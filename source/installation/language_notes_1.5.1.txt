@@ -1,0 +1,106 @@
+|=============================
+|	email_data.php
+|=============================
+
+NOTE: Variable change in admin_notify_forum_post()
+
+Change:
+{name} just submitted a new post in {forum_name}
+
+To:
+{name_of_poster} just submitted a new post in {forum_name}
+
+
+|=============================
+|	lang.core.php
+|=============================
+
+"no" =>
+"No",
+
+"yes" =>
+"Yes",
+
+"error_tag_module_processing" =>
+"The following tag cannot be processed:",
+
+"error_fix_module_processing" =>
+"Please check that the '%x' module is installed and that '%y' is an available method of the module",
+
+
+|=============================
+|	lang.cp.php
+|=============================
+
+'edit_quicklinks' =>
+"Edit QuickLinks",
+
+|=============================
+|	lang.home.php
+|=============================
+
+'pmachine_news_feed' =>
+'pMachine News Feed',
+
+'no_news' =>
+"No News Available",
+
+'more_news' =>
+"More News...",
+
+
+|=============================
+|	lang.members.php
+|=============================
+
+"new_member_search" =>
+"New Member Search",
+
+
+|=============================
+|	lang.messages.php
+|=============================
+
+'delete_bulletin' =>
+"Delete Bulletin",
+
+'delete_bulletin_popup' =>
+"Are you sure you want to delete this bulletin?",
+
+'bulletin_deleted' =>
+"Bulletin Deleted",
+
+'messsage_already_sent' =>
+"Your Message Has Already Been Sent",
+
+
+|=============================
+|	lang.myaccount.php
+|=============================
+
+'pmachine_news_feed' =>
+'pMachine News Feed',
+
+|=============================
+|	lang.publish.php
+|=============================
+
+'choose_entry_for_comment_move' =>
+"Choose Entry for Comment Move",
+
+'move_comments_to_entry' =>
+"Move Comments to Entry",
+
+'move_selected' =>
+"Move Selected",
+
+'choose_only_one_entry' =>
+"You Must Choose Only One Entry",
+
+
+|=============================
+|	lang.wiki.php
+|=============================
+
+'no_search_terms' =>
+'You must include search terms when searching namespaces.',

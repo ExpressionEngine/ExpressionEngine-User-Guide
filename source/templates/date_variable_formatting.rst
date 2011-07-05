@@ -1,0 +1,182 @@
+Date Variable Formatting
+========================
+
+Many tags, including channel fields of the "date" type, are designed to
+display dates and times. The output of these tags can be formatted so
+that the date and time appears in the manner you wish. Here is an
+example of formatting the
+`{current\_time} <globals/single_variables.html#var_current_time>`_
+global variable::
+
+	{current_time format="%F %d %Y"}
+
+The "format" parameter enables you to format the date using the Date
+Formatting Codes listed below. Each code letter is always preceded by a
+percent sign. The example above would be rendered like this::
+
+	January 15 2006
+
+You are allowed to use any character you want within the format
+parameter, **except** a percent sign. For example, this::
+
+	{current_time format="%D, %F %d, %Y - %g:%i:%s"}
+
+Would be rendered like this::
+
+	Mon, January 15, 2006 - 10:23:45
+
+Date Formatting Codes
+~~~~~~~~~~~~~~~~~~~~~
+
+Available Date Formatting Codes
+Variable
+Description
+Sample Rendering
+Seconds
+**%s**
+seconds
+"00" to "59"
+**%U**
+seconds since the epoch
+Minutes
+**%i**
+minutes
+"00" - "59"
+Hours
+**%g**
+hour, 12-hour format without leading zeros
+"1" to "12"
+**%G**
+hour, 24-hour format without leading zeros
+"0" to "23"
+**%h**
+hour, 12-hour format
+"01" to "12"
+**%H**
+hour, 24-hour format
+"00" to "23"
+AM / PM
+**%a**
+"am" / "pm"
+**%A**
+"AM" / "PM"
+Day
+**%d**
+day of the month, 2 digits with leading zeros
+"01" to "31"
+**%D**
+day of the week, textual, 3 letters
+"Fri"
+**%j**
+day of the month without leading zeros
+"1" to "31"
+**%l**
+(lowercase 'L') - day of the week, textual, long
+"Friday"
+**%w**
+day of the week, numeric
+"0" (Sunday) to "6" (Saturday)
+Week
+**%W**
+ISO-8601 week number of year, weeks starting on Monday
+"42": the 42nd week in the year
+Month
+**%m**
+month
+"01" to "12"
+**%M**
+month, textual, 3 letters
+"Jan"
+**%F**
+month, textual, long
+"January"
+**%n**
+month without leading zeros
+"1" to "12"
+**%t**
+number of days in the given month
+"28" to "31"
+Year
+**%L**
+boolean for whether it is a leap year
+"0" or "1"
+**%y**
+year, 2 digits
+"99"
+**%Y**
+year, 4 digits
+"1999"
+**%z**
+day of the year
+"0" to "365"
+Other
+**%B**
+Swatch Internet time
+**%I**
+(capital i)
+"1" if Daylight Saving Time, "0" otherwise
+**%Q**
+local server time zone offset, in hours and seconds, against GMT
+"+06:00"
+**%r**
+RFC 822 formatting
+"Thu, 21 Dec 2000 16:01:07 +0200"
+**%S**
+English ordinal suffix, 2 characters
+"th", "nd"
+**%T**
+Time zone setting of this machine
+MDT
+**%Z**
+time zone offset in seconds. The offset for time zones west of UTC is
+always negative, and for those east of UTC is always positive.
+"-43200" to "43200"
+Date Formatting Constants
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You may also use the pre-defined Date Formatting Constants listed below
+for easy access to some standard format strings. For example, this::
+
+	{current_time format="{DATE_ATOM}"}
+
+Would be rendered like this::
+
+	2006-01-15T20:23:45-06:00
+
+Available pre-defined formatting strings are described in the table
+below.
+
+Date Formatting Constants
+Variable
+Equivalent
+Sample Rendering
+**{DATE\_ATOM}**
+%Y-%m-%dT%H:%i:%s%Q
+2006-10-16T08:19:39-06:00
+**{DATE\_COOKIE}**
+%l, %d-%M-%y %H:%i:%s UTC
+Monday, 16-Oct-06 08:19:39 UTC
+**{DATE\_ISO8601}**
+%Y-%m-%dT%H:%i:%s%Q
+2006-10-16T08:19:39-05:00
+**{DATE\_RFC822}**
+%D, %d %M %y %H:%i:%s %O
+Mon, 16 Oct 06 08:19:39 -0500
+**{DATE\_RFC850}**
+%l, %d-%M-%y %H:%m:%i UTC
+Monday, 16-Oct-06 08:10:19 UTC
+**{DATE\_RFC1036}**
+%D, %d %M %y %H:%i:%s %O
+Mon, 16 Oct 06 08:19:39 -0500
+**{DATE\_RFC1123}**
+%D, %d %M %Y %H:%i:%s %O
+Mon, 16 Oct 2006 08:19:39 -0500
+**{DATE\_RFC2822}**
+%D, %d %M %Y %H:%i:%s %O
+Mon, 16 Oct 2006 08:19:39 -0500
+**{DATE\_RSS}**
+%D, %d %M %Y %H:%i:%s %O
+Mon, 16 Oct 2006 08:19:39 -0500
+**{DATE\_W3C}**
+%Y-%m-%dT%H:%i:%s%Q
+2006-10-16T08:19:39-06:00

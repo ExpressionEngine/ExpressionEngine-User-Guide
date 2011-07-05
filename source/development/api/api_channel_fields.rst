@@ -1,0 +1,115 @@
+ExpressionEngine Channel Fields API
+===================================
+
+-  **Function Reference**
+
+                        
+Calling the Class
+-----------------
+
+The Channel Fields class is called with the api->instantiate() function. ::
+
+	$this->EE->load->library('api'); $this->EE->api->instantiate('channel_fields');
+
+Function Reference
+------------------
+
+Fetch all Fieldtypes
+~~~~~~~~~~~~~~~~~~~~
+
+Goes through all fieldtype files, includes them (using
+include\_handler()), and returns an array of all found fieldtypes. ::
+
+	$this->EE->api_channel_fields->fetch_all_fieldtypes();
+
+*Return value*
+    Array::
+
+	'fieldtype_shortname' => array(     'path'  =>  (string) File Path,     'file'  =>  (string) Filename,                   'name'  =>  (string) Human readable name,     'class' =>  (string) Class Name,     'package' =>    (string) Package name );
+
+    A package name is only returned if the fieldtype comes from a third
+    party
+
+Fetch installed Fieldtypes
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This method is identical to fetch\_all\_fieldtypes(), but the returned
+array is limited to fieldtypes that have been installed by the user. ::
+
+	$this->EE->api_channel_fields->fetch_installed_fieldtypes();
+
+*Return value*
+    (array) Same as fetch\_all\_fieltypes, but with the addition of a
+    version number and fieldtype id.
+
+Include Fieldtype Class
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This method includes the class that is responsible for a certain
+fieldtype, and adds it to a list of known fieldtypes. Do not include
+fieldtypes manually as it may cause ExpressionEngine to not recognize
+them. ::
+
+	$this->EE->api_channel_fields->include_handler((string) $field_type);
+
+*Return value*
+    (string) Name of the fieldtype's class.
+
+Setup Fieldtype Class
+~~~~~~~~~~~~~~~~~~~~~
+
+This method prepares resets the fieldtype class and its settings. It
+must be called before a fieldtype is used. ::
+
+	$this->EE->api_channel_fields->setup_handler((string) $field_type);
+
+*Return value*
+    (bool) Fieldtype setup successful
+
+Setup Entry Settings
+~~~~~~~~~~~~~~~~~~~~
+
+This method will properly populate the settings array for all fields in
+the specified channel. It returns an array of all field settings, and is
+typically used before the Channel Entries API's
+`submit\_new\_entry() <api_channel_entries.html#submit_new_entry>`_
+method. ::
+
+	$this->EE->api_channel_fields->setup_entry_settings((string) $channel_id, (array) $entry_data,(bool) $bookmarklet);
+
+Set Fieldtype Settings
+~~~~~~~~~~~~~~~~~~~~~~
+
+This method is used to assign additional settings to a fieldtype. This
+may be any data that a fieldtype developer may need to use in their
+fieldtype. The settings array must include a field\_type key, and can
+include an optional field\_name if used in a channel context. ::
+
+	$this->EE->api_channel_fields->set_settings((string) $field_id, (mixed) $settings);
+
+Get Fieldtype Settings
+~~~~~~~~~~~~~~~~~~~~~~
+
+This method gets the settings of an individual field. ::
+
+	$this->EE->api_channel_fields->get_settings((string) $field_id);
+
+Call a Fieldtype Method
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is a convenience method to call a fieldtype after it has been
+setup. It will automatically setup the proper third party paths and
+handle PHP4's pass-by-reference quirks. It acts on the last fieldtype
+that was passed to setup\_handler(). It takes an array of parameters. ::
+
+	$this->EE->api_channel_fields->apply((string) $method, (mixed) $parameters);
+
+*Return value*
+    (mixed) The return value of the fieldtype function that was called.
+
+Example Usage
+^^^^^^^^^^^^^
+
+::
+
+	$parameters = array(     'foo'       => 'Dog',     'bar'       => 'Cat' );  $this->EE->api_channel_fields->setup_handler('my_fieldtype');  echo $this->EE->api_channel_fields->apply('my_method', $parameters);

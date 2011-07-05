@@ -1,0 +1,21 @@
+Update Notes for Version 2.1
+============================
+
+Stand-Alone Entry Form Update
+-----------------------------
+
+A number of minor changes have been made to the `Stand-Alone Entry
+Form <../modules/channel/entry_form.html>`_'s default template for 2.1.
+You may need to adjust the markup around your file fields.
+
+Added Registration Form Field
+-----------------------------
+
+The member registration form has been given a new email verification
+field. This field is optional, but has been included in the default site
+themes. You can retrofit your own themes by simply including the field
+in the form.
+
+`Return to Update Page <update.html>`_
+
+

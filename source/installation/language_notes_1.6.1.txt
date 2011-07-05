@@ -1,0 +1,91 @@
+|=============================
+|	lang.admin.php
+|=============================
+
+'sql_query_debug' =>
+'Enable MySQL Error Output',
+
+
+|=============================
+|	lang.communicate.php
+|=============================
+
+'plaintext_alt' =>
+"Plain Text Alternative (optional, HTML emails only, no text formatting applied)",
+
+"mail_format" =>
+"Email Formatting",
+
+* Note that the above are changes to an existing language variable, not a new variable
+* New variables for lang.communicate.php are listed below
+
+'text_formatting' =>
+'Text Formatting',
+
+'none' =>
+'None',
+
+'auto_br' =>
+'Auto &lt;br /&gt;',
+
+
+|=============================
+|	lang.members.php
+|=============================
+
+"include_in_authorlist" =>
+"Include Members in PUBLISH page multi-author list?",
+
+
+|=============================
+|	lang.messages.php
+|=============================
+
+'overflow_recipients' =>
+"The inboxes for the following members are currently full, and to send this message
+you must remove them from your Recipients or CC fields: %overflow_names%",
+
+
+|=============================
+|	lang.pages.php
+|=============================
+
+'pages_delete_question' =>
+"Are you sure you want to delete the selected Page URI(s)?<br /><em>Note: Deleting a Page only deletes the URL. It does not delete the entry.</em>",
+
+* Note that the above is a change to an existing language variable, not a new variable
+* New variables for lang.pages.php are listed below
+
+'pages_display_on_homepage' =>
+"Display of URIs on Module Homepage",
+
+'nested' =>
+"Nested",
+
+'not_nested' =>
+"Not Nested",
+
+
+|=============================
+|	lang.publish.php
+|=============================
+
+'live_look' =>
+'Live Look',
+
+'show_all' =>
+"Show All",
+
+
+|=============================
+|	lang.publish_ad.php
+|=============================
+
+'live_look_template' =>
+'Live Look Template',
+
+'no_live_look_template' =>
+'- No Live Look Template -',
+
+'show_show_all_cluster' =>
+"Display 'Show All' Tab",

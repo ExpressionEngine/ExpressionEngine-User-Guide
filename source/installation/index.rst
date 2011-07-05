@@ -1,0 +1,8 @@
+Installation
+============
+
+.. toctree::
+	:glob:
+	:titlesonly:
+	
+	*

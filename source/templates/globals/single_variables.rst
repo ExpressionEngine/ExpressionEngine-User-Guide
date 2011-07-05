@@ -1,0 +1,402 @@
+Standard Global Variables
+=========================
+
+These Global Variables can be used anywhere within your Templates.
+
+-  `{template\_edit\_date format="%Y %m %d
+   %H:%i:%s"} <#var_template_edit_date>`_
+
+Please note that there is an `alternative syntax <#alternative_syntax>`_
+for member variables that may be used in situations where an naming
+conflict with a module's variables may occur.
+
+app\_build
+~~~~~~~~~~
+
+::
+
+	{app_build}
+
+The build date of ExpressionEngine that you are using.
+
+app\_version
+~~~~~~~~~~~~
+
+::
+
+	{app_version}
+
+The version of ExpressionEngine that you are using (2.2.0, 2.3.0, etc.).
+
+charset
+~~~~~~~
+
+::
+
+	{charset}
+
+This variable will be substituted for the global character set (UTF-8).
+It is typically used in your META tags to indicate the character
+encoding::
+
+	<meta http-equiv="Content-Type" content="text/html; charset={charset}" />
+
+cp\_url
+~~~~~~~
+
+::
+
+	{cp_url}
+
+The URL to the control panel for this site. Only output for logged-in
+members who have access to the Control Panel
+
+current\_time
+~~~~~~~~~~~~~
+
+::
+
+	{current_time}
+
+This variable displays the current server time localized to each user's
+particular setting. As with other date variables, you will use the
+standard `date variable formatting <../date_variable_formatting.html>`_::
+
+	{current_time format="%Y %m %d %H:%i:%s"}
+
+**Note:** Unlike the rest of the Standard Global Variables,
+{current\_time} is parsed very early on in the Template parser, which
+allows you to make dynamic use of it in your tags, for instance as a tag
+parameter, or in a conditional.
+
+debug\_mode
+~~~~~~~~~~~
+
+::
+
+	{debug_mode}
+
+This variable will be substituted with either "on" or "off" based on
+your debug mode settings.
+
+doc\_url
+~~~~~~~~
+
+::
+
+	{doc_url}
+
+This variable will be substituted with the URL found in Admin > General
+Config > URL to Documentation Directory
+
+elapsed\_time
+~~~~~~~~~~~~~
+
+::
+
+	{elapsed_time}
+
+The amount of time, in seconds, it took ExpressionEngine to render the
+current page.
+
+email
+~~~~~
+
+::
+
+	{email}
+
+The email address for the currently logged-in user.
+
+embed
+~~~~~
+
+::
+
+	{embed=news/local}
+
+This variable allows you to embed one Template within another. Please
+see the `Embedded Templates <../embedding_templates.html>`_ section.
+
+encode
+~~~~~~
+
+::
+
+	{encode="you@example.com" title="Email Me!"}
+
+This variable will encode the specified email address using javascript
+and HTML entities to make it more difficult for spam harvesters to grab
+an email address from your site. If you normally show your email address
+on your site you are encouraged to use this variable. The title
+parameter on the variable allows you to specify the text you want to use
+for the link. ::
+
+	Email Me!
+
+group\_id
+~~~~~~~~~
+
+::
+
+	{group_id}
+
+The Member Group ID number for the currently logged-in user.
+
+group\_title
+~~~~~~~~~~~~
+
+::
+
+	{group_title}
+
+The title of the member group for the currently logged-in user.
+
+gzip\_mode
+~~~~~~~~~~
+
+::
+
+	{gzip_mode}
+
+This variable will be substituted with either "on" or "off" based on
+your output compression settings mode settings.
+
+hits
+~~~~
+
+::
+
+	{hits}
+
+This variable will be substituted with the number of hits that any given
+template containing the variable has received.
+
+homepage
+~~~~~~~~
+
+::
+
+	{homepage}
+
+This variable will be substituted with the URL to your home page as
+defined under Admin > General Configuration.
+
+ip\_address
+~~~~~~~~~~~
+
+::
+
+	{ip_address}
+
+This variable will be substituted with the IP address of the currently
+logged in user.
+
+lang
+~~~~
+
+::
+
+	{lang}
+
+This variable will be substituted for the "Default XML Language"
+preference as defined under Admin > General Configuration.
+
+location
+~~~~~~~~
+
+::
+
+	{location}
+
+The location (as entered in their profile) for the currently logged-in
+user.
+
+member\_group
+~~~~~~~~~~~~~
+
+::
+
+	{member_group}
+
+The Member Group ID number for the currently logged-in user.
+
+member\_id
+~~~~~~~~~~
+
+::
+
+	{member_id}
+
+The Member ID for the currently logged-in user.
+
+member\_profile\_link
+~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+	{member_profile_link}
+
+This variable will be substituted with a link to the public profile page
+for the currently logged in user. The text of the link will be the
+member's screen name. For instance, the output might be::
+
+	<a href="http://example.com/index.php/member/1/">Joe Smith</a>
+
+redirect
+~~~~~~~~
+
+::
+
+	{redirect='news/local'}
+
+This variable allows you redirect the visitor to another template.
+Typically this will mean that you will be utilizing the tag within
+conditionals. ::
+
+	{if segment_3 != 'cookies'}>   {redirect='bake/cookies'} {/if}
+
+You can also use the redirect variable to provide tighter control of
+your URLs, and trigger 404 pages in certain conditions. When you want to
+display your 404 page, just use "404" for the template. For instance,
+you might do this on a template group's 'index' template that you do not
+wish to be displayed if an arbitrary second URL segment exists. ::
+
+	{if segment_2 != ''}   {redirect="404"} {/if}
+
+Be careful that through your redirect variables that you do not create
+an infinite loop.
+
+screen\_name
+~~~~~~~~~~~~
+
+::
+
+	{screen_name}
+
+The screen name for the currently logged-in user.
+
+site\_name
+~~~~~~~~~~
+
+::
+
+	{site_name}
+
+This variable will be substituted with your site name as defined under
+Admin > General Configuration.
+
+site\_url
+~~~~~~~~~
+
+::
+
+	{site_url}
+
+This variable will be substituted with your site URL as defined under
+Admin > General Configuration.
+
+template\_edit\_date=""
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This variable displays the localized time for when the template was last
+updated. As with other date variables, you will use the standard `date
+variable formatting <../date_variable_formatting.html>`_::
+
+	{template_edit_date format="%Y %m %d %H:%i:%s"}
+
+total\_comments
+~~~~~~~~~~~~~~~
+
+::
+
+	{total_comments}
+
+The total number of comments posted by the currently logged-in user.
+
+theme\_folder\_url
+~~~~~~~~~~~~~~~~~~
+
+::
+
+	{theme_folder_url}
+
+The URL to your theme folder.
+
+total\_entries
+~~~~~~~~~~~~~~
+
+::
+
+	{total_entries}
+
+The total number of entries posted by the currently logged-in user.
+
+total\_queries
+~~~~~~~~~~~~~~
+
+::
+
+	{total_queries}
+
+The total number of database queries used to generate the current page.
+
+username
+~~~~~~~~
+
+::
+
+	{username}
+
+The username for the currently logged-in user.
+
+webmaster\_email
+~~~~~~~~~~~~~~~~
+
+::
+
+	{webmaster_email}
+
+``{encode="{webmaster_email}" title="Contact Us"}``
+
+The email address for the site, as specified in `Email
+Configuration <../../cp/admin/system_admin/email_configuration.html>`_.
+
+XID\_HASH
+~~~~~~~~~
+
+::
+
+	{XID_HASH}
+
+This variable is a required value for hidden form field 'XID' used in
+secure forms.
+
+Alternative Syntax
+------------------
+
+In order to be able to use some member variables inside tags that
+already parse their own member information, such as the channel entries
+tag, it is necessary to use an alternative syntax. All of the member
+variables may be used with the addition of the prefix "logged\_in\_". ::
+
+	{exp:channel:entries channel="default_site"}         This article was written by: {screen_name}<br />         The currently logged in user is: {logged_in_screen_name}     {/exp:channel:entries}
+
+A list of the available member variables that utilize this alternate
+syntax follows:
+
+-  logged\_in\_member\_id
+-  logged\_in\_group\_id
+-  logged\_in\_group\_description
+-  logged\_in\_username
+-  logged\_in\_screen\_name
+-  logged\_in\_email
+-  logged\_in\_ip\_address
+-  logged\_in\_location
+-  logged\_in\_total\_entries
+-  logged\_in\_total\_comments
+-  logged\_in\_private\_messages
+-  logged\_in\_total\_forum\_topics
+-  logged\_in\_total\_forum\_replies
+-  logged\_in\_total\_forum\_posts
+

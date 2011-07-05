@@ -1,0 +1,93 @@
+.calendarBG {
+ background-color: #000; 
+}
+
+.calendarBlank { 
+ background-color: #9DB7A7;
+}
+
+.calendarHeader { 
+ font-weight: bold; 
+ color: #fff; 
+ text-align: center;
+ background-color: #000; 
+}
+
+.calendarMonthLinks {
+ font-family:       Arial, Trebuchet MS, Tahoma, Verdana, Sans-serif;
+ font-size:         11px;
+ font-weight:		bold;
+ letter-spacing:	.1em;
+ text-decoration:   none;
+ color:             #fff;
+ background-color:  transparent;
+}
+
+.calendarMonthLinks a {
+ color:             #fff;
+ text-decoration:   none;
+ background-color:  transparent;
+}
+  
+.calendarMonthLinks a:visited {
+ color:             #fff;
+ text-decoration:   none;
+ background-color:  transparent;
+}
+
+.calendarMonthLinks a:hover {
+ color:             #ccc;
+ text-decoration:   underline;
+ background-color:  transparent;
+}
+
+.calendarDayHeading {
+ font-weight: bold; 
+ font-size:	11px;
+ color: #fff; 
+ background-color: #663300; 
+ text-align:  center;
+ vertical-align: middle;
+}
+
+.calendarToday { 
+ font-family:       Arial, Trebuchet MS, Tahoma, Verdana, Sans-serif;
+ font-size:         12px;
+ font-weight:		bold;
+ letter-spacing:	.1em;
+ text-decoration:   none;
+ text-align:  center;
+ vertical-align: middle;
+ color:             #000;
+ background-color: 	#ccc;
+}
+
+.calendarCell {
+ font-family:       Arial, Trebuchet MS, Tahoma, Verdana, Sans-serif;
+ font-size:         12px;
+ font-weight:		bold;
+ letter-spacing:	.1em;
+ text-decoration:   none;
+ text-align:  center;
+ vertical-align: middle;
+ color:             #666;
+ background-color:  #fff;
+}
+
+.calendarCell a {
+ color:             #000;
+ text-decoration:   underline;
+ background-color:  transparent;
+}
+  
+.calendarCell a:visited {
+ color:             #000;
+ text-decoration:   underline;
+ background-color:  transparent;
+}
+
+.calendarCell a:hover {
+ color:             #fff;
+ text-decoration:   none;
+ background-color:  transparent;
+}

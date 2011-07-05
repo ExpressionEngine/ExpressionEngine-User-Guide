@@ -1,0 +1,397 @@
+|=============================
+|	email_data.php
+|=============================
+
+NOTE: Variable change in forum_post_notification() and admin_notify_forum_post()
+
+Change:
+{thread_url}
+
+To:
+{post_url}
+
+|=============================
+|	email_data.php (cont.)
+|=============================
+
+/* -------------------------------------
+/*  Notification of Forum Post Report
+/* -------------------------------------*/
+
+function forum_report_notification_title()
+{
+return <<<EOF
+Post reported in {forum_name}
+EOF;
+}
+
+function forum_report_notification()
+{
+return <<<EOF
+{reporter_name} just reported a post written by {author} in:
+{forum_name}
+
+The reason(s) for the report:
+{reasons}
+
+Additional notes from {reporter_name}:
+{notes}
+
+The post can be found at:
+{post_url}
+
+Contents of reported post:
+{body}
+EOF;
+}
+/* END */
+
+
+|=============================
+|	lang.admin.php
+|=============================
+
+"view_throttle_log" =>
+"View Throttle Log",
+
+"no_throttle_logs" =>
+"No IPs are currently being throttled by the system.",
+
+'throttling_disabled' =>
+"Throttling Disabled",
+
+'hits' =>
+"Hits",
+
+'locked_out' =>
+"Locked Out",
+
+'last_activity' =>
+"Last Activity",
+
+'blacklist_all_ips' =>
+"Blacklist All IPs",
+
+
+
+|=============================
+|	lang.core.php
+|=============================
+
+'search' =>
+"Search",
+
+|=============================
+|	lang.filebrowser.php
+|=============================
+
+"fb_insert_link" =>
+"Insert Link",
+
+"fb_insert_links" =>
+"Insert Links",
+
+"fb_insert_url" =>
+"Insert URL",
+
+"fb_insert_urls" =>
+"Insert URLs",
+
+
+|=============================
+|	lang.forum.php
+|=============================
+
+'report_topic' =>
+'Report Topic',
+
+'report_reply' =>
+'Report Reply',
+
+'report_info' =>
+'The report feature allows you to report a post to the forum moderators.',
+
+'report_instructions' =>
+'Please select the reason you are reporting the thread below, and include any notes you wish for the moderators.',
+
+'report_missing_reason' =>
+'You must select a reason to report a post',
+
+'cannot_report_self' =>
+'You cannot report your own post',
+
+'content' =>
+'Content',
+
+'spam' =>
+'Spam / Advertising',
+
+'harrassment' =>
+'Harrassment',
+
+'language' =>
+'Language',
+
+'other' =>
+'Other',
+
+'ignore' =>
+'Ignore',
+
+'total_replies' =>
+'Total Replies:',
+
+'total_replies_heading' =>
+'Replies',
+
+'ignore_member_confirmation' =>
+'Ignore Member Confirmation',
+
+'can_not_ignore_yourself' =>
+"You can not ignore yourself",
+
+'already_ignored' =>
+'Member is already being ignored',
+
+'ignore_member' =>
+'Ignore Member',
+
+'unignore_member' =>
+'Stop Ignoring Member',
+
+'stop_ignoring' =>
+'Stop ignoring',
+
+'view_hide' =>
+'View / Hide',
+
+'topic_hidden' =>
+'A topic is hidden because',
+
+'post_hidden' =>
+'A post is hidden because',
+
+'is_ignored' =>
+'is being ignored',
+
+'report' =>
+'Report',
+
+'reply' =>
+'Reply',
+
+'notify_thread_owner' =>
+'Send notification email of this moderation action to thread owner',
+
+"pref_notify_moderators_topics" =>
+"Notify Moderators of New Topics?",
+
+"pref_notify_moderators_replies" =>
+"Notify Moderators of New Replies?",
+
+
+
+|=============================
+|	lang.forum_cp.php
+|=============================
+
+'report_form' =>
+'Report Form',
+
+'report_page' =>
+'Report Page',
+
+'ignore_member_confirmation' =>
+'Ignore Member Confirmation',
+
+'ignore_member_page' =>
+'Ignore Member Page',
+
+'forum_can_report' =>
+'Can Report',
+
+'pref_display_edit_date' =>
+'Display Edit Dates',
+
+'bulletin_board' =>
+'Bulletin Board',
+
+'edit_ignore_list_form' =>
+'Ignore List Form',
+
+'edit_ignore_list_rows' =>
+'Ignore List Rows',
+
+'edit_preferences' =>
+'Edit Preferences Form',
+
+
+
+|=============================
+|	lang.member.php
+|=============================
+
+'ignore_list' =>
+'Manage Ignore List',
+
+'ignore_list_blurb' =>
+'Use this form to manage your Ignore List',
+
+'unignore' =>
+'Stop Ignoring',
+
+'ignore_member' =>
+'Ignore Member',
+
+'unignore_member' =>
+'Stop Ignoring Member',
+
+'invalid_screen_name' =>
+'Invalid Screen Name',
+
+'can_not_ignore_self' =>
+'You can not ignore yourself',
+
+'invalid_screen_name_message' =>
+'The Screen Name you have submitted is invalid',
+
+'ignore_list_updated' =>
+'Ignore List successfully updated',
+
+'member_search' =>
+'Member Search',
+
+'any' =>
+'Any',
+
+'search_results' =>
+'Search Results',
+
+'insert_member_instructions' =>
+"Click a member's name to add them to your Ignore List",
+
+'add_member' =>
+'Add Member',
+
+'delete_member' =>
+'Delete',
+
+'delete_selected_members' =>
+'Delete selected member(s)',
+
+'no_search_results' =>
+'No members match your search criteria',
+
+'new_search' =>
+'Perform New Search?',
+
+
+|=============================
+|	lang.members.php
+|=============================
+
+'edit_ignore_list_form' =>
+'Ignore List Form',
+
+'edit_ignore_list_rows' =>
+'Ignore List Rows',
+
+
+|=============================
+|	lang.messages.php
+|=============================
+
+'waiting_period_not_reached' =>
+"To prevent spam there is a %time% hour waiting period before new members are allowed to send Private Messages.",
+
+"send_throttle" =>
+"You are only allowed to send a Private Message every %x seconds",
+
+'duplicate_message_sent' =>
+"You have sent the exact same message more than once.",
+
+
+
+|=============================
+|	lang.metaweblog_api.php
+|=============================
+
+'metaweblog_entry_status' =>
+"Entry Status",
+
+'do_not_set_status' =>
+"Do Not Set Status (Client decides)",
+
+
+
+|=============================
+|	lang.myaccount.php
+|=============================
+
+'utilities' =>
+'Utilities',
+
+
+'total_forum_replies' =>
+'Total Forum Replies',
+
+
+
+|=============================
+|	lang.publish.php
+|=============================
+
+'unable_to_create_url_title' =>
+'Unable to create valid URL Title for your entry',
+
+'add_categories' =>
+"Add Categories",
+
+'remove_categories' =>
+"Remove Categories",
+
+'no_category_group_match' =>
+"No Category Group Match was found for all of the entries.  Please choose entries that have at least one category group in common.",
+
+'multi_entry_category_editor' =>
+"Multi Entry Category Editor",
+
+'url_only' =>
+"URL Only",
+
+
+|=============================
+|	lang.search.php
+|=============================
+
+'search_by_member_group' =>
+'Search by Member Group',
+
+'switch_to_group' =>
+'Switch to Group Search',
+
+'switch_to_name' =>
+'Switch to Name Search',
+
+'search_all_groups' =>
+'Search All Member Groups',
+
+
+|=============================
+|	lang.specialty_tmp.php
+|=============================
+
+'forum_report_notification' =>
+'Moderator Notification of Forum Post Report',
+
+'forum_report_notification_desc' =>
+'This template defines notifications that moderators receive when a user reports a forum post',
+
+
+|=============================
+|	lang.wiki.php
+|=============================
+
+'duplicate_article' =>
+'Another article with that name already exists.',
+

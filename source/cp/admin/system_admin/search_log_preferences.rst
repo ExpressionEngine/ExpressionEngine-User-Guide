@@ -1,0 +1,22 @@
+Search Term Log Preferences
+===========================
+
+Control Panel Location: Admin > System Preferences > Search Term Log
+Preferences
+This section of the Control Panel allows you to set the Search Term
+Logging preferences.
+
+Enable Search Term Logging
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Specifies whether to log the search terms submitted by your users. When
+set to yes, each search term submitted will be stored so you can view it
+at the following location:
+
+Admin > Utilities > View Search Term Log
+
+Maximum number of recent search terms to save
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The maximum number of most recent searches to log. This prevents your
+database from getting too large.

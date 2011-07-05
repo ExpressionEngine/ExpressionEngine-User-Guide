@@ -1,0 +1,12 @@
+#ignore files created by setup.py for the ExpressionEngine Pygments Lexer
+eelexer/build/
+eelexer/pyeelexer.egg-info/
+eelexer/dist/
+
+
+#MacOS system files
+.DS_Store
+Thumbs.db
+
+#build dir shouldn't be revisioned
+build/

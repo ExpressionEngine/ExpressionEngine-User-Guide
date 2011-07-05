@@ -1,0 +1,37 @@
+{preload_replace:master_channel_name="default_site"}
+{exp:rss:feed channel="{master_channel_name}"}
+
+<?xml version="1.0" encoding="{encoding}"?>
+<rss version="2.0"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:admin="http://webns.net/mvcb/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/">
+
+    <channel>
+    
+    <title><![CDATA[{channel_name}]]></title>
+    <link>{channel_url}</link>
+    <description>{channel_description}</description>
+    <dc:language>{channel_language}</dc:language>
+    <dc:creator>{email}</dc:creator>
+    <dc:rights>Copyright {gmt_date format="%Y"}</dc:rights>
+    <dc:date>{gmt_date format="%Y-%m-%dT%H:%i:%s%Q"}</dc:date>
+    <admin:generatorAgent rdf:resource="http://expressionengine.com/" />
+    
+{exp:channel:entries channel="{master_channel_name}" limit="10" dynamic_start="on" disable="member_data|pagination"}
+    <item>
+      <title><![CDATA[{title}]]></title>
+      <link>{title_permalink='site/index'}</link>
+      <guid>{title_permalink='site/index'}#When:{gmt_entry_date format="%H:%i:%sZ"}</guid>
+      <description><![CDATA[{summary}{body}]]></description>
+      <dc:subject><![CDATA[{categories backspace="1"}{category_name}, {/categories}]]></dc:subject>
+      <dc:date>{gmt_entry_date format="%Y-%m-%dT%H:%i:%s%Q"}</dc:date>
+    </item>
+{/exp:channel:entries}
+    
+    </channel>
+</rss>
+
+{/exp:rss:feed}
