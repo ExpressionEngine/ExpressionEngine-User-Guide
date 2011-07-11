@@ -1,7 +1,7 @@
 import re
 import copy
 
-from pygments.lexer import DelegatingLexer, RegexLexer
+from pygments.lexer import DelegatingLexer, RegexLexer, bygroups
 from pygments.token import Text, Comment, Operator, Keyword, Name, String, \
 	 Number, Other, Punctuation, Literal
 from pygments.lexers.templates import HtmlPhpLexer
@@ -31,36 +31,36 @@ class ExpressionEngineTagsLexer(RegexLexer):
 	filenames = ['*.html', '*.htm', '*.xhtml', '*.xslt']
 	mimetypes = ['text/html', 'application/xhtml+xml']
 
-	flags = re.IGNORECASE | re.DOTALL
+	flags = re.IGNORECASE | re.DOTALL | re.MULTILINE
 	tokens = {
 		'root': [
-			('[^\{]+', Other),
-			('\{!--', Comment, 'comment'),
-			(r'\{[a-zA-Z0-9_:-]+\}', Name.Variable),
-			(r'\{[a-zA-Z0-9_:]+\s*=', Name.Function, 'eepath'),
-			(r'\{[a-zA-Z0-9_:]+', Name.Function, 'eetag'),
-			(r'\{/[a-zA-Z0-9_:]+\}', Name.Function),
+			(r'[^\{]+', Other),
+			(r'{!--.*?--}', Comment.Multiline),																# Comments
+			(r'({)(/)?([a-z0-9_-]+)(})', bygroups(Punctuation, Name.Variable, Name.Variable, Punctuation)),	# Run of the mill single and pair variables
+			(r'({)(if)(\s)+', bygroups(Punctuation, Name.Tag, Text), 'conditional'),
+			(r'({)(/)?([a-z0-9:_-]+)(\s*)', bygroups(Punctuation, Name.Function, Name.Function, Text), 'tag'),		# Plugin and Module tags
+			(r'{', Other)																					# Doesn't look like EE, leave it alone
 		],
-		'eepath': [
+		'path': [
 			(r'\s+', Text),
-			('".*?"', String, '#pop'),
-			("'.*?'", String, '#pop'),
-			(r'[a-zA-Z0-9_:/-]+', Name.Attribute, 'attr'),
-			(r'\s*\}', Name.Function, '#pop'),
+			(r'".*?"', String, '#pop'),
+			(r"'.*?'", String, '#pop'),
+			(r'(\s*)(})', bygroups(Text, Punctuation), '#pop'),
 		],
-		'eetag': [
+		'conditional': [
+			(r'[=!<>:&|]+\s*', Operator, 'attr'),
+			(r'([a-z0-9_:-]+)(\s*)', bygroups(Name.Attribute, Text)),
+			(r'}', Punctuation, '#pop'),
+		],
+		'tag': [
 			(r'\s+', Text),
-			(r'[\'\"a-zA-Z0-9_:-]+\s*[=!><]+\s*', Name.Attribute, 'attr'),
-			(r'\s*\}', Name.Function, '#pop'),
-		],
-		'comment': [
-			('[^-]+', Comment),
-			('--}', Comment, '#pop'),
-			('-', Comment),
+			(r'=', Punctuation, 'attr'),
+			(r'([a-z0-9_:-]+)(\s*)(=)', bygroups(Name.Attribute, Text, Punctuation), 'attr'),
+			(r'(\s*)(})', bygroups(Text, Punctuation), '#pop'),
 		],
 		'attr': [
-			('".*?"', String, '#pop'),
-			("'.*?'", String, '#pop'),
+			(r'".*?"', String, '#pop'),
+			(r"'.*?'", String, '#pop'),
 			(r'[^\s\}]+', String, '#pop'),
 		],
 	}
