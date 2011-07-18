@@ -8,7 +8,18 @@ Add-ons you agree to be bound by the terms and conditions of this
 license. EllisLab, Inc. reserves the right to alter this agreement at
 any time, for any reason, without notice.**
 
-Revised on: 19 July, 2010
+Revised on: 28 June, 2011
+
+ExpressionEngine Installations
+------------------------------
+
+An ExpressionEngine license purchase allows a single "live" installation
+in a production environment and ancillary "development use only"
+installations as needed to support the live installation (such as
+development and a staging servers). Additional installations require
+additional license purchases. If you have specific installation needs
+not covered by this license, please `Contact
+Us <http://expressionengine.com/support>`_.
 
 Permitted Use
 -------------
@@ -21,21 +32,14 @@ Permitted Use
       License may only be purchased by individuals or businesses with
       three employees or less. Only one Freelancer license is allowed
       per business entity. Only one Freelancer license is allowed per
-      ExpressionEngine.com account. One license grants the right to
-      perform **one** installation of the Software.
+      ExpressionEngine.com account.
    -  **Non-Commercial License:** Users of the Non-Commercial License
       may use the Software **only** on a website engaging in personal,
-      non-commercial, or non-profit activities. One license grants the
-      right to perform **one** installation of the Software. Each
-      additional installation of the Software requires an additional
-      purchased license.
+      non-commercial, or non-profit activities.
    -  **Commercial License:** Users of the Commercial License may use
       the Software on a website engaging a commercial, or for-profit
       activities. Websites engaging in direct, or indirect commercial
-      activities must purchase a Commercial License. One license grants
-      the right to perform **one** installation of the Software. Each
-      additional installation of the Software requires an additional
-      purchased license.
+      activities must purchase a Commercial License.
 
 -  **ExpressionEngine 1.x Licenses:**
 
@@ -44,17 +48,11 @@ Permitted Use
       non-profit activities.
    -  **Personal License:** Users of the Personal License may use the
       Software **only** on a website engaging in personal,
-      non-commercial, or non-profit activities. One license grants the
-      right to perform one installation of the Software. Each additional
-      installation of the Software requires an additional purchased
-      license.
+      non-commercial, or non-profit activities.
    -  **Commercial License:** Users of the Commercial License may use
       the Software on a website engaging a commercial, or for-profit
       activities. Websites engaging in direct, or indirect commercial
-      activities must purchase a Commercial License. One license grants
-      the right to perform **one** installation of the Software. Each
-      additional installation of the Software requires an additional
-      purchased license.
+      activities must purchase a Commercial License.
 
 EllisLab, Inc. will be the sole arbiter as to what constitutes
 commercial activities.
@@ -144,3 +142,5 @@ RESPONSIBLE FOR DETERMINING THE APPROPRIATENESS OF USE AND ASSUME ALL
 RISKS ASSOCIATED WITH ITS USE, INCLUDING BUT NOT LIMITED TO THE RISKS OF
 PROGRAM ERRORS, DAMAGE TO EQUIPMENT, LOSS OF DATA OR SOFTWARE PROGRAMS,
 OR UNAVAILABILITY OR INTERRUPTION OF OPERATIONS.
+
+

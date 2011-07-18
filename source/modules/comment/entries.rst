@@ -521,16 +521,16 @@ location
 
 	{location}
 
-The author's location as entered in their profile
+The commenter's location as entered in their profile
 
-member\_group\_id
-~~~~~~~~~~~~~~~~~
+group\_id
+~~~~~~~~~
 
 ::
 
-	{member_group_id}
+	{group_id}
 
-The author's member group id (0 for non-members)
+The commenter's member group id (0 for non-members)
 
 member\_search\_path
 ~~~~~~~~~~~~~~~~~~~~

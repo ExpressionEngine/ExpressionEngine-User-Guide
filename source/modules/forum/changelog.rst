@@ -1,6 +1,18 @@
 ExpressionEngine Forum Module Change Log
 ========================================
 
+Version 3.1.5
+-------------
+
+Release Date: June 30, 2011
+
+-  Added the ability to truncate data in forum notifications using a
+   char\_limit parameter on the email template variables.
+-  Added name\_of\_recipient to the forum notification email template.
+-  Fixed a bug where a PHP error could occur on some PHP 5.3 system
+   configurations.
+-  Fixed a bug where a PHP error could occur when listing the most
+   recent topics.
 
 Version 3.1.4
 -------------

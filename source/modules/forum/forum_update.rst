@@ -70,6 +70,10 @@ Step 5: Version Specific Notes
 Please view the update notes that apply to any versions that are newer
 than the version you have been running.
 
+-  `Version Notes 3.1.5 <forum_update_notes_3.1.5.html>`_
+-  `Version Notes 3.1.4 <forum_update_notes_3.1.4.html>`_
+-  `Version Notes 3.1.3 <forum_update_notes_3.1.3.html>`_
+-  `Version Notes 3.1.2 <forum_update_notes_3.1.2.html>`_
 -  `Version Notes 3.1.1 <forum_update_notes_3.1.1.html>`_
 -  `Version Notes 3.1.0 <forum_update_notes_3.1.0.html>`_
 -  `Version Notes 3.0.1 <forum_update_notes_3.0.1.html>`_
