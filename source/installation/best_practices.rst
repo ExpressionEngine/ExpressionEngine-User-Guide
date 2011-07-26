@@ -18,7 +18,9 @@ location of your system folder to be known.
    something else that is not easily guessed. For example, let's say
    you've renamed it to dazzle.
 #. Open index.php **and** admin.php (both found in your site's root) and
-   update the name of the system directory **in both files**::
+   update the name of the system directory **in both files**:
+
+::
 
 	$system_path = './dazzle';
 
@@ -59,6 +61,8 @@ Your folder structure looked like...
 
 	  $system_path = './system';
 
+|
+
 After
 ~~~~~
 
@@ -68,9 +72,9 @@ Now your your folder structure looks like...
 
     .
     ├── public_html
-        ├── admin.php
-        ├── index.php
-        ├── images
+    |   ├── admin.php
+    |   ├── index.php
+    |   ├── images
     │   └── themes
     └── system
 
@@ -100,6 +104,8 @@ something less obvious as well.
    you've renamed it to razzle.php.
 #. Open system/expressionengine/config/config.php (or whatever you have
    renamed the system folder to) and update the URL to the admin.php
-   file::
+   file
+
+::
 
 	  $config['cp_url'] = "http://example.com/razzle.php";
