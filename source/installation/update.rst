@@ -42,22 +42,6 @@ versions:
 -  system/
 -  themes/
 
-.. tip:: Following these steps can ease the update process:
-
-	- Download ExpressionEngine and rename the system folder to system\_new
-	- Upload system\_new to the same location as the live system folder
-	- Rename your live system folder to system\_old
-	- Rename system\_new to the previous name of the live system folder.
-
-	*Example:* Your current, live system folder is named purple\_rhino.
-	Upload system\_new to the server alongside purple\_rhino. Rename
-	purple\_rhino to system\_old. Now rename system\_new to purple\_rhino.
-
-After completing the update and verifying that the site is working
-properly, you can safely delete system\_old. If file corruption or other
-update failure occurs, deleting purple\_rhino and renaming system\_old
-to purple\_rhino allows you to rollback effortlessly.
-
 3. Restore Modified Files
 -------------------------
 
