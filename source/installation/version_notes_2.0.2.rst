@@ -22,6 +22,7 @@ Redundant Channel Preferences Removed
 Due to the ability to control publish field displays with `custom
 layouts <../cp/content/publish_page_layouts.html>`_, a number of now
 irrelevant channel preferences for the publish page were removed.
+
 Preferences Array Update
 ------------------------
 

@@ -109,6 +109,3 @@ value='Submit'
     value='{lang:submit}'
 
 `Return to Update Page <update.html>`_
-
-`ExpressionEngine <http://expressionengine.com/>`_ – Copyright ©
-2002-2011 – `EllisLab, Inc. <http://ellislab.com/>`_
