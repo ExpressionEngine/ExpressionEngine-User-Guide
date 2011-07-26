@@ -1,8 +1,7 @@
 Requirements
 ============
 
-We have created a `**Server
-Wizard** <http://expressionengine.com/files/ee_server_wizard.zip>`_ that
+We have created a `Server Wizard <http://expressionengine.com/files/ee_server_wizard.zip>`_ that
 will verify whether your server is compatible with ExpressionEngine. To
 use the Wizard:
 
@@ -72,6 +71,7 @@ to be able to use them you will need to meet their requirements.
 
 Notes
 -----
+|
 
 Apache Server
 ~~~~~~~~~~~~~
