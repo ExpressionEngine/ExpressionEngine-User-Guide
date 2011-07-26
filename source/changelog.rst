@@ -1100,9 +1100,7 @@ Build 20100121 (initial release)
 -  Added additional XML validation into member import (per #9669).
 -  Added a language key into communicate for "View Previously Sent Email" and "Add" in the Nav Menu (bug #10739).
 -  Removed unneeded "files" tool from the admin sidebar of publish (#9985).
--  Reverted an earlier bugfix that was creating more problems than it fixed:
-       Fixed a bug with conditionals that would result in a PHP error when a variable used does not exist, but part of that variable's name does, e.g. foo\_bar is not a valid variable, but foo is.
-
+-  Reverted an earlier bugfix that was creating more problems than it fixed ("Fixed a bug with conditionals that would result in a PHP error when a variable used does not exist, but part of that variable's name does, e.g. foo\_bar is not a valid variable, but foo is.")
 -  Changed the behaviour of url\_title to mimic EE1, where it will be automatically inserted if inserted blank for a new entry (#10889 \| #10644).
 -  Fixed some code that was incompatible with PHP4 in the Channel SAEF, Moblog, and MetaWeblog API modules. This also resolves an issue with these modules not working with the Trial version.
 -  Fixed a bug where adding an HTML button would result in 404 error.
