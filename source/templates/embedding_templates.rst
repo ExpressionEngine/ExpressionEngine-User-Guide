@@ -36,11 +36,17 @@ Since {embed=""} tags are processed after all of the other tags of the
 original template are processed, this means you can set these parameters
 with other variables too::
 
-	{exp:channel:entries channel="default_site" limit="1"}     {embed="site/export" the_id="{entry_id}"}     {/exp:channel:entries}
+	{exp:channel:entries channel="default_site" limit="1"}
+		{embed="site/export" the_id="{entry_id}"}
+	{/exp:channel:entries}
 
 You may also use embed variables in conditionals::
 
-	{if embed:dog_name == "Shadow"}         My dog's name is {embed:dog_name}.         {if:else}         {embed:dog_name} will never be as cool as Shadow.         {/if}
+	{if embed:dog_name == "Shadow"}
+		My dog's name is {embed:dog_name}.
+	{if:else}
+		{embed:dog_name} will never be as cool as Shadow.
+	{/if}
 
 How to choose between an Embedded Template and a Snippet
 --------------------------------------------------------
