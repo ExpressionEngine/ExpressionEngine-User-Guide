@@ -23,8 +23,7 @@ you had put the expanded text into the template itself::
 
 	{entry_date format="%m-%d-%Y"}
 
-What is the difference between a Snippet and a User-defined Global
-Variable?
+What is the difference between a Snippet and a User-defined Global Variable?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Snippets are expanded at a very early stage on each template, making it
@@ -58,4 +57,8 @@ can be private to a particular site, or shared between all sites. To
 easily identify the difference when reading your templates, consider
 prefixing your Snippet names with the site's short name, or "global"::
 
-	{ellislab_date_formatting} {codeigniter_date_formatting} {global_date_formatting}
+	{ellislab_date_formatting}
+	
+	{codeigniter_date_formatting}
+	
+	{global_date_formatting}
