@@ -28,4 +28,14 @@ A common usage for preload replacements is to hold the Channel short
 name(s), to save you from repeatedly typing them into different tags
 within the same template. ::
 
-	                      {preload_replace:channels="news|reviews"}                  {exp:channel:category_heading channel="{channels}"}     <h1>{category_name}</h1>     {if category_description != ""}<p>{category_description}</p>{/if}         {/exp:channel:category_heading}                  {exp:channel:entries channel="{channels}" limit="10"}     <h2>{title}</h2>     {body}         {/exp:channel:entries}
+	{preload_replace:channels="news|reviews"}
+	
+	{exp:channel:category_heading channel="{channels}"}
+		<h1>{category_name}</h1>
+		{if category_description != ""}<p>{category_description}</p>{/if}
+	{/exp:channel:category_heading}
+	
+	{exp:channel:entries channel="{channels}" limit="10"}
+		<h2>{title}</h2>
+		{body}
+	{/exp:channel:entries}
