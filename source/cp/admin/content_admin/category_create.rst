@@ -1,9 +1,12 @@
 Create a New Category
 =====================
 
-Control Panel Location: Admin > Channel Administration > Category
-Management > Create a New Category
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Categories --> Create a New Category`
+
 |Create a New Category|
+
 Category Name
 ~~~~~~~~~~~~~
 

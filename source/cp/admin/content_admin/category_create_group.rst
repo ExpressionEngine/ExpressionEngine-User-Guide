@@ -1,12 +1,15 @@
 Create a New Category Group
 ===========================
 
-Control Panel Location: Admin > Channel Administration > Categories >
-Create a New Category Group
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Categories --> Create a New Category Group`
+
 This page permits you to create a new category group. The name must be
 unique, but spaces are allowed.
 
 |Create a New Category Group|
+
 Name of category group
 ----------------------
 
