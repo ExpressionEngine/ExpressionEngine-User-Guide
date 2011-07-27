@@ -345,3 +345,4 @@ Maximum Size (in Kilobytes) of Signature Image
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The maximum file size allowed for user-uploaded signature images.
+

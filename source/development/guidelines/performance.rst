@@ -61,6 +61,21 @@ Avoid Unnecessary String Replacements
    loops that do not match, this method can approach 100% greater
    efficiency.
 
+Use sprintf instead of str_replace
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+	When you need to add one or more variables to an existing string (e.g. 
+	lang values), make sure to use `sprintf <http://php.net/sprintf>`_ instead of str_replace.
+
+::
+
+	INCORRECT:
+	str_replace('%s', $channel, 'Currently editing the %s channel.')
+
+	CORRECT:
+	sprintf('Currently editing the %s channel.', $channel)
+	sprintf('%s is currently editing the %s channel.', $member_name, $channel)
+
 Smart Substring Matching
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -72,7 +87,15 @@ Smart Substring Matching
 
 ::
 
-	INCORRECT: if (substr($str, 0, 3) == 'foo') if (substr(strtolower($str), 0, 3) == 'foo') if (preg_match('/^foo/', $str))         // no need for regex match for this type of comparison if (ereg('^foo', $str))             // AAAAAH!  Never ever use ereg(), remember?  CORRECT: if (strncmp($str, 'foo', 3) == 0) if (strncasecmp($str, 'foo', 3) == 0)
+	INCORRECT: 
+	if (substr($str, 0, 3) == 'foo') 
+	if (substr(strtolower($str), 0, 3) == 'foo') 
+	if (preg_match('/^foo/', $str))         // no need for regex match for this type of comparison
+	if (ereg('^foo', $str))             // AAAAAH!  Never ever use ereg(), remember?  
+	
+	CORRECT:
+	if (strncmp($str, 'foo', 3) == 0)
+	if (strncasecmp($str, 'foo', 3) == 0)
 
    `strncmp() <http://us3.php.net/manual/en/function.strncmp.php>`_ and
    `strncasecmp() <http://us3.php.net/manual/en/function.strcasecmp.php>`_

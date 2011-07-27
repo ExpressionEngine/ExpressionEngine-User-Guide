@@ -234,6 +234,18 @@ and Admins might want it gone
 
 	$config['remove_close_all_button'] = 'y';
 
+remove\_unparsed\_vars
+~~~~~~~~~~~~~~~~~~~~~~
+
+**Value:** y/n
+
+Prevents the stripping of unparsed ExpressionEngine variables in
+templates when Debug is set to 0. This can be useful to ensure that the
+Template Parser does not accidentally remove Javascript.
+
+::
+	$config['remove_unparsed_vars'] = 'n';
+
 smart\_static\_parsing
 ~~~~~~~~~~~~~~~~~~~~~~
 
