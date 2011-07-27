@@ -1,7 +1,6 @@
 Add-ons
 =======
 
-Control Panel Location: Add-Ons
 The Add-Ons section in the Control Panel provides access to most of the
 administration aspects of the system.
 
