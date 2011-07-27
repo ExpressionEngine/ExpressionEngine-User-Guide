@@ -1,7 +1,10 @@
 Accessories Manager
 ===================
 
-Control Panel Location: Add-Ons > Accessories
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Add-ons --> Accessories`
+
 The Accessories Manager page of the Control Panel allows you to install
 and manage access to Accessories. Accessories populate tabs in the
 control panel, allowing you to display additional information to users.
