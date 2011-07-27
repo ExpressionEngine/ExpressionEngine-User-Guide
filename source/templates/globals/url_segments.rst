@@ -8,12 +8,7 @@ segments::
 
 	http://example.com/index.php/products/shirts/
 
-products is Segment 1 and shirts is segment 2
-
-If needed, you could access the *values* of either of those segments
-using these variables in your templates:
-
-{segment\_1} or {segment\_2}.
+**products** is Segment 1 and **shirts** is Segment 2.
 
 Up to 9 URL segments can be accessed using the following variables::
 
@@ -37,7 +32,10 @@ The Template Groups name is "company" and the Template name is
 each person. Here's an example of a channel tag in which the URL title
 changes based on the 3rd segment::
 
-	{exp:channel:entries  url_title="{segment_3}"}     <h1>{title}</h1>     <p>{body}</p> {/exp:channel:entries}
+	{exp:channel:entries  url_title="{segment_3}"}
+		<h1>{title}</h1>
+		<p>{body}</p>
+	{/exp:channel:entries}
 
 Last Segment
 ------------
@@ -45,15 +43,13 @@ Last Segment
 The {last\_segment} global variable gives you the ability to determine
 the last segment of your URL when the number of URI segments is unknown.
 
-http://example.com/index.php/company/
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``http://example.com/index.php/company/``
 
 ::
 
 	{if last_segment == 'joe'}     Hey Joe, where you goin' with that? {/if}
 
-http://example.com/index.php/company/employees/joe
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+``http://example.com/index.php/company/employees/joe``
 
 ::
 
