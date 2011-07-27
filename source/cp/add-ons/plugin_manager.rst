@@ -6,6 +6,7 @@ The Plugin Manager page of the Control Panel allows you to view
 information about your installed plugins.
 
 |Plugin Manager|
+
 Requirements
 ~~~~~~~~~~~~
 
