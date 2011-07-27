@@ -1,13 +1,17 @@
 Extensions Manager
 ==================
 
-Control Panel Location: Add-ons > Extensions
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Add-ons --> Extensions`
+
 The Extensions Manager page of the Control Panel allows you to install
 and manage Extensions, which are small scripts that expand the core
 functionality of ExpressionEngine without hacking any of the
 ExpressionEngine files.
 
 |Extensions Manager|
+
 As Extensions are calling code within the ExpressionEngine code there is
 a chance that an extension will interfere with how your site is working.
 If you are unsure of which extension might be causing a problem you can
