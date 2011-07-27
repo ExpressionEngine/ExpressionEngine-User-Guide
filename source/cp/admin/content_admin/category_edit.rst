@@ -1,13 +1,14 @@
 Add/Edit Categories
 ===================
 
-Control Panel Location: Admin > Channel Administration > Category
-Management > Add/Edit Categories
-|Edit Categories|
-This screen lists the existing categories, showing the hierarchical
-relationship between the categories.
+.. rst-class:: cp-path
 
-You may also `Add New Categories <category_create.html>`_ to the group
+**Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Categories --> Add/Edit Categories`
+
+|Edit Categories|
+
+This screen lists the existing categories, showing the hierarchical
+relationship between the categories. You may also `Add New Categories <category_create.html>`_ to the group
 or to edit existing categories.
 
 ID
@@ -42,6 +43,7 @@ Master Sort Order
 ~~~~~~~~~~~~~~~~~
 
 |Sort Order|
+
 This preference has two setting options:
 
 #. **Alphabetical**: The entries will be sorted alphabetically based on
