@@ -60,12 +60,20 @@ Else and Elseif
 You can use two additional control structures to help tailor your
 results::
 
-	{if:else} ``{if:elseif}``
+	{if:elseif}
 
+	{if:else}
+	
 These work similar to standard PHP else and elseif constructs. Here is
 an example::
 
-	{if username == "joe"}          <h1>Hey, Joe! Where were you Tuesday?</h1>          {if:elseif username == "bob"}          <h1>Hey, Bob! Thanks for the tickets!</h1>          {if:else}          <h1>Welcome to our site.</h1>          {/if}
+	{if username == "joe"}
+		<h1>Hey, Joe! Where were you Tuesday?</h1>
+	{if:elseif username == "bob"}
+		<h1>Hey, Bob! Thanks for the tickets!</h1>
+	{if:else}
+		<h1>Welcome to our site.</h1>
+	{/if}
 
 In the above example, if the currently logged in user has the username
 of "joe" he receives the first message. If not, EE evaluates the second
@@ -273,7 +281,11 @@ a channel entries tag, which processes its own member information, it is
 necessary to use an alternative syntax. All of the member variables may
 be used in conditionals with the addition of the prefix "logged\_in\_". ::
 
-	{exp:channel:entries channel="default_site"}     {if logged_in_member_id == author_id}         <p>You wrote this entry!</p>     {/if} {/exp:channel:entries}
+	{exp:channel:entries channel="default_site"}
+		{if logged_in_member_id == author_id}
+			<p>You wrote this entry!</p>
+		{/if}
+	{/exp:channel:entries}
 
 A list of the available member variables that utilize this alternate
 syntax follows:
