@@ -3,9 +3,6 @@ Standard Global Variables
 
 These Global Variables can be used anywhere within your Templates.
 
--  `{template\_edit\_date format="%Y %m %d
-   %H:%i:%s"} <#var_template_edit_date>`_
-
 Please note that there is an `alternative syntax <#alternative_syntax>`_
 for member variables that may be used in situations where an naming
 conflict with a module's variables may occur.
@@ -296,8 +293,8 @@ site\_url
 This variable will be substituted with your site URL as defined under
 Admin > General Configuration.
 
-template\_edit\_date=""
-~~~~~~~~~~~~~~~~~~~~~~~
+template\_edit\_date
+~~~~~~~~~~~~~~~~~~~~
 
 This variable displays the localized time for when the template was last
 updated. As with other date variables, you will use the standard `date
@@ -357,7 +354,7 @@ webmaster\_email
 
 	{webmaster_email}
 
-``{encode="{webmaster_email}" title="Contact Us"}``
+	{encode="{webmaster_email}" title="Contact Us"}
 
 The email address for the site, as specified in `Email
 Configuration <../../cp/admin/system_admin/email_configuration.html>`_.
@@ -380,7 +377,10 @@ already parse their own member information, such as the channel entries
 tag, it is necessary to use an alternative syntax. All of the member
 variables may be used with the addition of the prefix "logged\_in\_". ::
 
-	{exp:channel:entries channel="default_site"}         This article was written by: {screen_name}<br />         The currently logged in user is: {logged_in_screen_name}     {/exp:channel:entries}
+	{exp:channel:entries channel="default_site"}
+		This article was written by: {screen_name}<br />
+		The currently logged in user is: {logged_in_screen_name}
+	{/exp:channel:entries}
 
 A list of the available member variables that utilize this alternate
 syntax follows:
