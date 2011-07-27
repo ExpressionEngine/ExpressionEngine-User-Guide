@@ -2,8 +2,7 @@ Using Plugins
 =============
 
 ExpressionEngine is designed so that features can be added through the
-use of Plugins. The `**ExpressionEngine
-Plugins** <http://expressionengine.com/downloads/addons/category/plugins/>`_
+use of Plugins. The `ExpressionEngine Plugins <http://expressionengine.com/downloads/addons/category/plugins/>`_
 site contains a list of all available first-party plugins, as well as
 installation and usage instructions for each one. It is important to
 review the notes for the specific plugin you wish to use.
@@ -15,15 +14,10 @@ Follow these steps to install a plugin:
 
 #. Download the Plugin to your local computer. You'll usually need to
    unzip the file.
-#. Log into your server via FTP and browse to your
-   system/expressionengine/third\_party/ directory.
-#. Upload the new Plugin **folder**. Be sure to upload in ASCII ("text")
-   mode.
+#. Upload the Plugin's **folder** to your
+   **system/expressionengine/third\_party/** folder.
 
-**Tip:** Plugins must reside within the
-system/expressionengine/third\_party folder inside a folder named as per
-the plugin itself. For instance, the No Follow plugin would be placed
-like so:
+For instance, the No Follow plugin would be placed like so:
 
 -  system/expressionengine/third\_party/no\_follow/pi.no\_follow.php
 
@@ -41,7 +35,9 @@ Basic Usage
 Within your templates you'll typically wrap the item you want affected
 by the plugin::
 
-	{exp:xml_encode} some content {/exp:xml_encode}
+	{exp:xml_encode}
+		some content
+	{/exp:xml_encode}
 
 In the above example, the content would be XML Encoded.
 
@@ -51,7 +47,11 @@ Nested Plugins
 It is possible to nest Plugins in order for content to be affected by
 more than one plugin. For example, you can do this::
 
-	{exp:word_limit total="35"}    {exp:xml_encode}        some content    {/exp:xml_encode} {/exp:word_limit}
+	{exp:word_limit total="35"}
+		{exp:xml_encode}
+			some content
+		{/exp:xml_encode}
+	{/exp:word_limit}
 
 By default, ExpressionEngine will process the innermost Plugin first,
 then the next Plugin, and so on until all the plugins wrapping a given
@@ -73,7 +73,14 @@ Examples
 
 Here are some examples to help illustrate the parsing order. ::
 
-	{exp:magpie url="http://some-site.com" parse="inward"}    {items}       <a href="{link}">{title}</a><br />       {exp:word_limit total="20"}{content}{/exp:word_limit}<br />    {/items} {/exp:magpie}
+	{exp:magpie url="http://some-site.com" parse="inward"}
+		{items}
+			<a href="{link}">{title}</a><br />
+			{exp:word_limit total="20"}
+				{content}
+			{/exp:word_limit}<br />
+		{/items}
+	{/exp:magpie}
 
 With the above, the "magpie" Plugin will be parsed first. This will
 allow the content of the {content} variable to be available to the
@@ -82,7 +89,19 @@ other, nested Plugin: "word\_limit".
 Here is a much more complicated example that demonstrates both parsing
 orders in action. ::
 
-	{exp:magpie url="http://some-site.com" limit="15" refresh="720" parse="inward"} <ul>    {items}       <li><a href="{link}">{title}</a><br />          {exp:word_limit total="35"}             {exp:xml_encode}                {content}             {/exp:xml_encode}          {/exp:word_limit}       </li>    {/items} </ul> {/exp:magpie}
+	{exp:magpie url="http://some-site.com" limit="15" refresh="720" parse="inward"}
+		<ul>
+			{items}
+				<li><a href="{link}">{title}</a><br />
+					{exp:word_limit total="35"}
+						{exp:xml_encode}
+							{content}
+						{/exp:xml_encode}
+					{/exp:word_limit}
+				</li>
+			{/items}
+		</ul>
+	{/exp:magpie}
 
 The outer "magpie" Plugin has the parameter set to parse inward, so it
 is parsed first. This makes the {content} variable's content available
