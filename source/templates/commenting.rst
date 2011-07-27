@@ -17,10 +17,16 @@ comments, just intead of the greater than and lesser than symbols, you
 use the opening and closing curly quote brackets, like with other EE
 Tags::
 
-	     {!--      Your comments will go in here.     You can even span it across multiple lines.     --}
+	     {!--      Your comments will go in here.
+	     You can even span it across multiple lines.     --}
 
 Any ExpressionEngine code that you put in these comments will NOT be
 rendered, so you can comment out old code or perhaps reference tags for
 later::
 
-	     {!--      {exp:channel:entries channel="recipies"}     {title}     {/exp:channel:entries}          Once the channel is set up and the old data inserted, use this below.     --}
+	{!--	Once the channel is set up and the old data inserted, use this below.
+
+		{exp:channel:entries channel="recipies"}
+		    	{title}
+	     	{/exp:channel:entries}
+	 --}
