@@ -1,11 +1,12 @@
 Modules Manager
 ===============
 
-Modules extend ExpressionEngine's capability
-Control Panel Location: Add-ons > Modules
-The Modules page is where you can see your currently installed Modules.
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Add-ons --> Modules`
 
 |Modules|
+
 Integrating the modules into your web pages is covered in detail in the
 `Modules and Tags <../../index.html#modules_docs>`_ area of the User
 Guide.
