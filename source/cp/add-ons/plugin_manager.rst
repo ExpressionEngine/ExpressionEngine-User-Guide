@@ -1,27 +1,15 @@
+==============
 Plugin Manager
 ==============
 
-Control Panel Location: Add-ons > Plugins
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Add-ons --> Plugins`
+
 The Plugin Manager page of the Control Panel allows you to view
 information about your installed plugins.
 
 |Plugin Manager|
-
-Requirements
-~~~~~~~~~~~~
-
-In order to take advantage of all the features available in the Plugin
-Manager, your system will need to meet the following requirements:
-
--  The "Magpie RSS Parser" Plugin must be installed. Normally it is
-   included with ExpressionEngine by default.
--  You must have the Pclzip.lib file in your
-   system/expressionengine/libraries folder. Normally it is included
-   with ExpressionEngine by default.
--  Your system/expressionengine/third\_party folder must be writable by
-   ExpressionEngine. This means it should be set to 777 permissions (for
-   UNIX-based servers) or otherwise made writable by your webserver (for
-   Windows-based servers).
 
 Currently Installed Plugins
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
