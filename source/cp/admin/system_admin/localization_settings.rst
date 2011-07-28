@@ -1,8 +1,10 @@
 Localization Settings
 =====================
 
-Control Panel Location: Admin > System Preferences > Localization
-Settings
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Localization Settings`
+
 This section of the Control Panel allows you to define the **default**
 localization settings for your website. Here you define things such as
 the time zone, time formatting, and Control Panel language.
@@ -43,8 +45,7 @@ Here you can specify whether the server is currently observing Daylight
 Saving Time. If and when your server changes its observance, you will
 need to update this setting.
 
-Honor the Daylight Saving Time setting associated with each channel
-entry?
+Honor the Daylight Saving Time setting associated with each channel entry?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Typically you will set this preference to yes. Every time you submit a
