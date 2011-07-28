@@ -1,8 +1,10 @@
 Global Channel Preferences
 ==========================
 
-Control Panel Location: Admin > Channel Administration > Global Channel
-Preferences
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Global Channel Preferences`
+
 This section of the Control Panel sets global preferences for your
 channels. The following preferences are available:
 
