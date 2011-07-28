@@ -1,8 +1,10 @@
 Image Resizing Preferences
 ==========================
 
-Control Panel Location: Admin > System Preferences > Image Resizing
-Preferences
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> System Administration --> Image Resizing Preferences`
+
 This section of the Control Panel allows you to define preferences for
 image resizing, such as creating thumbnails or resizing uploaded images.
 
@@ -13,10 +15,10 @@ This is where you indicate which resizing protocol to use. You may need
 to contact your Host or server admin to determine which protocols are
 installed and available on your server. The options are:
 
-#. `GD <http://www.boutell.com/gd/>`_
-#. `GD 2 <http://www.boutell.com/gd/>`_
-#. `ImageMagick <http://www.imagemagick.org/>`_
-#. `NetPBM <http://netpbm.sourceforge.net/>`_
+- `GD <http://www.boutell.com/gd/>`_
+- `GD 2 <http://www.boutell.com/gd/>`_
+- `ImageMagick <http://www.imagemagick.org/>`_
+- `NetPBM <http://netpbm.sourceforge.net/>`_
 
 Image Converter Path
 ~~~~~~~~~~~~~~~~~~~~
