@@ -1,9 +1,12 @@
 Channel Fields - Add/Edit
 =========================
 
-Control Panel Location: Admin > Channel Administration > Channel Fields
-> Add/Edit
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Channel Fields`
+
 |Channel Field Edit|
+
 This page lets you create or edit fields, which can be one of five
 types, described below.
 
