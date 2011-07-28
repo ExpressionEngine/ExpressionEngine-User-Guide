@@ -1,17 +1,19 @@
-Configuration File Editor
-=========================
+Config File Editor
+==================
 
-Control Panel Location: Admin > System Administration > Config File
-Editor
-The Config Editor page of the Control Panel allows you to edit items in
-the config.php page that would normally only be available via
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> System Administration --> Config File Editor`
+
+The Config File Editor allows you to edit items in
+the config.php file that would normally only be available via
 hand-editing.
 
 Before you begin editing or adding values, it is strongly recommended
-that you back up your config file. An incorrectly set value here could
+that you back up your config.php file. An incorrectly set value here could
 cause ExpressionEngine to not function as desired.
 
-The Config Editor screen shows a list of all the variables currently
+The Config File Editor screen shows a list of all the variables currently
 used in the file, presented alphabetically.
 
 To add a new value, enter the name in the textfield on the bottom of the
