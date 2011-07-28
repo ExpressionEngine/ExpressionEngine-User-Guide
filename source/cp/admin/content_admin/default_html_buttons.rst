@@ -1,8 +1,10 @@
 Default HTML Buttons
 ====================
 
-Control Panel Location: Admin > Content Administration > Default HTML
-Buttons
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Content Administration --> Default HTML Buttons`
+
 This section of the Control Panel allows you to define your default
 *HTML buttons*. HTML buttons appear in the PUBLISH page and allow you to
 add basic HTML to your entries.
@@ -12,6 +14,7 @@ buttons via their My Account page. These default buttons are **only**
 used with members that have not defined their own.
 
 |HTML Buttons|
+
 Adding Buttons
 --------------
 
