@@ -89,7 +89,11 @@ A variable represents a piece of information. This variable, for
 instance, might show the title of a channel entry. Variables are used
 like this within tag pairs::
 
-	{exp:channel:entries}  <h1>{title}</h1>  <p>{body}</p>  <div class="author">Posted by {author}</div>  {/exp:channel:entries}
+	{exp:channel:entries}
+		<h1>{title}</h1>
+		<p>{body}</p>
+		<div class="author">Posted by {author}</div>
+	{/exp:channel:entries}
 
 Parameters
 ----------
@@ -103,7 +107,7 @@ Parameters are placed inside the opening tag, like this::
 
 A typical tag with multiple parameters might look like this::
 
-	{exp:channel:entries channel="news"     orderby="date"        limit="10"}
+	{exp:channel:entries channel="news" orderby="date" limit="10"}
 
 The above tag will show 10 channel entries written in the "news"
 channel. They will be displayed in descending order.

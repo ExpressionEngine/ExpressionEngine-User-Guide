@@ -1,8 +1,7 @@
 Summary
 =======
 
-This graphic illustrates the pieces of ExpressionEngine and how they fit
-together.
+This graphic illustrates the pieces of ExpressionEngine and how they fit together.
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 |ExpressionEngine Overview|
@@ -18,8 +17,7 @@ together.
 -  A Template Group contains a collection of Templates. It is a
    container similar to a *folder*.
 
-Next: `Getting started with ExpressionEngine
-2.0 <../getting_started/index.html>`_
+Next: `Getting started with ExpressionEngine 2.0 <../getting_started/index.html>`_
 ==================================================================================
 
 .. |ExpressionEngine Overview| image:: ../images/overview.gif
