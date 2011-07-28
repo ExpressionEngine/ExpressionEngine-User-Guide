@@ -1,11 +1,14 @@
 Add/Edit Statuses
 =================
 
-Control Panel Location: Admin > Channel Administration > Statuses >
-Add/Edit Statuses
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Statuses`
+
 This page allows you to add new statuses or edit existing statuses.
 
 |Add/Edit Statuses|
+
 Status Name
 ~~~~~~~~~~~
 
