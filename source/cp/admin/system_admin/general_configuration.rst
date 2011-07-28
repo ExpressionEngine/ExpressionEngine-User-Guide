@@ -1,10 +1,14 @@
 General Configuration
 =====================
 
-Control Panel Location: Admin > General Configuration
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> General Configuration`
+
 This section of the Control Panel allows you to define the basic
-settings for your website. These are general settings that apply
-throughout the website/system.
+settings of your site. If you are using the `Multiple Site
+Manager <../../sites/index.html>`_, note that these settings are
+per-site.
 
 Is system on?
 ~~~~~~~~~~~~~
