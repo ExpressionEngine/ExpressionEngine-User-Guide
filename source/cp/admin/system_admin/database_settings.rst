@@ -1,7 +1,10 @@
 Database Settings
 =================
 
-Control Panel Location: Admin > System Preferences > Database Settings
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> System Administration --> Database Settings`
+
 This section of the Control Panel allows you to define some basic
 settings for your database.
 
