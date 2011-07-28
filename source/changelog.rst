@@ -6,6 +6,25 @@ ExpressionEngine 2.x Change Log
 -  `ExpressionEngine 1.x Change
    Log <http://expressionengine.com/legacy_docs/changelog.html>`_
 
+Version 2.2.2
+-------------
+
+Release Date: July 28, 2011
+
+ExpressionEngine version 2.2.2 is a maintenance update recommended only for
+membership based sites who require administrator approval for new member
+accounts.  Version 2.2.2 fixes a critical bug on these sites where Pending
+members could log in and have similar permissions to members in the default
+Member group.
+
+-	Removed accordions from Member Groups, Member Preferences and Channel Preferences.
+-	Fixed a bug (#16143) where a PHP error occurred on the Edit Member Group page when MSM was active.
+-	Fixed a bug (#16144) where an incorrect error message appeared on unsuccessful authentication on the front end.
+-	Fixed a bug (#16264) where Pending members were allowed to log in.
+-	Fixed a bug where groups in an MSM site that didn't have CP access to the main site couldn't login to the CP of any other sites.
+-	Fixed a bug where syncing a directory with files that have spaces in their names would break links to existing File fields and textarea fields.
+
+	
 Version 2.2.1
 -------------
 
