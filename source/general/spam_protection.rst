@@ -51,8 +51,7 @@ This setting defines the amount of time that must lapse between comment
 postings. A malicious user will have to wait until the time has lapsed
 before being able to post again.
 
-The setting is located at: Admin > Channel Management > Edit Preferences
-> Comment Time Interval
+The setting is located at: :menuselection:`Admin --> Channel Administration --> Channels --> Edit Preferences`
 
 Rank Denial
 -----------
@@ -68,8 +67,7 @@ altering all links submitted by users so that they point to an
 intermediary "redirect page" at your site first, before being sent to
 the target destination.
 
-The setting is located at: Admin > Security and Session Preferences >
-Apply Rank Denial to User-submitted Links?
+The setting is located at: :menuselection:`Admin --> Security and Privacy --> Security and Sessions`
 
 Secure Form Mode
 ----------------
@@ -80,8 +78,7 @@ submission is only allowed when a user manually loads a page and submits
 the form from your site. And once the form data is received, the user
 has to manually reload the page before they can submit again.
 
-The setting is located at: Admin > Security and Session Preferences >
-Process all forms in secure mode
+The setting is located at: :menuselection:`Admin --> Security and Privacy --> Security and Sessions`
 
 Deny Duplicate Data
 -------------------
@@ -90,8 +87,7 @@ The "Deny Duplicate Data" feature prevents a comment from being accepted
 if an identical one already exists in your database. A malicious person
 can't submit the same information more than once.
 
-The setting is located at: Admin > Security and Session Preferences >
-Deny Duplicate Data
+The setting is located at: :menuselection:`Admin --> Security and Privacy --> Security and Sessions`
 
 Site Membership
 ---------------

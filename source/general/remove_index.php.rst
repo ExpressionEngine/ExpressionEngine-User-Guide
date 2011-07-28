@@ -32,7 +32,18 @@ show **all** files, including hidden ones.
 
 Then add the following code to this newly created .htaccess file::
 
-	<IfModule mod_rewrite.c>     RewriteEngine On     # Removes index.php     RewriteCond $1 !\.(gif|jpe?g|png)$ [NC]     RewriteCond %{REQUEST_FILENAME} !-f     RewriteCond %{REQUEST_FILENAME} !-d     RewriteRule ^(.*)$ /index.php/$1 [L]     # If 404s, "No Input File" or every URL returns the same thing     # make it /index.php?/$1 above (add the question mark) </IfModule>
+	<IfModule mod_rewrite.c>
+		RewriteEngine On
+
+		# Removes index.php
+		RewriteCond $1 !\.(gif|jpe?g|png)$ [NC]
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteRule ^(.*)$ /index.php/$1 [L]
+		
+		# If 404s, "No Input File" or every URL returns the same thing
+		# make it /index.php?/$1 above (add the question mark)
+	</IfModule>
 
 2. Update General Configuration
 -------------------------------

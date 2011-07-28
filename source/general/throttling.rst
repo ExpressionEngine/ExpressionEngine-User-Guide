@@ -15,11 +15,6 @@ particular site from being as susceptible.
 Throttling Preferences
 ----------------------
 
-ExpressionEngine's Throttling Preferences can be found in the control
-panel at this page:
-
-Admin > System Preferences > Throttling Configuration
-
 The preferences in the Throttling page enable you to set various
 parameters to control the threshold at which the feature kicks in, and
 the action that should be taken when the threshold is exceeded. Since
@@ -27,16 +22,18 @@ the throttling check happens very early on during ExpressionEngine's
 system initialization it can deal with DOS attacks before server
 resources are unduly used.
 
+The setting is located at: :menuselection:`Admin --> Security and Privacy --> Throttling Preferences`
+
 404 Pages
 ---------
 
 In addition to the Throttling feature, ExpressionEngine allows you to
 specify a particular Template to display in cases where the requested
-page does not exist. This preference is set in the control panel at:
+page does not exist.
 
-Templates > Global Template Preferences
+The setting is located at: :menuselection:`Design --> Templates --> Global Preferences`
 
-Note: The setting is a site-wide preference.
+**Note:** The setting is a site-wide preference.
 
 It is important to note that there are limitations when it comes to what
 will trigger this "404" type Template to display. **ExpressionEngine

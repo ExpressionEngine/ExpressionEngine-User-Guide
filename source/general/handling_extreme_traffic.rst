@@ -37,19 +37,41 @@ config.php file as follows:
 config.php Extreme Traffic Overrides
 ------------------------------------
 
+::
 
-$config['enable_online_user_tracking'] 
-    (y/n) - Corresponds to `Enable Online User Tracking? <../cp/admin/system_admin/tracking_preferences.html#enable_online_user_tracking>`_
-$config['enable_hit_tracking']
-    (y/n) - Corresponds to Enable Template Hit Tracking?  <../cp/admin/system_admin/tracking_preferences.html#enable_hit_tracking>`_
-$config['enable\_entry\_view\_tracking']
-    (y/n) - Corresponds to `Enable Channel Entry View Tracking? <../cp/admin/system_admin/tracking_preferences.html#enable_entry_view_tracking>`_
-$config['log\_referrers']
-    (y/n) - Corresponds to `Enable Referrer Logging? <../cp/admin/system_admin/tracking_preferences.html#log_referrers>`_
-$config['dynamic\_tracking\_disabling']
-    (numeric) - Corresponds to `Suspend ALL tracking when number of online visitors exceeds: <../cp/admin/system_admin/tracking_preferences.html#dynamic_tracking_disabling>`_
-$config['disable\_all\_tracking']
-    (y/n) - Emergency config.php only preference which when set to 'y' will disable all of the above. This is useful for server administrators who need a way to respond immediately to table locks during a traffic spike to keep the site running smoothly.
+	$config['enable_online_user_tracking']
+	
+(y/n) - Corresponds to `Enable Online User Tracking? <../cp/admin/system_admin/tracking_preferences.html#enable_online_user_tracking>`_
+
+::
+
+	$config['enable_hit_tracking']
+
+(y/n) - Corresponds to `Enable Template Hit Tracking? <../cp/admin/system_admin/tracking_preferences.html#enable_hit_tracking>`_
+
+::
+	
+	$config['enable\_entry\_view\_tracking']
+
+(y/n) - Corresponds to `Enable Channel Entry View Tracking? <../cp/admin/system_admin/tracking_preferences.html#enable_entry_view_tracking>`_
+
+::
+
+	$config['log\_referrers']
+
+(y/n) - Corresponds to `Enable Referrer Logging? <../cp/admin/system_admin/tracking_preferences.html#log_referrers>`_
+
+::
+
+	$config['dynamic\_tracking\_disabling']
+
+(numeric) - Corresponds to `Suspend ALL tracking when number of online visitors exceeds: <../cp/admin/system_admin/tracking_preferences.html#dynamic_tracking_disabling>`_
+
+::
+
+	$config['disable\_all\_tracking']
+
+(y/n) - Emergency config.php only preference which when set to 'y' will disable all of the above. This is useful for server administrators who need a way to respond immediately to table locks during a traffic spike to keep the site running smoothly.
 
 If you have public facing ExpressionEngine-generated forms, you may also
 find it beneficial to disable the `Secure Forms <spam_protection.html>`_

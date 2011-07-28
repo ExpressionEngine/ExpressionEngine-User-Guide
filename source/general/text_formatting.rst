@@ -46,36 +46,7 @@ Youll see a menu below each entry field with this option. You can also
 configure your Comment Preferences so that any comments will be
 formatted this way.
 
-Convert High ASCII to Entities
+None
 ------------------------------
 
-Due to the inherent limitations of the web only Low-ASCII characters can
-be shown reliably in web browsers. Low-ASCII values are the basic
-characters, numbers, and standard punctuation on your computer keyboard.
-
-If your text contains High-ASCII values, like accented characters, or if
-you copy your text from **Microsoft Word**, which uses High-ASCII values
-for quotes and other characters, then you run the risk that some
-characters will not be displayed correctly on your web pages.
-
-Furthermore, depending on a number of factors related to your server's
-character encoding support, when you submit High-ASCII values into your
-database they might not be recognized properly for storage.
-
-ExpressionEngine's Convert High ASCII to Entities feature will
-automatically convert these high-ASCII characters into their appropriate
-HTML character entity so that any web browser can display them
-correctly. For instance, the © character will be converted into its HTML
-entity (&#169;), which any web browser, regardless of its character
-encoding, will correctly display as a copyright symbol.
-
-**To enable this feature go to the following page in your Control
-Panel:**
-
-Admin > Channel Management > Global Channel Preferences
-
-Once enabled, whenever you submit new entries they will be processed.
-
-**Note:** The conversion happens when you submit entries, **not** at run
-time, so you'll need to edit/re-save any entries containing High-ASCII
-values for this feature to work.
+ExpressionEngine will use your text exactly as you have entered it.
