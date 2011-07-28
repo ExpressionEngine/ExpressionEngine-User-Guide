@@ -1,8 +1,10 @@
 Emoticon Preferences
 ====================
 
-Control Panel Location: Admin > System Preferences > Emoticon
-Preferences
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> System Administration --> Emoticon Preferences`
+
 This section of the Control Panel allows you to define preferences for
 your Emoticon module. Smileys are graphical representations of commonly
 used "emoticons", such as :-). When smileys are turned on, the system
