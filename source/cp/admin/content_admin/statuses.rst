@@ -1,8 +1,12 @@
 Statuses
 ========
 
-Control Panel Location: Admin > Channel Administration > Statuses
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Statuses`
+
 |Statuses|
+
 Statuses are markers that can be assigned to your entries in the PUBLISH
 page. The two default statuses are Open and Closed, but you can create
 others.
