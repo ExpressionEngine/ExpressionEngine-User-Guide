@@ -1,8 +1,10 @@
 Default Ping Servers
 ====================
 
-Control Panel Location: Admin > Channel Administration > Default Ping
-Servers
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Content Administration --> Default Ping Servers`
+
 This section of the Control Panel allows you to define your default
 *ping servers*. Ping servers are sites that allow you to send a "ping"
 to them to let them know that you've posted a new entry. Pings can be
@@ -15,6 +17,7 @@ ping servers via their My Account page. These default servers are
 **only** used with members that have not defined their own.
 
 |Ping Servers|
+
 Server Name
 ~~~~~~~~~~~
 
