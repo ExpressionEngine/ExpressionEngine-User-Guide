@@ -1,8 +1,10 @@
 Edit Preferences
 ================
 
-Control Panel Location: Admin > Channel Administration > Channel
-Management > Edit Preferences
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Channels`
+
 This screen allows you to edit the preferences and settings associated
 with the channel. They include General, Administrative, Channel Posting,
 and Comment Posting settings.
