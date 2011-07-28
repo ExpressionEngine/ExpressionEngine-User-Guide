@@ -1,8 +1,10 @@
 Tracking Preferences
 ====================
 
-Control Panel Location: Admin > System Preferences > Tracking
-Preferences
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Tracking Preferences`
+
 This section of the Control Panel allows you to define preferences for
 various tracking features of ExpressionEngine. Adjustments to these
 settings can help decrease resource usage if you are not utilizing the
