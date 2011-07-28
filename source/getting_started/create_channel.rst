@@ -1,18 +1,14 @@
-Introducing ExpressionEngine 2 - Channels
-=========================================
+Introducing ExpressionEngine 2: Channels
+========================================
 
-The Goal: Learn where to create Channels and make Channel Group
-Assignments
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-A Channel is where you will store the majority of your data. This can be
+Channels are where you will store the majority of your data. They can be
 used for any data type, including files, news articles, a catalog of
 books, or whatever you can imagine for it to hold.
 
 Create a Channel
 ----------------
 
-Go to Admin -> Channel Management
+Go to: :menuselection:`Admin --> Channel Administration --> Channels`
 
 .. figure:: ../images/ee2_cp_channel_management.png
    :align: center
@@ -43,8 +39,5 @@ this example
    :alt: EE2 CP Channel New Template Group
 
 Next: `Publish a New Entry <publish_new_entry.html>`_
-=====================================================
 
 Previous: `File Upload Preferences <create_file_upload_pref.html>`_
-===================================================================
-
