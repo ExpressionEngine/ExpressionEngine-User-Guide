@@ -1,7 +1,12 @@
 Create a New Channel
 ====================
 
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Channels`
+
 |Channel Create|
+
 Short Name
 ~~~~~~~~~~
 
