@@ -1,7 +1,10 @@
 Cookie Settings
 ===============
 
-Control Panel Location: Admin > System Preferences > Cookie Settings
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Cookie Settings`
+
 This section of the Control Panel allows you to define cookie settings
 for your website.
 
@@ -14,14 +17,15 @@ of people will want to set this to:
 .example.com
 
 Obviously you'll use your actual domain name instead of ".example.com".
-Note the period at the beginning as it is very important.
-
-Setting the cookie domain like this will allow the cookies to work
-regardless of whether people specify your URL with the www part or only
-the http:// part.
+Note the period at the beginning as it is very important. Setting the
+cookie domain like this will allow the cookies to work regardless of
+whether people specify your URL with the www part or only the
+``http://`` part.
 
 If you want to restrict your cookies to a single subdomain then you may
-set that here.
+set that here as well:
+
+.subdomain.example.com
 
 Cookie Path
 ~~~~~~~~~~~
