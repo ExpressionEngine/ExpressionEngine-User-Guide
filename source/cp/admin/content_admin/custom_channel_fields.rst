@@ -1,8 +1,12 @@
 Channel Fields
 ==============
 
-Control Panel Location: Admin > Channel Administration > Channel Fields
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Channel Fields`
+
 |Channel Fields Overview|
+
 This section of the Control Panel lets you manage your Channel Field
 Groups.
 
