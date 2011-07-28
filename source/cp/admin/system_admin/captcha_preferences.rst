@@ -1,7 +1,10 @@
 Captcha Preferences
 ===================
 
-Control Panel Location: Admin > System Preferences > Captcha Preferences
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Captcha Preferences`
+
 This section of the Control Panel allows you to set
 `CAPTCHA <../../../general/captchas.html>`_ preferences for your
 website.
