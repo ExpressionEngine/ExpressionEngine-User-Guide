@@ -1,8 +1,10 @@
-Security and Session Preferences
-================================
+Security and Sessions
+=====================
 
-Control Panel Location: Admin > Security and Privacy > Security and
-Sessions
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Security and Sessions`
+
 This section of the Control Panel allows you to define the basic
 security-related settings for your website. These are security settings
 that apply throughout the website/system.
@@ -13,18 +15,18 @@ Control Panel Session Type
 This determines how sessions are handled for the Control Panel. You may
 use cookies, session IDs, or a combination. The available options are:
 
-#. **Cookies and session ID**: Both cookies and URL session ID
-   parameters are used to track the admin user. This is the default
-   setting, and is the most secure since it relies on two individual
-   cookies and a URL session ID.
-#. **Cookies only**: Only cookies are used to track the admin user. When
-   this setting is used a "remember me" checkbox will appear next to the
-   Control Panel login page, enabling users to stay permanently logged
-   in.
-#. **Session ID only**: Only URL session IDs are used to track the admin
-   user. This option should only be used if your desktop computer
-   prevents you from accepting cookies in the event you are behind a
-   firewall or due to some other technical issue.
+- **Cookies and session ID**: Both cookies and URL session ID
+  parameters are used to track the admin user. This is the default
+  setting, and is the most secure since it relies on two individual
+  cookies and a URL session ID.
+- **Cookies only**: Only cookies are used to track the admin user. When
+  this setting is used a "remember me" checkbox will appear next to the
+  Control Panel login page, enabling users to stay permanently logged
+  in.
+- **Session ID only**: Only URL session IDs are used to track the admin
+  user. This option should only be used if your desktop computer
+  prevents you from accepting cookies in the event you are behind a
+  firewall or due to some other technical issue.
 
 User Session Type
 ~~~~~~~~~~~~~~~~~
@@ -33,13 +35,13 @@ This determines how sessions for regular users on your website are
 handled. You may use cookies, session IDs, or a combination. The
 available options are:
 
-#. **Cookies and session ID**: Both cookies and URL session ID
-   parameters are used to track the user throughout their visit.
-#. **Cookies only**: Only cookies are used to track the user throughout
-   their visit. This is the default setting, and generally the best
-   option since it prevents URLs from showing session IDs.
-#. **Session ID only**: Only URL session IDs are used to track the user
-   throughout their visit.
+- **Cookies and session ID**: Both cookies and URL session ID
+  parameters are used to track the user throughout their visit.
+- **Cookies only**: Only cookies are used to track the user throughout
+  their visit. This is the default setting, and generally the best
+  option since it prevents URLs from showing session IDs.
+- **Session ID only**: Only URL session IDs are used to track the user
+  throughout their visit.
 
 Process Form Data in Secure Mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
