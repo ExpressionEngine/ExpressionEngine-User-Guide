@@ -1,8 +1,5 @@
-Introducing ExpressionEngine 2 - Step 2
-=======================================
-
-The Goal: Learn where to create Channel Fields
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Introducing ExpressionEngine 2: Channel Fields
+==============================================
 
 It is time to begin setting up the basic structure of the site. In
 ExpressionEngine, content is held within Channels that are made up of
@@ -11,7 +8,7 @@ the fields you define. These Channel Fields are held together in groups.
 Create a Channel Field Group
 ----------------------------
 
-Go to Admin > Channel Administration > Channel Fields
+Go to: :menuselection:`Admin --> Channel Administration --> Channel Fields`
 
 .. figure:: ../images/ee2_cp_custom_channel_fields.png
    :align: center
@@ -24,10 +21,8 @@ contain a set of channel fields.
    :align: center
    :alt: EE2 CP New Field Group
 
-**Note:** All group assignments will be made later in the tutorial.
-
-Add/Edit Channel Fields.
-------------------------
+Add/Edit Channel Fields
+-----------------------
 
 These will hold the actual content in your Channel Entries.
 
@@ -36,7 +31,7 @@ These will hold the actual content in your Channel Entries.
    :alt: EE2 CP Add Edit Channel Fields
 
 Create a New Channel Field with the Field Label of "Example Body" and
-the Field Name of "example\_body". Make this a textarea so it can hold
+the Field Name of "example\_body". Make this a **textarea** so that it can hold
 more content.
 
 .. figure:: ../images/ee2_cp_create_custom_field.png
@@ -47,8 +42,5 @@ more content.
 templates.
 
 Next: `Create a Category Group and Category <create_categories.html>`_
-======================================================================
 
 Prev: `Logging In <logging_in.html>`_
-=====================================
-
