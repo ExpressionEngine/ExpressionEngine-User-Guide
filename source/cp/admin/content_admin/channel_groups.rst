@@ -1,11 +1,14 @@
-Channel Groups
-==============
+Edit Group Assignments
+======================
 
-Control Panel Location: Admin > Channel Administration > Channel
-Management > Channel Groups
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Channels`
+
 This screen allows you to edit the groups associated with the channel.
 
 |Channel Group Prefs|
+
 Category Group
 ~~~~~~~~~~~~~~
 
