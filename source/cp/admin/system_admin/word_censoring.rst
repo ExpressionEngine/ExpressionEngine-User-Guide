@@ -1,8 +1,10 @@
-Word Censoring Preferences
-==========================
+Word Censoring
+==============
 
-Control Panel Location: Admin > System Preferences > Word Censoring
-Preferences
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Word Censoring`
+
 This section of the Control Panel allows you to enable word censoring.
 It is also where you define the list of censored words.
 
@@ -17,11 +19,11 @@ Censoring Replacement Word
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You may optionally specify a word or phrase to be used when replacing
-censored words. For example, if you set tisk tisk as your replacement
-word, and "shucks" is in your censored list, then anytime shucks is used
-it will be replaced with tisk tisk. If you do not set this preference, a
+censored words. For example, if you set "tisk tisk" as your replacement
+word, and "shucks" is in your censored list, then anytime "shucks" is used
+it will be replaced with "tisk tisk". If you do not set this preference, a
 pound symbol will be used for each character that is censored, so
-"shucks" would be converted to ######
+"shucks" would be converted to "######".
 
 Censored Words
 ~~~~~~~~~~~~~~
