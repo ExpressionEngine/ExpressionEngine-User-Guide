@@ -1,7 +1,10 @@
 Email Configuration
 ===================
 
-Control Panel Location: Admin > Email Configuration
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Email Configuration`
+
 This section of the Control Panel allows an administrator to set the
 preferences relating to how email is sent within an ExpressionEngine
 site. These settings affect not only how emails are sent via the
