@@ -1,9 +1,14 @@
 Category Fields - Add/Edit
 ==========================
 
-|Add or Edit Category Field|
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Categories --> Add/Edit`
+
 This page lets you create or edit fields, which can be one of three
 types, described below.
+
+|Add or Edit Category Field|
 
 Field Name
 ~~~~~~~~~~
