@@ -1,11 +1,13 @@
-Introducing ExpressionEngine 2 - Output and View Content
-========================================================
+Introducing ExpressionEngine 2: Output and View Content
+=======================================================
 
-The Goal: Learn where to modify templates to output your content..
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The pages your site displays are controlled by ExpressionEngine *templates*.
+Templates contain your site's HTML markup interspersed with EE tags
+that dynamically output content (typically, from your Channel Entries).
 
-The templates are where the design of your site is created and where EE
-tags go to output your previously-entered content.
+Templates are contained in groups, and the name of your groups and 
+templates help determine your site's URL structure. See
+`ExpressionEngine URLs <../general/urls.html>`_ for more details.
 
 Create a New Template Group
 ---------------------------
@@ -16,11 +18,8 @@ Click Create a New Template Group
    :align: center
    :alt: EE2 CP New Template Group
 
-Name the new template group example. Tick the box for Make the index
+Name the new Template Group "example". Tick the box for Make the index
 template in this group your site's home page?
-
-**Note:** Template Groups are used to group templates. The name of the
-Template Group will also appear as the first segment in your URL.
 
 Edit the index template to output your Content
 ----------------------------------------------
@@ -35,12 +34,16 @@ Click on the name of the template, in this case, click index
    :align: center
    :alt: EE2 CP Edit Template
 
-We're now going to add the Channel Entries EE tag to our template.
+Now, let's add the Channel Entries tag to our template so that it outputs
+data from the most recent entries published to our Channel.
 
-**Note**: You will need your Channel Shortname and your Channel Field
-short name for outputting the content. ::
+**Note**: Always use your Channel and Channel Fields' **Short Name**
+when referring to them in a template::
 
-	         {exp:channel:entries channel="example" limit="10"}         <h1>{title}</h1>         {example_body}         {/exp:channel:entries}
+	{exp:channel:entries channel="example" limit="10"}
+		<h1>{title}</h1>
+		{example_body}
+	{/exp:channel:entries}
 
 .. figure:: ../images/ee2_cp_edit_template_with_tag.png
    :align: center
@@ -49,17 +52,12 @@ short name for outputting the content. ::
 View the Output
 ---------------
 
-Now you can view the output your work by clicking View Rendered Template
+Now you can view your work by clicking View Rendered Template
 in the upper right of the Edit Template area.
 
 .. figure:: ../images/ee2_cp_view_rendered_template.png
    :align: center
    :alt: EE2 CP View Rendered Template
 
-**Congratulations!** You have taken the first steps to learning
-ExpressionEngine. You now know how to create categories, statuses, and
-channel fields to hold your content; how to create a channel and assign
-your groups; how to create a file upload preference; how to publish; and
-finally, how to output your content to the screen.
-
-***Welcome to ExpressionEngine 2!***
+Congratulations! You have taken the first steps to learning
+ExpressionEngine. **Welcome to ExpressionEngine 2!**
