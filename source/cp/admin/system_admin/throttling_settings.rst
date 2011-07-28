@@ -1,7 +1,10 @@
-Control Panel Settings
+Throttling Preferences
 ======================
 
-Control Panel Location: Admin > System Preferences > Throttling Settings
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Throttling Preferences`
+
 This section of the Control Panel allows you to manage the Throttling
 feature. Please visit `Throttling Control and 404
 Pages <../../../general/throttling.html>`_ for more information
@@ -46,11 +49,11 @@ Action to Take
 The action that should take place if a user has exceeded the limits. The
 options are:
 
--  **Send 404 Headers.** This option will cause standard server 404 Page
+-  **Send 404 Headers**: This option will cause standard server 404 Page
    Not Found headers to be sent.
--  **URL Redirect** This option will send the user to a URL of your
+-  **URL Redirect**: This option will send the user to a URL of your
    choice.
--  **Show a Custom Message.** This option will display a custom message
+-  **Show a Custom Message**: This option will display a custom message
    you can specify.
 
 URL for Redirect
