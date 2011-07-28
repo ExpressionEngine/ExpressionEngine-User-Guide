@@ -1,8 +1,10 @@
-Output and Debugging Preferences
-================================
+Output and Debugging
+====================
 
-Control Panel Location: Admin > System Preferences > Output and
-Debugging Preferences
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> System Administration --> Output and Debugging`
+
 This section of the Control Panel allows you to define how your site is
 output from the server to the user. This includes how debugging
 information is handled for your website. These are general settings that
@@ -39,12 +41,12 @@ Force URL query strings?
 Setting this to "Yes" will force the system to use a standard query
 string in all your URLs like this:
 
-http://example.com/index.php?/channel/joe/ (notice the question mark).
+``http://example.com/index.php?/channel/joe/`` (notice the question mark).
 
 When set to "No", the system uses a more search-engine friendly format
 similar to:
 
-http://example.com/index.php/channel/joe/
+``http://example.com/index.php/channel/joe/``
 
 The majority of servers will be able to use the default ("No") method,
 which is almost universally preferred by users. Some Windows servers
@@ -63,17 +65,17 @@ redirections are used relatively frequently throughout the system,
 especially with things like logging in/out and other membership related
 functions. There are two options:
 
-#. **Location (faster)**: This is the preferred method, which uses PHP's
-   "location" functionality.
-#. **Refresh (Windows servers)**: The "refresh" method is often
-   necessary for windows-based servers due to the poor way they handle
-   PHP's "location" functionality. This method is usually slightly
-   slower than the other method.
+- **Location (faster)**: This is the preferred method, which uses PHP's
+  "location" functionality.
+- **Refresh (Windows servers)**: The "refresh" method is often necessary
+  for windows-based servers due to the poor way they handle PHP's
+  "location" functionality. This method is usually slightly slower than
+  the other method.
 
 Debug Preference
 ~~~~~~~~~~~~~~~~
 
-This setting determines how PHP/database error messages are displayed.
+This setting determines how PHP or database error messages are displayed.
 Error messages are often very useful during initial development, but
 they can be very confusing to regular site visitors. There are two
 options:
@@ -87,15 +89,13 @@ suggests, error messages and warnings are shown to all site visitors.
 These messages can sometimes have configuration information in them,
 making this option a security risk.
 
-.. tip:: We recommend always keeping this Debug Preference set to "1:
-	PHP/SQL error messages shown only to Super Admins." This may greatly
-	reduce the time needed to troubleshoot issues as you will receive an
-	error instead of a blank screen.
-
-Furthermore, for those utilizing Javascript that may resemble EE code,
-including curly brackets, this setting must be 1 in order for the
-Javascript to function, or ExpressionEngine will hide Javascript output
-believing it to be an error.
+**Tip:** We recommend always keeping this Debug Preference set to "1:
+PHP/SQL error messages shown only to Super Admins." This may greatly
+reduce the time needed to troubleshoot issues as you will receive an
+error instead of a blank screen. Furthermore, for those utilizing
+Javascript that may resemble EE code, including curly brackets, this
+setting **must** be 1 in order for the Javascript to function, or
+ExpressionEngine will hide Javascript output believing it to be an error.
 
 Display SQL Queries?
 ~~~~~~~~~~~~~~~~~~~~
