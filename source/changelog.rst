@@ -9,7 +9,7 @@ ExpressionEngine 2.x Change Log
 Version 2.2.2
 -------------
 
-Release Date: July 28, 2011
+Release Date: August 1, 2011
 
 ExpressionEngine version 2.2.2 is a maintenance update recommended only for
 membership based sites who require administrator approval for new member
@@ -18,6 +18,8 @@ members could log in and have similar permissions to members in the default
 Member group.
 
 -	Removed accordions from Member Groups, Member Preferences and Channel Preferences.
+-	Temporarily disabled the Profiler in the installer / updater while investigating an
+	issue in certain environments where the Profiler may throw an exception and halt the installer.
 -	Fixed a bug (#16143) where a PHP error occurred on the Edit Member Group page when MSM was active.
 -	Fixed a bug (#16144) where an incorrect error message appeared on unsuccessful authentication on the front end.
 -	Fixed a bug (#16264) where Pending members were allowed to log in.
