@@ -178,6 +178,28 @@ becomes "1"::
 
 	$str = (string) $str; // cast $str as a string
 
+Setting Strings from Method Calls
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Sometimes it is desirable when setting a string from a method call to initialize with an empty string if the method returns FALSE.  For speed and code legibility, instead of a ternary operator or conditional, simply cast the return value as a string.
+
+INCORRECT::
+
+	$foo = ($this->input->post('foo')) ? $this->input->post('foo') : '';
+	
+	$bar = $this->some_method();
+	if ($bar === FALSE)
+	{
+		$bar = '';
+	}
+
+CORRECT::
+
+	$foo = (string) $this->input->post('foo');
+	
+	$bar = (string) $this->some_method();
+
+
 Debugging Code
 ^^^^^^^^^^^^^^
 
