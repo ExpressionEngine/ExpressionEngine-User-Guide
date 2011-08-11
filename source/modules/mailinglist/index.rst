@@ -1,7 +1,10 @@
-Mailing List Tags
-=================
+Mailing List Module
+===================
 
-ExpressionEngine comes with an integrated Mailing List Module.
+.. contents::
+
+Introduction
+------------
 
 The Mailing List is an opt in type, meaning that when someone adds their
 email address to the list, they are sent a confirmation email containing
@@ -11,8 +14,8 @@ hours. Conversely, when someone in your mailing list receives an email,
 there will be an "unsubscribe" link permitting them to remove themselves
 from the list.
 
-To access the Mailing List backed functions, go to the Modules > Mailing
-List page in your Control Panel. There you will be able to create and
+To access the Mailing List-backed functions, go to :menuselection:`Add-Ons --> Modules --> Mailing List`
+in your Control Panel. There you will be able to create and
 manage your mailing lists, as well as find and delete email addresses.
 See `Mailing List control panel <control_panel/index.html>`_ for more
 information. To send email to any of your lists you will use the Control
@@ -24,11 +27,14 @@ Adding a Mailing List Form to Your Site
 To add the mailing list form to any of your pages, use the following tag
 in any template::
 
-	{exp:mailinglist:form list="default"}     <p>Join our Mailing List</p>     <p><input type="text" name="email" value="{email}" /></p>     <p><input type="submit" value="submit" /></p> {/exp:mailinglist:form}
+	{exp:mailinglist:form list="default"}
+		<p>Join our Mailing List</p>
+		<p><input type="text" name="email" value="{email}"></p>
+		<p><input type="submit" value="submit"></p>
+	{/exp:mailinglist:form}
 
 Parameters
 ----------
-
 
 list=
 ~~~~~

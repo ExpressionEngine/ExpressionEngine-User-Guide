@@ -10,9 +10,9 @@ address is associated with. You can do two things with this information:
 #. **Show a flag icon** |image0| within your comments or entries to
    indicate the country of the person who submitted the entry.
 
-**Note:** When updating your IP to Nation module, make sure that you
-also update your /system/expressionengine/config/countries.php file so
-that newly added or changed nations display properly.
+.. note:: When updating your IP to Nation module, make sure that you
+   also update your /system/expressionengine/config/countries.php file so
+   that newly added or changed nations display properly.
 
 Database Updates
 ----------------
@@ -46,16 +46,18 @@ In order to use the world flag feature, please first visit the Modules
 page of the control panel and make sure your IP to Nation module is
 installed.
 
-**Note:** Please `download the flag
-icons <http://expressionengine.com/files/world_flags.zip>`_ from
-ExpressionEngine.com. Once downloaded, unzip the archive, then upload
-the "world\_flags" folder to your server. The folder can go anywhere
-since you'll set the URL in the tag as described below.
+.. note:: Please `download the flag
+   icons <http://expressionengine.com/files/world_flags.zip>`_ from
+   ExpressionEngine.com. Once downloaded, unzip the archive, then upload
+   the "world\_flags" folder to your server. The folder can go anywhere
+   since you'll set the URL in the tag as described below.
 
 The "world flags" tag can be used within your {exp:comment:entries} or
 {exp:channel:entries} like this::
 
-	{exp:ip_to_nation:world_flags   image_url="http://example.com/images/world_flags/"}     {ip_address}     {/exp:ip_to_nation:world_flags}
+	{exp:ip_to_nation:world_flags image_url="http://example.com/images/world_flags/"}
+		{ip_address}
+	{/exp:ip_to_nation:world_flags}
 
 Parameters
 ----------

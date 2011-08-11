@@ -1,9 +1,11 @@
 Tell-A-Friend Form
 ==================
 
-**Note:** The Email Module is not installed by default, so before using
-these tags make sure it is installed via the `Modules
-Page <../../cp/add-ons/module_manager.html>`_.
+.. contents::
+
+.. note:: The Email Module is not installed by default, so before using
+   these tags make sure it is installed via the `Modules
+   Page <../../cp/add-ons/module_manager.html>`_ at :menuselection:`Admin --> Modules`.
 
 The purpose of this tag is to display a form used to share an entry with
 someone by sending them an email about it. To show your tell-a-friend
@@ -19,10 +21,39 @@ There are numerous variations possible for this feature (using
 parameters and variables described below). Here's an example showing how
 a tell-a-friend form might be created::
 
-	{exp:email:tell_a_friend charset="utf-8" allow_html='no'}              <p><label for="from">Your Email: </label><br />     <input type="text" id="from" name="from" size="40" maxlength="35" value="{member_email}" /></p>      <p><label for="name">Your Name: </label><br />     <input type="text" id="name" name="name" size="40" maxlength="35" value="{member_name}" /></p>      <p><label for="to">To: </label><br />     <input type="text" id="to" name="to" size="40" maxlength="35" /></p>      <p><label for="subject">Subject: </label><br />     <input type="text" id="subject" name="subject" size="40" value="Entry by: {author}" /></p>      <p><label for="message">Message: </label><br />     <textarea id="message" name="message" readonly="readonly" rows="18" cols="40">      {summary}     {body}     {permalink}     </textarea></p>      <p><input name="submit" type='submit' value='Submit Form' /></p> {/exp:email:tell_a_friend}
+	{exp:email:tell_a_friend charset="utf-8" allow_html='no'}
+		<p>
+			<label for="from">Your Email: </label><br />
+			<input type="text" id="from" name="from" size="40" maxlength="35" value="{member_email}" />
+		</p>
+		<p>
+			<label for="name">Your Name: </label><br />
+			<input type="text" id="name" name="name" size="40" maxlength="35" value="{member_name}" />
+		</p>
+		<p>
+			<label for="to">To: </label><br />
+			<input type="text" id="to" name="to" size="40" maxlength="35" />
+		</p>
+		<p>
+			<label for="subject">Subject: </label><br />
+			<input type="text" id="subject" name="subject" size="40" value="Entry by: {author}" />
+		</p>
+		<p>
+			<label for="message">Message: </label><br />
+			<textarea id="message" name="message" readonly="readonly" rows="18" cols="40">
+				{summary}
+				{body}
+				{permalink}
+			</textarea>
+		</p>
+		<p>
+			<input name="submit" type='submit' value='Submit Form' />
+		</p>
+	{/exp:email:tell_a_friend}
+
 
 Linking to the Tell-a-Friend page
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
 
 In order to use the Tell-a-Friend feature, you will need to link to it.
 First, create a Template and place the Tell-a-Friend form in this
@@ -37,9 +68,9 @@ you can point to it using the permalink variable::
 In the above example, the Template "friend" contains the Tell-a-Friend
 form.
 
+
 Parameters
 ----------
-
 
 allow\_html=
 ~~~~~~~~~~~~
@@ -255,9 +286,9 @@ Variables <../../modules/channel/variables.html>`_ are available for the
 tell-a-friend form. Notable exceptions are all category related
 variables and custom member fields.
 
-**Note**: To ease the useability of this form with multiple channels,
-which will possibly contain different channel fields, all Channel
-Variables that are unfillable will be removed from the form.
+.. note:: To ease the useability of this form with multiple channels,
+   which will possibly contain different channel fields, all Channel
+   Variables that are unfillable will be removed from the form.
 
 For example, if you have a channel with the fields "summary" and "body",
 and then another channel with the fields "ingredients" and "directions",
@@ -282,7 +313,10 @@ captcha
 The CAPTCHA input for the form. It is usually used with a conditional so
 that it is only displayed if necessary::
 
-	{if captcha}  <p>Please enter the word you see in the image below:</p>  <p>{captcha}<br /> <input type="text" name="captcha" value="" maxlength="20" /></p>  {/if}
+	{if captcha}
+		<p>Please enter the word you see in the image below:</p>
+		<p>{captcha}<br /> <input type="text" name="captcha" value="" maxlength="20" /></p>
+	{/if}
 
 The setting to disable or enable CAPTCHA for the tell-a-friend form can
 be found in the `Email
@@ -298,13 +332,13 @@ from
 
 Email address of person who is sending the email.
 
-**WARNING**: If you leave this field open to user input, be aware that
-it is a potential for abuse by spammers, who could use your form
-pretending to be someone they are not (i.e. keying in admin@paypal.com).
-If the user is allowed to modify both this and the message field, you
-have essentially created a
-`phishing <http://dictionary.reference.com/search?q=phishing>`_ form
-ripe for abuse.
+.. warning:: If you leave this field open to user input, be aware that
+   it is a potential for abuse by spammers, who could use your form
+   pretending to be someone they are not (i.e. keying in admin@paypal.com).
+   If the user is allowed to modify both this and the message field, you
+   have essentially created a
+   `phishing <http://dictionary.reference.com/search?q=phishing>`_ form
+   ripe for abuse.
 
 message
 ~~~~~~~
@@ -319,12 +353,12 @@ the textarea as read only (ex: <textarea
 readonly="readonly"></textarea>). You must include this form field, even
 if it is just a hidden field.
 
-**WARNING**: If you leave this field open to user input, be aware that
-it is a potential for abuse by spammers, who could use your form for
-email advertising. If the user is allowed to modify both this and the
-from field, you have essentially created a
-`phishing <http://dictionary.reference.com/search?q=phishing>`_ form
-ripe for abuse.
+.. warning:: If you leave this field open to user input, be aware that
+   it is a potential for abuse by spammers, who could use your form for
+   email advertising. If the user is allowed to modify both this and the
+   from field, you have essentially created a
+   `phishing <http://dictionary.reference.com/search?q=phishing>`_ form
+   ripe for abuse.
 
 name
 ~~~~
