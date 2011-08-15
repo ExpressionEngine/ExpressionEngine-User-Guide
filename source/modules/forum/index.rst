@@ -1,6 +1,11 @@
 Discussion Forum Module
 =======================
 
+.. contents::
+
+Introduction
+------------
+
 The ExpressionEngine Discussion Forum Module allows you to create and
 manage a full-featured forum on your site. This includes everything from
 posting and replying to editing threads and private messaging other
@@ -9,9 +14,9 @@ for setup and to create and assign Moderators and Administrators. You
 can even easily change the look and feel of your forum by simply
 applying another "theme" to it.
 
-**Important:** The Discussion Forum is an ExpressionEngine Module, and
-therefore requires that you be running ExpressionEngine. This module
-requires the Non-Commercial or Commercial ExpressionEngine license.
+.. important:: The Discussion Forum is an ExpressionEngine Module, and
+   therefore requires that you be running ExpressionEngine. This module
+   requires the Non-Commercial or Commercial ExpressionEngine license.
 
 Requirements
 ~~~~~~~~~~~~
@@ -20,10 +25,6 @@ The Forum Module requires the you have ExpressionEngine installed. The
 current forum module is only compatible with the most current
 ExpressionEngine release.
 
-Change Log
-~~~~~~~~~~
-
--  `Change Log <changelog.html>`_
 
 Installation, Updating, and Setup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -46,6 +47,11 @@ Features and Management
    templates <recent_forum_topics.html>`_
 -  `Associating Channel Entries with Forum Topics <channel_forum.html>`_
 -  `Other Features <other_features.html>`_
+
+Change Log
+~~~~~~~~~~
+
+-  `Change Log <changelog.html>`_
 
 .. toctree::
 	:glob:

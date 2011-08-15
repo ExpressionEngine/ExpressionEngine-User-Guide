@@ -1,6 +1,9 @@
 IP to Nation Module
 ===================
 
+.. contents::
+   :local:
+
 The IP to Nation module enables you to determine which country an IP
 address is associated with. You can do two things with this information:
 

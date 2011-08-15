@@ -2,6 +2,7 @@ Mailing List Module
 ===================
 
 .. contents::
+   :local:
 
 Introduction
 ------------

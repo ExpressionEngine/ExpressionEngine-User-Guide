@@ -2,6 +2,7 @@ File Entries Tag
 ================
 
 .. contents::
+   :local:
 
 Introduction
 ------------

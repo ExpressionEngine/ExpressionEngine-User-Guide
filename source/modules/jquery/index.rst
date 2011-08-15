@@ -3,6 +3,7 @@ jQuery Module
 #############
 
 .. contents::
+   :local:
 
 ************
 Introduction

@@ -2,10 +2,7 @@ Tell-A-Friend Form
 ==================
 
 .. contents::
-
-.. note:: The Email Module is not installed by default, so before using
-   these tags make sure it is installed via the `Modules
-   Page <../../cp/add-ons/module_manager.html>`_ at :menuselection:`Admin --> Modules`.
+   :local:
 
 The purpose of this tag is to display a form used to share an entry with
 someone by sending them an email about it. To show your tell-a-friend

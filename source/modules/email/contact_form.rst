@@ -2,10 +2,7 @@ Email Contact Form
 ==================
 
 .. contents::
-
-.. note:: The Email Module is not installed by default, so before using
-   these tags make sure it is installed via the `Modules
-   Page <../../cp/add-ons/module_manager.html>`_ at :menuselection:`Admin --> Modules`.
+   :local:
 
 The purpose of this tag is to create a contact form on one of your pages
 that your users can use to send you email. To show your contact form use

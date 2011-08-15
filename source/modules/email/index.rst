@@ -1,5 +1,5 @@
-Email Module Tags
-=================
+Email Module
+============
 
 ExpressionEngine includes an Email Module in order to provide the
 ability to create contact forms and tell-a-friend forms.

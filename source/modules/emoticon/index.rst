@@ -1,7 +1,8 @@
-Emoticon Module Tag
-===================
+Emoticon Module
+===============
 
 .. contents::
+   :local:
 
 Introduction
 ------------
