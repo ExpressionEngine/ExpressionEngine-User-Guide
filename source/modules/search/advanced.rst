@@ -1,11 +1,140 @@
 Advanced Search Form Tag
 ========================
 
+.. contents::
+	:local:
+
+Introduction
+------------
+
 The Advanced Search Form Tag allows you to display a detailed search
 form that will allow your users to make "power searches" to find the
 information they need. Example::
 
-	{exp:search:advanced_form result_page="search/results"}  <table cellpadding='4' cellspacing='6' border='0' width='100%'> <tr> <td>  <fieldset class="fieldset">     <legend>{lang:search_by_keyword}</legend>      <input type="text" class="input" maxlength="100" size="40" name="keywords" style="width:100%;" />      <div class="default">         <select name="search_in">             <option value="titles" selected="selected">{lang:search_in_titles}</option>             <option value="entries">{lang:search_in_entries}</option>             <option value="everywhere" >{lang:search_everywhere}</option>         </select>     </div>      <div class="default">         <select name="where">             <option value="exact" selected="selected">{lang:exact_phrase_match}</option>             <option value="any">{lang:search_any_words}</option>             <option value="all" >{lang:search_all_words}</option>             <option value="word" >{lang:search_exact_word}</option>         </select>     </div>  </fieldset>  </td><td>  <fieldset class="fieldset">     <legend>{lang:search_by_member_name}</legend>      <input type="text" class="input" maxlength="100" size="40" name="member_name" style="width:100%;" />     <div class="default"><input type="checkbox" class="checkbox" name="exact_match" value="y"  /> {lang:exact_name_match}</div>  </fieldset>  </td> </tr> </table>  <table cellpadding='4' cellspacing='6' border='0' width='100%'>     <tr> <td valign="top" width="50%">  <table cellpadding='0' cellspacing='0' border='0'> <tr> <td valign="top">  <div class="defaultBold">{lang:channels}</div>      <select id="channel_id" name='channel_id[]' class='multiselect' size='12' multiple='multiple' onchange='changemenu(this.selectedIndex);'>         {channel_names}     </select>  </td> <td valign="top" width="16">&nbsp;</td> <td valign="top">  <div class="defaultBold">{lang:categories}</div>      <select name='cat_id[]' size='12'  class='multiselect' multiple='multiple'>         <option value='all' selected="selected">{lang:any_category}</option>     </select>  </td> </tr> </table>  </td> <td valign="top" width="50%">  <fieldset class="fieldset">     <legend>{lang:search_entries_from}</legend>      <select name="date" style="width:150px">         <option value="0" selected="selected">{lang:any_date}</option>         <option value="1" >{lang:today_and}</option>         <option value="7" >{lang:this_week_and}</option>         <option value="30" >{lang:one_month_ago_and}</option>         <option value="90" >{lang:three_months_ago_and}</option>         <option value="180" >{lang:six_months_ago_and}</option>         <option value="365" >{lang:one_year_ago_and}</option>     </select>  <div class="default">     <input type='radio' name='date_order' value='newer' class='radio' checked="checked" />&nbsp;{lang:newer}     <input type='radio' name='date_order' value='older' class='radio' />&nbsp;{lang:older} </div>  </fieldset>  <div class="default"><br /></div>  <fieldset class="fieldset">     <legend>{lang:sort_results_by}</legend>      <select name="orderby">         <option value="date" >{lang:date}</option>         <option value="title" >{lang:title}</option>         <option value="most_comments" >{lang:most_comments}</option>         <option value="recent_comment" >{lang:recent_comment}</option>     </select>  <div class="default">     <input type='radio' name='sort_order' class="radio" value='desc' checked="checked" /> {lang:descending}     <input type='radio' name='sort_order' class="radio" value='asc' /> {lang:ascending} </div>  </fieldset>  </td> </tr> </table>  <div class='searchSubmit'>     <input type='submit' value='Search' class='submit' /> </div>  {/exp:search:advanced_form}
+	{exp:search:advanced_form result_page="search/results"}
+	
+		<table cellpadding='4' cellspacing='6' border='0' width='100%'>
+		<tr>
+		<td>
+		
+		<fieldset class="fieldset">
+			<legend>{lang:search_by_keyword}</legend>
+		
+			<input type="text" class="input" maxlength="100" size="40" name="keywords" style="width:100%;" />
+		
+			<div class="default">
+				<select name="search_in">
+					<option value="titles" selected="selected">{lang:search_in_titles}</option>
+					<option value="entries">{lang:search_in_entries}</option>
+					<option value="everywhere" >{lang:search_everywhere}</option>
+				</select>
+			</div>
+		
+			<div class="default">
+				<select name="where">
+					<option value="exact" selected="selected">{lang:exact_phrase_match}</option>
+					<option value="any">{lang:search_any_words}</option>
+					<option value="all" >{lang:search_all_words}</option>
+					<option value="word" >{lang:search_exact_word}</option>
+				</select>
+			</div>
+		
+		</fieldset>
+		
+		</td><td>
+		
+		<fieldset class="fieldset">
+			<legend>{lang:search_by_member_name}</legend>
+		
+			<input type="text" class="input" maxlength="100" size="40" name="member_name" style="width:100%;" />
+			<div class="default"><input type="checkbox" class="checkbox" name="exact_match" value="y"  /> {lang:exact_name_match}</div>
+		
+		</fieldset>
+		
+		</td>
+		</tr>
+		</table>
+		
+		<table cellpadding='4' cellspacing='6' border='0' width='100%'>    
+		<tr>
+		<td valign="top" width="50%">
+		
+		<table cellpadding='0' cellspacing='0' border='0'>
+		<tr>
+		<td valign="top">
+		
+		<div class="defaultBold">{lang:channels}</div>
+		
+			<select id="channel_id" name='channel_id[]' class='multiselect' size='12' multiple='multiple' onchange='changemenu(this.selectedIndex);'>
+				{channel_names}
+			</select>
+		
+		</td>
+		<td valign="top" width="16">&nbsp;</td>
+		<td valign="top">
+		
+		<div class="defaultBold">{lang:categories}</div>
+		
+			<select name='cat_id[]' size='12'  class='multiselect' multiple='multiple'>
+				<option value='all' selected="selected">{lang:any_category}</option>
+			</select>
+		
+		</td>
+		</tr>
+		</table>
+		
+		</td>
+		<td valign="top" width="50%">
+		
+		<fieldset class="fieldset">
+			<legend>{lang:search_entries_from}</legend>
+		
+			<select name="date" style="width:150px">
+				<option value="0" selected="selected">{lang:any_date}</option>
+				<option value="1" >{lang:today_and}</option>
+				<option value="7" >{lang:this_week_and}</option>
+				<option value="30" >{lang:one_month_ago_and}</option>
+				<option value="90" >{lang:three_months_ago_and}</option>
+				<option value="180" >{lang:six_months_ago_and}</option>
+				<option value="365" >{lang:one_year_ago_and}</option>
+			</select>
+		
+		<div class="default">
+			<input type='radio' name='date_order' value='newer' class='radio' checked="checked" />&nbsp;{lang:newer}
+			<input type='radio' name='date_order' value='older' class='radio' />&nbsp;{lang:older}
+		</div>
+		
+		</fieldset>
+		
+		<div class="default"><br /></div>
+		
+		<fieldset class="fieldset">
+			<legend>{lang:sort_results_by}</legend>
+		
+			<select name="orderby">
+				<option value="date" >{lang:date}</option>
+				<option value="title" >{lang:title}</option>
+				<option value="most_comments" >{lang:most_comments}</option>
+				<option value="recent_comment" >{lang:recent_comment}</option>
+			</select>
+		
+		<div class="default">
+			<input type='radio' name='sort_order' class="radio" value='desc' checked="checked" /> {lang:descending}
+			<input type='radio' name='sort_order' class="radio" value='asc' /> {lang:ascending}
+		</div>
+		
+		</fieldset>
+		
+		</td>
+		</tr>
+		</table>
+		
+		<div class='searchSubmit'>
+			<input type='submit' value='Search' class='submit' />
+		</div>
+	
+	{/exp:search:advanced_form}
+
 
 The search results are displayed on the page you specify as the
 `result\_page= <#par_result_page>`_ page. Results are displayed with the
@@ -13,8 +142,6 @@ The search results are displayed on the page you specify as the
 
 Parameters
 ----------
-
--  `id="search\_form" <#par_id>`_ Deprecated
 
 category=
 ~~~~~~~~~
@@ -49,19 +176,6 @@ cat\_style=
 With this parameter, you can specify whether the categories should be
 displayed in a nested, hierarchical format or displayed linearly.
 Available values are "nested" and "linear".
-
-id=
-~~~
-
-::
-
-	id="search_form"
-
-Specify the ID attribute for the <form> tag, which will allow you to
-style the form more easily.
-
-**Note:** The ID parameter has been deprecated in favor of
-`form\_id= <#par_form_id>`_.
 
 name=
 ~~~~~
@@ -121,7 +235,11 @@ You may also let the user choose by using an Include Expired Entries
 form field. If you change the form field, you need to be sure to leave
 the name="show\_expired" attribute alone. ::
 
-	<label for="field_show_expired">Include Expired Entries?</label> <select name="show_expired" id="field_show_expired">   <option value="no">No</option>   <option value="yes">Yes</option> </select>
+	<label for="field_show_expired">Include Expired Entries?</label>
+	<select name="show_expired" id="field_show_expired">
+		<option value="no">No</option>
+		<option value="yes">Yes</option>
+	</select>
 
 show\_future\_entries=
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -139,7 +257,11 @@ You may also let the user choose by using an Include Future Entries form
 field. If you change the form field, you need to be sure to leave the
 name="show\_future\_entries" attribute alone. ::
 
-	<label for="field_show_future_entries">Include Future Entries?</label> <select name="show_future_entries" id="field_show_future_entries">   <option value="no">No</option>   <option value="yes">Yes</option> </select>
+	<label for="field_show_future_entries">Include Future Entries?</label>
+	<select name="show_future_entries" id="field_show_future_entries">
+		<option value="no">No</option>
+		<option value="yes">Yes</option>
+	</select>
 
 status=
 ~~~~~~~

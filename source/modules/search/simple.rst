@@ -1,11 +1,28 @@
 Simple Search Form Tag
 ======================
 
+.. contents::
+	:local:
+
+Introduction
+------------
+
 The Simple Search Form Tag allows you to easily add a single-form search
 field to your site. This allows you to have a simple search box in a
 sidebar of your site. Example::
 
-	{exp:search:simple_form channel="news"}              <p><label for="keywords">Search:</label><br />     <input type="text" name="keywords" id="keywords" value="" size="18" maxlength="100" /></p>     <p><a href="{path='search/index'}">Advanced Search</a></p>     <p><input type="submit" value="submit" class="submit" /></p>      {/exp:search:simple_form}
+	{exp:search:simple_form channel="news"}
+		<p>
+			<label for="keywords">Search:</label><br>
+			<input type="text" name="keywords" id="keywords" value="" size="18" maxlength="100">
+		</p>
+		<p>
+			<a href="{path='search/index'}">Advanced Search</a>
+		</p>
+		<p>
+			<input type="submit" value="submit" class="submit">
+		</p>
+	{/exp:search:simple_form}
 
 The search results are displayed on the page you specify as the
 `result\_page= <#par_result_page>`_ page. Results are displayed with the
@@ -22,7 +39,8 @@ The primary search method is to search by keyword. If you change the
 form field, you need to be sure to leave the name="keywords" attribute
 alone. ::
 
-	<label for="keywords">Keywords:</label><br /> <input type="text" name="keywords" id="keywords" maxlength="100" size="20"  />
+	<label for="keywords">Keywords:</label><br>
+	<input type="text" name="keywords" id="keywords" maxlength="100" size="20">
 
 Member Name
 ~~~~~~~~~~~
@@ -31,7 +49,8 @@ You may *optionally* search by member name (the screen name) by adding
 this field to your form. If you change the form field, you need to be
 sure to leave the name="member\_name" attribute alone. ::
 
-	<label for="member_name">Member Name:</label><br /> <input type="text" name="member_name" id="member_name" maxlength="100" size="40"  />
+	<label for="member_name">Member Name:</label><br>
+	<input type="text" name="member_name" id="member_name" maxlength="100" size="40">
 
 Exact Matching
 ~~~~~~~~~~~~~~
@@ -41,7 +60,8 @@ offer the option of matching partial member names or exact member names.
 If you change the form field, you need to be sure to leave the
 name="exact\_match" attribute alone. ::
 
-	<input type="checkbox" name="exact_match" id="exact_match" value="y" />  <label for="exact_match">Match Name Exactly</label>
+	<input type="checkbox" name="exact_match" id="exact_match" value="y">
+	<label for="exact_match">Match Name Exactly</label>
 
 Include Expired Entries
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -52,7 +72,11 @@ also possible to include a form field to let the user choose. If you
 change the form field, you need to be sure to leave the
 name="show\_expired" attribute alone. ::
 
-	<label for="field_show_expired">Include Expired Entries?</label> <select name="show_expired" id="field_show_expired">   <option value="no">No</option>   <option value="yes">Yes</option> </select>
+	<label for="field_show_expired">Include Expired Entries?</label>
+	<select name="show_expired" id="field_show_expired">
+		<option value="no">No</option>
+		<option value="yes">Yes</option>
+	</select>
 
 Include Future Entries
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -63,25 +87,14 @@ parameter, it is also possible to include a form field to let the user
 choose. If you change the form field, you need to be sure to leave the
 name="show\_future\_entries" attribute alone. ::
 
-	<label for="field_show_future_entries">Include Future Entries?</label> <select name="show_future_entries" id="field_show_future_entries">   <option value="no">No</option>   <option value="yes">Yes</option> </select>
+	<label for="field_show_future_entries">Include Future Entries?</label>
+	<select name="show_future_entries" id="field_show_future_entries">
+		<option value="no">No</option>
+		<option value="yes">Yes</option>
+	</select>
 
 Parameters
 ----------
-
--  `id="search\_form" <#par_id>`_ Deprecated
-
-id=
-~~~
-
-::
-
-	id="search_form"
-
-Specify the ID attribute for the <form> tag, which will allow you to
-style the form more easily.
-
-**Note:** The ID parameter has been deprecated in favor of
-`form\_id= <#par_form_id>`_.
 
 name=
 ~~~~~
@@ -130,9 +143,9 @@ search\_in=
 
 ::
 
-	search_in="entries" ``search_in="everywhere"``
-
-``search_in="titles"``
+	search_in="entries" 
+	search_in="everywhere"
+	search_in="titles"
 
 This parameter specifies which fields you would like to include in the
 searching. There are three possible values:
