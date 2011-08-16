@@ -5,6 +5,7 @@ The bottom section of the Simple Commerce module's control panel defines
 your PayPal settings.
 
 |Simple Commerce PayPal Settings|
+
 PayPal Account
 --------------
 

@@ -10,6 +10,7 @@ Simple Commerce Home Page Options
 ---------------------------------
 
 |Simple Commerce Purchases|
+
 Add Email Template
 ~~~~~~~~~~~~~~~~~~
 

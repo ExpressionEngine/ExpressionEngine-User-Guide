@@ -9,6 +9,7 @@ Simple Commerce Home Page Options
 ---------------------------------
 
 |Simple Commerce Items|
+
 Add Item
 ~~~~~~~~
 
@@ -31,6 +32,7 @@ Item Management
 ---------------
 
 |Simple Commerce Item Management|
+
 Overview
 ~~~~~~~~
 
@@ -63,6 +65,7 @@ with the following form. If you selected multiple items, you will be
 able to see and edit the details for each item all from the same page.
 
 |Simple Commerce Add Item|
+
 Regular Price
 ~~~~~~~~~~~~~
 

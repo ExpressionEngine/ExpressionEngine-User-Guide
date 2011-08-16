@@ -6,6 +6,7 @@ and track your store's items as well as set and maintain your PayPal
 account options.
 
 |Simple Commerce Control Panel|
+
 Simple Commerce Control Panel Areas
 -----------------------------------
 
