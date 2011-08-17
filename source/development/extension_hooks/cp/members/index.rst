@@ -1,12 +1,13 @@
 Members Controller Extension Hooks
 ==================================
 
-In the menu below you will find links to details about available
-extension hooks in the members controller (members.php).
+.. contents::
+	:local:
+	:depth: 1
 
 
-Added in v1.4.0cp\_members\_member\_create
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cp\_members\_member\_create
+---------------------------
 
 Additional processing after a member is created via the control panel.
 Executes after member is created, but before stats are recounted. ::
@@ -14,14 +15,22 @@ Executes after member is created, but before stats are recounted. ::
 	$edata = $this->extensions->call('cp_members_member_create', $member_id, $data); if ($this->extensions->end_script === TRUE) return;
 
 $member\_id
-    Member ID of the newly created member
+~~~~~~~~~~~
+
+Member ID of the newly created member
+
 $data
-    Array of data about the new member
-*Return value*
+~~~~~
+
+Array of data about the new member
+
+:returns:
     void
 
-Added in v1.4.2cp\_members\_member\_create\_start
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Added in v1.4.0
+
+cp\_members\_member\_create\_start
+----------------------------------
 
 Perform additional tasks prior to / take over the control panel member
 creation routine
@@ -30,22 +39,26 @@ creation routine
 
 	$edata = $this->extensions->call('cp_members_member_create_start'); if ($this->extensions->end_script === TRUE) return;
 
-*Return value*
+:returns:
     void
 
-Added in v1.4.0cp\_members\_member\_delete\_end
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Added in v1.4.2
+
+cp\_members\_member\_delete\_end
+--------------------------------
 
 Allows additional processing when a member is deleted from the control
 panel. ::
 
 	$edata = $this->extensions->call('cp_members_member_delete_end'); if ($this->extensions->end_script === TRUE) return;
 
-*Return value*
+:returns:
     void
 
-Added in v1.5.2cp\_members\_validate\_members
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Added in v1.4.0
+
+cp\_members\_validate\_members
+------------------------------
 
 Additional processing after pending members are validated via the
 Control Panel
@@ -54,7 +67,7 @@ Control Panel
 
 	$edata = $this->extensions->call('cp_members_validate_members'); if ($this->extensions->end_script === TRUE) return;
 
-*Return value*
+:returns:
     void
 
-
+Added in v1.5.2

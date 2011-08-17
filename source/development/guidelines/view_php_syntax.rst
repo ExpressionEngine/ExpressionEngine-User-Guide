@@ -1,6 +1,10 @@
 View Files and PHP Syntax
 =========================
 
+.. contents::
+	:local:
+	:depth: 2
+
 In view files **only**, it is recommended that you use PHPs alternative
 syntax for control structures and short tag echo statements. This
 minimizes the amount of PHP code in the view file and makes it easier to
@@ -13,10 +17,6 @@ ExpressionEngine will automatically rewrite them for you. In such a
 case, if PHP errors are encountered in your **view files**, the error
 message and line number will not be accurately shown. Instead, all
 errors will be shown as eval() errors.
-
-Table of Contents
------------------
-
 
 PHP Alternate Syntax
 --------------------
@@ -38,7 +38,11 @@ Alternative Control Structures
    Controls structures, like if, for, foreach, and while can be written
    in a simplified format as well. Here is an example using foreach::
 
-	<ul>  <?php foreach($todo as $item): ?>  <li><?=$item?></li>  <?php endforeach; ?>  </ul>
+	<ul>
+		<?php foreach($todo as $item): ?>
+			<li><?=$item?></li>
+		<?php endforeach; ?>
+	</ul>
 
    Notice that there are no braces. Instead, the end brace is replaced
    with endforeach. Each of the control structures listed above has a
@@ -49,5 +53,11 @@ Alternative Control Structures
 
    Here is another example, using if/elseif/else. Notice the colons::
 
-	<?php if ($username == 'sally'): ?>     <h3>Hi Sally</h3>  <?php elseif ($username == 'joe'): ?>     <h3>Hi Joe</h3>  <?php else: ?>     <h3>Hi unknown user</h3>  <?php endif; ?>
+	<?php if ($username == 'sally'): ?>
+		<h3>Hi Sally</h3>
+	<?php elseif ($username == 'joe'): ?>
+		<h3>Hi Joe</h3>
+	<?php else: ?>
+		<h3>Hi unknown user</h3>
+	<?php endif; ?>
 

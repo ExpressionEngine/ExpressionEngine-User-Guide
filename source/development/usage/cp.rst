@@ -1,6 +1,8 @@
 CP Class
 ========
 
+.. contents::
+	:local:
 
 Calling the CP Class
 --------------------
@@ -22,7 +24,10 @@ The right hand subnavigation can be used as the main navigation for a
 module. This function takes an associative array where the keys are
 language keys and the values are the full url to link to. ::
 
-	$this->EE->cp->set_right_nav(array(     'edit_avatar' => BASE.AMP.'C=my_account'.AMP.'M=edit_avatar',     'edit_profile' => BASE.AMP.'C=my_account'.AMP.'M=edit_profile' ));
+	$this->EE->cp->set_right_nav(array(
+		'edit_avatar' => BASE.AMP.'C=my_account'.AMP.'M=edit_avatar',
+		'edit_profile' => BASE.AMP.'C=my_account'.AMP.'M=edit_profile'
+	));
 
 Set Variables
 -------------
@@ -59,7 +64,12 @@ directories (if needed) and files to be added and the optional second
 parameter determines the placement of the resulting javascript link,
 defaulting to TRUE to place in the footer. ::
 
-	$this->EE->add_js_script(           array('ui' => array('core', 'widget', 'position', 'autocomplete'),          'plugin' => array('fancybox')         )     );
+	$this->EE->add_js_script(
+		array(
+			'ui' => array('core', 'widget', 'position', 'autocomplete'),
+			'plugin' => array('fancybox')
+		)
+	);
 
 Masking the Control Panel URL in links
 --------------------------------------
@@ -88,7 +98,9 @@ displayed by the `notification
 plugin <../cp_javascript/notification.html>`_ with the appropriate
 message type indicated. ::
 
-	$this->EE->session->set_flashdata('message_success', $this->EE->lang->line('updated')); $this->EE->session->set_flashdata('message_failure', $this->EE->lang->line('write_failed')); $this->EE->functions->redirect(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=my_module');
+	$this->EE->session->set_flashdata('message_success', $this->EE->lang->line('updated'));
+	$this->EE->session->set_flashdata('message_failure', $this->EE->lang->line('write_failed'));
+	$this->EE->functions->redirect(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=my_module');
 
 After redirecting, a javascript success notification bar would show
 briefly, followed by an error message. Error messages, if shown, remain
@@ -102,7 +114,10 @@ ascribes user data to them that, among other things, pertains to their
 member groups's access to various parts of the site. Returns FALSE if
 they have access, TRUE if they do. ::
 
-	if ( ! $this->EE->cp->allowed_group('can_delete_all_entries')) {     show_error($this->lang->line('unauthorized_to_delete_others')); }
+	if ( ! $this->EE->cp->allowed_group('can_delete_all_entries'))
+	{
+		show_error($this->lang->line('unauthorized_to_delete_others'));
+	}
 
 Safe Refresh
 ------------
@@ -126,7 +141,7 @@ of that module. This function returns the action id number from the
 database. (See also
 `functions->fetch\_action\_id <../reference/functions.html#action_id>`_)
 
-``$aid = $this->EE->cp->fetch_action_id($class, $method);``
+	$aid = $this->EE->cp->fetch_action_id($class, $method);
 
 Publish Page Layout Functions
 -----------------------------
@@ -160,7 +175,20 @@ include them as elements of their tab's array, with the field name as a
 key and containing the required elements: visible, collapse, htmlbuttons
 and width. ::
 
-	$tabs['pages'] = array(     'pages_uri' => array(                 'visible'   => 'true',                 'collapse'  => 'false',                 'htmlbuttons'   => 'true',                 'width'     => '100%'                 ),     'pages_template_id' => array(                 'visible'   => 'true',                 'collapse'  => 'false',                 'htmlbuttons'   => 'true',                 'width'     => '100%'                 )     );
+	$tabs['pages'] = array(
+		'pages_uri'	=> array(
+					'visible'	=> 'true',
+					'collapse'	=> 'false',
+					'htmlbuttons'	=> 'true',
+					'width'		=> '100%'
+					),
+		'pages_template_id'	=> array(
+					'visible'	=> 'true',
+					'collapse'	=> 'false',
+					'htmlbuttons'	=> 'true',
+					'width'		=> '100%'
+					)
+		);
 
 Delete Tabs
 ~~~~~~~~~~~

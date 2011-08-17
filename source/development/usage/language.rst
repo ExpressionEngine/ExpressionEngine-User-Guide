@@ -1,9 +1,8 @@
 Language Class
 ==============
 
--  `Calling the Language Class <language.html#calling>`_
--  `Fetching a Line of Text <language.html#fetching_line>`_
--  `Calling a Language File <language.html#calling_file>`_
+.. contents::
+	:local:
 
 Calling the Language Class
 --------------------------

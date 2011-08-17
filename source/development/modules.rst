@@ -6,8 +6,9 @@ database tables, backend control panels, tabs and fields that are
 included on the publish page, as well as their own tags for use in
 templates.
 
--  `The Control Panel file
-   (mcp.module\_name.php) <#control_panel_file>`_
+.. contents::
+	:local:
+	:depth: 1
 
 Basic File Structure
 --------------------
@@ -265,34 +266,70 @@ $entry\_id the entry\_id if this is an edit, empty otherwise.
 The settings array elements:
 
 field\_id
-    The name of the field
+^^^^^^^^^^
+
+The name of the field
+
 field\_label
-    The field label- typically a language variable is used here
+^^^^^^^^^^^^
+
+The field label- typically a language variable is used here
+
 field\_required
-    Indicates whether to include the 'required' class next to the field
-    label: y/n
+^^^^^^^^^^^^^^^
+
+Indicates whether to include the 'required' class next to the field label: y/n
+
 field\_data
-    The current data, if applicable.
+^^^^^^^^^^^
+
+The current data, if applicable.
+
 field\_list\_items
-    An array of options, otherwise an empty string.
+^^^^^^^^^^^^^^^^^^
+
+An array of options, otherwise an empty string.
+
 options
-    An array of options, otherwise an empty string.
+^^^^^^^
+
+An array of options, otherwise an empty string.
+
 selected
-    The selected value if applicable to the field\_type
+^^^^^^^^
+
+The selected value if applicable to the field\_type
+
 field\_fmt
-    Allowed field format options, if applicable: an associative array or
-    empty string.
+^^^^^^^^^^
+
+Allowed field format options, if applicable: an associative array or empty string.
+
 field\_instructions
-	Instructions to be displayed for this field in the publish page
+^^^^^^^^^^^^^^^^^^^
+
+Instructions to be displayed for this field in the publish page
+
 field\_show\_fmt
-    Determines whether the field format dropdown shows: y/n. Note- if
-    'y', you must specify the options available in field\_fmt
+^^^^^^^^^^^^^^^^
+
+Determines whether the field format dropdown shows: y/n. Note- if
+'y', you must specify the options available in field\_fmt
+
 field\_pre\_populate
-    Allows you to pre-populate a field when it is a new entry.
+^^^^^^^^^^^^^^^^^^^^
+
+Allows you to pre-populate a field when it is a new entry.
+
 field\_text\_direction
-    The direction of the text: ltr/rtl
+^^^^^^^^^^^^^^^^^^^^^^
+
+The direction of the text: ltr/rtl
+
 field\_type
-    May be any existing field type
+^^^^^^^^^^^
+
+May be any existing field type
 
 validate\_publish($params) \*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

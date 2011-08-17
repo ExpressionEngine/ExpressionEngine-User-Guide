@@ -1,12 +1,13 @@
 Functions Library Extension Hooks
 =================================
 
-In the menu below you will find links to details about available
-extension hooks in the Functions library (Functions.php).
+.. contents::
+	:local:
+	:depth: 1
 
 
-Added in v1.4.0create\_captcha\_start
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+create\_captcha\_start
+----------------------
 
 Allows rewrite of how CAPTCHAs are created
 
@@ -15,12 +16,17 @@ Allows rewrite of how CAPTCHAs are created
 	$edata = $this->extensions->call('create_captcha_start', $old_word); if ($this->extensions->end_script === TRUE) return $edata;
 
 $old\_word
-    Normally empty, but it will create a CAPTCHA with that wordif set.
-*Return value*
+~~~~~~~~~~
+
+Normally empty, but it will create a CAPTCHA with that word if set.
+
+:returns:
     void
 
-Added in vEE 1.4.2form\_declaration\_modify\_data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Added in v1.4.0
+
+form\_declaration\_modify\_data
+-------------------------------
 
 Modify the $data parameters before they are processed by the user side
 form creator. ::
@@ -28,12 +34,16 @@ form creator. ::
 	$data = $this->extensions->call('form_declaration_modify_data', $data);
 
 $data
-    The array of arguments sent to the form\_declaration() method
-*Return value*
+~~~~~
+The array of arguments sent to the form\_declaration() method
+
+:returns:
     Array
 
-Added in vEE 1.4.2form\_declaration\_return
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Added in v1.4.2
+
+form\_declaration\_return
+-------------------------
 
 Take control of the form\_declaration function to create form tags the
 way you want. ::
@@ -41,9 +51,12 @@ way you want. ::
 	$form = $this->extensions->call('form_declaration_return', $data); if ($this->extensions->end_script === TRUE) return $form;
 
 $data
-    The array of arguments sent to the function for creating the form
-    tag
-*Return value*
+~~~~~
+
+The array of arguments sent to the function for creating the form
+tag
+
+:returns:
     String
 
-
+Added in v1.4.2

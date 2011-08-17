@@ -1,9 +1,8 @@
 Email Class
 ===========
 
--  `Loading the Email Library <email.html#calling>`_
--  `Sending an Email <email.html#sending>`_
--  `Sending Multiple Emails <email.html#sending_multiple>`_
+.. contents::
+	:local:
 
 Calling the Email Class
 -----------------------
@@ -78,6 +77,7 @@ wordwrap
 Specifies whether the words in the email should be wrapped after a
 certain number of characters. By default, this is set to false, so you
 only need to set its value if you want to use wordwrap.
+
 wrapchars
 ~~~~~~~~~
 

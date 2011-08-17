@@ -1,9 +1,9 @@
 XML Parser Class
 ================
 
--  `Calling the XML Parser Class <xmlparser.html#calling>`_
--  `Parsing XML <xmlparser.html#parsing_xml>`_
--  `Converting Delimited Text to XML <xmlparser.html#converting>`_
+.. contents::
+	:local:
+	:depth: 1
 
 Calling the XML Parser Class
 ----------------------------
@@ -121,11 +121,19 @@ addition to the **children** array, there are three other variables for
 each tag object.
 
 tag
-    The tag's name.
+~~~
+
+The tag's name.
+
 attributes
-    If present, they are stored as an array of $key => $val pairs.
+~~~~~~~~~~
+
+If present, they are stored as an array of $key => $val pairs.
+
 value
-    The contents of the tag.
+~~~~~
+
+The contents of the tag.
 
 Converting Delimited Text to XML
 --------------------------------
@@ -148,22 +156,39 @@ Parameters
 This method takes an array of parameters, using the following keys:
 
 data
-    (string) delimited text data (comma-delimited, tab-delimited,
-    quote-enclosed, etc.)
+~~~~
+
+(string) delimited text data (comma-delimited, tab-delimited,
+quote-enclosed, etc.)
+
 structure
-    (array) structure of the delimited data.
+~~~~~~~~~
+
+(array) structure of the delimited data.
+
 root
-    (string) The root XML document tag name. Default is **'root'**
+~~~~
+
+(string) The root XML document tag name. Default is **'root'**
+
 element
-    (string) The name of the primary element that will be used to
-    enclose each record / row of data. Default is **'element'**
+~~~~~~~
+
+(string) The name of the primary element that will be used to
+enclose each record / row of data. Default is **'element'**
+
 delimiter
-    (string) The character delimiting the text. The default is **\\t**
-    (tab).
+~~~~~~~~~
+
+(string) The character delimiting the text. The default is **\\t**
+(tab).
+
 enclosure
-    (string) Character used to enclose the data, such as **"** in the
-    case of $data = '"item1", "item2", "item3"'; Default is none (empty
-    string)
+~~~~~~~~~
+
+(string) Character used to enclose the data, such as **"** in the
+case of $data = '"item1", "item2", "item3"'; Default is none (empty
+string)
 
 Sample data
 ~~~~~~~~~~~
@@ -246,11 +271,9 @@ Output class to generate an ExpressionEngine style error page:
 
 ::
 
-    global $OUT;
-
     if ( ! empty($this->EE->xmlparser->errors))
     {
-        $OUT->show_user_error('general', $this->EE->xmlparser->errors);
+        $this->EE->output->show_user_error('general', $this->EE->xmlparser->errors);
         exit;
     }
 

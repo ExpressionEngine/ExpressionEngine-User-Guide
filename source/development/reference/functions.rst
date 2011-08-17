@@ -4,6 +4,9 @@ Functions Class
 The Functions class contains commonly required functions used throughout
 ExpressionEngine's scripts.
 
+.. contents::
+	:local:
+
 set\_realpath(path [string])
 ----------------------------
 
@@ -447,8 +450,7 @@ Fetch parameters for tag
 
 **Description:** Returns an array of parameters for the tag.
 
-prep\_conditionals(str [string], variables [array], safety [string],
-prefix [string])
+prep\_conditionals(str [string], variables [array], safety [string], prefix [string])
 -------------------------------------------------------------------------------------
 
 Parses conditionals and preps conditional for evaluation

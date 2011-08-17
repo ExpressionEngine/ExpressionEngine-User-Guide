@@ -1,12 +1,8 @@
 Database Class
 ==============
 
--  `Calling the DB Class <database.html#calling>`_
--  `Performing a Query <database.html#query>`_
--  `Retrieving Results from SELECT query <database.html#results>`_
--  `INSERTing Data <database.html#inserting>`_
--  `UPDATEing Data <database.html#updating>`_
--  `Additional Functions <database.html#additional>`_
+.. contents::
+	:local:
 
 Calling the DB Class
 --------------------

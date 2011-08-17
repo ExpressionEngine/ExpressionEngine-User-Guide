@@ -1,11 +1,7 @@
 Extension Hooks
 ===============
 
-In the menu below you will find links to details about available
-extension hooks in ExpressionEngine.
-
-Extension Hooks
----------------
+The list below details all available extension hooks in ExpressionEngine.
 
 -  Global Hooks
 
@@ -40,9 +36,6 @@ Extension Hooks
 -  Module Hooks
 
    -  `Channel Module <module/channel/index.html>`_ (mod.channel.php)
-   -  `Channel Module Stand-Alone Entry
-      Form <module/channel_standalone/index.html>`_
-      (mod.channel\_standalone.php)
    -  `Comment Module <module/comment/index.html>`_ (mcp.comment.php,
       mod.comment.php)
    -  `Email Module <module/email/index.html>`_ (mod.email.php)
@@ -78,7 +71,6 @@ Extension Hooks
 	global/text_helper/index
 	global/typography/index
 	module/channel/index
-	module/channel_standalone/index
 	module/comment/index
 	module/email/index
 	module/forum/index

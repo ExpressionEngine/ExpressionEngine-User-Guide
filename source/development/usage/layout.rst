@@ -1,6 +1,9 @@
 Layout Class
 ============
 
+.. contents::
+	:local:
+
 
 Calling the Layout Class
 ------------------------
@@ -37,7 +40,20 @@ include them as elements of their tab's array, with the field name as a
 key and containing the required elements: visible, collapse, htmlbuttons
 and width. ::
 
-	$tabs['pages'] = array(     'pages_uri' => array(                 'visible'   => 'true',                 'collapse'  => 'false',                 'htmlbuttons'   => 'true',                 'width'     => '100%'                 ),     'pages_template_id' => array(                 'visible'   => 'true',                 'collapse'  => 'false',                 'htmlbuttons'   => 'true',                 'width'     => '100%'                 )     );
+	$tabs['pages'] = array(
+		'pages_uri'	=> array(
+					'visible'	=> 'true',
+					'collapse'	=> 'false',
+					'htmlbuttons'	=> 'true',
+					'width'		=> '100%'
+					),
+		'pages_template_id'	=> array(
+					'visible'	=> 'true',
+					'collapse'	=> 'false',
+					'htmlbuttons'	=> 'true',
+					'width'		=> '100%'
+					)
+		);	
 
 Delete Tabs
 ~~~~~~~~~~~

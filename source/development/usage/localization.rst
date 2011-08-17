@@ -1,14 +1,8 @@
 Localization Class
 ==================
 
--  `Calling the Localize Class <localization.html#calling>`_
--  `What time is it now? <localization.html#time_now>`_
--  `User's Localized Time <localization.html#localized_time>`_
--  `Date in the URL <localization.html#url_date>`_
--  `Date Tag Parameters <localization.html#date_tag_params>`_
--  `Human Readable Time <localization.html#human_readable>`_
--  `Foreign Dates <localization.html#foreign_dates>`_
--  `Timezone Menu <localization.html#timezone_menu>`_
+.. contents::
+	:local:
 
 Calling the Localize Class
 --------------------------
