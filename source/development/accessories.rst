@@ -146,6 +146,7 @@ Processing Requests
 -------------------
 
 Accessories have the ability to process requests for actions like AJAX
-calls. The following URL would be called
+calls. Methods designed for this purpose must have a *process_* prefix.
+For example, the the following URL could be called
 C=addons\_accessories&M=process\_request&accessory=my\_accessory&method=process\_sample\_process
-that requests the process\_sample\_process method in my\_accessory
+that requests the process\_sample\_process method in my\_accessory.
