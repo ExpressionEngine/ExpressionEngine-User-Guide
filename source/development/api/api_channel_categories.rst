@@ -11,7 +11,8 @@ Calling the Class
 The Channel Category class is called with the api->instantiate()
 function. ::
 
-	$this->EE->load->library('api'); $this->EE->api->instantiate('channel_categories');
+	$this->EE->load->library('api'); 	
+	$this->EE->api->instantiate('channel_categories');
 
 Function Reference
 ------------------
@@ -31,7 +32,9 @@ parameter determines the ordering of the categories ('a' for
 alphabetical based on category\_name or 'c' for the specified custom
 ordering). ::
 
-	$this->EE->api_channel_categories->category_tree((mixed) $group_id, [(mixed) $selected, [(string) c or a]]);
+	$this->EE->api_channel_categories->category_tree(
+		(mixed) $group_id, [(mixed) $selected, [(string) c or a]]
+	);
 
 :returns:
     Array::

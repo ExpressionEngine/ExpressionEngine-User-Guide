@@ -65,10 +65,12 @@ fieldset{ border: 0; }
 .top{ float: right; }
 
 .highlight-ee,
+.highlight-php,
 .cp-path,
 .important{ background-color: #F5FBFF; border: 1px solid #C8DEF0; padding: 10px 10px 8px; }
 
-	.highlight-ee{
+	.highlight-ee,
+	.highlight-php {
 		-moz-box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
 		-webkit-box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
 		box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
