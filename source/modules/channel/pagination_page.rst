@@ -106,7 +106,7 @@ or as a pair. When used as a single variable, the output looks a like this::
 When used as a pair, you have a bit more flexibility::
 
 	<ul>
-		{pagination_links show_first="no" show_previous="yes" show_next="yes" show_last="no"}
+		{pagination_links}
 			{previous_page}
 				<li><a class="page-{pagination_page_number}" href="{pagination_url}">Previous Page</a></li>
 			{/previous_page}
@@ -119,43 +119,7 @@ When used as a pair, you have a bit more flexibility::
 		{/pagination_links}
 	</ul>
 
-There are two variables and four parameters available when using the {pagination_links} pair.
-
-Parameters
-~~~~~~~~~~
-
-::
-
-	show_first="yes" show_first="no"
-
-Show the "go to the first page" link, by default this will show as long as you
-aren't on the first page. This parameter allows you to disable the "go to the
-first page" link completely.
-
-::
-
-	show_previous="yes" show_previous="no"
-
-Show the "previous page" link, by default this will show as long as pages
-before the one you are on exist. This parameter allows you to disable the
-previous page link completely.
-
-::
-
-	show_next="yes" show_next="no"
-
-Show the "next page" link, by default this will show as long as pages after
-the one you are on exist. This parameter allows you to disable the next page
-link completely.
-
-::
-
-	show_last="yes" show_last="no"
-
-Show the "go to the last page" link, by default this will show as long as you
-aren't on the last page. This parameter allows you to disable the "go to the
-last page" link completely.
-
+There are two variables and five variable pairs available when using the {pagination_links} pair.
 
 Variables
 ~~~~~~~~~
