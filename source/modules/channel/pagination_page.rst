@@ -96,7 +96,10 @@ pagination_links
 
 	{pagination_links}
 
-These show the current page you are on as well as "surrounding" pages in addition to links for nex/previous pages and first/last pages. You can use {pagination_links} in two ways. It can be used as a `single variable <#var_pagination_links>`_ or as a pair. When used as a single variable, the output looks a like this::
+These show the current page you are on as well as "surrounding" pages in
+addition to links for nex/previous pages and first/last pages. You can use
+{pagination_links} in two ways. It can be used as a `single variable <#var_pagination_links>`_
+or as a pair. When used as a single variable, the output looks a like this::
 
 	« First  <  11 12 13 14 15 >  Last »
 
@@ -104,15 +107,15 @@ When used as a pair, you have a bit more flexibility::
 
 	<ul>
 		{pagination_links show_first="no" show_previous="yes" show_next="yes" show_last="no"}
-			{if previous_link}
+			{previous_page}
 				<li><a class="page-{pagination_page_number}" href="{pagination_url}">Previous Page</a></li>
-			{/if}
-			{if normal_page_link}
+			{/previous_page}
+			{page}
 				<li><a href="{pagination_url}" class="page-{pagination_page_number}">{pagination_page_number}</a></li>
-			{/if}
-			{if next_link}
+			{/page}
+			{next_page}
 				<li><a class="page-{pagination_page_number}" href="{pagination_url}">Next Page</a></li>
-			{/if}
+			{/next_page}
 		{/pagination_links}
 	</ul>
 
@@ -125,25 +128,33 @@ Parameters
 
 	show_first="yes" show_first="no"
 
-Show the "go to the first page" link, by default this will show as long as you aren't on the first page. This parameter allows you to disable the "go to the first page" link completely.
+Show the "go to the first page" link, by default this will show as long as you
+aren't on the first page. This parameter allows you to disable the "go to the
+first page" link completely.
 
 ::
 
 	show_previous="yes" show_previous="no"
 
-Show the "previous page" link, by default this will show as long as pages before the one you are on exist. This parameter allows you to disable the previous page link completely.
+Show the "previous page" link, by default this will show as long as pages
+before the one you are on exist. This parameter allows you to disable the
+previous page link completely.
 
 ::
 
 	show_next="yes" show_next="no"
 
-Show the "next page" link, by default this will show as long as pages after the one you are on exist. This parameter allows you to disable the next page link completely.
+Show the "next page" link, by default this will show as long as pages after
+the one you are on exist. This parameter allows you to disable the next page
+link completely.
 
 ::
 
 	show_last="yes" show_last="no"
 
-Show the "go to the last page" link, by default this will show as long as you aren't on the last page. This parameter allows you to disable the "go to the last page" link completely.
+Show the "go to the last page" link, by default this will show as long as you
+aren't on the last page. This parameter allows you to disable the "go to the
+last page" link completely.
 
 
 Variables
@@ -162,44 +173,38 @@ Outputs the page number associated with the current page in the {pagination_link
 Outputs the URL associated with the current page in the {pagination_links} tag pair.
 
 
-Conditional Variables
-~~~~~~~~~~~~~~~~~~~~~
+Variable Pairs
+~~~~~~~~~~~~~~
 
 ::
 
-	{if first_page_link}
+	{first_page}
 		<li><a href="{pagination_url}" class="page-first">First Page</a></li>
-	{/if}
+	{/first_page}
 	
-	{if previous_page_link}
+	{previous_page}
 		<li><a href="{pagination_url}" class="page-previous">Previous Page</a></li>
-	{/if}
+	{/previous_page}
 	
-	{if next_page_link}
+	{next_page}
 		<li><a href="{pagination_url}" class="page-next">Next Page</a></li>
-	{/if}
+	{/next_page}
 	
-	{if last_page_link}
+	{last_page}
 		<li><a href="{pagination_url}" class="page-last">Last Page</a></li>
-	{/if}
+	{/last_page}
 
-These four conditional variables are used when displaying specific pages within the pagination: the first page link, the previous page link, the next page link, and the last page link.
+These four variable pairs are used when displaying specific pages within
+the pagination: the first page link, the previous page link, the next page 
+link, and the last page link.
 
 ::
 
-	{if normal_page_link}
+	{page}
 		<li><a href="{pagination_url}" class="page-{pagination_page_number}">{pagination_page_number}</a></li>
-	{/if}
+	{/page}
 
-The last conditional is used for the standard pagination links. You can also use an {if:else} statement::
-
-	{if previous_page_link}
-		<li><a href="{pagination_url}" class="page-previous">Previous Page</a></li>
-	{if:elseif next_page_link}
-		<li><a href="{pagination_url}" class="page-next">Next Page</a></li>
-	{if:else}
-		<li><a href="{pagination_url}" class="page-{pagination_page_number}">{pagination_page_number}</a></li>
-	{/if}
+The last variable pair is used for the standard pagination links.
 
 
 Variable Pairs
