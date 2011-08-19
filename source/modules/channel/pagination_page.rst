@@ -105,21 +105,33 @@ or as a pair. When used as a single variable, the output looks a like this::
 
 When used as a pair, you have a bit more flexibility::
 
-	<ul>
-		{pagination_links}
-			{previous_page}
-				<li><a class="page-{pagination_page_number}" href="{pagination_url}">Previous Page</a></li>
-			{/previous_page}
-			{page}
-				<li><a href="{pagination_url}" class="page-{pagination_page_number}">{pagination_page_number}</a></li>
-			{/page}
-			{next_page}
-				<li><a class="page-{pagination_page_number}" href="{pagination_url}">Next Page</a></li>
-			{/next_page}
-		{/pagination_links}
-	</ul>
+	{pagination_links}
+		<ul>
+			{first_page}
+				<li><a href="{pagination_url}" class="page-first">First Page</a></li>
+			{/first_page}
 
-There are two variables and five variable pairs available when using the {pagination_links} pair.
+			{previous_page}
+				<li><a href="{pagination_url}" class="page-previous">Previous Page</a></li>
+			{/previous_page}
+
+			{page}
+				<li><a href="{pagination_url}" class="page-{pagination_page_number} {if current_page}active{/if}">{pagination_page_number}</a></li>
+			{/page}
+
+			{next_page}
+				<li><a href="{pagination_url}" class="page-next">Next Page</a></li>
+			{/next_page}
+
+			{last_page}
+				<li><a href="{pagination_url}" class="page-last">Last Page</a></li>
+			{/last_page}
+		</ul>
+	{/pagination_links}
+
+
+There are two variables, five variable pairs, and one conditional variable
+available when using the {pagination_links} pair.
 
 Variables
 ~~~~~~~~~
@@ -169,6 +181,16 @@ link, and the last page link.
 	{/page}
 
 The last variable pair is used for the standard pagination links.
+
+
+Conditional Variables
+~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+	{if current_page}class="current"{/if}
+
+Check and see if the current {page} link is the current page.
 
 
 Variable Pairs
