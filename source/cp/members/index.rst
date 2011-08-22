@@ -9,7 +9,6 @@ more. There are several sections under Members and Groups:
 
 -  `View Members <view_members.html>`_
 -  `Activate Pending Members <activate_pending_members.html>`_
--  `Member Search <member_search.html>`_
 -  `IP Address Search <ip_searching.html>`_
 -  `Register a New Member <new_member_registration.html>`_
 -  `Membership Preferences <membership_preferences.html>`_
