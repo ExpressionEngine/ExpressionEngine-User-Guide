@@ -80,25 +80,35 @@ Here is how you might use the tag::
 Parameters
 ==========
 
-id=
----
+form_class=
+-----------
 
 ::
 
-	id="login_form"
+	form_class="login"
+
+This parameter allows you to specify the class attribute for the <form>
+tag.
+
+form_id=
+--------
+
+::
+
+	form_id="login"
 
 This parameter allows you to specify the id attribute for the <form>
-tag:
+tag.
 
-name=
------
+form_name=
+----------
 
 ::
 
-	name="login_form"
+	form_name="login"
 
 This parameter allows you to specify a name attribute for the <form>
-tag:
+tag.
 
 return=
 -------
