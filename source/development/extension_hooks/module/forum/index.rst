@@ -6,6 +6,61 @@ Forum Module Extension Hooks
 	:depth: 1
 
 
+
+forum\_post\_vote\_start
+------------------------------
+
+Allows rewrite or modify of Submission form template before processing
+
+::
+
+	$data = $this->extensions->universal_call('forum_post_vote_start', $data, $vote);
+	if ($this->extensions->end_script === TRUE) return;
+
+$data
+~~~~~
+
+An associative array including the user's existing vote status, the post_id, and the member_id of the person voting
+
+$vote
+~~~~
+
+-1 for a vote down, 1 for a vote up
+
+thread\_rows
+
+:returns:
+    Array
+
+Added in v4.0
+
+forum\_post\_solution\_start
+----------------------------
+
+Allows rewrite or modification of post solution data before updating
+
+::
+
+	$edata = $this->extensions->universal_call('forum_post_solution_start', $tquery, $post_id);
+	if ($this->extensions->end_script === TRUE) return;
+
+$tquery
+~~~~~
+
+The existing data for the topic
+
+$post_id
+~~~~
+
+The new post_id specified as the solution_post_id
+
+thread\_rows
+
+:returns:
+    Void
+
+Added in v4.0
+
 forum\_submission\_form\_start
 ------------------------------
 
