@@ -125,12 +125,12 @@ table.
 
     function update($current = '')
     {
-        if ($current == $this->version)
+        if (version_compare($current, '2.0', '='))
         {
             return FALSE;
         }
             
-        if ($current < 2.0) 
+        if (version_compare($current, '2.0', '<'))
         {
             // Do your update code here
         } 
