@@ -306,6 +306,26 @@ becomes "1"::
 
 	$str = (string) $str; // cast $str as a string
 
+Comparing Version Numbers
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When comparing version numbers, whether it be for comparing MySQL versions
+for compatibility with a particular feature, or for comparing the installed
+version of a module with the current version, these comparisons should
+not be made with loose typing, or even assuming that the version number
+will be entirely numeric.  Use **version_compare()** instead.
+
+INCORRECT::
+
+	if ($current < '2.3.1')
+
+CORRECT::
+
+	if (version_compare($current, '2.3.1', '<'))
+
+One of the big advantages here is that this PHP function accounts for many
+standard version numbering schemes, including alpha and beta suffixes.
+
 Setting Strings from Method Calls
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
