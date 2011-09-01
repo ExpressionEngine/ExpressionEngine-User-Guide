@@ -7,10 +7,10 @@ Forum Module Extension Hooks
 
 
 
-forum\_post\_vote\_start
-------------------------------
+forum_post_vote_start
+---------------------
 
-Allows rewrite or modify of Submission form template before processing
+Allows rewrite or modification of post vote data before updating votes
 
 ::
 
@@ -23,21 +23,21 @@ $data
 An associative array including the user's existing vote status, the post_id, and the member_id of the person voting
 
 $vote
-~~~~
+~~~~~
 
 -1 for a vote down, 1 for a vote up
 
-thread\_rows
+thread_rows
 
 :returns:
     Array
 
 Added in v4.0
 
-forum\_post\_solution\_start
-----------------------------
+forum_post_solution_start
+-------------------------
 
-Allows rewrite or modification of post solution data before updating
+Allows rewrite or modification of post solution data before updating topic solution
 
 ::
 
@@ -45,24 +45,24 @@ Allows rewrite or modification of post solution data before updating
 	if ($this->extensions->end_script === TRUE) return;
 
 $tquery
-~~~~~
+~~~~~~~
 
 The existing data for the topic
 
 $post_id
-~~~~
+~~~~~~~~
 
 The new post_id specified as the solution_post_id
 
-thread\_rows
+thread_rows
 
 :returns:
     Void
 
 Added in v4.0
 
-forum\_submission\_form\_start
-------------------------------
+forum_submission_form_start
+---------------------------
 
 Allows rewrite or modify of Submission form template before processing
 
@@ -86,8 +86,8 @@ Submission form template
 
 Added in v1.4.0
 
-forum\_submission\_form\_end
-----------------------------
+forum_submission_form_end
+-------------------------
 
 Final chance to modify the submission form before it is displayed
 
@@ -111,8 +111,8 @@ Submission form template
 
 Added in v1.4.0
 
-forum\_submission\_page
------------------------
+forum_submission_page
+---------------------
 
 - Allows usurping of forum submission forms
 - More error checking and permissions, too
@@ -137,8 +137,8 @@ new\_topic, edit\_topic, new\_reply, edit\_reply
 
 Added in v1.4.0
 
-forum\_submit\_post\_start
---------------------------
+forum_submit_post_start
+-----------------------
 
 Allows usurping of forum submission routine or possible adding more
 checks and permissions
@@ -158,8 +158,8 @@ The current Forum Core object
 
 Added in v1.4.0
 
-forum\_submit\_post\_end
-------------------------
+forum_submit_post_end
+---------------------
 
 Do more processing after the post is submitted. ::
 
@@ -187,8 +187,8 @@ array was added in build 20080626
 
 Added in v1.5.2
 
-forum\_threads\_template
-------------------------
+forum_threads_template
+----------------------
 
 Allows modifying of the Threads display template before it is processed
 
@@ -217,8 +217,8 @@ The data for this thread
 
 Added in v1.4.0
 
-forum\_thread\_rows\_absolute\_end
-----------------------------------
+forum_thread_rows_absolute_end
+------------------------------
 
 Take the processed thread rows and do what you wish
 
@@ -237,8 +237,8 @@ $data
 Information about the current group of thread\_rows (announcement,
 topic, all posts, etc.)
 
-$thread\_rows
-~~~~~~~~~~~~~
+$thread_rows
+~~~~~~~~~~~~
 
 The fully processed thread row template
 
@@ -247,8 +247,8 @@ The fully processed thread row template
 
 Added in v1.5.1
 
-forum\_thread\_rows\_loop\_start
---------------------------------
+forum_thread_rows_loop_start
+----------------------------
 
 Modify the thread row template and data before any processing takes
 place
@@ -283,8 +283,8 @@ The processed thread row
 
 Added in v1.5.1
 
-forum\_thread\_rows\_loop\_end
-------------------------------
+forum_thread_rows_loop_end
+--------------------------
 
 Modify the processed row before it is appended to the template output
 
@@ -317,8 +317,8 @@ The processed thread row
 
 Added in v1.5.1
 
-forum\_thread\_rows\_start
---------------------------
+forum_thread_rows_start
+-----------------------
 
 Allows modifying of the thread rows template
 
@@ -342,13 +342,13 @@ $data
 
 The data for this thread row (post)
 
-$is\_announcement
-~~~~~~~~~~~~~~~~~
+$is_announcement
+~~~~~~~~~~~~~~~~
 
 TRUE/FALSE
 
-$thread\_review
-~~~~~~~~~~~~~~~
+$thread_review
+~~~~~~~~~~~~~~
 
 TRUE/FALSE
 
@@ -357,8 +357,8 @@ TRUE/FALSE
 
 Added in v1.4.0
 
-forum\_topics\_absolute\_end
-----------------------------
+forum_topics_absolute_end
+-------------------------
 
 Modify the finalized topics template and do what you wish
 
@@ -387,8 +387,8 @@ The finalized topics template
 
 Added in v1.5.1
 
-forum\_topics\_loop\_start
---------------------------
+forum_topics_loop_start
+-----------------------
 
 Modify the topic row template and data before any processing takes place
 
@@ -422,8 +422,8 @@ The yet-to-be-processed template
 
 Added in v1.5.1
 
-forum\_topics\_loop\_end
-------------------------
+forum_topics_loop_end
+---------------------
 
 Modify the processed topic row before it is appended to the template
 output
@@ -458,8 +458,8 @@ The yet-to-be-processed template
 
 Added in v1.5.1
 
-forum\_topics\_start
---------------------
+forum_topics_start
+------------------
 
 Allows modifying of the Topics display template before it is processed
 
@@ -483,8 +483,8 @@ The topics template
 
 Added in v1.4.0
 
-main\_forum\_table\_rows\_template
-----------------------------------
+main_forum_table_rows_template
+------------------------------
 
 Allows modifying of the forum\_table\_rows template
 
@@ -498,8 +498,8 @@ $this
 
 The current Forum Core object
 
-$table\_rows
-~~~~~~~~~~~~
+$table_rows
+~~~~~~~~~~~
 
 The unparsed forum table rows template
 
@@ -512,8 +512,8 @@ $markers
 
 Array of topic markers
 
-$read\_topics
-~~~~~~~~~~~~~
+$read_topics
+~~~~~~~~~~~~
 
 Array of topics read by current visitor
 
