@@ -43,8 +43,10 @@ ordering). ::
 		'0' =>  (int) Category ID,
 		'1' =>  (string) Category Name,
 		'2' =>  (int) Category Group ID,
-		'3' =>  (bool) Selected,
-		'4' =>  (int) Depth Nested in the Tree
+		'3' =>  (string) Category Group Name,
+		'4' =>  (bool) Selected,
+		'5' =>  (int) Depth Nested in the Tree,
+		'6' =>  (int) Category Parent ID
 	);
 
 Category Form Tree
