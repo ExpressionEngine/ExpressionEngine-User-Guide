@@ -383,6 +383,17 @@ site=
 Specify the site short name of another site on your MSM installation to
 add/edit entries for that site.
 
+use_live_url=
+~~~~~~~~~~~~~
+
+::
+
+	use_live_url="no"
+
+This will disable the url_title from being created automatically based on the
+title. Use this when you've opted to disable safecracker_head. Defaults to
+yes.
+
 Variables
 ---------
 
