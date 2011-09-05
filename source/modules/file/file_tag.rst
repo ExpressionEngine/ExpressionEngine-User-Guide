@@ -479,7 +479,7 @@ following information for each auto-generated thumbnail:
 -  height
 -  width
 -  size
--  url
+-  file_url
 
 The variable for each of the above is created by combining the resize
 setting short name with the desired information, separated by an
@@ -487,8 +487,8 @@ underscore. For example, if you have two resized images created with
 shortnames 'small' and 'medium', the code to display the url for each
 would be::
 
-	{small_url}
-	{medium_url}
+	{small_file_url}
+	{medium_file_url}
 
 
 Categories Variable Pair

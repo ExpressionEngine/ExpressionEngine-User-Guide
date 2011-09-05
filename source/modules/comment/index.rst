@@ -1416,7 +1416,7 @@ The Comment Entries Tag Code::
 The JavaScript Code::
 
 	{exp:jquery:script_tag}
-	{exp:comment:comment_edit_script}
+	{exp:comment:edit_comment_script}
 
 
 Comment Edit Script Tag
@@ -1424,7 +1424,7 @@ Comment Edit Script Tag
 
 ::
 
-	{exp:comment:comment_edit_script}
+	{exp:comment:edit_comment_script}
 
 This tag outputs a script tag that will include the necessary JavaScript
 for your comment editor. This script requires jQuery, so you will
