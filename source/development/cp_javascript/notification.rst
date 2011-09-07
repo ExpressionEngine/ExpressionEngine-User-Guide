@@ -55,7 +55,7 @@ type (default: notice)
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Can be used to change the style of the notification. Available
-notification types are succes, notice, error, and custom. When using
+notification types are success, notice, error, and custom. When using
 custom, there will be no user clickable area to open the
 notification.
 
