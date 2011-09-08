@@ -46,6 +46,25 @@ CORRECT::
 	$str = preg_replace('/xyz(?:[0-9]+)/', 'zyx', $str);    // correct use when not using the captured subpattern
 	$str = preg_replace('/xyz([0-9]+)/', 'zyx\\1', $str);   // correct use of a captured subpattern
 
+
+PCRE Backreference Caution
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When using backreferences from a capture pattern combined with
+a parsed PHP variable, it is necessary to use dollar-sign backreferences
+to prevent it from looking for a backreference that doesn't exist.
+
+INCORRECT::
+
+	$foo = '123 Any Street';
+	$str = preg_replace('/(.*)/', "\\1{$foo}");	// expands to "\\1123 Any Street" and looks for backreference \\1123!
+
+CORRECT::
+
+	$foo = '123 Any Street';
+	$str = preg_replace('/(.*)/', "${1}{$foo}");
+
+	
 Avoid Unnecessary String Replacements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
