@@ -4,9 +4,9 @@ Next/Previous Entry Linking
 The Next and Previous entry links allow you to generate links to the
 next or previous entry, based on the date of the entry.
 
-**Note:** These links can **only** be used on pages displaying a single
-entry, such as a "comment" page, since they are designed to provide
-navigation from one entry to another.
+.. note:: These links can **only** be used on pages displaying a single
+   entry, such as a "comment" page, since they are designed to provide
+   navigation from one entry to another.   
 
 These tags work as tag pairs so that they will conditionally show the
 content between the pair if there is a next (or previous) entry. 
@@ -21,7 +21,10 @@ content between the pair if there is a next (or previous) entry.
         <p>Previous entry: <a href="{path='site/comments'}">{title}</a></p>  
     {/exp:channel:prev_entry}
 
-**Note:** If you are viewing the most recent entry in your channel, then
+.. important:: These tags **cannot** be placed inside your main Channel Entries Tag.
+   They must be placed outside of the Channel Entries tag in order to work correctly.
+
+If you are viewing the most recent entry in your channel, then
 the "next\_entry" tag's contents will not be shown (since there is no
 "next entry"). Likewise, when you are viewing the oldest/first entry in
 the channel the "previous\_entry" content will not be shown.
