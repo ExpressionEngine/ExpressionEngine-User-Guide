@@ -17,7 +17,7 @@ available in order to auto-fill fields in the form, and also a few tag
 parameters to specify form handling and hidden recipients. Here's an
 example showing how you might typically create a contact form::
 
-	{exp:email:contact_form user_recipients="false" recipients="admin@example.com" charset="utf-8"}
+	{exp:email:contact_form user_recipients="no" recipients="admin@example.com" charset="utf-8"}
 		<h2>Support Form</h2>
 		<p>
 			<label for="from">Your Email:</label><br />
@@ -153,12 +153,13 @@ user\_recipients=
 
 ::
 
-	user_recipients="true" ``user_recipients="false"``
+	user_recipients="yes" ``user_recipients="no"``
 
 The user\_recipients parameter specifies whether or not the form will
-accept having the user input the recipients via the 'to' field in the
-form. If set to true, then you can create a 'to' form field where the
-user can input the addresses where the email should be sent.
+accept having the user input recipients via a 'to' field in the
+form. If set to true, then you can create a form field with the name
+"to" in which a user can input addresses where the email should be sent.
+The default value is "no".
 
 form\_class=
 ~~~~~~~~~~~~
