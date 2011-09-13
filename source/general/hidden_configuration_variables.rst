@@ -239,12 +239,11 @@ remove\_unparsed\_vars
 
 **Value:** y/n
 
-Prevents the stripping of unparsed ExpressionEngine variables in
-templates when Debug is set to 0. This can be useful to ensure that the
-Template Parser does not accidentally remove Javascript.
+Enables the stripping of unparsed ExpressionEngine variables in
+templates when Debug has been forcibly set to 0 in your config file.
 
 ::
-	$config['remove_unparsed_vars'] = 'n';
+	$config['remove_unparsed_vars'] = 'y';
 
 smart\_static\_parsing
 ~~~~~~~~~~~~~~~~~~~~~~
