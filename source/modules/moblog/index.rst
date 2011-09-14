@@ -235,7 +235,7 @@ intervals. The tag can also be placed on a page dedicated to the purpose
 so that you could have a "Check Moblogs" page on your site if you
 wished. ::
 
-	{exp:moblog:check silent="true" which="cellphone"}
+	{exp:moblog:check silent="yes" which="cellphone"}
 
 Parameters
 ==========
@@ -245,12 +245,12 @@ silent=
 
 ::
 
-	silent="false"
+	silent="yes"
 
 You can specify whether or not you want messages about the Moblog Check
-to be seen. By default, this value is "true", which means that the check
+to be seen. By default, this value is "yes", which means that the check
 will be silent and no messages will be seen. If you set the parameter to
-"false", then ExpressionEngine will output messages for errors and
+"no", then ExpressionEngine will output messages for errors and
 successes.
 
 which=
