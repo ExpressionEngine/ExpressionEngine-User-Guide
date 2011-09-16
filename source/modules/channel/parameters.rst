@@ -153,7 +153,7 @@ the results. However, if you are using exclusion (category="not 3\|4"),
 then you will be shown all entries without those categories *including*
 those without any categories assigned. To change this behavior when
 excluding categories use the
-`uncategorized\_entries="" <parameters.html#par_uncategorized_entries>`_
+`uncategorized\_entries="" <#uncategorized-entries>`_
 parameter.
 
 **Note:** Using this parameter will automatically cause ExpressionEngine

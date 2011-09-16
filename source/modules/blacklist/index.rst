@@ -2,6 +2,7 @@ Blacklist/Whitelist Module
 ==========================
 
 .. contents::
+   :local:
 
 Introduction
 ------------

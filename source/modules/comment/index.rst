@@ -27,8 +27,8 @@ associated with your entries.
    "single entry" pages. That is, a page that shows a single, specific
    channel entry. Therefore, your Comment page must be linked to from
    within your Channel entries using the `URL Title
-   Path <../channel/variables.html#var_url_title_path>`_ variable or the
-   `Entry ID Path <../channel/variables.html#var_entry_id_path>`_ variable,
+   Path <../channel/variables.html#url-title-path>`_ variable or the
+   `Entry ID Path <../channel/variables.html#entry-id-path>`_ variable,
    so that the comments can be associated to a specific entry.
 
 Here is a basic example showing how you might use the comment tag::
@@ -1458,9 +1458,9 @@ comment text.
 Useful Comment Entry Tags
 =========================
 
--  `{if editable} <entries.html#var_editable>`_
--  `{if can\_moderate\_comment} <entries.html#var_can_moderate_comment>`_
--  `{comment\_stripped} <entries.html#var_comment_stripped>`_
+-  `{if editable} <#editable>`_
+-  `{if can\_moderate\_comment} <#can-moderate-comment>`_
+-  `{comment\_stripped} <#comment-stripped>`_
 
 Editing Permissions
 ===================
@@ -1571,11 +1571,6 @@ Control Panel
 *************
 
 See the `Comment Module Control Panel <control_panel/index.html>`_ page.
-
-
-
--  `Comment Preview Tag <preview.html>`_
--  `Comment Submission Form Tag <form.html>`_
 
 
 .. toctree::

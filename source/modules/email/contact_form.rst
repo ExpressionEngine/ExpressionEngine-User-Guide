@@ -1,8 +1,14 @@
+##################
 Email Contact Form
-==================
+##################
 
 .. contents::
    :local:
+   :depth: 1
+
+************
+Introduction
+************
 
 The purpose of this tag is to create a contact form on one of your pages
 that your users can use to send you email. To show your contact form use
@@ -40,11 +46,15 @@ example showing how you might typically create a contact form::
 	{/exp:email:contact_form}
 
 
+**********
 Parameters
-----------
+**********
+
+.. contents::
+   :local:
 
 charset=
-~~~~~~~~
+--------
 
 ::
 
@@ -55,7 +65,7 @@ this if your form's template is using a character set other than
 iso-8859-1.
 
 name=
-~~~~~
+-----
 
 ::
 
@@ -65,7 +75,7 @@ This allows you to set a name= attribute for the form. Keep in mind that
 name= is deprecated in XHTML.
 
 recipients=
-~~~~~~~~~~~
+-----------
 
 ::
 
@@ -84,7 +94,7 @@ one recipient, please separate each email address with a commas::
    recipients.
 
 redirect=
-~~~~~~~~~
+---------
 
 ::
 
@@ -107,7 +117,7 @@ the message page. To do this, set the value to none::
 	redirect="none"
 
 replyto=
-~~~~~~~~
+--------
 
 ::
 
@@ -123,7 +133,7 @@ address to get past this restriction while still allowing any replies to
 go to the sender of the email.
 
 return=
-~~~~~~~
+-------
 
 ::
 
@@ -149,7 +159,7 @@ character::
 	return="|Return to the Site"
 
 user\_recipients=
-~~~~~~~~~~~~~~~~~
+-----------------
 
 ::
 
@@ -162,7 +172,7 @@ form. If set to true, then you can create a form field with the name
 The default value is "no".
 
 form\_class=
-~~~~~~~~~~~~
+------------
 
 ::
 
@@ -172,7 +182,7 @@ With this parameter, you can specify the css class you want the form to
 have, enabling fine-grained styling of the form.
 
 form\_id=
-~~~~~~~~~
+---------
 
 ::
 
@@ -181,12 +191,15 @@ form\_id=
 With this parameter, you can specify the css id you want the form to
 have. The default value is 'contact\_form'.
 
+*********
 Variables
----------
+*********
 
+.. contents::
+   :local:
 
 author\_email
-~~~~~~~~~~~~~
+-------------
 
 ::
 
@@ -198,7 +211,7 @@ variable to put in the email address of the author who wrote the linked
 entry. This feature allows the creation of a "contact author" page.
 
 author\_name
-~~~~~~~~~~~~
+------------
 
 ::
 
@@ -210,7 +223,7 @@ variable to put in the screen name of the author who wrote the linked
 entry. This feature allows the creation of a "contact author" page.
 
 member\_email
-~~~~~~~~~~~~~
+-------------
 
 ::
 
@@ -220,7 +233,7 @@ If a user is logged in, then it will display their email address as
 recorded in their member profile.
 
 member\_name
-~~~~~~~~~~~~
+------------
 
 ::
 
@@ -229,12 +242,15 @@ member\_name
 If a user is logged in, then it will display their screen name as
 recorded in their member profile.
 
+***********
 Form Fields
------------
+***********
 
+.. contents::
+   :local:
 
 captcha
-~~~~~~~
+-------
 
 ::
 
@@ -254,7 +270,7 @@ Configuration <../../cp/admin/system_admin/email_configuration.html>`_
 preferences.
 
 from
-~~~~
+----
 
 ::
 
@@ -264,7 +280,7 @@ Email address of person who is sending the email. You must include this
 form field, even if it is just a hidden field.
 
 message
-~~~~~~~
+-------
 
 ::
 
@@ -280,7 +296,7 @@ by using "message[]". For example::
 	Cell Phone: <input type="text" name="message[]" size="12" maxlength="15" />
 
 name
-~~~~
+----
 
 ::
 
@@ -289,7 +305,7 @@ name
 Name of person who is sending the email.
 
 required
-~~~~~~~~
+--------
 
 ::
 
@@ -306,7 +322,7 @@ by using "required[]". For example::
 	Bio: <textarea name="required[]" rows="5" cols="40"></textarea>
 
 subject
-~~~~~~~
+-------
 
 ::
 
@@ -316,7 +332,7 @@ Subject of the email that is being sent. You must include this form
 field, even if it is just a hidden field.
 
 to
-~~
+--
 
 ::
 
@@ -325,7 +341,7 @@ to
 Email address to which the email is being sent. Multiple email addresses
 may be specified by separating them with a comma. You must include this
 form field, even if it is just a hidden field. This data may also be
-specified with the `recipients= <#par_recipients>`_ parameter of the
+specified with the `recipients= <#recipients>`_ parameter of the
 tag.
 
 .. warning:: If you leave this field open to user input, you are

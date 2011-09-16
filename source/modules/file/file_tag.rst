@@ -3,6 +3,7 @@ File Entries Tag
 
 .. contents::
    :local:
+   :depth: 1
 
 Introduction
 ------------
@@ -31,6 +32,8 @@ Here is a simple example of a possible usage of this tag::
 Parameters
 ----------
 
+.. contents::
+	:local:
 
 category=
 ~~~~~~~~~
@@ -67,9 +70,7 @@ haven't been categorized then they will be ignored and not included in
 the results. However, if you are using exclusion (category="not 3\|4"),
 then you will be shown all entries without those categories *including*
 those without any categories assigned. To change this behavior when
-excluding categories use the
-`uncategorized\_entries="" <parameters.html#par_uncategorized_entries>`_
-parameter.
+excluding categories use the `uncategorized_entries=`_ parameter.
 
 **Note:** Using this parameter will automatically cause ExpressionEngine
 to *ignore* any category information specified via the URL. For
@@ -257,16 +258,31 @@ sort=
 
 ::
 
-	sort="asc" ``sort="desc"``
+	sort="desc"
 
 The sort order can be "asc" (ascending order or "oldest item first" for
 dates) or "desc" (descending order or "newest item first" for dates). If
 you do not use a sort order the default is desc.
 
+uncategorized\_entries=
+~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+	uncategorized_entries="no"
+
+By default, when specifying the `category=`_ parameter with 'not ' at the
+beginning , ExpressionEngine will show all files without those
+categories *including* any files without categories assigned. If you
+would prefer that ExpressionEngine not show these uncategorized files,
+then set this parameter to "no" and they will be ignored.
+
 
 Variables
 ---------
 
+.. contents::
+	:local:
 
 absolute\_count
 ~~~~~~~~~~~~~~~
@@ -494,6 +510,9 @@ would be::
 Categories Variable Pair
 ------------------------
 
+.. contents::
+	:local:
+
 ::
 
 	{categories}
@@ -616,6 +635,9 @@ will automatically be available by its "short name" as a variable.
 
 Conditionals
 ------------
+
+.. contents::
+	:local:
 
 Conditionals work in the file tag::
 

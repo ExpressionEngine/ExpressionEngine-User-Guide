@@ -4,6 +4,7 @@ jQuery Module
 
 .. contents::
    :local:
+   :depth: 2
 
 ************
 Introduction
@@ -33,6 +34,9 @@ jQuery resources.
 
 Parameters
 ==========
+
+.. contents::
+   :local:
 
 plugin=
 -------
@@ -91,9 +95,9 @@ file in the main javascript folder in ExpressionEngine's system folder.
 Output example: <script type="text/javascript" charset="utf-8"
 src="http://example.com/index.php?ACT=jquery&amp;file=foo"></script>
 
-*************
-Script Source
-*************
+*****************
+Script Source Tag
+*****************
 
 The Script Source tag outputs a URL to the requested jQuery resource. ::
 
@@ -106,6 +110,9 @@ allow you to request URLs to specific jQuery resources.
 
 Parameters
 ==========
+
+.. contents::
+   :local:
 
 plugin=
 -------
@@ -157,9 +164,9 @@ file in the main javascript folder in ExpressionEngine's system folder.
 
 Output example: http://example.com/index.php?ACT=jquery&amp;file=foo
 
-*****************
-Output JavaScript
-*****************
+*********************
+Output JavaScript Tag
+*********************
 
 Outputs the actual script to the browser, with proper headers.
 
@@ -178,6 +185,9 @@ output.
 
 Parameters
 ==========
+
+.. contents::
+   :local:
 
 plugin=
 -------

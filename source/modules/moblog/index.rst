@@ -4,6 +4,7 @@ Moblog Module
 
 .. contents::
    :local:
+   :depth: 2
 
 ************
 Introduction
@@ -72,6 +73,9 @@ Here is a more complicated example that uses some of the "overrides"::
 		He's always cheerful and actually has some pretty nice flowers.
 	{/field:body}
 	{field:location format="none"}Train Station{/field:location}
+
+.. contents::
+   :local:
 
 category
 --------
@@ -239,6 +243,9 @@ wished. ::
 
 Parameters
 ==========
+
+.. contents::
+   :local:
 
 silent=
 -------

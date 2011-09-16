@@ -3,6 +3,7 @@ Mailing List Module
 
 .. contents::
    :local:
+   :depth: 1
 
 Introduction
 ------------
@@ -36,6 +37,9 @@ in any template::
 
 Parameters
 ----------
+
+.. contents::
+   :local:
 
 list=
 ~~~~~
@@ -71,6 +75,9 @@ have. The default value is 'mailinglist\_form'
 
 Variables
 ---------
+
+.. contents::
+   :local:
 
 email
 ~~~~~

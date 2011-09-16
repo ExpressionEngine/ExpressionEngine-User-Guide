@@ -34,23 +34,10 @@ community.
 -  Includes an optional `SafeCracker File <usage.html#file_fieldtype>`_
    fieldtype.
 
-************
-Installation
-************
 
-SafeCracker is not installed by default. To install it:
-
-#. Visit :menuselection:`Add-Ons --> Modules`
-#. Click the Install link for SafeCracker
-#. Confirm that you also want to install the Extension component by
-   selecting Install and clicking Submit.
-
-**NOTE:** You'll want to ensure that you are allowing extensions if you
-install the Extension component.
-
-*****
-Usage
-*****
+*****************
+Using SafeCracker
+*****************
 
 Including Assets
 ----------------
@@ -66,6 +53,9 @@ include your own version of jQuery, use the
 
 Form Inputs
 -----------
+
+.. contents::
+   :local:
 
 Most Channel Fields are available to use via input fields, including:
 
@@ -161,6 +151,8 @@ of the {field:my\_field\_name} and {options:my\_field\_name} tags. ::
 Parameters
 ----------
 
+.. contents::
+   :local:
 
 channel=
 ~~~~~~~~
@@ -396,6 +388,9 @@ yes.
 
 Variables
 ---------
+
+.. contents::
+   :local:
 
 
 Custom Field Single Tag

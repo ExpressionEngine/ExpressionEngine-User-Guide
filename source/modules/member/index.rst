@@ -4,6 +4,7 @@ Member Management Module
 
 .. contents::
    :local:
+   :depth: 2
 
 ************
 Introduction
@@ -80,6 +81,9 @@ Here is how you might use the tag::
 Parameters
 ==========
 
+.. contents::
+   :local:
+
 form_class=
 -----------
 
@@ -128,6 +132,9 @@ after successfully logging in. The parameter can be defined in two ways:
 
 Variables
 =========
+
+.. contents::
+   :local:
 
 {if auto\_login}
 ----------------
@@ -271,6 +278,9 @@ Here is the basic tag syntax::
 
 Parameters
 ==========
+
+.. contents::
+   :local:
 
 member\_id=
 -----------

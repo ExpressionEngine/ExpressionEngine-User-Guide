@@ -1,8 +1,14 @@
+##################
 Tell-A-Friend Form
-==================
+##################
 
 .. contents::
    :local:
+   :depth: 1
+   
+************
+Introduction
+************
 
 The purpose of this tag is to display a form used to share an entry with
 someone by sending them an email about it. To show your tell-a-friend
@@ -49,8 +55,9 @@ a tell-a-friend form might be created::
 	{/exp:email:tell_a_friend}
 
 
+*********************************
 Linking to the Tell-a-Friend page
----------------------------------
+*********************************
 
 In order to use the Tell-a-Friend feature, you will need to link to it.
 First, create a Template and place the Tell-a-Friend form in this
@@ -65,9 +72,12 @@ you can point to it using the permalink variable::
 In the above example, the Template "friend" contains the Tell-a-Friend
 form.
 
-
+**********
 Parameters
-----------
+**********
+
+.. contents::
+   :local:
 
 allow\_html=
 ~~~~~~~~~~~~
@@ -237,8 +247,9 @@ form\_id=
 With this parameter, you can specify the css id you want the form to
 have. The default value is 'tellafriend\_form'
 
+******************
 Channel Parameters
-------------------
+******************
 
 While some of the `Channel Entries Tag
 Parameters <../../modules/channel/parameters.html>`_ are also available
@@ -247,9 +258,12 @@ that context. One exception that can be valuable is
 show\_future\_entries=, which would let you use the Tell-a-Friend form
 with entries dated in the future.
 
+*********
 Variables
----------
+*********
 
+.. contents::
+   :local:
 
 member\_email
 ~~~~~~~~~~~~~
@@ -271,8 +285,9 @@ member\_name
 If a user is logged in, then it will display their screen name as
 recorded in their member profile.
 
+*****************
 Channel Variables
------------------
+*****************
 
 ::
 
@@ -296,9 +311,12 @@ be filled and the second two will be ignored. If an entry from channel 2
 is linking to the tell-a-friend form, then the first two will be ignored
 and the second two will be filled out.
 
+***********
 Form Fields
------------
+***********
 
+.. contents::
+   :local:
 
 captcha
 ~~~~~~~
@@ -397,5 +415,5 @@ to
 Email address where the email is being sent. Multiple email addresses
 may be specified by separating them with a comma. You must include this
 form field, even if it is just a hidden field. This data may also be
-specified with the `recipients= <#par_recipients>`_ parameter of the
+specified with the `recipients=`_ parameter of the
 tag.
