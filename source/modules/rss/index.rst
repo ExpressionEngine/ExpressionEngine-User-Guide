@@ -3,6 +3,7 @@ RSS Module
 
 .. contents::
    :local:
+   :depth: 1
    
 Introduction
 ------------
@@ -27,6 +28,9 @@ Sample RSS and Atom Templates
 
 Parameters
 ----------
+
+.. contents::
+   :local:
 
 If you use any of the following parameters, you will probably want to
 mirror the same settings for your {exp:channel:entries} tag contained
@@ -121,6 +125,9 @@ currently logged in user. ::
 
 Variables
 ---------
+
+.. contents::
+   :local:
 
 author
 ~~~~~~
@@ -262,7 +269,7 @@ serving the necessary content.
 
 This ability is provided by adding a special parameter to the
 {exp:channel:entries} opening tag,
-`dynamic\_start="yes" <../channel/parameters.html#par_dynamic_start>`_.
+`dynamic\_start="yes" <../channel/parameters.html#dynamic-start>`_.
 It is used like so::
 
 	{exp:channel:entries channel="default_site" limit="10" dynamic_start="yes"}

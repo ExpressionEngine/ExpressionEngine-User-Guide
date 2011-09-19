@@ -4,6 +4,7 @@ Wiki Module
 
 .. contents::
 	:local:
+	:depth: 2
 
 ************
 Introduction
@@ -79,6 +80,9 @@ the wiki within the specified ExpressionEngine template.
 
 Parameters
 ==========
+
+.. contents::
+	:local:
 
 base\_path
 ----------

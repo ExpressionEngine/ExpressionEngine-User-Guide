@@ -3,6 +3,7 @@ Simple Search Form Tag
 
 .. contents::
 	:local:
+	:depth: 1
 
 Introduction
 ------------
@@ -31,6 +32,8 @@ The search results are displayed on the page you specify as the
 Input Fields
 ------------
 
+.. contents::
+	:local:
 
 Keywords
 ~~~~~~~~
@@ -95,6 +98,9 @@ name="show\_future\_entries" attribute alone. ::
 
 Parameters
 ----------
+
+.. contents::
+	:local:
 
 name=
 ~~~~~

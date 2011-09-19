@@ -49,7 +49,7 @@ to the SAEF stylesheet in your template::
 
 SafeCracker will automatically load jQuery for you. If you prefer to
 include your own version of jQuery, use the
-`include\_jquery <#par_include_jquery>`_ parameter.
+`include_jquery=`_ parameter.
 
 Form Inputs
 -----------
@@ -65,14 +65,16 @@ Title
 
 Set the title of the entry. ::
 
-	<label for="title">Title</label>  <input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+	<label for="title">Title</label>
+	<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
 
 URL Title
 ~~~~~~~~~
 
 Set the URL title of the entry. ::
 
-	<label for="url_title">URL Title</label>  <input type="text" name="url_title" id="url_title" value="{url_title}" maxlength="75" size="50">
+	<label for="url_title">URL Title</label>
+	<input type="text" name="url_title" id="url_title" value="{url_title}" maxlength="75" size="50">
 
 Entry Date
 ~~~~~~~~~~
@@ -88,7 +90,9 @@ Expiration Date
 Set the expiration date of the entry, which must be in the format
 YYYY-MM-DD hh:mm PM. ::
 
-	<p>Expiration Date <br> <input type="text" name="expiration_date" value="{expiration_date}" maxlength="23" size="25"></p>
+	<p>Expiration Date <br>
+		<input type="text" name="expiration_date" value="{expiration_date}" maxlength="23" size="25">
+	</p>
 
 Categories
 ~~~~~~~~~~
@@ -276,7 +280,7 @@ error\_handling=
 	error_handling="inline"
 
 Choose to display error messages inline (see `Error
-Messages <#var_error>`_). By default, errors are displayed with the user
+Messages <#error-my-field-name>`_). By default, errors are displayed with the user
 message template.
 
 require\_entry=
@@ -430,7 +434,7 @@ error:my\_field\_name
 
 	{error:my_field_name}
 
-If you have chosen `inline error handling <#par_error_handling>`_, you
+If you have chosen `inline error handling <#error-handling>`_, you
 can display the error for the specified field. You may also use this
 syntax for non-custom fields, like title and url\_title.
 
@@ -477,7 +481,11 @@ options:my\_field\_name
 
 ::
 
-	<select name="my_field_name">     {options:my_field_name}         <option value="{option_value}"{selected}>{option_name}</option>     {/options:my_field_name}  </select>
+	<select name="my_field_name">
+		{options:my_field_name}
+			<option value="{option_value}"{selected}>{option_name}</option>
+		{/options:my_field_name}
+	</select>
 
 If using a field with options, such as Checkboxes or Dropdown, you can
 display the options in a loop, to give you more control over the markup.
@@ -620,7 +628,7 @@ global\_errors
 
 	{global_errors}{error}{/global_errors}
 
-If you have chosen `inline error handling <#par_error_handling>`_, you
+If you have chosen `inline error handling <#error-handling>`_, you
 can display global entry submission errors.
 
 global\_errors:count
@@ -630,7 +638,7 @@ global\_errors:count
 
 	{if global_errors:count}{/if}
 
-If you have chosen `inline error handling <#par_error_handling>`_, you
+If you have chosen `inline error handling <#error-handling>`_, you
 can display the number global entry submission errors.
 
 field\_errors
@@ -640,7 +648,7 @@ field\_errors
 
 	{field_errors}{error}{/field_errors}
 
-If you have chosen `inline error handling <#par_error_handling>`_, you
+If you have chosen `inline error handling <#error-handling>`_, you
 can display field-related entry submission errors.
 
 field\_errors:count
@@ -650,18 +658,18 @@ field\_errors:count
 
 	{if field_errors:count}{/if}
 
-If you have chosen `inline error handling <#par_error_handling>`_, you
+If you have chosen `inline error handling <#error-handling>`_, you
 can display the number field-related entry submission errors.
 
 Form Validation
 ---------------
 
 SafeCracker uses the CodeIgniter Form Validation class. You can create
-field-by-field `validation rules <#par_rules>`_. By default, SafeCracker
+field-by-field `validation rules <#rules-my-field-name>`_. By default, SafeCracker
 will display validation errors using the ExpressionEngine user message
 template. If you prefer, you can also use `inline error
-handling <#par_error_handling>`_ to `display form validation
-errors <#var_error>`_ in the context of your form.
+handling <#error-handling>`_ to display form validation
+errors in the context of your form.
 
 Allowing Guests to Post Entries
 -------------------------------

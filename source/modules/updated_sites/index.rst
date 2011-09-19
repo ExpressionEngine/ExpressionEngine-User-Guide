@@ -4,6 +4,7 @@ Updated Sites Module
 
 .. contents::
 	:local:
+	:depth: 2
 	
 ************
 Introduction
@@ -31,6 +32,8 @@ templates::
 Parameters
 ==========
 
+.. contents::
+	:local:
 
 limit=
 ------
@@ -88,6 +91,9 @@ configurations::
 
 Variables
 =========
+
+.. contents::
+	:local:
 
 count
 -----
@@ -236,5 +242,3 @@ when the ping was received. You may also deleted any unwanted pings.
 	:glob:
 	:titlesonly:
 	:hidden:
-	
-	*

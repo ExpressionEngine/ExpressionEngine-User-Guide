@@ -3,6 +3,7 @@ Advanced Search Form Tag
 
 .. contents::
 	:local:
+	:depth: 1
 
 Introduction
 ------------
@@ -137,11 +138,14 @@ information they need. Example::
 
 
 The search results are displayed on the page you specify as the
-`result\_page= <#par_result_page>`_ page. Results are displayed with the
+`result\_page=`_ page. Results are displayed with the
 `Search Results <results.html>`_ tag.
 
 Parameters
 ----------
+
+.. contents::
+	:local:
 
 category=
 ~~~~~~~~~

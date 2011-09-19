@@ -4,6 +4,7 @@ Displaying Search Results
 
 .. contents::
 	:local:
+	:depth: 2
 
 ******************
 Search Results Tag
@@ -43,6 +44,9 @@ searches. Example::
 Parameters
 ==========
 
+.. contents::
+	:local:
+
 backspace=
 ----------
 
@@ -73,30 +77,9 @@ That will produce code like this::
 	   Entry 2<br />
 	   Entry 3
 
-switch=
--------
-
-::
-
-	switch="option_one|option_two"
-
-This parameter allows you to set two values that will alternate between
-the result rows. This is commonly used to have alternating colored
-backgrounds for the result rows. This parameter works in conjunction
-with the `{switch} <#var_switch>`_ variable.
-
-This is a legacy parameter, and has been replaced by the more advanced
-`{switch=} variable <../channel/variables.html#var_switch>`_ from the
-Channel Entries tag which has greater flexibility. This parameter /
-variable combo will continue to function, but it is recommended that the
-Channel Entries tag's {switch=} variable be used.
 
 Variables
 ---------
-
-::
-
-	{title}     {permalink}     {author}     {body}     et cetera...
 
 Nearly all of the `Channel Entries Tag
 Variables <../../modules/channel/variables.html>`_ are available for the
@@ -104,6 +87,8 @@ search results page so that you can display as much or as little of the
 channel entry's data as possible depending on your needs. There are also
 some search results specific variables available in the results page:
 
+.. contents::
+	:local:
 
 auto\_path
 ----------
@@ -169,23 +154,6 @@ The Template\_Group/Template with which to display the member profile of
 the author of the entry. Typically, this variable will be specified as
 {member\_path='member/index'}.
 
-switch
-------
-
-::
-
-	{switch}
-
-This variable is dynamically replaced by the appropriate value specified
-in the `switch= <#par_switch>`_ parameter. This variable is commonly
-used to set a CSS class or a background color.
-
-This is a legacy variable, and has been replaced by the more advanced
-`{switch=} variable <../channel/variables.html#var_switch>`_ from the
-Channel Entries tag which has greater flexibility. This parameter /
-variable combo will continue to function, but it is recommended that the
-Channel Entries tag's {switch=} variable be used.
-
 *******************
 Search Keywords Tag
 *******************
@@ -197,7 +165,7 @@ search terms they used::
 	{exp:search:keywords}
 
 This may also be used on the template specified by the
-`no\_result\_page <advanced.html#par_no_result_page>`_ parameter of the
+`no\_result\_page <advanced.html#no-result-page>`_ parameter of the
 `simple search form <simple.html>`_ and `advanced search
 form <advanced.html>`_.
 
@@ -217,7 +185,7 @@ of matches::
 	{/exp:search:total_results}
 
 This may also be used on the template specified by the
-`no\_result\_page <advanced.html#par_no_result_page>`_ parameter of the
+`no\_result\_page <advanced.html#no-result-page>`_ parameter of the
 `simple search form <simple.html>`_ and `advanced search
 form <advanced.html>`_.
 

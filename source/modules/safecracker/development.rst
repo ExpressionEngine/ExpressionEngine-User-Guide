@@ -3,6 +3,7 @@ SafeCracker Development
 
 .. contents::
    :local:
+   :depth: 1
 
 Getting your custom fieldtype to work with SafeCracker
 ------------------------------------------------------
@@ -34,6 +35,9 @@ by::
 
 Extension Hooks
 ---------------
+
+.. contents::
+   :local:
 
 safecracker\_submit\_entry\_start
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

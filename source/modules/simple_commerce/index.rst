@@ -4,7 +4,7 @@ Simple Commerce Module
 
 .. contents::
 	:local:
-	:depth: 3
+	:depth: 2
 
 ************
 Introduction
@@ -57,6 +57,9 @@ Here is a simple example::
 
 Parameters
 ==========
+
+.. contents::
+	:local:
 
 cancel=
 -------
@@ -156,6 +159,9 @@ http://example.com/index.php/store/thank\_you/.
 
 Variables
 =========
+
+.. contents::
+	:local:
 
 Item Details
 ------------

@@ -3,6 +3,7 @@ Statistics Module
 
 .. contents::
 	:local:
+	:depth: 1
 
 Introduction
 ------------
@@ -16,6 +17,9 @@ system statistics. The basic tag consists of a tag pair::
 
 Parameters
 ----------
+
+.. contents::
+	:local:
 
 site=
 ~~~~~
@@ -61,6 +65,9 @@ Here is an example of the tag with the parameter in use::
 
 Variables
 ---------
+
+.. contents::
+	:local:
 
 -  `{last\_comment\_date format="%m/%d/%Y %h:%i
    %a"} <#var_last_comment_date>`_

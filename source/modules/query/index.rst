@@ -4,6 +4,7 @@ Query Module
 
 .. contents::
    :local:
+   :depth: 1
    
 ************
 Introduction
@@ -166,6 +167,9 @@ This would display output similar to this::
 ********************
 Additional Variables
 ********************
+
+.. contents::
+   :local:
 
 The following variables are automatically available to you:
 

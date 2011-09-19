@@ -4,6 +4,7 @@ Referrer Module
 
 .. contents::
    :local:
+   :depth: 1
 
 ************
 Introduction
@@ -45,6 +46,8 @@ To display your referrer information in a template, use the following code::
 Parameters
 **********
 
+.. contents::
+   :local:
 
 limit=
 ------
@@ -68,6 +71,9 @@ window.
 *********
 Variables
 *********
+
+.. contents::
+   :local:
 
 ref\_agent
 ----------
