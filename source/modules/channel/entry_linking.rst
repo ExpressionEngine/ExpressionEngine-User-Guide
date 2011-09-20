@@ -1,5 +1,14 @@
+###########################
 Next/Previous Entry Linking
-===========================
+###########################
+
+.. contents::
+   :local:
+   :depth: 1
+
+************
+Introduction
+************
 
 The Next and Previous entry links allow you to generate links to the
 next or previous entry, based on the date of the entry.
@@ -29,12 +38,15 @@ the "next\_entry" tag's contents will not be shown (since there is no
 "next entry"). Likewise, when you are viewing the oldest/first entry in
 the channel the "previous\_entry" content will not be shown.
 
+**********
 Parameters
-----------
+**********
 
+.. contents::
+   :local:
 
 category=
-~~~~~~~~~
+---------
 
 ::
 
@@ -83,7 +95,7 @@ excluding categories use the
 parameter.
 
 category\_group=
-~~~~~~~~~~~~~~~~
+----------------
 
 ::
 
@@ -108,7 +120,7 @@ Or use "not" to exclude categories
 	category_group="not 2"
 
 channel=
-~~~~~~~~
+--------
 
 ::
 
@@ -125,7 +137,7 @@ space::
 	channel="not channel4|channel5"
 
 entry\_id=
-~~~~~~~~~~
+----------
 
 ::
 
@@ -139,7 +151,7 @@ ommit specific entries from showing up in the cycle, by using "not"::
 The above example would ignore entries 2, 9, 23, and 50.
 
 show\_expired=
-~~~~~~~~~~~~~~
+--------------
 
 ::
 
@@ -149,7 +161,7 @@ You can determine whether you wish for entries that have "expired" to be
 included.
 
 show\_future\_entries=
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 ::
 
@@ -160,7 +172,7 @@ be included. This option is useful when doing things like creating a
 list of events, some of which have not occurred yet.
 
 status=
-~~~~~~~
+-------
 
 ::
 
@@ -178,12 +190,15 @@ Or exclude statuses using "not"
 
 	status="not submitted|processing|closed"
 
+*********
 Variables
----------
+*********
 
+.. contents::
+   :local:
 
 entry\_id
-~~~~~~~~~
+---------
 
 ::
 
@@ -192,7 +207,7 @@ entry\_id
 The ID number of the channel entry
 
 id\_path='
-~~~~~~~~~~
+----------
 
 ::
 
@@ -212,7 +227,7 @@ SITE\_INDEX is preferable since it will make the URL cleaner. ::
 	<a href="{path='SITE_INDEX'}">{title}</a>
 
 path='
-~~~~~~
+------
 
 ::
 
@@ -230,7 +245,7 @@ SITE\_INDEX is preferable since it will make the URL cleaner. ::
 	<a href="{path='SITE_INDEX'}">{title}</a>
 
 title
-~~~~~
+-----
 
 ::
 
@@ -239,7 +254,7 @@ title
 This variable simply displays the title of the entry.
 
 url\_title
-~~~~~~~~~~
+----------
 
 ::
 

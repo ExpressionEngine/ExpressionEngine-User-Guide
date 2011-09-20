@@ -1,30 +1,40 @@
+#######################
 Archive Month Links Tag
-=======================
+#######################
 
-The Archive Month links tag displays a list of links for any month that
-contains channel entries. Its purpose is to link to your monthly archive
-page. The links created by this tag look like this:
+.. contents::
+   :local:
+   :depth: 1
 
--  October, 2005
--  September, 2005
--  August, 2005
--  July, 2005
--  June, 2005
+************
+Introduction
+************
 
-Here is the tag syntax
-
-::
+The Archive Month Links tag displays a list of links for any months that
+contain Channel Entries. The links will point to your monthly archive
+page. ::
 
     {exp:channel:month_links channel="news" limit="50"}
         {month}, {year}<br>
     {/exp:channel:month_links}
 
-Parameters
-----------
+The links created by the tag look like this:
 
+-  October, 2011
+-  September, 2011
+-  August, 2011
+-  July, 2011
+-  June, 2011
+
+**********
+Parameters
+**********
+
+.. contents::
+   :local:
 
 channel=
-~~~~~~~~
+--------
 
 ::
 
@@ -33,7 +43,7 @@ channel=
 The name of the channel you want to limit the query to.
 
 limit=
-~~~~~~
+------
 
 ::
 
@@ -42,7 +52,7 @@ limit=
 The number of rows to return.
 
 sort=
-~~~~~
+-----
 
 ::
 
@@ -52,7 +62,7 @@ The sort order can be ascending or descending. The order will default to
 "descending" if nothing is specified.
 
 show_expired=
-~~~~~~~~~~~~~~
+--------------
 
 ::
 
@@ -62,7 +72,7 @@ You can determine whether you wish for entries that have "expired" to be
 included.
 
 show_future_entries=
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 ::
 
@@ -73,7 +83,7 @@ be included. This option is useful when doing things like creating a
 list of events, some of which have not occurred yet.
 
 status=
-~~~~~~~
+-------
 
 ::
 
@@ -93,12 +103,15 @@ Or exclude statuses using "not"
 
 	status="not submitted|processing|closed"
 
+*********
 Variables
----------
+*********
 
+.. contents::
+   :local:
 
 month
-~~~~~
+-----
 
 ::
 
@@ -107,7 +120,7 @@ month
 Month, long format: September
 
 month_num
-~~~~~~~~~~
+----------
 
 ::
 
@@ -116,7 +129,7 @@ month_num
 Month, numeric: 09
 
 month_short
-~~~~~~~~~~~~
+------------
 
 ::
 
@@ -125,7 +138,7 @@ month_short
 Month, short format: Sep
 
 path
-~~~~
+----
 
 ::
 
@@ -153,7 +166,7 @@ Will be rendered like this
     {path='template_group/template_name'}
 
 year
-~~~~
+----
 
 ::
 
@@ -162,7 +175,7 @@ year
 Year, long format: 2003
 
 year_short
-~~~~~~~~~~~
+-----------
 
 ::
 
@@ -170,12 +183,12 @@ year_short
 
 Year, short format: 03
 
-Variables Pairs
----------------
-
+**************
+Variable Pairs
+**************
 
 year_heading
-~~~~~~~~~~~~~
+-------------
 
 ::
 
