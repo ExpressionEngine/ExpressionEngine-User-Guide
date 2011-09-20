@@ -28,6 +28,6 @@ Forum Topic Variable Pairs
 
 To link the Forum Topic to the Channel Entry on the front-end use the
 Conditional Variables for the Channel Entries Tag. These include `{if
-forum\_topic} <../channel/conditional_variables.html#cond_if_forum_topic>`_
+forum\_topic} <../channel/conditional_variables.html#if-forum-topic>`_
 and `{if
-not\_forum\_topic} <../channel/conditional_variables.html#cond_if_not_forum_topic>`_
+not\_forum\_topic} <../channel/conditional_variables.html#if-not-forum-topic>`_

@@ -1,6 +1,9 @@
 Other Features
 ==============
 
+.. contents::
+   :local:
+
 Re-Synchronize Forums
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -38,7 +41,7 @@ standard EE template engine:
 
 #. Create a Template as normal in the main Templates tab of the Control
    Panel. Name it as you want.
-#. Inside that new Template, place this code *and **only** this code*::
+#. Inside that new Template, place this code and **only** this code::
 
 	{exp:forum}
 

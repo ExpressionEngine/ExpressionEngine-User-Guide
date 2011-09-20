@@ -1,14 +1,14 @@
-Upgrading the Discussion Forum Module From an Earlier Version
-=============================================================
+Updating to a Newer Version
+===========================
 
-**Note:** Before upgrading to a new version of the Discussion Forum
-module insure that you are running the current version of
-ExpressionEngine.
+  .. note:: Before updating to a new version of the Discussion Forum
+   module insure that you are running the latest version of
+   ExpressionEngine.
 
-Also, please note these instructions are only applicable for
-*upgrading* an existing installation. If you have not installed the
-Discussion Forum Module, you will need to follow the `forum installation
-instructions <forum_installation.html>`_.
+These instructions are only applicable for
+*updating* an existing installation. If you have not installed the
+Discussion Forum Module yet, follow the `Installation
+Instructions <forum_installation.html>`_.
 
 Step 1
 ------
@@ -28,7 +28,7 @@ your server at this location:
 
 system/expressionengine/modules/
 
-Note: You will replace the existing forum folder with the new one,
+You will replace the existing forum folder with the new one,
 ending up with this:
 
 system/expressionengine/modules/forum/
@@ -38,31 +38,29 @@ Step 3
 
 Inside the unzipped software you will also find two language files:
 
--  lang.forum.php
--  lang.forum\_cp.php
+-  forum_lang.php
+-  forum_cp_lang.php
 
 Upload these two files into your
 system/expressionengine/language/english/ directory on your server,
 replacing the existing ones. You should end up with:
 
--  system/expressionengine/language/english/lang.forum.php
--  system/expressionengine/language/english/lang.forum\_cp.php
+-  system/expressionengine/language/english/forum_lang.php
+-  system/expressionengine/language/english/forum_cp_lang.php
 
 Step 4
 ------
 
-Log into your ExpressionEngine Control Panel and visit this page:
-
-Add-ons > Modules > Discussion Forum
-
-Accessing that page will automatically tell ExpressionEngine to perform
+Log into your ExpressionEngine Control Panel and visit
+:menuselection:`Add-ons --> Modules --> Discussion Forum`.
+This will cause ExpressionEngine to automatically perform
 any internal updates that are needed for the new version.
 
-**IMPORTANT:** When you click on the link to the Discussion Forum
-module, the update will begin taking place. Do not close your browser
-window or click on any links until the page has finished loading.
-Depending on the size of your forums, the update may take several
-seconds to complete.
+.. important:: When you click on the link to the Discussion Forum
+   module, the update will begin taking place. Do not close your browser
+   window or click on any links until the page has finished loading.
+   Depending on the size of your forums, the update may take several
+   seconds to complete.
 
 Step 5: Version Specific Notes
 ------------------------------

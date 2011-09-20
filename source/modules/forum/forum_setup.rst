@@ -1,11 +1,11 @@
 Discussion Forum Setup
 ======================
 
-Setting Up Your Forums
-----------------------
-
 When setting up a new forum, it is typically best to do things in a
 certain order.
+
+.. contents::
+   :local:
 
 Set "Default Preferences"
 ~~~~~~~~~~~~~~~~~~~~~~~~~

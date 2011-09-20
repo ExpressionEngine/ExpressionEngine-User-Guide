@@ -1,5 +1,5 @@
-Installing the Discussion Forum Module
-======================================
+Installation
+============
 
 The Discussion Forum Module is simple to install.
 
@@ -69,7 +69,7 @@ Step 7
 ------
 
 Log into your ExpressionEngine Control Panel with a SuperAdmin user. Go
-Add-Ons > Modules. You will see an entry listed for the "Discussion
+to :menuselection:`Add-Ons --> Modules`. You will see an entry listed for the "Discussion
 Forum". On the right side of the table, click the Install link
 corresponding to the Discussion Forum Module. This will install the
 necessary database tables and settings for the forum.
