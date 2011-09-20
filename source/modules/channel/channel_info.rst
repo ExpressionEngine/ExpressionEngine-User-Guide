@@ -1,17 +1,32 @@
+#######################
 Channel Information Tag
-=======================
+#######################
+
+.. contents::
+   :local:
+   :depth: 1
+
+************
+Introduction
+************
 
 The purpose of this tag is to display general information about the
-specified channel as set under Admin > Channel Management. ::
+specified Channel as set under :menuselection:`Admin --> Channel Administration --> Channels`. ::
 
-	{exp:channel:info channel="news"}  Channel Name: {channel_title}<br /> Description: {channel_description}  {/exp:channel:info}
+	{exp:channel:info channel="news"}
+		Channel Name: {channel_title}<br>
+		Description: {channel_description}
+	{/exp:channel:info}
 
+**********
 Parameters
-----------
+**********
 
+.. contents::
+   :local:
 
 channel=
-~~~~~~~~
+--------
 
 ::
 
@@ -19,12 +34,15 @@ channel=
 
 The name (short name) of the channel. This is a **required** parameter.
 
+*********
 Variables
----------
+*********
 
+.. contents::
+   :local:
 
 channel\_description
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 ::
 
@@ -34,7 +52,7 @@ This variable simply displays the content from the "Channel Description"
 field.
 
 channel\_encoding
-~~~~~~~~~~~~~~~~~
+-----------------
 
 ::
 
@@ -44,7 +62,7 @@ This variable simply displays the content from the "XML Character
 Encoding" setting.
 
 channel\_lang
-~~~~~~~~~~~~~
+-------------
 
 ::
 
@@ -54,7 +72,7 @@ This variable simply displays the content from the "XML Language"
 setting.
 
 channel\_title
-~~~~~~~~~~~~~~
+--------------
 
 ::
 
@@ -64,7 +82,7 @@ This variable simply displays the content from the "Full Channel Name"
 setting.
 
 channel\_url
-~~~~~~~~~~~~
+------------
 
 ::
 

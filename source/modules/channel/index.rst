@@ -10,7 +10,7 @@ of flexibility for displaying your content.
 The Channel Module provides the following tags and features:
 
 -  `Channel Entries Tag <channel_entries.html>`_
--  `Channel Information Tag <info.html>`_
+-  `Channel Information Tag <channel_info.html>`_
 -  `Next/Prev Entry Linking <entry_linking.html>`_
 -  `Archive Month Links Tag <archive_month_links.html>`_
 -  `Calendar Tag <calendar.html>`_
