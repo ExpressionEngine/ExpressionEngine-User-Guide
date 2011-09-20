@@ -1578,5 +1578,4 @@ See the `Comment Module Control Panel <control_panel/index.html>`_ page.
 	:titlesonly:
 	:hidden:
 	
-	*
 	control_panel/index

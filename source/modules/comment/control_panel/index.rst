@@ -132,4 +132,3 @@ privileges, only the status will be editable.
 	:titlesonly:
 	:hidden:
 	
-	*

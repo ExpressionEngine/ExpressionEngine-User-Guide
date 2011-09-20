@@ -2259,8 +2259,6 @@ If no parameter is specified it will default to "daily".
 categories
 ----------
 
-::
-
 Categories are unique in that they are a "looping pair". Since you can
 have multiple categories per entry, we need a mechanism to show as many
 categories as exist for each entry. ::
