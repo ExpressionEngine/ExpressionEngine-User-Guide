@@ -23,8 +23,8 @@ The entire RSS feed is enclosed between the following tags::
 Sample RSS and Atom Templates
 -----------------------------
 
--  `Sample Atom Feed <sample_atom.txt>`_
--  `Sample RSS Feed <sample_rss.txt>`_
+- :download:`Sample Atom Feed <sample_atom.txt>`
+- :download:`Sample RSS Feed <sample_rss.txt>`
 
 Parameters
 ----------
