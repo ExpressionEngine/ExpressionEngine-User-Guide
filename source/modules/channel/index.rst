@@ -1,26 +1,15 @@
+##############
 Channel Module
-==============
+##############
 
 ExpressionEngine's Channel Module allows you to display content created
-using the PUBLISH page in the Control Panel. The Channel Module is the
-most powerful system within ExpressionEngine, allowing you a great deal
+using the :menuselection:`Publish` section of the Control Panel. It's the
+most powerful module of ExpressionEngine, allowing you a great deal
 of flexibility for displaying your content.
 
 The Channel Module provides the following tags and features:
 
 -  `Channel Entries Tag <channel_entries.html>`_
-
-   -  `Parameters <parameters.html>`_
-   -  `Conditional Variables <conditional_variables.html>`_
-   -  `Single Variables <variables.html>`_
-   -  `Variable Pairs <variable_pairs.html>`_
-   -  `Channel Fields <custom_fields.html>`_
-   -  `Pagination <pagination_page.html>`_
-   -  `Spanning an Entry Across Multiple
-      Pages <pagination_spanning.html>`_
-   -  `Entry "Views" Tracking <entry_tracking.html>`_
-   -  `Dynamic Parameters <dynamic_parameters.html>`_
-
 -  `Channel Information Tag <info.html>`_
 -  `Next/Prev Entry Linking <entry_linking.html>`_
 -  `Archive Month Links Tag <archive_month_links.html>`_
