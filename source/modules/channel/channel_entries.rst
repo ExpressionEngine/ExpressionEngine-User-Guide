@@ -2479,6 +2479,6 @@ of times an entry has been viewed.
 Relationships
 *************
 
-The Channel Module supports a powerful `related
-entries <related_entries.html>`_ feature that lets you associate one
+The Channel Module supports a powerful `Relationship
+ <relationships.html>`_ feature that lets you associate one
 entry to another.

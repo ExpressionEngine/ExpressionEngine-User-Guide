@@ -1,8 +1,17 @@
+######################
 Channel Categories Tag
-======================
+######################
 
-The "channel categories tag" enables you to show your categories in a
-list. Here is the basic syntax
+.. contents::
+   :local:
+   :depth: 1
+
+************
+Introduction
+************
+
+The Channel Categories tag enables you to show your Categories in a
+list. Here is the basic syntax:
 
 ::
 
@@ -12,7 +21,7 @@ list. Here is the basic syntax
 
 Everything contained between the opening and closing tag will be
 repeated for each category, so if you want to wrap each category with
-some markup you'll do this
+some markup you'll do this:
 
 ::
 
@@ -22,44 +31,47 @@ some markup you'll do this
     {/exp:channel:categories}
 
 
+**********
 Parameters
-----------
+**********
 
+.. contents::
+   :local:
 
 backspace=
-~~~~~~~~~~
+----------
 
 ::
 
-	backspace="7"
+	backspace="5"
 
 Backspacing removes characters (including spaces and line breaks) from
-the last iteration of the loop. For example, if you put a <br /> tag
+the last iteration of the loop. For example, if you put a <br> tag
 after each category you'll have this
 
 ::
 
-    Local News<br />
-    Health News<br />
-    Science News<br />
+    Local News<br>
+    Health News<br>
+    Science News<br>
 
-You might, however, not want the <br /> tag after the final item. Simply
+You might, however, not want the <br> tag after the final item. Simply
 count the number of characters (including spaces and line breaks) you
-want to remove and add the backspace parameter to the tag. The <br />
-tag has 6 characters plus a new line character, so you would do this
+want to remove and add the backspace parameter to the tag. The <br>
+tag has 4 characters plus a new line character, so you would do this
 
 ::
 
-	{exp:channel:categories style="linear" backspace="7"}
-	    {category_name}<br />
+	{exp:channel:categories style="linear" backspace="5"}
+	    {category_name}<br>
 	{/exp:channel:categories}
 
-That will produce code like this
+That will produce code like:
 
 ::
 
-    Local News<br />
-    Health News<br />
+    Local News<br>
+    Health News<br>
     Science News
 
 
@@ -68,7 +80,7 @@ style. It is not applicable if you use the "nested" style for the
 display of the list.
 
 category\_group=
-~~~~~~~~~~~~~~~~
+----------------
 
 ::
 
@@ -95,7 +107,7 @@ Or use "not" to exclude categories
 	category_group="not 2"
 
 channel=
-~~~~~~~~
+--------
 
 ::
 
@@ -109,7 +121,7 @@ URL <../../cp/admin/content_admin/global_channel_preferences.html>`_
 feature.
 
 class=
-~~~~~~
+------
 
 ::
 
@@ -127,7 +139,7 @@ then the beginning of the nested category output would be
 	<ul class="my_custom_class">
 
 disable=
-~~~~~~~~
+--------
 
 ::
 
@@ -140,7 +152,7 @@ are:
 -  category\_fields
 
 id=
-~~~
+---
 
 ::
 
@@ -158,7 +170,7 @@ beginning of the nested category output would be
 	<ul id="my_custom_id">
 
 parent\_only=
-~~~~~~~~~~~~~
+-------------
 
 ::
 
@@ -168,7 +180,7 @@ This parameter allows you to limit the category display to only "parent"
 categories; no sub-categories will be displayed.
 
 restrict\_channel=
-~~~~~~~~~~~~~~~~~~
+------------------
 
 ::
 
@@ -183,7 +195,7 @@ specified channel. By default, the empty categories shown will be
 restricted to the specified channel.
 
 show=
-~~~~~
+-----
 
 ::
 
@@ -206,7 +218,7 @@ children of that parent category are then unable to be shown by the tag.
 The parent category is required for any and all children categories.
 
 show\_empty=
-~~~~~~~~~~~~
+------------
 
 ::
 
@@ -222,7 +234,7 @@ parameter <#par_restrict_channel>`_ in conjunction with show\_empty
 By default, categories with no entries **will** be included.
 
 status=
-~~~~~~~
+-------
 
 ::
 
@@ -248,7 +260,7 @@ By default, the Categories tag will display categories that contain any
 entries with a status *other than* closed.
 
 style=
-~~~~~~
+------
 
 ::
 
@@ -302,12 +314,15 @@ used as a "hook" for javascript or CSS in providing DHTML or other
 functionality. You may change this by using the `id= <#par_id>`_
 parameter.
 
+*********
 Variables
----------
+*********
 
+.. contents::
+   :local:
 
 category\_description
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 ::
 
@@ -322,7 +337,7 @@ statement so that it only displays if there is content in the field
 	{if category_description}{category_description}{/if}
 
 category\_id
-~~~~~~~~~~~~
+------------
 
 ::
 
@@ -331,7 +346,7 @@ category\_id
 The category ID associated with the category.
 
 parent\_id
-~~~~~~~~~~
+----------
 
 ::
 
@@ -341,7 +356,7 @@ The category ID associated with the category's parent (or 0 in the case
 of a top level category).
 
 category\_image
-~~~~~~~~~~~~~~~
+---------------
 
 ::
 
@@ -351,7 +366,7 @@ The image link (or other information) you can optionally store with each
 category within the Control Panel.
 
 category\_name
-~~~~~~~~~~~~~~
+--------------
 
 ::
 
@@ -360,7 +375,7 @@ category\_name
 This variable simply displays the name of the category.
 
 category\_url\_title
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 ::
 
@@ -369,7 +384,7 @@ category\_url\_title
 This variable displays the URL title of the category
 
 count
-~~~~~
+-----
 
 ::
 
@@ -380,7 +395,7 @@ categories are being displayed, then for the fourth category the {count}
 variable would have a value of "4".
 
 path='
-~~~~~~
+------
 
 ::
 
@@ -402,7 +417,7 @@ SITE\_INDEX is preferable since it will make the URL cleaner.
 	<a href="{path='SITE_INDEX'}">{category_name}</a>
 
 total\_results
-~~~~~~~~~~~~~~
+--------------
 
 ::
 
@@ -411,7 +426,7 @@ total\_results
 The total number of categories being displayed.
 
 Custom Category Fields
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 All custom fields assigned to a category can be accessed using the
 "short name" of the field::
@@ -421,10 +436,11 @@ All custom fields assigned to a category can be accessed using the
 These are totally dynamic in that any field you create for your category
 will automatically be available by its "short name" as a variable.
 
+**********************
 Category Dropdown Menu
-----------------------
+**********************
 
-You can also display categories in a dropdown menu using the code below
+You can also display categories in a dropdown menu using the following code:
 
 ::
 
@@ -437,8 +453,9 @@ You can also display categories in a dropdown menu using the code below
 	    </select>
 	</form>
 
+********
 Examples
---------
+********
 
 Here are a few examples of the categories tag in use
 
