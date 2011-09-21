@@ -46,13 +46,16 @@ a tell-a-friend form might be created::
 			<textarea id="message" name="message" readonly="readonly" rows="18" cols="40">
 				{summary}
 				{body}
-				{permalink}
+				{permalink="template_group/template"}
 			</textarea>
 		</p>
 		<p>
 			<input name="submit" type='submit' value='Submit Form' />
 		</p>
 	{/exp:email:tell_a_friend}
+
+.. important:: Make sure to use the correct template_group and template so the
+permalink that is sent in the tell-a-friend email is correct
 
 
 *********************************
