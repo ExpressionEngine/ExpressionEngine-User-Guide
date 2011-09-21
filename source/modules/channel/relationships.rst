@@ -88,11 +88,10 @@ inside the related_entries tag pair. In fact, nearly anything that is
 available in the `Channel Entries <channel_entries.html>`_
 tag can be shown as related data.
 
-.. important:: For performance reasons all related entry data is cached
-   internally by the system when you submit new entries using the Publish
-   page. This has the unfortunate side effect of making a some items that
-   are normally dynamic not able to be used. These include various
-   statistical variables:
+.. important:: For performance reasons, all related Entry data is cached
+   internally by the system when you submit new Entries using the Publish
+   page. This makes some items that are normally dynamic unable to be used,
+   including the following statistical variables:
 
 - {view\_count\_one}
 - {view\_count\_two}
@@ -175,11 +174,10 @@ inside the reverse_related_entries tag pair. In fact, nearly anything that is
 available in the `Channel Entries <channel_entries.html>`_
 tag can be shown as reverse related data.
 
-.. important:: For performance reasons all related entry data is cached
-   internally by the system when you submit new entries using the Publish
-   page. This has the unfortunate side effect of making a some items that
-   are normally dynamic not able to be used. These include various
-   statistical variables:
+.. important:: For performance reasons, all related Entry data is cached
+   internally by the system when you submit new Entries using the Publish
+   page. This makes some items that are normally dynamic unable to be used,
+   including the following statistical variables:
 
 - {view\_count\_one}
 - {view\_count\_two}
