@@ -17,10 +17,8 @@ The Channel Module provides the following tags and features:
 -  `Channel Categories Tag <categories.html>`_
 -  `Category Archive Tag <category_archive.html>`_
 -  `Category Heading Tag <category_heading.html>`_
--  `Creating Relationships Between Entries <related_entries.html>`_
--  `Displaying Reverse Relationships Between
-   Entries <reverse_related_entries.html>`_
--  `Stand-Alone Entry Form <entry_form.html>`_
+-  `Relationships <relationships.html>`_
+-  `Stand-Alone Entry Form (deprecated)<entry_form.html>`_
 
 .. toctree::
 	:glob:
