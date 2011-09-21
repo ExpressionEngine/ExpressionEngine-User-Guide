@@ -10,15 +10,16 @@ of flexibility for displaying your content.
 The Channel Module provides the following tags and features:
 
 -  `Channel Entries Tag <channel_entries.html>`_
--  `Channel Information Tag <channel_info.html>`_
 -  `Next/Prev Entry Linking <entry_linking.html>`_
--  `Archive Month Links Tag <archive_month_links.html>`_
+-  `Relationships <relationships.html>`_
+-  `Adding and Editing Entries from Outside the Control Panel <../safecracker/index.html>`_
 -  `Calendar Tag <calendar.html>`_
+-  `Archive Month Links Tag <archive_month_links.html>`_
 -  `Channel Categories Tag <categories.html>`_
 -  `Category Archive Tag <category_archive.html>`_
 -  `Category Heading Tag <category_heading.html>`_
--  `Relationships <relationships.html>`_
--  `Stand-Alone Entry Form (deprecated)<entry_form.html>`_
+-  `Channel Information Tag <channel_info.html>`_
+-  `Stand-Alone Entry Form (deprecated) <entry_form.html>`_
 
 .. toctree::
 	:glob:
