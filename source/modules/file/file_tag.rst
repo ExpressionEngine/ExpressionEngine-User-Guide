@@ -340,18 +340,6 @@ current page.
 If five entries are being displayed per page, then for the fourth entry
 on the page the {count} variable would have a value of "4".
 
-custom\_field\_one
-~~~~~~~~~~~~~~~~~~
-
-Up to six custom fields can be shown, with the following syntax::
-
-	{custom_field_one}
-	{custom_field_two}
-	{custom_field_three}
-	{custom_field_four}
-	{custom_field_five}
-	{custom_field_six}
-
 entry\_date
 ~~~~~~~~~~~
 
