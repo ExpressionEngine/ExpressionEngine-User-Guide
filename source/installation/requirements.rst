@@ -35,6 +35,7 @@ Server Requirements
    -  UPDATE
    -  DELETE
    -  CREATE
+   -  INDEX
    -  ALTER
    -  DROP
 
