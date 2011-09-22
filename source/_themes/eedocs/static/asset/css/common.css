@@ -96,12 +96,12 @@ fieldset{ border: 0; }
 	padding: 20px 10px;
 	position: absolute;
 	top: 0;
-	width: 500px;
+	width: auto;
 }
 
 	#table-contents .toctree-wrapper ul{margin-bottom: 0; margin-top: 0; }
 	
-		#table-contents .toctree-wrapper li{ color: #999999; line-height: 1.7; padding: 1px 0; }
+		#table-contents .toctree-wrapper li{ color: #999999; line-height: 1.7; padding: 1px 0; white-space: nowrap}
 		
 			#table-contents .toctree-l1{ list-style-type: none; }
 		

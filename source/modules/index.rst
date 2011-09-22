@@ -1,7 +1,12 @@
+#######
+Modules
+#######
+
 .. toctree::
 	:glob:
 	:titlesonly:
-	
+	:maxdepth: 1
+
 	blacklist/index
 	channel/index
 	comment/index

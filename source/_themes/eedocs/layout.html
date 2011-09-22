@@ -97,15 +97,16 @@
 			</form>
 			<ul>
 				{%- block rootrellink %}
-				<li><a href="{{ pathto(master_doc) }}">Home</a>&nbsp;&nbsp;{{ reldelim1 }}</li>
-				<li><a id="toc-link" href="{{ pathto(master_doc) }}">Table of Contents</a>&nbsp;&nbsp;{{ reldelim1 }}</li>
+				<li><a href="{{ pathto(master_doc) }}">User Guide Home</a>{%- if pagename != 'index' %}&nbsp;&nbsp;{{ reldelim1 }}{%- endif %}</li>
 				{%- endblock %}
 				
 				{%- for parent in parents %}
 				<li><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a>&nbsp;&nbsp; {{ reldelim1 }}</li>
 		        {%- endfor %}
 
+				{%- if pagename != 'index' %}
 				<li><strong>{{ title }}</strong></li>
+				{%- endif %}
 			</ul>
 		</div><!-- /#header -->
 
@@ -128,12 +129,12 @@
 	<script src="{{ pathto('_static/asset/js/jquery-ui-min.js', 1) }}" type="text/javascript" charset="utf-8" async></script>
 	<script type="text/javascript" charset="utf-8">
 		$('#toc-link').click(function(){
-			$('#table-contents').animate({ left: '0' },1000);
+			$('#table-contents').animate({ left: '0' },'fast');
 			return false;
 		});
 		$('html').click(function(){
 			if ($('#table-contents').css("left") == '0px'){
-				$('#table-contents').animate({ left: '-520' },1000);
+				$('#table-contents').animate({ left: '-520' },'fast');
 			}
 		});
 		$('#table-contents').click(function(event){

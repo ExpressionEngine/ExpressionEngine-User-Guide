@@ -71,7 +71,6 @@ to be able to use them you will need to meet their requirements.
 
 Notes
 -----
-|
 
 Apache Server
 ~~~~~~~~~~~~~
@@ -84,12 +83,12 @@ three options:
 #. Manually turn that feature on using a .htaccess file.
 #. Contact your Host or server admin to have them enable the option.
 #. Run your site using query strings. See the "Query String" section of
-   the `Explanation of URLs <general/urls.html>`_ page for details.
+   the :doc:`/general/urls` page for details.
 
 URL Segment Support
 ~~~~~~~~~~~~~~~~~~~
 
 If the Server Wizard lists URL Segment Support as *Unsupported*, you
 will need to run your ExpressionEngine site using query strings. The
-"Query String" section on the `Explanation of URLs <general/urls.html>`_
-page contains the needed details.
+"Query String" section of the :doc:`/general/urls`
+page contains more information.

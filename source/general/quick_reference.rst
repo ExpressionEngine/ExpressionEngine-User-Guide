@@ -7,4 +7,4 @@ here <./images/ee_quick_reference.pdf>`_.
 |EE Quick Reference|
 
 
-.. |EE Quick Reference| image:: ./images/ee_quick_reference.png
+.. |EE Quick Reference| image:: ../images/ee_quick_reference.png
