@@ -554,12 +554,11 @@ the tags.
 The Core Module File (mod.module\_name.php)
 -------------------------------------------
 
-The Core Module file is used for outputting content via the Templates
+The Core Module file is used for outputting content via Templates
 and doing any processing that is required by both the Control Panel and
 any module tags contained in a template. It includes a class with a name
-that is a combination of the package's name with a '\_mod' suffix. The
-first letter and only the first letter of the class name should be
-capitalized. There is one required class variable, $return\_data, which
+that matches the package (the first letter of the class name must be
+capitalized). There is one required class variable, $return\_data, which
 will contain the module's outputted content and is retrieved by the
 Template parser after the module is done processing. As always, be sure
 you invoke the super object in your constructor.
