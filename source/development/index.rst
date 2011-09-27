@@ -14,7 +14,7 @@ Development
 -  `Emoticon Development <./emoticons.html>`_
 -  `Extensions Development <./extensions.html>`_
 -  `Fieldtype Development <./fieldtypes.html>`_
--  Plugin API and Reference
+-  `Plugin Development <./plugins.html>`_
 -  `Module Development <./modules.html>`_
 
    -  `Module Development Tutorial <./module_tutorial.html>`_
