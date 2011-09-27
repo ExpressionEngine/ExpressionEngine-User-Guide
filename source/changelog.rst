@@ -1,10 +1,12 @@
 ExpressionEngine 2.x Change Log
 ===============================
 
-..contents:: Page Contents
+.. contents::
+   :local:
+   :depth: 1
 
--  `ExpressionEngine 1.x Change
-   Log <http://expressionengine.com/legacy_docs/changelog.html>`_
+The Change Log for ExpressionEngine 1.x is `available here.
+<http://expressionengine.com/legacy_docs/changelog.html>`_
 
 Version 2.2.2
 -------------
@@ -2942,17 +2944,3 @@ Build 20091202 (initial release)
    -  `Benedikte Vanderweeën <http://www.bene.be/>`_
    -  `Colin Williams <http://wllmscncpts.tumblr.com/>`_
    -  Charles Neely
-
-What's changed in the User Guide itself?
-----------------------------------------
-
-Keep track of changes to the User Guide between versions by browsing our
-`User Guide repository mirror at
-Bitbucket <https://bitbucket.org/ellislab/expressionengine-user-guide>`_.
-Or clone a local copy with `Mercurial <http://mercurial.selenic.com/>`_
-and read and diff to your heart's content!
-
-.. code-block:: bash
-
-	$ hg clone https://ellislab@bitbucket.org/ellislab/expressionengine-user-guide
-
