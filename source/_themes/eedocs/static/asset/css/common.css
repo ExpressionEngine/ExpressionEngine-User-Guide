@@ -41,6 +41,8 @@ p, ul, ol{ margin: 20px 0; }
 	li > ul,
 	li > ol{ margin: 0; margin-left: 40px; }
 
+#expressionengine-user-guide li em {font-style: normal}
+
 p, li, dd, dt, pre{ line-height: 1.5; }
 
 a:link,
