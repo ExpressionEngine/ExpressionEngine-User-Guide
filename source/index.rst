@@ -9,9 +9,8 @@ ExpressionEngine User Guide
 Getting Started
 ***************
 
-- :doc:`Overview <overview/index>`
-- :doc:`Getting Started with ExpressionEngine <getting_started/index>`
-- :doc:`The Control Panel <cp/index>`
+- :doc:`getting_started/how_people_use_ee`
+- :doc:`getting_started/index`
 
 ***********************
 Installing and Updating
@@ -27,23 +26,24 @@ Installing and Updating
 Templates
 *********
 
-- :doc:`templates/index`
-- :doc:`Global Variables <templates/globals/index>`
+- :doc:`templates/globals/index`
 - :doc:`templates/embedding`
 - :doc:`templates/hidden_templates`
 - :doc:`templates/date_variable_formatting`
 - :doc:`templates/plugins`
 - :doc:`templates/hit_counter`
 - :doc:`templates/php`
-- :doc:`templates/flat_file_templates`
+- :doc:`templates/templates_as_files`
 - :doc:`templates/comments`
 
 *******************
 General Information
 *******************
 
+- :doc:`general/getting_the_most`
 - :doc:`general/urls`
 - :doc:`general/remove_index.php`
+- :doc:`cp/sites/index`
 - :doc:`general/text_formatting`
 - :doc:`general/database_backup`
 - :doc:`general/spam_protection`
@@ -54,15 +54,13 @@ General Information
 - :doc:`general/languages`
 - :doc:`general/bbcode`
 - :doc:`general/quick_reference`
-
-
+- :doc:`The Control Panel <cp/index>`
 
 *******
 Modules
 *******
 
 - :doc:`modules/blacklist/index`
-
 - :doc:`modules/channel/index`
 - :doc:`modules/comment/index`
 - :doc:`modules/email/index`
@@ -86,6 +84,12 @@ Modules
 - :doc:`modules/updated_sites/index`
 - :doc:`modules/wiki/index`
 	
+*****************
+Technical Support
+*****************
+
+- :doc:`troubleshooting/index`
+- :doc:`general/getting_help`
 
 .. toctree::
 	:glob:
@@ -99,7 +103,6 @@ Modules
 	general/index
 	getting_started/index
 	modules/index
-	overview/index
 	templates/index
 	troubleshooting/index
 	development/index
