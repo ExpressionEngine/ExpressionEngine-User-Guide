@@ -83,10 +83,3 @@ Ready to Rock?
 **************
 
 :doc:`Get Started with ExpressionEngine 2. </getting_started/index>`
-
-.. toctree::
-	:glob:
-	:titlesonly:
-	:hidden:
-	
-	*
