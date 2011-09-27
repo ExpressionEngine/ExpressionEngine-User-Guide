@@ -1,8 +1,5 @@
-Getting Help
-============
-
 Technical Support
------------------
+=================
 
 ExpressionEngine is known for its excellent customer and technical
 support (`review the Support
