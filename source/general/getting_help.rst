@@ -1,5 +1,5 @@
-Getting Help: Technical Support and Resources
-=============================================
+Getting Help
+============
 
 Technical Support
 -----------------
