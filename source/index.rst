@@ -5,9 +5,9 @@ ExpressionEngine User Guide
 - :doc:`License Agreement <license>`
 - :doc:`Change Log <changelog>`
 
-***************
-Getting Started
-***************
+*******
+Welcome
+*******
 
 - :doc:`getting_started/how_people_use_ee`
 - :doc:`getting_started/index`
@@ -21,20 +21,6 @@ Installing and Updating
 - :doc:`installation/update`
 - :doc:`installation/update_from_1.x`
 - :doc:`installation/update_from_freelancer`
-
-*********
-Templates
-*********
-
-- :doc:`templates/globals/index`
-- :doc:`templates/embedding`
-- :doc:`templates/hidden_templates`
-- :doc:`templates/date_variable_formatting`
-- :doc:`templates/plugins`
-- :doc:`templates/hit_counter`
-- :doc:`templates/php`
-- :doc:`templates/templates_as_files`
-- :doc:`templates/comments`
 
 *******************
 General Information
@@ -52,9 +38,21 @@ General Information
 - :doc:`general/caching`
 - :doc:`general/hidden_configuration_variables`
 - :doc:`general/languages`
-- :doc:`general/bbcode`
-- :doc:`general/quick_reference`
-- :doc:`The Control Panel <cp/index>`
+
+*********
+Templates
+*********
+
+- :doc:`templates/globals/index`
+- :doc:`templates/embedding`
+- :doc:`templates/hidden_templates`
+- :doc:`templates/date_variable_formatting`
+- :doc:`templates/plugins`
+- :doc:`templates/hit_counter`
+- :doc:`templates/php`
+- :doc:`templates/templates_as_files`
+- :doc:`templates/comments`
+
 
 *******
 Modules
@@ -84,12 +82,21 @@ Modules
 - :doc:`modules/updated_sites/index`
 - :doc:`modules/wiki/index`
 	
-*****************
-Technical Support
-*****************
+************
+Getting Help
+************
 
 - :doc:`troubleshooting/index`
-- :doc:`general/getting_help`
+- :doc:`general/technical_support`
+
+****************
+Reference Guides
+****************
+
+- :doc:`development/index`
+- :doc:`The Control Panel <cp/index>`
+- :doc:`general/quick_reference`
+- :doc:`general/bbcode`
 
 .. toctree::
 	:glob:
