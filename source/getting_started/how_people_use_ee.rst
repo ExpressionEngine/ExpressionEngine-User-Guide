@@ -1,32 +1,19 @@
-ExpressionEngine Overview
-=========================
-
-This section will introduce you to ExpressionEngine and give you an
-overview of its features and capability.
-
+###############################
 How People Use ExpressionEngine
--------------------------------
+###############################
 
 Thousands of web sites are powered using ExpressionEngine, from business
-sites, to online magazines, to personal channels. ExpressionEngine's
-flexible architecture allows an endless range of possibilities. Please
-visit `the Showcase <http://expressionengine.com/showcase/>`_ to see
-real world example sites and interviews with ExpressionEngine users.
-Then visit the `Community
-News <http://expressionengine.com/forums/viewforum/97/>`_ forum to see
-who has launched an ExpressionEngine site recently.
+sites, to online magazines, to personal blogs. ExpressionEngine's
+flexible architecture allows an endless range of possibilities.
+Vist `Show-EE <http://show-ee.com/>`_ to see
+real world example sites and interviews with ExpressionEngine creatives.
 
+***************
 The Big Picture
----------------
+***************
 
-Once you have installed ExpressionEngine, nearly all of your interaction
-with it will take place using the `**Control
-Panel** <control_panel.html>`_, which you will access using your web
-browser. The Control Panel enables you to add content to your site,
-manage its design, send email, set preferences, and much more.
-
-When you add content to your site using ExpressionEngine's control
-panel, it will be stored in a database. When someone visits your web
+When you add content to your site using ExpressionEngine's Control
+Panel, it will be stored in a database. When someone visits your web
 site, your content is retrieved from the database, formatted visually
 based on your template designs, and presented to them. ExpressionEngine
 is known as a dynamic system since it generates your web site in real
@@ -38,8 +25,9 @@ much more power and flexibility than what is possible with a traditional
 controlled, and flexibly reused in ways that would be tedious and
 difficult (if not impossible) to achieve with a static site.
 
+*************
 Some Examples
--------------
+*************
 
 To better illustrate how ExpressionEngine works, let's say you publish
 an online magazine. Your magazine has a home page that lists summaries
@@ -79,19 +67,22 @@ ExpressionEngine, creating a new archive will take a few minutes; you'll
 simply create a copy of your existing archive template, then update the
 *parameter* that controls the order that the items appear.
 
+****************
 In a Nutshell...
-----------------
+****************
 
 ExpressionEngine simplifies the process of managing your site while
-giving you more creative possibilities since you won't have to maneuver
-around your site's infrastructure, editing and uploading files. You can
+giving you more creative possibilities. You can
 simply add your content in the EE Control Panel and the system will
 automatically format it based on your template designs. And since
 ExpressionEngine is managed using your web browser, you can update your
 web site from anywhere you have access to the internet.
 
-Next: `Meet the Control Panel <control_panel.html>`_
-====================================================
+**************
+Ready to Rock?
+**************
+
+:doc:`Get Started with ExpressionEngine 2. </getting_started/index>`
 
 .. toctree::
 	:glob:
