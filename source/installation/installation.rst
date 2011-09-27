@@ -1,5 +1,5 @@
-Installation Instructions
-=========================
+Installing ExpressionEngine
+===========================
 
 **Important:** If you need to **update** your copy of ExpressionEngine
 from an earlier version, use the `Update Instructions <update.html>`_
