@@ -55,7 +55,7 @@ a tell-a-friend form might be created::
 	{/exp:email:tell_a_friend}
 
 .. important:: Make sure to use the correct template_group and template so the
-permalink that is sent in the tell-a-friend email is correct
+   permalink that is sent in the tell-a-friend email is correct
 
 
 *********************************
