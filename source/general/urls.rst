@@ -33,17 +33,6 @@ ExpressionEngine. Instead, its URLs are segment driven, like this::
 
 	http://example.com/index.php/site/archives
 
-Since Template groups and templates can be named anything you want, and
-since your site index page can be
-`renamed <../installation/renaming_index.html>`_ or even `eliminated
-completely <http://expressionengine.com/wiki/Remove_index.php_From_URLs>`_
-the URL struture for ExpressionEngine sites can appear totally static.
-For example: You can rename your "index.php" page to "channel", then
-rename the default Template Group from "site" to "joe". Your channel
-could then be accessed at::
-
-	http://example.com/channel/joe
-
 Viewing your Site
 -----------------
 
