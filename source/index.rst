@@ -36,7 +36,6 @@ General Information
 - :doc:`general/captchas`
 - :doc:`general/throttling`
 - :doc:`general/caching`
-- :doc:`general/hidden_configuration_variables`
 - :doc:`general/languages`
 
 *********
@@ -97,6 +96,7 @@ Reference Guides
 - :doc:`The Control Panel <cp/index>`
 - :doc:`general/quick_reference`
 - :doc:`general/bbcode`
+- :doc:`general/hidden_configuration_variables`
 
 .. toctree::
 	:glob:
