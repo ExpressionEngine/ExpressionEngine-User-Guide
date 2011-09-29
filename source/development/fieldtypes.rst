@@ -42,7 +42,7 @@ Example - Google Maps
 ---------------------
 
 The snippets below were truncated for clarity. The full example
-fieldtype can be `downloaded here <./google_maps.zip>`_.
+fieldtype can be :download:`downloaded here <google_maps.zip>`.
 
 Installation
 ~~~~~~~~~~~~

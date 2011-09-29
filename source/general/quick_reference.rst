@@ -1,8 +1,7 @@
 Quick Reference Chart
 =====================
 
-For a PDF version of this chart, `click
-here <./images/ee_quick_reference.pdf>`_.
+Download a :download:`PDF version of this chart </images/ee_quick_reference.pdf>`.
 
 |EE Quick Reference|
 

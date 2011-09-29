@@ -44,8 +44,8 @@ ExpressionEngine: logging in, submitting a form, etc. In addition, they
 may sometimes be shown error messages. This Message Page is designed to
 allow you to determine how the page looks that displays these messages.
 
-View default code for the `User Message
-Template <sample_code/user_message_template.txt>`_
+View default code for the :download:`User Message
+Template <sample_code/user_message_template.txt>`
 
 System Offline Template
 -----------------------
@@ -59,6 +59,6 @@ performing maintenance or other such things. This Message Page allows
 you to define the page that will be shown to people when your site is
 not "Live".
 
-View default code for the `System Offline
-Template <sample_code/system_offline.txt>`_
+View default code for the :download:`System Offline
+Template <sample_code/system_offline.txt>`
 

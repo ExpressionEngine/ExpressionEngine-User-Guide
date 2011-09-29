@@ -34,6 +34,7 @@ Development
    -  `Performance Guidelines <./guidelines/performance.html>`_
    -  `Security Guidelines <./guidelines/security.html>`_
    -  `Summary Checklist <./guidelines/checklist.html>`_
+   -  `Documentation <./guidelines/documentation.html>`_
 
 -  Using ExpressionEngine Classes
 

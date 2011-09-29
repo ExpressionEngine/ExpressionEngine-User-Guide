@@ -27,7 +27,7 @@ Guidelines
 Downloadable Conversion Tools
 -----------------------------
 
--  `TextMate syntax conversion macro <ee_textmate_macro.zip>`_ -
+-  :download:`TextMate syntax conversion macro <ee_textmate_macro.zip>` -
    convenient way to hit some of the more banal syntax changes
    automatically.
 

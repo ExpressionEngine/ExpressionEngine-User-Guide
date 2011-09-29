@@ -37,9 +37,7 @@ You may choose what type of field this is. There are 9 default choices:
 #. **Relationship**: This is a special and very powerful field type. It
    enables you to create relationships between two or more channels so
    you can show content from one entry within another. For more
-   information please visit the
-   `Relationships <../../../modules/channel/related_entries.html>`_
-   page.
+   information see :doc:`/modules/channel/relationships`.
 #. **Select Dropdown**: This creates a standard HTML <select> drop-down
    list. You can define the contents of the list manually or
    pre-populate it from another field.
@@ -66,11 +64,10 @@ This is the internal or "short name" for the field. This is a
 punctuation. The field name must be unique within the system, which
 means that you cannot have two field groups each containing a field with
 the field name of "body". The short name is typically used as the
-variable name in your `Channel Entries
-Tag <../../../modules/channel/channel_entries.html>`_
+variable name in your :doc:`/modules/channel/channel_entries`
 
-**Note:** Some words are reserved and cannot be used. Please see the
-list of `reserved words <../../reserved_words.html>`_ for details.
+.. note:: Some words are reserved and cannot be used. Please
+   see :doc:`/general/reserved_words` for details.
 
 Field Instructions
 ~~~~~~~~~~~~~~~~~~

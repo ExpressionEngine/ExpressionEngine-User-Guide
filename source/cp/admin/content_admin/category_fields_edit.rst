@@ -20,9 +20,8 @@ that you cannot have two category groups each containing a field with
 the field name of "extra". The short name is typically used as the
 variable name in your category related tags.
 
-**Note:** Some words are reserved and cannot be used. Please see the
-list of `reserved words <../../reserved_words.html#reserved_fields>`_
-for details.
+.. note:: Some words are reserved and cannot be used. Please see the
+   list of :ref:`reserved-words-fields` for details.
 
 Field Label
 ~~~~~~~~~~~

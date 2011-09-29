@@ -16,7 +16,7 @@ Before You Begin
 ExpressionEngine assumes that you are comfortable with basic HTML. If you aren't,
 we recommend `j-learning.org's basic HTML tutorial <http://www.j-learning.org/build_it/page/basic_html/>`_.
 
-If you have not installed ExpressionEngine yet, `please do so now </installation/installation>`_,
+If you have not installed ExpressionEngine yet, :doc:`please do so now </installation/installation>`,
 making sure to choose "None - Empty Installation" for your Site Theme when prompted.
 The other available theme, **Agile Records**, is a complete website for a ficticious music label
 and is simply a more complex and fully fleshed-out version of what we're going to build here.

@@ -20,9 +20,7 @@ this way::
 **Important:** You cannot give a user-defined global variable the same
 name as an existing variable. This includes variables native to
 ExpressionEngine such as other Global Variables. Please see the list of
-`reserved
-words <../../cp/reserved_words.html#reserved_global_variables>`_ for
-details.
+:doc:`/general/reserved_words` for details.
 
 **Note:** User-defined global variables are not run through the template
 engine, so you cannot place EE Tags, PHP, or variables inside them. Also
@@ -34,4 +32,4 @@ called "special\_channel", the following **would not work**::
 	{exp:channel:entries channel="{special_channel}" limit="10"}
 
 In this case, you would need to consider using a
-`Snippet <snippets.html>`_.
+:doc:`Snippet <snippets>`.

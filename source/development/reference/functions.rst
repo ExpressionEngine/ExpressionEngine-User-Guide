@@ -70,7 +70,7 @@ Remove duplicate slashes from URL.
 
 **Description:** A clean up function that removes all double slashes
 (//) from str and returns the string. Useful for cleaning up URLs. The
-double slashes in http:// are preserved.
+double slashes in ``http://`` are preserved.
 
 extract\_path(str [string])
 ---------------------------

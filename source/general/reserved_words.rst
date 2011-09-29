@@ -24,8 +24,7 @@ Reserved for Global Variables
 -----------------------------
 
 There are some words reserved for ExpressionEngine's use that may not be
-used in naming `User Defined Global
-Variables <../templates/globals/user_defined.html>`_. Below is a list of
+used in naming :doc:`/templates/globals/user_defined`. Below is a list of
 reserved words.
 
 -  lang
@@ -38,6 +37,8 @@ reserved words.
 -  hits
 -  total\_queries
 -  XID\_HASH
+
+.. _reserved-words-fields:
 
 Reserved for Fields
 -------------------

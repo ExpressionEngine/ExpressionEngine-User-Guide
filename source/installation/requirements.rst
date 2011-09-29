@@ -52,8 +52,7 @@ to be able to use them you will need to meet their requirements.
 
 -  **CAPTCHAs and Watermarking.** Your server must have the `GD (or GD
    2) <http://www.php.net/manual/en/ref.image.php>`_ library compiled
-   into PHP in order to use the `CAPTCHAs <./general/captchas.html>`_
-   feature or the
+   into PHP in order to use :doc:`/general/captchas` or watermarks.
 -  **Image Thumbnailing.** To take advantage of the image thumbnailing
    feature your server must support one of these image manipulation
    protocols:
