@@ -91,8 +91,7 @@ the results. However, if you are using exclusion (category="not 3\|4"),
 then you will be shown all entries without those categories *including*
 those without any categories assigned. To change this behavior when
 excluding categories use the
-`uncategoried\_entries="" <parameters.html#par_uncategorized_entries>`_
-parameter.
+:ref:`channel-entries-uncategorized-entries` parameter.
 
 category\_group=
 ----------------

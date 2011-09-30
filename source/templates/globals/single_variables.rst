@@ -48,6 +48,8 @@ cp\_url
 The URL to the control panel for this site. Only output for logged-in
 members who have access to the Control Panel
 
+.. _global-current_time:
+
 current\_time
 ~~~~~~~~~~~~~
 
@@ -113,7 +115,7 @@ embed
 	{embed=news/local}
 
 This variable allows you to embed one Template within another. Please
-see the `Embedded Templates <../embedding_templates.html>`_ section.
+see the :doc:`Embedded Templates <../embedding>` section.
 
 encode
 ~~~~~~
@@ -240,6 +242,8 @@ member's screen name. For instance, the output might be::
 
 	<a href="http://example.com/index.php/member/1/">Joe Smith</a>
 
+.. _global-redirect:
+
 redirect
 ~~~~~~~~
 
@@ -282,6 +286,8 @@ site\_name
 
 This variable will be substituted with your site name as defined under
 Admin > General Configuration.
+
+.. _global-site_url:
 
 site\_url
 ~~~~~~~~~

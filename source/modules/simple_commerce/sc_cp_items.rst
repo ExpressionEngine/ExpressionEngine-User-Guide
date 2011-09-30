@@ -87,7 +87,7 @@ Item Enabled
 ~~~~~~~~~~~~
 
 When checked, the item will be enabled and available for purchase. If
-unchecked, the `Simple Commerce Purchase tag <sc_purchase.html>`_ will
+unchecked, the :ref:`simple-commerce-purchase-tag` will
 not show details, purchase links, or buttons for this item.
 
 Admin Email Address
@@ -122,8 +122,8 @@ Membership" the member group would be automatically switched to the
 Recurring Payment
 ~~~~~~~~~~~~~~~~~
 
-If checked, the item is designated as a `recurring
-payment <sc_recurring_payments.html>`_.
+If checked, the item is designated as a :ref:`recurring
+payment <simple-commerce-recurring-payments>`.
 
 Subscription Frequency
 ~~~~~~~~~~~~~~~~~~~~~~

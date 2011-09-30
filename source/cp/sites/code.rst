@@ -64,8 +64,8 @@ Parameters
 
 Within the channel entries tag, it is possible to output a list of
 entries from multiple Sites while ordering by Site and Channel Field.
-Read more about the `Multiple Site Manager and
-orderby= <../../modules/channel/parameters.html#par_orderby>`_.
+Read more about the :ref:`Multiple Site Manager and
+orderby= <channel-entries-orderby>`.
 
 Variables
 ---------

@@ -1,6 +1,6 @@
-###############################
-How People Use ExpressionEngine
-###############################
+###############
+The Big Picture
+###############
 
 Thousands of web sites are powered using ExpressionEngine, from business
 sites, to online magazines, to personal blogs. ExpressionEngine's
@@ -8,22 +8,50 @@ flexible architecture allows an endless range of possibilities.
 Vist `Show-EE <http://show-ee.com/>`_ to see
 real world example sites and interviews with ExpressionEngine creatives.
 
-***************
-The Big Picture
-***************
+************
+How it Works
+************
 
 When you add content to your site using ExpressionEngine's Control
 Panel, it will be stored in a database. When someone visits your web
 site, your content is retrieved from the database, formatted visually
-based on your template designs, and presented to them. ExpressionEngine
-is known as a dynamic system since it generates your web site in real
+based on your markup, and presented to them. ExpressionEngine
+is a *dynamic* system since it generates your web site in real
 time for each user visiting it.
 
-The power of ExpressionEngine's *dynamic* approach is that it allows
+The power of ExpressionEngine's dynamic approach is that it allows
 much more power and flexibility than what is possible with a traditional
 *static* web site. Your content can be easily formatted, precisely
 controlled, and flexibly reused in ways that would be tedious and
 difficult (if not impossible) to achieve with a static site.
+
+******************
+Technical Overview
+******************
+
+ExpressionEngine stores your content inside *Channels*. Channels are simply
+information and are completely independent from the pages your visitors see,
+which are known as *Templates*. Templates contain any markup you desire
+(ExpressionEngine affords 100% control over the markup on every page) as well
+as ExpressionEngine *Tags* which pull in bits of content dynamically.
+
+Since there is no assumed relationship between a Channel and a Template,
+your content exists independent of your site's design, making ExpressionEngine
+a true content management system with great flexibility.
+
+- The Control Panel is where you publish and edit content, and manage your site.
+- A Channel consists of your entries, comments, preferences, and other related "data." It is simply information.
+- Tags permit you to show data from a Channel, or any other Module or add-on, in your Templates.
+- A Template represents a single page of your site. It is similar to an HTML file.
+- A Template Group contains a collection of Templates. It is a container similar to a folder.
+
+.. figure:: ../images/overview.gif
+   :align: center
+   :alt: ExpressionEngine Overview
+
+.. tip:: Don't worry if you don't fully grasp ExpressionEngine's terminology yet.
+	Our :doc:`Getting Started Guide </getting_started/index>` introduces the system
+	step-by-step and will have you building a simple blog in about 30 minutes.
 
 *************
 Some Examples
@@ -72,7 +100,7 @@ In a Nutshell...
 ****************
 
 ExpressionEngine simplifies the process of managing your site while
-giving you more creative possibilities. You can
+giving your designers complete creative control. You can
 simply add your content in the EE Control Panel and the system will
 automatically format it based on your template designs. And since
 ExpressionEngine is managed using your web browser, you can update your

@@ -87,7 +87,7 @@ allow\_html=
 
 ::
 
-	allow_html="yes" ``allow_html="<p>,<a>"`` ``allow_html="no"``
+	allow_html="yes" allow_html="<p>,<a>" allow_html="no"
 
 The channel entry variables (see Channel Variables below) are formatted
 according to the formatting specified when the entry was submitted, so
@@ -254,8 +254,8 @@ have. The default value is 'tellafriend\_form'
 Channel Parameters
 ******************
 
-While some of the `Channel Entries Tag
-Parameters <../../modules/channel/parameters.html>`_ are also available
+While some of the :ref:`Channel Entries Tag
+Parameters <channel-entries-parameters>` are also available
 to the Tell-a-Friend form, most of them will not be beneficial to use in
 that context. One exception that can be valuable is
 show\_future\_entries=, which would let you use the Tell-a-Friend form
@@ -296,8 +296,8 @@ Channel Variables
 
 	{title}     {permalink}     {author}     {body}     et cetera...
 
-Many of the `Channel Entries Tag
-Variables <../../modules/channel/variables.html>`_ are available for the
+Many of the :ref:`Channel Entries Tag
+Variables <channel-entries-single-variables>` are available for the
 tell-a-friend form. Notable exceptions are all category related
 variables and custom member fields.
 

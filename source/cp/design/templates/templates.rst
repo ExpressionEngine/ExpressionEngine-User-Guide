@@ -11,6 +11,7 @@ Tip: You can click multiple Group names to show more than one.
 Once chosen, the Template Group will be shown.
 
 |Template Group|
+
 Left Column
 ~~~~~~~~~~~
 
@@ -18,8 +19,8 @@ On the left side you'll find the Template Group as well as template
 export options.
 
 -  **Export Templates**: Allows you to export Templates as a zip files
-   with the directory structure of templates saved as `flat
-   files <../../../templates/flat_file_templates.html>`_.
+   with the directory structure of templates `saved as 
+   files </templates/templates_as_files>`.
 
 Header Navigation
 ~~~~~~~~~~~~~~~~~

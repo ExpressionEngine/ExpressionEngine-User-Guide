@@ -8,7 +8,6 @@ Troubleshooting
 
 By default, ExpressionEngine will not include entries whose entry date
 lies in the future. This behavior can be modified using the
-`show\_future\_entries="yes"
-parameter <../../modules/channel/parameters.html#par_show_future_entries>`_::
+:ref:`channel-entries-show-future-entries` parameter::
 
 	{exp:channel:entries channel="foobar" show_future_entries="yes"}

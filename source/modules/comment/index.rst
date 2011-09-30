@@ -26,9 +26,8 @@ associated with your entries.
 .. note:: The Comment Entries Tag is intended for use in one of your
    "single entry" pages. That is, a page that shows a single, specific
    channel entry. Therefore, your Comment page must be linked to from
-   within your Channel entries using the `URL Title
-   Path <../channel/variables.html#url-title-path>`_ variable or the
-   `Entry ID Path <../channel/variables.html#entry-id-path>`_ variable,
+   within your Channel entries using the :ref:`channel-entries-url_title_path` 
+   variable or the :ref:`channel-entries-entry_id_path` variable,
    so that the comments can be associated to a specific entry.
 
 Here is a basic example showing how you might use the comment tag::
@@ -114,6 +113,8 @@ Allows you to limit the number of comments. The limit will default to
 100 comments if a value is not specified. If you are using
 :doc:`pagination <../channel/pagination_page>` then this
 will determine the number of comments shown per page.
+
+.. _comment-entries-orderby:
 
 orderby=
 --------
@@ -349,7 +350,7 @@ can\_moderate\_comment
 	{if can_moderate_comment}
 
 This variable will be used in a conditional to allow `comment
-editing <comment_editing.html>`_. It indicates whether a member has
+editing <comment-editing>`. It indicates whether a member has
 permission to edit a given comment AND/OR close that comment.
 
 channel\_title
@@ -380,7 +381,7 @@ comment\_stripped
 
 The body of the comment without any typographical processing and with
 ExpressionEngine tags encoded. This tag is for use in `comment
-editing <comment_editing.html>`_.
+editing <comment-editing>`.
 
 comment\_auto\_path
 -------------------
@@ -478,7 +479,7 @@ editable
 	{if editable}Show Edit{/if}
 
 This variable will be used in a conditional to allow `comment
-editing <comment_editing.html>`_. It indicates whether a member has
+editing <comment-editing>`. It indicates whether a member has
 permission to edit a given comment.
 
 edit\_date
@@ -1038,8 +1039,10 @@ A simple example::
 It is very important that the dynamic="no" parameter be included above.
 This is what allows ExpressionEngine to display the comments independent
 of a particular entry. Also note that you can use a number of values for
-the `orderby= <entries.html#par_orderby>`_ parameter.
+the `comment-entries-orderby` parameter.
 
+
+.. _comment-submission-form:
 
 ***********************
 Comment Submission Form
@@ -1115,8 +1118,8 @@ preview=
 This is a **required** parameter if you are using comment previews
 indicating which template should be used for comment previews. Like
 other "path" variables in ExpressionEngine you will use the Template
-Group/Template name. More on previewing can be found on the `Comment
-Previewing <preview.html>`_ page.
+Group/Template name. More on previewing can be found in the `Comment
+Previewing`_ section.
 
 url\_title=
 -----------
@@ -1254,9 +1257,11 @@ To preview a comment requires that you create a specific Template for
 it. This Template will contain at minimum two tags. The first is the tag
 that shows the preview::
 
-	{exp:comment:preview}  {comment}  {/exp:comment:preview}
+	{exp:comment:preview}
+		{comment}
+	{/exp:comment:preview}
 
-The second is the `Comment Submission Form <form.html>`_ tag. This
+The second is the `Comment Submission Form`_ tag. This
 allows the comment to be displayed as well as the form containing the
 info so it can be previewed again or submitted.
 
@@ -1376,14 +1381,15 @@ The following conditionals are available:
 -  {if url}
 
 
+.. _comment-editing:
+
 **************************************************
 Allowing Members to Edit Comments on the Front End
 **************************************************
 
 The available tags and variables allow you to write your own client side
 code for implementing comment editing. The following is a simplified
-example using the native
-`{exp:jquery:script\_tag} <../jquery/jquery_tags.html#script_tag>`_.
+example using the native :ref:`{exp:jquery:script\_tag} <jquery-script-tag>`.
 
 Example Code
 ============
@@ -1428,8 +1434,7 @@ Comment Edit Script Tag
 
 This tag outputs a script tag that will include the necessary JavaScript
 for your comment editor. This script requires jQuery, so you will
-typically use it in conjunction with the
-`{exp:jquery:script\_tag} <../jquery/jquery_tags.html#script_tag>`_.
+typically use it in conjunction with the :ref:`jquery-script-tag`.
 
 AJAX Edit URL Tag
 =================

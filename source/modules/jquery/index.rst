@@ -15,6 +15,8 @@ your templates, and allows you to use the provided jQuery resources
 included with ExpressionEngine, without disclosing the system folder
 location or requiring that it reside in a publicly accessible location.
 
+.. _jquery-script-tag:
+
 **********
 Script Tag
 **********

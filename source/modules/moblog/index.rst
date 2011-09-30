@@ -51,6 +51,8 @@ submit along with your file::
 	Notice the guy selling flowers? He's been there every morning like clockwork for the last 2 years.
 	He's always cheerful and actually has some pretty nice flowers.
 
+.. _moblog-overrides:
+
 Overrides
 =========
 
@@ -218,6 +220,8 @@ the server in these cases.
 
 Further, note that the member account being used must be part of a
 Member Group that has permission to post entries to this channel.
+
+.. _check-moblog-tag:
 
 ****************
 Check Moblog Tag

@@ -76,7 +76,6 @@ Error Messages
 - `Supplied argument is not a valid MySQL-Link resource <error_messages/supplied_argument_is_not_a_valid_mysql-link_resource.html>`_
 - `Call to undefined function: imagettftext() <error_messages/call_to_undefined_function_imagettftext.html>`_
 - `You are not authorized to perform this action <error_messages/you_are_not_authorized_to_perform_this_action.html>`_
-- `PHP Functions can not reference global PHP variables <error_messages/php_functions_cannot_reference_global_php_variables.html>`_
 
 .. toctree::
 	:glob:

@@ -5,10 +5,12 @@ The Special Categories template creates a list of all the categories in
 a site as outlined below:
 
 |Displays all the categories in the wiki.|
+
 In addition to the variables in the `Wiki Page
 template <wiki_templates_page.html>`_, the Special Categories template
 makes use of the the following **Tags**:
 
+.. _wiki-categories-tag:
 
 {wiki:categories}
 -----------------
@@ -16,10 +18,10 @@ makes use of the the following **Tags**:
 This tag is used to display all the wiki's categories. When put into the
 `Wiki Article <./wiki_templates_article.html>`_ template, it will only
 show the categories for that specific article. It has
-:ref:`Parameters <wiki_categories_parameters>` and
-:ref:`Variables <wiki_categories_variables>` available to it.
+:ref:`Parameters <wiki-categories-parameters>` and
+:ref:`Variables <wiki-categories-variables>` available to it.
 
-.. _wiki_categories_parameters:
+.. _wiki-categories-parameters:
 
 {wiki:categories} \| Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -64,7 +66,7 @@ For more information on nesting please see the `Style
 parameter <../../modules/channel/categories.html#par_style>`_ in the
 Channel section of the User Guide.
 
-.. _wiki_categories_variables:
+.. _wiki-categories-variables:
 
 {wiki:categories} \| Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -165,10 +167,10 @@ Determines if a category is the last child of a parent category.
 ------------------------------
 
 This tag is used to display the subcategories of a single category. It
-has :ref:`Parameters <wiki_category_subcategories_parameters>` and
-:ref:`Variables <wiki_category_subcategories_variables>` available to it.
+has :ref:`Parameters <wiki-category-subcategories-parameters>` and
+:ref:`Variables <wiki-category-subcategories-variables>` available to it.
 
-.. _wiki_category_subcategories_parameters:
+.. _wiki-category-subcategories-parameters:
 
 {wiki:category\_subcategories} \| Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -201,7 +203,7 @@ For more information on nesting please see the `Style
 parameter <../../modules/channel/categories.html#par_style>`_ in the
 Channel section of the User Guide.
 
-.. _wiki_category_subcategories_variables:
+.. _wiki-category-subcategories-variables:
 
 {wiki:category\_subcategories} \| Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

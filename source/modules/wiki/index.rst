@@ -35,7 +35,7 @@ for a more detailed explanation of what a wiki is and what you can do with it.
 -  Template-based themes
 
 ****************
-First-time Setup
+First-Time Setup
 ****************
 
 #. If you have not already installed the Wiki Module, do so at
@@ -60,6 +60,7 @@ the default theme. If that's the case your tag would look like this::
 That's it! Point your browser to the 'wiki/index' template to view your
 wiki. Keep reading for more information on the wiki tag.
 
+.. _wiki-tag:
 
 ********
 Wiki Tag
@@ -71,9 +72,8 @@ Template::
 	{exp:wiki}
 
 This tag is placed in the **index template** of the Template Group that
-you are using for your wiki as described in the `Wiki
-Installation <wiki_installation.html>`_ instructions. The tag displays
-the wiki within the specified ExpressionEngine template.
+you are using for your wiki as described above in the `First-Time Setup`_
+instructions. The tag displays the wiki within the specified ExpressionEngine template.
 
 .. note:: Modifying the wiki's theme (visual design) is described in the
    `Wiki Theme Template <wiki_templates.html>`_ section of the User Guide.

@@ -13,7 +13,7 @@ containing the name of the author, the character encoding, etc., while
 the main channel tag renders the actual rows.
 
 The RSS Module Tag is intended to be used in conjunction with the
-`Channel Entries <../channel/channel_entries.html>`_ tag.
+:doc:`/modules/channel/channel_entries`.
 The entire RSS feed is enclosed between the following tags::
 
 	{exp:rss:feed}
@@ -268,8 +268,7 @@ This allows you to reduce bandwidth costs and download time by only
 serving the necessary content.
 
 This ability is provided by adding a special parameter to the
-{exp:channel:entries} opening tag,
-`dynamic\_start="yes" <../channel/parameters.html#dynamic-start>`_.
+{exp:channel:entries} opening tag, :ref:`channel-entries-dynamic-start`.
 It is used like so::
 
 	{exp:channel:entries channel="default_site" limit="10" dynamic_start="yes"}

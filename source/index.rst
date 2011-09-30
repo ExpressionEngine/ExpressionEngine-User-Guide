@@ -9,7 +9,7 @@ ExpressionEngine User Guide
 Welcome
 *******
 
-- :doc:`getting_started/how_people_use_ee`
+- :doc:`getting_started/the_big_picture`
 - :doc:`getting_started/index`
 
 ***********************

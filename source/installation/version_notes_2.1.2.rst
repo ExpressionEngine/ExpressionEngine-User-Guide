@@ -63,7 +63,7 @@ Forms is enabled, a proper security hash must be sent in order for the
 edit to be accepted. This also required a change in the response. All
 responses are now arrays. Your JavaScript will need to be updated in
 response to these changes. Please see `Comment
-Editing <../modules/comment/comment_editing.html>`_ for a current
+Editing <comment-editing>` for a current
 example.
 
 Developers

@@ -20,15 +20,42 @@ Example: for theme\_category.php create a directory named
 ‘forum\_category’. In the original theme\_category.php file, you’ll
 find::
 
-	function category_page() {     return <<< EOF {include:html_header} {include:top_bar} {include:page_header} {include:page_subheader} <div id="content"> {include:main_forum_list} {include:forum_legend} </div> {include:html_footer} EOF; } /* END */
+	function category_page() {
+		return <<< EOF
+		
+		{include:html_header}
+		{include:top_bar}
+		{include:page_header}
+		{include:page_subheader}
+		
+		<div id="content">
+			{include:main_forum_list}
+			{include:forum_legend}
+		</div>
+		
+		{include:html_footer}
+		
+	EOF;
+	}
+	 /* END */
 
 Which will become a new file in the forum\_category directory named
 category\_page.html, with the contents::
 
-	{include:html_header} {include:top_bar} {include:page_header} {include:page_subheader} <div id="content"> {include:main_forum_list} {include:forum_legend} </div> {include:html_footer}
+	{include:html_header}
+	{include:top_bar}
+	{include:page_header}
+	{include:page_subheader}
 
-There is also a small `standalone script
-utility <./convert_forum_theme.zip>`_ to help you automate these
+	<div id="content">
+		{include:main_forum_list}
+		{include:forum_legend}
+	</div>
+	
+	{include:html_footer}
+
+There is also a small :download:`standalone script
+utility <convert_forum_theme.zip>` to help you automate these
 changes. If you have greatly deviated from structure and files in your
 own theme, there may be some manual changes you will still need to make,
 but on most themes, running this utility and moving the resulting files
@@ -41,6 +68,3 @@ http://example.com/themes/forum\_themes/your\_theme/convert\_forum\_theme.php)
 and follow the included instructions.
 
 `Return to Update Page <forum_update.html>`_
-
-`ExpressionEngine <http://expressionengine.com/>`_ – Copyright ©
-2002-2011 – `EllisLab, Inc. <http://ellislab.com/>`_

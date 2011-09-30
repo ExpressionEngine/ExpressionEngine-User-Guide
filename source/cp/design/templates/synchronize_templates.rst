@@ -4,13 +4,14 @@ Synchronize Templates
 Control Panel Location: Templates > Synchronize Templates
 This section of the Control Panel allows you to synchronize templates
 stored in the database with their text file counterparts. In order to
-use this feature you must first set your site up to `Save Templates as
-Text Files <../../../templates/flat_file_templates.html>`_.
+use this feature you must first set your site up to :doc:`Save Templates as
+Files </templates/templates_as_files>`.
 
 Synchronizing Templates with Text Files
 ---------------------------------------
 
 |Template Synchronize|
+
 Upon loading the page, any files in the designated template directory
 that meet the requirements will have associated templates created for
 them. All templates set to 'save files as templates' will be shown in

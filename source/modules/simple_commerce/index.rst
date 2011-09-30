@@ -30,6 +30,8 @@ that easily integrates ExpressionEngine with PayPal.
 -  Tab delimited export of items and purchases
 
 
+.. _simple-commerce-purchase-tag:
+
 ****************************
 Simple Commerce Purchase Tag
 ****************************
@@ -325,6 +327,8 @@ view\_cart\_button
 
 A button to view the contents of the shopping cart.
 
+.. _simple-commerce-recurring-payments:
+
 ******************
 Recurring Payments
 ******************
@@ -347,8 +351,8 @@ Recurring Payment Variables in Template Tags
 ============================================
 
 Paypal does not allow recurring payments to be added to the shopping
-cart. It is therefore important to use the `item\_type
-variable <sc_variables.html#item_type>`_ in a conditional if you use
+cart. It is therefore important to use the `item_type`_
+variable in a conditional if you use
 shopping cart links.
 
 Recurring Payment Subscription Expiration Date
@@ -423,6 +427,8 @@ defined, set $debug to TRUE. ::
 Remember to set this variable to FALSE when you wish to take your store
 live and route purchases to the real PayPal website.
 
+
+.. _simple-commerce-encrypted-payments:
 
 **************************
 Encrypted Website Payments

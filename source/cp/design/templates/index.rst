@@ -6,9 +6,7 @@ The Templates page of the Control Panel allows you to create, edit, and
 manage your Templates and Template Groups. In addition you can set
 preferences and create Global Template variables.
 
-If you have not read the `Template
-Introduction <../../../overview/templates.html>`_ or `Getting Started
-Tutorial <../../../getting_started/index.html>`_ you are encouraged to
+If you have not read :doc:`/getting_started/index` you are encouraged to
 do so before reading the information below.
 
 -  `Main Templates Page <templates.html>`_

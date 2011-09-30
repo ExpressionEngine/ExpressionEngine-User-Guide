@@ -63,5 +63,4 @@ Member Related Links
 
 The path variable can be used to create a number of different links that
 point to areas with the Member Profile pages. You'll find more
-information regarding these in the `Member
-Links <../../modules/member/member_links.html>`_ page.
+information regarding these in the :ref:`creating-member-links` section.

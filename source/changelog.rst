@@ -767,9 +767,8 @@ General Changes:
 -  Added an importer to the IP to Nations Module that allows updating
    the IP records directly from the ip2nations SQL file.
 -  Added secure forms check to the frontend Comment Editor. See the
-   `Version Notes <installation/version_notes_2.1.2.html#comments>`__ and
-   update your `JavaScript <modules/comment/comment_editing.html>`_ if
-   needed.
+   `Version Notes <installation/version_notes_2.1.2.html#comments>`_ and
+   update your `JavaScript <comment-editing>` if needed.
 -  Added a setting to group preferences to disallow editing of html
    formatting buttons.
 -  Added to the default message text for forwarded private messages to
@@ -989,9 +988,8 @@ Build 20101018 (initial release)
       in arbitrary code execution.
    -  Altered version update notification to notify users if a new
       ExpressionEngine release is a security release.
-   -  Altered the behavior of the Channel Category tag's `show\_empty
-      parameter <modules/channel/categories.html#par_show_empty>`_ to be
-      channel specific. (Waits for the cheering to die down....)
+   -  Altered the behavior of the :doc:`Channel Category tag's </modules/channel/categories>` show_empty=
+      parameter channel specific. (Waits for the cheering to die down....)
    -  Altered member profile fields to disallow HTML.
    -  Altered final file permissions on uploads to compensate for
       certain hosting environments. (#13930)
@@ -1002,11 +1000,9 @@ Build 20101018 (initial release)
       #13568).
    -  Added a template synchronization warning in the Search and Replace
       tool for users saving templates as files (issue #13551).
-   -  Added a `restrict\_channel
-      parameter <modules/channel/categories.html#par_restrict_channel>`_
-      to the Channel Category tag, which allows overriding the new
-      default behavior of the `show\_empty
-      parameter <modules/channel/categories.html#par_show_empty>`_.
+   -  Added a restrict_channel= parameter
+      to the :doc:`Channel Category tag </modules/channel/categories>`, which allows overriding the new
+      default behavior of its show_empty= parameter.
    -  Added a `Control
       Panel <modules/comment/control_panel/index.html>`_ to the Comment
       Module.
@@ -1019,31 +1015,20 @@ Build 20101018 (initial release)
       `Settings <modules/comment/control_panel/index.html#settings>`_ to
       the Comment Module (Force word censoring for comments and Moderate
       expired comments).
-   -  Added new variables to the Comment Entries tag
-      (`{member\_group\_id} <modules/comment/entries.html#var_member_group_id>`_,
-      `{username} <modules/comment/entries.html#var_username>`_, `{if
-      editable} <modules/comment/entries.html#var_editable>`_, `{if
-      can\_moderate\_comment} <modules/comment/entries.html#var_can_moderate_comment>`_,
-      `{comment\_stripped} <modules/comment/entries.html#var_comment_stripped>`_).
-   -  Added new parameters to the Comment Entries tag
-      (`comment\_id= <modules/comment/entries.html#par_comment_id>`_,
-      `entry\_status= <modules/comment/entries.html#par_entry_status>`_,
-      `status= <modules/comment/entries.html#par_status>`_,
-      `author\_id= <modules/comment/entries.html#par_author_id>`_).
-   -  Added a random option to the Comment Entries `orderby
-      parameter <modules/comment/entries.html#par_orderby>`_
-   -  Added a new parameter to the Comment Form tag
-      (`return= <modules/comment/form.html#par_return>`_).
-   -  Added new conditionals to the Comment Form tag (`{if
-      comments\_expired} <modules/comment/form.html#cond_comments_expired>`_,
-      `{if
-      comments\_disabled} <modules/comment/form.html#cond_comments_disabled>`_).
-   -  Added a `Comment Notification
-      tag <modules/comment/notification_links.html>`_ to the Comment
-      module, which gives members the ability to subscribe to comment
+   -  Added new variables to the :doc:`Comment Entries tag </modules/comment/index>`
+      ({member\_group\_id}, {username}, {if editable}, {if can\_moderate\_comment}, {comment\_stripped}).
+   -  Added new parameters to the :doc:`Comment Entries tag </modules/comment/index>`
+      (comment\_id=, entry\_status=, status=, author\_id=_).
+   -  Added a random option to the Comment Entries :ref:`comment-entries-orderby` parameter.
+   -  Added a new parameter to the :ref:`Comment Form tag <comment-submission-form>`
+      (return=).
+   -  Added new conditionals to the :ref:`Comment Form tag <comment-submission-form>` ({if
+      comments\_expired}, {if comments\_disabled}).
+   -  Added a Comment Notification tag to the :doc:`Comment Module </modules/comment/index>`
+      which gives members the ability to subscribe to comment
       notifications for an entry without commenting.
-   -  Added the ability to `Allow Members to Edit Comments on the Front
-      End <modules/comment/comment_editing.html>`_.
+   -  Added the ability to :ref:`Allow Members to Edit Comments on the Front
+      End <comment-editing>`.
    -  Added a new notification template to the Comment Module to send a
       single digest when moderated comments are opened.)
    -  Moved stats mcp file logic to a library for greater code
@@ -1721,9 +1706,8 @@ Build 20100415 (initial release)
 -  Added missing language keys on publish page.
 -  Added a check for required fields when saving custom layouts for the
    publish page.
--  Added a
-   `{exp:pages:load\_site\_pages} <modules/pages/display_page_content.html#load_site_pages>`_
-   tag to the Pages module for use with the Multiple Site Manager.
+-  Added a {exp:pages:load_site_pages} tag to the :doc:`modules/pages/index`
+   for use with the Multiple Site Manager.
 -  Added a class variable to the xmlrpc library to increase consistency
    between the Metaweblog/Blogger modules and publishing using the
    control panel.
@@ -2766,13 +2750,11 @@ Build 20091202 (initial release)
       unauthorized changes to your index.php file are made.
    -  ExpressionEngine generated URLs are even prettier, no longer use a
       trailing slash.
-   -  Added
-      `{absolute\_results} <modules/channel/variables.html#var_absolute_results>`_
-      to Channel Entries tag.
+   -  Added the {absolute_results} :ref:`variable <channel-entries-single-variables>` to the Channel Entries tag.
    -  Changed the behavior of the backspace parameter so that it no
       longer ignores whitespace.
    -  Made "yes/no" tag parameters consistent.
-   -  ExpressionEngine `Template Comments <templates/commenting.html>`_
+   -  ExpressionEngine :doc:`Template Comments <templates/comments>`
       can now be used in Global Variables and Snippets.
    -  Added CodeIgniter Output Profiler for improved debugging.
    -  Changed system offline message to output 503 headers with a 1 hour
@@ -2780,9 +2762,8 @@ Build 20091202 (initial release)
    -  {assign\_variable:} changed to
       `{preload\_replace:foo="bar"} <templates/globals/preload_replacement.html>`_
       and documentation clarified.
-   -  The Simple Commerce Module now supports `subscriptions and
-      recurring
-      payments <modules/simple_commerce/sc_recurring_payments.html>`_
+   -  The Simple Commerce Module now supports :ref:`subscriptions and
+      recurring payments <simple-commerce-recurring-payments>`
    -  The Trackback module has been removed from ExpressionEngine. See
       the `version update
       notes <installation/version_notes_2.0.0.html>`__ for details.
@@ -2835,8 +2816,8 @@ Build 20091202 (initial release)
          misspelled a tag or used a tag for a plugin or module that is
          not installed.
       -  Added "create and edit" option when creating new templates.
-      -  Dramatically changed `flat-file template
-         system <templates/flat_file_templates.html>`_
+      -  Dramatically changed :doc:`flat-file template
+         system <templates/templates_as_files>`
 
          -  When using this feature, templates and groups will be
             created automatically when you add them to the template
@@ -2892,7 +2873,7 @@ Build 20091202 (initial release)
       your member profile themes.
    -  Site themes are much easier to create and redistribute, following
       the same file structure as the new
-      ` <templates/flat_file_templates.html>`_flat-file template system.
+      :doc:`flat-file template system <templates/templates_as_files>`.
 
 -  **Installer**
 
@@ -2919,8 +2900,8 @@ Build 20091202 (initial release)
       *`Contact the development
       team <http://expressionengine.com/support/>`_ for alpha
       documentation*.
-   -  Added simple methods for tags to `parse their template
-      variables <development/usage/template.html#parsing_variables>`_.
+   -  Added simple methods for tags to :doc:`parse their template
+      variables </development/usage/template>`.
    -  Added `CP library <development/usage/cp.html>`_ which has many
       assistive methods and handles many things for you automatically.
    -  Display class is deprecated!

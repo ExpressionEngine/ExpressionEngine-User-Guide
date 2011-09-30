@@ -81,8 +81,8 @@ That will produce code like this::
 Variables
 ---------
 
-Nearly all of the `Channel Entries Tag
-Variables <../../modules/channel/variables.html>`_ are available for the
+Nearly all of the :ref:`Channel Entries Tag
+Variables <channel-entries-single-variables>` are available for the
 search results page so that you can display as much or as little of the
 channel entry's data as possible depending on your needs. There are also
 some search results specific variables available in the results page:

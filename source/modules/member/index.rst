@@ -153,6 +153,8 @@ use "cookies only" and not sessions.::
 		<p><input class="checkbox" type="checkbox" name="auto_login" value="1"> Auto-login on future visits</p>
 	{/if}
 
+.. _creating-member-links:
+
 *********************
 Creating Member Links
 *********************

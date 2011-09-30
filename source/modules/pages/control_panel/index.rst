@@ -18,7 +18,7 @@ to create, edit, view and delete your Pages.
 Create New Page
 ***************
 
-This button will take you to the `Publish <../../cp/content/publish.html#tab_pages>`_ 
+This button will take you to the :ref:`Publish <publish-pages-tab>`
 area of the Control Panel. If you have specified a default Channel in the Module
 Configuration (see below), that Channel will be used, otherwise you will be
 presented with a choice of which Channel to publish to.

@@ -2,7 +2,9 @@ Global Template Preferences
 ===========================
 
 Control Panel Location: Design > Templates > Global Preferences
+
 |Global Template Preferences|
+
 This section of the Control Panel allows you to define global
 preferences which globally affect all Templates.
 
@@ -16,9 +18,8 @@ a valid Template Group only, or a 404 page is shown.
 
 If you wish to extend this to the second segment, requiring a valid
 template, then in your "index" template of your Template Group(s) that
-you wish to do this, you can take advantage of the `{redirect=} global
-variable <../../../templates/globals/single_variables.html#var_redirect>`_
-like so::
+you wish to do this, you can take advantage of the :ref:`{redirect=} global
+variable <global-redirect>` like so::
 
 	{if segment_2 != ''}   {redirect="404"} {/if}
 
@@ -40,9 +41,7 @@ segments of your URLs when determining whether to show a 404 page, since
 these segments will correlate to a Template Group and Template name
 (which represent your site's "pages"). Anything beyond the first two
 segments can not be used to show a 404 page (with one notable exception,
-using the
-`require\_entry= <../../../modules/channel/parameters.html#par_req_entry>`_
-parameter).
+using the :ref:`channel-entries-require_entry` parameter).
 
 For an explanation regarding how ExpressionEngine interprets your URLs,
 please see `ExpressionEngine URLs <../../../general/urls.html>`_ page.
@@ -67,10 +66,10 @@ revisions.
 Allow Templates to be Saved as Files?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This determines whether your Templates are saved out to a flat text file
-when you save them. See the `Flat File
-Templates <../../../templates/flat_file_templates.html>`_ section for
-specific information.
+This determines whether your Templates are saved to files
+in addition to the datbase, allowing easy editing via the
+editor of your choice. See :doc:`/templates/templates_as_files` for
+more information.
 
 Basepath to Template File Directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,8 +83,6 @@ preference and not a URL. A server path often looks similar to:
 Server paths will vary from server to server, so you should contact your
 Host or server admin if you are unsure of what your setting should be.
 
-See the `Flat File
-Templates <../../../templates/flat_file_templates.html>`_ section for
-more information.
+See :doc:`/templates/templates_as_files` for more information.
 
 .. |Global Template Preferences| image:: ../../../images/global_template_preferences.png

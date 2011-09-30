@@ -41,8 +41,8 @@ What is the difference between a Snippet and an Embedded Template?
 
 Snippets can be considered to actually be part of the template that they
 are used on, with their expanded contents parsed simultaneous to other
-tags and variables on the template. `Embedded
-templates <../embedding_templates.html>`_ are separate templates, with
+tags and variables on the template. :doc:`Embedded
+templates <../embedding>` are separate templates, with
 their own preferences (caching, PHP parsing, access, etc.), and are
 parsed individually. Put another way, embedded templates are not
 *included* in the parent template, but rather *added to them* after the

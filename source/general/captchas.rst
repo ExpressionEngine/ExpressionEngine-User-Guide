@@ -30,9 +30,7 @@ Management and look for the "Enable Captcha for Comment Posting?"
 preferences. Set this preference to "Yes".
 
 Once you have the preference turned on, you'll need to add the CAPTCHA
-code to your {exp:comment:form} `Comment Submission
-Form <../modules/comment/form.html>`_ tag. See below for the `actual
-code <#thecode>`_.
+code to your :ref:`comment-submission-form`. See below for the `CAPTCHA Code`_.
 
 Member Registration Form
 ------------------------
@@ -45,7 +43,7 @@ preferences. Set this preference to "Yes".
 The necessary CAPTCHA code already exists in the Member Templates by
 default, so you should not need to add it. If you have a version of
 ExpressionEngine from before the CAPTCHA feature was added or if you
-otherwise need the code, see below for the `actual code <#thecode>`_.
+otherwise need the code, see below for the `CAPTCHA Code`_.
 
 Contact and Tell-a-Friend Email Forms
 -------------------------------------
@@ -68,14 +66,12 @@ CAPTCHA Code
     {/if}
 
 
-The contents of the conditional (``{if captcha}``) tag will only appear if
+The contents of the conditional {if captcha} tag will only appear if
 you have the CAPTCHA preference turned on for either the comment or
 member registration forms.
 
 The code used inside the Member Registration Form is very similar, with
-only the omission of the ``{captcha_word}`` variable
-
-::
+only the omission of the {captcha_word} variable::
 
     {if captcha}
         <p>Please enter the word you see in the image below:</p>  

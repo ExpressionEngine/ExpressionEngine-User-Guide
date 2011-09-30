@@ -26,6 +26,7 @@ Publish Form Tab
 ----------------
 
 |Publish Form|
+
 Title Field
 ~~~~~~~~~~~
 
@@ -105,6 +106,7 @@ Date Tab
 --------
 
 |Publish Calendar|
+
 Entry Date
 ~~~~~~~~~~
 
@@ -146,6 +148,7 @@ Options Tab
 -----------
 
 |Publish Options Tab|
+
 Author
 ~~~~~~
 
@@ -198,6 +201,9 @@ The ping tab allows you to send "pings" to the Ping Servers you have
 defined in your My Account > Ping Servers area.
 
 |Publish Pings Tab|
+
+.. _publish-forum-tab:
+
 Forum Tab
 ---------
 
@@ -205,12 +211,11 @@ Forum Tab
 Module installed.
 
 |Publish Forum|
+
 The Forum tab allows you to optionally publish a forum topic to be
 associated with the channel entry. You can then automatically link to
 the created forum topic from within your {exp:channel:entries} tag using
-the
-`{forum\_topic\_id} <../../modules/channel/variables.html#var_forum_topic_id>`_
-variable.
+the :ref:`channel-entries-forum_topic_id` variable.
 
 Forum Topic Title
 ~~~~~~~~~~~~~~~~~
@@ -268,6 +273,8 @@ a new revision will be created rather than updating the previous
 revision. In other words, every time you click the save button a new
 revision is stored.
 
+.. _publish-pages-tab:
+
 Pages Tab
 ---------
 
@@ -275,6 +282,7 @@ Pages Tab
 Module <../../modules/pages/index.html>`_ installed.
 
 |Publish Pages|
+
 Pages URI
 ~~~~~~~~~
 

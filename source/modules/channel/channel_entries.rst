@@ -36,6 +36,8 @@ the "News" channel). {title} is replaced with the Title of each entry,
 and {body} is replaced with the content entered into the "Body" field
 of each entry.
 
+.. _channel-entries-parameters:
+
 **********
 Parameters
 **********
@@ -351,9 +353,7 @@ this::
 	display_by="week" limit="1"
 
 The display\_by="week" parameter can be used with other parameters like
-`show\_current\_week="" <parameters.html#par_show_current_week>`_,
-`start\_day="" <parameters.html#par_start_day>`_, and
-`week\_sort="" <parameters.html#par_week_sort>`_ to give more control
+`show_current_week=`_, `start_day=`_ and `week_sort=`_ to give more control
 over how the weeks are displayed and used with pagination.
 
 For example, if you want to display the current week by default but also
@@ -389,9 +389,11 @@ dynamic="no" you will ensure that the list is not affected by anything
 passed in the URL.
 
 Note: you may allow the tag to be sensitive to pagination data in the
-url by including the `paginate <#par_paginate>`_ parameter. If that tag
+url by including the `paginate=`_ parameter. If that tag
 is used in conjunction with the dynamic parameter, the tag will act
 dynamically for pagination data only.
+
+.. _channel-entries-dynamic-start:
 
 dynamic\_start=
 ---------------
@@ -436,7 +438,7 @@ entry\_id\_from=
 	entry_id_from="20"
 
 This parameter is used together with
-`entry\_id\_to= <#par_entry_id_to>`_ to designate a range of entries to
+`entry_id_to=`_ to designate a range of entries to
 display. This parameter indicates the beginning of the range. With the
 example above, the tag would begin displaying entries starting with
 entry ID 20.
@@ -449,7 +451,7 @@ entry\_id\_to=
 	entry_id_to="40"
 
 This parameter is used together with
-`entry\_id\_from= <#par_entry_id_from>`_ to designate a range of entries
+`entry_id_from=`_ to designate a range of entries
 to display. This parameter indicates the end of the range. With the
 example above, the tag would stop displaying entries at entry ID 40.
 
@@ -475,9 +477,8 @@ In the above example, three entries would be displayed, in the order: 1,
 7, and then 3.
 
 **Note:** Using this parameter will automatically constrain the entries
-tag to the entry id's you specify, effectively setting the `entry\_id=
-parameter <#par_entry_id>`_ to the same id's given to the fixed\_order=
-parameter.
+tag to the entry id's you specify, effectively setting the `entry_id=`_
+parameter to the same id's given to the fixed_order= parameter.
 
 group\_id=
 ----------
@@ -498,6 +499,8 @@ Or exclude groups using "not"
 ::
 
 	group_id="not 2|3|4"
+
+.. _channel-entries-limit:
 
 limit=
 ------
@@ -537,6 +540,8 @@ if you want to show all entries except the three latest ones, you would
 do this::
 
 	offset="3"
+
+.. _channel-entries-orderby:
 
 orderby=
 --------
@@ -676,7 +681,7 @@ related\_categories\_mode=
 
 ::
 
-	related_categories_mode="no" ``related_categories_mode="yes"``
+	related_categories_mode="no" related_categories_mode="yes"
 
 **Important Note:** This parameter is intended for use **only** when you
 are using the channel tag within "single entry" pages. Single entry
@@ -690,9 +695,9 @@ the same category as the entry specified in the URL. This lets you
 create a list of entries that are "related" to the primary one specified
 by the URL.
 
-The default limit when enabling related\_categories\_mode="" is 10
+The default limit when enabling related_categories_mode is 10
 entries, and can be overridden with the addition of the
-`limit="" <#par_limit>`_ parameter.
+:ref:`channel-entries-limit` parameter.
 
 When the related\_categories\_mode="" parameter is set to "yes", there
 are two additional parameters available to the Channel Entries tag:
@@ -721,6 +726,8 @@ This parameter allows you to use the category indicator in your URLs
 with an entries tag specifying multiple channels that do **not** share
 category groups.
 
+.. _channel-entries-require_entry:
+
 require\_entry="yes"
 --------------------
 
@@ -739,8 +746,8 @@ URL. However, if one of your single entry pages is requested, but it
 doesn't contain a valid ID, this parameter will tell the tag that you do
 not wish the template to display anything.
 
-**Note:** You will often use this parameter in conjunction with the `no
-results <conditional_variables.html#cond_if_no_results>`_ conditional.
+**Note:** You will often use this parameter in conjunction with the 
+`if no_results`_ conditional.
 
 search:field\_name=
 -------------------
@@ -871,7 +878,7 @@ show\_current\_week=
 	show_current_week="yes"
 
 Requires use of the
-`display\_by="week" <parameters.html#par_display_by>`_ parameter. When
+`display_by=`_ "week" parameter. When
 set to "yes", it displays the current week by default (i.e. no
 pagination in the URL) and automatically adjusts the pagination links to
 indicate the correct page for that week.
@@ -886,6 +893,8 @@ show\_expired=
 You can determine whether you wish for entries that have "expired" to be
 included.
 
+.. _channel-entries-show-future-entries:
+
 show\_future\_entries=
 ----------------------
 
@@ -899,12 +908,14 @@ list of events, some of which have not occurred yet. Note that EE will
 still display past entries; this parameter simply instructs EE to also
 include entries from the future.
 
+.. _channel-entries-show-pages:
+
 show\_pages=
 ------------
 
 ::
 
-	show_pages="only" ``show_pages="no"``
+	show_pages="only" show_pages="no"
 
 Allows you to tell the Channel module whether to show those entries that
 have been used to create pages with the Pages module. You can also set
@@ -912,8 +923,8 @@ it to "only" and *only* show those entries that have had Pages assigned
 to them. The default is "yes" and it will treat entries with assigned
 Pages no different from any other entries.
 
-**Tip:** show\_pages="only" acts in the same manner as
-`dynamic="no" <#par_dynamic>`_. show\_pages="only" aids in building
+**Tip:** show_pages="only" acts in the same manner as
+`dynamic=`_ "no". show\_pages="only" aids in building
 persistent menus based off existing Pages.
 
 sort=
@@ -948,7 +959,7 @@ start\_day=
 	start_day="Monday"
 
 Requires use of the
-`display\_by="week" <parameters.html#par_display_by>`_ parameter. Allows
+`display_by=`_ "week" parameter. Allows
 you to choose whether the week starts on Monday or Sunday. Sunday is the
 default.
 
@@ -962,7 +973,7 @@ start\_on=
 You can specify a particular date/time on which to start the entries.
 Only entries that are on or after this date will be included in the
 display. This parameter is often used together with the
-`stop\_before= <#par_stop_before>`_ parameter for limiting the entry
+`stop_before=`_ parameter for limiting the entry
 display to a specific date range.
 
 Format
@@ -991,15 +1002,14 @@ changed.
 Common Uses
 ~~~~~~~~~~~
 
-This parameter can be used in conjunction with
-`{current\_time} <../../templates/globals/single_variables.html#var_current_time>`_::
+This parameter can be used in conjunction with :ref:`global-current_time`::
 
 	{exp:channel:entries channel="{my_weblog}" sort="desc" start_on="{current_time format='%Y-%m-%d %H:%i'}" show_future_entries="yes"}
 
 The above would display future entries starting from the current time.
 
 If the date needs to be set dynamically, then PHP must often be used.
-`Enable PHP <../../templates/php_templates.html>`_ in the Template, set
+:doc:`Enable PHP </templates/php>` in the Template and set
 it to be parsed on "input". One example usage is::
 
 	<?php
@@ -1043,13 +1053,11 @@ stop\_before=
 You can specify a particular date/time on which to end the entries. Only
 entries that are before this date will be included in the display
 (entries exactly on this date/time will not be included). This parameter
-is often used together with the `start\_on= <#par_start_on>`_ parameter
-for limiting the entry display to a specific date range. See the
-`start\_on= <#par_start_on>`_ parameter for information about how to
-define the date/time in the parameter.
+is often used together with the `start_on=`_ parameter
+for limiting the entry display to a specific date range.
 
 If the date needs to be set dynamically, then PHP must often be used.
-`Enable PHP <../../templates/php_templates.html>`_ in the Template, set
+:doc:`Enable PHP </templates/php>` in the Template and set
 it to be parsed on "input" and then use something like this::
 
 	<?php
@@ -1072,6 +1080,8 @@ sticky=
 By default, sticky topics always remain at the top of the page. You can
 manually turn off stickies by using the above parameter.
 
+.. _channel-entries-track-views:
+
 track\_views=
 -------------
 
@@ -1086,14 +1096,14 @@ different page).
 To enable the view counter you will use one of these four parameters in
 the tag located in the page you want tracked. ::
 
-	track_views="one" ``track_views="two"`` ``track_views="three"``
-
-``track_views="four"``
+	track_views="one" track_views="two" track_views="three" track_views="four"
 
 Each of the above four parameters corresponds to these variables, which
 can be shown within any tag::
 
 	{view_count_one}{view_count_two}{view_count_three}{view_count_four}
+
+.. _channel-entries-uncategorized-entries:
 
 uncategorized\_entries=
 -----------------------
@@ -1166,7 +1176,7 @@ week\_sort=
 
 	week_sort="asc"
 
-Requires the `display\_by="week" <parameters.html#par_display_by>`_
+Requires the `display_by=`_ "week"
 parameter. Changes the sort order of the weeks so that you can either
 have the weeks displayed by most recent first or oldest first. Separate
 from the sort="" parameter, which will only affect the sorting of
@@ -1193,6 +1203,9 @@ parameter discussed previously, as these take precedence over that
 parameter. In addition, the three parameters must be applied "in order",
 meaning that you must specify the year if you specify the month and you
 must specify both month and year to use day.
+
+
+.. _channel-entries-single-variables:
 
 ****************
 Single Variables
@@ -1450,6 +1463,8 @@ entry\_id
 
 The ID number of the channel entry.
 
+.. _channel-entries-entry_id_path:
+
 entry\_id\_path
 ---------------
 
@@ -1486,6 +1501,8 @@ The expiration date of the entry. See `Date Variable
 Formatting <../../templates/date_variable_formatting.html>`_ for
 more information.
 
+.. _channel-entries-forum_topic_id:
+
 forum\_topic\_id
 ----------------
 
@@ -1501,6 +1518,8 @@ typically be used like so::
 	{if forum_topic}
 		<a href="{path='forums/viewthread'}{forum_topic_id}">Discuss this in our forums</a>
 	{/if}
+
+.. _channel-entries-gmt_entry_date:
 
 gmt\_entry\_date
 ----------------
@@ -1595,6 +1614,8 @@ occupation
 
 The author's occupation as entered in their profile.
 
+.. _channel-entries-page-uri:
+
 page\_uri
 ---------
 
@@ -1608,6 +1629,8 @@ tab), this is the page uri for the page. It will typically be used like
 so::
 
 	{if page_uri != ''} <a href="{page_uri}">View this page</a> {/if}
+
+.. _channel-entries-page-url:
 
 page\_url
 ---------
@@ -1925,6 +1948,8 @@ url\_title
 
 The human readable title used in the URL as a permalink.
 
+.. _channel-entries-url_title_path:
+
 url\_title\_path
 ----------------
 
@@ -1958,15 +1983,15 @@ week\_date
 	{week_date format="%Y %m %d"}
 
 The date that the week of the currently displayed entry started on, most
-commonly used in "weekly" `date
-headings <variable_pairs.html#var_date_heading>`_.
+commonly used in "weekly" scenarios with the `date_heading`_ variable pair.
 
-This variable is affected by the `start\_day
-parameter <parameters.html#par_start_day>`_. By default, the week date
+This variable is affected by the `start_day=`_ parameter. By default, the week date
 will fall on Sunday for the week of the entry. When start\_day="Monday"
 is used, the week date will fall on Monday for the week of the entry.
 See `Date Variable Formatting <../../templates/date_variable_formatting.html>`_ for
 more information.
+
+.. _channel-entries-conditional-variables:
 
 *********************
 Conditional Variables
@@ -2081,6 +2106,7 @@ if no\_results
 --------------
 
 ::
+
 	{if no_results} content {/if}
 
 You may use this conditional for displaying a message in the case when
@@ -2231,9 +2257,7 @@ date\_heading
 The date heading can be used to show a heading at certain intervals. The
 interval can be set to show hourly, daily, weekly, monthly, or yearly.
 
-When using weekly intervals, the
-`{week\_date} <variables.html#var_week_date>`_ variable would typically
-be used. ::
+When using weekly intervals, the `week_date`_ variable would typically be used. ::
 
 	{date_heading display="weekly"}Week of {week_date format="%Y %m %d"}{/date_heading}
 

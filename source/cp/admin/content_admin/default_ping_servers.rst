@@ -29,7 +29,7 @@ Server URL/Path
 
 The URL where the ping should be sent. This information will be
 available from the the particular site receiving the ping. Example:
-http://rpc.channels.com/RPC2
+http://rpc.weblogs.com/RPC2
 
 Port
 ~~~~

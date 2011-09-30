@@ -95,7 +95,7 @@ Date in the URL
 
 **$this->EE->localize->set\_localized\_offset()** is used when the date
 is specified in the URL (ex:
-http://www.site.com/index.php/features/module/2004/07/04/) and we need
+http://www.example.com/index.php/features/module/2004/07/04/) and we need
 to determine the current user's offset from GMT in order to pull the
 correct date range from the database. If the user is a visitor or a
 member who has not specified their Localization, then the system default

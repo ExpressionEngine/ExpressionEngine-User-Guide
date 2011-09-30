@@ -309,11 +309,11 @@ This tag, like most, has three segments: **exp**, **channel**, and **entries**.
 
 #. **exp** simply tells ExpressionEngine that this is a Tag. All Tags will begin with this.
 #. **channel** refers to the *Module* we want to use to fetch our data. ExpressionEngine is made
-   up of various Modules, and each provides its own Tags. The Channel Module is used to fetch
+   up of various Modules, and each provides its own Tags. The :doc:`/modules/channel/index` is used to fetch
    data from your Channels, and is the most commonly used Module in ExpressionEngine.
 #. **entries** refers to the type of data we want the Module to fetch, or in some cases,
    the action we want the Module to take. In this case, we're telling the Channel Module
-   that we want to retrieve our Entries.
+   that we want to retrieve our :doc:`Entries </modules/channel/channel_entries>`.
 
 Parameters
 ==========
@@ -330,6 +330,9 @@ You can specify multiple parameters, too::
 
 This tells the Channel Module that we want the 10 most recent Entries from the Channel named
 *News*. Simple enough, right? Now that we've told it what to fetch, let's actually use that data!
+
+.. tip:: Here's the full list of available :ref:`parameters <channel-entries-parameters>`
+	for the :doc:`/modules/channel/channel_entries`. 
 
 Variables
 =========
@@ -351,6 +354,9 @@ who it was submitted by, and much more. For example, to get the author of an Ent
 	{author}
 
 Now, we're ready to use this Tag in our Template.
+
+.. tip:: Here's the full list of available :ref:`variables <channel-entries-single-variables>`
+	for the :doc:`/modules/channel/channel_entries`. 
 
 ***********************
 Putting it All Together 
@@ -486,7 +492,8 @@ Then there's this line, which you'll notice *is* inside our Channel Entries Tag 
 
 				<li><a href="{url_title_path='blog'}">{title}</a></li>
 
-*url_title_path* is one of the many variables you can use inside the :doc:`Channel Entries Tag </modules/channel/channel_entries>`,
+*url_title_path* is one of the many :ref:`variables <channel-entries-single-variables>`
+you can use inside the :doc:`Channel Entries Tag </modules/channel/channel_entries>`,
 in addition to the variables containing the content of your Channel Fields. It acts very
 similary to the *path* variable we just discussed, but it appends the Entry's **URL Title**
 to the link.

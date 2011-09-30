@@ -31,8 +31,7 @@ community.
 -  Server-side form validation using the `CodeIgniter Form Validation
    class <http://codeigniter.com/user_guide/libraries/form_validation.html>`_.
 -  Handles AJAX requests and can output responses in JSON.
--  Includes an optional `SafeCracker File <usage.html#file_fieldtype>`_
-   fieldtype.
+-  Includes an optional `SafeCracker File Fieldtype`_.
 
 
 *****************

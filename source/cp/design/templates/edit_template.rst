@@ -2,6 +2,7 @@ Editing a Template
 ==================
 
 |Template Edit|
+
 Main Editing Area
 ~~~~~~~~~~~~~~~~~
 
@@ -95,8 +96,8 @@ PHP Parsing Stage
 ~~~~~~~~~~~~~~~~~
 
 If the previous preference is enabled, this sets whether PHP is parsed
-on "input" or "output" in the Template. See `Using PHP in
-Templates <../../../templates/php_templates.html>`_ for more
+on "input" or "output" in the Template. See :doc:`Using PHP in
+Templates </templates/php>` for more
 information.
 
 Hit Counter
