@@ -16,7 +16,8 @@ groups. These 'downloads' can then be displayed or accessed through a
 associated with an entry and displayed or linked inside a standard
 channel entries tag.
 
-The full example module can be :download:`downloaded here <download.zip>`.
+The full example module can be `downloaded from GitHub
+<https://github.com/EllisLab/ee-tuts-download-module>`_.
 
 Note: if you have not already read the `Modules
 Overview <./modules.html>`_, you will want to do so in order to obtain
