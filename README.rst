@@ -43,7 +43,7 @@ Obviously, the HTML documentation is what we care most about, as it is the
 primary documentation that our users encounter.  Since revisions to the built
 files are not of value, they are not under source control.  This also allows
 you to regenerate as necessary if you want to "preview" your work.  Generating
-the HTML is very simple, and sFrom the root directory of your user guide repo
+the HTML is very simple: from the root directory of your user guide repo
 fork::
 
 	make html
