@@ -24,11 +24,10 @@ http://python.org/download/releases/2.7.2/
 Installation
 ============
 
-# Install `easy_install <http://peak.telecommunity.com/DevCenter/EasyInstall#installing-easy-install>`_
-# ``easy_install sphinx``
-# ``easy_install sphinxcontrib-phpdomain``
-# Install the EE Lexer which allows EE syntax highlighting in code examples
-  (see *eelexer/README*)
+1. Install `easy_install <http://peak.telecommunity.com/DevCenter/EasyInstall#installing-easy-install>`_
+2. ``easy_install sphinx``
+3. ``easy_install sphinxcontrib-phpdomain``
+4. Install the EE Lexer which allows EE syntax highlighting in code examples (see *eelexer/README*)
 
 Editing and Creating Documentation
 ==================================
