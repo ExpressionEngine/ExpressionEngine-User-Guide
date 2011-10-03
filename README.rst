@@ -43,8 +43,8 @@ Obviously, the HTML documentation is what we care most about, as it is the
 primary documentation that our users encounter.  Since revisions to the built
 files are not of value, they are not under source control.  This also allows
 you to regenerate as necessary if you want to "preview" your work.  Generating
-the HTML is very simple: from the root directory of your user guide repo
-fork::
+the HTML is very simple.  From the root directory of your user guide repo
+fork issue the command::
 
 	make html
 
@@ -52,7 +52,7 @@ You will see it do a whiz-bang compilation, at which point the fully rendered
 user guide and images will be in *build/html/*.  After the HTML has been built,
 each successive build will only rebuild files that have changed, saving
 considerable time.  If for any reason you want to "reset" your build files,
-simply delete its contents and rebuild.
+simply delete the *build* folder's contents and rebuild.
 
 ***************
 Style Guideline
