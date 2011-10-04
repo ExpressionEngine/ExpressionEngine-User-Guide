@@ -28,6 +28,10 @@ Installation
 2. ``easy_install sphinx``
 3. ``easy_install sphinxcontrib-phpdomain``
 4. Install the EE Lexer which allows EE syntax highlighting in code examples (see *eelexer/README*)
+5. ``git clone git@github.com:EllisLab/ExpressionEngine-Reactor-User-Guide.git``
+6. ``cd ExpressionEngine-Reactor-User-Guide``
+7. ``git checkout develop``
+8. ``make html``
 
 Editing and Creating Documentation
 ==================================
@@ -44,7 +48,7 @@ primary documentation that our users encounter.  Since revisions to the built
 files are not of value, they are not under source control.  This also allows
 you to regenerate as necessary if you want to "preview" your work.  Generating
 the HTML is very simple.  From the root directory of your user guide repo
-fork issue the command::
+fork issue the command you used at the end of the installation instructions::
 
 	make html
 
