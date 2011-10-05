@@ -2,8 +2,10 @@
 Getting Started with ExpressionEngine 2
 #######################################
 
-This guide will introduce you to the basic concepts behind ExpressionEngine
-and walk you through creating a simple news blog.
+This guide will introduce you to the basic concepts behind ExpressionEngine.
+We'll create a simple two-page site with a news section to show a glimpse of the power,
+flexibility and level of control over your markup that ExpressionEngine offers over
+other systems. 
 
 .. contents::
 	:local:
@@ -18,7 +20,10 @@ we recommend `j-learning.org's basic HTML tutorial <http://www.j-learning.org/bu
 
 If you have not installed ExpressionEngine yet, :doc:`please do so now </installation/installation>`,
 making sure to choose "None - Empty Installation" for your Site Theme when prompted.
-The other available theme, **Agile Records**, is a complete website for a fictitious music label and is simply a more complex and fully fleshed-out version of what we're going to build here. It's okay if you've already installed ExpressionEngine with the Agile Records theme, but most of what we do here will have already been done for you. You can still easily follow along, though.
+The other available theme, **Agile Records**, is a complete website for a fictitious music label
+and is simply a more complex and fully fleshed-out version of what we're going to build here.
+It's okay if you've already installed ExpressionEngine with the Agile Records theme, but most of
+what we do here will have already been done for you. You can still easily follow along, though.
 
 
 *****************
@@ -102,8 +107,8 @@ Our new Channel Field Group is shown, as well as the fact that it currently hold
    :alt: Channel Field Groups Page
 
 
-For our simple news blog, let's create a basic Textarea field to hold the content, or "body", of each
-blog post.
+For our simple news section, let's create a basic Textarea field to hold the content, or "body", of each
+news article.
 
 Creating a Channel Field
 ========================
@@ -229,22 +234,22 @@ of your site. Here's how Template Groups and Templates make up an ExpressionEngi
 	http://example.com/template_group/template_name
 
 Every Template Group has at least one Template named **index**, which acts as the default if no other
-Template is specified. For example, if we create a new Template Group named **blog**, you can access its
+Template is specified. For example, if we create a new Template Group named **news**, you can access its
 index template using just::
 
-	http://example.com/blog
+	http://example.com/news
 	
 Creating a Template
 ===================
 
-Let's create our first Template, which will be a simple blog that displays Entries from our News Channel. 
+Let's create our first Template, which will be a simple news page that displays Entries from our News Channel. 
 
 #. Go to :menuselection:`Design --> Templates --> Template Manager`.
 #. Click the *New Group* button.
-#. For **Template Group Name**, type "blog".
+#. For **Template Group Name**, type "news".
 #. Click *Submit*.
 
-As expected, this automatically creates an **index** Template in our new **Blog** Group:
+As expected, this automatically creates an **index** Template in our new **bews** Group:
 
 .. figure:: ../images/getting_started_template_manager.png
    :align: center
@@ -382,7 +387,7 @@ update the Template with the following code::
 	
 After clicking *Update*, switch back over to the browser tab with the "Rendered Template" on it and
 hit Refresh. By default, the Channel Module sorts your Entries by newest to oldest, so
-you should now see your two previously-created Entries in their basic, blog-like glory:
+you should now see your two previously-created Entries in all their glory:
 
 .. figure:: ../images/getting_started_template_v2.png
    :align: center
@@ -429,10 +434,10 @@ Turning the Page
 ****************
 
 At this point, you might notice that our site's homepage (`<http://example.com>`_) is showing
-the same content as our Blog page (`<http://example.com/blog>`_). The reason for this is
+the same content as our News page (`<http://example.com/news>`_). The reason for this is
 simple: Every site has a default Template Group which gets shown as the homepage when no
 Template Group is specified in the URL. And since we've only created one Template Group, 
-"blog", that's automatically our site's default, too.
+"news", that's automatically our site's default, too.
 
 Let's rectify this by creating another Template Group, and making it the new default.
 
@@ -455,11 +460,11 @@ Let's add this code::
 		<h1>Home, Sweet Home.</h1>
 		<p>Kick back and relax... you've made it home.</p>
 	
-		<h2>The Latest</h2>
-		<p>Check out the latest news from our <a href="{path='blog'}">Blog</a>:</p>
+		<h2>What's Happening?</h2>
+		<p>Check out the <a href="{path='news'}">latest news</a>:</p>
 		<ul>
 			{exp:channel:entries channel="news" limit="10"}
-				<li><a href="{url_title_path='blog'}">{title}</a></li>
+				<li><a href="{url_title_path='news'}">{title}</a></li>
 			{/exp:channel:entries}
 		</ul>
 	</body>
@@ -478,29 +483,29 @@ Linking to Templates and Entries
 
 This line may have caught your attention::
 
-	<p>Check out the latest news from our <a href="{path='blog'}">Blog</a>:</p>
+		<p>Check out the <a href="{path='news'}">latest news</a>:</p>
 
 It contains the *path* variable, which creates a URL to a Template Group/Template.
-In this case we want to link to "blog/index", but since "index" is implied we can leave it off.  
+In this case we want to link to "news/index", but since "index" is implied we can leave it off.  
 The path variable is one of many :doc:`/templates/globals/index` you can use. *Global* just means
 that you can access it from anywhere inside your Template; it doesn't have to be inside a Tag Pair.
 
 Then there's this line, which you'll notice *is* inside our Channel Entries Tag Pair::
 
-				<li><a href="{url_title_path='blog'}">{title}</a></li>
+				<li><a href="{url_title_path='news'}">{title}</a></li>
 
 *url_title_path* is one of the many :ref:`variables <channel-entries-single-variables>`
 you can use inside the :doc:`Channel Entries Tag </modules/channel/channel_entries>`,
 in addition to the variables containing the content of your Channel Fields. It acts very
-similary to the *path* variable we just discussed, but it appends the Entry's **URL Title**
-to the link.
+similary to the *path* variable we just discussed, but it also appends the Entry's **URL Title**
+to the URL which lets us link directly to the entry, as you'll see next.
 
 A Dynamic Duo
 =============
 
-Examine the link to our older Entry, "Hello, World!" and you'll see that the URL
-looks like `<http://example.com/blog/hello-world>`_. Follow the link, and you'll be
-taken to our *Blog* Template Group. But wait, only one Entry is shown now!
+Now follow the link to our "Hello, World!" Entry, which will look like 
+`<http://example.com/news/hello-world>`_ thanks to *url_title_path*. You'll be
+taken to our *News* Template Group. But wait, only one Entry is shown now!
 
 .. figure:: ../images/getting_started_template_v4.png
    :align: center
@@ -508,9 +513,10 @@ taken to our *Blog* Template Group. But wait, only one Entry is shown now!
 
 What you're seeing here is the "dynamic" behavior of the Channel Entries Tag. By default
 the Tag will look for a valid **URL Title** in the current URL, and if one exists,
-show only that Entry in what's known as "Single Entry" mode. This can be very useful,
-but it may also not be wanted in some cases. A good example would be when you have a sidebar
-showing a list of recent Entries from various Channels, and you do not want that list
+show only that Entry in what's known as "Single Entry" mode. This is very useful, since
+we didn't have to create another template just to show our Entries all by themselves.
+In some cases, though, we may not want this to happen. A good example would be if we had a sidebar
+showing a list of recent Entries from various Channels, and we didn't want that list
 influenced by what happens to be in the current URL. To disable this behavior, set the
 *dynamic* parameter to "no"::
 
@@ -523,10 +529,10 @@ Again, all of the Channel Entries' available parameters and variables are detail
 Go Forth and Conquer!
 *********************
 
-Congratulations! You're ready to start *bringing the awesome*. You can
-create Channels and Channel Fields to hold your content, and then use Templates, Tags and your
-own HTML to create flexible, dynamic websites quickly and easily on a platform that doesn't
-get in your way. Welcome to ExpressionEngine.
+Congratulations! You're ready to start *bringing the awesome*. Create Channels and Channel Fields
+to hold your content just the way you need. Then use Templates, Tags and your own markup, style
+and scripts to create flexible, dynamic websites quickly and easily on a platform that does exactly
+what you want it to do. Welcome to ExpressionEngine.
 
 While you should read the User Guide in its entirety, here are some topics you might be
 interested in:
