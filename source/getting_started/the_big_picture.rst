@@ -5,7 +5,7 @@ The Big Picture
 Thousands of web sites are powered using ExpressionEngine, from business
 sites, to online magazines, to personal blogs. ExpressionEngine's
 flexible architecture allows an endless range of possibilities.
-Vist `Show-EE <http://show-ee.com/>`_ to see
+Visit the `ExpressionEngine Showcase <http://expressionengine.com/showcase/>`_ to see
 real world example sites and interviews with ExpressionEngine creatives.
 
 ************
