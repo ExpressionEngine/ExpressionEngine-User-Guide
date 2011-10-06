@@ -7,9 +7,9 @@ Modules Manager
 
 |Modules|
 
-Integrating the modules into your web pages is covered in detail in the
-`Modules and Tags <../../index.html#modules_docs>`_ area of the User
-Guide.
+Modules provide the Tags that you can use in your :doc:`Templates </templates/index>`. 
+ExpressionEngine includes a number of :doc:`Modules </modules/index>` by default,
+and you can install or uninstall additional ones from this page.
 
 Some Modules include their own Control Panel, enabling you to perform
 certain actions specific to that Module. For example, in the Mailing

@@ -7,10 +7,11 @@ administration aspects of the system.
 There are four main areas of Add-On administration, described in detail
 by following these links:
 
--  `Accessories <./accessory_manager.html>`_
--  `Extensions <./extension_manager.html>`_
--  `Plugins <./plugin_manager.html>`_
--  `Modules <./module_manager.html>`_
+-  :doc:`Modules <module_manager>`
+-  :doc:`Accessories <accessory_manager>`
+-  :doc:`Extensions <extension_manager>`
+-  :doc:`Fieldtypes <fieldtype_manager>`
+-  :doc:`Plugins <plugin_manager>`
 
 .. toctree::
 	:glob:
