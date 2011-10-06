@@ -44,15 +44,15 @@ First-Time Setup
    `create a wiki and configure the preferences <wiki_cp.html>`_.
 #. Go into the Templates section of your ExpressionEngine Control Panel.
    Create a Template Group specifically for your wiki and in the 'index'
-   template put the following tag::
+   template place a tag with a format similar to::
 
 	{exp:wiki base_path='Template_Group/index' wiki="wiki_short_name" theme="default"}
 
 For example, lets say you created a Template Group for your wiki called
-"wiki", your wiki's short name is also named "wiki," and you are using
+"wiki", your wiki's short name is "default_wiki," and you are using
 the default theme. If that's the case your tag would look like this::
 
-	{exp:wiki base_path='wiki/index' wiki="wiki" theme="default"}
+	{exp:wiki base_path='wiki/index' wiki="default_wiki" theme="default"}
 
 .. important:: *Do not* enable caching on the template containing the Wiki
    module tag.
