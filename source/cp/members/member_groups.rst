@@ -1,7 +1,10 @@
 Member Groups
 =============
 
-Control Panel Location: Members > Member Groups
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Member Groups`
+
 The *Member Groups* area of the Control Panel permits you to manage your
 Member Groups.
 

@@ -1,12 +1,15 @@
 Activate Pending Members
 ========================
 
-Control Panel Location: Admin > Members and Groups > Activate Pending
-Members
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Activate Pending`
+
 The Activate Pending Members section of the Control Panel allows you to
 activate any members that have registered and are pending activation.
 
 |Activate Members|
+
 Why Are Members Pending?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 

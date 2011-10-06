@@ -1,7 +1,10 @@
 Message Pages
 =============
 
-Control Panel Location: Design > Message Pages
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Design --> Message Pages`
+
 Message Pages are intended for specific purposes. There are three main
 types of Specialty Templates:
 

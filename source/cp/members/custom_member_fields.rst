@@ -1,9 +1,12 @@
 Member Fields
 =============
 
-Control Panel Location: Admin > Members and Groups > Custom Member
-Fields
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Member Fields`
+
 |Custom Member Fields Overview|
+
 The *Member Fields* feature permits you to add fields to the member
 registration form and/or member profile and My Account areas.
 
