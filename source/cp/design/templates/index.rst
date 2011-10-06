@@ -1,7 +1,6 @@
-Templates Page
-==============
+Templates
+=========
 
-The main interface for editing your pages
 The Templates page of the Control Panel allows you to create, edit, and
 manage your Templates and Template Groups. In addition you can set
 preferences and create Global Template variables.

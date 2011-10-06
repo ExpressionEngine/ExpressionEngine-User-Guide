@@ -1,7 +1,10 @@
 Synchronize Templates
 =====================
 
-Control Panel Location: Templates > Synchronize Templates
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Design --> Templates --> Synchronize Templates`
+
 This section of the Control Panel allows you to synchronize templates
 stored in the database with their text file counterparts. In order to
 use this feature you must first set your site up to :doc:`Save Templates as

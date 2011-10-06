@@ -1,6 +1,10 @@
 Wiki Templates
 ==============
 
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Design --> Themes --> Wiki`
+
 The Wiki's appearance is controlled via a collection of template files
 that make up a **theme**. Wiki themes are located in the
 themes/wiki\_themes directory. The following describes how the default

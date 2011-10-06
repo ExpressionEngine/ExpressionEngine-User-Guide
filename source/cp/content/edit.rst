@@ -1,14 +1,18 @@
 Edit Page
 =========
 
-The main interface for editing your content
-In this section of the Control Panel you can access previously posted
-entries. By using the drop-down menus the list can be filtered by
-channel, category, status, or date range. In addition, you can select
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Content --> Edit`
+
+In this section you can edit and update previously posted
+Entries. By using the drop-down menus the list can be filtered by
+Channel, Category, Status, or Date range. In addition, you can select
 multiple entries using the checkboxes on the right, then either delete
 them or edit them using the option menu at the bottom of the page.
 
 |Edit Page|
+
 Main Display
 ~~~~~~~~~~~~
 

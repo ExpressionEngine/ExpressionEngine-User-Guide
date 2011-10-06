@@ -1,7 +1,6 @@
 Snippets
 ========
 
-Control Panel Location: Design > Templates > Snippets
 Snippets are small bits of reusable template or tag parts. You could
 create a Snippet for any number of purposes, anywhere that you need to
 reuse a small portion of a template, including partial or complete tags,
@@ -22,6 +21,8 @@ It will be instantly expanded before your template is parsed, just as if
 you had put the expanded text into the template itself::
 
 	{entry_date format="%m-%d-%Y"}
+
+You can create and edit Snippets at :menuselection:`Design --> Templates --> Snippets`.
 
 What is the difference between a Snippet and a User-defined Global Variable?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

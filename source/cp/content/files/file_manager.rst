@@ -1,7 +1,10 @@
 File Manager
 ============
 
-Control Panel Location: Content > Files > File Manager
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Content --> Files --> File Manager`
+
 On the main File Manager page, you can view all of your previously
 uploaded files. Files are filterably by by upload location, category,
 file type and date range, as well as being searchable. In addition, you
@@ -13,6 +16,7 @@ Main File View
 --------------
 
 |File Manager Upload Directory|
+
 The Main File View shows the following columns:
 
 -  **#**: The ID number for the file.

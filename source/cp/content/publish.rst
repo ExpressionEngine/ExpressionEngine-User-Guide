@@ -1,25 +1,26 @@
 Publish Page
 ============
 
-The main interface for creating content for your site
-**Tip:** You can customize the display of the Publish Page by clicking
-Show Toolbar and creating a custom `Publish Page
-Layout <publish_page_layouts.html>`_.
+.. rst-class:: cp-path
 
-The PUBLISH section of the Control Panel is where you will add entries
-to your channels/site sections.
+**Control Panel Location:** :menuselection:`Content --> Publish`
 
-If you have more than one channel, when you move your cursor over the
-PUBLISH tab you will see a menu listing your channels.
+This is the area where you'll create content for your site by
+publishing new Entries to your Channels.
 
-Once a channel is selected, you will see the main Publish screen where
-you can create your entry.
+If you have more than one Channel, moving your cursor over the
+Publish menu will show all of your Channels and allow you to select one.
+
+.. tip:: You can customize the display of the Publish Page by clicking
+   Show Toolbar and creating a custom `Publish Page
+   Layout <publish_page_layouts.html>`_.
+
+
 
 Publish Page Areas
 ------------------
 
-The *PUBLISH* page interface is broken into the following separate
-"tabs":
+The Publish interface is broken into the following tabs:
 
 
 Publish Form Tab

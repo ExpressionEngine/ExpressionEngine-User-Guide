@@ -1,12 +1,15 @@
 Global Template Preferences
 ===========================
 
-Control Panel Location: Design > Templates > Global Preferences
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Design --> Templates --> Template Preferences`
+
+This section of the Control Panel allows you to define global
+preferences which affect all Templates.
 
 |Global Template Preferences|
 
-This section of the Control Panel allows you to define global
-preferences which globally affect all Templates.
 
 Strict URLs
 ~~~~~~~~~~~
@@ -76,9 +79,9 @@ Basepath to Template File Directory
 
 This is the *server path* to the folder you have created to hold the
 Template files. It is important that you use the server path for the
-preference and not a URL. A server path often looks similar to:
+preference and not a URL. A server path often looks similar to::
 
-/home/usr/domain.com/http\_docs/system/expressionengine/template\_files/
+	/home/usr/domain.com/http_docs/system/expressionengine/template_files/
 
 Server paths will vary from server to server, so you should contact your
 Host or server admin if you are unsure of what your setting should be.

@@ -1,7 +1,10 @@
 Watermark Preferences
 =====================
 
-Control Panel Location: Content > Files > Watermark Preferences
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Content --> Files --> Watermark Preferences`
+
 This section of the Control Panel allows you to manage watermark
 settings. A watermark is a unique text string or graphic that is
 automatically added to your images to mark them as "yours" and to hamper
@@ -16,6 +19,7 @@ The main Watermark Preferences page shows a list of all the existing
 watermark settings.
 
 |File Watermark Prefs|
+
 The Create New Watermark button takes you to a page where you can create
 a new watermark, or you can click the Edit link to edit an existing
 watermark setting. Either of these options will take you to the

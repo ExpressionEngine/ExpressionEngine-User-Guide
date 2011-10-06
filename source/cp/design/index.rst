@@ -1,7 +1,5 @@
-Design Page
-===========
-
-The main interface for adding/editing design elements
+Design
+======
 
 -  `Message Pages <./message_pages/index.html>`_
 -  `Templates <./templates/index.html>`_
