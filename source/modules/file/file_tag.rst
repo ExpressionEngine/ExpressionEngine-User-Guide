@@ -43,7 +43,7 @@ category=
 	category="2"
 
 Categories are specified by ID number (the ID number of each
-`category <../../cp/admin/content_admin/category_edit.html>`_ is
+`category <../../cp/admin/channels/category_edit.html>`_ is
 displayed in the Control Panel). The reason we use the ID is because
 categories can be called anything (with spaces, quotes, etc.), and also
 renamed. It would be much more difficult to have to update the tag
@@ -87,7 +87,7 @@ category\_group=
 
 Category Groups are specified by ID number (the ID number of each
 `category
-group <../../cp/admin/content_admin/category_management.html>`_ is
+group <../../cp/admin/channels/category_management.html>`_ is
 displayed in the Control Panel). The reason we use the ID is because
 category groups can be called anything (with spaces, quotes, etc.), and
 also renamed. It would be much more difficult to have to update the tag

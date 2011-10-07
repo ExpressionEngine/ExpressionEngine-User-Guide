@@ -44,7 +44,7 @@ channel=
 	channel="which"
 
 **Required**. From which
-`channel <../../cp/admin/content_admin/channel_management.html>`_ to
+`channel <../../cp/admin/channels/channel_management.html>`_ to
 show the meta data information.
 
 show\_expired=
@@ -78,7 +78,7 @@ status=
 	status="open"
 
 You may restrict to a particular
-`status <../../cp/admin/content_admin/statuses.html>`_. You can choose
+`status <../../cp/admin/channels/statuses.html>`_. You can choose
 multiple statuses using a pipe::
 
 	status="draft|reviewed|published"
@@ -183,7 +183,7 @@ channel\_url
 
 The URL associated with the channel as set in the "Channel URL"
 preference under `Channel
-Administration <../../cp/admin/content_admin/channel_management.html>`_.
+Administration <../../cp/admin/channels/channel_management.html>`_.
 
 date
 ~~~~

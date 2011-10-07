@@ -74,7 +74,7 @@ you can only list one channel name, since each channel can have separate
 category groups.
 
 You must specify this parameter if you use the `Category URL Titles In Links
-<../../cp/admin/content_admin/global_channel_preferences.html#use-category-url-titles-in-links>`_
+<../../cp/admin/channels/global_channel_preferences.html#use-category-url-titles-in-links>`_
 feature.
 
 *********

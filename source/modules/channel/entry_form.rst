@@ -479,7 +479,7 @@ field\_instructions
 	{field_instructions}
 
 The field instructions as entered in the `Channel Fields
-area <../../cp/admin/content_admin/custom_fields_edit.html>`_.
+area <../../cp/admin/channels/custom_fields_edit.html>`_.
 
 saef\_javascript
 ~~~~~~~~~~~~~~~~

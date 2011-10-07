@@ -80,12 +80,12 @@ Settings
 This screen allows you to edit Comment settings. Note that much of the
 behavior of the Comment Module is determined on a per Channel basis, and
 thus found in the Comment Posting Preferences section of the `Channel
-Preferences <../../../cp/admin/content_admin/channel_edit_preferences.html>`_.
+Preferences <../../../cp/admin/channels/channel_edit_preferences.html>`_.
 
 Force word censoring for comments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Word censoring <../../../cp/admin/system_admin/word_censoring.html>`_
+`Word censoring <../../../cp/admin/word_censoring.html>`_
 normally applies to the entire site, affecting both channel entries and
 comments. This setting allows you to apply word censoring to comments,
 even when it is turn off for the site as a whole. The censored words and

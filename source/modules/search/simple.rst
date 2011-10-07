@@ -201,7 +201,7 @@ status=
 	status="open"
 
 You may restrict the result to entries assigned to a particular
-`status <../../cp/admin/content_admin/statuses.html>`_. You can choose
+`status <../../cp/admin/channels/statuses.html>`_. You can choose
 multiple statuses using a pipe::
 
 	status="draft|reviewed|published"
@@ -220,7 +220,7 @@ channel=
 	channel="which"
 
 From which
-`channel <../../cp/admin/content_admin/channel_management.html>`_ to
+`channel <../../cp/admin/channels/channel_management.html>`_ to
 search the entries. Additionally, you can use the pipe character to
 separate multiple channels::
 

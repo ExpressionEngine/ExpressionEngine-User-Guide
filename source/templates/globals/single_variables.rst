@@ -363,7 +363,7 @@ webmaster\_email
 	{encode="{webmaster_email}" title="Contact Us"}
 
 The email address for the site, as specified in `Email
-Configuration <../../cp/admin/system_admin/email_configuration.html>`_.
+Configuration <../../cp/admin/email_configuration.html>`_.
 
 XID\_HASH
 ~~~~~~~~~

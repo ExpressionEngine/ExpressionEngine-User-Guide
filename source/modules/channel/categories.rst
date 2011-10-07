@@ -88,7 +88,7 @@ category\_group=
 
 Category Groups are specified by ID number (the ID number of each
 `category
-group <../../cp/admin/content_admin/category_management.html>`_ is
+group <../../cp/admin/channels/category_management.html>`_ is
 displayed in the Control Panel). The reason we use the ID is because
 category groups can be called anything (with spaces, quotes, etc.), and
 also renamed. It would be much more difficult to have to update the tag
@@ -117,7 +117,7 @@ The name (short name) of the channel that the categories are assigned
 to. This variable is **required** unless you only have a single channel.
 
 You must specify this parameter if you use the `category name in
-URL <../../cp/admin/content_admin/global_channel_preferences.html>`_
+URL <../../cp/admin/channels/global_channel_preferences.html>`_
 feature.
 
 class=
@@ -241,7 +241,7 @@ status=
 	status="open"
 
 You may restrict to categories with entries with a particular
-`status <../../cp/admin/content_admin/statuses.html>`_ . The two
+`status <../../cp/admin/channels/statuses.html>`_ . The two
 statuses "open" and "closed" are default statuses that are always
 available, so you can always specify those if needed. You can choose
 multiple statuses using a pipe

@@ -139,7 +139,7 @@ category=
 	category="2"
 
 Categories are specified by ID number (the ID number of each
-`category <../../cp/admin/content_admin/category_edit.html>`_ is
+`category <../../cp/admin/channels/category_edit.html>`_ is
 displayed in the Control Panel). The reason we use the ID is because
 categories can be called anything (with spaces, quotes, etc.), and also
 renamed. It would be much more difficult to have to update the tag
@@ -205,7 +205,7 @@ category\_group=
 
 Category Groups are specified by ID number (the ID number of each
 `category
-group <../../cp/admin/content_admin/category_management.html>`_ is
+group <../../cp/admin/channels/category_management.html>`_ is
 displayed in the Control Panel). The reason we use the ID is because
 category groups can be called anything (with spaces, quotes, etc.), and
 also renamed. It would be much more difficult to have to update the tag
@@ -237,7 +237,7 @@ channel=
 	channel="news"
 
 From which
-`channel <../../cp/admin/content_admin/channel_management.html>`_ to
+`channel <../../cp/admin/channels/channel_management.html>`_ to
 show the entries (will show all channels if no channel is specified).
 Additionally, you can use the pipe character to separate multiple
 channels::
@@ -250,7 +250,7 @@ channels::
 	channel="not channel1|channel2|channel3"
 
 You must specify this parameter if you use the `category name in
-URL <../../cp/admin/content_admin/global_channel_preferences.html>`_
+URL <../../cp/admin/channels/global_channel_preferences.html>`_
 feature.
 
 disable=
@@ -570,7 +570,7 @@ options for this parameter include:
 -  orderby="view\_count\_four"
 
 In addition you can order by a `channel
-field <../../cp/admin/content_admin/custom_channel_fields.html>`_. Use
+field <../../cp/admin/channels/custom_channel_fields.html>`_. Use
 the "short\_name" of the field::
 
 	orderby="name_of_field"
@@ -1030,7 +1030,7 @@ status=
 	status="open"
 
 You may restrict to entries with a particular
-`status <../../cp/admin/content_admin/statuses.html>`_ . The two
+`status <../../cp/admin/channels/statuses.html>`_ . The two
 statuses "open" and "closed" are default statuses that are always
 available, so you can always specify those if needed. You can choose
 multiple statuses using a pipe::

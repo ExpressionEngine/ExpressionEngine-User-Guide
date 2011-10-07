@@ -232,7 +232,7 @@ status=
 	status="open"
 
 You may restrict to entries with a particular
-`status <../../cp/admin/content_admin/statuses.html>`_. You can choose
+`status <../../cp/admin/channels/statuses.html>`_. You can choose
 multiple statuses using a pipe
 
 ::

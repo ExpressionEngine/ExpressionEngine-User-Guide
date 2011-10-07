@@ -266,7 +266,7 @@ that it is only displayed if necessary::
 
 The setting to disable or enable CAPTCHA for the contact form can be
 found in the `Email
-Configuration <../../cp/admin/system_admin/email_configuration.html>`_
+Configuration <../../cp/admin/email_configuration.html>`_
 preferences.
 
 from

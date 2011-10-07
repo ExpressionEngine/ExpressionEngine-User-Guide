@@ -209,7 +209,7 @@ channel=
 	channel="which"
 
 From which
-`channel <../../cp/admin/content_admin/channel_management.html>`_ to
+`channel <../../cp/admin/channels/channel_management.html>`_ to
 show the comments (will show comments from any channel if no channel is
 specified). Additionally, you can use the pipe character to separate
 multiple channels::
