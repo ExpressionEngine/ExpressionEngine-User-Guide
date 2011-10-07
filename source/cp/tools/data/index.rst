@@ -1,12 +1,10 @@
-Data Page
-=========
+Data
+====
 
-The main interface for manipulating your data
-
--  `Clear Cached Data <./clear_cached_data_files.html>`_
--  SQL Manager
--  `Search and Replace <./search_and_replace.html>`_
--  `Recount Statistics <./recount_statistics.html>`_
+- :doc:`sql_manager`
+- :doc:`clear_cached_data_files`
+- :doc:`search_and_replace`
+- :doc:`recount_statistics`
 
 .. toctree::
 	:glob:

@@ -2,6 +2,10 @@ Tools
 =====
 
 - :doc:`communicate`
+- Utilities
+	- :doc:`utilities/translation_utility`
+	- :doc:`utilities/import_utilities`
+	- :doc:`utilities/php_info`
 - Data
 	- :doc:`data/clear_cached_data_files`
 	- :doc:`data/sql_manager`
@@ -12,10 +16,6 @@ Tools
 	- :doc:`logs/search_log`
 	- :doc:`logs/throttle_log`
 	- :doc:`logs/email_console_logs`
-- Utilities
-	- :doc:`utilities/translation_utility`
-	- :doc:`utilities/import_utilities`
-	- :doc:`utilities/php_info`
 
 .. toctree::
 	:glob:

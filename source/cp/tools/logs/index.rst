@@ -1,10 +1,10 @@
 Logs
 ====
 
--  `Control Panel Log <./cp_log.html>`_
--  `Search Term Log <./search_log.html>`_
--  `Throttle Log <./throttle_log.html>`_
--  `Email Console Log <./email_console_logs.html>`_
+- :doc:`cp_log`
+- :doc:`search_log`
+- :doc:`throttle_log`
+- :doc:`email_console_logs`
 
 .. toctree::
 	:glob:
