@@ -1,11 +1,13 @@
-Email Console Logs
-==================
+Email Console Log
+=================
 
-Control Panel Location: Tools > Logs > Email Console Logs
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Tools --> Logs --> Email Console Log`
+
 The Email Console Logs section of the Control Panel allows you to view
 email messages that have been sent through the Email Console in the
 member profile pages.
 
 Before email messages can be logged, the Log Email Console Messages
-preference must first be enabled by visiting: Admin > Email
-Configuration.
+preference must first be enabled at :menuselection:`Admin --> Email Configuration`.

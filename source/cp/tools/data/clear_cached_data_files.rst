@@ -1,12 +1,16 @@
-Clear Cached Data
-=================
+Clear Caching
+=============
 
-Control Panel Location: Tools > Data > Clear Caching
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Tools --> Data --> Clear Caching`
+
 This section of the Control Panel allows you clear the cached data for
 the different types of `caching <../../../general/caching.html>`_ that
 are available.
 
 |Clear Caches|
+
 Choose which type of cache you would like to clear:
 
 -  **Page (template) cache files**: This lets you clear out page or

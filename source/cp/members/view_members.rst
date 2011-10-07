@@ -1,16 +1,14 @@
-View Members
-============
+View All
+========
 
 .. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Members --> View All`
 
-The :dfn:`View Members` page is used both to search and to browse 
+This page is used both to search and to browse 
 through active members within your ExpressionEngine installation. Also,
 you can filter the members by email, username, screen name and member
-id, using tokens within the search field. The page is located under
-:dfn:`Members > View All`.
-
+id, using tokens within the search field.
 
 Search Tokens
 -------------
@@ -32,8 +30,9 @@ in it, be sure to use quotes**::
 	screen_name:"john doe" email:gmail.com
 
 |View Members Page|
-**Note:** Clicking on the username link will take you to the My Account
-section corresponding to this member, where you may edit their account
-settings.
+
+.. note:: Clicking on the username link will take you to the My Account
+   section corresponding to this member, where you may edit their account
+   settings.
 
 .. |View Members Page| image:: ../../images/view_members.png

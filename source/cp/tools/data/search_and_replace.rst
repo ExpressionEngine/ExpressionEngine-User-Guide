@@ -1,24 +1,27 @@
-Find and Replace
-================
+Search and Replace
+==================
 
-Control Panel Location: Tools > Data > Search and Replace
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Tools --> Utilities --> Search and Replace`
+
 This section of the Control Panel allows you to search for text within
 your site and replace it with another piece of text. This search and
 replace operation can be performed on your entry titles, within any of
 the entry fields, or within your Templates.
 
 |Find And Replace|
-**Note:** Exercise caution when using this tool as any changes performed
-are permanent and cannot be reversed except by restoring a backed up
-version of the database. Also note that if you perform replacing within
-your Templates, you may not see the changes on your site immediately if
-you have caching options turned on. You may need to `clear your cache
-files <clear_cached_data_files.html>`_ in order to see the changes.
 
-**Note:** If you save templates as text files, make certain to
-`Synchronize
-Templates <../../design/templates/synchronize_templates.html>`_ before
-replacing in a template as the template edit date will be updated.
+.. important:: Exercise caution when using this tool as any changes performed
+   are permanent and cannot be reversed except by restoring a backed up
+   version of the database. Also note that if you perform replacing within
+   your Templates, you may not see the changes on your site immediately if
+   you have caching options turned on. You may need to `clear your cache
+   files <clear_cached_data_files.html>`_ in order to see the changes.
+
+.. important:: If you save templates as text files, make certain to
+   `Synchronize Templates <../../design/templates/synchronize_templates.html>`_ before
+   replacing in a template as the template edit date will be updated.
 
 Search for this text
 ~~~~~~~~~~~~~~~~~~~~
@@ -54,7 +57,7 @@ for which you can perform the search and replace. The list includes:
    within the entry titles.
 -  **Channel Fields**: Under this heading, each of the available
    `Channel
-   Fields <../../admin/content_admin/custom_channel_fields.html>`_ is
+   Fields <../../admin/channels/custom_channel_fields.html>`_ is
    listed.
 -  **Templates**: Select this to search and replace text within all of
    your Templates.

@@ -1,7 +1,5 @@
-Tools Page
-==========
-
-The main interface for tools
+Tools
+=====
 
 -  `Communicate <communicate.html>`_
 -  Data

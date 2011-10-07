@@ -76,4 +76,4 @@ documentation <http://markitup.jaysalvat.com/documentation/>`_, and
 particularly under the section on `Magic
 Markup <http://markitup.jaysalvat.com/documentation/#magicmarkups>`_.
 
-.. |HTML Buttons| image:: ../../../images/html_buttons.png
+.. |HTML Buttons| image:: /images/html_buttons.png

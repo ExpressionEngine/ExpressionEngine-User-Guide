@@ -1,12 +1,12 @@
 My Account
 ==========
 
-Managing member account information
 My Account allows you to edit your own membership account information.
 You may also edit information for other user accounts via the `View
 Members <../members/view_members.html>`_ area of the Control Panel.
 
 |My Account|
+
 There are a number of areas within the My Account section:
 
 Personal Settings
@@ -97,7 +97,7 @@ Ping Servers
 Every member may specify their own individual set of "Ping Servers".
 These Ping Servers will appear as options for new channel entries. By
 default, these will include the ones specified in the `Default Ping
-Servers <../admin/content_admin/default_ping_servers.html>`_ area. These
+Servers <../admin/default_ping_servers.html>`_ area. These
 can be edited or added to by the user, though.
 
 HTML Formatting Buttons
@@ -106,10 +106,10 @@ HTML Formatting Buttons
 Each member may also specify their own HTML Formatting buttons. These
 buttons are available for use when creating or editing channel entries.
 By default, these will include the buttons specified in the `Default
-HTML Buttons <../admin/content_admin/default_html_buttons.html>`_ area.
+HTML Buttons <../admin/default_html_buttons.html>`_ area.
 The user may edit or add to the buttons as desired. More information on
 button creation/editing is available on the `Default HTML
-Buttons <../admin/content_admin/default_html_buttons.html>`_ page.
+Buttons <../admin/default_html_buttons.html>`_ page.
 
 Bookmarklet
 ~~~~~~~~~~~

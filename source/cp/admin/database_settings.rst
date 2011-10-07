@@ -20,5 +20,4 @@ Enable SQL Query Caching
 
 Here you can determine whether or not Query Caching is enabled for your
 site. Query caching is one of several ways that ExpressionEngine can
-increase performance for your site. Read more in the `Data
-Caching <../../../general/caching.html>`_ section.
+increase performance for your site. Read more in the :doc:`/general/caching` section.

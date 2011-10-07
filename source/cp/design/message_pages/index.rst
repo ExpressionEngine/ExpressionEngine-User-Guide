@@ -54,7 +54,7 @@ System Offline Template
 -----------------------
 
 In the `General
-Configuration <../../admin/system_admin/general_configuration.html>`_
+Configuration <../../admin/general_configuration.html>`_
 section of the Control Panel you can specify whether or not your site is
 "Live". If the site is not live then people will be presented with a
 message when they try to access your page. This can be useful if you are

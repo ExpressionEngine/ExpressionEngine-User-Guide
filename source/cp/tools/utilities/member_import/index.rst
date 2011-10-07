@@ -1,8 +1,10 @@
 Member Import Utility
 =====================
 
-Control Panel Location: Tools > Utilities > Import Utilities > Member
-Import Utility
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Tools --> Utilities --> Import Utilities --> Member Import Utility`
+
 The Member Import Utility enables you to import members from other
 systems utilizing ExpressionEngine's special XML format. It also
 includes a tool to convert delimited data into ExpressionEngine's

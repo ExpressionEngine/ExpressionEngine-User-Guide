@@ -9,9 +9,8 @@ This section of the Control Panel allows you to define the **default**
 localization settings for your website. Here you define things such as
 the time zone, time formatting, and Control Panel language.
 
-**Note:** Each member of your site can override these default settings
-by changing their own `My Account <../../my_account/index.html>`_
-settings.
+.. note:: Each member of your site can override these default settings
+   by changing their own :doc:`/cp/my_account/index` settings.
 
 Server Time Zone
 ~~~~~~~~~~~~~~~~

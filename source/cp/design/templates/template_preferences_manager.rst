@@ -1,5 +1,5 @@
-Template Preferences Manager
-============================
+Template Preferences
+====================
 
 .. rst-class:: cp-path
 

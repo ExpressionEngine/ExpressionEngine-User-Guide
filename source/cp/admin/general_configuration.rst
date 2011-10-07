@@ -6,9 +6,8 @@ General Configuration
 **Control Panel Location:** :menuselection:`Admin --> General Configuration`
 
 This section of the Control Panel allows you to define the basic
-settings of your site. If you are using the `Multiple Site
-Manager <../../sites/index.html>`_, note that these settings are
-per-site.
+settings of your site. If you are using the :doc:`/cp/sites/index`, note that
+these settings are per-site.
 
 Is system on?
 ~~~~~~~~~~~~~
@@ -38,9 +37,8 @@ This is the name of your website. It may contain spaces and punctuation.
 This name is available in your Templates by using the {site\_name}
 Global Variable.
 
-**Note:** If you are using the `Multiple Site
-Manager <../../sites/index.html>`_ this setting will be found in the
-`Edit Sites <../../sites/managesites.html>`_ section.
+.. note:: If you are using the :doc:`/cp/sites/index` this setting will be found
+   in the :doc:`/cp/sites/managesites` section.
 
 Name of your site's index page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

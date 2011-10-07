@@ -1,7 +1,10 @@
 Communicate
 ===========
 
-Sending Email with ExpressionEngine
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Tools --> Communicate`
+
 The Communicate tab in the Control Panel provides access to the email
 sending part of the system. Email can be sent in plain text or HTML
 format, and supported email sending protocols are
@@ -10,9 +13,10 @@ format, and supported email sending protocols are
 `mail <http://us2.php.net/manual/en/function.mail.php>`_.
 
 **Note:** In the Admin area of the Control Panel you'll find the `Email
-Configuration <../admin/system_admin/email_configuration.html>`_ page.
+Configuration <../admin/email_configuration.html>`_ page.
 
 |Communicate|
+
 Sending Email
 -------------
 
@@ -62,7 +66,9 @@ to the HTML email. This allows email clients who have HTML email
 disabled or unavailable to still view the email in a form that is still
 easily readable, opposed to be the original HTML email with all tags
 stripped.
+
 |Communicate Formatting HTML|
+
 Text Formatting
 ~~~~~~~~~~~~~~~
 

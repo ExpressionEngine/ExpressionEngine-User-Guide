@@ -71,4 +71,4 @@ so **be very careful before deleting a ping server**. There is **no
 verification** performed; once you submit the ping server is removed
 immediately.
 
-.. |Ping Servers| image:: ../../../images/ping_servers.png
+.. |Ping Servers| image:: /images/ping_servers.png

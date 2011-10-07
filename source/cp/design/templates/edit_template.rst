@@ -1,5 +1,5 @@
-Editing a Template
-==================
+Template Editor
+===============
 
 |Template Edit|
 

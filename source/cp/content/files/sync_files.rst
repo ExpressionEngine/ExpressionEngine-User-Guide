@@ -1,8 +1,10 @@
 Synchronize Files
 =================
 
-Control Panel Location: Content > Files > File Upload Preferences >
-Synchronize Files
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Content --> Files --> File Upload Preferences --> Synchronize Files`
+
 The Synchronize Files page allows you to synchronize the file records in
 the database with the files stored in a given upload directory. When
 submitted, all allowed file types in the directory will be checked
@@ -18,6 +20,7 @@ Synchronization Options
 -----------------------
 
 |File Synchronization Overview|
+
 An overview of the directory and the directory settings will be shown on
 the synchronization page. This includes the total number of files to be
 cycled through and they type of files that will be included (all files

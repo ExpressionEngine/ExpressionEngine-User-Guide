@@ -1,27 +1,20 @@
-Publish Page
-============
+Publish
+=======
 
 .. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Content --> Publish`
 
 This is the area where you'll create content for your site by
-publishing new Entries to your Channels.
-
-If you have more than one Channel, moving your cursor over the
-Publish menu will show all of your Channels and allow you to select one.
+publishing new Entries to your Channels. If you have more than one Channel,
+moving your cursor over the Publish menu will show all of your Channels and
+allow you to select one.
 
 .. tip:: You can customize the display of the Publish Page by clicking
    Show Toolbar and creating a custom `Publish Page
    Layout <publish_page_layouts.html>`_.
 
-
-
-Publish Page Areas
-------------------
-
 The Publish interface is broken into the following tabs:
-
 
 Publish Form Tab
 ----------------
@@ -72,7 +65,7 @@ Entry Fields
 ~~~~~~~~~~~~
 
 The names and types of entry fields displayed will be determined by what
-`Channel Fields <../admin/content_admin/custom_channel_fields.html>`_
+`Channel Fields <../admin/channels/custom_channel_fields.html>`_
 you have defined for this channel. If an entry field is set to be
 "hidden" by default, it will have to be expanded by clicking on the
 field name before content can be entered. In addition to the field
@@ -176,7 +169,7 @@ Status
 There are two primary statuses that are always available: Open and
 Closed. Typically, "open" entries are viewable at your site, and
 "closed" entries are not. You can add additional statuses for editorial
-workflow in your `Statuses <../admin/content_admin/statuses.html>`_
+workflow in your `Statuses <../admin/channels/statuses.html>`_
 page, and opt to display or suppress entries assigned to these by
 modifying the "status" parameter found in the various "Channel" Tags in
 your Templates.

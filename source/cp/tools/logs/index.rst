@@ -1,7 +1,5 @@
-Log Overview Page
-=================
-
-The main interface for viewing your logs
+Logs
+====
 
 -  `Control Panel Log <./cp_log.html>`_
 -  `Search Term Log <./search_log.html>`_

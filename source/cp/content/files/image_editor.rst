@@ -1,7 +1,10 @@
 Image Editor
 ============
 
-Control Panel Location: Content > Files > File Manager > Image Editor
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Content --> Files --> File Manager --> Image Editor`
+
 The Image Editor page of the Control Panel allows you perform basic
 image editing tasks directly from ExpressionEngine. It is not intended
 to replace powerful image editing software such as Photoshop or Gimp,
@@ -9,10 +12,12 @@ but rather to provide a quick option for common tasks from within the
 control panel.
 
 |Image Editor|
+
 Edit Modes
 ----------
 
 |Image Editor Modes|
+
 Crop Mode
 ~~~~~~~~~
 
@@ -21,7 +26,9 @@ tool over the image, and specific pixel references. When the area you
 want to crop has been selected, choose Save Image to save your changes.
 
 |Image Editor Crop|
+
 |Image Editor Crop Options|
+
 Resize Mode
 ~~~~~~~~~~~
 
@@ -31,6 +38,7 @@ measurements you want into the sidebar. Note that ExpressionEngine
 attempts to keep the aspect ratio (proportions) or your image intact.
 
 |Image Editor Resize Mode|
+
 Rotate Mode
 ~~~~~~~~~~~
 

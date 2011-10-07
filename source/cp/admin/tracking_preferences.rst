@@ -8,8 +8,8 @@ Tracking Preferences
 This section of the Control Panel allows you to define preferences for
 various tracking features of ExpressionEngine. Adjustments to these
 settings can help decrease resource usage if you are not utilizing the
-features, as well as help you manage `extreme traffic
-events <../../../general/handling_extreme_traffic.html>`_.
+features, as well as help you manage :doc:`extreme traffic
+events </general/handling_extreme_traffic>`.
 
 Enable Online User Tracking?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,9 +28,8 @@ database on each page load.
 Enable Channel Entry View Tracking?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When set to "Yes", you can utilize the `Entry
-Tracking <../../../modules/channel/entry_tracking.html>`_ feature of the
-Channel module.
+When set to "Yes", you can utilize the :doc:`/modules/channel/entry_tracking`
+feature of the Channel module.
 
 Enable Referrer Tracking?
 ~~~~~~~~~~~~~~~~~~~~~~~~~

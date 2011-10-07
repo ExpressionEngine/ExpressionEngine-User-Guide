@@ -47,8 +47,8 @@ Process Form Data in Secure Mode
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This setting determines how form data is processed. When this preference
-is set to "Yes", forms are processed in `Secure
-Mode <../../../general/spam_protection.html>`_. This setting is designed
+is set to "Yes", forms are processed in :doc:`Secure
+Mode </general/spam_protection>`. This setting is designed
 to deter automated spam attacks as well as multiple accidental
 submissions. Enabling this feature does add one additional database
 query for each form submission.
