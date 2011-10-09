@@ -7,7 +7,8 @@ default behavior. These are advanced configuration options that should
 only be used by experienced ExpressionEngine users.
 
 .. contents::
-
+	:local:
+	
 allow_textarea_tabs
 ~~~~~~~~~~~~~~~~~~~
 

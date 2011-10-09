@@ -25,7 +25,7 @@ using a various criteria such as channel, category, date, order, etc.
 The main table shows the following columns:
 
 -  **#**: The entry ID number for the entry.
--  `**Entry Title** <./publish.html>`_: Clicking the link will open the
+-  `Entry Title <./publish.html>`_: Clicking the link will open the
    entry for editing.
 -  **View**: The link in this column will display the entry for you.
 -  **Live Look**: This link allows you to view the entry in a template
@@ -37,9 +37,9 @@ The main table shows the following columns:
    "View" link allows you to edit the comments.
 -  **Author**: The name of the entry author.
 -  **Date**: The date and time assigned to the entry.
--  `**Channel** <../admin/channels/channel_management.html>`_: The
+-  `Channel <../admin/channels/channel_management.html>`_: The
    short name of the channel that the entry is assigned to.
--  `**Status** <../admin/channels/statuses.html>`_: The status that
+-  `Status <../admin/channels/statuses.html>`_: The status that
    the entry is assigned to.
 
 Multi-Entry Editing/Deleting
