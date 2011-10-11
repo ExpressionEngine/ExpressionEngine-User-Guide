@@ -1,9 +1,12 @@
-Themes Page
-===========
+Themes
+======
 
-The main interface for adding/editing your themes
-
--  `Member Profile Templates <member_profile_templates.html>`_
+.. note:: The available options may vary from the list below depending
+   on what Modules are currently installed.
+   
+- :doc:`member_profile_templates`
+- :doc:`/modules/forum/forum_themes`
+- :doc:`/modules/wiki/wiki_templates`
 
 .. toctree::
 	:glob:

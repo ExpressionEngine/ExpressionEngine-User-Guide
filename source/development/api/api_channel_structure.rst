@@ -1,7 +1,9 @@
 ExpressionEngine Channel Structure API
 ======================================
 
--  **Function Reference**
+.. contents::
+	:local:
+	:depth: 1
 
             
 Calling the Class
@@ -17,6 +19,11 @@ function.
 Function Reference
 ------------------
 
+.. contents::
+	:local:
+	:depth: 1
+
+
 Get Channel Info
 ~~~~~~~~~~~~~~~~
 
@@ -24,7 +31,7 @@ Get Channel Info
 
 	$this->EE->api_channel_structure->get_channel_info((int) $channel_id);
 
-*Return value*
+:returns:
     Database result object or FALSE on error.
 
 Get Channels
@@ -34,7 +41,7 @@ Get Channels
 
 	$this->EE->api_channel_structure->get_channels([(int) $site_id]);
 
-*Return value*
+:returns:
     Database result object or FALSE on error.
 
 Delete Channel
@@ -44,7 +51,7 @@ Delete Channel
 
 	$this->EE->api_channel_structure->delete_channel((int) $channel_id, [(int) $site_id]);
 
-*Return value*
+:returns:
     Channel Title on successful delete or FALSE on error.
 
 Create Channel
@@ -54,7 +61,7 @@ Create Channel
 
 	$this->EE->api_channel_structure->create_channel((array) $data);
 
-*Return value*
+:returns:
     ID of newly created channel or FALSE on error.
 
 At the minimum, **channel\_title** and **channel\_name** must be in the
@@ -62,32 +69,40 @@ $data array.
 
 Values that may be passed in the data array include:
 
--  **site\_id**, (int)
--  **channel\_title**, (string)
--  **channel\_name**, (string a-zA-Z0-9\_- only)
--  **url\_title\_prefix**, (string a-zA-Z0-9\_- only)
--  **comment\_expiration**, (int)
--  **create\_templates**, (string yes/no)
+- **site\_id**, (int)
+- **channel\_title**, (string)
+- **channel\_name**, (string a-zA-Z0-9\_- only)
+- **url\_title\_prefix**, (string a-zA-Z0-9\_- only)
+- **comment\_expiration**, (int)
+- **create\_templates**, (string yes/no)
     **Also Requires:**
 
-   -  **old\_group\_id**
-   -  **group\_name**, (string a-zA-Z0-9\_- only)
-   -  **template\_theme**
+   - **old\_group\_id**
+   - **group\_name**, (string a-zA-Z0-9\_- only)
+   - **template\_theme**
 
--  **cat\_group**, (int or array of category group ids)
--  **dupe\_id**
--  **status\_group**
--  **field\_group**
--  **channel\_url**
--  **channel\_lang**
--  **group\_order**
+- **cat\_group**, (int or array of category group ids)
+- **dupe\_id**
+- **status\_group**
+- **field\_group**
+- **channel\_url**
+- **channel\_lang**
+- **group\_order**
 
-Example Usage
-^^^^^^^^^^^^^
+Example Usage::
 
-::
-
-	$data = array(     'channel_title'     => 'News',     'channel_name'      => 'news',     'field_group'       => 2,     'channel_url'       => 'http://example.com/index.php/news/',     'status_group'      => 1, );  if ($this->EE->api_channel_structure->create_channel($data) === FALSE) {     show_error('An Error Occurred Creating the Channel'); }
+	$data = array(
+		'channel_title'     => 'News',
+		'channel_name'      => 'news',
+		'field_group'       => 2,
+		'channel_url'       => 'http://example.com/index.php/news/',
+		'status_group'      => 1
+	);
+	
+	if ($this->EE->api_channel_structure->create_channel($data) === FALSE)
+	{
+		show_error('An Error Occurred Creating the Channel');
+	}
 
 Modify Channel
 ~~~~~~~~~~~~~~
@@ -96,7 +111,7 @@ Modify Channel
 
 	$this->EE->api_channel_structure->modify_channel((array) $data);
 
-*Return value*
+:returns:
     ID of newly created channel or FALSE on error.
 
 The channel\_id of the channel to be modified is required in the $data

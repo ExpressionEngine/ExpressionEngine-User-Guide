@@ -1,9 +1,18 @@
+############
 Calendar Tag
-============
+############
+
+.. contents::
+   :local:
+   :depth: 1
+
+************
+Introduction
+************
 
 This tag allows you to display a calendar which contains links based on
 entries in your channel. Here is an example of what you might use for a
-"mini-calendar" that you could place on each page of your site
+"mini-calendar" that you could place on each page of your site:
 
 ::
 
@@ -47,7 +56,7 @@ entries in your channel. Here is an example of what you might use for a
     {/exp:channel:calendar}
 
 Here is an example of what you might use for a "big" calendar that
-listed all entries on each day
+listed all entries on each day:
 
 ::
 
@@ -95,23 +104,25 @@ listed all entries on each day
     </table>
     {/exp:channel:calendar}
 
-
-You may also view the `example CSS <calendar_css.txt>`_ to go along with
+You may also view the :download:`example CSS <calendar_css.txt>` to go along with
 the calendar examples. You can add this to your main stylesheet if you
 wish, modify it as needed, or simply ignore it.
 
+**********
 Parameters
-----------
+**********
 
-Most of the `Parameters <parameters.html>`_ of the standard
+Most of the `Parameters <channel_entries.html#parameters>`_ of the standard
 {exp:channel:entries} tag are available. In addition, the following are
 special to the channel calendar tag.
 
+.. note:: Dynamic Parameters may not be used with the calendar tag.
 
-**Note**: Dynamic Parameters may not be used with the calendar tag.
+.. contents::
+   :local:
 
 leading\_zeroes=
-~~~~~~~~~~~~~~~~
+----------------
 
 ::
 
@@ -122,7 +133,7 @@ as a two-digit, zero-padded number, e.g.: 01, 02, 03, etc. The default
 setting is "no."
 
 month= year=
-~~~~~~~~~~~~
+------------
 
 ::
 
@@ -133,7 +144,7 @@ You may hardcode the month and year to display for the calendar. You
 in numerical form.
 
 show_future_entries=
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 ::
 
@@ -144,7 +155,7 @@ be included. This option is useful when doing things like creating a
 list of events, some of which have not occurred yet.
 
 start\_day=
-~~~~~~~~~~~
+-----------
 
 ::
 
@@ -162,7 +173,7 @@ values:
 -  saturday
 
 switch=
-~~~~~~~
+-------
 
 ::
 
@@ -178,95 +189,15 @@ second state) is applied.
 
 This works together with the `{switch} <#var_switch>`_ variable.
 
-Variable Pairs
---------------
+*********
+Variables
+*********
 
-
-calendar\_heading
-~~~~~~~~~~~~~~~~~
-
-::
-
-	{calendar_heading}
-	    <td class="calendarDayHeading">{lang:weekday_abrev}</td> 
-	{/calendar_heading}
-
-This variable pair is used to create the table row showing the days of
-the week. You can use one of three variables to determine what is shown
-for the day:
-
-#. **{lang:weekday\_abrev}**: The one-letter abbreviation for the day of
-   the week. i.e. M, T, etc.
-#. **{lang:weekday\_long}**: The full-text for the day of the week. i.e.
-   Monday, Tuesday, etc.
-#. **{lang:weekday\_short}**: The short-text for the day of the week.
-   i.e. Mon, Tue, etc.
-
-Using these variables will allow the calendar to display the day names
-in the appropriate language for the user. If they have a language
-specified in their profile then the system will use that, otherwise it
-will use the default language specified in the Control Panel.
-
-calendar\_rows
-~~~~~~~~~~~~~~
-
-::
-
-	{calendar_rows}
-	    {row_start}<tr>{/row_start}
-	        <td class='{switch}' align='center'>
-	            <a href="{day_path='channel/index'}">{day_number}</a>
-	            {entries}
-	            <div>
-	                <a href="{title_permalink='channel/index'}">{title}</a> <a href="{profile_path='member/profile'}">{author}</a>
-	            </div>
-	            {/entries}
-	        </td>
-	    {row_end}</tr>{/row_end}
-	{/calendar_rows}
-
-This variable pair is used to create the rows of dates for the calendar.
-
-entries
-~~~~~~~
-
-::
-
-	{entries}
-	    <div>
-	        <a href="{title_permalink='channel/index'}">{title}</a> <a href="{profile_path='member/profile'}">{author}</a>
-	    </div>
-	{/entries}
-
-This variable pair will loop through entries in the specified channel(s)
-that occur on that date.
-
-row\_end
-~~~~~~~~
-
-::
-
-	{row_end}</tr>{/row_end}
-
-This variable pair simply defines what content to use at the end of a
-row.
-
-row\_start
-~~~~~~~~~~
-
-::
-
-	{row_start}<tr>{/row_start}
-
-This variable pair simply defines what content to use at the start of a
-row.
-
-Single Variables
-----------------
-
+.. contents::
+   :local:
 
 author
-~~~~~~
+------
 
 ::
 
@@ -277,7 +208,7 @@ display the username. This is used inside the
 `{entries}{/entries} <#var_entries>`_ variable pair.
 
 comment\_auto\_path
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 ::
 
@@ -289,7 +220,7 @@ other information is included; this is the exact URL from the
 preference.
 
 comment\_entry\_id\_auto\_path
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 ::
 
@@ -310,7 +241,7 @@ Would be rendered like this
 	<a href="http://example.com/index.php/channel/comments/234/">my entry</a>
 
 comment\_url\_title\_auto\_path
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------
 
 ::
 
@@ -331,7 +262,7 @@ Would be rendered like this
 	<a href="http://example.com/index.php/channel/comments/ice_cream/">my entry</a>
 
 comment\_path
-~~~~~~~~~~~~~
+-------------
 
 ::
 
@@ -350,7 +281,7 @@ This is only available for use inside the {entries}{/entries} variable
 pair.
 
 comment\_total
-~~~~~~~~~~~~~~
+--------------
 
 ::
 
@@ -360,7 +291,7 @@ The total number of comments for a particular entry. This is used inside
 the `{entries}{/entries} <#var_entries>`_ variable pair.
 
 date
-~~~~
+----
 
 ::
 
@@ -373,7 +304,7 @@ formatting <../../templates/date_variable_formatting.html>`_ page for
 more information.
 
 day\_number
-~~~~~~~~~~~
+-----------
 
 ::
 
@@ -382,7 +313,7 @@ day\_number
 The number of the day of the month.
 
 day\_path
-~~~~~~~~~
+---------
 
 ::
 
@@ -399,7 +330,7 @@ Might be rendered like this::
 	<a href="http://example.com/index.php/channel/2003/02/17/">17</a>
 
 entry\_id\_path
-~~~~~~~~~~~~~~~
+---------------
 
 ::
 
@@ -418,7 +349,7 @@ This is only available for use inside the {entries}{/entries} variable
 pair.
 
 next\_date
-~~~~~~~~~~
+----------
 
 ::
 
@@ -431,7 +362,7 @@ formatting <../../templates/date_variable_formatting.html>`_ page for
 more information.
 
 next\_path
-~~~~~~~~~~
+----------
 
 ::
 
@@ -442,7 +373,7 @@ month on the calendar. Typically, the path should be to the current
 calendar page.
 
 permalink
-~~~~~~~~~
+---------
 
 ::
 
@@ -465,7 +396,7 @@ This is only available for use inside the {entries}{/entries} variable
 pair.
 
 previous\_date
-~~~~~~~~~~~~~~
+--------------
 
 ::
 
@@ -478,7 +409,7 @@ formatting <../../templates/date_variable_formatting.html>`_ page for
 more information.
 
 previous\_path
-~~~~~~~~~~~~~~
+--------------
 
 ::
 
@@ -489,7 +420,7 @@ previous month on the calendar. Typically, the path should be to the
 current calendar page.
 
 profile\_path
-~~~~~~~~~~~~~
+-------------
 
 ::
 
@@ -505,7 +436,7 @@ This is only available for use inside the {entries}{/entries} variable
 pair.
 
 switch
-~~~~~~
+------
 
 ::
 
@@ -516,7 +447,7 @@ entries are displayed. This variable works together with the
 `switch= <#par_switch>`_ parameter.
 
 title
-~~~~~
+-----
 
 ::
 
@@ -526,7 +457,7 @@ The title of the entry. This is used inside the
 `{entries}{/entries} <#var_entries>`_ variable pair.
 
 title\_permalink
-~~~~~~~~~~~~~~~~
+----------------
 
 ::
 
@@ -555,7 +486,7 @@ This is only available for use inside the {entries}{/entries} variable
 pair.
 
 url\_title\_path
-~~~~~~~~~~~~~~~~
+----------------
 
 ::
 
@@ -572,3 +503,89 @@ Would be rendered like this::
 
 This is only available for use inside the {entries}{/entries} variable
 pair.
+
+**************
+Variable Pairs
+**************
+
+.. contents::
+   :local:
+
+calendar\_heading
+-----------------
+
+::
+
+	{calendar_heading}
+	    <td class="calendarDayHeading">{lang:weekday_abrev}</td> 
+	{/calendar_heading}
+
+This variable pair is used to create the table row showing the days of
+the week. You can use one of three variables to determine what is shown
+for the day:
+
+#. **{lang:weekday\_abrev}**: The one-letter abbreviation for the day of
+   the week. i.e. M, T, etc.
+#. **{lang:weekday\_long}**: The full-text for the day of the week. i.e.
+   Monday, Tuesday, etc.
+#. **{lang:weekday\_short}**: The short-text for the day of the week.
+   i.e. Mon, Tue, etc.
+
+Using these variables will allow the calendar to display the day names
+in the appropriate language for the user. If they have a language
+specified in their profile then the system will use that, otherwise it
+will use the default language specified in the Control Panel.
+
+calendar\_rows
+--------------
+
+::
+
+	{calendar_rows}
+	    {row_start}<tr>{/row_start}
+	        <td class='{switch}' align='center'>
+	            <a href="{day_path='channel/index'}">{day_number}</a>
+	            {entries}
+	            <div>
+	                <a href="{title_permalink='channel/index'}">{title}</a> <a href="{profile_path='member/profile'}">{author}</a>
+	            </div>
+	            {/entries}
+	        </td>
+	    {row_end}</tr>{/row_end}
+	{/calendar_rows}
+
+This variable pair is used to create the rows of dates for the calendar.
+
+entries
+-------
+
+::
+
+	{entries}
+	    <div>
+	        <a href="{title_permalink='channel/index'}">{title}</a> <a href="{profile_path='member/profile'}">{author}</a>
+	    </div>
+	{/entries}
+
+This variable pair will loop through entries in the specified channel(s)
+that occur on that date.
+
+row\_end
+--------
+
+::
+
+	{row_end}</tr>{/row_end}
+
+This variable pair simply defines what content to use at the end of a
+row.
+
+row\_start
+----------
+
+::
+
+	{row_start}<tr>{/row_start}
+
+This variable pair simply defines what content to use at the start of a
+row.

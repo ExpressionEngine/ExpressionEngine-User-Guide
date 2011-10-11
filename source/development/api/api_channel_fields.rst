@@ -1,7 +1,9 @@
 ExpressionEngine Channel Fields API
 ===================================
 
--  **Function Reference**
+.. contents::
+	:local:
+	:depth: 1
 
                         
 Calling the Class
@@ -14,6 +16,9 @@ The Channel Fields class is called with the api->instantiate() function. ::
 Function Reference
 ------------------
 
+.. contents::
+	:local:
+
 Fetch all Fieldtypes
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -22,10 +27,16 @@ include\_handler()), and returns an array of all found fieldtypes. ::
 
 	$this->EE->api_channel_fields->fetch_all_fieldtypes();
 
-*Return value*
+:returns:
     Array::
 
-	'fieldtype_shortname' => array(     'path'  =>  (string) File Path,     'file'  =>  (string) Filename,                   'name'  =>  (string) Human readable name,     'class' =>  (string) Class Name,     'package' =>    (string) Package name );
+	'fieldtype_shortname' => array(
+		'path'  	=>  (string) File Path,
+		'file'  	=>  (string) Filename,
+		'name'  	=>  (string) Human readable name,
+		'class' 	=>  (string) Class Name,
+		'package' 	=>  (string) Package name
+	);
 
     A package name is only returned if the fieldtype comes from a third
     party
@@ -38,7 +49,7 @@ array is limited to fieldtypes that have been installed by the user. ::
 
 	$this->EE->api_channel_fields->fetch_installed_fieldtypes();
 
-*Return value*
+:returns:
     (array) Same as fetch\_all\_fieltypes, but with the addition of a
     version number and fieldtype id.
 
@@ -52,7 +63,7 @@ them. ::
 
 	$this->EE->api_channel_fields->include_handler((string) $field_type);
 
-*Return value*
+:returns:
     (string) Name of the fieldtype's class.
 
 Setup Fieldtype Class
@@ -63,7 +74,7 @@ must be called before a fieldtype is used. ::
 
 	$this->EE->api_channel_fields->setup_handler((string) $field_type);
 
-*Return value*
+:returns:
     (bool) Fieldtype setup successful
 
 Setup Entry Settings
@@ -104,12 +115,15 @@ that was passed to setup\_handler(). It takes an array of parameters. ::
 
 	$this->EE->api_channel_fields->apply((string) $method, (mixed) $parameters);
 
-*Return value*
+:returns:
     (mixed) The return value of the fieldtype function that was called.
 
-Example Usage
-^^^^^^^^^^^^^
+Example Usage::
 
-::
-
-	$parameters = array(     'foo'       => 'Dog',     'bar'       => 'Cat' );  $this->EE->api_channel_fields->setup_handler('my_fieldtype');  echo $this->EE->api_channel_fields->apply('my_method', $parameters);
+	$parameters = array(
+		'foo'       => 'Dog',
+		'bar'       => 'Cat'
+	);
+	
+	$this->EE->api_channel_fields->setup_handler('my_fieldtype');
+	echo $this->EE->api_channel_fields->apply('my_method', $parameters);

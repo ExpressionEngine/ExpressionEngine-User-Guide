@@ -1,30 +1,74 @@
-RSS Module Tags
-===============
+RSS Module
+==========
+
+.. contents::
+   :local:
+   :depth: 1
+   
+Introduction
+------------
 
 The main purpose of the RSS tag is to render the top portion of the feed
 containing the name of the author, the character encoding, etc., while
 the main channel tag renders the actual rows.
 
 The RSS Module Tag is intended to be used in conjunction with the
-`Channel Entries <../channel/channel_entries.html>`_ tag.
-
+:doc:`/modules/channel/channel_entries`.
 The entire RSS feed is enclosed between the following tags::
 
-	{exp:rss:feed}  {/exp:rss:feed}
+	{exp:rss:feed}
+	
+	{/exp:rss:feed}
 
 Sample RSS and Atom Templates
 -----------------------------
 
--  `Sample Atom Feed <sample_atom.txt>`_
--  `Sample RSS Feed <sample_rss.txt>`_
+- :download:`Sample Atom Feed <sample_atom.txt>`
+- :download:`Sample RSS Feed <sample_rss.txt>`
 
 Parameters
 ----------
 
+.. contents::
+   :local:
 
 If you use any of the following parameters, you will probably want to
 mirror the same settings for your {exp:channel:entries} tag contained
 inside the RSS tag.
+
+channel=
+~~~~~~~~
+
+::
+
+	channel="which"
+
+**Required**. From which
+`channel <../../cp/admin/channels/channel_management.html>`_ to
+show the meta data information.
+
+show\_expired=
+~~~~~~~~~~~~~~
+
+::
+
+	show_expired="yes"
+
+You can determine whether you wish for entries that have "expired" to be
+included.
+
+show\_future\_entries=
+~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+	show_future_entries="yes"
+
+You can determine whether you wish for entries dated in the "future" to
+be included. This option is useful when doing things like creating a
+list of events, some of which have not occurred yet. Note that EE will
+still display past entries; this parameter simply instructs EE to also
+include entries from the future.
 
 status=
 ~~~~~~~
@@ -34,7 +78,7 @@ status=
 	status="open"
 
 You may restrict to a particular
-`status <../../cp/admin/content_admin/statuses.html>`_. You can choose
+`status <../../cp/admin/channels/statuses.html>`_. You can choose
 multiple statuses using a pipe::
 
 	status="draft|reviewed|published"
@@ -78,43 +122,12 @@ currently logged in user. ::
 
 	username="NOT_CURRENT_USER"
 
-channel=
-~~~~~~~~
-
-::
-
-	channel="which"
-
-**Required**. From which
-`channel <../../cp/admin/content_admin/channel_management.html>`_ to
-show the meta data information.
-
-show\_expired=
-~~~~~~~~~~~~~~
-
-::
-
-	show_expired="yes"
-
-You can determine whether you wish for entries that have "expired" to be
-included.
-
-show\_future\_entries=
-~~~~~~~~~~~~~~~~~~~~~~
-
-::
-
-	show_future_entries="yes"
-
-You can determine whether you wish for entries dated in the "future" to
-be included. This option is useful when doing things like creating a
-list of events, some of which have not occurred yet. Note that EE will
-still display past entries; this parameter simply instructs EE to also
-include entries from the future.
 
 Variables
 ---------
 
+.. contents::
+   :local:
 
 author
 ~~~~~~
@@ -124,34 +137,6 @@ author
 	{author}
 
 The name of the person who submitted the last entry.
-
-email
-~~~~~
-
-::
-
-	{email}
-
-The email of the person submitting the very last entry.
-
-encoding
-~~~~~~~~
-
-::
-
-	{encoding}
-
-The XML character encoding for the channel.
-
-version
-~~~~~~~
-
-::
-
-	{version}
-
-The version of ExpressionEngine that you are using (1.0, 1.1, etc.).
-This data is pulled from system/core/core.system.php.
 
 channel\_description
 ~~~~~~~~~~~~~~~~~~~~
@@ -198,17 +183,7 @@ channel\_url
 
 The URL associated with the channel as set in the "Channel URL"
 preference under `Channel
-Management <../../cp/admin/content_admin/channel_management.html>`_.
-
-Single Variable Dates
----------------------
-
-Several date variables are available for use. As with other date
-variables, these require the "format" parameter in order to define how
-the date should be displayed. See the `date variable
-formatting <../../templates/date_variable_formatting.html>`_ page for
-more information.
-
+Administration <../../cp/admin/channels/channel_management.html>`_.
 
 date
 ~~~~
@@ -217,8 +192,8 @@ date
 
 	{date format="%Y %m %d"}
 
-The date on which the last entry was submitted. Note: as with all dates,
-the formatting codes are necessary: {date format="%Y"}
+The date on which the last entry was submitted. See `Date Variable
+Formatting <../../templates/date_variable_formatting.html>`_ for more information.
 
 edit\_date
 ~~~~~~~~~~
@@ -227,7 +202,26 @@ edit\_date
 
 	{edit_date format="%Y %m %d"}
 
-The date on which the entry was last edited.
+The date on which the entry was last edited. See `Date Variable
+Formatting <../../templates/date_variable_formatting.html>`_ for more information.
+
+email
+~~~~~
+
+::
+
+	{email}
+
+The email of the person submitting the very last entry.
+
+encoding
+~~~~~~~~
+
+::
+
+	{encoding}
+
+The XML character encoding for the channel.
 
 gmt\_entry\_date
 ~~~~~~~~~~~~~~~~
@@ -237,7 +231,8 @@ gmt\_entry\_date
 	{gmt_date format="%Y %m %d"}
 
 The date the entry was submitted in GMT. This variable is **not**
-localized for each user's date settings.
+localized for each user's date settings. See `Date Variable
+Formatting <../../templates/date_variable_formatting.html>`_ for more information.
 
 gmt\_edit\_date
 ~~~~~~~~~~~~~~~
@@ -247,7 +242,19 @@ gmt\_edit\_date
 	{gmt_edit_date format="%Y %m %d"}
 
 The date on which the entry was last edited in GMT. This variable is
-**not** localized for each user's date settings.
+**not** localized for each user's date settings. See `Date Variable
+Formatting <../../templates/date_variable_formatting.html>`_ for more information.
+
+version
+~~~~~~~
+
+::
+
+	{version}
+
+The version of ExpressionEngine that you are using (1.0, 1.1, etc.).
+This data is pulled from system/core/core.system.php.
+
 
 RFC3229 Support
 ---------------
@@ -261,8 +268,7 @@ This allows you to reduce bandwidth costs and download time by only
 serving the necessary content.
 
 This ability is provided by adding a special parameter to the
-{exp:channel:entries} opening tag,
-`dynamic\_start="yes" <../channel/parameters.html#par_dynamic_start>`_.
+{exp:channel:entries} opening tag, :ref:`channel-entries-dynamic-start`.
 It is used like so::
 
 	{exp:channel:entries channel="default_site" limit="10" dynamic_start="yes"}
@@ -283,4 +289,17 @@ default, with the option of displaying the tag error as well, using the
 {if empty\_feed} conditional. Tag errors can be displayed with the
 {error} variable.::
 
-	{if empty_feed} <?xml version="1.0" encoding="{charset}"?> <rss version="2.0">       <channel>       <title>{site_name}</title>       <link>{site_url}</link>       <description>{site_name}</description>            <item>             <title>Feed Error</title>             <description>{error}</description>       </item>       </channel> </rss> {/if}
+	{if empty_feed}
+		<?xml version="1.0" encoding="{charset}"?>
+		<rss version="2.0">
+			<channel>
+				<title>{site_name}</title>
+				<link>{site_url}</link>
+				<description>{site_name}</description>
+				<item>
+					<title>Feed Error</title>
+					<description>{error}</description>
+				</item>
+			</channel>
+		</rss>
+	{/if}

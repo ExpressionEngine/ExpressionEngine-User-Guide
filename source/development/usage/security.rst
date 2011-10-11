@@ -1,9 +1,8 @@
 Security Class
 ==============
 
--  `Calling the Security Class <security.html#calling>`_
--  `XSS Filtering <security.html#xss_filter>`_
--  `Other Class Variables <security.html#other_vars>`_
+.. contents::
+	:local:
 
 Calling the Security Class
 --------------------------
@@ -27,7 +26,10 @@ returning an altered string, the function returns TRUE if the image is
 safe, and FALSE if it contained potentially malicious information that a
 browser may attempt to execute. ::
 
-	if ($this->EE->security->xss_clean($file, TRUE) === FALSE) {     // file failed the XSS test }
+	if ($this->EE->security->xss_clean($file, TRUE) === FALSE)
+	{
+	    // file failed the XSS test
+	}
 
 Other Class Variables
 ---------------------
@@ -35,8 +37,8 @@ Other Class Variables
 $this->EE->security->sanitize\_filename()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Removes naughty characters from filenames. Returns a sanitized
-   string.
+Removes naughty characters from filenames. Returns a sanitized
+string.
 
 ::
 
@@ -45,7 +47,7 @@ $this->EE->security->sanitize\_filename()
 $this->EE->security->xss\_hash()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   Returns a random hash.
+Returns a random hash.
 
 ::
 

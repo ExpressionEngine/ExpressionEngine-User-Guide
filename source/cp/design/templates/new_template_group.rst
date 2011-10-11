@@ -1,10 +1,11 @@
-New Template Group
-==================
+Create Template Group
+=====================
 
 The New Template Group tab at the top of the Templates page allows you
 to create a new Template Group.
 
 |Template New Group|
+
 Template Group Name
 ~~~~~~~~~~~~~~~~~~~
 

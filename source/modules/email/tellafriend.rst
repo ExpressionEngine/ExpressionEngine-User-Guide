@@ -1,9 +1,14 @@
+##################
 Tell-A-Friend Form
-==================
+##################
 
-**Note:** The Email Module is not installed by default, so before using
-these tags make sure it is installed via the `Modules
-Page <../../cp/add-ons/module_manager.html>`_.
+.. contents::
+   :local:
+   :depth: 1
+   
+************
+Introduction
+************
 
 The purpose of this tag is to display a form used to share an entry with
 someone by sending them an email about it. To show your tell-a-friend
@@ -19,10 +24,43 @@ There are numerous variations possible for this feature (using
 parameters and variables described below). Here's an example showing how
 a tell-a-friend form might be created::
 
-	{exp:email:tell_a_friend charset="utf-8" allow_html='no'}              <p><label for="from">Your Email: </label><br />     <input type="text" id="from" name="from" size="40" maxlength="35" value="{member_email}" /></p>      <p><label for="name">Your Name: </label><br />     <input type="text" id="name" name="name" size="40" maxlength="35" value="{member_name}" /></p>      <p><label for="to">To: </label><br />     <input type="text" id="to" name="to" size="40" maxlength="35" /></p>      <p><label for="subject">Subject: </label><br />     <input type="text" id="subject" name="subject" size="40" value="Entry by: {author}" /></p>      <p><label for="message">Message: </label><br />     <textarea id="message" name="message" readonly="readonly" rows="18" cols="40">      {summary}     {body}     {permalink}     </textarea></p>      <p><input name="submit" type='submit' value='Submit Form' /></p> {/exp:email:tell_a_friend}
+	{exp:email:tell_a_friend charset="utf-8" allow_html='no'}
+		<p>
+			<label for="from">Your Email: </label><br />
+			<input type="text" id="from" name="from" size="40" maxlength="35" value="{member_email}" />
+		</p>
+		<p>
+			<label for="name">Your Name: </label><br />
+			<input type="text" id="name" name="name" size="40" maxlength="35" value="{member_name}" />
+		</p>
+		<p>
+			<label for="to">To: </label><br />
+			<input type="text" id="to" name="to" size="40" maxlength="35" />
+		</p>
+		<p>
+			<label for="subject">Subject: </label><br />
+			<input type="text" id="subject" name="subject" size="40" value="Entry by: {author}" />
+		</p>
+		<p>
+			<label for="message">Message: </label><br />
+			<textarea id="message" name="message" readonly="readonly" rows="18" cols="40">
+				{summary}
+				{body}
+				{permalink="template_group/template"}
+			</textarea>
+		</p>
+		<p>
+			<input name="submit" type='submit' value='Submit Form' />
+		</p>
+	{/exp:email:tell_a_friend}
 
+.. important:: Make sure to use the correct template_group and template so the
+   permalink that is sent in the tell-a-friend email is correct
+
+
+*********************************
 Linking to the Tell-a-Friend page
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*********************************
 
 In order to use the Tell-a-Friend feature, you will need to link to it.
 First, create a Template and place the Tell-a-Friend form in this
@@ -37,16 +75,19 @@ you can point to it using the permalink variable::
 In the above example, the Template "friend" contains the Tell-a-Friend
 form.
 
+**********
 Parameters
-----------
+**********
 
+.. contents::
+   :local:
 
 allow\_html=
 ~~~~~~~~~~~~
 
 ::
 
-	allow_html="yes" ``allow_html="<p>,<a>"`` ``allow_html="no"``
+	allow_html="yes" allow_html="<p>,<a>" allow_html="no"
 
 The channel entry variables (see Channel Variables below) are formatted
 according to the formatting specified when the entry was submitted, so
@@ -163,7 +204,7 @@ status=
 
 	status="open"
 
-The channel `status <../../cp/admin/content_admin/statuses.html>`_ you
+The channel `status <../../cp/admin/channels/statuses.html>`_ you
 would like entries restricted to. This is useful if you will be
 displaying entries with a status other than "open". You can choose
 multiple statuses using a pipe::
@@ -209,19 +250,23 @@ form\_id=
 With this parameter, you can specify the css id you want the form to
 have. The default value is 'tellafriend\_form'
 
+******************
 Channel Parameters
-------------------
+******************
 
-While some of the `Channel Entries Tag
-Parameters <../../modules/channel/parameters.html>`_ are also available
+While some of the :ref:`Channel Entries Tag
+Parameters <channel-entries-parameters>` are also available
 to the Tell-a-Friend form, most of them will not be beneficial to use in
 that context. One exception that can be valuable is
 show\_future\_entries=, which would let you use the Tell-a-Friend form
 with entries dated in the future.
 
+*********
 Variables
----------
+*********
 
+.. contents::
+   :local:
 
 member\_email
 ~~~~~~~~~~~~~
@@ -243,21 +288,22 @@ member\_name
 If a user is logged in, then it will display their screen name as
 recorded in their member profile.
 
+*****************
 Channel Variables
------------------
+*****************
 
 ::
 
 	{title}     {permalink}     {author}     {body}     et cetera...
 
-Many of the `Channel Entries Tag
-Variables <../../modules/channel/variables.html>`_ are available for the
+Many of the :ref:`Channel Entries Tag
+Variables <channel-entries-single-variables>` are available for the
 tell-a-friend form. Notable exceptions are all category related
 variables and custom member fields.
 
-**Note**: To ease the useability of this form with multiple channels,
-which will possibly contain different channel fields, all Channel
-Variables that are unfillable will be removed from the form.
+.. note:: To ease the useability of this form with multiple channels,
+   which will possibly contain different channel fields, all Channel
+   Variables that are unfillable will be removed from the form.
 
 For example, if you have a channel with the fields "summary" and "body",
 and then another channel with the fields "ingredients" and "directions",
@@ -268,9 +314,12 @@ be filled and the second two will be ignored. If an entry from channel 2
 is linking to the tell-a-friend form, then the first two will be ignored
 and the second two will be filled out.
 
+***********
 Form Fields
------------
+***********
 
+.. contents::
+   :local:
 
 captcha
 ~~~~~~~
@@ -282,11 +331,14 @@ captcha
 The CAPTCHA input for the form. It is usually used with a conditional so
 that it is only displayed if necessary::
 
-	{if captcha}  <p>Please enter the word you see in the image below:</p>  <p>{captcha}<br /> <input type="text" name="captcha" value="" maxlength="20" /></p>  {/if}
+	{if captcha}
+		<p>Please enter the word you see in the image below:</p>
+		<p>{captcha}<br /> <input type="text" name="captcha" value="" maxlength="20" /></p>
+	{/if}
 
 The setting to disable or enable CAPTCHA for the tell-a-friend form can
 be found in the `Email
-Configuration <../../cp/admin/system_admin/email_configuration.html>`_
+Configuration <../../cp/admin/email_configuration.html>`_
 preferences.
 
 from
@@ -298,13 +350,13 @@ from
 
 Email address of person who is sending the email.
 
-**WARNING**: If you leave this field open to user input, be aware that
-it is a potential for abuse by spammers, who could use your form
-pretending to be someone they are not (i.e. keying in admin@paypal.com).
-If the user is allowed to modify both this and the message field, you
-have essentially created a
-`phishing <http://dictionary.reference.com/search?q=phishing>`_ form
-ripe for abuse.
+.. warning:: If you leave this field open to user input, be aware that
+   it is a potential for abuse by spammers, who could use your form
+   pretending to be someone they are not (i.e. keying in admin@paypal.com).
+   If the user is allowed to modify both this and the message field, you
+   have essentially created a
+   `phishing <http://dictionary.reference.com/search?q=phishing>`_ form
+   ripe for abuse.
 
 message
 ~~~~~~~
@@ -319,12 +371,12 @@ the textarea as read only (ex: <textarea
 readonly="readonly"></textarea>). You must include this form field, even
 if it is just a hidden field.
 
-**WARNING**: If you leave this field open to user input, be aware that
-it is a potential for abuse by spammers, who could use your form for
-email advertising. If the user is allowed to modify both this and the
-from field, you have essentially created a
-`phishing <http://dictionary.reference.com/search?q=phishing>`_ form
-ripe for abuse.
+.. warning:: If you leave this field open to user input, be aware that
+   it is a potential for abuse by spammers, who could use your form for
+   email advertising. If the user is allowed to modify both this and the
+   from field, you have essentially created a
+   `phishing <http://dictionary.reference.com/search?q=phishing>`_ form
+   ripe for abuse.
 
 name
 ~~~~
@@ -366,5 +418,5 @@ to
 Email address where the email is being sent. Multiple email addresses
 may be specified by separating them with a comma. You must include this
 form field, even if it is just a hidden field. This data may also be
-specified with the `recipients= <#par_recipients>`_ parameter of the
+specified with the `recipients=`_ parameter of the
 tag.

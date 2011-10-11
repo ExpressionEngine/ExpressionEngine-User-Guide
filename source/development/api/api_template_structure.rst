@@ -1,7 +1,9 @@
 ExpressionEngine Template Structure API
 =======================================
 
--  **Function Reference**
+.. contents::
+	:local:
+	:depth: 1
 
          
 Calling the Class
@@ -24,7 +26,7 @@ Get Group Info
 
 	$this->EE->api_template_structure->get_group_info($group_id);
 
-*Return value*
+:returns:
     Database result object or returns FALSE on error.
 
 Create Template Group
@@ -34,14 +36,18 @@ Create Template Group
 
 	$this->EE->api_template_structure->create_template_group((array) $data, (int) $duplicate)
 
-Example Usage
-^^^^^^^^^^^^^
+Example Usage::
 
-::
+	$data = array(
+		'group_name'        => 'home',
+		'group_order'       => 2,
+		'is_site_default'   => 'n',
+		'site_id'  	 	    => 1
+	);
+	
+	$this->EE->api_template_structure->create_template_group($data, 1);
 
-	$data = array('group_name'        => 'home',          'group_order'       => 2,          'is_site_default'   => 'n',          'site_id'       => 1);          $this->EE->api_template_structure->create_template_group($data, 1);
-
-*Return value*
+:returns:
     Returns id of newly created group or FALSE on error.
 
 File Extensions
@@ -51,8 +57,7 @@ File Extensions
 
 	$this->EE->api_template_structure->file_extensions((str) $template_type);
 
-Template Types
-^^^^^^^^^^^^^^
+Template Types:
 
 -  webpage
 -  static
@@ -61,6 +66,6 @@ Template Types
 -  js
 -  xml
 
-*Return value*
+:returns:
     Returns file extension if template type exists, or an empty string
 

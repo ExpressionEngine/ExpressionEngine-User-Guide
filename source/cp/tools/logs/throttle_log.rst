@@ -1,14 +1,18 @@
-View Throttle Log
-=================
+Throttle Log
+============
 
-Control Panel Location: Tools > Logs > View Throttle Log
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Tools --> Logs --> Throttle Log`
+
 This section of the Control Panel allows you to view all the IPs that
 are currently by
-"`throttled <../../admin/system_admin/throttling_settings.html>`_" by
+"`throttled <../../admin/throttling_settings.html>`_" by
 ExpressionEngine from your Control Panel. You can also black list
 selected IPs.
 
 |Throttle Log|
+
 The following table columns are listed:
 
 -  **IP Address**: The IP address being throttled.

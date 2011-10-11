@@ -14,8 +14,8 @@ Language Additions
 ------------------
 
 ExpressionEngine 2.1.5 has a number of language file additions. To
-assist translators in updating their language packs, a `language notes
-text file <language_notes_2.1.5.txt>`_ has been provided. This text file
+assist translators in updating their language packs, a :download:`language notes
+text file <language_notes_2.1.5.txt>` has been provided. This text file
 lists all of the new language keys, separated by the each language file
 that contains changes. To update your language pack, you can download
 this text file, make the changes, and simply copy the new keys to the
@@ -41,3 +41,4 @@ The following views were edited:
 -  sysetm/expressionengine/views/admin/status\_group\_edit.php
 -  sysetm/expressionengine/views/admin/status\_group\_management.php
 
+:ref:`Return to Update Page <update-additional-steps>`

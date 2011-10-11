@@ -1,28 +1,22 @@
-Design Page
-===========
+Design
+======
 
-The main interface for adding/editing design elements
+- Templates
+	- :doc:`templates/edit_template`
+	- :doc:`templates/new_template_group`
+	- :doc:`templates/new_template`
+	- :doc:`templates/templates`
+	- :doc:`templates/synchronize_templates`
+	- :doc:`templates/snippets`
+	- :doc:`templates/global_variables`
+	- :doc:`templates/template_preferences_manager`
+	- :doc:`templates/global_template_preferences`
+- :doc:`message_pages/index`
+- Themes
+	- :doc:`themes/member_profile_templates`
+	- :doc:`/modules/forum/forum_themes`
+	- :doc:`/modules/wiki/wiki_templates`
 
--  `Message Pages <./message_pages/index.html>`_
--  `Templates <./templates/index.html>`_
-
-   -  `Main Templates Page <./templates/templates.html>`_
-   -  Editing a Template
-   -  `Template Access <./templates/template_access.html>`_
-   -  `Creating a New Template
-      Group <./templates/new_template_group.html>`_
-   -  `Creating a New Template <./templates/new_template.html>`_
-   -  `Snippets <./templates/snippets.html>`_
-   -  `Global Variables <./templates/global_variables.html>`_
-   -  `Global Template
-      Preferences <./templates/global_template_preferences.html>`_
-   -  `Synchronize Templates <./templates/synchronize_templates.html>`_
-
--  Themes
-
-   -  `Member Profile
-      Templates <./themes/member_profile_templates.html>`_
-   -  `Wiki Themes <../../modules/wiki/index.html>`_
 
 .. toctree::
 	:glob:

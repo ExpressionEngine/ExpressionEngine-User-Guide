@@ -3,17 +3,30 @@ Member XML Format
 
 ExpressionEngine utilizes a special XML format for member data. ::
 
-	<members>             <member>                     <username>brettb</username>                     <screen_name>Brett Bretterson</screen_name>                     <password type="md5">653132ffd94b986bf2bb806b3c67d190</password>                     <email>brett@example.com</email>             </member>                      <member>                     <username>robr</username>                     <screen_name>Robert Robertson</screen_name>                     <password type="sha1">1b4395b877794a16a7f4db5747380dbaafc7ff18</password>                     <email>robert@example.com</email>             </member>     </members>
+	<members>
+		<member>
+			<username>brettb</username>
+			<screen_name>Brett Bretterson</screen_name>
+			<password type="md5">653132ffd94b986bf2bb806b3c67d190</password>
+			<email>brett@example.com</email>
+		</member>
+		<member>
+			<username>robr</username>
+			<screen_name>Robert Robertson</screen_name>
+			<password type="sha1">1b4395b877794a16a7f4db5747380dbaafc7ff18</password>
+			<email>robert@example.com</email>
+		</member>
+	</members>
 
 The XML tags are identical to their database field counterparts from the
-exp\_members table. All fields are allowed except for "unique\_id".
+exp_members table. All fields are allowed except for "unique_id".
 
-**WARNING:** The <member\_id> tag will cause the import utility to
-overwrite any existing members with the same ID. It is generally
-recommended that you do not use a <member\_id> tag, so when transferring
-users from one system to another, ExpressionEngine can automatically
-create new unique IDs for each member without overwriting any existing
-members.
+.. important:: The <member_id> tag will cause the import utility to
+   overwrite any existing members with the same ID. It is generally
+   recommended that you do not use a <member_id> tag, so when transferring
+   users from one system to another, ExpressionEngine can automatically
+   create new unique IDs for each member without overwriting any existing
+   members.
 
 
 Required Tags

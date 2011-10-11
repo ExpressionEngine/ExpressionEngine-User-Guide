@@ -4,6 +4,9 @@ URI Class
 The URI Class provides functions that help you retrieve information from
 your URI strings. This class is initialized automatically.
 
+.. contents::
+	:local:
+
 $this->EE->uri->segment(n)
 --------------------------
 
@@ -30,7 +33,15 @@ failure::
 
 It helps avoid having to write code like this::
 
-	if ($this->EE->uri->segment(3) === FALSE)  {     $product_id = 0; } else {     $product_id = $this->EE->uri->segment(3); }
+	if ($this->EE->uri->segment(3) === FALSE)
+	{
+	    $product_id = 0;
+	}
+	else
+	{
+	    $product_id = $this->EE->uri->segment(3);
+	}
+	
 
 $this->EE->uri->slash\_segment(n)
 ---------------------------------
@@ -39,7 +50,11 @@ This function is almost identical to $this->EE->uri->segment() except it
 adds a trailing and/or leading slash based on the second parameter. If
 the parameter is not used, a trailing slash added. Examples::
 
-	$this->EE->uri->slash_segment(3); $this->EE->uri->slash_segment(3, 'leading'); $this->EE->uri->slash_segment(3, 'both');
+	$this->EE->uri->slash_segment(3);
+	
+	$this->EE->uri->slash_segment(3, 'leading');
+	
+	$this->EE->uri->slash_segment(3, 'both');
 
 Returns:
 
@@ -58,19 +73,26 @@ key/value pairs. Consider this URI::
 Using this function you can turn the URI into an associative array with
 this prototype::
 
-	[array] (     'name' => 'joe'     'location'  => 'UK'     'gender'    => 'male' )
+	[array]
+	(
+	    'name' => 'joe'
+	    'location'	=> 'UK'
+	    'gender'	=> 'male'
+	)
 
 The first parameter of the function lets you set an offset. By default
 it is set to 3 since your URI will normally contain a
 controller/function in the first and second segments. Example::
 
-	 $array = $this->EE->uri->uri_to_assoc(3);  echo $array['name'];
+	 $array = $this->EE->uri->uri_to_assoc(3);
+	 echo $array['name'];
 
 The second parameter lets you set default key names, so that the array
 returned by the function will always contain expected indexes, even if
 missing from the URI. Example::
 
-	 $default = array('name', 'gender', 'location', 'type', 'sort');  $array = $this->EE->uri->uri_to_assoc(3, $default);
+	 $default = array('name', 'gender', 'location', 'type', 'sort');
+	 $array = $this->EE->uri->uri_to_assoc(3, $default);
 
 If the URI does not contain a value in your default, an array index will
 be set to that name with a value of FALSE.
@@ -85,7 +107,11 @@ $this->EE->uri->assoc\_to\_uri($array)
 Takes an associative array and generates a URI string from it. The array
 keys will be included in the string. Example::
 
-	$array = array('product' => 'shoes', 'size' => 'large', 'color' => 'red');  $str = $this->EE->uri->assoc_to_uri($array);  // Produces:  product/shoes/size/large/color/red
+	// Produces:  product/shoes/size/large/color/red
+
+	$array = array('product' => 'shoes', 'size' => 'large', 'color' => 'red');
+	$str = $this->EE->uri->assoc_to_uri($array);
+	
 
 $this->EE->uri->uri\_string()
 -----------------------------
@@ -109,5 +135,11 @@ $this->EE->uri->segment\_array()
 
 Returns an array containing the URI segments. For example::
 
-	 $segs = $this->EE->uri->segment_array();  foreach ($segs as $segment) {     echo $segment;     echo '<br />'; }
+	$segs = $this->EE->uri->segment_array();
+	
+	foreach ($segs as $segment)
+	{
+	    echo $segment;
+	    echo '<br />';
+	}
 

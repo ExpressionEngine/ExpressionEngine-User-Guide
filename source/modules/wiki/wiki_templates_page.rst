@@ -1,12 +1,17 @@
 Wiki Page Section
 =================
 
+.. contents::
+	:local:
+	:depth: 1
+
 This is the **wrapper** section that contains the header, sidebar,
 navigation, CSS, and the elements found in a standard HTML page
 including the CSS. It "wraps" around all the user editable content as
 outlined in the screencap below.
 
 |The Wiki Page section controls the highlighted area|
+
 The variables available to the Wiki Page section are divided into the
 following broad categories:
 
@@ -14,6 +19,8 @@ following broad categories:
 Single Variables
 ----------------
 
+.. contents::
+	:local:
 
 elapsed\_time
 ~~~~~~~~~~~~~
@@ -32,8 +39,7 @@ original\_page
 	{original_page}
 
 If a page is redirected, this tag displays the name of the original
-page. This is used inside `redirected
-conditional <#var_con_redirected>`_.
+page. This variable is used inside the `if redirected`_ conditional.
 
 redirect\_page
 ~~~~~~~~~~~~~~
@@ -44,7 +50,7 @@ redirect\_page
 
 If a page redirects this variable sets the page to which it redirects.
 The value is set dynamically by ExpressionEngine. This variable is used
-inside `redirect\_page conditional <#var_con_redirect_page:>`_.
+inside the `if redirected`_ conditional.
 
 revision\_id
 ~~~~~~~~~~~~
@@ -297,9 +303,8 @@ path:logout
 
 Displays the URL to the logout script.
 
-**Note to Discussion Forum Module users:** The `Wiki
-tag <wiki_tag.html>`_ has an optional parameter called
-**profile\_path=''**. When this parameter is used, you can direct the
+**Note to Discussion Forum Module users:** The :ref:`wiki-tag` has an optional
+parameter called **profile\_path=''**. When this parameter is used, you can direct the
 member paths from the default member area of your ExpressionEngine
 installation to the Discussion Forum member area.
 
@@ -446,10 +451,9 @@ valid.
 -----------------------
 
 This tag is used to display all the wiki's categories. Unlike the
-`{wiki:categories} <./wiki_templates_special_categories.html#wiki_tag_categories>`_
-tag, it is not affected by being put in an article page. It has
-`Parameters <#wiki_categories_para>`_ and
-`Variables <#wiki_categories_var>`_ available to it.
+:ref:`{wiki:categories} <wiki-categories-tag>`
+tag, it is not affected by being put in an article page. It has the
+following parameters and variables available to it.
 
 {wiki:categories\_list} \| Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

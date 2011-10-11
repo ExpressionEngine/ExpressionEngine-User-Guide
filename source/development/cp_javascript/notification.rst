@@ -4,10 +4,8 @@ Javascript Notification Plugin
 The javascript notification plugin provides a unified way to notify
 users of javascript triggered control panel events.
 
--  `Showing a Notification <notification.html#showing>`_
--  `Multiple Notifications <notification.html#queueing>`_
--  `Hiding a Notification <notification.html#hiding>`_
--  `Parameters <notification.html#parameters>`_
+.. contents::
+	:local:
 
 Showing a Notification
 ----------------------
@@ -26,7 +24,10 @@ messages will increment a counter next to the first message. You can
 either call the plugin multiple times, or you can provide an array of
 messages::
 
-	$.ee_notice([     {message:"Show me First"},     {message:"Show me Second"} ]);
+	$.ee_notice([
+		{message:"Show me First"},
+		{message:"Show me Second"}
+	]);
 
 Hiding the Notifications
 ------------------------
@@ -53,15 +54,13 @@ form of a javascript object. ::
 type (default: notice)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-   Can be used to change the style of the notification. Available
-   notification types are succes, notice, error, and custom. When using
-   custom, there will be no user clickable area to open the
-   notification.
+Can be used to change the style of the notification. Available
+notification types are success, notice, error, and custom. When using
+custom, there will be no user clickable area to open the
+notification.
 
 open (default: false \| true for errors)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   When set to true, it will automatically slide down the notification
-   without any user interaction.
-
-
+When set to true, it will automatically slide down the notification
+without any user interaction.

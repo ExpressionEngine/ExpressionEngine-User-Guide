@@ -1,8 +1,9 @@
 ExpressionEngine Channel Categories API
 =======================================
 
--  **Function Reference**
-
+.. contents::
+	:local:
+	:depth: 1
             
 Calling the Class
 -----------------
@@ -10,10 +11,14 @@ Calling the Class
 The Channel Category class is called with the api->instantiate()
 function. ::
 
-	$this->EE->load->library('api'); $this->EE->api->instantiate('channel_categories');
+	$this->EE->load->library('api'); 	
+	$this->EE->api->instantiate('channel_categories');
 
 Function Reference
 ------------------
+
+.. contents::
+	:local:
 
 Category Tree
 ~~~~~~~~~~~~~
@@ -27,12 +32,22 @@ parameter determines the ordering of the categories ('a' for
 alphabetical based on category\_name or 'c' for the specified custom
 ordering). ::
 
-	$this->EE->api_channel_categories->category_tree((mixed) $group_id, [(mixed) $selected, [(string) c or a]]);
+	$this->EE->api_channel_categories->category_tree(
+		(mixed) $group_id, [(mixed) $selected, [(string) c or a]]
+	);
 
-*Return value*
+:returns:
     Array::
 
-	array(     '0' =>  (int) Category ID,     '1' =>  (string) Category Name,                  '2' =>  (int) Category Group ID,     '3' =>  (bool) Selected,     '4' =>  (int) Depth Nested in the Tree               );
+	array(
+		'0' =>  (int) Category ID,
+		'1' =>  (string) Category Name,
+		'2' =>  (int) Category Group ID,
+		'3' =>  (string) Category Group Name,
+		'4' =>  (bool) Selected,
+		'5' =>  (int) Depth Nested in the Tree,
+		'6' =>  (int) Category Parent ID
+	);
 
 Category Form Tree
 ~~~~~~~~~~~~~~~~~~
@@ -53,10 +68,15 @@ current site. ::
 
 	$this->EE->api_channel_categories->category_form_tree([(string) $nested y/n, [(mixed) $categories, [(mixed) $sites]]]);
 
-*Return value*
+:returns:
     Array::
 
-	array(     '0' =>  (int) Category Group ID,     '1' =>  (int) Category ID,                   '2' =>  (string) Category Name in ASCII Format,     '3' =>  (int) Parent ID );
+	array(
+		'0' =>  (int) Category Group ID,
+		'1' =>  (int) Category ID,
+		'2' =>  (string) Category Name in ASCII Format,
+		'3' =>  (int) Parent ID
+	);
 
 Fetch Category Parents
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -66,7 +86,7 @@ them to the cat\_parents class variable. ::
 
 	$this->EE->api_channel_categories->fetch_category_parents((array) $cat_array);
 
-*Return value*
+:returns:
     Void
 
 Fetch Allowed Category Groups
@@ -78,12 +98,18 @@ to administrate channels or edit categories. Returns FALSE otherwise. ::
 
 	$this->EE->api_channel_categories->fetch_allowed_category_groups((mixed) $cat_group);
 
-*Return value*
+:returns:
     Array or FALSE if there are no allowed category groups.
 
-Example Usage
-^^^^^^^^^^^^^
+Example Usage::
 
-::
-
-	$group_id = '1|5'; $allowed = $this->EE->api_channel_categories->fetch_allowed_category_groups($group_id);  if ($allowed != FALSE) {     foreach($allowed as $val)     {         echo 'Group ID: '.$val['0'].' Group Name: '.$val['1'].'';     } }
+	$group_id = '1|5';
+	
+	$allowed = $this->EE->api_channel_categories->fetch_allowed_category_groups($group_id);
+	
+	if ($allowed != FALSE) {
+		foreach($allowed as $val)
+		{
+			echo 'Group ID: '.$val['0'].' Group Name: '.$val['1'].'';
+		}
+	}

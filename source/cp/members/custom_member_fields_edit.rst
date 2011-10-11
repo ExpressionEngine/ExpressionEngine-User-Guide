@@ -1,12 +1,15 @@
 Member Fields - Add/Edit
 ========================
 
-Control Panel Location: Members > Member Fields > Create New Member
-Field
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Member Fields --> Create/Edit`
+
 The *Member Fields* feature permits you to add fields to the member
 registration form and/or member profile and My Account areas.
 
 |Custom Member Field Edit|
+
 Field Name
 ~~~~~~~~~~
 
@@ -17,9 +20,8 @@ your member profile and registration templates. Note: The fields are
 typically added automatically by the system so you do not need to edit
 the templates.
 
-**Note:** Some words are reserved and cannot be used. Please see the
-list of `reserved words <../reserved_words.html#reserved_fields>`_ for
-details.
+.. note:: Some words are reserved and cannot be used. Please
+   see :doc:`/general/reserved_words` for details.
 
 Field Label
 ~~~~~~~~~~~
@@ -93,8 +95,7 @@ Is this field visible in registration page?
 When set to "yes", the field will be available in the public member
 registration form.
 
-Is field visible in the control panel's administrative registration
-page?
+Is field visible in the control panel's administrative registration page?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When set to "yes", the field will be available in the control panel's

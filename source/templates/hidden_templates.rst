@@ -2,8 +2,8 @@ Hidden Templates
 ================
 
 Sometimes it is undesirable to allow access to a template via a URL. For
-instance, a template that you only use as an `embedded
-template <./embedding_templates.html>`_ would likely be an incomplete
+instance, a template that you only use as an :doc:`embedded
+template <embedding>` would likely be an incomplete
 HTML document, and not something you would want your users to be able to
 come across on its own, even accidentally.
 

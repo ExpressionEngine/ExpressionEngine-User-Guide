@@ -1,30 +1,26 @@
-Control Panel Home Page
-=======================
+#################
+The Control Panel
+#################
 
-The :dfn:`Control Panel Home Page` is where you'll be directed upon logging
-into the Control Panel.
+Also known as the "back end," the Control Panel is where most of your interaction
+with ExpressionEngine will take place. Here you’ll publish and edit your content,
+control the look and feel of your site, manage your members and much more.
 
-You may have this page inform you when new versions of ExpressionEngine
-are released. To enable this option, visit :dfn:`Admin > General Configuration`
-and set **New Version Auto Check** to "yes". The check will be performed
-every time you first log into the Control Panel.
+.. toctree::
+	:titlesonly:
+	:maxdepth: 1
+	
+	content/index
+	design/index
+	add-ons/index
+	members/index
+	admin/index
+	tools/index
+	my_account/index
+	sites/index
 
 .. figure:: ../images/cp_home.png
    :align: center
    :alt: Cp Home
 
 
-.. toctree::
-	:glob:
-	:hidden:
-	:titlesonly:
-	
-	*
-	add-ons/index
-	admin/index
-	content/index
-	design/index
-	members/index
-	my_account/index
-	sites/index
-	tools/index

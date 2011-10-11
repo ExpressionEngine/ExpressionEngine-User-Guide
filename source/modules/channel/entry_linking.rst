@@ -1,12 +1,21 @@
+###########################
 Next/Previous Entry Linking
-===========================
+###########################
+
+.. contents::
+   :local:
+   :depth: 1
+
+************
+Introduction
+************
 
 The Next and Previous entry links allow you to generate links to the
 next or previous entry, based on the date of the entry.
 
-**Note:** These links can **only** be used on pages displaying a single
-entry, such as a "comment" page, since they are designed to provide
-navigation from one entry to another.
+.. note:: These links can **only** be used on pages displaying a single
+   entry, such as a "comment" page, since they are designed to provide
+   navigation from one entry to another.   
 
 These tags work as tag pairs so that they will conditionally show the
 content between the pair if there is a next (or previous) entry. 
@@ -21,24 +30,30 @@ content between the pair if there is a next (or previous) entry.
         <p>Previous entry: <a href="{path='site/comments'}">{title}</a></p>  
     {/exp:channel:prev_entry}
 
-**Note:** If you are viewing the most recent entry in your channel, then
+.. important:: These tags **cannot** be placed inside your main Channel Entries Tag.
+   They must be placed outside of the Channel Entries tag in order to work correctly.
+
+If you are viewing the most recent entry in your channel, then
 the "next\_entry" tag's contents will not be shown (since there is no
 "next entry"). Likewise, when you are viewing the oldest/first entry in
 the channel the "previous\_entry" content will not be shown.
 
+**********
 Parameters
-----------
+**********
 
+.. contents::
+   :local:
 
 category=
-~~~~~~~~~
+---------
 
 ::
 
 	category="2"
 
 Categories are specified by ID number (the ID number of each
-`category <../../cp/admin/content_admin/category_edit.html>`_ is
+`category <../../cp/admin/channels/category_edit.html>`_ is
 displayed in the Control Panel). The reason we use the ID is because
 categories can be called anything (with spaces, quotes, etc.), and also
 renamed. It would be much more difficult to have to update the tag
@@ -76,11 +91,10 @@ the results. However, if you are using exclusion (category="not 3\|4"),
 then you will be shown all entries without those categories *including*
 those without any categories assigned. To change this behavior when
 excluding categories use the
-`uncategoried\_entries="" <parameters.html#par_uncategorized_entries>`_
-parameter.
+:ref:`channel-entries-uncategorized-entries` parameter.
 
 category\_group=
-~~~~~~~~~~~~~~~~
+----------------
 
 ::
 
@@ -88,7 +102,7 @@ category\_group=
 
 Category Groups are specified by ID number (the ID number of each
 `category
-group <../../cp/admin/content_admin/category_management.html>`_ is
+group <../../cp/admin/channels/category_management.html>`_ is
 displayed in the Control Panel). The reason we use the ID is because
 category groups can be called anything (with spaces, quotes, etc.), and
 also renamed. It would be much more difficult to have to update the tag
@@ -105,7 +119,7 @@ Or use "not" to exclude categories
 	category_group="not 2"
 
 channel=
-~~~~~~~~
+--------
 
 ::
 
@@ -122,7 +136,7 @@ space::
 	channel="not channel4|channel5"
 
 entry\_id=
-~~~~~~~~~~
+----------
 
 ::
 
@@ -136,7 +150,7 @@ ommit specific entries from showing up in the cycle, by using "not"::
 The above example would ignore entries 2, 9, 23, and 50.
 
 show\_expired=
-~~~~~~~~~~~~~~
+--------------
 
 ::
 
@@ -146,7 +160,7 @@ You can determine whether you wish for entries that have "expired" to be
 included.
 
 show\_future\_entries=
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 ::
 
@@ -157,14 +171,14 @@ be included. This option is useful when doing things like creating a
 list of events, some of which have not occurred yet.
 
 status=
-~~~~~~~
+-------
 
 ::
 
 	status="open"
 
 You may restrict to entries assigned to a particular
-`status <../../cp/admin/content_admin/statuses.html>`_. You can choose
+`status <../../cp/admin/channels/statuses.html>`_. You can choose
 multiple statuses using a pipe::
 
 	status="draft|reviewed|published"
@@ -175,12 +189,15 @@ Or exclude statuses using "not"
 
 	status="not submitted|processing|closed"
 
+*********
 Variables
----------
+*********
 
+.. contents::
+   :local:
 
 entry\_id
-~~~~~~~~~
+---------
 
 ::
 
@@ -189,7 +206,7 @@ entry\_id
 The ID number of the channel entry
 
 id\_path='
-~~~~~~~~~~
+----------
 
 ::
 
@@ -209,7 +226,7 @@ SITE\_INDEX is preferable since it will make the URL cleaner. ::
 	<a href="{path='SITE_INDEX'}">{title}</a>
 
 path='
-~~~~~~
+------
 
 ::
 
@@ -227,7 +244,7 @@ SITE\_INDEX is preferable since it will make the URL cleaner. ::
 	<a href="{path='SITE_INDEX'}">{title}</a>
 
 title
-~~~~~
+-----
 
 ::
 
@@ -236,7 +253,7 @@ title
 This variable simply displays the title of the entry.
 
 url\_title
-~~~~~~~~~~
+----------
 
 ::
 

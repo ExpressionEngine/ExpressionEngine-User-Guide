@@ -1,7 +1,13 @@
-Comment Module
-==============
+Comment Module Control Panel
+============================
 
-Control Panel Location: Modules > Comment Module
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Add-Ons --> Modules --> Comment`
+
+.. contents::
+	:local:
+
 The Comment Module Control Panel allows you to moderate comments. By
 using the drop-down menus the list can be filtered by channel, comment
 status, or date range. In addition, you can search in the comments, by
@@ -11,6 +17,7 @@ using the checkboxes on the right, then either delete them or change
 their status using the option menu at the bottom of the page.
 
 |Comment Control Panel|
+
 Main Display
 ------------
 
@@ -27,7 +34,7 @@ The main table shows the following columns:
    and
    `view\_comment\_leave\_breaks <../../../general/hidden_configuration_variables.html#view_comment_leave_breaks>`_
    for formatting options). Clicking the comment text allows you to
-   `view or edit the comment <edit_comment.html>`_.
+   `view or edit the comment <#editing-comments>`_.
 -  **Entry Title**: Click to search in entry titles for all comments for
    this entry.
 -  **Name**: The commenter's name. Click to search in names for more
@@ -73,12 +80,12 @@ Settings
 This screen allows you to edit Comment settings. Note that much of the
 behavior of the Comment Module is determined on a per Channel basis, and
 thus found in the Comment Posting Preferences section of the `Channel
-Preferences <../../../cp/admin/content_admin/channel_edit_preferences.html>`_.
+Preferences <../../../cp/admin/channels/channel_edit_preferences.html>`_.
 
 Force word censoring for comments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Word censoring <../../../cp/admin/system_admin/word_censoring.html>`_
+`Word censoring <../../../cp/admin/word_censoring.html>`_
 normally applies to the entire site, affecting both channel entries and
 comments. This setting allows you to apply word censoring to comments,
 even when it is turn off for the site as a whole. The censored words and
@@ -101,11 +108,27 @@ This specifies the length of time (in seconds) that non-Superadmins have
 before comment editing is disallowed on the front end of the site. Set
 to 0 for no limit.
 
+Editing Comments
+----------------
+
+The edit page shows the recorded comment data and allows editing of the
+individual comment.
+
+|Comment Edit Control Panel|
+
+Comments by registered members will use the member data when displaying
+name, email, url and location. Thus these fields will not be editable
+for registered members.
+
+If accessed by an administrator with only 'Can Moderate Comments'
+privileges, only the status will be editable.
+
+
 .. |Comment Control Panel| image:: ../../../images/comment_cp.png
+.. |Comment Edit Control Panel| image:: ../../../images/comment_edit_form.png
 
 .. toctree::
 	:glob:
 	:titlesonly:
 	:hidden:
 	
-	*

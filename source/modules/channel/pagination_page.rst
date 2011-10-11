@@ -86,7 +86,112 @@ channel entries or comments:
    below your list of entries.
 
 If no parameter is specified, the navigation block will default to the
-"bottom" behaviour.
+"bottom" behavior.
+
+
+pagination_links
+----------------
+
+::
+
+	{pagination_links}
+
+These show the current page you are on as well as "surrounding" pages in
+addition to links for nex/previous pages and first/last pages. You can use
+{pagination_links} in two ways. It can be used as a `single variable <#var_pagination_links>`_
+or as a pair. When used as a single variable, the output looks a like this::
+
+	« First  <  11 12 13 14 15 >  Last »
+
+When used as a pair, you have a bit more flexibility::
+
+	{pagination_links}
+		<ul>
+			{first_page}
+				<li><a href="{pagination_url}" class="page-first">First Page</a></li>
+			{/first_page}
+
+			{previous_page}
+				<li><a href="{pagination_url}" class="page-previous">Previous Page</a></li>
+			{/previous_page}
+
+			{page}
+				<li><a href="{pagination_url}" class="page-{pagination_page_number} {if current_page}active{/if}">{pagination_page_number}</a></li>
+			{/page}
+
+			{next_page}
+				<li><a href="{pagination_url}" class="page-next">Next Page</a></li>
+			{/next_page}
+
+			{last_page}
+				<li><a href="{pagination_url}" class="page-last">Last Page</a></li>
+			{/last_page}
+		</ul>
+	{/pagination_links}
+
+
+There are two variables, five variable pairs, and one conditional variable
+available when using the {pagination_links} pair.
+
+Variables
+~~~~~~~~~
+
+::
+
+	{pagination_page_number}
+
+Outputs the page number associated with the current page in the {pagination_links} tag pair.
+
+::
+
+	{pagination_url}
+
+Outputs the URL associated with the current page in the {pagination_links} tag pair.
+
+
+Variable Pairs
+~~~~~~~~~~~~~~
+
+::
+
+	{first_page}
+		<li><a href="{pagination_url}" class="page-first">First Page</a></li>
+	{/first_page}
+	
+	{previous_page}
+		<li><a href="{pagination_url}" class="page-previous">Previous Page</a></li>
+	{/previous_page}
+	
+	{next_page}
+		<li><a href="{pagination_url}" class="page-next">Next Page</a></li>
+	{/next_page}
+	
+	{last_page}
+		<li><a href="{pagination_url}" class="page-last">Last Page</a></li>
+	{/last_page}
+
+These four variable pairs are used when displaying specific pages within
+the pagination: the first page link, the previous page link, the next page 
+link, and the last page link.
+
+::
+
+	{page}
+		<li><a href="{pagination_url}" class="page-{pagination_page_number}">{pagination_page_number}</a></li>
+	{/page}
+
+The last variable pair is used for the standard pagination links.
+
+
+Conditional Variables
+~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+	{if current_page}class="current"{/if}
+
+Check and see if the current {page} link is the current page.
+
 
 Variable Pairs
 --------------
@@ -104,6 +209,7 @@ conjunction with the `paginate= <#par_paginate>`_ parameter to determine
 where the contents of this tag will appear. See below for the available
 variables for use inside this tag. This tag is wrapped around either the
 single variables (see below) or the next/previous variable pairs.
+
 
 if next\_page
 ~~~~~~~~~~~~~
@@ -157,20 +263,6 @@ current\_page
 
 This variable is replaced by the page number of the current page you are
 viewing.
-
-pagination\_links
-~~~~~~~~~~~~~~~~~
-
-::
-
-	{pagination_links}
-
-The dynamically created pagination links. These show the current page
-you are on as well as "surrounding" pages in addition to links for
-nex/previous pages and first/last pages. The output of the variable
-looks similar to this::
-
-	« First  <  11 12 13 14 15 >  Last »
 
 total\_pages
 ~~~~~~~~~~~~

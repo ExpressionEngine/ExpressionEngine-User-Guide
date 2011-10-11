@@ -19,10 +19,12 @@ The "Forum Board Home" tab reveals a drop-down menu to access the forum
 boards you have setup, as well as a link to "Edit Forum Boards".
 
 |Forum Board Dropdown|
+
 Forum Board Management
 ~~~~~~~~~~~~~~~~~~~~~~
 
 |Forum Board Management|
+
 Board ID
 ^^^^^^^^
 
@@ -105,6 +107,7 @@ Forum Board Alias Details
 -------------------------
 
 |Forum Board Alias Details|
+
 Forum Board Alias Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -62,6 +62,7 @@ pagination <pagination_page.html>`_ feature are available here. The
 following links point to the entries for that feature.
 
 -  `{paginate} <pagination_page.html#var_paginate>`_
+-  `{pagination_links} <pagination_page.html#pagination-links>`_
 -  `{if next\_page} <pagination_page.html#var_if_next_page>`_
 -  `{if previous\_page} <pagination_page.html#var_if_previous_page>`_
 
@@ -111,20 +112,6 @@ works:
 #. When you click that link, you'll see your entry again, but instead of
    {page1} being displayed, in its place would be {page2}.
 #. This would continue with as many variables/pages as needed.
-
-pagination\_links
-~~~~~~~~~~~~~~~~~
-
-::
-
-	{pagination_links}
-
-The dynamically created pagination links. These show the current page
-you are on as well as "surrounding" pages in addition to links for
-next/previous pages and first/last pages. The output of the variable
-looks similar to this::
-
-	« First  <  11 12 13 14 15 >  Last »
 
 path
 ~~~~

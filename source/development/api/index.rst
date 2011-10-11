@@ -1,8 +1,9 @@
 ExpressionEngine API
 ====================
 
-
-   
+.. contents::
+	:local:
+	:depth: 1
 
 Overview
 --------
@@ -25,9 +26,9 @@ Calling the API
 	$this->EE->load->library('api');
 
 After loading the parent API library, the child classes are loaded with
-instantiate()
+instantiate()::
 
-``$this->EE->api->instantiate('channel_entries');``
+$this->EE->api->instantiate('channel_entries');
 
 At this point, methods within the api\_channel\_entries api are callable
 via $this->EE->api\_channel\_entries->method\_name();
@@ -49,7 +50,10 @@ Available APIs
 Function Reference
 ------------------
 
-The following public functions are accessible
+The following public functions are accessible:
+
+.. contents::
+	:local:
 
 Instantiate
 ~~~~~~~~~~~
@@ -58,9 +62,8 @@ Name of the API to instantiate. ::
 
 	$this->EE->api->instantiate((string) $which);
 
-*Return value*
-    Void on success, however an exception will be raised if the API can
-    not be found.
+:returns:
+	Void on success, however an exception will be raised if the API can not be found.
 
 Error Count
 ~~~~~~~~~~~
@@ -69,8 +72,8 @@ Number of errors generated in API functions. ::
 
 	$this->EE->api->error_count();
 
-*Return value*
-    Returns number of errors
+:returns:
+    Number of errors
 
 Make URL Safe
 ~~~~~~~~~~~~~
@@ -81,14 +84,14 @@ Valid Characters are: a-zA-Z0-9\_-. ::
 
 	$this->EE->api->make_url_safe((string) $str);
 
-Example Usage:
-^^^^^^^^^^^^^^
+Example Usage::
 
-::
+	$this->EE->load->library('api');
+	
+	$str = 'this is a string that\'s not URL safe.  (we will clean it for $5).';
+	$str = $this->EE->api->make_url_safe($str); // Result thisisastringthatsnotURLsafe.wewillcleanitfor5.
 
-	$this->EE->load->library('api');  $str = 'this is a string that\'s not URL safe.  (we will clean it for $5).'; $str = $this->EE->api->make_url_safe($str); // Result thisisastringthatsnotURLsafe.wewillcleanitfor5.
-
-*Return value*
+:returns:
     Cleansed string
 
 Is String URL Safe?
@@ -100,14 +103,18 @@ Checks if a string is safe for use in a URL segment
 
 	$this->EE->api->is_url_safe((string) $str);
 
-Example Usage
-^^^^^^^^^^^^^
+Example Usage::
 
-::
+	$this->EE->load->library('api');
+	
+	$str = 'this is a string that\'s not URL safe.  (we will clean it for $5).';
+	
+	if ( ! $this->EE->api->is_url_safe($str))
+	{
+		// Do additional Processing on the string to make it URL safe
+	}
 
-	$this->EE->load->library('api');  $str = 'this is a string that\'s not URL safe.  (we will clean it for $5).';  if ( ! $this->EE->api->is_url_safe($str)) {     // Do additional Processing on the string to make it URL safe }
-
-*Return value*
+:returns:
     Boolean - TRUE on success, FALSE on failure
 
 

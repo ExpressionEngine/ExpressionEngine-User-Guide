@@ -20,7 +20,20 @@ plugin, since the module's front-end file can handle any tasks that a
 plugin is needed for except field formatting, and we strongly encourage
 formatting plugins to be distributed as separate add-ons. ::
 
-	/system/expressionengine/third_party/foo_bar      acc.foo_bar.php config/ ext.foo_bar.php helpers/ javascript/ language/ libraries/ mcp.foo_bar.php mod.foo_bar.php models/ pi.foo_bar.php upd.foo_bar.php views/
+	/system/expressionengine/third_party/foo_bar
+		acc.foo_bar.php
+		config/
+		ext.foo_bar.php
+		helpers/
+		javascript/
+		language/
+		libraries/
+		mcp.foo_bar.php
+		mod.foo_bar.php
+		models/
+		pi.foo_bar.php
+		upd.foo_bar.php
+		views/
 
 Details of the "Foo Bar" Package Structure
 ------------------------------------------

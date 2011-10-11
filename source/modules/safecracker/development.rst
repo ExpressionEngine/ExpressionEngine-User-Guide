@@ -1,8 +1,9 @@
 SafeCracker Development
 =======================
 
--  `Getting your custom fieldtype to work with
-   SafeCracker <#section_getting_it_to_work>`_
+.. contents::
+   :local:
+   :depth: 1
 
 Getting your custom fieldtype to work with SafeCracker
 ------------------------------------------------------
@@ -29,10 +30,14 @@ If you need to use EE's built-in scripts, such as jQuery UI or some of
 the other included jQuery plugins, you should make your dependency known
 by::
 
-	$this->EE->cp->add_js_script(array('ui' => array('sortable', 'tabs'))); $this->EE->cp->add_js_script('plugin', 'tablesorter');
+	$this->EE->cp->add_js_script(array('ui' => array('sortable', 'tabs'))); 
+	$this->EE->cp->add_js_script('plugin', 'tablesorter');
 
 Extension Hooks
 ---------------
+
+.. contents::
+   :local:
 
 safecracker\_submit\_entry\_start
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,8 +46,7 @@ safecracker\_submit\_entry\_start
 
 	$this->EE->extensions->call('safecracker_submit_entry_start', $this);
 
-$this
-    The SafeCracker library object
+where **$this** is the SafeCracker library object.
 
 safecracker\_submit\_entry\_end
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,6 +55,5 @@ safecracker\_submit\_entry\_end
 
 	$this->EE->extensions->call('safecracker_submit_entry_end', $this);
 
-$this
-    The SafeCracker library object
+where **$this** is the SafeCracker library object.
 

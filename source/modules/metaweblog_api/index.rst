@@ -1,5 +1,11 @@
-Metaweblog API & Movable Type API Module
-========================================
+Metaweblog/Movable Type Module
+==============================
+
+.. contents::
+   :local:
+   
+Introduction
+------------
 
 The Metaweblog API (Application Programming Interface) is an interface
 or "protocol" that will allow other programs to interact with the
@@ -15,11 +21,11 @@ it can do. The Movable Type API is slightly more flexible in that it
 supports up to four entry fields.
 
 
-The Control Panel
------------------
+Configuration
+-------------
 
-The Metaweblog API Control Panel is accessed via Modules > Metaweblog
-API in your Control Panel. Here, you can set up configurations for use
+The Metaweblog API Control Panel is accessed via :menuselection:`Add-Ons --> Modules --> Metaweblog API`
+in your Control Panel. Here, you can set up configurations for use
 with the Metaweblog API.
 
 The main page will list all of your existing configurations (including
@@ -89,25 +95,23 @@ Here you determine which field from your Field Group corresponds to the
 "textarea" type fields are available for selection. This field is only
 available when using the Movable Type API.
 
-Upload Directory for File Uploading
+Upload Folder for File Uploading
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If your Metaweblog API-compatible program allows you to upload files,
-you may specify into which directory you want files uploaded. Your
-choices are determined by what you have set up under Admin > File Upload
-Preferences. If you do not wish to allow uploads via the Metaweblog API,
+you may specify into which folder you want files uploaded. Your
+choices are determined by what you have set up under :menuselection:`Content --> Files --> File Upload Preferences`.
+
+The user sending the files via the Metaweblog API must have permission to
+upload to that folder. If you do not wish to allow uploads via the Metaweblog API,
 select "None".
 
-When using an upload directory with the MetaWeblog API, make sure to use
-absolute paths.
+.. note:: When using an upload folder with the MetaWeblog API, make sure to use
+   absolute paths.
 
-In addition, in order to be able to upload files, the user sending the
-files via the Metaweblog API must have permission to upload to that
-directory. See Admin > File Upload Preferences.
-
-Many Metaweblog API-compatible programs do not support this file upload
-feature. Further, if you wish to upload large files (anything over about
-1MB) you would be better off using standard FTP to do so.
+.. note:: Many Metaweblog API-compatible programs do not support this file upload
+   feature. Further, if you wish to upload large files (anything over about
+   1MB) you would be better off using standard FTP to do so.
 
 Connecting with a Metaweblog API Compatible Program
 ---------------------------------------------------
@@ -124,26 +128,25 @@ To connect with Ecto, you will need the URL provided for your
 configuration as well as your member login information.
 
 Using this information, Ecto will contact the API server to determine if
-that user is valid and what channels they are permitted to access. It
+that user is valid and what Channels they are permitted to access. It
 then contacts the API Server and downloads recent entries for all of
-those channels. Ecto does not provide a method for specifying a
-particular channel, thus you will receive all channels for which your
+those Channels. Ecto does not provide a method for specifying a
+particular Channel, thus you will receive all Channels for which your
 user has access.
 
 MarsEdit
 ~~~~~~~~
 
 To connect with MarsEdit, you will need the URL provided for your
-configuration, your member login information, and a channel ID. MarsEdit
-does not automatically detect all of the channels you have access to
-like Ecto, so you will have to make sure to specify which channel you
+configuration, your member login information, and a Channel ID. MarsEdit
+does not automatically detect all of the Channels you have access to
+like Ecto, so you will have to make sure to specify which Channel you
 wish to use with the Channel ID.
 
-When setting up your channel/connection in MarsEdit:
+When setting up your Channel in MarsEdit:
 
--  Select "Movable Type" as the type of Software since ExpressionEngine
-   supports the Movable Type API.
+-  Select "ExpressionEngine" as the System Name.
 -  In the "RPC URL" setting, put in the URL for your Configuration found
    in the Metaweblog API Module Control Panel.
--  Fill in your channel's ID number.
+-  Fill in your Channel's ID number.
 

@@ -1,9 +1,14 @@
+##################
 Email Contact Form
-==================
+##################
 
-**Note:** The Email Module is not installed by default, so before using
-these tags make sure it is installed via the `Modules
-Page <../../cp/add-ons/module_manager.html>`_.
+.. contents::
+   :local:
+   :depth: 1
+
+************
+Introduction
+************
 
 The purpose of this tag is to create a contact form on one of your pages
 that your users can use to send you email. To show your contact form use
@@ -18,14 +23,38 @@ available in order to auto-fill fields in the form, and also a few tag
 parameters to specify form handling and hidden recipients. Here's an
 example showing how you might typically create a contact form::
 
-	{exp:email:contact_form user_recipients="false" recipients="admin@example.com" charset="utf-8"}      <h2>Support Form</h2>      <p><label for="from">Your Email:</label><br />     <input type="text" id="from" name="from" size="40" maxlength="35" value="{member_email}" /></p>      <p><label for="subject">Subject:</label><br />     <input type="text" id="subject" name="subject" size="40" value="Contact Form" /></p>      <p><label for="message">Message:</label><br />     <textarea id="message" name="message" rows="18" cols="40">Support Email from: {member_name}         Sent at:  {current_time format="%Y %m %d"}</textarea></p>          <p><input name="submit" type='submit' value='Submit Form' /></p>  {/exp:email:contact_form}
+	{exp:email:contact_form user_recipients="no" recipients="admin@example.com" charset="utf-8"}
+		<h2>Support Form</h2>
+		<p>
+			<label for="from">Your Email:</label><br />
+			<input type="text" id="from" name="from" size="40" maxlength="35" value="{member_email}" />
+		</p>
+		<p>
+			<label for="subject">Subject:</label><br />
+			<input type="text" id="subject" name="subject" size="40" value="Contact Form" />
+		</p>
+		<p>
+			<label for="message">Message:</label><br />
+			<textarea id="message" name="message" rows="18" cols="40">
+				Support Email from: {member_name}
+				Sent at:  {current_time format="%Y %m %d"}
+			</textarea>
+		</p>
+		<p>
+			<input name="submit" type='submit' value='Submit Form' />
+		</p>
+	{/exp:email:contact_form}
 
+
+**********
 Parameters
-----------
+**********
 
+.. contents::
+   :local:
 
 charset=
-~~~~~~~~
+--------
 
 ::
 
@@ -36,7 +65,7 @@ this if your form's template is using a character set other than
 iso-8859-1.
 
 name=
-~~~~~
+-----
 
 ::
 
@@ -46,7 +75,7 @@ This allows you to set a name= attribute for the form. Keep in mind that
 name= is deprecated in XHTML.
 
 recipients=
-~~~~~~~~~~~
+-----------
 
 ::
 
@@ -58,14 +87,14 @@ one recipient, please separate each email address with a commas::
 
 	recipients="admin@example.com,ceo@example.com,president@example.com"
 
-**Note**: In the event that recipients are specified with this parameter
-and the regular "To:" field is *also* filled out, the recipients
-specified with this parameter will be mailed using BCC (Blind Carbon
-Copy) so that the "To:" recipient does not see those "hidden" email
-recipients.
+.. note:: In the event that recipients are specified with this parameter
+   and the regular "To:" field is *also* filled out, the recipients
+   specified with this parameter will be mailed using BCC (Blind Carbon
+   Copy) so that the "To:" recipient does not see those "hidden" email
+   recipients.
 
 redirect=
-~~~~~~~~~
+---------
 
 ::
 
@@ -88,7 +117,7 @@ the message page. To do this, set the value to none::
 	redirect="none"
 
 replyto=
-~~~~~~~~
+--------
 
 ::
 
@@ -104,7 +133,7 @@ address to get past this restriction while still allowing any replies to
 go to the sender of the email.
 
 return=
-~~~~~~~
+-------
 
 ::
 
@@ -130,19 +159,20 @@ character::
 	return="|Return to the Site"
 
 user\_recipients=
-~~~~~~~~~~~~~~~~~
+-----------------
 
 ::
 
-	user_recipients="true" ``user_recipients="false"``
+	user_recipients="yes" ``user_recipients="no"``
 
 The user\_recipients parameter specifies whether or not the form will
-accept having the user input the recipients via the 'to' field in the
-form. If set to true, then you can create a 'to' form field where the
-user can input the addresses where the email should be sent.
+accept having the user input recipients via a 'to' field in the
+form. If set to true, then you can create a form field with the name
+"to" in which a user can input addresses where the email should be sent.
+The default value is "no".
 
 form\_class=
-~~~~~~~~~~~~
+------------
 
 ::
 
@@ -152,7 +182,7 @@ With this parameter, you can specify the css class you want the form to
 have, enabling fine-grained styling of the form.
 
 form\_id=
-~~~~~~~~~
+---------
 
 ::
 
@@ -161,12 +191,15 @@ form\_id=
 With this parameter, you can specify the css id you want the form to
 have. The default value is 'contact\_form'.
 
+*********
 Variables
----------
+*********
 
+.. contents::
+   :local:
 
 author\_email
-~~~~~~~~~~~~~
+-------------
 
 ::
 
@@ -178,7 +211,7 @@ variable to put in the email address of the author who wrote the linked
 entry. This feature allows the creation of a "contact author" page.
 
 author\_name
-~~~~~~~~~~~~
+------------
 
 ::
 
@@ -190,7 +223,7 @@ variable to put in the screen name of the author who wrote the linked
 entry. This feature allows the creation of a "contact author" page.
 
 member\_email
-~~~~~~~~~~~~~
+-------------
 
 ::
 
@@ -200,7 +233,7 @@ If a user is logged in, then it will display their email address as
 recorded in their member profile.
 
 member\_name
-~~~~~~~~~~~~
+------------
 
 ::
 
@@ -209,12 +242,15 @@ member\_name
 If a user is logged in, then it will display their screen name as
 recorded in their member profile.
 
+***********
 Form Fields
------------
+***********
 
+.. contents::
+   :local:
 
 captcha
-~~~~~~~
+-------
 
 ::
 
@@ -223,15 +259,18 @@ captcha
 The CAPTCHA input for the form. It is usually used with a conditional so
 that it is only displayed if necessary::
 
-	{if captcha}  <p>Please enter the word you see in the image below:</p>  <p>{captcha}<br /> <input type="text" name="captcha" value="" maxlength="20" /></p>  {/if}
+	{if captcha}
+		<p>Please enter the word you see in the image below:</p>
+		<p>{captcha}<br /> <input type="text" name="captcha" value="" maxlength="20" /></p>
+	{/if}
 
 The setting to disable or enable CAPTCHA for the contact form can be
 found in the `Email
-Configuration <../../cp/admin/system_admin/email_configuration.html>`_
+Configuration <../../cp/admin/email_configuration.html>`_
 preferences.
 
 from
-~~~~
+----
 
 ::
 
@@ -241,7 +280,7 @@ Email address of person who is sending the email. You must include this
 form field, even if it is just a hidden field.
 
 message
-~~~~~~~
+-------
 
 ::
 
@@ -253,10 +292,11 @@ is just a hidden field.
 You may specify multiple fields by making the name= attribute an array
 by using "message[]". For example::
 
-	Home Phone: <input type="text" name="message[]" size="12" maxlength="15" /><br /> <br /> Cell Phone: <input type="text" name="message[]" size="12" maxlength="15" />
+	Home Phone: <input type="text" name="message[]" size="12" maxlength="15" /><br /> <br />
+	Cell Phone: <input type="text" name="message[]" size="12" maxlength="15" />
 
 name
-~~~~
+----
 
 ::
 
@@ -265,7 +305,7 @@ name
 Name of person who is sending the email.
 
 required
-~~~~~~~~
+--------
 
 ::
 
@@ -278,10 +318,11 @@ be readonly or hidden.
 You may specify multiple fields by making the name= attribute an array
 by using "required[]". For example::
 
-	Age: <input type="text" name="required[]" size="3" maxlength="3" /><br /> <br /> Bio: <textarea name="required[]" rows="5" cols="40"></textarea>
+	Age: <input type="text" name="required[]" size="3" maxlength="3" /><br /> <br />
+	Bio: <textarea name="required[]" rows="5" cols="40"></textarea>
 
 subject
-~~~~~~~
+-------
 
 ::
 
@@ -291,7 +332,7 @@ Subject of the email that is being sent. You must include this form
 field, even if it is just a hidden field.
 
 to
-~~
+--
 
 ::
 
@@ -300,11 +341,11 @@ to
 Email address to which the email is being sent. Multiple email addresses
 may be specified by separating them with a comma. You must include this
 form field, even if it is just a hidden field. This data may also be
-specified with the `recipients= <#par_recipients>`_ parameter of the
+specified with the `recipients= <#recipients>`_ parameter of the
 tag.
 
-**WARNING**: If you leave this field open to user input, you are
-potentially giving spammers an easy way to send anonymous emails. If you
-allow users to access this field, consider using a <select> field to
-limit the email address to specific choices. Further, you should enable
-CAPTCHAs to help prevent automated abuse.
+.. warning:: If you leave this field open to user input, you are
+   potentially giving spammers an easy way to send anonymous emails. If you
+   allow users to access this field, consider using a <select> field to
+   limit the email address to specific choices. Further, you should enable
+   CAPTCHAs to help prevent automated abuse.

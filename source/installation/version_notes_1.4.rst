@@ -70,7 +70,7 @@ name is "The Republic" you would write the conditional like so::
 
 	{if screen_name == '&#34;The Republic&#34;'}
 
-`Return to Update Page <update.html>`_
+:ref:`Return to Update Page <update-additional-steps>`
 
 `ExpressionEngine <http://expressionengine.com/>`_ – Copyright ©
 2002-2011 – `EllisLab, Inc. <http://ellislab.com/>`_

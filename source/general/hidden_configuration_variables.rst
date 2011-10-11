@@ -6,40 +6,48 @@ system/expressionengine/config/config.php and are used to over-ride
 default behavior. These are advanced configuration options that should
 only be used by experienced ExpressionEngine users.
 
-
-allow\_textarea\_tabs
-~~~~~~~~~~~~~~~~~~~~~
+.. contents::
+	:local:
+	
+allow_textarea_tabs
+~~~~~~~~~~~~~~~~~~~
 
 **Value:** y/n
 
 If not set the template editor and publish write mode allow for tabular
 input. Set to n to disable all tab input, set to y to force tab
-preservation in all publish textareas. ::
+preservation in all publish textareas.
+
+::
 
 	$config['allow_textarea_tabs'] = 'y';
 
-autosave\_interval\_seconds
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+autosave_interval_seconds
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Value:** number, in seconds
 
 This variable controls the number of seconds between each attempted
-"autosave" when editing an entry. ::
+"autosave" when editing an entry
+
+::
 
 	$config['autosave_interval_seconds'] = '300';
 
-autosave\_prune\_hours
-~~~~~~~~~~~~~~~~~~~~~~
+autosave_prune_hours
+~~~~~~~~~~~~~~~~~~~~
 
 **Value:** number, in hours
 
 This variable controls the number of hours that ExpressionEngine will
-keep autosave data. ::
+keep autosave data.
+
+::
 
 	$config['autosave_prune_hours'] = '6';
 
-cp\_session\_ttl
-~~~~~~~~~~~~~~~~
+cp_session_ttl
+~~~~~~~~~~~~~~
 
 **Value:** time in seconds
 
@@ -51,8 +59,8 @@ inactivity, the value would be: 600
 
 	$config['cp_session_ttl'] = 600;
 
-disable\_tag\_caching
-~~~~~~~~~~~~~~~~~~~~~
+disable_tag_caching
+~~~~~~~~~~~~~~~~~~~
 
 **Value:** y/n
 
@@ -65,49 +73,57 @@ permissions
 
 	$config['disable_tag_caching'] = 'y';
 
-encode\_removed\_text
-~~~~~~~~~~~~~~~~~~~~~
+encode_removed_text
+~~~~~~~~~~~~~~~~~~~
 
 **Value:** text string
 
 If set, when an {encode=""} tag is encountered, but emails are not to be
-encoded, this text will be displayed in place of the tag. ::
+encoded, this text will be displayed in place of the tag.
+
+::
 
 	$config['encode_removed_text'] = 'Encoded emails not allowed';
 
-email\_crlf
-~~~~~~~~~~~
+email_crlf
+~~~~~~~~~~
 
 **Value:** text string
 
 If set, overrides the core Email class setting for crlf characters in
-quoted-printable encoded emails (Email class $crlf property). ::
+quoted-printable encoded emails (Email class $crlf property).
+
+::
 
 	$config['email_crlf'] = "\r\n";
 
-email\_newline
-~~~~~~~~~~~~~~
+email_newline
+~~~~~~~~~~~~~
 
 **Value:** text string
 
 If set, overrides the core Email class setting for newline characters
-(Email class $newline property). ::
+(Email class $newline property).
+
+::
 
 	$config['email_newline'] = "\r\n";
 
-hidden\_template\_404
-~~~~~~~~~~~~~~~~~~~~~
+hidden_template_404
+~~~~~~~~~~~~~~~~~~~
 
 **Value:** y/n
 
 If a hidden template is encountered, the default behavior is to throw a
 404. With this set to 'n', the template group's index page will be shown
-instead. ::
+instead.
+
+::
 
 	$config['hidden_template_404'] = 'n';
 
-hidden\_template\_indicator
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+hidden_template_indicator
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Value:** text string
 
@@ -118,67 +134,79 @@ consider it a "hidden" template. Default is a period'.'
 
 	$config['hidden_template_indicator'] = '_';
 
-include\_seconds
-~~~~~~~~~~~~~~~~
-
-**Value:** y/n
-
-When set to "y" seconds are included on human-readable dates in the
-Control Panel forms. ::
-
-	$config['include_seconds'] = 'y';
-
-login\_reminder
+include_seconds
 ~~~~~~~~~~~~~~~
 
 **Value:** y/n
 
-Whether or not to display a notice when the CP Session is about to
-expire, allowing the user to log back in. Default is 'y'. ::
+When set to "y" seconds are included on human-readable dates in the
+Control Panel forms.
 
-	$config['login_reminder'] = 'n';
+::
 
-moblog\_allow\_nontextareas
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	$config['include_seconds'] = 'y';
+
+login_reminder
+~~~~~~~~~~~~~~
 
 **Value:** y/n
 
-Removes the textarea only restriction for fields in the moblog module. ::
+Whether or not to display a notice when the CP Session is about to
+expire, allowing the user to log back in. Default is 'y'.
+
+::
+
+	$config['login_reminder'] = 'n';
+
+moblog_allow_nontextareas
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Value:** y/n
+
+Removes the textarea only restriction for fields in the moblog module.
+
+::
 
 	$config['moblog_allow_nontextareas'] = 'y';
 
-popup\_link
-~~~~~~~~~~~
+popup_link
+~~~~~~~~~~
 
 **Value:** y/n
 
 Determines whether or not links created by Typography class open in a
-new window. ::
+new window.
+
+::
 
 	$config['popup_link'] = 'y';
 
-protect\_javascript
-~~~~~~~~~~~~~~~~~~~
+protect_javascript
+~~~~~~~~~~~~~~~~~~
 
 **Value:** y/n
 
 Prevents the advanced conditionals parser from processing anything in
-tags. By default, it's set to 'y'. ::
+tags. By default, it's set to 'y'.
+
+::
 
 	$config['protect_javascript'] = 'y';
 
-proxy\_ips
-~~~~~~~~~~
+proxy_ips
+~~~~~~~~~
 
 **Value:** comma delimited list of IP addresses
 
 Whitelist of reverse proxy servers that may forward the visitor's IP
-address. ::
+address.
+
+::
 
 	$config['proxy_ips'] = '10.0.1.25,10.0.1.26';
 
-prv\_msg\_throttling\_period
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+prv_msg_throttling_period
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Value:** number, in seconds
 
@@ -188,8 +216,8 @@ How many seconds between PMs?
 
 	$config['prv_msg_throttling_period'] = '60';
 
-prv\_msg\_waiting\_period
-~~~~~~~~~~~~~~~~~~~~~~~~~
+prv_msg_waiting_period
+~~~~~~~~~~~~~~~~~~~~~~
 
 **Value:** number, in hours
 
@@ -199,8 +227,8 @@ How many hours after becoming a member until they can PM?
 
 	$config['prv_msg_waiting_period'] = '48';
 
-publish\_page\_title\_focus
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+publish_page_title_focus
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Value:** y/n
 
@@ -210,19 +238,21 @@ Makes the title field gain focus when the page is loaded
 
 	$config['publish_page_title_focus'] = 'n';
 
-relaxed\_track\_views
-~~~~~~~~~~~~~~~~~~~~~
+relaxed_track_views
+~~~~~~~~~~~~~~~~~~~
 
 **Value:** y/n
 
 Allows Entry View Tracking to work for ANY combination that results in
 only one entry being returned by the tag, including channel query
-caching. ::
+caching.
+
+::
 
 	$config['relaxed_track_views'] = 'y';
 
-remove\_close\_all\_button
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+remove_close_all_button
+~~~~~~~~~~~~~~~~~~~~~~~
 
 **Value:** y/n
 
@@ -234,32 +264,33 @@ and Admins might want it gone
 
 	$config['remove_close_all_button'] = 'y';
 
-remove\_unparsed\_vars
-~~~~~~~~~~~~~~~~~~~~~~
+remove_unparsed_vars
+~~~~~~~~~~~~~~~~~~~~
 
 **Value:** y/n
 
-Prevents the stripping of unparsed ExpressionEngine variables in
-templates when Debug is set to 0. This can be useful to ensure that the
-Template Parser does not accidentally remove Javascript.
+Enables the stripping of unparsed ExpressionEngine variables in
+templates when Debug has been forcibly set to 0 in your config file.
 
 ::
-	$config['remove_unparsed_vars'] = 'n';
+	$config['remove_unparsed_vars'] = 'y';
 
-smart\_static\_parsing
-~~~~~~~~~~~~~~~~~~~~~~
+smart_static_parsing
+~~~~~~~~~~~~~~~~~~~~
 
 **Value:** y/n
 
 When enabled, parsing of embedded templates that are not set to the
 template type "Static" will still be parsed as static if they can be
 (i.e. if they have no PHP or ExpressionEngine tags in them). This
-setting is enabled by default. ::
+setting is enabled by default.
+
+::
 
 	$config['smart_static_parsing'] = 'n';
 
-spellcheck\_language\_code
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+spellcheck_language_code
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Value:** two letter language code
 
@@ -267,41 +298,49 @@ Allows you to specify the language used in the spellchecking functions.
 Set the value to the two letter ISO 639 language code for the spellcheck
 (ex: en, es, de)
 
-``$config['spellcheck_language_code'] = 'de';``
+::
 
-use\_compressed\_js
-~~~~~~~~~~~~~~~~~~~
+	$config['spellcheck_language_code'] = 'de';
+
+use_compressed_js
+~~~~~~~~~~~~~~~~~
 
 **Value:** y/n
 
 If set to no, forces the control panel to serve javascript from the src
-directory. Useful for debugging. ::
+directory. Useful for debugging.
+
+::
 
 	$config['use_compressed_js'] = 'n';
 
-use\_forum\_url
-~~~~~~~~~~~~~~~
+use_forum_url
+~~~~~~~~~~~~~
 
 **Value:** y/n
 
 Determines whether the forums run at a different base URL than the main
-site. Useful for running forums as a subdomain. ::
+site. Useful for running forums as a subdomain.
+
+::
 
 	$config['use_forum_url'] = 'y';
 
-use\_mobile\_control\_panel
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+use_mobile_control_panel
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Value:** y/n
 
 Disables checks within the control panel to look for the existence of
 the themes/cp\_themes/mobile directory, allowing for any theme to be
-used when viewing on a mobile device. ::
+used when viewing on a mobile device.
+
+::
 
 	$config['use_mobile_control_panel'] = 'n';
 
-user\_session\_ttl
-~~~~~~~~~~~~~~~~~~
+user_session_ttl
+~~~~~~~~~~~~~~~~
 
 **Value:** time in seconds
 
@@ -313,40 +352,48 @@ inactivity, the value would be: 600
 
 	$config['user_session_ttl'] = 600;
 
-view\_comment\_chars
-~~~~~~~~~~~~~~~~~~~~
+view_comment_chars
+~~~~~~~~~~~~~~~~~~
 
 **Value:** Number of characters to display
 
 Sets how many characters to display when viewing comments in the control
-panel. ::
+panel.
+
+::
 
 	$config['view_comment_chars'] = '50';
 
-view\_comment\_leave\_breaks
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+view_comment_leave_breaks
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Value:** y/n
 
 When set to 'y', creates <br />'s based on line breaks when viewing
-comments in the control panel. ::
+comments in the control panel.
+
+::
 
 	$config['view_comment_leave_breaks'] = 'y';
 
-xss\_clean\_member\_exception
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+xss_clean_member_exception
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Value:** Pipe delimeted list of member IDs
 
-Sets the member IDs to exclude XSS cleaning on. ::
+Sets the member IDs to exclude XSS cleaning on.
+
+::
 
 	$config['xss_clean_member_exception'] = '3|14|83';
 
-xss\_clean\_member\_group\_exception
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+xss_clean_member_group_exception
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Value:** Pipe delimited list of member group IDs
 
-Sets the member group IDs to exclude XSS cleaning on. ::
+Sets the member group IDs to exclude XSS cleaning on.
+
+::
 
 	$config['xss_clean_member_group_exception'] = '2|5';

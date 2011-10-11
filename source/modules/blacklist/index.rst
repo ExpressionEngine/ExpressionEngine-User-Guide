@@ -1,13 +1,19 @@
 Blacklist/Whitelist Module
 ==========================
 
+.. contents::
+   :local:
+
+Introduction
+------------
+
 The Blacklist/Whitelist Module is one of ExpressionEngine's native spam
 prevention systems. It helps prevent spam from occuring in comments,
 referrers, and other posted information. Used in combination with other
 `Spam Prevention Features <../../general/spam_protection.html>`_, the
 occurrence of spam on your site should be rare.
 
-This Module is accessed via Modules > Blacklist/Whitelist in your
+This Module is accessed via :menuselection:`Admin --> Modules --> Blacklist/Whitelist` in your
 Control Panel. This will bring up a screen where you can access either
 the Blacklist or the Whitelist, which are explained below.
 
@@ -113,7 +119,7 @@ believe should be added to the Blacklist or Whitelist, please email
 `blacklist@expressionengine.com <mailto:blacklist@expressionengine.com>`_.
 
 To download the ExpressionEngine Lists, you must have your License
-Number entered into the Admin > General Configuration area of the
+Number entered into the :menuselection:`Admin --> General Configuration` area of the
 Control Panel. To download the Lists, go into the Modules > Blacklist.
 In the main menu for the module are links that you can click to
 automatically download and add the ExpressionEngine.com Lists to your
@@ -149,16 +155,17 @@ done.
 #. Once you have a .htaccess file at the site root on your server, you
    will need to **change its permissions to 666** so that it is
    "writable" and ExpressionEngine can add content to it.
-#. In your ExpressionEngine Control Panel, go to Modules >
-   Blacklist/Whitelist. At the bottom of the table you'll see a "Write
+#. In your ExpressionEngine Control Panel, go to :menuselection:`Admin --> Modules --> Blacklist/Whitelist`.
+   At the bottom of the table you'll see a "Write
    Blacklist to .htaccess file?" setting. In this setting, you will need
-   to place the *full server path* to the .htaccess file. This is
-   **not** the URL to the file.
+   to place the *full server path* to the .htaccess file. The full server
+   path might look something like
 
-   The full server path might look something like
-   /home/example.com/public\_html/.htaccess. You **must** include the
-   .htaccess filename, so be sure to include it. If you do not know what
-   to use for your full server path, contact your Host or server admin.
+   :dfn:`/home/example.com/public\_html/.htaccess`
+
+   You **must** include the .htaccess filename, so be sure to include it.
+   If you do not know what to use for your full server path, contact your
+   Host or server admin.
 
 #. Press the Submit button on the form and ExpressionEngine will add the
    contents of your Blacklist to the .htaccess file, blocking them from
@@ -168,4 +175,4 @@ Also note that an "override" is included for any referrers that include
 your own server name (i.e. example.com) to make sure that there is no
 chance that you block your own site by accident. In order to include
 this "override" you need to ensure that your "Cookie Domain" preference
-is set under Admin > Cookie Settings.
+is set under :menuselection:`Admin --> Security and Privacy --> Cookie Settings`.

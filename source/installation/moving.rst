@@ -9,7 +9,7 @@ store their own path configurations.
 1. Verify Server Compatibility
 ------------------------------
 
-Upload the `ExpressionEngine Server Wizard <../requirements.html>`_ to
+Upload the :doc:`ExpressionEngine Server Wizard </installation/requirements>` to
 the new server and run it to verify basic compatibility with
 ExpressionEngine.
 
@@ -114,6 +114,5 @@ You're Done!
 At this point, your site should be fully functional. Check to make sure
 that there are no links still pointing to the previous server. It is
 recommended that links be generated using the
-`{path} <../templates/globals/path.html>`_ or
-`{site\_url} <../templates/globals/single_variables.html#var_site_url>`_
+:doc:`{path} </templates/globals/path>` or :ref:`{site\_url} <global-site_url>`
 variables for maximum portability.

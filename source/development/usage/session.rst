@@ -1,11 +1,8 @@
 Session Class
 =============
 
--  `Calling the Session Class <session.html#calling>`_
--  `User Data Information <session.html#user_data>`_
--  `Flash Data for Redirects <session.html#flash_data>`_
--  `Cache Array <session.html#cache>`_
--  `Tracker Array <session.html#tracker>`_
+.. contents::
+	:local:
 
 Calling the Session Class
 -------------------------
@@ -42,8 +39,8 @@ User Data Information
 The **$this->EE->session->userdata** variable is an array that contains
 information about that specific user, and it will likely be the most
 used part of this class for any module. Below is a list of the variables
-that it contains. ***Note:** If a user has a group\_id of 1, then they
-can access anything, no matter the other settings.*
+that it contains. **Note:** If a user has a group\_id of 1, then they
+can access anything, no matter the other settings.
 
 -  **username** - Username of user
 -  **screen\_name** - Screename of user, if any

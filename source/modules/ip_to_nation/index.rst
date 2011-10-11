@@ -1,5 +1,14 @@
+###################
 IP to Nation Module
-===================
+###################
+
+.. contents::
+   :local:
+   :depth: 2
+
+************
+Introduction
+************
 
 The IP to Nation module enables you to determine which country an IP
 address is associated with. You can do two things with this information:
@@ -10,12 +19,13 @@ address is associated with. You can do two things with this information:
 #. **Show a flag icon** |image0| within your comments or entries to
    indicate the country of the person who submitted the entry.
 
-**Note:** When updating your IP to Nation module, make sure that you
-also update your /system/expressionengine/config/countries.php file so
-that newly added or changed nations display properly.
+.. note:: When updating your IP to Nation module, make sure that you
+   also update your /system/expressionengine/config/countries.php file so
+   that newly added or changed nations display properly.
 
+****************
 Database Updates
-----------------
+****************
 
 Periodically, the IP address database for the IP to Nation module is
 updated from `ip2nation.com <http://www.ip2nation.com/>`_'s database.
@@ -32,38 +42,43 @@ Database page. To use the importer, download the SQL file from
 file to your server. Enter the path to the file in the import form, and
 new IP tables will be created using that file.
 
+****************
 Banning Counties
-----------------
+****************
 
 To look up the country associated with an IP address, or to ban a
-country you'll to to the Modules > IP to Nation page in your Control
+country, go to :menuselection:`Add-Ons --> Modules --> IP to Nation` in your Control
 Panel.
 
+***************
 World Flags Tag
----------------
+***************
 
 In order to use the world flag feature, please first visit the Modules
 page of the control panel and make sure your IP to Nation module is
 installed.
 
-**Note:** Please `download the flag
-icons <http://expressionengine.com/files/world_flags.zip>`_ from
-ExpressionEngine.com. Once downloaded, unzip the archive, then upload
-the "world\_flags" folder to your server. The folder can go anywhere
-since you'll set the URL in the tag as described below.
+.. note:: Please `download the flag
+   icons <http://expressionengine.com/files/world_flags.zip>`_ from
+   ExpressionEngine.com. Once downloaded, unzip the archive, then upload
+   the "world\_flags" folder to your server. The folder can go anywhere
+   since you'll set the URL in the tag as described below.
 
 The "world flags" tag can be used within your {exp:comment:entries} or
 {exp:channel:entries} like this::
 
-	{exp:ip_to_nation:world_flags   image_url="http://example.com/images/world_flags/"}     {ip_address}     {/exp:ip_to_nation:world_flags}
+	{exp:ip_to_nation:world_flags image_url="http://example.com/images/world_flags/"}
+		{ip_address}
+	{/exp:ip_to_nation:world_flags}
 
 Parameters
-----------
+==========
 
-The world flags tag has two parameters:
+.. contents::
+   :local:
 
 image\_url=
-~~~~~~~~~~~
+-----------
 
 This URL to your "world\_flags" folder.
 
@@ -73,7 +88,7 @@ slash::
 	http://example.com/images/world_flags/
 
 type="text"
-~~~~~~~~~~~
+-----------
 
 You can optional set the tag to output the name of the country as text
 by using the type="text" parameter.

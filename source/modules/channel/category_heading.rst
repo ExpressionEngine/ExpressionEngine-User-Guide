@@ -1,7 +1,16 @@
+############################
 Channel Category Heading Tag
-============================
+############################
 
-The purpose of this tag is to show the currently viewed category as a
+.. contents::
+   :local:
+   :depth: 1
+
+************
+Introduction
+************
+
+The purpose of this tag is to show the currently viewed Category as a
 heading. 
 
 ::
@@ -14,19 +23,22 @@ heading.
 	{/exp:channel:category_heading}
 
 
-When you visit one of your category links your channel entries are shown
-sorted by the chosen category. This tag lets you dynamically show the
-name of the category being viewed.
+When you visit one of your Category links your Channel Entries are shown
+sorted by the chosen Category. This tag lets you dynamically show the
+name of the cCtegory being viewed.
 
-If no categories are being shown, the tag will not show anything
+If no Categories are being shown, the tag will not show anything
 contained within the opening and closing pair.
 
+**********
 Parameters
-----------
+**********
 
+.. contents::
+   :local:
 
 disable=
-~~~~~~~~
+--------
 
 ::
 
@@ -39,7 +51,7 @@ are:
 -  category\_fields
 
 relaxed\_categories=
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 ::
 
@@ -50,7 +62,7 @@ an entries tag specifying multiple channels that do **not** share
 category groups.
 
 channel=
-~~~~~~~~
+--------
 
 ::
 
@@ -61,16 +73,19 @@ to. **Note:** Unless you are using the relaxed\_categories parameter,
 you can only list one channel name, since each channel can have separate
 category groups.
 
-You must specify this parameter if you use the `category name in
-URL <../../cp/admin/content_admin/global_channel_preferences.html>`_
+You must specify this parameter if you use the `Category URL Titles In Links
+<../../cp/admin/channels/global_channel_preferences.html#use-category-url-titles-in-links>`_
 feature.
 
+*********
 Variables
----------
+*********
 
+.. contents::
+   :local:
 
 category\_description
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 ::
 
@@ -78,14 +93,14 @@ category\_description
 
 This variable simply displays the content from the "category
 description" field. The variable may also be wrapped in a conditional
-statement so that it only displays if there is content in the field
+statement so that it only displays if there is content in the field:
 
 ::
 
 	{if category_description}{category_description}{/if}
 
 category\_id
-~~~~~~~~~~~~
+------------
 
 ::
 
@@ -94,7 +109,7 @@ category\_id
 The category ID associated with the category.
 
 parent\_id
-~~~~~~~~~~
+----------
 
 ::
 
@@ -104,7 +119,7 @@ The category ID associated with the category's parent (or 0 in the case
 of a top level category).
 
 category\_image
-~~~~~~~~~~~~~~~
+---------------
 
 ::
 
@@ -114,28 +129,28 @@ The image link (or other information) you can optionally store with each
 category within the Control Panel.
 
 category\_name
-~~~~~~~~~~~~~~
+--------------
 
 ::
 
 	{category_name}
 
-The name of the category being viewed
+The name of the category being viewed.
 
 category\_url\_title
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 ::
 
 	{category_url_title}
 
-This variable displays the URL title of the category
+The URL title of the category.
 
 Custom Category Fields
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 All custom fields assigned to a category can be accessed using the
-"short name" of the field
+"short name" of the field:
 
 ::
 

@@ -126,3 +126,5 @@ Updated the following language keys in members_lang.php
 	"can_view_offline_system" => "Can view system when it is offline",
 
 Update system/expressionengine/config/mimes.php
+
+:ref:`Return to Update Page <update-additional-steps>`

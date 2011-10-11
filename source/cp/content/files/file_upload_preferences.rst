@@ -1,7 +1,10 @@
 File Upload Preferences
 =======================
 
-Control Panel Location: Content > Files > File Upload Preferences
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Content --> Files --> File Upload Preferences`
+
 This section of the Control Panel allows you to manage file upload
 destinations. These destinations determine where you can upload files
 when using the upload utility on the Publish page. You can create as
@@ -20,6 +23,7 @@ The main File Upload Preferences page shows a list of all the existing
 upload destinations.
 
 |File Upload Prefs|
+
 The Synchronize icon allows you to synchronize the file records in the
 database with the files stored in a given upload directory. See
 `Synchronize Files <sync_files.html>`_ for details on how this works.
@@ -33,6 +37,7 @@ Create/Edit Upload Destination
 ------------------------------
 
 |File Upload Directory Prefs|
+
 Descriptive name of upload directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -184,14 +189,16 @@ all of those files to the File Manager.
 File Category Groups
 ~~~~~~~~~~~~~~~~~~~~
 
-|Image Manipulations|
+|File Categories|
+
 You may assign multiple category groups to a file upload directory,
 which will allow you to assign categories to any uploaded files.
 
 Image Manipulations
 ~~~~~~~~~~~~~~~~~~~
 
-|image4|
+|Image Manipulations|
+
 This setting allows you to specify multiple thumbnail images that will
 be automatically created when a file is uploaded.
 
@@ -213,6 +220,7 @@ Restrict file uploading to select member groups
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |Restrict to select member groups|
+
 This setting allows you to specify which member groups have permission
 to upload files to this file upload destination. By default, only the
 "Members" group and any user-created member groups are listed. Super
@@ -220,6 +228,6 @@ Admins can always upload files.
 
 .. |File Upload Prefs| image:: ../../../images/files/upload_listing.png
 .. |File Upload Directory Prefs| image:: ../../../images/files/upload_preferences.png
-.. |Image Manipulations| image:: ../../../images/files/upload_categories.png
-.. |image4| image:: ../../../images/files/upload_manipulations.png
+.. |File Categories| image:: ../../../images/files/upload_categories.png
+.. |Image Manipulations| image:: ../../../images/files/upload_manipulations.png
 .. |Restrict to select member groups| image:: ../../../images/files/upload_permissions.png

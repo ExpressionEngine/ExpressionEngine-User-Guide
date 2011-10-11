@@ -1,5 +1,5 @@
-ExpressionEngine Add-On Development Guidelines
-==============================================
+Guidelines
+==========
 
 Overview
 --------

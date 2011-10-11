@@ -1,9 +1,9 @@
 Mailing List Module Control Panel
 =================================
 
-Control Panel Location: Modules > Mailing List
-The Mailing List Control Panel is accessed via Modules > Mailing List in
-your Control Panel. It allows you to manage your mailing lists.
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Add-Ons --> Modules --> Mailing List`
 
 Mailing List Overview
 ---------------------
@@ -12,6 +12,7 @@ The overview shows a list of all your mailing lists, along with links to
 view and manage the emails within each list.
 
 |Mailing List Overview|
+
 View List
 ~~~~~~~~~
 
@@ -37,12 +38,16 @@ There are three variables that can be used in the template::
 
 In addition, there are two conditional variables::
 
-	{if html_email}{/if}And:{if plain_email}{/if}
+	{if html_email}{/if}
+	
+	{if plain_email}{/if}
 
 These conditionals can be used to show different versions of the
 unsubscribe link::
 
-	       To remove your email from the "{mailing_list}" mailing list, click here:     {if html_email}<a href="{unsubscribe_url}">{unsubscribe_url}</a>{/if}     {if plain_email}{unsubscribe_url}{/if}
+	To remove your email from the "{mailing_list}" mailing list, click here:
+
+	{if html_email}<a href="{unsubscribe_url}">{unsubscribe_url}</a>{/if}{if plain_email}{unsubscribe_url}{/if}
 
 Mailing List Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -57,6 +62,7 @@ The search utility permits you to look for specific email addresses. You
 may also submit partial addresses.
 
 |Mailing List Search|
+
 Mailing List Batch Subscribe/Unsubscribe
 ----------------------------------------
 

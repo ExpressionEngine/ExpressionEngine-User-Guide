@@ -1,7 +1,10 @@
 Manage Database Tables
 ======================
 
-Control Panel Location: Admin > Utilities > SQL Manager
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Tools --> Data --> SQL Manager --> Manage Database Tables`
+
 In this section you can browse the contents of any of your database
 tables to quickly check data. In addition, you can select one or more
 tables and perform one of several actions on the table:

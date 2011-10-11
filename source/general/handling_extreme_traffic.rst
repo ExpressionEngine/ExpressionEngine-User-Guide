@@ -29,7 +29,7 @@ traffic events, there are a few tracking features of ExpressionEngine
 that update certain tables on every page load, resulting in a queue of
 locked tables as MySQL tries to keep up. These can be disabled in your
 Control Panel `Tracking
-Preferences <../cp/admin/system_admin/tracking_preferences.html>`_. If
+Preferences <../cp/admin/tracking_preferences.html>`_. If
 you are unable to access your site due to the traffic, you or your
 server administrator can manually override these features in your
 config.php file as follows:
@@ -37,19 +37,41 @@ config.php file as follows:
 config.php Extreme Traffic Overrides
 ------------------------------------
 
+::
 
-$config['enable_online_user_tracking'] 
-    (y/n) - Corresponds to `Enable Online User Tracking? <../cp/admin/system_admin/tracking_preferences.html#enable_online_user_tracking>`_
-$config['enable_hit_tracking']
-    (y/n) - Corresponds to Enable Template Hit Tracking?  <../cp/admin/system_admin/tracking_preferences.html#enable_hit_tracking>`_
-$config['enable\_entry\_view\_tracking']
-    (y/n) - Corresponds to `Enable Channel Entry View Tracking? <../cp/admin/system_admin/tracking_preferences.html#enable_entry_view_tracking>`_
-$config['log\_referrers']
-    (y/n) - Corresponds to `Enable Referrer Logging? <../cp/admin/system_admin/tracking_preferences.html#log_referrers>`_
-$config['dynamic\_tracking\_disabling']
-    (numeric) - Corresponds to `Suspend ALL tracking when number of online visitors exceeds: <../cp/admin/system_admin/tracking_preferences.html#dynamic_tracking_disabling>`_
-$config['disable\_all\_tracking']
-    (y/n) - Emergency config.php only preference which when set to 'y' will disable all of the above. This is useful for server administrators who need a way to respond immediately to table locks during a traffic spike to keep the site running smoothly.
+	$config['enable_online_user_tracking']
+	
+(y/n) - Corresponds to `Enable Online User Tracking? <../cp/admin/tracking_preferences.html#enable_online_user_tracking>`_
+
+::
+
+	$config['enable_hit_tracking']
+
+(y/n) - Corresponds to `Enable Template Hit Tracking? <../cp/admin/tracking_preferences.html#enable_hit_tracking>`_
+
+::
+	
+	$config['enable\_entry\_view\_tracking']
+
+(y/n) - Corresponds to `Enable Channel Entry View Tracking? <../cp/admin/tracking_preferences.html#enable_entry_view_tracking>`_
+
+::
+
+	$config['log\_referrers']
+
+(y/n) - Corresponds to `Enable Referrer Logging? <../cp/admin/tracking_preferences.html#log_referrers>`_
+
+::
+
+	$config['dynamic\_tracking\_disabling']
+
+(numeric) - Corresponds to `Suspend ALL tracking when number of online visitors exceeds: <../cp/admin/tracking_preferences.html#dynamic_tracking_disabling>`_
+
+::
+
+	$config['disable\_all\_tracking']
+
+(y/n) - Emergency config.php only preference which when set to 'y' will disable all of the above. This is useful for server administrators who need a way to respond immediately to table locks during a traffic spike to keep the site running smoothly.
 
 If you have public facing ExpressionEngine-generated forms, you may also
 find it beneficial to disable the `Secure Forms <spam_protection.html>`_
@@ -88,7 +110,7 @@ server resource usage) due to the increased disk activity.
 Caching <caching.html#template_caching>`_ on such environments should be
 minimal unless experienced review of your templates has been performed
 with the assistance of the `Template Debugging
-utility <../cp/admin/system_admin/output_and_debugging_preferences.html>`_,
+utility <../cp/admin/output_and_debugging_preferences.html>`_,
 and revealed resource intensive tags or templates that are greatly
 improved after enabling the respective caching mechanism.
 

@@ -5,7 +5,7 @@ New Preferences
 ---------------
 
 There are several new preferences under Admin > `Channel
-Management <../cp/admin/content_admin/channel_management.html>`_.
+Management <../cp/admin/channels/channel_management.html>`_.
 Previously, there was a single 'Channel URL' path preference. There are
 now a number of path preferences which you may wish to update. Here is a
 short description and possible example of each:

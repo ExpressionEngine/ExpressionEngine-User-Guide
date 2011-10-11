@@ -1,10 +1,8 @@
 Form Validation Class
 =====================
 
--  `Usage of Form Validation Class <form_validation.html#usage>`_
--  `Setting Reference Values <form_validation.html#reference_values>`_
--  `User Specific Rules <form_validation.html#user_rules>`_
--  `Prepping Functions <form_validation.html#prepping_functions>`_
+.. contents::
+	:local:
 
 Usage of Form Validation Class
 ------------------------------

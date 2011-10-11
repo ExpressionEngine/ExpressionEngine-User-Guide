@@ -6,17 +6,41 @@ possible to display a simple list of "recent forum topics" in your
 standard Templates. You could use this to list recent threads in a
 sidebar on your site's main page, for instance. An example:
 
-**Note:** This tag is for use in any of your ExpressionEngine templates
-that are accessible via the TEMPLATES page in the control panel. It is
-not available for use in your forum templates. If you would like to show
-recent topics in your forum templates please use the
-**{include:recent\_posts}** tag, which corresponds to the Archive
-Template: "Recent Post Table". ::
+.. note:: This tag is for use in any of your ExpressionEngine templates
+   that are accessible via the TEMPLATES page in the control panel. It is
+   not available for use in your forum templates. If you would like to show
+   recent topics in your forum templates please use the
+   **{include:recent\_posts}** tag, which corresponds to the Archive
+   Template: "Recent Post Table". ::
 
-	<table>      <tr>         <td>Title</td>         <td>Author</td>         <td>Posted On</td>         <td>Posts</td>         <td>Views</td>         <td>Last Post Info</td>     </tr>  {exp:forum:topic_titles orderby="post_date" sort="desc" limit="10"}     <tr>         <td><a href="{thread_path='forums/viewthread'}">{title}</a></td>         <td><a href="{profile_path='forums/member'}">{author}</a></td>         <td>{topic_date format="%m/%d/%Y %h:%i %a"}</td>         <td>{post_total}</td>         <td>{views}</td>         <td>On: {last_post_date format="%m/%d/%Y %h:%i %a"}<br />         By: <a href="{last_author_profile_path='forums/member'}">{last_author}</a></td>     </tr> {/exp:forum:topic_titles}  </table>
+	<table>
+		<tr>
+			<td>Title</td>
+			<td>Author</td>
+			<td>Posted On</td>
+			<td>Posts</td>
+			<td>Views</td>
+			<td>Last Post Info</td>
+		</tr>
+	
+		{exp:forum:topic_titles orderby="post_date" sort="desc" limit="10"}
+			<tr>
+				<td><a href="{thread_path='forums/viewthread'}">{title}</a></td>
+				<td><a href="{profile_path='forums/member'}">{author}</a></td>
+				<td>{topic_date format="%m/%d/%Y %h:%i %a"}</td>
+				<td>{post_total}</td>
+				<td>{views}</td>
+				<td>On: {last_post_date format="%m/%d/%Y %h:%i %a"}<br />
+				By: <a href="{last_author_profile_path='forums/member'}">{last_author}</a></td>
+			</tr>
+		{/exp:forum:topic_titles}
+	</table>
 
 Parameters
 ----------
+
+.. contents::
+   :local:
 
 
 boards=
@@ -96,8 +120,8 @@ you do not use a sort order the default is desc.
 Variables
 ---------
 
--  `{last\_post\_date format="%m/%d/%Y %h:%i
-   %a"} <#var_last_post_date>`_
+.. contents::
+   :local:
 
 author
 ~~~~~~

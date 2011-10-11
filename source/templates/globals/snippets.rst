@@ -1,7 +1,6 @@
 Snippets
 ========
 
-Control Panel Location: Design > Templates > Snippets
 Snippets are small bits of reusable template or tag parts. You could
 create a Snippet for any number of purposes, anywhere that you need to
 reuse a small portion of a template, including partial or complete tags,
@@ -23,6 +22,8 @@ you had put the expanded text into the template itself::
 
 	{entry_date format="%m-%d-%Y"}
 
+You can create and edit Snippets at :menuselection:`Design --> Templates --> Snippets`.
+
 What is the difference between a Snippet and a User-defined Global Variable?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -41,8 +42,8 @@ What is the difference between a Snippet and an Embedded Template?
 
 Snippets can be considered to actually be part of the template that they
 are used on, with their expanded contents parsed simultaneous to other
-tags and variables on the template. `Embedded
-templates <../embedding_templates.html>`_ are separate templates, with
+tags and variables on the template. :doc:`Embedded
+templates <../embedding>` are separate templates, with
 their own preferences (caching, PHP parsing, access, etc.), and are
 parsed individually. Put another way, embedded templates are not
 *included* in the parent template, but rather *added to them* after the

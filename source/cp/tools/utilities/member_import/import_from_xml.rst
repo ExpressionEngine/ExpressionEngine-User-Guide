@@ -1,8 +1,10 @@
 Import from XML
 ===============
 
-Control Panel Location: Admin > Utilities > Import Utilities > Member
-Import Utility > Import from XML
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Tools --> Utilities --> Import Utilities --> Member Import Utility`
+
 **Note:** There is no undo for importing members. If you make a mistake
 or there is an error in your data, there is not a simple method to
 correct it. **Always backup your database before using this utility!**

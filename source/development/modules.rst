@@ -6,8 +6,9 @@ database tables, backend control panels, tabs and fields that are
 included on the publish page, as well as their own tags for use in
 templates.
 
--  `The Control Panel file
-   (mcp.module\_name.php) <#control_panel_file>`_
+.. contents::
+	:local:
+	:depth: 1
 
 Basic File Structure
 --------------------
@@ -124,12 +125,12 @@ table.
 
     function update($current = '')
     {
-        if ($current == $this->version)
+        if (version_compare($current, '2.0', '='))
         {
             return FALSE;
         }
             
-        if ($current < 2.0) 
+        if (version_compare($current, '2.0', '<'))
         {
             // Do your update code here
         } 
@@ -265,34 +266,70 @@ $entry\_id the entry\_id if this is an edit, empty otherwise.
 The settings array elements:
 
 field\_id
-    The name of the field
+^^^^^^^^^^
+
+The name of the field
+
 field\_label
-    The field label- typically a language variable is used here
+^^^^^^^^^^^^
+
+The field label- typically a language variable is used here
+
 field\_required
-    Indicates whether to include the 'required' class next to the field
-    label: y/n
+^^^^^^^^^^^^^^^
+
+Indicates whether to include the 'required' class next to the field label: y/n
+
 field\_data
-    The current data, if applicable.
+^^^^^^^^^^^
+
+The current data, if applicable.
+
 field\_list\_items
-    An array of options, otherwise an empty string.
+^^^^^^^^^^^^^^^^^^
+
+An array of options, otherwise an empty string.
+
 options
-    An array of options, otherwise an empty string.
+^^^^^^^
+
+An array of options, otherwise an empty string.
+
 selected
-    The selected value if applicable to the field\_type
+^^^^^^^^
+
+The selected value if applicable to the field\_type
+
 field\_fmt
-    Allowed field format options, if applicable: an associative array or
-    empty string.
+^^^^^^^^^^
+
+Allowed field format options, if applicable: an associative array or empty string.
+
 field\_instructions
-	Instructions to be displayed for this field in the publish page
+^^^^^^^^^^^^^^^^^^^
+
+Instructions to be displayed for this field in the publish page
+
 field\_show\_fmt
-    Determines whether the field format dropdown shows: y/n. Note- if
-    'y', you must specify the options available in field\_fmt
+^^^^^^^^^^^^^^^^
+
+Determines whether the field format dropdown shows: y/n. Note- if
+'y', you must specify the options available in field\_fmt
+
 field\_pre\_populate
-    Allows you to pre-populate a field when it is a new entry.
+^^^^^^^^^^^^^^^^^^^^
+
+Allows you to pre-populate a field when it is a new entry.
+
 field\_text\_direction
-    The direction of the text: ltr/rtl
+^^^^^^^^^^^^^^^^^^^^^^
+
+The direction of the text: ltr/rtl
+
 field\_type
-    May be any existing field type
+^^^^^^^^^^^
+
+May be any existing field type
 
 validate\_publish($params) \*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -517,12 +554,11 @@ the tags.
 The Core Module File (mod.module\_name.php)
 -------------------------------------------
 
-The Core Module file is used for outputting content via the Templates
+The Core Module file is used for outputting content via Templates
 and doing any processing that is required by both the Control Panel and
 any module tags contained in a template. It includes a class with a name
-that is a combination of the package's name with a '\_mod' suffix. The
-first letter and only the first letter of the class name should be
-capitalized. There is one required class variable, $return\_data, which
+that matches the package (the first letter of the class name must be
+capitalized). There is one required class variable, $return\_data, which
 will contain the module's outputted content and is retrieved by the
 Template parser after the module is done processing. As always, be sure
 you invoke the super object in your constructor.

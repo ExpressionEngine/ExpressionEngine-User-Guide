@@ -1,7 +1,10 @@
 Message Pages
 =============
 
-Control Panel Location: Design > Message Pages
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Design --> Message Pages`
+
 Message Pages are intended for specific purposes. There are three main
 types of Specialty Templates:
 
@@ -44,14 +47,14 @@ ExpressionEngine: logging in, submitting a form, etc. In addition, they
 may sometimes be shown error messages. This Message Page is designed to
 allow you to determine how the page looks that displays these messages.
 
-View default code for the `User Message
-Template <sample_code/user_message_template.txt>`_
+View default code for the :download:`User Message
+Template <sample_code/user_message_template.txt>`
 
 System Offline Template
 -----------------------
 
 In the `General
-Configuration <../../admin/system_admin/general_configuration.html>`_
+Configuration <../../admin/general_configuration.html>`_
 section of the Control Panel you can specify whether or not your site is
 "Live". If the site is not live then people will be presented with a
 message when they try to access your page. This can be useful if you are
@@ -59,6 +62,6 @@ performing maintenance or other such things. This Message Page allows
 you to define the page that will be shown to people when your site is
 not "Live".
 
-View default code for the `System Offline
-Template <sample_code/system_offline.txt>`_
+View default code for the :download:`System Offline
+Template <sample_code/system_offline.txt>`
 

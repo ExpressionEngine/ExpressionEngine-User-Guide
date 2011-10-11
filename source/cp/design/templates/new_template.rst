@@ -1,10 +1,11 @@
-New Template
-============
+Create Template
+===============
 
 The New Template link in the left column of each Template Group allows
 you to create a new Template.
 
 |Template New|
+
 Template Name
 ~~~~~~~~~~~~~
 

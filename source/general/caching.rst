@@ -14,11 +14,11 @@ of your site and utilize server resources more efficiently.
 The caching technology in ExpressionEngine is comprised of several
 independent data caching systems and preferences.
 
-#. `Query Caching <#query_caching>`_
-#. `Tag Caching <#tag_caching>`_
-#. `Template Caching <#template_caching>`_
-#. `Dynamic Channel Query Caching <#dynamic_channel_query_caching>`_
-#. `Query Disabling <#query_disabling>`_
+- `Query Caching <#query_caching>`_
+- `Tag Caching <#tag_caching>`_
+- `Template Caching <#template_caching>`_
+- `Dynamic Channel Query Caching <#dynamic_channel_query_caching>`_
+- `Query Disabling <#query_disabling>`_
 
 Query Caching
 -------------
@@ -141,7 +141,9 @@ turn it off.
 For example, let's say you are using an instance of your channel tag to
 show your 10 most recent entry titles::
 
-	{exp:channel:entries orderby="date" sort="desc" limit="10"} <a href="{title_permalink='channel/comments'}">{title}</a><br /> {/exp:channel:entries}
+	{exp:channel:entries orderby="date" sort="desc" limit="10"}
+		<h1 href="{title_permalink='channel/comments'}">{title}</h1>
+	{/exp:channel:entries}
 
 In this example you are only showing the title of your entries and
 nothing else; yet, the channel tag automatically fetches categories and
@@ -149,7 +151,9 @@ other data automatically. Using the disable= parameter you can turn off
 the unneeded features from being queried. In this case, you don't need
 any of the features that can be disabled. ::
 
-	{exp:channel:entries orderby="date" sort="desc" limit="10" disable="categories|custom_fields|member_data|pagination"} <a href="{title_permalink='channel/comments'}">{title}</a><br /> {/exp:channel:entries}
+	{exp:channel:entries orderby="date" sort="desc" limit="10" disable="categories|custom_fields|member_data|pagination"}
+		<h1 href="{title_permalink='channel/comments'}">{title}</h1>
+	{/exp:channel:entries}
 
 **Note**: You can also use disable="category\_fields" in the `channel
 categories <../modules/channel/categories.html>`_ tag, the `category

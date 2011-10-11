@@ -1,14 +1,8 @@
 Localization Class
 ==================
 
--  `Calling the Localize Class <localization.html#calling>`_
--  `What time is it now? <localization.html#time_now>`_
--  `User's Localized Time <localization.html#localized_time>`_
--  `Date in the URL <localization.html#url_date>`_
--  `Date Tag Parameters <localization.html#date_tag_params>`_
--  `Human Readable Time <localization.html#human_readable>`_
--  `Foreign Dates <localization.html#foreign_dates>`_
--  `Timezone Menu <localization.html#timezone_menu>`_
+.. contents::
+	:local:
 
 Calling the Localize Class
 --------------------------
@@ -101,7 +95,7 @@ Date in the URL
 
 **$this->EE->localize->set\_localized\_offset()** is used when the date
 is specified in the URL (ex:
-http://www.site.com/index.php/features/module/2004/07/04/) and we need
+http://www.example.com/index.php/features/module/2004/07/04/) and we need
 to determine the current user's offset from GMT in order to pull the
 correct date range from the database. If the user is a visitor or a
 member who has not specified their Localization, then the system default

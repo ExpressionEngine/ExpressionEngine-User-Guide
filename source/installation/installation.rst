@@ -1,9 +1,9 @@
-Installation Instructions
-=========================
+Installing ExpressionEngine
+===========================
 
-**Important:** If you need to **update** your copy of ExpressionEngine
-from an earlier version, use the `Update Instructions <update.html>`_
-instead.
+.. important:: If you need to **update** your copy of ExpressionEngine
+   from an earlier version, use the `Update Instructions <update.html>`_
+   instead.
 
 1. Get Your Settings
 --------------------
@@ -17,10 +17,10 @@ host.
 #. **MySQL Username**
 #. **MySQL Password**
 
-**Note**: You will need to either create your database or have an
-existing, empty database ready before running the installer. This is
-typically done with phpMyAdmin or through your hosting account's control
-panel.
+.. note:: You will need to either create your database or have an
+   existing, empty database ready before running the installer. This is
+   typically done with phpMyAdmin or through your hosting account's control
+   panel.
 
 2. Upload the Files
 -------------------
@@ -76,9 +76,9 @@ Welcome to ExpressionEngine!
 You can now log in to your Control Panel using admin.php or follow the
 links provided in the Installation Wizard confirmation screen.
 
-**Tip:** If you chose the "None - Empty Installation" Site Theme in Step
-4, your site's homepage will appear blank because no templates or data
-have been created yet.
+.. tip:: If you chose the "None - Empty Installation" Site Theme in Step
+   4, your site's homepage will appear blank because no templates or data
+   have been created yet.
 
 If you're new to ExpressionEngine, begin the learning process by
 following the `Getting

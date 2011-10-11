@@ -1,31 +1,26 @@
-Publish Page
-============
+Publish
+=======
 
-The main interface for creating content for your site
-**Tip:** You can customize the display of the Publish Page by clicking
-Show Toolbar and creating a custom `Publish Page
-Layout <publish_page_layouts.html>`_.
+.. rst-class:: cp-path
 
-The PUBLISH section of the Control Panel is where you will add entries
-to your channels/site sections.
+**Control Panel Location:** :menuselection:`Content --> Publish`
 
-If you have more than one channel, when you move your cursor over the
-PUBLISH tab you will see a menu listing your channels.
+This is the area where you'll create content for your site by
+publishing new Entries to your Channels. If you have more than one Channel,
+moving your cursor over the Publish menu will show all of your Channels and
+allow you to select one.
 
-Once a channel is selected, you will see the main Publish screen where
-you can create your entry.
+.. tip:: You can customize the display of the Publish Page by clicking
+   Show Toolbar and creating a custom `Publish Page
+   Layout <publish_page_layouts.html>`_.
 
-Publish Page Areas
-------------------
-
-The *PUBLISH* page interface is broken into the following separate
-"tabs":
-
+The Publish interface is broken into the following tabs:
 
 Publish Form Tab
 ----------------
 
 |Publish Form|
+
 Title Field
 ~~~~~~~~~~~
 
@@ -70,7 +65,7 @@ Entry Fields
 ~~~~~~~~~~~~
 
 The names and types of entry fields displayed will be determined by what
-`Channel Fields <../admin/content_admin/custom_channel_fields.html>`_
+`Channel Fields <../admin/channels/custom_channel_fields.html>`_
 you have defined for this channel. If an entry field is set to be
 "hidden" by default, it will have to be expanded by clicking on the
 field name before content can be entered. In addition to the field
@@ -105,6 +100,7 @@ Date Tab
 --------
 
 |Publish Calendar|
+
 Entry Date
 ~~~~~~~~~~
 
@@ -146,6 +142,7 @@ Options Tab
 -----------
 
 |Publish Options Tab|
+
 Author
 ~~~~~~
 
@@ -172,7 +169,7 @@ Status
 There are two primary statuses that are always available: Open and
 Closed. Typically, "open" entries are viewable at your site, and
 "closed" entries are not. You can add additional statuses for editorial
-workflow in your `Statuses <../admin/content_admin/statuses.html>`_
+workflow in your `Statuses <../admin/channels/statuses.html>`_
 page, and opt to display or suppress entries assigned to these by
 modifying the "status" parameter found in the various "Channel" Tags in
 your Templates.
@@ -198,6 +195,9 @@ The ping tab allows you to send "pings" to the Ping Servers you have
 defined in your My Account > Ping Servers area.
 
 |Publish Pings Tab|
+
+.. _publish-forum-tab:
+
 Forum Tab
 ---------
 
@@ -205,12 +205,11 @@ Forum Tab
 Module installed.
 
 |Publish Forum|
+
 The Forum tab allows you to optionally publish a forum topic to be
 associated with the channel entry. You can then automatically link to
 the created forum topic from within your {exp:channel:entries} tag using
-the
-`{forum\_topic\_id} <../../modules/channel/variables.html#var_forum_topic_id>`_
-variable.
+the :ref:`channel-entries-forum_topic_id` variable.
 
 Forum Topic Title
 ~~~~~~~~~~~~~~~~~
@@ -268,6 +267,8 @@ a new revision will be created rather than updating the previous
 revision. In other words, every time you click the save button a new
 revision is stored.
 
+.. _publish-pages-tab:
+
 Pages Tab
 ---------
 
@@ -275,6 +276,7 @@ Pages Tab
 Module <../../modules/pages/index.html>`_ installed.
 
 |Publish Pages|
+
 Pages URI
 ~~~~~~~~~
 

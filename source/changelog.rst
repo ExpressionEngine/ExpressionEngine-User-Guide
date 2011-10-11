@@ -1,15 +1,220 @@
 ExpressionEngine 2.x Change Log
 ===============================
 
-..contents:: Page Contents
+.. contents::
+   :local:
+   :depth: 1
 
--  `ExpressionEngine 1.x Change
-   Log <http://expressionengine.com/legacy_docs/changelog.html>`_
+The Change Log for ExpressionEngine 1.x is `available here.
+<http://expressionengine.com/legacy_docs/changelog.html>`_
+
+
+Version 2.3.0
+-------------
+
+Release Date: October 11, 2011
+
+- Important:
+
+  - Fixed a potential cross site scripting vulnerability.
+  - Fixed a potential cross site request forgery vulnerability.
+  - Fixed a bug where using the MSM multi-site login feature would
+    sometimes latch onto the wrong session.
+
+- General Changes:
+
+  - Removed accordions from Member Groups, Member Preferences and
+    Channel Preferences.
+  - Forum search now uses board default pagination per page settings
+    instead of using a hardcoded 20 items per page.
+  - Updated pagination variable pair that allows much more control over
+    pagination within channel entries and comments.
+  - Member search tokens that allow you to specify different information
+    to search for (e.g. email:ellislab.com username:test screen_name:'John Doe')
+  - Added quick way to copy and paste custom field tags from the
+    Custom Field Group's page
+  - Added a hidden config variable ``remove_unparsed_vars`` which, when
+    set to 'n' in conjunction with debug = 0, will not remove unparsed
+    ExpressionEngine Variables.
+  - Modified legacy debug 0 setting to only remove unparsed template
+    variables when the 'remove_unparsed_vars' hidden config is set to
+    'y', fixing some common issues with JavaScript and JSON getting
+    "eaten" on sites using that legacy debug setting.
+  - Fixed a bug in the Metaweblog API module that was causing
+    authentication errors.
+  - Fixed a bug in parsing image tag attributes that could lead to a PHP
+    notice error when only "Safe HTML" is allowed.
+  - Fixed a bug in the template parser that was preventing the minified
+    jQuery from being used in an ExpressionEngine template
+  - Fixed a bug where a PHP notice error would occur when debug is enabled
+    and an invalid ExpressionEngine tag occurs on the page that only has
+    one tag segment.
+  - Fixed a cosmetic IE JavaScript error (#15196) on the publish page.
+  - Fixed a display error in the file upload modal of the Corporate theme.
+  - Fixed a bug where reassignment of entries when deleting a member was
+    limited to superadmins.
+  - Fixed a bug (#16083) where editing or adding categories from the
+    Publish page did not work properly in IE7.
+  - Fixed a bug (#15530) where a registering member could supply a value
+    that was not an option in a Select List member field.
+  - Fixed a bug (#16214) where new categories would be sorted
+    alphabetically when the group was using a custom sort order instead. 
+  - Fixed a bug (#16232) where the multi-entry editor did not update
+    entry edit dates.
+  - Fixed a bug (#16246) where the Date fieldtype could not show an
+    error if an invalid date was entered.
+  - Fixed a bug (#16239) where some buttons in the Control Panel had
+    minor display issues.
+  - Fixed a bug (#16038) where the File Manager had display issues when
+    the Corporate theme was used.  
+  - Fixed a bug (#16265) where the Email Contact Form could fail to
+    send in some cases if the user_recipients parameter was not specified.
+  - Fixed a bug (#16422) where some colors appeared incorrectly in
+    the Datepicker.
+  - Fixed a bug (#16288) where ``http://`` could be undesirably prepended
+    to some General Configuration URLs.
+  - Fixed a bug (#16397) where the Add Category dialog could appear
+    incorrectly in some cases.
+  - Fixed a bug (#16639) where non-Super Admins with group administration
+    privileges could change a Super Admin's member group.
+  - Fixed a bug (#16626) where non-Super Admins with profile editing
+    privileges could edit a Super Admin's profile. 
+  - Fixed a documentation error (#16213) where some parameters available
+    to exp:member:login_form were not listed.
+  - Fixed a documentation error (#16564) where the tag for generating
+    comment editing Javascript was incorrectly listed.
+  - Fixed a typo in the Control Panel (#16403)
+  - Fixed a breadcrumb language key issue in the Control Panel (#16229)
+  - Fixed a bug where the private message inbox only displayed 5
+    messages per page.
+  - Fixed various jQuery UI display issues in the corporate theme.
+  - Fixed a bug where Datepicker hours before 10 were not consistently
+    prefixed with a zero.
+  - Fixed a bug where sorting channel entries on entry_date instead
+    of date ignored additional sort fields.
+  - Fixed a bug (#16149) where File Manager permissions would prevent
+    someone from uploading files on the Publish page.
+  - Fixed a bug (#16157) where Template Access preferences would show
+    up as being unaccessible in the File manager.
+  - Fixed a bug (#16183) where Wikis would show an error if all tracking
+    was disabled. Thanks to Erik Reagan for the fix.
+  - Fixed a bug (#16193) where uninstalling the Moblog would cause an
+    error due to a misnamed variable.
+  - Fixed a bug (#16202) where the backspace parameter in the
+    category_archive tag was removing characters from the whole loop,
+    not each iteration.
+  - Fixed a bug (#16204) where setting permissions on the closed status
+    would not be obeyed.
+  - Fixed a bug (#16211) where file size was not being updated after
+    any image manipulation.
+  - Fixed a bug (#16179) where images were being upsized instead of
+    restricting the width.
+  - Fixed a bug (#16114) where if $config['debug'] was set to 0, it
+    would not show up as an option in Output and Debugging Preferences.
+  - Fixed a bug (#15158) where the search excerpt field could only
+    be selected from searchable fields.
+  - Fixed a bug (#15510) where creating a channel via the API could
+    cause an error if there were no existing channels.
+  - Fixed a bug where syncing a directory with files that have
+    spaces in their names would break links to existing File fields
+    and textarea fields.
+  - Fixed a bug (#16264) where pending members were allowed to log in.
+  - Fixed a bug where groups in an MSM site that didn't have CP access
+    to the main site couldn't login to the CP of any other sites.
+  - Fixed a bug (#16200) where forum search was returning inconsistent
+    and incorrect results.
+  - Fixed a bug (#16322) where the Upload File button wasn't working
+    in the File Manager.
+  - Fixed a bug (#16380) where the arrow from an accordion was
+    overlapping the text in the accordion header.
+  - Fixed a bug (#15525) where the date picker on a SafeCracker date
+    field would always use US date formatting even when European date
+    formatting was chosen.
+  - Fixed a bug where the channel names in the Agile Records themes were
+    incorrect for both the comments and comment_preview templates within
+    the news template group.
+  - Fixed a bug (#16414) where the RSS feed for a forum would only
+    output the first forum's posts.
+  - Fixed a bug (#16406) where publish layouts were breaking if you
+    disabled comments after creating a layout. Thanks to John D. Wells
+    for supplying the fix.
+  - Fixed a bug (#16363) where items on the calendar were being placed
+    on the wrong day.
+  - Fixed a bug (#16388) where the file manager modal required scrolling
+    up to view in IE7 (updated the jQuery UI theme).
+  - Fixed a bug (#16525) where password reset did not honor the password
+    length requirements.
+  - Fixed a bug (#16539) where auto generated passwords did not honor
+    the secure password configuration setting.
+  - Fixed a bug (#16116) where image files could be upsized if either,
+    but not both, max height or max width was specified for the directory.
+  - Fixed a bug (#16159) where you could not edit channel entries when
+    the forum tab's forum topic id had been specified a 0.
+  - Fixed a bug (#16389) where a MySQL error occurred when displaying
+    comments with dynamic set to off and pagination on.
+  - Fixed a bug (#16349) where a PHP error could occur when changing
+    comment status and the ``update_comment_additional`` hook was being used.
+  - Fixed a bug (#16620) where multi-site login did not respect the
+    return parameter.
+  - Fixed a bug (#16611) where a PHP error could occur when recounting
+    member statistics if private messages existed.
+  - Fixed a bug where a PHP error could occur when sending private
+    messages with attachments.
+  - Fixed a bug (#16515) in the comments control panel where the second
+    page of comments for a single entry was not limited to that entry.
+  - Fixed a bug (#16420) where the reset_password was not properly
+    cleared from the database once successfully changed in the forgotten
+    password routine.
+  - Fixed a bug (#16592) where the file selector button on the
+    publish page did not work when no image button was defined in the
+    users' html buttons.
+  - Fixed a bug (#16267) where the publish page spellcheck iframe did
+    not display properly due to the failure to load a stylesheet.
+  - Fixed a bug (#16650) where the Moblog did not include files with
+    upper case extensions.
+  - Fixed a bug (#16107) where user notepad content did not properly
+    display.
+  - Fixed a bug (#16115) where the "Upload File" button on the File
+    Manager home page was unable to be translated.
+  - Fixed a bug (#16144) where an incorrect error message appeared on
+    unsuccessful authentication on the front end.
+  - Fixed a bug (#16102) where the file manager category filtering did
+    not function properly.
+  - Fixed a bug (#16163) where the Comment Module Control Panel page was
+    unable to limit to specific entry ids.
+  - Fixed a bug (#16143) where a PHP error occurred on the Edit Member
+    Group page when MSM was active.
+  - Fixed a bug (#16180) where the CP Menu Help Links in the File
+    Manager pointed to incorrect URLs.
+  - Fixed a bug (#15909) where usernames did not have leading or
+    trailing whitespace trimmed.
+  - Fixed a bug (#16112) where a MySQL error could occur when creating
+    a channel field and not including the ordering field.
+  - Fixed a bug (#16228) where a PHP error occurred in the member
+    importer.
+
+- Developers:
+
+  - Deprecated ``Channel_model::get_channel_categories()``.
+  - Deprecated ``Localize::set_gmt()``.
+  - Modified routing behavior to no longer require query strings to be
+    enabled on the frontend. Please make sure you do not use ``$_GET``
+    variables on the frontend (exceptions: ACT, URL, css).
+  - Fixed a bug (#16350) where the *update_comment_additional* hook
+    in ``change_comment_status()`` was being passed an object instead of
+    the documented array.
+  - Fixed a bug (#16366) where the ``can_access_module()`` method in the
+    member model did not automatically return TRUE for superadmins.
+  - Fixed a bug (#16383) where the ``get_channel_categories`` method in the
+    channel_model was not working properly due to an invalid where clause.
+  - Fixed a bug in ``Auth::verify()`` where it was checking for CP access
+    permissions on front end requests.
+
 
 Version 2.2.2
 -------------
 
-Release Date: July 28, 2011
+Release Date: August 1, 2011
 
 ExpressionEngine version 2.2.2 is a maintenance update recommended only for
 membership based sites who require administrator approval for new member
@@ -17,12 +222,20 @@ accounts.  Version 2.2.2 fixes a critical bug on these sites where Pending
 members could log in and have similar permissions to members in the default
 Member group.
 
--	Removed accordions from Member Groups, Member Preferences and Channel Preferences.
--	Fixed a bug (#16143) where a PHP error occurred on the Edit Member Group page when MSM was active.
--	Fixed a bug (#16144) where an incorrect error message appeared on unsuccessful authentication on the front end.
--	Fixed a bug (#16264) where Pending members were allowed to log in.
--	Fixed a bug where groups in an MSM site that didn't have CP access to the main site couldn't login to the CP of any other sites.
--	Fixed a bug where syncing a directory with files that have spaces in their names would break links to existing File fields and textarea fields.
+- Removed accordions from Member Groups, Member Preferences and Channel
+  Preferences.
+- Temporarily disabled the Profiler in the installer / updater while
+  investigating an issue in certain environments where the Profiler may
+  throw an exception and halt the installer.
+- Fixed a bug (#16143) where a PHP error occurred on the Edit Member Group
+  page when MSM was active.
+- Fixed a bug (#16144) where an incorrect error message appeared on
+  unsuccessful authentication on the front end.
+- Fixed a bug (#16264) where Pending members were allowed to log in.
+- Fixed a bug where groups in an MSM site that didn't have CP access to
+  the main site couldn't login to the CP of any other sites.
+- Fixed a bug where syncing a directory with files that have spaces in
+  their names would break links to existing File fields and textarea fields.
 
 	
 Version 2.2.1
@@ -763,9 +976,8 @@ General Changes:
 -  Added an importer to the IP to Nations Module that allows updating
    the IP records directly from the ip2nations SQL file.
 -  Added secure forms check to the frontend Comment Editor. See the
-   `Version Notes <installation/version_notes_2.1.2.html#comments>`__ and
-   update your `JavaScript <modules/comment/comment_editing.html>`_ if
-   needed.
+   `Version Notes <installation/version_notes_2.1.2.html#comments>`_ and
+   update your `JavaScript <comment-editing>` if needed.
 -  Added a setting to group preferences to disallow editing of html
    formatting buttons.
 -  Added to the default message text for forwarded private messages to
@@ -985,9 +1197,8 @@ Build 20101018 (initial release)
       in arbitrary code execution.
    -  Altered version update notification to notify users if a new
       ExpressionEngine release is a security release.
-   -  Altered the behavior of the Channel Category tag's `show\_empty
-      parameter <modules/channel/categories.html#par_show_empty>`_ to be
-      channel specific. (Waits for the cheering to die down....)
+   -  Altered the behavior of the :doc:`Channel Category tag's </modules/channel/categories>` show_empty=
+      parameter channel specific. (Waits for the cheering to die down....)
    -  Altered member profile fields to disallow HTML.
    -  Altered final file permissions on uploads to compensate for
       certain hosting environments. (#13930)
@@ -998,11 +1209,9 @@ Build 20101018 (initial release)
       #13568).
    -  Added a template synchronization warning in the Search and Replace
       tool for users saving templates as files (issue #13551).
-   -  Added a `restrict\_channel
-      parameter <modules/channel/categories.html#par_restrict_channel>`_
-      to the Channel Category tag, which allows overriding the new
-      default behavior of the `show\_empty
-      parameter <modules/channel/categories.html#par_show_empty>`_.
+   -  Added a restrict_channel= parameter
+      to the :doc:`Channel Category tag </modules/channel/categories>`, which allows overriding the new
+      default behavior of its show_empty= parameter.
    -  Added a `Control
       Panel <modules/comment/control_panel/index.html>`_ to the Comment
       Module.
@@ -1015,31 +1224,20 @@ Build 20101018 (initial release)
       `Settings <modules/comment/control_panel/index.html#settings>`_ to
       the Comment Module (Force word censoring for comments and Moderate
       expired comments).
-   -  Added new variables to the Comment Entries tag
-      (`{member\_group\_id} <modules/comment/entries.html#var_member_group_id>`_,
-      `{username} <modules/comment/entries.html#var_username>`_, `{if
-      editable} <modules/comment/entries.html#var_editable>`_, `{if
-      can\_moderate\_comment} <modules/comment/entries.html#var_can_moderate_comment>`_,
-      `{comment\_stripped} <modules/comment/entries.html#var_comment_stripped>`_).
-   -  Added new parameters to the Comment Entries tag
-      (`comment\_id= <modules/comment/entries.html#par_comment_id>`_,
-      `entry\_status= <modules/comment/entries.html#par_entry_status>`_,
-      `status= <modules/comment/entries.html#par_status>`_,
-      `author\_id= <modules/comment/entries.html#par_author_id>`_).
-   -  Added a random option to the Comment Entries `orderby
-      parameter <modules/comment/entries.html#par_orderby>`_
-   -  Added a new parameter to the Comment Form tag
-      (`return= <modules/comment/form.html#par_return>`_).
-   -  Added new conditionals to the Comment Form tag (`{if
-      comments\_expired} <modules/comment/form.html#cond_comments_expired>`_,
-      `{if
-      comments\_disabled} <modules/comment/form.html#cond_comments_disabled>`_).
-   -  Added a `Comment Notification
-      tag <modules/comment/notification_links.html>`_ to the Comment
-      module, which gives members the ability to subscribe to comment
+   -  Added new variables to the :doc:`Comment Entries tag </modules/comment/index>`
+      ({member\_group\_id}, {username}, {if editable}, {if can\_moderate\_comment}, {comment\_stripped}).
+   -  Added new parameters to the :doc:`Comment Entries tag </modules/comment/index>`
+      (comment\_id=, entry\_status=, status=, author\_id=_).
+   -  Added a random option to the Comment Entries :ref:`comment-entries-orderby` parameter.
+   -  Added a new parameter to the :ref:`Comment Form tag <comment-submission-form>`
+      (return=).
+   -  Added new conditionals to the :ref:`Comment Form tag <comment-submission-form>` ({if
+      comments\_expired}, {if comments\_disabled}).
+   -  Added a Comment Notification tag to the :doc:`Comment Module </modules/comment/index>`
+      which gives members the ability to subscribe to comment
       notifications for an entry without commenting.
-   -  Added the ability to `Allow Members to Edit Comments on the Front
-      End <modules/comment/comment_editing.html>`_.
+   -  Added the ability to :ref:`Allow Members to Edit Comments on the Front
+      End <comment-editing>`.
    -  Added a new notification template to the Comment Module to send a
       single digest when moderated comments are opened.)
    -  Moved stats mcp file logic to a library for greater code
@@ -1717,9 +1915,8 @@ Build 20100415 (initial release)
 -  Added missing language keys on publish page.
 -  Added a check for required fields when saving custom layouts for the
    publish page.
--  Added a
-   `{exp:pages:load\_site\_pages} <modules/pages/display_page_content.html#load_site_pages>`_
-   tag to the Pages module for use with the Multiple Site Manager.
+-  Added a {exp:pages:load_site_pages} tag to the :doc:`modules/pages/index`
+   for use with the Multiple Site Manager.
 -  Added a class variable to the xmlrpc library to increase consistency
    between the Metaweblog/Blogger modules and publishing using the
    control panel.
@@ -2762,13 +2959,11 @@ Build 20091202 (initial release)
       unauthorized changes to your index.php file are made.
    -  ExpressionEngine generated URLs are even prettier, no longer use a
       trailing slash.
-   -  Added
-      `{absolute\_results} <modules/channel/variables.html#var_absolute_results>`_
-      to Channel Entries tag.
+   -  Added the {absolute_results} :ref:`variable <channel-entries-single-variables>` to the Channel Entries tag.
    -  Changed the behavior of the backspace parameter so that it no
       longer ignores whitespace.
    -  Made "yes/no" tag parameters consistent.
-   -  ExpressionEngine `Template Comments <templates/commenting.html>`_
+   -  ExpressionEngine :doc:`Template Comments <templates/comments>`
       can now be used in Global Variables and Snippets.
    -  Added CodeIgniter Output Profiler for improved debugging.
    -  Changed system offline message to output 503 headers with a 1 hour
@@ -2776,9 +2971,8 @@ Build 20091202 (initial release)
    -  {assign\_variable:} changed to
       `{preload\_replace:foo="bar"} <templates/globals/preload_replacement.html>`_
       and documentation clarified.
-   -  The Simple Commerce Module now supports `subscriptions and
-      recurring
-      payments <modules/simple_commerce/sc_recurring_payments.html>`_
+   -  The Simple Commerce Module now supports :ref:`subscriptions and
+      recurring payments <simple-commerce-recurring-payments>`
    -  The Trackback module has been removed from ExpressionEngine. See
       the `version update
       notes <installation/version_notes_2.0.0.html>`__ for details.
@@ -2831,8 +3025,8 @@ Build 20091202 (initial release)
          misspelled a tag or used a tag for a plugin or module that is
          not installed.
       -  Added "create and edit" option when creating new templates.
-      -  Dramatically changed `flat-file template
-         system <templates/flat_file_templates.html>`_
+      -  Dramatically changed :doc:`flat-file template
+         system <templates/templates_as_files>`
 
          -  When using this feature, templates and groups will be
             created automatically when you add them to the template
@@ -2888,7 +3082,7 @@ Build 20091202 (initial release)
       your member profile themes.
    -  Site themes are much easier to create and redistribute, following
       the same file structure as the new
-      ` <templates/flat_file_templates.html>`_flat-file template system.
+      :doc:`flat-file template system <templates/templates_as_files>`.
 
 -  **Installer**
 
@@ -2915,8 +3109,8 @@ Build 20091202 (initial release)
       *`Contact the development
       team <http://expressionengine.com/support/>`_ for alpha
       documentation*.
-   -  Added simple methods for tags to `parse their template
-      variables <development/usage/template.html#parsing_variables>`_.
+   -  Added simple methods for tags to :doc:`parse their template
+      variables </development/usage/template>`.
    -  Added `CP library <development/usage/cp.html>`_ which has many
       assistive methods and handles many things for you automatically.
    -  Display class is deprecated!
@@ -2940,17 +3134,3 @@ Build 20091202 (initial release)
    -  `Benedikte Vanderweeën <http://www.bene.be/>`_
    -  `Colin Williams <http://wllmscncpts.tumblr.com/>`_
    -  Charles Neely
-
-What's changed in the User Guide itself?
-----------------------------------------
-
-Keep track of changes to the User Guide between versions by browsing our
-`User Guide repository mirror at
-Bitbucket <https://bitbucket.org/ellislab/expressionengine-user-guide>`_.
-Or clone a local copy with `Mercurial <http://mercurial.selenic.com/>`_
-and read and diff to your heart's content!
-
-.. code-block:: bash
-
-	$ hg clone https://ellislab@bitbucket.org/ellislab/expressionengine-user-guide
-

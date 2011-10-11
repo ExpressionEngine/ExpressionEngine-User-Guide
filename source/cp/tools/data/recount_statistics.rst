@@ -1,7 +1,10 @@
 Recount Statistics
 ==================
 
-Control Panel Location: Tools > Data > Recount Statistics
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Tools --> Data --> Recount Statistics`
+
 This section of the Control Panel allows you to force the system to
 recount different types of statistics. This section is rarely necessary,
 but every once in a while a statistic can become out of sync or
@@ -9,6 +12,7 @@ otherwise not reflect the correct data. This section will allow you to
 make the system update the information.
 
 |Recount Preferences|
+
 The main Recount Statistics screen shows the items which can be
 recounted.
 

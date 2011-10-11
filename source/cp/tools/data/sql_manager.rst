@@ -1,7 +1,10 @@
 SQL Manager
 ===========
 
-Control Panel Location: Tools > Data > SQL Manager
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Tools --> Data --> SQL Manager`
+
 This section of the Control Panel allows you to manage your database.
 You can view information about the database, run queries, optimize your
 tables, and more.
@@ -10,6 +13,7 @@ The main SQL Manager screen shows a table of your basic database
 information.
 
 |SQL Manager|
+
 The following SQL Utilities are accessible from this page:
 
 -  `Manage Database Tables <sql_manage_tables.html>`_

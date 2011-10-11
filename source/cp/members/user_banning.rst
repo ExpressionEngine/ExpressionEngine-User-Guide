@@ -1,7 +1,10 @@
 User Banning
 ============
 
-Control Panel Location: Members > User Banning
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> User Banning`
+
 The User Banning section of the Control Panel allows you to ban users by
 IP address, email, or name.
 

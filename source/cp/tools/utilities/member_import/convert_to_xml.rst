@@ -1,8 +1,10 @@
 Convert Delimited Data to XML
 =============================
 
-Control Panel Location: Admin > Utilities > Import Utilities > Member
-Import Utility > Convert Delimited Data to XML
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Tools --> Utilities --> Import Utilities --> Member Import Utility`
+
 The Convert Delimited Data to XML utility enables you to take member
 information from a third party application that exports a delimited data
 file and create an XML file in ExpressionEngine's `Member XML

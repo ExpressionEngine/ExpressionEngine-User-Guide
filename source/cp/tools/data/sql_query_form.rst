@@ -1,7 +1,10 @@
 Database Query Form
 ===================
 
-Control Panel Location: Tools > Data > SQL Manager > SQL Query Form
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Tools --> Data --> SQL Manager --> Database Query Form`
+
 This section presents a form that you can use to submit any standard
 database query. This feature is intended for **advanced** users since
 any changes you may make with a query are permanent.

@@ -1,5 +1,6 @@
+#####################################
 ExpressionEngine Emoticon Development
-=====================================
+#####################################
 
 Modifying or creating new sets of Emoticons for use with
 ExpressionEngine is fairly straightforward. Glyph translations are
@@ -9,8 +10,9 @@ should be replaced by which images, and what the properties of the image
 files are. The files themselves can be replaced or modified so that
 completely different Emoticon packs can be created and used.
 
+*********************
 Default Smileys Array
----------------------
+*********************
 
 ::
 
@@ -23,7 +25,7 @@ Default Smileys Array
         ':cheese:'      =>  array('cheese.gif',         '19',   '19',   'cheese'),
         ':)'            =>  array('smile.gif',          '19',   '19',   'smile'),
         ';-)'           =>  array('wink.gif',           '19',   '19',   'wink'),
-        ';)'        =>  array('wink.gif',           '19',   '19',   'wink'),
+        ';)'       		=>  array('wink.gif',           '19',   '19',   'wink'),
         ':smirk:'       =>  array('smirk.gif',          '19',   '19',   'smirk'),
         ':roll:'        =>  array('rolleyes.gif',       '19',   '19',   'rolleyes'),
         ':-S'           =>  array('confused.gif',       '19',   '19',   'confused'),
@@ -65,18 +67,33 @@ Default Smileys Array
         
 
 smiley
-    the glyph / text you wish to be replaced by a particular smiley
-image name
-    the file name for the smiley image
-width
-    The width, in pixels, of the smiley image
-height
-    The height, in pixels, of the smiley image
-alt
-    The text that will be used for the image alt="" attribute
+------
 
+the glyph / text you wish to be replaced by a particular smiley
+
+image name
+----------
+
+the file name for the smiley image
+
+width
+-----
+
+The width, in pixels, of the smiley image
+
+height
+------
+
+The height, in pixels, of the smiley image
+
+alt
+---
+
+The text that will be used for the image alt="" attribute
+
+***************
 Emoticon Images
----------------
+***************
 
 The file names in the $smileys array correspond to the files in the
 directory specified as the "smilies" directory in the Admin > Emoticon

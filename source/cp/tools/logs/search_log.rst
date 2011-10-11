@@ -1,19 +1,22 @@
-View Search Terms Log
-=====================
+Search Log
+==========
 
-Control Panel Location: Admin > Utilities > View Search Term Log
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Tools --> Logs --> Search Log`
+
 This section of the Control Panel allows you to view any logged search
 terms.
 
 |Search Log|
+
 The Search Term Logging feature lets you keep track of any search terms
 your site visitors submit via your simple or advanced search forms. This
 information can be useful in determining what information is being
 looked for at your site.
 
-Before search terms will be logged, the feature must be enabled at:
-
-Admin > System Preferences > Search Term Log Configuration
+Before search terms will be logged, the feature must be enabled at
+:menuselection:`Admin --> System Administration --> Search Log Configuration`.
 
 The following table columns are listed:
 

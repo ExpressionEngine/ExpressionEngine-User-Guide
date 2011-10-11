@@ -56,7 +56,7 @@ HTTP Headers
 
 Some "PHP as CGI" servers also do not like it if ExpressionEngine
 explicitly sends its own HTTP Headers. Try going into `General
-Configuration <../cp/admin/system_admin/general_configuration.html>`_
+Configuration <../cp/admin/general_configuration.html>`_
 and turn the "Generate HTTP Page Headers?" setting to "No".
 
 If you cannot log into the Control Panel, then you will need to manually

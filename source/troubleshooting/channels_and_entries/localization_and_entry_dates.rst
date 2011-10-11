@@ -20,6 +20,6 @@ that environment's time zone.
 
 If the time an entry was posted should not have any reference to the
 localization of the author, then use
-`{gmt\_entry\_date} <../../modules/channel/variables.html#var_gmt_entry_date>`_
+:ref:`channel-entries-gmt_entry_date`.
 
 

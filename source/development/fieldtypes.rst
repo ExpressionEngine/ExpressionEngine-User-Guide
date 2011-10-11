@@ -42,7 +42,7 @@ Example - Google Maps
 ---------------------
 
 The snippets below were truncated for clarity. The full example
-fieldtype can be `downloaded here <./google_maps.zip>`_.
+fieldtype can be :download:`downloaded here <google_maps.zip>`.
 
 Installation
 ~~~~~~~~~~~~
@@ -388,7 +388,21 @@ fields and field formatting options in this method. For example, the
 date file type requires an additional field\_dt\_x field and different
 content field type::
 
-	 function settings_modify_column($data) {     $fields['field_id\_'.$data['field_id']] = array(         'type'      => 'INT',         'constraint'    => 10,         'default'   => 0         );      $fields['field_dt\_'.$data['field_id']] = array(         'type'      => 'VARCHAR',         'constraint'    => 8         );                    return $fields; }
+	function settings_modify_column($data)
+	{
+		$fields['field_id_'.$data['field_id']] = array(
+			'type' 		=> 'INT',
+			'constraint'	=> 10,
+			'default'	=> 0
+			);
+	
+		$fields['field_dt_'.$data['field_id']] = array(
+			'type' 		=> 'VARCHAR',
+			'constraint'	=> 8
+			);			
+		
+		return $fields;
+	}	
 
 post\_save\_settings($data)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -418,6 +432,4 @@ reduce the processing required to extract the original data structure
 from the string (i.e. unserializing), the pre\_process function is
 called first.
 
-$data contains the field data
-
-Return the prepped data.
+$data contains the field data. Return the prepped data.

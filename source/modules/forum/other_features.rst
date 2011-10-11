@@ -1,6 +1,9 @@
 Other Features
 ==============
 
+.. contents::
+   :local:
+
 Re-Synchronize Forums
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -16,8 +19,8 @@ Using PHP in the Forum Templates
 You can enable PHP to be used in the Forum Templates if you wish. This
 is done under Default Preferences. You can do this if you wish to
 include other PHP scripts, such as banner ads. As with regular
-ExpressionEngine Templates, you can choose whether the `PHP is
-executed <../../templates/php_templates.html>`_ on "Input" or "Output".
+ExpressionEngine Templates, you can choose whether the :doc:`PHP is
+executed </templates/php>` on "Input" or "Output".
 
 Running the Forums Through Regular Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -38,7 +41,7 @@ standard EE template engine:
 
 #. Create a Template as normal in the main Templates tab of the Control
    Panel. Name it as you want.
-#. Inside that new Template, place this code *and **only** this code*::
+#. Inside that new Template, place this code and **only** this code::
 
 	{exp:forum}
 

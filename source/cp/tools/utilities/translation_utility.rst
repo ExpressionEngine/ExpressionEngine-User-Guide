@@ -1,7 +1,10 @@
 Translation Utility
 ===================
 
-Control Panel Location: Tools > Utilities > Translation Utility
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Tools --> Utilities --> Translation Utility`
+
 This Translation Utility page of the Control Panel allows you to
 translate the core language files into other languages.
 
@@ -17,11 +20,13 @@ The main Translation Utility screen shows a list of all the language
 files currently installed.
 
 |Translation Main|
+
 When you choose a file name you will be presented with a page showing a
 list of English words or phrases. Next to each line of text you'll see
 an input box where you will enter the translated version of the text.
 
 |Translation Editor|
+
 Once you have translated all the text for a particular file you will
 click the Save Changes button and ExpressionEngine will create the new
 translated file inside the translations folder.

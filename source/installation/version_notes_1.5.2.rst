@@ -74,14 +74,14 @@ Language Additions
 ------------------
 
 ExpressionEngine 1.5.2 has a number of language file additions. To
-assist translators in updating their language packs, a `language notes
-text file <language_notes_1.5.2.txt>`_ has been provided. This text file
+assist translators in updating their language packs, a :download:`language notes
+text file <language_notes_1.5.2.txt>` has been provided. This text file
 lists all of the new language keys, separated by the each language file
 that contains changes. To update your language pack, you can download
 this text file, make the changes, and simply copy the new keys to the
 appropriate language files.
 
-`Return to Update Page <update.html>`_
+:ref:`Return to Update Page <update-additional-steps>`
 
 `ExpressionEngine <http://expressionengine.com/>`_ – Copyright ©
 2002-2011 – `EllisLab, Inc. <http://ellislab.com/>`_

@@ -9,6 +9,7 @@ Simple Commerce Home Page Options
 ---------------------------------
 
 |Simple Commerce Purchases|
+
 Add Purchase
 ~~~~~~~~~~~~
 
@@ -35,6 +36,7 @@ Purchase Management
 -------------------
 
 |Simple Commerce Purchase Management|
+
 Overview
 ~~~~~~~~
 
@@ -49,6 +51,7 @@ Adding / Editing Purchases
 --------------------------
 
 |Simple Commerce Add Purchase|
+
 Purchase Identification Number (TXN ID)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -14,5 +14,4 @@ Entry "View" Tracking
 
 In addition to tracking page hits, EE lets you track the number of views
 a particular channel entry has received. For more information regarding
-this feature please read about `Track Views
-Parameter <../modules/channel/parameters.html#par_track_views>`_.
+this feature please read about the :ref:`channel-entries-track-views` parameter.

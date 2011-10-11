@@ -4,6 +4,9 @@ Functions Class
 The Functions class contains commonly required functions used throughout
 ExpressionEngine's scripts.
 
+.. contents::
+	:local:
+
 set\_realpath(path [string])
 ----------------------------
 
@@ -67,7 +70,7 @@ Remove duplicate slashes from URL.
 
 **Description:** A clean up function that removes all double slashes
 (//) from str and returns the string. Useful for cleaning up URLs. The
-double slashes in http:// are preserved.
+double slashes in ``http://`` are preserved.
 
 extract\_path(str [string])
 ---------------------------
@@ -447,8 +450,7 @@ Fetch parameters for tag
 
 **Description:** Returns an array of parameters for the tag.
 
-prep\_conditionals(str [string], variables [array], safety [string],
-prefix [string])
+prep\_conditionals(str [string], variables [array], safety [string], prefix [string])
 -------------------------------------------------------------------------------------
 
 Parses conditionals and preps conditional for evaluation

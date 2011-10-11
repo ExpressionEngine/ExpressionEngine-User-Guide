@@ -1,26 +1,8 @@
 Template Class
 ==============
 
--  `Introduction <template.html#intro>`_
--  `Calling the Template class <template.html#calling>`_
--  `Parameters <template.html#params>`_
--  `Data within Tag Pairs <template.html#tag_data>`_
--  `Variable Types <template.html#variable_types>`_
--  `Parsing Variables <template.html#parsing_variables>`_
-
-   -  `Overview <template.html#parsing_variables_overview>`_
-   -  `Single Variables <template.html#parsing_variables_single_vars>`_
-   -  `Pair Variables <template.html#parsing_variables_pair_vars>`_
-   -  `Automatic
-      Variables <template.html#parsing_variables_automatic_vars>`_
-   -  `Parsing Full
-      Results <template.html#parsing_variables_parse_full>`_
-   -  `Parsing a Single Result
-      Row <template.html#parsing_variables_parse_row>`_
-
--  `Single and Pair Variables
-   (Legacy) <template.html#single_pair_legacy>`_
--  `Conditional Variables <template.html#conditional_pairs>`_
+.. contents::
+	:local:
 
 Introduction
 ------------
@@ -53,7 +35,13 @@ available to the module class the parameters, variables, and content of
 the tag currently being processed. To make these values available,
 simply access the TMPL object of the ExpressionEngine super object. ::
 
-	function module_example() {     // Make a local reference to the ExpressionEngine super object     $this->EE =& get_instance();          $name = $this->EE->TMPL->fetch_param('name', ''); }
+	function module_example()
+	{
+		// Make a local reference to the ExpressionEngine super object
+		$this->EE =& get_instance();
+		
+		$name = $this->EE->TMPL->fetch_param('name', '');
+	}
 
 Parameters
 ----------
@@ -62,10 +50,9 @@ Before calling the function that is being requested by the
 ExpressionEngine tag, the Template class will parse out any parameters
 for that tag and insert them into a Template class variable, thus making
 them easily accessible by the requested function by using the
-**fetch\_param()** method.
+**fetch\_param()** method::
 
-string **$this->EE->TYPE->fetch\_param** ( string name, [ string default
-] )
+	string **$this->EE->TYPE->fetch\_param** ( string name, [ string default ] )
 
 **fetch\_param()** takes an optional second argument, which is the value
 that will be returned if the parameter was not set in the opening tag.
@@ -74,7 +61,29 @@ It defaults to FALSE if the second argument is not supplied.
 Note: values of 'y', 'on' and 'yes' will all return 'yes', while 'n',
 'off' and 'no' all return 'no'. ::
 
-	// Default value is 'random' $order = $this->EE->TMPL->fetch_param('order', 'random');  if ( ! $channel = $this->EE->TMPL->fetch_param('channel')) {     $this->EE->language->fetch_language_file('module');     $this->EE->output->fatal_error($this->EE->language->line('module_invalid_channel'));     exit; } else {                 $str = $this->EE->functions->sql_andor_string($channel, 'channel_name');          if (strncmp($str, 'AND', 3) == 0)     {         $str = substr($str, 3);     }          $sql .= "SELECT channel_id FROM exp_channels WHERE ".$str;     $query = $this->EE->db->query($sql); } // If channel is not specified, then an error is output. // Otherwise, perform query.
+	// Default value is 'random'
+	$order = $this->EE->TMPL->fetch_param('order', 'random');
+	
+	if ( ! $channel = $this->EE->TMPL->fetch_param('channel'))
+	{
+	    $this->EE->language->fetch_language_file('module');
+	    $this->EE->output->fatal_error($this->EE->language->line('module_invalid_channel'));
+	    exit;
+	}
+	else
+	{            
+	    $str = $this->EE->functions->sql_andor_string($channel, 'channel_name');
+	    
+	    if (strncmp($str, 'AND', 3) == 0)
+	    {
+	        $str = substr($str, 3);
+	    }
+	    
+	    $sql .= "SELECT channel_id FROM exp_channels WHERE ".$str;
+	    $query = $this->EE->db->query($sql);
+	}
+	// If channel is not specified, then an error is output.
+	// Otherwise, perform query.
 
 Information Within Tag Pairs
 ----------------------------
@@ -96,11 +105,28 @@ of this is the {exp:moblog:check} tag.*
 the opening tag to the beginning of the closing tag, basically the HTML
 and tag variables::
 
-	{exp:magic:spell}  <h2>{title}</h2>  <p>{summary}</p>  {/exp:magic:spell}
+	{exp:magic:spell}
+	
+		<h2>{title}</h2>
+		
+		<p>{summary}</p>
+	
+	{/exp:magic:spell}
 
 **A module calling and using the tag data.** ::
 
-	$query = $this->EE->db->query($sql); $variables = array();  foreach($query->result as $row) {     $variables[] = array(             'foo' => $row['foo'],             'bar' => $row['bar']             ); }  return $this->EE->TMPL->parse_variables($tagdata, $variables);
+	$query = $this->EE->db->query($sql);
+	$variables = array();
+	
+	foreach($query->result as $row)
+	{
+	    $variables[] = array(
+				'foo' => $row['foo'],
+				'bar' => $row['bar']
+				);
+	}
+	
+	return $this->EE->TMPL->parse_variables($tagdata, $variables);
 
 Variable Types
 --------------
@@ -111,7 +137,18 @@ contextually understandable for the tag, thus making it easier for users
 to remember them and understand their usage. There are three kinds of
 variables in ExpressionEngine, single, pair, and conditional variables. ::
 
-	// Single Variable {summary}  // Pair Variable {category}  {/category}  // Conditional Variable {if body != ""}  {/if}
+	// Single Variable
+	{summary}
+	
+	// Pair Variable
+	{category}
+	
+	{/category}
+	
+	// Conditional Variable
+	{if body != ""}
+	
+	{/if}
 
 Parsing Variables
 -----------------
@@ -132,7 +169,79 @@ Master Variables Array
 
 First let's look at a typical variables array::
 
-	Array (     [0] => Array         (             [powers] => Array                 (                     [0] => Array                         (                             [power] => Super Strength                             [scale] => 8                         )                      [1] => Array                         (                             [power] => Invisibility                             [scale] => 4                         )                  )              [name] => Chameleon             [dob] => 136771200             [type] => Hero             [affiliation] => Litigation Coalition             [bio] => Array                 (                     [0] => Hailing from the planet Lizzon, Chameleon came to earth in 2003.                     [1] => Array                         (                             [text_format] => xhtml                             [html_format] => all                         )                  )          )      [1] => Array         (             [powers] => Array                 (                     [0] => Array                         (                             [power] => Poisonous Breath                             [scale] => 5                         )                      [1] => Array                         (                             [power] => Wealth                             [scale] => 7                         )                  )              [name] => Stinkor             [dob] => -58924800             [type] => Villain             [affiliation] => N.E.S.T.             [bio] => Array                 (                     [0] => As a child, Stinkor was teased for his bad breath. When he realized that it was more than bad...noxious even, he turned to a life of crime, robbing banks by knocking out the guards by saying "Hello" in their face.                     [1] => Array                         (                             [text_format] => xhtml                             [html_format] => all                         )                  )          )  )
+	Array
+	(
+	    [0] => Array
+	        (
+	            [powers] => Array
+	                (
+	                    [0] => Array
+	                        (
+	                            [power] => Super Strength
+	                            [scale] => 8
+	                        )
+	
+	                    [1] => Array
+	                        (
+	                            [power] => Invisibility
+	                            [scale] => 4
+	                        )
+	
+	                )
+	
+	            [name] => Chameleon
+	            [dob] => 136771200
+	            [type] => Hero
+	            [affiliation] => Litigation Coalition
+	            [bio] => Array
+	                (
+	                    [0] => Hailing from the planet Lizzon, Chameleon came to earth in 2003.
+	                    [1] => Array
+	                        (
+	                            [text_format] => xhtml
+	                            [html_format] => all
+	                        )
+	
+	                )
+	
+	        )
+	
+	    [1] => Array
+	        (
+	            [powers] => Array
+	                (
+	                    [0] => Array
+	                        (
+	                            [power] => Poisonous Breath
+	                            [scale] => 5
+	                        )
+	
+	                    [1] => Array
+	                        (
+	                            [power] => Wealth
+	                            [scale] => 7
+	                        )
+	
+	                )
+	
+	            [name] => Stinkor
+	            [dob] => -58924800
+	            [type] => Villain
+	            [affiliation] => N.E.S.T.
+	            [bio] => Array
+	                (
+	                    [0] => As a child, Stinkor was teased for his bad breath. When he realized that it was more than bad…noxious even, he turned to a life of crime, robbing banks by knocking out the guards by saying "Hello" in their face.
+	                    [1] => Array
+	                        (
+	                            [text_format] => xhtml
+	                            [html_format] => all
+	                        )
+	
+	                )
+	
+	        )
+	
+	)
 
 Looking at this example, we see two "rows" of results. Each "row"
 contains a pair variable, 'powers', which itself has multiple rows with
@@ -144,7 +253,31 @@ contents and typography formatting instructions, but more on that later.
 Let's look at a typical way that this array would have been created in
 an add-on's code. ::
 
-	$variables = array();  foreach ($query->result as $row) {     $powers = array()      foreach ($unserialize($row['powers']) as $power)     {         $powers[] = array('power' => $power['name'], 'scale' => $power['scale']);     }      $variable_row = array(                 'powers'    => $powers,                 'name'      => $row['name'],                 'dob'       => $row['dob'],                 'type'      => $row['type'],                 'affiliation'   => $row['affiliation']                 );      $type_prefs = array('text_format' => 'xhtml', 'html_format' => 'all');      $variable_row['bio'] = array($row['bio'], $type_prefs);      $variables[] = $variable_row; }
+	$variables = array();
+	
+	foreach ($query->result as $row)
+	{
+		$powers = array()
+	
+		foreach ($unserialize($row['powers']) as $power)
+		{
+			$powers[] = array('power' => $power['name'], 'scale' => $power['scale']);
+		}
+	
+		$variable_row = array(
+					'powers'	=> $powers,
+					'name'		=> $row['name'],
+					'dob'		=> $row['dob'],
+					'type'		=> $row['type'],
+					'affiliation'	=> $row['affiliation']
+					);
+	
+		$type_prefs = array('text_format' => 'xhtml', 'html_format' => 'all');
+	
+		$variable_row['bio'] = array($row['bio'], $type_prefs);
+	
+		$variables[] = $variable_row;
+	}
 
 In the example above, first the pair variable $powers array is created.
 Each "row" of the pair variable is an array of single variables, or even
@@ -171,11 +304,52 @@ which returns the parsed output. ::
 
 Assuming that our tagdata is as follows::
 
-	<h1>{name}</h1> <ul>     <li>Date of Birth: {dob format="%d %M, %Y"}</li>     <li>{type}</li>     <li>Affiliation: {affiliation}</li> </ul>  <ul> {powers}     <li{if scale > 5} class="great"{/if}>{power} ({scale})</li> {/powers} </ul>  {bio}
+	<h1>{name}</h1>
+	<ul>
+		<li>Date of Birth: {dob format="%d %M, %Y"}</li>
+		<li>{type}</li>
+		<li>Affiliation: {affiliation}</li>
+	</ul>
+	
+	<ul>
+	{powers}
+		<li{if scale > 5} class="great"{/if}>{power} ({scale})</li>
+	{/powers}
+	</ul>
+	
+	{bio}
 
 Our returned output would be::
 
-	<h1>Chameleon</h1> <ul>     <li>Date of Birth: 02 May, 1974</li>     <li>Hero</li>     <li>Affiliation: Litigation Coalition</li> </ul>  <ul>     <li class="great">Super Strength (8)</li>     <li>Invisibility (4)</li> </ul>  <p>Hailing from the planet Lizzon, Chameleon came to earth in 2003. </p>  <h1>Stinkor</h1> <ul>     <li>Date of Birth: 18 Feb, 1968</li>     <li>Villain</li>     <li>Affiliation: N.E.S.T.</li> </ul>  <ul>     <li>Poisonous Breath (5)</li>     <li class="great">Wealth (7)</li> </ul>  <p>As a child, Stinkor was teased for his bad breath.  When he realized that it was more than bad...noxious even, he turned to a life of crime, robbing banks by knocking out the guards by saying "Hello" in their face. </p>
+	<h1>Chameleon</h1>
+	<ul>
+		<li>Date of Birth: 02 May, 1974</li>
+		<li>Hero</li>
+		<li>Affiliation: Litigation Coalition</li>
+	</ul>
+	
+	<ul>
+		<li class="great">Super Strength (8)</li>
+		<li>Invisibility (4)</li>
+	</ul>
+	
+	<p>Hailing from the planet Lizzon, Chameleon came to earth in 2003.
+	</p>
+	
+	<h1>Stinkor</h1>
+	<ul>
+		<li>Date of Birth: 18 Feb, 1968</li>
+		<li>Villain</li>
+		<li>Affiliation: N.E.S.T.</li>
+	</ul>
+	
+	<ul>
+		<li>Poisonous Breath (5)</li>
+		<li class="great">Wealth (7)</li>
+	</ul>
+	
+	<p>As a child, Stinkor was teased for his bad breath.  When he realized that it was more than bad…noxious even, he turned to a life of crime, robbing banks by knocking out the guards by saying "Hello" in their face.
+	</p>
 
 The following subsections break down the procedures in detail.
 
@@ -184,12 +358,22 @@ Single Variables
 
 ::
 
-	<h1>{name}</h1> <ul>     <li>Date of Birth: {dob format="%d %M, %Y"}</li>     <li>{type}</li>     <li>Affiliation: {affiliation}</li> </ul>
+	<h1>{name}</h1>
+	<ul>
+		<li>Date of Birth: {dob format="%d %M, %Y"}</li>
+		<li>{type}</li>
+		<li>Affiliation: {affiliation}</li>
+	</ul>
 
 Single variables are defined in the array as simple key => value pairs. ::
 
-	$vars = array(         'name' => 'Stinkor',         'type' => 'Villain',         'dob' => -58924800,         'affiliation' => 'N.E.S.T.'         );
-
+	$vars = array(
+			'name' => 'Stinkor',
+			'type' => 'Villain',
+			'dob' => -58924800,
+			'affiliation' => 'N.E.S.T.'
+			);
+	
 Additionally, you can have Typography automatically performed on single
 variables, by sending the variable in the form of an array with two keys
 - the first being the content, and the second being an array including
@@ -197,14 +381,25 @@ any of the four available standard `Typography <typography.html>`_
 preferences that you wish to override. Sending an empty array will
 result in Typography being parsed with the class defaults. ::
 
-	$type_prefs = array(         'text_format'   => 'markdown',         'html_format'   => 'all',         'auto_links'    => 'y',         'allow_img_url' => 'y'         );                  $vars['bio'] = array('This is the variable contents', $type_prefs);
+	$type_prefs = array(
+			'text_format'   => 'markdown',
+			'html_format'   => 'all',
+			'auto_links'    => 'y',
+			'allow_img_url' => 'y'
+			);
+					
+	$vars['bio'] = array('This is the variable contents', $type_prefs);
 
 Pair Variables
 ~~~~~~~~~~~~~~
 
 ::
 
-	<ul> {powers}     <li>{power} ({scale})</li> {/powers} </ul>
+	<ul>
+	{powers}
+		<li>{power} ({scale})</li>
+	{/powers}
+	</ul>
 
 Pair variables are defined identically to single variables, but
 contained in a multidimensional array of "rows" with the pair variable's
@@ -212,8 +407,12 @@ name as the key.
 
 ::
 
-	$vars['powers'] = array(             array('power' => 'Poisonous Breath', 'scale' => 5),             array('power' => 'Wealth', 'scale' => 7),             array('power' => 'Flying', 'scale' => 6)             );
-
+	$vars['powers'] = array(
+				array('power' => 'Poisonous Breath', 'scale' => 5),
+				array('power' => 'Wealth', 'scale' => 7),
+				array('power' => 'Flying', 'scale' => 6)
+				);
+				
 Automatic Variables
 ~~~~~~~~~~~~~~~~~~~
 
@@ -295,7 +494,16 @@ to add them yourself.
 
 ::
 
-	$count = 0; $output = '';  foreach($query->result as $row) {     $row['count'] = ++$count;     $row['total_results] = $query->num_rows;          $output .= $this->EE->TMPL->parse_variables_row($tagdata, $row); }
+	$count = 0;
+	$output = '';
+	
+	foreach($query->result as $row)
+	{
+		$row['count'] = ++$count;
+		$row['total_results] = $query->num_rows;
+		
+		$output .= $this->EE->TMPL->parse_variables_row($tagdata, $row);
+	}
 
 Single and Pair Variables (Legacy)
 ----------------------------------
@@ -318,14 +526,35 @@ a function, $this->EE->TMPL->swap\_var\_single, for performing the find
 and replace, making sure that the variable is replaced correctly in the
 template. ::
 
-	foreach ($this->EE->TMPL->var_single as $key => $val) {     if ($key == "spell_name")     {         $tagdata = $this->EE->TMPL->swap_var_single($val, $row['spell_name'], $tagdata);     }          if (strncmp($key, "spell_date", 10) == 0)     {         $date = $this->EE->localize->decode_date($val, $row['spell_date']);                  $tagdata = $this->EE->TMPL->swap_var_single($key, $date, $tagdata);         } }
+	foreach ($this->EE->TMPL->var_single as $key => $val)
+	{
+	    if ($key == "spell_name")
+	    {
+	        $tagdata = $this->EE->TMPL->swap_var_single($val, $row['spell_name'], $tagdata);
+	    }
+	    
+	    if (strncmp($key, "spell_date", 10) == 0)
+	    {
+	        $date = $this->EE->localize->decode_date($val, $row['spell_date']);
+	        
+	        $tagdata = $this->EE->TMPL->swap_var_single($key, $date, $tagdata);    
+	    }
+	}
 
 Pair variables are a bit more complicated since they are often used for
 performing a loop within the tag data when there are multiple pieces of
 content of a similar type. A good example of this is the channel module
 where an entry might have multiple categories. ::
 
-	{exp:channel:entries}  <ul> {categories} <li>{category_name}</li> {/categories} </ul>  {exp:channel:entries}
+	{exp:channel:entries}
+	
+	<ul>
+	{categories}
+	<li>{category_name}</li>
+	{/categories}
+	</ul>
+	
+	{exp:channel:entries}
 
 The Template class variable containing the variable pairs in the tag
 data is $this->EE->TMPL->var\_pair, which is an array where the keys are
@@ -336,7 +565,25 @@ variable pair, you will have to search the template for it yourself
 using a preg\_match() (or possibly a preg\_match\_all(), if you believe
 there could be multiple instances of this variable pair). ::
 
-	foreach ($this->EE->TMPL->var_pair as $key => $val) {     if (strncmp($key, 'items', 5) == 0)     {         $temp = preg_match("/".LD.$key.RD."(.*?)".LD.'\'.SLASH.'items'.RD."/s", $this->EE->TMPL->tagdata, $matches)          // Set the display preference         $nest = (is_array($val) && isset($val['nest'])) ? $val['nest'] : 'no';                  if ($nest == 'yes')         {             $temp = $this->nested_items($this->items, $temp);         }         else         {             $temp = $this->linear_items($this->items, $temp);         }                       } }
+	foreach ($this->EE->TMPL->var_pair as $key => $val)
+	{
+		if (strncmp($key, 'items', 5) == 0)
+	    {
+	    	$temp = preg_match("/".LD.$key.RD."(.*?)".LD.'\'.SLASH.'items'.RD."/s", $this->EE->TMPL->tagdata, $matches)
+	
+	        // Set the display preference
+	        $nest = (is_array($val) && isset($val['nest'])) ? $val['nest'] : 'no';
+	        
+	        if ($nest == 'yes')
+	        {
+	        	$temp = $this->nested_items($this->items, $temp);
+	        }
+	        else
+	        {
+	        	$temp = $this->linear_items($this->items, $temp);
+	        }                  
+	    }
+	}
 
 Conditional Variables
 ---------------------
@@ -346,7 +593,19 @@ data in order to show data if certain defined criteria are met. The
 structure should be a variable being checked against another variable or
 value via an operator::
 
-	// Structure {if variable comparison-operator value}  Data between the tags that gets shown if the condition is met.  {/if}  // Example {if spell_level > 3}  Advance Magicians Only  {/if}
+	// Structure
+	{if variable comparison-operator value}
+	
+	Data between the tags that gets shown if the condition is met.
+	
+	{/if}
+	
+	// Example
+	{if spell_level > 3}
+	
+	Advance Magicians Only
+	
+	{/if}
 
 There is a great deal more information about possible conditionals in
 the `Conditional Global
@@ -367,7 +626,13 @@ data you will send a string of either 'TRUE' or 'FALSE' depending on
 whether that conditional should be evaluated as true or false. The
 example belows gives you an idea of how this should work::
 
-	$cond             = $row;     // $row contains query fields and values, ex:  'title' => "First Entry"  $cond['logged_in']      = ($this->EE->session->userdata('member_id') == 0) ? 'FALSE' : 'TRUE'; $cond['logged_out']     = ($this->EE->session->userdata('member_id') != 0) ? 'FALSE' : 'TRUE'; $cond['allow_comments']     = (isset($row['allow_comments']) AND $row['allow_comments'] == 'n') ? 'FALSE' : 'TRUE';  $tagdata = $this->EE->functions->prep_conditionals($tagdata, $cond);
+	$cond				= $row; 	// $row contains query fields and values, ex:  'title' => "First Entry"
+	
+	$cond['logged_in']		= ($this->EE->session->userdata('member_id') == 0) ? 'FALSE' : 'TRUE';
+	$cond['logged_out']		= ($this->EE->session->userdata('member_id') != 0) ? 'FALSE' : 'TRUE';
+	$cond['allow_comments']		= (isset($row['allow_comments']) AND $row['allow_comments'] == 'n') ? 'FALSE' : 'TRUE';
+	
+	$tagdata = $this->EE->functions->prep_conditionals($tagdata, $cond);
 
 Once you send your tag data and your array of conditional variables, the
 $this->EE->functions->prep\_conditionals() function processes the
