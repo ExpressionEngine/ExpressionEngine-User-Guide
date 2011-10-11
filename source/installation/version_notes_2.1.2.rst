@@ -84,6 +84,6 @@ Added a new method settings_modify_column($params) to the custom field
 types. See `Fieldtypes Functions
 Reference <../development/fieldtypes.html#functions>`_.
 
-`Return to Update Page <update.html#additional-steps>`_
+:ref:`Return to Update Page <update-additional-steps>`
 
 

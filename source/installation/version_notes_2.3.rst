@@ -37,4 +37,4 @@ The following view files were edited:
 -  views/tools/communicate.php
 
 
-`Return to Update Page <update.html#additional-steps>`_
+:ref:`Return to Update Page <update-additional-steps>`
