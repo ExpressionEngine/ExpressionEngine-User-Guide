@@ -1,6 +1,15 @@
 Update Notes for Version 2.3
 ============================
 
+Emoticon URL Variable Name Change
+---------------------------------
+
+The ``emoticon_path`` config variable has been renamed to be
+consistent with ExpressionEngine naming conventions for URL
+configuration variables. It is now ``emoticon_url``, please
+update any index.php config_overrides you may have for this
+variable.
+
 
 Altered Language Files
 ----------------------
