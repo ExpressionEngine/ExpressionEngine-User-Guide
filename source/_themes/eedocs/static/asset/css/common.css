@@ -29,6 +29,8 @@ h1{ font-size: 28px; }
 
 h2{ font-size: 24px; }
 
+h1, h2, h3, h4, h5, h6{ margin-bottom: 20px; }
+
 h2, h3{ border-bottom: 2px solid #EEEEEE; padding: 0 0 3px; }	
 
 h3{ border-color: #E5E5E5; border-width: 1px; }
@@ -51,6 +53,8 @@ p, dl, ul, ol{ margin: 20px 0; }
 	li > ol{ margin: 0; margin-left: 40px; }
 
 	dl > dd{ margin-left: 20px; }
+
+#expressionengine-user-guide li em { font-style: normal; }
 
 p, li, dd, dt, pre{ line-height: 1.5; }
 
@@ -129,11 +133,12 @@ fieldset{ border: 0; }
 .cp-path,
 .important,
 .note{ 
-	background-color: #F5FBFF; 
+	background-color: #fafdff; 
 	border: 1px solid #C8DEF0; 
 	margin: 20px 0 20px 20px; 
 	padding: 10px 10px 8px; 
 }
+
 
 	.highlight-ci,
 	.highlight-ee,
