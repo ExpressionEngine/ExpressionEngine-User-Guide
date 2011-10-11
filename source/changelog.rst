@@ -12,12 +12,12 @@ The Change Log for ExpressionEngine 1.x is `available here.
 Version 2.3.0
 -------------
 
-Release Date: August 1, 2011
+Release Date: October 11, 2011
 
 - Important:
 
   - Fixed a potential cross site scripting vulnerability.
-  - Fixed a bug (#16489) where XIDs were not validated correctly.
+  - Fixed a potential cross site request forgery vulnerability.
   - Fixed a bug where using the MSM multi-site login feature would
     sometimes latch onto the wrong session.
 
