@@ -125,37 +125,5 @@
 			<p><a href="{{ project_url }}">{{ project }}</a> &ndash; Copyright &copy; {{ copyright }}</a></p>
 		</div><!-- /#footer -->
 	{%- endblock %}
-	
-	<script src="{{ pathto('_static/asset/js/jquery-ui-min.js', 1) }}" type="text/javascript" charset="utf-8" async></script>
-	<script type="text/javascript" charset="utf-8">
-		$('#toc-link').click(function(){
-			$('#table-contents').animate({ left: '0' },'fast');
-			return false;
-		});
-		$('html').click(function(){
-			if ($('#table-contents').css("left") == '0px'){
-				$('#table-contents').animate({ left: '-520' },'fast');
-			}
-		});
-		$('#table-contents').click(function(event){
-			event.stopPropagation();
-		});
-/*		$('*:not(#table-contents,#toc-link)').click(function(){
-			if ($('#table-contents').css("left") == '0px'){
-				$('#table-contents').animate({ left: '-520' },1000);
-			}
-		});
-/*		$("#toc-link").click(function () {
-			$('#table-contents').show("slide", { direction: "left" }, 100);
-			event.stopPropagation();
-			return false;
-		});
-		$('*:not(#table-contents,#toc-link)').click(function () {
-			if ($('#table-contents').is(":visible")) {
-				$('#table-contents').hide("slide", { direction: "left" }, 100);
-				event.stopPropagation();	
-			}
-		}); */
-	</script>
 	</body>
 </html>
