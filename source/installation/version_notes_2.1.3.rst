@@ -15,6 +15,6 @@ stylesheet. Please add them to your custom themes.
     }
 
 
-`Return to Update Page <update.html>`_
+`Return to Update Page <update.html#additional-steps>`_
 
 

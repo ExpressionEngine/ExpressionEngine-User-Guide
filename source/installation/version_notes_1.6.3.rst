@@ -30,6 +30,6 @@ to::
 
 	<div class='profileHeadingBG'><div class="tableHeading">{lang:heading}</div></div>
 
-`Return to Update Page <update.html>`_
+`Return to Update Page <update.html#additional-steps>`_
 
 

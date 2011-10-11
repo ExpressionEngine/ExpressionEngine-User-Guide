@@ -23,6 +23,6 @@ followed the instructions on updating your language folder, but you will
 need to upload the ext.cp\_jquery.php file from the download to your
 /system/extensions/ folder.
 
-`Return to Update Page <update.html>`_
+`Return to Update Page <update.html#additional-steps>`_
 
 

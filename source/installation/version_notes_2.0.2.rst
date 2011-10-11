@@ -85,6 +85,6 @@ Prior to 1.6.9:
               )
     )
 
-`Return to Update Page <update.html>`_
+`Return to Update Page <update.html#additional-steps>`_
 
 

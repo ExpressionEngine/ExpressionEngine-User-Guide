@@ -108,4 +108,4 @@ value='Search'
 value='Submit'
     value='{lang:submit}'
 
-`Return to Update Page <update.html>`_
+`Return to Update Page <update.html#additional-steps>`_

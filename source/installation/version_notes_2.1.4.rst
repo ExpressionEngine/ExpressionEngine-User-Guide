@@ -74,3 +74,4 @@ The following views were edited:
 -  themes/cp\_themes/mobile/addons/accessory\_preferences.php
 -  themes/cp\_themes/mobile/content/publish.php
 
+`Return to Update Page <update.html#additional-steps>`_

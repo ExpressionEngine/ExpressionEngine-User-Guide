@@ -1,5 +1,5 @@
-Update Notes for Version 2.0.0
-==============================
+Update Notes for Version 2.0
+============================
 
 ExpressionEngine 2.0.0 brings an immense amount of changes, most of
 which are handled for you automatically in the update process (such as
@@ -33,6 +33,6 @@ aware of prior to upgrading.
    If you need assistance with this modification, please contact
    ExpressionEngine support.
 
-`Return to Update Page <update.html>`_
+`Return to Update Page <update.html#additional-steps>`_
 
 

@@ -81,6 +81,6 @@ documented <../development/fieldtypes.html#class_variables>`_ as soon as
 possible so that sites using your Field Types do not break in future
 releases.
 
-`Return to Update Page <update.html>`_
+`Return to Update Page <update.html#additional-steps>`_
 
 
