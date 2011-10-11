@@ -29,6 +29,8 @@ h1{ font-size: 24px; }
 
 h2{ border-bottom: 2px solid #EEEEEE; font-size: 18px; padding: 0 0 3px; }	
 
+	h1, h2, h3, h4, h5, h6{ margin-bottom: 20px; }
+
 	h1 a,
 	h2 a{ font-weight: normal; text-decoration: none; }
 	
@@ -41,7 +43,7 @@ p, ul, ol{ margin: 20px 0; }
 	li > ul,
 	li > ol{ margin: 0; margin-left: 40px; }
 
-#expressionengine-user-guide li em {font-style: normal}
+#expressionengine-user-guide li em { font-style: normal; }
 
 p, li, dd, dt, pre{ line-height: 1.5; }
 
@@ -69,10 +71,10 @@ fieldset{ border: 0; }
 .highlight-ee,
 .highlight-php,
 .cp-path,
-.important{ background-color: #F5FBFF; border: 1px solid #C8DEF0; padding: 10px 10px 8px; }
+.important{ background-color: #fafdff; border: 1px solid #C8DEF0; margin: 20px 0; padding: 10px 10px 8px; }
 
 	.highlight-ee,
-	.highlight-php {
+	.highlight-php{
 		-moz-box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
 		-webkit-box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
 		box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
