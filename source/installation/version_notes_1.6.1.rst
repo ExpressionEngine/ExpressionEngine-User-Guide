@@ -98,7 +98,7 @@ that contains changes. To update your language pack, you can download
 this text file, make the changes, and simply copy the new keys to the
 appropriate language files.
 
-`Return to Update Page <update.html>`_
+:ref:`Return to Update Page <update-additional-steps>`
 
 `ExpressionEngine <http://expressionengine.com/>`_ – Copyright ©
 2002-2011 – `EllisLab, Inc. <http://ellislab.com/>`_

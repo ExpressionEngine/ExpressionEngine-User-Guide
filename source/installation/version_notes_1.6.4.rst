@@ -12,6 +12,6 @@ need to instead use {name\_of\_recipient} for the recipient's name and
 You can find this template in *Admin* > *Specialty Templates* > *User
 Comment Notification*.
 
-`Return to Update Page <update.html>`_
+:ref:`Return to Update Page <update-additional-steps>`
 
 
