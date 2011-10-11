@@ -124,39 +124,27 @@ fieldset{ border: 0; }
 
 .top{ float: right; }
 
-.highlight-ci,
+.admonition,
 .highlight-ee,
+.highlight-ci,
 .highlight-rst,
 .highlight-bash,
 .highlight-perl,
 .highlight-php,
-.cp-path,
-.important,
-.note{ 
-	background-color: #fafdff; 
+.cp-path{ 
+	background-color: #F9FEFF; 
 	border: 1px solid #C8DEF0; 
-	margin: 20px 0 20px 20px; 
+	-moz-box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
+	-webkit-box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
+	box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
+	margin: 20px 0; 
 	padding: 10px 10px 8px; 
 }
 
-
-	.highlight-ci,
-	.highlight-ee,
-	.highlight-rst,
-	.highlight-bash,
-	.highlight-perl,
-	.highlight-php{
-		-moz-box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
-		-webkit-box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
-		box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
-	}
-
-	.cp-path{ background-color: #FFFDED; border-color: #D1CDB0; }
-	.important, .note{ background-color: #F2FFE8; border-color: #B9D3A6; }
-	.highlight-rst{ background-color: #F9FEFE; border-color: #AACFCF; }
+	.admonition p{ margin: 0; }
 	
-	.important p,
-	.note p{ margin: 0; }
+	.cp-path{ background-color: #FAFFF6; border-color: #D1CDB0; }
+	.important, .note{ background-color: #FFFFF2; border-color: #C8C8A5; }
 	
 .admonition-title{ 
 	float: left;
