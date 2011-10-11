@@ -4,9 +4,9 @@ Updating from a Previous Version of ExpressionEngine
 This page describes the process for updating from a previous version of
 ExpressionEngine 2 to the latest version of ExpressionEngine 2.
 
-**Important:** If you are updating from ExpressionEngine 1.x use the
-`Updating from 1.x to ExpressionEngine 2.x <update_from_1.x.html>`_
-instructions.
+.. important:: If you are updating from ExpressionEngine 1.x use the
+   `Updating from 1.x to ExpressionEngine 2.x <update_from_1.x.html>`_
+   instructions.
 
 1. Prepare and Back-up
 ----------------------
