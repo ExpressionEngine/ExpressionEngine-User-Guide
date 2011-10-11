@@ -1,8 +1,6 @@
 Multiple Site Manager
 =====================
 
-Change Log
-
 
 Version 2.1.1
 -------------
