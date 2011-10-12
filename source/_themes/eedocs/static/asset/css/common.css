@@ -131,7 +131,8 @@ fieldset{ border: 0; }
 .highlight-bash,
 .highlight-perl,
 .highlight-php,
-.cp-path{ 
+.cp-path,
+.codeblock{ 
 	background-color: #F9FEFF; 
 	border: 1px solid #C8DEF0; 
 	-moz-box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
@@ -142,6 +143,8 @@ fieldset{ border: 0; }
 }
 
 	.admonition p{ margin: 0; }
+	
+	.codeblock{ margin: 10px 0; }
 	
 	.cp-path{ background-color: #FAFFF6; border-color: #D1CDB0; }
 	.important, .note{ background-color: #FFFFF2; border-color: #C8C8A5; }
@@ -265,6 +268,41 @@ fieldset{ border: 0; }
 #footer{ background-color: #F9F9F9; border-top: 1px solid #CCCCCC; padding: 20px; }
 
 	#footer p{ margin: 0; }
+
+#comments,
+#feedLink{ background: #FCFCFC; padding: 1px 40px 20px; }
+
+	#comments{ border-top: 1px solid #CCCCCC; }
+	#comments h3{ margin: 20px 0; }
+
+.comments td.column1,
+.comments td.post{ background-color: #FFFFFF; padding: 10px; }
+
+.comments td.staffeven{ border-left: 10px solid #C8DEF0; }
+
+#comment_form p,
+.comments p{ margin: 0; }
+
+	.comments p{ margin-bottom: 10px; }
+
+#comment_form textarea{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	resize: none; 
+	width: 100%; 
+}
+
+#comment_form input[type="submit"]{ margin-top: 10px; }
+
+	#comment_form textarea:focus{ background-color: #FFFFF2; border: 1px solid #666666; outline: 0; }
+
+	#commentFormInstructions{ font-size: 12px; margin: 20px 0; }
+
+	#feedLink a{ font-size: 16px; }
+
+	#feedLink a img{ float: left; margin-right: 5px; }
 
 @media (max-width:800px){
 	#footer .top,
