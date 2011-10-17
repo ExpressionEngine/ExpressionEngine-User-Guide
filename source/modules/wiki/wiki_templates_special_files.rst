@@ -4,6 +4,7 @@ Wiki Special Files Template
 This template displays all the wiki's upload files as outlined below:
 
 |Displays all the wiki's upload files.|
+
 In addition to the variables in the `Wiki Page
 template <wiki_templates_page.html>`_, the Special Files template has:
 

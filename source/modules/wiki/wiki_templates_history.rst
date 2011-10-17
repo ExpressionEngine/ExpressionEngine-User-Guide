@@ -4,8 +4,8 @@ Wiki History Template
 This template determines how an article's revision history is displayed
 within the Wiki Page wrapper template as outlined below:
 
-|The Wiki History Template determines the visual display of an article's
-revision history as highlighted below.|
+|The Wiki History Template determines the visual display of an article's revision history as highlighted below.|
+
 In addition to the variables in the `Wiki Page
 template <wiki_templates_page.html>`_, the History template has:
 

@@ -4,6 +4,7 @@ Wiki Special Upload Form Template
 This template displays the wiki's upload form as outlined below:
 
 |Displays the wiki's upload form.|
+
 In addition to the variables in the `Wiki Page
 template <wiki_templates_page.html>`_, the Special Upload Form template
 has:
