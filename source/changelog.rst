@@ -8,6 +8,209 @@ ExpressionEngine 2.x Change Log
 The Change Log for ExpressionEngine 1.x is `available here.
 <http://expressionengine.com/legacy_docs/changelog.html>`_
 
+
+Version 2.3.0
+-------------
+
+Release Date: October 11, 2011
+
+- Important:
+
+  - Fixed a potential cross site scripting vulnerability.
+  - Fixed a potential cross site request forgery vulnerability.
+  - Fixed a bug where using the MSM multi-site login feature would
+    sometimes latch onto the wrong session.
+
+- General Changes:
+
+  - Removed accordions from Member Groups, Member Preferences and
+    Channel Preferences.
+  - Forum search now uses board default pagination per page settings
+    instead of using a hardcoded 20 items per page.
+  - Updated pagination variable pair that allows much more control over
+    pagination within channel entries and comments.
+  - Member search tokens that allow you to specify different information
+    to search for (e.g. email:ellislab.com username:test screen_name:'John Doe')
+  - Added quick way to copy and paste custom field tags from the
+    Custom Field Group's page
+  - Added a hidden config variable ``remove_unparsed_vars`` which, when
+    set to 'n' in conjunction with debug = 0, will not remove unparsed
+    ExpressionEngine Variables.
+  - Modified legacy debug 0 setting to only remove unparsed template
+    variables when the 'remove_unparsed_vars' hidden config is set to
+    'y', fixing some common issues with JavaScript and JSON getting
+    "eaten" on sites using that legacy debug setting.
+  - Fixed a bug in the Metaweblog API module that was causing
+    authentication errors.
+  - Fixed a bug in parsing image tag attributes that could lead to a PHP
+    notice error when only "Safe HTML" is allowed.
+  - Fixed a bug in the template parser that was preventing the minified
+    jQuery from being used in an ExpressionEngine template
+  - Fixed a bug where a PHP notice error would occur when debug is enabled
+    and an invalid ExpressionEngine tag occurs on the page that only has
+    one tag segment.
+  - Fixed a cosmetic IE JavaScript error (#15196) on the publish page.
+  - Fixed a display error in the file upload modal of the Corporate theme.
+  - Fixed a bug where reassignment of entries when deleting a member was
+    limited to superadmins.
+  - Fixed a bug (#16083) where editing or adding categories from the
+    Publish page did not work properly in IE7.
+  - Fixed a bug (#15530) where a registering member could supply a value
+    that was not an option in a Select List member field.
+  - Fixed a bug (#16214) where new categories would be sorted
+    alphabetically when the group was using a custom sort order instead. 
+  - Fixed a bug (#16232) where the multi-entry editor did not update
+    entry edit dates.
+  - Fixed a bug (#16246) where the Date fieldtype could not show an
+    error if an invalid date was entered.
+  - Fixed a bug (#16239) where some buttons in the Control Panel had
+    minor display issues.
+  - Fixed a bug (#16038) where the File Manager had display issues when
+    the Corporate theme was used.  
+  - Fixed a bug (#16265) where the Email Contact Form could fail to
+    send in some cases if the user_recipients parameter was not specified.
+  - Fixed a bug (#16422) where some colors appeared incorrectly in
+    the Datepicker.
+  - Fixed a bug (#16288) where ``http://`` could be undesirably prepended
+    to some General Configuration URLs.
+  - Fixed a bug (#16397) where the Add Category dialog could appear
+    incorrectly in some cases.
+  - Fixed a bug (#16639) where non-Super Admins with group administration
+    privileges could change a Super Admin's member group.
+  - Fixed a bug (#16626) where non-Super Admins with profile editing
+    privileges could edit a Super Admin's profile. 
+  - Fixed a documentation error (#16213) where some parameters available
+    to exp:member:login_form were not listed.
+  - Fixed a documentation error (#16564) where the tag for generating
+    comment editing Javascript was incorrectly listed.
+  - Fixed a typo in the Control Panel (#16403)
+  - Fixed a breadcrumb language key issue in the Control Panel (#16229)
+  - Fixed a bug where the private message inbox only displayed 5
+    messages per page.
+  - Fixed various jQuery UI display issues in the corporate theme.
+  - Fixed a bug where Datepicker hours before 10 were not consistently
+    prefixed with a zero.
+  - Fixed a bug where sorting channel entries on entry_date instead
+    of date ignored additional sort fields.
+  - Fixed a bug (#16149) where File Manager permissions would prevent
+    someone from uploading files on the Publish page.
+  - Fixed a bug (#16157) where Template Access preferences would show
+    up as being unaccessible in the File manager.
+  - Fixed a bug (#16183) where Wikis would show an error if all tracking
+    was disabled. Thanks to Erik Reagan for the fix.
+  - Fixed a bug (#16193) where uninstalling the Moblog would cause an
+    error due to a misnamed variable.
+  - Fixed a bug (#16202) where the backspace parameter in the
+    category_archive tag was removing characters from the whole loop,
+    not each iteration.
+  - Fixed a bug (#16204) where setting permissions on the closed status
+    would not be obeyed.
+  - Fixed a bug (#16211) where file size was not being updated after
+    any image manipulation.
+  - Fixed a bug (#16179) where images were being upsized instead of
+    restricting the width.
+  - Fixed a bug (#16114) where if $config['debug'] was set to 0, it
+    would not show up as an option in Output and Debugging Preferences.
+  - Fixed a bug (#15158) where the search excerpt field could only
+    be selected from searchable fields.
+  - Fixed a bug (#15510) where creating a channel via the API could
+    cause an error if there were no existing channels.
+  - Fixed a bug where syncing a directory with files that have
+    spaces in their names would break links to existing File fields
+    and textarea fields.
+  - Fixed a bug (#16264) where pending members were allowed to log in.
+  - Fixed a bug where groups in an MSM site that didn't have CP access
+    to the main site couldn't login to the CP of any other sites.
+  - Fixed a bug (#16200) where forum search was returning inconsistent
+    and incorrect results.
+  - Fixed a bug (#16322) where the Upload File button wasn't working
+    in the File Manager.
+  - Fixed a bug (#16380) where the arrow from an accordion was
+    overlapping the text in the accordion header.
+  - Fixed a bug (#15525) where the date picker on a SafeCracker date
+    field would always use US date formatting even when European date
+    formatting was chosen.
+  - Fixed a bug where the channel names in the Agile Records themes were
+    incorrect for both the comments and comment_preview templates within
+    the news template group.
+  - Fixed a bug (#16414) where the RSS feed for a forum would only
+    output the first forum's posts.
+  - Fixed a bug (#16406) where publish layouts were breaking if you
+    disabled comments after creating a layout. Thanks to John D. Wells
+    for supplying the fix.
+  - Fixed a bug (#16363) where items on the calendar were being placed
+    on the wrong day.
+  - Fixed a bug (#16388) where the file manager modal required scrolling
+    up to view in IE7 (updated the jQuery UI theme).
+  - Fixed a bug (#16525) where password reset did not honor the password
+    length requirements.
+  - Fixed a bug (#16539) where auto generated passwords did not honor
+    the secure password configuration setting.
+  - Fixed a bug (#16116) where image files could be upsized if either,
+    but not both, max height or max width was specified for the directory.
+  - Fixed a bug (#16159) where you could not edit channel entries when
+    the forum tab's forum topic id had been specified a 0.
+  - Fixed a bug (#16389) where a MySQL error occurred when displaying
+    comments with dynamic set to off and pagination on.
+  - Fixed a bug (#16349) where a PHP error could occur when changing
+    comment status and the ``update_comment_additional`` hook was being used.
+  - Fixed a bug (#16620) where multi-site login did not respect the
+    return parameter.
+  - Fixed a bug (#16611) where a PHP error could occur when recounting
+    member statistics if private messages existed.
+  - Fixed a bug where a PHP error could occur when sending private
+    messages with attachments.
+  - Fixed a bug (#16515) in the comments control panel where the second
+    page of comments for a single entry was not limited to that entry.
+  - Fixed a bug (#16420) where the reset_password was not properly
+    cleared from the database once successfully changed in the forgotten
+    password routine.
+  - Fixed a bug (#16592) where the file selector button on the
+    publish page did not work when no image button was defined in the
+    users' html buttons.
+  - Fixed a bug (#16267) where the publish page spellcheck iframe did
+    not display properly due to the failure to load a stylesheet.
+  - Fixed a bug (#16650) where the Moblog did not include files with
+    upper case extensions.
+  - Fixed a bug (#16107) where user notepad content did not properly
+    display.
+  - Fixed a bug (#16115) where the "Upload File" button on the File
+    Manager home page was unable to be translated.
+  - Fixed a bug (#16144) where an incorrect error message appeared on
+    unsuccessful authentication on the front end.
+  - Fixed a bug (#16102) where the file manager category filtering did
+    not function properly.
+  - Fixed a bug (#16163) where the Comment Module Control Panel page was
+    unable to limit to specific entry ids.
+  - Fixed a bug (#16143) where a PHP error occurred on the Edit Member
+    Group page when MSM was active.
+  - Fixed a bug (#16180) where the CP Menu Help Links in the File
+    Manager pointed to incorrect URLs.
+  - Fixed a bug (#15909) where usernames did not have leading or
+    trailing whitespace trimmed.
+  - Fixed a bug (#16112) where a MySQL error could occur when creating
+    a channel field and not including the ordering field.
+  - Fixed a bug (#16228) where a PHP error occurred in the member
+    importer.
+
+- Developers:
+
+  - Deprecated ``Channel_model::get_channel_categories()``.
+  - Deprecated ``Localize::set_gmt()``.
+  - Modified routing behavior to no longer require query strings to be
+    enabled on the frontend. Please make sure you do not use ``$_GET``
+    variables on the frontend (exceptions: ACT, URL, css).
+  - Fixed a bug (#16350) where the *update_comment_additional* hook
+    in ``change_comment_status()`` was being passed an object instead of
+    the documented array.
+  - Fixed a bug (#16366) where the ``can_access_module()`` method in the
+    member model did not automatically return TRUE for superadmins.
+  - Fixed a bug (#16383) where the ``get_channel_categories`` method in the
+    channel_model was not working properly due to an invalid where clause.
+  - Fixed a bug in ``Auth::verify()`` where it was checking for CP access
+    permissions on front end requests.
+
+
 Version 2.2.2
 -------------
 
@@ -19,14 +222,20 @@ accounts.  Version 2.2.2 fixes a critical bug on these sites where Pending
 members could log in and have similar permissions to members in the default
 Member group.
 
--	Removed accordions from Member Groups, Member Preferences and Channel Preferences.
--	Temporarily disabled the Profiler in the installer / updater while investigating an
-	issue in certain environments where the Profiler may throw an exception and halt the installer.
--	Fixed a bug (#16143) where a PHP error occurred on the Edit Member Group page when MSM was active.
--	Fixed a bug (#16144) where an incorrect error message appeared on unsuccessful authentication on the front end.
--	Fixed a bug (#16264) where Pending members were allowed to log in.
--	Fixed a bug where groups in an MSM site that didn't have CP access to the main site couldn't login to the CP of any other sites.
--	Fixed a bug where syncing a directory with files that have spaces in their names would break links to existing File fields and textarea fields.
+- Removed accordions from Member Groups, Member Preferences and Channel
+  Preferences.
+- Temporarily disabled the Profiler in the installer / updater while
+  investigating an issue in certain environments where the Profiler may
+  throw an exception and halt the installer.
+- Fixed a bug (#16143) where a PHP error occurred on the Edit Member Group
+  page when MSM was active.
+- Fixed a bug (#16144) where an incorrect error message appeared on
+  unsuccessful authentication on the front end.
+- Fixed a bug (#16264) where Pending members were allowed to log in.
+- Fixed a bug where groups in an MSM site that didn't have CP access to
+  the main site couldn't login to the CP of any other sites.
+- Fixed a bug where syncing a directory with files that have spaces in
+  their names would break links to existing File fields and textarea fields.
 
 	
 Version 2.2.1

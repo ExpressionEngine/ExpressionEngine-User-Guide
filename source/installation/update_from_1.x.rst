@@ -4,11 +4,11 @@ Upgrading from 1.x to 2.x
 This page describes the process for upgrading from ExpressionEngine 1.x
 to ExpressionEngine 2.x.
 
-**Important:** Third-party add-ons from version 1.x will not work with
-ExpressionEngine 2.x. Please contact each add-on's author for a
-2.x-compatible version before upgrading, or your site may not function
-properly. The installer will automatically disable all extensions as
-part of the upgrade process.
+.. important:: Third-party add-ons from version 1.x will not work with
+   ExpressionEngine 2.x. Please contact each add-on's author for a
+   2.x-compatible version before upgrading, or your site may not function
+   properly. The installer will automatically disable all extensions as
+   part of the upgrade process.
 
 1. Prepare for the Upgrade
 --------------------------
@@ -66,11 +66,11 @@ upload the following ExpressionEngine 2.x files and folders:
    permissions on the folder are set to 777. The upgrader will sync your
    templates with the database and archive the old files.
 
-**Important:** If running the Multiple Site Manager and saving templates
-as files, you will need to create template folders for each site and and
-copy your 1.x templates into the proper folders. The folders should
-reside in system/expressionengine/templates and be the same as each Site
-Short Name.
+.. important:: If running the Multiple Site Manager and saving templates
+   as files, you will need to create template folders for each site and and
+   copy your 1.x templates into the proper folders. The folders should
+   reside in system/expressionengine/templates and be the same as each Site
+   Short Name.
 
 For example, if you have 3 Sites:
 

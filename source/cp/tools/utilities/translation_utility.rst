@@ -44,7 +44,7 @@ language pack:
 #. Choose "English" as your language under My Account > Localization
    Settings.
 #. Place a copy of the old language pack inside of the
-   system/translations/ folder. Ensure that the files are set to
+   system/expressionengine/translations/ folder. Ensure that the files are set to
    permissions of 666 so that ExpressionEngine can modify them.
 #. As you go through each files using the Translation Utility any new
    untranslated text will appear in English.

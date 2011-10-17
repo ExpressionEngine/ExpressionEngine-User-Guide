@@ -1,7 +1,13 @@
 Multiple Site Manager
 =====================
 
-Change Log
+
+Version 2.1.1
+-------------
+
+Release Date: October 11, 2011
+
+- Fixed various bugs in the multi-login functionality.
 
 
 Version 2.1.0

@@ -1,6 +1,25 @@
 ExpressionEngine Forum Module Change Log
 ========================================
 
+
+Version 3.1.6
+-------------
+
+Release Date: October 11, 2011
+
+- Fixed a bug (#16495) where a PHP error occurred when using the
+  {forum_reply} tag.
+- Fixed a bug (#16152) where pagination output would be incorrect.
+- Fixed a bug (#16122) where the forum module version number was not correct.
+- Updated the default forum RSS and Atom feed templates
+- Modified forum RSS and Atom feed templates to sort by topic date
+  instead of last reply date (which was not useful in this context)
+- Added some visual distinction between forum names and descriptions
+  on the Forum Management page.
+- Fixed a bug where forum feeds were not outputting proper XML headers.
+- Fixed a bug with GTM dates in forum feeds
+
+
 Version 3.1.5
 -------------
 
