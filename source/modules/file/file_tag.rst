@@ -137,12 +137,10 @@ disable=
 	disable="categories"
 
 The disable= parameter allows you to turn off aspects of the tag that
-you might not be using in order to improve performance. The channel tag
-is designed to fetch a lot of information by default: Categories,
-channel fields, member data, etc. Depending on how you use the tag, some
-of this data may not be needed. Through the use of the "disable"
-parameter you can turn off aspects of the tag in order to make it more
-lightweight.
+you might not be using in order to improve performance. The File tag
+is designed to fetch a lot of information by default, but through the
+use of the "disable" parameter you can turn off aspects of the tag in
+order to make it more lightweight.
 
 The syntax for the disable parameter is this: disable="ITEM YOU WANT TO
 DISABLE". The following items can be turned off:
@@ -156,7 +154,7 @@ be disabled.
 You may specify multiple items to disable by separating them with the
 pipe character::
 
-	disable="categories|member_data"
+	disable="categories|pagination"
 
 The best approach is to examine the data you are showing in each
 instance of the tag. If there is a type of data you are not utilizing,
