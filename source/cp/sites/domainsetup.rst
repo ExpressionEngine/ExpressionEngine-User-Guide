@@ -81,7 +81,8 @@ Uncomment the following $assign\_to\_config variables. Set the Short
 Name of the site this file will log into, and this file's URL. For
 example::
 
-	  $assign_to_config['site_name'] = 'domain2_short_name';     $assign_to_config['cp_url']    = 'http://domain2.com/admin.php';
+     $assign_to_config['site_name'] = 'domain2_short_name';
+     $assign_to_config['cp_url']    = 'http://domain2.com/admin.php';
 
 Step 4
 ------
@@ -105,7 +106,9 @@ Name of the site this file will display, the URL of this site's
 admin.php file, and the main URL of the site (without index.php). For
 example::
 
-	  $assign_to_config['site_name'] = 'domain2_short_name';     $assign_to_config['cp_url']    = 'http://domain2.com/admin.php';     $assign_to_config['site_url']  = 'http://domain2.com';
+     $assign_to_config['site_name'] = 'domain2_short_name';
+     $assign_to_config['cp_url']    = 'http://domain2.com/admin.php';
+     $assign_to_config['site_url']  = 'http://domain2.com';
 
 Next: `Sites Variables and Parameters <code.html>`_
 ===================================================
