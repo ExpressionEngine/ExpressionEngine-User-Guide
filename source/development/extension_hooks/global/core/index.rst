@@ -19,3 +19,6 @@ $this->EE->uri->uri_string
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The full uri string being loaded
+
+:returns:
+       Array (string The name of the template group, string The name of the template)
