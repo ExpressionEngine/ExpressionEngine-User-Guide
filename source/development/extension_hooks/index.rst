@@ -5,6 +5,8 @@ The list below details all available extension hooks in ExpressionEngine.
 
 -  Global Hooks
 
+   -  `Core Library <global/core/index.html>`_
+      (Core.php)
    -  `Filemanager Library <global/filemanager/index.html>`_
       (Filemanager.php)
    -  `Functions Library <global/functions/index.html>`_ (Functions.php)
@@ -65,6 +67,7 @@ The list below details all available extension hooks in ExpressionEngine.
 	cp/javascript/index
 	cp/login/index
 	cp/members/index
+	global/core/index
 	global/filemanager/index
 	global/functions/index
 	global/session/index
