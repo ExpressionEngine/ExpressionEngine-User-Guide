@@ -27,3 +27,5 @@ This hook should return an array in the following format::
 
 :returns:
     Array
+
+Added in v2.4.0
