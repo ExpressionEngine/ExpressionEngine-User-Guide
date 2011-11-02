@@ -434,12 +434,16 @@ blog format, or even a simple list. For example::
 Turning the Page
 ****************
 
-At this point, you might notice that our site's homepage (`<http://example.com>`_) is showing
-the same content as our News page (`<http://example.com/news>`_). The reason for this is
-simple. Remember checking the box next to **Make the index template in this group your site's home page?** when you created the "news" template group? That made "news" your site's default Template Group, the Template Group that is displayed as the homepage when no
+At this point, you might notice that our site's homepage
+(`<http://example.com>`_) is showing the same content as our News page
+(`<http://example.com/news>`_). The reason for this is simple: remember checking
+the box next to **Make the index template in this group your site's home page?**
+when you created the "news" template group? That made "news" your site's default
+Template Group, the Template Group that is displayed as the homepage when no
 Template Group is specified in the URL.
 
-Let's change this by creating another Template Group and making it the new default.
+Let's change this by creating another Template Group and making it the new
+default.
 
 #. Go to :menuselection:`Design --> Templates --> Template Manager`.
 #. Click the *New Group* button.
