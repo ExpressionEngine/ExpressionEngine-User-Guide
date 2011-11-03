@@ -46,9 +46,8 @@ Template Type dropdowns. ::
 This hook should return an array in the following format::
 
 	$custom_templates = array(
-	    array(
-	        'template_name'         => 'iCal Feed', // Display name
-	        'template_type'         => 'ical',      // Short name for database
+	    'ical' = > array(                           // Short name for database
+	        'template_name'         => 'iCal Feed', // Display name for Template Type dropdown
 	        'template_content_type' => 'text/ical'  // Content-type header for Output library
 	    )
 	);
