@@ -16,7 +16,7 @@ Release Date: October 17, 2011
 
 - Important:
 
-  - Fixed a potential cross site scripting vulnerability
+  - Fixed a potential cross site scripting vulnerability.
   - Modified a URL character check that was affecting third party addons to be less strict.
 
 - Bug Fixes:
