@@ -41,6 +41,7 @@ Development
    -  `CP Class <./usage/cp.html>`_
    -  `Database Class <./usage/database.html>`_
    -  `Email Class <./usage/email.html>`_
+   -  `File Browser Class <./usage/file_browser.html>`_
    -  `Form Validation Class <./usage/form_validation.html>`_
    -  `Input Class <./usage/input.html>`_
    -  `Language Class <./usage/language.html>`_
