@@ -53,6 +53,8 @@ p, dl, ul, ol{ margin: 20px 0; }
 	li > ol{ margin: 0; margin-left: 40px; }
 
 	dl > dd{ margin-left: 20px; }
+	
+	li > p { margin: 0; }
 
 #expressionengine-user-guide li em { font-style: normal; }
 
