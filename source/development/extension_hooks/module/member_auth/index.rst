@@ -9,7 +9,7 @@ Member Module Authorization Extension Hooks
 member\_member\_login\_multi
 ----------------------------
 
-Additional processing when a member is logging into ExpressionEnging via
+Additional processing when a member is logging into ExpressionEngine via
 the Multi-Login functionality
 
 ::
@@ -29,7 +29,7 @@ Added in v1.4.0
 member\_member\_login\_single
 -----------------------------
 
-Additional processing when a member is logging into ExpressionEnging
+Additional processing when a member is logging into ExpressionEngine
 
 ::
 

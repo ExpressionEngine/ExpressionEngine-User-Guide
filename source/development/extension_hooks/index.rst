@@ -9,6 +9,7 @@ The list below details all available extension hooks in ExpressionEngine.
       (Filemanager.php)
    -  `Functions Library <global/functions/index.html>`_ (Functions.php)
    -  `Session Library <global/session/index.html>`_ (Session.php)
+   -  `Output Library <global/output/index.html>`_ (EE\_Output.php)
    -  `Text Helper <global/text_helper/index.html>`_
       (EE\_text\_helper.php)
    -  `Typography Library <global/typography/index.html>`_
@@ -18,6 +19,8 @@ The list below details all available extension hooks in ExpressionEngine.
 
    -  `Channel Entries API <api/channel_entries/index.html>`_
       (Api\_channel\_entries.php)
+   -  `Template Structure API <api/template_structure/index.html>`_
+      (Api\_template\_structure.php)
 
 -  Control Panel Hooks
 
@@ -57,6 +60,7 @@ The list below details all available extension hooks in ExpressionEngine.
 	:titlesonly:
 
 	api/channel_entries/index
+	api/template_structure/index
 	cp/admin_content/index
 	cp/content_edit/index
 	cp/content_publish/index
@@ -67,6 +71,7 @@ The list below details all available extension hooks in ExpressionEngine.
 	cp/members/index
 	global/filemanager/index
 	global/functions/index
+	global/output/index
 	global/session/index
 	global/text_helper/index
 	global/typography/index
