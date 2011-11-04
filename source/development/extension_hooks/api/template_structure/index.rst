@@ -1,5 +1,5 @@
-Output Library Extension Hooks
-==============================
+Template Structure API Extension Hooks
+======================================
 
 .. contents::
 	:local:
@@ -9,11 +9,11 @@ Output Library Extension Hooks
 template_types
 --------------
 
-Add template types to ExpressionEngine's default set. In the Output
-library specifically, it is useful to return the appropriate content type
-header for the template type. ::
+Add template types to ExpressionEngine's default set. In the template
+structure API, this hook can be used to specify file extensions for custom
+template types. ::
 
-	$template_types = $EE->extensions->call('template_types', array());
+	$template_types = $this->EE->extensions->call('template_types', array());
 
 This hook should return an array in the following format::
 

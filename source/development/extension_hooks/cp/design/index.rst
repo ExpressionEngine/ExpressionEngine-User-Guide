@@ -46,9 +46,10 @@ Template Type dropdowns. ::
 This hook should return an array in the following format::
 
 	$custom_templates = array(
-	    'ical' = > array(                        // Short name for database
-	        'template_name'    => 'iCal Feed',   // Display name for Template Type dropdown
-	        'template_headers' => array(         // Custom headers for file type
+	    'ical' = > array(                              // Short name for database
+	        'template_name'           => 'iCal Feed',  // Display name for Template Type dropdown
+	        'template_file_extension' => '.ics',       // File extension for saving templates as files
+	        'template_headers'        => array(        // Custom headers for file type
 	            'Content-Type: text/ical',
 	            'Content-Disposition: attachment; filename="event.ics"'
 	        )
@@ -57,7 +58,7 @@ This hook should return an array in the following format::
 
 **Note:** It is good practice to clean up the templates table and remove
 your custom template type from templates using it upon extension
-uninstall.
+uninstallation.
 
 :returns:
     Array
