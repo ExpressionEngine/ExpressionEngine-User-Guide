@@ -54,25 +54,31 @@ although in many cases you can use a simple *relative path* (Example:
 /home/user/example.com/http\_docs/images/uploads/). If you are not sure
 how to determine your server path please contact your hosting company.
 
-Once the upload destination is created, you can optionally override this
-path in config.php. For example: If the ID of upload destination is 1
-according to the File Upload Preferences, the config.php key would be
-file_upload_path_1::
-
-	$config['file_upload_path_1'] = '/home/user/example.com/staging/images/uploads/';
-
 URL of Upload Directory
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 You will also need to supply the full **URL** to the new destination
 (Example: http://example.com/images/uploads/).
 
-Once the upload destination is created, you can optionally override this
-URL in config.php. For example: If the ID of upload destination is 1
-according to the File Upload Preferences, the config.php key would be
-file_upload_url_1::
+Overriding Upload Paths and URLs Using Configuration Variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	$config['file_upload_url_1'] = 'http://staging.example.com/images/uploads/';
+Once upload destinations are created, you can optionally override upload
+destination paths, URLs and titles in config.php. For each upload
+destination, you can add an associative array to the
+``$config['upload_preferences']`` variable::
+
+	$config['upload_preferences'] = array(
+	    1 => array(                                                            // ID of upload destination
+	        'name'        => 'Staging Image Uploads',                          // Display name in control panel
+	        'server_path' => '/home/user/example.com/staging/images/uploads/', // Server path to upload directory
+	        'url'         => 'http://staging.example.com/images/uploads/'      // URL of upload directory
+	    )
+	);
+
+Each key in the array is optional and only overrides existing values in
+the database, new upload destinations cannot be created using this
+configuration variable.
 
 Allowed File Types
 ~~~~~~~~~~~~~~~~~~
