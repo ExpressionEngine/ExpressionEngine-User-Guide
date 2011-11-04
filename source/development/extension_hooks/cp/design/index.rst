@@ -41,7 +41,7 @@ Add template types to ExpressionEngine's default set. In the design
 controller, this hook will append custom template types to the bottom of
 Template Type dropdowns. ::
 
-	$custom_templates = $this->extensions->call('template_types');
+	$custom_templates = $this->extensions->call('template_types', array());
 
 This hook should return an array in the following format::
 
