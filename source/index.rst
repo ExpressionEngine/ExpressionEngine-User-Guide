@@ -21,6 +21,7 @@ Installing and Updating
 - :doc:`installation/update`
 - :doc:`installation/update_from_1.x`
 - :doc:`installation/update_from_freelancer`
+- :doc:`installation/moving`
 
 *******************
 General Information

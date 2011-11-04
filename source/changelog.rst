@@ -9,6 +9,21 @@ The Change Log for ExpressionEngine 1.x is `available here.
 <http://expressionengine.com/legacy_docs/changelog.html>`_
 
 
+Version 2.3.1
+-------------
+
+Release Date: October 17, 2011
+
+- Important:
+
+  - Fixed a potential cross site scripting vulnerability.
+  - Modified a URL character check that was affecting third party addons to be less strict.
+
+- Bug Fixes:
+
+  - Fixed several minor documentation errors including #16770, #16772, #16783,
+    #16771, #16761 and #16318.
+
 Version 2.3.0
 -------------
 
