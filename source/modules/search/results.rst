@@ -79,7 +79,7 @@ That will produce code like this::
 
 
 Variables
----------
+==========
 
 Nearly all of the :ref:`Channel Entries Tag
 Variables <channel-entries-single-variables>` are available for the
