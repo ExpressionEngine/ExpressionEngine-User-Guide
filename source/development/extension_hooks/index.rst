@@ -5,11 +5,14 @@ The list below details all available extension hooks in ExpressionEngine.
 
 -  Global Hooks
 
+   -  `Core Library <global/core/index.html>`_
+      (Core.php)
    -  `Filemanager Library <global/filemanager/index.html>`_
       (Filemanager.php)
    -  `Functions Library <global/functions/index.html>`_ (Functions.php)
    -  `Session Library <global/session/index.html>`_ (Session.php)
    -  `Output Library <global/output/index.html>`_ (EE\_Output.php)
+   -  `Template Library <global/template/index.html>`_ (Template.php)
    -  `Text Helper <global/text_helper/index.html>`_
       (EE\_text\_helper.php)
    -  `Typography Library <global/typography/index.html>`_
@@ -69,10 +72,12 @@ The list below details all available extension hooks in ExpressionEngine.
 	cp/javascript/index
 	cp/login/index
 	cp/members/index
+	global/core/index
 	global/filemanager/index
 	global/functions/index
 	global/output/index
 	global/session/index
+	global/template/index
 	global/text_helper/index
 	global/typography/index
 	module/channel/index
