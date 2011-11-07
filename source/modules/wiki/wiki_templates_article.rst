@@ -4,8 +4,8 @@ Wiki Article Template
 This template determines how an article is displayed within the Wiki
 Page wrapper template as outlined below:
 
-|The Wiki Article template determines the visual display of articles as
-highlighted below.|
+|The Wiki Article template determines the visual display of articles as highlighted below.|
+
 In addition to the variables in the `Wiki Page
 template <wiki_templates_page.html>`_, the Article template has:
 

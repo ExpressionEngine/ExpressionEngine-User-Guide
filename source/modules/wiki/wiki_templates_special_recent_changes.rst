@@ -5,6 +5,7 @@ This template displays a list of all recent changes to the wiki as
 highlighted below:
 
 |Displays the Wiki's Special Recent Changes page.|
+
 In addition to the variables in the `Wiki Page
 template <wiki_templates_page.html>`_, the Special Recent Changes
 template has:

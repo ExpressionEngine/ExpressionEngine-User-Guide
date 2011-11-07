@@ -5,6 +5,7 @@ This template displays all uncategorized wiki articles as outlined
 below:
 
 |Wiki Uncategorized|
+
 In addition to the variables in the `Wiki Page
 template <wiki_templates_page.html>`_, the Special Uncategorized
 template has:
