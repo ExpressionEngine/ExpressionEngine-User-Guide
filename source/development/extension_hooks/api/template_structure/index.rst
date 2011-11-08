@@ -15,8 +15,7 @@ template types. ::
 
 	$template_types = $this->EE->extensions->call('template_types', array());
 
-This hook should append a key to the passed array in the following
-format::
+This hook must append a key to the passed array in the following format::
 
 	$custom_templates['ical'] = array(             // Short name for database
 	    'template_name'           => 'iCal Feed',  // Display name for Template Type dropdown
