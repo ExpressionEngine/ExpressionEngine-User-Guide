@@ -43,8 +43,11 @@ Template Type dropdowns. ::
 
 	$custom_templates = $this->extensions->call('template_types', array());
 
-This hook must append a key to the passed array in the following format::
+This hook must append a key to the `$last_call <../../../extensions.html#this-extensions-last-call>`_
+array in the following format::
 
+	$custom_templates = $this->EE->extensions->last_call;
+	
 	$custom_templates['ical'] = array(             // Short name for database
 	    'template_name'           => 'iCal Feed',  // Display name for Template Type dropdown
 	    'template_file_extension' => '.ics',       // File extension for saving templates as files
