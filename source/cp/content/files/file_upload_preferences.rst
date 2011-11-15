@@ -60,6 +60,26 @@ URL of Upload Directory
 You will also need to supply the full **URL** to the new destination
 (Example: http://example.com/images/uploads/).
 
+Overriding Upload Paths and URLs Using Configuration Variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once upload destinations are created, you can optionally override upload
+destination paths, URLs and titles in config.php. For each upload
+destination, you can add an associative array to the
+``$config['upload_preferences']`` variable::
+
+	$config['upload_preferences'] = array(
+	    1 => array(                                                            // ID of upload destination
+	        'name'        => 'Staging Image Uploads',                          // Display name in control panel
+	        'server_path' => '/home/user/example.com/staging/images/uploads/', // Server path to upload directory
+	        'url'         => 'http://staging.example.com/images/uploads/'      // URL of upload directory
+	    )
+	);
+
+Each key in the array is optional and only overrides existing values in
+the database, new upload destinations cannot be created using this
+configuration variable.
+
 Allowed File Types
 ~~~~~~~~~~~~~~~~~~
 
