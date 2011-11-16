@@ -61,7 +61,7 @@ You will also need to supply the full **URL** to the new destination
 (Example: http://example.com/images/uploads/).
 
 Overriding Upload Paths and URLs Using Configuration Variables
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once upload destinations are created, you can optionally override upload
 destination paths, URLs and titles in config.php. For each upload
