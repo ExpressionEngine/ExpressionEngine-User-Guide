@@ -48,17 +48,18 @@ will appear when uploading files via the PUBLISH page.
 Server Path to Upload Directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is the **server path** to the upload folder for this destination.
-It is recommended that you use a *full server path* (not a URL),
-although in many cases you can use a simple *relative path* (Example:
-/home/user/example.com/http\_docs/images/uploads/). If you are not sure
-how to determine your server path please contact your hosting company.
+The **full server path** (not a URL) to the upload folder for
+this destination.  For example::
+
+	/home/user/example.com/public_html/images/uploads/
+	
+If you are not sure how to determine your server path please contact
+your hosting company.
 
 URL of Upload Directory
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-You will also need to supply the full **URL** to the new destination
-(Example: http://example.com/images/uploads/).
+The **full URL** to the new destination. For example: http://example.com/images/uploads/
 
 Overriding Upload Paths and URLs Using Configuration Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
