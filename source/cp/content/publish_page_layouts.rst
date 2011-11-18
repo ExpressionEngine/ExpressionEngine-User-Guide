@@ -18,6 +18,7 @@ Fields
 The Fields Grouping shows all available Channel Fields.
 
 |Publish Page Fields|
+
 The eye icon in the far right indicates whether that field is shown or
 hidden on the publish page.
 
