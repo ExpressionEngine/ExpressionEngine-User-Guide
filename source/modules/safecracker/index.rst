@@ -157,6 +157,17 @@ Parameters
 .. contents::
    :local:
 
+allow_comments=
+~~~~~~~~~~~~~~~
+
+::
+
+	allow_comments="yes"
+
+Whether to allow comments on the submitted entry. If this parameter is
+not specified, the Channel's :ref:`channel-prefs-allow-comments` preference
+will be used.
+
 author\_only=
 ~~~~~~~~~~~~~
 
