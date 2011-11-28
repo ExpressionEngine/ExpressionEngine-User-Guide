@@ -195,18 +195,6 @@ Together with the previous setting you would get this output::
 
 	<div class="file"><a href="http://example.com/images/upload/plan.txt" >plan.txt</a></div>
 
-Batch Upload Location
-~~~~~~~~~~~~~~~~~~~~~
-
-This is the **server path** to a directory where you can perform batch
-uploads. It is recommended that you use a *full server path* (not a
-URL), although in many cases you can use a simple *relative path*
-(Example: /home/user/example.com/http\_docs/images/uploads/).
-
-For example, you’d define a Batch Upload Location and then upload files
-to that directory. After that, you’d visit the Batch Upload page and add
-all of those files to the File Manager.
-
 File Category Groups
 ~~~~~~~~~~~~~~~~~~~~
 
