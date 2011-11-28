@@ -2388,6 +2388,16 @@ Categories Tag Pair Variables
 .. contents::
    :local:
 
+active
+^^^^^^
+
+::
+
+	{if active} This category is active {/if}
+
+You may use this conditional to test whether the category shown is the
+active category or not, based on the dynamic URI segment.
+
 category\_description
 ^^^^^^^^^^^^^^^^^^^^^
 
