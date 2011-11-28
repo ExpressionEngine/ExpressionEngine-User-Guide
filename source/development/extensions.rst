@@ -1,15 +1,15 @@
 Extensions Development
 ======================
 
--  `Overview <extensions.html#overview>`_
--  `Naming Convention <extensions.html#naming>`_
--  `The Base Extension Class <extensions.html#base>`_
--  `Activating and Updating <extensions.html#enable>`_
--  `Disabling <extensions.html#disable>`_
--  `Settings <extensions.html#settings>`_
--  `Calling of the Extension <extensions.html#extension>`_
--  `Multiple Extensions, Same Hook <extensions.html#hook>`_
--  `Extension Hooks Library <extension_hooks/index.html>`_
+-  `Overview`_
+-  `Naming Convention`_
+-  `The Base Extension Class`_
+-  `Activating and Updating`_
+-  `Disabling`_
+-  `Settings`_
+-  `Calling of the Extension`_
+-  `Multiple Extensions, Same Hook`_
+-  :doc:`extension_hooks/index`
 
 Overview
 --------
@@ -48,8 +48,8 @@ standard PHP suffix of .php. So, if we have an extension named
 '**ext.link\_truncator.php**' and the class would be called
 '**Link\_truncator\_ext**'.
 
-Inside the Extension
---------------------
+The Base Extension Class
+------------------------
 
 Inside an extension file should be a class, which will be called by
 ExpressionEngine whenever this particular extension is required. The

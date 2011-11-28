@@ -264,7 +264,7 @@ This variable allows you redirect the visitor to another template.
 Typically this will mean that you will be utilizing the tag within
 conditionals. ::
 
-	{if segment_3 != 'cookies'}>   {redirect='bake/cookies'} {/if}
+	{if segment_3 != 'cookies'}   {redirect='bake/cookies'} {/if}
 
 You can also use the redirect variable to provide tighter control of
 your URLs, and trigger 404 pages in certain conditions. When you want to

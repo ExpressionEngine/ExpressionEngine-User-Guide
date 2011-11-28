@@ -49,6 +49,7 @@ Development
    -  `Localization Class <./usage/localization.html>`_
    -  `Security Class <./usage/security.html>`_
    -  `Session Class <./usage/session.html>`_
+   -  `Table Class <./usage/table.html>`_
    -  `Template Parser Class <./usage/template.html>`_
    -  `Typography Class <./usage/typography.html>`_
    -  `URI Class <./usage/uri.html>`_
@@ -60,6 +61,7 @@ Development
 
 -  ExpressionEngine Control Panel JavaScript
 
+   -  `Custom jQuery Events <./cp_javascript/events.html>`_
    -  `Notification Plugin <./cp_javascript/notification.html>`_
 
 -  `Control Panel Style Reference <./cp_styles/index.html>`_
