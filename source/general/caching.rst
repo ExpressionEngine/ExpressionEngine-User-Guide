@@ -14,39 +14,10 @@ of your site and utilize server resources more efficiently.
 The caching technology in ExpressionEngine is comprised of several
 independent data caching systems and preferences.
 
-- `Query Caching <#query_caching>`_
 - `Tag Caching <#tag_caching>`_
 - `Template Caching <#template_caching>`_
 - `Dynamic Channel Query Caching <#dynamic_channel_query_caching>`_
 - `Query Disabling <#query_disabling>`_
-
-Query Caching
--------------
-
-Query Caching caches the output of your database, saving each query as a
-text file. When your visitors access your web pages, the cache files are
-examined to see if the particular queries being requested exist in
-cached form. If they do, ExpressionEngine uses the cached data instead
-of querying your database. This provides a significant reduction in your
-overall database load. The query caching system is completely dynamic,
-meaning it automatically updates itself when new information is added to
-your database.
-
-Some queries can not be cached because the syntax of the query changes
-dynamically every time the query is run. The main channel display query,
-for example, always matches the expiration date against the current time
-in order to determine if entries have expired. This causes the query to
-change slightly with each page load; thus it cannot use the standard
-query caching. (See `Dynamic Channel Query
-Caching <#dynamic_channel_query_caching>`_ for an alternative that can
-be used in many cases.)
-
-The query caching system will provide anywhere from a 30% to 90%
-reduction in the total number of queries depending on how your pages are
-constructed.
-
-This feature can be manually turned on at Admin > System Administration
-> Database Settings in the Control Panel.
 
 Tag Caching
 -----------
@@ -96,6 +67,8 @@ cleared, momentarily overriding the normal caching preferences.
 increased benefit to using tag caching and page caching together. When
 page caching is on, no other caching setting matters. Therefore, if you
 want to cache individual tags, turn off page caching.
+
+.. _dynamic-channel-query-caching:
 
 Dynamic Channel Query Caching
 -----------------------------
