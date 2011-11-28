@@ -121,7 +121,7 @@ Through the use of the "disable" parameter you can turn off aspects of
 the tag in order to make it more lightweight.
 
 The syntax for the disable parameter is this: disable="ITEM YOU WANT TO
-DISABLE". There are six things that can be turned off:
+DISABLE". There are five items that can be turned off:
 
 -  categories
 -  category\_fields
