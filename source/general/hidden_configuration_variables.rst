@@ -109,6 +109,33 @@ If set, overrides the core Email class setting for newline characters
 
 	$config['email_newline'] = "\r\n";
 
+enable_db_caching
+~~~~~~~~~~~~~~~~~
+
+Forces ExpressionEngine to cache the output of database queries to text
+files.
+
+::
+
+$config['enable_db_caching'] = "y";
+
+When your visitors access your web pages, the cache files are
+examined to see if the particular queries being requested exist in
+cached form. If they do, ExpressionEngine uses the cached data instead
+of querying your database.
+
+In most environments, the database server is better suited to handle
+its own caching. Therefore, we do not recommend that this option be
+enabled unless it is specifically required.
+
+Furthermore, some queries can not be cached this way because the syntax
+of the query changes dynamically every time the query is run. A Channel
+Entries query, for example, always matches the expiration date against
+the current time in order to determine if entries have expired. This causes
+the query to change slightly with each page load; thus it cannot use this
+caching method. (See :ref:`dynamic-channel-query-caching` for an
+alternative that can be used in many cases.)
+
 hidden_template_404
 ~~~~~~~~~~~~~~~~~~~
 
