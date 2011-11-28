@@ -273,6 +273,7 @@ Enables the stripping of unparsed ExpressionEngine variables in
 templates when Debug has been forcibly set to 0 in your config file.
 
 ::
+
 	$config['remove_unparsed_vars'] = 'y';
 
 smart_static_parsing
