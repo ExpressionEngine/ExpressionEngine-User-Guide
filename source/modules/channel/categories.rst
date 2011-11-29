@@ -321,16 +321,6 @@ Variables
 .. contents::
    :local:
 
-active
-------
-
-::
-
-	{if active} This category is active {/if}
-
-You may use this conditional to test whether the category shown is the
-active category or not, based on the dynamic URI segment.
-
 category\_description
 ---------------------
 
@@ -445,6 +435,20 @@ All custom fields assigned to a category can be accessed using the
 
 These are totally dynamic in that any field you create for your category
 will automatically be available by its "short name" as a variable.
+
+*********************
+Conditional Variables
+*********************
+
+active
+------
+
+::
+
+	<a href="{path='news/index'}"{if active} class="active"{/if}>{category_name}</a>
+
+You may use this conditional to test whether the category shown is the
+active category or not, based on the dynamic URI segment.
 
 **********************
 Category Dropdown Menu
