@@ -22,11 +22,12 @@ Managing Page Content
 The `Pages Module Control Panel <control_panel/index.html>`_ allows you
 to create, edit, view and delete your Pages.
 
-.. note:: It is not necessary to give content authors access to the
-   Modules section of the site to create and manage pages. Pages are merely
-   channel entries assigned to a specific URL in the Pages tab of the
-   Publish area, so regular permissions to create and edit channel entries
-   is sufficient for a content author to manage page content.
+.. note:: In order to allow content authors full access to create and modify
+   pages through both the Pages tab of the Publish area and the Pages module
+   itself, it is necessary to give their members groups the appropriate Control
+   Panel access for publishing and editing content, access to post and edit
+   entries to the particular channel in question, access to Modules in general,
+   and access to the Pages module specifically.
 
 ****************************************************
 Displaying Page Content with the Channel Entries Tag
