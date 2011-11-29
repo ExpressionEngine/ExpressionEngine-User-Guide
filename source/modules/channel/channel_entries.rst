@@ -393,6 +393,24 @@ url by including the `paginate=`_ parameter. If that tag
 is used in conjunction with the dynamic parameter, the tag will act
 dynamically for pagination data only.
 
+dynamic_parameters=
+-------------------
+
+::
+
+	dynamic_parameters="orderby|limit|sort"
+
+The `Dynamic Parameters <dynamic_parameters.html>`_ feature permits a
+{exp:channel:entries} tag's parameters to be set "on the fly" using POST
+data submitted via a form. A practical use for this is to create some
+display options in a form on your page that your visitors can use to
+select their preferred page view.
+
+**NOTE:** This feature will only work if page caching is turned OFF for
+the template in which it is being used.
+
+Every Parameter available to the channel tag can be set dynamically.
+
 .. _channel-entries-dynamic-start:
 
 dynamic\_start=
