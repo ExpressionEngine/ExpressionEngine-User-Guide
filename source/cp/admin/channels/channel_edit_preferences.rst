@@ -207,6 +207,8 @@ multiple addresses by separating them with a comma. Ex:
 Comment Posting Preferences
 ---------------------------
 
+.. _channel-prefs-allow-comments:
+
 Allow comments in this channel?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

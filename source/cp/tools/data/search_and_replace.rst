@@ -3,7 +3,7 @@ Search and Replace
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Tools --> Utilities --> Search and Replace`
+**Control Panel Location:** :menuselection:`Tools --> Data --> Search and Replace`
 
 This section of the Control Panel allows you to search for text within
 your site and replace it with another piece of text. This search and

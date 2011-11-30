@@ -62,7 +62,7 @@ Most Channel Fields are available to use via input fields, including:
 Title
 ~~~~~
 
-Set the title of the entry. ::
+Set the title of the entry. This is a **required** parameter. ::
 
 	<label for="title">Title</label>
 	<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
@@ -157,6 +157,26 @@ Parameters
 .. contents::
    :local:
 
+allow_comments=
+~~~~~~~~~~~~~~~
+
+::
+
+	allow_comments="yes"
+
+Whether to allow comments on the submitted entry. If this parameter is
+not specified, the Channel's :ref:`channel-prefs-allow-comments` preference
+will be used.
+
+author\_only=
+~~~~~~~~~~~~~
+
+::
+
+	author_only="yes"
+
+Only allow the author of the entry to edit the entry. Defaults to "no".
+
 channel=
 ~~~~~~~~
 
@@ -166,25 +186,23 @@ channel=
 
 The short name of the channel. This is a **required** parameter.
 
-entry\_id=
-~~~~~~~~~~
+class=
+~~~~~~
 
 ::
 
-	entry_id="{segment_3}"
+	class="safecracker"
 
-The entry\_id of the channel entry you wish to edit. If both this and
-url\_title are empty, the entry form will add a new entry.
+Specify the CSS class.
 
-url\_title=
+datepicker=
 ~~~~~~~~~~~
 
 ::
 
-	url_title="{segment_3}"
+	datepicker="no"
 
-The url\_title of the channel entry you wish to edit. If both this and
-entry\_id are empty, the entry form will add a new entry.
+Adds the datepicker to your date fields. Defaults to "yes".
 
 dynamic\_title=
 ~~~~~~~~~~~~~~~
@@ -196,50 +214,35 @@ dynamic\_title=
 Dynamically set the title of your entry based on your entry's data. Use
 brackets [ ] instead of the standard curly braces.
 
-rules:my\_field\_name=
-~~~~~~~~~~~~~~~~~~~~~~
+entry\_id=
+~~~~~~~~~~
 
 ::
 
-	rules:my_field_name="required|min_length[5]"
+	entry_id="{segment_3}"
 
-Add additional validation rules to your fields. Separate multiple rules
-with the pipe \| character. You may use the native `CodeIgniter
-rules <http://codeigniter.com/user_guide/libraries/form_validation.html#rulereference>`_
-(required, matches, min\_length, max\_length, exact\_length, alpha,
-alpha\_numeric, alpha\_dash, numeric, integer, is\_natural,
-is\_natural\_no\_zero, valid\_email, valid\_emails, valid\_ip,
-valid\_base64), and these additional ExpressionEngine-specific rules:
-valid\_ee\_date.
+The entry\_id of the channel entry you wish to edit. If both this and
+url\_title are empty, the entry form will add a new entry.
 
-logged\_out\_member\_id=
-~~~~~~~~~~~~~~~~~~~~~~~~
+error\_handling=
+~~~~~~~~~~~~~~~~
 
 ::
 
-	logged_out_member_id="3"
+	error_handling="inline"
 
-In order to allow logged out users to use the entry form, you must
-specify a member\_id which SafeCracker will use as the author of the
-entry.
+Choose to display error messages inline (see `Error
+Messages <#error-my-field-name>`_). By default, errors are displayed with the user
+message template.
 
-json=
-~~~~~
-
-::
-
-	json="yes"
-
-Output your results in JSON format, instead of performing a redirect.
-
-datepicker=
-~~~~~~~~~~~
+id=
+~~~
 
 ::
 
-	datepicker="no"
+	id="safecracker"
 
-Adds the datepicker to your date fields. Defaults to "yes".
+Specify the CSS id.
 
 include\_jquery=
 ~~~~~~~~~~~~~~~~
@@ -253,53 +256,25 @@ Includes jQuery automatically. Defaults to "yes".
 **Note:** If you are using your own copy of jQuery you will need to load
 it **before** the SafeCracker form.
 
-secure\_action=
-~~~~~~~~~~~~~~~
+json=
+~~~~~
 
 ::
 
-	secure_action="yes"
+	json="yes"
 
-Forces the form to use https as its action.. Defaults to "no".
+Output your results in JSON format, instead of performing a redirect.
 
-secure\_return=
-~~~~~~~~~~~~~~~
-
-::
-
-	secure_return="yes"
-
-Force the form to return to https. Defaults to "no".
-
-error\_handling=
-~~~~~~~~~~~~~~~~
+logged\_out\_member\_id=
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
-	error_handling="inline"
+	logged_out_member_id="3"
 
-Choose to display error messages inline (see `Error
-Messages <#error-my-field-name>`_). By default, errors are displayed with the user
-message template.
-
-require\_entry=
-~~~~~~~~~~~~~~~
-
-::
-
-	require_entry="yes"
-
-Require an entry to edit via the entry\_id or url\_title parameters.
-Disables new entries. Defaults to "no".
-
-author\_only=
-~~~~~~~~~~~~~
-
-::
-
-	author_only="yes"
-
-Only allow the author of the entry to edit the entry. Defaults to "no".
+In order to allow logged out users to use the entry form, you must
+specify a member\_id which SafeCracker will use as the author of the
+entry.
 
 preserve\_checkboxes=
 ~~~~~~~~~~~~~~~~~~~~~
@@ -317,15 +292,15 @@ an intentional omission of the field itself from your form. You are
 provided this parameter to preserve the existing values without having
 to use a hidden field. Defaults to "no".
 
-safecracker\_head=
-~~~~~~~~~~~~~~~~~~
+require\_entry=
+~~~~~~~~~~~~~~~
 
 ::
 
-	safecracker_head="no"
+	require_entry="yes"
 
-Adds necessary Javascript to your form. If you don't require the
-Javascript functionality, set to "no". Defaults to "yes".
+Require an entry to edit via the entry\_id or url\_title parameters.
+Disables new entries. Defaults to "no".
 
 return=
 ~~~~~~~
@@ -350,23 +325,49 @@ Specify a path to redirect the user to after an entry submission, based
 on the user's member group. Replace X with the group\_id of the member
 group.
 
-class=
-~~~~~~
+rules:my\_field\_name=
+~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
-	class="safecracker"
+	rules:my_field_name="required|min_length[5]"
 
-Specify the CSS class.
+Add additional validation rules to your fields. Separate multiple rules
+with the pipe \| character. You may use the native `CodeIgniter
+rules <http://codeigniter.com/user_guide/libraries/form_validation.html#rulereference>`_
+(required, matches, min\_length, max\_length, exact\_length, alpha,
+alpha\_numeric, alpha\_dash, numeric, integer, is\_natural,
+is\_natural\_no\_zero, valid\_email, valid\_emails, valid\_ip,
+valid\_base64), and these additional ExpressionEngine-specific rules:
+valid\_ee\_date.
 
-id=
-~~~
+safecracker\_head=
+~~~~~~~~~~~~~~~~~~
 
 ::
 
-	id="safecracker"
+	safecracker_head="no"
 
-Specify the CSS id.
+Adds necessary Javascript to your form. If you don't require the
+Javascript functionality, set to "no". Defaults to "yes".
+
+secure\_action=
+~~~~~~~~~~~~~~~
+
+::
+
+	secure_action="yes"
+
+Forces the form to use https as its action.. Defaults to "no".
+
+secure\_return=
+~~~~~~~~~~~~~~~
+
+::
+
+	secure_return="yes"
+
+Force the form to return to https. Defaults to "no".
 
 site=
 ~~~~~
@@ -378,6 +379,16 @@ site=
 Specify the site short name of another site on your MSM installation to
 add/edit entries for that site.
 
+url\_title=
+~~~~~~~~~~~
+
+::
+
+	url_title="{segment_3}"
+
+The url\_title of the channel entry you wish to edit. If both this and
+entry\_id are empty, the entry form will add a new entry.
+
 use_live_url=
 ~~~~~~~~~~~~~
 
@@ -388,6 +399,7 @@ use_live_url=
 This will disable the url_title from being created automatically based on the
 title. Use this when you've opted to disable safecracker_head. Defaults to
 yes.
+
 
 Variables
 ---------

@@ -48,17 +48,38 @@ will appear when uploading files via the PUBLISH page.
 Server Path to Upload Directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is the **server path** to the upload folder for this destination.
-It is recommended that you use a *full server path* (not a URL),
-although in many cases you can use a simple *relative path* (Example:
-/home/user/example.com/http\_docs/images/uploads/). If you are not sure
-how to determine your server path please contact your hosting company.
+The **full server path** (not a URL) to the upload folder for
+this destination.  For example::
+
+	/home/user/example.com/public_html/images/uploads/
+	
+If you are not sure how to determine your server path please contact
+your hosting company.
 
 URL of Upload Directory
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-You will also need to supply the full **URL** to the new destination
-(Example: http://example.com/images/uploads/).
+The **full URL** to the new destination. For example: http://example.com/images/uploads/
+
+Overriding Upload Paths and URLs Using Configuration Variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once upload destinations are created, you can optionally override upload
+destination paths, URLs and titles in config.php. For each upload
+destination, you can add an associative array to the
+``$config['upload_preferences']`` variable::
+
+	$config['upload_preferences'] = array(
+	    1 => array(                                                            // ID of upload destination
+	        'name'        => 'Staging Image Uploads',                          // Display name in control panel
+	        'server_path' => '/home/user/example.com/staging/images/uploads/', // Server path to upload directory
+	        'url'         => 'http://staging.example.com/images/uploads/'      // URL of upload directory
+	    )
+	);
+
+Each key in the array is optional and only overrides existing values in
+the database, new upload destinations cannot be created using this
+configuration variable.
 
 Allowed File Types
 ~~~~~~~~~~~~~~~~~~
@@ -173,18 +194,6 @@ easily "wrap" your file code. For example, you could use </div>.
 Together with the previous setting you would get this output::
 
 	<div class="file"><a href="http://example.com/images/upload/plan.txt" >plan.txt</a></div>
-
-Batch Upload Location
-~~~~~~~~~~~~~~~~~~~~~
-
-This is the **server path** to a directory where you can perform batch
-uploads. It is recommended that you use a *full server path* (not a
-URL), although in many cases you can use a simple *relative path*
-(Example: /home/user/example.com/http\_docs/images/uploads/).
-
-For example, you’d define a Batch Upload Location and then upload files
-to that directory. After that, you’d visit the Batch Upload page and add
-all of those files to the File Manager.
 
 File Category Groups
 ~~~~~~~~~~~~~~~~~~~~
