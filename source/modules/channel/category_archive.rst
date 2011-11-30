@@ -299,6 +299,16 @@ There are several variables available for use inside the
 {categories}{/categories} variable pair.
 
 
+active
+~~~~~~
+
+::
+
+	{if active} This category is active {/if}
+
+You may use this conditional to test whether the category shown is the
+active category or not, based on the dynamic URI segment.
+
 category\_description
 ~~~~~~~~~~~~~~~~~~~~~
 

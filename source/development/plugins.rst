@@ -386,12 +386,12 @@ directly as a formatting choice:
         {
             $this->EE =& get_instance();
             
-            if ($str)
+            if (empty($str))
             {
                 $str = $this->EE->TMPL->tagdata;
             }
 
-            $return_data = "<b>".$str."</b>";
+            $this->return_data = "<b>".$str."</b>";
         }
     }
 
