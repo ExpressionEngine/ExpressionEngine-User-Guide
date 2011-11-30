@@ -3,7 +3,7 @@ Table Class
 
 .. contents::
 	:local:
-
+	:depth: 1
 
 Calling the Table Class
 -----------------------
@@ -13,19 +13,23 @@ Calling the Table Class
 	$this->EE->load->library('table');
 
 
-Usage of Form Validation Class
-------------------------------
+Usage of Table Class
+--------------------
 
 The Table class provides a simplified means to quickly build html tables
 that usually require a large amount of boilerplate code. The base
-funtionality for the Table class is inherited from the corresponding
+functionality for the Table class is inherited from the corresponding
 CodeIgniter library. Refer to the `HTML Table
 <http://codeigniter.com/user_guide/libraries/table.html>`_ documentation
 in the CodeIgniter user guide for details on basic table creation.
 
 
-Improving Usability for Large Amounts of Data
----------------------------------------------
+Example: Improving Usability for Large Amounts of Data
+------------------------------------------------------
+
+This document will walk you through an example of how to add this
+functionality step-by-step, starting from a basic table. For more
+general documentation, refer to the function reference below.
 
 When dealing with large amounts of data, displaying a single table will
 almost always lead to bad usability and performance. The Table class
@@ -230,27 +234,100 @@ sort on the size column. Also try adding a default offset, like the one we
 retrieved from `$state` in our pagination code.
 
 
-STOP READING HERE - WORK IN PROGRESS
-====================================
-
-Configuration Reference
------------------------
-
-Row Options
-~~~~~~~~~~~
-
-- `header`
-- `sort`
-- `html`
-- `sort_key`?
-
-
 Filtering
 ~~~~~~~~~
 
-Link to jQuery plugin docs.
+As a last step you can add dynamic filtering to our table. To make this work
+you will need to write some javascript. The `table plugin
+<../cp_javascript/table.html>`_ will provide simple access to everything you
+need to do.
+
+At this point it becomes easier to work with a database. The filtering
+information will be added to your `$state` array. Doing a like query will
+let you fetch the correct information.
 
 Function Reference
 ------------------
 
-Will go here. Mention second param to datasource.
+This documents the ExpressionEngine additions to the table class. Refer
+to the `HTML Table <http://codeigniter.com/user_guide/libraries/table.html>`_
+documentation in the CodeIgniter user guide for the base table class
+reference.
+
+datasource($function, [$default_state, [$additional_parameters]])
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This function lets you define a datasource for your table contents. When
+called asynchronously, the request will stop here and the table data will
+be returned as JSON.
+
+Example Usage::
+
+	$custom_params = array('my_key' => $my_value);
+	$default_state = array('sort' => array('name' => 'asc'));
+	
+	$this->table->datasource('_source', $default_state, $custom_params);
+	
+	function _source($state, $params)
+	{
+		// do work
+		
+		return array(
+			'rows' => $rows,
+			'pagination' => array(
+				'total_rows' = $total
+			)
+		);
+	}
+
+:returns:
+
+    (array) All values returned from the datasource, as well as the
+    parsed html strings. They are added to the return data, so that
+    the datasource acts as much like a function call as possible. ::
+
+	'table_html'      => (string) Rendered Table,
+	'pagination_html' => (string) Rendered Pagination
+
+
+set_base_url($url)
+~~~~~~~~~~~~~~~~~~
+
+Define the callback url. Usually this can be auto discovered, but
+sometimes providing it manually is more robust.
+
+Example Usage::
+	
+	$this->table->set_base_url('C=addons_modules&M=show_module_cp&module=example');
+
+
+set_columns($array)
+~~~~~~~~~~~~~~~~~~~
+	
+Define the table columns and their behavior.
+
+Example Usage::
+	
+	$this->EE->table->set_columns(array(
+	    'name'  => array('header' => 'Name'),
+	    'color' => array('header' => 'Color'),
+	    'size'  => array('header' => 'Size')
+	));
+
+Row Options:
+
+- `header` - (string) Heading Contents
+- `sort` - (bool) Allow Sorting [default=true]
+- `html` - (bool) Allow HTML [default=true]
+
+set_data($rows)
+~~~~~~~~~~~~~~~
+
+If you only need single page sorting, this function lets you set the
+named column data directly ::
+
+	$this->EE->table->set_data(array(
+	    array('name' => 'Fred', 'color' => 'Blue',  'size' => 'Small'),
+	    array('name' => 'Mary', 'color' => 'Red',   'size' => 'Large'),
+	    array('name' => 'John', 'color' => 'Green', 'size' => 'Medium'),
+	));

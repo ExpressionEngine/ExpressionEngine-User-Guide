@@ -63,6 +63,7 @@ Development
 
    -  `Custom jQuery Events <./cp_javascript/events.html>`_
    -  `Notification Plugin <./cp_javascript/notification.html>`_
+   -  `Table Plugin <./cp_javascript/table.html>`_
 
 -  `Control Panel Style Reference <./cp_styles/index.html>`_
 
