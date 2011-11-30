@@ -24,10 +24,10 @@ to create, edit, view and delete your Pages.
 
 .. note:: In order to allow content authors full access to create and modify
    pages through both the Pages tab of the Publish area and the Pages module
-   itself, it is necessary to give their members groups the appropriate Control
-   Panel access for publishing and editing content, access to post and edit
-   entries to the particular channel in question, access to Modules in general,
-   and access to the Pages module specifically.
+   itself, it is necessary to give those authors' respective member groups the
+   appropriate Control Panel access for publishing and editing content, access
+   to post and edit entries in the particular Channel in question, access to
+   Modules in general, and access to the Pages module specifically.
 
 ****************************************************
 Displaying Page Content with the Channel Entries Tag
