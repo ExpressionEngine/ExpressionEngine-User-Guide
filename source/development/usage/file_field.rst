@@ -1,29 +1,56 @@
-File Browser Class
-==================
+File Field Class
+================
 
 .. contents::
 	:local:
 
-Calling the File Browser Class
-------------------------------
+Calling the File Field Class
+----------------------------
 
-ExpressionEngine uses the File Browser class whenever a file browser modal
-window is needed. To use the file browser in your add-on, you'll need to 
-load the File Browser library
+ExpressionEngine uses the File Field class whenever a file field and file 
+browser is needed. To use the file browser in your add-on, you'll need to 
+load the File Field library
 
 ::
 
-    $this->EE->load->library('file_browser');
+    $this->EE->load->library('file_field');
+
+
+Creating a File Field
+---------------------
+
+Before you can use the file browser, you need a field that the file browser
+knows how to work with. To create that field, you'll use the field method::
+
+	$this->EE->file_field->field($field_name, $data = '', $allowed_file_dirs = 'all', $content_type = 'all')
+
+
++-----------------------+-----------------------------------------------------+
+|Parameter              |Value                                                |
++=======================+=====================================================+
+|``$field_name``        |(string) the name of the field being created         |
++-----------------------+-----------------------------------------------------+
+|``$data``              |(string) the data that already exists for this field |
++-----------------------+-----------------------------------------------------+
+|``$allowed_file_dirs`` |(string) 'all' for all directories, or the ID of a   |
+|                       |particular directory                                 |
++-----------------------+-----------------------------------------------------+
+|``$content_types``     |(string) 'all' for all content types, or 'image' for |
+|                       |images only                                          |
++-----------------------+-----------------------------------------------------+
+
+:returns:
+	String: the html representation of the field
 
 
 Initializing a File Browser
 ---------------------------
 
-The File Browser class loads most of what you need for your file browser:
+The File Field class loads most of what you need for your file browser:
 javascript and css especially. What you need to do is initialize the file
 browser by optionally passing it two parameters::
 
-	$this->EE->file_browser->init($config, $endpoint_url);
+	$this->EE->file_field->browser($config, $endpoint_url);
 
 
 ``$config`` parameter
@@ -57,3 +84,70 @@ know what you're getting into, to just leave this parameter off. The
 retrieve the file browser HTML, directories, directory contents, and directory
 categories. 
 
+
+Validating the data from the File Field
+---------------------------------------
+
+When using the File Field library's ``field()`` method to generate the file 
+field for you, it creates two fields: one that facilitates uploading using the
+file browser, and one that works when Javascript is disabled. If Javascript is
+disabled, it will then upload the file. Either way, the ``validate()`` method
+will return the name of the file in an array.
+
+::
+
+	$this->EE->file_field->validate($data, $field_name, $required = 'n');
+
+
++---------------+-------------------------------------------------------------+
+|Parameter      |Value                                                        |
++===============+=============================================================+
+|``$data``      |(string) the data to validate                                |
++---------------+-------------------------------------------------------------+
+|``$field_name``|(string) the name of the field being validated               |
++---------------+-------------------------------------------------------------+
+|``$required``  |(string) 'n' if the field isn't required, 'y' if it is       |
++---------------+-------------------------------------------------------------+
+
+:returns:
+	Array: (value => uploaded file's name)
+
+
+Formatting the data
+-------------------
+
+After you've validated the data, you now have to format the data for use in 
+templates::
+
+	$this->EE->file_field->format_data($file_name, $directory_id = 0);
+
++-----------------+-----------------------------------------------------------+
+|Parameter        |Value                                                      |
++=================+===========================================================+
+|``$file_name``   |(string) the file name                                     |
++-----------------+-----------------------------------------------------------+
+|``$directory_id``|(integer) the directory id where the file is located       |
++-----------------+-----------------------------------------------------------+
+
+:returns:
+	String: the formated field data e.g. {filedir_1}filename.ext
+	
+
+Parsing the Formatted Data
+--------------------------
+
+This method is of more use to ExpressionEngine than anyone else, but it's here
+if you need it. When you have template content that has ``{filedir_n}``s all 
+over the place, you need to parse them, so the ``{filedir_n}`` tag is replaced 
+with the actual URL::
+
+	$this->EE->file_field->parse($data);
+
++-----------------+-----------------------------------------------------------+
+|Parameter        |Value                                                      |
++=================+===========================================================+
+|``$data``        |(string) the template to parse                             |
++-----------------+-----------------------------------------------------------+
+
+:returns:
+	String: the template with ``{filedir_n}`` parsed out
