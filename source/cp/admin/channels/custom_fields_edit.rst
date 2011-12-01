@@ -150,7 +150,7 @@ Whether or not to display a popup link to choose from graphical smileys
 to insert into the content.
 
 Show Glossary
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 Whether or not to display a link to access the HTML tag glossary.
 
