@@ -7,7 +7,7 @@ Core Library Extension Hooks
 
 
 core\_template\_route
---------------------
+---------------------
 
 Reassign the template group and template loaded for parsing.
 
