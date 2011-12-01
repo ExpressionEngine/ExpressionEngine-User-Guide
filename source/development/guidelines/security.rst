@@ -420,8 +420,7 @@ naughty characters.
 - Browser provides the MIME type, available in:
   **$\_FILES['userfile']['type']**
 - Use the Upload class ($this->EE->load->library('upload',
-  $config);) whenever possible, as it contains methods for
-  validation and sanitizing
+  $config);) as it contains methods for validation and sanitizing
 
 Typography Class
 ~~~~~~~~~~~~~~~~
