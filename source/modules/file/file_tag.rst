@@ -296,14 +296,37 @@ If five entries are being displayed per page, then for the fourth entry
 on the second page the {absolute\_count} variable would have a value of
 "9".
 
-caption
-~~~~~~~
+count
+~~~~~
 
 ::
 
-	{caption}
+	{count}
 
-The caption associated with the entry.
+The "count" out of the current file being displayed by the tag on the
+current page.
+
+If five entries are being displayed per page, then for the fourth entry
+on the page the {count} variable would have a value of "4".
+
+credit
+~~~~~~
+
+::
+
+	{credit}
+
+The credit information associated with the entry, typically used for photo
+attributions.
+
+description
+~~~~~~~~~~~
+
+::
+
+	{description}
+
+The description associated with the entry.
 
 
 directory\_id
@@ -324,19 +347,6 @@ directory\_title
 
 This variable simply displays the content from the "Descriptive name of
 upload directory" setting for the directory that the file is in.
-
-count
-~~~~~
-
-::
-
-	{count}
-
-The "count" out of the current file being displayed by the tag on the
-current page.
-
-If five entries are being displayed per page, then for the fourth entry
-on the page the {count} variable would have a value of "4".
 
 entry\_date
 ~~~~~~~~~~~
@@ -374,6 +384,15 @@ filename
 The raw filename of the file associated with the entry. For instance,
 zoo.jpg.
 
+file\_url
+~~~~~~~~~
+
+::
+
+	{file_url}
+
+The URL to the file.
+
 height
 ~~~~~~
 
@@ -400,14 +419,15 @@ Would be rendered like this::
 
 	<a href="http://example.com/index.php/gallery/full_image/234/">my picture</a>
 
-file\_url
-~~~~~~~~~
+location
+~~~~~~~~
 
 ::
 
-	{file_url}
+	{location}
 
-The URL to the file.
+The user-defined geographic location information associated with the
+entry, typically used for photos.
 
 size
 ~~~~
