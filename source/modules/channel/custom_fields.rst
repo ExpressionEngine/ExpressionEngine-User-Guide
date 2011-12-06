@@ -1,52 +1,50 @@
+##############
 Channel Fields
-==============
+##############
 
-All fields assigned to a channel can be accessed using the "short name"
-of the field
-
-::
+All fields assigned to a Channel can be accessed using the Short Name
+of the field::
 
 	{body}
 	{summary}
 	{extended}
 	
 	etc..
+There are a number of field types included with ExpressionEngine, and
+add-ons can make even more available. Channel fields are managed in your
+control panel at
+:menuselection:`Admin --> Channel Administration --> Channel Fields`.
 
-These are totally dynamic in that any field you create for your channel
-will automatically be available by its "short name" as a variable.
-Channel fields can be assigned as different types, a few of which have
-more formatting options to simplify their use.
-
-Channel fields are managed in your control panel at:
-
-Admin > Channel Administration > Channel Fields
+.. contents::
+	:local:
+	:depth: 1
 
 
-File Fields
------------
+**********
+File Field
+**********
 
-::
+.. contents::
+	:local:
+	:depth: 1
+
+Single Variable Usage
+=====================
+
+In its most basic form, a File field can be used as a single tag that
+simply outputs the URL of the file::
 
 	{news_image}
 
-The file field will contain the full url to the uploaded file. You may
-want to use parts of that path, such as the filename. In order to
-accommodate this you can use the field as a tag pair
+If you have defined any :ref:`image-manipulations` you can modify the
+tag with the Short Name of the manipulation. For example, if you've
+defined a "small" manipulation, the following will output the URL to
+that version::
 
-::
-
-	{news_image}
-	    The file is a: {extension}
-	{/news_image}
-
-The available variables are:
-
--  {path} - the path to the parent folder
--  {filename} - the name of the file
--  {extension} - the file extension
+	{news_image:small}
 
 Wrap Parameter
-~~~~~~~~~~~~~~
+--------------
 
 You will frequently want to link to the file in your entry. Using the
 wrap parameter can simplify this process::
@@ -66,8 +64,173 @@ Which will output as::
 
 	<img src="http://example.com/dir/filename.ext" alt="filename" />
 
+Variable Pair Usage
+===================
+
+You can show detailed information about the file by using it as a tag
+pair and then referencing any of the available variables::
+
+	{news_image}
+		This file is a {extension} and was uploaded on {upload_date format="%Y %m %d"}
+		<a href="{url}">View it now</a>
+	{/news_image}
+
+.. contents::
+	:local:
+
+caption
+-------
+
+::
+
+	{caption}
+
+The caption assigned to the file.
+
+extension
+---------
+
+::
+
+	{extension}
+	
+The file's extension, if it has one.
+
+file_id
+-------
+
+::
+
+	{file_id}
+	
+The unique id of the file.
+
+file_name
+---------
+
+::
+
+	{file_name}
+	
+The full name of the file (including its extension).
+
+file_size
+---------
+
+::
+
+	{file_size}
+	
+The size of the file (in bytes).
+
+field_x
+-------
+
+::
+
+	{field_1}
+	...
+	{field_6}
+
+Outputs the content from one of the six available custom fields
+associated with the file.
+
+height
+------
+
+::
+
+	{height}
+	
+The height of the image (in pixels) if applicable.
+
+mime_type
+---------
+
+::
+
+	{mime_type}
+
+The automatically-detected MIME type of the file.
+
+modified_date
+-------------
+
+::
+
+	{modified_date format="%Y %m %d"}
+
+The date the file was last modified. See `Date Variable
+Formatting <../../templates/date_variable_formatting.html>`_ for more
+information.
+
+path
+----
+
+::
+
+	{path}
+	
+The URL to the folder containing the file, including a trailing slash.
+
+site_id
+-------
+
+::
+
+	{site_id}
+	
+The ID of the site the file is associate with.
+
+title
+-----
+
+::
+
+	{title}
+	
+The title assigned to the file.
+
+upload_date
+-----------
+
+::
+
+	{upload_date format="%Y %m %d"}
+
+The date the file was first uploaded. See `Date Variable
+Formatting <../../templates/date_variable_formatting.html>`_ for more
+information.
+	
+
+url
+---
+
+::
+
+	{url}
+
+The full URL to the file.
+	
+If you have defined any :ref:`image-manipulations` you can modify this
+tag with the Short Name of the manipulation. For example, if you've
+defined a "small" manipulation, the following will output the URL to
+that version::
+
+	{url:small}
+	
+width
+-----
+
+::
+
+	{width}
+	
+The width of the image (in pixels) if applicable.
+
+***************
 Checkbox Fields
----------------
+***************
 
 Like file fields, checkbox fields are special in that they can be used
 as a single tag and as a tag pair. 
@@ -79,13 +242,13 @@ as a single tag and as a tag pair.
 	{/poll_options}
 
 Limit Parameter
-~~~~~~~~~~~~~~~
+===============
 
 This parameter limits the number of selected items output by the tag. It
 works for both the single variable, as well as the tag pair.
 
 Markup Parameter
-~~~~~~~~~~~~~~~~
+================
 
 As a single tag, the multi option fields will display a comma seperated
 list of values. If you want an html list, you can use markup="ul" or
@@ -106,7 +269,7 @@ Which will render as
 	</ul>
 
 Backspace Parameter
-~~~~~~~~~~~~~~~~~~~
+===================
 
 When used as a tag pair, the multi option fields are a looping pair.
 Backspacing removes characters (including spaces and line breaks) from
@@ -134,14 +297,16 @@ count the number of characters (including spaces and line breaks) you
 want to remove and add the backspace parameter to the tag. The <br />
 tag has 6 characters plus a new line character.
 
+*******************
 Multi-Select Fields
--------------------
+*******************
 
 Multiselect fields are identical to `Checkbox
 Fields <#checkbox_fields>`_ in their usage.
 
+*************
 Member Fields
--------------
+*************
 
 All member profile fields can be accessed using the "short name" of the
 field
@@ -157,8 +322,9 @@ These are totally dynamic in that any profile field you create for your
 members will automatically be available by its "short name" as a
 variable.
 
+***********
 Date Fields
------------
+***********
 
 Any field that is a date type can be formatted just like other dates.
 Simply use the name of the field at the beginning of the tag. For

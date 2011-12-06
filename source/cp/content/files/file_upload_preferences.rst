@@ -203,6 +203,8 @@ File Category Groups
 You may assign multiple category groups to a file upload directory,
 which will allow you to assign categories to any uploaded files.
 
+.. _image-manipulations:
+
 Image Manipulations
 ~~~~~~~~~~~~~~~~~~~
 
