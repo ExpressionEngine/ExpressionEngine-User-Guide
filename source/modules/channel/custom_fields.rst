@@ -10,7 +10,8 @@ of the field::
 	{extended}
 	
 	etc..
-There are a number of field types included with ExpressionEngine, and
+
+There are a number of field types included with ExpressionEngine, and
 add-ons can make even more available. Channel fields are managed in your
 control panel at
 :menuselection:`Admin --> Channel Administration --> Channel Fields`.
@@ -180,7 +181,7 @@ site_id
 
 	{site_id}
 	
-The ID of the site the file is associate with.
+The ID of the site the file is associated with.
 
 title
 -----
