@@ -34,7 +34,7 @@ A second boolean parameter may be passed to specify if the message should
 be unique in the log and not duplicated. This is good for situations where
 a notice does not need to be logged each time it's triggered, but still
 needs to be brought to the Super Admin's attention. In the case that a
-message is sent to developer() with the unique flag set to TRUE, it will
+message is sent to developer() with the update flag set to TRUE, it will
 find the last message that matches the string of the message, set it's
 viewed status to not viewed, and update the timestamp. ::
 
