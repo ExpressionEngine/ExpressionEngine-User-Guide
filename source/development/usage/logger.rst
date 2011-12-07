@@ -25,7 +25,20 @@ For example, EllisLab uses the developer log to warn developers if a core
 function that is planned to be deprecated is being used by any third-party
 add-ons.
 
-To use the developer log to log your own events, notices or warnings, call this
-function and pass the string of the notice::
+To use the developer log to log your own events, notices or warnings, call
+this function and pass the string of the notice::
 
 	$this->EE->logger->developer('Log message.');
+
+A second boolean parameter may be passed to specify if the message should
+be unique in the log and not duplicated. This is good for situations where
+a notice does not need to be logged each time it's triggered, but still
+needs to be brought to the Super Admin's attention. In the case that a
+message is sent to developer() with the unique flag set to TRUE, it will
+find the last message that matches the string of the message, set it's
+viewed status to not viewed, and update the timestamp. ::
+
+	$this->EE->logger->developer('Unique log message.', TRUE);
+
+**NOTE:** Be conscious of how often the developer() function is used so as
+not to clutter the developer log and run unnecessary queries.
