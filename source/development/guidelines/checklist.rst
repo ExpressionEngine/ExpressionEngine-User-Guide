@@ -12,6 +12,9 @@ Developer Guidelines Checklist
       necessary)
    -  No debugging code leftover unless commented out
    -  No whitespace before or after opening/closing PHP tags in files
+   -  No use of deprecated core methods (check the
+      `Developer Log <../../cp/tools/logs/developer_log.html>`_ to make
+      sure no deprecation warnings have surfaced from your add-on)
    -  All code is PHP 5.1.6+ compatible
    -  Proper use of $this->EE->session->cache variables, e.g.
       $this->EE->session->cache['class\_name']['var\_name']
