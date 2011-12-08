@@ -79,14 +79,23 @@ pair and then referencing any of the available variables::
 .. contents::
 	:local:
 
-caption
--------
+credit
+------
 
 ::
 
-	{caption}
+	{credit}
 
-The caption assigned to the file.
+The credit assigned to the file.
+
+description
+-----------
+
+::
+
+	{description}
+
+The description assigned to the file.
 
 extension
 ---------
@@ -145,6 +154,15 @@ height
 	
 The height of the image (in pixels) if applicable.
 
+location
+--------
+
+::
+
+	{location}
+
+The location assigned to the file.
+
 mime_type
 ---------
 
@@ -173,15 +191,6 @@ path
 	{path}
 	
 The URL to the folder containing the file, including a trailing slash.
-
-site_id
--------
-
-::
-
-	{site_id}
-	
-The ID of the site the file is associated with.
 
 title
 -----
