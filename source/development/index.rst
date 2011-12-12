@@ -47,6 +47,7 @@ Development
    -  `Language Class <./usage/language.html>`_
    -  `Layout Class <./usage/layout.html>`_
    -  `Localization Class <./usage/localization.html>`_
+   -  `Logger Class <./usage/logger.html>`_
    -  `Security Class <./usage/security.html>`_
    -  `Session Class <./usage/session.html>`_
    -  `Table Class <./usage/table.html>`_
