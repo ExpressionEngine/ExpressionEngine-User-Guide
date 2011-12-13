@@ -43,23 +43,14 @@ Server Requirements
    and modules.
 -  2 MB of Database space. Note: The database will increase in size as
    you add new content.
+-  The  the `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_
+   library compiled into PHP.
 
 Optional Requirements
 ---------------------
 
 Some features of ExpressionEngine are optional to use. However, in order
 to be able to use them you will need to meet their requirements.
-
--  **CAPTCHAs and Watermarking.** Your server must have the `GD (or GD
-   2) <http://www.php.net/manual/en/ref.image.php>`_ library compiled
-   into PHP in order to use :doc:`/general/captchas` or watermarks.
--  **Image Thumbnailing.** To take advantage of the image thumbnailing
-   feature your server must support one of these image manipulation
-   protocols:
-
-   #. `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_
-   #. ImageMagick
-   #. NetPBM
 
 -  **Pings** Your server must have XML support compiled into PHP in
    order to send pings.
