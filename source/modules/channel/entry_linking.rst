@@ -189,6 +189,18 @@ Or exclude statuses using "not"
 
 	status="not submitted|processing|closed"
 
+url_title=
+----------
+
+::
+
+	url_title="{segment_4}"
+
+You may specify the URL title in which the module uses as a reference for
+next and previous entries. This is useful when a custom URL structure is
+being used and the module has trouble detecting the URL title
+automatically.
+
 *********
 Variables
 *********
