@@ -330,6 +330,25 @@ Set the value to the two letter ISO 639 language code for the spellcheck
 
 	$config['spellcheck_language_code'] = 'de';
 
+upload_preferences
+~~~~~~~~~~~~~~~~~~
+
+**Value:** Array
+
+Overrides file upload destination paths, URLs and titles. Each key in the
+array is optional and only overrides existing values in the database, new
+upload destinations cannot be created using this configuration variable.
+
+::
+
+	$config['upload_preferences'] = array(
+	    1 => array(                                                            // ID of upload destination
+	        'name'        => 'Staging Image Uploads',                          // Display name in control panel
+	        'server_path' => '/home/user/example.com/staging/images/uploads/', // Server path to upload directory
+	        'url'         => 'http://staging.example.com/images/uploads/'      // URL of upload directory
+	    )
+	);
+
 use_compressed_js
 ~~~~~~~~~~~~~~~~~
 
