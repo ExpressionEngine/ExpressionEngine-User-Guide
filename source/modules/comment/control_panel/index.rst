@@ -10,9 +10,7 @@ Comment Module Control Panel
 
 The Comment Module Control Panel allows you to moderate comments. By
 using the drop-down menus the list can be filtered by channel, comment
-status, or date range. In addition, you can search in the comments, by
-commenter IP address, commenter name, commenter email and by the channel
-entry title the comment is assigned to. You can select multiple comments
+status, or date range. You can select multiple comments
 using the checkboxes on the right, then either delete them or change
 their status using the option menu at the bottom of the page.
 
@@ -26,8 +24,7 @@ Search and Filter
 
 The main table shows the following columns:
 
--  **Display toggle**: Toggles the display of the full comment. Click on
-   the column heading to expand/collapse all comments.
+-  **Display toggle**: Toggles the display of the full comment.
 -  **Comment**: The comment body, limited by default to 100 characters
    with line breaks preserved (see
    `view\_comment\_chars <../../../general/hidden_configuration_variables.html#view_comment_chars>`_
@@ -35,30 +32,23 @@ The main table shows the following columns:
    `view\_comment\_leave\_breaks <../../../general/hidden_configuration_variables.html#view_comment_leave_breaks>`_
    for formatting options). Clicking the comment text allows you to
    `view or edit the comment <#editing-comments>`_.
--  **Entry Title**: Click to search in entry titles for all comments for
-   this entry.
--  **Name**: The commenter's name. Click to search in names for more
-   name matches.
--  **Email**: The commenter's email address. Click to search for more
-   email matches.
+-  **Entry Title**: The title of the Entry the comment was posted to.
+-  **Name**: The commenter's name.
+-  **Email**: The commenter's email address.
 -  **Date**: The date and time assigned to the comment.
--  **IP**: The commenter's IP address. Click to search for more IP
-   matches.
+-  **IP**: The commenter's IP address.
 -  **Status**: The status of the comment (Pending, Open or Closed).
-   Click to filter on this status.
 
-**NOTE:** The 'Add IPs to Blacklist' checkbox is only available when
-deleting comments. The `Blacklist Module <../../blacklist/index.html>`_
-must be installed to use this feature.
+.. note:: The 'Add IPs to Blacklist' checkbox is only available when
+   deleting comments. The `Blacklist Module <../../blacklist/index.html>`_
+   must be installed to use this feature.
 
 Comment Administration Privileges
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Comment administration permissions are set on a per member group basis
 in `Create/Edit Member
-Groups <../../../cp/members/member_groups_edit.html>`_
-
-.
+Groups <../../../cp/members/member_groups_edit.html>`_.
 
 -  **Can Moderate Comments**: Can view all comments and change the
    status of any comment.
@@ -71,8 +61,8 @@ Groups <../../../cp/members/member_groups_edit.html>`_
 -  **Can delete comments in ANY channel entries**: Can delete any
    comment.
 
-**NOTE:** In order to moderate comments, the member must have access to
-the Comment Module Control Panel.
+.. note:: In order to moderate comments, the member must have access to
+   the Comment Module Control Panel.
 
 Settings
 --------
