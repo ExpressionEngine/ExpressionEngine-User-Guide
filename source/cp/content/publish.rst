@@ -188,14 +188,6 @@ If this option is checked, then comments will be allowed for this entry.
 When this option is unchecked, your comment submission form will be
 suppressed. Any existing comments will still appear.
 
-Pings Tab
----------
-
-The ping tab allows you to send "pings" to the Ping Servers you have
-defined in your My Account > Ping Servers area.
-
-|Publish Pings Tab|
-
 .. _publish-forum-tab:
 
 Forum Tab
@@ -311,7 +303,6 @@ when the above URI is requested.
 .. |Publish Calendar| image:: ../../images/publish_cal.png
 .. |Publish Categories| image:: ../../images/publish_cats.png
 .. |Publish Options Tab| image:: ../../images/publish_options.png
-.. |Publish Pings Tab| image:: ../../images/publish_pings.png
 .. |Publish Forum| image:: ../../images/publish_forum.png
 .. |Publish Revisions Tab| image:: ../../images/publish_revisions.png
 .. |Publish Pages| image:: ../../images/publish_pages.png
