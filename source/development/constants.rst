@@ -10,22 +10,23 @@ Path Constants
 --------------
 
 -  **PATH\_THIRD** - Path to the system/expressionengine/third\_party
-   directory.
--  **PATH\_THEMES** - Path to the /themes directory.
--  **APPPATH** - Path to the /expressionengine directory.
--  **BASEPATH** - Path to the system directory.
--  **PATH\_MOD** - Path to the first party modules directory.
--  **PATH\_PI** - Path to the first party plugins directory.
--  **PATH\_EXT** - Path to the first party extensions directory.
--  **PATH\_ACC** - Path to the first party accessories directory.
--  **PATH\_FT** - Path to the first party fieldtypes directory.
--  **PATH\_MBR\_THEMES** - Path to the member themes directory.
--  **PATH\_CP\_GBL\_IMG** - Path to the global image directory.
--  **PATH\_JAVASCRIPT** - Path to the javascript directory.
--  **PATH\_JQUERY** - Path to the jQuery directory.
+   folder.
+-  **PATH\_THEMES** - Path to the /themes folder.
+-  **APPPATH** - Path to the /expressionengine folder.
+-  **BASEPATH** - Path to the system folder.
+-  **PATH\_MOD** - Path to the first party modules folder.
+-  **PATH\_PI** - Path to the first party plugins folder.
+-  **PATH\_EXT** - Path to the first party extensions folder.
+-  **PATH\_ACC** - Path to the first party accessories folder.
+-  **PATH\_FT** - Path to the first party fieldtypes folder.
+-  **PATH_THIRD_THEMES** - Path to the third party themes folder.
+-  **PATH\_MBR\_THEMES** - Path to the member themes folder.
+-  **PATH\_CP\_GBL\_IMG** - Path to the global image folder.
+-  **PATH\_JAVASCRIPT** - Path to the javascript folder.
+-  **PATH\_JQUERY** - Path to the jQuery folder.
 -  **SELF** - Name of the bootstrap file
 -  **FCPATH** - Path to the bootstrap file
--  **SYSDIR** - Name of the system directory
+-  **SYSDIR** - Name of the system folder
 
 Version Constants
 -----------------
@@ -42,6 +43,7 @@ URL Constants
 -  **AMP** - &amp;
 -  **QUERY\_MARKER** - Question mark if forcing query strings, blank
    otherwise
+- **URL_THIRD_THEMES** - URL to the third party theme folder
 
 HTML Constants
 --------------
