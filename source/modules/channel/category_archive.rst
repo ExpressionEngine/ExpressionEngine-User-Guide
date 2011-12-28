@@ -225,7 +225,11 @@ sort=
 
 ::
 
-	sort="asc" ``sort="desc"``
+	sort="asc"
+
+::
+
+	sort="desc"
 
 The sort order can be "asc" (ascending order or "oldest item first") or
 "desc" (descending order or "newest item first"). If you do not use a
