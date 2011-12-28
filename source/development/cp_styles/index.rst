@@ -62,6 +62,13 @@ ExpressionEngine will "fall back" and retreive them from default
 instead. This means that your custom theme need only consist of the PHP
 and CSS files you have actually modified.
 
+As a security precaution, the default theme's PHP files are not actually located
+in ``themes/cp_themes/default`` but are instead located within the system folder
+at ``system/expressionengine/views``. If you would like to override any of those
+files in your own theme, copy them to your own theme's directory, making sure
+that the copied files maintain the same directory structure in your theme as
+they do in the *views* directory.
+
 Overriding Control Panel Style
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
