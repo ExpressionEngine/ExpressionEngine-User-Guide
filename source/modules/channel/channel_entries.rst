@@ -1205,16 +1205,30 @@ year=, month=, day=
 
 ::
 
-	year="2003" ``month="12"`` ``day="23"``
+	year="2003"
+	
+::
+
+	month="12"
+
+::
+	
+	day="23"
 
 You can limit queries by year, month, or day. For example, to show all
 of year 2002 you'll use only::
 
 	year="2002"
 
-To show only the month of December in 2003 you'll do this::
+To show only the month of December in 2003 you'll do this
 
-	year="2003" month="12"
+::
+
+	year="2003"
+
+::
+	
+	month="12"
 
 **Note:** Don't combine these parameters with the "display\_by"
 parameter discussed previously, as these take precedence over that
