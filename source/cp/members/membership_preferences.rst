@@ -112,18 +112,17 @@ Specifies the number of rows to return by default.
 Notification Preferences
 ------------------------
 
-Notify administrators of new registrations?
+Send new member notifications?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Determine whether or not administrators (see next preference) will
-receive emails notifying them of new member registrations.
+If enabled, notifications will be sent to the email addresses specified in the
+next preference field.
 
 Email address for notifications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Here you can specify the email addresses which should receive
-notifications (see previous preference). Multiple email addresses should
-be separated by commas.
+Here you can specify the email addresses which should receive notifications (see
+previous preference). Multiple email addresses should be separated by commas.
 
 Private Messaging Preferences
 -----------------------------
