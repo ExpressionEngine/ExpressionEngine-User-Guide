@@ -14,32 +14,37 @@ The Search Results Tag controls how you display results from your
 searches. Example::
 
 	<table border="0" cellpadding="6" cellspacing="1" width="100%">
-		<tr>	
-			<th>{lang:title}</th>
-			<th>{lang:excerpt}</th>
-			<th>{lang:author}</th>
-			<th>{lang:date}</th>
-			<th>{lang:total_comments}</th>
-			<th>{lang:recent_comments}</th>
-		</tr>
+	    <tr>    
+	        <th>{lang:title}</th>
+	        <th>{lang:excerpt}</th>
+	        <th>{lang:author}</th>
+	        <th>{lang:date}</th>
+	        <th>{lang:total_comments}</th>
+	        <th>{lang:recent_comments}</th>
+	    </tr>
 	
-		{exp:search:search_results switch="resultRowOne|resultRowTwo"}
-			<tr class="{switch}">
-				<td width="30%" valign="top"><b><a href="{auto_path}">{title}</a></b></td>
-				<td width="30%" valign="top">{excerpt}</td>
-				<td width="10%" valign="top"><a href="{member_path='member/index'}">{author}</a></td>
-				<td width="10%" valign="top">{entry_date format="%m/%d/%y"}</td>
-				<td width="10%" valign="top">{comment_total}</td>
-				<td width="10%" valign="top">{recent_comment_date format="%m/%d/%y"}</td>
-			</tr>
-		{/exp:search:search_results}
-	</table>
+	{exp:search:search_results switch="resultRowOne|resultRowTwo"}
+	
+	    <tr class="{switch}">
+	        <td width="30%" valign="top"><b><a href="{auto_path}">{title}</a></b></td>
+	        <td width="30%" valign="top">{excerpt}</td>
+	        <td width="10%" valign="top"><a href="{member_path='member/index'}">{author}</a></td>
+	        <td width="10%" valign="top">{entry_date format="%m/%d/%y"}</td>
+	        <td width="10%" valign="top">{comment_total}</td>
+	        <td width="10%" valign="top">{recent_comment_date format="%m/%d/%y"}</td>
+	    </tr>
+	    
+	    {if count == total_results}
+	        </table>
+	    {/if}
+	    
+	    {paginate}
+	        <p>Page {current_page} of {total_pages} pages {pagination_links}</p>
+	    {/paginate}
+		
+	{/exp:search:search_results}
 
-	{if paginate}
-		<div class='paginate'>
-			<span class='pagecount'>{page_count}</span>&nbsp; {paginate}
-		</div>
-	{/if}
+Pagination follows the `Channel style of pagination <../channel/pagination_page.html>`_.
 
 Parameters
 ==========
