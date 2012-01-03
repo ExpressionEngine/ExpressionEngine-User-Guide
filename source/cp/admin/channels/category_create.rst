@@ -27,10 +27,7 @@ Category Image URL
 ~~~~~~~~~~~~~~~~~~
 
 This field is designed to allow you to associate an image with the
-category within your `Channel
-Entries <../../../modules/channel/channel_entries.html>`_ Tag. It is
-also possible to use this field to store other types of text, but a URL
-is the most common choice.
+category.
 
 Category Parent
 ~~~~~~~~~~~~~~~
