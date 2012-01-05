@@ -16,7 +16,7 @@ tags.
 Here is a simple example of a possible usage of this tag::
 
 	{exp:file:entries limit="20" paginate="both" directory_id="3"}
-		<p><strong>{title}</strong> - {custom_field_one} posted: {entry_date format='%h:%i %A'}</p>
+		<p><strong>{title}</strong> - posted: {entry_date format='%h:%i %A'}</p>
 
 		{categories}
 			{category_image} - <a href="{path='about/test'}">{category_name}</a><br>
