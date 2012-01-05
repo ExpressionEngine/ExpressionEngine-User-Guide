@@ -133,18 +133,6 @@ file_size
 	
 The size of the file (in bytes).
 
-field_x
--------
-
-::
-
-	{field_1}
-	...
-	{field_6}
-
-Outputs the content from one of the six available custom fields
-associated with the file.
-
 height
 ------
 
