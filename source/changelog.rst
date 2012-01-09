@@ -14,6 +14,43 @@ Version 2.4.0
 
 Release Date: Unreleased
 
+- General Changes:
+
+  - Removed the ability to enable SQL Query Caching via the Control Panel. It
+    is now only accessible via the 'enable_db_caching' hidden configuration
+    variable. Note that this form of caching is **not** recommended in most
+    environments.
+  - Added the ability to apply image watermarks without having to also
+    resize the image.
+  - Changed the member module to display a proper 404 page when an action
+    could not be found.
+  - Altered the handling of the control panel cookie domain for MSM sites.
+  - Optimized the encode_ee_tags() method in the Functions library.
+  - Disabled the ability to type over the field shortname on the 'Admin- Channel 
+    Fields' main page when selecting a field short name.
+  - Abstracted file browser and file field into the File_field library.
+  - Changed the category image field to use the new File_field library and image
+    browser.
+  - Abstracted channel pagination into the EE Pagination library.
+  - Implemented new EE Pagination library with comment pagination.
+  - Implemented new EE Pagination library with search pagination.
+  - Added file metadata to the file upload modal.
+  - Removed accordions from image edit in the file upload modal.
+  - Added check to make sure that version constant matches version in config file.
+  - File upload paths can now be overridden via configuration variables.
+  - Added ``active`` conditional variable to category listings for
+    determining the active category.
+  - Added link to publish another entry after publishing an entry.
+  - Added "credit" and "location" metadata fields to files.
+  - Added url_title parameter to Channel module's next_entry and prev_entry.
+  - Channel Categories and Category Archive tags now support multiple
+    channels in the channel parameter.
+  - Files in file browser modal can now be sorted and filtered by keywords.
+  - Added the list of Channels to dropdown under Edit.
+  - Added third_party_path config item.
+  - Changed default text formatting from XHTML to none.
+  - Fixed an issue where remember me functionality was not working correctly.
+
 - Bug Fixes:
 
   - Fixed a bug (#16814) where the Datepicker would not allow AM to be
@@ -184,42 +221,6 @@ Release Date: Unreleased
     information for the Comment Module page.
   - Fixed a documentation error (#16547) where there was some outdated 
     information for the File Manager page.
-
-- General Changes:
-
-  - Removed the ability to enable SQL Query Caching via the Control Panel. It
-    is now only accessible via the 'enable_db_caching' hidden configuration
-    variable. Note that this form of caching is **not** recommended in most
-    environments.
-  - Added the ability to apply image watermarks without having to also
-    resize the image.
-  - Changed the member module to display a proper 404 page when an action
-    could not be found.
-  - Altered the handling of the control panel cookie domain for MSM sites.
-  - Optimized the encode_ee_tags() method in the Functions library.
-  - Disabled the ability to type over the field shortname on the 'Admin- Channel 
-    Fields' main page when selecting a field short name.
-  - Abstracted file browser and file field into the File_field library.
-  - Changed the category image field to use the new File_field library and image
-    browser.
-  - Abstracted channel pagination into the EE Pagination library.
-  - Implemented new EE Pagination library with comment pagination.
-  - Implemented new EE Pagination library with search pagination.
-  - Added file metadata to the file upload modal.
-  - Removed accordions from image edit in the file upload modal.
-  - Added check to make sure that version constant matches version in config file.
-  - File upload paths can now be overridden via configuration variables.
-  - Added ``active`` conditional variable to category listings for
-    determining the active category.
-  - Added link to publish another entry after publishing an entry.
-  - Added "credit" and "location" metadata fields to files.
-  - Added url_title parameter to Channel module's next_entry and prev_entry.
-  - Channel Categories and Category Archive tags now support multiple
-    channels in the channel parameter.
-  - Files in file browser modal can now be sorted and filtered by keywords.
-  - Added the list of Channels to dropdown under Edit
-  - Added third_party_path config item
-  - Changed default text formatting from XHTML to none
 
 - Developers:
 
