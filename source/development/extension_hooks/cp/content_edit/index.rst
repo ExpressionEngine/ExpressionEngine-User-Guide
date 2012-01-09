@@ -53,9 +53,36 @@ deletion process. ::
 	$edata = $this->extensions->call('delete_entries_start'); if ($this->extensions->end_script === TRUE) return;
 
 :returns:
-    void
+	void
 
 Added in v1.4.0
+
+
+edit\_entries\_additional\_where
+--------------------------------
+
+This hook is executed when the edit page is loaded, and on every search
+that is performed on the edit page. It can be used to add additional
+where, where_in, and where_not_in options to the query. ::
+
+	$_hook_wheres = $this->extensions->call('edit_entries_additional_where', $filter_data); if ($this->extensions->end_script === TRUE) return;
+
+
+$filter_data
+~~~~~~~~~~~~
+
+Current search form information.
+
+:returns:
+    array of additional where data
+    ::
+        array(
+            'entry_id' => array(1, 2, 3),
+            'entry_id !=' => 5,
+            'channel_id !=' => array(3, 4)
+        )
+	
+Added in v2.4.0
 
 update\_multi\_entries\_loop
 ----------------------------
