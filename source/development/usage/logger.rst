@@ -41,5 +41,18 @@ not viewed, and update the timestamp. ::
 
 	$this->EE->logger->developer('Unique log message.', TRUE);
 
+A third parameter may be set if the log item should only be logged every
+so often. If the second parameter is set to TRUE, the third parameter is
+the amount of time in seconds to have elapsed from the initial logging to
+mark as unread and alert Super Admin again. For example, if an item should
+only show once per week, an item is logged with an expires time of 604800
+seconds. If the developer function is called with the same data within
+that period of time, it will hold off displaying a notice to the Super
+Admin until the developer function is called again after the interval has
+completed. This is designed to make log item alerts less annoying to the
+user. ::
+
+	$this->EE->logger->developer('Unique log message.', TRUE, 604800);
+
 **NOTE:** Be conscious of how often the developer() function is used so as
 not to clutter the developer log and run unnecessary queries.
