@@ -51,3 +51,5 @@ The site_id of the current template
 
 :returns:
     String
+
+Added in v2.4.0
