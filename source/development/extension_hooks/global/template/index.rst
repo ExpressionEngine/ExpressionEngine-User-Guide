@@ -23,6 +23,8 @@ Array of data for the current template
 :returns:
     void
 
+Added in v2.4.0
+
 template\_post\_parse
 ---------------------
 
