@@ -223,7 +223,7 @@ Release Date: Unreleased
 
 - Developers:
 
-  - Added URL_THEMES_THIRD and PATH_THEMES_THIRD constants for add-on developers.
+  - Added URL_THIRD_THEMES and PATH_THIRD_THEMES constants for add-on developers.
   - Added Developer Log to log notices that need Super Admin attention.
   - Deprecated ``member_model->get_authors_simple()``, use
     ``member_model->get_authors()`` instead.
