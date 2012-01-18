@@ -22,6 +22,8 @@ Release Date: Unreleased
     environments.
   - Added the ability to apply image watermarks without having to also
     resize the image.
+  - Added the ability to use image manipulations in custom file fields, using 
+    both a single tag and a tag pair.
   - Changed the member module to display a proper 404 page when an action
     could not be found.
   - Altered the handling of the control panel cookie domain for MSM sites.
