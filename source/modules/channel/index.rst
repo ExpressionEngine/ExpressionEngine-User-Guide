@@ -10,6 +10,7 @@ of flexibility for displaying your content.
 The Channel Module provides the following tags and features:
 
 -  `Channel Entries Tag <channel_entries.html>`_
+-  `Custom Fields <custom_fields.html>`_
 -  `Next/Prev Entry Linking <entry_linking.html>`_
 -  `Relationships <relationships.html>`_
 -  `Adding and Editing Entries from Outside the Control Panel <../safecracker/index.html>`_
