@@ -226,8 +226,11 @@ Release Date: Unreleased
 
   - Added URL_THIRD_THEMES and PATH_THIRD_THEMES constants for add-on developers.
   - Added Developer Log to log notices that need Super Admin attention.
-  - Deprecated ``member_model->get_authors_simple()``, use
-    ``member_model->get_authors()`` instead.
+  - Deprecated ``Member_model::get_authors_simple()``, use
+    ``Member_model::get_authors()`` instead.
+  - Deprecated ``File_upload_preferences_model::get_upload_preferences()``,
+    use ``File_upload_preferences_model::get_file_upload_preferences()``
+    instead.
   - Added ``template_types`` Extension Hook to add custom template types.
   - Added ``member_delete`` Extension Hook to execute code before member
     deletion and to modify member IDs to delete.
