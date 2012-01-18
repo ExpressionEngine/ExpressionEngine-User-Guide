@@ -22,8 +22,8 @@ Release Date: Unreleased
     environments.
   - Added the ability to apply image watermarks without having to also
     resize the image.
-  - Added the ability to use image manipulations in custom file fields, using 
-    both a single tag and a tag pair.
+  - Added the ability to use image manipulations in custom file fields, using both
+    a single tag and a tag pair.
   - Changed the member module to display a proper 404 page when an action
     could not be found.
   - Altered the handling of the control panel cookie domain for MSM sites.
@@ -107,7 +107,7 @@ Release Date: Unreleased
     in a permission error when using secure forms.
   - Fixed a bug (#16504) where multiple versions of the same email on a
     page were not decoded correctly.
-  - Fixed a bug (#16759) where categories with lots of custom fields were
+  - Fixed a bug (#16759) where categories with lots of channel fields were
     difficult to edit from the publish page.
   - Fixed a bug (#16801) where members were always logged in as anonymous.
   - Fixed a bug (#16865) where upper case BBCode was not being parsed.
