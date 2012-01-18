@@ -6,8 +6,8 @@ Channel Module Extension Hooks
 	:depth: 1
 
 
-channel\_entries\_query\_result
--------------------------------
+channel_entries_query_result
+----------------------------
 
 Modify the channel entries query result array before the parsing loop
 starts
@@ -22,7 +22,7 @@ $this
 
 The current Channel object
 
-$query\_result
+$query_result
 ~~~~~~~~~~~~~~
 
 The Channel Entries query result array
@@ -32,8 +32,8 @@ The Channel Entries query result array
 
 Added in v1.6.7
 
-channel\_entries\_tagdata
--------------------------
+channel_entries_tagdata
+-----------------------
 
 Modify the tagdata for the channel entries before anything else is
 parsed
@@ -62,8 +62,8 @@ and fields
 
 Added in v1.4.0
 
-channel\_entries\_row
----------------------
+channel_entries_row
+-------------------
 
 Modify the entry data for the channel entries before anything else is
 parsed
@@ -88,8 +88,8 @@ and fields
 
 Added in v1.6.7
 
-channel\_entries\_tagdata\_end
-------------------------------
+channel_entries_tagdata_end
+---------------------------
 
 Take the final result from an entry's parsing and do what you will. ::
 
@@ -116,8 +116,8 @@ and fields
 
 Added in v1.5.0
 
-channel\_module\_calendar\_start
---------------------------------
+channel_module_calendar_start
+-----------------------------
 
 Rewrite the displaying of the calendar tag
 
@@ -130,8 +130,8 @@ Rewrite the displaying of the calendar tag
 
 Added in v1.4.0
 
-channel\_module\_categories\_start
-----------------------------------
+channel_module_categories_start
+-------------------------------
 
 Rewrite the displaying of categories with the Category tag in the
 Channel module
@@ -145,8 +145,8 @@ Channel module
 
 Added in v1.4.0
 
-channel\_module\_category\_heading\_start
------------------------------------------
+channel_module_category_heading_start
+-------------------------------------
 
 Rewrite the displaying of category headings
 
@@ -159,31 +159,37 @@ Rewrite the displaying of category headings
 
 Added in v1.4.0
 
-channel\_module\_create\_pagination
------------------------------------
+channel_module_create_pagination
+--------------------------------
 
-Rewrite the pagination function in the Channel module and possible
-expand the types of pagination available
+Rewrite the pagination function in the Pagination library and possible expand
+the types of pagination available
 
 ::
 
-	$edata = $this->extensions->call('channel_module_create_pagination', $this); if ($this->extensions->end_script === TRUE) return;
+	$edata = $this->extensions->call('channel_module_create_pagination', $this, $count); 
+	if ($this->extensions->end_script === TRUE) return;
 
 $this
 ~~~~~
 
-Currently instantiated object for Channel class, remember to call
-this with a reference if you want to modify the object
+Currently instantiated object for EE_Pagination class, remember to call this
+with a reference if you want to modify the object.
+
+$count
+~~~~~~
+
+The number of items the pagination library is paginating over.
 
 :returns:
     void
 
 Added in v1.4.0
 
-channel\_module\_fetch\_pagination\_data
-----------------------------------------
+channel_module_fetch_pagination_data
+------------------------------------
 
-- Works with the 'channel\_module\_create\_pagination' hook
+- Works with the 'channel_module_create_pagination' hook
 
 ::
 
