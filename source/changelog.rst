@@ -233,6 +233,8 @@ Release Date: Unreleased
   - Deprecated ``File_upload_preferences_model::get_upload_preferences()``,
     use ``File_upload_preferences_model::get_file_upload_preferences()``
     instead.
+  - Deprecated ``Tools_model::get_upload_preferences()``, use 
+    ``File_upload_preferences_model::get_file_upload_preferences()`` instead.
   - Added ``template_types`` Extension Hook to add custom template types.
   - Added ``member_delete`` Extension Hook to execute code before member
     deletion and to modify member IDs to delete.
