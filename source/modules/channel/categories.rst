@@ -395,7 +395,7 @@ The "count" out of the current categories being displayed. If five
 categories are being displayed, then for the fourth category the {count}
 variable would have a value of "4".
 
-path='
+path=
 ------
 
 ::

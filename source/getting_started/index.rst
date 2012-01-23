@@ -464,7 +464,7 @@ Let's add this code::
 		<h1>Home, Sweet Home.</h1>
 		<p>Kick back and relax... you've made it home.</p>
 	
-		<h2>What's Happening?</h2>
+		<h2>The Latest</h2>
 		<p>Check out the <a href="{path='news'}">latest news</a>:</p>
 		<ul>
 			{exp:channel:entries channel="news" limit="10"}
