@@ -2,6 +2,17 @@ Multiple Site Manager
 =====================
 
 
+Version 2.1.2
+-------------
+
+Release Date: January 23, 2012
+
+- Updated copying of file upload destinations to respect config variable
+  overrides.
+- Fixed a bug (#17049) where image manipulations weren't moved or copied
+  along with upload destinations when creating a new site.
+
+
 Version 2.1.1
 -------------
 
