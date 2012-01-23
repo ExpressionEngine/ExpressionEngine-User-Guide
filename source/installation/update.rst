@@ -127,7 +127,8 @@ be taken:
 
 -  The `Version Notes <version_notes.html>`_ will outline any
    version-specific changes that may need to be made.
--  If you're updating from a previous version, you may have a \_thumb
+-  If you're updating from a previous version, you might need to sync your file
+   upload directories for files to work properly.
 -  If you use a local version of the documentation, replace your copy
    with the latest from our `Download
    Area <https://secure.expressionengine.com/download.php>`_.
