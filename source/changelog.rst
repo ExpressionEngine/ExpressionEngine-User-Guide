@@ -14,6 +14,11 @@ Version 2.4.0
 
 Release Date: Unreleased
 
+- Important:
+
+  - Fixed a security issue that could have caused all mailing list subscribers
+    to be unsubscribed.
+
 - General Changes:
 
   - Removed the ability to enable SQL Query Caching via the Control Panel. It
