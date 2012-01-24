@@ -77,9 +77,9 @@ Current search form information.
     array of additional where data
     ::
         array(
-            'entry_id' => array(1, 2, 3),
-            'entry_id !=' => 5,
-            'channel_id !=' => array(3, 4)
+            'entry_id !=' => 5,        // where
+            'entry_id' => array(1, 2, 3),    // where_in
+            'channel_id !=' => array(3, 4)    // where_not_in
         )
 	
 Added in v2.4.0
