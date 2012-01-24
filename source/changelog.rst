@@ -207,6 +207,10 @@ Release Date: Unreleased
     Entries tag had no effect.
   - Fixed a bug with autosave where the save() method would be called for third 
     party add-ons on autosave.
+  - Fixed a bug (#16973) where the "Show Existing Files" link on a
+    SafeCracker file field would claim the upload directory didn't exist.
+  - Fixed a bug (#16237) where File module pagination was not working
+    correctly.
   - Fixed a documentation error (#16932) where a Plugin code sample was
     incorrect.
   - Fixed a documentation error (#16335) where an API usage example was
