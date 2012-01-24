@@ -92,8 +92,6 @@ Release Date: Unreleased
     could not logically allow spaces were not trimmed.
   - Fixed a bug where date fields containing a date prior to 1970 were not
     displayed in the preview shown after creating or editing an entry. 
-  - Fixed a bug (#16328) where times could shift by one minute when creating
-    or editing an entry.
   - Fixed a bug (#17231) where Moscow Time was still represented as UTC+03:00
     instead of UTC+04:00.
   - Fixed a bug (#17142) by improving the grammar of messages in some areas.
