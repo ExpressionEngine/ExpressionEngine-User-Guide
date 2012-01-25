@@ -5,6 +5,7 @@ This template displays a list of pages that link to the current article
 as outlined below:
 
 |Wiki Associated Pages|
+
 In addition to the variables in the `Wiki Page
 template <wiki_templates_page.html>`_, the Special Associated Pages
 template has:

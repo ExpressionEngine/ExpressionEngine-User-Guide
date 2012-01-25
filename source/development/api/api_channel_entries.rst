@@ -11,7 +11,8 @@ Calling the Class
 The Channel Entries class is called with the api->instantiate()
 function. ::
 
-	$this->EE->load->library('api'); $this->EE->api->instantiate('channel_entries');
+	$this->EE->load->library('api');
+	$this->EE->api->instantiate('channel_entries');
 
 **Note:** the API uses a Singleton pattern and does not currently
 support nesting of calls. Thus instantiating a new call while in the
@@ -40,9 +41,6 @@ Example Usage::
 	$this->EE->api->instantiate('channel_entries');
 	$this->EE->api->instantiate('channel_fields');
 	
-	$this->EE->api_channel_fields->setup_entry_settings($data['channel_id'], $data);
-	$result = $this->EE->api_channel_entries->submit_new_entry($data['channel_id'], $data);
-	
 	$data = array(
 		'title'         => 'Breaking News Story!',
 		'entry_date'    => '1256953732',
@@ -52,7 +50,9 @@ Example Usage::
 		'field_ft_19'   => 'xhtml'
 	);
 	
-	if ($this->EE->api_channel_entries->submit_new_entry(4, $data) === FALSE)
+	$this->EE->api_channel_fields->setup_entry_settings($channel_id, $data);
+
+	if ($this->EE->api_channel_entries->submit_new_entry($channel_id, $data) === FALSE)
 	{
 		show_error('An Error Occurred Creating the Entry');
 	}

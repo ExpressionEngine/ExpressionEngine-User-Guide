@@ -109,6 +109,33 @@ If set, overrides the core Email class setting for newline characters
 
 	$config['email_newline'] = "\r\n";
 
+enable_db_caching
+~~~~~~~~~~~~~~~~~
+
+Forces ExpressionEngine to cache the output of database queries to text
+files.
+
+::
+
+$config['enable_db_caching'] = "y";
+
+When your visitors access your web pages, the cache files are
+examined to see if the particular queries being requested exist in
+cached form. If they do, ExpressionEngine uses the cached data instead
+of querying your database.
+
+In most environments, the database server is better suited to handle
+its own caching. Therefore, we do not recommend that this option be
+enabled unless it is specifically required.
+
+Furthermore, some queries can not be cached this way because the syntax
+of the query changes dynamically every time the query is run. A Channel
+Entries query, for example, always matches the expiration date against
+the current time in order to determine if entries have expired. This causes
+the query to change slightly with each page load; thus it cannot use this
+caching method. (See :ref:`dynamic-channel-query-caching` for an
+alternative that can be used in many cases.)
+
 hidden_template_404
 ~~~~~~~~~~~~~~~~~~~
 
@@ -273,6 +300,7 @@ Enables the stripping of unparsed ExpressionEngine variables in
 templates when Debug has been forcibly set to 0 in your config file.
 
 ::
+
 	$config['remove_unparsed_vars'] = 'y';
 
 smart_static_parsing
@@ -301,6 +329,25 @@ Set the value to the two letter ISO 639 language code for the spellcheck
 ::
 
 	$config['spellcheck_language_code'] = 'de';
+
+upload_preferences
+~~~~~~~~~~~~~~~~~~
+
+**Value:** Array
+
+Overrides file upload destination paths, URLs and titles. Each key in the
+array is optional and only overrides existing values in the database, new
+upload destinations cannot be created using this configuration variable.
+
+::
+
+	$config['upload_preferences'] = array(
+	    1 => array(                                                            // ID of upload destination
+	        'name'        => 'Staging Image Uploads',                          // Display name in control panel
+	        'server_path' => '/home/user/example.com/staging/images/uploads/', // Server path to upload directory
+	        'url'         => 'http://staging.example.com/images/uploads/'      // URL of upload directory
+	    )
+	);
 
 use_compressed_js
 ~~~~~~~~~~~~~~~~~

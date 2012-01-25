@@ -42,11 +42,9 @@ wiki's Full Name is "Joe's Wiki" your Short Name might be "joes\_wiki."
 Text Formatting for articles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can use any of the text formatting
-`plugins <http://plugins.expressionengine.com/>`_ available for
-ExpressionEngine including **xhtml**, **Textile**, and **Markdown**.
+You can use either **XHTML** or **BBCode** in Wiki articles.
 
-To create pages, categories, and learn more about typically wiki use
+To create pages, categories, and learn more about typical Wiki use
 please see the `Wiki syntax <wiki_syntax.html>`_ documentation.
 
 File Upload Directory for Wiki
@@ -122,6 +120,7 @@ Namespaces as they override those set for the general wiki. You can see
 an example in the screen shot below.
 
 |Create Namespace form.|
+
 If you wish to delete a namespace, click the minus sign on the right
 side of its row. To add a new namespace row, click any of the plus signs
 and a new, empty row will be created for you.

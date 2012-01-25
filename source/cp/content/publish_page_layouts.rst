@@ -18,6 +18,7 @@ Fields
 The Fields Grouping shows all available Channel Fields.
 
 |Publish Page Fields|
+
 The eye icon in the far right indicates whether that field is shown or
 hidden on the publish page.
 
@@ -42,10 +43,12 @@ Tabs go across the top of the Publish Page and allow you to group
 actions together.
 
 |Publish Page Tabs Top|
+
 You can add a new tab by clicking + Add a Tab at the top of the Publish
 Page, or by clicking Add a Tab in the Tabs grouping in the Toolbar
 
 |Publish Page Tabs|
+
 This Tab Grouping includes the default tabs with the installation, as
 well as those made since. You can delete a tab by clicking the Trash Can
 — |Publish Page Trash| — to the right of each tab.
@@ -76,6 +79,7 @@ You can add and remove authors while customizing the Publish Page
 Layout.
 
 |Publish Page Authors|
+
 Arranging Fields
 ~~~~~~~~~~~~~~~~
 
@@ -92,6 +96,7 @@ field — |Publish Page Resize Field| —and drag to the desired width.
 and then dragging them next to each other.
 
 |Publish Page Example Side By Side|
+
 Saving your Publish Page Layout
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -99,6 +104,7 @@ Publish Page Layouts can be previewed, saved, and removed per member
 group.
 
 |Publish Page Save Layout|
+
 The next time a member of that group Publishes or Edits an entry in that
 Channel, this custom publish page layout will be displayed.
 

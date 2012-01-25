@@ -393,6 +393,24 @@ url by including the `paginate=`_ parameter. If that tag
 is used in conjunction with the dynamic parameter, the tag will act
 dynamically for pagination data only.
 
+dynamic_parameters=
+-------------------
+
+::
+
+	dynamic_parameters="orderby|limit|sort"
+
+The `Dynamic Parameters <dynamic_parameters.html>`_ feature permits a
+{exp:channel:entries} tag's parameters to be set "on the fly" using POST
+data submitted via a form. A practical use for this is to create some
+display options in a form on your page that your visitors can use to
+select their preferred page view.
+
+**NOTE:** This feature will only work if page caching is turned OFF for
+the template in which it is being used.
+
+Every Parameter available to the channel tag can be set dynamically.
+
 .. _channel-entries-dynamic-start:
 
 dynamic\_start=
@@ -1187,16 +1205,30 @@ year=, month=, day=
 
 ::
 
-	year="2003" ``month="12"`` ``day="23"``
+	year="2003"
+	
+::
+
+	month="12"
+
+::
+	
+	day="23"
 
 You can limit queries by year, month, or day. For example, to show all
 of year 2002 you'll use only::
 
 	year="2002"
 
-To show only the month of December in 2003 you'll do this::
+To show only the month of December in 2003 you'll do this
 
-	year="2003" month="12"
+::
+
+	year="2003"
+
+::
+	
+	month="12"
 
 **Note:** Don't combine these parameters with the "display\_by"
 parameter discussed previously, as these take precedence over that
@@ -2387,6 +2419,16 @@ Categories Tag Pair Variables
 
 .. contents::
    :local:
+
+active
+^^^^^^
+
+::
+
+	{if active} This category is active {/if}
+
+You may use this conditional to test whether the category shown is the
+active category or not, based on the dynamic URI segment.
 
 category\_description
 ^^^^^^^^^^^^^^^^^^^^^

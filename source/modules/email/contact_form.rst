@@ -163,7 +163,11 @@ user\_recipients=
 
 ::
 
-	user_recipients="yes" ``user_recipients="no"``
+	user_recipients="yes"
+	
+::
+
+	user_recipients="no"
 
 The user\_recipients parameter specifies whether or not the form will
 accept having the user input recipients via a 'to' field in the

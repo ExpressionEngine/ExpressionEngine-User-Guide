@@ -115,6 +115,7 @@ channel=
 
 The name (short name) of the channel that the categories are assigned
 to. This variable is **required** unless you only have a single channel.
+Multiple channels may also be specified.
 
 You must specify this parameter if you use the `category name in
 URL <../../cp/admin/channels/global_channel_preferences.html>`_
@@ -184,7 +185,7 @@ restrict\_channel=
 
 ::
 
-	restrict_channel="no" ``restrict_channel="yes"``
+	restrict_channel="no"
 
 This parameter may be used to alter the behavior of the `show\_empty
 parameter <#par_show_empty>`_ and has no effect unless that parameter is
@@ -222,7 +223,7 @@ show\_empty=
 
 ::
 
-	show_empty="no" ``show_empty="yes"``
+	show_empty="no"
 
 This parameter determines whether or not categories that contain no
 entries for the specific channel are displayed. If you set the parameter
@@ -394,7 +395,7 @@ The "count" out of the current categories being displayed. If five
 categories are being displayed, then for the fourth category the {count}
 variable would have a value of "4".
 
-path='
+path=
 ------
 
 ::
@@ -435,6 +436,20 @@ All custom fields assigned to a category can be accessed using the
 
 These are totally dynamic in that any field you create for your category
 will automatically be available by its "short name" as a variable.
+
+*********************
+Conditional Variables
+*********************
+
+active
+------
+
+::
+
+	<a href="{path='news/index'}"{if active} class="active"{/if}>{category_name}</a>
+
+You may use this conditional to test whether the category shown is the
+active category or not, based on the dynamic URI segment.
 
 **********************
 Category Dropdown Menu

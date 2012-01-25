@@ -75,6 +75,36 @@ similar to:
 
 http://example.com/themes/
 
+Theme Folder Path
+~~~~~~~~~~~~~~~~~
+
+The *server path* to the "themes" folder. A server path often looks
+similar to::
+
+	/home/usr/domain.com/public_html/themes/
+
+Server paths will vary from server to server, so you should contact your
+Host or server admin if you are unsure of what your setting should be.
+
+Default Control Panel Theme
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The theme that members will see when logged in to the Control Panel.
+They are able to override this setting in :doc:`/cp/my_account/index`.
+
+Default Language
+~~~~~~~~~~~~~~~~
+
+The language pack that members will see when logged in to the Control
+Panel. This only affects the Control Panel. 
+Members are able to override this setting in :doc:`/cp/my_account/index`.
+
+Default XML Language
+~~~~~~~~~~~~~~~~~~~~
+
+This setting is typically used when outputting RSS feeds. Your feed will
+identify itself as having the language specified here.
+
 Maximum Number of Cachable URIs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

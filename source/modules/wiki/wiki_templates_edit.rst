@@ -6,6 +6,7 @@ happens when a user clicks an 'edit' link) is displayed within the Wiki
 Page wrapper template as outlined below:
 
 |Dislays the editing interface for an article|
+
 In addition to the variables in the `Wiki Page
 template <wiki_templates_page.html>`_, the Edit template has:
 

@@ -25,7 +25,7 @@ heading.
 
 When you visit one of your Category links your Channel Entries are shown
 sorted by the chosen Category. This tag lets you dynamically show the
-name of the cCtegory being viewed.
+name of the Category being viewed.
 
 If no Categories are being shown, the tag will not show anything
 contained within the opening and closing pair.

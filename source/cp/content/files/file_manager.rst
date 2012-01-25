@@ -5,12 +5,11 @@ File Manager
 
 **Control Panel Location:** :menuselection:`Content --> Files --> File Manager`
 
-On the main File Manager page, you can view all of your previously
-uploaded files. Files are filterably by by upload location, category,
-file type and date range, as well as being searchable. In addition, you
-can select multiple files using the checkboxes on the right, then you
-can either download the files or delete them using the option menu at
-the bottom of the page.
+On the main File Manager page you can view all of your previously
+uploaded files. Files can be searched by keyword as well as filtered by
+upload location, category, type and date. You can also select multiple
+files using the checkboxes on the right, and then download the files or delete
+them using the dropdown menu at the bottom of the page.
 
 Main File View
 --------------
@@ -29,9 +28,11 @@ The Main File View shows the following columns:
    resides.
 -  **Date**: The date the file was uploaded.
 -  **Actions**: Three actions you can perform on the file: download,
-   delete, and edit.
+   edit metadata, and image manipulation (crop, rotate or resize).
+-  **Delete**: Deletes the file.
 
 |File Manager Quick Look|
+
 Clicking on an image’s File Name will bring up an overlay showing you
 the image.
 
@@ -42,16 +43,19 @@ Files can be uploaded from the File Manager to any of the directories
 available to you. Start by clicking the Upload button.
 
 |File Manager File Upload|
+
 Then, select the upload directory where you want the file to go and then
 select your file and click Upload File.
 
 |File Manager File Upload Success|
+
 After the file is uploaded, you’ll be shown a summary of the file,
 including a thumbnail and some file details. Note that the filename is
 automatically sanitized to remove spaces and other disallowed characters
 and the file renamed if necessary.
 
 |image5|
+
 If you close the dialog by either clicking the close button in the top
 right corner or by clicking Browse Files on the bottom, you’ll be shown
 the file table again, with the most recent file on the top.
@@ -64,15 +68,22 @@ Download File
 
 |Download File Icon| Clicking this icon will download the file.
 
+Edit File
+~~~~~~~~~
+
+|Edit File Icon| Clicking this icon will allow you to edit the file's
+metadata.
+
+Edit Image
+~~~~~~~~~~
+
+|Edit Image Icon| If the file is an image, clicking this icon will allow you
+to rotate, crop or resize the image.
+
 Delete File
 ~~~~~~~~~~~
 
 |Delete File Icon| Clicking this icon will delete the file.
-
-Edit File
-~~~~~~~~~
-
-|Edit File Icon| Clicking this icon will take you to the edit file page.
 
 Batch File Actions
 ------------------
@@ -96,5 +107,6 @@ using this option.
 .. |File Manager File Upload Success| image:: ../../../images/files/upload_successful.png
 .. |image5| image:: ../../../images/files/highlighted_row.png
 .. |Download File Icon| image:: ../../../images/files/icon_download.png
-.. |Delete File Icon| image:: ../../../images/files/icon_delete.png
 .. |Edit File Icon| image:: ../../../images/files/icon_edit.png
+.. |Edit Image Icon| image:: ../../../images/files/icon_image.png
+.. |Delete File Icon| image:: ../../../images/files/icon_delete.png

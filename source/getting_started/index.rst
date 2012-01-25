@@ -247,9 +247,10 @@ Let's create our first Template, which will be a simple news page that displays 
 #. Go to :menuselection:`Design --> Templates --> Template Manager`.
 #. Click the *New Group* button.
 #. For **Template Group Name**, type "news".
+#. Check the box next to **Make the index template in this group your site's home page?**
 #. Click *Submit*.
 
-As expected, this automatically creates an **index** Template in our new **bews** Group:
+As expected, this automatically creates an **index** Template in our new **news** Group:
 
 .. figure:: ../images/getting_started_template_manager.png
    :align: center
@@ -433,13 +434,16 @@ blog format, or even a simple list. For example::
 Turning the Page
 ****************
 
-At this point, you might notice that our site's homepage (`<http://example.com>`_) is showing
-the same content as our News page (`<http://example.com/news>`_). The reason for this is
-simple: Every site has a default Template Group which gets shown as the homepage when no
-Template Group is specified in the URL. And since we've only created one Template Group, 
-"news", that's automatically our site's default, too.
+At this point, you might notice that our site's homepage
+(`<http://example.com>`_) is showing the same content as our News page
+(`<http://example.com/news>`_). The reason for this is simple: remember checking
+the box next to **Make the index template in this group your site's home page?**
+when you created the "news" template group? That made "news" your site's default
+Template Group, the Template Group that is displayed as the homepage when no
+Template Group is specified in the URL.
 
-Let's rectify this by creating another Template Group, and making it the new default.
+Let's change this by creating another Template Group and making it the new
+default.
 
 #. Go to :menuselection:`Design --> Templates --> Template Manager`.
 #. Click the *New Group* button.
@@ -460,7 +464,7 @@ Let's add this code::
 		<h1>Home, Sweet Home.</h1>
 		<p>Kick back and relax... you've made it home.</p>
 	
-		<h2>What's Happening?</h2>
+		<h2>The Latest</h2>
 		<p>Check out the <a href="{path='news'}">latest news</a>:</p>
 		<ul>
 			{exp:channel:entries channel="news" limit="10"}
