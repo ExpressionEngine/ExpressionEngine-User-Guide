@@ -93,6 +93,10 @@ ExpressionEngine automatically searches your template directory and
 creates new template groups and templates for any appropriately named
 files and folders that do not already have an associated template.
 
+**Note:** In order to edit flat files through the control panel and have 
+new files automatically synced to the database, text files must be writable 
+(file permissions set to 666 or equivalent).
+
 Synchronizing Templates
 ~~~~~~~~~~~~~~~~~~~~~~~
 
