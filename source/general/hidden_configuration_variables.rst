@@ -349,18 +349,6 @@ upload destinations cannot be created using this configuration variable.
 	    )
 	);
 
-use_compressed_js
-~~~~~~~~~~~~~~~~~
-
-**Value:** y/n
-
-If set to no, forces the control panel to serve javascript from the src
-directory. Useful for debugging.
-
-::
-
-	$config['use_compressed_js'] = 'n';
-
 use_forum_url
 ~~~~~~~~~~~~~
 
