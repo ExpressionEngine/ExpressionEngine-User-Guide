@@ -2,7 +2,7 @@ Database Backup
 ===============
 
 Since ExpressionEngine stores most of your content in a database it is
-highly recommended that you preform regular database backups. Some
+highly recommended that you perform regular database backups. Some
 hosting providers backup account databases as part of their service, but
 many do not. And even among those that do, not all of them perform
 backups at very frequent intervals so you are encouraged to make regular
