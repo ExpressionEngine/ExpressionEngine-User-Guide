@@ -127,3 +127,72 @@ Example Usage::
 	
 	$this->EE->api_channel_fields->setup_handler('my_fieldtype');
 	echo $this->EE->api_channel_fields->apply('my_method', $parameters);
+
+Create or Update a Channel Field
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This method gets the settings of an individual field. Include a field_id in the $field_data array to update an existing field, or omit field_id to create a new one. ::
+
+	$this->EE->api_channel_fields->update_field((array) $field_data);
+
+:returns:
+	(string) The field_id of the updated/created field.
+
+Values that may be passed in the $field_data array include:
+
+- **group\_id**, (int)
+- **field\_id**, (int optional)
+- **field\_name**, (string a-zA-Z0-9\_- only)
+- **field\_label**, (string)
+- **field\_type**, (string a valid fieldtype short name)
+- **field\_order**, (int)
+- **field\_instructions**, (string)
+- **field\_required**, (string y/n)
+- **field\_search**, (string y/n)
+- **field\_is_hidden**, (string y/n)
+- **field\_fmt**, (string)
+- **field\_show_fmt**, (string)
+- **field\_text_direction**, (string ltr/rtl)
+- **field\_maxl**, (int)
+- and other fieldtype-specific settings, see the fieldtype's display_settings and save_settings methods for more options
+
+Example Usage::
+
+	$field_data = array(
+		'group_id' => 1,
+		'field_name' => 'blog_body',
+		'field_label' => 'Body',
+		'field_type' => 'text',
+		'field_order' => 10,
+		'field_required' => 'y',
+		'field_search' => 'y',
+		'field_is_hidden' => 'n',
+		'field_instructions' => '',
+		'field_maxl' => 128,
+		'text_field_fmt' => 'none',
+		'text_field_show_fmt' => 'n',
+		'text_field_text_direction' => 'ltr',
+		'text_field_content_type' => 'all',
+		'text_field_show_smileys' => 'n',
+		'text_field_show_glossary' => 'n',
+		'text_field_show_spellcheck' => 'n',
+		'text_field_show_file_selector' => 'n',
+	);
+	
+	$this->EE->api_channel_fields->update_field($field_data);
+
+Field Settings Variables
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+This method supplies the view variables for field settings in the Edit/Create Field screen. This is used prior to and in conjunction with api_channel_fields->update_field(). $field_id is optional if you are creating a new field. $field_types is optional, and is an array of field types to display. By default, all field types are shown in the view.
+
+	$this->EE->api_channel_fields->field_edit_vars((int) $group_id, (int) $field_id, (array) $field_types)
+
+:returns:
+	(array) View variables for the admin/field_edit view.
+
+Example Usage::
+
+	$vars = $this->EE->api_channel_fields->field_edit_vars(1, 2);
+	
+	return $this->EE->load->view('admin/field_edit', $vars, TRUE);
