@@ -131,7 +131,9 @@ Example Usage::
 Create or Update a Channel Field
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This method gets the settings of an individual field. Include a field_id in the $field_data array to update an existing field, or omit field_id to create a new one. ::
+This creates a new channel field or updates an existing field. Include a
+field_id in the $field_data array to update an existing field, or omit
+field_id to create a new one. ::
 
 	$this->EE->api_channel_fields->update_field((array) $field_data);
 
@@ -184,7 +186,10 @@ Example Usage::
 Field Settings Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-This method supplies the view variables for field settings in the Edit/Create Field screen. This is used prior to and in conjunction with api_channel_fields->update_field(). $field_id is optional if you are creating a new field. $field_types is optional, and is an array of field types to display. By default, all field types are shown in the view.
+This method supplies the view variables for field settings in the Edit/Create
+Field screen. This is used prior to and in conjunction with api_channel_fields->update_field(). $field_id is optional if you are creating
+a new field. $field_types is optional, and is an array of field types to
+display. By default, all field types are shown in the view.
 
 	$this->EE->api_channel_fields->field_edit_vars((int) $group_id, (int) $field_id, (array) $field_types)
 
