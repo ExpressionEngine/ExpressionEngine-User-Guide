@@ -187,7 +187,8 @@ Field Settings Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 This method supplies the view variables for field settings in the Edit/Create
-Field screen. This is used prior to and in conjunction with api_channel_fields->update_field(). $field_id is optional if you are creating
+Field screen. This is used prior to and in conjunction with
+api_channel_fields->update_field(). $field_id is optional if you are creating
 a new field. $field_types is optional, and is an array of field types to
 display. By default, all field types are shown in the view.
 
