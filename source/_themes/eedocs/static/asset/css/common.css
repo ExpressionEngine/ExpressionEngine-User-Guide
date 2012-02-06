@@ -277,6 +277,8 @@ fieldset{ border: 0; }
 	#comments{ border-top: 1px solid #CCCCCC; }
 	#comments h3{ margin: 20px 0; }
 
+.comments td.avatar{ min-width: 100px; }
+
 .comments td.column1,
 .comments td.post{ background-color: #FFFFFF; padding: 10px; }
 
