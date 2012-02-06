@@ -18,6 +18,7 @@ Admin
 
   - :doc:`default_ping_servers`
   - :doc:`default_html_buttons`
+  - :doc:`rich_text_editor_settings`
 
 - System Administration
 

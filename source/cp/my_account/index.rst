@@ -9,6 +9,7 @@ Members <../members/view_members.html>`_ area of the Control Panel.
 
 There are a number of areas within the My Account section:
 
+
 Personal Settings
 -----------------
 
@@ -69,6 +70,7 @@ preference. Note that this is information that applies *only* to this
 user account. To specify default server settings, use Admin >
 Localization Settings.
 
+
 Customize Control Panel
 -----------------------
 
@@ -87,6 +89,15 @@ Control Panel. The tabs you add are viewable only by this user. To add a
 new tab, first visit the destination page, then click the Add Tab link
 at the top right of the page. In this section you can manage or remove
 any tabs you have created.
+
+Rich Text Editor Preferences
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If the Rich Text Editor Module is enabled, this page lets you enable or
+disable rich text editing for your account. It also lets you choose which
+rich text editor toolset you'd like to use or it allows you to define 
+your own.
+
 
 Channel Settings
 ----------------
@@ -117,6 +128,7 @@ Bookmarklet
 The Bookmarklet section will allows you to create a customized
 bookmarklet, permitting you to add entries to your site while browsing
 the internet.
+
 
 Extras
 ------
