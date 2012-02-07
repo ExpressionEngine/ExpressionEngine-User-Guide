@@ -327,7 +327,8 @@ need this method.
 pre_loop($data)
 ~~~~~~~~~~~~~~~
 
-Sends field data for the entire channel entries loop to the fieldtype for
+Before the tag is rendered on the frontend, this function is called to
+pass field data for the entire channel entries loop to the fieldtype for
 preprocessing or caching. This function is useful when your fieldtype
 needs to query the database to render its tag. Instead of querying with
 each loop of the channel entries tag, all data needed can be gathered up
