@@ -74,13 +74,13 @@ $filter_data
 Current search form information.
 
 :returns:
-    array of additional where data
-    ::
-        array(
-            'entry_id !=' => 5,        // where
-            'entry_id' => array(1, 2, 3),    // where_in
-            'channel_id !=' => array(3, 4)    // where_not_in
-        )
+    array of additional where data::
+
+	array(
+		'entry_id !=' => 5,		// where
+		'entry_id' => array(1, 2, 3),	// where_in
+		'channel_id !=' => array(3, 4)	// where_not_in
+	)
 	
 Added in v2.4.0
 
