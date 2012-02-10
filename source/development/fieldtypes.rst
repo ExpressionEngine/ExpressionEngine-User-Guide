@@ -324,6 +324,19 @@ $ids is an array containing the ids of the deleted entries. Please note
 that channel data is removed automatically so most fieldtypes will not
 need this method.
 
+pre_loop($data)
+~~~~~~~~~~~~~~~
+
+Before the tag is rendered on the frontend, this function is called to
+pass field data for the entire channel entries loop to the fieldtype for
+preprocessing or caching. This function is useful when your fieldtype
+needs to query the database to render its tag. Instead of querying with
+each loop of the channel entries tag, all data needed can be gathered up
+front, therefore reducing queries and loadtime needed.
+
+$data contains all field data for the current channel entries loop,
+limited only to the fieldtype's own data.
+
 replace\_tag($data, $params = array(), $tagdata = FALSE)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

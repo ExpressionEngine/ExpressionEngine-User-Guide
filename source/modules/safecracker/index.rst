@@ -545,7 +545,7 @@ custom\_fields
 		
 		{if radio}
 			{options}
-				<label class="checkbox">{option_value}<label class="checkbox">
+				<label class="checkbox">{option_value}
 					<input type="radio" id="{field_name}" name="{field_name}" value="{option_value}"{checked}>
 				</label>
 			{/options}
