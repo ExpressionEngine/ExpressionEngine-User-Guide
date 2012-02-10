@@ -303,6 +303,25 @@ templates when Debug has been forcibly set to 0 in your config file.
 
 	$config['remove_unparsed_vars'] = 'y';
 
+
+session_ip_accuracy
+~~~~~~~~~~~~~~~~~~~
+
+**Value:** 0-4
+
+When checking the session table, we make sure that the user's IP address and
+user agent (browser) haven't changed. If you or one of your user's had a dynamic
+IP that changed frequently then they could be logged out when the IP changes.
+Using this hidden config you can decide how accurate you want the check to be.
+For example, If their IP changed from 192.168.1.1 to 192.168.200.200, and the
+accuracy was ``2`` they would **not** be logged out, but if the accuracy was
+``3`` they would be logged out.
+
+::
+
+	$config['session_ip_accuracy'] = 4;
+
+
 smart_static_parsing
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -329,6 +348,14 @@ Set the value to the two letter ISO 639 language code for the spellcheck
 ::
 
 	$config['spellcheck_language_code'] = 'de';
+
+third_party_path
+~~~~~~~~~~~~~~~~
+
+**Value:** Valid path to ``third_party`` directory.
+
+Overrides the ``third_party`` paths so you can move your ``third_party``
+directory outside of your system directory.
 
 upload_preferences
 ~~~~~~~~~~~~~~~~~~
