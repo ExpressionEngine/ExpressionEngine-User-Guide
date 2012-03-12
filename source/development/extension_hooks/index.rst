@@ -39,6 +39,7 @@ The list below details all available extension hooks in ExpressionEngine.
       (javascript.php)
    -  `Login controller <cp/login/index.html>`_ (login.php)
    -  `Members controller <cp/members/index.html>`_ (members.php)
+   -  `My Account controller <cp/myaccount/index.html>`_ (myaccount.php)
 
 -  Module Hooks
 
@@ -73,6 +74,7 @@ The list below details all available extension hooks in ExpressionEngine.
 	cp/javascript/index
 	cp/login/index
 	cp/members/index
+   cp/myaccount/index
 	global/core/index
 	global/filemanager/index
 	global/functions/index
