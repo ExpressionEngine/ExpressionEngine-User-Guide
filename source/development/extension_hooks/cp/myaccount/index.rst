@@ -65,10 +65,10 @@ when the form is submitted, ``myaccount_settings_save`` will be called. Both
 methods--the one defined and the save method--will pass the ``$member_id`` of
 the member being edited as the only argument::
 
-	public funciton myaccount_settings($member_id)
+	public function myaccount_settings($member_id)
 	public function myaccount_settings_save($member_id)
 
-If you need to submit anything using Ajax, use the following URL that you'll use
+If you need to submit anything using AJAX, the following URL that you'll use
 (either for POSTing or GETing) is::
 
 	'C=myaccount'.AMP.'M=custom_action'.AMP.'extension=extension_name'.AMP.'method=method_name'
