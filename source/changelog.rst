@@ -12,7 +12,7 @@ The Change Log for ExpressionEngine 1.x is `available here.
 Version 2.4.0
 -------------
 
-Release Date: Unreleased
+Release Date: Jan 24, 2012
 
 - Important:
 
