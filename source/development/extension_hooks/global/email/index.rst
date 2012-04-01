@@ -16,9 +16,11 @@ email sending completely. ::
 	    'email_send',
 	    array(
 	        &$this->_headers,     // Email headers array
+	        &$this->_header_str,  // Header string
 	        &$this->_recipients,  // Recipients string
 	        &$this->_cc_array,    // CC recipients, populated by Email::cc()
 	        &$this->_bcc_array,   // BCC recipients, populated by Email::bcc()
+	        &$this->_subject,     // Email subject
 	        &$this->_finalbody    // Final email body text
 	    )
 	);
@@ -35,10 +37,6 @@ email sending completely. ::
 The email data is sent in a single array
 `by reference <http://php.net/manual/en/language.references.pass.php>`_ so
 data may be altered without needing to return the altered data.
-
-If the _headers array is edited, ``Email::_write_headers()`` should be
-called to rewrite the headers string that is used for some protocols for
-sending mail.
 
 :returns:
     Boolean
