@@ -15,13 +15,13 @@ email sending completely. ::
 	$ret = $this->EE->extensions->call(
 	    'email_send',
 	    array(
-	        &$this->_headers,     // Email headers array
-	        &$this->_header_str,  // Header string
-	        &$this->_recipients,  // Recipients string
-	        &$this->_cc_array,    // CC recipients, populated by Email::cc()
-	        &$this->_bcc_array,   // BCC recipients, populated by Email::bcc()
-	        &$this->_subject,     // Email subject
-	        &$this->_finalbody    // Final email body text
+	        'headers'       => &$this->_headers,     // Email headers array
+	        'header_str'    => &$this->_header_str,  // Header string
+	        'recipients'    => &$this->_recipients,  // Recipients string
+	        'cc_array'      => &$this->_cc_array,    // CC recipients, populated by Email::cc(), used by SMTP
+	        'bcc_array'     => &$this->_bcc_array,   // BCC recipients, populated by Email::bcc(), used by SMTP
+	        'subject'       => &$this->_subject,     // Email subject
+	        'finalbody'     => &$this->_finalbody    // Final email body text
 	    )
 	);
 	
