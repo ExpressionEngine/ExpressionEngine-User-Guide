@@ -49,10 +49,9 @@ new server. At a minimum, this will typically include:
 6. Verify File Permissions
 --------------------------
 
-If you are moving to `EngineHosting <http://enginehosting.com>`_ you can
-skip this step. For other Unix hosts the following is typical, but you
-may check with your host to see if more restrictive permissions can be
-used to allow PHP to write to files (666) and folders (777). On Windows
+The following permissions are typical for UNIX-based hosts. You may want to
+check with your host to see if more restrictive permissions can be used
+to allow PHP to write to files (666) and folders (777). On Windows
 servers the following will not apply, but you will need to ensure that
 the files and folders are writable by ExpressionEngine. You may need to
 contact your host for this.

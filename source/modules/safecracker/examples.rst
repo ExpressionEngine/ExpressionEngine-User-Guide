@@ -53,7 +53,6 @@ More Complex Example
 
         <label class="checkbox"><input type="checkbox" name="sticky" value="y"  {sticky}> Make Entry Sticky</label>
         <label class="checkbox"><input type="checkbox" name="allow_comments" value="y" {allow_comments}> Allow Comments</label>
-        <label class="checkbox"><input type="checkbox" name="dst_enabled" value="y" {dst_enabled}>DST Active on Date of Entry</label>
 
         {category_menu}
             <label for="categories">Categories</label>

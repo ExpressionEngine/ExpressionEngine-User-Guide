@@ -43,7 +43,7 @@ Server Requirements
    and modules.
 -  2 MB of Database space. Note: The database will increase in size as
    you add new content.
--  The  the `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_
+-  The `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_
    library compiled into PHP.
 
 Optional Requirements
