@@ -1416,7 +1416,7 @@ will be automatically added. For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/comments/234/">my entry</a>
+	<a href="http://example.com/index.php/channel/comments/234">my entry</a>
 
 comment\_total
 --------------
