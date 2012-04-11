@@ -10,6 +10,7 @@ The list below details all available extension hooks in ExpressionEngine.
    -  `Filemanager Library <global/filemanager/index.html>`_
       (Filemanager.php)
    -  `Functions Library <global/functions/index.html>`_ (Functions.php)
+   -  `Email Library <global/email/index.html>`_ (EE\_Email.php)
    -  `Member Model <global/member_model/index.html>`_ (member_model.php)
    -  `Output Library <global/output/index.html>`_ (EE\_Output.php)
    -  `Session Library <global/session/index.html>`_ (Session.php)
