@@ -60,3 +60,20 @@ tag
     String
 
 Added in v1.4.2
+
+
+set_cookie_end
+--------------
+Take control of setting cookies after cookie parameters have been normalized according to the cookie configuration settings. ::
+
+			$this->EE->extensions->call('set_cookie_end', $data);
+			if ($this->EE->extensions->end_script === TRUE) return;
+$data
+~~~~~~~~~~
+
+An array of the prepped cookie parameters, which includes the following keys: prefix, name, value, expire, path, domain, secure_cookie.
+
+:returns:
+    void
+
+Added in v2.5.0

@@ -5,6 +5,61 @@ Forum Module Extension Hooks
 	:local:
 	:depth: 1
 
+forum_add_template
+------------------
+
+Allows the addition and loading of entirely new templates.
+
+::
+
+	$classname = $this->EE->extensions->call('forum_add_template', $which, $classname);
+
+$which
+~~~~~
+
+The name of the template to be loaded.
+
+$classname
+~~~~~~~~~~
+
+The name of the class and thus folder associated with the template name or FALSE.
+
+
+:returns:
+    String
+
+Added in v2.5.0
+
+
+forum_include_extras
+--------------------
+
+Allows additional processing of forum templates that are not associated with an existing forum method call.  Can be used in conjunction with the forum_add_template hook to parse entirely new templates.
+
+::
+
+	$element = $this->EE->extensions->call('forum_include_extras', $this, $function, $element);
+
+$this
+~~~~~
+
+The current Forum object
+
+$function
+~~~~~~~~~
+
+The name of the template being parsed.
+
+$element
+~~~~~~~~
+
+A string containing the contents of the template.
+
+:returns:
+    String
+
+Added in v2.5.0
+
 forum_submission_form_start
 ---------------------------
 
