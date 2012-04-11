@@ -127,23 +127,29 @@ Basic Cookies
 -------------
 
 tracker
-	End of session.
+	End of session.  Contains the last 5 pages viewed.  Typically used for form or error message returns.
 last_visit
-	1 year.
+	1 year.  Date of the user's last visit.  Can be shown as a statistic for members and used by the forum to show unread topics for both members and guests.
 last_activity
-	1 year.
+	1 year.  Records the time of the last page load.  Used in conjunction with the last_visit cookie.
 cookies_allowed
-	1 year
+	1 year.  Indicates whether the user has given consent for cookies to be set.
 
 Comment Module Cookies
 ----------------------
 
-notify_me
-save_info
-my_name
-my_url
-my_email
-my_location
+notify_me.  Indicates that a user wants email notification of new comments to an entry. 
+	1 year.
+save_info.  Determines whether personal information should be stored in a cookie in order to pre-fill fields in the comment form.
+	1 year.
+my_name.  The user's name, as entered in the comment form.
+	1 year.
+my_url.  The user's URL, as entered in the comment form.
+	1 year.
+my_email.  The user's email address, as entered in the comment form.
+	1 year.
+my_location.  The user's location, as entered in the comment form.
+	1 year.
 
 
 Additional Logged In Cookies 
@@ -152,28 +158,28 @@ Additional Logged In Cookies
 perpage
 	26 weeks.  Number of entries to show on the Content Edit page.
 flash
-	24 hours.
+	24 hours.  Control panel user feedback messages.
 cp_last_site_id
-	End of session.  MSM.
+	End of session.  MSM cookie indicating the last site accessed in the control panel.
 read_topics
 
-expiration
+expiration*
 	1 year.
-anon
-	1 year.
+anon*
+	1 year.  Determines whether the user's username is displayed in the list of currently logged in members.
 remember
-	1 year.
+	2 weeks.  Determines whether a user is automatically logged in upon visiting the site.
 
 
 Forum Cookies
 -------------
 
-forum
 forum_theme
-	1 year.
+	1 year.  The users chosen forum theme if changed from the default.
 forum_topics
+	1 year.  Read topics in the forum, used to display new topics for the user.
 
-
+* Not set if using 'sessions only'
 
 .. toctree::
 	:glob:
