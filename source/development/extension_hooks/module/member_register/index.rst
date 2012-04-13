@@ -32,6 +32,30 @@ The new member's id.
 
 Added in v1.4.0
 
+
+
+member_member_register_errors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Add additional error checking to the member registration form.
+
+::
+
+	$this->EE->extensions->call('member_member_register_errors', $this);
+	if ($this->EE->extensions->end_script === TRUE) return;
+
+
+$this
+~~~~~
+
+The current Member_register object
+
+:returns:
+    void
+
+Added in v2.5.0
+
+
+
 member\_member\_register\_start
 -------------------------------
 
