@@ -23,7 +23,7 @@ Message tag
 ***********
 
 
-La la ::
+This tag allows you to conditionally display messages based on whether the user has the cookies_allowed cookie set, thus indicating consent to set cookies.  Typically you will show a link to grant cookie permission only to those who have not already granted consent.  You may also use the module to display a link to revoke cookie consent. ::
 
 	{exp:cookie_consent:message}
 
@@ -119,9 +119,9 @@ The following conditional variables are available in this theme page:
 
 The new template can be included in any other template using {include:cookie_consent}.
 
-********************************
+*********************************
 Standard ExpressionEngine Cookies
-********************************
+*********************************
 
 Basic Cookies
 -------------
@@ -138,18 +138,18 @@ cookies_allowed
 Comment Module Cookies
 ----------------------
 
-notify_me.  Indicates that a user wants email notification of new comments to an entry. 
-	1 year.
-save_info.  Determines whether personal information should be stored in a cookie in order to pre-fill fields in the comment form.
-	1 year.
-my_name.  The user's name, as entered in the comment form.
-	1 year.
-my_url.  The user's URL, as entered in the comment form.
-	1 year.
-my_email.  The user's email address, as entered in the comment form.
-	1 year.
-my_location.  The user's location, as entered in the comment form.
-	1 year.
+notify_me.
+	1 year.  Indicates that a user wants email notification of new comments to an entry. 
+save_info.
+  	1 year. Determines whether personal information should be stored in a cookie in order to pre-fill fields in the comment form.
+my_name.
+	1 year.  The user's name, as entered in the comment form.
+my_url.
+	1 year.  The user's URL, as entered in the comment form.
+my_email.
+	1 year.  The user's email address, as entered in the comment form.
+my_location.
+	1 year.  The user's location, as entered in the comment form.
 
 
 Additional Logged In Cookies 
@@ -161,13 +161,11 @@ flash
 	24 hours.  Control panel user feedback messages.
 cp_last_site_id
 	End of session.  MSM cookie indicating the last site accessed in the control panel.
-read_topics
-
 expiration*
 	1 year.
 anon*
 	1 year.  Determines whether the user's username is displayed in the list of currently logged in members.
-remember
+remember*
 	2 weeks.  Determines whether a user is automatically logged in upon visiting the site.
 
 
