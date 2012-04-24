@@ -109,6 +109,18 @@ If set, overrides the core Email class setting for newline characters
 
 	$config['email_newline'] = "\r\n";
 
+email_smtp_port
+~~~~~~~~~~~~~~~
+
+**Value:** numeric string
+
+If set, overrides the core Email class setting (25) for SMTP Port.
+(Email class $smtp_port property).
+
+::
+
+	$config['email_smtp_port'] = "2525";
+
 enable_db_caching
 ~~~~~~~~~~~~~~~~~
 
