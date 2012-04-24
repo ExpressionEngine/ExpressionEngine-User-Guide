@@ -21,7 +21,8 @@ to all elements with the class "my-class"::
 	<script type="text/javascript" src="{exp:rte:script_url selector=".my-class"}"></script>
 
 .. important:: If you're using :doc:`SafeCracker </modules/safecracker/index>`,
-   use its :ref:`safecracker-rte-selector` parameter instead of this tag.
+   use its :ref:`safecracker-rte-selector` parameter instead of this tag to load
+   the Rich Text Editor in your templates.
 
 
 
