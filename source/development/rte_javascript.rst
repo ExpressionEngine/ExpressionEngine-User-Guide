@@ -117,3 +117,52 @@ textChange(before [, after])
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Marks a chunk of text changes as undoable.
+
+isKeyCombo(strName, evt)
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Identifies if the current event matches a specified key event name. The
+name must takes on the form: `ctrl-shfit-c`
+
+isEvent(name, evt)
+^^^^^^^^^^^^^^^^^^
+
+Identifies a named key event such as paste or undo.
+
+getState()
+^^^^^^^^^^
+
+Returns the editors current html contents and selection.
+
+WysiHat.Undo
+~~~~~~~~~~~~
+
+A simple undo stack. Specifically made to handle text changes,
+it will try to find the smallest difference in two strings rather
+than saving the whole thing.
+
+push(before, after, selBefore, selAfter)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Adds a diff of the before and after strings as well as the selection
+positions to the undo stack.
+
+hasUndo()
+^^^^^^^^^
+
+Check for available undos.
+
+hasRedo()
+^^^^^^^^^
+
+Check for available redos.
+
+undo()
+^^^^^^
+
+Undo the last change.
+
+redo()
+^^^^^^
+
+Redo the last undo.
