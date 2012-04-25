@@ -65,3 +65,15 @@ The id of the toolset to use. If this parameter is not specified, the
 custom toolset of the currently logged in user will be used. If they
 do not have a custom toolset, or are not logged in, the site's Default
 Toolset will be used.
+
+Control Panel
+-------------
+
+See the :doc:`control_panel/index` page.
+
+.. toctree::
+	:glob:
+	:titlesonly:
+	:hidden:
+	
+	control_panel/index
