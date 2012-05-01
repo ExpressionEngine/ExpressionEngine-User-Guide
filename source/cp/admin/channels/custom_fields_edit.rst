@@ -130,6 +130,16 @@ If you select the checkbox when you set up the field, then the new
 formatting choice will also be applied to this field for **all**
 existing entries.
 
+.. _channel-field-enable-rte:
+
+Enable Rich Text Editor
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Whether or not to apply the Rich Text Editor (RTE) to this field.
+The Toolset shown will be either the :ref:`rte-mcp-default-toolset` or
+the member's custom toolset if they have created one using the
+:ref:`my-account-rte-prefs` page under :doc:`/cp/my_account/index`.
+
 Text Direction
 ~~~~~~~~~~~~~~
 

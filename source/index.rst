@@ -75,6 +75,7 @@ Modules
 - :doc:`modules/query/index`
 - :doc:`modules/referrer/index`
 - :doc:`modules/rss/index`
+- :doc:`modules/rte/index`
 - :doc:`modules/safecracker/index`
 - :doc:`modules/search/index`
 - :doc:`modules/simple_commerce/index`

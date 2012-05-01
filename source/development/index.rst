@@ -20,6 +20,7 @@ Development
 
    -  `Module Development Tutorial <./module_tutorial.html>`_
 
+-  `Rich Text Editor Tool Development <./rte_tools.html>`_
 -  `API <./api/index.html>`_
 
    -  `Channel Categories <./api/api_channel_categories.html>`_

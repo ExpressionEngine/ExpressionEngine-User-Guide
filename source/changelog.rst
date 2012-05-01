@@ -20,7 +20,7 @@ Release Date: Unreleased
 
 - General Changes:
 
-  - `Rich Text Editor <cp/admin/rich_text_editor_settings.rst>`_
+  - `Rich Text Editor <cp/admin/rich_text_editor_settings.html>`_
 
     - Added new module and fieldtype for the new rich text editor.
     - Added user preferences for rich text editor under my preferences.
