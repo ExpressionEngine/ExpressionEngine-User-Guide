@@ -61,6 +61,7 @@ Modules
 - :doc:`modules/blacklist/index`
 - :doc:`modules/channel/index`
 - :doc:`modules/comment/index`
+- :doc:`modules/cookie_consent/index`
 - :doc:`modules/email/index`
 - :doc:`modules/emoticon/index`
 - :doc:`modules/file/index`

@@ -16,6 +16,15 @@ The module makes two means of granting consent available: a direct link that can
 
 **Note:** Installing this module will prevent cookies from being set by all first party ExpressionEngine code and any code that uses the Function class' set_cookie() method.  Cookies may still be set by third party code using PHP, JavasScript, third party scripts, etc. 
 
+
+.. _installation:
+
+************
+Installation
+************
+
+The Cookie Consent Module is available as a `separate download  <http://expressionengine.com/downloads/details/cookie_consent>`_. in ExpressionEngine's `First Party Add-on Library <http://expressionengine.com/downloads>`_..  The module folder should be placed in your third_party folder (typically system/expressionengine/third_party/).  
+
 .. _message-tag:
 
 ***********
@@ -79,6 +88,7 @@ cookies\_allowed\_link
 
 A link to enable cookies.
 
+.. _forms:
 
 ****************************
 Login and Registration Forms
@@ -91,6 +101,7 @@ Cookie consent is required in order to login or register.  If consent has not be
 
 Typically this form field will be used inside the Cookie Consent Message tag and only shown if cookie consent has not been granted.  This applies to both regular ExpressionEngine templates and the Member Profile templates.
 
+.. _forum:
 
 ***********************************
 Cookie Consent and the Forum Module
@@ -115,6 +126,8 @@ The following conditional variables are available in this theme page:
 	{if cookies_not_allowed}{/if}
 
 The new template can be included in any other template using {include:cookie_consent}.
+
+.. _cookie_list:
 
 *********************************
 Standard ExpressionEngine Cookies
@@ -146,44 +159,83 @@ cookies_allowed
 Comment Module Cookies
 ======================
 
-notify_me.
-	1 year.  Indicates that a user wants email notification of new comments to an entry. 
-save_info.
-  	1 year. Determines whether personal information should be stored in a cookie in order to pre-fill fields in the comment form.
-my_name.
-	1 year.  The user's name, as entered in the comment form.
-my_url.
-	1 year.  The user's URL, as entered in the comment form.
-my_email.
-	1 year.  The user's email address, as entered in the comment form.
-my_location.
-	1 year.  The user's location, as entered in the comment form.
+notify_me
+---------
+
+1 year.  Indicates that a user wants email notification of new comments to an entry.
+
+save_info
+---------
+
+1 year. Determines whether personal information should be stored in a cookie in order to pre-fill fields in the comment form.
+
+my_name
+-------
+
+1 year.  The user's name, as entered in the comment form.
+
+my_url
+------
+
+1 year.  The user's URL, as entered in the comment form.
+
+my_email
+--------
+
+1 year.  The user's email address, as entered in the comment form.
+
+my_location
+-----------
+
+1 year.  The user's location, as entered in the comment form.
 
 
 Additional Logged In Cookies 
-----------------------------
+============================
 
 perpage
-	26 weeks.  Number of entries to show on the Content Edit page.
+-------
+
+26 weeks.  Number of entries to show on the Content Edit page.
+
 flash
-	24 hours.  Control panel user feedback messages.
+-----
+
+24 hours.  Control panel user feedback messages.
+
 cp_last_site_id
-	End of session.  MSM cookie indicating the last site accessed in the control panel.
+---------------
+
+End of session.  MSM cookie indicating the last site accessed in the control panel.
+
 expiration*
-	1 year.
+-----------
+
+1 year.
+	
 anon*
-	1 year.  Determines whether the user's username is displayed in the list of currently logged in members.
+-----
+
+1 year.  Determines whether the user's username is displayed in the list of currently logged in members.
+
 remember*
-	2 weeks.  Determines whether a user is automatically logged in upon visiting the site.
+---------
+	
+2 weeks.  Determines whether a user is automatically logged in upon visiting the site.
 
 
 Forum Cookies
--------------
+=============
 
 forum_theme
-	1 year.  The users chosen forum theme if changed from the default.
+-----------
+
+1 year.  The user's chosen forum theme if changed from the default.
+
 forum_topics
-	1 year.  Read topics in the forum, used to display new topics for the user.
+------------
+
+1 year.  Read topics in the forum, used to display new topics for the user.
 
 * Not set if using 'sessions only'
 
