@@ -68,8 +68,9 @@ Take control of setting cookies after cookie parameters have been normalized acc
 
 			$this->EE->extensions->call('set_cookie_end', $data);
 			if ($this->EE->extensions->end_script === TRUE) return;
+
 $data
-~~~~~~~~~~
+~~~~~
 
 An array of the prepped cookie parameters, which includes the following keys: prefix, name, value, expire, path, domain, secure_cookie.
 

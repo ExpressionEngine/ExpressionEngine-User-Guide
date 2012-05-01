@@ -15,7 +15,7 @@ Allows the addition and loading of entirely new templates.
 	$classname = $this->EE->extensions->call('forum_add_template', $which, $classname);
 
 $which
-~~~~~
+~~~~~~
 
 The name of the template to be loaded.
 

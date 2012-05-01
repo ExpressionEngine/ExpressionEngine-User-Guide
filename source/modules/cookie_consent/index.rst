@@ -22,7 +22,6 @@ The module makes two means of granting consent available: a direct link that can
 Message tag
 ***********
 
-
 This tag allows you to conditionally display messages based on whether the user has the cookies_allowed cookie set, thus indicating consent to set cookies.  Typically you will show a link to grant cookie permission only to those who have not already granted consent.  You may also use the module to display a link to revoke cookie consent. ::
 
 	{exp:cookie_consent:message}
@@ -37,11 +36,8 @@ This tag allows you to conditionally display messages based on whether the user 
 	
 	{/exp:cookie_consent:message}
 
-
-
 Single Variables
 ================
-
 
 .. contents::
    :local:
@@ -62,7 +58,8 @@ clear\_ee\_cookies\_link
 
 	{clear_ee_cookies_link}
 
-A link to disallow cookies and clear existing ExpressionEngine cookies.  Only cookies with the cookie prefix specified in your configuration will be cleared (by default, that prefix is 'exp_').  
+A link to disallow cookies and clear existing ExpressionEngine cookies.
+Only cookies with the cookie prefix specified in your configuration will be cleared (by default, that prefix is **exp_**).
 
 cookies\_allowed
 ----------------
@@ -74,7 +71,7 @@ cookies\_allowed
 Indicates whether the current user has consented to having cookies set or not.  The only values are 'yes' or 'no'.  This variable will typically be used in a conditional.
 
 cookies\_allowed\_link
----------------
+----------------------
 
 ::
 
@@ -83,9 +80,9 @@ cookies\_allowed\_link
 A link to enable cookies.
 
 
-********************************
+****************************
 Login and Registration Forms
-********************************
+****************************
 
 Cookie consent is required in order to login or register.  If consent has not been granted, an error message will be shown when a login or registration form is submitted.  In order to provide flexibility in how you gain consent, posting a form field named 'cookie_consent' with a value of 'y' will allow the consent cookie and all subsequent cookies to be set. 
 
@@ -95,9 +92,9 @@ Cookie consent is required in order to login or register.  If consent has not be
 Typically this form field will be used inside the Cookie Consent Message tag and only shown if cookie consent has not been granted.  This applies to both regular ExpressionEngine templates and the Member Profile templates.
 
 
-**********************************
+***********************************
 Cookie Consent and the Forum Module
-**********************************
+***********************************
 
 As with other login and registration forms, a 'cookie_consent' field with a value of 'y' can be used in the forum login and registration pages to indicate consent.  The Cookie Consent Message tag can be used in the forum_member/login_form.html and forum_member/registration_form.html to conditionally display the field.
 
@@ -124,19 +121,30 @@ Standard ExpressionEngine Cookies
 *********************************
 
 Basic Cookies
--------------
+=============
 
 tracker
-	End of session.  Contains the last 5 pages viewed.  Typically used for form or error message returns.
+-------
+
+End of session.  Contains the last 5 pages viewed.  Typically used for form or error message returns.
+
 last_visit
-	1 year.  Date of the user's last visit.  Can be shown as a statistic for members and used by the forum to show unread topics for both members and guests.
+----------
+
+1 year.  Date of the user's last visit.  Can be shown as a statistic for members and used by the forum to show unread topics for both members and guests.
+
 last_activity
-	1 year.  Records the time of the last page load.  Used in conjunction with the last_visit cookie.
+-------------
+
+1 year.  Records the time of the last page load.  Used in conjunction with the last_visit cookie.
+
 cookies_allowed
-	1 year.  Indicates whether the user has given consent for cookies to be set.
+---------------
+
+1 year.  Indicates whether the user has given consent for cookies to be set.
 
 Comment Module Cookies
-----------------------
+======================
 
 notify_me.
 	1 year.  Indicates that a user wants email notification of new comments to an entry. 

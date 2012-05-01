@@ -75,7 +75,7 @@ The list below details all available extension hooks in ExpressionEngine.
 	cp/javascript/index
 	cp/login/index
 	cp/members/index
-   cp/myaccount/index
+	cp/myaccount/index
 	global/core/index
 	global/filemanager/index
 	global/functions/index

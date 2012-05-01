@@ -1,5 +1,5 @@
 My Account Controller Extension Hooks
-====================================
+=====================================
 
 .. contents::
 	:local:
