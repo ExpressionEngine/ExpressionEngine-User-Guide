@@ -354,11 +354,11 @@ This parameter will tell SafeCracker to automatically load ExpressionEngine's
 :doc:`/modules/rte/index` and apply it to the element(s) matching the jQuery
 selector you specify. Any valid jQuery selector is acceptable.
 
-The Toolset shown will be either the :ref:`rte-mcp-default-toolset` or
-the member's custom toolset if they are logged in and have created one using
-the :ref:`my-account-rte-prefs` page under :doc:`/cp/my_account/index`.
+The RTE will use the Toolset preference of the currently logged-in user as chosen
+in :ref:`my-account-rte-prefs`. If the user has not chosen a Toolset or is not
+logged in, the site's :ref:`rte-mcp-default-toolset` will be used.
 
-You can optionally force a particular toolset ID to show (see below).
+You can optionally force a particular toolset ID to use (see below).
 
 .. _safecracker-rte-toolset-id:
 

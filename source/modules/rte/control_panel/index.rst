@@ -33,9 +33,8 @@ Text Editor will not appear regardless of whether a Channel Field's
 Default Toolset
 ===============
 
-Determines which Toolset will be shown for any member that has not created their
-own Toolset using the :ref:`my-account-rte-prefs` page under
-:doc:`/cp/my_account/index`.
+Determines which Toolset will be shown for any member that has not
+specifically chosen one in :ref:`my-account-rte-prefs`.
 
 .. note:: If using the :doc:`/cp/sites/index`, this preference is per-site.
 
@@ -74,7 +73,7 @@ To enable or disable a Toolset, click the desired action under the **Status**
 column.
 
 A disabled Toolset will not appear as a choice to members, but can still be 
-referred to via its ID. This is useful in combination with SafeCracker's
+referred to by ID. This is useful in combination with SafeCracker's
 :ref:`safecracker-rte-selector` and :ref:`safecracker-rte-toolset-id` parameters,
 for example.
 
