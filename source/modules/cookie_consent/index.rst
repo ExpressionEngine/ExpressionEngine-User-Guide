@@ -14,6 +14,10 @@ The Cookie Consent Module prevents ExpressionEngine cookies from being set unles
 
 The module makes two means of granting consent available: a direct link that can be used anywhere and form field that can be included on login and registration pages.  Removing permission to set cookies is also provided for via a link.
 
+To access the Cookie Consent control panel, go to :menuselection:`Add-Ons --> Modules --> Cookie Consent` in your Control Panel. There you will be able control settings related to control panel login and cookie clearing behavior.
+See `Cookie Consent control panel <control_panel/index.html>`_ for more
+information.
+
 **Note:** Installing this module will prevent cookies from being set by all first party ExpressionEngine code and any code that uses the Function class' set_cookie() method.  Cookies may still be set by third party code using PHP, JavasScript, third party scripts, etc. 
 
 
