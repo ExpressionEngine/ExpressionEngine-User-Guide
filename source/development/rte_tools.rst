@@ -1,11 +1,15 @@
 ExpressionEngine RTE tools API
 ==============================
 
+.. contents::
+	:local:
+
+
 Basic File Structure
 --------------------
 
 All RTE tools should be placed into the ``third\_party`` folder in a
-package and be named after that package name. So in a packaged named
+package and be named after that package name. So in a package named
 ``strip\_tags`` the RTE tools file will be ``rte.strip\_tags.php``. All
 RTE tools must provide an ``$info`` array with a name, version number,
 description, and whether or not the RTE tool is allowable outside of
@@ -13,30 +17,30 @@ the Control Panel.
 
 ::
 
-  	Class Strip_tags_rte {
-		    
-		    public $info = array(
-  	        'name'        => 'Strip Tags',
-  	        'version'     => '1.0',
-  	        'description' => 'Triggers the RTE to strip all block and phrase-level formatting elements',
-  	        'cp_only'     => 'n'
-		    );
-	
-		    private $EE;
+    Class Strip_tags_rte {
+            
+        public $info = array(
+            'name'        => 'Strip Tags',
+            'version'     => '1.0',
+            'description' => 'Triggers the RTE to strip all block and phrase-level formatting elements',
+            'cp_only'     => 'n'
+        );
+    
+        private $EE;
         
-		    /** -------------------------------------
-		    /**  Constructor
-		    /** -------------------------------------*/
-		    function __construct()
-		    {
-		    	// Make a local reference of the ExpressionEngine super object
-		    	$this->EE =& get_instance();
-		    }
-		}
+        /** -------------------------------------
+        /**  Constructor
+        /** -------------------------------------*/
+        function __construct()
+        {
+            // Make a local reference of the ExpressionEngine super object
+            $this->EE =& get_instance();
+        }
+    }
     // END Strip_tags_rte class
 
     /* End of file rte.strip_tags.php */
-		/* Location: ./system/expressionengine/third_party/strip_tags/rte.strip_tags.php */
+    /* Location: ./system/expressionengine/third_party/strip_tags/rte.strip_tags.php */
 
 
 Example - Strip Tags
@@ -58,23 +62,29 @@ in the Definition section.
 
 ::
 
-    /** -------------------------------------
-		/**  Globals we need defined
-		/** -------------------------------------*/
-		function globals()
-		{
-		    $this->EE->lang->loadfile('rte');
-		    return array(
-		        'rte.strip_tags.label' => lang('strip_tags')
-		    );
-		}
-		
+	/** -------------------------------------
+	/**  Globals we need defined
+	/** -------------------------------------*/
+	function globals()
+	{
+	    $this->EE->lang->loadfile('rte');
+	    return array(
+	        'rte.strip_tags.label' => lang('strip_tags')
+	    );
+	}
+        
 
 Definition
 ~~~~~~~~~~
 
+.. seealso::
+
+  :doc:`RTE Javascript <cp_javascript/rte>`
+    Documentation for the WysiHat and the Button classes.
+
 The ExpressionEngine RTE makes use of the WysiHat plugin for jQuery.
-More information on that plugin can be found `on Github <#>`.
+Please refer to the :doc:`API information <rte/wysihat_api>` for help
+with the ExpressionEngine version of this plugin.
 
 In order for your RTE tool to do anything, it needs to be defined.
 An RTE tool is defined in JavaScript and can be added to the RTE
@@ -98,25 +108,25 @@ value of the global we set in the Globals section (above).
 
 ::
 
-		/** -------------------------------------
-		/**  RTE tool Definition
-		/** -------------------------------------*/
-		function definition()
-		{
-		    return '
-		   
-		    toolbar.addButton({
-		        name:	"strip_tags",
-		        label:	EE.rte.strip_tags.label,
-		        handler: function( $ed ){
-		            $ed.stripFormattingElements();
-		            $ed.unformatContentBlock();
-		        }
-		    });
-		   
-		    ';
-		}
-		
+	/** -------------------------------------
+	/**  RTE tool Definition
+	/** -------------------------------------*/
+	function definition()
+	{
+	    return '
+	   
+	    toolbar.addButton({
+	        name:    "strip_tags",
+	        label:    EE.rte.strip_tags.label,
+	        handler: function( $ed ){
+	            $ed.stripFormattingElements();
+	            $ed.unformatContentBlock();
+	        }
+	    });
+	   
+	    ';
+	}
+        
 
 Libraries
 ~~~~~~~~~
@@ -127,16 +137,16 @@ make your RTE tool functional, you can do so by defining the optional
 one you would you would pass into the Control Panel Library's 
 ``add_js_script()`` method. Here's an example from the Image RTE tool::
 
-		/** -------------------------------------
-		/**  Libraries we need loaded
-		/** -------------------------------------*/
-		function libraries()
-		{
-		    return array(
-		        'plugin' => 'ee_filebrowser',
-		        'ui'     => 'dialog'
-		    );
-		}
+	/** -------------------------------------
+	/**  Libraries we need loaded
+	/** -------------------------------------*/
+	function libraries()
+	{
+	    return array(
+	        'plugin' => 'ee_filebrowser',
+	        'ui'     => 'dialog'
+	    );
+	}
 
 
 Styles
@@ -147,19 +157,19 @@ can define a ``styles()`` method. The ``styles()`` method must return a
 string containing the CSS rule sets you wish to define. Here is an example
 from the Link RTE tool::
 
-		/** -------------------------------------
-		/**  Styles we need loaded
-		/** -------------------------------------*/
-		function styles()
-		{
-		    return '
-		        #rte_link_dialog p { margin-bottom:10px; }
-				    #rte_link_dialog label { width: 90px; display: inline-block; }
-				    #rte_link_dialog input, #rte_link_dialog select { width: 70%; margin-left: 10px; }
-				    #rte_link_dialog .buttons { text-align: center; }
-				    #rte_link_dialog button { cursor: pointer; }
-		    ';
-		}
+	/** -------------------------------------
+	/**  Styles we need loaded
+	/** -------------------------------------*/
+	function styles()
+	{
+	    return '
+	        #rte_link_dialog p { margin-bottom:10px; }
+	            #rte_link_dialog label { width: 90px; display: inline-block; }
+	            #rte_link_dialog input, #rte_link_dialog select { width: 70%; margin-left: 10px; }
+	            #rte_link_dialog .buttons { text-align: center; }
+	            #rte_link_dialog button { cursor: pointer; }
+	    ';
+	}
 
 **Note:** If you reference images in your custom CSS and your RTE tool can
 be used outside of the Control Panel, make sure the file paths will work
@@ -169,17 +179,17 @@ file to define the necessary styles. If you are dealing with more than a
 few simple rule sets, that may be an easier way to go::
 
 
-		/** -------------------------------------
-		/**  Styles we need loaded
-		/** -------------------------------------*/
-		function styles()
-		{
-		    # load the external file
-		    $styles = file_get_contents( 'rte.image.css', TRUE );
-		    $theme  = $this->EE->session->userdata('cp_theme');
-		    $theme  = $this->EE->config->item('theme_folder_url').'cp_themes/'.($theme ? $theme : 'default').'/';
-		    return str_replace('{theme_folder_url}', $theme, $styles);
-		}
+	/** -------------------------------------
+	/**  Styles we need loaded
+	/** -------------------------------------*/
+	function styles()
+	{
+	    # load the external file
+	    $styles = file_get_contents( 'rte.image.css', TRUE );
+	    $theme  = $this->EE->session->userdata('cp_theme');
+	    $theme  = $this->EE->config->item('theme_folder_url').'cp_themes/'.($theme ? $theme : 'default').'/';
+	    return str_replace('{theme_folder_url}', $theme, $styles);
+	}
 
 
 Function Reference
