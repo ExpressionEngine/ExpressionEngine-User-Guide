@@ -15,6 +15,6 @@ Altered View Files
 The following view files were edited:
 
  - views/design/new_template.php
-
+ - views/account/login.php
 
 :ref:`Return to Update Page <update-additional-steps>`

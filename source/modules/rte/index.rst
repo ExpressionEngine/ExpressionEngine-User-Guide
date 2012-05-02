@@ -1,5 +1,5 @@
-RTE Module
-==========
+Rich Text Editor Module
+=======================
 
 .. contents::
    :local:
@@ -8,11 +8,21 @@ RTE Module
 Introduction
 ------------
 
-The main purpose of the RTE tag is to allow use of ExpressionEngine's
-Rich Text Editor outside of the Control Panel.
+ExpressionEngine's built-in Rich Text Editor (RTE) provides a WYSIWYG editing
+experience inside the Control Panel. This module allows you to also use the RTE
+outside of the Control Panel, in your site's front-end templates. 
 
-The RSS Module Tag is intended to be used in conjunction with a
-``textarea`` field which you want to turn into a Rich Text Editor.
+Its primary purpose is to output the URL of the RTE's JavaScript and
+apply it to the desired elements (usually textareas) in your templates.
+For example, to load the RTE's JavaScript via a template and apply it
+to all elements with the class "my-class", you would place this inside your
+document's **head** element::
+
+	<script type="text/javascript" src="{exp:rte:script_url selector=".my-class"}"></script>
+
+.. important:: If you're using :doc:`SafeCracker </modules/safecracker/index>`,
+   it's preferable to use the :ref:`safecracker-rte-selector` parameter instead
+   of this module's tag.
 
 Parameters
 ----------
@@ -20,15 +30,16 @@ Parameters
 .. contents::
    :local:
 
-toolset\_id=
-~~~~~~~~~~~~
+include_jquery=
+~~~~~~~~~~~~~~~
 
 ::
 
-	toolset_id="1"
+	include_jquery="no"
 
-**Required**. The RTE Toolset you want to load. The toolset must 
-exist, of course.
+The versions of jQuery and jQuery UI that ship with ExpressionEngine are
+loaded by default since the RTE depends on them. If you are already loading
+these libraries separately, you may set this to "no".
 
 selector=
 ~~~~~~~~~
@@ -37,7 +48,30 @@ selector=
 
 	selector=".my-custom-class"
 
-The ExpressionEngine Rich Text Editor, when included, will automatically
-turn any element with a ``class`` of "rte" into a Rich Text Field. To 
-override this behavior, you must define a different selector. Any valid 
-jQuery selector is acceptable.
+The jQuery selector that determines which element(s) the RTE will be applied
+to. Any valid jQuery selector is acceptable. If this parameter is not specified,
+it will default to ".rte", selecting all elements having "rte" as a class.
+
+toolset\_id=
+~~~~~~~~~~~~
+
+::
+
+	toolset_id="1"
+
+The id of the toolset to use. If this parameter is not specified, the RTE will
+attempt to load the Toolset preference of the currently logged-in user as chosen
+in :ref:`my-account-rte-prefs`. If the user has not chosen a Toolset or is not
+logged in, the site's :ref:`rte-mcp-default-toolset` will be used.
+
+Control Panel
+-------------
+
+See the :doc:`control_panel/index` page.
+
+.. toctree::
+	:glob:
+	:titlesonly:
+	:hidden:
+	
+	control_panel/index

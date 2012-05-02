@@ -7,16 +7,6 @@ ExpressionEngine's scripts.
 .. contents::
 	:local:
 
-set\_realpath(path [string])
-----------------------------
-
-Returns realpath for a directory or file.
-
-**Class:** Functions (functions)
-
-**Description:** Takes a path and attempts to determine the full server
-path for it.
-
 fetch\_site\_index(add\_slash [int], session\_id [int])
 -------------------------------------------------------
 
