@@ -79,7 +79,7 @@ Development
 	*
 	api/index
 	conversion/index
-	cp_javascript/notification
+	cp_javascript/*
 	cp_styles/index
 	extension_hooks/index
 	guidelines/index

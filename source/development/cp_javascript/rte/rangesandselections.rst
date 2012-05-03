@@ -14,7 +14,7 @@ Ranges
 At their core ranges simply describe a section of the page from one point
 in the DOM to another.
 
-To illustrate we'll use an imaginary bit of selected text in thebrowser,
+To illustrate we'll use an imaginary bit of selected text in the browser,
 which looks something like this:
 
 .. rst-class:: admonition
@@ -24,11 +24,11 @@ which looks something like this:
 We are going to try to describe the selection we see here as a range, going
 from the beginning of the word "me" to the end of the word "Science". Keep
 in mind that ranges are not inherently visible. They give us a way of
-*describing* where to start and end when manipulating the dom across elements.
+*describing* where to start and end when manipulating the DOM across elements.
 
 If we just worked with text, we could count characters (including the newline)
 and say that our range starts at 8 and ends at 45. While this works, it is
-not always enough information. Let's look at the html that was used to create
+not always enough information. Let's look at the HTML that was used to create
 this text:
 
 ::
@@ -41,9 +41,9 @@ the beginning of the em. Simply saying 8 does not convey enough information.
 
 These differences become especially important when dealing with block
 elements. The end of the first paragraph and beginning of the next look
-contiguous in html, but to the user they appear separated by a new line.
+contiguous in HTML, but to the user they appear separated by a new line.
 
-Before we can look into how we can solve it. Let's break this html down
+Before we can look into how we can solve it. Let's break this HTML down
 into the pieces we can access from javascript. The DOM is a collection of
 nodes, there are two types that we care about:
 
@@ -112,7 +112,7 @@ can only have one selection.
 
 In other words, the selection holds a single range. When you select
 a new piece of text, this single range changes to match your selection.
-Conversely, when you programatically ask the browser to select a range,
+Conversely, when you programmatically ask the browser to select a range,
 the old selection is lost and your new one is displayed.
 
 The range in the current selection can be accessed without having to
