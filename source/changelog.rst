@@ -12,7 +12,7 @@ The Change Log for ExpressionEngine 1.x is `available here.
 Version 2.4.0
 -------------
 
-Release Date: Unreleased
+Release Date: Jan 24, 2012
 
 - Important:
 
@@ -53,9 +53,9 @@ Release Date: Unreleased
   - Channel Categories and Category Archive tags now support multiple
     channels in the channel parameter.
   - Files in file browser modal can now be sorted and filtered by keywords.
-  - Added the list of Channels to dropdown under Edit.
-  - Added third_party_path config item.
-  - Changed default text formatting from XHTML to none.
+  - **Reactor:** Added the list of Channels to dropdown under Edit.
+  - **Reactor:** Added third_party_path config item.
+  - **Reactor:** Changed default text formatting from XHTML to none.
   - Fixed an issue where remember me functionality was not working correctly.
 
 - Bug Fixes:
@@ -208,7 +208,7 @@ Release Date: Unreleased
     member groups could not be accessed by its creator.
   - Fixed a bug (#16983) where uncategorized_entries parameter in Channel
     Entries tag had no effect.
-  - Fixed a bug with autosave where the save() method would be called for third 
+  - **Reactor:** Fixed a bug with autosave where the save() method would be called for third 
     party add-ons on autosave.
   - Fixed a bug (#16973) where the "Show Existing Files" link on a
     SafeCracker file field would claim the upload directory didn't exist.
@@ -245,13 +245,13 @@ Release Date: Unreleased
   - Added ``template_types`` Extension Hook to add custom template types.
   - Added ``member_delete`` Extension Hook to execute code before member
     deletion and to modify member IDs to delete.
-  - Added ``core_template_hook`` that lets you change the template to be loaded
+  - **Reactor:** Added ``core_template_hook`` that lets you change the template to be loaded
     based on the uri_string.
-  - Added ``template_post_parse`` hook that lets you modify templates after parsing.
-  - Added ``template_fetch_template`` hook that lets you see what template is being loaded.
-  - Added option to suppress errors thrown by loading language files.
-  - Added all plugins to default text formatting list when creating a new field.
-  - Abstracted field edit/create logic to the Channel Fields API.
+  - **Reactor:** Added ``template_post_parse`` hook that lets you modify templates after parsing.
+  - **Reactor:** Added ``template_fetch_template`` hook that lets you see what template is being loaded.
+  - **Reactor:** Added option to suppress errors thrown by loading language files.
+  - **Reactor:** Added all plugins to default text formatting list when creating a new field.
+  - **Reactor:** Abstracted field edit/create logic to the Channel Fields API.
 
 
 Version 2.3.1
