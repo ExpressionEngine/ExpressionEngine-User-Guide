@@ -8,22 +8,21 @@ Rich Text Editor Module
 Introduction
 ------------
 
-ExpressionEngine's built-in Rich Text Editor (RTE) is typically used inside the
-Control Panel to provide a WYSIWYG editing experience in certain Channel Fields.
-This module's tag outputs the URL of the RTE's JavaScript so that you can load it
-from a normal template and apply it to the desired elements (usually textareas)::
+ExpressionEngine's built-in Rich Text Editor (RTE) provides a WYSIWYG editing
+experience inside the Control Panel. This module allows you to also use the RTE
+outside of the Control Panel, in your site's front-end templates. 
 
-	<script type="text/javascript" src="{exp:rte:script_url}"></script>
-
-For example, to load the RTE's JavaScript into a template and apply it
-to all elements with the class "my-class"::
+Its primary purpose is to output the URL of the RTE's JavaScript and
+apply it to the desired elements (usually textareas) in your templates.
+For example, to load the RTE's JavaScript via a template and apply it
+to all elements with the class "my-class", you would place this inside your
+document's **head** element::
 
 	<script type="text/javascript" src="{exp:rte:script_url selector=".my-class"}"></script>
 
 .. important:: If you're using :doc:`SafeCracker </modules/safecracker/index>`,
-   use its :ref:`safecracker-rte-selector` parameter instead of this tag.
-
-
+   it's preferable to use the :ref:`safecracker-rte-selector` parameter instead
+   of this module's tag.
 
 Parameters
 ----------
@@ -38,9 +37,9 @@ include_jquery=
 
 	include_jquery="no"
 
-jQuery is included by default since it is required for the RTE to work.
-However, if you are already loading jQuery elsewhere in your template, set
-this to "no".
+The versions of jQuery and jQuery UI that ship with ExpressionEngine are
+loaded by default since the RTE depends on them. If you are already loading
+these libraries separately, you may set this to "no".
 
 selector=
 ~~~~~~~~~
@@ -60,7 +59,19 @@ toolset\_id=
 
 	toolset_id="1"
 
-The id of the toolset to use. If this parameter is not specified, the
-custom toolset of the currently logged in user will be used. If they
-do not have a custom toolset, or are not logged in, the site's Default
-Toolset will be used.
+The id of the toolset to use. If this parameter is not specified, the RTE will
+attempt to load the Toolset preference of the currently logged-in user as chosen
+in :ref:`my-account-rte-prefs`. If the user has not chosen a Toolset or is not
+logged in, the site's :ref:`rte-mcp-default-toolset` will be used.
+
+Control Panel
+-------------
+
+See the :doc:`control_panel/index` page.
+
+.. toctree::
+	:glob:
+	:titlesonly:
+	:hidden:
+	
+	control_panel/index
