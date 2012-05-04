@@ -8,9 +8,9 @@ ExpressionEngine RTE tools API
 Basic File Structure
 --------------------
 
-All RTE tools should be placed into the ``third\_party`` folder in a
+All RTE tools should be placed into the ``third_party`` folder in a
 package and be named after that package name. So in a package named
-``strip\_tags`` the RTE tools file will be ``rte.strip\_tags.php``. All
+``strip_tags`` the RTE tools file will be ``rte.strip_tags.php``. All
 RTE tools must provide an ``$info`` array with a name, version number,
 description, and whether or not the RTE tool is allowable outside of
 the Control Panel.
@@ -22,15 +22,15 @@ the Control Panel.
         public $info = array(
             'name'        => 'Strip Tags',
             'version'     => '1.0',
-            'description' => 'Triggers the RTE to strip all block and phrase-level formatting elements',
+            'description' => 'Strips all block and phrase-level formatting elements',
             'cp_only'     => 'n'
         );
     
         private $EE;
         
-        /** -------------------------------------
-        /**  Constructor
-        /** -------------------------------------*/
+        /**
+         *  Constructor
+         */
         function __construct()
         {
             // Make a local reference of the ExpressionEngine super object
@@ -43,12 +43,8 @@ the Control Panel.
     /* Location: ./system/expressionengine/third_party/strip_tags/rte.strip_tags.php */
 
 
-Example - Strip Tags
---------------------
-
-The snippets below were truncated for clarity. The full example
-RTE tool can be found in ``system/expressionengine/rte_tools/strip_tags``
-
+Example Tool
+------------
 
 Globals
 ~~~~~~~
@@ -62,12 +58,12 @@ in the Definition section.
 
 ::
 
-	/** -------------------------------------
-	/**  Globals we need defined
-	/** -------------------------------------*/
+	/**
+	 *  Globals we need defined
+	 */
 	function globals()
 	{
-	    $this->EE->lang->loadfile('rte');
+	    $this->EE->lang->loadfile('strip_tags');
 	    return array(
 	        'rte.strip_tags.label' => lang('strip_tags')
 	    );
@@ -79,48 +75,38 @@ Definition
 
 .. seealso::
 
-  :doc:`RTE Javascript <cp_javascript/rte>`
+  :doc:`RTE Javascript <cp_javascript/rte/index>`
     Documentation for the WysiHat and the Button classes.
 
 The ExpressionEngine RTE makes use of the WysiHat plugin for jQuery.
-Please refer to the :doc:`API information <rte/wysihat_api>` for help
-with the ExpressionEngine version of this plugin.
+Please refer to the :doc:`WysiHat API information <cp_javascript/rte/wysihat_api>`
+for help with the ExpressionEngine version of this plugin.
 
 In order for your RTE tool to do anything, it needs to be defined.
 An RTE tool is defined in JavaScript and can be added to the RTE
-toolbar in a number of ways, but the most common is via the toolbar's
+toolbar in a number of ways, but the most common is via WysiHat's
 ``addButton()`` method. A button is typically defined using a definition
-object with ``name`` and ``label`` properties and a ``handler`` method, but
-other options are available as well. Consult the WysiHat documentation
+object with a ``label`` property and a ``handler`` method, but other
+options are available as well. Consult the :doc:`RTE Javascript documentation <cp_javascript/rte/index>`
 for more details.
-
-In your JavaScript snippet, ``toolbar`` will always be a reference to the
-toolbar object, ``$editor`` will always be a reference to the WysiHat instance
-(the RTE editor), and ``$field`` will always be a reference to the ``textarea``
-that was replaced by the RTE.
-
-Within the handler, a reference to the current WysiHat instance is
-passed in as the first argument. A reference to the triggering event 
-(typically a click) is passed in as the second argument.
 
 In this example, you can see the label of the button is set to the
 value of the global we set in the Globals section (above).
 
 ::
 
-	/** -------------------------------------
-	/**  RTE tool Definition
-	/** -------------------------------------*/
+	/**
+	 *  RTE tool Definition
+	 */
 	function definition()
 	{
 	    return '
 	   
-	    toolbar.addButton({
-	        name:    "strip_tags",
-	        label:    EE.rte.strip_tags.label,
-	        handler: function( $ed ){
-	            $ed.stripFormattingElements();
-	            $ed.unformatContentBlock();
+	    WysiHat.addButton('strip_tags', {
+	        label:         EE.rte.strip_tags.label,
+	        handler: function()
+	        {
+	            // Strip tags logic
 	        }
 	    });
 	   
@@ -137,9 +123,9 @@ make your RTE tool functional, you can do so by defining the optional
 one you would you would pass into the Control Panel Library's 
 ``add_js_script()`` method. Here's an example from the Image RTE tool::
 
-	/** -------------------------------------
-	/**  Libraries we need loaded
-	/** -------------------------------------*/
+	/**
+	 * Libraries we need loaded
+	 */
 	function libraries()
 	{
 	    return array(
@@ -157,9 +143,9 @@ can define a ``styles()`` method. The ``styles()`` method must return a
 string containing the CSS rule sets you wish to define. Here is an example
 from the Link RTE tool::
 
-	/** -------------------------------------
-	/**  Styles we need loaded
-	/** -------------------------------------*/
+	/**
+	 *  Styles we need loaded
+	 */
 	function styles()
 	{
 	    return '
@@ -179,9 +165,9 @@ file to define the necessary styles. If you are dealing with more than a
 few simple rule sets, that may be an easier way to go::
 
 
-	/** -------------------------------------
-	/**  Styles we need loaded
-	/** -------------------------------------*/
+	/**
+	 *  Styles we need loaded
+	 */
 	function styles()
 	{
 	    # load the external file
