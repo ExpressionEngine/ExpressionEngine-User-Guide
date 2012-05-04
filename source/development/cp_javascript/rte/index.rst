@@ -212,6 +212,7 @@ Button Properties
 - **name** - the button name
 - **parent** - parent class (use when extending)
 - **$editor** - the editor element
+- **$field** - the edited textarea
 - **$element** - the button element
 - **Event** - WysiHat Event Core
 - **Commands** - WysiHat Commands Object
