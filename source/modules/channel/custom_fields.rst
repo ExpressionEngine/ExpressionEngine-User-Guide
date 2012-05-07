@@ -37,6 +37,8 @@ simply outputs the URL of the file::
 
 	{news_image}
 
+.. _image-manipulation-single:
+
 If you have defined any :ref:`image-manipulations` you can modify the
 tag with the Short Name of the manipulation. For example, if you've
 defined a "small" manipulation, the following will output the URL to
@@ -200,6 +202,8 @@ The date the file was first uploaded. See `Date Variable
 Formatting <../../templates/date_variable_formatting.html>`_ for more
 information.
 	
+
+.. _image-manipulation-pair:
 
 url
 ---
