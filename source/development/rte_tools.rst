@@ -1,16 +1,13 @@
 ExpressionEngine RTE tools API
 ==============================
 
-.. contents::
-	:local:
-
 
 Basic File Structure
 --------------------
 
-All RTE tools should be placed into the ``third\_party`` folder in a
+All RTE tools should be placed into the ``third_party`` folder in a
 package and be named after that package name. So in a package named
-``strip\_tags`` the RTE tools file will be ``rte.strip\_tags.php``. All
+``strip_tags`` the RTE tools file will be ``rte.strip_tags.php``. All
 RTE tools must provide an ``$info`` array with a name, version number,
 description, and whether or not the RTE tool is allowable outside of
 the Control Panel.
