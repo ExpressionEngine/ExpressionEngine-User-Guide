@@ -210,22 +210,23 @@ Image Manipulations
 
 |Image Manipulations|
 
-This setting allows you to specify multiple thumbnail images that will
-be automatically created when a file is uploaded.
+This area allows you to specify one or more alternate versions
+of an image that automatically get created when the original
+image is uploaded. A manipulation can include a resized version,
+a `watermark <watermark_preferences.html>`_, or both.
 
-The short name will be used in templates to display the generated
-thumbnail. Images will be resized according to the height and width
-settings. If only height or width is specified, the thumbnails will be
-created using that as the master dimension. For example, setting the
-height to 200 and leaving the width blank will result in an image that
-is no higher than 200 pixels, with the width resized proportionately.
-Setting both the height and the width to 200 would result in an image
+The resize type will determine whether the image is constrained
+(resized) or cropped to the specified dimensions. If only height
+or width is specified, the thumbnails will be created using that
+as the master dimension. For example, setting the height to 200 and
+leaving the width blank will result in an image that is no higher
+than 200 pixels, with the width resized proportionately. Setting
+both the height and the width to 200 would result in an image
 that is no higher or wider than 200 pixels.
 
-Resize type will determine whether the image is constrained (resized) or
-cropped to the specified dimensions. You may also assign a watermark to
-the image if any `watermark settings <watermark_preferences.html>`_
-exist.
+You can refer to a particular Image Manipulation in your templates
+via a File Field's :ref:`single variable tag <image-manipulation-single>`
+or its :ref:`variable pair tag <image-manipulation-pair>`.
 
 Restrict file uploading to select member groups
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
