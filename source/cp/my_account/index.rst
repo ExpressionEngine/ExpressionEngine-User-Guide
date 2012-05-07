@@ -101,9 +101,11 @@ These links will be visible only to you.
 Rich Text Editor Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This page allows you to enable or disable the Rich Text Editor, as well
-as select which Toolset to use when publishing entries. If you choose
-"My Toolset", you'll be able to customize your own Toolset.
+This page allows you to enable or disable the Rich Text Editor for
+your account (if disabled, **Textarea (Rich Text)** fields will appear
+as normal textareas), as well as select which Toolset to use when
+publishing entries. If you choose "My Toolset" an Edit button 
+will appear, allowing you to customize your own Toolset.
 
 
 Channel Settings

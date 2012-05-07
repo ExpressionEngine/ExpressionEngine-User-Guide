@@ -11,10 +11,8 @@ Development
 -  `2.0 Conversion <./conversion/index.html>`_
 -  `Constants Reference <./constants.html>`_
 -  `Accessory Development <./accessories.html>`_
--  `Emoticon Development <./emoticons.html>`_
 -  `Extensions Development <./extensions.html>`_
 -  `Fieldtype Development <./fieldtypes.html>`_
--  `Rich Text Editor Tool Development <./rte_tools.html>`_
 -  `Plugin Development <./plugins.html>`_
 -  `Module Development <./modules.html>`_
 
@@ -66,9 +64,11 @@ Development
 
    -  `Custom jQuery Events <./cp_javascript/events.html>`_
    -  `Notification Plugin <./cp_javascript/notification.html>`_
+   -  `Rich Text Editor <./cp_javascript/rte/index.html>`_
    -  `Table Plugin <./cp_javascript/table.html>`_
 
 -  `Control Panel Style Reference <./cp_styles/index.html>`_
+-  `Emoticon Development <./emoticons.html>`_
 
 
 .. toctree::
@@ -79,7 +79,7 @@ Development
 	*
 	api/index
 	conversion/index
-	cp_javascript/notification
+	cp_javascript/*
 	cp_styles/index
 	extension_hooks/index
 	guidelines/index

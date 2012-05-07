@@ -10,6 +10,7 @@ Modules
 	blacklist/index
 	channel/index
 	comment/index
+	cookie_consent/index
 	email/index
 	emoticon/index
 	file/index

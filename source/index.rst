@@ -112,6 +112,7 @@ Reference Guides
 	cp/index
 	general/index
 	getting_started/index
+	handling_bugs/index
 	modules/index
 	templates/index
 	troubleshooting/index
