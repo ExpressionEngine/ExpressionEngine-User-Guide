@@ -25,12 +25,16 @@ Release Date: Unreleased
     - Added new module and fieldtype for the new rich text editor.
     - Added user preferences for rich text editor under my preferences.
   
-  - Altered language keys on the New Template page to be consistent with the 
-    New Template Group page in the control panel.
+  - Added a Cookie Consent Module, available in the ExpressionEngine Add-on
+    Library.
   - Dropdown for "Preview Layout" in publish layouts sidebar updates to the
     member group being viewed.
   - When editing publish layouts, the checkbox for the member group being
     viewed defaults to being checked.
+  - Removed IP requirement from sessions check to prevent logout issues for 
+    revolving IP addresses.
+  - Altered language keys on the New Template page to be consistent with the 
+    New Template Group page in the control panel.
   - **Reactor:** Changed "edit member group" screen to show prefs for the MSM
     site you are presently using.
   - **Reactor:** Added option to member delete confirmation page to delete all 
@@ -160,11 +164,18 @@ Release Date: Unreleased
   - **Reactor:** Re-exposed channel->pager_sql in the channel module.
   - **Reactor:** Added parameter to ``Api_channel_fields::field_edit_vars`` to 
     specify which field types to present as options.
+  - **Reactor:** Altered the Template class to allow plugins/modules to use 
+    __call() magic method.
   - Added ``myaccount_nav_setup`` hook to modify My Account navigation. See 
     `documentation <development/extension_hooks/cp/myaccount/index.html>`_ for 
     more information.
   - Added ``email_send`` hook to modify emails or take over email sending
     completely.
+  - Added ``member_member_register_errors`` hook to allow additional error
+    checking to the member registration form.
+  - Added ``set_cookie_end`` hook which allows full control of setting cookies
+    after cookie parameters have been normalized according to the cookie
+    configuration settings.
 
 
 Version 2.4.0
