@@ -163,6 +163,7 @@ The following single variables are available in this theme page:
 The following conditional variables are available in this theme page:
 
 ::
+
 	{if cookies_allowed}{/if}
 	{if cookies_not_allowed}{/if}
 
