@@ -10,7 +10,7 @@ of the finicky browser differences.
 Prerequisites
 -------------
 
-Before you dive into rte button development, please make sure that
+Before you dive into RTE button development, please make sure that
 you have a solid understanding of :doc:`ranges and selections
 <rangesandselections>`.
 
@@ -82,7 +82,7 @@ may still be appropriate.
 Modifying the Text
 ------------------
 
-With that out of the way, we will want to actually create a youtube link.
+With that out of the way, we will want to actually create a YouTube link.
 To do that, we can use the button's ``make`` method, which will handle the
 more intricate details for us. ::
 
@@ -100,8 +100,8 @@ more intricate details for us. ::
 	    }
 	});
 
-Now it would be nice if we could ask the user for a video id to use. So we
-will add an overlay to prompt the user for an id. ::
+Now it would be nice if we could ask the user for a video ID to use. So we
+will add an overlay to prompt the user for an ID. ::
 
 	WysiHat.addButton("ytLink", {
 	    'label': EE.rte.ytLink.add,
@@ -140,11 +140,12 @@ will add an overlay to prompt the user for an id. ::
 	});
 
 That was a lot, let's look at it in more detail. The ``_prompt`` method is
-not very interesting, it is mostly jQuery ui boilerplate. In create link
-we first close the dialog, reselect the editor, and then create the link.
+not very interesting, it is mostly jQuery UI boilerplate. In
+``_createLink`` we first close the dialog, reselect the editor, and then
+create the link.
 
 What we didn't cover above is that the handler always receives two parameters.
-The first is the starting state of the editor. This contains the current html
+The first is the starting state of the editor. This contains the current HTML
 and the selection as it is returned from the selection utility. We save this
 and reselect the text when we're ready to modify the editor again.
 
@@ -156,7 +157,7 @@ Async Mode
 While the above works fairly well at first glance, it breaks the editor's undo
 feature. Normally, the editor stores the state changes for all actions to make
 sure that undoing works intuitively. This storing action runs after the handler
-is completely. When we do something asynchronous, such as waiting for an ajax
+is completely. When we do something asynchronous, such as waiting for an AJAX
 request or waiting for user input, the new state isn't any different from the
 old.
 
@@ -191,7 +192,7 @@ do this. ::
 	    }
 
 .. caution::
-	You must **always** call finalize. Even if an ajax request fails or the
+	You must **always** call finalize. Even if an AJAX request fails or the
 	user decides to cancel his or her action.
 
 Quick Reference
@@ -211,6 +212,7 @@ Button Properties
 - **name** - the button name
 - **parent** - parent class (use when extending)
 - **$editor** - the editor element
+- **$field** - the edited textarea
 - **$element** - the button element
 - **Event** - WysiHat Event Core
 - **Commands** - WysiHat Commands Object

@@ -11,7 +11,6 @@ Development
 -  `2.0 Conversion <./conversion/index.html>`_
 -  `Constants Reference <./constants.html>`_
 -  `Accessory Development <./accessories.html>`_
--  `Emoticon Development <./emoticons.html>`_
 -  `Extensions Development <./extensions.html>`_
 -  `Fieldtype Development <./fieldtypes.html>`_
 -  `Plugin Development <./plugins.html>`_
@@ -69,6 +68,7 @@ Development
    -  `Table Plugin <./cp_javascript/table.html>`_
 
 -  `Control Panel Style Reference <./cp_styles/index.html>`_
+-  `Emoticon Development <./emoticons.html>`_
 
 
 .. toctree::
@@ -79,7 +79,7 @@ Development
 	*
 	api/index
 	conversion/index
-	cp_javascript/notification
+	cp_javascript/*
 	cp_styles/index
 	extension_hooks/index
 	guidelines/index

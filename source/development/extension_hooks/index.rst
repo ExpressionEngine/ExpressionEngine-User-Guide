@@ -77,6 +77,7 @@ The list below details all available extension hooks in ExpressionEngine.
 	cp/members/index
 	cp/myaccount/index
 	global/core/index
+	global/email/index
 	global/filemanager/index
 	global/functions/index
 	global/member_model/index
