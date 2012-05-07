@@ -154,6 +154,9 @@ Release Date: Unreleased
     validation may delete data in that entry's file fields.
   - Fixed a bug (#16583) where auto-linker behavior differed from 1.x,
     causing links without a protocol not to be converted.
+  - Fixed a bug where the channel calendar day_path did not always match the
+    calendar day shown due to differences in localization.
+  - Fixed a bug where the Updated Sites module was rejecting valid pings.
   - **Reactor:** Fixed a bug where 3rd party module tab fields did not have their 
     data set after an autosave.
 
