@@ -14,7 +14,6 @@ Development
 -  `Emoticon Development <./emoticons.html>`_
 -  `Extensions Development <./extensions.html>`_
 -  `Fieldtype Development <./fieldtypes.html>`_
--  `Rich Text Editor Tool Development <./rte_tools.html>`_
 -  `Plugin Development <./plugins.html>`_
 -  `Module Development <./modules.html>`_
 
