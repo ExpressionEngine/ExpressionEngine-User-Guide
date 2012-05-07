@@ -20,7 +20,7 @@ Release Date: May 7, 2012
 
 - General Changes:
 
-  - `Rich Text Editor <cp/admin/rich_text_editor_settings.html>`_
+  - `Rich Text Editor <modules/rte/control_panel/index.html>`_
 
     - Added new module and fieldtype for the new rich text editor.
     - Added user preferences for rich text editor under my preferences.
