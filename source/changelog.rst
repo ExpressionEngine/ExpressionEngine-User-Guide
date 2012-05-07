@@ -24,7 +24,6 @@ Release Date: Unreleased
 
     - Added new module and fieldtype for the new rich text editor.
     - Added user preferences for rich text editor under my preferences.
-    - Added preference to textareas to enable the rich text editor.
   
   - Altered language keys on the New Template page to be consistent with the 
     New Template Group page in the control panel.

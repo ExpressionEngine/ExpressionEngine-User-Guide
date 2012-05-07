@@ -13,7 +13,8 @@ types, described below.
 Field Type
 ~~~~~~~~~~
 
-You may choose what type of field this is. There are 9 default choices:
+ExpressionEngine includes the following types of fields for use
+in your Channel Entries (add-ons can include their own as well):
 
 #. **Checkboxes**: Checkbox fields display a list of options in the
    publish form that you choose by clicking the checkboxes.
@@ -44,7 +45,9 @@ You may choose what type of field this is. There are 9 default choices:
 #. **Text Input**: This is a single input line for text. It is the type
    of field you might use for a title, name, or other short information.
 #. **Textarea**: This is a standard text entry box with multiple lines.
-   This is what you would use for a main entry body.
+   This is often used for the body text of entries.
+#. **Textarea (Rich Text)**: This is a text entry box with multiple
+   lines that uses the built-in :doc:`/modules/rte/index`.
 
 Field Label
 ~~~~~~~~~~~
@@ -129,16 +132,6 @@ to use for formatting the field. Plugins such as "Textile" and
 If you select the checkbox when you set up the field, then the new
 formatting choice will also be applied to this field for **all**
 existing entries.
-
-.. _channel-field-enable-rte:
-
-Enable Rich Text Editor
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Whether or not to apply the Rich Text Editor (RTE) to this field.
-The Toolset shown will be either the :ref:`rte-mcp-default-toolset` or
-the member's custom toolset if they have created one using the
-:ref:`my-account-rte-prefs` page under :doc:`/cp/my_account/index`.
 
 Text Direction
 ~~~~~~~~~~~~~~

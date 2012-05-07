@@ -21,10 +21,9 @@ General Preferences
 Enable the Rich Text Editor
 ===========================
 
-If "Yes", the Rich Text Editor will appear on any Channel Fields whose
-:ref:`channel-field-enable-rte` preference is enabled. If "No", the Rich
-Text Editor will not appear regardless of whether a Channel Field's
-:ref:`channel-field-enable-rte` preference is enabled.
+If "Yes", the Rich Text Editor will be applied to any Channel Fields of
+the :doc:`Textarea (Rich Text)</cp/admin/channels/custom_fields_edit>`
+fieldtype. If "No", the field will appear as a normal textarea instead.
 
 .. note:: If using the :doc:`/cp/sites/index`, this preference is per-site.
 
