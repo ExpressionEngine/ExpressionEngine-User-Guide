@@ -8,8 +8,8 @@ Rich Text Editor Module
 Introduction
 ------------
 
-ExpressionEngine's built-in Rich Text Editor (RTE) provides a WYSIWYG editing
-experience inside the Control Panel. This module allows you to also use the RTE
+ExpressionEngine's built-in Rich Text Editor (RTE) is usually used 
+inside the Control Panel. This module allows you to also use the RTE
 outside of the Control Panel, in your site's front-end templates. 
 
 Its primary purpose is to output the URL of the RTE's JavaScript and
