@@ -8,18 +8,8 @@ use the Wizard:
 -  `Download <http://expressionengine.com/files/ee_server_wizard.zip>`_
    and unzip the archive.
 -  Upload the folder to your server.
--  Point your web browser to the folder. Example:
-   http://example.com/ee\_server\_wizard/
-
-To create a site with ExpressionEngine, you must have at least minimal
-experience with HTML and understand how to create a website. Further,
-you must be familiar with the process of uploading files to your server
-via FTP.
-
-To experience the full functionality of ExpressionEngine you must use a
-web browser with Javascript enabled. If Javascript is disabled, then
-some dynamic functionality in the Control Panel and other areas of the
-site may not function.
+-  Point your web browser to the folder. For example:
+   http://example.com/ee_wizard
 
 Server Requirements
 -------------------
@@ -83,3 +73,10 @@ If the Server Wizard lists URL Segment Support as *Unsupported*, you
 will need to run your ExpressionEngine site using query strings. The
 "Query String" section of the :doc:`/general/urls`
 page contains more information.
+
+Getting Started
+---------------
+
+Once you're sure that your server is compatible,
+:doc:`install ExpressionEngine</installation/installation>` and 
+:doc:`get started!</getting_started/index>`
