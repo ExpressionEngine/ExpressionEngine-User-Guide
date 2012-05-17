@@ -401,10 +401,10 @@ containing the field, and returns the query string required.
 ::
 
     $str  = 'channel|news|sports';
-    $sql  = "SELECT * FROM exp_channels WHERE is_user_channel = 'n' ";
+    $sql  = "SELECT * FROM exp_channels WHERE site_id = 1 ";
     $sql .= $this->EE->functions->sql_andor_string($str, 'channel_name');
     // $sql equals:
-    // SELECT * FROM exp_channels WHERE is_user_channel = 'n'
+    // SELECT * FROM exp_channels WHERE site_id = 1
     // AND channel_name = 'channel' OR channel_name = 'news' OR channel_name = 'sports'
 
 assign\_variables(str [string], slash [string])
