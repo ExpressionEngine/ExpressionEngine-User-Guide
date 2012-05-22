@@ -179,6 +179,8 @@ Release Date: May 7, 2012
   - Added ``set_cookie_end`` hook which allows full control of setting cookies
     after cookie parameters have been normalized according to the cookie
     configuration settings.
+  - Added ``pre_loop()`` function to fieldtypes for preprocessing of
+    channel data before the entries loop runs.
 
 
 Version 2.4.0
