@@ -66,7 +66,7 @@ Excerpt Field
 
 Here you determine which field from your Field Group corresponds to the
 "Excerpt Field" in your Metaweblog API-compatible program. Only
-"textarea" type fields are available for selection. This field is only
+text-type fields are available for selection. This field is only
 available when using the Movable Type API.
 
 Content Field
@@ -74,14 +74,14 @@ Content Field
 
 Here you determine which field from your Field Group corresponds to the
 "Content Field" in your Metaweblog API-compatible program. Only
-"textarea" type fields are available for selection.
+text-type fields are available for selection.
 
 More Field
 ~~~~~~~~~~
 
 Here you determine which field from your Field Group corresponds to the
-"More Field" in your Metaweblog API-compatible program. Only "textarea"
-type fields are available for selection. This field is only available
+"More Field" in your Metaweblog API-compatible program. Only text-type
+fields are available for selection. This field is only available
 when using the Movable Type API.
 
 Keywords Field
@@ -89,7 +89,7 @@ Keywords Field
 
 Here you determine which field from your Field Group corresponds to the
 "Keywords Field" in your Metaweblog API-compatible program. Only
-"textarea" type fields are available for selection. This field is only
+text-type fields are available for selection. This field is only
 available when using the Movable Type API.
 
 Upload Folder for File Uploading
