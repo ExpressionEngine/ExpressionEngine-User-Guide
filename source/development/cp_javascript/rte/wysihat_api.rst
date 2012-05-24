@@ -322,11 +322,10 @@ replaceElement($el, tagName)
 Takes the current element and turns it into a different one. Does not
 change the contents of the element.
 
-deleteElement()
+deleteElement($el)
 ^^^^^^^^^^^^^^^
 
-Acts similar to unwrap. Must be called with an element scope by
-using ``apply`` or ``call``.
+Replaces the element with its contents, similar to jQuery's unwrap.
 
 .. caution::
 	This function is likely to change or be removed in the future.
