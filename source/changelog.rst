@@ -8,6 +8,121 @@ ExpressionEngine 2.x Change Log
 The Change Log for ExpressionEngine 1.x is `available here.
 <http://expressionengine.com/legacy_docs/changelog.html>`_
 
+Version 2.5.1
+-------------
+
+Release Date: May 29, 2012
+
+- Important:
+
+  - Fixed a potential cross site scripting vulnerability in the member module.
+
+- General Changes:
+
+  - Added support for IPv6 IP addresses
+  - Rich Text Editor fields are now available for use with the Metaweblog API
+    module.
+  - Made Communicate file uploads more resistant to malformed file names.
+
+- Bug Fixes:
+
+  - Fixed a bug (#17348) preventing field formatting types provided by some
+    plugins from working with the MetaWeblog API module, and especially
+    MarsEdit.
+  - Fixed a bug (#17499) where changing a username or password from the
+    front-end did not behave as expected in some cases. 
+  - Fixed a bug (#16995) where Pages module URIs were case sensitive.
+  - Fixed bugs (#17026, #17378) where the Pages module and page_url tags
+    still displayed trailing slashes in some cases.
+  - Fixed a bug (#17424) where a "too many URL segments" error would not
+    return a 404 status code.
+  - Fixed a bug (#17597) where the email encode tag did not output valid HTML5.
+  - Fixed a documentation error (#17633) where the example path to the server
+    wizard was not correct.
+  - Fixed a bug (#17459) where safecracker could be tricked into posting a
+    new entry instead of editing the specified entry.
+  - Fixed bugs (#16802, #17442) where package paths were not added
+    consistently.
+  - Fixed a bug (#17911) where comments did not expand correctly in the
+    comment control panel.
+  - Fixed a bug (#17857) where http authentication did not correctly block
+    some member groups.
+  - Fixed a bug (#17140) where set_image_memory always assumed MB.
+  - Fixed a bug (#17937) where the admin overview page did not list a
+    description for the RTE settings.
+  - Fixed a bug (#17812) where conditional comparisons with strings containing
+    certain punctuation and special characters did not evaluate correctly.
+  - Fixed a bug (#17901) where pasting into the rte sometimes did not result
+    in the expected paragraph markup.
+  - Fixed a bug (#16548) where publish page permissions were not being observed.
+  - Fixed a bug (#16593) where advanced search ignored the status parameter.
+  - Fixed a bug (#16619) where saving the SafeCracker extension settings would
+    clear out settings for other MSM sites.
+  - Fixed a bug (#16708) where there was an unnecessary query when building the 
+    category list for new entries.
+  - Fixed a bug (#16610) where importing members would not correctly set the 
+    time format.
+  - Fixed a bug (#16798) where safecracker file was not obeying the required 
+    rule.
+  - Fixed a bug (#17892) where the password lockout notice may show number
+    of minutes as a hexadecimal number.
+  - Fixed a bug (#17875) where the word 'or' was not called from a language
+    file on the RTE toolset editor dialog.
+  - Fixed a bug (#17876) where viewing the Search Log without the Search
+    Module installed would show a PHP error.
+  - Fixed a bug (#17882) where sort and search on the members table would
+    not work if the initial sort was set to a column not in the table.
+  - Fixed a bug (#16989) where SafeCracker categories were not filtered by
+    its group_id parameter.
+  - Fixed a bug (#17877) where saving a category image would save the file
+    field data incorrectly in the database.
+  - Fixed a bug (#17781) where deleting a member without the Comment
+    module installed would show PHP errors.
+  - Fixed a bug where when deleting a member, the option to delete all the
+    member's entries shows up even if the member has no entries.
+  - Fixed a bug (#17906) where the code view of the Rich Text Editor on the
+    front-end may appear too narrow.
+  - Fixed a bug (#17905) where some language was not being referenced from
+    language files.
+  - Fixed bugs (#17902, #17912) where some subclass method signatures
+    differed from their superclass, causing warnings in PHP 5.4.
+  - Fixed a bug where submitting a publish form while the category editor
+    was visible would result in loss of category selections for that entry.
+  - Fixed a bug (#17914) where textarea rows setting could not be updated.
+  - Fixed a bug (#17918) where the ``edit_date`` of an entry wouldn't update
+    after editing an entry.
+  - Fixed a bug (#17898) where trying to add a link to the start of a bullet
+    list item in the RTE sometimes would claim text wasn't selected.
+  - Fixed a bug (#17817) where the template manager table may move to the
+    bottom of the page at high browser window resolutions.
+  - Fixed a bug (#17831) where image manipulations may resize image to one
+    pixel larger than desired dimension.
+  - Fixed a bug (#17907) where the Rich Text Editor would pass publish form
+    validation even if field was set to be required.
+  - Fixed a bug (#17931) where saving an empty RTE field inserts empty
+    paragraph tags into the database, making template conditionals not work.
+  - Fixed a bug (#17934) where a textarea with formatting buttons showing
+    wasn't able to be resized when editing the publish layout.
+  - Fixed a bug (#17939) where using the backspace parameter on a categories
+    variable pair in the File Entries tag would not work.
+  - Fixed a bug (#17940) where saving an entry with a hidden Rich Text
+    Field would result in loss of new data in that field.
+  - Fixed a bug (#17942) where the Help link on third-party module pages was
+    not correct.
+  - Fixed a bug (#17929) where sending an email to a member group or mailing
+    list with an attachment may fail.
+  - Fixed a bug (#17944) where editing an entry belonging to a non-existent
+    author would show PHP errors.
+  - Fixed a bug where the hostname used to access the control panel may
+    affect which tools are loaded in the Rich Text Editor.
+
+- Developers:
+
+  - Variable pairs passed to ``Template::parse_variables()`` or
+    ``Template::parse_variables_row()`` can make use of a backspace and
+    limit parameter.
+
+
 Version 2.5.0
 -------------
 
