@@ -37,8 +37,6 @@ Release Date: May 29, 2012
   - Fixed a bug (#17424) where a "too many URL segments" error would not
     return a 404 status code.
   - Fixed a bug (#17597) where the email encode tag did not output valid HTML5.
-  - Fixed a documentation error (#17633) where the example path to the server
-    wizard was not correct.
   - Fixed a bug (#17459) where safecracker could be tricked into posting a
     new entry instead of editing the specified entry.
   - Fixed bugs (#16802, #17442) where package paths were not added
@@ -115,6 +113,8 @@ Release Date: May 29, 2012
     author would show PHP errors.
   - Fixed a bug where the hostname used to access the control panel may
     affect which tools are loaded in the Rich Text Editor.
+  - Fixed a documentation error (#17633) where the example path to the server
+    wizard was not correct.
 
 - Developers:
 
