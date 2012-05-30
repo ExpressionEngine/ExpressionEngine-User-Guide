@@ -111,15 +111,6 @@ Redirect to location.
 redirect either by location or meta refresh, depending on the redirect
 method preference.
 
-hash(str [string])
-------------------
-
-Convert a string into a SHA1 encrypted hash.
-
-**Class:** Functions (functions)
-
-**Description:** Returns str as a SHA1 encrypted hash.
-
 random(type [string], length (string int))
 ------------------------------------------
 
@@ -262,41 +253,6 @@ Returns the contents of email template.
 
 **Description:** Returns the contents of the email template requested
 based on the language settings of the user.
-
-encoding\_menu(which [str], name [str], selected [str])
--------------------------------------------------------
-
-Returns character encoding or language form select menu
-
-**Class:** Functions (functions)
-
-**Description:** The which variable can be set to either 'languages' or
-'charsets', and the name must be set to whatever you want the form field
-to be named. The optional value selected is for indicating the selected
-value or the default value for the pulldown.
-
-::
-
-    echo $this->EE->functions->encoding_menu('languages', 'xml_lang', 'ab');
-    //  Displays:
-    //  <select name="xml_lang">
-    //  <option value='aa'>Afar</option>
-    //  <option value='ab' selected='selected'>Abkhazian</option>
-    //  <option value='af'>Afrikaans</option>
-    //  etc...
-    //  </select>
-
-create\_directory\_map(directory [str], top\_level\_only [bool])
-----------------------------------------------------------------
-
-Returns array of files and folders in a directory
-
-**Class:** Functions (functions)
-
-**Description:** Specify a directory and this function will create an
-array mapping out all the files and folders in that directory, including
-any sub-folder files. This functions uses multi-level arrays to show
-sub-folder depth.
 
 language\_pack\_names(default [str])
 ------------------------------------
