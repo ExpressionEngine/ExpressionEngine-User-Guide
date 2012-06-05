@@ -11,7 +11,13 @@ The Change Log for ExpressionEngine 1.x is `available here.
 Version 2.5.2
 -------------
 
-Release Date: June 4, 2012
+Release Date: June 5, 2012
+
+- General Changes:
+
+  - One-click updating of IP to Nation database, as well as support for
+    IPv6 addresses for nations.
+  - Improvements to Blacklist module to handle uncollapsed IPv6 addresses.
 
 - Bug Fixes:
 
