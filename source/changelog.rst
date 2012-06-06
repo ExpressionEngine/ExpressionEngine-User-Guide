@@ -11,7 +11,7 @@ The Change Log for ExpressionEngine 1.x is `available here.
 Version 2.5.2
 -------------
 
-Release Date: June 5, 2012
+Release Date: June 6, 2012
 
 - General Changes:
 
