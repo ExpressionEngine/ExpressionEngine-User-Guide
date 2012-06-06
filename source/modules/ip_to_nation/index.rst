@@ -28,7 +28,7 @@ Database Updates
 ****************
 
 Periodically, the IP address database for the IP to Nation module is
-updated from `ip2nation.com <http://www.ip2nation.com/>`_'s database.
+updated from `maxmind.com <http://www.maxmind.com/>`_'s database.
 When this occurs, a note will be made in the `Change
 Log <../../changelog.html>`_. To update your installation, simply make
 sure that you are running the latest version of ExpressionEngine, and
@@ -37,10 +37,8 @@ may take a few seconds; do not click any links or refresh the page while
 the auto-update is taking place.
 
 You also manually update the IP address database using the Update IP
-Database page. To use the importer, download the SQL file from
-`ip2nation.com <http://www.ip2nation.com/>`_ and upload the unzipped SQL
-file to your server. Enter the path to the file in the import form, and
-new IP tables will be created using that file.
+Database page. The new files will automatically be downloaded for you
+to use.
 
 ****************
 Banning Counties
@@ -94,3 +92,7 @@ You can optional set the tag to output the name of the country as text
 by using the type="text" parameter.
 
 .. |image0| image:: flag_us.gif
+
+.. note::
+  This product includes GeoLite data created by MaxMind, available from
+  http://maxmind.com/
