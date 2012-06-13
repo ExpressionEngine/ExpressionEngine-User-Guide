@@ -40,7 +40,7 @@ Installation
 ************
 
 The Cookie Consent Module is available as a `separate download  
-<http://expressionengine.com/downloads/details/cookie_consent>`_. in ExpressionEngine's 
+<http://expressionengine.com/downloads/details/cookie_consent_module>`_. in ExpressionEngine's 
 `First Party Add-on Library <http://expressionengine.com/downloads>`_..  The module 
 folder should be placed in your third_party folder (typically system/expressionengine/third_party/).  
 
