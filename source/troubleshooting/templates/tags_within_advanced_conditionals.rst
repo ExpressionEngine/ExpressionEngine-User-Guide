@@ -14,8 +14,22 @@ shared markup for the rest of the tag block.
 
 **Right:** ::
 
-	{if segment_3 == "foo"}             {exp:channel:entries channel="default_site"}                 <h2>{title}</h2>             {/exp:channel:entries}         {if:else}             {exp:channel:entries channel="another_channel" category="not 6|7"}                 <h2>{title</h2>             {/exp:channel:entries}         {/if}
+	{if segment_3 == "foo"}
+		{exp:channel:entries channel="default_site"}
+			<h2>{title}</h2>
+		{/exp:channel:entries}
+	{if:else}
+		{exp:channel:entries channel="another_channel" category="not 6|7"}
+			<h2>{title</h2>
+		{/exp:channel:entries}
+	{/if}
 
 **Wrong:** ::
 
-	{if segment_3 == "foo"}             {exp:channel:entries channel="default_site"}         {if:else}             {exp:channel:entries channel="another_channel" category="not 6|7"}         {/if}                 <h2>{title}</h2>             {/exp:channel:entries}
+	{if segment_3 == "foo"}
+		{exp:channel:entries channel="default_site"}
+	{if:else}
+		{exp:channel:entries channel="another_channel" category="not 6|7"}
+	{/if}
+			<h2>{title}</h2>
+		{/exp:channel:entries}

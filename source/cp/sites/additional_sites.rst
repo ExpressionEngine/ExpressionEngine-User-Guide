@@ -31,7 +31,7 @@ following files:
 
 -  system/expressionengine/libraries/Sites.php
 -  system/expressionengine/controllers/cp/sites.php
--  system/expressionengine/language/english/lang.sites.phpp
+-  system/expressionengine/language/english/sites_lang.php
 
 Upload system/expressionengine/libraries/Sites.php to your
 system/expressionengine/libraries directory.
@@ -39,7 +39,7 @@ system/expressionengine/libraries directory.
 Upload system/expressionengine/controllers/cp/sites.php to your
 system/expressionengine/controllers/cp directory.
 
-Upload system/expressionengine/language/english/lang.sites.php
+Upload system/expressionengine/language/english/sites_lang.php
 to your system/expressionengine/language/english directory.
 That's it, the Additional Sites are now installed. You can can now
 proceed with creating a new site.

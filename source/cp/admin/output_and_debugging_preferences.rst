@@ -97,20 +97,18 @@ Javascript that may resemble EE code, including curly brackets, this
 setting **must** be 1 in order for the Javascript to function, or
 ExpressionEngine will hide Javascript output believing it to be an error.
 
-Display SQL Queries?
-~~~~~~~~~~~~~~~~~~~~
+Display Output Profiler?
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-If this preference is set to "Yes", all members of the Super Admin group
-will see, at the bottom of the page, a list of the database queries used
-to generate the page. All other users will see nothing. This output can
-be useful during site development or for debugging purposes.
+If enabled, Super Admins will see benchmark results, SQL queries, and
+submitted form data displayed at the bottom of the browser window.
+This is useful for debugging.
 
 Display Template Debugging?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If this preference is set to "Yes", a log of all processing that occurs
-while a a page is being created in the ExpressionEngine Template parser
-will be created and outputted to SuperAdmins. This includes but is not
-limited to Global Variables, Conditionals, Tags, PHP on Input/Ouput,
-Embeds, and Extension Hooks. Excellent tool for debugging your
-templates.
+If enabled, a log of all processing that occurs while a page is being
+created in the ExpressionEngine Template parser will be shown to Super
+Admins at the bottom of the browser window. This includes Global Variables,
+Conditionals, Tags, PHP on Input/Ouput, Embeds, and Extension Hooks.
+This is an excellent tool for debugging your templates.

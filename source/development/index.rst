@@ -11,7 +11,6 @@ Development
 -  `2.0 Conversion <./conversion/index.html>`_
 -  `Constants Reference <./constants.html>`_
 -  `Accessory Development <./accessories.html>`_
--  `Emoticon Development <./emoticons.html>`_
 -  `Extensions Development <./extensions.html>`_
 -  `Fieldtype Development <./fieldtypes.html>`_
 -  `Plugin Development <./plugins.html>`_
@@ -19,6 +18,7 @@ Development
 
    -  `Module Development Tutorial <./module_tutorial.html>`_
 
+-  `Rich Text Editor Tool Development <./rte_tools.html>`_
 -  `API <./api/index.html>`_
 
    -  `Channel Categories <./api/api_channel_categories.html>`_
@@ -41,13 +41,16 @@ Development
    -  `CP Class <./usage/cp.html>`_
    -  `Database Class <./usage/database.html>`_
    -  `Email Class <./usage/email.html>`_
+   -  `File Field Class <./usage/file_field.html>`_
    -  `Form Validation Class <./usage/form_validation.html>`_
    -  `Input Class <./usage/input.html>`_
    -  `Language Class <./usage/language.html>`_
    -  `Layout Class <./usage/layout.html>`_
    -  `Localization Class <./usage/localization.html>`_
+   -  `Logger Class <./usage/logger.html>`_
    -  `Security Class <./usage/security.html>`_
    -  `Session Class <./usage/session.html>`_
+   -  `Table Class <./usage/table.html>`_
    -  `Template Parser Class <./usage/template.html>`_
    -  `Typography Class <./usage/typography.html>`_
    -  `URI Class <./usage/uri.html>`_
@@ -59,9 +62,13 @@ Development
 
 -  ExpressionEngine Control Panel JavaScript
 
+   -  `Custom jQuery Events <./cp_javascript/events.html>`_
    -  `Notification Plugin <./cp_javascript/notification.html>`_
+   -  `Rich Text Editor <./cp_javascript/rte/index.html>`_
+   -  `Table Plugin <./cp_javascript/table.html>`_
 
 -  `Control Panel Style Reference <./cp_styles/index.html>`_
+-  `Emoticon Development <./emoticons.html>`_
 
 
 .. toctree::
@@ -72,7 +79,7 @@ Development
 	*
 	api/index
 	conversion/index
-	cp_javascript/notification
+	cp_javascript/*
 	cp_styles/index
 	extension_hooks/index
 	guidelines/index

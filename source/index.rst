@@ -21,6 +21,7 @@ Installing and Updating
 - :doc:`installation/update`
 - :doc:`installation/update_from_1.x`
 - :doc:`installation/update_from_freelancer`
+- :doc:`installation/moving`
 
 *******************
 General Information
@@ -60,6 +61,7 @@ Modules
 - :doc:`modules/blacklist/index`
 - :doc:`modules/channel/index`
 - :doc:`modules/comment/index`
+- :doc:`modules/cookie_consent/index`
 - :doc:`modules/email/index`
 - :doc:`modules/emoticon/index`
 - :doc:`modules/file/index`
@@ -74,6 +76,7 @@ Modules
 - :doc:`modules/query/index`
 - :doc:`modules/referrer/index`
 - :doc:`modules/rss/index`
+- :doc:`modules/rte/index`
 - :doc:`modules/safecracker/index`
 - :doc:`modules/search/index`
 - :doc:`modules/simple_commerce/index`
@@ -109,6 +112,7 @@ Reference Guides
 	cp/index
 	general/index
 	getting_started/index
+	handling_bugs/index
 	modules/index
 	templates/index
 	troubleshooting/index

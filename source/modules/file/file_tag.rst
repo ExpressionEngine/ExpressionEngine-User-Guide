@@ -16,7 +16,7 @@ tags.
 Here is a simple example of a possible usage of this tag::
 
 	{exp:file:entries limit="20" paginate="both" directory_id="3"}
-		<p><strong>{title}</strong> - {custom_field_one} posted: {entry_date format='%h:%i %A'}</p>
+		<p><strong>{title}</strong> - posted: {entry_date format='%h:%i %A'}</p>
 
 		{categories}
 			{category_image} - <a href="{path='about/test'}">{category_name}</a><br>
@@ -137,12 +137,10 @@ disable=
 	disable="categories"
 
 The disable= parameter allows you to turn off aspects of the tag that
-you might not be using in order to improve performance. The channel tag
-is designed to fetch a lot of information by default: Categories,
-channel fields, member data, etc. Depending on how you use the tag, some
-of this data may not be needed. Through the use of the "disable"
-parameter you can turn off aspects of the tag in order to make it more
-lightweight.
+you might not be using in order to improve performance. The File tag
+is designed to fetch a lot of information by default, but through the
+use of the "disable" parameter you can turn off aspects of the tag in
+order to make it more lightweight.
 
 The syntax for the disable parameter is this: disable="ITEM YOU WANT TO
 DISABLE". The following items can be turned off:
@@ -156,7 +154,7 @@ be disabled.
 You may specify multiple items to disable by separating them with the
 pipe character::
 
-	disable="categories|member_data"
+	disable="categories|pagination"
 
 The best approach is to examine the data you are showing in each
 instance of the tag. If there is a type of data you are not utilizing,
@@ -298,14 +296,37 @@ If five entries are being displayed per page, then for the fourth entry
 on the second page the {absolute\_count} variable would have a value of
 "9".
 
-caption
-~~~~~~~
+count
+~~~~~
 
 ::
 
-	{caption}
+	{count}
 
-The caption associated with the entry.
+The "count" out of the current file being displayed by the tag on the
+current page.
+
+If five entries are being displayed per page, then for the fourth entry
+on the page the {count} variable would have a value of "4".
+
+credit
+~~~~~~
+
+::
+
+	{credit}
+
+The credit information associated with the entry, typically used for photo
+attributions.
+
+description
+~~~~~~~~~~~
+
+::
+
+	{description}
+
+The description associated with the entry.
 
 
 directory\_id
@@ -326,19 +347,6 @@ directory\_title
 
 This variable simply displays the content from the "Descriptive name of
 upload directory" setting for the directory that the file is in.
-
-count
-~~~~~
-
-::
-
-	{count}
-
-The "count" out of the current file being displayed by the tag on the
-current page.
-
-If five entries are being displayed per page, then for the fourth entry
-on the page the {count} variable would have a value of "4".
 
 entry\_date
 ~~~~~~~~~~~
@@ -376,6 +384,15 @@ filename
 The raw filename of the file associated with the entry. For instance,
 zoo.jpg.
 
+file\_url
+~~~~~~~~~
+
+::
+
+	{file_url}
+
+The URL to the file.
+
 height
 ~~~~~~
 
@@ -402,14 +419,15 @@ Would be rendered like this::
 
 	<a href="http://example.com/index.php/gallery/full_image/234/">my picture</a>
 
-file\_url
-~~~~~~~~~
+location
+~~~~~~~~
 
 ::
 
-	{file_url}
+	{location}
 
-The URL to the file.
+The user-defined geographic location information associated with the
+entry, typically used for photos.
 
 size
 ~~~~

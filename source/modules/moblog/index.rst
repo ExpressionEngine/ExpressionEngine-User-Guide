@@ -173,7 +173,11 @@ status
 
 ::
 
-	{status}pending{/status} ``<status>Closed</status>``
+	{status}pending{/status}
+
+::
+
+	<status>Closed</status>
 
 You may override the default status for the entry and specify your own.
 Simply use the name of the status.
@@ -187,6 +191,8 @@ sticky
 ::
 
 	{sticky}yes{/sticky}
+
+::
 	
 	<sticky>no</sticky>
 

@@ -12,7 +12,8 @@ delete\_entries\_end
 Executed after the entry deletion routine complete, allowing additional
 processing. ::
 
-	$edata = $this->extensions->call('delete_entries_end'); if ($this->extensions->end_script === TRUE) return;
+	$edata = $this->extensions->call('delete_entries_end');
+	if ($this->extensions->end_script === TRUE) return;
 
 :returns:
     void
@@ -25,7 +26,8 @@ delete\_entries\_loop
 Executed in the loop that deletes each entry, after deletion, prior to
 stat recounts. ::
 
-	$edata = $this->extensions->call('delete_entries_loop', $val, $channel_id); if ($this->extensions->end_script === TRUE) return;
+	$edata = $this->extensions->call('delete_entries_loop', $val, $channel_id);
+	if ($this->extensions->end_script === TRUE) return;
 
 $val
 ~~~~
@@ -50,12 +52,41 @@ prior to the entry's deletion. It can be used to perform additional
 validation / actions before the entry is deleted, or to take over the
 deletion process. ::
 
-	$edata = $this->extensions->call('delete_entries_start'); if ($this->extensions->end_script === TRUE) return;
+	$edata = $this->extensions->call('delete_entries_start');
+	if ($this->extensions->end_script === TRUE) return;
 
 :returns:
-    void
+	void
 
 Added in v1.4.0
+
+
+edit\_entries\_additional\_where
+--------------------------------
+
+This hook is executed when the edit page is loaded, and on every search
+that is performed on the edit page. It can be used to add additional
+where, where_in, and where_not_in options to the query. ::
+
+	$_hook_wheres = $this->extensions->call('edit_entries_additional_where', $filter_data);
+	if ($this->extensions->end_script === TRUE) return;
+
+
+$filter_data
+~~~~~~~~~~~~
+
+Current search form information.
+
+:returns:
+    array of additional where data::
+
+	array(
+		'entry_id !=' => 5,		// where
+		'entry_id' => array(1, 2, 3),	// where_in
+		'channel_id !=' => array(3, 4)	// where_not_in
+	)
+	
+Added in v2.4.0
 
 update\_multi\_entries\_loop
 ----------------------------
@@ -64,7 +95,8 @@ This hook is executed when entries are updated using the multi-entry
 editor. It runs once for each entry being updated, after the entry is
 updated, allowing additional actions to be performed for each entry. ::
 
-	$edata = $this->extensions->call('update_multi_entries_loop', $id, $data); if ($this->extensions->end_script === TRUE) return;
+	$edata = $this->extensions->call('update_multi_entries_loop', $id, $data);
+	if ($this->extensions->end_script === TRUE) return;
 
 $id
 ~~~
@@ -90,7 +122,8 @@ processing of submitted form data, allowing additional validation /
 actions before the entries are updated, or to take over the update
 process. ::
 
-	$edata = $this->extensions->call('update_multi_entries_start'); if ($this->extensions->end_script === TRUE) return;
+	$edata = $this->extensions->call('update_multi_entries_start');
+	if ($this->extensions->end_script === TRUE) return;
 
 :returns:
     void

@@ -18,13 +18,12 @@ to ExpressionEngine 2.x.
 -  `Download <https://secure.expressionengine.com/download.php>`_ the
    most current version of ExpressionEngine and unzip the software to
    your local computer.
--  Take Your Site Offline
-   It is recommended that you take your site offline for the duration of
+-  It is recommended that you take your site offline for the duration of
    the upgrade so that people visiting your site won't see any PHP
    errors or other anomalies that may occur while you are uploading
    files. Here is one approach:
 
-   #. Copy system/expressionengine/utilities/offline.html to your web
+   #. Copy system/utilities/offline.html to your web
       root folder (the same place you have your main index.php file).
    #. Rename offline.html to index.html. Now your visitors will see the
       "offline" page while you upgrade your site.
@@ -89,8 +88,7 @@ Ensure each folder is set to 777 permissions.
 5. Verify File Permissions
 --------------------------
 
-If you are on `EngineHosting <http://enginehosting.com>`_ you can skip
-this step. For other Unix hosts the following is typical, but you may
+The following permissions are typical for UNIX-based hosts. You may want to
 check with your host to see if more restrictive permissions can be used
 to allow PHP to write to files (666) and folders (777). On Windows
 servers the following will not apply, but you will need to ensure that

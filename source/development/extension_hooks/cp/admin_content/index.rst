@@ -6,8 +6,8 @@ Admin Content Controller Extension Hooks
 	:depth: 1
 
 
-oreign\_character\_conversion\_array
-------------------------------------
+foreign\_character\_conversion\_array
+-------------------------------------
 
 Allows you to set the foreign character conversion array used to
 transliterate non-English characters for use in URLs.
@@ -22,4 +22,4 @@ you can simply modify system/expressionengine/config/foreign\_chars.php
 :returns:
     Array
 
-Added in v1.6.0f
+Added in v1.6.0

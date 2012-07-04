@@ -111,6 +111,17 @@ The "backspace" parameter is only allowed if you are using the "linear"
 style. It is not applicable if you use the "nested" style for the
 display of the list.
 
+channel=
+~~~~~~~~
+
+::
+
+	channel="channel"
+
+This indicates the name of the channel that the categories are assigned
+to. The channel parameter is **required** unless you only have a single
+channel. Multiple channels may also be specified.
+
 class=
 ~~~~~~
 
@@ -214,7 +225,11 @@ sort=
 
 ::
 
-	sort="asc" ``sort="desc"``
+	sort="asc"
+
+::
+
+	sort="desc"
 
 The sort order can be "asc" (ascending order or "oldest item first") or
 "desc" (descending order or "newest item first"). If you do not use a
@@ -273,18 +288,6 @@ The list can also be shown in a flat "linear" style.
 For more information about how this option works see the parameter
 description on the `Channel Categories <categories.html>`_ page.
 
-channel=
-~~~~~~~~
-
-::
-
-	channel="channel"
-
-This indicates the name of the channel that the categories are assigned
-to. Only a single channel may be specified since this is a category list
-for a specific channel. The channel parameter is **required** unless you
-only have a single channel.
-
 Variable Pairs
 --------------
 
@@ -298,6 +301,16 @@ starts/ends and where the title markup starts/ends.
 There are several variables available for use inside the
 {categories}{/categories} variable pair.
 
+
+active
+~~~~~~
+
+::
+
+	{if active} This category is active {/if}
+
+You may use this conditional to test whether the category shown is the
+active category or not, based on the dynamic URI segment.
 
 category\_description
 ~~~~~~~~~~~~~~~~~~~~~

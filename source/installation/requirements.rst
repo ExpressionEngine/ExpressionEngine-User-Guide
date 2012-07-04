@@ -8,18 +8,8 @@ use the Wizard:
 -  `Download <http://expressionengine.com/files/ee_server_wizard.zip>`_
    and unzip the archive.
 -  Upload the folder to your server.
--  Point your web browser to the folder. Example:
-   http://example.com/ee\_server\_wizard/
-
-To create a site with ExpressionEngine, you must have at least minimal
-experience with HTML and understand how to create a website. Further,
-you must be familiar with the process of uploading files to your server
-via FTP.
-
-To experience the full functionality of ExpressionEngine you must use a
-web browser with Javascript enabled. If Javascript is disabled, then
-some dynamic functionality in the Control Panel and other areas of the
-site may not function.
+-  Point your web browser to the folder. For example:
+   http://example.com/ee_wizard
 
 Server Requirements
 -------------------
@@ -43,23 +33,32 @@ Server Requirements
    and modules.
 -  2 MB of Database space. Note: The database will increase in size as
    you add new content.
+-  The `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_
+   library compiled into PHP.
+
+Browser Requirements
+---------------------
+
+The ExpressionEngine Control Panel is tested extensively with the web
+browsers listed here. Please note that these are the minimum browser
+requirements necessary to use the Control Panel. These requirements do
+not necessarily apply to an ExpressionEngine-powered website's front-end
+pages.
+
+- Internet Explorer 8 and above
+- Firefox 13
+- Safari 5.1
+- Chrome 19
+- Opera 11.64
+
+.. note:: JavaScript must be enabled to use the Control Panel.
+
 
 Optional Requirements
 ---------------------
 
 Some features of ExpressionEngine are optional to use. However, in order
 to be able to use them you will need to meet their requirements.
-
--  **CAPTCHAs and Watermarking.** Your server must have the `GD (or GD
-   2) <http://www.php.net/manual/en/ref.image.php>`_ library compiled
-   into PHP in order to use :doc:`/general/captchas` or watermarks.
--  **Image Thumbnailing.** To take advantage of the image thumbnailing
-   feature your server must support one of these image manipulation
-   protocols:
-
-   #. `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_
-   #. ImageMagick
-   #. NetPBM
 
 -  **Pings** Your server must have XML support compiled into PHP in
    order to send pings.
@@ -92,3 +91,10 @@ If the Server Wizard lists URL Segment Support as *Unsupported*, you
 will need to run your ExpressionEngine site using query strings. The
 "Query String" section of the :doc:`/general/urls`
 page contains more information.
+
+Getting Started
+---------------
+
+Once you're sure that your server is compatible,
+:doc:`install ExpressionEngine</installation/installation>` and 
+:doc:`get started!</getting_started/index>`

@@ -1,14 +1,23 @@
+#########################
 Standard Global Variables
-=========================
+#########################
 
 These Global Variables can be used anywhere within your Templates.
+Note that they are subject to ExpressionEngine's `parse order <http://expressionengine.com/wiki/Parse_Order>`_,
+which can affect their availability when used inside other tags.
 
-Please note that there is an `alternative syntax <#alternative_syntax>`_
+Also note that there is an `alternative syntax <#alternative_syntax>`_
 for member variables that may be used in situations where an naming
 conflict with a module's variables may occur.
 
+Variables
+=========
+
+.. contents::
+	:local:
+
 app\_build
-~~~~~~~~~~
+----------
 
 ::
 
@@ -17,7 +26,7 @@ app\_build
 The build date of ExpressionEngine that you are using.
 
 app\_version
-~~~~~~~~~~~~
+------------
 
 ::
 
@@ -26,7 +35,7 @@ app\_version
 The version of ExpressionEngine that you are using (2.2.0, 2.3.0, etc.).
 
 charset
-~~~~~~~
+-------
 
 ::
 
@@ -39,7 +48,7 @@ encoding::
 	<meta http-equiv="Content-Type" content="text/html; charset={charset}" />
 
 cp\_url
-~~~~~~~
+-------
 
 ::
 
@@ -51,7 +60,7 @@ members who have access to the Control Panel
 .. _global-current_time:
 
 current\_time
-~~~~~~~~~~~~~
+-------------
 
 ::
 
@@ -69,7 +78,7 @@ allows you to make dynamic use of it in your tags, for instance as a tag
 parameter, or in a conditional.
 
 debug\_mode
-~~~~~~~~~~~
+-----------
 
 ::
 
@@ -79,7 +88,7 @@ This variable will be substituted with either "on" or "off" based on
 your debug mode settings.
 
 doc\_url
-~~~~~~~~
+--------
 
 ::
 
@@ -89,7 +98,7 @@ This variable will be substituted with the URL found in Admin > General
 Config > URL to Documentation Directory
 
 elapsed\_time
-~~~~~~~~~~~~~
+-------------
 
 ::
 
@@ -99,7 +108,7 @@ The amount of time, in seconds, it took ExpressionEngine to render the
 current page.
 
 email
-~~~~~
+-----
 
 ::
 
@@ -108,7 +117,7 @@ email
 The email address for the currently logged-in user.
 
 embed
-~~~~~
+-----
 
 ::
 
@@ -118,7 +127,7 @@ This variable allows you to embed one Template within another. Please
 see the :doc:`Embedded Templates <../embedding>` section.
 
 encode
-~~~~~~
+------
 
 ::
 
@@ -134,7 +143,7 @@ for the link. ::
 	Email Me!
 
 group\_id
-~~~~~~~~~
+---------
 
 ::
 
@@ -143,7 +152,7 @@ group\_id
 The Member Group ID number for the currently logged-in user.
 
 group\_title
-~~~~~~~~~~~~
+------------
 
 ::
 
@@ -152,7 +161,7 @@ group\_title
 The title of the member group for the currently logged-in user.
 
 gzip\_mode
-~~~~~~~~~~
+----------
 
 ::
 
@@ -162,7 +171,7 @@ This variable will be substituted with either "on" or "off" based on
 your output compression settings mode settings.
 
 hits
-~~~~
+----
 
 ::
 
@@ -172,7 +181,7 @@ This variable will be substituted with the number of hits that any given
 template containing the variable has received.
 
 homepage
-~~~~~~~~
+--------
 
 ::
 
@@ -182,7 +191,7 @@ This variable will be substituted with the URL to your home page as
 defined under Admin > General Configuration.
 
 ip\_address
-~~~~~~~~~~~
+-----------
 
 ::
 
@@ -192,7 +201,7 @@ This variable will be substituted with the IP address of the currently
 logged in user.
 
 lang
-~~~~
+----
 
 ::
 
@@ -202,7 +211,7 @@ This variable will be substituted for the "Default XML Language"
 preference as defined under Admin > General Configuration.
 
 location
-~~~~~~~~
+--------
 
 ::
 
@@ -212,7 +221,7 @@ The location (as entered in their profile) for the currently logged-in
 user.
 
 member\_group
-~~~~~~~~~~~~~
+-------------
 
 ::
 
@@ -221,7 +230,7 @@ member\_group
 The Member Group ID number for the currently logged-in user.
 
 member\_id
-~~~~~~~~~~
+----------
 
 ::
 
@@ -230,7 +239,7 @@ member\_id
 The Member ID for the currently logged-in user.
 
 member\_profile\_link
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 ::
 
@@ -245,7 +254,7 @@ member's screen name. For instance, the output might be::
 .. _global-redirect:
 
 redirect
-~~~~~~~~
+--------
 
 ::
 
@@ -255,7 +264,7 @@ This variable allows you redirect the visitor to another template.
 Typically this will mean that you will be utilizing the tag within
 conditionals. ::
 
-	{if segment_3 != 'cookies'}>   {redirect='bake/cookies'} {/if}
+	{if segment_3 != 'cookies'}   {redirect='bake/cookies'} {/if}
 
 You can also use the redirect variable to provide tighter control of
 your URLs, and trigger 404 pages in certain conditions. When you want to
@@ -269,7 +278,7 @@ Be careful that through your redirect variables that you do not create
 an infinite loop.
 
 screen\_name
-~~~~~~~~~~~~
+------------
 
 ::
 
@@ -278,7 +287,7 @@ screen\_name
 The screen name for the currently logged-in user.
 
 site\_name
-~~~~~~~~~~
+----------
 
 ::
 
@@ -290,7 +299,7 @@ Admin > General Configuration.
 .. _global-site_url:
 
 site\_url
-~~~~~~~~~
+---------
 
 ::
 
@@ -300,7 +309,7 @@ This variable will be substituted with your site URL as defined under
 Admin > General Configuration.
 
 template\_edit\_date
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 This variable displays the localized time for when the template was last
 updated. As with other date variables, you will use the standard `date
@@ -309,7 +318,7 @@ variable formatting <../date_variable_formatting.html>`_::
 	{template_edit_date format="%Y %m %d %H:%i:%s"}
 
 total\_comments
-~~~~~~~~~~~~~~~
+---------------
 
 ::
 
@@ -318,7 +327,7 @@ total\_comments
 The total number of comments posted by the currently logged-in user.
 
 theme\_folder\_url
-~~~~~~~~~~~~~~~~~~
+------------------
 
 ::
 
@@ -327,7 +336,7 @@ theme\_folder\_url
 The URL to your theme folder.
 
 total\_entries
-~~~~~~~~~~~~~~
+--------------
 
 ::
 
@@ -336,7 +345,7 @@ total\_entries
 The total number of entries posted by the currently logged-in user.
 
 total\_queries
-~~~~~~~~~~~~~~
+--------------
 
 ::
 
@@ -345,7 +354,7 @@ total\_queries
 The total number of database queries used to generate the current page.
 
 username
-~~~~~~~~
+--------
 
 ::
 
@@ -354,7 +363,7 @@ username
 The username for the currently logged-in user.
 
 webmaster\_email
-~~~~~~~~~~~~~~~~
+----------------
 
 ::
 
@@ -366,7 +375,7 @@ The email address for the site, as specified in `Email
 Configuration <../../cp/admin/email_configuration.html>`_.
 
 XID\_HASH
-~~~~~~~~~
+---------
 
 ::
 
@@ -376,7 +385,7 @@ This variable is a required value for hidden form field 'XID' used in
 secure forms.
 
 Alternative Syntax
-------------------
+==================
 
 In order to be able to use some member variables inside tags that
 already parse their own member information, such as the channel entries

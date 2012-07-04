@@ -1,6 +1,25 @@
 Multiple Site Manager
 =====================
 
+Version 2.1.3
+-------------
+
+Release Date: May 29, 2012
+
+- Fixed a bug (#16645) where creating a new site would not create a new status 
+  group if no channels were duplicated
+
+
+Version 2.1.2
+-------------
+
+Release Date: January 23, 2012
+
+- Updated copying of file upload destinations to respect config variable
+  overrides.
+- Fixed a bug (#17049) where image manipulations weren't moved or copied
+  along with upload destinations when creating a new site.
+
 
 Version 2.1.1
 -------------

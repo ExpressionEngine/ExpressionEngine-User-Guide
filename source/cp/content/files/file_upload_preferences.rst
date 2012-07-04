@@ -48,17 +48,38 @@ will appear when uploading files via the PUBLISH page.
 Server Path to Upload Directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is the **server path** to the upload folder for this destination.
-It is recommended that you use a *full server path* (not a URL),
-although in many cases you can use a simple *relative path* (Example:
-/home/user/example.com/http\_docs/images/uploads/). If you are not sure
-how to determine your server path please contact your hosting company.
+The **full server path** (not a URL) to the upload folder for
+this destination.  For example::
+
+	/home/user/example.com/public_html/images/uploads/
+	
+If you are not sure how to determine your server path please contact
+your hosting company.
 
 URL of Upload Directory
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-You will also need to supply the full **URL** to the new destination
-(Example: http://example.com/images/uploads/).
+The **full URL** to the new destination. For example: http://example.com/images/uploads/
+
+Overriding Upload Paths and URLs Using Configuration Variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Once upload destinations are created, you can optionally override upload
+destination paths, URLs and titles in config.php. For each upload
+destination, you can add an associative array to the
+``$config['upload_preferences']`` variable::
+
+	$config['upload_preferences'] = array(
+	    1 => array(                                                            // ID of upload destination
+	        'name'        => 'Staging Image Uploads',                          // Display name in control panel
+	        'server_path' => '/home/user/example.com/staging/images/uploads/', // Server path to upload directory
+	        'url'         => 'http://staging.example.com/images/uploads/'      // URL of upload directory
+	    )
+	);
+
+Each key in the array is optional and only overrides existing values in
+the database, new upload destinations cannot be created using this
+configuration variable.
 
 Allowed File Types
 ~~~~~~~~~~~~~~~~~~
@@ -174,18 +195,6 @@ Together with the previous setting you would get this output::
 
 	<div class="file"><a href="http://example.com/images/upload/plan.txt" >plan.txt</a></div>
 
-Batch Upload Location
-~~~~~~~~~~~~~~~~~~~~~
-
-This is the **server path** to a directory where you can perform batch
-uploads. It is recommended that you use a *full server path* (not a
-URL), although in many cases you can use a simple *relative path*
-(Example: /home/user/example.com/http\_docs/images/uploads/).
-
-For example, you’d define a Batch Upload Location and then upload files
-to that directory. After that, you’d visit the Batch Upload page and add
-all of those files to the File Manager.
-
 File Category Groups
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -194,27 +203,30 @@ File Category Groups
 You may assign multiple category groups to a file upload directory,
 which will allow you to assign categories to any uploaded files.
 
+.. _image-manipulations:
+
 Image Manipulations
 ~~~~~~~~~~~~~~~~~~~
 
 |Image Manipulations|
 
-This setting allows you to specify multiple thumbnail images that will
-be automatically created when a file is uploaded.
+This area allows you to specify one or more alternate versions
+of an image that automatically get created when the original
+image is uploaded. A manipulation can include a resized version,
+a `watermark <watermark_preferences.html>`_, or both.
 
-The short name will be used in templates to display the generated
-thumbnail. Images will be resized according to the height and width
-settings. If only height or width is specified, the thumbnails will be
-created using that as the master dimension. For example, setting the
-height to 200 and leaving the width blank will result in an image that
-is no higher than 200 pixels, with the width resized proportionately.
-Setting both the height and the width to 200 would result in an image
+The resize type will determine whether the image is constrained
+(resized) or cropped to the specified dimensions. If only height
+or width is specified, the thumbnails will be created using that
+as the master dimension. For example, setting the height to 200 and
+leaving the width blank will result in an image that is no higher
+than 200 pixels, with the width resized proportionately. Setting
+both the height and the width to 200 would result in an image
 that is no higher or wider than 200 pixels.
 
-Resize type will determine whether the image is constrained (resized) or
-cropped to the specified dimensions. You may also assign a watermark to
-the image if any `watermark settings <watermark_preferences.html>`_
-exist.
+You can refer to a particular Image Manipulation in your templates
+via a File Field's :ref:`single variable tag <image-manipulation-single>`
+or its :ref:`variable pair tag <image-manipulation-pair>`.
 
 Restrict file uploading to select member groups
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

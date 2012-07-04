@@ -199,7 +199,7 @@ Constants
 
 Constants follow the same guidelines as do variables, except
 constants should always be fully uppercase. *Always use
-ExpressionEngine constants when appropriate, i.e. SLASH, LD, RD,
+ExpressionEngine constants when appropriate, i.e. LD, RD,
 PATH\_CACHE, etc.*
 
 INCORRECT::
@@ -583,6 +583,28 @@ distinguish them from functions and increase readability. ::
 	
 	INCORRECT: foreach( $query->result_array() as $row )
 	CORRECT: foreach ($query->result_array() as $row)    // single space following PHP control structures, but not in interior parenthesis
+
+
+Long Lines and Indentation
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In cases where the line length is longer than 80 characters and the line
+includes method calls with multiple parameters, put individual parameters
+(including additional method calls) on separate lines::
+
+	return str_replace(
+		$match[1],
+		preg_replace(
+			"#href=.*?(alert\(|alert&\#40;|javascript\:|livescript\:|mocha\:|charset\=|window\.|document\.|\.cookie|<script|<xss|base64\s*,)#si", 
+			"",
+			$attributes
+		),
+		$match[0]
+	);
+
+Also note that long strings don't need to be broken up and closing parenthesis
+always appear at the same indentation level as the opening parenthesis.
+
 
 Localized Text in Control Panel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

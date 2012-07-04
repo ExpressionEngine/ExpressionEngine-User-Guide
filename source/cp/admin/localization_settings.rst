@@ -43,11 +43,3 @@ Daylight Saving Time
 Here you can specify whether the server is currently observing Daylight
 Saving Time. If and when your server changes its observance, you will
 need to update this setting.
-
-Honor the Daylight Saving Time setting associated with each channel entry?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Typically you will set this preference to yes. Every time you submit a
-new entry, the DST setting at the time you submitted the entry will be
-saved with the entry data. This permits each entry to be offset
-individually based on its own DST setting.

@@ -188,14 +188,6 @@ If this option is checked, then comments will be allowed for this entry.
 When this option is unchecked, your comment submission form will be
 suppressed. Any existing comments will still appear.
 
-Pings Tab
----------
-
-The ping tab allows you to send "pings" to the Ping Servers you have
-defined in your My Account > Ping Servers area.
-
-|Publish Pings Tab|
-
 .. _publish-forum-tab:
 
 Forum Tab
@@ -251,15 +243,14 @@ you may associate the entry with an existing ID.
 Revisions Tab
 -------------
 
-**Note:** This tab will only appear if you have Entry Versioning enabled
-at:
-Admin > Channel Administration > Channel Management
+**Note:** This tab will only appear if you have Entry Versioning enabled in the
+particular channel's preferences at: Admin > Channel Administration > Channels
 
 |Publish Revisions Tab|
 When Entry Versioning is enabled, every time you save changes to your
 entries they will be saved so you can go back in time and retrieve older
 versions of your entries. The Revisions Tab will show a list of all
-revisions for the entry being edited
+revisions for the entry being edited.
 
 When a previous revision is selected it will be loaded into the Publish
 page form so you can view or further edit it. If you save your changes,
@@ -311,7 +302,6 @@ when the above URI is requested.
 .. |Publish Calendar| image:: ../../images/publish_cal.png
 .. |Publish Categories| image:: ../../images/publish_cats.png
 .. |Publish Options Tab| image:: ../../images/publish_options.png
-.. |Publish Pings Tab| image:: ../../images/publish_pings.png
 .. |Publish Forum| image:: ../../images/publish_forum.png
 .. |Publish Revisions Tab| image:: ../../images/publish_revisions.png
 .. |Publish Pages| image:: ../../images/publish_pages.png

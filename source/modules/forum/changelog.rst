@@ -1,6 +1,40 @@
 ExpressionEngine Forum Module Change Log
 ========================================
 
+Version 3.1.8
+-------------
+
+Release Date: May 7, 2012
+
+- Added ``forum_add_template`` hook to allow including new forum
+  templates.
+- Added ``forum_include_extras`` hook to allow processing of forum
+  templates that are not associated with an existing forum method call.
+- Fixed a bug where searching within a thread would always provide no
+  results.
+
+
+Version 3.1.7
+-------------
+
+Release Date: January 23, 2012
+
+- Fixed a bug (#16298) where the Can Upload and Can Report columns in
+  Forum Permissions were swapped.
+- Fixed a bug where the forum templates did not display the correct
+  version number.
+- Fixed a bug (#16704) where forum:topic_titles would sometimes render
+  html.
+- Fixed a bug (#16758) where the atom news feed generator link in the blue
+  theme was incorrect.
+- Fixed a bug (#16618) where searches were always using an exact match
+  regardless of the specified search type.
+- Fixed a bug where saving a channel entry associated with a forum topic
+  would reset the reply count, post date, sticky status and may other
+  settings.
+- Fixed a bug (#16526) where "Powered by ExpressionEngine" forum header
+  may attract spammers, the header now displays the first breadcrumb item.
+
 
 Version 3.1.6
 -------------

@@ -104,8 +104,8 @@ will be used.
 ::
 
     // Start of day and end of day in Unix timestamp for UTC
-    $start_time = $this->EE->localize->set_gmt(mktime(0, 0, 0, $month, $day, $year));
-    $end_time = $this->EE->localize->set_gmt(mktime(23, 59, 59, $month, $day, $year)); 
+    $start_time = mktime(0, 0, 0, $month, $day, $year);
+    $end_time = mktime(23, 59, 59, $month, $day, $year); 
 
     // Checks for Daylight Savings Time (DST)       
     // Adds or subtracts an hour
@@ -148,8 +148,8 @@ by using the **$this->EE->localize->fetch\_days\_in\_month()** function.
         $eday = $day;
     }
 
-    $start_time = $this->EE->localize->set_gmt(mktime(0, 0, 0, $month, $sday, $year));
-    $end_time = $this->EE->localize->set_gmt(mktime(23, 59, 59, $month, $eday, $year))
+    $start_time = mktime(0, 0, 0, $month, $sday, $year);
+    $end_time = mktime(23, 59, 59, $month, $eday, $year);
 
 Date Tag Parameters
 -------------------
@@ -168,7 +168,7 @@ database time.
 
     if (strlen($month) == 1) $month = '0'.$month;
 
-    $utc_time = $this->EE->localize->set_gmt(mktime(0, 0, 0, $month, $day, $year));
+    $utc_time = mktime(0, 0, 0, $month, $day, $year);
 
 **Note:** If no day is specified, then the entire month can be selected
 by using the **$this->EE->localize->fetch\_days\_in\_month()** function.
@@ -192,8 +192,8 @@ by using the **$this->EE->localize->fetch\_days\_in\_month()** function.
         $eday = $day;
     }
 
-    $start_time = $this->EE->localize->set_gmt(mktime(0, 0, 0, $month, $sday, $year));
-    $end_time = $this->EE->localize->set_gmt(mktime(23, 59, 59, $month, $eday, $year))
+    $start_time = mktime(0, 0, 0, $month, $sday, $year);
+    $end_time = mktime(23, 59, 59, $month, $eday, $year);
 
 Human Readable Time
 -------------------

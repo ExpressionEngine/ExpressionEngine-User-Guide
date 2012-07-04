@@ -17,6 +17,6 @@ home page and the breadcrumb links!
 Files
 ~~~~~
 
--  `Stylesheet </_static/asset/css/common.css>`_
+-  `Stylesheet </user_guide/_static/asset/css/common.css>`_
 -  Page Template
 

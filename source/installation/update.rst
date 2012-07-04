@@ -76,8 +76,7 @@ file.
 4. Verify File Permissions
 --------------------------
 
-If you are on `EngineHosting <http://enginehosting.com>`_ you can skip
-this step. For other Unix hosts the following is typical, but you may
+The following permissions are typical for UNIX-based hosts. You may want to
 check with your host to see if more restrictive permissions can be used
 to allow PHP to write to files (666) and folders (777). On Windows
 servers the following will not apply, but you will need to ensure that
@@ -127,7 +126,8 @@ be taken:
 
 -  The `Version Notes <version_notes.html>`_ will outline any
    version-specific changes that may need to be made.
--  If you're updating from a previous version, you may have a \_thumb
+-  If you're updating from a previous version, you might need to sync your file
+   upload directories for files to work properly.
 -  If you use a local version of the documentation, replace your copy
    with the latest from our `Download
    Area <https://secure.expressionengine.com/download.php>`_.

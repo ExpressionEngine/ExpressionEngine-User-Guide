@@ -5,6 +5,7 @@ This template displays a list of all titles in the wiki as outlined
 below:
 
 |Displays all the titles in the wiki.|
+
 In addition to the variables in the `Wiki Page
 template <wiki_templates_page.html>`_, the Special Titles template has:
 

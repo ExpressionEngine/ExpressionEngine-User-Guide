@@ -10,6 +10,7 @@ Modules
 	blacklist/index
 	channel/index
 	comment/index
+	cookie_consent/index
 	email/index
 	emoticon/index
 	file/index
@@ -24,6 +25,7 @@ Modules
 	query/index
 	referrer/index
 	rss/index
+	rte/index
 	safecracker/index
 	search/index
 	simple_commerce/index

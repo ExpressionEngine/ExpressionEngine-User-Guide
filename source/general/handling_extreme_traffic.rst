@@ -51,25 +51,25 @@ config.php Extreme Traffic Overrides
 
 ::
 	
-	$config['enable\_entry\_view\_tracking']
+	$config['enable_entry_view_tracking']
 
 (y/n) - Corresponds to `Enable Channel Entry View Tracking? <../cp/admin/tracking_preferences.html#enable_entry_view_tracking>`_
 
 ::
 
-	$config['log\_referrers']
+	$config['log_referrers']
 
 (y/n) - Corresponds to `Enable Referrer Logging? <../cp/admin/tracking_preferences.html#log_referrers>`_
 
 ::
 
-	$config['dynamic\_tracking\_disabling']
+	$config['dynamic_tracking_disabling']
 
 (numeric) - Corresponds to `Suspend ALL tracking when number of online visitors exceeds: <../cp/admin/tracking_preferences.html#dynamic_tracking_disabling>`_
 
 ::
 
-	$config['disable\_all\_tracking']
+	$config['disable_all_tracking']
 
 (y/n) - Emergency config.php only preference which when set to 'y' will disable all of the above. This is useful for server administrators who need a way to respond immediately to table locks during a traffic spike to keep the site running smoothly.
 
