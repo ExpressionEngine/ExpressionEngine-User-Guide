@@ -4,9 +4,9 @@ Removing index.php from ExpressionEngine URLs
 Beginning with the release of ExpressionEngine 2.2, EllisLab can now
 offer limited official support for removing index.php from your URLs.
 
-The "index.php" appears in your URLs because it is the file
-responsible for processing all requests to the system. In a URL such
-as http://yourdomain.com/index.php/template\_group/template the
+The "index.php" appears in your URLs because it is the file responsible
+for processing all requests to the system. In a URL such as
+http://yourdomain.com/index.php/template\_group/template the
 template\_group/template segments are simply information passed to
 index.php and do not refer to actual files or folders on the server.
 
@@ -71,9 +71,9 @@ index.php removed.
 
 Some common problems include links returning 404s, a "No Input File
 Specified" error, or all links returning the same content. This can
-often be the case with hosts (such as GoDaddy) that require you to
-force query strings. If this happens, follow the exception above for
-hosts that force query strings.
+often be the case with hosts (such as GoDaddy) that require you to force
+query strings. If this happens, follow the exception above for hosts
+that force query strings.
 
 If you encounter a problem, you can rename the .htaccess file to
 something else (it only takes effect when it is named .htaccess) and set
