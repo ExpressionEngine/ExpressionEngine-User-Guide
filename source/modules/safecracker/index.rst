@@ -113,6 +113,54 @@ Or use the alternative syntax. ::
 			<option value="{category_id}"{selected}>{category_name}</option>
 		{/categories}
 	</select>
+	
+
+The following variables are available inside the Category Menu and Categories 
+tag pairs:
+
+{category_id}
+^^^^^^^^^^^^^
+
+The category id number.
+
+{category_name}
+^^^^^^^^^^^^^^^
+
+The category name.
+
+{category_group_id}
+^^^^^^^^^^^^^^^^^^^
+
+The category group id number.
+	
+{category_group}
+^^^^^^^^^^^^^^^^
+
+The category group name.
+
+{category_parent}
+^^^^^^^^^^^^^^^^^
+
+The name of the category parent if it exists, indented according to the 
+category depth.
+
+{category_depth}
+^^^^^^^^^^^^^^^^
+
+The level of nesting assigned to the category.  The depth of a top level 
+category is 1.
+
+{selected}
+^^^^^^^^^^
+
+An indicator of whether the category has been selected or not.  Is blank if not, 
+selected="selected" otherwise.
+
+{checked}
+^^^^^^^^^
+
+An indicator of whether the category has been selected or not.  Is blank if not, 
+checked="checked" otherwise.	
 
 Status
 ~~~~~~
