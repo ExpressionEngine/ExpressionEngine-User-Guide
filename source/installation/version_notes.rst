@@ -7,6 +7,9 @@ version you upgraded from.
 ExpressionEngine 2.x
 --------------------
 
+-	:doc:`Version Notes 2.5.2 <version_notes_2.5.2>`
+-	:doc:`Version Notes 2.5.1 <version_notes_2.5.1>`
+-	:doc:`Version Notes 2.5 <version_notes_2.5>`
 -	:doc:`Version Notes 2.4 <version_notes_2.4>`
 -	:doc:`Version Notes 2.3 <version_notes_2.3>`
 -	:doc:`Version Notes 2.2.2 <version_notes_2.2.2>`

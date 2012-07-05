@@ -141,7 +141,7 @@ if you need it. When you have template content that has ``{filedir_n}``s all
 over the place, you need to parse them, so the ``{filedir_n}`` tag is replaced 
 with the actual URL::
 
-	$this->EE->file_field->parse($data);
+	$this->EE->file_field->parse_field($data);
 
 +-----------------+-----------------------------------------------------------+
 |Parameter        |Value                                                      |

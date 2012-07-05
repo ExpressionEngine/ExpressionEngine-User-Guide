@@ -1,6 +1,14 @@
 Multiple Site Manager
 =====================
 
+Version 2.1.3
+-------------
+
+Release Date: May 29, 2012
+
+- Fixed a bug (#16645) where creating a new site would not create a new status 
+  group if no channels were duplicated
+
 
 Version 2.1.2
 -------------

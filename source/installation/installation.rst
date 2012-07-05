@@ -32,8 +32,7 @@ your server.
 3. Set File Permissions
 -----------------------
 
-If you are on `EngineHosting <http://enginehosting.com>`_ you can skip
-this step. For other Unix hosts the following is typical, but you may
+The following permissions are typical for UNIX-based hosts. You may want to
 check with your host to see if more restrictive permissions can be used
 to allow PHP to write to files (666) and folders (777). On Windows
 servers the following will not apply, but you will need to ensure that

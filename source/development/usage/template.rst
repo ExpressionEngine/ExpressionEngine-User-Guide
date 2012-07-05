@@ -412,7 +412,10 @@ name as the key.
 				array('power' => 'Wealth', 'scale' => 7),
 				array('power' => 'Flying', 'scale' => 6)
 				);
-				
+
+Pair variables can automatically make use of ``backspace`` and ``limit``
+parameters in their template tags.
+
 Automatic Variables
 ~~~~~~~~~~~~~~~~~~~
 

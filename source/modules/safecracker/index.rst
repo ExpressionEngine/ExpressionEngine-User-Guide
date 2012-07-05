@@ -341,6 +341,37 @@ is\_natural\_no\_zero, valid\_email, valid\_emails, valid\_ip,
 valid\_base64), and these additional ExpressionEngine-specific rules:
 valid\_ee\_date.
 
+.. _safecracker-rte-selector:
+
+rte_selector=
+~~~~~~~~~~~~~
+
+::
+
+	rte_selector=".my-custom-class"
+
+This parameter will tell SafeCracker to automatically load ExpressionEngine's
+:doc:`/modules/rte/index` and apply it to the element(s) matching the jQuery
+selector you specify. Any valid jQuery selector is acceptable.
+
+The RTE will use the Toolset preference of the currently logged-in user as chosen
+in :ref:`my-account-rte-prefs`. If the user has not chosen a Toolset or is not
+logged in, the site's :ref:`rte-mcp-default-toolset` will be used.
+
+You can optionally force a particular toolset ID to use (see below).
+
+.. _safecracker-rte-toolset-id:
+
+rte_toolset\_id=
+~~~~~~~~~~~~~~~~
+
+::
+
+	rte_toolset_id="1"
+
+The ID of the Rich Text Editor toolset to use. Toolset IDs are listed on the
+:doc:`/modules/rte/control_panel/index` page.
+
 safecracker\_head=
 ~~~~~~~~~~~~~~~~~~
 
@@ -545,7 +576,7 @@ custom\_fields
 		
 		{if radio}
 			{options}
-				<label class="checkbox">{option_value}<label class="checkbox">
+				<label class="checkbox">{option_value}
 					<input type="radio" id="{field_name}" name="{field_name}" value="{option_value}"{checked}>
 				</label>
 			{/options}

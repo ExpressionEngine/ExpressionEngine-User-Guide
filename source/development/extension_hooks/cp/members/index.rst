@@ -50,7 +50,12 @@ cp\_members\_member\_delete\_end
 Allows additional processing when a member is deleted from the control
 panel. ::
 
-	$edata = $this->extensions->call('cp_members_member_delete_end'); if ($this->extensions->end_script === TRUE) return;
+	$edata = $this->extensions->call('cp_members_member_delete_end', $member_ids); if ($this->extensions->end_script === TRUE) return;
+
+$member\_ids
+~~~~~~~~~~~~
+
+An array of Member IDs of members deleted
 
 :returns:
     void

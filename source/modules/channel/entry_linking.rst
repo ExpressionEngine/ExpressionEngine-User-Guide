@@ -215,14 +215,14 @@ entry\_id
 
 	{entry_id}
 
-The ID number of the channel entry
+The ID number of the channel entry.
 
-id\_path='
-----------
+id\_path
+--------
 
 ::
 
-	{id_path=template_group/template'}
+	{id_path='template_group/template'}
 
 The path (template\_group/template) where you want to show the entry.
 The ID number of the entry will be automatically added instead of the
@@ -237,12 +237,12 @@ SITE\_INDEX is preferable since it will make the URL cleaner. ::
 
 	<a href="{path='SITE_INDEX'}">{title}</a>
 
-path='
-------
+path
+----
 
 ::
 
-	{path=template_group/template'}
+	{path='template_group/template'}
 
 The path (template\_group/template) where you want to show the entry.
 This is typically used within a standard HTML link tag::
@@ -271,4 +271,4 @@ url\_title
 
 	{url_title}
 
-The human readable title used in the URL as a permalink
+The human readable title used in the URL as a permalink.

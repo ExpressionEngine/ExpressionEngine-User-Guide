@@ -66,22 +66,21 @@ revisions will be saved for any given template. This setting helps
 ensure that your database does not get too large due to storing Template
 revisions.
 
-Allow Templates to be Saved as Files?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Save templates as files
+~~~~~~~~~~~~~~~~~~~~~~~
 
 This determines whether your Templates are saved to files
 in addition to the datbase, allowing easy editing via the
 editor of your choice. See :doc:`/templates/templates_as_files` for
 more information.
 
-Basepath to Template File Directory
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Server path to site's templates
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is the *server path* to the folder you have created to hold the
-Template files. It is important that you use the server path for the
-preference and not a URL. A server path often looks similar to::
+This is the *server path* (not URL) to the folder that holds the
+Template files. A server path often looks similar to::
 
-	/home/usr/domain.com/http_docs/system/expressionengine/template_files/
+	/home/usr/domain.com/system/expressionengine/templates/
 
 Server paths will vary from server to server, so you should contact your
 Host or server admin if you are unsure of what your setting should be.

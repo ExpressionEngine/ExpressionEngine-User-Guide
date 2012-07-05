@@ -106,7 +106,7 @@ contents. This can be as simple or complex as you need it to be.
 Activating and Updating
 -----------------------
 
-No special functions are required to install your accessory. If you
+No special functions are required to install your accessory. If you're
 following the naming conventions above, include your required class
 variables, and have a set\_sections() function, ExpressionEngine will
 automatically handle the installation and deinstallation. However, in

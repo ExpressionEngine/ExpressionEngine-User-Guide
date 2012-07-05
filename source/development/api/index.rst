@@ -39,9 +39,9 @@ Available APIs
 -  `Channel Categories <./api_channel_categories.html>`_ – Retrieve
    information on Channel Categories.
 -  `Channel Entries <./api_channel_entries.html>`_ – Retrieve
-   information on Channel Categories.
+   information on Channel Entries.
 -  `Channel Fields <./api_channel_fields.html>`_ – Retrieve information
-   on Channel Categories.
+   on Channel Fields.
 -  `Channel Structure <./api_channel_structure.html>`_ – Create, Modify,
    Delete & Update Channels.
 -  `Template Structure <./api_template_structure.html>`_ – Retrieve

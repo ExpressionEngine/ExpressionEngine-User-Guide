@@ -9,6 +9,7 @@ Members <../members/view_members.html>`_ area of the Control Panel.
 
 There are a number of areas within the My Account section:
 
+
 Personal Settings
 -----------------
 
@@ -69,6 +70,7 @@ preference. Note that this is information that applies *only* to this
 user account. To specify default server settings, use Admin >
 Localization Settings.
 
+
 Customize Control Panel
 -----------------------
 
@@ -79,14 +81,32 @@ Each user may independently choose which "theme" they desire to use when
 viewing the Control Panel. This page allows them to set that preference
 from among the available themes.
 
-Tab Manager
-~~~~~~~~~~~
+Main Menu Manager
+~~~~~~~~~~~~~~~~~
 
 This page lets you add custom own tabs to the main navigation of the
 Control Panel. The tabs you add are viewable only by this user. To add a
 new tab, first visit the destination page, then click the Add Tab link
 at the top right of the page. In this section you can manage or remove
 any tabs you have created.
+
+Quick Links Manager
+~~~~~~~~~~~~~~~~~~~
+
+Use this page to add personal links to the control panel sidebar.
+These links will be visible only to you.
+
+.. _my-account-rte-prefs:
+
+Rich Text Editor Preferences
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This page allows you to enable or disable the Rich Text Editor for
+your account (if disabled, **Textarea (Rich Text)** fields will appear
+as normal textareas), as well as select which Toolset to use when
+publishing entries. If you choose "My Toolset" an Edit button 
+will appear, allowing you to customize your own Toolset.
+
 
 Channel Settings
 ----------------
@@ -118,23 +138,6 @@ The Bookmarklet section will allows you to create a customized
 bookmarklet, permitting you to add entries to your site while browsing
 the internet.
 
-Extras
-------
-
-Quick Links
-~~~~~~~~~~~
-
-Each user may specify custom "Quick Links" for themselves. These links
-appear at the top of the Control Panel along with the other static links
-such as "Control Panel Home" and "Logout".
-
-Notepad
-~~~~~~~
-
-The "Notepad" within a member's My Account area can be used to store
-personal notes, to-do lists, or whatever other information they may
-desire. It is designed to be a place that the user may store some
-information that they'll need later.
 
 Member Administration
 ---------------------

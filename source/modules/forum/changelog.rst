@@ -1,6 +1,18 @@
 ExpressionEngine Forum Module Change Log
 ========================================
 
+Version 3.1.8
+-------------
+
+Release Date: May 7, 2012
+
+- Added ``forum_add_template`` hook to allow including new forum
+  templates.
+- Added ``forum_include_extras`` hook to allow processing of forum
+  templates that are not associated with an existing forum method call.
+- Fixed a bug where searching within a thread would always provide no
+  results.
+
 
 Version 3.1.7
 -------------

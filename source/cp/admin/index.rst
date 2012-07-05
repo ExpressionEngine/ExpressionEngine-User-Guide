@@ -18,6 +18,7 @@ Admin
 
   - :doc:`default_ping_servers`
   - :doc:`default_html_buttons`
+  - :doc:`Rich Text Editor Settings</modules/rte/control_panel/index>`
 
 - System Administration
 
