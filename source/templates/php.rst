@@ -1,12 +1,12 @@
 PHP in Templates
 ================
 
-**Very Important:** Enabling PHP in a template will enable anyone with
-editing rights for that template to become a de-facto Super Admin since
-they can execute any PHP they want in that template, including PHP that
-can reveal information about your system, PHP that can delete data from
-your database, etc. Exercise extreme caution before enabling this option
-if you permit others to edit your templates.
+.. important:: Enabling PHP in a template will enable anyone with
+   editing rights for that template to become a de-facto Super Admin
+   since they can execute any PHP they want in that template, including
+   PHP that can reveal information about your system, PHP that can
+   delete data from your database, etc. Exercise extreme caution before
+   enabling this option if you permit others to edit your templates.
 
 ExpressionEngine allows you to place `PHP <http://www.php.net/>`_ code
 within your Templates so that it can be executed, allowing more dynamic
