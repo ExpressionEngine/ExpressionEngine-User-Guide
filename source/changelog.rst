@@ -8,6 +8,27 @@ ExpressionEngine 2.x Change Log
 The Change Log for ExpressionEngine 1.x is `available here.
 <http://expressionengine.com/legacy_docs/changelog.html>`_
 
+Version 2.5.2
+-------------
+
+Release Date: June 6, 2012
+
+- General Changes:
+
+  - One-click updating of IP to Nation database, as well as support for
+    IPv6 addresses for nations.
+  - Improvements to Blacklist/Whitelist module to handle uncollapsed IPv6
+    addresses.
+
+- Bug Fixes:
+
+  - Fixed a bug (#17978) where the control panel would sometimes show an error
+    for older versions of PHP.
+  - Fixed a bug (#17968) where the Referrer module was attempting to update the
+    comments table instead of the referrer table.
+  - Fixed a bug (#17971) where accessing a site with a 'site_name'
+    configuration variable set may show errors on older versions of PHP.
+
 Version 2.5.1
 -------------
 
