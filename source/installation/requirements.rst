@@ -36,6 +36,24 @@ Server Requirements
 -  The `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_
    library compiled into PHP.
 
+Browser Requirements
+---------------------
+
+The ExpressionEngine Control Panel is tested extensively with the web
+browsers listed here. Please note that these are the minimum browser
+requirements necessary to use the Control Panel. These requirements do
+not necessarily apply to an ExpressionEngine-powered website's front-end
+pages.
+
+- Internet Explorer 8 and above
+- Firefox 13
+- Safari 5.1
+- Chrome 19
+- Opera 11.64
+
+.. note:: JavaScript must be enabled to use the Control Panel.
+
+
 Optional Requirements
 ---------------------
 
