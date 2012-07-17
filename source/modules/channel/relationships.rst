@@ -71,7 +71,7 @@ you'll use::
 Here is an example showing the related entries tags inside your channel
 entry tags::
 
-	{exp:channel:entries channel="news" limit="15"}
+	{exp:channel:entries channel="events" limit="15"}
 		<h2>{title}</h2>
 		{body}
 		
