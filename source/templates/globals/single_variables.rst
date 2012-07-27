@@ -6,7 +6,7 @@ These Global Variables can be used anywhere within your Templates.
 Note that they are subject to ExpressionEngine's `parse order <http://expressionengine.com/wiki/Parse_Order>`_,
 which can affect their availability when used inside other tags.
 
-Also note that there is an `alternative syntax <#alternative_syntax>`_
+Also note that there is an `alternative syntax <#id2>`_
 for member variables that may be used in situations where an naming
 conflict with a module's variables may occur.
 
