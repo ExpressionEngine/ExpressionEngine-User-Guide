@@ -45,6 +45,11 @@ standard EE template engine:
 
 	{exp:forum}
 
+If you have multiple forums, you can specify which forum to load using the
+"board" parameter, like so::
+
+	{exp:forum board="board_name"}
+
 Your forum will then be run inside the regular EE template engine, which
 means that you can include standard EE Tags in the forum theme
 Templates. The forum is then accessed through whichever Template you
