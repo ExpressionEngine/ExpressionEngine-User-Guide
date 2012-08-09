@@ -201,7 +201,7 @@ show\_empty=
 
 ::
 
-	show_empty="no" ``show_empty="yes"``
+	show_empty="no"
 
 This parameter determines whether or not categories that contain no
 entries are displayed. If you set the parameter to "no" then categories
