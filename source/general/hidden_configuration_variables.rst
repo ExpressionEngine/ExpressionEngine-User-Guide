@@ -208,6 +208,14 @@ Removes the textarea only restriction for fields in the moblog module.
 
 	$config['moblog_allow_nontextareas'] = 'y';
 
+path_third_themes
+~~~~~~~~~~~~~~~~~
+
+**Value:** Valid path to ``themes/third_party`` directory.
+
+Overrides the ``themes/third_party`` paths so you can move your ``themes/third_party``
+directory outside of your themes directory. Use in conjunction with `url_third_themes`_.
+
 popup_link
 ~~~~~~~~~~
 
@@ -387,6 +395,14 @@ upload destinations cannot be created using this configuration variable.
 	        'url'         => 'http://staging.example.com/images/uploads/'      // URL of upload directory
 	    )
 	);
+
+url_third_themes
+~~~~~~~~~~~~~~~~
+
+**Value:** Valid URL to ``themes/third_party`` directory.
+
+Overrides the ``themes/third_party`` URL so you can move your ``themes/third_party``
+directory outside of your themes directory. Use in conjunction with `path_third_themes`_.
 
 use_forum_url
 ~~~~~~~~~~~~~
