@@ -247,6 +247,19 @@ modifier name.
         return $latitude;
     }
 
+There is also a function to catch ALL modifiers, whose declaration
+includes the modifier name and looks like this::
+
+   function replace_tag_catchall($file_info, $params = array(), $tagdata = FALSE, $modifier)
+
+You can also use variable pairs to capture tag data for processing in your
+modifier function. The syntax for using modifiers on variable pairs in
+your templates is::
+
+    {myfield:option}
+        Tag data here
+    {/myfield}
+
 Class Variables
 ---------------
 
