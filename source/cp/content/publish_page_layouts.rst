@@ -59,7 +59,7 @@ entering as the tab's name the key you wish to use to represent that
 tab's name. Next, you will need to manually add that key and its
 corresponding value in the appropriate language file(s):
 system/expressionengine/language/{language
-name}/lang.publish\_tabs\_custom.php. It is recommended that you ensure
+name}/publish\_tabs\_custom\_lang.php. It is recommended that you ensure
 your language key is unique by namespacing it as in the following
 example::
 

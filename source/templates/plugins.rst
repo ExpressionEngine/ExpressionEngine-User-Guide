@@ -22,12 +22,12 @@ For instance, the No Follow plugin would be placed like so:
 -  system/expressionengine/third\_party/no\_follow/pi.no\_follow.php
 
 Once the Plugin is installed, you should be able to see it listed in the
-`Plugin Manager <../cp/add-ons/plugin_manager.html>`_ in your
+:doc:`Plugin Manager </cp/add-ons/plugin_manager>` in your
 ExpressionEngine Control Panel.
 
-**Note:** Some Plugins may have additional installation requirements
-specific to that particular Plugin. Be sure to read any instructions,
-readme files, etc. that may come with the Plugin.
+.. note:: Some Plugins may have additional installation requirements
+   specific to that particular Plugin. Be sure to read any instructions,
+   readme files, etc. that may come with the Plugin.
 
 Basic Usage
 -----------
