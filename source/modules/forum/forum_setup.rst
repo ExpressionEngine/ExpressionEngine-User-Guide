@@ -61,9 +61,9 @@ the forums.
 The "blank" boxes in the last column and last row allow you to easily
 select or de-select an entire column or row.
 
-Member Groups are managed under Admin > Members and Groups > Member
-Groups since Member Groups are used throughout your site and not just as
-part of the forum.
+Member Groups are managed under :menuselection:`Admin --> Members and
+Groups --> Member Groups` since Member Groups are used throughout your
+site and not just as part of the forum.
 
 Add a New Category
 ~~~~~~~~~~~~~~~~~~

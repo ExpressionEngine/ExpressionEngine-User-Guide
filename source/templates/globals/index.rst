@@ -6,14 +6,14 @@ in scope, meaning they can be used anywhere within your templates. These
 variables enable you to show dynamic information, create links, display
 system information, control access to areas of your site, and more.
 
--  `Path Variables <path.html>`_
--  `Linking to Stylesheets <stylesheet.html>`_
--  `Standard Global Variables <single_variables.html>`_
--  `Snippets <snippets.html>`_
--  `Conditional Global Variables <conditionals.html>`_
--  `URL Segment Variables <url_segments.html>`_
--  `User Defined Global Variables <user_defined.html>`_
--  `Preload Text Replacement <preload_replacement.html>`_
+-  :doc:`/templates/globals/path`
+-  :doc:`/templates/globals/stylesheet`
+-  :doc:`/templates/globals/single_variables`
+-  :doc:`/templates/globals/snippets`
+-  :doc:`/templates/globals/conditionals`
+-  :doc:`/templates/globals/url_segments`
+-  :doc:`/templates/globals/user_defined`
+-  :doc:`/templates/globals/preload_replacement`
 
 .. toctree::
 	:glob:

@@ -93,13 +93,14 @@ Query Strings
 
 Some web servers — typically Windows-based servers — still have
 difficulty with the default ExpressionEngine setup that doesn't use
-query strings. In cases like this, you can tell the system to "Force URL
-Query Strings" at :menuselection:`Admin --> System Administration --> Output and Debugging`.
+query strings. In cases like this, you can tell the system to **Force
+URL Query Strings** under :menuselection:`Admin --> System
+Administration --> Output and Debugging`.
 
 With this option enabled, the URLs output by ExpressionEngine are
 slightly different, but still far more readable and search
-engine-friendly than a typical dynamic system might output. With "Force
-URL Query Strings" turned on, an ExpressionEngine URL might look like
+engine-friendly than a typical dynamic system might output. With **Force
+URL Query Strings** turned on, an ExpressionEngine URL might look like
 this::
 
 	http://example.com/index.php?/site/archives
@@ -107,7 +108,7 @@ this::
 You'll notice that it is almost identical to the regular setting, only
 with the addition of the question mark.
 
-In a select few cases, turning on "Force URL Query Strings" by itself
+In a select few cases, turning on **Force URL Query Strings** by itself
 won't be enough. If URLs continue to not work even with that setting on,
 then open system/expressionengine/config/config.php and set::
 

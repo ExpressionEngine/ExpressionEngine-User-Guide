@@ -22,7 +22,8 @@ you had put the expanded text into the template itself::
 
 	{entry_date format="%m-%d-%Y"}
 
-You can create and edit Snippets at :menuselection:`Design --> Templates --> Snippets`.
+You can create and edit Snippets at :menuselection:`Design --> Templates
+--> Snippets`.
 
 What is the difference between a Snippet and a User-defined Global Variable?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

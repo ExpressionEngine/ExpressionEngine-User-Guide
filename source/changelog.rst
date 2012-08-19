@@ -1177,8 +1177,8 @@ Build 20110512
       Request <http://expressionengine.com/forums/viewthread/174119/>`__
       to allow parsing of global variables within snippets.
    -  Removed the Blogger API module.
-   -  Moved SafeCracker into native modules, **please see the `version
-      notes <installation/version_notes_2.2.0.html>`_ about how to
+   -  Moved SafeCracker into native modules, **please see the** :doc:`version
+      notes <installation/version_notes_2.2.0>` **about how to
       upgrade**.
 
 -  Bug Fixes:
@@ -3422,8 +3422,8 @@ Build 20091204
 -  Various visual refinements (#9357, #10468)
 -  Added db\_test.php and email\_test.php into
    system/expressionengine/utilities to assist with diagnosing problems.
--  Changed the default sort order of Content > Edit to be entry id,
-   descending.
+-  Changed the default sort order of :menuselection:`Content --> Edit`
+   to be entry id, descending.
 -  Added the ability to create new categories from the publish page as
    per bug (#10431).
 -  Changed control panel JavaScript and CSS to send far-future expires

@@ -9,11 +9,11 @@ The ExpressionEngine Forums make use of "themes" to determine how they
 are displayed. The Forum Module comes with a "default" theme, which is
 located in your installation under themes/forum_themes/.
 
-The theme files may also be edited from within the ExpressionEngine Control
-Panel at :menuselection:`Add-ons --> Modules --> Discussion Forum --> Templates`.
-In order to edit the Templates inside the Control Panel,
-set the theme folders and files to 666 permissions (for Windows servers, you
-need to make them "writable").
+The theme files may also be edited from within the Control Panel at
+:menuselection:`Add-ons --> Modules --> Discussion Forum --> Templates`.
+In order to edit the Templates inside the Control Panel, set the theme
+folders and files to 666 permissions (for Windows servers, you need to
+make them "writable").
 
 If you plan to make changes to your theme, we recommend that you make a
 copy of the themes/forum_themes/default/ directory, name it something

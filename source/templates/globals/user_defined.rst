@@ -1,9 +1,13 @@
-User Defined Global Variables
+User-Defined Global Variables
 =============================
 
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Design --> Templates -->
+Global Variables`
+
 Custom, user-defined global variables can be created for use in any
-Template. In the Control Panel > Templates page, click the Global
-Variables link at the top of the page.
+Template.
 
 User-defined global variables can hold any **static** information. These
 variables can be useful for things like site header, footers, copyright

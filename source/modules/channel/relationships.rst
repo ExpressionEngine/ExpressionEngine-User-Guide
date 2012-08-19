@@ -39,13 +39,13 @@ Creating a Relationship
 ***********************
 
 Add a field of the "Relationship" type to the desired Channel Field
-Group at :menuselection:`Admin --> Channel Administration --> Channel Fields`.
+Group under :menuselection:`Admin --> Channel Administration --> Channel
+Fields`.
 
-On the field's settings page, choose the Channel to relate to.
-Once the field is added, if you visit the :menuselection:`Publish` page
-for the Channel you just added the Relationship field to, you'll see
-a new drop-down menu showing the titles of all Entries in the related
-Channel.
+On the field's settings page, choose the Channel to relate to. Once the
+field is added, if you visit :menuselection:`Content --> Publish` for
+the Channel you just added the Relationship field to, you'll see a new
+drop-down menu showing the titles of all Entries in the related Channel.
 
 ************************
 Related Entries Tag Pair

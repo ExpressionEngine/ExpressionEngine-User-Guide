@@ -24,9 +24,9 @@ Step 3
 If you are updating, there are no further steps required.
 
 If you are installing for the first time, in your ExpressionEngine
-Control Panel, go to Admin > General Configuration. Set **Enable
-Multiple Site Manager** to 'Yes' and submit the form to save your
-preferences.
+Control Panel, go to :menuselection:`Admin --> General Configuration`.
+Set **Enable Multiple Site Manager** to 'Yes' and submit the form to
+save your preferences.
 
 That's it, the Multiple Site Manager is now installed. Clicking the name
 of your Site in the upper right corner of the Control Panel will bring

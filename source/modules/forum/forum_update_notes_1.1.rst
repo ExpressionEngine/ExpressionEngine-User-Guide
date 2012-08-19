@@ -5,10 +5,10 @@ Perform this step ONLY if you have Customized Your Forum Themes
 ---------------------------------------------------------------
 
 You will need to manually add one new preference item to your profile
-area. In your control panel, go to:
+area. In your Control Panel, go to:
 
-Modules > Discussion Forum > Templates > Default > Member Profile
-Templates > Edit Preferences Form
+:menuselection:`Modules --> Discussion Forum --> Templates --> Default
+--> Member Profile Templates --> Edit Preferences Form`
 
 Add the following code where you wish the preference to appear::
 

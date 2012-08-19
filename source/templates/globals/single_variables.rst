@@ -94,8 +94,9 @@ doc\_url
 
 	{doc_url}
 
-This variable will be substituted with the URL found in Admin > General
-Config > URL to Documentation Directory
+This variable will be substituted with the URL found in **URL to
+Documentation Directory** under :menuselection:`Admin --> General
+Config`.
 
 elapsed\_time
 -------------
@@ -187,8 +188,9 @@ homepage
 
 	{homepage}
 
-This variable will be substituted with the URL to your home page as
-defined under Admin > General Configuration.
+This variable will be substituted with the **URL to the root directory of
+your site** preference under :menuselection:`Admin --> General
+Configuration`.
 
 ip\_address
 -----------
@@ -207,8 +209,8 @@ lang
 
 	{lang}
 
-This variable will be substituted for the "Default XML Language"
-preference as defined under Admin > General Configuration.
+This variable will be substituted for the **Default XML Language**
+preference under :menuselection:`Admin --> General Configuration`.
 
 location
 --------
@@ -294,7 +296,7 @@ site\_name
 	{site_name}
 
 This variable will be substituted with your site name as defined under
-Admin > General Configuration.
+:menuselection:`Admin --> General Configuration`.
 
 .. _global-site_url:
 
@@ -306,14 +308,14 @@ site\_url
 	{site_url}
 
 This variable will be substituted with your site URL as defined under
-Admin > General Configuration.
+:menuselection:`Admin --> General Configuration`.
 
 template\_edit\_date
 --------------------
 
 This variable displays the localized time for when the template was last
-updated. As with other date variables, you will use the standard `date
-variable formatting <../date_variable_formatting.html>`_::
+updated. As with other date variables, you will use the standard
+:doc:`date variable formatting </templates/date_variable_formatting>`::
 
 	{template_edit_date format="%Y %m %d %H:%i:%s"}
 

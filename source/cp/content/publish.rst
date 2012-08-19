@@ -42,14 +42,13 @@ for you based upon your entry Title. URL Titles must be unique within a
 channel, so if an entry with the same title already exists then the URL
 Title will have a number appended to the end to make it unique.
 
-**Note:** If you let the system create your URL Title for you it will
-convert spaces into underscores by default. For example, if the title of
-your entry is "Joe's First Entry" it will be converted to
-"joes\_first\_entry". If you prefer dashes to be used instead of
-underscores (there is some evidence that Google prefers URLs with
-dashes) you can change it in the following Control Panel page:
-
-Admin > Channel Administration > Global Channel Preferences
+.. note:: If you let the system create your URL Title for you it will
+   convert spaces into underscores by default. For example, if the title
+   of your entry is "Joe's First Entry" it will be converted to
+   "joes\_first\_entry". If you prefer dashes to be used instead of
+   underscores---there is some evidence that Google prefers URLs with
+   dashes---you can change it with the **Word Separator for URL Titles**
+   preference under :menuselection:`Admin --> Channel Administration --> Global Channel Preferences`.
 
 Formatting Buttons
 ~~~~~~~~~~~~~~~~~~
@@ -57,9 +56,8 @@ Formatting Buttons
 If the user accessing the Publish page has any HTML Formatting Buttons
 specified in their My Account page they will be displayed for use with
 the entry fields. Each user is allowed their own formatting buttons,
-which can be specified at:
-
-My Account > Channel Settings > HTML Formatting Buttons
+which can be specified at :menuselection:`My Account --> Channel
+Settings --> HTML Formatting Buttons`
 
 Entry Fields
 ~~~~~~~~~~~~
@@ -214,9 +212,9 @@ Forum Topic Text
 This is the main text for the forum thread.
 
 You may use {permalink} to link from the Forum Entry to the Channel
-Entry. This variable is replaced by the URL set in the "Comment Page
-URL" preference under Admin > Channel Management. The URL Title of the
-entry will be automatically added. For example, this::
+Entry. This variable is replaced by the URL set in the **Comment Page
+URL** preference under :menuselection:`Admin --> Channel Management`. The
+URL Title of the entry will be automatically added. For example, this::
 
 	             <a href="{permalink}">my entry</a>
 
@@ -243,8 +241,9 @@ you may associate the entry with an existing ID.
 Revisions Tab
 -------------
 
-**Note:** This tab will only appear if you have Entry Versioning enabled in the
-particular channel's preferences at: Admin > Channel Administration > Channels
+.. note:: This tab will only appear if you have Entry Versioning enabled
+   in the particular channel's preferences
+   at :menuselection:`Admin --> Channel Administration --> Channels`.
 
 |Publish Revisions Tab|
 When Entry Versioning is enabled, every time you save changes to your

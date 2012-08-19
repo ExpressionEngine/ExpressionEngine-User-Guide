@@ -248,7 +248,7 @@ review/moderation by an administrator.
 
 Member Groups (such as the SuperAdmin Group by default) can be set to
 bypass comment moderation and have their comments posted immediately.
-That option is access under Admin > Member Groups.
+That option can be set at :menuselection:`Admin --> Member Groups`.
 
 Maximum number of characters allowed in comments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

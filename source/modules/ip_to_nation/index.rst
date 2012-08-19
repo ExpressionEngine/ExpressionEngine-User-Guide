@@ -28,11 +28,11 @@ Database Updates
 ****************
 
 Periodically, the IP address database for the IP to Nation module is
-updated from `maxmind.com <http://www.maxmind.com/>`_'s database.
-When this occurs, a note will be made in the `Change
-Log <../../changelog.html>`_. To update your installation, simply make
-sure that you are running the latest version of ExpressionEngine, and
-visit the Modules > IP to Nation page in your Control Panel. The update
+updated from `maxmind.com <http://www.maxmind.com/>`_'s database. When
+this occurs, a note will be made in the :doc:`Change Log </changelog>`.
+To update your installation, simply make sure that you are running the
+latest version of ExpressionEngine, and visit the :menuselection:`Add-
+Ons --> Modules --> IP to Nation` page in your Control Panel. The update
 may take a few seconds; do not click any links or refresh the page while
 the auto-update is taking place.
 

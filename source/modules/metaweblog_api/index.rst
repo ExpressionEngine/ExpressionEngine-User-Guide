@@ -114,9 +114,9 @@ Connecting with a Metaweblog API Compatible Program
 ---------------------------------------------------
 
 In general, you will use the URL of your desired configuration as shown
-on the Metaweblog API Control Panel page at :menuselection:`Add-Ons --> Modules --> Metaweblog API`
-to connect with your program. Below is information specific to some common
-programs.
+on the Metaweblog API Control Panel page at :menuselection:`Add-Ons -->
+Modules --> Metaweblog API` to connect with your program. Below is
+information specific to some common programs.
 
 MarsEdit
 ~~~~~~~~

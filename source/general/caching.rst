@@ -73,11 +73,11 @@ want to cache individual tags, turn off page caching.
 Dynamic Channel Query Caching
 -----------------------------
 
-This feature is found under Admin > Channel Administration > Global
-Preferences. This feature will improve the speed at which the
-{exp:channel:entries} tag is rendered by caching queries that are
-normally executed dynamically. This option cannot be used for all
-people, though.
+This feature is found under :menuselection:`Admin --> Channel
+Administration --> Global Preferences`. This feature will improve the
+speed at which the {exp:channel:entries} tag is rendered by caching
+queries that are normally executed dynamically. This option cannot be
+used for all people, though.
 
 Enable this feature only if you **do not** use future entries, expiring
 entries, or random entries.

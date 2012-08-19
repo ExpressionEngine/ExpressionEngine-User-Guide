@@ -119,8 +119,9 @@ believe should be added to the Blacklist or Whitelist, please email
 `blacklist@expressionengine.com <mailto:blacklist@expressionengine.com>`_.
 
 To download the ExpressionEngine Lists, you must have your License
-Number entered into the :menuselection:`Admin --> General Configuration` area of the
-Control Panel. To download the Lists, go into the Modules > Blacklist.
+Number entered into the :menuselection:`Admin --> General Configuration`
+area of the Control Panel. To download the Lists, go into the
+:menuselection:`Add-Ons --> Modules` and choose *Blacklist/Whitelist*.
 In the main menu for the module are links that you can click to
 automatically download and add the ExpressionEngine.com Lists to your
 own.

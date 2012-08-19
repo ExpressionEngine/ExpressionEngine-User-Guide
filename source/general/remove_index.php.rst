@@ -1,8 +1,10 @@
 Removing index.php from ExpressionEngine URLs
 =============================================
 
-Beginning with the release of ExpressionEngine 2.2, EllisLab can now
-offer limited official support for removing index.php from your URLs.
+.. versionadded:: 2.2
+   Official support, limited to the scope of the recommendations
+   provided here, if now available for removing index.php from your
+   URLs.
 
 The "index.php" appears in your URLs because it is the file responsible
 for processing all requests to the system. In a URL such as
@@ -60,8 +62,9 @@ Exceptions
 2. Update General Configuration
 -------------------------------
 
-In the Control Panel, go to Admin > General Configuration, set the Name
-of your site's index page to blank (empty), and click Submit.
+In the Control Panel, go to :menuselection:`Admin --> General
+Configuration`, set the Name of your site's index page to blank (empty),
+and click Submit.
 
 3. Test
 -------

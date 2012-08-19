@@ -15,9 +15,8 @@ Is system on?
 This indicates whether or not your site is "live" and displayed to the
 public. If you set this preference to "No" only members of the Super
 Admin group will be able to see the site. All other users will be shown
-the System Offline page, which you can edit at:
-
-Design > Message Pages > System Offline Template
+the System Offline page, which you can edit at :menuselection:`Design
+--> Message Pages --> System Offline Template`.
 
 License Number
 ~~~~~~~~~~~~~~
@@ -37,8 +36,8 @@ This is the name of your website. It may contain spaces and punctuation.
 This name is available in your Templates by using the {site\_name}
 Global Variable.
 
-.. note:: If you are using the :doc:`/cp/sites/index` this setting will be found
-   in the :doc:`/cp/sites/managesites` section.
+.. note:: If you are using the :doc:`/cp/sites/index` this setting will
+   be found in the :doc:`/cp/sites/managesites` section.
 
 Name of your site's index page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

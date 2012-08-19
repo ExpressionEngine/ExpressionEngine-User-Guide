@@ -27,8 +27,8 @@ ExpressionEngine 2 to the latest version of ExpressionEngine 2.
    #. Rename offline.html to index.html. Now your visitors will see the
       "offline" page while you update your site.
 
--  In your ExpressionEngine Control Panel, go to Tools > Data > Clear
-   Caching. Select **All Caches** and click Submit.
+-  In your ExpressionEngine Control Panel, go to :menuselection:`Tools
+   --> Data --> Clear Caching`. Select **All Caches** and click Submit.
 
 2. Upload New Files
 -------------------
