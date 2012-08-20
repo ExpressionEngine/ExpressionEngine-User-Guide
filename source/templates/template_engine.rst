@@ -14,10 +14,10 @@ being used in the Template.
    </modules/wiki/wiki_templates>` module, or the :doc:`Discussion 
    Forum </modules/forum/forum_themes>` module.
 
-ExpressionEngine goes through several stages in the process of parsing
-each Template, and this article exposes the order of those parsing
-stages. Understanding how the system renders a template can help
-immensely when building pages and troubleshooting problems.
+ExpressionEngine goes through several stages to fully process each
+Template, and this article exposes the order of those rendering stages.
+Understanding how the system renders a template can help immensely when
+building pages and troubleshooting problems.
 
 The use of :doc:`Conditional Variables <globals/conditionals>` provides
 a great example here. Simple conditionals are parsed *before* module
@@ -25,13 +25,16 @@ tags, but advanced conditionals are parsed *after* module tags. If a
 simple conditional evaluates false, ExpressionEngine simply ignores a
 module tag within that conditional, neither rendering it nor displaying
 it. But if an advanced conditional evaluates false, ExpressionEngine can
-only hide the output of the already parsed module tag. That amounts to a
-big difference in performance.
+only hide the output of the already fully rendered module tag. That
+amounts to a big difference in performance.
 
-Parsing Stages
---------------
+Rendering Stages
+----------------
 
-#. Determine template to parse based on request :doc:`URI </general/urls>`
+The Template Engine processes the selected template fully from top to
+bottom through each rendering stage.
+
+#. Determine template to process based on request :doc:`URI </general/urls>`
 
 #. Get **template from database**, check :doc:`template access permissions </cp/design/templates/template_access>`, and increment the :doc:`hit counter </templates/hit_counter>`
 
