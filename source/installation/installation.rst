@@ -2,7 +2,7 @@ Installing ExpressionEngine
 ===========================
 
 .. important:: If you need to **update** your copy of ExpressionEngine
-   from an earlier version, use the `Update Instructions <update.html>`_
+   from an earlier version, use the :doc:`Update Instructions </installation/update>`
    instead.
 
 1. Get Your Settings
@@ -41,18 +41,18 @@ contact your host for this.
 
 -  Set the following files to 666:
 
-   -  system/expressionengine/config/config.php
-   -  system/expressionengine/config/database.php
+   -  :file:`system/expressionengine/config/config.php`
+   -  :file:`system/expressionengine/config/database.php`
 
 -  Set the following folders to 777:
 
-   -  /system/expressionengine/cache/
-   -  /images/avatars/uploads/
-   -  /images/captchas/
-   -  /images/member\_photos/
-   -  /images/pm\_attachments/
-   -  /images/signature\_attachments/
-   -  /images/uploads/
+   -  :file:`system/expressionengine/cache/`
+   -  :file:`images/avatars/uploads/`
+   -  :file:`images/captchas/`
+   -  :file:`images/member\_photos/`
+   -  :file:`images/pm\_attachments/`
+   -  :file:`images/signature\_attachments/`
+   -  :file:`images/uploads/`
 
 4. Run The Installation Wizard
 ------------------------------
@@ -67,7 +67,7 @@ contact your host for this.
 -  Once the Installation Wizard is finished, you **must** remove the
    following folder from your server:
 
-   -  system/installer/
+   -  :file:`system/installer/`
 
 Welcome to ExpressionEngine!
 ----------------------------
@@ -80,15 +80,14 @@ links provided in the Installation Wizard confirmation screen.
    have been created yet.
 
 If you're new to ExpressionEngine, begin the learning process by
-following the `Getting
-Started <http://expressionengine.com/user_guide/overview/index.html>`_
-tutorial.
+following the :doc:`Getting Started </getting_started/index>` tutorial.
 
 Post-Installation Best Practices
 --------------------------------
 
 Once you are confident that ExpressionEngine is working normally on your
-server, there are `recommended best practices <best_practices.html>`_
-for protecting your installation against common security risks.
+server, there are :doc:`recommended best practices
+</installation/best_practices>` for protecting your installation against
+common security risks.
 
 
