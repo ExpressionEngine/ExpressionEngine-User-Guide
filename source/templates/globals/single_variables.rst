@@ -4,7 +4,7 @@ Standard Global Variables
 
 These Global Variables can be used anywhere within your Templates. Note
 that they are subject to ExpressionEngine's :doc:`parsing order
-</templates/parsing_engine>`, which can affect their availability when
+</templates/template_engine>`, which can affect their availability when
 used inside other tags.
 
 Also note that there is an :ref:`alternative syntax <global-alt-syntax>`

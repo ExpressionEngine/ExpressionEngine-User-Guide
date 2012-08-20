@@ -44,7 +44,7 @@ Templates
 *********
 
 - :doc:`templates/globals/index`
-- :doc:`templates/parsing_engine`
+- :doc:`templates/template_engine`
 - :doc:`templates/embedding`
 - :doc:`templates/hidden_templates`
 - :doc:`templates/date_variable_formatting`

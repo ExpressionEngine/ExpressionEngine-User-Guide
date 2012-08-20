@@ -38,7 +38,7 @@ PHP Parsing Stage
 There are two choices for when PHP gets parsed:
 
 **Input**: PHP parsed at the "input" stage will be parsed early in the
-:doc:`template parsing order </templates/parsing_engine>`, before
+:doc:`template parsing order </templates/template_engine>`, before
 ExpressionEngine Tags get parsed. Parsing PHP on Input will allow you to
 do things such as::
 
@@ -58,7 +58,7 @@ or::
 	?>
 
 **Output**: PHP parsed at the "output" stage happens later in the
-:doc:`template parsing order </templates/parsing_engine>`, which means it
+:doc:`template parsing order </templates/template_engine>`, which means it
 will be parsed *after* the ExpressionEngine Tags are interpreted. This
 will allow you to use PHP to affect the "rendered Template".
 

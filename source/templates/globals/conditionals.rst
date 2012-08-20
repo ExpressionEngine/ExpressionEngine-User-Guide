@@ -15,7 +15,7 @@ Simple Conditionals
 
 A conditional is considered "simple" if it is evaluating variables that
 are already available by the time the :doc:`template parsing engine
-</templates/parsing_engine>` reaches the simple conditionals parsing
+</templates/template_engine>` reaches the simple conditionals parsing
 stage (e.g. segment, embed, and global variables), the expression
 evaluates a single variable (i.e. contains no logical operators such as
 OR, AND), and the conditional does not make use of the *else* or
@@ -67,7 +67,7 @@ Advanced Conditionals
 Any conditional that isn't a :ref:`simple conditional <global-simple-conditionals>`
 is considered an "advanced" conditional and is evaluated
 much later in the :doc:`template parsing order
-</templates/parsing_engine>`. More advanced conditionals can use logical
+</templates/template_engine>`. More advanced conditionals can use logical
 operators (ex: OR, AND) to compare multiple variables to multiple
 values. Consider this example::
 
