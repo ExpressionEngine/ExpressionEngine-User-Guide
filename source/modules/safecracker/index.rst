@@ -796,13 +796,13 @@ Publish Form. It is also a Matrix celltype.
 Examples
 ********
 
-See `SafeCracker Examples <examples.html>`_ for more complete examples of SafeCracker usage.
+See :doc:`SafeCracker Examples <examples>` for more complete examples of SafeCracker usage.
 
 **********************
 Control Panel Settings
 **********************
 
-See the `SafeCracker Module Control Panel <control_panel/index.html>`_ page.
+See the :doc:`SafeCracker Module Control Panel <control_panel/index>` page.
 
 
 ***********

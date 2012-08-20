@@ -99,6 +99,6 @@ Is field visible in the control panel's administrative registration page?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When set to "yes", the field will be available in the control panel's
-`member registration form <new_member_registration.html>`_.
+:doc:`member registration form <new_member_registration>`.
 
 .. |Custom Member Field Edit| image:: ../../images/custom_member_field_edit.png

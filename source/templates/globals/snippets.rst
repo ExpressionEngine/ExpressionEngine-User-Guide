@@ -32,8 +32,8 @@ Snippets are expanded at a very early stage on each template, making it
 possible for them to hold dynamic content, ExpressionEngine tags, other
 variables, PHP, etc. They shine when you need to reuse dynamic
 information, but don't need the extra overhead of access control or
-separate preferences of an embedded template. `User-defined Global
-Variables <user_defined.html>`_ are the polar opposites, expanded at the
+separate preferences of an embedded template. :doc:`User-defined Global
+Variables <user_defined>` are the polar opposites, expanded at the
 very end of all template parsing, and should be used for static text,
 HTML, JavaScript, and other static content that would not affect other
 tags and variables on the template.

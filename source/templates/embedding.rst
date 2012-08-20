@@ -51,7 +51,7 @@ You may also use embed variables in conditionals::
 How to choose between an Embedded Template and a Snippet
 --------------------------------------------------------
 
-Since `Snippets <globals/snippets.html>`_ can also contain tags,
+Since :doc:`Snippets <globals/snippets>` can also contain tags,
 variables, and PHP, the question often arises: which do I choose? If
 your content meets one of the following criteria, use an Embedded
 template.

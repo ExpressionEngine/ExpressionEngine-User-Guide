@@ -400,7 +400,7 @@ dynamic_parameters=
 
 	dynamic_parameters="orderby|limit|sort"
 
-The `Dynamic Parameters <dynamic_parameters.html>`_ feature permits a
+The :doc:`Dynamic Parameters <dynamic_parameters>` feature permits a
 {exp:channel:entries} tag's parameters to be set "on the fly" using POST
 data submitted via a form. A practical use for this is to create some
 display options in a form on your page that your visitors can use to
@@ -691,8 +691,8 @@ paginate\_type=
 
 This tells ExpressionEngine to function in "pagination" mode for your
 channel entry fields so that you can automatically have an entry span
-multiple pages. See the `Spanning a Channel Entry Across Multiple
-Pages <pagination_spanning.html>`_ page.
+multiple pages. See the :doc:`Spanning a Channel Entry Across Multiple
+Pages <pagination_spanning>` page.
 
 related\_categories\_mode=
 --------------------------
@@ -2527,23 +2527,23 @@ will automatically be available by its "short name" as a variable.
 Pagination
 **********
 
-The `Pagination <pagination_page.html>`_ feature allows you to create
+The :doc:`Pagination <pagination_page>` feature allows you to create
 "next" and "previous" links between pages of entries.
 
-You can also span a single entry `across multiple
-pages <pagination_spanning.html>`_, like online magazines do.
+You can also span a single entry :doc:`across multiple
+pages <pagination_spanning>`, like online magazines do.
 
 **********************
 Entry "Views" Tracking
 **********************
 
-The Channel Entries tag also has a `Views
-Tracking <entry_tracking.html>`_ feature that lets you track the number
+The Channel Entries tag also has a :doc:`Views
+Tracking <entry_tracking>` feature that lets you track the number
 of times an entry has been viewed.
 
 *************
 Relationships
 *************
 
-The Channel Module supports a powerful `Relationship <relationships.html>`_
+The Channel Module supports a powerful :doc:`Relationship <relationships>`
 feature that lets you associate one entry to another.

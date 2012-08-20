@@ -16,10 +16,10 @@ information.
 
 The following SQL Utilities are accessible from this page:
 
--  `Manage Database Tables <sql_manage_tables.html>`_
--  `Database Query Form <sql_query_form.html>`_
--  `Status Info <sql_status_info.html>`_
--  `System Variables <sql_system_variables.html>`_
--  `Process List <sql_process_list.html>`_
+-  :doc:`Manage Database Tables <sql_manage_tables>`
+-  :doc:`Database Query Form <sql_query_form>`
+-  :doc:`Status Info <sql_status_info>`
+-  :doc:`System Variables <sql_system_variables>`
+-  :doc:`Process List <sql_process_list>`
 
 .. |SQL Manager| image:: ../../../images/sql_manager.png

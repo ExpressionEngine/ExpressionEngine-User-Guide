@@ -1575,7 +1575,7 @@ the example code below for reference. ::
 Control Panel
 *************
 
-See the `Comment Module Control Panel <control_panel/index.html>`_ page.
+See the :doc:`Comment Module Control Panel <control_panel/index>` page.
 
 
 .. toctree::

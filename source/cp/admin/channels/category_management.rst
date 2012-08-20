@@ -19,12 +19,12 @@ The main Categories screen shows a table of all the existing
 category groups. It lists the category group name and provides links to
 edit the preferences.
 
--  `Create a New Category Group <category_create_group.html>`_: Enables
+-  :doc:`Create a New Category Group <category_create_group>`: Enables
    you to Create a new Category Group.
--  `Add/Edit Categories <category_edit.html>`_: Create and edit the
+-  :doc:`Add/Edit Categories <category_edit>`: Create and edit the
    categories that belong to a category group.
 -  **Edit Group**: Edit the preferences of an existing category group.
--  `Manage Category Fields <category_field_management.html>`_: Create and
+-  :doc:`Manage Category Fields <category_field_management>`: Create and
    Edit fields for the category group.
 -  **Delete Group**: Delete the category group and all the categories it
    contains.

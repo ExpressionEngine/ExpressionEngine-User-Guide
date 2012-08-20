@@ -20,9 +20,9 @@ Guidelines
 ----------
 
 -  `Add-on Package File Structure <../packages.html>`_
--  `General Syntax Changes <syntax.html>`_
--  `Module Specific Changes <modules.html>`_
--  `Module Conversion Walk-through <walk-through.html>`_
+-  :doc:`General Syntax Changes <syntax>`
+-  :doc:`Module Specific Changes <modules>`
+-  :doc:`Module Conversion Walk-through <walk-through>`
 
 Downloadable Conversion Tools
 -----------------------------

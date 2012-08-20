@@ -6,8 +6,8 @@ uploaded to the wiki as outlined below:
 
 |Displays the information on a single uploaded file.|
 
-In addition to the variables in the `Wiki Page
-template <wiki_templates_page.html>`_, the Special Single File template
+In addition to the variables in the :doc:`Wiki Page
+template <wiki_templates_page>`, the Special Single File template
 has:
 
 

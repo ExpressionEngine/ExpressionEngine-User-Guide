@@ -16,9 +16,9 @@ giving you precise control over what each of your members can do.
 
 |Member Groups Overview|
 
--  `Create a New Group <member_groups_edit.html>`_: Allows you to create
+-  :doc:`Create a New Group <member_groups_edit>`: Allows you to create
    a new Member Group.
--  `Edit Group <member_groups_edit.html>`_: Edit an existing member
+-  :doc:`Edit Group <member_groups_edit>`: Edit an existing member
    group.
 -  **Delete**: Delete the group. Note: Some groups can not be deleted.
 

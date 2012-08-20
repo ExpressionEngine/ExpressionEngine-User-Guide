@@ -8,7 +8,7 @@ Add/Edit Categories
 |Edit Categories|
 
 This screen lists the existing categories, showing the hierarchical
-relationship between the categories. You may also `Add New Categories <category_create.html>`_ to the group
+relationship between the categories. You may also :doc:`Add New Categories <category_create>` to the group
 or to edit existing categories.
 
 ID

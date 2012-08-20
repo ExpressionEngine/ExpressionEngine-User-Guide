@@ -113,14 +113,14 @@ Default Status
 ~~~~~~~~~~~~~~
 
 The default status for new channel entries. The available options depend
-on what `Status Group <channel_groups.html>`_ the channel is assigned to
+on what :doc:`Status Group <channel_groups>` the channel is assigned to
 use and which statuses are defined for that group.
 
 Default Category
 ~~~~~~~~~~~~~~~~
 
 The default category for new channel entries. The available options
-depend on what `Category Group <channel_groups.html>`_ the channel is
+depend on what :doc:`Category Group <channel_groups>` the channel is
 assigned to use and which categories are defined for that group. In
 addition to the categories from that group, the "None" option is also
 available, in which case no category will be selected by default.
@@ -137,8 +137,8 @@ Which field should be used for search excerpt?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can specify which field from your entries to use in search result
-excerpts. The list is dynamically populated depending on which `Field
-Group <channel_groups.html>`_ the channel is assigned to use and which
+excerpts. The list is dynamically populated depending on which :doc:`Field
+Group <channel_groups>` the channel is assigned to use and which
 fields are defined for that group. Only fields that have been set as
 "searchable" will be included.
 

@@ -5,8 +5,8 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
-The Change Log for ExpressionEngine 1.x is `available here.
-<http://expressionengine.com/legacy_docs/changelog.html>`_
+The Change Log for ExpressionEngine 1.x is `available here
+<http://expressionengine.com/legacy_docs/changelog.html>`_.
 
 Version 2.5.2
 -------------
@@ -156,7 +156,7 @@ Release Date: May 7, 2012
 
 - General Changes:
 
-  - `Rich Text Editor <modules/rte/control_panel/index.html>`_
+  - :doc:`Rich Text Editor <modules/rte/control_panel/index>`
 
     - Added new module and fieldtype for the new rich text editor.
     - Added user preferences for rich text editor under my preferences.
@@ -306,7 +306,7 @@ Release Date: May 7, 2012
   - **Reactor:** Altered the Template class to allow plugins/modules to use 
     __call() magic method.
   - Added ``myaccount_nav_setup`` hook to modify My Account navigation. See 
-    `documentation <development/extension_hooks/cp/myaccount/index.html>`_ for 
+    :doc:`documentation <development/extension_hooks/cp/myaccount/index>` for 
     more information.
   - Added ``email_send`` hook to modify emails or take over email sending
     completely.
@@ -871,7 +871,7 @@ Release Date: June 22, 2011
 
 -  General Changes:
 
-   -  Added a `File Module <modules/file/index.html>`_ to display file
+   -  Added a :doc:`File Module <modules/file/index>` to display file
       information on the frontend.
    -  Added ability to edit file metadata from the File Manager.
    -  Added several file types to the mimetype listing. **Please update
@@ -1138,8 +1138,8 @@ Build 20110512
 
 -  General Changes:
 
-   -  File Manager Changes (see `Version Update
-      Notes <installation/version_notes_2.1.5.html>`__):
+   -  File Manager Changes (see :doc:`Version Update
+      Notes <installation/version_notes_2.1.5>`):
 
       -  Moved file information storage to the database
       -  Moved File Upload Preferences to the File Manager
@@ -1782,14 +1782,14 @@ Build 20101018 (initial release)
    -  Added a restrict_channel= parameter
       to the :doc:`Channel Category tag </modules/channel/categories>`, which allows overriding the new
       default behavior of its show_empty= parameter.
-   -  Added a `Control
-      Panel <modules/comment/control_panel/index.html>`_ to the Comment
+   -  Added a :doc:`Control
+      Panel <modules/comment/control_panel/index>` to the Comment
       Module.
    -  Added a new status for comments. Moderated comments will no go in
       with a status of 'Pending' rather than 'Closed' (though moderators
       may still set a comment to 'Closed' status.
    -  Added new variables to the Comment Notification Templates (see
-      `Version Notes <installation/version_notes_2.1.1.html>`__).
+      :doc:`Version Notes <installation/version_notes_2.1.1>`).
    -  Added new
       `Settings <modules/comment/control_panel/index.html#settings>`_ to
       the Comment Module (Force word censoring for comments and Moderate
@@ -3219,8 +3219,8 @@ Build 20100121 (initial release)
    -  Added a fieldtype overview page to install, uninstall, and set
       global settings.
    -  Added per field settings for showing smileys, spellcheck, etc.,
-      please see the `Fieldtype
-      documentation <development/fieldtypes.html>`_ for details.
+      please see the :doc:`Fieldtype
+      documentation <development/fieldtypes>` for details.
 
 Version 2.0.0 Public Beta
 -------------------------
@@ -3516,13 +3516,13 @@ Build 20091202 (initial release)
       framework from EllisLab, Inc.
    -  "Weblogs" are now known as "Channels"
    -  ExpressionEngine now runs fully (and only) on UTF-8.
-   -  Added `Snippets <./templates/globals/snippets.html>`_, a new
+   -  Added :doc:`Snippets </templates/globals/snippets>`, a new
       early-parsed type of global variable which can be reused
       throughout your templates and can include any dynamic information.
    -  New custom field types: Multi-select, Checkbox, Radio, and Upload
    -  Included jQuery and numerous plugins, themes, and UI effects as
       standard.
-   -  Added a `jQuery module <modules/jquery/index.html>`_ to simplify
+   -  Added a :doc:`jQuery module <modules/jquery/index>` to simplify
       access to jQuery script files in your ExpressionEngine
       installation.
    -  Added additional security measures to help alert you if
@@ -3539,16 +3539,16 @@ Build 20091202 (initial release)
    -  Changed system offline message to output 503 headers with a 1 hour
       retry time.
    -  {assign\_variable:} changed to
-      `{preload\_replace:foo="bar"} <templates/globals/preload_replacement.html>`_
+      :doc:`{preload\_replace:foo="bar"} <templates/globals/preload_replacement>`
       and documentation clarified.
    -  The Simple Commerce Module now supports :ref:`subscriptions and
       recurring payments <simple-commerce-recurring-payments>`
    -  The Trackback module has been removed from ExpressionEngine. See
-      the `version update
-      notes <installation/version_notes_2.0.0.html>`__ for details.
+      the :doc:`version update
+      notes <installation/version_notes_2.0>` for details.
    -  The Photo Gallery module has been removed from ExpressionEngine.
-      See the `version update
-      notes <installation/version_notes_2.0.0.html>`__ for details.
+      See the :doc:`version update
+      notes <installation/version_notes_2.0>` for details.
 
 -  **Control Panel**
 
@@ -3558,7 +3558,7 @@ Build 20091202 (initial release)
       -  Completely redesigned navigation.
       -  Improved UI, including new table filtering and sorting
          capabilities.
-      -  Added `Accessories <cp/add-ons/accessory_manager.html>`__, a
+      -  Added :doc:`Accessories <cp/add-ons/accessory_manager>`, a
          brand new control panel add-on type.
       -  My Account sidebar gives quick access to personal settings.
       -  Added context sensitive Help system.
@@ -3603,8 +3603,8 @@ Build 20091202 (initial release)
             folder
          -  Template Editor will indicate whether the loaded template is
             sourced from a file or the database
-         -  Easy to use `Synchronization
-            Tool <cp/design/templates/synchronize_templates.html>`_ to
+         -  Easy to use :doc:`Synchronization
+            Tool <cp/design/templates/synchronize_templates>` to
             keep your database and files in sync.
          -  Files are now saved with the proper file extension, making
             syntax highlighting simpler in your favorite text/HTML/CSS
@@ -3668,20 +3668,20 @@ Build 20091202 (initial release)
 
 -  **Development changes**
 
-   -  Add-ons now come in `packages <development/packages.html>`_,
+   -  Add-ons now come in :doc:`packages <development/packages>`,
       increasing flexibility and simplifying updates and maintenance.
    -  Add-ons can have their own CodeIgniter libraries, models, config,
       javascript, view files, etc.
    -  Single third party folder for all add-on types.
    -  New control panel add-on type:
-      `Accessories <development/accessories.html>`__.
+      :doc:`Accessories <development/accessories>`.
    -  New Custom Field API lets you create your own custom field types.
       *`Contact the development
       team <http://expressionengine.com/support/>`_ for alpha
       documentation*.
    -  Added simple methods for tags to :doc:`parse their template
       variables </development/usage/template>`.
-   -  Added `CP library <development/usage/cp.html>`_ which has many
+   -  Added :doc:`CP library <development/usage/cp>` which has many
       assistive methods and handles many things for you automatically.
    -  Display class is deprecated!
    -  CodeIgniter core increase ease and power of developing add-ons,

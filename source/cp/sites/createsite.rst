@@ -98,6 +98,6 @@ start by updating the following:
    want to select a Template Group and edit the group preferences to set
    the Template Group's index page as the Site's home page.
 
-Next: `Setup domains and sub-domains <domainsetup.html>`_
+Next: :doc:`Setup domains and sub-domains <domainsetup>`
 =========================================================
 

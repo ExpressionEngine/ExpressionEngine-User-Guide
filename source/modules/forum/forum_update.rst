@@ -7,8 +7,8 @@ Updating to a Newer Version
 
 These instructions are only applicable for
 *updating* an existing installation. If you have not installed the
-Discussion Forum Module yet, follow the `Installation
-Instructions <forum_installation.html>`_.
+Discussion Forum Module yet, follow the :doc:`Installation
+Instructions <forum_installation>`.
 
 Step 1
 ------
@@ -68,24 +68,24 @@ Step 5: Version Specific Notes
 Please view the update notes that apply to any versions that are newer
 than the version you have been running.
 
--  `Version Notes 3.1.5 <forum_update_notes_3.1.5.html>`_
--  `Version Notes 3.1.4 <forum_update_notes_3.1.4.html>`_
--  `Version Notes 3.1.3 <forum_update_notes_3.1.3.html>`_
--  `Version Notes 3.1.2 <forum_update_notes_3.1.2.html>`_
--  `Version Notes 3.1.1 <forum_update_notes_3.1.1.html>`_
--  `Version Notes 3.1.0 <forum_update_notes_3.1.0.html>`_
--  `Version Notes 3.0.1 <forum_update_notes_3.0.1.html>`_
--  `Version Notes 3.0.0 <forum_update_notes_3.0.0.html>`_
--  `Version Notes 2.1.2 <forum_update_notes_2.1.2.html>`_
--  `Version Notes 2.1.1 <forum_update_notes_2.1.1.html>`_
--  `Version Notes 2.1 <forum_update_notes_2.1.html>`_
--  `Version Notes 2.0 <forum_update_notes_2.0.html>`_
--  `Version Notes 1.3.2 <forum_update_notes_1.3.2.html>`_
--  `Version Notes 1.3.1 <forum_update_notes_1.3.1.html>`_
--  `Version Notes 1.3 <forum_update_notes_1.3.html>`_
--  `Version Notes 1.2 <forum_update_notes_1.2.html>`_
--  `Version Notes 1.1.1 <forum_update_notes_1.1.1.html>`_
--  `Version Notes 1.1 <forum_update_notes_1.1.html>`_
+-  :doc:`Version Notes 3.1.5 <forum_update_notes_3.1.5>`
+-  :doc:`Version Notes 3.1.4 <forum_update_notes_3.1.4>`
+-  :doc:`Version Notes 3.1.3 <forum_update_notes_3.1.3>`
+-  :doc:`Version Notes 3.1.2 <forum_update_notes_3.1.2>`
+-  :doc:`Version Notes 3.1.1 <forum_update_notes_3.1.1>`
+-  :doc:`Version Notes 3.1.0 <forum_update_notes_3.1.0>`
+-  :doc:`Version Notes 3.0.1 <forum_update_notes_3.0.1>`
+-  :doc:`Version Notes 3.0.0 <forum_update_notes_3.0.0>`
+-  :doc:`Version Notes 2.1.2 <forum_update_notes_2.1.2>`
+-  :doc:`Version Notes 2.1.1 <forum_update_notes_2.1.1>`
+-  :doc:`Version Notes 2.1 <forum_update_notes_2.1>`
+-  :doc:`Version Notes 2.0 <forum_update_notes_2.0>`
+-  :doc:`Version Notes 1.3.2 <forum_update_notes_1.3.2>`
+-  :doc:`Version Notes 1.3.1 <forum_update_notes_1.3.1>`
+-  :doc:`Version Notes 1.3 <forum_update_notes_1.3>`
+-  :doc:`Version Notes 1.2 <forum_update_notes_1.2>`
+-  :doc:`Version Notes 1.1.1 <forum_update_notes_1.1.1>`
+-  :doc:`Version Notes 1.1 <forum_update_notes_1.1>`
 
 *You're done!*
 --------------

@@ -34,6 +34,6 @@ up your Sites menu. Sites is a straight-forward, but very powerful
 add-on. Please thoroughly review the documentation before using the
 Multiple Site Manager.
 
-Next: `Create a New Site <createsite.html>`_
+Next: :doc:`Create a New Site <createsite>`
 ============================================
 

@@ -79,8 +79,8 @@ wiki\_name
 
 	{wiki_name}
 
-Displays the Wiki's Full Name (see the `Wiki Control
-Panel <wiki_cp.html>`_).
+Displays the Wiki's Full Name (see the :doc:`Wiki Control
+Panel <wiki_cp>`).
 
 XID\_HASH
 ~~~~~~~~~
@@ -180,7 +180,7 @@ path:wiki\_home
 	{path:wiki_home}
 
 This variable will generate the URL for the wiki's homepage which is set
-in the `Wiki Control Panel <wiki_cp.html>`_. For example, this::
+in the :doc:`Wiki Control Panel <wiki_cp>`. For example, this::
 
 	<a href="{path:wiki_home}">Home</a>
 

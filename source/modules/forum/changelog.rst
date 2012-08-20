@@ -537,13 +537,13 @@ Version 2.0
 
 Release Date: June 19, 2007
 
--  Added `Forum Boards <forum_boards.html>`_
+-  Added :doc:`Forum Boards <forum_boards>`
 -  Added new forum theme: Grey
 -  Added Text Formatting preference for posts
 -  Added ability to move individual replies between threads
 -  Added ability to link directly to reply in search results where the
-   search terms were found in a reply (see `version update
-   notes <forum_update_notes_2.0.html>`_).
+   search terms were found in a reply (see :doc:`version update
+   notes <forum_update_notes_2.0>`).
 -  Added `forums= <recent_forum_topics.html#par_forums>`_ and
    `boards= <recent_forum_topics.html#par_boards>`_ parameters to the
    Topic Titles tag

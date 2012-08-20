@@ -11,8 +11,8 @@ moving your cursor over the Publish menu will show all of your Channels and
 allow you to select one.
 
 .. tip:: You can customize the display of the Publish Page by clicking
-   Show Toolbar and creating a custom `Publish Page
-   Layout <publish_page_layouts.html>`_.
+   Show Toolbar and creating a custom :doc:`Publish Page
+   Layout <publish_page_layouts>`.
 
 The Publish interface is broken into the following tabs:
 

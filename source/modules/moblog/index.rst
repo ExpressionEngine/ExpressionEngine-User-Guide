@@ -294,7 +294,7 @@ moblogs::
 Control Panel
 *************
 
-See the `Moblog Module Control Panel <control_panel/index.html>`_ page.
+See the :doc:`Moblog Module Control Panel <control_panel/index>` page.
 
 .. toctree::
 	:glob:

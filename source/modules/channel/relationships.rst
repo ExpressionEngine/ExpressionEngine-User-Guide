@@ -65,8 +65,8 @@ you'll use::
 	...
 	{/related_entries}
 
-.. important:: The above tags **must** be placed inside your
-   `{exp:channel:entries} <channel_entries.html>`_ tag.
+.. important:: The above tags **must** be placed inside
+   your :doc:`{exp:channel:entries} <channel_entries>` tag.
 
 Here is an example showing the related entries tags inside your channel
 entry tags::
@@ -85,7 +85,7 @@ entry tags::
 
 As you can see, all Channel Fields of the related Entry are available
 inside the related_entries tag pair. In fact, nearly anything that is
-available in the `Channel Entries <channel_entries.html>`_
+available in the :doc:`Channel Entries <channel_entries>`
 tag can be shown as related data.
 
 .. important:: For performance reasons, all related Entry data is cached
@@ -152,8 +152,8 @@ with a certain Status while sorting and ordering as you see fit. As
 Relationships are cached in order to reduce the load on
 ExpressionEngine, these are the only parameters available at this time.
 
-.. important:: The above tags **must** be placed inside your
-   `{exp:channel:entries} <channel_entries.html>`_ tag.
+.. important:: The above tags **must** be placed inside
+   your :doc:`{exp:channel:entries} <channel_entries>` tag.
 
 A full example::
 
@@ -171,7 +171,7 @@ A full example::
 
 As you can see, all Channel Fields of the reverse related Entry are available
 inside the reverse_related_entries tag pair. In fact, nearly anything that is
-available in the `Channel Entries <channel_entries.html>`_
+available in the :doc:`Channel Entries <channel_entries>`
 tag can be shown as reverse related data.
 
 .. important:: For performance reasons, all related Entry data is cached

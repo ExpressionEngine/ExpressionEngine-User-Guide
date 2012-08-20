@@ -19,8 +19,8 @@ channel entries tag.
 The full example module can be `downloaded from GitHub
 <https://github.com/EllisLab/ee-tuts-download-module>`_.
 
-Note: if you have not already read the `Modules
-Overview <./modules.html>`_, you will want to do so in order to obtain
+Note: if you have not already read the :doc:`Modules
+Overview </development/modules>`, you will want to do so in order to obtain
 the greatest value from the tutorial.
 
 
@@ -569,8 +569,8 @@ folder:
     <?=lang('no_matching_files')?>
     <?php endif; ?>  
 
-It is recommended that in view pages only, you use the `PHP's alternate
-syntax <./guidelines/view_php_syntax.html>`_ in your views, as it makes
+It is recommended that in view pages only, you use the :doc:`PHP's alternate
+syntax </development/guidelines/view_php_syntax>` in your views, as it makes
 them easier to read and limits the amount of php. If this is not
 supported by your server, ExpressionEngine will automatically rewrite
 the tags.
@@ -802,7 +802,7 @@ no\_results function if no records exist. If there are records to parse,
 the :doc:`Typography class <usage/typography>` is initialized and the data parsed out and
 returned.
 
-The `Template class <usage/template.html>`_, offers two general
+The :doc:`Template class <usage/template>`, offers two general
 approaches to parsing out the data. Here we use the simple
 parse\_variables method, where we simply need to pass a multidimensional
 associative array where our tags are the keys and the values our

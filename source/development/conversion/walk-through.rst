@@ -27,7 +27,7 @@ methods: install(), uninistall(), update().
 
 	function update($current = '')
 
-#. Convert any relevant syntax to the `new format <syntax.html>`_.
+#. Convert any relevant syntax to the :doc:`new format <syntax>`.
 #. Make certain your queries are converted to use `active
    record <http://codeigniter.com/user_guide/database/active_record.html>`_
    or `database
@@ -52,7 +52,7 @@ Modify Core Module File (mod.package\_name.php)
 -----------------------------------------------
 
 Converting the mod.package\_name.php file is simply a matter of altering
-the existing syntax. See `the syntax conversion notes <syntax.html>`_
+the existing syntax. See :doc:`the syntax conversion notes <syntax>`
 for more detail. Don't forget to:
 
 -  Call the super object

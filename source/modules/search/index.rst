@@ -14,21 +14,21 @@ together to perform searches and display search results.
 Simple Search Form
 ------------------
 
-The `Simple Search Form <simple.html>`_ tag allows you to easily add a
+The :doc:`Simple Search Form <simple>` tag allows you to easily add a
 single-form search field to your site. This allows you to have a simple
 search box in a sidebar of your site.
 
 Advanced Search Form
 --------------------
 
-The `Advanced Search Form <advanced.html>`_ tag allows you to display a
+The :doc:`Advanced Search Form <advanced>` tag allows you to display a
 detailed search form that will allow your users to make "power searches"
 to find the information they need.
 
 Displaying Search Results
 -------------------------
 
-The `Displaying Search Results <results.html>`_ page details the tags
+The :doc:`Displaying Search Results <results>` page details the tags
 available for controling how you display results from your searches.
 
 Search Syntax

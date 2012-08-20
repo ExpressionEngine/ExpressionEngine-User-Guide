@@ -25,7 +25,7 @@ using a various criteria such as channel, category, date, order, etc.
 The main table shows the following columns:
 
 -  **#**: The entry ID number for the entry.
--  `Entry Title <./publish.html>`_: Clicking the link will open the
+-  :doc:`Entry Title </cp/content/publish>`: Clicking the link will open the
    entry for editing.
 -  **View**: The link in this column will display the entry for you.
 -  **Live Look**: This link allows you to view the entry in a template

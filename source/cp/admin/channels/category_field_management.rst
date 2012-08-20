@@ -16,9 +16,9 @@ existing category fields for the currently chosen category group. It
 lists the category field name and provides links to edit the
 preferences.
 
--  `Create a New Category Field <category_fields_edit.html>`_: Enables you
+-  :doc:`Create a New Category Field <category_fields_edit>`: Enables you
    to Create a new Category Field.
--  `Edit Field <category_fields_edit.html>`_: Click the Field Label to
+-  :doc:`Edit Field <category_fields_edit>`: Click the Field Label to
    edit the category field.
 -  **Delete**: Delete the category field and associated data.
 

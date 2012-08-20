@@ -46,8 +46,8 @@ top right.
 Adding Items
 ------------
 
-From the Simple Commerce module's `control panel home
-page <sc_cp.html>`_, or from the Edit Items section, click **Add
+From the Simple Commerce module's :doc:`control panel home
+page <sc_cp>`, or from the Edit Items section, click **Add
 Items**. You will be presented with a familiar looking screen, one that
 looks much like the `Edit section of the Control
 Panel <../../cp/content/edit.html>`_, and can in fact perform searches
@@ -99,13 +99,13 @@ email address.
 Admin Email Template
 ~~~~~~~~~~~~~~~~~~~~
 
-The `email template <sc_cp_email_templates.html>`_ that will be used to
+The :doc:`email template <sc_cp_email_templates>` that will be used to
 generate administrator notification emails for this item.
 
 Customer Email Template
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The `email template <sc_cp_email_templates.html>`_ that will be used to
+The :doc:`email template <sc_cp_email_templates>` that will be used to
 generate customer notification emails for this item.
 
 New Member Group
@@ -146,15 +146,15 @@ subscription items.
 Admin Email Unsubscribe Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For subscription items only, this is the `email
-template <sc_cp_email_templates.html>`_ that will be used to generate
+For subscription items only, this is the :doc:`email
+template <sc_cp_email_templates>` that will be used to generate
 administrator notification when a subscription runs out.
 
 Customer Email Unsubscribe Template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-For subscription items only, this is the `email
-template <sc_cp_email_templates.html>`_ that will be used to generate
+For subscription items only, this is the :doc:`email
+template <sc_cp_email_templates>` that will be used to generate
 customer notification emails when their subscription runs out for this
 item.
 

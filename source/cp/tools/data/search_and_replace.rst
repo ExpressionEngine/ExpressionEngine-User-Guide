@@ -16,8 +16,8 @@ the entry fields, or within your Templates.
    are permanent and cannot be reversed except by restoring a backed up
    version of the database. Also note that if you perform replacing within
    your Templates, you may not see the changes on your site immediately if
-   you have caching options turned on. You may need to `clear your cache
-   files <clear_cached_data_files.html>`_ in order to see the changes.
+   you have caching options turned on. You may need to :doc:`clear your cache
+   files <clear_cached_data_files>` in order to see the changes.
 
 .. important:: If you save templates as text files, make certain to
    `Synchronize Templates <../../design/templates/synchronize_templates.html>`_ before

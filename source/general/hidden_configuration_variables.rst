@@ -6,7 +6,7 @@ system/expressionengine/config/config.php and are used to over-ride
 default behavior. These are advanced configuration options that should
 only be used by experienced ExpressionEngine users. More
 performance-related configuration options can be found in
-`Handling Extreme Traffic with ExpressionEngine <handling_extreme_traffic.html>`_.
+:doc:`Handling Extreme Traffic with ExpressionEngine <handling_extreme_traffic>`.
 
 .. contents::
 	:local:

@@ -1,10 +1,10 @@
 Control Panel Javascript Reference
 ==================================
 
--  `Custom jQuery Events <./events.html>`_
--  `Javascript Notification Plugin <./notification.html>`_
--  `Javascript Table Plugin <./table.html>`_
--  `Rich Text Editor Javascript <./rte/index.html>`_
+-  :doc:`Custom jQuery Events </development/cp_javascript/events>`
+-  :doc:`Javascript Notification Plugin </development/cp_javascript/notification>`
+-  :doc:`Javascript Table Plugin </development/cp_javascript/table>`
+-  :doc:`Rich Text Editor Javascript </development/cp_javascript/rte/index>`
 
 .. toctree::
 	:glob:
