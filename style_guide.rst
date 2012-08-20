@@ -2,28 +2,29 @@
 Prototype User Guide Page
 #########################
 
-This page represents all of the various types of documentation
-needs that we encounter when documenting EllisLab applications.
-The focus is on readability, user friendliness, and an "I've got
-your hand, baby" feel.  While they can be quite technical, we
-always write for humans... our grandmothers even!
+This page represents all of the various types of documentation needs
+that we encounter when documenting EllisLab applications. The focus is
+on readability, user friendliness, and an "I've got your hand, baby"
+feel.  While they can be quite technical, we always write for humans...
+our grandmothers even!
 
-A table of contents should always be included like the one below.
-It is created automatically by inserting the ``.. contents::``
-directive on a line by itself.
+A table of contents should always be included like the one below. It is
+created automatically by inserting the ``.. contents::`` directive on a
+line by itself.
 
 .. contents::
-
 
 
 *****************************************
 Page and Section Headings and Subheadings
 *****************************************
 
-Headings not only provide order and sections within a page, but they also are used to automatically
-build both the page and document table of contents.  Headings are formed by using certain characters
-as underlines for a bit of text.  Major headings, like page titles and section headings also use
-overlines.  Other headings just use underlines, with the following hierarchy::
+Headings not only provide order and sections within a page, but they
+also are used to automatically build both the page and document table of
+contents.  Headings are formed by using certain characters as underlines
+for a bit of text.  Major headings, like page titles and section
+headings also use overlines.  Other headings just use underlines, with
+the following hierarchy::
 
 	# with overline for page titles
 	* with overline for major sections
@@ -32,7 +33,8 @@ overlines.  Other headings just use underlines, with the following hierarchy::
 	^ for subsubsubsections
 	" for subsubsubsubsections (!)
 	
-The TextMate EEDocs Bundle can help you create these with the following tab triggers::
+The TextMate EEDocs Bundle can help you create these with the following
+tab triggers::
 
 	title->
 	
@@ -65,6 +67,17 @@ The TextMate EEDocs Bundle can help you create these with the following tab trig
 	
 		SubSubSubSubSection (!)
 		"""""""""""""""""""""""
+
+
+*************
+Line Wrapping
+*************
+
+Line lengths in the .rst files should be hard-wrapped at 72 characters.
+The exceptions are when line wraps will break formatting (such as with
+code blocks, which are interpreted literally)  or cause the Sphinx
+parser to throw an error (e.g. a `:doc:` role within a ``.. note::``
+directive).
 		
 
 *******************
@@ -75,8 +88,8 @@ Control Panel Pages
 
 **Control Panel Location:** :menuselection:`Design --> Templates --> Global Preferences`
 
-To style the above properly, assign a class of *cp-path* and use the \:menuselection\:
-role with hyphen-arrows::
+To style the above properly, assign a class of *cp-path* and use the
+\:menuselection\: role with hyphen-arrows::
 
 	.. rst-class:: cp-path
 
@@ -84,21 +97,24 @@ role with hyphen-arrows::
 
 |Global Template Preferences|
 
-This section of the Control Panel allows you to define global preferences which globally affect all Templates
-
+This section of the Control Panel allows you to define global
+preferences which globally affect all Templates.
 
 
 *****************
 exp:module:method
 *****************
 
-A tag has all parameters and variables documented.  Subsections are used to separate required parameters from
-optional parameters.  Parameters and variables within their subsections are always listed in alphabetical order.
+A tag has all parameters and variables documented.  Subsections are used
+to separate required parameters from optional parameters.  Parameters
+and variables within their subsections are always listed in alphabetical
+order.
 
 Required Parameters
 ===================
 
-The following parameters are *required* by the ``{exp:module:method}`` tag.
+The following parameters are *required* by the ``{exp:module:method}``
+tag.
 
 channel=
 --------
@@ -161,7 +177,8 @@ currently logged in user. ::
 Variables
 =========
 
-The following variables are available to the ``{exp:module:method}`` tag.
+The following variables are available to the ``{exp:module:method}``
+tag.
 
 {absolute_results}
 ------------------
@@ -186,7 +203,8 @@ preference.
 {custom_field}
 --------------
 
-Any custom field can be displayed by using its shortname as a variable within the tag.
+Any custom field can be displayed by using its shortname as a variable
+within the tag.
 
 {email}
 -------
@@ -198,9 +216,9 @@ The email address of the entry author.
 Method Documentation
 ********************
 
-When documenting class methods for third party developers, Sphinx provides
-directives to assist and keep things simple.  For example, consider the following
-ReST:
+When documenting class methods for third party developers, Sphinx
+provides directives to assist and keep things simple.  For example,
+consider the following ReST:
 
 .. code-block:: rst
 
@@ -346,9 +364,8 @@ segments of your URLs when determining whether to show a 404 page, since
 these segments will correlate to a Template Group and Template name
 (which represent your site's "pages"). Anything beyond the first two
 segments can not be used to show a 404 page (with one notable exception,
-using the
-`require\_entry= <../../../modules/channel/parameters.html#par_req_entry>`_
-parameter).
+using the `require\_entry=
+<../../../modules/channel/parameters.html#par_req_entry>`_ parameter).
 
 For an explanation regarding how ExpressionEngine interprets your URLs,
 please see `ExpressionEngine URLs <../../../general/urls.html>`_ page.
