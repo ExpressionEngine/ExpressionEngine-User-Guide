@@ -2134,6 +2134,8 @@ like so::
 		<a href="{path='forums/viewthread'}/{forum_topic_id}">Discuss this in our forums</a>
 	{/if}
 
+.. _channel-entries-if-no_results:
+
 if no\_results
 --------------
 

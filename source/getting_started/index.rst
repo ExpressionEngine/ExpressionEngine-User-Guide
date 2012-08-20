@@ -218,6 +218,8 @@ of the Control Panel.
 For the purposes of this guide, **publish a second Entry** by following the same steps as before, but
 with a different Title and News Body. That will give us two Entries to work with later.
 
+.. _getting-started-templates:
+
 *********
 Templates
 *********

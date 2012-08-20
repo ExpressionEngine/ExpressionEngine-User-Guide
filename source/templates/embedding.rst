@@ -2,7 +2,7 @@ Embedding Templates within Other Templates
 ==========================================
 
 Any template can be embedded within another template using the "embed"
-variable::
+tag::
 
 	{embed="template_group/template"}
 
@@ -12,11 +12,13 @@ name of the template. For example::
 	{embed="site/header"}
 
 You **must** include both the template group and the template name in
-the embedded tag.
+the embed tag.
 
-By default, you cannot use embeds inside of Forum templates. See `Other
-Features <http://expressionengine.com/user_guide/modules/forum/other_features.html>`_
-for instructions on running the forums through regular templates.
+By default, you cannot use embeds inside of Forum templates. See
+:doc:`Other Features </modules/forum/other_features>` for
+instructions on running the forums through regular templates.
+
+.. _embed-variables:
 
 Embed Variables for the Embedded Template
 -----------------------------------------

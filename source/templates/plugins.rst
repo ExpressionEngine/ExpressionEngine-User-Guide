@@ -41,6 +41,8 @@ by the plugin::
 
 In the above example, the content would be XML Encoded.
 
+.. _templates-nested-plugins:
+
 Nested Plugins
 --------------
 
@@ -69,7 +71,7 @@ that Plugin before parsing any Plugins inside of it. ::
 	parse="inward"
 
 Examples
---------
+~~~~~~~~
 
 Here are some examples to help illustrate the parsing order. ::
 

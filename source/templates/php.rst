@@ -30,15 +30,17 @@ Allow PHP?
 Setting this preference to "Yes" will allow you to have PHP code parsed
 within your Template.
 
+.. _php-parsing-stage:
+
 PHP Parsing Stage
 ~~~~~~~~~~~~~~~~~
 
 There are two choices for when PHP gets parsed:
 
-**Input**: PHP parsed at the "input" stage will be parsed before
-ExpressionEngine Tags get parsed. This setting allows you to affect
-the Template before it is interpreted. Input parsing will allow you
-to do things such as::
+**Input**: PHP parsed at the "input" stage will be parsed early in the
+:doc:`template parsing order </templates/parsing_engine>`, before
+ExpressionEngine Tags get parsed. Parsing PHP on Input will allow you to
+do things such as::
 
 	{exp:channel:entries limit="<?php echo $limit; ?>"}
 
@@ -55,8 +57,8 @@ or::
 	}
 	?>
 
-**Output**: PHP parsed at the "output" stage will be the last thing
-done, which means it will be parsed *after* the ExpressionEngine tags
-are interpreted. This will allow you to use PHP to affect the
-"rendered Template".
+**Output**: PHP parsed at the "output" stage happens later in the
+:doc:`template parsing order </templates/parsing_engine>`, which means it
+will be parsed *after* the ExpressionEngine Tags are interpreted. This
+will allow you to use PHP to affect the "rendered Template".
 

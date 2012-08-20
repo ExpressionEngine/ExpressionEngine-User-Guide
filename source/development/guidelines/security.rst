@@ -273,6 +273,8 @@ variables <http://us2.php.net/manual/en/language.variables.variable.php>`_.
 	// Each variable would still need to be validated as instructed above
 	// before using them in the code.
 
+.. _dev-guidelines-secure-forms:
+
 Secure Forms
 ~~~~~~~~~~~~
 
