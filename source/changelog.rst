@@ -8,6 +8,228 @@ ExpressionEngine 2.x Change Log
 The Change Log for ExpressionEngine 1.x is `available here
 <http://expressionengine.com/legacy_docs/changelog.html>`_.
 
+Version 2.5.3
+-------------
+
+Release Date: ?
+
+- General Changes:
+
+  - Added field searching across multiple sites to Channel Entries using a sloppy
+    search. When more than one site is specified along with a field search, all
+    fields with the specified name used in all sites specified will be searched
+    and entries returned. Related to bugs #17298 and #18074.
+  - Changed Forgot your Password logic so it always responds with the same message
+    so email addresses aren't confirmed and denied for spammers.
+  - Added autocomplete="off" to all email, username, and password fields.
+  - Altered the display of Standard Global variables to output an empty string
+    rather than the unparsed variable when not set.
+  - Added an ID of expressionengine_template_debug to the division containing 
+    template debugging output.
+
+- Bug Fixes:
+
+  - Fixed a bug where template files were not checked for a maximum length of 50
+    characters, which could result in the creation of duplicate template groups.
+  - Fixed a bug (#17896) where existing image links could break when a field was
+    switched to a Rich Text field.
+  - Fixed a bug (#17995) where a PHP error could occur on the frontend when the
+    category URL indicator was left blank.
+  - Fixed a bug (#18129) in the channel entries tag where the parent_id variable
+    was always zero if a subcategories parent was not included in the assigned
+    categories.
+  - Fixed a bug (#18131) where the Channel module's reverse related entries
+    could treat numbers as strings, resulting in improper ordering.
+  - Fixed a bug (#18080) where the Channel Entries tag was not properly ignoring
+    category indicators in the URL when dynamic was set to 'no'.
+  - Fixed a bug (#17445) where Ping servers were only populated on the publish
+    page if the user had saved their individual ping preferences.
+  - Fixed a bug (#17507) where Subscription pagination was incorrect for 
+    administrators viewing a user's subscriptions.
+  - Fixed a bug (#17952) where Communicate's batch mode displayed unstyled. 
+  - Fixed a bug (#17762) where the Simple Commerce module could reject a valid
+    ping due to the use of capital letters in the account email.
+  - Fixed a bug (#18120) where the Simple Commerce module could reject a valid 
+    ping due to slashes added when magic_quotes are turned on.
+  - Fixed a bug (#16950) in the Simple Commerce module where entering a purchase 
+    manually could cause a MySQL error in strict mode.
+  - Fixed a bug (#16607) in the Simple Commerce module where subscriptions could
+    be rejected if Paypal sent the payment notification too soon.
+  - Fixed a bug (#18171) where the Content Edit page javascript could silently
+    fail to paginate and filter in rare circumstances.
+  - Fixed a bug where the JavaScript on the Template Manager page loaded all
+    template options, slowing page load in some circumstances.
+  - Fixed a security issue that could have caused issues in the template manager.
+  - Fixed a bug (#18004) where member groups able to create channels were
+    not able to access channels they have created.
+  - Fixed a bug (#18087) where some spam filters may falsely mark an email
+    from ExpressionEngine as spam due to extra encoding of the subject line.
+  - Fixed a bug (#18069) where modules may not be updated if previous
+    version number contained alpha or beta designation.
+  - Fixed a bug (#17989) where some conditionals that contained single
+    quotes no longer worked.
+  - Fixed a bug (#17946) where the Template Structure API could not
+    duplicate a template group.
+  - Fixed a bug (#17935) where the Typography class may try to include an
+    invalid path.
+  - Fixed a bug (#17623) where Functions::delete_directory may fail.
+  - Fixed a bug (#16339) where determining a unique URL title may run an
+    unnecessary query.
+  - Fixed a bug (#18128) where publish form validation errors regarding the
+    author field would not show an error message.
+  - Fixed a bug (#16832) where the Extensions class had some unnecessary
+    code for PHP 4.
+  - Fixed a bug (#16909) where cleaning cookie keys may show a "Disallowed
+    Key Characters" error.
+  - Fixed a bug (#18073) where clicking a formatting button in an empty rich
+    text editor may output "undefined" in the text area.
+  - Fixed a bug (#18054) where RAR files could not be uploaded.
+  - Fixed a bug (#18044) where deleting a channel field group would not
+    disassociate the field group from channels.
+  - Fixed a bug (#18036) where having the Mailing List module installed but
+    no mailing lists may show a PHP error on the Communicate screen.
+  - Fixed a bug (#18040) where the Referrer module wouldn't log referrers
+    unless the IP to Nation module was installed.
+  - Fixed a bug (#18085) where the Database Query Form link would appear for
+    non-super admins.
+  - Fixed a bug (#18022) where uploading an animated GIF may produce a PHP
+    error in the File Manager.
+  - Fixed bugs (#17878, #18094) where sorting entries by status or paging on
+    the edit screen with a restricted account may fail.
+  - Fixed a bug (#16904) where photo_url may not be parsed in a channel
+    entries loop if photos were enabled but avatars were disabled.
+  - Fixed a bug (#17966) where hidden templates could not be used as
+    templates for Pages entries.
+  - Fixed a bug (#17684) where removing a member photo when avatars were
+    disabled showed an error.
+  - Fixed a bug (#18002) where a quote mismatch in a single variable in a
+    channel entries loop may show a PHP error.
+  - Fixed a bug (#18012) where Api_channel_entries::delete_entry() may show
+    the wrong error messages for certain member permissions checks.
+  - Fixed a bug (#18145) where the RTE extension used the cp_menu_array
+    hook without checking last_call.
+  - Fixed a bug (#18092) where the RTE fieldtype wouldn't automatically turn
+    URLs and email addresses into links if the channel preference was on.
+  - Fixed a bug (#17795) where the throttle table may not be automatically
+    truncated if online user tracking was turned off.
+  - Fixed a bug (#17775) where the comment form could be validated using
+    whitespace.
+  - Fixed a bug (#17903) where custom menu bar links may not work depending
+    on the path saved and the path used to access the control panel.
+  - Fixed a bug (#17785) where variables in conditionals were not trimmed
+    for whitespace while the rendered variable was.
+  - Fixed a bug (#18071) where masked URLs in the control panel were not
+    URL-encoded to protect characters like ampersands.
+  - Fixed a bug (#18032) where the "Invalid GET Data" error would appear to
+    site guests, it now only appears for super admins.
+  - Fixed a bug (#17832) where conditionals could not be spanned over
+    multiple lines.
+  - Fixed a bug (#18056) where URL titles at least 70 characters long with
+    one hundred thousand duplicates would fail to validate.
+  - Fixed a bug (#18157) where pre formatting, post formatting, and
+    properties were not rendering with wrapped file fields on the front end.
+  - Fixed a bug (#17954) where the category archive tag would not output
+    markup outside of {categories} and {entry_titles} variable pairs.
+  - Fixed a bug (#17766) where having a custom 404 template set would have
+    template fetching behave as if Strict URLs was turned on.
+  - Fixed a bug (#18063) where entry titles could contain invisible
+    characters.
+  - Fixed a bug (#18096) where conditionals may strip script tags from the
+    evaluated variable.
+  - Fixed a bug (#18163) where orphaned categories may not be sorted
+    correctly when sorting alphabetically.
+  - Fixed a bug (#17619) where having multiple HTML image formatting buttons
+    with different markup would all output the same markup.
+  - Fixed a bug (#18001) where the limit to the amount of banned IPs or
+    emails could be reached easily.
+  - Fixed a bug (#18147) where having many member groups may slow down
+    loading of the member group editing page.
+  - Fixed a bug (#18165) where custom member select fields with quotes in
+    the selected value would fail validation on the front end.
+  - Fixed a bug (#18170) where category groups from other MSM sites may
+    appear as an option in the channel group assignments.
+  - Fixed a bug (#17999) where upgrading from pre-1.x versions may show a
+    database error.
+  - Fixed a bug (#17433) where the "img" HTML button was still present even
+    after removing all image buttons in the settings.
+  - Fixed a bug (#17645) where filtering entries may show a PHP error.
+  - Fixed a bug (#17974) where member registration validation may show the
+    wrong error message.
+  - Fixed a bug (#17669) where an uploaded file with special characters in
+    its file name may not appear correctly.
+  - Fixed a bug (#17670) where a maximum file upload size of 5 or less would
+    allow a file of any size to be uploaded.
+  - Fixed a bug (#18172) where saving Rich Text Editor toolsets for other
+    members appeared not to work.
+  - Fixed a bug (#17910) where the XML Encode plugin would allow email
+    email addresses to be converted into links.
+  - Fixed a bug (#17837) where using modifiers on variable pairs would not
+    work.
+  - Fixed a bug (#17557) where pagination links in the file manager were not
+    be updated when filters were applied.
+  - Fixed a bug (#17992) where the file type and date range filters were not
+    working on the File Manager screen.
+  - Fixed a bug (#17554) where syncing an upload directory would not update
+    file sizes in the database.
+  - Fixed a bug (#18141) where setting preserve_checkboxes to "yes" on a
+    SafeCracker form would not save the values of on-screen checkboxes if
+    they were unchecked.
+  - Fixed a bug (#18133) where values of a SafeCracker form were not being
+    escaped which could break form markup.
+  - Fixed a bug (#17936) where the Table library may show a PHP error about
+    an undefined property.
+  - Fixed a bug (#18182) where Template::parse_variables() may not parse
+    variables in variable pairs under certain conditions.
+  - Fixed a bug (#18184) where the output profiler did not display in the
+    control panel.
+  - Fixed a bug (#17646) where SafeCracker form validation for required
+    checkbox fields would fail.
+  - Fixed a bug (#18132) where SafeCracker form validation would pass if the
+    encrypted hidden fields containing the rules were edited.
+  - Fixed a bug (#18000) where SafeCracker form validation would fail if a
+    file field was required but filled in.
+  - Fixed a bug (#18185) where the recent comment date for an entry would be
+    set to zero upon editing the entry.
+  - Fixed bugs (#18018, #18019, #18020) where there were unnecessary
+    queries when loading a SafeCracker form.
+  - Fixed a bug (#16838) where categories in a SafeCracker tag pair did not
+    have access to category images or descriptions.
+  - Fixed a bug (#18118) where WMV files could not be uploaded.
+  - Fixed a bug (#17958) where users were not allowed to move an entry between
+    identical channels when the category was "none" due to "none" having two
+    different representations in the db.
+  - Fixed a bug (#18104) where the publish page tab translation file was not
+    being loaded, and thus tabs were not being correctly localized.
+  - Fixed a bug (#18033) that was causing the option "None" to be absent from the
+    formatting options for category's custom textarea fields.
+  - Fixed a bug (#17298) where field searching was not working when searching
+    across sites using the multiple site manager.
+  - Fixed a bug (#18124) that was causing author_id="CURRENT_USER" in the channel
+    module to fail when Dynamic Channel Query Caching was enabled.
+  - Fixed a bug (#18058) where SafeCracker's settings were not being properly
+    translated and saved from the settings form, result being that users
+    couldn't uncheck any of the settings checkboxes once checked.
+  - Fixed a bug (#17753) where Safecracker was inconsistently formatting large
+    numbers.
+  - Fixed a bug where the set of valid category groups was being incorrectly
+    determined in in the channel:entries and channel:category_headings tags when
+    a text category url parameter was given.
+  - Fixed a documentation error (#17783) where the cp_menu_array hook was
+    not documented.
+  - Fixed a documentation error (#17232) where some hidden configuration
+    variables weren't mentioned on the main hidden configuration variables
+    page.
+  - Fixed a documentation error (#17451) where the exp:forum tag's board
+    parameter was not documented.
+
+- Developers:
+
+  - Added ``api_channel_entries_custom_field_query`` hook for altering the
+    custom fields query array result.
+  - **Reactor:** Added ``file_after_save`` hook in File_model.
+  - **Reactor:** Moved RTE display code to its library file to be more accessible
+    by third parties.
+
 Version 2.5.2
 -------------
 
