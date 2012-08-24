@@ -26,6 +26,8 @@ Release Date: ?
     rather than the unparsed variable when not set.
   - Added an ID of expressionengine_template_debug to the division containing 
     template debugging output.
+  - **Reactor:** Added ``path_third_themes`` and ``url_third_themes`` hidden config
+    variables.
 
 - Bug Fixes:
 

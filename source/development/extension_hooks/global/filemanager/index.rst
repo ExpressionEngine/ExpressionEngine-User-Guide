@@ -25,6 +25,8 @@ An array of the file data that was just saved to exp_files.
 :returns:
     void
 
+Added in v2.5.3
+
 files\_after\_delete
 --------------------
 
