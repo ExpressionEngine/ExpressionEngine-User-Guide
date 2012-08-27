@@ -27,6 +27,10 @@ Added in v2.5.3
 entry\_submission\_end
 ----------------------
 
+Do more processing after an entry is submitted. ::
+
+	$this->extensions->call('entry_submission_end', $this->entry_id, $this->meta, $this->data);
+
 $this->entry\_id
 ~~~~~~~~~~~~~~~~
 
