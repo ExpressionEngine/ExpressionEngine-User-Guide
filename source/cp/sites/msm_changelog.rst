@@ -1,6 +1,20 @@
 Multiple Site Manager
 =====================
 
+Version 2.1.4
+-------------
+
+Release Date: ?
+
+- Fixed a bug (#18041) where a MySQL error occurred when creating a site
+  with 'Duplicate Channel, Duplicate Entries' selected for a channel with
+  no entries.
+- Fixed a bug (#18042) where a site's snippets were abandoned in the
+  database after the site was deleted.
+- Fixed a bug where channel data was not successfully duplicated on new site
+  creation when "Duplicate Channel, Duplicate Channel Entries" was selected.
+
+
 Version 2.1.3
 -------------
 

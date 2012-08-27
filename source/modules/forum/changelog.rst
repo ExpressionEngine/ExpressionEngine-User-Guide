@@ -1,6 +1,15 @@
 ExpressionEngine Forum Module Change Log
 ========================================
 
+Version 3.1.9
+-------------
+
+Release Date: ?
+
+- Fixed a bug (#17785) where topic could be submitted with just whitespace
+  in the title and body.
+
+
 Version 3.1.8
 -------------
 
