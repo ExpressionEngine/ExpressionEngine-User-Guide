@@ -168,7 +168,7 @@ Release Date: ?
   - Fixed a bug (#17837) where using modifiers on variable pairs would not
     work.
   - Fixed a bug (#17557) where pagination links in the file manager were not
-    be updated when filters were applied.
+    updated when filters were applied.
   - Fixed a bug (#17992) where the file type and date range filters were not
     working on the File Manager screen.
   - Fixed a bug (#17554) where syncing an upload directory would not update
