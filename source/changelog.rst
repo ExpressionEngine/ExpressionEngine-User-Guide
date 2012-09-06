@@ -216,6 +216,8 @@ Release Date: ?
   - Fixed a bug where the set of valid category groups was being incorrectly
     determined in in the channel:entries and channel:category_headings tags when
     a text category url parameter was given.
+  - Fixed a bug where the default form ID for the Tell-A-Friend form was
+    'contact_form' instead of 'tellafriend_form'.
   - Fixed a documentation error (#17783) where the cp_menu_array hook was
     not documented.
   - Fixed a documentation error (#17232) where some hidden configuration
