@@ -4,7 +4,7 @@ ExpressionEngine Forum Module Change Log
 Version 3.1.9
 -------------
 
-Release Date: ?
+Release Date: September 11, 2012
 
 - Fixed a bug (#17785) where topic could be submitted with just whitespace
   in the title and body.

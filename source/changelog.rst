@@ -11,7 +11,7 @@ The Change Log for ExpressionEngine 1.x is `available here
 Version 2.5.3
 -------------
 
-Release Date: ?
+Release Date: September 11, 2012
 
 - General Changes:
 

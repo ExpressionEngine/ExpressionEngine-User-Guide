@@ -4,7 +4,7 @@ Multiple Site Manager
 Version 2.1.4
 -------------
 
-Release Date: ?
+Release Date: September 11, 2012
 
 - Fixed a bug (#18041) where a MySQL error occurred when creating a site
   with 'Duplicate Channel, Duplicate Entries' selected for a channel with
