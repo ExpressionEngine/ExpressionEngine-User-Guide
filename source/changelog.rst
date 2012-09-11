@@ -15,10 +15,10 @@ Release Date: September 11, 2012
 
 - General Changes:
 
-  - Added field searching across multiple sites to Channel Entries using a sloppy
-    search. When more than one site is specified along with a field search, all
-    fields with the specified name used in all sites specified will be searched
-    and entries returned. Related to bugs #17298 and #18074.
+  - Added field searching across multiple sites to Channel Entries. When more than
+    one site is specified along with a field search, all fields with the specified
+    name used in all sites specified will be searched and entries returned.
+    Related to bugs #17298 and #18074.
   - Changed Forgot your Password logic so it always responds with the same message
     so email addresses aren't confirmed and denied for spammers.
   - Added autocomplete="off" to all email, username, and password fields.
