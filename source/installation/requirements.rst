@@ -39,11 +39,11 @@ Server Requirements
 Browser Requirements
 ---------------------
 
-The ExpressionEngine Control Panel is tested extensively with the web
-browsers listed here. Please note that these are the minimum browser
-requirements necessary to use the Control Panel. These requirements do
-not necessarily apply to an ExpressionEngine-powered website's front-end
-pages.
+The ExpressionEngine Control Panel is tested extensively with the
+final-release versions of the web browsers listed here. Please note that
+these are the minimum browser requirements necessary to use the Control
+Panel. These requirements do not necessarily apply to an
+ExpressionEngine-powered website's front-end pages.
 
 - Internet Explorer 8 and above
 - Firefox 13
