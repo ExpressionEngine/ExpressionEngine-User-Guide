@@ -33,7 +33,7 @@ This button allows you to configure the default behavior of the module.
 Display of URIs on Module Homepage
 ==================================
 
-Whether or not to use a hierarchal
+Whether or not to use a hierarchical
 nested display of your Pages in the Pages Control Panel.
 
 Default Channel for 'Create New Page' Tab
