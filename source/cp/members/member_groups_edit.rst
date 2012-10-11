@@ -74,8 +74,7 @@ typically located at:
 
 http://example.com/index.php/member/memberlist/
 
-Can delete own account - deletes all posts, entries, and comments as
-well
+Can delete own account - deletes all posts, entries, and comments as well
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determines whether a member of the group can delete their own account.
