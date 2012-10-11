@@ -236,7 +236,7 @@ protect_javascript
 **Value:** y/n
 
 Prevents the advanced conditionals parser from processing anything in
-tags. By default, it's set to 'y'.
+``<script>`` tags. By default, it's set to 'y'.
 
 ::
 
