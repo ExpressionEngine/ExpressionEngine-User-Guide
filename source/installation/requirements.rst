@@ -67,6 +67,23 @@ to be able to use them you will need to meet their requirements.
    `pspell <http://us2.php.net/pspell>`_ support **or** be able to
    contact remote servers though PHP. If you are unsure if this is the
    case, contact your Host or server admin.
+-  **Multibyte Support**  For full support of multibyte encodings you must 
+   set mbstring.func_overload to 6 in your server configuration.  This may 
+   be done by editing your  your php.ini file as per the below and then 
+   restarting:
+
+::
+
+	; overload(replace) single byte functions by mbstring functions.
+	; mail(), ereg(), etc are overloaded by mb_send_mail(), mb_ereg(),
+	; etc. Possible values are 0,1,2,4 or combination of them.
+	; For example, 7 for overload everything.
+	; 0: No overload
+	; 1: Overload mail() function
+	; 2: Overload str*() functions
+	; 4: Overload ereg*() functions
+	mbstring.func_overload = 6
+	
 
 Notes
 -----
