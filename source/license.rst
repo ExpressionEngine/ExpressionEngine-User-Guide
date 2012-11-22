@@ -28,7 +28,7 @@ Permitted Use
 
    - Users of an ExpressionEngine 2.x License may use the Software
      on a website engaging in either commercial or non-commercial activities.
-   - Users of the free trial of the software must purchase a license to
+   - Users of the Software free trial must purchase a license to
      continue using the Software after the trial period.
 
 -  **ExpressionEngine 1.x Licenses:**
