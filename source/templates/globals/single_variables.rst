@@ -59,6 +59,18 @@ members who have access to the Control Panel
 
 .. _global-current_time:
 
+current_path
+------------
+
+::
+
+	{current_path}
+
+This variable outputs the current URI path relative to your ExpressionEngine
+installation, e.g. *news/article/man-captures-all-the-rabbits*.
+
+**Note:** If there are no URL segments, this will output a slash: */*
+
 current\_time
 -------------
 
@@ -76,6 +88,15 @@ standard `date variable formatting <../date_variable_formatting.html>`_::
 {current\_time} is parsed very early on in the Template parser, which
 allows you to make dynamic use of it in your tags, for instance as a tag
 parameter, or in a conditional.
+
+current_url
+-----------
+
+::
+
+	{current_url}
+
+This variable displays the full current URL.
 
 debug\_mode
 -----------
