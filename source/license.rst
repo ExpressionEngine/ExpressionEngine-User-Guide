@@ -90,7 +90,7 @@ Technical Support
 -----------------
 
 Technical support is provided as described in the `Support
-Policy <http://support.ellislab.com/policy>`_.
+Policy <https://support.ellislab.com/policy>`_.
 
 Refund Policy
 -------------
