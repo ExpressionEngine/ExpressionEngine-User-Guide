@@ -96,11 +96,12 @@ Refund Policy
 -------------
 
 Due to the non-returnable nature of downloadable software, EllisLab, Inc. does
-not issue refunds once a transaction has been completed. ExpressionEngine is
-available for free evaluation prior to purchasing. We encourage you to
-thoroughly test the system you are interested in before purchasing to
-determine its suitability for your purposes and compatibility with your
-hosting account.
+not issue refunds once a transaction has been completed. If you have questions
+about whether or not ExpressionEngine will work for you, please <a
+href="http://ellislab.com/about">contact us</a> to request a free trial. We
+encourage you to thoroughly test the system you are interested in before
+purchasing to determine its suitability for your purposes and compatibility
+with your hosting account.
 
 Indemnity
 ---------
