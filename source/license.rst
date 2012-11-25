@@ -8,7 +8,7 @@ Add-ons you agree to be bound by the terms and conditions of this
 license. EllisLab, Inc. reserves the right to alter this agreement at
 any time, for any reason, without notice.**
 
-Revised on: 22 November, 2012
+Revised on: 25 November, 2012
 
 ExpressionEngine Installations
 ------------------------------
