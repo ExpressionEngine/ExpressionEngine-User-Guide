@@ -1,11 +1,11 @@
 Requirements
 ============
 
-We have created a `Server Wizard <http://expressionengine.com/files/ee_server_wizard.zip>`_ that
+We have created a `Server Wizard <http://ellislab.com/asset/file/ee_server_wizard.zip>`_ that
 will verify whether your server is compatible with ExpressionEngine. To
 use the Wizard:
 
--  `Download <http://expressionengine.com/files/ee_server_wizard.zip>`_
+-  `Download <http://ellislab.com/asset/file/ee_server_wizard.zip>`_
    and unzip the archive.
 -  Upload the folder to your server.
 -  Point your web browser to the folder. For example:
