@@ -19,7 +19,7 @@ from the list.
 To access the Mailing List-backed functions, go to :menuselection:`Add-Ons --> Modules --> Mailing List`
 in your Control Panel. There you will be able to create and
 manage your mailing lists, as well as find and delete email addresses.
-See `Mailing List control panel <control_panel/index.html>`_ for more
+See :doc:`Mailing List control panel <control_panel/index>` for more
 information. To send email to any of your lists you will use the Control
 Panel `Communicate Page <../../cp/tools/communicate.html>`_.
 

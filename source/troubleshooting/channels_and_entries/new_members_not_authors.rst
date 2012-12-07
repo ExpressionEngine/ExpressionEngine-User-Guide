@@ -8,9 +8,10 @@ Troubleshooting
 ---------------
 
 Members must be specifically added to the multi-author list. For
-individual members, this can be done via Members > View All, clicking
-the member's name and checking "Include user in PUBLISH page
-multi-author list?" under "Member Preferences".
+individual members, this can be done via :menuselection:`Members -->
+View All`, clicking the member's name and checking **Include user in
+PUBLISH page multi-author list?** under "Member Preferences".
 
 The appropriate permission for entire member groups can be set at
-Members > Member Groups > Edit Group > Member Account Privileges.
+:menuselection:`Members --> Member Groups --> Edit Group --> Member
+Account Privileges`.

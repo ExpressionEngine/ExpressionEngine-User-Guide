@@ -286,7 +286,7 @@ functionality.
 The list can also be shown in a flat "linear" style.
 
 For more information about how this option works see the parameter
-description on the `Channel Categories <categories.html>`_ page.
+description on the :doc:`Channel Categories <categories>` page.
 
 Variable Pairs
 --------------

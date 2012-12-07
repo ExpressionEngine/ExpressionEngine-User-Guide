@@ -4,7 +4,7 @@ Wiki Control Panel
 After the initial setup in the Control Panel, all page creation and
 editing is handled through the Wiki itself. This means your users do not
 need Control Panel access to create new pages and edit pages on your
-wiki. See `Using the Wiki <wiki_syntax.html>`_ for more information.
+wiki. See :doc:`Using the Wiki <wiki_syntax>` for more information.
 
 Creating Wikis
 --------------
@@ -45,7 +45,7 @@ Text Formatting for articles
 You can use either **XHTML** or **BBCode** in Wiki articles.
 
 To create pages, categories, and learn more about typical Wiki use
-please see the `Wiki syntax <wiki_syntax.html>`_ documentation.
+please see the :doc:`Wiki syntax <wiki_syntax>` documentation.
 
 File Upload Directory for Wiki
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,14 +60,14 @@ Administrator Groups
 ~~~~~~~~~~~~~~~~~~~~
 
 Admins can Moderate, Lock, and Delete wiki articles in addition to all
-the User Group priviliges. Please see the `Wiki
-Users <wiki_users.html>`_ section for details.
+the User Group priviliges. Please see the :doc:`Wiki
+Users <wiki_users>` section for details.
 
 User Groups
 ~~~~~~~~~~~
 
 These Member Groups have access to the wiki. They can add and edit
-articles and categories. Please see the `Wiki Users <wiki_users.html>`_
+articles and categories. Please see the :doc:`Wiki Users <wiki_users>`
 section for details.
 
 Number of Revisions to Keep Per Article
@@ -87,7 +87,7 @@ Email Addresses for Moderation Notifications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When an article is moderated an email can be sent to alert Admins of the
-changes. Please see the `Wiki Users <wiki_users.html>`_ section for
+changes. Please see the :doc:`Wiki Users <wiki_users>` section for
 details.
 
 Namespaces

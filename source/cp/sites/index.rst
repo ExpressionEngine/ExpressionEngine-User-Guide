@@ -41,21 +41,21 @@ Requirements
 -  ExpressionEngine 2.0 or later
 -  All Sites must reside on the same server
 -  If using sub-domains or domains, directories must be able to access
-   your main installation system directory. Please see `Setup Domains
-   and Sub-domains <domainsetup.html>`_ for more information.
+   your main installation system directory. Please see :doc:`Setup Domains
+   and Sub-domains <domainsetup>` for more information.
 -  License holder must be the owner of all Sites
 
 Table of Contents
 -----------------
 
--  `Overview of the Multiple Site Manager <overview.html>`_
--  `Install/Update Multiple Site Manager <install.html>`_
--  `Create a new Site <createsite.html>`_
--  `Setup domains and sub-domains <domainsetup.html>`_
--  `Sites Variables and Parameters <code.html>`_
--  `Manage existing Sites <managesites.html>`_
--  `Purchase Additional Sites <additional_sites.html>`_
--  `Change Log <msm_changelog.html>`_
+-  :doc:`Overview of the Multiple Site Manager <overview>`
+-  :doc:`Install/Update Multiple Site Manager <install>`
+-  :doc:`Create a new Site <createsite>`
+-  :doc:`Setup domains and sub-domains <domainsetup>`
+-  :doc:`Sites Variables and Parameters <code>`
+-  :doc:`Manage existing Sites <managesites>`
+-  :doc:`Purchase Additional Sites <additional_sites>`
+-  :doc:`Change Log <msm_changelog>`
 
 .. toctree::
 	:glob:

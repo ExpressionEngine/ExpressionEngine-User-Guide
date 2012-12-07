@@ -6,8 +6,8 @@ a site as outlined below:
 
 |Displays all the categories in the wiki.|
 
-In addition to the variables in the `Wiki Page
-template <wiki_templates_page.html>`_, the Special Categories template
+In addition to the variables in the :doc:`Wiki Page
+template <wiki_templates_page>`, the Special Categories template
 makes use of the the following **Tags**:
 
 .. _wiki-categories-tag:
@@ -16,7 +16,7 @@ makes use of the the following **Tags**:
 -----------------
 
 This tag is used to display all the wiki's categories. When put into the
-`Wiki Article <./wiki_templates_article.html>`_ template, it will only
+:doc:`Wiki Article </modules/wiki/wiki_templates_article>` template, it will only
 show the categories for that specific article. It has
 :ref:`Parameters <wiki-categories-parameters>` and
 :ref:`Variables <wiki-categories-variables>` available to it.

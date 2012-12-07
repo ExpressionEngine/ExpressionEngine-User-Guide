@@ -6,7 +6,7 @@ system/expressionengine/config/config.php and are used to over-ride
 default behavior. These are advanced configuration options that should
 only be used by experienced ExpressionEngine users. More
 performance-related configuration options can be found in
-`Handling Extreme Traffic with ExpressionEngine <handling_extreme_traffic.html>`_.
+:doc:`Handling Extreme Traffic with ExpressionEngine <handling_extreme_traffic>`.
 
 .. contents::
 	:local:
@@ -210,6 +210,14 @@ Removes the textarea only restriction for fields in the moblog module.
 
 	$config['moblog_allow_nontextareas'] = 'y';
 
+path_third_themes
+~~~~~~~~~~~~~~~~~
+
+**Value:** Valid path to ``themes/third_party`` directory.
+
+Overrides the ``themes/third_party`` paths so you can move your ``themes/third_party``
+directory outside of your themes directory. Use in conjunction with `url_third_themes`_.
+
 popup_link
 ~~~~~~~~~~
 
@@ -228,7 +236,7 @@ protect_javascript
 **Value:** y/n
 
 Prevents the advanced conditionals parser from processing anything in
-tags. By default, it's set to 'y'.
+``<script>`` tags. By default, it's set to 'y'.
 
 ::
 
@@ -317,25 +325,6 @@ templates when Debug has been forcibly set to 0 in your config file.
 
 	$config['remove_unparsed_vars'] = 'y';
 
-
-session_ip_accuracy
-~~~~~~~~~~~~~~~~~~~
-
-**Value:** 0-4
-
-When checking the session table, we make sure that the user's IP address and
-user agent (browser) haven't changed. If you or one of your user's had a dynamic
-IP that changed frequently then they could be logged out when the IP changes.
-Using this hidden config you can decide how accurate you want the check to be.
-For example, If their IP changed from 192.168.1.1 to 192.168.200.200, and the
-accuracy was ``2`` they would **not** be logged out, but if the accuracy was
-``3`` they would be logged out.
-
-::
-
-	$config['session_ip_accuracy'] = 4;
-
-
 smart_static_parsing
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -389,6 +378,14 @@ upload destinations cannot be created using this configuration variable.
 	        'url'         => 'http://staging.example.com/images/uploads/'      // URL of upload directory
 	    )
 	);
+
+url_third_themes
+~~~~~~~~~~~~~~~~
+
+**Value:** Valid URL to ``themes/third_party`` directory.
+
+Overrides the ``themes/third_party`` URL so you can move your ``themes/third_party``
+directory outside of your themes directory. Use in conjunction with `path_third_themes`_.
 
 use_forum_url
 ~~~~~~~~~~~~~

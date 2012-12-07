@@ -38,14 +38,15 @@ basic compatibility with ExpressionEngine.
 
 You can skip this step if you are not saving templates as files.
 
-From the Control Panel, go to Design > Templates > Synchronize
-Templates, select all templates and click Submit.
+From the Control Panel, go to :menuselection:`Design --> Templates -->
+Template Manager --> Synchronize Templates`, select all templates and
+click Submit.
 
 3. Clear Caches
 ----------------
 
-Go to Tools > Data > Clear Caching. Select **All Caches** and click
-Submit.
+Go to :menuselection:`Tools --> Data --> Clear Caching`. Select **All
+Caches** and click Submit.
 
 4. Back-up Database and Files
 -----------------------------
@@ -122,13 +123,13 @@ and **9** are correct.
 There are typically several areas of the Control Panel in which paths
 may need to be updated, including:
 
--  Admin > General Configuration
--  Admin > Security and Privacy > Captcha Preferences
--  Admin > System Administration > Emoticon Preferences
--  Content > Files > File Upload Preferences
--  Members > Preferences
--  Design > Templates > Global Preferences
--  Admin > Channel Administration > Channels
+-  :menuselection:`Admin --> General Configuration`
+-  :menuselection:`Admin --> Security and Privacy --> Captcha Preferences`
+-  :menuselection:`Admin --> System Administration --> Emoticon Preferences`
+-  :menuselection:`Content --> Files --> File Upload Preferences`
+-  :menuselection:`Members --> Preferences`
+-  :menuselection:`Design --> Templates --> Global Preferences`
+-  :menuselection:`Admin --> Channel Administration --> Channels`
 
 You can also set many of these paths in your config.php file using
 configuration variables::
@@ -165,8 +166,8 @@ configuration variables::
 11. Clear Caches (Again!)
 -------------------------
 
-Go to Tools > Data > Clear Caching. Select **All Caches** and click
-Submit.
+Go to :menuselection:`Tools --> Data --> Clear Caching`. Select **All
+Caches** and click Submit.
 
 You're Done!
 ------------

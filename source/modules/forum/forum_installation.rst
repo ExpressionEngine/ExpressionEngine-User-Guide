@@ -8,7 +8,7 @@ ExpressionEngine.
 
 These instructions are **only** for first-time installations. **Do not
 follow the instructions below if you need to *update* your forum
-installation.** Instead, follow the `Forum Update <forum_update.html>`_
+installation.** Instead, follow the :doc:`Forum Update <forum_update>`
 instructions.
 
 Step 1

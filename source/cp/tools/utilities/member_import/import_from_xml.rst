@@ -17,7 +17,7 @@ create new unique IDs for each member without overwriting any existing
 members.
 
 The Import from XML utility enables you import members from an XML file
-in ExpressionEngine's `Member XML Format <member_xml_format.html>`_.
+in ExpressionEngine's :doc:`Member XML Format <member_xml_format>`.
 
 The utility itself contains the instructions needed to assist you during
 the XML import, and you should read each area carefully before

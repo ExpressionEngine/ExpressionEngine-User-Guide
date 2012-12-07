@@ -8,7 +8,7 @@ Add-ons you agree to be bound by the terms and conditions of this
 license. EllisLab, Inc. reserves the right to alter this agreement at
 any time, for any reason, without notice.**
 
-Revised on: 28 June, 2011
+Revised on: 25 November, 2012
 
 ExpressionEngine Installations
 ------------------------------
@@ -19,27 +19,17 @@ installations as needed to support the live installation (such as
 development and a staging servers). Additional installations require
 additional license purchases. If you have specific installation needs
 not covered by this license, please `Contact
-Us <http://expressionengine.com/support>`_.
+Us <http://ellislab.com/about>`_.
 
 Permitted Use
 -------------
 
 -  **ExpressionEngine 2.x Licenses:**
 
-   -  **Freelancer License:** Users of the Freelancer License may use
-      the Software **only** for their own professional web presence. The
-      Freelancer license may not be used for client work. The Freelancer
-      License may only be purchased by individuals or businesses with
-      three employees or less. Only one Freelancer license is allowed
-      per business entity. Only one Freelancer license is allowed per
-      ExpressionEngine.com account.
-   -  **Non-Commercial License:** Users of the Non-Commercial License
-      may use the Software **only** on a website engaging in personal,
-      non-commercial, or non-profit activities.
-   -  **Commercial License:** Users of the Commercial License may use
-      the Software on a website engaging a commercial, or for-profit
-      activities. Websites engaging in direct, or indirect commercial
-      activities must purchase a Commercial License.
+   - Users of an ExpressionEngine 2.x License may use the Software
+     on a website engaging in either commercial or non-commercial activities.
+   - Users of the Software free trial must purchase a license to
+     continue using the Software after the trial period.
 
 -  **ExpressionEngine 1.x Licenses:**
 
@@ -100,18 +90,18 @@ Technical Support
 -----------------
 
 Technical support is provided as described in the `Support
-Policy <http://expressionengine.com/support/policy>`_. No
-representations or guarantees are made regarding the response time in
-which support questions are answered.
+Policy <https://support.ellislab.com/policy>`_.
 
 Refund Policy
 -------------
 
-We offer a 30 day, money back `Refund
-Policy <http://expressionengine.com/support/refund_policy>`_. If for any
-reason ExpressionEngine doesn’t work out for your project, simply `email
-sales <mailto:sales@expressionengine.com>`_ within 30 days of purchase
-for a full refund.
+Due to the non-returnable nature of downloadable software, EllisLab, Inc. does
+not issue refunds once a transaction has been completed. If you have questions
+about whether or not ExpressionEngine will work for you, please `contact
+us <http://ellislab.com/about>`_ to request a free trial. We encourage you to
+thoroughly test the system you are interested in before purchasing to
+determine its suitability for your purposes and compatibility with your
+hosting account.
 
 Indemnity
 ---------

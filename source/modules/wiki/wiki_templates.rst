@@ -19,41 +19,41 @@ one.
 Templates
 ---------
 
--  `Wiki Page <wiki_templates_page.html>`_: This is the **wrapper**
+-  :doc:`Wiki Page <wiki_templates_page>`: This is the **wrapper**
    template that contains the header, sidebar and navigation.
--  `Wiki Article <wiki_templates_article.html>`_: Displays the article
+-  :doc:`Wiki Article <wiki_templates_article>`: Displays the article
    and a list of its assigned categories.
--  `Wiki History <wiki_templates_history.html>`_: Displays an article's
+-  :doc:`Wiki History <wiki_templates_history>`: Displays an article's
    history.
--  `Wiki Edit <wiki_templates_edit.html>`_: Displays a article's editing
+-  :doc:`Wiki Edit <wiki_templates_edit>`: Displays a article's editing
    interface.
--  `Wiki File <wiki_templates_file.html>`_: Information about a single
+-  :doc:`Wiki File <wiki_templates_file>`: Information about a single
    uploaded file.
 -  **Special sections**: Pages created dynamically by the wiki.
 
-   -  `Recent Changes <wiki_templates_special_recent_changes.html>`_:
+   -  :doc:`Recent Changes <wiki_templates_special_recent_changes>`:
       The most recently changed wiki articles.
-   -  `Categories <wiki_templates_special_categories.html>`_: All wiki
+   -  :doc:`Categories <wiki_templates_special_categories>`: All wiki
       categories.
-   -  `Titles <wiki_templates_special_titles.html>`_: All wiki articles
+   -  :doc:`Titles <wiki_templates_special_titles>`: All wiki articles
       by title.
-   -  `Uncategorized <wiki_templates_special_uncategorized.html>`_:
+   -  :doc:`Uncategorized <wiki_templates_special_uncategorized>`:
       Lists all uncategorized wiki articles.
-   -  `Search Results <wiki_templates_special_search_results.html>`_:
+   -  :doc:`Search Results <wiki_templates_special_search_results>`:
       Displays wiki search results.
-   -  `Files list <wiki_templates_special_files.html>`_: Lists all of
+   -  :doc:`Files list <wiki_templates_special_files>`: Lists all of
       the files uploaded to the wiki.
-   -  `Upload Form <wiki_templates_special_upload_form.html>`_: Creates
+   -  :doc:`Upload Form <wiki_templates_special_upload_form>`: Creates
       the wiki's upload form.
-   -  `Associated
-      Pages <wiki_templates_special_associated_pages.html>`_: Lists
+   -  :doc:`Associated
+      Pages <wiki_templates_special_associated_pages>`: Lists
       pages that link to the current article.
 
--  `RSS and ATOM feeds <wiki_templates_special_feeds.html>`_: The
+-  :doc:`RSS and ATOM feeds <wiki_templates_special_feeds>`: The
    templates used to generate the wiki's feeds.
--  `Wiki Email Moderation Message <wiki_templates_special_email.html>`_:
+-  :doc:`Wiki Email Moderation Message <wiki_templates_special_email>`:
    Used to create the article moderator notification email body.
--  `Wiki Email Moderation Subject <wiki_templates_special_email.html>`_:
+-  :doc:`Wiki Email Moderation Subject <wiki_templates_special_email>`:
    Used to create the article moderator notification email subject.
 -  Wiki Style: The stylesheet used by all of a theme's templates.
 

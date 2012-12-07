@@ -171,8 +171,8 @@ search terms they used::
 
 This may also be used on the template specified by the
 `no\_result\_page <advanced.html#no-result-page>`_ parameter of the
-`simple search form <simple.html>`_ and `advanced search
-form <advanced.html>`_.
+:doc:`simple search form <simple>` and :doc:`advanced search
+form <advanced>`.
 
 There are no parameters or variables associated with this
 ExpressionEngine tag.
@@ -191,8 +191,8 @@ of matches::
 
 This may also be used on the template specified by the
 `no\_result\_page <advanced.html#no-result-page>`_ parameter of the
-`simple search form <simple.html>`_ and `advanced search
-form <advanced.html>`_.
+:doc:`simple search form <simple>` and :doc:`advanced search
+form <advanced>`.
 
 The only variable associated with this tag is {total\_results}.
 

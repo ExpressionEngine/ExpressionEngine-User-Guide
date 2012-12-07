@@ -1,7 +1,7 @@
 Setup Domains and Sub-domains
 =============================
 
-It is recommended that you `Create a Site <createsite.html>`_ before
+It is recommended that you :doc:`Create a Site <createsite>` before
 setting up the domain or sub-domain.
 
 Step 1
@@ -110,6 +110,6 @@ example::
      $assign_to_config['cp_url']    = 'http://domain2.com/admin.php';
      $assign_to_config['site_url']  = 'http://domain2.com';
 
-Next: `Sites Variables and Parameters <code.html>`_
+Next: :doc:`Sites Variables and Parameters <code>`
 ===================================================
 

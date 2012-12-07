@@ -238,7 +238,7 @@ It works together with the "Time Between Checks" setting in the Control
 Panel . Whenever a visitor to your site loads a Template with this Tag
 on it, ExpressionEngine will look to see if the necessary amount of time
 has passed based on the "Time Between Checks" setting for this moblog
-(Modules > `Moblog <control_panel/index.html#create_a_new_moblog>`_ in
+(:menuselection:`Add-Ons --> Modules --> Moblog` in
 the Control Panel). If the necessary time has passed since the last time
 a check was performed then ExpressionEngine will check the specified
 Moblog(s) for new messages.
@@ -294,7 +294,7 @@ moblogs::
 Control Panel
 *************
 
-See the `Moblog Module Control Panel <control_panel/index.html>`_ page.
+See the :doc:`Moblog Module Control Panel <control_panel/index>` page.
 
 .. toctree::
 	:glob:

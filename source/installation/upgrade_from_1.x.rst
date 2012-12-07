@@ -23,13 +23,15 @@ to ExpressionEngine 2.x.
    errors or other anomalies that may occur while you are uploading
    files. Here is one approach:
 
-   #. Copy system/utilities/offline.html to your web
-      root folder (the same place you have your main index.php file).
-   #. Rename offline.html to index.html. Now your visitors will see the
-      "offline" page while you upgrade your site.
+   #. Copy :file:`system/utilities/offline.html` to your web
+      root folder (the same place you have your main :file:`index.php`
+      file).
+   #. Rename :file:`offline.html` to :file:`index.html`. Now your
+      visitors will see the "offline" page while you upgrade your site.
 
--  In your ExpressionEngine Control Panel, go to Admin > Utilities >
-   Clear Cached Data Files. Select **All Caches** and click Submit.
+-  In your ExpressionEngine Control Panel, go to
+   :menuselection:`Admin --> Utilities --> Clear Cached Data Files`.
+   Select **All Caches** and click Submit.
 
 2. Rename Old Files and Folders
 -------------------------------
@@ -38,10 +40,10 @@ Rename the following files and folders so that they will not conflict
 with the new EE 2.x versions, but will still be available if it's
 necessary to roll-back to 1.x for some reason.
 
--  Rename index.php to **index.php\_old**
--  Rename system/ to **system\_old/** (you may have previously re-named
-   "system" to something else)
--  Rename themes/ to **themes\_old/**
+-  Rename :file:`index.php` to :file:`index.php\_old`
+-  Rename :file:`system/` to :file:`system\_old/` (you may have
+   previously re-named "system" to something else)
+-  Rename :file:`themes/` to :file:`themes\_old/`
 
 3. Upload New Files
 -------------------
@@ -49,27 +51,27 @@ necessary to roll-back to 1.x for some reason.
 Using an FTP program such as WS\_FTP, SmartFTP, Transmit or Fetch,
 upload the following ExpressionEngine 2.x files and folders:
 
--  admin.php
--  index.php
--  system/
--  themes/
+-  :file:`admin.php`
+-  :file:`index.php`
+-  :file:`system/`
+-  :file:`themes/`
 
 4. Restore Some 1.x Files
 -------------------------
 
--  Copy your old 1.x version of system/config.php to
-   system/expressionengine/config/config.php
+-  Copy your old 1.x version of :file:`system/config.php` to
+   :file:`system/expressionengine/config/config.php`
 -  If you saved your templates as flat files in 1.x, upload the contents
-   of your 1.x system/templates/ directory to
-   system/expressionengine/templates/default\_site/ and verify
+   of your 1.x :file:`system/templates/` directory to
+   :file:`system/expressionengine/templates/default\_site/` and verify
    permissions on the folder are set to 777. The upgrader will sync your
    templates with the database and archive the old files.
 
 .. important:: If running the Multiple Site Manager and saving templates
    as files, you will need to create template folders for each site and and
    copy your 1.x templates into the proper folders. The folders should
-   reside in system/expressionengine/templates and be the same as each Site
-   Short Name.
+   reside in :file:`system/expressionengine/templates` and be the same
+   as each Site Short Name.
 
 For example, if you have 3 Sites:
 
@@ -79,9 +81,9 @@ For example, if you have 3 Sites:
 
 You would copy the appropriate 1.x template files to each of:
 
--  system/expressionengine/templates/default\_site/
--  system/expressionengine/templates/products/
--  system/expressionengine/templates/company\_news/
+-  :file:`system/expressionengine/templates/default\_site/`
+-  :file:`system/expressionengine/templates/products/`
+-  :file:`system/expressionengine/templates/company\_news/`
 
 Ensure each folder is set to 777 permissions.
 
@@ -97,12 +99,12 @@ contact your host for this.
 
 -  Set the following files to 666:
 
-   -  system/expressionengine/config/config.php
-   -  system/expressionengine/config/database.php
+   -  :file:`system/expressionengine/config/config.php`
+   -  :file:`system/expressionengine/config/database.php`
 
 -  Set the following folders to 777:
 
-   -  system/expressionengine/cache/ (and subfolders)
+   -  :file:`system/expressionengine/cache/` (and subfolders)
 
 6. Run The Upgrade Wizard
 -------------------------
@@ -113,7 +115,7 @@ contact your host for this.
 -  Once the Upgrade Wizard is finished, remove the following folder from
    your server:
 
-   -  system/installer/
+   -  :file:`system/installer/`
 
 7. Upgrade Add-ons
 ------------------
@@ -121,9 +123,9 @@ contact your host for this.
 -  If the Discussion Forum or Multiple Site Manager are installed, these
    need to be upgraded at this time:
 
-   -  `Discussion Forum Update
-      Instructions <../modules/forum/forum_update.html>`_
-   -  `MSM Update Instructions <../cp/sites/install.html>`_
+   -  :doc:`Discussion Forum Update
+      Instructions </modules/forum/forum_update>`
+   -  :doc:`MSM Update Instructions </cp/sites/install>`
 
 -  Upgrade any third-party add-ons by following the upgrade instructions
    for each add-on.
@@ -134,7 +136,7 @@ contact your host for this.
 Please review the following to determine if any additional steps need to
 be taken:
 
--  The `Version Notes <version_notes.html>`_ will outline any
+-  The :doc:`Version Notes </installation/version_notes>` will outline any
    version-specific changes that may need to be made.
 -  If you use a local version of the documentation, replace your copy
    with the latest from our `Download
@@ -149,6 +151,6 @@ Post-Installation Best Practices
 --------------------------------
 
 Once you are confident that ExpressionEngine 2.x is working normally on
-your server, there are `recommended best
-practices <best_practices.html>`_ for protecting your installation
-against common security risks.
+your server, there are :doc:`recommended best practices
+</installation/best_practices>` for protecting your installation against
+common security risks.

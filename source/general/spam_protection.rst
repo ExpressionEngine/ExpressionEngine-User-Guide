@@ -41,7 +41,7 @@ When the CAPTCHA is enabled, an image containing a random word appears
 next to the comment and member registration forms. In order to submit
 the form, the word must be typed into a form field.
 
-ExpressionEngine can use `CAPTCHAs <captchas.html>`_ for comment
+ExpressionEngine can use :doc:`CAPTCHAs <captchas>` for comment
 submission and member registration.
 
 Comment Time Interval

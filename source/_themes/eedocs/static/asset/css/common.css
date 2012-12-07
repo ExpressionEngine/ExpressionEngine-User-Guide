@@ -324,3 +324,19 @@ fieldset{ border: 0; }
 @media screen and (-webkit-min-device-pixel-ratio:0){
 	#header input[type="submit"]{ padding-bottom: 7px; }
 }
+
+.download-bar{
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 5px;
+}
+
+	.download-bar a{
+	    background-color: #3B7EB0;
+	    color: #FFFFFF;
+	    font-size: 12px;
+	    margin-left: 5px;
+	    padding: 5px 8px;
+	}

@@ -8,6 +8,6 @@ Troubleshooting Comments
 ------------------------
 
 This message appears when a user tries to submit a comment identical to
-an already-existing one. This anti-spam measure can be turned off via
-the "Deny Duplicate Data?" preference under Admin > Security and Session
-Preferences.
+an already-existing one. This anti-spam measure can be turned off with
+the **Deny Duplicate Data?** preference under :menuselection:`Admin -->
+Security and Privacy -->  Security and Sessions`.

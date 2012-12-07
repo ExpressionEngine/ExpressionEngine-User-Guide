@@ -19,7 +19,7 @@ any URL desired.
 Managing Page Content
 *********************
 
-The `Pages Module Control Panel <control_panel/index.html>`_ allows you
+The :doc:`Pages Module Control Panel <control_panel/index>` allows you
 to create, edit, view and delete your Pages.
 
 .. note:: In order to allow content authors full access to create and modify
@@ -96,7 +96,7 @@ look like:
 Control Panel
 *************
 
-See the `Pages Module Control Panel <control_panel/index.html>`_ page.
+See the :doc:`Pages Module Control Panel <control_panel/index>` page.
 
 .. toctree::
 	:glob:

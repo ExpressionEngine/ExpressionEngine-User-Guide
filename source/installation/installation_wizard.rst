@@ -61,8 +61,8 @@ b. Server Settings
 c. Database Settings
 ~~~~~~~~~~~~~~~~~~~~
 
-These are the settings you wrote down in Step 1 of the `installation
-instructions <installation.html>`_.
+These are the settings you wrote down in Step 1 of the :doc:`installation
+instructions <installation>`.
 
 .. figure:: ../images/installer_database_settings.png
    :align: center

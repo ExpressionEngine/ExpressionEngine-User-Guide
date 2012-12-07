@@ -36,6 +36,6 @@ of the documentation.
 -  *Installation wide*: Refers to items that apply to the entire
    ExpressionEngine installation and are not Site Specific.
 
-Next: `Install Multiple Site Manager <install.html>`_
+Next: :doc:`Install Multiple Site Manager <install>`
 =====================================================
 

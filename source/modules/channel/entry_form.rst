@@ -1,12 +1,11 @@
 Stand-Alone Entry Form
 ======================
 
-**IMPORTANT:** This tag is deprecated in favor of
-`SafeCracker <../safecracker/index.html>`_ and will be removed from
-future versions of ExpressionEngine. It is no longer supported. Thank
-you to `Barrett Newton <http://barrettnewton.com/>`_ for developing
-SafeCracker and working with EllisLab to provide it to the
-ExpressionEngine community.
+.. deprecated:: 2.1.5
+   This tag is deprecated in favor
+   of :doc:`SafeCracker </modules/safecracker/index>` and will be 
+   removed from future versions of ExpressionEngine. It is no longer 
+   supported.
 
 Using this tag, you can create an entry form to submit entries to any of
 your channels outside of the Control Panel.
@@ -151,8 +150,8 @@ Input Fields
 
 All of the fields available on the Control Panel Publish page are
 available. However, the only *required* fields are the Title field and
-any entry fields which you have specified in your Admin > Custom Channel
-Fields as required.
+any entry fields which you have specified in :menuselection:`Admin
+--> Channel Fields` as required.
 
 
 Allow Comments
@@ -348,8 +347,8 @@ hidden\_pings=
 If you don't wish to include the form options on the page to select the
 servers to ping, then you can specify whether or not to send the pings
 via this parameter. Options are "yes" and "no". If you select "yes",
-then EE will send a ping to all of the servers that are specified under
-Admin > Default Ping Servers.
+then EE will send a ping to all of the servers that are specified at
+:menuselection:`Admin --> Default Ping Servers`.
 
 preview=
 ~~~~~~~~
@@ -405,9 +404,9 @@ status=
 
 If you don't wish to include the form option on the page you can set the
 status that you wish to assign the entry to. Simply use the name of the
-status as specified under Admin > Channel Administration > Statuses. The
-two statuses "open" and "closed" are default statuses that are always
-available, so you can always specify those if needed.
+status as specified in :menuselection:`Admin --> Channel Administration
+--> Statuses`. The two statuses "open" and "closed" are default statuses
+that are always available, so you can always specify those if needed.
 
 sticky\_entry=
 ~~~~~~~~~~~~~~

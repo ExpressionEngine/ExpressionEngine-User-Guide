@@ -790,19 +790,24 @@ file fields without the entire file manager. You are presented with a
 simple file input, and if applicable, a thumbnail and a "remove file"
 checkbox. You specify the upload location in the field settings.
 SafeCracker File may be used in both SafeCracker Entry Forms and the CP
-Publish Form. It is also a Matrix celltype.
+Publish Form. SafeCracker File inherits the tags of the standard
+`File Field <../channel/custom_fields.html#file-field>`_.
+
+SafeCracker File may be used as a Matrix celltype and as a Low Variables
+variable type. If you are using it as a Low Variable, you must use the
+`parse tag <http://gotolow.com/addons/low-variables/docs/tags#parse-tag>`_.
 
 ********
 Examples
 ********
 
-See `SafeCracker Examples <examples.html>`_ for more complete examples of SafeCracker usage.
+See :doc:`SafeCracker Examples <examples>` for more complete examples of SafeCracker usage.
 
 **********************
 Control Panel Settings
 **********************
 
-See the `SafeCracker Module Control Panel <control_panel/index.html>`_ page.
+See the :doc:`SafeCracker Module Control Panel <control_panel/index>` page.
 
 
 ***********

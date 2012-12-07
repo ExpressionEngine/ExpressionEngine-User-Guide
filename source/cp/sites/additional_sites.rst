@@ -44,6 +44,6 @@ to your system/expressionengine/language/english directory.
 That's it, the Additional Sites are now installed. You can can now
 proceed with creating a new site.
 
-Next: `Create a New Site <createsite.html>`_
+Next: :doc:`Create a New Site <createsite>`
 ============================================
 

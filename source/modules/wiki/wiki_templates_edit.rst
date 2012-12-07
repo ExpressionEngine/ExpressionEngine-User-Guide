@@ -7,8 +7,8 @@ Page wrapper template as outlined below:
 
 |Dislays the editing interface for an article|
 
-In addition to the variables in the `Wiki Page
-template <wiki_templates_page.html>`_, the Edit template has:
+In addition to the variables in the :doc:`Wiki Page
+template <wiki_templates_page>`, the Edit template has:
 
 
 Single Variables
@@ -114,7 +114,7 @@ Tags
 ----
 
 The Wiki Edit Template can also use the **{wiki:files}** tag as
-described in the `Special Files <wiki_templates_special_files.html>`_
+described in the :doc:`Special Files <wiki_templates_special_files>`
 section. This is used to display a list of the wiki's uploaded files in
 the edit interface as outlined below:
 

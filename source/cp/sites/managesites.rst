@@ -93,8 +93,8 @@ created in SiteA will not be visible when viewing SiteB through the
 Control Panel.
 
 However, you can access any Channel or Template from any Site for
-display on any Site at the Template level using the new `site=""
-parameter <code.html>`_.
+display on any Site at the Template level using the new :doc:`site=""
+parameter <code>`.
 
 This would allow, for example, creating an installation wide
 Announcement Channel that can be displayed on all Sites.

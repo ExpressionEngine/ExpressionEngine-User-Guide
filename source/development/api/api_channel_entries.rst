@@ -14,9 +14,9 @@ function. ::
 	$this->EE->load->library('api');
 	$this->EE->api->instantiate('channel_entries');
 
-**Note:** the API uses a Singleton pattern and does not currently
-support nesting of calls. Thus instantiating a new call while in the
-middle of a request may have unanticipated results.
+.. note:: The API uses a Singleton pattern and does not currently support
+   nesting of calls. Thus instantiating a new call while in the middle of a
+   request may have unanticipated results.
 
 Function Reference
 ------------------
@@ -27,8 +27,9 @@ Function Reference
 Submit New Entry
 ~~~~~~~~~~~~~~~~
 
-This function will create a new channel entry. The data array must
-contain a title, an entry date, and data for all required fields. ::
+This function will create a new channel entry. The data array must contain a
+title and data for all required fields. If the entry date or edit date are not
+included in the data array, current time will be used instead. ::
 
 	$this->EE->api_channel_entries->submit_new_entry((int) $channel_id, (mixed) $data);
 
@@ -44,6 +45,7 @@ Example Usage::
 	$data = array(
 		'title'         => 'Breaking News Story!',
 		'entry_date'    => '1256953732',
+		'edit_date'     => '1351653729',
 		'field_id_6'    => 'Some data',
 		'field_ft_6'    => 'none',
 		'field_id_19'   => 'More data',
@@ -60,22 +62,23 @@ Example Usage::
 See also `setup\_entry\_settings() <api_channel_fields.html#>`_ in the
 Channel Fields API.
 
-**Note:** as part of the data normalization, custom data with a value of
-NULL is transformed to an empty string before database insertion.
+.. note:: As part of the data normalization, custom data with a value of NULL is
+   transformed to an empty string before database insertion.
 
 Update Entry
 ~~~~~~~~~~~~
 
-This function will update a channel entry. The data array must contain a
-title, an entry date, and data for all required fields. ::
+This function will update a channel entry. The data array must contain a title
+and data for all required fields. If the entry date or edit date are not
+included in the data array, current time will be used instead. ::
 
 	$this->EE->api_channel_entries->update_entry((int) $entry_id, (mixed) $data);
 
 :returns:
     (bool) Successfully Updated Entry
 
-**Note:** as part of the data normalization, custom data with a value of
-NULL is transformed to an empty string before database insertion.
+.. note:: As part of the data normalization, custom data with a value of NULL is
+   transformed to an empty string before database insertion.
 
 Delete Entry
 ~~~~~~~~~~~~

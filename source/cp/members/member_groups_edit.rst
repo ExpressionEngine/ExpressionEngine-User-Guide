@@ -1,9 +1,9 @@
 Member Groups - Create/Edit
 ===========================
 
-Control Panel Location: Members > Member Groups > Create/Edit
-This page describes each of the preferences available to your Member
-Groups.
+Control Panel Location: :menuselection:`Members --> Member Groups -->
+Create/Edit`. This page describes each of the preferences available to
+your Member Groups.
 
 Enable Group Security Lock
 --------------------------
@@ -74,8 +74,7 @@ typically located at:
 
 http://example.com/index.php/member/memberlist/
 
-Can delete own account - deletes all posts, entries, and comments as
-well
+Can delete own account - deletes all posts, entries, and comments as well
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determines whether a member of the group can delete their own account.
@@ -271,13 +270,13 @@ Can administrate system utilities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determines whether a member of the group is allowed to administrate
-Utilities, located at: Admin > Utilities.
+Utilities, located at :menuselection:`Admin --> Utilities`.
 
 Can administrate general preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determines whether a member of the group is allowed to administrate
-System Preferences, located at: Admin > System Preferences.
+System Preferences, located at :menuselection:`Admin --> System Preferences`.
 
 Can install/remove modules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

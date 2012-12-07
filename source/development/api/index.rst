@@ -36,15 +36,15 @@ via $this->EE->api\_channel\_entries->method\_name();
 Available APIs
 --------------
 
--  `Channel Categories <./api_channel_categories.html>`_ – Retrieve
+-  :doc:`Channel Categories </development/api/api_channel_categories>` – Retrieve
    information on Channel Categories.
--  `Channel Entries <./api_channel_entries.html>`_ – Retrieve
+-  :doc:`Channel Entries </development/api/api_channel_entries>` – Retrieve
    information on Channel Entries.
--  `Channel Fields <./api_channel_fields.html>`_ – Retrieve information
+-  :doc:`Channel Fields </development/api/api_channel_fields>` – Retrieve information
    on Channel Fields.
--  `Channel Structure <./api_channel_structure.html>`_ – Create, Modify,
+-  :doc:`Channel Structure </development/api/api_channel_structure>` – Create, Modify,
    Delete & Update Channels.
--  `Template Structure <./api_template_structure.html>`_ – Retrieve
+-  :doc:`Template Structure </development/api/api_template_structure>` – Retrieve
    information on Template Groups.
 
 Function Reference

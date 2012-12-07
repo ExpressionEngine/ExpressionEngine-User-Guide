@@ -67,4 +67,4 @@ inside your forum theme folder, access it directly from your browser
 http://example.com/themes/forum\_themes/your\_theme/convert\_forum\_theme.php)
 and follow the included instructions.
 
-`Return to Update Page <forum_update.html>`_
+:doc:`Return to Update Page <forum_update>`

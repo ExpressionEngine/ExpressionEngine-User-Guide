@@ -294,7 +294,7 @@ if segment\_*X*
 
 	{if segment_3 == "private"}  You're seeing something private!  {/if}
 
-You can test against one of the `URL Segments <url_segments.html>`_ that
+You can test against one of the :doc:`URL Segments <url_segments>` that
 are available. The conditional should be replaced with the correct
 segment name. e.g. if you're interested in URL Segment 3, then use {if
 segment\_3}.

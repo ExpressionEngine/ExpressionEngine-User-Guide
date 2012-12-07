@@ -97,16 +97,16 @@ In addition, your server must have the GD (or GD 2) image library
 support installed in order for CAPTCHAs to work.
 
 For ExpressionEngine installations that power multiple domains or
-subdomains, you may need to place the *server* path for the "Relative
-Path to Captcha Folder" setting under Admin > Captcha Preferences. A
-server path is typically something similar to
+subdomains, you may need to place the *server* path for the **Relative
+Path to Captcha Folder** setting under :menuselection:`Admin --> Captcha
+Preferences`. A server path is typically something similar to
 /home/domain.com/http\_docs/images/captchas/. The specific setting will
 vary from server to server so you may need to contact your Host or
 server admin to determine what your correct "server path" is.
 
 If your server does not have True Type font support compiled into PHP
-you should disable the use of True Type fonts under Admin > Security and
-Privacy > Captcha Preferences.
+you should disable the use of True Type fonts under :menuselection:`Admin
+--> Security` and :menuselection:`Privacy --> Captcha Preferences`.
 
 Special CAPTCHA Files
 ---------------------

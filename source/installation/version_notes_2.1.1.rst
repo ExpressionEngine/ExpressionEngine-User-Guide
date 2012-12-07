@@ -45,13 +45,6 @@ This template is used to send a single notifications to entry
 subscribers when multiple comments for that entry are opened at the same
 time during comment moderation.
 
-Added a new Email Notification Template: User Comments Added Notification
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This template is used to send a single notifications to entry
-subscribers when multiple comments for that entry are opened at the same
-time during comment moderation.
-
 Developers
 ----------
 

@@ -6,6 +6,24 @@ Channel Entries API Extension Hooks
 	:depth: 1
 
 
+api_channel_entries_custom_field_query
+--------------------------------------
+
+Modify the custom fields query array result. ::
+
+	$result = $this->EE->extensions->call('api_channel_entries_custom_field_query', $result);
+	if ($this->EE->extensions->end_script === TRUE) return;
+
+$result
+~~~~~~~
+
+Array of result from custom field query.
+
+:returns:
+    Array
+
+Added in v2.5.3
+
 entry\_submission\_end
 ----------------------
 

@@ -390,10 +390,10 @@ comment\_auto\_path
 
 	{comment_auto_path}
 
-This variable is replaced by the URL set in the "Comment Page URL"
-preference under Admin > Channel Management. No entry id, URL Title, or
-other information is included; this is simply the exact URL from the
-preference.
+This variable is replaced by the URL set in the **Comment Page URL**
+preference under :menuselection:`Admin --> Channel Management`. No entry
+id, URL Title, or other information is included; this is simply the
+exact URL from the preference.
 
 comment\_date
 -------------
@@ -413,9 +413,9 @@ comment\_entry\_id\_auto\_path
 
 	{comment_entry_id_auto_path}
 
-This variable is replaced by the URL set in the "Comment Page URL"
-preference under Admin > Channel Management. The ID number of the entry
-will be automatically added. For example, this::
+This variable is replaced by the URL set in the **Comment Page URL**
+preference under :menuselection:`Admin --> Channel Management`. The ID
+number of the entry will be automatically added. For example, this::
 
 	<a href="{comment_entry_id_auto_path}">my entry</a>
 
@@ -448,9 +448,9 @@ comment\_url\_title\_auto\_path
 
 	{comment_url_title_auto_path}
 
-This variable is replaced by the URL set in the "Comment Page URL"
-preference under Admin > Channel Management. The URL Title of the entry
-will be automatically added. For example, this::
+This variable is replaced by the URL set in the **Comment Page URL**
+preference under :menuselection:`Admin --> Channel Management`. The URL
+Title of the entry will be automatically added. For example, this::
 
 	<a href="{comment_url_title_auto_path}">my entry</a>
 
@@ -1575,7 +1575,7 @@ the example code below for reference. ::
 Control Panel
 *************
 
-See the `Comment Module Control Panel <control_panel/index.html>`_ page.
+See the :doc:`Comment Module Control Panel <control_panel/index>` page.
 
 
 .. toctree::

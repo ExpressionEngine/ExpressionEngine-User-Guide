@@ -33,20 +33,21 @@ Using Different Languages
 -------------------------
 
 You may set the default language for your Control Panel and website
-under Admin > General Configuration. This will be the language displayed
-to visitors and users who have not customized their own settings.
+under :menuselection:`Admin --> General Configuration`. This will be the
+language displayed to visitors and users who have not customized their
+own settings.
 
 Users may customize their own account in one of two locations. First, if
 the user has access to the Control Panel then they may customize their
-preferred language under My Account > Localization Settings. For regular
-users of a site, they will simply access their Member Profile and then
-select Localization Settings. Users who have customized their settings
-and are logged in will see user messages, dates, and the Control Panel
-in their chosen language.
+preferred language under :menuselection:`My Account --> Localization
+Settings`. For regular users of a site, they will simply access their
+Member Profile and then select Localization Settings. Users who have
+customized their settings and are logged in will see user messages,
+dates, and the Control Panel in their chosen language.
 
 Updating Language Packs for New EE Versions
 -------------------------------------------
 
-You may follow the `updating language
-packs <../cp/tools/utilities/translation_utility.html>`_ instructions to
+You may follow the :doc:`updating language
+packs </cp/tools/utilities/translation_utility>` instructions to
 update an existing Language Pack to a newer version of EE.

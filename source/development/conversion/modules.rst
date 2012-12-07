@@ -2,7 +2,7 @@
 ExpressionEngine 2.0 Module Changes
 ***********************************
 
-In addition to the `syntax changes <syntax.html>`_ already discussed,
+In addition to the :doc:`syntax changes <syntax>` already discussed,
 modules require some fundamental alterations to the control panel file.
 A new update file (upd.package\_name.php) has been introduced to manage
 installing, uninstalling and updating the module. The Display class has
@@ -233,14 +233,14 @@ Language Files
 Language Convention Changes
 ---------------------------
 
-As noted in the `syntax guidelines <syntax.html>`_, the $L array
+As noted in the :doc:`syntax guidelines <syntax>`, the $L array
 containing language variables must be renamed to the $lang array.
 
 Core Module File
 ================
 
 For your core module file (mod.package\_name.php) you simply need to
-`update the syntax <syntax.html>`_. Be certain to change queries to use
+:doc:`update the syntax <syntax>`. Be certain to change queries to use
 `active
 record <http://codeigniter.com/user_guide/database/active_record.html>`_.
 

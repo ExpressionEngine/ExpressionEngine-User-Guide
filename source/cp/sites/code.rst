@@ -79,6 +79,6 @@ Manager:
 -  *{site\_label}*: Displays the Site's Label.
 -  *{site\_short\_name}*: Displays the Site's Short Name.
 
-Next: `Manage existing Sites <managesites.html>`_
+Next: :doc:`Manage existing Sites <managesites>`
 =================================================
 
