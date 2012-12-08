@@ -1,5 +1,5 @@
-Upgrading from Freelancer to Commercial or Non-Commercial
-=========================================================
+Upgrading from Freelancer to a Full License
+===========================================
 
 Follow the standard :doc:`Update Instructions </installation/update>`.
 

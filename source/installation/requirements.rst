@@ -1,5 +1,5 @@
-Requirements
-============
+System Requirements
+===================
 
 We have created a `Server Wizard <http://ellislab.com/asset/file/ee_server_wizard.zip>`_ that
 will verify whether your server is compatible with ExpressionEngine. To
