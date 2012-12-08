@@ -1,63 +1,115 @@
-###########################
-ExpressionEngine User Guide
-###########################
-
-- :doc:`License Agreement <license>`
-- :doc:`Change Log <changelog>`
-
-*******
+#######
 Welcome
-*******
+#######
 
-- :doc:`getting_started/the_big_picture`
-- :doc:`getting_started/index`
+- :doc:`general/getting_the_most`
+- :doc:`general/technical_support`
 
-***********************
-Installing and Updating
-***********************
+######################
+Using ExpressionEngine
+######################
+
+*****************
+Application Setup
+*****************
+
+Installation
+============
 
 - :doc:`installation/requirements`
 - :doc:`installation/installation`
+
+Updates and Upgrades
+====================
+
 - :doc:`installation/update`
 - :doc:`installation/upgrade_from_1.x`
 - :doc:`installation/upgrade_from_freelancer`
-- :doc:`installation/moving`
 
-*******************
-General Information
-*******************
 
-- :doc:`general/getting_the_most`
-- :doc:`general/urls`
-- :doc:`general/remove_index.php`
-- :doc:`cp/sites/index`
-- :doc:`general/text_formatting`
-- :doc:`general/database_backup`
-- :doc:`general/spam_protection`
-- :doc:`general/captchas`
-- :doc:`general/throttling`
-- :doc:`general/caching`
+***********
+First Steps
+***********
+
+- :doc:`getting_started/the_big_picture`
+- :doc:`getting_started/index`
+- :doc:`The Control Panel <cp/index>`
 - :doc:`general/languages`
 
-*********
-Templates
-*********
+*************
+The Front-End
+*************
 
-- :doc:`templates/globals/index`
-- :doc:`templates/template_engine`
+URLs
+====
+
+- :doc:`general/urls`
+- :doc:`general/remove_index.php`
+
+Templates
+=========
+
 - :doc:`templates/embedding`
 - :doc:`templates/hidden_templates`
-- :doc:`templates/date_variable_formatting`
 - :doc:`templates/plugins`
-- :doc:`templates/hit_counter`
 - :doc:`templates/php`
 - :doc:`templates/templates_as_files`
 - :doc:`templates/comments`
 
 
+*********************
+Multiple Site Manager
+*********************
+
+- :doc:`cp/sites/index`
+
+
+****************
+Discussion Forum
+****************
+
+- :doc:`modules/forum/index`
+
+
+****************************************
+Application Maintenance and Optimization
+****************************************
+
+Maintenance and Operations
+==========================
+
+- :doc:`installation/moving`
+- :doc:`general/database_backup`
+
+Protecting ExpressionEngine
+===========================
+
+- :doc:`general/spam_protection`
+- :doc:`general/captchas`
+
+Optimizing ExpressionEngine
+===========================
+
+- :doc:`general/throttling`
+- :doc:`general/caching`
+
+Solving Problems
+================
+
+- :doc:`troubleshooting/index`
+- :doc:`general/technical_support`
+
+
+###################
+Technical Reference
+###################
+
 *******
-Modules
+Add-Ons
 *******
+
+Included in Core
+================
 
 - :doc:`modules/blacklist/index`
 - :doc:`modules/channel/index`
@@ -66,7 +118,6 @@ Modules
 - :doc:`modules/email/index`
 - :doc:`modules/emoticon/index`
 - :doc:`modules/file/index`
-- :doc:`modules/forum/index`
 - :doc:`modules/ip_to_nation/index`
 - :doc:`modules/jquery/index`
 - :doc:`modules/mailinglist/index`
@@ -84,23 +135,40 @@ Modules
 - :doc:`modules/statistics/index`
 - :doc:`modules/updated_sites/index`
 - :doc:`modules/wiki/index`
-	
-************
-Getting Help
-************
 
-- :doc:`troubleshooting/index`
-- :doc:`general/technical_support`
+Available for Download
+======================
 
 ****************
 Reference Guides
 ****************
 
-- :doc:`development/index`
 - :doc:`The Control Panel <cp/index>`
 - :doc:`general/quick_reference`
 - :doc:`general/bbcode`
 - :doc:`general/hidden_configuration_variables`
+- :doc:`general/text_formatting`
+- :doc:`templates/globals/index`
+- :doc:`templates/date_variable_formatting`
+- :doc:`templates/hit_counter`
+- :doc:`templates/template_engine`
+
+******************
+Add-on Development
+******************
+
+- :doc:`development/index`
+
+********
+Glossary
+********
+
+######################
+About ExpressionEngine
+######################
+
+- :doc:`License Agreement <license>`
+- :doc:`Change Log <changelog>`
 
 .. toctree::
 	:glob:
