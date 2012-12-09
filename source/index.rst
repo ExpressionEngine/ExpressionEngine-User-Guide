@@ -3,36 +3,39 @@ Welcome
 #######
 
 - :doc:`general/getting_the_most`
+- :doc:`getting_started/the_big_picture`
 - :doc:`general/technical_support`
 
-######################
-Using ExpressionEngine
-######################
-
-*****************
+#################
 Application Setup
-*****************
+#################
 
+************
 Installation
-============
+************
 
 - :doc:`installation/requirements`
 - :doc:`installation/installation`
 
+********************
 Updates and Upgrades
-====================
+********************
 
 - :doc:`installation/update`
 - :doc:`installation/upgrade_from_1.x`
 - :doc:`installation/upgrade_from_freelancer`
 
-
-***********
-First Steps
-***********
+######################
+Using ExpressionEngine
+######################
 
 - :doc:`getting_started/the_big_picture`
-- :doc:`getting_started/index`
+- Hello, World!
+
+*****************
+The Control Panel
+*****************
+
 - :doc:`The Control Panel <cp/index>`
 - :doc:`general/languages`
 
@@ -40,11 +43,7 @@ First Steps
 The Front-End
 *************
 
-URLs
-====
-
-- :doc:`general/urls`
-- :doc:`general/remove_index.php`
+- Introduction to the Front-End
 
 Templates
 =========
@@ -56,53 +55,82 @@ Templates
 - :doc:`templates/templates_as_files`
 - :doc:`templates/comments`
 
+URLs
+====
 
-*********************
-Multiple Site Manager
-*********************
+- :doc:`general/urls`
+- :doc:`general/remove_index.php`
 
+
+#####################
+Going Beyond the Core
+#####################
+
+- intro to add-ons
 - :doc:`cp/sites/index`
-
-
-****************
-Discussion Forum
-****************
-
 - :doc:`modules/forum/index`
 
 
-****************************************
+########################################
 Application Maintenance and Optimization
-****************************************
+########################################
 
+**************************
 Maintenance and Operations
-==========================
+**************************
 
 - :doc:`installation/moving`
 - :doc:`general/database_backup`
 
-Protecting ExpressionEngine
-===========================
+*************************
+Securing ExpressionEngine
+*************************
 
+- Basic Security
 - :doc:`general/spam_protection`
 - :doc:`general/captchas`
 
+***************************
 Optimizing ExpressionEngine
-===========================
+***************************
 
 - :doc:`general/throttling`
 - :doc:`general/caching`
+- :doc:`general/handling_extreme_traffic`
 
+****************
 Solving Problems
-================
+****************
 
 - :doc:`troubleshooting/index`
 - :doc:`general/technical_support`
 
 
+#############
+How-To Guides
+#############
+
+- Hello, World!
+- :doc:`getting_started/index`
+
+
 ###################
 Technical Reference
 ###################
+
+****************
+Reference Guides
+****************
+
+- :doc:`The Control Panel <cp/index>`
+- :doc:`general/quick_reference`
+- :doc:`general/bbcode`
+- :doc:`general/hidden_configuration_variables`
+- :doc:`general/text_formatting`
+- :doc:`templates/globals/index`
+- :doc:`templates/date_variable_formatting`
+- :doc:`templates/hit_counter`
+- :doc:`templates/template_engine`
 
 *******
 Add-Ons
@@ -139,29 +167,11 @@ Included in Core
 Available for Download
 ======================
 
-****************
-Reference Guides
-****************
-
-- :doc:`The Control Panel <cp/index>`
-- :doc:`general/quick_reference`
-- :doc:`general/bbcode`
-- :doc:`general/hidden_configuration_variables`
-- :doc:`general/text_formatting`
-- :doc:`templates/globals/index`
-- :doc:`templates/date_variable_formatting`
-- :doc:`templates/hit_counter`
-- :doc:`templates/template_engine`
-
-******************
-Add-on Development
-******************
+###############################
+Developing for ExpressionEngine
+###############################
 
 - :doc:`development/index`
-
-********
-Glossary
-********
 
 ######################
 About ExpressionEngine
@@ -169,6 +179,7 @@ About ExpressionEngine
 
 - :doc:`License Agreement <license>`
 - :doc:`Change Log <changelog>`
+- Glossary
 
 .. toctree::
 	:glob:
