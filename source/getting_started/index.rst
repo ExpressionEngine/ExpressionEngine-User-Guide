@@ -1,6 +1,6 @@
-#######################################
-Getting Started with ExpressionEngine 2
-#######################################
+################################################
+Building a Simple News Site from Start to Finish
+################################################
 
 This guide will introduce you to the basic concepts behind ExpressionEngine.
 We'll create a simple two-page site with a news section to show a glimpse of the power,
