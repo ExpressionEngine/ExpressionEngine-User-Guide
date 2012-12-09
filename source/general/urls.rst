@@ -1,5 +1,5 @@
-ExpressionEngine URLs
-=====================
+URL Structure
+=============
 
 Pages (Templates) are organized in Template Groups. To access a Template
 within a Template Group you'll use this URL structure::

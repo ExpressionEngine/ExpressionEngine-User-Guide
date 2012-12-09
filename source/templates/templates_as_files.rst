@@ -1,4 +1,4 @@
-Saving Templates to Text Files
+Saving Templates as Text Files
 ==============================
 
 ExpressionEngine supports saving Template Groups and Templates as

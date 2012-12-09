@@ -1,5 +1,5 @@
-Removing index.php from ExpressionEngine URLs
-=============================================
+Removing index.php from URLs
+============================
 
 .. versionadded:: 2.2
    Official support, limited to the scope of the recommendations

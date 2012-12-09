@@ -1,5 +1,5 @@
-Template Engine
-===============
+The Template Engine
+===================
 
 At a basic level, :ref:`Templates <getting-started-templates>` contain
 almost everything you want displayed on the front-end of the site. When

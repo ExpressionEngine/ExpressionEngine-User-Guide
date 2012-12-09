@@ -1,5 +1,5 @@
-Handling Extreme Traffic with ExpressionEngine
-==============================================
+Handling Extreme Traffic
+========================
 
 **Notice:** This info is intended for Server Admins when dealing with
 high-volume traffic spikes or as a permanent solution for radically high
