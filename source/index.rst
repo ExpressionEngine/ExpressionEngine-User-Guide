@@ -66,7 +66,7 @@ URLs
 Going Beyond the Core
 *********************
 
-- intro to add-ons
+- :doc:`getting_started/expressionengine_addons`
 - :doc:`cp/sites/index`
 - :doc:`modules/forum/index`
 
