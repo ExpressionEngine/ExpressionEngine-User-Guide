@@ -1,52 +1,52 @@
-#######
+###########################
+ExpressionEngine User Guide
+###########################
+
+*******
 Welcome
-#######
+*******
 
 - :doc:`general/getting_the_most`
 - :doc:`getting_started/the_big_picture`
 - :doc:`general/technical_support`
 
-#################
+*****************
 Application Setup
-#################
+*****************
 
-************
 Installation
-************
+============
 
 - :doc:`installation/requirements`
 - :doc:`installation/installation`
 
-********************
 Updates and Upgrades
-********************
+====================
 
 - :doc:`installation/update`
 - :doc:`installation/upgrade_from_1.x`
 - :doc:`installation/upgrade_from_freelancer`
 
-######################
+**********************
 Using ExpressionEngine
-######################
+**********************
 
 - :doc:`getting_started/the_big_picture`
 - Hello, World!
 
-*****************
 The Control Panel
-*****************
+=================
 
 - :doc:`The Control Panel <cp/index>`
 - :doc:`general/languages`
 
-*************
 The Front-End
-*************
+=============
 
 - Introduction to the Front-End
 
 Templates
-=========
+---------
 
 - :doc:`templates/embedding`
 - :doc:`templates/hidden_templates`
@@ -56,71 +56,66 @@ Templates
 - :doc:`templates/comments`
 
 URLs
-====
+----
 
 - :doc:`general/urls`
 - :doc:`general/remove_index.php`
 
 
-#####################
+*********************
 Going Beyond the Core
-#####################
+*********************
 
 - intro to add-ons
 - :doc:`cp/sites/index`
 - :doc:`modules/forum/index`
 
 
-########################################
+****************************************
 Application Maintenance and Optimization
-########################################
+****************************************
 
-**************************
 Maintenance and Operations
-**************************
+==========================
 
 - :doc:`installation/moving`
 - :doc:`general/database_backup`
 
-*************************
 Securing ExpressionEngine
-*************************
+=========================
 
 - Basic Security
 - :doc:`general/spam_protection`
 - :doc:`general/captchas`
 
-***************************
 Optimizing ExpressionEngine
-***************************
+===========================
 
 - :doc:`general/throttling`
 - :doc:`general/caching`
 - :doc:`general/handling_extreme_traffic`
 
-****************
 Solving Problems
-****************
+================
 
 - :doc:`troubleshooting/index`
 - :doc:`general/technical_support`
 
 
-#############
+*************
 How-To Guides
-#############
+*************
 
 - Hello, World!
 - :doc:`getting_started/index`
 
 
-###################
+*******************
 Technical Reference
-###################
+*******************
 
-****************
 Reference Guides
-****************
+================
 
 - :doc:`The Control Panel <cp/index>`
 - :doc:`general/quick_reference`
@@ -132,12 +127,11 @@ Reference Guides
 - :doc:`templates/hit_counter`
 - :doc:`templates/template_engine`
 
-*******
 Add-Ons
-*******
+=======
 
 Included in Core
-================
+----------------
 
 - :doc:`modules/blacklist/index`
 - :doc:`modules/channel/index`
@@ -165,17 +159,19 @@ Included in Core
 - :doc:`modules/wiki/index`
 
 Available for Download
-======================
+----------------------
 
-###############################
+- List of all add-ons on GitHub
+
+*******************************
 Developing for ExpressionEngine
-###############################
+*******************************
 
 - :doc:`development/index`
 
-######################
+**********************
 About ExpressionEngine
-######################
+**********************
 
 - :doc:`License Agreement <license>`
 - :doc:`Change Log <changelog>`
