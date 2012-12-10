@@ -92,6 +92,7 @@ Optimizing ExpressionEngine
 ===========================
 
 - :doc:`general/throttling`
+- :doc:`general/404pages`
 - :doc:`general/caching`
 - :doc:`general/handling_extreme_traffic`
 
