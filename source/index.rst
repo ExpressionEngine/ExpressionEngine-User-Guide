@@ -8,7 +8,7 @@ Welcome
 
 - :doc:`general/getting_the_most`
 - :doc:`getting_started/the_big_picture`
-- :doc:`general/technical_support`
+- `EllisLab Support <http://ellislab.com/support>`_
 
 *****************
 Application Setup
@@ -100,7 +100,8 @@ Solving Problems
 ================
 
 - :doc:`troubleshooting/index`
-- :doc:`general/technical_support`
+- `EllisLab Support <http://ellislab.com/support>`_
+- `Community Support Forum <http://ellislab.com/forums/viewannounce/230174_114/>`_
 
 
 *************
@@ -169,6 +170,8 @@ Developing for ExpressionEngine
 *******************************
 
 - :doc:`development/index`
+- `Development & Programming Forum <http://ellislab.com/forums/viewannounce/230178_116/>`_
+
 
 **********************
 About ExpressionEngine

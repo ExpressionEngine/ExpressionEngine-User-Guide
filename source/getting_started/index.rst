@@ -544,7 +544,6 @@ While you should read the User Guide in its entirety, here are some topics you m
 interested in:
 
 - :doc:`/general/getting_the_most`
-- :doc:`/general/technical_support`
 - :doc:`/modules/index`
 - :doc:`/general/remove_index.php`
 - :doc:`/cp/sites/index`
