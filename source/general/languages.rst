@@ -14,8 +14,9 @@ Obtaining Language Packs
 ------------------------
 
 You may download any of the available Language Packs from the
-expressionengine.com website in the `Language
-Packs <http://expressionengine.com/language/>`_ section.
+EllisLab Github repository:
+
+- `Github <https://github.com>`_
 
 Installing a Language Pack
 --------------------------
@@ -51,3 +52,43 @@ Updating Language Packs for New EE Versions
 You may follow the :doc:`updating language
 packs </cp/tools/utilities/translation_utility>` instructions to
 update an existing Language Pack to a newer version of EE.
+
+
+.. raw:: html
+
+	<script>
+
+	(function(_) {
+
+	var reLanguage = new RegExp('^EE-Language-'),
+		listPlaceholder = $('#obtaining-language-packs ul'),
+		listTemplate;
+
+	// compile a template from the placeholder list
+	listTemplate = _.template(
+		listPlaceholder
+			.html()
+			.replace('<li>', '<% $u.each(repos, function(r) { %> <li>')
+			.replace('</li>','</li> <% }); %>')
+			.replace(/href="[^"]+"/, 'href="<%= r.url %>"')
+			.replace(/>[^<>]+<\/a>/, '><%= r.langName %></a>')
+	);
+
+
+	jQuery.getJSON('https://api.github.com/users/EllisLab/repos?callback=?', function(res) {
+
+		// filter out the language repos
+		var languages = _.filter(res.data, function(el) {
+			el.langName = el.name.replace(reLanguage, '');
+			return reLanguage.test(el.name);
+		});
+
+		listPlaceholder.html(
+			listTemplate({ repos: languages })
+		);
+
+	});
+
+	})($u); // sphinx rewrite _ to $u and uses _ for localization
+		
+	</script>
