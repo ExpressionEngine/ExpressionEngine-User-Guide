@@ -12,18 +12,21 @@
  * potential api failure as well as future design changes.
  *
  */
-(function(_) {
+ (function(_) {
 
 // Kick off the request right away, holding on to the deferred object.
-var reposPromise = jQuery.getJSON('https://api.github.com/users/EllisLab/repos?callback=?');
 
-// Processing needs to wait on the page
+var ignoreLanguages = ['English', 'Hebrew'],
+	reposPromise = jQuery.getJSON('https://api.github.com/users/EllisLab/repos?callback=?');
+
+// Processing needs to wait on the dom
 $(document).ready(function() {
+
 	var reLanguage = new RegExp('^EE-Language-'),
 		placeholder = $('.github-language-repos'),
 		listTemplate;
 
-	// compile a template from the placeholder item
+	// compile an underscore template from the placeholder item
 	listTemplate = _.template(
 		'<% $u.each(repos, function(r) { %>' + 
 		placeholder
@@ -33,23 +36,29 @@ $(document).ready(function() {
 		'<% }); %>'
 	);
 
-	// and now we wait ...
+	// ready to handle the promise when it resolves
 	reposPromise.success(function(res) {
 		// res.data - response data
 		// res.meta - rate limit information
 
-		// filter out the language repos
-		// while we're at it we'll add a short name
-		var languages = _.filter(res.data, function(el) {
-			el.langName = el.name.replace(reLanguage, '');
-			return reLanguage.test(el.name);
-		});
+		var isLangRepo = function(el) { return reLanguage.test(el.name); },
+			isIgnored = function(el) { return _.include(ignoreLanguages, el.langName) },
+			langName = function(el) { return (el.langName = el.name.replace(reLanguage, ''), el); };
+
+		// filter out the language repos we want to show
+		// and while we're at it, add a clean name for display
+
+		var languages = _.reject(
+			_.filter(res.data, isLangRepo),
+			_.compose(isIgnored, langName)
+		);
 
 		placeholder.html(
 			listTemplate({ repos: languages })
 		);
 
 	});
+
 });
 
 })($u); // sphinx hijacks _ for localization, but it aliases underscore on $u
