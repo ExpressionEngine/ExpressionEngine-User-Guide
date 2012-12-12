@@ -89,6 +89,6 @@ update an existing Language Pack to a newer version of EE.
 
 	});
 
-	})($u); // sphinx rewrite _ to $u and uses _ for localization
+	})($u); // sphinx rewrites _ to $u and uses _ for localization
 		
 	</script>
