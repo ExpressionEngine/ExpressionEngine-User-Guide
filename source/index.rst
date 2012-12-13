@@ -186,6 +186,7 @@ About ExpressionEngine
 	:titlesonly:
 	:hidden:
 	
+	about/index
 	license
 	changelog
 	installation/index
