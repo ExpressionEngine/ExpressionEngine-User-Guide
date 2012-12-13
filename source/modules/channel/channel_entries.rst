@@ -578,6 +578,7 @@ options for this parameter include:
 -  ``orderby="most_recent_comment"``
 -  ``orderby="random"``
 -  ``orderby="screen_name"``
+-  ``orderby="status"``
 -  ``orderby="title"``
 -  ``orderby="url_title"``
 -  ``orderby="username"``
