@@ -14,8 +14,8 @@ Many member management features are built-in to ExpressionEngine,
 so unlike other modules, the Member Management module is
 not managed from the Modules area of the Control Panel.
 
-.. note:: The Member Module is available only with the purchase of a
-   Non-Commercial or Commercial license.
+.. note:: The Member Module is available only with a `purchased <https://store.ellislab.com/>`_
+   ExpressionEngine license.
 
 You'll find many member management options available at:
 

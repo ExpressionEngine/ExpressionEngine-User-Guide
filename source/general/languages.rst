@@ -14,8 +14,13 @@ Obtaining Language Packs
 ------------------------
 
 You may download any of the available Language Packs from the
-expressionengine.com website in the `Language
-Packs <http://expressionengine.com/language/>`_ section.
+EllisLab Github repository:
+
+.. Heads up: general_languages.js relies on .github-languag-repos! See notes there.
+
+.. rst-class:: github-language-repos
+
+ - `Github <https://github.com>`_
 
 Installing a Language Pack
 --------------------------

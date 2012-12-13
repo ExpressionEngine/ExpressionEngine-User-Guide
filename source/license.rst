@@ -8,7 +8,7 @@ Add-ons you agree to be bound by the terms and conditions of this
 license. EllisLab, Inc. reserves the right to alter this agreement at
 any time, for any reason, without notice.**
 
-Revised on: 25 November, 2012
+Revised on: 18 December, 2012
 
 ExpressionEngine Installations
 ------------------------------
@@ -26,10 +26,14 @@ Permitted Use
 
 -  **ExpressionEngine 2.x Licenses:**
 
-   - Users of an ExpressionEngine 2.x License may use the Software
-     on a website engaging in either commercial or non-commercial activities.
-   - Users of the Software free trial must purchase a license to
-     continue using the Software after the trial period.
+   -  **Core License:** Users of the Core License may use the Software
+      **only** on a website engaging in personal, non-commercial, or
+      non-profit activities.
+   -  **Standard License:** Users of the Standard purchased ExpressionEngine
+      2.x License may use the Software on a website engaging in commercial,
+      personal, non-commercial, or non-profit activities. Websites engaging in
+      direct or indirect commercial activities much purchase a Standard
+      License.
 
 -  **ExpressionEngine 1.x Licenses:**
 
@@ -97,11 +101,11 @@ Refund Policy
 
 Due to the non-returnable nature of downloadable software, EllisLab, Inc. does
 not issue refunds once a transaction has been completed. If you have questions
-about whether or not ExpressionEngine will work for you, please `contact
-us <http://ellislab.com/about>`_ to request a free trial. We encourage you to
-thoroughly test the system you are interested in before purchasing to
-determine its suitability for your purposes and compatibility with your
-hosting account.
+about whether or not ExpressionEngine will work for you, please try the Core
+version or `contact us <http://ellislab.com/about>`_ with any questions. We
+encourage you to thoroughly test the system you are interested in before
+purchasing to determine its suitability for your purposes and compatibility
+with your hosting account.
 
 Indemnity
 ---------

@@ -24,6 +24,9 @@ it will not process UPDATE or DELETE queries.
 .. note:: To take full advantage of this tag's power you will need to have a good
    understanding of SQL querying.
 
+.. note:: The Query Module is available only with a `purchased <https://store.ellislab.com/>`_
+  ExpressionEngine license.
+
 ******************************
 Selecting Fields and Variables
 ******************************

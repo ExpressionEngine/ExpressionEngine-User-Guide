@@ -19,7 +19,8 @@ applying another "theme" to it.
 
 .. important:: The Discussion Forum is an ExpressionEngine Module, and
    therefore requires that you be running ExpressionEngine. This module
-   requires the Non-Commercial or Commercial ExpressionEngine license.
+   requires a `purchased <https://store.ellislab.com/>`_
+   ExpressionEngine license.
 
 *********************************
 Installation, Updating, and Setup

@@ -16,6 +16,9 @@ hours. Conversely, when someone in your mailing list receives an email,
 there will be an "unsubscribe" link permitting them to remove themselves
 from the list.
 
+.. note:: The Mailing List Module is available only with a
+   `purchased <https://store.ellislab.com/>`_ ExpressionEngine license.
+
 To access the Mailing List-backed functions, go to :menuselection:`Add-Ons --> Modules --> Mailing List`
 in your Control Panel. There you will be able to create and
 manage your mailing lists, as well as find and delete email addresses.
