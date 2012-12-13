@@ -1,5 +1,5 @@
-Upgrading from EE Core to a Standard License
-============================================
+Upgrading from EE Core to Standard Edition
+==========================================
  
 *ExpressionEngine Core* is a free, feature-limited edition of our award winning
 content management platform, and it can **only** be used on a website engaging 
