@@ -1,11 +1,7 @@
-Upgrading from EE Core to Standard Edition
-==========================================
+Upgrading from Core to Standard Edition
+=======================================
  
-*ExpressionEngine Core* is a free, feature-limited edition of our award winning
-content management platform, and it can **only** be used on a website engaging 
-in personal, non-commercial, or non-profit activities.
- 
-To upgrade your software from Core to the standard edition ExpressionEngine, just follow the usual :doc:`Update Instructions
+To upgrade your software from :term:`Core` to the standard edition ExpressionEngine, just follow the usual :doc:`Update Instructions
 </installation/update>`.
  
 .. important:: If you are upgrading within the same version number (for

@@ -2,6 +2,12 @@ Glossary
 ========
 
 .. glossary::
+   :sorted:
+
+   Core
+      A free, feature-limited edition of our award 
+      winning content management platform, available under a :doc:`restricted 
+      license </license>`.
 
    MSM Site
    MSM Sites
