@@ -38,7 +38,7 @@ Key Features
 Requirements
 ~~~~~~~~~~~~
 
--  ExpressionEngine 2.0 or later
+-  Purchased license of ExpressionEngine 2.0 or later
 -  All Sites must reside on the same server
 -  If using sub-domains or domains, directories must be able to access
    your main installation system directory. Please see :doc:`Setup Domains

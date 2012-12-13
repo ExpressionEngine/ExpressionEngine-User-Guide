@@ -23,6 +23,9 @@ address is associated with. You can do two things with this information:
    also update your /system/expressionengine/config/countries.php file so
    that newly added or changed nations display properly.
 
+.. note:: The IP to Nation Module is available only with a
+   `purchased <https://store.ellislab.com/>`_ ExpressionEngine license.
+
 ****************
 Database Updates
 ****************

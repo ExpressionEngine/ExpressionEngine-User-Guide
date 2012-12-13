@@ -14,8 +14,8 @@ The ExpressionEngine Wiki Module provides a powerful wiki that
 integrates seamlessly with ExpressionEngine. See :doc:`Getting Started with the Wiki <getting_started>` 
 for a more detailed explanation of what a wiki is and what you can do with it.
 
-.. note:: The Wiki Module requires a `Non-Commercial <http://expressionengine.com/overview/pricing/>`_ or
-   `Commercial <http://expressionengine.com/overview/pricing/>`_ license.
+.. note:: The Wiki Module is available only with a `purchased <https://store.ellislab.com/>`_
+   ExpressionEngine license.
 
 -  Integrates with ExpressionEngine's Membership Module
 -  Supports multiple wikis on a single ExpressionEngine installation

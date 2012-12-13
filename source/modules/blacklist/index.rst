@@ -13,6 +13,9 @@ referrers, and other posted information. Used in combination with other
 `Spam Prevention Features <../../general/spam_protection.html>`_, the
 occurrence of spam on your site should be rare.
 
+.. note:: The Blacklist/Whitelist Module is available only with a
+   `purchased <https://store.ellislab.com/>`_ ExpressionEngine license.
+
 This Module is accessed via :menuselection:`Admin --> Modules --> Blacklist/Whitelist` in your
 Control Panel. This will bring up a screen where you can access either
 the Blacklist or the Whitelist, which are explained below.
