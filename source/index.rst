@@ -63,9 +63,9 @@ URLs
 - :doc:`general/remove_index.php`
 
 
-*********************
-Going Beyond the Core
-*********************
+*****************
+Beyond the Basics
+*****************
 
 - :doc:`getting_started/expressionengine_addons`
 - :doc:`cp/sites/index`
