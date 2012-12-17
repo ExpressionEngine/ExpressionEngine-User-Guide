@@ -18,7 +18,7 @@
 
 var reposPromise = jQuery.getJSON('https://api.github.com/users/EllisLab/repos?per_page=100&callback=?');
 
-$.fn.githubAddons = function(callback) {
+$.fn.githubRepositories = function(callback) {
 
 	return $(this).each(function() {
 
@@ -54,7 +54,7 @@ $.fn.githubAddons = function(callback) {
 $(document).ready(function() {
 
 	// for the homepage
-	$('.github-addon-repos').githubAddons(function(repos) {
+	$('.github-addon-repos').githubRepositories(function(repos) {
 
 		var isAddonRepo = function(el) { return el.description == 'ExpressionEngine Add-on'; },
 			repoName = function(el) { return (el.repoName = el.name.replace(/-/g, ' '), el); };
@@ -69,7 +69,7 @@ $(document).ready(function() {
 
 
 	// for the general/languages.rst page
-	$('.github-language-repos').githubAddons(function(repos) {
+	$('.github-language-repos').githubRepositories(function(repos) {
 		
 		var ignoreLanguages = ['English', 'Hebrew'],
 			reLanguage = new RegExp('^EE-Language-');
