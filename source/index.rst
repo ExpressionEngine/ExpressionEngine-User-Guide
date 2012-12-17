@@ -164,39 +164,9 @@ Included in Core
 Available for Download
 ----------------------
 
-- `Allow Encode <https://github.com/EllisLab/Allow-Eecode>`_
-- `Auto Linker <https://github.com/EllisLab/Auto-Linker>`_
-- `Char Limit <https://github.com/EllisLab/Char-Limit>`_
-- `Comment Buttons <https://github.com/EllisLab/Comment-Buttons>`_
-- `Cookie Consent <https://github.com/EllisLab/Cookie-Consent>`_
-- `Cron <https://github.com/EllisLab/Cron>`_
-- `Cron Blacklist <https://github.com/EllisLab/Cron-Blacklist>`_
-- `Cron Clean Cache <https://github.com/EllisLab/Cron-Clean-Cache>`_
-- `Cron Email <https://github.com/EllisLab/Cron-Email>`_
-- `CSS Switcher <https://github.com/EllisLab/Css-Switcher>`_
-- `Dodwnload Content <https://github.com/EllisLab/download-content>`_
-- `Duplicate Email Check <https://github.com/EllisLab/Duplicate-Email-Check>`_
-- `EE Tuts Download Module <https://github.com/EllisLab/ee-tuts-download-module>`_
-- `List Maker <https://github.com/EllisLab/List-Maker>`_
-- `Netflix <https://github.com/EllisLab/Netflix>`_
-- `No Follow <https://github.com/EllisLab/No-Follow>`_
-- `No Formatting <https://github.com/EllisLab/No-Formatting>`_
-- `Opml Parse <https://github.com/EllisLab/Opml-Parse>`_
-- `Parse URL <https://github.com/EllisLab/Parse-Url>`_
-- `Plugin List <https://github.com/EllisLab/Plugin-List>`_
-- `Protect Dollar <https://github.com/EllisLab/Protect-Dollar>`_
-- `Ptobr <https://github.com/EllisLab/Ptobr>`_
-- `Randomizer <https://github.com/EllisLab/Randomizer>`_
-- `RSS Parser <https://github.com/EllisLab/RSS-Parser>`_
-- `Search Hilite <https://github.com/EllisLab/Search-Hilite>`_
-- `Since Last Visit <https://github.com/EllisLab/Since-Last-Visit>`_
-- `Twitter Timeline <https://github.com/EllisLab/Twitter-Timeline>`_
-- `Valid URL <https://github.com/EllisLab/Valid-Url>`_
-- `Wiki TOC <https://github.com/EllisLab/Wiki-Toc>`_
-- `Word Limit <https://github.com/EllisLab/Word-Limit>`_
-- `Word Safe <https://github.com/EllisLab/Word-Safe>`_
-- `World Weather <https://github.com/EllisLab/World-Weather>`_
-- `Xhtml <https://github.com/EllisLab/Xhtml>`_
+.. rst-class:: github-addon-repos
+
+ - `Github <https://github.com>`_
 
 *******************************
 Developing for ExpressionEngine
