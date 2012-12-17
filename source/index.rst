@@ -67,7 +67,7 @@ URLs
 Beyond the Basics
 *****************
 
-- :doc:`getting_started/expressionengine_addons`
+- :doc:`general/addons`
 - :doc:`cp/sites/index`
 - :doc:`modules/forum/index`
 
