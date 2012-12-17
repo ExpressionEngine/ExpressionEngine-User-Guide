@@ -1,6 +1,15 @@
 ExpressionEngine Forum Module Change Log
 ========================================
 
+Version 3.1.10
+--------------
+
+Release Date: December 18, 2012
+
+- Fixed a bug (#18380) where pressing the back button after a search and
+  then attempting a new search would fail.
+
+
 Version 3.1.9
 -------------
 
