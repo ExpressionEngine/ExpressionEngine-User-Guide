@@ -21,10 +21,10 @@ error codes, you can do that in the Control Panel.
 
 
 The 404 page setting tells ExpressionEngine which template group/template to use
-for all the 404 errors that are received. It is worth noting that using
-:term:`strict URLs` is preferable as this makes the path to your content more
-precise, allows more relevant 404 pages, and does not allow your content to be
-shown with variances in the URL structure
+for all the 404 errors that are received. It is worth noting that using strict
+URLs is preferable as this makes the path to your content more precise, allows
+more relevant 404 pages, and does not allow your content to be shown with
+variances in the URL structure
 
 **3. So I enabled 404 pages within ExpressionEngine, how is this going to work?**
 
