@@ -1,6 +1,6 @@
-#############
-Moblog Module
-#############
+######
+Moblog
+######
 
 .. contents::
    :local:

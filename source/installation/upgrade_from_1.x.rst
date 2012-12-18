@@ -1,5 +1,5 @@
-Upgrading from 1.x to 2.x
-=========================
+Upgrading from ExpressionEngine 1
+=================================
 
 This page describes the process for upgrading from ExpressionEngine 1.x
 to ExpressionEngine 2.x.

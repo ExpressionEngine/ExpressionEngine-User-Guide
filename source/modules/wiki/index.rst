@@ -1,6 +1,6 @@
-###########
-Wiki Module
-###########
+####
+Wiki
+####
 
 .. contents::
 	:local:

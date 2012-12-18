@@ -2,11 +2,11 @@ Hidden Configuration Variables
 ==============================
 
 Hidden configuration variables are placed in
-system/expressionengine/config/config.php and are used to over-ride
-default behavior. These are advanced configuration options that should
-only be used by experienced ExpressionEngine users. More
-performance-related configuration options can be found in
-:doc:`Handling Extreme Traffic with ExpressionEngine <handling_extreme_traffic>`.
+``system/expressionengine/config/config.php`` and are used to over-ride default
+behavior. These are advanced configuration options that should only be used by
+experienced ExpressionEngine users. More performance-related configuration
+options can be found in :doc:`Handling Extreme Traffic with ExpressionEngine
+</optimization/handling_extreme_traffic>`.
 
 .. contents::
 	:local:
@@ -147,8 +147,22 @@ of the query changes dynamically every time the query is run. A Channel
 Entries query, for example, always matches the expiration date against
 the current time in order to determine if entries have expired. This causes
 the query to change slightly with each page load; thus it cannot use this
-caching method. (See :ref:`dynamic-channel-query-caching` for an
+caching method. (See :ref:`caching-dynamic-channel-query-caching` for an
 alternative that can be used in many cases.)
+
+filename_increment
+~~~~~~~~~~~~~~~~~~
+
+**Value:** y/n
+
+When set to "y", forces upload filenames to be unique. Re-uploads of existing
+files or uploads that share a filename with an existing file will have an
+incrementing number appended to them.
+
+::
+
+	$config['filename_increment'] = 'y';
+
 
 hidden_template_404
 ~~~~~~~~~~~~~~~~~~~

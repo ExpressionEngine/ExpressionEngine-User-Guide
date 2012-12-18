@@ -2,11 +2,11 @@
 The Big Picture
 ###############
 
-Thousands of web sites are powered using ExpressionEngine, from business
-sites, to online magazines, to personal blogs. ExpressionEngine's
-flexible architecture allows an endless range of possibilities.
-Visit the `ExpressionEngine Showcase <http://expressionengine.com/showcase/>`_ to see
-real-world example sites and interviews with ExpressionEngine creatives.
+Thousands of web sites are powered using ExpressionEngine, from business sites,
+to online magazines, to personal blogs. ExpressionEngine's flexible architecture
+allows an endless range of possibilities. Visit the `Showcase
+<http://ellislab.com/showcase/>`__ to see examples of real-world sites with
+insight direct from the site builders themselves.
 
 ************
 How it Works
@@ -50,7 +50,7 @@ a true content management system with great flexibility.
    :alt: ExpressionEngine Overview
 
 .. tip:: Don't worry if you don't fully grasp ExpressionEngine's terminology yet.
-	Our :doc:`Getting Started Guide </getting_started/index>` introduces the system
+	Our guide :doc:`/how_to/building_a_simple_new_site` introduces the system
 	step-by-step and will have you building a simple site in about 30 minutes.
 
 *************
@@ -105,9 +105,3 @@ simply add your content in the EE Control Panel and the system will
 automatically format it based on your template designs. And since
 ExpressionEngine is managed using your web browser, you can update your
 web site from anywhere you have access to the Internet.
-
-**************
-Ready to Rock?
-**************
-
-:doc:`Get Started with ExpressionEngine 2. </getting_started/index>`

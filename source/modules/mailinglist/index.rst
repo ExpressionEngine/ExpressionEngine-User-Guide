@@ -1,5 +1,5 @@
-Mailing List Module
-===================
+Mailing List
+============
 
 .. contents::
    :local:

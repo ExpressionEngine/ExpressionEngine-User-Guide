@@ -1,5 +1,5 @@
-Rich Text Editor Module
-=======================
+Rich Text Editor
+================
 
 .. contents::
    :local:

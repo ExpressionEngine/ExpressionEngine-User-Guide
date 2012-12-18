@@ -1,5 +1,5 @@
-Updating from a Previous Version of ExpressionEngine
-====================================================
+Updating ExpressionEngine 2
+===========================
 
 This page describes the process for updating from a previous version of
 ExpressionEngine 2 to the latest version of ExpressionEngine 2.

@@ -1,6 +1,6 @@
-#######################################
-Getting Started with ExpressionEngine 2
-#######################################
+################################################
+Building a Simple News Site from Start to Finish
+################################################
 
 This guide will introduce you to the basic concepts behind ExpressionEngine.
 We'll create a simple two-page site with a news section to show a glimpse of the power,
@@ -196,7 +196,7 @@ store in ExpressionEngine.
    ourselves - all Entries automatically have a Title field.
 #. ExpressionEngine provides a sensible **URL Title** for you. This is another
    automatic field that allows your entries to be easily linked to via a URL.
-   See :doc:`/general/urls` for more information.
+   See :doc:`/urls/url_structure` for more information.
 #. Enter some text in the **News Body** field. Make it good!
 #. Click *Submit* to publish the Entry.
 
@@ -217,6 +217,8 @@ of the Control Panel.
 
 For the purposes of this guide, **publish a second Entry** by following the same steps as before, but
 with a different Title and News Body. That will give us two Entries to work with later.
+
+.. _getting-started-templates:
 
 *********
 Templates
@@ -541,18 +543,9 @@ what you want it to do. Welcome to ExpressionEngine.
 While you should read the User Guide in its entirety, here are some topics you might be
 interested in:
 
-- :doc:`/general/getting_the_most`
-- :doc:`/general/technical_support`
+- :doc:`/intro/getting_the_most`
 - :doc:`/modules/index`
-- :doc:`/general/remove_index.php`
+- :doc:`/urls/remove_index.php`
 - :doc:`/cp/sites/index`
 - :doc:`/templates/php`
 - :doc:`/templates/comments`
-
-
-.. toctree::
-	:glob:
-	:titlesonly:
-	:hidden:
-
-	*

@@ -1,6 +1,6 @@
-#############
-Search Module
-#############
+######
+Search
+######
 
 .. contents::
 	:local:

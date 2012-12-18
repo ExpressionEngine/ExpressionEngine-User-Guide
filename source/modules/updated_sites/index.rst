@@ -1,6 +1,6 @@
-####################
-Updated Sites Module
-####################
+#############
+Updated Sites
+#############
 
 .. contents::
 	:local:

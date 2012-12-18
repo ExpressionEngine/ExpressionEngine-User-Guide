@@ -14,10 +14,10 @@ of your site and utilize server resources more efficiently.
 The caching technology in ExpressionEngine is comprised of several
 independent data caching systems and preferences.
 
-- `Tag Caching <#tag_caching>`_
-- `Template Caching <#template_caching>`_
-- `Dynamic Channel Query Caching <#dynamic_channel_query_caching>`_
-- `Query Disabling <#query_disabling>`_
+.. contents::
+	:local:
+
+.. _caching-tag-caching:
 
 Tag Caching
 -----------
@@ -37,13 +37,15 @@ To enable tag caching, add these two parameters to **any** tag::
 
 	cache="yes" refresh="10"
 
-**Note:** refresh indicates the time, in minutes, between cache
-refreshes.
+.. note:: Refresh indicates the time, in minutes, between cache
+   refreshes.
 
 For example, to cache your channel tag in 30 minute intervals you'll do
 this::
 
 	{exp:channel:entries cache="yes" refresh="30"}
+
+.. _caching-template-caching:
 
 Template Caching
 ----------------
@@ -63,12 +65,12 @@ automatically when certain events happen. For example, if you cache your
 comments page, when someone submits a comment, the cache will be
 cleared, momentarily overriding the normal caching preferences.
 
-**Note:** Dynamic Page Caching will supersede Tag Caching. There is no
-increased benefit to using tag caching and page caching together. When
-page caching is on, no other caching setting matters. Therefore, if you
-want to cache individual tags, turn off page caching.
+.. note:: Dynamic Page Caching will supersede Tag Caching. There is no
+   increased benefit to using tag caching and page caching together.
+   When page caching is on, no other caching setting matters. Therefore,
+   if you want to cache individual tags, turn off page caching.
 
-.. _dynamic-channel-query-caching:
+.. _caching-dynamic-channel-query-caching:
 
 Dynamic Channel Query Caching
 -----------------------------
@@ -81,6 +83,8 @@ used for all people, though.
 
 Enable this feature only if you **do not** use future entries, expiring
 entries, or random entries.
+
+.. _caching-query-disabling:
 
 Query Disabling
 ---------------
@@ -128,7 +132,8 @@ any of the features that can be disabled. ::
 		<h1 href="{title_permalink='channel/comments'}">{title}</h1>
 	{/exp:channel:entries}
 
-**Note**: You can also use disable="category\_fields" in the `channel
-categories <../modules/channel/categories.html>`_ tag, the `category
-heading <../modules/channel/category_heading.html>`_ tag, and the
-`category archives <../modules/channel/category_archive.html>`_ tag.
+.. note:: You can also use disable="category\_fields" in
+   the :doc:`channel categories </modules/channel/categories>` tag,
+   the :doc:`category heading </modules/channel/category_heading>` tag,
+   and the :doc:`category archives </modules/channel/category_archive>`
+   tag.

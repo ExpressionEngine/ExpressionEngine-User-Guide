@@ -1,6 +1,6 @@
-########################
-Member Management Module
-########################
+#################
+Member Management
+#################
 
 .. contents::
    :local:

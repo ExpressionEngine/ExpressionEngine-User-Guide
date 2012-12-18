@@ -1,5 +1,5 @@
-Emoticon Module
-===============
+Emoticon
+========
 
 .. contents::
    :local:

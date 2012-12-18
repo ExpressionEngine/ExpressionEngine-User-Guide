@@ -1,5 +1,5 @@
-Statistics Module
-=================
+Statistics
+==========
 
 .. contents::
 	:local:

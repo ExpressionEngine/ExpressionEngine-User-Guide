@@ -1,6 +1,6 @@
-##############
-Comment Module
-##############
+#######
+Comment
+#######
 
 .. contents::
 	:local:

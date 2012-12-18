@@ -67,6 +67,8 @@ entries from multiple Sites while ordering by Site and Channel Field.
 Read more about the :ref:`Multiple Site Manager and
 orderby= <channel-entries-orderby>`.
 
+.. _msm-variables:
+
 Variables
 ---------
 

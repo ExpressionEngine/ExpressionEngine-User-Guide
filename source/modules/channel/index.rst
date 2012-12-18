@@ -1,6 +1,6 @@
-##############
-Channel Module
-##############
+#######
+Channel
+#######
 
 ExpressionEngine's Channel Module allows you to display content created
 using the :menuselection:`Publish` section of the Control Panel. It's the

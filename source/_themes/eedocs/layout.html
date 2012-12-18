@@ -12,8 +12,8 @@
 {%- set exclude_comments = ['index', 'license', 'changelog',
 							'development/index', 'development/extension_hooks/index',
 							'development/guidelines/template'] %}
-{% if pagename == 'general/languages' -%}
-	{%- set script_files = script_files + ['_static/asset/js/general_languages.js'] %}
+{% if pagename in ['index', 'general/languages'] -%}
+	{%- set script_files = script_files + ['_static/asset/js/jquery-github-repos.js'] %}
 {% endif %}
 
 <html>

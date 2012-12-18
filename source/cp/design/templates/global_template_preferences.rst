@@ -10,6 +10,7 @@ preferences which affect all Templates.
 
 |Global Template Preferences|
 
+.. _strict-url-label:
 
 Strict URLs
 ~~~~~~~~~~~

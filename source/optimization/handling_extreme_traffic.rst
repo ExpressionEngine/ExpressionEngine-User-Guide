@@ -1,5 +1,5 @@
-Handling Extreme Traffic with ExpressionEngine
-==============================================
+Handling Extreme Traffic
+========================
 
 **Notice:** This info is intended for Server Admins when dealing with
 high-volume traffic spikes or as a permanent solution for radically high
@@ -74,7 +74,7 @@ config.php Extreme Traffic Overrides
 (y/n) - Emergency config.php only preference which when set to 'y' will disable all of the above. This is useful for server administrators who need a way to respond immediately to table locks during a traffic spike to keep the site running smoothly.
 
 If you have public facing ExpressionEngine-generated forms, you may also
-find it beneficial to disable the :doc:`Secure Forms <spam_protection>`
+find it beneficial to disable the :doc:`Secure Forms </security/spam_protection>`
 feature, though be aware that that hinders ExpressionEngine's ability to
 help prevent CSRF and spam attacks on your site. Or you may temporarily
 remove the forms or move them to a less popular URL (such as off of the

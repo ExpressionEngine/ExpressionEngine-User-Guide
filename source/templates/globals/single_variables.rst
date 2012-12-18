@@ -2,11 +2,12 @@
 Standard Global Variables
 #########################
 
-These Global Variables can be used anywhere within your Templates.
-Note that they are subject to ExpressionEngine's `parse order <http://expressionengine.com/wiki/Parse_Order>`_,
-which can affect their availability when used inside other tags.
+These Global Variables can be used anywhere within your Templates. Note
+that they are subject to ExpressionEngine's :doc:`parsing order
+</templates/template_engine>`, which can affect their availability when
+used inside other tags.
 
-Also note that there is an `alternative syntax <#id2>`_
+Also note that there is an :ref:`alternative syntax <global-alt-syntax>`
 for member variables that may be used in situations where an naming
 conflict with a module's variables may occur.
 
@@ -331,6 +332,8 @@ site\_url
 This variable will be substituted with your site URL as defined under
 :menuselection:`Admin --> General Configuration`.
 
+.. _global-template_edit_date:
+
 template\_edit\_date
 --------------------
 
@@ -397,6 +400,8 @@ webmaster\_email
 The email address for the site, as specified in `Email
 Configuration <../../cp/admin/email_configuration.html>`_.
 
+.. _global-xid-hash:
+
 XID\_HASH
 ---------
 
@@ -406,6 +411,8 @@ XID\_HASH
 
 This variable is a required value for hidden form field 'XID' used in
 secure forms.
+
+.. _global-alt-syntax:
 
 Alternative Syntax
 ==================

@@ -8,51 +8,78 @@ conditionals, which normally follows this form::
 
 	{if variable comparison-operator value}  Data between the tags that gets shown if the condition is met.  {/if}
 
-A basic conditional variable will look like this::
+.. _global-simple-conditionals:
+
+Simple Conditionals
+-------------------
+
+A conditional is considered "simple" if it is evaluating variables that
+are already available by the time the :doc:`template parsing engine
+</templates/template_engine>` reaches the simple conditionals parsing
+stage (e.g. segment, embed, and global variables), the expression
+evaluates a single variable (i.e. contains no logical operators such as
+OR, AND), and the conditional does not make use of the *else* or
+*elseif* control structures. In short, a simple conditional will look
+very much like this::
 
 	{if username == "joe"}  <h1>Hi Joe!</h1>  {/if}
 
-**Note:** If you are testing against a word, you should enclose the word
-in single or double-quotes. If you are testing against a number, then
-you do not need to use quotes.
+.. note:: If you are testing against a word, you should enclose the word
+   in single or double-quotes. If you are testing against a number, then
+   you do not need to use quotes.
 
-**Technical Note:** We use PHP to evaluate conditionals in
-ExpressionEngine and as such there are certain characters that we have
-to protect in a variable so that they are not treated as PHP code. We do
-this by converting those characters into HTML entities or removing the
-character entirely. Here is the conversion list:
+Protected Characters
+~~~~~~~~~~~~~~~~~~~~
 
--  " => &#34;
--  \\ => &#92;
--  $ => &#36;
--  ( => &#40;
--  ) => &#41;
--  { => removed
--  } => removed
--  \\n (linebreaks) => removed
--  \\r (carriage return) => removed
+ExpressionEngine uses PHP to evaluate conditionals, and there are
+certain characters that must be protected in a variable so that they are
+not treated as PHP code. You should converting those characters
+into HTML entities or removing the character entirely. Here is the
+conversion list:
 
-For example, this means that if you are comparing a value against a
-variable that might have a double quote, you should have any quotes in
-the value converted into the entity as well. For example, if your screen
-name is "The Republic" you would write the conditional like so::
+=====================  ===========
+To evaluate            Use instead
+=====================  ===========
+"                      &#34;
+\\                     &#92;
+$                      &#36;
+(                      &#40;
+)                      &#41;
+{                      remove
+}                      remove
+\\n (linebreaks)       remove
+\\r (carriage return)  remove
+=====================  ===========
 
-	{if screen_name == '&#34;The Republic&#34;'}
+If you are comparing a variable against a value that might include
+parentheses, you should use the HTML entities for parentheses listed in
+the table above instead. For example, if you want the conditional to
+evaluate whether the screen name is *John Smith (Owner)*, you would write
+the conditional like so::
+
+	{if screen_name == 'John Smith &#40;Owner&#41;'}
+
+.. _global-advanced-conditionals:
 
 Advanced Conditionals
 ---------------------
 
-**Note:** Advanced Conditionals are evaluated *after* all EE tags are
-parsed.
+Any conditional that isn't a :ref:`simple conditional <global-simple-conditionals>`
+is considered an "advanced" conditional and is evaluated
+much later in the :doc:`template parsing order
+</templates/template_engine>`. More advanced conditionals can use logical
+operators (ex: OR, AND) to compare multiple variables to multiple
+values. Consider this example::
 
-More advanced conditionals can use logical operators (ex: OR, AND) to
-compare multiple variables to multiple values. Consider this example::
-
-	{if username == "joe" OR username == "bob"}          <h1>Hey, Guys!</h1>          {/if}
+	{if username == "Joe" OR username == "Bob"}
+	    <h1>Hey, Joe or Bob!</h1>
+	{/if}
 
 Or this example::
 
-	{if username != "joe" AND username != "bob"}          <h1>Hey, Guys!</h1>          {/if}
+	{if username != "Joe" AND username != "Bob"}
+	    <h1>Hey, people who are neither Joe nor Bob!</h1>
+	{/if}
 
 Else and Elseif
 ~~~~~~~~~~~~~~~
@@ -62,14 +89,16 @@ results::
 
 	{if:elseif}
 
+And::
+
 	{if:else}
 	
 These work similar to standard PHP else and elseif constructs. Here is
 an example::
 
-	{if username == "joe"}
+	{if username == "Joe"}
 		<h1>Hey, Joe! Where were you Tuesday?</h1>
-	{if:elseif username == "bob"}
+	{if:elseif username == "Bob"}
 		<h1>Hey, Bob! Thanks for the tickets!</h1>
 	{if:else}
 		<h1>Welcome to our site.</h1>
@@ -80,9 +109,10 @@ of "joe" he receives the first message. If not, EE evaluates the second
 conditional for the username of "bob". If the username is neither joe
 nor bob a default message is shown.
 
-**Note:** Don't be confused by the {if: prefix. This simply helps the EE
-parser identify each control structure. The information to the *right*
-of the prefix is what determines which conditional you are using.
+.. note:: Don't be confused by the `{if:` prefix. This simply helps the
+   parsing engine identify each control structure. The information to
+   the *right* of the prefix is what determines which conditional you
+   are using.
 
 Operators
 ---------
@@ -96,16 +126,21 @@ Comparison Operators
 You can use any of the following operators to compare a variable to a
 value:
 
--  **==** "equal to"
--  **!=** "not equal to"
--  **<** "less than"
--  **<=** "less than or equal to"
--  **>** "greater than"
--  **>=** "greater than or equal to"
--  **<>** "not equal to"
+========  ========================
+Operator  Name
+========  ========================
+==        Equal
+!=        Not Equal
+<         Less than
+<=        Less than or equal to
+>         Greater than
+>=        Greater than or equal to
+<>        Not equal
+========  ========================
 
-**Note:** When comparing equality make sure to use **two** equal signs
-rather than one: ==
+
+.. note:: When comparing equality make sure to use **two** equal signs
+   rather than one (e.g. **==**).
 
 Logical Operators
 ~~~~~~~~~~~~~~~~~
@@ -113,17 +148,18 @@ Logical Operators
 You can use the following operators to compare multiple variables to
 multiple values:
 
--  **&&** - returns conditional's contents if *both* conditions are true
--  **\|\|** - returns conditional's contents if *either* condition is
-   true
--  **AND** - returns conditional's contents if *both* conditions are
-   true
--  **XOR** - returns conditional's contents if *either* condition is
-   true *but not both*
--  **OR** - returns conditional's contents if *either* condition is true
+========  =======  ===========================================================
+Operator  Name     Result
+========  =======  ===========================================================
+&&        And      **TRUE** if *both* conditions are **TRUE**.
+\|\|      Or       **TRUE** if *either* condition is **TRUE**.
+AND       And      **TRUE** if *both* conditions are **TRUE**.
+XOR       Xor      **TRUE** if *either* condition is **TRUE**, *but not both*.
+OR        Or       **TRUE** if *either* condition is **TRUE**.
+========  =======  ===========================================================
 
 Logical operators have a precedence that determines in what order the
-parts of a conditional are parsed. In the following advanced condtional
+parts of a conditional are parsed. In the following advanced conditional
 the member\_id and member\_group parts of the conditional are compared
 *first* using &&, before their result is compared to the username part
 via OR. ::
@@ -131,10 +167,9 @@ via OR. ::
 	{if member_id != '1' && member_group != "5" OR username == "Billy"} Hi! {/if}
 
 So, if the member id of the site visitor is not 1 and their member group
-is not 5 \*and\* their username is Billy, they can view the data in the
-conditional. The Logical Operator table above lists the precedence of
-operators with the highest-precedence operators listed at the top of the
-table.
+is not 5 *and* their username is Billy, they can view the data in the
+conditional. The table above lists the precedence of operators with the
+highest-precedence operators listed at the top of the table.
 
 Parentheses in Conditionals
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
