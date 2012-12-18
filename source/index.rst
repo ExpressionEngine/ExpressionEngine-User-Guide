@@ -169,7 +169,7 @@ Available for Download
 Developing for ExpressionEngine
 *******************************
 
-- :doc:`development/index`
+- :doc:`Add-On Development <development/index>`
 - `Development & Programming Forum <http://ellislab.com/forums/viewannounce/230178_116/>`_
 
 
@@ -179,7 +179,7 @@ About ExpressionEngine
 
 - :doc:`License Agreement <license>`
 - :doc:`Change Log <changelog>`
-- Glossary
+- :doc:`about/glossary`
 
 .. toctree::
 	:glob:
