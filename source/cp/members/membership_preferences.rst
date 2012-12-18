@@ -58,7 +58,7 @@ Profile and My Account pages.
 Enable Membership Captcha
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Here you can determine whether :doc:`CAPTCHAs </general/captchas>` are
+Here you can determine whether :doc:`CAPTCHAs </security/captchas>` are
 required for new members registering.
 
 Default Member Group Assigned to New Members

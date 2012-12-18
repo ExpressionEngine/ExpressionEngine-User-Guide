@@ -59,7 +59,7 @@ contact your host for this.
 
 -  Point your browser to the URL of the admin.php file you uploaded. For
    example: http://example.com/admin.php
--  Follow the :doc:`on-screen instructions <installation_wizard>` to
+-  Follow the on-screen instructions to
    install ExpressionEngine. Note that if you choose the "None - Empty
    Installation" Site Theme during this step, your site's homepage will
    appear blank since no templates will be created automatically for
@@ -80,7 +80,7 @@ links provided in the Installation Wizard confirmation screen.
    have been created yet.
 
 If you're new to ExpressionEngine, begin the learning process by
-following the :doc:`Getting Started </getting_started/index>` tutorial.
+reading through the :doc:`User Guide </index>`.
 
 Post-Installation Best Practices
 --------------------------------

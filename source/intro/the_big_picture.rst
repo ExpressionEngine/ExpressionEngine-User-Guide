@@ -50,7 +50,7 @@ a true content management system with great flexibility.
    :alt: ExpressionEngine Overview
 
 .. tip:: Don't worry if you don't fully grasp ExpressionEngine's terminology yet.
-	Our :doc:`Getting Started Guide </getting_started/index>` introduces the system
+	Our guide :doc:`/how_to/building_a_simple_new_site` introduces the system
 	step-by-step and will have you building a simple site in about 30 minutes.
 
 *************
@@ -105,9 +105,3 @@ simply add your content in the EE Control Panel and the system will
 automatically format it based on your template designs. And since
 ExpressionEngine is managed using your web browser, you can update your
 web site from anywhere you have access to the Internet.
-
-**************
-Ready to Rock?
-**************
-
-:doc:`Get Started with ExpressionEngine 2. </getting_started/index>`
