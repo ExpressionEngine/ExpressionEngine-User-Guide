@@ -1,6 +1,6 @@
-#############
-jQuery Module
-#############
+######
+jQuery
+######
 
 .. contents::
    :local:

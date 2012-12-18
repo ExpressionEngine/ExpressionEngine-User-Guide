@@ -1,6 +1,6 @@
-##################
-SafeCracker Module
-##################
+###########
+SafeCracker
+###########
 
 .. contents::
    :local:

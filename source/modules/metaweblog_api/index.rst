@@ -1,5 +1,5 @@
-Metaweblog API / Movable Type Module
-====================================
+Metaweblog API / Movable Type
+=============================
 
 .. contents::
    :local:

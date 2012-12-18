@@ -1,6 +1,6 @@
-###################
-IP to Nation Module
-###################
+############
+IP to Nation
+############
 
 .. contents::
    :local:

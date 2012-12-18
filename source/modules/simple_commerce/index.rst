@@ -1,6 +1,6 @@
-######################
-Simple Commerce Module
-######################
+###############
+Simple Commerce
+###############
 
 .. contents::
 	:local:

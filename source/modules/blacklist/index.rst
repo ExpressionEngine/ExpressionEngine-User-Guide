@@ -1,5 +1,5 @@
-Blacklist/Whitelist Module
-==========================
+Blacklist/Whitelist
+===================
 
 .. contents::
    :local:

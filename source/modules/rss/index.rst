@@ -1,5 +1,5 @@
-RSS Module
-==========
+RSS
+===
 
 .. contents::
    :local:

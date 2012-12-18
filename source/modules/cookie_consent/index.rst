@@ -1,6 +1,6 @@
-#####################
-Cookie Consent Module
-#####################
+##############
+Cookie Consent
+##############
 
 .. contents::
    :local:

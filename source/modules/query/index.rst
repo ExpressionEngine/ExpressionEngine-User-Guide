@@ -1,6 +1,6 @@
-############
-Query Module
-############
+#####
+Query
+#####
 
 .. contents::
    :local:

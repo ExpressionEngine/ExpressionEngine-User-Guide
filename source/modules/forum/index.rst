@@ -1,6 +1,6 @@
-#######################
-Discussion Forum Module
-#######################
+################
+Discussion Forum
+################
 
 .. contents::
    :local:

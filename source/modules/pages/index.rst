@@ -1,6 +1,6 @@
-############
-Pages Module
-############
+#####
+Pages
+#####
 
 .. contents::
    :local:

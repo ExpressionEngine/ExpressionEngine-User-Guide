@@ -1,5 +1,5 @@
-File Module
-===========
+File
+====
 
 The File Module allows you to display data associated with the files in
 your `File Upload
