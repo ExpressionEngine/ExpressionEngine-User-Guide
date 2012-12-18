@@ -7,8 +7,8 @@ Congratulations! You have installed ExpressionEngine... now what? Why not say
 
 Visit :menuselection:`Design --> Templates --> Edit --> Create Group`
 
-Fill in the field for **Template Group Name**, for this example we'll use 
-"site". Leave **Duplicate an Existing Template Group?** the same and check the 
+Fill in the field for **Template Group Name**, for this example use "site". 
+Ignore **Duplicate an Existing Template Group?** for now and check the 
 box for **Make the index template in this group your site's home page?**. Now, 
 click `Submit`.
 
@@ -46,12 +46,12 @@ add some code! ::
 To save your changes, click `Update`. 
 
 Ready to admire your work? Click `View Rendered Template` in the 
-upper-right area above the **Template Editor**. You'll be taken to the front-end 
-to see what the world sees.
+upper-right area above the **Template Editor**. You'll be taken to your site 
+to see what the world will see.
 
-Have a look at the URL - you'll see ``example.com/index.php/site``.
+Have a look at the URL - ``example.com/index.php/site``.
 ExpressionEngine uses :doc:`URL Segments </templates/globals/url_segments>` to 
-do its magic, and here you can see that it is using ``site`` in Segment 1. That 
+do its magic, and here you can see ``site`` in Segment 1. That 
 tells ExpressionEngine to look for a Template Group named "site" and the lack of 
 Segment 2 (since there is nothing past ``site/``) let's ExpressionEngine know to 
 use the group's "index" template.
@@ -65,7 +65,7 @@ You'll see the same output as before. In the fist example, adding Segment 2
 (``index``), alerts ExpressionEngine to precisely the template we want from the
 group "site". In the second example, going straight to the root URL should bring
 up the home page. Remember, we set ExpressionEngine to use the "index" template 
-from the group "site" as our site's main index page.
+from the group "site" as our site's home page.
 
 You can add more HTML to your template and have some fun. Create a few other
 templates in this group, or some new groups altogether. Spend some time playing 
