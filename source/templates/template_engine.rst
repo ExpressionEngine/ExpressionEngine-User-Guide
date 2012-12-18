@@ -34,7 +34,7 @@ Rendering Stages
 The Template Engine processes the selected template fully from top to
 bottom through each rendering stage.
 
-#. Determine template to process based on request :doc:`URI </general/urls>`
+#. Determine template to process based on request :doc:`URI </urls/url_structure>`
 
 #. Get **template from database**, check :doc:`template access permissions </cp/design/templates/template_access>`, and increment the :doc:`hit counter </templates/hit_counter>`
 

@@ -99,19 +99,18 @@ three options:
 #. Manually turn that feature on using a .htaccess file.
 #. Contact your Host or server admin to have them enable the option.
 #. Run your site using query strings. See the "Query String" section of
-   the :doc:`/general/urls` page for details.
+   the :doc:`/urls/url_structure` page for details.
 
 URL Segment Support
 ~~~~~~~~~~~~~~~~~~~
 
 If the Server Wizard lists URL Segment Support as *Unsupported*, you
 will need to run your ExpressionEngine site using query strings. The
-"Query String" section of the :doc:`/general/urls`
+"Query String" section of the :doc:`/urls/url_structure`
 page contains more information.
 
 Getting Started
 ---------------
 
 Once you're sure that your server is compatible,
-:doc:`install ExpressionEngine</installation/installation>` and 
-:doc:`get started!</getting_started/index>`
+:doc:`install ExpressionEngine</installation/installation>` and get started!

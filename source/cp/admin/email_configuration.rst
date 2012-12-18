@@ -166,6 +166,6 @@ Enable CAPTCHAs for Tell-a-Friend and Contact emails
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 With this enabled, users will need to fill out a
-:doc:`CAPTCHA </general/captchas>` when using the Tell-a-Friend
+:doc:`CAPTCHA </security/captchas>` when using the Tell-a-Friend
 or Contact email forms. You will need to ensure that your tags for those
 forms contain the appropriate CAPTCHA code.

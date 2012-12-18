@@ -6,21 +6,21 @@ Captcha Preferences
 **Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Captcha Preferences`
 
 This section of the Control Panel allows you to set
-:doc:`CAPTCHA </general/captchas>` preferences for your
+:doc:`CAPTCHA </security/captchas>` preferences for your
 website.
 
 Server Path to Captcha Folder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The *server path* (not a URL) to the folder containing your
-:doc:`CAPTCHA </general/captchas>` images. In some cases a
+:doc:`CAPTCHA </security/captchas>` images. In some cases a
 simple relative path will work correctly. If you are not sure how to
 determine your server path please contact your system administrator.
 
 Full URL to Captcha Folder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The full URL to the :doc:`CAPTCHAs </general/captchas>` image
+The full URL to the :doc:`CAPTCHAs </security/captchas>` image
 folder, with a trailing slash.
 
 Use TrueType Font for Captcha?

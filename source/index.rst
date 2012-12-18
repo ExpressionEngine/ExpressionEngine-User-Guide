@@ -6,8 +6,8 @@ ExpressionEngine User Guide
 Welcome
 *******
 
-- :doc:`general/getting_the_most`
-- :doc:`getting_started/the_big_picture`
+- :doc:`intro/getting_the_most`
+- :doc:`intro/the_big_picture`
 - `EllisLab Support <http://ellislab.com/support>`_
 
 *****************
@@ -32,8 +32,13 @@ Updates and Upgrades
 Using ExpressionEngine
 **********************
 
+<<<<<<< HEAD
 - :doc:`getting_started/the_big_picture`
 - :doc:`getting_started/hello-world`
+=======
+- :doc:`intro/the_big_picture`
+- Hello, World!
+>>>>>>> adf3eeea0aa4a50a28a79b954649d45d8c2a2888
 
 The Control Panel
 =================
@@ -57,8 +62,8 @@ Templates
 URLs
 ----
 
-- :doc:`general/urls`
-- :doc:`general/remove_index.php`
+- :doc:`urls/url_structure`
+- :doc:`urls/remove_index.php`
 
 
 *****************
@@ -70,29 +75,29 @@ Beyond the Basics
 - :doc:`modules/forum/index`
 
 
-****************************************
-Application Maintenance and Optimization
-****************************************
+**************************************
+Application Maintenance & Optimization
+**************************************
 
-Maintenance and Operations
-==========================
+Maintenance & Operations
+========================
 
-- :doc:`installation/moving`
-- :doc:`general/database_backup`
+- :doc:`operations/moving`
+- :doc:`operations/database_backup`
 
 Securing ExpressionEngine
 =========================
 
-- :doc:`general/spam_protection`
-- :doc:`general/captchas`
+- :doc:`security/spam_protection`
+- :doc:`security/captchas`
 
 Optimizing ExpressionEngine
 ===========================
 
-- :doc:`general/404pages`
-- :doc:`general/caching`
-- :doc:`general/throttling`
-- :doc:`general/handling_extreme_traffic`
+- :doc:`optimization/404pages`
+- :doc:`optimization/caching`
+- :doc:`optimization/throttling`
+- :doc:`optimization/handling_extreme_traffic`
 
 Solving Problems
 ================
@@ -106,8 +111,13 @@ Solving Problems
 How-To Guides
 *************
 
+<<<<<<< HEAD
 - :doc:`getting_started/hello-world`
 - :doc:`getting_started/index`
+=======
+- Hello, World!
+- :doc:`how_to/building_a_simple_new_site`
+>>>>>>> adf3eeea0aa4a50a28a79b954649d45d8c2a2888
 
 
 *******************
@@ -118,23 +128,28 @@ Reference Guides
 ================
 
 - :doc:`The Control Panel <cp/index>`
-- :doc:`general/quick_reference`
-- :doc:`general/bbcode`
-- :doc:`general/hidden_configuration_variables`
-- :doc:`general/text_formatting`
+- :doc:`templates/template_engine`
 - :doc:`templates/globals/index`
+- :doc:`general/hidden_configuration_variables`
+- :doc:`general/bbcode`
+- :doc:`general/text_formatting`
 - :doc:`templates/date_variable_formatting`
 - :doc:`templates/hit_counter`
-- :doc:`templates/template_engine`
+- :doc:`general/quick_reference`
 
 Add-Ons
 =======
 
+<<<<<<< HEAD
 
 .. _add-ons-included-in-expressionengine:
 
 Included in Core
 ----------------
+=======
+Included in ExpressionEngine
+----------------------------
+>>>>>>> adf3eeea0aa4a50a28a79b954649d45d8c2a2888
 
 - :doc:`modules/blacklist/index`
 - :doc:`modules/channel/index`
@@ -183,9 +198,9 @@ Developing for ExpressionEngine
 About ExpressionEngine
 **********************
 
-- :doc:`License Agreement <license>`
-- :doc:`Change Log <changelog>`
-- :doc:`about/glossary`
+- :doc:`License Agreement </about/license>`
+- :doc:`Change Log </about/changelog>`
+- :doc:`/about/glossary`
 
 .. toctree::
 	:glob:
@@ -193,14 +208,18 @@ About ExpressionEngine
 	:hidden:
 	
 	about/index
-	license
-	changelog
+	about/license
+	about/changelog
 	installation/index
 	cp/index
 	general/index
-	getting_started/index
+	intro/index
 	handling_bugs/index
 	modules/index
+	operations/index
+	optimization/index
+	security/index
 	templates/index
 	troubleshooting/index
+	urls/index
 	development/index

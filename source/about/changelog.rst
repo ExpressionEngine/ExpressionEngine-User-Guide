@@ -527,7 +527,7 @@ Release Date: May 7, 2012
 
 - General Changes:
 
-  - :doc:`Rich Text Editor <modules/rte/control_panel/index>`
+  - :doc:`Rich Text Editor </modules/rte/control_panel/index>`
 
     - Added new module and fieldtype for the new rich text editor.
     - Added user preferences for rich text editor under my preferences.
@@ -677,7 +677,7 @@ Release Date: May 7, 2012
   - **Reactor:** Altered the Template class to allow plugins/modules to use 
     __call() magic method.
   - Added ``myaccount_nav_setup`` hook to modify My Account navigation. See 
-    :doc:`documentation <development/extension_hooks/cp/myaccount/index>` for 
+    :doc:`documentation </development/extension_hooks//cp/myaccount/index>` for 
     more information.
   - Added ``email_send`` hook to modify emails or take over email sending
     completely.
@@ -1242,7 +1242,7 @@ Release Date: June 22, 2011
 
 -  General Changes:
 
-   -  Added a :doc:`File Module <modules/file/index>` to display file
+   -  Added a :doc:`File Module </modules/file/index>` to display file
       information on the frontend.
    -  Added ability to edit file metadata from the File Manager.
    -  Added several file types to the mimetype listing. **Please update
@@ -1510,7 +1510,7 @@ Build 20110512
 -  General Changes:
 
    -  File Manager Changes (see :doc:`Version Update
-      Notes <installation/version_notes_2.1.5>`):
+      Notes </installation/version_notes_2.1.5>`):
 
       -  Moved file information storage to the database
       -  Moved File Upload Preferences to the File Manager
@@ -1549,7 +1549,7 @@ Build 20110512
       to allow parsing of global variables within snippets.
    -  Removed the Blogger API module.
    -  Moved SafeCracker into native modules, **please see the** :doc:`version
-      notes <installation/version_notes_2.2.0>` **about how to
+      notes </installation/version_notes_2.2.0>` **about how to
       upgrade**.
 
 -  Bug Fixes:
@@ -1917,7 +1917,7 @@ General Changes:
 -  Added an importer to the IP to Nations Module that allows updating
    the IP records directly from the ip2nations SQL file.
 -  Added secure forms check to the frontend Comment Editor. See the
-   `Version Notes <installation/version_notes_2.1.2.html#comments>`_ and
+   `Version Notes </installation/version_notes_2.1.2.html#comments>`_ and
    update your `JavaScript <comment-editing>` if needed.
 -  Added a setting to group preferences to disallow editing of html
    formatting buttons.
@@ -1956,7 +1956,7 @@ Developers:
 -  Added cp\_js\_end and cp\_css\_end Extension Hook to the Javascript
    Controller.
 -  Added a new method
-   `settings\_modify\_column() <installation/version_notes_2.1.2.html#settings_modify_column>`_
+   `settings\_modify\_column() </installation/version_notes_2.1.2.html#settings_modify_column>`_
    to Custom Fieldtypes.
 -  Changed the API's initialize method visibility to protected.
 -  Moved Javascript files to themes/javascript/compressed/.
@@ -1969,7 +1969,7 @@ Developers:
 -  Abstracted the secure forms check to a new function
    secure\_forms\_check() in the Security Library.
 -  Moved the `entry\_submission\_absolute\_end
-   hook <installation/version_notes_2.1.2.html#entry_submission_absolute_end>`_
+   hook </installation/version_notes_2.1.2.html#entry_submission_absolute_end>`_
    from the Channel Entries API to Content Publish and added a new
    parameter.
 -  CodeIgniter system folder set to `Rev
@@ -2154,15 +2154,15 @@ Build 20101018 (initial release)
       to the :doc:`Channel Category tag </modules/channel/categories>`, which allows overriding the new
       default behavior of its show_empty= parameter.
    -  Added a :doc:`Control
-      Panel <modules/comment/control_panel/index>` to the Comment
+      Panel </modules/comment/control_panel/index>` to the Comment
       Module.
    -  Added a new status for comments. Moderated comments will no go in
       with a status of 'Pending' rather than 'Closed' (though moderators
       may still set a comment to 'Closed' status.
    -  Added new variables to the Comment Notification Templates (see
-      :doc:`Version Notes <installation/version_notes_2.1.1>`).
+      :doc:`Version Notes </installation/version_notes_2.1.1>`).
    -  Added new
-      `Settings <modules/comment/control_panel/index.html#settings>`_ to
+      `Settings </modules/comment/control_panel/index.html#settings>`_ to
       the Comment Module (Force word censoring for comments and Moderate
       expired comments).
    -  Added new variables to the :doc:`Comment Entries tag </modules/comment/index>`
@@ -2220,9 +2220,9 @@ Build 20101018 (initial release)
    -  Deprecated the old lang.name.php language file naming convention
       in favor of CodeIgniter's name\_lang.php.
    -  Added a parameter to the `delete\_comment\_additional
-      hook <installation/version_notes_2.1.1.html#delete_comment_additional>`_.
+      hook </installation/version_notes_2.1.1.html#delete_comment_additional>`_.
    -  Removed the `comment\_form\_action
-      hook <installation/version_notes_2.1.1.html#comment_form_action>`_.
+      hook </installation/version_notes_2.1.1.html#comment_form_action>`_.
    -  Fixed a bug in the API where child drivers were not being
       initialized before consecutive instantiations.
    -  Fixed a bug (#14009) in the Channel Entries API where
@@ -2856,7 +2856,7 @@ Build 20100415 (initial release)
 -  Added missing language keys on publish page.
 -  Added a check for required fields when saving custom layouts for the
    publish page.
--  Added a {exp:pages:load_site_pages} tag to the :doc:`modules/pages/index`
+-  Added a {exp:pages:load_site_pages} tag to the :doc:`/modules/pages/index`
    for use with the Multiple Site Manager.
 -  Added a class variable to the xmlrpc library to increase consistency
    between the Metaweblog/Blogger modules and publishing using the
@@ -3591,7 +3591,7 @@ Build 20100121 (initial release)
       global settings.
    -  Added per field settings for showing smileys, spellcheck, etc.,
       please see the :doc:`Fieldtype
-      documentation <development/fieldtypes>` for details.
+      documentation </development/fieldtypes>` for details.
 
 Version 2.0.0 Public Beta
 -------------------------
@@ -3893,7 +3893,7 @@ Build 20091202 (initial release)
    -  New custom field types: Multi-select, Checkbox, Radio, and Upload
    -  Included jQuery and numerous plugins, themes, and UI effects as
       standard.
-   -  Added a :doc:`jQuery module <modules/jquery/index>` to simplify
+   -  Added a :doc:`jQuery module </modules/jquery/index>` to simplify
       access to jQuery script files in your ExpressionEngine
       installation.
    -  Added additional security measures to help alert you if
@@ -3904,22 +3904,22 @@ Build 20091202 (initial release)
    -  Changed the behavior of the backspace parameter so that it no
       longer ignores whitespace.
    -  Made "yes/no" tag parameters consistent.
-   -  ExpressionEngine :doc:`Template Comments <templates/comments>`
+   -  ExpressionEngine :doc:`Template Comments </templates/comments>`
       can now be used in Global Variables and Snippets.
    -  Added CodeIgniter Output Profiler for improved debugging.
    -  Changed system offline message to output 503 headers with a 1 hour
       retry time.
    -  {assign\_variable:} changed to
-      :doc:`{preload\_replace:foo="bar"} <templates/globals/preload_replacement>`
+      :doc:`{preload\_replace:foo="bar"} </templates/globals/preload_replacement>`
       and documentation clarified.
    -  The Simple Commerce Module now supports :ref:`subscriptions and
       recurring payments <simple-commerce-recurring-payments>`
    -  The Trackback module has been removed from ExpressionEngine. See
       the :doc:`version update
-      notes <installation/version_notes_2.0>` for details.
+      notes </installation/version_notes_2.0>` for details.
    -  The Photo Gallery module has been removed from ExpressionEngine.
       See the :doc:`version update
-      notes <installation/version_notes_2.0>` for details.
+      notes </installation/version_notes_2.0>` for details.
 
 -  **Control Panel**
 
@@ -3929,7 +3929,7 @@ Build 20091202 (initial release)
       -  Completely redesigned navigation.
       -  Improved UI, including new table filtering and sorting
          capabilities.
-      -  Added :doc:`Accessories <cp/add-ons/accessory_manager>`, a
+      -  Added :doc:`Accessories </cp/add-ons/accessory_manager>`, a
          brand new control panel add-on type.
       -  My Account sidebar gives quick access to personal settings.
       -  Added context sensitive Help system.
@@ -3967,7 +3967,7 @@ Build 20091202 (initial release)
          not installed.
       -  Added "create and edit" option when creating new templates.
       -  Dramatically changed :doc:`flat-file template
-         system <templates/templates_as_files>`
+         system </templates/templates_as_files>`
 
          -  When using this feature, templates and groups will be
             created automatically when you add them to the template
@@ -3975,7 +3975,7 @@ Build 20091202 (initial release)
          -  Template Editor will indicate whether the loaded template is
             sourced from a file or the database
          -  Easy to use :doc:`Synchronization
-            Tool <cp/design/templates/synchronize_templates>` to
+            Tool </cp/design/templates/synchronize_templates>` to
             keep your database and files in sync.
          -  Files are now saved with the proper file extension, making
             syntax highlighting simpler in your favorite text/HTML/CSS
@@ -4023,7 +4023,7 @@ Build 20091202 (initial release)
       your member profile themes.
    -  Site themes are much easier to create and redistribute, following
       the same file structure as the new
-      :doc:`flat-file template system <templates/templates_as_files>`.
+      :doc:`flat-file template system </templates/templates_as_files>`.
 
 -  **Installer**
 
@@ -4039,20 +4039,20 @@ Build 20091202 (initial release)
 
 -  **Development changes**
 
-   -  Add-ons now come in :doc:`packages <development/packages>`,
+   -  Add-ons now come in :doc:`packages </development/packages>`,
       increasing flexibility and simplifying updates and maintenance.
    -  Add-ons can have their own CodeIgniter libraries, models, config,
       javascript, view files, etc.
    -  Single third party folder for all add-on types.
    -  New control panel add-on type:
-      :doc:`Accessories <development/accessories>`.
+      :doc:`Accessories </development/accessories>`.
    -  New Custom Field API lets you create your own custom field types.
-      *`Contact the development
-      team <http://expressionengine.com/support/>`_ for alpha
+      *Contact the development
+      team for alpha
       documentation*.
    -  Added simple methods for tags to :doc:`parse their template
       variables </development/usage/template>`.
-   -  Added :doc:`CP library <development/usage/cp>` which has many
+   -  Added :doc:`CP library </development/usage/cp>` which has many
       assistive methods and handles many things for you automatically.
    -  Display class is deprecated!
    -  CodeIgniter core increase ease and power of developing add-ons,
