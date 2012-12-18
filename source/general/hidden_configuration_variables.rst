@@ -150,6 +150,20 @@ the query to change slightly with each page load; thus it cannot use this
 caching method. (See :ref:`caching-dynamic-channel-query-caching` for an
 alternative that can be used in many cases.)
 
+filename_increment
+~~~~~~~~~~~~~~~~~~
+
+**Value:** y/n
+
+When set to "y", forces upload filenames to be unique. Re-uploads of existing
+files or uploads that share a filename with an existing file will have an
+incrementing number appended to them.
+
+::
+
+	$config['filename_increment'] = 'y';
+
+
 hidden_template_404
 ~~~~~~~~~~~~~~~~~~~
 
