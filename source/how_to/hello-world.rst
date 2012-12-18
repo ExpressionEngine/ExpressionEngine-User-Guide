@@ -24,7 +24,8 @@ Click **Index** in the `Edit Template` column. This will take you to the
 
 |Template Edit|
 
-You should see a completely blank slate. How droll, let's add some code! ::
+You should see a completely blank slate. That's rather uninteresting... let's 
+add some code! ::
 
   <!DOCTYPE html>
   <html lang="en">
@@ -48,28 +49,29 @@ upper-right area above the **Template Editor**. You'll be taken to the front-end
 view of your template.
 
 Have a look at the URL - you'll see ``example.com/index.php/site``.
-ExpressionEngine uses URL segments to do some work, and here we can see that it
-is using ``site`` in segment 1. That tells EE to look for a Template Group named
-"site" and the lack of segment 2 (there is nothing past ``site/``) let's EE know
-we want to default to that group's "index" template.
+ExpressionEngine uses :doc:`URL Segments </templates/globals/url_segments>` to 
+do some work, and here we can see that it is using ``site`` in Segment 1. That 
+tells ExpressionEngine to look for a Template Group named "site" and the lack of 
+Segment 2 (since there is nothing past ``site/``) let's ExpressionEngine know to 
+default the group's "index" template.
 
 Let's try a couple of other URLs:
 
 	- ``example.com/index.php/site/index/``
 	- ``example.com/``
 
-You'll see the same output as before. In our fist example, we've added segment 2
+You'll see the same output as before. In our fist example, we've added Segment 2
 (``index``), so ExpressionEngine knows precisely the template we want from the
 group "site". In the second example, we've gone straight to the root URL.
-Remember, we set ExpressionEngine to use the index template from the group site
-as our site's main index page?
+Remember, we set ExpressionEngine to use the index template from the group 
+"site" as our site's main index page.
 
 You can add more HTML to your template and have some fun. Create a few other
-templates in this group, or some new groups and play with how ExpressionEngine
-uses the URL to send that to the browser.
+templates in this group, or some new groups and study how ExpressionEngine
+uses the URL.
 
-After you feel comfortable with how ExpressionEngine presents templates, start 
-:doc:`Building a Simple Site <building_a_simple_new_site>`! 
+Now that you feel comfortable with static ExpressionEngine templates, how about 
+:doc:`Building a Simple Site <building_a_simple_new_site>`? 
 
 .. |Template Group| image:: ../images/template_group.png
 .. |Template Edit| image:: ../images/template_edit.png
