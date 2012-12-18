@@ -24,4 +24,4 @@ the forums. You might want to get started by hanging out in
 `The Lounge <http://ellislab.com/forums/viewforum/28/>`_.
 
 Go ahead and explore the Forums and get involved. Teaching and helping others
-troubleshoot can be one of the best ways to boost your own EE skills.
+troubleshoot can be one of the best ways to boost your own ExpressionEngine skills.

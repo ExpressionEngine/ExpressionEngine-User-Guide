@@ -44,8 +44,6 @@ The Control Panel
 The Front-End
 =============
 
-- Introduction to the Front-End
-
 Templates
 ---------
 
@@ -92,9 +90,9 @@ Securing ExpressionEngine
 Optimizing ExpressionEngine
 ===========================
 
-- :doc:`general/throttling`
 - :doc:`general/404pages`
 - :doc:`general/caching`
+- :doc:`general/throttling`
 - :doc:`general/handling_extreme_traffic`
 
 Solving Problems

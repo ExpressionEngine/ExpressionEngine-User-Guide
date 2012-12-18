@@ -2,11 +2,11 @@
 The Big Picture
 ###############
 
-Thousands of web sites are powered using ExpressionEngine, from business
-sites, to online magazines, to personal blogs. ExpressionEngine's
-flexible architecture allows an endless range of possibilities.
-Visit the `ExpressionEngine Showcase <http://expressionengine.com/showcase/>`_ to see
-real-world example sites and interviews with ExpressionEngine creatives.
+Thousands of web sites are powered using ExpressionEngine, from business sites,
+to online magazines, to personal blogs. ExpressionEngine's flexible architecture
+allows an endless range of possibilities. Visit the `Showcase
+<http://ellislab.com/showcase/>`__ to see examples of real-world sites with
+insight direct from the site builders themselves.
 
 ************
 How it Works
