@@ -69,8 +69,8 @@ Example 1
 ---------
 
 Often URLs entered by hand are not typed correctly, especially if the URL
-includes the title of an entry. Its easier to enter in the URL if it's site
-name and then a template group. For example:
+includes the title of an entry. Avoiding mistyped URLs is much easier when
+entering just a site name and a template group. For example:
 
 www.example.com/blog/
 
