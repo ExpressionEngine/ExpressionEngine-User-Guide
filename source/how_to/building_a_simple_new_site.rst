@@ -196,7 +196,7 @@ store in ExpressionEngine.
    ourselves - all Entries automatically have a Title field.
 #. ExpressionEngine provides a sensible **URL Title** for you. This is another
    automatic field that allows your entries to be easily linked to via a URL.
-   See :doc:`/general/urls` for more information.
+   See :doc:`/urls/url_structure` for more information.
 #. Enter some text in the **News Body** field. Make it good!
 #. Click *Submit* to publish the Entry.
 
@@ -543,9 +543,9 @@ what you want it to do. Welcome to ExpressionEngine.
 While you should read the User Guide in its entirety, here are some topics you might be
 interested in:
 
-- :doc:`/general/getting_the_most`
+- :doc:`/intro/getting_the_most`
 - :doc:`/modules/index`
-- :doc:`/general/remove_index.php`
+- :doc:`/urls/remove_index.php`
 - :doc:`/cp/sites/index`
 - :doc:`/templates/php`
 - :doc:`/templates/comments`

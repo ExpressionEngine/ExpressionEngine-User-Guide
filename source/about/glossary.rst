@@ -7,7 +7,7 @@ Glossary
    Core
       A free, feature-limited edition of our award 
       winning content management platform, available under a :doc:`restricted 
-      license </license>`.
+      license </about/license>`.
 
    MSM Site
    MSM Sites

@@ -6,7 +6,7 @@ Throttling Preferences
 **Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Throttling Preferences`
 
 This section of the Control Panel allows you to manage the Throttling
-feature. See :doc:`/general/throttling` for more information
+feature. See :doc:`/optimization/throttling` for more information
 regarding this feature.
 
 Enable Throttling
