@@ -33,7 +33,7 @@ Using ExpressionEngine
 **********************
 
 - :doc:`getting_started/the_big_picture`
-- Hello, World!
+- :doc:`getting_started/hello-world`
 
 The Control Panel
 =================
@@ -106,7 +106,7 @@ Solving Problems
 How-To Guides
 *************
 
-- Hello, World!
+- :doc:`getting_started/hello-world`
 - :doc:`getting_started/index`
 
 
@@ -129,6 +129,9 @@ Reference Guides
 
 Add-Ons
 =======
+
+
+.. _add-ons-included-in-expressionengine:
 
 Included in Core
 ----------------
@@ -157,6 +160,7 @@ Included in Core
 - :doc:`modules/statistics/index`
 - :doc:`modules/updated_sites/index`
 - :doc:`modules/wiki/index`
+
 
 .. _add-ons-available-for-download:
 
