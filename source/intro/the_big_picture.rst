@@ -50,7 +50,7 @@ a true content management system with great flexibility.
    :alt: ExpressionEngine Overview
 
 .. tip:: Don't worry if you don't fully grasp ExpressionEngine's terminology yet.
-	Our guide :doc:`/how_to/building_a_simple_new_site` introduces the system
+	Our guide :doc:`/how_to/building_a_simple_news_site` introduces the system
 	step-by-step and will have you building a simple site in about 30 minutes.
 
 *************
