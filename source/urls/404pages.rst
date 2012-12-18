@@ -110,7 +110,7 @@ rather just push your user back to the template group and article they intended.
 ``example.com/blog/title-of-article/another/segment``
 
 Placing this code will auto correct that. This will require that PHP be enabled
-in the your template. ::
+in the template. ::
 
   {if segment_3!=""}
   <?
