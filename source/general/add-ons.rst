@@ -2,28 +2,23 @@
 Add-Ons
 #######
 
-ExpressionEngine is remarkably capable right out-of-the-box. Like an Operating
-System, it ships with a set of apps to get you started. And like an OS,
-ExpressionEngine was designed with more in mind. Rather than cast you into 
-a mould, ExpressionEngine let's you shatter the mould!
+ExpressionEngine isn't a single, inflexible piece of software. It was designed
+to be a platform for developers to easily extend to enable rich functionality.
+Like an operating system, it ships with a set of "apps" to cover the basic
+necessities right out of the box. We call those apps *Add-Ons*.
 
-A `CodeIgniter <http://ellislab.com/codeigniter/>`_ foundation and
-robust :doc:`Developer API </development/index>` have allowed EllisLab and 
-third-party developers to add functionality to ExpressionEngine. Any piece of 
-software that adds to ExpressionEngine is called an 
-:ref:`Add-On <add-ons-included-in-expressionengine>`. Add-On packages enable
-ExpressionEngine to be amazingly flexible.
+Have a need for :doc:`RSS </modules/rss/index>`?  :doc:`Search
+</modules/search/index>`?  :doc:`Comments </modules/comment/index>`?  Install
+those packages, and you'll have a whole new set of tools at your disposal.
 
-Have a need for :doc:`RSS </modules/rss/index>`? 
-:doc:`Search </modules/search/index>`? 
-:doc:`Comments </modules/comment/index>`? 
-Install those packages and then you're ready to build those features.
+And just like an OS, Add-Ons that don't come :ref:`included with
+ExpressionEngine <add-ons-included-in-expressionengine>` can be added to bring
+even more functionality to the platform. ExpressionEngine was built on a
+`CodeIgniter <http://ellislab.com/codeigniter/>`_ foundation and includes a
+robust :doc:`developer API </development/index>` to enable rapid Add-on
+development, and a rich ecosystem filled with high-quality Add-Ons has grown up
+around it.
 
-By the way, you aren't limited to what ships with ExpressionEngine. EllisLab 
-offers a :ref:`collection of Add-Ons <add-ons-available-for-download>` on 
-GitHub and there are an ever-growing number of third-party Add-Ons available 
-that extend ExpressionEngine in amazing ways.
-
-With Add-Ons, you build just the features and functionality your clients need. 
-It’s entirely possible to use EE on dozens of projects and deliver a tailored 
-experience with each one.
+With Add-Ons :ref:`available from EllisLab <add-ons-available-for-download>` and
+third-party developers, you can construct a web publishing system tailored to
+fit the needs of the project at hand.
