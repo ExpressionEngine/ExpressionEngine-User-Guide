@@ -107,7 +107,7 @@ How-To Guides
 *************
 
 - :doc:`how_to/hello-world`
-- :doc:`how_to/building_a_simple_new_site`
+- :doc:`how_to/building_a_simple_news_site`
 
 
 *******************

@@ -71,7 +71,7 @@ templates in this group, or some new groups and study how ExpressionEngine
 uses the URL.
 
 Now that you feel comfortable with static ExpressionEngine templates, how about 
-:doc:`Building a Simple Site <building_a_simple_new_site>`? 
+:doc:`Building a Simple Site <building_a_simple_news_site>`? 
 
 .. |Template Group| image:: ../images/template_group.png
 .. |Template Edit| image:: ../images/template_edit.png
