@@ -83,7 +83,6 @@ Maintenance and Operations
 Securing ExpressionEngine
 =========================
 
-- Basic Security
 - :doc:`general/spam_protection`
 - :doc:`general/captchas`
 
