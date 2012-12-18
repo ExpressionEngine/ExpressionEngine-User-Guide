@@ -3,7 +3,7 @@ Add Sites to MSM
 
 When the :doc:`Multiple Site Manager </cp/sites/index>` expansion is added to an
 ExpressionEngine installation, it enables the software to power up to 3
-:term:`MSM Sites`. Follow these steps to add more Sites to your ExpressionEngine
+MSM Sites. Follow these steps to add more Sites to your ExpressionEngine
 installation.
 
 Purchase Additional Sites
@@ -38,5 +38,5 @@ files:
 
 Upload each of these files to their respective directories within your ExpressionEngine installation.
 
-Now your installation will have the ability to power that many more :term:`MSM
-Sites`. The next step is to :doc:`set up the new MSM Site <createsite>` in your installation.
+Now your installation will have the ability to power that many more MSM
+Sites. The next step is to :doc:`set up the new MSM Site <createsite>` in your installation.

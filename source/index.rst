@@ -59,6 +59,7 @@ URLs
 
 - :doc:`urls/url_structure`
 - :doc:`urls/remove_index.php`
+- :doc:`urls/404pages`
 
 
 *****************
@@ -89,7 +90,6 @@ Securing ExpressionEngine
 Optimizing ExpressionEngine
 ===========================
 
-- :doc:`optimization/404pages`
 - :doc:`optimization/caching`
 - :doc:`optimization/throttling`
 - :doc:`optimization/handling_extreme_traffic`
@@ -184,7 +184,6 @@ About ExpressionEngine
 
 - :doc:`License Agreement </about/license>`
 - :doc:`Change Log </about/changelog>`
-- :doc:`/about/glossary`
 
 .. toctree::
 	:glob:
