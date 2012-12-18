@@ -130,8 +130,8 @@ Reference Guides
 Add-Ons
 =======
 
-Included in Core
-----------------
+Included in ExpressionEngine
+----------------------------
 
 - :doc:`modules/blacklist/index`
 - :doc:`modules/channel/index`
