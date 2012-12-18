@@ -36,7 +36,7 @@ Now that you understand a bit more about what a 404 status code is, that helps y
 
 **2. How does ExpressionEngine handle a 404 by default?**
 
-By default when a 404 error is encountered, ExpressionEngine will direct your visitor to the homepage. Or rather, the default template group and the index file in that template group. ExpressionEngine only checks the first two :term:`segments` to determine whether or not to show a 404 page. Anything beyond that cannot be used, but we will address that later on in this guide.
+By default when a 404 error is encountered, ExpressionEngine will direct your visitor to the homepage. Or rather, the default template group and the index file in that template group. ExpressionEngine only checks the first two segments to determine whether or not to show a 404 page. Anything beyond that cannot be used, but we will address that later on in this guide.
 
 **3. Where do I change the settings so that I have control over the 404 page that is shown?**
 
@@ -46,7 +46,7 @@ If you would like to change the default way that ExpressionEngine handles 404 er
 
 :menuselection:`Design --> Templates --> Global Preferences`
 
-The 404 page setting tells ExpressionEngine which template group/template to use for all the 404 errors that are received. It is worth noting that using :term:`strict URLs` is preferable as this makes the path to your content more precise, allows more relevant 404 pages, and does not allow your content to be shown with variances in the URL structure
+The 404 page setting tells ExpressionEngine which template group/template to use for all the 404 errors that are received. It is worth noting that using strict URLs is preferable as this makes the path to your content more precise, allows more relevant 404 pages, and does not allow your content to be shown with variances in the URL structure
 
 If you wish to extend this to the second segment, requiring a valid template, then in your “index” template of your Template Group(s) that you wish to do this, you can take advantage of the {redirect=} global variable like this. ::
 
