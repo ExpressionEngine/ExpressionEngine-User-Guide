@@ -5,8 +5,153 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
-The Change Log for ExpressionEngine 1.x is `available here
-<http://expressionengine.com/legacy_docs/changelog.html>`_.
+Version 2.5.4
+-------------
+
+Release Date: December 18, 2012
+
+- Important:
+
+  - Custom main menu items are now XSS cleaned.
+  - Quick links are now XSS cleaned.
+  - Added X-Frame-Options header to deny attempts at iframing the Control Panel.
+  - Super Admins are required to reauthenticate before they can login as another
+    user.
+  - Super Admins are required to enter their password when changing another user's
+    email address, username, or password.
+  - Generate salt, salted password, and crypt key on user registration.
+  - Changed Forgot your Password logic so it always responds with the same message
+    so email addresses aren't confirmed and denied for spammers.
+
+- General Changes:
+
+  - Added the ability to use status in the Channel Entry tag's orderby
+    parameter.
+  - Added ``{current_url}`` standard global variable.
+  - Added ``{current_path}`` standard global variable.
+  - Changed HTTP Auth realm from 'ExpressionEngine Template' to 'Restricted
+    Content'.
+  - Added the ``disable="pagination"`` parameter to the Comment Entries
+    tag to disable pagination overhead.
+  - Altered member validation to ensure duplicate username checks are case
+    insensitive regardless of database settings. 
+
+- Bug Fixes:
+
+  - Fixed a bug (#18238) where a temp\_ prefix was added to duplicate file names
+    when using SafeCracker File.
+  - Fixed a bug where a PHP error could occur when overwriting unsynced files.
+  - Fixed a bug where XSS filters in certain browsers could break javascript on
+    the template edit page under rare circumstances.
+  - Fixed a bug (#18280) where referrer tracking was not disabled when the 
+    Referrer module was uninstalled, causing a MySQL error.
+  - Fixed a bug (#18309) where the IP to Nation module did not properly update
+    the update date.
+  - Fixed a bug (#18201) where the IP to Nation module updater could call no
+    longer included files, resulting in an error.
+  - Fixed a bug (#18313) where IP to Nation database updates could fail silently
+    when the host site is unavailable.
+  - Fixed a bug (#18341) where backslashes could be improperly stripped from the
+    View Entry page in the control panel.
+  - Fixed a bug where backslashes could be improperly stripped when inside the
+    Next/Previous tags.
+  - Fixed a bug (#16862) where the Wiki module returned both categorized and
+    uncategorized entries on the uncategorized entries page.
+  - Fixed a bug (#18314) in the Wiki module where the check for duplicate
+    titles when renaming an article was not wiki specific.
+  - Fixed a bug (#18344) where the Wiki's category page could display improperly
+    under certain server environments.
+  - Fixed a bug (#18304) where a 404 redirect could result in a PHP error on
+    some versions of PHP.
+  - Fixed a bug (#19046) where backslashes were improperly stripped from search
+    results.
+  - Fixed a bug (#18199) where IP to Nation was missing a few countries on
+    the ban list.
+  - Fixed a bug (#18194) where the total entries and comments fields in the
+    members table could max out before the fields in the channel and stats
+    tables.
+  - Fixed a bug where some valid date-based conditionals may show an
+    "Invalid EE Conditional Variable" error.
+  - Fixed a bug (#18222) where the comments module could not display
+    comments with a status of closed.
+  - Fixed a bug (#18208) where the ``include_seconds`` configuration would
+    not be respected after changing the date in a date field.
+  - Fixed a bug (#18210) where the File module would improperly show
+    protocol-relative URL paths.
+  - Fixed a bug (#18234) where some member permissions may be reset when
+    saving permissions for other member groups.
+  - Fixed a bug where formatted date variables in conditionals may not
+    always parse correctly.
+  - Fixed a bug (#17802) where the using the legacy ``$conf`` variable in
+    ``config.php`` may cause the updater to have wrong information.
+  - Fixed a bug (#18236) where the ``cp_url`` config override may be
+    overwritten by saving the General Configuration form.
+  - Fixed a bug (#18265) where file field entries displayed from other sites
+    may not render correctly.
+  - Fixed a bug (#18239) where custom settings initialized in the
+    Typography class would not persist through multiple calls of
+    ``parse_type()``.
+  - Fixed a bug (#18289) where filenames with spaces may not be properly
+    encoded for display on the front-end when synced via the file manager.
+  - Fixed a bug (#18285) where the RTE's image tool may place an image at
+    the top of the editor if browser selection data changes.
+  - Fixed a bug (#18263) where PHP may claim an object wasn't passed by
+    reference to an extension hook.
+  - Fixed a bug (#19050) where members sharing the same IP address and user
+    agent may be locked out of the control panel if one of those members
+    triggered a password lockout.
+  - Fixed a bug (#18343) where an old javascript plugin was still
+    attempting to be loaded in the control panel.
+  - Fixed a bug (#18337) where the ``{absolute_count}`` variable in the
+    search results tag returned the value of ``{count}`` instead.
+  - Fixed a bug (#19056) where the ``{local_time}`` variable may not show
+    the correct time in ``{exp:member:custom_profile_data}``.
+  - Fixed a bug (#19055) where javascript sent via the ``cp_js_end`` hook
+    may be incorrectly cached.
+  - Fixed a bug (#18319) where PHP may not be rendered in templates with a
+    SafeCracker ``{custom_fields}`` loop.
+  - Fixed a bug (#19047) where setting the site URL to a protocol-relative
+    URL would break ``{path=}`` variables.
+  - Fixed a bug (#17951) where SafeCracker may overwrite another form's
+    action ID if the SafeCracker form fails to load.
+  - Fixed a bug (#19061) where PHP errors may not be shown on the extensions
+    page regardless of the ``debug`` config item.
+  - Fixed a bug (#18303) where the ``{edit_date}`` variable in comment
+    entries may show the wrong date.
+  - Fixed a bug (#16814) where the Datepicker field on a multiple entry edit
+    screen would not allow AM to be manually typed into the field.
+  - Fixed a bug (#18250) where forum member templates may not fully render
+    when accessing the forum through the forum module tag.
+  - Fixed bugs (#18233, #18237) where submitting a SafeCracker form that
+    didn't include checkbox fields would cause an undefined index error.
+  - Fixed a bug (#18248) where the SafeCracker tag's ``{status_menu}``
+    variable didn't output statuses in the order designated in the CP status
+    management screen.
+  - Fixed a bug (#18264) where the ``{absolute_count}`` variable in the
+    comment entries tag didn't return the correct result.
+  - Fixed a bug (#18245) in which member groups were not being created on
+    all sites when Multisite Manager was enabled.
+  - Fixed a bug (#18259) where ``{if editable}`` in the Comment Entries
+    tag was failing to account for edit timeout.
+  - Fixed a bug (#18276) in which members in a user group with out upload
+    permissions on a certain file directory could not view files in that
+    directory when logged in. 
+  - Fixed a bug (#18258) where file paths with special characters in them
+    were being url encoded and then saved to the database, resulting in
+    the references to them in channel entries being corrupted.
+  - Fixed a bug (#18350) where File Manager search was defaulting to 
+    filename only search when a search of all fields was expected default.
+  - Fixed a bug (#18351) where the username field length was too short in
+    the session time out login form.
+  - Fixed a bug (#18321) where "Can administrate design preferences" was not
+    properly controller access to design preferences.
+
+- Developers:
+
+  - Moved the cp_member_login hook so that it is called after control panel
+    logins are logged.
+  - Fixed a bug (#19058) where api_channel_structure::get_channels($site_id)
+    ignored the site_id parameter.
 
 Version 2.5.3
 -------------
