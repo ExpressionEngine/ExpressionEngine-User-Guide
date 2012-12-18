@@ -13,14 +13,13 @@ content of your site.
 Obtaining Language Packs
 ------------------------
 
-You may download any of the available Language Packs from the
-EllisLab Github repository:
+Download any of the available Language Packs from the GitHub repositories:
 
 .. Heads up: general_languages.js relies on .github-languag-repos! See notes there.
 
 .. rst-class:: github-language-repos
 
- - `Github <https://github.com>`_
+ - `GitHub Repositories <https://github.com/EllisLab>`_
 
 Installing a Language Pack
 --------------------------

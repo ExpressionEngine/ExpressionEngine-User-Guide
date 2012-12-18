@@ -166,7 +166,7 @@ Available for Download
 
 .. rst-class:: github-addon-repos
 
- - `Github <https://github.com>`_
+ - `GitHub Repositories <https://github.com/EllisLab>`_
 
 *******************************
 Developing for ExpressionEngine
