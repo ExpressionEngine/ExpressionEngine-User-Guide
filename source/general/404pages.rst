@@ -72,7 +72,7 @@ Often URLs entered by hand are not typed correctly, especially if the URL
 includes the title of an entry. Avoiding mistyped URLs is much easier when
 entering just a site name and a template group. For example:
 
-www.example.com/blog/
+www.example.com/blog
 
 But let's say that a visitor wants a specific entry in your blog template group
 and so they type
