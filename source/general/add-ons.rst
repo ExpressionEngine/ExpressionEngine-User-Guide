@@ -2,10 +2,10 @@
 Add-Ons
 #######
 
-ExpressionEngine isn't a single, inflexible piece of software. It was designed
-to be a platform for developers to easily extend to enable rich functionality.
-Like an operating system, it ships with a set of "apps" to cover the basic
-necessities right out of the box. We call those apps *Add-Ons*.
+Rather than a single, inflexible piece of software, ExpressionEngine was
+designed to be a platform for developers to easily extend to enable rich
+functionality. Like an operating system, it ships with a set of "apps" to cover
+the basic necessities right out of the box. We call those apps *Add-Ons*.
 
 Have a need for :doc:`RSS </modules/rss/index>`?  :doc:`Search
 </modules/search/index>`?  :doc:`Comments </modules/comment/index>`?  Install
