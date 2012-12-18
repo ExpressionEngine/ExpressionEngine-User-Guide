@@ -196,6 +196,7 @@ About ExpressionEngine
 	installation/index
 	cp/index
 	general/index
+	how_to/index
 	intro/index
 	handling_bugs/index
 	modules/index
