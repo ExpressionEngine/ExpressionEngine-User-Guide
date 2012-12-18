@@ -184,7 +184,6 @@ About ExpressionEngine
 
 - :doc:`License Agreement </about/license>`
 - :doc:`Change Log </about/changelog>`
-- :doc:`/about/glossary`
 
 .. toctree::
 	:glob:
