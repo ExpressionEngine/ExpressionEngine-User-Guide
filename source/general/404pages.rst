@@ -68,23 +68,23 @@ Examples
 Example 1
 ---------
 
-Often URLs entered by hand are not type correctly, especially if the URL
-includes the title of an entry. It's easier to enter in the URL if it's site
+Often URLs entered by hand are not typed correctly, especially if the URL
+includes the title of an entry. Its easier to enter in the URL if it's site
 name and then a template group. For example:
 
-www.sitename.com/blog/
+www.example.com/blog/
 
 But let's say that a visitor wants a specific entry in your blog template group
 and so they type
 
-www.site.com/blog/cats-in-dresses-dancing-to-Christmas-music
+www.example.com/blog/cats-in-dresses-dancing-to-Christmas-music
 
 Chances are they will not get that right and trigger a 404. The template group
-is correct so they will get the home page which makes it seem like they typed
+is correct so they will not see any errors. This makes it seem like they typed
 everything out just right, but they are left wondering where the cats are.
 
 Let's take care of that. This is a single entry page, so we can use
-:ref:`require_entry= <require-entry-label>`in our channel
+:ref:`require_entry= <channel-entries-require_entry>` in our channel
 entries tag pair. This tells the channel entries tag pair to only return results
 if there is a specific title URL title found in the segment of the URL.
 
@@ -114,7 +114,7 @@ In this example you would like to restrict visitors to just the blog and a
 specific article. Anything beyond that, you prefer not to show the 404 page but
 rather just push your user back to the template group and article they intended.
 
-**www.site.com/blog/title-of-article/another/segment**
+**www.example.com/blog/title-of-article/another/segment**
 
 Placing this code will auto correct that. This will require that PHP be enabled in the your template. ::
 
@@ -127,5 +127,5 @@ Placing this code will auto correct that. This will require that PHP be enabled 
   {/if}
 
 
-What we did was check that segment 3 is empty and if it's not, send the visitor
-to the template group and template.
+What we did was check to see that segment 3 was empty. If segment 3 send the visitor
+to the current template group and template.
