@@ -32,13 +32,8 @@ Updates and Upgrades
 Using ExpressionEngine
 **********************
 
-<<<<<<< HEAD
-- :doc:`getting_started/the_big_picture`
-- :doc:`getting_started/hello-world`
-=======
 - :doc:`intro/the_big_picture`
-- Hello, World!
->>>>>>> adf3eeea0aa4a50a28a79b954649d45d8c2a2888
+- :doc:`how_to/hello-world`
 
 The Control Panel
 =================
@@ -111,13 +106,8 @@ Solving Problems
 How-To Guides
 *************
 
-<<<<<<< HEAD
-- :doc:`getting_started/hello-world`
-- :doc:`getting_started/index`
-=======
-- Hello, World!
+- :doc:`how_to/hello-world`
 - :doc:`how_to/building_a_simple_new_site`
->>>>>>> adf3eeea0aa4a50a28a79b954649d45d8c2a2888
 
 
 *******************
@@ -140,16 +130,11 @@ Reference Guides
 Add-Ons
 =======
 
-<<<<<<< HEAD
 
 .. _add-ons-included-in-expressionengine:
 
-Included in Core
-----------------
-=======
 Included in ExpressionEngine
 ----------------------------
->>>>>>> adf3eeea0aa4a50a28a79b954649d45d8c2a2888
 
 - :doc:`modules/blacklist/index`
 - :doc:`modules/channel/index`
@@ -175,7 +160,6 @@ Included in ExpressionEngine
 - :doc:`modules/statistics/index`
 - :doc:`modules/updated_sites/index`
 - :doc:`modules/wiki/index`
-
 
 .. _add-ons-available-for-download:
 
