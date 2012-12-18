@@ -72,12 +72,12 @@ Often URLs entered by hand are not typed correctly, especially if the URL
 includes the title of an entry. Avoiding mistyped URLs is much easier when
 entering just a site name and a template group. For example:
 
-www.example.com/blog
+``example.com/blog``
 
 But let's say that a visitor wants a specific entry in your blog template group
 and so they type
 
-www.example.com/blog/cats-in-dresses-dancing-to-Christmas-music
+``example.com/blog/cats-in-dresses-dancing-to-Christmas-music``
 
 Chances are they will not get that right and trigger a 404. The template group
 is correct so they will not see any errors. This makes it seem like they typed
@@ -114,7 +114,7 @@ In this example you would like to restrict visitors to just the blog and a
 specific article. Anything beyond that, you prefer not to show the 404 page but
 rather just push your user back to the template group and article they intended.
 
-**www.example.com/blog/title-of-article/another/segment**
+``example.com/blog/title-of-article/another/segment``
 
 Placing this code will auto correct that. This will require that PHP be enabled in the your template. ::
 
