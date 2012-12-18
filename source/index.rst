@@ -65,7 +65,7 @@ URLs
 Beyond the Basics
 *****************
 
-- :doc:`general/addons`
+- :doc:`general/add-ons`
 - :doc:`cp/sites/index`
 - :doc:`modules/forum/index`
 
@@ -157,6 +157,8 @@ Included in Core
 - :doc:`modules/statistics/index`
 - :doc:`modules/updated_sites/index`
 - :doc:`modules/wiki/index`
+
+.. _add-ons-available-for-download:
 
 Available for Download
 ----------------------
