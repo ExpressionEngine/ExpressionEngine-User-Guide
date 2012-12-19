@@ -5,10 +5,10 @@
 {%- set reldelim2 = reldelim2 is not defined and ' |' or reldelim2 %}
 {%- set url_root = pathto('', 1) %}
 {%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
-{% set project_abbreviation = 'ee' %}{% set project_domain = 'expressionengine.com' %}
-{%- if project == 'ExpressionEngine' %}{% set project_abbreviation = 'ee' %}{% set project_domain = 'expressionengine.com' %}{% endif -%}
-{%- if project == 'CodeIgniter' %}{% set project_abbreviation = 'ci' %}{% set project_domain = 'codeigniter.com' %}{% endif -%}
-{%- if project == 'MojoMotor' %}{% set project_abbreviation = 'mm' %}{% set project_domain = 'mojomotor.com' %}{% endif -%}
+{% set project_abbreviation = 'ee' %}{% set project_domain = 'ellislab.com/expressionegine' %}
+{%- if project == 'ExpressionEngine' %}{% set project_abbreviation = 'ee' %}{% set project_domain = 'ellislab.com/expressionegine' %}{% endif -%}
+{%- if project == 'CodeIgniter' %}{% set project_abbreviation = 'ci' %}{% set project_domain = 'ellislab.com/codeigniter' %}{% endif -%}
+{%- if project == 'MojoMotor' %}{% set project_abbreviation = 'mm' %}{% set project_domain = 'ellislab.com/mojomotor' %}{% endif -%}
 {%- set exclude_comments = ['index', 'license', 'changelog',
 							'development/index', 'development/extension_hooks/index',
 							'development/guidelines/template'] %}
@@ -89,7 +89,7 @@
 		</div>
 
 		<div id="brand" class="{{ project_abbreviation }}">
-			<a href="http://{{ project_domain }}/"><img src="{{ pathto('_static/asset/img/' + project_abbreviation + '-logo.gif', 1) }}" alt="{{ project }}"></a>
+			<a href="http://{{ project_domain }}/><img src="{{ pathto('_static/asset/img/' + project_abbreviation + '-logo.gif', 1) }}" alt="{{ project }}"></a>
 			<p>{{ release }} User Guide</p>
 		</div><!-- /#brand -->
 
@@ -97,7 +97,7 @@
 			<form method="get" action="http://www.google.com/search">
 				<fieldset>
 					<input type="text" name="q" id="q" value="">
-					<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="{{ project_domain }}/user_guide/" />
+					<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="{{ project_domain }}/user-guide/" />
 					<input class="grades" type="submit" value="search">
 				</fieldset>
 			</form>
