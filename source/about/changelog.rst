@@ -5,6 +5,23 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.5.5
+-------------
+
+Release Date: December 20, 2012
+
+- General Changes:
+
+  - Fixed a bug where date single variables with colons in their names would
+    not render.
+  - Fixed a bug (#18268) where PayPal addresses may fail validation in the
+    Simple Commerce module.
+  - Fixed a bug (#19075) where entries posted via SafeCracker weren't
+    honoring the channel's entry versioning setting.
+  - Fixed a bug (#19088) where ``url_title`` could not be set via dynamic
+    parameters in the Channel Entries tag.
+
+
 Version 2.5.4
 -------------
 
