@@ -21,7 +21,11 @@ Release Date: December 20, 2012
   - Fixed a bug (#19088) where ``url_title`` could not be set via dynamic
     parameters in the Channel Entries tag.
 
+- Developers
 
+  - Fixed a bug where the Member_model::member_delete() method would have issues
+    deleting single members not passed within arrays.
+    
 Version 2.5.4
 -------------
 
