@@ -206,7 +206,8 @@ With this parameter, you can specify which categories will be included
 in the list. For instance, if you wanted to keep a particular category
 from being listed you could specify only those you wanted displayed to
 be included. Category IDs are separated by the pipe character to specify
-more than one category.
+more than one category. If you specify a child category be shown, you
+must also include its parent category to be shown.
 
 You may alternatively specify which categories to not show
 
@@ -214,9 +215,9 @@ You may alternatively specify which categories to not show
 
 	show="not 3|6|8"
 
-**Note:** If you specify that a parent category is not shown, then any
-children of that parent category are then unable to be shown by the tag.
-The parent category is required for any and all children categories.
+If you specify that a parent category is not shown, then any children of
+that parent category are then unable to be shown by the tag. The parent
+category is required for any and all children categories.
 
 show\_empty=
 ------------

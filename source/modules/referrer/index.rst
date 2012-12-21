@@ -1,6 +1,6 @@
-###############
-Referrer Module
-###############
+########
+Referrer
+########
 
 .. contents::
    :local:

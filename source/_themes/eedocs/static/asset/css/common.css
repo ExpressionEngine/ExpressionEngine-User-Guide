@@ -150,6 +150,20 @@ fieldset{ border: 0; }
 	
 	.cp-path{ background-color: #FAFFF6; border-color: #D1CDB0; }
 	.important, .note{ background-color: #FFFFF2; border-color: #C8C8A5; }
+
+.comments .codeblock{ 
+	background-color: #10618F; 
+	border: 0;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	border-radius: 5px;
+	-moz-box-shadow: 0 0 0 rgba(0,0,0,0); 
+	-webkit-box-shadow: 0 0 0 rgba(0,0,0,0); 
+	box-shadow: 0 0 0 rgba(0,0,0,0);
+	margin: 20px 0; 
+	overflow: auto; 
+	padding: 10px 10px 8px; 
+}
 	
 .admonition-title{ 
 	float: left;
@@ -324,3 +338,19 @@ fieldset{ border: 0; }
 @media screen and (-webkit-min-device-pixel-ratio:0){
 	#header input[type="submit"]{ padding-bottom: 7px; }
 }
+
+.download-bar{
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 5px;
+}
+
+	.download-bar a{
+	    background-color: #3B7EB0;
+	    color: #FFFFFF;
+	    font-size: 12px;
+	    margin-left: 5px;
+	    padding: 5px 8px;
+	}

@@ -6,8 +6,8 @@ Page wrapper template as outlined below:
 
 |The Wiki Article template determines the visual display of articles as highlighted below.|
 
-In addition to the variables in the `Wiki Page
-template <wiki_templates_page.html>`_, the Article template has:
+In addition to the variables in the :doc:`Wiki Page
+template <wiki_templates_page>`, the Article template has:
 
 
 Single Variables
@@ -104,8 +104,8 @@ conditional and a combination of the
 `{wiki:category\_subcategories} <wiki_templates_special_categories.html#wiki_tag_category_subcategories>`_
 and
 `{wiki:category\_articles} <wiki_templates_special_categories.html#wiki_tag_category_articles>`_
-tags described in the `Special
-Categories <wiki_templates_special_categories.html>`_ section of the
+tags described in the :doc:`Special
+Categories <wiki_templates_special_categories>` section of the
 Wiki documentation.
 
 

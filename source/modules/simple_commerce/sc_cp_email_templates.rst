@@ -35,8 +35,8 @@ Email Template Name
 ~~~~~~~~~~~~~~~~~~~
 
 A descriptive name for the email template. This will be shown in the
-email template drop-down menus of the store `item
-creation <sc_cp_items.html>`_ form.
+email template drop-down menus of the store :doc:`item
+creation <sc_cp_items>` form.
 
 Email Subject
 ~~~~~~~~~~~~~

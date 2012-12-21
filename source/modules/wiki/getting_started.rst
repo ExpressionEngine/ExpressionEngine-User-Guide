@@ -109,8 +109,8 @@ article doesn't exist and then gives you the opportunity to create it by
 clicking the edit link. If the hot chocolate article already existed
 then this method would automatically link to it.
 
-You can do a lot more with **Wiki Syntax**, please see the `Wiki
-Syntax <wiki_syntax.html>`_ section for details.
+You can do a lot more with **Wiki Syntax**, please see the :doc:`Wiki
+Syntax <wiki_syntax>` section for details.
 
 Organizing Articles with Categories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -140,7 +140,7 @@ do that::
 Now the article is assigned to the **Sandwiches** parent category and
 the **Breakfast** sub-category.
 
-You can do a lot more with **Wiki Syntax**, please see the `Wiki
-Syntax <wiki_syntax.html>`_ section for details.
+You can do a lot more with **Wiki Syntax**, please see the :doc:`Wiki
+Syntax <wiki_syntax>` section for details.
 
 

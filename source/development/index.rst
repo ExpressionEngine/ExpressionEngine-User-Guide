@@ -8,67 +8,67 @@ ExpressionEngine.
 Development
 -----------
 
--  `2.0 Conversion <./conversion/index.html>`_
--  `Constants Reference <./constants.html>`_
--  `Accessory Development <./accessories.html>`_
--  `Extensions Development <./extensions.html>`_
--  `Fieldtype Development <./fieldtypes.html>`_
--  `Plugin Development <./plugins.html>`_
--  `Module Development <./modules.html>`_
+-  :doc:`2.0 Conversion </development/conversion/index>`
+-  :doc:`Constants Reference </development/constants>`
+-  :doc:`Accessory Development </development/accessories>`
+-  :doc:`Extensions Development </development/extensions>`
+-  :doc:`Fieldtype Development </development/fieldtypes>`
+-  :doc:`Plugin Development </development/plugins>`
+-  :doc:`Module Development </development/modules>`
 
-   -  `Module Development Tutorial <./module_tutorial.html>`_
+   -  :doc:`Module Development Tutorial </development/module_tutorial>`
 
--  `Rich Text Editor Tool Development <./rte_tools.html>`_
--  `API <./api/index.html>`_
+-  :doc:`Rich Text Editor Tool Development </development/rte_tools>`
+-  :doc:`API </development/api/index>`
 
-   -  `Channel Categories <./api/api_channel_categories.html>`_
-   -  `Channel Entries <./api/api_channel_entries.html>`_
-   -  `Channel Fields <./api/api_channel_fields.html>`_
-   -  `Channel Structure <./api/api_channel_structure.html>`_
-   -  `Template Structure <./api/api_template_structure.html>`_
+   -  :doc:`Channel Categories </development/api/api_channel_categories>`
+   -  :doc:`Channel Entries </development/api/api_channel_entries>`
+   -  :doc:`Channel Fields </development/api/api_channel_fields>`
+   -  :doc:`Channel Structure </development/api/api_channel_structure>`
+   -  :doc:`Template Structure </development/api/api_template_structure>`
 
 -  **Guidelines**
 
-   -  `Overview <./guidelines/index.html>`_
-   -  `General Style and Syntax <./guidelines/general.html>`_
-   -  `Performance Guidelines <./guidelines/performance.html>`_
-   -  `Security Guidelines <./guidelines/security.html>`_
-   -  `Summary Checklist <./guidelines/checklist.html>`_
-   -  `Documentation <./guidelines/documentation.html>`_
+   -  :doc:`Overview </development/guidelines/index>`
+   -  :doc:`General Style and Syntax </development/guidelines/general>`
+   -  :doc:`Performance Guidelines </development/guidelines/performance>`
+   -  :doc:`Security Guidelines </development/guidelines/security>`
+   -  :doc:`Summary Checklist </development/guidelines/checklist>`
+   -  :doc:`Documentation </development/guidelines/documentation>`
 
 -  Using ExpressionEngine Classes
 
-   -  `CP Class <./usage/cp.html>`_
-   -  `Database Class <./usage/database.html>`_
-   -  `Email Class <./usage/email.html>`_
-   -  `File Field Class <./usage/file_field.html>`_
-   -  `Form Validation Class <./usage/form_validation.html>`_
-   -  `Input Class <./usage/input.html>`_
-   -  `Language Class <./usage/language.html>`_
-   -  `Layout Class <./usage/layout.html>`_
-   -  `Localization Class <./usage/localization.html>`_
-   -  `Logger Class <./usage/logger.html>`_
-   -  `Security Class <./usage/security.html>`_
-   -  `Session Class <./usage/session.html>`_
-   -  `Table Class <./usage/table.html>`_
-   -  `Template Parser Class <./usage/template.html>`_
-   -  `Typography Class <./usage/typography.html>`_
-   -  `URI Class <./usage/uri.html>`_
-   -  `XML Parser Class <./usage/xmlparser.html>`_
+   -  :doc:`CP Class </development/usage/cp>`
+   -  :doc:`Database Class </development/usage/database>`
+   -  :doc:`Email Class </development/usage/email>`
+   -  :doc:`File Field Class </development/usage/file_field>`
+   -  :doc:`Form Validation Class </development/usage/form_validation>`
+   -  :doc:`Input Class </development/usage/input>`
+   -  :doc:`Language Class </development/usage/language>`
+   -  :doc:`Layout Class </development/usage/layout>`
+   -  :doc:`Localization Class </development/usage/localization>`
+   -  :doc:`Logger Class </development/usage/logger>`
+   -  :doc:`Security Class </development/usage/security>`
+   -  :doc:`Session Class </development/usage/session>`
+   -  :doc:`Table Class </development/usage/table>`
+   -  :doc:`Template Parser Class </development/usage/template>`
+   -  :doc:`Typography Class </development/usage/typography>`
+   -  :doc:`URI Class </development/usage/uri>`
+   -  :doc:`XML Parser Class </development/usage/xmlparser>`
 
 -  ExpressionEngine Functions by Class
 
-   -  `Functions Class <./reference/functions.html>`_
+   -  :doc:`Functions Class </development/reference/functions>`
 
 -  ExpressionEngine Control Panel JavaScript
 
-   -  `Custom jQuery Events <./cp_javascript/events.html>`_
-   -  `Notification Plugin <./cp_javascript/notification.html>`_
-   -  `Rich Text Editor <./cp_javascript/rte/index.html>`_
-   -  `Table Plugin <./cp_javascript/table.html>`_
+   -  :doc:`Custom jQuery Events </development/cp_javascript/events>`
+   -  :doc:`Notification Plugin </development/cp_javascript/notification>`
+   -  :doc:`Rich Text Editor </development/cp_javascript/rte/index>`
+   -  :doc:`Table Plugin </development/cp_javascript/table>`
 
--  `Control Panel Style Reference <./cp_styles/index.html>`_
--  `Emoticon Development <./emoticons.html>`_
+-  :doc:`Control Panel Style Reference </development/cp_styles/index>`
+-  :doc:`Emoticon Development </development/emoticons>`
 
 
 .. toctree::

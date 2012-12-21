@@ -72,5 +72,5 @@ name is "The Republic" you would write the conditional like so::
 
 :ref:`Return to Update Page <update-additional-steps>`
 
-`ExpressionEngine <http://expressionengine.com/>`_ – Copyright ©
+`ExpressionEngine <http://ellislab.com/expressionengine>`_ – Copyright ©
 2002-2011 – `EllisLab, Inc. <http://ellislab.com/>`_

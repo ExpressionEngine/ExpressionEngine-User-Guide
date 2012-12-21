@@ -2,11 +2,12 @@
 Standard Global Variables
 #########################
 
-These Global Variables can be used anywhere within your Templates.
-Note that they are subject to ExpressionEngine's `parse order <http://expressionengine.com/wiki/Parse_Order>`_,
-which can affect their availability when used inside other tags.
+These Global Variables can be used anywhere within your Templates. Note
+that they are subject to ExpressionEngine's :doc:`parsing order
+</templates/template_engine>`, which can affect their availability when
+used inside other tags.
 
-Also note that there is an `alternative syntax <#alternative_syntax>`_
+Also note that there is an :ref:`alternative syntax <global-alt-syntax>`
 for member variables that may be used in situations where an naming
 conflict with a module's variables may occur.
 
@@ -59,6 +60,18 @@ members who have access to the Control Panel
 
 .. _global-current_time:
 
+current_path
+------------
+
+::
+
+	{current_path}
+
+This variable outputs the current URI path relative to your ExpressionEngine
+installation, e.g. *news/article/man-captures-all-the-rabbits*.
+
+**Note:** If there are no URL segments, this will output a slash: */*
+
 current\_time
 -------------
 
@@ -77,6 +90,15 @@ standard `date variable formatting <../date_variable_formatting.html>`_::
 allows you to make dynamic use of it in your tags, for instance as a tag
 parameter, or in a conditional.
 
+current_url
+-----------
+
+::
+
+	{current_url}
+
+This variable displays the full current URL.
+
 debug\_mode
 -----------
 
@@ -94,8 +116,9 @@ doc\_url
 
 	{doc_url}
 
-This variable will be substituted with the URL found in Admin > General
-Config > URL to Documentation Directory
+This variable will be substituted with the URL found in **URL to
+Documentation Directory** under :menuselection:`Admin --> General
+Config`.
 
 elapsed\_time
 -------------
@@ -187,8 +210,9 @@ homepage
 
 	{homepage}
 
-This variable will be substituted with the URL to your home page as
-defined under Admin > General Configuration.
+This variable will be substituted with the **URL to the root directory of
+your site** preference under :menuselection:`Admin --> General
+Configuration`.
 
 ip\_address
 -----------
@@ -207,8 +231,8 @@ lang
 
 	{lang}
 
-This variable will be substituted for the "Default XML Language"
-preference as defined under Admin > General Configuration.
+This variable will be substituted for the **Default XML Language**
+preference under :menuselection:`Admin --> General Configuration`.
 
 location
 --------
@@ -294,7 +318,7 @@ site\_name
 	{site_name}
 
 This variable will be substituted with your site name as defined under
-Admin > General Configuration.
+:menuselection:`Admin --> General Configuration`.
 
 .. _global-site_url:
 
@@ -306,14 +330,16 @@ site\_url
 	{site_url}
 
 This variable will be substituted with your site URL as defined under
-Admin > General Configuration.
+:menuselection:`Admin --> General Configuration`.
+
+.. _global-template_edit_date:
 
 template\_edit\_date
 --------------------
 
 This variable displays the localized time for when the template was last
-updated. As with other date variables, you will use the standard `date
-variable formatting <../date_variable_formatting.html>`_::
+updated. As with other date variables, you will use the standard
+:doc:`date variable formatting </templates/date_variable_formatting>`::
 
 	{template_edit_date format="%Y %m %d %H:%i:%s"}
 
@@ -374,6 +400,8 @@ webmaster\_email
 The email address for the site, as specified in `Email
 Configuration <../../cp/admin/email_configuration.html>`_.
 
+.. _global-xid-hash:
+
 XID\_HASH
 ---------
 
@@ -383,6 +411,8 @@ XID\_HASH
 
 This variable is a required value for hidden form field 'XID' used in
 secure forms.
+
+.. _global-alt-syntax:
 
 Alternative Syntax
 ==================

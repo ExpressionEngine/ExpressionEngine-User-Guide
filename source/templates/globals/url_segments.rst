@@ -37,6 +37,8 @@ changes based on the 3rd segment::
 		<p>{body}</p>
 	{/exp:channel:entries}
 
+.. _global-last-segment:
+
 Last Segment
 ------------
 

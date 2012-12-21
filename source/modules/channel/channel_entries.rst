@@ -99,9 +99,8 @@ count the number of characters (including spaces and line breaks) you
 want to remove and add the backspace parameter to the tag. The <br />
 tag has 6 characters plus a new line character, so you would do this::
 
-::
-
 	{exp:channel:entries backspace="7"}    {title}<br /> {/exp:channel:entries}
+
 
 That will produce code like this::
 
@@ -178,22 +177,20 @@ Or you can negate the inclusive stack and get entries that do not of
 	category="not 3&5"
 
 
-**Note:** When you use the category="3\|4" parameter (not excluding),
-you are implicitly telling ExpressionEngine to only deal with entries
-that have been assigned one or more categories. If you have entries that
-haven't been categorized then they will be ignored and not included in
-the results. However, if you are using exclusion (category="not 3\|4"),
-then you will be shown all entries without those categories *including*
-those without any categories assigned. To change this behavior when
-excluding categories use the
-`uncategorized\_entries="" <#uncategorized-entries>`_
-parameter.
+.. note:: When you use the ``category="3|4"`` parameter (not excluding), you
+   are implicitly telling ExpressionEngine to only deal with entries that have 
+   been assigned one or more categories. If you have entries that haven't been 
+   categorized then they will be ignored and not included in the results. 
+   However, if you are using exclusion (``category="not 3|4"``), then you will 
+   be shown all entries without those categories *including* those without any 
+   categories assigned. To change this behavior when excluding categories use 
+   the `uncategorized\_entries <#uncategorized-entries>`_ parameter.
 
-**Note:** Using this parameter will automatically cause ExpressionEngine
-to *ignore* any category information specified via the URL. For
-instance, if you are on a "category page" (e.g. a "/C13/" segment in the
-URL) that will be completely ignored in favor of whatever you have
-specified via the parameter.
+.. note:: Using this parameter will automatically cause ExpressionEngine to
+   *ignore* any category information specified via the URL. For instance, if 
+   you are on a "category page" (e.g. a ``/C13/`` segment in the URL) that 
+   will be completely ignored in favor of whatever you have specified via the 
+   parameter.
 
 category\_group=
 ----------------
@@ -225,7 +222,7 @@ Or use "not" to exclude categories
 
 **Note:** Using this parameter will automatically cause ExpressionEngine
 to *ignore* any category information specified via the URL. For
-instance, if you are on a "category page" (e.g. a "/C13/" segment in the
+instance, if you are on a "category page" (e.g. a ``/C13/`` segment in the
 URL) that will be completely ignored in favor of whatever you have
 specified via the parameter.
 
@@ -268,17 +265,17 @@ of this data may not be needed. Through the use of the "disable"
 parameter you can turn off aspects of the tag in order to make it more
 lightweight.
 
-The syntax for the disable parameter is this: disable="ITEM YOU WANT TO
-DISABLE". The following items can be turned off:
+The syntax for the disable parameter is this: ``disable="ITEM YOU WANT TO
+DISABLE"``. The following items can be turned off:
 
--  categories
--  category\_fields
--  custom\_fields
--  member\_data
--  pagination
+-  ``categories``
+-  ``category_fields``
+-  ``custom_fields``
+-  ``member_data``
+-  ``pagination``
 
-**Note:** If you disable categories, category fields will automatically
-be disabled.
+.. note:: If you disable categories, category fields will automatically
+   be disabled.
 
 You may specify multiple items to disable by separating them with the
 pipe character::
@@ -344,15 +341,17 @@ will be limited by number. In other words::
 
 Will show 20 entries.
 
-**display\_by="week"**
+::
 
-The display\_by="week" parameter allows the displaying of entries by
+	display_by="week"
+
+The ``display_by="week"`` parameter allows the displaying of entries by
 week. To simply show the last week that contains entries, you can use
 this::
 
 	display_by="week" limit="1"
 
-The display\_by="week" parameter can be used with other parameters like
+The ``display_by="week"`` parameter can be used with other parameters like
 `show_current_week=`_, `start_day=`_ and `week_sort=`_ to give more control
 over how the weeks are displayed and used with pagination.
 
@@ -361,11 +360,11 @@ show entries in future weeks with pagination, you can use this::
 
 	display_by="week" limit="1" show_future_entries="yes" show_current_week="yes"
 
-**NOTE:** The display\_by parameter uses the last unit of time provided
-that has entries. If you display\_by="day" then it will show the last
-day that has entries. If you display\_by="month" combined with limit="3"
-then it will show the last 3 months with entries, even if these months
-are not consecutive.
+.. note:: The display\_by parameter uses the last unit of time provided that 
+   has entries. If you ``display_by="day"`` then it will show the last day that 
+   has entries. If you ``display_by="month"`` combined with ``limit="3"`` then 
+   it will show the last 3 months with entries, even if these months are not 
+   consecutive.
 
 This parameter uses UTC/GMT time and is not localized to the server or
 logged in user.
@@ -380,12 +379,12 @@ dynamic=
 The channel display engine sets some parameters dynamically, based on
 what is in the URL. There are times, however, where you do not want the
 parameters affected by what the URL contains. To override the dynamic
-nature of the channel tag, use dynamic="no".
+nature of the channel tag, use ``dynamic="no"``.
 
 This is often useful if you want to list entries in a "sidebar" on your
 site and have them always be the same ones regardless of which page on
 your site you visit (main page, archives, comments, etc.). By setting
-dynamic="no" you will ensure that the list is not affected by anything
+``dynamic="no"`` you will ensure that the list is not affected by anything
 passed in the URL.
 
 Note: you may allow the tag to be sensitive to pagination data in the
@@ -400,7 +399,7 @@ dynamic_parameters=
 
 	dynamic_parameters="orderby|limit|sort"
 
-The `Dynamic Parameters <dynamic_parameters.html>`_ feature permits a
+The :doc:`Dynamic Parameters <dynamic_parameters>` feature permits a
 {exp:channel:entries} tag's parameters to be set "on the fly" using POST
 data submitted via a form. A practical use for this is to create some
 display options in a form on your page that your visitors can use to
@@ -571,21 +570,22 @@ orderby=
 The "order" parameter sets the display order of the entries. Setting
 options for this parameter include:
 
--  orderby="comment\_total"
--  orderby="date"
--  orderby="edit\_date"
--  orderby="entry\_id"
--  orderby="expiration\_date"
--  orderby="most\_recent\_comment"
--  orderby="random"
--  orderby="screen\_name"
--  orderby="title"
--  orderby="url\_title"
--  orderby="username"
--  orderby="view\_count\_one"
--  orderby="view\_count\_two"
--  orderby="view\_count\_three"
--  orderby="view\_count\_four"
+-  ``orderby="comment_total"``
+-  ``orderby="date"``
+-  ``orderby="edit_date"``
+-  ``orderby="entry_id"``
+-  ``orderby="expiration_date"``
+-  ``orderby="most_recent_comment"``
+-  ``orderby="random"``
+-  ``orderby="screen_name"``
+-  ``orderby="status"``
+-  ``orderby="title"``
+-  ``orderby="url_title"``
+-  ``orderby="username"``
+-  ``orderby="view_count_one"``
+-  ``orderby="view_count_two"``
+-  ``orderby="view_count_three"``
+-  ``orderby="view_count_four"``
 
 In addition you can order by a `channel
 field <../../cp/admin/channels/custom_channel_fields.html>`_. Use
@@ -691,8 +691,8 @@ paginate\_type=
 
 This tells ExpressionEngine to function in "pagination" mode for your
 channel entry fields so that you can automatically have an entry span
-multiple pages. See the `Spanning a Channel Entry Across Multiple
-Pages <pagination_spanning.html>`_ page.
+multiple pages. See the :doc:`Spanning a Channel Entry Across Multiple
+Pages <pagination_spanning>` page.
 
 related\_categories\_mode=
 --------------------------
@@ -701,10 +701,10 @@ related\_categories\_mode=
 
 	related_categories_mode="no" related_categories_mode="yes"
 
-**Important Note:** This parameter is intended for use **only** when you
-are using the channel tag within "single entry" pages. Single entry
-pages are ones that show only a single entry, specified by the ID number
-or URL Title in the URL.
+.. important:: This parameter is intended for use **only** when you
+   are using the channel tag within "single entry" pages. Single entry
+   pages are ones that show only a single entry, specified by the ID number
+   or URL Title in the URL.
 
 When enabled, this parameter alters the behavior of the
 {exp:channel:entries} tag, causing it to ignore the entry ID or URL
@@ -717,9 +717,9 @@ The default limit when enabling related_categories_mode is 10
 entries, and can be overridden with the addition of the
 :ref:`channel-entries-limit` parameter.
 
-When the related\_categories\_mode="" parameter is set to "yes", there
+When the ``related_categories_mode=""`` parameter is set to "yes", there
 are two additional parameters available to the Channel Entries tag:
-custom\_fields="yes" and member\_data="yes", which will allow the
+``custom_fields="yes"`` and ``member_data="yes"``, which will allow the
 displaying of field data and member data respectively. By default, those
 two parameters are both set to "no" to reduce load. Below is a
 simplified example with both optional parameters enabled::
@@ -730,8 +730,8 @@ simplified example with both optional parameters enabled::
 		<div class="posted">Posted by {author} on {entry_date format='%m/%d'} at {entry_date format='%h:%i %A'}</div>
 	{/exp:channel:entries}
 
-**Note:** Relationships, Reverse Relationships, Pagination, and
-Categories are not available when Related Category Mode is enabled.
+.. note:: Relationships, Reverse Relationships, Pagination, and
+   Categories are not available when Related Category Mode is enabled.
 
 relaxed\_categories=
 --------------------
@@ -746,7 +746,7 @@ category groups.
 
 .. _channel-entries-require_entry:
 
-require\_entry="yes"
+require\_entry=
 --------------------
 
 ::
@@ -941,9 +941,9 @@ it to "only" and *only* show those entries that have had Pages assigned
 to them. The default is "yes" and it will treat entries with assigned
 Pages no different from any other entries.
 
-**Tip:** show_pages="only" acts in the same manner as
-`dynamic=`_ "no". show\_pages="only" aids in building
-persistent menus based off existing Pages.
+.. tip:: ``show_pages="only"`` acts in the same manner as ``dynamic="no"``. 
+   ``show_pages="only"`` aids in building persistent menus based off existing 
+   Pages.
 
 sort=
 -----
@@ -1152,9 +1152,9 @@ Or you can add "not" to exclude url\_titles::
 
 	url_title="not my_in_laws"
 
-**Note:** It is strongly suggested you use the channel="" parameter when
-using the url\_title="" parameter as ExpressionEngine can be set up to
-allow the same url\_title for two different channels.
+.. note:: It is strongly suggested you use the ``channel=""`` parameter when
+   using the ``url_title=""`` parameter as ExpressionEngine can be set up to
+   allow the same url\_title for two different channels.
 
 username=
 ---------
@@ -1174,7 +1174,7 @@ Or you can add "not" to exclude usernames
 
 	username="not tom|dick|harry|fred"
 	
-You can also use the constant "CURRENT\_USER" to show entries from only the currently logged in user.
+You can also use the constant ``"CURRENT_USER"`` to show entries from only the currently logged in user.
 
 ::
 
@@ -1182,7 +1182,7 @@ You can also use the constant "CURRENT\_USER" to show entries from only the curr
 
 This allow each logged-in user to get only their entries. Users who are
 not logged in won't see anything. Alternatively, you can use the
-constant "NOT\_CURRENT\_USER" to show entries **except** from the
+constant ``"NOT_CURRENT_USER"`` to show entries **except** from the
 currently logged in user. ::
 
 	username="NOT_CURRENT_USER"
@@ -1197,7 +1197,7 @@ week\_sort=
 Requires the `display_by=`_ "week"
 parameter. Changes the sort order of the weeks so that you can either
 have the weeks displayed by most recent first or oldest first. Separate
-from the sort="" parameter, which will only affect the sorting of
+from the ``sort=""`` parameter, which will only affect the sorting of
 entries within the weeks, not the weeks themselves.
 
 year=, month=, day=
@@ -1230,12 +1230,11 @@ To show only the month of December in 2003 you'll do this
 	
 	month="12"
 
-**Note:** Don't combine these parameters with the "display\_by"
-parameter discussed previously, as these take precedence over that
-parameter. In addition, the three parameters must be applied "in order",
-meaning that you must specify the year if you specify the month and you
-must specify both month and year to use day.
-
+.. note:: Don't combine these parameters with the ``display_by`` parameter 
+   discussed previously, as these take precedence over that parameter. In 
+   addition, the three parameters must be applied "in order", meaning that you 
+   must specify the year if you specify the month and you must specify both 
+   month and year to use day.
 
 .. _channel-entries-single-variables:
 
@@ -1396,10 +1395,10 @@ comment\_auto\_path
 
 	{comment_auto_path}
 
-This variable is replaced by the URL set in the "Comment Page URL"
-preference under Admin > Channel Management. No entry id, URL Title, or
-other information is included; this is the exact URL from the
-preference.
+This variable is replaced by the URL set in the **Comment Page URL**
+preference under :menuselection:`Admin --> Channel Management`. No entry
+id, URL Title, or other information is included; this is the exact URL
+from the preference.
 
 comment\_entry\_id\_auto\_path
 ------------------------------
@@ -1408,9 +1407,9 @@ comment\_entry\_id\_auto\_path
 
 	{comment_entry_id_auto_path}
 
-This variable is replaced by the URL set in the "Comment Page URL"
-preference under Admin > Channel Management. The ID number of the entry
-will be automatically added. For example, this::
+This variable is replaced by the URL set in the **Comment Page URL**
+preference under :menuselection:`Admin --> Channel Management`. The ID
+number of the entry will be automatically added. For example, this::
 
 	<a href="{comment_entry_id_auto_path}">my entry</a>
 
@@ -1434,9 +1433,9 @@ comment\_url\_title\_auto\_path
 
 	{comment_url_title_auto_path}
 
-This variable is replaced by the URL set in the "Comment Page URL"
-preference under Admin > Channel Management. The URL Title of the entry
-will be automatically added. For example, this::
+This variable is replaced by the URL set in the **Comment Page URL**
+preference under :menuselection:`Admin --> Channel Management`. The URL
+Title of the entry will be automatically added. For example, this::
 
 	<a href="{comment_url_title_auto_path}">my entry</a>
 
@@ -1871,10 +1870,10 @@ could be used like so::
 		</div>
 	{/exp:channel:entries}
 
-The entries would then alternate between <div class="one"> and <div
-class="two">.
+The entries would then alternate between ``<div class="one">`` and ``<div
+class="two">``.
 
-Multiple instances of the {switch=} tag may be used and the system will
+Multiple instances of the ``{switch=}`` tag may be used and the system will
 intelligently keep track of each one.
 
 title
@@ -2018,7 +2017,7 @@ The date that the week of the currently displayed entry started on, most
 commonly used in "weekly" scenarios with the `date_heading`_ variable pair.
 
 This variable is affected by the `start_day=`_ parameter. By default, the week date
-will fall on Sunday for the week of the entry. When start\_day="Monday"
+will fall on Sunday for the week of the entry. When ``start_day="Monday"``
 is used, the week date will fall on Monday for the week of the entry.
 See `Date Variable Formatting <../../templates/date_variable_formatting.html>`_ for
 more information.
@@ -2133,6 +2132,8 @@ like so::
 	{if forum_topic}
 		<a href="{path='forums/viewthread'}/{forum_topic_id}">Discuss this in our forums</a>
 	{/if}
+
+.. _channel-entries-if-no_results:
 
 if no\_results
 --------------
@@ -2266,11 +2267,11 @@ An optional "display" parameter can be used to set the display interval::
 
 Choices for the "display" parameter are:
 
--  {date\_footer display="hourly"}
--  {date\_footer display="daily"}
--  {date\_footer display="weekly"}
--  {date\_footer display="monthly"}
--  {date\_footer display="yearly"}
+-  ``{date_footer display="hourly"}``
+-  ``{date_footer display="daily"}``
+-  ``{date_footer display="weekly"}``
+-  ``{date_footer display="monthly"}``
+-  ``{date_footer display="yearly"}``
 
 If no parameter is specified it will default to "daily".
 
@@ -2299,11 +2300,11 @@ An optional "display" parameter can be used to set the display interval::
 
 Choices for the "display" parameter are:
 
--  {date\_heading display="hourly"}
--  {date\_heading display="daily"}
--  {date\_heading display="weekly"}
--  {date\_heading display="monthly"}
--  {date\_heading display="yearly"}
+-  ``{date_heading display="hourly"}``
+-  ``{date_heading display="daily"}``
+-  ``{date_heading display="weekly"}``
+-  ``{date_heading display="monthly"}``
+-  ``{date_heading display="yearly"}``
 
 If no parameter is specified it will default to "daily".
 
@@ -2527,23 +2528,23 @@ will automatically be available by its "short name" as a variable.
 Pagination
 **********
 
-The `Pagination <pagination_page.html>`_ feature allows you to create
+The :doc:`Pagination <pagination_page>` feature allows you to create
 "next" and "previous" links between pages of entries.
 
-You can also span a single entry `across multiple
-pages <pagination_spanning.html>`_, like online magazines do.
+You can also span a single entry :doc:`across multiple
+pages <pagination_spanning>`, like online magazines do.
 
 **********************
 Entry "Views" Tracking
 **********************
 
-The Channel Entries tag also has a `Views
-Tracking <entry_tracking.html>`_ feature that lets you track the number
+The Channel Entries tag also has a :doc:`Views
+Tracking <entry_tracking>` feature that lets you track the number
 of times an entry has been viewed.
 
 *************
 Relationships
 *************
 
-The Channel Module supports a powerful `Relationship <relationships.html>`_
+The Channel Module supports a powerful :doc:`Relationship <relationships>`
 feature that lets you associate one entry to another.

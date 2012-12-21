@@ -5,8 +5,8 @@ This template displays the wiki's upload form as outlined below:
 
 |Displays the wiki's upload form.|
 
-In addition to the variables in the `Wiki Page
-template <wiki_templates_page.html>`_, the Special Upload Form template
+In addition to the variables in the :doc:`Wiki Page
+template <wiki_templates_page>`, the Special Upload Form template
 has:
 
 
@@ -23,7 +23,7 @@ file\_types
 
 This displays the allowed file types that can be uploaded. The value is
 determined by the settings of the File Upload Directory that the wiki is
-using, which is set from the `Wiki's Control Panel <wiki_cp.html>`_.
+using, which is set from the :doc:`Wiki's Control Panel <wiki_cp>`.
 
 Conditional Variables
 ---------------------
@@ -36,8 +36,8 @@ if file\_types
 
 	{if file_types == 'images'}
 
-This checks to see if the Upload Directory specified in the `Wiki's
-Control Panel <wiki_cp.html>`_ allows only images to be uploaded. This
+This checks to see if the Upload Directory specified in the :doc:`Wiki's
+Control Panel <wiki_cp>` allows only images to be uploaded. This
 is used in combination with the
 `{file\_types} <#upload_sin_file_types>`_ variable to display what kind
 of files can be uploaded. Please see the default theme file for an

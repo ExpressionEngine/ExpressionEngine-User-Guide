@@ -1,5 +1,5 @@
-Blacklist/Whitelist Module
-==========================
+Blacklist/Whitelist
+===================
 
 .. contents::
    :local:
@@ -12,6 +12,9 @@ prevention systems. It helps prevent spam from occuring in comments,
 referrers, and other posted information. Used in combination with other
 `Spam Prevention Features <../../general/spam_protection.html>`_, the
 occurrence of spam on your site should be rare.
+
+.. note:: The Blacklist/Whitelist Module is available only with a
+   `purchased <https://store.ellislab.com/>`_ ExpressionEngine license.
 
 This Module is accessed via :menuselection:`Admin --> Modules --> Blacklist/Whitelist` in your
 Control Panel. This will bring up a screen where you can access either
@@ -119,8 +122,9 @@ believe should be added to the Blacklist or Whitelist, please email
 `blacklist@expressionengine.com <mailto:blacklist@expressionengine.com>`_.
 
 To download the ExpressionEngine Lists, you must have your License
-Number entered into the :menuselection:`Admin --> General Configuration` area of the
-Control Panel. To download the Lists, go into the Modules > Blacklist.
+Number entered into the :menuselection:`Admin --> General Configuration`
+area of the Control Panel. To download the Lists, go into the
+:menuselection:`Add-Ons --> Modules` and choose *Blacklist/Whitelist*.
 In the main menu for the module are links that you can click to
 automatically download and add the ExpressionEngine.com Lists to your
 own.

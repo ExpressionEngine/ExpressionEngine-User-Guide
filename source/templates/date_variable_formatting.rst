@@ -115,6 +115,8 @@ Date Formatting Codes
 |            | always negative, and for those east of UTC is always positive.        |                                            |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
 
+.. _template-date-formatting-constants:
+
 Date Formatting Constants
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 

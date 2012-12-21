@@ -7,8 +7,8 @@ use double brackets for this syntax and the ExpressionEngine Wiki Module
 does the same.
 
 **Note:** The text formatting for your wiki is handled by whatever
-formatting option you choose in the `Wiki Control
-Panel <wiki_cp.html>`_.
+formatting option you choose in the :doc:`Wiki Control
+Panel <wiki_cp>`.
 
 
 Create or Link to a Page

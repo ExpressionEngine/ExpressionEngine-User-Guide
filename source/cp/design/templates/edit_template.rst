@@ -27,10 +27,9 @@ Save Revision
 If you have enabled the Template Versioning feature you'll see a
 checkbox that lets you choose whether to save a revision of your
 template. You can then look at any past revisions using the View
-Revision History pull-down menu at the top of the template. To enable
-Template Versioning visit this page in your Control Panel:
-
-Templates > Global Template Preferences > Save Template Revisions
+Revision History pull-down menu at the top of the template. Enable
+Template Versioning in your Control Panel under :menuselection:`Design
+--> Templates --> Global Preferences`.
 
 Preferences
 ~~~~~~~~~~~

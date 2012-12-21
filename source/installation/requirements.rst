@@ -1,11 +1,11 @@
-Requirements
-============
+System Requirements
+===================
 
-We have created a `Server Wizard <http://expressionengine.com/files/ee_server_wizard.zip>`_ that
+We have created a `Server Wizard <http://ellislab.com/asset/file/ee_server_wizard.zip>`_ that
 will verify whether your server is compatible with ExpressionEngine. To
 use the Wizard:
 
--  `Download <http://expressionengine.com/files/ee_server_wizard.zip>`_
+-  `Download <http://ellislab.com/asset/file/ee_server_wizard.zip>`_
    and unzip the archive.
 -  Upload the folder to your server.
 -  Point your web browser to the folder. For example:
@@ -39,11 +39,11 @@ Server Requirements
 Browser Requirements
 ---------------------
 
-The ExpressionEngine Control Panel is tested extensively with the web
-browsers listed here. Please note that these are the minimum browser
-requirements necessary to use the Control Panel. These requirements do
-not necessarily apply to an ExpressionEngine-powered website's front-end
-pages.
+The ExpressionEngine Control Panel is tested extensively with the
+final-release versions of the web browsers listed here. Please note that
+these are the minimum browser requirements necessary to use the Control
+Panel. These requirements do not necessarily apply to an
+ExpressionEngine-powered website's front-end pages.
 
 - Internet Explorer 8 and above
 - Firefox 13
@@ -67,6 +67,23 @@ to be able to use them you will need to meet their requirements.
    `pspell <http://us2.php.net/pspell>`_ support **or** be able to
    contact remote servers though PHP. If you are unsure if this is the
    case, contact your Host or server admin.
+-  **Multibyte Support**  For full support of multibyte encodings you must 
+   set mbstring.func_overload to 6 in your server configuration.  This may 
+   be done by editing your  your php.ini file as per the below and then 
+   restarting:
+
+::
+
+	; overload(replace) single byte functions by mbstring functions.
+	; mail(), ereg(), etc are overloaded by mb_send_mail(), mb_ereg(),
+	; etc. Possible values are 0,1,2,4 or combination of them.
+	; For example, 7 for overload everything.
+	; 0: No overload
+	; 1: Overload mail() function
+	; 2: Overload str*() functions
+	; 4: Overload ereg*() functions
+	mbstring.func_overload = 6
+	
 
 Notes
 -----
@@ -82,19 +99,18 @@ three options:
 #. Manually turn that feature on using a .htaccess file.
 #. Contact your Host or server admin to have them enable the option.
 #. Run your site using query strings. See the "Query String" section of
-   the :doc:`/general/urls` page for details.
+   the :doc:`/urls/url_structure` page for details.
 
 URL Segment Support
 ~~~~~~~~~~~~~~~~~~~
 
 If the Server Wizard lists URL Segment Support as *Unsupported*, you
 will need to run your ExpressionEngine site using query strings. The
-"Query String" section of the :doc:`/general/urls`
+"Query String" section of the :doc:`/urls/url_structure`
 page contains more information.
 
 Getting Started
 ---------------
 
 Once you're sure that your server is compatible,
-:doc:`install ExpressionEngine</installation/installation>` and 
-:doc:`get started!</getting_started/index>`
+:doc:`install ExpressionEngine</installation/installation>` and get started!

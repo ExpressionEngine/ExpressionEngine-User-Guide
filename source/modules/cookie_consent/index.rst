@@ -1,6 +1,6 @@
-#####################
-Cookie Consent Module
-#####################
+##############
+Cookie Consent
+##############
 
 .. contents::
    :local:
@@ -24,7 +24,7 @@ pages.  Removing permission to set cookies is also provided for via a link.
 To access the Cookie Consent control panel, go to :menuselection:`Add-Ons --> 
 Modules --> Cookie Consent` in your Control Panel. There you will be able control 
 settings related to control panel login and cookie clearing behavior.
-See `Cookie Consent control panel <control_panel/index.html>`_ for more
+See :doc:`Cookie Consent control panel <control_panel/index>` for more
 information.
 
 **Note:** Installing this module will prevent cookies from being set by all first 
@@ -40,7 +40,7 @@ Installation
 ************
 
 The Cookie Consent Module is available as a `separate download  
-<http://expressionengine.com/downloads/details/cookie_consent>`_. in ExpressionEngine's 
+<http://expressionengine.com/downloads/details/cookie_consent_module>`_. in ExpressionEngine's 
 `First Party Add-on Library <http://expressionengine.com/downloads>`_..  The module 
 folder should be placed in your third_party folder (typically system/expressionengine/third_party/).  
 

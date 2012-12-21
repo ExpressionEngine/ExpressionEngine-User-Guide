@@ -6,8 +6,8 @@ below:
 
 |Displays all the titles in the wiki.|
 
-In addition to the variables in the `Wiki Page
-template <wiki_templates_page.html>`_, the Special Titles template has:
+In addition to the variables in the :doc:`Wiki Page
+template <wiki_templates_page>`, the Special Titles template has:
 
 
 Tags

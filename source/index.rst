@@ -2,61 +2,139 @@
 ExpressionEngine User Guide
 ###########################
 
-- :doc:`License Agreement <license>`
-- :doc:`Change Log <changelog>`
-
 *******
 Welcome
 *******
 
-- :doc:`getting_started/the_big_picture`
-- :doc:`getting_started/index`
+- :doc:`intro/getting_the_most`
+- :doc:`intro/the_big_picture`
+- `EllisLab Support <http://ellislab.com/support>`_
 
-***********************
-Installing and Updating
-***********************
+*****************
+Application Setup
+*****************
+
+Installation
+============
 
 - :doc:`installation/requirements`
 - :doc:`installation/installation`
+
+Updates and Upgrades
+====================
+
 - :doc:`installation/update`
-- :doc:`installation/update_from_1.x`
-- :doc:`installation/update_from_freelancer`
-- :doc:`installation/moving`
+- :doc:`installation/upgrade_from_1.x`
+- :doc:`installation/upgrade_from_freelancer`
+- :doc:`installation/upgrade_from_core`
 
-*******************
-General Information
-*******************
+**********************
+Using ExpressionEngine
+**********************
 
-- :doc:`general/getting_the_most`
-- :doc:`general/urls`
-- :doc:`general/remove_index.php`
-- :doc:`cp/sites/index`
-- :doc:`general/text_formatting`
-- :doc:`general/database_backup`
-- :doc:`general/spam_protection`
-- :doc:`general/captchas`
-- :doc:`general/throttling`
-- :doc:`general/caching`
+- :doc:`intro/the_big_picture`
+- :doc:`how_to/hello-world`
+
+The Control Panel
+=================
+
+- :doc:`The Control Panel <cp/index>`
 - :doc:`general/languages`
 
-*********
-Templates
-*********
+The Front-End
+=============
 
-- :doc:`templates/globals/index`
+Templates
+---------
+
 - :doc:`templates/embedding`
 - :doc:`templates/hidden_templates`
-- :doc:`templates/date_variable_formatting`
 - :doc:`templates/plugins`
-- :doc:`templates/hit_counter`
 - :doc:`templates/php`
 - :doc:`templates/templates_as_files`
 - :doc:`templates/comments`
 
+URLs
+----
 
-*******
-Modules
-*******
+- :doc:`urls/url_structure`
+- :doc:`urls/remove_index.php`
+- :doc:`urls/404pages`
+
+
+*****************
+Beyond the Basics
+*****************
+
+- :doc:`general/add-ons`
+- :doc:`cp/sites/index`
+- :doc:`modules/forum/index`
+
+
+**************************************
+Application Maintenance & Optimization
+**************************************
+
+Maintenance & Operations
+========================
+
+- :doc:`operations/moving`
+- :doc:`operations/database_backup`
+
+Securing ExpressionEngine
+=========================
+
+- :doc:`security/spam_protection`
+- :doc:`security/captchas`
+
+Optimizing ExpressionEngine
+===========================
+
+- :doc:`optimization/caching`
+- :doc:`optimization/throttling`
+- :doc:`optimization/handling_extreme_traffic`
+
+Solving Problems
+================
+
+- :doc:`troubleshooting/index`
+- `EllisLab Support <http://ellislab.com/support>`_
+- `Community Support Forum <http://ellislab.com/forums/viewannounce/230174_114/>`_
+
+
+*************
+How-To Guides
+*************
+
+- :doc:`how_to/hello-world`
+- :doc:`how_to/building_a_simple_news_site`
+
+
+*******************
+Technical Reference
+*******************
+
+Reference Guides
+================
+
+- :doc:`The Control Panel <cp/index>`
+- :doc:`templates/template_engine`
+- :doc:`templates/globals/index`
+- :doc:`general/hidden_configuration_variables`
+- :doc:`general/bbcode`
+- :doc:`general/text_formatting`
+- :doc:`templates/date_variable_formatting`
+- :doc:`templates/hit_counter`
+- :doc:`general/quick_reference`
+
+Add-Ons
+=======
+
+
+.. _add-ons-included-in-expressionengine:
+
+Included in ExpressionEngine
+----------------------------
 
 - :doc:`modules/blacklist/index`
 - :doc:`modules/channel/index`
@@ -65,7 +143,6 @@ Modules
 - :doc:`modules/email/index`
 - :doc:`modules/emoticon/index`
 - :doc:`modules/file/index`
-- :doc:`modules/forum/index`
 - :doc:`modules/ip_to_nation/index`
 - :doc:`modules/jquery/index`
 - :doc:`modules/mailinglist/index`
@@ -83,37 +160,50 @@ Modules
 - :doc:`modules/statistics/index`
 - :doc:`modules/updated_sites/index`
 - :doc:`modules/wiki/index`
-	
-************
-Getting Help
-************
 
-- :doc:`troubleshooting/index`
-- :doc:`general/technical_support`
+.. _add-ons-available-for-download:
 
-****************
-Reference Guides
-****************
+Available for Download
+----------------------
 
-- :doc:`development/index`
-- :doc:`The Control Panel <cp/index>`
-- :doc:`general/quick_reference`
-- :doc:`general/bbcode`
-- :doc:`general/hidden_configuration_variables`
+.. rst-class:: github-addon-repos
+
+ - `GitHub Repositories <https://github.com/EllisLab>`_
+
+*******************************
+Developing for ExpressionEngine
+*******************************
+
+- :doc:`Add-On Development <development/index>`
+- `Development & Programming Forum <http://ellislab.com/forums/viewannounce/230178_116/>`_
+
+
+**********************
+About ExpressionEngine
+**********************
+
+- :doc:`License Agreement </about/license>`
+- :doc:`Change Log </about/changelog>`
 
 .. toctree::
 	:glob:
 	:titlesonly:
 	:hidden:
 	
-	license
-	changelog
+	about/index
+	about/license
+	about/changelog
 	installation/index
 	cp/index
 	general/index
-	getting_started/index
+	how_to/index
+	intro/index
 	handling_bugs/index
 	modules/index
+	operations/index
+	optimization/index
+	security/index
 	templates/index
 	troubleshooting/index
+	urls/index
 	development/index

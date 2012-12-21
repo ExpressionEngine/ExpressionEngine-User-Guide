@@ -15,8 +15,8 @@ The name of the new category. The name may include spaces.
 Category URL Title
 ~~~~~~~~~~~~~~~~~~
 
-The human readable category name used in the URL when using `Category
-URL Titles in Links <global_channel_preferences.html>`_.
+The human readable category name used in the URL when using :doc:`Category
+URL Titles in Links <global_channel_preferences>`.
 
 Category Description
 ~~~~~~~~~~~~~~~~~~~~

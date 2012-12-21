@@ -32,14 +32,15 @@ Edit Avatar
 
 You may select an avatar to associate with your member account. You may
 choose from among the default avatars or you may upload your own if that
-ability is enabled under Members > Membership Preferences.
+ability is enabled under :menuselection:`Members --> Membership
+Preferences`.
 
 Edit Your Photo
 ~~~~~~~~~~~~~~~
 
-If the ability to upload Member Photos is enabled under Admin >
-Membership Preferences, this is where you can upload a photo to be
-displayed in your member profile area.
+If the ability to upload Member Photos is enabled at
+:menuselection:`Admin --> Membership Preferences`, this is where you can
+upload a photo to be displayed in your member profile area.
 
 Email Settings
 ~~~~~~~~~~~~~~
@@ -67,8 +68,8 @@ Data displayed on an ExpressionEngine page is determined dynamically for
 each user viewing the site. Registered users can specify in which time
 zone they reside as well as their language and time formatting
 preference. Note that this is information that applies *only* to this
-user account. To specify default server settings, use Admin >
-Localization Settings.
+user account. To specify default server settings, go to
+:menuselection:`Admin --> Localization Settings`.
 
 
 Customize Control Panel

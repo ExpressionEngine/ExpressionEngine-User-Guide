@@ -1,6 +1,6 @@
-##################
-SafeCracker Module
-##################
+###########
+SafeCracker
+###########
 
 .. contents::
    :local:
@@ -113,6 +113,54 @@ Or use the alternative syntax. ::
 			<option value="{category_id}"{selected}>{category_name}</option>
 		{/categories}
 	</select>
+	
+
+The following variables are available inside the Category Menu and Categories 
+tag pairs:
+
+{category_id}
+^^^^^^^^^^^^^
+
+The category id number.
+
+{category_name}
+^^^^^^^^^^^^^^^
+
+The category name.
+
+{category_group_id}
+^^^^^^^^^^^^^^^^^^^
+
+The category group id number.
+	
+{category_group}
+^^^^^^^^^^^^^^^^
+
+The category group name.
+
+{category_parent}
+^^^^^^^^^^^^^^^^^
+
+The name of the category parent if it exists, indented according to the 
+category depth.
+
+{category_depth}
+^^^^^^^^^^^^^^^^
+
+The level of nesting assigned to the category.  The depth of a top level 
+category is 1.
+
+{selected}
+^^^^^^^^^^
+
+An indicator of whether the category has been selected or not.  Is blank if not, 
+selected="selected" otherwise.
+
+{checked}
+^^^^^^^^^
+
+An indicator of whether the category has been selected or not.  Is blank if not, 
+checked="checked" otherwise.	
 
 Status
 ~~~~~~
@@ -742,19 +790,24 @@ file fields without the entire file manager. You are presented with a
 simple file input, and if applicable, a thumbnail and a "remove file"
 checkbox. You specify the upload location in the field settings.
 SafeCracker File may be used in both SafeCracker Entry Forms and the CP
-Publish Form. It is also a Matrix celltype.
+Publish Form. SafeCracker File inherits the tags of the standard
+`File Field <../channel/custom_fields.html#file-field>`_.
+
+SafeCracker File may be used as a Matrix celltype and as a Low Variables
+variable type. If you are using it as a Low Variable, you must use the
+`parse tag <http://gotolow.com/addons/low-variables/docs/tags#parse-tag>`_.
 
 ********
 Examples
 ********
 
-See `SafeCracker Examples <examples.html>`_ for more complete examples of SafeCracker usage.
+See :doc:`SafeCracker Examples <examples>` for more complete examples of SafeCracker usage.
 
 **********************
 Control Panel Settings
 **********************
 
-See the `SafeCracker Module Control Panel <control_panel/index.html>`_ page.
+See the :doc:`SafeCracker Module Control Panel <control_panel/index>` page.
 
 
 ***********

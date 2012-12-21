@@ -67,6 +67,8 @@ entries from multiple Sites while ordering by Site and Channel Field.
 Read more about the :ref:`Multiple Site Manager and
 orderby= <channel-entries-orderby>`.
 
+.. _msm-variables:
+
 Variables
 ---------
 
@@ -77,6 +79,6 @@ Manager:
 -  *{site\_label}*: Displays the Site's Label.
 -  *{site\_short\_name}*: Displays the Site's Short Name.
 
-Next: `Manage existing Sites <managesites.html>`_
+Next: :doc:`Manage existing Sites <managesites>`
 =================================================
 

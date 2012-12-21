@@ -26,7 +26,7 @@ upload destinations.
 
 The Synchronize icon allows you to synchronize the file records in the
 database with the files stored in a given upload directory. See
-`Synchronize Files <sync_files.html>`_ for details on how this works.
+:doc:`Synchronize Files <sync_files>` for details on how this works.
 
 The Create New Upload Destination button takes you to a page where you
 can create a new destination, or you can click the Edit icon to edit an
@@ -213,7 +213,7 @@ Image Manipulations
 This area allows you to specify one or more alternate versions
 of an image that automatically get created when the original
 image is uploaded. A manipulation can include a resized version,
-a `watermark <watermark_preferences.html>`_, or both.
+a :doc:`watermark <watermark_preferences>`, or both.
 
 The resize type will determine whether the image is constrained
 (resized) or cropped to the specified dimensions. If only height

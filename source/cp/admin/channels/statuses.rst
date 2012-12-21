@@ -33,7 +33,7 @@ groups. It lists the status group name and provides links to edit the
 preferences:
 
 -  **Create a New Status Group:** Allows you to create a new group
--  `Add/edit Statuses <statuses_edit.html>`_: Create and edit the
+-  :doc:`Add/edit Statuses <statuses_edit>`: Create and edit the
    statuses that belong to the status group.
 -  **Edit Status Group**: Edit the name of the existing status group.
 -  **Delete Status Group**: Delete the status group.

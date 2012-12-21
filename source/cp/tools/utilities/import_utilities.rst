@@ -8,5 +8,5 @@ Import Utilities
 ExpressionEngine includes the following utilities enabling you to import
 data from other publishing systems:
 
--  `Member Import Utility <./member_import/index.html>`_
+-  :doc:`Member Import Utility </cp/tools/utilities/member_import/index>`
 

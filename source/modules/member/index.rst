@@ -1,6 +1,6 @@
-########################
-Member Management Module
-########################
+#################
+Member Management
+#################
 
 .. contents::
    :local:
@@ -14,14 +14,16 @@ Many member management features are built-in to ExpressionEngine,
 so unlike other modules, the Member Management module is
 not managed from the Modules area of the Control Panel.
 
-.. note:: The Member Module is available only with the purchase of a Non-Commercial or
-   Commercial license.
+.. note:: The Member Module is available only with a `purchased <https://store.ellislab.com/>`_
+   ExpressionEngine license.
 
 You'll find many member management options available at:
 
-- The `Members <../../cp/members/index.html>`_ section, which
+- The :doc:`Members </cp/members/index>` section, which
   hosts a comprehensive suite of member management utilities
-  including the `Membership Preferences <../../cp/members/membership_preferences.html>`_ page.
+  including
+  the :doc:`Membership Preferences </cp/members/membership_preferences>`
+  page.
 - The My Account Page, accessible from the Control Panel's sidebar.
   It can also display information for any member if you choose a
   particular member from :menuselection:`Members --> View All`.
@@ -42,11 +44,13 @@ to change the look. You'll find the templates located at::
 	themes/profile_themes/default
 
 These templates can be edited with a text editor, or you may choose to
-edit them via your Control Panel at :menuselection:`Design --> Themes --> Member Profile Templates`
+edit them via your Control Panel at :menuselection:`Design --> Themes
+--> Member Profile Templates`
 
 A good strategy is to make a copy of the entire **default** templates
-folder, then edit your copy so you can leave the **default** files intact.
-Set your new copy as the site default at :menuselection:`Members --> Preferences --> Default Member Profile Theme`
+folder, then edit your copy so you can leave the **default** files
+intact. Set your new copy as the site default under :menuselection:`Members
+--> Preferences --> Default Member Profile Theme`
 
 **************
 Login Form Tag

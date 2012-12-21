@@ -71,8 +71,8 @@ Here is a quick run down each variable:
 
 If your accessory has a language file, then you the $name and
 $description class variables can be set in the constructor by calling
-the language file and variables using the `Language ($LANG)
-class <./usage/language.html>`_. If your accessory is likely to be used
+the language file and variables using the :doc:`Language ($LANG)
+class </development/usage/language>`. If your accessory is likely to be used
 internationally and by non-English speakers this is a recommended course
 of action.
 

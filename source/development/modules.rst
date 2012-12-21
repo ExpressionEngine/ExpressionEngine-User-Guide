@@ -507,7 +507,7 @@ Working with Forms
 While creating forms for the backend is fairly routine, there are
 several differences/additions worth noting:
 
--  The `Form Validation library <./usage/form_validation.html>`_ is the
+-  The :doc:`Form Validation library </development/usage/form_validation>` is the
    best means of checking submitted form data and returning in-line
    errors in the case of failed validation.
 -  After form submission, you will generally want to output a success
@@ -545,8 +545,8 @@ This would return the index.php view page, located in a **views**
 folder. The view file is passed an array with all of the variables used
 by the view, and those variables are simple 'plugged into' the html.
 
-It is recommended that in view pages only, you use the `PHP's alternate
-syntax <./guidelines/view_php_syntax.html>`_ in your views, as it makes
+It is recommended that in view pages only, you use the :doc:`PHP's alternate
+syntax </development/guidelines/view_php_syntax>` in your views, as it makes
 them easier to read and limits the amount of php. If this is not
 supported by your server, ExpressionEngine will automatically rewrite
 the tags.
@@ -563,8 +563,8 @@ will contain the module's outputted content and is retrieved by the
 Template parser after the module is done processing. As always, be sure
 you invoke the super object in your constructor.
 
-The tag structure of a module follows the same rules as the `Plugins
-API <plugins.html>`_:
+The tag structure of a module follows the same rules as the :doc:`Plugins
+API <plugins>`:
 
 ::
 

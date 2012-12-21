@@ -35,8 +35,8 @@ Here you can choose how membership accounts are activated:
    ExpressionEngine uses this method since it ensures that the email
    address the user submitted when signing up is valid.
 -  **Manual activation by an administrator**: New members may only be
-   activated by an admin visiting the Members > Activate Pending section
-   of the Control Panel.
+   activated by an admin visiting the :menuselection:`Members -->
+   Activate Pending` section of the Control Panel.
 
 Require Terms of Service
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,9 +45,8 @@ When new members register through the site, a "terms of service" block
 of text is displayed. This preference determines whether new members
 must indicate that they agree to abide by these terms before they can
 register. You may edit the terms of service within the registration form
-template, located at:
-
-Design > Themes > Member Profile Templates > Default > Registration Form
+template, located at :menuselection:`Design --> Themes --> Member
+Profile Templates --> Default --> Registration Form`.
 
 Allow members to set their own localization preferences?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -59,8 +58,8 @@ Profile and My Account pages.
 Enable Membership Captcha
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Here you can determine whether `CAPTCHAs <../../general/captchas.html>`_
-are required for new members registering.
+Here you can determine whether :doc:`CAPTCHAs </security/captchas>` are
+required for new members registering.
 
 Default Member Group Assigned to New Members
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

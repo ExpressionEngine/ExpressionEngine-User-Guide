@@ -323,7 +323,7 @@ Takes the current element and turns it into a different one. Does not
 change the contents of the element.
 
 deleteElement($el)
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^
 
 Replaces the element with its contents, similar to jQuery's unwrap.
 

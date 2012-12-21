@@ -214,10 +214,10 @@ comment\_auto\_path
 
 	{comment_auto_path}
 
-This variable is replaced by the URL set in the "Comment Page URL"
-preference under Admin > Channel Management. No entry id, URL Title, or
-other information is included; this is the exact URL from the
-preference.
+This variable is replaced by the URL set in the **Comment Page URL**
+preference under :menuselection:`Admin --> Channel Management`. No entry
+id, URL Title, or other information is included; this is the exact URL
+from the preference.
 
 comment\_entry\_id\_auto\_path
 ------------------------------
@@ -226,9 +226,9 @@ comment\_entry\_id\_auto\_path
 
 	{comment_entry_id_auto_path}
 
-This variable is replaced by the URL set in the "Comment Page URL"
-preference under Admin > Channel Management. The ID number of the entry
-will be automatically added. For example, this
+This variable is replaced by the URL set in the **Comment Page URL**
+preference under :menuselection:`Admin --> Channel Management`. The ID
+number of the entry will be automatically added. For example, this
 
 ::
 
@@ -247,9 +247,9 @@ comment\_url\_title\_auto\_path
 
 	{comment_url_title_auto_path}
 
-This variable is replaced by the URL set in the "Comment Page URL"
-preference under Admin > Channel Management. The URL Title of the entry
-will be automatically added. For example, this
+This variable is replaced by the URL set in the **Comment Page URL**
+preference under :menuselection:`Admin --> Channel Management`. The URL
+Title of the entry will be automatically added. For example, this
 
 ::
 

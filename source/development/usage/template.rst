@@ -377,7 +377,7 @@ Single variables are defined in the array as simple key => value pairs. ::
 Additionally, you can have Typography automatically performed on single
 variables, by sending the variable in the form of an array with two keys
 - the first being the content, and the second being an array including
-any of the four available standard `Typography <typography.html>`_
+any of the four available standard :doc:`Typography <typography>`
 preferences that you wish to override. Sending an empty array will
 result in Typography being parsed with the class defaults. ::
 

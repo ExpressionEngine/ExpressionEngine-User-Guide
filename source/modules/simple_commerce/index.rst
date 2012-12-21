@@ -1,6 +1,6 @@
-######################
-Simple Commerce Module
-######################
+###############
+Simple Commerce
+###############
 
 .. contents::
 	:local:
@@ -13,8 +13,8 @@ Introduction
 The Simple Commerce Module is a basic but flexible module
 that easily integrates ExpressionEngine with PayPal.
 
-.. note:: The Simple Commerce Module requires a `Non-Commercial <http://expressionengine.com/overview/pricing/>`_ or
-   `Commercial <http://expressionengine.com/overview/pricing/>`_ license.
+.. note:: The Simple Commerce Module is available only with a `purchased <https://store.ellislab.com/>`_
+   ExpressionEngine license.
 
 -  Integrates with ExpressionEngine's Channel Module to define items for sale
 -  Tracks purchases automatically utilizing PayPal's `Instant Payment
@@ -341,8 +341,8 @@ module, you can specify emails to be sent upon a recurring purchase,
 emails to be sent when a recurring payment is cancelled, and alter a
 member's group assignment based on their subscription status.
 
-.. note:: Automatic emails and member group changes rely on `Instant
-   Payment Notification <sc_cp_ipn.html>`_. New subscription automated
+.. note:: Automatic emails and member group changes rely on :doc:`Instant
+   Payment Notification <sc_cp_ipn>`. New subscription automated
    features will only work for purchases made by logged-in members of your
    site. Subscription termination automatic features will only work for
    purchases made by members.
@@ -402,7 +402,7 @@ account with PayPal.
 
 #. Launch Sandbox for the Premier Account
 
-   #. Set up `Instant Payment Notification <sc_cp_ipn.html>`_.
+   #. Set up :doc:`Instant Payment Notification <sc_cp_ipn>`.
    #. Add a Bank Account. Enter a fictional name, PayPal will
       automatically create fake account numbers for you.
    #. Confirm the Bank Account. Simply click confirm--no test deposits
@@ -544,8 +544,8 @@ Update your Certificate ID
 In the Encrypted Payment Settings section of your PayPal Seller
 Preferences, the "Cert ID" column of the table showing your uploaded
 public certificates displays the certificate ID that PayPal assigned to
-the certificate. In your Simple Commerce control panel `PayPal
-Settings <sc_cp_paypal_settings.html>`_, key in your certificate ID to
+the certificate. In your Simple Commerce control panel :doc:`PayPal
+Settings <sc_cp_paypal_settings>`, key in your certificate ID to
 the field marked **ID Given to Public Certificate by PayPal**.
 
 Download PayPal's public certificate
@@ -563,8 +563,8 @@ this file to your server.
 Update paths to your certificates and key
 =========================================
 
-In your Simple Commerce control panel `PayPal
-Settings <sc_cp_paypal_settings.html>`_, update the paths for the
+In your Simple Commerce control panel :doc:`PayPal
+Settings <sc_cp_paypal_settings>`, update the paths for the
 certificates and key, as well as the folder used to temporarily store
 encrypted files. As indicated in the notes, this path must be readable
 by ExpressionEngine, but should not be accessible from the web.
@@ -586,14 +586,14 @@ then select "On" next to "Block Non-encrypted Website Payments".
 Control Panel
 *************
 
-See the `Simple Commerce Control Panel <sc_cp.html>`_ page for more information
+See the :doc:`Simple Commerce Control Panel <sc_cp>` page for more information
 on:
 
-   -  `Managing Store Items <sc_cp_items.html>`_
-   -  `Managing Store Purchases <sc_cp_purchases.html>`_
-   -  `Store Email Templates <sc_cp_email_templates.html>`_
-   -  `Instant Payment Notification <sc_cp_ipn.html>`_
-   -  `PayPal Settings <sc_cp_paypal_settings.html>`_
+   -  :doc:`Managing Store Items <sc_cp_items>`
+   -  :doc:`Managing Store Purchases <sc_cp_purchases>`
+   -  :doc:`Store Email Templates <sc_cp_email_templates>`
+   -  :doc:`Instant Payment Notification <sc_cp_ipn>`
+   -  :doc:`PayPal Settings <sc_cp_paypal_settings>`
 
 
 .. toctree::

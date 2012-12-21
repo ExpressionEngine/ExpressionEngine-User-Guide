@@ -1,6 +1,6 @@
-#############
-Moblog Module
-#############
+######
+Moblog
+######
 
 .. contents::
    :local:
@@ -13,6 +13,9 @@ Introduction
 The Moblog, or "mobile blogging", Module allows you to submit Channel
 Entries to ExpressionEngine via email. Emails may contain images or
 other attachments, typically sent via a mobile device.
+
+.. note:: The Moblog Module is available only with a `purchased <https://store.ellislab.com/>`_
+   ExpressionEngine license.
 
 The basic concept is this: You send an email containing the text of your
 entry along with a file or image attachment to a specific email address
@@ -238,7 +241,7 @@ It works together with the "Time Between Checks" setting in the Control
 Panel . Whenever a visitor to your site loads a Template with this Tag
 on it, ExpressionEngine will look to see if the necessary amount of time
 has passed based on the "Time Between Checks" setting for this moblog
-(Modules > `Moblog <control_panel/index.html#create_a_new_moblog>`_ in
+(:menuselection:`Add-Ons --> Modules --> Moblog` in
 the Control Panel). If the necessary time has passed since the last time
 a check was performed then ExpressionEngine will check the specified
 Moblog(s) for new messages.
@@ -294,7 +297,7 @@ moblogs::
 Control Panel
 *************
 
-See the `Moblog Module Control Panel <control_panel/index.html>`_ page.
+See the :doc:`Moblog Module Control Panel <control_panel/index>` page.
 
 .. toctree::
 	:glob:

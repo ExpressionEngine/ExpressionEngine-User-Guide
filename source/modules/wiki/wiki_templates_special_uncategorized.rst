@@ -6,8 +6,8 @@ below:
 
 |Wiki Uncategorized|
 
-In addition to the variables in the `Wiki Page
-template <wiki_templates_page.html>`_, the Special Uncategorized
+In addition to the variables in the :doc:`Wiki Page
+template <wiki_templates_page>`, the Special Uncategorized
 template has:
 
 

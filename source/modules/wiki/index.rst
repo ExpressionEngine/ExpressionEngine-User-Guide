@@ -1,6 +1,6 @@
-###########
-Wiki Module
-###########
+####
+Wiki
+####
 
 .. contents::
 	:local:
@@ -11,11 +11,11 @@ Introduction
 ************
 
 The ExpressionEngine Wiki Module provides a powerful wiki that
-integrates seamlessly with ExpressionEngine. See `Getting Started with the Wiki <getting_started.html>`_ 
+integrates seamlessly with ExpressionEngine. See :doc:`Getting Started with the Wiki <getting_started>` 
 for a more detailed explanation of what a wiki is and what you can do with it.
 
-.. note:: The Wiki Module requires a `Non-Commercial <http://expressionengine.com/overview/pricing/>`_ or
-   `Commercial <http://expressionengine.com/overview/pricing/>`_ license.
+.. note:: The Wiki Module is available only with a `purchased <https://store.ellislab.com/>`_
+   ExpressionEngine license.
 
 -  Integrates with ExpressionEngine's Membership Module
 -  Supports multiple wikis on a single ExpressionEngine installation
@@ -41,7 +41,7 @@ First-Time Setup
 #. If you have not already installed the Wiki Module, do so at
    :menuselection:`Add-Ons --> Modules --> Wiki`.
 #. Click on **Wiki** to open the Wiki Module Control Panel and then
-   `create a wiki and configure the preferences <wiki_cp.html>`_.
+   :doc:`create a wiki and configure the preferences <wiki_cp>`.
 #. Go into the Templates section of your ExpressionEngine Control Panel.
    Create a Template Group specifically for your wiki and in the 'index'
    template place a tag with a format similar to::
@@ -75,8 +75,8 @@ This tag is placed in the **index template** of the Template Group that
 you are using for your wiki as described above in the `First-Time Setup`_
 instructions. The tag displays the wiki within the specified ExpressionEngine template.
 
-.. note:: Modifying the wiki's theme (visual design) is described in the
-   `Wiki Theme Template <wiki_templates.html>`_ section of the User Guide.
+.. note:: Modifying the wiki's theme (visual design) is described in
+   the :doc:`Wiki Theme Template <wiki_templates>` section of the User Guide.
 
 Parameters
 ==========
@@ -136,7 +136,7 @@ themes/wiki\_themes/ directory. The parameter specifies the name of your
 theme's folder and that folder's theme file. This means that a theme's
 folder and its main php file will match. For example the default theme
 structure is default/default.php so the parameter would be default. See
-the `Wiki Templates <wiki_templates.html>`_ section for more information
+the :doc:`Wiki Templates <wiki_templates>` section for more information
 on themes.
 
 wiki
@@ -156,9 +156,9 @@ specify one wiki in this parameter.
 Control Panel and Templates
 ***************************
 
--  `Control Panel <wiki_cp.html>`_
+-  :doc:`Control Panel <wiki_cp>`
 -  `Setting Up Namespaces <wiki_cp.html#namespaces>`_
--  `Templates <wiki_templates.html>`_
+-  :doc:`Templates <wiki_templates>`
 
 **************
 Using the Wiki
@@ -167,16 +167,16 @@ Using the Wiki
 All page creation, category creation, and editing is done by users
 directly on the wiki using special **wiki syntax**.
 
--  `Getting Started with the Wiki <getting_started.html>`_
--  `Wiki Search <wiki_search.html>`_
--  `Wiki Syntax <wiki_syntax.html>`_
--  `Wiki Users <wiki_users.html>`_
+-  :doc:`Getting Started with the Wiki <getting_started>`
+-  :doc:`Wiki Search <wiki_search>`
+-  :doc:`Wiki Syntax <wiki_syntax>`
+-  :doc:`Wiki Users <wiki_users>`
 
 ************
 Update Notes
 ************
 
-See the `Wiki Module Update Notes <wiki_update_notes.html>`_  page.
+See the :doc:`Wiki Module Update Notes <wiki_update_notes>`  page.
 
 .. toctree::
 	:glob:

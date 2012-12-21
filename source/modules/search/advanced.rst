@@ -139,7 +139,7 @@ information they need. Example::
 
 The search results are displayed on the page you specify as the
 `result\_page=`_ page. Results are displayed with the
-`Search Results <results.html>`_ tag.
+:doc:`Search Results <results>` tag.
 
 Parameters
 ----------

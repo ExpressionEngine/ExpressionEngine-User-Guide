@@ -5,60 +5,61 @@ The list below details all available extension hooks in ExpressionEngine.
 
 -  Global Hooks
 
-   -  `Core Library <global/core/index.html>`_
+   -  :doc:`Core Library <global/core/index>`
       (Core.php)
-   -  `Filemanager Library <global/filemanager/index.html>`_
+   -  :doc:`Filemanager Library <global/filemanager/index>`
       (Filemanager.php)
-   -  `Functions Library <global/functions/index.html>`_ (Functions.php)
-   -  `Email Library <global/email/index.html>`_ (EE\_Email.php)
-   -  `Member Model <global/member_model/index.html>`_ (member_model.php)
-   -  `Output Library <global/output/index.html>`_ (EE\_Output.php)
-   -  `Session Library <global/session/index.html>`_ (Session.php)
-   -  `Template Library <global/template/index.html>`_ (Template.php)
-   -  `Text Helper <global/text_helper/index.html>`_
+   -  :doc:`Functions Library <global/functions/index>` (Functions.php)
+   -  :doc:`Email Library <global/email/index>` (EE\_Email.php)
+   -  :doc:`Member Model <global/member_model/index>` (member_model.php)
+   -  :doc:`Output Library <global/output/index>` (EE\_Output.php)
+   -  :doc:`Session Library <global/session/index>` (Session.php)
+   -  :doc:`Template Library <global/template/index>` (Template.php)
+   -  :doc:`Text Helper <global/text_helper/index>`
       (EE\_text\_helper.php)
-   -  `Typography Library <global/typography/index.html>`_
+   -  :doc:`Typography Library <global/typography/index>`
       (EE\_Typography.php)
 
 -  API Library Hooks
 
-   -  `Channel Entries API <api/channel_entries/index.html>`_
+   -  :doc:`Channel Entries API <api/channel_entries/index>`
       (Api\_channel\_entries.php)
-   -  `Template Structure API <api/template_structure/index.html>`_
+   -  :doc:`Template Structure API <api/template_structure/index>`
       (Api\_template\_structure.php)
 
 -  Control Panel Hooks
 
-   -  `Admin Content controller <cp/admin_content/index.html>`_
+   -  :doc:`Admin Content controller <cp/admin_content/index>`
       (admin\_content.php)
-   -  `Content Edit controller <cp/content_edit/index.html>`_
+   -  :doc:`Content Edit controller <cp/content_edit/index>`
       (content\_edit.php)
-   -  `Content Publish controller <cp/content_publish/index.html>`_
+   -  :doc:`Content Publish controller <cp/content_publish/index>`
       (content\_publish.php)
-   -  `Design controller <cp/design/index.html>`_ (design.php)
-   -  `Javascript controller <cp/javascript/index.html>`_
+   -  :doc:`Design controller <cp/design/index>` (design.php)
+   -  :doc:`Javascript controller <cp/javascript/index>`
       (javascript.php)
-   -  `Login controller <cp/login/index.html>`_ (login.php)
-   -  `Members controller <cp/members/index.html>`_ (members.php)
-   -  `My Account controller <cp/myaccount/index.html>`_ (myaccount.php)
+   -  :doc:`Login controller <cp/login/index>` (login.php)
+   -  :doc:`Members controller <cp/members/index>` (members.php)
+   -  :doc:`Menu class <cp/menu/index>` (Menu.php)
+   -  :doc:`My Account controller <cp/myaccount/index>` (myaccount.php)
 
 -  Module Hooks
 
-   -  `Channel Module <module/channel/index.html>`_ (mod.channel.php)
-   -  `Comment Module <module/comment/index.html>`_ (mcp.comment.php,
+   -  :doc:`Channel Module <module/channel/index>` (mod.channel.php)
+   -  :doc:`Comment Module <module/comment/index>` (mcp.comment.php,
       mod.comment.php)
-   -  `Email Module <module/email/index.html>`_ (mod.email.php)
-   -  `Forum Module <module/forum/index.html>`_ (mod.forum\_core.php)
-   -  `Member Module <module/member/index.html>`_ (mod.member.php)
-   -  `Member Module Authorization <module/member_auth/index.html>`_
+   -  :doc:`Email Module <module/email/index>` (mod.email.php)
+   -  :doc:`Forum Module <module/forum/index>` (mod.forum\_core.php)
+   -  :doc:`Member Module <module/member/index>` (mod.member.php)
+   -  :doc:`Member Module Authorization <module/member_auth/index>`
       (mod.member\_auth.php)
-   -  `Member Module Registration <module/member_register/index.html>`_
+   -  :doc:`Member Module Registration <module/member_register/index>`
       (mod.member\_register.php)
-   -  `Member Module Settings <module/member_settings/index.html>`_
+   -  :doc:`Member Module Settings <module/member_settings/index>`
       (mod.member\_settings.php)
-   -  `Simple Commerce Module <module/simple_commerce/index.html>`_
+   -  :doc:`Simple Commerce Module <module/simple_commerce/index>`
       (mod.simple\_commerce.php)
-   -  `Wiki Module <module/wiki/index.html>`_ (mod.wiki.php)
+   -  :doc:`Wiki Module <module/wiki/index>` (mod.wiki.php)
 
 .. toctree::
 	:glob:
@@ -75,6 +76,7 @@ The list below details all available extension hooks in ExpressionEngine.
 	cp/javascript/index
 	cp/login/index
 	cp/members/index
+	cp/menu/index
 	cp/myaccount/index
 	global/core/index
 	global/email/index

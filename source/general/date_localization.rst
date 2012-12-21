@@ -12,16 +12,16 @@ site.
 If people browsing your site are not members, or if they have not set a
 time zone preferences in their personal profile, the times will instead
 be shown according to your master system localization settings found in
-the `Admin > Localization
-Settings <../cp/admin/localization_settings.html>`_ area of
+the :doc:`Localization
+Settings </cp/admin/localization_settings>` area of
 your Control Panel. If you prefer that the localization settings of a
 particular member be used as the site default this can be specified in
-the My Account > Administrative Options page.
+the :menuselection:`My Account --> Administrative Options` page.
 
 If you do not wish to permit your members to set their own localization
-preferences you can disable the feature in the `Admin > Membership
-Preferences <../cp/members/membership_preferences.html>`_ page of the
-control panel. When disabled, the localization preferences page will not
+preferences you can disable the feature in the :doc:`Membership
+Preferences </cp/members/membership_preferences>` page of the
+Control Panel. When disabled, the localization preferences page will not
 be accessible to members in their member profile area.
 
 **A note regarding Daylight Saving Time (DST).**

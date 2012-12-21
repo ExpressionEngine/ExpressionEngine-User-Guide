@@ -5,8 +5,8 @@ This template displays wiki search results as outlined below:
 
 |Displays search results done through the wiki.|
 
-In addition to the variables in the `Wiki Page
-template <wiki_templates_page.html>`_, the Special Search Results
+In addition to the variables in the :doc:`Wiki Page
+template <wiki_templates_page>`, the Special Search Results
 template has:
 
 

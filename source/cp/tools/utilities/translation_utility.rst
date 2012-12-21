@@ -3,7 +3,8 @@ Translation Utility
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Tools --> Utilities --> Translation Utility`
+**Control Panel Location:** :menuselection:`Tools --> Utilities -->
+Translation Utility`
 
 This Translation Utility page of the Control Panel allows you to
 translate the core language files into other languages.
@@ -41,8 +42,8 @@ Sometimes you may wish to update an older version of a language pack to
 be compatible with a new version of ExpressionEngine. To update a
 language pack:
 
-#. Choose "English" as your language under My Account > Localization
-   Settings.
+#. Choose "English" as your language under :menuselection:`My Account
+   --> Localization Settings`.
 #. Place a copy of the old language pack inside of the
    system/expressionengine/translations/ folder. Ensure that the files are set to
    permissions of 666 so that ExpressionEngine can modify them.

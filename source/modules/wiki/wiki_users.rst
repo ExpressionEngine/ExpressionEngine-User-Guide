@@ -26,11 +26,11 @@ Users
 
 A User is a person who is logged into your ExpressionEngine site and
 belongs to a **Member Group** that is allowed to *use* the wiki. You can
-specify which Member Groups are users from the `Wiki Control
-Panel <wiki_cp.html>`_.
+specify which Member Groups are users from the :doc:`Wiki Control
+Panel <wiki_cp>`.
 
-Users can add and edit articles and categories in the wiki using `Wiki
-Syntax <wiki_syntax.html>`_.
+Users can add and edit articles and categories in the wiki using :doc:`Wiki
+Syntax <wiki_syntax>`.
 
 Administrators
 --------------
@@ -48,7 +48,7 @@ In a article's Edit Screen you can select to **moderate** an article.
 This means that **Users** can edit the article, but the edits will not
 appear on the live wiki until they are approved by a wiki admin.
 
-In the `Wiki Control Panel <wiki_cp.html>`_ you can have the Wiki email
+In the :doc:`Wiki Control Panel <wiki_cp>` you can have the Wiki email
 specified admins of changes to moderated articles. Admins can then
 approve or reject those changes from the email. You can also view
 changes to the wiki by clicking on the *Recent Changes* link in the

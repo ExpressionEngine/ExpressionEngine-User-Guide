@@ -201,7 +201,7 @@ show\_empty=
 
 ::
 
-	show_empty="no" ``show_empty="yes"``
+	show_empty="no"
 
 This parameter determines whether or not categories that contain no
 entries are displayed. If you set the parameter to "no" then categories
@@ -286,7 +286,7 @@ functionality.
 The list can also be shown in a flat "linear" style.
 
 For more information about how this option works see the parameter
-description on the `Channel Categories <categories.html>`_ page.
+description on the :doc:`Channel Categories <categories>` page.
 
 Variable Pairs
 --------------

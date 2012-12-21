@@ -12,7 +12,7 @@ This screen allows you to edit the groups associated with the channel.
 Category Group
 ~~~~~~~~~~~~~~
 
-Choose which `category groups <category_management.html>`_ are assigned
+Choose which :doc:`category groups <category_management>` are assigned
 to the channel. This determines what categories are associated with the
 channel. The list is dynamically populated with all the existing groups
 as well as "None".
@@ -20,7 +20,7 @@ as well as "None".
 Status Group
 ~~~~~~~~~~~~
 
-Choose which `status group <statuses.html>`_ is assigned to the channel.
+Choose which :doc:`status group <statuses>` is assigned to the channel.
 This determines what statuses are associated with the channel. The list
 is dynamically populated with all the existing groups as well as "None".
 
@@ -30,7 +30,7 @@ Admins will be able to post entries with an 'open' status.
 Field Group
 ~~~~~~~~~~~
 
-Choose which `field group <custom_channel_fields.html>`_ is assigned to
+Choose which :doc:`field group <custom_channel_fields>` is assigned to
 the channel. This determines which channel fields are associated with
 the channel. The list is dynamically populated with all the existing
 groups as well as "None".

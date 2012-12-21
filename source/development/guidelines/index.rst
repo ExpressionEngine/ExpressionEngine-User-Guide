@@ -29,19 +29,19 @@ to see that the guidelines are met before submitting your add-on.
 **Note:** Unless otherwise indicated, each item discussed is a
 *requirement*, and not an option for consideration.
 
--  `General Style and Syntax <general.html>`_
--  `View Files and PHP Alternate Syntax <view_php_syntax.html>`_
--  `Performance <performance.html>`_
--  `Security <security.html>`_
+-  :doc:`General Style and Syntax <general>`
+-  :doc:`View Files and PHP Alternate Syntax <view_php_syntax>`
+-  :doc:`Performance <performance>`
+-  :doc:`Security <security>`
 
 After reading and understanding the above sections, you can use the
-`Summarized Checklist <checklist.html>`_ to assist you in reviewing your
+:doc:`Summarized Checklist <checklist>` to assist you in reviewing your
 code prior to submission.
 
 Documentation
 -------------
 
-`Templates <documentation.html>`_ are available to assist you in
+:doc:`Templates <documentation>` are available to assist you in
 documenting your add-on.
 
 .. toctree::

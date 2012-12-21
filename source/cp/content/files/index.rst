@@ -1,15 +1,15 @@
 Files
 =====
 
--  `File Manager <file_manager.html>`_
+-  :doc:`File Manager <file_manager>`
 
-   -  `Image Editor <image_editor.html>`_
+   -  :doc:`Image Editor <image_editor>`
 
--  `File Upload Preferences <file_upload_preferences.html>`_
+-  :doc:`File Upload Preferences <file_upload_preferences>`
 
-   -  `Synchronize Files <sync_files.html>`_
+   -  :doc:`Synchronize Files <sync_files>`
 
--  `Watermark Preferences <watermark_preferences.html>`_
+-  :doc:`Watermark Preferences <watermark_preferences>`
 
 
 .. toctree::

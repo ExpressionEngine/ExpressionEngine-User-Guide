@@ -27,7 +27,7 @@ sidebar of your site. Example::
 
 The search results are displayed on the page you specify as the
 `result\_page= <#par_result_page>`_ page. Results are displayed with the
-`Search Results <results.html>`_ tag.
+:doc:`Search Results <results>` tag.
 
 Input Fields
 ------------

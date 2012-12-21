@@ -20,3 +20,10 @@ The following table columns are listed:
 -  **Action**: What type of action was performed.
 
 .. |Cp Log View| image:: ../../../images/cp_log_view.png
+
+Clear Log Files
+---------------
+
+Clicking this link will cause all of the current access logs to be
+cleared. A record of the clearing action will appear in the new log
+list.

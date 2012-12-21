@@ -7,8 +7,8 @@ Convert Delimited Data to XML
 
 The Convert Delimited Data to XML utility enables you to take member
 information from a third party application that exports a delimited data
-file and create an XML file in ExpressionEngine's `Member XML
-Format <member_xml_format.html>`_. Nearly all delimited formats are
+file and create an XML file in ExpressionEngine's :doc:`Member XML
+Format <member_xml_format>`. Nearly all delimited formats are
 accepted, such as the common tab-delimited, comma-delimited, and
 quote-enclosed formats.
 

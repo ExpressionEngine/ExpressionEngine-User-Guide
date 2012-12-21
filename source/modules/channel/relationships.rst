@@ -39,13 +39,13 @@ Creating a Relationship
 ***********************
 
 Add a field of the "Relationship" type to the desired Channel Field
-Group at :menuselection:`Admin --> Channel Administration --> Channel Fields`.
+Group under :menuselection:`Admin --> Channel Administration --> Channel
+Fields`.
 
-On the field's settings page, choose the Channel to relate to.
-Once the field is added, if you visit the :menuselection:`Publish` page
-for the Channel you just added the Relationship field to, you'll see
-a new drop-down menu showing the titles of all Entries in the related
-Channel.
+On the field's settings page, choose the Channel to relate to. Once the
+field is added, if you visit :menuselection:`Content --> Publish` for
+the Channel you just added the Relationship field to, you'll see a new
+drop-down menu showing the titles of all Entries in the related Channel.
 
 ************************
 Related Entries Tag Pair
@@ -65,13 +65,13 @@ you'll use::
 	...
 	{/related_entries}
 
-.. important:: The above tags **must** be placed inside your
-   `{exp:channel:entries} <channel_entries.html>`_ tag.
+.. important:: The above tags **must** be placed inside
+   your :doc:`{exp:channel:entries} <channel_entries>` tag.
 
 Here is an example showing the related entries tags inside your channel
 entry tags::
 
-	{exp:channel:entries channel="news" limit="15"}
+	{exp:channel:entries channel="events" limit="15"}
 		<h2>{title}</h2>
 		{body}
 		
@@ -85,7 +85,7 @@ entry tags::
 
 As you can see, all Channel Fields of the related Entry are available
 inside the related_entries tag pair. In fact, nearly anything that is
-available in the `Channel Entries <channel_entries.html>`_
+available in the :doc:`Channel Entries <channel_entries>`
 tag can be shown as related data.
 
 .. important:: For performance reasons, all related Entry data is cached
@@ -152,8 +152,8 @@ with a certain Status while sorting and ordering as you see fit. As
 Relationships are cached in order to reduce the load on
 ExpressionEngine, these are the only parameters available at this time.
 
-.. important:: The above tags **must** be placed inside your
-   `{exp:channel:entries} <channel_entries.html>`_ tag.
+.. important:: The above tags **must** be placed inside
+   your :doc:`{exp:channel:entries} <channel_entries>` tag.
 
 A full example::
 
@@ -171,7 +171,7 @@ A full example::
 
 As you can see, all Channel Fields of the reverse related Entry are available
 inside the reverse_related_entries tag pair. In fact, nearly anything that is
-available in the `Channel Entries <channel_entries.html>`_
+available in the :doc:`Channel Entries <channel_entries>`
 tag can be shown as reverse related data.
 
 .. important:: For performance reasons, all related Entry data is cached

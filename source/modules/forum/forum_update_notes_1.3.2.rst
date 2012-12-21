@@ -414,7 +414,7 @@ to::
 
 	<script type="text/javascript" charset="utf-8">     function switchto(el)     {         if (el == 'byMemberGroup')         {             document.getElementById('byMemberGroup').style.display = "";             document.getElementById('byMemberName').style.display = "none";         }         else         {             document.getElementById('byMemberGroup').style.display = "none";             document.getElementById('byMemberName').style.display = "";                      }     }     </script>      <fieldset id="byMemberName" class="searchBox">     <legend class="searchBoxTitle">{lang:search_by_member_name} - (<a href="#" onclick="switchto('byMemberGroup'); return false;">{lang:switch_to_group}</a>)</legend>      <input type="text" class="input" maxlength="100" size="40" name="member_name" style="width:100%;" />     <div class="searchpad"><input type="checkbox" class="checkbox" name="exact_match" value="y"  /> {lang:exact_name_match}</div>     </fieldset>      <fieldset id="byMemberGroup" class="searchBox" style="display: none;">     <legend class="searchBoxTitle">{lang:search_by_member_group} - (<a href="#" onclick="switchto('byMemberName'); return false;">{lang:switch_to_name}</a>)</legend>      <select name='member_group[]' class='multiselect' size='5' style="width:100%;" multiple='multiple'>     {member_group_select_options}     </select>     </fieldset>
 
-`Return to Update Page <forum_update.html>`_
+:doc:`Return to Update Page <forum_update>`
 
-`ExpressionEngine <http://expressionengine.com/>`_ – Copyright ©
+`ExpressionEngine <http://ellislab.com/expressionengine>`_ – Copyright ©
 2002-2011 – `EllisLab, Inc. <http://ellislab.com/>`_

@@ -1,6 +1,6 @@
-####################
-Updated Sites Module
-####################
+#############
+Updated Sites
+#############
 
 .. contents::
 	:local:
@@ -13,6 +13,9 @@ Introduction
 This Updated Sites Module allows other sites to ping your site when they
 have created new content. You can then display a "recently updated
 sites" list based on the sites that send you pings.
+
+.. note:: The Updated Sites Module is available only with a `purchased <https://store.ellislab.com/>`_
+   ExpressionEngine license.
 
 The module will accept either a standard Channels.com style ping (which
 is most common) or an Extended Ping.

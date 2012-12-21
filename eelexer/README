@@ -1,4 +1,4 @@
-To install the ExpressionEngine Lexer to Pygments, run:
+To install the ExpressionEngine Lexer to Pygments, run the following (with eelexer as your working directory):
 
 	sudo python setup.py install
 

@@ -6,10 +6,11 @@ Changing the default field formatting does not affect existing entries.
 Troubleshooting
 ---------------
 
-Changing the default formatting options for a channel field at Admin >
-Channel Administration > Channel Fields will only affect future entries.
+Changing the default formatting options for a channel field at
+:menuselection:`Admin --> Channel Administration --> Channel Fields`
+will only affect future entries.
 
 If the new formatting is to be applied to existing fields as well, care
-must be taken to select "Update all existing weblog entries with your
-new formatting choice?" at the bottom of the page whenever the default
+must be taken to select **Update all existing weblog entries with your
+new formatting choice?** at the bottom of the page whenever the default
 field formatting is changed.

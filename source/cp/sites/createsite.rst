@@ -91,12 +91,13 @@ ExpressionEngine installation, being sure to switch sites so that you
 are editing the settings for your new site. It is recommended that you
 start by updating the following:
 
--  Admin > General Configuration: Update the System Preferences for the
-   new Site. At a minimum, you will change the URL to the root directory.
--  Design > Templates Manager > Edit Group: You'll want to select a
-   Template Group and edit the group preferences to set the Template
-   Group's index page as the Site's home page.
+-  :menuselection:`Admin --> General Configuration`: Update the System
+   Preferences for the new Site. At a minimum, you will change the URL
+   to the root directory.
+-  :menuselection:`Design --> Templates Manager --> Edit Group`: You'll
+   want to select a Template Group and edit the group preferences to set
+   the Template Group's index page as the Site's home page.
 
-Next: `Setup domains and sub-domains <domainsetup.html>`_
+Next: :doc:`Setup domains and sub-domains <domainsetup>`
 =========================================================
 

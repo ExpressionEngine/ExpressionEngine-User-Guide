@@ -1,6 +1,6 @@
-#######################
-Discussion Forum Module
-#######################
+################
+Discussion Forum
+################
 
 .. contents::
    :local:
@@ -19,15 +19,16 @@ applying another "theme" to it.
 
 .. important:: The Discussion Forum is an ExpressionEngine Module, and
    therefore requires that you be running ExpressionEngine. This module
-   requires the Non-Commercial or Commercial ExpressionEngine license.
+   requires a `purchased <https://store.ellislab.com/>`_
+   ExpressionEngine license.
 
 *********************************
 Installation, Updating, and Setup
 *********************************
 
--  `Installation <forum_installation.html>`_
--  `Updating to a Newer Version <forum_update.html>`_
--  `Setting Up Your Forums for the First Time <forum_setup.html>`_
+-  :doc:`Installation <forum_installation>`
+-  :doc:`Updating to a Newer Version <forum_update>`
+-  :doc:`Setting Up Your Forums for the First Time <forum_setup>`
 -  `Running your Forum from a subdomain (e.g.
    http://forums.example.com) <http://expressionengine.com/wiki/How_can_I_run_the_Discussion_Forums_from_a_subdomain_such_as_forums.example.com/>`_
 
@@ -35,20 +36,20 @@ Installation, Updating, and Setup
 Features and Management
 ***********************
 
--  `Forum Boards and Aliases <forum_boards.html>`_
--  `User Management <forum_user_management.html>`_
--  `Forum Themes <forum_themes.html>`_
--  `Forum Global Variables <forum_global_variables.html>`_
--  `Signatures, Avatars and Member Photos <signatures.html>`_
--  `Displaying Recent Forum Topics in non-forum templates <recent_forum_topics.html>`_
--  `Associating Channel Entries with Forum Topics <channel_forum.html>`_
--  `Other Features <other_features.html>`_
+-  :doc:`Forum Boards and Aliases <forum_boards>`
+-  :doc:`User Management <forum_user_management>`
+-  :doc:`Forum Themes <forum_themes>`
+-  :doc:`Forum Global Variables <forum_global_variables>`
+-  :doc:`Signatures, Avatars and Member Photos <signatures>`
+-  :doc:`Displaying Recent Forum Topics in non-forum templates <recent_forum_topics>`
+-  :doc:`Associating Channel Entries with Forum Topics <channel_forum>`
+-  :doc:`Other Features <other_features>`
 
 **********
 Change Log
 **********
 
--  `Change Log <changelog.html>`_
+-  :doc:`Change Log <changelog>`
 
 .. toctree::
 	:glob:

@@ -16,7 +16,7 @@ the same group on multiple channels.
 
 -  **Create a New Channel Field Group**: Allows you to create new
    groups.
--  `Add/Edit Custom Fields <custom_fields_edit.html>`_: Create and edit
+-  :doc:`Add/Edit Custom Fields <custom_fields_edit>`: Create and edit
    the fields that belong to a field group.
 -  **Edit Field Group**: Edit the name of the existing field group.
 -  **Delete Field Group**: Delete the field group and all the fields it
