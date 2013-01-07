@@ -2,7 +2,7 @@
 Add-Ons
 #######
 
-ExpressionEngine is the ultimate in flexibility, designed to be to be a platform
+ExpressionEngine is the ultimate in flexibility, designed to be a platform
 for developers to easily extend to enable rich functionality. Like an operating
 system, it ships with a set of "apps" to cover the basic necessities right out
 of the box. We call those apps *Add-Ons*.
