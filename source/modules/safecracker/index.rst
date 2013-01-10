@@ -38,6 +38,8 @@ community.
 Using SafeCracker
 *****************
 
+.. _sc-include-assets:
+
 Including Assets
 ----------------
 
@@ -225,6 +227,8 @@ author\_only=
 
 Only allow the author of the entry to edit the entry. Defaults to "no".
 
+.. _sc-channel-tag:
+
 channel=
 ~~~~~~~~
 
@@ -324,6 +328,8 @@ In order to allow logged out users to use the entry form, you must
 specify a member\_id which SafeCracker will use as the author of the
 entry.
 
+.. _sc-preservecheck-tag:
+
 preserve\_checkboxes=
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -349,6 +355,8 @@ require\_entry=
 
 Require an entry to edit via the entry\_id or url\_title parameters.
 Disables new entries. Defaults to "no".
+
+.. _sc-return-tag:
 
 return=
 ~~~~~~~
@@ -582,6 +590,8 @@ display the options in a loop, to give you more control over the markup.
 You have the four following sub-variables: {option\_value},
 {option\_name}, {selected} and {checked}.
 
+.. _safecracker-custom-fields:
+
 custom\_fields
 ~~~~~~~~~~~~~~
 
@@ -761,6 +771,8 @@ template. If you prefer, you can also use `inline error
 handling <#error-handling>`_ to display form validation
 errors in the context of your form.
 
+.. _sc-loggedout-tag:
+
 Allowing Guests to Post Entries
 -------------------------------
 
@@ -782,6 +794,8 @@ first take a few steps to set up.
 
    parameter of your entry form.
 
+.. _sc-filefieldtype:
+
 SafeCracker File Fieldtype
 --------------------------
 
@@ -802,6 +816,12 @@ Examples
 ********
 
 See :doc:`SafeCracker Examples <examples>` for more complete examples of SafeCracker usage.
+
+********
+Tutorial
+********
+
+See :doc:`SafeCracker Tutorial <tutorial>` for a simple front-end entry form.
 
 **********************
 Control Panel Settings
