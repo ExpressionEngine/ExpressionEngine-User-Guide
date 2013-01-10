@@ -5,8 +5,8 @@ SafeCracker Examples
 .. contents::
    :local:
 
-Basic Example Contact Form
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Basic Example
+~~~~~~~~~~~~~
 
 ::
 
@@ -16,84 +16,58 @@ Basic Example Contact Form
 	     	<input type="submit" value="Submit">
 	     {/exp:safecracker}
 
-
-Entry Form using the {custom_fields} loop
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+More Complex Example
+~~~~~~~~~~~~~~~~~~~~
 
 ::
 
     {exp:safecracker channel="channel_name" return="channel_name/edit/ENTRY_ID" entry_id="{segment_3}"}
 
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
 
-    <label for="url_title">URL Title</label>
-    <input type="text" name="url_title" id="url_title" value="{url_title}" maxlength="75" size="50">
+        <label for="url_title">URL Title</label>
+        <input type="text" name="url_title" id="url_title" value="{url_title}" maxlength="75" size="50">
 
-    {custom_fields}
-      <label for="{field_name}">{if required}* {/if}{field_label}</label>
-      {field_instructions}
-      {formatting_buttons}
-      {if error}
-        <p class="error">{error}</p>
-      {/if}
-
-      {if text}
-      <input type="text" dir="{text_direction}" id="{field_name}" name="{field_name}" value="{field_data}" maxlength="{maxlength}" size="50">
-      {/if}
-
-      {if select}
-        <select id="{field_name}" name="{field_name}">
-        {options}<option value="{option_value}"{selected}>{option_name}</option>{/options}
+        <select name="my_field_name" id="my_field_name">
+	        {options:my_field_name}
+	            <option value="{option_value}"{selected}>{option_name}</option>
+	        {/options:my_field_name}
         </select>
-      {/if}
 
-      {if date}
-        <input type="text" id="{field_name}" name="{field_name}" value="{field_data}" size="50">
-      {/if}
+        {status_menu}
+            <label for="status">Status</label>
+            <select name="status" id="status">
+	            {select_options}
+            </select>
+        {/status_menu}
 
-      {if checkbox}
-        {options}
-          <label class="checkbox">{option_value}
-          <input type="checkbox" id="{field_name}" name="{field_name}[]" value="{option_value}"{checked}>
-          </label>
-        {/options}
-      {/if}
+        <label for="entry_date">Date</label>
+        <input type="text" name="entry_date" id="entry_date" value="{entry_date}" maxlength="23" size="25">
 
-      {if radio}
-        {options}
-          <label class="checkbox">{option_value}
-            <input type="radio" id="{field_name}" name="{field_name}" value="{option_value}"{checked}>
-          </label>
-        {/options}
-      {/if}
+        <label for="expiration_date">Expiration Date</label>
+        <input type="text" name="expiration_date" id="expiration_date" value="{expiration_date}" maxlength="23" size="25">
 
-      {if safecracker_file}
-        {display_field}
-      {/if}
+        <label for="comment_expiration_date">Comment Expiration Date</label>
+        <input type="text" name="comment_expiration_date" id="comment_expiration_date" value="{comment_expiration_date}" maxlength="23" size="25">
 
-      {if relationship}
-        <select id="{field_name}" name="{field_name}">
-          {options}
-            <option value="{option_value}"{selected}>{option_name}</option>
-          {/options}
-        </select>
-      {/if}
+        <label class="checkbox"><input type="checkbox" name="sticky" value="y"  {sticky}> Make Entry Sticky</label>
+        <label class="checkbox"><input type="checkbox" name="allow_comments" value="y" {allow_comments}> Allow Comments</label>
 
-      {if multiselect}
-        <select id="{field_name}" name="{field_name}[]" multiple="multiple">
-          {options}
-            <option value="{option_value}"{selected}>{option_name}</option>
-          {/options}
-        </select>
-      {/if}
+        {category_menu}
+            <label for="categories">Categories</label>
+            <select name="category[]" id="categories" size="4" multiple="multiple">
+	            {select_options}
+            </select>
+        {/category_menu}
+        
+        {if captcha}
+            <label for="captcha">Please enter the word you see in the image below:</label>
+            {captcha}
+            <input type="text" name="captcha" value="{captcha_word}" maxlength="20">
+        {/if}
 
-      {if textarea}
-        <textarea id="{field_name}" name="{field_name}" dir="{text_direction}" rows="{rows}">{field_data}</textarea>
-      {/if}
-
-      {/custom_fields}
-      <input type="submit" name="submit" value="Submit">
+        <input type="submit" name="submit" value="Submit">
     {/exp:safecracker}
 
 Entry Form without using the {custom\_fields} loop
@@ -125,49 +99,45 @@ Entry Form without using the {custom\_fields} loop
 		<input type="submit" name="submit" value="Submit">
 	{/exp:safecracker}
 
-
-
-
-
-
-
 AJAX-driven Entry Form
 ~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
-  <html>
-  <head>
-  {exp:jquery:script_tag}
-  <!--using the jQuery Form plugin http://jquery.malsup.com/form/-->
-  <script src="/js/jquery.form.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-    $('#publishForm').ajaxForm({
-    dataType: 'json',
-      success: function(data) {
-        if (data.success) {
-          alert('You successfully added a new entry with entry_id '+data.entry_id)
-            } else {
-            alert('Failed with the following errors: '+data.errors.join(', '));
-            }
-          } 
-        });
-      });
-  </script>
-  </head>
-   <body>
-   {exp:safecracker channel="products" return="safecracker/ENTRY_ID" entry_id="{segment_2}" json="yes"}
-   <label for="title">Title</label>
-   <input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+	<html>
+		<head>
+			{exp:jquery:script_tag}
+			
+			<!--using the jQuery Form plugin http://jquery.malsup.com/form/-->
+			<script src="/js/jquery.form.js" type="text/javascript"></script>
+			
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$('#publishForm').ajaxForm({
+						dataType: 'json',
+						success: function(data) {
+							if (data.success) {
+								alert('You successfully added a new entry with entry_id '+data.entry_id)
+							} else {
+								alert('Failed with the following errors: '+data.errors.join(', '));
+							}
+						}
+					});
+				});
+			</script>
+		</head>
+		<body>
+			{exp:safecracker channel="products" return="safecracker/ENTRY_ID" entry_id="{segment_2}" json="yes"}
+				<label for="title">Title</label>
+				<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
 
-   <label for="url_title">URL Title</label>
-   <input type="text" name="url_title" id="url_title" value="{url_title}" maxlength="75" size="50">
+				<label for="url_title">URL Title</label>
+				<input type="text" name="url_title" id="url_title" value="{url_title}" maxlength="75" size="50">
 
-   <label for="entry_date">Date</label>
-   <input type="text" name="entry_date" id="entry_date" value="{entry_date}" maxlength="23" size="25">
+				<label for="entry_date">Date</label>
+				<input type="text" name="entry_date" id="entry_date" value="{entry_date}" maxlength="23" size="25">
 
-   <input type="submit" name="submit" value="Submit">
-   {/exp:safecracker}
-   </body>
-   </html>
+				<input type="submit" name="submit" value="Submit">
+			{/exp:safecracker}
+		</body>
+	</html>

@@ -33,8 +33,6 @@ can create a new destination, or you can click the Edit icon to edit an
 existing destination. Either of these options will take you to the
 following page:
 
-.. _file-create-upload-destination:
-
 Create/Edit Upload Destination
 ------------------------------
 

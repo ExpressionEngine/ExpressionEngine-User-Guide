@@ -1972,8 +1972,6 @@ url\_or\_email\_as\_link
 This is similar to the above variable. The difference is that the text
 for the link will be either the URL or the email address.
 
-.. _channel-entries-url_title:
-
 url\_title
 ----------
 
