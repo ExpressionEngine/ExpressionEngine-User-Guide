@@ -1060,6 +1060,8 @@ Or exclude statuses using "not"
 ::
 
 	status="not submitted|processing|closed"
+	
+If no status parameter is specified, only open status entries will be returned.	
 
 stop\_before=
 -------------
