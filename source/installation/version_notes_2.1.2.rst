@@ -62,7 +62,7 @@ Edits are now run through the Secure Forms check (if enabled). If Secure
 Forms is enabled, a proper security hash must be sent in order for the
 edit to be accepted. This also required a change in the response. All
 responses are now arrays. Your JavaScript will need to be updated in
-response to these changes. Please see `Comment
+response to these changes. Please see :ref:`Comment
 Editing <comment-editing>` for a current
 example.
 

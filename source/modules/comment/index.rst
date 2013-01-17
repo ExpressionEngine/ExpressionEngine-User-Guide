@@ -349,7 +349,7 @@ can\_moderate\_comment
 
 	{if can_moderate_comment}
 
-This variable will be used in a conditional to allow `comment
+This variable will be used in a conditional to allow :ref:`comment
 editing <comment-editing>`. It indicates whether a member has
 permission to edit a given comment AND/OR close that comment.
 
@@ -380,7 +380,7 @@ comment\_stripped
 	{comment_stripped}
 
 The body of the comment without any typographical processing and with
-ExpressionEngine tags encoded. This tag is for use in `comment
+ExpressionEngine tags encoded. This tag is for use in :ref:`comment
 editing <comment-editing>`.
 
 comment\_auto\_path
@@ -478,7 +478,7 @@ editable
 
 	{if editable}Show Edit{/if}
 
-This variable will be used in a conditional to allow `comment
+This variable will be used in a conditional to allow :ref:`comment
 editing <comment-editing>`. It indicates whether a member has
 permission to edit a given comment.
 
