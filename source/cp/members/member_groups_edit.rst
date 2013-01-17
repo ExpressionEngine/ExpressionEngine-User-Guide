@@ -392,7 +392,7 @@ via the control panel for channel entries authored by someone else.
 Can edit comments in their own channel entries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Determines whether a member of the group is allowed to **view comments**
+Determines whether a member of the group is allowed to **edit comments**
 via the control panel for their own channel entries.
 
 Can delete comments in their own channel entries
