@@ -480,7 +480,7 @@ editable
 
 This variable will be used in a conditional to allow :ref:`comment
 editing <comment-editing>`. It indicates whether a member has
-permission to edit a given comment.
+:ref:`permission to edit a given comment <comment-admin-privs>`.
 
 edit\_date
 ----------

@@ -374,6 +374,8 @@ assign a channel or combinations of channels to the group. Only
 channel(s) that are assigned to the group are included in the Channel
 Posting and Editing Privileges above.
 
+.. _comment-admin-privs:
+
 Comment Administration Privileges
 ---------------------------------
 
