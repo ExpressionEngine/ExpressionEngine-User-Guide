@@ -73,7 +73,7 @@ paginate=
 
 ::
 
-	paginate="top" paginate="bottom"  paginate="both"
+	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"
 
 This parameter determines where the pagination code will appear for your
 channel entries or comments:
@@ -84,6 +84,8 @@ channel entries or comments:
    list of entries.
 #. **both**: The navigation text and links will appear both above and
    below your list of entries.
+#. **inline**: The navigation text and links will appear within the list
+   of entries for each entry.
 
 If no parameter is specified, the navigation block will default to the
 "bottom" behavior.
