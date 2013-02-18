@@ -166,7 +166,6 @@ Available Member Data Tags
 
 -  <bio>
 -  <cp\_theme>
--  <daylight\_savings>
 -  <display\_avatars>
 -  <display\_signatures>
 -  <email>
