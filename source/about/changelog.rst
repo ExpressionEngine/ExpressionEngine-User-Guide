@@ -1939,7 +1939,7 @@ General Changes:
    the IP records directly from the ip2nations SQL file.
 -  Added secure forms check to the frontend Comment Editor. See the
    `Version Notes </installation/version_notes_2.1.2.html#comments>`_ and
-   update your `JavaScript <comment-editing>` if needed.
+   update your :ref:`JavaScript <comment-editing>` if needed.
 -  Added a setting to group preferences to disallow editing of html
    formatting buttons.
 -  Added to the default message text for forwarded private messages to

@@ -71,7 +71,7 @@ $(document).ready(function() {
 	// for the general/languages.rst page
 	$('.github-language-repos').githubRepositories(function(repos) {
 		
-		var ignoreLanguages = ['English', 'Hebrew'],
+		var ignoreLanguages = ['English'],
 			reLanguage = new RegExp('^EE-Language-');
 
 		var isLangRepo = function(el) { return reLanguage.test(el.name); },
