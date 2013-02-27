@@ -15,22 +15,31 @@ The config.php file found at system/expressionengine/config/config.php allows yo
 
 
 
-[admin_session_type]
+admin_session_type
+------------------
+This configuration will set the session type of the control panel.
+
++-----------------------+-----------------------------------------------------------------------+
+|Parameter              |Value                                                                  |
++=======================+=======================================================================+
+|``c``                  |Cookies                                                                |
+|                       |                                                                       |
++-----------------------+-----------------------------------------------------------------------+
+|``s``                  |Session                                                                |
+|                       |                                                                       |
++-----------------------+-----------------------------------------------------------------------+
+|``cs``                 |Cookies and Sessions                                                   |
+|                       |                                                                       |
++-----------------------+-----------------------------------------------------------------------+
+
+Example ::
+
+
+[admin_session_type] => cs
+
+
+allow_avatar_uploads
 --------------------
-This configuration will set the session type of the control panel. C stands for Cookies, the S Stands for Session and CS will set the session type to both Cookies and Sessions.
-
-Parameters
-~~~~~~~~~~
-
-::
-
-
-=> c
-=> s
-=> cs
-
-[allow_avatar_uploads]
-----------------------
 This configuration will either allow or disallow avatar uploads. This is set to y for yes or n for no.
 
 Parameters
@@ -41,8 +50,8 @@ Parameters
 => y
 => n
 
-[allow_dictionary_pw]
-----------------------
+allow_dictionary_pw
+-------------------
 This configuration will either allow or disallow avatar uploads. This is set to y for yes or n for no.
 
 Parameters
