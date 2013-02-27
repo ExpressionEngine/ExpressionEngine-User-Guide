@@ -19,53 +19,68 @@ admin_session_type
 ------------------
 This configuration will set the session type of the control panel.
 
-+-----------------------+-----------------------------------------------------------------------+
-|Parameter              |Value                                                                  |
-+=======================+=======================================================================+
-|``c``                  |Cookies                                                                |
-|                       |                                                                       |
-+-----------------------+-----------------------------------------------------------------------+
-|``s``                  |Session                                                                |
-|                       |                                                                       |
-+-----------------------+-----------------------------------------------------------------------+
-|``cs``                 |Cookies and Sessions                                                   |
-|                       |                                                                       |
-+-----------------------+-----------------------------------------------------------------------+
++---------------------------+-------------------------------------------------------+
+|Possible Values            |Expected Behavior                                      |
++===========================+=======================================================+
+|``c``                      |Sets the Control Panel to use Cookies                  |
+|                           |                                                       |
++---------------------------+-------------------------------------------------------+
+|``s``                      |Sets the Control Panel to use Session                  |
+|                           |                                                       |
++---------------------------+-------------------------------------------------------+
+|``cs``                     |Sets the Control Panel to use Cookies and Sessions     |
+|                           |                                                       |
++---------------------------+-------------------------------------------------------+
 
 Example ::
 
 
-[admin_session_type] => cs
+$config['admin_session_type'] = 's'; 
 
 
 allow_avatar_uploads
 --------------------
 This configuration will either allow or disallow avatar uploads. This is set to y for yes or n for no.
 
-Parameters
-~~~~~~~~~~
++-----------------------+-----------------------------------------------------------+
+|Possible Values        |Expected Behavior                                          |
++=======================+===========================================================+
+|``y``                  |Yes, allow member to upload their own avatar.              |
+|                       |                                                           |
++-----------------------+-----------------------------------------------------------+
+|``n``                  |No, do not allow member to upload their own avatar.        |
+|                       |                                                           |
++-----------------------+-----------------------------------------------------------+
 
-::
+Example ::
 
-=> y
-=> n
+
+$config['allow_avatar_uploads'] = 'y'; 
+
 
 allow_dictionary_pw
 -------------------
-This configuration will either allow or disallow avatar uploads. This is set to y for yes or n for no.
+This configuration will allow or disallow members to enter passwords that are simple dictionary words.
 
-Parameters
-~~~~~~~~~~
++-----------------------+-----------------------------------------------------------+
+|Possible Values        |Expected Behavior                                          |
++=======================+===========================================================+
+|``y``                  |Yes, allow user to members dictionary based passwords      |
+|                       |                                                           |
++-----------------------+-----------------------------------------------------------+
+|``n``                  |No, do not allow members to use dictionary based passwords.|
+|                       |                                                           |
++-----------------------+-----------------------------------------------------------+
 
-::
-
-=> y
-=> n
+Example ::
 
 
-::
+$config['allow_dictionary_pw'] = 'y'; 
 
-    
+  
+   ::
+
+
     [allow_extensions] 
     [allow_member_localization]
     [allow_member_registration]
