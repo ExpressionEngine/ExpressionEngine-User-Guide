@@ -130,6 +130,8 @@ containing at least one uppercase character, one lowercase character,
 and one numeric character. Passwords that follow this basic formula are
 much more difficult to guess.
 
+.. _dict-passwds-label:
+
 Allow Dictionary Words as Passwords
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

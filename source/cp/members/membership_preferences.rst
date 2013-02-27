@@ -197,6 +197,8 @@ This determines whether avatars are enabled for your site. If enabled,
 then users will be able to associate an image with their account that
 you can optionally display with entries, comments, and forum posts.
 
+.. _avatar-upload-label:
+
 Allow members to upload their own avatars?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -4,8 +4,8 @@ config.php Settings
 .. contents::
     :local:
 
-Introduction
-------------
+
+
 The config.php file found at system/expressionengine/config/config.php allows you to override settings in all other locations. Configuration settings are honored as follows.
 
 #. Settings saved in the Database are used.
@@ -17,22 +17,22 @@ The config.php file found at system/expressionengine/config/config.php allows yo
 
 admin_session_type
 ------------------
-This configuration will set the session type of the control panel.
+Sets the session type of the control panel.
 
 +---------------------------+-------------------------------------------------------+
-|Possible Values            |Expected Behavior                                      |
+|Values                     |Behavior                                               |
 +===========================+=======================================================+
-|``c``                      |Sets the Control Panel to use Cookies                  |
-|                           |                                                       |
+|``c``                      |Sets the Control Panel to use                          |
+|                           |:doc:`cookies </cp/admin/security_settings>` only      |
 +---------------------------+-------------------------------------------------------+
-|``s``                      |Sets the Control Panel to use Session                  |
-|                           |                                                       |
+|``s``                      |Sets the Control Panel to use                          |
+|                           |:doc:`Session ID </cp/admin/security_settings>` only   |
 +---------------------------+-------------------------------------------------------+
 |``cs``                     |Sets the Control Panel to use Cookies and Sessions     |
 |                           |                                                       |
 +---------------------------+-------------------------------------------------------+
 
-Example ::
+Example: ::
 
 
 $config['admin_session_type'] = 's'; 
@@ -40,19 +40,19 @@ $config['admin_session_type'] = 's';
 
 allow_avatar_uploads
 --------------------
-This configuration will either allow or disallow avatar uploads. This is set to y for yes or n for no.
+Allows or disallows avatar uploads.
 
 +-----------------------+-----------------------------------------------------------+
-|Possible Values        |Expected Behavior                                          |
+|Values                 |Behavior                                                   |
 +=======================+===========================================================+
-|``y``                  |Yes, allow member to upload their own avatar.              |
-|                       |                                                           |
+|``y``                  |Yes, allow member to upload their own                      |
+|                       |:ref:`avatar <avatar-upload-label>`                        |
 +-----------------------+-----------------------------------------------------------+
 |``n``                  |No, do not allow member to upload their own avatar.        |
 |                       |                                                           |
 +-----------------------+-----------------------------------------------------------+
 
-Example ::
+Example: ::
 
 
 $config['allow_avatar_uploads'] = 'y'; 
@@ -60,19 +60,19 @@ $config['allow_avatar_uploads'] = 'y';
 
 allow_dictionary_pw
 -------------------
-This configuration will allow or disallow members to enter passwords that are simple dictionary words.
+Allows or disallows members to use passwords that are based on dictionary words.
 
 +-----------------------+-----------------------------------------------------------+
-|Possible Values        |Expected Behavior                                          |
+|Values                 |Behavior                                                   |
 +=======================+===========================================================+
-|``y``                  |Yes, allow user to members dictionary based passwords      |
-|                       |                                                           |
+|``y``                  |Yes, allow user to members                                 |
+|                       |:ref:`dictionary based passwords <dict-passwds-label>`     |
 +-----------------------+-----------------------------------------------------------+
 |``n``                  |No, do not allow members to use dictionary based passwords.|
 |                       |                                                           |
 +-----------------------+-----------------------------------------------------------+
 
-Example ::
+Example: ::
 
 
 $config['allow_dictionary_pw'] = 'y'; 
