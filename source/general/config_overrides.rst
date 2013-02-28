@@ -32,15 +32,23 @@ Sets the session type of the control panel.
 |                           |                                                       |
 +---------------------------+-------------------------------------------------------+
 
-Example: ::
 
++-----------------------+---------------------------------------------------------------------------+
+|Works in               |Notes                                                                      |
++=======================+===========================================================================+
+|CP                     |:doc:`Yes </cp/admin/security_settings>`  -                                |
+|                       |:menuselection:`Design --> Security And Privacy --> Security And Sessions` | 
++-----------------------+---------------------------------------------------------------------------+
+|index.php              |N/A                                                                        |
+|                       |                                                                           |
++-----------------------+---------------------------------------------------------------------------+
+|admin.php              |No                                                                         |
+|                       |                                                                           |
++-----------------------+---------------------------------------------------------------------------+
+|config.php             |Usage: ``$config['admin_session_type'] = 's';``                            |
+|                       |                                                                           |
++-----------------------+---------------------------------------------------------------------------+
 
-$config['admin_session_type'] = 's'; 
-
-
-This override setting overrides :doc:`Control Panel Session Type </cp/admin/security_settings>` and is set under :menuselection:`Design --> Security And Privacy --> Security And Sessions` in the ExpressionEngine Control Panel.
-
-This override setting does not work when used in admin.php, it may be used in config.php only.
 
 
 allow_avatar_uploads
