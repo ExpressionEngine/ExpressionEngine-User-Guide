@@ -75,6 +75,8 @@ As the name suggests, this setting determines whether or not members are
 allowed to change their "username" after they register. Members will
 always be able to change their "screen name" if they choose to use one.
 
+.. _allow-multi-logins-label:
+
 Allow Multiple Log-ins From a Single Account
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

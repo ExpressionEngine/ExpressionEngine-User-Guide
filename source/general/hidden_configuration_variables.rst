@@ -10,6 +10,8 @@ options can be found in :doc:`Handling Extreme Traffic with ExpressionEngine
 
 .. contents::
 	:local:
+
+.. _allow-txtarea-tabs-label:	
 	
 allow_textarea_tabs
 ~~~~~~~~~~~~~~~~~~~

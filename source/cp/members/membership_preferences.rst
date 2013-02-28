@@ -11,6 +11,8 @@ set all of your membership-related preferences.
 General Configuration
 ---------------------
 
+.. _allow-member-register-label:
+
 Allow New Member Registrations?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -47,6 +49,8 @@ must indicate that they agree to abide by these terms before they can
 register. You may edit the terms of service within the registration form
 template, located at :menuselection:`Design --> Themes --> Member
 Profile Templates --> Default --> Registration Form`.
+
+.. _allow-member-localization-label:
 
 Allow members to set their own localization preferences?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
