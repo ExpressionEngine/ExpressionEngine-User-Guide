@@ -1,5 +1,5 @@
-config.php Settings
-=====================
+File-Based System Configuration
+===============================
 
 .. contents::
     :local:
@@ -36,6 +36,11 @@ Example: ::
 
 
 $config['admin_session_type'] = 's'; 
+
+
+This override setting overrides :doc:`Control Panel Session Type </cp/admin/security_settings>` and is set under :menuselection:`Design --> Security And Privacy --> Security And Sessions` in the ExpressionEngine Control Panel.
+
+This override setting does not work when used in admin.php, it may be used in config.php only.
 
 
 allow_avatar_uploads
