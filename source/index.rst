@@ -69,7 +69,7 @@ Beyond the Basics
 - :doc:`general/add-ons`
 - :doc:`cp/sites/index`
 - :doc:`modules/forum/index`
-- :doc:`general/config_overrides`
+- :doc:`general/file-based_system_configuration`
 
 
 **************************************
