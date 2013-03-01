@@ -1,18 +1,63 @@
 File-Based System Configuration
-===============================
+*******************************
+
+Every time ExpressionEngine runs, its system configuration is determined by
+settings stored in several resources:
+
+When settings are saved in the Control Panel, ExpressionEngine stores them in
+the **database**. Settings from the database are loaded first.
+
+The **site index file** is the ``index.php`` file found in the web root of the
+ExpressionEngine installation. This file acts like the gateway to the front-end
+of the site. Since all web requests for a site's front-end will pass through the
+site index file, there are a *limited selection* of configuration variables you
+can include in this file to alter ExpressionEngine's configuration.
+(Configuration variables that can be used in ``index.php`` or ``admin.php`` are
+noted below.) Keep in mind that any configuration variables set in the site
+index file *only* affect the system's behavior for front-end pages. (Even if you
+have :doc:`removed index.php from your site's URLs</urls/remove_index.php>`, all
+front-end web requests are still handled by the site index file.)
+
+The **CP index file** is the ``admin.php`` file also found in the installation's
+web root. The CP index file is similar to the site index file except that it
+acts as the gateway for all web requests to the Control Panel. And similarly,
+any configuration variables set in the CP index file *only* affect the system's
+behavior for pages accessed through the Control Panel (e.g.
+*http://example.com/admin.php*).
+
+ExpressionEngine's **main configuration file**, found at
+``system/expressionengine/config/config.php``, is loaded every time the system
+is run, meaning that configuration variables set in ``config.php`` always alter
+the system's configuration. Since ``config.php`` is loaded after all other
+configuration resources, it also means any configuration variables set in this
+file will override settings loaded from all other resources. For this reason,
+ExpressionEngine developers have adopted the shorthand "config overrides" to
+refer to file-based system configuration variables.
+
+For serving up the front-end, ExpressionEngine loads configuration resources in
+this order:
+
+#. Settings stored in the Database are loaded.
+#. Configuration variables in the site index file are loaded and override
+   settings loaded from the database.
+#. Configuration variables in ``config.php`` are loaded and override any
+   settings loaded from the database or the site index file.
+
+For serving Control Panel pages, ExpressionEngine loads configuration resources
+in this order:
+
+#. Settings stored in the Database are loaded.
+#. Configuration variables in the CP index file are loaded and override settings
+   loaded from the database.
+#. Configuration variables in ``config.php`` are loaded and override any
+   settings loaded from the database or the CP index file.
+
+
+Configuration Variables
+=======================
 
 .. contents::
     :local:
-
-
-
-The config.php file found at system/expressionengine/config/config.php allows you to override settings in all other locations. Configuration settings are honored as follows.
-
-#. Settings saved in the Database are used.
-#. Settings in index.php effect the front of site and override the settings in the database.
-#. Settings in admin.php and system/index.php effect the Control Panel and override settings in the database.
-#. Settings in config.php override everything else. If the configuration is set in this file, it will take precedence over items 1-3.
-
 
 
 admin_session_type
