@@ -292,6 +292,8 @@ photo you'll enter 2048.
 Signature Preferences
 ---------------------
 
+.. _allow-member-sigs-label:
+
 Allow Users to have Signatures?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

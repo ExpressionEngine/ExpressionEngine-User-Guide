@@ -68,6 +68,8 @@ This option rewrites links submitted in comments so they first point to
 an intermediary redirect page. This helps deter comment spam by
 preventing linked sites from gaining a page rank advantage.
 
+.. _allow-member-username-label:
+
 Allow members to change their username
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

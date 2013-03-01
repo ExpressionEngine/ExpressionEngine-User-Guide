@@ -33,23 +33,13 @@ Sets the session type of the control panel.
 +---------------------------+-------------------------------------------------------+
 
 
-+-----------------------+-------------------------------------------------------------------------------+
-|Available in           |Notes                                                                          |
-+=======================+===============================================================================+
-|Control Panel          |:doc:`Admin Session Type </cp/admin/security_settings>` at                     |
-|                       |:menuselection:`Design --> Security And Privacy --> Security And Sessions`     | 
-+-----------------------+-------------------------------------------------------------------------------+
-|index.php              |N/A                                                                            |
-|                       |                                                                               |
-+-----------------------+-------------------------------------------------------------------------------+
-|admin.php              |No effect                                                                      |
-|                       |                                                                               |
-+-----------------------+-------------------------------------------------------------------------------+
-|config.php             |Usage: ``$config['admin_session_type'] = 's';``                                |
-|                       |                                                                               |
-+-----------------------+-------------------------------------------------------------------------------+
+Example: ::
 
 
+ $config['admin_session_type'] = 's';
+
+
+May be set in the Control Panel as well by navigating to :menuselection:`Design --> Security And Privacy --> Security And Sessions` and changing the value for :doc:`Admin Session Type </cp/admin/security_settings>`
 
 allow_avatar_uploads
 --------------------
@@ -65,23 +55,13 @@ Allows or disallows avatar uploads.
 |                       |                                                           |
 +-----------------------+-----------------------------------------------------------+
 
+Example: ::
 
-+-----------------------+----------------------------------------------------------------------------------+
-|Available in           |Notes                                                                             |
-+=======================+==================================================================================+
-|Control Panel          |:ref:`Allow members to upload their own avatars?<avatar-upload-label>`            |
-|                       |at :menuselection:`Members --> Preferences`                                       | 
-+-----------------------+----------------------------------------------------------------------------------+
-|index.php              |N/A                                                                               |
-|                       |                                                                                  |
-+-----------------------+----------------------------------------------------------------------------------+
-|admin.php              |N/A                                                                               |
-|                       |                                                                                  |
-+-----------------------+----------------------------------------------------------------------------------+
-|config.php             |Usage: ``$config['allow_avatar_uploads'] = 'y';``                                 |
-|                       |                                                                                  |
-+-----------------------+----------------------------------------------------------------------------------+
 
+$config['allow_avatar_uploads'] = 'y';
+
+
+May be set in the Control Panel as well by navigating to :menuselection:`Members --> Preferences` and changing the value for :ref:`Allow members to upload their own avatars?<avatar-upload-label>`
 
 
 allow_dictionary_pw
@@ -98,22 +78,13 @@ Allows or disallows members to use passwords that are based on dictionary words.
 |                       |                                                           |
 +-----------------------+-----------------------------------------------------------+
 
+Example: ::
 
-+-----------------------+----------------------------------------------------------------------------------+
-|Available in           |Notes                                                                             |
-+=======================+==================================================================================+
-|Control Panel          |:ref:`Allow Dictionary Words as Passwords?<dict-passwds-label>`                   |
-|                       |:menuselection:`Design --> Security And Privacy --> Security And Sessions`        | 
-+-----------------------+----------------------------------------------------------------------------------+
-|index.php              |N/A                                                                               |
-|                       |                                                                                  |
-+-----------------------+----------------------------------------------------------------------------------+
-|admin.php              |No effect                                                                         |
-|                       |                                                                                  |
-+-----------------------+----------------------------------------------------------------------------------+
-|config.php             |Usage: ``$config['allow_dictionary_pw'] = 'y';``                                  |
-|                       |                                                                                  |
-+-----------------------+----------------------------------------------------------------------------------+
+
+$config['allow_dictionary_pw'] = 'y';
+
+
+May be set in the Control Panel as well by navigating to :menuselection:`Design --> Security And Privacy --> Security And Sessions`   and changing the value for :ref:`Allow Dictionary Words as Passwords?<dict-passwds-label>` 
 
 
 allow_extensions
@@ -128,21 +99,10 @@ Enables or disables extensions in the Control Panel.
 |``n``                  |Disable extensions.                                        |
 +-----------------------+-----------------------------------------------------------+
 
+Example: ::
 
-+-----------------------+----------------------------------------------------------------------------------+
-|Available in           |Notes                                                                             |
-+=======================+==================================================================================+
-|Control Panel          |N/A                                                                               |
-+-----------------------+----------------------------------------------------------------------------------+
-|index.php              |No Effect                                                                         |
-|                       |                                                                                  |
-+-----------------------+----------------------------------------------------------------------------------+
-|admin.php              |No effect                                                                         |
-|                       |                                                                                  |
-+-----------------------+----------------------------------------------------------------------------------+
-|config.php             |Usage: ``$config['allow_extensions'] = 'y';``                                     |
-|                       |                                                                                  |
-+-----------------------+----------------------------------------------------------------------------------+
+
+$config['allow_extensions'] = 'y';
 
 
 allow_member_localization
@@ -157,22 +117,13 @@ Allows members to set their own localization. If set to "no" all dates and times
 |``n``                  |Do not allow members to set their own localization         |
 +-----------------------+-----------------------------------------------------------+
 
+Example: ::
 
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|Available in           |Notes                                                                                             |
-+=======================+==================================================================================================+
-|Control Panel          |:ref:`Allow members to set their own localization preferences? <allow-member-localization-label>` |
-|                       |:menuselection:`Members --> Preferences`                                                          |
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|index.php              |No effect                                                                                         |
-|                       |                                                                                                  |
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|admin.php              |No effect                                                                                         |
-|                       |                                                                                                  |
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|config.php             |Usage: ``$config['allow_member_localization'] = 'y';``                                            |
-|                       |                                                                                                  |
-+-----------------------+--------------------------------------------------------------------------------------------------+
+
+$config['allow_member_localization'] = 'y';
+
+
+May be set in the Control Panel as well by navigating to :menuselection:`Members --> Preferences` and changing the value for :ref:`Allow members to set their own localization preferences? <allow-member-localization-label>`
 
 
 allow_member_registration
@@ -187,23 +138,13 @@ Allow or disallow new member registration on your ExpressionEngine website.
 |``n``                  |Do not allow members to register                           |
 +-----------------------+-----------------------------------------------------------+
 
+Example: ::
 
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|Available in           |Notes                                                                                             |
-+=======================+==================================================================================================+
-|Control Panel          |:ref:`Allow New Member Registrations? <allow-member-register-label>`                              |
-|                       |:menuselection:`Members --> Preferences`                                                          |
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|index.php              |No effect                                                                                         |
-|                       |                                                                                                  |
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|admin.php              |No effect                                                                                         |
-|                       |                                                                                                  |
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|config.php             |Usage: ``$config['allow_member_registration'] = 'y';``                                            |
-|                       |                                                                                                  |
-+-----------------------+--------------------------------------------------------------------------------------------------+
 
+$config['allow_member_registration'] = 'y';
+
+
+May be set in the Control Panel as well by navigating to :menuselection:`Members --> Preferences` and changing the value for :ref:`Allow New Member Registrations? <allow-member-register-label>`
 
 allow_multi_logins
 -------------------------
@@ -217,22 +158,13 @@ Determines whether more than one person can simultaneously access the system usi
 |``n``                  |Do not allow members to register                           |
 +-----------------------+-----------------------------------------------------------+
 
+Example: ::
 
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|Available in           |Notes                                                                                             |
-+=======================+==================================================================================================+
-|Control Panel          |:ref:`Allow multiple log-ins from a single account? <allow-multi-logins-label>`                   |
-|                       |:menuselection:`Design --> Security And Privacy --> Security And Sessions`                        |
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|index.php              |No effect                                                                                         |
-|                       |                                                                                                  |
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|admin.php              |No effect                                                                                         |
-|                       |                                                                                                  |
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|config.php             |Usage: ``$config['allow_multi_logins'] = 'y';``                                                   |
-|                       |                                                                                                  |
-+-----------------------+--------------------------------------------------------------------------------------------------+
+
+$config['allow_multi_logins'] = 'y';
+
+
+May be set in the Control Panel as well by navigating to :menuselection:`Design --> Security And Privacy --> Security And Sessions` and changing the value for :ref:`Allow multiple log-ins from a single account? <allow-multi-logins-label>`
 
 
 allow_textarea_tabs
@@ -247,30 +179,60 @@ If not set the template editor and publish write mode allow for tabular input. S
 |``n``                  |Do not allow tabs in textareaas                            |
 +-----------------------+-----------------------------------------------------------+
 
+Example: ::
 
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|Available in           |Notes                                                                                             |
-+=======================+==================================================================================================+
-|Control Panel          |This is a :ref:`Hidden Config Variable <allow-txtarea-tabs-label>`                                |
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|index.php              |No effect                                                                                         |
-|                       |                                                                                                  |
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|admin.php              |No effect                                                                                         |
-|                       |                                                                                                  |
-+-----------------------+--------------------------------------------------------------------------------------------------+
-|config.php             |Usage: ``$config['allow_textarea_tabs'] = 'y';``                                                  |
-|                       |                                                                                                  |
-+-----------------------+--------------------------------------------------------------------------------------------------+
+
+$config['allow_textarea_tabs'] = 'y';
+
+
+This is a :ref:`Hidden Config Variable <allow-txtarea-tabs-label>`
+
+allow_signatures
+-------------------------
+Allow or disallow members to have their own signatures.
+
++-----------------------+-----------------------------------------------------------+
+|Values                 |Behavior                                                   |
++=======================+===========================================================+
+|``y``                  |Allow members to have their own signature                  |
++-----------------------+-----------------------------------------------------------+
+|``n``                  |Do not allow members to have their own signature           |
++-----------------------+-----------------------------------------------------------+
+
+Example: ::
+
+
+$config['allow_signatures'] = 'y';
+
+
+May be set in the Control Panel as well by navigating to :menuselection:`Members --> Preferences` and changing the value for :ref:`Allow Users to have Signatures? <allow-member-sigs-label>`
+
+allow_username_change
+-------------------------
+Allow or disallow members to change their username.
+
++-----------------------+-----------------------------------------------------------+
+|Values                 |Behavior                                                   |
++=======================+===========================================================+
+|``y``                  |Allow members to change their username                     |
++-----------------------+-----------------------------------------------------------+
+|``n``                  |Do not allow members to change their username              |
++-----------------------+-----------------------------------------------------------+
+
+Example: ::
+
+
+$config['allow_username_change'] = 'y';
+
+
+May be set in the Control Panel as well by navigating to :menuselection:`Design --> Security And Privacy --> Security And Sessions` and changing the value for :ref:`Allow members to change their username? <allow-member-username-label>`
+
 
   
    ::
 
 
 
-
-    [allow_signatures]
-    [allow_username_change]
     [app_version]
     [auto_assign_cat_parents]
     [auto_convert_high_ascii]
