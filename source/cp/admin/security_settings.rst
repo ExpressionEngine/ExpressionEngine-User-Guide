@@ -9,6 +9,8 @@ This section of the Control Panel allows you to define the basic
 security-related settings for your website. These are security settings
 that apply throughout the website/system.
 
+.. _cp-session-type-label:
+
 Control Panel Session Type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -62,29 +62,28 @@ Configuration Variables
 
 admin_session_type
 ------------------
-Sets the session type of the control panel.
 
-+---------------------------+-------------------------------------------------------+
-|Values                     |Behavior                                               |
-+===========================+=======================================================+
-|``c``                      |Sets the Control Panel to use                          |
-|                           |:doc:`cookies </cp/admin/security_settings>` only      |
-+---------------------------+-------------------------------------------------------+
-|``s``                      |Sets the Control Panel to use                          |
-|                           |:doc:`Session ID </cp/admin/security_settings>` only   |
-+---------------------------+-------------------------------------------------------+
-|``cs``                     |Sets the Control Panel to use Cookies and Sessions     |
-|                           |                                                       |
-+---------------------------+-------------------------------------------------------+
+Sets the :ref:`Control Panel session type <cp-session-type-label>`.
+
+====== ========
+Values Behavior
+====== ========
+``c``  Sets the Control Panel to use cookies only
+``s``  Sets the Control Panel to use Session ID only
+``cs`` Sets the Control Panel to use Cookies and Session ID
+====== ========
 
 
-Example: ::
+Example Usage::
 
 
  $config['admin_session_type'] = 's';
 
 
-May be set in the Control Panel as well by navigating to :menuselection:`Design --> Security And Privacy --> Security And Sessions` and changing the value for :doc:`Admin Session Type </cp/admin/security_settings>`
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security And Privacy --> Security And Sessions`: Control Panel Session Type
+
 
 allow_avatar_uploads
 --------------------
