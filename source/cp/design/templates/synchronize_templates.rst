@@ -21,7 +21,7 @@ them. All templates set to 'save files as templates' will be shown in
 the file synchronization interface. Three 'types' of template-file
 pairings may be indicated:
 
--  Synced files. No action is needed. The datebase update is more recent
+-  Synced files. No action is needed. The database update is more recent
    than the associated file and is thus 'in sync'.
 -  Outdated template. The file associated with the template is more
    recent than the copy in the database. The information in the database
