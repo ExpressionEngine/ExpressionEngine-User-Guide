@@ -10,10 +10,23 @@ Relationships
 Introduction
 ************
 
-ExpressionEngine's relationships work very simply.  To show how the tags work
-we'll use an example community sports league website with four channels: Seasons,
-Teams, Games and Players.  The league that runs multiple seasons every year
-with different teams and games.  Your channels might look like this::
+
+
+********
+Examples
+********
+
+.. contents::
+   :local:
+   :depth: 1
+
+The Community Sports League
+===========================
+
+To show how the tags work we'll use an example community sports league website
+with four channels: Seasons, Teams, Games and Players.  The league runs
+multiple seasons every year with different teams and games.  Your channels
+might look like this::
 
 	Seasons
 		title			Text 
@@ -40,6 +53,9 @@ with different teams and games.  Your channels might look like this::
 		first_name		Text
 		last_name		Text
 		number			Number
+
+Child Entries: Showing Games and Teams in a Season
+==================================================
 
 So, with our channel structure layed out, let's dive right in.  Say you wanted
 to show all games and teams in the 'Spring 2013' season.  And you wanted to
@@ -159,6 +175,63 @@ can access the relationship's variables directly, at any time, by adding the
 prefix. There's no need to specify the bit of your template you want to loop
 over. There can only be one!
 
+Child Entries: Showing Details of a Game
+========================================
+
+Let's try another example.  Let's say you need another page on this league
+website that shows the details of a single game: when, who played and who
+won.  That template might look something like this::
+
+	{exp:channel:entries channel="Games" limit="1"}
+		<h2>{home:title} ({home_score}) vs {away:title} ({away_score})</h2>
+		<p>In this game the {home:title} played the {away:title}.</p>
+		<p>The final scores were {home:title} with {home_score} and {away:title} with {away_score}.</p>
+		<p>Playing for {home:title} were:</p>
+		<div class="players">
+			{home:players} 
+				<span class="player">#{home:players:number} {home:players:first_name} {home:players:last_name}</span>
+			{/home:players}
+		</div>
+		<p>Playing for {away:title} were:</p>
+		<div class="players">
+			{away:players} 
+				<span class="player">#{away:players:number} {away:players:first_name} {away:players:last_name}</span>
+			{/away:players}
+		</div>
+	{/exp:channel:entries}
+
+Parent Entries: Showing A Team's History
+========================================
+
+A similar tag is the ``parents`` tag.  It pulls all entries that are parents of
+the of the current entry.  Say you had a Team page where you showed details of
+a particular team and you wanted to show all Games that team had played in.
+You could accomplish this like so::
+
+	{exp:channel:entries channel="Teams"}
+		<div class="games"><ul>
+			{parents channel="Games"}
+				<li>{parent:home:title} ({parent:home_score}) vs {parent:away:title} ({parent:away_score})</li>
+			{/parents}
+		</div>
+	{/exp:channel:entries}
+
+The ``parents`` tag will pull all games in which the current team was either
+the home or away team.  If you wanted to just pull home games, you could use
+the ``field`` parameter to specify which relationship field from the parent
+channel you wanted to examine::
+
+	{exp:channel:entries channel="Teams"}
+		<div class="games"><ul>
+			{parents channel="Games" field="home"}
+				<li>{parent:home:title} ({parent:home_score}) vs {parent:away:title} ({parent:away_score})</li>
+			{/parents}
+		</div>
+	{/exp:channel:entries}
+
+Sibling Entries: Navigating Between Games
+=========================================
+
 Let's try another example, with the same channel set up.  What if you wanted to
 have a series of pages showing the details of a single game?  On these pages, 
 you want to show a navigation section, showing other games from the current
@@ -186,31 +259,6 @@ tag, we use the singular case of ``sibling``.  This is to remind you that
 ``siblings`` isn't just another relationship variable, but a special tag with a
 special meaning.  
 
-A similar tag is the ``parents`` tag.  It pulls all entries that are parents of
-the of the current entry.  Say you had a Team page where you showed details of
-a particular team and you wanted to show all Games that team had played in.
-You could accomplish this like so::
-
-	{exp:channel:entries channel="Teams"}
-		<div class="games"><ul>
-			{parents channel="Games"}
-				<li>{parent:title} - {parent:home:title} vs {parent:away:title}</li>
-			{/parents}
-		</div>
-	{/exp:channel:entries}
-
-The ``parents`` tag will pull all games in which the current team was either
-the home or away team.  If you wanted to just pull home games, you could use
-the ``field`` parameter to specify which relationship field from the parent
-channel you wanted to examine::
-
-	{exp:channel:entries channel="Teams"}
-		<div class="games"><ul>
-			{parents channel="Games" field="home"}
-				<li>{parent:title} - {parent:home:title} vs {parent:away:title}</li>
-			{/parents}
-		</div>
-	{/exp:channel:entries}
 		  
 
 *************
