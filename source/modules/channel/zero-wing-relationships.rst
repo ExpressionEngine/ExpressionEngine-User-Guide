@@ -220,6 +220,10 @@ Tag Reference
 Accessing Children
 ==================
 
+.. contents::
+   :local:
+   :depth: 2
+
 Multiple Related Entries 
 ------------------------
 
@@ -289,6 +293,39 @@ You would access the child entry in your tempalte using the following syntax::
 	{/exp:channel:entries}
 
 No looping occurs.  
+
+Parameters
+----------
+
+Limit
++++++
+
+You can use the limit parameter on any looping relationship tag in order to limit
+the number of results returned from the tag.  Given the following channel structure::
+
+	ParentChannel
+		title
+		url_title
+		field1					Text
+		field2					Text
+		relationship_field		Relationship (ChildChannel, Multiple)
+
+
+	ChildChannel
+		title
+		url_title
+		field1					Text
+		field2					Text
+
+Then you could use the following code::
+
+	{relationship_field limit="5"}
+		{relationship_field:title}
+		{relationship_field:field1}
+	{/relationship_field}
+
+To only grab the first 5 entries that are attached to the current entry in
+``ParentChannel`` through the ``relationship_field``.
 
 Accessing Siblings
 ==================
