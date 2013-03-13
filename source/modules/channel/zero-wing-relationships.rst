@@ -4,7 +4,7 @@ Relationships
 
 .. contents::
    :local:
-   :depth: 2
+   :depth: 1
 
 ************
 Introduction
@@ -217,6 +217,10 @@ channel you wanted to examine::
 Tag Reference
 *************
 
+.. contents::
+   :local:
+   :depth: 1
+
 Accessing Children
 ==================
 
@@ -297,6 +301,10 @@ No looping occurs.
 Parameters
 ----------
 
+.. contents::
+   :local:
+   :depth: 1
+
 Limit
 +++++
 
@@ -372,12 +380,45 @@ Parameters
 channel
 +++++++
 
+Since an entry can have multiple parent entries, we need to specify which
+channel should be considered the parent when pulling an entry's siblings.  To
+this, use the channel parameter::
+
+    {siblings channel="ParentChannel"}
+
+This will declare that we are looking for siblings of the current entry using
+``ParentChannel`` as the parent.  In some cases, ``ParentChannel`` will have
+multiple fields that relate to ``ChildChannel``.  In that case, you may also
+need to specify which field you want the siblings from.  To accomplish this,
+use the ``field=""`` parameter.
+
 field
 +++++
+
+Use the ``field`` parameter to specify which field in the parent entry we should
+be pulling the siblings from.  Since an entry can have more than a single field
+relate to the same channel, this can be extremely useful.  The syntax is::
+
+    {siblings field="relationship_field"}
+
+
+parent_id
++++++++++
+
+The ``parent_id`` parameter allows you to specify which parent entry you wish to
+pull the siblings from.  It takes an entry id and uses that to filter the parent
+entries when checking for siblings.  The syntax is::
+
+    {siblings parent_id="2"}
+
 
 limit
 +++++
 
+The ``limit`` parameter allows you to limit the number of entries returned by the
+siblings tag.  The syntax is::
+
+    {siblings limit="5"}
 
 Accessing Parents
 =================
