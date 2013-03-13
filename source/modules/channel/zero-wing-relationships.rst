@@ -4,36 +4,35 @@ Relationships
 
 .. contents::
    :local:
-   :depth: 1
+   :depth: 2
 
 ************
 Introduction
 ************
 
 ExpressionEngine's relationships work very simply.  To show how the tags work
-we'll use an example setup with four channels: Seasons, Teams, Games and
-Players.  The example is of a community sports league that runs multiple
-seasons every year with different teams and games.  Your channels might look
-like this::
+we'll use an example community sports league website with four channels: Seasons,
+Teams, Games and Players.  The league that runs multiple seasons every year
+with different teams and games.  Your channels might look like this::
 
 	Seasons
 		title			Text 
 		url_title		Text 
-		games			Relationship (A relationship field pointing to Games channel, multiple Games)
-		teams			Relationship (A relationship field pointing to the Teams channel, multiple Games)
+		games			Relationship (pointing to Games channel, multiple Games)
+		teams			Relationship (pointing to Teams channel, multiple Teams)
 
 	Games
 		title			Text	
 		url_title		Text	
-		home			Relationship (pointing to the Teams channel, a single Team)
-		away			Relationship (pointing to the Teams channel, a single Team)
+		home			Relationship (pointing to Teams channel, a single Team)
+		away			Relationship (pointing to Teams channel, a single Team)
 		home_score		Number
 		away_score		Number
 
 	Teams
 		title			Text
 		url_title		Text
-		players			Relationship (pointing to the Players channel, multiple Players)
+		players			Relationship (pointing to Players channel, multiple Players)
 
 	Players
 		title			Text
@@ -42,8 +41,10 @@ like this::
 		last_name		Text
 		number			Number
 
-Given this layout of channels, you can access your channels through their
-relationships in the channel entries tag like this::
+So, with our channel structure layed out, let's dive right in.  Say you wanted
+to show all games and teams in the 'Spring 2013' season.  And you wanted to
+list all the players on each team.  Your template might look something like
+this::
 
 	{exp:channel:entries channel="Seasons" title="Spring 2013" limit="1"}
 		<div class="season">
@@ -71,8 +72,8 @@ relationships in the channel entries tag like this::
 		</div>
 	{/exp:channel:entries}
 
-Let's break that down and see very clearly what we're doing.  The first thing
-you'll see is the good old channel entries tag::
+Let's break that down to see what we're doing.  The first thing you'll see is
+the good old channel entries tag::
 
 	{exp:channel:entries channel="Seasons" title="Spring 2013" limit="1"}	
 
@@ -89,21 +90,22 @@ title of the entry.  After that things get more interesting::
 	</div>
 	{/teams}
 
-If you'll notice, the tag name ``teams`` is the same as our relationship field
-name in the Seasons channel.  This is a relationship tag.  It works almost
-exactly the same as a ``channel:entries`` tag and takes most of the same
-parameters.  It will loop over the entries you have assigned to the ``teams``
-field on the publish page and use them to replace the variables below.  Here,
-things differ a little bit from standard channel entries.  We need a way to
-separate the related entry's variables from your ``channel:entries`` tag's
+Notice, the tag name ``teams`` is the same as our relationship field name in
+the Seasons channel.  This is a relationship tag.  It works very similarly to
+the ``channel:entries`` tag.  It will loop over the entries you have assigned
+to the ``teams`` field on the publish page and use them to replace the
+variables contained.  
+
+Here, things differ a little bit from standard channel entries.  We need a way
+to separate the related entry's variables from your ``channel:entries`` tag's
 variables.  To accomplish this we prefix the variables of the related entries
-with the name of the field they belong to.  So here::
+with the name of the field they belong to.  So::
 
 	<h4>{teams:title}</h4>
 
 In that bit of code, we're accessing the title of the entry from the Teams
 channel related to our current Season through the ``teams`` field.  This is
-very powerful, as it allows you to relate entries even from the same channel to
+very powerful.  It allows you to relate entries even from the same channel to
 each other and still access their variables.  Say you wanted to add a field for
 the previous and next seasons to a season's entry.  You could give it a
 ``previous`` and ``next`` field.  In your ``channel:entries`` tag you might
@@ -119,17 +121,15 @@ variable from the current entry or either of the related entries.
 Prefixing variables this way also allows us to access nested relationships.  Look
 back up to our previous example.  Notice this bit of code::
 
-
 	{teams:players}
 	<span class="player">{teams:players:first_name} {teams:players:last_name}</span>
 	{/teams:players}
 
 In our Teams channel you'll notice that we have a relationship field to the
-Players channel that can take multiple entries.  We access those entries by
+Players channel that can take multiple entries.  We access those entries
 through the ``{teams:players}`` tag.  This works exactly the same as the
-``{teams}`` tag.  It's an entries loop tag.  It can take most of the same
-parameters as ``channel:entries`` tag.  Except in this case, we're getting the
-entries that were assigned to our current Team.  We can access the Player
+``{teams}`` tag.  It's an entries loop tag.  Except in this case, we're getting
+the entries that were assigned to our current Team.  We can access the Player
 channel's variables in the same way as we do our Team channel's variables, by
 prefixing them::
 
@@ -146,7 +146,6 @@ In other places, however, we don't.  We just access the relationship's
 variables directly using the prefixing, like we did with the ``home`` and
 ``away`` fields::
 
-
 	{games}
 	<div class="game">
 		<h4>{games:title}</h4>
@@ -155,10 +154,10 @@ variables directly using the prefixing, like we did with the ``home`` and
 	{/games}
 
 In the above example, ``home`` and ``away`` are relationship fields in the
-Games channel.  However, they are limited to only a single entry. In that case,
-you can access the relationship's variables directly, at any time, by
-adding the prefix. There's no need to specify the bit of your template you want
-to loop over. There can only be one!
+Games channel.  However, they are limited to a single entry. In that case, you
+can access the relationship's variables directly, at any time, by adding the
+prefix. There's no need to specify the bit of your template you want to loop
+over. There can only be one!
 
 Let's try another example, with the same channel set up.  What if you wanted to
 have a series of pages showing the details of a single game?  On these pages, 
@@ -176,18 +175,21 @@ easier way to accomplish this would be to use the ``siblings`` tag, like so::
 		</ul></div>
 	{/exp:channel:entries}
 		
-In the above example, the ``siblings`` tag pulls all entries in the Games channel that
-are related to the Seasons channel through the ``games`` field, except for the current
-one. The current entry in the Games channel that the ``channel:entries`` tag has pulled
-up must be related to the channel through the field given to the siblings tag.  Otherwise
-it won't work.  Notice, that when we are prefixing the variables inside the ``siblings``
-loop tag, we use the singular case of ``sibling``.  This is to remind you that ``siblings``
-isn't just another relationship variable, but a special tag with a special meaning.  A
+The ``siblings`` tag pulls all entries in the Games channel that are related to
+the Seasons channel through the ``games`` field, except for the current one.
+The current entry in the Games channel that the ``channel:entries`` tag has
+pulled up must be related to the channel through the field given to the
+siblings tag.  Otherwise it won't work.  
 
-A similar tab is the ``parents`` tag.  It pulls all entries that are parents of the of
-the current entry.  Say you had a Team page where you showed details of a particular
-team and you wanted to show all Games that team had played in.  You could accomplish
-this like so::
+Notice, that when we are prefixing the variables inside the ``siblings`` loop
+tag, we use the singular case of ``sibling``.  This is to remind you that
+``siblings`` isn't just another relationship variable, but a special tag with a
+special meaning.  
+
+A similar tag is the ``parents`` tag.  It pulls all entries that are parents of
+the of the current entry.  Say you had a Team page where you showed details of
+a particular team and you wanted to show all Games that team had played in.
+You could accomplish this like so::
 
 	{exp:channel:entries channel="Teams"}
 		<div class="games"><ul>
@@ -197,10 +199,10 @@ this like so::
 		</div>
 	{/exp:channel:entries}
 
-In the above example, the ``parents`` tag will pull all games in which the current team
-was either the home or away team.  If you wanted to just pull home games, you could use
-the ``field`` parameter to specify which relationship field from the parent channel
-you wanted to examine::
+The ``parents`` tag will pull all games in which the current team was either
+the home or away team.  If you wanted to just pull home games, you could use
+the ``field`` parameter to specify which relationship field from the parent
+channel you wanted to examine::
 
 	{exp:channel:entries channel="Teams"}
 		<div class="games"><ul>
@@ -255,8 +257,7 @@ The section of the template that belongs to the ``relationship_field``::
 		{relationship_field:field1}
 	{/relationship_field}
 
-Will be looped over.  It acts very similarly to a ``channel:entries`` tag and takes
-most of the same parameters.
+Will be looped over.  It acts very similarly to a ``channel:entries`` tag.
 
 Single Related Entries
 ----------------------
@@ -312,7 +313,7 @@ You can access siblings of the current entry in ``channel:entries`` tag
 using the following syntax::
 
 	{exp:channel:entries channel="ChildChannel"}
-		{siblings url_title="{segment_1}" field="relationship_field"}
+		{siblings Channel="ParentChannel" field="relationship_field"}
 			{sibling:title} - {sibling:field1} - {sibling:field2}
 		{/siblings}
 	{/exp:channel:entries}
