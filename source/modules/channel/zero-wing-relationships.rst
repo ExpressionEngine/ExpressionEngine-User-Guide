@@ -330,6 +330,13 @@ To only grab the first 5 entries that are attached to the current entry in
 Accessing Siblings
 ==================
 
+.. contents::
+   :local:
+   :depth: 2
+
+Usage
+-----
+
 Given the following channel layout::
 
 	ParentChannel
@@ -350,13 +357,37 @@ You can access siblings of the current entry in ``channel:entries`` tag
 using the following syntax::
 
 	{exp:channel:entries channel="ChildChannel"}
-		{siblings Channel="ParentChannel" field="relationship_field"}
+		{siblings channel="ParentChannel" field="relationship_field"}
 			{sibling:title} - {sibling:field1} - {sibling:field2}
 		{/siblings}
 	{/exp:channel:entries}
 
+Parameters
+----------
+
+.. contents::
+   :local:
+   :depth: 1
+
+channel
++++++++
+
+field
++++++
+
+limit
++++++
+
+
 Accessing Parents
 =================
+
+.. contents::
+   :local:
+   :depth: 2
+
+Usage
+-----
 
 Given the following channel layout::
 
@@ -383,3 +414,18 @@ using the following syntax::
 		{/parents}
 	{/exp:channel:entries}
 
+Parameters
+----------
+
+.. contents::
+   :local:
+   :depth: 1
+
+channel
++++++++
+
+field
++++++
+
+limit
++++++
