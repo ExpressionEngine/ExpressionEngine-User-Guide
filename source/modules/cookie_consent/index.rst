@@ -40,9 +40,8 @@ Installation
 ************
 
 The Cookie Consent Module is available as a `separate download  
-<http://expressionengine.com/downloads/details/cookie_consent_module>`_. in ExpressionEngine's 
-`First Party Add-on Library <http://expressionengine.com/downloads>`_..  The module 
-folder should be placed in your third_party folder (typically system/expressionengine/third_party/).  
+<https://github.com/EllisLab/Cookie-Consent/archive/master.zip>`_ on `GitHub <https://github.com/EllisLab/Cookie-Consent>`_. The module 
+folder (which should be ``cookie_consent`` and must be renamed to that if it's something different) should be placed in your third_party folder (typically system/expressionengine/third_party/).
 
 .. _message-tag:
 

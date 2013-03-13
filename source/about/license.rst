@@ -32,7 +32,7 @@ Permitted Use
    -  **Standard License:** Users of the Standard purchased ExpressionEngine
       2.x License may use the Software on a website engaging in commercial,
       personal, non-commercial, or non-profit activities. Websites engaging in
-      direct or indirect commercial activities much purchase a Standard
+      direct or indirect commercial activities must purchase a Standard
       License.
 
 -  **ExpressionEngine 1.x Licenses:**

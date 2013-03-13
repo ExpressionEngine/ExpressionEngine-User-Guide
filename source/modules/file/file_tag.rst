@@ -213,7 +213,7 @@ paginate=
 
 ::
 
-	paginate="top" ``paginate="bottom"`` ``paginate="both"``
+	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"
 
 This parameter is for use with entry
 :doc:`pagination <../channel/pagination_page>` and determines where the
@@ -225,6 +225,8 @@ pagination code will appear for your files:
    list of files.
 #. **both**: The navigation text and links will appear both above and
    below your list of files.
+#. **inline**: The navigation text and links will appear within the list
+   of entries for each entry.
 
 If no parameter is specified, the navigation block will default to the
 "bottom" behavior.
