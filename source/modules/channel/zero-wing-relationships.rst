@@ -55,7 +55,7 @@ might look like this::
 		number			Number
 
 Child Entries: Showing Games and Teams in a Season
-==================================================
+--------------------------------------------------
 
 So, with our channel structure layed out, let's dive right in.  Say you wanted
 to show all games and teams in the 'Spring 2013' season.  And you wanted to
@@ -176,7 +176,7 @@ prefix. There's no need to specify the bit of your template you want to loop
 over. There can only be one!
 
 Child Entries: Showing Details of a Game
-========================================
+----------------------------------------
 
 Let's try another example.  Let's say you need another page on this league
 website that shows the details of a single game: when, who played and who
@@ -201,7 +201,7 @@ won.  That template might look something like this::
 	{/exp:channel:entries}
 
 Parent Entries: Showing A Team's History
-========================================
+----------------------------------------
 
 A similar tag is the ``parents`` tag.  It pulls all entries that are parents of
 the of the current entry.  Say you had a Team page where you showed details of
@@ -230,7 +230,7 @@ channel you wanted to examine::
 	{/exp:channel:entries}
 
 Sibling Entries: Navigating Between Games
-=========================================
+-----------------------------------------
 
 Let's try another example, with the same channel set up.  What if you wanted to
 have a series of pages showing the details of a single game?  On these pages, 
@@ -259,7 +259,95 @@ tag, we use the singular case of ``sibling``.  This is to remind you that
 ``siblings`` isn't just another relationship variable, but a special tag with a
 special meaning.  
 
-		  
+The Music Venue
+===============
+
+Another common case in which you might need Relationships is the Music Venue
+website.  We'll assume this is a small venue that plays lots of local bands.
+These bands probably return for many shows.  They also probably change pretty
+frequently.  And it may be many of the same musicians moving between the bands
+as they breakup, reform or trade musicians.  So we'll want three channels,
+``Bands``, ``Musicians``, and ``Shows``.  Here's the layout::
+
+	Musicians
+		title			Text
+		url_title		Text
+		first_name		Text
+		last_name		Text
+		biography		Text
+		instruments		Text
+
+	Bands
+		title			Text
+		url_title		Text
+		history			Text
+		style			Text
+		members			Relationship (to Musicians, multiple)
+
+	Shows
+		title			Text
+		url_title		Text
+		what			Text
+		when			Date
+		bands			Relationship (to Bands, multiple)	
+
+We'll have built this layout in the channel administration section and then
+assigned entries to the relationships after creating them.  We'll assume that's
+all done for this example and just look at building the templates.
+
+Child Entries: Listing the Shows
+--------------------------------
+
+Let's start simple.  The first thing you'll probably want to do is create a
+listing of upcoming shows and the bands that are playing in them.  We'll assume
+you set the entry to expire the date after the show, so we don't have to worry
+about any date stuff.  Here's what that template might look like::
+    	 	
+	{exp:channel:entries channel="Shows"}
+		<div class="show">
+			<h2><a href="{path="shows/index"}/{url_title}">{title}</a></h2>
+			<div class="show-body">
+				<div class="what"><label>What</label>{what}</div>
+				<div class="when"><label>When</label>{when}</div>
+				<div class="who">
+					<label>Who's playing?</label>
+					{bands}
+						<div class="band"><strong>{bands:title}</strong> {bands:style}</div>
+					{/bands}
+				</div>
+			</div>
+		</div>		
+	{/exp:channel:entries}		  
+
+Most of this should look pretty familiar to you if you're familiar with the
+``channel:entries`` tag.  But notice this section::
+	
+	<div class="who">
+		<label>Who's playing?</label>
+		{bands}
+			<div class="band"><strong>{bands:title}</strong> {bands:style}</div>
+		{/bands}
+	</div>
+
+This section uses the relationships we build in our channel structure.  On the
+publish page, we'll have attached the Bands that are going to playing this show
+to the show's entry.  With the ``{bands}`` tag, we are now looping over those
+bands.  For each band we attached we're displaying its name ``{bands:title}``
+and what style of music they play ``{bands:style}``. Again, the namespacing of
+relationships with the relationship tag name allows us to specify which title
+we want, in this case, the band's.  
+
+Parent Entries: Listing Shows a Band has Played
+-----------------------------------------------
+
+Now let's say we want a page for each band.  And on that page, we want to display
+all the shows that band has played.  To do this, we'll need a parent tag::
+
+	{exp:channel:entries channel="Bands" limit="1"}
+		<div class="band">
+		
+		</div>
+	{/exp:channel:entries}
 
 *************
 Tag Reference
