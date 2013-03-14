@@ -1,7 +1,6 @@
 #############
 Relationships
 #############
-
 .. contents::
    :local:
    :depth: 1
@@ -15,7 +14,6 @@ Introduction
 ********
 Examples
 ********
-
 .. contents::
    :local:
    :depth: 2
@@ -35,7 +33,7 @@ You'll start by building your channels through the channel administration
 section and then you'll need to write your templates.  We'll go ahead and "do"
 that first step for you, here's the channel structure we'll be working with::
 
-	Store
+	Stores
 		title				Text Input
 		url_title			Text Input
 		address				Textarea
@@ -47,6 +45,97 @@ that first step for you, here's the channel structure we'll be working with::
 		url_title			Text Input
 		description			Textarea
 		ingredients			Checkbox
+
+Child Entries: Displaying the Stores and their Menus
+----------------------------------------------------
+
+The first thing you're likely to want to do in this scenario is list the stores
+and their current menus of specialty pizzas.  So lets go ahead and do that in
+a very simple template::
+
+	{exp:channel:entries channel="Stores"}
+		<h1>{title}</h1>
+		<p>Phone: {phone}</p>
+		<p>Address: {address}</p>
+		<h2>Specialty Pizzas</h2>
+		{specialty_pizzas}
+			<h3>{specialty_pizzas:title}</h3>
+			<p>{specialty_pizzas:description}</p>
+			<p>{specialty_pizzas:ingredients}</p>
+		{/specialty_pizzas}
+	{/exp:channel:entries}
+
+In this template, we start with the standard ``channel:entries`` tag. We're
+pulling from the Stores channel.  For each Store entry we're going to display
+the Store name, the Store's phone number and address.  And then we'll display
+which specialty pizzas they have available.  We do that with this part of the
+template::
+
+	<h2>Specialty Pizzas</h2>
+	{specialty_pizzas}
+		<h3>{specialty_pizzas:title}</h3>
+		<p>{specialty_pizzas:description}</p>
+		<p>{specialty_pizzas:ingredients}</p>
+	{/specialty_pizzas}
+
+The ``specialty_pizzas`` tag is a Relationship variable tag.  Since it is a
+relationship that can take multiple entries, it is a looping tag.  So these
+three lines::
+
+		<h3>{specialty_pizzas:title}</h3>
+		<p>{specialty_pizzas:description}</p>
+		<p>{specialty_pizzas:ingredients}</p>
+
+Will be looped over for each Pizza entry that is attached to the current Store
+entry.  In those lines ``specialty_pizzas:title`` will be replaced by the
+``title`` of the current Pizza entry, ``specialty_pizzas:description`` will be
+replaced by its description and so on.  You'll notice that what we're doing
+here is prefixing the names of the variables in the Pizza channel with the name
+of the Relationship field that relates the Store channel to the Pizza channel.
+We call this namespacing and it's a very powerful tool.  We'll see why later.
+
+Parent Entries: Which Stores have Which Pizza?
+----------------------------------------------
+
+Another template you might want to make is a page for each pizza.  On that
+page you might want to show which stores have which pizzas.  You can do this
+with the ``parents`` tag.  Like so::
+
+	{exp:channel:entries channel="Pizzas"}
+		<h2>{title}</h2>			
+		<p>{description}</p>
+		<p>{ingredients}</p>
+		<h3>Where can I find this pizza?</h3>
+		{parents channel="Stores"}
+			<strong>{parent:title}</strong>: <br />
+			{parent:phone} <br />
+			<p>{parent:address}</p>	
+		{/parents}
+	{/exp:channel:entries}
+
+In this template we list the Pizza channel's various variables -- title,
+description and ingredients.  Then we have a section in which we show which
+stores this pizza is currently available at.  To accomplish this, we use the
+``parents`` tag.  This tag looks for entries in a different channel that have a
+relationship field that goes to the current channel in which the current entry
+is a child.  In this case, we're passing it the Stores channel.  So it will
+look for all entries in the Stores channel that have the current Pizza entry as
+a child, in any variable.  This will have the result of finding all Stores that
+currently have this Pizza available. 
+
+The ``parents`` tag is a looping tag pair.  So for each Store it finds, it will
+loop over the section of template contained in the pair::
+
+		<strong>{parent:title}</strong>: <br />
+		{parent:phone} <br />
+		<p>{parent:address}</p>	
+
+It will replace that section's variables and append it to the final output.
+Here, we use namespacing again to access the parent Store's variables.  We
+access its title, phone and address using ``parent:title``, ``parent:phone``,
+and ``parent:address``.  Notice, that when using the prefix, we use ``parent``,
+singular, not ``parents`` plural.  This is because ``parents`` is not a
+Relationship variable, but a special tag that requires special processing.
 
 The Music Venue
 ===============
@@ -84,8 +173,8 @@ We'll have built this layout in the channel administration section and then
 assigned entries to the relationships after creating them.  We'll assume that's
 all done for this example and just look at building the templates.
 
-Child Entries: Listing the Shows
---------------------------------
+Child Entries: Upcoming Shows 
+-----------------------------
 
 Let's start simple.  The first thing you'll probably want to do is create a
 listing of upcoming shows and the bands that are playing in them.  We'll assume
@@ -126,8 +215,8 @@ and what style of music they play ``{bands:style}``. Again, the namespacing of
 relationships with the relationship tag name allows us to specify which title
 we want, in this case, the band's.  
 
-Parent Entries: Listing Shows a Band has Played
------------------------------------------------
+Parent Entries: A Band's Recent Shows
+-------------------------------------
 
 Now let's say we want a page for each band.  And on that page, we want to display
 all the shows that band has played.  To do this, we'll need a parent tag::
@@ -183,6 +272,12 @@ display this part of the template for that Show entry::
 
 Notice that when we're namespacing the Show's variables, we use ``parent``
 instead of ``parents``.  
+
+Parent Entries: A Musician's Past Bands
+---------------------------------------
+
+Sibling Entries: A Musician's Past Bandmates
+--------------------------------------------
 
 
 The Community Sports League
@@ -394,6 +489,9 @@ channel you wanted to examine::
 		</div>
 	{/exp:channel:entries}
 
+Parent Entries: Showing a Player's History
+------------------------------------------
+
 Sibling Entries: Navigating Between Games
 -----------------------------------------
 
@@ -424,18 +522,19 @@ tag, we use the singular case of ``sibling``.  This is to remind you that
 ``siblings`` isn't just another relationship variable, but a special tag with a
 special meaning.  
 
+Sibling Entries: Navigating Between Current Teammates
+-----------------------------------------------------
+
 
 *************
 Tag Reference
 *************
-
 .. contents::
    :local:
    :depth: 1
 
 Accessing Children
 ==================
-
 .. contents::
    :local:
    :depth: 2
@@ -513,7 +612,6 @@ No looping occurs.
 
 Parameters
 ----------
-
 .. contents::
    :local:
    :depth: 1
@@ -551,7 +649,6 @@ To only grab the first 5 entries that are attached to the current entry in
 
 Accessing Siblings
 ==================
-
 .. contents::
    :local:
    :depth: 2
@@ -586,7 +683,6 @@ using the following syntax::
 
 Parameters
 ----------
-
 .. contents::
    :local:
    :depth: 1
@@ -636,7 +732,6 @@ siblings tag.  The syntax is::
 
 Accessing Parents
 =================
-
 .. contents::
    :local:
    :depth: 2
@@ -671,7 +766,6 @@ using the following syntax::
 
 Parameters
 ----------
-
 .. contents::
    :local:
    :depth: 1
