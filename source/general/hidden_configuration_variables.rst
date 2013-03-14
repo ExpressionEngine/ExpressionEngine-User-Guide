@@ -111,17 +111,64 @@ If set, overrides the core Email class setting for newline characters
 
 	$config['email_newline'] = "\r\n";
 
-email_smtp_port
-~~~~~~~~~~~~~~~
+mail_protocol
+~~~~~~~~~~~~~
 
-**Value:** numeric string
+**Value:** text string
 
-If set, overrides the core Email class setting (25) for SMTP Port.
-(Email class $smtp_port property).
+Sets the email protocol to be used when sending all emails. Possible options are
+``mail``, ``sendmail``, and ``smtp``.
 
 ::
 
-	$config['email_smtp_port'] = "2525";
+	$config['mail_protocol'] = "smtp";
+
+smtp_server
+~~~~~~~~~~~
+
+**Value:** text string
+
+When using SMTP as your mail protocol, this sets the server to be used. You can 
+use ssl servers as long as OpenSSL is installed on the server ExpressionEngine 
+is installed on. Check with your server administrator first.
+
+::
+
+	$config['smtp_server'] = "smtp.server.com";
+
+smtp_port
+~~~~~~~~~
+
+**Value:** numeric string
+
+When using SMTP as your mail protocol, this will override the core Email class 
+setting (25) for SMTP Port.
+
+::
+
+	$config['smtp_port'] = "587";
+
+smtp_username
+~~~~~~~~~~~~~
+
+**Value:** text string
+
+When using SMTP as your mail protocol, this sets the username to use.
+
+::
+
+	$config['smtp_username'] = "username";
+
+smtp_password
+~~~~~~~~~~~~~
+
+**Value:** text string
+
+When using SMTP as your mail protocol, this sets the password to use.
+
+::
+
+	$config['smtp_password'] = "password";
 
 enable_db_caching
 ~~~~~~~~~~~~~~~~~
