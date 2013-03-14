@@ -20,6 +20,171 @@ Examples
    :local:
    :depth: 2
 
+The Pizza Shop
+==============
+
+Let's start with a very simple example.  You've been tasked with building a
+website for a small chain of local pizza joints.  These pizza places share a
+general menu of specialty pizzas, but each individual store manager gets to
+decide which specialty pizzas will be available on any particular week, based
+on which ones seem more popular at that store.  You need to make a website for
+the whole chain with store pages for each particular store that display that
+store's menu for the week.
+
+You'll start by building your channels through the channel administration
+section and then you'll need to write your templates.  We'll go ahead and "do"
+that first step for you, here's the channel structure we'll be working with::
+
+	Store
+		title				Text Input
+		url_title			Text Input
+		address				Textarea
+		phone				Text Input
+		specialty_pizzas	Relationship (to Pizzas, multiple)
+
+	Pizzas
+		title				Text Input
+		url_title			Text Input
+		description			Textarea
+		ingredients			Checkbox
+
+The Music Venue
+===============
+
+Another common case in which you might need Relationships is the Music Venue
+website.  We'll assume this is a small venue that plays lots of local bands.
+These bands probably return for many shows.  They also probably change pretty
+frequently.  And it may be many of the same musicians moving between the bands
+as they breakup, reform or trade musicians.  So we'll want three channels,
+``Bands``, ``Musicians``, and ``Shows``.  Here's the layout::
+
+	Musicians
+		title			Text
+		url_title		Text
+		first_name		Text
+		last_name		Text
+		biography		Text
+		instruments		Text
+
+	Bands
+		title			Text
+		url_title		Text
+		history			Text
+		style			Text
+		members			Relationship (to Musicians, multiple)
+
+	Shows
+		title			Text
+		url_title		Text
+		what			Text
+		when			Date
+		bands			Relationship (to Bands, multiple)	
+
+We'll have built this layout in the channel administration section and then
+assigned entries to the relationships after creating them.  We'll assume that's
+all done for this example and just look at building the templates.
+
+Child Entries: Listing the Shows
+--------------------------------
+
+Let's start simple.  The first thing you'll probably want to do is create a
+listing of upcoming shows and the bands that are playing in them.  We'll assume
+you set the entry to expire the date after the show, so we don't have to worry
+about any date stuff.  Here's what that template might look like::
+    	 	
+	{exp:channel:entries channel="Shows"}
+		<div class="show">
+			<h2><a href="{path="shows/index"}/{url_title}">{title}</a></h2>
+			<div class="show-body">
+				<div class="what"><label>What</label>{what}</div>
+				<div class="when"><label>When</label>{when}</div>
+				<div class="who">
+					<label>Who's playing?</label>
+					{bands}
+						<div class="band"><strong>{bands:title}</strong> {bands:style}</div>
+					{/bands}
+				</div>
+			</div>
+		</div>		
+	{/exp:channel:entries}		  
+
+Most of this should look pretty familiar to you if you're familiar with the
+``channel:entries`` tag.  But notice this section::
+	
+	<div class="who">
+		<label>Who's playing?</label>
+		{bands}
+			<div class="band"><strong>{bands:title}</strong> {bands:style}</div>
+		{/bands}
+	</div>
+
+This section uses the relationships we build in our channel structure.  On the
+publish page, we'll have attached the Bands that are going to playing this show
+to the show's entry.  With the ``{bands}`` tag, we are now looping over those
+bands.  For each band we attached we're displaying its name ``{bands:title}``
+and what style of music they play ``{bands:style}``. Again, the namespacing of
+relationships with the relationship tag name allows us to specify which title
+we want, in this case, the band's.  
+
+Parent Entries: Listing Shows a Band has Played
+-----------------------------------------------
+
+Now let's say we want a page for each band.  And on that page, we want to display
+all the shows that band has played.  To do this, we'll need a parent tag::
+
+	{exp:channel:entries channel="Bands" limit="1"}
+		<div class="band">
+			<h2>{title}</h2>
+			<span class="style">{style}</span>
+			<p>{history}</p>	
+			<div class="members">
+				{members}
+					<div class="member">
+						<a href="{path="musicians/index"}/{members:url_title}">{members:first_name} {members:last_name}</a>
+					</div>
+				{/members}
+			</div>
+			<div class="shows">
+			<h3>Recent Shows</h3>
+			{parents channel="Shows" field="bands"}
+				<div class="show">
+					<strong>{parent:title}</strong>
+					<div class="what">{parent:what}</div>
+					<div class="when">{parent:when}</div>
+				</div>
+			{/parents}
+			</div>
+		</div>
+	{/exp:channel:entries}
+
+The part to notice here is this bit::
+
+	<div class="shows">
+	<h3>Recent Shows</h3>
+	{parents channel="Shows" field="bands"}
+		<div class="show">
+			<strong>{parent:title}</strong>
+			<div class="what">{parent:what}</div>
+			<div class="when">{parent:when}</div>
+		</div>
+	{/parents}
+	</div>
+
+Here, we use the ``{parents}`` tag to access this band's parent
+entries in the Shows channel. It will cycle through each show that
+has this particular Band entry as a child through the ``bands`` field and
+display this part of the template for that Show entry::
+ 
+	<div class="show">
+		<strong>{parent:title}</strong>
+		<div class="what">{parent:what}</div>
+		<div class="when">{parent:when}</div>
+	</div>
+
+Notice that when we're namespacing the Show's variables, we use ``parent``
+instead of ``parents``.  
+
+
 The Community Sports League
 ===========================
 
@@ -29,30 +194,30 @@ multiple seasons every year with different teams and games.  Your channels
 might look like this::
 
 	Seasons
-		title			Text 
-		url_title		Text 
+		title			Text Input 
+		url_title		Text Input 
 		games			Relationship (pointing to Games channel, multiple Games)
 		teams			Relationship (pointing to Teams channel, multiple Teams)
 
 	Games
-		title			Text	
-		url_title		Text	
+		title			Text Input
+		url_title		Text Input	
 		home			Relationship (pointing to Teams channel, a single Team)
 		away			Relationship (pointing to Teams channel, a single Team)
-		home_score		Number
-		away_score		Number
+		home_score		Text Input (Number)
+		away_score		Text Input (Number)
 
 	Teams
-		title			Text
-		url_title		Text
+		title			Text Input
+		url_title		Text Input
 		players			Relationship (pointing to Players channel, multiple Players)
 
 	Players
-		title			Text
-		url_title		Text
-		first_name		Text
-		last_name		Text
-		number			Number
+		title			Text Input
+		url_title		Text Input
+		first_name		Text Input
+		last_name		Text Input
+		number			Text Input (Number)
 
 Child Entries: Showing Games and Teams in a Season
 --------------------------------------------------
@@ -259,141 +424,6 @@ tag, we use the singular case of ``sibling``.  This is to remind you that
 ``siblings`` isn't just another relationship variable, but a special tag with a
 special meaning.  
 
-The Music Venue
-===============
-
-Another common case in which you might need Relationships is the Music Venue
-website.  We'll assume this is a small venue that plays lots of local bands.
-These bands probably return for many shows.  They also probably change pretty
-frequently.  And it may be many of the same musicians moving between the bands
-as they breakup, reform or trade musicians.  So we'll want three channels,
-``Bands``, ``Musicians``, and ``Shows``.  Here's the layout::
-
-	Musicians
-		title			Text
-		url_title		Text
-		first_name		Text
-		last_name		Text
-		biography		Text
-		instruments		Text
-
-	Bands
-		title			Text
-		url_title		Text
-		history			Text
-		style			Text
-		members			Relationship (to Musicians, multiple)
-
-	Shows
-		title			Text
-		url_title		Text
-		what			Text
-		when			Date
-		bands			Relationship (to Bands, multiple)	
-
-We'll have built this layout in the channel administration section and then
-assigned entries to the relationships after creating them.  We'll assume that's
-all done for this example and just look at building the templates.
-
-Child Entries: Listing the Shows
---------------------------------
-
-Let's start simple.  The first thing you'll probably want to do is create a
-listing of upcoming shows and the bands that are playing in them.  We'll assume
-you set the entry to expire the date after the show, so we don't have to worry
-about any date stuff.  Here's what that template might look like::
-    	 	
-	{exp:channel:entries channel="Shows"}
-		<div class="show">
-			<h2><a href="{path="shows/index"}/{url_title}">{title}</a></h2>
-			<div class="show-body">
-				<div class="what"><label>What</label>{what}</div>
-				<div class="when"><label>When</label>{when}</div>
-				<div class="who">
-					<label>Who's playing?</label>
-					{bands}
-						<div class="band"><strong>{bands:title}</strong> {bands:style}</div>
-					{/bands}
-				</div>
-			</div>
-		</div>		
-	{/exp:channel:entries}		  
-
-Most of this should look pretty familiar to you if you're familiar with the
-``channel:entries`` tag.  But notice this section::
-	
-	<div class="who">
-		<label>Who's playing?</label>
-		{bands}
-			<div class="band"><strong>{bands:title}</strong> {bands:style}</div>
-		{/bands}
-	</div>
-
-This section uses the relationships we build in our channel structure.  On the
-publish page, we'll have attached the Bands that are going to playing this show
-to the show's entry.  With the ``{bands}`` tag, we are now looping over those
-bands.  For each band we attached we're displaying its name ``{bands:title}``
-and what style of music they play ``{bands:style}``. Again, the namespacing of
-relationships with the relationship tag name allows us to specify which title
-we want, in this case, the band's.  
-
-Parent Entries: Listing Shows a Band has Played
------------------------------------------------
-
-Now let's say we want a page for each band.  And on that page, we want to display
-all the shows that band has played.  To do this, we'll need a parent tag::
-
-	{exp:channel:entries channel="Bands" limit="1"}
-		<div class="band">
-			<h2>{title}</h2>
-			<span class="style">{style}</span>
-			<p>{history}</p>	
-			<div class="members">
-				{members}
-					<div class="member">
-						<a href="{path="musicians/index"}/{members:url_title}">{members:first_name} {members:last_name}</a>
-					</div>
-				{/members}
-			</div>
-			<div class="shows">
-			<h3>Recent Shows</h3>
-			{parents channel="Shows" field="bands"}
-				<div class="show">
-					<strong>{parent:title}</strong>
-					<div class="what">{parent:what}</div>
-					<div class="when">{parent:when}</div>
-				</div>
-			{/parents}
-			</div>
-		</div>
-	{/exp:channel:entries}
-
-The part to notice here is this bit::
-
-	<div class="shows">
-	<h3>Recent Shows</h3>
-	{parents channel="Shows" field="bands"}
-		<div class="show">
-			<strong>{parent:title}</strong>
-			<div class="what">{parent:what}</div>
-			<div class="when">{parent:when}</div>
-		</div>
-	{/parents}
-	</div>
-
-Here, we use the ``{parents}`` tag to access this band's parent
-entries in the Shows channel. It will cycle through each show that
-has this particular Band entry as a child through the ``bands`` field and
-display this part of the template for that Show entry::
- 
-	<div class="show">
-		<strong>{parent:title}</strong>
-		<div class="what">{parent:what}</div>
-		<div class="when">{parent:when}</div>
-	</div>
-
-Notice that when we're namespacing the Show's variables, we use ``parent``
-instead of ``parents``.  
 
 *************
 Tag Reference
