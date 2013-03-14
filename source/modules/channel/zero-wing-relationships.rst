@@ -18,7 +18,7 @@ Examples
 
 .. contents::
    :local:
-   :depth: 1
+   :depth: 2
 
 The Community Sports League
 ===========================
@@ -345,9 +345,55 @@ all the shows that band has played.  To do this, we'll need a parent tag::
 
 	{exp:channel:entries channel="Bands" limit="1"}
 		<div class="band">
-		
+			<h2>{title}</h2>
+			<span class="style">{style}</span>
+			<p>{history}</p>	
+			<div class="members">
+				{members}
+					<div class="member">
+						<a href="{path="musicians/index"}/{members:url_title}">{members:first_name} {members:last_name}</a>
+					</div>
+				{/members}
+			</div>
+			<div class="shows">
+			<h3>Recent Shows</h3>
+			{parents channel="Shows" field="bands"}
+				<div class="show">
+					<strong>{parent:title}</strong>
+					<div class="what">{parent:what}</div>
+					<div class="when">{parent:when}</div>
+				</div>
+			{/parents}
+			</div>
 		</div>
 	{/exp:channel:entries}
+
+The part to notice here is this bit::
+
+	<div class="shows">
+	<h3>Recent Shows</h3>
+	{parents channel="Shows" field="bands"}
+		<div class="show">
+			<strong>{parent:title}</strong>
+			<div class="what">{parent:what}</div>
+			<div class="when">{parent:when}</div>
+		</div>
+	{/parents}
+	</div>
+
+Here, we use the ``{parents}`` tag to access this band's parent
+entries in the Shows channel. It will cycle through each show that
+has this particular Band entry as a child through the ``bands`` field and
+display this part of the template for that Show entry::
+ 
+	<div class="show">
+		<strong>{parent:title}</strong>
+		<div class="what">{parent:what}</div>
+		<div class="when">{parent:when}</div>
+	</div>
+
+Notice that when we're namespacing the Show's variables, we use ``parent``
+instead of ``parents``.  
 
 *************
 Tag Reference
@@ -364,8 +410,8 @@ Accessing Children
    :local:
    :depth: 2
 
-Multiple Related Entries 
-------------------------
+Usage: Multiple Related Entries 
+-------------------------------
 
 Given the following channel layout::
 
@@ -399,12 +445,13 @@ The section of the template that belongs to the ``relationship_field``::
 	{relationship_field}
 		{relationship_field:title}
 		{relationship_field:field1}
+		{relationship_field:field2}
 	{/relationship_field}
 
 Will be looped over.  It acts very similarly to a ``channel:entries`` tag.
 
-Single Related Entries
-----------------------
+Usage: Single Related Entries
+-----------------------------
 
 Given the following channel layout, where ``relationship_field`` is limited to taking a single child entry::
 
@@ -466,6 +513,7 @@ Then you could use the following code::
 	{relationship_field limit="5"}
 		{relationship_field:title}
 		{relationship_field:field1}
+		{relationship_field:field2}
 	{/relationship_field}
 
 To only grab the first 5 entries that are attached to the current entry in
