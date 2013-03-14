@@ -195,7 +195,7 @@ form <advanced>`.
 There are no parameters or variables associated with this
 ExpressionEngine tag.
 
-You may alternatively use the tag pair:
+You may alternatively use the tag pair::
 
 	{exp:search:total_results}
 		{total_results}
