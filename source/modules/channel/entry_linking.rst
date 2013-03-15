@@ -208,6 +208,68 @@ Variables
 .. contents::
    :local:
 
+channel
+-------
+
+::
+
+	{channel}
+
+The title of the channel the entry is in.
+
+channel_short_name
+------------------
+
+::
+
+	{channel_short_name}
+
+The short name of the channel the entry is in.
+
+channel_url
+-----------
+
+::
+
+	{channel_url}
+
+The URL of the channel the entry is in.
+
+comment_entry_id_auto_path
+--------------------------
+
+::
+
+	{comment_entry_id_auto_path}
+
+This variable is replaced by the URL set in the "Comment Page URL"
+preference under Admin > Channel Management. The ID number of the entry
+will be automatically added. For example, this::
+
+	<a href="{comment_entry_id_auto_path}">Next entry</a>
+
+Would be rendered like this::
+
+	<a href="http://example.com/index.php/channel/comments/234/">Next entry</a>
+
+comment_url_title_auto_path
+---------------------------
+
+::
+
+	{comment_url_title_auto_path}
+
+This variable is replaced by the URL set in the "Comment Page URL"
+preference under Admin > Channel Management. The URL Title of the entry
+will be automatically added. For example, this::
+
+	<a href="{comment_url_title_auto_path}">Next entry</a>
+
+Would be rendered like this::
+
+	<a href="http://example.com/index.php/channel/comments/ice_cream/">Next entry</a>
+
+
 entry\_id
 ---------
 
