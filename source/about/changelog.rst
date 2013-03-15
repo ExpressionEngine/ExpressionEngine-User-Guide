@@ -14,6 +14,7 @@ Release Date: ?
 
   - ExpressionEngine now requires PHP 5.2.4 and MySQL 5.0.3.
   - Relationships field improvements:
+  
     - New interface
     - Supports multiple relationships
     - Provides infinitely nestable relationship tags
@@ -46,7 +47,7 @@ Release Date: ?
 
 - Bug Fixes:
   
-  - Fixed Remember Me (FINALLY)
+  - Fixed (#16355) Remember Me (FINALLY)
   - Fixed bugs (#16939, #17363, #19133) where the DST setting may
     incorrectly shift stored and displayed times by one hour.
   - Fixed an issue where JSON responses in the control panel were not not

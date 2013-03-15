@@ -25,7 +25,6 @@ Updates and Upgrades
 
 - :doc:`installation/update`
 - :doc:`installation/upgrade_from_1.x`
-- :doc:`installation/upgrade_from_freelancer`
 - :doc:`installation/upgrade_from_core`
 
 **********************
