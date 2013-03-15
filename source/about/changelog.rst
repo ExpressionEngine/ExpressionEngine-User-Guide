@@ -5,6 +5,27 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.5.5
+-------------
+
+Release Date: December 20, 2012
+
+- General Changes:
+
+  - Fixed a bug where date single variables with colons in their names would
+    not render.
+  - Fixed a bug (#18268) where PayPal addresses may fail validation in the
+    Simple Commerce module.
+  - Fixed a bug (#19075) where entries posted via SafeCracker weren't
+    honoring the channel's entry versioning setting.
+  - Fixed a bug (#19088) where ``url_title`` could not be set via dynamic
+    parameters in the Channel Entries tag.
+
+- Developers
+
+  - Fixed a bug where the Member_model::member_delete() method would have issues
+    deleting single members not passed within arrays.
+    
 Version 2.5.4
 -------------
 
@@ -1918,7 +1939,7 @@ General Changes:
    the IP records directly from the ip2nations SQL file.
 -  Added secure forms check to the frontend Comment Editor. See the
    `Version Notes </installation/version_notes_2.1.2.html#comments>`_ and
-   update your `JavaScript <comment-editing>` if needed.
+   update your :ref:`JavaScript <comment-editing>` if needed.
 -  Added a setting to group preferences to disallow editing of html
    formatting buttons.
 -  Added to the default message text for forwarded private messages to

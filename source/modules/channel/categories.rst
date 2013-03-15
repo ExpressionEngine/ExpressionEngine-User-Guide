@@ -235,6 +235,32 @@ parameter <#par_restrict_channel>`_ in conjunction with show\_empty
 
 By default, categories with no entries **will** be included.
 
+show_expired_entries=
+---------------------
+::
+
+	show_expired_entries="yes"
+
+Determines whether expired entries are included when calculating whether 
+a category has entries when the `show\_empty parameter <#par_show_empty>`_ 
+is set to not show empty categories.
+
+By default, expired entries will **not** count when determining whether a 
+category is empty.
+
+show_future_entries=
+--------------------
+::
+
+	show_future_entries="yes"
+
+Determines whether entries dated in the "future" to are included when 
+calculating whether a category has entries when the 
+`show\_empty parameter <#par_show_empty>`_ is set to not show empty categories.
+
+By default, future dated entries will **not** count when determining whether a 
+category is empty.  
+
 status=
 -------
 
@@ -259,7 +285,8 @@ Or exclude statuses using "not"
 	status="not submitted|processing|closed"
 
 By default, the Categories tag will display categories that contain any
-entries with a status *other than* closed.
+entries with a status *other than* closed.  This parameter has no effect unless
+the `show\_empty parameter <#par_show_empty>`_ is set to not show empty categories.
 
 style=
 ------

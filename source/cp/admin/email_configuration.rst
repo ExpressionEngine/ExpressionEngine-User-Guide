@@ -80,6 +80,12 @@ fill out this field, which specifies the server address of the SMTP
 server. This setting is ignored if "SMTP" is not selected as the email
 protocol.
 
+SMTP Server Port
+~~~~~~~~~~~~~~~~
+
+If you need to use a port other than 25 with your SMTP server, then fill out 
+this field. If you're planning on using port 25, you can leave this blank.
+
 SMTP Username
 ~~~~~~~~~~~~~
 

@@ -146,7 +146,7 @@ This is the filename of the dictionary file used for the previous
 preference.
 
 You may download a 230,000 word `dictionary
-file <http://expressionengine.com/files/dictionary.zip>`_ from
+file <http://ellislab.com/asset/file/dictionary.zip>`_ from
 ExpressionEngine.com. Simply unzip the download and place the text file
 (dictionary.txt) in the following location on your server:
 

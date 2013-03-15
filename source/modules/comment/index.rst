@@ -138,7 +138,7 @@ paginate=
 
 ::
 
-	paginate="top" ``paginate="bottom"`` ``paginate="both"``
+	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"
 
 This parameter is for use with entry
 :doc:`pagination <../channel/pagination_page>` and determines where the
@@ -150,6 +150,8 @@ pagination code will appear for your comments:
    list of comments.
 #. **both**: The navigation text and links will appear both above and
    below your list of comments.
+#. **inline**: The navigation text and links will appear within the list
+   of entries for each entry.
 
 If no parameter is specified, the navigation block will default to the
 "bottom" behavior.
@@ -349,7 +351,7 @@ can\_moderate\_comment
 
 	{if can_moderate_comment}
 
-This variable will be used in a conditional to allow `comment
+This variable will be used in a conditional to allow :ref:`comment
 editing <comment-editing>`. It indicates whether a member has
 permission to edit a given comment AND/OR close that comment.
 
@@ -389,7 +391,7 @@ comment\_stripped
 	{comment_stripped}
 
 The body of the comment without any typographical processing and with
-ExpressionEngine tags encoded. This tag is for use in `comment
+ExpressionEngine tags encoded. This tag is for use in :ref:`comment
 editing <comment-editing>`.
 
 comment\_auto\_path
@@ -487,9 +489,9 @@ editable
 
 	{if editable}Show Edit{/if}
 
-This variable will be used in a conditional to allow `comment
+This variable will be used in a conditional to allow :ref:`comment
 editing <comment-editing>`. It indicates whether a member has
-permission to edit a given comment.
+:ref:`permission to edit a given comment <comment-admin-privs>`.
 
 edit\_date
 ----------
@@ -649,7 +651,7 @@ paginate=
 
 ::
 
-	paginate="top" ``paginate="bottom"`` ``paginate="both"``
+	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"
 
 This parameter is for use with entry
 :doc:`pagination <../channel/pagination_page>` and
@@ -661,6 +663,8 @@ determines where the pagination code will appear for your entries:
    list of entries.
 #. **both**: The navigation text and links will appear both above and
    below your list of entries.
+#. **inline**: The navigation text and links will appear within the list
+   of entries for each entry.
 
 If no parameter is specified, the navigation block will default to the
 "bottom" behavior.
@@ -1454,8 +1458,10 @@ AJAX Edit URL Tag
 
 This tag outputs an action url that links to a method that processes the
 submitted data. It is useful if you are `customizing the client-side
-code <#customizing>`_. The method requires both a comment id and either
-a comment or a status variable. For example::
+code <#customizing-client-side-code>`_. The method requires both a comment id and either
+a comment or a status variable. For example:
+
+.. code-block:: js
 
 	$.post("{exp:comment:ajax_edit_url}", {status: "close", comment_id: id, XID: hash});
 
@@ -1502,10 +1508,12 @@ Customizing Client-Side Code
 
 If you need additional control or customized hooks in your markup and
 JavaScript for the comment editor, you can forego the simplified jQuery
-and {exp:comment:comment\_edit\_script} and roll your own. You can use
-the example code below for reference. ::
+and `{exp:comment:edit\_comment\_script} <#comment-edit-script-tag>`_ and roll your own. You can use
+the example code below for reference, or download and fork from our `GitHub repo <https://github.com/EllisLab/CommentEditor>`_.
 
-	<script type="text/javascript" charset="utf-8">
+.. code-block:: html
+
+	<script type="text/javascript">
 		$.fn.CommentEditor = function(options) {
 	
 			var OPT;

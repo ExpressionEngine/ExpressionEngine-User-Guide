@@ -374,6 +374,8 @@ assign a channel or combinations of channels to the group. Only
 channel(s) that are assigned to the group are included in the Channel
 Posting and Editing Privileges above.
 
+.. _comment-admin-privs:
+
 Comment Administration Privileges
 ---------------------------------
 
@@ -392,7 +394,7 @@ via the control panel for channel entries authored by someone else.
 Can edit comments in their own channel entries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Determines whether a member of the group is allowed to **view comments**
+Determines whether a member of the group is allowed to **edit comments**
 via the control panel for their own channel entries.
 
 Can delete comments in their own channel entries

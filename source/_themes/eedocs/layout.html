@@ -5,8 +5,8 @@
 {%- set reldelim2 = reldelim2 is not defined and ' |' or reldelim2 %}
 {%- set url_root = pathto('', 1) %}
 {%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
-{% set project_abbreviation = 'ee' %}{% set project_domain = 'ellislab.com/expressionegine' %}
-{%- if project == 'ExpressionEngine' %}{% set project_abbreviation = 'ee' %}{% set project_domain = 'ellislab.com/expressionegine' %}{% endif -%}
+{% set project_abbreviation = 'ee' %}{% set project_domain = 'ellislab.com/expressionengine' %}
+{%- if project == 'ExpressionEngine' %}{% set project_abbreviation = 'ee' %}{% set project_domain = 'ellislab.com/expressionengine' %}{% endif -%}
 {%- if project == 'CodeIgniter' %}{% set project_abbreviation = 'ci' %}{% set project_domain = 'ellislab.com/codeigniter' %}{% endif -%}
 {%- if project == 'MojoMotor' %}{% set project_abbreviation = 'mm' %}{% set project_domain = 'ellislab.com/mojomotor' %}{% endif -%}
 {%- set exclude_comments = ['index', 'license', 'changelog',
@@ -89,7 +89,7 @@
 		</div>
 
 		<div id="brand" class="{{ project_abbreviation }}">
-			<a href="http://{{ project_domain }}/><img src="{{ pathto('_static/asset/img/' + project_abbreviation + '-logo.gif', 1) }}" alt="{{ project }}"></a>
+			<a href="http://{{ project_domain }}/"><img src="{{ pathto('_static/asset/img/' + project_abbreviation + '-logo.gif', 1) }}" alt="{{ project }}"></a>
 			<p>{{ release }} User Guide</p>
 		</div><!-- /#brand -->
 

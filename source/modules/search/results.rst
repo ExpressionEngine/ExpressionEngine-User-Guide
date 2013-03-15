@@ -186,13 +186,19 @@ search. It is used on the search results page to show the total number
 of matches::
 
 	{exp:search:total_results}
-		{total_results}
-	{/exp:search:total_results}
-
+	
 This may also be used on the template specified by the
 `no\_result\_page <advanced.html#no-result-page>`_ parameter of the
 :doc:`simple search form <simple>` and :doc:`advanced search
 form <advanced>`.
 
-The only variable associated with this tag is {total\_results}.
+There are no parameters or variables associated with this
+ExpressionEngine tag.
 
+You may alternatively use the tag pair::
+
+	{exp:search:total_results}
+		{total_results}
+	{/exp:search:total_results}
+
+The only variable associated with this tag is {total\_results}.
