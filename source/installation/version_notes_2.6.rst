@@ -7,6 +7,7 @@ Altered Language Files
 The following language files were edited:
 
 - system/expressionengine/language/english/fieldtypes_lang.php
+
   - Added key: 'rel_ft_options'			
   - Added key: 'rel_ft_configure'			
   - Added key: 'rel_ft_configure_subtext'	
@@ -28,10 +29,14 @@ The following language files were edited:
   - Added key: 'rel_ft_order_desc'			
   - Added key: 'rel_ft_allow_multi'		
   - Added key: 'rel_ft_allow_multi_subtext'
+
 - system/installer/language/english/installer_lang.php
+
   - Edited key: 'switch_hosts'
+  
 - system/expressionengine/language/english/filemanager_lang.php
-	Added key: 'php_max_filesize'
+
+  - Added key: 'php_max_filesize'
 
 Altered View Files
 ------------------
