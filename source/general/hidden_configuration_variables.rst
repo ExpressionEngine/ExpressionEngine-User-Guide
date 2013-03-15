@@ -386,6 +386,19 @@ templates when Debug has been forcibly set to 0 in your config file.
 
 	$config['remove_unparsed_vars'] = 'y';
 
+server_offset
+~~~~~~~~~~~~~
+
+**Value:** time in minutes
+
+When a server's clock is off, you can set the amount of minutes to offset
+the server time by. To subtract minutes, prefix the number of minutes
+with a minus sign.
+
+::
+
+	$config['server_offset'] = '-15';
+
 smart_static_parsing
 ~~~~~~~~~~~~~~~~~~~~
 

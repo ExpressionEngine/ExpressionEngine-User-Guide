@@ -23,16 +23,3 @@ preferences you can disable the feature in the :doc:`Membership
 Preferences </cp/members/membership_preferences>` page of the
 Control Panel. When disabled, the localization preferences page will not
 be accessible to members in their member profile area.
-
-**A note regarding Daylight Saving Time (DST).**
-
-Since dates/times will adjust themselves automatically to your local
-time, an issue can arise if you view or edit channel entries with dates
-that fall outside your current Daylight Saving Time setting. In order to
-compensate for this EE stores whether DST is active or not on the date
-that an entry is posted. You'll find this setting in the PUBLISH page
-under the options tab. Although it will set itself automatically when
-you post entries, if you find yourself editing the date of an entry,
-changing it so that it falls outside the dates that DST is active in
-your area, you may need to enable or disable this preference for that
-entry otherwise the time may be off by an hour.
