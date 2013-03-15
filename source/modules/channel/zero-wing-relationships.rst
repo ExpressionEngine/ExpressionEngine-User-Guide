@@ -122,7 +122,7 @@ Like so::
 		<p>{description}</p>
 		<p>{ingredients}</p>
 		<h3>Where can I find this pizza?</h3>
-		{parents channel="stores"}
+		{parents channel="stores" field="specialty_pizzas"}
 			<strong>{parents:title}</strong>: <br />
 			{parents:phone} <br />
 			<p>{parents:address}</p>	
@@ -481,19 +481,6 @@ Parent Entries: Showing A Team's History
 It pulls all entries that are parents of the of the current entry.  Say you had
 a Team page where you showed details of a particular team and you wanted to
 show all Games that team had played in.  You could accomplish this like so::
-
-	{exp:channel:entries channel="teams"}
-		<div class="games"><ul>
-			{parents channel="games"}
-				<li>{parents:home:title} ({parents:home_score}) vs {parents:away:title} ({parents:away_score})</li>
-			{/parents}
-		</div>
-	{/exp:channel:entries}
-
-The ``parents`` tag will pull all games in which the current team was either
-the home or away team.  If you wanted to just pull home games, you could use
-the ``field`` parameter to specify which relationship field from the parent
-channel you wanted to examine::
 
 	{exp:channel:entries channel="teams"}
 		<div class="games"><ul>
