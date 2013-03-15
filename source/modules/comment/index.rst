@@ -355,6 +355,15 @@ This variable will be used in a conditional to allow :ref:`comment
 editing <comment-editing>`. It indicates whether a member has
 permission to edit a given comment AND/OR close that comment.
 
+channel\_short\_name
+-------------------
+
+::
+
+	{channel_short_name}
+
+The short name of the channel of that the comment belongs to.
+
 channel\_title
 --------------
 
