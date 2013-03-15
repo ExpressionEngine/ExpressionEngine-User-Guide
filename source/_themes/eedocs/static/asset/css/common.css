@@ -127,12 +127,14 @@ fieldset{ border: 0; }
 .top{ float: right; }
 
 .admonition,
+.highlight-bash,
 .highlight-ee,
 .highlight-ci,
-.highlight-rst,
-.highlight-bash,
+.highlight-html,
+.highlight-js,
 .highlight-perl,
 .highlight-php,
+.highlight-rst,
 .cp-path,
 .codeblock{ 
 	background-color: #F9FEFF; 

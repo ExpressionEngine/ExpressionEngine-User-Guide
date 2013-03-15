@@ -1458,8 +1458,10 @@ AJAX Edit URL Tag
 
 This tag outputs an action url that links to a method that processes the
 submitted data. It is useful if you are `customizing the client-side
-code <#customizing>`_. The method requires both a comment id and either
-a comment or a status variable. For example::
+code <#customizing-client-side-code>`_. The method requires both a comment id and either
+a comment or a status variable. For example:
+
+.. code-block:: js
 
 	$.post("{exp:comment:ajax_edit_url}", {status: "close", comment_id: id, XID: hash});
 
@@ -1506,10 +1508,12 @@ Customizing Client-Side Code
 
 If you need additional control or customized hooks in your markup and
 JavaScript for the comment editor, you can forego the simplified jQuery
-and {exp:comment:comment\_edit\_script} and roll your own. You can use
-the example code below for reference. ::
+and `{exp:comment:edit\_comment\_script} <#comment-edit-script-tag>`_ and roll your own. You can use
+the example code below for reference, or download and fork from our `GitHub repo <https://github.com/EllisLab/CommentEditor>`_.
 
-	<script type="text/javascript" charset="utf-8">
+.. code-block:: html
+
+	<script type="text/javascript">
 		$.fn.CommentEditor = function(options) {
 	
 			var OPT;
