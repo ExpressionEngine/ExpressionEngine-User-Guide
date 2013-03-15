@@ -123,9 +123,9 @@ Like so::
 		<p>{ingredients}</p>
 		<h3>Where can I find this pizza?</h3>
 		{parents channel="Stores"}
-			<strong>{parent:title}</strong>: <br />
-			{parent:phone} <br />
-			<p>{parent:address}</p>	
+			<strong>{parents:title}</strong>: <br />
+			{parents:phone} <br />
+			<p>{parents:address}</p>	
 		{/parents}
 	{/exp:channel:entries}
 
@@ -145,16 +145,14 @@ available.
 The ``{parents}`` tag is a looping tag pair.  So for each Store it finds, it will
 loop over the section of template contained in the pair::
 
-		<strong>{parent:title}</strong>: <br />
-		{parent:phone} <br />
-		<p>{parent:address}</p>	
+		<strong>{parents:title}</strong>: <br />
+		{parents:phone} <br />
+		<p>{parents:address}</p>	
 
 It will replace that section's variables and append it to the final output.
 Here, we use namespacing again to access the parent Store's variables.  We
-access its title, phone and address using ``parent:title``, ``parent:phone``,
-and ``parent:address``.  Notice, that when using the prefix, we use ``parent``,
-singular, not ``parents``, plural.  This is because ``parents`` is not a
-Relationship variable, but a special tag that requires special processing.
+access its title, phone and address using ``parents:title``, ``parents:phone``,
+and ``parents:address``.  
 
 The Music Venue
 ===============
@@ -254,9 +252,9 @@ all the Shows that Band has played.  To do this, we'll need a parent tag::
 				<h3>Recent Shows</h3>
 				{parents channel="Shows" field="bands"}
 					<div class="show">
-						<strong>{parent:title}</strong>
-						<div class="what">{parent:what}</div>
-						<div class="when">{parent:when}</div>
+						<strong>{parents:title}</strong>
+						<div class="what">{parents:what}</div>
+						<div class="when">{parents:when}</div>
 					</div>
 				{/parents}
 			</div>
@@ -269,9 +267,9 @@ The part to notice here is this bit::
 	<h3>Recent Shows</h3>
 	{parents channel="Shows" field="bands"}
 		<div class="show">
-			<strong>{parent:title}</strong>
-			<div class="what">{parent:what}</div>
-			<div class="when">{parent:when}</div>
+			<strong>{parents:title}</strong>
+			<div class="what">{parents:what}</div>
+			<div class="when">{parents:when}</div>
 		</div>
 	{/parents}
 	</div>
@@ -282,13 +280,11 @@ has this particular Band entry as a child through the ``bands`` field and
 display this part of the template for that Show entry::
  
 	<div class="show">
-		<strong>{parent:title}</strong>
-		<div class="what">{parent:what}</div>
-		<div class="when">{parent:when}</div>
+		<strong>{parents:title}</strong>
+		<div class="what">{parents:what}</div>
+		<div class="when">{parents:when}</div>
 	</div>
 
-Notice that when we're namespacing the Show's variables, we use ``parent``
-instead of ``parents``.  
 
 Parent Entries: A Musician's Past Bands
 ---------------------------------------
@@ -489,7 +485,7 @@ show all Games that team had played in.  You could accomplish this like so::
 	{exp:channel:entries channel="Teams"}
 		<div class="games"><ul>
 			{parents channel="Games"}
-				<li>{parent:home:title} ({parent:home_score}) vs {parent:away:title} ({parent:away_score})</li>
+				<li>{parents:home:title} ({parents:home_score}) vs {parents:away:title} ({parents:away_score})</li>
 			{/parents}
 		</div>
 	{/exp:channel:entries}
@@ -502,7 +498,7 @@ channel you wanted to examine::
 	{exp:channel:entries channel="Teams"}
 		<div class="games"><ul>
 			{parents channel="Games" field="home"}
-				<li>{parent:home:title} ({parent:home_score}) vs {parent:away:title} ({parent:away_score})</li>
+				<li>{parents:home:title} ({parents:home_score}) vs {parents:away:title} ({parents:away_score})</li>
 			{/parents}
 		</div>
 	{/exp:channel:entries}
@@ -526,7 +522,7 @@ use the ``siblings`` tag, like so::
 	{exp:channel:entries channel="Games"}
 		<div class="navigation"><ul>
 			{siblings channel="Seasons" field="games"}
-				<li>{sibling:title}	- {sibling:home:title} vs {sibling:away:title}</li>
+				<li>{siblings:title}	- {siblings:home:title} vs {siblings:away:title}</li>
 			{/siblings}
 		</ul></div>
 	{/exp:channel:entries}
@@ -537,10 +533,6 @@ The current entry in the Games channel that the ``channel:entries`` tag has
 pulled up must be related to the channel through the field given to the
 siblings tag.  Otherwise it won't work.  
 
-Notice, that when we are prefixing the variables inside the ``siblings`` loop
-tag, we use the singular case of ``sibling``.  This is to remind you that
-``siblings`` isn't just another relationship variable, but a special tag with a
-special meaning.  
 
 Sibling Entries: Navigating Between Current Teammates
 -----------------------------------------------------
@@ -603,7 +595,8 @@ Will be looped over.  It acts very similarly to a ``channel:entries`` tag.
 Usage: Single Related Entries
 -----------------------------
 
-Given the following channel layout, where ``relationship_field`` is limited to taking a single child entry::
+Given the following channel layout, where ``relationship_field`` is limited to
+taking a single child entry::
 
 	ParentChannel
 		title
@@ -620,7 +613,6 @@ Given the following channel layout, where ``relationship_field`` is limited to t
 		field2					Text
 
 You would access the child entry in your tempalte using the following syntax::
-
 
 	{exp:channel:entries channel="ParentChannel"}
 		{title} - {field1} - {field2}
@@ -682,7 +674,7 @@ using the following syntax::
 
 	{exp:channel:entries channel="ChildChannel"}
 		{siblings field="relationship_field"}
-			{sibling:title} - {sibling:field1} - {sibling:field2}
+			{siblings:title} - {siblings:field1} - {siblings:field2}
 		{/siblings}
 	{/exp:channel:entries}
 
@@ -764,7 +756,7 @@ using the following syntax::
 
 	{exp:channel:entries channel="ChildChannel"}
 		{parents field="relationship_field"}
-			{parent:title} - {parent:field1} - {parent:field2}
+			{parents:title} - {parents:field1} - {parents:field2}
 		{/parents}
 	{/exp:channel:entries}
 
