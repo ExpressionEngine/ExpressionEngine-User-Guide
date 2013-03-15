@@ -14,6 +14,7 @@ Release Date: ?
 
   - ExpressionEngine now requires PHP 5.2.4 and MySQL 5.0.3.
   - Relationships field improvements:
+  
     - New interface
     - Supports multiple relationships
     - Provides infinitely nestable relationship tags
