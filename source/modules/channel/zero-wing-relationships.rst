@@ -57,7 +57,7 @@ Child Entries: Displaying the Stores and their Menus
 The first thing you're likely to want to do in this scenario is list the stores
 and their current menus of specialty pizzas.  So lets go ahead and do that::
 
-	{exp:channel:entries channel="Stores"}
+	{exp:channel:entries channel="stores"}
 		<h1>{title}</h1>
 		<p>Phone: {phone}</p>
 		<p>Address: {address}</p>
@@ -117,12 +117,12 @@ a description of the pizza, list its ingredients and show which stores
 currently have the pizza available.  You can do this with the ``{parents}`` tag.
 Like so::
 
-	{exp:channel:entries channel="Pizzas"}
+	{exp:channel:entries channel="pizzas"}
 		<h2>{title}</h2>			
 		<p>{description}</p>
 		<p>{ingredients}</p>
 		<h3>Where can I find this pizza?</h3>
-		{parents channel="Stores"}
+		{parents channel="stores"}
 			<strong>{parents:title}</strong>: <br />
 			{parents:phone} <br />
 			<p>{parents:address}</p>	
@@ -196,7 +196,7 @@ bands that are playing in them.  We'll assume the entry is set to expire the
 day after the show, so we don't have to worry about any date stuff for now.
 Here's what that template might look like::
     	 	
-	{exp:channel:entries channel="Shows"}
+	{exp:channel:entries channel="shows"}
 		<div class="show">
 			<h2><a href="{path="shows/index"}/{url_title}">{title}</a></h2>
 			<div class="show-body">
@@ -236,7 +236,7 @@ Parent Entries: A Band's Recent Shows
 Now let's say we want a page for each Band.  And on that page, we want to display
 all the Shows that Band has played.  To do this, we'll need a parent tag::
 
-	{exp:channel:entries channel="Bands" limit="1"}
+	{exp:channel:entries channel="bands" limit="1"}
 		<div class="band">
 			<h2>{title}</h2>
 			<span class="style">{style}</span>
@@ -250,7 +250,7 @@ all the Shows that Band has played.  To do this, we'll need a parent tag::
 			</div>
 			<div class="shows">
 				<h3>Recent Shows</h3>
-				{parents channel="Shows" field="bands"}
+				{parents channel="shows" field="bands"}
 					<div class="show">
 						<strong>{parents:title}</strong>
 						<div class="what">{parents:what}</div>
@@ -265,7 +265,7 @@ The part to notice here is this bit::
 
 	<div class="shows">
 	<h3>Recent Shows</h3>
-	{parents channel="Shows" field="bands"}
+	{parents channel="shows" field="bands"}
 		<div class="show">
 			<strong>{parents:title}</strong>
 			<div class="what">{parents:what}</div>
@@ -337,7 +337,7 @@ The 'Spring 2013' season. While we're at it, lets list all the players on each
 team, so that players know which team they've been placed on.  Your template
 might look something like this::
 
-	{exp:channel:entries channel="Seasons" title="Spring 2013" limit="1"}
+	{exp:channel:entries channel="seasons" title="Spring 2013" limit="1"}
 		<div class="season">
 			<h2>{title}</h2>
 			<h3>Teams</h3>
@@ -366,7 +366,7 @@ might look something like this::
 Let's break that down to see what we're doing.  The first thing you'll see is
 the good old channel entries tag::
 
-	{exp:channel:entries channel="Seasons" title="Spring 2013" limit="1"}	
+	{exp:channel:entries channel="seasons" title="Spring 2013" limit="1"}	
 
 We're pulling a single entry from the Seasons channel.  The one titled "Spring
 2013".  Just inside of that we see our standard ``{title}`` tag to pull the
@@ -402,7 +402,7 @@ the previous and next seasons to a season's entry.  You could give it a
 ``previous`` and ``next`` field.  In your ``channel:entries`` tag you might
 access them like this::
 
-	{exp:channel:entries channel="Seasons" url-title="winter-2013" limit="1"}
+	{exp:channel:entries channel="seasons" url-title="winter-2013" limit="1"}
 		<a href="{path="seasons/index"}/{previous:url_title}">{previous:title}</a>
 		<a href="{path="seasons/index"}/{next:url_title}">{next:title}</a>
 
@@ -457,7 +457,7 @@ Let's try another example.  Let's say you need another page on this league
 website that shows the details of a single game: when, who played and who
 won.  That template might look something like this::
 
-	{exp:channel:entries channel="Games" limit="1"}
+	{exp:channel:entries channel="games" limit="1"}
 		<h2>{home:title} ({home_score}) vs {away:title} ({away_score})</h2>
 		<p>In this game the {home:title} played the {away:title}.</p>
 		<p>The final scores were {home:title} with {home_score} and {away:title} with {away_score}.</p>
@@ -482,9 +482,9 @@ It pulls all entries that are parents of the of the current entry.  Say you had
 a Team page where you showed details of a particular team and you wanted to
 show all Games that team had played in.  You could accomplish this like so::
 
-	{exp:channel:entries channel="Teams"}
+	{exp:channel:entries channel="teams"}
 		<div class="games"><ul>
-			{parents channel="Games"}
+			{parents channel="games"}
 				<li>{parents:home:title} ({parents:home_score}) vs {parents:away:title} ({parents:away_score})</li>
 			{/parents}
 		</div>
@@ -495,9 +495,9 @@ the home or away team.  If you wanted to just pull home games, you could use
 the ``field`` parameter to specify which relationship field from the parent
 channel you wanted to examine::
 
-	{exp:channel:entries channel="Teams"}
+	{exp:channel:entries channel="teams"}
 		<div class="games"><ul>
-			{parents channel="Games" field="home"}
+			{parents channel="games" field="home"}
 				<li>{parents:home:title} ({parents:home_score}) vs {parents:away:title} ({parents:away_score})</li>
 			{/parents}
 		</div>
@@ -519,9 +519,9 @@ would require an ``if`` tag to determine whether the game we're showing in
 navigation is the current game. An easier way to accomplish this would be to
 use the ``siblings`` tag, like so::
 
-	{exp:channel:entries channel="Games"}
+	{exp:channel:entries channel="games"}
 		<div class="navigation"><ul>
-			{siblings channel="Seasons" field="games"}
+			{siblings channel="seasons" field="games"}
 				<li>{siblings:title}	- {siblings:home:title} vs {siblings:away:title}</li>
 			{/siblings}
 		</ul></div>
@@ -573,7 +573,7 @@ Given the following channel layout::
 
 You would access the child entries in your template using the following syntax::
 
-	{exp:channel:entries channel="ParentChannel"}
+	{exp:channel:entries channel="parentChannel"}
 		{title} - {field1} - {field2}
 		{relationship_field}
 			{relationship_field:title}
@@ -614,7 +614,7 @@ taking a single child entry::
 
 You would access the child entry in your tempalte using the following syntax::
 
-	{exp:channel:entries channel="ParentChannel"}
+	{exp:channel:entries channel="parentChannel"}
 		{title} - {field1} - {field2}
 		{relationship_field:title}
 		{relationship_field:field1}
@@ -672,7 +672,7 @@ Given the following channel layout::
 You can access siblings of the current entry in ``channel:entries`` tag
 using the following syntax::
 
-	{exp:channel:entries channel="ChildChannel"}
+	{exp:channel:entries channel="childChannel"}
 		{siblings field="relationship_field"}
 			{siblings:title} - {siblings:field1} - {siblings:field2}
 		{/siblings}
@@ -720,7 +720,7 @@ Since an entry can have multiple parent entries, we may need to specify which
 channel should be considered the parent when pulling an entry's siblings.  To
 this, use the channel parameter::
 
-    {siblings channel="ParentChannel" field="relationship_field"}
+    {siblings channel="parentChannel" field="relationship_field"}
 
 This will declare that we are looking for siblings of the current entry using
 ``ParentChannel`` as the parent.
@@ -754,7 +754,7 @@ Given the following channel layout::
 You can access the parents of the current entry in a ``channel:entries`` tag
 using the following syntax::
 
-	{exp:channel:entries channel="ChildChannel"}
+	{exp:channel:entries channel="childChannel"}
 		{parents field="relationship_field"}
 			{parents:title} - {parents:field1} - {parents:field2}
 		{/parents}
@@ -801,7 +801,7 @@ Since an entry can have multiple parent entries in multiple channels,
 potentially with the same field, we may need to specify which channel we want
 to examine for parents. To this, use the channel parameter::
 
-    {parents channel="ParentChannel" field="relationship_field"}
+    {parents channel="parentChannel" field="relationship_field"}
 
 This lets us declare which channel we want to look for parent entries in.  Only
 that channel will be examined.
