@@ -140,43 +140,12 @@ Release Date: ?
   - Added ``Localize::format_date`` to convert a Unix timestamp into a
     formatted date string.
   - ``Localize::now`` property now accounts for server offset.
-  - Deprecated ``Localize::timestamp_to_gmt``, use Date helper's
-    ``mysql_to_unix()`` instead.
-  - Deprecated ``Localize::set_localized_time``.
-  - Deprecated ``Localize::set_server_time``.
-  - Deprecated ``Localize::set_server_offset``.
-  - Deprecated ``Localize::set_localized_offset``.
-  - Deprecated ``Localize::set_human_time``, use ``Localize::human_time``
-    instead.
-  - Deprecated ``Localize::convert_human_date_to_gmt``, use
-    ``Localize::string_to_timestamp`` instead.
-  - Deprecated ``Localize::simpl_offset``.
-  - Deprecated ``Localize::format_timespan``, use Date helper's
-    ``timespan()`` instead.
-  - Deprecated ``Localize::fetch_date_params``.
-  - Deprecated ``Localize::decode_date``, use
-    ``Localize::format_date`` instead.
-  - Deprecated ``Localize::convert_timestamp``, use
-    ``Localize::format_date`` instead.
-  - Deprecated ``Localize::zone_offset``.
-  - Deprecated ``Localize::timezone_menu``, use Date helper's
-    ``timezone_menu()`` instead.
-  - Deprecated ``Localize::zones`` method and property, use Date helper's
-    ``timezones()`` instead.
-  - Deprecated ``Localize::fetch_days_in_month``, use Date helper's
-    ``days_in_month()`` instead.
-  - Deprecated ``Localize::adjust_date``, use ``Calendar::adjust_date``
-    instead.
-  - Deprecated ``Session::update_cookies``, unused, has no correlating method
   - Changed the CP view file structure to inherit from a master template.
     Please check your view file overrides.
   - String helper is now loaded automatically.
-  - Deprecated ``Functions::remove_double_slashes``, use String helper's
-    ``reduce_double_slashes()`` instead.
   - Updated the Email library to be more consistent with CI, including a number 
     of CI bug fixes.  Please see the documentation for full details on usage
     recommendations.
-  - Deprecated ``Email::_get_ip()`` and ``Email::_set_headers()``
   - Added ``Email::set_headers()``.
   - Added the following public Email class variables: ``smtp_keepalive``, 
     ``smtp_crypto`` and ``dsn``.
@@ -193,6 +162,28 @@ Release Date: ?
   - Channel Entries API will use current time as the default edit date when
     adding or updating an entry if the edit date is not explicitly set.
   - **Reactor:** Added ability to have multiple fieldtypes in one add-on package.
+  - Deprecated methods:
+
+    - ``Localize::timestamp_to_gmt``, use Date helper's ``mysql_to_unix()`` instead.
+    - ``Localize::set_localized_time``.
+    - ``Localize::set_server_time``.
+    - ``Localize::set_server_offset``.
+    - ``Localize::set_localized_offset``.
+    - ``Localize::set_human_time``, use ``Localize::human_time`` instead.
+    - ``Localize::convert_human_date_to_gmt``, use ``Localize::string_to_timestamp`` instead.
+    - ``Localize::simpl_offset``
+    - ``Localize::format_timespan``, use Date helper's ``timespan()`` instead.
+    - ``Localize::fetch_date_params``.
+    - ``Localize::decode_date``, use ``Localize::format_date`` instead.
+    - ``Localize::convert_timestamp``, use ``Localize::format_date`` instead.
+    - ``Localize::zone_offset``.
+    - ``Localize::zones`` method and property.
+    - ``Localize::fetch_days_in_month``, use Date helper's ``days_in_month()`` instead.
+    - ``Localize::adjust_date``, use ``Calendar::adjust_date`` instead.
+    - ``Email::_get_ip()````
+    - ``Email::_set_headers()``
+    - ``Session::update_cookies``
+    - ``Functions::remove_double_slashes``, use String helper's ``reduce_double_slashes()`` instead.
 
 Version 2.5.5
 -------------
