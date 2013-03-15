@@ -14,7 +14,7 @@ Release Date: ?
 
   - ExpressionEngine now requires PHP 5.2.4 and MySQL 5.0.3.
   - Relationships field improvements:
-  
+
     - New interface
     - Supports multiple relationships
     - Provides infinitely nestable relationship tags
@@ -24,8 +24,12 @@ Release Date: ?
     localization and handling of Daylight Saving Time rules.
   - Added ``inline`` option to ``paginate`` parameter.
   - Added new variables to the Channel Next/Previous tags:
-    ``{channel_short_name}``,  ``{channel}``, ``{channel_url}``,
-    ``{comment_entry_id_auto_path}`` and  ``{comment_url_title_auto_path}``.
+
+    - ``{channel_short_name}``
+    - ``{channel}``
+    - ``{channel_url}``
+    - ``{comment_entry_id_auto_path}``
+    - ``{comment_url_title_auto_path}``
   - Entry View Tracking is now disabled by default.
   - Server offset setting has been removed from Localization Settings and is
     now a hidden configuration variable only, called ``server_offset``.
