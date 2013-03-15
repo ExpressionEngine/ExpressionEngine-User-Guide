@@ -185,7 +185,7 @@ Release Date: ?
     - ``Localize::zones`` method and property.
     - ``Localize::fetch_days_in_month``, use Date helper's ``days_in_month()`` instead.
     - ``Localize::adjust_date``, use ``Calendar::adjust_date`` instead.
-    - ``Email::_get_ip()````
+    - ``Email::_get_ip()``
     - ``Email::_set_headers()``
     - ``Session::update_cookies``
     - ``Functions::remove_double_slashes``, use String helper's ``reduce_double_slashes()`` instead.
