@@ -5,6 +5,195 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.6.0
+-------------
+
+Release Date: ?
+
+- General Changes:
+
+  - ExpressionEngine now requires PHP 5.2.4 and MySQL 5.0.3.
+  - Relationships field improvements:
+    - New interface
+    - Supports multiple relationships
+    - Provides infinitely nestable relationship tags
+    - Provides access to siblings and parents
+    - SafeCracker support
+  - Timezone selection menus now include all timezones for automatic date
+    localization and handling of Daylight Saving Time rules.
+  - Added ``inline`` option to ``paginate`` parameter.
+  - Added new variables to the Channel Next/Previous tags:
+    ``{channel_short_name}``,  ``{channel}``, ``{channel_url}``,
+    ``{comment_entry_id_auto_path}`` and  ``{comment_url_title_auto_path}``.
+  - Entry View Tracking is now disabled by default.
+  - Server offset setting has been removed from Localization Settings and is
+    now a hidden configuration variable only, called ``server_offset``.
+  - Added SMTP Server Port to the Email Configuration page.
+  - Added a hidden config, ``email_smtp_crypto``, that allows you to specify an
+    encryption protocal for SMTP email.
+  - PHP's upload_max_filesize setting is now displayed in the File Upload
+    Preferences form. 
+  - Added a status_code="" parameter to the {redirect} tag allowing you to specify
+    the status code of the redirect.  Currently only accepts 3xx status
+    codes.
+  - smtp_password is now an input of type="password" in Admin->Email Configuration.
+  - Added category_url_title to the category edit page table after Category Name.
+  - Changed password reset flow to remove an unnecessary step and force them to change
+    their password.
+  - Added ``channel_short_name`` variable to the comment entries tag.
+  - Added the ability to use the system default thumbnails inside file field
+    variable pairs.
+
+- Bug Fixes:
+  
+  - Fixed Remember Me (FINALLY)
+  - Fixed bugs (#16939, #17363, #19133) where the DST setting may
+    incorrectly shift stored and displayed times by one hour.
+  - Fixed an issue where JSON responses in the control panel were not not
+    always sent as UTF-8
+  - Fixed a bug (#18107) where email links may not render correctly in the
+    Forum module.
+  - Fixed a bug (#18230) where the edit date was being saved to the database
+    as a localized date on initial entry save.
+  - Fixed a bug (#18308) where an entry's edit date was incorrectly tied to
+    the entry date on the initial save.
+  - Fixed a bug with the Channel Entries API when trying to save a custom
+    field with type "real" and no data.
+  - Fixed a bug (#19105) where the updater may have problems updating from
+    EE 1.x due to config settings.
+  - Fixed a bug (#16951) where the search module ignored the search form's where
+    field selection and defaulted to searching for all words.
+  - Fixed a bug (#16985) where ExpressionEngine tags were not encoded in some
+    category fields.
+  - Fixed a bug (#17283) where setting the comment edit time limit to 0 did not
+    result in no time limit on editing.
+  - Fixed a bug (#19110) where a MySQL error occured when using an exact search
+    parameter in the channel entries tag and not including a search term.
+  - Fixed a bug (#19130) where an improper cookie domain could be used when
+    switching MSM sites, making it impossible to switch sites via the control
+    panel.
+  - Fixed a very rare bug (#19140) where a PHP error could occur when sending
+    comment notifications after a comment status change.
+  - Fixed a bug (#19158) where a PHP error could occur when submitting an RTE
+    field with code tags in it.
+  - Fixed a bug (#17032) where changes to the Admin localization settings did
+    not affect the default user localization.
+  - Fixed a bug (#19180) in SafeCracker File where it was not MSM compatible
+    when used in SafeCracker.
+  - Fixed a bug (#19192) where IP country searches and ban checks could trigger
+    a MySQL error using some IPs.
+  - Fixed a bug (#18278) in SafeCracker where it was possible to manipulate the
+    parameter behavior.
+  - Fixed a bug in SafeCracker where checks on the posted status did not follow
+    member group preference settings.
+  - Fixed a bug (#17259) in SafeCracker where the relationships options variable
+    pair was not parsed outside the custom field loop.
+  - Modified string cleaning to accommodate an iconv bug that could result in
+    form data being lost it contained invalid characters (#19134). 
+  - Fixed a bug in the IP to Nation module where environmental factors could
+    cause an erroneus cache full error when attempting to update the IP
+    database.
+  - Fixed a bug (#19223) in the Metaweblog API where failed new entries did not
+    elicit a proper fault code.
+  - Fixed a bug (#19220) in the Simple Commerce module where a MySQL error could
+    occur after an update from 1.x due to a missing field.
+  - Fixed a bug (#19193) in the Comment Module where closing a comment via front
+    end editing did not properly update all associated statistics.
+  - Fixed a bug (#19170) where a PHP error could result when $_GET variables
+    included an array.
+  - Fixed a bug (#19241) where a PHP error could occur when calling the Channel
+    Structure API's modify_channel() method.
+  - Removed unused error array from the batch update method (#19251).
+  - Fixed a bug (#19250) in the file field output where non-existent variables
+    were parsed as if a path existed.
+  - Fixed a bug (#19114) where the forgot password language was ambiguous.
+  - Fixed a bug where uploading multiple files using the multiple="multiple" 
+    attribute would cause an error in SafeCracker.
+  - Fixed a bug (#19063) where URLs mentioned in module descriptions may not
+    be masked.
+  - Fixed a bug (#18353) where showing an RTE field as an excerpt in a
+    Search Results tag may be missing spaces between words.
+  - Fixed a bug (#18102) where members could only edit entries if the
+    publishing was was enabled.
+  - Fixed a bug (#19094) where using the RTE via SafeCracker may show PHP
+    errors upon submission.
+  - Fixed a bug (#18244) where duplicating a site's entries via MSM would
+    have duplicate entry data for the newly-created entries in the
+    channel_data table.
+  - Fixed a bug (#18221) where using the date-picker in a SafeCracker tool
+    would lose the leading zero on the hour segment.
+  - Fixed a bug (#18270) where trying to edit a file with some special
+    characters in the file name would show an Unauthorized error.
+  - Fixed a bug (#19102) where the ``{excerpt}`` and ``{full_text}`` tags in
+    the Search Results tag pair showed regular expression escape characters.
+  - Fixed a bug (#19062) where autosaving an empty File field would save the
+    incorrect data and may show a PHP error when editing the entry.
+  - Fixed a bug (#18217) where an "Invalid GET Data" error may appear when
+    certain safe characters where part of a query string value.
+
+- Developers
+
+  - The Localize class has been rewritten to use PHP's DateTime class for
+    better localization and daylight savings time handling.
+  - Added ``Localize::string_to_timestamp`` method for converting a
+    pre-localized or non-localized time string into a Unix timestamp.
+  - Added ``Localize::format_date`` to convert a Unix timestamp into a
+    formatted date string.
+  - ``Localize::now`` property now accounts for server offset.
+  - Deprecated ``Localize::timestamp_to_gmt``, use Date helper's
+    ``mysql_to_unix()`` instead.
+  - Deprecated ``Localize::set_localized_time``.
+  - Deprecated ``Localize::set_server_time``.
+  - Deprecated ``Localize::set_server_offset``.
+  - Deprecated ``Localize::set_localized_offset``.
+  - Deprecated ``Localize::set_human_time``, use ``Localize::human_time``
+    instead.
+  - Deprecated ``Localize::convert_human_date_to_gmt``, use
+    ``Localize::string_to_timestamp`` instead.
+  - Deprecated ``Localize::simpl_offset``.
+  - Deprecated ``Localize::format_timespan``, use Date helper's
+    ``timespan()`` instead.
+  - Deprecated ``Localize::fetch_date_params``.
+  - Deprecated ``Localize::decode_date``, use
+    ``Localize::format_date`` instead.
+  - Deprecated ``Localize::convert_timestamp``, use
+    ``Localize::format_date`` instead.
+  - Deprecated ``Localize::zone_offset``.
+  - Deprecated ``Localize::timezone_menu``, use Date helper's
+    ``timezone_menu()`` instead.
+  - Deprecated ``Localize::zones`` method and property, use Date helper's
+    ``timezones()`` instead.
+  - Deprecated ``Localize::fetch_days_in_month``, use Date helper's
+    ``days_in_month()`` instead.
+  - Deprecated ``Localize::adjust_date``, use ``Calendar::adjust_date``
+    instead.
+  - Deprecated ``Session::update_cookies``, unused, has no correlating method
+  - Changed the CP view file structure to inherit from a master template.
+    Please check your view file overrides.
+  - String helper is now loaded automatically.
+  - Deprecated ``Functions::remove_double_slashes``, use String helper's
+    ``reduce_double_slashes()`` instead.
+  - Updated the Email library to be more consistent with CI, including a number 
+    of CI bug fixes.  Please see the documentation for full details on usage
+    recommendations.
+  - Deprecated ``Email::_get_ip()`` and ``Email::_set_headers()``
+  - Added ``Email::set_headers()``.
+  - Added the following public Email class variables: ``smtp_keepalive``, 
+    ``smtp_crypto`` and ``dsn``.
+  - Added an override for ``Email::_mime_types()`` that uses the mimes config
+    file to define mimes.
+  - Email::send() now automatically clears parameters if the request was
+    successful, which may have implications for success messages.
+  - Email::clear() should be used instead of Email:initialize() to manually
+    clear parameters.
+  - Channel Entries API now allows new or updated entry edit date to be
+    explicitly set.
+  - Channel Entries API will use current time as the default entry date when
+    adding or updating an entry if the entry date is not explicitly set.
+  - Channel Entries API will use current time as the default edit date when
+    adding or updating an entry if the edit date is not explicitly set.
+  - **Reactor:** Added ability to have multiple fieldtypes in one add-on package.
+
 Version 2.5.5
 -------------
 

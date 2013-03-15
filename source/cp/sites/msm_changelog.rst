@@ -1,6 +1,14 @@
 Multiple Site Manager
 =====================
 
+Version 2.1.5
+-------------
+
+Release Date: ?
+
+- Fixed a bug (#19067) where updating a site's short name failed to update any
+  associated template folder's name.
+
 Version 2.1.4
 -------------
 

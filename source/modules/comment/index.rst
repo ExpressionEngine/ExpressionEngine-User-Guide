@@ -356,7 +356,7 @@ editing <comment-editing>`. It indicates whether a member has
 permission to edit a given comment AND/OR close that comment.
 
 channel\_short\_name
--------------------
+--------------------
 
 ::
 
