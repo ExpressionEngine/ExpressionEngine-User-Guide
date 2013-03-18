@@ -8,6 +8,7 @@ Relationships
 ************
 Introduction
 ************
+// TODO Briefly cover creating a relationship field.
 
 Relationships are an extremely powerful tool that allow you to connect Entries
 in one channel to those in another one, or even to other entries in the same
@@ -17,6 +18,7 @@ straightforward and easy.  If you're here, we'll assume you've read the
 documentation on using the relationships field in your channels and are looking
 to write your templates.  If you're ready to tackle templating your related
 channel data, read on.
+
 
 ********
 Examples
@@ -32,7 +34,7 @@ Let's start with a very simple example.  You've been tasked with building a
 website for a small chain of local pizza joints.  These pizza places share a
 menu of specialty pizzas, but each individual store manager gets to decide
 which pizzas will be available on any particular week.  You need to make a
-website for the whole chain with store pages for each store that display that
+website for the whole chain with store pages for each store to display that
 store's menu for the week.
 
 Since this is a template writing tutorial, we'll go ahead and layout the
@@ -54,8 +56,8 @@ channels for you::
 Child Entries: Displaying the Stores and their Menus
 ----------------------------------------------------
 
-The first thing you're likely to want to do in this scenario is list the stores
-and their current menus of specialty pizzas.  So lets go ahead and do that::
+First things first.  We need to write a page to list each Store and which
+pizzas they have to offer.  We do that with this template::
 
 	{exp:channel:entries channel="stores"}
 		<h1>{title}</h1>
@@ -69,10 +71,10 @@ and their current menus of specialty pizzas.  So lets go ahead and do that::
 		{/specialty_pizzas}
 	{/exp:channel:entries}
 
-We start with the standard ``{exp:channel:entries}`` tag. We're pulling from the
-Stores channel.  For each Store entry we're going to display the Store name,
-the Store's phone number and its address.  Then we'll display which specialty
-pizzas are available::
+We start with the standard ``{exp:channel:entries}`` tag, pulling from the
+Stores channel.  For each Store entry we display the Store name, the Store's
+phone number and its address.  Then we display which specialty pizzas are
+available::
 
 	<h2>Specialty Pizzas</h2>
 	{specialty_pizzas}
@@ -95,12 +97,11 @@ replaced by the title of the current Pizza entry,
 ``{specialty_pizzas:description}`` will be replaced by its description and so
 on.  
 
-You'll notice that what we're doing here is prefixing the names of the
-variables in the Pizza channel with the name of the Relationship field that
-relates the Store channel to the Pizza channel.  We call this namespacing and
-it's a very powerful tool. This is what allows us to access the variables of
-the related entries, even though they may be the same as those of the parent
-entries.  
+Notice that what we're doing here is prefixing the names of the variables in
+the Pizza channel with the name of the Relationship field that relates the
+Store channel to the Pizza channel.  We call this namespacing and it's a very
+powerful tool. This is what allows us to access the variables of the related
+entries, even though they may be the same as those of the parent entries.  
 
 Inside the ``{specialty_pizzas}`` tag pair, you can use ``{title}`` to display
 the title of the current Store entry and ``{specialty_pizzas:title}`` to
@@ -122,7 +123,7 @@ Like so::
 		<p>{description}</p>
 		<p>{ingredients}</p>
 		<h3>Where can I find this pizza?</h3>
-		{parents channel="stores" field="specialty_pizzas"}
+		{parents field="specialty_pizzas"}
 			<strong>{parents:title}</strong>: <br />
 			{parents:phone} <br />
 			<p>{parents:address}</p>	
@@ -130,17 +131,21 @@ Like so::
 	{/exp:channel:entries}
 
 In this template we list the Pizza channel's variables -- ``{title}``,
-``{description}`` and ``{ingredients}``.  Then we have a section in which we
-show which stores this pizza is currently available.  To accomplish this, we
-use the ``{parents}`` tag.  
+``{description}`` and ``{ingredients}``.  Then we have a section to show in
+which stores this pizza is currently available.  To accomplish this, we use the
+``{parents}`` tag.  
 
-It will pull entries that have the current Entry as a child through at least
-one relationship tag.  You can get more specific by specifying a channel and a
-field that you want to check to see if this entry is a child.  In this case,
-we're passing it the Stores channel.  It will look for all entries in the
-Stores channel that have the current Pizza entry as a child, in any Relationship field.
-This will have the result of finding all Stores that currently have this Pizza
-available. 
+// TODO This is confusing.
+
+It will pull entries that have the current Entry as a child through the field
+that you specify.  If you use the same field group in multiple channels, you
+may want to also specify the channel.  In this case, we're passing it the
+``specialty_pizzas`` field.  It will look for all entries attached to any
+channel through the ``specialty_pizzas`` field that have the current Pizza
+entry as a child.  This will have the result of finding all Stores that
+currently have this Pizza available. 
+
+// END TODO
 
 The ``{parents}`` tag is a looping tag pair.  So for each Store it finds, it will
 loop over the section of template contained in the pair::
@@ -159,8 +164,8 @@ The Music Venue
 
 Another case in which Relationships can be handy is the Music Venue website.
 We'll assume this is a small venue that plays a lot of local bands.  These
-bands return for many shows. They also change pretty frequently.  And it may be
-many of the same musicians moving between the bands as they breakup, reform or
+bands return for many shows. They also change pretty frequently.  And it is
+often the same musicians moving between the bands as they breakup, reform or
 trade musicians.  So we'll want three channels, ``Bands``, ``Musicians``, and
 ``Shows``.  Here's the layout::
 
@@ -191,10 +196,10 @@ trade musicians.  So we'll want three channels, ``Bands``, ``Musicians``, and
 Child Entries: Upcoming Shows 
 -----------------------------
 
-The first thing we'll tackle is creating a listing of upcoming shows and the
-bands that are playing in them.  We'll assume the entry is set to expire the
-day after the show, so we don't have to worry about any date stuff for now.
-Here's what that template might look like::
+The first thing we tackle is creating a listing of upcoming shows and the bands
+that are playing in them.  We assume the Show entry is set to expire the day
+after the show, so we don't have to worry about any date stuff for now.  Here's
+what that template might look like::
     	 	
 	{exp:channel:entries channel="shows"}
 		<div class="show">
@@ -222,19 +227,24 @@ Most of this should look pretty familiar to you if you're familiar with the
 		{/bands}
 	</div>
 
-This section uses the Relationships fields.  On the publish page, we'll have
-attached the Bands that are going to playing this show to the show's entry.
-With the ``{bands}`` tag, we are now looping over those bands.  For each band
-we attached we're displaying its name ``{bands:title}`` and what style of music
-they play ``{bands:style}``. Again, the namespacing of relationships with the
-relationship tag name allows us to specify which title we want, in this case,
-the Band's and not the Show's.  
+This section uses the Relationships field.  On the publish page, we attached
+the Bands that are going to playing this Show to the Show's entry.  With the
+``{bands}`` tag, we are now looping over those bands.  For each Band entry
+attached to the Show entry, we append this line of the template with the
+variables replaced::
+
+		<div class="band"><strong>{bands:title}</strong> {bands:style}</div>
+
+In each loop, we replace the Band's name ``{bands:title}`` and what style of
+music they play ``{bands:style}``. Again, the namespacing of relationships with
+the relationship tag name allows us to specify which title we want, in this
+case, the Band's and not the Show's.  
 
 Parent Entries: A Band's Recent Shows
 -------------------------------------
 
-Now let's say we want a page for each Band.  And on that page, we want to display
-all the Shows that Band has played.  To do this, we'll need a parent tag::
+Now we want to build a page for each Band.  And on that page, we want to
+display all the Shows that Band has played.  To do this, we need a parent tag::
 
 	{exp:channel:entries channel="bands" limit="1"}
 		<div class="band">
@@ -261,7 +271,7 @@ all the Shows that Band has played.  To do this, we'll need a parent tag::
 		</div>
 	{/exp:channel:entries}
 
-The part to notice here is this bit::
+The part to notice is this bit::
 
 	<div class="shows">
 	<h3>Recent Shows</h3>
