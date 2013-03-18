@@ -296,15 +296,45 @@ display this part of the template for that Show entry::
 	</div>
 
 
-Parent Entries: A Musician's Past Bands
+Parent Entries: A Musician's Bands
 ---------------------------------------
 
------ Under construction ----
+On the musician page, we want to be able to display the bands a musican currently 
+plays with.  To do that, we use the ``{parents}`` tag again. Here
+is the template::
 
-Sibling Entries: A Musician's Past Bandmates
---------------------------------------------
+	{exp:channel:entries channel="musicians" limit="1"}
+		<div class="musician">
+			<h2>{first_name} {last_name}<h2>
+			<div class="instruments">
+				{instruments}
+			</div>
+			<div class="biography">
+				{biography}
+			</div>
+			<div class="past-bands">
+				<ul>
+				{parents field="members"}
+					<li class="band-name"><a href="{path="bands/index"}/{parents:url-title}">{parents:title}</a></li>
+				{/parents}
+				</ul>
+			</div>
+		</div>
+	{/exp:channel:entries}
 
------ Under construction ----
+The relevant section is this::
+	
+	<div class="past-bands">
+		<ul>
+		{parents field="members"}
+			<li class="band-name"><a href="{path="bands/index"}/{parents:url-title}">{parents:title}</a></li>
+		{/parents}
+		</ul>
+	</div>
+
+Here we use the ``{parents}`` tag to access the Band entries that this Musician
+is a member of.  Since the ``members`` field is only used in the Band channel
+we do not need to specify the channel.  It will only pull Bands. 
 
 The Community Sports League
 ===========================
