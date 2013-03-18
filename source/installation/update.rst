@@ -13,8 +13,8 @@ ExpressionEngine 2 to the latest version of ExpressionEngine 2.
 
 -  Back-up your ExpressionEngine database.
 -  Back-up all ExpressionEngine files and folders.
--  `Download <https://secure.expressionengine.com/download.php>`_ the
-   most current version of ExpressionEngine and unzip the software to
+-  `Download <https://store.ellislab.com/manage>`_ the
+   most recent release of ExpressionEngine and unzip the software to
    your local computer.
 -  Take Your Site Offline
    It is recommended that you take your site offline for the duration of
@@ -128,9 +128,6 @@ be taken:
    version-specific changes that may need to be made.
 -  If you're updating from a previous version, you might need to sync your file
    upload directories for files to work properly.
--  If you use a local version of the documentation, replace your copy
-   with the latest from our `Download
-   Area <https://secure.expressionengine.com/download.php>`_.
 
 You're Done!
 ------------
