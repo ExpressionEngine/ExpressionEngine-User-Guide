@@ -189,6 +189,7 @@ Release Date: ?
     - ``Email::_set_headers()``
     - ``Session::update_cookies``
     - ``Functions::remove_double_slashes``, use String helper's ``reduce_double_slashes()`` instead.
+    - Security helper's ``do_hash()``, use PHP's hashing functions instead.
 
 Version 2.5.5
 -------------
