@@ -30,6 +30,8 @@ Release Date: ?
     - ``{channel_url}``
     - ``{comment_entry_id_auto_path}``
     - ``{comment_url_title_auto_path}``
+  - Modified channel entries to no longer allow conditional parsing within content
+    (See :doc:`/installation/version_notes_2.6` for details)
   - Entry View Tracking is now disabled by default.
   - Server offset setting has been removed from Localization Settings and is
     now a hidden configuration variable only, called ``server_offset``.
@@ -48,6 +50,7 @@ Release Date: ?
   - Added ``channel_short_name`` variable to the comment entries tag.
   - Added the ability to use the system default thumbnails inside file field
     variable pairs.
+  - Template manager no longer automatically adds files starting with ``._``.
 
 - Bug Fixes:
   
@@ -166,9 +169,21 @@ Release Date: ?
     adding or updating an entry if the entry date is not explicitly set.
   - Channel Entries API will use current time as the default edit date when
     adding or updating an entry if the edit date is not explicitly set.
+  - ``Functions::convert_curlies()`` now also encodes EE conditionals
   - **Reactor:** Added ability to have multiple fieldtypes in one add-on package.
   - Deprecated methods:
 
+    - ``Api_channel_entries::submit_new_entry`` and
+      ``Api_channel_entries::update_entry``, use ``Api_channel_entries::save_entry`` instead.
+    - ``Cp::delete_layout_tabs``, use ``Layout::delete_layout_tabs`` instead.
+    - ``Cp::delete_layout_fields``, use ``Layout::delete_layout_fields`` instead.
+    - ``Cp::set_variable``, set the variable directly on the view object instead, e.g.
+      ``$this->EE->view->$name = $value;``
+    - ``Cp::secure_forms``, use ``EE_Security::have_valid_xid`` instead.
+    - ``Cp::fetch_cp_themes``, use ``Admin_model::get_cp_theme_list`` instead.
+    - ``Email::_get_ip``, use ``Input::ip_address`` instead.
+    - ``Email::_set_header``, use `instead.`Email::set_header``
+    - ``Functions::remove_double_slashes``, use String helper's ``reduce_double_slashes()`` instead.
     - ``Localize::timestamp_to_gmt``, use Date helper's ``mysql_to_unix()`` instead.
     - ``Localize::set_localized_time``.
     - ``Localize::set_server_time``.
@@ -185,11 +200,10 @@ Release Date: ?
     - ``Localize::zones`` method and property.
     - ``Localize::fetch_days_in_month``, use Date helper's ``days_in_month()`` instead.
     - ``Localize::adjust_date``, use ``Calendar::adjust_date`` instead.
-    - ``Email::_get_ip()``
-    - ``Email::_set_headers()``
-    - ``Session::update_cookies``
-    - ``Functions::remove_double_slashes``, use String helper's ``reduce_double_slashes()`` instead.
+    - ``SafeCracker_lib::decrypt_input``
+    - ``SafeCracker_lib::encrypt_input``
     - Security helper's ``do_hash()``, use PHP's hashing functions instead.
+    - ``Session::update_cookies``
 
 Version 2.5.5
 -------------

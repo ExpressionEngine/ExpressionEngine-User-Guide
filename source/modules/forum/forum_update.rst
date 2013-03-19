@@ -14,7 +14,7 @@ Step 1
 ------
 
 The first step is to
-`download <https://secure.expressionengine.com/download.php>`_ the most
+`download <https://store.ellislab.com/manage>`_ the most
 current version of the Discussion Forum Module. Once you have downloaded
 it, Unzip the software to your local computer.
 

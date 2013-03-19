@@ -46,7 +46,7 @@ Development
    -  :doc:`Input Class </development/usage/input>`
    -  :doc:`Language Class </development/usage/language>`
    -  :doc:`Layout Class </development/usage/layout>`
-   -  :doc:`Localization Class </development/usage/localization>`
+   -  :doc:`Localize Class </development/usage/localization>`
    -  :doc:`Logger Class </development/usage/logger>`
    -  :doc:`Security Class </development/usage/security>`
    -  :doc:`Session Class </development/usage/session>`

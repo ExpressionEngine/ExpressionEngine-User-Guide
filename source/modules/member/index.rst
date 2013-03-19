@@ -368,15 +368,6 @@ birthday
 
 The user's birthday.
 
-daylight_savings
-----------------
-
-::
-
-	{daylight_savings}
-
-The user's daylight savings setting.
-
 email
 -----
 
