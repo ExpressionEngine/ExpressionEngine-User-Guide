@@ -50,6 +50,9 @@ Release Date: ?
   - Added ``channel_short_name`` variable to the comment entries tag.
   - Added the ability to use the system default thumbnails inside file field
     variable pairs.
+  - Template manager no longer automatically adds files starting with ``._``.
+  - Modified channel entries to no longer allow conditional parsing within content
+    (Developers: ``Functions::convert_curlies()`` now also encodes EE conditionals)
 
 - Bug Fixes:
   
@@ -172,6 +175,8 @@ Release Date: ?
   - **Reactor:** Added ability to have multiple fieldtypes in one add-on package.
   - Deprecated methods:
 
+    - ``Api_channel_entries::submit_new_entry`` and
+      ``Api_channel_entries::update_entry``, use ``Api_channel_entries::save_entry`` instead.
     - ``Localize::timestamp_to_gmt``, use Date helper's ``mysql_to_unix()`` instead.
     - ``Localize::set_localized_time``.
     - ``Localize::set_server_time``.
