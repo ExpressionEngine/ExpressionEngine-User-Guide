@@ -66,7 +66,7 @@ A module's language file is automatically loaded whenever the module is
 accessed through the Module section of the Control Panel. So, in that
 instance, you simply need to call the piece of text you wish from the
 array contained in your module's langauge file. To do so, you simply use
-the $this->EE->lang->line() function and specify the key for that piece
+the lang() function and specify the key for that piece
 of text in the array.
 
 ::

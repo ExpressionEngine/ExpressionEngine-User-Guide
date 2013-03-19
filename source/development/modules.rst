@@ -516,7 +516,7 @@ several differences/additions worth noting:
   (or failure) message and redirect to a new page.
   ::
 
-    $this->EE->session->set_flashdata('message_success', $this->EE->lang->line('record_added'));
+    $this->EE->session->set_flashdata('message_success', lang('record_added'));
     $this->EE->functions->redirect(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name');    
 
 Outputting Pages

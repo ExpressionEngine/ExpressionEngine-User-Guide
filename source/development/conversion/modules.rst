@@ -345,7 +345,7 @@ Theme urls::
 Setting the base breadcrumb::
 
        $this->EE->cp->set\_breadcrumb(BASE.AMP.'C=addons\_modules'.AMP.'M=show\_module\_cp'.AMP.'module=package\_name',
-       $this->EE->lang->line('name'));
+       lang('name'));
 
 Setting the title::
 

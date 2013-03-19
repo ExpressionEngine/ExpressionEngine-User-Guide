@@ -422,7 +422,7 @@ appropriately.
     {
         if (empty($_POST))
         {
-            show_error($this->EE->lang->line('unauthorized_access'));
+            show_error(lang('unauthorized_access'));
         }
         
         unset($_POST['submit']);
@@ -435,7 +435,7 @@ appropriately.
         {
             $this->EE->session->set_flashdata(
                     'message_failure', 
-                    sprintf($this->EE->lang->line('max_link_length_range'),
+                    sprintf(lang('max_link_length_range'),
                         $len)
             );
             $this->EE->functions->redirect(
@@ -448,7 +448,7 @@ appropriately.
         
         $this->EE->session->set_flashdata(
             'message_success',
-            $this->EE->lang->line('preferences_updated')
+            lang('preferences_updated')
         );
     }
 

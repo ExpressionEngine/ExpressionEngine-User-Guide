@@ -643,7 +643,7 @@ records.
 
             $settings[] = array(
                     'field_id'      => 'download_field_ids',
-                    'field_label'       => $this->EE->lang->line('download_files'),
+                    'field_label'       => lang('download_files'),
                     'field_required'    => 'n',
                     'field_data'        => $selected,               
                     'field_list_items'  => $existing_files,
@@ -849,7 +849,7 @@ with appropriate headers to users who meet the access requirements:
             
             if ($file_id === FALSE)
             {
-                return $this->EE->output->show_user_error('general', $this->EE->lang->line('invalid_download'));
+                return $this->EE->output->show_user_error('general', lang('invalid_download'));
             }
             
             $group_id = $this->EE->session->userdata['group_id'];
@@ -871,7 +871,7 @@ with appropriate headers to users who meet the access requirements:
                 
                 if ( ! in_array('all', $allowed) && ! in_array($group_id, $allowed))
                 {
-                    return $this->EE->output->show_user_error('general', $this->EE->lang->line('no_permission'));
+                    return $this->EE->output->show_user_error('general', lang('no_permission'));
                 }
                 
                 $file_name = $row->file_name;

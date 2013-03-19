@@ -35,10 +35,10 @@ Set Variables
 This is a simple alternative for setting a page variable. It is used
 almost exclusively for setting the title of a control panel page::
 
-	$this->EE->cp->set_variable('cp_page_title', $this->EE->lang->line('page_title'));
 
 .. deprecated:: 2.6
 	Use ``$this->EE->view->cp_page_title = '...'`` instead.
+	$this->EE->cp->set_variable('cp_page_title', lang('page_title'));
 
 Adding Header Data
 ------------------
@@ -101,8 +101,8 @@ displayed by the `notification
 plugin <../cp_javascript/notification.html>`_ with the appropriate
 message type indicated. ::
 
-	$this->EE->session->set_flashdata('message_success', $this->EE->lang->line('updated'));
-	$this->EE->session->set_flashdata('message_failure', $this->EE->lang->line('write_failed'));
+	$this->EE->session->set_flashdata('message_success', lang('updated'));
+	$this->EE->session->set_flashdata('message_failure', lang('write_failed'));
 	$this->EE->functions->redirect(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=my_module');
 
 After redirecting, a javascript success notification bar would show

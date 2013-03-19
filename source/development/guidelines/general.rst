@@ -613,7 +613,7 @@ Any text that is output in the control panel should use language
 variables in your module's lang file to allow localization. ::
 
 	INCORRECT: return "Invalid Selection";
-	CORRECT: return $this->EE->lang->line('invalid_selection');
+	CORRECT: return lang('invalid_selection');
 
 Private Methods and Variables
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
