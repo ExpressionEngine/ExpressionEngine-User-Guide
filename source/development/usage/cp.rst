@@ -32,12 +32,12 @@ language keys and the values are the full url to link to. ::
 Set Variables
 -------------
 
+.. deprecated:: 2.6
+	Use ``$this->EE->view->cp_page_title = '...'`` instead.
+
 This is a simple alternative for setting a page variable. It is used
 almost exclusively for setting the title of a control panel page::
 
-
-.. deprecated:: 2.6
-	Use ``$this->EE->view->cp_page_title = '...'`` instead.
 	$this->EE->cp->set_variable('cp_page_title', lang('page_title'));
 
 Adding Header Data

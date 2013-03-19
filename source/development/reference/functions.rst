@@ -54,6 +54,9 @@ default.
 remove\_double\_slashes(str [string])
 -------------------------------------
 
+.. deprecated:: 2.6
+  Use String helper's ``reduce_double_slashes()`` instead.
+
 Remove duplicate slashes from URL.
 
 **Class:** Functions (functions)
