@@ -44,5 +44,14 @@ Altered View Files
 - Changed all CP view files to inherit from a master template. Please
   check your view file overrides.
 
+Conditionals in Channel Entries Content
+---------------------------------------
+
+Channel entries will no longer parse EE conditionals. While we know that some
+users relied on this functionality, the vast majority of users benefit by encoding
+conditionals by default within Channel entries content. If you are using EE conditionals (or
+similarly formated JavaScript, e.g. "``{if...``") in your entries, you will need to use the
+`Allow EECode plugin <https://github.com/EllisLab/Allow-Eecode>`_ in your templates to
+allow EE tags and conditionals to be parsed.
 
 :ref:`Return to Update Page <update-additional-steps>`

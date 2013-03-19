@@ -30,6 +30,8 @@ Release Date: ?
     - ``{channel_url}``
     - ``{comment_entry_id_auto_path}``
     - ``{comment_url_title_auto_path}``
+  - Modified channel entries to no longer allow conditional parsing within content
+    (See :doc:`/installation/version_notes_2.6` for details)
   - Entry View Tracking is now disabled by default.
   - Server offset setting has been removed from Localization Settings and is
     now a hidden configuration variable only, called ``server_offset``.
@@ -166,6 +168,7 @@ Release Date: ?
     adding or updating an entry if the entry date is not explicitly set.
   - Channel Entries API will use current time as the default edit date when
     adding or updating an entry if the edit date is not explicitly set.
+  - ``Functions::convert_curlies()`` now also encodes EE conditionals
   - **Reactor:** Added ability to have multiple fieldtypes in one add-on package.
   - Deprecated methods:
 
