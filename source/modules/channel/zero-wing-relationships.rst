@@ -548,22 +548,23 @@ Player's first name, last name and number with ``{home:players:first_name}``,
 Parent Entries: Showing A Team's History
 ----------------------------------------
 
-It pulls all entries that are parents of the of the current entry.  Say you had
-a Team page where you showed details of a particular team and you wanted to
-show all Games that team had played in.  You could accomplish this like so::
+Say you had a Team page where you showed details of a particular team and you
+wanted to show all Games that team had played in.  You could accomplish this
+like so::
 
 	{exp:channel:entries channel="teams"}
 		<div class="games"><ul>
-			{parents channel="games" field="home"}
+			{parents field="home|away"}
 				<li>{parents:home:title} ({parents:home_score}) vs {parents:away:title} ({parents:away_score})</li>
 			{/parents}
-		</div>
+		</ul></div>
 	{/exp:channel:entries}
 
-Parent Entries: Showing a Player's History
-------------------------------------------
-
------------- Under Construction ----------
+In this case, we have two different fields in the parent channel that relate to
+the Teams channel: ``home`` and ``away``.  We want to pull from both of them,
+so in our ``{parents}`` tag field parameter we use ``field="home|away"``.  Here
+the channel parameter is unnecessary as neither ``home`` or ``away`` is used in
+any channel other than Games.
 
 Sibling Entries: Navigating Between Games
 -----------------------------------------
@@ -590,11 +591,6 @@ The current entry in the Games channel that the ``channel:entries`` tag has
 pulled up must be related to the channel through the field given to the
 siblings tag.  Otherwise it won't work.  
 
-
-Sibling Entries: Navigating Between Current Teammates
------------------------------------------------------
-
--------------- Under Construction -------------------
 
 *************
 Tag Reference
@@ -726,13 +722,25 @@ Given the following channel layout::
 		field1					Text
 		field2					Text
 
-You can access siblings of the current entry in ``channel:entries`` tag
+You can access siblings of the current entry in ``{exp:channel:entries}`` tag
 using the following syntax::
 
 	{exp:channel:entries channel="childChannel"}
 		{siblings field="relationship_field"}
 			{siblings:title} - {siblings:field1} - {siblings:field2}
 		{/siblings}
+	{/exp:channel:entries}
+
+The ``{siblings}`` tag does not need to be a top level tag. It may be used
+from a nested relationship in order to access that relationship's siblings.
+The syntax is::
+
+	{exp:channel:entries channel="parentChannel"}
+		{relationship_field}
+			{relationship_field:siblings field="relationship_field"}
+				{relationship_field:siblings:title}
+			{/relationship_field:siblings}
+		{/relationship_field}
 	{/exp:channel:entries}
 
 Parameters
@@ -815,6 +823,17 @@ using the following syntax::
 		{parents field="relationship_field"}
 			{parents:title} - {parents:field1} - {parents:field2}
 		{/parents}
+	{/exp:channel:entries}
+
+The ``{parents}`` tag may be accessed through nested relationships tags using
+the following syntax::
+	
+	{exp:channel:entries channel="parentChannel"}
+		{relationship_field}
+			{relationship_field:parents field="relationship_field"}
+				{relationship_field:parents:title}
+			{/relationship_field:parents}
+		{/relationship_field}
 	{/exp:channel:entries}
 
 Parameters
