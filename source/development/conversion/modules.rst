@@ -421,17 +421,16 @@ index() method would look like::
 
 	function index($message = '') 
 	{		 
-		 
-		$this->EE->cp->set_variable('cp_page_title', $this->EE->lang->line('fortunes_module_name'));
+		$this->EE->view->cp_page_title = lang('fortunes_module_name');
 	
 		$this->EE->load->library('javascript');
 		$this->EE->javascript->output($this->EE->jquery->corner('.cp_button a'));
 		$this->EE->javascript->compile();
 	
-			$vars['view_url'] = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=view';  
-			$vars['add_url'] = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=add';
+		$vars['view_url'] = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=view';  
+		$vars['add_url'] = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=add';
 	
-		return $this->EE->load->view('index', $vars, TRUE);																																   
+		return $this->EE->load->view('index', $vars, TRUE);
 	} 
 
 The page title is set using the CP class. To add a bit of style, the

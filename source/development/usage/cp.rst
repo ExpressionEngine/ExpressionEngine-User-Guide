@@ -37,6 +37,9 @@ almost exclusively for setting the title of a control panel page::
 
 	$this->EE->cp->set_variable('cp_page_title', $this->EE->lang->line('page_title'));
 
+.. deprecated:: 2.6
+	Use ``$this->EE->view->cp_page_title = '...'`` instead.
+
 Adding Header Data
 ------------------
 

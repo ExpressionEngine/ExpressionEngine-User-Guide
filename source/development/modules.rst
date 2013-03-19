@@ -452,27 +452,29 @@ ExpressionEngine (as well as your own libraries) are available, there
 are a few CP library functions that will typically be used in any
 control panel file:
 
--  Set the page title, which is also displayed in the breadcrumb. Any
-   displayed control panel page should include a title:
-   ::
+- Set the page title, which is also displayed in the breadcrumb. Any
+  displayed control panel page should include a title:
+  ::
 
-       $this->EE->cp->set_variable('cp_page_title', $this->EE->lang->line('mymodule_module_name'));
+    $this->EE->view->cp_page_title = lang('mymodule_module_name');
 
--  For interior pages, you will want to add to the breadcrumb, allowing
-   easy navigation back to your main page:
-   ::
+- For interior pages, you will want to add to the breadcrumb, allowing
+  easy navigation back to your main page:
+  ::
 
-       $this->EE->cp->set_breadcrumb(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name',
-            $this->EE->lang->line('mymodule_module_name'));
+    $this->EE->cp->set_breadcrumb(
+      BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name',
+      lang('mymodule_module_name')
+    );
 
--  If your module backend has multiple pages, you may want to create
-   fourth level navigation. This is easily done in the constructor using
-   the set\_right\_nav() function:
-   ::
+- If your module backend has multiple pages, you may want to create
+  fourth level navigation. This is easily done in the constructor using
+  the set\_right\_nav() function:
+  ::
 
-       $this->EE->cp->set_right_nav(array(
-               'add_record'        => BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name'.AMP.'method=add_record'
-           ));
+    $this->EE->cp->set_right_nav(array(
+      'add_record'        => BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name'.AMP.'method=add_record'
+    ));
 
 Javascript
 ~~~~~~~~~~
@@ -485,21 +487,21 @@ JavaScript library, enabling developers to easily include JavaScript
 enhancements. It is worth noting some 'best practices' when using
 JavaScript in your control panel:
 
--  Loading jQuery plugins:
-   ::
+- Loading jQuery plugins:
+  ::
 
-       $this->EE->cp->add_js_script(array('plugin' => 'dataTables'));
+    $this->EE->cp->add_js_script(array('plugin' => 'dataTables'));
 
--  Outputting JavaScript to the browser:
-   ::
+- Outputting JavaScript to the browser:
+  ::
 
-       $this->EE->javascript->output();
+    $this->EE->javascript->output();
 
--  After defining any JavaScript output, you must compile in order to
-   display it.
-   ::
+- After defining any JavaScript output, you must compile in order to
+  display it.
+  ::
 
-       $this->EE->javascript->compile();
+    $this->EE->javascript->compile();
 
 Working with Forms
 ~~~~~~~~~~~~~~~~~~
@@ -507,15 +509,15 @@ Working with Forms
 While creating forms for the backend is fairly routine, there are
 several differences/additions worth noting:
 
--  The :doc:`Form Validation library </development/usage/form_validation>` is the
-   best means of checking submitted form data and returning in-line
-   errors in the case of failed validation.
--  After form submission, you will generally want to output a success
-   (or failure) message and redirect to a new page.
-   ::
+- The :doc:`Form Validation library </development/usage/form_validation>` is the
+  best means of checking submitted form data and returning in-line
+  errors in the case of failed validation.
+- After form submission, you will generally want to output a success
+  (or failure) message and redirect to a new page.
+  ::
 
-       $this->EE->session->set_flashdata('message_success', $this->EE->lang->line('record_added'));
-       $this->EE->functions->redirect(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name');    
+    $this->EE->session->set_flashdata('message_success', $this->EE->lang->line('record_added'));
+    $this->EE->functions->redirect(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name');    
 
 Outputting Pages
 ~~~~~~~~~~~~~~~~
@@ -539,7 +541,7 @@ string:
 
 ::
 
-    return $this->EE->load->view('index', $vars, TRUE); 
+  return $this->EE->load->view('index', $vars, TRUE); 
 
 This would return the index.php view page, located in a **views**
 folder. The view file is passed an array with all of the variables used
@@ -568,5 +570,5 @@ API <plugins>`:
 
 ::
 
-    {exp:module_name:method}
+  {exp:module_name:method}
 

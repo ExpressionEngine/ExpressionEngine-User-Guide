@@ -314,9 +314,9 @@ navigation using the set\_right\_nav function.
         $this->EE =& get_instance();
 
         $this->EE->cp->set_right_nav(array(
-                'add_download'  => BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'
-                    .AMP.'module=download'.AMP.'method=file_browse'
-                ));
+            'add_download'  => BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'
+                .AMP.'module=download'.AMP.'method=file_browse'
+        ));
     }
 
 Module's Control Panel Homepage
@@ -342,16 +342,16 @@ Also note the use of the CP set\_variable method to set our page title:
         $this->EE->load->library('table');
         $this->EE->load->helper('form');
 
-        $this->EE->cp->set_variable('cp_page_title', $this->EE->lang->line('download_module_name'));
+        $this->EE->view->cp_page_title = lang('download_module_name');
 
         $vars['action_url'] = 'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=download'.AMP.'method=edit_downloads';
         $vars['form_hidden'] = NULL;
         $vars['files'] = array();
             
         $vars['options'] = array(
-                    'edit'  => lang('edit_selected'),
-                    'delete'    => lang('delete_selected')
-                    );      
+            'edit'  => lang('edit_selected'),
+            'delete'    => lang('delete_selected')
+        );      
 
 Because we may need to paginate our list of files, we need to check for
 the row number indicator and then use this in our main query. Make sure
@@ -360,9 +360,7 @@ class <http://codeigniter.com/user_guide/database/active_record.html>`_
 when constructing your queries. This will enable your queries to work as
 support for more database types are added.
 
-::
-
-           
+::           
         if ( ! $rownum = $this->EE->input->get_post('rownum'))
         {       
             $rownum = 0;
@@ -406,11 +404,11 @@ for easy use in our view file:
 
             // Toggle checkbox
             $vars['files'][$row['file_id']]['toggle'] = array(
-                                    'name'      => 'toggle[]',
-                                    'id'        => 'edit_box_'.$row['file_id'],
-                                    'value'     => $row['file_id'],
-                                    'class'     =>'toggle'
-                                    );
+                'name'      => 'toggle[]',
+                'id'        => 'edit_box_'.$row['file_id'],
+                'value'     => $row['file_id'],
+                'class'     =>'toggle'
+            );
         }
 
 All our variables aside from pagination are now in place. We need to

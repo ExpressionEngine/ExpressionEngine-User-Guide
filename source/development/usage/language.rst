@@ -71,7 +71,7 @@ of text in the array.
 
 ::
 
-    $this->EE->cp->set_variable('cp_page_title', $this->EE->lang->line('view_moblogs'));
+    $this->EE->view->cp_page_title = lang('view_moblogs');
     // Returns "Moblog Accounts" as the page title;
 
 Calling a Language File

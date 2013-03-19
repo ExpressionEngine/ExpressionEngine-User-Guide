@@ -94,8 +94,8 @@ it is an easier to edit and more organized developmental strategy.
    You need to set the page title (cp\_page\_title variable) and the
    base breadcrumb link using this format::
 
-	$this->EE->cp->set_breadcrumb(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=package_name', $this->EE->lang->line('package_name_module_name'));
-	$this->EE->cp->set_variable('cp_page_title', $this->EE->lang->line('package_name_module_name'));
+	$this->EE->cp->set_breadcrumb(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=package_name', lang('package_name_module_name'));
+	$this->EE->view->cp_page_title = lang('package_name_module_name');
 
 #. If the method is loading a view, load any dependences (such as the
    table class or form helper) before loading the view.
