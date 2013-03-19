@@ -527,6 +527,24 @@ won.  That template might look something like this::
 		</div>
 	{/exp:channel:entries}
 
+Here, the ``{exp:channel:entries}`` tag accesses the Games channel.  The first
+thing we do is display which teams are playing and what the score was.  We do
+that by going through the ``home`` and ``away`` fields which both point to the
+Teams channel.  We grab the title (``{home:title}`` and ``{away:title}``) and
+display it.
+
+Further down we list the players on each team using ``{home:players}`` and
+``{away:players}``.  Since the ``players`` field is a multiple relationship, we
+need a tag pair.   But notice that we don't need to be the ``{home:players}`` tag
+itself inside a ``{home}`` pair.  ``{home}`` takes a single entry, and so we can
+just use it as a prefix to access its custom field variables.
+
+Inside the ``{home:players}`` and ``{away:players}`` pairs we can access the
+field variables of the Players channels by prefixing them with ``home:players``
+or ``away:players`` respectively.  So, inside ``{home:players}`` we can get the
+Player's first name, last name and number with ``{home:players:first_name}``,
+``{home:players:last_name}`` and ``{home:players:number}``.  
+
 Parent Entries: Showing A Team's History
 ----------------------------------------
 
