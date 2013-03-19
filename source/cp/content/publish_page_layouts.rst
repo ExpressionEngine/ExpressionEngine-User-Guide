@@ -3,8 +3,8 @@ Publish Page Layouts
 
 Customizing Content Entry
 The Publish/Edit page can be customized, with the layout saved per
-member group, per channel. The Publish Page has a `default
-layout <http://expressionengine.com/public_beta/docs/cp/content/publish.html>`_.
+member group, per channel. The Publish Page has a :doc:`default
+layout </cp/content/publish>`.
 
 Show Toolbar
 ~~~~~~~~~~~~

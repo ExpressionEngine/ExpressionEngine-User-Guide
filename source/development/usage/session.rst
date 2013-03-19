@@ -49,7 +49,6 @@ can access anything, no matter the other settings.
 -  **location** - Location, if any
 -  **language** - Chosen Language
 -  **timezone** - Chosen Timezone (UM12 - UTC - UP12)
--  **daylight\_savings** - y/n
 -  **time\_format** - eu/us
 -  **group\_id** - Group ID number (1-Superadmin, 2-Banned, 3-Guests,
    4-Pending, 5-Members, 6+ Other Member Groups
