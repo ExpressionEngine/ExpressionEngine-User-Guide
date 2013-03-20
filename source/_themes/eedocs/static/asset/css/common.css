@@ -47,7 +47,7 @@ h3, h5, h6{ font-size: 18px; margin: 20px 0; }
 
 p, dl, ul, ol{ margin: 20px 0; }
 
-	p, dl, ul, ol, h3, h4, h5, h6{ margin-left: 20px; }
+	dl, ul, ol, h3, h4, h5, h6{ margin-left: 20px; }
 
 	li > ul,
 	li > ol{ margin: 0; margin-left: 40px; }
@@ -84,7 +84,7 @@ table{
 	.descname{ color: #000080; font-weight: bold; }
 	.descclassname{ color: #094776; }
 	
-	.class .descname{ font-size: 18px; font-style: italic; }
+	.class .descname{ font-size: 14px; font-style: italic; }
 	.method .descname{ font-style: normal; }
 	
 	.class .property{ color: #094776; }
@@ -97,7 +97,9 @@ table{
 	
 	.method dt{ margin: 20px 0; }
 		
-	.method table{ margin-bottom: 0; margin-left: 20px; }
+	.method table{ margin-bottom: 0; }
+
+	.method th{ background-color: #e2f2fe; color: #326B95; font-weight: normal; text-align: right; }
 	
 	.method th,
 	.method td{ padding: 10px; }
@@ -152,6 +154,17 @@ fieldset{ border: 0; }
 	
 	.cp-path{ background-color: #FAFFF6; border-color: #D1CDB0; }
 	.important, .note{ background-color: #FFFFF2; border-color: #C8C8A5; }
+
+	.deprecated{
+		background-color: #ffe8e8;
+		border: 1px solid #f19999;
+		-moz-box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
+		-webkit-box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
+		box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
+		color: #7c1c1c;
+		font-weight: bold;
+		padding: 10px;
+	}
 
 .comments .codeblock{ 
 	background-color: #10618F; 
