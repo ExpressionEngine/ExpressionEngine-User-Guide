@@ -25,7 +25,7 @@ Installation
 ============
 
 1. Install `easy_install <http://peak.telecommunity.com/DevCenter/EasyInstall#installing-easy-install>`_. 
-   Shouldn't need to install thisif you're running Mac OS X.
+   Shouldn't need to install this if you're running Mac OS X.
 2. ``(sudo) easy_install -U sphinx``
 3. ``(sudo) easy_install -U sphinxcontrib-phpdomain``
 4. ``git clone git@github.com:EllisLab/ExpressionEngine-User-Guide.git``
