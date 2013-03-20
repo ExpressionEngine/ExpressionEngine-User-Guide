@@ -25,7 +25,7 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.todo', 'sphinx.ext.ifconfig']
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.todo', 'sphinx.ext.ifconfig', 'sphinxcontrib.phpdomain']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'ExpressionEngine'
-copyright = u'2002-2012 &ndash; <a href="http://ellislab.com/">EllisLab, Inc.</a>'
+copyright = u'2002-2013 &ndash; <a href="http://ellislab.com/">EllisLab, Inc.</a>'
 project_url = u'http://ellislab.com/expressionengine'
 
 
@@ -82,6 +82,9 @@ exclude_patterns = []
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 highlight_language = 'ee'
+
+# Our primary domain in PHP
+primary_domain = 'php'
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
