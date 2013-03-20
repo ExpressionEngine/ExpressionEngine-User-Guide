@@ -2,10 +2,9 @@ Stand-Alone Entry Form
 ======================
 
 .. deprecated:: 2.1.5
-   This tag is deprecated in favor
-   of :doc:`SafeCracker </modules/safecracker/index>` and will be 
-   removed from future versions of ExpressionEngine. It is no longer 
-   supported.
+   This tag is deprecated in favor of :doc:`SafeCracker 
+   </modules/safecracker/index>` and will be removed from future 
+   versions of ExpressionEngine. It is no longer supported.
 
 Using this tag, you can create an entry form to submit entries to any of
 your channels outside of the Control Panel.
@@ -236,8 +235,8 @@ sheets via the {path='css/\_ee\_saef\_css'} path variable.
 DST Enabled
 ~~~~~~~~~~~
 
-You may allow the user to choose whether or not to store that `DST is
-active <../../general/date_localization.html>`_ with the entry. ::
+You may allow the user to choose whether or not to store that :doc:`DST
+is active </general/date_localization>` with the entry. ::
 
 	<p><input type="checkbox" name="dst_enabled" value="y" {dst_enabled} /> DST Active on Date of Entry</p>
 
@@ -477,8 +476,8 @@ field\_instructions
 
 	{field_instructions}
 
-The field instructions as entered in the `Channel Fields
-area <../../cp/admin/channels/custom_fields_edit.html>`_.
+The field instructions as entered in the :doc:`Channel Fields area
+</cp/admin/channels/custom_fields_edit>`.
 
 saef\_javascript
 ~~~~~~~~~~~~~~~~

@@ -73,16 +73,16 @@ Alterations made to the entry_submission_absolute_end hook
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Added a new parameter $loc and moved the hook from the Channel Entries
-API (where it was not being called) to Content Publish. See `Content
-Publish Controller Extension
-Hooks <../development/extension_hooks/cp/content_publish/index.html>`_.
+API (where it was not being called) to Content Publish. See
+:doc:`Content Publish Controller Extension Hooks
+</development/extension_hooks/cp/content_publish/index>`.
 
 New Fieldtype method settings_modify_column()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Added a new method settings_modify_column($params) to the custom field
-types. See `Fieldtypes Functions
-Reference <../development/fieldtypes.html#functions>`_.
+types. See :doc:`Fieldtypes Functions Reference
+</development/fieldtypes>`.
 
 :ref:`Return to Update Page <update-additional-steps>`
 

@@ -321,7 +321,7 @@ Returns a properly formated action id tag
 that are recognized via an action ids that are inserted into the
 database upon installation of that module. This function returns a tag
 in the format {AID:class:method} for use in the frontend. (See also
-`EE->cp->fetch\_action\_id <../usage/cp.html#action_id>`_).
+:doc:`EE->cp->fetch\_action\_id </development/usage/cp>`).
 
 ::
 

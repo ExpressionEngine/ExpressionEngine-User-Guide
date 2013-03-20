@@ -24,7 +24,7 @@ aware of prior to upgrading.
 -  The features of the first-party Fresh Variables add-on have been
    incorporated natively into ExpressionEngine 2.0. If you have the
    Fresh Variables module installed, its content will be converted to
-   `Snippets <../templates/globals/snippets.html>`_.
+   :doc:`Snippets </templates/globals/snippets>`.
 -  ExpressionEngine generated URLs no longer use a trailing slash.
 -  The deprecated HTML tags <strike> and <u> (and deprecated in v1.6.5
    typography), will no longer render as inline tags when using XHTML

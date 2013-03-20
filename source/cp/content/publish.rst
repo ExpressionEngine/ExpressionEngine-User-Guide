@@ -63,14 +63,13 @@ Entry Fields
 ~~~~~~~~~~~~
 
 The names and types of entry fields displayed will be determined by what
-`Channel Fields <../admin/channels/custom_channel_fields.html>`_
-you have defined for this channel. If an entry field is set to be
-"hidden" by default, it will have to be expanded by clicking on the
-field name before content can be entered. In addition to the field
-itself, you can also choose the type of `text
-formatting <../../general/text_formatting.html>`_ to apply to that
-field. You'll also notice "Check Spelling", "Glossary", and "Smileys"
-options beneath each field.
+:doc:`/cp/admin/channels/custom_channel_fields` you have defined for
+this channel. If an entry field is set to be "hidden" by default, it
+will have to be expanded by clicking on the field name before content
+can be entered. In addition to the field itself, you can also choose the
+type of :doc:`/general/text_formatting` to apply to that field. You'll
+also notice "Check Spelling", "Glossary", and "Smileys" options beneath
+each field.
 
 Write Mode
 ~~~~~~~~~~
@@ -147,9 +146,9 @@ Author
 You may select the author for this entry from the drop-down list. By
 default only the person submitting the entry is shown in the author
 list. If you would like to enable other authors so that the author name
-can be changed please see this `troubleshooting
-page <../../troubleshooting/channels_and_entries/new_members_not_authors.html>`_
-for information.
+can be changed please see this :doc:`troubleshooting page
+</troubleshooting/channels_and_entries/new_members_not_authors>` for
+information.
 
 Channel
 ~~~~~~~
@@ -167,10 +166,9 @@ Status
 There are two primary statuses that are always available: Open and
 Closed. Typically, "open" entries are viewable at your site, and
 "closed" entries are not. You can add additional statuses for editorial
-workflow in your `Statuses <../admin/channels/statuses.html>`_
-page, and opt to display or suppress entries assigned to these by
-modifying the "status" parameter found in the various "Channel" Tags in
-your Templates.
+workflow in your :doc:`/cp/admin/channels/statuses` page, and opt to
+display or suppress entries assigned to these by modifying the "status"
+parameter found in the various "Channel" Tags in your Templates.
 
 Make Entry Sticky
 ~~~~~~~~~~~~~~~~~
@@ -262,8 +260,8 @@ revision is stored.
 Pages Tab
 ---------
 
-**Note:** This tab will only appear if you have the `Pages
-Module <../../modules/pages/index.html>`_ installed.
+**Note:** This tab will only appear if you have the :doc:`Pages Module
+</modules/pages/index>` installed.
 
 |Publish Pages|
 

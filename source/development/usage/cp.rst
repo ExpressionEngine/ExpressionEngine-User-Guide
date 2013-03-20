@@ -91,15 +91,15 @@ Control Panel Messages
 The control panel class creates a default view variable $cp\_messages,
 which you will typically use to display messages after form submission.
 By default, this is an empty array. Using the Session Class's
-`set\_flashdata() <../usage/session.html#flash_data>`_ (requires a
+:doc:`set_flashdata() </development/usage/session>` (requires a
 redirect), you may specify a success and/or failure message. The message
 content will be displayed using the
 ./themes/cp\_themes/default/\_shared/message.php view, with a class of
 'success' or 'failure' as needed. If javascript is enabled, the html
 notification will automatically be hidden and the message will be
-displayed by the `notification
-plugin <../cp_javascript/notification.html>`_ with the appropriate
-message type indicated. ::
+displayed by the :doc:`notification plugin
+</development/cp_javascript/notification>` with the appropriate message
+type indicated. ::
 
 	$this->EE->session->set_flashdata('message_success', lang('updated'));
 	$this->EE->session->set_flashdata('message_failure', lang('write_failed'));
@@ -141,18 +141,20 @@ Fetch an Action ID
 Modules have certain actions for forms, links, etc. that are recognized
 via an action ids that are inserted into the database upon installation
 of that module. This function returns the action id number from the
-database. (See also
-`functions->fetch\_action\_id <../reference/functions.html#action_id>`_)
+database. (See also :doc:`functions->fetch_action_id
+</development/reference/functions>`)
 
 	$aid = $this->EE->cp->fetch_action_id($class, $method);
 
 Publish Page Layout Functions
 -----------------------------
 
+.. todo:: Create anchor for module_tutorial.html#update_file
+
 Administrators may extensively customize publish pages on a per member
 group and per channel basis. Since these custom layouts are saved as a
 serialized array in the database, any additions or deletions to publish
 page tabs and fields must be synced to any saved layouts. The control
 panel library provides 4 functions to facilitate custom layout updates.
-(See also `Module Tutorial: Update
-file. <../module_tutorial.html#update_file>`_)
+(See also :doc:`Module Tutorial: Update file.
+</development/module_tutorial>`)

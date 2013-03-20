@@ -27,12 +27,12 @@ itself.
 
 An Extension is an add-on script that is placed in the
 /system/expressionengine/third\_party/<package\_name>/ directory and
-then enabled via the `Extensions
-Manager <../cp/add-ons/extension_manager.html>`_ in the Control Panel.
-Extensions can have their own settings and their own database tables, if
-necessary, but neither is required. If settings are available for an
-Extension, a language file is required, but unlike a module there is no
-control panel for Extensions.
+then enabled via the :doc:`Extensions Manager 
+</cp/add-ons/extension_manager>` in the Control Panel. Extensions can 
+have their own settings and their own database tables, if necessary, but
+neither is required. If settings are available for an Extension, a 
+language file is required, but unlike a module there is no control panel
+for Extensions.
 
 Naming Convention
 -----------------
@@ -552,10 +552,10 @@ method might look like:
 The three parameters from the extension hook are mapped straight to the
 three parameters of the method being called, and so your extension can
 easily use those parameters and do what it needs to do. The
-ExpressionEngine.com `Extension Hook library <./extension_hooks/>`_ will
-have a record of all extension hooks and the parameters available to
-you, along with a suggestion or two about what can be done with the
-extension hook.
+ExpressionEngine.com :doc:`Extension Hook library
+</development/extension_hooks/index>` will have a record of all
+extension hooks and the parameters available to you, along with a
+suggestion or two about what can be done with the extension hook.
 
 Multiple Extensions, Same Hook
 ------------------------------

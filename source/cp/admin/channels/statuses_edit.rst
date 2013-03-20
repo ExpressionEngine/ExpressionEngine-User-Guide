@@ -25,10 +25,10 @@ Highlight Color
 ~~~~~~~~~~~~~~~
 
 This optional field allows you to specify a highlight color for this
-status. This is the color of the status name in the
-`Edit <../../content/edit.html>`_ main table. Entries assigned to this
-status will have their status name in this color. That way you can
-easily make a specific status stand out in that table.
+status. This is the color of the status name in the :doc:`/cp/content/edit`
+main table. Entries assigned to this status will have their status name
+in this color. That way you can easily make a specific status stand out
+in that table.
 
 This field will take standard `CSS color
 values <http://www.w3.org/TR/REC-CSS1#color-units>`_ as input. That

@@ -19,7 +19,7 @@ under 2.0.
 Guidelines
 ----------
 
--  `Add-on Package File Structure <../packages.html>`_
+-  :doc:`/development/packages`
 -  :doc:`General Syntax Changes <syntax>`
 -  :doc:`Module Specific Changes <modules>`
 -  :doc:`Module Conversion Walk-through <walk-through>`

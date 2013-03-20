@@ -274,9 +274,9 @@ status=
 
 	status="open"
 
-You may restrict the results to a particular
-`status <../../cp/admin/channels/statuses.html>`_. You can choose
-multiple statuses using a pipe::
+You may restrict the results to a particular :doc:`status
+</cp/admin/channels/statuses>`. You can choose multiple statuses using a
+pipe::
 
 	status="draft|reviewed|published"
 
@@ -293,8 +293,7 @@ channel=
 
 	channel="which"
 
-From which
-`channel <../../cp/admin/channels/channel_management.html>`_ to
+From which :doc:`channel </cp/admin/channels/channel_management>` to
 search the entries. Additionally, you can use the pipe character to
 separate multiple channels::
 

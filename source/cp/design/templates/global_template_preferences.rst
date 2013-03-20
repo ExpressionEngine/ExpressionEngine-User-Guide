@@ -48,7 +48,7 @@ segments can not be used to show a 404 page (with one notable exception,
 using the :ref:`channel-entries-require_entry` parameter).
 
 For an explanation regarding how ExpressionEngine interprets your URLs,
-please see `ExpressionEngine URLs <../../../general/urls.html>`_ page.
+please see :doc:`/urls/url_structure` page.
 
 Save Template Revisions
 ~~~~~~~~~~~~~~~~~~~~~~~

@@ -10,8 +10,8 @@ also been deprecated and replaced by a new approach to formatting your
 control panel output.
 
 A fictional Fortune Cookies module is used in the following examples.
-For more examples, see the `full Module Development
-tutorial <../module_tutorial.html>`_.
+For more examples, see the :doc:`full Module Development
+tutorial </development/module_tutorial>`.
       
 .. contents::
 	:local:
@@ -41,8 +41,8 @@ control panel should look like (\* required):
 
 -  \*expressionengine/third\_party/package\_name/language/english/package\_name\_lang.php
 
-The reference page for `Add-on Packages <../packages.html>`_ gives
-greater detail on the above changes.
+The reference page for :doc:`Add-on Packages </development/packages>`
+gives greater detail on the above changes.
 
 Note: It is recommended to put a placeholder index.html file in any
 of your folders.
@@ -443,8 +443,8 @@ variables is returned. The view file might be as simple as::
 		<li><div class="cp_button"><a href="<?=$view_url?>"><?=lang('view_fortunes')?></a></div></li>
 	</ul>
 
-For an example of a more complex page, see the `Module
-tutorial <../../development/module_tutorial.html#view_files>`_.
+For an example of a more complex page, see the
+:doc:`/development/module_tutorial`.
 
 View Folders and Files
 ----------------------
@@ -500,8 +500,8 @@ rendered html and replace the variable elements with, well, variables::
 There are a few things to note in the above changeover:
 
 #. Views are REALLY easy!
-#. Use php `short tags <../guidelines/view_php_syntax.html>`_ in your
-   views for increased legibility. If your server does not support short
+#. Use php :doc:`short tags </development/guidelines/view_php_syntax>` in your views
+   for increased legibility. If your server does not support short
    tags, ExpressionEngine will automatically rewrite them when
    processing your view file.
 #. Module control panel URLs have been changed slightly. The structure
@@ -603,11 +603,10 @@ The Table library
 The Table library is the other resource you'll find invaluable when
 creating your views. It will often prove easier and cleaner than hard
 coding your table markup (though you can do that as well). Here's
-another sample from or fortunes module: in this case, it's the
-original 'view' page- where you can see your existing fortunes and
-select fortunes to modify or delete. (**NOTE:** The `Module
-tutorial <../../development/module_tutorial.html#view_files>`_
-explains views further.)
+another sample from or fortunes module: in this case, it's the original
+'view' page- where you can see your existing fortunes and select
+fortunes to modify or delete. (**NOTE:** The
+:doc:`/development/module_tutorial` explains views further.)
 
 Here's how we can use the table library to generate our somewhat
 complex 'view fortunes' page::

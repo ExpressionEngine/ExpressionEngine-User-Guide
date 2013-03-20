@@ -375,23 +375,19 @@ Upload Directory for Files
 
 You may determine into which of your File Upload directories the file
 attachments will be placed. These upload directories are defined in the
-`File Upload
-Preferences <../../../cp/content/files/file_upload_preferences.html>`_
-section.
+:doc:`/cp/content/files/file_upload_preferences` section.
 
 Image Size
 ----------
 
 Choose the image from your defined image dimensions from the selected
 upload directory. If you don't choose a size, the image will upload at
-full size. These sizes are defined in the `File Upload
-Preferences <../../../cp/content/files/file_upload_preferences.html>`_
-section.
+full size. These sizes are defined in the
+:doc:`/cp/content/files/file_upload_preferences` section.
 
 Thumb Size
 ----------
 
 Choose the thumbnail size from your defined image dimensions from the
-selected upload directory. These sizes are defined in the `File Upload
-Preferences <../../../cp/content/files/file_upload_preferences.html>`_
-section.
+selected upload directory. These sizes are defined in the
+:doc:`/cp/content/files/file_upload_preferences` section.

@@ -102,8 +102,8 @@ Announcement Channel that can be displayed on all Sites.
 Find and Replace Utility
 ------------------------
 
-The `Find and Replace <../tools/data/search_and_replace.html>`_ Utility
-has been updated to include searching in specific Sites. It can access
-all the Templates, Channels, and Preferences from all your Sites no
-matter which Site you are currently viewing.
+The :doc:`/cp/tools/data/search_and_replace` Utility has been updated to
+include searching in specific Sites. It can access all the Templates,
+Channels, and Preferences from all your Sites no matter which Site you
+are currently viewing.
 

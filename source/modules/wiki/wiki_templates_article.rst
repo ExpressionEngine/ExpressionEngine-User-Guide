@@ -44,9 +44,8 @@ When a revision of an article is displayed this shows the date of the
 revision being viewed.
 
 The **format** parameter is used to determine the date's formatting
-using ExpressionEngine's `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_. For
-example, this::
+using ExpressionEngine's :doc:`Date Variable Formatting
+</templates/date_variable_formatting>`. For example, this::
 
 	Revised: {revision_date format="%D, %F %d, %Y - %g:%i:%s"}
 
@@ -74,9 +73,11 @@ used to display the categories on the article page.
 Special Category Tags
 ---------------------
 
+.. todo:: Create anchor for .html#wiki_tag_categories
+
 If an article is assigned to one or more categories you can use the
-`{wiki:categories} <wiki_templates_special_categories.html#wiki_tag_categories>`_
-tag to display the categories beneath the article as outlined below:
+:doc:`{wiki:categories} <wiki_templates_special_categories>` tag to
+display the categories beneath the article as outlined below:
 
 |If an article has categories you can display them beneath the article.|
 
@@ -99,14 +100,16 @@ current verison you can use the **Category Namespace** in the Article
 Template to create a list of articles that are assigned to a specific
 category.
 
+.. todo:: Create anchor for #wiki_tag_category_subcategories
+.. todo:: Create anchor for #wiki_tag_category_articles
+
 This is done by using the special **{if namespace == 'Category'}**
 conditional and a combination of the
-`{wiki:category\_subcategories} <wiki_templates_special_categories.html#wiki_tag_category_subcategories>`_
-and
-`{wiki:category\_articles} <wiki_templates_special_categories.html#wiki_tag_category_articles>`_
-tags described in the :doc:`Special
-Categories <wiki_templates_special_categories>` section of the
-Wiki documentation.
+:doc:`{wiki:category\_subcategories}
+<wiki_templates_special_categories>` and :doc:`{wiki:category\_articles}
+<wiki_templates_special_categories>` tags described in the :doc:`Special
+Categories <wiki_templates_special_categories>` section of the Wiki
+documentation.
 
 
 .. |The Wiki Article template determines the visual display of articles as highlighted below.| image:: ../../images/wiki_article_highlight.jpg

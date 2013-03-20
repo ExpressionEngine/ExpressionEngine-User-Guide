@@ -11,7 +11,7 @@ Suspect a Bug?
 First thing's first: make sure it's a bug. If you're not sure, or if you
 don't yet have clear steps to reproduce the bug, head over to the
 `Technical Support
-Forum <http://expressionengine.com/forums/viewforum/105/>`_ to work
+Forum <http://ellislab.com/forums/viewforum/105/>`_ to work
 through it with the Technical Support Specialists. Technical support is
 **not** provided through the bug tracker, and if we're unable to
 reproduce the bug using the information provided in your bug report, it

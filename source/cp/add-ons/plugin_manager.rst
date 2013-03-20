@@ -27,7 +27,6 @@ can, of course, reinstall it.
 Installing Plugins
 ------------------
 
-To install plugins follow the detailed instructions in `Using
-Plugins <../../templates/plugins.html>`_.
+To install plugins follow the detailed instructions in :doc:`/templates/plugins`.
 
-.. |Plugin Manager| image:: ../../images/plugin_manager.png
+.. |Plugin Manager| image:: /images/plugin_manager.png

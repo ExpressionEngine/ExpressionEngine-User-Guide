@@ -611,9 +611,9 @@ value via an operator::
 	{/if}
 
 There is a great deal more information about possible conditionals in
-the `Conditional Global
-Variables <../../templates/globals/conditionals.html>`_, so we suggest
-you give it a quick look over.
+the :doc:`Conditional Global Variables
+</templates/globals/conditionals>`, so we suggest you give it a quick
+look over.
 
 If you are scripting conditional variables in your module, then they
 should be done first when processing tag data before any other variables

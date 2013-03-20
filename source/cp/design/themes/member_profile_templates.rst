@@ -16,10 +16,10 @@ profile area and registration page of your site.
 
 By default ExpressionEngine uses its default set of templates, but you
 may make a copy of this folder and use it instead. You may also select
-your new set of templates to be the site default in your `Membership
-Preferences <../../members/membership_preferences.html>`_ page. If you
-have multiple sets of templates your members will be able to choose
-which one to use in their profile area.
+your new set of templates to be the site default in your
+:doc:`/cp/members/membership_preferences` page. If you have multiple
+sets of templates your members will be able to choose which one to use
+in their profile area.
 
 |Member Templates|
 

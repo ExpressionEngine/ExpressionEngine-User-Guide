@@ -23,8 +23,8 @@ revision\_date
 This displays the time of the most recent article revision.
 
 The **format** parameter is used to determine the date's formatting
-using ExpressionEngine's `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_.
+using ExpressionEngine's :doc:`Date Variable Formatting
+</templates/date_variable_formatting>`.
 
 title
 ~~~~~

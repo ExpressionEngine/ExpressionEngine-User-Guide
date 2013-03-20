@@ -34,5 +34,5 @@ Passwords will be randomly created for members who do not have a
 <password> element, and those members will need to use the "Forgot
 Password" link in order to log in. Passwords of the "text" type will be
 encrypted for you. Pre-encrypted passwords will be inserted into the
-database as-is. Please see the notes on the `password
-tag <./member_xml_format.html#password_tag>`_ for more details.
+database as-is. Please see the notes on the :doc:`password tag
+</cp/tools/utilities/member_import/member_xml_format>` for more details.

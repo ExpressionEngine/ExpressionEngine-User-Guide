@@ -60,7 +60,7 @@ guide section on `Config
 Files <http://codeigniter.com/user_guide/libraries/config.html>`_ for
 details. You are responsible for uniquely prefixing your config keys.
 
-See also `help\_menu.php <conversion/modules.html#help_menu>`_ - an
+See also :doc:`help_menu.php </development/conversion/modules>` - an
 optional ExpressionEngine Help menu config file to provide context
 sensitive help in your module control panel pages.
 
@@ -85,8 +85,8 @@ details.
 javascript/
 ~~~~~~~~~~~
 
-(optional) Folder containing javascript files - refer to the `cp library
-documentation <usage/cp.html#load_package_js>`_ on how to include these
+(optional) Folder containing javascript files - refer to the :doc:`cp
+library documentation </development/usage/cp>` on how to include these
 files.
 
 language/

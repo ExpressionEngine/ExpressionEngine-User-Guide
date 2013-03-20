@@ -22,17 +22,15 @@ Can View Site When it is Online
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determines whether a member of this group can view your site when it is
-"online" in your `General
-Configuration <../admin/general_configuration.html>`_ page.
-It is highly unlikely that you'll ever set this preference to "no"
-unless the Member Groups is used with banned users.
+"online" in your :doc:`/cp/admin/general_configuration` page. It is
+highly unlikely that you'll ever set this preference to "no" unless the
+Member Groups is used with banned users.
 
 Can View Site When it is Offline
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determines whether a member of this group can view your site when it has
-been taken offline in your `General
-Configuration <../admin/general_configuration.html>`_ page.
+been taken offline in your :doc:`/cp/admin/general_configuration` page.
 
 Member Account Privileges
 -------------------------

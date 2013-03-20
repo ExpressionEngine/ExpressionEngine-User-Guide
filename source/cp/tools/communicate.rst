@@ -12,8 +12,8 @@ format, and supported email sending protocols are
 `Sendmail <http://www.sendmail.org/>`_, and PHP
 `mail <http://us2.php.net/manual/en/function.mail.php>`_.
 
-**Note:** In the Admin area of the Control Panel you'll find the `Email
-Configuration <../admin/email_configuration.html>`_ page.
+**Note:** In the Admin area of the Control Panel you'll find the
+:doc:`/cp/admin/email_configuration` page.
 
 |Communicate|
 
@@ -177,10 +177,9 @@ Send to Mailing List
 ~~~~~~~~~~~~~~~~~~~~
 
 You may select one or more of your existing mailing lists as recipients
-for the email. See the `Mailing
-List <../../modules/mailinglist/index.html>`_ section of the Modules
-area for more information on mailing lists. Mailing list emails are sent
-as regular recipients.
+for the email. See the :doc:`/modules/mailinglist/index` section of the
+Modules area for more information on mailing lists. Mailing list emails
+are sent as regular recipients.
 
 Send to Member Groups
 ~~~~~~~~~~~~~~~~~~~~~

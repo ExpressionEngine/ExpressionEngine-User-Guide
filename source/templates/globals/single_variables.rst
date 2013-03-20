@@ -81,7 +81,8 @@ current\_time
 
 This variable displays the current server time localized to each user's
 particular setting. As with other date variables, you will use the
-standard `date variable formatting <../date_variable_formatting.html>`_::
+standard :doc:`date variable formatting
+</templates/date_variable_formatting>`::
 
 	{current_time format="%Y %m %d %H:%i:%s"}
 
@@ -397,8 +398,8 @@ webmaster\_email
 
 	{encode="{webmaster_email}" title="Contact Us"}
 
-The email address for the site, as specified in `Email
-Configuration <../../cp/admin/email_configuration.html>`_.
+The email address for the site, as specified in :doc:`Email
+Configuration </cp/admin/email_configuration>`.
 
 .. _global-xid-hash:
 

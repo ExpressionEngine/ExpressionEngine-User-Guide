@@ -791,7 +791,7 @@ simple file input, and if applicable, a thumbnail and a "remove file"
 checkbox. You specify the upload location in the field settings.
 SafeCracker File may be used in both SafeCracker Entry Forms and the CP
 Publish Form. SafeCracker File inherits the tags of the standard
-`File Field <../channel/custom_fields.html#file-field>`_.
+:doc:`File Field </modules/channel/custom_fields>`.
 
 SafeCracker File may be used as a Matrix celltype and as a Low Variables
 variable type. If you are using it as a Low Variable, you must use the
@@ -814,9 +814,11 @@ See the :doc:`SafeCracker Module Control Panel <control_panel/index>` page.
 Development
 ***********
 
--  `Getting your custom fieldtype to work with
-   SafeCracker <development.html#section_getting_it_to_work>`_
--  `Extension Hooks <development.html#section_hooks>`_
+.. todo:: create anchors
+
+-  :doc:`Getting your custom fieldtype to work with
+   SafeCracker </modules/safecracker/development>`
+-  :doc:`Extension Hooks </modules/safecracker/development>`
 
 .. toctree::
 	:glob:

@@ -60,7 +60,7 @@ should use $this->EE->security->xss\_clean() for user input data.
 Outputting Data to the Page
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use the `Typography class <../usage/typography.html>`_ when
+Use the :doc:`Typography class </development/usage/typography>` when
 outputting to a page. Doing so provides a number of benefits and
 security precautions:
 
@@ -101,14 +101,14 @@ the query. This means that even variables passed as arguments to a
 method must be escaped before being used in a query.
 
 Manually written queries should use
-**`$this->EE->db->escape\_str() <../usage/database.html#additional>`_**
+**:doc:`$this->EE->db->escape\_str() <../usage/database>`**
 on variables, even if you think the value is trusted.
 
 ::
 
 	$query = $this->EE->db->query("SELECT field FROM table WHERE column = '".$this->EE->db->escape_str($foo)."'");
 
-**`$this->EE->db->insert\_string() <../usage/database.html#inserting>`_**
+**:doc:`$this->EE->db->insert\_string() <../usage/database>`**
 is the preferred method for INSERT queries, as values are escaped
 automatically in the supplied data array.
 
@@ -117,7 +117,7 @@ automatically in the supplied data array.
 	$data = array('name' => 'Brett Bretterson', 'email_address' => 'brett@example.com');
 	$this->EE->db->query($this->EE->db->insert_string('table', $data));
 
-**`$this->EE->db->update\_string() <../usage/database.html#updating>`_**
+**:doc:`$this->EE->db->update\_string() <../usage/database>`**
 is the preferred method for UPDATE queries, as values are escaped
 automatically in the supplied data and "where" arrays.
 
@@ -287,10 +287,11 @@ $this->EE->functions->form\_declaration()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Create all forms on the user side with
-`$this->EE->functions->form\_declaration() <../reference/functions.html>`_,
-so the XID (secure hash ID) is added automatically as a hidden input
-field. This also allows any extensions the site may have installed
-that modifies forms to have effect on your forms.
+:doc:`$this->EE->functions->form\_declaration()
+</development/reference/functions>`, so the XID (secure hash ID) is
+added automatically as a hidden input field. This also allows any
+extensions the site may have installed that modifies forms to have
+effect on your forms.
 
 Handling Form Hashes in Your Add-on
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -361,8 +362,7 @@ additional requirements.
   -  Does the user need to be a logged in member?
   -  Does the user need to be in a specific member group for the
      action?
-  -  `Deny Duplicate Data <../../general/spam_protection.html>`_
-     Check?
+  -  :doc:`Deny Duplicate Data </security/spam_protection>` Check?
 
 -  What security checks are performed?
 
@@ -427,7 +427,7 @@ naughty characters.
 Typography Class
 ~~~~~~~~~~~~~~~~
 
-Use the `Typography class <../usage/typography.html>`_ whenever
+Use the :doc:`Typography class </development/usage/typography>` whenever
 outputting blocks of content from user submitted data. It is regularly
 updated to improve security and performance, saving you both time and
 energy.
@@ -457,8 +457,8 @@ General Security Practice
    tasks.
 -  Use good beta testers and run a tight ship to get the best results.
 -  Keep debugging on for all users on your private development / testing
-   site. Refer to the `instructions for PHP
-   errors <general.html#php_errors>`_ in the General Syntax and Style
+   site. Refer to the :doc:`instructions for PHP errors
+   </development/guidelines/general>`_ in the General Syntax and Style
    section.
 -  Use an approach of Least Privilege. Start by allowing access to NO
    one, and explicitly grant access to those that qualify.

@@ -44,7 +44,8 @@ searches. Example::
 		
 	{/exp:search:search_results}
 
-Pagination follows the `Channel style of pagination <../channel/pagination_page.html>`_.
+Pagination follows the :doc:`Channel style of pagination
+</modules/channel/pagination_page>`.
 
 Parameters
 ==========
@@ -106,8 +107,8 @@ This parameter is replaced with the URL to the entry with the URL Title
 appended to the end. Unlike other "path" variables, this variable does
 **not** require the Template\_Group/Template to be specified. Instead,
 the path will automatically be determined by the Search Results URL
-setting for the channel in `Channel
-Management <../../cp/admin/channels/channel_management.html>`_.
+setting for the channel in :doc:`Channel
+Management </cp/admin/channels/channel_management>`.
 
 excerpt
 -------
@@ -117,9 +118,9 @@ excerpt
 	{excerpt}
 
 An excerpt from the entry. The excerpt consists of the first 50 words
-from the field specified for search excerpting in your `Channel
-Management <../../cp/admin/channels/channel_management.html>`_
-settings for your channels. HTML markup is stripped prior to output.
+from the field specified for search excerpting in your :doc:`Channel
+Management </cp/admin/channels/channel_management>` settings for your
+channels. HTML markup is stripped prior to output.
 
 full\_text
 ----------
@@ -130,8 +131,7 @@ full\_text
 
 The text from the entry. Unlike the {excerpt} variable, this one returns
 the entire text from the field specified for search excerpting in your
-`Channel
-Management <../../cp/admin/channels/channel_management.html>`_
+:doc:`Channel Management </cp/admin/channels/channel_management>`
 settings for your channels.
 
 id\_auto\_path
@@ -145,8 +145,8 @@ This parameter is replaced with the URL to the entry with the Entry ID
 appended to the end. Unlike other "path" variables, this variable does
 **not** require the Template\_Group/Template to be specified. Instead,
 the path will automatically be determined by the Channel URL setting for
-the channel in `Channel
-Management <../../cp/admin/channels/channel_management.html>`_.
+the channel in `Channel Management
+</cp/admin/channels/channel_management>`.
 
 member\_path
 ------------
@@ -169,10 +169,11 @@ search terms they used::
 
 	{exp:search:keywords}
 
+.. todo:: Create anchor for no_result_page
+
 This may also be used on the template specified by the
-`no\_result\_page <advanced.html#no-result-page>`_ parameter of the
-:doc:`simple search form <simple>` and :doc:`advanced search
-form <advanced>`.
+:doc:`no_result_page <advanced>` parameter of the :doc:`simple search
+form <simple>` and :doc:`advanced search form <advanced>`.
 
 There are no parameters or variables associated with this
 ExpressionEngine tag.
@@ -187,10 +188,11 @@ of matches::
 
 	{exp:search:total_results}
 	
+.. todo:: Create anchor for no_result_page
+
 This may also be used on the template specified by the
-`no\_result\_page <advanced.html#no-result-page>`_ parameter of the
-:doc:`simple search form <simple>` and :doc:`advanced search
-form <advanced>`.
+:doc:`no_result_page <advanced>` parameter of the :doc:`simple search
+form <simple>` and :doc:`advanced search form <advanced>`.
 
 There are no parameters or variables associated with this
 ExpressionEngine tag.

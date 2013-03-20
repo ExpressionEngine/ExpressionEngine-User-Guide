@@ -89,11 +89,10 @@ status=
 
 	status="open"
 
-You may restrict to entries with a particular
-`status <../../cp/admin/channels/statuses.html>`_ . The two
-statuses "open" and "closed" are default statuses that are always
-available, so you can always specify those if needed. You can choose
-multiple statuses using a pipe::
+You may restrict to entries with a particular :doc:`status
+</cp/admin/channels/statuses>`. The two statuses "open" and "closed" are
+default statuses that are always available, so you can always specify
+those if needed. You can choose multiple statuses using a pipe::
 
 	status="draft|reviewed|published"
 

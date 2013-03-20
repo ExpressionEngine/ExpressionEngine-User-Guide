@@ -157,7 +157,10 @@ Control Panel and Templates
 ***************************
 
 -  :doc:`Control Panel <wiki_cp>`
--  `Setting Up Namespaces <wiki_cp.html#namespaces>`_
+
+.. todo:: setup anchor for .html#namespaces 
+
+-  :doc:`Setting Up Namespaces <wiki_cp>`
 -  :doc:`Templates <wiki_templates>`
 
 **************

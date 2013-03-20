@@ -54,9 +54,8 @@ continuing.
 When creating a new Site you can choose to **Import** or **Duplicate**
 existing Channel data, File Upload Preferences, Template Groups, and
 Template Global Variables to the new Site. Please note that if you
-import or duplicate channel entries you'll need to `Recount the
-Statistics <../tools/data/recount_statistics.html>`_ in the Site
-afterwards.
+import or duplicate channel entries you'll need to :doc:`Recount the
+Statistics </cp/tools/data/recount_statistics>` in the Site afterwards.
 
 **Importing** will move the data from its current site to the new Site.
 For example, if you import a Channel from Site A to Site B, it will no

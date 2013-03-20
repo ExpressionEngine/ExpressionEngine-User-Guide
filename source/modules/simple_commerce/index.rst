@@ -87,7 +87,7 @@ This parameter controls the language that will be used on the initial
 PayPal shopping cart / log in screen when someone makes a purchase from
 your store. Use the two letter country abbreviation, following the `ISO
 3166
-standard <http://www.iso.org/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html>`_.
+standard <http://en.wikipedia.org/wiki/ISO_3166-1#Current_codes>`_.
 If no parameter is given, a default of 'US' will be used.
 
 currency=
@@ -99,8 +99,8 @@ currency=
 
 The three letter representation of the currency for the item prices in
 the store, using the ISO 4217 standard. Default is "USD" (U.S. Dollars).
-For other currencies, please refer to `official ISO 4217
-lising <http://www.iso.org/iso/en/prods-services/popstds/currencycodeslist.html>`_.
+For other currencies, please refer to `Wikipedia's ISO 4127
+listing <http://en.wikipedia.org/wiki/ISO_4217#Active_codes>`_.
 
 decimal=
 --------

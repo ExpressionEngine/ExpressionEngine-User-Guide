@@ -4,8 +4,8 @@ Javascript Table Plugin
 The javascript table plugin provides the javascript counterpart to the
 enhanced table class. It uses the jQuery UI widget pattern, which means
 that it will be available directly on the table. The initial setup is
-done automatically when a datasource is declared in the `table class
-<../usage/table.html>`_.
+done automatically when a datasource is declared in the
+:doc:`/development/usage/table`.
 
 .. note ::
 
