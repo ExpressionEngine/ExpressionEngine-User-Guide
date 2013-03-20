@@ -246,9 +246,9 @@ status=
 
 	status="open"
 
-You may restrict to entries with a particular
-`status <../../cp/admin/channels/statuses.html>`_. You can choose
-multiple statuses using a pipe
+You may restrict to entries with a particular :doc:`status
+</cp/admin/channels/statuses>`. You can choose multiple statuses using a
+pipe
 
 ::
 

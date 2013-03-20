@@ -29,8 +29,8 @@ enable compatibility with other programs, it is recommended that you use
 the Input Class, since it automatically strips out that prefix.
 
 The superglobal functions all allow the specification of an optional
-second parameter that lets you run the data through the `XSS
-filter <security.html#xss_filter>`_. It's enabled by setting the second
+second parameter that lets you run the data through the :doc:`XSS filter
+</development/usage/security>`. It's enabled by setting the second
 parameter to boolean TRUE.
 
 Lastly, the superglobal functions will check to see if the item is set

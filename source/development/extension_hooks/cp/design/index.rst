@@ -43,8 +43,8 @@ Template Type dropdowns. ::
 
 	$custom_templates = $this->extensions->call('template_types', array());
 
-This hook must append a key to the `$last_call <../../../extensions.html#this-extensions-last-call>`_
-array in the following format::
+This hook must append a key to the :doc:`$last_call
+</development/extensions>` array in the following format::
 
 	$custom_templates = $this->EE->extensions->last_call;
 	

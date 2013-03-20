@@ -158,9 +158,9 @@ using redirect flash data.
     // On the new page
     $message = $this->EE->session->flashdata('result_message');
 
-Flash data will often be used to specify a `Control panel
-class <../usage/cp.html#cp_messages>`_ $cp\_message variable, as such
-default view variables are displayed automatically.
+Flash data will often be used to specify a :doc:`Control panel class
+</development/usage/cp>` $cp\_message variable, as such default view
+variables are displayed automatically.
 
 Please note that due to internal limitations this will only work in
 combination with the redirect method of the functions class. Also keep

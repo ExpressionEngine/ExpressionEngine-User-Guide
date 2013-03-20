@@ -28,11 +28,10 @@ normal operation, this is perfectly fine. However, during extreme
 traffic events, there are a few tracking features of ExpressionEngine
 that update certain tables on every page load, resulting in a queue of
 locked tables as MySQL tries to keep up. These can be disabled in your
-Control Panel `Tracking
-Preferences <../cp/admin/tracking_preferences.html>`_. If
-you are unable to access your site due to the traffic, you or your
-server administrator can manually override these features in your
-config.php file as follows:
+Control Panel :doc:`Tracking Preferences
+</cp/admin/tracking_preferences>`. If you are unable to access your site
+due to the traffic, you or your server administrator can manually
+override these features in your config.php file as follows:
 
 config.php Extreme Traffic Overrides
 ------------------------------------
@@ -41,31 +40,36 @@ config.php Extreme Traffic Overrides
 
 	$config['enable_online_user_tracking']
 	
-(y/n) - Corresponds to `Enable Online User Tracking? <../cp/admin/tracking_preferences.html#enable_online_user_tracking>`_
+(y/n) - Corresponds to :doc:`Enable Online User Tracking?
+(</cp/admin/tracking_preferences>`
 
 ::
 
 	$config['enable_hit_tracking']
 
-(y/n) - Corresponds to `Enable Template Hit Tracking? <../cp/admin/tracking_preferences.html#enable_hit_tracking>`_
+(y/n) - Corresponds to :doc:`Enable Template Hit Tracking?
+(</cp/admin/tracking_preferences>`
 
 ::
 	
 	$config['enable_entry_view_tracking']
 
-(y/n) - Corresponds to `Enable Channel Entry View Tracking? <../cp/admin/tracking_preferences.html#enable_entry_view_tracking>`_
+(y/n) - Corresponds to :doc:`Enable Channel Entry View Tracking?
+(</cp/admin/tracking_preferences>`
 
 ::
 
 	$config['log_referrers']
 
-(y/n) - Corresponds to `Enable Referrer Logging? <../cp/admin/tracking_preferences.html#log_referrers>`_
+(y/n) - Corresponds to :doc:`Enable Referrer Logging?
+(</cp/admin/tracking_preferences>`
 
 ::
 
 	$config['dynamic_tracking_disabling']
 
-(numeric) - Corresponds to `Suspend ALL tracking when number of online visitors exceeds: <../cp/admin/tracking_preferences.html#dynamic_tracking_disabling>`_
+(numeric) - Corresponds to :doc:`Suspend ALL tracking when number of
+(online visitors exceeds: </cp/admin/tracking_preferences>`
 
 ::
 
@@ -97,25 +101,30 @@ hours (72000 seconds).
 Disk I/O
 --------
 
+.. todo:: Create anchor for caching.html#query_caching
+.. todo:: Create anchor for caching.html#dynamic_channel_query_caching
+
 ExpressionEngine's caching mechanisms can help reduce database load in
 most situations. However if your site is hosted on an environment using
-NAS/SAN storage for single or load-balanced web servers, `Query
-Caching <caching.html#query_caching>`_ and `Dynamic Channel Query
-Caching <caching.html#dynamic_channel_query_caching>`_ in most cases
-should **not be used**. Doing so could be doubling up on caching efforts
-and inadvertently negate any caching benefits (or perhaps even worsen
-server resource usage) due to the increased disk activity.
+NAS/SAN storage for single or load-balanced web servers, :doc:`Query
+Caching <caching>` and :doc:`Dynamic Channel Query Caching <caching>` in
+most cases should **not be used**. Doing so could be doubling up on
+caching efforts and inadvertently negate any caching benefits (or
+perhaps even worsen server resource usage) due to the increased disk
+activity.
 
-`Tag <caching.html#tag_caching>`_ and `Template
-Caching <caching.html#template_caching>`_ on such environments should be
-minimal unless experienced review of your templates has been performed
-with the assistance of the `Template Debugging
-utility <../cp/admin/output_and_debugging_preferences.html>`_,
-and revealed resource intensive tags or templates that are greatly
-improved after enabling the respective caching mechanism.
+.. todo:: Create anchor for #tag_caching
+.. todo:: Create anchor for #template_caching
 
-Likewise, `saving templates as
-files <http://expressionengine.com/user_guide/templates/flat_file_templates.html>`_
-can marginally increase disk i/o as each template must be retrieved from
-disk in addition to the standard database query responsible for managing
-your template's meta data (access, PHP parsing, template type, etc.).
+:doc:`Tag <caching>` and :doc:`Template Caching <caching>` on such
+environments should be minimal unless experienced review of your
+templates has been performed with the assistance of the :doc:`Template
+Debugging utility </cp/admin/output_and_debugging_preferences>`, and
+revealed resource intensive tags or templates that are greatly improved
+after enabling the respective caching mechanism.
+
+Likewise, :doc:`saving templates as files
+</templates/templates_as_files>` can marginally increase disk i/o as
+each template must be retrieved from disk in addition to the standard
+database query responsible for managing your template's meta data
+(access, PHP parsing, template type, etc.).

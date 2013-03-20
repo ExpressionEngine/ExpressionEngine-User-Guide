@@ -237,10 +237,10 @@ retrieved from `$state` in our pagination code.
 Filtering
 ~~~~~~~~~
 
-As a last step you can add dynamic filtering to our table. To make this work
-you will need to write some javascript. The `table plugin
-<../cp_javascript/table.html>`_ will provide simple access to everything you
-need to do.
+As a last step you can add dynamic filtering to our table. To make this
+work you will need to write some javascript. The :doc:`table plugin
+</development/cp_javascript/table>` will provide simple access to
+everything you need to do.
 
 At this point it becomes easier to work with a database. The filtering
 information will be added to your `$state` array. Doing a like query will

@@ -86,8 +86,10 @@ categories. This does not create a category.
 Namespaces
 ----------
 
-**Note:** Before you can use Namespaces on your wiki you must `configure
-Namespaces in your Control Panel <wiki_cp.html#namespaces>`_.
+.. todo:: Setup anchor for .html#namespaces
+
+**Note:** Before you can use Namespaces on your wiki you must
+:doc:`configure Namespaces in your Control Panel <wiki_cp>`.
 
 Linking to or creating an article in a Namespace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -125,12 +127,13 @@ and rename the article::
 Viewing articles in a Namespace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. todo:: Setup anchor for .html#wiki_theme
+
 The default theme has a dropdown menu that lets you view all the
 articles in a namespace. Its located on the *Title List* page (on the
 main menu). If you want to add a similar feature on your custom wiki
-template please follow the `Wiki Theme
-Updates <../../installation/version_notes_1.5.html#wiki_theme>`_
-example.
+template please follow the :doc:`Wiki Theme Updates
+</installation/version_notes_1.5>` example.
 
 Linking to Image or Uploaded File
 ---------------------------------

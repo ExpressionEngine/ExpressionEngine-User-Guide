@@ -46,12 +46,11 @@ top right.
 Adding Items
 ------------
 
-From the Simple Commerce module's :doc:`control panel home
-page <sc_cp>`, or from the Edit Items section, click **Add
-Items**. You will be presented with a familiar looking screen, one that
-looks much like the `Edit section of the Control
-Panel <../../cp/content/edit.html>`_, and can in fact perform searches
-here using the same methods.
+From the Simple Commerce module's :doc:`control panel home page
+<sc_cp>`, or from the Edit Items section, click **Add Items**. You will
+be presented with a familiar looking screen, one that looks much like
+the :doc:`Edit section of the Control Panel </cp/content/edit>`, and can
+in fact perform searches here using the same methods.
 
 To add Store Items, simply check the boxes to the right of the items you
 wish to add to your store, and then click Submit (**Add Item** should

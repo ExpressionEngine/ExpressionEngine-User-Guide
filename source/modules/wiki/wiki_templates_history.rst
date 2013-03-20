@@ -96,9 +96,8 @@ When a revision of an article is displayed this shows the date of the
 revision being viewed.
 
 The **format** parameter is used to determine the date's formatting
-using ExpressionEngine's `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_. For
-example, this::
+using ExpressionEngine's :doc:`Date Variable Formatting
+</templates/date_variable_formatting>`. For example, this::
 
 	Revised: {revision_date format="%D, %F %d, %Y - %g:%i:%s"}
 

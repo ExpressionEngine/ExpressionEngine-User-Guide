@@ -19,12 +19,13 @@ from the list.
 .. note:: The Mailing List Module is available only with a
    `purchased <https://store.ellislab.com/>`_ ExpressionEngine license.
 
-To access the Mailing List-backed functions, go to :menuselection:`Add-Ons --> Modules --> Mailing List`
-in your Control Panel. There you will be able to create and
-manage your mailing lists, as well as find and delete email addresses.
-See :doc:`Mailing List control panel <control_panel/index>` for more
-information. To send email to any of your lists you will use the Control
-Panel `Communicate Page <../../cp/tools/communicate.html>`_.
+To access the Mailing List-backed functions, go to :menuselection:`Add-
+Ons --> Modules --> Mailing List` in your Control Panel. There you will
+be able to create and manage your mailing lists, as well as find and
+delete email addresses. See :doc:`Mailing List control panel
+</modules/mailinglist/control_panel/index>` for more information. To
+send email to any of your lists you will use the Control Panel
+:doc:`Communicate Page </cp/tools/communicate>`.
 
 Adding a Mailing List Form to Your Site
 ---------------------------------------
@@ -89,11 +90,10 @@ email
 
 	{email}
 
-This is the standard
-`{email} <../../templates/globals/single_variables.html#var_email>`_
-global variable. Using this variable as the value of the email input
-field lets you automatically populate the field for logged-in members.
-Use as follows::
+This is the standard :doc:`{email}
+</templates/globals/single_variables>` global variable. Using this
+variable as the value of the email input field lets you automatically
+populate the field for logged-in members. Use as follows::
 
 	<input type="text" name="email" value="{email}" />
 

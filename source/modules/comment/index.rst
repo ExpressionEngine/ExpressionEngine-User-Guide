@@ -10,10 +10,11 @@ Comment
 Introduction
 ************
 
-The Comment Module allows you to show user-submitted comments on your site.
-Comments can be managed via the Comment Module Control Panel, and users can 
-edit their own comments via AJAX on the front-end of your site. In addition,
-the comment module supports `Comment Pagination <../channel/pagination_page.html>`_. 
+The Comment Module allows you to show user-submitted comments on your
+site. Comments can be managed via the Comment Module Control Panel, and
+users can  edit their own comments via AJAX on the front-end of your
+site. In addition, the comment module supports :doc:`Comment Pagination
+</modules/channel/pagination_page>`.
 
 
 *******************
@@ -210,8 +211,7 @@ channel=
 
 	channel="which"
 
-From which
-`channel <../../cp/admin/channels/channel_management.html>`_ to
+From which :doc:`channel </cp/admin/channels/channel_management>` to
 show the comments (will show comments from any channel if no channel is
 specified). Additionally, you can use the pipe character to separate
 multiple channels::
@@ -413,8 +413,8 @@ comment\_date
 
 	{comment_date format="%Y %m %d"}
 
-The date of the comment. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for more information.
+The date of the comment. See :doc:`Date Variable Formatting
+</templates/date_variable_formatting>` for more information.
 
 
 comment\_entry\_id\_auto\_path
@@ -500,8 +500,8 @@ edit\_date
 
 	{edit_date format="%Y %m %d"}
 
-The date on which the comment was edited. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for more information.
+The date on which the comment was edited. See :doc:`Date Variable
+Formatting </templates/date_variable_formatting>` for more information.
 
 email
 -----
@@ -556,8 +556,9 @@ gmt\_comment\_date
 
 	{gmt_comment_date format="%Y %m %d"}
 
-The date of the comment but **not** localized for the user. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for more information.
+The date of the comment but **not** localized for the user. See
+:doc:`Date Variable Formatting </templates/date_variable_formatting>`
+for more information.
 
 icq
 ---
@@ -1234,11 +1235,10 @@ captcha
 
 	{if captcha}
 
-As noted in the `captcha
-section <../../general/captchas.html#thecode>`_, the contents of the
-conditional ({if captcha}) tag will only appear if you have the CAPTCHA
-preference turned on for comments in the channel the entry is associated
-with.
+As noted in the :doc:`captcha section </security/captchas>`, the contents
+of the conditional ({if captcha}) tag will only appear if you have the
+CAPTCHA preference turned on for comments in the channel the entry is
+associated with.
 
 comments\_expired
 -----------------
@@ -1247,9 +1247,9 @@ comments\_expired
 
 	{if comments_expired}
 
-If commenting has expired (and expiration is not set to be `overridden
-by moderation <control_panel/index.html#settings>`_), the contents of
-this conditional will replace all other tag contents.
+If commenting has expired (and expiration is not set to be
+:doc:`overridden by moderation </modules/comment/control_panel/index>`),
+the contents of this conditional will replace all other tag contents.
 
 comments\_disabled
 ------------------
@@ -1302,9 +1302,8 @@ comment\_date
 
 The date of the comment. As with other date variables, this requires the
 "format" parameter in order to define how the date should be displayed.
-See the `date variable
-formatting <../../templates/date_variable_formatting.html>`_ page for
-more information.
+See the :doc:`date variable formatting
+</templates/date_variable_formatting>` page for more information.
 
 email
 -----

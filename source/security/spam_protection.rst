@@ -20,11 +20,11 @@ against the automated spamming methods.
 Blacklists
 ----------
 
-The ExpressionEngine `Blacklist/Whitelist
-Module <../modules/blacklist/index.html>`_ is an integral part of EE's
-spam prevention capability. This Module allows you to specify URLs, IP
-addresses, and user agents that you want to deny (blacklist) or
-specifically allow (whitelist) from your site.
+The ExpressionEngine :doc:`Blacklist/Whitelist Module
+</modules/blacklist/index>` is an integral part of EE's spam prevention
+capability. This Module allows you to specify URLs, IP addresses, and
+user agents that you want to deny (blacklist) or specifically allow
+(whitelist) from your site.
 
 The blacklist checks all content that is submitted to your site.
 ExpressionEngine will compare the submitted content against your

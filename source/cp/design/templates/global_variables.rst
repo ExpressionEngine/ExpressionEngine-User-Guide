@@ -7,8 +7,7 @@ Global Variables
 
 In this section you can define custom data that you would like to be
 available globally in any Template. This is in addition to the standard
-`Global Variables <../../../templates/globals/index.html>`_ that are
-already available.
+:doc:`/templates/globals/index` that are already available.
 
 You could create a Global Variable for any number of purposes. One idea
 would be for a piece of copyright text that would be included on every

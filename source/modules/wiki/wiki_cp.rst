@@ -102,8 +102,9 @@ have a *Spanish* namespace and a *German* namespace as a way to organize
 and separate your content. You could have a different Member Group as
 the admin for each namespace.
 
-Please see the `Wiki Syntax,
-Namespaces <wiki_syntax.html#syntax_namespaces>`_ section for
+.. todo:: Setup anchor for .html#syntax_namespaces
+
+Please see the :doc:`Wiki Syntax, Namespaces <wiki_syntax>` section for
 information on using namespaces on your wiki after configuring them.
 
 Setting up Namespaces

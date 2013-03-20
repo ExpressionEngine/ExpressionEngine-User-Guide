@@ -187,10 +187,11 @@ times across page loads. Find a way to run such queries only once,
 outside of loops, by perhaps accessing all of the information your
 add-on will require for each iteration, storing it in a master array.
 
-Make intelligent use of
-`$this->EE->session->cache <general.html#use_of_sess_cache>`_ so
-these and other "meta" queries are executed only once no matter how
-many times a method is called on a page load.
+.. todo:: Anchor for general.html#use_of_sess_cache
+
+Make intelligent use of :doc:`$this->EE->session->cache <general>` so
+these and other "meta" queries are executed only once no matter how many
+times a method is called on a page load.
 
 **Note:** To keep the code example simple, the values in the $ids
 array below are assumed to have already been validated in the code

@@ -25,7 +25,7 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.todo', 'sphinx.ext.ifconfig', 'sphinxcontrib.phpdomain']
+extensions = ['sphinx.ext.autodoc', 'sphinx.ext.todo', 'sphinx.ext.ifconfig', 'sphinxcontrib.phpdomain', 'sphinx.ext.extlinks']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -89,6 +89,10 @@ primary_domain = 'php'
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
+# Links
+extlinks = {
+	'ellislab': ('http://ellislab.com%s', 'ellislab')
+}
 
 # -- Options for HTML output ---------------------------------------------------
 
@@ -257,3 +261,11 @@ epub_copyright = u'2002-2011, EllisLab, Inc.'
 
 # Allow duplicate toc entries.
 #epub_tocdup = True
+
+# -- Options for Linkcheck -----------------------------------------------------
+
+linkcheck_ignore = [
+	r'http://example.com.*',
+	r'http://yourdomain.com.*',
+	'https://'
+]

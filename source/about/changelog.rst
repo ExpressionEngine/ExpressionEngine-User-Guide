@@ -2138,7 +2138,7 @@ General Changes:
 -  Added an importer to the IP to Nations Module that allows updating
    the IP records directly from the ip2nations SQL file.
 -  Added secure forms check to the frontend Comment Editor. See the
-   `Version Notes </installation/version_notes_2.1.2.html#comments>`_ and
+   :doc:`Version Notes </installation/version_notes_2.1.2>` and
    update your :ref:`JavaScript <comment-editing>` if needed.
 -  Added a setting to group preferences to disallow editing of html
    formatting buttons.
@@ -2177,7 +2177,7 @@ Developers:
 -  Added cp\_js\_end and cp\_css\_end Extension Hook to the Javascript
    Controller.
 -  Added a new method
-   `settings\_modify\_column() </installation/version_notes_2.1.2.html#settings_modify_column>`_
+   :doc:`settings\_modify\_column() </installation/version_notes_2.1.2>`
    to Custom Fieldtypes.
 -  Changed the API's initialize method visibility to protected.
 -  Moved Javascript files to themes/javascript/compressed/.
@@ -2189,12 +2189,12 @@ Developers:
    properly set in Addons\_accessories::process\_request().
 -  Abstracted the secure forms check to a new function
    secure\_forms\_check() in the Security Library.
--  Moved the `entry\_submission\_absolute\_end
-   hook </installation/version_notes_2.1.2.html#entry_submission_absolute_end>`_
+-  Moved the :doc:`entry\_submission\_absolute\_end
+   hook </installation/version_notes_2.1.2>`
    from the Channel Entries API to Content Publish and added a new
    parameter.
--  CodeIgniter system folder set to `Rev
-   0a18e0f60784 <https://bitbucket.org/ellislab/codeigniter/changeset/0a18e0f60784>`_
+-  CodeIgniter system folder set to ``
+   0a18e0f60784``
 
 Bugs:
 
@@ -2383,7 +2383,7 @@ Build 20101018 (initial release)
    -  Added new variables to the Comment Notification Templates (see
       :doc:`Version Notes </installation/version_notes_2.1.1>`).
    -  Added new
-      `Settings </modules/comment/control_panel/index.html#settings>`_ to
+      :doc:`Settings </modules/comment/control_panel/index>` to
       the Comment Module (Force word censoring for comments and Moderate
       expired comments).
    -  Added new variables to the :doc:`Comment Entries tag </modules/comment/index>`
@@ -2440,10 +2440,10 @@ Build 20101018 (initial release)
       JavaScript library is loaded.
    -  Deprecated the old lang.name.php language file naming convention
       in favor of CodeIgniter's name\_lang.php.
-   -  Added a parameter to the `delete\_comment\_additional
-      hook </installation/version_notes_2.1.1.html#delete_comment_additional>`_.
-   -  Removed the `comment\_form\_action
-      hook </installation/version_notes_2.1.1.html#comment_form_action>`_.
+   -  Added a parameter to the :doc:`delete\_comment\_additional
+      hook </installation/version_notes_2.1.1>`.
+   -  Removed the :doc:`comment\_form\_action
+      hook </installation/version_notes_2.1.1>`.
    -  Fixed a bug in the API where child drivers were not being
       initialized before consecutive instantiations.
    -  Fixed a bug (#14009) in the Channel Entries API where
@@ -2456,8 +2456,7 @@ Build 20101018 (initial release)
       added to the data array.
    -  Fixed a bug (#13610) where the FieldType update() method was not
       being called properly.
-   -  CodeIgniter system folder set to `Rev
-      0b88a4ed5303 <https://bitbucket.org/ellislab/codeigniter/changeset/0b88a4ed5303>`_
+   -  CodeIgniter system folder set to ``0b88a4ed5303``
 
 -  Bug Fixes
 
@@ -4104,7 +4103,7 @@ Build 20091202 (initial release)
 -  **General changes**
 
    -  ExpressionEngine is now powered by
-      `CodeIgniter <http://codeigniter.com>`_, the open source PHP
+      :ellislab:`CodeIgniter </codeigniter>`, the open source PHP
       framework from EllisLab, Inc.
    -  "Weblogs" are now known as "Channels"
    -  ExpressionEngine now runs fully (and only) on UTF-8.

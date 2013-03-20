@@ -184,9 +184,9 @@ class <http://codeigniter.com/user_guide/database/forge.html>`_):
         $this->EE->dbforge->create_table('download_posts');     
 
 Lastly, we ensure that any saved publish layouts have our new tab data
-added to the saved layout via the layout library's `add\_layout\_tabs()
-function <./usage/layout.html#publish_layout>`_. Once all of this has
-completed, the function should return TRUE.
+added to the saved layout via the layout library's
+:doc:`add_layout_tabs() function </development/usage/layout>`. Once all
+of this has completed, the function should return TRUE.
 
 ::
 
@@ -234,9 +234,8 @@ this function.
     }
      
 
-Note the use of the layout library's `delete\_layout\_tabs()
-function <./usage/layout.html#publish_layout>`_ to remove our tab from
-saved layouts.
+Note the use of the layout library's :doc:`delete_layout_tabs() function
+</development/usage/layout>` to remove our tab from saved layouts.
 
 Update Function
 ~~~~~~~~~~~~~~~

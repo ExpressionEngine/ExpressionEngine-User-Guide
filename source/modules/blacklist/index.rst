@@ -10,7 +10,7 @@ Introduction
 The Blacklist/Whitelist Module is one of ExpressionEngine's native spam
 prevention systems. It helps prevent spam from occuring in comments,
 referrers, and other posted information. Used in combination with other
-`Spam Prevention Features <../../general/spam_protection.html>`_, the
+:doc:`Spam Prevention Features </security/spam_protection>`, the
 occurrence of spam on your site should be rare.
 
 .. note:: The Blacklist/Whitelist Module is available only with a

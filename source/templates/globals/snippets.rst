@@ -8,9 +8,9 @@ other variables, etc. Snippets add flexibility and reusability, while
 making it simple to make site-wide changes by editing the Snippet's
 source instead of having to modify many templates.
 
-One idea would be to hold a particular `date format
-string <../date_variable_formatting.html>`_ that you wish to reuse over
-and over. By making it a Snippet you can change it in one place and
+One idea would be to hold a particular :doc:`date format string
+</templates/date_variable_formatting>` that you wish to reuse over and
+over. By making it a Snippet you can change it in one place and
 immediately see the effects everywhere that you've used it. For example,
 you could create a Snippet named my\_date\_formatting with a value of
 format="%m-%d-%Y" and use it in any date variable thusly::

@@ -63,17 +63,20 @@ The same variable pairs used in the :doc:`channel entry and comment
 pagination <pagination_page>` feature are available here. The
 following links point to the entries for that feature.
 
--  `{paginate} <pagination_page.html#var_paginate>`_
--  `{pagination_links} <pagination_page.html#pagination-links>`_
--  `{if next\_page} <pagination_page.html#var_if_next_page>`_
--  `{if previous\_page} <pagination_page.html#var_if_previous_page>`_
+.. todo:: Create anchors for these links
+
+-  :doc:`{paginate} </modules/channel/pagination_page>`
+-  :doc:`{pagination_links} </modules/channel/pagination_page>`
+-  :doc:`{if next\_page} </modules/channel/pagination_page>`
+-  :doc:`{if previous\_page} </modules/channel/pagination_page>`
 
 Variables
 ---------
 
+.. todo:: Create anchors for this link
 
-These individual variables are for use inside the
-`{paginate} <pagination_page.html#var_paginate>`_ tag pair.
+These individual variables are for use inside the :doc:`{paginate}
+</modules/channel/pagination_page>` tag pair.
 
 current\_page
 ~~~~~~~~~~~~~
@@ -122,11 +125,12 @@ path
 
 	{path}
 
-The {path} variable is used inside of the `{if
-next\_page} <pagination_page.html#var_if_next_page>`_ and `{if
-previous\_page} <pagination_page.html#var_if_previous_page>`_ variable
-pairs. It is dynamically replaced with the correct path to the
-next/previous page.
+.. todo:: Create anchors
+
+The {path} variable is used inside of the :doc:`{if next\_page}
+</modules/channel/pagination_page>` and `{if previous\_page}
+</modules/channel/pagination_page>` variable pairs. It is dynamically
+replaced with the correct path to the next/previous page.
 
 total\_pages
 ~~~~~~~~~~~~

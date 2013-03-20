@@ -31,16 +31,16 @@ The main table shows the following columns:
 -  **Live Look**: This link allows you to view the entry in a template
    of your choice. This will appear in place of the View link when a
    template is specified in the
-   `preferences <../admin/channels/channel_edit_preferences.html>`_
+   :doc:`preferences </cp/admin/channels/channel_edit_preferences>`
    for the channel.
--  `Comments <../../modules/comment/control_panel/index.html>`_: The
-   "View" link allows you to edit the comments.
+-  :doc:`Comments </modules/comment/control_panel/index>`: The "View" 
+   link allows you to edit the comments.
 -  **Author**: The name of the entry author.
 -  **Date**: The date and time assigned to the entry.
--  `Channel <../admin/channels/channel_management.html>`_: The
-   short name of the channel that the entry is assigned to.
--  `Status <../admin/channels/statuses.html>`_: The status that
-   the entry is assigned to.
+-  :doc:`Channel </cp/admin/channels/channel_management>`: The short 
+   name of the channel that the entry is assigned to.
+-  :doc:`Status </cp/admin/channels/statuses>`: The status that the 
+   entry is assigned to.
 
 Multi-Entry Editing/Deleting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

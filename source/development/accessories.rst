@@ -7,11 +7,10 @@ Overview
 
 Third-party accessories should be placed in the
 /system/expressionengine/third\_party/<package\_name>/ directory and are
-enabled via the `Accessories
-Manager <../cp/add-ons/accessory_manager.html>`_ in the Add-Ons section.
-Accessories can have their own database tables, if necessary, but it is
-not required. Accessories do not have their own individual control
-panel.
+enabled via the :doc:`/cp/add-ons/accessory_manager` in the Add-Ons
+section. Accessories can have their own database tables, if necessary,
+but it is not required. Accessories do not have their own individual
+control panel.
 
 Naming Convention
 -----------------
@@ -139,8 +138,8 @@ View Files
 
 Accessories can utilize View files as a more intuitive way to create the
 content for each section. For greater detail on utilizing views from
-your add-on, see the modules tutorial section on `using view
-files <modules.html#view_files>`_.
+your add-on, see the modules tutorial section on :doc:`using view files
+</development/modules>`.
 
 Processing Requests
 -------------------

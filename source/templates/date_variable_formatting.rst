@@ -1,12 +1,13 @@
 Date Variable Formatting
 ========================
 
+.. todo:: Anchor for single_variables.html#var_current_time
+
 Many tags, including channel fields of the "date" type, are designed to
 display dates and times. The output of these tags can be formatted so
 that the date and time appears in the manner you wish. Here is an
-example of formatting the
-`{current\_time} <globals/single_variables.html#var_current_time>`_
-global variable::
+example of formatting the :doc:`{current\_time}
+<globals/single_variables>` global variable::
 
 	{current_time format="%F %d %Y"}
 

@@ -187,12 +187,11 @@ Would be rendered like this:
 last\_post\_date
 ~~~~~~~~~~~~~~~~
 
-``{last_post_date format="%m/%d/%Y %h:%i %a"}``
-The date on which the last (most recent) post in the thread was made. As
-with other date variables, these require the "format" parameter in order
-to define how the date should be displayed. See the `date variable
-formatting <../../templates/date_variable_formatting.html>`_ page for
-more information.
+``{last_post_date format="%m/%d/%Y %h:%i %a"}`` The date on which the
+last (most recent) post in the thread was made. As with other date
+variables, these require the "format" parameter in order to define how
+the date should be displayed. See the :doc:`date variable formatting
+</templates/date_variable_formatting>` page for more information.
 
 last\_post\_id
 ~~~~~~~~~~~~~~
@@ -258,12 +257,11 @@ The title for the thread.
 topic\_date
 ~~~~~~~~~~~
 
-``{topic_date format="%m/%d/%Y %h:%i %a"}``
-The date on which the thread was posted. As with other date variables,
-these require the "format" parameter in order to define how the date
-should be displayed. See the `date variable
-formatting <../../templates/date_variable_formatting.html>`_ page for
-more information.
+``{topic_date format="%m/%d/%Y %h:%i %a"}`` The date on which the thread
+was posted. As with other date variables, these require the "format"
+parameter in order to define how the date should be displayed. See the
+:doc:`date variable formatting </templates/date_variable_formatting>`
+page for more information.
 
 topic\_relative\_date
 ~~~~~~~~~~~~~~~~~~~~~

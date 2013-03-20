@@ -169,9 +169,8 @@ modified_date
 
 	{modified_date format="%Y %m %d"}
 
-The date the file was last modified. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for more
-information.
+The date the file was last modified. See :doc:`Date Variable Formatting
+</templates/date_variable_formatting>` for more information.
 
 path
 ----
@@ -198,10 +197,8 @@ upload_date
 
 	{upload_date format="%Y %m %d"}
 
-The date the file was first uploaded. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for more
-information.
-	
+The date the file was first uploaded. See `Date Variable Formatting
+</templates/date_variable_formatting>` for more information.
 
 .. _image-manipulation-pair:
 
@@ -337,6 +334,5 @@ this
 
 	{my_date format="%Y %m %d"}
 
-See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for more
-information.
+See :doc:`Date Variable Formatting
+</templates/date_variable_formatting>` for more information.

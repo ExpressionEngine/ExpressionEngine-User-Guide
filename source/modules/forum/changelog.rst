@@ -562,17 +562,17 @@ Release Date: June 19, 2007
 -  Added ability to link directly to reply in search results where the
    search terms were found in a reply (see :doc:`version update
    notes <forum_update_notes_2.0>`).
--  Added `forums= <recent_forum_topics.html#par_forums>`_ and
-   `boards= <recent_forum_topics.html#par_boards>`_ parameters to the
+-  Added :doc:`forums= </modules/forum/recent_forum_topics>` and
+   `boards= </modules/forum/recent_forum_topics>` parameters to the
    Topic Titles tag
 -  Added
-   `{auto\_thread\_path} <recent_forum_topics.html#var_auto_thread_path>`_,
-   `{board\_label} <recent_forum_topics.html#var_board_label>`_,
-   `{board\_name} <recent_forum_topics.html#var_board_name>`_,
-   `{body} <recent_forum_topics.html#var_body>`_,
-   `{forum\_name} <recent_forum_topics.html#var_forum_name>`_,
-   `{forum\_url} <recent_forum_topics.html#var_forum_url>`_, and
-   `{last\_reply} <recent_forum_topics.html#var_last_reply>`_ variables
+   `{auto\_thread\_path} </modules/forum/recent_forum_topics>`,
+   `{board\_label} </modules/forum/recent_forum_topics>`,
+   `{board\_name} </modules/forum/recent_forum_topics>`,
+   `{body} </modules/forum/recent_forum_topics>`,
+   `{forum\_name} </modules/forum/recent_forum_topics>`,
+   `{forum\_url} </modules/forum/recent_forum_topics>`, and
+   `{last\_reply} </modules/forum/recent_forum_topics>` variables
    to the Topic Titles tag
 -  Added Basic HTTP Authentication for feeds when accessing a feed for a
    forum that you do not have permission to view. Authentication is only

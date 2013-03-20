@@ -28,9 +28,9 @@ Short Name
 
 The "short name" for the channel is the name used internally within the
 program. It is also used when specifying a channel in variables or
-parameters in your `Templates <../../design/templates/index.html>`_. It
-is not normally shown to visitors or otherwise exposed outside of your
-channel "setup".
+parameters in your :doc:`/cp/design/templates/index`. It is not
+normally shown to visitors or otherwise exposed outside of your channel
+"setup".
 
 The channel's short name is a required field. It must be a single word
 with no spaces. The underscore character is allowed. For example, the
@@ -225,19 +225,18 @@ visitor will receive a message.
 Enable Captcha for Comment Posting?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Determines whether or not you require
-`CAPTCHAs <../../../general/captchas.html>`_ to be used when submitting
-comments.
+Determines whether or not you require :doc:`/security/captchas` to be 
+used when submitting comments.
 
 Require email address to post comments?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can optionally require that anyone posting comments must list an
 email address. You can determine in your
-`Template <../../design/templates/index.html>`_ whether or not the
-address is shown publicly, but requiring an email address in order to
-post comments can help reduce the number of "spam" comments you receive
-since the visitor must submit a valid email address.
+:doc:`/cp/design/templates/index` whether or not the address is shown
+publicly, but requiring an email address in order to post comments can
+help reduce the number of "spam" comments you receive since the visitor
+must submit a valid email address.
 
 Moderate Comments?
 ~~~~~~~~~~~~~~~~~~
@@ -275,10 +274,10 @@ be displayed. Enter 0 (zero) for no expiration. Note that this
 preference sets the *default* setting for the channel. The setting can
 be overridden and changed on a per-entry basis.
 
-You may override this setting in the `Comment
-Settings <../../../modules/comment/control_panel/index.html>`_ section
-of the Comment Module so that comments are set to be moderated rather
-than closed once the expiration period is passed.
+You may override this setting in the
+:doc:`/modules/comment/control_panel/index` section of the Comment
+Module so that comments are set to be moderated rather than closed once
+the expiration period is passed.
 
 If you also select the checkbox accompanying this setting, then all
 existing entries in this channel will be updated to reflect the new

@@ -495,9 +495,10 @@ using <ul> or render a list without any formatting. The values are:
 -  **nested**: renders the categories in a xhtml list with <ul>.
 -  **linear**: renders the categories with no formatting.
 
-For more information on nesting please see the `Style
-parameter <../../modules/channel/categories.html#par_style>`_ in the
-Channel section of the User Guide.
+.. todo:: Create anchor for .html#par_style
+
+For more information on nesting please see the :doc:`Style parameter
+</modules/channel/categories>` in the Channel section of the User Guide.
 
 {wiki:categories\_list} \| Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

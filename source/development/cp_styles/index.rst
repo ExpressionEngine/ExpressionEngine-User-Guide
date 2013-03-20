@@ -11,7 +11,7 @@ External Links
 ~~~~~~~~~~~~~~
 
 To protect the users control panel URL from ending up in web server
-referrer logs, use the `masked\_url() <../usage/cp.html#masked_url>`_
+referrer logs, use the :doc:`masked_url() </development/usage/cp>`
 function from the Control Panel Class. ::
 
 	$this->EE->cp->masked_url('http://www.google.com');
@@ -79,8 +79,8 @@ of only one CSS file:
 
 -  themes/cp\_themes/my\_theme/css/override.css
 
-This stylesheet will be loaded just prior to the `cp\_css\_end
-hook <../extension_hooks/cp/css/index.html>`_.
+This stylesheet will be loaded just prior to the :doc:`cp_css_end hook
+</development/extension_hooks/cp/css/index>`.
 
 Design Snippets
 ---------------
@@ -112,7 +112,7 @@ Top Right Navigation
 |image0|
 
 Top right navigation is created with the set\_right\_nav() method of the
-`Control Panel Class <../usage/cp.html#sub_navigation>`_.
+:doc:`Control Panel Class </development/usage/cp>`.
 
 Example Code
 ^^^^^^^^^^^^
@@ -141,8 +141,8 @@ Two default table styles are defined in the Control Panel Library.
 Example Table-based Layout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The following example is from the `Updated Sites
-Module <../../modules/updated_sites/index.html>`_ index.php view file. ::
+The following example is from the :doc:`Updated Sites Module
+</modules/updated_sites/index>` index.php view file. ::
 
 	<?php
 		$this->table->set_template($cp_table_template);

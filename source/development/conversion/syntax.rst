@@ -378,13 +378,12 @@ Regular Expressions Class
 Template Class
 --------------
 
-Aside from switching from globals to the super object, you don't HAVE
-to change your use of the template class. However, make certain to
-read the 2.0 docs on the `Template class <../usage/template.html>`_,
-as using it has been greatly simplified. The legacy approach still
-works, but it may be worth experimenting with the new
-parse\_variables() method, as you will likely want to make use of the
-streamlined approach in the future.
+Aside from switching from globals to the super object, you don't HAVE to
+change your use of the template class. However, make certain to read the
+2.0 docs on the :doc:`/development/usage/template`, as using it has been
+greatly simplified. The legacy approach still works, but it may be worth
+experimenting with the new parse\_variables() method, as you will likely
+want to make use of the streamlined approach in the future.
 
 Note also, the fetch\_param() function has been changed so that
 parameter values of 'y', 'on' and 'yes' all return 'yes', while 'n',

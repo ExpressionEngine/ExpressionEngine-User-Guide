@@ -138,14 +138,13 @@ category=
 	category="2"
 
 Categories are specified by ID number (the ID number of each
-`category <../../cp/admin/channels/category_edit.html>`_ is
-displayed in the Control Panel). The reason we use the ID is because
-categories can be called anything (with spaces, quotes, etc.), and also
-renamed. It would be much more difficult to have to update the tag
-parameters every time you updated a category name. Further, you can have
-multiple categories with the same name either in different Category
-Groups or in different parts of the hierarchy within the same Category
-Group.
+:doc:`category </cp/admin/channels/category_edit>` is displayed in the
+Control Panel). The reason we use the ID is because categories can be
+called anything (with spaces, quotes, etc.), and also renamed. It would
+be much more difficult to have to update the tag parameters every time
+you updated a category name. Further, you can have multiple categories
+with the same name either in different Category Groups or in different
+parts of the hierarchy within the same Category Group.
 
 And as with some of the other parameters, you can stack categories to
 get entries with any of those categories
@@ -201,8 +200,7 @@ category\_group=
 
 
 Category Groups are specified by ID number (the ID number of each
-`category
-group <../../cp/admin/channels/category_management.html>`_ is
+:doc:`category group </cp/admin/channels/category_management>` is
 displayed in the Control Panel). The reason we use the ID is because
 category groups can be called anything (with spaces, quotes, etc.), and
 also renamed. It would be much more difficult to have to update the tag
@@ -233,8 +231,7 @@ channel=
 
 	channel="news"
 
-From which
-`channel <../../cp/admin/channels/channel_management.html>`_ to
+From which :doc:`channel </cp/admin/channels/channel_management>` to
 show the entries (will show all channels if no channel is specified).
 Additionally, you can use the pipe character to separate multiple
 channels::
@@ -246,9 +243,8 @@ channels::
 
 	channel="not channel1|channel2|channel3"
 
-You must specify this parameter if you use the `category name in
-URL <../../cp/admin/channels/global_channel_preferences.html>`_
-feature.
+You must specify this parameter if you use the :doc:`category name in
+URL </cp/admin/channels/global_channel_preferences>` feature.
 
 disable=
 --------
@@ -587,9 +583,9 @@ options for this parameter include:
 -  ``orderby="view_count_three"``
 -  ``orderby="view_count_four"``
 
-In addition you can order by a `channel
-field <../../cp/admin/channels/custom_channel_fields.html>`_. Use
-the "short\_name" of the field::
+In addition you can order by a :doc:`channel field
+</cp/admin/channels/custom_channel_fields>`. Use the "short\_name" of
+the field::
 
 	orderby="name_of_field"
 
@@ -1047,11 +1043,10 @@ status=
 
 	status="open"
 
-You may restrict to entries with a particular
-`status <../../cp/admin/channels/statuses.html>`_ . The two
-statuses "open" and "closed" are default statuses that are always
-available, so you can always specify those if needed. You can choose
-multiple statuses using a pipe::
+You may restrict to entries with a particular :doc:`status
+</cp/admin/channels/statuses>`. The two statuses "open" and "closed" are
+default statuses that are always available, so you can always specify
+those if needed. You can choose multiple statuses using a pipe::
 
 	status="draft|reviewed|published"
 
@@ -1463,9 +1458,8 @@ edit\_date
 
 	{edit_date format="%Y %m %d"}
 
-The date on which the entry was last edited. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+The date on which the entry was last edited. See :doc:`Date Variable
+Formatting </templates/date_variable_formatting>` for more information.
 
 email
 -----
@@ -1483,9 +1477,8 @@ entry\_date
 
 	{entry_date format="%Y %m %d"}
 
-The date the entry was submitted. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+The date the entry was submitted. See :doc:`Date Variable Formatting
+</templates/date_variable_formatting>` for more information.
 
 entry\_id
 ---------
@@ -1530,9 +1523,8 @@ expiration\_date
 
 	{expiration_date format="%Y %m %d"}
 
-The expiration date of the entry. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+The expiration date of the entry. See :doc:`Date Variable Formatting
+</templates/date_variable_formatting>` for more information.
 
 .. _channel-entries-forum_topic_id:
 
@@ -1562,9 +1554,8 @@ gmt\_entry\_date
 	{gmt_entry_date format="%Y %m %d"}
 
 The date the entry was submitted in GMT. This variable is **not**
-localized for each user's date settings. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+localized for each user's date settings. See :doc:`Date Variable
+Formatting </templates/date_variable_formatting>` for more information.
 
 gmt\_edit\_date
 ---------------
@@ -1574,9 +1565,8 @@ gmt\_edit\_date
 	{gmt_edit_date format="%Y %m %d"}
 
 The date on which the entry was last edited in GMT. This variable is
-**not** localized for each user's date settings. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+**not** localized for each user's date settings. See :doc:`Date Variable
+Formatting </templates/date_variable_formatting>` for more information.
 
 icq
 ---
@@ -1749,9 +1739,9 @@ recent\_comment\_date
 
 	{recent_comment_date format="%Y %m %d"}
 
-The date of the most recent comment associated with the entry. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+The date of the most recent comment associated with the entry. See
+:doc:`Date Variable Formatting </templates/date_variable_formatting>`
+for more information.
 
 relative\_url
 -------------
@@ -2016,13 +2006,14 @@ week\_date
 	{week_date format="%Y %m %d"}
 
 The date that the week of the currently displayed entry started on, most
-commonly used in "weekly" scenarios with the `date_heading`_ variable pair.
+commonly used in "weekly" scenarios with the `date_heading`_ variable
+pair.
 
-This variable is affected by the `start_day=`_ parameter. By default, the week date
-will fall on Sunday for the week of the entry. When ``start_day="Monday"``
-is used, the week date will fall on Monday for the week of the entry.
-See `Date Variable Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+This variable is affected by the `start_day=`_ parameter. By default,
+the week date will fall on Sunday for the week of the entry. When
+``start_day="Monday"`` is used, the week date will fall on Monday for
+the week of the entry. See :doc:`Date Variable Formatting
+</templates/date_variable_formatting>` for more information.
 
 .. _channel-entries-conditional-variables:
 
@@ -2033,8 +2024,8 @@ Conditional Variables
 Conditionals allow you to more precisely control your content.
 
 .. note:: A more complete explanation of conditional control structures
-   and operators can be found on the `Global
-   Conditionals <../../templates/globals/conditionals.html>`_ page.
+   and operators can be found on the :doc:`Global Conditionals 
+   </templates/globals/conditionals>` page.
 
 Here is an example that tests for the "summary" field being not empty
 

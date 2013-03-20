@@ -66,8 +66,8 @@ Would display like this after editing::
 
 	This text is emphasized. This text is italicized.
 
-You can do a lot more with BBCode. Just see the `BBCode
-Reference <../../general/BBCode.html>`_ section for details.
+You can do a lot more with BBCode. Just see the :doc:`BBCode Reference
+</general/bbcode>` section for details.
 
 Create an Article
 ~~~~~~~~~~~~~~~~~

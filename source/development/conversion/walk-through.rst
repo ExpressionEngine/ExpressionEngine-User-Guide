@@ -57,8 +57,8 @@ for more detail. Don't forget to:
 
 -  Call the super object
 -  Switch to active record for your queries
--  Take advantage of the new `Template variable
-   parser <../usage/template.html>`_
+-  Take advantage of the new :doc:`Template variable parser 
+   </development/usage/template>`
 
 Modify Control Panel File (mcp.package\_name.php)
 -------------------------------------------------
