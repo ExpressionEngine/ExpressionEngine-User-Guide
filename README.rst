@@ -24,13 +24,14 @@ http://python.org/download/releases/2.7.2/
 Installation
 ============
 
-1. Install `easy_install <http://peak.telecommunity.com/DevCenter/EasyInstall#installing-easy-install>`_
-2. ``easy_install sphinx``
-3. ``easy_install sphinxcontrib-phpdomain``
-4. Install the EE Lexer which allows EE syntax highlighting in code examples (see *eelexer/README*)
-5. ``git clone git@github.com:EllisLab/ExpressionEngine-Reactor-User-Guide.git``
-6. ``cd ExpressionEngine-Reactor-User-Guide``
-7. ``git checkout develop``
+1. Install `easy_install <http://peak.telecommunity.com/DevCenter/EasyInstall#installing-easy-install>`_. 
+   Shouldn't need to install thisif you're running Mac OS X.
+2. ``(sudo) easy_install -U sphinx``
+3. ``(sudo) easy_install -U sphinxcontrib-phpdomain``
+4. ``git clone git@github.com:EllisLab/ExpressionEngine-User-Guide.git``
+5. ``cd ExpressionEngine-User-Guide``
+6. ``git checkout develop``
+7. Install the EE Lexer which allows EE syntax highlighting in code examples (see *eelexer/README*)
 8. ``make html``
 
 Editing and Creating Documentation
