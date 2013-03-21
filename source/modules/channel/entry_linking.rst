@@ -82,15 +82,15 @@ Or you can negate the inclusive stack and get entries that do not of
 
 	category="not 3&5"
 
-**Note:** When you use the category="3\|4" parameter (not excluding),
-you are implicitly telling ExpressionEngine to only deal with entries
-that have been assigned one or more categories. If you have entries that
-haven't been categorized then they will be ignored and not included in
-the results. However, if you are using exclusion (category="not 3\|4"),
-then you will be shown all entries without those categories *including*
-those without any categories assigned. To change this behavior when
-excluding categories use the
-:ref:`channel-entries-uncategorized-entries` parameter.
+.. note:: When you use the category="3\|4" parameter (not excluding),
+	you are implicitly telling ExpressionEngine to only deal with
+	entries that have been assigned one or more categories. If you have
+	entries that haven't been categorized then they will be ignored and
+	not included in the results. However, if you are using exclusion 
+	(``category="not 3|4"``), then you will be shown all entries without
+	those categories *including* those without any categories assigned.
+	To change this behavior when excluding categories use the
+	:ref:`channel-entries-uncategorized-entries` parameter.
 
 category\_group=
 ----------------

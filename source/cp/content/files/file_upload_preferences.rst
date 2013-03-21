@@ -11,10 +11,10 @@ when using the upload utility on the Publish page. You can create as
 many destinations as you need in order to organize your uploaded images
 in the manner you wish.
 
-**Note:** This utility will **not** create the actual destination folder
-on your server so you'll need to do that using your FTP program. In
-addition, you must set the file permissions for that folder to 777 so
-that ExpressionEngine will be allowed to put files into it.
+.. note:: This utility will **not** create the actual destination folder
+	on your server so you'll need to do that using your FTP program. In
+	addition, you must set the file permissions for that folder to 777
+	so that ExpressionEngine will be allowed to put files into it.
 
 Main Screen
 -----------
@@ -93,11 +93,11 @@ files. You have two choices for this preference:
    type to the system. **Be careful** with this setting since it could
    be possible for someone to upload a malicious file.
 
-**Note:** Only file types that are specified in ExpressionEngine's Mime
-Type file are allowed to be uploaded. If you are uploading something
-uncommon and run into problems you may need to add the mime type for
-your file. The Mime Type file can be found at:
-system/expressionengine/config/mimes.php
+.. note:: Only file types that are specified in ExpressionEngine's Mime
+	Type file are allowed to be uploaded. If you are uploading something
+	uncommon and run into problems you may need to add the mime type for
+	your file. The Mime Type file can be found at:
+	``system/expressionengine/config/mimes.php``
 
 Maximum File Size (in bytes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -107,11 +107,11 @@ the setting blank if you do not wish to impose a limit. The size is
 defined in bytes; 1 kilobyte = 1024 bytes. Example: to limit each upload
 to 30 kilobytes, you'll put 30720 in the field.
 
-**Note:** Servers usually also have built-in limits on the amount of
-data that can be uploaded via PHP at one time. The default value for
-this in PHP is 2 MB. If you have a need to upload very large files, then
-you should contact your Host or server admin and talk to them about any
-size limits they have in place.
+.. note:: Servers usually also have built-in limits on the amount of
+	data that can be uploaded via PHP at one time. The default value for
+	this in PHP is 2 MB. If you have a need to upload very large files,
+	then you should contact your Host or server admin and talk to them
+	about any size limits they have in place.
 
 Maximum Image Height (in pixels)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -131,9 +131,10 @@ setting and the maximum height setting blank if you do not with to
 impose a limit. The size is defined in pixels. This option only applies
 to uploaded images and not other file types.
 
-**Note:** If either the maximum height or maximum width is set and the
-other left blank, images that exceed the specified setting will still be
-resized, using the specified setting as the master dimension.
+.. note:: If either the maximum height or maximum width is set and the
+	other left blank, images that exceed the specified setting will
+	still be resized, using the specified setting as the master
+	dimension.
 
 Image Properties
 ~~~~~~~~~~~~~~~~

@@ -33,13 +33,11 @@ A tag, therefore, mirrors an object oriented approach: Class->function
 
     {exp:class_name:function_name}
 
-**Note:** Tags are not always required to have three segments. If your
-plugin is very simple you might opt to only use the class constructor.
-In this case you can get by only using two segments:
+.. note:: Tags are not always required to have three segments. If your
+    plugin is very simple you might opt to only use the class
+    constructor. In this case you can get by only using two segments::
 
-::
-
-    {exp:class_name}
+        {exp:class_name}
 
 Two Kinds of Tags
 ~~~~~~~~~~~~~~~~~

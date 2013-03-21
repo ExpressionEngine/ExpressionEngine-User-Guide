@@ -243,10 +243,10 @@ publish page, all third party tab fields are namespaced using the
 package name when displayed on the publish page. This namespacing will
 be stripped prior to any data being returned to the tab functions.
 
-Note: if your module includes a tab, do not forget to indicate this in
-the update file when installing the module. Further, be sure to include
-the tabs() function in the update file, and use it when updating custom
-layouts on installation and uninstallation.
+.. note:: if your module includes a tab, do not forget to indicate this
+  in the update file when installing the module. Further, be sure to
+  include the tabs() function in the update file, and use it when
+  updating custom layouts on installation and uninstallation.
 
 Tab File Function Reference
 ---------------------------

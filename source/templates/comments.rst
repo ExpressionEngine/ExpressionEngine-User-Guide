@@ -8,9 +8,9 @@ displayed. This allows developers to jot down notes about their usage of
 tags, variables, plugins, and even PHP in templates for future reference
 while keeping users from ever seeing those notes.
 
-**Note:** ExpressionEngine comments must be stored directly in the
-template. When stored in any type of variable, the comments will be
-rendered directly to the screen.
+.. note:: ExpressionEngine comments must be stored directly in the
+	template. When stored in any type of variable, the comments will be
+	rendered directly to the screen.
 
 The syntax for commenting your template code is fairly similar to HTML
 comments, just intead of the greater than and lesser than symbols, you

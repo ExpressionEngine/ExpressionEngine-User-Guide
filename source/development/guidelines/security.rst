@@ -127,9 +127,9 @@ automatically in the supplied data and "where" arrays.
 	$where = array('name' => 'Brett Bretterson');
 	$this->EE->db->query($this->EE->db->update_string('table', $data, $where));
 
-**Note:** If you send the third argument (the WHERE clause) as an
-array as shown above, it will automatically be escaped. If you send a
-string, you must escape it yourself.
+.. note:: If you send the third argument (the WHERE clause) as an
+	array as shown above, it will automatically be escaped. If you send
+	a string, you must escape it yourself.
 
 ::
 
@@ -231,16 +231,17 @@ type of data.
 
 	$foo = (ctype_digit($foo = $this->EE->TMPL->fetch_param('foo'))) ? FALSE : $foo;
 
-**Side Note:** You no doubt notice that ctype\_digit is being used
-here to validate the parameter as a numeric value. Why?
-`is\_numeric() <http://us3.php.net/manual/en/function.is-numeric.php>`_
-returns TRUE for some non-integer numbers, including notation, e.g.
-"-0123.45e6".
-`is\_int() <http://us2.php.net/manual/en/function.is-int.php>`_ only
-returns TRUE on actual integer variable types, and tag parameters are
-always strings. Note that
-`ctype\_digit() <http://us3.php.net/manual/en/function.ctype-digit.php>`_,
-will return TRUE on an empty string in pre-5.1.0 versions of PHP.
+.. note:: You no doubt notice that ``ctype_digit`` is being used
+	here to validate the parameter as a numeric value. Why?
+	`is\_numeric() 
+	<http://us3.php.net/manual/en/function.is-numeric.php>`_ returns 
+	``TRUE`` for some non-integer numbers, including notation, e.g.
+	"-0123.45e6". `is\_int()
+	<http://us2.php.net/manual/en/function.is-int.php>`_ only returns 
+	``TRUE`` on actual integer variable types, and tag parameters are
+	always strings. Note that `ctype\_digit()
+	<http://us3.php.net/manual/en/function.ctype-digit.php>`_, will 
+	return ``TRUE`` on an empty string in pre-5.1.0 versions of PHP.
 
 Default Values
 ^^^^^^^^^^^^^^

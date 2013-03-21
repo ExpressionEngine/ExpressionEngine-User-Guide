@@ -42,9 +42,10 @@ master archive that looks like this
 	etc...
 
 It shows the name of each category, and the channel entry titles
-assigned to them. **Note:** Once you have hundreds of channel entries,
-it might become cumbersome to use this tag on your page.
+assigned to them. 
 
+.. note:: Once you have hundreds of channel entries, it might become 
+	cumbersome to use this tag on your page.
 
 Parameters
 ----------

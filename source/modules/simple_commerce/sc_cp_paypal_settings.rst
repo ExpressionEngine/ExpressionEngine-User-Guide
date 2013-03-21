@@ -26,11 +26,11 @@ someone to alter the purchase data for your items.
 `OpenSSL <http://php.net/manual/en/ref.openssl.php>`_ support compiled
 into PHP. Ask your server administrator for this information.
 
-**Note:** Enabling this requires that you use a public certificate and
-private key. Please read the section on
-:ref:`simple-commerce-encrypted-payments` for full details. In order to be
-the most effective, you should also change your PayPal account settings
-to only accept encrypted payments.
+.. note:: Enabling this requires that you use a public certificate and
+	private key. Please read the section on 
+	:ref:`simple-commerce-encrypted-payments` for full details. In order
+	to be the most effective, you should also change your PayPal account
+	settings to only accept encrypted payments.
 
 ID Given to Public Certificate by PayPal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -44,10 +44,10 @@ Public Certificate Path
 The path to your public certificate file. Please read the section on
 :ref:`simple-commerce-encrypted-payments` for full details.
 
-**Note:** ExpressionEngine must have read access to this directory, but
-for security it is highly recommended that you use a location above the
-public HTML folder on your account so that the certificate and key files
-are not accessible via the web.
+.. note:: ExpressionEngine must have read access to this directory, but
+	for security it is highly recommended that you use a location above
+	the public HTML folder on your account so that the certificate and 
+	key files are not accessible via the web.
 
 Private Key Path
 ~~~~~~~~~~~~~~~~
@@ -55,10 +55,10 @@ Private Key Path
 The path to your private key file. Please read the section on
 :ref:`simple-commerce-encrypted-payments` for full details.
 
-**Note:** ExpressionEngine must have read access to this directory, but
-for security it is highly recommended that you use a location above the
-public HTML folder on your account so that the certificate and key files
-are not accessible via the web.
+.. note:: ExpressionEngine must have read access to this directory, but
+	for security it is highly recommended that you use a location above
+	the public HTML folder on your account so that the certificate and
+	key files are not accessible via the web.
 
 PayPal Certificate Path
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -66,10 +66,10 @@ PayPal Certificate Path
 The path to your PayPal certificate file. Please read the section on
 :ref:`simple-commerce-encrypted-payments` for full details.
 
-**Note:** ExpressionEngine must have read access to this directory, but
-for security it is highly recommended that you use a location above the
-public HTML folder on your account so that the certificate and key files
-are not accessible via the web.
+.. note:: ExpressionEngine must have read access to this directory, but
+	for security it is highly recommended that you use a location above
+	the public HTML folder on your account so that the certificate and 
+	key files are not accessible via the web.
 
 Temporary Encrypted Files Path
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -77,9 +77,9 @@ Temporary Encrypted Files Path
 The path to your temporarily stored encrypted files. Please read the section on
 :ref:`simple-commerce-encrypted-payments` for full details.
 
-**Note:** ExpressionEngine must have read and write access to this
-directory. The files created in this directory are temporary and are
-deleted after processing, but it is still recommended that it is not
-accessible via the web.
+.. note:: ExpressionEngine must have read and write access to this
+	directory. The files created in this directory are temporary and are
+	deleted after processing, but it is still recommended that it is not
+	accessible via the web.
 
 .. |Simple Commerce PayPal Settings| image:: ../../images/sc_paypal_settings.png

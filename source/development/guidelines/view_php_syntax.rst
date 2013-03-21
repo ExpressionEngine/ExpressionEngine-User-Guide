@@ -12,11 +12,11 @@ identify the code blocks. If you are not familiar with this syntax, it
 allows you to eliminate the braces from your code, and eliminate "echo"
 statements.
 
-**NOTE:** If "short tags" are disabled in your PHP ini file,
-ExpressionEngine will automatically rewrite them for you. In such a
-case, if PHP errors are encountered in your **view files**, the error
-message and line number will not be accurately shown. Instead, all
-errors will be shown as eval() errors.
+.. note:: If "short tags" are disabled in your PHP ini file,
+	ExpressionEngine will automatically rewrite them for you. In such a
+	case, if PHP errors are encountered in your **view files**, the
+	error message and line number will not be accurately shown. Instead,
+	all errors will be shown as eval() errors.
 
 PHP Alternate Syntax
 --------------------

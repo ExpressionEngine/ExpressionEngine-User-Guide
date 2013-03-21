@@ -218,11 +218,11 @@ Or use "not" to exclude categories
 
 	category_group="not 2"
 
-**Note:** Using this parameter will automatically cause ExpressionEngine
-to *ignore* any category information specified via the URL. For
-instance, if you are on a "category page" (e.g. a ``/C13/`` segment in the
-URL) that will be completely ignored in favor of whatever you have
-specified via the parameter.
+.. note:: Using this parameter will automatically cause ExpressionEngine
+	to *ignore* any category information specified via the URL. For
+	instance, if you are on a "category page" (e.g. a ``/C13/`` segment
+	in the URL) that will be completely ignored in favor of whatever you
+	have specified via the parameter.
 
 channel=
 --------
@@ -383,10 +383,10 @@ your site you visit (main page, archives, comments, etc.). By setting
 ``dynamic="no"`` you will ensure that the list is not affected by anything
 passed in the URL.
 
-Note: you may allow the tag to be sensitive to pagination data in the
-url by including the `paginate=`_ parameter. If that tag
-is used in conjunction with the dynamic parameter, the tag will act
-dynamically for pagination data only.
+.. note:: You may allow the tag to be sensitive to pagination data in 
+	the url by including the `paginate=`_ parameter. If that tag
+	is used in conjunction with the dynamic parameter, the tag will act
+	dynamically for pagination data only.
 
 dynamic_parameters=
 -------------------
@@ -401,8 +401,8 @@ data submitted via a form. A practical use for this is to create some
 display options in a form on your page that your visitors can use to
 select their preferred page view.
 
-**NOTE:** This feature will only work if page caching is turned OFF for
-the template in which it is being used.
+.. note:: This feature will only work if page caching is turned OFF for
+	the template in which it is being used.
 
 Every Parameter available to the channel tag can be set dynamically.
 
@@ -489,9 +489,10 @@ setting it to 'desc'::
 In the above example, three entries would be displayed, in the order: 1,
 7, and then 3.
 
-**Note:** Using this parameter will automatically constrain the entries
-tag to the entry id's you specify, effectively setting the `entry_id=`_
-parameter to the same id's given to the fixed_order= parameter.
+.. note:: Using this parameter will automatically constrain the entries
+	tag to the entry id's you specify, effectively setting the 
+	`entry_id=`_ parameter to the same id's given to the 
+	``fixed_order=`` parameter.
 
 group\_id=
 ----------
@@ -589,13 +590,13 @@ the field::
 
 	orderby="name_of_field"
 
-**Note:** Ordering by a Relationship field will cause entries to appear
-in the order the relationships were made, not based on any content from
-the related entries.
+.. note:: Ordering by a Relationship field will cause entries to appear
+	in the order the relationships were made, not based on any content
+	from the related entries.
 
-**Note:** When ordering by "random", entries that have been marked as
-"sticky" will not appear first; they will appear randomly with all other
-entries.
+.. note:: When ordering by "random", entries that have been marked as
+	"sticky" will not appear first; they will appear randomly with all
+	other entries.
 
 **Multiple Orders and Sorts**
 
@@ -760,8 +761,8 @@ URL. However, if one of your single entry pages is requested, but it
 doesn't contain a valid ID, this parameter will tell the tag that you do
 not wish the template to display anything.
 
-**Note:** You will often use this parameter in conjunction with the 
-`if no_results`_ conditional.
+.. note:: You will often use this parameter in conjunction with the 
+	`if no_results`_ conditional.
 
 search:field\_name=
 -------------------
@@ -776,8 +777,8 @@ by using the field's short name immediately after "search:". You can
 search based on whether a field is an exact match to your provided term
 or whether or not a field simply contains your term.
 
-**Note:** Only fields of the type "Text Input", "Textarea", and
-"Drop-down Lists" are searched with this parameter.
+.. note:: Only fields of the type "Text Input", "Textarea", and
+	"Drop-down Lists" are searched with this parameter.
 
 "Exact" Matching
 ~~~~~~~~~~~~~~~~
@@ -879,10 +880,10 @@ the body is empty **or** contains the word "sandwich". ::
 This example returns only entries that have content, but **not** those
 that contain "sandwich" **nor** those that contain the word "salad".
 
-**Note:** You may use multiple search: parameters in a channel entries
-tag, as long as each one is searching a different field. e.g.::
+.. note:: You may use multiple search: parameters in a channel entries
+	tag, as long as each one is searching a different field. e.g.::
 
-	{exp:channel:entries search:style="=ale" search:region="germany|belgium" search:rating="=3|4|5"}
+		{exp:channel:entries search:style="=ale" search:region="germany|belgium" search:rating="=3|4|5"}
 
 show\_current\_week=
 --------------------
@@ -1009,9 +1010,9 @@ You may optionally use a 12 hour time format by including am/pm notation
 08:00 pm; 2004-06-05 08:00 is equivalent to: 2004-06-05 08:00 AM and
 2004-06-05 08:00 am).
 
-**Note:** If you are using a non-English language pack, it's necessary
-to use a 24 hour format only, as the AM/PM indicators may have been
-changed.
+.. note:: If you are using a non-English language pack, it's necessary
+	to use a 24 hour format only, as the AM/PM indicators may have been
+	changed.
 
 Common Uses
 ~~~~~~~~~~~
@@ -1898,10 +1899,10 @@ Will render as::
 
 	http://example.com/index.php/channel/archives/my_ugly_boyfriend/
 
-**Note:** When creating a new entry, if you don't supply the "url title"
-then it will be automatically created from the actual entry title.
-Spaces are turned into underscores and quotes are removed. For example,
-"Joe's night out" becomes "joes\_night\_out".
+.. note:: When creating a new entry, if you don't supply the "url title"
+	then it will be automatically created from the actual entry title.
+	Spaces are turned into underscores and quotes are removed. For
+	example, "Joe's night out" becomes "joes\_night\_out".
 
 total\_results
 --------------

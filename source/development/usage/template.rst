@@ -58,32 +58,32 @@ them easily accessible by the requested function by using the
 that will be returned if the parameter was not set in the opening tag.
 It defaults to FALSE if the second argument is not supplied.
 
-Note: values of 'y', 'on' and 'yes' will all return 'yes', while 'n',
-'off' and 'no' all return 'no'. ::
+.. note:: values of 'y', 'on' and 'yes' will all return 'yes', while 
+	'n', 'off' and 'no' all return 'no'::
 
-	// Default value is 'random'
-	$order = $this->EE->TMPL->fetch_param('order', 'random');
-	
-	if ( ! $channel = $this->EE->TMPL->fetch_param('channel'))
-	{
-	    $this->EE->language->fetch_language_file('module');
-	    $this->EE->output->fatal_error($this->EE->language->line('module_invalid_channel'));
-	    exit;
-	}
-	else
-	{            
-	    $str = $this->EE->functions->sql_andor_string($channel, 'channel_name');
-	    
-	    if (strncmp($str, 'AND', 3) == 0)
-	    {
-	        $str = substr($str, 3);
-	    }
-	    
-	    $sql .= "SELECT channel_id FROM exp_channels WHERE ".$str;
-	    $query = $this->EE->db->query($sql);
-	}
-	// If channel is not specified, then an error is output.
-	// Otherwise, perform query.
+		// Default value is 'random'
+		$order = $this->EE->TMPL->fetch_param('order', 'random');
+		
+		if ( ! $channel = $this->EE->TMPL->fetch_param('channel'))
+		{
+		    $this->EE->language->fetch_language_file('module');
+		    $this->EE->output->fatal_error($this->EE->language->line('module_invalid_channel'));
+		    exit;
+		}
+		else
+		{            
+		    $str = $this->EE->functions->sql_andor_string($channel, 'channel_name');
+		    
+		    if (strncmp($str, 'AND', 3) == 0)
+		    {
+		        $str = substr($str, 3);
+		    }
+		    
+		    $sql .= "SELECT channel_id FROM exp_channels WHERE ".$str;
+		    $query = $this->EE->db->query($sql);
+		}
+		// If channel is not specified, then an error is output.
+		// Otherwise, perform query.
 
 Information Within Tag Pairs
 ----------------------------
@@ -96,10 +96,10 @@ this formatting information between the opening and closing tags the
 'tag data', and this data can be requested by using the
 $this->EE->TMPL->tagdata variable.
 
-***NOTE:** Except in rare cases, a module will have both an opening and
-closing tag. There are exceptions to this rule such as when you might
-wish to have a tag that simply performs an automated action. An example
-of this is the {exp:moblog:check} tag.*
+.. note:: Except in rare cases, a module will have both an opening and
+	closing tag. There are exceptions to this rule such as when you
+	might wish to have a tag that simply performs an automated action.
+	An example of this is the {exp:moblog:check} tag.
 
 **Module code in template.** The tag data is everything from the end of
 the opening tag to the beginning of the closing tag, basically the HTML

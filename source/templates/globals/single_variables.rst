@@ -86,10 +86,10 @@ standard :doc:`date variable formatting
 
 	{current_time format="%Y %m %d %H:%i:%s"}
 
-**Note:** Unlike the rest of the Standard Global Variables,
-{current\_time} is parsed very early on in the Template parser, which
-allows you to make dynamic use of it in your tags, for instance as a tag
-parameter, or in a conditional.
+.. note:: Unlike the rest of the Standard Global Variables,
+	``{current_time}`` is parsed very early on in the Template parser, 
+	which allows you to make dynamic use of it in your tags, for 
+	instance as a tag parameter, or in a conditional.
 
 current_url
 -----------

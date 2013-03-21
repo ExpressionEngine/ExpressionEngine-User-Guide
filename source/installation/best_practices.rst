@@ -24,11 +24,11 @@ location of your system folder to be known.
 
 	$system_path = './dazzle';
 
-**Note:** There may also be some areas in the Control Panel where you
-will need to update the server path. For example:
+.. note:: There may also be some areas in the Control Panel where you
+  will need to update the server path. For example:
 
--  :menuselection:`Design --> Templates --> Global Preferences`
--  :menuselection:`Content --> Files --> File Upload Preferences`
+  - :menuselection:`Design --> Templates --> Global Preferences`
+  - :menuselection:`Content --> Files --> File Upload Preferences`
 
 Moving the System Directory Above Webroot
 -----------------------------------------
@@ -86,11 +86,11 @@ Note the extra period, indicating that the system folder is now one
 level up, above webroot where it cannot be directly accessed from a web
 browser.
 
-**Note:** There may also be some areas in the Control Panel where you
-will need to update the server path. For example:
+.. note:: There may also be some areas in the Control Panel where you
+  will need to update the server path. For example:
 
--  :menuselection:`Design --> Templates --> Global Preferences`
--  :menuselection:`Content --> Files --> File Upload Preferences`
+  - :menuselection:`Design --> Templates --> Global Preferences`
+  - :menuselection:`Content --> Files --> File Upload Preferences`
 
 Renaming admin.php
 ------------------

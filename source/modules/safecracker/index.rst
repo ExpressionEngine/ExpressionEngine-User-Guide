@@ -301,8 +301,8 @@ include\_jquery=
 
 Includes jQuery automatically. Defaults to "yes".
 
-**Note:** If you are using your own copy of jQuery you will need to load
-it **before** the SafeCracker form.
+.. note:: If you are using your own copy of jQuery you will need to load
+	it **before** the SafeCracker form.
 
 json=
 ~~~~~

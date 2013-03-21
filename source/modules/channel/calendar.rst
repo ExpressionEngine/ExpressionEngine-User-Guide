@@ -475,10 +475,10 @@ Will render as::
 
 	http://example.com/channel/archives/my_ugly_boyfriend/
 
-**Note:** When creating a new entry, if you don't supply the "url title"
-then it will be automatically created from the actual entry title.
-Spaces are turned into underscores and quotes are removed. For example,
-"Joe's night out" becomes "joes\_night\_out".
+.. note:: When creating a new entry, if you don't supply the "url title"
+    then it will be automatically created from the actual entry title.
+    Spaces are turned into underscores and quotes are removed. For
+    example, "Joe's night out" becomes "joes\_night\_out".
 
 This is only available for use inside the {entries}{/entries} variable
 pair.

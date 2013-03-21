@@ -14,13 +14,73 @@ recent threads in a sidebar on your site's main page, for instance.
 
 At its simplest, posts to support forums can be displayed along with the
 current reply status, making it easy for users to identify recent posts
-that have not been successfully solved or replied to by staff:
+that have not been successfully solved or replied to by staff::
 
-``<table>     <tr>         <td>Title</td>         <td>Status</td>         <td>Last reply</td>     </tr>  {exp:forum:forum_helper orderby="post_date" sort="desc" limit="50"}     <tr>         <td><a href="{thread_path='forums/viewthread'}">{title}</a></td>         <td>{"status"}</td>         <td>Last response: {last_post_date format="%m/%d/%Y %h:%i %a"}<br />         By: <a href="{last_author_profile_path='forums/member'}">{last_author}</a></td>     </tr> {/exp:forum:topic_titles} </table>``
+	<table>
+		<tr>
+			<td>Title</td>
+			<td>Status</td>
+			<td>Last reply</td>
+		</tr>
+		{exp:forum:forum_helper orderby="post_date" sort="desc" limit="50"}
+			<tr>
+				<td><a href="{thread_path='forums/viewthread'}">{title}</a></td>
+				<td>{"status"}</td>
+				<td>
+					Last response: {last_post_date format="%m/%d/%Y %h:%i %a"}<br />
+					By: <a href="{last_author_profile_path='forums/member'}">{last_author}</a>
+				</td>
+			</tr>
+		{/exp:forum:topic_titles}
+	</table>
+
 You can also break out the different statuses into their own display
-grids using variable pairs:
+grids using variable pairs::
 
-``{exp:forum:forum_helper orderby="post_date" sort="desc" limit="50"}  {status_group status="new"}     {status_header}      <h2>{status}<h2>          <table>         <tr>             <td>Title</td>             <td>Last reply</td>         </tr>     {/status_header}                  <tr>             <td><a href="{thread_path='forums/viewthread'}">{title}</a></td>             <td>Last response: {last_post_date format="%m/%d/%Y %h:%i %a"}<br />             By: <a href="{last_author_profile_path='forums/member'}">{last_author}</a></td>         </tr>      {status_footer}     </table>     {/status_footer}  {/status_group}   {status_group status="not new"}     {status_header}      <h2>{status}<h2>          <table>         <tr>             <td>Title</td>             <td>Status</td>             <td>Last reply</td>         </tr>     {/status_header}                  <tr>             <td><a href="{thread_path='forums/viewthread'}">{title}</a></td>             <td>{status}</td>                        <td>Last response: {last_post_date format="%m/%d/%Y %h:%i %a"}<br />             By: <a href="{last_author_profile_path='forums/member'}">{last_author}</a></td>         </tr>      {status_footer}     </table>     {/status_footer}  {/status_group}  {/exp:forum:forum_helper} </table>``
+	{exp:forum:forum_helper orderby="post_date" sort="desc" limit="50"}
+		{status_group status="new"}
+			{status_header}
+				<h2>{status}<h2>
+	 			<table>
+	 				<tr>
+	 					<td>Title</td>
+	 					<td>Last reply</td>
+	 				</tr>
+ 			{/status_header}
+ 					<tr>             
+ 						<td><a href="{thread_path='forums/viewthread'}">{title}</a></td>
+ 						<td>
+ 							Last response: {last_post_date format="%m/%d/%Y %h:%i %a"}<br />
+ 							By: <a href="{last_author_profile_path='forums/member'}">{last_author}</a></td>
+ 						</tr>
+ 			{status_footer}
+ 				</table>
+ 			{/status_footer}
+ 		{/status_group}
+ 		{status_group status="not new"}
+ 			{status_header}
+ 				<h2>{status}<h2>
+ 				<table>
+ 					<tr>
+	 					<td>Title</td>
+	 					<td>Status</td>
+	 					<td>Last reply</td>
+	 				</tr>
+ 			{/status_header}
+ 					<tr>
+ 						<td><a href="{thread_path='forums/viewthread'}">{title}</a></td>
+ 						<td>{status}</td>
+ 						<td>
+ 							Last response: {last_post_date format="%m/%d/%Y %h:%i %a"}<br />
+ 							By: <a href="{last_author_profile_path='forums/member'}">{last_author}</a>
+ 						</td>
+ 					</tr>
+ 			{status_footer}
+ 				</table>
+ 			{/status_footer}
+ 		{/status_group}
+ 	{/exp:forum:forum_helper}
+ 	
 Parameters
 ----------
 
@@ -148,8 +208,8 @@ body
 ``{body}``
 The contents of the topic.
 
-**Note:** This variable will use the formatting preferences of the forum
-that the topic belongs to.
+.. note:: This variable will use the formatting preferences of the forum
+	that the topic belongs to.
 
 forum\_name
 ~~~~~~~~~~~
@@ -219,8 +279,8 @@ last\_reply
 ``{last_reply}``
 If available, the contents of the most recent reply to the thread.
 
-**Note:** This variable will use the formatting preferences of the forum
-that the topic belongs to.
+.. note:: This variable will use the formatting preferences of the forum
+	that the topic belongs to.
 
 profile\_path
 ~~~~~~~~~~~~~

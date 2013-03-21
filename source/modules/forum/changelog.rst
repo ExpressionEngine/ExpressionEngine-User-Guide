@@ -766,16 +766,19 @@ Version 1.2
 
 Release Date: November 30, 2005
 
--  Improved the "read topic" tracker so that it works with non-logged-in
-   users (Note: requires the EE 1.4 core)
--  Changed the "max post characters" limit to 5 characters
--  Fixed a problem that can occur if a user edits a post after a
-   moderator has enabled it as sticky, closed, etc.
--  Fixed a problem displaying attachments if the attachment has a file
-   extension in uppercase.
--  Added Post Reply and Post Topic permissions instead of the single
-   Post permission
--  Added notification preferences for categories
+- Improved the "read topic" tracker so that it works with non-logged-in
+  users
+
+  .. note:: Requires the EE 1.4 core)
+  
+- Changed the "max post characters" limit to 5 characters
+- Fixed a problem that can occur if a user edits a post after a
+  moderator has enabled it as sticky, closed, etc.
+- Fixed a problem displaying attachments if the attachment has a file
+  extension in uppercase.
+- Added Post Reply and Post Topic permissions instead of the single
+  Post permission
+- Added notification preferences for categories
 
 `Top of Page <#top>`_
 

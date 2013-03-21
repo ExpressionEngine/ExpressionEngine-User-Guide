@@ -37,8 +37,8 @@ So if the Site's Short Name is "siteA" and you want to embed the
 Specifying Multiple Sites (prepare for a head trip)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Note:** Specifying multiple Sites does not work with the {embed=""}
-tag.
+.. note:: Specifying multiple Sites does not work with the {embed=""}
+	tag.
 
 When using the site="" parameter in the Channel, Comment, Statistics,
 and RSS modules you can specify multiple Sites like so::

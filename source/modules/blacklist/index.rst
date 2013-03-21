@@ -106,11 +106,11 @@ items in your Whitelist before automatically deleting them. This means
 that as you update your Blacklist you can automatically clean out
 existing referrers that match your new entries.
 
-**Note:** ExpressionEngine does **not** search through comments and
-delete them when new items are added to the Blacklist. Mass deleting of
-comments via a simple search of a term is not recommended, since it
-might have unforeseen results and the deleted comments are not
-retrievable.
+.. note:: ExpressionEngine does **not** search through comments and
+   delete them when new items are added to the Blacklist. Mass deleting
+   of comments via a simple search of a term is not recommended, since
+   it might have unforeseen results and the deleted comments are not
+   retrievable.
 
 Downloading ExpressionEngine.com Lists
 --------------------------------------
@@ -133,10 +133,11 @@ ExpressionEngine will compare the downloaded list to your local list and
 add any new entries to the end of your lists. EE will not delete or
 alter any of your existing items in your lists.
 
-**Note:** Downloading the ExpressionEngine.com Blacklist and Whitelist
-requires that your host have outgoing socket connections enabled on your
-server and the 'fsockopen()' PHP function available. This configuration
-is quite common on most web hosts and default server configurations.
+.. note:: Downloading the ExpressionEngine.com Blacklist and Whitelist
+   requires that your host have outgoing socket connections enabled on
+   your server and the 'fsockopen()' PHP function available. This
+   configuration is quite common on most web hosts and default server
+   configurations.
 
 Writing Blacklist to .htaccess File
 -----------------------------------

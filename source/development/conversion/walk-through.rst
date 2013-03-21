@@ -35,11 +35,11 @@ methods: install(), uninistall(), update().
    database manipulation).
 #. Save- you're done with your update file!
 
-**Note:** If your module requires user input to complete the install,
-that should occur on first-run of the module control panel, and not the
-primary installer. This allows your module to be installed during the
-ExpressionEngine installer process. See the Wiki module for an example
-if needed.
+.. note:: If your module requires user input to complete the install,
+   that should occur on first-run of the module control panel, and not
+   the primary installer. This allows your module to be installed during
+   the ExpressionEngine installer process. See the Wiki module for an
+   example if needed.
 
 Modify Language File
 --------------------

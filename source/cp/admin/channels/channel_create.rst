@@ -40,8 +40,8 @@ Edit Group Preferences
 
 Allows you to set the group preferences for a channel upon creation.
 
-**Note:** Changing these settings will override the settings that would
-be applied when duplicating an existing channel's preferences
+.. note:: Changing these settings will override the settings that would
+	be applied when duplicating an existing channel's preferences
 
 Category Group
 ^^^^^^^^^^^^^^

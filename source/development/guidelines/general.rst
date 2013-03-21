@@ -474,12 +474,13 @@ CORRECT::
 
 	exp_pre_email_addresses
 
-**Note:** Be mindful that MySQL has a limit of 64 characters for
-table names. This should not be an issue as table names that would
-exceed this would likely have unreasonable names. For instance, the
-following table name exceeds this limitation by one character. Silly,
-no?
-**exp\_pre\_email\_addresses\_of\_registered\_users\_in\_seattle\_washington**
+.. note:: Be mindful that MySQL has a limit of 64 characters for
+	table names. This should not be an issue as table names that would
+	exceed this would likely have unreasonable names. For instance, the
+	following table name exceeds this limitation by one character. 
+	Silly, no::
+
+		exp_pre_email_addresses_of_registered_users_in_seattle_washington
 
 One File per Class
 ^^^^^^^^^^^^^^^^^^
@@ -650,11 +651,11 @@ it with::
 
 	ini_set('display_errors', 1);
 
-**Note:** Setting the
-`display\_errors <http://us.php.net/manual/en/ref.errorfunc.php#ini.display-errors>`_
-setting with ini\_set() at runtime is not identical to having it
-enabled in the PHP environment. Namely, it will not have any effect
-if the script has fatal errors
+.. note:: Setting the `display\_errors 
+	<http://us.php.net/manual/en/ref.errorfunc.php#ini.display-errors>`_
+	setting with ini\_set() at runtime is not identical to having it
+	enabled in the PHP environment. Namely, it will not have any effect
+	if the script has fatal errors
 
 Short Open Tags
 ^^^^^^^^^^^^^^^

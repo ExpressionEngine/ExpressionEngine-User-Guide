@@ -19,9 +19,9 @@ channel entries tag.
 The full example module can be `downloaded from GitHub
 <https://github.com/EllisLab/ee-tuts-download-module>`_.
 
-Note: if you have not already read the :doc:`Modules
-Overview </development/modules>`, you will want to do so in order to obtain
-the greatest value from the tutorial.         
+.. note:: if you have not already read the :doc:`Modules
+    Overview </development/modules>`, you will want to do so in order to
+    obtain the greatest value from the tutorial.         
 
 Required File Structure for the Download Module
 -----------------------------------------------
@@ -122,10 +122,10 @@ action id and tie it to the appropriate method.
 
         $this->EE->db->insert('actions', $data);
 
-**Note:** Because the action\_id field in the actions table is
-auto-incremented, do not specify it in the query. If you include an
-auto-increment field and leave it empty, it will cause a database error
-if MySQL is running in "strict mode".
+.. note:: Because the action\_id field in the actions table is
+    auto-incremented, do not specify it in the query. If you include an
+    auto-increment field and leave it empty, it will cause a database
+    error if MySQL is running in "strict mode".
 
 When the actions are entered into the exp\_actions database table, they
 are given a unique action\_id that the system will recognize and use to

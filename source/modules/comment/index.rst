@@ -86,10 +86,10 @@ from multiple entries by separating them with the pipe character::
 
 	entry_id="not 45|534|807"
 
-**Note:** This parameter takes precedence over any entry specified
-dynamically in the URL, so when using this parameter you will want to
-make sure it is clear to the user which entry the displayed comments
-belong to.
+.. note:: This parameter takes precedence over any entry specified
+	dynamically in the URL, so when using this parameter you will want
+	to make sure it is clear to the user which entry the displayed
+	comments belong to.
 
 comment\_id=
 ------------
@@ -199,10 +199,10 @@ url\_title=
 You can hard code the comment entries tag to show comments for a
 specific channel entry by its URL title.
 
-**Note:** This parameter takes precedence over any entry specified
-dynamically in the URL, so when using this parameter you will want to
-make sure it is clear to the user which entry the displayed comments
-belong to.
+.. note:: This parameter takes precedence over any entry specified
+	dynamically in the URL, so when using this parameter you will want
+	to make sure it is clear to the user which entry the displayed
+	comments belong to.
 
 channel=
 --------
@@ -1117,10 +1117,10 @@ entry\_id=
 You can hard code the comment form tag to display a comment form for a
 specific channel entry by its entry ID.
 
-**Note:** This parameter takes precedence over any entry specified
-dynamically in the URL, so when using this parameter you will want to
-make sure it is clear to the user which entry the displayed comment form
-belongs to.
+.. note:: This parameter takes precedence over any entry specified
+	dynamically in the URL, so when using this parameter you will want
+	to make sure it is clear to the user which entry the displayed
+	comment form belongs to.
 
 preview=
 --------
@@ -1145,10 +1145,10 @@ url\_title=
 You can hard code the comment for tag to display a comment form for a
 specific channel entry by its URL title.
 
-**Note:** This parameter takes precedence over any entry specified
-dynamically in the URL, so when using this parameter you will want to
-make sure it is clear to the user which entry the displayed comment form
-belong to.
+.. note:: This parameter takes precedence over any entry specified
+	dynamically in the URL, so when using this parameter you will want
+	to make sure it is clear to the user which entry the displayed
+	comment form belong to.
 
 channel=
 --------
@@ -1464,8 +1464,8 @@ a comment or a status variable. For example:
 
 	$.post("{exp:comment:ajax_edit_url}", {status: "close", comment_id: id, XID: hash});
 
-**Note:** If secure forms is enabled, a proper security hash must be
-sent in order to edit or close the comment.
+.. note:: If secure forms is enabled, a proper security hash must be
+	sent in order to edit or close the comment.
 
 A request for an edit will return a response array. In the case of an
 error, an error key with a response message will be sent. If the request

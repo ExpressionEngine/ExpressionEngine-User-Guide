@@ -29,9 +29,9 @@ This hook must append a key to the :doc:`$last_call
 	    )
 	);
 
-**Note:** It is good practice to clean up the templates table and remove
-your custom template type from templates using it upon extension
-uninstallation.
+.. note:: It is good practice to clean up the templates table and remove
+	your custom template type from templates using it upon extension
+	uninstallation.
 
 :returns:
     Array

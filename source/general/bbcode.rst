@@ -9,9 +9,10 @@ cases identical) to the codes used on many popular forum packages.
 BBCode can be used in your entry fields when you create an entry or when
 you leave a comment. It cannot normally be used in a Template.
 
-**Security Note:** Whenever BBCode is used, even if your settings Allow
-All HTML, the BBCode is run through various security checks to prevent
-malicious people from posting naughty HTML or code through them.
+.. important:: Whenever BBCode is used, even if your settings Allow
+	All HTML, the BBCode is run through various security checks to 
+	prevent malicious people from posting naughty HTML or code through
+	them.
 
 URLs and Linking
 ----------------

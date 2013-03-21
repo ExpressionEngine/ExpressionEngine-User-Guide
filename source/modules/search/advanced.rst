@@ -167,8 +167,8 @@ Or use "not" to exclude categories
 
 	category="not 2|8"
 
-**Note:** If a parent is excluded from the multiple select list, then
-its children will not be shown.
+.. note:: If a parent is excluded from the multiple select list, then
+	its children will not be shown.
 
 cat\_style=
 ~~~~~~~~~~~

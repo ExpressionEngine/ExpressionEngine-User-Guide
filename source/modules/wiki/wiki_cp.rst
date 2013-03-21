@@ -53,8 +53,8 @@ File Upload Directory for Wiki
 You can use any existing upload directory for the wiki or create a new
 one.
 
-**Note:** The server path for your wiki's File Upload Directory must use
-a full server path.
+.. note:: The server path for your wiki's File Upload Directory must use
+	a full server path.
 
 Administrator Groups
 ~~~~~~~~~~~~~~~~~~~~
@@ -127,10 +127,10 @@ If you wish to delete a namespace, click the minus sign on the right
 side of its row. To add a new namespace row, click any of the plus signs
 and a new, empty row will be created for you.
 
-**Note:** When you delete a namespace, the articles will still exist in
-the database but since their Namespace is gone they will no longer be
-accessible via the wiki. If you ever recreate the namespace with the
-same short name and label, the articles will once again be accessible.
-
+.. note:: When you delete a namespace, the articles will still exist in
+	the database but since their Namespace is gone they will no longer
+	be accessible via the wiki. If you ever recreate the namespace with
+	the same short name and label, the articles will once again be 
+	accessible.
 
 .. |Create Namespace form.| image:: ../../images/wiki_cp_namespaces.png

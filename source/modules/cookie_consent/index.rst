@@ -27,10 +27,10 @@ settings related to control panel login and cookie clearing behavior.
 See :doc:`Cookie Consent control panel <control_panel/index>` for more
 information.
 
-**Note:** Installing this module will prevent cookies from being set by all first 
-party ExpressionEngine code and any code that uses the Function class' set_cookie() 
-method.  Cookies may still be set by third party code using PHP, JavasScript, third 
-party scripts, etc. 
+.. note:: Installing this module will prevent cookies from being set by all first 
+	party ExpressionEngine code and any code that uses the Function class' 
+	set_cookie() method.  Cookies may still be set by third party code using PHP,
+	JavasScript, third party scripts, etc. 
 
 
 .. _installation:

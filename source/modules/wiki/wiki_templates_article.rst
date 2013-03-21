@@ -88,10 +88,11 @@ below:
 
 |Displays all the articles in a category.|
 
-**Note:** A **Namespace** is a way to organize content by a special
-keyword (the "namespace") that is not a title, topic, or category name.
-For example, the wiki currently uses, by default, namespaces called
-**Special**, **File**, and **Category** to organize wiki content.
+.. note:: A **Namespace** is a way to organize content by a special
+	keyword (the "namespace") that is not a title, topic, or category 
+	name. For example, the wiki currently uses, by default, namespaces 
+	called **Special**, **File**, and **Category** to organize wiki 
+	content.
 
 Namespace features will be expanded on in future versions. In the
 current verison you can use the **Category Namespace** in the Article

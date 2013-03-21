@@ -12,8 +12,8 @@ format, and supported email sending protocols are
 `Sendmail <http://www.sendmail.org/>`_, and PHP
 `mail <http://us2.php.net/manual/en/function.mail.php>`_.
 
-**Note:** In the Admin area of the Control Panel you'll find the
-:doc:`/cp/admin/email_configuration` page.
+.. note:: In the Admin area of the Control Panel you'll find the
+	:doc:`/cp/admin/email_configuration` page.
 
 |Communicate|
 
@@ -60,12 +60,12 @@ How the email's message should be formatted. Options include:
    emails, HTML emails are more likely to be flagged as spam, and that
    many people prefer not to receive such emails.
 
-**Note:** If you choose to send your email in the HTML Format, an
-optional field will appear allowing you specify a Plain Text Alternative
-to the HTML email. This allows email clients who have HTML email
-disabled or unavailable to still view the email in a form that is still
-easily readable, opposed to be the original HTML email with all tags
-stripped.
+.. note:: If you choose to send your email in the HTML Format, an
+	optional field will appear allowing you specify a Plain Text
+	Alternative to the HTML email. This allows email clients who have
+	HTML email disabled or unavailable to still view the email in a form
+	that is still easily readable, opposed to be the original HTML email
+	with all tags stripped.
 
 |Communicate Formatting HTML|
 

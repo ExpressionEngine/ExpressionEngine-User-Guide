@@ -44,8 +44,8 @@ control panel should look like (\* required):
 The reference page for :doc:`Add-on Packages </development/packages>`
 gives greater detail on the above changes.
 
-Note: It is recommended to put a placeholder index.html file in any
-of your folders.
+.. note:: It is recommended to put a placeholder index.html file in any
+	of your folders.
 
 URL Logic
 ---------
@@ -89,7 +89,7 @@ Add your renamed functions to your update file.
 The update file has a slightly different naming convention, so rename
 your methods install(), uninstall(), and update().
 
-**Note:** The update file **requires** an update function.
+.. note:: The update file **requires** an update function.
 
 Use Active Record and Database Forge for Queries.
 -------------------------------------------------
@@ -187,14 +187,14 @@ Example Code
 	/* End of file upd.package_name.php */
 	/* Location: ./system/expressionengine/third_party/upd.package_name.php */
 
-**Note:** Use $this->\_ee\_path.'third\_party/foo' as file path for
-any required included files that reside within your module folder.
+.. note:: Use $this->\_ee\_path.'third\_party/foo' as file path for
+	any required included files that reside within your module folder.
 
-**Note:** If your module needs user intervention for first-time
-setup, it should occur in the module's control panel on first-run,
-and not the installer method. This will allow your module to be
-installed during ExpressionEngine's application installation process.
-See the Wiki module for an example if needed.
+.. note:: If your module needs user intervention for first-time
+	setup, it should occur in the module's control panel on first-run,
+	and not the installer method. This will allow your module to be
+	installed during ExpressionEngine's application installation 
+	process. See the Wiki module for an example if needed.
 
 Passing Errors to the Wizard
 ----------------------------
@@ -397,8 +397,8 @@ And here's an example using an object::
 
 	$data = new Foo_class(); $this->EE->load->view('name', $data, TRUE);
 
-Note: If you use an object, the class variables will be turned into
-array elements.
+.. note:: If you use an object, the class variables will be turned into
+	array elements.
 
 You can also pass a variable using $this->EE->cp->set\_variable().
 This allows you to set vars without needing to pass an array into the
@@ -449,20 +449,20 @@ For an example of a more complex page, see the
 View Folders and Files
 ----------------------
 
-**Note:** If your module doesn't have a control panel, you may skip this
-step.
+.. note:: If your module doesn't have a control panel, you may skip this
+	step.
 
 A view is simply a web page or page fragment. To create your module
 control panel using views to show the rendered output, you will start by
 creating a views folder. In general, each page of your control panel
 will have its own view file inside the views folder.
 
-**NOTE:** You are not required to use a view file to create your output
-markup. Any string that the method returns is placed inside the control
-panel page's content container. For very simple pages, this may the
-option you choose. However, views are the best architectural choice, as
-they are modular and easy to read and modify. As such, they are the
-recommended approach.
+.. note:: You are not required to use a view file to create your output
+	markup. Any string that the method returns is placed inside the
+	control panel page's content container. For very simple pages, this
+	may the option you choose. However, views are the best architectural
+	choice, as they are modular and easy to read and modify. As such,
+	they are the recommended approach.
 
 Since view files are really just HTML snippets with a bit of PHP added
 to output your variables, one easy way to get started is by viewing the
@@ -525,10 +525,10 @@ shown above::
 Easy to change the markup, isn't it? I also added a few variables to
 help keep the view file simple and easy to read.
 
-**Note:** jQuery should typically be handled in the controller and not
-the view files. It's perfectly acceptable to do otherwise, but the
-Javascript library has some automation that can help keep your view
-files simple in this regard.
+.. note:: jQuery should typically be handled in the controller and not
+	the view files. It's perfectly acceptable to do otherwise, but the
+	Javascript library has some automation that can help keep your view
+	files simple in this regard.
 
 Display Tools
 =============
@@ -605,8 +605,9 @@ creating your views. It will often prove easier and cleaner than hard
 coding your table markup (though you can do that as well). Here's
 another sample from or fortunes module: in this case, it's the original
 'view' page- where you can see your existing fortunes and select
-fortunes to modify or delete. (**NOTE:** The
-:doc:`/development/module_tutorial` explains views further.)
+fortunes to modify or delete.
+
+.. note:: The :doc:`/development/module_tutorial` explains views further.
 
 Here's how we can use the table library to generate our somewhat
 complex 'view fortunes' page::

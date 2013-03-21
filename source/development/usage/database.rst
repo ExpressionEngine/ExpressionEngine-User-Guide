@@ -41,9 +41,9 @@ no results being returned.
     // Update, with no variable being set
     $this->EE->db->query("UPDATE exp_channels SET channel_name = 'dog' WHERE channel_name = 'cat'");
 
-***Note:** When doing any sort of query using user submitted data make
-sure to use the $this->EE->db->escape\_str() function (details below) to
-prevent any problems between MySQL and the data.*
+.. note:: When doing any sort of query using user submitted data make
+    sure to use the $this->EE->db->escape\_str() function (details 
+    below) to prevent any problems between MySQL and the data.
 
 Retrieving Results from SELECT query
 ------------------------------------

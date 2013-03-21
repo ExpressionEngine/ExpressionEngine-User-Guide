@@ -189,8 +189,8 @@ suppressed. Any existing comments will still appear.
 Forum Tab
 ---------
 
-**Note:** This tab will only appear if you have the Discussion Forum
-Module installed.
+.. note:: This tab will only appear if you have the Discussion Forum
+   Module installed.
 
 |Publish Forum|
 
@@ -260,8 +260,8 @@ revision is stored.
 Pages Tab
 ---------
 
-**Note:** This tab will only appear if you have the :doc:`Pages Module
-</modules/pages/index>` installed.
+.. note:: This tab will only appear if you have the :doc:`Pages Module
+   </modules/pages/index>` installed.
 
 |Publish Pages|
 
@@ -283,9 +283,9 @@ alpha-numeric characters, underscore / dash separators, and periods.
 -  http://example.com/index.php/company/roster/board/ceo/
 -  /my\_stuff/über\_list.html
 
-**Note:** Entries cannot share the same Page URI. Each "page" entry must
-be given a unique URI so the system knows which entry to display when
-the Page URI is requested.
+.. note:: Entries cannot share the same Page URI. Each "page" entry must
+   be given a unique URI so the system knows which entry to display when
+   the Page URI is requested.
 
 Template
 ~~~~~~~~

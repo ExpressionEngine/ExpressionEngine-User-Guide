@@ -65,7 +65,7 @@ path:open\_revision
 
 Displays the URL to Open the revision.
 
-**Note:** Opening a revision approves it and makes it live.
+.. note:: Opening a revision approves it and makes it live.
 
 path:close\_revision
 ^^^^^^^^^^^^^^^^^^^^

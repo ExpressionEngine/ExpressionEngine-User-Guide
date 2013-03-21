@@ -6,9 +6,9 @@ actions directly on the wiki using special syntax. Wikis traditionally
 use double brackets for this syntax and the ExpressionEngine Wiki Module
 does the same.
 
-**Note:** The text formatting for your wiki is handled by whatever
-formatting option you choose in the :doc:`Wiki Control
-Panel <wiki_cp>`.
+.. note:: The text formatting for your wiki is handled by whatever
+	formatting option you choose in the :doc:`Wiki Control Panel
+	<wiki_cp>`.
 
 
 Create or Link to a Page
@@ -88,8 +88,9 @@ categories. This does not create a category.
 Namespaces
 ----------
 
-**Note:** Before you can use Namespaces on your wiki you must
-:ref:`configure Namespaces in your Control Panel <wiki_cp_namespaces>`.
+.. note:: Before you can use Namespaces on your wiki you must
+	:ref:`configure Namespaces in your Control Panel 
+	<wiki_cp_namespaces>`.
 
 Linking to or creating an article in a Namespace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -136,11 +137,13 @@ template please follow the :ref:`Wiki Theme Updates
 Linking to Image or Uploaded File
 ---------------------------------
 
-**Note:** The wiki can automatically give you a file or image's code. On
-the article Edit page click on *View 10 Most Recent File Uploads*. If
-you need an older file click on *Uploaded Files* in the navigation and
-then select file. You'll see the appropriate code to use to call that
-file or image. ::
+.. note:: The wiki can automatically give you a file or image's code. On
+	the article Edit page click on *View 10 Most Recent File Uploads*. 
+	If you need an older file click on *Uploaded Files* in the 
+	navigation and then select file. You'll see the appropriate code to 
+	use to call that file or image. 
+
+::
 
 	[[File:filename.zip]]
 

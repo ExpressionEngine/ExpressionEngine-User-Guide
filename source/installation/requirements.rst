@@ -31,8 +31,10 @@ Server Requirements
 
 -  10 MB of free space on your server for the ExpressionEngine software
    and modules.
--  2 MB of Database space. Note: The database will increase in size as
-   you add new content.
+-  2 MB of Database space. 
+
+   .. note:: The database will increase in size as you add new content.
+   
 -  The `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_
    library compiled into PHP.
 

@@ -13,8 +13,8 @@ Introduction
 The Simple Commerce Module is a basic but flexible module
 that easily integrates ExpressionEngine with PayPal.
 
-.. note:: The Simple Commerce Module is available only with a `purchased <https://store.ellislab.com/>`_
-   ExpressionEngine license.
+.. note:: The Simple Commerce Module is available only with a `purchased
+	<https://store.ellislab.com/>`_ ExpressionEngine license.
 
 -  Integrates with ExpressionEngine's Channel Module to define items for sale
 -  Tracks purchases automatically utilizing PayPal's `Instant Payment
@@ -246,9 +246,9 @@ item\_type
 Whether item is a recurring item (subscription/purchase). Useful in
 conditionals and custom queries.
 
-**Note:** Recurring payments cannot be made using the shopping cart.
-Thus item\_type conditionals should be used if you offer cart links and
-are mixing recurring and non-recurring items.
+.. note:: Recurring payments cannot be made using the shopping cart.
+	Thus item\_type conditionals should be used if you offer cart links
+	and are mixing recurring and non-recurring items.
 
 Purchase Links
 --------------

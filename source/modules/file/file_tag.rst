@@ -62,20 +62,21 @@ Or use "not" to exclude categories
 
 	category="not 4|5|7"
 
-**Note:** When you use the category="3\|4" parameter (not excluding),
-you are implicitly telling ExpressionEngine to only deal with entries
-that have been assigned one or more categories. If you have entries that
-haven't been categorized then they will be ignored and not included in
-the results. However, if you are using exclusion (category="not 3\|4"),
-then you will be shown all entries without those categories *including*
-those without any categories assigned. To change this behavior when
-excluding categories use the `uncategorized_entries=`_ parameter.
+.. note:: When you use the category="3\|4" parameter (not excluding),
+	you are implicitly telling ExpressionEngine to only deal with
+	entries that have been assigned one or more categories. If you have
+	entries that haven't been categorized then they will be ignored and
+	not included in the results. However, if you are using exclusion 
+	(``category="not 3|4"``), then you will be shown all entries without
+	those categories *including* those without any categories assigned.
+	To change this behavior when excluding categories use the 
+	`uncategorized_entries=`_ parameter.
 
-**Note:** Using this parameter will automatically cause ExpressionEngine
-to *ignore* any category information specified via the URL. For
-instance, if you are on a "category page" (e.g. a "/C13/" segment in the
-URL) that will be completely ignored in favor of whatever you have
-specified via the parameter.
+.. note:: Using this parameter will automatically cause ExpressionEngine
+	to *ignore* any category information specified via the URL. For
+	instance, if you are on a "category page" (e.g. a "/C13/" segment in
+	the URL) that will be completely ignored in favor of whatever you
+	have specified via the parameter.
 
 category\_group=
 ~~~~~~~~~~~~~~~~
@@ -101,11 +102,11 @@ Or use "not" to exclude categories
 
 	category_group="not 2"
 
-**Note:** Using this parameter will automatically cause ExpressionEngine
-to *ignore* any category information specified via the URL. For
-instance, if you are on a "category page" (e.g. a "/C13/" segment in the
-URL) that will be completely ignored in favor of whatever you have
-specified via the parameter.
+.. note:: Using this parameter will automatically cause ExpressionEngine
+	to *ignore* any category information specified via the URL. For
+	instance, if you are on a "category page" (e.g. a "/C13/" segment in
+	the URL) that will be completely ignored in favor of whatever you
+	have specified via the parameter.
 
 directory\_id=
 ~~~~~~~~~~~~~~
@@ -145,8 +146,8 @@ DISABLE". The following items can be turned off:
 -  categories
 -  pagination
 
-**Note:** If you disable categories, category fields will automatically
-be disabled.
+.. note:: If you disable categories, category fields will automatically
+	be disabled.
 
 You may specify multiple items to disable by separating them with the
 pipe character::

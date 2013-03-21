@@ -12,16 +12,17 @@ their server, and notifies ExpressionEngine when the transaction is
 complete, so purchases are not recorded in your store until they are
 finalized.
 
-**Note:** While you can still use Simple Commerce generated PayPal links
-to sell items to users browsing your site as guests, the Instant Payment
-Notification features, such as transaction recording and email
-notifications, will only work for purchases made by logged-in members of
-your site.
+.. note:: While you can still use Simple Commerce generated PayPal links
+	to sell items to users browsing your site as guests, the Instant
+	Payment Notification features, such as transaction recording and 
+	email notifications, will only work for purchases made by logged-in
+	members of your site.
 
-**Note:** In order for PayPal to be able to send payment notifications
-to your site, your site needs to be online and accessible to the public.
-If anything would prevent an unauthenticated user from visiting your
-site, PayPal will be unable to send payment notifications.
+.. note:: In order for PayPal to be able to send payment notifications
+	to your site, your site needs to be online and accessible to the
+	public. If anything would prevent an unauthenticated user from
+	visiting your site, PayPal will be unable to send payment
+	notifications.
 
 Enabling PayPal Instant Payment Notification
 --------------------------------------------

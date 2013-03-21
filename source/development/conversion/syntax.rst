@@ -263,13 +263,15 @@ Functions Class
 
 ::
 
-   $FNS->fetch\_action\_id()
-       $this->EE->cp->fetch\_action\_id()
-       Note: for use in the control panel
-       $this->EE->functions->fetch\_action\_id()
-       Note: for use in the module file
-   $FNS->filename\_security()
-       $this->EE->security->sanitize\_filename
+  $FNS->fetch_action_id()
+    // Note: for use in the control panel
+    $this->EE->cp->fetch_action_id()
+
+    // Note: for use in the module file
+    $this->EE->functions->fetch_action_id()
+    
+  $FNS->filename_security()
+    $this->EE->security->sanitize_filename
 
 Input Class
 -----------
