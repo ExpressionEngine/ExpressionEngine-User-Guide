@@ -169,11 +169,10 @@ search terms they used::
 
 	{exp:search:keywords}
 
-.. todo:: Create anchor for no_result_page
-
 This may also be used on the template specified by the
-:doc:`no_result_page <advanced>` parameter of the :doc:`simple search
-form <simple>` and :doc:`advanced search form <advanced>`.
+:ref:`no_result_page <search_advanced_no_result_page>` parameter of the
+:doc:`simple search form <simple>` and :doc:`advanced search form
+<advanced>`.
 
 There are no parameters or variables associated with this
 ExpressionEngine tag.
@@ -188,11 +187,10 @@ of matches::
 
 	{exp:search:total_results}
 	
-.. todo:: Create anchor for no_result_page
-
 This may also be used on the template specified by the
-:doc:`no_result_page <advanced>` parameter of the :doc:`simple search
-form <simple>` and :doc:`advanced search form <advanced>`.
+:ref:`no_result_page <search_advanced_no_result_page>` parameter of the
+:doc:`simple search form <simple>` and :doc:`advanced search form
+<advanced>`.
 
 There are no parameters or variables associated with this
 ExpressionEngine tag.

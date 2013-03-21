@@ -149,12 +149,10 @@ database. (See also :doc:`functions->fetch_action_id
 Publish Page Layout Functions
 -----------------------------
 
-.. todo:: Create anchor for module_tutorial.html#update_file
-
 Administrators may extensively customize publish pages on a per member
 group and per channel basis. Since these custom layouts are saved as a
 serialized array in the database, any additions or deletions to publish
 page tabs and fields must be synced to any saved layouts. The control
 panel library provides 4 functions to facilitate custom layout updates.
-(See also :doc:`Module Tutorial: Update file.
-</development/module_tutorial>`)
+(See also :ref:`Module Tutorial: Update file.
+<module_update_file>`)

@@ -101,22 +101,15 @@ hours (72000 seconds).
 Disk I/O
 --------
 
-.. todo:: Create anchor for caching.html#query_caching
-.. todo:: Create anchor for caching.html#dynamic_channel_query_caching
-
 ExpressionEngine's caching mechanisms can help reduce database load in
 most situations. However if your site is hosted on an environment using
-NAS/SAN storage for single or load-balanced web servers, :doc:`Query
-Caching <caching>` and :doc:`Dynamic Channel Query Caching <caching>` in
-most cases should **not be used**. Doing so could be doubling up on
-caching efforts and inadvertently negate any caching benefits (or
-perhaps even worsen server resource usage) due to the increased disk
-activity.
+NAS/SAN storage for single or load-balanced web servers,
+:ref:`caching_dynamic_channel_query_caching` in most cases should **not
+be used**. Doing so could be doubling up on caching efforts and
+inadvertently negate any caching benefits (or perhaps even worsen server
+resource usage) due to the increased disk activity.
 
-.. todo:: Create anchor for #tag_caching
-.. todo:: Create anchor for #template_caching
-
-:doc:`Tag <caching>` and :doc:`Template Caching <caching>` on such
+:ref:`caching_tag_caching` and :ref:`caching_template_caching` on such
 environments should be minimal unless experienced review of your
 templates has been performed with the assistance of the :doc:`Template
 Debugging utility </cp/admin/output_and_debugging_preferences>`, and

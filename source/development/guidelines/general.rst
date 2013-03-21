@@ -379,6 +379,8 @@ unless your code contains an alternative method when the function is
 not available, or you explicitly document that your add-on requires
 said PHP libraries.
 
+.. _use_of_session_cache:
+
 Use of $this->EE->session->cache
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

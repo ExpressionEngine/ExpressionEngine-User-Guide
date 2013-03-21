@@ -10,7 +10,7 @@ In addition to the variables in the :doc:`Wiki Page
 template <wiki_templates_page>`, the Special Categories template
 makes use of the the following **Tags**:
 
-.. _wiki-categories-tag:
+.. _wiki_categories_tag:
 
 {wiki:categories}
 -----------------
@@ -21,7 +21,7 @@ show the categories for that specific article. It has
 :ref:`Parameters <wiki-categories-parameters>` and
 :ref:`Variables <wiki-categories-variables>` available to it.
 
-.. _wiki-categories-parameters:
+.. _wiki_categories_parameters:
 
 {wiki:categories} \| Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -62,12 +62,10 @@ using <ul> or render a list without any formatting. The values are:
 -  **nested**: renders the categories in a xhtml list with <ul>.
 -  **linear**: renders the categories with no formatting.
 
-.. todo:: Create anchor for .html#par_style
+For more information on nesting please see the :ref:`Style parameter
+<channel_categories_style>` in the Channel section of the User Guide.
 
-For more information on nesting please see the :doc:`Style parameter
-</modules/channel/categories>` in the Channel section of the User Guide.
-
-.. _wiki-categories-variables:
+.. _wiki_categories_variables:
 
 {wiki:categories} \| Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -164,6 +162,8 @@ if last\_child
 
 Determines if a category is the last child of a parent category.
 
+.. _wiki_category_subcategories:
+
 {wiki:category\_subcategories}
 ------------------------------
 
@@ -171,7 +171,7 @@ This tag is used to display the subcategories of a single category. It
 has :ref:`Parameters <wiki-category-subcategories-parameters>` and
 :ref:`Variables <wiki-category-subcategories-variables>` available to it.
 
-.. _wiki-category-subcategories-parameters:
+.. _wiki_category_subcategories_parameters:
 
 {wiki:category\_subcategories} \| Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -200,12 +200,10 @@ using <ul> or render a list without any formatting. The values are:
 -  **nested**: renders the categories in a xhtml list with <ul>.
 -  **linear**: renders the categories with no formatting.
 
-.. todo:: Create anchor for .html#par_style
+For more information on nesting please see the :ref:`Style parameter
+<channel_categories_style>` in the Channel section of the User Guide.
 
-For more information on nesting please see the `Style parameter
-</modules/channel/categories>` in the Channel section of the User Guide.
-
-.. _wiki-category-subcategories-variables:
+.. _wiki_category_subcategories_variables:
 
 {wiki:category\_subcategories} \| Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -278,6 +276,8 @@ subcategory\_total
 	{subcategory_total}
 
 Displays the number of subcategories in a category.
+
+.. _wiki_category_articles:
 
 {wiki:category\_articles}
 -------------------------

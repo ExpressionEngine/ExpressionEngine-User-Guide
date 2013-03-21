@@ -191,6 +191,8 @@ name=
 Specify the name attribute for the <form> tag, which will allow you to
 specify CSS and JavaScript to the form more easily.
 
+.. _search_advanced_no_result_page:
+
 no\_result\_page=
 ~~~~~~~~~~~~~~~~~
 

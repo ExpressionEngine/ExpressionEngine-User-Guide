@@ -58,8 +58,6 @@ cp\_url
 The URL to the control panel for this site. Only output for logged-in
 members who have access to the Control Panel
 
-.. _global-current_time:
-
 current_path
 ------------
 
@@ -70,7 +68,9 @@ current_path
 This variable outputs the current URI path relative to your ExpressionEngine
 installation, e.g. *news/article/man-captures-all-the-rabbits*.
 
-**Note:** If there are no URL segments, this will output a slash: */*
+.. note:: If there are no URL segments, this will output a slash: */*
+
+.. _global_current_time:
 
 current\_time
 -------------

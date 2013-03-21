@@ -286,6 +286,8 @@ By default, the Categories tag will display categories that contain any
 entries with a status *other than* closed.  This parameter has no effect unless
 the `show\_empty parameter <#par_show_empty>`_ is set to not show empty categories.
 
+.. _channel_categories_style:
+
 style=
 ------
 

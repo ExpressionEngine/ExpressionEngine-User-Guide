@@ -21,14 +21,7 @@ The full example module can be `downloaded from GitHub
 
 Note: if you have not already read the :doc:`Modules
 Overview </development/modules>`, you will want to do so in order to obtain
-the greatest value from the tutorial.
-
-
-         
-
-            
-
-         
+the greatest value from the tutorial.         
 
 Required File Structure for the Download Module
 -----------------------------------------------
@@ -55,6 +48,8 @@ used in the display of our backend. The final file structure will be:
    publish page and process publish page submissions
 -  third\_party/download/views/index.html - multiple view files inside
    the view folder
+
+.. _module_update_file:
 
 The Update file (upd.download.php)
 ----------------------------------

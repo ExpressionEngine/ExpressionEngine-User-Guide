@@ -90,6 +90,8 @@ When an article is moderated an email can be sent to alert Admins of the
 changes. Please see the :doc:`Wiki Users <wiki_users>` section for
 details.
 
+.. _wiki_cp_namespaces:
+
 Namespaces
 ----------
 
@@ -102,10 +104,9 @@ have a *Spanish* namespace and a *German* namespace as a way to organize
 and separate your content. You could have a different Member Group as
 the admin for each namespace.
 
-.. todo:: Setup anchor for .html#syntax_namespaces
-
-Please see the :doc:`Wiki Syntax, Namespaces <wiki_syntax>` section for
-information on using namespaces on your wiki after configuring them.
+Please see the :ref:`Wiki Syntax, Namespaces <wiki_syntax_namespaces>`
+section for information on using namespaces on your wiki after
+configuring them.
 
 Setting up Namespaces
 ~~~~~~~~~~~~~~~~~~~~~

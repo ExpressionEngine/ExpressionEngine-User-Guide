@@ -755,11 +755,11 @@ Form Validation
 ---------------
 
 SafeCracker uses the CodeIgniter Form Validation class. You can create
-field-by-field `validation rules <#rules-my-field-name>`_. By default, SafeCracker
-will display validation errors using the ExpressionEngine user message
-template. If you prefer, you can also use `inline error
-handling <#error-handling>`_ to display form validation
-errors in the context of your form.
+field-by-field `validation rules <#rules-my-field-name>`_. By default,
+SafeCracker will display validation errors using the ExpressionEngine
+user message template. If you prefer, you can also use `inline error
+handling <#error-handling>`_ to display form validation errors in the
+context of your form.
 
 Allowing Guests to Post Entries
 -------------------------------
@@ -795,30 +795,30 @@ Publish Form. SafeCracker File inherits the tags of the standard
 
 SafeCracker File may be used as a Matrix celltype and as a Low Variables
 variable type. If you are using it as a Low Variable, you must use the
-`parse tag <http://gotolow.com/addons/low-variables/docs/tags#parse-tag>`_.
+`parse tag <http://gotolow.com/addons/low-variables/docs/tags#parse-
+tag>`_.
 
 ********
 Examples
 ********
 
-See :doc:`SafeCracker Examples <examples>` for more complete examples of SafeCracker usage.
+See :doc:`SafeCracker Examples <examples>` for more complete examples of
+SafeCracker usage.
 
 **********************
 Control Panel Settings
 **********************
 
-See the :doc:`SafeCracker Module Control Panel <control_panel/index>` page.
+See the :doc:`SafeCracker Module Control Panel <control_panel/index>`
+page.
 
 
 ***********
 Development
 ***********
 
-.. todo:: create anchors
-
--  :doc:`Getting your custom fieldtype to work with
-   SafeCracker </modules/safecracker/development>`
--  :doc:`Extension Hooks </modules/safecracker/development>`
+-  :ref:`safecracker_development_fieldtype`
+-  :ref:`safecracker_development_hooks`
 
 .. toctree::
 	:glob:

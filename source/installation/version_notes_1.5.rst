@@ -493,6 +493,8 @@ Add::
 	}
 
 	// END
+
+.. _version_notes_1_5_wiki_theme:
 	
 Wiki Theme Updates
 ------------------

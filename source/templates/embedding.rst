@@ -91,11 +91,8 @@ Notes
 -  A template is fully rendered before any embedded templates are
    processed and included, which means you cannot break up tags between
    different templates and embed them in pieces.
-
-.. todo:: Create anchor for code.html#embedding
-
 -  If you are using the Multiple Site Manager, you can embed templates
    from one site into another site. Details can be found here: 
-   :doc:`Multiple Site Manager Variables and Parameters 
-   </cp/sites/code>`
+   :ref:`Multiple Site Manager Variables and Parameters 
+   <msm_code_embedding>`
 
