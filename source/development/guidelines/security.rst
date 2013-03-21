@@ -458,7 +458,7 @@ General Security Practice
 -  Use good beta testers and run a tight ship to get the best results.
 -  Keep debugging on for all users on your private development / testing
    site. Refer to the :doc:`instructions for PHP errors
-   </development/guidelines/general>`_ in the General Syntax and Style
+   </development/guidelines/general>` in the General Syntax and Style
    section.
 -  Use an approach of Least Privilege. Start by allowing access to NO
    one, and explicitly grant access to those that qualify.

@@ -360,6 +360,7 @@ when constructing your queries. This will enable your queries to work as
 support for more database types are added.
 
 ::           
+    
         if ( ! $rownum = $this->EE->input->get_post('rownum'))
         {       
             $rownum = 0;

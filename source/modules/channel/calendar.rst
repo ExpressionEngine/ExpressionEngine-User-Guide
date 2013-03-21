@@ -299,7 +299,7 @@ date
 
 The current date. As with other date variables, this require the
 "format" parameter in order to define how the date should be displayed.
-See the :date:`date variable formatting
+See the :doc:`date variable formatting
 </templates/date_variable_formatting>` page for more information.
 
 day\_number
@@ -356,7 +356,7 @@ next\_date
 
 The next date for the calendar; i.e. the next month. As with other date
 variables, this require the "format" parameter in order to define how
-the date should be displayed. See the :date:`date variable formatting
+the date should be displayed. See the :doc:`date variable formatting
 </templates/date_variable_formatting>` page for more information.
 
 next\_path
