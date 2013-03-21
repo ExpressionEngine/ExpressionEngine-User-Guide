@@ -193,10 +193,10 @@ Make intelligent use of :doc:`$this->EE->session->cache <general>` so
 these and other "meta" queries are executed only once no matter how many
 times a method is called on a page load.
 
-**Note:** To keep the code example simple, the values in the $ids
-array below are assumed to have already been validated in the code
-prior to what is being shown. Do not neglect to validate and escape
-variables before using them in queries!
+.. note:: To keep the code example simple, the values in the $ids
+	array below are assumed to have already been validated in the code
+	prior to what is being shown. Do not neglect to validate and escape
+	variables before using them in queries!
 
 INCORRECT::
 

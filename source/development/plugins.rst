@@ -86,8 +86,8 @@ A plugin consists of a class and at least one function:
     /* End of file pi.plugin_name.php */ 
     /* Location: ./system/expressionengine/third_party/plugin_name/pi.plugin_name.php */
 
-**Note**: Always deny direct access to your script by checking for the
-BASEPATH constant.
+.. note:: Always deny direct access to your script by checking for the
+    BASEPATH constant.
 
 In addition, you should add some information that is displayed in the
 Plugin Manager section of the Control Panel. This is covered in the
@@ -135,11 +135,11 @@ In the new file you've created add this class and constructor:
         }
     }
 
-**Note**: Class name must always be capitalized. This is the one
-exception to the rule. Tag names and file names are always lowercase,
-while the class name is capitalized.
+.. note:: Class name must always be capitalized. This is the one
+    exception to the rule. Tag names and file names are always 
+    lowercase, while the class name is capitalized.
 
-**Note**: You must call of the super object in your constructor.
+.. note:: You must call of the super object in your constructor.
 
 Returning a Value
 ~~~~~~~~~~~~~~~~~

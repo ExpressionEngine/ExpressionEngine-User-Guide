@@ -18,9 +18,9 @@ When editing an existing channel entry, only the Forum Topic ID will be
 present to associate an existing forum post with this existing channel
 entry.
 
-**Note**: When a new entry is created and there is content in the Forum
-tab, the Forum information will be posted immediately regardless of the
-entry date, status, or other entry parameters.
+.. note:: When a new entry is created and there is content in the Forum
+	tab, the Forum information will be posted immediately regardless of
+	the entry date, status, or other entry parameters.
 
 Forum Topic Variable Pairs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

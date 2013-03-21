@@ -221,9 +221,10 @@ if logged\_in
 This tag pair will display content within the pair if the person viewing
 the page is currently a logged in member.
 
-**Note**: This only tests whether or not someone is logged in. If you
-want to restrict a particular page based on the member group assignment
-you'll do that in your Template preferences in the Control Panel.
+.. note:: This only tests whether or not someone is logged in. If you
+	want to restrict a particular page based on the member group 
+	assignment you'll do that in your Template preferences in the 
+	Control Panel.
 
 if logged\_out
 ~~~~~~~~~~~~~~

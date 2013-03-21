@@ -86,7 +86,7 @@ certain number of characters. Email programs that do not automatically
 wrap lines or insert their own line breaks will then be able to better
 view emails. 72 characters per line is considered the email standard.
 
-**Note**: Word wrapping affects only plain text emails.
+.. note:: Word wrapping affects only plain text emails.
 
 Overriding Word Wrapping
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -104,7 +104,7 @@ from wrapping. ::
 
 Place the item you do not want word-wrapped between: {unwrap} {/unwrap}
 
-**Note**: The {unwrap} variable pair affects only plain text emails.
+.. note:: The {unwrap} variable pair affects only plain text emails.
 
 Priority
 ~~~~~~~~

@@ -235,9 +235,10 @@ The sort order can be "asc" (ascending order or "oldest item first") or
 "desc" (descending order or "newest item first"). If you do not use a
 sort order the default is desc.
 
-**Note**: The order of the categories will always follow the Category
-Order specified in the control panel. The only things the sort parameter
-changes is the order of the *entries* within each category.
+.. note:: The order of the categories will always follow the Category
+	Order specified in the control panel. The only things the sort 
+	parameter changes is the order of the *entries* within each 
+	category.
 
 status=
 ~~~~~~~

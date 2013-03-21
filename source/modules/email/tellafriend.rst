@@ -121,11 +121,11 @@ separating the email addresses with commas::
 
 	recipients="admin@example.com,ceo@example.com,president@example.com"
 
-**Note**: In the situation where recipients are specified with this
-parameter and the regular "To:" field is *also* filled out, the
-recipients specified with this parameter will be mailed using BCC (Blind
-Carbon Copy) so that the "To:" recipient does not see those "hidden"
-email recipients.
+.. note:: In the situation where recipients are specified with this
+	parameter and the regular "To:" field is *also* filled out, the
+	recipients specified with this parameter will be mailed using BCC 
+	(Blind Carbon Copy) so that the "To:" recipient does not see those 
+	"hidden" email recipients.
 
 redirect=
 ~~~~~~~~~
