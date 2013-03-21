@@ -20,8 +20,7 @@ URLs and Linking
 ::
 
 	[url]http://example.com/[/url]
-
-``[url=http://example.com/]my site[/url]``
+	[url=http://example.com/]my site[/url]
 
 You can easily create links with custom text or simply with the URL
 itself as the link.
@@ -32,8 +31,7 @@ Email Links
 ::
 
 	[email]you@example.com[/email]
-
-``[email=you@example.com]click here to email[/email]``
+	[email=you@example.com]click here to email[/email]
 
 As with URLs, you can also format email addresses. These BBCode tags
 will automatically encode the email address to make it more difficult
@@ -89,7 +87,6 @@ Bold, Strong, Em And Italic
 ::
 
     [b]some bold text[/b]  [strong]some strong text[/strong]
-
     [em]some em text[/em]  [i]some italic text[/i]
 
 Bold, strong, em and italic text is simple to add.
@@ -123,8 +120,7 @@ Pre-Formatted Text
 ::
 
 	[pre]Some pre-formatted text...[/pre]
-
-``[code]Some pre-formatted text...[/code]``
+	[code]Some pre-formatted text...[/code]
 
 You can submit pre-formatted text such as script examples. These will be
 replaced with <pre> </pre> HTML tags. Whitespace and line wrapping will
