@@ -37,9 +37,9 @@ simply outputs the URL of the file::
 
 	{news_image}
 
-.. _image-manipulation-single:
+.. _image_manipulation_single:
 
-If you have defined any :ref:`image-manipulations` you can modify the
+If you have defined any :ref:`image_manipulations` you can modify the
 tag with the Short Name of the manipulation. For example, if you've
 defined a "small" manipulation, the following will output the URL to
 that version::
@@ -200,7 +200,7 @@ upload_date
 The date the file was first uploaded. See `Date Variable Formatting
 </templates/date_variable_formatting>` for more information.
 
-.. _image-manipulation-pair:
+.. _image_manipulation_pair:
 
 url
 ---
@@ -211,7 +211,7 @@ url
 
 The full URL to the file.
 	
-If you have defined any :ref:`image-manipulations` you can modify this
+If you have defined any :ref:`image_manipulations` you can modify this
 tag with the Short Name of the manipulation. For example, if you've
 defined a "small" manipulation, the following will output the URL to
 that version::

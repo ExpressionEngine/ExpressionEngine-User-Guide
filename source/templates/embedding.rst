@@ -18,7 +18,7 @@ By default, you cannot use embeds inside of Forum templates. See
 :doc:`Other Features </modules/forum/other_features>` for
 instructions on running the forums through regular templates.
 
-.. _embed-variables:
+.. _embed_variables:
 
 Embed Variables for the Embedded Template
 -----------------------------------------

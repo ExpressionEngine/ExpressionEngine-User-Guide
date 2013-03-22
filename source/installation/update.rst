@@ -116,7 +116,7 @@ contact your host for this.
 -  Update any third-party add-ons by following the update instructions
    for each add-on.
 
-.. _update-additional-steps:
+.. _update_additional_steps:
 
 7. Additional Steps
 -------------------

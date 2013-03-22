@@ -88,7 +88,7 @@ Variables
 ==========
 
 Nearly all of the :ref:`Channel Entries Tag
-Variables <channel-entries-single-variables>` are available for the
+Variables <channel_entries_single_variables>` are available for the
 search results page so that you can display as much or as little of the
 channel entry's data as possible depending on your needs. There are also
 some search results specific variables available in the results page:

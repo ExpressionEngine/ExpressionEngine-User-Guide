@@ -204,7 +204,7 @@ File Category Groups
 You may assign multiple category groups to a file upload directory,
 which will allow you to assign categories to any uploaded files.
 
-.. _image-manipulations:
+.. _image_manipulations:
 
 Image Manipulations
 ~~~~~~~~~~~~~~~~~~~
@@ -226,8 +226,8 @@ both the height and the width to 200 would result in an image
 that is no higher or wider than 200 pixels.
 
 You can refer to a particular Image Manipulation in your templates
-via a File Field's :ref:`single variable tag <image-manipulation-single>`
-or its :ref:`variable pair tag <image-manipulation-pair>`.
+via a File Field's :ref:`single variable tag <image_manipulation_single>`
+or its :ref:`variable pair tag <image_manipulation_pair>`.
 
 Restrict file uploading to select member groups
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -28,7 +28,7 @@ into PHP. Ask your server administrator for this information.
 
 .. note:: Enabling this requires that you use a public certificate and
 	private key. Please read the section on 
-	:ref:`simple-commerce-encrypted-payments` for full details. In order
+	:ref:`simple_commerce_encrypted_payments` for full details. In order
 	to be the most effective, you should also change your PayPal account
 	settings to only accept encrypted payments.
 
@@ -42,7 +42,7 @@ Public Certificate Path
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The path to your public certificate file. Please read the section on
-:ref:`simple-commerce-encrypted-payments` for full details.
+:ref:`simple_commerce_encrypted_payments` for full details.
 
 .. note:: ExpressionEngine must have read access to this directory, but
 	for security it is highly recommended that you use a location above
@@ -53,7 +53,7 @@ Private Key Path
 ~~~~~~~~~~~~~~~~
 
 The path to your private key file. Please read the section on
-:ref:`simple-commerce-encrypted-payments` for full details.
+:ref:`simple_commerce_encrypted_payments` for full details.
 
 .. note:: ExpressionEngine must have read access to this directory, but
 	for security it is highly recommended that you use a location above
@@ -64,7 +64,7 @@ PayPal Certificate Path
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The path to your PayPal certificate file. Please read the section on
-:ref:`simple-commerce-encrypted-payments` for full details.
+:ref:`simple_commerce_encrypted_payments` for full details.
 
 .. note:: ExpressionEngine must have read access to this directory, but
 	for security it is highly recommended that you use a location above
@@ -75,7 +75,7 @@ Temporary Encrypted Files Path
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The path to your temporarily stored encrypted files. Please read the section on
-:ref:`simple-commerce-encrypted-payments` for full details.
+:ref:`simple_commerce_encrypted_payments` for full details.
 
 .. note:: ExpressionEngine must have read and write access to this
 	directory. The files created in this directory are temporary and are

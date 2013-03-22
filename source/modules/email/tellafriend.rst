@@ -255,7 +255,7 @@ Channel Parameters
 ******************
 
 While some of the :ref:`Channel Entries Tag
-Parameters <channel-entries-parameters>` are also available
+Parameters <channel_entries_parameters>` are also available
 to the Tell-a-Friend form, most of them will not be beneficial to use in
 that context. One exception that can be valuable is
 show\_future\_entries=, which would let you use the Tell-a-Friend form
@@ -297,13 +297,13 @@ Channel Variables
 	{title}     {permalink}     {author}     {body}     et cetera...
 
 Many of the :ref:`Channel Entries Tag
-Variables <channel-entries-single-variables>` are available for the
+Variables <channel_entries_single_variables>` are available for the
 tell-a-friend form. Notable exceptions are all category related
 variables and custom member fields.
 
-.. note:: To ease the useability of this form with multiple channels,
+.. note:: To ease the usability of this form with multiple channels,
    which will possibly contain different channel fields, all Channel
-   Variables that are unfillable will be removed from the form.
+   Variables that are unfulfillable will be removed from the form.
 
 For example, if you have a channel with the fields "summary" and "body",
 and then another channel with the fields "ingredients" and "directions",

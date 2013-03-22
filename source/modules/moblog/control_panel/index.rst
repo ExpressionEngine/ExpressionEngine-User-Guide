@@ -39,7 +39,7 @@ Time Between Checks
 
 The amount of time that will elapse between checks of your Moblog
 account. This is used in conjunction with the
-:ref:`check-moblog-tag` on your page.
+:ref:`check_moblog_tag` on your page.
 
 Moblog Enabled
 --------------
@@ -101,7 +101,7 @@ Allow Overrides in Email?
 
 This allows you to specify whether or not you can override the default
 values specified on this page by including
-:ref:`overrides <moblog-overrides>` in the actual email text. If
+:ref:`overrides <moblog_overrides>` in the actual email text. If
 turned on, this preference will cause the Moblog to ignore any overrides
 sent along with the email.
 

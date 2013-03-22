@@ -213,7 +213,7 @@ allow_comments=
 	allow_comments="yes"
 
 Whether to allow comments on the submitted entry. If this parameter is
-not specified, the Channel's :ref:`channel-prefs-allow-comments` preference
+not specified, the Channel's :ref:`channel_prefs_allow_comments` preference
 will be used.
 
 author\_only=
@@ -389,7 +389,7 @@ is\_natural\_no\_zero, valid\_email, valid\_emails, valid\_ip,
 valid\_base64), and these additional ExpressionEngine-specific rules:
 valid\_ee\_date.
 
-.. _safecracker-rte-selector:
+.. _safecracker_rte_selector:
 
 rte_selector=
 ~~~~~~~~~~~~~
@@ -403,12 +403,12 @@ This parameter will tell SafeCracker to automatically load ExpressionEngine's
 selector you specify. Any valid jQuery selector is acceptable.
 
 The RTE will use the Toolset preference of the currently logged-in user as chosen
-in :ref:`my-account-rte-prefs`. If the user has not chosen a Toolset or is not
-logged in, the site's :ref:`rte-mcp-default-toolset` will be used.
+in :ref:`my_account_rte_prefs`. If the user has not chosen a Toolset or is not
+logged in, the site's :ref:`rte_mcp_default_toolset` will be used.
 
 You can optionally force a particular toolset ID to use (see below).
 
-.. _safecracker-rte-toolset-id:
+.. _safecracker_rte_toolset_id:
 
 rte_toolset\_id=
 ~~~~~~~~~~~~~~~~

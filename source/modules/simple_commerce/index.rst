@@ -30,7 +30,7 @@ that easily integrates ExpressionEngine with PayPal.
 -  Tab delimited export of items and purchases
 
 
-.. _simple-commerce-purchase-tag:
+.. _simple_commerce_purchase_tag:
 
 ****************************
 Simple Commerce Purchase Tag
@@ -327,7 +327,7 @@ view\_cart\_button
 
 A button to view the contents of the shopping cart.
 
-.. _simple-commerce-recurring-payments:
+.. _simple_commerce_recurring_payments:
 
 ******************
 Recurring Payments
@@ -428,7 +428,7 @@ Remember to set this variable to FALSE when you wish to take your store
 live and route purchases to the real PayPal website.
 
 
-.. _simple-commerce-encrypted-payments:
+.. _simple_commerce_encrypted_payments:
 
 **************************
 Encrypted Website Payments

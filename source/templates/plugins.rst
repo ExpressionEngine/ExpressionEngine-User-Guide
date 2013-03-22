@@ -41,7 +41,7 @@ by the plugin::
 
 In the above example, the content would be XML Encoded.
 
-.. _templates-nested-plugins:
+.. _templates_nested_plugins:
 
 Nested Plugins
 --------------

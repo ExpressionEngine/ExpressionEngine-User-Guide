@@ -90,7 +90,7 @@ Or you can negate the inclusive stack and get entries that do not of
 	(``category="not 3|4"``), then you will be shown all entries without
 	those categories *including* those without any categories assigned.
 	To change this behavior when excluding categories use the
-	:ref:`channel-entries-uncategorized-entries` parameter.
+	:ref:`channel_entries_uncategorized_entries` parameter.
 
 category\_group=
 ----------------

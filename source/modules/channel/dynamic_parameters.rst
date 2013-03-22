@@ -10,10 +10,10 @@ preferred page view.
 .. note:: This feature will only work if page caching is turned OFF for
 	the template in which it is being used.
 
-Every :ref:`Parameter <channel-entries-parameters>` available to the channel tag can be
-set dynamically. However, as a security precaution you must specify
-which parameters you'll allow to be dynamic within a given channel tag,
-like this
+Every :ref:`Parameter <channel_entries_parameters>` available to the
+channel tag can be set dynamically. However, as a security precaution
+you must specify which parameters you'll allow to be dynamic within a
+given channel tag, like this
 
 ::
 

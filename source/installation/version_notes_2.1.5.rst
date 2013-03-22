@@ -41,4 +41,4 @@ The following views were edited:
 -  system/expressionengine/views/admin/status\_group\_edit.php
 -  system/expressionengine/views/admin/status\_group\_management.php
 
-:ref:`Return to Update Page <update-additional-steps>`
+:ref:`Return to Update Page <update_additional_steps>`

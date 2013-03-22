@@ -27,8 +27,8 @@ associated with your entries.
 .. note:: The Comment Entries Tag is intended for use in one of your
    "single entry" pages. That is, a page that shows a single, specific
    channel entry. Therefore, your Comment page must be linked to from
-   within your Channel entries using the :ref:`channel-entries-url_title_path` 
-   variable or the :ref:`channel-entries-entry_id_path` variable,
+   within your Channel entries using the :ref:`channel_entries_url_title_path` 
+   variable or the :ref:`channel_entries_entry_id_path` variable,
    so that the comments can be associated to a specific entry.
 
 Here is a basic example showing how you might use the comment tag::
@@ -115,7 +115,7 @@ Allows you to limit the number of comments. The limit will default to
 :doc:`pagination <../channel/pagination_page>` then this
 will determine the number of comments shown per page.
 
-.. _comment-entries-orderby:
+.. _comment_entries_orderby:
 
 orderby=
 --------
@@ -352,7 +352,7 @@ can\_moderate\_comment
 	{if can_moderate_comment}
 
 This variable will be used in a conditional to allow :ref:`comment
-editing <comment-editing>`. It indicates whether a member has
+editing <comment_editing>`. It indicates whether a member has
 permission to edit a given comment AND/OR close that comment.
 
 channel\_short\_name
@@ -392,7 +392,7 @@ comment\_stripped
 
 The body of the comment without any typographical processing and with
 ExpressionEngine tags encoded. This tag is for use in :ref:`comment
-editing <comment-editing>`.
+editing <comment_editing>`.
 
 comment\_auto\_path
 -------------------
@@ -490,8 +490,8 @@ editable
 	{if editable}Show Edit{/if}
 
 This variable will be used in a conditional to allow :ref:`comment
-editing <comment-editing>`. It indicates whether a member has
-:ref:`permission to edit a given comment <comment-admin-privs>`.
+editing <comment_editing>`. It indicates whether a member has
+:ref:`permission to edit a given comment <comment_admin_privs>`.
 
 edit\_date
 ----------
@@ -1056,7 +1056,7 @@ of a particular entry. Also note that you can use a number of values for
 the `comment-entries-orderby` parameter.
 
 
-.. _comment-submission-form:
+.. _comment_submission_form:
 
 ***********************
 Comment Submission Form
@@ -1393,7 +1393,7 @@ The following conditionals are available:
 -  {if url}
 
 
-.. _comment-editing:
+.. _comment_editing:
 
 **************************************************
 Allowing Members to Edit Comments on the Front End
@@ -1401,7 +1401,7 @@ Allowing Members to Edit Comments on the Front End
 
 The available tags and variables allow you to write your own client side
 code for implementing comment editing. The following is a simplified
-example using the native :ref:`{exp:jquery:script\_tag} <jquery-script-tag>`.
+example using the native :ref:`{exp:jquery:script\_tag} <jquery_script_tag>`.
 
 Example Code
 ============
@@ -1446,7 +1446,7 @@ Comment Edit Script Tag
 
 This tag outputs a script tag that will include the necessary JavaScript
 for your comment editor. This script requires jQuery, so you will
-typically use it in conjunction with the :ref:`jquery-script-tag`.
+typically use it in conjunction with the :ref:`jquery_script_tag`.
 
 AJAX Edit URL Tag
 =================

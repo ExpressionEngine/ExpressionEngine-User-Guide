@@ -18,8 +18,8 @@ makes use of the the following **Tags**:
 This tag is used to display all the wiki's categories. When put into the
 :doc:`Wiki Article </modules/wiki/wiki_templates_article>` template, it will only
 show the categories for that specific article. It has
-:ref:`Parameters <wiki-categories-parameters>` and
-:ref:`Variables <wiki-categories-variables>` available to it.
+:ref:`Parameters <wiki_categories_parameters>` and
+:ref:`Variables <wiki_categories_variables>` available to it.
 
 .. _wiki_categories_parameters:
 
@@ -168,8 +168,8 @@ Determines if a category is the last child of a parent category.
 ------------------------------
 
 This tag is used to display the subcategories of a single category. It
-has :ref:`Parameters <wiki-category-subcategories-parameters>` and
-:ref:`Variables <wiki-category-subcategories-variables>` available to it.
+has :ref:`Parameters <wiki_category_subcategories_parameters>` and
+:ref:`Variables <wiki_category_subcategories_variables>` available to it.
 
 .. _wiki_category_subcategories_parameters:
 

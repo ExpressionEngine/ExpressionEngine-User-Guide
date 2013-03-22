@@ -184,7 +184,7 @@ If this option is checked, then comments will be allowed for this entry.
 When this option is unchecked, your comment submission form will be
 suppressed. Any existing comments will still appear.
 
-.. _publish-forum-tab:
+.. _publish_forum_tab:
 
 Forum Tab
 ---------
@@ -197,7 +197,7 @@ Forum Tab
 The Forum tab allows you to optionally publish a forum topic to be
 associated with the channel entry. You can then automatically link to
 the created forum topic from within your {exp:channel:entries} tag using
-the :ref:`channel-entries-forum_topic_id` variable.
+the :ref:`channel_entries_forum_topic_id` variable.
 
 Forum Topic Title
 ~~~~~~~~~~~~~~~~~
@@ -255,7 +255,7 @@ a new revision will be created rather than updating the previous
 revision. In other words, every time you click the save button a new
 revision is stored.
 
-.. _publish-pages-tab:
+.. _publish_pages_tab:
 
 Pages Tab
 ---------

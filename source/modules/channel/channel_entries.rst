@@ -36,7 +36,7 @@ the "News" channel). {title} is replaced with the Title of each entry,
 and {body} is replaced with the content entered into the "Body" field
 of each entry.
 
-.. _channel-entries-parameters:
+.. _channel_entries_parameters:
 
 **********
 Parameters
@@ -406,7 +406,7 @@ select their preferred page view.
 
 Every Parameter available to the channel tag can be set dynamically.
 
-.. _channel-entries-dynamic-start:
+.. _channel_entries_dynamic_start:
 
 dynamic\_start=
 ---------------
@@ -514,7 +514,7 @@ Or exclude groups using "not"
 
 	group_id="not 2|3|4"
 
-.. _channel-entries-limit:
+.. _channel_entries_limit:
 
 limit=
 ------
@@ -555,7 +555,7 @@ do this::
 
 	offset="3"
 
-.. _channel-entries-orderby:
+.. _channel_entries_orderby:
 
 orderby=
 --------
@@ -712,7 +712,7 @@ by the URL.
 
 The default limit when enabling related_categories_mode is 10
 entries, and can be overridden with the addition of the
-:ref:`channel-entries-limit` parameter.
+:ref:`channel_entries_limit` parameter.
 
 When the ``related_categories_mode=""`` parameter is set to "yes", there
 are two additional parameters available to the Channel Entries tag:
@@ -741,7 +741,7 @@ This parameter allows you to use the category indicator in your URLs
 with an entries tag specifying multiple channels that do **not** share
 category groups.
 
-.. _channel-entries-require_entry:
+.. _channel_entries_require_entry:
 
 require\_entry=
 --------------------
@@ -908,7 +908,7 @@ show\_expired=
 You can determine whether you wish for entries that have "expired" to be
 included.
 
-.. _channel-entries-show-future-entries:
+.. _channel_entries_show_future_entries:
 
 show\_future\_entries=
 ----------------------
@@ -923,7 +923,7 @@ list of events, some of which have not occurred yet. Note that EE will
 still display past entries; this parameter simply instructs EE to also
 include entries from the future.
 
-.. _channel-entries-show-pages:
+.. _channel_entries_show_pages:
 
 show\_pages=
 ------------
@@ -1017,7 +1017,7 @@ You may optionally use a 12 hour time format by including am/pm notation
 Common Uses
 ~~~~~~~~~~~
 
-This parameter can be used in conjunction with :ref:`global-current_time`::
+This parameter can be used in conjunction with :ref:`global_current_time`::
 
 	{exp:channel:entries channel="{my_weblog}" sort="desc" start_on="{current_time format='%Y-%m-%d %H:%i'}" show_future_entries="yes"}
 
@@ -1096,7 +1096,7 @@ sticky=
 By default, sticky topics always remain at the top of the page. You can
 manually turn off stickies by using the above parameter.
 
-.. _channel-entries-track-views:
+.. _channel_entries_track_views:
 
 track\_views=
 -------------
@@ -1119,7 +1119,7 @@ can be shown within any tag::
 
 	{view_count_one}{view_count_two}{view_count_three}{view_count_four}
 
-.. _channel-entries-uncategorized-entries:
+.. _channel_entries_uncategorized_entries:
 
 uncategorized\_entries=
 -----------------------
@@ -1234,7 +1234,7 @@ To show only the month of December in 2003 you'll do this
    must specify the year if you specify the month and you must specify both 
    month and year to use day.
 
-.. _channel-entries-single-variables:
+.. _channel_entries_single_variables:
 
 ****************
 Single Variables
@@ -1490,7 +1490,7 @@ entry\_id
 
 The ID number of the channel entry.
 
-.. _channel-entries-entry_id_path:
+.. _channel_entries_entry_id_path:
 
 entry\_id\_path
 ---------------
@@ -1527,7 +1527,7 @@ expiration\_date
 The expiration date of the entry. See :doc:`Date Variable Formatting
 </templates/date_variable_formatting>` for more information.
 
-.. _channel-entries-forum_topic_id:
+.. _channel_entries_forum_topic_id:
 
 forum\_topic\_id
 ----------------
@@ -1545,7 +1545,7 @@ typically be used like so::
 		<a href="{path='forums/viewthread'}{forum_topic_id}">Discuss this in our forums</a>
 	{/if}
 
-.. _channel-entries-gmt_entry_date:
+.. _channel_entries_gmt_entry_date:
 
 gmt\_entry\_date
 ----------------
@@ -1638,7 +1638,7 @@ occupation
 
 The author's occupation as entered in their profile.
 
-.. _channel-entries-page-uri:
+.. _channel_entries_page_uri:
 
 page\_uri
 ---------
@@ -1654,7 +1654,7 @@ so::
 
 	{if page_uri != ''} <a href="{page_uri}">View this page</a> {/if}
 
-.. _channel-entries-page-url:
+.. _channel_entries_page_url:
 
 page\_url
 ---------
@@ -1972,7 +1972,7 @@ url\_title
 
 The human readable title used in the URL as a permalink.
 
-.. _channel-entries-url_title_path:
+.. _channel_entries_url_title_path:
 
 url\_title\_path
 ----------------
@@ -2016,7 +2016,7 @@ the week date will fall on Sunday for the week of the entry. When
 the week of the entry. See :doc:`Date Variable Formatting
 </templates/date_variable_formatting>` for more information.
 
-.. _channel-entries-conditional-variables:
+.. _channel_entries_conditional_variables:
 
 *********************
 Conditional Variables
@@ -2127,7 +2127,7 @@ like so::
 		<a href="{path='forums/viewthread'}/{forum_topic_id}">Discuss this in our forums</a>
 	{/if}
 
-.. _channel-entries-if-no_results:
+.. _channel_entries_if_no_results:
 
 if no\_results
 --------------

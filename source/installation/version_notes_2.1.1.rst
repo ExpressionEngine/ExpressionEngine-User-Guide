@@ -73,6 +73,6 @@ Please update your code to use $this->field\_id :doc:`as documented
 </development/fieldtypes>` as soon as possible so that sites using your
 Field Types do not break in future releases.
 
-:ref:`Return to Update Page <update-additional-steps>`
+:ref:`Return to Update Page <update_additional_steps>`
 
 

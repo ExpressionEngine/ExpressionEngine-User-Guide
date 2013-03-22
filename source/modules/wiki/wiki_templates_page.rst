@@ -303,7 +303,7 @@ path:logout
 
 Displays the URL to the logout script.
 
-**Note to Discussion Forum Module users:** The :ref:`wiki-tag` has an optional
+**Note to Discussion Forum Module users:** The :ref:`wiki_tag` has an optional
 parameter called **profile\_path=''**. When this parameter is used, you can direct the
 member paths from the default member area of your ExpressionEngine
 installation to the Discussion Forum member area.
@@ -451,7 +451,7 @@ valid.
 -----------------------
 
 This tag is used to display all the wiki's categories. Unlike the
-:ref:`{wiki:categories} <wiki-categories-tag>`
+:ref:`{wiki:categories} <wiki_categories_tag>`
 tag, it is not affected by being put in an article page. It has the
 following parameters and variables available to it.
 

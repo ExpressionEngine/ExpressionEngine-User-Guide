@@ -130,7 +130,7 @@ Add-Ons
 =======
 
 
-.. _add-ons-included-in-expressionengine:
+.. _add_ons_included_in_expressionengine:
 
 Included in ExpressionEngine
 ----------------------------
@@ -160,7 +160,7 @@ Included in ExpressionEngine
 - :doc:`modules/updated_sites/index`
 - :doc:`modules/wiki/index`
 
-.. _add-ons-available-for-download:
+.. _add_ons_available_for_download:
 
 Available for Download
 ----------------------

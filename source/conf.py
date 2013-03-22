@@ -91,7 +91,9 @@ primary_domain = 'php'
 
 # Links
 extlinks = {
-	'ellislab': ('http://ellislab.com%s', 'ellislab')
+    'ellislab': ('http://ellislab.com%s', 'ellislab'),
+    'elstore': ('https://store.ellislab.com%s', 'elstore'),
+    'elsupport': ('https://support.ellislab.com%s', 'elsupport')
 }
 
 # -- Options for HTML output ---------------------------------------------------
@@ -185,8 +187,8 @@ htmlhelp_basename = 'ExpressionEnginedoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'ExpressionEngine.tex', u'ExpressionEngine Documentation',
-   u'EllisLab, Inc.', 'manual'),
+    ('index', 'ExpressionEngine.tex', u'ExpressionEngine Documentation',
+        u'EllisLab, Inc.', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -265,7 +267,7 @@ epub_copyright = u'2002-2011, EllisLab, Inc.'
 # -- Options for Linkcheck -----------------------------------------------------
 
 linkcheck_ignore = [
-	r'http://example.com.*',
-	r'http://yourdomain.com.*',
-	'https://'
+    r'http://example.com.*',
+    r'http://yourdomain.com.*',
+    'https://'
 ]

@@ -12,7 +12,7 @@ Manager module.
 
 .. note:: Since these language packs are contributed by the members of the 
    community, we are not responsible for the accuracy of the translations. If 
-   something looks wrong to you, we recommend you :ref:`send us a pull request on GitHub <contributing-to-language-packs>` with the corrected translation.
+   something looks wrong to you, we recommend you :ref:`send us a pull request on GitHub <contributing_to_language_packs>` with the corrected translation.
 
 Downloading Language Packs
 --------------------------
@@ -51,7 +51,7 @@ select Localization Settings. Users who have customized their settings and are
 logged in will see user messages, dates, and the Control Panel in their chosen
 language.
 
-.. _contributing-to-language-packs:
+.. _contributing_to_language_packs:
 
 Contributing
 ------------
