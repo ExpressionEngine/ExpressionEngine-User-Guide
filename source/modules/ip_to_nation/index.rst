@@ -96,6 +96,5 @@ by using the type="text" parameter.
 
 .. |image0| image:: flag_us.gif
 
-.. note::
-  This product includes GeoLite data created by MaxMind, available from
-  http://maxmind.com/
+.. note:: This product includes GeoLite data created by MaxMind, 
+  available from `http://maxmind.com/ <http://maxmind.com/>`_.

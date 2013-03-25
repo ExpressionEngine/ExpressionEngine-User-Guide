@@ -11,7 +11,8 @@ Cross Site Scripting (XSS)
 Cross Site Scripting is a type of security vulnerability that allows
 code injection by malicious users onto a page. You can find some
 educational reading and examples on the following site:
-`http://ha.ckers.org/xss.html <http://ha.ckers.org/xss.html>`_
+`http://owasp.org 
+<https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet>`_.
 
 Cross Site Scripting should be taken very seriously as you would never
 want your add-on to be the source of an attack vector.
@@ -164,9 +165,8 @@ encode them:
 - PHP has the `Mcrypt
   library <http://us2.php.net/manual/en/ref.mcrypt.php>`_ and other
   PHP libraries which have encryption and decryption with a salt.
-  CodeIgniter has an `Encryption
-  class <http://codeigniter.com/user_guide/libraries/encryption.html>`_,
-  incidentally.
+  CodeIgniter has an :ellislab:`Encryption class 
+  </codeigniter/user-guide/libraries/encryption.html>`, incidentally.
 
 Yes / No Preferences
 ^^^^^^^^^^^^^^^^^^^^

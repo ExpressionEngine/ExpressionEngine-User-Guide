@@ -94,12 +94,11 @@ your methods install(), uninstall(), and update().
 Use Active Record and Database Forge for Queries.
 -------------------------------------------------
 
-All queries, inserts and updates should be altered to use the `active
-record
-class <http://codeigniter.com/user_guide/database/active_record.html>`_.
-Table creation, alteration and deletion should be done using the
-`database forge
-class <http://codeigniter.com/user_guide/database/forge.html>`_.
+All queries, inserts and updates should be altered to use the
+:ellislab:`active record class
+</codeigniter/user-guide/database/active_record.html>`. Table creation,
+alteration and deletion should be done using the :ellislab:`database
+forge class </codeigniter/user-guide/database/forge.html>`.
 
 Example Code
 ------------
@@ -241,8 +240,8 @@ Core Module File
 
 For your core module file (mod.package\_name.php) you simply need to
 :doc:`update the syntax <syntax>`. Be certain to change queries to use
-`active
-record <http://codeigniter.com/user_guide/database/active_record.html>`_.
+:ellislab:`active record
+</codeigniter/user-guide/database/active_record.html>`.
 
 Control Panel File (mcp.package\_name.php)
 ==========================================

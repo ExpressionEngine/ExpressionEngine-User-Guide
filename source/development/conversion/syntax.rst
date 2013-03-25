@@ -190,9 +190,8 @@ The helpers most likely to be used in plugins and modules include:
 - Text helper
 - URI helper (replaces a number of input class methods)
 
-Refer to `CodeIgniter's user
-guide <http://codeigniter.com/user_guide/>`_ for details on all
-available helpers.
+Refer to :ellislab:`CodeIgniter's user guide
+</codeigniter/user-guide/>` for details on all available helpers.
 
 Renamed Functions by (Old) Class
 ================================
@@ -200,8 +199,8 @@ Renamed Functions by (Old) Class
 Database Class
 --------------
 
-- All queries should be rewritten to use `active
-  record <http://codeigniter.com/user_guide/database/active_record.html>`_
+- All queries should be rewritten to use :ellislab:`active record 
+  </codeigniter/user-guide/database/active_record.html>`
 - The exp\_weblogs, exp\_weblog\_titles and exp\_weblog\_data tables
   have been changed to use 'channel' nomenclature instead of
   'weblog'
@@ -212,10 +211,10 @@ Database Class
   found in the MySQL `SQL Mode
   FAQ <http://dev.mysql.com/doc/refman/5.0/en/faqs-sql-modes.html>`_.
 
-The architecture of the database driver has changed. See the
-CodeIgniter user guide for full details of the `database
-class <http://codeigniter.com/user_guide/database/index.html>`_. Here
-is a short summary of some of the old vs. new syntax::
+The architecture of the database driver has changed. See the CodeIgniter
+user guide for full details of the :ellislab:`database class
+</codeigniter/user-guide/database/index.html>`. Here is a short summary
+of some of the old vs. new syntax::
 
    ->num\_rows
        ->num\_rows()

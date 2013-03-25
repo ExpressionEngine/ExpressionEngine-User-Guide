@@ -482,6 +482,8 @@ The topics template
 
 Added in v1.4.0
 
+.. _forum_dev_main_forum_table_rows_template:
+
 main_forum_table_rows_template
 ------------------------------
 

@@ -56,9 +56,9 @@ config/
 ~~~~~~~
 
 (optional) Folder containing config files - see the CodeIgniter user
-guide section on `Config
-Files <http://codeigniter.com/user_guide/libraries/config.html>`_ for
-details. You are responsible for uniquely prefixing your config keys.
+guide section on :ellislab:`Config Files
+</codeigniter/user-guide/libraries/config.html>` for details. You are
+responsible for uniquely prefixing your config keys.
 
 See also :doc:`help_menu.php </development/conversion/modules>` - an
 optional ExpressionEngine Help menu config file to provide context
@@ -78,9 +78,8 @@ helpers/
 ~~~~~~~~
 
 (optional) Folder containing Helper files - see the CodeIgniter user
-guide section on `Helper
-Functions <http://codeigniter.com/user_guide/general/helpers.html>`_ for
-details.
+guide section on :ellislab:`Helper Functions
+</codeigniter/user-guide/general/helpers.html>` for details.
 
 javascript/
 ~~~~~~~~~~~
@@ -121,9 +120,8 @@ models/
 ~~~~~~~
 
 (optional) Folder containing data model class files - see the
-CodeIgniter user guide section on
-`Models <http://codeigniter.com/user_guide/general/models.html>`_ for
-more details.
+CodeIgniter user guide section on :ellislab:`Models
+</codeigniter/user-guide/general/models.html>` for more details.
 
 pi.foo\_bar.php
 ~~~~~~~~~~~~~~~
@@ -149,6 +147,5 @@ views/
 ~~~~~~
 
 (optional) Folder containing view files - see the CodeIgniter user guide
-section on
-`Views <http://codeigniter.com/user_guide/general/views.html>`_ for more
-details.
+section on :ellislab:`Views
+</codeigniter/user-guide/general/views.html>` for more details.

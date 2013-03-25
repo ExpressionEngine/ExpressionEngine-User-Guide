@@ -4,13 +4,11 @@ Guidelines
 Overview
 --------
 
-To facilitate reviewing, approving, and adding third-party
-ExpressionEngine add-ons to the ExpressionEngine.com `Add-On
-Library <http://expressionengine.com/downloads/addons/>`_, EllisLab has
-defined the following programming guidelines. Even if you do not plan on
-publicly releasing your add-on, you will greatly benefit from the
-security, performance tips, and uniformity of code that results from
-following these guidelines.
+To facilitate quality third-party add-ons, EllisLab has defined the
+following programming guidelines. Even if you do not plan on publicly
+releasing your add-on, you will greatly benefit from the security,
+performance tips, and uniformity of code that results from following
+these guidelines.
 
 Some things may be different from your current coding style, but it is
 important to remember that you rarely will be the only person working

@@ -86,8 +86,8 @@ Installation Function
 
 Here is what our Download module's installation function will look like.
 Basically, it inserts the module's name, version, and whether it has a
-backend and/or a tab into the exp\_modules table (see `Active Record
-class <http://codeigniter.com/user_guide/database/active_record.html>`_).
+backend and/or a tab into the exp\_modules table (see :ellislab:`Active
+Record class </codeigniter/user-guide/database/active_record.html>`).
 Since our module will have a Control Panel backend, we set the third
 field to 'y', otherwise it should be set to 'n'. Since our module will
 also add a tab to the publish field, we need to set has\_publish\_fields
@@ -147,8 +147,8 @@ appropriate tag for the template parser to process.
 
 The installation function will also need to create the database tables
 that we will use to store the download data and relationships (see
-`Database Forge
-class <http://codeigniter.com/user_guide/database/forge.html>`_):
+:ellislab:`Database Forge class </codeigniter/user-
+guide/database/forge.html>`):
 
 ::
 
@@ -349,10 +349,10 @@ Also note the use of the CP set\_variable method to set our page title:
 
 Because we may need to paginate our list of files, we need to check for
 the row number indicator and then use this in our main query. Make sure
-to use the `active record
-class <http://codeigniter.com/user_guide/database/active_record.html>`_
-when constructing your queries. This will enable your queries to work as
-support for more database types are added.
+to use the :ellislab:`active record class
+</codeigniter/user-guide/database/active_record.html>` when constructing
+your queries. This will enable your queries to work as support for more
+database types are added.
 
 ::           
     

@@ -354,7 +354,7 @@ Email address of person who is sending the email.
    pretending to be someone they are not (i.e. keying in admin@paypal.com).
    If the user is allowed to modify both this and the message field, you
    have essentially created a
-   `phishing <http://dictionary.reference.com/search?q=phishing>`_ form
+   `phishing <http://dictionary.reference.com/browse/phishing>`_ form
    ripe for abuse.
 
 message
@@ -374,7 +374,7 @@ if it is just a hidden field.
    it is a potential for abuse by spammers, who could use your form for
    email advertising. If the user is allowed to modify both this and the
    from field, you have essentially created a
-   `phishing <http://dictionary.reference.com/search?q=phishing>`_ form
+   `phishing <http://dictionary.reference.com/browse/phishing>`_ form
    ripe for abuse.
 
 name

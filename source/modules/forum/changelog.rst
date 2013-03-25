@@ -389,8 +389,8 @@ Build 20090723 (initial release)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Compatible with PHP 5.3.0
--  Added `'main\_forum\_table\_rows\_template' extension
-   hook <http://expressionengine.com/developers/extension_hooks/main_forum_table_rows_template>`_
+-  Added :ref:`'main\_forum\_table\_rows\_template' extension hook 
+   <forum_dev_main_forum_table_rows_template>`
 -  Added the {topic\_title} variable to the Post Submission Form when
    editing a reply.
 -  Fixed a bug where the member trigger word was hardcoded to 'member'

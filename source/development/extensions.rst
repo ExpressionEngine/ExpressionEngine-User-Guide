@@ -91,7 +91,7 @@ settings (if any).
         var $version        = '1.0';
         var $description    = 'Truncates long links';
         var $settings_exist = 'y';
-        var $docs_url       = ''; // 'http://expressionengine.com/user_guide/';
+        var $docs_url       = ''; // 'http://ellislab.com/expressionengine/user-guide/';
 
         var $settings       = array();
         
@@ -133,7 +133,7 @@ the method in your extension's class to call for this hook.
      *
      * This function enters the extension into the exp_extensions table
      *
-     * @see http://codeigniter.com/user_guide/database/index.html for
+     * @see http://ellislab.com/codeigniter/user-guide/database/index.html for
      * more information on the db class.
      *
      * @return void
@@ -523,7 +523,7 @@ method might look like:
      * This function is the meat & potatoes of the extension, where all
      * the work is done.  
      *
-     * @see http://expressionengine.com/public_beta/docs/development/extension_hooks/global/typography/index.html#typography_parse_type_end
+     * @see http://ellislab.com/expressionengine/user-guide/development/extension_hooks/global/typography/index.html#typography-parse-type-end
      *
      * @param   string  string to look
      * @param   object  typography object

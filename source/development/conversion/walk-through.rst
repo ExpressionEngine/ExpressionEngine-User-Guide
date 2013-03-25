@@ -28,11 +28,11 @@ methods: install(), uninistall(), update().
 	function update($current = '')
 
 #. Convert any relevant syntax to the :doc:`new format <syntax>`.
-#. Make certain your queries are converted to use `active
-   record <http://codeigniter.com/user_guide/database/active_record.html>`_
-   or `database
-   forge <http://codeigniter.com/user_guide/database/forge.html>`_ (for
-   database manipulation).
+#. Make certain your queries are converted to use :ellislab:`active
+   record </codeigniter/user-guide/database/active_record.html>`
+   or :ellislab:`database forge 
+   </codeigniter/user-guide/database/forge.html>` (for database 
+   manipulation).
 #. Save- you're done with your update file!
 
 .. note:: If your module requires user input to complete the install,
@@ -66,9 +66,9 @@ Modify Control Panel File (mcp.package\_name.php)
 The control panel uses an MVC development approach, and your module can
 take advantage of this by using view files instead of creating your
 markup in your controller. If you've never worked with MVC or view files
-before, please read the `overview of
-views <http://codeigniter.com/user_guide/general/views.html>`_ in the
-CodeIgniter user guide.
+before, please read the :ellislab:`overview of views
+</codeigniter/user-guide/general/views.html>` in the CodeIgniter user
+guide.
 
 View files for your module will reside within a folder named views
 within your module's folder. ExpressionEngine will automatically look in

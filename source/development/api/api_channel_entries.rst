@@ -85,8 +85,10 @@ Submit New Entry
 			show_error('An Error Occurred Creating the Entry');
 		}
 
-	See also `setup\_entry\_settings() <api_channel_fields.html#>`_ in the
-	Channel Fields API.
+	.. todo:: Change to method reference.
+
+	See also :doc:`setup_entry_settings() <api_channel_fields>` in
+	the Channel Fields API.
 
 	.. note:: As part of the data normalization, custom data with a value of NULL is
 	   transformed to an empty string before database insertion.

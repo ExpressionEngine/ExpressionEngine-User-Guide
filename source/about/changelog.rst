@@ -1758,16 +1758,12 @@ Build 20110512
       intermediate confirmation page on all forwarded urls.
    -  Added $config['cookie\_secure'] to the config file to allow
       requiring a secure (HTTPS) in order to set cookies.
-   -  Added
-      `theme\_folder\_url <http://expressionengine.com/forums/viewthread/183306/>`_
-      as a Global Variable.
-   -  Added `Feature
-      Request <http://expressionengine.com/forums/viewthread/162694/>`__:
-      rel="external" to control panel help links so they open in a new
-      window.
-   -  Added `Feature
-      Request <http://expressionengine.com/forums/viewthread/174119/>`__
-      to allow parsing of global variables within snippets.
+   -  Added :forum_thread:`theme\_folder\_url <183306>` as a Global 
+      Variable.
+   -  Added :forum_thread:`Feature Request <162694>`: rel="external" to
+      control panel help links so they open in a new window.
+   -  Added :forum_thread:`Feature Request <174119>` to allow parsing of
+      global variables within snippets.
    -  Removed the Blogger API module.
    -  Moved SafeCracker into native modules, **please see the** :doc:`version
       notes </installation/version_notes_2.2.0>` **about how to

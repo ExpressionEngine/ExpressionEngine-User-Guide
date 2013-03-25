@@ -400,9 +400,8 @@ Database Access
 ---------------
 
 ExpressionEngine makes it easy to access the database using the provided
-database class. To run a query you will use `active
-record <http://codeigniter.com/user_guide/database/active_record.html>`_
-syntax:
+database class. To run a query you will use :ellislab:`active record
+</codeigniter/user-guide/database/active_record.html>` syntax:
 
 ::
 

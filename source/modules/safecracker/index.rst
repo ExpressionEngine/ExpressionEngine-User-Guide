@@ -28,8 +28,9 @@ community.
 -  Specify a default status, or set forms to override default statuses.
 -  Specify different return URLs for different member groups by the
    group\_id. Send visitors to one page, and admins to another.
--  Server-side form validation using the `CodeIgniter Form Validation
-   class <http://codeigniter.com/user_guide/libraries/form_validation.html>`_.
+-  Server-side form validation using the :ellislab:`CodeIgniter Form 
+   Validation class 
+   </codeigniter/user-guide/libraries/form_validation.html>`.
 -  Handles AJAX requests and can output responses in JSON.
 -  Includes an optional `SafeCracker File Fieldtype`_.
 
@@ -381,8 +382,8 @@ rules:my\_field\_name=
 	rules:my_field_name="required|min_length[5]"
 
 Add additional validation rules to your fields. Separate multiple rules
-with the pipe \| character. You may use the native `CodeIgniter
-rules <http://codeigniter.com/user_guide/libraries/form_validation.html#rulereference>`_
+with the pipe \| character. You may use the native :ellislab:`CodeIgniter
+rules </codeigniter/user-guide/libraries/form_validation.html#rulereference>`
 (required, matches, min\_length, max\_length, exact\_length, alpha,
 alpha\_numeric, alpha\_dash, numeric, integer, is\_natural,
 is\_natural\_no\_zero, valid\_email, valid\_emails, valid\_ip,

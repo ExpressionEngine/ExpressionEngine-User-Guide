@@ -93,7 +93,8 @@ primary_domain = 'php'
 extlinks = {
     'ellislab': ('http://ellislab.com%s', 'ellislab'),
     'elstore': ('https://store.ellislab.com%s', 'elstore'),
-    'elsupport': ('https://support.ellislab.com%s', 'elsupport')
+    'elsupport': ('https://support.ellislab.com%s', 'elsupport'),
+    'forum_thread': ('https://ellislab.com/forums/viewthread/%s/', 'forum_thread')
 }
 
 # -- Options for HTML output ---------------------------------------------------
@@ -268,6 +269,9 @@ epub_copyright = u'2002-2011, EllisLab, Inc.'
 
 linkcheck_ignore = [
     r'http://example.com.*',
-    r'http://yourdomain.com.*',
-    'https://'
+    r'http://.*yourdomain.com.*',
+    'https://',
+    'http://www.sendmail.org/',
+    'http://markitup.jaysalvat.com/',
+    r'http://(www\.)?maxmind.com.*',
 ]

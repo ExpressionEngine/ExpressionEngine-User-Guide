@@ -127,8 +127,8 @@ Example Code
 Table-based Layout
 ~~~~~~~~~~~~~~~~~~
 
-The ExpressionEngine Control Panel makes usage of the CodeIgniter `HTML
-Table <http://codeigniter.com/user_guide/libraries/table.html>`_
+The ExpressionEngine Control Panel makes usage of the CodeIgniter
+:ellislab:`HTML Table </codeigniter/user-guide/libraries/table.html>`
 library. You may load this library in your controller using::
 
 	$this->EE->load->library('table');
