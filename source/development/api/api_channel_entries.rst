@@ -10,15 +10,15 @@ Calling the Class
 
 .. class:: Api_channel_entries
 
-The Channel Entries class is called with the api->instantiate()
-function. ::
+	The Channel Entries class is called with the api->instantiate()
+	function. ::
 
-	$this->EE->load->library('api');
-	$this->EE->api->instantiate('channel_entries');
+		$this->EE->load->library('api');
+		$this->EE->api->instantiate('channel_entries');
 
-.. note:: The API uses a Singleton pattern and does not currently support
-   nesting of calls. Thus instantiating a new call while in the middle of a
-   request may have unanticipated results.
+	.. note:: The API uses a Singleton pattern and does not currently
+		support nesting of calls. Thus instantiating a new call while in
+		the middle of a request may have unanticipated results.
 
 Function Reference
 ------------------
@@ -85,13 +85,12 @@ Submit New Entry
 			show_error('An Error Occurred Creating the Entry');
 		}
 
-	.. todo:: Change to method reference.
+	See also :meth:`Api_channel_fields::setup_entry_settings` in the
+	Channel Fields API.
 
-	See also :doc:`setup_entry_settings() <api_channel_fields>` in
-	the Channel Fields API.
-
-	.. note:: As part of the data normalization, custom data with a value of NULL is
-	   transformed to an empty string before database insertion.
+	.. note:: As part of the data normalization, custom data with a 
+		value of NULL is transformed to an empty string before database
+		insertion.
 
 Update Entry
 ~~~~~~~~~~~~
