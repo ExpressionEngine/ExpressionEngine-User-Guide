@@ -1056,7 +1056,7 @@ List Tag::
 		{/if}
 		
 		{if subscriber_count == subscriber_total_results}
-			<li>and {subscriber_guest_total} Guest{if subscriber_guest_total > 1}s{/if}</li>	
+			<li>and {subscriber_guest_total} Guest{if subscriber_guest_total != 1}s{/if}</li>	
 			</ul>
 		{/if}
 	{/exp:comment:subscriber_list}
