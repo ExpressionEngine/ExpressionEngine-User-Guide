@@ -18,22 +18,22 @@ resources. Note that in this example that a Plugin file is also
 included. In a real add-on, you would not have both a module and a
 plugin, since the module's front-end file can handle any tasks that a
 plugin is needed for except field formatting, and we strongly encourage
-formatting plugins to be distributed as separate add-ons. ::
+formatting plugins to be distributed as separate add-ons::
 
-	/system/expressionengine/third_party/foo_bar
-		acc.foo_bar.php
-		config/
-		ext.foo_bar.php
-		helpers/
-		javascript/
-		language/
-		libraries/
-		mcp.foo_bar.php
-		mod.foo_bar.php
-		models/
-		pi.foo_bar.php
-		upd.foo_bar.php
-		views/
+  /system/expressionengine/third_party/foo_bar
+    acc.foo_bar.php
+    config/
+    ext.foo_bar.php
+    helpers/
+    javascript/
+    language/
+    libraries/
+    mcp.foo_bar.php
+    mod.foo_bar.php
+    models/
+    pi.foo_bar.php
+    upd.foo_bar.php
+    views/
 
 Details of the "Foo Bar" Package Structure
 ------------------------------------------
@@ -42,15 +42,15 @@ Below are the details of the significance of each file and directory,
 along with the required naming convention for the PHP class in each
 add-on file.
 
-acc.foo\_bar.php
-~~~~~~~~~~~~~~~~
+acc.foo_bar.php
+~~~~~~~~~~~~~~~
 
 Control Panel Accessory File
 
-**File Naming Convention:** acc.*package\_name*.php
+**File Naming Convention:** ``acc.package_name.php``
 
-**PHP Class Name:** Foo\_bar\_acc Package name with underscores in place
-of spaces, capitalized first letter only, and **\_acc** suffix.
+**PHP Class Name:** ``Foo_bar_acc`` Package name with underscores in
+place of spaces, capitalized first letter only, and ``_acc`` suffix.
 
 config/
 ~~~~~~~
@@ -64,15 +64,15 @@ See also :doc:`help_menu.php </development/conversion/modules>` - an
 optional ExpressionEngine Help menu config file to provide context
 sensitive help in your module control panel pages.
 
-ext.foo\_bar.php
-~~~~~~~~~~~~~~~~
+ext.foo_bar.php
+~~~~~~~~~~~~~~~
 
 Extension File
 
-**File Naming Convention:** ext.*package\_name*.php
+**File Naming Convention:** ``ext.package_name.php``
 
-**PHP Class Name:** Foo\_bar\_ext Package name with underscores in place
-of spaces, capitalized first letter only, and **\_ext** suffix.
+**PHP Class Name:** ``Foo_bar_ext`` Package name with underscores in
+place of spaces, capitalized first letter only, and ``_ext`` suffix.
 
 helpers/
 ~~~~~~~~
@@ -94,27 +94,27 @@ language/
 Folder containing language files, with subfolders for each language.
 Example::
 
-	language/english/foo_bar_lang.php language/spanish/foo_bar_lang.php
+  language/english/foo_bar_lang.php language/spanish/foo_bar_lang.php
 
-mcp.foo\_bar.php
-~~~~~~~~~~~~~~~~
+mcp.foo_bar.php
+~~~~~~~~~~~~~~~
 
 Module Control Panel File
 
-**File Naming Convention:** mcp.*package\_name*.php
+**File Naming Convention:** ``mcp.package_name.php``
 
-**PHP Class Name:** Foo\_bar\_mcp Package name with underscores in place
-of spaces, capitalized first letter only, and **\_mcp** suffix.
+**PHP Class Name:** ``Foo_bar_mcp`` Package name with underscores in place
+of spaces, capitalized first letter only, and ``_mcp`` suffix.
 
-mod.foo\_bar.php
-~~~~~~~~~~~~~~~~
+mod.foo_bar.php
+~~~~~~~~~~~~~~~
 
 Module Front End File
 
-**File Naming Convention:** mod.*package\_name*.php
+**File Naming Convention:** ``mod.package_name.php``
 
-**PHP Class Name:** Foo\_bar Package name with underscores in place of
-spaces, capitalized first letter only.
+**PHP Class Name:** ``Foo_bar`` Package name with underscores in place
+of spaces, capitalized first letter only.
 
 models/
 ~~~~~~~
@@ -123,25 +123,25 @@ models/
 CodeIgniter user guide section on :ellislab:`Models
 </codeigniter/user-guide/general/models.html>` for more details.
 
-pi.foo\_bar.php
-~~~~~~~~~~~~~~~
+pi.foo_bar.php
+~~~~~~~~~~~~~~
 
 Plugin File
 
-**File Naming Convention:** pi.*package\_name*.php
+**File Naming Convention:** ``pi.package_name.php``
 
-**PHP Class Name:** Foo\_bar Package name with underscores in place of
+**PHP Class Name:** ``Foo_bar`` Package name with underscores in place of
 spaces, capitalized first letter only.
 
-upd.foo\_bar.php
-~~~~~~~~~~~~~~~~
+upd.foo_bar.php
+~~~~~~~~~~~~~~~
 
-Module Installer / Update File
+Module Installer/Update File
 
-**File Naming Convention:** upd.*package\_name*.php
+**File Naming Convention:** ``upd.package_name.php``
 
-**PHP Class Name:** Foo\_bar\_upd Package name with underscores in place
-of spaces, capitalized first letter only, and **\_upd** suffix.
+**PHP Class Name:** ``Foo_bar_upd`` Package name with underscores in place
+of spaces, capitalized first letter only, and ``_upd`` suffix.
 
 views/
 ~~~~~~
