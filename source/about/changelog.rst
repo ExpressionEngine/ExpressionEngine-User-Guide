@@ -22,6 +22,7 @@ Release Date: ?
     - SafeCracker support
   - Timezone selection menus now include all timezones for automatic date
     localization and handling of Daylight Saving Time rules.
+  - Added Subscriber List tag to the :doc:`Comment Module </modules/comment/index>`
   - Added ``inline`` option to ``paginate`` parameter.
   - Added new variables to the Channel Next/Previous tags:
 
@@ -30,6 +31,7 @@ Release Date: ?
     - ``{channel_url}``
     - ``{comment_entry_id_auto_path}``
     - ``{comment_url_title_auto_path}``
+  - Added new variable ``{comment_subscriber_total}`` to the Channel Entries tag.
   - Modified channel entries to no longer allow conditional parsing within content
     (See :doc:`/installation/version_notes_2.6` for details)
   - Entry View Tracking is now disabled by default.

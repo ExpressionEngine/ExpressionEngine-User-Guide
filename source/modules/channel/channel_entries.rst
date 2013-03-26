@@ -1414,6 +1414,15 @@ Would be rendered like this::
 
 	<a href="http://example.com/index.php/channel/comments/234">my entry</a>
 
+comment\_subscriber\_total
+--------------------------
+
+::
+
+	{comment_subscriber_total}
+
+Total number of subscribers to comments for a particular entry.
+
 comment\_total
 --------------
 
