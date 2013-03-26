@@ -5,16 +5,15 @@ ExpressionEngine Channel Structure API
 	:local:
 	:depth: 1
 
-            
 Calling the Class
 -----------------
 
-The Channel Structure class is called with the api->instantiate()
-function.
+.. class:: Api_channel_structure
 
-::
+	The Channel Structure class is called with the api->instantiate()
+	function::
 
-	$this->EE->load->library('api'); $this->EE->api->instantiate('channel_structure');
+		$this->EE->load->library('api'); $this->EE->api->instantiate('channel_structure');
 
 Function Reference
 ------------------
@@ -27,100 +26,120 @@ Function Reference
 Get Channel Info
 ~~~~~~~~~~~~~~~~
 
-::
+.. method:: get_channel_info($channel_id)
 
-	$this->EE->api_channel_structure->get_channel_info((int) $channel_id);
+	Fetches all metadata for a channel::
 
-:returns:
-    Database result object or FALSE on error.
+		$this->EE->api_channel_structure->get_channel_info((int) $channel_id);
+
+	:param int $channel_id: ID of the channel to fetch information for
+	:returns: Database result object or ``FALSE`` on error
+	:rtype: CodeIgniter database result object
 
 Get Channels
 ~~~~~~~~~~~~
 
-::
+.. method:: get_channels([$site_id = FALSE])
 
-	$this->EE->api_channel_structure->get_channels([(int) $site_id]);
+	Fetches channel names and ids::
 
-:returns:
-    Database result object or FALSE on error.
+		$this->EE->api_channel_structure->get_channels([(int) $site_id]);
+
+	:param int $site_id: The site ID you want channel 
+		information for
+	:returns: Database result object or ``FALSE`` on error
+	:rtype: CodeIgniter database result object
 
 Delete Channel
 ~~~~~~~~~~~~~~
 
-::
+.. method:: delete_channel($channel_id = ''[, $site_id = NULL])
 
-	$this->EE->api_channel_structure->delete_channel((int) $channel_id, [(int) $site_id]);
+	Delete a channel::
 
-:returns:
-    Channel Title on successful delete or FALSE on error.
+		$this->EE->api_channel_structure->delete_channel((int) $channel_id, [(int) $site_id]);
+
+	:param int $channel_id: ID of the channel to delete
+	:param int $site_id: Specify the site ID of the channel 
+		if necessary
+	:returns: Channel Title on successful delete or ``FALSE`` on error.
+	:rtype: String/Boolean
 
 Create Channel
 ~~~~~~~~~~~~~~
 
-::
+.. method:: create_channel($data)
 
-	$this->EE->api_channel_structure->create_channel((array) $data);
+	Creates a new channel::
 
-:returns:
-    ID of newly created channel or FALSE on error.
+		$this->EE->api_channel_structure->create_channel((array) $data);
 
-At the minimum, **channel\_title** and **channel\_name** must be in the
-$data array.
+	:param array $data: Array of data necessary to create a channel (see
+		below)
+	:returns: ID of newly created channel or ``FALSE`` on error.
+	:rtype: Integer/Boolean
 
-Values that may be passed in the data array include:
+	At the minimum, ``channel_title`` and ``channel_name`` must be in
+	the $data array.
 
-- **site\_id**, (int)
-- **channel\_title**, (string)
-- **channel\_name**, (string a-zA-Z0-9\_- only)
-- **url\_title\_prefix**, (string a-zA-Z0-9\_- only)
-- **comment\_expiration**, (int)
-- **create\_templates**, (string yes/no)
-    **Also Requires:**
+	Values that may be passed in the data array include:
 
-   - **old\_group\_id**
-   - **group\_name**, (string a-zA-Z0-9\_- only)
-   - **template\_theme**
+	- ``site_id``, (int)
+	- ``channel_title``, (string)
+	- ``channel_name``, (string a-zA-Z0-9\_- only)
+	- ``url_title_prefix``, (string a-zA-Z0-9\_- only)
+	- ``comment_expiration``, (int)
+	- ``create_templates``, (string yes/no) **Also Requires:**
 
-- **cat\_group**, (int or array of category group ids)
-- **dupe\_id**
-- **status\_group**
-- **field\_group**
-- **channel\_url**
-- **channel\_lang**
-- **group\_order**
+		- ``old_group_id``
+		- ``group_name``, (string a-zA-Z0-9\_- only)
+		- ``template_theme``
 
-Example Usage::
+	- ``cat_group``, (int or array of category group ids)
+	- ``dupe_id``
+	- ``status_group``
+	- ``field_group``
+	- ``channel_url``
+	- ``channel_lang``
+	- ``group_order``
 
-	$data = array(
-		'channel_title'     => 'News',
-		'channel_name'      => 'news',
-		'field_group'       => 2,
-		'channel_url'       => 'http://example.com/index.php/news/',
-		'status_group'      => 1
-	);
-	
-	if ($this->EE->api_channel_structure->create_channel($data) === FALSE)
-	{
-		show_error('An Error Occurred Creating the Channel');
-	}
+	Example Usage::
+
+		$data = array(
+			'channel_title'	=> 'News',
+			'channel_name'	=> 'news',
+			'field_group'	=> 2,
+			'channel_url'	=> 'http://example.com/index.php/news/',
+			'status_group'	=> 1
+		);
+		
+		if ($this->EE->api_channel_structure->create_channel($data) === FALSE)
+		{
+			show_error('An Error Occurred Creating the Channel');
+		}
 
 Modify Channel
 ~~~~~~~~~~~~~~
 
-::
+.. method:: modify_channel($data)
 
-	$this->EE->api_channel_structure->modify_channel((array) $data);
+	Update an existing Channel::
 
-:returns:
-    ID of newly created channel or FALSE on error.
+		$this->EE->api_channel_structure->modify_channel((array) $data);
 
-The channel\_id of the channel to be modified is required in the $data
-array. channel\_title and channel\_name are also required.
+	:param array $data: Channel modification data (see 
+		:meth:`Api_channel_structure::create_channel`'s data array 
+		examples)
+	:returns: ID of newly created channel or ``FALSE`` on error
+	:rtype: Integer/Boolean
 
-In addition to values in the exp\_channels table, values that may be
-modified include:
+	The ``channel_id`` of the channel to be modified is required in the
+	$data array. ``channel_title`` and ``channel_name`` are also
+	required.
 
--  **apply\_expiration\_to\_existing**, (bool) only if
-   comment\_expiration is set
--  **clear\_versioning\_data**, (bool)
+	In addition to values in the ``exp_channels`` table, values that may
+	be modified include:
+
+	- ``apply_expiration_to_existing``, (``bool``) only if ``comment_expiration`` is set
+	- ``clear_versioning_data``, (``bool``)
 
