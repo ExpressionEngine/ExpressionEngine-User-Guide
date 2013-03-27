@@ -144,7 +144,6 @@ Line lengths in the .rst files should be hard-wrapped at 80 characters. The
 exceptions are when line wraps will break formatting (such as with code blocks,
 which are interpreted literally)  or cause the Sphinx parser to throw an error
 (e.g. a `:doc:` role within a ``.. note::`` directive).
-    
 
 *******************
 Control Panel Pages

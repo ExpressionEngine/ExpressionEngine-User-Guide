@@ -108,82 +108,82 @@ Example Code
 
   <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
   
-  class Package_name_upd {
-  
-    var $version = '3.0';
-  
-    function __construct()
-    {
-      // Make a local reference to the ExpressionEngine super object
-      $this->EE =& get_instance();
-    }
-  
-    function install()
-    {
-      $this->EE->load->dbforge();
-  
-      $fields = array(
-        'fortune_id'=>  array(
-          'type' => 'int',
-          'constraint'  =>  '6',
-          'unsigned'  =>  TRUE,
-          'auto_increment'=>  TRUE
-        ),
-        'fortune_text'  =>  array('type' => 'text')
-      );
-  
-      $this->EE->dbforge->add_field($fields);
-      $this->EE->dbforge->add_key('fortune_id', TRUE);
-      $this->EE->dbforge->create_table('fortunes');
-      
-      $data = array(
-        'module_name' => 'Fortunes' ,
-        'module_version' => $this->version,
-        'has_cp_backend' => 'y'
-      );
-      
-      $this->db->insert('modules', $data);
-      
-      return TRUE;
-    }
-  
-    function uninstall()
-    {
-      $this->EE->load->dbforge();
-  
-      $this->EE->db->select('module_id');
-      $query = $this->EE->db->get_where('modules', array('module_name' => 'Fortunes'));
-  
-      $this->EE->db->where('module_id', $query->row('module_id'));
-      $this->EE->db->delete('module_member_groups');
-  
-      $this->EE->db->where('module_name', 'Fortunes');
-      $this->EE->db->delete('modules');
-  
-      $this->EE->db->where('class', 'Fortunes');
-      $this->EE->db->delete('actions');
-  
-      $this->EE->db->where('class', 'Fortunes_mcp');
-      $this->EE->db->delete('actions');
-  
-      $this->EE->dbforge->drop_table('fortunes');
-  
-      return TRUE;
-    }
-  
-    function update($current='')
-    {
-      if ($current < 2.0)
+  class Package_name_upd
+  {
+      var $version = '3.0';
+    
+      function __construct()
       {
-        // Do your 2.0 version update queries
+          // Make a local reference to the ExpressionEngine super object
+          $this->EE =& get_instance();
       }
-      if ($current < 3.0)
+    
+      function install()
       {
-        // Do your 3.0 v. update queries
+          $this->EE->load->dbforge();
+      
+          $fields = array(
+              'fortune_id'=>  array(
+                  'type' => 'int',
+                  'constraint'  =>  '6',
+                  'unsigned'  =>  TRUE,
+                  'auto_increment'=>  TRUE
+              ),
+              'fortune_text'  =>  array('type' => 'text')
+          );
+      
+          $this->EE->dbforge->add_field($fields);
+          $this->EE->dbforge->add_key('fortune_id', TRUE);
+          $this->EE->dbforge->create_table('fortunes');
+          
+          $data = array(
+              'module_name' => 'Fortunes' ,
+              'module_version' => $this->version,
+              'has_cp_backend' => 'y'
+          );
+          
+          $this->db->insert('modules', $data);
+          
+          return TRUE;
       }
-  
-      return TRUE;
-    }
+    
+      function uninstall()
+      {
+          $this->EE->load->dbforge();
+      
+          $this->EE->db->select('module_id');
+          $query = $this->EE->db->get_where('modules', array('module_name' => 'Fortunes'));
+      
+          $this->EE->db->where('module_id', $query->row('module_id'));
+          $this->EE->db->delete('module_member_groups');
+      
+          $this->EE->db->where('module_name', 'Fortunes');
+          $this->EE->db->delete('modules');
+      
+          $this->EE->db->where('class', 'Fortunes');
+          $this->EE->db->delete('actions');
+      
+          $this->EE->db->where('class', 'Fortunes_mcp');
+          $this->EE->db->delete('actions');
+      
+          $this->EE->dbforge->drop_table('fortunes');
+      
+          return TRUE;
+      }
+    
+      function update($current='')
+      {
+          if ($current < 2.0)
+          {
+              // Do your 2.0 version update queries
+          }
+          if ($current < 3.0)
+          {
+              // Do your 3.0 v. update queries
+          }
+      
+          return TRUE;
+      }
   }
   /* END Class */
   
@@ -210,22 +210,22 @@ want to attempt to create a folder on the server.
 
   function install()
   {
-    var $errors = array();
-  
-    if (mkdir('/my/dir'))
-    {
-      $errors = array('Unable to create the directory, please manually add it before you use this module.');
-    }
-  
-    if (count($errors) > 0)
-    {
-      $this->install_errors = $errors;
-      return FALSE;
-    }
-    else
-    {
-      return TRUE;
-    }
+      var $errors = array();
+    
+      if (mkdir('/my/dir'))
+      {
+          $errors = array('Unable to create the directory, please manually add it before you use this module.');
+      }
+    
+      if (count($errors) > 0)
+      {
+          $this->install_errors = $errors;
+          return FALSE;
+      }
+      else
+      {
+          return TRUE;
+      }
   }
 
 When you pass errors, it is best practice to return FALSE.
@@ -255,15 +255,15 @@ in the format::
   
   <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
   
-  class Package_name_mcp {
-  
-    var $version = '1.0';
-  
-    function __construct()
-    {
-      // Make a local reference to the ExpressionEngine super object
-      $this->EE =& get_instance();
-    }
+  class Package_name_mcp 
+  {
+      var $version = '1.0';
+    
+      function __construct()
+      {
+          // Make a local reference to the ExpressionEngine super object
+          $this->EE =& get_instance();
+      }
   }
   /* END Class */
   
@@ -287,23 +287,24 @@ constructor, and ``__construct()`` should now be used::
   Old Syntax
   function Package_name_mcp( $switch = TRUE )
   {
-    global $IN;
-    
-    if ($switch)
-    {
-      switch($IN->GBL('P'))
+      global $IN;
+      
+      if ($switch)
       {
-        case 'home' : $this->home();
-          break;
+          switch($IN->GBL('P'))
+          {
+              case 'home':
+                  $this->home();
+                  break;
+          }
       }
-    }
   }
   
   NEW Syntax
   function __construct( $switch = TRUE )
   {
-    // Make a local reference to the ExpressionEngine super object
-    $this->EE =& get_instance();
+      // Make a local reference to the ExpressionEngine super object
+      $this->EE =& get_instance();
   }
 
 Load any helpers and libraries you may need in your view
@@ -345,8 +346,8 @@ Theme urls::
 Setting the base breadcrumb::
 
   $this->EE->cp->set_breadcrumb(
-    BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=package_name',
-    lang('name')
+      BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=package_name',
+      lang('name')
   );
 
 Setting the title::
@@ -386,9 +387,9 @@ object in the second parameter of the view loading function. Here is an
 example using an array::
 
   $data = array(
-    'title' => 'My Title',
-    'heading' => 'My Heading',
-    'message' => 'My Message'
+      'title' => 'My Title',
+      'heading' => 'My Heading',
+      'message' => 'My Message'
   );
   
   return $this->EE->load->view('name', $data, TRUE);
@@ -421,16 +422,16 @@ index() method would look like::
 
   function index($message = '') 
   {
-    $this->EE->view->cp_page_title = lang('fortunes_module_name');
-  
-    $this->EE->load->library('javascript');
-    $this->EE->javascript->output($this->EE->jquery->corner('.cp_button a'));
-    $this->EE->javascript->compile();
-  
-    $vars['view_url'] = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=view';  
-    $vars['add_url'] = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=add';
-  
-    return $this->EE->load->view('index', $vars, TRUE);
+      $this->EE->view->cp_page_title = lang('fortunes_module_name');
+    
+      $this->EE->load->library('javascript');
+      $this->EE->javascript->output($this->EE->jquery->corner('.cp_button a'));
+      $this->EE->javascript->compile();
+    
+      $vars['view_url'] = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=view';  
+      $vars['add_url'] = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=add';
+    
+      return $this->EE->load->view('index', $vars, TRUE);
   }
 
 The page title is set using the CP class. To add a bit of style, the
@@ -439,8 +440,8 @@ links). And lastly, a view is loaded sending an array containing two
 variables is returned. The view file might be as simple as::
 
   <ul>
-    <li><div class="cp_button"><a href="<?=$add_url?>"><?=lang('add_fortune')?></a></div></li>
-    <li><div class="cp_button"><a href="<?=$view_url?>"><?=lang('view_fortunes')?></a></div></li>
+      <li><div class="cp_button"><a href="<?=$add_url?>"><?=lang('add_fortune')?></a></div></li>
+      <li><div class="cp_button"><a href="<?=$view_url?>"><?=lang('view_fortunes')?></a></div></li>
   </ul>
 
 For an example of a more complex page, see the
@@ -470,17 +471,15 @@ rendered output of your current module. Using the 'Fortunes' demo module
 as an example, here is the output html for the home page::
 
   <div id='contentNB'>
-  
-  <h1>Fortunes Control Panel</h1>
-  
-  <div class='itemWrapper' >
-  <h5><a href='index.php?S=0&C=modules&M=fortunes&P=add' >Add Fortune</a></h5>
-  </div>
-  
-  <div class='itemWrapper' >
-  <h5><a href='index.php?S=0&C=modules&M=fortunes&P=view' >View Fortunes</a></h5>
-  </div>
-  
+      <h1>Fortunes Control Panel</h1>
+    
+      <div class='itemWrapper'>
+          <h5><a href='index.php?S=0&C=modules&M=fortunes&P=add' >Add Fortune</a></h5>
+      </div>
+      
+      <div class='itemWrapper'>
+          <h5><a href='index.php?S=0&C=modules&M=fortunes&P=view' >View Fortunes</a></h5>
+      </div>
   </div>
 
 Everything inside the contentNB division will be controlled by your view
@@ -488,13 +487,19 @@ file. Thus to replicate the current module, you could simply copy the
 rendered html and replace the variable elements with, well, variables::
 
   <div class='itemWrapper'>
-  <h5><a href="<?=BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=add'?>">
-    <?=lang('add_fortune')?></a></h5>
+      <h5>
+          <a href="<?=BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=add'?>">
+              <?=lang('add_fortune')?>
+          </a>
+      </h5>
   </div>
   
   <div class='itemWrapper'>
-  <h5>href="<?=BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=view'?>">
-    <?=lang('view_fortunes')?></a></h5>
+      <h5>
+          <a href="<?=BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=view'?>">
+              <?=lang('view_fortunes')?>
+          </a>
+      </h5>
   </div>
 
 There are a few things to note in the above changeover:
@@ -518,8 +523,8 @@ example. Riffing on that, we end up with a completed view file that was
 shown above::
 
   <ul>
-    <li><div class="cp_button"><a href="<?=$add_url?>"><?=lang('add_fortune')?></a></div></li>
-    <li><div class="cp_button"><a href="<?=$view_url?>"><?=lang('view_fortunes')?></a></div></li>
+      <li><div class="cp_button"><a href="<?=$add_url?>"><?=lang('add_fortune')?></a></div></li>
+      <li><div class="cp_button"><a href="<?=$view_url?>"><?=lang('view_fortunes')?></a></div></li>
   </ul>
 
 Easy to change the markup, isn't it? I also added a few variables to
@@ -553,20 +558,20 @@ existing ones. The rendered html looks like::
   <h1>Add Fortune</h1>
   
   <form method='post'  name='target' id='target'  action='index.php?S=0&C=modules&M=fortunes&P=update' >
-    <div class='hidden'><input type='hidden' name='XID' value='0801a8c15ef3ad5a7c1318f232a210eb721464a1' /></div>
-    
-    <table border='0'  cellspacing='0' cellpadding='0' style='width:100%;'  class='tableBorder' >
-      <tr>
-        <td class='tableCellOne' >
-          <textarea dir='ltr' style='width:100%;' name='fortune_text' id='fortune_text' cols='90' rows='15' class='textarea' ></textarea>
-        </td>
-      </tr>
-    </table>
-    
-    <div class='itemWrapper' >
-      <br />
-      <input type='submit' class='submit' value='Add Fortune' />
-    </div>
+      <div class='hidden'><input type='hidden' name='XID' value='0801a8c15ef3ad5a7c1318f232a210eb721464a1' /></div>
+      
+      <table border='0'  cellspacing='0' cellpadding='0' style='width:100%;'  class='tableBorder' >
+          <tr>
+              <td class='tableCellOne' >
+                  <textarea dir='ltr' style='width:100%;' name='fortune_text' id='fortune_text' cols='90' rows='15' class='textarea' ></textarea>
+              </td>
+          </tr>
+      </table>
+      
+      <div class='itemWrapper' >
+          <br />
+          <input type='submit' class='submit' value='Add Fortune' />
+      </div>
   </form>
 
 Again, you can almost do a 'copy/paste' of your output html and then
@@ -574,22 +579,22 @@ just go in and replace your variable bits with actual php variables. Let
 the form helper take care of the details of the form creation::
 
   <?php if ($message != ''):?>  
-    <p class="notice"><?=$message?></p> 
+      <p class="notice"><?=$message?></p> 
   <?php endif;?>  
   
   <?=form_open($form_action, '', $hidden)?> 
-    <table border='0' cellspacing='0' cellpadding='0' style='width:100%;' class='tableBorder' >
-      <tr>
-        <td class='tableCellOne' >
-          <?=form_textarea(array('id'=>'fortune_text','name'=>'fortune_text','class'=>'textarea','value'=>$fortune_text));?> 
-        </td>
-      </tr>
-    </table>
+      <table border='0' cellspacing='0' cellpadding='0' style='width:100%;' class='tableBorder' >
+          <tr>
+              <td class='tableCellOne' >
+                  <?=form_textarea(array('id'=>'fortune_text','name'=>'fortune_text','class'=>'textarea','value'=>$fortune_text));?> 
+              </td>
+          </tr>
+      </table>
 
-    <div class='itemWrapper' >
-      <br />
-      <?=form_submit(array('name' => 'submit', 'value' => lang('update'), 'class' => 'submit'));?> 
-    </div>
+      <div class='itemWrapper'>
+          <br />
+          <?=form_submit(array('name' => 'submit', 'value' => lang('update'), 'class' => 'submit'));?> 
+      </div>
   <?=form_close()?> 
 
 That's all there is to it. You now have a view (``fortune_form.php``)
@@ -611,39 +616,39 @@ Here's how we can use the table library to generate our somewhat complex
 'view fortunes' page::
 
   <?php if ($message != ''):?>
-    <p class="notice"><?=$message?></p>
+      <p class="notice"><?=$message?></p>
   <?php endif;?>
   
   <?php if(count($fortunes) > 0):?>
   
-    <?=form_open($form_action)?>
+      <?=form_open($form_action)?>
   
-    <?php
-    $this->table->set_template($cp_table_template);
-    $this->table->set_heading(
-      lang('fortune_text'),
-      lang('modify_fortune'),
-      form_checkbox('select_all', 'true', FALSE, 'class="toggle_all" id="select_all"').NBS.lang('delete_fortune','select_all')
-    );
-  
-    foreach($fortunes as $fortune)
-    {
-      $this->table->add_row(
-        $fortune['fortune'],
-        '<a href="'.$fortune['modify_link'].'">'.lang('modify_fortune').'</a>',
-        form_checkbox($fortune['toggle'])
+      <?php
+      $this->table->set_template($cp_table_template);
+      $this->table->set_heading(
+          lang('fortune_text'),
+          lang('modify_fortune'),
+          form_checkbox('select_all', 'true', FALSE, 'class="toggle_all" id="select_all"').NBS.lang('delete_fortune','select_all')
       );
-    }
-    ?>
-  
-    <?=$this->table->generate()?>
-    <div><?=form_submit(array('name' => 'submit', 'value' => lang('delete'), 'class' => 'submit'));?></div>
-  
-    <?=$pagination?>
-  
-    <?=form_close()?>
+    
+      foreach($fortunes as $fortune)
+      {
+          $this->table->add_row(
+              $fortune['fortune'],
+              '<a href="'.$fortune['modify_link'].'">'.lang('modify_fortune').'</a>',
+              form_checkbox($fortune['toggle'])
+          );
+      }
+      ?>
+    
+      <?=$this->table->generate()?>
+      <div><?=form_submit(array('name' => 'submit', 'value' => lang('delete'), 'class' => 'submit'));?></div>
+    
+      <?=$pagination?>
+    
+      <?=form_close()?>
   <?php else: ?>
-    <?=lang('no_fortunes')?>
+      <?=lang('no_fortunes')?>
   <?php endif;?>
 
 Using the Table library allows for easier changes to the dynamically
@@ -671,9 +676,9 @@ specific URLs::
   <?php
   
   $help_menu = array(
-    'index' => 'http://example.com/user_guide/',
-    'add'   => 'http://example.com/user_guide/add_fortune.html',
-    'view'  => 'http://example.com/user_guide/view_fortune.html'
+      'index' => 'http://example.com/user_guide/',
+      'add'   => 'http://example.com/user_guide/add_fortune.html',
+      'view'  => 'http://example.com/user_guide/view_fortune.html'
   );
   
   /* End of file help_menu.php */

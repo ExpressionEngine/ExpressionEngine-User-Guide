@@ -26,7 +26,7 @@ within your templates, they instead allow you to modify the core system
 itself.
 
 An Extension is an add-on script that is placed in the
-/system/expressionengine/third\_party/<package\_name>/ directory and
+``/system/expressionengine/third_party/<package_name>/`` directory and
 then enabled via the :doc:`Extensions Manager 
 </cp/add-ons/extension_manager>` in the Control Panel. Extensions can 
 have their own settings and their own database tables, if necessary, but
@@ -41,12 +41,12 @@ Extensions have a similar naming convention to ExpressionEngine plugins
 so current developers should get the hang of them quickly. There is only
 a single file required for an extension and inside this file should be a
 PHP class. The name of the class is used in the file name of the
-extension with the addition of the suffix \_ext so that the name of the
+extension with the addition of the suffix ``_ext`` so that the name of the
 file is the *lower-cased* class name with the prefix ext. and the
-standard PHP suffix of .php. So, if we have an extension named
-'**Link\_truncator**', then the file name for this extension would be
-'**ext.link\_truncator.php**' and the class would be called
-'**Link\_truncator\_ext**'.
+standard PHP suffix of ``.php``. So, if we have an extension named
+'``Link_truncator``', then the file name for this extension would be
+'``ext.link_truncator.php``' and the class would be called
+'``Link_truncator_ext``'.
 
 The Base Extension Class
 ------------------------
@@ -163,23 +163,24 @@ the method in your extension's class to call for this hook.
 Here is a quick run down of what each of these fields in the database
 table mean:
 
--  **extension\_id** - primary id for row in table
--  **class** - name of your extension's class
--  **method** - method being called for this extension hook
--  **hook** - name of the extension hook in the program
--  **settings** - serialized array of settings, usually empty by default
--  **priority** - an extension hook could have many extensions being
-   called, so there needs to be priority. 1 => First, 10 => Last.
--  **version** - version of extension when activated, used for updating
--  **enabled** - is this extension activated
+- ``extension_id`` - primary id for row in table
+- ``class`` - name of your extension's class
+- ``method`` - method being called for this extension hook
+- ``hook`` - name of the extension hook in the program
+- ``settings`` - serialized array of settings, usually empty by default
+- ``priority`` - an extension hook could have many extensions being
+  called, so there needs to be priority. 1 => First, 10 => Last.
+- ``version`` - version of extension when activated, used for updating
+- ``enabled`` - is this extension activated
 
 Updating an extension is extremely easy in ExpressionEngine. The user
 will simply upload the new version of the extension and ExpressionEngine
 will automatically update the extension the next time it is called. All
-that is required is an intelligent function called update\_extension().
-The program will automatically compare the version of the extension
-information in the database against the version of the extension file,
-and if the extension file is a newer version it calls this function.
+that is required is an intelligent function called
+``update_extension()``. The program will automatically compare the
+version of the extension information in the database against the version
+of the extension file, and if the extension file is a newer version it
+calls this function.
 
 ::
 
@@ -214,20 +215,20 @@ Disabling
 ---------
 
 When an extension is enabled for the very *first* time, the
-activate\_extension() function is called and all of the extension calls
-are inserted into the database. When an extension is disabled though,
-these extension calls are not removed from the database. Instead they
-are merely disabled, which allows settings to be preserved and not
+``activate_extension()`` function is called and all of the extension
+calls are inserted into the database. When an extension is disabled
+though, these extension calls are not removed from the database. Instead
+they are merely disabled, which allows settings to be preserved and not
 removed so that they are still there if the extension is enabled again
 in the future.
 
 This causes a problem for developers who, while developing an extension,
 will often enable an extension to test their code but before they have
-added all of their extension calls to the activate\_extension()
+added all of their extension calls to the ``activate_extension()``
 function. What we have done is allowed the creation of a
-disable\_extension() function in an extension's class. If this function
-exists in the class, it will be called whenever your extension is
-disabled. This will allow you to clear out your extension's data and
+``disable_extension()`` function in an extension's class. If this
+function exists in the class, it will be called whenever your extension
+is disabled. This will allow you to clear out your extension's data and
 basically start fresh every single time.
 
 ::
@@ -253,15 +254,15 @@ Abstracted Settings Form and Processing
 
 If you want to give your extension the ability to have settings, then we
 have written an abstracted layer to make it extremely easy. First, you
-have to make sure that you have your $settings\_exist class variable set
-to 'y'. Second, you need a language file for your extension with the
-file name of the language file being the extension's lower-cased class
-name with a suffix of '\_lang.php'. Make sure the language file is put
-in the /system/expressionengine/third\_party/package name/language/
-directory too. And finally, you need to have a method in your
-extension's class called settings(). This function will return an array
-in a certain form that will help the Extensions Manager automatically
-create a form for your settings.
+have to make sure that you have your ``$settings_exist`` class variable
+set to '``y``'. Second, you need a language file for your extension with
+the file name of the language file being the extension's lower-cased
+class name with a suffix of '``_lang.php``'. Make sure the language file
+is put in the ``/system/expressionengine/third_party/package
+name/language/`` directory too. And finally, you need to have a method
+in your extension's class called ``settings()``. This function will
+return an array in a certain form that will help the Extensions Manager
+automatically create a form for your settings.
 
 ::
 
@@ -321,7 +322,7 @@ Alternatively, if your settings require a special form that cannot
 created by the abstracted layer above, then ExpressionEngine permits you
 to create your own settings form and processing functions within your
 Extension. First, you need to will need have a method in your
-extension's class called settings\_form().
+extension's class called ``settings_form()``.
 
 ::
 
@@ -402,10 +403,10 @@ Save Settings
 ^^^^^^^^^^^^^
 
 Lastly, you will need to ave a method in your extension's class called
-save\_settings(). This function will be called when your
-settings\_form() method's form is submitted. Use it to process the data
-sent and put it into the exp\_extensions database table. Remember that
-the data put into the database is a serialized array, so handle it
+``save_settings()``. This function will be called when your
+``settings_form()`` method's form is submitted. Use it to process the
+data sent and put it into the exp_extensions database table. Remember
+that the data put into the database is a serialized array, so handle it
 appropriately.
 
 ::
@@ -471,12 +472,12 @@ is available for use:
     //
     // -------------------------------------------
 
-The first parameter of $this->extensions->call\_extension is the name of
-the hook, which lets the Extension class know what extensions to call.
-The other three parameters are variables taken from the function that
-the hook is embedded within. They provide information and data for the
-extensions being called for this hook, which allows those extensions to
-have information about the script that allow them to perform certain
+The first parameter of ``$this->extensions->call_extension`` is the name
+of the hook, which lets the Extension class know what extensions to
+call. The other three parameters are variables taken from the function
+that the hook is embedded within. They provide information and data for
+the extensions being called for this hook, which allows those extensions
+to have information about the script that allow them to perform certain
 actions or manipulate data. When an extension is called,
 ExpressionEngine loads the extension file, instantiates the extension's
 class, and then calls the method specified for this extension hook as
@@ -567,32 +568,32 @@ level with the lower the priority number the sooner the extension is
 called. Because of priority, extensions might interfere with each other,
 so we have provided two variables for helping with that.
 
-$this->extensions->last\_call
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$this->extensions->last_call
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There will be rather popular hooks being used by multiple extensions and
 some hooks will expect you to return data to the extension hook. Because
 of that, there is a variable available from the Extensions class
-($this->extensions) that will contain the returned data of any prior
+(``$this->extensions``) that will contain the returned data of any prior
 extensions for that hook. Say, there is a hook for formatting text and
 an extension before yours is called. That extension will be returning
 the text formatted in its own way, but then your extension is called
 with the original text details being sent. In such an instance of data
 being returned and possible prior extensions, there is a variable
 available to retrieve that already formatted text:
-$this->extensions->last\_call. This variable will return whatever the
+``$this->extensions->last_call``. This variable will return whatever the
 last extension returned to this hook. If there was no prior extension,
-then the value of this variable is FALSE.
+then the value of this variable is ``FALSE``.
 
-$this->extensions->end\_script
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$this->extensions->end_script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Many extension hooks exist for the express purpose of totally
 controlling a page or script in the Control Panel. They are meant for
 redesigning the appearance of a form or perhaps usurping a script for
 processing form data. In those instances you want your extension to be
 the last thing called for that extension hook so that nothing else is
-processed after that point. The $this->extensions->end\_script exists
+processed after that point. The ``$this->extensions->end_script`` exists
 solely for that purpose. If you set this value to TRUE, then once your
 extension is done being processed the execution of the hook is finished,
 as is the script that the extension hook is contained within.

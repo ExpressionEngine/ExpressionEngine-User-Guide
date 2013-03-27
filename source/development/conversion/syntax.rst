@@ -42,11 +42,11 @@ a local instance of the super object is used.
 
   class Some_class
   {
-    function __construct($params)
-    {
-      $this->EE =& get_instance();
-      // now all calls to class methods go through $this->EE
-      $this->EE->functions->redirect();
+      function __construct($params)
+      {
+          $this->EE =& get_instance();
+          // now all calls to class methods go through $this->EE
+          $this->EE->functions->redirect();
 
 Switch 'weblog' terminology to 'channel' terminology
 ----------------------------------------------------
@@ -150,7 +150,7 @@ example::
   
   if ( ! class_exists('Typography'))
   {
-    require PATH_CORE.'core.typography'.EXT;
+      require PATH_CORE.'core.typography'.EXT;
   }
   
   $TYPE = new Typography;
@@ -220,13 +220,13 @@ user guide for full details of the :ellislab:`database class
 of some of the old vs. new syntax::
 
   ->num_rows
-    ->num_rows()
+      ->num_rows()
   ->row['field_name']
-    ->row('field_name')
+      ->row('field_name')
   ->result as $row)
-    ->result_array() as $row) // $row is an array
+      ->result_array() as $row) // $row is an array
   (n/a)
-    ->result() as $row) // $row is an object
+      ->result() as $row) // $row is an object
 
 Display Class
 -------------
@@ -234,13 +234,13 @@ Display Class
 ::
 
   $DSP->allowed_group('can_admin_channels')
-    $this->EE->cp->allowed_group('can_admin_channels')
+      $this->EE->cp->allowed_group('can_admin_channels')
   $DSP->breadcrumb()
-    $this->EE-cp->set_breadcrumb()
+      $this->EE-cp->set_breadcrumb()
   $DSP->html_header()
-    $this->EE-cp->set_variable('cp_page_title', $value)
+      $this->EE-cp->set_variable('cp_page_title', $value)
   $DSP->error_message()
-    show_error()
+      show_error()
 
 Email Class
 -----------
@@ -248,7 +248,7 @@ Email Class
 ::
 
   $email->initialize()
-    $this->EE->email->EE_initialize();
+      $this->EE->email->EE_initialize();
 
 Extensions Class
 ----------------
@@ -256,9 +256,9 @@ Extensions Class
 ::
 
   $EXT->call_extension
-    $this->EE->extensions->call
+      $this->EE->extensions->call
   $EXT->universal_call_extension
-    $this->EE->extensions->universal_call
+      $this->EE->extensions->universal_call
 
 Functions Class
 ---------------
@@ -281,36 +281,36 @@ Input Class
 ::
 
   $IN->URI
-    $this->EE->uri->uri_string
+      $this->EE->uri->uri_string
   $IN->QSTR
-    $this->EE->uri->query_string
+      $this->EE->uri->query_string
   $IN->Pages_QSTR
-    $this->EE->uri->page_query_string
+      $this->EE->uri->page_query_string
   $IN->IP
-    $this->EE->input->ip_address()
+      $this->EE->input->ip_address()
   $IN->blacklisted
-    $this->EE->blacklist->blacklisted
+      $this->EE->blacklist->blacklisted
   $IN->whitelisted
-    $this->EE->blacklist->whitelisted
+      $this->EE->blacklist->whitelisted
   $IN->SEGS
-    $this->EE->uri->segments
+      $this->EE->uri->segments
   $IN->parse_uri
-    Private method (Input class)
+      Private method (Input class)
   $IN->fetch_uri_segment()
-    $this->EE->uri->segment()
+      $this->EE->uri->segment()
   $IN->clean_input_data
-    Private method (Input class)
+      Private method (Input class)
 
   $IN->GBL('name', 'GP')
-    $this->EE->input->get_post('name')
+      $this->EE->input->get_post('name')
   $IN->GBL('name')
-    $this->EE->input->get_post('name')
+      $this->EE->input->get_post('name')
   $IN->GBL('name', 'POST')
-    $this->EE->input->post('name')
+      $this->EE->input->post('name')
   $IN->GBL('name', 'GET')
-    $this->EE->input->get('name')
+      $this->EE->input->get('name')
   $IN->GBL('name', 'COOKIE')
-    $this->EE->input->cookie('name')
+      $this->EE->input->cookie('name')
 
 Language Class
 --------------
@@ -318,7 +318,7 @@ Language Class
 ::
 
   $LANG->fetch_language_file
-    $this->EE->lang->loadfile
+      $this->EE->lang->loadfile
 
 Preferences Class
 -----------------
@@ -326,7 +326,7 @@ Preferences Class
 ::
 
   $PREFS->ini
-    $this->EE->config->item
+      $this->EE->config->item
 
 Regular Expressions Class
 -------------------------
@@ -334,47 +334,47 @@ Regular Expressions Class
 ::
 
   array_stripslashes()
-    strip_slashes() [$this->EE->load->helper('string');]
+      strip_slashes() [$this->EE->load->helper('string');]
   ascii_to_entities()
-    ascii_to_entities() [$this->EE->load->helper('text');]
+      ascii_to_entities() [$this->EE->load->helper('text');]
   convert_accented_characters()
-    convert_accented_characters()
-    [$this->EE->load->helper('text');]
+      convert_accented_characters()
+      [$this->EE->load->helper('text');]
   convert_quotes()
-    quotes_to_entities() [$this->EE->load->helper('string');]
+      quotes_to_entities() [$this->EE->load->helper('string');]
   decode_qstr()
-    Deprecated
+      Deprecated
   encode_ee_tags()
-    $this->EE->functions->encode_ee_tags()
+      $this->EE->functions->encode_ee_tags()
   encode_php_tags()
-    encode_php_tags() [$this->EE->load->helper('security');]
+      encode_php_tags() [$this->EE->load->helper('security');]
   entities_to_ascii()
-    entities_to_ascii() [$this->EE->load->helper('text');]
+      entities_to_ascii() [$this->EE->load->helper('text');]
   form_prep()
-    form_prep() [$this->EE->load->helper('form');]
+      form_prep() [$this->EE->load->helper('form');]
   create_url_title()
-    url_title() [$this->EE->load->helper('url');]
+      url_title() [$this->EE->load->helper('url');]
   keyword_clean()
-    sanitize_search_terms() [$this->EE->load->helper('search');]
+      sanitize_search_terms() [$this->EE->load->helper('search');]
   prep_query_string()
-    $this->EE->functions->prep_query_string()
+      $this->EE->functions->prep_query_string()
   prep_url()
-    prep_url() [$this->EE->load->helper('url');]
+      prep_url() [$this->EE->load->helper('url');]
   remove_extra_commas($str)
-    reduce_multiples($str, ',', TRUE);
-    [$this->EE->load->helper('string');]
+      reduce_multiples($str, ',', TRUE);
+      [$this->EE->load->helper('string');]
   strip_quotes()
-    strip_quotes() [$this->EE->load->helper('string');]
+      strip_quotes() [$this->EE->load->helper('string');]
   trim_slashes()
-    trim_slashes() [$this->EE->load->helper('string');]
+      trim_slashes() [$this->EE->load->helper('string');]
   valid_ip()
-    $this->EE->input->valid_ip()
+      $this->EE->input->valid_ip()
   xml_convert()
-    xml_convert() [$this->EE->load->helper('xml');]
+      xml_convert() [$this->EE->load->helper('xml');]
   xss_clean()
-    $this->EE->security->xss_clean()
+      $this->EE->security->xss_clean()
   xss_protection_hash()
-    $this->EE->security->xss_hash()
+      $this->EE->security->xss_hash()
 
 2.0 Tips and Tricks
 ===================

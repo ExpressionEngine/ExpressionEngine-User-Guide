@@ -56,10 +56,10 @@ Converting the ``mod.package_name.php`` file is simply a matter of
 altering the existing syntax. See :doc:`the syntax conversion notes
 <syntax>` for more detail. Don't forget to:
 
--  Call the super object
--  Switch to active record for your queries
--  Take advantage of the new :doc:`Template variable parser 
-   </development/usage/template>`
+- Call the super object
+- Switch to active record for your queries
+- Take advantage of the new :doc:`Template variable parser 
+  </development/usage/template>`
 
 Modify Control Panel File (``mcp.package_name.php``)
 ----------------------------------------------------
@@ -75,7 +75,7 @@ View files for your module will reside within a folder named views
 within your module's folder. ExpressionEngine will automatically look in
 that path to find your view files, allowing you to use them thusly::
 
-	return $this->EE->load->view('index', $vars, TRUE);
+  return $this->EE->load->view('index', $vars, TRUE);
 
 Note in the above example that the third argument of ``view()`` is being
 used so that instead of being added to existing output, it is returned
