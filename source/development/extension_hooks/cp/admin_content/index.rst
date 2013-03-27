@@ -6,21 +6,7 @@ Admin Content Controller Extension Hooks
 	:depth: 1
 
 
-foreign\_character\_conversion\_array
--------------------------------------
+foreign_character_conversion_array
+----------------------------------
 
-Allows you to set the foreign character conversion array used to
-transliterate non-English characters for use in URLs.
-
-.. note:: If you only need to use one non-dynamically controlled array,
-	you can simply modify 
-	``system/expressionengine/config/foreign_chars.php``
-
-::
-
-	$foreign_characters = $this->extensions->call('foreign_character_conversion_array');
-
-:returns:
-    Array
-
-Added in v1.6.0
+See Content_publish's :func:`foreign_character_conversion_array`.

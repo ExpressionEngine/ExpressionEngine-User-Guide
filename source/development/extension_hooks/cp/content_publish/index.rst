@@ -76,24 +76,27 @@ Original Location ExpressionEngine would be redirecting to
 
 Added in v2.0
 
-foreign\_character\_conversion\_array
--------------------------------------
+foreign_character_conversion_array
+----------------------------------
 
-Allows you to set the foreign character conversion array used to
-transliterate non-English characters for use in URLs.
+.. function:: foreign_character_conversion_array() 
 
-.. note:: If you only need to use one non-dynamically controlled array,
-	you can simply modify 
-	``system/expressionengine/config/foreign_chars.php``
+  Allows you to set the foreign character conversion array used to
+  transliterate non-English characters for use in URLs.
 
-::
+  How it's called::
 
-	$foreign_characters = $this->extensions->call('foreign_character_conversion_array');
+    $foreign_characters = $CI->extensions->call('foreign_character_conversion_array');
 
-:returns:
-    Array
+  :returns: Array of character ASCII values as keys and what they should
+    translate to as values
+  :rtype: String
 
-Added in v1.6.0
+  .. note:: If you only need to use one non-dynamically controlled 
+    array, you can simply modify 
+    ``system/expressionengine/config/foreign_chars.php``
+
+  .. versionadded:: 2.0
 
 publish\_form\_channel\_preferences
 -----------------------------------

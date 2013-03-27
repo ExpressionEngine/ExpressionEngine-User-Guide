@@ -2,45 +2,46 @@ Session Library Extension Hooks
 ===============================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
 
-sessions\_end
--------------
+sessions_end
+------------
 
-Modify the user's session/member data, also allows for additional
-session or login methods (ex: log in to other system)::
+.. function:: sessions_end($this)
 
-	$edata = $this->extensions->call('sessions_end', $this);
-	if ($this->extensions->end_script === TRUE) return;
+  Modify the user's session/member data, also allows for additional
+  session or login methods (ex: log in to other system).
 
-$this
-~~~~~
+  How it's called::
 
-The current instantiated Session class with all of its variables and
-functions, use a reference in your functions to modify.
+    $this->extensions->call('sessions_end', $this);
+    if ($this->extensions->end_script === TRUE) return;
 
-:returns:
-    void
+  :param object $this: The current instantiated Session class with all
+    of its variables and functions, use a reference in your functions to
+    modify
+  :rtype: Void
 
-Added in v1.4.0
+  .. versionadded:: 1.4.0
 
-sessions\_start
----------------
+sessions_start
+--------------
 
-Reset Session class variables, modify default/guest settings, take over
-whole session check, etc. ::
+.. function:: sessions_start($this)
 
-	$edata = $this->extensions->call('sessions_start', $this); if ($this->extensions->end_script === TRUE) return;
+  Reset Session class variables, modify default/guest settings, take
+  over whole session check, etc.
 
-$this
-~~~~~
+  How it's called::
 
-The current instantiated Session class with all of its variables and
-functions, use a reference in your functions to modify.
+    $this->extensions->call('sessions_start', $this);
+    if ($this->extensions->end_script === TRUE) return;
 
-:returns:
-    void
+  :param object $this: The current instantiated Session class with all
+    of its variables and functions, use a reference in your functions to
+    modify
+  :rtype: Void
 
-Added in v1.4.0
+  .. versionadded:: 1.4.0

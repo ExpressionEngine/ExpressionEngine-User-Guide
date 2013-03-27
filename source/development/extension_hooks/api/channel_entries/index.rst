@@ -2,104 +2,118 @@ Channel Entries API Extension Hooks
 ===================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
 
 api_channel_entries_custom_field_query
 --------------------------------------
 
-Modify the custom fields query array result. ::
+.. function:: api_channel_entries_custom_field_query($result)
 
-	$result = $this->EE->extensions->call('api_channel_entries_custom_field_query', $result);
-	if ($this->EE->extensions->end_script === TRUE) return;
+  Modify the custom fields query array result.
 
-$result
-~~~~~~~
+  How it's called::
 
-Array of result from custom field query.
+    $result = $this->EE->extensions->call('api_channel_entries_custom_field_query', $result);
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-:returns:
-    Array
+  :param array $result: Array of results from custom field query
+  :returns: Modified custom fields query array result
+  :rtype: Array
 
-Added in v2.5.3
+  .. versionadded:: 2.5.3
 
-entry\_submission\_end
+entry_submission_ready
 ----------------------
 
-Do more processing after an entry is submitted. ::
+.. function:: entry_submission_ready($meta, $data, $autosave)
 
-	$this->extensions->call('entry_submission_end', $this->entry_id, $this->meta, $this->data);
+  Additional processing after all data has been validated, just prior to
+  insertion / update.
 
-$this->entry\_id
-~~~~~~~~~~~~~~~~
+  How it's called::
 
-entry\_id of the entry being submitted
+    $this->EE->extensions->call('entry_submission_ready', $this->meta, $this->data, $this->autosave);
 
-$this->meta
-~~~~~~~~~~~
+  :param array $meta: Entry's metadata (``channel_id``, ``entry_date``,
+    i.e. fields for ``exp_channel_titles``)
+  :param array $data: Entry's field data
+  :param boolean $autosave: ``TRUE`` if the submission is a 
+    non-publishing autosave
+  :rtype: Void
 
-Array of entry's metadata (channel\_id, entry\_date, i.e. fields for
-exp\_channel\_titles.)
+  .. versionadded:: 2.0
 
-$this->data
-~~~~~~~~~~~
+entry_submission_start
+----------------------
 
-Array of entry's field data
+.. function:: entry_submission_start($channel_id, $autosave)
 
-:returns:
-    void
-    
-Added in v2.0
+  Additional processing before an entry is submitted.
 
-entry\_submission\_ready
-------------------------
+  How it's called::
 
-Additional processing after all data has been validated, just prior to
-insertion / update. ::
+    $this->extensions->call('entry_submission_start', $this->channel_id, $this->autosave);
 
-	$this->EE->extensions->call('entry_submission_ready', $this->meta, $this->data, $this->autosave);
+  :param int $channel_id: Channel ID of submitted entry
+  :param boolean $autosave: ``TRUE`` if the submission is a
+    non-publishing autosave
+  :rtype: Void
 
-$this->meta
-~~~~~~~~~~~
+  .. versionadded:: 2.0
 
-Array of entry's metadata (channel\_id, entry\_date, i.e. fields for
-exp\_channel\_titles.)
+entry_submission_end
+--------------------
 
-$this->data
-~~~~~~~~~~~
+.. function:: entry_submission_end($entry_id, $meta, $data)
 
-Array of entry's field data
+  Do more processing after an entry is submitted.
 
-$this->autosave
-~~~~~~~~~~~~~~~
+  How it's called::
 
-(Boolean) whether or not the submission action is an non-publishing
-autosave
+    $this->extensions->call('entry_submission_end', $this->entry_id, $this->meta, $this->data);
 
-:returns:
-    void
+  :param int $entry_id: ID of the entry being submitted
+  :param array $meta: Entry's metadata (``channel_id``, ``entry_date``,
+    i.e. fields for ``exp_channel_titles``)
+  :rtype: Void
 
-Added in v2.0
+  .. versionadded:: 2.0
 
-entry\_submission\_start
-------------------------
+delete_entries_end
+------------------
 
-Additional processing before an entry is submitted. ::
+.. function:: delete_entries_end()
 
-	$this->extensions->call('entry_submission_start', $this->channel_id, $this->autosave);
+  Executed after the entry deletion routine complete, allowing additional
+  processing.
 
-$this->channel\_id
-~~~~~~~~~~~~~~~~~~
-    channel\_id of the submitted entry
+  How it's called::
 
-$this->autosave
-~~~~~~~~~~~~~~~
+    $this->extensions->call('delete_entries_end');
+    if ($this->extensions->end_script === TRUE) return;
 
-(Boolean) whether or not the submission action is an non-publishing
-autosave
+  :rtype: Void
 
-:returns:
-    void
+  .. versionadded:: 1.4.0
 
-Added in v2.0
+delete_entries_loop
+-------------------
+
+.. function:: delete_entries_loop($val, $channel_id)
+
+  Executed in the loop that deletes each entry, after deletion, prior to
+  stat recounts.
+
+  How it's called::
+
+    $edata = $this->extensions->call('delete_entries_loop', $val, $channel_id);
+    if ($this->extensions->end_script === TRUE) return;
+
+  :param int $val: ID of the entry being deleted
+  :param int $channel_id: Channel ID of the entry being deleted
+  :rtype: Void
+
+  .. versionadded:: 1.4.1
+
