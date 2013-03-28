@@ -2,45 +2,41 @@ Member Module Settings Extension Hooks
 ======================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
 
-member\_edit\_preferences
+member_edit_preferences
+-----------------------
+
+.. function:: member_edit_preferences($element)
+
+  Allows adding of preferences to user side preferences form by
+  modifying the preference form template.
+
+  How it's called::
+
+    $element = $this->EE->extensions->call('member_edit_preferences', $element);
+
+  :param string $element: Preference form template
+  :returns: Modified preference form template (``$element``)
+  :rtype: String
+
+  .. versionadded:: 1.4.0
+
+member_update_preferences
 -------------------------
 
-Allows adding of preferences to user side preferences form by modifying
-the preference form template
+.. function:: member_update_preferences($data)
 
-::
+  Allows updating of added preferences via user side preferences form.
 
-	$element = $this->extensions->call('member_edit_preferences', $element);
+  How it's called::
 
-$element
-~~~~~~~~
+    $this->EE->extensions->call('member_update_preferences', $data);
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-Preference form template
+  :param array $data: Array of data from standard form
+  :rtype: Void
 
-:returns:
-    String
-
-Added in v1.4.0
-
-member\_update\_preferences
----------------------------
-
-Allows updating of added preferences via user side preferences form
-
-::
-
-	$edata = $this->extensions->call('member_update_preferences', $data); if ($this->extensions->end_script === TRUE) return;
-
-$data
-~~~~~
-
-Array of data from standard form
-
-:returns:
-    void
-
-Added in v1.4.0
+  .. versionadded:: 1.4.0

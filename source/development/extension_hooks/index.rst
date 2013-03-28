@@ -11,6 +11,7 @@ The list below details all available extension hooks in ExpressionEngine.
   - :doc:`global/email/index` (``EE_Email.php``)
   - :doc:`global/member_model/index` (``member_model.php``)
   - :doc:`global/output/index` (``EE_Output.php``)
+  - :doc:`global/pagination/index` (``EE_Pagination.php``)
   - :doc:`global/session/index` (``Session.php``)
   - :doc:`global/template/index` (``Template.php``)
   - :doc:`global/text_helper/index` (``EE_text_helper.php``)
@@ -48,39 +49,40 @@ The list below details all available extension hooks in ExpressionEngine.
   - :doc:`module/wiki/index` (``mod.wiki.php``)
 
 .. toctree::
-	:glob:
-	:hidden:
-	:titlesonly:
+  :glob:
+  :hidden:
+  :titlesonly:
 
-	api/channel_entries/index
-	api/template_structure/index
-	cp/admin_content/index
-	cp/content_edit/index
-	cp/content_publish/index
-	cp/css/index
-	cp/design/index
-	cp/javascript/index
-	cp/login/index
-	cp/members/index
-	cp/menu/index
-	cp/myaccount/index
-	global/core/index
-	global/email/index
-	global/filemanager/index
-	global/functions/index
-	global/member_model/index
-	global/output/index
-	global/session/index
-	global/template/index
-	global/text_helper/index
-	global/typography/index
-	module/channel/index
-	module/comment/index
-	module/email/index
-	module/forum/index
-	module/member/index
-	module/member_auth/index
-	module/member_register/index
-	module/member_settings/index
-	module/simple_commerce/index
-	module/wiki/index
+  api/channel_entries/index
+  api/template_structure/index
+  cp/admin_content/index
+  cp/content_edit/index
+  cp/content_publish/index
+  cp/css/index
+  cp/design/index
+  cp/javascript/index
+  cp/login/index
+  cp/members/index
+  cp/menu/index
+  cp/myaccount/index
+  global/core/index
+  global/email/index
+  global/filemanager/index
+  global/functions/index
+  global/member_model/index
+  global/output/index
+  global/pagination/index
+  global/session/index
+  global/template/index
+  global/text_helper/index
+  global/typography/index
+  module/channel/index
+  module/comment/index
+  module/email/index
+  module/forum/index
+  module/member/index
+  module/member_auth/index
+  module/member_register/index
+  module/member_settings/index
+  module/simple_commerce/index
+  module/wiki/index

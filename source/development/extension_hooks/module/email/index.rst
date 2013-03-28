@@ -2,64 +2,47 @@ Email Module Extension Hooks
 ============================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
 
-email\_module\_send\_email\_end
--------------------------------
+email_module_send_email_end
+---------------------------
 
-After emails are sent, do some additional processing
+.. function:: email_module_send_email_end($subject, $message, $approved_tos, $approved_recipients)
 
-::
+  After emails are sent, do some additional processing.
 
-	$edata = $this->extensions->call('email_module_send_email_end', $subject, $message, $approved_tos, $approved_recipients); if ($this->extensions->end_script === TRUE) return;
+  How it's called::
 
-$subject
-~~~~~~~~
+    $this->EE->extensions->call('email_module_send_email_end', $subject, $message, $approved_tos, $approved_recipients);
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-The sanitized and parsed subject of the email
+  :param string $subject: Sanitized and parsed subject of the email
+  :param string $message: Sanitized and parsed body of the email
+  :param array $approved_tos: Email addresses in the form's "to" field
+  :param array $approved_recipients: Email addresses specified in the
+    tag as recipients
+  :rtype: Void
 
-$message
-~~~~~~~~
+  .. versionadded:: 1.5.1
 
-The sanitized and parsed body of the email
+email_module_tellafriend_override
+---------------------------------
 
-$approved\_tos
-~~~~~~~~~~~~~~
+.. function:: email_module_tellafriend_override($qstring, $this)
 
-Array of email addresses sent from the form's "to" field
+  Allow use of Tell-A-Friend for things besides channel entries.
 
-$approved\_recipients
-~~~~~~~~~~~~~~~~~~~~~
+  How it's called::
 
-Array of email addresses specified in the tag as recipients
+    $tagdata = $this->EE->extensions->call('email_module_tellafriend_override', $qstring, $this);
+    if ($this->EE->extensions->end_script === TRUE) return $tagdata;
 
-:returns:
-    void
+  :param string $qstring: Query string without comments or pagination
+    information
+  :param object $this: Email object
+  :returns: Rendered tagdata
+  :rtype: String
 
-Added in v1.5.1
-
-email\_module\_tellafriend\_override
-------------------------------------
-
-Allow use of Tell-A-Friend for things besides channel entries
-
-::
-
-	$tagdata = $this->extensions->call('email_module_tellafriend_override', $qstring, $this); if ($this->extensions->end_script === TRUE) return $tagdata;
-
-$qstring
-~~~~~~~~
-
-Query string without comments or pagination information
-
-$this
-~~~~~
-
-The Email class object with its various variables
-
-:returns:
-    String
-
-Added in v1.5.1
+  .. versionadded:: 1.5.1

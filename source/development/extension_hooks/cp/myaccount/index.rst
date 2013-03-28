@@ -2,82 +2,88 @@ My Account Controller Extension Hooks
 =====================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
 myaccount_nav_setup
 -------------------
 
-Add additional menu items to the My Account settings page. ::
+.. function:: myaccount_nav_setup()
 
-	$vars['additional_nav'] = array(
-		'personal_settings' => array(),
-		'utilities' => array(),
-		'private_messages' => array(),
-		'customize_cp' => array(),
-		'channel_preferences' => array(),
-		'administrative_options' => array()
-	);
+  Add additional menu items to the My Account settings page.
 
-	$vars['additional_nav'] = array_merge_recursive(
-		$vars['additional_nav'], 
-		$this->extensions->call('myaccount_nav_setup')
-	);
+  How it's called::
 
-Your hook should return an associative array with the key matching one of the
-keys above that match the My Account sections. The value should be another
-associative array with the key being the text you want in the navgation and the
-value being another associative array with ``extension`` and ``method`` being
-the keys and their values being the respective extension's name and the method
-being a method that exists in the method's control panel.
+    $vars['additional_nav'] = array(
+        'personal_settings' => array(),
+        'utilities' => array(),
+        'private_messages' => array(),
+        'customize_cp' => array(),
+        'channel_preferences' => array(),
+        'administrative_options' => array()
+    );
 
-Additionally, you should check ``extensions->last_call`` to avoid overwriting
-previous changes to the My Account navigation and be sure to use
-``array_merge_recursive`` when merging the previous extension results::
+    $vars['additional_nav'] = array_merge_recursive(
+        $vars['additional_nav'],
+        $this->extensions->call('myaccount_nav_setup')
+    );
 
-	// Check for previous calls to myaccount_nav_setup hook
-	$additional_nav = ($this->EE->extensions->last_call) ? 
-		$this->EE->extensions->last_call :
-		array();
+  :returns: Additional My Account navigation items
+  :rtype: Array
 
-	// Load in language file for navigation wording
-	$this->EE->lang->loadfile('extension_name');
+  Your hook should return an associative array with the key matching one
+  of the keys above that match the My Account sections. The value should
+  be another associative array with the key being the text you want in
+  the navgation and the value being another associative array with
+  ``extension`` and ``method`` being the keys and their values being the
+  respective extension's name and the method being a method that exists
+  in the method's control panel.
 
-	// Return new navigation item merged with existing calls to hook
-	// Using array_merge_recursive for a deep clone
-	return array_merge_recursive(
-		$additional_nav,
-		array(
-			'customize_cp' => array(
-				lang('extension_myaccount_settings') => array(
-					'extension'	=> 'extension_name',
-					'method'	=> 'extension_myaccount_settings'
-				)
-			)
-		)
-	);
+  Additionally, you should check ``extensions->last_call`` to avoid
+  overwriting previous changes to the My Account navigation and be sure
+  to use ``array_merge_recursive`` when merging the previous extension
+  results::
 
-The method defined in the hook should provide the _innards_ of a My Account page
-pane without a form element (that will automatically be added for you). The form
-will be submitted to your defined method name with ``_save`` appended. For
-example, if the method name you defined in the hook was ``myaccount_settings``,
-when the form is submitted, ``myaccount_settings_save`` will be called. Both
-methods--the one defined and the save method--will pass the ``$member_id`` of
-the member being edited as the only argument::
+    // Check for previous calls to myaccount_nav_setup hook
+    $additional_nav = ($this->EE->extensions->last_call) ?
+        $this->EE->extensions->last_call :
+        array();
 
-	public function myaccount_settings($member_id)
-	public function myaccount_settings_save($member_id)
+    // Load in language file for navigation wording
+    $this->EE->lang->loadfile('extension_name');
 
-If you need to submit anything using AJAX, the following URL that you'll use
-(either for POSTing or GETing) is::
+    // Return new navigation item merged with existing calls to hook
+    // Using array_merge_recursive for a deep clone
+    return array_merge_recursive(
+        $additional_nav,
+        array(
+            'customize_cp' => array(
+                lang('extension_myaccount_settings') => array(
+                    'extension' => 'extension_name',
+                    'method'    => 'extension_myaccount_settings'
+                )
+            )
+        )
+    );
 
-	'C=myaccount'.AMP.'M=custom_action'.AMP.'extension=extension_name'.AMP.'method=method_name'
+  The method defined in the hook should provide the _innards_ of a My
+  Account page pane without a form element (that will automatically be
+  added for you). The form will be submitted to your defined method name
+  with ``_save`` appended. For example, if the method name you defined
+  in the hook was ``myaccount_settings``, when the form is submitted,
+  ``myaccount_settings_save`` will be called. Both methods--the one
+  defined and the save method--will pass the ``$member_id`` of the
+  member being edited as the only argument::
 
-Just replace the ``extension_name`` and ``method_name`` with the correct
-parameters and you should be set.
+    public function myaccount_settings($member_id)
+    public function myaccount_settings_save($member_id)
 
-:returns:
-	Associative array containing one of the previously defined navigation 
-	sections.
+  If you need to submit anything using AJAX, the following URL that
+  you'll use (either for POSTing or GETing) is::
 
-Added in v2.5
+    'C=myaccount'.AMP.'M=custom_action'.AMP.'extension=extension_name'.AMP.'method=method_name'
+
+  Just replace the ``extension_name`` and ``method_name`` with the
+  correct parameters and you should be set.
+
+  .. versionadded:: 2.5

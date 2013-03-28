@@ -2,523 +2,358 @@ Forum Module Extension Hooks
 ============================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
 forum_add_template
 ------------------
 
-Allows the addition and loading of entirely new templates.
+.. function:: forum_add_template($which, $classname)
 
-::
+  Allows the addition and loading of entirely new templates.
 
-	$classname = $this->EE->extensions->call('forum_add_template', $which, $classname);
+  How it's called::
 
-$which
-~~~~~~
+    $classname = $this->EE->extensions->call('forum_add_template', $which, $classname);
 
-The name of the template to be loaded.
+  :param string $which: The name of the template to be loaded.
+  :param string $classname: The name of the class and thus folder
+    associated with the template name or ``FALSE``.
+  :returns: Modified ``$classname``
+  :rtype: String
 
-$classname
-~~~~~~~~~~
-
-The name of the class and thus folder associated with the template name or FALSE.
-
-
-:returns:
-    String
-
-Added in v2.5.0
-
+  .. versionadded:: 2.5.0
 
 forum_include_extras
 --------------------
 
-Allows additional processing of forum templates that are not associated with an existing forum method call.  Can be used in conjunction with the forum_add_template hook to parse entirely new templates.
+.. function:: forum_include_extras($this, $function, $element)
 
-::
+  Allows additional processing of forum templates that are not
+  associated with an existing forum method call. Can be used in
+  conjunction with the forum_add_template hook to parse entirely new
+  templates.
 
-	$element = $this->EE->extensions->call('forum_include_extras', $this, $function, $element);
+  How it's called::
 
-$this
-~~~~~
+    $element = $this->EE->extensions->call('forum_include_extras', $this, $function, $element);
 
-The current Forum object
+  :param object $this: The current Forum object
+  :param string $function: The name of the template being parsed.
+  :param string $element: A string containing the contents of the template.
+  :returns: Modified temlate (``$element``)
+  :rtype: String
 
-$function
-~~~~~~~~~
-
-The name of the template being parsed.
-
-$element
-~~~~~~~~
-
-A string containing the contents of the template.
-
-:returns:
-    String
-
-Added in v2.5.0
+  .. versionadded:: 2.5.0
 
 forum_submission_form_start
 ---------------------------
 
-Allows rewrite or modify of Submission form template before processing
+.. function:: forum_submission_form_start($this, $str)
 
-::
+  Allows rewrite or modify of Submission form template before processing
 
-	$str = $this->extensions->universal_call('forum_submission_form_start', $this, $str);
-	if ($this->extensions->end_script === TRUE) return $str;
+  How it's called::
 
-$this
-~~~~~
+    $str = $this->EE->extensions->universal_call('forum_submission_form_start', $this, $str);
+    if ($this->EE->extensions->end_script === TRUE) return $str;
 
-The current Forum Core object
+  :param object $this: The current Forum Core object
+  :param string $str: Submission form template
+  :returns: Modified forum template (``$str``)
+  :rtype: String
 
-$str
-~~~~
-
-Submission form template
-
-:returns:
-    String
-
-Added in v1.4.0
+  .. versionadded:: 1.4.0
 
 forum_submission_form_end
 -------------------------
 
-Final chance to modify the submission form before it is displayed
+.. function:: forum_submission_form_end($this, $str)
 
-::
+  Final chance to modify the submission form before it is displayed
 
-	$str = $this->extensions->universal_call('forum_submission_form_end', $this, $str);
-	if ($this->extensions->end_script === TRUE) return $str;
+  How it's called::
 
-$this
-~~~~~
+    $str = $this->EE->extensions->universal_call('forum_submission_form_end', $this, $str);
+    if ($this->EE->extensions->end_script === TRUE) return $str;
 
-The current Forum Core object
+  :param object $this: The current Forum Core object
+  :param string $str: Submission form template
+  :returns: Modified form template (``$str``)
+  :rtype: String
 
-$str
-~~~~
-
-Submission form template
-
-:returns:
-    String
-
-Added in v1.4.0
+  .. versionadded:: 1.4.0
 
 forum_submission_page
 ---------------------
 
-- Allows usurping of forum submission forms
-- More error checking and permissions, too
+.. function:: forum_submission_page($this, $type)
 
-::
+  Allows usurping of forum submission forms and more error checking and
+  permissions, too.
 
-	$edata = $this->extensions->universal_call('forum_submission_page', $this, $type);
-	if ($this->extensions->end_script === TRUE) return $edata;
+  How it's called::
 
-$this
-~~~~~
+    $edata = $this->extensions->universal_call('forum_submission_page', $this, $type);
+    if ($this->extensions->end_script === TRUE) return $edata;
 
-The current Forum Core object
+  :param object $this: The current Forum Core object
+  :param string $type: ``new_topic``, ``edit_topic``, ``new_reply``,
+    ``edit_reply``
+  :rtype: Void
 
-$type
-~~~~~
-
-new\_topic, edit\_topic, new\_reply, edit\_reply
-
-:returns:
-    void
-
-Added in v1.4.0
+  .. versionadded:: 1.4.0
 
 forum_submit_post_start
 -----------------------
 
-Allows usurping of forum submission routine or possible adding more
-checks and permissions
+.. function:: forum_submit_post_start($this)
 
-::
+  Allows usurping of forum submission routine or possible adding more
+  checks and permissions.
 
-	$edata = $this->extensions->universal_call('forum_submit_post_start', $this);
-	if ($this->extensions->end_script === TRUE) return $edata;
+  How it's called::
 
-$this
-~~~~~
+    $edata = $this->EE->extensions->universal_call('forum_submit_post_start', $this);
+    if ($this->EE->extensions->end_script === TRUE) return $edata;
 
-The current Forum Core object
+  :param object $this: The current Forum Core object
+  :rtype: Void
 
-:returns:
-    void
-
-Added in v1.4.0
+  .. versionadded:: 1.4.0
 
 forum_submit_post_end
 ---------------------
 
-Do more processing after the post is submitted. ::
+.. function:: forum_submit_post_end($this, $data)
 
-	$edata = $this->extensions->universal_call('forum_submit_post_end', $this, $data);
-	if ($this->extensions->end_script === TRUE) return $edata;
+  Do more processing after the post is submitted.
 
-$this
-~~~~~
+  How it's called::
 
-The current Forum Core object
+    $edata = $this->EE->extensions->universal_call('forum_submit_post_end', $this, $data);
+    if ($this->EE->extensions->end_script === TRUE) return $edata;
 
-$data
-~~~~~
+  :param object $this: The current Forum Core object
+  :param array $data: the forum post data array
+  :rtype: Void
 
-the forum post data array
+  .. note:: User notifications have not been sent at this point.
 
-:returns:
-    void
-
-Additional Notes
-^^^^^^^^^^^^^^^^
-
-Note that user notifications have not been sent at this point. The $data
-array was added in build 20080626
-
-Added in v1.5.2
+  .. versionadded:: 1.5.2
 
 forum_threads_template
 ----------------------
 
-Allows modifying of the Threads display template before it is processed
+.. function:: forum_threads_template($this, $str, $tquery)
 
-::
+  Allows modifying of the Threads display template before it is
+  processed.
 
-	$str = $this->extensions->universal_call('forum_threads_template', $this, $str, $tquery);
-	if ($this->extensions->end_script === TRUE) return $str;
+  How it's called::
 
-$this
-~~~~~
+    $str = $this->EE->extensions->universal_call('forum_threads_template', $this, $str, $tquery);
+    if ($this->EE->extensions->end_script === TRUE) return $str;
 
-The current Forum Core object
+  :param object $this: The current Forum Core object
+  :param string $str: The topics thread template
+  :param object $tquery: Thread database object
+  :returns: Modified threads template (``$str``) before processing
+  :rtype: String
 
-$str
-~~~~
-
-The topics thread template
-
-$tquery
-~~~~~~~
-
-The data for this thread
-
-:returns:
-    String
-
-Added in v1.4.0
+  .. versionadded:: 1.4.0
 
 forum_thread_rows_absolute_end
 ------------------------------
 
-Take the processed thread rows and do what you wish
+.. function:: forum_thread_rows_absolute_end($this, $data, $thread_rows)
 
-::
+  Take the processed thread rows and do what you wish
 
-	$thread_rows = $this->extensions->universal_call('forum_thread_rows_absolute_end', $this, $data, $thread_rows);
-	if ($this->extensions->end_script === TRUE) return $thread_rows;
+  How it's called::
 
-$this
-~~~~~
+    $thread_rows = $this->EE->extensions->universal_call('forum_thread_rows_absolute_end', $this, $data, $thread_rows);
+    if ($this->EE->extensions->end_script === TRUE) return $thread_rows;
 
-The current Forum Core object
+  :param object $this: The current Forum Core object
+  :param array $data: Information about the current group of thread_rows
+    (announcement, topic, all posts, etc.)
+  :param string $thread_rows: The fully processed thread row template
+  :returns: Modified thread row template (``$thread_rows``)
+  :rtype: String
 
-$data
-~~~~~
-Information about the current group of thread\_rows (announcement,
-topic, all posts, etc.)
-
-$thread_rows
-~~~~~~~~~~~~
-
-The fully processed thread row template
-
-:returns:
-    String
-
-Added in v1.5.1
+  .. versionadded:: 1.5.1
 
 forum_thread_rows_loop_start
 ----------------------------
 
-Modify the thread row template and data before any processing takes
-place
+.. function:: forum_thread_rows_loop_start($this, $data, $row, $temp)
 
-::
+  Modify the thread row template and data before any processing takes
+  place.
 
-	$temp = $this->extensions->universal_call('forum_thread_rows_loop_start', $this, $data, $row, $temp);
-	if ($this->extensions->end_script === TRUE) return;
+  How it's called::
 
-$this
-~~~~~
+    $temp = $this->EE->extensions->universal_call('forum_thread_rows_loop_start', $this, $data, $row, $temp);
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-The current Forum Core object
+  :param object $this: The current Forum Core object
+  :param array $data: The data for all thread rows
+  :param array $row: The data for this thread row (post)
+  :param string $temp: The processed thread row
+  :returns: Modified thread row (``$temp``)
+  :rtype: String
 
-$data
-~~~~~
-
-The data for all thread rows
-
-$row
-~~~~
-
-The data for this thread row (post)
-
-$temp
-~~~~~
-
-The processed thread row
-
-:returns:
-    String
-
-Added in v1.5.1
+  .. versionadded:: 1.5.1
 
 forum_thread_rows_loop_end
 --------------------------
 
-Modify the processed row before it is appended to the template output
+.. function:: forum_thread_rows_loop_end($this, $data, $row, $temp)
 
-::
+  Modify the processed row before it is appended to the template output.
 
-	$temp = $this->extensions->universal_call('forum_thread_rows_loop_end', $this, $data, $row, $temp);
-	if ($this->extensions->end_script === TRUE) return;
+  How it's called::
 
-$this
-~~~~~
-The current Forum Core object
+    $temp = $this->EE->extensions->universal_call('forum_thread_rows_loop_end', $this, $data, $row, $temp);
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-$data
-~~~~~
+  :param object $this: The current Forum Core object
+  :param array $data: The data for all thread rows
+  :param array $row: The data for this thread row (post)
+  :param string $temp: The processed thread row
+  :returns: Modified thread row (``$temp``)
+  :rtype: String
 
-The data for all thread rows
-
-$row
-~~~~
-
-The data for this thread row (post)
-
-$temp
-~~~~~
-
-The processed thread row
-
-:returns:
-    String
-
-Added in v1.5.1
+  .. versionadded:: 1.5.1
 
 forum_thread_rows_start
 -----------------------
 
-Allows modifying of the thread rows template
+.. function:: forum_thread_rows_start($this, $template, $data, $is_announcement, $thread_review)
 
-::
+  Allows modifying of the thread rows template.
 
-	$template = $this->extensions->universal_call('forum_thread_rows_start', $this, $template, $data, $is_announcement, $thread_review);
-	if ($this->extensions->end_script === TRUE) return $template;
+  How it's called::
 
-$this
-~~~~~
+    $template = $this->EE->extensions->universal_call('forum_thread_rows_start', $this, $template, $data, $is_announcement, $thread_review);
+    if ($this->EE->extensions->end_script === TRUE) return $template;
 
-The current Forum Core object
+  :param object $this: The current Forum Core object
+  :param string $template: The topics thread row template
+  :param array $data: The data for this thread row (post)
+  :param boolean $is_announcement: ``TRUE`` if announcement
+  :param boolean $thread_review: ``TRUE`` if thread review
+  :returns: Modified thread rows template (``$template``)
+  :rtype: String
 
-$template
-~~~~~~~~~
-
-The topics thread row template
-
-$data
-~~~~~
-
-The data for this thread row (post)
-
-$is_announcement
-~~~~~~~~~~~~~~~~
-
-TRUE/FALSE
-
-$thread_review
-~~~~~~~~~~~~~~
-
-TRUE/FALSE
-
-:returns:
-    String
-
-Added in v1.4.0
+  .. versionadded:: 1.4.0
 
 forum_topics_absolute_end
 -------------------------
 
-Modify the finalized topics template and do what you wish
+.. function:: forum_topics_absolute_end($this, $result, $str)
 
-::
+  Modify the finalized topics template and do what you wish.
 
-	$str = $this->extensions->universal_call('forum_topics_absolute_end', $this, $query->result, $str);
-	if ($this->extensions->end_script === TRUE) return $str;
+  How it's called::
 
-$this
-~~~~~
+    $str = $this->EE->extensions->universal_call('forum_topics_absolute_end', $this, $query->result(), $str);
+    if ($this->EE->extensions->end_script === TRUE) return $str;
 
-The current Forum Core object
+  :param object $this: The current Forum Core object
+  :param array $result: Array of all of the displayed topics
+  :param string $str: The finalized topics template
+  :returns: Modified topics template (``$str``)
+  :rtype: String
 
-$query->result
-~~~~~~~~~~~~~~
-
-Array of all of the displayed topics
-
-$str
-~~~~
-
-The finalized topics template
-
-:returns:
-    String
-
-Added in v1.5.1
+  .. versionadded:: 1.5.1
 
 forum_topics_loop_start
 -----------------------
 
-Modify the topic row template and data before any processing takes place
+.. function:: forum_topics_loop_start($this, $result, $row, $temp)
 
-::
+  Modify the topic row template and data before any processing takes
+  place.
 
-	$temp = $this->extensions->universal_call('forum_topics_loop_start', $this, $query->result, $row, $temp);
-	if ($this->extensions->end_script === TRUE) return;
+  How it's called::
 
-$this
-~~~~~
+    $temp = $this->EE->extensions->universal_call('forum_topics_loop_start', $this, $query->result(), $row, $temp);
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-The current Forum Core object
+  :param object $this: The current Forum Core object
+  :param array $result: Array of all of the topics
+  :param array $row: The data for this topic
+  :param string $temp: The yet-to-be-processed template
+  :returns: Modified topic row template (``$temp``)
+  :rtype: String
 
-$query->result
-~~~~~~~~~~~~~~
-
-Array of all of the topics
-
-$row
-~~~~
-
-The data for this topic
-
-$temp
-~~~~~
-
-The yet-to-be-processed template
-
-:returns:
-    String
-
-Added in v1.5.1
+  .. versionadded:: 1.5.1
 
 forum_topics_loop_end
 ---------------------
 
-Modify the processed topic row before it is appended to the template
-output
+.. function:: forum_topics_loop_end($this, $result, $row, $temp)
 
-::
+  Modify the processed topic row before it is appended to the template
+  output.
 
-	$temp = $this->extensions->universal_call('forum_topics_loop_end', $this, $query->result, $row, $temp);
-	if ($this->extensions->end_script === TRUE) return;
+  How it's called::
 
-$this
-~~~~~
+    $temp = $this->EE->extensions->universal_call('forum_topics_loop_end', $this, $query->result(), $row, $temp);
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-The current Forum Core object
+  :param object $this: The current Forum Core object
+  :param array $result: Array of all of the topics
+  :param array $row: The data for this topic
+  :param string $temp: The yet-to-be-processed template
+  :returns: Modified topic row (``$temp``)
+  :rtype: String
 
-$query->result
-~~~~~~~~~~~~~~
-
-Array of all of the topics
-
-$row
-~~~~
-
-The data for this topic
-
-$temp
-~~~~~
-
-The yet-to-be-processed template
-
-:returns:
-    String
-
-Added in v1.5.1
+  .. versionadded:: 1.5.1
 
 forum_topics_start
 ------------------
 
-Allows modifying of the Topics display template before it is processed
+.. function:: forum_topics_start($this, $str)
 
-::
+  Allows modifying of the Topics display template before it is
+  processed.
 
-	$str = $this->extensions->universal_call('forum_topics_start', $this, $str);
-	if ($this->extensions->end_script === TRUE) return $str;
+  How it's called::
 
-$this
-~~~~~
+    $str = $this->EE->extensions->universal_call('forum_topics_start', $this, $str);
+    if ($this->EE->extensions->end_script === TRUE) return $str;
 
-The current Forum Core object
+  :param object $this: The current Forum Core object
+  :param string $str: The topics template
+  :returns: Modified topics template (``$str``)
+  :rtype: String
 
-$str
-~~~~
-
-The topics template
-
-:returns:
-    String
-
-Added in v1.4.0
+  .. versionadded:: 1.4.0
 
 .. _forum_dev_main_forum_table_rows_template:
 
 main_forum_table_rows_template
 ------------------------------
 
-Allows modifying of the forum\_table\_rows template
+.. function:: main_forum_table_rows_template()
 
-::
+  Allows modifying of the forum_table_rows template
 
-	$table_rows = $this->extensions->universal_call('main_forum_table_rows_template', $this, $query->result, $row, $temp);
-	if ($this->extensions->end_script === TRUE) return $table_rows;
+  How it's called::
 
-$this
-~~~~~
+    $table_rows = $this->EE->extensions->universal_call('main_forum_table_rows_template', $this, $table_rows, $row, $markers, $read_topics);
+    if ($this->EE->extensions->end_script === TRUE) return $table_rows;
 
-The current Forum Core object
+  :param object $this: The current Forum Core object
+  :param string $table_rows: The unparsed forum table rows template
+  :param array $row: Array of data for the current row
+  :param array $markers: Array of topic markers
+  :param array $read_topics: Array of topics read by current visitor
+  :returns: Modified and parsed forum table rows template
+    (``$table_rows``)
+  :rtype: Array
 
-$table_rows
-~~~~~~~~~~~
-
-The unparsed forum table rows template
-
-$row
-~~~~
-Array of data for the current row
-
-$markers
-~~~~~~~~
-
-Array of topic markers
-
-$read_topics
-~~~~~~~~~~~~
-
-Array of topics read by current visitor
-
-:returns:
-    Array
-
-Added in v1.6.8
+  .. versionadded:: 1.6.8

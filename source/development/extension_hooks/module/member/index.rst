@@ -2,25 +2,23 @@ Member Module Extension Hooks
 =============================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
 
-member\_manager
----------------
+member_manager
+--------------
 
-Seize control over any Member Module user side request
+.. function:: member_manager($this)
 
-::
+  Seize control over any Member Module user side request
 
-	$edata = $this->extensions->call('member_manager', $this); if ($this->extensions->end_script === TRUE) return;
+  How it's called::
 
-$this
-~~~~~
+    $edata = $this->EE->extensions->universal_call('member_manager', $this);
+    if ($this->EE->extensions->end_script === TRUE) return $edata;
 
-The current state of the instantiated Member object
+  :param object $this: The current state of the instantiated Member object
+  :rtype: Void
 
-:returns:
-    void
-
-Added in v1.5.2
+  .. versionadded:: 1.5.2
