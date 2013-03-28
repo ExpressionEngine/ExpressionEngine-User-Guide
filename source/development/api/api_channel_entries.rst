@@ -74,9 +74,10 @@ Update Entry
 .. deprecated:: 2.6
 	Use ``Api_channel_entries::save_entry()`` instead.
 
-This function will update a channel entry. The data array must contain a title
-and data for all required fields. If the entry date or edit date are not
-included in the data array, current time will be used instead. ::
+This function will update a channel entry. The data array must contain a 
+title, channel_id and data for all required fields. If the entry date or 
+edit date are not included in the data array, current time will be used 
+instead. ::
 
 	$this->EE->api_channel_entries->update_entry((int) $entry_id, (mixed) $data);
 
