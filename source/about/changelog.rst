@@ -39,7 +39,7 @@ Release Date: ?
     now a hidden configuration variable only, called ``server_offset``.
   - Added SMTP Server Port to the Email Configuration page.
   - Added a hidden config, ``email_smtp_crypto``, that allows you to specify an
-    encryption protocal for SMTP email.
+    encryption protocol for SMTP email.
   - PHP's upload_max_filesize setting is now displayed in the File Upload
     Preferences form. 
   - Added a status_code="" parameter to the {redirect} tag allowing you to specify
