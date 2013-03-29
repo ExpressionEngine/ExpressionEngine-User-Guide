@@ -77,7 +77,7 @@ Release Date: ?
     category fields.
   - Fixed a bug (#17283) where setting the comment edit time limit to 0 did not
     result in no time limit on editing.
-  - Fixed a bug (#19110) where a MySQL error occured when using an exact search
+  - Fixed a bug (#19110) where a MySQL error occurred when using an exact search
     parameter in the channel entries tag and not including a search term.
   - Fixed a bug (#19130) where an improper cookie domain could be used when
     switching MSM sites, making it impossible to switch sites via the control
@@ -101,7 +101,7 @@ Release Date: ?
   - Modified string cleaning to accommodate an iconv bug that could result in
     form data being lost it contained invalid characters (#19134). 
   - Fixed a bug in the IP to Nation module where environmental factors could
-    cause an erroneus cache full error when attempting to update the IP
+    cause an erroneous cache full error when attempting to update the IP
     database.
   - Fixed a bug (#19223) in the Metaweblog API where failed new entries did not
     elicit a proper fault code.
@@ -238,7 +238,7 @@ Release Date: December 18, 2012
   - Custom main menu items are now XSS cleaned.
   - Quick links are now XSS cleaned.
   - Added X-Frame-Options header to deny attempts at iframing the Control Panel.
-  - Super Admins are required to reauthenticate before they can login as another
+  - Super Admins are required to re-authenticate before they can login as another
     user.
   - Super Admins are required to enter their password when changing another user's
     email address, username, or password.
