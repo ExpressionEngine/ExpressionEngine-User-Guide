@@ -140,6 +140,8 @@ Release Date: ?
     incorrect data and may show a PHP error when editing the entry.
   - Fixed a bug (#18217) where an "Invalid GET Data" error may appear when
     certain safe characters where part of a query string value.
+  - Fixed a bug (#19271) where accessing member logout when already logged
+    out could destroy other user's sessions.
 
 - Developers
 
