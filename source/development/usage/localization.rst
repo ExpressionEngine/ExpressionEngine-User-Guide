@@ -69,7 +69,7 @@ Examples
 
     $this->EE->localize->format_date('%r');
     // Thu, 14 Feb 2013 14:24:55 -0500
-    
+
     $this->EE->localize->format_date('%r', 1345065960);
     // Wed, 15 Aug 2012 17:26:00 -0400
 
@@ -120,7 +120,7 @@ Examples
 Human-readable time
 -------------------
 
-For a common human-reabable date format conforming to ExpressionEngine's
+For a common human-readable date format conforming to ExpressionEngine's
 :doc:`default time formatting setting </cp/admin/localization_settings>`,
 use the ``Localize::human_time`` method. This method is most commonly
 used to express dates in the control panel.
