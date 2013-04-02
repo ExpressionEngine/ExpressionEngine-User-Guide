@@ -144,6 +144,8 @@ Release Date: ?
     out could destroy other user's sessions.
   - Fixed a bug (#19237) where duplicate field names could be created due
     to the name being truncated for length. 
+  - Fixed a bug (#16256) where the status dropdown on the Content Edit
+    page was not always populated with the correct custom statuses.
 
 - Developers
 
