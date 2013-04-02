@@ -142,6 +142,8 @@ Release Date: ?
     certain safe characters where part of a query string value.
   - Fixed a bug (#19271) where accessing member logout when already logged
     out could destroy other user's sessions.
+  - Fixed a bug (#19237) where duplicate field names could be created due
+    to the name being truncated for length. 
 
 - Developers
 
