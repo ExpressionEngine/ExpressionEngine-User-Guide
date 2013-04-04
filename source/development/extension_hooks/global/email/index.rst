@@ -5,6 +5,7 @@ Email Library Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 email_send
 ----------

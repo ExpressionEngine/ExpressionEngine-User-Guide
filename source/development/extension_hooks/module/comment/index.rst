@@ -6,6 +6,7 @@ Comment Module Extension Hooks
   :local:
   :depth: 2
 
+.. highlight:: php
 
 *************************************
 Control Panel Hooks (mcp.comment.php)

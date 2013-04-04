@@ -5,6 +5,8 @@ Members Controller Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
+
 cp_members_member_create_start
 ------------------------------
 

@@ -5,6 +5,8 @@ My Account Controller Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
+
 myaccount_nav_setup
 -------------------
 

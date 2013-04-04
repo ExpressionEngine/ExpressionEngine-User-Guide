@@ -5,6 +5,7 @@ Member Module Registration Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 member_member_register
 ----------------------

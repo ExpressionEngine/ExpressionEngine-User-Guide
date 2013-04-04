@@ -4,16 +4,18 @@ ExpressionEngine Channel Categories API
 .. contents::
   :local:
   :depth: 1
-            
+
+.. highlight:: php
+
 Calling the Class
 -----------------
 
 .. class:: Api_channel_categories
 
-  The Channel Category class is called with the api->instantiate()
+  The Channel Category class is called with the ``api->instantiate()``
   function::
 
-    $this->EE->load->library('api');  
+    $this->EE->load->library('api');
     $this->EE->api->instantiate('channel_categories');
 
 Function Reference
@@ -40,14 +42,14 @@ Category Tree
         (mixed) $group_id, [(mixed) $selected, [(string) c or a]]
     );
 
-  :param mixed $group_id: Category group ID, pipe delimited string of 
-    category group IDs or array of category group IDs to create a 
+  :param mixed $group_id: Category group ID, pipe delimited string of
+    category group IDs or array of category group IDs to create a
     category tree for
-  :param mixed $selected: Category ID, pipe delimited string of 
+  :param mixed $selected: Category ID, pipe delimited string of
     category IDs or array of category IDs to mark as selected
-  :param string $order: ``c`` for custom ordering, ``a`` for 
+  :param string $order: ``c`` for custom ordering, ``a`` for
     alphabetical
-  :returns: ``FALSE`` if no results, otherwise an associative array 
+  :returns: ``FALSE`` if no results, otherwise an associative array
     containing the category tree (see below)
   :rtype: Array/Boolean
 
@@ -90,14 +92,14 @@ Category Form Tree
         [(string) $nested y/n, [(mixed) $categories, [(mixed) $sites]]]
     );
 
-  :param string $nested: `y` if you want the array to be nested, 
+  :param string $nested: ```y``` if you want the array to be nested,
     anything else will return a flat listing
-  :param mixed $categories: Category ID, pipe delimited string of 
+  :param mixed $categories: Category ID, pipe delimited string of
     category IDs, or array of Category IDs
-  :param mixed $sites: Site ID, pipe delimited string of site IDs, or 
+  :param mixed $sites: Site ID, pipe delimited string of site IDs, or
     array of site IDs
-  :returns: Array consisting of a hierarchy tree of categories 
-    formatted for use in select and multi-select forms and related 
+  :returns: Array consisting of a hierarchy tree of categories
+    formatted for use in select and multi-select forms and related
     javascript
   :rtype: Array
 
@@ -119,7 +121,7 @@ Fetch Category Parents
 .. method:: fetch_category_parents($cat_array)
 
   This function finds the parents of the specified categories and adds
-  them to the cat\_parents class variable. ::
+  them to the ``cat_parents`` class variable::
 
     $this->EE->api_channel_categories->fetch_category_parents(
         (array) $cat_array
@@ -144,17 +146,17 @@ Fetch Allowed Category Groups
 
   :param mixed $cat_group: Category ID, or an array or pipe delimited
     string of category IDs
-  :returns: Array of category group names the user has permission to 
-    administrate or ``FALSE`` if there are no allowed category 
+  :returns: Array of category group names the user has permission to
+    administrate or ``FALSE`` if there are no allowed category
     groups.
   :rtype: Array/Boolean
 
   Example Usage::
 
     $group_id = '1|5';
-    
+
     $allowed = $this->EE->api_channel_categories->fetch_allowed_category_groups($group_id);
-    
+
     if ($allowed != FALSE) {
         foreach($allowed as $val)
         {

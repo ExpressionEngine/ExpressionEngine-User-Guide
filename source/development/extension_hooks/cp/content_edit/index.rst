@@ -5,6 +5,8 @@ Content Edit Controller Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
+
 delete_entries_start
 --------------------
 
@@ -49,7 +51,7 @@ edit_entries_additional_where
         'entry_id' => array(1, 2, 3),   // where_in
         'channel_id !=' => array(3, 4)  // where_not_in
     )
-  
+
   .. versionadded:: 2.4.0
 
 update_multi_entries_loop

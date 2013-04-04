@@ -5,12 +5,14 @@ ExpressionEngine Template Structure API
   :local:
   :depth: 1
 
+.. highlight:: php
+
 Calling the Class
 -----------------
 
 .. class:: Api_template_structure
 
-  The Template Structure class is called with the api->instantiate()
+  The Template Structure class is called with the ``api->instantiate()``
   function::
 
     $this->EE->load->library('api'); $this->EE->api->instantiate('template_structure');
@@ -54,7 +56,7 @@ Create Template Group
         'is_site_default'   => 'n',   // Defaults to 'n'
         'site_id'           => 1      // Defaults to config->item('site_id')
     );
-    
+
     $this->EE->api_template_structure->create_template_group($data, 1);
 
 File Extensions

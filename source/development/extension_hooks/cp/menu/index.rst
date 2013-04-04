@@ -5,6 +5,7 @@ Menu Class Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 cp_menu_array
 -------------
@@ -14,7 +15,7 @@ cp_menu_array
   Modify the control panel menu before it's presented in the control
   panel. **Be sure to pull in contents of
   ``$this->EE->extensions->last_call`` before editing ``$menu`` or
-  returning anything.
+  returning anything**.
 
   How it's called::
 

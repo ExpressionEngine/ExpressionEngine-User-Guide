@@ -11,6 +11,8 @@ Extensions Development
 -  `Multiple Extensions, Same Hook`_
 -  :doc:`extension_hooks/index`
 
+.. highlight:: php
+
 Overview
 --------
 
@@ -27,10 +29,10 @@ itself.
 
 An Extension is an add-on script that is placed in the
 ``/system/expressionengine/third_party/<package_name>/`` directory and
-then enabled via the :doc:`Extensions Manager 
-</cp/add-ons/extension_manager>` in the Control Panel. Extensions can 
+then enabled via the :doc:`Extensions Manager
+</cp/add-ons/extension_manager>` in the Control Panel. Extensions can
 have their own settings and their own database tables, if necessary, but
-neither is required. If settings are available for an Extension, a 
+neither is required. If settings are available for an Extension, a
 language file is required, but unlike a module there is no control panel
 for Extensions.
 
@@ -58,24 +60,24 @@ settings for the extension and set a class variable.
 
 ::
 
-    class Link_truncator_ext {
+  class Link_truncator_ext {
 
-        var $settings        = array();
+      var $settings        = array();
 
-        /**
-         * Constructor
-         *
-         * @param   mixed   Settings array or empty string if none exist.
-         */
-        function __construct($settings='')
-        {
-            $this->EE =& get_instance();
-            
-            $this->settings = $settings;
-        }
-        // END
-    }
-    // END CLASS
+      /**
+       * Constructor
+       *
+       * @param   mixed   Settings array or empty string if none exist.
+       */
+      function __construct($settings='')
+      {
+          $this->EE =& get_instance();
+
+          $this->settings = $settings;
+      }
+      // END
+  }
+  // END CLASS
 
 Besides the $settings class variable, there are five other required
 class variables that your extension should have. These variables output
@@ -85,29 +87,29 @@ settings (if any).
 
 ::
 
-    class Link_truncator_ext {
+  class Link_truncator_ext {
 
-        var $name       = 'Link Truncator';
-        var $version        = '1.0';
-        var $description    = 'Truncates long links';
-        var $settings_exist = 'y';
-        var $docs_url       = ''; // 'http://ellislab.com/expressionengine/user-guide/';
+      var $name       = 'Link Truncator';
+      var $version        = '1.0';
+      var $description    = 'Truncates long links';
+      var $settings_exist = 'y';
+      var $docs_url       = ''; // 'http://ellislab.com/expressionengine/user-guide/';
 
-        var $settings       = array();
-        
-        /**
-         * Constructor
-         *
-         * @param   mixed   Settings array or empty string if none exist.
-         */
-        function __construct($settings = '')
-        {
-            $this->EE =& get_instance();
+      var $settings       = array();
 
-            $this->settings = $settings;
-        }
-    }
-    // END CLASS
+      /**
+       * Constructor
+       *
+       * @param   mixed   Settings array or empty string if none exist.
+       */
+      function __construct($settings = '')
+      {
+          $this->EE =& get_instance();
+
+          $this->settings = $settings;
+      }
+  }
+  // END CLASS
 
 If your extension has a language file, then you the $name and
 $description class variables can be set in the constructor by calling
@@ -128,37 +130,37 @@ the method in your extension's class to call for this hook.
 
 ::
 
-    /**
-     * Activate Extension
-     *
-     * This function enters the extension into the exp_extensions table
-     *
-     * @see http://ellislab.com/codeigniter/user-guide/database/index.html for
-     * more information on the db class.
-     *
-     * @return void
-     */
-    function activate_extension()
-    {
-        $this->settings = array(
-            'max_link_length'   => 18,
-            'truncate_cp_links' => 'no',
-            'use_in_forum'      => 'no'
-        );
-        
-        
-        $data = array(
-            'class'     => __CLASS__,
-            'method'    => 'truncate_this',
-            'hook'      => 'typography_parse_type_end',
-            'settings'  => serialize($this->settings),
-            'priority'  => 10,
-            'version'   => $this->version,
-            'enabled'   => 'y'
-        );
-        
-        $this->EE->db->insert('extensions', $data);
-    }
+  /**
+   * Activate Extension
+   *
+   * This function enters the extension into the exp_extensions table
+   *
+   * @see http://ellislab.com/codeigniter/user-guide/database/index.html for
+   * more information on the db class.
+   *
+   * @return void
+   */
+  function activate_extension()
+  {
+      $this->settings = array(
+          'max_link_length'   => 18,
+          'truncate_cp_links' => 'no',
+          'use_in_forum'      => 'no'
+      );
+
+
+      $data = array(
+          'class'     => __CLASS__,
+          'method'    => 'truncate_this',
+          'hook'      => 'typography_parse_type_end',
+          'settings'  => serialize($this->settings),
+          'priority'  => 10,
+          'version'   => $this->version,
+          'enabled'   => 'y'
+      );
+
+      $this->EE->db->insert('extensions', $data);
+  }
 
 Here is a quick run down of what each of these fields in the database
 table mean:
@@ -184,32 +186,32 @@ calls this function.
 
 ::
 
-    /**
-     * Update Extension
-     *
-     * This function performs any necessary db updates when the extension
-     * page is visited
-     *
-     * @return  mixed   void on update / false if none
-     */
-    function update_extension($current = '')
-    {
-        if ($current == '' OR $current == $this->version)
-        {
-            return FALSE;
-        }
-        
-        if ($current < '1.0')
-        {
-            // Update to version 1.0
-        }
-        
-        $this->EE->db->where('class', __CLASS__);
-        $this->EE->db->update(
-                    'extensions', 
-                    array('version' => $this->version)
-        );
-    }
+  /**
+   * Update Extension
+   *
+   * This function performs any necessary db updates when the extension
+   * page is visited
+   *
+   * @return  mixed   void on update / false if none
+   */
+  function update_extension($current = '')
+  {
+      if ($current == '' OR $current == $this->version)
+      {
+          return FALSE;
+      }
+
+      if ($current < '1.0')
+      {
+          // Update to version 1.0
+      }
+
+      $this->EE->db->where('class', __CLASS__);
+      $this->EE->db->update(
+                  'extensions',
+                  array('version' => $this->version)
+      );
+  }
 
 Disabling
 ---------
@@ -233,18 +235,18 @@ basically start fresh every single time.
 
 ::
 
-    /**
-     * Disable Extension
-     *
-     * This method removes information from the exp_extensions table
-     *
-     * @return void
-     */
-    function disable_extension()
-    {
-        $this->EE->db->where('class', __CLASS__);
-        $this->EE->db->delete('extensions');
-    }
+  /**
+   * Disable Extension
+   *
+   * This method removes information from the exp_extensions table
+   *
+   * @return void
+   */
+  function disable_extension()
+  {
+      $this->EE->db->where('class', __CLASS__);
+      $this->EE->db->delete('extensions');
+  }
 
 Settings
 --------
@@ -266,48 +268,48 @@ automatically create a form for your settings.
 
 ::
 
-    // --------------------------------
-    //  Settings
-    // --------------------------------  
+  // --------------------------------
+  //  Settings
+  // --------------------------------
 
-    function settings()
-    {
-        $settings = array();
+  function settings()
+  {
+      $settings = array();
 
-        // Creates a text input with a default value of "EllisLab Brand Butter"
-        $settings['brand']      = array('i', '', "EllisLab Brand Butter");
+      // Creates a text input with a default value of "EllisLab Brand Butter"
+      $settings['brand']      = array('i', '', "EllisLab Brand Butter");
 
-        // Creates a textarea with 20 rows and an empty default value
-        $settings['description']    = array('t', array('rows' => '20'), '');
+      // Creates a textarea with 20 rows and an empty default value
+      $settings['description']    = array('t', array('rows' => '20'), '');
 
-        // Creates a set of radio buttons, one for "Yes" (y), one for "No" (n) and a default of "Yes"
-        $settings['tasty']      = array('r', array('y' => "Yes", 'n' => "No"), 'y');
+      // Creates a set of radio buttons, one for "Yes" (y), one for "No" (n) and a default of "Yes"
+      $settings['tasty']      = array('r', array('y' => "Yes", 'n' => "No"), 'y');
 
-        // Creates a set of checkboxes, one for "Lowfat" (l) and one for "Salty" (s), and a
-        // default of both items being checked
-        $settings['details']    = array('c', array('l' => "Lowfat", 's' => "Salty"), array('c', 's'));
+      // Creates a set of checkboxes, one for "Lowfat" (l) and one for "Salty" (s), and a
+      // default of both items being checked
+      $settings['details']    = array('c', array('l' => "Lowfat", 's' => "Salty"), array('c', 's'));
 
-        // Creates a select dropdown with the options "France" (fr), "Germany" (de), and "United States"
-        // (us), with a default of "United States"
-        $settings['country']    = array('s', array('fr' => 'France', 'de' => 'Germany', 'us' => 'United States'), 'us');
+      // Creates a select dropdown with the options "France" (fr), "Germany" (de), and "United States"
+      // (us), with a default of "United States"
+      $settings['country']    = array('s', array('fr' => 'France', 'de' => 'Germany', 'us' => 'United States'), 'us');
 
-        // Creates a multi-select box with the options "Derek" (dj), "Leslie" (lc), and "Rick" (re) with
-        // Derek and Rick selected by default
-        $settings['enjoyed_by'] = array('ms', array('dj' => 'Derek', 'lc' => 'Leslie', 're' => 'Rick'), array('dj', 're'));
+      // Creates a multi-select box with the options "Derek" (dj), "Leslie" (lc), and "Rick" (re) with
+      // Derek and Rick selected by default
+      $settings['enjoyed_by'] = array('ms', array('dj' => 'Derek', 'lc' => 'Leslie', 're' => 'Rick'), array('dj', 're'));
 
 
-        // General pattern:
-        //
-        // $settings[variable_name] => array(type, options, default);
-        //
-        // variable_name: short name for the setting and the key for the language file variable
-        // type:          i - text input, t - textarea, r - radio buttons, c - checkboxes, s - select, ms - multiselect
-        // options:       can be string (i, t) or array (r, c, s, ms)
-        // default:       array member, array of members, string, nothing
-        
-        return $settings;
-    }
-    // END
+      // General pattern:
+      //
+      // $settings[variable_name] => array(type, options, default);
+      //
+      // variable_name: short name for the setting and the key for the language file variable
+      // type:          i - text input, t - textarea, r - radio buttons, c - checkboxes, s - select, ms - multiselect
+      // options:       can be string (i, t) or array (r, c, s, ms)
+      // default:       array member, array of members, string, nothing
+
+      return $settings;
+  }
+  // END
 
 A note about the values array for the second field: The keys will be
 used as the value for that item while the value will be the language
@@ -326,78 +328,78 @@ extension's class called ``settings_form()``.
 
 ::
 
-    /**
-     * Settings Form
-     *
-     * @param   Array   Settings
-     * @return  void
-     */
-    function settings_form($current)
-    {
-        $this->EE->load->helper('form');
-        $this->EE->load->library('table');
-        
-        $vars = array();
-        
-        $max_length = isset($current['max_link_length']) ? $current['max_link_length'] : 20; 
-        
-        $trunc_cp_links = (isset($current['truncate_cp_links'])) ? $current['truncate_cp_links'] : 'no';
-        
-        $yes_no_options = array(
-            'yes'   => lang('yes'), 
-            'no'    => lang('no')
-        );
-        
-        $vars['settings'] = array(
-            'max_link_length'   => form_input('max_link_length', $max_length),
-            'truncate_cp_links' => form_dropdown(
-                        'truncate_cp_links',
-                        $yes_no_options, 
-                        $trunc_cp_links)
-            );
+  /**
+   * Settings Form
+   *
+   * @param   Array   Settings
+   * @return  void
+   */
+  function settings_form($current)
+  {
+      $this->EE->load->helper('form');
+      $this->EE->load->library('table');
 
-        if ($this->EE->config->item('forum_is_installed') == 'y')
-        {
-            $use_in_forum = isset($current['use_in_forum']) ? $current['use_in_forum'] : 'no';
-            
-            $vars['settings']['use_in_forum'] = form_dropdown(
-                        'use_in_forum',
-                        $yes_no_options, 
-                        $use_in_forum);
-        }
-        
-        return $this->EE->load->view('index', $vars, TRUE);         
-    }
+      $vars = array();
+
+      $max_length = isset($current['max_link_length']) ? $current['max_link_length'] : 20;
+
+      $trunc_cp_links = (isset($current['truncate_cp_links'])) ? $current['truncate_cp_links'] : 'no';
+
+      $yes_no_options = array(
+          'yes'   => lang('yes'),
+          'no'    => lang('no')
+      );
+
+      $vars['settings'] = array(
+          'max_link_length'   => form_input('max_link_length', $max_length),
+          'truncate_cp_links' => form_dropdown(
+                      'truncate_cp_links',
+                      $yes_no_options,
+                      $trunc_cp_links)
+          );
+
+      if ($this->EE->config->item('forum_is_installed') == 'y')
+      {
+          $use_in_forum = isset($current['use_in_forum']) ? $current['use_in_forum'] : 'no';
+
+          $vars['settings']['use_in_forum'] = form_dropdown(
+                      'use_in_forum',
+                      $yes_no_options,
+                      $use_in_forum);
+      }
+
+      return $this->EE->load->view('index', $vars, TRUE);
+  }
 
 View File
 ~~~~~~~~~
 
 ::
 
-    <?=form_open('C=addons_extensions'.AMP.'M=save_extension_settings'.AMP.'file=link_truncator');?>
+  <?=form_open('C=addons_extensions'.AMP.'M=save_extension_settings'.AMP.'file=link_truncator');?>
 
-    <?php 
-    $this->table->set_template($cp_pad_table_template);
-    $this->table->set_heading(
-        array('data' => lang('preference'), 'style' => 'width:50%;'),
-        lang('setting')
-    );
+  <?php
+  $this->table->set_template($cp_pad_table_template);
+  $this->table->set_heading(
+      array('data' => lang('preference'), 'style' => 'width:50%;'),
+      lang('setting')
+  );
 
-    foreach ($settings as $key => $val)
-    {
-        $this->table->add_row(lang($key, $key), $val);
-    }
+  foreach ($settings as $key => $val)
+  {
+      $this->table->add_row(lang($key, $key), $val);
+  }
 
-    echo $this->table->generate();
+  echo $this->table->generate();
 
-    ?>
+  ?>
 
-    <p><?=form_submit('submit', lang('submit'), 'class="submit"')?></p>
-    <?php $this->table->clear()?>
-    <?=form_close()?>
-    <?php
-    /* End of file index.php */
-    /* Location: ./system/expressionengine/third_party/link_truncator/views/index.php */
+  <p><?=form_submit('submit', lang('submit'), 'class="submit"')?></p>
+  <?php $this->table->clear()?>
+  <?=form_close()?>
+  <?php
+  /* End of file index.php */
+  /* Location: ./system/expressionengine/third_party/link_truncator/views/index.php */
 
 Save Settings
 ^^^^^^^^^^^^^
@@ -411,47 +413,47 @@ appropriately.
 
 ::
 
-    /**
-     * Save Settings
-     *
-     * This function provides a little extra processing and validation 
-     * than the generic settings form.
-     *
-     * @return void
-     */
-    function save_settings()
-    {
-        if (empty($_POST))
-        {
-            show_error(lang('unauthorized_access'));
-        }
-        
-        unset($_POST['submit']);
+  /**
+   * Save Settings
+   *
+   * This function provides a little extra processing and validation
+   * than the generic settings form.
+   *
+   * @return void
+   */
+  function save_settings()
+  {
+      if (empty($_POST))
+      {
+          show_error(lang('unauthorized_access'));
+      }
 
-        $this->EE->lang->loadfile('link_truncator');
+      unset($_POST['submit']);
 
-        $len = $this->EE->input->post('max_link_length');
+      $this->EE->lang->loadfile('link_truncator');
 
-        if ( ! is_numeric($len) OR $len <= 0)
-        {
-            $this->EE->session->set_flashdata(
-                    'message_failure', 
-                    sprintf(lang('max_link_length_range'),
-                        $len)
-            );
-            $this->EE->functions->redirect(
-                BASE.AMP.'C=addons_extensions'.AMP.'M=extension_settings'.AMP.'file=link_truncator'
-            );
-        }
-        
-        $this->EE->db->where('class', __CLASS__);
-        $this->EE->db->update('extensions', array('settings' => serialize($_POST)));
-        
-        $this->EE->session->set_flashdata(
-            'message_success',
-            lang('preferences_updated')
-        );
-    }
+      $len = $this->EE->input->post('max_link_length');
+
+      if ( ! is_numeric($len) OR $len <= 0)
+      {
+          $this->EE->session->set_flashdata(
+                  'message_failure',
+                  sprintf(lang('max_link_length_range'),
+                      $len)
+          );
+          $this->EE->functions->redirect(
+              BASE.AMP.'C=addons_extensions'.AMP.'M=extension_settings'.AMP.'file=link_truncator'
+          );
+      }
+
+      $this->EE->db->where('class', __CLASS__);
+      $this->EE->db->update('extensions', array('settings' => serialize($_POST)));
+
+      $this->EE->session->set_flashdata(
+          'message_success',
+          lang('preferences_updated')
+      );
+  }
 
 Calling of the Extension
 ------------------------
@@ -461,16 +463,16 @@ is available for use:
 
 ::
 
-    // -------------------------------------------
-    // 'typography_parse_type_end' hook.
-    //  - Modify string after all other typography processing
-    //
-        if ($this->EE->extensions->active_hook('typography_parse_type_end') === TRUE)
-        {
-            $str = $this->EE->extensions->call('typography_parse_type_end', $str, $this, $prefs);
-        }   
-    //
-    // -------------------------------------------
+  // -------------------------------------------
+  // 'typography_parse_type_end' hook.
+  //  - Modify string after all other typography processing
+  //
+      if ($this->EE->extensions->active_hook('typography_parse_type_end') === TRUE)
+      {
+          $str = $this->EE->extensions->call('typography_parse_type_end', $str, $this, $prefs);
+      }
+  //
+  // -------------------------------------------
 
 The first parameter of ``$this->extensions->call_extension`` is the name
 of the hook, which lets the Extension class know what extensions to
@@ -490,65 +492,65 @@ method might look like:
 
 ::
 
-    /**
-     * Shorten Link Text
-     *
-     * This function is a callback method for preg_replace_callback in the method below.
-     * 
-     * @param   array   array from the preg_match
-     * @return  string  Newly truncated Link.
-     */
-    function _shorten_link_text($matches)
-    {
-        $link_text = $matches[3];
-        $link_text = substr($link_text, strpos($link_text, '://') + 3);
+  /**
+   * Shorten Link Text
+   *
+   * This function is a callback method for preg_replace_callback in the method below.
+   *
+   * @param   array   array from the preg_match
+   * @return  string  Newly truncated Link.
+   */
+  function _shorten_link_text($matches)
+  {
+      $link_text = $matches[3];
+      $link_text = substr($link_text, strpos($link_text, '://') + 3);
 
-        if (strlen($link_text) >= (int) $this->settings['max_link_length'] )
-        {
-            $l = (int) $this->settings['max_link_length'] / 2;
-            
-            $b_part = substr($link_text, 0,  $l);
-            $e_part = substr($link_text, -$l);
-            
-            $link_text = $b_part . '&hellip;' . $e_part;
-        }
+      if (strlen($link_text) >= (int) $this->settings['max_link_length'] )
+      {
+          $l = (int) $this->settings['max_link_length'] / 2;
 
-        return $matches[1].$link_text.'</a>';
-    }
+          $b_part = substr($link_text, 0,  $l);
+          $e_part = substr($link_text, -$l);
 
-    // ---------------------------------------------------------------- 
+          $link_text = $b_part . '&hellip;' . $e_part;
+      }
 
-    /**
-     * Truncate This
-     *
-     * This function is the meat & potatoes of the extension, where all
-     * the work is done.  
-     *
-     * @see http://ellislab.com/expressionengine/user-guide/development/extension_hooks/global/typography/index.html#typography-parse-type-end
-     *
-     * @param   string  string to look
-     * @param   object  typography object
-     * @param   array   array of preferences
-     * @return  string
-     */
-    function truncate_this($str, $obj, $prefs)
-    {
-        if ($this->settings['truncate_cp_links'] == 'no' && REQ == 'CP')
-        {
-            return $str;
-        }
-        
-        if (isset($obj->EE->FRM_CORE) && $this->settings['use_in_forum'] == 'no')
-        {
-            return $str;
-        }
+      return $matches[1].$link_text.'</a>';
+  }
 
-        $pattern = "/(<a[^>]*\s+href\s*=\s*(\042|047)([^\\2]*?)\\2[^>]*>)\\3<\/a>/i";
-        
-        $str = preg_replace_callback($pattern, array(get_class($this), '_shorten_link_text'), $str);
+  // ----------------------------------------------------------------
 
-        return $str;
-    }
+  /**
+   * Truncate This
+   *
+   * This function is the meat & potatoes of the extension, where all
+   * the work is done.
+   *
+   * @see http://ellislab.com/expressionengine/user-guide/development/extension_hooks/global/typography/index.html#typography-parse-type-end
+   *
+   * @param   string  string to look
+   * @param   object  typography object
+   * @param   array   array of preferences
+   * @return  string
+   */
+  function truncate_this($str, $obj, $prefs)
+  {
+      if ($this->settings['truncate_cp_links'] == 'no' && REQ == 'CP')
+      {
+          return $str;
+      }
+
+      if (isset($obj->EE->FRM_CORE) && $this->settings['use_in_forum'] == 'no')
+      {
+          return $str;
+      }
+
+      $pattern = "/(<a[^>]*\s+href\s*=\s*(\042|047)([^\\2]*?)\\2[^>]*>)\\3<\/a>/i";
+
+      $str = preg_replace_callback($pattern, array(get_class($this), '_shorten_link_text'), $str);
+
+      return $str;
+  }
 
 The three parameters from the extension hook are mapped straight to the
 three parameters of the method being called, and so your extension can

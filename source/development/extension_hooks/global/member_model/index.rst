@@ -2,9 +2,10 @@ Member Model Extension Hooks
 ============================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
 member_create_start
 -------------------
@@ -21,7 +22,7 @@ member_create_start
 
   :param array $data: Data to be inserted into ``exp_members`` table
   :param array $cdata: Optional custom member data
-  :returns: Array containing the ``$data`` array and ``$cdata`` array 
+  :returns: Array containing the ``$data`` array and ``$cdata`` array
     (see below)
   :rtype: Array
 

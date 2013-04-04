@@ -5,6 +5,7 @@ Session Library Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 sessions_end
 ------------

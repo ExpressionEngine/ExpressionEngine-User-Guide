@@ -5,6 +5,7 @@ Login Controller Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 login_authenticate_start
 ------------------------

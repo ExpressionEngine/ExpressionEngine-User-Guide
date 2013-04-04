@@ -25,12 +25,12 @@ checklist is also provided to assist you in quickly reviewing your code
 to see that the guidelines are met before submitting your add-on.
 
 .. note:: Unless otherwise indicated, each item discussed is a
-	*requirement*, and not an option for consideration.
+  *requirement*, and not an option for consideration.
 
--  :doc:`General Style and Syntax <general>`
--  :doc:`View Files and PHP Alternate Syntax <view_php_syntax>`
--  :doc:`Performance <performance>`
--  :doc:`Security <security>`
+- :doc:`General Style and Syntax <general>`
+- :doc:`View Files and PHP Alternate Syntax <view_php_syntax>`
+- :doc:`Performance <performance>`
+- :doc:`Security <security>`
 
 After reading and understanding the above sections, you can use the
 :doc:`Summarized Checklist <checklist>` to assist you in reviewing your
@@ -43,8 +43,8 @@ Documentation
 documenting your add-on.
 
 .. toctree::
-	:glob:
-	:hidden:
-	:titlesonly:
-	
-	*
+  :glob:
+  :hidden:
+  :titlesonly:
+
+  *

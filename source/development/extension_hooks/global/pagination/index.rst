@@ -5,6 +5,8 @@ Pagination Library Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
+
 channel_module_create_pagination
 --------------------------------
 

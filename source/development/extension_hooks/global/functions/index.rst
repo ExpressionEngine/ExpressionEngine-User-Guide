@@ -2,9 +2,10 @@ Functions Library Extension Hooks
 =================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
 create_captcha_start
 --------------------
@@ -36,7 +37,7 @@ form_declaration_modify_data
 
     $data = $this->extensions->call('form_declaration_modify_data', $data);
 
-  :param array $data: Array of arguments sent to the 
+  :param array $data: Array of arguments sent to the
     ``form_declaration()`` method
   :returns: Manipulated array to pass to ``form_declaration()``
   :rtype: Array
@@ -56,7 +57,7 @@ form_declaration_return
     $form = $this->extensions->call('form_declaration_return', $data);
     if ($this->extensions->end_script === TRUE) return $form;
 
-  :param array $data: Array of arguments sent to the function for 
+  :param array $data: Array of arguments sent to the function for
     creating the form tag
   :returns: String containing the opening form tag, must set
     ``end_script`` to ``FALSE`` for this to work
@@ -78,7 +79,7 @@ set_cookie_end
     if ($this->EE->extensions->end_script === TRUE) return;
 
   :param array $data: Array of prepped cookie parameters, which include
-    the following keys: ``prefix``, ``name``, ``value``, ``expire``, 
+    the following keys: ``prefix``, ``name``, ``value``, ``expire``,
     ``path``, ``domain``, ``secure_cookie``
   :rtype: Void
 

@@ -2,6 +2,8 @@
 ExpressionEngine 2.0 Syntax Changes
 ###################################
 
+.. highlight:: php
+
 In the move to 2.0, a number of classes have been renamed, deprecated,
 and/or split up among helper functions. Some methods have also been
 moved to new classes. EE 2.0 also replaces the use of global objects
@@ -73,11 +75,11 @@ should be used in place of any current constants such as ``PATH_CACHE``,
 ::
 
   OLD syntax: $this->cache_path = PATH_CACHE.$this->cache_name.'/'.md5($this->username);
-  
+
   NEW syntax: $this->cache_path = APPPATH.'cache/'.$this->cache_name.'/'.md5($this->username);
 
 .. note:: Files located using PATH\_CP will be in a
-  `library <#libraries>`_ or core class, and should use the 
+  `library <#libraries>`_ or core class, and should use the
   appropriate method for each.
 
 The ``QUERY_MARKER`` constant replaces the use of the configuration item
@@ -87,9 +89,9 @@ The ``QUERY_MARKER`` constant replaces the use of the configuration item
 
   $qs = ($PREFS->ini('force_query_string') == 'y') ? '' : '?';
   $search_link = $FNS->fetch_site_index(0, 0).$qs.'ACT='
-  
+
   NEW syntax:
-  
+
   $search_link = $this->EE->functions->fetch_site_index(0, 0).QUERY_MARKER.'ACT='
 
 The ``SLASH`` constant has been removed from the template parser, and
@@ -147,17 +149,17 @@ Where class name is the name of the class you want to invoke. For
 example::
 
   OLD syntax:
-  
+
   if ( ! class_exists('Typography'))
   {
       require PATH_CORE.'core.typography'.EXT;
   }
-  
+
   $TYPE = new Typography;
   $str = $TYPE->light_xhtml_typography($str);
-  
+
   NEW syntax:
-  
+
   $this->EE->load->library('typography');
   $this->EE->load->typography->initialize();
   $str = $this->EE->typography->light_xhtml_typography($str);
@@ -202,7 +204,7 @@ Renamed Functions by (Old) Class
 Database Class
 --------------
 
-- All queries should be rewritten to use :ellislab:`active record 
+- All queries should be rewritten to use :ellislab:`active record
   </codeigniter/user-guide/database/active_record.html>`
 - The ``exp_weblogs``, ``exp_weblog_titles`` and ``exp_weblog_data``
   tables have been changed to use 'channel' nomenclature instead of
@@ -271,7 +273,7 @@ Functions Class
 
   // Note: for use in the module file
   $this->EE->functions->fetch_action_id()
-  
+
   $FNS->filename_security()
   $this->EE->security->sanitize_filename
 

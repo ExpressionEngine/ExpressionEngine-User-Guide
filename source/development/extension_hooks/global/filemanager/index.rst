@@ -2,8 +2,10 @@ Filemanager Library Extension Hooks
 ===================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
+
+.. highlight:: php
 
 file_after_save
 ---------------

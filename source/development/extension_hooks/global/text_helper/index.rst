@@ -5,6 +5,7 @@ Text Helper Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 foreign_character_conversion_array
 ----------------------------------

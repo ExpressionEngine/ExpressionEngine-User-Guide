@@ -5,6 +5,8 @@ ExpressionEngine API
   :local:
   :depth: 1
 
+.. highlight:: php
+
 Overview
 --------
 
@@ -89,8 +91,8 @@ Make URL Safe
 
   Makes a string safe for use in a URL segment::
 
-    $this->EE->load->library('api');  
-    $str = 'this is a string that\'s not URL safe.  (we will clean it for $5).';
+    $this->EE->load->library('api');
+    $str = 'this is a string that's not URL safe.  (we will clean it for $5).';
     $str = $this->EE->api->make_url_safe($str); // Result thisisastringthatsnotURLsafe.wewillcleanitfor5.
 
   .. note:: Valid Characters are: a-zA-Z0-9\_-.

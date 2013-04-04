@@ -5,12 +5,14 @@ ExpressionEngine Channel Structure API
   :local:
   :depth: 1
 
+.. highlight:: php
+
 Calling the Class
 -----------------
 
 .. class:: Api_channel_structure
 
-  The Channel Structure class is called with the api->instantiate()
+  The Channel Structure class is called with the ``api->instantiate()``
   function::
 
     $this->EE->load->library('api'); $this->EE->api->instantiate('channel_structure');
@@ -45,7 +47,7 @@ Get Channels
 
     $this->EE->api_channel_structure->get_channels([(int) $site_id]);
 
-  :param int $site_id: The site ID you want channel 
+  :param int $site_id: The site ID you want channel
     information for
   :returns: Database result object or ``FALSE`` on error
   :rtype: CodeIgniter database result object
@@ -60,7 +62,7 @@ Delete Channel
     $this->EE->api_channel_structure->delete_channel((int) $channel_id, [(int) $site_id]);
 
   :param int $channel_id: ID of the channel to delete
-  :param int $site_id: Specify the site ID of the channel 
+  :param int $site_id: Specify the site ID of the channel
     if necessary
   :returns: Channel Title on successful delete or ``FALSE`` on error.
   :rtype: String/Boolean
@@ -112,7 +114,7 @@ Create Channel
         'channel_url' => 'http://example.com/index.php/news/',
         'status_group'  => 1
     );
-    
+
     if ($this->EE->api_channel_structure->create_channel($data) === FALSE)
     {
         show_error('An Error Occurred Creating the Channel');
@@ -127,8 +129,8 @@ Modify Channel
 
     $this->EE->api_channel_structure->modify_channel((array) $data);
 
-  :param array $data: Channel modification data (see 
-    :meth:`Api_channel_structure::create_channel`'s data array 
+  :param array $data: Channel modification data (see
+    :meth:`Api_channel_structure::create_channel`'s data array
     examples)
   :returns: ID of newly created channel or ``FALSE`` on error
   :rtype: Integer/Boolean

@@ -1,6 +1,8 @@
 Module Conversion Walk-through
 ==============================
 
+.. highlight:: php
+
 #. `Create Update File`_
 #. `Modify Language File`_
 #. `Modify Core Module File (mod.package_name.php)`_
@@ -17,10 +19,10 @@ methods: ``install()``, ``uninistall()``, ``update()``.
    ``upd.package_name.php``
 #. Rename class ``upd.package_name.php`` to ``Package_name_upd`` and
    constructor to ``__construct()``
-#. Remove all methods except ``module_install()``, 
+#. Remove all methods except ``module_install()``,
    ``module_deinstall()``, any
    upgrade method, and any dependencies
-#. Rename the methods: ``module_install`` → ``install``, 
+#. Rename the methods: ``module_install`` → ``install``,
    ``module_deinstall`` → ``uninstall``.
 #. Make sure you have a method named update and that it accepts one
    argument ``$current``, which will be the current installed version of
@@ -31,8 +33,8 @@ methods: ``install()``, ``uninistall()``, ``update()``.
 #. Convert any relevant syntax to the :doc:`new format <syntax>`.
 #. Make certain your queries are converted to use :ellislab:`active
    record </codeigniter/user-guide/database/active_record.html>`
-   or :ellislab:`database forge 
-   </codeigniter/user-guide/database/forge.html>` (for database 
+   or :ellislab:`database forge
+   </codeigniter/user-guide/database/forge.html>` (for database
    manipulation).
 #. Save, you're done with your update file!
 
@@ -58,7 +60,7 @@ altering the existing syntax. See :doc:`the syntax conversion notes
 
 - Call the super object
 - Switch to active record for your queries
-- Take advantage of the new :doc:`Template variable parser 
+- Take advantage of the new :doc:`Template variable parser
   </development/usage/template>`
 
 Modify Control Panel File (``mcp.package_name.php``)
@@ -110,7 +112,7 @@ it is an easier to edit and more organized developmental strategy.
    it in your controller before loading your view or returning your
    string.
 #. If you are loading a view file, be certain all variables needed for
-   display are defined in the ``$vars`` array. Array keys will 
+   display are defined in the ``$vars`` array. Array keys will
    correspond to the variable name in the view file.
 #. Pass those variables to the appropriate view via::
 

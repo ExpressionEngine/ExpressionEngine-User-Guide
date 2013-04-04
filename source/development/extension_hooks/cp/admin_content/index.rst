@@ -2,9 +2,10 @@ Admin Content Controller Extension Hooks
 ========================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
 foreign_character_conversion_array
 ----------------------------------

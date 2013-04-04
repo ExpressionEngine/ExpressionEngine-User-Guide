@@ -2,8 +2,10 @@ Javascript Controller Extension Hooks
 =====================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
+
+.. highlight:: php
 
 cp_js_end
 ---------

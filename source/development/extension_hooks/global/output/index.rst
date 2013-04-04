@@ -5,6 +5,7 @@ Output Library Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 template_types
 --------------

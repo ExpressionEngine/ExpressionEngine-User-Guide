@@ -5,6 +5,7 @@ Member Module Authorization Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 member_member_login_multi
 -------------------------

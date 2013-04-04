@@ -5,6 +5,8 @@ Forum Module Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
+
 forum_add_template
 ------------------
 

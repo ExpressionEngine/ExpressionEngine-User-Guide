@@ -5,6 +5,7 @@ Content Publish Controller Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 entry_submission_absolute_end
 --------------------------------

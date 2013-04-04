@@ -2,6 +2,8 @@
 ExpressionEngine 2.0 Module Changes
 ***********************************
 
+.. highlight:: php
+
 In addition to the :doc:`syntax changes <syntax>` already discussed,
 modules require some fundamental alterations to the control panel file.
 A new update file (``upd.package_name.php``) has been introduced to
@@ -26,7 +28,7 @@ The typical file structure for a third party module that employs a
 control panel should look like (* required):
 
 - ``expressionengine/third_party/package_name/``
-  
+
   - ``expressionengine/third_party/package_name/mcp.package_name.php``
     (control panel file)
   - ``expressionengine/third_party/package_name/mod.package_name.php``
@@ -35,10 +37,10 @@ control panel should look like (* required):
     (installation, uninstall and updates)
   - ``expressionengine/third_party/package_name/views/`` (contains all
     views)
-  
+
       - ``expressionengine/third_party/package_name/views/index.php``
       - ``expressionengine/third_party/package_name/views/another_page.php``
-  
+
   - ``expressionengine/third_party/package_name/language/english/package_name_lang.php``
 
 The reference page for :doc:`Add-on Packages </development/packages>`
@@ -107,21 +109,21 @@ Example Code
 ::
 
   <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-  
+
   class Package_name_upd
   {
       var $version = '3.0';
-    
+
       function __construct()
       {
           // Make a local reference to the ExpressionEngine super object
           $this->EE =& get_instance();
       }
-    
+
       function install()
       {
           $this->EE->load->dbforge();
-      
+
           $fields = array(
               'fortune_id'=>  array(
                   'type' => 'int',
@@ -131,46 +133,46 @@ Example Code
               ),
               'fortune_text'  =>  array('type' => 'text')
           );
-      
+
           $this->EE->dbforge->add_field($fields);
           $this->EE->dbforge->add_key('fortune_id', TRUE);
           $this->EE->dbforge->create_table('fortunes');
-          
+
           $data = array(
               'module_name' => 'Fortunes' ,
               'module_version' => $this->version,
               'has_cp_backend' => 'y'
           );
-          
+
           $this->db->insert('modules', $data);
-          
+
           return TRUE;
       }
-    
+
       function uninstall()
       {
           $this->EE->load->dbforge();
-      
+
           $this->EE->db->select('module_id');
           $query = $this->EE->db->get_where('modules', array('module_name' => 'Fortunes'));
-      
+
           $this->EE->db->where('module_id', $query->row('module_id'));
           $this->EE->db->delete('module_member_groups');
-      
+
           $this->EE->db->where('module_name', 'Fortunes');
           $this->EE->db->delete('modules');
-      
+
           $this->EE->db->where('class', 'Fortunes');
           $this->EE->db->delete('actions');
-      
+
           $this->EE->db->where('class', 'Fortunes_mcp');
           $this->EE->db->delete('actions');
-      
+
           $this->EE->dbforge->drop_table('fortunes');
-      
+
           return TRUE;
       }
-    
+
       function update($current='')
       {
           if ($current < 2.0)
@@ -181,12 +183,12 @@ Example Code
           {
               // Do your 3.0 v. update queries
           }
-      
+
           return TRUE;
       }
   }
   /* END Class */
-  
+
   /* End of file upd.package_name.php */
   /* Location: ./system/expressionengine/third_party/upd.package_name.php */
 
@@ -196,7 +198,7 @@ Example Code
 .. note:: If your module needs user intervention for first-time
   setup, it should occur in the module's control panel on first-run,
   and not the installer method. This will allow your module to be
-  installed during ExpressionEngine's application installation 
+  installed during ExpressionEngine's application installation
   process. See the Wiki module for an example if needed.
 
 Passing Errors to the Wizard
@@ -211,12 +213,12 @@ want to attempt to create a folder on the server.
   function install()
   {
       var $errors = array();
-    
+
       if (mkdir('/my/dir'))
       {
           $errors = array('Unable to create the directory, please manually add it before you use this module.');
       }
-    
+
       if (count($errors) > 0)
       {
           $this->install_errors = $errors;
@@ -252,13 +254,13 @@ Control Panel File (mcp.package_name.php)
 
 If your module does not have a control panel, you still need an mcp file
 in the format::
-  
+
   <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-  
-  class Package_name_mcp 
+
+  class Package_name_mcp
   {
       var $version = '1.0';
-    
+
       function __construct()
       {
           // Make a local reference to the ExpressionEngine super object
@@ -266,7 +268,7 @@ in the format::
       }
   }
   /* END Class */
-  
+
   /* End of file mcp.package_name.php */
   /* Location: ./system/expressionengine/third_party/package_name/mcp.package_name.php */
 
@@ -288,7 +290,7 @@ constructor, and ``__construct()`` should now be used::
   function Package_name_mcp( $switch = TRUE )
   {
       global $IN;
-      
+
       if ($switch)
       {
           switch($IN->GBL('P'))
@@ -299,7 +301,7 @@ constructor, and ``__construct()`` should now be used::
           }
       }
   }
-  
+
   NEW Syntax
   function __construct( $switch = TRUE )
   {
@@ -328,7 +330,7 @@ using JavaScript, you'd use::
   $this->EE->load->library('javascript');
   $this->EE->javascript->output($this->EE->jquery->corner('.cp_button a'));
   $this->EE->javascript->compile();
-  
+
   return $this->EE->load->view('index', $vars, TRUE);
 
 Breadcrumbs, titles and the $EE->cp class
@@ -391,7 +393,7 @@ example using an array::
       'heading' => 'My Heading',
       'message' => 'My Message'
   );
-  
+
   return $this->EE->load->view('name', $data, TRUE);
 
 And here's an example using an object::
@@ -420,17 +422,17 @@ simple control panel page. The Fortune module's home page is about as
 simple as it gets, consisting of two links. To create the page , our
 index() method would look like::
 
-  function index($message = '') 
+  function index($message = '')
   {
       $this->EE->view->cp_page_title = lang('fortunes_module_name');
-    
+
       $this->EE->load->library('javascript');
       $this->EE->javascript->output($this->EE->jquery->corner('.cp_button a'));
       $this->EE->javascript->compile();
-    
-      $vars['view_url'] = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=view';  
+
+      $vars['view_url'] = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=view';
       $vars['add_url'] = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=add';
-    
+
       return $this->EE->load->view('index', $vars, TRUE);
   }
 
@@ -472,11 +474,11 @@ as an example, here is the output html for the home page::
 
   <div id='contentNB'>
       <h1>Fortunes Control Panel</h1>
-    
+
       <div class='itemWrapper'>
           <h5><a href='index.php?S=0&C=modules&M=fortunes&P=add' >Add Fortune</a></h5>
       </div>
-      
+
       <div class='itemWrapper'>
           <h5><a href='index.php?S=0&C=modules&M=fortunes&P=view' >View Fortunes</a></h5>
       </div>
@@ -493,7 +495,7 @@ rendered html and replace the variable elements with, well, variables::
           </a>
       </h5>
   </div>
-  
+
   <div class='itemWrapper'>
       <h5>
           <a href="<?=BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=view'?>">
@@ -556,10 +558,10 @@ module, there is a very simple form used to enter new fortunes and edit
 existing ones. The rendered html looks like::
 
   <h1>Add Fortune</h1>
-  
+
   <form method='post'  name='target' id='target'  action='index.php?S=0&C=modules&M=fortunes&P=update' >
       <div class='hidden'><input type='hidden' name='XID' value='0801a8c15ef3ad5a7c1318f232a210eb721464a1' /></div>
-      
+
       <table border='0'  cellspacing='0' cellpadding='0' style='width:100%;'  class='tableBorder' >
           <tr>
               <td class='tableCellOne' >
@@ -567,7 +569,7 @@ existing ones. The rendered html looks like::
               </td>
           </tr>
       </table>
-      
+
       <div class='itemWrapper' >
           <br />
           <input type='submit' class='submit' value='Add Fortune' />
@@ -578,24 +580,24 @@ Again, you can almost do a 'copy/paste' of your output html and then
 just go in and replace your variable bits with actual php variables. Let
 the form helper take care of the details of the form creation::
 
-  <?php if ($message != ''):?>  
-      <p class="notice"><?=$message?></p> 
-  <?php endif;?>  
-  
-  <?=form_open($form_action, '', $hidden)?> 
+  <?php if ($message != ''):?>
+      <p class="notice"><?=$message?></p>
+  <?php endif;?>
+
+  <?=form_open($form_action, '', $hidden)?>
       <table border='0' cellspacing='0' cellpadding='0' style='width:100%;' class='tableBorder' >
           <tr>
               <td class='tableCellOne' >
-                  <?=form_textarea(array('id'=>'fortune_text','name'=>'fortune_text','class'=>'textarea','value'=>$fortune_text));?> 
+                  <?=form_textarea(array('id'=>'fortune_text','name'=>'fortune_text','class'=>'textarea','value'=>$fortune_text));?>
               </td>
           </tr>
       </table>
 
       <div class='itemWrapper'>
           <br />
-          <?=form_submit(array('name' => 'submit', 'value' => lang('update'), 'class' => 'submit'));?> 
+          <?=form_submit(array('name' => 'submit', 'value' => lang('update'), 'class' => 'submit'));?>
       </div>
-  <?=form_close()?> 
+  <?=form_close()?>
 
 That's all there is to it. You now have a view (``fortune_form.php``)
 that allows new entries, edits, and generates the appropriate messages.
@@ -618,11 +620,11 @@ Here's how we can use the table library to generate our somewhat complex
   <?php if ($message != ''):?>
       <p class="notice"><?=$message?></p>
   <?php endif;?>
-  
+
   <?php if(count($fortunes) > 0):?>
-  
+
       <?=form_open($form_action)?>
-  
+
       <?php
       $this->table->set_template($cp_table_template);
       $this->table->set_heading(
@@ -630,7 +632,7 @@ Here's how we can use the table library to generate our somewhat complex
           lang('modify_fortune'),
           form_checkbox('select_all', 'true', FALSE, 'class="toggle_all" id="select_all"').NBS.lang('delete_fortune','select_all')
       );
-    
+
       foreach($fortunes as $fortune)
       {
           $this->table->add_row(
@@ -640,12 +642,12 @@ Here's how we can use the table library to generate our somewhat complex
           );
       }
       ?>
-    
+
       <?=$this->table->generate()?>
       <div><?=form_submit(array('name' => 'submit', 'value' => lang('delete'), 'class' => 'submit'));?></div>
-    
+
       <?=$pagination?>
-    
+
       <?=form_close()?>
   <?php else: ?>
       <?=lang('no_fortunes')?>
@@ -674,13 +676,13 @@ with an associative array that maps your control panel class methods to
 specific URLs::
 
   <?php
-  
+
   $help_menu = array(
       'index' => 'http://example.com/user_guide/',
       'add'   => 'http://example.com/user_guide/add_fortune.html',
       'view'  => 'http://example.com/user_guide/view_fortune.html'
   );
-  
+
   /* End of file help_menu.php */
   /* Location: ./system/expressionengine/third_party/package_name/config/help_menu.php */
 

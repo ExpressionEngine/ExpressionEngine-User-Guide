@@ -6,6 +6,8 @@ ExpressionEngine Fieldtypes
   :local:
   :depth: 2
 
+.. highlight:: php
+
 ********************
 Basic File Structure
 ********************

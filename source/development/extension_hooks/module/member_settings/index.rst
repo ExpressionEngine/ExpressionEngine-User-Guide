@@ -5,6 +5,7 @@ Member Module Settings Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 member_edit_preferences
 -----------------------

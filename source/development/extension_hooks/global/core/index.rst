@@ -5,6 +5,8 @@ Core Library Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
+
 core_template_route
 -------------------
 

@@ -5,6 +5,7 @@ Design Controller Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 edit_template_start
 -------------------

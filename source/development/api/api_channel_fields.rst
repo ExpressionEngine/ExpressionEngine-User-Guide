@@ -5,13 +5,14 @@ ExpressionEngine Channel Fields API
   :local:
   :depth: 1
 
+.. highlight:: php
 
 Calling the Class
 -----------------
 
 .. class:: Api_channel_fields
 
-  The Channel Fields class is called with the api->instantiate() function. ::
+  The Channel Fields class is called with the api->instantiate() function::
 
     $this->EE->load->library('api'); $this->EE->api->instantiate('channel_fields');
 
@@ -25,9 +26,9 @@ Fetch all Fieldtypes
 ~~~~~~~~~~~~~~~~~~~~
 
 .. method:: fetch_all_fieldtypes()
-  
+
   Goes through all fieldtype files, includes them (using
-  include\_handler()), and returns an array of all found fieldtypes::
+  ``include_handler()``), and returns an array of all found fieldtypes::
 
     $this->EE->api_channel_fields->fetch_all_fieldtypes();
 
@@ -57,8 +58,7 @@ Fetch installed Fieldtypes
 
   This method is identical to
   :meth:`Api_channel_fields::fetch_all_fieldtypes`, but the returned
-  array is limited to fieldtypes that have been installed by the
-  user::
+  array is limited to fieldtypes that have been installed by the user::
 
     $this->EE->api_channel_fields->fetch_installed_fieldtypes();
 
@@ -73,8 +73,8 @@ Include Fieldtype Class
 
   This method includes the class that is responsible for a certain
   fieldtype, and adds it to a list of known fieldtypes. Do not include
-  fieldtypes manually as it may cause ExpressionEngine to not
-  recognize them::
+  fieldtypes manually as it may cause ExpressionEngine to not recognize
+  them::
 
     $this->EE->api_channel_fields->include_handler((string) $field_type);
 
@@ -93,7 +93,7 @@ Setup Fieldtype Class
 
     $this->EE->api_channel_fields->setup_handler((string) $field_type);
 
-  :param string $field_type: Name of the fieldtype to include (e.g. 
+  :param string $field_type: Name of the fieldtype to include (e.g.
     ft.**field_name**.php)
   :returns: ``TRUE`` if setup was successful, ``FALSE`` if not
   :rtype: Boolean
@@ -107,13 +107,13 @@ Setup Entry Settings
   in the specified channel. It returns an array of all field settings,
   and is typically used before the Channel Entries API's
   :doc:`submit_new_entry() </development/api/api_channel_entries>`
-  method. ::
+  method::
 
     $this->EE->api_channel_fields->setup_entry_settings((string) $channel_id, (array) $entry_data, (bool) $bookmarklet);
 
   :param int $channel_id: ID of the channel the entry is in
   :param array $entry_data: Associative array of entry data
-  :param boolean $bookmarklet: ``TRUE`` if you need the data to be 
+  :param boolean $bookmarklet: ``TRUE`` if you need the data to be
     setup for a bookmarklet
   :returns: Nested array of field settings for a channel with data
   :rtype: Array
@@ -123,16 +123,15 @@ Set Fieldtype Settings
 
 .. method:: set_settings($field_id, $settings)
 
-  This method is used to assign additional settings to a fieldtype.
-  This may be any data that a fieldtype developer may need to use in
-  their fieldtype. The settings array must include a field\_type key,
-  and can include an optional field\_name if used in a channel
-  context::
+  This method is used to assign additional settings to a fieldtype. This
+  may be any data that a fieldtype developer may need to use in their
+  fieldtype. The settings array must include a ``field_type`` key, and
+  can include an optional ``field_name`` if used in a channel context::
 
     $this->EE->api_channel_fields->set_settings((string) $field_id, (mixed) $settings);
 
   :param string $field_id: ID of the field
-  :param mixed $settings: Array of settings to **replace** the 
+  :param mixed $settings: Array of settings to **replace** the
     original settings with
   :rtype: Void
 
@@ -141,7 +140,7 @@ Get Fieldtype Settings
 
 .. method:: get_settings($field_id)
 
-  This method gets the settings of an individual field. ::
+  This method gets the settings of an individual field::
 
     $this->EE->api_channel_fields->get_settings((string) $field_id);
 
@@ -158,8 +157,8 @@ Call a Fieldtype Method
 
   This is a convenience method to call a fieldtype after it has been
   setup. It will automatically setup the proper third party paths and
-  handle PHP4's pass-by-reference quirks. It acts on the last
-  fieldtype that was passed to setup\_handler(). It takes an array of
+  handle PHP4's pass-by-reference quirks. It acts on the last fieldtype
+  that was passed to ``setup_handler()``. It takes an array of
   parameters::
 
     $this->EE->api_channel_fields->apply((string) $method, (mixed) $parameters);
@@ -175,7 +174,7 @@ Call a Fieldtype Method
         'foo'       => 'Dog',
         'bar'       => 'Cat'
     );
-    
+
     $this->EE->api_channel_fields->setup_handler('my_fieldtype');
     echo $this->EE->api_channel_fields->apply('my_method', $parameters);
 
@@ -184,15 +183,15 @@ Create or Update a Channel Field
 
 .. method:: update_field($field_data)
 
-  This creates a new channel field or updates an existing field. Include a
-  field_id in the $field_data array to update an existing field, or omit
-  field_id to create a new one. ::
+  This creates a new channel field or updates an existing field. Include
+  a ``field_id`` in the ``$field_data`` array to update an existing
+  field, or omit ``field_id`` to create a new one. ::
 
     $this->EE->api_channel_fields->update_field((array) $field_data);
 
-  :param array $field_data: The field settings. Needs the following 
-    keys: ``group_id``, ``site_id``, ``field_name``, 
-    ``field_label``, ``field_type``, ``field_order``, and also 
+  :param array $field_data: The field settings. Needs the following
+    keys: ``group_id``, ``site_id``, ``field_name``,
+    ``field_label``, ``field_type``, ``field_order``, and also
     fieldtype-specific settings, e.g. ``text_field_text_direction``
   :returns: The field_id of the updated/created field.
   :rtype: String
@@ -237,7 +236,7 @@ Create or Update a Channel Field
         'text_field_show_spellcheck' => 'n',
         'text_field_show_file_selector' => 'n',
     );
-    
+
     $this->EE->api_channel_fields->update_field($field_data);
 
 Field Settings Variables
@@ -247,10 +246,10 @@ Field Settings Variables
 
   This method supplies the view variables for field settings in the
   Edit/Create Field screen. This is used prior to and in conjunction
-  with api_channel_fields->update_field(). $field_id is optional if
-  you are creating a new field. $field_types is optional, and is an
-  array of field types to display. By default, all field types are
-  shown in the view.
+  with ``api_channel_fields->update_field()``. ``$field_id`` is optional
+  if you are creating a new field. ``$field_types`` is optional, and is
+  an array of field types to display. By default, all field types are
+  shown in the view::
 
     $this->EE->api_channel_fields->field_edit_vars((int) $group_id, (int) $field_id, (array) $field_types)
 

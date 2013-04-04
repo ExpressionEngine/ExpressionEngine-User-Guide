@@ -5,6 +5,7 @@ Channel Module Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 channel_entries_query_result
 ----------------------------

@@ -5,6 +5,7 @@ Channel Entries API Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 api_channel_entries_custom_field_query
 --------------------------------------
@@ -39,7 +40,7 @@ entry_submission_ready
   :param array $meta: Entry's metadata (``channel_id``, ``entry_date``,
     i.e. fields for ``exp_channel_titles``)
   :param array $data: Entry's field data
-  :param boolean $autosave: ``TRUE`` if the submission is a 
+  :param boolean $autosave: ``TRUE`` if the submission is a
     non-publishing autosave
   :rtype: Void
 

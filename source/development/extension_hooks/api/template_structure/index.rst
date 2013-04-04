@@ -2,8 +2,8 @@ Template Structure API Extension Hooks
 ======================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
 
 template_types

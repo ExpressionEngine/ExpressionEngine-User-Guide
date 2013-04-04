@@ -1,6 +1,8 @@
 Accessory Development
 =====================
 
+.. highlight:: php
+
 Overview
 --------
 
@@ -94,7 +96,7 @@ content.
    */
   function set_sections()
   {
-      $this->sections['My Heading'] = 'I made an accessory!'; 
+      $this->sections['My Heading'] = 'I made an accessory!';
   }
 
 Each element of the array represents a section. The array key will be

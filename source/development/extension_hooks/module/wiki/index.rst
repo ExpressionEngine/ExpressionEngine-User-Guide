@@ -5,6 +5,7 @@ Wiki Module Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 wiki_start
 ----------

@@ -5,6 +5,7 @@ Simple Commerce Module Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 simple_commerce_evaluate_ipn_response
 -------------------------------------

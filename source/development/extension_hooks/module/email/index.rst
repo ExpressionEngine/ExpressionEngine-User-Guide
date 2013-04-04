@@ -5,6 +5,7 @@ Email Module Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 email_module_send_email_end
 ---------------------------

@@ -2,18 +2,21 @@ CSS Controller Extension Hooks
 ==============================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-cp\_css\_end
-------------
+cp_css_end
+----------
 
-Allows you add custom CSS to every Control Panel page. ::
+.. function:: cp_css_end()
 
-	$str = $this->extensions->call('cp_css_end');
+  Allows you add custom CSS to every Control Panel page::
 
-:returns:
-    String
+    $str = $this->extensions->call('cp_css_end');
 
-Added in v2.1.2
+  :returns: CSS to add to every Control Panel page
+  :rtype: String
+
+  .. versionadded:: 2.1.2

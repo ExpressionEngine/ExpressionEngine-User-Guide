@@ -17,6 +17,6 @@ home page and the breadcrumb links!
 Files
 ~~~~~
 
--  :download:`Stylesheet </_static/asset/css/common.css>`
--  Page Template
+- :download:`Stylesheet </_static/asset/css/common.css>`
+- Page Template
 

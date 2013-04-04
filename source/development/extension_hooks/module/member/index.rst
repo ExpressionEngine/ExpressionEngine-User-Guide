@@ -5,6 +5,7 @@ Member Module Extension Hooks
   :local:
   :depth: 1
 
+.. highlight:: php
 
 member_manager
 --------------
