@@ -2,79 +2,85 @@ Functions Library Extension Hooks
 =================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-create\_captcha\_start
-----------------------
+create_captcha_start
+--------------------
 
-Allows rewrite of how CAPTCHAs are created
+.. function:: create_captcha_start($old_word)
 
-::
+  Allows rewrite of how CAPTCHAs are created.
 
-	$edata = $this->extensions->call('create_captcha_start', $old_word); if ($this->extensions->end_script === TRUE) return $edata;
+  How it's called::
 
-$old\_word
-~~~~~~~~~~
+    $edata = $this->EE->extensions->call('create_captcha_start', $old_word);
+    if ($this->EE->extensions->end_script === TRUE) return $edata;
 
-Normally empty, but it will create a CAPTCHA with that word if set.
+  :param string $old_word: Normally empty, but it will create a CAPTCHA
+    with that word if set
+  :rtype: Void
 
-:returns:
-    void
+  .. versionadded:: 1.4.0
 
-Added in v1.4.0
+form_declaration_modify_data
+----------------------------
 
-form\_declaration\_modify\_data
--------------------------------
+.. function:: form_declaration_modify_data($data)
 
-Modify the $data parameters before they are processed by the user side
-form creator. ::
+  Modify the $data parameters before they are processed by the user side
+  form creator.
 
-	$data = $this->extensions->call('form_declaration_modify_data', $data);
+  How it's called::
 
-$data
-~~~~~
-The array of arguments sent to the form\_declaration() method
+    $data = $this->extensions->call('form_declaration_modify_data', $data);
 
-:returns:
-    Array
+  :param array $data: Array of arguments sent to the
+    ``form_declaration()`` method
+  :returns: Manipulated array to pass to ``form_declaration()``
+  :rtype: Array
 
-Added in v1.4.2
+  .. versionadded:: 1.4.2
 
-form\_declaration\_return
--------------------------
+form_declaration_return
+-----------------------
 
-Take control of the form\_declaration function to create form tags the
-way you want. ::
+.. function:: form_declaration_return($data)
 
-	$form = $this->extensions->call('form_declaration_return', $data); if ($this->extensions->end_script === TRUE) return $form;
+  Take control of the form_declaration function to create form tags the
+  way you want.
 
-$data
-~~~~~
+  How it's called::
 
-The array of arguments sent to the function for creating the form
-tag
+    $form = $this->extensions->call('form_declaration_return', $data);
+    if ($this->extensions->end_script === TRUE) return $form;
 
-:returns:
-    String
+  :param array $data: Array of arguments sent to the function for
+    creating the form tag
+  :returns: String containing the opening form tag, must set
+    ``end_script`` to ``FALSE`` for this to work
+  :rtype: String
 
-Added in v1.4.2
-
+  .. versionadded:: 1.4.2
 
 set_cookie_end
 --------------
-Take control of setting cookies after cookie parameters have been normalized according to the cookie configuration settings. ::
 
-			$this->EE->extensions->call('set_cookie_end', $data);
-			if ($this->EE->extensions->end_script === TRUE) return;
+.. function:: set_cookie_end($data)
 
-$data
-~~~~~
+  Take control of setting cookies after cookie parameters have been
+  normalized according to the cookie configuration settings.
 
-An array of the prepped cookie parameters, which includes the following keys: prefix, name, value, expire, path, domain, secure_cookie.
+  How it's called::
 
-:returns:
-    void
+    $this->EE->extensions->call('set_cookie_end', $data);
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-Added in v2.5.0
+  :param array $data: Array of prepped cookie parameters, which include
+    the following keys: ``prefix``, ``name``, ``value``, ``expire``,
+    ``path``, ``domain``, ``secure_cookie``
+  :rtype: Void
+
+  .. versionadded:: 2.5.0

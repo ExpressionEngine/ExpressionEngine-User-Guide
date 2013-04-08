@@ -127,4 +127,4 @@ Updated the following language keys in members_lang.php
 
 Update system/expressionengine/config/mimes.php
 
-:ref:`Return to Update Page <update-additional-steps>`
+:ref:`Return to Update Page <update_additional_steps>`

@@ -47,9 +47,11 @@ charset
 Specifies the character set of the email. Since ExpressionEngine uses
 the character set in the Control Panel and in the default templates, the
 default is set for UTF-8. However, in certain circumstances you might
-wish to change this. Note: There are email clients that will ignore any
-character specified in an email and will attempt to auto-detect,
-sometimes erroneously.
+wish to change this. 
+
+.. note:: There are email clients that will ignore any character
+    specified in an email and will attempt to auto-detect, sometimes
+    erroneously.
 
 debug
 ~~~~~
@@ -166,10 +168,10 @@ formatting which is added to the header string for people who do not accept
 HTML email. If you do not set your own message CodeIgniter will extract the 
 message from your HTML email and strip the tags.
 
-***NOTE:** If you are using data from a channel entry and not sending an
-HTML email, then you should use the entities\_to\_ascii() function (text
-helper) to convert any HTML entities back into ASCII characters before
-sending the message to the class.*
+.. note:: If you are using data from a channel entry and not sending an
+    HTML email, then you should use the entities\_to\_ascii() function 
+    (text helper) to convert any HTML entities back into ASCII
+    characters before sending the message to the class.
 
 Finally, to send the message, call the $this->EE->email->Send()
 function, and the class will process and send the email. 

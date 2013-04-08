@@ -1,8 +1,8 @@
 Creating a New Site
 ===================
 
-**Note:** Make a backup of your database before working with the
-Multiple Site Manager.
+.. note:: Make a backup of your database before working with the
+   Multiple Site Manager.
 
 Step 1
 ------
@@ -46,10 +46,10 @@ Import Options
 Import options are only available when creating a new Site. They are not
 available when Editing a Site's information.
 
-**Note:** Importing Channels, File Upload Preferences, Template Groups,
-and Template Global Variables cannot be undone. If you carelessly
-disregarded the earlier warning, make a backup of your database before
-continuing.
+.. note:: Importing Channels, File Upload Preferences, Template Groups,
+   and Template Global Variables cannot be undone. If you carelessly
+   disregarded the earlier warning, make a backup of your database
+   before continuing.
 
 When creating a new Site you can choose to **Import** or **Duplicate**
 existing Channel data, File Upload Preferences, Template Groups, and
@@ -70,13 +70,13 @@ existing content while keeping the current Site live.
 
 Click Submit to create your new Site.
 
-**Note:** Since multiple channels can use the same category, channel
-field and status groups, whenever a channel is imported *or* duplicated
-the groups assigned to the channel are duplicated in the new site and
-are NOT imported. This means the groups will still remain at the old
-site so other, non-imported channels are not affected but the imported
-or duplicated channels have new groups created and all data is
-reassigned to use those groups correctly.
+.. note:: Since multiple channels can use the same category, channel
+   field and status groups, whenever a channel is imported *or*
+   duplicated the groups assigned to the channel are duplicated in the
+   new site and are NOT imported. This means the groups will still
+   remain at the old site so other, non-imported channels are not
+   affected but the imported or duplicated channels have new groups
+   created and all data is reassigned to use those groups correctly.
 
 .. figure:: ../../images/sites_import.png
    :align: center

@@ -303,7 +303,7 @@ path:logout
 
 Displays the URL to the logout script.
 
-**Note to Discussion Forum Module users:** The :ref:`wiki-tag` has an optional
+**Note to Discussion Forum Module users:** The :ref:`wiki_tag` has an optional
 parameter called **profile\_path=''**. When this parameter is used, you can direct the
 member paths from the default member area of your ExpressionEngine
 installation to the Discussion Forum member area.
@@ -451,7 +451,7 @@ valid.
 -----------------------
 
 This tag is used to display all the wiki's categories. Unlike the
-:ref:`{wiki:categories} <wiki-categories-tag>`
+:ref:`{wiki:categories} <wiki_categories_tag>`
 tag, it is not affected by being put in an article page. It has the
 following parameters and variables available to it.
 
@@ -495,10 +495,8 @@ using <ul> or render a list without any formatting. The values are:
 -  **nested**: renders the categories in a xhtml list with <ul>.
 -  **linear**: renders the categories with no formatting.
 
-.. todo:: Create anchor for .html#par_style
-
-For more information on nesting please see the :doc:`Style parameter
-</modules/channel/categories>` in the Channel section of the User Guide.
+For more information on nesting please see the :ref:`Style parameter
+<channel_categories_style>` in the Channel section of the User Guide.
 
 {wiki:categories\_list} \| Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

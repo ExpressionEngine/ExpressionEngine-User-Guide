@@ -8,16 +8,15 @@ track different aspects of an entry independently. For example you can
 use view counter "one" to track views on your comments page and view
 counter "two" to track views on your permalink page.
 
-**Note:** The view tracking counter works in conjunction with the
-{exp:channel:entries} tag. Although you can show the number of views in
-any instance of your channel entries tag, the counter will **only**
-increment on pages that show a **single-entry pages**. Single entry
-pages are ones that show only a single entry, specified dynamically by
-the ID number or URL Title in the URL, such as comment or permalink
-pages.
+.. note:: The view tracking counter works in conjunction with the
+    {exp:channel:entries} tag. Although you can show the number of views
+    in any instance of your channel entries tag, the counter will 
+    **only** increment on pages that show a **single-entry pages**. 
+    Single entry pages are ones that show only a single entry, specified
+    dynamically by the ID number or URL Title in the URL, such as
+    comment or permalink pages.
 
-**Also Note:** If you have page caching enabled this feature will not
-work.
+.. note::  If you have page caching enabled this feature will not work.
 
 Tracking Views
 --------------

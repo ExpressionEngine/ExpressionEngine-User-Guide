@@ -20,7 +20,7 @@ error codes, you can do that in the Control Panel.
 
 The 404 page setting tells ExpressionEngine which template to use for all the
 404 errors that are received. It is worth noting that using :ref:`Strict URLs
-<strict-url-label>` is preferable as this makes the path to your content more
+<strict_url_label>` is preferable as this makes the path to your content more
 precise, allows more relevant 404 pages, and does not allow your content to be
 shown with variances in the URL structure
 
@@ -45,7 +45,7 @@ The second condition that will trigger a 404 status is extra segments. This will
 require some code to be added to your template. Remember that ExpressionEngine
 is only looking at the first segment to trigger a 404 status, in order to extend
 this error checking beyond the first segment we need to use a conditional and
-the :ref:`{redirect=} global variable <global-redirect>`. ::
+the :ref:`{redirect=} global variable <global_redirect>`. ::
 
   {if segment_3 != ''}
     {redirect="404"} 
@@ -77,7 +77,7 @@ is correct so they will not see any errors. This makes it seem like they typed
 everything out just right, but they are left wondering where the cats are.
 
 Let's take care of that. This is a single entry page, so we can use
-:ref:`require_entry= <channel-entries-require_entry>` in our channel entries tag
+:ref:`require_entry= <channel_entries_require_entry>` in our channel entries tag
 pair. This tells the channel entries tag pair to only return results if there is
 a specific title URL title found in the segment of the URL.
 

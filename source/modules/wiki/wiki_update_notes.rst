@@ -14,9 +14,9 @@ Version 2.0
 Trailing Slashes Removed from URLs
 ==================================
 
-**Note:** if you are using unmodified default themes, and have replaced
-your themes with those that come with 2.0, you have no further steps to
-take.
+.. note:: if you are using unmodified default themes, and have replaced
+	your themes with those that come with 2.0, you have no further steps
+	to take.
 
 ExpressionEngine version 1.x used trailing slashes at the end of all
 URLs; 2.0 does not, so you may have some theme changes to make for your

@@ -30,7 +30,7 @@ Allow PHP?
 Setting this preference to "Yes" will allow you to have PHP code parsed
 within your Template.
 
-.. _php-parsing-stage:
+.. _php_parsing_stage:
 
 PHP Parsing Stage
 ~~~~~~~~~~~~~~~~~

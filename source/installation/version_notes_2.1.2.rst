@@ -63,7 +63,7 @@ Forms is enabled, a proper security hash must be sent in order for the
 edit to be accepted. This also required a change in the response. All
 responses are now arrays. Your JavaScript will need to be updated in
 response to these changes. Please see :ref:`Comment
-Editing <comment-editing>` for a current
+Editing <comment_editing>` for a current
 example.
 
 Developers
@@ -84,6 +84,6 @@ Added a new method settings_modify_column($params) to the custom field
 types. See :doc:`Fieldtypes Functions Reference
 </development/fieldtypes>`.
 
-:ref:`Return to Update Page <update-additional-steps>`
+:ref:`Return to Update Page <update_additional_steps>`
 
 

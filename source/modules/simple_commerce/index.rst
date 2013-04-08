@@ -13,8 +13,8 @@ Introduction
 The Simple Commerce Module is a basic but flexible module
 that easily integrates ExpressionEngine with PayPal.
 
-.. note:: The Simple Commerce Module is available only with a `purchased <https://store.ellislab.com/>`_
-   ExpressionEngine license.
+.. note:: The Simple Commerce Module is available only with a `purchased
+	<https://store.ellislab.com/>`_ ExpressionEngine license.
 
 -  Integrates with ExpressionEngine's Channel Module to define items for sale
 -  Tracks purchases automatically utilizing PayPal's `Instant Payment
@@ -30,7 +30,7 @@ that easily integrates ExpressionEngine with PayPal.
 -  Tab delimited export of items and purchases
 
 
-.. _simple-commerce-purchase-tag:
+.. _simple_commerce_purchase_tag:
 
 ****************************
 Simple Commerce Purchase Tag
@@ -246,9 +246,9 @@ item\_type
 Whether item is a recurring item (subscription/purchase). Useful in
 conditionals and custom queries.
 
-**Note:** Recurring payments cannot be made using the shopping cart.
-Thus item\_type conditionals should be used if you offer cart links and
-are mixing recurring and non-recurring items.
+.. note:: Recurring payments cannot be made using the shopping cart.
+	Thus item\_type conditionals should be used if you offer cart links
+	and are mixing recurring and non-recurring items.
 
 Purchase Links
 --------------
@@ -327,7 +327,7 @@ view\_cart\_button
 
 A button to view the contents of the shopping cart.
 
-.. _simple-commerce-recurring-payments:
+.. _simple_commerce_recurring_payments:
 
 ******************
 Recurring Payments
@@ -428,7 +428,7 @@ Remember to set this variable to FALSE when you wish to take your store
 live and route purchases to the real PayPal website.
 
 
-.. _simple-commerce-encrypted-payments:
+.. _simple_commerce_encrypted_payments:
 
 **************************
 Encrypted Website Payments

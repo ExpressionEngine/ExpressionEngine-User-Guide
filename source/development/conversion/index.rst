@@ -19,21 +19,21 @@ under 2.0.
 Guidelines
 ----------
 
--  :doc:`/development/packages`
--  :doc:`General Syntax Changes <syntax>`
--  :doc:`Module Specific Changes <modules>`
--  :doc:`Module Conversion Walk-through <walk-through>`
+- :doc:`/development/packages`
+- :doc:`General Syntax Changes <syntax>`
+- :doc:`Module Specific Changes <modules>`
+- :doc:`Module Conversion Walk-through <walk-through>`
 
 Downloadable Conversion Tools
 -----------------------------
 
--  :download:`TextMate syntax conversion macro <ee_textmate_macro.zip>` -
-   convenient way to hit some of the more banal syntax changes
-   automatically.
+- :download:`TextMate syntax conversion macro <ee_textmate_macro.zip>` -
+  convenient way to hit some of the more banal syntax changes
+  automatically.
 
 .. toctree::
-	:glob:
-	:hidden:
-	:titlesonly:
+  :glob:
+  :hidden:
+  :titlesonly:
 
-	*
+  *

@@ -13,8 +13,8 @@ validating user input, showing validation errors, and repopulating form
 fields.
 
 The base functionality for the Form Validation class is inherited from
-the corresponding CodeIgniter library - refer to the `Form
-Validation <http://codeigniter.com/user_guide/libraries/form_validation.html>`_
+the corresponding CodeIgniter library - refer to the :ellislab:`Form
+Validation </codeigniter/user-guide/libraries/form_validation.html>`
 documentation in the CodeIgniter user guide for details.
 
 Setting Reference Values

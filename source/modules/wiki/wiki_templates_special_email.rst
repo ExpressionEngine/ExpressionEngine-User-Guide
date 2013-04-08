@@ -4,8 +4,8 @@ Wiki Email Templates
 These templates generate the email that notifies Wiki Admins of changes
 to moderated articles.
 
-**Note:** The email is split into two templates; one handles the email
-subject and the other the body of the email.
+.. note:: The email is split into two templates; one handles the email
+	subject and the other the body of the email.
 
 The email templates have the following variables available to it.
 
@@ -98,9 +98,9 @@ path:open\_revision
 
 Displays the URL to Open the revision.
 
-**Note:** Opening a revision approves it and makes it live. If you only
-want to view a revision, use the
-`{path:view\_revision} <#var_sin_path_view_revision>`_ variable instead.
+.. note:: Opening a revision approves it and makes it live. If you only
+	want to view a revision, use the `path:view\_revision`_ variable 
+	instead.
 
 path:close\_revision
 ~~~~~~~~~~~~~~~~~~~~
@@ -111,8 +111,9 @@ path:close\_revision
 
 Displays the URL that will close a revision.
 
-**Note:** The "open" and "close" links will only work if the person
-clicking them is a Wiki Admin.
+.. note:: The "open" and "close" links will only work if the person
+	clicking them is a Wiki Admin.
+
 
 content
 ~~~~~~~

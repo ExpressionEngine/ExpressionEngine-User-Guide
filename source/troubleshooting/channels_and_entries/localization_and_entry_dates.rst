@@ -20,6 +20,6 @@ settings are accurate:
 
 If the time an entry was posted should not have any reference to the
 localization of the author, then use
-:ref:`channel-entries-gmt_entry_date`.
+:ref:`channel_entries_gmt_entry_date`.
 
 

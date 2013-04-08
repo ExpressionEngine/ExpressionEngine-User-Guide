@@ -60,7 +60,7 @@ the default theme. If that's the case your tag would look like this::
 That's it! Point your browser to the 'wiki/index' template to view your
 wiki. Keep reading for more information on the wiki tag.
 
-.. _wiki-tag:
+.. _wiki_tag:
 
 ********
 Wiki Tag
@@ -157,10 +157,7 @@ Control Panel and Templates
 ***************************
 
 -  :doc:`Control Panel <wiki_cp>`
-
-.. todo:: setup anchor for .html#namespaces 
-
--  :doc:`Setting Up Namespaces <wiki_cp>`
+-  :ref:`Setting Up Namespaces <wiki_cp_namespaces>`
 -  :doc:`Templates <wiki_templates>`
 
 **************

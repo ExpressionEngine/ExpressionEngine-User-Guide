@@ -85,6 +85,6 @@ Prior to 1.6.9:
               )
     )
 
-:ref:`Return to Update Page <update-additional-steps>`
+:ref:`Return to Update Page <update_additional_steps>`
 
 

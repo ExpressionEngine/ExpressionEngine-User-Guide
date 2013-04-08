@@ -184,20 +184,20 @@ If this option is checked, then comments will be allowed for this entry.
 When this option is unchecked, your comment submission form will be
 suppressed. Any existing comments will still appear.
 
-.. _publish-forum-tab:
+.. _publish_forum_tab:
 
 Forum Tab
 ---------
 
-**Note:** This tab will only appear if you have the Discussion Forum
-Module installed.
+.. note:: This tab will only appear if you have the Discussion Forum
+   Module installed.
 
 |Publish Forum|
 
 The Forum tab allows you to optionally publish a forum topic to be
 associated with the channel entry. You can then automatically link to
 the created forum topic from within your {exp:channel:entries} tag using
-the :ref:`channel-entries-forum_topic_id` variable.
+the :ref:`channel_entries_forum_topic_id` variable.
 
 Forum Topic Title
 ~~~~~~~~~~~~~~~~~
@@ -255,13 +255,13 @@ a new revision will be created rather than updating the previous
 revision. In other words, every time you click the save button a new
 revision is stored.
 
-.. _publish-pages-tab:
+.. _publish_pages_tab:
 
 Pages Tab
 ---------
 
-**Note:** This tab will only appear if you have the :doc:`Pages Module
-</modules/pages/index>` installed.
+.. note:: This tab will only appear if you have the :doc:`Pages Module
+   </modules/pages/index>` installed.
 
 |Publish Pages|
 
@@ -283,9 +283,9 @@ alpha-numeric characters, underscore / dash separators, and periods.
 -  http://example.com/index.php/company/roster/board/ceo/
 -  /my\_stuff/über\_list.html
 
-**Note:** Entries cannot share the same Page URI. Each "page" entry must
-be given a unique URI so the system knows which entry to display when
-the Page URI is requested.
+.. note:: Entries cannot share the same Page URI. Each "page" entry must
+   be given a unique URI so the system knows which entry to display when
+   the Page URI is requested.
 
 Template
 ~~~~~~~~

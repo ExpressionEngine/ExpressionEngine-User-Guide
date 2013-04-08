@@ -54,4 +54,4 @@ similarly formated JavaScript, e.g. "``{if...``") in your entries, you will need
 `Allow EECode plugin <https://github.com/EllisLab/Allow-Eecode>`_ in your templates to
 allow EE tags and conditionals to be parsed.
 
-:ref:`Return to Update Page <update-additional-steps>`
+:ref:`Return to Update Page <update_additional_steps>`

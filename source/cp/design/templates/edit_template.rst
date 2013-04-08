@@ -14,12 +14,12 @@ View Rendered Template
 The View Rendered Template tab at the top of the page allows you to see
 what your template looks like rendered in your web browser.
 
-**Note:** Some templates will not render properly unless the URL
-contains certain information. For example, a typical comment page
-requires that the URL contain the ID of a specific entry. If some of the
-dynamic aspects are missing from your template when you view it it's
-likely because the URL doesn't contain information that is present when
-your template is viewed via your site.
+.. note:: Some templates will not render properly unless the URL
+   contains certain information. For example, a typical comment page
+   requires that the URL contain the ID of a specific entry. If some of
+   the dynamic aspects are missing from your template when you view it
+   it's likely because the URL doesn't contain information that is
+   present when your template is viewed via your site.
 
 Save Revision
 ~~~~~~~~~~~~~
@@ -43,8 +43,10 @@ Template Name
 
 Template names may only contain alpha-numberic characters and no spaces.
 Since template names are typically used as part of a URL they must
-follow the standard URL naming rules. Note: The "index" template can not
-be renamed. Each template group must have an index template.
+follow the standard URL naming rules. 
+
+.. note:: The "index" template can not be renamed. Each template group
+   must have an index template.
 
 Type
 ~~~~
@@ -56,10 +58,12 @@ appropriately tailor the output processing.
 -  **Webpage**: This is the most common type of Template. Unless you
    specifically need one of the other two types you should use this one.
 -  **CSS Stylesheet**: This type is used for Stylesheets. It tells
-   ExpressionEngine to send "text/css" MIME type server headers. Note:
-   CSS types are not processed using the main template parser in
-   ExpressionEngine, making them much more light-weight than standard
-   templates.
+   ExpressionEngine to send "text/css" MIME type server headers. 
+
+   .. note:: CSS types are not processed using the main template parser
+      in ExpressionEngine, making them much more light-weight than
+      standard templates.
+      
 -  **RSS Page**: Used for RSS and Atom syndication feeds. It tells
    ExpressionEngine to send "text/xml" MIME type server headers when
    being viewed.

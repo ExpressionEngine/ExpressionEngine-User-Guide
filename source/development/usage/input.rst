@@ -115,8 +115,10 @@ $this->EE->input->valid\_ip($ip)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Takes an IP address as input and returns TRUE or FALSE (boolean) if
-it is valid or not. Note: The $this->EE->input->ip\_address()
-function above validates the IP automatically.
+it is valid or not. 
+
+.. note:: The $this->EE->input->ip\_address() function above validates
+	the IP automatically.
 
 ::
 

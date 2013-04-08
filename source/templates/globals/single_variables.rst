@@ -7,7 +7,7 @@ that they are subject to ExpressionEngine's :doc:`parsing order
 </templates/template_engine>`, which can affect their availability when
 used inside other tags.
 
-Also note that there is an :ref:`alternative syntax <global-alt-syntax>`
+Also note that there is an :ref:`alternative syntax <global_alt_syntax>`
 for member variables that may be used in situations where an naming
 conflict with a module's variables may occur.
 
@@ -58,8 +58,6 @@ cp\_url
 The URL to the control panel for this site. Only output for logged-in
 members who have access to the Control Panel
 
-.. _global-current_time:
-
 current_path
 ------------
 
@@ -70,7 +68,9 @@ current_path
 This variable outputs the current URI path relative to your ExpressionEngine
 installation, e.g. *news/article/man-captures-all-the-rabbits*.
 
-**Note:** If there are no URL segments, this will output a slash: */*
+.. note:: If there are no URL segments, this will output a slash: */*
+
+.. _global_current_time:
 
 current\_time
 -------------
@@ -86,10 +86,10 @@ standard :doc:`date variable formatting
 
 	{current_time format="%Y %m %d %H:%i:%s"}
 
-**Note:** Unlike the rest of the Standard Global Variables,
-{current\_time} is parsed very early on in the Template parser, which
-allows you to make dynamic use of it in your tags, for instance as a tag
-parameter, or in a conditional.
+.. note:: Unlike the rest of the Standard Global Variables,
+	``{current_time}`` is parsed very early on in the Template parser, 
+	which allows you to make dynamic use of it in your tags, for 
+	instance as a tag parameter, or in a conditional.
 
 current_url
 -----------
@@ -276,7 +276,7 @@ member's screen name. For instance, the output might be::
 
 	<a href="http://example.com/index.php/member/1/">Joe Smith</a>
 
-.. _global-redirect:
+.. _global_redirect:
 
 redirect
 --------
@@ -321,7 +321,7 @@ site\_name
 This variable will be substituted with your site name as defined under
 :menuselection:`Admin --> General Configuration`.
 
-.. _global-site_url:
+.. _global_site_url:
 
 site\_url
 ---------
@@ -333,7 +333,7 @@ site\_url
 This variable will be substituted with your site URL as defined under
 :menuselection:`Admin --> General Configuration`.
 
-.. _global-template_edit_date:
+.. _global_template_edit_date:
 
 template\_edit\_date
 --------------------
@@ -401,7 +401,7 @@ webmaster\_email
 The email address for the site, as specified in :doc:`Email
 Configuration </cp/admin/email_configuration>`.
 
-.. _global-xid-hash:
+.. _global_xid_hash:
 
 XID\_HASH
 ---------
@@ -413,7 +413,7 @@ XID\_HASH
 This variable is a required value for hidden form field 'XID' used in
 secure forms.
 
-.. _global-alt-syntax:
+.. _global_alt_syntax:
 
 Alternative Syntax
 ==================

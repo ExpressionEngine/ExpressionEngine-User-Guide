@@ -2,77 +2,79 @@ Members Controller Extension Hooks
 ==================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-cp\_members\_member\_create
----------------------------
-
-Additional processing after a member is created via the control panel.
-Executes after member is created, but before stats are recounted. ::
-
-	$edata = $this->extensions->call('cp_members_member_create', $member_id, $data); if ($this->extensions->end_script === TRUE) return;
-
-$member\_id
-~~~~~~~~~~~
-
-Member ID of the newly created member
-
-$data
-~~~~~
-
-Array of data about the new member
-
-:returns:
-    void
-
-Added in v1.4.0
-
-cp\_members\_member\_create\_start
-----------------------------------
-
-Perform additional tasks prior to / take over the control panel member
-creation routine
-
-::
-
-	$edata = $this->extensions->call('cp_members_member_create_start'); if ($this->extensions->end_script === TRUE) return;
-
-:returns:
-    void
-
-Added in v1.4.2
-
-cp\_members\_member\_delete\_end
---------------------------------
-
-Allows additional processing when a member is deleted from the control
-panel. ::
-
-	$edata = $this->extensions->call('cp_members_member_delete_end', $member_ids); if ($this->extensions->end_script === TRUE) return;
-
-$member\_ids
-~~~~~~~~~~~~
-
-An array of Member IDs of members deleted
-
-:returns:
-    void
-
-Added in v1.4.0
-
-cp\_members\_validate\_members
+cp_members_member_create_start
 ------------------------------
 
-Additional processing after pending members are validated via the
-Control Panel
+.. function:: cp_members_member_create_start()
 
-::
+  Perform additional tasks prior to / take over the control panel member
+  creation routine.
 
-	$edata = $this->extensions->call('cp_members_validate_members'); if ($this->extensions->end_script === TRUE) return;
+  How it's called::
 
-:returns:
-    void
+    $this->extensions->call('cp_members_member_create_start');
+    if ($this->extensions->end_script === TRUE) return;
 
-Added in v1.5.2
+  :rtype: Void
+
+  .. versionadded:: 1.4.2
+
+cp_members_member_create
+------------------------
+
+.. function:: cp_members_member_create($member_id, $data)
+
+  Additional processing after a member is created via the control panel.
+  Executes after member is created, but before stats are recounted.
+
+  How it's called::
+
+    $this->extensions->call('cp_members_member_create', $member_id, $data);
+    if ($this->extensions->end_script === TRUE) return;
+
+  :param int $member_id: New member's ID
+  :param array $data: New member's data
+  :rtype: Void
+
+  .. versionadded:: 1.4.0
+    Notes about addition
+
+cp_members_member_delete_end
+----------------------------
+
+.. function:: cp_members_member_delete_end($member_ids)
+
+  Allows additional processing when a member is deleted from the control
+  panel.
+
+  How it's called::
+
+    $this->extensions->call('cp_members_member_delete_end', $member_ids);
+    if ($this->extensions->end_script === TRUE) return;
+
+  :param array $member_ids: IDs of members deleted
+  :rtype: Void
+
+  .. versionadded:: 1.4.0
+
+cp_members_validate_members
+---------------------------
+
+.. function:: cp_members_validate_members()
+
+  Additional processing after pending members are validated via the
+  Control Panel.
+
+  How it's called::
+
+    $this->extensions->call('cp_members_validate_members');
+    if ($this->extensions->end_script === TRUE) return;
+
+  :rtype: Void
+
+  .. versionadded:: 1.5.2

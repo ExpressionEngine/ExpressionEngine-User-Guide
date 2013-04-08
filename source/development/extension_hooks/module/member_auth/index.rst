@@ -2,73 +2,78 @@ Member Module Authorization Extension Hooks
 ===========================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-member\_member\_login\_multi
-----------------------------
+member_member_login_multi
+-------------------------
 
-Additional processing when a member is logging into ExpressionEngine via
-the Multi-Login functionality
+.. function:: member_member_login_multi($hook_data)
 
-::
+  Additional processing when a member is logging into ExpressionEngine
+  via the Multi-Login functionality.
 
-	$edata = $this->extensions->call('member_member_login_multi', $query->row()); if ($this->extensions->end_script === TRUE) return;
+  How it's called::
 
-$query->row()
-~~~~~~~~~~~~~
+    $this->EE->extensions->call('member_member_login_multi', $this->_hook_data());
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-    The member data for the member logging in
+  :param object $hook_data: Member object with session ID
+    (``$hook_data->session_id``) and CP permission boolean
+    (``$hook_data->can_access_cp``)
+  :rtype: Void
 
-:returns:
-    void
+  .. versionadded:: 1.4.0
 
-Added in v1.4.0
+member_member_login_single
+--------------------------
 
-member\_member\_login\_single
------------------------------
+.. function:: member_member_login_single($hook_data)
 
-Additional processing when a member is logging into ExpressionEngine
+  Additional processing when a member is logging into ExpressionEngine.
 
-::
+  How it's called::
 
-	$edata = $this->extensions->call('member_member_login_single', $query->row()); if ($this->extensions->end_script === TRUE) return;
+    $this->EE->extensions->call('member_member_login_single', $this->_hook_data());
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-$query->row()
-~~~~~~~~~~~~~
+  :param object $hook_data: Member object with session ID
+    (``$hook_data->session_id``) and CP permission boolean
+    (``$hook_data->can_access_cp``)
+  :rtype: Void
 
-    The member data for the member logging in
+  .. versionadded:: 1.4.0
 
-:returns:
-    void
+member_member_login_start
+-------------------------
 
-Added in v1.4.0
+.. function:: member_member_login_start()
 
-member\_member\_login\_start
-----------------------------
+  Additional processing prior to / take control of member login routine
 
-Additional processing prior to / take control of member login routine
+  How it's called::
 
-::
+    $this->EE->extensions->call('member_member_login_start');
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-	$edata = $this->extensions->call('member_member_login_start'); if ($this->extensions->end_script === TRUE) return;
+  :rtype: Void
 
-:returns:
-    void
+  .. versionadded:: 1.4.2
 
-Added in v1.4.2
-
-member\_member\_logout
+member_member_logout
 ----------------------
 
-Perform additional actions after logout
+.. function:: member_member_logout()
 
-::
+  Perform additional actions after logout.
 
-	$edata = $this->extensions->call('member_member_logout'); if ($this->extensions->end_script === TRUE) return;
+  How it's called::
 
-:returns:
-    void
+    $edata = $this->EE->extensions->call('member_member_logout');
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-Added in v1.6.1
+  :rtype: Void
+
+  .. versionadded:: 1.6.1

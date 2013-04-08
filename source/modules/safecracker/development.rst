@@ -5,6 +5,8 @@ SafeCracker Development
    :local:
    :depth: 1
 
+.. _safecracker_development_fieldtype:
+
 Getting your custom fieldtype to work with SafeCracker
 ------------------------------------------------------
 
@@ -32,6 +34,8 @@ by::
 
 	$this->EE->cp->add_js_script(array('ui' => array('sortable', 'tabs'))); 
 	$this->EE->cp->add_js_script('plugin', 'tablesorter');
+
+.. _safecracker_development_hooks:
 
 Extension Hooks
 ---------------

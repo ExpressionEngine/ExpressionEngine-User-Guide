@@ -2,90 +2,78 @@ Member Module Registration Extension Hooks
 ==========================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-member\_member\_register
-------------------------
+member_member_register
+----------------------
 
-Additional processing when a member is registering through the user side
-of ExpressionEngine
+.. function:: member_member_register($data, $member_id)
 
-::
+  Additional processing when a member is registering through the user
+  side of ExpressionEngine.
 
-	$edata = $this->extensions->call('member_member_register', $data, $member_id); if ($this->extensions->end_script === TRUE) return;
+  How it's called::
 
-$data
-~~~~~
+    $this->EE->extensions->call('member_member_register', $data, $member_id);
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-Array of data about the new member like username, email,
-screen\_name.
+  :param array $data: Array of data about the new member like username,
+    email, screen_name
+  :param int $member_id: The new member's id
+  :rtype: Void
 
-$member\_id (added in v2.0.1)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The new member's id.
-
-:returns:
-    void
-
-Added in v1.4.0
-
-
+  .. versionadded:: 1.4.0
 
 member_member_register_errors
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Add additional error checking to the member registration form.
+-----------------------------
 
-::
+.. function:: member_member_register_errors($this)
 
-	$this->EE->extensions->call('member_member_register_errors', $this);
-	if ($this->EE->extensions->end_script === TRUE) return;
+  Add additional error checking to the member registration form.
 
+  How it's called::
 
-$this
-~~~~~
+    $this->EE->extensions->call('member_member_register_errors', $this);
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-The current Member_register object
+  :param object $this: The current Member_register object
+  :rtype: Void
 
-:returns:
-    void
+  .. versionadded:: 2.5.0
 
-Added in v2.5.0
+member_member_register_start
+----------------------------
 
+.. function:: member_member_register_start()
 
+  Additional processing prior to/take control of member registration
+  routine.
 
-member\_member\_register\_start
--------------------------------
+  How it's called::
 
-Additional processing prior to / take control of member registration
-routine
+    $this->EE->extensions->call('member_member_register_start');
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-::
+  :rtype: Void
 
-	$edata = $this->extensions->call('member_member_register_start'); if ($this->extensions->end_script === TRUE) return;
+  .. versionadded:: 1.4.2
 
-:returns:
-    void
+member_register_validate_members
+--------------------------------
 
-Added in v1.4.2
+.. function:: member_register_validate_members($member_id)
 
-member\_register\_validate\_members
------------------------------------
+  Additional processing when member(s) are self validated
 
-Additional processing when member(s) are self validated
+  How it's called::
 
-::
+    $this->EE->extensions->call('member_register_validate_members', $member_id);
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-	$edata = $this->extensions->call('member_register_validate_members', $member_id); if ($this->extensions->end_script === TRUE) return;
+  :param int $member_id: the ID of the member
+  :rtype: Void
 
-$member\_id
-~~~~~~~~~~~
-
-the ID of the member (added 1.6.1)
-
-:returns:
-    void
-
-Added in v1.5.2
+  .. versionadded:: 1.5.2

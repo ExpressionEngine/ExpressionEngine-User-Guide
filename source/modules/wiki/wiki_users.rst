@@ -18,8 +18,8 @@ Visitors are also people who visit your wiki and are logged into your
 ExpressionEngine site but **are not** in a Member Group that is
 specified as wiki `Users <#users>`_ or `Admins <#admins>`_.
 
-**Note:** The Wiki Module does not allow anonymous visitors to
-contribute to the wiki.
+.. note:: The Wiki Module does not allow anonymous visitors to
+	contribute to the wiki.
 
 Users
 -----
@@ -35,7 +35,7 @@ Syntax <wiki_syntax>`.
 Administrators
 --------------
 
-**Note:** A Super Admin is always a Wiki Admin.
+.. note:: A Super Admin is always a Wiki Admin.
 
 A Administrator (admin) has all the **User** privileges plus they can
 **Moderate**, **Lock**, **Rename** articles, and **Delete** articles and
@@ -83,8 +83,8 @@ Category's page. Now click the **Edit** link. In the title area you'll
 see "Editing Category:Name of the category". Now check the "Delete
 Category" option and click update to delete the category.
 
-**Note:** Deleting a category will not delete any articles that have
-been assigned to the category. Deleting the category will not remove the
-category code in an article.
+.. note:: Deleting a category will not delete any articles that have
+	been assigned to the category. Deleting the category will not remove
+	the category code in an article.
 
 

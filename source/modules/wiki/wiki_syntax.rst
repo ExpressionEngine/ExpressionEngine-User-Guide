@@ -6,9 +6,9 @@ actions directly on the wiki using special syntax. Wikis traditionally
 use double brackets for this syntax and the ExpressionEngine Wiki Module
 does the same.
 
-**Note:** The text formatting for your wiki is handled by whatever
-formatting option you choose in the :doc:`Wiki Control
-Panel <wiki_cp>`.
+.. note:: The text formatting for your wiki is handled by whatever
+	formatting option you choose in the :doc:`Wiki Control Panel
+	<wiki_cp>`.
 
 
 Create or Link to a Page
@@ -83,13 +83,14 @@ This will create a link to the category page (notice colon at the
 beginning) that will display all the articles in the specified
 categories. This does not create a category.
 
+.. _wiki_syntax_namespaces:
+
 Namespaces
 ----------
 
-.. todo:: Setup anchor for .html#namespaces
-
-**Note:** Before you can use Namespaces on your wiki you must
-:doc:`configure Namespaces in your Control Panel <wiki_cp>`.
+.. note:: Before you can use Namespaces on your wiki you must
+	:ref:`configure Namespaces in your Control Panel 
+	<wiki_cp_namespaces>`.
 
 Linking to or creating an article in a Namespace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,22 +128,22 @@ and rename the article::
 Viewing articles in a Namespace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. todo:: Setup anchor for .html#wiki_theme
-
 The default theme has a dropdown menu that lets you view all the
 articles in a namespace. Its located on the *Title List* page (on the
 main menu). If you want to add a similar feature on your custom wiki
-template please follow the :doc:`Wiki Theme Updates
-</installation/version_notes_1.5>` example.
+template please follow the :ref:`Wiki Theme Updates
+<version_notes_1_5_wiki_theme>` example.
 
 Linking to Image or Uploaded File
 ---------------------------------
 
-**Note:** The wiki can automatically give you a file or image's code. On
-the article Edit page click on *View 10 Most Recent File Uploads*. If
-you need an older file click on *Uploaded Files* in the navigation and
-then select file. You'll see the appropriate code to use to call that
-file or image. ::
+.. note:: The wiki can automatically give you a file or image's code. On
+	the article Edit page click on *View 10 Most Recent File Uploads*. 
+	If you need an older file click on *Uploaded Files* in the 
+	navigation and then select file. You'll see the appropriate code to 
+	use to call that file or image. 
+
+::
 
 	[[File:filename.zip]]
 

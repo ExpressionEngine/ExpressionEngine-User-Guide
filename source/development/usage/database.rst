@@ -2,7 +2,9 @@ Database Class
 ==============
 
 .. contents::
-	:local:
+  :local:
+
+.. highlight:: php
 
 Calling the DB Class
 --------------------
@@ -11,9 +13,7 @@ ExpressionEngine has an abstract database layer that allows developers
 to easily access the MySQL database and also provide many features like
 automatic escaping of characters and query caching.
 
-This class is initialized automatically.
-
-::
+This class is initialized automatically. ::
 
     $query = $this->EE->db->query("SELECT channel_name FROM exp_channels");
 
@@ -41,9 +41,9 @@ no results being returned.
     // Update, with no variable being set
     $this->EE->db->query("UPDATE exp_channels SET channel_name = 'dog' WHERE channel_name = 'cat'");
 
-***Note:** When doing any sort of query using user submitted data make
-sure to use the $this->EE->db->escape\_str() function (details below) to
-prevent any problems between MySQL and the data.*
+.. note:: When doing any sort of query using user submitted data make
+    sure to use the $this->EE->db->escape\_str() function (details
+    below) to prevent any problems between MySQL and the data.
 
 Retrieving Results from SELECT query
 ------------------------------------
@@ -86,7 +86,7 @@ want to use the **result** array of the object with a foreach loop.
     {
         foreach($results->result_array() as $row)
         {
-            echo $row['channel_id'].' - '.$row['channel_name']."<br />\n";    
+            echo $row['channel_id'].' - '.$row['channel_name']."<br />\n";
         }
     }
 

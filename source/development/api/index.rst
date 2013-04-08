@@ -2,8 +2,10 @@ ExpressionEngine API
 ====================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
+
+.. highlight:: php
 
 Overview
 --------
@@ -21,31 +23,33 @@ architecture changes.
 Calling the API
 ---------------
 
-::
+.. class:: Api
 
-	$this->EE->load->library('api');
+  ::
 
-After loading the parent API library, the child classes are loaded with
-instantiate()::
+    $this->EE->load->library('api');
 
-$this->EE->api->instantiate('channel_entries');
+  After loading the parent API library, the child classes are loaded with
+  ``instantiate()``::
 
-At this point, methods within the api\_channel\_entries api are callable
-via $this->EE->api\_channel\_entries->method\_name();
+    $this->EE->api->instantiate('channel_entries');
+
+  At this point, methods within the api\_channel\_entries api are callable
+  via ``$this->EE->api_channel_entries->method_name();``
 
 Available APIs
 --------------
 
--  :doc:`Channel Categories </development/api/api_channel_categories>` – Retrieve
-   information on Channel Categories.
--  :doc:`Channel Entries </development/api/api_channel_entries>` – Retrieve
-   information on Channel Entries.
--  :doc:`Channel Fields </development/api/api_channel_fields>` – Retrieve information
-   on Channel Fields.
--  :doc:`Channel Structure </development/api/api_channel_structure>` – Create, Modify,
-   Delete & Update Channels.
--  :doc:`Template Structure </development/api/api_template_structure>` – Retrieve
-   information on Template Groups.
+- :doc:`Channel Categories </development/api/api_channel_categories>` – Retrieve
+  information on Channel Categories.
+- :doc:`Channel Entries </development/api/api_channel_entries>` – Retrieve
+  information on Channel Entries.
+- :doc:`Channel Fields </development/api/api_channel_fields>` – Retrieve information
+  on Channel Fields.
+- :doc:`Channel Structure </development/api/api_channel_structure>` – Create, Modify,
+  Delete & Update Channels.
+- :doc:`Template Structure </development/api/api_template_structure>` – Retrieve
+  information on Template Groups.
 
 Function Reference
 ------------------
@@ -53,74 +57,71 @@ Function Reference
 The following public functions are accessible:
 
 .. contents::
-	:local:
+  :local:
 
 Instantiate
 ~~~~~~~~~~~
 
-Name of the API to instantiate. ::
+.. method:: instantiate($which)
 
-	$this->EE->api->instantiate((string) $which);
+  Instantiate an API::
 
-:returns:
-	Void on success, however an exception will be raised if the API can not be found.
+    $this->EE->api->instantiate('channel_entries');
+
+  :param string $which: Name of the API to instantiate. Options: ``channel_categories``, ``channel_entries``, ``channel_fields``, ``channel_structure``, and ``template_structure``.
+  :exception: Raises an exception if the specified API doesn't exist
+  :rtype: Void
 
 Error Count
 ~~~~~~~~~~~
 
-Number of errors generated in API functions. ::
+.. method:: error_count()
 
-	$this->EE->api->error_count();
+  Get the number of API errors::
 
-:returns:
-    Number of errors
+    $this->EE->api->error_count();
+
+  :returns: The number of errors generated in API functions
+  :rtype: Integer
 
 Make URL Safe
 ~~~~~~~~~~~~~
 
-Makes a string safe for use in a URL segment.
+.. method:: make_url_safe($str)
 
-Valid Characters are: a-zA-Z0-9\_-. ::
+  Makes a string safe for use in a URL segment::
 
-	$this->EE->api->make_url_safe((string) $str);
+    $this->EE->load->library('api');
+    $str = 'this is a string that's not URL safe.  (we will clean it for $5).';
+    $str = $this->EE->api->make_url_safe($str); // Result thisisastringthatsnotURLsafe.wewillcleanitfor5.
 
-Example Usage::
+  .. note:: Valid Characters are: a-zA-Z0-9\_-.
 
-	$this->EE->load->library('api');
-	
-	$str = 'this is a string that\'s not URL safe.  (we will clean it for $5).';
-	$str = $this->EE->api->make_url_safe($str); // Result thisisastringthatsnotURLsafe.wewillcleanitfor5.
-
-:returns:
-    Cleansed string
+  :param string $str: String to make URL safe
+  :returns: Cleansed string
+  :rtype: String
 
 Is String URL Safe?
 ~~~~~~~~~~~~~~~~~~~
 
-Checks if a string is safe for use in a URL segment
+.. method:: is_url_safe($str)
 
-::
+  Checks if a string is safe for use in a URL segment::
 
-	$this->EE->api->is_url_safe((string) $str);
+    $this->EE->load->library('api');
+    $str = 'this is a string that\'s not URL safe.  (we will clean it for $5).';
+    if ( ! $this->EE->api->is_url_safe($str))
+    {
+        // Do additional Processing on the string to make it URL safe
+    }
 
-Example Usage::
-
-	$this->EE->load->library('api');
-	
-	$str = 'this is a string that\'s not URL safe.  (we will clean it for $5).';
-	
-	if ( ! $this->EE->api->is_url_safe($str))
-	{
-		// Do additional Processing on the string to make it URL safe
-	}
-
-:returns:
-    Boolean - TRUE on success, FALSE on failure
-
+  :param string $str: String to verify URL safety
+  :returns: ``TRUE`` on success, ``FALSE`` on failure
+  :rtype: Boolean
 
 .. toctree::
-	:glob:
-	:hidden:
-	:titlesonly:
+  :glob:
+  :hidden:
+  :titlesonly:
 
-	*
+  *

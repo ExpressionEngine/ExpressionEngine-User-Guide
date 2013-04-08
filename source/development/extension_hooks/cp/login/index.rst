@@ -2,51 +2,60 @@ Login Controller Extension Hooks
 ================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-login\_authenticate\_start
---------------------------
+login_authenticate_start
+------------------------
 
-Perform additional actions prior to / take over the control panel login
-routine. ::
+.. function:: login_authenticate_start()
 
-	$edata = $this->extensions->call('login_authenticate_start'); if ($this->extensions->end_script === TRUE) return;
+  Perform additional actions prior to/take over the control panel login
+  routine.
 
-:returns:
-    void
+  How it's called::
 
-Added in v1.4.2
+    $this->extensions->call('login_authenticate_start');
+    if ($this->extensions->end_script === TRUE) return;
 
-cp\_member\_login
------------------
+  :rtype: Void
 
-Executes after control panel session is instantiated, allows additional
-processing on control panel logins. ::
+  .. versionadded:: 1.4.2
 
-	$edata = $this->extensions->call('cp_member_login', $query->row()); if ($this->extensions->end_script === TRUE) return;
+cp_member_login
+---------------
 
-$query->row()
-~~~~~~~~~~~~~
+.. function:: cp_member_login($hook_data)
 
-Array of member data
+  Executes after control panel session is instantiated, allows
+  additional processing on control panel logins.
 
-:returns:
-    void
+  How it's called::
 
-Added in v1.4.0
+    $this->EE->extensions->call('cp_member_login', $this->_hook_data());
+    if ($this->EE->extensions->end_script === TRUE) return;
 
-cp\_member\_logout
-------------------
+  :param object $hook_data: Member object with session ID
+    (``$hook_data->session_id``) and CP permission boolean
+    (``$hook_data->can_access_cp``)
+  :rtype: Void
 
-Perform additional actions after a user logs out of the control panel
+  .. versionadded:: 1.4.0
 
-::
+cp_member_logout
+----------------
 
-	$edata = $this->extensions->call('cp_member_logout'); if ($this->extensions->end_script === TRUE) return;
+.. function:: cp_member_logout()
 
-:returns:
-    void
+  Perform additional actions after a user logs out of the control panel.
 
-Added in v1.6.1
+  How it's called::
+
+    $this->extensions->call('cp_member_logout');
+    if ($this->extensions->end_script === TRUE) return;
+
+  :rtype: Void
+
+  .. versionadded:: 1.6.1

@@ -167,8 +167,8 @@ Or use "not" to exclude categories
 
 	category="not 2|8"
 
-**Note:** If a parent is excluded from the multiple select list, then
-its children will not be shown.
+.. note:: If a parent is excluded from the multiple select list, then
+	its children will not be shown.
 
 cat\_style=
 ~~~~~~~~~~~
@@ -190,6 +190,8 @@ name=
 
 Specify the name attribute for the <form> tag, which will allow you to
 specify CSS and JavaScript to the form more easily.
+
+.. _search_advanced_no_result_page:
 
 no\_result\_page=
 ~~~~~~~~~~~~~~~~~

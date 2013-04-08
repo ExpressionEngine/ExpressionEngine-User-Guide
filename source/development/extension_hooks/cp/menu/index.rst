@@ -2,24 +2,27 @@ Menu Class Extension Hooks
 ==========================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-cp\_menu\_array
----------------
+cp_menu_array
+-------------
 
-Modify the control panel menu before it's presented in the control panel.
-::
+.. function:: cp_menu_array($menu)
 
-	$menu = $this->EE->extensions->call('cp_menu_array', $menu);
+  Modify the control panel menu before it's presented in the control
+  panel. **Be sure to pull in contents of
+  ``$this->EE->extensions->last_call`` before editing ``$menu`` or
+  returning anything**.
 
-$menu
-~~~~~
+  How it's called::
 
-Array of control panel menu hierarchy and links.
+    $menu = $this->EE->extensions->call('cp_menu_array', $menu);
 
-:returns:
-    Array
+  :param array $menu: Control panel menu hierarchy and links
+  :returns: Manipulated ``$menu`` array
+  :rtype: Array
 
-Added in v2.1.5
+  .. versionadded:: 2.1.5

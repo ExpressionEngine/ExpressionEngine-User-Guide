@@ -88,7 +88,7 @@ Variables
 ==========
 
 Nearly all of the :ref:`Channel Entries Tag
-Variables <channel-entries-single-variables>` are available for the
+Variables <channel_entries_single_variables>` are available for the
 search results page so that you can display as much or as little of the
 channel entry's data as possible depending on your needs. There are also
 some search results specific variables available in the results page:
@@ -169,11 +169,10 @@ search terms they used::
 
 	{exp:search:keywords}
 
-.. todo:: Create anchor for no_result_page
-
 This may also be used on the template specified by the
-:doc:`no_result_page <advanced>` parameter of the :doc:`simple search
-form <simple>` and :doc:`advanced search form <advanced>`.
+:ref:`no_result_page <search_advanced_no_result_page>` parameter of the
+:doc:`simple search form <simple>` and :doc:`advanced search form
+<advanced>`.
 
 There are no parameters or variables associated with this
 ExpressionEngine tag.
@@ -188,11 +187,10 @@ of matches::
 
 	{exp:search:total_results}
 	
-.. todo:: Create anchor for no_result_page
-
 This may also be used on the template specified by the
-:doc:`no_result_page <advanced>` parameter of the :doc:`simple search
-form <simple>` and :doc:`advanced search form <advanced>`.
+:ref:`no_result_page <search_advanced_no_result_page>` parameter of the
+:doc:`simple search form <simple>` and :doc:`advanced search form
+<advanced>`.
 
 There are no parameters or variables associated with this
 ExpressionEngine tag.

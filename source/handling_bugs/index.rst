@@ -29,9 +29,8 @@ receive a reply back within one working day.
 
 -  Check that your preferences have been set correctly, and look for
    typos.
--  `Check the bug
-   tracker <http://expressionengine.com/bug_tracker/list_2.x/>`_ to see
-   if this specific bug has already been submitted.
+-  :elsupport:`Check the bug tracker </bugs>` to see if this specific 
+   bug has already been submitted.
 -  Make sure you can reproduce the bug in a separate, fresh installation
    of ExpressionEngine running the latest update for your version.
    
@@ -52,9 +51,8 @@ question. Our community is a huge part of what makes ExpressionEngine
 great, and bug reports from members of our community can go a long way
 in making ExpressionEngine even better.
 
-Visit the bug tracker to `report the
-bug <http://expressionengine.com/bug_tracker/report/v2/>`_, and take
-note of the following fields when filling out the bug report form:
+Visit the bug tracker to :elsupport:`report the bug </bugs/submit>`, and
+take note of the following fields when filling out the bug report form:
 
 #. **Short Description**: Make sure it's clear and concise so others
    scanning the bug tracker can easily find your bug if they're

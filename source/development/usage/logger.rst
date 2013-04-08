@@ -54,5 +54,5 @@ user. ::
 
 	$this->EE->logger->developer('Unique log message.', TRUE, 604800);
 
-**NOTE:** Be conscious of how often the developer() function is used so as
-not to clutter the developer log and run unnecessary queries.
+.. note:: Be conscious of how often the developer() function is used so as
+	not to clutter the developer log and run unnecessary queries.

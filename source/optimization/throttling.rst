@@ -8,9 +8,9 @@ attacks, where your pages are maliciously loaded repeatedly (usually
 through the use of automated scripts) in an effort to cause undue load
 to your web server.
 
-Note: A server-wide DOS attack preventative is beyond the scope of what
-ExpressionEngine can do, but EE's Throttling feature can help keep your
-particular site from being as susceptible.
+.. note:: A server-wide DOS attack preventative is beyond the scope of
+	what ExpressionEngine can do, but EE's Throttling feature can help
+	keep your particular site from being as susceptible.
 
 Throttling Preferences
 ----------------------

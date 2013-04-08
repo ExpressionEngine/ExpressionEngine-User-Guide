@@ -18,6 +18,12 @@ import sys, os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 
+# Make PHP highlighting work without <?php
+from sphinx.highlighting import lexers
+from pygments.lexers.web import PhpLexer
+lexers['php'] = PhpLexer(startinline=True)
+
+
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -91,7 +97,10 @@ primary_domain = 'php'
 
 # Links
 extlinks = {
-	'ellislab': ('http://ellislab.com%s', 'ellislab')
+    'ellislab': ('http://ellislab.com%s', 'ellislab'),
+    'elstore': ('https://store.ellislab.com%s', 'elstore'),
+    'elsupport': ('https://support.ellislab.com%s', 'elsupport'),
+    'forum_thread': ('https://ellislab.com/forums/viewthread/%s/', 'forum_thread')
 }
 
 # -- Options for HTML output ---------------------------------------------------
@@ -185,8 +194,8 @@ htmlhelp_basename = 'ExpressionEnginedoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'ExpressionEngine.tex', u'ExpressionEngine Documentation',
-   u'EllisLab, Inc.', 'manual'),
+    ('index', 'ExpressionEngine.tex', u'ExpressionEngine Documentation',
+        u'EllisLab, Inc.', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -265,7 +274,10 @@ epub_copyright = u'2002-2011, EllisLab, Inc.'
 # -- Options for Linkcheck -----------------------------------------------------
 
 linkcheck_ignore = [
-	r'http://example.com.*',
-	r'http://yourdomain.com.*',
-	'https://'
+    r'http://example.com.*',
+    r'http://.*yourdomain.com.*',
+    'https://',
+    'http://www.sendmail.org/',
+    'http://markitup.jaysalvat.com/',
+    r'http://(www\.)?maxmind.com.*',
 ]

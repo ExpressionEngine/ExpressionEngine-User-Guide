@@ -1766,16 +1766,12 @@ Build 20110512
       intermediate confirmation page on all forwarded urls.
    -  Added $config['cookie\_secure'] to the config file to allow
       requiring a secure (HTTPS) in order to set cookies.
-   -  Added
-      `theme\_folder\_url <http://expressionengine.com/forums/viewthread/183306/>`_
-      as a Global Variable.
-   -  Added `Feature
-      Request <http://expressionengine.com/forums/viewthread/162694/>`__:
-      rel="external" to control panel help links so they open in a new
-      window.
-   -  Added `Feature
-      Request <http://expressionengine.com/forums/viewthread/174119/>`__
-      to allow parsing of global variables within snippets.
+   -  Added :forum_thread:`theme\_folder\_url <183306>` as a Global 
+      Variable.
+   -  Added :forum_thread:`Feature Request <162694>`: rel="external" to
+      control panel help links so they open in a new window.
+   -  Added :forum_thread:`Feature Request <174119>` to allow parsing of
+      global variables within snippets.
    -  Removed the Blogger API module.
    -  Moved SafeCracker into native modules, **please see the** :doc:`version
       notes </installation/version_notes_2.2.0>` **about how to
@@ -2147,7 +2143,7 @@ General Changes:
    the IP records directly from the ip2nations SQL file.
 -  Added secure forms check to the frontend Comment Editor. See the
    :doc:`Version Notes </installation/version_notes_2.1.2>` and
-   update your :ref:`JavaScript <comment-editing>` if needed.
+   update your :ref:`JavaScript <comment_editing>` if needed.
 -  Added a setting to group preferences to disallow editing of html
    formatting buttons.
 -  Added to the default message text for forwarded private messages to
@@ -2398,16 +2394,16 @@ Build 20101018 (initial release)
       ({member\_group\_id}, {username}, {if editable}, {if can\_moderate\_comment}, {comment\_stripped}).
    -  Added new parameters to the :doc:`Comment Entries tag </modules/comment/index>`
       (comment\_id=, entry\_status=, status=, author\_id=_).
-   -  Added a random option to the Comment Entries :ref:`comment-entries-orderby` parameter.
-   -  Added a new parameter to the :ref:`Comment Form tag <comment-submission-form>`
+   -  Added a random option to the Comment Entries :ref:`comment_entries_orderby` parameter.
+   -  Added a new parameter to the :ref:`Comment Form tag <comment_submission_form>`
       (return=).
-   -  Added new conditionals to the :ref:`Comment Form tag <comment-submission-form>` ({if
+   -  Added new conditionals to the :ref:`Comment Form tag <comment_submission_form>` ({if
       comments\_expired}, {if comments\_disabled}).
    -  Added a Comment Notification tag to the :doc:`Comment Module </modules/comment/index>`
       which gives members the ability to subscribe to comment
       notifications for an entry without commenting.
    -  Added the ability to :ref:`Allow Members to Edit Comments on the Front
-      End <comment-editing>`.
+      End <comment_editing>`.
    -  Added a new notification template to the Comment Module to send a
       single digest when moderated comments are opened.)
    -  Moved stats mcp file logic to a library for greater code
@@ -4128,7 +4124,7 @@ Build 20091202 (initial release)
       unauthorized changes to your index.php file are made.
    -  ExpressionEngine generated URLs are even prettier, no longer use a
       trailing slash.
-   -  Added the {absolute_results} :ref:`variable <channel-entries-single-variables>` to the Channel Entries tag.
+   -  Added the {absolute_results} :ref:`variable <channel_entries_single_variables>` to the Channel Entries tag.
    -  Changed the behavior of the backspace parameter so that it no
       longer ignores whitespace.
    -  Made "yes/no" tag parameters consistent.
@@ -4141,7 +4137,7 @@ Build 20091202 (initial release)
       :doc:`{preload\_replace:foo="bar"} </templates/globals/preload_replacement>`
       and documentation clarified.
    -  The Simple Commerce Module now supports :ref:`subscriptions and
-      recurring payments <simple-commerce-recurring-payments>`
+      recurring payments <simple_commerce_recurring_payments>`
    -  The Trackback module has been removed from ExpressionEngine. See
       the :doc:`version update
       notes </installation/version_notes_2.0>` for details.

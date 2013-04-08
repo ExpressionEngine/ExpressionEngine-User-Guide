@@ -73,11 +73,9 @@ used to display the categories on the article page.
 Special Category Tags
 ---------------------
 
-.. todo:: Create anchor for .html#wiki_tag_categories
-
 If an article is assigned to one or more categories you can use the
-:doc:`{wiki:categories} <wiki_templates_special_categories>` tag to
-display the categories beneath the article as outlined below:
+:ref:`{wiki:categories} <wiki_categories_tag>` tag to display the
+categories beneath the article as outlined below:
 
 |If an article has categories you can display them beneath the article.|
 
@@ -90,24 +88,20 @@ below:
 
 |Displays all the articles in a category.|
 
-**Note:** A **Namespace** is a way to organize content by a special
-keyword (the "namespace") that is not a title, topic, or category name.
-For example, the wiki currently uses, by default, namespaces called
-**Special**, **File**, and **Category** to organize wiki content.
+.. note:: A **Namespace** is a way to organize content by a special
+	keyword (the "namespace") that is not a title, topic, or category 
+	name. For example, the wiki currently uses, by default, namespaces 
+	called **Special**, **File**, and **Category** to organize wiki 
+	content.
 
 Namespace features will be expanded on in future versions. In the
 current verison you can use the **Category Namespace** in the Article
 Template to create a list of articles that are assigned to a specific
 category.
 
-.. todo:: Create anchor for #wiki_tag_category_subcategories
-.. todo:: Create anchor for #wiki_tag_category_articles
-
 This is done by using the special **{if namespace == 'Category'}**
-conditional and a combination of the
-:doc:`{wiki:category\_subcategories}
-<wiki_templates_special_categories>` and :doc:`{wiki:category\_articles}
-<wiki_templates_special_categories>` tags described in the :doc:`Special
+conditional and a combination of the :ref:`wiki_category_subcategories`
+and :ref:`wiki_category_articles` tags described in the :doc:`Special
 Categories <wiki_templates_special_categories>` section of the Wiki
 documentation.
 

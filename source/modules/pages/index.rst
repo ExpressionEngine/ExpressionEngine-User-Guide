@@ -66,7 +66,7 @@ Parameters
 The Pages Module adds the following parameters for use in the
 {exp:channel:entries} tag.
 
--  :ref:`channel-entries-show-pages`
+-  :ref:`channel_entries_show_pages`
 
 Variables
 =========
@@ -74,8 +74,8 @@ Variables
 The Pages Module adds the following variables for use in the
 {exp:channel:entries} tag.
 
--  :ref:`channel-entries-page-uri`
--  :ref:`channel-entries-page-url`
+-  :ref:`channel_entries_page_uri`
+-  :ref:`channel_entries_page_url`
 
 
 *********************

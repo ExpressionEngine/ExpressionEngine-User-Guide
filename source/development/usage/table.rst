@@ -19,9 +19,9 @@ Usage of Table Class
 The Table class provides a simplified means to quickly build html tables
 that usually require a large amount of boilerplate code. The base
 functionality for the Table class is inherited from the corresponding
-CodeIgniter library. Refer to the `HTML Table
-<http://codeigniter.com/user_guide/libraries/table.html>`_ documentation
-in the CodeIgniter user guide for details on basic table creation.
+CodeIgniter library. Refer to the :ellislab:`HTML Table 
+</codeigniter/user-guide/libraries/table.html>` documentation in the 
+CodeIgniter user guide for details on basic table creation.
 
 
 Example: Improving Usability for Large Amounts of Data
@@ -250,9 +250,9 @@ Function Reference
 ------------------
 
 This documents the ExpressionEngine additions to the table class. Refer
-to the `HTML Table <http://codeigniter.com/user_guide/libraries/table.html>`_
-documentation in the CodeIgniter user guide for the base table class
-reference.
+to the :ellislab:`HTML Table 
+</codeigniter/user-guide/libraries/table.html>` documentation in the 
+CodeIgniter user guide for the base table class reference.
 
 datasource($function, [$default_state, [$additional_parameters]])
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

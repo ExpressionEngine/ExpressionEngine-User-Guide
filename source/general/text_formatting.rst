@@ -32,8 +32,8 @@ Panel. You'll see a menu below each entry field with this option. You
 can also configure your Comment Preferences so that any comments will be
 formatted this way.
 
-**Note:** By default, all entries and comments are assigned to this
-formatting option.
+.. note:: By default, all entries and comments are assigned to this
+	formatting option.
 
 Auto BR
 -------

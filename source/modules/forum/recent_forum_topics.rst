@@ -178,8 +178,8 @@ body
 
 The contents of the topic.
 
-**Note:** This variable will use the formatting preferences of the forum
-that the topic belongs to.
+.. note:: This variable will use the formatting preferences of the forum
+	that the topic belongs to.
 
 forum\_name
 ~~~~~~~~~~~
@@ -279,8 +279,8 @@ last\_reply
 
 If available, the contents of the most recent reply to the thread.
 
-**Note:** This variable will use the formatting preferences of the forum
-that the topic belongs to.
+.. note:: This variable will use the formatting preferences of the forum
+	that the topic belongs to.
 
 post\_total
 ~~~~~~~~~~~

@@ -2,23 +2,34 @@ Core Library Extension Hooks
 ==================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-core\_template\_route
----------------------
+core_template_route
+-------------------
 
-Reassign the template group and template loaded for parsing.
+.. function:: core_template_route($uri_string)
 
-::
+  Reassign the template group and template loaded for parsing.
 
-	$this->template = $this->EE->extensions->call('core_template_route', $this->EE->uri->uri_string);
+  How it's called::
 
-$this->EE->uri->uri_string
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+    $edata = $this->EE->extensions->call('core_template_route', $this->EE->uri->uri_string);
+    if (is_array($edata) && count($edata) == 2)
+    {
+        list($template_group, $template) = $edata;
+    }
 
-The full uri string being loaded
+  :param string $uri_string: Current URI string
+  :returns: Array containing the name of the template group and template
+    (see below)
+  :rtype: Array
 
-:returns:
-       Array (string The name of the template group, string The name of the template)
+  Example of array to return::
+
+    array(
+        'template_group', // Template group name
+        'template'        // Template name
+    );

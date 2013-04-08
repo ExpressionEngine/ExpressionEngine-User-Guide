@@ -10,7 +10,7 @@ preferences which affect all Templates.
 
 |Global Template Preferences|
 
-.. _strict-url-label:
+.. _strict_url_label:
 
 Strict URLs
 ~~~~~~~~~~~
@@ -23,7 +23,7 @@ a valid Template Group only, or a 404 page is shown.
 If you wish to extend this to the second segment, requiring a valid
 template, then in your "index" template of your Template Group(s) that
 you wish to do this, you can take advantage of the :ref:`{redirect=} global
-variable <global-redirect>` like so::
+variable <global_redirect>` like so::
 
 	{if segment_2 != ''}   {redirect="404"} {/if}
 
@@ -45,7 +45,7 @@ segments of your URLs when determining whether to show a 404 page, since
 these segments will correlate to a Template Group and Template name
 (which represent your site's "pages"). Anything beyond the first two
 segments can not be used to show a 404 page (with one notable exception,
-using the :ref:`channel-entries-require_entry` parameter).
+using the :ref:`channel_entries_require_entry` parameter).
 
 For an explanation regarding how ExpressionEngine interprets your URLs,
 please see :doc:`/urls/url_structure` page.

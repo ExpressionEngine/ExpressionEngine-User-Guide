@@ -12,7 +12,7 @@ Manager module.
 
 .. note:: Since these language packs are contributed by the members of the 
    community, we are not responsible for the accuracy of the translations. If 
-   something looks wrong to you, we recommend you :ref:`send us a pull request on GitHub <contributing-to-language-packs>` with the corrected translation.
+   something looks wrong to you, we recommend you :ref:`send us a pull request on GitHub <contributing_to_language_packs>` with the corrected translation.
 
 Downloading Language Packs
 --------------------------
@@ -51,7 +51,7 @@ select Localization Settings. Users who have customized their settings and are
 logged in will see user messages, dates, and the Control Panel in their chosen
 language.
 
-.. _contributing-to-language-packs:
+.. _contributing_to_language_packs:
 
 Contributing
 ------------
@@ -65,13 +65,15 @@ the event the language pack supports both 2.x and 1.x. If there are only tags
 for 1.x versions and there is no ``1.x`` branch, then that language only
 supports 1.x.
 
-If you want to contribute to a language pack, find the language pack you want to
-modify, `fork the repository <http://help.github.com/fork-a-repo/>`__, make sure
-you’re working from the correct branch, work on your changes `inside of a
-feature branch <http://help.github.com/fork-a-repo/#_more_things_you_can_do>`__,
-push your changes to your fork of the repository, and `send us a pull request
-<http://help.github.com/send-pull-requests/>`__. Then, we’ll take a look at your
-pull request, make sure everything looks alright, and merge it in.
+If you want to contribute to a language pack, find the language pack you
+want to modify, `fork the repository
+<https://help.github.com/articles/fork-a-repo>`_, make sure you’re
+working from the correct branch, work on your changes `inside of a
+feature branch <https://help.github.com/articles/fork-a-repo>`_, push
+your changes to your fork of the repository, and `send us a pull request
+<https://help.github.com/articles/using-pull-requests>`_. Then, we’ll
+take a look at your pull request, make sure everything looks alright,
+and merge it in.
 
 (The :doc:`/cp/tools/utilities/translation_utility` can help create new a
 language pack or update an existing one.)

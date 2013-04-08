@@ -67,6 +67,6 @@ article title or content. ::
 This would search the wiki for the phrase "electromagnetic pulse",
 excluding any articles that are in the "DHARMA Initiative" namespace.
 
-**Note:** Namespaces are case-sensitive.
+.. note:: Namespaces are case-sensitive.
 
 

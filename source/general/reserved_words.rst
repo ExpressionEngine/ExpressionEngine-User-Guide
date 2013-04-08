@@ -38,7 +38,7 @@ reserved words.
 -  total\_queries
 -  XID\_HASH
 
-.. _reserved-words-fields:
+.. _reserved_words_fields:
 
 Reserved for Fields
 -------------------

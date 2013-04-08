@@ -227,10 +227,11 @@ type.
     {/if}
     {/custom_fields}
 
-**Note:** The file field example includes markup used by the file
-browser javascript. If you are using the file browser in you entry form,
-it's suggested that you also include a link to the accompanying style
-sheets via the {path='css/\_ee\_saef\_css'} path variable.
+.. note:: The file field example includes markup used by the file
+    browser javascript. If you are using the file browser in you entry
+    form, it's suggested that you also include a link to the
+    accompanying style sheets via the ``{path='css/\_ee\_saef\_css'}``
+    path variable.
 
 DST Enabled
 ~~~~~~~~~~~
@@ -391,8 +392,8 @@ You may exclude fields by placing the word "not" in front of the list::
 
 	show_fields="not image_thumbnail|source|rating"
 
-**Note:** You **must** include all fields that are designated as
-"required".
+.. note:: You **must** include all fields that are designated as
+    "required".
 
 status=
 ~~~~~~~

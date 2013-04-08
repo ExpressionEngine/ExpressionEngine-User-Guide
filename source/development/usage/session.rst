@@ -36,11 +36,13 @@ these functions
 User Data Information
 ---------------------
 
-The **$this->EE->session->userdata** variable is an array that contains
+The ``$this->EE->session->userdata`` variable is an array that contains
 information about that specific user, and it will likely be the most
 used part of this class for any module. Below is a list of the variables
-that it contains. **Note:** If a user has a group\_id of 1, then they
-can access anything, no matter the other settings.
+that it contains. 
+
+.. note:: If a user has a ``group_id`` of 1, then they can access 
+  anything, no matter the other settings.
 
 -  **username** - Username of user
 -  **screen\_name** - Screename of user, if any

@@ -1,7 +1,7 @@
 The Template Engine
 ===================
 
-At a basic level, :ref:`Templates <getting-started-templates>` contain
+At a basic level, :ref:`Templates <getting_started_templates>` contain
 almost everything you want displayed on the front-end of the site. When
 ExpressionEngine serves up each Template, the system must go through a
 rendering process to parse out the Tags, Variables, Snippets, and Embeds
@@ -46,42 +46,42 @@ bottom through each rendering stage.
 
    * {freelancer_version}
    * :doc:`Snippets </templates/globals/snippets>`
-   * :ref:`MSM variables <msm-variables>`: {site_id}, {site_label}, {site_shortname}
-   * :ref:`{last_segment} <global-last-segment>`
+   * :ref:`MSM variables <msm_variables>`: {site_id}, {site_label}, {site_shortname}
+   * :ref:`{last_segment} <global_last_segment>`
 
 #. Parse :doc:`segment variables </templates/globals/url_segments>`
 
-#. Parse :ref:`embed variables <embed-variables>`
+#. Parse :ref:`embed variables <embed_variables>`
 
-#. Parse :ref:`date formatting string constants <template-date-formatting-constants>`
+#. Parse :ref:`date formatting string constants <template_date_formatting_constants>`
 
-#. Parse :ref:`{template_edit_date} <global-template_edit_date>`
+#. Parse :ref:`{template_edit_date} <global_template_edit_date>`
 
-#. Parse :ref:`{current_time} <global-current_time>`
+#. Parse :ref:`{current_time} <global_current_time>`
 
-#. If present, get :ref:`cached template <caching-template-caching>`, then skip to the **advanced 
+#. If present, get :ref:`cached template <caching_template_caching>`, then skip to the **advanced 
    conditionals** parsing stage
 
-#. Parse :ref:`PHP on Input <php-parsing-stage>`
+#. Parse :ref:`PHP on Input <php_parsing_stage>`
 
-#. Parse :ref:`simple conditionals <global-simple-conditionals>`: segment, embed, global variables
+#. Parse :ref:`simple conditionals <global_simple_conditionals>`: segment, embed, global variables
 
 #. Assign and parse :doc:`preload_replace variables </templates/globals/preload_replacement>`
 
 #. Parse **module and plugin tags**
 
-   * See notes on how :ref:`nested plugins <templates-nested-plugins>` are parsed.
-   * If any module's :ref:`{if no_results} <channel-entries-if-no_results>` tag pair evaluates true, a :ref:`{redirect} <global-redirect>` variable within the tag pair will be processed immediately.
+   * See notes on how :ref:`nested plugins <templates_nested_plugins>` are parsed.
+   * If any module's :ref:`{if no_results} <channel_entries_if_no_results>` tag pair evaluates true, a :ref:`{redirect} <global_redirect>` variable within the tag pair will be processed immediately.
 
-#. Parse :ref:`PHP on Output <php-parsing-stage>`
+#. Parse :ref:`PHP on Output <php_parsing_stage>`
 
 #. Write **template to cache file**
 
-#. Parse :ref:`advanced conditionals <global-advanced-conditionals>`
+#. Parse :ref:`advanced conditionals <global_advanced_conditionals>`
 
 #. Process :doc:`embedded templates </templates/embedding>`
 
-#. Process :ref:`redirect variable <global-redirect>`
+#. Process :ref:`redirect variable <global_redirect>`
 
 #. Parse :doc:`user-defined global variables 
    </templates/globals/user_defined>`
@@ -112,7 +112,7 @@ bottom through each rendering stage.
    * {member_profile_link}
    * {captcha}
 
-#. Add :ref:`security hashes <dev-guidelines-secure-forms>` to forms and parse :ref:`{XID_HASH} <global-xid-hash>` 
+#. Add :ref:`security hashes <dev_guidelines_secure_forms>` to forms and parse :ref:`{XID_HASH} <global_xid_hash>` 
 
 #. Parse remaining :doc:`standard global variables </templates/globals/single_variables>` (separately, in order given):
 
@@ -133,6 +133,6 @@ bottom through each rendering stage.
    * {total_forum_topics}
    * {total_forum_replies}
 
-#. Parse :ref:`alternative syntax <global-alt-syntax>` forms of the member variables above
+#. Parse :ref:`alternative syntax <global_alt_syntax>` forms of the member variables above
 
 #. Parse :doc:`path variables </templates/globals/path>`

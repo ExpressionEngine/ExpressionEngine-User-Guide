@@ -97,7 +97,7 @@ Quick Links Manager
 Use this page to add personal links to the control panel sidebar.
 These links will be visible only to you.
 
-.. _my-account-rte-prefs:
+.. _my_account_rte_prefs:
 
 Rich Text Editor Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

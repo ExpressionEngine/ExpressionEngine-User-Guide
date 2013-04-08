@@ -268,7 +268,7 @@ This allows you to reduce bandwidth costs and download time by only
 serving the necessary content.
 
 This ability is provided by adding a special parameter to the
-{exp:channel:entries} opening tag, :ref:`channel-entries-dynamic-start`.
+{exp:channel:entries} opening tag, :ref:`channel_entries_dynamic_start`.
 It is used like so::
 
 	{exp:channel:entries channel="default_site" limit="10" dynamic_start="yes"}

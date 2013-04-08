@@ -36,7 +36,7 @@ the "News" channel). {title} is replaced with the Title of each entry,
 and {body} is replaced with the content entered into the "Body" field
 of each entry.
 
-.. _channel-entries-parameters:
+.. _channel_entries_parameters:
 
 **********
 Parameters
@@ -218,11 +218,11 @@ Or use "not" to exclude categories
 
 	category_group="not 2"
 
-**Note:** Using this parameter will automatically cause ExpressionEngine
-to *ignore* any category information specified via the URL. For
-instance, if you are on a "category page" (e.g. a ``/C13/`` segment in the
-URL) that will be completely ignored in favor of whatever you have
-specified via the parameter.
+.. note:: Using this parameter will automatically cause ExpressionEngine
+	to *ignore* any category information specified via the URL. For
+	instance, if you are on a "category page" (e.g. a ``/C13/`` segment
+	in the URL) that will be completely ignored in favor of whatever you
+	have specified via the parameter.
 
 channel=
 --------
@@ -383,10 +383,10 @@ your site you visit (main page, archives, comments, etc.). By setting
 ``dynamic="no"`` you will ensure that the list is not affected by anything
 passed in the URL.
 
-Note: you may allow the tag to be sensitive to pagination data in the
-url by including the `paginate=`_ parameter. If that tag
-is used in conjunction with the dynamic parameter, the tag will act
-dynamically for pagination data only.
+.. note:: You may allow the tag to be sensitive to pagination data in 
+	the url by including the `paginate=`_ parameter. If that tag
+	is used in conjunction with the dynamic parameter, the tag will act
+	dynamically for pagination data only.
 
 dynamic_parameters=
 -------------------
@@ -401,12 +401,12 @@ data submitted via a form. A practical use for this is to create some
 display options in a form on your page that your visitors can use to
 select their preferred page view.
 
-**NOTE:** This feature will only work if page caching is turned OFF for
-the template in which it is being used.
+.. note:: This feature will only work if page caching is turned OFF for
+	the template in which it is being used.
 
 Every Parameter available to the channel tag can be set dynamically.
 
-.. _channel-entries-dynamic-start:
+.. _channel_entries_dynamic_start:
 
 dynamic\_start=
 ---------------
@@ -489,9 +489,10 @@ setting it to 'desc'::
 In the above example, three entries would be displayed, in the order: 1,
 7, and then 3.
 
-**Note:** Using this parameter will automatically constrain the entries
-tag to the entry id's you specify, effectively setting the `entry_id=`_
-parameter to the same id's given to the fixed_order= parameter.
+.. note:: Using this parameter will automatically constrain the entries
+	tag to the entry id's you specify, effectively setting the 
+	`entry_id=`_ parameter to the same id's given to the 
+	``fixed_order=`` parameter.
 
 group\_id=
 ----------
@@ -513,7 +514,7 @@ Or exclude groups using "not"
 
 	group_id="not 2|3|4"
 
-.. _channel-entries-limit:
+.. _channel_entries_limit:
 
 limit=
 ------
@@ -554,7 +555,7 @@ do this::
 
 	offset="3"
 
-.. _channel-entries-orderby:
+.. _channel_entries_orderby:
 
 orderby=
 --------
@@ -589,13 +590,13 @@ the field::
 
 	orderby="name_of_field"
 
-**Note:** Ordering by a Relationship field will cause entries to appear
-in the order the relationships were made, not based on any content from
-the related entries.
+.. note:: Ordering by a Relationship field will cause entries to appear
+	in the order the relationships were made, not based on any content
+	from the related entries.
 
-**Note:** When ordering by "random", entries that have been marked as
-"sticky" will not appear first; they will appear randomly with all other
-entries.
+.. note:: When ordering by "random", entries that have been marked as
+	"sticky" will not appear first; they will appear randomly with all
+	other entries.
 
 **Multiple Orders and Sorts**
 
@@ -711,7 +712,7 @@ by the URL.
 
 The default limit when enabling related_categories_mode is 10
 entries, and can be overridden with the addition of the
-:ref:`channel-entries-limit` parameter.
+:ref:`channel_entries_limit` parameter.
 
 When the ``related_categories_mode=""`` parameter is set to "yes", there
 are two additional parameters available to the Channel Entries tag:
@@ -740,7 +741,7 @@ This parameter allows you to use the category indicator in your URLs
 with an entries tag specifying multiple channels that do **not** share
 category groups.
 
-.. _channel-entries-require_entry:
+.. _channel_entries_require_entry:
 
 require\_entry=
 --------------------
@@ -760,8 +761,8 @@ URL. However, if one of your single entry pages is requested, but it
 doesn't contain a valid ID, this parameter will tell the tag that you do
 not wish the template to display anything.
 
-**Note:** You will often use this parameter in conjunction with the 
-`if no_results`_ conditional.
+.. note:: You will often use this parameter in conjunction with the 
+	`if no_results`_ conditional.
 
 search:field\_name=
 -------------------
@@ -776,8 +777,8 @@ by using the field's short name immediately after "search:". You can
 search based on whether a field is an exact match to your provided term
 or whether or not a field simply contains your term.
 
-**Note:** Only fields of the type "Text Input", "Textarea", and
-"Drop-down Lists" are searched with this parameter.
+.. note:: Only fields of the type "Text Input", "Textarea", and
+	"Drop-down Lists" are searched with this parameter.
 
 "Exact" Matching
 ~~~~~~~~~~~~~~~~
@@ -879,10 +880,10 @@ the body is empty **or** contains the word "sandwich". ::
 This example returns only entries that have content, but **not** those
 that contain "sandwich" **nor** those that contain the word "salad".
 
-**Note:** You may use multiple search: parameters in a channel entries
-tag, as long as each one is searching a different field. e.g.::
+.. note:: You may use multiple search: parameters in a channel entries
+	tag, as long as each one is searching a different field. e.g.::
 
-	{exp:channel:entries search:style="=ale" search:region="germany|belgium" search:rating="=3|4|5"}
+		{exp:channel:entries search:style="=ale" search:region="germany|belgium" search:rating="=3|4|5"}
 
 show\_current\_week=
 --------------------
@@ -907,7 +908,7 @@ show\_expired=
 You can determine whether you wish for entries that have "expired" to be
 included.
 
-.. _channel-entries-show-future-entries:
+.. _channel_entries_show_future_entries:
 
 show\_future\_entries=
 ----------------------
@@ -922,7 +923,7 @@ list of events, some of which have not occurred yet. Note that EE will
 still display past entries; this parameter simply instructs EE to also
 include entries from the future.
 
-.. _channel-entries-show-pages:
+.. _channel_entries_show_pages:
 
 show\_pages=
 ------------
@@ -1009,14 +1010,14 @@ You may optionally use a 12 hour time format by including am/pm notation
 08:00 pm; 2004-06-05 08:00 is equivalent to: 2004-06-05 08:00 AM and
 2004-06-05 08:00 am).
 
-**Note:** If you are using a non-English language pack, it's necessary
-to use a 24 hour format only, as the AM/PM indicators may have been
-changed.
+.. note:: If you are using a non-English language pack, it's necessary
+	to use a 24 hour format only, as the AM/PM indicators may have been
+	changed.
 
 Common Uses
 ~~~~~~~~~~~
 
-This parameter can be used in conjunction with :ref:`global-current_time`::
+This parameter can be used in conjunction with :ref:`global_current_time`::
 
 	{exp:channel:entries channel="{my_weblog}" sort="desc" start_on="{current_time format='%Y-%m-%d %H:%i'}" show_future_entries="yes"}
 
@@ -1095,7 +1096,7 @@ sticky=
 By default, sticky topics always remain at the top of the page. You can
 manually turn off stickies by using the above parameter.
 
-.. _channel-entries-track-views:
+.. _channel_entries_track_views:
 
 track\_views=
 -------------
@@ -1118,7 +1119,7 @@ can be shown within any tag::
 
 	{view_count_one}{view_count_two}{view_count_three}{view_count_four}
 
-.. _channel-entries-uncategorized-entries:
+.. _channel_entries_uncategorized_entries:
 
 uncategorized\_entries=
 -----------------------
@@ -1233,7 +1234,7 @@ To show only the month of December in 2003 you'll do this
    must specify the year if you specify the month and you must specify both 
    month and year to use day.
 
-.. _channel-entries-single-variables:
+.. _channel_entries_single_variables:
 
 ****************
 Single Variables
@@ -1498,7 +1499,7 @@ entry\_id
 
 The ID number of the channel entry.
 
-.. _channel-entries-entry_id_path:
+.. _channel_entries_entry_id_path:
 
 entry\_id\_path
 ---------------
@@ -1535,7 +1536,7 @@ expiration\_date
 The expiration date of the entry. See :doc:`Date Variable Formatting
 </templates/date_variable_formatting>` for more information.
 
-.. _channel-entries-forum_topic_id:
+.. _channel_entries_forum_topic_id:
 
 forum\_topic\_id
 ----------------
@@ -1553,7 +1554,7 @@ typically be used like so::
 		<a href="{path='forums/viewthread'}{forum_topic_id}">Discuss this in our forums</a>
 	{/if}
 
-.. _channel-entries-gmt_entry_date:
+.. _channel_entries_gmt_entry_date:
 
 gmt\_entry\_date
 ----------------
@@ -1646,7 +1647,7 @@ occupation
 
 The author's occupation as entered in their profile.
 
-.. _channel-entries-page-uri:
+.. _channel_entries_page_uri:
 
 page\_uri
 ---------
@@ -1662,7 +1663,7 @@ so::
 
 	{if page_uri != ''} <a href="{page_uri}">View this page</a> {/if}
 
-.. _channel-entries-page-url:
+.. _channel_entries_page_url:
 
 page\_url
 ---------
@@ -1907,10 +1908,10 @@ Will render as::
 
 	http://example.com/index.php/channel/archives/my_ugly_boyfriend/
 
-**Note:** When creating a new entry, if you don't supply the "url title"
-then it will be automatically created from the actual entry title.
-Spaces are turned into underscores and quotes are removed. For example,
-"Joe's night out" becomes "joes\_night\_out".
+.. note:: When creating a new entry, if you don't supply the "url title"
+	then it will be automatically created from the actual entry title.
+	Spaces are turned into underscores and quotes are removed. For
+	example, "Joe's night out" becomes "joes\_night\_out".
 
 total\_results
 --------------
@@ -1980,7 +1981,7 @@ url\_title
 
 The human readable title used in the URL as a permalink.
 
-.. _channel-entries-url_title_path:
+.. _channel_entries_url_title_path:
 
 url\_title\_path
 ----------------
@@ -2024,7 +2025,7 @@ the week date will fall on Sunday for the week of the entry. When
 the week of the entry. See :doc:`Date Variable Formatting
 </templates/date_variable_formatting>` for more information.
 
-.. _channel-entries-conditional-variables:
+.. _channel_entries_conditional_variables:
 
 *********************
 Conditional Variables
@@ -2135,7 +2136,7 @@ like so::
 		<a href="{path='forums/viewthread'}/{forum_topic_id}">Discuss this in our forums</a>
 	{/if}
 
-.. _channel-entries-if-no_results:
+.. _channel_entries_if_no_results:
 
 if no\_results
 --------------
