@@ -23,13 +23,15 @@ Text. Go to ``Preferences → Settings → More → Syntax Specific - User``
 and add the following::
 
   {
+    "detect_indentation" : false,
     "rulers":
     [
       72
     ],
     "spell_check": true,
     "translate_tabs_to_spaces": true,
-    "tab_size": 2
+    "tab_size": 2,
+    "trim_trailing_white_space_on_save": true
   }
 
 Additionally, this turns on spell checking and a ruler at 72 characters
@@ -39,13 +41,13 @@ as a reminder to insert newlines.
 Links
 *****
 
-When linking to another page in the documentation always use doc 
+When linking to another page in the documentation always use doc
 references::
 
   :doc:`Another Page <section/another_page>`
   :doc:`section/another_page`
 
-If you don't insert a page title (e.g. ``Another Page`` above) then 
+If you don't insert a page title (e.g. ``Another Page`` above) then
 the page title from the linked document will be used
 When linking to a documented method, use the method references::
 
@@ -55,7 +57,7 @@ When linking to an anchor on the page, section links::
 
   `Section Name on page`_
 
-When linking to an anchor on another page, you **must** use 
+When linking to an anchor on another page, you **must** use
 cross-references (always use underscores in the reference definition)
 ::
 
@@ -99,39 +101,39 @@ headings just use underlines, with the following hierarchy::
   - for subsubsections
   ^ for subsubsubsections
   " for subsubsubsubsections (!)
-  
+
 The TextMate EEDocs Bundle can help you create these with the following
 tab triggers::
 
   title->
-  
+
     ##########
     Page Title
     ##########
 
   sec->
-  
+
     *************
     Major Section
     *************
-    
+
   sub->
-  
+
     Subsection
     ==========
-    
+
   sss->
-  
+
     SubSubSection
     -------------
-    
+
   ssss->
-  
+
     SubSubSubSection
     ^^^^^^^^^^^^^^^^
-    
+
   sssss->
-  
+
     SubSubSubSubSection (!)
     """""""""""""""""""""""
 
@@ -222,7 +224,7 @@ Or you can add "not" to exclude usernames
 ::
 
   username="not tom|dick|harry|fred"
-  
+
 You can also use the constant "CURRENT\_USER" to show entries from only the
 currently logged in user.
 
@@ -330,7 +332,7 @@ following ReST:
 
       :returns: whether or something should be done or not
       :rtype: Boolean
-  
+
 
 It creates the following display:
 
@@ -352,18 +354,18 @@ some_method()
     :rtype: Boolean
 
     Example Usage::
-      
+
       <?php
-      
+
       $this->EE->load->library('some_class');
-      
+
       $bar = array(
         'something'   => 'Here is this parameter!',
         'something_else'  => 42
       );
-      
+
       $bat = $this->EE->some_class->should_do_something();
-      
+
       if ($this->EE->some_class->some_method(4, $bar, $bat) === FALSE)
       {
         show_error('An Error Occurred Doing Some Method');
@@ -432,7 +434,7 @@ see `ExpressionEngine URLs <../../../general/urls.html>`_ page.
 
 .. important::
   **BONUS:** Since the Search module utilizes channel variables, ``{absolute_count}`` is also available to the Search Results tag.
-  
+
 ***********************
 Save Template Revisions
 ***********************
