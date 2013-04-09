@@ -14,7 +14,7 @@ it.
 
 ::
 
-    $this->EE->load->library('email'); 
+    $this->EE->load->library('email');
 
 Sending an Email
 ----------------
@@ -28,12 +28,12 @@ example pice of code used for sending a single email.
 ::
 
     $this->EE->load->library('email');
-    $this->EE->load->helper('text'); 
+    $this->EE->load->helper('text');
 
     $this->EE->email->wordwrap = true;
-    $this->EE->email->mailtype = 'text';    
+    $this->EE->email->mailtype = 'text';
     $this->EE->email->from($from);
-    $this->EE->email->to($recipient); 
+    $this->EE->email->to($recipient);
     $this->EE->email->subject($email_subject);
     $this->EE->email->message(entities_to_ascii($email_msg));
     $this->EE->email->Send();
@@ -47,7 +47,7 @@ charset
 Specifies the character set of the email. Since ExpressionEngine uses
 the character set in the Control Panel and in the default templates, the
 default is set for UTF-8. However, in certain circumstances you might
-wish to change this. 
+wish to change this.
 
 .. note:: There are email clients that will ignore any character
     specified in an email and will attempt to auto-detect, sometimes
@@ -116,7 +116,7 @@ The function for specifying the Reply-To header of the email. The
 variable is the email address(es) that when a person replies to this
 email, it will be in the To box automatically.
 
-$this->EE->email->to('someone@example.com'); 
+$this->EE->email->to('someone@example.com');
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 $this->EE->email->to('one@example.com, two@example.com, three@example.com');
@@ -156,25 +156,25 @@ $this->EE->email->message('This is my message');
 
 Sets the email message body.
 
-You may also choose to manually specify an alternative message if sending HTML 
+You may also choose to manually specify an alternative message if sending HTML
 email.
 
 $this->EE->email->set_alt_message('This is the alternative message');
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is an optional message string which can be used if you send HTML 
-formatted email. It lets you specify an alternative message with no HTML 
-formatting which is added to the header string for people who do not accept 
-HTML email. If you do not set your own message CodeIgniter will extract the 
+This is an optional message string which can be used if you send HTML
+formatted email. It lets you specify an alternative message with no HTML
+formatting which is added to the header string for people who do not accept
+HTML email. If you do not set your own message CodeIgniter will extract the
 message from your HTML email and strip the tags.
 
 .. note:: If you are using data from a channel entry and not sending an
-    HTML email, then you should use the entities\_to\_ascii() function 
+    HTML email, then you should use the entities\_to\_ascii() function
     (text helper) to convert any HTML entities back into ASCII
     characters before sending the message to the class.
 
 Finally, to send the message, call the $this->EE->email->Send()
-function, and the class will process and send the email. 
+function, and the class will process and send the email.
 
 $this->EE->email->send();
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -210,7 +210,7 @@ possible that the emails will not be sent or sent incorrectly.
 ::
 
     $this->EE->load->library('email');
-    $this->EE->load->helper('text'); 
+    $this->EE->load->helper('text');
 
     $this->EE->email->wordwrap = true;
     $this->EE->email->mailtype = 'text';
@@ -219,7 +219,7 @@ possible that the emails will not be sent or sent incorrectly.
     foreach($member_emails as $username => $from)
     {
         $this->EE->email->from($from);
-        $this->EE->email->to($recipient); 
+        $this->EE->email->to($recipient);
         $this->EE->email->subject("Account Expiration: {$username}");
         $this->EE->email->message(entities_to_ascii($message));
         $this->EE->email->send();
@@ -227,7 +227,7 @@ possible that the emails will not be sent or sent incorrectly.
 		if ( ! $this->EE->email->send())
 		{
 			$errors[] = $this->EE->email->print_debugger();
-			
+
 			// Send failed, data was not cleared
 			$this->EE->email->clear();
 		}
@@ -240,8 +240,8 @@ Displaying Debugging Output
 $this->EE->email->print_debugger();
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Returns a string containing any server messages, the email headers, and the 
-email message. 
+Returns a string containing any server messages, the email headers, and the
+email message.
 
 You can optionally specify which parts of the message should be printed. Valid
  options are: headers, subject, body.
@@ -251,7 +251,7 @@ You can optionally specify which parts of the message should be printed. Valid
     $this->EE->email->send(FALSE);
     echo $this->EE->email->print_debugger(array('headers'));
 
-This would print the email headers, excluding the message subject and body.  
+This would print the email headers, excluding the message subject and body.
 
 By default, all of the raw data will be printed.
 
