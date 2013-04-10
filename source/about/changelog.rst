@@ -146,6 +146,8 @@ Release Date: ?
     to the name being truncated for length.
   - Fixed a bug (#16256) where the status dropdown on the Content Edit
     page was not always populated with the correct custom statuses.
+  - Fixed a bug where variable pairs could be incompletely parsed due to
+    naming conflicts.  See bugs #17915, #17673, #19249.
 
 - Developers
 
