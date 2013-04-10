@@ -535,7 +535,7 @@ template. ::
 
 	    if (strncmp($key, "spell_date", 10) == 0)
 	    {
-	        $date = ee()->localize->decode_date($val, $row['spell_date']);
+	        $date = ee()->localize->format_date($val, $row['spell_date']);
 
 	        $tagdata = ee()->TMPL->swap_var_single($key, $date, $tagdata);
 	    }

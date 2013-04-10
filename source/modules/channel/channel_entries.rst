@@ -1028,7 +1028,7 @@ If the date needs to be set dynamically, then PHP must often be used.
 it to be parsed on "input". One example usage is::
 
 	<?php
-		$start_time = ee()->localize->decode_date('%Y-%m-%d %H:%i', ee()->localize->now - 86400);
+		$start_time = ee()->localize->format_date('%Y-%m-%d %H:%i', ee()->localize->now - 86400);
 	?>
 
 	{exp:channel:entries channel="{my_weblog}" limit="5" sort="desc" start_on="<?php echo $start_time; ?>"}
@@ -1077,7 +1077,7 @@ If the date needs to be set dynamically, then PHP must often be used.
 it to be parsed on "input" and then use something like this::
 
 	<?php
-		$current_time = ee()->localize->decode_date('%Y-%m-%d %H:%i', ee()->localize->now - 518400);
+		$current_time = ee()->localize->format_date('%Y-%m-%d %H:%i', ee()->localize->now - 518400);
 	?>
 
 	{exp:channel:entries channel="{my_weblog}" orderby="date" sort="desc" stop_before="<?php echo $current_time; ?>"}
