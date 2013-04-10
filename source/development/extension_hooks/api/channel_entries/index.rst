@@ -16,8 +16,8 @@ api_channel_entries_custom_field_query
 
   How it's called::
 
-    $result = $this->EE->extensions->call('api_channel_entries_custom_field_query', $result);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $result = ee()->extensions->call('api_channel_entries_custom_field_query', $result);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param array $result: Array of results from custom field query
   :returns: Modified custom fields query array result
@@ -35,7 +35,7 @@ entry_submission_ready
 
   How it's called::
 
-    $this->EE->extensions->call('entry_submission_ready', $this->meta, $this->data, $this->autosave);
+    ee()->extensions->call('entry_submission_ready', $this->meta, $this->data, $this->autosave);
 
   :param array $meta: Entry's metadata (``channel_id``, ``entry_date``,
     i.e. fields for ``exp_channel_titles``)

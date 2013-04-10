@@ -16,7 +16,7 @@ core_template_route
 
   How it's called::
 
-    $edata = $this->EE->extensions->call('core_template_route', $this->EE->uri->uri_string);
+    $edata = ee()->extensions->call('core_template_route', ee()->uri->uri_string);
     if (is_array($edata) && count($edata) == 2)
     {
         list($template_group, $template) = $edata;

@@ -17,8 +17,8 @@ Developer Guidelines Checklist
     :doc:`Developer Log </cp/tools/logs/developer_log>` to make
     sure no deprecation warnings have surfaced from your add-on)
   - All code is PHP 5.2.4+ compatible
-  - Proper use of ``$this->EE->session->set_cache()`` and
-    ``$this->EE->session->cache()``
+  - Proper use of ``ee()->session->set_cache()`` and
+    ``ee()->session->cache()``
   - Class and filenames are prefixed to avoid overlap when the name
     and purpose may be common
   - Custom database tables all use ``exp_`` prefix, followed by unique
@@ -71,12 +71,12 @@ Developer Guidelines Checklist
   - XSS Cleaning taking place for all front-side user input before
     inserting into the database or output to the screen.
   - PHP variables escaped in queries.
-  - Manually written queries using ``$this->EE->db->escape_str()``
-  - ``$this->EE->db->insert_string()`` used for data ``INSERT``
-  - ``$this->EE->db->update_string()`` is used for ``UPDATE``
+  - Manually written queries using ``ee()->db->escape_str()``
+  - ``ee()->db->insert_string()`` used for data ``INSERT``
+  - ``ee()->db->update_string()`` is used for ``UPDATE``
   - Strings sent as the ``WHERE`` clause to
-    ``$this->EE->db->update_string()`` are escaped with
-    ``$this->EE->db->escape_str()``
+    ``ee()->db->update_string()`` are escaped with
+    ``ee()->db->escape_str()``
   - Security and required preference settings are stored in the
     database or ``config.php`` file.
   - Prefs and settings are not being used in hidden form fields

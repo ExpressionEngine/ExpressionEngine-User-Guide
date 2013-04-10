@@ -378,10 +378,10 @@ or you explicitly document that your add-on requires said PHP libraries.
 
 .. _use_of_session_cache:
 
-Use of $this->EE->session->cache
+Use of ee()->session->cache
 --------------------------------
 
-``$this->EE->session->cache`` is an array provided for you to use for
+``ee()->session->cache`` is an array provided for you to use for
 "flash" content, i.e. values that you would like to persist during a
 page load, helping you eliminate redundant queries and PHP processing.
 To avoid conflicts with other first and third-party use of this array,
@@ -392,12 +392,12 @@ for separators between words, and meaningful names.
 
 INCORRECT::
 
-  $this->EE->session->cache['admins']
-  $this->EE->session->cache['Super_class']['admins']
+  ee()->session->cache['admins']
+  ee()->session->cache['Super_class']['admins']
 
 CORRECT::
 
-  $this->EE->session->cache['super_class']['admins']
+  ee()->session->cache['super_class']['admins']
 
 Here is an example of how one might utilize the ``$EE->session->cache``
 array. This way, no matter how many times this method is called on a
@@ -405,15 +405,15 @@ given page load (for instance, a tag being used twice on a template, or
 within a tag that might loop, such as a plugin within the Channel
 entries tag), the query and loading of the array occurs only once::
 
-  if ( ! isset($this->EE->session->cache['super_class']['admins']))
+  if ( ! isset(ee()->session->cache['super_class']['admins']))
   {
-      $query = $this->EE->db->query("SELECT member_id FROM exp_super_class_admins");
+      $query = ee()->db->query("SELECT member_id FROM exp_super_class_admins");
 
       if ($query->num_rows()() > 0)
       {
           foreach($query->result_array() as $row)
           {
-              $this->EE->session->cache['super_class']['admins'][] = $row['member_id'];
+              ee()->session->cache['super_class']['admins'][] = $row['member_id'];
           }
       }
   }  // set a local variable from the cached
@@ -718,11 +718,11 @@ INCORRECT::
 
   // keywords are lowercase and query is too long for
   // a single line (... indicates continuation of line)
-  $query = $this->EE->db->query("select foo, bar, baz, foofoo, foobar as raboof, foobaz from exp_pre_email_addresses where foo != 'oof' and baz != 'zab' order by foobaz limit 5, 100");
+  $query = ee()->db->query("select foo, bar, baz, foofoo, foobar as raboof, foobaz from exp_pre_email_addresses where foo != 'oof' and baz != 'zab' order by foobaz limit 5, 100");
 
 CORRECT::
 
-  $query = $this->EE->db->query("SELECT foo, bar, baz, foofoo, foobar AS raboof, foobaz
+  $query = ee()->db->query("SELECT foo, bar, baz, foofoo, foobar AS raboof, foobaz
       FROM exp_pre_email_addresses
       WHERE foo != 'oof'
       AND baz != 'zab'

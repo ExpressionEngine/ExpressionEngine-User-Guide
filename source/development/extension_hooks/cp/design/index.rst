@@ -47,7 +47,7 @@ template_types
   This hook must append a key to the :doc:`$last_call
   </development/extensions>` array in the following format::
 
-      $custom_templates = $this->EE->extensions->last_call;
+      $custom_templates = ee()->extensions->last_call;
 
       $custom_templates['ical'] = array(             // Short name for database
           'template_name'           => 'iCal Feed',  // Display name for Template Type dropdown

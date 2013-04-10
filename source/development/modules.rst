@@ -54,17 +54,11 @@ The Update file (upd.module_name.php)
   letter and only the first letter of the class name should be
   capitalized. There is only one required class variable is
   ``$version``, which should indicate the current version of this
-  module. As always, be sure you invoke the super object in your
-  constructor::
+  module::
 
     class Module_name_upd {
 
         var $version = '1.0';
-
-        function __construct()
-        {
-            $this->EE =& get_instance();
-        }
 
 Update File Function Reference
 ------------------------------
@@ -92,7 +86,7 @@ install() *
          'has_publish_fields' => 'y'
       );
 
-      $this->EE->db->insert('modules', $data);
+      ee()->db->insert('modules', $data);
 
   - Optionally add records to the ``exp_actions`` table---used if your
     module needs to invoke actions based on frontend behavior such as
@@ -103,14 +97,14 @@ install() *
          'method'    => 'method_to_call'
       );
 
-      $this->EE->db->insert('actions', $data);
+      ee()->db->insert('actions', $data);
 
   - Optionally add the publish page tab fields to any saved publish
     layouts. This is ONLY used if the module adds a tab to the publish
     page and it requires the ``tabs()`` function::
 
-      $this->EE->load->library('layout');
-      $this->EE->layout->add_layout_tabs($this->tabs(), 'module_name');
+      ee()->load->library('layout');
+      ee()->layout->add_layout_tabs($this->tabs(), 'module_name');
 
   :returns: ``TRUE`` if everything installed properly, ``FALSE`` if not
   :rtype: Boolean
@@ -158,8 +152,8 @@ uninstall() *
     layouts. This is ONLY used if the module adds a tab to the publish
     page and it requires the ``tabs()`` function::
 
-      $this->EE->load->library('layout');
-      $this->EE->layout->delete_layout_tabs($this->tabs(), 'module_name');
+      ee()->load->library('layout');
+      ee()->layout->delete_layout_tabs($this->tabs(), 'module_name');
 
   :returns: ``TRUE`` if everything uninstalled properly, ``FALSE``
     otherwise
@@ -250,8 +244,7 @@ The Tab File (tab.module_name.php)
   This is an optional file, required only if your module needs to
   include a tab on the publish page. It must have a class with a name
   that is a combination of the package's name with a ``_tab`` suffix.
-  There are no required class variables, though be sure you invoke the
-  super object in your constructor. Because multiple modules may be
+  There are no required class variables. Because multiple modules may be
   adding fields to the publish page, all third party tab fields are
   namespaced using the package name when displayed on the publish page.
   This namespacing will be stripped prior to any data being returned to
@@ -344,7 +337,7 @@ publish_data_db($params) *
             'file_id' => $params['mod_data']['field_name_one']
             );
 
-            $this->EE->db->insert('table_name', $data);
+            ee()->db->insert('table_name', $data);
     }
 
   :param array $params: top level array consists of ``meta``, ``data``,
@@ -370,8 +363,7 @@ The Control Panel File (mcp.module_name.php)
   Used to create the backend control panel, it includes a class with a
   name that is a combination of the package's name with a ``_mcp``
   suffix. The first letter and only the first letter of the class name
-  should be capitalized. There are no required class variables. As
-  always, be sure you invoke the super object in your constructor. The
+  should be capitalized. There are no required class variables. The
   control panel file for a module without a backend control panel would
   look like::
 
@@ -379,10 +371,6 @@ The Control Panel File (mcp.module_name.php)
 
     class Module_name_mcp {
 
-        function __construct()
-        {
-            $this->EE =& get_instance();
-        }
     }
     // END CLASS
 
@@ -427,12 +415,12 @@ control panel file:
 - Set the page title, which is also displayed in the breadcrumb. Any
   displayed control panel page should include a title::
 
-    $this->EE->view->cp_page_title = lang('mymodule_module_name');
+    ee()->view->cp_page_title = lang('mymodule_module_name');
 
 - For interior pages, you will want to add to the breadcrumb, allowing
   easy navigation back to your main page::
 
-    $this->EE->cp->set_breadcrumb(
+    ee()->cp->set_breadcrumb(
         BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name',
         lang('mymodule_module_name')
     );
@@ -441,7 +429,7 @@ control panel file:
   fourth level navigation. This is easily done in the constructor using
   the ``set_right_nav()`` function::
 
-    $this->EE->cp->set_right_nav(array(
+    ee()->cp->set_right_nav(array(
         'add_record'        => BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name'.AMP.'method=add_record'
     ));
 
@@ -458,16 +446,16 @@ JavaScript in your control panel:
 
 - Loading jQuery plugins::
 
-    $this->EE->cp->add_js_script(array('plugin' => 'dataTables'));
+    ee()->cp->add_js_script(array('plugin' => 'dataTables'));
 
 - Outputting JavaScript to the browser::
 
-    $this->EE->javascript->output();
+    ee()->javascript->output();
 
 - After defining any JavaScript output, you must compile in order to
   display it::
 
-    $this->EE->javascript->compile();
+    ee()->javascript->compile();
 
 Working with Forms
 ~~~~~~~~~~~~~~~~~~
@@ -481,8 +469,8 @@ several differences/additions worth noting:
 - After form submission, you will generally want to output a success
   (or failure) message and redirect to a new page::
 
-    $this->EE->session->set_flashdata('message_success', lang('record_added'));
-    $this->EE->functions->redirect(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name');
+    ee()->session->set_flashdata('message_success', lang('record_added'));
+    ee()->functions->redirect(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name');
 
 Outputting Pages
 ~~~~~~~~~~~~~~~~
@@ -504,7 +492,7 @@ are passed to the view in an array when you load it. Setting the third
 parameter of the load call to true will return the view to you as a
 string::
 
-  return $this->EE->load->view('index', $vars, TRUE);
+  return ee()->load->view('index', $vars, TRUE);
 
 This would return the index.php view page, located in a ``views``
 folder. The view file is passed an array with all of the variables used
@@ -527,8 +515,7 @@ any module tags contained in a template. It includes a class with a name
 that matches the package (the first letter of the class name must be
 capitalized). There is one required class variable, $return_data, which
 will contain the module's outputted content and is retrieved by the
-Template parser after the module is done processing. As always, be sure
-you invoke the super object in your constructor.
+Template parser after the module is done processing.
 
 The tag structure of a module follows the same rules as the :doc:`Plugins
 API <plugins>`::

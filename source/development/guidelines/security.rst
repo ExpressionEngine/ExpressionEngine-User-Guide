@@ -19,17 +19,17 @@ educational reading and examples on the following site:
 Cross Site Scripting should be taken very seriously as you would never
 want your add-on to be the source of an attack vector.
 
-$this->EE->security->xss_clean()
+ee()->security->xss_clean()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-``$this->EE->security->xss_clean()`` is the built in ExpressionEngine
+``ee()->security->xss_clean()`` is the built in ExpressionEngine
 XSS sanitization method, which is constantly tweaked for improved
 security and performance. It accepts both a ``string`` and an ``array``
 and will return sanitized text.
 
 ::
 
-  $str = $this->EE->security->xss_clean($str);
+  $str = ee()->security->xss_clean($str);
 
 Sanitized Variables on Input
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -43,7 +43,7 @@ Keys are cleaned and new lines in data are normalized
 
 For performance reasons, data are not automatically run through the xss
 filter. This means that any front-side user input from superglobals
-should be sanitized by using ``$this->EE->security->xss_clean()`` before
+should be sanitized by using ``ee()->security->xss_clean()`` before
 inserting into the database our outputting to the screen. If the user
 input is in the Control Panel, such as a module's back end, it is at
 your discretion based on the needs of the module for whether or not
@@ -57,7 +57,7 @@ INSERT and UPDATE Queries
 As ExpressionEngine assumes that all information in the database is
 sanitized against XSS, the responsibility for sanitization falls on
 **input** to the database. Therefore, all ``INSERT`` and ``UPDATE``
-queries should use ``$this->EE->security->xss_clean()`` for user input
+queries should use ``ee()->security->xss_clean()`` for user input
 data.
 
 Outputting Data to the Page
@@ -76,7 +76,7 @@ When In Doubt...
 
 If there is any doubt on the safety of a variable that you are
 outputting or inserting into the database, use XML Encode
-(``$this->EE->xml_convert()`` or
+(``ee()->xml_convert()`` or
 `htmlentities() <http://us.php.net/manual/en/function.htmlentities.php>`_
 and
 `strip_tags() <http://us.php.net/manual/en/function.strip-tags.php>`_.
@@ -89,7 +89,7 @@ query without being properly filtered, allowing a user to execute their
 own queries on the database. Example::
 
   $evil = "brett'; DELETE FROM exp_members;";
-  $query = $this->EE->db->query("SELECT * FROM exp_members WHERE username='{$evil}'");
+  $query = ee()->db->query("SELECT * FROM exp_members WHERE username='{$evil}'");
 
 For more information, you can read MySQL's guide to SQL Injection
 security:
@@ -103,33 +103,33 @@ explicitly set to a hard-coded value *within* the method using the
 query. This means that even variables passed as arguments to a method
 must be escaped before being used in a query.
 
-Manually written queries should use :doc:`$this->EE->db->escape_str()
+Manually written queries should use :doc:`ee()->db->escape_str()
 <../usage/database>` on variables, even if you think the value is
 trusted::
 
-  $query = $this->EE->db->query("SELECT field FROM table WHERE column = '".$this->EE->db->escape_str($foo)."'");
+  $query = ee()->db->query("SELECT field FROM table WHERE column = '".ee()->db->escape_str($foo)."'");
 
-:doc:`$this->EE->db->insert_string() <../usage/database>` is the
+:doc:`ee()->db->insert_string() <../usage/database>` is the
 preferred method for ``INSERT`` queries, as values are escaped
 automatically in the supplied data array::
 
   $data = array('name' => 'Brett Bretterson', 'email_address' => 'brett@example.com');
-  $this->EE->db->query($this->EE->db->insert_string('table', $data));
+  ee()->db->query(ee()->db->insert_string('table', $data));
 
-:doc:`$this->EE->db->update_string() <../usage/database>` is the
+:doc:`ee()->db->update_string() <../usage/database>` is the
 preferred method for ``UPDATE`` queries, as values are escaped
 automatically in the supplied data and ``where`` arrays::
 
   $data = array('email_address' => 'brett.bretterson@example.com');
   $where = array('name' => 'Brett Bretterson');
-  $this->EE->db->query($this->EE->db->update_string('table', $data, $where));
+  ee()->db->query(ee()->db->update_string('table', $data, $where));
 
 .. note:: If you send the third argument (the ``WHERE`` clause) as an
   array as shown above, it will automatically be escaped. If you send
   a string, you must escape it yourself::
 
     $data = array('email_address' => 'brett.bretterson@example.com');
-    $this->EE->db->query($this->EE->db->update_string('table', $data, "name = '".$this->EE->db->escape_str($foo)."'"));
+    ee()->db->query(ee()->db->update_string('table', $data, "name = '".ee()->db->escape_str($foo)."'"));
 
 Preferences and Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -194,7 +194,7 @@ Always validate the values being supplied to a tag parameter before
 using them in your code. ``switch()`` statements are good for numerous
 possible values, as are arrays of possible values::
 
-  switch ($foo = $this->EE->TMPL->fetch_param('foo'))
+  switch ($foo = ee()->TMPL->fetch_param('foo'))
   {
       case 'bar':
       case 'baz':
@@ -207,20 +207,20 @@ possible values, as are arrays of possible values::
   }
 
   $valid_foo = array('bar', 'baz', 'bag');
-  $foo = (in_array($foo = $this->EE->TMPL->fetch_param('foo'), $valid_foo)) ? $foo : '';
+  $foo = (in_array($foo = ee()->TMPL->fetch_param('foo'), $valid_foo)) ? $foo : '';
 
 If you cannot validate against specific values, at least validate the
 type of data::
 
-  if (! ctype_digit($foo = $this->EE->TMPL->fetch_param('foo')))
+  if (! ctype_digit($foo = ee()->TMPL->fetch_param('foo')))
   {
-      $this->EE->TMPL->log_item('Super Class Module error: Provided parameter "foo" contains non-digit characters');
+      ee()->TMPL->log_item('Super Class Module error: Provided parameter "foo" contains non-digit characters');
       return FALSE;
   }
 
 Or even::
 
-  $foo = (ctype_digit($foo = $this->EE->TMPL->fetch_param('foo'))) ? FALSE : $foo;
+  $foo = (ctype_digit($foo = ee()->TMPL->fetch_param('foo'))) ? FALSE : $foo;
 
 .. note:: You no doubt notice that ``ctype_digit`` is being used
   here to validate the parameter as a numeric value. Why?
@@ -256,7 +256,7 @@ variables
 
   foreach ($defaults as $key => $val)
   {
-      $$key = ($$key = $this->EE->TMPL->fetch_param($key)) ? $$key : $val;
+      $$key = ($$key = ee()->TMPL->fetch_param($key)) ? $$key : $val;
   }
 
   // Results in three variables being set:
@@ -275,11 +275,11 @@ To help prevent spam and protect against Cross-site Request Forgery
 stored in the database tied to the IP address of the machine that the
 form was generated for. Here is how to make use of it.
 
-$this->EE->functions->form_declaration()
+ee()->functions->form_declaration()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Create all forms on the user side with
-:doc:`$this->EE->functions->form_declaration()
+:doc:`ee()->functions->form_declaration()
 </development/reference/functions>`, so the XID (secure hash ID) is
 added automatically as a hidden input field. This also allows any
 extensions the site may have installed that modifies forms to have
@@ -298,18 +298,18 @@ hash and deletes existing hashes as needed::
 
   // Secure Forms check
 
-  if ($this->EE->security->secure_forms_check($this->EE->input->post('XID')) == FALSE)
+  if (ee()->security->secure_forms_check(ee()->input->post('XID')) == FALSE)
   {
       // no data insertion if a hash isn't found or is too old
-      $this->functions->redirect(stripslashes($this->EE->input->post('RET')));
+      $this->functions->redirect(stripslashes(ee()->input->post('RET')));
   }
 
   // All Clear- insert the data!
-  $this->EE->db->query($this->EE->db->insert_string('table', $data));
+  ee()->db->query(ee()->db->insert_string('table', $data));
 
 In some cases, you may choose to run a check for a valid hash
-(``$this->EE->security->check_xid()``) and the deletion of the existing
-hash (``$this->EE->security->delete_xid()``) separately.
+(``ee()->security->check_xid()``) and the deletion of the existing
+hash (``ee()->security->delete_xid()``) separately.
 
 Forms in the Control Panel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -359,8 +359,8 @@ requirements.
   - CAPTCHA
   - Blacklist Banning / Whitelist Overrides
 
-    - ``$this->EE->blacklist->blacklisted == 'y'`` (blacklisted)
-    - ``$this->EE->blacklist->whitelisted == 'y'`` (whitelist
+    - ``ee()->blacklist->blacklisted == 'y'`` (blacklisted)
+    - ``ee()->blacklist->whitelisted == 'y'`` (whitelist
       override)
 
   - Preferences and settings checked against
@@ -375,7 +375,7 @@ requirements.
 
 - Insert Data or Update
 
-  - ``$this->EE->security->xss_clean()`` on all string data even if
+  - ``ee()->security->xss_clean()`` on all string data even if
     there is no intent to output (don't forget about the Query
     module!)
   - Make sure all data is properly escaped
@@ -397,7 +397,7 @@ is to not design your add-on in such a way that would make this
 necessary in the first place, but if you do, either:
 
 - Validate the filename based on possible options, OR
-- Use ``$this->EE->security->sanitize_filename()`` to remove naughty
+- Use ``ee()->security->sanitize_filename()`` to remove naughty
   characters
 
 Saving Images or Files to the Server
@@ -407,10 +407,10 @@ When saving images or files to the server, make sure and validate the
 file type (MIME) and also clean the file name to remove possible naughty
 characters.
 
-- Sanitize file name: ``$this->EE->security->sanitize_filename();``
+- Sanitize file name: ``ee()->security->sanitize_filename();``
 - Browser provides the MIME type, available in:
   ``$_FILES['userfile']['type']``
-- Use the Upload class (``$this->EE->load->library('upload',
+- Use the Upload class (``ee()->load->library('upload',
   $config);``) as it contains methods for validation and sanitizing
 
 Typography Class

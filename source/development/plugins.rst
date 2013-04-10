@@ -68,7 +68,7 @@ A plugin consists of a class and at least one function::
 
       public function __construct()
       {
-          $this->EE =& get_instance();
+
       }
   }
 
@@ -115,15 +115,13 @@ In the new file you've created add this class and constructor::
   {
       public function __construct()
       {
-          $this->EE =& get_instance();
+
       }
   }
 
 .. note:: Class name must always be capitalized. This is the one
   exception to the rule. Tag names and file names are always
   lowercase, while the class name is capitalized.
-
-.. note:: You must call of the super object in your constructor.
 
 Returning a Value
 ~~~~~~~~~~~~~~~~~
@@ -145,7 +143,6 @@ assign it to a variable called: ``$return_data``::
 
       public function __construct()
       {
-          $this->EE =& get_instance();
           $this->return_data = "Hello World";
       }
   }
@@ -163,11 +160,6 @@ value directly::
 
   class Hello_world
   {
-      public function __construct()
-      {
-          $this->EE =& get_instance();
-      }
-
       public function bold()
       {
           return "<b>Hello World</b>";
@@ -227,14 +219,14 @@ In following our naming rules, we will create a plugin file named:
 
       public function __construct()
       {
-          $this->EE =& get_instance();
+
       }
   }
 
 So how do we fetch the data contained within the tag pairs? Using the
 following variable::
 
-  $this->EE->TMPL->tagdata;
+  ee()->TMPL->tagdata;
 
 Here is how the variable is used::
 
@@ -244,8 +236,7 @@ Here is how the variable is used::
 
       public function __construct()
       {
-          $this->EE =& get_instance();
-          $this->return_data = $this->EE->TMPL->tagdata;
+          $this->return_data = ee()->TMPL->tagdata;
       }
   }
 
@@ -258,8 +249,7 @@ it, so let's make it bold::
 
       public function __construct()
       {
-          $this->EE =& get_instance();
-          $this->return_data = "<b>".$this->EE->TMPL->tagdata."</b>";
+          $this->return_data = "<b>".ee()->TMPL->tagdata."</b>";
       }
   }
 
@@ -269,7 +259,7 @@ Parameters
 Since tags will often have parameters, the template engine makes it easy
 to fetch them using the following variable::
 
-  $this->EE->TMPL->fetch_param('param_name');
+  ee()->TMPL->fetch_param('param_name');
 
 To see how this is used, let's create a plugin that lets you format text
 based on the parameter. Our new plugin will have this syntax::
@@ -293,22 +283,21 @@ Create a plugin file named pi.format.php and in it put this::
 
       public function __construct()
       {
-          $this->EE =& get_instance();
-          $parameter = $this->EE->TMPL->fetch_param('type');
+          $parameter = ee()->TMPL->fetch_param('type');
 
           switch ($parameter)
           {
               case "uppercase":
-                  $this->return_data = strtoupper($this->EE->TMPL->tagdata);
+                  $this->return_data = strtoupper(ee()->TMPL->tagdata);
                   break;
               case "lowercase":
-                  $this->return_data = strtolower($this->EE->TMPL->tagdata);
+                  $this->return_data = strtolower(ee()->TMPL->tagdata);
                   break;
               case "bold" :
-                  $this->return_data = "<b>".$this->EE->TMPL->tagdata."</b>";
+                  $this->return_data = "<b>".ee()->TMPL->tagdata."</b>";
                   break;
               case "italic":
-                  $this->return_data = "<i>".$this->EE->TMPL->tagdata."</i>";
+                  $this->return_data = "<i>".ee()->TMPL->tagdata."</i>";
                   break;
           }
       }
@@ -332,11 +321,9 @@ directly as a formatting choice::
 
       function __construct($str = NULL)
       {
-          $this->EE =& get_instance();
-
           if (empty($str))
           {
-              $str = $this->EE->TMPL->tagdata;
+              $str = ee()->TMPL->tagdata;
           }
 
           $this->return_data = "<b>".$str."</b>";
@@ -375,9 +362,7 @@ Here is the class syntax::
 
       public function __construct()
       {
-          $this->EE =& get_instance();
-
-          $query = $this->EE->db->select("screen_name")
+          $query = ee()->db->select("screen_name")
                   ->get('members', 15);
 
           foreach($query->result() as $row)
@@ -394,7 +379,7 @@ $query->row()
 
 If your query only returns one row you can use this variable like this::
 
-  $query = $this->EE->db->select('screen_name');
+  $query = ee()->db->select('screen_name');
       ->get('members', 1);
 
   return $query->row('screen_name');
@@ -405,7 +390,7 @@ $query->num_rows()
 The number of rows returned by the query. This is a handy variable that
 can be used like this::
 
-  $query = $this->EE->db->select('screen_name')
+  $query = ee()->db->select('screen_name')
       ->where('url !=', '')
       ->get('members');
 
@@ -508,9 +493,7 @@ functions. Your finished Plugin would look like this::
        */
       public function __construct()
       {
-          $this->EE =& get_instance();
-
-          $query = $this->EE->db->select('screen_name')
+          $query = ee()->db->select('screen_name')
               ->get('members', 15);
 
           foreach($query->result_array() as $row)

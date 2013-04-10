@@ -21,7 +21,7 @@ Breadcrumbs
   Adds a new breadcrumb to the initial breadcrumb array. The system will
   automatically output the final array::
 
-    $this->EE->cp->set_breadcrumb($link, $title);
+    ee()->cp->set_breadcrumb($link, $title);
 
   :param type $link: URL the breadcrumb should go to
   :param type $title: Text to go in the link
@@ -34,7 +34,7 @@ The right hand subnavigation can be used as the main navigation for a
 module. This function takes an associative array where the keys are
 language keys and the values are the full url to link to::
 
-  $this->EE->cp->set_right_nav(array(
+  ee()->cp->set_right_nav(array(
       'edit_avatar' => BASE.AMP.'C=my_account'.AMP.'M=edit_avatar',
       'edit_profile' => BASE.AMP.'C=my_account'.AMP.'M=edit_profile'
   ));
@@ -43,12 +43,12 @@ Set Variables
 -------------
 
 .. deprecated:: 2.6
-  Use ``$this->EE->view->cp_page_title = '...'`` instead.
+  Use ``ee()->view->cp_page_title = '...'`` instead.
 
 This is a simple alternative for setting a page variable. It is used
 almost exclusively for setting the title of a control panel page::
 
-  $this->EE->cp->set_variable('cp_page_title', lang('page_title'));
+  ee()->cp->set_variable('cp_page_title', lang('page_title'));
 
 Adding Header Data
 ------------------
@@ -57,7 +57,7 @@ The ``<head>`` tag of the control panel can be extended with new styles,
 meta tags, and other data. Multiple calls to this function are
 additive::
 
-  $this->EE->cp->add_to_head('<style type="text/css" media="screen">div { display: none; }</style>');
+  ee()->cp->add_to_head('<style type="text/css" media="screen">div { display: none; }</style>');
 
 Loading Javascript Files
 ------------------------
@@ -67,7 +67,7 @@ directory. This function includes files from the current package's
 javascript folder. It takes a simple file name, ``.js`` will be appended
 automatically::
 
-  $this->EE->cp->load_package_js('my_file');
+  ee()->cp->load_package_js('my_file');
 
 Add a javascript file or files to the javascript combo loader
 -------------------------------------------------------------
@@ -78,7 +78,7 @@ directories (if needed) and files to be added and the optional second
 parameter determines the placement of the resulting javascript link,
 defaulting to ``TRUE`` to place in the footer::
 
-  $this->EE->add_js_script(
+  ee()->add_js_script(
       array(
           'ui'      => array('core', 'widget', 'position', 'autocomplete'),
           'plugin'  => array('fancybox')
@@ -91,7 +91,7 @@ Masking the Control Panel URL in links
 When creating external links in the users Control Panel, the system
 folder should not show in server referral logs::
 
-  $this->EE->cp->masked_url('http://example.com');
+  ee()->cp->masked_url('http://example.com');
 
 Creates the a the following link:
 ``http://example.com/index.php?URL=http://example.com``
@@ -112,9 +112,9 @@ displayed by the :doc:`notification plugin
 </development/cp_javascript/notification>` with the appropriate message
 type indicated::
 
-  $this->EE->session->set_flashdata('message_success', lang('updated'));
-  $this->EE->session->set_flashdata('message_failure', lang('write_failed'));
-  $this->EE->functions->redirect(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=my_module');
+  ee()->session->set_flashdata('message_success', lang('updated'));
+  ee()->session->set_flashdata('message_failure', lang('write_failed'));
+  ee()->functions->redirect(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=my_module');
 
 After redirecting, a javascript success notification bar would show
 briefly, followed by an error message. Error messages, if shown, remain
@@ -128,7 +128,7 @@ ascribes user data to them that, among other things, pertains to their
 member groups's access to various parts of the site. Returns ``FALSE``
 if they have access, ``TRUE`` if they do::
 
-  if ( ! $this->EE->cp->allowed_group('can_delete_all_entries'))
+  if ( ! ee()->cp->allowed_group('can_delete_all_entries'))
   {
       show_error(lang('unauthorized_to_delete_others'));
   }
@@ -157,7 +157,7 @@ of that module. This function returns the action id number from the
 database. (See also :doc:`functions->fetch_action_id
 </development/reference/functions>`)
 
-  $aid = $this->EE->cp->fetch_action_id($class, $method);
+  $aid = ee()->cp->fetch_action_id($class, $method);
 
 Publish Page Layout Functions
 -----------------------------

@@ -46,14 +46,6 @@ so that it can describe your accessory and manage display settings.
       var $version        = '1.0';
       var $description    = 'My accessory has a lovely description.';
       var $sections       = array();
-
-      /**
-       * Constructor
-       */
-      function __construct()
-      {
-          $this->EE =& get_instance();
-      }
   }
   // END CLASS
 

@@ -16,8 +16,8 @@ email_module_send_email_end
 
   How it's called::
 
-    $this->EE->extensions->call('email_module_send_email_end', $subject, $message, $approved_tos, $approved_recipients);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->call('email_module_send_email_end', $subject, $message, $approved_tos, $approved_recipients);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param string $subject: Sanitized and parsed subject of the email
   :param string $message: Sanitized and parsed body of the email
@@ -37,8 +37,8 @@ email_module_tellafriend_override
 
   How it's called::
 
-    $tagdata = $this->EE->extensions->call('email_module_tellafriend_override', $qstring, $this);
-    if ($this->EE->extensions->end_script === TRUE) return $tagdata;
+    $tagdata = ee()->extensions->call('email_module_tellafriend_override', $qstring, $this);
+    if (ee()->extensions->end_script === TRUE) return $tagdata;
 
   :param string $qstring: Query string without comments or pagination
     information

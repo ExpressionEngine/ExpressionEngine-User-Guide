@@ -71,8 +71,6 @@ settings for the extension and set a class variable.
        */
       function __construct($settings='')
       {
-          $this->EE =& get_instance();
-
           $this->settings = $settings;
       }
       // END
@@ -104,8 +102,6 @@ settings (if any).
        */
       function __construct($settings = '')
       {
-          $this->EE =& get_instance();
-
           $this->settings = $settings;
       }
   }
@@ -159,7 +155,7 @@ the method in your extension's class to call for this hook.
           'enabled'   => 'y'
       );
 
-      $this->EE->db->insert('extensions', $data);
+      ee()->db->insert('extensions', $data);
   }
 
 Here is a quick run down of what each of these fields in the database
@@ -206,8 +202,8 @@ calls this function.
           // Update to version 1.0
       }
 
-      $this->EE->db->where('class', __CLASS__);
-      $this->EE->db->update(
+      ee()->db->where('class', __CLASS__);
+      ee()->db->update(
                   'extensions',
                   array('version' => $this->version)
       );
@@ -244,8 +240,8 @@ basically start fresh every single time.
    */
   function disable_extension()
   {
-      $this->EE->db->where('class', __CLASS__);
-      $this->EE->db->delete('extensions');
+      ee()->db->where('class', __CLASS__);
+      ee()->db->delete('extensions');
   }
 
 Settings
@@ -336,8 +332,8 @@ extension's class called ``settings_form()``.
    */
   function settings_form($current)
   {
-      $this->EE->load->helper('form');
-      $this->EE->load->library('table');
+      ee()->load->helper('form');
+      ee()->load->library('table');
 
       $vars = array();
 
@@ -358,7 +354,7 @@ extension's class called ``settings_form()``.
                       $trunc_cp_links)
           );
 
-      if ($this->EE->config->item('forum_is_installed') == 'y')
+      if (ee()->config->item('forum_is_installed') == 'y')
       {
           $use_in_forum = isset($current['use_in_forum']) ? $current['use_in_forum'] : 'no';
 
@@ -368,7 +364,7 @@ extension's class called ``settings_form()``.
                       $use_in_forum);
       }
 
-      return $this->EE->load->view('index', $vars, TRUE);
+      return ee()->load->view('index', $vars, TRUE);
   }
 
 View File
@@ -430,26 +426,26 @@ appropriately.
 
       unset($_POST['submit']);
 
-      $this->EE->lang->loadfile('link_truncator');
+      ee()->lang->loadfile('link_truncator');
 
-      $len = $this->EE->input->post('max_link_length');
+      $len = ee()->input->post('max_link_length');
 
       if ( ! is_numeric($len) OR $len <= 0)
       {
-          $this->EE->session->set_flashdata(
+          ee()->session->set_flashdata(
                   'message_failure',
                   sprintf(lang('max_link_length_range'),
                       $len)
           );
-          $this->EE->functions->redirect(
+          ee()->functions->redirect(
               BASE.AMP.'C=addons_extensions'.AMP.'M=extension_settings'.AMP.'file=link_truncator'
           );
       }
 
-      $this->EE->db->where('class', __CLASS__);
-      $this->EE->db->update('extensions', array('settings' => serialize($_POST)));
+      ee()->db->where('class', __CLASS__);
+      ee()->db->update('extensions', array('settings' => serialize($_POST)));
 
-      $this->EE->session->set_flashdata(
+      ee()->session->set_flashdata(
           'message_success',
           lang('preferences_updated')
       );
@@ -467,9 +463,9 @@ is available for use:
   // 'typography_parse_type_end' hook.
   //  - Modify string after all other typography processing
   //
-      if ($this->EE->extensions->active_hook('typography_parse_type_end') === TRUE)
+      if (ee()->extensions->active_hook('typography_parse_type_end') === TRUE)
       {
-          $str = $this->EE->extensions->call('typography_parse_type_end', $str, $this, $prefs);
+          $str = ee()->extensions->call('typography_parse_type_end', $str, $this, $prefs);
       }
   //
   // -------------------------------------------

@@ -17,7 +17,7 @@ email_send
 
   How it's called::
 
-    $ret = $this->EE->extensions->call(
+    $ret = ee()->extensions->call(
         'email_send',
         array(
             'headers'       => &$this->_headers,     // Email headers array
@@ -30,7 +30,7 @@ email_send
         )
     );
 
-    if ($this->EE->extensions->end_script === TRUE)
+    if (ee()->extensions->end_script === TRUE)
     {
         return $ret;
     }

@@ -71,7 +71,7 @@ of text in the array.
 
 ::
 
-    $this->EE->view->cp_page_title = lang('view_moblogs');
+    ee()->view->cp_page_title = lang('view_moblogs');
     // Returns "Moblog Accounts" as the page title;
 
 Calling a Language File
@@ -92,10 +92,10 @@ another language file. For example, you know that the members\_lang.php
 file contains many member related pieces of text, and instead of
 duplicating those in your module's language file you could use the text
 in that language file. To load that language file and its values, you
-simply need to call the $this->EE->lang->loadfile() function with the
+simply need to call the ee()->lang->loadfile() function with the
 name of the language file.
 
 ::
 
-    $this->EE->lang->loadfile('members');
+    ee()->lang->loadfile('members');
 

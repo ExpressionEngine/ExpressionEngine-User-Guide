@@ -37,10 +37,7 @@ simply access the TMPL object of the ExpressionEngine super object. ::
 
 	function module_example()
 	{
-		// Make a local reference to the ExpressionEngine super object
-		$this->EE =& get_instance();
-		
-		$name = $this->EE->TMPL->fetch_param('name', '');
+	    $name = ee()->TMPL->fetch_param('name', '');
 	}
 
 Parameters
@@ -52,35 +49,35 @@ for that tag and insert them into a Template class variable, thus making
 them easily accessible by the requested function by using the
 **fetch\_param()** method::
 
-	string **$this->EE->TYPE->fetch\_param** ( string name, [ string default ] )
+	ee()->TMPL->fetch_param( string name, [ string default ] )
 
 **fetch\_param()** takes an optional second argument, which is the value
 that will be returned if the parameter was not set in the opening tag.
 It defaults to FALSE if the second argument is not supplied.
 
-.. note:: values of 'y', 'on' and 'yes' will all return 'yes', while 
+.. note:: values of 'y', 'on' and 'yes' will all return 'yes', while
 	'n', 'off' and 'no' all return 'no'::
 
 		// Default value is 'random'
-		$order = $this->EE->TMPL->fetch_param('order', 'random');
-		
-		if ( ! $channel = $this->EE->TMPL->fetch_param('channel'))
+		$order = ee()->TMPL->fetch_param('order', 'random');
+
+		if ( ! $channel = ee()->TMPL->fetch_param('channel'))
 		{
-		    $this->EE->language->fetch_language_file('module');
-		    $this->EE->output->fatal_error($this->EE->language->line('module_invalid_channel'));
+		    ee()->language->fetch_language_file('module');
+		    ee()->output->fatal_error(ee()->language->line('module_invalid_channel'));
 		    exit;
 		}
 		else
-		{            
-		    $str = $this->EE->functions->sql_andor_string($channel, 'channel_name');
-		    
+		{
+		    $str = ee()->functions->sql_andor_string($channel, 'channel_name');
+
 		    if (strncmp($str, 'AND', 3) == 0)
 		    {
 		        $str = substr($str, 3);
 		    }
-		    
+
 		    $sql .= "SELECT channel_id FROM exp_channels WHERE ".$str;
-		    $query = $this->EE->db->query($sql);
+		    $query = ee()->db->query($sql);
 		}
 		// If channel is not specified, then an error is output.
 		// Otherwise, perform query.
@@ -94,7 +91,7 @@ content is determined by the HTML and variable data contained between
 the opening and closing tags for the tag being called. We normally call
 this formatting information between the opening and closing tags the
 'tag data', and this data can be requested by using the
-$this->EE->TMPL->tagdata variable.
+ee()->TMPL->tagdata variable.
 
 .. note:: Except in rare cases, a module will have both an opening and
 	closing tag. There are exceptions to this rule such as when you
@@ -106,18 +103,18 @@ the opening tag to the beginning of the closing tag, basically the HTML
 and tag variables::
 
 	{exp:magic:spell}
-	
+
 		<h2>{title}</h2>
-		
+
 		<p>{summary}</p>
-	
+
 	{/exp:magic:spell}
 
 **A module calling and using the tag data.** ::
 
-	$query = $this->EE->db->query($sql);
+	$query = ee()->db->query($sql);
 	$variables = array();
-	
+
 	foreach($query->result as $row)
 	{
 	    $variables[] = array(
@@ -125,8 +122,8 @@ and tag variables::
 				'bar' => $row['bar']
 				);
 	}
-	
-	return $this->EE->TMPL->parse_variables($tagdata, $variables);
+
+	return ee()->TMPL->parse_variables($tagdata, $variables);
 
 Variable Types
 --------------
@@ -139,15 +136,15 @@ variables in ExpressionEngine, single, pair, and conditional variables. ::
 
 	// Single Variable
 	{summary}
-	
+
 	// Pair Variable
 	{category}
-	
+
 	{/category}
-	
+
 	// Conditional Variable
 	{if body != ""}
-	
+
 	{/if}
 
 Parsing Variables
@@ -180,15 +177,15 @@ First let's look at a typical variables array::
 	                            [power] => Super Strength
 	                            [scale] => 8
 	                        )
-	
+
 	                    [1] => Array
 	                        (
 	                            [power] => Invisibility
 	                            [scale] => 4
 	                        )
-	
+
 	                )
-	
+
 	            [name] => Chameleon
 	            [dob] => 136771200
 	            [type] => Hero
@@ -201,11 +198,11 @@ First let's look at a typical variables array::
 	                            [text_format] => xhtml
 	                            [html_format] => all
 	                        )
-	
+
 	                )
-	
+
 	        )
-	
+
 	    [1] => Array
 	        (
 	            [powers] => Array
@@ -215,15 +212,15 @@ First let's look at a typical variables array::
 	                            [power] => Poisonous Breath
 	                            [scale] => 5
 	                        )
-	
+
 	                    [1] => Array
 	                        (
 	                            [power] => Wealth
 	                            [scale] => 7
 	                        )
-	
+
 	                )
-	
+
 	            [name] => Stinkor
 	            [dob] => -58924800
 	            [type] => Villain
@@ -236,11 +233,11 @@ First let's look at a typical variables array::
 	                            [text_format] => xhtml
 	                            [html_format] => all
 	                        )
-	
+
 	                )
-	
+
 	        )
-	
+
 	)
 
 Looking at this example, we see two "rows" of results. Each "row"
@@ -254,16 +251,16 @@ Let's look at a typical way that this array would have been created in
 an add-on's code. ::
 
 	$variables = array();
-	
+
 	foreach ($query->result as $row)
 	{
 		$powers = array()
-	
+
 		foreach ($unserialize($row['powers']) as $power)
 		{
 			$powers[] = array('power' => $power['name'], 'scale' => $power['scale']);
 		}
-	
+
 		$variable_row = array(
 					'powers'	=> $powers,
 					'name'		=> $row['name'],
@@ -271,11 +268,11 @@ an add-on's code. ::
 					'type'		=> $row['type'],
 					'affiliation'	=> $row['affiliation']
 					);
-	
+
 		$type_prefs = array('text_format' => 'xhtml', 'html_format' => 'all');
-	
+
 		$variable_row['bio'] = array($row['bio'], $type_prefs);
-	
+
 		$variables[] = $variable_row;
 	}
 
@@ -300,7 +297,7 @@ Now that our master array is fully loaded, we simply send it along with
 the tagdata to the **parse\_variables()** method of the Template class,
 which returns the parsed output. ::
 
-	$output = $this->EE->TMPL->parse_variables($this->EE->TMPL->tagdata, $variables);
+	$output = ee()->TMPL->parse_variables(ee()->TMPL->tagdata, $variables);
 
 Assuming that our tagdata is as follows::
 
@@ -310,13 +307,13 @@ Assuming that our tagdata is as follows::
 		<li>{type}</li>
 		<li>Affiliation: {affiliation}</li>
 	</ul>
-	
+
 	<ul>
 	{powers}
 		<li{if scale > 5} class="great"{/if}>{power} ({scale})</li>
 	{/powers}
 	</ul>
-	
+
 	{bio}
 
 Our returned output would be::
@@ -327,27 +324,27 @@ Our returned output would be::
 		<li>Hero</li>
 		<li>Affiliation: Litigation Coalition</li>
 	</ul>
-	
+
 	<ul>
 		<li class="great">Super Strength (8)</li>
 		<li>Invisibility (4)</li>
 	</ul>
-	
+
 	<p>Hailing from the planet Lizzon, Chameleon came to earth in 2003.
 	</p>
-	
+
 	<h1>Stinkor</h1>
 	<ul>
 		<li>Date of Birth: 18 Feb, 1968</li>
 		<li>Villain</li>
 		<li>Affiliation: N.E.S.T.</li>
 	</ul>
-	
+
 	<ul>
 		<li>Poisonous Breath (5)</li>
 		<li class="great">Wealth (7)</li>
 	</ul>
-	
+
 	<p>As a child, Stinkor was teased for his bad breath.  When he realized that it was more than bad…noxious even, he turned to a life of crime, robbing banks by knocking out the guards by saying "Hello" in their face.
 	</p>
 
@@ -373,7 +370,7 @@ Single variables are defined in the array as simple key => value pairs. ::
 			'dob' => -58924800,
 			'affiliation' => 'N.E.S.T.'
 			);
-	
+
 Additionally, you can have Typography automatically performed on single
 variables, by sending the variable in the form of an array with two keys
 - the first being the content, and the second being an array including
@@ -387,7 +384,7 @@ result in Typography being parsed with the class defaults. ::
 			'auto_links'    => 'y',
 			'allow_img_url' => 'y'
 			);
-					
+
 	$vars['bio'] = array('This is the variable contents', $type_prefs);
 
 Pair Variables
@@ -482,7 +479,7 @@ row containing the single and pair variables that your tag uses, simply
 call the parse\_variables() method, providing the tag data, and the
 master array. ::
 
-	$str = $this->EE->TMPL->parse_variables($tagdata, $variables);
+	$str = ee()->TMPL->parse_variables($tagdata, $variables);
 
 Parsing a Single Result Row
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -499,13 +496,13 @@ to add them yourself.
 
 	$count = 0;
 	$output = '';
-	
+
 	foreach($query->result as $row)
 	{
 		$row['count'] = ++$count;
 		$row['total_results] = $query->num_rows;
-		
-		$output .= $this->EE->TMPL->parse_variables_row($tagdata, $row);
+
+		$output .= ee()->TMPL->parse_variables_row($tagdata, $row);
 	}
 
 Single and Pair Variables (Legacy)
@@ -521,26 +518,26 @@ Single variables output a single piece of content, and in the module's
 code these variables are usually handled by doing a simple find and
 replace, where the outputted content is replacing the variable. The
 Template class array for single variables is
-$this->EE->TMPL->var\_single, where the keys are the variable's name and
+ee()->TMPL->var\_single, where the keys are the variable's name and
 the values are the full variable contents including any formatting
 parameters. For dates using format="%Y %m %d", only the formatting
 string is assigned to the array value. The Template class also provides
-a function, $this->EE->TMPL->swap\_var\_single, for performing the find
+a function, ee()->TMPL->swap\_var\_single, for performing the find
 and replace, making sure that the variable is replaced correctly in the
 template. ::
 
-	foreach ($this->EE->TMPL->var_single as $key => $val)
+	foreach (ee()->TMPL->var_single as $key => $val)
 	{
 	    if ($key == "spell_name")
 	    {
-	        $tagdata = $this->EE->TMPL->swap_var_single($val, $row['spell_name'], $tagdata);
+	        $tagdata = ee()->TMPL->swap_var_single($val, $row['spell_name'], $tagdata);
 	    }
-	    
+
 	    if (strncmp($key, "spell_date", 10) == 0)
 	    {
-	        $date = $this->EE->localize->decode_date($val, $row['spell_date']);
-	        
-	        $tagdata = $this->EE->TMPL->swap_var_single($key, $date, $tagdata);    
+	        $date = ee()->localize->decode_date($val, $row['spell_date']);
+
+	        $tagdata = ee()->TMPL->swap_var_single($key, $date, $tagdata);
 	    }
 	}
 
@@ -550,33 +547,33 @@ content of a similar type. A good example of this is the channel module
 where an entry might have multiple categories. ::
 
 	{exp:channel:entries}
-	
+
 	<ul>
 	{categories}
 	<li>{category_name}</li>
 	{/categories}
 	</ul>
-	
+
 	{exp:channel:entries}
 
 The Template class variable containing the variable pairs in the tag
-data is $this->EE->TMPL->var\_pair, which is an array where the keys are
+data is ee()->TMPL->var\_pair, which is an array where the keys are
 the contents of the pair variable's opening tag and the values are an
 array containing any parameters for the pair variable. Since the
-$this->EE->TMPL->var\_pair variable does not contain the content of the
+ee()->TMPL->var\_pair variable does not contain the content of the
 variable pair, you will have to search the template for it yourself
 using a preg\_match() (or possibly a preg\_match\_all(), if you believe
 there could be multiple instances of this variable pair). ::
 
-	foreach ($this->EE->TMPL->var_pair as $key => $val)
+	foreach (ee()->TMPL->var_pair as $key => $val)
 	{
 		if (strncmp($key, 'items', 5) == 0)
 	    {
-	    	$temp = preg_match("/".LD.$key.RD."(.*?)".LD.'\'.SLASH.'items'.RD."/s", $this->EE->TMPL->tagdata, $matches)
-	
+	    	$temp = preg_match("/".LD.$key.RD."(.*?)".LD.'\'.SLASH.'items'.RD."/s", ee()->TMPL->tagdata, $matches)
+
 	        // Set the display preference
 	        $nest = (is_array($val) && isset($val['nest'])) ? $val['nest'] : 'no';
-	        
+
 	        if ($nest == 'yes')
 	        {
 	        	$temp = $this->nested_items($this->items, $temp);
@@ -584,7 +581,7 @@ there could be multiple instances of this variable pair). ::
 	        else
 	        {
 	        	$temp = $this->linear_items($this->items, $temp);
-	        }                  
+	        }
 	    }
 	}
 
@@ -598,16 +595,16 @@ value via an operator::
 
 	// Structure
 	{if variable comparison-operator value}
-	
+
 	Data between the tags that gets shown if the condition is met.
-	
+
 	{/if}
-	
+
 	// Example
 	{if spell_level > 3}
-	
+
 	Advance Magicians Only
-	
+
 	{/if}
 
 There is a great deal more information about possible conditionals in
@@ -630,13 +627,13 @@ whether that conditional should be evaluated as true or false. The
 example belows gives you an idea of how this should work::
 
 	$cond				= $row; 	// $row contains query fields and values, ex:  'title' => "First Entry"
-	
-	$cond['logged_in']		= ($this->EE->session->userdata('member_id') == 0) ? 'FALSE' : 'TRUE';
-	$cond['logged_out']		= ($this->EE->session->userdata('member_id') != 0) ? 'FALSE' : 'TRUE';
+
+	$cond['logged_in']		= (ee()->session->userdata('member_id') == 0) ? 'FALSE' : 'TRUE';
+	$cond['logged_out']		= (ee()->session->userdata('member_id') != 0) ? 'FALSE' : 'TRUE';
 	$cond['allow_comments']		= (isset($row['allow_comments']) AND $row['allow_comments'] == 'n') ? 'FALSE' : 'TRUE';
-	
-	$tagdata = $this->EE->functions->prep_conditionals($tagdata, $cond);
+
+	$tagdata = ee()->functions->prep_conditionals($tagdata, $cond);
 
 Once you send your tag data and your array of conditional variables, the
-$this->EE->functions->prep\_conditionals() function processes the
+ee()->functions->prep\_conditionals() function processes the
 conditionals so that they can be evaluted by the Template parser later.

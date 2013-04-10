@@ -15,15 +15,15 @@ display\_field method.
 
 -  ::
 
-       $this->EE->javascript->output();
+       ee()->javascript->output();
 
 -  ::
 
-       $this->EE->cp->add_to_head();
+       ee()->cp->add_to_head();
 
 -  ::
 
-       $this->EE->cp->add_to_foot();
+       ee()->cp->add_to_foot();
 
 Place additional script files and stylesheets in the themes folder, so
 we can access it outside of the CP.
@@ -32,8 +32,8 @@ If you need to use EE's built-in scripts, such as jQuery UI or some of
 the other included jQuery plugins, you should make your dependency known
 by::
 
-	$this->EE->cp->add_js_script(array('ui' => array('sortable', 'tabs'))); 
-	$this->EE->cp->add_js_script('plugin', 'tablesorter');
+	ee()->cp->add_js_script(array('ui' => array('sortable', 'tabs')));
+	ee()->cp->add_js_script('plugin', 'tablesorter');
 
 .. _safecracker_development_hooks:
 
@@ -48,7 +48,7 @@ safecracker\_submit\_entry\_start
 
 ::
 
-	$this->EE->extensions->call('safecracker_submit_entry_start', $this);
+	ee()->extensions->call('safecracker_submit_entry_start', $this);
 
 where **$this** is the SafeCracker library object.
 
@@ -57,7 +57,7 @@ safecracker\_submit\_entry\_end
 
 ::
 
-	$this->EE->extensions->call('safecracker_submit_entry_end', $this);
+	ee()->extensions->call('safecracker_submit_entry_end', $this);
 
 where **$this** is the SafeCracker library object.
 

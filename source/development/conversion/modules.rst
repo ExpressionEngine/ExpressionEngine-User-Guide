@@ -114,15 +114,9 @@ Example Code
   {
       var $version = '3.0';
 
-      function __construct()
-      {
-          // Make a local reference to the ExpressionEngine super object
-          $this->EE =& get_instance();
-      }
-
       function install()
       {
-          $this->EE->load->dbforge();
+          ee()->load->dbforge();
 
           $fields = array(
               'fortune_id'=>  array(
@@ -134,9 +128,9 @@ Example Code
               'fortune_text'  =>  array('type' => 'text')
           );
 
-          $this->EE->dbforge->add_field($fields);
-          $this->EE->dbforge->add_key('fortune_id', TRUE);
-          $this->EE->dbforge->create_table('fortunes');
+          ee()->dbforge->add_field($fields);
+          ee()->dbforge->add_key('fortune_id', TRUE);
+          ee()->dbforge->create_table('fortunes');
 
           $data = array(
               'module_name' => 'Fortunes' ,
@@ -151,24 +145,24 @@ Example Code
 
       function uninstall()
       {
-          $this->EE->load->dbforge();
+          ee()->load->dbforge();
 
-          $this->EE->db->select('module_id');
-          $query = $this->EE->db->get_where('modules', array('module_name' => 'Fortunes'));
+          ee()->db->select('module_id');
+          $query = ee()->db->get_where('modules', array('module_name' => 'Fortunes'));
 
-          $this->EE->db->where('module_id', $query->row('module_id'));
-          $this->EE->db->delete('module_member_groups');
+          ee()->db->where('module_id', $query->row('module_id'));
+          ee()->db->delete('module_member_groups');
 
-          $this->EE->db->where('module_name', 'Fortunes');
-          $this->EE->db->delete('modules');
+          ee()->db->where('module_name', 'Fortunes');
+          ee()->db->delete('modules');
 
-          $this->EE->db->where('class', 'Fortunes');
-          $this->EE->db->delete('actions');
+          ee()->db->where('class', 'Fortunes');
+          ee()->db->delete('actions');
 
-          $this->EE->db->where('class', 'Fortunes_mcp');
-          $this->EE->db->delete('actions');
+          ee()->db->where('class', 'Fortunes_mcp');
+          ee()->db->delete('actions');
 
-          $this->EE->dbforge->drop_table('fortunes');
+          ee()->dbforge->drop_table('fortunes');
 
           return TRUE;
       }
@@ -261,11 +255,6 @@ in the format::
   {
       var $version = '1.0';
 
-      function __construct()
-      {
-          // Make a local reference to the ExpressionEngine super object
-          $this->EE =& get_instance();
-      }
   }
   /* END Class */
 
@@ -284,30 +273,7 @@ Changes to the constructor
 --------------------------
 
 With 2.0 there is no need to manually route your pages in the
-constructor, and ``__construct()`` should now be used::
-
-  Old Syntax
-  function Package_name_mcp( $switch = TRUE )
-  {
-      global $IN;
-
-      if ($switch)
-      {
-          switch($IN->GBL('P'))
-          {
-              case 'home':
-                  $this->home();
-                  break;
-          }
-      }
-  }
-
-  NEW Syntax
-  function __construct( $switch = TRUE )
-  {
-      // Make a local reference to the ExpressionEngine super object
-      $this->EE =& get_instance();
-  }
+constructor.
 
 Load any helpers and libraries you may need in your view
 --------------------------------------------------------
@@ -316,8 +282,8 @@ Since views are given all the existing references when they are loaded,
 you may want to load certain libraries or helpers before loading the
 view. This is discussed more in the `Views <#views>`_ section::
 
-  $this->EE->load->helper('form');
-  $this->EE->load->library('table');
+  ee()->load->helper('form');
+  ee()->load->library('table');
 
 Using Javascript in your control panel
 --------------------------------------
@@ -327,11 +293,11 @@ default. You should create and compile your JavaScript before loading
 your view (or returning a string). For example, to round your buttons
 using JavaScript, you'd use::
 
-  $this->EE->load->library('javascript');
-  $this->EE->javascript->output($this->EE->jquery->corner('.cp_button a'));
-  $this->EE->javascript->compile();
+  ee()->load->library('javascript');
+  ee()->javascript->output(ee()->jquery->corner('.cp_button a'));
+  ee()->javascript->compile();
 
-  return $this->EE->load->view('index', $vars, TRUE);
+  return ee()->load->view('index', $vars, TRUE);
 
 Breadcrumbs, titles and the $EE->cp class
 -----------------------------------------
@@ -343,18 +309,18 @@ $DSP to $EE->CP
 
 Theme urls::
 
-  $this->EE->cp->cp_theme_url
+  ee()->cp->cp_theme_url
 
 Setting the base breadcrumb::
 
-  $this->EE->cp->set_breadcrumb(
+  ee()->cp->set_breadcrumb(
       BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=package_name',
       lang('name')
   );
 
 Setting the title::
 
-  $this->EE->cp->set_variable('cp_page_title', 'page_title');
+  ee()->cp->set_variable('cp_page_title', 'page_title');
 
 Outputting Control Panel Pages
 ------------------------------
@@ -376,7 +342,7 @@ plain HTML in the view file.
 
 To load a view, you use::
 
-  return $this->EE->load->view('index', $vars, TRUE);
+  return ee()->load->view('index', $vars, TRUE);
 
 Note in the above example that the third argument of view() is being
 used so that instead of being added to existing output, it is returned
@@ -394,16 +360,16 @@ example using an array::
       'message' => 'My Message'
   );
 
-  return $this->EE->load->view('name', $data, TRUE);
+  return ee()->load->view('name', $data, TRUE);
 
 And here's an example using an object::
 
-  $data = new Foo_class(); $this->EE->load->view('name', $data, TRUE);
+  $data = new Foo_class(); ee()->load->view('name', $data, TRUE);
 
 .. note:: If you use an object, the class variables will be turned into
   array elements.
 
-You can also pass a variable using $this->EE->cp->set\_variable().
+You can also pass a variable using ee()->cp->set\_variable().
 This allows you to set vars without needing to pass an array into the
 view. This is used exclusively for setting control panel variables
 such as page titles.
@@ -424,16 +390,16 @@ index() method would look like::
 
   function index($message = '')
   {
-      $this->EE->view->cp_page_title = lang('fortunes_module_name');
+      ee()->view->cp_page_title = lang('fortunes_module_name');
 
-      $this->EE->load->library('javascript');
-      $this->EE->javascript->output($this->EE->jquery->corner('.cp_button a'));
-      $this->EE->javascript->compile();
+      ee()->load->library('javascript');
+      ee()->javascript->output(ee()->jquery->corner('.cp_button a'));
+      ee()->javascript->compile();
 
       $vars['view_url'] = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=view';
       $vars['add_url'] = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortunes'.AMP.'method=add';
 
-      return $this->EE->load->view('index', $vars, TRUE);
+      return ee()->load->view('index', $vars, TRUE);
   }
 
 The page title is set using the CP class. To add a bit of style, the

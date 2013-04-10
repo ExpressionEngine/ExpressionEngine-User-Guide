@@ -16,8 +16,8 @@ simple_commerce_evaluate_ipn_response
 
   How it's called::
 
-    $result = $this->EE->extensions->universal_call('simple_commerce_evaluate_ipn_response', $this, $result);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $result = ee()->extensions->universal_call('simple_commerce_evaluate_ipn_response', $this, $result);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $this: The current Simple Commerce object including all
     data relating to the purchase and debug state
@@ -36,8 +36,8 @@ simple_commerce_perform_actions_end
 
   How it's called::
 
-    $this->EE->extensions->universal_call('simple_commerce_perform_actions_end', $this, $query->row());
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->universal_call('simple_commerce_perform_actions_end', $this, $query->row());
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $this: The current Simple Commerce object including all
     data relating to the purchase and debug state
@@ -61,8 +61,8 @@ simple_commerce_perform_actions_start
 
   How it's called::
 
-    $this->EE->extensions->universal_call('simple_commerce_perform_actions_start', $this, $query->row());
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->universal_call('simple_commerce_perform_actions_start', $this, $query->row());
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $this: The current Simple Commerce object including all
     data relating to the purchase and debug state

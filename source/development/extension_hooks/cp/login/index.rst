@@ -34,8 +34,8 @@ cp_member_login
 
   How it's called::
 
-    $this->EE->extensions->call('cp_member_login', $this->_hook_data());
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->call('cp_member_login', $this->_hook_data());
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $hook_data: Member object with session ID
     (``$hook_data->session_id``) and CP permission boolean

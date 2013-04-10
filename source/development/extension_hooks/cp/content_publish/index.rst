@@ -26,9 +26,9 @@ entry_submission_absolute_end
     ...
 
     // In system/expressionengine/libraries/api/Api_channel_entries.php
-    $this->EE->extensions->call('entry_submission_absolute_end', $this->entry_id, $this->meta, $this->data, $orig_var);
+    ee()->extensions->call('entry_submission_absolute_end', $this->entry_id, $this->meta, $this->data, $orig_var);
     ...
-    if ($this->EE->extensions->end_script === TRUE)
+    if (ee()->extensions->end_script === TRUE)
     {
         return TRUE;
     }
@@ -40,7 +40,7 @@ entry_submission_absolute_end
   :param string $view_url: Control Panel URL to view submitted entry
   :rtype: Void
 
-  Set ``$this->EE->extensions->end_script`` to ``TRUE`` to prevent an
+  Set ``ee()->extensions->end_script`` to ``TRUE`` to prevent an
   automatic redirect to the ``$view_url``.
 
   .. versionadded:: 2.0
@@ -62,7 +62,7 @@ entry_submission_redirect
 
     // In system/expressionengine/libraries/api/Api_channel_entries.php
     $loc = $this->extensions->call('entry_submission_redirect', $this->entry_id, $this->meta, $this->data, $cp_call, $orig_loc);
-    if ($this->EE->extensions->end_script === TRUE)
+    if (ee()->extensions->end_script === TRUE)
     {
         return $loc;
     }

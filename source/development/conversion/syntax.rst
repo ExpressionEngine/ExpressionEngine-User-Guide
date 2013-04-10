@@ -34,21 +34,18 @@ Switch from globals to the super object
 ---------------------------------------
 
 Methods are no longer called from global object references. Instead,
-a local instance of the super object is used.
+the super object is used.
 
 #. Remove all globals from your methods.
-#. Get a reference to the super object in your class constructor.
-#. Switch your syntax to use the super object.
+#. Switch your syntax to use the super object returned by ``ee()``.
 
 ::
 
-  class Some_class
-  {
-      function __construct($params)
-      {
-          $this->EE =& get_instance();
-          // now all calls to class methods go through $this->EE
-          $this->EE->functions->redirect();
+  // 1.x syntax
+  $FNS->redirect();
+
+  // 2.x syntax
+  ee()->functions->redirect();
 
 Switch 'weblog' terminology to 'channel' terminology
 ----------------------------------------------------
@@ -92,7 +89,7 @@ The ``QUERY_MARKER`` constant replaces the use of the configuration item
 
   NEW syntax:
 
-  $search_link = $this->EE->functions->fetch_site_index(0, 0).QUERY_MARKER.'ACT='
+  $search_link = ee()->functions->fetch_site_index(0, 0).QUERY_MARKER.'ACT='
 
 The ``SLASH`` constant has been removed from the template parser, and
 forward slashes are no longer converted to entities. For example, the
@@ -143,7 +140,7 @@ A number of EE classes are now libraries, located in
 ``/system/expressionengine/libraries/``. To use one of these classes,
 you invoke it using the following syntax::
 
-  $this->EE->load->library('class name');
+  ee()->load->library('class name');
 
 Where class name is the name of the class you want to invoke. For
 example::
@@ -160,12 +157,12 @@ example::
 
   NEW syntax:
 
-  $this->EE->load->library('typography');
-  $this->EE->load->typography->initialize();
-  $str = $this->EE->typography->light_xhtml_typography($str);
+  ee()->load->library('typography');
+  ee()->load->typography->initialize();
+  $str = ee()->typography->light_xhtml_typography($str);
 
 Note that after loading the Typography library you need to initialize
-it with ``$this->EE->load->typography->initialize();`` or you will be
+it with ``ee()->load->typography->initialize();`` or you will be
 inheriting the class properties of whatever code last used it.
 
 Helper Functions
@@ -179,12 +176,12 @@ quickly create proper forms. The helper files are located in
 ``/system/expressionengine/helpers/``. To use one of their functions,
 you invoke it using the following syntax::
 
-  $this->EE->load->helper('helper_name');
+  ee()->load->helper('helper_name');
 
 Where ``helper_name`` is the name of the helper you want to invoke. For
 example, to limit a string to 10 words in length, you would use::
 
-  $this->EE->load->helper('text'); $str = word_limiter($str, 10);
+  ee()->load->helper('text'); $str = word_limiter($str, 10);
 
 The helpers most likely to be used in plugins and modules include:
 
@@ -236,11 +233,11 @@ Display Class
 ::
 
   $DSP->allowed_group('can_admin_channels')
-      $this->EE->cp->allowed_group('can_admin_channels')
+      ee()->cp->allowed_group('can_admin_channels')
   $DSP->breadcrumb()
-      $this->EE-cp->set_breadcrumb()
+      ee()-cp->set_breadcrumb()
   $DSP->html_header()
-      $this->EE-cp->set_variable('cp_page_title', $value)
+      ee()-cp->set_variable('cp_page_title', $value)
   $DSP->error_message()
       show_error()
 
@@ -250,7 +247,7 @@ Email Class
 ::
 
   $email->initialize()
-      $this->EE->email->EE_initialize();
+      ee()->email->EE_initialize();
 
 Extensions Class
 ----------------
@@ -258,9 +255,9 @@ Extensions Class
 ::
 
   $EXT->call_extension
-      $this->EE->extensions->call
+      ee()->extensions->call
   $EXT->universal_call_extension
-      $this->EE->extensions->universal_call
+      ee()->extensions->universal_call
 
 Functions Class
 ---------------
@@ -269,13 +266,13 @@ Functions Class
 
   $FNS->fetch_action_id()
   // Note: for use in the control panel
-  $this->EE->cp->fetch_action_id()
+  ee()->cp->fetch_action_id()
 
   // Note: for use in the module file
-  $this->EE->functions->fetch_action_id()
+  ee()->functions->fetch_action_id()
 
   $FNS->filename_security()
-  $this->EE->security->sanitize_filename
+  ee()->security->sanitize_filename
 
 Input Class
 -----------
@@ -283,36 +280,36 @@ Input Class
 ::
 
   $IN->URI
-      $this->EE->uri->uri_string
+      ee()->uri->uri_string
   $IN->QSTR
-      $this->EE->uri->query_string
+      ee()->uri->query_string
   $IN->Pages_QSTR
-      $this->EE->uri->page_query_string
+      ee()->uri->page_query_string
   $IN->IP
-      $this->EE->input->ip_address()
+      ee()->input->ip_address()
   $IN->blacklisted
-      $this->EE->blacklist->blacklisted
+      ee()->blacklist->blacklisted
   $IN->whitelisted
-      $this->EE->blacklist->whitelisted
+      ee()->blacklist->whitelisted
   $IN->SEGS
-      $this->EE->uri->segments
+      ee()->uri->segments
   $IN->parse_uri
       Private method (Input class)
   $IN->fetch_uri_segment()
-      $this->EE->uri->segment()
+      ee()->uri->segment()
   $IN->clean_input_data
       Private method (Input class)
 
   $IN->GBL('name', 'GP')
-      $this->EE->input->get_post('name')
+      ee()->input->get_post('name')
   $IN->GBL('name')
-      $this->EE->input->get_post('name')
+      ee()->input->get_post('name')
   $IN->GBL('name', 'POST')
-      $this->EE->input->post('name')
+      ee()->input->post('name')
   $IN->GBL('name', 'GET')
-      $this->EE->input->get('name')
+      ee()->input->get('name')
   $IN->GBL('name', 'COOKIE')
-      $this->EE->input->cookie('name')
+      ee()->input->cookie('name')
 
 Language Class
 --------------
@@ -320,7 +317,7 @@ Language Class
 ::
 
   $LANG->fetch_language_file
-      $this->EE->lang->loadfile
+      ee()->lang->loadfile
 
 Preferences Class
 -----------------
@@ -328,7 +325,7 @@ Preferences Class
 ::
 
   $PREFS->ini
-      $this->EE->config->item
+      ee()->config->item
 
 Regular Expressions Class
 -------------------------
@@ -336,47 +333,47 @@ Regular Expressions Class
 ::
 
   array_stripslashes()
-      strip_slashes() [$this->EE->load->helper('string');]
+      strip_slashes() [ee()->load->helper('string');]
   ascii_to_entities()
-      ascii_to_entities() [$this->EE->load->helper('text');]
+      ascii_to_entities() [ee()->load->helper('text');]
   convert_accented_characters()
       convert_accented_characters()
-      [$this->EE->load->helper('text');]
+      [ee()->load->helper('text');]
   convert_quotes()
-      quotes_to_entities() [$this->EE->load->helper('string');]
+      quotes_to_entities() [ee()->load->helper('string');]
   decode_qstr()
       Deprecated
   encode_ee_tags()
-      $this->EE->functions->encode_ee_tags()
+      ee()->functions->encode_ee_tags()
   encode_php_tags()
-      encode_php_tags() [$this->EE->load->helper('security');]
+      encode_php_tags() [ee()->load->helper('security');]
   entities_to_ascii()
-      entities_to_ascii() [$this->EE->load->helper('text');]
+      entities_to_ascii() [ee()->load->helper('text');]
   form_prep()
-      form_prep() [$this->EE->load->helper('form');]
+      form_prep() [ee()->load->helper('form');]
   create_url_title()
-      url_title() [$this->EE->load->helper('url');]
+      url_title() [ee()->load->helper('url');]
   keyword_clean()
-      sanitize_search_terms() [$this->EE->load->helper('search');]
+      sanitize_search_terms() [ee()->load->helper('search');]
   prep_query_string()
-      $this->EE->functions->prep_query_string()
+      ee()->functions->prep_query_string()
   prep_url()
-      prep_url() [$this->EE->load->helper('url');]
+      prep_url() [ee()->load->helper('url');]
   remove_extra_commas($str)
       reduce_multiples($str, ',', TRUE);
-      [$this->EE->load->helper('string');]
+      [ee()->load->helper('string');]
   strip_quotes()
-      strip_quotes() [$this->EE->load->helper('string');]
+      strip_quotes() [ee()->load->helper('string');]
   trim_slashes()
-      trim_slashes() [$this->EE->load->helper('string');]
+      trim_slashes() [ee()->load->helper('string');]
   valid_ip()
-      $this->EE->input->valid_ip()
+      ee()->input->valid_ip()
   xml_convert()
-      xml_convert() [$this->EE->load->helper('xml');]
+      xml_convert() [ee()->load->helper('xml');]
   xss_clean()
-      $this->EE->security->xss_clean()
+      ee()->security->xss_clean()
   xss_protection_hash()
-      $this->EE->security->xss_hash()
+      ee()->security->xss_hash()
 
 2.0 Tips and Tricks
 ===================

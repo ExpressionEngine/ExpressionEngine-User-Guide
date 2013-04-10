@@ -19,7 +19,7 @@ The Channel Entries tag can display both multi-entry and
 single-entry content - that is, several entries on a page, or one
 specific one (it dynamically adjusts its output based on the URL
 request). It can also show entries from specific categories, specific
-days, monthly archives, permalinks, and more. 
+days, monthly archives, permalinks, and more.
 
 Here is a basic example of how this tag might be used:
 
@@ -52,7 +52,7 @@ author\_id=
 ::
 
 	author_id="1"
-	
+
 
 This parameter limits the query by the member ID of the entry's author.
 You can use the pipe character to query by multiple author IDs::
@@ -63,8 +63,8 @@ Or you can add "not" to exclude author IDs
 
 ::
 
-	author_id="not 1|2|3" 
-	
+	author_id="not 1|2|3"
+
 You can also use the constant "CURRENT\_USER" to show entries from only the currently logged in user.
 
 
@@ -86,7 +86,7 @@ backspace=
 ::
 
 	backspace="7"
-	
+
 
 Backspacing removes characters (including spaces and line breaks) from
 the last iteration of the loop. For example, if you put a <br /> tag
@@ -177,18 +177,18 @@ Or you can negate the inclusive stack and get entries that do not of
 
 
 .. note:: When you use the ``category="3|4"`` parameter (not excluding), you
-   are implicitly telling ExpressionEngine to only deal with entries that have 
-   been assigned one or more categories. If you have entries that haven't been 
-   categorized then they will be ignored and not included in the results. 
-   However, if you are using exclusion (``category="not 3|4"``), then you will 
-   be shown all entries without those categories *including* those without any 
-   categories assigned. To change this behavior when excluding categories use 
+   are implicitly telling ExpressionEngine to only deal with entries that have
+   been assigned one or more categories. If you have entries that haven't been
+   categorized then they will be ignored and not included in the results.
+   However, if you are using exclusion (``category="not 3|4"``), then you will
+   be shown all entries without those categories *including* those without any
+   categories assigned. To change this behavior when excluding categories use
    the `uncategorized\_entries <#uncategorized-entries>`_ parameter.
 
 .. note:: Using this parameter will automatically cause ExpressionEngine to
-   *ignore* any category information specified via the URL. For instance, if 
-   you are on a "category page" (e.g. a ``/C13/`` segment in the URL) that 
-   will be completely ignored in favor of whatever you have specified via the 
+   *ignore* any category information specified via the URL. For instance, if
+   you are on a "category page" (e.g. a ``/C13/`` segment in the URL) that
+   will be completely ignored in favor of whatever you have specified via the
    parameter.
 
 category\_group=
@@ -356,10 +356,10 @@ show entries in future weeks with pagination, you can use this::
 
 	display_by="week" limit="1" show_future_entries="yes" show_current_week="yes"
 
-.. note:: The display\_by parameter uses the last unit of time provided that 
-   has entries. If you ``display_by="day"`` then it will show the last day that 
-   has entries. If you ``display_by="month"`` combined with ``limit="3"`` then 
-   it will show the last 3 months with entries, even if these months are not 
+.. note:: The display\_by parameter uses the last unit of time provided that
+   has entries. If you ``display_by="day"`` then it will show the last day that
+   has entries. If you ``display_by="month"`` combined with ``limit="3"`` then
+   it will show the last 3 months with entries, even if these months are not
    consecutive.
 
 This parameter uses UTC/GMT time and is not localized to the server or
@@ -383,7 +383,7 @@ your site you visit (main page, archives, comments, etc.). By setting
 ``dynamic="no"`` you will ensure that the list is not affected by anything
 passed in the URL.
 
-.. note:: You may allow the tag to be sensitive to pagination data in 
+.. note:: You may allow the tag to be sensitive to pagination data in
 	the url by including the `paginate=`_ parameter. If that tag
 	is used in conjunction with the dynamic parameter, the tag will act
 	dynamically for pagination data only.
@@ -490,8 +490,8 @@ In the above example, three entries would be displayed, in the order: 1,
 7, and then 3.
 
 .. note:: Using this parameter will automatically constrain the entries
-	tag to the entry id's you specify, effectively setting the 
-	`entry_id=`_ parameter to the same id's given to the 
+	tag to the entry id's you specify, effectively setting the
+	`entry_id=`_ parameter to the same id's given to the
 	``fixed_order=`` parameter.
 
 group\_id=
@@ -761,7 +761,7 @@ URL. However, if one of your single entry pages is requested, but it
 doesn't contain a valid ID, this parameter will tell the tag that you do
 not wish the template to display anything.
 
-.. note:: You will often use this parameter in conjunction with the 
+.. note:: You will often use this parameter in conjunction with the
 	`if no_results`_ conditional.
 
 search:field\_name=
@@ -842,8 +842,8 @@ you can add the special trigger \\W after the term.
 
 ::
 
-	search:body="cat\W" 
-	
+	search:body="cat\W"
+
 The above example will return all entries that contain the whole word "cat".
 It will not match entries where the phrase "cat" only lies within another word.
 
@@ -938,8 +938,8 @@ it to "only" and *only* show those entries that have had Pages assigned
 to them. The default is "yes" and it will treat entries with assigned
 Pages no different from any other entries.
 
-.. tip:: ``show_pages="only"`` acts in the same manner as ``dynamic="no"``. 
-   ``show_pages="only"`` aids in building persistent menus based off existing 
+.. tip:: ``show_pages="only"`` acts in the same manner as ``dynamic="no"``.
+   ``show_pages="only"`` aids in building persistent menus based off existing
    Pages.
 
 sort=
@@ -1028,9 +1028,9 @@ If the date needs to be set dynamically, then PHP must often be used.
 it to be parsed on "input". One example usage is::
 
 	<?php
-		$start_time = $this->EE->localize->decode_date('%Y-%m-%d %H:%i', $this->EE->localize->now - 86400);
+		$start_time = ee()->localize->decode_date('%Y-%m-%d %H:%i', ee()->localize->now - 86400);
 	?>
-	
+
 	{exp:channel:entries channel="{my_weblog}" limit="5" sort="desc" start_on="<?php echo $start_time; ?>"}
 
 The above would display up to 5 entries with entry dates that fall
@@ -1056,8 +1056,8 @@ Or exclude statuses using "not"
 ::
 
 	status="not submitted|processing|closed"
-	
-If no status parameter is specified, only open status entries will be returned.	
+
+If no status parameter is specified, only open status entries will be returned.
 
 stop\_before=
 -------------
@@ -1077,9 +1077,9 @@ If the date needs to be set dynamically, then PHP must often be used.
 it to be parsed on "input" and then use something like this::
 
 	<?php
-		$current_time = $this->EE->localize->decode_date('%Y-%m-%d %H:%i', $this->EE->localize->now - 518400);
+		$current_time = ee()->localize->decode_date('%Y-%m-%d %H:%i', ee()->localize->now - 518400);
 	?>
-	
+
 	{exp:channel:entries channel="{my_weblog}" orderby="date" sort="desc" stop_before="<?php echo $current_time; ?>"}
 
 The above would display entries in descending date from six days in the
@@ -1171,7 +1171,7 @@ Or you can add "not" to exclude usernames
 ::
 
 	username="not tom|dick|harry|fred"
-	
+
 You can also use the constant ``"CURRENT_USER"`` to show entries from only the currently logged in user.
 
 ::
@@ -1204,13 +1204,13 @@ year=, month=, day=
 ::
 
 	year="2003"
-	
+
 ::
 
 	month="12"
 
 ::
-	
+
 	day="23"
 
 You can limit queries by year, month, or day. For example, to show all
@@ -1225,13 +1225,13 @@ To show only the month of December in 2003 you'll do this
 	year="2003"
 
 ::
-	
+
 	month="12"
 
-.. note:: Don't combine these parameters with the ``display_by`` parameter 
-   discussed previously, as these take precedence over that parameter. In 
-   addition, the three parameters must be applied "in order", meaning that you 
-   must specify the year if you specify the month and you must specify both 
+.. note:: Don't combine these parameters with the ``display_by`` parameter
+   discussed previously, as these take precedence over that parameter. In
+   addition, the three parameters must be applied "in order", meaning that you
+   must specify the year if you specify the month and you must specify both
    month and year to use day.
 
 .. _channel_entries_single_variables:
@@ -2034,7 +2034,7 @@ Conditional Variables
 Conditionals allow you to more precisely control your content.
 
 .. note:: A more complete explanation of conditional control structures
-   and operators can be found on the :doc:`Global Conditionals 
+   and operators can be found on the :doc:`Global Conditionals
    </templates/globals/conditionals>` page.
 
 Here is an example that tests for the "summary" field being not empty
@@ -2147,7 +2147,7 @@ if no\_results
 
 You may use this conditional for displaying a message in the case when
 no entries are returned. The contents inside of the conditional will be
-displayed in cases where there are no results returned for the tag. 
+displayed in cases where there are no results returned for the tag.
 
 ::
 
@@ -2162,7 +2162,7 @@ variable
 	{if no_results} {redirect="channel/noresult"} {/if}
 
 Lastly, if you want to simply display your 404 page (with 404 headers)
-when no entries are returned, simply use "404" as the template name. 
+when no entries are returned, simply use "404" as the template name.
 
 ::
 
@@ -2315,7 +2315,7 @@ If no parameter is specified it will default to "daily".
    There is a bit of a performance hit, however, since date parsing is the
    most processor intensive. Read the caching section for information on
    improving performance.
-   
+
 categories
 ----------
 

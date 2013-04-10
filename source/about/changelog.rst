@@ -41,7 +41,7 @@ Release Date: ?
   - Added a hidden config, ``email_smtp_crypto``, that allows you to specify an
     encryption protocol for SMTP email.
   - PHP's upload_max_filesize setting is now displayed in the File Upload
-    Preferences form. 
+    Preferences form.
   - Added a status_code="" parameter to the {redirect} tag allowing you to specify
     the status code of the redirect.  Currently only accepts 3xx status
     codes.
@@ -55,7 +55,7 @@ Release Date: ?
   - Template manager no longer automatically adds files starting with ``._``.
 
 - Bug Fixes:
-  
+
   - Fixed (#16355) Remember Me (FINALLY)
   - Fixed bugs (#16939, #17363, #19133) where the DST setting may
     incorrectly shift stored and displayed times by one hour.
@@ -99,7 +99,7 @@ Release Date: ?
   - Fixed a bug (#17259) in SafeCracker where the relationships options variable
     pair was not parsed outside the custom field loop.
   - Modified string cleaning to accommodate an iconv bug that could result in
-    form data being lost it contained invalid characters (#19134). 
+    form data being lost it contained invalid characters (#19134).
   - Fixed a bug in the IP to Nation module where environmental factors could
     cause an erroneous cache full error when attempting to update the IP
     database.
@@ -117,7 +117,7 @@ Release Date: ?
   - Fixed a bug (#19250) in the file field output where non-existent variables
     were parsed as if a path existed.
   - Fixed a bug (#19114) where the forgot password language was ambiguous.
-  - Fixed a bug where uploading multiple files using the multiple="multiple" 
+  - Fixed a bug where uploading multiple files using the multiple="multiple"
     attribute would cause an error in SafeCracker.
   - Fixed a bug (#19063) where URLs mentioned in module descriptions may not
     be masked.
@@ -143,7 +143,7 @@ Release Date: ?
   - Fixed a bug (#19271) where accessing member logout when already logged
     out could destroy other user's sessions.
   - Fixed a bug (#19237) where duplicate field names could be created due
-    to the name being truncated for length. 
+    to the name being truncated for length.
   - Fixed a bug (#16256) where the status dropdown on the Content Edit
     page was not always populated with the correct custom statuses.
 
@@ -155,15 +155,17 @@ Release Date: ?
     pre-localized or non-localized time string into a Unix timestamp.
   - Added ``Localize::format_date`` to convert a Unix timestamp into a
     formatted date string.
-  - ``Localize::now`` property now accounts for server offset.
+  - ``Localize::$now`` property now accounts for server offset.
   - Changed the CP view file structure to inherit from a master template.
     Please check your view file overrides.
+  - Added global ``ee()`` function for easy access to the EE super
+    object.
   - String helper is now loaded automatically.
-  - Updated the Email library to be more consistent with CI, including a number 
+  - Updated the Email library to be more consistent with CI, including a number
     of CI bug fixes.  Please see the documentation for full details on usage
     recommendations.
   - Added ``Email::set_headers()``.
-  - Added the following public Email class variables: ``smtp_keepalive``, 
+  - Added the following public Email class variables: ``smtp_keepalive``,
     ``smtp_crypto`` and ``dsn``.
   - Added an override for ``Email::_mime_types()`` that uses the mimes config
     file to define mimes.
@@ -186,7 +188,7 @@ Release Date: ?
     - ``Cp::delete_layout_tabs``, use ``Layout::delete_layout_tabs`` instead.
     - ``Cp::delete_layout_fields``, use ``Layout::delete_layout_fields`` instead.
     - ``Cp::set_variable``, set the variable directly on the view object instead, e.g.
-      ``$this->EE->view->$name = $value;``
+      ``ee()->view->$name = $value;``
     - ``Cp::secure_forms``, use ``EE_Security::have_valid_xid`` instead.
     - ``Cp::fetch_cp_themes``, use ``Admin_model::get_cp_theme_list`` instead.
     - ``Email::_get_ip``, use ``Input::ip_address`` instead.
@@ -233,7 +235,7 @@ Release Date: December 20, 2012
 
   - Fixed a bug where the Member_model::member_delete() method would have issues
     deleting single members not passed within arrays.
-    
+
 Version 2.5.4
 -------------
 
@@ -263,7 +265,7 @@ Release Date: December 18, 2012
   - Added the ``disable="pagination"`` parameter to the Comment Entries
     tag to disable pagination overhead.
   - Altered member validation to ensure duplicate username checks are case
-    insensitive regardless of database settings. 
+    insensitive regardless of database settings.
 
 - Bug Fixes:
 
@@ -272,7 +274,7 @@ Release Date: December 18, 2012
   - Fixed a bug where a PHP error could occur when overwriting unsynced files.
   - Fixed a bug where XSS filters in certain browsers could break javascript on
     the template edit page under rare circumstances.
-  - Fixed a bug (#18280) where referrer tracking was not disabled when the 
+  - Fixed a bug (#18280) where referrer tracking was not disabled when the
     Referrer module was uninstalled, causing a MySQL error.
   - Fixed a bug (#18309) where the IP to Nation module did not properly update
     the update date.
@@ -364,11 +366,11 @@ Release Date: December 18, 2012
     tag was failing to account for edit timeout.
   - Fixed a bug (#18276) in which members in a user group with out upload
     permissions on a certain file directory could not view files in that
-    directory when logged in. 
+    directory when logged in.
   - Fixed a bug (#18258) where file paths with special characters in them
     were being url encoded and then saved to the database, resulting in
     the references to them in channel entries being corrupted.
-  - Fixed a bug (#18350) where File Manager search was defaulting to 
+  - Fixed a bug (#18350) where File Manager search was defaulting to
     filename only search when a search of all fields was expected default.
   - Fixed a bug (#18351) where the username field length was too short in
     the session time out login form.
@@ -398,7 +400,7 @@ Release Date: September 11, 2012
   - Added autocomplete="off" to all email, username, and password fields.
   - Altered the display of Standard Global variables to output an empty string
     rather than the unparsed variable when not set.
-  - Added an ID of expressionengine_template_debug to the division containing 
+  - Added an ID of expressionengine_template_debug to the division containing
     template debugging output.
   - **Reactor:** Added ``path_third_themes`` and ``url_third_themes`` hidden config
     variables.
@@ -420,14 +422,14 @@ Release Date: September 11, 2012
     category indicators in the URL when dynamic was set to 'no'.
   - Fixed a bug (#17445) where Ping servers were only populated on the publish
     page if the user had saved their individual ping preferences.
-  - Fixed a bug (#17507) where Subscription pagination was incorrect for 
+  - Fixed a bug (#17507) where Subscription pagination was incorrect for
     administrators viewing a user's subscriptions.
-  - Fixed a bug (#17952) where Communicate's batch mode displayed unstyled. 
+  - Fixed a bug (#17952) where Communicate's batch mode displayed unstyled.
   - Fixed a bug (#17762) where the Simple Commerce module could reject a valid
     ping due to the use of capital letters in the account email.
-  - Fixed a bug (#18120) where the Simple Commerce module could reject a valid 
+  - Fixed a bug (#18120) where the Simple Commerce module could reject a valid
     ping due to slashes added when magic_quotes are turned on.
-  - Fixed a bug (#16950) in the Simple Commerce module where entering a purchase 
+  - Fixed a bug (#16950) in the Simple Commerce module where entering a purchase
     manually could cause a MySQL error in strict mode.
   - Fixed a bug (#16607) in the Simple Commerce module where subscriptions could
     be rejected if Paypal sent the payment notification too soon.
@@ -651,7 +653,7 @@ Release Date: May 29, 2012
     plugins from working with the MetaWeblog API module, and especially
     MarsEdit.
   - Fixed a bug (#17499) where changing a username or password from the
-    front-end did not behave as expected in some cases. 
+    front-end did not behave as expected in some cases.
   - Fixed a bug (#16995) where Pages module URIs were case sensitive.
   - Fixed bugs (#17026, #17378) where the Pages module and page_url tags
     still displayed trailing slashes in some cases.
@@ -677,11 +679,11 @@ Release Date: May 29, 2012
   - Fixed a bug (#16593) where advanced search ignored the status parameter.
   - Fixed a bug (#16619) where saving the SafeCracker extension settings would
     clear out settings for other MSM sites.
-  - Fixed a bug (#16708) where there was an unnecessary query when building the 
+  - Fixed a bug (#16708) where there was an unnecessary query when building the
     category list for new entries.
-  - Fixed a bug (#16610) where importing members would not correctly set the 
+  - Fixed a bug (#16610) where importing members would not correctly set the
     time format.
-  - Fixed a bug (#16798) where safecracker file was not obeying the required 
+  - Fixed a bug (#16798) where safecracker file was not obeying the required
     rule.
   - Fixed a bug (#17892) where the password lockout notice may show number
     of minutes as a hexadecimal number.
@@ -760,20 +762,20 @@ Release Date: May 7, 2012
 
     - Added new module and fieldtype for the new rich text editor.
     - Added user preferences for rich text editor under my preferences.
-  
+
   - Added a Cookie Consent Module, available in the ExpressionEngine Add-on
     Library.
   - Dropdown for "Preview Layout" in publish layouts sidebar updates to the
     member group being viewed.
   - When editing publish layouts, the checkbox for the member group being
     viewed defaults to being checked.
-  - Removed IP requirement from sessions check to prevent logout issues for 
+  - Removed IP requirement from sessions check to prevent logout issues for
     revolving IP addresses.
-  - Altered language keys on the New Template page to be consistent with the 
+  - Altered language keys on the New Template page to be consistent with the
     New Template Group page in the control panel.
   - **Reactor:** Changed "edit member group" screen to show prefs for the MSM
     site you are presently using.
-  - **Reactor:** Added option to member delete confirmation page to delete all 
+  - **Reactor:** Added option to member delete confirmation page to delete all
     entries associated with the member being deleted
 
 - Bug Fixes:
@@ -785,32 +787,32 @@ Release Date: May 7, 2012
   - Fixed a bug where the currently selected upload folder on the File
     Manager page was not used as the default in the Upload File dialog.
   - Fixed bugs (#16802, #17442) where package paths were not added consistently.
-  - Fixed a bug (#17391) where the localization link did not show in the My 
-    Account menu in the control panel unless the member also had permission to 
+  - Fixed a bug (#17391) where the localization link did not show in the My
+    Account menu in the control panel unless the member also had permission to
     administer members.
-  - Fixed a bug (#17443) where the recipient parameter in the Tell-a-Friend tag 
+  - Fixed a bug (#17443) where the recipient parameter in the Tell-a-Friend tag
     was ignored.
-  - Fixed a bug (#17523) where a PHP error could occur when a member group had 
-    permission to create new channels but no channels had been assigned to that 
+  - Fixed a bug (#17523) where a PHP error could occur when a member group had
+    permission to create new channels but no channels had been assigned to that
     group.
-  - Fixed a bug (#17523) where a permission error could occur when a group had 
+  - Fixed a bug (#17523) where a permission error could occur when a group had
     permission to create new channels but did not have template access.
-  - Fixed a bug (#17644) where the codeblock division added to code tags could 
-    be converted to entities when allowed HTML formatting was set to none. 
-  - Fixed a bug (#17647) where deleting a status group did not remove a 
+  - Fixed a bug (#17644) where the codeblock division added to code tags could
+    be converted to entities when allowed HTML formatting was set to none.
+  - Fixed a bug (#17647) where deleting a status group did not remove a
     reference to that group id in the exp_channels table.
-  - Fixed a bug where the per page setting in Content Edit did not stick once 
+  - Fixed a bug where the per page setting in Content Edit did not stick once
     navigating away from the page.
-  - Fixed a bug (#17365) where setting your Default HTML formatting to Convert 
+  - Fixed a bug (#17365) where setting your Default HTML formatting to Convert
     HTML and turning Automatically turn URLS into links on would cause the auto
     linking not to work.
-  - Fixed a bug (#17440) where Safecracker was attempting to load the file 
+  - Fixed a bug (#17440) where Safecracker was attempting to load the file
     browser even though it can't use it.
-  - Fixed a bug (#17690) where SafeCracker could not use the valid_ip form 
+  - Fixed a bug (#17690) where SafeCracker could not use the valid_ip form
     validation rule.
   - Fixed a bug (#17577) where filtered comments in the control panel may
     appear out of order.
-  - Fixed a bug in the version helper that would display PHP errors if 
+  - Fixed a bug in the version helper that would display PHP errors if
     unexpected data was returned from the server.
   - Fixed a bug (#17380) where editing entries while the comment module is
     disabled would show PHP errors.
@@ -893,20 +895,20 @@ Release Date: May 7, 2012
   - Fixed a bug where the channel calendar day_path did not always match the
     calendar day shown due to differences in localization.
   - Fixed a bug where the Updated Sites module was rejecting valid pings.
-  - **Reactor:** Fixed a bug where 3rd party module tab fields did not have their 
+  - **Reactor:** Fixed a bug where 3rd party module tab fields did not have their
     data set after an autosave.
 
 - Developers:
 
-  - **Reactor:** Added $member_ids, an array of members deleted, to the 
+  - **Reactor:** Added $member_ids, an array of members deleted, to the
     cp_members_member_delete_end hook.
   - **Reactor:** Re-exposed channel->pager_sql in the channel module.
-  - **Reactor:** Added parameter to ``Api_channel_fields::field_edit_vars`` to 
+  - **Reactor:** Added parameter to ``Api_channel_fields::field_edit_vars`` to
     specify which field types to present as options.
-  - **Reactor:** Altered the Template class to allow plugins/modules to use 
+  - **Reactor:** Altered the Template class to allow plugins/modules to use
     __call() magic method.
-  - Added ``myaccount_nav_setup`` hook to modify My Account navigation. See 
-    :doc:`documentation </development/extension_hooks//cp/myaccount/index>` for 
+  - Added ``myaccount_nav_setup`` hook to modify My Account navigation. See
+    :doc:`documentation </development/extension_hooks//cp/myaccount/index>` for
     more information.
   - Added ``email_send`` hook to modify emails or take over email sending
     completely.
@@ -943,7 +945,7 @@ Release Date: Jan 24, 2012
     could not be found.
   - Altered the handling of the control panel cookie domain for MSM sites.
   - Optimized the encode_ee_tags() method in the Functions library.
-  - Disabled the ability to type over the field shortname on the 'Admin- Channel 
+  - Disabled the ability to type over the field shortname on the 'Admin- Channel
     Fields' main page when selecting a field short name.
   - Abstracted file browser and file field into the File_field library.
   - Changed the category image field to use the new File_field library and image
@@ -1001,7 +1003,7 @@ Release Date: Jan 24, 2012
   - Fixed a bug (#17106) in the installation wizard where some inputs that
     could not logically allow spaces were not trimmed.
   - Fixed a bug where date fields containing a date prior to 1970 were not
-    displayed in the preview shown after creating or editing an entry. 
+    displayed in the preview shown after creating or editing an entry.
   - Fixed a bug (#17231) where Moscow Time was still represented as UTC+03:00
     instead of UTC+04:00.
   - Fixed a bug (#17142) by improving the grammar of messages in some areas.
@@ -1033,14 +1035,14 @@ Release Date: Jan 24, 2012
   - Fixed a bug (#17134) where the file upload could report that a file already
     exists when it did not.
   - Fixed a bug where the Moblog Module check reported rejected entries as
-    successful and failed to count saved entries. 
+    successful and failed to count saved entries.
   - Fixed a bug (#17141) where a MySQL error could occur due to SafeCracker
     adding a stray where clause to random queries.
   - Fixed a bug (#17156) where using loading entry version and then saving the
     entry could result in a duplicate entry being created.
   - Fixed a bug (#17160) where uploaded files and generated thumbnails had the
     wrong permissions applied.
-  - Fixed a bug (#17006) where performing a search, then going back in your 
+  - Fixed a bug (#17006) where performing a search, then going back in your
     browser and searching again would cause an invalid action error.
   - Fixed a bug (#16034) where SafeCracker would insert an empty option into
     dropdown menus when using the {options} tag pair.
@@ -1118,7 +1120,7 @@ Release Date: Jan 24, 2012
     member groups could not be accessed by its creator.
   - Fixed a bug (#16983) where uncategorized_entries parameter in Channel
     Entries tag had no effect.
-  - **Reactor:** Fixed a bug with autosave where the save() method would be called for third 
+  - **Reactor:** Fixed a bug with autosave where the save() method would be called for third
     party add-ons on autosave.
   - Fixed a bug (#16973) where the "Show Existing Files" link on a
     SafeCracker file field would claim the upload directory didn't exist.
@@ -1134,11 +1136,11 @@ Release Date: Jan 24, 2012
     Configuration were not documented.
   - Fixed a documentation error (#17153) where a preference was incorrectly
     named in Output and Debugging Preferences.
-  - Fixed a documentation error (#17180) where there was some outdated 
+  - Fixed a documentation error (#17180) where there was some outdated
     information for the Publish page.
-  - Fixed a documentation error (#16547) where there was some outdated 
+  - Fixed a documentation error (#16547) where there was some outdated
     information for the Comment Module page.
-  - Fixed a documentation error (#16547) where there was some outdated 
+  - Fixed a documentation error (#16547) where there was some outdated
     information for the File Manager page.
 
 - Developers:
@@ -1150,7 +1152,7 @@ Release Date: Jan 24, 2012
   - Deprecated ``File_upload_preferences_model::get_upload_preferences()``,
     use ``File_upload_preferences_model::get_file_upload_preferences()``
     instead.
-  - Deprecated ``Tools_model::get_upload_preferences()``, use 
+  - Deprecated ``Tools_model::get_upload_preferences()``, use
     ``File_upload_preferences_model::get_file_upload_preferences()`` instead.
   - Added ``template_types`` Extension Hook to add custom template types.
   - Added ``member_delete`` Extension Hook to execute code before member
@@ -1228,7 +1230,7 @@ Release Date: October 11, 2011
   - Fixed a bug (#15530) where a registering member could supply a value
     that was not an option in a Select List member field.
   - Fixed a bug (#16214) where new categories would be sorted
-    alphabetically when the group was using a custom sort order instead. 
+    alphabetically when the group was using a custom sort order instead.
   - Fixed a bug (#16232) where the multi-entry editor did not update
     entry edit dates.
   - Fixed a bug (#16246) where the Date fieldtype could not show an
@@ -1236,7 +1238,7 @@ Release Date: October 11, 2011
   - Fixed a bug (#16239) where some buttons in the Control Panel had
     minor display issues.
   - Fixed a bug (#16038) where the File Manager had display issues when
-    the Corporate theme was used.  
+    the Corporate theme was used.
   - Fixed a bug (#16265) where the Email Contact Form could fail to
     send in some cases if the user_recipients parameter was not specified.
   - Fixed a bug (#16422) where some colors appeared incorrectly in
@@ -1248,7 +1250,7 @@ Release Date: October 11, 2011
   - Fixed a bug (#16639) where non-Super Admins with group administration
     privileges could change a Super Admin's member group.
   - Fixed a bug (#16626) where non-Super Admins with profile editing
-    privileges could edit a Super Admin's profile. 
+    privileges could edit a Super Admin's profile.
   - Fixed a documentation error (#16213) where some parameters available
     to exp:member:login_form were not listed.
   - Fixed a documentation error (#16564) where the tag for generating
@@ -1407,7 +1409,7 @@ Member group.
 - Fixed a bug where syncing a directory with files that have spaces in
   their names would break links to existing File fields and textarea fields.
 
-	
+
 Version 2.2.1
 -------------
 
@@ -1766,7 +1768,7 @@ Build 20110512
       intermediate confirmation page on all forwarded urls.
    -  Added $config['cookie\_secure'] to the config file to allow
       requiring a secure (HTTPS) in order to set cookies.
-   -  Added :forum_thread:`theme\_folder\_url <183306>` as a Global 
+   -  Added :forum_thread:`theme\_folder\_url <183306>` as a Global
       Variable.
    -  Added :forum_thread:`Feature Request <162694>`: rel="external" to
       control panel help links so they open in a new window.

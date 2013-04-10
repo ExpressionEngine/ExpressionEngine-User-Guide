@@ -16,7 +16,7 @@ template_fetch_template
 
   How it's called::
 
-    $this->EE->extensions->call('template_fetch_template', $row);
+    ee()->extensions->call('template_fetch_template', $row);
 
   :param array $row: Data for the current template
   :rtype: Void
@@ -32,7 +32,7 @@ template_post_parse
 
   How it's called::
 
-    $this->final_template = $this->EE->extensions->call(
+    $this->final_template = ee()->extensions->call(
         'template_post_parse',
         $this->final_template,
         $sub,

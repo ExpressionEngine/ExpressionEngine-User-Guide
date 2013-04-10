@@ -17,8 +17,8 @@ member_member_register
 
   How it's called::
 
-    $this->EE->extensions->call('member_member_register', $data, $member_id);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->call('member_member_register', $data, $member_id);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param array $data: Array of data about the new member like username,
     email, screen_name
@@ -36,8 +36,8 @@ member_member_register_errors
 
   How it's called::
 
-    $this->EE->extensions->call('member_member_register_errors', $this);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->call('member_member_register_errors', $this);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $this: The current Member_register object
   :rtype: Void
@@ -54,8 +54,8 @@ member_member_register_start
 
   How it's called::
 
-    $this->EE->extensions->call('member_member_register_start');
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->call('member_member_register_start');
+    if (ee()->extensions->end_script === TRUE) return;
 
   :rtype: Void
 
@@ -70,8 +70,8 @@ member_register_validate_members
 
   How it's called::
 
-    $this->EE->extensions->call('member_register_validate_members', $member_id);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->call('member_register_validate_members', $member_id);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param int $member_id: the ID of the member
   :rtype: Void
