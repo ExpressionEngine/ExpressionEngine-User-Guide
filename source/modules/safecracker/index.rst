@@ -636,11 +636,16 @@ custom\_fields
 		{/if}
 		
 		{if relationship}
-			<select id="{field_name}" name="{field_name}">
+			<ul style="list-style: none">
 				{options}
-					<option value="{option_value}"{selected}>{option_name}</option>
+					<li>
+					<input type="text" name="{field_name}[sort][]" value="{option_order}" style="width: 25px">
+					<label class="checkbox">
+						<input type="checkbox" name="{field_name}[data][]" value="{option_value}"{checked}> {option_name}
+					</label>
+					</li>
 				{/options}
-			</select>
+			</ul>
 		{/if}
 		
 		{if multiselect}
