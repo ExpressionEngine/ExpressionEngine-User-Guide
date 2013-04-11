@@ -218,6 +218,7 @@ Release Date: ?
     - ``SafeCracker_lib::encrypt_input``
     - Security helper's ``do_hash()``, use PHP's hashing functions instead.
     - ``Session::update_cookies``
+    - ``Template::assign_relationship_data``
 
 Version 2.5.5
 -------------
