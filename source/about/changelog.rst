@@ -163,6 +163,7 @@ Release Date: ?
   - Added global ``ee()`` function for easy access to the EE super
     object.
   - String helper is now loaded automatically.
+  - Updated underscore.js to version 1.4.4
   - Updated the Email library to be more consistent with CI, including a number
     of CI bug fixes.  Please see the documentation for full details on usage
     recommendations.
@@ -187,6 +188,7 @@ Release Date: ?
 
     - ``Api_channel_entries::submit_new_entry`` and
       ``Api_channel_entries::update_entry``, use ``Api_channel_entries::save_entry`` instead.
+    - ``Cp::add_to_head`` should only be used for styles, use ``Cp::add_to_foot`` for scripts.
     - ``Cp::delete_layout_tabs``, use ``Layout::delete_layout_tabs`` instead.
     - ``Cp::delete_layout_fields``, use ``Layout::delete_layout_fields`` instead.
     - ``Cp::set_variable``, set the variable directly on the view object instead, e.g.
