@@ -184,6 +184,14 @@ Release Date: ?
     adding or updating an entry if the edit date is not explicitly set.
   - ``Functions::convert_curlies()`` now also encodes EE conditionals
   - **Reactor:** Added ability to have multiple fieldtypes in one add-on package.
+  - **Reactor:** Added ``relationships_display_field`` hook to alter
+    related entries displayed in the publish field of a muti-select
+    Relationships field.
+  - **Reactor:** Added ``relationships_post_save`` hook to alter the
+    entry IDs that get saved upon saving an entry with a Relationships
+    field.
+  - **Reactor:** Added ``relationships_query`` hook to alter the entry
+    IDs returned when parsing nested Relationships field tree tags.
   - Deprecated methods:
 
     - ``Api_channel_entries::submit_new_entry`` and
