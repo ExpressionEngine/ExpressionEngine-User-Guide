@@ -1,5 +1,6 @@
+###################
 Security Guidelines
-===================
+###################
 
 .. contents::
   :local:
@@ -7,8 +8,9 @@ Security Guidelines
 
 .. highlight:: php
 
+**************************
 Cross Site Scripting (XSS)
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+**************************
 
 Cross Site Scripting is a type of security vulnerability that allows
 code injection by malicious users onto a page. You can find some
@@ -20,69 +22,70 @@ Cross Site Scripting should be taken very seriously as you would never
 want your add-on to be the source of an attack vector.
 
 ee()->security->xss_clean()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===========================
 
 ``ee()->security->xss_clean()`` is the built in ExpressionEngine
 XSS sanitization method, which is constantly tweaked for improved
 security and performance. It accepts both a ``string`` and an ``array``
-and will return sanitized text.
-
-::
+and will return sanitized text::
 
   $str = ee()->security->xss_clean($str);
 
 Sanitized Variables on Input
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+============================
 
-Keys are cleaned and new lines in data are normalized
-**automatically** by the Input Class for the following:
+Keys are converted to UTF-8 and new lines in data are normalized
+**automatically** by the Input Class for the following variables:
 
 - ``$_GET``
 - ``$_COOKIE``
 - ``$_POST``
 
-For performance reasons, data are not automatically run through the xss
-filter. This means that any front-side user input from superglobals
-should be sanitized by using ``ee()->security->xss_clean()`` before
-inserting into the database our outputting to the screen. If the user
-input is in the Control Panel, such as a module's back end, it is at
-your discretion based on the needs of the module for whether or not
-administrative input is sanitized. Always err on the side of caution,
-and never assume that your end user will only allow access to the back
-end of your module to trusted members.
+However, for performance reasons, data are not automatically run through
+the xss filter. If you are storing or displaying data from these
+variables, you should use the :doc:`Input class's get(), post(), or
+get_post() methods </development/usage/input>` and pass ``TRUE`` as
+the second parameter so the value will be XSS cleaned.
+
+If the user input is in the Control Panel, such as a module's back end,
+it is at your discretion based on the needs of the module for whether or
+not administrative input is sanitized. Always err on the side of
+caution, and never assume that your end user will only allow access to
+the back end of your module to trusted members.
 
 INSERT and UPDATE Queries
-^^^^^^^^^^^^^^^^^^^^^^^^^
+=========================
 
 As ExpressionEngine assumes that all information in the database is
 sanitized against XSS, the responsibility for sanitization falls on
-**input** to the database. Therefore, all ``INSERT`` and ``UPDATE``
-queries should use ``ee()->security->xss_clean()`` for user input
-data.
+**input** to the database. Active Record methods will escape your data,
+but will not XSS clean it.Therefore, all data should be run through
+either ``ee()->security->xss_clean()`` or ``ee()->input->get_post('key',
+TRUE)`` before being stored in the database.
 
 Outputting Data to the Page
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===========================
 
-Use the :doc:`Typography class </development/usage/typography>` when
-outputting to a page. Doing so provides a number of benefits and
-security precautions:
+Use the :doc:`Typography class </development/usage/typography>` whenever
+outputting blocks of content from user submitted data. It is regularly
+updated to improve security and performance, saving you both time and
+energy.
 
-- Allows Safe HTML or no HTML at all if desired
-- Validates all BBCode, such as [url] and [img] to keep them safe
-- Encodes ExpressionEngine tags and variables by default
+- It protects against PHP and ExpressionEngine tags from being parsed
+- BBCode is sanitized, even if Allow All HTML is enabled
+- Using ``'safe'`` or ``'none'`` for HTML formatting further protects
+  output by converting tags to entities
 
 When In Doubt...
-^^^^^^^^^^^^^^^^
+================
 
 If there is any doubt on the safety of a variable that you are
-outputting or inserting into the database, use XML Encode
-(``ee()->xml_convert()`` or
-`htmlentities() <http://us.php.net/manual/en/function.htmlentities.php>`_
-and
-`strip_tags() <http://us.php.net/manual/en/function.strip-tags.php>`_.
+outputting or inserting into the database, use XSS Clean:
+``ee()->security->xss_clean($value)``.
 
+************************
 SQL Injection Prevention
-~~~~~~~~~~~~~~~~~~~~~~~~
+************************
 
 SQL Injection is a special type of attack in which data is used in a
 query without being properly filtered, allowing a user to execute their
@@ -96,99 +99,72 @@ security:
 `http://dev.mysql.com/tech-resources/articles/guide-to-php-security-ch3.pdf <http://dev.mysql.com/tech-resources/articles/guide-to-php-security-ch3.pdf>`_
 
 Escaping PHP Variables
-^^^^^^^^^^^^^^^^^^^^^^
+======================
 
 PHP variables should be escaped in queries anytime the variable is not
 explicitly set to a hard-coded value *within* the method using the
 query. This means that even variables passed as arguments to a method
 must be escaped before being used in a query.
 
-Manually written queries should use :doc:`ee()->db->escape_str()
-<../usage/database>` on variables, even if you think the value is
-trusted::
+Manually written queries should use both XSS cleaned data and
+:doc:`ee()->db->escape_str() <../usage/database>` on variables, even if
+you think the value is trusted::
 
-  $query = ee()->db->query("SELECT field FROM table WHERE column = '".ee()->db->escape_str($foo)."'");
+  $data = ee()->security->xss_clean($foo);
 
-:doc:`ee()->db->insert_string() <../usage/database>` is the
-preferred method for ``INSERT`` queries, as values are escaped
-automatically in the supplied data array::
+  OR
 
-  $data = array('name' => 'Brett Bretterson', 'email_address' => 'brett@example.com');
-  ee()->db->query(ee()->db->insert_string('table', $data));
+  $data = ee()->input->get_post('foo', TRUE);
 
-:doc:`ee()->db->update_string() <../usage/database>` is the
-preferred method for ``UPDATE`` queries, as values are escaped
-automatically in the supplied data and ``where`` arrays::
+  ...
 
-  $data = array('email_address' => 'brett.bretterson@example.com');
-  $where = array('name' => 'Brett Bretterson');
-  ee()->db->query(ee()->db->update_string('table', $data, $where));
+  $query = ee()->db->query("SELECT field FROM table WHERE column = '".ee()->db->escape_str($data)."'");
+
+:doc:`ee()->db->insert() <../usage/database>` is the preferred method
+for ``INSERT`` queries, as values are escaped automatically in the
+supplied data array::
+
+  ee()->db->insert(
+      'table',
+      array(
+          'name'          => 'Brett Bretterson',
+          'email_address' => 'brett@example.com'
+      )
+  );
+
+:doc:`ee()->db->update() <../usage/database>` is the preferred method
+for ``UPDATE`` queries, as values are escaped automatically in the
+supplied data and ``where`` arrays::
+
+  ee()->db->update(
+      'table',
+      array('email_address' => 'brett.bretterson@example.com'),
+      array('name' => 'Brett Bretterson')
+  );
 
 .. note:: If you send the third argument (the ``WHERE`` clause) as an
   array as shown above, it will automatically be escaped. If you send
   a string, you must escape it yourself::
 
-    $data = array('email_address' => 'brett.bretterson@example.com');
-    ee()->db->query(ee()->db->update_string('table', $data, "name = '".ee()->db->escape_str($foo)."'"));
+    ee()->db->update(
+        'table',
+        array('email_address' => 'brett.bretterson@example.com'),
+        "name = '".ee()->db->escape_str($foo)."'"
+    );
 
-Preferences and Settings
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Storage of Settings
-^^^^^^^^^^^^^^^^^^^
-
-Security and required preference settings should be stored in the
-database or ``config.php`` file.
-
-Use of Settings in Forms
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-Never send values for preferences or settings in hidden form fields.
-HTML source is open and readable, so a malicious user could simply
-copy the HTML or use a browser plugin to alter the form data to
-something you do not expect or desire. If *absolutely* required,
-encode them:
-
-- JavaScript is good against bots but not against serious hackers.
-- Base 64 encoding is easy to break and therefore NOT recommended.
-- If there are a limited number of *possible* values, you could use
-  ``md5()`` or ``sha1()`` to encode the values and check against encoded
-  *possible* values. This is not bulletproof of course, as the
-  hacker needs only to know what the possible values are to be able
-  to utilize them.
-- PHP has the `Mcrypt
-  library <http://us2.php.net/manual/en/ref.mcrypt.php>`_ and other
-  PHP libraries which have encryption and decryption with a salt.
-  CodeIgniter has an :ellislab:`Encryption class
-  </codeigniter/user-guide/libraries/encryption.html>`, incidentally.
-
-Yes / No Preferences
-^^^^^^^^^^^^^^^^^^^^
-
-If your preference setting is a simple Yes / No, use ``'y'`` for Yes
-and ``'n'`` for No in both the code and the database, to keep things
-simple and consistent.
-
-Follow the Art of KISS
-^^^^^^^^^^^^^^^^^^^^^^
-
-"Keep It Simple, Stupid". Before adding a preference, ask yourself: is a
-preference for 'foo' *really* needed? Eventually with too many
-preferences, there will be interference and priority issues, and
-overcomplication.
-
+**************
 Tag Parameters
-~~~~~~~~~~~~~~
+**************
 
 Never Assume Tag Parameters are "Good" Input
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+============================================
 
 Do not make security exceptions for tag parameters. With PHP on Input,
 nested tags, other plugins, or variables being possible sources for
 parameter values, you cannot be sure that the data is safe.
 
 Validate Values Before Using
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+============================
 
 Always validate the values being supplied to a tag parameter before
 using them in your code. ``switch()`` statements are good for numerous
@@ -235,7 +211,7 @@ Or even::
   return ``TRUE`` on an empty string in pre-5.1.0 versions of PHP.
 
 Default Values
-^^^^^^^^^^^^^^
+==============
 
 Always have default values if you plan to allow the code to execute
 without parameters being supplied, or in the case of invalid parameter
@@ -267,8 +243,9 @@ variables
 
 .. _dev_guidelines_secure_forms:
 
+************
 Secure Forms
-~~~~~~~~~~~~
+************
 
 To help prevent spam and protect against Cross-site Request Forgery
 (CSRF), ExpressionEngine has a "Secure Form" setting that uses a hash
@@ -276,7 +253,7 @@ stored in the database tied to the IP address of the machine that the
 form was generated for. Here is how to make use of it.
 
 ee()->functions->form_declaration()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===================================
 
 Create all forms on the user side with
 :doc:`ee()->functions->form_declaration()
@@ -286,7 +263,7 @@ extensions the site may have installed that modifies forms to have
 effect on your forms.
 
 Handling Form Hashes in Your Add-on
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===================================
 
 Do a check and deletion for the secure hash after all error checking has
 been completed, but prior to any data insertion into the database. You
@@ -312,33 +289,34 @@ In some cases, you may choose to run a check for a valid hash
 hash (``ee()->security->delete_xid()``) separately.
 
 Forms in the Control Panel
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+==========================
 
 The Control Panel's Display class automatically adds hashes to any form
 tag automatically for you. Likewise, the system will check for hashes
 automatically, so forms in the control panel require no additional work
 for you to use securely.
 
+*************************
 Handling Form Submissions
-~~~~~~~~~~~~~~~~~~~~~~~~~
+*************************
 
 Form submissions are the most common form of user input you will handle
 in your add-ons, so it is important to understand how to deal with them
 securely.
 
 Outputting Form Data to the Screen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==================================
 
 **Never** output unfiltered incoming data directly to the screen.
 
 Trust No One
-^^^^^^^^^^^^
+============
 
 Treat all input as potentially dangerous, even from within the
 control panel.
 
 Use a Logic Map for Processing
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==============================
 
 In your methods that will be handling form data, create a logic map that
 you can use to ensure that you are handling all validation and security
@@ -384,11 +362,12 @@ After processing, make sure submitted data that might be sent to the
 screen for a success or error message is the filtered and validated
 version
 
+*****************
 Filename Security
-~~~~~~~~~~~~~~~~~
+*****************
 
 include() and require()
-^^^^^^^^^^^^^^^^^^^^^^^
+=======================
 
 Many servers have the ability to include files from offsite or anywhere
 in the local server, so when using ``include()`` or ``require()`` with
@@ -401,7 +380,7 @@ necessary in the first place, but if you do, either:
   characters
 
 Saving Images or Files to the Server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+====================================
 
 When saving images or files to the server, make sure and validate the
 file type (MIME) and also clean the file name to remove possible naughty
@@ -413,21 +392,59 @@ characters.
 - Use the Upload class (``ee()->load->library('upload',
   $config);``) as it contains methods for validation and sanitizing
 
-Typography Class
-~~~~~~~~~~~~~~~~
+.. todo:: Move most of the preferences and settings to an add-on
+  guidelines page
 
-Use the :doc:`Typography class </development/usage/typography>` whenever
-outputting blocks of content from user submitted data. It is regularly
-updated to improve security and performance, saving you both time and
-energy.
+************************
+Preferences and Settings
+************************
 
-- It protects against PHP and ExpressionEngine tags from being parsed
-- BBCode is sanitized, even if Allow All HTML is enabled
-- Using ``'safe'`` or ``'none'`` for HTML formatting further protects
-  output by converting tags to entities
+Storage of Settings
+===================
 
+Security and required preference settings should be stored in the
+database or ``config.php`` file.
+
+Use of Settings in Forms
+========================
+
+Never send values for preferences or settings in hidden form fields.
+HTML source is open and readable, so a malicious user could simply copy
+the HTML or use a browser plugin to alter the form data to something you
+do not expect or desire. If *absolutely* required, encode them:
+
+- JavaScript is good against bots but not against serious hackers.
+- Base 64 encoding is easy to break and therefore NOT recommended.
+- If there are a limited number of *possible* values, you could use
+  ``md5()`` or ``sha1()`` to encode the values and check against encoded
+  *possible* values. This is not bulletproof of course, as the
+  hacker needs only to know what the possible values are to be able
+  to utilize them.
+- PHP has the `Mcrypt
+  library <http://us2.php.net/manual/en/ref.mcrypt.php>`_ and other
+  PHP libraries which have encryption and decryption with a salt.
+  CodeIgniter has an :ellislab:`Encryption class
+  </codeigniter/user-guide/libraries/encryption.html>`, incidentally.
+
+Yes / No Preferences
+====================
+
+If your preference setting is a simple Yes / No, use ``'y'`` for Yes and
+``'n'`` for No in both the code and the database, to keep things simple
+and consistent.
+
+Follow the Art of KISS
+======================
+
+"Keep It Simple, Stupid". Before adding a preference, ask yourself: is a
+preference for 'foo' *really* needed? Eventually with too many
+preferences, there will be interference and priority issues, and over-
+complication.
+
+
+*************************
 General Security Practice
-~~~~~~~~~~~~~~~~~~~~~~~~~
+*************************
 
 - Super Admins' absolute power is for *access*, not security. Do not
   make security exceptions for Super Admins. "Doom, doom, doom," as it
