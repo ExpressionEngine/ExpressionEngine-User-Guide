@@ -185,6 +185,10 @@ Or you can negate the inclusive stack and get entries that do not of
    categories assigned. To change this behavior when excluding categories use
    the `uncategorized\_entries <#uncategorized-entries>`_ parameter.
 
+.. note:: If you are using exclusion (``category="not 3|4"``) and an entry is
+   in a category that is not excluded, the entry will be returned even if it 
+   also belongs to an excluded category.
+
 .. note:: Using this parameter will automatically cause ExpressionEngine to
    *ignore* any category information specified via the URL. For instance, if
    you are on a "category page" (e.g. a ``/C13/`` segment in the URL) that
