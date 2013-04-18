@@ -648,7 +648,7 @@ custom\_fields
 					{/options}
 				</ul>
 			{if:else}
-					<select id="{field_name}" name="{field_name}[data]">
+					<select id="{field_name}" name="{field_name}[data][]">
 					{options}
 						<option value="{option_value}"{selected}>{option_name}</option>
 					{/options}
