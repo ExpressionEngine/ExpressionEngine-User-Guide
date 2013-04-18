@@ -127,6 +127,8 @@ Release Date: ?
     publishing was was enabled.
   - Fixed a bug (#19094) where using the RTE via SafeCracker may show PHP
     errors upon submission.
+  - Fixed a bug (#19231) where SafeCracker File would fail to upload a second 
+    file if the file names differed only on suffix.
   - Fixed a bug (#18244) where duplicating a site's entries via MSM would
     have duplicate entry data for the newly-created entries in the
     channel_data table.
