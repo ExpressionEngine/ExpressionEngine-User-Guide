@@ -127,7 +127,7 @@ Release Date: ?
     publishing was was enabled.
   - Fixed a bug (#19094) where using the RTE via SafeCracker may show PHP
     errors upon submission.
-  - Fixed a bug (#19231) where SafeCracker File would fail to upload a second 
+  - Fixed a bug (#19231) where SafeCracker File would fail to upload a second
     file if the file names differed only on suffix.
   - Fixed a bug (#18244) where duplicating a site's entries via MSM would
     have duplicate entry data for the newly-created entries in the
@@ -196,6 +196,10 @@ Release Date: ?
     IDs returned when parsing nested Relationships field tree tags.
   - Deprecated methods:
 
+    - Calls to load the Security library---it's automatically loaded
+    - Using the class name as the constructor for Fieldtypes
+    - ``EE_Loader::view`` should have ``load::add_package_path()``
+      called before it
     - ``Api_channel_entries::submit_new_entry`` and
       ``Api_channel_entries::update_entry``, use ``Api_channel_entries::save_entry`` instead.
     - ``Cp::add_to_head`` should only be used for styles, use ``Cp::add_to_foot`` for scripts.
@@ -207,7 +211,12 @@ Release Date: ?
     - ``Cp::fetch_cp_themes``, use ``Admin_model::get_cp_theme_list`` instead.
     - ``Email::_get_ip``, use ``Input::ip_address`` instead.
     - ``Email::_set_header``, use `instead.`Email::set_header``
+    - Email hidden configuration variable
+      ``$config['email_smtp_port']``, use ``$config['smtp_port']``
+      instead
     - ``Functions::remove_double_slashes``, use String helper's ``reduce_double_slashes()`` instead.
+    - ``Functions::compile_relationship``
+    - ``EE_Javascript::generate_json``, use ``json_encode()`` instead
     - ``Localize::timestamp_to_gmt``, use Date helper's ``mysql_to_unix()`` instead.
     - ``Localize::set_localized_time``.
     - ``Localize::set_server_time``.
@@ -222,13 +231,21 @@ Release Date: ?
     - ``Localize::convert_timestamp``, use ``Localize::format_date`` instead.
     - ``Localize::zone_offset``.
     - ``Localize::zones`` method and property.
+    - ``Localize::set_localized_timezone``.
     - ``Localize::fetch_days_in_month``, use Date helper's ``days_in_month()`` instead.
     - ``Localize::adjust_date``, use ``Calendar::adjust_date`` instead.
+    - ``Output::show_user_error``, use ``show_error()`` instead
+    - ``Services_json::json_decode`` use ``json_decode()`` instead
     - ``SafeCracker_lib::decrypt_input``
     - ``SafeCracker_lib::encrypt_input``
     - Security helper's ``do_hash()``, use PHP's hashing functions instead.
     - ``Session::update_cookies``
     - ``Template::assign_relationship_data``
+    - ``Channel::related_entries``, use
+      ``Channel::related_category_entries()`` instead
+    - ``Safecracker_lib::decrypt_input``
+    - ``Safecracker_lib::encrypt_input``
+
 
 Version 2.5.5
 -------------
