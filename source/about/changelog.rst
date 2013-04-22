@@ -200,6 +200,8 @@ Release Date: ?
     - Using the class name as the constructor for Fieldtypes
     - Modifying ``load::_view_path``, use ``load::add_package_path``
       instead
+    - Accessing the EE super object reference on one of the core classes. Please
+      use ``ee()`` or ``get_instance()`` instead.
     - ``Api_channel_entries::submit_new_entry`` and
       ``Api_channel_entries::update_entry``, use ``Api_channel_entries::save_entry`` instead.
     - ``Cp::add_to_head`` should only be used for styles, use ``Cp::add_to_foot`` for scripts.
