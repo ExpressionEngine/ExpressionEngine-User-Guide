@@ -184,6 +184,10 @@ Release Date: ?
     adding or updating an entry if the entry date is not explicitly set.
   - Channel Entries API will use current time as the default edit date when
     adding or updating an entry if the edit date is not explicitly set.
+  - Added SmartForge library, making the Update Wizard's database changes far
+    more fault-tolerant.
+  - Added an update log to record notices, exceptions, and failures from the
+    Updater.
   - ``Functions::convert_curlies()`` now also encodes EE conditionals
   - **Reactor:** Added ability to have multiple fieldtypes in one add-on package.
   - **Reactor:** Added ``relationships_display_field`` hook to alter
