@@ -44,6 +44,14 @@ Altered View Files
 - Changed all CP view files to inherit from a master template. Please
   check your view file overrides.
 
+Safecracker Relationship Formatting
+-----------------------------------
+
+If you're using the relationship conditional in a safecracker custom field
+loop, please modify your template with the new format to allow for multiple
+relationship selections. An example can be found in the
+:ref:`Safecracker Documentation <safecracker_examples_custom_field_loop>`.
+
 Conditionals in Channel Entries Content
 ---------------------------------------
 

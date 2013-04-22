@@ -583,6 +583,8 @@ display the options in a loop, to give you more control over the markup.
 You have the four following sub-variables: {option\_value},
 {option\_name}, {selected} and {checked}.
 
+.. _safecracker_examples_custom_field_loop:
+
 custom\_fields
 ~~~~~~~~~~~~~~
 
