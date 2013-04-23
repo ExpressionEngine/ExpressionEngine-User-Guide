@@ -4,9 +4,9 @@ ExpressionEngine Forum Module Change Log
 Version 3.1.11
 --------------
 
-Release Date: ?
+Release Date: April 23, 2013
 
-- Updates for new date localization changes in ExpressionEngine 2.6.
+- Updates for date localization changes in ExpressionEngine 2.6.
 
 
 Version 3.1.10
