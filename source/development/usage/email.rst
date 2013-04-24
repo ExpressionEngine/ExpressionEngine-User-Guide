@@ -1,39 +1,42 @@
+###########
 Email Class
-===========
+###########
 
 .. contents::
-	:local:
+  :local:
 
+***********************
 Calling the Email Class
------------------------
+***********************
 
-ExpressionEngine uses the Email class for the sending of email via
-whatever protocol is specified in the site's Email Preferences. This
-class is a library, so you have to load the Email library before using
-it.
+.. class:: Email
 
-::
+  ExpressionEngine uses the Email class for the sending of email via
+  whatever protocol is specified in the site's Email Preferences. This
+  class is a library, so you have to load the Email library before using
+  it::
 
-    $this->EE->load->library('email'); 
+    $this->EE->load->library('email');
 
+****************
 Sending an Email
-----------------
+****************
 
 The Email class will automatically create all email headers and will
 process the data in various ways depending on the parameters set (ex:
 word wrapping and email validity). So, you simply have to send the class
 the relevant information and it will take care of the rest. Below is an
-example pice of code used for sending a single email.
+example piece of code used for sending a single email.
 
 ::
 
     $this->EE->load->library('email');
-    $this->EE->load->helper('text'); 
+    $this->EE->load->helper('text');
 
     $this->EE->email->wordwrap = true;
-    $this->EE->email->mailtype = 'text';    
+    $this->EE->email->mailtype = 'text';
     $this->EE->email->from($from);
-    $this->EE->email->to($recipient); 
+    $this->EE->email->to($recipient);
     $this->EE->email->subject($email_subject);
     $this->EE->email->message(entities_to_ascii($email_msg));
     $this->EE->email->Send();
@@ -41,37 +44,37 @@ example pice of code used for sending a single email.
 First, load the email library and the text helper. Second, there are a
 few variables that you may wish to set.
 
-charset
-~~~~~~~
+Properties
+==========
 
-Specifies the character set of the email. Since ExpressionEngine uses
-the character set in the Control Panel and in the default templates, the
-default is set for UTF-8. However, in certain circumstances you might
-wish to change this. 
+.. attr:: charset
 
-.. note:: There are email clients that will ignore any character
+  Specifies the character set of the email. Since ExpressionEngine uses
+  the character set in the Control Panel and in the default templates,
+  the default is set for UTF-8. However, in certain circumstances you
+  might wish to change this.
+
+  .. note:: There are email clients that will ignore any character
     specified in an email and will attempt to auto-detect, sometimes
     erroneously.
 
-debug
-~~~~~
+.. attr:: debug
 
-Specifies whether to enable debugging mode for the class. If emails are
-not being sent, then it might be prudent to set this to TRUE and see if
-any errors are being sent by the Email class.
+  Specifies whether to enable debugging mode for the class. If emails
+  are not being sent, then it might be prudent to set this to ``TRUE``
+  and see if any errors are being sent by the Email class.
 
-mailtype
-~~~~~~~~
+.. attr:: mailtype
 
-Specifies whether to send this email as a simple text email or an HTML
-email. The default type is 'text', so you only need to set this
-parameter when sending HTML email ('html').
+  Specifies whether to send this email as a simple text email or an
+  ``HTML`` email. The default type is ``'text'``, so you only need to
+  set this parameter when sending HTML email (``'html'``).
 
-validate
-~~~~~~~~
+.. attr:: validate
 
-Specifies whether to validate all emails sent to the class. By default
-this is FALSE, and it must be set to TRUE to perform the validation.
+  Specifies whether to validate all emails sent to the class. By default
+  this is ``FALSE``, and it must be set to TRUE to perform the
+  validation.
 
 wordwrap
 ~~~~~~~~
@@ -116,7 +119,7 @@ The function for specifying the Reply-To header of the email. The
 variable is the email address(es) that when a person replies to this
 email, it will be in the To box automatically.
 
-$this->EE->email->to('someone@example.com'); 
+$this->EE->email->to('someone@example.com');
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 $this->EE->email->to('one@example.com, two@example.com, three@example.com');
@@ -156,25 +159,25 @@ $this->EE->email->message('This is my message');
 
 Sets the email message body.
 
-You may also choose to manually specify an alternative message if sending HTML 
+You may also choose to manually specify an alternative message if sending HTML
 email.
 
 $this->EE->email->set_alt_message('This is the alternative message');
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is an optional message string which can be used if you send HTML 
-formatted email. It lets you specify an alternative message with no HTML 
-formatting which is added to the header string for people who do not accept 
-HTML email. If you do not set your own message CodeIgniter will extract the 
+This is an optional message string which can be used if you send HTML
+formatted email. It lets you specify an alternative message with no HTML
+formatting which is added to the header string for people who do not accept
+HTML email. If you do not set your own message CodeIgniter will extract the
 message from your HTML email and strip the tags.
 
 .. note:: If you are using data from a channel entry and not sending an
-    HTML email, then you should use the entities\_to\_ascii() function 
+    HTML email, then you should use the entities\_to\_ascii() function
     (text helper) to convert any HTML entities back into ASCII
     characters before sending the message to the class.
 
 Finally, to send the message, call the $this->EE->email->Send()
-function, and the class will process and send the email. 
+function, and the class will process and send the email.
 
 $this->EE->email->send();
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -182,21 +185,21 @@ $this->EE->email->send();
 The Email sending method. Returns boolean TRUE or FALSE based on
 success or failure, enabling it to be used conditionally::
 
-	if ( ! $this->EE->email->send())
-	{
-		// Generate error
-	}
+  if ( ! ee()->email->send())
+  {
+    // Generate error
+  }
 
 This method will automatically clear all parameters if the request was
 successful. To stop this behavior pass FALSE::
 
- 	if ($this->EE->email->send(FALSE))
- 	{
- 		// Parameters won't be cleared
- 	}
+  if (ee()->email->send(FALSE))
+  {
+    // Parameters won't be cleared
+  }
 
 .. note:: In order to use the ``print_debugger()`` method, you need
-	to avoid clearing the email parameters.
+  to avoid clearing the email parameters.
 
 Sending Multiple Emails
 -----------------------
@@ -210,27 +213,27 @@ possible that the emails will not be sent or sent incorrectly.
 ::
 
     $this->EE->load->library('email');
-    $this->EE->load->helper('text'); 
+    $this->EE->load->helper('text');
 
-    $this->EE->email->wordwrap = true;
-    $this->EE->email->mailtype = 'text';
-	$errors = array();
+    ee()->email->wordwrap = true;
+    ee()->email->mailtype = 'text';
+    $errors = array();
 
     foreach($member_emails as $username => $from)
     {
         $this->EE->email->from($from);
-        $this->EE->email->to($recipient); 
+        $this->EE->email->to($recipient);
         $this->EE->email->subject("Account Expiration: {$username}");
         $this->EE->email->message(entities_to_ascii($message));
         $this->EE->email->send();
 
-		if ( ! $this->EE->email->send())
-		{
-			$errors[] = $this->EE->email->print_debugger();
-			
-			// Send failed, data was not cleared
-			$this->EE->email->clear();
-		}
+        if ( ! ee()->email->send())
+        {
+          $errors[] = ee()->email->print_debugger();
+
+          // Send failed, data was not cleared
+          ee()->email->clear();
+        }
     }
 
 
@@ -240,8 +243,8 @@ Displaying Debugging Output
 $this->EE->email->print_debugger();
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Returns a string containing any server messages, the email headers, and the 
-email message. 
+Returns a string containing any server messages, the email headers, and the
+email message.
 
 You can optionally specify which parts of the message should be printed. Valid
  options are: headers, subject, body.
@@ -251,7 +254,7 @@ You can optionally specify which parts of the message should be printed. Valid
     $this->EE->email->send(FALSE);
     echo $this->EE->email->print_debugger(array('headers'));
 
-This would print the email headers, excluding the message subject and body.  
+This would print the email headers, excluding the message subject and body.
 
 By default, all of the raw data will be printed.
 
