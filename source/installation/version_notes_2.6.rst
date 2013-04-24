@@ -57,7 +57,7 @@ Conditionals in Channel Entries Content
 
 We have removed parsing for conditionals within channel entry input
 data. This change does not affect the use of conditionals in templates
-or the :doc:`Channel Entries </modules/channel/channel_entries>` tag
+or the :doc:`{exp:channel:entries} </modules/channel/channel_entries>` tag
 pair. While we know that some users relied on this functionality, the
 vast majority of users benefit by encoding conditionals by default
 within Channel Entries content. If you are using EE conditionals (or
