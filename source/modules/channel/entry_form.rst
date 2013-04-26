@@ -116,14 +116,6 @@ Here is an example of how the tag might be used to create an entry form:
     <p><input type="checkbox" name="allow_comments" value="y" {allow_comments} /> Allow Comments</p>
     <p><input type='checkbox' name='dst_enabled' value='y' {dst_enabled} />DST Active on Date of Entry</p>
 
-    {ping_servers}
-    <p>Ping Servers<br />
-    {ping_row}
-    <input type="checkbox" name="ping[]" value="{ping_value}" {ping_checked} /> {ping_server_name}<br />
-    {/ping_row}
-    </p>
-    {/ping_servers}
-
     {category_menu}
     <p>Categories<br />
     <select name="category[]" size="4" multiple="multiple">
@@ -277,13 +269,6 @@ The user can specify whether to make the entry "sticky" or not. ::
 
 	<p><input type="checkbox" name="sticky" value="y"  {sticky} /> Make Entry Sticky</p>
 
-Ping Servers
-~~~~~~~~~~~~
-
-The user can any servers they wish to ping when the entry is submitted. ::
-
-	{ping_servers} <p>Ping Servers<br /> {ping_row} <input type="checkbox" name="ping[]" value="{ping_value}" {ping_checked} /> {ping_server_name}<br /> {/ping_row} </p> {/ping_servers}
-
 Status Menu
 ~~~~~~~~~~~
 
@@ -336,19 +321,6 @@ parameter. Specify the category by Category ID. You may specify multiple
 categories by separating the Category ID with the pipe character::
 
 	category="3|7|13|42"
-
-hidden\_pings=
-~~~~~~~~~~~~~~
-
-::
-
-	hidden_pings="yes"
-
-If you don't wish to include the form options on the page to select the
-servers to ping, then you can specify whether or not to send the pings
-via this parameter. Options are "yes" and "no". If you select "yes",
-then EE will send a ping to all of the servers that are specified at
-:menuselection:`Admin --> Default Ping Servers`.
 
 preview=
 ~~~~~~~~

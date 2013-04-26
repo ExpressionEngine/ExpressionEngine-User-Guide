@@ -120,8 +120,8 @@ Example Code
 ::
 
 	ee()->cp->set_right_nav(array(
-		'updated_sites_create_new' =>
-			BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=updated_sites'.AMP.'method=create')
+		'forum_create_new' =>
+			BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=forum'.AMP.'method=create')
 	);
 
 Table-based Layout
@@ -141,31 +141,25 @@ Two default table styles are defined in the Control Panel Library.
 Example Table-based Layout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The following example is from the :doc:`Updated Sites Module
-</modules/updated_sites/index>` index.php view file. ::
+The following example is a single table row from the :doc:`Wiki Module
+</modules/wiki/index>` update.php view file. ::
 
-	<?php
-		$this->table->set_template($cp_table_template);
-		$this->table->set_heading(
-			lang('updated_sites_config_name').'/'.lang('edit'),
-			lang('view_pings'),
-			lang('updated_sites_config_url'),
-			form_checkbox('select_all', 'true', FALSE, 'class="toggle_all" id="select_all"').NBS.lang('delete', 'select_all')
+	<?php 
+		$this->table->set_heading(array(
+				array('data' => lang('setting'), 'width' => '50%'),
+				lang('preference')
+			)
 		);
 
-		$base_url = BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=updated_sites'.AMP;
-
-		foreach($pings as $ping)
-		{
-			$this->table->add_row(
-				'<a href="'.$base_url.AMP.'method=modify'.AMP.'id='.$ping['id'].'">'.$ping['name'].'</a>',
-				'<a href="'.$base_url.AMP.'method=pings'.AMP.'id='.$ping['id'].'">'.lang('view_pings').'</a>',
-				$ping['url'],
-				form_checkbox($ping['toggle'])
-				);
-		}
-	?>
-	<?=$this->table->generate();?>
+		$this->table->add_row(array(
+				lang('moderation_emails', 'wiki_moderation_emails'),
+				form_error('wiki_moderation_emails').
+				form_input('wiki_moderation_emails', set_value('wiki_moderation_emails', $wiki_moderation_emails_value), 'id="wiki_moderation_emails"')
+			)
+		);
+		
+		echo $this->table->generate();
+		$this->table->clear()?>
 
 Submit Buttons
 ~~~~~~~~~~~~~~

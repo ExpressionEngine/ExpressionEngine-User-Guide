@@ -62,8 +62,6 @@ Optional Requirements
 Some features of ExpressionEngine are optional to use. However, in order
 to be able to use them you will need to meet their requirements.
 
--  **Pings** Your server must have XML support compiled into PHP in
-   order to send pings.
 -  **Spell Checking.** In order to be able to use the spell check
    feature in ExpressionEngine, your server must have PHP compiled with
    `pspell <http://us2.php.net/pspell>`_ support **or** be able to
