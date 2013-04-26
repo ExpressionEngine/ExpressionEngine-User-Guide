@@ -87,8 +87,7 @@ category\_group=
 	category_group="2"
 
 Category Groups are specified by ID number (the ID number of each
-`category
-group <../../cp/admin/channels/category_management.html>`_ is
+:doc:`category group </cp/admin/channels/category_management>` is
 displayed in the Control Panel). The reason we use the ID is because
 category groups can be called anything (with spaces, quotes, etc.), and
 also renamed. It would be much more difficult to have to update the tag
@@ -117,9 +116,8 @@ The name (short name) of the channel that the categories are assigned
 to. This variable is **required** unless you only have a single channel.
 Multiple channels may also be specified.
 
-You must specify this parameter if you use the `category name in
-URL <../../cp/admin/channels/global_channel_preferences.html>`_
-feature.
+You must specify this parameter if you use the :doc:`category name in
+URL </cp/admin/channels/global_channel_preferences>` feature.
 
 class=
 ------
@@ -269,10 +267,10 @@ status=
 	status="open"
 
 You may restrict to categories with entries with a particular
-`status <../../cp/admin/channels/statuses.html>`_ . The two
-statuses "open" and "closed" are default statuses that are always
-available, so you can always specify those if needed. You can choose
-multiple statuses using a pipe
+:doc:`status </cp/admin/channels/statuses>`. The two statuses "open" and
+"closed" are default statuses that are always available, so you can
+always specify those if needed. You can choose multiple statuses using a
+pipe
 
 ::
 
@@ -287,6 +285,8 @@ Or exclude statuses using "not"
 By default, the Categories tag will display categories that contain any
 entries with a status *other than* closed.  This parameter has no effect unless
 the `show\_empty parameter <#par_show_empty>`_ is set to not show empty categories.
+
+.. _channel_categories_style:
 
 style=
 ------

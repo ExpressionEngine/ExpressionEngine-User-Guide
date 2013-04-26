@@ -13,8 +13,8 @@ validating user input, showing validation errors, and repopulating form
 fields.
 
 The base functionality for the Form Validation class is inherited from
-the corresponding CodeIgniter library - refer to the `Form
-Validation <http://codeigniter.com/user_guide/libraries/form_validation.html>`_
+the corresponding CodeIgniter library - refer to the :ellislab:`Form
+Validation </codeigniter/user-guide/libraries/form_validation.html>`
 documentation in the CodeIgniter user guide for details.
 
 Setting Reference Values
@@ -24,12 +24,12 @@ For member screen names, member usernames, and member email addresses
 the Form Validation class needs a reference value. This value will be
 ignored when checking for duplicates.
 
-$this->EE->form\_validation->set\_old\_value($key, $value)
+ee()->form\_validation->set\_old\_value($key, $value)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Is used to set a reference value for a given key.
 
-$this->EE->form\_validation->old\_value($key)
+ee()->form\_validation->old\_value($key)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Can be used to retrieve a reference value that was previously set. This
@@ -51,8 +51,8 @@ before running the validation.
 
 ::
 
-    $this->EE->form_validation->set_rules('username', 'Username', 'required|valid_username');
-    $this->EE->form_validation->set_rules('username', 'Username', 'required|valid_username[new]');
+    ee()->form_validation->set_rules('username', 'Username', 'required|valid_username');
+    ee()->form_validation->set_rules('username', 'Username', 'required|valid_username[new]');
 
 valid\_screen\_name
 ~~~~~~~~~~~~~~~~~~~
@@ -62,8 +62,8 @@ value for **screen\_name** was set before running the validation.
 
 ::
 
-    $this->EE->form_validation->set_old_value('screen_name', 'Bob');
-    $this->EE->form_validation->set_rules('screen_name', 'Screen Name', 'required|valid_screen_name');
+    ee()->form_validation->set_old_value('screen_name', 'Bob');
+    ee()->form_validation->set_rules('screen_name', 'Screen Name', 'required|valid_screen_name');
 
 valid\_user\_email
 ~~~~~~~~~~~~~~~~~~
@@ -74,7 +74,7 @@ set for **email**.
 ::
 
     // Note: no reference value is needed if this is a new user
-    $this->EE->form_validation->set_rules('email', 'lang:email', 'required|valid_user_email[new]');
+    ee()->form_validation->set_rules('email', 'lang:email', 'required|valid_user_email[new]');
 
 valid\_password
 ~~~~~~~~~~~~~~~
@@ -86,7 +86,7 @@ check user credentials.
 
 ::
 
-    $this->EE->form_validation->set_rules('password', 'lang:password', 'required|valid_password[username]');
+    ee()->form_validation->set_rules('password', 'lang:password', 'required|valid_password[username]');
 
 Prepping Functions
 ------------------
@@ -102,5 +102,5 @@ with a given delimiter.
 
 ::
 
-    $this->EE->form_validation->set_rules('emails', 'lang:emails', 'required|prep_list[,]|valid_emails');
+    ee()->form_validation->set_rules('emails', 'lang:emails', 'required|prep_list[,]|valid_emails');
 

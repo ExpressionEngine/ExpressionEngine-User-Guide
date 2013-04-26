@@ -37,7 +37,7 @@ true and the session id will be added. Default is true for session\_id.
 
 ::
 
-    $memberlist_url = $this->EE->functions->create_url('member/memberlist');
+    $memberlist_url = ee()->functions->create_url('member/memberlist');
     // returns "http://example.com/index.php/member/memberlist/"
 
 fetch\_current\_uri()
@@ -53,6 +53,9 @@ default.
 
 remove\_double\_slashes(str [string])
 -------------------------------------
+
+.. deprecated:: 2.6
+  Use String helper's ``reduce_double_slashes()`` instead.
 
 Remove duplicate slashes from URL.
 
@@ -76,9 +79,9 @@ Removed session IDs from a URL.
 
     // Parse permalink path
     $key = '{permalink path='channel/details'}'
-    if ($this->EE->functions->extract_path($key) != '' && $this->EE->functions->extract_path($key) != 'SITE_INDEX')
+    if (ee()->functions->extract_path($key) != '' && ee()->functions->extract_path($key) != 'SITE_INDEX')
     {
-        $path = $this->EE->functions->extract_path($key).'/'.$row['entry_id'];
+        $path = ee()->functions->extract_path($key).'/'.$row['entry_id'];
     }
     // function returns 'channel/details'
 
@@ -95,9 +98,9 @@ str.
 
 ::
 
-    $str = "Rick and Paul ate {meal} while sitting around the {item}"; 
+    $str = "Rick and Paul ate {meal} while sitting around the {item}";
     $swap = array('meal' => "Skittles", 'item' => "computer");
-    $msg = $this->EE->functions->var_swap($str, $swap);
+    $msg = ee()->functions->var_swap($str, $swap);
     // returns "Rick and Paul ate Skittles while sitting around the computer";
 
 redirect(location [string])
@@ -149,14 +152,14 @@ the values with TMPL class properties of form\_id and form\_class.
 
     $form_details = array('action'     => '',
                       'name'           => 'upload',
-                      'id'             => $this->EE->TMPL->form_id,
-                      'class'          => $this->EE->TMPL->form_class,
+                      'id'             => ee()->TMPL->form_id,
+                      'class'          => ee()->TMPL->form_class,
                       'hidden_fields'  => array('new' => 'y'),
                       'secure'         => TRUE,
                       'onsubmit'       => "validate_form(); return false;"
-                      );    
+                      );
 
-    $r = $this->EE->functions->form_declaration($form_details);
+    $r = ee()->functions->form_declaration($form_details);
 
 form\_backtrack(offset [int])
 -----------------------------
@@ -177,10 +180,10 @@ form page.
     $data = array('title'   => 'Information Accepted',
                   'heading' => 'Thank you',
                   'content' => 'Thank you for the locale information',
-                  'link'    => array($this->EE->functions->form_backtrack('-2'), 'Return to entry')
+                  'link'    => array(ee()->functions->form_backtrack('-2'), 'Return to entry')
                   );
-                  
-    $this->EE->output->show_message($data);
+
+    ee()->output->show_message($data);
 
 evaluate(str [string])
 ----------------------
@@ -197,10 +200,10 @@ Evaluates a string as PHP
 
     ob_start();
 
-    echo $this->EE->functions->evaluate($str);
+    echo ee()->functions->evaluate($str);
     $value = ob_get_contents();
 
-    ob_end_clean(); 
+    ob_end_clean();
 
     // $value is now equal to 12, since that is what would be outputted by the PHP.
 
@@ -318,11 +321,11 @@ Returns a properly formated action id tag
 that are recognized via an action ids that are inserted into the
 database upon installation of that module. This function returns a tag
 in the format {AID:class:method} for use in the frontend. (See also
-`EE->cp->fetch\_action\_id <../usage/cp.html#action_id>`_).
+:doc:`EE->cp->fetch\_action\_id </development/usage/cp>`).
 
 ::
 
-    $action_id = $this->EE->functions->fetch_action_id('Comment', 'insert_new_comment');
+    $action_id = ee()->functions->fetch_action_id('Comment', 'insert_new_comment');
 
 create\_captcha()
 -----------------
@@ -358,7 +361,7 @@ containing the field, and returns the query string required.
 
     $str  = 'channel|news|sports';
     $sql  = "SELECT * FROM exp_channels WHERE site_id = 1 ";
-    $sql .= $this->EE->functions->sql_andor_string($str, 'channel_name');
+    $sql .= ee()->functions->sql_andor_string($str, 'channel_name');
     // $sql equals:
     // SELECT * FROM exp_channels WHERE site_id = 1
     // AND channel_name = 'channel' OR channel_name = 'news' OR channel_name = 'sports'

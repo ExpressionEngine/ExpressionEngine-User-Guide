@@ -24,13 +24,13 @@ superglobals themselves. However, the input class does offer some
 benefits.
 
 Since the ExpressionEngine function for creating cookies
-[$this->EE->functions->set\_cookie();] adds a prefix automatically to
+[ee()->functions->set\_cookie();] adds a prefix automatically to
 enable compatibility with other programs, it is recommended that you use
 the Input Class, since it automatically strips out that prefix.
 
 The superglobal functions all allow the specification of an optional
-second parameter that lets you run the data through the `XSS
-filter <security.html#xss_filter>`_. It's enabled by setting the second
+second parameter that lets you run the data through the :doc:`XSS filter
+</development/usage/security>`. It's enabled by setting the second
 parameter to boolean TRUE.
 
 Lastly, the superglobal functions will check to see if the item is set
@@ -49,59 +49,59 @@ normally you might do something like this::
 
 With the built in functions you can simply do this::
 
-	$something = $this->EE->input->post('something');
+	$something = ee()->input->post('something');
 
 To automatically run the returned data through the xss\_clean()
 function, simply specify the second parameter is TRUE::
 
-	$something = $this->EE->input->post('something', TRUE);
+	$something = ee()->input->post('something', TRUE);
 
 The available superglobal functions are:
 
-$this->EE->input->post()
+ee()->input->post()
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 The first parameter will contain the name of the POST item you are
 looking for::
 
-	$this->EE->input->post('some_data');
+	ee()->input->post('some_data');
 
-$this->EE->input->get()
+ee()->input->get()
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 This function is identical to the post function, only it fetches get
 data::
 
-	$this->EE->input->get('some_data');
+	ee()->input->get('some_data');
 
-$this->EE->input->get\_post()
+ee()->input->get\_post()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This function will search through both the post and get streams for
 data, looking first in post, and then in get::
 
-	$this->EE->input->get_post('some_data');
+	ee()->input->get_post('some_data');
 
-$this->EE->input->cookie()
+ee()->input->cookie()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This function is identical to the post function, only it fetches
 cookie data::
 
-	$this->EE->input->cookie('some_data');
+	ee()->input->cookie('some_data');
 
-$this->EE->input->server()
+ee()->input->server()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This function is identical to the above functions, only it fetches
 server data::
 
-	$this->EE->input->server('some_data');
+	ee()->input->server('some_data');
 
 Other Class Variables
 ---------------------
 
-$this->EE->input->ip\_address()
+ee()->input->ip\_address()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Returns the IP address for the current user. If the IP address is not
@@ -109,14 +109,16 @@ valid, the function will return an IP of: 0.0.0.0
 
 ::
 
-	echo $this->EE->input->ip_address();
+	echo ee()->input->ip_address();
 
-$this->EE->input->valid\_ip($ip)
+ee()->input->valid\_ip($ip)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Takes an IP address as input and returns TRUE or FALSE (boolean) if
-it is valid or not. Note: The $this->EE->input->ip\_address()
-function above validates the IP automatically.
+it is valid or not.
+
+.. note:: The ee()->input->ip\_address() function above validates
+	the IP automatically.
 
 ::
 
@@ -129,7 +131,7 @@ function above validates the IP automatically.
 		echo 'Valid';
 	}
 
-$this->EE->input->user\_agent()
+ee()->input->user\_agent()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Returns the user agent (web browser) being used by the current user.
@@ -137,7 +139,7 @@ Returns FALSE if it's not available.
 
 ::
 
-	echo $this->EE->input->user_agent();
+	echo ee()->input->user_agent();
 
 Cleaning Superglobals
 ---------------------

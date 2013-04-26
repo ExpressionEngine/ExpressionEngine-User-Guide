@@ -2,87 +2,71 @@ Simple Commerce Module Extension Hooks
 ======================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-simple\_commerce\_evaluate\_ipn\_response
------------------------------------------
+simple_commerce_evaluate_ipn_response
+-------------------------------------
 
-Take over processing of PayPal's response to an IPN confirmation
+.. function:: simple_commerce_evaluate_ipn_response($this, $result)
 
-::
+  Take over processing of PayPal's response to an IPN confirmation.
 
-	$result = $this->extensions-> universal_call('simple_commerce_evaluate_ipn_response', $this, $result); if ($this->extensions->end_script === TRUE) return;
+  How it's called::
 
-$this
-~~~~~
+    $result = ee()->extensions->universal_call('simple_commerce_evaluate_ipn_response', $this, $result);
+    if (ee()->extensions->end_script === TRUE) return;
 
-The current Simple Commerce object including all data relating to
-the purchase and debug state
+  :param object $this: The current Simple Commerce object including all
+    data relating to the purchase and debug state
+  :param string $result: PayPal's response to the IPN confirmation
+  :returns: Modified IPN response (``$result``)
+  :rtype: String
 
-$result
-~~~~~~~
+  .. versionadded:: 1.5.1
 
-PayPal's response to the IPN confirmation
+simple_commerce_perform_actions_end
+-----------------------------------
 
-:returns:
-    String
+.. function:: simple_commerce_perform_actions_end($this, $row
 
-Added in v1.5.1
+  After a purchase is recorded, do more processing.
 
-simple\_commerce\_perform\_actions\_end
----------------------------------------
+  How it's called::
 
-After a purchase is recorded, do more processing
+    ee()->extensions->universal_call('simple_commerce_perform_actions_end', $this, $query->row());
+    if (ee()->extensions->end_script === TRUE) return;
 
-::
+  :param object $this: The current Simple Commerce object including all
+    data relating to the purchase and debug state
+  :param array $row: The database record for the store item
+  :rtype: Void
 
-	$edata = $this->extensions-> universal_call('simple_commerce_perform_actions_end', $this, $query->row); if ($this->extensions->end_script === TRUE) return;
+  Useful object variables:
 
-$this
-~~~~~
+  - ``$this->post`` - array of information about the purchase
+  - ``$this->debug`` - whether or not debug mode is enabled
 
-The current Simple Commerce object including all data relating to
-the purchase and debug state
+  .. versionadded:: 1.5.1
 
-$query->row
-~~~~~~~~~~~
+simple_commerce_perform_actions_start
+-------------------------------------
 
-The database record for the store item
+.. function:: simple_commerce_perform_actions_start($this, $row)
 
-:returns:
-    void
+  After a purchase is recorded, do more processing before EE's
+  processing.
 
-Additional Notes
-^^^^^^^^^^^^^^^^
+  How it's called::
 
-Useful object variables: $this->post - array of information about the
-purchase $this->debug - whether or not debug mode is enabled.
+    ee()->extensions->universal_call('simple_commerce_perform_actions_start', $this, $query->row());
+    if (ee()->extensions->end_script === TRUE) return;
 
-Added in v1.5.1
+  :param object $this: The current Simple Commerce object including all
+    data relating to the purchase and debug state
+  :param array $row: The database record for the store item
+  :rtype: Void
 
-simple\_commerce\_perform\_actions\_start
------------------------------------------
-
-After a purchase is recorded, do more processing before EE's processing
-
-::
-
-	$edata = $this->extensions-> universal_call('simple_commerce_perform_actions_start', $this, $query->row); if ($this->extensions->end_script === TRUE) return;
-
-$this
-~~~~~
-
-The current Simple Commerce object including all data relating to
-the purchase and debug state
-
-$query->row
-~~~~~~~~~~~
-
-The database record for the store item
-
-:returns:
-    void
-
-Added in v1.5.1
+  .. versionadded:: 1.5.1

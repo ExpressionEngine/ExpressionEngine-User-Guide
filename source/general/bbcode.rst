@@ -9,9 +9,10 @@ cases identical) to the codes used on many popular forum packages.
 BBCode can be used in your entry fields when you create an entry or when
 you leave a comment. It cannot normally be used in a Template.
 
-**Security Note:** Whenever BBCode is used, even if your settings Allow
-All HTML, the BBCode is run through various security checks to prevent
-malicious people from posting naughty HTML or code through them.
+.. important:: Whenever BBCode is used, even if your settings Allow
+	All HTML, the BBCode is run through various security checks to 
+	prevent malicious people from posting naughty HTML or code through
+	them.
 
 URLs and Linking
 ----------------
@@ -19,11 +20,18 @@ URLs and Linking
 ::
 
 	[url]http://example.com/[/url]
-
-``[url=http://example.com/]my site[/url]``
+	[url=http://example.com/]my site[/url]
 
 You can easily create links with custom text or simply with the URL
-itself as the link.
+itself as the link.  You may even add attributes to your link, though 
+your allowed HTML settings influence what may be included.
+
+::
+
+  [url=http://example.com/ class="link"]my site[/url]
+
+Safe HTML will allow the following attributes: rel, title, class, style, 
+and target.  Note that quotes are required when specifying attributes.  
 
 Email Links
 -----------
@@ -31,8 +39,7 @@ Email Links
 ::
 
 	[email]you@example.com[/email]
-
-``[email=you@example.com]click here to email[/email]``
+	[email=you@example.com]click here to email[/email]
 
 As with URLs, you can also format email addresses. These BBCode tags
 will automatically encode the email address to make it more difficult
@@ -88,7 +95,6 @@ Bold, Strong, Em And Italic
 ::
 
     [b]some bold text[/b]  [strong]some strong text[/strong]
-
     [em]some em text[/em]  [i]some italic text[/i]
 
 Bold, strong, em and italic text is simple to add.
@@ -122,8 +128,7 @@ Pre-Formatted Text
 ::
 
 	[pre]Some pre-formatted text...[/pre]
-
-``[code]Some pre-formatted text...[/code]``
+	[code]Some pre-formatted text...[/code]
 
 You can submit pre-formatted text such as script examples. These will be
 replaced with <pre> </pre> HTML tags. Whitespace and line wrapping will

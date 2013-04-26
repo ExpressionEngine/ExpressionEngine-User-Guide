@@ -19,8 +19,8 @@ member database fields are available to you. It is recommended that you
 do not use member\_id, so ExpressionEngine can automatically generate
 unique Member IDs when the members are later imported from the XML file.
 
-**Note:** Many applications export field headings as the first line of a
-delimited data file. You must delete this row, or it will be included as
-a member element. Field assignment takes place during the conversion
-process, so those field headings will not be necessary to define your
-file's structure.
+.. note:: Many applications export field headings as the first line of a
+	delimited data file. You must delete this row, or it will be included
+	as a member element. Field assignment takes place during the
+	conversion process, so those field headings will not be necessary to
+	define your file's structure.

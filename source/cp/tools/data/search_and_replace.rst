@@ -20,8 +20,8 @@ the entry fields, or within your Templates.
    files <clear_cached_data_files>` in order to see the changes.
 
 .. important:: If you save templates as text files, make certain to
-   `Synchronize Templates <../../design/templates/synchronize_templates.html>`_ before
-   replacing in a template as the template edit date will be updated.
+   :doc:`/cp/design/templates/synchronize_templates` before replacing in
+   a template as the template edit date will be updated.
 
 Search for this text
 ~~~~~~~~~~~~~~~~~~~~
@@ -56,9 +56,7 @@ for which you can perform the search and replace. The list includes:
 -  **Channel Entry Titles**: Select this to search and replace text
    within the entry titles.
 -  **Channel Fields**: Under this heading, each of the available
-   `Channel
-   Fields <../../admin/channels/custom_channel_fields.html>`_ is
-   listed.
+   :doc:`/cp/admin/channels/custom_channel_fields` is listed.
 -  **Templates**: Select this to search and replace text within all of
    your Templates.
 

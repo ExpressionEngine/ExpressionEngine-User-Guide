@@ -2,10 +2,9 @@ Stand-Alone Entry Form
 ======================
 
 .. deprecated:: 2.1.5
-   This tag is deprecated in favor
-   of :doc:`SafeCracker </modules/safecracker/index>` and will be 
-   removed from future versions of ExpressionEngine. It is no longer 
-   supported.
+   This tag is deprecated in favor of :doc:`SafeCracker 
+   </modules/safecracker/index>` and will be removed from future 
+   versions of ExpressionEngine. It is no longer supported.
 
 Using this tag, you can create an entry form to submit entries to any of
 your channels outside of the Control Panel.
@@ -228,16 +227,17 @@ type.
     {/if}
     {/custom_fields}
 
-**Note:** The file field example includes markup used by the file
-browser javascript. If you are using the file browser in you entry form,
-it's suggested that you also include a link to the accompanying style
-sheets via the {path='css/\_ee\_saef\_css'} path variable.
+.. note:: The file field example includes markup used by the file
+    browser javascript. If you are using the file browser in you entry
+    form, it's suggested that you also include a link to the
+    accompanying style sheets via the ``{path='css/\_ee\_saef\_css'}``
+    path variable.
 
 DST Enabled
 ~~~~~~~~~~~
 
-You may allow the user to choose whether or not to store that `DST is
-active <../../general/date_localization.html>`_ with the entry. ::
+You may allow the user to choose whether or not to store that :doc:`DST
+is active </general/date_localization>` with the entry. ::
 
 	<p><input type="checkbox" name="dst_enabled" value="y" {dst_enabled} /> DST Active on Date of Entry</p>
 
@@ -392,8 +392,8 @@ You may exclude fields by placing the word "not" in front of the list::
 
 	show_fields="not image_thumbnail|source|rating"
 
-**Note:** You **must** include all fields that are designated as
-"required".
+.. note:: You **must** include all fields that are designated as
+    "required".
 
 status=
 ~~~~~~~
@@ -477,8 +477,8 @@ field\_instructions
 
 	{field_instructions}
 
-The field instructions as entered in the `Channel Fields
-area <../../cp/admin/channels/custom_fields_edit.html>`_.
+The field instructions as entered in the :doc:`Channel Fields area
+</cp/admin/channels/custom_fields_edit>`.
 
 saef\_javascript
 ~~~~~~~~~~~~~~~~

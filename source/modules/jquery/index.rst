@@ -15,7 +15,7 @@ your templates, and allows you to use the provided jQuery resources
 included with ExpressionEngine, without disclosing the system folder
 location or requiring that it reside in a publicly accessible location.
 
-.. _jquery-script-tag:
+.. _jquery_script_tag:
 
 **********
 Script Tag
@@ -172,13 +172,15 @@ Output JavaScript Tag
 
 Outputs the actual script to the browser, with proper headers.
 
-**Note:** This tag will output content identically as if it were
-requested via one of the URLs output with the tags above. No other
-content from the template this tag is used on will be output, and
-execution will be halted as soon as this tag is processed. It is
-typically not necessary to use these tags in a template, but the option
-exists if for some reason you need a specific URL structure to your
-jQuery resources. ::
+.. note:: This tag will output content identically as if it were
+	requested via one of the URLs output with the tags above. No other
+	content from the template this tag is used on will be output, and
+	execution will be halted as soon as this tag is processed. It is
+	typically not necessary to use these tags in a template, but the
+	option exists if for some reason you need a specific URL structure 
+	to your jQuery resources. 
+
+::
 
 	{exp:jquery:output_javascript}
 

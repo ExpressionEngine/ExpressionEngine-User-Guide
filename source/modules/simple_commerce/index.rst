@@ -13,8 +13,8 @@ Introduction
 The Simple Commerce Module is a basic but flexible module
 that easily integrates ExpressionEngine with PayPal.
 
-.. note:: The Simple Commerce Module is available only with a `purchased <https://store.ellislab.com/>`_
-   ExpressionEngine license.
+.. note:: The Simple Commerce Module is available only with a `purchased
+	<https://store.ellislab.com/>`_ ExpressionEngine license.
 
 -  Integrates with ExpressionEngine's Channel Module to define items for sale
 -  Tracks purchases automatically utilizing PayPal's `Instant Payment
@@ -30,7 +30,7 @@ that easily integrates ExpressionEngine with PayPal.
 -  Tab delimited export of items and purchases
 
 
-.. _simple-commerce-purchase-tag:
+.. _simple_commerce_purchase_tag:
 
 ****************************
 Simple Commerce Purchase Tag
@@ -87,7 +87,7 @@ This parameter controls the language that will be used on the initial
 PayPal shopping cart / log in screen when someone makes a purchase from
 your store. Use the two letter country abbreviation, following the `ISO
 3166
-standard <http://www.iso.org/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html>`_.
+standard <http://en.wikipedia.org/wiki/ISO_3166-1#Current_codes>`_.
 If no parameter is given, a default of 'US' will be used.
 
 currency=
@@ -99,8 +99,8 @@ currency=
 
 The three letter representation of the currency for the item prices in
 the store, using the ISO 4217 standard. Default is "USD" (U.S. Dollars).
-For other currencies, please refer to `official ISO 4217
-lising <http://www.iso.org/iso/en/prods-services/popstds/currencycodeslist.html>`_.
+For other currencies, please refer to `Wikipedia's ISO 4127
+listing <http://en.wikipedia.org/wiki/ISO_4217#Active_codes>`_.
 
 decimal=
 --------
@@ -246,9 +246,9 @@ item\_type
 Whether item is a recurring item (subscription/purchase). Useful in
 conditionals and custom queries.
 
-**Note:** Recurring payments cannot be made using the shopping cart.
-Thus item\_type conditionals should be used if you offer cart links and
-are mixing recurring and non-recurring items.
+.. note:: Recurring payments cannot be made using the shopping cart.
+	Thus item\_type conditionals should be used if you offer cart links
+	and are mixing recurring and non-recurring items.
 
 Purchase Links
 --------------
@@ -327,7 +327,7 @@ view\_cart\_button
 
 A button to view the contents of the shopping cart.
 
-.. _simple-commerce-recurring-payments:
+.. _simple_commerce_recurring_payments:
 
 ******************
 Recurring Payments
@@ -428,7 +428,7 @@ Remember to set this variable to FALSE when you wish to take your store
 live and route purchases to the real PayPal website.
 
 
-.. _simple-commerce-encrypted-payments:
+.. _simple_commerce_encrypted_payments:
 
 **************************
 Encrypted Website Payments

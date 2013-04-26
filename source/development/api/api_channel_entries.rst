@@ -2,126 +2,184 @@ ExpressionEngine Channel Entries API
 ====================================
 
 .. contents::
-	:local:
-	:depth: 1
-                  
+  :local:
+  :depth: 1
+
+.. highlight:: php
+
 Calling the Class
 -----------------
 
-The Channel Entries class is called with the api->instantiate()
-function. ::
+.. class:: Api_channel_entries
 
-	$this->EE->load->library('api');
-	$this->EE->api->instantiate('channel_entries');
+  The Channel Entries class is called with the ``api->instantiate()``
+  function::
 
-.. note:: The API uses a Singleton pattern and does not currently support
-   nesting of calls. Thus instantiating a new call while in the middle of a
-   request may have unanticipated results.
+    ee()->load->library('api');
+    ee()->api->instantiate('channel_entries');
+
+  .. note:: The API uses a Singleton pattern and does not currently
+    support nesting of calls. Thus instantiating a new call while in
+    the middle of a request may have unanticipated results.
 
 Function Reference
 ------------------
 
 .. contents::
-	:local:
+  :local:
+
+Save Entry
+~~~~~~~~~~
+
+.. method:: save_entry($data[, $channel_id = NULL[, $entry_id = 0[, $autosave = FALSE]]])
+
+  Saves a new or existing channel entry::
+
+    ee()->api_channel_entries->save_entry($data, $channel_id, $entry_id, $autosave);
+
+  :param array $data: Entry data to submit
+  :param int $channel_id: The channel ID for the new entry
+  :param int $entry_id: The entry ID to update
+  :param boolean $autosave: Whether the entry is being autosaved or not
+  :returns: Whether the new entry was successfully created or updated
+  :rtype: Boolean
 
 Submit New Entry
 ~~~~~~~~~~~~~~~~
 
-This function will create a new channel entry. The data array must contain a
-title and data for all required fields. If the entry date or edit date are not
-included in the data array, current time will be used instead. ::
+.. method:: submit_new_entry($channel_id, $data[, $autosave = FALSE])
 
-	$this->EE->api_channel_entries->submit_new_entry((int) $channel_id, (mixed) $data);
+  .. deprecated:: 2.6
+    Use :meth:`Api_channel_entries::save_entry` instead.
 
-:returns:
-    (bool) Successfully Created Entry
+  This function will create a new channel entry. The data array must
+  contain a title and data for all required fields. If the entry date or
+  edit date are not included in the data array, current time will be
+  used instead. ::
 
-Example Usage::
+    ee()->api_channel_entries->submit_new_entry((int) $channel_id, (array) $data);
 
-	$this->EE->load->library('api');
-	$this->EE->api->instantiate('channel_entries');
-	$this->EE->api->instantiate('channel_fields');
-	
-	$data = array(
-		'title'         => 'Breaking News Story!',
-		'entry_date'    => '1256953732',
-		'edit_date'     => '1351653729',
-		'field_id_6'    => 'Some data',
-		'field_ft_6'    => 'none',
-		'field_id_19'   => 'More data',
-		'field_ft_19'   => 'xhtml'
-	);
-	
-	$this->EE->api_channel_fields->setup_entry_settings($channel_id, $data);
+  :param int $channel_id: The channel ID for the new entry
+  :param array $data: Entry data to submit
+  :param boolean $autosave: Whether the entry is being autosaved or not
+  :returns: Whether the new entry was successfully created
+  :rtype: Boolean
 
-	if ($this->EE->api_channel_entries->submit_new_entry($channel_id, $data) === FALSE)
-	{
-		show_error('An Error Occurred Creating the Entry');
-	}
+  Example Usage::
 
-See also `setup\_entry\_settings() <api_channel_fields.html#>`_ in the
-Channel Fields API.
+    ee()->load->library('api');
+    ee()->api->instantiate('channel_entries');
+    ee()->api->instantiate('channel_fields');
 
-.. note:: As part of the data normalization, custom data with a value of NULL is
-   transformed to an empty string before database insertion.
+    $data = array(
+        'title'         => 'Breaking News Story!',
+        'entry_date'    => '1256953732',
+        'edit_date'     => '1351653729',
+        'field_id_6'    => 'Some data',
+        'field_ft_6'    => 'none',
+        'field_id_19'   => 'More data',
+        'field_ft_19'   => 'xhtml'
+    );
+
+    ee()->api_channel_fields->setup_entry_settings($channel_id, $data);
+
+    if (ee()->api_channel_entries->submit_new_entry($channel_id, $data) === FALSE)
+    {
+        show_error('An Error Occurred Creating the Entry');
+    }
+
+  See also :meth:`Api_channel_fields::setup_entry_settings` in the
+  Channel Fields API.
+
+  .. note:: As part of the data normalization, custom data with a
+    value of NULL is transformed to an empty string before database
+    insertion.
 
 Update Entry
 ~~~~~~~~~~~~
 
-This function will update a channel entry. The data array must contain a title
-and data for all required fields. If the entry date or edit date are not
-included in the data array, current time will be used instead. ::
+.. method:: update_entry($entry_id, $data[, $autosave = FALSE])
 
-	$this->EE->api_channel_entries->update_entry((int) $entry_id, (mixed) $data);
+  .. deprecated:: 2.6
+    Use :meth:`Api_channel_entries::save_entry` instead.
 
-:returns:
-    (bool) Successfully Updated Entry
+  This function will update a channel entry. The data array must contain
+  a title and data for all required fields. If the entry date or edit
+  date are not included in the data array, current time will be used
+  instead. ::
 
-.. note:: As part of the data normalization, custom data with a value of NULL is
-   transformed to an empty string before database insertion.
+    ee()->api_channel_entries->update_entry((int) $entry_id, (array) $data);
+
+  :param int $entry_id: The entry ID to update
+  :param array $data: Entry data to submit
+  :param boolean $autosave: Whether the entry is being autosaved or not
+  :returns: Whether an entry was successfully updated
+  :rtype: Boolean
+
+  .. note:: As part of the data normalization, custom data with a value
+    of NULL is
+    transformed to an empty string before database insertion.
 
 Delete Entry
 ~~~~~~~~~~~~
 
-This function will delete one or more entries as well as some of their
-related data. The data array must contain an entry id, or an array of
-entry ids. ::
+.. method:: delete_entry($entry_ids)
 
-	$this->EE->api_channel_entries->delete_entry((mixed) $entry_ids);
+  This function will delete one or more entries as well as some of their
+  related data. The data array must contain an entry id, or an array of
+  entry ids. ::
 
-:returns:
-    (bool) Successfully Deleted Entry
+    ee()->api_channel_entries->delete_entry((mixed) $entry_ids);
+
+  :param mixed $entry_ids: Integer or array of integers containing
+    ``entry_ids`` to delete
+  :returns: Whether an entry was successfully deleted
+  :rtype: Boolean
 
 Entry Exists
 ~~~~~~~~~~~~
 
-This function checks if an entry with a given id exists. ::
+.. method:: entry_exists($entry_id)
 
-	$this->EE->api_channel_entries->entry_exists((int) $entry_id);
+  This function checks if an entry with a given id exists. ::
 
-:returns:
-    (bool) Entry Exists
+    ee()->api_channel_entries->entry_exists((int) $entry_id);
+
+  :param int $entry_id: Entry ID to be verified
+  :returns: Whether an entry exists
+  :rtype: Boolean
 
 Send Pings
 ~~~~~~~~~~
 
-This function sends pings to a list of ping servers. The
-submit\_new\_entry() and update\_entry() functions will automatically
-send pings if given ping\_servers in their data array. $ping\_servers
-should be a list of ping server ids from the exp\_ping\_servers database
-table. ::
+.. method:: send_pings($ping_servers, $channel_id, $entry_id[, $send_now = TRUE])
 
-	$this->EE->api_channel_entries->send_pings((mixed) $ping_servers, (int) $channel_id, (int) $entry_id);
+  This function sends pings to a list of ping servers. The
+  ``submit_new_entry()`` and ``update_entry()`` functions will
+  automatically send pings if given ``ping_servers`` in their data
+  array. ``$ping_servers`` should be a list of ping server ids from the
+  ``exp_ping_servers`` database table::
 
-:returns:
-    (bool) Pings Sent
+    ee()->api_channel_entries->send_pings((array) $ping_servers, (int) $channel_id, (int) $entry_id);
+
+  :param array $ping_servers: Array of IDs of ping servers in the
+    database
+  :param int $channel_id: ID of the channel that contains the
+    ``$entry_id``
+  :param int $entry_id: ID of the entry you want to send pings for
+  :param boolean $send_now: Set to ``FALSE`` to prevent pings from being
+    sent
+  :returns: Whether pings were sent
+  :rtype: Boolean
 
 Update Relationship Cache
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This function updates the relationship cache table. You should only need
-to use this function if you are manually changing relationship data,
-submit\_new\_entry() and update\_entry() will automatically recompile
-relationship data. ::
+.. method:: update_related_cache($entry_id)
 
-	$this->EE->api_channel_entries->update_related_cache((int) $entry_id);
+  This function updates the relationship cache table. You should only
+  need to use this function if you are manually changing relationship
+  data, ``submit_new_entry()`` and ``update_entry()`` will automatically
+  recompile relationship data::
+
+    ee()->api_channel_entries->update_related_cache((int) $entry_id);

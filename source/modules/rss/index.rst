@@ -43,9 +43,9 @@ channel=
 
 	channel="which"
 
-**Required**. From which
-`channel <../../cp/admin/channels/channel_management.html>`_ to
-show the meta data information.
+**Required**. From which :doc:`channel
+</cp/admin/channels/channel_management>` to show the meta data
+information.
 
 show\_expired=
 ~~~~~~~~~~~~~~
@@ -77,9 +77,9 @@ status=
 
 	status="open"
 
-You may restrict to a particular
-`status <../../cp/admin/channels/statuses.html>`_. You can choose
-multiple statuses using a pipe::
+You may restrict to a particular :doc:`status
+</cp/admin/channels/statuses>`. You can choose multiple statuses using a
+pipe::
 
 	status="draft|reviewed|published"
 
@@ -182,8 +182,8 @@ channel\_url
 	{channel_url}
 
 The URL associated with the channel as set in the "Channel URL"
-preference under `Channel
-Administration <../../cp/admin/channels/channel_management.html>`_.
+preference under :doc:`Channel Administration
+</cp/admin/channels/channel_management>`.
 
 date
 ~~~~
@@ -192,8 +192,8 @@ date
 
 	{date format="%Y %m %d"}
 
-The date on which the last entry was submitted. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for more information.
+The date on which the last entry was submitted. See :doc:`Date Variable
+Formatting </templates/date_variable_formatting>` for more information.
 
 edit\_date
 ~~~~~~~~~~
@@ -202,8 +202,8 @@ edit\_date
 
 	{edit_date format="%Y %m %d"}
 
-The date on which the entry was last edited. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for more information.
+The date on which the entry was last edited. See :doc:`Date Variable
+Formatting </templates/date_variable_formatting>` for more information.
 
 email
 ~~~~~
@@ -231,8 +231,8 @@ gmt\_entry\_date
 	{gmt_date format="%Y %m %d"}
 
 The date the entry was submitted in GMT. This variable is **not**
-localized for each user's date settings. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for more information.
+localized for each user's date settings. See :doc:`Date Variable
+Formatting </templates/date_variable_formatting>` for more information.
 
 gmt\_edit\_date
 ~~~~~~~~~~~~~~~
@@ -243,7 +243,7 @@ gmt\_edit\_date
 
 The date on which the entry was last edited in GMT. This variable is
 **not** localized for each user's date settings. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for more information.
+Formatting </templates/date_variable_formatting>` for more information.
 
 version
 ~~~~~~~
@@ -268,7 +268,7 @@ This allows you to reduce bandwidth costs and download time by only
 serving the necessary content.
 
 This ability is provided by adding a special parameter to the
-{exp:channel:entries} opening tag, :ref:`channel-entries-dynamic-start`.
+{exp:channel:entries} opening tag, :ref:`channel_entries_dynamic_start`.
 It is used like so::
 
 	{exp:channel:entries channel="default_site" limit="10" dynamic_start="yes"}

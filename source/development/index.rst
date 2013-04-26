@@ -56,6 +56,10 @@ Development
    -  :doc:`URI Class </development/usage/uri>`
    -  :doc:`XML Parser Class </development/usage/xmlparser>`
 
+-  ExpressionEngine Datastructures
+
+   - :doc:`Tree </development/reference/tree_datastructure>`
+
 -  ExpressionEngine Functions by Class
 
    -  :doc:`Functions Class </development/reference/functions>`

@@ -18,6 +18,8 @@ The site="" parameter is available to the following:
 When you use the site="" parameter it will exclude all other Sites. If
 the site="" parameter is not specified then the current site is used.
 
+.. _msm_code_embedding:
+
 Embedding Templates from Another Site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -35,8 +37,8 @@ So if the Site's Short Name is "siteA" and you want to embed the
 Specifying Multiple Sites (prepare for a head trip)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Note:** Specifying multiple Sites does not work with the {embed=""}
-tag.
+.. note:: Specifying multiple Sites does not work with the {embed=""}
+	tag.
 
 When using the site="" parameter in the Channel, Comment, Statistics,
 and RSS modules you can specify multiple Sites like so::
@@ -65,9 +67,9 @@ Parameters
 Within the channel entries tag, it is possible to output a list of
 entries from multiple Sites while ordering by Site and Channel Field.
 Read more about the :ref:`Multiple Site Manager and
-orderby= <channel-entries-orderby>`.
+orderby= <channel_entries_orderby>`.
 
-.. _msm-variables:
+.. _msm_variables:
 
 Variables
 ---------

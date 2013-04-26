@@ -19,9 +19,9 @@ with the new file from Version 2.0.2.
 Redundant Channel Preferences Removed
 -------------------------------------
 
-Due to the ability to control publish field displays with `custom
-layouts <../cp/content/publish_page_layouts.html>`_, a number of now
-irrelevant channel preferences for the publish page were removed.
+Due to the ability to control publish field displays with :doc:`custom
+layouts </cp/content/publish_page_layouts>`, a number of now irrelevant
+channel preferences for the publish page were removed.
 
 Preferences Array Update
 ------------------------
@@ -31,11 +31,11 @@ preferences. New pages created in the 2.x versions will already be
 encoded, however imported data may not have been. Further, this update
 checks that page data is stored consistent with the 1.6.9 update.
 
-If you use `Pages <../modules/pages/index.html>`_ and have any add-ons
-that might make use of this array, be certain to update the add-ons as
-part of this version update. Not doing so may result in broken pages.
-Add-ons that may be affected include Structure, LG Better Meta, and the
-Nested Menu Plugin.
+If you use :doc:`Pages </modules/pages/index>` and have any add-ons that
+might make use of this array, be certain to update the add-ons as part
+of this version update. Not doing so may result in broken pages. Add-ons
+that may be affected include Structure, LG Better Meta, and the Nested
+Menu Plugin.
 
 For those using PHP in templates or using their own add-ons, you may
 need to adjust your code to reflect changes to site\_pages array. The
@@ -85,6 +85,6 @@ Prior to 1.6.9:
               )
     )
 
-:ref:`Return to Update Page <update-additional-steps>`
+:ref:`Return to Update Page <update_additional_steps>`
 
 

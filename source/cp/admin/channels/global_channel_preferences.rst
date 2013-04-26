@@ -64,9 +64,10 @@ Cache Dynamic Channel Queries?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This feature will improve the speed at which your channel pages load by
-caching queries that are normally executed dynamically. **Note:** Enable
-this preference only if you **do not** use the "future entries" or
-"expiring entries" feature.
+caching queries that are normally executed dynamically. 
+
+.. note:: Enable this preference only if you **do not** use the "future
+	entries" or "expiring entries" feature.
 
 Word Separator for URL Titles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

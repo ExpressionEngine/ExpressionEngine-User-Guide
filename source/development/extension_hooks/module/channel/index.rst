@@ -2,206 +2,140 @@ Channel Module Extension Hooks
 ==============================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
 channel_entries_query_result
 ----------------------------
 
-Modify the channel entries query result array before the parsing loop
-starts
+.. function:: channel_entries_query_result($this, $query_result)
 
-::
+  Modify the channel entries query result array before the parsing loop
+  starts.
 
-	$query_result = $this->extensions->call('channel_entries_query_result', $this, $query_result);
-	if ($this->extensions->end_script === TRUE) return $this->TMPL->tagdata;
+  How it's called::
 
-$this
-~~~~~
+    $query_result = $this->extensions->call('channel_entries_query_result', $this, $query_result);
+    if ($this->extensions->end_script === TRUE) return $this->TMPL->tagdata;
 
-The current Channel object
+  :param object $this: Current Channel object
+  :param array $query_result: Channel entries query result array
+  :returns: Modified ``$query_result`` array
+  :rtype: Array
 
-$query_result
-~~~~~~~~~~~~~~
-
-The Channel Entries query result array
-
-:returns:
-    Array
-
-Added in v1.6.7
+  .. versionadded:: 1.6.7
 
 channel_entries_tagdata
 -----------------------
 
-Modify the tagdata for the channel entries before anything else is
-parsed
+.. function:: channel_entries_tagdata($tagdata, $row, $this)
 
-::
+  Modify the tagdata for the channel entries before anything else is
+  parsed.
 
-	$tagdata = $this->extensions->call('channel_entries_tagdata', $tagdata, $row, $this); if ($this->extensions->end_script === TRUE) return $tagdata;
+  How it's called::
 
-$tagdata
-~~~~~~~~
+    $tagdata = $this->extensions->call('channel_entries_tagdata', $tagdata, $row, $this);
+    if ($this->extensions->end_script === TRUE) return $tagdata;
 
-The Channel Entries tag data
+  :param string $tagdata: Channel entries tagdata
+  :param array $row: Current entry data
+  :param object $this: Current Channel object
+  :returns: Modified ``$tagdata``
+  :rtype: String
 
-$row
-~~~~
-
-Array of data for the current entry
-
-$this
-~~~~~
-The current Channel object including all data relating to categories
-and fields
-
-:returns:
-    String
-
-Added in v1.4.0
+  .. versionadded:: 1.4.0
 
 channel_entries_row
 -------------------
 
-Modify the entry data for the channel entries before anything else is
-parsed
+.. function:: channel_entries_row($this, $row)
 
-::
+  Modify the entry data for the channel entries before anything else is
+  parsed.
 
-	$row = $this->extensions->call('channel_entries_row', $this, $row); if ($this->extensions->end_script === TRUE) return $tagdata;
+  How it's called::
 
-$row
-~~~~
+    $row = $this->extensions->call('channel_entries_row', $this, $row);
+    if ($this->extensions->end_script === TRUE) return $tagdata;
 
-Array of data for the current entry
+  :param object $this: Current Channel object
+  :param array $row: Current entry data
+  :returns: Modified ``$row``
+  :rtype: Array
 
-$this
-~~~~~
-
-The current Channel object including all data relating to categories
-and fields
-
-:returns:
-    Array
-
-Added in v1.6.7
+  .. versionadded:: 1.6.7
 
 channel_entries_tagdata_end
 ---------------------------
 
-Take the final result from an entry's parsing and do what you will. ::
+.. function:: function_name($tagdata, $row, $this)
 
-	$tagdata = $this->extensions->call('channel_entries_tagdata_end', $tagdata, $row, $this); if ($this->extensions->end_script === TRUE) return $tagdata;
+  Take the final result from an entry's parsing and do what you will.
 
-$tagdata
-~~~~~~~~
+  How it's called::
 
-The Channel Entries tag data
+    $tagdata = $this->extensions->call('channel_entries_tagdata_end', $tagdata, $row, $this);
+    if ($this->extensions->end_script === TRUE) return $tagdata;
 
-$row
-~~~~
+  :param string $tagdata: Channel entries tagdata
+  :param array $row: Current entry data
+  :param object $this: Current Channel object
+  :returns: Modified ``$tagdata``
+  :rtype: String
 
-Array of data for the current entry
-
-$this
-~~~~~
-
-The current Channel object including all data relating to categories
-and fields
-
-:returns:
-    String
-
-Added in v1.5.0
+  .. versionadded:: 1.5.0
+    Notes about addition
 
 channel_module_calendar_start
 -----------------------------
 
-Rewrite the displaying of the calendar tag
+.. function:: channel_module_calendar_start()
 
-::
+  Rewrite the displaying of the calendar tag.
 
-	$edata = $this->extensions->call('channel_module_calendar_start'); if ($this->extensions->end_script === TRUE) return $edata;
+  How it's called::
 
-:returns:
-    void
+    $edata = $this->extensions->call('channel_module_calendar_start');
+    if ($this->extensions->end_script === TRUE) return $edata;
 
-Added in v1.4.0
+  :returns: Rendered calendar data
+  :rtype: String
+
+  .. versionadded:: 1.4.0
 
 channel_module_categories_start
 -------------------------------
 
-Rewrite the displaying of categories with the Category tag in the
-Channel module
+.. function:: channel_module_categories_start()
 
-::
+  Rewrite the displaying of categories with the Category tag in the
+  Channel module.
 
-	return $this->extensions->call('channel_module_categories_start');
+  How it's called::
 
-:returns:
-    String
+    return $this->extensions->call('channel_module_categories_start');
 
-Added in v1.4.0
+  :returns: Rendered category tagdata
+  :rtype: String
+
+  .. versionadded:: 1.4.0
 
 channel_module_category_heading_start
 -------------------------------------
 
-Rewrite the displaying of category headings
+.. function:: channel_module_category_heading_start()
 
-::
+  Rewrite the displaying of category headings.
 
-	$this->EE->TMPL->tagdata = $this->extensions->call('channel_module_category_heading_start'); if ($this->extensions->end_script === TRUE) return $this->EE->TMPL->tagdata;
+  How it's called::
 
-:returns:
-    String
+    ee()->TMPL->tagdata = $this->extensions->call('channel_module_category_heading_start');
+    if ($this->extensions->end_script === TRUE) return ee()->TMPL->tagdata;
 
-Added in v1.4.0
+  :returns: Rendered category heading tagdata
+  :rtype: String
 
-channel_module_create_pagination
---------------------------------
-
-Rewrite the pagination function in the Pagination library and possible expand
-the types of pagination available
-
-::
-
-	$edata = $this->extensions->call('channel_module_create_pagination', $this, $count); 
-	if ($this->extensions->end_script === TRUE) return;
-
-$this
-~~~~~
-
-Currently instantiated object for EE_Pagination class, remember to call this
-with a reference if you want to modify the object.
-
-$count
-~~~~~~
-
-The number of items the pagination library is paginating over.
-
-:returns:
-    void
-
-Added in v1.4.0
-
-channel_module_fetch_pagination_data
-------------------------------------
-
-- Works with the 'channel_module_create_pagination' hook
-
-::
-
-	$edata = $this->extensions->call('channel_module_fetch_pagination_data', $this); if ($this->extensions->end_script === TRUE) return;
-
-$this
-~~~~~
-
-Currently instantiated object for Channel class, remember to call
-this with a reference if you want to modify the object
-
-:returns:
-    void
-
-Added in v1.4.0
+  .. versionadded:: 1.4.0

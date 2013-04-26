@@ -201,8 +201,8 @@ status=
 	status="open"
 
 You may restrict the result to entries assigned to a particular
-`status <../../cp/admin/channels/statuses.html>`_. You can choose
-multiple statuses using a pipe::
+:doc:`status </cp/admin/channels/statuses>`. You can choose multiple
+statuses using a pipe::
 
 	status="draft|reviewed|published"
 
@@ -219,8 +219,7 @@ channel=
 
 	channel="which"
 
-From which
-`channel <../../cp/admin/channels/channel_management.html>`_ to
+From which :doc:`channel </cp/admin/channels/channel_management>` to
 search the entries. Additionally, you can use the pipe character to
 separate multiple channels::
 
@@ -274,5 +273,5 @@ Variables
 ---------
 
 There are no specific variables associated with the Simple Search Form.
-You may use the `{path=''} <../../templates/globals/path.html>`_ Global
+You may use the :doc:`{path=''} </templates/globals/path>` Global
 Variable to create a link to an Advanced Search Form if you wish.

@@ -9,7 +9,19 @@ long articles.
 Here's an example of what your channel entries tag might look like with
 this feature in action::
 
-	{exp:channel:entries channel="news" paginate_type="field" paginate="bottom"}  <h3>{title}</h3>  {body}  {multi_field="page1|page2|page3|page4"}  <div>Last updated on {edit_date format='%M %d, %Y'}   at {edit_date format='%h:%i %A'}<br /> </div>  {paginate} <p>Page {current_page} of {total_pages} pages for this article {pagination_links}</p> {/paginate}  {/exp:channel:entries}
+   {exp:channel:entries channel="news" paginate_type="field" paginate="bottom"} 
+      <h3>{title}</h3>
+      {body}
+      {multi_field="page1|page2|page3|page4"}
+      <div>
+         Last updated on {edit_date format='%M %d, %Y'} at 
+            {edit_date format='%h:%i %A'}<br /> 
+      </div>
+      {paginate}
+         <p>Page {current_page} of {total_pages} pages for this article 
+            {pagination_links}</p> 
+      {/paginate}  
+   {/exp:channel:entries}
 
 You may notice that the code shares a lot in common with the code for
 :doc:`channel entry and comment pagination <pagination_page>`. In fact,
@@ -63,17 +75,16 @@ The same variable pairs used in the :doc:`channel entry and comment
 pagination <pagination_page>` feature are available here. The
 following links point to the entries for that feature.
 
--  `{paginate} <pagination_page.html#var_paginate>`_
--  `{pagination_links} <pagination_page.html#pagination-links>`_
--  `{if next\_page} <pagination_page.html#var_if_next_page>`_
--  `{if previous\_page} <pagination_page.html#var_if_previous_page>`_
+-  :ref:`{paginate} <pagination_paginate>`
+-  :ref:`{pagination_links} <pagination_pagination_links>`
+-  :ref:`{if next_page} <pagination_next_page>`
+-  :ref:`{if previous_page} <pagination_previous_page>`
 
 Variables
 ---------
 
-
-These individual variables are for use inside the
-`{paginate} <pagination_page.html#var_paginate>`_ tag pair.
+These individual variables are for use inside the :ref:`{paginate}
+<pagination_paginate>` tag pair.
 
 current\_page
 ~~~~~~~~~~~~~
@@ -122,11 +133,10 @@ path
 
 	{path}
 
-The {path} variable is used inside of the `{if
-next\_page} <pagination_page.html#var_if_next_page>`_ and `{if
-previous\_page} <pagination_page.html#var_if_previous_page>`_ variable
-pairs. It is dynamically replaced with the correct path to the
-next/previous page.
+The ``{path}`` variable is used inside of the :ref:`{if next_page}
+<pagination_next_page>` and :ref:`{if previous_page}
+<pagination_previous_page>` variable pairs. It is dynamically
+replaced with the correct path to the next/previous page.
 
 total\_pages
 ~~~~~~~~~~~~

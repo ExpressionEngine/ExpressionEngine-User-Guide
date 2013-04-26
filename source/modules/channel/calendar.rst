@@ -112,9 +112,9 @@ wish, modify it as needed, or simply ignore it.
 Parameters
 **********
 
-Most of the `Parameters <channel_entries.html#parameters>`_ of the standard
-{exp:channel:entries} tag are available. In addition, the following are
-special to the channel calendar tag.
+Most of the :doc:`Parameters </modules/channel/channel_entries>` of the
+standard {exp:channel:entries} tag are available. In addition, the
+following are special to the channel calendar tag.
 
 .. note:: Dynamic Parameters may not be used with the calendar tag.
 
@@ -299,9 +299,8 @@ date
 
 The current date. As with other date variables, this require the
 "format" parameter in order to define how the date should be displayed.
-See the `date variable
-formatting <../../templates/date_variable_formatting.html>`_ page for
-more information.
+See the :doc:`date variable formatting
+</templates/date_variable_formatting>` page for more information.
 
 day\_number
 -----------
@@ -357,9 +356,8 @@ next\_date
 
 The next date for the calendar; i.e. the next month. As with other date
 variables, this require the "format" parameter in order to define how
-the date should be displayed. See the `date variable
-formatting <../../templates/date_variable_formatting.html>`_ page for
-more information.
+the date should be displayed. See the :doc:`date variable formatting
+</templates/date_variable_formatting>` page for more information.
 
 next\_path
 ----------
@@ -404,9 +402,9 @@ previous\_date
 
 The previous date for the calendar; i.e. the previous month. As with
 other date variables, this require the "format" parameter in order to
-define how the date should be displayed. See the `date variable
-formatting <../../templates/date_variable_formatting.html>`_ page for
-more information.
+define how the date should be displayed. See the :doc:`date variable
+formatting </templates/date_variable_formatting>` page for more
+information.
 
 previous\_path
 --------------
@@ -477,10 +475,10 @@ Will render as::
 
 	http://example.com/channel/archives/my_ugly_boyfriend/
 
-**Note:** When creating a new entry, if you don't supply the "url title"
-then it will be automatically created from the actual entry title.
-Spaces are turned into underscores and quotes are removed. For example,
-"Joe's night out" becomes "joes\_night\_out".
+.. note:: When creating a new entry, if you don't supply the "url title"
+    then it will be automatically created from the actual entry title.
+    Spaces are turned into underscores and quotes are removed. For
+    example, "Joe's night out" becomes "joes\_night\_out".
 
 This is only available for use inside the {entries}{/entries} variable
 pair.

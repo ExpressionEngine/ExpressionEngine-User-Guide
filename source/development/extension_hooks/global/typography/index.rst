@@ -2,65 +2,47 @@ Typography Library Extension Hooks
 ==================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-typography\_parse\_type\_end
-----------------------------
+typography_parse_type_start
+---------------------------
 
-Modify string after all other typography processing
+.. function:: typography_parse_type_start($str, $this, $prefs)
 
-::
+  Modify string prior to all other typography processing.
 
-	$str = $this->extensions->call('typography_parse_type_end', $str, $this, $prefs);
+  How it's called::
 
-$str
-~~~~
+    $str = $this->extensions->call('typography_parse_type_start', $str, $this, $prefs);
 
-The string currently being parsed.
+  :param string $str: The string currently being parsed
+  :param object $this: The Typography library object
+  :param array $prefs: Array of preferences sent to
+    ``EE_Typography::parse_type``
+  :returns: String to be parsed by ``EE_Typography::parse_type``
+  :rtype: String
 
-$this
-~~~~~
+  .. versionadded:: 1.4.0
 
-The Typography library object - accept by reference in your methods.
+typography_parse_type_end
+-------------------------
 
-$prefs
-~~~~~~
+.. function:: typography_parse_type_end($str, $this, $prefs)
 
-Any prefs sent to the $this->typography->parse\_type() method with
-this string.
+  Modify string after all other typography processing.
 
-:returns:
-    String
+  How it's called::
 
-Added in v1.4.0
+    $str = $this->extensions->call('typography_parse_type_end', $str, $this, $prefs);
 
-typography\_parse\_type\_start
--------------------------------
+  :param string $str: The string currently being parsed
+  :param object $this: The Typography library object
+  :param array $prefs: Array of preferences sent to
+    ``EE_Typography::parse_type``
+  :returns: String passed out of ``EE_Typography::parse_type``
+  :rtype: String
 
-Modify string prior to all other typography processing
-
-::
-
-	$str = $this->extensions->call('typography_parse_type_start', $str, $this, $prefs);
-
-$str
-~~~~
-
-The string currently being parsed.
-
-$this
-~~~~~
-
-The Typography library object - accept by reference in your methods.
-
-$prefs
-~~~~~~
-
-Any prefs sent to the $TYPE->parse\_type function with this string.
-
-:returns:
-    Array
-
-Added in v1.4.0
+  .. versionadded:: 1.4.0

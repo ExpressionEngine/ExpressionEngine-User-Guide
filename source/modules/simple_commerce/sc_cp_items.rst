@@ -46,12 +46,11 @@ top right.
 Adding Items
 ------------
 
-From the Simple Commerce module's :doc:`control panel home
-page <sc_cp>`, or from the Edit Items section, click **Add
-Items**. You will be presented with a familiar looking screen, one that
-looks much like the `Edit section of the Control
-Panel <../../cp/content/edit.html>`_, and can in fact perform searches
-here using the same methods.
+From the Simple Commerce module's :doc:`control panel home page
+<sc_cp>`, or from the Edit Items section, click **Add Items**. You will
+be presented with a familiar looking screen, one that looks much like
+the :doc:`Edit section of the Control Panel </cp/content/edit>`, and can
+in fact perform searches here using the same methods.
 
 To add Store Items, simply check the boxes to the right of the items you
 wish to add to your store, and then click Submit (**Add Item** should
@@ -87,7 +86,7 @@ Item Enabled
 ~~~~~~~~~~~~
 
 When checked, the item will be enabled and available for purchase. If
-unchecked, the :ref:`simple-commerce-purchase-tag` will
+unchecked, the :ref:`simple_commerce_purchase_tag` will
 not show details, purchase links, or buttons for this item.
 
 Admin Email Address
@@ -123,7 +122,7 @@ Recurring Payment
 ~~~~~~~~~~~~~~~~~
 
 If checked, the item is designated as a :ref:`recurring
-payment <simple-commerce-recurring-payments>`.
+payment <simple_commerce_recurring_payments>`.
 
 Subscription Frequency
 ~~~~~~~~~~~~~~~~~~~~~~

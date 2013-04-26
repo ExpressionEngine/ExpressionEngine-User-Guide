@@ -6,8 +6,8 @@ Clear Caching
 **Control Panel Location:** :menuselection:`Tools --> Data --> Clear Caching`
 
 This section of the Control Panel allows you clear the cached data for
-the different types of `caching <../../../general/caching.html>`_ that
-are available.
+the different types of :doc:`caching </optimization/caching>` that are
+available.
 
 |Clear Caches|
 

@@ -157,7 +157,7 @@ use "cookies only" and not sessions.::
 		<p><input class="checkbox" type="checkbox" name="auto_login" value="1"> Auto-login on future visits</p>
 	{/if}
 
-.. _creating-member-links:
+.. _creating_member_links:
 
 *********************
 Creating Member Links
@@ -652,9 +652,8 @@ ignore list of currently logged-in user or from a specified user.
    this tag. If you do not avoid caching, then data will not be dynamic for
    each user. Instead, whoever happens to load the page when it is cached
    will have their information shown for everyone until the cache expires.
-   Unlike this tag, `Global
-   Variables <../../templates/globals/index.html>`_ can be used in
-   templates that are cached.
+   Unlike this tag, :doc:`Global Variables </templates/globals/index>` 
+   can be used in templates that are cached.
 
 Here is the basic tag syntax::
 

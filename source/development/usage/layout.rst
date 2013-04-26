@@ -10,7 +10,7 @@ Calling the Layout Class
 
 ::
 
-	$this->EE->load->library('layout');
+	ee()->load->library('layout');
 
 Publish Page Layout Functions
 -----------------------------
@@ -20,8 +20,8 @@ group and per channel basis. Since these custom layouts are saved as a
 serialized array in the database, any additions or deletions to publish
 page tabs and fields must be synced to any saved layouts. The control
 panel library provides 4 functions to facilitate custom layout updates.
-(See also `Module Tutorial: Update
-file. <../module_tutorial.html#update_file>`_)
+(See also :doc:`Module Tutorial: Update file.
+</development/module_tutorial>`)
 
 Add Tabs
 ~~~~~~~~
@@ -32,7 +32,7 @@ false
 
 ::
 
-	$this->EE->layout->add_layout_tabs($tabs);
+	ee()->layout->add_layout_tabs($tabs);
 
 $tabs must be an associative array where the top level array(s) is the
 name of the tab. If the tab contains any fields, as it likely does,
@@ -53,7 +53,7 @@ and width. ::
 					'htmlbuttons'	=> 'true',
 					'width'		=> '100%'
 					)
-		);	
+		);
 
 Delete Tabs
 ~~~~~~~~~~~
@@ -64,7 +64,7 @@ with the top level array's key the name of the tab. As in the
 add\_layout\_tabs() function, any associated fields should be included
 as keys within the tab's array. ::
 
-	$this->EE->layout->delete_layout_tabs($tabs);
+	ee()->layout->delete_layout_tabs($tabs);
 
 Add Fields
 ~~~~~~~~~~
@@ -77,7 +77,7 @@ add\_layout\_tabs() function, while $channel\_id is an optional
 parameter that limits the update to layouts associated with a given
 channel and should generally be omitted from third party usage. ::
 
-	$this->EE->layout->add_layout_fields($tabs, $channel_id);
+	ee()->layout->add_layout_fields($tabs, $channel_id);
 
 Delete Fields
 ~~~~~~~~~~~~~
@@ -89,4 +89,4 @@ format as the add\_layout\_tabs() function, while $channel\_id is an
 optional parameter that limits the update to layouts associated with a
 given channel and should generally be omitted from third party usage. ::
 
-	$this->EE->layout->delete_layout_fields($tabs, $channel_id);
+	ee()->layout->delete_layout_fields($tabs, $channel_id);

@@ -8,7 +8,7 @@ conditionals, which normally follows this form::
 
 	{if variable comparison-operator value}  Data between the tags that gets shown if the condition is met.  {/if}
 
-.. _global-simple-conditionals:
+.. _global_simple_conditionals:
 
 Simple Conditionals
 -------------------
@@ -54,22 +54,22 @@ $                      &#36;
 If you are comparing a variable against a value that might include
 parentheses, you should use the HTML entities for parentheses listed in
 the table above instead. For example, if you want the conditional to
-evaluate whether the screen name is *John Smith (Owner)*, you would write
-the conditional like so::
+evaluate whether the screen name is *John Smith (Owner)*, you would
+write the conditional like so::
 
 	{if screen_name == 'John Smith &#40;Owner&#41;'}
 
-.. _global-advanced-conditionals:
+.. _global_advanced_conditionals:
 
 Advanced Conditionals
 ---------------------
 
-Any conditional that isn't a :ref:`simple conditional <global-simple-conditionals>`
-is considered an "advanced" conditional and is evaluated
-much later in the :doc:`template parsing order
-</templates/template_engine>`. More advanced conditionals can use logical
-operators (ex: OR, AND) to compare multiple variables to multiple
-values. Consider this example::
+Any conditional that isn't a :ref:`simple conditional
+<global_simple_conditionals>` is considered an "advanced" conditional
+and is evaluated much later in the :doc:`template parsing order
+</templates/template_engine>`. More advanced conditionals can use
+logical operators (ex: OR, AND) to compare multiple variables to
+multiple values. Consider this example::
 
 	{if username == "Joe" OR username == "Bob"}
 	    <h1>Hey, Joe or Bob!</h1>
@@ -221,9 +221,10 @@ if logged\_in
 This tag pair will display content within the pair if the person viewing
 the page is currently a logged in member.
 
-**Note**: This only tests whether or not someone is logged in. If you
-want to restrict a particular page based on the member group assignment
-you'll do that in your Template preferences in the Control Panel.
+.. note:: This only tests whether or not someone is logged in. If you
+	want to restrict a particular page based on the member group 
+	assignment you'll do that in your Template preferences in the 
+	Control Panel.
 
 if logged\_out
 ~~~~~~~~~~~~~~

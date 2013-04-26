@@ -25,8 +25,8 @@ gmt\_last\_updated
 This displays the GMT time of the most recent wiki update.
 
 The **format** parameter is used to determine the date's formatting
-using ExpressionEngine's `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_.
+using ExpressionEngine's :doc:`Date Variable Formatting
+</templates/date_variable_formatting>`.
 
 last\_updated
 ~~~~~~~~~~~~~
@@ -38,8 +38,8 @@ last\_updated
 Displays the localized time (for user) of the most recent wiki update.
 
 The **format** parameter is used to determine the date's formatting
-using ExpressionEngine's `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_.
+using ExpressionEngine's :doc:`Date Variable Formatting
+</templates/date_variable_formatting>`.
 
 language
 ~~~~~~~~
@@ -163,8 +163,8 @@ gmt\_revision\_date
 This displays the GMT time of the most recent article revision.
 
 The **format** parameter is used to determine the date's formatting
-using ExpressionEngine's `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_.
+using ExpressionEngine's :doc:`Date Variable Formatting
+</templates/date_variable_formatting>`.
 
 page\_id
 ^^^^^^^^
@@ -195,8 +195,8 @@ revision\_date
 This displays the time of the most recent article revision.
 
 The **format** parameter is used to determine the date's formatting
-using ExpressionEngine's `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_.
+using ExpressionEngine's :doc:`Date Variable Formatting
+</templates/date_variable_formatting>`.
 
 revision\_id
 ^^^^^^^^^^^^

@@ -116,9 +116,8 @@ ping\_date
 
 	{ping_date format="%Y %m %d"}
 
-The date the ping was received. See the `date variable
-formatting <../../templates/date_variable_formatting.html>`_ page for
-more information.
+The date the ping was received. See the :doc:`date variable formatting
+</templates/date_variable_formatting>` page for more information.
 
 ping\_ipaddress
 ---------------

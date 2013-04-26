@@ -25,9 +25,9 @@ file in your /system/expressionengine/third\_party/accessories/ folder
 and then when you reload the Accessories Manager the accessory will
 automatically be available for you to install.
 
-**Note:** Some accessories will have language files, so put these files
-in your third party language folder in the
-/system/expressionengine/third\_party/language/ directory.
+.. note:: Some accessories will have language files, so put these files
+	in your third party language folder in the
+	``/system/expressionengine/third_party/language/`` directory.
 
 Accessory Preferences
 ---------------------

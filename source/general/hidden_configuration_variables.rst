@@ -194,7 +194,7 @@ of the query changes dynamically every time the query is run. A Channel
 Entries query, for example, always matches the expiration date against
 the current time in order to determine if entries have expired. This causes
 the query to change slightly with each page load; thus it cannot use this
-caching method. (See :ref:`caching-dynamic-channel-query-caching` for an
+caching method. (See :ref:`caching_dynamic_channel_query_caching` for an
 alternative that can be used in many cases.)
 
 filename_increment

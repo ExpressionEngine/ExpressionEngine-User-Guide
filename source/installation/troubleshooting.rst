@@ -5,8 +5,7 @@ Main page content appears on every page / I get 404s except on the main page / "
 --------------------------------------------------------------------------------------------------------
 
 If you encounter any of the above while trying to navigate your site,
-please review `this
-FAQ <http://expressionengine.com/forums/viewthread/130554/>`_.
+please review :forum_thread:`this FAQ <130554>`.
 
 Running PHP as CGI
 ------------------

@@ -53,14 +53,12 @@ Template <sample_code/user_message_template.txt>`
 System Offline Template
 -----------------------
 
-In the `General
-Configuration <../../admin/general_configuration.html>`_
-section of the Control Panel you can specify whether or not your site is
-"Live". If the site is not live then people will be presented with a
-message when they try to access your page. This can be useful if you are
-performing maintenance or other such things. This Message Page allows
-you to define the page that will be shown to people when your site is
-not "Live".
+In the :doc:`/cp/admin/general_configuration` section of the Control
+Panel you can specify whether or not your site is "Live". If the site is
+not live then people will be presented with a message when they try to
+access your page. This can be useful if you are performing maintenance
+or other such things. This Message Page allows you to define the page
+that will be shown to people when your site is not "Live".
 
 View default code for the :download:`System Offline
 Template <sample_code/system_offline.txt>`

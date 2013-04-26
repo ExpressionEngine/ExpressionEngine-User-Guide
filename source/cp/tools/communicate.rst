@@ -12,8 +12,8 @@ format, and supported email sending protocols are
 `Sendmail <http://www.sendmail.org/>`_, and PHP
 `mail <http://us2.php.net/manual/en/function.mail.php>`_.
 
-**Note:** In the Admin area of the Control Panel you'll find the `Email
-Configuration <../admin/email_configuration.html>`_ page.
+.. note:: In the Admin area of the Control Panel you'll find the
+	:doc:`/cp/admin/email_configuration` page.
 
 |Communicate|
 
@@ -60,12 +60,12 @@ How the email's message should be formatted. Options include:
    emails, HTML emails are more likely to be flagged as spam, and that
    many people prefer not to receive such emails.
 
-**Note:** If you choose to send your email in the HTML Format, an
-optional field will appear allowing you specify a Plain Text Alternative
-to the HTML email. This allows email clients who have HTML email
-disabled or unavailable to still view the email in a form that is still
-easily readable, opposed to be the original HTML email with all tags
-stripped.
+.. note:: If you choose to send your email in the HTML Format, an
+	optional field will appear allowing you specify a Plain Text
+	Alternative to the HTML email. This allows email clients who have
+	HTML email disabled or unavailable to still view the email in a form
+	that is still easily readable, opposed to be the original HTML email
+	with all tags stripped.
 
 |Communicate Formatting HTML|
 
@@ -86,7 +86,7 @@ certain number of characters. Email programs that do not automatically
 wrap lines or insert their own line breaks will then be able to better
 view emails. 72 characters per line is considered the email standard.
 
-**Note**: Word wrapping affects only plain text emails.
+.. note:: Word wrapping affects only plain text emails.
 
 Overriding Word Wrapping
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -104,7 +104,7 @@ from wrapping. ::
 
 Place the item you do not want word-wrapped between: {unwrap} {/unwrap}
 
-**Note**: The {unwrap} variable pair affects only plain text emails.
+.. note:: The {unwrap} variable pair affects only plain text emails.
 
 Priority
 ~~~~~~~~
@@ -177,10 +177,9 @@ Send to Mailing List
 ~~~~~~~~~~~~~~~~~~~~
 
 You may select one or more of your existing mailing lists as recipients
-for the email. See the `Mailing
-List <../../modules/mailinglist/index.html>`_ section of the Modules
-area for more information on mailing lists. Mailing list emails are sent
-as regular recipients.
+for the email. See the :doc:`/modules/mailinglist/index` section of the
+Modules area for more information on mailing lists. Mailing list emails
+are sent as regular recipients.
 
 Send to Member Groups
 ~~~~~~~~~~~~~~~~~~~~~

@@ -19,7 +19,7 @@ The Channel Entries tag can display both multi-entry and
 single-entry content - that is, several entries on a page, or one
 specific one (it dynamically adjusts its output based on the URL
 request). It can also show entries from specific categories, specific
-days, monthly archives, permalinks, and more. 
+days, monthly archives, permalinks, and more.
 
 Here is a basic example of how this tag might be used:
 
@@ -36,7 +36,7 @@ the "News" channel). {title} is replaced with the Title of each entry,
 and {body} is replaced with the content entered into the "Body" field
 of each entry.
 
-.. _channel-entries-parameters:
+.. _channel_entries_parameters:
 
 **********
 Parameters
@@ -52,7 +52,7 @@ author\_id=
 ::
 
 	author_id="1"
-	
+
 
 This parameter limits the query by the member ID of the entry's author.
 You can use the pipe character to query by multiple author IDs::
@@ -63,8 +63,8 @@ Or you can add "not" to exclude author IDs
 
 ::
 
-	author_id="not 1|2|3" 
-	
+	author_id="not 1|2|3"
+
 You can also use the constant "CURRENT\_USER" to show entries from only the currently logged in user.
 
 
@@ -86,7 +86,7 @@ backspace=
 ::
 
 	backspace="7"
-	
+
 
 Backspacing removes characters (including spaces and line breaks) from
 the last iteration of the loop. For example, if you put a <br /> tag
@@ -138,14 +138,13 @@ category=
 	category="2"
 
 Categories are specified by ID number (the ID number of each
-`category <../../cp/admin/channels/category_edit.html>`_ is
-displayed in the Control Panel). The reason we use the ID is because
-categories can be called anything (with spaces, quotes, etc.), and also
-renamed. It would be much more difficult to have to update the tag
-parameters every time you updated a category name. Further, you can have
-multiple categories with the same name either in different Category
-Groups or in different parts of the hierarchy within the same Category
-Group.
+:doc:`category </cp/admin/channels/category_edit>` is displayed in the
+Control Panel). The reason we use the ID is because categories can be
+called anything (with spaces, quotes, etc.), and also renamed. It would
+be much more difficult to have to update the tag parameters every time
+you updated a category name. Further, you can have multiple categories
+with the same name either in different Category Groups or in different
+parts of the hierarchy within the same Category Group.
 
 And as with some of the other parameters, you can stack categories to
 get entries with any of those categories
@@ -178,18 +177,22 @@ Or you can negate the inclusive stack and get entries that do not of
 
 
 .. note:: When you use the ``category="3|4"`` parameter (not excluding), you
-   are implicitly telling ExpressionEngine to only deal with entries that have 
-   been assigned one or more categories. If you have entries that haven't been 
-   categorized then they will be ignored and not included in the results. 
-   However, if you are using exclusion (``category="not 3|4"``), then you will 
-   be shown all entries without those categories *including* those without any 
-   categories assigned. To change this behavior when excluding categories use 
+   are implicitly telling ExpressionEngine to only deal with entries that have
+   been assigned one or more categories. If you have entries that haven't been
+   categorized then they will be ignored and not included in the results.
+   However, if you are using exclusion (``category="not 3|4"``), then you will
+   be shown all entries without those categories *including* those without any
+   categories assigned. To change this behavior when excluding categories use
    the `uncategorized\_entries <#uncategorized-entries>`_ parameter.
 
+.. note:: If you are using exclusion (``category="not 3|4"``) and an entry is
+   in a category that is not excluded, the entry will be returned even if it 
+   also belongs to an excluded category.
+
 .. note:: Using this parameter will automatically cause ExpressionEngine to
-   *ignore* any category information specified via the URL. For instance, if 
-   you are on a "category page" (e.g. a ``/C13/`` segment in the URL) that 
-   will be completely ignored in favor of whatever you have specified via the 
+   *ignore* any category information specified via the URL. For instance, if
+   you are on a "category page" (e.g. a ``/C13/`` segment in the URL) that
+   will be completely ignored in favor of whatever you have specified via the
    parameter.
 
 category\_group=
@@ -201,8 +204,7 @@ category\_group=
 
 
 Category Groups are specified by ID number (the ID number of each
-`category
-group <../../cp/admin/channels/category_management.html>`_ is
+:doc:`category group </cp/admin/channels/category_management>` is
 displayed in the Control Panel). The reason we use the ID is because
 category groups can be called anything (with spaces, quotes, etc.), and
 also renamed. It would be much more difficult to have to update the tag
@@ -220,11 +222,11 @@ Or use "not" to exclude categories
 
 	category_group="not 2"
 
-**Note:** Using this parameter will automatically cause ExpressionEngine
-to *ignore* any category information specified via the URL. For
-instance, if you are on a "category page" (e.g. a ``/C13/`` segment in the
-URL) that will be completely ignored in favor of whatever you have
-specified via the parameter.
+.. note:: Using this parameter will automatically cause ExpressionEngine
+	to *ignore* any category information specified via the URL. For
+	instance, if you are on a "category page" (e.g. a ``/C13/`` segment
+	in the URL) that will be completely ignored in favor of whatever you
+	have specified via the parameter.
 
 channel=
 --------
@@ -233,8 +235,7 @@ channel=
 
 	channel="news"
 
-From which
-`channel <../../cp/admin/channels/channel_management.html>`_ to
+From which :doc:`channel </cp/admin/channels/channel_management>` to
 show the entries (will show all channels if no channel is specified).
 Additionally, you can use the pipe character to separate multiple
 channels::
@@ -246,9 +247,8 @@ channels::
 
 	channel="not channel1|channel2|channel3"
 
-You must specify this parameter if you use the `category name in
-URL <../../cp/admin/channels/global_channel_preferences.html>`_
-feature.
+You must specify this parameter if you use the :doc:`category name in
+URL </cp/admin/channels/global_channel_preferences>` feature.
 
 disable=
 --------
@@ -295,9 +295,9 @@ show your 10 most recent entry titles::
 
 In this example you are only showing the title of your entries and
 nothing else; yet, the channel tag automatically fetches categories and
-other data automatically. Using the disable= parameter you can turn off
-the unneeded features from being queried. In this case, you don't need
-any of the features that can be disabled. ::
+other data. Using the disable= parameter you can turn off the unneeded
+features from being queried. In this case, you don't need any of the
+features that can be disabled. ::
 
 	{exp:channel:entries orderby="date" sort="desc" limit="10" disable="categories|custom_fields|member_data|pagination"}
 		<a href="{title_permalink='channel/comments'}">{title}</a><br>
@@ -360,10 +360,10 @@ show entries in future weeks with pagination, you can use this::
 
 	display_by="week" limit="1" show_future_entries="yes" show_current_week="yes"
 
-.. note:: The display\_by parameter uses the last unit of time provided that 
-   has entries. If you ``display_by="day"`` then it will show the last day that 
-   has entries. If you ``display_by="month"`` combined with ``limit="3"`` then 
-   it will show the last 3 months with entries, even if these months are not 
+.. note:: The display\_by parameter uses the last unit of time provided that
+   has entries. If you ``display_by="day"`` then it will show the last day that
+   has entries. If you ``display_by="month"`` combined with ``limit="3"`` then
+   it will show the last 3 months with entries, even if these months are not
    consecutive.
 
 This parameter uses UTC/GMT time and is not localized to the server or
@@ -387,10 +387,10 @@ your site you visit (main page, archives, comments, etc.). By setting
 ``dynamic="no"`` you will ensure that the list is not affected by anything
 passed in the URL.
 
-Note: you may allow the tag to be sensitive to pagination data in the
-url by including the `paginate=`_ parameter. If that tag
-is used in conjunction with the dynamic parameter, the tag will act
-dynamically for pagination data only.
+.. note:: You may allow the tag to be sensitive to pagination data in
+	the url by including the `paginate=`_ parameter. If that tag
+	is used in conjunction with the dynamic parameter, the tag will act
+	dynamically for pagination data only.
 
 dynamic_parameters=
 -------------------
@@ -405,12 +405,12 @@ data submitted via a form. A practical use for this is to create some
 display options in a form on your page that your visitors can use to
 select their preferred page view.
 
-**NOTE:** This feature will only work if page caching is turned OFF for
-the template in which it is being used.
+.. note:: This feature will only work if page caching is turned OFF for
+	the template in which it is being used.
 
 Every Parameter available to the channel tag can be set dynamically.
 
-.. _channel-entries-dynamic-start:
+.. _channel_entries_dynamic_start:
 
 dynamic\_start=
 ---------------
@@ -493,9 +493,10 @@ setting it to 'desc'::
 In the above example, three entries would be displayed, in the order: 1,
 7, and then 3.
 
-**Note:** Using this parameter will automatically constrain the entries
-tag to the entry id's you specify, effectively setting the `entry_id=`_
-parameter to the same id's given to the fixed_order= parameter.
+.. note:: Using this parameter will automatically constrain the entries
+	tag to the entry id's you specify, effectively setting the
+	`entry_id=`_ parameter to the same id's given to the
+	``fixed_order=`` parameter.
 
 group\_id=
 ----------
@@ -517,7 +518,7 @@ Or exclude groups using "not"
 
 	group_id="not 2|3|4"
 
-.. _channel-entries-limit:
+.. _channel_entries_limit:
 
 limit=
 ------
@@ -558,7 +559,7 @@ do this::
 
 	offset="3"
 
-.. _channel-entries-orderby:
+.. _channel_entries_orderby:
 
 orderby=
 --------
@@ -587,19 +588,19 @@ options for this parameter include:
 -  ``orderby="view_count_three"``
 -  ``orderby="view_count_four"``
 
-In addition you can order by a `channel
-field <../../cp/admin/channels/custom_channel_fields.html>`_. Use
-the "short\_name" of the field::
+In addition you can order by a :doc:`channel field
+</cp/admin/channels/custom_channel_fields>`. Use the "short\_name" of
+the field::
 
 	orderby="name_of_field"
 
-**Note:** Ordering by a Relationship field will cause entries to appear
-in the order the relationships were made, not based on any content from
-the related entries.
+.. note:: Ordering by a Relationship field will cause entries to appear
+	in the order the relationships were made, not based on any content
+	from the related entries.
 
-**Note:** When ordering by "random", entries that have been marked as
-"sticky" will not appear first; they will appear randomly with all other
-entries.
+.. note:: When ordering by "random", entries that have been marked as
+	"sticky" will not appear first; they will appear randomly with all
+	other entries.
 
 **Multiple Orders and Sorts**
 
@@ -715,7 +716,7 @@ by the URL.
 
 The default limit when enabling related_categories_mode is 10
 entries, and can be overridden with the addition of the
-:ref:`channel-entries-limit` parameter.
+:ref:`channel_entries_limit` parameter.
 
 When the ``related_categories_mode=""`` parameter is set to "yes", there
 are two additional parameters available to the Channel Entries tag:
@@ -744,7 +745,7 @@ This parameter allows you to use the category indicator in your URLs
 with an entries tag specifying multiple channels that do **not** share
 category groups.
 
-.. _channel-entries-require_entry:
+.. _channel_entries_require_entry:
 
 require\_entry=
 --------------------
@@ -764,8 +765,8 @@ URL. However, if one of your single entry pages is requested, but it
 doesn't contain a valid ID, this parameter will tell the tag that you do
 not wish the template to display anything.
 
-**Note:** You will often use this parameter in conjunction with the 
-`if no_results`_ conditional.
+.. note:: You will often use this parameter in conjunction with the
+	`if no_results`_ conditional.
 
 search:field\_name=
 -------------------
@@ -780,8 +781,8 @@ by using the field's short name immediately after "search:". You can
 search based on whether a field is an exact match to your provided term
 or whether or not a field simply contains your term.
 
-**Note:** Only fields of the type "Text Input", "Textarea", and
-"Drop-down Lists" are searched with this parameter.
+.. note:: Only fields of the type "Text Input", "Textarea", and
+	"Drop-down Lists" are searched with this parameter.
 
 "Exact" Matching
 ~~~~~~~~~~~~~~~~
@@ -845,8 +846,8 @@ you can add the special trigger \\W after the term.
 
 ::
 
-	search:body="cat\W" 
-	
+	search:body="cat\W"
+
 The above example will return all entries that contain the whole word "cat".
 It will not match entries where the phrase "cat" only lies within another word.
 
@@ -883,10 +884,10 @@ the body is empty **or** contains the word "sandwich". ::
 This example returns only entries that have content, but **not** those
 that contain "sandwich" **nor** those that contain the word "salad".
 
-**Note:** You may use multiple search: parameters in a channel entries
-tag, as long as each one is searching a different field. e.g.::
+.. note:: You may use multiple search: parameters in a channel entries
+	tag, as long as each one is searching a different field. e.g.::
 
-	{exp:channel:entries search:style="=ale" search:region="germany|belgium" search:rating="=3|4|5"}
+		{exp:channel:entries search:style="=ale" search:region="germany|belgium" search:rating="=3|4|5"}
 
 show\_current\_week=
 --------------------
@@ -911,7 +912,7 @@ show\_expired=
 You can determine whether you wish for entries that have "expired" to be
 included.
 
-.. _channel-entries-show-future-entries:
+.. _channel_entries_show_future_entries:
 
 show\_future\_entries=
 ----------------------
@@ -926,7 +927,7 @@ list of events, some of which have not occurred yet. Note that EE will
 still display past entries; this parameter simply instructs EE to also
 include entries from the future.
 
-.. _channel-entries-show-pages:
+.. _channel_entries_show_pages:
 
 show\_pages=
 ------------
@@ -941,8 +942,8 @@ it to "only" and *only* show those entries that have had Pages assigned
 to them. The default is "yes" and it will treat entries with assigned
 Pages no different from any other entries.
 
-.. tip:: ``show_pages="only"`` acts in the same manner as ``dynamic="no"``. 
-   ``show_pages="only"`` aids in building persistent menus based off existing 
+.. tip:: ``show_pages="only"`` acts in the same manner as ``dynamic="no"``.
+   ``show_pages="only"`` aids in building persistent menus based off existing
    Pages.
 
 sort=
@@ -1013,14 +1014,14 @@ You may optionally use a 12 hour time format by including am/pm notation
 08:00 pm; 2004-06-05 08:00 is equivalent to: 2004-06-05 08:00 AM and
 2004-06-05 08:00 am).
 
-**Note:** If you are using a non-English language pack, it's necessary
-to use a 24 hour format only, as the AM/PM indicators may have been
-changed.
+.. note:: If you are using a non-English language pack, it's necessary
+	to use a 24 hour format only, as the AM/PM indicators may have been
+	changed.
 
 Common Uses
 ~~~~~~~~~~~
 
-This parameter can be used in conjunction with :ref:`global-current_time`::
+This parameter can be used in conjunction with :ref:`global_current_time`::
 
 	{exp:channel:entries channel="{my_weblog}" sort="desc" start_on="{current_time format='%Y-%m-%d %H:%i'}" show_future_entries="yes"}
 
@@ -1031,9 +1032,9 @@ If the date needs to be set dynamically, then PHP must often be used.
 it to be parsed on "input". One example usage is::
 
 	<?php
-		$start_time = $this->EE->localize->decode_date('%Y-%m-%d %H:%i', $this->EE->localize->now - 86400);
+		$start_time = ee()->localize->format_date('%Y-%m-%d %H:%i', ee()->localize->now - 86400);
 	?>
-	
+
 	{exp:channel:entries channel="{my_weblog}" limit="5" sort="desc" start_on="<?php echo $start_time; ?>"}
 
 The above would display up to 5 entries with entry dates that fall
@@ -1047,11 +1048,10 @@ status=
 
 	status="open"
 
-You may restrict to entries with a particular
-`status <../../cp/admin/channels/statuses.html>`_ . The two
-statuses "open" and "closed" are default statuses that are always
-available, so you can always specify those if needed. You can choose
-multiple statuses using a pipe::
+You may restrict to entries with a particular :doc:`status
+</cp/admin/channels/statuses>`. The two statuses "open" and "closed" are
+default statuses that are always available, so you can always specify
+those if needed. You can choose multiple statuses using a pipe::
 
 	status="draft|reviewed|published"
 
@@ -1060,8 +1060,8 @@ Or exclude statuses using "not"
 ::
 
 	status="not submitted|processing|closed"
-	
-If no status parameter is specified, only open status entries will be returned.	
+
+If no status parameter is specified, only open status entries will be returned.
 
 stop\_before=
 -------------
@@ -1081,9 +1081,9 @@ If the date needs to be set dynamically, then PHP must often be used.
 it to be parsed on "input" and then use something like this::
 
 	<?php
-		$current_time = $this->EE->localize->decode_date('%Y-%m-%d %H:%i', $this->EE->localize->now - 518400);
+		$current_time = ee()->localize->format_date('%Y-%m-%d %H:%i', ee()->localize->now - 518400);
 	?>
-	
+
 	{exp:channel:entries channel="{my_weblog}" orderby="date" sort="desc" stop_before="<?php echo $current_time; ?>"}
 
 The above would display entries in descending date from six days in the
@@ -1100,7 +1100,7 @@ sticky=
 By default, sticky topics always remain at the top of the page. You can
 manually turn off stickies by using the above parameter.
 
-.. _channel-entries-track-views:
+.. _channel_entries_track_views:
 
 track\_views=
 -------------
@@ -1123,7 +1123,7 @@ can be shown within any tag::
 
 	{view_count_one}{view_count_two}{view_count_three}{view_count_four}
 
-.. _channel-entries-uncategorized-entries:
+.. _channel_entries_uncategorized_entries:
 
 uncategorized\_entries=
 -----------------------
@@ -1175,7 +1175,7 @@ Or you can add "not" to exclude usernames
 ::
 
 	username="not tom|dick|harry|fred"
-	
+
 You can also use the constant ``"CURRENT_USER"`` to show entries from only the currently logged in user.
 
 ::
@@ -1208,13 +1208,13 @@ year=, month=, day=
 ::
 
 	year="2003"
-	
+
 ::
 
 	month="12"
 
 ::
-	
+
 	day="23"
 
 You can limit queries by year, month, or day. For example, to show all
@@ -1229,16 +1229,16 @@ To show only the month of December in 2003 you'll do this
 	year="2003"
 
 ::
-	
+
 	month="12"
 
-.. note:: Don't combine these parameters with the ``display_by`` parameter 
-   discussed previously, as these take precedence over that parameter. In 
-   addition, the three parameters must be applied "in order", meaning that you 
-   must specify the year if you specify the month and you must specify both 
+.. note:: Don't combine these parameters with the ``display_by`` parameter
+   discussed previously, as these take precedence over that parameter. In
+   addition, the three parameters must be applied "in order", meaning that you
+   must specify the year if you specify the month and you must specify both
    month and year to use day.
 
-.. _channel-entries-single-variables:
+.. _channel_entries_single_variables:
 
 ****************
 Single Variables
@@ -1419,6 +1419,15 @@ Would be rendered like this::
 
 	<a href="http://example.com/index.php/channel/comments/234">my entry</a>
 
+comment\_subscriber\_total
+--------------------------
+
+::
+
+	{comment_subscriber_total}
+
+Total number of subscribers to comments for a particular entry.
+
 comment\_total
 --------------
 
@@ -1463,9 +1472,8 @@ edit\_date
 
 	{edit_date format="%Y %m %d"}
 
-The date on which the entry was last edited. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+The date on which the entry was last edited. See :doc:`Date Variable
+Formatting </templates/date_variable_formatting>` for more information.
 
 email
 -----
@@ -1483,9 +1491,8 @@ entry\_date
 
 	{entry_date format="%Y %m %d"}
 
-The date the entry was submitted. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+The date the entry was submitted. See :doc:`Date Variable Formatting
+</templates/date_variable_formatting>` for more information.
 
 entry\_id
 ---------
@@ -1496,7 +1503,7 @@ entry\_id
 
 The ID number of the channel entry.
 
-.. _channel-entries-entry_id_path:
+.. _channel_entries_entry_id_path:
 
 entry\_id\_path
 ---------------
@@ -1530,11 +1537,10 @@ expiration\_date
 
 	{expiration_date format="%Y %m %d"}
 
-The expiration date of the entry. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+The expiration date of the entry. See :doc:`Date Variable Formatting
+</templates/date_variable_formatting>` for more information.
 
-.. _channel-entries-forum_topic_id:
+.. _channel_entries_forum_topic_id:
 
 forum\_topic\_id
 ----------------
@@ -1552,7 +1558,7 @@ typically be used like so::
 		<a href="{path='forums/viewthread'}{forum_topic_id}">Discuss this in our forums</a>
 	{/if}
 
-.. _channel-entries-gmt_entry_date:
+.. _channel_entries_gmt_entry_date:
 
 gmt\_entry\_date
 ----------------
@@ -1562,9 +1568,8 @@ gmt\_entry\_date
 	{gmt_entry_date format="%Y %m %d"}
 
 The date the entry was submitted in GMT. This variable is **not**
-localized for each user's date settings. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+localized for each user's date settings. See :doc:`Date Variable
+Formatting </templates/date_variable_formatting>` for more information.
 
 gmt\_edit\_date
 ---------------
@@ -1574,9 +1579,8 @@ gmt\_edit\_date
 	{gmt_edit_date format="%Y %m %d"}
 
 The date on which the entry was last edited in GMT. This variable is
-**not** localized for each user's date settings. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+**not** localized for each user's date settings. See :doc:`Date Variable
+Formatting </templates/date_variable_formatting>` for more information.
 
 icq
 ---
@@ -1647,7 +1651,7 @@ occupation
 
 The author's occupation as entered in their profile.
 
-.. _channel-entries-page-uri:
+.. _channel_entries_page_uri:
 
 page\_uri
 ---------
@@ -1663,7 +1667,7 @@ so::
 
 	{if page_uri != ''} <a href="{page_uri}">View this page</a> {/if}
 
-.. _channel-entries-page-url:
+.. _channel_entries_page_url:
 
 page\_url
 ---------
@@ -1749,9 +1753,9 @@ recent\_comment\_date
 
 	{recent_comment_date format="%Y %m %d"}
 
-The date of the most recent comment associated with the entry. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+The date of the most recent comment associated with the entry. See
+:doc:`Date Variable Formatting </templates/date_variable_formatting>`
+for more information.
 
 relative\_url
 -------------
@@ -1908,10 +1912,10 @@ Will render as::
 
 	http://example.com/index.php/channel/archives/my_ugly_boyfriend/
 
-**Note:** When creating a new entry, if you don't supply the "url title"
-then it will be automatically created from the actual entry title.
-Spaces are turned into underscores and quotes are removed. For example,
-"Joe's night out" becomes "joes\_night\_out".
+.. note:: When creating a new entry, if you don't supply the "url title"
+	then it will be automatically created from the actual entry title.
+	Spaces are turned into underscores and quotes are removed. For
+	example, "Joe's night out" becomes "joes\_night\_out".
 
 total\_results
 --------------
@@ -1981,7 +1985,7 @@ url\_title
 
 The human readable title used in the URL as a permalink.
 
-.. _channel-entries-url_title_path:
+.. _channel_entries_url_title_path:
 
 url\_title\_path
 ----------------
@@ -2016,15 +2020,16 @@ week\_date
 	{week_date format="%Y %m %d"}
 
 The date that the week of the currently displayed entry started on, most
-commonly used in "weekly" scenarios with the `date_heading`_ variable pair.
+commonly used in "weekly" scenarios with the `date_heading`_ variable
+pair.
 
-This variable is affected by the `start_day=`_ parameter. By default, the week date
-will fall on Sunday for the week of the entry. When ``start_day="Monday"``
-is used, the week date will fall on Monday for the week of the entry.
-See `Date Variable Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+This variable is affected by the `start_day=`_ parameter. By default,
+the week date will fall on Sunday for the week of the entry. When
+``start_day="Monday"`` is used, the week date will fall on Monday for
+the week of the entry. See :doc:`Date Variable Formatting
+</templates/date_variable_formatting>` for more information.
 
-.. _channel-entries-conditional-variables:
+.. _channel_entries_conditional_variables:
 
 *********************
 Conditional Variables
@@ -2033,8 +2038,8 @@ Conditional Variables
 Conditionals allow you to more precisely control your content.
 
 .. note:: A more complete explanation of conditional control structures
-   and operators can be found on the `Global
-   Conditionals <../../templates/globals/conditionals.html>`_ page.
+   and operators can be found on the :doc:`Global Conditionals
+   </templates/globals/conditionals>` page.
 
 Here is an example that tests for the "summary" field being not empty
 
@@ -2135,7 +2140,7 @@ like so::
 		<a href="{path='forums/viewthread'}/{forum_topic_id}">Discuss this in our forums</a>
 	{/if}
 
-.. _channel-entries-if-no_results:
+.. _channel_entries_if_no_results:
 
 if no\_results
 --------------
@@ -2146,7 +2151,7 @@ if no\_results
 
 You may use this conditional for displaying a message in the case when
 no entries are returned. The contents inside of the conditional will be
-displayed in cases where there are no results returned for the tag. 
+displayed in cases where there are no results returned for the tag.
 
 ::
 
@@ -2161,7 +2166,7 @@ variable
 	{if no_results} {redirect="channel/noresult"} {/if}
 
 Lastly, if you want to simply display your 404 page (with 404 headers)
-when no entries are returned, simply use "404" as the template name. 
+when no entries are returned, simply use "404" as the template name.
 
 ::
 
@@ -2314,7 +2319,7 @@ If no parameter is specified it will default to "daily".
    There is a bit of a performance hit, however, since date parsing is the
    most processor intensive. Read the caching section for information on
    improving performance.
-   
+
 categories
 ----------
 

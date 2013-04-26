@@ -5,9 +5,10 @@ Import from XML
 
 **Control Panel Location:** :menuselection:`Tools --> Utilities --> Import Utilities --> Member Import Utility`
 
-**Note:** There is no undo for importing members. If you make a mistake
-or there is an error in your data, there is not a simple method to
-correct it. **Always backup your database before using this utility!**
+.. note:: There is no undo for importing members. If you make a mistake
+	or there is an error in your data, there is not a simple method to
+	correct it. **Always backup your database before using this 
+	utility!**
 
 **WARNING:** The <member\_id> tag will cause the import utility to
 overwrite any existing members with the same ID. It is generally
@@ -34,5 +35,5 @@ Passwords will be randomly created for members who do not have a
 <password> element, and those members will need to use the "Forgot
 Password" link in order to log in. Passwords of the "text" type will be
 encrypted for you. Pre-encrypted passwords will be inserted into the
-database as-is. Please see the notes on the `password
-tag <./member_xml_format.html#password_tag>`_ for more details.
+database as-is. Please see the notes on the :doc:`password tag
+</cp/tools/utilities/member_import/member_xml_format>` for more details.

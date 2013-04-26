@@ -10,7 +10,7 @@ Calling the Table Class
 
 ::
 
-	$this->EE->load->library('table');
+	ee()->load->library('table');
 
 
 Usage of Table Class
@@ -19,9 +19,9 @@ Usage of Table Class
 The Table class provides a simplified means to quickly build html tables
 that usually require a large amount of boilerplate code. The base
 functionality for the Table class is inherited from the corresponding
-CodeIgniter library. Refer to the `HTML Table
-<http://codeigniter.com/user_guide/libraries/table.html>`_ documentation
-in the CodeIgniter user guide for details on basic table creation.
+CodeIgniter library. Refer to the :ellislab:`HTML Table
+</codeigniter/user-guide/libraries/table.html>` documentation in the
+CodeIgniter user guide for details on basic table creation.
 
 
 Example: Improving Usability for Large Amounts of Data
@@ -43,13 +43,13 @@ For the sake of example, we assume that we have a very bland existing table.
 In your add-on this will probably be more complex, with potentially
 thousands of rows coming from the database. ::
 
-	$this->EE->table->set_heading('Name', 'Color', 'Size');
+	ee()->table->set_heading('Name', 'Color', 'Size');
 
-	$this->EE->table->add_row('Fred', 'Blue', 'Small');
-	$this->EE->table->add_row('Mary', 'Red', 'Large');
-	$this->EE->table->add_row('John', 'Green', 'Medium');
+	ee()->table->add_row('Fred', 'Blue', 'Small');
+	ee()->table->add_row('Mary', 'Red', 'Large');
+	ee()->table->add_row('John', 'Green', 'Medium');
 
-	echo $this->EE->table->generate();
+	echo ee()->table->generate();
 
 
 To start out we need to add some structure to our row and column setup.
@@ -59,16 +59,16 @@ data points in a row through an identifying key. To achieve this goal, we
 want to name our columns, instead of just specifying headings. Change the
 first line to use `set_columns()` instead of `set_heading()`. ::
 
-	$this->EE->table->set_columns(array(
+	ee()->table->set_columns(array(
 	    'name'  => array('header' => 'Name'),
 	    'color' => array('header' => 'Color'),
 	    'size'  => array('header' => 'Size')
 	));
-	
+
 Let's add this same structure to our data and pass it to `set_data()` instead
 of `set_columns()`. ::
 
-	$this->EE->table->set_data(array(
+	ee()->table->set_data(array(
 	    array('name' => 'Fred', 'color' => 'Blue',  'size' => 'Small'),
 	    array('name' => 'Mary', 'color' => 'Red',   'size' => 'Large'),
 	    array('name' => 'John', 'color' => 'Green', 'size' => 'Medium'),
@@ -105,7 +105,7 @@ argument, but for now we will just return the required `rows`. ::
 	        array('name' => 'Mary', 'color' => 'Red',   'size' => 'Large'),
 	        array('name' => 'John', 'color' => 'Green', 'size' => 'Medium'),
 	    );
-	    
+
 	    return array(
 	        'rows' => $rows
 	    );
@@ -116,7 +116,7 @@ Of course, we need to tell the Table class where to look for the data. So
 our old `set_data()` and `generate()` calls change into a single pointer
 to the datasource. ::
 
-	$data = $this->EE->table->datasource('_datasource');
+	$data = ee()->table->datasource('_datasource');
 	echo $data['table_html'];
 
 Remember that our asynchronous calls will stop here, so the Table class has
@@ -136,7 +136,7 @@ this contains is the current page offset. ::
 	function _datasource($state)
 	{
 	    $offset = $state['offset'];
-	
+
 Let's use that information to cut down our data to just the expected row. We
 will also return the total rows and some basic configuration that is required
 by the pagination class. ::
@@ -152,10 +152,10 @@ by the pagination class. ::
 Lastly, our pagination html will be added in the same way that we received
 our table html, so let's output that. ::
 
-	$data = $this->EE->table->datasource('_datasource');
+	$data = ee()->table->datasource('_datasource');
 	echo $data['table_html'];
 	echo $data['pagination_html'];
-	
+
 
 If everything went as planned we should now have a table that spans three
 pages and paginates without refreshing.
@@ -190,7 +190,7 @@ return value. ::
 
 	$this->sort = $state['sort'];
 	usort($rows, array($this, '_sort_rows'));
-	
+
 Of course we need an implementation for our `_sort_rows()` method that
 supports sorting on multiple keys. If this method seems complex, don't
 worry, most of your applications will make use of Active Record. ::
@@ -202,16 +202,16 @@ worry, most of your applications will make use of Active Record. ::
 	        if ($a[$key] !== $b[$key])
 	        {
 	            $ret = +1;
-                
+
 	            if ($a[$key] < $b[$key] OR $dir == 'desc')
 	            {
 	                $ret = -1;
 	            }
-                
+
 	            return $ret;
 	        }
 	    }
-        
+
 	    return 0;
 	}
 
@@ -226,8 +226,8 @@ So adding a default sort is as simple as passing a sort order. ::
 	$defaults = array(
 	    'sort' => array('name' => 'asc')
 	);
-	
-	$data = $this->EE->table->datasource('_datasource', $defaults);
+
+	$data = ee()->table->datasource('_datasource', $defaults);
 
 Do some experimenting with the `$defaults` array. Try including a secondary
 sort on the size column. Also try adding a default offset, like the one we
@@ -237,10 +237,10 @@ retrieved from `$state` in our pagination code.
 Filtering
 ~~~~~~~~~
 
-As a last step you can add dynamic filtering to our table. To make this work
-you will need to write some javascript. The `table plugin
-<../cp_javascript/table.html>`_ will provide simple access to everything you
-need to do.
+As a last step you can add dynamic filtering to our table. To make this
+work you will need to write some javascript. The :doc:`table plugin
+</development/cp_javascript/table>` will provide simple access to
+everything you need to do.
 
 At this point it becomes easier to work with a database. The filtering
 information will be added to your `$state` array. Doing a like query will
@@ -250,9 +250,9 @@ Function Reference
 ------------------
 
 This documents the ExpressionEngine additions to the table class. Refer
-to the `HTML Table <http://codeigniter.com/user_guide/libraries/table.html>`_
-documentation in the CodeIgniter user guide for the base table class
-reference.
+to the :ellislab:`HTML Table
+</codeigniter/user-guide/libraries/table.html>` documentation in the
+CodeIgniter user guide for the base table class reference.
 
 datasource($function, [$default_state, [$additional_parameters]])
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -265,13 +265,13 @@ Example Usage::
 
 	$custom_params = array('my_key' => $my_value);
 	$default_state = array('sort' => array('name' => 'asc'));
-	
+
 	$this->table->datasource('_source', $default_state, $custom_params);
-	
+
 	function _source($state, $params)
 	{
 		// do work
-		
+
 		return array(
 			'rows' => $rows,
 			'pagination' => array(
@@ -297,18 +297,18 @@ Define the callback url. Usually this can be auto discovered, but
 sometimes providing it manually is more robust.
 
 Example Usage::
-	
+
 	$this->table->set_base_url('C=addons_modules&M=show_module_cp&module=example');
 
 
 set_columns($array)
 ~~~~~~~~~~~~~~~~~~~
-	
+
 Define the table columns and their behavior.
 
 Example Usage::
-	
-	$this->EE->table->set_columns(array(
+
+	ee()->table->set_columns(array(
 	    'name'  => array('header' => 'Name'),
 	    'color' => array('header' => 'Color'),
 	    'size'  => array('header' => 'Size')
@@ -326,7 +326,7 @@ set_data($rows)
 If you only need single page sorting, this function lets you set the
 named column data directly ::
 
-	$this->EE->table->set_data(array(
+	ee()->table->set_data(array(
 	    array('name' => 'Fred', 'color' => 'Blue',  'size' => 'Small'),
 	    array('name' => 'Mary', 'color' => 'Red',   'size' => 'Large'),
 	    array('name' => 'John', 'color' => 'Green', 'size' => 'Medium'),

@@ -22,17 +22,15 @@ Can View Site When it is Online
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determines whether a member of this group can view your site when it is
-"online" in your `General
-Configuration <../admin/general_configuration.html>`_ page.
-It is highly unlikely that you'll ever set this preference to "no"
-unless the Member Groups is used with banned users.
+"online" in your :doc:`/cp/admin/general_configuration` page. It is
+highly unlikely that you'll ever set this preference to "no" unless the
+Member Groups is used with banned users.
 
 Can View Site When it is Offline
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determines whether a member of this group can view your site when it has
-been taken offline in your `General
-Configuration <../admin/general_configuration.html>`_ page.
+been taken offline in your :doc:`/cp/admin/general_configuration` page.
 
 Member Account Privileges
 -------------------------
@@ -61,10 +59,10 @@ Include Members in PUBLISH page multi-author list?
 Determines whether members of this group will appear in the Publish page
 "Multi-Author list".
 
-**Note:** This setting overrides any individual users's setting in the
-My Account area. If set here to "Yes", then **all** members of the
-member group will be displayed in the Multi-Author list drop-down in the
-Publish page.
+.. note:: This setting overrides any individual users's setting in the
+	My Account area. If set here to "Yes", then **all** members of the
+	member group will be displayed in the Multi-Author list drop-down in
+	the Publish page.
 
 Include Members in Site's Member List?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -81,9 +79,9 @@ Determines whether a member of the group can delete their own account.
 If enabled, members of this group will be able to delete their own
 account through their front-end member control panel.
 
-**Note:** When a user deletes their own account, it also removes *all
-content* created by them from your site: comments, channel entries,
-forum topics, and forum posts.
+.. note:: When a user deletes their own account, it also removes *all
+	content* created by them from your site: comments, channel entries,
+	forum topics, and forum posts.
 
 Email Address of Delete Notification Recipient(s)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -245,8 +243,9 @@ Can change the group that a member is assigned to
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determines whether a member of the group is allowed to change the Member
-Groups assignment for any given member (except Super Admins). Note: Only
-Groups that are unlocked apply to this preference.
+Groups assignment for any given member (except Super Admins). 
+
+.. note:: Only Groups that are unlocked apply to this preference.
 
 Can administrate member profile templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -321,15 +320,19 @@ Can view channel entries authored by others
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determines whether a member of the group is allowed to **view** channel
-entries that have been authored by someone else. Note: One entries
-within channels assigned to the user (see below) apply.
+entries that have been authored by someone else. 
+
+.. note:: One entries within channels assigned to the user (see below)
+	apply.
 
 Can delete their own channel entries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determines whether a member of the group is allowed to **delete** their
-own channel entries. Note: One entries within channels assigned to the
-user (see below) apply.
+own channel entries. 
+
+.. note:: One entries within channels assigned to the user (see below)
+	apply.
 
 Can edit entries authored by others
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -337,22 +340,28 @@ Can edit entries authored by others
 Determines whether a member of the group is allowed to **edit** channel
 entries that have been authored by someone else. If this is set to yes
 then members of this group will also be able to *view channel entries
-authored by others* regardless of that permission's setting. Note: One
-entries within channels assigned to the user (see below) apply.
+authored by others* regardless of that permission's setting. 
+
+.. note:: One entries within channels assigned to the user (see below)
+	apply.
 
 Can delete channel entries authored by others
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determines whether a member of the group is allowed to **delete**
-channel entries that have been authored by someone else. Note: One
-entries within channels assigned to the user (see below) apply.
+channel entries that have been authored by someone else. 
+
+.. note:: One entries within channels assigned to the user (see below)
+	apply.
 
 Can change the author name when posting channel entries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determines whether a member of the group is allowed to change the author
-name when posting or editing entries. Note: One entries within channels
-assigned to the user (see below) apply.
+name when posting or editing entries. 
+
+.. note:: One entries within channels assigned to the user (see below)
+	apply.
 
 Can edit and add new categories
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -374,7 +383,7 @@ assign a channel or combinations of channels to the group. Only
 channel(s) that are assigned to the group are included in the Channel
 Posting and Editing Privileges above.
 
-.. _comment-admin-privs:
+.. _comment_admin_privs:
 
 Comment Administration Privileges
 ---------------------------------
