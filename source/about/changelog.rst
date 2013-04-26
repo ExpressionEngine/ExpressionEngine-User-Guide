@@ -8,7 +8,7 @@ ExpressionEngine 2.x Change Log
 Version 2.6.0
 -------------
 
-Release Date: ?
+Release Date: April 23, 2013
 
 - General Changes:
 
@@ -184,6 +184,10 @@ Release Date: ?
     adding or updating an entry if the entry date is not explicitly set.
   - Channel Entries API will use current time as the default edit date when
     adding or updating an entry if the edit date is not explicitly set.
+  - Added SmartForge library, making the Update Wizard's database changes far
+    more fault-tolerant.
+  - Added an update log to record notices, exceptions, and failures from the
+    Updater.
   - ``Functions::convert_curlies()`` now also encodes EE conditionals
   - **Reactor:** Added ability to have multiple fieldtypes in one add-on package.
   - **Reactor:** Added ``relationships_display_field`` hook to alter
@@ -247,6 +251,28 @@ Release Date: ?
       ``Channel::related_category_entries()`` instead
     - ``Safecracker_lib::decrypt_input``
     - ``Safecracker_lib::encrypt_input``
+
+  - Removed Methods:
+
+    - ``Channel_model::get_channel_categories()``
+    - ``Cp::add_layout_fields()``
+    - ``Cp::add_layout_tabs()``
+    - ``EE_Typography::xhtml_typography()``
+    - ``EE_XMLParser::data2xml()``
+    - ``File_upload_preferences_model::get_upload_preferences()``
+    - ``Functions::clone_object()``
+    - ``Functions::create_directory_map()``
+    - ``Functions::encoding_menu()``
+    - ``Functions::hash()``
+    - ``Localize::offset_entry_dst()``
+    - ``Localize::set_gmt()``
+    - ``Login::login_form()``
+    - ``Member_model::get_authors_simple()``
+    - ``Template::template_authentication_basic()``
+    - ``Template::template_authentication_check_basic()``
+    - ``Tools_model::delete_upload_preferences()``
+    - ``Tools_model::get_files()``
+    - ``Tools_model::get_upload_preferences()``
 
 
 Version 2.5.5
