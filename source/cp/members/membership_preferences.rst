@@ -211,10 +211,14 @@ If this is set to "No" but avatars are enabled, then members will only
 be able to choose from among the default avatars. Note: You can add your
 own Avatars, located in the avatars folder within the images folder.
 
+.. _avatar-url-label:
+
 URL to Avatar Folder
 ~~~~~~~~~~~~~~~~~~~~
 
 The URL to the folder on your site that contains the avatars.
+
+.. _avatar-path-label:
 
 Server Path to Avatar Folder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -227,15 +231,21 @@ The full server path might look something like
 /home/example.com/public\_html/images/avatars/. If you do not know what
 to use for your full server path, contact your Host or server admin.
 
+.. _avatar-max-width-label:
+
 Avatar Maximum Width
 ~~~~~~~~~~~~~~~~~~~~
 
 The maximum width (in pixels) allowed for user-uploaded avatars.
 
+.. _avatar-max-height-label:
+
 Avatar Maximum Height
 ~~~~~~~~~~~~~~~~~~~~~
 
 The maximum height (in pixels) allowed for user-uploaded avatars.
+
+.. _avatar-max-kb-label:
 
 Avatar Maximum Size (in Kilobytes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

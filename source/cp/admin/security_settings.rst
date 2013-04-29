@@ -92,6 +92,8 @@ feature will not work. The system can only track multiple people using
 the same account if a session is generated, which does not happen when
 only cookies are used.
 
+.. _require-ip-logins-label:
+
 Require IP Address and User Agent for Login
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

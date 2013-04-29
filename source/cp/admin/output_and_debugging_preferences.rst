@@ -19,6 +19,8 @@ preference to "Yes" causes headers to be explicitly sent by the server.
 Sending explicit headers is generally considered to be a good practice,
 although in some cases it can cause some problems.
 
+.. _output-enable-gzip-label:
+
 Enable GZIP Output?
 ~~~~~~~~~~~~~~~~~~~
 

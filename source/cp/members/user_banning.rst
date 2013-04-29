@@ -8,6 +8,8 @@ User Banning
 The User Banning section of the Control Panel allows you to ban users by
 IP address, email, or name.
 
+.. _member-banned-ip-label:
+
 Banned IP Addresses
 -------------------
 
@@ -25,6 +27,8 @@ access the site:
 -  Show the user a specific message.
 -  Redirect the user to another specified site.
 
+.. _member-banned-email-label:
+
 Banned Email Addresses
 ----------------------
 
@@ -33,11 +37,15 @@ specify full email addresses or use wildcards to specify partial email
 addresses. For example, \*@baddomain.com. Each address should be placed
 on a separate line.
 
+.. _member-banned-username-label:
+
 Restricted Usernames
 --------------------
 
 You can list usernames, preventing their use. This can be handy if you
 would like to reserve certain usernames for your own use.
+
+.. _member-banned-screename-label:
 
 Restricted Screen Names
 -----------------------

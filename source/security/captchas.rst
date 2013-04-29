@@ -79,6 +79,7 @@ only the omission of the {captcha_word} variable::
         <input type="text" name="captcha" value="" size="20" maxlength="20" style="width:140px;" /></p>  
     {/if}
 
+.. _captcha-notes-label:
 
 Notes
 -----

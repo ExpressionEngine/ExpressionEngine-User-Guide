@@ -46,6 +46,8 @@ This is the filename of your site's "index" page. By default, this will
 be index.php, which is located in the base folder. You will only need to
 alter this setting if you have changed the filename.
 
+.. _general-config-url-root-label:
+
 URL to the root directory of your site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

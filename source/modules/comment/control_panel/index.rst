@@ -72,6 +72,8 @@ behavior of the Comment Module is determined on a per Channel basis, and
 thus found in the Comment Posting Preferences section of the `Channel
 Preferences <../../../cp/admin/channels/channel_edit_preferences.html>`_.
 
+.. _comment-force-censoring-label:
+
 Force word censoring for comments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -83,6 +85,8 @@ replacements are still determined by the Administration preferences, and
 if site-wide word censoring is enabled, comments will still be censored
 regardless of this setting.
 
+.. _comment-expired-comments-label:
+
 Moderate expired comments
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -90,6 +94,8 @@ Forces moderation of comments once the Comment Expiration date for an
 entry is passed, rather than closing comments entirely. The existing
 moderation rules regarding whether members are exempt from moderation
 will be followed.
+
+.. _comment-editing-time-label:
 
 Comment Editing Time Limit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
