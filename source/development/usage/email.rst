@@ -5,6 +5,8 @@ Email Class
 .. contents::
   :local:
 
+.. highlight:: php
+
 ***********************
 Calling the Email Class
 ***********************
@@ -41,9 +43,6 @@ example piece of code used for sending a single email.
     $this->EE->email->message(entities_to_ascii($email_msg));
     $this->EE->email->Send();
 
-First, load the email library and the text helper. Second, there are a
-few variables that you may wish to set.
-
 Properties
 ==========
 
@@ -76,139 +75,164 @@ Properties
   this is ``FALSE``, and it must be set to TRUE to perform the
   validation.
 
-wordwrap
-~~~~~~~~
+.. attr:: wordwrap
 
-Specifies whether the words in the email should be wrapped after a
-certain number of characters. By default, this is set to false, so you
-only need to set its value if you want to use wordwrap.
+  Specifies whether the words in the email should be wrapped after a
+  certain number of characters. By default, this is set to ``FALSE``, so
+  you only need to set its value if you want to use wordwrap.
 
-wrapchars
-~~~~~~~~~
+.. attr:: wrapchars
 
-Specifies the number of characters to wrap at, if **wordwrap** is set to
-true.
+  Specifies the number of characters to wrap at, if
+  :attr:`Email::$wordwrap` is set to true.
 
-Third, after setting any class variables, you can proceed to send the
-class the sender, recipient(s), subject, and message for the email. The
-values for the various recipient functions can be either sent as an
-array with each member of the array being an email address *or* a string
-with multiple email addresses separated by commas. The to, subject,
-message functions must be sent as strings through.
+Methods
+=======
 
-$this->EE->email->from('you@example.com', 'Your Name');
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. method:: from($from[, $name = ''[, $return_path = NULL]])
 
-The function for specifying the sender of the email. The first variable
-is the email address of the sender, and the optional second parameter is
-the name/title of the sender. If you send the first variable in the form
-of 'webmaster@example.com <Site Webmaster>, then the function will parse
-the email address and name for you.
+  The function for specifying the sender of the email::
 
-You can also set a Return-Path, to help redirect undelivered mail:
+    $this->EE->email->from('you@example.com', 'Your Name');
 
-$this->EE->email->from('you@example.com', 'Your Name', 'returned@example.com');
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  :param string $from: The email address of the sender
+  :param string $name: The name of the sender
+  :param string $return_path: Email address to redirect undelivered mail
+  :returns: Email class object
+  :rtype: Object
 
-Return-Path can't be used if you've configured 'smtp' as your protocol.
+.. method:: reply_to($replyto[, $name = ''])
 
-$this->EE->email->reply\_to('you@example.com', 'Your Name');
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  The function for specifying the Reply-To header of the email::
 
-The function for specifying the Reply-To header of the email. The
-variable is the email address(es) that when a person replies to this
-email, it will be in the To box automatically.
+    $this->EE->email->reply\_to('you@example.com', 'Your Name');
 
-$this->EE->email->to('someone@example.com');
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  :param string $replyto: The email address for the reply-to
+  :param string $name: The name of the sender
+  :returns: Email class object
+  :rtype: Object
 
-$this->EE->email->to('one@example.com, two@example.com, three@example.com');
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. method:: to($to)
 
-The function for specifying the general recipient(s) of the email. The
-variable is the email address(es) that are to receive the email, either
-in an array or a comma separated list.
+  The function for specifying the general recipient(s) of the email::
 
-$this->EE->email->cc('someone@example.com');
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    $this->EE->email->to('someone@example.com');
+    $this->EE->email->to('one@example.com, two@example.com, three@example.com');
 
-The function for specifying the recipient(s) receiving a carbon copy of
-the email. The variable should be set as an array or a comma separated
-list.
+  :param mixed $to: Array or comma separated string of email addresses
+  :returns: Email class object
+  :rtype: Object
 
-$this->EE->email->bcc('someone@example.com', 200);
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. method:: cc($cc)
 
-The function for specifying the recipient(s) receiving a blind carbon
-copy of the email. The first variable should be set as an array or a
-comma separated list. The second, optional variable will allow you to
-determine a batch side for any BCC emails. Use it if you are sending a
-large amount of emails via BCC to ease the load on your server.
+  The function for specifying the recipient(s) receiving a carbon copy
+  of the email::
 
-Next, at a minimum you will use the **$this->EE->email->subject()** and
-**$this->EE->email->message()** functions to set the subject and message
-of the email.
+    $this->EE->email->cc('someone@example.com');
 
-$this->EE->email->subject('This is my subject');
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  :param mixed $cc: Array or comma separated string of email addresses
+  :returns: Email class object
+  :rtype: Object
 
-Sets the email subject.
+.. method:: bcc($bcc[, $limit = ''])
 
-$this->EE->email->message('This is my message');
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  The function for specifying the recipient(s) receiving a blind carbon
+  copy of the email::
 
-Sets the email message body.
+    $this->EE->email->bcc('someone@example.com', 200);
 
-You may also choose to manually specify an alternative message if sending HTML
-email.
+  :param mixed $bcc: Array or comma separated string of email addresses
+  :param integer $limit: Number of emails to send at a time, will batch
+    if necessary
+  :returns: Email class object
+  :rtype: Object
 
-$this->EE->email->set_alt_message('This is the alternative message');
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. method:: subject($subject)
 
-This is an optional message string which can be used if you send HTML
-formatted email. It lets you specify an alternative message with no HTML
-formatting which is added to the header string for people who do not accept
-HTML email. If you do not set your own message CodeIgniter will extract the
-message from your HTML email and strip the tags.
+  Sets the email subject::
 
-.. note:: If you are using data from a channel entry and not sending an
-    HTML email, then you should use the entities\_to\_ascii() function
+    $this->EE->email->subject('This is my subject');
+
+  :param string $subject: Subject of the email
+  :returns: Email class object
+  :rtype: Object
+
+.. method:: message($body)
+
+  Sets the email message body::
+
+    $this->EE->email->message('This is my message');
+
+  :param string $body: The message body
+  :returns: Email class object
+  :rtype: Object
+
+.. method:: send_alt_message($str = '')
+
+  This is an optional message string which can be used if you send HTML
+  formatted email. It lets you specify an alternative message with no
+  HTML formatting which is added to the header string for people who do
+  not accept HTML email. If you do not set your own message CodeIgniter
+  will extract the message from your HTML email and strip the tags::
+
+    $this->EE->email->set_alt_message('This is the alternative message');
+
+  .. note:: If you are using data from a channel entry and not sending an
+    HTML email, then you should use the ``entities_to_ascii()`` function
     (text helper) to convert any HTML entities back into ASCII
     characters before sending the message to the class.
 
-Finally, to send the message, call the $this->EE->email->Send()
-function, and the class will process and send the email.
+  :param string $str: Alternative message with no HTML formatting sent
+    to people who do not accept HTML email
+  :returns: Email class object
+  :rtype: Object
 
-$this->EE->email->send();
-~~~~~~~~~~~~~~~~~~~~~~~~~
+.. method:: send($auto_clear = TRUE)
 
-The Email sending method. Returns boolean TRUE or FALSE based on
-success or failure, enabling it to be used conditionally::
+  The Email sending method::
 
-  if ( ! ee()->email->send())
-  {
-    // Generate error
-  }
+    $this->EE->email->send();
 
-This method will automatically clear all parameters if the request was
-successful. To stop this behavior pass FALSE::
+  :param boolean $auto_clear: When set to ``FALSE`` will prevent
+    parameters from being cleared after sending the email
+  :returns: ``TRUE`` if successful, ``FALSE`` otherwise
+  :rtype: Boolean
 
-  if (ee()->email->send(FALSE))
-  {
-    // Parameters won't be cleared
-  }
+  .. note:: In order to use the ``print_debugger()`` method, you need
+    to avoid clearing the email parameters.
 
-.. note:: In order to use the ``print_debugger()`` method, you need
-  to avoid clearing the email parameters.
+.. method:: print_debugger($include = array('headers', 'subject', 'body'))
 
+  Returns a string containing any server messages, the email headers, and the
+  email message::
+
+    $this->EE->email->print_debugger();
+
+  :param array $include: Optionally specify which parts of the message
+    should be printed. Valid options are: headers, subject, body.
+  :returns: String of data requested
+  :rtype: String
+
+.. method:: clear($clear_attachments = FALSE)
+
+  Clears out all parameters set either by property or method::
+
+    $this->EE->email->clear();
+
+  :param boolean $clear_attachments: If set to ``TRUE`` attachments will
+    be cleared out, otherwise they're left alone.
+  :returns: Email class object
+  :rtype: Object
+
+***********************
 Sending Multiple Emails
------------------------
+***********************
 
 If you are sending multiple emails in a function either for
 notifications or because each message has a separate message, then you
-should use the $this->EE->email->clear() function between each email
-to reset certain variables in the class. If you do not, then it is
-possible that the emails will not be sent or sent incorrectly.
+should use the :meth:`Email::clear` function between each email to reset
+certain variables in the class. If you do not, then it is possible that
+the emails will not be sent or sent incorrectly.
 
 ::
 
@@ -235,27 +259,3 @@ possible that the emails will not be sent or sent incorrectly.
           ee()->email->clear();
         }
     }
-
-
-Displaying Debugging Output
----------------------------
-
-$this->EE->email->print_debugger();
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Returns a string containing any server messages, the email headers, and the
-email message.
-
-You can optionally specify which parts of the message should be printed. Valid
- options are: headers, subject, body.
-
-::
-
-    $this->EE->email->send(FALSE);
-    echo $this->EE->email->print_debugger(array('headers'));
-
-This would print the email headers, excluding the message subject and body.
-
-By default, all of the raw data will be printed.
-
-
