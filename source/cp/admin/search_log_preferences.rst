@@ -8,6 +8,8 @@ Search Log Configuration
 This section of the Control Panel allows you to set the Search Term
 Logging preferences.
 
+.. _enable-search-term-log-label:
+
 Enable Search Term Logging
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 

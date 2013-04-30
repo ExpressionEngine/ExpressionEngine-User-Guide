@@ -80,6 +80,8 @@ has to manually reload the page before they can submit again.
 
 The setting is located at: :menuselection:`Admin --> Security and Privacy --> Security and Sessions`
 
+.. _deny-duplicate-data-label:
+
 Deny Duplicate Data
 -------------------
 

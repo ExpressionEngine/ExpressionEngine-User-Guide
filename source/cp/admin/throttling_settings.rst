@@ -9,6 +9,8 @@ This section of the Control Panel allows you to manage the Throttling
 feature. See :doc:`/optimization/throttling` for more information
 regarding this feature.
 
+.. _enable-throttling-label:
+
 Enable Throttling
 ~~~~~~~~~~~~~~~~~
 
@@ -35,6 +37,8 @@ Time Interval
 
 The number of **seconds** during which the above number of page loads
 are allowed.
+
+.. _throttling-lockout-time-label:
 
 Lockout Time
 ~~~~~~~~~~~~

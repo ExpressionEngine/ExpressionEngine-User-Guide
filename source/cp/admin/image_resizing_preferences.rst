@@ -8,6 +8,8 @@ Image Resizing Preferences
 This section of the Control Panel allows you to define preferences for
 image resizing, such as creating thumbnails or resizing uploaded images.
 
+.. _image-resizing-protocol-label:
+
 Image Resizing Protocol
 ~~~~~~~~~~~~~~~~~~~~~~~
 

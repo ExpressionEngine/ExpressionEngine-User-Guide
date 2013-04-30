@@ -65,6 +65,8 @@ Enable Membership Captcha
 Here you can determine whether :doc:`CAPTCHAs </security/captchas>` are
 required for new members registering.
 
+.. _default-member-group-label:
+
 Default Member Group Assigned to New Members
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -194,6 +196,8 @@ Message attachments will be allowed.
 Avatar Preferences
 ------------------
 
+.. _avatar-enable-label:
+
 Enable Avatars
 ~~~~~~~~~~~~~~
 
@@ -256,6 +260,8 @@ you'll enter 2048.
 
 Member Photo Preferences
 ------------------------
+
+.. _enable-member-photos-label:
 
 Enable Member Photos
 ~~~~~~~~~~~~~~~~~~~~

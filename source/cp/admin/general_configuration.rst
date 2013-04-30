@@ -9,6 +9,8 @@ This section of the Control Panel allows you to define the basic
 settings of your site. If you are using the :doc:`/cp/sites/index`, note that
 these settings are per-site.
 
+.. _general-config-system-on-label:
+
 Is system on?
 ~~~~~~~~~~~~~
 
@@ -17,6 +19,8 @@ public. If you set this preference to "No" only members of the Super
 Admin group will be able to see the site. All other users will be shown
 the System Offline page, which you can edit at :menuselection:`Design
 --> Message Pages --> System Offline Template`.
+
+.. _general-config-license-number-label:
 
 License Number
 ~~~~~~~~~~~~~~
@@ -39,6 +43,8 @@ Global Variable.
 .. note:: If you are using the :doc:`/cp/sites/index` this setting will
    be found in the :doc:`/cp/sites/managesites` section.
 
+.. _general-config-index-name-label:
+
 Name of your site's index page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -59,6 +65,8 @@ http://example.com/index.php
 Then the correct setting would be:
 
 http://example.com/
+
+.. _general-config-url-cp-label:
 
 URL to your Control Panel index page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -86,6 +94,8 @@ similar to::
 
 Server paths will vary from server to server, so you should contact your
 Host or server admin if you are unsure of what your setting should be.
+
+.. _general-config-cp-theme-label:
 
 Default Control Panel Theme
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -121,6 +131,8 @@ New Version Auto Check
 Enabling this feature will cause a message to be displayed in the
 Control Panel when a new version of ExpressionEngine is available. It
 will **not** automatically download and install a new version.
+
+.. _general-config-URL-docs-label:
 
 URL to Documentation Directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

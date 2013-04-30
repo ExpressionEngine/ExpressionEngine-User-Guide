@@ -37,6 +37,8 @@ compatibility you may want to set this to "no". (Also note that while
 Internet Explorer does support this feature, it also contains bugs in
 its implementation which can have adverse consequences.)
 
+.. _output-force-query-strings-label:
+
 Force URL query strings?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -73,6 +75,8 @@ functions. There are two options:
   for windows-based servers due to the poor way they handle PHP's
   "location" functionality. This method is usually slightly slower than
   the other method.
+
+.. _output-debug-pref-label:
 
 Debug Preference
 ~~~~~~~~~~~~~~~~

@@ -8,6 +8,8 @@ Cookie Settings
 This section of the Control Panel allows you to define cookie settings
 for your website.
 
+.. _cookie-domain-label:
+
 Cookie Domain
 ~~~~~~~~~~~~~
 
@@ -27,6 +29,8 @@ set that here as well:
 
 .subdomain.example.com
 
+.. _cookie-path-label:
+
 Cookie Path
 ~~~~~~~~~~~
 
@@ -37,6 +41,8 @@ specify a folder from which to make the cooke available. If you set the
 path to /joe/, the cookie will only be available in the "joe" folder and
 any subdirectories of it. It will not be available in directories above
 /joe/. The vast majrity of people will leave this setting blank.
+
+.. _cookie-prefix-label:
 
 Cookie Prefix
 ~~~~~~~~~~~~~

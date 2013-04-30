@@ -8,6 +8,8 @@ Word Censoring
 This section of the Control Panel allows you to enable word censoring.
 It is also where you define the list of censored words.
 
+.. _censor-words-enable-label:
+
 Enable Word Censoring?
 ~~~~~~~~~~~~~~~~~~~~~~
 
