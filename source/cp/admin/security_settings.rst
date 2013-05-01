@@ -63,6 +63,8 @@ being processed if it is an exact duplicate of data that already exists.
 This setting is designed to deter automated spam attacks as well as
 multiple accidental submissions.
 
+.. _security-apply-rank-denial-label:
+
 Apply Rank Denial to User-submitted Links
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -104,12 +106,16 @@ to "Yes" can help prevent hackers from logging in using direct socket
 connections or from trying to access the system with a masked IP
 address.
 
+.. _require-ip-posting-submit-comments-label:
+
 Require IP Address and User Agent when receiving comments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Similar to the previous setting, when turned on, this setting requires
 IP address and user agent information to be supplied when submitting
 comments.
+
+.. _security-enable-passwd-lockout-label:
 
 Enable Password Lockout
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -121,6 +127,8 @@ deter hackers from using collision attacks to guess poorly chosen
 passwords. The account remains locked for the duration of the time
 period. Once the period expires it becomes unlocked.
 
+.. _security-passwd-lockout-int-label:
+
 Time Interval for Lockout
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -128,6 +136,8 @@ This setting is used together with the previous preference. Here you can
 determine, in minutes, the time interval over which more than four
 invalid login attempts will trigger a lockout. You may use decimals to
 indicate fractions of a minute: e.g. 1.5 equals one and a half minutes.
+
+.. _security-require-secure-passwords-label:
 
 Require Secure Passwords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -148,6 +158,8 @@ set their password using words and names that are commonly found in a
 dictionary. This will make "dictionary attacks" by hackers much more
 difficult. **Note:** In order to be able to use this setting you must
 have a dictionary file installed for the system. See below.
+
+.. _dict-passwds-file-label:
 
 Name of Dictionary File
 ~~~~~~~~~~~~~~~~~~~~~~~

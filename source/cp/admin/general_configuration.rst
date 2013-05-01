@@ -125,6 +125,8 @@ disk space. 150 is a good number for a small site. If you have a large
 site and disk space is not an issue you can set it higher (over 300).
 There is an internal limit of 1000 regardless of your preference.
 
+.. _general-config-new-version-label:
+
 New Version Auto Check
 ~~~~~~~~~~~~~~~~~~~~~~
 

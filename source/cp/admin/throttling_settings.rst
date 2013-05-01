@@ -22,6 +22,8 @@ Deny Access if No IP Address is Present
 If this setting is set to yes, throttling will be immediately triggered
 if the user visiting your site is not generating IP Address information.
 
+.. _throttling-max-page-load-label:
+
 Maximum Number of Page Loads
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

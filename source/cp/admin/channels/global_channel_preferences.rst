@@ -23,6 +23,8 @@ share identical Category Groups:
 -  {exp:channel:category\_heading}
 -  {exp:channel:entries}
 
+.. _global-channel-category-url-indicator-label:
+
 Category URL Indicator
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -54,6 +56,8 @@ If this option is set to "yes", when new entries that contain category
 assignments are submitted, the "parent" category of any sub-categories
 will be automatically assigned. If set to "no", the entry will only be
 assigned to the child category.
+
+.. _global-channel-clear-cache-label:
 
 Clear all caches when new entries are posted?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

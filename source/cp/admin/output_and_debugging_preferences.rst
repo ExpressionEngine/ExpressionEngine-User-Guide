@@ -61,6 +61,8 @@ links seem to work.
 In addition, some people will need to use this variable in conjunction
 with editing the $qtype variable in your main site index.php file.
 
+.. _output-debug-redirect-method-label:
+
 Redirection Method
 ~~~~~~~~~~~~~~~~~~
 

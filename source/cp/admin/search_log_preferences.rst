@@ -19,6 +19,8 @@ at:
 
 :menuselection:`Tools --> Logs --> Search Logs`
 
+.. _max-search-save-label:
+
 Maximum number of recent search terms to save
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

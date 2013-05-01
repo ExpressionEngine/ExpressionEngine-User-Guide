@@ -1801,7 +1801,7 @@ $config['language'] = "english";
 
 
 license_number
-------------
+--------------
 The :ref:`License Number <general-config-license-number-label>` you were issued upon purchasing ExpressionEngine.
 
 ========== ========
@@ -1839,7 +1839,7 @@ $config['lockout_time'] = '30';
 
 
 log_email_console_msgs
-------------
+----------------------
 The :ref:`Log Email Console Messages <email-log-console-messages-label>` preference lets you log all messages sent via the Email Console in the member profile pages.
 
 ========== ========
@@ -1857,87 +1857,986 @@ $config['log_email_console_msgs'] = 'y';
 
 **Control Panel Location:** :menuselection:`Admin --> Email Configuration`: Log Email Console Messages
 
-   ::
 
-    [log_path]
-    [log_referrers]
-    [log_search_terms]
-    [log_threshold]
-    [mail_format]
-    [mail_protocol]
-    [mailinglist_enabled]
-    [mailinglist_notify]
-    [mailinglist_notify_emails]
-    [max_caches]
-    [max_logged_searches]
-    [max_page_loads]
-    [max_referrers]
-    [max_tmpl_revisions]
-    [mbr_notification_emails] 
-    [member_theme]
-    [memberlist_order_by]
-    [memberlist_row_limit]
-    [memberlist_sort_order]
-    [moblog_allow_nontextareas]
-    [multi_login_sites]
-    [multiple_sites_enabled]
-    [name_of_dictionary_file]
-    [new_member_notification]
-    [new_posts_clear_caches]
-    [new_version_check]
-    [output_charset]
-    [password_lockout]
-    [password_lockout_interval]
-    [permitted_uri_chars]
-    [path_third_themes]
-    [photo_max_height] 
-    [photo_max_kb] 
-    [photo_max_width]
-    [photo_path]
-    [photo_url]
-    [popup_link]
-    [profile_trigger]
-    [protect_javascript
-    [profile_trigger]
-    [proxy_ips]
-    [prv_msg_attach_maxsize]
-    [prv_msg_attach_total]
-    [prv_msg_auto_links]
-    [prv_msg_html_format]
-    [prv_msg_max_attachments]
-    [prv_msg_max_chars]
-    [prv_msg_upload_path]
-    [pw_min_len]
-    [publish_page_title_focus]
-    [recount_batch_total]
-    [redirect_method]
-    [redirect_submitted_links]
-    [relaxed_track_views]
-    [remove_close_all_button]
-    [remove_unparsed_vars]
-    [req_mbr_activation]
-    [require_ip_for_login]
-    [require_ip_for_posting]
-    [require_secure_passwords]
-    [require_terms_of_service]
-    [reserved_category_word]
-    [rewrite_short_tags]
-    [rte_default_toolset_id]
-    [rte_enabled]
-    [safecracker_field_extra_js]
-    [safecracker_option_fields]
-    [safecracker_require_save_call]
-    [save_tmpl_files]
-    [save_tmpl_revisions]
+log_path
+--------
+Leave this BLANK unless you would like to set something other than the default system/logs/ folder.  Use a full server path with trailing slash.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Full server path to system log folder 
+========== ========
+
+Example: ::
+
+$config['log_path'] = '/path/to/location/';
+
+
+log_referrers
+-------------
+You can determine whether Referrer Tracking is performed by the system. When you have this preference set to “Y”, one additional database access query will be performed for each page load so that the statistics can be generated.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Default value, enables referrer tracking 
+``n``      Disables referrers tracking
+========== ========
+
+Example: ::
+
+$config['log_referrers'] = 'y';
+
+
+mail_format
+-----------
+The :ref:`Default Mail Format <email-default-format-label>`. When you send email via the Communicate section of your Control Panel, you are able to send HTML formatted emails. This preference sets whether the Communicate section has “Plain text” or “HTML” selected by default.
+
+========== ========
+Values     Behavior
+========== ========
+``plain``  Sets default email format to Plain Text
+``html``   Sets defauly email format to HTML
+========== ========
+
+Example: ::
+
+$config['mail_format'] = 'plain';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Email Configuration`: Default Mail Format
+
+
+mail_protocol
+-------------
+The :ref:`Email Protocol <email-protocol-label>`. Email can be sent by ExpressionEngine by one of three protocols.
+
+============ ========
+Values       Behavior
+============ ========
+``mail``     Sets email protocol to PHP Mail
+``smtp``     Sets email protocol to SMTP
+``sendmail`` Sets email protocol to Sendmail
+============ ========
+
+Example: ::
+
+$config['mail_protocol'] = 'smtp';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Email Configuration`: Email Protocol
+
+
+mailinglist_enabled
+-------------------
+Enables the mailing list.
+
+======= ========
+Values  Behavior
+======= ========
+``y``   Default value, enables mailing list 
+``n``   Disables mailing list
+======= ========
+
+Example: ::
+
+$config['mailinglist_enabled'] = 'y';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Add-Ons --> Modules --> Mailing List`: Mailing List is Enabled
+
+
+mailinglist_notify
+------------------
+Recipient list for notification of new mailing list sign-ups.
+
+======= ========
+Values  Behavior
+======= ========
+``y``   Enables recipient list for notification of new mailing list sign-ups 
+``n``   Default value, disables recipient list for notification of new mailing list sign-ups
+======= ========
+
+Example: ::
+
+$config['mailinglist_notify'] = 'y';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Add-Ons --> Modules --> Mailing List`: Enable recipient list for notification of new mailing list sign-ups
+
+
+mailinglist_notify_emails
+-------------------------
+Email Address of Notification Recipient(s).
+
+======== ========
+Values   Behavior
+======== ========
+``text`` Email address Notification Recipient(s) 
+======== ========
+
+Example: ::
+
+$config['mailinglist_notify_emails'] = 'joe@example.com';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Add-Ons --> Modules --> Mailing List`: Email Address of Notification Recipient(s) 
+
+
+max_logged_searches
+-------------------
+The :ref:`Maximum number of recent search terms to save  <max-search-save-label>`. This prevents your database from getting too large.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Sets maximum number of recent search terms to save
+========== ========
+
+Example: ::
+
+$config['max_logged_searches'] = '500';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> System Administration --> Search Log Configuration`: Maximum number of recent search terms to save 
+
+
+max_page_loads
+--------------
+:ref:`Maximum Number of Page Loads <throttling-max-page-load-label>` is the total number of times a user is allowed to load your web pages (within the time interval below) before being locked out. For example, if you set this preference to 5 page loads within 10 seconds, a user can not browse more than 5 pages within a 10 second interval or the throttling feature will be triggered, locking them out of your site according to the parameters you set below.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Sets maximum number of page loads
+========== ========
+
+Example: ::
+
+$config['max_page_loads'] = '10';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Throttling Preferences`: Maximum Number of Page Loads
+
+
+max_tmpl_revisions
+------------------
+:ref:`Maximum Number of Revisions to Keep <global-template-max-revisions-label>` for each template.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Sets maximum number of template revisions to keep
+========== ========
+
+Example: ::
+
+$config['max_tmpl_revisions'] = '10';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Design --> Templates --> Global Template Preferences`: Maximum Number of Revisions to Keep
+
+
+mbr_notification_emails
+-----------------------
+:ref:`Email address for notifications <member-send-notifications-email-label>` allow you to specify the email addresses which should receive notifications.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Email address Notification Recipient(s)
+========== ========
+
+Example: ::
+
+$config['mbr_notification_emails'] = 'joe@example.com';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Email address for notifications
+
+
+member_theme
+------------
+The :ref:`Default Member Profile Theme <member-default-theme-label>` to be used in the Member Profile area of your site. Available, installed themes are listed in the menu.
+
+=========== ========
+Values      Behavior
+=========== ========
+``text``    Sets the theme for the default member profile
+=========== ========
+
+Example: ::
+
+$config['member_theme'] = 'default';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Default Member Profile Theme
+
+
+memberlist_sort_order
+---------------------
+The :ref:`Member List - Order <member-list-order-label>` specifies whether to show the list in Ascending or Descending order.
+
+=========== ========
+Values      Behavior
+=========== ========
+``asc``     Sorts member list in Ascending order
+``desc``    Deafult value, sorts member list in Descending order
+=========== ========
+
+Example: ::
+
+$config['memberlist_sort_order'] = 'desc';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Member List - Order
+
+
+memberlist_row_limit
+--------------------
+The :ref:`Member List - Rows <member-list-rows-label>` specifies the number of rows to return by default.
+
+=========== ========
+Values      Behavior
+=========== ========
+``number``  Sets the number of rows to return by default
+=========== ========
+
+Example: ::
+
+$config['memberlist_row_limit'] = '20';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Member List - Rows
+
+
+memberlist_order_by
+-------------------
+The :ref:`Member List - Sort By <member-list-rows-label>` specifies the sorting criteria to be used. Choices are: Total Posts, Screen Name, Total Comments, Total Entries, Join Date.
+
+================== ========
+Values             Behavior
+================== ========
+``total_posts``    Sorts member list by Total Posts
+``screen_name``    Sorts member list by Screen Name
+``total_comments`` Sorts member list by Total Comments
+``total_entries``  Sorts member list by Total Entries
+``join_date``      Sorts member list by Join Date
+================== ========
+
+Example: ::
+
+$config['memberlist_order_by'] = "total_posts";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Member List - Sort By
+
+
+name_of_dictionary_file
+-----------------------
+The :ref:`Name of Dictionary File <dict-passwds-file-label>` is the filename of the dictionary file used for Dictionary Words as Passwords.
+
+=========== ========
+Values      Behavior
+=========== ========
+``text``    Indicates the filename of the dictionary file
+=========== ========
+
+Example: ::
+
+$config['name_of_dictionary_file'] = 'billy';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Security and Sessions`: Name of Dictionary File
+
+
+new_member_notification
+-----------------------
+The :ref:`Send new member notifications <member-send-notifications-label>`, if enabled, notifications will be sent.
+
+======= ========
+Values  Behavior
+======= ========
+``y``   Enables notifications
+``n``   Default value, notification will not be sent
+======= ========
+
+Example: ::
+
+$config['new_member_notification'] = "n";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Send new member notifications
+
+
+new_posts_clear_caches
+----------------------
+:ref:`Clear all caches when new entries are posted <global-channel-clear-cache-label>`. You can determine whether your caches will be cleared when you post an entry. If set to “n”, the new entry will not appear on your site until any cache expires.
+
+======= ========
+Values  Behavior
+======= ========
+``y``   Default value, new posts clear cache
+``n``   New posts do not clear cache
+======= ========
+
+Example: ::
+
+$config['new_posts_clear_caches'] = "n";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Global Channel Preferences`: Clear all caches when new entries are posted
+
+
+new_version_check
+-----------------
+:ref:`New Version Auto Check <general-config-new-version-label>`. Enabling this feature will cause a message to be displayed in the Control Panel when a new version of ExpressionEngine is available. It will not automatically download and install a new version.
+
+======= ========
+Values  Behavior
+======= ========
+``y``   Default value, enables new version auto check
+``n``   Disables new version auto check
+======= ========
+
+Example: ::
+
+$config['new_version_check'] = "n";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> General Configuration`: New Version Auto Check
+
+
+password_lockout
+----------------
+:ref:`Enable Password Lockout <security-enable-passwd-lockout-label>`. When this preference is set to “y”, the system will lock a member account if more than four invalid login attempts are made within a specified time period (see next setting). This preference is designed to deter hackers from using collision attacks to guess poorly chosen passwords. The account remains locked for the duration of the time period. Once the period expires it becomes unlocked.
+
+======= ========
+Values  Behavior
+======= ========
+``y``   Default value, enables password lockouts
+``n``   Disables password lockouts
+======= ========
+
+Example: ::
+
+$config['password_lockout'] = "n";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Security and Sessions`: Enable Password Lockout
+
+
+password_lockout_interval
+-------------------------
+:ref:`Time Interval for Lockout <security-passwd-lockout-int-label>`. When this preference is set to “y”, the system will lock a member account if more than four invalid login attempts are made within a specified time period (see next setting). This preference is designed to deter hackers from using collision attacks to guess poorly chosen passwords. The account remains locked for the duration of the time period. Once the period expires it becomes unlocked.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Number is set in minutes. You are allowed to use decimal fractions. Example: 1.5
+========== ========
+
+Example: ::
+
+$config['password_lockout_interval'] = "2.5";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Security and Sessions`: Time Interval for Lockout
+
+
+permitted_uri_chars
+-------------------
+This lets you specify which characters are permitted within your URLs. When someone tries to submit a URL with disallowed characters they will get a warning message.
+
+As a security measure you are STRONGLY encouraged to restrict URLs to as few characters as possible.  By default only these are allowed: a-z 0-9~%.:_-
+
+Leave blank to allow all characters -- but only if you are insane.
+
+DO NOT CHANGE THIS UNLESS YOU FULLY UNDERSTAND THE REPERCUSSIONS!!
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the permitted URI characters
+========== ========
+
+Example: ::
+
+$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\\-';
+
+
+path_third_themes
+-----------------
+Overrides the third_party paths so you can move your third_party directory outside of your system directory.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets path to third_party directory
+========== ========
+
+Example: ::
+
+$config['path_third_themes'] = "/valid/path/to/directory/";
+
+
+photo_max_height
+----------------
+The :ref:`Photo Maximum Height <member-photo-max-height-label>` (in pixels) allowed for user-uploaded member photos.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Sets the maximum hight (in pixels) for member photos
+========== ========
+
+Example: ::
+
+$config['photo_max_height'] = "100";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Photo Maximum Height
+
+
+photo_max_kb
+------------
+The :ref:`Photo Maximum Size (in Kilobytes) <member-photo-max-size-kb-label>` allowed for user-uploaded member photos.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Sets the maximum Size (in Kilobytes) allowed for user-uploaded member photos.
+========== ========
+
+Example: ::
+
+$config['photo_max_kb'] = "50";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Photo Maximum Size (in Kilobytes)
+
+
+photo_max_width
+---------------
+The :ref:`Photo Maximum Width <member-photo-max-width-label>`  (in pixels) allowed for user-uploaded member photos.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Sets the maximum width (in pixels) allowed for user-uploaded member photos
+========== ========
+
+Example: ::
+
+$config['photo_max_width'] = "150";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Photo Maximum Width
+
+
+photo_path
+----------
+The :ref:`Server Path to Photo Folder <member-photo-max-width-label>` is where you set the full server path to the member photos folder. By default, it is the member_photos folder inside the images folder. 
+
+.. NOTE::
+   Note: Must be a full server path, NOT a URL. Folder permissions must be set to 777.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the full server path to the photos folder
+========== ========
+
+Example: ::
+
+$config['photo_path'] = "/path/to/folder/";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Server Path to Photo Folder
+
+
+photo_url
+---------
+The :ref:`URL to Photos Folder <member-photo-max-width-label>` on your site that contains the member photos.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the URL to the photos folder
+========== ========
+
+Example: ::
+
+$config['photo_url'] = "http://www.example.com/images/memberphotos/";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: URL to Photos Folder
+
+
+popup_link
+----------
+Determines whether or not links created by Typography class open in a new window.
+
+======= ========
+Values  Behavior
+======= ========
+``y``   Enables links created by Typography class open in a new window
+``n``   Default value, disables links created by Typography class open in a new window
+======= ========
+
+Example: ::
+
+$config['popup_link'] = 'y';
+
+
+profile_trigger
+---------------
+When the :ref:`Profile Triggering Word <profile-trigger-word-label>` is encountered in your URL it will display your member profile area. The word you choose can not be the name of an existing template group. The default value of this is “member”. That means that a URL like the following would trigger ExpressionEngine to display the member profile area:
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the profile trigger word
+========== ========
+
+Example: ::
+
+$config['profile_trigger'] = "fajkkalf89idjae8hjkfsldamvpp0";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Profile Triggering Word
+
+
+protect_javascript
+------------------
+Prevents the advanced conditionals parser from processing anything in <script> tags. By default, it’s set to ‘y’.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Default value, prevents the advanced conditionals parser from processing anything in <script> tags
+``n``      Disables protect_javacript
+========== ========
+
+Example: ::
+
+$config['protect_javascript'] = "y";
+
+
+proxy_ips
+---------
+Whitelist of reverse proxy servers that may forward the visitor’s IP address.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Comma delimited list of IP addresses
+========== ========
+
+Example: ::
+
+$config['proxy_ips'] = '10.0.1.25,10.0.1.26';
+
+
+pw_min_len
+----------
+You may specify the :ref:`Minimum Password Length <profile-trigger-word-label>` required for a member password during new member registration. Specify the minimum number of characters required. It is common practice to require passwords at least eight (8) characters long.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Sets the minimum password length
+========== ========
+
+Example: ::
+
+$config['pw_min_len'] = '5';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Security and Sessions`: Minimum Password Length
+
+
+publish_page_title_focus
+------------------------
+Makes the title field gain focus when the page is loaded
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Default value, makes the title field gain focus when the page is loaded
+``n``      Disables focus
+========== ========
+
+Example: ::
+
+$config['publish_page_title_focus'] = 'n';
+
+
+recount_batch_total
+-------------------
+Because the recounting of statistics can impose some load on your server, the recounting is performed in batches. The Recount Preferences page allows you to define how large each processing batch should be. For most servers, a value of 1000 works well. For high-performance or dedicated servers you can increase this number and if your server is low on resources you may need to lower the number.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Sets the batch size
+========== ========
+
+Example: ::
+
+$config['recount_batch_total'] = '10000';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Tools --> Data --> Recount Statistics --> Recount Preferences`: Total number of database rows processed per batch
+
+
+redirect_method
+---------------
+The :ref:`Redirection Method <output-debug-redirect-method-label>` setting determines what method is used for page redirections. These redirections are used relatively frequently throughout the system, especially with things like logging in/out and other membership related functions.
+
+============ ========
+Values       Behavior
+============ ========
+``redirect`` Sets the redirect method to Location (faster): This is the preferred method, which uses PHP’s “location” functionality.
+``refresh``  Sets the redirect method to Refresh (Windows servers) (Slower)
+============ ========
+
+Example: ::
+
+$config['redirect_method'] = 'redirect';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> System Administration --> Output and Debugging`: Redirection Method
+
+
+redirect_submitted_links
+------------------------
+The :ref:`Apply Rank Denial to User-submitted Links <security-apply-rank-denial-label>` option rewrites links submitted in comments so they first point to an intermediary redirect page. This helps deter comment spam by preventing linked sites from gaining a page rank advantage.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Applies rank denial to user-submitted Links
+``n``      Default value, does not apply rank denial to user-submitted Links
+========== ========
+
+Example: ::
+
+$config['redirect_submitted_links'] = 'y';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Security and Sessions`: Apply Rank Denial to User-submitted Links
+
+
+relaxed_track_views
+-------------------
+Allows Entry View Tracking to work for ANY combination that results in only one entry being returned by the tag, including channel query caching.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Allows Entry View Tracking
+``n``      Default value, does not allow Entry View Tracking
+========== ========
+
+Example: ::
+
+$config['relaxed_track_views'] = 'y';
+
+
+remove_close_all_button
+-----------------------
+Removes the Close All button from the Publish/Edit page and user side HTML formatting buttons. Useful because most browsers no longer need it and Admins might want it gone
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Removes the close all button
+``n``      Default value, does not remove the close all button
+========== ========
+
+Example: ::
+
+$config['remove_close_all_button'] = 'y';
+
+
+remove_unparsed_vars
+--------------------
+Enables the stripping of unparsed ExpressionEngine variables in templates when Debug has been forcibly set to 0 in your config file.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Enables stripping of unparsed ExpressionEngine variables
+``n``      Default value, disables stripping of unparsed ExpressionEngine variables
+========== ========
+
+Example: ::
+
+$config['remove_unparsed_vars'] = 'y';
+
+
+req_mbr_activation
+------------------
+With :ref:`Require Member Account Activation <member-account-activation-label>` you can choose how membership accounts are activated.
+
+========== ========
+Values     Behavior
+========== ========
+``none``   Sets member activation to no activation required: New members are automatically activated and approved for the site. 
+``email``  Sets member activation to self-activation via email: New members are sent an email. 
+``manual`` Sets member activation to manual activation by an administrator
+========== ========
+
+Example: ::
+
+$config['req_mbr_activation'] = 'none';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Require Member Account Activation
+
+
+require_ip_for_login
+--------------------
+If the :ref:`Require IP Address and User Agent for Login <require-ip-logins-label>` preference is set to “y”, then users will not be able to log in unless their browser (or other access device) correctly supplies their IP address and User Agent (browser) information. Having this set to “y” can help prevent hackers from logging in using direct socket connections or from trying to access the system with a masked IP address.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Default value, requires IP Address for Login
+``n``      Disables Require IP Address and User Agent for Login
+========== ========
+
+Example: ::
+
+$config['require_ip_for_login'] = 'n';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Security and Sessions`: Require IP Address and User Agent for Login
+
+
+require_ip_for_posting
+----------------------
+:ref:`Require IP Address and User Agent when receiving comments <require-ip-posting-submit-comments-label>` when turned on requires IP address and user agent information to be supplied when submitting comments.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Default value, requires IP Address for submitting comments
+``n``      Disables require IP Address and User Agent for submitting comments
+========== ========
+
+Example: ::
+
+$config['require_ip_for_posting'] = 'n';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Security and Sessions`: Require IP Address and User Agent for posting
+
+
+require_secure_passwords
+------------------------
+If :ref:`Require Secure Passwords <security-require-secure-passwords-label>` is set to “y”, then users will be required to choose a minimally “secure” password. In this case, a password containing at least one uppercase character, one lowercase character, and one numeric character. Passwords that follow this basic formula are much more difficult to guess.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Default value, requires secure password
+``n``      Disables require secure passwords
+========== ========
+
+Example: ::
+
+$config['require_secure_passwords'] = 'n';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Security and Sessions`: Require Secure Passwords
+
+
+require_terms_of_service
+------------------------
+When new members register through the site, a “terms of service” block of text is displayed. The :ref:`Require Terms of Service <member-require-tos-label>` preference determines whether new members must indicate that they agree to abide by these terms before they can register. 
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Default value, requires TOS
+``n``      Disables require TOS
+========== ========
+
+Example: ::
+
+$config['require_terms_of_service'] = 'n';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Member --> Preferences`: Require Terms of Service
+
+
+reserved_category_word
+----------------------
+If you turn on :ref:`Category URL Indicator <global-channel-category-url-indicator-label>`, you must designate a special “indicator” word, which will be used in the URL whenever a category is intended.
+
+.. NOTE::
+   Whatever word you chose CANNOT be the name of a template group or a template.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the category URL indicator
+========== ========
+
+Example: ::
+
+$config['reserved_category_word'] = 'category';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Global Channel Preferences`: Category URL Indicator
+
+
+rewrite_short_tags
+----------------------
+If your PHP installation does not have short tag support enabled CI can rewrite the tags on-the-fly, enabling you to utilize that syntax in your view files.  Options are TRUE or FALSE (boolean)
+
+========== ========
+Values     Behavior
+========== ========
+``TRUE``   Enables rewrite short tags
+``FALSE``  Disables rewrite short tags
+========== ========
+
+Example: ::
+
+$config['rewrite_short_tags'] = 'TRUE';
+
+
+rte_default_toolset_id
+----------------------
+:ref:`Default Toolset <global-channel-category-url-indicator-label>` determines which Toolset will be shown for any member that has not specifically chosen one in Rich Text Editor Preferences.
+
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the default toolset id
+========== ========
+
+Example: ::
+
+$config['rte_default_toolset_id'] = '2';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Add-Ons --> Modules --> Rich Text Editor`: Default Toolset
+
+
+rte_enabled
+-----------
+:ref:`Enable the Rich Text Editor <global-channel-category-url-indicator-label>` If “y”, the Rich Text Editor will be applied to any Channel Fields of the Textarea (Rich Text) fieldtype. If “n”, the field will appear as a normal textarea instead.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Default value, if installed, enables RTE
+``n``      Disables RTE and shows the normal textarea
+========== ========
+
+Example: ::
+
+$config['rte_enabled'] = 'y';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Add-Ons --> Modules --> Rich Text Editor`: Enable Rich Text Editor
+
+
+save_tmpl_files
+---------------
+:ref:`Save templates as files <global-template-save-templates-as-files-label>` determines whether your Templates are saved to files in addition to the datbase, allowing easy editing via the editor of your choice. See Saving Templates as Text Files for more information.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Templates are saved as files
+``n``      Default value, templates are not saved as files
+========== ========
+
+Example: ::
+
+$config['save_tmpl_files'] = 'y';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Design --> Templates --> Global Template Preferences`: Save Templates as Files
+
+
+save_tmpl_revisions
+-------------------
+If :ref:`Save Template Revisions <global-template-save-templates-revisions-label>` is set to “y”, then any changes you make to one of your Templates will be saved. This allows you to keep a record of all changes made so that you can easily revert back to an earlier version of a Template if you need to do so.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Templates revisions are saved
+``n``      Default value, templates revisions are not saved
+========== ========
+
+Example: ::
+
+$config['save_tmpl_revisions'] = 'y';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Design --> Templates --> Global Template Preferences `: Save Template Revisions
+
+   ::
+   
     [sc_encrypt_buttons]
     [sc_paypal_account]
     [sc_temp_path]
+
     [secure_forms]
     [send_headers]
     [server_offset]
     [server_timezone]
     [sess_type]
     [show_profiler]
+    
     [sig_allow_img_hotlink]
     [sig_allow_img_upload]
     [sig_img_max_height]
@@ -1946,6 +2845,7 @@ $config['log_email_console_msgs'] = 'y';
     [sig_img_path]
     [sig_img_url]
     [sig_maxlength]
+
     [site_404]
     [site_bootstrap_checksums]
     [site_description]
@@ -1956,6 +2856,7 @@ $config['log_email_console_msgs'] = 'y';
     [site_pages]
     [site_short_name]
     [site_url]
+
     [smart_static_parsing]
     [smtp_password]
     [smtp_server]
@@ -1964,18 +2865,22 @@ $config['log_email_console_msgs'] = 'y';
     [spellcheck_language_code]
     [strict_urls]
     [subclass_prefix]
+
     [template]
     [template_group]
     [template_loop_prevention]
     [template_debugging]
+    
     [theme_folder_path]
     [theme_folder_url]
     [third_party_path]
     [thumbnail_prefix]
+
     [time_format]
     [time_interval]
     [time_reference]
     [tmpl_file_basepath]
+    
     [un_min_len]
     [uri_protocol]
     [url_suffix]
@@ -1983,15 +2888,19 @@ $config['log_email_console_msgs'] = 'y';
     [url_third_themes]
     [use_category_name]
     [use_compressed_js]
+
     [use_membership_captcha]
     [use_mobile_control_panel]
     [user_session_ttl]
     [user_session_type]
+    
     [webmaster_email]
     [webmaster_name]
+    
     [word_separator]
     [word_wrap]
     [xml_lang]
+    
     [xss_clean_member_exception]
     [xss_clean_member_group_exception]
     [xss_clean_uploads]

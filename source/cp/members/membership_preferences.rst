@@ -23,6 +23,8 @@ accepted.
 Newer versions of ExpressionEngine default (EE 2.1.2 and later) to
 having New Member Registrations off when initially creating the site.
 
+.. _member-account-activation-label:
+
 Require Member Account Activation?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -39,6 +41,8 @@ Here you can choose how membership accounts are activated:
 -  **Manual activation by an administrator**: New members may only be
    activated by an admin visiting the :menuselection:`Members -->
    Activate Pending` section of the Control Panel.
+
+.. _member-require-tos-label:
 
 Require Terms of Service
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -73,11 +77,15 @@ Default Member Group Assigned to New Members
 This allows you to specify the Member Group to which approved members
 will be assigned.
 
+.. _member-default-theme-label:
+
 Default Member Profile Theme
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The default member profile theme to be used in the Member Profile area
 of your site. Available, installed themes are listed in the menu.
+
+.. _profile-trigger-word-label:
 
 Profile Triggering Word
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -104,10 +112,14 @@ Member List - Sort By
 Specifies the sorting criteria to be used. Choices are: Total Posts,
 Screen Name, Total Comments, Total Entries, Join Date.
 
+.. _member-list-order-label:
+
 Member List - Order
 ~~~~~~~~~~~~~~~~~~~
 
 Specifies whether to show the list in *Ascending* or *Descending* order.
+
+.. _member-list-rows-label:
 
 Member List - Rows
 ~~~~~~~~~~~~~~~~~~
@@ -117,11 +129,15 @@ Specifies the number of rows to return by default.
 Notification Preferences
 ------------------------
 
+.. _member-send-notifications-label:
+
 Send new member notifications?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If enabled, notifications will be sent to the email addresses specified in the
 next preference field.
+
+.. _member-send-notifications-email-label:
 
 Email address for notifications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -288,15 +304,21 @@ know what to use for your full server path, contact your Host or server
 admin. Remember that this upload folder must be set to 777 permissions
 (or otherwise be "writable").
 
+.. _member-photo-max-width-label:
+
 Photo Maximum Width
 ~~~~~~~~~~~~~~~~~~~
 
 The maximum width (in pixels) allowed for user-uploaded member photos.
 
+.. _member-photo-max-height-label:
+
 Photo Maximum Height
 ~~~~~~~~~~~~~~~~~~~~
 
 The maximum height (in pixels) allowed for user-uploaded member photos.
+
+.. _member-photo-max-size-kb-label:
 
 Photo Maximum Size (in Kilobytes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

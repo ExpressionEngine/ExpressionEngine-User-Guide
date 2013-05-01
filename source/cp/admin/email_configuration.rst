@@ -45,6 +45,8 @@ can be useful in helping to track down any problems you may be
 experiencing. If you are having difficulty sending email you are
 encouraged to enable this option.
 
+.. _email-protocol-label:
+
 Email Protocol
 ~~~~~~~~~~~~~~
 
@@ -150,6 +152,8 @@ Note: Unless your mailing list numbers in the thousands you won't gain
 much of a speed gain from setting large batches. If you are using the
 less efficient "PHP mail" protocol then you will usually need to set a
 lower batch size; 50-100 is typical.
+
+.. _email-default-format-label:
 
 Default Mail Format
 ~~~~~~~~~~~~~~~~~~~
