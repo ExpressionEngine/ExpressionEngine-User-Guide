@@ -2822,16 +2822,51 @@ $config['save_tmpl_revisions'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Design --> Templates --> Global Template Preferences `: Save Template Revisions
+**Control Panel Location:** :menuselection:`Design --> Templates --> Global Template Preferences`: Save Template Revisions
+
+
+secure_forms
+------------
+:ref:`Secure Form Mode <spam-protect-secure-form-mode-label>` prevents automated scripts (the most common way spam is generated) from repeatedly submitting comments or other form data. A submission is only allowed when a user manually loads a page and submits the form from your site. And once the form data is received, the user has to manually reload the page before they can submit again.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Default value, enables secure form mode
+``n``      Disables secure form mode
+========== ========
+
+Example: ::
+
+$config['secure_forms'] = 'y';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Security and Sessions`: Process form data in Secure Mode
+
+
+send_headers
+------------
+:ref:`Generate HTTP Page Headers <spam-protect-secure-form-mode-label>` setting determines whether or not the server should automatically send HTTP page headers when it serves the pages to a user. Setting this preference to “Yes” causes headers to be explicitly sent by the server. Sending explicit headers is generally considered to be a good practice, although in some cases it can cause some problems.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Default value, enables generate HTTP headers
+``n``      Disables generate HTTP headers
+========== ========
+
+Example: ::
+
+$config['send_headers'] = 'n';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> System Administration --> Output and Debugging`: Generate HTTP Page Headers
+
 
    ::
-   
-    [sc_encrypt_buttons]
-    [sc_paypal_account]
-    [sc_temp_path]
 
-    [secure_forms]
-    [send_headers]
     [server_offset]
     [server_timezone]
     [sess_type]
