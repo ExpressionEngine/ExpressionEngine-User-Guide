@@ -339,10 +339,14 @@ This determines whether member signatures are enabled for your site. If
 enabled, then users will be able to create a signature for their account
 that you can optionally display with entries, comments, and forum posts.
 
+.. _member-signature-max-chars-label:
+
 Maximum number of characters per signature
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The maximum number of characters allowed within a member's signature.
+
+.. _member-signature-hot-linking-label:
 
 Allow image hot linking in signatures?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -351,17 +355,23 @@ Specifies whether or not members can "hot link" to images located on
 other sites or servers. Most sites do not like other people to hot link
 to their content since it basically "steals" their bandwidth.
 
+.. _member-signature-allow-upload-label:
+
 Allow users to upload an image in their signature?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Determine whether or not members will be allowed to upload images to be
 used in their signatures.
 
+.. _member-signature-URL-label:
+
 URL to Signature Image Upload Folder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The URL to the folder on your site that contains the signature image
 uploads.
+
+.. _member-signature-server-path-label:
 
 Server path to Signature Image Upload Folder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -376,17 +386,23 @@ not know what to use for your full server path, contact your Host or
 server admin. Remember that this upload folder must be set to 777
 permissions (or otherwise be "writable").
 
+.. _member-signature-max-width-label:
+
 Maximum Width of Signature Image
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The maximum width (in pixels) allowed for user-uploaded signature
 images.
 
+.. _member-signature-max-height-label:
+
 Maximum Height of Signature Image
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The maximum height (in pixels) allowed for user-uploaded signature
 images.
+
+.. _member-signature-max-size-label:
 
 Maximum Size (in Kilobytes) of Signature Image
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

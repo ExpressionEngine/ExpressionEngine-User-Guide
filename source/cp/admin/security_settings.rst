@@ -30,6 +30,8 @@ use cookies, session IDs, or a combination. The available options are:
   prevents you from accepting cookies in the event you are behind a
   firewall or due to some other technical issue.
 
+.. _user-session-type-label:
+
 User Session Type
 ~~~~~~~~~~~~~~~~~
 
@@ -176,12 +178,16 @@ system/expressionengine/config/
 
 Submit the **name** of the file in this setting.
 
+.. _security-min-username-label:
+
 Minimum Username Length
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 You may specify the minimum length required for a member username during
 new member registration. Specify the minimum number of characters
 required.
+
+.. _security-min-password-label:
 
 Minimum Password Length
 ~~~~~~~~~~~~~~~~~~~~~~~

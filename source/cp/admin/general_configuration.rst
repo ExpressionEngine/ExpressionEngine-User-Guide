@@ -76,6 +76,8 @@ will be similar to:
 
 http://example.com/system/index.php
 
+.. _general-config-theme-url-label:
+
 URL to your "themes" folder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -83,6 +85,8 @@ The full URL to your "themes" folder. In most cases, this will be
 similar to:
 
 http://example.com/themes/
+
+.. _general-config-theme-path-label:
 
 Theme Folder Path
 ~~~~~~~~~~~~~~~~~
@@ -109,6 +113,8 @@ Default Language
 The language pack that members will see when logged in to the Control
 Panel. This only affects the Control Panel. 
 Members are able to override this setting in :doc:`/cp/my_account/index`.
+
+.. _general-config-default-xml-label:
 
 Default XML Language
 ~~~~~~~~~~~~~~~~~~~~

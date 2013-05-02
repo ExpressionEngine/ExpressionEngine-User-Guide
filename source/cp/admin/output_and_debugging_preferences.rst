@@ -105,12 +105,16 @@ Javascript that may resemble EE code, including curly brackets, this
 setting **must** be 1 in order for the Javascript to function, or
 ExpressionEngine will hide Javascript output believing it to be an error.
 
+.. _output-debug-display-profiler-label:
+
 Display Output Profiler?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 If enabled, Super Admins will see benchmark results, SQL queries, and
 submitted form data displayed at the bottom of the browser window.
 This is useful for debugging.
+
+.. _output-debug-display-template-debug-label:
 
 Display Template Debugging?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

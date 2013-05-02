@@ -74,6 +74,8 @@ caching queries that are normally executed dynamically. **Note:** Enable
 this preference only if you **do not** use the "future entries" or
 "expiring entries" feature.
 
+.. _global-channel-word-seperator-label:
+
 Word Separator for URL Titles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

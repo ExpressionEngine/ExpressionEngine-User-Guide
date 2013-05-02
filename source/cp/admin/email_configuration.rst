@@ -78,6 +78,8 @@ Email can be sent by ExpressionEngine by one of three protocols.
    likely need to fill out the three fields following it to use this
    protocol.
 
+.. _email-smtp-server-label:
+
 SMTP Server Address
 ~~~~~~~~~~~~~~~~~~~
 
@@ -95,12 +97,16 @@ The username used to log in to your SMTP server. Not all SMTP servers require
 you to authenticate, but many of them do. In those cases you will need to specify 
 the username and password (below).
 
+.. _email-smtp-username-label:
+
 SMTP Username
 ~~~~~~~~~~~~~
 
 The username used to log in to your SMTP server. Not all SMTP servers
 require you to *authenticate*, but many of them do. In those cases you
 will need to specify the username and password (below).
+
+.. _email-smtp-password-label:
 
 SMTP Password
 ~~~~~~~~~~~~~

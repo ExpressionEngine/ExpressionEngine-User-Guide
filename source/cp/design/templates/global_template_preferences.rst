@@ -33,6 +33,8 @@ relevant 404 pages, and does not allow your content to be shown with
 variances in the URL structure. However, for legacy reasons, Strict URLs
 are disabled by default.
 
+.. _global-template-404-label:
+
 404 Page
 ~~~~~~~~
 

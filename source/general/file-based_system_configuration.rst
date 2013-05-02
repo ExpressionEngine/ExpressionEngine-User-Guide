@@ -74,7 +74,7 @@ Values Behavior
 ====== ========
 
 
-Example Usage::
+Example Usage: ::
 
 
  $config['admin_session_type'] = 's';
@@ -96,7 +96,7 @@ Values   Behavior
 ``n``    No, do not allow member to upload their own avatar.
 ======== ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['allow_avatar_uploads'] = 'y';
@@ -118,7 +118,7 @@ Values   Behavior
 ``n``    No, do not allow members to use dictionary based passwords.
 ======== ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['allow_dictionary_pw'] = 'y';
@@ -140,7 +140,7 @@ Values   Behavior
 ``n``    Disable extensions
 ======== ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['allow_extensions'] = 'y';
@@ -158,7 +158,7 @@ Values   Behavior
 ``n``    Do not allow members to set their own localization
 ======== ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['allow_member_localization'] = 'y';
@@ -180,7 +180,7 @@ Values   Behavior
 ``n``    Do not allow members to register
 ======== ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['allow_member_registration'] = 'y';
@@ -204,7 +204,7 @@ Values   Behavior
 ``n``    Do not allow members to register
 ======== ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['allow_multi_logins'] = 'y';
@@ -225,7 +225,7 @@ Values   Behavior
 ``n``    Do not allow tabs in textareaas
 ======== ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['allow_textarea_tabs'] = 'y';
@@ -244,7 +244,7 @@ Values   Behavior
 ``n``    Do not allow members to have their own signature
 ======== ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['allow_signatures'] = 'y';
@@ -265,7 +265,7 @@ Values    Behavior
 ``n``     Do not allow members to change their username
 ========= ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['allow_username_change'] = 'y';
@@ -302,7 +302,7 @@ Values    Behavior
 ``n``     Entry will only be assigned to the child category 
 ========= ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['auto_assign_cat_parents'] = 'y';
@@ -322,7 +322,7 @@ Values    Behavior
 ``Num``   Numerical value depicting max height in pixels
 ========= ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['avatar_max_height'] = '120';
@@ -342,7 +342,7 @@ Values    Behavior
 ``Num``   Numerical value depicting max size in Kilobytes
 ========= ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['avatar_max_kb'] = '60';
@@ -362,7 +362,7 @@ Values    Behavior
 ``Num``   Numerical value depicting max width in pixels
 ========= ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['avatar_max_width'] = '120';
@@ -382,7 +382,7 @@ Values    Behavior
 ``Path``  Full server path to avatar folder
 ========= ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['avatar_path'] = '/path/images/avatars/';
@@ -402,7 +402,7 @@ Values    Behavior
 ``URL``   URL to avatar folder 
 ========= ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['avatar_url'] = 'http://example.com/images/avatars';
@@ -424,7 +424,7 @@ Values        Behavior
 ``bounce``    Redirect the user to another specified site
 ============= ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['ban_action'] = 'message';
@@ -448,7 +448,7 @@ Values    Behavior
 ``URL``   Send the user to this URL
 ========= ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['ban_destination'] = 'http://www.example.com';
@@ -471,7 +471,7 @@ Values    Behavior
 ``text``  Message to be shown to user
 ========= ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['ban_message'] = 'This site is currently unavailable';
@@ -492,7 +492,7 @@ Values    Behavior
 ``n``     Do not check IP address and User Agent 
 ========= ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['banish_masked_ips'] = 'y';
@@ -512,7 +512,7 @@ Values    Behavior
 ``text``  Custom message to show user 
 ========= ===========
 
-Example: ::
+Example Usage: ::
 
 
 $config['banishment_message'] = 'You have exceeded the allowed page load frequency.';
@@ -537,7 +537,7 @@ Values        Behavior
 ============= ===========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['banishment_type'] = 'message';
@@ -558,7 +558,7 @@ Values    Behavior
 ========= ===========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['banishment_url'] = 'http://www.example.com';
@@ -579,7 +579,7 @@ Values    Behavior
 ========= ===========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['banned_emails'] = 'user@example.com';
@@ -600,7 +600,7 @@ Values Behavior
 ====== ========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['banned_ips'] = '123.321.*';
@@ -621,7 +621,7 @@ Values           Behavior
 ================ ===========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['banned_ips'] = 'garfield';
@@ -642,7 +642,7 @@ Values       Behavior
 ============ ========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['banned_ips'] = 'dsmith';
@@ -663,7 +663,7 @@ Values   Behavior
 ======== ========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['base_url'] = 'http://www.example.com';
@@ -685,7 +685,7 @@ Values Behavior
 ====== ========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['captcha_font'] = 'n';
@@ -706,7 +706,7 @@ Values   Behavior
 ======== ========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['captcha_path'] = '/var/www/html/example/images/captchas';
@@ -728,7 +728,7 @@ Values Behavior
 ====== ========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['captcha_rand'] = 'n';
@@ -750,7 +750,7 @@ Values Behavior
 ====== ========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['captcha_require_members'] = 'y';
@@ -771,7 +771,7 @@ Values   Behavior
 ======== ========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['captcha_url'] = 'http://www.example.com/images/captchas';
@@ -792,7 +792,7 @@ Values   Behavior
 ======== ========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['censor_replacement'] = 'censored';
@@ -813,7 +813,7 @@ Values   Behavior
 ======== ========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['censored_words'] = 'blanket';
@@ -834,7 +834,7 @@ Values       Behavior
 ============ ========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['charset'] = 'UTF-8';
@@ -851,7 +851,7 @@ Values     Behavior
 ========== ========
 
 
-Example: ::
+Example Usage: ::
 
 
 $config['comment_edit_time_limit'] = '120';
@@ -872,7 +872,7 @@ Values Behavior
 ``n``  Default value, does not force moderation
 ====== ========
 
-Example: ::
+Example Usage: ::
 
 
 $config['comment_moderation_override'] = 'y';
@@ -893,7 +893,7 @@ Values Behavior
 ``n``  Default value, does not force censoring for comments
 ====== ========
 
-Example: ::
+Example Usage: ::
 
 $config['comment_word_censoring'] = 'y';
 
@@ -915,7 +915,7 @@ Values    Behavior
 ``FALSE`` Default value, does not compress output
 ========= ========
 
-Example: ::
+Example Usage: ::
 
 $config['compress_output'] = 'FALSE';
 
@@ -934,7 +934,7 @@ Values    Behavior
 ``text``  Sets .yourdomain.com for site-wide cookies
 ========= ========
 
-Example: ::
+Example Usage: ::
 
 $config['cookie_domain'] = '.example.com';
 
@@ -953,7 +953,7 @@ Values    Behavior
 ``path``  Relative path to cookie folder on your ExpressionEngine web server.
 ========= ========
 
-Example: ::
+Example Usage: ::
 
 $config['cookie_path'] = '/folder/';
 
@@ -972,7 +972,7 @@ Values    Behavior
 ``text``  Sets the cookie prefix for cookies when running multiple installations
 ========= ========
 
-Example: ::
+Example Usage: ::
 
 $config['cookie_prefix'] = 'site1';
 
@@ -992,7 +992,7 @@ Values     Behavior
 ``FALSE``  Default value, does not require a secure connection to set cookies
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['cookie_secure'] = 'TRUE';
 
@@ -1011,7 +1011,7 @@ Values     Behavior
 ``number`` Sets the control panel session length in seconds 
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['cp_session_ttl'] = '300';
 
@@ -1026,7 +1026,7 @@ Values     Behavior
 ``text``   Name of theme to use for the Control Panel
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['cp_theme'] = 'default';
 
@@ -1046,7 +1046,7 @@ Values     Behavior
 ``URL``    Sets the URL to your ExpressionEngine Control Panel
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['cp_url'] = 'http://www.example.com/system/index.php';
 
@@ -1062,7 +1062,7 @@ Values     Behavior
 ``FALSE``  Default value, disables CSRF
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['csrf_protection'] = 'FALSE';
 
@@ -1078,7 +1078,7 @@ Values     Behavior
 ``2``      Enables PHP/SQL error messages shown to anyone - NOT SECURE
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['debug'] = '1';
 
@@ -1097,7 +1097,7 @@ Values     Behavior
 ``number`` Group ID of desired default member group
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['default_member_group'] = '6';
 
@@ -1117,7 +1117,7 @@ Values  Behavior
 ``n``   Disables protection against comments being submitted twice
 ======= ========
 
-Example: ::
+Example Usage: ::
 
 $config['deny_duplicate_data'] = 'y';
 
@@ -1136,7 +1136,7 @@ Values  Behavior
 ``y``   Disables all tracking (User, Template, Channel, Referrer)
 ======= ========
 
-Example: ::
+Example Usage: ::
 
 $config['disable_all_tracking'] = 'y';
 
@@ -1152,7 +1152,7 @@ Values  Behavior
 ``n``   Default value, tag caching is enabled
 ======= ========
 
-Example: ::
+Example Usage: ::
 
 $config['disable_tag_caching'] = 'y';
 
@@ -1167,7 +1167,7 @@ Values  Behavior
 ``URL`` Sets the URL to your documentation (User Guide link at the top of your Control Panel)
 ======= ========
 
-Example: ::
+Example Usage: ::
 
 $config['doc_url'] = 'http://www.example.com/docs/';
 
@@ -1189,7 +1189,7 @@ Values     Behavior
 ``number`` Sets the number of "online visitors" which will trigger the disabling of all tracking
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['dynamic_tracking_disabling'] = '350';
 
@@ -1213,7 +1213,7 @@ Values     Behavior
 ``number`` Sets the number of emails to send in a batch (For average servers, 300 is a safe number)
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['email_batch_size'] = '300';
 
@@ -1237,7 +1237,7 @@ Values     Behavior
 ``n``      Default value, disables batch mode
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['email_batchmode'] = 'y';
 
@@ -1256,7 +1256,7 @@ Values     Behavior
 ``text``   Sets the encoding to be used by emails being sent
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['email_charset'] = 'utf-8';
 
@@ -1278,7 +1278,7 @@ Values     Behavior
 ``number`` sets the number of minutes that must lapse before a member is allowed to send another email
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['email_console_timelock'] = "300";
 
@@ -1297,7 +1297,7 @@ Values     Behavior
 ``text``   Overrides the core Email class setting for crlf characters in quoted-printable encoded emails
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['email_crlf'] = "\r\n";
 
@@ -1313,7 +1313,7 @@ Values     Behavior
 ``n``      Default value, email debugging is not enabled
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['email_debug'] = "y";
 
@@ -1333,7 +1333,7 @@ Values     Behavior
 ``n``      Default value, CAPTCHAS are not required on Tell-a-Friend and Contact email forms
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['email_module_captchas'] = "y";
 
@@ -1352,7 +1352,7 @@ Values     Behavior
 ``text``   Overrides the core Email class setting for newline characters
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['email_newline'] = "\r\n";
 
@@ -1367,7 +1367,7 @@ Values     Behavior
 ``number`` Specifies which port to use for SMTP
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['email_smtp_port'] = "2525";
 
@@ -1386,7 +1386,7 @@ Values     Behavior
 ``URL``    Specifies the URL of the folder where you have your smiley graphics located
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['emoticon_url'] = "http://www.example.com/images/smileys/";
 
@@ -1406,7 +1406,7 @@ Values     Behavior
 ``n``      Disables avatars for your ExpressionEngine site
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['enable_avatars'] = "n";
 
@@ -1426,7 +1426,7 @@ Values     Behavior
 ``n``      Default value, disables word censoring
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['enable_censoring'] = "y";
 
@@ -1446,7 +1446,7 @@ Values     Behavior
 ``n``      Default value, disables database caching
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['enable_db_caching'] = "y";
 
@@ -1463,7 +1463,7 @@ Values     Behavior
 ``n``      Disables Smileys
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['enable_emoticons'] = "y";
 
@@ -1483,7 +1483,7 @@ Values     Behavior
 ``n``      Default value, disables tracking views
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['enable_entry_view_tracking'] = "y";
 
@@ -1503,7 +1503,7 @@ Values     Behavior
 ``n``      Disables template hit tracking
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['enable_hit_tracking'] = "y";
 
@@ -1523,7 +1523,7 @@ Values     Behavior
 ``n``      Default value, disables online user tracking
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['enable_online_user_tracking'] = "y";
 
@@ -1543,7 +1543,7 @@ Values     Behavior
 ``FALSE``  Default value, disables "hooks" feature
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['enable_hooks'] = "TRUE";
 
@@ -1559,7 +1559,7 @@ Values     Behavior
 ``n``      Default value, disables member photos
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['enable_photos'] = "y";
 
@@ -1579,7 +1579,7 @@ Values     Behavior
 ``FALSE``  Default value, will not force query strings
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['enable_query_strings'] = "TRUE";
 
@@ -1599,7 +1599,7 @@ Values     Behavior
 ``n``      Disables search term log
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['enable_search_log'] = "TRUE";
 
@@ -1619,7 +1619,7 @@ Values     Behavior
 ``n``      Default value, query caching is not enabled
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['enable_sql_caching'] = "n";
 
@@ -1639,7 +1639,7 @@ Values     Behavior
 ``n``      Default value, throttling is disabled
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['enable_throttling'] = "n";
 
@@ -1658,7 +1658,7 @@ Values     Behavior
 ``text``   Sets text to be used
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['encode_removed_text'] = 'Encoded emails not allowed';
 
@@ -1674,7 +1674,7 @@ Values     Behavior
 ``n``      Default value
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['filename_increment'] = "y";
 
@@ -1689,7 +1689,7 @@ Values     Behavior
 ``text``   Sets the character(s) to use at the beginning of a template name to consider it a “hidden” template
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['hidden_template_indicator'] = '_';
 
@@ -1704,7 +1704,7 @@ Values     Behavior
 ``text``   Sets path to image library
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['image_library_path'] = '/bin/gd2/';
  
@@ -1722,7 +1722,7 @@ Values           Behavior
 ``netpbm``       Sets the NetPBM Library to be used as Image Resizing Protocol
 ================ ========
 
-Example: ::
+Example Usage: ::
 
 $config['image_resize_protocol'] = "gd2";
 
@@ -1741,7 +1741,7 @@ Values     Behavior
 ``text``   Sets the name of your site’s index page
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['index_page'] = '';
 
@@ -1760,7 +1760,7 @@ Values     Behavior
 ``1``      Install lock is enabled
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['install_lock'] = '1';
 
@@ -1776,7 +1776,7 @@ Values     Behavior
 ``n``      Sets the site to offline
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['is_system_on'] = "y";
 
@@ -1795,7 +1795,7 @@ Values     Behavior
 ``text``   Indicated which language files should be used
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['language'] = "english";
 
@@ -1810,7 +1810,7 @@ Values     Behavior
 ``number`` Sets your ExpressionEngine license number
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['license_number'] = '4498-3348-9871-1123';
 
@@ -1829,7 +1829,7 @@ Values     Behavior
 ``number`` Sets lockout time in seconds
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['lockout_time'] = '30';
 
@@ -1849,7 +1849,7 @@ Values     Behavior
 ``n``      Disables the logging of email console messages
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['log_email_console_msgs'] = 'y';
 
@@ -1868,7 +1868,7 @@ Values     Behavior
 ``text``   Full server path to system log folder 
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['log_path'] = '/path/to/location/';
 
@@ -1884,7 +1884,7 @@ Values     Behavior
 ``n``      Disables referrers tracking
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['log_referrers'] = 'y';
 
@@ -1900,7 +1900,7 @@ Values     Behavior
 ``html``   Sets defauly email format to HTML
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['mail_format'] = 'plain';
 
@@ -1921,7 +1921,7 @@ Values       Behavior
 ``sendmail`` Sets email protocol to Sendmail
 ============ ========
 
-Example: ::
+Example Usage: ::
 
 $config['mail_protocol'] = 'smtp';
 
@@ -1941,7 +1941,7 @@ Values  Behavior
 ``n``   Disables mailing list
 ======= ========
 
-Example: ::
+Example Usage: ::
 
 $config['mailinglist_enabled'] = 'y';
 
@@ -1961,7 +1961,7 @@ Values  Behavior
 ``n``   Default value, disables recipient list for notification of new mailing list sign-ups
 ======= ========
 
-Example: ::
+Example Usage: ::
 
 $config['mailinglist_notify'] = 'y';
 
@@ -1980,7 +1980,7 @@ Values   Behavior
 ``text`` Email address Notification Recipient(s) 
 ======== ========
 
-Example: ::
+Example Usage: ::
 
 $config['mailinglist_notify_emails'] = 'joe@example.com';
 
@@ -1999,7 +1999,7 @@ Values     Behavior
 ``number`` Sets maximum number of recent search terms to save
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['max_logged_searches'] = '500';
 
@@ -2018,7 +2018,7 @@ Values     Behavior
 ``number`` Sets maximum number of page loads
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['max_page_loads'] = '10';
 
@@ -2037,7 +2037,7 @@ Values     Behavior
 ``number`` Sets maximum number of template revisions to keep
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['max_tmpl_revisions'] = '10';
 
@@ -2056,7 +2056,7 @@ Values     Behavior
 ``text``   Email address Notification Recipient(s)
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['mbr_notification_emails'] = 'joe@example.com';
 
@@ -2075,7 +2075,7 @@ Values      Behavior
 ``text``    Sets the theme for the default member profile
 =========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['member_theme'] = 'default';
 
@@ -2095,7 +2095,7 @@ Values      Behavior
 ``desc``    Deafult value, sorts member list in Descending order
 =========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['memberlist_sort_order'] = 'desc';
 
@@ -2114,7 +2114,7 @@ Values      Behavior
 ``number``  Sets the number of rows to return by default
 =========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['memberlist_row_limit'] = '20';
 
@@ -2137,7 +2137,7 @@ Values             Behavior
 ``join_date``      Sorts member list by Join Date
 ================== ========
 
-Example: ::
+Example Usage: ::
 
 $config['memberlist_order_by'] = "total_posts";
 
@@ -2156,7 +2156,7 @@ Values      Behavior
 ``text``    Indicates the filename of the dictionary file
 =========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['name_of_dictionary_file'] = 'billy';
 
@@ -2176,7 +2176,7 @@ Values  Behavior
 ``n``   Default value, notification will not be sent
 ======= ========
 
-Example: ::
+Example Usage: ::
 
 $config['new_member_notification'] = "n";
 
@@ -2196,7 +2196,7 @@ Values  Behavior
 ``n``   New posts do not clear cache
 ======= ========
 
-Example: ::
+Example Usage: ::
 
 $config['new_posts_clear_caches'] = "n";
 
@@ -2216,7 +2216,7 @@ Values  Behavior
 ``n``   Disables new version auto check
 ======= ========
 
-Example: ::
+Example Usage: ::
 
 $config['new_version_check'] = "n";
 
@@ -2236,7 +2236,7 @@ Values  Behavior
 ``n``   Disables password lockouts
 ======= ========
 
-Example: ::
+Example Usage: ::
 
 $config['password_lockout'] = "n";
 
@@ -2255,7 +2255,7 @@ Values     Behavior
 ``number`` Number is set in minutes. You are allowed to use decimal fractions. Example: 1.5
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['password_lockout_interval'] = "2.5";
 
@@ -2280,7 +2280,7 @@ Values     Behavior
 ``text``   Sets the permitted URI characters
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\\-';
 
@@ -2295,7 +2295,7 @@ Values     Behavior
 ``text``   Sets path to third_party directory
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['path_third_themes'] = "/valid/path/to/directory/";
 
@@ -2310,7 +2310,7 @@ Values     Behavior
 ``number`` Sets the maximum hight (in pixels) for member photos
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['photo_max_height'] = "100";
 
@@ -2329,7 +2329,7 @@ Values     Behavior
 ``number`` Sets the maximum Size (in Kilobytes) allowed for user-uploaded member photos.
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['photo_max_kb'] = "50";
 
@@ -2348,7 +2348,7 @@ Values     Behavior
 ``number`` Sets the maximum width (in pixels) allowed for user-uploaded member photos
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['photo_max_width'] = "150";
 
@@ -2370,7 +2370,7 @@ Values     Behavior
 ``text``   Sets the full server path to the photos folder
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['photo_path'] = "/path/to/folder/";
 
@@ -2389,7 +2389,7 @@ Values     Behavior
 ``text``   Sets the URL to the photos folder
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['photo_url'] = "http://www.example.com/images/memberphotos/";
 
@@ -2409,7 +2409,7 @@ Values  Behavior
 ``n``   Default value, disables links created by Typography class open in a new window
 ======= ========
 
-Example: ::
+Example Usage: ::
 
 $config['popup_link'] = 'y';
 
@@ -2424,7 +2424,7 @@ Values     Behavior
 ``text``   Sets the profile trigger word
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['profile_trigger'] = "fajkkalf89idjae8hjkfsldamvpp0";
 
@@ -2444,7 +2444,7 @@ Values     Behavior
 ``n``      Disables protect_javacript
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['protect_javascript'] = "y";
 
@@ -2459,7 +2459,7 @@ Values     Behavior
 ``text``   Comma delimited list of IP addresses
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['proxy_ips'] = '10.0.1.25,10.0.1.26';
 
@@ -2474,7 +2474,7 @@ Values     Behavior
 ``number`` Sets the minimum password length
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['pw_min_len'] = '5';
 
@@ -2494,7 +2494,7 @@ Values     Behavior
 ``n``      Disables focus
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['publish_page_title_focus'] = 'n';
 
@@ -2509,7 +2509,7 @@ Values     Behavior
 ``number`` Sets the batch size
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['recount_batch_total'] = '10000';
 
@@ -2529,7 +2529,7 @@ Values       Behavior
 ``refresh``  Sets the redirect method to Refresh (Windows servers) (Slower)
 ============ ========
 
-Example: ::
+Example Usage: ::
 
 $config['redirect_method'] = 'redirect';
 
@@ -2549,7 +2549,7 @@ Values     Behavior
 ``n``      Default value, does not apply rank denial to user-submitted Links
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['redirect_submitted_links'] = 'y';
 
@@ -2569,7 +2569,7 @@ Values     Behavior
 ``n``      Default value, does not allow Entry View Tracking
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['relaxed_track_views'] = 'y';
 
@@ -2585,7 +2585,7 @@ Values     Behavior
 ``n``      Default value, does not remove the close all button
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['remove_close_all_button'] = 'y';
 
@@ -2601,7 +2601,7 @@ Values     Behavior
 ``n``      Default value, disables stripping of unparsed ExpressionEngine variables
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['remove_unparsed_vars'] = 'y';
 
@@ -2618,7 +2618,7 @@ Values     Behavior
 ``manual`` Sets member activation to manual activation by an administrator
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['req_mbr_activation'] = 'none';
 
@@ -2638,7 +2638,7 @@ Values     Behavior
 ``n``      Disables Require IP Address and User Agent for Login
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['require_ip_for_login'] = 'n';
 
@@ -2658,7 +2658,7 @@ Values     Behavior
 ``n``      Disables require IP Address and User Agent for submitting comments
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['require_ip_for_posting'] = 'n';
 
@@ -2678,7 +2678,7 @@ Values     Behavior
 ``n``      Disables require secure passwords
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['require_secure_passwords'] = 'n';
 
@@ -2698,7 +2698,7 @@ Values     Behavior
 ``n``      Disables require TOS
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['require_terms_of_service'] = 'n';
 
@@ -2720,7 +2720,7 @@ Values     Behavior
 ``text``   Sets the category URL indicator
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['reserved_category_word'] = 'category';
 
@@ -2740,7 +2740,7 @@ Values     Behavior
 ``FALSE``  Disables rewrite short tags
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['rewrite_short_tags'] = 'TRUE';
 
@@ -2756,7 +2756,7 @@ Values     Behavior
 ``text``   Sets the default toolset id
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['rte_default_toolset_id'] = '2';
 
@@ -2776,7 +2776,7 @@ Values     Behavior
 ``n``      Disables RTE and shows the normal textarea
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['rte_enabled'] = 'y';
 
@@ -2796,7 +2796,7 @@ Values     Behavior
 ``n``      Default value, templates are not saved as files
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['save_tmpl_files'] = 'y';
 
@@ -2816,7 +2816,7 @@ Values     Behavior
 ``n``      Default value, templates revisions are not saved
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['save_tmpl_revisions'] = 'y';
 
@@ -2836,7 +2836,7 @@ Values     Behavior
 ``n``      Disables secure form mode
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['secure_forms'] = 'y';
 
@@ -2856,7 +2856,7 @@ Values     Behavior
 ``n``      Disables generate HTTP headers
 ========== ========
 
-Example: ::
+Example Usage: ::
 
 $config['send_headers'] = 'n';
 
@@ -2865,77 +2865,665 @@ $config['send_headers'] = 'n';
 **Control Panel Location:** :menuselection:`Admin --> System Administration --> Output and Debugging`: Generate HTTP Page Headers
 
 
-   ::
+show_profiler
+-------------
+If :ref:`Display Output Profiler <output-debug-display-profiler-label>` is enabled, Super Admins will see benchmark results, SQL queries, and submitted form data displayed at the bottom of the browser window. This is useful for debugging.
 
-    [server_offset]
-    [server_timezone]
-    [sess_type]
-    [show_profiler]
-    
-    [sig_allow_img_hotlink]
-    [sig_allow_img_upload]
-    [sig_img_max_height]
-    [sig_img_max_kb]
-    [sig_img_max_width]
-    [sig_img_path]
-    [sig_img_url]
-    [sig_maxlength]
+========== ========
+Values     Behavior
+========== ========
+``y``      Enables output profiler
+``n``      Default value, disables output profiler
+========== ========
 
-    [site_404]
-    [site_bootstrap_checksums]
-    [site_description]
-    [site_id]
-    [site_index]
-    [site_label]
-    [site_name]
-    [site_pages]
-    [site_short_name]
-    [site_url]
+Example Usage: ::
 
-    [smart_static_parsing]
-    [smtp_password]
-    [smtp_server]
-    [smtp_port]
-    [smtp_username]
-    [spellcheck_language_code]
-    [strict_urls]
-    [subclass_prefix]
+$config['show_profiler'] = 'y';
 
-    [template]
-    [template_group]
-    [template_loop_prevention]
-    [template_debugging]
-    
-    [theme_folder_path]
-    [theme_folder_url]
-    [third_party_path]
-    [thumbnail_prefix]
+.. rst-class:: cp-path
 
-    [time_format]
-    [time_interval]
-    [time_reference]
-    [tmpl_file_basepath]
-    
-    [un_min_len]
-    [uri_protocol]
-    [url_suffix]
-    [upload_preferences]
-    [url_third_themes]
-    [use_category_name]
-    [use_compressed_js]
+**Control Panel Location:** :menuselection:`Admin --> System Administration --> Output and Debugging`: Display Output Profiler
 
-    [use_membership_captcha]
-    [use_mobile_control_panel]
-    [user_session_ttl]
-    [user_session_type]
-    
-    [webmaster_email]
-    [webmaster_name]
-    
-    [word_separator]
-    [word_wrap]
-    [xml_lang]
-    
-    [xss_clean_member_exception]
-    [xss_clean_member_group_exception]
-    [xss_clean_uploads]
+
+sig_allow_img_hotlink
+---------------------
+:ref:`Allow image hot linking in signatures <member-signature-hot-linking-label>` specifies whether or not members can “hot link” to images located on other sites or servers. Most sites do not like other people to hot link to their content since it basically “steals” their bandwidth.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Enables image hot linking protection
+``n``      Default value, disables image hot linking protection
+========== ========
+
+Example Usage: ::
+
+$config['sig_allow_img_hotlink'] = 'n';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Allow image hot linking in signatures
+
+
+sig_allow_img_upload
+--------------------
+:ref:`Allow users to upload an image in their signature <member-signature-allow-upload-label>` determines whether or not members will be allowed to upload images to be used in their signatures.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Enables image uploading for signatures
+``n``      Default value, disables image uploading for signatures
+========== ========
+
+Example Usage: ::
+
+$config['sig_allow_img_upload'] = 'y';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Allow users to upload an image in their signature
+
+
+sig_img_max_height
+------------------
+:ref:`Maximum Height of Signature Image <member-signature-max-height-label>` is the maximum height (in pixels) allowed for user-uploaded signature images.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Sets the maximum height (in pixels) for user-uploaded signature images
+========== ========
+
+Example Usage: ::
+
+$config['sig_img_max_height'] = '150';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Maximum Height of Signature Image
+
+
+sig_img_max_width
+-----------------
+:ref:`Maximum Height of Signature Image <member-signature-max-width-label>` is the maximum width (in pixels) allowed for user-uploaded signature images.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Sets the maximum width (in pixels) for user-uploaded signature images
+========== ========
+
+Example Usage: ::
+
+$config['sig_img_max_width'] = '150';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Maximum Width of Signature Image
+
+
+sig_img_max_kb
+--------------
+:ref:`Maximum Size (in Kilobytes) of Signature Image <member-signature-max-size-label>` is the maximum file size allowed for user-uploaded signature images.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Sets the maximum file size allowed for user-uploaded signature images
+========== ========
+
+Example Usage: ::
+
+$config['sig_img_max_kb'] = '50';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Maximum Size (in Kilobytes) of Signature Image
+
+
+sig_img_path
+------------
+:ref:`Server path to Signature Image Upload Folder <member-signature-server-path-label>` is where you set the full server page (not the URL) to the signature image uploads folder. By default, it is the signature_attachments folder inside the images folder.
+
+.. NOTE::
+   Must be a full server path, NOT a URL. Folder permissions must be set to 777
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets full server path to the signature image uploads folder
+========== ========
+
+Example Usage: ::
+
+$config['sig_img_path'] = '/path/to/image/folder/';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Server path to Signature Image Upload Folder
+
+
+sig_img_url
+-----------
+:ref:`URL to Signature Image Upload Folder <member-signature-URL-label>` is the URL to the folder on your site that contains the signature image uploads.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the URL to the folder on your site that contains the signature image uploads
+========== ========
+
+Example Usage: ::
+
+$config['sig_img_url'] = 'http://www.example.com/images/signatures/';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: URL to Signature Image Upload Folder
+
+
+sig_maxlength
+-------------
+:ref:`Maximum number of characters per signature <member-signature-max-chars-label>` is the maximum number of characters allowed within a member’s signature.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Sets the maximum number of characters allowed within a member’s signature
+========== ========
+
+Example Usage: ::
+
+$config['sig_maxlength'] = '500';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Members --> Preferences`: Maximum number of characters per signature
+
+
+site_404
+--------
+:ref:`Maximum number of characters per signature <global-template-404-label>` determines which template should be displayed when someone tries to access an invalid URL. If you choose “None”, a standard 404 message and server header will be shown.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets which template should be displayed when someone tries to access an invalid URL
+========== ========
+
+Example Usage: ::
+
+$config['site_404'] = 'site/404';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Design --> Templates --> Global Template Preferences`: 404 Page
+
+
+site_description
+----------------
+Sets the site description.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets site description
+========== ========
+
+Example Usage: ::
+
+$config['site_description'] = 'This is a website';
+
+
+smart_static_parsing
+--------------------
+When enabled, parsing of embedded templates that are not set to the template type “Static” will still be parsed as static if they can be (i.e. if they have no PHP or ExpressionEngine tags in them). This setting is enabled by default.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Default value, enables smart static parsing
+``n``      Disables smart static parsing
+========== ========
+
+Example Usage: ::
+
+$config['smart_static_parsing'] = 'n';
+
+
+smtp_password
+-------------
+:ref:`SMTP Password <email-smtp-password-label>` is the password used to log in to your SMTP server. Not all SMTP servers require you to authenticate, but many of them do. In those cases you will need to specify the username (above) and password.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the SMTP password
+========== ========
+
+Example Usage: ::
+
+$config['smtp_password'] = 'ihateburpees';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Email Configuration`: SMTP Password
+
+
+smtp_server
+-----------
+:ref:`SMTP Server Address <email-smtp-server-label>` If you chose SMTP as your email protocol above, then you will need to fill out this field, which specifies the server address of the SMTP server. This setting is ignored if “SMTP” is not selected as the email protocol.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets SMTP server address
+========== ========
+
+Example Usage: ::
+
+$config['smtp_server'] = '10.2.3.12';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Email Configuration`: SMTP Server Address
+
+
+smtp_port
+---------
+:ref:`SMTP Server Port <email-smtp-server-port-label>` If you chose SMTP as your email protocol above, then you will need to fill out this field, which specifies the server address of the SMTP server. This setting is ignored if “SMTP” is not selected as the email protocol.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Specifies which port to use for SMTP
+========== ========
+
+Example Usage: ::
+
+$config['email_smtp_port'] = "2525";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Email Configuration`: SMTP Server Port
+
+
+smtp_username
+-------------
+:ref:`SMTP Username <email-smtp-username-label>` is the username used to log in to your SMTP server. Not all SMTP servers require you to authenticate, but many of them do.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Specifies the SMTP username
+========== ========
+
+Example Usage: ::
+
+$config['smtp_username'] = "joe@example.com";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Email Configuration`: SMTP Username
+
+
+spellcheck_language_code
+------------------------
+Allows you to specify the language used in the spellchecking functions. Set the value to the two letter ISO 639 language code for the spellcheck (ex: en, es, de)
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Specifies the language used in the spellchecking functions
+========== ========
+
+Example Usage: ::
+
+$config['spellcheck_language_code'] = 'en';
+
+
+subclass_prefix
+---------------
+Allows you to set the filename/classname prefix when extending native libraries.  For more information please see the CodeIgniter user guide.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the subclass prefix
+========== ========
+
+Example Usage: ::
+
+$config['subclass_prefix'] = "EE_";
+
+
+template_debugging
+------------------
+If :ref:`Display Template Debugging <output-debug-display-template-debug-label>` is enabled, a log of all processing that occurs while a page is being created in the ExpressionEngine Template parser will be shown to Super Admins at the bottom of the browser window. This includes Global Variables, Conditionals, Tags, PHP on Input/Ouput, Embeds, and Extension Hooks. This is an excellent tool for debugging your templates.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Enables template debugging
+``n``      Default value, disables template debugging
+========== ========
+
+Example Usage: ::
+
+$config['template_debugging'] = "y";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> System Administration --> Output and Debugging`: Display Template Debugging
+
+
+theme_folder_path
+-----------------
+:ref:`Theme Folder Path <general-config-theme-path-label>` is the server path to the “themes” folder.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the server path to the “themes” folder.
+========== ========
+
+Example Usage: ::
+
+$config['theme_folder_path'] = "/home/usr/domain.com/public_html/themes/";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> General Configuration`: Theme Folder Path
+
+
+third_party_path
+----------------
+With the third_party_path config variable, you can keep your third_party folders completely out of the system/ and themes/ directory, which will make upgrading easier.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the path to your third party folders.
+========== ========
+
+Example Usage: ::
+
+$config['third_party_path'] = "/path/to/third_party/folders/";
+
+
+tmpl_file_basepath
+------------------
+:ref:`Theme Folder Path <general-config-theme-path-label>`  is the server path (not URL) to the folder that holds the Template files.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the server path to the folder that holds the Template files
+========== ========
+
+Example Usage: ::
+
+$config['tmpl_file_basepath'] = "/home/usr/domain.com/system/expressionengine/templates/";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Design --> Templates --> Template Preferences`: Server path to site's templates
+
+
+un_min_len
+----------
+:ref:`Minimum Username Length <security-min-username-label>`  is the minimum length required for a member username during new member registration. Specify the minimum number of characters required.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Sets the minimum length required for a member username during new member registration
+========== ========
+
+Example Usage: ::
+
+$config['un_min_len'] = "5";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Security and Sessions`: Server path to site's templates
+
+
+uri_protocol
+------------
+This item determines which server global should be used to retrieve the URI string.  The default setting of "AUTO" works for most servers. If your links do not seem to work, try one of the other delicious flavors.
+
+=================== ========
+Values              Behavior
+=================== ========
+``auto``            Default value, auto detects
+``PATH_INFO``       Uses the PATH_INFO
+``QUERY_STRING``    Uses the QUERY_STRING
+``REQUEST_URI``     Uses the REQUEST_URI
+``ORIG_PATH_INFO``  Uses the ORIG_PATH_INFO 
+=================== ========
+
+Example Usage: ::
+
+$config['uri_protocol'] = "PATH_INFO";
+
+
+un_min_len
+----------
+:ref:`Minimum Username Length <security-min-username-label>`  is the minimum length required for a member username during new member registration. Specify the minimum number of characters required.
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Sets the minimum length required for a member username during new member registration
+========== ========
+
+Example Usage: ::
+
+$config['un_min_len'] = "5";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Security and Sessions`: Server path to site's templates
+
+
+url_third_themes
+-----------------
+Overrides the third_party URL so you can move your third_party directory outside of your system directory.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets URL to third_party directory
+========== ========
+
+Example Usage: ::
+
+$config['url_third_themes'] = "http://www.example.com/third_party/";
+
+
+use_mobile_control_panel
+------------------------
+Disables checks within the control panel to look for the existence of the themes/cp_themes/mobile directory, allowing for any theme to be used when viewing on a mobile device.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Disables checks within the control panel for mobile directory
+``n``      ExpressionEngine will check for mobile directory
+========== ========
+
+Example Usage: ::
+
+$config['use_mobile_control_panel'] = "n";
+
+
+user_session_ttl
+----------------
+Allows changing of the Users Session Length to any number in seconds. For instance, if users should be logged out after 10 minutes of inactivity, the value would be: 600
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Time in seconds for Users Session Length
+========== ========
+
+Example Usage: ::
+
+$config['user_session_ttl'] = '600';
+
+
+user_session_type
+-----------------
+:ref:`User Session Type <user-session-type-label>` determines how sessions for regular users on your website are handled. You may use cookies, session IDs, or a combination.
+
+====== ========
+Values Behavior
+====== ========
+``c``  Sets the User Session to use cookies only
+``s``  Sets the User Session to use Session ID only
+``cs`` Sets the User Session to use Cookies and Session ID
+====== ========
+
+
+Example Usage: ::
+
+ $config['user_session_type'] = 's';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Security And Privacy --> Security And Sessions`: User Session Type
+
+
+webmaster_email
+---------------
+Sets the Webmaster's email address.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the webmaster's email address
+========== ========
+
+Example Usage: ::
+
+$config['webmaster_email'] = "joe@example.com";
+
+
+webmaster_name
+--------------
+Sets the Webmaster's email address.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the webmaster's name
+========== ========
+
+Example Usage: ::
+
+$config['webmaster_name'] = "Joe";
+
+
+word_separator
+--------------
+When creating an entry in the PUBLISH page, if you do not manually enter a “URL Title” then the system will automatically create one based on the entry Title. The :ref:`Word Separator for URL Titles <global-channel-word-seperator-label>` preference determines whether underscore characters (_) or dashes (-) should be used when automatically creating the URL Title.
+
+============== ========
+Values         Behavior
+============== ========
+``dash``       Default value, sets Dash as the word separator
+``underscore`` Sets underscore as the word separator
+============== ========
+
+Example Usage: ::
+
+ $config['word_separator'] = 'dash';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Global Channel Preferences`: Word Separator for URL Titles
+
+
+xml_lang
+--------
+The :ref:`Default XML Language <general-config-default-xml-label>` setting is typically used when outputting RSS feeds. Your feed will identify itself as having the language specified here.
+
+============== ========
+Values         Behavior
+============== ========
+``text``       Sets default XML language
+============== ========
+
+Example Usage: ::
+
+ $config['xml_lang'] = 'en';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> General Configuration`: Default XML Language
+
+
+xss_clean_member_exception
+--------------------------
+Sets the member IDs to exclude XSS cleaning on.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Pipe delimeted list of member IDs
+========== ========
+
+Example Usage: ::
+
+$config['xss_clean_member_exception'] = '3|14|83';
+
+
+xss_clean_member_group_exception
+--------------------------------
+Sets the member IDs to exclude XSS cleaning on.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Pipe delimited list of member group IDs
+========== ========
+
+Example Usage: ::
+
+$config['xss_clean_member_group_exception'] = '2|5';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
