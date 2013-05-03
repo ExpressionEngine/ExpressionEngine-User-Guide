@@ -652,7 +652,7 @@ $config['banned_ips'] = 'dsmith';
 **Control Panel Location:** :menuselection:`Members --> User Banning`: Restricted Usernames
 
 
-base_url
+site_url
 --------
 The :ref:`URL to the root directory of your site <general-config-url-root-label>` is the full URL to the folder containing your site’s index page.
 
@@ -666,7 +666,7 @@ Values   Behavior
 Example Usage: ::
 
 
-$config['base_url'] = 'http://www.example.com';
+$config['site_url'] = 'http://www.example.com';
 
 .. rst-class:: cp-path
 
@@ -902,8 +902,8 @@ $config['comment_word_censoring'] = 'y';
 **Control Panel Location:** :menuselection:`Add-Ons --> Modules --> Comment`: Force word censoring for comments
 
 
-compress_output
----------------
+gzip_output
+-----------
 Setting :ref:`Enable GZIP Output <output-enable-gzip-label>` to “Y” will cause the web server to send out your pages in the compressed gzip format. Browsers will automatically decompress the pages and display them as normal; there will be no visible difference to your users apart from a faster page loading time.
 
 In order for this option to work your server must support the gzip format. Additionally, the browser being used to view your site must also support pages served in the gzip format. Many modern browser support this, but not all do, so if you are concerned with wide-spread compatibility you may want to set this to “n”. (Also note that while Internet Explorer does support this feature, it also contains bugs in its implementation which can have adverse consequences.)
@@ -911,13 +911,13 @@ In order for this option to work your server must support the gzip format. Addit
 ========= ========
 Values    Behavior
 ========= ========
-``TRUE``  When enabled, your site will be shown in a compressed format for faster page loading
-``FALSE`` Default value, does not compress output
+``y``     When enabled, your site will be shown in a compressed format for faster page loading
+``n``     Default value, does not compress output
 ========= ========
 
 Example Usage: ::
 
-$config['compress_output'] = 'FALSE';
+$config['gzip_output'] = 'n';
 
 .. rst-class:: cp-path
 
@@ -1104,6 +1104,25 @@ $config['default_member_group'] = '6';
 .. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Members --> Preferences`: Default Member Group Assigned to New Members
+
+
+default_site_timezone
+---------------------
+The :ref:`Server Time Zone <default-member-group-label>` lets you specify the time zone where your server is located. ExpressionEngine uses native PHP functions to deal with dates and times, which base their output on the timezone of the server. If you do not set this preference so that it correctly reflects the location of your server it may cause problems with your dates and times. If you are not sure where you server is located please ask your hosting provider.
+
+========== ========
+Values     Behavior
+========== ========
+``NEED``   NEED
+========== ========
+
+Example Usage: ::
+
+$config['default_site_timezone'] = '';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> Localization Settings`: Server Timezone
 
 
 deny_duplicate_data
@@ -1570,6 +1589,22 @@ $config['enable_photos'] = "y";
 
 enable_query_strings
 --------------------
+Toggles query strings
+
+========== ========
+Values     Behavior
+========== ========
+``TRUE``   Enables query strings
+``FALSE``  Default value, disables query strings
+========== ========
+
+Example Usage: ::
+
+$config['enable_query_strings'] = "TRUE";
+
+
+force_query_string
+------------------
 Setting :ref:`Force URL query strings <output-force-query-strings-label>` to “Yes” will force the system to use a standard query string in all your URLs.
 
 ========== ========
@@ -1581,7 +1616,7 @@ Values     Behavior
 
 Example Usage: ::
 
-$config['enable_query_strings'] = "TRUE";
+$config['force_query_string'] = "TRUE";
 
 .. rst-class:: cp-path
 
@@ -1679,6 +1714,37 @@ Example Usage: ::
 $config['filename_increment'] = "y";
 
 
+forum_trigger
+-------------
+Forum trigger word, requires that forums be installed.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the forum trigger word
+========== ========
+
+Example Usage: ::
+
+$config['forum_trigger'] = "eerox";
+
+
+global_xss_filtering
+--------------------
+Enables XSS filtering for your ExpressionEngine website.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Enables XSS filtering
+``n``      Default value, disables XSS filtering
+========== ========
+
+Example Usage: ::
+
+$config['global_xss_filtering'] = "y";
+
+
 hidden_template_indicator
 -------------------------
 Set the character(s) to use at the beginning of a template name to consider it a “hidden” template. Default is a period’.’
@@ -1692,6 +1758,21 @@ Values     Behavior
 Example Usage: ::
 
 $config['hidden_template_indicator'] = '_';
+
+
+htaccess_path
+-------------------------
+Used by the Blacklist Module to write rules to your .htaccess file. This is the server path.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the server path to your .htaccess file.
+========== ========
+
+Example Usage: ::
+
+$config['htaccess_path'] = '/server/path/to/your/.htaccess/';
 
 
 image_library_path
@@ -1731,7 +1812,7 @@ $config['image_resize_protocol'] = "gd2";
 **Control Panel Location:** :menuselection:`Admin --> System Administration --> Image Resizing Preferences`: Image Resizing Protocol
  
 
-index_page
+site_index
 ----------
 :ref:`Name of your site’s index page <general-config-index-name-label>`  is the filename of your site’s “index” page. By default, this will be index.php, which is located in the base folder. You will only need to alter this setting if you have changed the filename.
 
@@ -1743,7 +1824,7 @@ Values     Behavior
 
 Example Usage: ::
 
-$config['index_page'] = '';
+$config['site_index'] = 'coolpage.php';
 
 .. rst-class:: cp-path
 
@@ -1764,6 +1845,21 @@ Example Usage: ::
 
 $config['install_lock'] = '1';
 
+is_site_on
+----------
+Is site on refers to both MSM installations and a single site. Setting this variable to "n" will shut ExpressionEngine off allowing you to put an index.php file in the root directory without ExpressionEngine trying to use it.
+
+========== ========
+Values     Behavior
+========== ========
+``y``      Sets ExpressionEngine to on
+``n``      Sets ExpressionEngine to off
+========== ========
+
+Example Usage: ::
+
+$config['is_site_on'] = "y";
+
 
 is_system_on
 ------------
@@ -1783,7 +1879,6 @@ $config['is_system_on'] = "y";
 .. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Admin --> General Configuration`: Is system on
-
 
 language
 --------
@@ -3343,22 +3438,6 @@ Example Usage: ::
 $config['url_third_themes'] = "http://www.example.com/third_party/";
 
 
-use_mobile_control_panel
-------------------------
-Disables checks within the control panel to look for the existence of the themes/cp_themes/mobile directory, allowing for any theme to be used when viewing on a mobile device.
-
-========== ========
-Values     Behavior
-========== ========
-``y``      Disables checks within the control panel for mobile directory
-``n``      ExpressionEngine will check for mobile directory
-========== ========
-
-Example Usage: ::
-
-$config['use_mobile_control_panel'] = "n";
-
-
 user_session_ttl
 ----------------
 Allows changing of the Users Session Length to any number in seconds. For instance, if users should be logged out after 10 minutes of inactivity, the value would be: 600
@@ -3493,37 +3572,3 @@ Values     Behavior
 Example Usage: ::
 
 $config['xss_clean_member_group_exception'] = '2|5';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
