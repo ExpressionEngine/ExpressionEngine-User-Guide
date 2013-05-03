@@ -662,15 +662,28 @@ Values   Behavior
 ``URL``  URL to the root directory of your site
 ======== ========
 
-
 Example Usage: ::
-
 
 $config['base_url'] = 'http://www.example.com';
 
 .. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Admin --> General Configuration`: URL to the root directory of your site
+
+
+cache_path
+----------
+Leave this BLANK unless you would like to set something other than the default system/cache/ folder.  Use a full server path with trailing slash.
+
+======== ========
+Values   Behavior
+======== ========
+``text`` Sets the server path to your cache folder
+======== ========
+
+Example Usage: ::
+
+$config['cache_path'] = '/path/to/cache/folder/';
 
 
 captcha_font
@@ -1531,6 +1544,22 @@ $config['enable_hit_tracking'] = "y";
 **Control Panel Location:** :menuselection:`Members --> Security and Privacy --> Tracking Preferences`: Enable Template Hit Tracking
  
 
+enable_hooks
+------------
+If you would like to use the "hooks" feature you must enable it by setting this variable to TRUE (boolean).  See the user guide for details.
+
+========== ========
+Values     Behavior
+========== ========
+``TRUE``   Enables hooks
+``FALSE``  Default value, disables hooks
+========== ========
+
+Example Usage: ::
+
+$config['enable_hooks'] = "y";
+
+
 enable_online_user_tracking
 ---------------------------
 :ref:`Enable Online User Tracking <tracking-enable-online-user-tracking-label>` allows you yo determine whether tracking of online users is performed by the system. When you have this preference set to “Yes”, a database update will be performed for each page load so that the user statistics can be tracked and stored.
@@ -1933,6 +1962,21 @@ $config['lockout_time'] = '30';
 **Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Throttling Preferences`: Lockout Time
 
 
+log_date_format
+---------------
+Each item that is logged has an associated date. You can use PHP date codes to set your own date formatting
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets log date format 
+========== ========
+
+Example Usage: ::
+
+$config['log_date_format'] = 'Y-m-d H:i:s';
+
+
 log_email_console_msgs
 ----------------------
 The :ref:`Log Email Console Messages <email-log-console-messages-label>` preference lets you log all messages sent via the Email Console in the member profile pages.
@@ -1982,6 +2026,25 @@ Values     Behavior
 Example Usage: ::
 
 $config['log_referrers'] = 'y';
+
+
+log_threshold
+-------------
+If you have enabled error logging, you can set an error threshold to determine what gets logged.
+
+========== ========
+Values     Behavior
+========== ========
+``0``      Disables logging, Error logging TURNED OFF
+``1``      Error Messages (including PHP errors)
+``2``      Debug Messages
+``3``      Informational Messages
+``4``      All Messages
+========== ========
+
+Example Usage: ::
+
+$config['log_threshold'] = '1';
 
 
 mail_format
