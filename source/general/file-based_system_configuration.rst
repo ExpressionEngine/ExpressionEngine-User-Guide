@@ -652,7 +652,7 @@ $config['banned_ips'] = 'dsmith';
 **Control Panel Location:** :menuselection:`Members --> User Banning`: Restricted Usernames
 
 
-site_url
+base_url
 --------
 The :ref:`URL to the root directory of your site <general-config-url-root-label>` is the full URL to the folder containing your site’s index page.
 
@@ -666,7 +666,7 @@ Values   Behavior
 Example Usage: ::
 
 
-$config['site_url'] = 'http://www.example.com';
+$config['base_url'] = 'http://www.example.com';
 
 .. rst-class:: cp-path
 
@@ -902,8 +902,8 @@ $config['comment_word_censoring'] = 'y';
 **Control Panel Location:** :menuselection:`Add-Ons --> Modules --> Comment`: Force word censoring for comments
 
 
-gzip_output
------------
+compress_output
+---------------
 Setting :ref:`Enable GZIP Output <output-enable-gzip-label>` to “Y” will cause the web server to send out your pages in the compressed gzip format. Browsers will automatically decompress the pages and display them as normal; there will be no visible difference to your users apart from a faster page loading time.
 
 In order for this option to work your server must support the gzip format. Additionally, the browser being used to view your site must also support pages served in the gzip format. Many modern browser support this, but not all do, so if you are concerned with wide-spread compatibility you may want to set this to “n”. (Also note that while Internet Explorer does support this feature, it also contains bugs in its implementation which can have adverse consequences.)
@@ -917,7 +917,7 @@ Values    Behavior
 
 Example Usage: ::
 
-$config['gzip_output'] = 'n';
+$config['compress_output'] = 'n';
 
 .. rst-class:: cp-path
 
@@ -1812,7 +1812,7 @@ $config['image_resize_protocol'] = "gd2";
 **Control Panel Location:** :menuselection:`Admin --> System Administration --> Image Resizing Preferences`: Image Resizing Protocol
  
 
-site_index
+index_page
 ----------
 :ref:`Name of your site’s index page <general-config-index-name-label>`  is the filename of your site’s “index” page. By default, this will be index.php, which is located in the base folder. You will only need to alter this setting if you have changed the filename.
 
@@ -1824,7 +1824,7 @@ Values     Behavior
 
 Example Usage: ::
 
-$config['site_index'] = 'coolpage.php';
+$config['index_page'] = 'coolpage.php';
 
 .. rst-class:: cp-path
 
@@ -3311,6 +3311,21 @@ $config['template_debugging'] = "y";
 .. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Admin --> System Administration --> Output and Debugging`: Display Template Debugging
+
+
+========== ========
+Values     Behavior
+========== ========
+``NEED``   NEED
+========== ========
+
+Example Usage: ::
+
+$config['template_group'] = "NEED";
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Design --> Templates --> Template Manager --> Edit Template Group`: Make the index template in this group your site's home page?
 
 
 theme_folder_path
