@@ -21,7 +21,7 @@ Calling the Layout Class
 
   ::
 
-    $this->EE->load->library('layout');
+    ee()->load->library('layout');
 
 Add Tabs
 ~~~~~~~~
@@ -32,7 +32,7 @@ Add Tabs
   layouts. If there is an existing tab with the same name, the function
   will return false::
 
-    $this->EE->layout->add_layout_tabs($tabs);
+    ee()->layout->add_layout_tabs($tabs);
 
   :param array $tabs: Associative nested array with the top level where
     the key is the name of the tab. All fields are represented as nested
@@ -74,7 +74,7 @@ Delete Tabs
   :meth:`Layout::add_layout_tabs` function, any associated fields should
   be included as keys within the tab's array::
 
-    $this->EE->layout->delete_layout_tabs($tabs);
+    ee()->layout->delete_layout_tabs($tabs);
 
   :param array $tabs: Associative nested array with the top level where
     the key is the name of the tab. All fields are represented as nested
@@ -96,7 +96,7 @@ Add Fields
   if none exists in the layout. The $tabs array takes the same format as
   the :meth:`Layout::add_layout_tabs` function::
 
-    $this->EE->layout->add_layout_fields($tabs, $channel_id);
+    ee()->layout->add_layout_fields($tabs, $channel_id);
 
   :param array $tabs: Associative nested array with the top level where
     the key is the name of the tab. All fields are represented as nested
@@ -119,7 +119,7 @@ Delete Fields
   layouts associated with a given channel and should generally be
   omitted from third party usage. ::
 
-    $this->EE->layout->delete_layout_fields($tabs, $channel_id);
+    ee()->layout->delete_layout_fields($tabs, $channel_id);
 
   :param array $tabs: Associative nested array with the top level where
     the key is the name of the tab. All fields are represented as nested

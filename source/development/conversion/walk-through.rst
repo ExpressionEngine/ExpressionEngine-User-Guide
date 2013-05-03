@@ -77,7 +77,7 @@ View files for your module will reside within a folder named views
 within your module's folder. ExpressionEngine will automatically look in
 that path to find your view files, allowing you to use them thusly::
 
-  return $this->EE->load->view('index', $vars, TRUE);
+  return ee()->load->view('index', $vars, TRUE);
 
 Note in the above example that the third argument of ``view()`` is being
 used so that instead of being added to existing output, it is returned
@@ -99,14 +99,14 @@ it is an easier to edit and more organized developmental strategy.
    You need to set the page title (``cp_page_title`` variable) and the
    base breadcrumb link using this format::
 
-    $this->EE->cp->set_breadcrumb(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=package_name', lang('package_name_module_name'));
-    $this->EE->view->cp_page_title = lang('package_name_module_name');
+    ee()->cp->set_breadcrumb(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=package_name', lang('package_name_module_name'));
+    ee()->view->cp_page_title = lang('package_name_module_name');
 
 #. If the method is loading a view, load any dependences (such as the
    table class or form helper) before loading the view::
 
-    $this->EE->load->library('table');
-    $this->EE->load->helper('form');
+    ee()->load->library('table');
+    ee()->load->helper('form');
 
 #. If you are using jQuery in your control panel, initialize and compile
    it in your controller before loading your view or returning your
@@ -116,6 +116,6 @@ it is an easier to edit and more organized developmental strategy.
    correspond to the variable name in the view file.
 #. Pass those variables to the appropriate view via::
 
-    return $this->EE->load->view('view_filename', $vars, TRUE);
+    return ee()->load->view('view_filename', $vars, TRUE);
 
 #. Celebrate, you're done!

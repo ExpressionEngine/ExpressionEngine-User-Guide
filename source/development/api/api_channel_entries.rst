@@ -15,8 +15,8 @@ Calling the Class
   The Channel Entries class is called with the ``api->instantiate()``
   function::
 
-    $this->EE->load->library('api');
-    $this->EE->api->instantiate('channel_entries');
+    ee()->load->library('api');
+    ee()->api->instantiate('channel_entries');
 
   .. note:: The API uses a Singleton pattern and does not currently
     support nesting of calls. Thus instantiating a new call while in
@@ -35,7 +35,7 @@ Save Entry
 
   Saves a new or existing channel entry::
 
-    $this->EE->api_channel_entries->save_entry($data, $channel_id, $entry_id, $autosave);
+    ee()->api_channel_entries->save_entry($data, $channel_id, $entry_id, $autosave);
 
   :param array $data: Entry data to submit
   :param int $channel_id: The channel ID for the new entry
@@ -57,7 +57,7 @@ Submit New Entry
   edit date are not included in the data array, current time will be
   used instead. ::
 
-    $this->EE->api_channel_entries->submit_new_entry((int) $channel_id, (array) $data);
+    ee()->api_channel_entries->submit_new_entry((int) $channel_id, (array) $data);
 
   :param int $channel_id: The channel ID for the new entry
   :param array $data: Entry data to submit
@@ -67,9 +67,9 @@ Submit New Entry
 
   Example Usage::
 
-    $this->EE->load->library('api');
-    $this->EE->api->instantiate('channel_entries');
-    $this->EE->api->instantiate('channel_fields');
+    ee()->load->library('api');
+    ee()->api->instantiate('channel_entries');
+    ee()->api->instantiate('channel_fields');
 
     $data = array(
         'title'         => 'Breaking News Story!',
@@ -81,9 +81,9 @@ Submit New Entry
         'field_ft_19'   => 'xhtml'
     );
 
-    $this->EE->api_channel_fields->setup_entry_settings($channel_id, $data);
+    ee()->api_channel_fields->setup_entry_settings($channel_id, $data);
 
-    if ($this->EE->api_channel_entries->submit_new_entry($channel_id, $data) === FALSE)
+    if (ee()->api_channel_entries->submit_new_entry($channel_id, $data) === FALSE)
     {
         show_error('An Error Occurred Creating the Entry');
     }
@@ -108,7 +108,7 @@ Update Entry
   date are not included in the data array, current time will be used
   instead. ::
 
-    $this->EE->api_channel_entries->update_entry((int) $entry_id, (array) $data);
+    ee()->api_channel_entries->update_entry((int) $entry_id, (array) $data);
 
   :param int $entry_id: The entry ID to update
   :param array $data: Entry data to submit
@@ -129,7 +129,7 @@ Delete Entry
   related data. The data array must contain an entry id, or an array of
   entry ids. ::
 
-    $this->EE->api_channel_entries->delete_entry((mixed) $entry_ids);
+    ee()->api_channel_entries->delete_entry((mixed) $entry_ids);
 
   :param mixed $entry_ids: Integer or array of integers containing
     ``entry_ids`` to delete
@@ -143,7 +143,7 @@ Entry Exists
 
   This function checks if an entry with a given id exists. ::
 
-    $this->EE->api_channel_entries->entry_exists((int) $entry_id);
+    ee()->api_channel_entries->entry_exists((int) $entry_id);
 
   :param int $entry_id: Entry ID to be verified
   :returns: Whether an entry exists
@@ -154,13 +154,15 @@ Send Pings
 
 .. method:: send_pings($ping_servers, $channel_id, $entry_id[, $send_now = TRUE])
 
+  .. deprecated:: 2.7
+
   This function sends pings to a list of ping servers. The
   ``submit_new_entry()`` and ``update_entry()`` functions will
   automatically send pings if given ``ping_servers`` in their data
   array. ``$ping_servers`` should be a list of ping server ids from the
   ``exp_ping_servers`` database table::
 
-    $this->EE->api_channel_entries->send_pings((array) $ping_servers, (int) $channel_id, (int) $entry_id);
+    ee()->api_channel_entries->send_pings((array) $ping_servers, (int) $channel_id, (int) $entry_id);
 
   :param array $ping_servers: Array of IDs of ping servers in the
     database
@@ -182,4 +184,4 @@ Update Relationship Cache
   data, ``submit_new_entry()`` and ``update_entry()`` will automatically
   recompile relationship data::
 
-    $this->EE->api_channel_entries->update_related_cache((int) $entry_id);
+    ee()->api_channel_entries->update_related_cache((int) $entry_id);

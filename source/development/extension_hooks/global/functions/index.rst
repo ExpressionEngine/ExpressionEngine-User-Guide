@@ -16,8 +16,8 @@ create_captcha_start
 
   How it's called::
 
-    $edata = $this->EE->extensions->call('create_captcha_start', $old_word);
-    if ($this->EE->extensions->end_script === TRUE) return $edata;
+    $edata = ee()->extensions->call('create_captcha_start', $old_word);
+    if (ee()->extensions->end_script === TRUE) return $edata;
 
   :param string $old_word: Normally empty, but it will create a CAPTCHA
     with that word if set
@@ -75,8 +75,8 @@ set_cookie_end
 
   How it's called::
 
-    $this->EE->extensions->call('set_cookie_end', $data);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->call('set_cookie_end', $data);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param array $data: Array of prepped cookie parameters, which include
     the following keys: ``prefix``, ``name``, ``value``, ``expire``,

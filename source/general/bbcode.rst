@@ -23,7 +23,15 @@ URLs and Linking
 	[url=http://example.com/]my site[/url]
 
 You can easily create links with custom text or simply with the URL
-itself as the link.
+itself as the link.  You may even add attributes to your link, though 
+your allowed HTML settings influence what may be included.
+
+::
+
+  [url=http://example.com/ class="link"]my site[/url]
+
+Safe HTML will allow the following attributes: rel, title, class, style, 
+and target.  Note that quotes are required when specifying attributes.  
 
 Email Links
 -----------

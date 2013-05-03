@@ -15,7 +15,7 @@ Calling the Class
   The Channel Structure class is called with the ``api->instantiate()``
   function::
 
-    $this->EE->load->library('api'); $this->EE->api->instantiate('channel_structure');
+    ee()->load->library('api'); ee()->api->instantiate('channel_structure');
 
 Function Reference
 ------------------
@@ -32,7 +32,7 @@ Get Channel Info
 
   Fetches all metadata for a channel::
 
-    $this->EE->api_channel_structure->get_channel_info((int) $channel_id);
+    ee()->api_channel_structure->get_channel_info((int) $channel_id);
 
   :param int $channel_id: ID of the channel to fetch information for
   :returns: Database result object or ``FALSE`` on error
@@ -45,7 +45,7 @@ Get Channels
 
   Fetches channel names and ids::
 
-    $this->EE->api_channel_structure->get_channels([(int) $site_id]);
+    ee()->api_channel_structure->get_channels([(int) $site_id]);
 
   :param int $site_id: The site ID you want channel
     information for
@@ -59,7 +59,7 @@ Delete Channel
 
   Delete a channel::
 
-    $this->EE->api_channel_structure->delete_channel((int) $channel_id, [(int) $site_id]);
+    ee()->api_channel_structure->delete_channel((int) $channel_id, [(int) $site_id]);
 
   :param int $channel_id: ID of the channel to delete
   :param int $site_id: Specify the site ID of the channel
@@ -74,7 +74,7 @@ Create Channel
 
   Creates a new channel::
 
-    $this->EE->api_channel_structure->create_channel((array) $data);
+    ee()->api_channel_structure->create_channel((array) $data);
 
   :param array $data: Array of data necessary to create a channel (see
     below)
@@ -115,7 +115,7 @@ Create Channel
         'status_group'  => 1
     );
 
-    if ($this->EE->api_channel_structure->create_channel($data) === FALSE)
+    if (ee()->api_channel_structure->create_channel($data) === FALSE)
     {
         show_error('An Error Occurred Creating the Channel');
     }
@@ -127,7 +127,7 @@ Modify Channel
 
   Update an existing Channel::
 
-    $this->EE->api_channel_structure->modify_channel((array) $data);
+    ee()->api_channel_structure->modify_channel((array) $data);
 
   :param array $data: Channel modification data (see
     :meth:`Api_channel_structure::create_channel`'s data array

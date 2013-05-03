@@ -583,6 +583,8 @@ display the options in a loop, to give you more control over the markup.
 You have the four following sub-variables: {option\_value},
 {option\_name}, {selected} and {checked}.
 
+.. _safecracker_examples_custom_field_loop:
+
 custom\_fields
 ~~~~~~~~~~~~~~
 
@@ -636,11 +638,24 @@ custom\_fields
 		{/if}
 		
 		{if relationship}
-			<select id="{field_name}" name="{field_name}">
-				{options}
-					<option value="{option_value}"{selected}>{option_name}</option>
-				{/options}
-			</select>
+			{if allow_multiple}
+				<ul style="list-style: none">
+					{options}
+					<li>
+						<input type="text" name="{field_name}[sort][]" value="{option_order}" style="width: 25px">
+						<label class="checkbox">
+						<input type="checkbox" name="{field_name}[data][]" value="{option_value}"{checked}> {option_name}
+						</label>
+					</li>
+					{/options}
+				</ul>
+			{if:else}
+					<select id="{field_name}" name="{field_name}[data][]">
+					{options}
+						<option value="{option_value}"{selected}>{option_name}</option>
+					{/options}
+					</select>
+			{/if}
 		{/if}
 		
 		{if multiselect}

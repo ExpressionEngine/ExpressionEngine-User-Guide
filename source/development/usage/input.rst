@@ -53,13 +53,13 @@ words, normally you might do something like this::
 
 With the built in functions you can simply do this::
 
-  $something = $this->EE->input->post('something');
+  $something = ee()->input->post('something');
 
 To automatically run the returned data through the
 :meth:`Security::xss_clean` function, simply specify the second
 parameter is ``TRUE``::
 
-  $something = $this->EE->input->post('something', TRUE);
+  $something = ee()->input->post('something', TRUE);
 
 The available superglobal functions are:
 
@@ -68,7 +68,7 @@ The available superglobal functions are:
   The first parameter will contain the name of the ``POST`` item you are
   looking for::
 
-    $this->EE->input->post('some_data');
+    ee()->input->post('some_data');
 
   :param string $index: Name of the input in the ``$_POST`` array
   :param boolean $xss_clean: If set to ``TRUE`` the value will be run
@@ -81,7 +81,7 @@ The available superglobal functions are:
   This function is identical to the post function, only it fetches get
   data::
 
-    $this->EE->input->get('some_data');
+    ee()->input->get('some_data');
 
   :param string $index: Name of the input in the ``$_GET`` array
   :param boolean $xss_clean: If set to ``TRUE`` the value will be run
@@ -94,7 +94,7 @@ The available superglobal functions are:
   This function will search through both the post and get streams for
   data, looking first in post, and then in get::
 
-    $this->EE->input->get_post('some_data');
+    ee()->input->get_post('some_data');
 
   :param string $index: Name of the input in the ``$_POST`` or ``$_GET``
     array
@@ -108,7 +108,7 @@ The available superglobal functions are:
   This function is identical to the post function, only it fetches
   cookie data::
 
-    $this->EE->input->cookie('some_data');
+    ee()->input->cookie('some_data');
 
   :param string $index: Name of the input in the ``$_COOKIE`` array
   :param boolean $xss_clean: If set to ``TRUE`` the value will be run
@@ -121,7 +121,7 @@ The available superglobal functions are:
   This function is identical to the above functions, only it fetches
   server data::
 
-    $this->EE->input->server('some_data');
+    ee()->input->server('some_data');
 
   :param string $index: Name of the input in the ``$_SERVER`` array
   :param boolean $xss_clean: If set to ``TRUE`` the value will be run
@@ -134,7 +134,7 @@ The available superglobal functions are:
   Returns the IP address for the current user. If the IP address is not
   valid, the function will return an IP of: 0.0.0.0::
 
-    echo $this->EE->input->ip_address();
+    echo ee()->input->ip_address();
 
   :returns: IP address for the current user
   :rtype: String
@@ -168,7 +168,7 @@ The available superglobal functions are:
 
   Returns the user agent (web browser) being used by the current user::
 
-    echo $this->EE->input->user_agent();
+    echo ee()->input->user_agent();
 
   :returns: The user agent, otherwise ``FALSE``
   :rtype: Mixed

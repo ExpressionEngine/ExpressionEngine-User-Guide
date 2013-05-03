@@ -15,8 +15,8 @@ Calling the Class
   The Channel Category class is called with the ``api->instantiate()``
   function::
 
-    $this->EE->load->library('api');
-    $this->EE->api->instantiate('channel_categories');
+    ee()->load->library('api');
+    ee()->api->instantiate('channel_categories');
 
 Function Reference
 ------------------
@@ -38,7 +38,7 @@ Category Tree
   ordering of the categories (``a`` for alphabetical based on
   ``category_name`` or ``c`` for the specified custom ordering)::
 
-    $this->EE->api_channel_categories->category_tree(
+    ee()->api_channel_categories->category_tree(
         (mixed) $group_id, [(mixed) $selected, [(string) c or a]]
     );
 
@@ -88,7 +88,7 @@ Category Form Tree
   to ``(bool) FALSE``, which will include only categories from the
   current site::
 
-    $this->EE->api_channel_categories->category_form_tree(
+    ee()->api_channel_categories->category_form_tree(
         [(string) $nested y/n, [(mixed) $categories, [(mixed) $sites]]]
     );
 
@@ -123,7 +123,7 @@ Fetch Category Parents
   This function finds the parents of the specified categories and adds
   them to the ``cat_parents`` class variable::
 
-    $this->EE->api_channel_categories->fetch_category_parents(
+    ee()->api_channel_categories->fetch_category_parents(
         (array) $cat_array
     );
 
@@ -140,7 +140,7 @@ Fetch Allowed Category Groups
   permission to administrate channels or edit categories. Returns
   ``FALSE`` otherwise::
 
-    $this->EE->api_channel_categories->fetch_allowed_category_groups(
+    ee()->api_channel_categories->fetch_allowed_category_groups(
         (mixed) $cat_group
     );
 
@@ -155,7 +155,7 @@ Fetch Allowed Category Groups
 
     $group_id = '1|5';
 
-    $allowed = $this->EE->api_channel_categories->fetch_allowed_category_groups($group_id);
+    $allowed = ee()->api_channel_categories->fetch_allowed_category_groups($group_id);
 
     if ($allowed != FALSE) {
         foreach($allowed as $val)

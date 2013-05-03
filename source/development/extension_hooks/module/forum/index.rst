@@ -16,7 +16,7 @@ forum_add_template
 
   How it's called::
 
-    $classname = $this->EE->extensions->call('forum_add_template', $which, $classname);
+    $classname = ee()->extensions->call('forum_add_template', $which, $classname);
 
   :param string $which: The name of the template to be loaded.
   :param string $classname: The name of the class and thus folder
@@ -38,7 +38,7 @@ forum_include_extras
 
   How it's called::
 
-    $element = $this->EE->extensions->call('forum_include_extras', $this, $function, $element);
+    $element = ee()->extensions->call('forum_include_extras', $this, $function, $element);
 
   :param object $this: The current Forum object
   :param string $function: The name of the template being parsed.
@@ -57,8 +57,8 @@ forum_submission_form_start
 
   How it's called::
 
-    $str = $this->EE->extensions->universal_call('forum_submission_form_start', $this, $str);
-    if ($this->EE->extensions->end_script === TRUE) return $str;
+    $str = ee()->extensions->universal_call('forum_submission_form_start', $this, $str);
+    if (ee()->extensions->end_script === TRUE) return $str;
 
   :param object $this: The current Forum Core object
   :param string $str: Submission form template
@@ -76,8 +76,8 @@ forum_submission_form_end
 
   How it's called::
 
-    $str = $this->EE->extensions->universal_call('forum_submission_form_end', $this, $str);
-    if ($this->EE->extensions->end_script === TRUE) return $str;
+    $str = ee()->extensions->universal_call('forum_submission_form_end', $this, $str);
+    if (ee()->extensions->end_script === TRUE) return $str;
 
   :param object $this: The current Forum Core object
   :param string $str: Submission form template
@@ -116,8 +116,8 @@ forum_submit_post_start
 
   How it's called::
 
-    $edata = $this->EE->extensions->universal_call('forum_submit_post_start', $this);
-    if ($this->EE->extensions->end_script === TRUE) return $edata;
+    $edata = ee()->extensions->universal_call('forum_submit_post_start', $this);
+    if (ee()->extensions->end_script === TRUE) return $edata;
 
   :param object $this: The current Forum Core object
   :rtype: Void
@@ -133,8 +133,8 @@ forum_submit_post_end
 
   How it's called::
 
-    $edata = $this->EE->extensions->universal_call('forum_submit_post_end', $this, $data);
-    if ($this->EE->extensions->end_script === TRUE) return $edata;
+    $edata = ee()->extensions->universal_call('forum_submit_post_end', $this, $data);
+    if (ee()->extensions->end_script === TRUE) return $edata;
 
   :param object $this: The current Forum Core object
   :param array $data: the forum post data array
@@ -154,8 +154,8 @@ forum_threads_template
 
   How it's called::
 
-    $str = $this->EE->extensions->universal_call('forum_threads_template', $this, $str, $tquery);
-    if ($this->EE->extensions->end_script === TRUE) return $str;
+    $str = ee()->extensions->universal_call('forum_threads_template', $this, $str, $tquery);
+    if (ee()->extensions->end_script === TRUE) return $str;
 
   :param object $this: The current Forum Core object
   :param string $str: The topics thread template
@@ -174,8 +174,8 @@ forum_thread_rows_absolute_end
 
   How it's called::
 
-    $thread_rows = $this->EE->extensions->universal_call('forum_thread_rows_absolute_end', $this, $data, $thread_rows);
-    if ($this->EE->extensions->end_script === TRUE) return $thread_rows;
+    $thread_rows = ee()->extensions->universal_call('forum_thread_rows_absolute_end', $this, $data, $thread_rows);
+    if (ee()->extensions->end_script === TRUE) return $thread_rows;
 
   :param object $this: The current Forum Core object
   :param array $data: Information about the current group of thread_rows
@@ -196,8 +196,8 @@ forum_thread_rows_loop_start
 
   How it's called::
 
-    $temp = $this->EE->extensions->universal_call('forum_thread_rows_loop_start', $this, $data, $row, $temp);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $temp = ee()->extensions->universal_call('forum_thread_rows_loop_start', $this, $data, $row, $temp);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $this: The current Forum Core object
   :param array $data: The data for all thread rows
@@ -217,8 +217,8 @@ forum_thread_rows_loop_end
 
   How it's called::
 
-    $temp = $this->EE->extensions->universal_call('forum_thread_rows_loop_end', $this, $data, $row, $temp);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $temp = ee()->extensions->universal_call('forum_thread_rows_loop_end', $this, $data, $row, $temp);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $this: The current Forum Core object
   :param array $data: The data for all thread rows
@@ -238,8 +238,8 @@ forum_thread_rows_start
 
   How it's called::
 
-    $template = $this->EE->extensions->universal_call('forum_thread_rows_start', $this, $template, $data, $is_announcement, $thread_review);
-    if ($this->EE->extensions->end_script === TRUE) return $template;
+    $template = ee()->extensions->universal_call('forum_thread_rows_start', $this, $template, $data, $is_announcement, $thread_review);
+    if (ee()->extensions->end_script === TRUE) return $template;
 
   :param object $this: The current Forum Core object
   :param string $template: The topics thread row template
@@ -260,8 +260,8 @@ forum_topics_absolute_end
 
   How it's called::
 
-    $str = $this->EE->extensions->universal_call('forum_topics_absolute_end', $this, $query->result(), $str);
-    if ($this->EE->extensions->end_script === TRUE) return $str;
+    $str = ee()->extensions->universal_call('forum_topics_absolute_end', $this, $query->result(), $str);
+    if (ee()->extensions->end_script === TRUE) return $str;
 
   :param object $this: The current Forum Core object
   :param array $result: Array of all of the displayed topics
@@ -281,8 +281,8 @@ forum_topics_loop_start
 
   How it's called::
 
-    $temp = $this->EE->extensions->universal_call('forum_topics_loop_start', $this, $query->result(), $row, $temp);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $temp = ee()->extensions->universal_call('forum_topics_loop_start', $this, $query->result(), $row, $temp);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $this: The current Forum Core object
   :param array $result: Array of all of the topics
@@ -303,8 +303,8 @@ forum_topics_loop_end
 
   How it's called::
 
-    $temp = $this->EE->extensions->universal_call('forum_topics_loop_end', $this, $query->result(), $row, $temp);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $temp = ee()->extensions->universal_call('forum_topics_loop_end', $this, $query->result(), $row, $temp);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $this: The current Forum Core object
   :param array $result: Array of all of the topics
@@ -325,8 +325,8 @@ forum_topics_start
 
   How it's called::
 
-    $str = $this->EE->extensions->universal_call('forum_topics_start', $this, $str);
-    if ($this->EE->extensions->end_script === TRUE) return $str;
+    $str = ee()->extensions->universal_call('forum_topics_start', $this, $str);
+    if (ee()->extensions->end_script === TRUE) return $str;
 
   :param object $this: The current Forum Core object
   :param string $str: The topics template
@@ -346,8 +346,8 @@ main_forum_table_rows_template
 
   How it's called::
 
-    $table_rows = $this->EE->extensions->universal_call('main_forum_table_rows_template', $this, $table_rows, $row, $markers, $read_topics);
-    if ($this->EE->extensions->end_script === TRUE) return $table_rows;
+    $table_rows = ee()->extensions->universal_call('main_forum_table_rows_template', $this, $table_rows, $row, $markers, $read_topics);
+    if (ee()->extensions->end_script === TRUE) return $table_rows;
 
   :param object $this: The current Forum Core object
   :param string $table_rows: The unparsed forum table rows template

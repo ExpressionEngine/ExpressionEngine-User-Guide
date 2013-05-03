@@ -21,8 +21,8 @@ delete_comment_additional
 
   How it's called::
 
-    $this->EE->extensions->call('delete_comment_additional', $comment_ids);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->call('delete_comment_additional', $comment_ids);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param array $comment_ids: Comment IDs being deleted
   :rtype: Void
@@ -39,8 +39,8 @@ update_comment_additional
 
   How it's called::
 
-    $this->EE->extensions->call('update_comment_additional', $comment_id, $data);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->call('update_comment_additional', $comment_id, $data);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param int $comment_id: ID of the comment being modified
   :param array $data: Comment data
@@ -61,8 +61,8 @@ comment_entries_comment_format
 
   How it's called::
 
-    $comment = $this->EE->extensions->call('comment_entries_comment_format', $row);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $comment = ee()->extensions->call('comment_entries_comment_format', $row);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param array $row: Data for current comment
   :returns: Rendered comment
@@ -79,8 +79,8 @@ comment_entries_tagdata
 
   How it's called::
 
-    $tagdata = $this->EE->extensions->call('comment_entries_tagdata', $tagdata, $row);
-    if ($this->EE->extensions->end_script === TRUE) return $tagdata;
+    $tagdata = ee()->extensions->call('comment_entries_tagdata', $tagdata, $row);
+    if (ee()->extensions->end_script === TRUE) return $tagdata;
 
   :param string $tagdata: Tagdata within comment entries tag
   :param array $row: Data for current comment
@@ -98,8 +98,8 @@ comment_form_end
 
   How it's called::
 
-    $res = $this->EE->extensions->call('comment_form_end', $res);
-    if ($this->EE->extensions->end_script === TRUE) return $res;
+    $res = ee()->extensions->call('comment_form_end', $res);
+    if (ee()->extensions->end_script === TRUE) return $res;
 
   :param string $res: Current tagdata for form
   :returns: Modified ``$res`` (tagdata)
@@ -116,8 +116,8 @@ comment_form_hidden_fields
 
   How it's called::
 
-    $hidden_fields = $this->EE->extensions->call('comment_form_hidden_fields', $hidden_fields);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $hidden_fields = ee()->extensions->call('comment_form_hidden_fields', $hidden_fields);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param array $hidden_fields: Current hidden fields for the comment
     form
@@ -135,8 +135,8 @@ comment_form_tagdata
 
   How it's called::
 
-    $tagdata = $this->EE->extensions->call('comment_form_tagdata', $tagdata);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $tagdata = ee()->extensions->call('comment_form_tagdata', $tagdata);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param string $tagdata: Comment form tagdata
   :returns: Modified ``$tagdata``
@@ -153,8 +153,8 @@ comment_preview_comment_format
 
   How it's called::
 
-    $data = $this->EE->extensions->call('comment_preview_comment_format', $query->row());
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $data = ee()->extensions->call('comment_preview_comment_format', $query->row());
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param array $row: Data for the comment being previewed
   :returns: Rendered comment preview
@@ -171,8 +171,8 @@ comment_preview_tagdata
 
   How it's called::
 
-    $tagdata = $this->EE->extensions->call('comment_preview_tagdata', $tagdata);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $tagdata = ee()->extensions->call('comment_preview_tagdata', $tagdata);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param string $tagdata: Comment preview tagdata
   :returns: Modified ``$tagdata``
@@ -190,8 +190,8 @@ insert_comment_start
 
   How it's called::
 
-    $this->EE->extensions->call('insert_comment_start');
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->call('insert_comment_start');
+    if (ee()->extensions->end_script === TRUE) return;
 
   :rtype: Void
 
@@ -207,8 +207,8 @@ insert_comment_end
 
   How it's called::
 
-    $this->EE->extensions->call('insert_comment_end', $data, $comment_moderate, $comment_id);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->call('insert_comment_end', $data, $comment_moderate, $comment_id);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param array $data: Data for the new comment
   :param boolean $comment_moderate: ``TRUE`` if the comment is going to
@@ -227,8 +227,8 @@ insert_comment_insert_array
 
   How it's called::
 
-    $data = $this->EE->extensions->call('insert_comment_insert_array', $data);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $data = ee()->extensions->call('insert_comment_insert_array', $data);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param array $data: Data for the new comment
   :returns: Modified ``$data``
@@ -246,8 +246,8 @@ insert_comment_preferences_sql
 
   How it's called::
 
-    $sql = $this->EE->extensions->call('insert_comment_preferences_sql', $sql);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $sql = ee()->extensions->call('insert_comment_preferences_sql', $sql);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param string $sql: Current query to return preferences for a comment
     insert

@@ -191,7 +191,7 @@ times across page loads. Find a way to run such queries only once,
 outside of loops, by perhaps accessing all of the information your add-
 on will require for each iteration, storing it in a master array.
 
-Make intelligent use of :ref:`$this->EE->session->cache
+Make intelligent use of :ref:`ee()->session->cache
 <use_of_session_cache>` so these and other "meta" queries are executed
 only once no matter how many times a method is called on a page load.
 
@@ -204,7 +204,7 @@ INCORRECT::
 
   foreach ($ids as $id)
   {
-      $query = $this->EE->db->query("SELECT name FROM exp_pre_email_addresses WHERE id = {$id}");
+      $query = ee()->db->query("SELECT name FROM exp_pre_email_addresses WHERE id = {$id}");
 
       if ($query->num_rows() > 0)
       {
@@ -215,20 +215,20 @@ INCORRECT::
 
 CORRECT::
 
-  if ( ! isset($this->EE->session->cache['super_class']['names']))
+  if ( ! isset(ee()->session->cache['super_class']['names']))
   {
-      $query = $this->EE->db->query('SELECT id, name FROM exp_pre_email_addresses WHERE id IN ('.implode(',', $ids).')');
+      $query = ee()->db->query('SELECT id, name FROM exp_pre_email_addresses WHERE id IN ('.implode(',', $ids).')');
 
       if ($query->num_rows() > 0)
       {
           foreach ($query->result_array() as $row)
           {
-              $this->EE->session->cache['super_class']['names'][$row['id']] = $row['name'];
+              ee()->session->cache['super_class']['names'][$row['id']] = $row['name'];
           }
       }
   }
 
-  $names = $this->EE->session->cache['super_class']['names'];
+  $names = ee()->session->cache['super_class']['names'];
 
   // later in the code looped queries are no longer used
   foreach ($ids as $id)

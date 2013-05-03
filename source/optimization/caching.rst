@@ -124,9 +124,9 @@ show your 10 most recent entry titles::
 
 In this example you are only showing the title of your entries and
 nothing else; yet, the channel tag automatically fetches categories and
-other data automatically. Using the disable= parameter you can turn off
-the unneeded features from being queried. In this case, you don't need
-any of the features that can be disabled. ::
+other data. Using the disable= parameter you can turn off the unneeded
+features from being queried. In this case, you don't need any of the
+features that can be disabled. ::
 
 	{exp:channel:entries orderby="date" sort="desc" limit="10" disable="categories|custom_fields|member_data|pagination"}
 		<h1 href="{title_permalink='channel/comments'}">{title}</h1>

@@ -16,8 +16,8 @@ member_manager
 
   How it's called::
 
-    $edata = $this->EE->extensions->universal_call('member_manager', $this);
-    if ($this->EE->extensions->end_script === TRUE) return $edata;
+    $edata = ee()->extensions->universal_call('member_manager', $this);
+    if (ee()->extensions->end_script === TRUE) return $edata;
 
   :param object $this: The current state of the instantiated Member object
   :rtype: Void

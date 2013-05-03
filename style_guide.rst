@@ -306,16 +306,16 @@ following ReST:
 
         <?php
 
-        $this->EE->load->library('some_class');
+        ee()->load->library('some_class');
 
         $bar = array(
           'something'   => 'Here is this parameter!',
           'something_else'  => 42
         );
 
-        $bat = $this->EE->some_class->should_do_something();
+        $bat = ee()->some_class->should_do_something();
 
-        if ($this->EE->some_class->some_method(4, $bar, $bat) === FALSE)
+        if (ee()->some_class->some_method(4, $bar, $bat) === FALSE)
         {
           show_error('An Error Occurred Doing Some Method');
         }
@@ -357,16 +357,16 @@ some_method()
 
       <?php
 
-      $this->EE->load->library('some_class');
+      ee()->load->library('some_class');
 
       $bar = array(
         'something'   => 'Here is this parameter!',
         'something_else'  => 42
       );
 
-      $bat = $this->EE->some_class->should_do_something();
+      $bat = ee()->some_class->should_do_something();
 
-      if ($this->EE->some_class->some_method(4, $bar, $bat) === FALSE)
+      if (ee()->some_class->some_method(4, $bar, $bat) === FALSE)
       {
         show_error('An Error Occurred Doing Some Method');
       }

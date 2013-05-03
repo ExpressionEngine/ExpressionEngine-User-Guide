@@ -132,8 +132,8 @@ channel_module_category_heading_start
 
   How it's called::
 
-    $this->EE->TMPL->tagdata = $this->extensions->call('channel_module_category_heading_start');
-    if ($this->extensions->end_script === TRUE) return $this->EE->TMPL->tagdata;
+    ee()->TMPL->tagdata = $this->extensions->call('channel_module_category_heading_start');
+    if ($this->extensions->end_script === TRUE) return ee()->TMPL->tagdata;
 
   :returns: Rendered category heading tagdata
   :rtype: String

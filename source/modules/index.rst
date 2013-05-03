@@ -30,5 +30,4 @@ Modules
 	search/index
 	simple_commerce/index
 	statistics/index
-	updated_sites/index
 	wiki/index

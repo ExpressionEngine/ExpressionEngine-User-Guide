@@ -27,15 +27,15 @@ Calling the API
 
   ::
 
-    $this->EE->load->library('api');
+    ee()->load->library('api');
 
   After loading the parent API library, the child classes are loaded with
   ``instantiate()``::
 
-    $this->EE->api->instantiate('channel_entries');
+    ee()->api->instantiate('channel_entries');
 
   At this point, methods within the api\_channel\_entries api are callable
-  via ``$this->EE->api_channel_entries->method_name();``
+  via ``ee()->api_channel_entries->method_name();``
 
 Available APIs
 --------------
@@ -66,7 +66,7 @@ Instantiate
 
   Instantiate an API::
 
-    $this->EE->api->instantiate('channel_entries');
+    ee()->api->instantiate('channel_entries');
 
   :param string $which: Name of the API to instantiate. Options: ``channel_categories``, ``channel_entries``, ``channel_fields``, ``channel_structure``, and ``template_structure``.
   :exception: Raises an exception if the specified API doesn't exist
@@ -79,7 +79,7 @@ Error Count
 
   Get the number of API errors::
 
-    $this->EE->api->error_count();
+    ee()->api->error_count();
 
   :returns: The number of errors generated in API functions
   :rtype: Integer
@@ -91,9 +91,9 @@ Make URL Safe
 
   Makes a string safe for use in a URL segment::
 
-    $this->EE->load->library('api');
+    ee()->load->library('api');
     $str = 'this is a string that's not URL safe.  (we will clean it for $5).';
-    $str = $this->EE->api->make_url_safe($str); // Result thisisastringthatsnotURLsafe.wewillcleanitfor5.
+    $str = ee()->api->make_url_safe($str); // Result thisisastringthatsnotURLsafe.wewillcleanitfor5.
 
   .. note:: Valid Characters are: a-zA-Z0-9\_-.
 
@@ -108,9 +108,9 @@ Is String URL Safe?
 
   Checks if a string is safe for use in a URL segment::
 
-    $this->EE->load->library('api');
+    ee()->load->library('api');
     $str = 'this is a string that\'s not URL safe.  (we will clean it for $5).';
-    if ( ! $this->EE->api->is_url_safe($str))
+    if ( ! ee()->api->is_url_safe($str))
     {
         // Do additional Processing on the string to make it URL safe
     }

@@ -17,7 +17,7 @@ member_edit_preferences
 
   How it's called::
 
-    $element = $this->EE->extensions->call('member_edit_preferences', $element);
+    $element = ee()->extensions->call('member_edit_preferences', $element);
 
   :param string $element: Preference form template
   :returns: Modified preference form template (``$element``)
@@ -34,8 +34,8 @@ member_update_preferences
 
   How it's called::
 
-    $this->EE->extensions->call('member_update_preferences', $data);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->call('member_update_preferences', $data);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param array $data: Array of data from standard form
   :rtype: Void

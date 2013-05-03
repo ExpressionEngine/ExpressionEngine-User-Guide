@@ -60,20 +60,13 @@ The Update file for a module includes a class with a name that is a
 combination of the package's name with `_upd` tacked on the end. So,
 for our download module, we will create a class called ``Download_upd``.
 There is only one required class variable for this class and that is
-$version, which should indicate the current version of this module. As
-always, be sure you invoke the super object in your constructor::
+$version, which should indicate the current version of this module::
 
   <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
   class Download_upd {
 
       var $version = '1.0';
-
-      function __construct()
-      {
-          // Make a local reference to the ExpressionEngine super object
-          $this->EE =& get_instance();
-      }
 
 Each Control Panel class has at a minimum three functions:
 ``install()``, ``uninstall()`` and ``update()``. These functions are
@@ -95,7 +88,7 @@ module will also add a tab to the publish field, we need to set
 
   function install()
   {
-      $this->EE->load->dbforge();
+      ee()->load->dbforge();
 
       $data = array(
           'module_name' => 'Download' ,
@@ -104,7 +97,7 @@ module will also add a tab to the publish field, we need to set
           'has_publish_fields' => 'y'
       );
 
-      $this->EE->db->insert('modules', $data);
+      ee()->db->insert('modules', $data);
 
 The Download module also requires that we generate an action id, to be
 used to serve up files based on the id associated with a given file
@@ -116,7 +109,7 @@ action id and tie it to the appropriate method::
           'method'    => 'force_download'
       );
 
-      $this->EE->db->insert('actions', $data);
+      ee()->db->insert('actions', $data);
 
 .. note:: Because the action_id field in the actions table is
   auto-incremented, do not specify it in the query. If you include an
@@ -129,13 +122,13 @@ call the class and function required. If you need to use this id in the
 control panel, you can use the CP class ``fetch_action_id()`` function
 in your control panel files::
 
-  $action_id  = $this->EE->cp->fetch_action_id('Download', 'force_download');
+  $action_id  = ee()->cp->fetch_action_id('Download', 'force_download');
 
 When using an action id on the frontend (in your mod.download.php file),
 you use the Functions class ``fetch_action_id()``, which outputs the
 appropriate tag for the template parser to process::
 
-  $action_id  = $this->EE->functions->fetch_action_id('Download', 'force_download');
+  $action_id  = ee()->functions->fetch_action_id('Download', 'force_download');
 
 The installation function will also need to create the database tables
 that we will use to store the download data and relationships (see
@@ -150,10 +143,10 @@ guide/database/forge.html>`)::
           'member_access' => array('type' => 'varchar', 'constraint' => '250', 'default' => 'all')
           );
 
-      $this->EE->dbforge->add_field($fields);
-      $this->EE->dbforge->add_key('file_id', TRUE);
+      ee()->dbforge->add_field($fields);
+      ee()->dbforge->add_key('file_id', TRUE);
 
-      $this->EE->dbforge->create_table('download_files');
+      ee()->dbforge->create_table('download_files');
 
       unset($fields);
 
@@ -162,19 +155,19 @@ guide/database/forge.html>`)::
           'entry_id'  => array('type' => 'int', 'constraint' => '10', 'unsigned' => TRUE)
           );
 
-      $this->EE->dbforge->add_field($fields);
-      $this->EE->dbforge->add_key('file_id', TRUE);
-      $this->EE->dbforge->add_key('entry_id', TRUE);
+      ee()->dbforge->add_field($fields);
+      ee()->dbforge->add_key('file_id', TRUE);
+      ee()->dbforge->add_key('entry_id', TRUE);
 
-      $this->EE->dbforge->create_table('download_posts');
+      ee()->dbforge->create_table('download_posts');
 
 Lastly, we ensure that any saved publish layouts have our new tab data
 added to the saved layout via the layout library's
 :doc:`add_layout_tabs() function </development/usage/layout>`. Once all
 of this has completed, the function should return ``TRUE``::
 
-      $this->EE->load->library('layout');
-      $this->EE->layout->add_layout_tabs($this->tabs(), 'download');
+      ee()->load->library('layout');
+      ee()->layout->add_layout_tabs($this->tabs(), 'download');
 
       return TRUE;
   }
@@ -190,26 +183,26 @@ this function::
 
   function uninstall()
   {
-      $this->EE->load->dbforge();
+      ee()->load->dbforge();
 
-      $this->EE->db->select('module_id');
-      $query = $this->EE->db->get_where('modules', array('module_name' => 'Download'));
+      ee()->db->select('module_id');
+      $query = ee()->db->get_where('modules', array('module_name' => 'Download'));
 
-      $this->EE->db->where('module_id', $query->row('module_id'));
-      $this->EE->db->delete('module_member_groups');
+      ee()->db->where('module_id', $query->row('module_id'));
+      ee()->db->delete('module_member_groups');
 
-      $this->EE->db->where('module_name', 'Download');
-      $this->EE->db->delete('modules');
+      ee()->db->where('module_name', 'Download');
+      ee()->db->delete('modules');
 
-      $this->EE->db->where('class', 'Download');
-      $this->EE->db->delete('actions');
+      ee()->db->where('class', 'Download');
+      ee()->db->delete('actions');
 
-      $this->EE->dbforge->drop_table('download_files');
-      $this->EE->dbforge->drop_table('download_posts');
+      ee()->dbforge->drop_table('download_files');
+      ee()->dbforge->drop_table('download_posts');
 
       // Required if your module includes fields on the publish page
-      $this->EE->load->library('layout');
-      $this->EE->layout->delete_layout_tabs($this->tabs(), 'download');
+      ee()->load->library('layout');
+      ee()->layout->delete_layout_tabs($this->tabs(), 'download');
 
       return TRUE;
   }
@@ -278,16 +271,13 @@ The Control Panel file (mcp.download.php)
 The Control Panel file for a module includes a class with a name that is
 a combination of the package's name with ``_mcp`` tacked on the end. So,
 for our Download module, we will create a class called ``Download_mcp``.
-There are no required class variables, though don't forget to call the
-super object in your constructor. Because the module requires multiple
-pages, a link to the 'Add Files' page is added to the fourth level
-navigation using the ``set_right_nav`` function::
+There are no required class variables. Because the module requires
+multiple pages, a link to the 'Add Files' page is added to the fourth
+level navigation using the ``set_right_nav`` function::
 
   function __construct()
   {
-      $this->EE =& get_instance();
-
-      $this->EE->cp->set_right_nav(array(
+      ee()->cp->set_right_nav(array(
           'add_download'  => BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'
               .AMP.'module=download'.AMP.'method=file_browse'
       ));
@@ -311,11 +301,11 @@ title::
 
   function index()
   {
-      $this->EE->load->library('javascript');
-      $this->EE->load->library('table');
-      $this->EE->load->helper('form');
+      ee()->load->library('javascript');
+      ee()->load->library('table');
+      ee()->load->helper('form');
 
-      $this->EE->view->cp_page_title = lang('download_module_name');
+      ee()->view->cp_page_title = lang('download_module_name');
 
       $vars['action_url'] = 'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=download'.AMP.'method=edit_downloads';
       $vars['form_hidden'] = NULL;
@@ -333,19 +323,19 @@ to use the :ellislab:`active record class
 your queries. This will enable your queries to work as support for more
 database types are added::
 
-      if ( ! $rownum = $this->EE->input->get_post('rownum'))
+      if ( ! $rownum = ee()->input->get_post('rownum'))
       {
           $rownum = 0;
       }
 
-      $this->EE->db->order_by("file_id", "desc");
-      $query = $this->EE->db->get('download_files', $this->perpage, $rownum);
+      ee()->db->order_by("file_id", "desc");
+      $query = ee()->db->get('download_files', $this->perpage, $rownum);
 
 We then loop through the query results and format a ``$vars['files']``
 array for easy use in our view file::
 
       // get all member groups for the dropdown list
-      $member_groups = $this->EE->member_model->get_member_groups();
+      $member_groups = ee()->member_model->get_member_groups();
 
       foreach($member_groups->result() as $group)
       {
@@ -389,17 +379,17 @@ simple and reduces redundancy if you have multiple functions that you
 need to paginate::
 
       //  Check for pagination
-      $total = $this->EE->db->count_all('download_files');
+      $total = ee()->db->count_all('download_files');
 
       // Pass the relevant data to the paginate class so it can display the "next page" links
-      $this->EE->load->library('pagination');
+      ee()->load->library('pagination');
       $p_config = $this->pagination_config('index', $total);
 
-      $this->EE->pagination->initialize($p_config);
+      ee()->pagination->initialize($p_config);
 
-      $vars['pagination'] = $this->EE->pagination->create_links();
+      $vars['pagination'] = ee()->pagination->create_links();
 
-      return $this->EE->load->view('index', $vars, TRUE);
+      return ee()->load->view('index', $vars, TRUE);
   }
 
 Here's the abstracted pagination_config method used by the above::
@@ -414,10 +404,10 @@ Here's the abstracted pagination_config method used by the above::
       $config['query_string_segment'] = 'rownum';
       $config['full_tag_open'] = '<p id="paginationLinks">';
       $config['full_tag_close'] = '</p>';
-      $config['prev_link'] = '<img src="'.$this->EE->cp->cp_theme_url.'images/pagination_prev_button.gif" width="13" height="13" alt="<" />';
-      $config['next_link'] = '<img src="'.$this->EE->cp->cp_theme_url.'images/pagination_next_button.gif" width="13" height="13" alt=">" />';
-      $config['first_link'] = '<img src="'.$this->EE->cp->cp_theme_url.'images/pagination_first_button.gif" width="13" height="13" alt="< <" />';
-      $config['last_link'] = '<img src="'.$this->EE->cp->cp_theme_url.'images/pagination_last_button.gif" width="13" height="13" alt="> >" />';
+      $config['prev_link'] = '<img src="'.ee()->cp->cp_theme_url.'images/pagination_prev_button.gif" width="13" height="13" alt="<" />';
+      $config['next_link'] = '<img src="'.ee()->cp->cp_theme_url.'images/pagination_next_button.gif" width="13" height="13" alt=">" />';
+      $config['first_link'] = '<img src="'.ee()->cp->cp_theme_url.'images/pagination_first_button.gif" width="13" height="13" alt="< <" />';
+      $config['last_link'] = '<img src="'.ee()->cp->cp_theme_url.'images/pagination_last_button.gif" width="13" height="13" alt="> >" />';
 
       return $config;
   }
@@ -437,7 +427,7 @@ as pagination.
 
 Adding 'toggle all' functionality is a simple matter::
 
-  $this->EE->javascript->output(array(
+  ee()->javascript->output(array(
       '$(".toggle_all").toggle(
           function(){
               $("input.toggle").each(function() {
@@ -456,17 +446,17 @@ In order to add the sortable ajax paginated table, we make use of the
 `DataTables jQuery plugin <http://www.datatables.net/>`_. When using a
 plugin, it must first be loaded::
 
-  $this->EE->cp->add_js_script(array('plugin' => 'dataTables'));
+  ee()->cp->add_js_script(array('plugin' => 'dataTables'));
 
 The details of how to use this particular plugin can be seen in the
 attached module files, and in this case, the bulk of the coding is again
 abstracted to the ``ajax_filters()`` function::
 
-  $this->EE->javascript->output($this->ajax_filters('edit_items_ajax_filter', 4));
+  ee()->javascript->output($this->ajax_filters('edit_items_ajax_filter', 4));
 
 In order to display the javascript, the last step is to compile it::
 
-  $this->EE->javascript->compile();
+  ee()->javascript->compile();
 
 The View files
 --------------
@@ -474,7 +464,7 @@ The View files
 Given the complexity of our backend pages, we use view files to handle
 the display and formatting as seen in the ``index()`` above::
 
-  return $this->EE->load->view('index', $vars, TRUE);
+  return ee()->load->view('index', $vars, TRUE);
 
 This would return the index.php view page, located in a ``views``
 folder::
@@ -544,12 +534,6 @@ include the optional Tab file::
 
   class Download_tab {
 
-      function __construct()
-      {
-          // Make a local reference to the ExpressionEngine super object
-          $this->EE =& get_instance();
-      }
-
 The tab class must include 4 required functions: ``publish_tabs()``,
 ``validate_publish()``, ``publish_data_db()`` and
 ``publish_data_delete_db()``.
@@ -568,7 +552,7 @@ records::
           $selected = array();
           $existing_files = array();
 
-          $query = $this->EE->db->get('download_files');
+          $query = ee()->db->get('download_files');
 
           foreach ($query->result() as $row)
           {
@@ -577,7 +561,7 @@ records::
 
           if ($entry_id != '')
           {
-              $query = $this->EE->db->get_where('download_posts', array('entry_id' => $entry_id));
+              $query = ee()->db->get_where('download_posts', array('entry_id' => $entry_id));
 
               foreach ($query->result() as $row)
               {
@@ -588,7 +572,7 @@ records::
           $id_instructions = lang('id_field_instructions');
 
           // Load the module lang file for the field label
-          $this->EE->lang->loadfile('download');
+          ee()->lang->loadfile('download');
 
           $settings[] = array(
                   'field_id'      => 'download_field_ids',
@@ -628,8 +612,8 @@ consisting of: ``meta``, ``data``, ``mod_data``, and ``entry_id``::
       function publish_data_db($params)
       {
           // Remove existing
-          $this->EE->db->where('entry_id', $params['entry_id']);
-          $this->EE->db->delete('download_posts');
+          ee()->db->where('entry_id', $params['entry_id']);
+          ee()->db->delete('download_posts');
 
           if (isset($params['mod_data']['download_field_ids']) &&
               is_array($params['mod_data']['download_field_ids']) &&
@@ -643,7 +627,7 @@ consisting of: ``meta``, ``data``, ``mod_data``, and ``entry_id``::
                       );
               }
 
-              $this->EE->db->insert('download_posts', $data);
+              ee()->db->insert('download_posts', $data);
           }
       }
 
@@ -659,8 +643,8 @@ entry ids from our ``exp_download_posts`` table::
       function publish_data_delete_db($params)
       {
           // Remove existing
-          $this->EE->db->where_in('entry_id', $params['entry_ids']);
-          $this->EE->db->delete('download_posts');
+          ee()->db->where_in('entry_id', $params['entry_ids']);
+          ee()->db->delete('download_posts');
       }
 
 The Core Module file (mod.download.php)
@@ -697,11 +681,6 @@ point looks like::
 
       var $return_data    = '';
 
-      function __construct()
-      {
-          // Make a local reference to the ExpressionEngine super object
-          $this->EE =& get_instance();
-      }
   }
 
 Next, we need to add a function that outputs our download data. Note
@@ -710,22 +689,22 @@ that according to our tag, this function is expected to be named
 
       function entries()
       {
-          if (($entry_id = $this->EE->TMPL->fetch_param('entry_id')) === FALSE) return;
+          if (($entry_id = ee()->TMPL->fetch_param('entry_id')) === FALSE) return;
 
           $limit  = ( ! isset($params['limit']) OR ! is_numeric($params['limit'])) ? 100 : $params['limit'];
 
-          $this->EE->db->select('*');
-          $this->EE->db->limit($limit);
-          $this->EE->db->where('entry_id', $entry_id);
-          $this->EE->db->from('download_files');
-          $this->EE->db->join('download_posts', 'download_files.file_id = download_posts.file_id', 'right');
+          ee()->db->select('*');
+          ee()->db->limit($limit);
+          ee()->db->where('entry_id', $entry_id);
+          ee()->db->from('download_files');
+          ee()->db->join('download_posts', 'download_files.file_id = download_posts.file_id', 'right');
 
-          $query = $this->EE->db->get();
+          $query = ee()->db->get();
 
 
           if ($query->num_rows() == 0)
           {
-              return $this->EE->TMPL->no_results();
+              return ee()->TMPL->no_results();
           }
 
 The function first checks for the existence of the required
@@ -742,12 +721,12 @@ values our replacement data::
 
           //  Instantiate Typography class
 
-          $this->EE->load->library('typography');
-          $this->EE->typography->initialize();
-          $this->EE->typography->parse_images = TRUE;
-          $this->EE->typography->allow_headings = FALSE;
+          ee()->load->library('typography');
+          ee()->typography->initialize();
+          ee()->typography->parse_images = TRUE;
+          ee()->typography->allow_headings = FALSE;
 
-          $base_url = $this->EE->functions->fetch_site_index(0, 0).QUERY_MARKER.'ACT='.$this->EE->functions->fetch_action_id('Download', 'force_download');
+          $base_url = ee()->functions->fetch_site_index(0, 0).QUERY_MARKER.'ACT='.ee()->functions->fetch_action_id('Download', 'force_download');
 
           foreach ($query->result_array() as $id => $row)
           {
@@ -759,7 +738,7 @@ values our replacement data::
 
           }
 
-          return $this->EE->TMPL->parse_variables($this->EE->TMPL->tagdata, $variables);
+          return ee()->TMPL->parse_variables(ee()->TMPL->tagdata, $variables);
       }
 
 Lastly, this module needs to force downloads and obscure image paths,
@@ -771,25 +750,25 @@ with appropriate headers to users who meet the access requirements::
 
       function force_download()
       {
-          $file_id = $this->EE->input->get('id');
-          $this->EE->lang->loadfile('download');
+          $file_id = ee()->input->get('id');
+          ee()->lang->loadfile('download');
 
 
           if ($file_id === FALSE)
           {
-              return $this->EE->output->show_user_error('general', lang('invalid_download'));
+              return ee()->output->show_user_error('general', lang('invalid_download'));
           }
 
-          $group_id = $this->EE->session->userdata['group_id'];
+          $group_id = ee()->session->userdata['group_id'];
 
-          $this->EE->load->helper('download');
+          ee()->load->helper('download');
 
-          $this->EE->db->select('file_name, file_title, member_access, server_path, url');
-          $this->EE->db->from('download_files');
-          $this->EE->db->join('upload_prefs', 'upload_prefs.id = download_files.dir_id');
-          $this->EE->db->where('file_id', $file_id);
+          ee()->db->select('file_name, file_title, member_access, server_path, url');
+          ee()->db->from('download_files');
+          ee()->db->join('upload_prefs', 'upload_prefs.id = download_files.dir_id');
+          ee()->db->where('file_id', $file_id);
 
-          $query = $this->EE->db->get();
+          $query = ee()->db->get();
 
           if ($query->num_rows() > 0)
           {
@@ -799,7 +778,7 @@ with appropriate headers to users who meet the access requirements::
 
               if ( ! in_array('all', $allowed) && ! in_array($group_id, $allowed))
               {
-                  return $this->EE->output->show_user_error('general', lang('no_permission'));
+                  return ee()->output->show_user_error('general', lang('no_permission'));
               }
 
               $file_name = $row->file_name;

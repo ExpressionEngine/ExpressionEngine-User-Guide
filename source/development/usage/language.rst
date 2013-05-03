@@ -85,10 +85,10 @@ Calling a Language File
   and instead of duplicating those in your module's language file you
   could use the text in that language file. To load that language file
   and its values, you simply need to call the
-  ``$this->EE->lang->loadfile()`` function with the name of the language
+  ``ee()->lang->loadfile()`` function with the name of the language
   file::
 
-    $this->EE->lang->loadfile('members');
+    ee()->lang->loadfile('members');
 
   :param string $which: Name of the language file to load
   :param string $package: Name of the package where the language file
@@ -109,7 +109,7 @@ Fetching a Line of Text
   simply use the ``lang()`` function and specify the key for that piece
   of text in the array::
 
-    $this->EE->view->cp_page_title = lang('view_moblogs');
+    ee()->view->cp_page_title = lang('view_moblogs');
     // Returns "Moblog Accounts" as the page title;
 
   :param string $line: the key from the language file
@@ -117,4 +117,3 @@ Fetching a Line of Text
     rendered text in a ``<label>`` tag
   :returns: Language value
   :rtype: String
-

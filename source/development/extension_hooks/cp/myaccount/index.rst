@@ -47,12 +47,12 @@ myaccount_nav_setup
   results::
 
     // Check for previous calls to myaccount_nav_setup hook
-    $additional_nav = ($this->EE->extensions->last_call) ?
-        $this->EE->extensions->last_call :
+    $additional_nav = (ee()->extensions->last_call) ?
+        ee()->extensions->last_call :
         array();
 
     // Load in language file for navigation wording
-    $this->EE->lang->loadfile('extension_name');
+    ee()->lang->loadfile('extension_name');
 
     // Return new navigation item merged with existing calls to hook
     // Using array_merge_recursive for a deep clone

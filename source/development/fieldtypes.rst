@@ -139,10 +139,10 @@ screen. The individual settings are in a table, so they need to use
           'zoom'          => (int) $this->settings['zoom']
       );
 
-      $this->EE->cp->add_to_head('<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>');
+      ee()->cp->add_to_head('<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>');
 
-      $this->EE->javascript->set_global('gmaps.'.$this->field_name.'.settings', $options);
-      $this->EE->javascript->output('
+      ee()->javascript->set_global('gmaps.'.$this->field_name.'.settings', $options);
+      ee()->javascript->output('
           var fieldOpts = EE.gmaps.'.$this->field_name.'.settings,
               myLatlng = new google.maps.LatLng(fieldOpts.latitude, fieldOpts.longitude);
 
@@ -171,9 +171,9 @@ so they can override a global setting.
   function save_settings($data)
   {
       return array(
-          'latitude'  => $this->EE->input->post('latitude'),
-          'longitude' => $this->EE->input->post('longitude'),
-          'zoom'      => $this->EE->input->post('zoom')
+          'latitude'  => ee()->input->post('latitude'),
+          'longitude' => ee()->input->post('longitude'),
+          'zoom'      => ee()->input->post('zoom')
       );
   }
 

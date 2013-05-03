@@ -16,8 +16,8 @@ wiki_start
 
   How it's called::
 
-    $this->return_data = $this->EE->extensions->universal_call('wiki_start', $this);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $this->return_data = ee()->extensions->universal_call('wiki_start', $this);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $this: The current Wiki class object
   :returns: Modified page template (``$this->return_data``)
@@ -34,8 +34,8 @@ wiki_article_start
 
   How it's called::
 
-    $this->EE->extensions->universal_call('wiki_article_start', $this, $title, $query);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->universal_call('wiki_article_start', $this, $title, $query);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $this: The current Wiki class object
   :param string $title: The title of the requested article
@@ -53,8 +53,8 @@ wiki_article_end
 
   How it's called::
 
-    $this->return_data = $this->EE->extensions->universal_call('wiki_article_end', $this, $query);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $this->return_data = ee()->extensions->universal_call('wiki_article_end', $this, $query);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $this: The current Wiki class object
   :param object $query: The query object for the article
@@ -72,8 +72,8 @@ wiki_special_page
 
   How it's called::
 
-    $this->EE->extensions->universal_call('wiki_special_page', $this, $topic);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->universal_call('wiki_special_page', $this, $topic);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $this: The current Wiki class object
   :param string $topic: The requested topic (e.g. categories, files, etc.)
@@ -90,8 +90,8 @@ edit_wiki_article_end
 
   How it's called::
 
-    $edata = $this->EE->extensions->universal_call('edit_wiki_article_end', $this, $query);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $edata = ee()->extensions->universal_call('edit_wiki_article_end', $this, $query);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $this: The current Wiki class object
   :param object $query: The query object for the article
@@ -108,8 +108,8 @@ edit_wiki_article_form_start
 
   How it's called::
 
-    $this->EE->extensions->universal_call('edit_wiki_article_form_start', $this, $title, $query);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->universal_call('edit_wiki_article_form_start', $this, $title, $query);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $this: The current Wiki class object
   :param string $title: The title of the article
@@ -127,8 +127,8 @@ edit_wiki_article_form_end
 
   How it's called::
 
-    $this->return_data = $this->EE->extensions->universal_call('edit_wiki_article_form_end', $this, $query);
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $this->return_data = ee()->extensions->universal_call('edit_wiki_article_form_end', $this, $query);
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $this: The current Wiki class object
   :param object $query: The query object for the article

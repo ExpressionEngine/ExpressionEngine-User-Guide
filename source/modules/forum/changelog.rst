@@ -1,6 +1,14 @@
 ExpressionEngine Forum Module Change Log
 ========================================
 
+Version 3.1.11
+--------------
+
+Release Date: April 23, 2013
+
+- Updates for date localization changes in ExpressionEngine 2.6.
+
+
 Version 3.1.10
 --------------
 
@@ -389,7 +397,7 @@ Build 20090723 (initial release)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Compatible with PHP 5.3.0
--  Added :ref:`'main\_forum\_table\_rows\_template' extension hook 
+-  Added :ref:`'main\_forum\_table\_rows\_template' extension hook
    <forum_dev_main_forum_table_rows_template>`
 -  Added the {topic\_title} variable to the Post Submission Form when
    editing a reply.
@@ -770,7 +778,7 @@ Release Date: November 30, 2005
   users
 
   .. note:: Requires the EE 1.4 core)
-  
+
 - Changed the "max post characters" limit to 5 characters
 - Fixed a problem that can occur if a user edits a post after a
   moderator has enabled it as sticky, closed, etc.

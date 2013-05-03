@@ -17,8 +17,8 @@ member_member_login_multi
 
   How it's called::
 
-    $this->EE->extensions->call('member_member_login_multi', $this->_hook_data());
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->call('member_member_login_multi', $this->_hook_data());
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $hook_data: Member object with session ID
     (``$hook_data->session_id``) and CP permission boolean
@@ -36,8 +36,8 @@ member_member_login_single
 
   How it's called::
 
-    $this->EE->extensions->call('member_member_login_single', $this->_hook_data());
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->call('member_member_login_single', $this->_hook_data());
+    if (ee()->extensions->end_script === TRUE) return;
 
   :param object $hook_data: Member object with session ID
     (``$hook_data->session_id``) and CP permission boolean
@@ -55,8 +55,8 @@ member_member_login_start
 
   How it's called::
 
-    $this->EE->extensions->call('member_member_login_start');
-    if ($this->EE->extensions->end_script === TRUE) return;
+    ee()->extensions->call('member_member_login_start');
+    if (ee()->extensions->end_script === TRUE) return;
 
   :rtype: Void
 
@@ -71,8 +71,8 @@ member_member_logout
 
   How it's called::
 
-    $edata = $this->EE->extensions->call('member_member_logout');
-    if ($this->EE->extensions->end_script === TRUE) return;
+    $edata = ee()->extensions->call('member_member_logout');
+    if (ee()->extensions->end_script === TRUE) return;
 
   :rtype: Void
 

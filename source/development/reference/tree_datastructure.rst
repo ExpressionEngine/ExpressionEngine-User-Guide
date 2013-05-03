@@ -34,7 +34,7 @@ we can start using it
 
 ::
 
-    $this->EE->load->library('datastructures/tree');
+    ee()->load->library('datastructures/tree');
 
 There are two ways to create a tree. The first is to create and connect
 the nodes manually. This tends to give you a little more flexibilty in
@@ -56,7 +56,7 @@ this node.
 Here we have created a tree that looks like this:
 
 ::
-    
+
          root
         /    \
    child1   child2
@@ -82,7 +82,7 @@ method:
 
 ::
 
-    $root = $this->EE->tree->from_list($data);
+    $root = ee()->tree->from_list($data);
 
 By default, ``id`` and ``parent_id`` will be used to resolve the tree
 structure. The ``id`` is also used as the name, and by default the tree
@@ -91,7 +91,7 @@ of these, you can do so with a second parameter:
 
 ::
 
-    $root = $this->EE->tree->from_list($data, array(
+    $root = ee()->tree->from_list($data, array(
     	'id' => 'category_id',
     	'parent' => 'parent_category_id',
     	'class_name' => 'MyCatTreeNode',
@@ -161,7 +161,7 @@ if the current node is a leaf (going down) or the root (going up):
 
 ::
 
-	$node->is_leaf(); 
+	$node->is_leaf();
 	$node->is_root();
 
 
@@ -220,7 +220,7 @@ prints the tree with the children indented:
 And this tree:
 
 ::
-    
+
                  root
                 /    \
            child1   child2

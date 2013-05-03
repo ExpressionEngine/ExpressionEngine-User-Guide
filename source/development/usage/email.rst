@@ -18,7 +18,7 @@ Calling the Email Class
   class is a library, so you have to load the Email library before using
   it::
 
-    $this->EE->load->library('email');
+    ee()->load->library('email');
 
 ****************
 Sending an Email
@@ -32,16 +32,16 @@ example piece of code used for sending a single email.
 
 ::
 
-    $this->EE->load->library('email');
-    $this->EE->load->helper('text');
+    ee()->load->library('email');
+    ee()->load->helper('text');
 
-    $this->EE->email->wordwrap = true;
-    $this->EE->email->mailtype = 'text';
-    $this->EE->email->from($from);
-    $this->EE->email->to($recipient);
-    $this->EE->email->subject($email_subject);
-    $this->EE->email->message(entities_to_ascii($email_msg));
-    $this->EE->email->Send();
+    ee()->email->wordwrap = true;
+    ee()->email->mailtype = 'text';
+    ee()->email->from($from);
+    ee()->email->to($recipient);
+    ee()->email->subject($email_subject);
+    ee()->email->message(entities_to_ascii($email_msg));
+    ee()->email->Send();
 
 Properties
 ==========
@@ -93,7 +93,7 @@ Methods
 
   The function for specifying the sender of the email::
 
-    $this->EE->email->from('you@example.com', 'Your Name');
+    ee()->email->from('you@example.com', 'Your Name');
 
   :param string $from: The email address of the sender
   :param string $name: The name of the sender
@@ -105,7 +105,7 @@ Methods
 
   The function for specifying the Reply-To header of the email::
 
-    $this->EE->email->reply\_to('you@example.com', 'Your Name');
+    ee()->email->reply\_to('you@example.com', 'Your Name');
 
   :param string $replyto: The email address for the reply-to
   :param string $name: The name of the sender
@@ -116,8 +116,8 @@ Methods
 
   The function for specifying the general recipient(s) of the email::
 
-    $this->EE->email->to('someone@example.com');
-    $this->EE->email->to('one@example.com, two@example.com, three@example.com');
+    ee()->email->to('someone@example.com');
+    ee()->email->to('one@example.com, two@example.com, three@example.com');
 
   :param mixed $to: Array or comma separated string of email addresses
   :returns: Email class object
@@ -128,7 +128,7 @@ Methods
   The function for specifying the recipient(s) receiving a carbon copy
   of the email::
 
-    $this->EE->email->cc('someone@example.com');
+    ee()->email->cc('someone@example.com');
 
   :param mixed $cc: Array or comma separated string of email addresses
   :returns: Email class object
@@ -139,7 +139,7 @@ Methods
   The function for specifying the recipient(s) receiving a blind carbon
   copy of the email::
 
-    $this->EE->email->bcc('someone@example.com', 200);
+    ee()->email->bcc('someone@example.com', 200);
 
   :param mixed $bcc: Array or comma separated string of email addresses
   :param integer $limit: Number of emails to send at a time, will batch
@@ -151,7 +151,7 @@ Methods
 
   Sets the email subject::
 
-    $this->EE->email->subject('This is my subject');
+    ee()->email->subject('This is my subject');
 
   :param string $subject: Subject of the email
   :returns: Email class object
@@ -161,7 +161,7 @@ Methods
 
   Sets the email message body::
 
-    $this->EE->email->message('This is my message');
+    ee()->email->message('This is my message');
 
   :param string $body: The message body
   :returns: Email class object
@@ -175,7 +175,7 @@ Methods
   not accept HTML email. If you do not set your own message CodeIgniter
   will extract the message from your HTML email and strip the tags::
 
-    $this->EE->email->set_alt_message('This is the alternative message');
+    ee()->email->set_alt_message('This is the alternative message');
 
   .. note:: If you are using data from a channel entry and not sending an
     HTML email, then you should use the ``entities_to_ascii()`` function
@@ -191,7 +191,7 @@ Methods
 
   The Email sending method::
 
-    $this->EE->email->send();
+    ee()->email->send();
 
   :param boolean $auto_clear: When set to ``FALSE`` will prevent
     parameters from being cleared after sending the email
@@ -206,7 +206,7 @@ Methods
   Returns a string containing any server messages, the email headers, and the
   email message::
 
-    $this->EE->email->print_debugger();
+    ee()->email->print_debugger();
 
   :param array $include: Optionally specify which parts of the message
     should be printed. Valid options are: headers, subject, body.
@@ -217,7 +217,7 @@ Methods
 
   Clears out all parameters set either by property or method::
 
-    $this->EE->email->clear();
+    ee()->email->clear();
 
   :param boolean $clear_attachments: If set to ``TRUE`` attachments will
     be cleared out, otherwise they're left alone.
@@ -232,30 +232,27 @@ If you are sending multiple emails in a function either for
 notifications or because each message has a separate message, then you
 should use the :meth:`Email::clear` function between each email to reset
 certain variables in the class. If you do not, then it is possible that
-the emails will not be sent or sent incorrectly.
+the emails will not be sent or sent incorrectly::
 
-::
+  ee()->load->library('email');
+  ee()->load->helper('text');
 
-    $this->EE->load->library('email');
-    $this->EE->load->helper('text');
+  ee()->email->wordwrap = true;
+  ee()->email->mailtype = 'text';
+  $errors = array();
 
-    ee()->email->wordwrap = true;
-    ee()->email->mailtype = 'text';
-    $errors = array();
+  foreach($member_emails as $username => $from)
+  {
+      ee()->email->from($from);
+      ee()->email->to($recipient);
+      ee()->email->subject("Account Expiration: {$username}");
+      ee()->email->message(entities_to_ascii($message));
+      ee()->email->send();
 
-    foreach($member_emails as $username => $from)
-    {
-        $this->EE->email->from($from);
-        $this->EE->email->to($recipient);
-        $this->EE->email->subject("Account Expiration: {$username}");
-        $this->EE->email->message(entities_to_ascii($message));
-        $this->EE->email->send();
+  if ( ! ee()->email->send())
+  {
+      $errors[] = ee()->email->print_debugger();
 
-        if ( ! ee()->email->send())
-        {
-          $errors[] = ee()->email->print_debugger();
-
-          // Send failed, data was not cleared
-          ee()->email->clear();
-        }
-    }
+      // Send failed, data was not cleared
+      ee()->email->clear();
+  }

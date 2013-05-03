@@ -157,7 +157,6 @@ Included in ExpressionEngine
 - :doc:`modules/search/index`
 - :doc:`modules/simple_commerce/index`
 - :doc:`modules/statistics/index`
-- :doc:`modules/updated_sites/index`
 - :doc:`modules/wiki/index`
 
 .. _add_ons_available_for_download:

@@ -21,7 +21,7 @@ Breadcrumbs
   Adds a new breadcrumb to the initial breadcrumb array. The system will
   automatically output the final array::
 
-    $this->EE->cp->set_breadcrumb($link, $title);
+    ee()->cp->set_breadcrumb($link, $title);
 
   :param type $link: URL the breadcrumb should go to
   :param type $title: Text to go in the link
@@ -36,7 +36,7 @@ Sub Navigation
   module. This function takes an associative array where the keys are
   language keys and the values are the full url to link to::
 
-    $this->EE->cp->set_right_nav(array(
+    ee()->cp->set_right_nav(array(
         'edit_avatar' => BASE.AMP.'C=my_account'.AMP.'M=edit_avatar',
         'edit_profile' => BASE.AMP.'C=my_account'.AMP.'M=edit_profile'
     ));
@@ -71,7 +71,7 @@ Adding Header Data
   styles, meta tags, and other data. Multiple calls to this function are
   additive::
 
-    $this->EE->cp->add_to_head('<style type="text/css" media="screen">div { display: none; }</style>');
+    ee()->cp->add_to_head('<style type="text/css" media="screen">div { display: none; }</style>');
 
   :param string $data: String to add to the ``<head>`` of the control
     panel
@@ -87,7 +87,7 @@ Loading Javascript Files
   javascript folder. It takes a simple file name, ``.js`` will be
   appended automatically::
 
-    $this->EE->cp->load_package_js('my_file');
+    ee()->cp->load_package_js('my_file');
 
   :param string $file: javascript file to load
   :rtype: Void
@@ -103,7 +103,7 @@ Add a javascript file or files to the javascript combo loader
   second parameter determines the placement of the resulting javascript
   link, defaulting to ``TRUE`` to place in the footer::
 
-    $this->EE->add_js_script(
+    ee()->add_js_script(
         array(
             'ui'      => array('core', 'widget', 'position', 'autocomplete'),
             'plugin'  => array('fancybox')
@@ -125,7 +125,7 @@ Masking the Control Panel URL in links
   When creating external links in the users Control Panel, the system
   folder should not show in server referral logs::
 
-    $this->EE->cp->masked_url('http://example.com');
+    ee()->cp->masked_url('http://example.com');
 
   Creates the a the following link:
   ``http://example.com/index.php?URL=http://example.com``
@@ -144,7 +144,7 @@ Allowed Group
   member groups's access to various parts of the site. Returns ``FALSE``
   if they have access, ``TRUE`` if they do::
 
-    if ( ! $this->EE->cp->allowed_group('can_delete_all_entries'))
+    if ( ! ee()->cp->allowed_group('can_delete_all_entries'))
     {
         show_error(lang('unauthorized_to_delete_others'));
     }

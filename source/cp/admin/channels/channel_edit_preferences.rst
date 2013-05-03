@@ -81,21 +81,11 @@ example, if you wish that links off the search results page point to
 your "comments" Template you might use:
 http://example.com/index.php/channel/comments/
 
-Ping Return URL
-~~~~~~~~~~~~~~~
-
-When you send a ping to a website, it includes a return URL. Here you
-can set what that URL should be. For example:
-http://example.com/index.php
-
 RSS Feed URL
 ~~~~~~~~~~~~
 
 The URL where you can view the RSS feed for this channel. For example:
-http://example.com/index.php/channel/rss\_2.0/. This setting is used for
-sending pings in the "Extended Ping" format. Some servers may not accept
-"Extended Pings", so you can leave this field blank and EE will send a
-standard ping.
+http://example.com/index.php/channel/rss\_2.0/.
 
 Live Look Template
 ~~~~~~~~~~~~~~~~~~

@@ -473,19 +473,6 @@ site. Useful for running forums as a subdomain.
 
 	$config['use_forum_url'] = 'y';
 
-use_mobile_control_panel
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-**Value:** y/n
-
-Disables checks within the control panel to look for the existence of
-the themes/cp\_themes/mobile directory, allowing for any theme to be
-used when viewing on a mobile device.
-
-::
-
-	$config['use_mobile_control_panel'] = 'n';
-
 user_session_ttl
 ~~~~~~~~~~~~~~~~
 

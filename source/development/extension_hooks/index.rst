@@ -12,6 +12,8 @@ The list below details all available extension hooks in ExpressionEngine.
   - :doc:`global/member_model/index` (``member_model.php``)
   - :doc:`global/output/index` (``EE_Output.php``)
   - :doc:`global/pagination/index` (``EE_Pagination.php``)
+  - :doc:`global/relationships/index` (``ft.relationship.php``,
+    ``relationship_model.php``)
   - :doc:`global/session/index` (``Session.php``)
   - :doc:`global/template/index` (``Template.php``)
   - :doc:`global/text_helper/index` (``EE_text_helper.php``)
@@ -72,6 +74,7 @@ The list below details all available extension hooks in ExpressionEngine.
   global/member_model/index
   global/output/index
   global/pagination/index
+  global/relationships/index
   global/session/index
   global/template/index
   global/text_helper/index

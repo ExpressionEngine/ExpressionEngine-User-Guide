@@ -44,14 +44,26 @@ Altered View Files
 - Changed all CP view files to inherit from a master template. Please
   check your view file overrides.
 
+SafeCracker Relationship Formatting
+-----------------------------------
+
+If you're using the relationship conditional in a SafeCracker custom field
+loop, please modify your template with the new format to allow for multiple
+relationship selections. An example can be found in the
+:ref:`SafeCracker Documentation <safecracker_examples_custom_field_loop>`.
+
 Conditionals in Channel Entries Content
 ---------------------------------------
 
-Channel entries will no longer parse EE conditionals. While we know that some
-users relied on this functionality, the vast majority of users benefit by encoding
-conditionals by default within Channel entries content. If you are using EE conditionals (or
-similarly formated JavaScript, e.g. "``{if...``") in your entries, you will need to use the
-`Allow EECode plugin <https://github.com/EllisLab/Allow-Eecode>`_ in your templates to
-allow EE tags and conditionals to be parsed.
+We have removed parsing for conditionals within channel entry input
+data. This change does not affect the use of conditionals in templates
+or the :doc:`{exp:channel:entries} </modules/channel/channel_entries>` tag
+pair. While we know that some users relied on this functionality, the
+vast majority of users benefit by encoding conditionals by default
+within Channel Entries content. If you are using EE conditionals (or
+similarly formated JavaScript, e.g. "``{if...``") in your entries, you
+will need to use the `Allow EECode plugin
+<https://github.com/EllisLab/Allow-Eecode>`_ in your templates to allow
+EE tags and conditionals to be parsed.
 
 :ref:`Return to Update Page <update_additional_steps>`

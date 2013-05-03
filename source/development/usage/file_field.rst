@@ -17,7 +17,7 @@ Calling the File Field Class
   file browser is needed. To use the file browser in your add-on, you'll
   need to load the File Field library::
 
-    $this->EE->load->library('file_field');
+    ee()->load->library('file_field');
 
 *********************
 Creating a File Field
@@ -29,7 +29,7 @@ Creating a File Field
   browser knows how to work with. To create that field, you'll use the
   field method::
 
-    $this->EE->file_field->field($field_name, $data = '', $allowed_file_dirs = 'all', $content_type = 'all')
+    ee()->file_field->field($field_name, $data = '', $allowed_file_dirs = 'all', $content_type = 'all')
 
   :param string $field_name: the name of the field being created
   :param string $data: the data that already exists for this field
@@ -42,6 +42,7 @@ Creating a File Field
 
 ***************************
 Initializing a File Browser
+<<<<<<< HEAD
 ***************************
 
 .. method:: browser($config = array()[, $endpoint_url = 'C=content_publish&M=filemanager_actions'])
@@ -50,7 +51,7 @@ Initializing a File Browser
   browser: javascript and css especially. What you need to do is
   initialize the file browser by optionally passing it two parameters::
 
-    $this->EE->file_field->browser($config, $endpoint_url);
+    ee()->file_field->browser($config, $endpoint_url);
 
   :param array $config: Associative array containing configuration
     options (see below)
@@ -99,7 +100,7 @@ Validating the data from the File Field
   Either way, the ``validate()`` method will return the name of the file
   in an array::
 
-    $this->EE->file_field->validate($data, $field_name, $required = 'n');
+    ee()->file_field->validate($data, $field_name, $required = 'n');
 
   :param string $data: the data to validate
   :param string $field_name: the name of the field being validated
@@ -118,7 +119,7 @@ Formatting the data
   After you've validated the data, you now have to format the data for
   use in templates::
 
-    $this->EE->file_field->format_data($file_name, $directory_id = 0);
+    ee()->file_field->format_data($file_name, $directory_id = 0);
 
   :param string $file_name: the file name
   :param integer $directory_id: the directory id where the file is
@@ -137,7 +138,7 @@ Parsing the Formatted Data
   ``{filedir_n}``s all over the place, you need to parse them, so the
   ``{filedir_n}`` tag is replaced with the actual URL::
 
-    $this->EE->file_field->parse_field($data);
+    ee()->file_field->parse_field($data);
 
   :param string $data: the template to parse
   :returns: the template with ``{filedir_n}`` parsed out

@@ -22,16 +22,6 @@ the Control Panel::
           'cp_only'     => 'n'
       );
 
-      private $EE;
-
-      /**
-       * Constructor
-       */
-      function __construct()
-      {
-          // Make a local reference of the ExpressionEngine super object
-          $this->EE =& get_instance();
-      }
   }
   // END Strip_tags_rte class
 
@@ -55,7 +45,7 @@ object as demonstrated in the Definition section::
    */
   function globals()
   {
-      $this->EE->lang->loadfile('strip_tags');
+      ee()->lang->loadfile('strip_tags');
       return array(
           'rte.strip_tags.label' => lang('strip_tags')
       );
@@ -159,8 +149,8 @@ example from the Link RTE tool::
     {
         # load the external file
         $styles = file_get_contents( 'rte.image.css', TRUE );
-        $theme  = $this->EE->session->userdata('cp_theme');
-        $theme  = $this->EE->config->item('theme_folder_url').'cp_themes/'.($theme ? $theme : 'default').'/';
+        $theme  = ee()->session->userdata('cp_theme');
+        $theme  = ee()->config->item('theme_folder_url').'cp_themes/'.($theme ? $theme : 'default').'/';
         return str_replace('{theme_folder_url}', $theme, $styles);
     }
 

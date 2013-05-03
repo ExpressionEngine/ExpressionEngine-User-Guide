@@ -14,8 +14,8 @@ use the Wizard:
 Server Requirements
 -------------------
 
--  `PHP <http://www.php.net/>`_ version 5.1.6 or newer
--  `MySQL <http://www.mysql.com/>`_ version 4.1 or newer
+-  `PHP <http://www.php.net/>`_ version 5.2.4 or newer
+-  `MySQL <http://www.mysql.com/>`_ version 5.0.3 or newer
 -  32M memory allocated to PHP
 -  Your hosting account must have the following minimum MySQL grant
    privileges for database tables:
@@ -31,10 +31,10 @@ Server Requirements
 
 -  10 MB of free space on your server for the ExpressionEngine software
    and modules.
--  2 MB of Database space. 
+-  2 MB of Database space.
 
    .. note:: The database will increase in size as you add new content.
-   
+
 -  The `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_
    library compiled into PHP.
 
@@ -62,16 +62,14 @@ Optional Requirements
 Some features of ExpressionEngine are optional to use. However, in order
 to be able to use them you will need to meet their requirements.
 
--  **Pings** Your server must have XML support compiled into PHP in
-   order to send pings.
 -  **Spell Checking.** In order to be able to use the spell check
    feature in ExpressionEngine, your server must have PHP compiled with
    `pspell <http://us2.php.net/pspell>`_ support **or** be able to
    contact remote servers though PHP. If you are unsure if this is the
    case, contact your Host or server admin.
--  **Multibyte Support**  For full support of multibyte encodings you must 
-   set mbstring.func_overload to 6 in your server configuration.  This may 
-   be done by editing your  your php.ini file as per the below and then 
+-  **Multibyte Support**  For full support of multibyte encodings you must
+   set mbstring.func_overload to 6 in your server configuration.  This may
+   be done by editing your  your php.ini file as per the below and then
    restarting:
 
 ::
@@ -85,7 +83,7 @@ to be able to use them you will need to meet their requirements.
 	; 2: Overload str*() functions
 	; 4: Overload ereg*() functions
 	mbstring.func_overload = 6
-	
+
 
 Notes
 -----

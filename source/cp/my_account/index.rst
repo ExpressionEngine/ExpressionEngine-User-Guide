@@ -112,15 +112,6 @@ will appear, allowing you to customize your own Toolset.
 Channel Settings
 ----------------
 
-Ping Servers
-~~~~~~~~~~~~
-
-Every member may specify their own individual set of "Ping Servers".
-These Ping Servers will appear as options for new channel entries. By
-default, these will include the ones specified in the
-:doc:`/cp/admin/default_ping_servers` area. These can be edited or
-added to by the user, though.
-
 HTML Formatting Buttons
 ~~~~~~~~~~~~~~~~~~~~~~~
 
