@@ -8,7 +8,7 @@ Add-ons you agree to be bound by the terms and conditions of this
 license. EllisLab, Inc. reserves the right to alter this agreement at
 any time, for any reason, without notice.**
 
-Revised on: 18 December, 2012
+Revised on: 1 May, 2013
 
 ExpressionEngine Installations
 ------------------------------
@@ -119,11 +119,10 @@ suitability for your purposes and compatibility with your hosting account.
 Indemnity
 ---------
 
-You agree to indemnify and hold harmless EllisLab, Inc. and
-EngineHosting for any third-party claims, actions or suits, as well as
-any related expenses, liabilities, damages, settlements or fees arising
-from your use or misuse of the Software, or a violation of any terms of
-this license.
+You agree to indemnify and hold harmless EllisLab, Inc. for any
+third-party claims, actions or suits, as well as any related expenses,
+liabilities, damages, settlements or fees arising from your use or
+misuse of the Software, or a violation of any terms of this license.
 
 Disclaimer Of Warranty
 ----------------------
