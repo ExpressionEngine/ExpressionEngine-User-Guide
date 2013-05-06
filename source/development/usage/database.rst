@@ -2,7 +2,9 @@ Database Class
 ==============
 
 .. contents::
-	:local:
+  :local:
+
+.. highlight:: php
 
 Calling the DB Class
 --------------------
@@ -11,11 +13,9 @@ ExpressionEngine has an abstract database layer that allows developers
 to easily access the MySQL database and also provide many features like
 automatic escaping of characters and query caching.
 
-This class is initialized automatically.
+This class is initialized automatically. ::
 
-::
-
-    $query = $this->EE->db->query("SELECT channel_name FROM exp_channels");
+    $query = ee()->db->query("SELECT channel_name FROM exp_channels");
 
     if ($query->num_rows() > 0)
     {
@@ -28,7 +28,7 @@ This class is initialized automatically.
 Performing a Query
 ------------------
 
-**$this->EE->db->query()** sends a query to the database and will also
+**ee()->db->query()** sends a query to the database and will also
 return back the results, if it is a SELECT query. If you are doing an
 INSERT or UPDATE, then you do not need to set a variable since there are
 no results being returned.
@@ -36,14 +36,14 @@ no results being returned.
 ::
 
     // Simple select query
-    $query = $this->EE->db->query("SELECT * FROM exp_channels");
+    $query = ee()->db->query("SELECT * FROM exp_channels");
 
     // Update, with no variable being set
-    $this->EE->db->query("UPDATE exp_channels SET channel_name = 'dog' WHERE channel_name = 'cat'");
+    ee()->db->query("UPDATE exp_channels SET channel_name = 'dog' WHERE channel_name = 'cat'");
 
-***Note:** When doing any sort of query using user submitted data make
-sure to use the $this->EE->db->escape\_str() function (details below) to
-prevent any problems between MySQL and the data.*
+.. note:: When doing any sort of query using user submitted data make
+    sure to use the ee()->db->escape\_str() function (details
+    below) to prevent any problems between MySQL and the data.
 
 Retrieving Results from SELECT query
 ------------------------------------
@@ -55,7 +55,7 @@ object.
 
 ::
 
-    $results = $this->EE->db->query("SELECT * FROM exp_channels");
+    $results = ee()->db->query("SELECT * FROM exp_channels");
 
     if ($results->num_rows() == 0)
     {
@@ -68,7 +68,7 @@ simply use the **row** array in the object returned.
 
 ::
 
-    $results = $this->EE->db->query("SELECT * FROM exp_channels ORDER BY channel_id LIMIT 0,1");
+    $results = ee()->db->query("SELECT * FROM exp_channels ORDER BY channel_id LIMIT 0,1");
 
     $first_channel = $results->row('channel_name');
 
@@ -80,13 +80,13 @@ want to use the **result** array of the object with a foreach loop.
 
 ::
 
-    $results = $this->EE->db->query("SELECT channel_name, channel_id FROM exp_channels");
+    $results = ee()->db->query("SELECT channel_name, channel_id FROM exp_channels");
 
     if ($results->num_rows() > 0)
     {
         foreach($results->result_array() as $row)
         {
-            echo $row['channel_id'].' - '.$row['channel_name']."<br />\n";    
+            echo $row['channel_id'].' - '.$row['channel_name']."<br />\n";
         }
     }
 
@@ -104,11 +104,11 @@ fields.
 
     $data = array('name' => $name, 'email' => $email, 'url' => $url);
 
-    $sql = $this->EE->db->insert_string('exp_channel', $data);
+    $sql = ee()->db->insert_string('exp_channel', $data);
 
     // INSERT INTO exp_channel (name, email, url) VALUES ('Joe', 'joe@joe.com', 'www.joe.com')
 
-    $this->EE->db->query($sql);
+    ee()->db->query($sql);
 
 Upon performing an insert you might wish to know the value of the
 primary key for the row that was added. The DB Class tracks the last
@@ -117,8 +117,8 @@ method of the class.
 
 ::
 
-    $this->EE->db->query($insert_sql);
-    $entry_id = $this->EE->db->insert_id();
+    ee()->db->query($insert_sql);
+    $entry_id = ee()->db->insert_id();
 
 UPDATEing Data
 --------------
@@ -135,11 +135,11 @@ to update.
 
     $data = array('name' => $name, 'email' => $email, 'url' => $url);
 
-    $sql = $this->EE->db->update_string('exp_channel', $data, "author_id = '1'");
+    $sql = ee()->db->update_string('exp_channel', $data, "author_id = '1'");
 
     // UPDATE exp_channel SET name = 'Joe', email = 'joe@joe.com', url = 'www.joe.com' WHERE author_id = '1'
 
-    $this->EE->db->query($sql);
+    ee()->db->query($sql);
 
 Additional Functions
 --------------------
@@ -149,7 +149,7 @@ prepared for any sql statement to the database.
 
 ::
 
-    $query = $this->EE->db->query("SELECT FROM exp_comments WHERE url = '".$this->EE->db->escape_str($site_url)."'");
+    $query = ee()->db->query("SELECT FROM exp_comments WHERE url = '".ee()->db->escape_str($site_url)."'");
 
 **affected\_rows** will return how many rows in the database were
 affected during the most recent query. Every so often a useful variable
@@ -157,6 +157,6 @@ to have when performing INSERT, UPDATE, or DELETE queries.
 
 ::
 
-    $query = $this->EE->db->query("DELETE FROM exp_comments WHERE url = '".$this->EE->db->escape_str($site_url)."'");
-    echo $this->EE->db->affected_rows()." rows were deleted.";
+    $query = ee()->db->query("DELETE FROM exp_comments WHERE url = '".ee()->db->escape_str($site_url)."'");
+    echo ee()->db->affected_rows()." rows were deleted.";
 

@@ -111,17 +111,64 @@ If set, overrides the core Email class setting for newline characters
 
 	$config['email_newline'] = "\r\n";
 
-email_smtp_port
-~~~~~~~~~~~~~~~
+mail_protocol
+~~~~~~~~~~~~~
 
-**Value:** numeric string
+**Value:** text string
 
-If set, overrides the core Email class setting (25) for SMTP Port.
-(Email class $smtp_port property).
+Sets the email protocol to be used when sending all emails. Possible options are
+``mail``, ``sendmail``, and ``smtp``.
 
 ::
 
-	$config['email_smtp_port'] = "2525";
+	$config['mail_protocol'] = "smtp";
+
+smtp_server
+~~~~~~~~~~~
+
+**Value:** text string
+
+When using SMTP as your mail protocol, this sets the server to be used. You can 
+use ssl servers as long as OpenSSL is installed on the server ExpressionEngine 
+is installed on. Check with your server administrator first.
+
+::
+
+	$config['smtp_server'] = "smtp.server.com";
+
+smtp_port
+~~~~~~~~~
+
+**Value:** numeric string
+
+When using SMTP as your mail protocol, this will override the core Email class 
+setting (25) for SMTP Port.
+
+::
+
+	$config['smtp_port'] = "587";
+
+smtp_username
+~~~~~~~~~~~~~
+
+**Value:** text string
+
+When using SMTP as your mail protocol, this sets the username to use.
+
+::
+
+	$config['smtp_username'] = "username";
+
+smtp_password
+~~~~~~~~~~~~~
+
+**Value:** text string
+
+When using SMTP as your mail protocol, this sets the password to use.
+
+::
+
+	$config['smtp_password'] = "password";
 
 enable_db_caching
 ~~~~~~~~~~~~~~~~~
@@ -147,7 +194,7 @@ of the query changes dynamically every time the query is run. A Channel
 Entries query, for example, always matches the expiration date against
 the current time in order to determine if entries have expired. This causes
 the query to change slightly with each page load; thus it cannot use this
-caching method. (See :ref:`caching-dynamic-channel-query-caching` for an
+caching method. (See :ref:`caching_dynamic_channel_query_caching` for an
 alternative that can be used in many cases.)
 
 filename_increment
@@ -338,6 +385,19 @@ templates when Debug has been forcibly set to 0 in your config file.
 ::
 
 	$config['remove_unparsed_vars'] = 'y';
+
+server_offset
+~~~~~~~~~~~~~
+
+**Value:** time in minutes
+
+When a server's clock is off, you can set the amount of minutes to offset
+the server time by. To subtract minutes, prefix the number of minutes
+with a minus sign.
+
+::
+
+	$config['server_offset'] = '-15';
 
 smart_static_parsing
 ~~~~~~~~~~~~~~~~~~~~

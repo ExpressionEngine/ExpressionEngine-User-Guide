@@ -11,7 +11,7 @@ Suspect a Bug?
 First thing's first: make sure it's a bug. If you're not sure, or if you
 don't yet have clear steps to reproduce the bug, head over to the
 `Technical Support
-Forum <http://expressionengine.com/forums/viewforum/105/>`_ to work
+Forum <http://ellislab.com/forums/viewforum/105/>`_ to work
 through it with the Technical Support Specialists. Technical support is
 **not** provided through the bug tracker, and if we're unable to
 reproduce the bug using the information provided in your bug report, it
@@ -29,9 +29,8 @@ receive a reply back within one working day.
 
 -  Check that your preferences have been set correctly, and look for
    typos.
--  `Check the bug
-   tracker <http://expressionengine.com/bug_tracker/list_2.x/>`_ to see
-   if this specific bug has already been submitted.
+-  :elsupport:`Check the bug tracker </bugs>` to see if this specific 
+   bug has already been submitted.
 -  Make sure you can reproduce the bug in a separate, fresh installation
    of ExpressionEngine running the latest update for your version.
    
@@ -52,9 +51,8 @@ question. Our community is a huge part of what makes ExpressionEngine
 great, and bug reports from members of our community can go a long way
 in making ExpressionEngine even better.
 
-Visit the bug tracker to `report the
-bug <http://expressionengine.com/bug_tracker/report/v2/>`_, and take
-note of the following fields when filling out the bug report form:
+Visit the bug tracker to :elsupport:`report the bug </bugs/submit>`, and
+take note of the following fields when filling out the bug report form:
 
 #. **Short Description**: Make sure it's clear and concise so others
    scanning the bug tracker can easily find your bug if they're

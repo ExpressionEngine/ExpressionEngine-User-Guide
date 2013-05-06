@@ -493,6 +493,8 @@ Add::
 	}
 
 	// END
+
+.. _version_notes_1_5_wiki_theme:
 	
 Wiki Theme Updates
 ------------------
@@ -554,4 +556,4 @@ contains changes. To update your language pack, you can download this
 text file, make the changes, and simply copy the new keys to the
 appropriate language files.
 
-:ref:`Return to Update Page <update-additional-steps>`
+:ref:`Return to Update Page <update_additional_steps>`

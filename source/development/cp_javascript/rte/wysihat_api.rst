@@ -581,9 +581,8 @@ setOn()
 
 Change the button state to indicate that it is active.
 
-.. Note::
-	Usually you do not need to call this yourself. Look into overriding
-	the state handler instead.
+.. note:: Usually you do not need to call this yourself. Look into
+	overriding the state handler instead.
 
 setOff()
 ^^^^^^^^

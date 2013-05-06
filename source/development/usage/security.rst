@@ -4,6 +4,8 @@ Security Class
 .. contents::
 	:local:
 
+.. highlight:: php
+
 Calling the Security Class
 --------------------------
 
@@ -12,12 +14,12 @@ This class is initialized automatically.
 Security filtering
 ------------------
 
-$this->EE->security->xss\_clean() is the built in ExpressionEngine XSS
+ee()->security->xss\_clean() is the built in ExpressionEngine XSS
 sanitization method, which is constantly tweaked for improved security
 and performance. It accepts both a *string* and an *array* and will
 return sanitized text. ::
 
-	$str = $this->EE->security->xss_clean($str);
+	$str = ee()->security->xss_clean($str);
 
 An optional second parameter, is\_image, allows this function to be used
 to test images for potential XSS attacks, useful for file upload
@@ -26,7 +28,7 @@ returning an altered string, the function returns TRUE if the image is
 safe, and FALSE if it contained potentially malicious information that a
 browser may attempt to execute. ::
 
-	if ($this->EE->security->xss_clean($file, TRUE) === FALSE)
+	if (ee()->security->xss_clean($file, TRUE) === FALSE)
 	{
 	    // file failed the XSS test
 	}
@@ -34,7 +36,7 @@ browser may attempt to execute. ::
 Other Class Variables
 ---------------------
 
-$this->EE->security->sanitize\_filename()
+ee()->security->sanitize\_filename()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Removes naughty characters from filenames. Returns a sanitized
@@ -42,14 +44,14 @@ string.
 
 ::
 
-	$filename = $this->EE->security->sanitize_filename($name);
+	$filename = ee()->security->sanitize_filename($name);
 
-$this->EE->security->xss\_hash()
+ee()->security->xss\_hash()
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Returns a random hash.
 
 ::
 
-	echo $this->EE->security->xss_hash();
+	echo ee()->security->xss_hash();
 

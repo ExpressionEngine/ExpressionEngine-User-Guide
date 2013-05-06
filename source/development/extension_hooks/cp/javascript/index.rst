@@ -2,18 +2,23 @@ Javascript Controller Extension Hooks
 =====================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-cp\_js\_end
------------
+cp_js_end
+---------
 
-Allows you add javascript to every Control Panel page. ::
+.. function:: cp_js_end()
 
-	$str = $this->extensions->call('cp_js_end');
+  Allows you add javascript to every Control Panel page.
 
-:returns:
-    String
+  How it's called::
 
-Added in v2.1.2
+    $str = $this->extensions->call('cp_js_end');
+
+  :returns: Javascript to add to the end of the control panel
+  :rtype: String
+
+  .. versionadded:: 2.1.2

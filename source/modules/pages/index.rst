@@ -37,17 +37,17 @@ Displaying Page content is as easy as displaying normal Channel entries.
 The primary difference is that when a Page URI is requested, the URL
 segments do not correlate to a template group and template, as that is
 determined by the template that the particular "page" entry was assigned
-to use on the `Pages tab <../../cp/content/publish.html#tab_pages>`_ of
-the Publish form.
+to use on the :doc:`Pages tab </cp/content/publish>` of the Publish
+form.
 
 Additionally, the page will automatically be treated as a single entry
 page for that page entry, so other tags on the template will need to use
 the dynamic="no" parameter (if available) to display other content.
 
-In the Template chosen on the `Pages tab <../../cp/content/publish.html#tab_pages>`_ of
-the Page entry, use a normal `Channel Entries
-tag <../../modules/channel/channel_entries.html>`_ with any parameters
-and variables that you desire to display the entry, e.g.::
+In the Template chosen on the :doc:`Pages tab </cp/content/publish>` of
+the Page entry, use a normal :doc:`Channel Entries tag
+</modules/channel/channel_entries>` with any parameters and variables
+that you desire to display the entry, e.g.::
 
 	{exp:channel:entries channel="personnel"}
 		<h2>{title}</h2>
@@ -57,13 +57,16 @@ and variables that you desire to display the entry, e.g.::
 		<p>{background}</p>
 	{/exp:channel:entries}
 
+.. note:: Spanning an entry across multiple pages is not possible when
+using Page URLs, as content is only displayed for exact URI matches.
+
 Parameters
 ==========
 
 The Pages Module adds the following parameters for use in the
 {exp:channel:entries} tag.
 
--  :ref:`channel-entries-show-pages`
+-  :ref:`channel_entries_show_pages`
 
 Variables
 =========
@@ -71,22 +74,21 @@ Variables
 The Pages Module adds the following variables for use in the
 {exp:channel:entries} tag.
 
--  :ref:`channel-entries-page-uri`
--  :ref:`channel-entries-page-url`
+-  :ref:`channel_entries_page_uri`
+-  :ref:`channel_entries_page_url`
 
 
 *********************
 Multiple Site Manager
 *********************
 
-If you are using the `Multiple Site
-Manager <../../cp/sites/index.html>`_, page data are only available for
-the current site. If you wish to show the {page\_uri} or {page\_url} for
-an entry from a different site, you will need to use the
-{exp:pages:load\_site\_pages} tag on the relevant template. This tag has
-one required parameter: site. For example, if your weblog tag is pulling
-in pages from sites default\_site and corporate\_site, your tag should
-look like:
+If you are using the :doc:`Multiple Site Manager </cp/sites/index>`,
+page data are only available for the current site. If you wish to show
+the {page\_uri} or {page\_url} for an entry from a different site, you
+will need to use the {exp:pages:load\_site\_pages} tag on the relevant
+template. This tag has one required parameter: site. For example, if
+your weblog tag is pulling in pages from sites default\_site and
+corporate\_site, your tag should look like:
 
 ::
 

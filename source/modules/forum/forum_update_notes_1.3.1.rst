@@ -143,8 +143,8 @@ Member Accounts - Self Deletion
 
 A new feature in ExpressionEngine 1.5 is the ability to allow members in
 particular member groups to delete their own accounts. Please see the
-`Member Groups <../../cp/members/member_groups_edit.html>`_ section of
-the User Guide for details on this feature.
+:doc:`Member Groups </cp/members/member_groups_edit>` section of the
+User Guide for details on this feature.
 
 In order for your Discussion Forum profile pages to allow this new
 ability, you need to make the following template changes:

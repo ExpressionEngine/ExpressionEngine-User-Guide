@@ -8,11 +8,11 @@ Comment Module
 Moved Comment Management to the Comment Module Control Panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-With the addition of a `Control Panel for the Comments
-Module <../modules/comment/control_panel/index.html>`_, all comment
-management was moved to the Comment CP. In order to moderate comments, a
-member group must now have access to the Comment Module (set in `Member
-Groups - Create/Edit <../cp/members/member_groups_edit.html>`_).
+With the addition of a :doc:`Control Panel for the Comments Module
+</modules/comment/control_panel/index>`, all comment management was
+moved to the Comment CP. In order to moderate comments, a member group
+must now have access to the Comment Module (set in :doc:`Member Groups -
+Create/Edit </cp/members/member_groups_edit>`).
 
 Added Admin Notification of Comments Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -69,11 +69,10 @@ included a hack for this point release to allow these Field Types to
 continue working, however **this hack will be removed in
 ExpressionEngine 2.1.2**.
 
-Please update your code to use $this->field\_id `as
-documented <../development/fieldtypes.html#class_variables>`_ as soon as
-possible so that sites using your Field Types do not break in future
-releases.
+Please update your code to use $this->field\_id :doc:`as documented
+</development/fieldtypes>` as soon as possible so that sites using your
+Field Types do not break in future releases.
 
-:ref:`Return to Update Page <update-additional-steps>`
+:ref:`Return to Update Page <update_additional_steps>`
 
 

@@ -7,6 +7,8 @@ Session Class
 Calling the Session Class
 -------------------------
 
+.. class:: Session
+
 ExpressionEngine uses the Session class for storing information about
 the user currently visiting the ExpressionEngine site. If the user is a
 member and is logged in, then their various preferences and privileges
@@ -17,13 +19,13 @@ initialized automatically.
 
     function session_example()
     {
-        if ($this->EE->session->userdata('group_id') != 1)
+        if (ee()->session->userdata('group_id') != 1)
         {
             exit('Not a Superadmin');
         }
         else
         {
-            $admin_email = $this->EE->session->userdata('email')
+            $admin_email = ee()->session->userdata('email')
         }
     }
 
@@ -36,11 +38,13 @@ these functions
 User Data Information
 ---------------------
 
-The **$this->EE->session->userdata** variable is an array that contains
+The ``ee()->session->userdata`` variable is an array that contains
 information about that specific user, and it will likely be the most
 used part of this class for any module. Below is a list of the variables
-that it contains. **Note:** If a user has a group\_id of 1, then they
-can access anything, no matter the other settings.
+that it contains.
+
+.. note:: If a user has a ``group_id`` of 1, then they can access
+  anything, no matter the other settings.
 
 -  **username** - Username of user
 -  **screen\_name** - Screename of user, if any
@@ -49,7 +53,6 @@ can access anything, no matter the other settings.
 -  **location** - Location, if any
 -  **language** - Chosen Language
 -  **timezone** - Chosen Timezone (UM12 - UTC - UP12)
--  **daylight\_savings** - y/n
 -  **time\_format** - eu/us
 -  **group\_id** - Group ID number (1-Superadmin, 2-Banned, 3-Guests,
    4-Pending, 5-Members, 6+ Other Member Groups
@@ -147,21 +150,23 @@ included:
 Flash Data for Redirects
 ------------------------
 
+.. method:: set_flashdata()
+
 You may sometimes need to store small pieces of data, such as language
 keys, across page requests to show as result messages. You can do this
 using redirect flash data.
 
 ::
 
-    $this->EE->session->set_flashdata('result_message', 'Entry Deleted!');
-    $this->EE->functions->redirect(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortune');
+    ee()->session->set_flashdata('result_message', 'Entry Deleted!');
+    ee()->functions->redirect(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=fortune');
 
     // On the new page
-    $message = $this->EE->session->flashdata('result_message');
+    $message = ee()->session->flashdata('result_message');
 
-Flash data will often be used to specify a `Control panel
-class <../usage/cp.html#cp_messages>`_ $cp\_message variable, as such
-default view variables are displayed automatically.
+Flash data will often be used to specify a :doc:`Control panel class
+</development/usage/cp>` $cp\_message variable, as such default view
+variables are displayed automatically.
 
 Please note that due to internal limitations this will only work in
 combination with the redirect method of the functions class. Also keep
@@ -171,7 +176,7 @@ capacity.
 Cache Array
 -----------
 
-$this->EE->session->cache is an array provided for you to use for
+ee()->session->cache is an array provided for you to use for
 "flash" content, i.e. values that you would like to persist during a
 page load, helping you eliminate redundant queries and PHP processing.
 To avoid conflicts with other first and third-party use of this array,
@@ -188,9 +193,9 @@ entries tag), the query and loading of the array occurs only once.
 
 ::
 
-    if ( ! $this->EE->session->cache('super_class', 'admins'))
+    if ( ! ee()->session->cache('super_class', 'admins'))
     {
-        $query = $this->EE->db->select('member_id')->get('super_class_admins');
+        $query = ee()->db->select('member_id')->get('super_class_admins');
 
         if ($query->num_rows() > 0)
         {
@@ -201,7 +206,7 @@ entries tag), the query and loading of the array occurs only once.
                 $cache[] = $row->member_id;
             }
 
-            $this->EE->session->set_cache('super_class', 'admins', $cache);
+            ee()->session->set_cache('super_class', 'admins', $cache);
         }
     }
 
@@ -216,16 +221,16 @@ Tracker Array
 -------------
 
 The Session class has one more useful variable that is only available on
-the user side of the site. **$this->EE->session->tracker** is an array
+the user side of the site. **ee()->session->tracker** is an array
 that contains the last five ExpressionEngine pages viewed by this user
 in the form of a ExpresionEngine query string (i.e. '/channel/comments/'
 or 'index' for main site page). The array's keys ranges from 0-5.
 
 ::
 
-    $current_page = $this->EE->session->tracker['0'];
-    $last_page = $this->EE->session->tracker['1'];
-    $two_pages_ago = $this->EE->session->tracker['2'];
+    $current_page = ee()->session->tracker['0'];
+    $last_page = ee()->session->tracker['1'];
+    $two_pages_ago = ee()->session->tracker['2'];
 
 If a page is constantly reloaded, ExpressionEngine will not allow the
 array to fill up with just the page's query string but waits until the

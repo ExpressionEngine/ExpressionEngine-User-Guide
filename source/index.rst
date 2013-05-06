@@ -8,7 +8,7 @@ Welcome
 
 - :doc:`intro/getting_the_most`
 - :doc:`intro/the_big_picture`
-- `EllisLab Support <http://ellislab.com/support>`_
+- :ellislab:`EllisLab Support </support>`
 
 *****************
 Application Setup
@@ -25,7 +25,6 @@ Updates and Upgrades
 
 - :doc:`installation/update`
 - :doc:`installation/upgrade_from_1.x`
-- :doc:`installation/upgrade_from_freelancer`
 - :doc:`installation/upgrade_from_core`
 
 **********************
@@ -98,8 +97,8 @@ Solving Problems
 ================
 
 - :doc:`troubleshooting/index`
-- `EllisLab Support <http://ellislab.com/support>`_
-- `Community Support Forum <http://ellislab.com/forums/viewannounce/230174_114/>`_
+- :ellislab:`EllisLab Support </support>`
+- :ellislab:`Community Support Forum </forums/viewannounce/230174_114/>`
 
 
 *************
@@ -131,7 +130,7 @@ Add-Ons
 =======
 
 
-.. _add-ons-included-in-expressionengine:
+.. _add_ons_included_in_expressionengine:
 
 Included in ExpressionEngine
 ----------------------------
@@ -161,7 +160,7 @@ Included in ExpressionEngine
 - :doc:`modules/updated_sites/index`
 - :doc:`modules/wiki/index`
 
-.. _add-ons-available-for-download:
+.. _add_ons_available_for_download:
 
 Available for Download
 ----------------------
@@ -175,7 +174,7 @@ Developing for ExpressionEngine
 *******************************
 
 - :doc:`Add-On Development <development/index>`
-- `Development & Programming Forum <http://ellislab.com/forums/viewannounce/230178_116/>`_
+- :ellislab:`Development & Programming Forum </forums/viewannounce/230178_116/>`
 
 
 **********************

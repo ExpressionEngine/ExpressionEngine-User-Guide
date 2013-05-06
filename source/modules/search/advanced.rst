@@ -167,8 +167,8 @@ Or use "not" to exclude categories
 
 	category="not 2|8"
 
-**Note:** If a parent is excluded from the multiple select list, then
-its children will not be shown.
+.. note:: If a parent is excluded from the multiple select list, then
+	its children will not be shown.
 
 cat\_style=
 ~~~~~~~~~~~
@@ -190,6 +190,8 @@ name=
 
 Specify the name attribute for the <form> tag, which will allow you to
 specify CSS and JavaScript to the form more easily.
+
+.. _search_advanced_no_result_page:
 
 no\_result\_page=
 ~~~~~~~~~~~~~~~~~
@@ -274,9 +276,9 @@ status=
 
 	status="open"
 
-You may restrict the results to a particular
-`status <../../cp/admin/channels/statuses.html>`_. You can choose
-multiple statuses using a pipe::
+You may restrict the results to a particular :doc:`status
+</cp/admin/channels/statuses>`. You can choose multiple statuses using a
+pipe::
 
 	status="draft|reviewed|published"
 
@@ -293,8 +295,7 @@ channel=
 
 	channel="which"
 
-From which
-`channel <../../cp/admin/channels/channel_management.html>`_ to
+From which :doc:`channel </cp/admin/channels/channel_management>` to
 search the entries. Additionally, you can use the pipe character to
 separate multiple channels::
 

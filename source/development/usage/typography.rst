@@ -5,6 +5,8 @@ Typography Class
 	:local:
 	:depth: 1
 
+.. highlight:: php
+
 Calling the Typography Class
 ----------------------------
 
@@ -18,11 +20,11 @@ the Typography Class
 
 ::
 
-    $this->EE->load->library('typography');
-    $this->EE->typography->initialize();
+    ee()->load->library('typography');
+    ee()->typography->initialize();
 
 Note that after loading the Typography library you need to initialize it
-with $this->EE->load->typography->initialize(); or you will be
+with ee()->load->typography->initialize(); or you will be
 inheriting the class properties of whatever code last used it.
 
 Typography Class Properties
@@ -208,7 +210,7 @@ provided for a Yes / No type preference.
 Parsing Type
 ------------
 
-*str* **$this->EE->typography->parse\_type** ( *str* $str, *array*
+*str* **ee()->typography->parse\_type** ( *str* $str, *array*
 $prefs )
 
 This function returns a string of parsed type. It is the most common use
@@ -217,7 +219,7 @@ described in this document are used within the parse\_type() method. The
 format the string is returned in is determined by both the class
 properties and the array of properties provided in the second argument.::
 
-    $str = $this->EE->typography->parse_type($str);
+    $str = ee()->typography->parse_type($str);
 
 Example of Parsing Type with Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -239,7 +241,7 @@ following:
             'allow_img_url' => 'y'
             );
 
-    $str = $this->EE->typography->parse_type($str, $prefs);
+    $str = ee()->typography->parse_type($str, $prefs);
 
 Using a Plugin for Text Formatting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -249,7 +251,7 @@ the class name of the plugin, in lowercase letters.
 
 ::
 
-    $str = $this->EE->typography->parse_type($str, array('text_format' => 'markdown'));
+    $str = ee()->typography->parse_type($str, array('text_format' => 'markdown'));
 
 If you attempt to use a plugin that is not installed, no text formatting
 will be performed. It may be wise to check for the existence of plugins
@@ -258,20 +260,20 @@ one of the native formatting types.
 
 ::
 
-    $text_format = (in_array('markdown', $this->EE->typography->text_fmt_plugins)) ? 'markdown' : 'xhtml';
-    $str = $this->EE->typography->parse_type($str, array('text_format' => $text_format));
+    $text_format = (in_array('markdown', ee()->typography->text_fmt_plugins)) ? 'markdown' : 'xhtml';
+    $str = ee()->typography->parse_type($str, array('text_format' => $text_format));
 
 Encode Email Addresses
 ----------------------
 
-*str* **$this->EE->typography->encode\_email** ( *str* $email, *str*
+*str* **ee()->typography->encode\_email** ( *str* $email, *str*
 $title, *bool* $anchor )
 
 This function encodes email addresses with Javascript, to assist in
 prevention of email harvesting by bots.::
 
     $str = "brett.bretterson@example.com";
-    $str = $this->EE->typography->encode_email($str, "Email Brett Bretterson");
+    $str = ee()->typography->encode_email($str, "Email Brett Bretterson");
 
 $email
 ~~~~~~
@@ -296,8 +298,8 @@ you can also set the $encode\_type class property to "noscript".
 ::
 
     $str = "brett.bretterson@example.com";
-    $this->EE->typography->encode_type = "noscript";
-    $str = $this->EE->typography->encode_email($str, '', FALSE);
+    ee()->typography->encode_type = "noscript";
+    $str = ee()->typography->encode_email($str, '', FALSE);
 
 Returns::
 
@@ -306,12 +308,12 @@ Returns::
 Auto (XTHML) Typography
 -----------------------
 
-*str* **$this->EE->typography->auto\_typography** ( *str* $str )
+*str* **ee()->typography->auto\_typography** ( *str* $str )
 
 This function takes a string of text and returns typographically correct
 XHTML.::
 
-    $str = $this->EE->typography->auto_typography($str);
+    $str = ee()->typography->auto_typography($str);
 
  Its primary modifications are:
 
@@ -330,12 +332,12 @@ $str
 Formatting Characters for XHTML ("Light" Typography)
 ----------------------------------------------------
 
-*str* **$this->EE->typography->format\_characters** ( *str* $str )
+*str* **ee()->typography->format\_characters** ( *str* $str )
 
 This function performs the character transformation portion of the XHTML
 typography only, i.e. curly quotes, ellipsis, ampersand, etc.::
 
-    $str = $this->EE->typography->format_characters($str);
+    $str = ee()->typography->format_characters($str);
 
 $str
 ~~~~

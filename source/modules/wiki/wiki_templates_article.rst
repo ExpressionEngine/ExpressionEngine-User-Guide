@@ -44,9 +44,8 @@ When a revision of an article is displayed this shows the date of the
 revision being viewed.
 
 The **format** parameter is used to determine the date's formatting
-using ExpressionEngine's `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_. For
-example, this::
+using ExpressionEngine's :doc:`Date Variable Formatting
+</templates/date_variable_formatting>`. For example, this::
 
 	Revised: {revision_date format="%D, %F %d, %Y - %g:%i:%s"}
 
@@ -75,8 +74,8 @@ Special Category Tags
 ---------------------
 
 If an article is assigned to one or more categories you can use the
-`{wiki:categories} <wiki_templates_special_categories.html#wiki_tag_categories>`_
-tag to display the categories beneath the article as outlined below:
+:ref:`{wiki:categories} <wiki_categories_tag>` tag to display the
+categories beneath the article as outlined below:
 
 |If an article has categories you can display them beneath the article.|
 
@@ -89,10 +88,11 @@ below:
 
 |Displays all the articles in a category.|
 
-**Note:** A **Namespace** is a way to organize content by a special
-keyword (the "namespace") that is not a title, topic, or category name.
-For example, the wiki currently uses, by default, namespaces called
-**Special**, **File**, and **Category** to organize wiki content.
+.. note:: A **Namespace** is a way to organize content by a special
+	keyword (the "namespace") that is not a title, topic, or category 
+	name. For example, the wiki currently uses, by default, namespaces 
+	called **Special**, **File**, and **Category** to organize wiki 
+	content.
 
 Namespace features will be expanded on in future versions. In the
 current verison you can use the **Category Namespace** in the Article
@@ -100,13 +100,10 @@ Template to create a list of articles that are assigned to a specific
 category.
 
 This is done by using the special **{if namespace == 'Category'}**
-conditional and a combination of the
-`{wiki:category\_subcategories} <wiki_templates_special_categories.html#wiki_tag_category_subcategories>`_
-and
-`{wiki:category\_articles} <wiki_templates_special_categories.html#wiki_tag_category_articles>`_
-tags described in the :doc:`Special
-Categories <wiki_templates_special_categories>` section of the
-Wiki documentation.
+conditional and a combination of the :ref:`wiki_category_subcategories`
+and :ref:`wiki_category_articles` tags described in the :doc:`Special
+Categories <wiki_templates_special_categories>` section of the Wiki
+documentation.
 
 
 .. |The Wiki Article template determines the visual display of articles as highlighted below.| image:: ../../images/wiki_article_highlight.jpg

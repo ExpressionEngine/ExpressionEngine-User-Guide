@@ -24,11 +24,10 @@ When a Hidden Template is Requested in the URL
 
 When someone attempts to access a hidden template via the URL, one of
 two things will occur. If you have specified a 404 template in your
-`Global Template
-Preferences <../cp/design/templates/global_template_preferences.html>`_,
-then the 404 template will be displayed, with 404 headers. If you have
-not specified a 404 template, then the index template of the requested
-template group will be displayed.
+:doc:`/cp/design/templates/global_template_preferences`, then the 404
+template will be displayed, with 404 headers. If you have not specified
+a 404 template, then the index template of the requested template group
+will be displayed.
 
 Example
 ~~~~~~~

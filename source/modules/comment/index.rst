@@ -10,11 +10,11 @@ Comment
 Introduction
 ************
 
-The Comment Module allows you to show user-submitted comments on your site.
-Comments can be managed via the Comment Module Control Panel, and users can 
-edit their own comments via AJAX on the front-end of your site. In addition,
-the comment module supports `Comment Pagination <../channel/pagination_page.html>`_. 
-
+The Comment Module allows you to show user-submitted comments on your
+site. Comments can be managed via the Comment Module Control Panel, and
+users can  edit their own comments via AJAX on the front-end of your
+site. In addition, the comment module supports :doc:`Comment Pagination
+</modules/channel/pagination_page>`.
 
 *******************
 Comment Entries Tag
@@ -26,8 +26,8 @@ associated with your entries.
 .. note:: The Comment Entries Tag is intended for use in one of your
    "single entry" pages. That is, a page that shows a single, specific
    channel entry. Therefore, your Comment page must be linked to from
-   within your Channel entries using the :ref:`channel-entries-url_title_path` 
-   variable or the :ref:`channel-entries-entry_id_path` variable,
+   within your Channel entries using the :ref:`channel_entries_url_title_path` 
+   variable or the :ref:`channel_entries_entry_id_path` variable,
    so that the comments can be associated to a specific entry.
 
 Here is a basic example showing how you might use the comment tag::
@@ -85,10 +85,10 @@ from multiple entries by separating them with the pipe character::
 
 	entry_id="not 45|534|807"
 
-**Note:** This parameter takes precedence over any entry specified
-dynamically in the URL, so when using this parameter you will want to
-make sure it is clear to the user which entry the displayed comments
-belong to.
+.. note:: This parameter takes precedence over any entry specified
+	dynamically in the URL, so when using this parameter you will want
+	to make sure it is clear to the user which entry the displayed
+	comments belong to.
 
 comment\_id=
 ------------
@@ -114,7 +114,7 @@ Allows you to limit the number of comments. The limit will default to
 :doc:`pagination <../channel/pagination_page>` then this
 will determine the number of comments shown per page.
 
-.. _comment-entries-orderby:
+.. _comment_entries_orderby:
 
 orderby=
 --------
@@ -138,7 +138,7 @@ paginate=
 
 ::
 
-	paginate="top" ``paginate="bottom"`` ``paginate="both"``
+	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"
 
 This parameter is for use with entry
 :doc:`pagination <../channel/pagination_page>` and determines where the
@@ -150,6 +150,8 @@ pagination code will appear for your comments:
    list of comments.
 #. **both**: The navigation text and links will appear both above and
    below your list of comments.
+#. **inline**: The navigation text and links will appear within the list
+   of entries for each entry.
 
 If no parameter is specified, the navigation block will default to the
 "bottom" behavior.
@@ -196,10 +198,10 @@ url\_title=
 You can hard code the comment entries tag to show comments for a
 specific channel entry by its URL title.
 
-**Note:** This parameter takes precedence over any entry specified
-dynamically in the URL, so when using this parameter you will want to
-make sure it is clear to the user which entry the displayed comments
-belong to.
+.. note:: This parameter takes precedence over any entry specified
+	dynamically in the URL, so when using this parameter you will want
+	to make sure it is clear to the user which entry the displayed
+	comments belong to.
 
 channel=
 --------
@@ -208,8 +210,7 @@ channel=
 
 	channel="which"
 
-From which
-`channel <../../cp/admin/channels/channel_management.html>`_ to
+From which :doc:`channel </cp/admin/channels/channel_management>` to
 show the comments (will show comments from any channel if no channel is
 specified). Additionally, you can use the pipe character to separate
 multiple channels::
@@ -349,9 +350,18 @@ can\_moderate\_comment
 
 	{if can_moderate_comment}
 
-This variable will be used in a conditional to allow `comment
-editing <comment-editing>`. It indicates whether a member has
+This variable will be used in a conditional to allow :ref:`comment
+editing <comment_editing>`. It indicates whether a member has
 permission to edit a given comment AND/OR close that comment.
+
+channel\_short\_name
+--------------------
+
+::
+
+	{channel_short_name}
+
+The short name of the channel of that the comment belongs to.
 
 channel\_title
 --------------
@@ -380,8 +390,8 @@ comment\_stripped
 	{comment_stripped}
 
 The body of the comment without any typographical processing and with
-ExpressionEngine tags encoded. This tag is for use in `comment
-editing <comment-editing>`.
+ExpressionEngine tags encoded. This tag is for use in :ref:`comment
+editing <comment_editing>`.
 
 comment\_auto\_path
 -------------------
@@ -402,8 +412,8 @@ comment\_date
 
 	{comment_date format="%Y %m %d"}
 
-The date of the comment. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for more information.
+The date of the comment. See :doc:`Date Variable Formatting
+</templates/date_variable_formatting>` for more information.
 
 
 comment\_entry\_id\_auto\_path
@@ -478,9 +488,9 @@ editable
 
 	{if editable}Show Edit{/if}
 
-This variable will be used in a conditional to allow `comment
-editing <comment-editing>`. It indicates whether a member has
-permission to edit a given comment.
+This variable will be used in a conditional to allow :ref:`comment
+editing <comment_editing>`. It indicates whether a member has
+:ref:`permission to edit a given comment <comment_admin_privs>`.
 
 edit\_date
 ----------
@@ -489,8 +499,8 @@ edit\_date
 
 	{edit_date format="%Y %m %d"}
 
-The date on which the comment was edited. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for more information.
+The date on which the comment was edited. See :doc:`Date Variable
+Formatting </templates/date_variable_formatting>` for more information.
 
 email
 -----
@@ -545,8 +555,9 @@ gmt\_comment\_date
 
 	{gmt_comment_date format="%Y %m %d"}
 
-The date of the comment but **not** localized for the user. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for more information.
+The date of the comment but **not** localized for the user. See
+:doc:`Date Variable Formatting </templates/date_variable_formatting>`
+for more information.
 
 icq
 ---
@@ -640,7 +651,7 @@ paginate=
 
 ::
 
-	paginate="top" ``paginate="bottom"`` ``paginate="both"``
+	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"
 
 This parameter is for use with entry
 :doc:`pagination <../channel/pagination_page>` and
@@ -652,6 +663,8 @@ determines where the pagination code will appear for your entries:
    list of entries.
 #. **both**: The navigation text and links will appear both above and
    below your list of entries.
+#. **inline**: The navigation text and links will appear within the list
+   of entries for each entry.
 
 If no parameter is specified, the navigation block will default to the
 "bottom" behavior.
@@ -1017,6 +1030,181 @@ as "comment" pages.
 .. note:: Only logged in members may subscribe without commenting. The
    tag will return nothing for non-logged in members.
 
+***************************
+Comment Subscriber List Tag
+***************************
+
+The Comment Subscriber List Tag enables you to display the members who
+have subscribed to comment notifications for a particular entry.
+
+.. note:: The Comment Subscriber List Tag is intended for use in one of your
+  "single entry" pages. That is, a page that shows a single, specific
+  channel entry. Its variables are all prefixed, so you can easily use it
+  inside of a channel entries tag or a comment entries tag.
+
+Here is a basic example showing how you might use the Comment Subscriber
+List Tag::
+
+	{exp:comment:subscriber_list}
+		{if subscriber_count == 1}
+			<p>{subscriber_total_results} Subscribed</p>
+			<ul>
+		{/if}
+		
+		{if subscriber_is_member}
+			<li><a href="{path='member/{subscriber_member_id}'}">{subscriber_screen_name}</a></li>
+		{/if}
+		
+		{if subscriber_count == subscriber_total_results}
+			<li>and {subscriber_guest_total} Guest{if subscriber_guest_total != 1}s{/if}</li>	
+			</ul>
+		{/if}
+	{/exp:comment:subscriber_list}
+
+Parameters
+==========
+
+.. contents::
+	:local:
+	:depth: 2
+
+entry\_id=
+----------
+
+::
+
+	entry_id="24"
+
+You can hard code the comment subscriber list tag to show subscribers
+for a specific channel entry by its entry ID.
+
+.. note:: This parameter takes precedence over any entry specified
+  dynamically in the URL, so when using this parameter you will want to
+  make sure it is clear to the user which entry the displayed comments
+  belong to.
+
+exclude\_guests=
+----------------
+
+::
+
+	exclude_guests="yes"
+
+If you would like to exclude guest comments from the list and totals, set
+the `exclude_guests` parameter to "yes". Comments made by non-members will
+not be included in the totals, and their email addresses will not be
+available for output to Super Admins.
+
+
+Variables
+=========
+
+.. contents::
+	:local:
+	:depth: 2
+
+subscriber\_count
+-----------------
+
+::
+
+	{subscriber_count}
+
+The "count" out of the current subscriber being displayed by the tag. Also
+available simply as `{count}`, but using the prefixed version makes this
+variable safe to use inside of other tags that may have their own `{count}`
+variable.
+
+subscriber\_email
+-----------------
+
+::
+
+	{subscriber_email}
+
+The email address of the subscriber being displayed.
+
+.. note:: For the privacy of your site's members, email addresses will
+  **only** be output to logged in Super Admins. This is useful for making
+  this information known to administrators, e.g.::
+
+   {if subscriber_is_member}
+   	{subscriber_screen_name}
+   {if:else}
+   	{encode="{subscriber_email}"}
+   {/if}
+
+  `{subscriber_email}` will be empty if you are not logged in as a
+  Super Admin so it is best to use this variable in a conditional.
+
+subscriber\_guest\_total
+------------------------
+
+::
+	
+	{subscriber_guest_total}
+
+The total number of subscribers to an entry who are **not** registered
+members of the site.
+
+subscriber\_member\_id
+----------------------
+
+::
+
+	{subscriber_member_id}
+
+The member ID of the subscriber being displayed. This will be "0" if the
+subscriber is a guest, so it is best to use this variable in a conditional.
+
+subscriber\_member\_total
+-------------------------
+
+::
+
+	{subscriber_member_total}
+
+The total number of subscribers to an entry who are registered members
+of the site.
+
+subscriber\_screen\_name
+------------------------
+
+::
+
+	{subscriber_screen_name}
+
+The screen name of the subscriber. This will be empty if the subscriber
+is a guest, so it is best to use this variable in a conditional.
+
+subscriber\_total\_results
+--------------------------
+
+::
+
+	{subscriber_total_results}
+
+The total number of subscribers to an entry. Also available simply as
+`{total_results}`, but using the prefixed version makes this variable
+safe to use inside of other tags that may have their own
+`{total_results}` variable.
+
+
+Conditionals
+============
+
+.. contents::
+	:local:
+
+subscriber\_is\_member
+----------------------
+
+::
+
+	{if subscriber_is_member}
+
+The conditional allows you to show (or hide) content based on whether
+the subscriber is a registered member of the site.
 
 **************************
 Displaying Recent Comments
@@ -1042,7 +1230,7 @@ of a particular entry. Also note that you can use a number of values for
 the `comment-entries-orderby` parameter.
 
 
-.. _comment-submission-form:
+.. _comment_submission_form:
 
 ***********************
 Comment Submission Form
@@ -1103,10 +1291,10 @@ entry\_id=
 You can hard code the comment form tag to display a comment form for a
 specific channel entry by its entry ID.
 
-**Note:** This parameter takes precedence over any entry specified
-dynamically in the URL, so when using this parameter you will want to
-make sure it is clear to the user which entry the displayed comment form
-belongs to.
+.. note:: This parameter takes precedence over any entry specified
+	dynamically in the URL, so when using this parameter you will want
+	to make sure it is clear to the user which entry the displayed
+	comment form belongs to.
 
 preview=
 --------
@@ -1131,10 +1319,10 @@ url\_title=
 You can hard code the comment for tag to display a comment form for a
 specific channel entry by its URL title.
 
-**Note:** This parameter takes precedence over any entry specified
-dynamically in the URL, so when using this parameter you will want to
-make sure it is clear to the user which entry the displayed comment form
-belong to.
+.. note:: This parameter takes precedence over any entry specified
+	dynamically in the URL, so when using this parameter you will want
+	to make sure it is clear to the user which entry the displayed
+	comment form belong to.
 
 channel=
 --------
@@ -1221,11 +1409,10 @@ captcha
 
 	{if captcha}
 
-As noted in the `captcha
-section <../../general/captchas.html#thecode>`_, the contents of the
-conditional ({if captcha}) tag will only appear if you have the CAPTCHA
-preference turned on for comments in the channel the entry is associated
-with.
+As noted in the :doc:`captcha section </security/captchas>`, the contents
+of the conditional ({if captcha}) tag will only appear if you have the
+CAPTCHA preference turned on for comments in the channel the entry is
+associated with.
 
 comments\_expired
 -----------------
@@ -1234,9 +1421,9 @@ comments\_expired
 
 	{if comments_expired}
 
-If commenting has expired (and expiration is not set to be `overridden
-by moderation <control_panel/index.html#settings>`_), the contents of
-this conditional will replace all other tag contents.
+If commenting has expired (and expiration is not set to be
+:doc:`overridden by moderation </modules/comment/control_panel/index>`),
+the contents of this conditional will replace all other tag contents.
 
 comments\_disabled
 ------------------
@@ -1289,9 +1476,8 @@ comment\_date
 
 The date of the comment. As with other date variables, this requires the
 "format" parameter in order to define how the date should be displayed.
-See the `date variable
-formatting <../../templates/date_variable_formatting.html>`_ page for
-more information.
+See the :doc:`date variable formatting
+</templates/date_variable_formatting>` page for more information.
 
 email
 -----
@@ -1381,7 +1567,7 @@ The following conditionals are available:
 -  {if url}
 
 
-.. _comment-editing:
+.. _comment_editing:
 
 **************************************************
 Allowing Members to Edit Comments on the Front End
@@ -1389,7 +1575,7 @@ Allowing Members to Edit Comments on the Front End
 
 The available tags and variables allow you to write your own client side
 code for implementing comment editing. The following is a simplified
-example using the native :ref:`{exp:jquery:script\_tag} <jquery-script-tag>`.
+example using the native :ref:`{exp:jquery:script\_tag} <jquery_script_tag>`.
 
 Example Code
 ============
@@ -1434,7 +1620,7 @@ Comment Edit Script Tag
 
 This tag outputs a script tag that will include the necessary JavaScript
 for your comment editor. This script requires jQuery, so you will
-typically use it in conjunction with the :ref:`jquery-script-tag`.
+typically use it in conjunction with the :ref:`jquery_script_tag`.
 
 AJAX Edit URL Tag
 =================
@@ -1445,13 +1631,15 @@ AJAX Edit URL Tag
 
 This tag outputs an action url that links to a method that processes the
 submitted data. It is useful if you are `customizing the client-side
-code <#customizing>`_. The method requires both a comment id and either
-a comment or a status variable. For example::
+code <#customizing-client-side-code>`_. The method requires both a comment id and either
+a comment or a status variable. For example:
+
+.. code-block:: js
 
 	$.post("{exp:comment:ajax_edit_url}", {status: "close", comment_id: id, XID: hash});
 
-**Note:** If secure forms is enabled, a proper security hash must be
-sent in order to edit or close the comment.
+.. note:: If secure forms is enabled, a proper security hash must be
+	sent in order to edit or close the comment.
 
 A request for an edit will return a response array. In the case of an
 error, an error key with a response message will be sent. If the request
@@ -1493,10 +1681,12 @@ Customizing Client-Side Code
 
 If you need additional control or customized hooks in your markup and
 JavaScript for the comment editor, you can forego the simplified jQuery
-and {exp:comment:comment\_edit\_script} and roll your own. You can use
-the example code below for reference. ::
+and `{exp:comment:edit\_comment\_script} <#comment-edit-script-tag>`_ and roll your own. You can use
+the example code below for reference, or download and fork from our `GitHub repo <https://github.com/EllisLab/CommentEditor>`_.
 
-	<script type="text/javascript" charset="utf-8">
+.. code-block:: html
+
+	<script type="text/javascript">
 		$.fn.CommentEditor = function(options) {
 	
 			var OPT;

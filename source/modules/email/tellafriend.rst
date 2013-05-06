@@ -121,11 +121,11 @@ separating the email addresses with commas::
 
 	recipients="admin@example.com,ceo@example.com,president@example.com"
 
-**Note**: In the situation where recipients are specified with this
-parameter and the regular "To:" field is *also* filled out, the
-recipients specified with this parameter will be mailed using BCC (Blind
-Carbon Copy) so that the "To:" recipient does not see those "hidden"
-email recipients.
+.. note:: In the situation where recipients are specified with this
+	parameter and the regular "To:" field is *also* filled out, the
+	recipients specified with this parameter will be mailed using BCC 
+	(Blind Carbon Copy) so that the "To:" recipient does not see those 
+	"hidden" email recipients.
 
 redirect=
 ~~~~~~~~~
@@ -204,10 +204,10 @@ status=
 
 	status="open"
 
-The channel `status <../../cp/admin/channels/statuses.html>`_ you
-would like entries restricted to. This is useful if you will be
-displaying entries with a status other than "open". You can choose
-multiple statuses using a pipe::
+The channel :doc:`status </cp/admin/channels/statuses>` you would like
+entries restricted to. This is useful if you will be displaying entries
+with a status other than "open". You can choose multiple statuses using
+a pipe::
 
 	status="draft|reviewed|published"
 
@@ -255,7 +255,7 @@ Channel Parameters
 ******************
 
 While some of the :ref:`Channel Entries Tag
-Parameters <channel-entries-parameters>` are also available
+Parameters <channel_entries_parameters>` are also available
 to the Tell-a-Friend form, most of them will not be beneficial to use in
 that context. One exception that can be valuable is
 show\_future\_entries=, which would let you use the Tell-a-Friend form
@@ -297,13 +297,13 @@ Channel Variables
 	{title}     {permalink}     {author}     {body}     et cetera...
 
 Many of the :ref:`Channel Entries Tag
-Variables <channel-entries-single-variables>` are available for the
+Variables <channel_entries_single_variables>` are available for the
 tell-a-friend form. Notable exceptions are all category related
 variables and custom member fields.
 
-.. note:: To ease the useability of this form with multiple channels,
+.. note:: To ease the usability of this form with multiple channels,
    which will possibly contain different channel fields, all Channel
-   Variables that are unfillable will be removed from the form.
+   Variables that are unfulfillable will be removed from the form.
 
 For example, if you have a channel with the fields "summary" and "body",
 and then another channel with the fields "ingredients" and "directions",
@@ -337,9 +337,8 @@ that it is only displayed if necessary::
 	{/if}
 
 The setting to disable or enable CAPTCHA for the tell-a-friend form can
-be found in the `Email
-Configuration <../../cp/admin/email_configuration.html>`_
-preferences.
+be found in the :doc:`Email Configuration
+</cp/admin/email_configuration>` preferences.
 
 from
 ~~~~
@@ -355,7 +354,7 @@ Email address of person who is sending the email.
    pretending to be someone they are not (i.e. keying in admin@paypal.com).
    If the user is allowed to modify both this and the message field, you
    have essentially created a
-   `phishing <http://dictionary.reference.com/search?q=phishing>`_ form
+   `phishing <http://dictionary.reference.com/browse/phishing>`_ form
    ripe for abuse.
 
 message
@@ -375,7 +374,7 @@ if it is just a hidden field.
    it is a potential for abuse by spammers, who could use your form for
    email advertising. If the user is allowed to modify both this and the
    from field, you have essentially created a
-   `phishing <http://dictionary.reference.com/search?q=phishing>`_ form
+   `phishing <http://dictionary.reference.com/browse/phishing>`_ form
    ripe for abuse.
 
 name

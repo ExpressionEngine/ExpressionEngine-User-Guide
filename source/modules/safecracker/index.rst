@@ -28,8 +28,9 @@ community.
 -  Specify a default status, or set forms to override default statuses.
 -  Specify different return URLs for different member groups by the
    group\_id. Send visitors to one page, and admins to another.
--  Server-side form validation using the `CodeIgniter Form Validation
-   class <http://codeigniter.com/user_guide/libraries/form_validation.html>`_.
+-  Server-side form validation using the :ellislab:`CodeIgniter Form 
+   Validation class 
+   </codeigniter/user-guide/libraries/form_validation.html>`.
 -  Handles AJAX requests and can output responses in JSON.
 -  Includes an optional `SafeCracker File Fieldtype`_.
 
@@ -213,7 +214,7 @@ allow_comments=
 	allow_comments="yes"
 
 Whether to allow comments on the submitted entry. If this parameter is
-not specified, the Channel's :ref:`channel-prefs-allow-comments` preference
+not specified, the Channel's :ref:`channel_prefs_allow_comments` preference
 will be used.
 
 author\_only=
@@ -301,8 +302,8 @@ include\_jquery=
 
 Includes jQuery automatically. Defaults to "yes".
 
-**Note:** If you are using your own copy of jQuery you will need to load
-it **before** the SafeCracker form.
+.. note:: If you are using your own copy of jQuery you will need to load
+	it **before** the SafeCracker form.
 
 json=
 ~~~~~
@@ -381,15 +382,15 @@ rules:my\_field\_name=
 	rules:my_field_name="required|min_length[5]"
 
 Add additional validation rules to your fields. Separate multiple rules
-with the pipe \| character. You may use the native `CodeIgniter
-rules <http://codeigniter.com/user_guide/libraries/form_validation.html#rulereference>`_
+with the pipe \| character. You may use the native :ellislab:`CodeIgniter
+rules </codeigniter/user-guide/libraries/form_validation.html#rulereference>`
 (required, matches, min\_length, max\_length, exact\_length, alpha,
 alpha\_numeric, alpha\_dash, numeric, integer, is\_natural,
 is\_natural\_no\_zero, valid\_email, valid\_emails, valid\_ip,
 valid\_base64), and these additional ExpressionEngine-specific rules:
 valid\_ee\_date.
 
-.. _safecracker-rte-selector:
+.. _safecracker_rte_selector:
 
 rte_selector=
 ~~~~~~~~~~~~~
@@ -403,12 +404,12 @@ This parameter will tell SafeCracker to automatically load ExpressionEngine's
 selector you specify. Any valid jQuery selector is acceptable.
 
 The RTE will use the Toolset preference of the currently logged-in user as chosen
-in :ref:`my-account-rte-prefs`. If the user has not chosen a Toolset or is not
-logged in, the site's :ref:`rte-mcp-default-toolset` will be used.
+in :ref:`my_account_rte_prefs`. If the user has not chosen a Toolset or is not
+logged in, the site's :ref:`rte_mcp_default_toolset` will be used.
 
 You can optionally force a particular toolset ID to use (see below).
 
-.. _safecracker-rte-toolset-id:
+.. _safecracker_rte_toolset_id:
 
 rte_toolset\_id=
 ~~~~~~~~~~~~~~~~
@@ -582,6 +583,8 @@ display the options in a loop, to give you more control over the markup.
 You have the four following sub-variables: {option\_value},
 {option\_name}, {selected} and {checked}.
 
+.. _safecracker_examples_custom_field_loop:
+
 custom\_fields
 ~~~~~~~~~~~~~~
 
@@ -635,11 +638,24 @@ custom\_fields
 		{/if}
 		
 		{if relationship}
-			<select id="{field_name}" name="{field_name}">
-				{options}
-					<option value="{option_value}"{selected}>{option_name}</option>
-				{/options}
-			</select>
+			{if allow_multiple}
+				<ul style="list-style: none">
+					{options}
+					<li>
+						<input type="text" name="{field_name}[sort][]" value="{option_order}" style="width: 25px">
+						<label class="checkbox">
+						<input type="checkbox" name="{field_name}[data][]" value="{option_value}"{checked}> {option_name}
+						</label>
+					</li>
+					{/options}
+				</ul>
+			{if:else}
+					<select id="{field_name}" name="{field_name}[data][]">
+					{options}
+						<option value="{option_value}"{selected}>{option_name}</option>
+					{/options}
+					</select>
+			{/if}
 		{/if}
 		
 		{if multiselect}
@@ -755,11 +771,11 @@ Form Validation
 ---------------
 
 SafeCracker uses the CodeIgniter Form Validation class. You can create
-field-by-field `validation rules <#rules-my-field-name>`_. By default, SafeCracker
-will display validation errors using the ExpressionEngine user message
-template. If you prefer, you can also use `inline error
-handling <#error-handling>`_ to display form validation
-errors in the context of your form.
+field-by-field `validation rules <#rules-my-field-name>`_. By default,
+SafeCracker will display validation errors using the ExpressionEngine
+user message template. If you prefer, you can also use `inline error
+handling <#error-handling>`_ to display form validation errors in the
+context of your form.
 
 Allowing Guests to Post Entries
 -------------------------------
@@ -791,32 +807,34 @@ simple file input, and if applicable, a thumbnail and a "remove file"
 checkbox. You specify the upload location in the field settings.
 SafeCracker File may be used in both SafeCracker Entry Forms and the CP
 Publish Form. SafeCracker File inherits the tags of the standard
-`File Field <../channel/custom_fields.html#file-field>`_.
+:doc:`File Field </modules/channel/custom_fields>`.
 
 SafeCracker File may be used as a Matrix celltype and as a Low Variables
 variable type. If you are using it as a Low Variable, you must use the
-`parse tag <http://gotolow.com/addons/low-variables/docs/tags#parse-tag>`_.
+`parse tag <http://gotolow.com/addons/low-variables/docs/tags#parse-
+tag>`_.
 
 ********
 Examples
 ********
 
-See :doc:`SafeCracker Examples <examples>` for more complete examples of SafeCracker usage.
+See :doc:`SafeCracker Examples <examples>` for more complete examples of
+SafeCracker usage.
 
 **********************
 Control Panel Settings
 **********************
 
-See the :doc:`SafeCracker Module Control Panel <control_panel/index>` page.
+See the :doc:`SafeCracker Module Control Panel <control_panel/index>`
+page.
 
 
 ***********
 Development
 ***********
 
--  `Getting your custom fieldtype to work with
-   SafeCracker <development.html#section_getting_it_to_work>`_
--  `Extension Hooks <development.html#section_hooks>`_
+-  :ref:`safecracker_development_fieldtype`
+-  :ref:`safecracker_development_hooks`
 
 .. toctree::
 	:glob:

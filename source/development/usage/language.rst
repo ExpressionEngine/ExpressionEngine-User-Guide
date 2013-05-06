@@ -66,12 +66,12 @@ A module's language file is automatically loaded whenever the module is
 accessed through the Module section of the Control Panel. So, in that
 instance, you simply need to call the piece of text you wish from the
 array contained in your module's langauge file. To do so, you simply use
-the $this->EE->lang->line() function and specify the key for that piece
+the lang() function and specify the key for that piece
 of text in the array.
 
 ::
 
-    $this->EE->cp->set_variable('cp_page_title', $this->EE->lang->line('view_moblogs'));
+    ee()->view->cp_page_title = lang('view_moblogs');
     // Returns "Moblog Accounts" as the page title;
 
 Calling a Language File
@@ -92,10 +92,10 @@ another language file. For example, you know that the members\_lang.php
 file contains many member related pieces of text, and instead of
 duplicating those in your module's language file you could use the text
 in that language file. To load that language file and its values, you
-simply need to call the $this->EE->lang->loadfile() function with the
+simply need to call the ee()->lang->loadfile() function with the
 name of the language file.
 
 ::
 
-    $this->EE->lang->loadfile('members');
+    ee()->lang->loadfile('members');
 

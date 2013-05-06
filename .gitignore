@@ -1,7 +1,6 @@
 #ignore files created by setup.py for the ExpressionEngine Pygments Lexer
-eelexer/build/
-eelexer/pyeelexer.egg-info/
-eelexer/dist/
+*.egg-info/
+dist/
 
 
 #MacOS system files

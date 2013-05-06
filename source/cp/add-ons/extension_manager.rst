@@ -30,8 +30,8 @@ package in your /system/expressionengine/third\_party/ folder and then
 when you reload the Extensions Manager the extension will automatically
 be available for you to enable.
 
-**Note:** Extensions might require other tasks to function correct, so
-make sure to follow any instructions included with the extension.
+.. note:: Extensions might require other tasks to function correct, so
+	make sure to follow any instructions included with the extension.
 
 Settings
 --------

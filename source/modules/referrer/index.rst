@@ -171,7 +171,7 @@ intelligently keep track of each one.
 Blacklist and Whitelist
 ***********************
 
-You may want to utilize the `Blacklist/Whitelist Module <../blacklist/index.html>`_ so that you can keep
-certain IP addresses, URLs, or even User Agents from being counted in
-your referrals as well as have a Whitelist that will automatically let
-matches through.
+You may want to utilize the :doc:`Blacklist/Whitelist Module
+</modules/blacklist/index>` so that you can keep certain IP addresses,
+URLs, or even User Agents from being counted in your referrals as well
+as have a Whitelist that will automatically let matches through.

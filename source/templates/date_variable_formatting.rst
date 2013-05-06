@@ -4,8 +4,7 @@ Date Variable Formatting
 Many tags, including channel fields of the "date" type, are designed to
 display dates and times. The output of these tags can be formatted so
 that the date and time appears in the manner you wish. Here is an
-example of formatting the
-`{current\_time} <globals/single_variables.html#var_current_time>`_
+example of formatting the :ref:`{current\_time} <global_current_time>`
 global variable::
 
 	{current_time format="%F %d %Y"}
@@ -103,9 +102,10 @@ Date Formatting Codes
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
 | **%O**     | Difference to Greenwich time (GMT) in hours                           | "-0500"                                    | 
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
-| **%Q**     | local server time zone offset, in hours and seconds, against GMT      | "+06:00"                                   | 
+| **%P**     | Difference to Greenwich time (GMT) with colon between hours and       | "-05:00"                                   | 
+|            | minutes                                                               |                                            | 
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
-| **%r**     | RFC 822 formatting                                                    | "Thu, 21 Dec 2000 16:01:07 +0200"          | 
+| **%r**     | RFC 2822 formatting                                                   | "Thu, 21 Dec 2000 16:01:07 +0200"          | 
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
 | **%S**     | English ordinal suffix, 2 characters                                  | "th", "nd"                                 |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
@@ -115,7 +115,7 @@ Date Formatting Codes
 |            | always negative, and for those east of UTC is always positive.        |                                            |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
 
-.. _template-date-formatting-constants:
+.. _template_date_formatting_constants:
 
 Date Formatting Constants
 ~~~~~~~~~~~~~~~~~~~~~~~~~

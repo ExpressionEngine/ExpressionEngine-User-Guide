@@ -202,8 +202,10 @@ Allow members to upload their own avatars?
 
 Specifies whether members are allowed to upload their own avatar image.
 If this is set to "No" but avatars are enabled, then members will only
-be able to choose from among the default avatars. Note: You can add your
-own Avatars, located in the avatars folder within the images folder.
+be able to choose from among the default avatars. 
+
+.. note:: You can add your own Avatars, located in the avatars folder
+   within the images folder.
 
 URL to Avatar Folder
 ~~~~~~~~~~~~~~~~~~~~
@@ -234,9 +236,10 @@ The maximum height (in pixels) allowed for user-uploaded avatars.
 Avatar Maximum Size (in Kilobytes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The maximum file size allowed for user-uploaded avatars. Note: There are
-1024 Kilobytes per Megabyte, so if you want to allow a 2 MB avatar
-you'll enter 2048.
+The maximum file size allowed for user-uploaded avatars. 
+
+.. note:: There are 1024 Kilobytes per Megabyte, so if you want to allow
+   a 2 MB avatar you'll enter 2048.
 
 Member Photo Preferences
 ------------------------
@@ -279,9 +282,10 @@ The maximum height (in pixels) allowed for user-uploaded member photos.
 Photo Maximum Size (in Kilobytes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The maximum file size allowed for user-uploaded member photos. Note:
-There are 1024 Kilobytes per Megabyte, so if you want to allow a 2 MB
-photo you'll enter 2048.
+The maximum file size allowed for user-uploaded member photos. 
+
+.. note:: There are 1024 Kilobytes per Megabyte, so if you want to allow
+   a 2 MB photo you'll enter 2048.
 
 Signature Preferences
 ---------------------

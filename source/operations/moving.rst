@@ -175,5 +175,5 @@ You're Done!
 At this point, your site should be fully functional. Check to make sure
 that there are no links still pointing to the previous server. It is
 recommended that links be generated using the :doc:`{path}
-</templates/globals/path>` or :ref:`{site\_url} <global-site_url>`
+</templates/globals/path>` or :ref:`{site\_url} <global_site_url>`
 variables for maximum portability.

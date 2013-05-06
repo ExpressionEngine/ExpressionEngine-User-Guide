@@ -63,14 +63,13 @@ Entry Fields
 ~~~~~~~~~~~~
 
 The names and types of entry fields displayed will be determined by what
-`Channel Fields <../admin/channels/custom_channel_fields.html>`_
-you have defined for this channel. If an entry field is set to be
-"hidden" by default, it will have to be expanded by clicking on the
-field name before content can be entered. In addition to the field
-itself, you can also choose the type of `text
-formatting <../../general/text_formatting.html>`_ to apply to that
-field. You'll also notice "Check Spelling", "Glossary", and "Smileys"
-options beneath each field.
+:doc:`/cp/admin/channels/custom_channel_fields` you have defined for
+this channel. If an entry field is set to be "hidden" by default, it
+will have to be expanded by clicking on the field name before content
+can be entered. In addition to the field itself, you can also choose the
+type of :doc:`/general/text_formatting` to apply to that field. You'll
+also notice "Check Spelling", "Glossary", and "Smileys" options beneath
+each field.
 
 Write Mode
 ~~~~~~~~~~
@@ -147,9 +146,9 @@ Author
 You may select the author for this entry from the drop-down list. By
 default only the person submitting the entry is shown in the author
 list. If you would like to enable other authors so that the author name
-can be changed please see this `troubleshooting
-page <../../troubleshooting/channels_and_entries/new_members_not_authors.html>`_
-for information.
+can be changed please see this :doc:`troubleshooting page
+</troubleshooting/channels_and_entries/new_members_not_authors>` for
+information.
 
 Channel
 ~~~~~~~
@@ -167,10 +166,9 @@ Status
 There are two primary statuses that are always available: Open and
 Closed. Typically, "open" entries are viewable at your site, and
 "closed" entries are not. You can add additional statuses for editorial
-workflow in your `Statuses <../admin/channels/statuses.html>`_
-page, and opt to display or suppress entries assigned to these by
-modifying the "status" parameter found in the various "Channel" Tags in
-your Templates.
+workflow in your :doc:`/cp/admin/channels/statuses` page, and opt to
+display or suppress entries assigned to these by modifying the "status"
+parameter found in the various "Channel" Tags in your Templates.
 
 Make Entry Sticky
 ~~~~~~~~~~~~~~~~~
@@ -186,20 +184,20 @@ If this option is checked, then comments will be allowed for this entry.
 When this option is unchecked, your comment submission form will be
 suppressed. Any existing comments will still appear.
 
-.. _publish-forum-tab:
+.. _publish_forum_tab:
 
 Forum Tab
 ---------
 
-**Note:** This tab will only appear if you have the Discussion Forum
-Module installed.
+.. note:: This tab will only appear if you have the Discussion Forum
+   Module installed.
 
 |Publish Forum|
 
 The Forum tab allows you to optionally publish a forum topic to be
 associated with the channel entry. You can then automatically link to
 the created forum topic from within your {exp:channel:entries} tag using
-the :ref:`channel-entries-forum_topic_id` variable.
+the :ref:`channel_entries_forum_topic_id` variable.
 
 Forum Topic Title
 ~~~~~~~~~~~~~~~~~
@@ -257,13 +255,13 @@ a new revision will be created rather than updating the previous
 revision. In other words, every time you click the save button a new
 revision is stored.
 
-.. _publish-pages-tab:
+.. _publish_pages_tab:
 
 Pages Tab
 ---------
 
-**Note:** This tab will only appear if you have the `Pages
-Module <../../modules/pages/index.html>`_ installed.
+.. note:: This tab will only appear if you have the :doc:`Pages Module
+   </modules/pages/index>` installed.
 
 |Publish Pages|
 
@@ -285,9 +283,9 @@ alpha-numeric characters, underscore / dash separators, and periods.
 -  http://example.com/index.php/company/roster/board/ceo/
 -  /my\_stuff/über\_list.html
 
-**Note:** Entries cannot share the same Page URI. Each "page" entry must
-be given a unique URI so the system knows which entry to display when
-the Page URI is requested.
+.. note:: Entries cannot share the same Page URI. Each "page" entry must
+   be given a unique URI so the system knows which entry to display when
+   the Page URI is requested.
 
 Template
 ~~~~~~~~

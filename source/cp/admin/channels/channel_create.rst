@@ -12,9 +12,8 @@ Short Name
 
 The "short name" for the channel is the name used internally within the
 program. It is also used when specifying a channel in variables of
-parameters in your `Templates <../../design/templates/index.html>`_. It
-is not normally shown to visitors or otherwise exposed outside of your
-channel "setup".
+parameters in your :doc:`/cp/design/templates/index`. It is not normally
+shown to visitors or otherwise exposed outside of your channel "setup".
 
 The channel's short name is a required field. It must be a single word
 with no spaces. The underscore character is allowed. For example, the
@@ -41,8 +40,8 @@ Edit Group Preferences
 
 Allows you to set the group preferences for a channel upon creation.
 
-**Note:** Changing these settings will override the settings that would
-be applied when duplicating an existing channel's preferences
+.. note:: Changing these settings will override the settings that would
+	be applied when duplicating an existing channel's preferences
 
 Category Group
 ^^^^^^^^^^^^^^

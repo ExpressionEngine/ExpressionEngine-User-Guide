@@ -5,12 +5,14 @@ Logger Class
 	:local:
 	:depth: 1
 
+.. highlight:: php
+
 Calling the Logger Class
 ------------------------
 
 Load the Logger library. ::
 
-	$this->EE->load->library('logger');
+	ee()->load->library('logger');
 
 Developer Log
 -------------
@@ -29,7 +31,7 @@ To use the developer log to log your own events, notices or warnings that
 need to be brought to the attention of the Super Admin, call this function
 and pass the string of the notice::
 
-	$this->EE->logger->developer('Log message.');
+	ee()->logger->developer('Log message.');
 
 A second boolean parameter may be passed to specify if the message should
 be unique in the log and not duplicated. This is good for situations where
@@ -39,7 +41,7 @@ developer() with the update flag set to TRUE, it will find the last
 message that matches the string of the message, set it's viewed status to
 not viewed, and update the timestamp. ::
 
-	$this->EE->logger->developer('Unique log message.', TRUE);
+	ee()->logger->developer('Unique log message.', TRUE);
 
 A third parameter may be set if the log item should only be logged every
 so often. If the second parameter is set to TRUE, the third parameter is
@@ -52,7 +54,7 @@ Admin until the developer function is called again after the interval has
 completed. This is designed to make log item alerts less annoying to the
 user. ::
 
-	$this->EE->logger->developer('Unique log message.', TRUE, 604800);
+	ee()->logger->developer('Unique log message.', TRUE, 604800);
 
-**NOTE:** Be conscious of how often the developer() function is used so as
-not to clutter the developer log and run unnecessary queries.
+.. note:: Be conscious of how often the developer() function is used so as
+	not to clutter the developer log and run unnecessary queries.

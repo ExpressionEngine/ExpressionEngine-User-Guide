@@ -120,8 +120,8 @@ default choices:
    This might be useful if you want people to be able to use full HTML
    in this field.
 #. **XHTML**: The field content will be formatted with
-   ExpressionEngine's `Auto XHTML
-   feature. <../../../general/text_formatting.html>`_
+   ExpressionEngine's :doc:`Auto XHTML feature. 
+   </general/text_formatting>`
 #. **Auto <br />**: All line breaks in the field content will be
    converted into <br /> tags.
 

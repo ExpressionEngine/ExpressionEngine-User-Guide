@@ -43,14 +43,13 @@ category=
 	category="2"
 
 Categories are specified by ID number (the ID number of each
-`category <../../cp/admin/channels/category_edit.html>`_ is
-displayed in the Control Panel). The reason we use the ID is because
-categories can be called anything (with spaces, quotes, etc.), and also
-renamed. It would be much more difficult to have to update the tag
-parameters every time you updated a category name. Further, you can have
-multiple categories with the same name either in different Category
-Groups or in different parts of the hierarchy within the same Category
-Group.
+:doc:`category </cp/admin/channels/category_edit>` is displayed in the
+Control Panel). The reason we use the ID is because categories can be
+called anything (with spaces, quotes, etc.), and also renamed. It would
+be much more difficult to have to update the tag parameters every time
+you updated a category name. Further, you can have multiple categories
+with the same name either in different Category Groups or in different
+parts of the hierarchy within the same Category Group.
 
 And as with some of the other parameters, you can stack categories to
 get entries with any of those categories::
@@ -63,20 +62,21 @@ Or use "not" to exclude categories
 
 	category="not 4|5|7"
 
-**Note:** When you use the category="3\|4" parameter (not excluding),
-you are implicitly telling ExpressionEngine to only deal with entries
-that have been assigned one or more categories. If you have entries that
-haven't been categorized then they will be ignored and not included in
-the results. However, if you are using exclusion (category="not 3\|4"),
-then you will be shown all entries without those categories *including*
-those without any categories assigned. To change this behavior when
-excluding categories use the `uncategorized_entries=`_ parameter.
+.. note:: When you use the category="3\|4" parameter (not excluding),
+	you are implicitly telling ExpressionEngine to only deal with
+	entries that have been assigned one or more categories. If you have
+	entries that haven't been categorized then they will be ignored and
+	not included in the results. However, if you are using exclusion 
+	(``category="not 3|4"``), then you will be shown all entries without
+	those categories *including* those without any categories assigned.
+	To change this behavior when excluding categories use the 
+	`uncategorized_entries=`_ parameter.
 
-**Note:** Using this parameter will automatically cause ExpressionEngine
-to *ignore* any category information specified via the URL. For
-instance, if you are on a "category page" (e.g. a "/C13/" segment in the
-URL) that will be completely ignored in favor of whatever you have
-specified via the parameter.
+.. note:: Using this parameter will automatically cause ExpressionEngine
+	to *ignore* any category information specified via the URL. For
+	instance, if you are on a "category page" (e.g. a "/C13/" segment in
+	the URL) that will be completely ignored in favor of whatever you
+	have specified via the parameter.
 
 category\_group=
 ~~~~~~~~~~~~~~~~
@@ -86,8 +86,7 @@ category\_group=
 	category_group="2"
 
 Category Groups are specified by ID number (the ID number of each
-`category
-group <../../cp/admin/channels/category_management.html>`_ is
+:doc:`category group </cp/admin/channels/category_management>` is
 displayed in the Control Panel). The reason we use the ID is because
 category groups can be called anything (with spaces, quotes, etc.), and
 also renamed. It would be much more difficult to have to update the tag
@@ -103,11 +102,11 @@ Or use "not" to exclude categories
 
 	category_group="not 2"
 
-**Note:** Using this parameter will automatically cause ExpressionEngine
-to *ignore* any category information specified via the URL. For
-instance, if you are on a "category page" (e.g. a "/C13/" segment in the
-URL) that will be completely ignored in favor of whatever you have
-specified via the parameter.
+.. note:: Using this parameter will automatically cause ExpressionEngine
+	to *ignore* any category information specified via the URL. For
+	instance, if you are on a "category page" (e.g. a "/C13/" segment in
+	the URL) that will be completely ignored in favor of whatever you
+	have specified via the parameter.
 
 directory\_id=
 ~~~~~~~~~~~~~~
@@ -116,11 +115,10 @@ directory\_id=
 
 	directory_id="3"
 
-From which `file upload
-directory <../../cp/content/files/file_upload_preferences.html>`_ to
-show the files (will show files from any directory if none is
-specified). Additionally, you can use the pipe character to separate
-multiple directories::
+From which :doc:`file upload directory
+</cp/content/files/file_upload_preferences>` to show the files (will
+show files from any directory if none is specified). Additionally, you
+can use the pipe character to separate multiple directories::
 
 	directory_id="1|2|3"
 
@@ -148,8 +146,8 @@ DISABLE". The following items can be turned off:
 -  categories
 -  pagination
 
-**Note:** If you disable categories, category fields will automatically
-be disabled.
+.. note:: If you disable categories, category fields will automatically
+	be disabled.
 
 You may specify multiple items to disable by separating them with the
 pipe character::
@@ -213,7 +211,7 @@ paginate=
 
 ::
 
-	paginate="top" ``paginate="bottom"`` ``paginate="both"``
+	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"
 
 This parameter is for use with entry
 :doc:`pagination <../channel/pagination_page>` and determines where the
@@ -225,6 +223,8 @@ pagination code will appear for your files:
    list of files.
 #. **both**: The navigation text and links will appear both above and
    below your list of files.
+#. **inline**: The navigation text and links will appear within the list
+   of entries for each entry.
 
 If no parameter is specified, the navigation block will default to the
 "bottom" behavior.
@@ -355,11 +355,10 @@ entry\_date
 
 	{entry_date format="%Y %m %d"}
 
-The date of the file entry. As with other date
-variables, these require the "format" parameter in order to define how
-the date should be displayed. See the `date variable
-formatting <../../templates/date_variable_formatting.html>`_ page for
-more information.
+The date of the file entry. As with other date variables, these require
+the "format" parameter in order to define how the date should be
+displayed. See the :doc:`date variable formatting
+</templates/date_variable_formatting>` page for more information.
 
 edit\_date
 ~~~~~~~~~~
@@ -368,11 +367,10 @@ edit\_date
 
 	{edit_date format="%Y %m %d"}
 
-The date on which the file was edited through the system. As with other date
-variables, these require the "format" parameter in order to define how
-the date should be displayed. See the `date variable
-formatting <../../templates/date_variable_formatting.html>`_ page for
-more information.
+The date on which the file was edited through the system. As with other
+date variables, these require the "format" parameter in order to define
+how the date should be displayed. See the :doc:`date variable formatting
+</templates/date_variable_formatting>` page for more information.
 
 filename
 ~~~~~~~~
@@ -682,5 +680,5 @@ variable::
 Pagination
 ----------
 
-The File module supports `File
-Pagination <../channel/pagination_page.html>`_.
+The File module supports :doc:`File Pagination
+</modules/channel/pagination_page>`.

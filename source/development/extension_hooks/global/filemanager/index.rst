@@ -2,44 +2,43 @@ Filemanager Library Extension Hooks
 ===================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
-file\_after\_save
------------------
+.. highlight:: php
 
-Do additional processing after a file is saved. ::
+file_after_save
+---------------
 
-	$this->extensions->call('file_after_save', $file_id, $data);
+.. function:: file_after_save($file_id, $data)
 
-$file\_id
-~~~~~~~~~
+  Do additional processing after a file is saved.
 
-The ID of the file that was just saved in exp_files.
+  How it's called::
 
-$data
-~~~~~
+    $this->extensions->call('file_after_save', $file_id, $data);
+    if ($this->extensions->end_script === TRUE) return;
 
-An array of the file data that was just saved to exp_files.
+  :param int $file_id: File ID in the ``exp_files`` table
+  :param array $data: Associative array containing data about file
+  :rtype: Void
 
-:returns:
-    void
+  .. versionadded:: 2.5.3
 
-Added in v2.5.3
-
-files\_after\_delete
+files_after_delete
 --------------------
 
-Do additional processing after a file is removed. ::
+.. function:: files_after_delete($deleted)
 
-	$edata = $this->extensions->call('files_after_delete', $deleted_files);
+  Do additional processing after a file is removed.
 
-$deleted\_files
-~~~~~~~~~~~~~~~
+  How it's called::
 
-An array of database row objects for the files that were deleted.
+    $edata = $this->extensions->call('files_after_delete', $deleted);
+    if ($this->extensions->end_script === TRUE) return;
 
-:returns:
-    void
+  :param array $deleted: Array of database row objects for the files
+    that were deleted
+  :rtype: Void
 
-Added in v2.1.5
+  .. versionadded:: 2.1.5

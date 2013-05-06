@@ -11,10 +11,10 @@ themes/wiki\_themes directory. The following describes how the default
 theme's templates are put together and lists the available tags,
 parameters, and variables for each template.
 
-**Note:** The included default wiki theme is fully commented with all
-the tags, parameters, and variables available in the wiki. This provides
-a quick reference while building your own theme or modifying the default
-one.
+.. note:: The included default wiki theme is fully commented with all
+   the tags, parameters, and variables available in the wiki. This 
+   provides a quick reference while building your own theme or modifying
+   the default one.
 
 Templates
 ---------

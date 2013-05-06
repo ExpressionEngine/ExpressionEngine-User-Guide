@@ -5,6 +5,8 @@ XML Parser Class
 	:local:
 	:depth: 1
 
+.. highlight:: php
+
 Calling the XML Parser Class
 ----------------------------
 
@@ -17,7 +19,7 @@ XML Parser Class
 
 ::
 
-    $this->EE->load->library('xmlparser'); 
+    ee()->load->library('xmlparser');
 
 Parsing XML
 -----------
@@ -25,7 +27,7 @@ Parsing XML
 Description
 ~~~~~~~~~~~
 
-obj **$this->EE->xmlparser->parse\_xml** ( string xml )
+obj **ee()->xmlparser->parse\_xml** ( string xml )
 
 This function returns an abstracted object containing all of the tags,
 attributes, and values from the XML. The string parameter must be valid
@@ -46,14 +48,14 @@ Sample XML
                 </email>
             </emails>";
 
-Using $this->EE->xmlparser->parse\_xml()
+Using ee()->xmlparser->parse\_xml()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
-    $xml_obj = $this->EE->xmlparser->parse_xml($simple);
+    $xml_obj = ee()->xmlparser->parse_xml($simple);
 
-Structure of $this->EE->xmlparser->parse\_xml()
+Structure of ee()->xmlparser->parse\_xml()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
@@ -61,39 +63,39 @@ Structure of $this->EE->xmlparser->parse\_xml()
     xml_cache Object
     (
         [tag] => emails
-        [attributes] => 
-        [value] => 
+        [attributes] =>
+        [value] =>
         [children] => Array
             (
                 [0] => xml_cache Object
                     (
                         [tag] => email
-                        [attributes] => 
-                        [value] => 
+                        [attributes] =>
+                        [value] =>
                         [children] => Array
                             (
                                 [0] => xml_cache Object
                                     (
                                         [tag] => from
-                                        [attributes] => 
+                                        [attributes] =>
                                         [value] => Samantha
-                                        [children] => 
+                                        [children] =>
                                     )
 
                                 [1] => xml_cache Object
                                     (
                                         [tag] => to
-                                        [attributes] => 
+                                        [attributes] =>
                                         [value] => Gertrude
-                                        [children] => 
+                                        [children] =>
                                     )
 
                                 [2] => xml_cache Object
                                     (
                                         [tag] => subject
-                                        [attributes] => 
+                                        [attributes] =>
                                         [value] => You coming to the party?
-                                        [children] => 
+                                        [children] =>
                                     )
 
                                 [3] => xml_cache Object
@@ -105,7 +107,7 @@ Structure of $this->EE->xmlparser->parse\_xml()
                                             )
 
                                         [value] => It starts at 9pm.  Don't forget to bring the gruyère!
-                                        [children] => 
+                                        [children] =>
                                     )
 
                             )
@@ -144,7 +146,7 @@ delimited data.
 Description
 ~~~~~~~~~~~
 
-string **$this->EE->xmlparser->delimited\_to\_xml** ( array parameters )
+string **ee()->xmlparser->delimited\_to\_xml** ( array parameters )
 
 Takes delimited data and returns XML. Returns FALSE if unable to create
 XML, and uses the XML class $errors array to log errors encountered. You
@@ -206,7 +208,7 @@ Sample data
 
     $element = "email";
 
-Using $this->EE->xmlparser->delimited\_to\_xml()
+Using ee()->xmlparser->delimited\_to\_xml()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
@@ -218,8 +220,8 @@ Using $this->EE->xmlparser->delimited\_to\_xml()
             'root'      => $root,
             'element'   => $element
             );
-                        
-    $xml = $this->EE->xmlparser->delimited_to_xml($params);
+
+    $xml = ee()->xmlparser->delimited_to_xml($params);
 
 Result
 ~~~~~~
@@ -246,20 +248,20 @@ Checking for Errors
 
 You should always check for the presence of errors before using the
 returned XML. This will allow you to tell which records were skipped and
-unable to be used in the XML. $this->EE->xmlparser->delimited\_to\_xml()
+unable to be used in the XML. ee()->xmlparser->delimited\_to\_xml()
 will only return FALSE on fatal errors, as in some cases it may be
 acceptable to ignore the errors.
 
-Errors are logged in the $this->EE->xmlparser->errors array. Below is an
+Errors are logged in the ee()->xmlparser->errors array. Below is an
 example of how you might use them.
 
 ::
 
-    if ( ! empty($this->EE->xmlparser->errors))
+    if ( ! empty(ee()->xmlparser->errors))
     {
         echo "Could not convert to XML:<br /><br />";
-        
-        foreach ($this->EE->xmlparser->errors as $error)
+
+        foreach (ee()->xmlparser->errors as $error)
         {
             echo "{$error}<br />";
             exit;
@@ -271,9 +273,9 @@ Output class to generate an ExpressionEngine style error page:
 
 ::
 
-    if ( ! empty($this->EE->xmlparser->errors))
+    if ( ! empty(ee()->xmlparser->errors))
     {
-        $this->EE->output->show_user_error('general', $this->EE->xmlparser->errors);
+        ee()->output->show_user_error('general', ee()->xmlparser->errors);
         exit;
     }
 

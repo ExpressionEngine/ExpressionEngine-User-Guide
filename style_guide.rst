@@ -13,6 +13,78 @@ automatically by inserting the ``.. contents::`` directive on a line by itself.
 .. contents::
 
 
+***************
+Editor Settings
+***************
+
+Make sure your editor's tab width is set to two and it indents as spaces
+for all ReStructuredText files. It's an easy change within Sublime
+Text. Go to ``Preferences → Settings → More → Syntax Specific - User``
+and add the following::
+
+  {
+    "detect_indentation" : false,
+    "rulers":
+    [
+      72
+    ],
+    "spell_check": true,
+    "translate_tabs_to_spaces": true,
+    "tab_size": 2,
+    "trim_trailing_white_space_on_save": true
+  }
+
+Additionally, this turns on spell checking and a ruler at 72 characters
+as a reminder to insert newlines.
+
+*****
+Links
+*****
+
+When linking to another page in the documentation always use doc
+references::
+
+  :doc:`Another Page <section/another_page>`
+  :doc:`section/another_page`
+
+If you don't insert a page title (e.g. ``Another Page`` above) then
+the page title from the linked document will be used
+When linking to a documented method, use the method references::
+
+  :meth:`Api_channel_entries::save_entry`
+
+When linking to an anchor on the page, section links::
+
+  `Section Name on page`_
+
+When linking to an anchor on another page, you **must** use
+cross-references (always use underscores in the reference definition)
+::
+
+  .. _anchor_on_page:
+
+  Anchor on Page
+  --------------
+
+  // elsewhere...
+  :ref:`Another page's anchor <anchor_on_page>`
+  :ref:`anchor_on_page`
+
+When linking to an EllisLab property, use the short forms for that::
+
+  // EllisLab.com Pages
+  :ellislab:`CodeIgniter </codeigniter>`
+  :ellislab:`ExpressionEngine User Guide </expressionengine/user-guide>`
+
+  // EllisLab Support
+  :elsupport:`Bug #12345 </bugs/detail/12345>`
+
+  // EllisLab Store
+  :elstore:`Manage page </manage>`
+
+  // Forum Topics
+  :forum_topic:`Feature Request <12345>`
+
 *****************************************
 Page and Section Headings and Subheadings
 *****************************************
@@ -23,47 +95,47 @@ Headings are formed by using certain characters as underlines for a bit of text.
 Major headings, like page titles and section headings also use overlines.  Other
 headings just use underlines, with the following hierarchy::
 
-	# with overline for page titles
-	* with overline for major sections
-	= for subsections
-	- for subsubsections
-	^ for subsubsubsections
-	" for subsubsubsubsections (!)
-	
+  # with overline for page titles
+  * with overline for major sections
+  = for subsections
+  - for subsubsections
+  ^ for subsubsubsections
+  " for subsubsubsubsections (!)
+
 The TextMate EEDocs Bundle can help you create these with the following
 tab triggers::
 
-	title->
-	
-		##########
-		Page Title
-		##########
+  title->
 
-	sec->
-	
-		*************
-		Major Section
-		*************
-		
-	sub->
-	
-		Subsection
-		==========
-		
-	sss->
-	
-		SubSubSection
-		-------------
-		
-	ssss->
-	
-		SubSubSubSection
-		^^^^^^^^^^^^^^^^
-		
-	sssss->
-	
-		SubSubSubSubSection (!)
-		"""""""""""""""""""""""
+    ##########
+    Page Title
+    ##########
+
+  sec->
+
+    *************
+    Major Section
+    *************
+
+  sub->
+
+    Subsection
+    ==========
+
+  sss->
+
+    SubSubSection
+    -------------
+
+  ssss->
+
+    SubSubSubSection
+    ^^^^^^^^^^^^^^^^
+
+  sssss->
+
+    SubSubSubSubSection (!)
+    """""""""""""""""""""""
 
 
 *************
@@ -74,7 +146,6 @@ Line lengths in the .rst files should be hard-wrapped at 80 characters. The
 exceptions are when line wraps will break formatting (such as with code blocks,
 which are interpreted literally)  or cause the Sphinx parser to throw an error
 (e.g. a `:doc:` role within a ``.. note::`` directive).
-		
 
 *******************
 Control Panel Pages
@@ -87,9 +158,9 @@ Control Panel Pages
 To style the above properly, assign a class of *cp-path* and use the
 \:menuselection\: role with hyphen-arrows::
 
-	.. rst-class:: cp-path
+  .. rst-class:: cp-path
 
-	**Control Panel Location:** :menuselection:`Design --> Templates --> Global Preferences`
+  **Control Panel Location:** :menuselection:`Design --> Templates --> Global Preferences`
 
 |Global Template Preferences|
 
@@ -115,7 +186,7 @@ channel=
 
 ::
 
-	channel="news"
+  channel="news"
 
 From which channel to show the meta data information.
 
@@ -128,7 +199,7 @@ show_expired=
 
 ::
 
-	show_expired="yes"
+  show_expired="yes"
 
 You can determine whether you wish for entries that have "expired" to be
 included.
@@ -139,34 +210,34 @@ username=
 
 ::
 
-	username="petunia"
+  username="petunia"
 
 This parameter limits the query by username. You can use the pipe character to
 query by multiple usernames
 
 ::
 
-	username="tom|dick|harry"
+  username="tom|dick|harry"
 
 Or you can add "not" to exclude usernames
 
 ::
 
-	username="not tom|dick|harry|fred"
-	
+  username="not tom|dick|harry|fred"
+
 You can also use the constant "CURRENT\_USER" to show entries from only the
 currently logged in user.
 
 ::
 
-	username="CURRENT_USER"
+  username="CURRENT_USER"
 
 This allow each logged-in user to get only their entries. Users who are not
 logged in won't see anything. Alternatively, you can use the constant
 "NOT\_CURRENT\_USER" to show entries **except** from the currently logged in
 user. ::
 
-	username="NOT_CURRENT_USER"
+  username="NOT_CURRENT_USER"
 
 Variables
 =========
@@ -214,54 +285,54 @@ following ReST:
 
 .. code-block:: rst
 
-	.. php:class:: Some_class
+  .. php:class:: Some_class
 
-	some_method()
-	=============
+  some_method()
+  =============
 
-		.. php:method:: some_method ( $foo [, $bar [, $bat]])
+    .. php:method:: some_method ( $foo [, $bar [, $bat]])
 
-			This function will perform some action. The ``$bar`` array must contain
-			a something and something else, and along with ``$bat`` is an optional
-			parameter.
+      This function will perform some action. The ``$bar`` array must contain
+      a something and something else, and along with ``$bat`` is an optional
+      parameter.
 
-			:param int $foo: the foo id to do something in
-			:param mixed $bar: A data array that must contain aa something and something else
-			:param bool $bat: whether or not to do something
-			:returns: FALSE on failure, TRUE if successful
-			:rtype: Boolean
+      :param int $foo: the foo id to do something in
+      :param mixed $bar: A data array that must contain aa something and something else
+      :param bool $bat: whether or not to do something
+      :returns: FALSE on failure, TRUE if successful
+      :rtype: Boolean
 
-			Example Usage::
+      Example Usage::
 
-				<?php
+        <?php
 
-				$this->EE->load->library('some_class');
+        ee()->load->library('some_class');
 
-				$bar = array(
-					'something'		=> 'Here is this parameter!',
-					'something_else'	=> 42
-				);
+        $bar = array(
+          'something'   => 'Here is this parameter!',
+          'something_else'  => 42
+        );
 
-				$bat = $this->EE->some_class->should_do_something();
+        $bat = ee()->some_class->should_do_something();
 
-				if ($this->EE->some_class->some_method(4, $bar, $bat) === FALSE)
-				{
-					show_error('An Error Occurred Doing Some Method');
-				}
+        if (ee()->some_class->some_method(4, $bar, $bat) === FALSE)
+        {
+          show_error('An Error Occurred Doing Some Method');
+        }
 
-			See also :php:meth:`Some_class::should_do_something`
+      See also :php:meth:`Some_class::should_do_something`
 
-			.. note:: Here is something that you should be aware of when using some_method().
-					For real.
+      .. note:: Here is something that you should be aware of when using some_method().
+          For real.
 
-	should_do_something()
-	=====================
+  should_do_something()
+  =====================
 
-		.. php:method:: should_do_something()
+    .. php:method:: should_do_something()
 
-			:returns: whether or something should be done or not
-			:rtype: Boolean
-	
+      :returns: whether or something should be done or not
+      :rtype: Boolean
+
 
 It creates the following display:
 
@@ -270,48 +341,48 @@ It creates the following display:
 some_method()
 =============
 
-	.. php:method:: some_method ( $foo [, $bar [, $bat]])
+  .. php:method:: some_method ( $foo [, $bar [, $bat]])
 
-		This function will perform some action. The ``$bar`` array must contain
-		a something and something else, and along with ``$bat`` is an optional
-		parameter.
+    This function will perform some action. The ``$bar`` array must contain
+    a something and something else, and along with ``$bat`` is an optional
+    parameter.
 
-		:param int $foo: the foo id to do something in
-		:param mixed $bar: A data array that must contain aa something and something else
-		:param bool $bat: whether or not to do something
-		:returns: FALSE on failure, TRUE if successful
-		:rtype: Boolean
+    :param int $foo: the foo id to do something in
+    :param mixed $bar: A data array that must contain aa something and something else
+    :param bool $bat: whether or not to do something
+    :returns: FALSE on failure, TRUE if successful
+    :rtype: Boolean
 
-		Example Usage::
-			
-			<?php
-			
-			$this->EE->load->library('some_class');
-			
-			$bar = array(
-				'something'		=> 'Here is this parameter!',
-				'something_else'	=> 42
-			);
-			
-			$bat = $this->EE->some_class->should_do_something();
-			
-			if ($this->EE->some_class->some_method(4, $bar, $bat) === FALSE)
-			{
-				show_error('An Error Occurred Doing Some Method');
-			}
+    Example Usage::
 
-		See also :php:meth:`Some_class::should_do_something`
+      <?php
 
-		.. note:: Here is something that you should be aware of when using some_method().
-				For real.
+      ee()->load->library('some_class');
+
+      $bar = array(
+        'something'   => 'Here is this parameter!',
+        'something_else'  => 42
+      );
+
+      $bat = ee()->some_class->should_do_something();
+
+      if (ee()->some_class->some_method(4, $bar, $bat) === FALSE)
+      {
+        show_error('An Error Occurred Doing Some Method');
+      }
+
+    See also :php:meth:`Some_class::should_do_something`
+
+    .. note:: Here is something that you should be aware of when using some_method().
+        For real.
 
 should_do_something()
 =====================
 
-	.. php:method:: should_do_something()
+  .. php:method:: should_do_something()
 
-		:returns: whether or something should be done or not
-		:rtype: Boolean
+    :returns: whether or something should be done or not
+    :rtype: Boolean
 
 
 ******
@@ -362,8 +433,8 @@ For an explanation regarding how ExpressionEngine interprets your URLs, please
 see `ExpressionEngine URLs <../../../general/urls.html>`_ page.
 
 .. important::
-	**BONUS:** Since the Search module utilizes channel variables, ``{absolute_count}`` is also available to the Search Results tag.
-	
+  **BONUS:** Since the Search module utilizes channel variables, ``{absolute_count}`` is also available to the Search Results tag.
+
 ***********************
 Save Template Revisions
 ***********************

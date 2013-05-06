@@ -29,8 +29,6 @@ Installation, Updating, and Setup
 -  :doc:`Installation <forum_installation>`
 -  :doc:`Updating to a Newer Version <forum_update>`
 -  :doc:`Setting Up Your Forums for the First Time <forum_setup>`
--  `Running your Forum from a subdomain (e.g.
-   http://forums.example.com) <http://expressionengine.com/wiki/How_can_I_run_the_Discussion_Forums_from_a_subdomain_such_as_forums.example.com/>`_
 
 ***********************
 Features and Management

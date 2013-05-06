@@ -27,13 +27,13 @@ fieldtype. If "No", the field will appear as a normal textarea instead.
 
 .. note:: If using the :doc:`/cp/sites/index`, this preference is per-site.
 
-.. _rte-mcp-default-toolset:
+.. _rte_mcp_default_toolset:
 
 Default Toolset
 ===============
 
 Determines which Toolset will be shown for any member that has not
-specifically chosen one in :ref:`my-account-rte-prefs`.
+specifically chosen one in :ref:`my_account_rte_prefs`.
 
 .. note:: If using the :doc:`/cp/sites/index`, this preference is per-site.
 
@@ -73,7 +73,7 @@ column.
 
 A disabled Toolset will not appear as a choice to members, but can still be 
 referred to by ID. This is useful in combination with SafeCracker's
-:ref:`safecracker-rte-selector` and :ref:`safecracker-rte-toolset-id` parameters,
+:ref:`safecracker_rte_selector` and :ref:`safecracker_rte_toolset_id` parameters,
 for example.
 
 Deleting a Toolset

@@ -30,7 +30,7 @@ Management and look for the "Enable Captcha for Comment Posting?"
 preferences. Set this preference to "Yes".
 
 Once you have the preference turned on, you'll need to add the CAPTCHA
-code to your :ref:`comment-submission-form`. See below for the `CAPTCHA Code`_.
+code to your :ref:`comment_submission_form`. See below for the `CAPTCHA Code`_.
 
 Member Registration Form
 ------------------------

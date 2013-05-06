@@ -2,54 +2,48 @@ Template Library Extension Hooks
 ==================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-template\_fetch\_template
--------------------------
+template_fetch_template
+-----------------------
 
-Access template data prior to template parsing
+.. function:: template_fetch_template($row)
 
-::
+  Access template data prior to template parsing.
 
-	$this->EE->extensions->call('template_fetch_template', $row);
+  How it's called::
 
-$row
-~~~~
+    ee()->extensions->call('template_fetch_template', $row);
 
-Array of data for the current template
+  :param array $row: Data for the current template
+  :rtype: Void
 
-:returns:
-    void
+  .. versionadded:: 2.4.0
 
-Added in v2.4.0
-
-template\_post\_parse
+template_post_parse
 ---------------------
 
-Modify template after tag parsing
+.. function:: template_post_parse($final_template, $sub, $site_id)
 
-::
+  Modify template after tag parsing
 
-	$this->final_template = $this->EE->extensions->call('template_post_parse', $this->final_template, $sub, $site_id);
+  How it's called::
 
-$this->final_template
-~~~~~~~~~~~~~~~~~~~~~
+    $this->final_template = ee()->extensions->call(
+        'template_post_parse',
+        $this->final_template,
+        $sub,
+        $site_id
+    );
 
-The template string after template tags have been parsed
+  :param string $final_template: The template string after template tags
+    have been parsed
+  :param boolean $sub: ``TRUE`` if the current template is an embed
+  :param string $site_id: Site ID of the current template
+  :returns: The adjusted ``$final_template``
+  :rtype: String
 
-$sub
-~~~~
-
-Whether or not the current template is an embed
-
-$site_id
-~~~~~~~~
-
-The site_id of the current template
-
-:returns:
-    String
-
-Added in v2.4.0
+  .. versionadded:: 2.4.0

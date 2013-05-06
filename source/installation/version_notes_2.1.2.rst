@@ -62,8 +62,8 @@ Edits are now run through the Secure Forms check (if enabled). If Secure
 Forms is enabled, a proper security hash must be sent in order for the
 edit to be accepted. This also required a change in the response. All
 responses are now arrays. Your JavaScript will need to be updated in
-response to these changes. Please see `Comment
-Editing <comment-editing>` for a current
+response to these changes. Please see :ref:`Comment
+Editing <comment_editing>` for a current
 example.
 
 Developers
@@ -73,17 +73,17 @@ Alterations made to the entry_submission_absolute_end hook
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Added a new parameter $loc and moved the hook from the Channel Entries
-API (where it was not being called) to Content Publish. See `Content
-Publish Controller Extension
-Hooks <../development/extension_hooks/cp/content_publish/index.html>`_.
+API (where it was not being called) to Content Publish. See
+:doc:`Content Publish Controller Extension Hooks
+</development/extension_hooks/cp/content_publish/index>`.
 
 New Fieldtype method settings_modify_column()
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Added a new method settings_modify_column($params) to the custom field
-types. See `Fieldtypes Functions
-Reference <../development/fieldtypes.html#functions>`_.
+types. See :doc:`Fieldtypes Functions Reference
+</development/fieldtypes>`.
 
-:ref:`Return to Update Page <update-additional-steps>`
+:ref:`Return to Update Page <update_additional_steps>`
 
 

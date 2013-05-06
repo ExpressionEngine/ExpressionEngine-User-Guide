@@ -218,7 +218,7 @@ of the Control Panel.
 For the purposes of this guide, **publish a second Entry** by following the same steps as before, but
 with a different Title and News Body. That will give us two Entries to work with later.
 
-.. _getting-started-templates:
+.. _getting_started_templates:
 
 *********
 Templates
@@ -336,7 +336,7 @@ You can specify multiple parameters, too::
 This tells the Channel Module that we want the 10 most recent Entries from the Channel named
 *News*. Simple enough, right? Now that we've told it what to fetch, let's actually use that data!
 
-.. tip:: Here's the full list of available :ref:`parameters <channel-entries-parameters>`
+.. tip:: Here's the full list of available :ref:`parameters <channel_entries_parameters>`
 	for the :doc:`/modules/channel/channel_entries`. 
 
 Variables
@@ -360,7 +360,7 @@ who it was submitted by, and much more. For example, to get the author of an Ent
 
 Now, we're ready to use this Tag in our Template.
 
-.. tip:: Here's the full list of available :ref:`variables <channel-entries-single-variables>`
+.. tip:: Here's the full list of available :ref:`variables <channel_entries_single_variables>`
 	for the :doc:`/modules/channel/channel_entries`. 
 
 ***********************
@@ -500,10 +500,10 @@ Then there's this line, which you'll notice *is* inside our Channel Entries Tag 
 
 				<li><a href="{url_title_path='news'}">{title}</a></li>
 
-*url_title_path* is one of the many :ref:`variables <channel-entries-single-variables>`
+*url_title_path* is one of the many :ref:`variables <channel_entries_single_variables>`
 you can use inside the :doc:`Channel Entries Tag </modules/channel/channel_entries>`,
 in addition to the variables containing the content of your Channel Fields. It acts very
-similary to the *path* variable we just discussed, but it also appends the Entry's **URL Title**
+similarly to the *path* variable we just discussed, but it also appends the Entry's **URL Title**
 to the URL which lets us link directly to the entry, as you'll see next.
 
 A Dynamic Duo

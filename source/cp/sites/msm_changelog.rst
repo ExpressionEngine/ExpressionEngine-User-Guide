@@ -1,6 +1,15 @@
 Multiple Site Manager
 =====================
 
+Version 2.1.5
+-------------
+
+Release Date: April 23, 2013
+
+- Fixed a bug (#19067) where updating a site's short name failed to
+  update any associated template folder's name.
+- Updates for Relationships field compatability.
+
 Version 2.1.4
 -------------
 
@@ -20,7 +29,7 @@ Version 2.1.3
 
 Release Date: May 29, 2012
 
-- Fixed a bug (#16645) where creating a new site would not create a new status 
+- Fixed a bug (#16645) where creating a new site would not create a new status
   group if no channels were duplicated
 
 

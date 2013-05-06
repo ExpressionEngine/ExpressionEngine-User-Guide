@@ -73,7 +73,7 @@ paginate=
 
 ::
 
-	paginate="top" paginate="bottom"  paginate="both"
+	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"
 
 This parameter determines where the pagination code will appear for your
 channel entries or comments:
@@ -84,10 +84,14 @@ channel entries or comments:
    list of entries.
 #. **both**: The navigation text and links will appear both above and
    below your list of entries.
+#. **inline**: The navigation text and links will appear within the list
+   of entries for each entry.
 
 If no parameter is specified, the navigation block will default to the
 "bottom" behavior.
 
+
+.. _pagination_pagination_links:
 
 pagination_links
 ----------------
@@ -197,6 +201,8 @@ Variable Pairs
 --------------
 
 
+.. _pagination_paginate:
+
 paginate
 ~~~~~~~~
 
@@ -211,6 +217,8 @@ variables for use inside this tag. This tag is wrapped around either the
 single variables (see below) or the next/previous variable pairs.
 
 
+.. _pagination_next_page:
+
 if next\_page
 ~~~~~~~~~~~~~
 
@@ -221,6 +229,9 @@ if next\_page
 This tag will conditionally display the code inside the tag if there is
 a "next" page. If there is no next page then the content simply will not
 be displayed.
+
+
+.. _pagination_previous_page:
 
 if previous\_page
 ~~~~~~~~~~~~~~~~~

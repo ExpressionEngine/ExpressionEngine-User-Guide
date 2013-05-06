@@ -12,9 +12,9 @@ sent when you submit new entries via the PUBLISH page. Examples include
 `weblogs.com <http://www.weblogs.com/>`_ and `Blo.gs <http://blo.gs/>`_,
 among others.
 
-**Note:** Each member of your site is allowed to specify their preferred
-ping servers via their My Account page. These default servers are
-**only** used with members that have not defined their own.
+.. note:: Each member of your site is allowed to specify their preferred
+	ping servers via their My Account page. These default servers are
+	**only** used with members that have not defined their own.
 
 |Ping Servers|
 

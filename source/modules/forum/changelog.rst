@@ -1,6 +1,23 @@
 ExpressionEngine Forum Module Change Log
 ========================================
 
+Version 3.1.12
+--------------
+
+Release Date: May 6, 2013
+
+- Fixed a bug (#19344) where a PHP error occurred when updating the
+  forum by accessing the forum control panel.
+
+
+Version 3.1.11
+--------------
+
+Release Date: April 23, 2013
+
+- Updates for date localization changes in ExpressionEngine 2.6.
+
+
 Version 3.1.10
 --------------
 
@@ -389,8 +406,8 @@ Build 20090723 (initial release)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Compatible with PHP 5.3.0
--  Added `'main\_forum\_table\_rows\_template' extension
-   hook <http://expressionengine.com/developers/extension_hooks/main_forum_table_rows_template>`_
+-  Added :ref:`'main\_forum\_table\_rows\_template' extension hook
+   <forum_dev_main_forum_table_rows_template>`
 -  Added the {topic\_title} variable to the Post Submission Form when
    editing a reply.
 -  Fixed a bug where the member trigger word was hardcoded to 'member'
@@ -562,17 +579,17 @@ Release Date: June 19, 2007
 -  Added ability to link directly to reply in search results where the
    search terms were found in a reply (see :doc:`version update
    notes <forum_update_notes_2.0>`).
--  Added `forums= <recent_forum_topics.html#par_forums>`_ and
-   `boards= <recent_forum_topics.html#par_boards>`_ parameters to the
+-  Added :doc:`forums= </modules/forum/recent_forum_topics>` and
+   `boards= </modules/forum/recent_forum_topics>` parameters to the
    Topic Titles tag
 -  Added
-   `{auto\_thread\_path} <recent_forum_topics.html#var_auto_thread_path>`_,
-   `{board\_label} <recent_forum_topics.html#var_board_label>`_,
-   `{board\_name} <recent_forum_topics.html#var_board_name>`_,
-   `{body} <recent_forum_topics.html#var_body>`_,
-   `{forum\_name} <recent_forum_topics.html#var_forum_name>`_,
-   `{forum\_url} <recent_forum_topics.html#var_forum_url>`_, and
-   `{last\_reply} <recent_forum_topics.html#var_last_reply>`_ variables
+   `{auto\_thread\_path} </modules/forum/recent_forum_topics>`,
+   `{board\_label} </modules/forum/recent_forum_topics>`,
+   `{board\_name} </modules/forum/recent_forum_topics>`,
+   `{body} </modules/forum/recent_forum_topics>`,
+   `{forum\_name} </modules/forum/recent_forum_topics>`,
+   `{forum\_url} </modules/forum/recent_forum_topics>`, and
+   `{last\_reply} </modules/forum/recent_forum_topics>` variables
    to the Topic Titles tag
 -  Added Basic HTTP Authentication for feeds when accessing a feed for a
    forum that you do not have permission to view. Authentication is only
@@ -766,16 +783,19 @@ Version 1.2
 
 Release Date: November 30, 2005
 
--  Improved the "read topic" tracker so that it works with non-logged-in
-   users (Note: requires the EE 1.4 core)
--  Changed the "max post characters" limit to 5 characters
--  Fixed a problem that can occur if a user edits a post after a
-   moderator has enabled it as sticky, closed, etc.
--  Fixed a problem displaying attachments if the attachment has a file
-   extension in uppercase.
--  Added Post Reply and Post Topic permissions instead of the single
-   Post permission
--  Added notification preferences for categories
+- Improved the "read topic" tracker so that it works with non-logged-in
+  users
+
+  .. note:: Requires the EE 1.4 core)
+
+- Changed the "max post characters" limit to 5 characters
+- Fixed a problem that can occur if a user edits a post after a
+  moderator has enabled it as sticky, closed, etc.
+- Fixed a problem displaying attachments if the attachment has a file
+  extension in uppercase.
+- Added Post Reply and Post Topic permissions instead of the single
+  Post permission
+- Added notification preferences for categories
 
 `Top of Page <#top>`_
 

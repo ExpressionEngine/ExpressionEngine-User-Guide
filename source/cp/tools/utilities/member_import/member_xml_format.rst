@@ -102,10 +102,10 @@ Security, Inc. MD5 Message-Digest Algorithm (md5) hash. `[RFC
 Hash Algorithm 1 (sha1) hash. `[RFC
 3174] <http://www.faqs.org/rfcs/rfc3174.html>`_
 
-**NOTE:** If you import encrypted passwords of one type and your
-ExpressionEngine installation was configured with a different type of
-encryption, the passwords will not work, and users will need to use the
-"Forgot Password" link to log in.
+.. note:: If you import encrypted passwords of one type and your
+	ExpressionEngine installation was configured with a different type
+	of encryption, the passwords will not work, and users will need to
+	use the "Forgot Password" link to log in.
 
 Birthday Tag
 ------------
@@ -166,7 +166,6 @@ Available Member Data Tags
 
 -  <bio>
 -  <cp\_theme>
--  <daylight\_savings>
 -  <display\_avatars>
 -  <display\_signatures>
 -  <email>

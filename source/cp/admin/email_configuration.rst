@@ -80,6 +80,12 @@ fill out this field, which specifies the server address of the SMTP
 server. This setting is ignored if "SMTP" is not selected as the email
 protocol.
 
+SMTP Server Port
+~~~~~~~~~~~~~~~~
+
+If you need to use a port other than 25 with your SMTP server, then fill out 
+this field. If you're planning on using port 25, you can leave this blank.
+
 SMTP Username
 ~~~~~~~~~~~~~
 
@@ -129,10 +135,11 @@ SMTP, you can set a greater batch total, possibly as high as several
 hundred or even more if you are on a dedicated server. A batch size of
 300 in these cases is a good starting point. If you are having good
 success you can increase it until you begin experiencing time-outs.
-Note: Unless your mailing list numbers in the thousands you won't gain
-much of a speed gain from setting large batches. If you are using the
-less efficient "PHP mail" protocol then you will usually need to set a
-lower batch size; 50-100 is typical.
+
+.. note:: Unless your mailing list numbers in the thousands you won't
+   gain much of a speed gain from setting large batches. If you are
+   using the less efficient "PHP mail" protocol then you will usually
+   need to set a lower batch size; 50-100 is typical.
 
 Default Mail Format
 ~~~~~~~~~~~~~~~~~~~
@@ -153,8 +160,10 @@ Email Console Timelock
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The number of minutes that must lapse before a member is allowed to send
-another email. Note: This only applies to the Email Console in the
-member profile pages.
+another email. 
+
+.. note:: This only applies to the Email Console in the member profile
+   pages.
 
 Log Email Console Messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

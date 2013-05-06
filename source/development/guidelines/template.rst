@@ -7,7 +7,7 @@ Table of Contents
 -----------------
 
 
-**Note:** This is something important.
+.. note:: This is something important.
 
 Method Tag Parameters
 ---------------------

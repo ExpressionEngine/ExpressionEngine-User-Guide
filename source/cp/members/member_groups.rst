@@ -20,6 +20,8 @@ giving you precise control over what each of your members can do.
    a new Member Group.
 -  :doc:`Edit Group <member_groups_edit>`: Edit an existing member
    group.
--  **Delete**: Delete the group. Note: Some groups can not be deleted.
+-  **Delete**: Delete the group. 
+	
+	.. note:: Some groups can not be deleted.
 
 .. |Member Groups Overview| image:: ../../images/member_groups_overview.png

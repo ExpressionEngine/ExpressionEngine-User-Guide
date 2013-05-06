@@ -2,10 +2,10 @@ Using Plugins
 =============
 
 ExpressionEngine is designed so that features can be added through the
-use of Plugins. The `ExpressionEngine Plugins <http://expressionengine.com/downloads/addons/category/plugins/>`_
-site contains a list of all available first-party plugins, as well as
-installation and usage instructions for each one. It is important to
-review the notes for the specific plugin you wish to use.
+use of Plugins. A list of first party ExpressionEngine plugins can be
+found on `EllisLab's GitHub page <https://github.com/EllisLab/>`_, along
+with installation and usage instructions for each one. It is important
+to review the notes for the specific plugin you wish to use.
 
 Installation
 ------------
@@ -41,7 +41,7 @@ by the plugin::
 
 In the above example, the content would be XML Encoded.
 
-.. _templates-nested-plugins:
+.. _templates_nested_plugins:
 
 Nested Plugins
 --------------
