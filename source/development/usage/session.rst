@@ -7,6 +7,8 @@ Session Class
 Calling the Session Class
 -------------------------
 
+.. class:: Session
+
 ExpressionEngine uses the Session class for storing information about
 the user currently visiting the ExpressionEngine site. If the user is a
 member and is logged in, then their various preferences and privileges
@@ -147,6 +149,8 @@ included:
 
 Flash Data for Redirects
 ------------------------
+
+.. method:: set_flashdata()
 
 You may sometimes need to store small pieces of data, such as language
 keys, across page requests to show as result messages. You can do this

@@ -53,8 +53,8 @@ Release Date: May 6, 2013
     members with custom fields.
   - Altered SmartForge library to ignore strict mode warnings when
     altering database fields (bug #19330).
-  - Fixed a security bug where a non Super Admin with Control Panel
-    access could create Super Admins.
+  - Fixed a security bug where a non Super Admin with Member
+    Administration access could create Super Admins.
   - Fixed a bug (#19329) where the installer may fail in earlier
     versions of PHP.
 

@@ -4,6 +4,8 @@ Template Class
 .. contents::
 	:local:
 
+.. highlight:: php
+
 Introduction
 ------------
 
@@ -503,7 +505,6 @@ to add them yourself.
 		$row['total_results] = $query->num_rows;
 
 		$output .= ee()->TMPL->parse_variables_row($tagdata, $row);
-	}
 
 Single and Pair Variables (Legacy)
 ----------------------------------
