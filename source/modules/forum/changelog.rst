@@ -4,7 +4,7 @@ ExpressionEngine Forum Module Change Log
 Version 3.1.12
 --------------
 
-Release Date: May 1, 2013
+Release Date: May 6, 2013
 
 - Fixed a bug (#19344) where a PHP error occurred when updating the
   forum by accessing the forum control panel.
