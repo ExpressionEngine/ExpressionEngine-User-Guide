@@ -4,6 +4,8 @@ Security Class
 .. contents::
 	:local:
 
+.. highlight:: php
+
 Calling the Security Class
 --------------------------
 

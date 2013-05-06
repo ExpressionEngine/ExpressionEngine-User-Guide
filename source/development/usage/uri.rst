@@ -7,6 +7,8 @@ your URI strings. This class is initialized automatically.
 .. contents::
 	:local:
 
+.. highlight:: php
+
 ee()->uri->segment(n)
 --------------------------
 
@@ -41,7 +43,6 @@ It helps avoid having to write code like this::
 	{
 	    $product_id = ee()->uri->segment(3);
 	}
-
 
 ee()->uri->slash\_segment(n)
 ---------------------------------

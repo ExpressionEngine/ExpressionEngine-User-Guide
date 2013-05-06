@@ -31,6 +31,12 @@ relate one.
 Once you have built your relationship fields, building the templates is
 surprisingly straightforward.  Building templates using your related entries is
 the primary focus of this page.  So if you're ready to tackle it, read on.
+
+.. versionchanged:: 2.6
+   *Relationships* was completely rewritten for this version, adding the ability
+   to create multiple relationships for each entry and introducing a friendly
+   new tag syntax. The template tags described here are not compatible with
+   previous versions.
  
 ********
 Examples
