@@ -51,6 +51,8 @@ Release Date: May 6, 2013
     SafeCracker form.
   - Fixed a bug (#19342) where a PHP errors was thrown when importing
     members with custom fields.
+  - Fixed a bug(#19338) introduced in 2.6.0 where certain sessions could
+    not be destroyed by logging out.
   - Altered SmartForge library to ignore strict mode warnings when
     altering database fields (bug #19330).
   - Fixed a security bug where a non Super Admin with Member
