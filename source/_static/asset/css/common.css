@@ -183,6 +183,7 @@ fieldset{ border: 0; }
 			background-color: #f6f2ca; 
 			border-color: #c5bf7c; 
 			font-weight: normal; 
+			margin: 20px 0; 
 		}
 
 .comments .codeblock{ 
