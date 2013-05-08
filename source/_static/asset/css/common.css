@@ -381,10 +381,15 @@ fieldset{ border: 0; }
     top: 5px;
 }
 
-	.download-bar a{
+	.download-bar a,
+	.download-bar span{
 	    background-color: #3B7EB0;
 	    color: #FFFFFF;
 	    font-size: 12px;
 	    margin-left: 5px;
 	    padding: 5px 8px;
 	}
+	
+		.download-bar span select {
+			margin-right: 0;
+		}
