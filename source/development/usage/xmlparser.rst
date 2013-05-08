@@ -5,6 +5,8 @@ XML Parser Class
 	:local:
 	:depth: 1
 
+.. highlight:: php
+
 Calling the XML Parser Class
 ----------------------------
 

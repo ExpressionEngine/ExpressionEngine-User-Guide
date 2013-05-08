@@ -5,6 +5,62 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.6.1
+-------------
+
+Release Date: May 6, 2013
+
+- General Changes:
+
+  - Increased the size of the Relationships reordering drag target.
+  - Made the Relationships field search box more conspicuous.
+  - Publish tabs that contain fields with form submission errors are now
+    marked with a flag.
+
+- Bug Fixes:
+
+  - Fixed a bug (#19322) where specifying ``custom_fields`` in the
+    disable parameter would cause an error.
+  - Fixed a bug (#17895) where the Rich Text Editor did not properly
+    apply heading changes.
+  - Fixed a bug (#18272) where text copied into an empty Rich Text
+    Editor was wrapped in span elements instead of paragraphs.
+  - Fixed bugs (#19225, #17932, #17956) where the Rich Text Editor did
+    not always handle newlines correctly.
+  - Fixed a bug (#19321) where updated Relationship fields would cause
+    an error if they were sorted by date.
+  - Fixed a bug (#19196) where Internet Explorer did not load jQuery
+    into an iframe unless the ``src`` attribute was set after adding the
+    iframe to the DOM.
+  - Fixed a bug (#19257) where hitting enter in the filebrowser search
+    box would submit the publish form.
+  - Fixed a bug (#19339) where ``{date_footer}`` was shown improperly.
+  - Fixed a bug (#19337) where variables added to the channel row data
+    from an extension hook where not always replaced correctly.
+  - Fixed a bug (#19346) where ``{page_url}`` was not replaced
+    correctly.
+  - Fixed a bug (#19326) where email could generate a PHP error when
+    using Sendmail.
+  - Fixed a bug (#19327) in the 2.0 updater where an error could occur
+    if a template was set to a custom template type.
+  - Fixed a bug (#19328) where a MySQL error could occur on the publish
+    page if no member groups were assigned to the author dropdown.
+  - Fixed a bug (#19331) where a PHP error occurred when exporting
+    template groups.
+  - Fixed a bug (#19335) where status was not properly set using a
+    SafeCracker form.
+  - Fixed a bug (#19342) where a PHP errors was thrown when importing
+    members with custom fields.
+  - Fixed a bug(#19338) introduced in 2.6.0 where certain sessions could
+    not be destroyed by logging out.
+  - Altered SmartForge library to ignore strict mode warnings when
+    altering database fields (bug #19330).
+  - Fixed a security bug where a non Super Admin with Member
+    Administration access could create Super Admins.
+  - Fixed a bug (#19329) where the installer may fail in earlier
+    versions of PHP.
+
+
 Version 2.6.0
 -------------
 
