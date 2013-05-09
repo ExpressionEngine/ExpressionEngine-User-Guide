@@ -1,6 +1,9 @@
 Install/Update Multiple Site Manager
 ====================================
 
+.. note:: Before updating to a new version of Multiple Site Manager
+  insure that you are running the latest version of ExpressionEngine.
+
 Step 1
 ------
 
