@@ -159,14 +159,16 @@ fieldset{ border: 0; }
 	padding: 10px 10px 8px; 
 }
 
-	.admonition p{ margin: 0; }
+	.admonition p,
+	.versionchanged p{ margin: 0; }
 	
 	.codeblock{ margin: 10px 0; }
 	
 	.cp-path{ background-color: #FAFFF6; border-color: #D1CDB0; }
 	.important, .note{ background-color: #FFFFF2; border-color: #C8C8A5; }
 
-	.deprecated{
+	.deprecated,
+	.versionchanged{
 		background-color: #ffe8e8;
 		border: 1px solid #f19999;
 		-moz-box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
@@ -176,6 +178,13 @@ fieldset{ border: 0; }
 		font-weight: bold;
 		padding: 10px;
 	}
+
+		.versionchanged{ 
+			background-color: #f6f2ca; 
+			border-color: #c5bf7c; 
+			font-weight: normal; 
+			margin: 20px 0; 
+		}
 
 .comments .codeblock{ 
 	background-color: #10618F; 
@@ -373,10 +382,15 @@ fieldset{ border: 0; }
     top: 5px;
 }
 
-	.download-bar a{
+	.download-bar a,
+	.download-bar span{
 	    background-color: #3B7EB0;
 	    color: #FFFFFF;
 	    font-size: 12px;
 	    margin-left: 5px;
 	    padding: 5px 8px;
 	}
+	
+		.download-bar span select {
+			margin-right: 0;
+		}
