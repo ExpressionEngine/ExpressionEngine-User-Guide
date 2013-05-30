@@ -32,7 +32,7 @@ this case the function to display the ``channel_name``.
 Calling the Template Class
 --------------------------
 
-.. class:: Template
+.. class:: TMPL
 
   When the Template class calls a module, the Template class makes
   available to the module class the parameters, variables, and content
@@ -48,71 +48,66 @@ Calling the Template Class
 Parameters
 ----------
 
-.. method:: fetch_param($which[, $default = FALSE])
+Before calling the function that is being requested by the
+ExpressionEngine tag, the Template class will parse out any parameters
+for that tag and insert them into a Template class variable, thus making
+them easily accessible by the requested function by using this method::
 
-  Before calling the function that is being requested by the
-  ExpressionEngine tag, the Template class will parse out any parameters
-  for that tag and insert them into a Template class variable, thus
-  making them easily accessible by the requested function by using this
-  method::
+  $param = ee()->TMPL->fetch_param('parameter');
 
-    $param = ee()->TMPL->fetch_param('parameter');
+:meth:`TMPL::fetch_param` takes an optional second argument, which is
+the value that will be returned if the parameter was not set in the
+opening tag. It defaults to FALSE if the second argument is not
+supplied::
 
-  **fetch_param()** takes an optional second argument, which is the value
-  that will be returned if the parameter was not set in the opening tag.
-  It defaults to FALSE if the second argument is not supplied::
+  // Default value is 'random'
+  $order = ee()->TMPL->fetch_param('order', 'random');
 
-    // Default value is 'random'
-    $order = ee()->TMPL->fetch_param('order', 'random');
+  if ( ! $channel = ee()->TMPL->fetch_param('channel'))
+  {
+      ee()->language->fetch_language_file('module');
+      ee()->output->fatal_error(ee()->language->line('module_invalid_channel'));
+      exit;
+  }
+  else
+  {
+      $str = ee()->functions->sql_andor_string($channel, 'channel_name');
 
-    if ( ! $channel = ee()->TMPL->fetch_param('channel'))
-    {
-        ee()->language->fetch_language_file('module');
-        ee()->output->fatal_error(ee()->language->line('module_invalid_channel'));
-        exit;
-    }
-    else
-    {
-        $str = ee()->functions->sql_andor_string($channel, 'channel_name');
+      if (strncmp($str, 'AND', 3) == 0)
+      {
+          $str = substr($str, 3);
+      }
 
-        if (strncmp($str, 'AND', 3) == 0)
-        {
-            $str = substr($str, 3);
-        }
+      $sql .= "SELECT channel_id FROM exp_channels WHERE ".$str;
+      $query = ee()->db->query($sql);
+  }
+  // If channel is not specified, then an error is output.
+  // Otherwise, perform query.
 
-        $sql .= "SELECT channel_id FROM exp_channels WHERE ".$str;
-        $query = ee()->db->query($sql);
-    }
-    // If channel is not specified, then an error is output.
-    // Otherwise, perform query.
+.. note:: values of ``'y'``, ``'on'`` and ``'yes'`` will all return
+  ``'yes'``, while ``'n'``, ``'off'`` and ``'no'`` all return
+  ``'no'``.
 
-  .. note:: values of 'y', 'on' and 'yes' will all return 'yes', while
-    'n', 'off' and 'no' all return 'no'.
-
-  :param string $which: Name of the parameter
-  :param mixed $default: Default value for parameter
-  :returns: Value of the parameter or the default
-  :rtype: String
 
 Information Within Tag Pairs
 ----------------------------
 
-ExpressionEngine tags are used primarily to output some form of content
-so it can be displayed within a template. The formatting for this
-content is determined by the HTML and variable data contained between
-the opening and closing tags for the tag being called. We normally call
-this formatting information between the opening and closing tags the
-'tag data', and this data can be requested by using the
-ee()->TMPL->tagdata variable.
+ExpressionEngine tags are used primarily to output some form of
+content so it can be displayed within a template. The formatting for
+this content is determined by the HTML and variable data contained
+between the opening and closing tags for the tag being called. We
+normally call this formatting information between the opening and
+closing tags the 'tag data', and this data can be requested by using
+the :attr:`TMPL::$tagdata` variable.
 
 .. note:: Except in rare cases, a module will have both an opening and
   closing tag. There are exceptions to this rule such as when you
   might wish to have a tag that simply performs an automated action.
-  An example of this is the {exp:moblog:check} tag.
+  An example of this is the ``{exp:moblog:check}`` tag.
 
-**Module code in template.** The tag data is everything from the end of
-the opening tag to the beginning of the closing tag, basically the HTML
-and tag variables::
+**Module code in template.** The tag data is everything from the end
+of the opening tag to the beginning of the closing tag, basically the
+HTML and tag variables::
 
   {exp:magic:spell}
 
@@ -135,7 +130,7 @@ and tag variables::
         );
   }
 
-  return ee()->TMPL->parse_variables($tagdata, $variables);
+  return ee()->TMPL->parse_variables(ee()->TMPL->tagdata, $variables);
 
 Variable Types
 --------------
@@ -166,12 +161,13 @@ Overview
 ~~~~~~~~
 
 The Template class makes parsing your module or plugin's variables a
-snap. Using the **parse_variables()** method, you supply the tag data,
-and an array containing all of your variables, organized as "rows". Your
-single, pair, and conditional variables will automatically be parsed for
-you, and your module or plugin will also automatically have {count} and
-{switch} variables. Additionally, date variables will be parsed, and you
-can optionally have typography performed automatically for you as well.
+snap. Using the :meth:`TMPL::parse_variables` method, you supply the tag
+data, and an array containing all of your variables, organized as
+"rows". Your single, pair, and conditional variables will automatically
+be parsed for you, and your module or plugin will also automatically
+have ``{count}`` and ``{switch}`` variables. Additionally, date
+variables will be parsed, and you can optionally have typography
+performed automatically for you as well.
 
 Master Variables Array
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -239,7 +235,7 @@ First let's look at a typical variables array::
               [affiliation] => N.E.S.T.
               [bio] => Array
                   (
-                      [0] => As a child, Stinkor was teased for his bad breath. When he realized that it was more than bad…noxious even, he turned to a life of crime, robbing banks by knocking out the guards by saying "Hello" in their face.
+                      [0] => As a child, Stinkor was teased for his bad breath. When he realized that it was more than bad...noxious even, he turned to a life of crime, robbing banks by knocking out the guards by saying "Hello" in their face.
                       [1] => Array
                           (
                               [text_format] => xhtml
@@ -253,50 +249,52 @@ First let's look at a typical variables array::
   )
 
 Looking at this example, we see two "rows" of results. Each "row"
-contains a pair variable, 'powers', which itself has multiple rows with
-some single variables, 'power' and 'scale'. Next we have the single
-variables 'name', 'dob', 'type', 'affiliation', and 'bio'. We can tell
-by looking that 'dob' is a date field, in this case date of birth. The
-'bio' field, though a single variable is also an array, containing the
-contents and typography formatting instructions, but more on that later.
-Let's look at a typical way that this array would have been created in
-an add-on's code. ::
+contains a pair variable, ``'powers'``, which itself has multiple rows
+with some single variables, ``'power'`` and ``'scale'``. Next we have
+the single variables ``'name'``, ``'dob'``, ``'type'``,
+``'affiliation'``, and ``'bio'``. We can tell by looking that ``'dob'``
+is a date field, in this case date of birth. The ``'bio'`` field, though
+a single variable is also an array, containing the contents and
+typography formatting instructions, but more on that later. Let's look
+at a typical way that this array would have been created in an add-on's
+code. ::
 
   $variables = array();
 
   foreach ($query->result as $row)
   {
-    $powers = array()
+      $powers = array()
 
-    foreach ($unserialize($row['powers']) as $power)
-    {
-      $powers[] = array('power' => $power['name'], 'scale' => $power['scale']);
-    }
+      foreach ($unserialize($row['powers']) as $power)
+      {
+          $powers[] = array('power' => $power['name'], 'scale' => $power['scale']);
+      }
 
-    $variable_row = array(
+      $variable_row = array(
           'powers'  => $powers,
           'name'    => $row['name'],
           'dob'   => $row['dob'],
           'type'    => $row['type'],
           'affiliation' => $row['affiliation']
-          );
+      );
 
-    $type_prefs = array('text_format' => 'xhtml', 'html_format' => 'all');
+      $type_prefs = array('text_format' => 'xhtml', 'html_format' => 'all');
 
-    $variable_row['bio'] = array($row['bio'], $type_prefs);
+      $variable_row['bio'] = array($row['bio'], $type_prefs);
 
-    $variables[] = $variable_row;
+      $variables[] = $variable_row;
   }
 
-In the example above, first the pair variable $powers array is created.
+In the example above, first the pair variable ``$powers`` array is created.
 Each "row" of the pair variable is an array of single variables, or even
 more pair variables. Then an array is used to hold the data for this
-result's row. The simple single variables are added in a simple array()
-declaration, but bio, which needed some typography preferences, is added
-later as an additional key. Whether you use an array() declaration, or
-keys for assignment is entirely up to you, and will often depend on the
-needs of your code. At the end of the loop, we add the entire "row" of
-data to our master $variables array. That row is now stored for parsing.
+result's row. The simple single variables are added in a simple
+``array()`` declaration, but bio, which needed some typography
+preferences, is added later as an additional key. Whether you use an
+``array()`` declaration, or keys for assignment is entirely up to you,
+and will often depend on the needs of your code. At the end of the loop,
+we add the entire "row" of data to our master $variables array. That row
+is now stored for parsing.
 
 Note that the order in which the variables are given in the array is the
 same order they will be parsed in. Because of this precedence, it is
@@ -306,8 +304,8 @@ Parsing the Variables
 ^^^^^^^^^^^^^^^^^^^^^
 
 Now that our master array is fully loaded, we simply send it along with
-the tagdata to the **parse_variables()** method of the Template class,
-which returns the parsed output. ::
+the tagdata to the :meth:`TMPL::parse_variables` method of the Template
+class, which returns the parsed output. ::
 
   $output = ee()->TMPL->parse_variables(ee()->TMPL->tagdata, $variables);
 
@@ -374,7 +372,8 @@ Single Variables
     <li>Affiliation: {affiliation}</li>
   </ul>
 
-Single variables are defined in the array as simple key => value pairs. ::
+Single variables are defined in the array as simple key => value pairs.
+::
 
   $vars = array(
       'name' => 'Stinkor',
@@ -428,9 +427,9 @@ parameters in their template tags.
 Automatic Variables
 ~~~~~~~~~~~~~~~~~~~
 
-If you are using the parse_variables() method to handle variable
-parsing in your add-on, then your tag will automatically inherit the
-ability to use the following variables::
+If you are using the :meth:`TMPL::parse_variables` method to handle
+variable parsing in your add-on, then your tag will automatically
+inherit the ability to use the following variables::
 
   {count}
 
@@ -438,15 +437,13 @@ The "count" of the output; the iteration of the tag pair loop. ::
 
   {total_results}
 
-The total number of results, or "rows", that your tag will be
-outputting. ::
+The total number of results, or "rows", that your tag will output. ::
 
   {switch="one|two|three"}
 
 This variable permits you to rotate through any number of values as the
-results are displayed. The first result will use "option_one", the
-second will use "option_two", the third "option_three", the fourth
-"option_one", and so on.
+results are displayed. The first result will use "one", the second will
+use "two", the third "three", the fourth "one", and so on.
 
 Date Variables
 ^^^^^^^^^^^^^^
@@ -470,7 +467,7 @@ indicator be appended to the final url. ::
 You indicate a path variable in much the same way you pass typography
 information, by sending the variable in the form of an array with two
 keys. The first key is the value you want appended to the final url. The
-second key must be named 'path_variable' and set to TRUE.
+second key must be named 'path_variable' and set to ``TRUE``.
 
 ::
 
@@ -488,8 +485,8 @@ Parsing Full Results
 
 Once you have assembled your master array of result "rows", with each
 row containing the single and pair variables that your tag uses, simply
-call the parse_variables() method, providing the tag data, and the
-master array. ::
+call the :meth:`TMPL::parse_variables` method, providing the tag data,
+and the master array. ::
 
   $str = ee()->TMPL->parse_variables($tagdata, $variables);
 
@@ -497,12 +494,12 @@ Parsing a Single Result Row
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You may also parse the result rows yourself, which could be useful if
-for some reason you need to modify the tagdata for each row based on
-certain criteria. You can still benefit from the simplified variable
-parsing by using parse_variables_row(), though you will no longer
-automatically have {count}, {total_results}, or {switch=} variables. To
-include these variables when parsing your own result rows, you will need
-to add them yourself.
+for some reason you need to modify the :attr:`TMPL::$tagdata` for each
+row based on certain criteria. You can still benefit from the simplified
+variable parsing by using :meth:`TMPL::parse_variables_row`, though you
+will no longer automatically have ``{count}``, ``{total_results}``, or
+``{switch=}`` variables. To include these variables when parsing your
+own result rows, you will need to add them yourself.
 
 ::
 
@@ -528,14 +525,13 @@ that it needs to replace with content.
 Single variables output a single piece of content, and in the module's
 code these variables are usually handled by doing a simple find and
 replace, where the outputted content is replacing the variable. The
-Template class array for single variables is
-ee()->TMPL->var_single, where the keys are the variable's name and
-the values are the full variable contents including any formatting
-parameters. For dates using format="%Y %m %d", only the formatting
-string is assigned to the array value. The Template class also provides
-a function, ee()->TMPL->swap_var_single, for performing the find
-and replace, making sure that the variable is replaced correctly in the
-template. ::
+Template class array for single variables is :attr:`TMPL::$var_single`,
+where the keys are the variable's name and the values are the full
+variable contents including any formatting parameters. For dates using
+``format="%Y %m %d"``, only the formatting string is assigned to the
+array value. The Template class also provides a function,
+:meth:`TMPL::swap_var_single`, for performing the find and replace,
+making sure that the variable is replaced correctly in the template. ::
 
   foreach (ee()->TMPL->var_single as $key => $val)
   {
@@ -568,13 +564,13 @@ where an entry might have multiple categories. ::
   {exp:channel:entries}
 
 The Template class variable containing the variable pairs in the tag
-data is ee()->TMPL->var_pair, which is an array where the keys are
+data is :attr:`TMPL::$var_pair`, which is an array where the keys are
 the contents of the pair variable's opening tag and the values are an
 array containing any parameters for the pair variable. Since the
-ee()->TMPL->var_pair variable does not contain the content of the
+:attr:`TMPL::$var_pair` variable does not contain the content of the
 variable pair, you will have to search the template for it yourself
-using a preg_match() (or possibly a preg_match_all(), if you believe
-there could be multiple instances of this variable pair). ::
+using a ``preg_match()`` (or possibly a ``preg_match_all()``, if you
+believe there could be multiple instances of this variable pair). ::
 
   foreach (ee()->TMPL->var_pair as $key => $val)
   {
@@ -631,11 +627,11 @@ then takes care of all the work. The data needs to be in the form of an
 array where the key is the name of the variable and the value is the
 data for that variable.
 
-If you have *short conditionals* that can be evaluted without a
-comparison operator (ex: {if allow_comments}), then instead of sending
-data you will send a string of either 'TRUE' or 'FALSE' depending on
-whether that conditional should be evaluated as true or false. The
-example belows gives you an idea of how this should work::
+If you have *short conditionals* that can be evaluated without a
+comparison operator (ex: ``{if allow_comments}``), then instead of
+sending data you will send a string of either ``'TRUE'`` or ``'FALSE'``
+depending on whether that conditional should be evaluated as true or
+false. The example belows gives you an idea of how this should work::
 
   $cond       = $row;   // $row contains query fields and values, ex:  'title' => "First Entry"
 
@@ -646,5 +642,69 @@ example belows gives you an idea of how this should work::
   $tagdata = ee()->functions->prep_conditionals($tagdata, $cond);
 
 Once you send your tag data and your array of conditional variables, the
-ee()->functions->prep_conditionals() function processes the
-conditionals so that they can be evaluted by the Template parser later.
+:meth:`Functions::prep_conditionals` function processes the conditionals
+so that they can be evaluated by the Template parser later.
+
+Method and Property Reference
+-----------------------------
+
+.. attr:: tagdata
+
+  String containing the data within the tag you're currently parsing.
+
+.. attr:: var_single
+
+  Array containing single variables within :attr:`TMPL::$tagdata`.
+
+.. attr:: var_pair
+
+  Array containing variable pairs within :attr:`TMPL::$tagdata`.
+
+.. method:: fetch_param($which[, $default = FALSE])
+
+  Fetch the parameter of a template tag.
+
+  :param string $which: Name of the parameter
+  :param mixed $default: Default value for parameter
+  :returns: Value of the parameter or the default
+  :rtype: String
+
+.. method:: parse_variables($tagdata, $variables[, $enable_backspace = TRUE])
+
+  Parse the variables within in a string--usually
+  :attr:`TMPL::$tagdata`.
+
+  :param string $tagdata: Tagdata or text to be parsed
+  :param array $variables: Array of variables and their data (see
+    `Master Variables Array`_ for an example)
+  :param boolean $enable_backspace: Optionally disable the ``backspace``
+    tag parameter
+  :returns: The ``$tagdata`` parsed with ``$variables``
+  :rtype: String
+
+.. method:: parse_variables_row($tagdata, $variables[, $solo = TRUE])
+
+  Parses a single row of data instead of letting
+  :meth:`TMPL::parse_variables` handle all of the rows for you.
+
+  :param string $tagdata: Tagdata or text to be parsed
+  :param array $variables: Array of variables for a single row of data
+  :param boolean $solo: Should be set to ``TRUE`` if not being called
+    from :meth:`TMPL::parse_variables`--forces some caching
+  :returns: The ``$tagdata`` parsed with ``$variables``
+  :rtype: String
+
+.. method:: swap_var_single($search, $replace, $source)
+
+  .. deprecated:: 2.0
+    Use :meth:`TMPL::parse_variables` or
+    :meth:`TMPL::parse_variables_row` instead
+
+  Replace a single variable with a value, a callable method that simply
+  plugs into ``str_replace()``.
+
+  :param string $search: Name of the tag without the curly braces
+  :param string $replace: Value to put in the tag's place
+  :param string $source: String to parse
+  :returns: ``$source`` with ``$search`` replaced with ``$replace``
+  :rtype: String
