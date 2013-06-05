@@ -114,7 +114,6 @@ Here is an example of how the tag might be used to create an entry form:
 
     <p><input type="checkbox" name="sticky" value="y"  {sticky} /> Make Entry Sticky</p>
     <p><input type="checkbox" name="allow_comments" value="y" {allow_comments} /> Allow Comments</p>
-    <p><input type='checkbox' name='dst_enabled' value='y' {dst_enabled} />DST Active on Date of Entry</p>
 
     {category_menu}
     <p>Categories<br />
@@ -224,14 +223,6 @@ type.
     form, it's suggested that you also include a link to the
     accompanying style sheets via the ``{path='css/\_ee\_saef\_css'}``
     path variable.
-
-DST Enabled
-~~~~~~~~~~~
-
-You may allow the user to choose whether or not to store that :doc:`DST
-is active </general/date_localization>` with the entry. ::
-
-	<p><input type="checkbox" name="dst_enabled" value="y" {dst_enabled} /> DST Active on Date of Entry</p>
 
 Entry Date
 ~~~~~~~~~~
