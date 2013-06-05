@@ -321,15 +321,6 @@ EE_TreeNode
   :param mixed $value: The value of the property
   :rtype: Void
 
-.. method:: __clone()
-
-  Post-process node cloning
-
-  Cloning needs to unfreeze the node for the benefit of the
-  :meth:`EE_TreeNode::subtree_copy` method. Not to mention dev sanity.
-
-  :rtype: Void
-
 .. method:: add(EE_TreeNode $child)
 
   Add a child node to the current node.
@@ -504,6 +495,9 @@ EE_TreeIterator
 
 .. class:: EE_TreeIterator
 
+  This class extends `RecursiveArrayIterator
+  <http://php.net/manual/en/class.recursivearrayiterator.php>`_.
+
 .. method:: hasChildren()
 
   Override ``RecursiveArrayIterator``'s child detection method. We
@@ -525,6 +519,9 @@ EE_BreadthFirstIterator
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. class:: EE_BreadthFirstIterator
+
+  This class implements `OuterIterator
+  <http://php.net/manual/en/class.outeriterator.php>`_.
 
 .. method:: current()
 
