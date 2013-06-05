@@ -9,6 +9,8 @@ interactions that are common in a content management system.
 
 .. highlight:: js
 
+.. _jquery-interact:
+
 Form Interaction Event
 ----------------------
 

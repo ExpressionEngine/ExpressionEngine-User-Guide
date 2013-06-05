@@ -77,21 +77,53 @@ Adding Header Data
     panel
   :rtype: Void
 
-Add a JavaScript File or Files to the JavaScript Combo Loader
--------------------------------------------------------------
+Add JavaScript Files to the JavaScript Combo Loader
+---------------------------------------------------
+
+.. method:: add_js_script($script_type, $script_name)
+
+  This function allows you to include scripts found in the main JavaScript
+  directory in the combo load routine, thus reducing HTTP requests. As an
+  example, the call to load ``filename.js`` file from the ``themes/javascript``
+  directory would look like this::
+
+    ee()->add_js_script('file', 'filename');
+
+  :param string $script_type: Type of script to load
+  :param string $script_name: Name of script to load
+  :returns: Associative array of loaded js files
+  :rtype: Array
+
+  .. note:: The ``add_js_script()`` function will only load files from the
+     ``themes/javascript`` directory. To load a third-party add-on package's
+     JavaScript files, use ``load_package_js()``.
+
+  Several custom jQuery plugins are included with ExpressionEngine and available
+  for third-party developers to use. Plugins available include
+  :ref:`ee_interact.event <jquery-interact>`, :doc:`ee_notice
+  </development/cp_javascript/notification>`, `tablesorter
+  <http://tablesorter.com/docs/>`__, :doc:`ee_table
+  </development/cp_javascript/table>`, and :doc:`wysihat
+  </development/cp_javascript/rte/wysihat_api>`.
+
+  An example call to load one of the jQuery plugins::
+
+    ee()->add_js_script('plugin', 'tablesorter');
+
+  The `jQuery UI <http://jqueryui.com>`__ interactions and widgets are also
+  included with ExpressionEngine for third-party developers to use. The call to
+  load the jQuery UI Autocomplete plugin would look like this, for example::
+
+    ee()->add_js_script('ui', 'autocomplete');
 
 .. method:: add_js_script([$script = array()[, $in_footer = TRUE]])
 
-  This function allows you to include scripts in the 'combo load' routine, thus
-  reducing HTTP requests. The first parameter specifies the files to be added from
-  within the ``themes/javascript`` directory, and the optional second parameter
-  determines the placement of the resulting JavaScript link, defaulting to
-  ``TRUE`` to place in the footer::
+  Several scripts can be included in a single call as an array::
 
     ee()->add_js_script(
         array(
-            'ui'      => array('core', 'widget', 'position', 'autocomplete'),
-            'plugin'  => array('fancybox')
+            'ui'      => array('widget', 'position', 'autocomplete'),
+            'plugins'  => array('ee_notice', 'ee_table')
         )
     );
 
@@ -102,14 +134,13 @@ Add a JavaScript File or Files to the JavaScript Combo Loader
   :returns: Associative array of loaded js files
   :rtype: Array
 
-Loading JavaScript Files
-------------------------
+Loading Third-Party JavaScript Files
+------------------------------------
 
 .. method:: load_package_js($file)
 
-  The ``add_js_script()`` function will only load files from the
-  ``themes/javascript`` directory. To load a third-party add-on
-  package's JavaScript files, use ``load_package_js()``::
+  To load a third-party add-on package's JavaScript files, use
+  ``load_package_js()``::
 
     ee()->cp->load_package_js('my_file');
 
@@ -117,7 +148,7 @@ Loading JavaScript Files
 
     /third_party/my_package/javascript/my_file.js
 
-  :param string $file: javascript file to load
+  :param string $file: JavaScript file to load, path relative to the current package's JavaScript directory
   :rtype: Void
 
 Masking the Control Panel URL in links
