@@ -2,56 +2,57 @@ Security Class
 ==============
 
 .. contents::
-	:local:
+  :local:
 
 .. highlight:: php
 
 Calling the Security Class
 --------------------------
 
-This class is initialized automatically.
+.. class:: Security
+
+  This class is initialized automatically.
 
 Security filtering
 ------------------
 
-ee()->security->xss\_clean() is the built in ExpressionEngine XSS
-sanitization method, which is constantly tweaked for improved security
-and performance. It accepts both a *string* and an *array* and will
-return sanitized text. ::
+.. method:: xss_clean($str[, $is_image = FALSE])
 
-	$str = ee()->security->xss_clean($str);
+  ``xss_clean()`` is the built in ExpressionEngine XSS sanitization
+  method, which is constantly tweaked for improved security and
+  performance::
 
-An optional second parameter, is\_image, allows this function to be used
-to test images for potential XSS attacks, useful for file upload
-security. When this second parameter is set to TRUE, instead of
-returning an altered string, the function returns TRUE if the image is
-safe, and FALSE if it contained potentially malicious information that a
-browser may attempt to execute. ::
+    $str = ee()->security->xss_clean($str);
 
-	if (ee()->security->xss_clean($file, TRUE) === FALSE)
-	{
-	    // file failed the XSS test
-	}
+  :param mixed $str: Either a string or an array to sanitize
+  :param boolean $is_image: Set to ``TRUE`` if you want to test images
+    for XSS attacks.
+  :returns: Either a string or an array of sanitized strings. If
+    ``$is_image`` is set to ``TRUE``, will return ``FALSE`` if the image
+    fails the check.
+  :rtype: Mixed
 
-Other Class Variables
----------------------
+Other Class Methods
+-------------------
 
-ee()->security->sanitize\_filename()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. method:: sanitize_filename($str[, $relative_path = FALSE])
 
-Removes naughty characters from filenames. Returns a sanitized
-string.
+  Removes naughty characters from filenames. Returns a sanitized
+  string::
 
-::
+    $filename = ee()->security->sanitize_filename($name);
 
-	$filename = ee()->security->sanitize_filename($name);
+  :param string $str: Filename to sanitize
+  :param boolean $relative_path: Set to ``TRUE`` if you want to validate
+     a filename with a relative path
+  :returns: Sanitized filename
+  :rtype: String
 
-ee()->security->xss\_hash()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. method:: xss_hash()
 
-Returns a random hash.
+  Returns a random hash::
 
-::
+    echo ee()->security->xss_hash();
 
-	echo ee()->security->xss_hash();
-
+  :returns: Random hash
+  :rtype: String

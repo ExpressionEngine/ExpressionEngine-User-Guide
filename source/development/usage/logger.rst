@@ -2,17 +2,19 @@ Logger Class
 ============
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
 .. highlight:: php
 
 Calling the Logger Class
 ------------------------
 
-Load the Logger library. ::
+.. class:: Logger
 
-	ee()->load->library('logger');
+  Load the Logger library. ::
+
+    ee()->load->library('logger');
 
 Developer Log
 -------------
@@ -27,34 +29,24 @@ For example, EllisLab uses the developer log to warn developers if a core
 function that is planned to be deprecated is being used by any third-party
 add-ons.
 
-To use the developer log to log your own events, notices or warnings that
-need to be brought to the attention of the Super Admin, call this function
-and pass the string of the notice::
+.. method:: developer($data[, $update = FALSE[, $expires = 0]])
 
-	ee()->logger->developer('Log message.');
+  To use the developer log to log your own events, notices or warnings that
+  need to be brought to the attention of the Super Admin, call this function
+  and pass the string of the notice::
 
-A second boolean parameter may be passed to specify if the message should
-be unique in the log and not duplicated. This is good for situations where
-a notice does not need to be logged each time it's triggered, but still
-needs the Super Admin's attention. In the case that a message is sent to
-developer() with the update flag set to TRUE, it will find the last
-message that matches the string of the message, set it's viewed status to
-not viewed, and update the timestamp. ::
+    ee()->logger->developer('Log message.');
 
-	ee()->logger->developer('Unique log message.', TRUE);
+  :param string $data: Message to send to the developer log
+  :param boolean $update: ``TRUE`` if you want to update a previous
+    message instead of creating a new one. This is good for situations
+    where a notice does not need to be logged each time it's triggered,
+    but still needs the Super Admin's attention.
+  :param integer $expires: Amount of time where you should only show one
+    meessage. For example, if an item should only show once per week, an
+    item is logged with an expires time of 604800 seconds.
+  :returns: Array of data for the log message
+  :rtype: Array
 
-A third parameter may be set if the log item should only be logged every
-so often. If the second parameter is set to TRUE, the third parameter is
-the amount of time in seconds to have elapsed from the initial logging to
-mark as unread and alert Super Admin again. For example, if an item should
-only show once per week, an item is logged with an expires time of 604800
-seconds. If the developer function is called with the same data within
-that period of time, it will hold off displaying a notice to the Super
-Admin until the developer function is called again after the interval has
-completed. This is designed to make log item alerts less annoying to the
-user. ::
-
-	ee()->logger->developer('Unique log message.', TRUE, 604800);
-
-.. note:: Be conscious of how often the developer() function is used so as
-	not to clutter the developer log and run unnecessary queries.
+  .. note:: Be conscious of how often the developer() function is used so as
+    not to clutter the developer log and run unnecessary queries.

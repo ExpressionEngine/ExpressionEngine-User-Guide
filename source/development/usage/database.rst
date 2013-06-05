@@ -1,162 +1,185 @@
+##############
 Database Class
-==============
+##############
 
 .. contents::
   :local:
 
 .. highlight:: php
 
+********************
 Calling the DB Class
---------------------
+********************
 
 ExpressionEngine has an abstract database layer that allows developers
 to easily access the MySQL database and also provide many features like
 automatic escaping of characters and query caching.
 
-This class is initialized automatically. ::
+This class is initialized automatically::
 
-    $query = ee()->db->query("SELECT channel_name FROM exp_channels");
+  $channels = ee()->db->select('channel_name')
+    ->from('channels')
+    ->get();
 
-    if ($query->num_rows() > 0)
-    {
-        foreach($query->result_array() as $row)
-        {
-            echo $row['channel_name']."<br />\n";
-        }
-    }
+  if ($channels->num_rows() > 0)
+  {
+      foreach($channels->result_array() as $row)
+      {
+          echo $row['channel_name']."<br />\n";
+      }
+  }
 
-Performing a Query
-------------------
+Active Record
+=============
 
-**ee()->db->query()** sends a query to the database and will also
-return back the results, if it is a SELECT query. If you are doing an
-INSERT or UPDATE, then you do not need to set a variable since there are
-no results being returned.
+While we still make ``ee()->db->query()`` available, it's highly
+recommended that you use :ellislab:`CodeIgniter's Active Record
+</codeigniter/user-guide/database/active_record.html>` because queries
+will be easier to read and edit::
 
-::
+  $query = ee()->db->select('username, screen_name, email, url, signature')
+      ->from('members m')
+      ->join('my_table t', 'm.member_id = t.member_id')
+      ->where(array(
+          't.subscribed' => 'y',
+          't.end_date >' => ee()->localize->now,
+      ))
+      ->limit($per_page)
+      ->order_by('m.join_date', 'desc')
+      ->get();
 
-    // Simple select query
-    $query = ee()->db->query("SELECT * FROM exp_channels");
+.. note:: We're not adding ``exp_`` to the beginning of the table names,
+  CodeIgniter takes care of that automatically, so you can add it if you
+  want, but it's unnecessary.
 
-    // Update, with no variable being set
-    ee()->db->query("UPDATE exp_channels SET channel_name = 'dog' WHERE channel_name = 'cat'");
+**************
+SELECTing Data
+**************
 
-.. note:: When doing any sort of query using user submitted data make
-    sure to use the ee()->db->escape\_str() function (details
-    below) to prevent any problems between MySQL and the data.
+When you perform a ``SELECT`` query using Active Record, a database
+object containing the results will be returned. To check for the number
+of results returned by the query, use the ``num_rows`` value in the
+returned object::
 
-Retrieving Results from SELECT query
-------------------------------------
+  $results = ee()->db->select('*')
+    ->from('channels')
+    ->get();
 
-Upon performing a SELECT query an object containing the results of query
-will be returned by the function. To check for the number of results
-returned by the query, use the **num\_rows** value in the returned
-object.
+  if ($results->num_rows() == 0)
+  {
+      exit('No channels exist');
+  }
 
-::
+.. note:: You don't have to supply a ``select()`` or a ``from()``,
+  instead if you want to select everything simply omit the ``select()``,
+  and instead of adding a ``from()``, just put the table name in the
+  ``get()``::
 
-    $results = ee()->db->query("SELECT * FROM exp_channels");
-
-    if ($results->num_rows() == 0)
-    {
-        exit('No channels exist');
-    }
+    $results = ee()->db->get('channels');
 
 In many instances, you will know that only a single row of data will be
 returned from a query. Instead of looping through an array, you can
-simply use the **row** array in the object returned.
+simply use the ``row`` array in the object returned::
 
-::
+  $results = ee()->db->order_by('channel_id')
+    ->limit(1)
+    ->get('channels');
 
-    $results = ee()->db->query("SELECT * FROM exp_channels ORDER BY channel_id LIMIT 0,1");
-
-    $first_channel = $results->row('channel_name');
+  $first_channel = $results->row('channel_name');
 
 When many rows of data are returned you will wish to loop through the
 returned array and use the values returned for the fields.
-ExpressionEngine uses MYSQL\_ASSOC, which has MySQL using the field
+ExpressionEngine uses ``MYSQL_ASSOC``, which has MySQL using the field
 names in the array and not numbers. To access this array, then you will
-want to use the **result** array of the object with a foreach loop.
+want to use the ``result`` array of the object with a ``foreach`` loop::
 
-::
+  $results = ee()->db->select('channel_name, channel_id')
+    ->get('channels');
 
-    $results = ee()->db->query("SELECT channel_name, channel_id FROM exp_channels");
+  if ($results->num_rows() > 0)
+  {
+      foreach($results->result_array() as $row)
+      {
+          echo $row['channel_id'].' - '.$row['channel_name']."<br />\n";
+      }
+  }
 
-    if ($results->num_rows() > 0)
-    {
-        foreach($results->result_array() as $row)
-        {
-            echo $row['channel_id'].' - '.$row['channel_name']."<br />\n";
-        }
-    }
-
+**************
 INSERTing Data
---------------
+**************
 
-Included in the DB Class is a function that makes the inserting of data
-into the database easier by correctly formatting the INSERT string and
-escaping the values being inserted. The **insert\_string()** function
-accepts the name of the table for the insert and an array containing the
-field names as keys with the values containing the data for those
-fields.
+Active Record includes ``insert()``, ``insert_batch()`` and ``set()``
+methods that makes the inserting of data into the database easier by
+correctly formatting the ``INSERT`` string and escaping the values being
+inserted. The ``insert()`` and ``insert_batch()`` methods accept the
+name of the table for the insert and an array containing the field names
+as keys with the values containing the data for those fields::
 
-::
-
-    $data = array('name' => $name, 'email' => $email, 'url' => $url);
-
-    $sql = ee()->db->insert_string('exp_channel', $data);
-
-    // INSERT INTO exp_channel (name, email, url) VALUES ('Joe', 'joe@joe.com', 'www.joe.com')
-
-    ee()->db->query($sql);
+  ee()->db->insert(
+      'channel',
+      array(
+          'name'  => $name,
+          'email' => $email,
+          'url'   => $url
+      )
+  );
 
 Upon performing an insert you might wish to know the value of the
-primary key for the row that was added. The DB Class tracks the last
-insert and will return the primary key value using the insert\_id()
-method of the class.
+primary key for the row that was added. Active Record tracks the last
+insert and will return the primary key value using the ``insert_id()``
+method of the class::
 
-::
+  ee()->db->insert('channel', array('name' => $name));
+  $entry_id = ee()->db->insert_id();
 
-    ee()->db->query($insert_sql);
-    $entry_id = ee()->db->insert_id();
-
+**************
 UPDATEing Data
---------------
+**************
 
-Included in the DB Class is a function that makes the updating of data
-in the database easier by correctly formatting the UPDATE string and
-escaping the values being inserted. The **update\_string()** function
-accepts the name of the table for the update, an array containing the
-field names as keys with the values containing the updated data for
-those fields, and the WHERE clause for choosing which rows in the table
-to update.
+Active Record also includes ``update()`` and ``update_batch()`` methods
+that makes the updating of data in the database easier by correctly
+formatting the UPDATE string and escaping the values being inserted.
+Both methods accept the name of the table for the update, an array
+containing the field names as keys with the values containing the
+updated data for those fields, and the ``WHERE`` clause for choosing
+which rows in the table to update::
 
-::
+  ee()->db->update(
+      'channel',
+      array(
+          'name'  => $name,
+          'email' => $email,
+          'url'   => $url
+      ),
+      array(
+          'author_id' => '1'
+      )
+  );
 
-    $data = array('name' => $name, 'email' => $email, 'url' => $url);
+**************
+DELETEing Data
+**************
 
-    $sql = ee()->db->update_string('exp_channel', $data, "author_id = '1'");
+Like ``UPDATE``'s and ``INSERT``'s, Active Record has a ``delete()``
+method for deleting data. It accepts a table name and a string or array
+containing the ``WHERE`` clause(s)::
 
-    // UPDATE exp_channel SET name = 'Joe', email = 'joe@joe.com', url = 'www.joe.com' WHERE author_id = '1'
+  ee()->db->delete(
+      'table',
+      array(
+          'id' => $id_to_delete
+      )
+  );
 
-    ee()->db->query($sql);
+.. note:: Always be wary of the data you're deleting.
 
+********************
 Additional Functions
---------------------
+********************
 
-**escape\_str** will accept a string variable and return that variable
-prepared for any sql statement to the database.
-
-::
-
-    $query = ee()->db->query("SELECT FROM exp_comments WHERE url = '".ee()->db->escape_str($site_url)."'");
-
-**affected\_rows** will return how many rows in the database were
+``affected_rows`` will return how many rows in the database were
 affected during the most recent query. Every so often a useful variable
-to have when performing INSERT, UPDATE, or DELETE queries.
+to have when performing ``INSERT``, ``UPDATE``, or ``DELETE`` queries::
 
-::
-
-    $query = ee()->db->query("DELETE FROM exp_comments WHERE url = '".ee()->db->escape_str($site_url)."'");
-    echo ee()->db->affected_rows()." rows were deleted.";
-
+  ee()->db->delete('comments', array('url' => $site_url));
+  echo ee()->db->affected_rows()." rows were deleted.";

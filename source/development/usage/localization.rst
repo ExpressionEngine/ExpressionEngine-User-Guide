@@ -2,7 +2,7 @@ Localize Class
 ==============
 
 .. contents::
-	:local:
+  :local:
 
 .. highlight:: php
 

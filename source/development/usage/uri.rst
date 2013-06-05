@@ -1,146 +1,182 @@
 URI Class
 =========
 
+.. class:: URI
+
 The URI Class provides functions that help you retrieve information from
 your URI strings. This class is initialized automatically.
 
 .. contents::
-	:local:
+  :local:
 
 .. highlight:: php
 
-ee()->uri->segment(n)
+ee()->uri->segment()
+--------------------
+
+.. method:: segment($n[, $no_result = FALSE])
+
+  Permits you to retrieve a specific segment, where ``$n`` is the
+  segment number you wish to retrieve. Segments are numbered from left
+  to right. For example, if your full URL is this::
+
+    http://example.com/index.php/news/local/metro/crime_is_up
+
+  The segment numbers would be this:
+
+  #. ``news``
+  #. ``local``
+  #. ``metro``
+  #. ``crime_is_up``
+
+  By default the function returns ``FALSE`` (boolean) if the segment
+  does not exist. There is an optional second parameter that permits you
+  to set your own default value if the segment is missing. For example,
+  this would tell the function to return the number zero in the event of
+  failure::
+
+    $product_id = ee()->uri->segment(3, 0);
+
+  It helps avoid having to write code like this::
+
+    if (ee()->uri->segment(3) === FALSE)
+    {
+        $product_id = 0;
+    }
+    else
+    {
+        $product_id = ee()->uri->segment(3);
+    }
+
+  :param integer $n: The segment number you want to retrieve
+  :param mixed $no_result: Default to use if the segment does not exist
+  :returns: The segment
+  :rtype: String
+
+ee()->uri->slash_segment()
 --------------------------
 
-Permits you to retrieve a specific segment, where n is the segment
-number you wish to retrieve. Segments are numbered from left to right.
-For example, if your full URL is this::
+.. method:: slash_segment($n[, $where = 'trailing'])
 
-	http://example.com/index.php/news/local/metro/crime_is_up
+  This function is almost identical to :meth:`URI::segment` except it
+  adds a trailing and/or leading slash based on the second parameter. If
+  the parameter is not used, a trailing slash added. Examples::
 
-The segment numbers would be this:
+    ee()->uri->slash_segment(3); // returns segment/
+    ee()->uri->slash_segment(3, 'leading'); // returns /segment
+    ee()->uri->slash_segment(3, 'both'); // returns /segment/
 
-#. news
-#. local
-#. metro
-#. crime\_is\_up
+  :param integer $n: The segment number you want to retrieve
+  :param string $where: ``'trailing'`` if you want the slash at the end,
+    ``'leading'`` if you want it at the beginning, ``'both'`` if you
+    want both
+  :returns: Segment with a slash
+  :rtype: String
 
-By default the function returns FALSE (boolean) if the segment does not
-exist. There is an optional second parameter that permits you to set
-your own default value if the segment is missing. For example, this
-would tell the function to return the number zero in the event of
-failure::
+ee()->uri->uri_to_assoc()
+-------------------------
 
-	$product_id = ee()->uri->segment(3, 0);
+.. method:: uri_to_assoc([$n = 3[, $default = array()]])
 
-It helps avoid having to write code like this::
+  This function lets you turn URI segments into an associative array of
+  key/value pairs. Consider this URI::
 
-	if (ee()->uri->segment(3) === FALSE)
-	{
-	    $product_id = 0;
-	}
-	else
-	{
-	    $product_id = ee()->uri->segment(3);
-	}
+    index.php/user/search/name/joe/location/UK/gender/male
 
-ee()->uri->slash\_segment(n)
----------------------------------
+  Using this function you can turn the URI into an associative array with
+  this prototype::
 
-This function is almost identical to ee()->uri->segment() except it
-adds a trailing and/or leading slash based on the second parameter. If
-the parameter is not used, a trailing slash added. Examples::
+    [array]
+    (
+        'name' => 'joe'
+        'location'  => 'UK'
+        'gender'  => 'male'
+    )
 
-	ee()->uri->slash_segment(3);
+  The first parameter of the function lets you set an offset. By default
+  it is set to 3 since your URI will normally contain a
+  controller/function in the first and second segments. Example::
 
-	ee()->uri->slash_segment(3, 'leading');
+   $array = ee()->uri->uri_to_assoc(3);
+   echo $array['name'];
 
-	ee()->uri->slash_segment(3, 'both');
+  The second parameter lets you set default key names, so that the array
+  returned by the function will always contain expected indexes, even if
+  missing from the URI. Example::
 
-Returns:
+   $default = array('name', 'gender', 'location', 'type', 'sort');
+   $array = ee()->uri->uri_to_assoc(3, $default);
 
-#. segment/
-#. /segment
-#. /segment/
+  If the URI does not contain a value in your default, an array index
+  will be set to that name with a value of ``FALSE``.
 
-ee()->uri->uri\_to\_assoc(n)
----------------------------------
+  Lastly, if a corresponding value is not found for a given key (if
+  there is an odd number of URI segments) the value will be set to
+  ``FALSE`` (boolean).
 
-This function lets you turn URI segments into an associative array of
-key/value pairs. Consider this URI::
+  :param integer $n: Starting segment number
+  :param array $default: Array of default values
+  :returns: Key value pair of the URI
+  :rtype: Array
 
-	index.php/user/search/name/joe/location/UK/gender/male
+ee()->uri->assoc_to_uri()
+-------------------------
 
-Using this function you can turn the URI into an associative array with
-this prototype::
+.. method:: associ_to_uri($array)
 
-	[array]
-	(
-	    'name' => 'joe'
-	    'location'	=> 'UK'
-	    'gender'	=> 'male'
-	)
+  Takes an associative array and generates a URI string from it. The
+  array keys will be included in the string. Example::
 
-The first parameter of the function lets you set an offset. By default
-it is set to 3 since your URI will normally contain a
-controller/function in the first and second segments. Example::
+    // Produces:  product/shoes/size/large/color/red
 
-	 $array = ee()->uri->uri_to_assoc(3);
-	 echo $array['name'];
+    $array = array('product' => 'shoes', 'size' => 'large', 'color' => 'red');
+    $str = ee()->uri->assoc_to_uri($array);
 
-The second parameter lets you set default key names, so that the array
-returned by the function will always contain expected indexes, even if
-missing from the URI. Example::
+  :param array $array: Associative array containing key and value pairs
+  :returns: Joined array
+  :rtype: Array
 
-	 $default = array('name', 'gender', 'location', 'type', 'sort');
-	 $array = ee()->uri->uri_to_assoc(3, $default);
+ee()->uri->uri_string()
+-----------------------
 
-If the URI does not contain a value in your default, an array index will
-be set to that name with a value of FALSE.
+.. method:: uri_string()
 
-Lastly, if a corresponding value is not found for a given key (if there
-is an odd number of URI segments) the value will be set to FALSE
-(boolean).
+  Returns a string with the complete current URI. For example, if this
+  is your current URL::
 
-ee()->uri->assoc\_to\_uri($array)
---------------------------------------
+    http://example.com/index.php/news/local/345
 
-Takes an associative array and generates a URI string from it. The array
-keys will be included in the string. Example::
+  The function would return this::
 
-	// Produces:  product/shoes/size/large/color/red
+    /news/local/345
 
-	$array = array('product' => 'shoes', 'size' => 'large', 'color' => 'red');
-	$str = ee()->uri->assoc_to_uri($array);
+  :returns: URI String
+  :rtype: String
 
+ee()->uri->total_segments()
+---------------------------
 
-ee()->uri->uri\_string()
------------------------------
+.. method:: total_segments()
 
-Returns a string with the complete current URI. For example, if this is
-your current URL::
+  Returns the total number of segments in the current URI.
 
-	http://example.com/index.php/news/local/345
+  :returns: Total number of segments in current URI
+  :rtype: Integer
 
-The function would return this::
+ee()->uri->segment_array()
+--------------------------
 
-	/news/local/345
+.. method:: segment_array()
 
-ee()->uri->total\_segments()
----------------------------------
+  Returns an array containing the URI segments. For example::
 
-Returns the total number of segments in the current URI.
+    $segs = ee()->uri->segment_array();
 
-ee()->uri->segment\_array()
---------------------------------
+    foreach ($segs as $segment)
+    {
+        echo $segment;
+        echo '<br />';
+    }
 
-Returns an array containing the URI segments. For example::
-
-	$segs = ee()->uri->segment_array();
-
-	foreach ($segs as $segment)
-	{
-	    echo $segment;
-	    echo '<br />';
-	}
-
+  :returns: Array of current segments
+  :rtype: Array

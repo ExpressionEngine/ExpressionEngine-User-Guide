@@ -95,7 +95,7 @@ More complex, with simple conditionals, PHP, and pair variables::
 
 	<?php $i = 0; ?>
 
-	{exp:safecracker channel="channel_name" return="channel_name/edit/ENTRY_ID" entry_id="{segment_3}"}
+	{exp:channel:form channel="channel_name" return="channel_name/edit/ENTRY_ID" entry_id="{segment_3}"}
 
 	    <label for="title">Title</label>
 	    <input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();" />
@@ -132,8 +132,6 @@ More complex, with simple conditionals, PHP, and pair variables::
 
 	    <label class="checkbox"><input type="checkbox" name="allow_comments" value="y" {allow_comments} /> Allow Comments</label>
 
-	    <label class="checkbox"><input type="checkbox" name="dst_enabled" value="y" {dst_enabled} />DST Active on Date of Entry</label>
-
 	    {category_menu}
 	        <label for="categories">Categories</label>
 	        <select name="category[]" id="categories" size="4" multiple="multiple">
@@ -151,7 +149,7 @@ More complex, with simple conditionals, PHP, and pair variables::
 
 	    <input type="submit" name="submit" value="Submit" />
 
-	{/exp:safecracker}
+	{/exp:channel:form}
 	
 Tada!
 
