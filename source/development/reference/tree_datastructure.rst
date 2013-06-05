@@ -235,7 +235,7 @@ breadth_first_iterator()
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Breadth first iteration will visit the tree level-by-level. This requires
-a little more memory than other forms of iteration as iterator needs to
+a little more memory than other forms of iteration as the iterator needs to
 remember which nodes had children.
 
 ::
