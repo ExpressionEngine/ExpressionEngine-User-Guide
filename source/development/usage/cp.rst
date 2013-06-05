@@ -59,24 +59,14 @@ additive::
 
   ee()->cp->add_to_head('<style type="text/css" media="screen">div { display: none; }</style>');
 
-Loading Javascript Files
-------------------------
-
-The javascript library will only load files from the main javascript
-directory. This function includes files from the current package's
-javascript folder. It takes a simple file name, ``.js`` will be appended
-automatically::
-
-  ee()->cp->load_package_js('my_file');
-
-Add a javascript file or files to the javascript combo loader
+Add a JavaScript File or Files to the JavaScript Combo Loader
 -------------------------------------------------------------
 
-This function allows you to include scripts in the 'combo load' routine,
-thus reducing HTTP requests. The first parameter specifies the
-directories (if needed) and files to be added and the optional second
-parameter determines the placement of the resulting javascript link,
-defaulting to ``TRUE`` to place in the footer::
+This function allows you to include scripts in the 'combo load' routine, thus
+reducing HTTP requests. The first parameter specifies the files to be added from
+within the ``themes/javascript`` directory, and the optional second parameter
+determines the placement of the resulting JavaScript link, defaulting to
+``TRUE`` to place in the footer::
 
   ee()->add_js_script(
       array(
@@ -84,6 +74,19 @@ defaulting to ``TRUE`` to place in the footer::
           'plugin'  => array('fancybox')
       )
   );
+
+Loading JavaScript Files 
+------------------------
+
+The ``add_js_script()`` function will only load files from the
+``themes/javascript`` directory. To load a third-party add-on package's
+JavaScript files, use ``load_package_js()``::
+
+  ee()->cp->load_package_js('my_file');
+
+This will load from the current package's ``javascript`` directory::
+
+  /third_party/my_package/javascript/my_file.js
 
 Masking the Control Panel URL in links
 --------------------------------------
@@ -106,7 +109,7 @@ Class's :doc:`set_flashdata() </development/usage/session>` (requires a
 redirect), you may specify a success and/or failure message. The message
 content will be displayed using the
 ./themes/cp_themes/default/_shared/message.php view, with a class of
-``success`` or ``failure`` as needed. If javascript is enabled, the html
+``success`` or ``failure`` as needed. If JavaScript is enabled, the html
 notification will automatically be hidden and the message will be
 displayed by the :doc:`notification plugin
 </development/cp_javascript/notification>` with the appropriate message
@@ -116,7 +119,7 @@ type indicated::
   ee()->session->set_flashdata('message_failure', lang('write_failed'));
   ee()->functions->redirect(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=my_module');
 
-After redirecting, a javascript success notification bar would show
+After redirecting, a JavaScript success notification bar would show
 briefly, followed by an error message. Error messages, if shown, remain
 visible until manually closed.
 
