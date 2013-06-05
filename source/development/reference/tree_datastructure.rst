@@ -222,7 +222,6 @@ postorder_iterator()
 ~~~~~~~~~~~~~~~~~~~~
 
 Postorder iteration will visit the children first and then the current node.
-This is also a depth first iterator.
 
 ::
 
