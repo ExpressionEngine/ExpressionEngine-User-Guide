@@ -90,5 +90,5 @@ Development
 	cp_styles/index
 	extension_hooks/index
 	guidelines/index
-	reference/functions
+	reference/*
 	usage/*

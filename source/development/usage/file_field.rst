@@ -42,7 +42,6 @@ Creating a File Field
 
 ***************************
 Initializing a File Browser
-<<<<<<< HEAD
 ***************************
 
 .. method:: browser($config = array()[, $endpoint_url = 'C=content_publish&M=filemanager_actions'])
