@@ -21,9 +21,9 @@ Showing a Notification
 
     $.ee_notice("Igor, set up program five!");
 
-  :param mixed $message: The message to show, or an array containing
+  :param mixed message: The message to show, or an array containing
     objects that hold messages (see `Multiple Notifications`_ below)
-  :param object $params: Object containing parameters for the notice
+  :param object params: Object containing parameters for the notice
     (see `Parameters`_ below)
   :returns: The object that sent the notice
   :rtype: $.ee_notice
