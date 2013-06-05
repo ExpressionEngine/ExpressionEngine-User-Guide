@@ -77,31 +77,16 @@ Adding Header Data
     panel
   :rtype: Void
 
-Loading Javascript Files
-------------------------
-
-.. method:: load_package_js($file)
-
-  The javascript library will only load files from the main javascript
-  directory. This function includes files from the current package's
-  javascript folder. It takes a simple file name, ``.js`` will be
-  appended automatically::
-
-    ee()->cp->load_package_js('my_file');
-
-  :param string $file: javascript file to load
-  :rtype: Void
-
-Add a javascript file or files to the javascript combo loader
+Add a JavaScript File or Files to the JavaScript Combo Loader
 -------------------------------------------------------------
 
 .. method:: add_js_script([$script = array()[, $in_footer = TRUE]])
 
-  This function allows you to include scripts in the 'combo load'
-  routine, thus reducing HTTP requests. The first parameter specifies
-  the directories (if needed) and files to be added and the optional
-  second parameter determines the placement of the resulting javascript
-  link, defaulting to ``TRUE`` to place in the footer::
+  This function allows you to include scripts in the 'combo load' routine, thus
+  reducing HTTP requests. The first parameter specifies the files to be added from
+  within the ``themes/javascript`` directory, and the optional second parameter
+  determines the placement of the resulting JavaScript link, defaulting to
+  ``TRUE`` to place in the footer::
 
     ee()->add_js_script(
         array(
@@ -116,6 +101,24 @@ Add a javascript file or files to the javascript combo loader
     otherwise it's added to the ``<head>``
   :returns: Associative array of loaded js files
   :rtype: Array
+
+Loading JavaScript Files
+------------------------
+
+.. method:: load_package_js($file)
+
+  The ``add_js_script()`` function will only load files from the
+  ``themes/javascript`` directory. To load a third-party add-on
+  package's JavaScript files, use ``load_package_js()``::
+
+    ee()->cp->load_package_js('my_file');
+
+  This will load from the current package's ``javascript`` directory::
+
+    /third_party/my_package/javascript/my_file.js
+
+  :param string $file: javascript file to load
+  :rtype: Void
 
 Masking the Control Panel URL in links
 --------------------------------------
