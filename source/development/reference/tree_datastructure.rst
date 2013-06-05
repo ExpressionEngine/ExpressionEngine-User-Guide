@@ -111,11 +111,23 @@ responds correctly to :meth:`EE_TreeNode::is_root`::
       $root = $root->first_child()->subtree();
   }
 
+Otherwise you will need to exclude the root in your iterations::
+
+  foreach ($it as $node)
+  {
+      if ($node->is_root())
+      {
+          continue;
+      }
+
+      // process node
+  }
+
 Moving between tree nodes
 -------------------------
 
-Any node contains all the information about its neighbors so that you
-can easily move between nodes to move along your tree. The simplest
+All nodes contain the information about their neighbors so that you
+can easily move between nodes to travel along your tree. The simplest
 movement is between a node and its parent::
 
   $parent = $node->parent();
@@ -210,7 +222,6 @@ postorder_iterator()
 ~~~~~~~~~~~~~~~~~~~~
 
 Postorder iteration will visit the children first and then the current node.
-This is also a depth first iterator.
 
 ::
 
@@ -224,7 +235,7 @@ breadth_first_iterator()
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Breadth first iteration will visit the tree level-by-level. This requires
-a little more memory than other forms of iteration as iterator needs to
+a little more memory than other forms of iteration as the iterator needs to
 remember which nodes had children.
 
 ::
@@ -290,7 +301,7 @@ EE_TreeNode
 
   Retrieve the payload data.
 
-  If they payload is an array we treat the entire object as an accessor
+  If the payload is an array we treat the entire object as an accessor
   to the payload. Otherwise the key must be "data" to mimic regular
   object access.
 
@@ -355,7 +366,7 @@ EE_TreeNode
 
 .. method:: root()
 
-  Get all of the tree's root node
+  Get the tree's root node
 
   If the current node is not a root node, we move our
   way up until we have a root.
