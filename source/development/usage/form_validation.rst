@@ -96,10 +96,10 @@ check user credentials::
 
   ee()->form_validation->set_rules('password', 'lang:password', 'required|valid_password[username]');
 
-Prepping Functions
-------------------
+Prepping Methods
+----------------
 
-These are convenience functions to help sanitize and validate frequently
+These are convenience methods to help sanitize and validate frequently
 used input data patterns.
 
 prep_list

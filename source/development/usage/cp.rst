@@ -33,7 +33,7 @@ Sub Navigation
 .. method:: set_right_nav($nav = array())
 
   The right hand subnavigation can be used as the main navigation for a
-  module. This function takes an associative array where the keys are
+  module. This method takes an associative array where the keys are
   language keys and the values are the full url to link to::
 
     ee()->cp->set_right_nav(array(
@@ -68,7 +68,7 @@ Adding Header Data
 .. method:: add_to_head($data)
 
   The ``<head>`` tag of the control panel can be extended with new
-  styles, meta tags, and other data. Multiple calls to this function are
+  styles, meta tags, and other data. Multiple calls to this method are
   additive::
 
     ee()->cp->add_to_head('<style type="text/css" media="screen">div { display: none; }</style>');
@@ -82,7 +82,7 @@ Add JavaScript Files to the JavaScript Combo Loader
 
 .. method:: add_js_script($script_type, $script_name)
 
-  This function allows you to include scripts found in the main
+  This method allows you to include scripts found in the main
   JavaScript directory in the combo load routine, thus reducing HTTP
   requests. As an example, the call to load ``filename.js`` file from
   the ``themes/javascript`` directory would look like this::
@@ -94,9 +94,9 @@ Add JavaScript Files to the JavaScript Combo Loader
   :returns: Associative array of loaded js files
   :rtype: Array
 
-  .. note:: The ``add_js_script()`` function will only load files from
+  .. note:: This method will only load files from
      the ``themes/javascript`` directory. To load a third-party add-on
-     package's JavaScript files, use ``load_package_js()``.
+     package's JavaScript files, use :meth:`Cp::load_package_js`.
 
   Several custom jQuery plugins are included with ExpressionEngine and
   available for third-party developers to use. Plugins available include
@@ -140,8 +140,7 @@ Loading Third-Party JavaScript Files
 
 .. method:: load_package_js($file)
 
-  To load a third-party add-on package's JavaScript files, use
-  ``load_package_js()``::
+  Use this method to load a third-party add-on package's JavaScript files::
 
     ee()->cp->load_package_js('my_file');
 
@@ -217,7 +216,7 @@ Fetch an Action ID
 
   Modules have certain actions for forms, links, etc. that are
   recognized via an action ids that are inserted into the database upon
-  installation of that module. This function returns the action id
+  installation of that module. This method returns the action id
   number from the database. (See also :doc:`functions->fetch_action_id
   </development/reference/functions>`)::
 
@@ -245,12 +244,12 @@ type indicated. After redirecting, a javascript success notification bar
 would show briefly, followed by an error message. Error messages, if
 shown, remain visible until manually closed.
 
-Publish Page Layout Functions
------------------------------
+Publish Page Layout Methods
+---------------------------
 
 Administrators may extensively customize publish pages on a per member
 group and per channel basis. Since these custom layouts are saved as a
 serialized array in the database, any additions or deletions to publish
 page tabs and fields must be synced to any saved layouts. The control
-panel library provides 4 functions to facilitate custom layout updates.
+panel library provides 4 methods to facilitate custom layout updates.
 (See also :ref:`Module Tutorial: Update file. <module_update_file>`)

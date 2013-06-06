@@ -13,7 +13,7 @@ Calling the Input Class
 
   ExpressionEngine uses the Input class for two main purposes:
 
-  #. To provide some helper functions for fetching input data and
+  #. To provide some helper methods for fetching input data and
      pre-processing it.
   #. To pre-process global input data for security.
 
@@ -27,17 +27,17 @@ the superglobal arrays, it will still be available through the
 superglobals themselves. However, the input class does offer some
 benefits.
 
-Since the ExpressionEngine function for creating cookies---
+Since the ExpressionEngine method for creating cookies---
 :meth:`Functions::set_cookie`---adds a prefix automatically to enable
 compatibility with other programs, it is recommended that you use the
 Input Class, since it automatically strips out that prefix.
 
-The superglobal functions all allow the specification of an optional
+The superglobal methods all allow the specification of an optional
 second parameter that lets you run the data through the :doc:`XSS filter
 </development/usage/security>`. It's enabled by setting the second
 parameter to boolean TRUE.
 
-Lastly, the superglobal functions will check to see if the item is set
+Lastly, the superglobal methods will check to see if the item is set
 and return ``FALSE`` (boolean) if not. This lets you conveniently use
 data without having to test whether an item exists first. In other
 words, normally you might do something like this::
@@ -51,17 +51,17 @@ words, normally you might do something like this::
       $something = $_POST['something'];
   }
 
-With the built in functions you can simply do this::
+With the built-in methods you can simply do this::
 
   $something = ee()->input->post('something');
 
 To automatically run the returned data through the
-:meth:`Security::xss_clean` function, simply specify the second
+:meth:`Security::xss_clean` method, simply specify the second
 parameter is ``TRUE``::
 
   $something = ee()->input->post('something', TRUE);
 
-The available superglobal functions are:
+The available superglobal methods are:
 
 .. method:: post($index[, $xss_clean = FALSE])
 
@@ -78,7 +78,7 @@ The available superglobal functions are:
 
 .. method:: get($index[, $xss_clean = FALSE])
 
-  This function is identical to the post function, only it fetches get
+  This method is identical to the post method, only it fetches get
   data::
 
     ee()->input->get('some_data');
@@ -91,7 +91,7 @@ The available superglobal functions are:
 
 .. method:: get_post($index[, $xss_clean = FALSE])
 
-  This function will search through both the post and get streams for
+  This method will search through both the post and get streams for
   data, looking first in post, and then in get::
 
     ee()->input->get_post('some_data');
@@ -105,7 +105,7 @@ The available superglobal functions are:
 
 .. method:: cookie($index[, $xss_clean = FALSE])
 
-  This function is identical to the post function, only it fetches
+  This method is identical to the post method, only it fetches
   cookie data::
 
     ee()->input->cookie('some_data');
@@ -118,7 +118,7 @@ The available superglobal functions are:
 
 .. method:: server($index[, $xss_clean = FALSE])
 
-  This function is identical to the above functions, only it fetches
+  This method is identical to the above method, only it fetches
   server data::
 
     ee()->input->server('some_data');
@@ -132,7 +132,7 @@ The available superglobal functions are:
 .. method:: ip_address()
 
   Returns the IP address for the current user. If the IP address is not
-  valid, the function will return an IP of: 0.0.0.0::
+  valid, the method will return an IP of: 0.0.0.0::
 
     echo ee()->input->ip_address();
 
@@ -144,7 +144,7 @@ The available superglobal functions are:
   Takes an IP address as input and returns ``TRUE`` or ``FALSE``
   (boolean) if it is valid or not.
 
-  .. note:: The :meth:`Input::ip_address` function above validates
+  .. note:: The :meth:`Input::ip_address` method above validates
     the IP automatically.
 
   ::

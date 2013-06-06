@@ -30,11 +30,11 @@ Calling the Session Class
         }
     }
 
-  The Functions class has numerous functions that use the information in
+  The Functions class has numerous methods that use the information in
   the Session class variables to provide useful information for modules
   and plugins, such as allowed channels and access to areas. Make sure
   to check out the Functions class reference file for more information
-  on these functions.
+  on these methods.
 
 User Data Information
 ---------------------
@@ -188,7 +188,7 @@ Flash Data for Redirects
   displayed automatically.
 
   .. note:: Due to internal limitations this will only work in
-    combination with the redirect method of the functions class. Also
+    combination with the redirect method of the Functions class. Also
     keep in mind that this data is stored in a cookie, which have
     limited capacity.
 

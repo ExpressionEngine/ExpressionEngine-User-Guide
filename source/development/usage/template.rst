@@ -27,7 +27,7 @@ The first part of the tag, exp:, tells ExpressionEngine that this is a
 tag. The second part, channel, is the module or the plugin that the tag
 belongs to, in this case the ``channel`` module. The third part is the
 specific method from within the module or plugin that you're calling; in
-this case the function to display the ``channel_name``.
+this case the method to display the ``channel_name``.
 
 Calling the Template Class
 --------------------------
@@ -48,10 +48,10 @@ Calling the Template Class
 Parameters
 ----------
 
-Before calling the function that is being requested by the
+Before calling the method that is being requested by the
 ExpressionEngine tag, the Template class will parse out any parameters
 for that tag and insert them into a Template class variable, thus making
-them easily accessible by the requested function by using this method::
+them easily accessible by the requested method by using this method::
 
   $param = ee()->TMPL->fetch_param('parameter');
 
@@ -529,7 +529,7 @@ Template class array for single variables is :attr:`TMPL::$var_single`,
 where the keys are the variable's name and the values are the full
 variable contents including any formatting parameters. For dates using
 ``format="%Y %m %d"``, only the formatting string is assigned to the
-array value. The Template class also provides a function,
+array value. The Template class also provides a method,
 :meth:`TMPL::swap_var_single`, for performing the find and replace,
 making sure that the variable is replaced correctly in the template. ::
 
@@ -622,7 +622,7 @@ look over.
 If you are scripting conditional variables in your module, then they
 should be done first when processing tag data before any other variables
 are parsed. Instead of writing your own conditional parsing routine,
-ExpressionEngine allows you to simply give your data to a function that
+ExpressionEngine allows you to simply give your data to a method that
 then takes care of all the work. The data needs to be in the form of an
 array where the key is the name of the variable and the value is the
 data for that variable.
@@ -642,7 +642,7 @@ false. The example belows gives you an idea of how this should work::
   $tagdata = ee()->functions->prep_conditionals($tagdata, $cond);
 
 Once you send your tag data and your array of conditional variables, the
-:meth:`Functions::prep_conditionals` function processes the conditionals
+:meth:`Functions::prep_conditionals` method processes the conditionals
 so that they can be evaluated by the Template parser later.
 
 Method and Property Reference

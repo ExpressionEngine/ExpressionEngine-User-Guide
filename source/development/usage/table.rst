@@ -29,7 +29,7 @@ Example: Improving Usability for Large Amounts of Data
 
 This document will walk you through an example of how to add this
 functionality step-by-step, starting from a basic table. For more
-general documentation, refer to the function reference below.
+general documentation, refer to the method reference below.
 
 When dealing with large amounts of data, displaying a single table will
 almost always lead to bad usability and performance. The Table class
@@ -248,7 +248,7 @@ At this point it becomes easier to work with a database. The filtering
 information will be added to your ``$state`` array. Doing a like query
 will let you fetch the correct information.
 
-Function Reference
+Method Reference
 ------------------
 
 This documents the ExpressionEngine additions to the table class. Refer
@@ -258,7 +258,7 @@ CodeIgniter user guide for the base table class reference.
 
 .. method:: datasource($func[, $options = array()[, $params = array()]])
 
-  This function lets you define a datasource for your table contents.
+  This method lets you define a datasource for your table contents.
   When called asynchronously, the request will stop here and the table
   data will be returned as JSON.
 
@@ -329,7 +329,7 @@ CodeIgniter user guide for the base table class reference.
 
 .. method:: set_data($table_data = NULL)
 
-  If you only need single page sorting, this function lets you set the
+  If you only need single page sorting, this method lets you set the
   named column data directly ::
 
     ee()->table->set_data(array(

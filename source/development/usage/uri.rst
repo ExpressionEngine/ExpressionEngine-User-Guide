@@ -3,7 +3,7 @@ URI Class
 
 .. class:: URI
 
-The URI Class provides functions that help you retrieve information from
+The URI Class provides methods that help you retrieve information from
 your URI strings. This class is initialized automatically.
 
 .. contents::
@@ -29,10 +29,10 @@ ee()->uri->segment()
   #. ``metro``
   #. ``crime_is_up``
 
-  By default the function returns ``FALSE`` (boolean) if the segment
+  By default the method returns ``FALSE`` (boolean) if the segment
   does not exist. There is an optional second parameter that permits you
   to set your own default value if the segment is missing. For example,
-  this would tell the function to return the number zero in the event of
+  this would tell the method to return the number zero in the event of
   failure::
 
     $product_id = ee()->uri->segment(3, 0);
@@ -58,7 +58,7 @@ ee()->uri->slash_segment()
 
 .. method:: slash_segment($n[, $where = 'trailing'])
 
-  This function is almost identical to :meth:`URI::segment` except it
+  This method is almost identical to :meth:`URI::segment` except it
   adds a trailing and/or leading slash based on the second parameter. If
   the parameter is not used, a trailing slash added. Examples::
 
@@ -78,12 +78,12 @@ ee()->uri->uri_to_assoc()
 
 .. method:: uri_to_assoc([$n = 3[, $default = array()]])
 
-  This function lets you turn URI segments into an associative array of
+  This method lets you turn URI segments into an associative array of
   key/value pairs. Consider this URI::
 
     index.php/user/search/name/joe/location/UK/gender/male
 
-  Using this function you can turn the URI into an associative array with
+  Using this method you can turn the URI into an associative array with
   this prototype::
 
     [array]
@@ -93,7 +93,7 @@ ee()->uri->uri_to_assoc()
         'gender'  => 'male'
     )
 
-  The first parameter of the function lets you set an offset. By default
+  The first parameter of the method lets you set an offset. By default
   it is set to 3 since your URI will normally contain a
   controller/function in the first and second segments. Example::
 
@@ -101,7 +101,7 @@ ee()->uri->uri_to_assoc()
    echo $array['name'];
 
   The second parameter lets you set default key names, so that the array
-  returned by the function will always contain expected indexes, even if
+  returned by the method will always contain expected indexes, even if
   missing from the URI. Example::
 
    $default = array('name', 'gender', 'location', 'type', 'sort');
@@ -146,7 +146,7 @@ ee()->uri->uri_string()
 
     http://example.com/index.php/news/local/345
 
-  The function would return this::
+  The method would return this::
 
     /news/local/345
 

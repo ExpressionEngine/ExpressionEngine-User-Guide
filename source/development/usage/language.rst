@@ -85,7 +85,7 @@ Calling a Language File
   and instead of duplicating those in your module's language file you
   could use the text in that language file. To load that language file
   and its values, you simply need to call the
-  ``ee()->lang->loadfile()`` function with the name of the language
+  ``ee()->lang->loadfile()`` method with the name of the language
   file::
 
     ee()->lang->loadfile('members');
@@ -100,13 +100,13 @@ Calling a Language File
 Fetching a Line of Text
 -----------------------
 
-.. function:: lang($line[, $id = ''])
+.. method:: lang($line[, $id = ''])
 
   A module's language file is automatically loaded whenever the module
   is accessed through the Module section of the Control Panel. So, in
   that instance, you simply need to call the piece of text you wish from
   the array contained in your module's langauge file. To do so, you
-  simply use the ``lang()`` function and specify the key for that piece
+  simply use the ``lang()`` method and specify the key for that piece
   of text in the array::
 
     ee()->view->cp_page_title = lang('view_moblogs');

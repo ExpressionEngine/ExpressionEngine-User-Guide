@@ -91,7 +91,7 @@ Methods
 
 .. method:: from($from[, $name = ''[, $return_path = NULL]])
 
-  The function for specifying the sender of the email::
+  The method for specifying the sender of the email::
 
     ee()->email->from('you@example.com', 'Your Name');
 
@@ -103,7 +103,7 @@ Methods
 
 .. method:: reply_to($replyto[, $name = ''])
 
-  The function for specifying the Reply-To header of the email::
+  The method for specifying the Reply-To header of the email::
 
     ee()->email->reply\_to('you@example.com', 'Your Name');
 
@@ -114,7 +114,7 @@ Methods
 
 .. method:: to($to)
 
-  The function for specifying the general recipient(s) of the email::
+  The method for specifying the general recipient(s) of the email::
 
     ee()->email->to('someone@example.com');
     ee()->email->to('one@example.com, two@example.com, three@example.com');
@@ -125,7 +125,7 @@ Methods
 
 .. method:: cc($cc)
 
-  The function for specifying the recipient(s) receiving a carbon copy
+  The method for specifying the recipient(s) receiving a carbon copy
   of the email::
 
     ee()->email->cc('someone@example.com');
@@ -136,7 +136,7 @@ Methods
 
 .. method:: bcc($bcc[, $limit = ''])
 
-  The function for specifying the recipient(s) receiving a blind carbon
+  The method for specifying the recipient(s) receiving a blind carbon
   copy of the email::
 
     ee()->email->bcc('someone@example.com', 200);
@@ -178,7 +178,7 @@ Methods
     ee()->email->set_alt_message('This is the alternative message');
 
   .. note:: If you are using data from a channel entry and not sending an
-    HTML email, then you should use the ``entities_to_ascii()`` function
+    HTML email, then you should use the ``entities_to_ascii()`` method
     (text helper) to convert any HTML entities back into ASCII
     characters before sending the message to the class.
 
@@ -228,9 +228,9 @@ Methods
 Sending Multiple Emails
 ***********************
 
-If you are sending multiple emails in a function either for
+If you are sending multiple emails in a method either for
 notifications or because each message has a separate message, then you
-should use the :meth:`Email::clear` function between each email to reset
+should use the :meth:`Email::clear` method between each email to reset
 certain variables in the class. If you do not, then it is possible that
 the emails will not be sent or sent incorrectly::
 

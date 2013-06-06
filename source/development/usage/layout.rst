@@ -15,7 +15,7 @@ Calling the Layout Class
   group and per channel basis. Since these custom layouts are saved as a
   serialized array in the database, any additions or deletions to publish
   page tabs and fields must be synced to any saved layouts. The control
-  panel library provides 4 functions to facilitate custom layout updates.
+  panel library provides 4 methods to facilitate custom layout updates.
   (See also :doc:`Module Tutorial: Update file.
   </development/module_tutorial>`)
 
@@ -29,7 +29,7 @@ Add Tabs
 .. method:: add_layout_tabs([$tabs = array()[, $namespace = ''[, $channel_id = array()]]])
 
   Adds tabs and any associated fields to currently saved publish
-  layouts. If there is an existing tab with the same name, the function
+  layouts. If there is an existing tab with the same name, the method
   will return false::
 
     ee()->layout->add_layout_tabs($tabs);
@@ -68,10 +68,10 @@ Delete Tabs
 
 .. method:: delete_layout_tabs([$tabs = array()[, $namespace = ''[, $channel_id = array()]]])
 
-  This function will remove tabs and all associated fields from the
+  This method will remove tabs and all associated fields from the
   saved publish page layouts. The $tabs variable must be an associative
   array, with the top level array's key the name of the tab. As in the
-  :meth:`Layout::add_layout_tabs` function, any associated fields should
+  :meth:`Layout::add_layout_tabs` method, any associated fields should
   be included as keys within the tab's array::
 
     ee()->layout->delete_layout_tabs($tabs);
@@ -94,7 +94,7 @@ Add Fields
   layouts may have moved the field(s) to a different tab and deleted the
   tab originally associated with the fields, a new tab will be created
   if none exists in the layout. The $tabs array takes the same format as
-  the :meth:`Layout::add_layout_tabs` function::
+  the :meth:`Layout::add_layout_tabs` method::
 
     ee()->layout->add_layout_fields($tabs, $channel_id);
 
@@ -111,10 +111,10 @@ Delete Fields
 
 .. method:: delete_layout_fields([$tabs = array()[, $channel_id = array()]])
 
-  Used to delete fields without removing the existing tab. This function
+  Used to delete fields without removing the existing tab. This method
   removes all matching field names from the saved layouts, regardless of
   the tab they are currently saved in. The $tabs array takes the same
-  format as the :meth:`Layout::add_layout_tabs` function, while
+  format as the :meth:`Layout::add_layout_tabs` method, while
   ``$channel_id`` is an optional parameter that limits the update to
   layouts associated with a given channel and should generally be
   omitted from third party usage. ::

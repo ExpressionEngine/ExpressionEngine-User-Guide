@@ -181,8 +181,8 @@ Parsing Type
 
 .. method:: parse_type($str[, $prefs = ''])
 
-  This function returns a string of parsed type. It is the most common use
-  of the Typography class, and many of the individual functions also
+  This method returns a string of parsed type. It is the most common use
+  of the Typography class, and many of the individual methods also
   described in this document are used within the parse_type() method. The
   format the string is returned in is determined by both the class
   properties and the array of properties provided in the second argument.::
@@ -235,7 +235,7 @@ Encode Email Addresses
 
 .. method:: encode_email($email[, $title = ''[, $anchor = TRUE ]])
 
-  This function encodes email addresses with Javascript, to assist in
+  This method encodes email addresses with Javascript, to assist in
   prevention of email harvesting by bots.::
 
       $str = "brett.bretterson@example.com";
@@ -256,7 +256,7 @@ Auto (XTHML) Typography
 
 .. method:: auto_typography($str[, $reduce_linebreaks = FALSE])
 
-  This function takes a string of text and returns typographically
+  This method takes a string of text and returns typographically
   correct XHTML::
 
     $str = ee()->typography->auto_typography($str);
@@ -280,7 +280,7 @@ Formatting Characters for XHTML ("Light" Typography)
 
 .. method:: format_characters($str)
 
-  This function performs the character transformation portion of the
+  This method performs the character transformation portion of the
   XHTML typography only, i.e. curly quotes, ellipsis, ampersand, etc.::
 
       $str = ee()->typography->format_characters($str);

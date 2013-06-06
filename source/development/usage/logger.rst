@@ -32,7 +32,7 @@ add-ons.
 .. method:: developer($data[, $update = FALSE[, $expires = 0]])
 
   To use the developer log to log your own events, notices or warnings that
-  need to be brought to the attention of the Super Admin, call this function
+  need to be brought to the attention of the Super Admin, call this method
   and pass the string of the notice::
 
     ee()->logger->developer('Log message.');
@@ -48,5 +48,5 @@ add-ons.
   :returns: Array of data for the log message
   :rtype: Array
 
-  .. note:: Be conscious of how often the developer() function is used so as
+  .. note:: Be conscious of how often the developer() method is used so as
     not to clutter the developer log and run unnecessary queries.

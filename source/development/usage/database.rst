@@ -173,9 +173,9 @@ containing the ``WHERE`` clause(s)::
 
 .. note:: Always be wary of the data you're deleting.
 
-********************
-Additional Functions
-********************
+******************
+Additional Methods
+******************
 
 ``affected_rows`` will return how many rows in the database were
 affected during the most recent query. Every so often a useful variable
