@@ -82,10 +82,10 @@ Add JavaScript Files to the JavaScript Combo Loader
 
 .. method:: add_js_script($script_type, $script_name)
 
-  This function allows you to include scripts found in the main JavaScript
-  directory in the combo load routine, thus reducing HTTP requests. As an
-  example, the call to load ``filename.js`` file from the ``themes/javascript``
-  directory would look like this::
+  This function allows you to include scripts found in the main
+  JavaScript directory in the combo load routine, thus reducing HTTP
+  requests. As an example, the call to load ``filename.js`` file from
+  the ``themes/javascript`` directory would look like this::
 
     ee()->add_js_script('file', 'filename');
 
@@ -94,12 +94,12 @@ Add JavaScript Files to the JavaScript Combo Loader
   :returns: Associative array of loaded js files
   :rtype: Array
 
-  .. note:: The ``add_js_script()`` function will only load files from the
-     ``themes/javascript`` directory. To load a third-party add-on package's
-     JavaScript files, use ``load_package_js()``.
+  .. note:: The ``add_js_script()`` function will only load files from
+     the ``themes/javascript`` directory. To load a third-party add-on
+     package's JavaScript files, use ``load_package_js()``.
 
-  Several custom jQuery plugins are included with ExpressionEngine and available
-  for third-party developers to use. Plugins available include
+  Several custom jQuery plugins are included with ExpressionEngine and
+  available for third-party developers to use. Plugins available include
   :ref:`ee_interact.event <jquery-interact>`, :doc:`ee_notice
   </development/cp_javascript/notification>`, `tablesorter
   <http://tablesorter.com/docs/>`__, :doc:`ee_table
@@ -110,9 +110,10 @@ Add JavaScript Files to the JavaScript Combo Loader
 
     ee()->add_js_script('plugin', 'tablesorter');
 
-  The `jQuery UI <http://jqueryui.com>`__ interactions and widgets are also
-  included with ExpressionEngine for third-party developers to use. The call to
-  load the jQuery UI Autocomplete plugin would look like this, for example::
+  The `jQuery UI <http://jqueryui.com>`__ interactions and widgets are
+  also included with ExpressionEngine for third-party developers to use.
+  The call to load the jQuery UI Autocomplete plugin would look like
+  this, for example::
 
     ee()->add_js_script('ui', 'autocomplete');
 
