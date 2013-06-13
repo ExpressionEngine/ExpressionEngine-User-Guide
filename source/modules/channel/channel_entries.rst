@@ -186,7 +186,7 @@ Or you can negate the inclusive stack and get entries that do not of
    the `uncategorized\_entries <#uncategorized-entries>`_ parameter.
 
 .. note:: If you are using exclusion (``category="not 3|4"``) and an entry is
-   in a category that is not excluded, the entry will be returned even if it 
+   in a category that is not excluded, the entry will be returned even if it
    also belongs to an excluded category.
 
 .. note:: Using this parameter will automatically cause ExpressionEngine to
@@ -768,6 +768,8 @@ not wish the template to display anything.
 .. note:: You will often use this parameter in conjunction with the
 	`if no_results`_ conditional.
 
+.. _search_parameter:
+
 search:field\_name=
 -------------------
 
@@ -850,6 +852,20 @@ you can add the special trigger \\W after the term.
 
 The above example will return all entries that contain the whole word "cat".
 It will not match entries where the phrase "cat" only lies within another word.
+
+Numeric Matching
+~~~~~~~~~~~~~~~~
+
+If you have a field containing numeric data, you may use greater-than
+or less-than operators to search through them. ::
+
+  search:numeric_field="<20"
+
+  search:numeric_field=">20"
+
+  search:numeric_field="<=20"
+
+  search:numeric_field=">=20"
 
 Including / Excluding Empty Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1853,6 +1869,8 @@ status
 	{status}
 
 The status of the entry (open, closed, etc.)
+
+.. _switch_variable:
 
 switch=
 -------
