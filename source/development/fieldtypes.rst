@@ -416,6 +416,28 @@ Function Reference
   :returns: Either nothing, or a string for your settings fields
   :rtype: Void/String
 
+.. method:: validate_settings($data)
+
+  Validate fieldtype settings. In this method, you can set rules via the
+  Form Validation library to ensure values entered in your settings form
+  are valid. Here is an example from our File field::
+
+    function validate_settings($data)
+    {
+        ee()->form_validation->set_rules(
+            'file_allowed_directories',
+            'lang:allowed_dirs_file',
+            'required|callback__check_directories'
+        );
+    }
+
+  Callbacks may be specified as well, as you see above we are calling
+  a method called ``_check_directories`` to ensure upload destinations
+  exist before creating a new file field.
+
+  :param array $data: Submitted settings for this field
+  :rtype: Void
+
 .. method:: save_settings($data)
 
   Save the fieldtype settings.
@@ -495,3 +517,244 @@ Function Reference
   :param array $data: Field data
   :returns: Prepped ``$data``
   :rtype: Array
+
+**************************
+Grid Fieldtype Development
+**************************
+
+In order to make your fieldtypes compatible with Grid, a few more
+methods as well as Javascript callbacks are available.
+
+To make your fieldtype recognized by Grid as a Grid-compatible
+fieldtype, all you need to do is implement the
+:meth:`EE_Fieldtype::grid_display_settings` method. Once this method is
+implemented, your fieldtype will show up in the list of fieldtypes
+available for use when setting up a new Grid column.
+
+Grid Column Settings
+====================
+
+.. method:: grid_display_settings($data)
+
+  Displays settings for your Grid fieldtype::
+
+    public function grid_display_settings($data)
+    {
+        return array(
+            $this->grid_field_formatting_row($data),
+            $this->grid_text_direction_row($data),
+            $this->grid_max_length_row($data)
+        );
+    }
+
+  Each array item should be a string.
+
+  :param array $data: Column settings
+  :returns: Array of settings for the column
+  :rtype: Array
+
+Much like in :meth:`EE_Fieldtype::display_settings`, we provide several
+helpers to insert the settings rows you may need:
+
+.. method:: grid_settings_row($label, $content[, $wide = FALSE])
+
+  Adds a generic settings row to a Grid column.
+
+  :param string $label: Label for the setting
+  :param string $content: HTML for the form element(s) for the setting
+  :param boolean $wide: If ``TRUE``, gives more room to the content
+    portion of the setting
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_dropdown_row($label, $name, $data[, $selected = NULL[, $multiple = FALSE[, $wide = FALSE[, $attributes]]]])
+
+  Adds a dropdown settings row to a Grid column.
+
+  :param string $label: Label for the setting
+  :param string $name: Value for the name attribute of the dropdown
+  :param array $data: Array of options to show in the dropdown
+  :param string $selected: Selected value of the setting
+  :param boolean $multiple: Whether or not this is a multiselect
+  :param boolean $wide: If ``TRUE``, gives more visual room to the
+    dropdown portion of the setting
+  :param string $attributes: Any extra HTML attributes to put on the
+    dropdown
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_checkbox_row($label, $name, $value, $checked)
+
+  Adds a settings row with a single Checkbox to a Grid column.
+
+  :param string $label: Label for the setting
+  :param string $name: Value for the name attribute of the checkbox
+  :param string $value: Value for the value attribute of the checkbox
+  :param boolean $checked: Whether or not the box is checked on display
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_yes_no_row($label, $name, $data)
+
+  Adds a settings row with a Yes radio button and a No radio button to a
+  Grid column.
+
+  :param string $label: Label for the setting
+  :param string $name: Value for the name attribute of the radio buttons
+  :param array $data: Data array passed to ``grid_display_settings()``
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_text_direction_row($$data)
+
+  Adds a settings row with a dropdown of text direction options.
+
+  :param array $data: Data array passed to ``grid_display_settings()``
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_field_formatting_row($$data)
+
+  Adds a settings row with a dropdown of text formatting options.
+
+  :param array $data: Data array passed to ``grid_display_settings()``
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_max_length_row($$data)
+
+  Adds a settings row with a small textbox to enter the maximum number
+  of characters your fieldtype accepts.
+
+  :param array $data: Data array passed to ``grid_display_settings()``
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_multi_item_row($$data)
+
+  Adds a settings row with a textarea for entering options to be used
+  in a fieldtype where the content is limited to multiple options to
+  select from, such as radio buttons.
+
+  :param array $data: Data array passed to ``grid_display_settings()``
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_textarea_max_rows_row($$data)
+
+  Adds a settings row with a small textbox to enter the maximum number
+  of rows a textarea may show.
+
+  :param array $data: Data array passed to ``grid_display_settings()``
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+Check the implementations of :meth:`EE_Fieldtype::grid_display_settings`
+in our native fieldtypes to see examples of the above helper methods
+being used as well as other ways to display custom settings.
+
+Validating Grid Settings
+------------------------
+
+Validating your Grid column's settings is similar to validating field
+contents. Unlike :meth:`EE_Fieldtype::validate_settings`, you cannot
+use the Form Validation library, rather you simply check the array of
+settings passed to your fieldtype, and then return TRUE or an error
+message if the settings do not validate.
+
+For example, here is the validation method for a File field's settings
+when used as a Grid column::
+
+  function grid_validate_settings($data)
+  {
+      if ( ! $this->_check_directories())
+      {
+          ee()->lang->loadfile('filemanager');
+          return lang('please_add_upload');
+      }
+
+      return TRUE;
+  }
+
+If the ``_check_directories()`` check fails, we return an error message.
+Otherwise if it passes, we return ``TRUE``.
+
+Grid Fieldtype Events
+=====================
+
+Most of the regular fieldtype methods (``display_field()``,
+``replace_tag()``, etc.) are available prefixed with "grid\_" for
+special handling when being used in the context of the Grid field. For
+example::
+
+  // Only called when being used as a normal fieldtype:
+  public function display_field($data)
+  {
+      // Display code
+  }
+
+  // Only called when being rendered in a Grid field cell:
+  public function grid_display_field($data)
+  {
+      // Display code for Grid cell
+  }
+
+However, if a fieldtype implements ``grid_display_settings()`` and does
+NOT implement ``grid_display_field()``, Grid will call
+``display_field()`` to display the field's form in the cell. The same
+applies for all other methods except for ``install()``, ``uninstall()``,
+the global settings methods, and ``validate_settings()`` which is
+covered above. The idea is most fieldtypes should be able to use the
+same code to handle their field operations for both Grid and the normal
+publish form, but if not, you can easily override the behavior and run
+special operations in the context of Grid.
+
+If you use ``grid_*`` methods, you may want to look for ways to refactor
+your fieldtype where there is overlapping logic to run. For example,
+some of our native fieldtypes require slightly different code to render
+the HTML needed to display fields in ``display_field()`` and
+``grid_display_field()``, so we try to centralize the the common logic
+between them for better code maintenance.
+
+Grid Javascript Events
+======================
+
+Several Javscript events are fired on certain actions to let your
+fieldtypes know when those actions have taken place. Here is an
+overview.
+
++-----------------------+-----------+---------------------------------+
+| Event Name            | Description                                 |
++=======================+===========+=================================+
+| **display**           | Called when a row is displayed on the       |
+|                       | publish form                                |
++-----------------------+-----------+---------------------------------+
+| **remove**            | Called when a row is deleted from the       |
+|                       | publish form                                |
++-----------------------+-----------+---------------------------------+
+| **beforeSort**        | Called before a row starts sorting on the   |
+|                       | publish form                                |
++-----------------------+-----------+---------------------------------+
+| **afterSort**         | Called after a row finishes sorting on the  |
+|                       | publish form                                |
++-----------------------+-----------+---------------------------------+
+| **displaySettings**   | Called when a fieldtype's settings form is  |
+|                       | displayed on the Grid field settings page   |
++-----------------------+-----------+---------------------------------+
+
+To bind an event, use the below Javascript as an example. We call
+``bind()`` on the Grid namespace and pass the short fieldtype name as
+the first parameter, the second parameter is the name of the event, and
+the third parameter is the callback::
+
+  Grid.bind("date", "display", function(cell)
+  {
+      // Act on event
+  });
+
+A jQuery object of the cell being affected by the current event (or
+settings form in the case of ``displaySettings``) is passed to the
+callback function. There are a few data attributes available on the
+cell object such as ``fieldtype``, ``column-id`` and ``row-id``. Plus
+since it's a jQuery object, you have all DOM traversal methods
+available to act upon.
