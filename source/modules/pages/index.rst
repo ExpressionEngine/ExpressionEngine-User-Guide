@@ -58,7 +58,7 @@ that you desire to display the entry, e.g.::
 	{/exp:channel:entries}
 
 .. note:: Spanning an entry across multiple pages is not possible when
-using Page URLs, as content is only displayed for exact URI matches.
+   using Page URLs, as content is only displayed for exact URI matches.
 
 Parameters
 ==========
