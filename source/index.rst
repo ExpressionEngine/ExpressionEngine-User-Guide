@@ -93,6 +93,11 @@ Optimizing ExpressionEngine
 - :doc:`optimization/throttling`
 - :doc:`optimization/handling_extreme_traffic`
 
+Performance Monitoring
+======================
+
+- :doc:`monitoring/new-relic`
+
 Solving Problems
 ================
 
@@ -200,6 +205,7 @@ About ExpressionEngine
 	modules/index
 	operations/index
 	optimization/index
+	monitoring/index
 	security/index
 	templates/index
 	troubleshooting/index
