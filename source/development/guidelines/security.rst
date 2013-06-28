@@ -265,28 +265,11 @@ effect on your forms.
 Handling Form Hashes in Your Add-on
 ===================================
 
-Do a check and deletion for the secure hash after all error checking has
-been completed, but prior to any data insertion into the database. You
-will typically use the Security Library's ``secure_forms_check()``
-method, which returns a boolean to indicate the validity of the security
-hash and deletes existing hashes as needed::
-
-  // error checking and data validation before this!
-
-  // Secure Forms check
-
-  if (ee()->security->secure_forms_check(ee()->input->post('XID')) == FALSE)
-  {
-      // no data insertion if a hash isn't found or is too old
-      $this->functions->redirect(stripslashes(ee()->input->post('RET')));
-  }
-
-  // All Clear- insert the data!
-  ee()->db->query(ee()->db->insert_string('table', $data));
-
-In some cases, you may choose to run a check for a valid hash
-(``ee()->security->check_xid()``) and the deletion of the existing
-hash (``ee()->security->delete_xid()``) separately.
+Under normal circumstances ExpressionEngine will check the secure
+hash for you automatically. In some cases you may want to allow reuse
+of the current XID. For example a search addon may see frequent back
+button use. In those cases you can call ``ee()->security->restore_xid()``
+and the current XID will validate again.
 
 Forms in the Control Panel
 ==========================
