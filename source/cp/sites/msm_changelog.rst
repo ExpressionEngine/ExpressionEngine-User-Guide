@@ -1,6 +1,14 @@
 Multiple Site Manager
 =====================
 
+Version 2.1.6
+-------------
+
+Release Date: ?
+
+- Fixed a bug (#19352) where new installs had incorrect forgotten password
+  instructions in their specialty templates.
+
 Version 2.1.5
 -------------
 
