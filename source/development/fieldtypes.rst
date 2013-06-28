@@ -742,15 +742,21 @@ overview.
 |                       | displayed on the Grid field settings page   |
 +-----------------------+-----------+---------------------------------+
 
-To bind an event, use the below Javascript as an example. We call
-``bind()`` on the Grid namespace and pass the short fieldtype name as
-the first parameter, the second parameter is the name of the event, and
-the third parameter is the callback::
+To bind an event, use the below Javascript as an example::
 
   Grid.bind("date", "display", function(cell)
   {
       // Act on event
   });
+
+Here are the usage details for this function:
+
+.. js:function:: Grid.bind(fieldtype, event, callback)
+
+  :param string fieldtype: Your short fieldtype name
+  :param string: Event name
+  :param callback: Callback function to use for the event
+  :rtype: Void
 
 A jQuery object of the cell being affected by the current event (or
 settings form in the case of ``displaySettings``) is passed to the
