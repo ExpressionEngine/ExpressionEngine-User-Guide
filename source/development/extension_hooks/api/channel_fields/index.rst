@@ -21,7 +21,7 @@ custom_field_modify_data
   :param object $ft: Fieldtype object that the method will be called on.
   :param string $method: Name of the method to be called
   :param mixed $data: Data passed to the fieldtype. Varies by method.
-  :returns: Modified $data array
-  :rtype: Array
+  :returns: Modified $data parameter
+  :rtype: Mixed
 
   .. versionadded:: 2.7.0
