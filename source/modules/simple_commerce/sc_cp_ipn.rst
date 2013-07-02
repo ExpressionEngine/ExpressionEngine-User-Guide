@@ -14,7 +14,7 @@ finalized.
 
 .. note:: While you can still use Simple Commerce generated PayPal links
 	to sell items to users browsing your site as guests, the Instant
-	Payment Notification features, such as transaction recording and 
+	Payment Notification features, such as transaction recording and
 	email notifications, will only work for purchases made by logged-in
 	members of your site.
 
