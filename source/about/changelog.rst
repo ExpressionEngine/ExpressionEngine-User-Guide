@@ -20,6 +20,7 @@ Release Date: ?
     Entries search parameter.
   - Added ``{entry_id}`` and ``{url_title}`` variables to the channel
     category archive tag.
+  - Added ``{current_query_string}`` global variable
   - Merged the safecracker_file field into the default file field.
   - All files regardless of type are now linked for viewing in the File
     Manager.
