@@ -24,6 +24,7 @@ Release Date: ?
   - Merged the safecracker_file field into the default file field.
   - All files regardless of type are now linked for viewing in the File
     Manager.
+  - Added GET support for Dynamic Parameters in Channel Entries tags
   - Removed the Updated Sites module
   - Removed the ability to ping other sites
   - Removed the Corporate theme
