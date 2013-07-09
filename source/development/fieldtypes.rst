@@ -761,6 +761,6 @@ Here are the usage details for this function:
 A jQuery object of the cell being affected by the current event (or
 settings form in the case of ``displaySettings``) is passed to the
 callback function. There are a few data attributes available on the
-cell object such as ``fieldtype``, ``column-id`` and ``row-id``. Plus
-since it's a jQuery object, you have all DOM traversal methods
-available to act upon.
+cell object such as ``fieldtype``, ``column-id`` and ``row-id``
+(``row-id`` will be undefined for new rows). Plus since it's a jQuery
+object, you have all DOM traversal methods available to act upon.
