@@ -102,6 +102,13 @@ Release Date: ?
   - Fixed a bug (#19509) in the comment entries tag where dynamic="no" did not
     affect the returned data.
   - Fixed a security bug where certain form parameters could be changed.
+  - Fixed a bug (#19553) in the forgotten password email where the name variable 
+    was replaced with the username, which was inconsistent with other email 
+    notification templates.
+  - Fixed a bug (#19528) in the Simple Commerce module where a PHP error 
+    occurred on the purchases page of the control panel.
+  - Fixed a bug (#19529) where a PHP error could occur when viewing a member 
+    profile other than your own on the frontend.
 
 - Developers:
 
