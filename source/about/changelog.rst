@@ -113,6 +113,10 @@ Release Date: ?
     fields were represented as zero for the US time format.
   - Fixed a bug (#19578) where IP search results in the control panel had 
     incorrect links to the user profiles.
+  - Fixed a bug (#19590) in the 2.0 updater where the large database shell script
+    utf8 conversion did not specifically convert table columns.
+  - Altered the column size of site_preferences in the 2.0 update to prevent 
+    possible truncation of data.
 
 - Developers:
 
