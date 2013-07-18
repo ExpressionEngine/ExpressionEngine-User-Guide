@@ -111,6 +111,8 @@ Release Date: ?
     profile other than your own on the frontend.
   - Fixed a bug where if the current time is midnight, hours in date
     fields were represented as zero for the US time format.
+  - Fixed a bug (#19578) where IP search results in the control panel had 
+    incorrect links to the user profiles.
 
 - Developers:
 
