@@ -271,6 +271,9 @@ of the current XID. For example a search addon may see frequent back
 button use. In those cases you can call ``ee()->security->restore_xid()``
 and the current XID will validate again.
 
+If you are using action requests, you can choose to disable the secure
+form check on a per-action basis using the ``csrf_exempt`` column.
+
 Forms in the Control Panel
 ==========================
 
