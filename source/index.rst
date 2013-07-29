@@ -158,7 +158,6 @@ Included in ExpressionEngine
 - :doc:`modules/referrer/index`
 - :doc:`modules/rss/index`
 - :doc:`modules/rte/index`
-- :doc:`modules/safecracker/index`
 - :doc:`modules/search/index`
 - :doc:`modules/simple_commerce/index`
 - :doc:`modules/statistics/index`
@@ -192,7 +191,7 @@ About ExpressionEngine
 	:glob:
 	:titlesonly:
 	:hidden:
-	
+
 	about/index
 	about/license
 	about/changelog

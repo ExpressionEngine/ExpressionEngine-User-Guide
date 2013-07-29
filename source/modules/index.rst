@@ -26,7 +26,6 @@ Modules
 	referrer/index
 	rss/index
 	rte/index
-	safecracker/index
 	search/index
 	simple_commerce/index
 	statistics/index

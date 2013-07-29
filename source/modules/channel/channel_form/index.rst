@@ -1,6 +1,6 @@
-###########
-SafeCracker
-###########
+############
+Channel Form
+############
 
 .. contents::
    :local:
@@ -10,11 +10,11 @@ SafeCracker
 Introduction
 ************
 
-SafeCracker makes it possible to add and edit entries from outside of
-the Control Panel using a Stand-Alone Entry Form (SAEF). Thank you to
-`Barrett Newton <http://barrettnewton.com/>`_ for developing SafeCracker
-and working with EllisLab to provide it to the ExpressionEngine
-community.
+The Channel Form makes it possible to add and edit entries from outside
+of the Control Panel using a regular form inside a template. Thank you to
+`Barrett Newton <http://barrettnewton.com/>`_ for developing the original
+(under the name of SafeCracker) and working with EllisLab to provide it
+to the ExpressionEngine community.
 
 -  Allows guest (logged out) users to use the entry form, with optional
    CAPTCHA support.
@@ -28,16 +28,15 @@ community.
 -  Specify a default status, or set forms to override default statuses.
 -  Specify different return URLs for different member groups by the
    group\_id. Send visitors to one page, and admins to another.
--  Server-side form validation using the :ellislab:`CodeIgniter Form 
-   Validation class 
+-  Server-side form validation using the :ellislab:`CodeIgniter Form
+   Validation class
    </codeigniter/user-guide/libraries/form_validation.html>`.
 -  Handles AJAX requests and can output responses in JSON.
--  Includes an optional `SafeCracker File Fieldtype`_.
 
 
-*****************
-Using SafeCracker
-*****************
+******************
+Using Channel Form
+******************
 
 Including Assets
 ----------------
@@ -45,10 +44,10 @@ Including Assets
 If you plan on using the Datepicker or formatting buttons, include a link
 to the SAEF stylesheet in your template::
 
-	<link href="{path=css/_ee_saef_css}" type="text/css" rel="stylesheet" media="screen">
+	<link href="{path=css/_ee_channel_form_css}" type="text/css" rel="stylesheet" media="screen">
 
-SafeCracker will automatically load jQuery for you. If you prefer to
-include your own version of jQuery, use the
+The channel form tag will automatically load jQuery for you. If you prefer
+to include your own version of jQuery, use the
 `include_jquery=`_ parameter.
 
 Form Inputs
@@ -94,6 +93,24 @@ YYYY-MM-DD hh:mm PM. ::
 		<input type="text" name="expiration_date" value="{expiration_date}" maxlength="23" size="25">
 	</p>
 
+Comment Expiration Date
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Set the comment expiration date if desired. This is specified in the format
+YYYY-MM-DD hh:mm PM exactly as in the Control Panel Publish section. ::
+
+	<p>Comment Expiration Date <br>
+	<input type="text" name="comment_expiration_date" value="{comment_expiration_date}" maxlength="23" size="25" />
+	</p>
+
+Make Entry Sticky
+~~~~~~~~~~~~~~~~~
+
+Set the entry as "sticky" or not. ::
+
+	<p><input type="checkbox" name="sticky" value="y"  {sticky} /> Make Entry Sticky</p>
+
+
 Categories
 ~~~~~~~~~~
 
@@ -114,9 +131,9 @@ Or use the alternative syntax. ::
 			<option value="{category_id}"{selected}>{category_name}</option>
 		{/categories}
 	</select>
-	
 
-The following variables are available inside the Category Menu and Categories 
+
+The following variables are available inside the Category Menu and Categories
 tag pairs:
 
 {category_id}
@@ -133,7 +150,7 @@ The category name.
 ^^^^^^^^^^^^^^^^^^^
 
 The category group id number.
-	
+
 {category_group}
 ^^^^^^^^^^^^^^^^
 
@@ -142,26 +159,26 @@ The category group name.
 {category_parent}
 ^^^^^^^^^^^^^^^^^
 
-The name of the category parent if it exists, indented according to the 
+The name of the category parent if it exists, indented according to the
 category depth.
 
 {category_depth}
 ^^^^^^^^^^^^^^^^
 
-The level of nesting assigned to the category.  The depth of a top level 
+The level of nesting assigned to the category.  The depth of a top level
 category is 1.
 
 {selected}
 ^^^^^^^^^^
 
-An indicator of whether the category has been selected or not.  Is blank if not, 
+An indicator of whether the category has been selected or not.  Is blank if not,
 selected="selected" otherwise.
 
 {checked}
 ^^^^^^^^^
 
-An indicator of whether the category has been selected or not.  Is blank if not, 
-checked="checked" otherwise.	
+An indicator of whether the category has been selected or not.  Is blank if not,
+checked="checked" otherwise.
 
 Status
 ~~~~~~
@@ -226,6 +243,21 @@ author\_only=
 
 Only allow the author of the entry to edit the entry. Defaults to "no".
 
+category=
+~~~~~~~~~
+
+::
+
+	category="7|13"
+
+If you don't wish to include the form option on the page then you can
+set any categories that you wish to assign the entry to via this
+parameter. Specify the category by Category ID. You may specify multiple
+categories by separating the Category ID with the pipe character::
+
+	category="3|7|13|42"
+
+
 channel=
 ~~~~~~~~
 
@@ -240,7 +272,7 @@ class=
 
 ::
 
-	class="safecracker"
+	class="channel_form"
 
 Specify the CSS class.
 
@@ -289,9 +321,21 @@ id=
 
 ::
 
-	id="safecracker"
+	id="channel_form"
 
 Specify the CSS id.
+
+
+include_assets=
+~~~~~~~~~~~~~~~
+
+::
+
+	include_assets="no"
+
+Adds necessary Javascript to your form. If you don't require the
+Javascript functionality, set to "no". Defaults to "yes".
+
 
 include\_jquery=
 ~~~~~~~~~~~~~~~~
@@ -303,7 +347,7 @@ include\_jquery=
 Includes jQuery automatically. Defaults to "yes".
 
 .. note:: If you are using your own copy of jQuery you will need to load
-	it **before** the SafeCracker form.
+	it **before** the form.
 
 json=
 ~~~~~
@@ -322,8 +366,7 @@ logged\_out\_member\_id=
 	logged_out_member_id="3"
 
 In order to allow logged out users to use the entry form, you must
-specify a member\_id which SafeCracker will use as the author of the
-entry.
+specify a member\_id which will be used as the author of the entry.
 
 preserve\_checkboxes=
 ~~~~~~~~~~~~~~~~~~~~~
@@ -336,7 +379,7 @@ If you are using an entry form to edit only some of your entry (like a
 form just to change status, for example), you should use this parameter.
 HTML checkboxes have an interesting property, which is that if
 unchecked, they are not sent in the POST request. Because of this unique
-nature, SafeCracker cannot distinguish between an unchecked checkbox and
+nature, the form cannot distinguish between an unchecked checkbox and
 an intentional omission of the field itself from your form. You are
 provided this parameter to preserve the existing values without having
 to use a hidden field. Defaults to "no".
@@ -390,7 +433,7 @@ is\_natural\_no\_zero, valid\_email, valid\_emails, valid\_ip,
 valid\_base64), and these additional ExpressionEngine-specific rules:
 valid\_ee\_date.
 
-.. _safecracker_rte_selector:
+.. _channel_form_rte_selector:
 
 rte_selector=
 ~~~~~~~~~~~~~
@@ -399,9 +442,9 @@ rte_selector=
 
 	rte_selector=".my-custom-class"
 
-This parameter will tell SafeCracker to automatically load ExpressionEngine's
-:doc:`/modules/rte/index` and apply it to the element(s) matching the jQuery
-selector you specify. Any valid jQuery selector is acceptable.
+This parameter will automatically load ExpressionEngine's :doc:`/modules/rte/index`
+and apply it to the element(s) matching the jQuery selector you specify.
+Any valid jQuery selector is acceptable.
 
 The RTE will use the Toolset preference of the currently logged-in user as chosen
 in :ref:`my_account_rte_prefs`. If the user has not chosen a Toolset or is not
@@ -409,7 +452,7 @@ logged in, the site's :ref:`rte_mcp_default_toolset` will be used.
 
 You can optionally force a particular toolset ID to use (see below).
 
-.. _safecracker_rte_toolset_id:
+.. _channel_form_rte_toolset_id:
 
 rte_toolset\_id=
 ~~~~~~~~~~~~~~~~
@@ -420,16 +463,6 @@ rte_toolset\_id=
 
 The ID of the Rich Text Editor toolset to use. Toolset IDs are listed on the
 :doc:`/modules/rte/control_panel/index` page.
-
-safecracker\_head=
-~~~~~~~~~~~~~~~~~~
-
-::
-
-	safecracker_head="no"
-
-Adds necessary Javascript to your form. If you don't require the
-Javascript functionality, set to "no". Defaults to "yes".
 
 secure\_action=
 ~~~~~~~~~~~~~~~
@@ -459,6 +492,41 @@ site=
 Specify the site short name of another site on your MSM installation to
 add/edit entries for that site.
 
+show\_fields=
+~~~~~~~~~~~~~
+
+::
+
+	show_fields="body|extended"
+
+Specify which entry fields to display in the custom field loop, by
+specifying a pipe separated list of field short names.::
+
+	show_fields="body|extended|full_image"
+
+You may exclude fields by placing the word "not" in front of the list::
+
+	show_fields="not image_thumbnail|source|rating"
+
+
+status=
+~~~~~~~
+
+::
+
+	status="pending"
+
+Set the status to use for the entry.
+
+sticky\_entry=
+~~~~~~~~~~~~~~
+
+::
+
+	sticky_entry="yes"
+
+Force the entry to be "sticky" or not.
+
 url\_title=
 ~~~~~~~~~~~
 
@@ -477,7 +545,7 @@ use_live_url=
 	use_live_url="no"
 
 This will disable the url_title from being created automatically based on the
-title. Use this when you've opted to disable safecracker_head. Defaults to
+title. Use this when you've opted to disable channel_form_assets. Defaults to
 yes.
 
 
@@ -583,7 +651,7 @@ display the options in a loop, to give you more control over the markup.
 You have the four following sub-variables: {option\_value},
 {option\_name}, {selected} and {checked}.
 
-.. _safecracker_examples_custom_field_loop:
+.. _channel_form_examples_custom_field_loop:
 
 custom\_fields
 ~~~~~~~~~~~~~~
@@ -594,29 +662,29 @@ custom\_fields
 		<label for="{field_name}">{if required}* {/if}{field_label}</label>
 		{field_instructions}
 		{formatting_buttons}
-		
+
 		{if error}
 			<p class="error">{error}</p>
 		{/if}
-		
+
 		{if textarea}
 			<textarea id="{field_name}" name="{field_name}" dir="{text_direction}" rows="{rows}">{field_data}</textarea>
 		{/if}
-		
+
 		{if text}
 			<input type="text" dir="{text_direction}" id="{field_name}" name="{field_name}" value="{field_data}" maxlength="{maxlength}" size="50">
 		{/if}
-		
+
 		{if select}
 			<select id="{field_name}" name="{field_name}">
 				{options}<option value="{option_value}"{selected}>{option_name}</option>{/options}
 			</select>
 		{/if}
-		
+
 		{if date}
 			<input type="text" id="{field_name}" name="{field_name}" value="{field_data}" size="50">
 		{/if}
-		
+
 		{if checkbox}
 			{options}
 				<label class="checkbox">{option_value}
@@ -624,7 +692,7 @@ custom\_fields
 				</label>
 			{/options}
 		{/if}
-		
+
 		{if radio}
 			{options}
 				<label class="checkbox">{option_value}
@@ -632,11 +700,11 @@ custom\_fields
 				</label>
 			{/options}
 		{/if}
-				
-		{if safecracker_file}
+
+		{if file}
 			{display_field}
 		{/if}
-		
+
 		{if relationship}
 			{if allow_multiple}
 				<ul style="list-style: none">
@@ -657,7 +725,7 @@ custom\_fields
 					</select>
 			{/if}
 		{/if}
-		
+
 		{if multiselect}
 			<select id="{field_name}" name="{field_name}[]" multiple="multiple">
 				{options}
@@ -716,12 +784,12 @@ captcha
 		<input type="text" name="captcha" value="{captcha_word}" maxlength="20">
 	{/if}
 
-safecracker\_head
-~~~~~~~~~~~~~~~~~
+channel\_form\_assets
+~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
-	{safecracker_head}
+	{channel_form_assets}
 
 Many custom fields require additional css and/or javascript. This
 additional markup is automatically added to the end of your form, unless
@@ -770,17 +838,17 @@ can display the number field-related entry submission errors.
 Form Validation
 ---------------
 
-SafeCracker uses the CodeIgniter Form Validation class. You can create
+Channel Form uses the CodeIgniter Form Validation class. You can create
 field-by-field `validation rules <#rules-my-field-name>`_. By default,
-SafeCracker will display validation errors using the ExpressionEngine
-user message template. If you prefer, you can also use `inline error
-handling <#error-handling>`_ to display form validation errors in the
+validaiton errors will be displayed using the ExpressionEngine user
+message template. If you prefer, you can also use `inline error handling
+<#error-handling>`_ to display form validation errors in the
 context of your form.
 
 Allowing Guests to Post Entries
 -------------------------------
 
-In order to allow guests to use your SafeCracker Entry Form, you must
+In order to allow guests to use your Channel Entry Form, you must
 first take a few steps to set up.
 
 #. Create a new member group (optional). You may use an existing member
@@ -791,55 +859,31 @@ first take a few steps to set up.
 #. Create a new member (optional). You may use an existing member if you
    prefer.
 #. Select this member for the channel you're working with in the
-   SafeCracker settings. OR, note the member id, and use that as the
+   channel form settings. OR, note the member id, and use that as the
    ::
 
        logged_out_member_id
 
    parameter of your entry form.
 
-SafeCracker File Fieldtype
---------------------------
-
-The SafeCracker File fieldtype is a simple file fieldtype for creating
-file fields without the entire file manager. You are presented with a
-simple file input, and if applicable, a thumbnail and a "remove file"
-checkbox. You specify the upload location in the field settings.
-SafeCracker File may be used in both SafeCracker Entry Forms and the CP
-Publish Form. SafeCracker File inherits the tags of the standard
-:doc:`File Field </modules/channel/custom_fields>`.
-
-SafeCracker File may be used as a Matrix celltype and as a Low Variables
-variable type. If you are using it as a Low Variable, you must use the
-`parse tag <http://gotolow.com/addons/low-variables/docs/tags#parse-
-tag>`_.
-
 ********
 Examples
 ********
 
-See :doc:`SafeCracker Examples <examples>` for more complete examples of
-SafeCracker usage.
-
-**********************
-Control Panel Settings
-**********************
-
-See the :doc:`SafeCracker Module Control Panel <control_panel/index>`
-page.
-
+See :doc:`Channel Form Examples <examples>` for more complete examples of
+Channel Form usage.
 
 ***********
 Development
 ***********
 
--  :ref:`safecracker_development_fieldtype`
--  :ref:`safecracker_development_hooks`
+-  :ref:`channel_form_development_fieldtype`
+-  :ref:`channel_form_development_hooks`
 
 .. toctree::
 	:glob:
 	:titlesonly:
 	:hidden:
-	
+
 	control_panel/index
 	*

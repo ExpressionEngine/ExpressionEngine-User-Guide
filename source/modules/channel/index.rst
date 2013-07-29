@@ -14,7 +14,7 @@ The Channel Module provides the following tags and features:
 -  :doc:`Next/Prev Entry Linking <entry_linking>`
 -  :doc:`Relationships <relationships>`
 -  :doc:`Grid Field <grid>`
--  :doc:`Adding and Editing Entries from Outside the Control Panel <../safecracker/index>`
+-  :doc:`Adding and Editing Entries from Outside the Control Panel <channel_form/index>`
 -  :doc:`Calendar Tag <calendar>`
 -  :doc:`Archive Month Links Tag <archive_month_links>`
 -  :doc:`Channel Categories Tag <categories>`

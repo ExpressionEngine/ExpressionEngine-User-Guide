@@ -1,6 +1,6 @@
---------------------
-SafeCracker Examples
---------------------
+---------------------
+Channel Form Examples
+---------------------
 
 .. contents::
    :local:
@@ -10,18 +10,18 @@ Basic Example
 
 ::
 
-	     {exp:safecracker channel="contact_form" return="contact/thanks" }
+	     {exp:channel:form channel="contact_form" return="contact/thanks" }
 	     	<input name="title" type="text">
 	     	<input name="my_custom_field" type="text">
 	     	<input type="submit" value="Submit">
-	     {/exp:safecracker}
+	     {/exp:channel:form}
 
 More Complex Example
 ~~~~~~~~~~~~~~~~~~~~
 
 ::
 
-    {exp:safecracker channel="channel_name" return="channel_name/edit/ENTRY_ID" entry_id="{segment_3}"}
+    {exp:channel:form channel="channel_name" return="channel_name/edit/ENTRY_ID" entry_id="{segment_3}"}
 
         <label for="title">Title</label>
         <input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
@@ -60,7 +60,7 @@ More Complex Example
 	            {select_options}
             </select>
         {/category_menu}
-        
+
         {if captcha}
             <label for="captcha">Please enter the word you see in the image below:</label>
             {captcha}
@@ -68,36 +68,36 @@ More Complex Example
         {/if}
 
         <input type="submit" name="submit" value="Submit">
-    {/exp:safecracker}
+    {/exp:channel:form}
 
 Entry Form without using the {custom\_fields} loop
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
-	{exp:safecracker channel="products" return="safecracker/ENTRY_ID" entry_id="{segment_2}"}
+	{exp:channel:form channel="products" return="form_template/ENTRY_ID" entry_id="{segment_2}"}
 		<label for="title">Title</label>
 		<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
-		
+
 		<label for="url_title">URL Title</label>
 		<input type="text" name="url_title" id="url_title" value="{url_title}" maxlength="75" size="50">
-		
+
 		<label for="entry_date">Date</label>
 		<input type="text" name="entry_date" id="entry_date" value="{entry_date}" maxlength="23" size="25">
-		
+
 		<label for="my_field_name">Your Custom Field</label>
 		<input type="text" name="my_field_name" id="my_field_name" value="{my_field_name}">
-		
+
 		<label for="my_field_name">Your Custom Field (a field with options)</label>
 		<select name="my_field_name">
 			{options:my_field_name}
 				<option value="{option_value}"{selected}>{option_name}</option>
 			{/options:my_field_name}
 		</select>
-		
-		<label for="my_field_name">Your 3rd Party WYSIWYG Field</label> {field:my_field_name} 
+
+		<label for="my_field_name">Your 3rd Party WYSIWYG Field</label> {field:my_field_name}
 		<input type="submit" name="submit" value="Submit">
-	{/exp:safecracker}
+	{/exp:channel:form}
 
 AJAX-driven Entry Form
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -107,10 +107,10 @@ AJAX-driven Entry Form
 	<html>
 		<head>
 			{exp:jquery:script_tag}
-			
+
 			<!--using the jQuery Form plugin http://jquery.malsup.com/form/-->
 			<script src="/js/jquery.form.js" type="text/javascript"></script>
-			
+
 			<script type="text/javascript">
 				$(document).ready(function(){
 					$('#publishForm').ajaxForm({
@@ -127,7 +127,7 @@ AJAX-driven Entry Form
 			</script>
 		</head>
 		<body>
-			{exp:safecracker channel="products" return="safecracker/ENTRY_ID" entry_id="{segment_2}" json="yes"}
+			{exp:channel:form channel="products" return="form_template/ENTRY_ID" entry_id="{segment_2}" json="yes"}
 				<label for="title">Title</label>
 				<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
 
@@ -138,6 +138,6 @@ AJAX-driven Entry Form
 				<input type="text" name="entry_date" id="entry_date" value="{entry_date}" maxlength="23" size="25">
 
 				<input type="submit" name="submit" value="Submit">
-			{/exp:safecracker}
+			{/exp:channel:form}
 		</body>
 	</html>
