@@ -885,5 +885,4 @@ Development
 	:titlesonly:
 	:hidden:
 
-	control_panel/index
 	*

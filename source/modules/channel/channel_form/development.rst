@@ -44,7 +44,7 @@ Extension Hooks
    :local:
 
 channel_form\_submit\_entry\_start
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
@@ -53,7 +53,7 @@ channel_form\_submit\_entry\_start
 where **$this** is the Channel Form library object.
 
 channel_form\_submit\_entry\_end
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 

@@ -30,3 +30,4 @@ The Channel Module provides the following tags and features:
 	:hidden:
 
 	*
+	channel_form/index
