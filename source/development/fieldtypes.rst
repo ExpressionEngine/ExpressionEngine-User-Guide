@@ -280,19 +280,36 @@ The base class provides a handful of base variables:
 
 .. attr:: EE
 
-  a reference to the controller instance
+  A reference to the controller instance.
 
-.. attr:: field_id
+.. deprecated:: 2.7.0
 
-  the field's database id
+.. attr:: id
 
-.. attr:: field_name
+  The field identifier (unique for the current content type).
 
-  the field short name
+.. attr:: name
+
+  The field name, used for the tag names.
+
+.. attr:: content_id
+
+  The unique id of the parent content that contains this field. Not
+  available in install, settings, or other non-content environments.
+
+.. attr:: content_type
 
 .. attr:: settings
 
-  the field settings array
+  The field settings array
+
+.. attr:: field_id
+
+  Alias for id
+
+.. attr:: field_name
+
+  Alias for name
 
 .. note:: Allowing fields to be used as tag pairs requires some extra
   processing to reduce the parsing overhead. So if you want to create
@@ -305,6 +322,42 @@ The base class provides a handful of base variables:
 
 Function Reference
 ==================
+
+.. method:: id()
+
+  Getter for ``id``.
+
+  :rtype: Integer/String
+
+.. method:: name()
+
+  Getter for ``name``.
+
+  :rtype: String
+
+.. method:: content_id()
+
+  Getter for ``content_id``.
+
+  :rtype: Integer/String
+
+.. method:: content_type()
+
+  Getter for ``content_type``.
+
+  :rtype: String
+
+.. method:: row($key [, $default = NULL ])
+
+  Accessor for the current content type parent row. In the case of channel
+  entries, this would be current entry row. If the key is not found, the
+  value given in default is returned. Not all content types have all row
+  keys.
+
+  :param: string $key: The name of the row value to retrieve
+  :param: mixed $default: The value to return if $key is not set
+  :return: The value of the row element, or $default.
+  :rtype: Mixed
 
 .. method:: install()
 
@@ -517,6 +570,52 @@ Function Reference
   :param array $data: Field data
   :returns: Prepped ``$data``
   :rtype: Array
+
+*************************
+Content Type Independence
+*************************
+
+Fieldtypes can be used to describe fields in many different types of
+content. For most fieldtypes adding support simply means overriding the
+:meth:`EE_Fieldtype::accepts_content_type` method to always return TRUE.
+
+.. method:: accepts_content_type($name)
+
+  Returns TRUE or FALSE based on whether or not the content type is
+  supported. By default all fieldtypes support the `channel` content type.::
+
+    public function accepts_content_type($name)
+    {
+      return ($name == 'channel');
+    }
+
+  :param string $name: The name of the content type
+  :returns: Supports the given content type?
+  :rtype: Boolean
+
+However, if your fieldtype stores its own data, then you must make sure
+to clearly separate the data by content type. You can do this by accessing
+the current content type with the :meth:`EE_Fieldtype::content_type` getter
+method, and using it as an additional parameter everywhere you store or retrieve data.
+
+You must also handle the complete out removal of a content type.
+
+.. method:: unregister_content_type($name)
+
+  Remove a content type from the current fieldtype.
+
+  :param string $name: Name of the content type to remove.
+  :rtype: void
+
+If your fieldtype creates columns or tables dynamically, you may also
+want to implement the opposite case of when a fieldtype is added.
+
+.. method:: register_content_type($name)
+
+  Add a content type from the current fieldtype.
+
+  :param string $name: Name of the content type to add.
+  :rtype: void
 
 **************************
 Grid Fieldtype Development
