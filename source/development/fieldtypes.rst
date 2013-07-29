@@ -625,10 +625,17 @@ In order to make your fieldtypes compatible with Grid, a few more
 methods as well as Javascript callbacks are available.
 
 To make your fieldtype recognized by Grid as a Grid-compatible
-fieldtype, all you need to do is implement the
-:meth:`EE_Fieldtype::grid_display_settings` method. Once this method is
-implemented, your fieldtype will show up in the list of fieldtypes
-available for use when setting up a new Grid column.
+fieldtype, you need to modify your implementation of
+:meth:`EE_Fieldtype::accepts_content_type` to accept the ``grid``
+content type. For example::
+
+  public function accepts_content_type($name)
+  {
+      return ($name == 'channel' || $name == 'grid');
+  }
+
+Once that's done, your fieldtype will show up in the list
+of fieldtypes available for use when setting up a new Grid column.
 
 Grid Column Settings
 ====================
@@ -798,15 +805,15 @@ example::
       // Display code for Grid cell
   }
 
-However, if a fieldtype implements ``grid_display_settings()`` and does
-NOT implement ``grid_display_field()``, Grid will call
-``display_field()`` to display the field's form in the cell. The same
-applies for all other methods except for ``install()``, ``uninstall()``,
-the global settings methods, and ``validate_settings()`` which is
-covered above. The idea is most fieldtypes should be able to use the
-same code to handle their field operations for both Grid and the normal
-publish form, but if not, you can easily override the behavior and run
-special operations in the context of Grid.
+However, if a fieldtype does NOT implement ``grid_display_field()``,
+Grid will call ``display_field()`` to display the field's form in the
+cell. The same applies for all other methods except for ``install()``,
+``uninstall()``, the global settings methods, ``display_settings()``,
+``validate_settings()`` which is covered above. The idea is most
+fieldtypes should be able to use the same code to handle their field
+operations for both Grid and the normal publish form, but if not, you
+can easily override the behavior and run special operations when in the
+context of Grid.
 
 If you use ``grid_*`` methods, you may want to look for ways to refactor
 your fieldtype where there is overlapping logic to run. For example,
