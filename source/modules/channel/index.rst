@@ -22,7 +22,6 @@ The Channel Module provides the following tags and features:
 -  :doc:`Category Heading Tag <category_heading>`
 -  :doc:`Channel Information Tag <channel_info>`
 -  :doc:`Channel Entry and Comment Pagination <pagination_page>`
--  :doc:`Stand-Alone Entry Form (deprecated) <entry_form>`
 
 .. toctree::
 	:glob:

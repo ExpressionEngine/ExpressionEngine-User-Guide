@@ -42,7 +42,7 @@ Including Assets
 ----------------
 
 If you plan on using the Datepicker or formatting buttons, include a link
-to the SAEF stylesheet in your template::
+to the channel form stylesheet in your template::
 
 	<link href="{path=css/_ee_channel_form_css}" type="text/css" rel="stylesheet" media="screen">
 
