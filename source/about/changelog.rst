@@ -111,18 +111,18 @@ Release Date: ?
     profile other than your own on the frontend.
   - Fixed a bug where if the current time is midnight, hours in date
     fields were represented as zero for the US time format.
-  - Fixed a bug (#19578) where IP search results in the control panel had 
+  - Fixed a bug (#19578) where IP search results in the control panel had
     incorrect links to the user profiles.
   - Fixed a bug (#19590) in the 2.0 updater where the large database shell script
     utf8 conversion did not specifically convert table columns.
-  - Altered the column size of site_preferences in the 2.0 update to prevent 
+  - Altered the column size of site_preferences in the 2.0 update to prevent
     possible truncation of data.
 
 - Developers:
 
-  - New fieldtype method: ``validate_settings()``; fieldtype settings
-    can now be validated using the Form Validation library. TODO: Link
-    when docs are ready.
+  - New fieldtype method: :meth:`~EE_Fieldtype::validate_settings` fieldtype settings
+    can now be validated using the Form Validation library.
+  - Made the parent element's content type available to fieldtypes.
   - Entry versioning now works more like autosave in that it stores
     entry POST data, so it is easier for fieldtypes with external
     storage strategies to support revisions.
