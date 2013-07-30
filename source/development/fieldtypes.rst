@@ -577,7 +577,7 @@ Content Type Independence
 
 Fieldtypes can be used to describe fields in many different types of
 content. For most fieldtypes adding support simply means overriding the
-:meth:`EE_Fieldtype::accepts_content_type` method to always return TRUE.
+:meth:`~EE_Fieldtype::accepts_content_type` method to always return TRUE.
 
 .. method:: accepts_content_type($name)
 
@@ -595,7 +595,7 @@ content. For most fieldtypes adding support simply means overriding the
 
 However, if your fieldtype stores its own data, then you must make sure
 to clearly separate the data by content type. You can do this by accessing
-the current content type with the :meth:`EE_Fieldtype::content_type` getter
+the current content type with the :meth:`~EE_Fieldtype::content_type` getter
 method, and using it as an additional parameter everywhere you store or retrieve data.
 
 You must also handle the complete out removal of a content type.
@@ -626,7 +626,7 @@ methods as well as Javascript callbacks are available.
 
 To make your fieldtype recognized by Grid as a Grid-compatible
 fieldtype, you need to modify your implementation of
-:meth:`EE_Fieldtype::accepts_content_type` to accept the ``grid``
+:meth:`~EE_Fieldtype::accepts_content_type` to accept the ``grid``
 content type. For example::
 
   public function accepts_content_type($name)
@@ -659,7 +659,7 @@ Grid Column Settings
   :returns: Array of settings for the column
   :rtype: Array
 
-Much like in :meth:`EE_Fieldtype::display_settings`, we provide several
+Much like in :meth:`~EE_Fieldtype::display_settings`, we provide several
 helpers to insert the settings rows you may need:
 
 .. method:: grid_settings_row($label, $content[, $wide = FALSE])
@@ -755,7 +755,7 @@ helpers to insert the settings rows you may need:
   :returns: String of HTML ready to use as a Grid settings row
   :rtype: String
 
-Check the implementations of :meth:`EE_Fieldtype::grid_display_settings`
+Check the implementations of :meth:`~EE_Fieldtype::grid_display_settings`
 in our native fieldtypes to see examples of the above helper methods
 being used as well as other ways to display custom settings.
 
@@ -763,7 +763,7 @@ Validating Grid Settings
 ------------------------
 
 Validating your Grid column's settings is similar to validating field
-contents. Unlike :meth:`EE_Fieldtype::validate_settings`, you cannot
+contents. Unlike :meth:`~EE_Fieldtype::validate_settings`, you cannot
 use the Form Validation library, rather you simply check the array of
 settings passed to your fieldtype, and then return TRUE or an error
 message if the settings do not validate.
