@@ -85,6 +85,8 @@ If there is any doubt on the safety of a variable that you are
 outputting or inserting into the database, use XSS Clean:
 ``ee()->security->xss_clean($value)``.
 
+.. _dev_guidelines_sql_injection_prevention:
+
 ************************
 SQL Injection Prevention
 ************************
