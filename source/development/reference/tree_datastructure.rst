@@ -249,7 +249,7 @@ remember which nodes had children.
 leaf_iterator()
 ~~~~~~~~~~~~~~~
 
-This iterator only visits nodes that do not have parents of their own.
+This iterator only visits nodes that do not have children of their own.
 
 ::
 
