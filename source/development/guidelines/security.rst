@@ -8,6 +8,8 @@ Security Guidelines
 
 .. highlight:: php
 
+.. _dev_guidelines_xss_protection:
+
 **************************
 Cross Site Scripting (XSS)
 **************************
@@ -241,11 +243,11 @@ variables
   // Each variable would still need to be validated as instructed above
   // before using them in the code.
 
-.. _dev_guidelines_secure_forms:
+.. _dev_guidelines_csrf_protection:
 
-************
-Secure Forms
-************
+**************************
+Cross Site Request Forgery
+**************************
 
 To help prevent spam and protect against Cross-site Request Forgery
 (CSRF), ExpressionEngine has a "Secure Form" setting that uses a hash
@@ -260,15 +262,20 @@ Create all forms on the user side with
 </development/reference/functions>`, so the XID (secure hash ID) is
 added automatically as a hidden input field. This also allows any
 extensions the site may have installed that modifies forms to have
-effect on your forms.
+effect on your forms. ::
+
+  ee()->functions->form_declaration(array(
+    'action'  => ''
+  ));
 
 Handling Form Hashes in Your Add-on
 ===================================
 
-Under normal circumstances ExpressionEngine will check the secure
-hash for you automatically. In some cases you may want to allow reuse
-of the current XID. For example a search addon may see frequent back
-button use. In those cases you can call ``ee()->security->restore_xid()``
+Under normal circumstances ExpressionEngine will check the csrf token
+for you automatically. In some cases you may want to allow reuse of
+the current token. For example a search addon may see frequent back
+button use. In those cases you can call :doc:`ee()->security->restore_xid()
+</development/usage/security>`
 and the current XID will validate again.
 
 If you are using action requests, you can choose to disable the secure
@@ -281,6 +288,37 @@ The Control Panel's Display class automatically adds hashes to any form
 tag automatically for you. Likewise, the system will check for hashes
 automatically, so forms in the control panel require no additional work
 for you to use securely.
+
+AJAX
+====
+
+Using AJAX to submit or validate your forms requires diligent exchanging
+of XIDs to preserve a smooth user experience. To ease this process, ajax
+requests can provide the XID token either through the regular POST data
+array, or through an ``HTTP_X_EEXID`` header.
+
+All ajax requests will be returned a new valid XID in the ``HTTP_X_EEXID``
+header of the response. As a result, if you are using jQuery, you can
+hide the XID exchange almost entirely using an ajax prefilter.
+
+.. code-block:: js
+
+  $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+    var old_xid = EE.XID;
+
+    jqXHR.setRequestHeader("X-EEXID", old_xid);
+
+    jqXHR.complete(function(xhr) {
+      var new_xid = xhr.getResponseHeader('X-EEXID');
+
+      if (new_xid) {
+        EE.XID = new_xid;
+        $('input[name="XID"]').filter('[value="'+old_xid+'"]').val(new_xid);
+      }
+    });
+  });
+
+.. note:: In the control panel this is done for you automatically.
 
 *************************
 Handling Form Submissions

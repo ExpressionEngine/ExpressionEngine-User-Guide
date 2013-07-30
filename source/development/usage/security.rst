@@ -13,8 +13,11 @@ Calling the Security Class
 
   This class is initialized automatically.
 
-Security filtering
-------------------
+Cross Site Scripting Protection
+-------------------------------
+
+For general XSS protection handling, please refer to the :ref:`Cross Site
+Scripting <dev_guidelines_xss_protection>` section of the security guidelines.
 
 .. method:: xss_clean($str[, $is_image = FALSE])
 
@@ -31,6 +34,22 @@ Security filtering
     ``$is_image`` is set to ``TRUE``, will return ``FALSE`` if the image
     fails the check.
   :rtype: Mixed
+
+
+Cross Site Request Forgery Protection
+-------------------------------------
+
+For general CSRF protection handling, please refer to the :ref:`Cross Site
+Request Forgery <dev_guidelines_csrf_protection>` section of the security guidelines.
+
+.. method:: restore_xid([$xid = REQUEST_XID])
+
+  By default all XIDs are single use tokens. In some cases you may want
+  to allow reuse of the token. To do this you can call ``restore_xid()``
+  at any point during the request that consumed the token. ::
+
+    ee()->security->restore_xid();
+
 
 Other Class Methods
 -------------------
