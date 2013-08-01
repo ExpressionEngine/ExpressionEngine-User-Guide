@@ -125,7 +125,7 @@ Release Date: ?
     exp_channel_data.
   - Altered default text type columns in exp_channel_data to allow NULL 
     consistently.
-  - Fixed a bug (#19615) where the channel calendar could show day of the work 
+  - Fixed a bug (#19615) where the channel calendar could show day of the week 
     occurring on the wrong day due to localizing the days of the week.
   - Fixed a bug (#19612) where the File Browser on the publish page did not 
     limit the directories shown in the directory dropdown to the current site.
