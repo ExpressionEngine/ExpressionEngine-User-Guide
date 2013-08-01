@@ -117,6 +117,19 @@ Release Date: ?
     utf8 conversion did not specifically convert table columns.
   - Altered the column size of site_preferences in the 2.0 update to prevent
     possible truncation of data.
+  - Fixed a bug (#19589) in MSM where site deletion would fail with MySQL errors
+    if site creation was impossible due to table column limitations.
+  - Altered the 2.6.0 updater to be more specific when changing the forgotten
+    password action records (#19586).
+  - Altered relationship fields to have an integer type column in 
+    exp_channel_data.
+  - Altered default text type columns in exp_channel_data to allow NULL 
+    consistently.
+  - Fixed a bug (#19615) where the channel calendar could show day of the work 
+    occurring on the wrong day due to localizing the days of the week.
+  - Fixed a bug (#19612) where the File Browser on the publish page did not 
+    limit the directories shown in the directory dropdown to the current site.
+  - Fixed a reference to a removed view (#19611).
 
 - Developers:
 
