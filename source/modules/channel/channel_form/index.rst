@@ -726,9 +726,9 @@ custom\_fields
 			{/if}
 		{/if}
 
-    {if grid}
-      {display_field}
-    {/if}
+		{if grid}
+			{display_field}
+		{/if}
 
 		{if multiselect}
 			<select id="{field_name}" name="{field_name}[]" multiple="multiple">
