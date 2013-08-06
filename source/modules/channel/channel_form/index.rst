@@ -705,7 +705,7 @@ custom\_fields
 			{display_field}
 		{/if}
 
-		{if relationship}
+		{if relationships}
 			{if allow_multiple}
 				<ul style="list-style: none">
 					{options}
@@ -725,6 +725,10 @@ custom\_fields
 					</select>
 			{/if}
 		{/if}
+
+    {if grid}
+      {display_field}
+    {/if}
 
 		{if multiselect}
 			<select id="{field_name}" name="{field_name}[]" multiple="multiple">
