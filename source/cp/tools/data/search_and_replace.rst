@@ -19,9 +19,9 @@ the entry fields, or within your Templates.
    you have caching options turned on. You may need to :doc:`clear your cache
    files <clear_cached_data_files>` in order to see the changes.
 
-.. important:: If you save templates as text files, make certain to
-   :doc:`/cp/design/templates/synchronize_templates` before replacing in
-   a template as the template edit date will be updated.
+.. important:: If you save templates as text files, make certain
+   to :doc:`/cp/design/templates/synchronize_templates` before replacing
+   in a template as the template edit date will be updated.
 
 Search for this text
 ~~~~~~~~~~~~~~~~~~~~

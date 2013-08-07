@@ -12,8 +12,8 @@ format, and supported email sending protocols are
 `Sendmail <http://www.sendmail.org/>`_, and PHP
 `mail <http://us2.php.net/manual/en/function.mail.php>`_.
 
-.. note:: In the Admin area of the Control Panel you'll find the
-	:doc:`/cp/admin/email_configuration` page.
+.. note:: In the Admin area of the Control Panel you'll find
+	the :doc:`/cp/admin/email_configuration` page.
 
 |Communicate|
 

@@ -55,9 +55,8 @@ object as demonstrated in the Definition section::
 Definition
 ~~~~~~~~~~
 
-.. seealso::
-  :doc:`RTE Javascript <cp_javascript/rte/index>`: Documentation for the
-  WysiHat and the Button classes.
+.. seealso:: The :doc:`RTE Javascript <cp_javascript/rte/index>`
+   documentation for the WysiHat and the Button classes.
 
 The ExpressionEngine RTE makes use of the WysiHat plugin for jQuery.
 Please refer to the :doc:`WysiHat API information
