@@ -27,10 +27,10 @@ someone to alter the purchase data for your items.
 into PHP. Ask your server administrator for this information.
 
 .. note:: Enabling this requires that you use a public certificate and
-   private key. Please read the section
-   on :ref:`simple_commerce_encrypted_payments` for full details. In
-   order	to be the most effective, you should also change your PayPal
-   account	settings to only accept encrypted payments.
+	private key. Please read the section on 
+	:ref:`simple_commerce_encrypted_payments` for full details. In order
+	to be the most effective, you should also change your PayPal account
+	settings to only accept encrypted payments.
 
 ID Given to Public Certificate by PayPal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -46,7 +46,7 @@ The path to your public certificate file. Please read the section on
 
 .. note:: ExpressionEngine must have read access to this directory, but
 	for security it is highly recommended that you use a location above
-	the public HTML folder on your account so that the certificate and
+	the public HTML folder on your account so that the certificate and 
 	key files are not accessible via the web.
 
 Private Key Path
@@ -68,7 +68,7 @@ The path to your PayPal certificate file. Please read the section on
 
 .. note:: ExpressionEngine must have read access to this directory, but
 	for security it is highly recommended that you use a location above
-	the public HTML folder on your account so that the certificate and
+	the public HTML folder on your account so that the certificate and 
 	key files are not accessible via the web.
 
 Temporary Encrypted Files Path

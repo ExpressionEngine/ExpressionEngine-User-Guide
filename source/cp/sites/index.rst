@@ -1,10 +1,10 @@
 Multiple Site Manager
 =====================
 
-Manage multiple Sites from a single installation
+Manage multiple Sites from a single installation 
 
-.. note:: The Multiple Site Manager **does not** alter
-	the :doc:`/about/license`. The license holder must be the owner of all
+.. note:: The Multiple Site Manager **does not** alter the 
+	:doc:`/about/license`. The license holder must be the owner of all
 	Sites on a single installation.
 
 One Installation, Multiple Websites
@@ -62,5 +62,5 @@ Table of Contents
 	:glob:
 	:hidden:
 	:titlesonly:
-
+	
 	*

@@ -88,8 +88,9 @@ categories. This does not create a category.
 Namespaces
 ----------
 
-.. note:: Before you can use Namespaces on your wiki you
-   must :ref:`configure Namespaces in your Control Panel <wiki_cp_namespaces>`.
+.. note:: Before you can use Namespaces on your wiki you must
+	:ref:`configure Namespaces in your Control Panel 
+	<wiki_cp_namespaces>`.
 
 Linking to or creating an article in a Namespace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -137,10 +138,10 @@ Linking to Image or Uploaded File
 ---------------------------------
 
 .. note:: The wiki can automatically give you a file or image's code. On
-	the article Edit page click on *View 10 Most Recent File Uploads*.
-	If you need an older file click on *Uploaded Files* in the
-	navigation and then select file. You'll see the appropriate code to
-	use to call that file or image.
+	the article Edit page click on *View 10 Most Recent File Uploads*. 
+	If you need an older file click on *Uploaded Files* in the 
+	navigation and then select file. You'll see the appropriate code to 
+	use to call that file or image. 
 
 ::
 
