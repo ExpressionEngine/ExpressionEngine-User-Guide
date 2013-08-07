@@ -33,6 +33,13 @@ to the ExpressionEngine community.
    </codeigniter/user-guide/libraries/form_validation.html>`.
 -  Handles AJAX requests and can output responses in JSON.
 
+.. versionchanged:: 2.7
+
+   * *SafeCracker* is now *Channel Form*.
+   * The *File* fieldtype is now compatible with *Channel Form*.
+   * *Stand-Alone Entry Form* has been removed.
+   * *SafeCracker File* has been removed.
+
 
 ******************
 Using Channel Form
