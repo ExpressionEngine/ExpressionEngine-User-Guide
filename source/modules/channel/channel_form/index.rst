@@ -40,7 +40,7 @@ to the ExpressionEngine community.
    * *SafeCracker* is now *Channel Form*.
    * The *File* fieldtype is now compatible with *Channel Form*.
    * *Stand-Alone Entry Form* has been removed.
-   * *SafeCracker File* have been removed.
+   * *SafeCracker File* has been removed.
 
 
 ******************
