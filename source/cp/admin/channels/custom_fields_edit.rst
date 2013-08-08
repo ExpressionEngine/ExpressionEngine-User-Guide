@@ -35,7 +35,7 @@ in your Channel Entries (add-ons can include their own as well):
    -  **Fixed**: The date will NOT be localized and instead shown at the
       exact date/time you submit.
 
-#. **Relationship**: This is a special and very powerful field type. It
+#. **Relationships**: This is a special and very powerful field type. It
    enables you to create relationships between two or more channels so
    you can show content from one entry within another. For more
    information see :doc:`/modules/channel/relationships`.
