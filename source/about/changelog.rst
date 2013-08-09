@@ -117,8 +117,6 @@ Release Date: ?
     utf8 conversion did not specifically convert table columns.
   - Altered the column size of site_preferences in the 2.0 update to prevent
     possible truncation of data.
-  - Fixed a bug (#19589) in MSM where site deletion would fail with MySQL errors
-    if site creation was impossible due to table column limitations.
   - Altered the 2.6.0 updater to be more specific when changing the forgotten
     password action records (#19586).
   - Altered relationship fields to have an integer type column in 
