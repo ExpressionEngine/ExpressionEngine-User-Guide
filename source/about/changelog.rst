@@ -128,6 +128,8 @@ Release Date: ?
   - Fixed a bug (#19612) where the File Browser on the publish page did not 
     limit the directories shown in the directory dropdown to the current site.
   - Fixed a reference to a removed view (#19611).
+  - Fixed a bug (#19621) where the latest comment date for an entry was being 
+    set incorrectly whenever it needed to be recalculated.
 
 - Developers:
 
