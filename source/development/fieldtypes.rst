@@ -808,8 +808,9 @@ example::
 However, if a fieldtype does NOT implement ``grid_display_field()``,
 Grid will call ``display_field()`` to display the field's form in the
 cell. The same applies for all other methods except for ``install()``,
-``uninstall()``, the global settings methods, ``display_settings()``,
-``validate_settings()`` which is covered above. The idea is most
+``uninstall()``, the global settings methods,
+``settings_modify_column()``, ``display_settings()``,
+and ``validate_settings()`` which is covered above. The idea is most
 fieldtypes should be able to use the same code to handle their field
 operations for both Grid and the normal publish form, but if not, you
 can easily override the behavior and run special operations when in the
