@@ -582,7 +582,7 @@ Custom Field Tag Pair
 	{my_field_name}{/my_field_name}
 
 Display a custom field's data using the Fieldtype API's replace\_tag
-method. Useful for fieldtypes with complex data, such as a Matrix field.
+method. Useful for fieldtypes with complex data, such as a grid field.
 
 field:my\_field\_name
 ~~~~~~~~~~~~~~~~~~~~~
@@ -592,7 +592,7 @@ field:my\_field\_name
 	{field:my_field_name}
 
 Display a custom field using the Fieldtype API's display\_field method.
-Useful for fieldtypes that use complex markup, for instance a WYSIWYG
+Useful for fieldtypes that use complex markup, for instance a relationship
 fieldtype.
 
 error:my\_field\_name
