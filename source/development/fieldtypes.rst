@@ -762,35 +762,42 @@ being used as well as other ways to display custom settings.
 Validating Grid Settings
 ------------------------
 
-Validating your Grid column's settings is similar to validating field
-contents. Unlike :meth:`~EE_Fieldtype::validate_settings`, you cannot
-use the Form Validation library, rather you simply check the array of
-settings passed to your fieldtype, and then return TRUE or an error
-message if the settings do not validate.
+.. method:: grid_validate_settings($data)
 
-For example, here is the validation method for a File field's settings
-when used as a Grid column::
+  Validating your Grid column's settings is similar to validating field
+  contents. Unlike :meth:`~EE_Fieldtype::validate_settings`, you cannot
+  use the Form Validation library, rather you simply check the array of
+  settings passed to your fieldtype, and then return TRUE or an error
+  message if the settings do not validate.
 
-  function grid_validate_settings($data)
-  {
-      if ( ! $this->_check_directories())
-      {
-          ee()->lang->loadfile('filemanager');
-          return lang('please_add_upload');
-      }
+  For example, here is the validation method for a File field's settings
+  when used as a Grid column::
 
-      return TRUE;
-  }
+    function grid_validate_settings($data)
+    {
+        if ( ! $this->_check_directories())
+        {
+            ee()->lang->loadfile('filemanager');
+            return lang('please_add_upload');
+        }
 
-If the ``_check_directories()`` check fails, we return an error message.
-Otherwise if it passes, we return ``TRUE``.
+        return TRUE;
+    }
+
+  If the ``_check_directories()`` check fails, we return an error message.
+  Otherwise if it passes, we return ``TRUE``.
+
+  :param array $data: Submitted settings for this field
+  :rtype: Void
+
 
 Grid Fieldtype Events
 =====================
 
-Most of the regular fieldtype methods (``display_field()``,
+All of the regular fieldtype methods (``display_field()``,
 ``replace_tag()``, etc.) are available prefixed with "grid\_" for
-special handling when being used in the context of the Grid field. For
+special handling when being used in the context of the Grid field, with
+a few exceptions noted below. For
 example::
 
   // Only called when being used as a normal fieldtype:
@@ -807,14 +814,24 @@ example::
 
 However, if a fieldtype does NOT implement ``grid_display_field()``,
 Grid will call ``display_field()`` to display the field's form in the
-cell. The same applies for all other methods except for ``install()``,
-``uninstall()``, the global settings methods,
-``settings_modify_column()``, ``display_settings()``,
-and ``validate_settings()`` which is covered above. The idea is most
-fieldtypes should be able to use the same code to handle their field
-operations for both Grid and the normal publish form, but if not, you
-can easily override the behavior and run special operations when in the
-context of Grid.
+cell. This applies to all fieldtype methods except for the following:
+
+============================= ==========================
+Method                        Exception
+============================= ==========================
+``install()``                 No unique Grid method required
+``uninstall()``               No unique Grid method required
+``display_global_settings()`` No unique Grid method required
+``save_global_settings()``    No unique Grid method required
+``settings_modify_column()``  Must use Grid Column Settings methods
+``display_settings()``        Must use :meth:`~EE_Fieldtype::grid_display_settings`
+``validate_settings()``       Must use :meth:`~EE_Fieldtype::grid_validate_settings`
+============================= ==========================
+
+The idea is that most fieldtypes should be able to use the same code to
+handle their field operations for both Grid and the normal publish form,
+but if not, you can easily override the behavior and run special
+operations when in the context of Grid.
 
 If you use ``grid_*`` methods, you may want to look for ways to refactor
 your fieldtype where there is overlapping logic to run. For example,
