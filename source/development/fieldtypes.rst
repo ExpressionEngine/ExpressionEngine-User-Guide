@@ -843,7 +843,7 @@ between them for better code maintenance.
 Grid Javascript Events
 ======================
 
-Several Javscript events are fired on certain actions to let your
+Several Javascript events are fired on certain actions to let your
 fieldtypes know when those actions have taken place. Here is an
 overview.
 
