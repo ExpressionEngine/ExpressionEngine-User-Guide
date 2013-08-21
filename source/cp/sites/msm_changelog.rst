@@ -6,11 +6,12 @@ Version 2.1.6
 
 Release Date: ?
 
+- Added Grid compatibility.
 - Added the site label to the site deletion confirmation page.
 - Fixed a bug (#19352) where new installs had incorrect forgotten password
   instructions in their specialty templates.
 - Fixed a bug (#19589) in MSM where site deletion would fail with MySQL errors
-    if site creation was impossible due to table column limitations.
+  if site creation was impossible due to table column limitations.
 
 Version 2.1.5
 -------------
