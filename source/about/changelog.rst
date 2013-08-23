@@ -30,6 +30,8 @@ Release Date: ?
   - Removed the Corporate theme
   - Removed the ``use_mobile_control_panel`` hidden configuration item.
   - Renamed SafeCracker to Channel Form
+  - Relationships in channel form can now display their native UI using
+    the ``display_field`` or ``field:fieldname`` tags.
   - Added a second file type match to the mime configuration for docx files.
 
 - Bug Fixes:
@@ -119,17 +121,18 @@ Release Date: ?
     possible truncation of data.
   - Altered the 2.6.0 updater to be more specific when changing the forgotten
     password action records (#19586).
-  - Altered relationship fields to have an integer type column in 
+  - Altered relationship fields to have an integer type column in
     exp_channel_data.
-  - Altered default text type columns in exp_channel_data to allow NULL 
+  - Altered default text type columns in exp_channel_data to allow NULL
     consistently.
-  - Fixed a bug (#19615) where the channel calendar could show day of the week 
+  - Fixed a bug (#19615) where the channel calendar could show day of the week
     occurring on the wrong day due to localizing the days of the week.
-  - Fixed a bug (#19612) where the File Browser on the publish page did not 
+  - Fixed a bug (#19612) where the File Browser on the publish page did not
     limit the directories shown in the directory dropdown to the current site.
   - Fixed a reference to a removed view (#19611).
-  - Fixed a bug (#19621) where the latest comment date for an entry was being 
+  - Fixed a bug (#19621) where the latest comment date for an entry was being
     set incorrectly whenever it needed to be recalculated.
+  - Fixed a bug (#19661) where whitespace in figures was converted to newlines.
 
 - Developers:
 
