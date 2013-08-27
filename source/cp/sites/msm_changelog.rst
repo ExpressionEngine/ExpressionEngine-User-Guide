@@ -4,7 +4,7 @@ Multiple Site Manager
 Version 2.1.6
 -------------
 
-Release Date: ?
+Release Date: August 27, 2013
 
 - Added Grid compatibility.
 - Added the site label to the site deletion confirmation page.
