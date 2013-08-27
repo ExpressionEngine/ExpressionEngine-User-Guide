@@ -35,6 +35,19 @@ formatted this way.
 .. note:: By default, all entries and comments are assigned to this
 	formatting option.
 
+Markdown
+--------
+
+The *Markdown* option parses all of your content through `a Markdown
+parser <http://michelf.ca/projects/php-markdown/extra/>`_ and `a
+SmartyPants parser <http://michelf.ca/projects/php-smartypants/>`_—the
+parser follows `Jon Gruber's implementation of Markdown
+<http://daringfireball.net/projects/markdown/>`_ for the most part, but
+adds a few things as well. SmartyPants transforms normal quotes into
+curly quotes, consecutive dashes into en (``--`` into –) and em (``---``
+into —) dashes, and three consecutive periods into an ellipsis (``...``
+into …).
+
 Auto BR
 -------
 

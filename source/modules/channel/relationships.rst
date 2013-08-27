@@ -884,3 +884,10 @@ to examine for parents. To this, use the channel parameter::
 This lets us declare which channel we want to look for parent entries in.  Only
 that channel will be examined.
 
+Grid Compatibility
+------------------
+
+The Relationships field can be used as a Grid field column. Currently it
+is not possible to get the parents of a relationship field that is inside
+of a Grid field. You can also not use Relationships inside of a Grid field
+that does not store Channel data.
