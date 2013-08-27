@@ -21,6 +21,8 @@ in your Channel Entries (add-ons can include their own as well):
 #. **File**: File fields store uploaded files and images, and utilize
    the build in file browser for your publishers to upload and insert
    files.
+#. **Grid**: The Grid field in ExpressionEngine provides a way to group
+   fieldtypes in repeatable rows.For more information see :doc:`/modules/channel/grid`.
 #. **Multi Select**: Multi Select field types give a list of options in
    a standard multiple selection form control, letting publishers choose
    any or none of the available items.
