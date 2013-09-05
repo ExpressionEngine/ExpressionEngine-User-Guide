@@ -137,7 +137,8 @@ Processing Requests
 
 Accessories have the ability to process requests for actions like AJAX
 calls. Methods designed for this purpose must have a ``process_``
-prefix. For example, the the following URL could be called ``C=addons_ac
-cessories&M=process_request&accessory=my_accessory&method=process_sample
-_process`` that requests the process_sample_process method in
-``my_accessory``.
+prefix. For example, the the following URL could be called ::
+
+  C=addons_accessories&M=process_request&accessory=my_accessory&method=example
+
+This will request the ``process_example`` method in ``my_accessory``.
