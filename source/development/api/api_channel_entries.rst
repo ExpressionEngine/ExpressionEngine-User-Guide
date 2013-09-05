@@ -154,6 +154,8 @@ Send Pings
 
 .. method:: send_pings($ping_servers, $channel_id, $entry_id[, $send_now = TRUE])
 
+  .. deprecated:: 2.7
+
   This function sends pings to a list of ping servers. The
   ``submit_new_entry()`` and ``update_entry()`` functions will
   automatically send pings if given ``ping_servers`` in their data

@@ -5,7 +5,18 @@ Create a New Channel
 
 **Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Channels`
 
-|Channel Create|
+.. image:: ../../../images/channel_create.png
+
+Full Channel Name
+~~~~~~~~~~~~~~~~~
+
+The "full channel name" is the descriptive name for the channel. This is
+the name of your channel that you will show to visitors and display on
+your site.
+
+The full channel name is a required field. Spaces, punctuation, and
+other special characters are allowed. For example, the channel's
+descriptive name might be Joe's Personal Channel.
 
 Short Name
 ~~~~~~~~~~
@@ -18,17 +29,6 @@ shown to visitors or otherwise exposed outside of your channel "setup".
 The channel's short name is a required field. It must be a single word
 with no spaces. The underscore character is allowed. For example, the
 channel's "short name" might be joe\_channel.
-
-Full Channel Name
-~~~~~~~~~~~~~~~~~
-
-The "full channel name" is the descriptive name for the channel. This is
-the name of your channel that you will show to visitors and display on
-your site.
-
-The full channel name is a required field. Spaces, punctuation, and
-other special characters are allowed. For example, the channel's
-descriptive name might be Joe's Personal Channel.
 
 Duplicate existing channel's preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -53,28 +53,8 @@ Status Group
 
 Allows you to select the Status Group to assign to this channel
 
-Field Group
-^^^^^^^^^^^
+Channel Field Group
+^^^^^^^^^^^^^^^^^^^
 
 Allows you to select the Channel Field Group to assign to this channel
 
-Create New Templates For This Channel?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-With this setting you can specify whether you would like Templates and a
-Template Group to be automatically created. If you choose to have
-Templates created then you can base them off of either one of the
-default "Themes" or from an existing Template Group.
-
-ExpressionEngine will go through the Templates and attempt to update
-them for use with the newly created channel. This would include things
-such as altering the channel="default\_site" parameter in channel
-entries tags. ExpressionEngine cannot always be 100% accurate in this so
-you're encouraged to go through the Templates and ensure they are
-correct. The system will also not be able to do things such as place
-your channel entry field variables in the Template.
-
-The feature should greatly help get you on your way when creating a new
-channel, though.
-
-.. |Channel Create| image:: ../../../images/channel_create.png

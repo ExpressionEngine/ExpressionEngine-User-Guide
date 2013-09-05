@@ -5,7 +5,7 @@ Query
 .. contents::
    :local:
    :depth: 1
-   
+
 ************
 Introduction
 ************
@@ -19,13 +19,24 @@ queries, returning results from your database without having to use PHP. ::
 
 You may use any standard SELECT query you want and the syntax used is
 identical to a regular SQL query. You may only use SELECT statements;
-it will not process UPDATE or DELETE queries. 
+it will not process UPDATE or DELETE queries.
 
 .. note:: To take full advantage of this tag's power you will need to have a good
    understanding of SQL querying.
 
 .. note:: The Query Module is available only with a `purchased <https://store.ellislab.com/>`_
   ExpressionEngine license.
+
+
+****************************
+Template Tags Inside Queries
+****************************
+
+Using template tags as part of your query is strongly discouraged. All user
+input, including segments, must be properly validated and escaped before
+use inside of a query. Please review the :ref:`SQL Injection Prevention
+Guidelines <dev_guidelines_sql_injection_prevention>` for more information.
+
 
 ******************************
 Selecting Fields and Variables

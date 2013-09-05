@@ -5,6 +5,229 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.7.0
+-------------
+
+Release Date: August 27, 2013
+
+- General Changes:
+
+  - Added a new fieldtype called :doc:`Grid </modules/channel/grid>` for
+    grouping fieldtypes in repeatable rows.
+  - Added support for New Relic performance monitoring
+  - Added Markdown plugin and field formatting option.
+  - Added <, >, <=, and >= numeric comparison operators to the Channel
+    Entries search parameter.
+  - Added ``{entry_id}`` and ``{url_title}`` variables to the channel
+    category archive tag.
+  - Added ``{current_query_string}`` global variable
+  - Merged the safecracker_file field into the default file field.
+  - All files regardless of type are now linked for viewing in the File
+    Manager.
+  - Added GET support for Dynamic Parameters in Channel Entries tags
+  - Removed the Updated Sites module
+  - Removed the ability to ping other sites
+  - Removed the Corporate theme
+  - Removed the ``use_mobile_control_panel`` hidden configuration item.
+  - Renamed SafeCracker to Channel Form
+  - Relationships in channel form can now display their native UI using
+    the ``display_field`` or ``field:fieldname`` tags.
+  - Added a second file type match to the mime configuration for docx files.
+
+- Bug Fixes:
+
+  - Added a second file type match to the mime configuration for docx files.
+  - Quoted-printable encoding of email Subject line made more intelligent.
+  - Fixed a bug (#19433) where there were problems submitting a channel
+    field form that had failed form validation.
+  - Fixed a bug where SafeCracker did not respect the default_entry_title
+    and url_title_prefix settings.
+  - Fixed a bug where SafeCracker validation would not correctly set the
+    new value from a prepping validation function.
+  - Updated the relationship parser to handle a few of the more esoteric
+    nesting cases more gracefully.
+  - Fixed a bug (#19351) where some conditionals with multiple prefixes
+    were not parsed correctly if the channel was related to itself.
+  - Fixed a bug (#19414) where the forgotten password tool on the front end
+    redirected to a blank page on submit due to the installer putting the wrong
+    actions in the database.
+  - Fixed a bug (#19405) where the Rich Text Editor did not always render with XHTML.
+  - Fixed a bug (#19425) where the Rich Text Editor reduced extraneous whitespace
+    too greedily.
+  - Fixed a bug where PHP 5.3 did not correctly sort relationship entries.
+  - Fixed a bug (#19353) where a PHP error could occur when switch database
+    debug settings in the control panel.
+  - Fixed a bug (#19352) where new sites had incorrect forgotten password
+    instructions added to their specialty templates.
+  - Fixed a bug (#19363) where a JavaScript error occurred on SafeCracker forms.
+  - Fixed a bug (#19360) where BBCode could create bad links when rank denial
+    was on and all HTML was allowed.
+  - Fixed a bug (#19367) where a MySQL error could occur when adding a new field
+    if no member groups were included in the publish author list.
+  - Fixed a bug (#19374) where a PHP error could occur using parent relationship
+    tags.
+  - Fixed a bug (#19378) where control panel redirects to the homepage could be
+    missing an ampersand.
+  - Fixed a bug (#19375) where the File Manager directory dropdown was not
+    limited to the current site.
+  - Fixed a bug (#19371) where removing the site themes directory would cause a
+    PHP error during installation.
+  - Fixed a bug (#19398) where a MySQL error could occur when editing an entry
+    with a relationship field sorted by date.
+  - Fixed a bug (#19382) where the 'Can change the author name' member group
+    permission was not properly implemented when editing entries by others.
+  - Fixed a bug (#19401) where a PHP notice of an undefined constant REQ in
+    Core.php could occur.
+  - Fixed a bug (#19410) where an error was falsely triggered when editing in
+    SafeCracker with the author_only parameter on.
+  - Fixed a bug (#19406) where a PHP error could occur when viewing someone
+    else's member profile on the frontend.
+  - Prefixed some RTE language keys to avoid collisions on the publish page
+    (#19444).
+  - Fixed a bug (#19453) where a PHP error could occur when editing old format
+    file fields that contain the full path instead of a file directory indicator.
+  - Fixed a bug (#19451) where the Communicate form did not default properly on
+    the member permission checkbox.
+  - Fixed a bug (#19448) in the member import where a PHP error could occur.
+  - Fixed a bug (#19458) where the update script created for 2.0 large databases
+    output improper database credentials.
+  - Fixed a bug (#19472) in the channel entries tag where month, day and year
+    parameters were not localized prior to use.
+  - Fixed a bug (#19460) where Super Admins could not login as another member if
+    using both cookies and sessions.
+  - Fixed a bug (#19489) where publish layouts weren't always properly updated
+    when field group assignments were switched.
+  - Fixed a bug (#19488) in the SafeCracker module where the dynamic_title
+    parameter had no effect.
+  - Fixed a bug (#19506) where the {comment_url_title_auto_path} variable in the
+    Next/Previous tags used the channel URL instead of the comment path URL.
+  - Fixed a bug (#19509) in the comment entries tag where dynamic="no" did not
+    affect the returned data.
+  - Fixed a security bug where certain form parameters could be changed.
+  - Fixed a bug (#19553) in the forgotten password email where the name variable
+    was replaced with the username, which was inconsistent with other email
+    notification templates.
+  - Fixed a bug (#19528) in the Simple Commerce module where a PHP error
+    occurred on the purchases page of the control panel.
+  - Fixed a bug (#19529) where a PHP error could occur when viewing a member
+    profile other than your own on the frontend.
+  - Fixed a bug where if the current time is midnight, hours in date
+    fields were represented as zero for the US time format.
+  - Fixed a bug (#19578) where IP search results in the control panel had
+    incorrect links to the user profiles.
+  - Fixed a bug (#19590) in the 2.0 updater where the large database shell script
+    utf8 conversion did not specifically convert table columns.
+  - Altered the column size of site_preferences in the 2.0 update to prevent
+    possible truncation of data.
+  - Altered the 2.6.0 updater to be more specific when changing the forgotten
+    password action records (#19586).
+  - Altered relationship fields to have an integer type column in
+    exp_channel_data.
+  - Altered default text type columns in exp_channel_data to allow NULL
+    consistently.
+  - Fixed a bug (#19615) where the channel calendar could show day of the week
+    occurring on the wrong day due to localizing the days of the week.
+  - Fixed a bug (#19612) where the File Browser on the publish page did not
+    limit the directories shown in the directory dropdown to the current site.
+  - Fixed a reference to a removed view (#19611).
+  - Fixed a bug (#19621) where the latest comment date for an entry was being
+    set incorrectly whenever it needed to be recalculated.
+  - Fixed a bug (#19661) where whitespace in figures was converted to newlines.
+
+- Developers:
+
+  - New fieldtype method: :meth:`~EE_Fieldtype::validate_settings` fieldtype settings
+    can now be validated using the Form Validation library.
+  - Made the parent element's content type available to fieldtypes.
+  - Entry versioning now works more like autosave in that it stores
+    entry POST data, so it is easier for fieldtypes with external
+    storage strategies to support revisions.
+  - Added ``category_save`` hook that fires upon saving a new category
+    or editing an existing category.
+  - Added ``category_delete`` hook that fires when a category or its
+    parent category group is deleted.
+  - Fixed a bug (#19500) in the File_field::browser() where the file_field
+    parameter was output as a variable name rather than a string in the resulting
+    JavaScript.
+  - Renamed the safecracker hooks to use the ``channel_form_`` prefix
+    instead of ``safecracker_``. The old hooks are now deprecated.
+  - Removed ``server_timezone`` please always use the ``default_site_timezone``
+    config item.
+  - Removed ``server_timezone`` from the sites config array
+  - Removed ``default_site_dst`` from the sites config array
+  - Removed ``honor_entry_dst`` from the sites config array
+  - Dropped ``localization_is_site_default`` from the members table
+  - Dropped ``ping_return_url`` from the channel table
+  - Removed the following jquery tools plugins: ``overlay.apple``,
+    ``toolbox.history``, ``toolbox.mousewheel``, ``tooltip``, ``scrollable``
+  - Removed the following jquery plugins: ``crypt``, ``ee_focus``,
+    ``ee_upload``, ``fancybox``, ``simplemodal``, ``thickbox``
+  - Removed the example markitup button set.
+  - Added a ``custom_field_modify_data`` hook to modify custom field
+    information before it gets sent to the field.
+  - Deprecated Methods
+
+    - ``Api_channel_entries::send_pings``
+    - ``Member_model::get_localization_default``
+    - ``Filebrowser::frontend_filebrowser``
+
+
+Version 2.6.1
+-------------
+
+Release Date: May 6, 2013
+
+- General Changes:
+
+  - Increased the size of the Relationships reordering drag target.
+  - Made the Relationships field search box more conspicuous.
+  - Publish tabs that contain fields with form submission errors are now
+    marked with a flag.
+
+- Bug Fixes:
+
+  - Fixed a bug (#19322) where specifying ``custom_fields`` in the
+    disable parameter would cause an error.
+  - Fixed a bug (#17895) where the Rich Text Editor did not properly
+    apply heading changes.
+  - Fixed a bug (#18272) where text copied into an empty Rich Text
+    Editor was wrapped in span elements instead of paragraphs.
+  - Fixed bugs (#19225, #17932, #17956) where the Rich Text Editor did
+    not always handle newlines correctly.
+  - Fixed a bug (#19321) where updated Relationship fields would cause
+    an error if they were sorted by date.
+  - Fixed a bug (#19196) where Internet Explorer did not load jQuery
+    into an iframe unless the ``src`` attribute was set after adding the
+    iframe to the DOM.
+  - Fixed a bug (#19257) where hitting enter in the filebrowser search
+    box would submit the publish form.
+  - Fixed a bug (#19339) where ``{date_footer}`` was shown improperly.
+  - Fixed a bug (#19337) where variables added to the channel row data
+    from an extension hook where not always replaced correctly.
+  - Fixed a bug (#19346) where ``{page_url}`` was not replaced
+    correctly.
+  - Fixed a bug (#19326) where email could generate a PHP error when
+    using Sendmail.
+  - Fixed a bug (#19327) in the 2.0 updater where an error could occur
+    if a template was set to a custom template type.
+  - Fixed a bug (#19328) where a MySQL error could occur on the publish
+    page if no member groups were assigned to the author dropdown.
+  - Fixed a bug (#19331) where a PHP error occurred when exporting
+    template groups.
+  - Fixed a bug (#19335) where status was not properly set using a
+    SafeCracker form.
+  - Fixed a bug (#19342) where a PHP errors was thrown when importing
+    members with custom fields.
+  - Fixed a bug(#19338) introduced in 2.6.0 where certain sessions could
+    not be destroyed by logging out.
+  - Altered SmartForge library to ignore strict mode warnings when
+    altering database fields (bug #19330).
+  - Fixed a security bug where a non Super Admin with Member
+    Administration access could create Super Admins.
+  - Fixed a bug (#19329) where the installer may fail in earlier
+    versions of PHP.
+
+
 Version 2.6.0
 -------------
 

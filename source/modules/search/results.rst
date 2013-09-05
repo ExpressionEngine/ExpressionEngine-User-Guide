@@ -13,36 +13,38 @@ Search Results Tag
 The Search Results Tag controls how you display results from your
 searches. Example::
 
-	<table border="0" cellpadding="6" cellspacing="1" width="100%">
-	    <tr>    
-	        <th>{lang:title}</th>
-	        <th>{lang:excerpt}</th>
-	        <th>{lang:author}</th>
-	        <th>{lang:date}</th>
-	        <th>{lang:total_comments}</th>
-	        <th>{lang:recent_comments}</th>
-	    </tr>
-	
-	{exp:search:search_results switch="resultRowOne|resultRowTwo"}
-	
-	    <tr class="{switch}">
-	        <td width="30%" valign="top"><b><a href="{auto_path}">{title}</a></b></td>
-	        <td width="30%" valign="top">{excerpt}</td>
-	        <td width="10%" valign="top"><a href="{member_path='member/index'}">{author}</a></td>
-	        <td width="10%" valign="top">{entry_date format="%m/%d/%y"}</td>
-	        <td width="10%" valign="top">{comment_total}</td>
-	        <td width="10%" valign="top">{recent_comment_date format="%m/%d/%y"}</td>
-	    </tr>
-	    
-	    {if count == total_results}
-	        </table>
-	    {/if}
-	    
-	    {paginate}
-	        <p>Page {current_page} of {total_pages} pages {pagination_links}</p>
-	    {/paginate}
-		
-	{/exp:search:search_results}
+  <table border="0" cellpadding="6" cellspacing="1" width="100%">
+      <tr>
+          <th>{lang:title}</th>
+          <th>{lang:excerpt}</th>
+          <th>{lang:author}</th>
+          <th>{lang:date}</th>
+          <th>{lang:total_comments}</th>
+          <th>{lang:recent_comments}</th>
+      </tr>
+
+  {exp:search:search_results switch="resultRowOne|resultRowTwo"}
+
+      <tr class="{switch}">
+          <td width="30%" valign="top"><b><a href="{auto_path}">{title}</a></b></td>
+          <td width="30%" valign="top">{excerpt}</td>
+          <td width="10%" valign="top"><a href="{member_path='member/index'}">{author}</a></td>
+          <td width="10%" valign="top">{entry_date format="%m/%d/%y"}</td>
+          <td width="10%" valign="top">{comment_total}</td>
+          <td width="10%" valign="top">{recent_comment_date format="%m/%d/%y"}</td>
+      </tr>
+
+      {if count == total_results}
+          </table>
+      {/if}
+
+      {paginate}
+          <p>Page {current_page} of {total_pages} pages {pagination_links}</p>
+      {/paginate}
+
+  {/exp:search:search_results}
+
+  </table>
 
 Pagination follows the :doc:`Channel style of pagination
 </modules/channel/pagination_page>`.
@@ -186,7 +188,7 @@ search. It is used on the search results page to show the total number
 of matches::
 
 	{exp:search:total_results}
-	
+
 This may also be used on the template specified by the
 :ref:`no_result_page <search_advanced_no_result_page>` parameter of the
 :doc:`simple search form <simple>` and :doc:`advanced search form

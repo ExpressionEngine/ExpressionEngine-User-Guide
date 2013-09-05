@@ -2,7 +2,7 @@ Localize Class
 ==============
 
 .. contents::
-	:local:
+  :local:
 
 .. highlight:: php
 
@@ -20,7 +20,7 @@ benefit of doing so is that each member of an EE site can choose their
 own timezone and date localization settings. This permits entries and
 other information containing dates/times to appear in each member's
 local time. ExpressionEngine uses the date/time and localization
-functions available in the Localize class to set and display dates and
+methods available in the Localize class to set and display dates and
 times throughout the application.
 
 This class is initialized by the system automatically so there is no
