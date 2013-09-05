@@ -4,13 +4,13 @@ Rich Text Editor
 .. contents::
    :local:
    :depth: 1
-   
+
 Introduction
 ------------
 
-ExpressionEngine's built-in Rich Text Editor (RTE) is usually used 
+ExpressionEngine's built-in Rich Text Editor (RTE) is usually used
 inside the Control Panel. This module allows you to also use the RTE
-outside of the Control Panel, in your site's front-end templates. 
+outside of the Control Panel, in your site's front-end templates.
 
 Its primary purpose is to output the URL of the RTE's JavaScript and
 apply it to the desired elements (usually textareas) in your templates.
@@ -20,8 +20,8 @@ document's **head** element::
 
 	<script type="text/javascript" src="{exp:rte:script_url selector=".my-class"}"></script>
 
-.. important:: If you're using :doc:`SafeCracker </modules/safecracker/index>`,
-   it's preferable to use the :ref:`safecracker_rte_selector` parameter instead
+.. important:: If you're using the :doc:`Channel Form </modules/channel/channel_form/index>`,
+   it's preferable to use the :ref:`channel_form_rte_selector` parameter instead
    of this module's tag.
 
 Parameters
@@ -73,5 +73,5 @@ See the :doc:`control_panel/index` page.
 	:glob:
 	:titlesonly:
 	:hidden:
-	
+
 	control_panel/index

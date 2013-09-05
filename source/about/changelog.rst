@@ -8,7 +8,7 @@ ExpressionEngine 2.x Change Log
 Version 2.7.0
 -------------
 
-Release Date: ?
+Release Date: August 27, 2013
 
 - General Changes:
 
@@ -30,6 +30,8 @@ Release Date: ?
   - Removed the Corporate theme
   - Removed the ``use_mobile_control_panel`` hidden configuration item.
   - Renamed SafeCracker to Channel Form
+  - Relationships in channel form can now display their native UI using
+    the ``display_field`` or ``field:fieldname`` tags.
   - Added a second file type match to the mime configuration for docx files.
 
 - Bug Fixes:
@@ -102,12 +104,41 @@ Release Date: ?
   - Fixed a bug (#19509) in the comment entries tag where dynamic="no" did not
     affect the returned data.
   - Fixed a security bug where certain form parameters could be changed.
+  - Fixed a bug (#19553) in the forgotten password email where the name variable
+    was replaced with the username, which was inconsistent with other email
+    notification templates.
+  - Fixed a bug (#19528) in the Simple Commerce module where a PHP error
+    occurred on the purchases page of the control panel.
+  - Fixed a bug (#19529) where a PHP error could occur when viewing a member
+    profile other than your own on the frontend.
+  - Fixed a bug where if the current time is midnight, hours in date
+    fields were represented as zero for the US time format.
+  - Fixed a bug (#19578) where IP search results in the control panel had
+    incorrect links to the user profiles.
+  - Fixed a bug (#19590) in the 2.0 updater where the large database shell script
+    utf8 conversion did not specifically convert table columns.
+  - Altered the column size of site_preferences in the 2.0 update to prevent
+    possible truncation of data.
+  - Altered the 2.6.0 updater to be more specific when changing the forgotten
+    password action records (#19586).
+  - Altered relationship fields to have an integer type column in
+    exp_channel_data.
+  - Altered default text type columns in exp_channel_data to allow NULL
+    consistently.
+  - Fixed a bug (#19615) where the channel calendar could show day of the week
+    occurring on the wrong day due to localizing the days of the week.
+  - Fixed a bug (#19612) where the File Browser on the publish page did not
+    limit the directories shown in the directory dropdown to the current site.
+  - Fixed a reference to a removed view (#19611).
+  - Fixed a bug (#19621) where the latest comment date for an entry was being
+    set incorrectly whenever it needed to be recalculated.
+  - Fixed a bug (#19661) where whitespace in figures was converted to newlines.
 
 - Developers:
 
-  - New fieldtype method: ``validate_settings()``; fieldtype settings
-    can now be validated using the Form Validation library. TODO: Link
-    when docs are ready.
+  - New fieldtype method: :meth:`~EE_Fieldtype::validate_settings` fieldtype settings
+    can now be validated using the Form Validation library.
+  - Made the parent element's content type available to fieldtypes.
   - Entry versioning now works more like autosave in that it stores
     entry POST data, so it is easier for fieldtypes with external
     storage strategies to support revisions.

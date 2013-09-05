@@ -183,14 +183,17 @@ Checking for Errors
         }
     }
 
-  You can also take advantage of the ``show_user_error()`` method from
-  the Output class to generate an ExpressionEngine style error page:
+  You can also take advantage of ExpressionEngine's error display methods
+  to generate a more UI consistent error page.
 
   ::
 
     if ( ! empty(ee()->xmlparser->errors))
     {
-        ee()->output->show_user_error('general', ee()->xmlparser->errors);
-        exit;
+      // frontend
+      ee()->output->show_user_error('general', ee()->xmlparser->errors);
+
+      // control panel
+      show_error(ee()->xmlparser->errors);
     }
 

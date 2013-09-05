@@ -1,14 +1,14 @@
-SafeCracker Development
-=======================
+Channel Form Development
+========================
 
 .. contents::
    :local:
    :depth: 1
 
-.. _safecracker_development_fieldtype:
+.. _channel_form_development_fieldtype:
 
-Getting your custom fieldtype to work with SafeCracker
-------------------------------------------------------
+Getting your custom fieldtype to work with the Channel Form
+-----------------------------------------------------------
 
 Use one or more of these methods to get javascript and css in your
 display\_field method.
@@ -35,7 +35,7 @@ by::
 	ee()->cp->add_js_script(array('ui' => array('sortable', 'tabs')));
 	ee()->cp->add_js_script('plugin', 'tablesorter');
 
-.. _safecracker_development_hooks:
+.. _channel_form_development_hooks:
 
 Extension Hooks
 ---------------
@@ -43,21 +43,21 @@ Extension Hooks
 .. contents::
    :local:
 
-safecracker\_submit\_entry\_start
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+channel_form\_submit\_entry\_start
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
-	ee()->extensions->call('safecracker_submit_entry_start', $this);
+	ee()->extensions->call('channel_form_submit_entry_start', $this);
 
-where **$this** is the SafeCracker library object.
+where **$this** is the Channel Form library object.
 
-safecracker\_submit\_entry\_end
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+channel_form\_submit\_entry\_end
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
-	ee()->extensions->call('safecracker_submit_entry_end', $this);
+	ee()->extensions->call('channel_form_submit_entry_end', $this);
 
-where **$this** is the SafeCracker library object.
+where **$this** is the Channel Form library object.
 

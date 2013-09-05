@@ -288,3 +288,23 @@ Formatting Characters for XHTML ("Light" Typography)
   :param string $str: Text to apply character formatting to
   :returns: Character formatted text
   :rtype: String
+
+Markdown
+--------
+
+.. method:: markdown($str[, $options = array()])
+
+  This method lets you parse your content using Markdown and
+  Smartypants::
+
+    $str = ee()->typography->markdown($str);
+
+  :param string $str: String to parse
+  :param array $options: Associative array containing options:
+
+    - ``encode_ee_tags`` (``yes``/``no``) can be used to disable ee tag
+      encoding
+    - ``smartypants`` (``yes``/``no``) enable or disable smartypants
+
+  :returns: Parsed Markdown content
+  :rtype: String

@@ -12,9 +12,9 @@ The Channel Module provides the following tags and features:
 -  :doc:`Channel Entries Tag <channel_entries>`
 -  :doc:`Custom Fields <custom_fields>`
 -  :doc:`Next/Prev Entry Linking <entry_linking>`
--  :doc:`Relationships <relationships>`
+-  :doc:`Relationships Field <relationships>`
 -  :doc:`Grid Field <grid>`
--  :doc:`Adding and Editing Entries from Outside the Control Panel <../safecracker/index>`
+-  :doc:`Adding and Editing Entries from Outside the Control Panel <channel_form/index>`
 -  :doc:`Calendar Tag <calendar>`
 -  :doc:`Archive Month Links Tag <archive_month_links>`
 -  :doc:`Channel Categories Tag <categories>`
@@ -22,7 +22,6 @@ The Channel Module provides the following tags and features:
 -  :doc:`Category Heading Tag <category_heading>`
 -  :doc:`Channel Information Tag <channel_info>`
 -  :doc:`Channel Entry and Comment Pagination <pagination_page>`
--  :doc:`Stand-Alone Entry Form (deprecated) <entry_form>`
 
 .. toctree::
 	:glob:
@@ -30,3 +29,4 @@ The Channel Module provides the following tags and features:
 	:hidden:
 
 	*
+	channel_form/index
