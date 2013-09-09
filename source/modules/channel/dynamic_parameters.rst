@@ -54,5 +54,9 @@ being used.
 	    <input type="submit" value="Go!" />
 	</form>
 
+.. note:: If you have Secure Forms turned ON, you will need to add a
+  hidden input for the XID. ::
+    <input type="hidden" name="XID" value="{XID_HASH}" />
+
 .. note:: If you have pagination links on your page they will not retain
 	the page layout options created dynamically using this feature.
