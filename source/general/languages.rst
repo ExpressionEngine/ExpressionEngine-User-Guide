@@ -10,8 +10,8 @@ Manager module.
 .. note:: These language packs do **not** automatically translate the
    content of your site.
 
-.. note:: Since these language packs are contributed by the members of the 
-   community, we are not responsible for the accuracy of the translations. If 
+.. note:: Since these language packs are contributed by the members of the
+   community, we are not responsible for the accuracy of the translations. If
    something looks wrong to you, we recommend you :ref:`send us a pull request on GitHub <contributing_to_language_packs>` with the corrected translation.
 
 Downloading Language Packs
@@ -67,11 +67,11 @@ supports 1.x.
 
 If you want to contribute to a language pack, find the language pack you
 want to modify, `fork the repository
-<https://help.github.com/articles/fork-a-repo>`_, make sure you’re
+<https://help.github.com/articles/fork-a-repo>`_, make sure you're
 working from the correct branch, work on your changes `inside of a
 feature branch <https://help.github.com/articles/fork-a-repo>`_, push
 your changes to your fork of the repository, and `send us a pull request
-<https://help.github.com/articles/using-pull-requests>`_. Then, we’ll
+<https://help.github.com/articles/using-pull-requests>`_. Then, we'll
 take a look at your pull request, make sure everything looks alright,
 and merge it in.
 

@@ -33,7 +33,7 @@ The Main File View shows the following columns:
 
 |File Manager Quick Look|
 
-Clicking on an image’s File Name will bring up an overlay showing you
+Clicking on an image's File Name will bring up an overlay showing you
 the image.
 
 Uploading Files
@@ -49,7 +49,7 @@ select your file and click Upload File.
 
 |File Manager File Upload Success|
 
-After the file is uploaded, you’ll be shown a summary of the file,
+After the file is uploaded, you'll be shown a summary of the file,
 including a thumbnail and some file details. Note that the filename is
 automatically sanitized to remove spaces and other disallowed characters
 and the file renamed if necessary.
@@ -57,7 +57,7 @@ and the file renamed if necessary.
 |image5|
 
 If you close the dialog by either clicking the close button in the top
-right corner or by clicking Browse Files on the bottom, you’ll be shown
+right corner or by clicking Browse Files on the bottom, you'll be shown
 the file table again, with the most recent file on the top.
 
 File Actions

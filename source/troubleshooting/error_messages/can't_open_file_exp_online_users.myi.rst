@@ -1,4 +1,4 @@
-Can’t open file: exp\_online\_users.MYI
+Can't open file: exp\_online\_users.MYI
 =======================================
 
 ExpressionEngine returns the following error: **"Can't open file:

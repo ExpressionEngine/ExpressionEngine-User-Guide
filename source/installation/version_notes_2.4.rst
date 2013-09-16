@@ -4,10 +4,10 @@ Update Notes for Version 2.4
 Added Developer Constants
 -------------------------
 
-For add-on developers we’ve introduced two new constants: ``URL_THEMES_THIRD``
+For add-on developers we've introduced two new constants: ``URL_THEMES_THIRD``
 and ``PATH_THEMES_THIRD``. These two constants point to the URL and the path of
-the themes/third_party/ directory. We’d like you to start using these right
-away and have your add-ons using them by our next major release because we’ll
+the themes/third_party/ directory. We'd like you to start using these right
+away and have your add-ons using them by our next major release because we'll
 be introducing two new config variables that allow you to change the value of
 these constants. This means that in conjunction with the new ``third_party_path``
 config variable, you can keep your third_party folders completely out of the
