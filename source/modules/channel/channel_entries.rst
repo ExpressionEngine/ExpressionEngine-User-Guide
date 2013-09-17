@@ -568,7 +568,7 @@ orderby=
 
 	orderby="date"
 
-The "order" parameter sets the display order of the entries. Setting
+The ``orderby`` parameter sets the display order of the entries. Setting
 options for this parameter include:
 
 -  ``orderby="comment_total"``
