@@ -18,14 +18,14 @@ Server Requirements
 -  The MySQL user connecting to the database must have the following
    privileges:
 
-  -  SELECT
-  -  INSERT
-  -  UPDATE
-  -  DELETE
-  -  CREATE
-  -  INDEX
-  -  ALTER
-  -  DROP
+  -  ``SELECT``
+  -  ``INSERT``
+  -  ``UPDATE``
+  -  ``DELETE``
+  -  ``REATE``
+  -  ``INDEX``
+  -  ``ALTER``
+  -  ``DROP``
 
   .. _server-wizard:
 
