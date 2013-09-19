@@ -1,51 +1,54 @@
 System Requirements
 ===================
 
-We have created a `Server Wizard <http://ellislab.com/asset/file/ee_server_wizard.zip>`_ that
-will verify whether your server is compatible with ExpressionEngine. To
-use the Wizard:
+Server Requirements
+-------------------
+
+-  `PHP <http://www.php.net/>`_ 5.2.4 or newer, compiled with the
+   `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_ library
+-  `MySQL <http://www.mysql.com/>`_ 5.0.3 or newer
+-  At least 32 MB memory allocated to PHP
+-  At least 10 MB of available disk space for the ExpressionEngine
+   software and modules
+-  At least 2 MB of database space
+
+   .. note:: Disk space usage and the database size will increase as
+      content is added.
+
+-  The MySQL user connecting to the database must have the following
+   privileges:
+
+  -  SELECT
+  -  INSERT
+  -  UPDATE
+  -  DELETE
+  -  CREATE
+  -  INDEX
+  -  ALTER
+  -  DROP
+
+  .. _server-wizard:
+
+Server Compatibility Wizard
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you're not sure whether your server meets the minimum requirements,
+the server wizard will run some tests and give you an answer.
 
 -  `Download <http://ellislab.com/asset/file/ee_server_wizard.zip>`_
    and unzip the archive.
 -  Upload the folder to your server.
 -  Point your web browser to the folder. For example:
-   http://example.com/ee_wizard
+   ``http://example.com/ee_wizard``
 
-Server Requirements
--------------------
 
--  `PHP <http://www.php.net/>`_ version 5.2.4 or newer
--  `MySQL <http://www.mysql.com/>`_ version 5.0.3 or newer
--  32M memory allocated to PHP
--  Your hosting account must have the following minimum MySQL grant
-   privileges for database tables:
+CP Browser Requirements
+-----------------------
 
-   -  SELECT
-   -  INSERT
-   -  UPDATE
-   -  DELETE
-   -  CREATE
-   -  INDEX
-   -  ALTER
-   -  DROP
-
--  10 MB of free space on your server for the ExpressionEngine software
-   and modules.
--  2 MB of Database space.
-
-   .. note:: The database will increase in size as you add new content.
-
--  The `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_
-   library compiled into PHP.
-
-Browser Requirements
----------------------
-
-The ExpressionEngine Control Panel is tested extensively with the
+ExpressionEngine's Control Panel is tested extensively with the
 final-release versions of the web browsers listed here. Please note that
 these are the minimum browser requirements necessary to use the Control
-Panel. These requirements do not necessarily apply to an
-ExpressionEngine-powered website's front-end pages.
+Panel. They will not apply to your site's front-end pages.
 
 - Internet Explorer 8 and above
 - Firefox 13
@@ -59,20 +62,20 @@ ExpressionEngine-powered website's front-end pages.
 Optional Requirements
 ---------------------
 
-Some features of ExpressionEngine are optional to use. However, in order
-to be able to use them you will need to meet their requirements.
+Spell Check
+^^^^^^^^^^^
 
--  **Spell Checking.** In order to be able to use the spell check
-   feature in ExpressionEngine, your server must have PHP compiled with
-   `pspell <http://us2.php.net/pspell>`_ support **or** be able to
-   contact remote servers though PHP. If you are unsure if this is the
-   case, contact your Host or server admin.
--  **Multibyte Support**  For full support of multibyte encodings you must
-   set mbstring.func_overload to 6 in your server configuration.  This may
-   be done by editing your  your php.ini file as per the below and then
-   restarting:
+To use the spell check feature, your server must have PHP compiled with
+`pspell <http://us2.php.net/pspell>`_ support or be able to contact
+remote servers though PHP. If you are unsure if your server is set up
+for this, ask your web host or server admin to check for you.
 
-::
+Multibyte Support
+^^^^^^^^^^^^^^^^^
+
+For full support of multibyte encodings, ask your web host or server
+admin to set ``mbstring.func_overload`` to ``6`` in your server
+configuration by editing ``php.ini`` as shown below::
 
 	; overload(replace) single byte functions by mbstring functions.
 	; mail(), ereg(), etc are overloaded by mb_send_mail(), mb_ereg(),
@@ -89,28 +92,20 @@ Notes
 -----
 
 Apache Server
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
-If you are hosted on an Apache server it needs to be configured with
-AcceptPathInfo On for the URLs to work with the default settings. Most
-server are configured this way, but if yours is **not** then there are
-three options:
+If you are hosted on an Apache server, the ``AcceptPathInfo`` option
+needs to be enabled for URLs to work properly. Most servers are
+configured this way by default, but if yours is not, you have a few
+options:
 
-#. Manually turn that feature on using a .htaccess file.
-#. Contact your Host or server admin to have them enable the option.
-#. Run your site using query strings. See the "Query String" section of
-   the :doc:`/urls/url_structure` page for details.
+- Include ``AcceptPathInfo On`` in your ``.htaccess`` file to enable it
+- Ask your web host or server admin to enable the option
+- Set your site's URLs to use :ref:`query strings <query-strings>`
 
 URL Segment Support
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
-If the Server Wizard lists URL Segment Support as *Unsupported*, you
-will need to run your ExpressionEngine site using query strings. The
-"Query String" section of the :doc:`/urls/url_structure`
-page contains more information.
-
-Getting Started
----------------
-
-Once you're sure that your server is compatible,
-:doc:`install ExpressionEngine</installation/installation>` and get started!
+If the :ref:`Server Compatibility Wizard <server-wizard>` lists URL
+Segment Support as *Unsupported*, you will need to set your site's URLs
+to use :ref:`query strings <query-strings>`.
