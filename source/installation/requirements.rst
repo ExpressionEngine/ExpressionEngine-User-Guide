@@ -75,7 +75,7 @@ Multibyte Support
 
 For full support of multibyte encodings, ask your web host or server
 admin to set ``mbstring.func_overload`` to ``6`` in your server
-configuration by editing ``php.ini`` as shown below::
+configuration by editing :file:`php.ini` as shown below::
 
 	; overload(replace) single byte functions by mbstring functions.
 	; mail(), ereg(), etc are overloaded by mb_send_mail(), mb_ereg(),
