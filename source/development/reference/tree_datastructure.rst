@@ -74,7 +74,7 @@ parent ids. The above data might look like this::
   );
 
 In order to turn this into a tree, we simply pass it to the
-:meth:`EE_Tree::from_list` method::
+:meth:`~EE_Tree::from_list` method::
 
     $root = ee()->tree->from_list($data);
 
@@ -94,7 +94,7 @@ It will return the root node of the tree for us. *Watch out:* Since the
 database result can frequently contain more than one relative root it
 will always return a blank root node with the actual tree as its
 children. If you know you only have one root, you can use the
-:meth:`EE_TreeNode::first_child` convenience method to move to your real
+:meth:`~EE_TreeNode::first_child` convenience method to move to your real
 root::
 
   if ( ! $root->is_leaf())
@@ -103,8 +103,8 @@ root::
   }
 
 If you want to disconnect the single parent completely, you should also
-call the :meth:`EE_TreeNode::subtree` method so that your new node
-responds correctly to :meth:`EE_TreeNode::is_root`::
+call the :meth:`~EE_TreeNode::subtree` method so that your new node
+responds correctly to :meth:`~EE_TreeNode::is_root`::
 
   if ( ! $root->is_leaf())
   {
@@ -162,7 +162,7 @@ payload data that you want it to have::
 
   $node = new EE_TreeNode('Lennie', array('friend' => 'George'));
 
-The name can be accessed with the :meth:`EE_TreeNode::name` function::
+The name can be accessed with the :meth:`~EE_TreeNode::name` function::
 
   echo $node->name(); // prints "Lennie"
 
@@ -171,7 +171,7 @@ from the node::
 
   echo $node->friend; // prints "George"
 
-The full data is available through the :meth:`EE_TreeNode::data`
+The full data is available through the :meth:`~EE_TreeNode::data`
 method::
 
   $data = $node->data();
@@ -249,7 +249,7 @@ remember which nodes had children.
 leaf_iterator()
 ~~~~~~~~~~~~~~~
 
-This iterator only visits nodes that do not have parents of their own.
+This iterator only visits nodes that do not have children of their own.
 
 ::
 
@@ -289,7 +289,7 @@ EE_Tree
 
   :param EE_TreeNode $tree: :class:`EE_TreeNode` object
   :returns: Similar data structure to what was passed to
-    :meth:`EE_Tree::from_list`
+    :meth:`~EE_Tree::from_list`
   :rtype: Array
 
 EE_TreeNode
@@ -328,7 +328,7 @@ EE_TreeNode
   Notifies the child of its parent and adds the child name to the child
   name array. Does not enforce unique names since it may be desirable to
   have non-unique named children. It's on the developer to not rely on
-  the :meth:`EE_TreeNode::get` method in that case.
+  the :meth:`~EE_TreeNode::get` method in that case.
 
   :param EE_TreeNode $child: EE_TreeNode to add as a child
   :rtype: Void
@@ -437,7 +437,7 @@ EE_TreeNode
 
   This is a shallow copy! The root node you receive is a clone, but its
   children remain on the tree. If you need a clone for anything other
-  than traversal, consider using the :meth:`EE_TreeNode::subtree_copy`
+  than traversal, consider using the :meth:`~EE_TreeNode::subtree_copy`
   method instead.
 
   :returns: A shallow copy of the tree starting at the current node
@@ -449,7 +449,7 @@ EE_TreeNode
 
   Clones the current node and all of its children. This is a deep
   copy, everything will be cloned. If all you need is a new root
-  for traversal, consider using :meth:`EE_TreeNode::subtree` instead.
+  for traversal, consider using :meth:`~EE_TreeNode::subtree` instead.
 
   :returns: Full subtree copy from the current node
   :rtype: EE_TreeNode

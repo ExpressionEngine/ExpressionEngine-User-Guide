@@ -71,9 +71,9 @@ Enabling and Disabling Toolsets
 To enable or disable a Toolset, click the desired action under the **Status**
 column.
 
-A disabled Toolset will not appear as a choice to members, but can still be 
-referred to by ID. This is useful in combination with SafeCracker's
-:ref:`safecracker_rte_selector` and :ref:`safecracker_rte_toolset_id` parameters,
+A disabled Toolset will not appear as a choice to members, but can still be
+referred to by ID. This is useful in combination with the Channel Form's
+:ref:`channel_form_rte_selector` and :ref:`channel_form_rte_toolset_id` parameters,
 for example.
 
 Deleting a Toolset

@@ -65,6 +65,7 @@ Modules
   global/email/index
   global/filemanager/index
   global/functions/index
+  global/grid/index
   global/member_model/index
   global/output/index
   global/pagination/index
