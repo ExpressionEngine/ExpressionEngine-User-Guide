@@ -20,12 +20,13 @@ Installation
 - :doc:`installation/requirements`
 - :doc:`installation/installation`
 
-Updates and Upgrades
-====================
+Updates & Upgrades
+==================
 
 - :doc:`installation/update`
 - :doc:`installation/upgrade_from_1.x`
 - :doc:`installation/upgrade_from_core`
+- :doc:`installation/version_notes`
 
 **********************
 Using ExpressionEngine
@@ -96,7 +97,7 @@ Optimizing ExpressionEngine
 Performance Monitoring
 ======================
 
-- :doc:`monitoring/new-relic`
+- :doc:`New Relic <monitoring/new-relic>`
 
 Solving Problems
 ================
