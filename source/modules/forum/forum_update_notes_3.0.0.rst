@@ -13,28 +13,28 @@ For each file (e.g. theme\_css.php) create a corresponding directory
 with the pattern forum\_css. ("theme\_" becomes "forum\_" and drop the
 ".php" extension.
 Open the theme file in a text editor and for every method in the file,
-create a correspondingly named .html file, and place that method’s
+create a correspondingly named .html file, and place that method's
 contents in that file.
 
 Example: for theme\_category.php create a directory named
-‘forum\_category’. In the original theme\_category.php file, you’ll
+'forum\_category'. In the original theme\_category.php file, you'll
 find::
 
 	function category_page() {
 		return <<< EOF
-		
+
 		{include:html_header}
 		{include:top_bar}
 		{include:page_header}
 		{include:page_subheader}
-		
+
 		<div id="content">
 			{include:main_forum_list}
 			{include:forum_legend}
 		</div>
-		
+
 		{include:html_footer}
-		
+
 	EOF;
 	}
 	 /* END */
@@ -51,7 +51,7 @@ category\_page.html, with the contents::
 		{include:main_forum_list}
 		{include:forum_legend}
 	</div>
-	
+
 	{include:html_footer}
 
 There is also a small :download:`standalone script

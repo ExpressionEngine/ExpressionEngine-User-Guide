@@ -6,7 +6,7 @@ Reviewing the notes below will help you transition to 1.5.1 with as
 little effort as possible.
 
 
-      
+
 
 CP Image Additions
 ------------------
@@ -49,4 +49,4 @@ that contains changes. To update your language pack, you can download
 this text file, make the changes, and simply copy the new keys to the
 appropriate language files.
 
-:ref:`Return to Update Page <update_additional_steps>`
+:ref:`Return to Update Page <update_cleanup>`

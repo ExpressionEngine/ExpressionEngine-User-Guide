@@ -1,5 +1,5 @@
-ExpressionEngine Version Update Notes
-=====================================
+Version Update Notes
+====================
 
 Please view the update notes for any versions that are newer than the
 version you upgraded from.
@@ -31,7 +31,9 @@ ExpressionEngine 2.x
 ExpressionEngine 1.x
 --------------------
 
--	:doc:`Version Notes 1.6.8 <version_notes_1.6.7>`
+-	:doc:`Version Notes 1.7.3 <version_notes_1.7.3>`
+-	:doc:`Version Notes 1.6.9 <version_notes_1.6.9>`
+-	:doc:`Version Notes 1.6.8 <version_notes_1.6.8>`
 -	:doc:`Version Notes 1.6.7 <version_notes_1.6.7>`
 -	:doc:`Version Notes 1.6.6 <version_notes_1.6.6>`
 -	:doc:`Version Notes 1.6.5 <version_notes_1.6.5>`
@@ -51,5 +53,3 @@ ExpressionEngine 1.x
 -	:doc:`Version Notes 1.2.1 <version_notes_1.2.1>`
 -	:doc:`Version Notes 1.2 <version_notes_1.2>`
 -	:doc:`Version Notes 1.1 <version_notes_1.1>`
-
-
