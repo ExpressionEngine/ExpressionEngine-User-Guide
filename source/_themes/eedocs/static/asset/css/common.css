@@ -160,7 +160,8 @@ fieldset{ border: 0; }
 }
 
 	.admonition p,
-	.versionchanged p{ margin: 0; }
+	.versionchanged p,
+	.deprecated p{ margin: 0; }
 	
 	.codeblock{ margin: 10px 0; }
 	

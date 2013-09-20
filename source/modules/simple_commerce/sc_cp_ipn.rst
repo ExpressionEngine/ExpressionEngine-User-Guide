@@ -14,7 +14,7 @@ finalized.
 
 .. note:: While you can still use Simple Commerce generated PayPal links
 	to sell items to users browsing your site as guests, the Instant
-	Payment Notification features, such as transaction recording and 
+	Payment Notification features, such as transaction recording and
 	email notifications, will only work for purchases made by logged-in
 	members of your site.
 
@@ -27,11 +27,16 @@ finalized.
 Enabling PayPal Instant Payment Notification
 --------------------------------------------
 
-Please refer to `PayPal's
-instructions <https://www.paypal.com/IntegrationCenter/ic_ipn.html>`_
-for the latest information. To enable Instant Payment Notification,
-login to PayPal, and select "Payment Notifications" from the Profile
-submenu. Provide PayPal with the ExpressionEngine notification URL by
-typing or pasting the URL shown in your Simple Commerce control panel.
+Please refer to `PayPal's instructions
+<https://developer.paypal.com/webapps/developer/docs/classic/ipn
+/integration-guide/IPNIntro/>`_ for the latest information. To enable
+Instant Payment Notification, login to PayPal, and select "Payment
+Notifications" from the Profile submenu. Provide PayPal with the
+**Instant Payment Notification (IPN) URL** found in the Simple Commerce
+preferences.
+
+.. note:: For ExpressionEngine to reliably track PayPal transactions
+   within Simple Commerce, you must enter your primary PayPal email
+   address as the **PayPal Account** in the Simple Commerce preferences.
 
 .. |Simple Commerce Instant Payment Notification| image:: ../../images/sc_cp_ipn.png

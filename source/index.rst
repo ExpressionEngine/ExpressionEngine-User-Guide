@@ -93,6 +93,11 @@ Optimizing ExpressionEngine
 - :doc:`optimization/throttling`
 - :doc:`optimization/handling_extreme_traffic`
 
+Performance Monitoring
+======================
+
+- :doc:`monitoring/new-relic`
+
 Solving Problems
 ================
 
@@ -129,7 +134,6 @@ Reference Guides
 Add-Ons
 =======
 
-
 .. _add_ons_included_in_expressionengine:
 
 Included in ExpressionEngine
@@ -153,11 +157,9 @@ Included in ExpressionEngine
 - :doc:`modules/referrer/index`
 - :doc:`modules/rss/index`
 - :doc:`modules/rte/index`
-- :doc:`modules/safecracker/index`
 - :doc:`modules/search/index`
 - :doc:`modules/simple_commerce/index`
 - :doc:`modules/statistics/index`
-- :doc:`modules/updated_sites/index`
 - :doc:`modules/wiki/index`
 
 .. _add_ons_available_for_download:
@@ -185,24 +187,25 @@ About ExpressionEngine
 - :doc:`Change Log </about/changelog>`
 
 .. toctree::
-	:glob:
-	:titlesonly:
-	:hidden:
-	
-	about/index
-	about/license
-	about/changelog
-	installation/index
-	cp/index
-	general/index
-	how_to/index
-	intro/index
-	handling_bugs/index
-	modules/index
-	operations/index
-	optimization/index
-	security/index
-	templates/index
-	troubleshooting/index
-	urls/index
-	development/index
+  :glob:
+  :titlesonly:
+  :hidden:
+
+  about/index
+  about/license
+  about/changelog
+  installation/index
+  cp/index
+  general/index
+  how_to/index
+  intro/index
+  handling_bugs/index
+  modules/index
+  operations/index
+  optimization/index
+  monitoring/index
+  security/index
+  templates/index
+  troubleshooting/index
+  urls/index
+  development/index

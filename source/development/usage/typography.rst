@@ -2,30 +2,30 @@ Typography Class
 ================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
 .. highlight:: php
 
 Calling the Typography Class
 ----------------------------
 
-The Typography class is used in ExpressionEngine to parse type,
-providing tools for automatic XHTML, auto line-breaking, email encoding,
-word censoring, decoding BBCode, syntax highlighting, and gateway access
-to formatting plugins.
+.. class:: Typography
 
-To use the these features in your modules, you need to first instantiate
-the Typography Class
+  The Typography class is used in ExpressionEngine to parse type,
+  providing tools for automatic XHTML, auto line-breaking, email
+  encoding, word censoring, decoding BBCode, syntax highlighting, and
+  gateway access to formatting plugins.
 
-::
+  To use the these features in your modules, you need to first
+  instantiate the Typography Class::
 
     ee()->load->library('typography');
     ee()->typography->initialize();
 
-Note that after loading the Typography library you need to initialize it
-with ee()->load->typography->initialize(); or you will be
-inheriting the class properties of whatever code last used it.
+  Note that after loading the Typography library you need to initialize
+  it with ``ee()->load->typography->initialize();`` or you will be
+  inheriting the class properties of whatever code last used it.
 
 Typography Class Properties
 ---------------------------
@@ -34,212 +34,183 @@ The Typography class has a number of class properties that you may wish
 to set before calling any methods. Below is a description of available
 class properties and their default values (in bold).
 
-$allow\_img\_url
-~~~~~~~~~~~~~~~~
+.. attr:: allow_img_url
 
-(string) *[ y / **n** ]* — Allow inline images?
+  (``string``) [ y / **n** ] — Allow inline images?
 
-$allow\_js\_img\_anchors
-~~~~~~~~~~~~~~~~~~~~~~~~
+.. attr:: allow_js_img_anchors
 
-(bool) *[ TRUE / **FALSE** ]* — Whether to allow JavaScript
-submitted within <a href> and <img> tags
+  (``bool``) [ TRUE / **FALSE** ] — Whether to allow JavaScript
+  submitted (within ``<a href>`` and ``<img>`` tags
 
-$auto\_links
-~~~~~~~~~~~~
+.. attr:: auto_links
 
-(string) *[ **y** / n ]* — Auto-link URLs and email addresses? (Note
-that auto-linking does not ever occur if $html\_format is "none")
+  (``string``) [ **y** / n ] — Auto-link URLs and email addresses? (Note
+  that auto-linking does not ever occur if ``$html_format`` is "none")
 
-$bounce
-~~~~~~~
+.. attr:: bounce
 
-(string) — Used to construct redirect links, to prevent control
-panel URLs from showing up in referrer logs, and on the front-end
-for rank denial. This property is set dynamically based on site
-preferences and is not necessary to set directly.
+  (``string``) — Used to construct redirect links, to prevent control
+  panel URLs from showing up in referrer logs, and on the front-end
+  for rank denial. This property is set dynamically based on site
+  preferences and is not necessary to set directly.
 
-$censored\_replace
-~~~~~~~~~~~~~~~~~~
+.. attr:: censored_replace
 
-(string) — String that censored words are replaced with, taken from
-site preferences.
+  (``string``) — String that censored words are replaced with, taken
+  from site preferences.
 
-$censored\_words
-~~~~~~~~~~~~~~~~
+.. attr:: censored_words
 
-(array) — Array of words to be censored, taken from site
-preferences.
+  (``array``) — Array of words to be censored, taken from site
+  preferences.
 
-$code\_chunks
-~~~~~~~~~~~~~
+.. attr:: code_chunks
 
-(array) — Array of temporary markers and content used to prevent
-formatting from being applied to syntax highlighted code.
+  (``array``) — Array of temporary markers and content used to prevent
+  formatting from being applied to syntax highlighted code.
 
-$code\_counter
-~~~~~~~~~~~~~~
+.. attr:: code_counter
 
-(int) — Used as keys of the $code\_chunks array, to keep the
-temporary markers organized.
+  (``int``) — Used as keys of the $code_chunks array, to keep the
+  temporary markers organized.
 
-$convert\_curly
-~~~~~~~~~~~~~~~
+.. attr:: convert_curly
 
-(bool) *[ **TRUE** / FALSE ]* — Convert curly brackets ( "{" and "}") into entities?
+  (``bool``) [ **TRUE** / FALSE ] — Convert curly brackets ( "{" and
+  "}") into entities?
 
-$emoticon\_path
-~~~~~~~~~~~~~~~
+.. attr:: emoticon_path
 
-(string) — The preference setting for the URL path to the site's
-emoticons. This property is set dynamically based on site
-preferences and is not necessary to set directly.
+  (``string``) — The preference setting for the URL path to the site's
+  emoticons. This property is set dynamically based on site
+  preferences and is not necessary to set directly.
 
-$encode\_email
-~~~~~~~~~~~~~~
+.. attr:: encode_email
 
-(bool) *[ **TRUE** / FALSE ]* — Whether or not email addresses are
-encoded.
+  (``bool``) [ **TRUE** / FALSE ] — Whether or not email addresses are
+  encoded.
 
-$encode\_type
-~~~~~~~~~~~~~
+.. attr:: encode_type
 
-(string) *[ **javascript** / noscript ]* — Type of encoding applied
-to email addresses if email address encoding is enabled. "noscript"
-renders in a human readable format (e.g. "name at example dot com)",
-suitable for use where JavaScript is inappropriate, such as in a
-feed.
+  (``string``) [ **javascript** / noscript ] — Type of encoding applied
+  to email addresses if email address encoding is enabled.
+  ``"noscript"`` renders in a human readable format (e.g. "name at
+  example dot com)", suitable for use where JavaScript is inappropriate,
+  such as in a feed.
 
-$file\_paths
-~~~~~~~~~~~~
+.. attr:: file_paths
 
-(array) — Array of file upload directories in key (ids) => value
-(urls) pairs.
+  (``array``) — Array of file upload directories in ``key (ids) => value
+  (urls)`` pairs.
 
-$highlight\_code
-~~~~~~~~~~~~~~~~
+.. attr:: highlight_code
 
-(bool) *[ **TRUE** / FALSE ]* — Perform PHP syntax highlighting on
-[pre] and [code] blocks?
+  (``bool``) [ **TRUE** / FALSE ] — Perform PHP syntax highlighting on
+  ``[pre]`` and ``[code]`` blocks?
 
-$html\_fmt\_types
-~~~~~~~~~~~~~~~~~
+.. attr:: html_fmt_types
 
-(array) *[ **array('safe', 'all', 'none')** ]* — Array of standard
-HTML handling types available to the Typography class.
+  (``array``) [ **array('safe', 'all', 'none')** ] — Array of standard
+  HTML handling types available to the Typography class.
 
-$html\_format
-~~~~~~~~~~~~~
+.. attr:: html_format
 
-(string) *[ **safe** / all / none ]* — Controls how HTML is handled
-in text.
+  (``string``) [ **safe** / all / none ] — Controls how HTML is handled
+  in text.
 
-$parse\_images
-~~~~~~~~~~~~~~
+.. attr:: parse_images
 
-(bool) *[ **TRUE** / FALSE ]* — Whether or not {filedir\_#}
-variables are to be parsed.
+  (``bool``) [ **TRUE** / FALSE ] — Whether or not ``{filedir_#}``
+  variables are to be parsed.
 
-$parse\_smileys
-~~~~~~~~~~~~~~~
+.. attr:: parse_smileys
 
-(bool) *[ **TRUE** / FALSE ]* — Replace text smileys with smiley
-images?
+  (``bool``) [ **TRUE** / FALSE ] — Replace text smileys with smiley
+  images?
 
-$popup\_links
-~~~~~~~~~~~~~
+.. attr:: popup_links
 
-(bool) *[ TRUE / **FALSE** ]* — Create links as popups?
+  (``bool``) [ TRUE / **FALSE** ] — Create links as popups?
 
-$single\_line\_pgfs
-~~~~~~~~~~~~~~~~~~~
+.. attr:: single_line_pgfs
 
-(bool) *[ **TRUE** / FALSE ]* — Whether to treat single lines as
-paragraphs in auto-XHTML
+  (``bool``) [ **TRUE** / FALSE ] — Whether to treat single lines as
+  paragraphs in auto-XHTML
 
-$site\_index
-~~~~~~~~~~~~
+.. attr:: smiley_array
 
-(string) — Deprecated.
+  (``mixed``) [ **FALSE** ] — If emoticons are enabled for the site,
+  this property will contain an array of smiley conversions in ``key
+  (smiley) => value (image)`` pairs. If emoticons are not enabled, this
+  will be set to ``FALSE``.
 
-$smiley\_array
-~~~~~~~~~~~~~~
+.. attr:: text_fmt_plugins
 
-(mixed) *[ **FALSE** ]* — If emoticons are enabled for the site,
-this property will contain an array of smiley conversions in key
-(smiley) => value (image) pairs. If emoticons are not enabled, this
-will be set to FALSE.
+  (``array``) — Array of available installed plugins.
 
-$text\_fmt\_plugins
-~~~~~~~~~~~~~~~~~~~
+.. attr:: text_fmt_types
 
-(array) — Array of available installed plugins.
+  (``array``) [ **array('xhtml', 'br', 'none', 'lite')** ] — Array of
+  standard formatting types available to the Typography class.
 
-$text\_fmt\_types
-~~~~~~~~~~~~~~~~~
+.. attr:: text_format
 
-(array) *[ **array('xhtml', 'br', 'none', 'lite')** ]* — Array of
-standard formatting types available to the Typography class.
+  (``string``) [ **xhtml** / br / none / lite ] — Controls what
+  formatting is applied to text.
 
-$text\_format
-~~~~~~~~~~~~~
+.. attr:: use_span_tags
 
-(string) *[ **xhtml** / br / none / lite ]* — Controls what
-formatting is applied to text.
+  (``bool``) [ **TRUE** / FALSE ] — Use ``<span>`` tags for font color
+  and size BBCode? Setting to ``FALSE`` uses ``<font>`` tags.
 
-$use\_span\_tags
-~~~~~~~~~~~~~~~~
+.. attr:: word_censor
 
-(bool) *[ **TRUE** / FALSE ]* — Use <span> tags for font color and
-size BBCode? Setting to FALSE uses <font> tags.
+  (``bool``) [ **FALSE** ] — Whether or not word censoring is applied.
+  This property is set dynamically based on site preferences and is
+  not necessary to set directly.
 
-$word\_censor
-~~~~~~~~~~~~~
+.. attr:: yes_no_syntax
 
-(bool) *[ **FALSE** ]* — Whether or not word censoring is applied.
-This property is set dynamically based on site preferences and is
-not necessary to set directly.
-
-$yes\_no\_syntax
-~~~~~~~~~~~~~~~~
-
-(array) *[ **array('y', 'n')** ]* — Array of valid Yes / No strings
-for use in properties. Used to ensure that valid settings are being
-provided for a Yes / No type preference.
+  (``array``) [ **array('y', 'n')** ] — Array of valid Yes / No strings
+  for use in properties. Used to ensure that valid settings are being
+  provided for a Yes / No type preference.
 
 Parsing Type
 ------------
 
-*str* **ee()->typography->parse\_type** ( *str* $str, *array*
-$prefs )
+.. method:: parse_type($str[, $prefs = ''])
 
-This function returns a string of parsed type. It is the most common use
-of the Typography class, and many of the individual functions also
-described in this document are used within the parse\_type() method. The
-format the string is returned in is determined by both the class
-properties and the array of properties provided in the second argument.::
+  This method returns a string of parsed type. It is the most common use
+  of the Typography class, and many of the individual methods also
+  described in this document are used within the parse_type() method. The
+  format the string is returned in is determined by both the class
+  properties and the array of properties provided in the second argument.::
 
     $str = ee()->typography->parse_type($str);
 
-Example of Parsing Type with Preferences
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  :param string $str: String to parse
+  :param array $prefs: Associative array containing parsing preferences
+    (see below)
+  :returns: Parsed string
+  :rtype: String
 
-You may override class properties directly in the $prefs array for the
-following:
+  You may override class properties directly in the $prefs array for the
+  following:
 
--  text\_format
--  html\_format
--  auto\_links
--  allow\_img\_url
+  - ``text_format``
+  - ``html_format``
+  - ``auto_links``
+  - ``allow_img_url``
 
-::
+  ::
 
     $prefs = array(
-            'text_format'   => 'xhtml',
-            'html_format'   => 'all',
-            'auto_links'    => 'y',
-            'allow_img_url' => 'y'
-            );
+        'text_format'   => 'xhtml',
+        'html_format'   => 'all',
+        'auto_links'    => 'y',
+        'allow_img_url' => 'y'
+    );
 
     $str = ee()->typography->parse_type($str, $prefs);
 
@@ -247,101 +218,93 @@ Using a Plugin for Text Formatting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Any installed formatting plugin may be used to parse type. Simply use
-the class name of the plugin, in lowercase letters.
+the class name of the plugin, in lowercase letters::
 
-::
-
-    $str = ee()->typography->parse_type($str, array('text_format' => 'markdown'));
+  $str = ee()->typography->parse_type($str, array('text_format' => 'markdown'));
 
 If you attempt to use a plugin that is not installed, no text formatting
 will be performed. It may be wise to check for the existence of plugins
 before using them, so if they are not installed, you can fall back on
-one of the native formatting types.
+one of the native formatting types::
 
-::
-
-    $text_format = (in_array('markdown', ee()->typography->text_fmt_plugins)) ? 'markdown' : 'xhtml';
-    $str = ee()->typography->parse_type($str, array('text_format' => $text_format));
+  $text_format = (in_array('markdown', ee()->typography->text_fmt_plugins)) ? 'markdown' : 'xhtml';
+  $str = ee()->typography->parse_type($str, array('text_format' => $text_format));
 
 Encode Email Addresses
 ----------------------
 
-*str* **ee()->typography->encode\_email** ( *str* $email, *str*
-$title, *bool* $anchor )
+.. method:: encode_email($email[, $title = ''[, $anchor = TRUE ]])
 
-This function encodes email addresses with Javascript, to assist in
-prevention of email harvesting by bots.::
+  This method encodes email addresses with Javascript, to assist in
+  prevention of email harvesting by bots.::
 
-    $str = "brett.bretterson@example.com";
-    $str = ee()->typography->encode_email($str, "Email Brett Bretterson");
+      $str = "brett.bretterson@example.com";
+      $str = ee()->typography->encode_email($str, "Email Brett Bretterson");
 
-$email
-~~~~~~
+  If you want to return a human readable "encoded" email address
+  instead, you can also set the :attr:`Typography::$encode_type` class
+  property to ``"noscript"``.
 
-(string) — Email address. *Required*
-
-$title
-~~~~~~
-
-(string) *[ **empty string** ]* — The text to use as the title of
-the email link.
-
-$anchor
-~~~~~~~
-
-(bool) *[ **TRUE** / FALSE ]* — Whether or not a clickable link is
-created for the email address.
-
-If you want to return a human readable "encoded" email address instead,
-you can also set the $encode\_type class property to "noscript".
-
-::
-
-    $str = "brett.bretterson@example.com";
-    ee()->typography->encode_type = "noscript";
-    $str = ee()->typography->encode_email($str, '', FALSE);
-
-Returns::
-
-	brett dot bretterson at example dot com
+  :param string $email: Email address
+  :param string $title: Text to use as the title of the link
+  :param boolean $anchor: Whether to create a clickable link or not
+  :returns: Encoded email address
+  :rtype: String
 
 Auto (XTHML) Typography
 -----------------------
 
-*str* **ee()->typography->auto\_typography** ( *str* $str )
+.. method:: auto_typography($str[, $reduce_linebreaks = FALSE])
 
-This function takes a string of text and returns typographically correct
-XHTML.::
+  This method takes a string of text and returns typographically
+  correct XHTML::
 
     $str = ee()->typography->auto_typography($str);
 
- Its primary modifications are:
+  Its primary modifications are:
 
-- It turns double spaces into paragraphs.
-- It adds line breaks where there are single spaces.
-- It turns single and double quotes into curly quotes.
-- It turns three dots into ellipsis.
-- It turns double dashes into em-dashes.
+  - It turns double spaces into paragraphs.
+  - It adds line breaks where there are single spaces.
+  - It turns single and double quotes into curly quotes.
+  - It turns three dots into ellipsis.
+  - It turns double dashes into em-dashes.
 
-$str
-~~~~
-
-(string) Text to apply XHTML typography to
-
+  :param string $str: Text to apply XHTML typography to
+  :param boolean $reduce_linebreaks: Set to ``TRUE`` to reduce more than
+    two consecutive newlines to two
+  :returns: Formatted and cleaned text
+  :rtype: String
 
 Formatting Characters for XHTML ("Light" Typography)
 ----------------------------------------------------
 
-*str* **ee()->typography->format\_characters** ( *str* $str )
+.. method:: format_characters($str)
 
-This function performs the character transformation portion of the XHTML
-typography only, i.e. curly quotes, ellipsis, ampersand, etc.::
+  This method performs the character transformation portion of the
+  XHTML typography only, i.e. curly quotes, ellipsis, ampersand, etc.::
 
-    $str = ee()->typography->format_characters($str);
+      $str = ee()->typography->format_characters($str);
 
-$str
-~~~~
+  :param string $str: Text to apply character formatting to
+  :returns: Character formatted text
+  :rtype: String
 
-(string) Text to apply character formatting to
+Markdown
+--------
 
+.. method:: markdown($str[, $options = array()])
 
+  This method lets you parse your content using Markdown and
+  Smartypants::
+
+    $str = ee()->typography->markdown($str);
+
+  :param string $str: String to parse
+  :param array $options: Associative array containing options:
+
+    - ``encode_ee_tags`` (``yes``/``no``) can be used to disable ee tag
+      encoding
+    - ``smartypants`` (``yes``/``no``) enable or disable smartypants
+
+  :returns: Parsed Markdown content
+  :rtype: String

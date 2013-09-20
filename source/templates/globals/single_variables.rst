@@ -91,6 +91,22 @@ standard :doc:`date variable formatting
   which allows you to make dynamic use of it in your tags, for
   instance as a tag parameter, or in a conditional.
 
+current_query_string
+--------------------
+
+::
+
+  {current_query_string}
+
+This variable displays the current security-filtered query string, which
+can be useful to append to your path variables when you want a link to
+retain the current query string, e.g.::
+
+  gclid=1123581321
+
+.. note:: This variable has already been URL encoded so all characters
+  are transported safely and ready to append to URLs as needed.
+
 current_url
 -----------
 

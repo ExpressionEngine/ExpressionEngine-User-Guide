@@ -280,19 +280,36 @@ The base class provides a handful of base variables:
 
 .. attr:: EE
 
-  a reference to the controller instance
+  A reference to the controller instance.
 
-.. attr:: field_id
+.. deprecated:: 2.7.0
 
-  the field's database id
+.. attr:: id
 
-.. attr:: field_name
+  The field identifier (unique for the current content type).
 
-  the field short name
+.. attr:: name
+
+  The field name, used for the tag names.
+
+.. attr:: content_id
+
+  The unique id of the parent content that contains this field. Not
+  available in install, settings, or other non-content environments.
+
+.. attr:: content_type
 
 .. attr:: settings
 
-  the field settings array
+  The field settings array
+
+.. attr:: field_id
+
+  Alias for id
+
+.. attr:: field_name
+
+  Alias for name
 
 .. note:: Allowing fields to be used as tag pairs requires some extra
   processing to reduce the parsing overhead. So if you want to create
@@ -305,6 +322,42 @@ The base class provides a handful of base variables:
 
 Function Reference
 ==================
+
+.. method:: id()
+
+  Getter for ``id``.
+
+  :rtype: Integer/String
+
+.. method:: name()
+
+  Getter for ``name``.
+
+  :rtype: String
+
+.. method:: content_id()
+
+  Getter for ``content_id``.
+
+  :rtype: Integer/String
+
+.. method:: content_type()
+
+  Getter for ``content_type``.
+
+  :rtype: String
+
+.. method:: row($key [, $default = NULL ])
+
+  Accessor for the current content type parent row. In the case of channel
+  entries, this would be current entry row. If the key is not found, the
+  value given in default is returned. Not all content types have all row
+  keys.
+
+  :param: string $key: The name of the row value to retrieve
+  :param: mixed $default: The value to return if $key is not set
+  :return: The value of the row element, or $default.
+  :rtype: Mixed
 
 .. method:: install()
 
@@ -416,6 +469,28 @@ Function Reference
   :returns: Either nothing, or a string for your settings fields
   :rtype: Void/String
 
+.. method:: validate_settings($data)
+
+  Validate fieldtype settings. In this method, you can set rules via the
+  Form Validation library to ensure values entered in your settings form
+  are valid. Here is an example from our File field::
+
+    function validate_settings($data)
+    {
+        ee()->form_validation->set_rules(
+            'file_allowed_directories',
+            'lang:allowed_dirs_file',
+            'required|callback__check_directories'
+        );
+    }
+
+  Callbacks may be specified as well, as you see above we are calling
+  a method called ``_check_directories`` to ensure upload destinations
+  exist before creating a new file field.
+
+  :param array $data: Submitted settings for this field
+  :rtype: Void
+
 .. method:: save_settings($data)
 
   Save the fieldtype settings.
@@ -495,3 +570,321 @@ Function Reference
   :param array $data: Field data
   :returns: Prepped ``$data``
   :rtype: Array
+
+*************************
+Content Type Independence
+*************************
+
+Fieldtypes can be used to describe fields in many different types of
+content. For most fieldtypes adding support simply means overriding the
+:meth:`~EE_Fieldtype::accepts_content_type` method to always return TRUE.
+
+.. method:: accepts_content_type($name)
+
+  Returns TRUE or FALSE based on whether or not the content type is
+  supported. By default all fieldtypes support the `channel` content type.::
+
+    public function accepts_content_type($name)
+    {
+      return ($name == 'channel');
+    }
+
+  :param string $name: The name of the content type
+  :returns: Supports the given content type?
+  :rtype: Boolean
+
+However, if your fieldtype stores its own data, then you must make sure
+to clearly separate the data by content type. You can do this by accessing
+the current content type with the :meth:`~EE_Fieldtype::content_type` getter
+method, and using it as an additional parameter everywhere you store or retrieve data.
+
+You must also handle the complete out removal of a content type.
+
+.. method:: unregister_content_type($name)
+
+  Remove a content type from the current fieldtype.
+
+  :param string $name: Name of the content type to remove.
+  :rtype: void
+
+If your fieldtype creates columns or tables dynamically, you may also
+want to implement the opposite case of when a fieldtype is added.
+
+.. method:: register_content_type($name)
+
+  Add a content type from the current fieldtype.
+
+  :param string $name: Name of the content type to add.
+  :rtype: void
+
+**************************
+Grid Fieldtype Development
+**************************
+
+In order to make your fieldtypes compatible with Grid, a few more
+methods as well as Javascript callbacks are available.
+
+To make your fieldtype recognized by Grid as a Grid-compatible
+fieldtype, you need to modify your implementation of
+:meth:`~EE_Fieldtype::accepts_content_type` to accept the ``grid``
+content type. For example::
+
+  public function accepts_content_type($name)
+  {
+      return ($name == 'channel' || $name == 'grid');
+  }
+
+Once that's done, your fieldtype will show up in the list
+of fieldtypes available for use when setting up a new Grid column.
+
+Grid Column Settings
+====================
+
+.. method:: grid_display_settings($data)
+
+  Displays settings for your Grid fieldtype::
+
+    public function grid_display_settings($data)
+    {
+        return array(
+            $this->grid_field_formatting_row($data),
+            $this->grid_text_direction_row($data),
+            $this->grid_max_length_row($data)
+        );
+    }
+
+  Each array item should be a string.
+
+  :param array $data: Column settings
+  :returns: Array of settings for the column
+  :rtype: Array
+
+Much like in :meth:`~EE_Fieldtype::display_settings`, we provide several
+helpers to insert the settings rows you may need:
+
+.. method:: grid_settings_row($label, $content[, $wide = FALSE])
+
+  Adds a generic settings row to a Grid column.
+
+  :param string $label: Label for the setting
+  :param string $content: HTML for the form element(s) for the setting
+  :param boolean $wide: If ``TRUE``, gives more room to the content
+    portion of the setting
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_dropdown_row($label, $name, $data[, $selected = NULL[, $multiple = FALSE[, $wide = FALSE[, $attributes]]]])
+
+  Adds a dropdown settings row to a Grid column.
+
+  :param string $label: Label for the setting
+  :param string $name: Value for the name attribute of the dropdown
+  :param array $data: Array of options to show in the dropdown
+  :param string $selected: Selected value of the setting
+  :param boolean $multiple: Whether or not this is a multiselect
+  :param boolean $wide: If ``TRUE``, gives more visual room to the
+    dropdown portion of the setting
+  :param string $attributes: Any extra HTML attributes to put on the
+    dropdown
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_checkbox_row($label, $name, $value, $checked)
+
+  Adds a settings row with a single Checkbox to a Grid column.
+
+  :param string $label: Label for the setting
+  :param string $name: Value for the name attribute of the checkbox
+  :param string $value: Value for the value attribute of the checkbox
+  :param boolean $checked: Whether or not the box is checked on display
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_yes_no_row($label, $name, $data)
+
+  Adds a settings row with a Yes radio button and a No radio button to a
+  Grid column.
+
+  :param string $label: Label for the setting
+  :param string $name: Value for the name attribute of the radio buttons
+  :param array $data: Data array passed to ``grid_display_settings()``
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_text_direction_row($$data)
+
+  Adds a settings row with a dropdown of text direction options.
+
+  :param array $data: Data array passed to ``grid_display_settings()``
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_field_formatting_row($$data)
+
+  Adds a settings row with a dropdown of text formatting options.
+
+  :param array $data: Data array passed to ``grid_display_settings()``
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_max_length_row($$data)
+
+  Adds a settings row with a small textbox to enter the maximum number
+  of characters your fieldtype accepts.
+
+  :param array $data: Data array passed to ``grid_display_settings()``
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_multi_item_row($$data)
+
+  Adds a settings row with a textarea for entering options to be used
+  in a fieldtype where the content is limited to multiple options to
+  select from, such as radio buttons.
+
+  :param array $data: Data array passed to ``grid_display_settings()``
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+.. method:: grid_textarea_max_rows_row($$data)
+
+  Adds a settings row with a small textbox to enter the maximum number
+  of rows a textarea may show.
+
+  :param array $data: Data array passed to ``grid_display_settings()``
+  :returns: String of HTML ready to use as a Grid settings row
+  :rtype: String
+
+Check the implementations of :meth:`~EE_Fieldtype::grid_display_settings`
+in our native fieldtypes to see examples of the above helper methods
+being used as well as other ways to display custom settings.
+
+Validating Grid Settings
+------------------------
+
+.. method:: grid_validate_settings($data)
+
+  Validating your Grid column's settings is similar to validating field
+  contents. Unlike :meth:`~EE_Fieldtype::validate_settings`, you cannot
+  use the Form Validation library, rather you simply check the array of
+  settings passed to your fieldtype, and then return TRUE or an error
+  message if the settings do not validate.
+
+  For example, here is the validation method for a File field's settings
+  when used as a Grid column::
+
+    function grid_validate_settings($data)
+    {
+        if ( ! $this->_check_directories())
+        {
+            ee()->lang->loadfile('filemanager');
+            return lang('please_add_upload');
+        }
+
+        return TRUE;
+    }
+
+  If the ``_check_directories()`` check fails, we return an error message.
+  Otherwise if it passes, we return ``TRUE``.
+
+  :param array $data: Submitted settings for this field
+  :rtype: Void
+
+
+Grid Fieldtype Events
+=====================
+
+All of the regular fieldtype methods (``display_field()``,
+``replace_tag()``, etc.) are available prefixed with "grid\_" for
+special handling when being used in the context of the Grid field, with
+a few exceptions noted below. For
+example::
+
+  // Only called when being used as a normal fieldtype:
+  public function display_field($data)
+  {
+      // Display code
+  }
+
+  // Only called when being rendered in a Grid field cell:
+  public function grid_display_field($data)
+  {
+      // Display code for Grid cell
+  }
+
+However, if a fieldtype does NOT implement ``grid_display_field()``,
+Grid will call ``display_field()`` to display the field's form in the
+cell. This applies to all fieldtype methods except for the following:
+
+============================= ==========================
+Method                        Exception
+============================= ==========================
+``install()``                 No unique Grid method required
+``uninstall()``               No unique Grid method required
+``display_global_settings()`` No unique Grid method required
+``save_global_settings()``    No unique Grid method required
+``settings_modify_column()``  Must use Grid Column Settings methods
+``display_settings()``        Must use :meth:`~EE_Fieldtype::grid_display_settings`
+``validate_settings()``       Must use :meth:`~EE_Fieldtype::grid_validate_settings`
+============================= ==========================
+
+The idea is that most fieldtypes should be able to use the same code to
+handle their field operations for both Grid and the normal publish form,
+but if not, you can easily override the behavior and run special
+operations when in the context of Grid.
+
+If you use ``grid_*`` methods, you may want to look for ways to refactor
+your fieldtype where there is overlapping logic to run. For example,
+some of our native fieldtypes require slightly different code to render
+the HTML needed to display fields in ``display_field()`` and
+``grid_display_field()``, so we try to centralize the the common logic
+between them for better code maintenance.
+
+Grid Javascript Events
+======================
+
+Several Javascript events are fired on certain actions to let your
+fieldtypes know when those actions have taken place. Here is an
+overview.
+
++-----------------------+-----------+---------------------------------+
+| Event Name            | Description                                 |
++=======================+===========+=================================+
+| **display**           | Called when a row is displayed on the       |
+|                       | publish form                                |
++-----------------------+-----------+---------------------------------+
+| **remove**            | Called when a row is deleted from the       |
+|                       | publish form                                |
++-----------------------+-----------+---------------------------------+
+| **beforeSort**        | Called before a row starts sorting on the   |
+|                       | publish form                                |
++-----------------------+-----------+---------------------------------+
+| **afterSort**         | Called after a row finishes sorting on the  |
+|                       | publish form                                |
++-----------------------+-----------+---------------------------------+
+| **displaySettings**   | Called when a fieldtype's settings form is  |
+|                       | displayed on the Grid field settings page   |
++-----------------------+-----------+---------------------------------+
+
+To bind an event, use the below Javascript as an example::
+
+  Grid.bind("date", "display", function(cell)
+  {
+      // Act on event
+  });
+
+Here are the usage details for this function:
+
+.. js:function:: Grid.bind(fieldtype, event, callback)
+
+  :param string fieldtype: Your short fieldtype name
+  :param string: Event name
+  :param callback: Callback function to use for the event
+  :rtype: Void
+
+A jQuery object of the cell being affected by the current event (or
+settings form in the case of ``displaySettings``) is passed to the
+callback function. There are a few data attributes available on the
+cell object such as ``fieldtype``, ``column-id`` and ``row-id``
+(``row-id`` will be undefined for new rows). Plus since it's a jQuery
+object, you have all DOM traversal methods available to act upon.

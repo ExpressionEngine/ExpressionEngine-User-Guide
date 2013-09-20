@@ -77,13 +77,13 @@ name= is deprecated in XHTML.
 recipients=
 -----------
 
-::
+This optional parameter allows you to specify an email address to
+receive the email::
 
 	recipients="admin@example.com"
 
-The recipients parameter allows you to specify the email address of the
-person (or persons) you want to receive the email. If you have more than
-one recipient, please separate each email address with a commas::
+To specify more than one recipient, separate each email address
+with a comma::
 
 	recipients="admin@example.com,ceo@example.com,president@example.com"
 
@@ -164,7 +164,7 @@ user\_recipients=
 ::
 
 	user_recipients="yes"
-	
+
 ::
 
 	user_recipients="no"
