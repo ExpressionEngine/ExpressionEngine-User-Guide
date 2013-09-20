@@ -5,6 +5,12 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.7.1
+-------------
+
+Release Date: September 24, 2013
+
+
 Version 2.7.0
 -------------
 
