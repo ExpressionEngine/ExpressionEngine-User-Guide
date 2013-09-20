@@ -12,20 +12,20 @@ The purpose of the *Auto XHTML* option is to make your content
 semantically and typographically correct. This feature does the
 following:
 
--  Double Line Breaks are wrapped in paragraph tags: <p>*content..*</p>
--  Single Line Breaks are turned into <br /> tags.
--  Double quotes are converted to curly double quotes: "this" becomes
-   “this”
--  Single quotes are converted to curly single quotes: Joe's becomes
-   Joe’s
--  Double dashes are converted to em-dashes: This -- text becomes
-   this—text.
--  Three periods are converted to ellipsis: This... becomes this…
+-  Double Line Breaks are wrapped in paragraph tags: ``<p>*content..*</p>``
+-  Single Line Breaks are turned into ``<br />`` tags.
+-  Double quotes are converted to curly double quotes: ``"this"`` becomes
+   ``“this”``
+-  Single quotes are converted to curly single quotes: ``Joe's`` becomes
+   ``Joe’s``
+-  Double dashes are converted to em-dashes: ``This -- text`` becomes
+   ``this—text``.
+-  Three periods are converted to ellipsis: ``This...`` becomes ``this…``
 
 In addition, the Auto XHTML feature intelligently handles text
-containing block level elements, like <div>, <blockquote>, etc. so that
-they are not wrapped in paragraph tags. Further, elements within <pre>
-tags are exempt from the paragraph conversion.
+containing block level elements, like ``<div>``, ``<blockquote>``, etc.
+so that they are not wrapped in paragraph tags. Further, elements within
+``<pre>`` tags are exempt from the paragraph conversion.
 
 The Auto XHTML Feature can be found in the PUBLISH page of the Control
 Panel. You'll see a menu below each entry field with this option. You
@@ -45,14 +45,14 @@ parser follows `Jon Gruber's implementation of Markdown
 <http://daringfireball.net/projects/markdown/>`_ for the most part, but
 adds a few things as well. SmartyPants transforms normal quotes into
 curly quotes, consecutive dashes into en (``--`` into –) and em (``---``
-into —) dashes, and three consecutive periods into an ellipsis (``...``
-into …).
+into ``—``) dashes, and three consecutive periods into an ellipsis
+(``...`` into ``…``).
 
 Auto BR
 -------
 
-This Auto BR feature simply converts each line break into an HTML <br />
-tag.
+This Auto BR feature simply converts each line break into an HTML
+``<br />`` tag.
 
 This feature can be found in the PUBLISH page of the Control Panel.
 Youll see a menu below each entry field with this option. You can also

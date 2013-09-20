@@ -1,5 +1,5 @@
 ########################################
-Getting the Most out of ExpressionEngine
+Getting the Most Out of ExpressionEngine
 ########################################
 
 ********************************

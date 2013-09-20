@@ -1957,8 +1957,8 @@ Release Date: June 22, 2011
       to the same file from the textrea.
    -  Fixed a bug (#15529) where autosaved entries couldn't be edited.
    -  Fixed a bug (#15745) where images would be incorrectly outputted
-      when the channel’s HTML formatting was set to ‘Allow only safe
-      HTML’.
+      when the channel's HTML formatting was set to 'Allow only safe
+      HTML'.
    -  Fixed a bug (#15778) where SafeCracker forms would cause a
       Javascript error by attempting to load a view for the file
       chooser.
@@ -1971,7 +1971,7 @@ Release Date: June 22, 2011
       'search\_in' or 'where' values if they were in standard inputs.
    -  Fixed a bug where the Advanced Search form wouldn't obey the
       'category' parameter.
-   -  Added error conditionals to SafeCracker’s form when using
+   -  Added error conditionals to SafeCracker's form when using
       error\_handling="inline".
    -  Fixed a bug (#15764, #15507) where SafeCracker would not respect
       the channel parameter.
