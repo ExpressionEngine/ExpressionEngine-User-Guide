@@ -36,4 +36,4 @@ The following view files were edited:
 -  views/members/edit_member_group.php
 
 
-:ref:`Return to Update Page <update_additional_steps>`
+:ref:`Return to Update Page <update_cleanup>`

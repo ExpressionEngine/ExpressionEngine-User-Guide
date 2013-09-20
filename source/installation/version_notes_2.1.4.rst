@@ -13,14 +13,14 @@ breadcrumb.html
 
 ::
 
-    <table border='0' cellpadding='0' cellspacing='0' style="width:99%;"> 
+    <table border='0' cellpadding='0' cellspacing='0' style="width:99%;">
         <tr>
             <td>
                 <div class='breadcrumb'>{breadcrumb_links}</div>
             </td>
             {if logged_in}
             <td align="right">
-            {lang:logged_in_as} <span class="defaultBold"><a href="{path:your_profile}">{name}</a></span>  &nbsp;|&nbsp;  <span class="default"><a href="{path:your_control_panel}">{lang:your_control_panel}</a></span>  &nbsp;|&nbsp;  <span class="default"><a href="{path:memberlist}">{lang:memberlist}</a></span>  &nbsp;|&nbsp;  <span class="default"><a href="{path="LOGOUT"}">{lang:logout}</a></span>  &nbsp;|&nbsp;  
+            {lang:logged_in_as} <span class="defaultBold"><a href="{path:your_profile}">{name}</a></span>  &nbsp;|&nbsp;  <span class="default"><a href="{path:your_control_panel}">{lang:your_control_panel}</a></span>  &nbsp;|&nbsp;  <span class="default"><a href="{path:memberlist}">{lang:memberlist}</a></span>  &nbsp;|&nbsp;  <span class="default"><a href="{path="LOGOUT"}">{lang:logout}</a></span>  &nbsp;|&nbsp;
             </td>
             {/if}
         </tr>
@@ -32,7 +32,7 @@ Member Template Menu Conditionals
 
 menu.html in member and forum themes, can now contain the following
 conditional variables to show or hide links depending on member
-preferences. 
+preferences.
 
 ::
 
@@ -73,4 +73,4 @@ The following views were edited:
 -  themes/cp\_themes/mobile/addons/accessory\_preferences.php
 -  themes/cp\_themes/mobile/content/publish.php
 
-:ref:`Return to Update Page <update_additional_steps>`
+:ref:`Return to Update Page <update_cleanup>`

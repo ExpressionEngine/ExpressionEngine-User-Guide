@@ -1,139 +1,166 @@
 Updating ExpressionEngine 2
 ===========================
 
-This page describes the process for updating from a previous version of
+This is the process for updating your site from a previous version of
 ExpressionEngine 2 to the latest version of ExpressionEngine 2.
 
-.. important:: If you are upgrading from ExpressionEngine 1.x use
-   the :doc:`Upgrading from 1.x to ExpressionEngine 2.x </installation/upgrade_from_1.x>`
-   instructions.
+.. important:: If you are upgrading from ExpressionEngine 1 to
+   ExpressionEngine 2, see :doc:`Upgrading from ExpressionEngine 1 </installation/upgrade_from_1.x>`.
+
 
 1. Prepare and Back-up
 ----------------------
 
--  Back-up your ExpressionEngine database.
--  Back-up all ExpressionEngine files and folders.
--  `Download <https://store.ellislab.com/manage>`_ the
-   most recent release of ExpressionEngine and unzip the software to
-   your local computer.
--  Take Your Site Offline:
-   It is recommended that you take your site offline for the duration of
-   the update so that people visiting your site won't see any PHP errors
-   or other anomalies that may occur while you are uploading files. Here
-   is one approach:
+#. Download the most recent release of ExpressionEngine (either
+   `ExpressionEngine Core <https://store.ellislab.com/#ee-core>`__ or
+   the `standard edition <https://store.ellislab.com/manage>`__,
+   whichever your site is currently running) and unzip the files to a
+   folder on your computer.
 
-   #. Copy :file:`system/expressionengine/utilities/offline.html` to
-      your web root folder (the same place you have your
-      main :file:`index.php` file).
-   #. Rename offline.html to index.html. Now your visitors will see the
-      "offline" page while you update your site.
-
--  In your ExpressionEngine Control Panel, go to :menuselection:`Tools
+#. In your ExpressionEngine Control Panel, go to :menuselection:`Tools
    --> Data --> Clear Caching`. Select **All Caches** and click Submit.
+
+#. Back-up your ExpressionEngine database.
+
+#. Back-up all your ExpressionEngine files and directories:
+
+#. Find these files and directories and add ``_old`` to the name:
+
+   -  Rename :file:`admin.php` to :file:`admin.php_old`
+   -  Rename :file:`index.php` to :file:`index.php_old`
+   -  Rename :file:`system/` to :file:`system_old/`
+   -  Rename :file:`themes/` to :file:`themes_old/`
+
+#. We strongly encourage taking your site offline for the duration of
+   the update so that people visiting your site won't see any PHP errors
+   or other anomalies that may occur while you are uploading files:
+
+   #. Copy :file:`system_old/expressionengine/utilities/offline.html` to
+      your web root directory (the same place you have your
+      main :file:`index.php` file).
+   #. Rename :file:`offline.html` to :file:`index.html`. Now your
+      visitors will see the "offline" page while you update your site.
+
 
 2. Upload New Files
 -------------------
 
-Using an FTP program such as WS\_FTP, SmartFTP, Transmit or Fetch,
-replace the following files and folders on your server with their new
-versions:
+Using your favorite FTP client, upload these files and directories to
+your server:
 
 -  :file:`admin.php`
 -  :file:`index.php`
 -  :file:`system/`
 -  :file:`themes/`
 
-3. Restore Modified Files
--------------------------
+During this step, you should also upload the most recent version of all
+add-ons installed in your ExpressionEngine installation, including
+:doc:`Discussion Forum </modules/forum/forum_update>` and :doc:`Multiple
+Site Manager </cp/sites/install>`. Consult the documentation for each
+add-on for any particular steps necessary to upgrade that add-on.
 
-Files and settings that are specific to your site should now be restored
-from the backup you made in Step 1.
 
--  Restore any modifications made to the following files, such as
-   updating the system folder name or path:
+3. Restore From Backup
+----------------------
+
+#. Restore these files from your backup:
+
+   - Copy :file:`system_old/expressionengine/config/config.php` to
+     :file:`system/expressionengine/config/`
+   - Copy :file:`system_old/expressionengine/config/database.php` to
+     :file:`system/expressionengine/config/`
+
+#. Restore these directories from your backup:
+
+   - Copy all non-English language files from
+     :file:`system_old/expressionengine/language/` to
+     :file:`system/expressionengine/language/`
+   - Copy all files and directories from
+     :file:`system_old/expressionengine/third\_party/` to
+     :file:`system/expressionengine/third\_party/`
+   - Copy all files and directories from
+     :file:`system_old/expressionengine/templates/` to
+     :file:`system/expressionengine/templates/`
+   - Copy all files and directories from
+     :file:`themes_old/third\_party/` to
+     :file:`themes/third\_party/`
+
+
+4. Restore File Changes
+-----------------------
+
+Restore any modifications made to these files, such as updating the
+system directory name or path:
 
    -  :file:`admin.php`
    -  :file:`index.php`
 
-If you are using the :doc:`Multiple Site Manager </cp/sites/index>`, the
-same should be done for each MSM site's :file:`index.php` and/or
-:file:`admin.php` file.
+.. note:: If you are using
+   :doc:`Multiple Site Manager </cp/sites/index>`, the same should be
+   done for each MSM site's :file:`index.php` and :file:`admin.php`
+   file.
 
--  Restore the following files from your backup:
 
-   -  :file:`system/expressionengine/config/config.php`
-   -  :file:`system/expressionengine/config/database.php`
-
--  Restore the following folders from your backup:
-
-   -  :file:`system/expressionengine/language/` (if you are using a language
-      pack or previously modified the English language files)
-   -  :file:`system/expressionengine/third\_party/`
-   -  :file:`system/expressionengine/templates/`
-   -  :file:`themes/third\_party/` (if it exists, and any additional third-party
-      theme folders you had previously)
-
-4. Verify File Permissions
+5. Verify File Permissions
 --------------------------
 
-The following permissions are typical for UNIX-based hosts. You may want to
-check with your host to see if more restrictive permissions can be used
-to allow PHP to write to files (666) and folders (777). On Windows
-servers the following will not apply, but you will need to ensure that
-the files and folders are writable by ExpressionEngine. You may need to
-contact your host for this.
+Apache
+^^^^^^
 
--  Set the following files to 666:
+These permissions are typical for PHP-based applications running on
+Apache, though you may want to check with your web host to see if more
+restrictive permissions can be used to allow PHP to write to files and
+directories.
 
-   -  :file:`system/expressionengine/config/config.php`
-   -  :file:`system/expressionengine/config/database.php`
+Set these files to 666:
 
--  Set the following folders to 777:
+- :file:`system/expressionengine/config/config.php`
+- :file:`system/expressionengine/config/database.php`
 
-   -  :file:`system/expressionengine/cache/` (and subfolders)
+Set these directories to 777:
 
-5. Run The Update Wizard
+- :file:`system/expressionengine/cache/` *(and subdirectories)*
+- :file:`images/avatars/uploads/`
+- :file:`images/captchas/`
+- :file:`images/member\_photos/`
+- :file:`images/pm\_attachments/`
+- :file:`images/signature\_attachments/`
+- :file:`images/uploads/`
+
+IIS
+^^^
+
+Provide all permissions to the IIS user for these directories:
+
+- :file:`system/expressionengine/cache/` *(and subdirectories)*
+- :file:`images/avatars/uploads/`
+- :file:`images/captchas/`
+- :file:`images/member\_photos/`
+- :file:`images/pm\_attachments/`
+- :file:`images/signature\_attachments/`
+- :file:`images/uploads/`
+
+
+6. Run The Update Wizard
 ------------------------
 
--  Point your browser to the URL of your :file:`admin.php` file. For example:
-   http://example.com/admin.php
--  Follow the on-screen instructions to update ExpressionEngine.
--  Once the Update Wizard is finished, remove the following folder from
-   your server:
+Point your browser to your Control Panel, and follow the on-screen
+instructions to update ExpressionEngine.
 
-   -  :file:`system/installer/`
-
-6. Update Add-ons
------------------
-
--  If the Discussion Forum or Multiple Site Manager are installed, these
-   need to be updated at this time:
-
-   -  :doc:`Discussion Forum Update
-      Instructions </modules/forum/forum_update>`
-   -  :doc:`MSM Update Instructions </cp/sites/install>`
-
--  Update any third-party add-ons by following the update instructions
-   for each add-on.
-
-.. _update_additional_steps:
-
-7. Additional Steps
--------------------
-
-Please review the following to determine if any additional steps need to
-be taken:
-
--  If you took your site offline in step 1 above, remove the offline file that was
-   added to your web root.
--  The :doc:`Version Notes </installation/version_notes>` will outline any
-   version-specific changes that may need to be made.
--  If you're updating from a previous version, you might need to sync your file
-   upload directories for files to work properly.
-
-You're Done!
-------------
-
-ExpressionEngine is now fully updated.
+Once the Update Wizard is finished, you **must** remove the
+:file:`system/installer/` directory from your server.
 
 
+.. _update_cleanup:
+
+7. Cleanup
+----------
+
+#. Remove the offline :file:`index.html` file that was added to your web
+   root in Step 1.
+
+#. Review the :doc:`Version Notes </installation/version_notes>` since
+   they outline any version-specific changes that you may need to make
+   to your installation.
+
+You're Done! ExpressionEngine is now fully updated.

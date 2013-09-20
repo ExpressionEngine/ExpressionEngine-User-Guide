@@ -16,6 +16,6 @@ field. This field is optional, but has been included in the default site
 themes. You can retrofit your own themes by simply including the field
 in the form.
 
-:ref:`Return to Update Page <update_additional_steps>`
+:ref:`Return to Update Page <update_cleanup>`
 
 

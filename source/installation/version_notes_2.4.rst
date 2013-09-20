@@ -117,4 +117,4 @@ The following view files were edited:
  - views/tools/view\_throttle\_log.php
 
 
-:ref:`Return to Update Page <update_additional_steps>`
+:ref:`Return to Update Page <update_cleanup>`

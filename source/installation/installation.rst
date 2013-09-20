@@ -30,7 +30,7 @@ download it from `your account <https://store.ellislab.com/manage>`__
 (or grab a copy of the free, feature-limited `ExpressionEngine Core
 <https://store.ellislab.com/#ee-core>`__), and unzip the files to a
 folder on your computer. Then use your favorite FTP client to upload the
-files to a publicly-accessible folder on your server.
+files to a publicly-accessible directory on your server.
 
 
 3. Set File Permissions
@@ -42,35 +42,35 @@ Apache
 These permissions are typical for PHP-based applications running on
 Apache, though you may want to check with your web host to see if more
 restrictive permissions can be used to allow PHP to write to files and
-folders.
+directories.
 
--  Set these files to 666:
+Set these files to 666:
 
-   -  :file:`system/expressionengine/config/config.php`
-   -  :file:`system/expressionengine/config/database.php`
+- :file:`system/expressionengine/config/config.php`
+- :file:`system/expressionengine/config/database.php`
 
--  Set these folders to 777:
+Set these directories to 777:
 
-   -  :file:`system/expressionengine/cache/`
-   -  :file:`images/avatars/uploads/`
-   -  :file:`images/captchas/`
-   -  :file:`images/member\_photos/`
-   -  :file:`images/pm\_attachments/`
-   -  :file:`images/signature\_attachments/`
-   -  :file:`images/uploads/`
+- :file:`system/expressionengine/cache/`
+- :file:`images/avatars/uploads/`
+- :file:`images/captchas/`
+- :file:`images/member\_photos/`
+- :file:`images/pm\_attachments/`
+- :file:`images/signature\_attachments/`
+- :file:`images/uploads/`
 
 IIS
 ^^^
 
-Provide all permissions to the IIS user for these folders:
+Provide all permissions to the IIS user for these directories:
 
--  :file:`system/expressionengine/cache/`
--  :file:`images/avatars/uploads/`
--  :file:`images/captchas/`
--  :file:`images/member\_photos/`
--  :file:`images/pm\_attachments/`
--  :file:`images/signature\_attachments/`
--  :file:`images/uploads/`
+- :file:`system/expressionengine/cache/`
+- :file:`images/avatars/uploads/`
+- :file:`images/captchas/`
+- :file:`images/member\_photos/`
+- :file:`images/pm\_attachments/`
+- :file:`images/signature\_attachments/`
+- :file:`images/uploads/`
 
 
 4. Run The Installation Wizard
@@ -80,14 +80,14 @@ Point your browser to the URL of the :file:`admin.php` file you
 uploaded. For example: ``http://example.com/admin.php``
 
 
-Follow the on-screen instructions to    install ExpressionEngine.
+Follow the on-screen instructions to install ExpressionEngine.
 
 .. tip:: If you choose the *None - Empty Installation* Site Theme, your
    site's homepage will appear blank because no templates or content
    has been created yet.
 
 Once the Installation Wizard is finished, you **must** remove the
-:file:`system/installer/` folder from your server.
+:file:`system/installer/` directory from your server.
 
 
 Welcome to ExpressionEngine!

@@ -30,6 +30,6 @@ to::
 
 	<div class='profileHeadingBG'><div class="tableHeading">{lang:heading}</div></div>
 
-:ref:`Return to Update Page <update_additional_steps>`
+:ref:`Return to Update Page <update_cleanup>`
 
 
