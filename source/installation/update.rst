@@ -1,7 +1,7 @@
 Updating ExpressionEngine 2
 ===========================
 
-This is the process for updating your site from a previous version of
+This guide will help you update your site from a previous version of
 ExpressionEngine 2 to the latest version of ExpressionEngine 2.
 
 .. important:: If you are upgrading from ExpressionEngine 1 to
