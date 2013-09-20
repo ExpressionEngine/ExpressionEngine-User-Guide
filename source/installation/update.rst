@@ -54,10 +54,14 @@ your server:
 -  :file:`themes/`
 
 During this step, you should also upload the most recent version of all
-add-ons installed in your ExpressionEngine installation, including
-:doc:`Discussion Forum </modules/forum/forum_update>` and :doc:`Multiple
-Site Manager </cp/sites/install>`. Consult the documentation for each
-add-on for any particular steps necessary to upgrade that add-on.
+add-ons installed in your ExpressionEngine installation. Consult the
+documentation for each add-on for any particular steps necessary to
+upgrade that add-on.
+
+.. important:: If you have :doc:`Discussion Forum
+   </modules/forum/forum_update>` or :doc:`Multiple Site Manager
+   </cp/sites/install>` installed, be sure to update them to the latest
+   versions whenever you update ExpressionEngine.
 
 
 3. Restore From Backup
