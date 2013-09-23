@@ -106,3 +106,40 @@ relationships_query
   :rtype: Array
 
   .. versionadded:: 2.6.0
+
+relationships_query_result
+--------------------------
+
+.. function:: relationships_query_result($entry_lookup)
+
+  Allows developers to modify or add columns to the relationships array.
+  Do not use this hook to remove elements.
+
+  How it's called::
+
+    $entry_lookup = ee()->extensions->call('relationships_query_result', $entry_lookup);
+
+  :param array $entry_lookup: Array of entry IDs to rows for all relationship tags.
+  :returns: Array of entry IDs to rows.
+  :rtype: Array
+
+  .. versionadded:: 2.7.1
+
+relationships_modify_rows
+-------------------------
+
+.. function:: relationships_post_save($rows, $node)
+
+  Allows developers to modify or add to the relationship rows right before
+  parsing happens.
+
+  How it's called::
+
+    $rows = ee()->extensions->call('relationships_modify_rows', $rows, $node);
+
+  :param array $rows: Array of entry IDs to rows for this tag.
+  :param ParseNode $node: Parse node for the current relationships tag.
+  :returns: Array of entry ids to rows for this tag.
+  :rtype: Array
+
+  .. versionadded:: 2.7.1

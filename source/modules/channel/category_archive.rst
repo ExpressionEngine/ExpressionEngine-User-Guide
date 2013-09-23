@@ -197,8 +197,8 @@ You may alternatively specify which categories to not show::
 
 	show="not 3|6|8"
 
-show\_empty=
-~~~~~~~~~~~~
+show_empty=
+~~~~~~~~~~~
 
 ::
 
@@ -210,8 +210,8 @@ which do not contain any entries will not be included in the list.
 
 By default, categories with no entries **will** be included.
 
-show\_future\_entries=
-~~~~~~~~~~~~~~~~~~~~~~
+show_future_entries=
+~~~~~~~~~~~~~~~~~~~~
 
 ::
 
@@ -314,8 +314,8 @@ active
 You may use this conditional to test whether the category shown is the
 active category or not, based on the dynamic URI segment.
 
-category\_description
-~~~~~~~~~~~~~~~~~~~~~
+category_description
+~~~~~~~~~~~~~~~~~~~~
 
 ::
 
@@ -331,8 +331,8 @@ statement so that it only displays if there is content in the field::
 	    {if category_description}{category_description}{/if}
 	{/categories}
 
-category\_id
-~~~~~~~~~~~~
+category_id
+~~~~~~~~~~~
 
 ::
 
@@ -340,8 +340,8 @@ category\_id
 
 The category ID associated with the category.
 
-parent\_id
-~~~~~~~~~~
+parent_id
+~~~~~~~~~
 
 ::
 
@@ -350,8 +350,8 @@ parent\_id
 The category ID associated with the category's parent (or 0 in the case
 of a top level category).
 
-category\_image
-~~~~~~~~~~~~~~~
+category_image
+~~~~~~~~~~~~~~
 
 ::
 
@@ -360,8 +360,8 @@ category\_image
 The image link (or other information) you can optionally store with each
 category within the Control Panel.
 
-category\_name
-~~~~~~~~~~~~~~
+category_name
+~~~~~~~~~~~~~
 
 ::
 
@@ -371,8 +371,8 @@ category\_name
 
 This displays the name of the category.
 
-category\_url\_title
-~~~~~~~~~~~~~~~~~~~~
+category_url_title
+~~~~~~~~~~~~~~~~~~
 
 ::
 
@@ -417,15 +417,15 @@ All custom fields assigned to a category can be accessed using the
 These are totally dynamic in that any field you create for your category
 will automatically be available by its "short name" as a variable.
 
-{entry\_titles} Variable Pair
------------------------------
+{entry_titles} Variable Pair
+----------------------------
 
 There are several variables available for use inside the
 {entry\_titles}{/entry\_titles} variable pair.
 
 
-entry\_date
-~~~~~~~~~~~
+entry_date
+~~~~~~~~~~
 
 ::
 
@@ -433,8 +433,17 @@ entry\_date
 
 The date the entry was submitted
 
-entry\_id\_path
-~~~~~~~~~~~~~~~
+entry_id
+~~~~~~~~
+
+::
+
+	{entry_id}
+
+The ID number of the channel entry.
+
+entry_id_path
+~~~~~~~~~~~~~
 
 ::
 
@@ -489,3 +498,12 @@ title
 	{entry_titles} {title} {/entry_titles}
 
 This variable is replaced by the title of the entry.
+
+url_title
+~~~~~~~~~
+
+::
+
+	{url_title}
+
+The human readable title used in the URL as a permalink.

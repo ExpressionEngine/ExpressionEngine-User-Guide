@@ -8,10 +8,10 @@ rendering process to parse out the Tags, Variables, Snippets, and Embeds
 being used in the Template.
 
 .. note:: The information in this article applies only to rendering
-   Templates. It doesn't apply to rendering theme files such as those 
-   used for :doc:`Member Profiles 
-   </cp/design/themes/member_profile_templates>`, the :doc:`Wiki 
-   </modules/wiki/wiki_templates>` module, or the :doc:`Discussion 
+   Templates. It doesn't apply to rendering theme files such as those
+   used for :doc:`Member Profiles
+   </cp/design/themes/member_profile_templates>`, the :doc:`Wiki
+   </modules/wiki/wiki_templates>` module, or the :doc:`Discussion
    Forum </modules/forum/forum_themes>` module.
 
 ExpressionEngine goes through several stages to fully process each
@@ -59,7 +59,7 @@ bottom through each rendering stage.
 
 #. Parse :ref:`{current_time} <global_current_time>`
 
-#. If present, get :ref:`cached template <caching_template_caching>`, then skip to the **advanced 
+#. If present, get :ref:`cached template <caching_template_caching>`, then skip to the **advanced
    conditionals** parsing stage
 
 #. Parse :ref:`PHP on Input <php_parsing_stage>`
@@ -83,7 +83,7 @@ bottom through each rendering stage.
 
 #. Process :ref:`redirect variable <global_redirect>`
 
-#. Parse :doc:`user-defined global variables 
+#. Parse :doc:`user-defined global variables
    </templates/globals/user_defined>`
 
 #. Parse some :doc:`standard global variables </templates/globals/single_variables>` (separately, in order given):
@@ -112,7 +112,7 @@ bottom through each rendering stage.
    * {member_profile_link}
    * {captcha}
 
-#. Add :ref:`security hashes <dev_guidelines_secure_forms>` to forms and parse :ref:`{XID_HASH} <global_xid_hash>` 
+#. Add :ref:`csrf tokens <dev_guidelines_csrf_protection>` to forms and parse :ref:`{XID_HASH} <global_xid_hash>`
 
 #. Parse remaining :doc:`standard global variables </templates/globals/single_variables>` (separately, in order given):
 

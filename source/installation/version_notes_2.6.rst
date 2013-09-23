@@ -1,6 +1,14 @@
 Update Notes for Version 2.6
 ============================
 
+Relationships
+----------------------
+
+Relationships was completely rewritten for this version, adding the ability to
+create multiple relationships for each entry and introducing a friendly new tag
+syntax. The template tags :doc:`described here </modules/channel/relationships>`
+are not compatible with previous versions.
+
 Altered Language Files
 ----------------------
 
@@ -50,7 +58,7 @@ SafeCracker Relationship Formatting
 If you're using the relationship conditional in a SafeCracker custom field
 loop, please modify your template with the new format to allow for multiple
 relationship selections. An example can be found in the
-:ref:`SafeCracker Documentation <safecracker_examples_custom_field_loop>`.
+:ref:`Channel Form Documentation <channel_form_examples_custom_field_loop>`.
 
 Conditionals in Channel Entries Content
 ---------------------------------------

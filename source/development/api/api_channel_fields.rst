@@ -57,7 +57,7 @@ Fetch installed Fieldtypes
 .. method:: fetch_installed_fieldtypes()
 
   This method is identical to
-  :meth:`Api_channel_fields::fetch_all_fieldtypes`, but the returned
+  :meth:`~Api_channel_fields::fetch_all_fieldtypes`, but the returned
   array is limited to fieldtypes that have been installed by the user::
 
     ee()->api_channel_fields->fetch_installed_fieldtypes();

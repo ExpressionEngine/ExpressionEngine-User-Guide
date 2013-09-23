@@ -21,6 +21,8 @@ in your Channel Entries (add-ons can include their own as well):
 #. **File**: File fields store uploaded files and images, and utilize
    the build in file browser for your publishers to upload and insert
    files.
+#. **Grid**: The Grid field in ExpressionEngine provides a way to group
+   fieldtypes in repeatable rows.For more information see :doc:`/modules/channel/grid`.
 #. **Multi Select**: Multi Select field types give a list of options in
    a standard multiple selection form control, letting publishers choose
    any or none of the available items.
@@ -35,7 +37,7 @@ in your Channel Entries (add-ons can include their own as well):
    -  **Fixed**: The date will NOT be localized and instead shown at the
       exact date/time you submit.
 
-#. **Relationship**: This is a special and very powerful field type. It
+#. **Relationships**: This is a special and very powerful field type. It
    enables you to create relationships between two or more channels so
    you can show content from one entry within another. For more
    information see :doc:`/modules/channel/relationships`.
@@ -120,8 +122,10 @@ default choices:
    This might be useful if you want people to be able to use full HTML
    in this field.
 #. **XHTML**: The field content will be formatted with
-   ExpressionEngine's :doc:`Auto XHTML feature. 
+   ExpressionEngine's :doc:`Auto XHTML feature.
    </general/text_formatting>`
+#. **Markdown**: The field content will be formatted with Markdown
+   and SmartyPants.
 #. **Auto <br />**: All line breaks in the field content will be
    converted into <br /> tags.
 
