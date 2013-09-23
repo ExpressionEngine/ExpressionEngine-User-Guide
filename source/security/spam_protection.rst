@@ -69,10 +69,10 @@ the target destination.
 
 The setting is located at: :menuselection:`Admin --> Security and Privacy --> Security and Sessions`
 
-Secure Form Mode
-----------------
+Secure Forms
+------------
 
-Secure Form Mode prevents automated scripts (the most common way spam is
+Secure Forms prevents automated scripts (the most common way spam is
 generated) from repeatedly submitting comments or other form data. A
 submission is only allowed when a user manually loads a page and submits
 the form from your site. And once the form data is received, the user
