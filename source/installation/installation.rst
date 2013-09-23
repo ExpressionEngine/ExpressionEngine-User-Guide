@@ -79,7 +79,6 @@ Provide all permissions to the IIS user for these directories:
 Point your browser to the URL of the :file:`admin.php` file you
 uploaded. For example: ``http://example.com/admin.php``
 
-
 Follow the on-screen instructions to install ExpressionEngine.
 
 .. tip:: If you choose the *None - Empty Installation* Site Theme, your

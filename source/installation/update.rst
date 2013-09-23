@@ -24,7 +24,7 @@ ExpressionEngine 2 to the latest version of ExpressionEngine 2.
 
 #. Back-up all your ExpressionEngine files and directories:
 
-#. Find these files and directories and add ``_old`` to the name:
+   Find these files and directories and add ``_old`` to the name:
 
    -  Rename :file:`admin.php` to :file:`admin.php_old`
    -  Rename :file:`index.php` to :file:`index.php_old`
@@ -121,9 +121,10 @@ Set these files to 666:
 - :file:`system/expressionengine/config/config.php`
 - :file:`system/expressionengine/config/database.php`
 
-Set these directories to 777:
+Set these directories (and their subdirectories) to 777:
 
-- :file:`system/expressionengine/cache/` *(and subdirectories)*
+- :file:`system/expressionengine/cache/`
+- :file:`system/expressionengine/templates/`
 - :file:`images/avatars/uploads/`
 - :file:`images/captchas/`
 - :file:`images/member\_photos/`
