@@ -10,7 +10,7 @@ options can be found in :doc:`Handling Extreme Traffic with ExpressionEngine
 
 .. contents::
 	:local:
-	
+
 allow_textarea_tabs
 ~~~~~~~~~~~~~~~~~~~
 
@@ -128,8 +128,8 @@ smtp_server
 
 **Value:** text string
 
-When using SMTP as your mail protocol, this sets the server to be used. You can 
-use ssl servers as long as OpenSSL is installed on the server ExpressionEngine 
+When using SMTP as your mail protocol, this sets the server to be used. You can
+use ssl servers as long as OpenSSL is installed on the server ExpressionEngine
 is installed on. Check with your server administrator first.
 
 ::
@@ -141,7 +141,7 @@ smtp_port
 
 **Value:** numeric string
 
-When using SMTP as your mail protocol, this will override the core Email class 
+When using SMTP as your mail protocol, this will override the core Email class
 setting (25) for SMTP Port.
 
 ::
@@ -269,7 +269,21 @@ Removes the textarea only restriction for fields in the moblog module.
 
 ::
 
-	$config['moblog_allow_nontextareas'] = 'y';
+  $config['moblog_allow_nontextareas'] = 'y';
+
+newrelic_app_name
+~~~~~~~~~~~~~~~~~
+
+**Value:** text string
+
+If the New Relic extension is installed on your server, allows the
+application name reported in the New Relic dashboard to be changed. This
+variable is also available to set via ``$assign_to_config`` for
+optionally setting a different application name per MSM site.
+
+::
+
+  $config['newrelic_app_name'] = 'My Site';
 
 path_third_themes
 ~~~~~~~~~~~~~~~~~

@@ -166,7 +166,7 @@ implementation is as follows::
   <?=form_submit(array('name' => 'submit', 'value' => lang('submit'), 'class' => 'submit'));?>
 
 Note that in order to use the table based layout sample code you must
-first load the table library in your module’s method.
+first load the table library in your module's method.
 
 Tab Menu
 ~~~~~~~~
