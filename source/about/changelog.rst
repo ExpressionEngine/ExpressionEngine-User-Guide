@@ -10,6 +10,92 @@ Version 2.7.1
 
 Release Date: September 24, 2013
 
+- General Changes:
+
+  - Added modulus operator to conditionals.
+  - Grid column names now automatically populate based on the column
+    label.
+  - Added a setting to customize the application name for New Relic
+    reporting.
+  - The site label appears next to New Relic web transactions if Multiple
+    Site Manager is enabled.
+  - Combined the idle and logout notifications and made their state persistent
+    across browser tabs.
+  - Changed parse order of ``{current_url}``, ``{current_path}`` and
+    ``{current_query_string}`` so they are available for use in
+    conditionals (see bug #19675).
+  - Added ``entry_id`` and ``url_title`` parameters to the Comment
+    module's Comment Notification Links tag.
+  - Removed content preview from post-publish View Entry screen.
+  - **Reactor:** Recursively loaded templates error message now shows the
+    order of template loading that caused the recursion.
+
+- Bug Fixes:
+
+  - Fixed a bug (#19480) where relationships did not parse correctly across
+    MSM sites.
+  - Fixed a bug (#19715) where the publish page preview could execute
+    Javascript.
+  - Fixed a bug in the Rich Text Editor where lists were with displayed with
+    a lot of additional spacing when editing an entry.
+  - Fixed a bug where the template parser could hit the regular expression length
+    limit when processing tags that return randomized data.
+  - Fixed a bug where super admins could assign duplicate email addresses to
+    existing users.
+  - Fixed a bug (#19605) where the offset parameter did not work on relationship
+    tags unless a limit parameter was also specified.
+  - Fixed a bug (#19677) where the redirect to the frontend username update page
+    ignored the member trigger setting.
+  - Fixed a bug where Channel Form submission could result in a PHP error when
+    overloading multibyte functions.
+  - Fixed a bug (#19717) in Channel Form where the captcha word was not always
+    created despite being required to post.
+  - Fixed a bug (#19710) where file syncing would silently fail when adding large
+    numbers of new files.
+  - Fixed a bug where Channel Form failed when posting to a different MSM site
+    (also addressed #17605).
+  - Fixed a bug in the 2.0 update where a MySQL error could occur trying to alter
+    Trackback dates.
+  - Fixed a bug (#17113) in the Channel Form tag where captcha errors were not
+    displayed when using inline errors.
+  - Updated the user agents configuration file to properly recognize newer versions
+    of Opera (#19617).
+  - Fixed a bug in the Channel Entries tag where a PHP error could occur in related
+    categories mode.
+  - Fixed a bug where the updater may show an error on sites that have an
+    RTE field but no Channel entries.
+  - Fixed a bug (#19502) where logging items to the Developer Log via the
+    Javascript controller wouldn't have required dependencies loaded
+  - Fixed a bug (#19684) where Grid column names couldn't be prefixed with
+    the name of the parent Grid field.
+  - Fixed a bug (#19685) where some conditionals testing if a Grid field
+    had content may evaluate incorrectly.
+  - Fixed a bug (#19696) where uninstalling Grid may show an error.
+  - Fixed a bug (#19707) where the class parameter was not working on
+    Channel Form.
+  - Fixed a bug (#19702) where some member profile forms may show an error
+    upon submission when Secure Forms is turned on.
+  - Fixed a bug where the search parameter wasn't working in Channel
+    Calendar.
+  - Fixed bugs (#17681, #16840) in Channel Forms where a file upload over
+    PHP's ``post_max_size`` limit resulted in the request silently being
+    dropped
+  - Fixed bugs (#19388, #19452) where the query for duplicate url_titles
+    was using the wrong regex and preforming inefficiently with a larger
+    number of entries.
+  - Fixed a bug (#19226) where CP tab ordering failed with numeric tab
+    names because Chrome sorts numeric object keys by key instead of
+    insertion order.
+  - Fixed a bug (#19317) where an incorrect error message was being thrown
+    when GD was not present during thumbnail creation.
+  - Fixed a bug in the RTE where the last [code][/code] block would be
+    replaced by the second to last code block when editing an entry.
+  - Fixed a bug in the publish form where pressing "enter" in any text
+    area would result in the RTE grabbing focus and the form not being
+    submitted.
+  - Fixed a bug (#19700) in the RTE where extra paragraph tags could
+    appear at the end of the content after going to code view.
+
 
 Version 2.7.0
 -------------
