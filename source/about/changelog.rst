@@ -21,6 +21,7 @@ Release Date: September 24, 2013
     Site Manager is enabled.
   - Combined the idle and logout notifications and made their state persistent
     across browser tabs.
+  - Modified the member delete confirmation page to be clearer.
   - Changed parse order of ``{current_url}``, ``{current_path}`` and
     ``{current_query_string}`` so they are available for use in
     conditionals (see bug #19675).
