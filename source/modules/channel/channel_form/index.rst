@@ -50,14 +50,17 @@ Using Channel Form
 Including Assets
 ----------------
 
-If you plan on using the Datepicker or formatting buttons, include a link
-to the channel form stylesheet in your template::
+If you plan on using the formatting buttons or the :doc:`Grid
+</modules/channel/grid>`, :doc:`Relationships
+</modules/channel/relationships>`, :doc:`Rich Text Editor
+</modules/rte/index>`, Date, or File fieldtypes, include a link to the
+Channel Form stylesheet in your template::
 
 	<link href="{path=css/_ee_channel_form_css}" type="text/css" rel="stylesheet" media="screen">
 
-The channel form tag will automatically load jQuery for you. If you prefer
-to include your own version of jQuery, use the
-`include_jquery=`_ parameter.
+The Channel Form tag will automatically load jQuery for you. If you
+prefer to include your own version of jQuery, use the `include_jquery=`_
+parameter.
 
 Form Inputs
 -----------
