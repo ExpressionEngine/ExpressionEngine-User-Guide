@@ -5,6 +5,64 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.7.2
+-------------
+
+Release Date: October 8, 2013
+
+- General Changes:
+
+  - Addressed a security issue where XIDs may not invalidate properly.
+  - Changed the email password field in the Moblog settings to a password type
+    field.
+
+- Bug Fixes:
+
+  - Fixed a bug (#19737) where Grid row sorting may not work correctly in
+    Firefox.
+  - Fixed a bug where the IP to Nation module may fail to update its
+    database on some non-GNU systems.
+  - Fixed a bug in CodeIgniter's database library where using ``where_in``
+    on a cached query did not apply the conditional operator.
+  - Fixed a bug (#19760) where selected relationships were cut off by the
+    field limit.
+  - Fixed bugs (#19512, #19096) where the default collation on the files table
+    was resulting in case-sensitive operations returning case-insensitive matches.
+  - Fixed a bug (#19745) where the save layout function was grabbing the
+    incorrect tab label.
+  - Fixed a bug (#19368) where selecting SMTP as the email protocol and
+    leaving the port blank resulted in a PHP socket error.
+  - Fixed a bug (#19704) where trying to add a File fieldtype to a channel
+    group, without file upload preferences set, failed without reporting the
+    error.
+  - Fixed a bug (#19728) where changing the text formatting options from
+    editing a channel field, returns to the channel field form with validation
+    errors and missing data.
+  - Fixed a bug (#19750) where the override default text format setting was not
+    being accurately displayed when editing a channel field.
+  - Fixed a bug (#19751) where text formatting overrides were not working
+  - Fixed a bug (#18219) where URLs ending in a period or comma would end up
+    in the wrong place if converted via auto_linker.
+  - Fixed a bug (#19648) where "Filter by" ID on view all members did not work.
+  - Fixed a bug (#19722) where the generated link to change a forgotten password
+    was wrong if force query strings was on.
+  - Fixed a bug (#19721) where showing a formatted entry date inside the entries
+    tag pair in the Channel Entries Calendar tag caused a PHP error.
+  - Fixed a bug (#19732) on the publish page where file fields would always be
+    treated as required if an allowed upload directory was specified in the field's
+    settings.
+  - Fixed a bug (#19733) where the mailing list form tag would silently fail adding
+    emails.
+  - Fixed a bug (#19624) where conditionals did not work inside checkbox and
+    multi-select custom field tag pairs.
+  - Fixed a display issue on the category edit page that occurred when a category
+    image exists.
+  - Fixed a bug (#19749) where extra segments in the URL could cause the channel
+    module to fail to identify a single entry indicator.
+  - Fixed a bug in Communicate where a PHP error could occur when sending emails to
+    mailing lists and recipients at the same time.
+
+
 Version 2.7.1
 -------------
 
