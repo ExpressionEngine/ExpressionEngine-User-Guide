@@ -62,6 +62,11 @@ Release Date: October 8, 2013
   - Fixed a bug in Communicate where a PHP error could occur when sending emails to
     mailing lists and recipients at the same time.
 
+- Developers:
+
+  - Fixed a bug (#19427) where objects could not be passed through to views.
+  - Fixed a bug where the Grid field would send the wrong row ID to post_save.
+
 
 Version 2.7.1
 -------------
