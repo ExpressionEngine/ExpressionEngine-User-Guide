@@ -61,6 +61,8 @@ Release Date: October 8, 2013
     module to fail to identify a single entry indicator.
   - Fixed a bug in Communicate where a PHP error could occur when sending emails to
     mailing lists and recipients at the same time.
+  - Fixed a bug where text columns in Grid may not be able to change
+    data types.
 
 - Developers:
 
