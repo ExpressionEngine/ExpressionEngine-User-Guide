@@ -27,11 +27,11 @@ $.fn.githubRepositories = function(callback) {
 
 		// compile an underscore template from the placeholder item
 		listTemplate = _.template(
-			'<% $u.each(repos, function(r) { %>' + 
+			'<% $u.each(repos, function(r) { %>' +
 			placeholder
 				.html()
-				.replace(/href="[^"]+"/, 'href="<%= r.html_url %>"')
-				.replace(/>[^<>]+<\/a>/, '><%= r.repoName %></a>') + 
+				.replace(/href="[^"]+"/, 'href="<%= r.html_url %>/releases"')
+				.replace(/>[^<>]+<\/a>/, '><%= r.repoName %></a>') +
 			'<% }); %>'
 		);
 
@@ -70,7 +70,7 @@ $(document).ready(function() {
 
 	// for the general/languages.rst page
 	$('.github-language-repos').githubRepositories(function(repos) {
-		
+
 		var ignoreLanguages = ['English', 'Hebrew'],
 			reLanguage = new RegExp('^EE-Language-');
 
