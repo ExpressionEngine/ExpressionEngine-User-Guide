@@ -271,6 +271,8 @@ Removes the textarea only restriction for fields in the moblog module.
 
   $config['moblog_allow_nontextareas'] = 'y';
 
+.. _advconfig-newrelic_app_name:
+
 newrelic_app_name
 ~~~~~~~~~~~~~~~~~
 

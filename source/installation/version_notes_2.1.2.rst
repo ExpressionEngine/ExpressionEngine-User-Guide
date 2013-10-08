@@ -26,10 +26,10 @@ with.
 
 ::
 
-    <!-- Template Private Message - Preview -->      
-    <h3>{lang:preview_message}</h3> 
+    <!-- Template Private Message - Preview -->
+    <h3>{lang:preview_message}</h3>
     <table class="member_table">
-        <tr> 
+        <tr>
             <td>{include:parsed_message}</td>
         </tr>
     </table> <!-- End Template Private Message - Preview -->
@@ -84,6 +84,6 @@ Added a new method settings_modify_column($params) to the custom field
 types. See :doc:`Fieldtypes Functions Reference
 </development/fieldtypes>`.
 
-:ref:`Return to Update Page <update_additional_steps>`
+:ref:`Return to Update Page <update_cleanup>`
 
 

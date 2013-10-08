@@ -6,7 +6,7 @@ Reviewing the notes below will help you transition to 1.5.2 with as
 little effort as possible.
 
 
-            
+
 
 Profile Theme Updates
 ---------------------
@@ -81,7 +81,7 @@ that contains changes. To update your language pack, you can download
 this text file, make the changes, and simply copy the new keys to the
 appropriate language files.
 
-:ref:`Return to Update Page <update_additional_steps>`
+:ref:`Return to Update Page <update_cleanup>`
 
 `ExpressionEngine <http://ellislab.com/expressionengine>`_ – Copyright ©
 2002-2011 – `EllisLab, Inc. <http://ellislab.com/>`_

@@ -1,6 +1,15 @@
 ExpressionEngine Forum Module Change Log
 ========================================
 
+Version 3.1.13
+--------------
+
+Release Date: October 8, 2013
+
+- Altered the forum tab behavior to allow disassociating a channel entry from a
+  forum topic by submitting an empty forum topic ID field (see #17262).
+
+
 Version 3.1.12
 --------------
 

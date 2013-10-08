@@ -35,4 +35,4 @@ Altered View Files
 - views/members/register.php
 
 
-:ref:`Return to Update Page <update_additional_steps>`
+:ref:`Return to Update Page <update_cleanup>`

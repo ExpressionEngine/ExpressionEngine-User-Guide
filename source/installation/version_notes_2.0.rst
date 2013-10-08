@@ -33,6 +33,6 @@ aware of prior to upgrading.
    If you need assistance with this modification, please contact
    ExpressionEngine support.
 
-:ref:`Return to Update Page <update_additional_steps>`
+:ref:`Return to Update Page <update_cleanup>`
 
 
