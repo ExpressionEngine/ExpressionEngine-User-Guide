@@ -840,6 +840,40 @@ the HTML needed to display fields in ``display_field()`` and
 ``grid_display_field()``, so we try to centralize the the common logic
 between them for better code maintenance.
 
+Grid Fieldtype Settings Class Property
+======================================
+
+When your fieldtype is in the context of Grid, it will have a few more
+items available to you in your fieldtype's ``$settings`` class property.
+
++-----------------------+----------------------------------------------+
+| Settings Key Name     | Description                                  |
++=======================+==============================================+
+| ``col_id``            | The ID of the column your fieldtype is in    |
+|                       | publish form                                 |
++-----------------------+----------------------------------------------+
+| ``col_name``          | The short name of the column your fieldtype  |
+|                       | is in                                        |
++-----------------------+----------------------------------------------+
+| ``col_required``      | Whether or not the column is required (y/n), |
+|                       | ``field_required`` will also be set to this  |
++-----------------------+----------------------------------------------+
+| ``grid_field_id``     | Field ID of the column's parent Grid field   |
++-----------------------+----------------------------------------------+
+| ``grid_row_name``     | In certain instances, such as saving data,   |
+|                       | will be set to a unique row name when a row  |
+|                       | ID might not be available for new rows       |
++-----------------------+----------------------------------------------+
+| ``grid_row_id``       | When available, ID of the current row being  |
+|                       | processed                                    |
++-----------------------+----------------------------------------------+
+
+These are accessed as array keys of your ``$settings`` class property
+like so::
+
+  $this->settings['col_id'];
+
+
 Grid Javascript Events
 ======================
 
