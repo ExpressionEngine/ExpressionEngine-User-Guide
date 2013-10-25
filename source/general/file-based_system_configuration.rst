@@ -1389,25 +1389,6 @@ Example Usage: ::
 $config['email_newline'] = "\r\n";
 
 
-email_smtp_port
----------------
-:ref:`SMTP Server Port <email-smtp-server-port-label>` If you need to use a port other than 25 with your SMTP server, then fill out this field. If you’re planning on using port 25, you can leave this blank.
-
-========== ========
-Values     Behavior
-========== ========
-``number`` Specifies which port to use for SMTP
-========== ========
-
-Example Usage: ::
-
-$config['email_smtp_port'] = "2525";
-
-.. rst-class:: cp-path
-
-**Control Panel Location:** :menuselection:`Admin --> Email Configuration`: SMTP Server Port
-
-
 emoticon_url
 ------------
 The :ref:`URL to the folder containing your smileys <emoticon-url-folder-label>` setting specifies the URL of the folder where you have your smiley graphics located. This setting will automatically be filled in during installation, so you should only need to change it if you have altered where your smiley graphics are stored.
@@ -3290,7 +3271,7 @@ $config['smtp_server'] = '10.2.3.12';
 
 smtp_port
 ---------
-:ref:`SMTP Server Port <email-smtp-server-port-label>` If you chose SMTP as your email protocol above, then you will need to fill out this field, which specifies the server address of the SMTP server. This setting is ignored if “SMTP” is not selected as the email protocol.
+:ref:`SMTP Server Port <email-smtp-server-port-label>` If you chose SMTP as your email protocol above, then you will need to fill out this field, which specifies the server address of the SMTP server. This setting is ignored if "SMTP" is not selected as the email protocol.
 
 ========== ========
 Values     Behavior
@@ -3300,7 +3281,7 @@ Values     Behavior
 
 Example Usage: ::
 
-$config['email_smtp_port'] = "2525";
+$config['smtp_port'] = "2525";
 
 .. rst-class:: cp-path
 
