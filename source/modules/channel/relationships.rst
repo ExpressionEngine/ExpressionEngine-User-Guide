@@ -667,7 +667,7 @@ taking a single child entry::
 		field1					Text
 		field2					Text
 
-You would access the child entry in your tempalte using the following syntax::
+You would access the child entry in your template using the following syntax::
 
 	{exp:channel:entries channel="parentChannel"}
 		{title} - {field1} - {field2}
