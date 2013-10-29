@@ -234,6 +234,15 @@ next\_row
 Used as a tag pair within the parent Grid field tag pair, provides
 access to data in the next row in the dataset.
 
+row_id
+------
+
+::
+
+  {gallery:row_id}
+
+The database ID of the current row.
+
 switch=
 -------
 
