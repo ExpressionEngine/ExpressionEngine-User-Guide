@@ -41,11 +41,11 @@ published.
 BBCode Basics
 ^^^^^^^^^^^^^
 
-**Note:** BBCode is just the default text-formatting option. Your wiki
-admin may have selected a different text-formatting style such as
-**Textile** or **Markdown** or prefer the use of standard **xhtml**. If
-BBCode doesn't work, please contact your wiki admin for text-formatting
-help.
+.. note:: BBCode is just the default text-formatting option. Your wiki
+	admin may have selected a different text-formatting style such as
+	**Textile** or **Markdown** or prefer the use of standard **xhtml**.
+	If BBCode doesn't work, please contact your wiki admin for 
+	text-formatting help.
 
 BBCode works by surrounding the text you want to style with a bracketed
 tag. For example, if you want to make some text have **strong emphasis**
@@ -66,8 +66,8 @@ Would display like this after editing::
 
 	This text is emphasized. This text is italicized.
 
-You can do a lot more with BBCode. Just see the `BBCode
-Reference <../../general/BBCode.html>`_ section for details.
+You can do a lot more with BBCode. Just see the :doc:`BBCode Reference
+</general/bbcode>` section for details.
 
 Create an Article
 ~~~~~~~~~~~~~~~~~

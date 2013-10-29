@@ -46,7 +46,7 @@ will require you to make this CSS modification, replacing::
 
 	.uploadBox {
 
-		   background-color:  #A5B2DC;  
+		   background-color:  #A5B2DC;
 
 		   border:            #6F7CA2 1px solid;
 
@@ -63,12 +63,12 @@ will require you to make this CSS modification, replacing::
 		   padding:           5px 0 5px 0;
 
 	}
-	
+
 with this::
 
 	.uploadBox {
 
-   background-color:  #A5B2DC;  
+   background-color:  #A5B2DC;
 
    border:            #6F7CA2 1px solid;
 
@@ -115,7 +115,7 @@ with this::
    margin-bottom:     -2px;
 
 	}
-	
+
 Some CSS that was previously hard-coded in the control panel output has
 been moved to the Control Panel theme CSS files to make this more
 flexible to theme. Six variables have been added which are required to
@@ -164,7 +164,7 @@ need to add this CSS to your theme::
 	html>body #sitesdropmenu ul { display:none; position:absolute; top:5px; left:190px; border-top:1px solid #B2B3CE; }
 
 	html>body .navCell #sitesdropmenu li:hover { background: #C0C3E2 url({path:image_url}bg_cell_hover.jpg) repeat-x left top; }
-	
+
 Template Manager Icons
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -198,7 +198,7 @@ the download to your /themes/cp\_global\_images/ folder::
 	xml_icon.png
 
 	xml_icon_hidden.png
-	
+
 Mailing List Activation Template
 --------------------------------
 
@@ -218,7 +218,7 @@ include the new variable::
 	Thank You!
 
 	{site_name}
-	
+
 Mailing List Templates
 ----------------------
 
@@ -234,7 +234,7 @@ variable::
 		{if html_email}<a href="{unsubscribe_url}">{unsubscribe_url}</a>{/if}
 
 		{if plain_email}{unsubscribe_url}{/if}
-	
+
 Language Additions
 ------------------
 
@@ -246,4 +246,4 @@ contains changes. To update your language pack, you can download this
 text file, make the changes, and simply copy the new keys to the
 appropriate language files.
 
-:ref:`Return to Update Page <update-additional-steps>`
+:ref:`Return to Update Page <update_cleanup>`

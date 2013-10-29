@@ -20,11 +20,11 @@ against the automated spamming methods.
 Blacklists
 ----------
 
-The ExpressionEngine `Blacklist/Whitelist
-Module <../modules/blacklist/index.html>`_ is an integral part of EE's
-spam prevention capability. This Module allows you to specify URLs, IP
-addresses, and user agents that you want to deny (blacklist) or
-specifically allow (whitelist) from your site.
+The ExpressionEngine :doc:`Blacklist/Whitelist Module
+</modules/blacklist/index>` is an integral part of EE's spam prevention
+capability. This Module allows you to specify URLs, IP addresses, and
+user agents that you want to deny (blacklist) or specifically allow
+(whitelist) from your site.
 
 The blacklist checks all content that is submitted to your site.
 ExpressionEngine will compare the submitted content against your
@@ -69,16 +69,17 @@ the target destination.
 
 The setting is located at: :menuselection:`Admin --> Security and Privacy --> Security and Sessions`
 
-.. _spam-protect-secure-form-mode-label:
+.. _spam-protect-secure-mode-label:
 
-Secure Form Mode
-----------------
+Secure Mode
+-----------
 
-Secure Form Mode prevents automated scripts (the most common way spam is
-generated) from repeatedly submitting comments or other form data. A
-submission is only allowed when a user manually loads a page and submits
-the form from your site. And once the form data is received, the user
-has to manually reload the page before they can submit again.
+Processing forms in Secure Mode prevents automated scripts (the most
+common way spam is generated) from repeatedly submitting comments or
+other form data. A submission is only allowed when a user manually loads
+a page and submits the form from your site. And once the form data is
+received, the user has to manually reload the page before they can
+submit again.
 
 The setting is located at: :menuselection:`Admin --> Security and Privacy --> Security and Sessions`
 

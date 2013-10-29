@@ -8,7 +8,7 @@ Welcome
 
 - :doc:`intro/getting_the_most`
 - :doc:`intro/the_big_picture`
-- `EllisLab Support <http://ellislab.com/support>`_
+- :ellislab:`EllisLab Support </support>`
 
 *****************
 Application Setup
@@ -20,13 +20,13 @@ Installation
 - :doc:`installation/requirements`
 - :doc:`installation/installation`
 
-Updates and Upgrades
-====================
+Updates & Upgrades
+==================
 
 - :doc:`installation/update`
 - :doc:`installation/upgrade_from_1.x`
-- :doc:`installation/upgrade_from_freelancer`
 - :doc:`installation/upgrade_from_core`
+- :doc:`installation/version_notes`
 
 **********************
 Using ExpressionEngine
@@ -95,12 +95,17 @@ Optimizing ExpressionEngine
 - :doc:`optimization/throttling`
 - :doc:`optimization/handling_extreme_traffic`
 
+Performance Monitoring
+======================
+
+- :doc:`New Relic <monitoring/new-relic>`
+
 Solving Problems
 ================
 
 - :doc:`troubleshooting/index`
-- `EllisLab Support <http://ellislab.com/support>`_
-- `Community Support Forum <http://ellislab.com/forums/viewannounce/230174_114/>`_
+- :ellislab:`EllisLab Support </support>`
+- :ellislab:`Community Support Forum </forums/viewannounce/230174_114/>`
 
 
 *************
@@ -131,8 +136,7 @@ Reference Guides
 Add-Ons
 =======
 
-
-.. _add-ons-included-in-expressionengine:
+.. _add_ons_included_in_expressionengine:
 
 Included in ExpressionEngine
 ----------------------------
@@ -155,14 +159,12 @@ Included in ExpressionEngine
 - :doc:`modules/referrer/index`
 - :doc:`modules/rss/index`
 - :doc:`modules/rte/index`
-- :doc:`modules/safecracker/index`
 - :doc:`modules/search/index`
 - :doc:`modules/simple_commerce/index`
 - :doc:`modules/statistics/index`
-- :doc:`modules/updated_sites/index`
 - :doc:`modules/wiki/index`
 
-.. _add-ons-available-for-download:
+.. _add_ons_available_for_download:
 
 Available for Download
 ----------------------
@@ -176,7 +178,7 @@ Developing for ExpressionEngine
 *******************************
 
 - :doc:`Add-On Development <development/index>`
-- `Development & Programming Forum <http://ellislab.com/forums/viewannounce/230178_116/>`_
+- :ellislab:`Development & Programming Forum </forums/viewannounce/230178_116/>`
 
 
 **********************
@@ -187,24 +189,25 @@ About ExpressionEngine
 - :doc:`Change Log </about/changelog>`
 
 .. toctree::
-	:glob:
-	:titlesonly:
-	:hidden:
-	
-	about/index
-	about/license
-	about/changelog
-	installation/index
-	cp/index
-	general/index
-	how_to/index
-	intro/index
-	handling_bugs/index
-	modules/index
-	operations/index
-	optimization/index
-	security/index
-	templates/index
-	troubleshooting/index
-	urls/index
-	development/index
+  :glob:
+  :titlesonly:
+  :hidden:
+
+  about/index
+  about/license
+  about/changelog
+  installation/index
+  cp/index
+  general/index
+  how_to/index
+  intro/index
+  handling_bugs/index
+  modules/index
+  operations/index
+  optimization/index
+  monitoring/index
+  security/index
+  templates/index
+  troubleshooting/index
+  urls/index
+  development/index

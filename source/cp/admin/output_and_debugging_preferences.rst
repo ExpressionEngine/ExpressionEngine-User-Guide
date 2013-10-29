@@ -10,6 +10,8 @@ output from the server to the user. This includes how debugging
 information is handled for your website. These are general settings that
 apply throughout the website/system.
 
+.. _generate-http-headers-label:
+
 Generate HTTP Page Headers?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -124,3 +126,10 @@ created in the ExpressionEngine Template parser will be shown to Super
 Admins at the bottom of the browser window. This includes Global Variables,
 Conditionals, Tags, PHP on Input/Ouput, Embeds, and Extension Hooks.
 This is an excellent tool for debugging your templates.
+
+Enable New Relic RUM JavaScript?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This preference only appears when the New Relic PHP extension has
+been installed on your server. For more details, please visit
+:doc:`/monitoring/new-relic`.

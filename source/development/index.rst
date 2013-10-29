@@ -8,74 +8,81 @@ ExpressionEngine.
 Development
 -----------
 
--  :doc:`2.0 Conversion </development/conversion/index>`
--  :doc:`Constants Reference </development/constants>`
--  :doc:`Accessory Development </development/accessories>`
--  :doc:`Extensions Development </development/extensions>`
--  :doc:`Fieldtype Development </development/fieldtypes>`
--  :doc:`Plugin Development </development/plugins>`
--  :doc:`Module Development </development/modules>`
+- :doc:`2.0 Conversion </development/conversion/index>`
+- :doc:`Constants Reference </development/constants>`
+- :doc:`Accessory Development </development/accessories>`
+- :doc:`Extensions Development </development/extensions>`
 
-   -  :doc:`Module Development Tutorial </development/module_tutorial>`
+  - :doc:`/development/extension_hooks/index`
 
--  :doc:`Rich Text Editor Tool Development </development/rte_tools>`
--  :doc:`API </development/api/index>`
+- :doc:`Fieldtype Development </development/fieldtypes>`
+- :doc:`Plugin Development </development/plugins>`
+- :doc:`Module Development </development/modules>`
 
-   -  :doc:`Channel Categories </development/api/api_channel_categories>`
-   -  :doc:`Channel Entries </development/api/api_channel_entries>`
-   -  :doc:`Channel Fields </development/api/api_channel_fields>`
-   -  :doc:`Channel Structure </development/api/api_channel_structure>`
-   -  :doc:`Template Structure </development/api/api_template_structure>`
+  -  :doc:`Module Development Tutorial </development/module_tutorial>`
 
--  **Guidelines**
+- :doc:`Rich Text Editor Tool Development </development/rte_tools>`
+- :doc:`API </development/api/index>`
 
-   -  :doc:`Overview </development/guidelines/index>`
-   -  :doc:`General Style and Syntax </development/guidelines/general>`
-   -  :doc:`Performance Guidelines </development/guidelines/performance>`
-   -  :doc:`Security Guidelines </development/guidelines/security>`
-   -  :doc:`Summary Checklist </development/guidelines/checklist>`
-   -  :doc:`Documentation </development/guidelines/documentation>`
+  - :doc:`Channel Categories </development/api/api_channel_categories>`
+  - :doc:`Channel Entries </development/api/api_channel_entries>`
+  - :doc:`Channel Fields </development/api/api_channel_fields>`
+  - :doc:`Channel Structure </development/api/api_channel_structure>`
+  - :doc:`Template Structure </development/api/api_template_structure>`
 
--  Using ExpressionEngine Classes
+- **Guidelines**
 
-   -  :doc:`CP Class </development/usage/cp>`
-   -  :doc:`Database Class </development/usage/database>`
-   -  :doc:`Email Class </development/usage/email>`
-   -  :doc:`File Field Class </development/usage/file_field>`
-   -  :doc:`Form Validation Class </development/usage/form_validation>`
-   -  :doc:`Input Class </development/usage/input>`
-   -  :doc:`Language Class </development/usage/language>`
-   -  :doc:`Layout Class </development/usage/layout>`
-   -  :doc:`Localization Class </development/usage/localization>`
-   -  :doc:`Logger Class </development/usage/logger>`
-   -  :doc:`Security Class </development/usage/security>`
-   -  :doc:`Session Class </development/usage/session>`
-   -  :doc:`Table Class </development/usage/table>`
-   -  :doc:`Template Parser Class </development/usage/template>`
-   -  :doc:`Typography Class </development/usage/typography>`
-   -  :doc:`URI Class </development/usage/uri>`
-   -  :doc:`XML Parser Class </development/usage/xmlparser>`
+  - :doc:`Overview </development/guidelines/index>`
+  - :doc:`General Style and Syntax </development/guidelines/general>`
+  - :doc:`Performance Guidelines </development/guidelines/performance>`
+  - :doc:`Security Guidelines </development/guidelines/security>`
+  - :doc:`Summary Checklist </development/guidelines/checklist>`
+  - :doc:`Documentation </development/guidelines/documentation>`
 
--  ExpressionEngine Functions by Class
+- Using ExpressionEngine Classes
 
-   -  :doc:`Functions Class </development/reference/functions>`
+  - :doc:`CP Class </development/usage/cp>`
+  - :doc:`Database Class </development/usage/database>`
+  - :doc:`Email Class </development/usage/email>`
+  - :doc:`File Field Class </development/usage/file_field>`
+  - :doc:`Form Validation Class </development/usage/form_validation>`
+  - :doc:`Input Class </development/usage/input>`
+  - :doc:`Language Class </development/usage/language>`
+  - :doc:`Layout Class </development/usage/layout>`
+  - :doc:`Localize Class </development/usage/localization>`
+  - :doc:`Logger Class </development/usage/logger>`
+  - :doc:`Security Class </development/usage/security>`
+  - :doc:`Session Class </development/usage/session>`
+  - :doc:`Table Class </development/usage/table>`
+  - :doc:`Template Parser Class </development/usage/template>`
+  - :doc:`Typography Class </development/usage/typography>`
+  - :doc:`URI Class </development/usage/uri>`
+  - :doc:`XML Parser Class </development/usage/xmlparser>`
 
--  ExpressionEngine Control Panel JavaScript
+- ExpressionEngine Datastructures
 
-   -  :doc:`Custom jQuery Events </development/cp_javascript/events>`
-   -  :doc:`Notification Plugin </development/cp_javascript/notification>`
-   -  :doc:`Rich Text Editor </development/cp_javascript/rte/index>`
-   -  :doc:`Table Plugin </development/cp_javascript/table>`
+  - :doc:`Tree </development/reference/tree_datastructure>`
 
--  :doc:`Control Panel Style Reference </development/cp_styles/index>`
--  :doc:`Emoticon Development </development/emoticons>`
+- ExpressionEngine Functions by Class
+
+  - :doc:`Functions Class </development/reference/functions>`
+
+- ExpressionEngine Control Panel JavaScript
+
+  - :doc:`Custom jQuery Events </development/cp_javascript/events>`
+  - :doc:`Notification Plugin </development/cp_javascript/notification>`
+  - :doc:`Rich Text Editor </development/cp_javascript/rte/index>`
+  - :doc:`Table Plugin </development/cp_javascript/table>`
+
+- :doc:`Control Panel Style Reference </development/cp_styles/index>`
+- :doc:`Emoticon Development </development/emoticons>`
 
 
 .. toctree::
 	:glob:
 	:hidden:
 	:titlesonly:
-	
+
 	*
 	api/index
 	conversion/index
@@ -83,5 +90,5 @@ Development
 	cp_styles/index
 	extension_hooks/index
 	guidelines/index
-	reference/functions
+	reference/*
 	usage/*

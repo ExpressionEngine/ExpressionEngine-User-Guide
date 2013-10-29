@@ -8,9 +8,9 @@ other variables, etc. Snippets add flexibility and reusability, while
 making it simple to make site-wide changes by editing the Snippet's
 source instead of having to modify many templates.
 
-One idea would be to hold a particular `date format
-string <../date_variable_formatting.html>`_ that you wish to reuse over
-and over. By making it a Snippet you can change it in one place and
+One idea would be to hold a particular :doc:`date format string
+</templates/date_variable_formatting>` that you wish to reuse over and
+over. By making it a Snippet you can change it in one place and
 immediately see the effects everywhere that you've used it. For example,
 you could create a Snippet named my\_date\_formatting with a value of
 format="%m-%d-%Y" and use it in any date variable thusly::
@@ -30,13 +30,15 @@ What is the difference between a Snippet and a User-defined Global Variable?
 
 Snippets are expanded at a very early stage on each template, making it
 possible for them to hold dynamic content, ExpressionEngine tags, other
-variables, PHP, etc. They shine when you need to reuse dynamic
-information, but don't need the extra overhead of access control or
-separate preferences of an embedded template. :doc:`User-defined Global
-Variables <user_defined>` are the polar opposites, expanded at the
-very end of all template parsing, and should be used for static text,
-HTML, JavaScript, and other static content that would not affect other
-tags and variables on the template.
+variables, PHP, etc. (Read more about :doc:`the rendering stages of the
+template engine </templates/template_engine>`.) They shine when you need
+to reuse dynamic information but don't need the extra overhead of
+access control or separate preferences of an embedded template.
+:doc:`User-defined Global Variables <user_defined>` are the polar
+opposites, expanded during one of the final rendering stages of the
+template engine, and should be used for static text, HTML, JavaScript,
+and other static content that would not affect other tags and variables
+on the template.
 
 What is the difference between a Snippet and an Embedded Template?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -54,13 +56,14 @@ template.
 Multiple Site Manager Tip
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are using the Multiple Site Manager, you'll notice that Snippets
-can be private to a particular site, or shared between all sites. To
-easily identify the difference when reading your templates, consider
-prefixing your Snippet names with the site's short name, or "global"::
+If you are using the Multiple Site Manager, you'll notice that you have
+a new preference when editing each Snippet: make it available to all
+your MSM sites or this site only. To easily identify the difference when
+reading your templates, consider prefixing your Snippet names with the
+site's short name or, for Snippets available to all sites, *global*::
 
 	{ellislab_date_formatting}
-	
+
 	{codeigniter_date_formatting}
-	
+
 	{global_date_formatting}

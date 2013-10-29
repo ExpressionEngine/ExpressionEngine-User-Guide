@@ -2,90 +2,83 @@ Design Controller Extension Hooks
 =================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-edit\_template\_start
----------------------
+edit_template_start
+-------------------
 
-Additional processing / take over at the beginning of the
-edit\_template() method. ::
+.. function:: edit_template_start($query, $template_id, $message)
 
-	$edata = $this->extensions->call('edit_template_start', $query, $template_id, $message); if ($this->extensions->end_script === TRUE) return;
+  Additional processing / take over at the beginning of the
+  ``edit_template()`` method.
 
-$query
-~~~~~~
+  How it's called::
 
-Database result object for the selected template
+    $this->extensions->call('edit_template_start', $query, $template_id, $message);
+    if ($this->extensions->end_script === TRUE) return;
 
-$template\_id
-~~~~~~~~~~~~~
+  :param object $query: Database result object for the selected template
+  :param int $template_id: Selected template's ID
+  :param string $message: Update/error message from update action, if
+    applicable
+  :rtype: Void
 
-Template ID of the selected template
-
-$message
-~~~~~~~~
-
-Update / Error message from update action, if applicable
-
-:returns:
-    void
-
-Added in v1.6.0
+  .. versionadded:: 1.6.0
 
 template_types
 --------------
 
-Add template types to ExpressionEngine's default set. In the design
-controller, this hook will append custom template types to the bottom of
-Template Type dropdowns. ::
+.. function:: template_types()
 
-	$custom_templates = $this->extensions->call('template_types', array());
+  Add template types to ExpressionEngine's default set. In the Output
+  library specifically, it is useful to return the appropriate content
+  type header for the template type.
 
-This hook must append a key to the `$last_call <../../../extensions.html#this-extensions-last-call>`_
-array in the following format::
+  How it's called::
 
-	$custom_templates = $this->EE->extensions->last_call;
-	
-	$custom_templates['ical'] = array(             // Short name for database
-	    'template_name'           => 'iCal Feed',  // Display name for Template Type dropdown
-	    'template_file_extension' => '.ics',       // File extension for saving templates as files
-	    'template_headers'        => array(        // Custom headers for file type
-	        'Content-Type: text/ical',
-	        'Content-Disposition: attachment; filename="event.ics"'
-	    )
-	);
+    $template_types = $EE->extensions->call('template_types');
 
-**Note:** It is good practice to clean up the templates table and remove
-your custom template type from templates using it upon extension
-uninstallation.
+  :returns: The custom templates array (see below)
+  :rtype: Array
 
-:returns:
-    Array
+  This hook must append a key to the :doc:`$last_call
+  </development/extensions>` array in the following format::
 
-Added in v2.4.0
+      $custom_templates = ee()->extensions->last_call;
 
-update\_template\_end
----------------------
+      $custom_templates['ical'] = array(             // Short name for database
+          'template_name'           => 'iCal Feed',  // Display name for Template Type dropdown
+          'template_file_extension' => '.ics',       // File extension for saving templates as files
+          'template_headers'        => array(        // Custom headers for file type
+              'Content-Type: text/ical',
+              'Content-Disposition: attachment; filename="event.ics"'
+          )
+      );
 
-Additional processing after a template is updated
+  .. note:: It is good practice to clean up the templates table and
+    remove your custom template type from templates using it upon
+    extension uninstallation.
 
-::
+  .. versionadded:: 2.4.0
 
-	$edata = $this->extensions->call('update_template_end', $template_id, $message); if ($this->extensions->end_script === TRUE) return;
+update_template_end
+-------------------
 
-$template\_id
-~~~~~~~~~~~~~
+.. function:: update_template_end($template_id, $message)
 
-Template ID of the updated template
+  Additional processing after a template is updated
 
-$message
-~~~~~~~~
+  How it's called::
 
-Update / Error message from update action
+    $this->extensions->call('update_template_end', $template_id, $message);
+    if ($this->extensions->end_script === TRUE) return;
 
-:returns:
-    void
+  :param int $template_id: Selected template's ID
+  :param string $message: Update/error message from update action, if
+    applicable
+  :rtype: Void
 
-Added in v1.6.0
+  .. versionadded:: 1.6.0

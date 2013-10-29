@@ -6,7 +6,7 @@ Snippets
 **Control Panel Location:** :menuselection:`Design --> Templates --> Snippets`
 
 In this section of the Design area, you can create and edit
-`Snippets <../../../templates/globals/snippets.html>`_.
+:doc:`Snippets </templates/globals/snippets>`.
 
 |Design Snippets|
 

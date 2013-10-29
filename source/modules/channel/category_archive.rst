@@ -42,9 +42,10 @@ master archive that looks like this
 	etc...
 
 It shows the name of each category, and the channel entry titles
-assigned to them. **Note:** Once you have hundreds of channel entries,
-it might become cumbersome to use this tag on your page.
+assigned to them. 
 
+.. note:: Once you have hundreds of channel entries, it might become 
+	cumbersome to use this tag on your page.
 
 Parameters
 ----------
@@ -196,8 +197,8 @@ You may alternatively specify which categories to not show::
 
 	show="not 3|6|8"
 
-show\_empty=
-~~~~~~~~~~~~
+show_empty=
+~~~~~~~~~~~
 
 ::
 
@@ -209,8 +210,8 @@ which do not contain any entries will not be included in the list.
 
 By default, categories with no entries **will** be included.
 
-show\_future\_entries=
-~~~~~~~~~~~~~~~~~~~~~~
+show_future_entries=
+~~~~~~~~~~~~~~~~~~~~
 
 ::
 
@@ -235,9 +236,10 @@ The sort order can be "asc" (ascending order or "oldest item first") or
 "desc" (descending order or "newest item first"). If you do not use a
 sort order the default is desc.
 
-**Note**: The order of the categories will always follow the Category
-Order specified in the control panel. The only things the sort parameter
-changes is the order of the *entries* within each category.
+.. note:: The order of the categories will always follow the Category
+	Order specified in the control panel. The only things the sort 
+	parameter changes is the order of the *entries* within each 
+	category.
 
 status=
 ~~~~~~~
@@ -246,9 +248,9 @@ status=
 
 	status="open"
 
-You may restrict to entries with a particular
-`status <../../cp/admin/channels/statuses.html>`_. You can choose
-multiple statuses using a pipe
+You may restrict to entries with a particular :doc:`status
+</cp/admin/channels/statuses>`. You can choose multiple statuses using a
+pipe
 
 ::
 
@@ -312,8 +314,8 @@ active
 You may use this conditional to test whether the category shown is the
 active category or not, based on the dynamic URI segment.
 
-category\_description
-~~~~~~~~~~~~~~~~~~~~~
+category_description
+~~~~~~~~~~~~~~~~~~~~
 
 ::
 
@@ -329,8 +331,8 @@ statement so that it only displays if there is content in the field::
 	    {if category_description}{category_description}{/if}
 	{/categories}
 
-category\_id
-~~~~~~~~~~~~
+category_id
+~~~~~~~~~~~
 
 ::
 
@@ -338,8 +340,8 @@ category\_id
 
 The category ID associated with the category.
 
-parent\_id
-~~~~~~~~~~
+parent_id
+~~~~~~~~~
 
 ::
 
@@ -348,8 +350,8 @@ parent\_id
 The category ID associated with the category's parent (or 0 in the case
 of a top level category).
 
-category\_image
-~~~~~~~~~~~~~~~
+category_image
+~~~~~~~~~~~~~~
 
 ::
 
@@ -358,8 +360,8 @@ category\_image
 The image link (or other information) you can optionally store with each
 category within the Control Panel.
 
-category\_name
-~~~~~~~~~~~~~~
+category_name
+~~~~~~~~~~~~~
 
 ::
 
@@ -369,8 +371,8 @@ category\_name
 
 This displays the name of the category.
 
-category\_url\_title
-~~~~~~~~~~~~~~~~~~~~
+category_url_title
+~~~~~~~~~~~~~~~~~~
 
 ::
 
@@ -415,15 +417,15 @@ All custom fields assigned to a category can be accessed using the
 These are totally dynamic in that any field you create for your category
 will automatically be available by its "short name" as a variable.
 
-{entry\_titles} Variable Pair
------------------------------
+{entry_titles} Variable Pair
+----------------------------
 
 There are several variables available for use inside the
 {entry\_titles}{/entry\_titles} variable pair.
 
 
-entry\_date
-~~~~~~~~~~~
+entry_date
+~~~~~~~~~~
 
 ::
 
@@ -431,8 +433,17 @@ entry\_date
 
 The date the entry was submitted
 
-entry\_id\_path
-~~~~~~~~~~~~~~~
+entry_id
+~~~~~~~~
+
+::
+
+	{entry_id}
+
+The ID number of the channel entry.
+
+entry_id_path
+~~~~~~~~~~~~~
 
 ::
 
@@ -487,3 +498,12 @@ title
 	{entry_titles} {title} {/entry_titles}
 
 This variable is replaced by the title of the entry.
+
+url_title
+~~~~~~~~~
+
+::
+
+	{url_title}
+
+The human readable title used in the URL as a permalink.

@@ -16,9 +16,10 @@ Field Name
 This is the internal or "short name" for the field. This is a
 **required** field and must be a single word with no spaces or
 punctuation. The short name is typically used as the variable name in
-your member profile and registration templates. Note: The fields are
-typically added automatically by the system so you do not need to edit
-the templates.
+your member profile and registration templates. 
+
+.. note:: The fields are typically added automatically by the system so
+   you do not need to edit the templates.
 
 .. note:: Some words are reserved and cannot be used. Please
    see :doc:`/general/reserved_words` for details.
@@ -70,8 +71,8 @@ There are three choices:
    This might be useful if you want people to be able to use full HTML
    in this field.
 #. **XHTML**: The field content will be formatted with
-   ExpressionEngine's `Auto XHTML
-   feature. <../../general/text_formatting.html>`_
+   ExpressionEngine's :doc:`Auto XHTML feature. 
+   </general/text_formatting>`
 #. **Auto <br />**: All line breaks in the field content will be
    converted into <br /> tags.
 

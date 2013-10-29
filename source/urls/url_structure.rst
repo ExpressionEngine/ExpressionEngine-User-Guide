@@ -88,6 +88,8 @@ http://example.com/index.php/channel/archives/C13
 Here, the URL indicates to display the category with the Category ID of
 "13" using the "archives" Template in the "channel" Template Group.
 
+.. _query-strings:
+
 Query Strings
 -------------
 

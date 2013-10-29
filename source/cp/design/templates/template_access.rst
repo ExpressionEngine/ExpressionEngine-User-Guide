@@ -34,10 +34,11 @@ If you have HTTP Authentication enabled, a small key icon will appear
 next to the template's name in the Template Manager.
 
 |HTTP Authentication symbol example|
-**Note:** If the login fails, the user will receive a 401 Not Authorized
-page, and not the redirect template specified in the above drop-down
-menu. Additionally, this ability is typically only available when PHP is
-run as an Apache module.
+
+.. note:: If the login fails, the user will receive a 401 Not Authorized
+	page, and not the redirect template specified in the above drop-down
+	menu. Additionally, this ability is typically only available when
+	PHP is run as an Apache module.
 
 **SECURITY NOTE:** Do to the nature of HTTP Authentication, if used, the
 username and password submitted might be sent in the clear (unencrypted)

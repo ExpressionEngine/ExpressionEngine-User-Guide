@@ -28,9 +28,9 @@ Short Name
 
 The "short name" for the channel is the name used internally within the
 program. It is also used when specifying a channel in variables or
-parameters in your `Templates <../../design/templates/index.html>`_. It
-is not normally shown to visitors or otherwise exposed outside of your
-channel "setup".
+parameters in your :doc:`/cp/design/templates/index`. It is not
+normally shown to visitors or otherwise exposed outside of your channel
+"setup".
 
 The channel's short name is a required field. It must be a single word
 with no spaces. The underscore character is allowed. For example, the
@@ -81,21 +81,11 @@ example, if you wish that links off the search results page point to
 your "comments" Template you might use:
 http://example.com/index.php/channel/comments/
 
-Ping Return URL
-~~~~~~~~~~~~~~~
-
-When you send a ping to a website, it includes a return URL. Here you
-can set what that URL should be. For example:
-http://example.com/index.php
-
 RSS Feed URL
 ~~~~~~~~~~~~
 
 The URL where you can view the RSS feed for this channel. For example:
-http://example.com/index.php/channel/rss\_2.0/. This setting is used for
-sending pings in the "Extended Ping" format. Some servers may not accept
-"Extended Pings", so you can leave this field blank and EE will send a
-standard ping.
+http://example.com/index.php/channel/rss\_2.0/.
 
 Live Look Template
 ~~~~~~~~~~~~~~~~~~
@@ -207,7 +197,7 @@ multiple addresses by separating them with a comma. Ex:
 Comment Posting Preferences
 ---------------------------
 
-.. _channel-prefs-allow-comments:
+.. _channel_prefs_allow_comments:
 
 Allow comments in this channel?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -225,19 +215,18 @@ visitor will receive a message.
 Enable Captcha for Comment Posting?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Determines whether or not you require
-`CAPTCHAs <../../../general/captchas.html>`_ to be used when submitting
-comments.
+Determines whether or not you require :doc:`/security/captchas` to be 
+used when submitting comments.
 
 Require email address to post comments?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can optionally require that anyone posting comments must list an
 email address. You can determine in your
-`Template <../../design/templates/index.html>`_ whether or not the
-address is shown publicly, but requiring an email address in order to
-post comments can help reduce the number of "spam" comments you receive
-since the visitor must submit a valid email address.
+:doc:`/cp/design/templates/index` whether or not the address is shown
+publicly, but requiring an email address in order to post comments can
+help reduce the number of "spam" comments you receive since the visitor
+must submit a valid email address.
 
 Moderate Comments?
 ~~~~~~~~~~~~~~~~~~
@@ -275,10 +264,10 @@ be displayed. Enter 0 (zero) for no expiration. Note that this
 preference sets the *default* setting for the channel. The setting can
 be overridden and changed on a per-entry basis.
 
-You may override this setting in the `Comment
-Settings <../../../modules/comment/control_panel/index.html>`_ section
-of the Comment Module so that comments are set to be moderated rather
-than closed once the expiration period is passed.
+You may override this setting in the
+:doc:`/modules/comment/control_panel/index` section of the Comment
+Module so that comments are set to be moderated rather than closed once
+the expiration period is passed.
 
 If you also select the checkbox accompanying this setting, then all
 existing entries in this channel will be updated to reflect the new

@@ -2,130 +2,138 @@ Content Publish Controller Extension Hooks
 ==========================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-entry\_submission\_absolute\_end
+entry_submission_absolute_end
 --------------------------------
 
-Additional processing after entry submission, after all processing,
-prior to redirect. ::
+.. function:: entry_submission_absolute_end($entry_id, $meta, $data, $view_url)
 
-	$this->extensions->call('entry_submission_absolute_end', $this->entry_id, $this->meta, $this->data);
+  Additional processing after entry submission, after all processing,
+  prior to redirect.
 
-$this->entry\_id
-~~~~~~~~~~~~~~~~
+  How it's called::
 
-entry\_id of submitted entry
+    // In system/expressionengine/controllers/cp/content_publish.php
+    if ($this->api_channel_entries->trigger_hook('entry_submission_absolute_end', $view_url) === TRUE)
+    {
+       return TRUE;
+    }
 
-$this->meta
-~~~~~~~~~~~
+    ...
 
-Array of entry's metadata (channel\_id, entry\_date, i.e. fields for
-exp\_channel\_titles.)
+    // In system/expressionengine/libraries/api/Api_channel_entries.php
+    ee()->extensions->call('entry_submission_absolute_end', $this->entry_id, $this->meta, $this->data, $orig_var);
+    ...
+    if (ee()->extensions->end_script === TRUE)
+    {
+        return TRUE;
+    }
 
-$this->data
-~~~~~~~~~~~
+  :param int $entry_id: Entry ID of submitted entry
+  :param array $meta: Entry's metadata (``channel_id``, ``entry_date``,
+    i.e. fields for ``exp_channel_titles``)
+  :param array $data: Entry's field data
+  :param string $view_url: Control Panel URL to view submitted entry
+  :rtype: Void
 
-Array of entry's field data
+  Set ``ee()->extensions->end_script`` to ``TRUE`` to prevent an
+  automatic redirect to the ``$view_url``.
 
-:returns:
-    void
-    
-Added in v2.0
+  .. versionadded:: 2.0
 
-entry\_submission\_redirect
----------------------------
+entry_submission_redirect
+-------------------------
 
-Set the URL that the user will be redirected to after a successful entry
-submission
+.. function:: entry_submission_redirect($entry_id, $meta, $data, $cp_call, $view_url)
 
-::
+  Set the URL that the user will be redirected to after a successful
+  entry submission.
 
-	$loc = $this->extensions->call('entry_submission_redirect', $this->entry_id, $this->meta, $this->data, $cp_call, $orig_loc);
+  How it's called::
 
-$this->entry\_id
-~~~~~~~~~~~~~~~~
+    // In system/expressionengine/controllers/cp/content_publish.php
+    $view_url = $this->api_channel_entries->trigger_hook('entry_submission_redirect', $view_url);
 
-entry\_id of the submitted entry
+    ...
 
-$this->meta
-~~~~~~~~~~~
+    // In system/expressionengine/libraries/api/Api_channel_entries.php
+    $loc = $this->extensions->call('entry_submission_redirect', $this->entry_id, $this->meta, $this->data, $cp_call, $orig_loc);
+    if (ee()->extensions->end_script === TRUE)
+    {
+        return $loc;
+    }
+    return $loc;
 
-Array of entry's metadata (channel\_id, entry\_date, i.e. fields for
-exp\_channel\_titles.)
+  :param int $entry_id: Entry ID of submitted entry
+  :param array $meta: Entry's metadata (``channel_id``, ``entry_date``,
+    i.e. fields for ``exp_channel_titles``)
+  :param array $data: Entry's field data
+  :param boolean $cp_call: ``TRUE`` if the call came from the control
+    panel
+  :param string $view_url: Control Panel URL to view submitted entry
+  :returns: URL to return to instead of ``$view_url``
+  :rtype: String
 
-$this->data
-~~~~~~~~~~~
-    Array of entry's field data
+  .. versionadded:: 2.0
 
-$cp\_call
-~~~~~~~~~
+foreign_character_conversion_array
+----------------------------------
 
-(Boolean) whether or not the entry is submitted from the control
-panel
+.. function:: foreign_character_conversion_array()
 
-$orig\_loc
-~~~~~~~~~~
+  Allows you to set the foreign character conversion array used to
+  transliterate non-English characters for use in URLs.
 
-Original Location ExpressionEngine would be redirecting to
+  How it's called::
 
-:returns:
-    String
+    $foreign_characters = $CI->extensions->call('foreign_character_conversion_array');
 
-Added in v2.0
+  :returns: Array of character ASCII values as keys and what they should
+    translate to as values
+  :rtype: String
 
-foreign\_character\_conversion\_array
--------------------------------------
+  .. note:: If you only need to use one non-dynamically controlled
+    array, you can simply modify
+    ``system/expressionengine/config/foreign_chars.php``
 
-Allows you to set the foreign character conversion array used to
-transliterate non-English characters for use in URLs.
+  .. versionadded:: 2.0
 
-**Note:** If you only need to use one non-dynamically controlled array,
-you can simply modify system/expressionengine/config/foreign\_chars.php
+publish_form_channel_preferences
+--------------------------------
 
-::
+.. function:: publish_form_channel_preferences($row)
 
-	$foreign_characters = $this->extensions->call('foreign_character_conversion_array');
+  Allows modification of channel preferences used on the publish form
+  page.
 
-:returns:
-    Array
+  How it's called::
 
-Added in v1.6.0
+    $row = $this->extensions->call('publish_form_channel_preferences', $row);
 
-publish\_form\_channel\_preferences
------------------------------------
+  :param array $row: Selected channel preferences
+  :returns: Manipulated channel preferences (``$row``)
+  :rtype: Array
 
-Allows modification of channel preferences used on the publish form
-page. ::
+  .. versionadded:: 1.4.1
 
-	$row = $this->extensions->call('publish_form_channel_preferences', $query->row_array());
+publish_form_entry_data
+-----------------------
 
-$query->row\_array()
-~~~~~~~~~~~~~~~~~~~~
+.. function:: publish_form_entry_data($result)
 
-Array of preferences for the selected channel
+  Allows modification of entry data for the publish form when editing an
+  existing entry.
 
-:returns:
-    Array
+  How it's called::
 
-Added in v1.4.1
+    $result = $this->extensions->call('publish_form_entry_data', $result);
 
-publish\_form\_entry\_data
---------------------------
+  :param array $result: Entry data
+  :returns: Manipulated entry data (``$result``)
+  :rtype: Array
 
-Allows modification of entry data for the publish form when editing an
-existing entry. ::
-
-	$resrow = $this->extensions->call('publish_form_entry_data', $result->row_array());
-
-$result->row\_array()
-~~~~~~~~~~~~~~~~~~~~~
-
-Array of entry data
-
-:returns:
-    Array
-
-Added in v1.4.1
+  .. versionadded:: 1.4.1

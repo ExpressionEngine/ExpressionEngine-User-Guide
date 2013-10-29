@@ -69,13 +69,14 @@ channel=
 	channel="news"
 
 The name (short name) of the channel that the categories are assigned
-to. **Note:** Unless you are using the relaxed\_categories parameter,
-you can only list one channel name, since each channel can have separate
-category groups.
+to. 
 
-You must specify this parameter if you use the `Category URL Titles In Links
-<../../cp/admin/channels/global_channel_preferences.html#use-category-url-titles-in-links>`_
-feature.
+.. note:: Unless you are using the ``relaxed_categories`` parameter,
+	you can only list one channel name, since each channel can have
+	separate category groups.
+
+You must specify this parameter if you use the :doc:`Category URL Titles
+In Links </cp/admin/channels/global_channel_preferences>` feature.
 
 *********
 Variables

@@ -17,7 +17,7 @@ independent data caching systems and preferences.
 .. contents::
 	:local:
 
-.. _caching-tag-caching:
+.. _caching_tag_caching:
 
 Tag Caching
 -----------
@@ -45,7 +45,7 @@ this::
 
 	{exp:channel:entries cache="yes" refresh="30"}
 
-.. _caching-template-caching:
+.. _caching_template_caching:
 
 Template Caching
 ----------------
@@ -70,7 +70,7 @@ cleared, momentarily overriding the normal caching preferences.
    When page caching is on, no other caching setting matters. Therefore,
    if you want to cache individual tags, turn off page caching.
 
-.. _caching-dynamic-channel-query-caching:
+.. _caching_dynamic_channel_query_caching:
 
 Dynamic Channel Query Caching
 -----------------------------
@@ -84,7 +84,7 @@ used for all people, though.
 Enable this feature only if you **do not** use future entries, expiring
 entries, or random entries.
 
-.. _caching-query-disabling:
+.. _caching_query_disabling:
 
 Query Disabling
 ---------------
@@ -124,9 +124,9 @@ show your 10 most recent entry titles::
 
 In this example you are only showing the title of your entries and
 nothing else; yet, the channel tag automatically fetches categories and
-other data automatically. Using the disable= parameter you can turn off
-the unneeded features from being queried. In this case, you don't need
-any of the features that can be disabled. ::
+other data. Using the disable= parameter you can turn off the unneeded
+features from being queried. In this case, you don't need any of the
+features that can be disabled. ::
 
 	{exp:channel:entries orderby="date" sort="desc" limit="10" disable="categories|custom_fields|member_data|pagination"}
 		<h1 href="{title_permalink='channel/comments'}">{title}</h1>

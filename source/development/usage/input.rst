@@ -2,18 +2,22 @@ Input Class
 ===========
 
 .. contents::
-	:local:
+  :local:
+
+.. highlight:: php
 
 Calling the Input Class
 -----------------------
 
-ExpressionEngine uses the Input class for two main purposes:
+.. class:: Input
 
-#. To provide some helper functions for fetching input data and
-   pre-processing it.
-#. To pre-process global input data for security.
+  ExpressionEngine uses the Input class for two main purposes:
 
-This class is initialized automatically.
+  #. To provide some helper methods for fetching input data and
+     pre-processing it.
+  #. To pre-process global input data for security.
+
+  This class is initialized automatically.
 
 Fetching a Superglobal value
 ----------------------------
@@ -23,121 +27,151 @@ the superglobal arrays, it will still be available through the
 superglobals themselves. However, the input class does offer some
 benefits.
 
-Since the ExpressionEngine function for creating cookies
-[$this->EE->functions->set\_cookie();] adds a prefix automatically to
-enable compatibility with other programs, it is recommended that you use
-the Input Class, since it automatically strips out that prefix.
+Since the ExpressionEngine method for creating cookies---
+:meth:`Functions::set_cookie`---adds a prefix automatically to enable
+compatibility with other programs, it is recommended that you use the
+Input Class, since it automatically strips out that prefix.
 
-The superglobal functions all allow the specification of an optional
-second parameter that lets you run the data through the `XSS
-filter <security.html#xss_filter>`_. It's enabled by setting the second
+The superglobal methods all allow the specification of an optional
+second parameter that lets you run the data through the :doc:`XSS filter
+</development/usage/security>`. It's enabled by setting the second
 parameter to boolean TRUE.
 
-Lastly, the superglobal functions will check to see if the item is set
-and return FALSE (boolean) if not. This lets you conveniently use data
-without having to test whether an item exists first. In other words,
-normally you might do something like this::
+Lastly, the superglobal methods will check to see if the item is set
+and return ``FALSE`` (boolean) if not. This lets you conveniently use
+data without having to test whether an item exists first. In other
+words, normally you might do something like this::
 
-	 if ( ! isset($_POST['something']))
-	 {
-	 	$something = FALSE;
-	 }
-	 else
-	 {
-	 	$something = $_POST['something'];
-	 }
+  if ( ! isset($_POST['something']))
+  {
+      $something = FALSE;
+  }
+  else
+  {
+      $something = $_POST['something'];
+  }
 
-With the built in functions you can simply do this::
+With the built-in methods you can simply do this::
 
-	$something = $this->EE->input->post('something');
+  $something = ee()->input->post('something');
 
-To automatically run the returned data through the xss\_clean()
-function, simply specify the second parameter is TRUE::
+To automatically run the returned data through the
+:meth:`Security::xss_clean` method, simply specify the second
+parameter is ``TRUE``::
 
-	$something = $this->EE->input->post('something', TRUE);
+  $something = ee()->input->post('something', TRUE);
 
-The available superglobal functions are:
+The available superglobal methods are:
 
-$this->EE->input->post()
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. method:: post($index[, $xss_clean = FALSE])
 
-The first parameter will contain the name of the POST item you are
-looking for::
+  The first parameter will contain the name of the ``POST`` item you are
+  looking for::
 
-	$this->EE->input->post('some_data');
+    ee()->input->post('some_data');
 
-$this->EE->input->get()
-^^^^^^^^^^^^^^^^^^^^^^^
+  :param string $index: Name of the input in the ``$_POST`` array
+  :param boolean $xss_clean: If set to ``TRUE`` the value will be run
+    through :meth:`Security::xss_clean`
+  :returns: Value stored in ``$_POST``
+  :rtype: String
 
-This function is identical to the post function, only it fetches get
-data::
+.. method:: get($index[, $xss_clean = FALSE])
 
-	$this->EE->input->get('some_data');
+  This method is identical to the post method, only it fetches get
+  data::
 
-$this->EE->input->get\_post()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ee()->input->get('some_data');
 
-This function will search through both the post and get streams for
-data, looking first in post, and then in get::
+  :param string $index: Name of the input in the ``$_GET`` array
+  :param boolean $xss_clean: If set to ``TRUE`` the value will be run
+    through :meth:`Security::xss_clean`
+  :returns: Value stored in ``$_GET``
+  :rtype: String
 
-	$this->EE->input->get_post('some_data');
+.. method:: get_post($index[, $xss_clean = FALSE])
 
-$this->EE->input->cookie()
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+  This method will search through both the post and get streams for
+  data, looking first in post, and then in get::
 
-This function is identical to the post function, only it fetches
-cookie data::
+    ee()->input->get_post('some_data');
 
-	$this->EE->input->cookie('some_data');
+  :param string $index: Name of the input in the ``$_POST`` or ``$_GET``
+    array
+  :param boolean $xss_clean: If set to ``TRUE`` the value will be run
+    through :meth:`Security::xss_clean`
+  :returns: Value stored in ``$_POST`` or ``$_GET``
+  :rtype: String
 
-$this->EE->input->server()
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. method:: cookie($index[, $xss_clean = FALSE])
 
-This function is identical to the above functions, only it fetches
-server data::
+  This method is identical to the post method, only it fetches
+  cookie data::
 
-	$this->EE->input->server('some_data');
+    ee()->input->cookie('some_data');
 
-Other Class Variables
----------------------
+  :param string $index: Name of the input in the ``$_COOKIE`` array
+  :param boolean $xss_clean: If set to ``TRUE`` the value will be run
+    through :meth:`Security::xss_clean`
+  :returns: Value stored in ``$_COOKIE``
+  :rtype: String
 
-$this->EE->input->ip\_address()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. method:: server($index[, $xss_clean = FALSE])
 
-Returns the IP address for the current user. If the IP address is not
-valid, the function will return an IP of: 0.0.0.0
+  This method is identical to the above method, only it fetches
+  server data::
 
-::
+    ee()->input->server('some_data');
 
-	echo $this->EE->input->ip_address();
+  :param string $index: Name of the input in the ``$_SERVER`` array
+  :param boolean $xss_clean: If set to ``TRUE`` the value will be run
+    through :meth:`Security::xss_clean`
+  :returns: Value stored in ``$_SERVER``
+  :rtype: String
 
-$this->EE->input->valid\_ip($ip)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. method:: ip_address()
 
-Takes an IP address as input and returns TRUE or FALSE (boolean) if
-it is valid or not. Note: The $this->EE->input->ip\_address()
-function above validates the IP automatically.
+  Returns the IP address for the current user. If the IP address is not
+  valid, the method will return an IP of: 0.0.0.0::
 
-::
+    echo ee()->input->ip_address();
 
-	if ( ! $this->input->valid_ip($ip))
-	{
-		echo 'Not Valid';
-	}
-	else
-	{
-		echo 'Valid';
-	}
+  :returns: IP address for the current user
+  :rtype: String
 
-$this->EE->input->user\_agent()
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. method:: valid_ip($ip[, $which = ''])
 
-Returns the user agent (web browser) being used by the current user.
-Returns FALSE if it's not available.
+  Takes an IP address as input and returns ``TRUE`` or ``FALSE``
+  (boolean) if it is valid or not.
 
-::
+  .. note:: The :meth:`Input::ip_address` method above validates
+    the IP automatically.
 
-	echo $this->EE->input->user_agent();
+  ::
+
+    if ( ! $this->input->valid_ip($ip))
+    {
+        echo 'Not Valid';
+    }
+    else
+    {
+        echo 'Valid';
+    }
+
+  :param string $ip: IP address to validate
+  :param string $which: Specify ``'ipv4'`` or ``'ipv6'`` to validate
+    a specific type of IP address
+  :returns: ``TRUE`` if valid, ``FALSE`` otherwise
+  :rtype: Boolean
+
+.. method:: user_agent()
+
+  Returns the user agent (web browser) being used by the current user::
+
+    echo ee()->input->user_agent();
+
+  :returns: The user agent, otherwise ``FALSE``
+  :rtype: Mixed
 
 Cleaning Superglobals
 ---------------------
@@ -145,8 +179,8 @@ Cleaning Superglobals
 The input class is loaded by EE core early in processing. It
 automatically does the following:
 
--  Destroys all global variables in the event register\_globals is
-   turned on.
--  Filters the POST/GET/COOKIE array keys, permitting only alpha-numeric
-   (and a few other) characters.
--  Standardizes newline characters to \\n
+- Destroys all global variables in the event ``register_globals`` is
+  turned on.
+- Filters the ``POST``/``GET``/``COOKIE`` array keys, permitting only
+  alpha-numeric (and a few other) characters.
+- Standardizes newline characters to ``\\n``

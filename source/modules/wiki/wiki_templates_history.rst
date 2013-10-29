@@ -65,7 +65,7 @@ path:open\_revision
 
 Displays the URL to Open the revision.
 
-**Note:** Opening a revision approves it and makes it live.
+.. note:: Opening a revision approves it and makes it live.
 
 path:close\_revision
 ^^^^^^^^^^^^^^^^^^^^
@@ -96,9 +96,8 @@ When a revision of an article is displayed this shows the date of the
 revision being viewed.
 
 The **format** parameter is used to determine the date's formatting
-using ExpressionEngine's `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_. For
-example, this::
+using ExpressionEngine's :doc:`Date Variable Formatting
+</templates/date_variable_formatting>`. For example, this::
 
 	Revised: {revision_date format="%D, %F %d, %Y - %g:%i:%s"}
 

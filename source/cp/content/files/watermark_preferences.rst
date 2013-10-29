@@ -97,8 +97,8 @@ This is a drop-down of the available True Type fonts. By default, the
 different font then you will need to upload it to your system/fonts/
 directory.
 
-**Note**: The font selection works only when "Use True Type Font" is
-enabled.
+.. note:: The font selection works only when "Use True Type Font" is
+	enabled.
 
 Font Size
 ~~~~~~~~~
@@ -108,8 +108,8 @@ this is the font size that will be applied to the full-size image. The
 font size will be scaled proportionally with the image size if applied
 to the thumbnail or medium sized image.
 
-**Note**: The font size selection works only when "Use True Type Font"
-is enabled.
+.. note:: The font size selection works only when "Use True Type Font"
+	is enabled.
 
 Text Color
 ~~~~~~~~~~

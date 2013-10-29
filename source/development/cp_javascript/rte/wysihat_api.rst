@@ -5,33 +5,40 @@ This documentation is for developers who wish to dig a little deeper. It
 outlines most of the core WysiHat classes and methods.
 
 .. contents::
-	:local:
-	:depth: 2
+  :local:
+  :depth: 2
+
+.. highlight:: js
 
 jQuery Reference
 ----------------
 
 This is the main public method to use when dealing with WysiHat. It will
 handle most of the setup for you. It can also be used to get access to
-instances of some of the public classes without going through ``$.data()``.
+instances of some of the public classes without going through
+``$.data()``.
 
 Initial Setup
 ~~~~~~~~~~~~~
 
-Creates a new instance of the editor on a textarea. ::
+.. js:function:: wysihat(options)
 
-	$('textarea').wysihat({
-	    'buttons': ['bold', 'italic', 'underline']
-	});
+  Creates a new instance of the editor on a textarea. ::
+
+    $('textarea').wysihat({
+        'buttons': ['bold', 'italic', 'underline']
+    });
 
 Existing Editors
 ~~~~~~~~~~~~~~~~
 
-Attempting to setup multiple editors will fail. Subsequent calls to
-``$.wysihat()`` will return the existing editor. You can also access
-the editor instance bound to an element using ``$.data()``: ::
+.. js:data:: wysihat
 
-	$myTextarea.data('wysihat');
+  Attempting to setup multiple editors will fail. Subsequent calls to
+  ``$.wysihat()`` will return the existing editor. You can also access
+  the editor instance bound to an element using ``$.data()``: ::
+
+    $myTextarea.data('wysihat');
 
 Helper Classes
 ~~~~~~~~~~~~~~
@@ -39,16 +46,15 @@ Helper Classes
 Since the helper classes are all bound on the editor instance you can
 retrieve any of them from an editor instance ::
 
-	editor = $('textarea').data('wysihat');
-	selection = editor.Selection;
+  editor = $('textarea').data('wysihat');
+  selection = editor.Selection;
 
 Alternatively you can use the WysiHat constructor to get access to any
 of the helper classes directly. This is provided mainly for debugging, to
 quickly look up information about the undo stack or selection. ::
 
-	$('textarea').wysihat('undo'); // undo stack
-	$('textarea').wysihat('selection'); // selection utility
-
+  $('textarea').wysihat('undo'); // undo stack
+  $('textarea').wysihat('selection'); // selection utility
 
 Publicly Accessible Classes
 ---------------------------
@@ -60,420 +66,320 @@ where possible.
 WysiHat
 ~~~~~~~
 
-name
-^^^^
+.. js:class:: WysiHat
 
-The editor name. Always "WysiHat" in ExpressionEngine. This is used to
-prefix editor specific events.
+.. js:attribute:: name
 
-.. _WysiHat.addButton :
+  The editor name. Always "WysiHat" in ExpressionEngine. This is used to
+  prefix editor specific events.
 
-addButton(name, config)
-^^^^^^^^^^^^^^^^^^^^^^^
+.. js:function:: addButton(name, config)
 
-Register a button for use. Not shown in the editor, until it is actually
-added to the toolbar. This is usually accomplished through the button
-option when attaching the editor.
+  Register a button for use. Not shown in the editor, until it is actually
+  added to the toolbar. This is usually accomplished through the button
+  option when attaching the editor.
 
-.. _WysiHat.attach :
+.. js: function:: attach(field, options)
 
-attach(field, options)
-^^^^^^^^^^^^^^^^^^^^^^
+  Replace the textfield in `field` with a new WysiHat instance. Options
+  can contain:
 
-Replace the textfield in `field` with a new WysiHat instance. Options
-can contain:
+  - ``buttons`` - Array of strings, one for each button name. Buttons
+    must be registered with addButton before they can be
+    shown.
 
-- **buttons** - Array of strings, one for each button name. Buttons
-  must be registered with addButton before they can be
-  shown.
+.. js:function:: inherit(proto, props)
 
-.. _WysiHat.inherit :
-
-inherit(proto, props)
-^^^^^^^^^^^^^^^^^^^^^
-
-Convenience method for prototypal inheritance. Returns a new object
-with proto in its prototype chain and an additional `parent` property
-which contains proxies to the prototype's methods.
+  Convenience method for prototypal inheritance. Returns a new object
+  with proto in its prototype chain and an additional `parent` property
+  which contains proxies to the prototype's methods.
 
 WysiHat.Editor
 ~~~~~~~~~~~~~~
 
-An object of this class is returned by :ref:`attach() <WysiHat.attach>`
-It implements the CommandExpando as well as the following methods:
+.. js:class:: WysiHat.Editor
 
-updateField()
-^^^^^^^^^^^^^
+  An object of this class is returned by :js:func:`attach` It implements
+  the CommandExpando as well as the following methods:
 
-Updates the textarea from the editor markup. Called automatically for
-most changes.
+.. js:function:: updateField()
 
-updateEditor()
-^^^^^^^^^^^^^^
+  Updates the textarea from the editor markup. Called automatically for
+  most changes.
 
-Updates the editor from the textarea markup. Automatically called when
-switching from source to editor view.
+.. js:function:: updateEditor()
 
-selectEmptyParagraph()
-^^^^^^^^^^^^^^^^^^^^^^
+  Updates the editor from the textarea markup. Automatically called when
+  switching from source to editor view.
 
-Utility method to help select an empty editor. Most browsers will not
-create a paragraph tag for the first paragraph otherwise.
+.. js:function:: selectEmptyParagraph()
 
+  Utility method to help select an empty editor. Most browsers will not
+  create a paragraph tag for the first paragraph otherwise.
 
 WysiHat.Event
 ~~~~~~~~~~~~~
 
-Main event handling class. Takes care of all internal and external editor
-events.
+.. js:class:: WysiHat.Event
 
-.. _Event.add :
+  Main event handling class. Takes care of all internal and external editor
+  events.
 
-add(eventName, handler)
-^^^^^^^^^^^^^^^^^^^^^^^
+.. js:function:: add(eventName, handler)
 
-Add an event handler for a given event name.
+  Add an event handler for a given event name.
 
-.. _Event.has :
+.. js:function:: has(eventName)
 
-has(eventName)
-^^^^^^^^^^^^^^
+  Checks if a handler exists for ``eventName``.
 
-Checks if a handler exists for ``eventName``.
+.. js:function:: run(eventName, state, finalize)
 
-.. _Event.run :
+  Runs an event handler and calls finalize. Usually you will want
+  :js:func:`fire`.
 
-run(eventName, state, finalize)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. js:function:: fire(eventName)
 
-Runs an event handler and calls finalize. Usually you will want :ref:`fire() <Event.fire>`.
+  Run all the required code to dispatch the event. This function
+  understands all built in commands, such as ``undo``, ``redo``, and
+  ``paste``.
 
+.. js:function:: textChange(before [, after])
 
-.. _Event.fire :
+  Marks a chunk of text changes as undoable.
 
-fire(eventName)
-^^^^^^^^^^^^^^^
+.. js:function:: isKeyCombo(strName, evt)
 
-Run all the required code to dispatch the event. This function understands
-all built in commands, such as ``undo``, ``redo``, and ``paste``.
+  Identifies if the current event matches a specified key event name.
+  The name must take on the form: :kbd:`ctrl-shfit-c`.
 
-.. _Event.textChange :
+.. js:function:: isEvent(name, evt)
 
-textChange(before [, after])
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Identifies a named key event such as paste or undo.
 
-Marks a chunk of text changes as undoable.
+.. js:function:: getState()
 
-.. _Event.isKeyCombo :
-
-isKeyCombo(strName, evt)
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-Identifies if the current event matches a specified key event name. The
-name must take on the form: :kbd:`ctrl-shfit-c`.
-
-.. _Event.isEvent :
-
-isEvent(name, evt)
-^^^^^^^^^^^^^^^^^^
-
-Identifies a named key event such as paste or undo.
-
-.. _Event.getState :
-
-getState()
-^^^^^^^^^^
-
-Returns the editors current html contents and selection.
+  Returns the editors current html contents and selection.
 
 WysiHat.Undo
 ~~~~~~~~~~~~
 
-A simple undo stack. Specifically made to handle text changes,
-it will try to find the smallest difference in two strings rather
-than saving the whole thing.
+.. js:class:: WysiHat.Undo
 
-.. _Undo.push :
+  A simple undo stack. Specifically made to handle text changes, it will
+  try to find the smallest difference in two strings rather than saving
+  the whole thing.
 
-push(before, after, selBefore, selAfter)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. js:function:: push(before, after, selBefore, selAfter)
 
-Adds a diff of the before and after strings as well as the selection
-positions to the undo stack.
+  Adds a diff of the before and after strings as well as the selection
+  positions to the undo stack.
 
-hasUndo()
-^^^^^^^^^
+.. js:function:: hasUndo()
 
-Check for available undos.
+  Check for available undos.
 
-hasRedo()
-^^^^^^^^^
+.. js:function:: hasRedo()
 
-Check for available redos.
+  Check for available redos.
 
-undo()
-^^^^^^
+.. js:function:: undo()
 
-Undo the last change.
+  Undo the last change.
 
-redo()
-^^^^^^
+.. js:function:: redo()
 
-Redo the last undo.
+  Redo the last undo.
 
 WysiHat.Selection
 ~~~~~~~~~~~~~~~~~
 
-A small helper class that abstracts the very basic range manipulations
-into a text offset based system. For advanced stuff you will still have
-to fall back on ranges for node level granularity.
+.. js:class:: WysiHat.Selection
 
-get()
-^^^^^
+  A small helper class that abstracts the very basic range manipulations
+  into a text offset based system. For advanced stuff you will still
+  have to fall back on ranges for node level granularity.
 
-Get a selection. Returns an ordered pair of [start, end]. These offsets
-are text based. Not html based.
+.. js:function:: get()
 
-.. _Selection.set :
+  Get a selection. Returns an ordered pair of [start, end]. These
+  offsets are text based. Not html based.
 
-set(start [, end])
-^^^^^^^^^^^^^^^^^^
+.. js:function:: set(start [, end])
 
-Sets up a new selection to surround the text that range. Can either
-accept the 2-tuple returned by `get()`_ or separate start and end offsets.
+  Sets up a new selection to surround the text that range. Can either
+  accept the 2-tuple returned by :js:func:`get` or separate start and
+  end offsets.
 
-toString()
-^^^^^^^^^^
+.. js:function:: toString()
 
-Returns the contents of the current selection.
+  Returns the contents of the current selection.
 
 WysiHat.Commands
 ~~~~~~~~~~~~~~~~
 
-Singleton that contains all of the available editor commands. They
-are split up into query commands (*is*), modifying commands (
-*make*), as well as a variety of utility methods.
+.. js:class:: WysiHat.Commands
 
-You can retrieve a list of make and is commands by simply dumping
-``WysiHat.Commands.is`` and ``WysiHat.Commands.make``. These functions
-are also available through the shortcut methods on the `CommandsMixin`_.
+  Singleton that contains all of the available editor commands. They are
+  split up into query commands (*is*), modifying commands ( *make*), as
+  well as a variety of utility methods.
 
+  You can retrieve a list of make and is commands by simply dumping
+  ``WysiHat.Commands.is`` and ``WysiHat.Commands.make``. These functions
+  are also available through the shortcut methods on the
+  `CommandsMixin`_.
 
-styleSelectors
-^^^^^^^^^^^^^^
+.. js:function:: styleSelectors
 
-A list of styles that you may need to access in your tool. Mainly
-provided to smooth out strange mappings.
+  A list of styles that you may need to access in your tool. Mainly
+  provided to smooth out strange mappings.
 
-.. _Commands.execCommand :
+.. js:function:: execCommand(command, ui, value)
 
-execCommand(command, ui, value)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Works just like the browser native execCommand, but handles errors
+  gracefully so you don't have to.
 
-Works just like the browser native execCommand, but handles errors
-gracefully so you don't have to.
+.. js:function:: isMakeCommand(cmd)
 
-.. _Commands.isMakeCommand :
+  Utility method to check if the command is available as a WysiHat
+  version. Used in the button handler to decide what handler to return.
+  You probably won't ever need this.
 
-isMakeCommand(cmd)
-^^^^^^^^^^^^^^^^^^
+.. js:function:: isValidExecCommand(cmd)
 
-Utility method to check if the command is available as a WysiHat version.
-Used in the button handler to decide what handler to return. You probably
-won't ever need this.
+  Utility method to check if the command is valid as an option to the
+  browser's execCommand. Used in the button handler to decide what
+  handler to return. You probably won't ever need this.
 
-.. _Commands.isValidExecCommand :
+.. js:function:: queryCommandState(state)
 
-isValidExecCommand(cmd)
-^^^^^^^^^^^^^^^^^^^^^^^
+  Works just like the browser native queryCommandState, but will first
+  look for custom command state queries on ``WysiHat.is``. Also handles
+  errors for you.
 
-Utility method to check if the command is valid as an option to the
-browser's execCommand. Used in the button handler to decide what handler
-to return. You probably won't ever need this.
+.. js:function:: selectionIsWithin(tagNames)
 
-.. _Commands.queryCommandState :
+  Checks if the current selection is contained in any of the provided
+  tags.
 
-queryCommandState(state)
-^^^^^^^^^^^^^^^^^^^^^^^^
+.. js:function:: getSelectedStyles()
 
-Works just like the browser native queryCommandState, but will first
-look for custom command state queries on ``WysiHat.is``. Also handles
-errors for you.
+  Returns all styles in the :js:func:`styleSelectors` map with their
+  values in the current selection context.
 
-.. _Commands.selectionIsWithin :
+.. js:function:: replaceElement($el, tagName)
 
-selectionIsWithin(tagNames)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Takes the current element and turns it into a different one. Does not
+  change the contents of the element.
 
-Checks if the current selection is contained in any of the provided
-tags.
+.. js:function:: deleteElement($el)
 
-getSelectedStyles()
-^^^^^^^^^^^^^^^^^^^
+  Replaces the element with its contents, similar to jQuery's unwrap.
 
-Returns all styles in the `styleSelectors`_ map with their values in
-the current selection context.
+  .. note:: This function is likely to change or be removed in the
+    future.
 
-.. _Commands.replaceElement :
+.. js:function:: stripFormattingElements()
 
-replaceElement($el, tagName)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Completely strips the selection of formatting.
 
-Takes the current element and turns it into a different one. Does not
-change the contents of the element.
+.. js:function:: manipulateSelection(callback)
 
-deleteElement($el)
-^^^^^^^^^^^^^^^^^^
+  Utility function that takes a callback and calls it with each
+  available range in the editor in the context of
+  :js:class:`WysiHat.Commands`. It will restore the ranges to their
+  original state once all callbacks have been called.
 
-Replaces the element with its contents, similar to jQuery's unwrap.
+.. js:function:: getRangeElements(range, tagNames)
 
-.. caution::
-	This function is likely to change or be removed in the future.
+  Returns all elements in the ``range`` that match the ``tagNames``
+  selector.
 
-stripFormattingElements()
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.. js:function:: getRanges()
 
-Completely strips the selection of formatting.
+  Returns an array of all ranges. Utility method to avoid calling
+  getRangeAt in a loop.
 
-.. _Commands.manipulateSelection :
+.. js:function:: restoreRanges(ranges)
 
-manipulateSelection(callback)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Takes an array of ranges and creates an editor selection from them.
 
-Utility function that takes a callback and calls it with each available
-range in the editor in the context of `WysiHat.Commands`. It will restore
-the ranges to their original state once all callbacks have been called.
+.. js:function:: changeContentBlock(tagName)
 
-.. _Commands.getRangeElements :
+  Similar to :js:func:`replaceElement`, but applies to all block
+  elements in the selection.
 
-getRangeElements(range, tagNames)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. js:function:: unformatContentBlock()
 
-Returns all elements in the ``range`` that match the ``tagNames`` selector.
+  Changes all block elements in the selection into paragraphs.
 
-getRanges()
-^^^^^^^^^^^
+.. js:function:: unlinkSelection()
 
-Returns an array of all ranges. Utility method to avoid calling getRangeAt
-in a loop.
+  Removes all links in the selection.
 
-.. _Commands.restoreRanges :
+  .. note:: This function may be moved in the future.
 
-restoreRanges(ranges)
-^^^^^^^^^^^^^^^^^^^^^
+.. js:function:: wrapHTML(html)
 
-Takes an array of ranges and creates an editor selection from them.
+  Wraps the current selection in HTML. Can be called with multiple
+  parameters to consecutively wrap the selection further.
 
-.. _Commands.changeContentBlock :
+.. js:function:: toggleHTML(button)
 
-changeContentBlock(tagName)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Toggles the editors source view and flips the button state.
 
-Similar to :ref:`replaceElement() <Commands.replaceElement>`, but applies
-to all block elements in the selection.
+  .. note:: This function may be re-moved in the future.
 
-unformatContentBlock()
-^^^^^^^^^^^^^^^^^^^^^^
+.. js:function:: insertHTML(html)
 
-Changes all block elements in the selection into paragraphs.
+  Replaces the current range with a given piece of HTML.
 
-unlinkSelection()
-^^^^^^^^^^^^^^^^^
+.. js:function:: quoteSelection()
 
-Removes all links in the selection.
+  Turns the current line or closest block element into a blockquote.
+  Please use :js:func:`toggle('blockquote') <toggle>` instead.
 
-.. caution::
-	This function may be moved in the future.
+.. js:function:: unquoteSelection()
 
-.. _Commands.wrapHTML :
+  Removes the blockquote closest to the current selection. Please use
+  :js:func:`toggle('blockquote') <toggle>` instead.
 
-wrapHTML(html)
-^^^^^^^^^^^^^^
+.. js:function:: toggleList(type)
 
-Wraps the current selection in HTML. Can be called with multiple parameters
-to consecutively wrap the selection further.
-
-.. _Commands.toggleHTML :
-
-toggleHTML(button)
-^^^^^^^^^^^^^^^^^^
-
-Toggles the editors source view and flips the button state.
-
-.. caution::
-	This function may be re-moved in the future.
-
-.. _Commands.insertHTML :
-
-insertHTML(html)
-^^^^^^^^^^^^^^^^
-
-Replaces the current range with a given piece of HTML.
-
-quoteSelection()
-^^^^^^^^^^^^^^^^
-
-Turns the current line or closest block element into a blockquote.
-Please use :ref:`toggle('blockquote') <CommandsMixin.toggle>` instead.
-
-unquoteSelection
-^^^^^^^^^^^^^^^^
-
-Removes the blockquote closest to the current selection.
-Please use :ref:`toggle('blockquote') <CommandsMixin.toggle>` instead.
-
-.. _Commands.toggleList :
-
-toggleList(type)
-^^^^^^^^^^^^^^^^
-
-Toggles the list type of the current line. Removes the list if it is
-already a list of the given ``type``.
-Please use :ref:`toggle('li/ul') <CommandsMixin.toggle>` instead.
+  Toggles the list type of the current line. Removes the list if it is
+  already a list of the given ``type``. Please use
+  :js:func:`toggle('li/ul') <toggle>` instead.
 
 WysiHat.Toolbar
 ~~~~~~~~~~~~~~~
 
-.. _Toolbar.addButton :
+.. js:class:: WysiHat.Toolbar
 
-addButton(name)
-^^^^^^^^^^^^^^^
+.. js:function:: addButton(name)
 
-Add a button to the current editor toolbar. The button must already be
-registered with WysiHat through :ref:`addButton <WysiHat.addButton>`.
+  Add a button to the current editor toolbar. The button must already be
+  registered with WysiHat through :js:func:`addButton`.
 
-.. _Toolbar.createButtonElement :
+.. js:function:: createButtonElement(button)
 
-createButtonElement(button)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Creates the main button markup. Odds are you don't need to call this.
+  Ever.
 
-Creates the main button markup. Odds are you don't need to call this. Ever.
+.. js:function:: observeButtonClick(button)
 
-.. _Toolbar.observeButtonClick :
+  Sets up the event handler for the button. As with creating the button,
+  this is done completely automatically.
 
-observeButtonClick(button)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Sets up the event handler for the button. As with creating the button, this
-is done completely automatically.
-
-.. _Toolbar.observeStateChanges :
-
-observeStateChanges(button)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. js:function:: observeStateChanges(button)
 
 Binds editor selection change events to the button's ``queryStateHandler`` and
 update the button's state when the cursor enters or exits text controllable
 with that button.
 
-.. _Toolbar.updateButtonState :
+.. js:function:: updateButtonState(button, state)
 
-updateButtonState(button, state)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Toggles the buttons controls on or off. Identical to calling `setOn()`_ or
-`setOff()`_.
-
+  Toggles the buttons controls on or off. Identical to calling
+  :js:func:`setOn` or :js:func:`setOff`.
 
 Publicly Accessible Objects
 ---------------------------
@@ -481,67 +387,59 @@ Publicly Accessible Objects
 Most of these are used as utilities and have better abstractions elsewhere.
 Use with care.
 
-
 WysiHat.Element
 ~~~~~~~~~~~~~~~
+
+.. js:class:: WysiHat.Element
 
 A helper object that provides easy access to types of elements.
 
 WysiHat.Paster
 ~~~~~~~~~~~~~~
 
-A helper object that provides the event handler for paste events
+.. js:class:: WysiHat.Paster
 
+A helper object that provides the event handler for paste events
 
 WysiHat.Formatting
 ~~~~~~~~~~~~~~~~~~
 
-A helper object that contains most of the functions to keep editor
-markup clean and consistent. Please use the editor's `updateField()`_
-and `updateEditor()`_ methods when syncing the editor and textarea.
+.. js:class:: WysiHat.Formatting
 
-.. _Formatting.cleanup :
+  A helper object that contains most of the functions to keep editor
+  markup clean and consistent. Please use the editor's
+  :js:func:`updateField` and :js:func:`updateEditor` methods when
+  syncing the editor and textarea.
 
-cleanup($element)
-^^^^^^^^^^^^^^^^^
+.. js:function:: cleanup($element)
 
-Removes browser added markup such as ``b`` and ``i`` tags. It also removes
-comments, scripts, empty paragraphs, and inline style tags.
+  Removes browser added markup such as ``b`` and ``i`` tags. It also
+  removes comments, scripts, empty paragraphs, and inline style tags.
 
-.. _Formatting.cleanupPaste :
+.. js:function:: cleanupPaste($element, parentTagName)
 
-cleanupPaste($element, parentTagName)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  Cleans up a paste container. This includes everything in
+  :js:func:`cleanup` as well as resolving newlines into paragraphs and
+  `br` tags. When given a ``parentTagName`` it will also remove that tag
+  from the pasted content. This is done to prevent nesting blocks such
+  as ``h1`` tags.
 
-Cleans up a paste container. This includes everything in
-:ref:`cleanup <Formatting.cleanup>` as well as resolving newlines into
-paragraphs and `br` tags. When given a ``parentTagName`` it will also remove
-that tag from the pasted content. This is done to prevent nesting blocks
-such as ``h1`` tags.
+  Most times you will want to use :js:class:`WysiHat.Paster` or
+  :js:func:`Event.fire('paste') <fire>`.
 
-Most times you will want to use
-`WysiHat.Paster`_ or :ref:`Event.fire('paste') <Event.fire>`.
+.. js:function:: format($element)
 
-.. _Formatting.format :
+  Prettifies the HTML markup to ease in readability and debugging.
 
-format($element)
-^^^^^^^^^^^^^^^^
+.. js:function:: getBrowserMarkupFrom($element)
 
-Prettifies the HTML markup to ease in readability and debugging.
+  Returns the raw markup form the textarea. Please use
+  :js:func:`updateField` to sync.
 
-.. _Formatting.getBrowserMarkupFrom :
+.. js:function:: getApplicationMarkupFrom($element)
 
-getBrowserMarkupFrom($element)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Returns the raw markup form the textarea. Please use `updateField()`_ to sync.
-
-.. _Formatting.getApplicationMarkupFrom :
-
-getApplicationMarkupFrom($element)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Returns the raw markup form the editor. Please use `updateEditor()`_ to sync.
+  Returns the raw markup form the editor. Please use
+  :js:func:`updateEditor` to sync.
 
 Non-public Internal Classes
 ---------------------------
@@ -549,82 +447,66 @@ Non-public Internal Classes
 BlankButton
 ~~~~~~~~~~~
 
-This is the parent class for all buttons.
+.. js:class:: BlankButton
 
-.. _BlankButton.init :
+  This is the parent class for all buttons.
 
-init(name, $editor)
-^^^^^^^^^^^^^^^^^^^
+.. js:function:: init(name, $editor)
 
-The main constructor. If you extend it, it should always return ``this``.
+  The main constructor. If you extend it, it should always return
+  ``this``.
 
-.. _BlankButton.setElement :
+.. js:function:: setElement(element)
 
-setElement(element)
-^^^^^^^^^^^^^^^^^^^
+  Links the button instance with its clickable element.
 
-Links the button instance with its clickable element.
+.. js:function:: getHandler()
 
-getHandler()
-^^^^^^^^^^^^
+  Returns the buttons event handler.
 
-Returns the buttons event handler.
+.. js:function:: getStateHandler()
 
-getStateHandler()
-^^^^^^^^^^^^^^^^^
+  Returns the buttons state handler. This is called frequently. If you
+  extend it, make sure it can handle the load.
 
-Returns the buttons state handler. This is called frequently. If you
-extend it, make sure it can handle the load.
+.. js:function:: setOn()
 
-setOn()
-^^^^^^^
+  Change the button state to indicate that it is active.
 
-Change the button state to indicate that it is active.
+  .. note:: Usually you do not need to call this yourself. Look into
+    overriding the state handler instead.
 
-.. Note::
-	Usually you do not need to call this yourself. Look into overriding
-	the state handler instead.
+.. js:function:: setOff()
 
-setOff()
-^^^^^^^^
-
-Change the button state to indicate that it is inactive. The same warnings
-as for `setOn()`_ apply.
+  Change the button state to indicate that it is inactive. The same
+  warnings as for :js:func:`setOn` apply.
 
 CommandsMixin
 ~~~~~~~~~~~~~
 
-This mixin is provided to ensure consistency across buttons and editor
-instances at all times.
+.. js:class:: CommandsMixin
 
-.. _CommandsMixin.is :
+  This mixin is provided to ensure consistency across buttons and editor
+  instances at all times.
 
-is(type)
-^^^^^^^^
+.. js:function:: is(type)
 
-Use this to check for the current state of the selection. Returns
-a boolean of the current state. ::
-	
-	this.is('bold')
+  Use this to check for the current state of the selection. Returns
+  a boolean of the current state::
 
-.. _CommandsMixin.make :
+    this.is('bold')
 
-make(type)
-^^^^^^^^^^
+.. js:function:: make(type)
 
-Changes the state of the current selection. Also understand some simple
-aliases for ease of use. ::
+  Changes the state of the current selection. Also understand some
+  simple aliases for ease of use. ::
 
-	this.make('italicize'); // native name
-	this.make('italic'); // alias
+    this.make('italicize'); // native name
+    this.make('italic'); // alias
 
-.. _CommandsMixin.toggle :
+.. js:function:: toggle(type)
 
-toggle(type)
-^^^^^^^^^^^^
-
-Alias to :ref:`make() <CommandsMixin.make>`
-
+  Alias to :js:func:`make`.
 
 Browser Compatibility Shims
 ---------------------------

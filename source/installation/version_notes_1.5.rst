@@ -6,7 +6,7 @@ Reviewing the notes below will help you transition to 1.5 with as little
 effort as possible.
 
 
-            
+
 
 Template Updates
 ----------------
@@ -57,41 +57,41 @@ Member Search in Member List
 
 	<!--- Begin Member Search -->
 	<script type="text/javascript">
-	
+
 		var searchFieldCount = 1;
-	
+
 		function add_search_field() {
-	
+
 		    if (document.getElementById('search_field_1')) {
 		        // Find last search field
 		        var originalSearchField = document.getElementById('search_field_1');
 		        searchFieldCount++;
-		
+
 		        // Clone it, change the id
 		        var newSearchField = originalSearchField.cloneNode(true);
 		        newSearchField.id = 'search_field_' + searchFieldCount;
-		
+
 		        // Zero the input and change the names of fields
 		        var newFieldInputs = newSearchField.getElementsByTagName('input');
 		        newFieldInputs[0].value = '';
 		        newFieldInputs[0].name = 'search_keywords_' + searchFieldCount;
-		
+
 		        var newFieldSelects = newSearchField.getElementsByTagName('select');
 		        newFieldSelects[0].name = 'search_field_' + searchFieldCount;
-		
+
 		        // Append it and we're done
 		        originalSearchField.parentNode.appendChild(newSearchField);
 		    }
 		}
-		
+
 		function delete_search_field(obj) {
-		
+
 		    if (obj.parentNode && obj.parentNode.id != 'search_field_1') {
 		        obj.parentNode.parentNode.removeChild(obj.parentNode)
 		    }
 		}
 	</script>
-	
+
 	<table class='tableborder' border='0' cellspacing='0' cellpadding='0' style='width:100%'>
 		<tr>
 		    <td class='memberlistHead'>{lang:member_search}</td>
@@ -99,7 +99,7 @@ Member Search in Member List
 		<tr>
 		    <td class='tableCellOne'>
 		        {form:form_declaration:do_member_search}
-		
+
 		        <div id="member_search_fields">
 			        <div id="search_field_1" class="itempadbig">
 		    		    <input type="text" name="search_keywords_1" />
@@ -111,16 +111,16 @@ Member Search in Member List
 						        <option value='location'>Location</option>
 						        {custom_profile_field_options}
 					        </select>
-		
+
 				        <a href="#" onclick="add_search_field(); return false;" class="defaultBold">+</a>
 				        <a href="#" onclick="delete_search_field(this); return false;" class="defaultBold">-</a>
 			        </div>
 		        </div>
-		
+
 		        <select name='search_group_id' class='select' >
 		        	{group_id_options}
 		        </select>
-		
+
 		        <div class="itempadbig">  <input type='submit' value='Search' class='submit' /></div>
 		        </form>
 		    </td>
@@ -148,7 +148,7 @@ Add::
 
 	/* -------------------------------------*/
 
-	
+
 
 	function delete_confirmation_form()
 
@@ -156,11 +156,11 @@ Add::
 
 	return <<< EOF
 
-	
+
 
 	{form_declaration}
 
-	
+
 
 	<table class="tableborder" cellpadding="0" cellspacing="0" border="0" style="width:560px;" align="center">
 
@@ -204,11 +204,11 @@ Add::
 
 	</table>
 
-	
+
 
 	</form>
 
-	
+
 
 	EOF;
 
@@ -232,9 +232,9 @@ Add::
 
 	//  Bulletin Board - USER
 
-	// -----------------------------------   
+	// -----------------------------------
 
-	    
+
 
 	function bulletin_board()
 
@@ -242,11 +242,11 @@ Add::
 
 	    return <<<ONEIL
 
-	    
+
 
 	<div class='menuHeadingBG'><div class="tableHeading">{lang:bulletin_board}</div></div>
 
-	
+
 
 	{if can_post_bulletin}
 
@@ -262,7 +262,7 @@ Add::
 
 	{/if}
 
-	
+
 
 	{if no_bulletins}
 
@@ -272,9 +272,9 @@ Add::
 
 	{/if}
 
-	
 
-	
+
+
 
 	{if bulletins}
 
@@ -282,7 +282,7 @@ Add::
 
 	{/if}
 
-	
+
 
 	{if paginate}
 
@@ -302,27 +302,27 @@ Add::
 
 	{/if}
 
-	        
+
 
 	ONEIL;
 
-	
+
 
 	}
 
 	// END
 
-	
 
-	
+
+
 
 	// -----------------------------------
 
 	//  Single Bulletin
 
-	// -----------------------------------   
+	// -----------------------------------
 
-	    
+
 
 	function bulletin()
 
@@ -330,17 +330,17 @@ Add::
 
 	    return <<<JAFFA
 
-	
+
 
 	<div class="{style}" id="bulletin_div_{bulletin_id}">
 
-	
+
 
 	<span class="defaultBold">{lang:message_sender}</span>: {bulletin_sender}<br />
 
 	<span class="defaultBold">{lang:message_date}</span>: {bulletin_date}<br />
 
-	
+
 
 	<div class="itempadbig">
 
@@ -348,25 +348,25 @@ Add::
 
 	</div>
 
-	
+
 
 	</div>
 
-	        
+
 
 	JAFFA;
 
-	
+
 
 	}
 
 	// END
 
-	
 
-	
 
-	
+
+
+
 
 	//-------------------------------------
 
@@ -374,7 +374,7 @@ Add::
 
 	//-------------------------------------
 
-	
+
 
 	function bulletin_form()
 
@@ -382,11 +382,11 @@ Add::
 
 	return <<< EOF
 
-	
+
 
 	{form:form_declaration:sending_bulletin}
 
-	
+
 
 	{if message}
 
@@ -394,11 +394,11 @@ Add::
 
 	{/if}
 
-	
+
 
 	<table border='0' cellspacing='0' cellpadding='0' style='width:100%'>
 
-	
+
 
 	<tr>
 
@@ -406,7 +406,7 @@ Add::
 
 	</tr>
 
-	
+
 
 	<tr>
 
@@ -424,7 +424,7 @@ Add::
 
 	</tr>
 
-	
+
 
 	<tr>
 
@@ -434,7 +434,7 @@ Add::
 
 	</tr>
 
-	
+
 
 	<tr>
 
@@ -448,9 +448,9 @@ Add::
 
 	</tr>
 
-	
 
-	
+
+
 
 	<tr>
 
@@ -464,7 +464,7 @@ Add::
 
 	</tr>
 
-	
+
 
 	<tr>
 
@@ -480,11 +480,11 @@ Add::
 
 	</tr>
 
-	
+
 
 	</table>
 
-	
+
 
 	</form>
 
@@ -493,7 +493,9 @@ Add::
 	}
 
 	// END
-	
+
+.. _version_notes_1_5_wiki_theme:
+
 Wiki Theme Updates
 ------------------
 
@@ -503,25 +505,25 @@ Namespaces Displaying
 In **wiki\_special\_titles()** template function at the very top, after::
 
 	ob_start();
-	
+
 	?>
 
 add::
 
 	<div class='defaultLeft'>
-	
+
 	Choose Namespace:  <select onchange="location.href=this.value">
-	
+
 	<option value="{path:wiki_home}{special_namespace}:Titles/">Main</option>
-	
+
 	{wiki:custom_namespaces_list}
-	
+
 	<option value="{path:wiki_home}{special_namespace}:Titles/{namespace_short_name}/" {namespace_selected}>{namespace_label}</option>
-	
+
 	{/wiki:custom_namespaces_list}
-	
+
 	</select>
-	
+
 	</div>
 
 In **wiki\_special\_titles()** template function within the
@@ -554,4 +556,4 @@ contains changes. To update your language pack, you can download this
 text file, make the changes, and simply copy the new keys to the
 appropriate language files.
 
-:ref:`Return to Update Page <update-additional-steps>`
+:ref:`Return to Update Page <update_cleanup>`

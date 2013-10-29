@@ -27,10 +27,10 @@ settings related to control panel login and cookie clearing behavior.
 See :doc:`Cookie Consent control panel <control_panel/index>` for more
 information.
 
-**Note:** Installing this module will prevent cookies from being set by all first 
-party ExpressionEngine code and any code that uses the Function class' set_cookie() 
-method.  Cookies may still be set by third party code using PHP, JavasScript, third 
-party scripts, etc. 
+.. note:: Installing this module will prevent cookies from being set by all first 
+	party ExpressionEngine code and any code that uses the Function class' 
+	set_cookie() method.  Cookies may still be set by third party code using PHP,
+	JavasScript, third party scripts, etc. 
 
 
 .. _installation:
@@ -43,7 +43,7 @@ The Cookie Consent Module is available as a `separate download
 <https://github.com/EllisLab/Cookie-Consent/archive/master.zip>`_ on `GitHub <https://github.com/EllisLab/Cookie-Consent>`_. The module 
 folder (which should be ``cookie_consent`` and must be renamed to that if it's something different) should be placed in your third_party folder (typically system/expressionengine/third_party/).
 
-.. _message-tag:
+.. _message_tag:
 
 ***********
 Message tag

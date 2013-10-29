@@ -93,9 +93,8 @@ protocol.
 SMTP Server Port
 ~~~~~~~~~~~~~~~~
 
-The username used to log in to your SMTP server. Not all SMTP servers require 
-you to authenticate, but many of them do. In those cases you will need to specify 
-the username and password (below).
+If you need to use a port other than 25 with your SMTP server, then fill out
+this field. If you're planning on using port 25, you can leave this blank.
 
 .. _email-smtp-username-label:
 
@@ -154,10 +153,11 @@ SMTP, you can set a greater batch total, possibly as high as several
 hundred or even more if you are on a dedicated server. A batch size of
 300 in these cases is a good starting point. If you are having good
 success you can increase it until you begin experiencing time-outs.
-Note: Unless your mailing list numbers in the thousands you won't gain
-much of a speed gain from setting large batches. If you are using the
-less efficient "PHP mail" protocol then you will usually need to set a
-lower batch size; 50-100 is typical.
+
+.. note:: Unless your mailing list numbers in the thousands you won't
+   gain much of a speed gain from setting large batches. If you are
+   using the less efficient "PHP mail" protocol then you will usually
+   need to set a lower batch size; 50-100 is typical.
 
 .. _email-default-format-label:
 
@@ -182,8 +182,10 @@ Email Console Timelock
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The number of minutes that must lapse before a member is allowed to send
-another email. Note: This only applies to the Email Console in the
-member profile pages.
+another email.
+
+.. note:: This only applies to the Email Console in the member profile
+   pages.
 
 .. _email-log-console-messages-label:
 

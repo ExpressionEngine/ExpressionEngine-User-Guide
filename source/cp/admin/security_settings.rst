@@ -91,10 +91,10 @@ Allow Multiple Log-ins From a Single Account
 This setting determines whether more than one person can simultaneously
 log-in and use ExpressionEngine with the same membership account.
 
-**Note:** If the Session Type above is set to "Cookies Only" this
-feature will not work. The system can only track multiple people using
-the same account if a session is generated, which does not happen when
-only cookies are used.
+.. note:: If the Session Type above is set to "Cookies Only" this
+  feature will not work. The system can only track multiple people using
+  the same account if a session is generated, which does not happen when
+  only cookies are used.
 
 .. _require-ip-logins-label:
 
@@ -158,8 +158,10 @@ Allow Dictionary Words as Passwords
 Setting this preference to "No" will prevent users from being able to
 set their password using words and names that are commonly found in a
 dictionary. This will make "dictionary attacks" by hackers much more
-difficult. **Note:** In order to be able to use this setting you must
-have a dictionary file installed for the system. See below.
+difficult. 
+
+.. note:: In order to be able to use this setting you must have a
+  dictionary file installed for the system. See below.
 
 .. _dict-passwds-file-label:
 

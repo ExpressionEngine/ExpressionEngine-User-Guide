@@ -58,9 +58,9 @@ but will trigger automatic pruning of the collected referrer data.
 Suspend ALL tracking when number of online visitors exceeds:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Note:** Online User Tracking must be enabled for this feature to work,
-or the information will not be available to ExpressionEngine to
-determine your site's traffic.
+.. note:: Online User Tracking must be enabled for this feature to work,
+	or the information will not be available to ExpressionEngine to
+	determine your site's traffic.
 
 If a value is provided for this setting, when the number of "online
 visitors" exceeds that value, all of the above tracking features will be

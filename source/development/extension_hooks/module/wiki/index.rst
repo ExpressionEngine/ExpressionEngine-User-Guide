@@ -2,179 +2,138 @@ Wiki Module Extension Hooks
 ===========================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-edit\_wiki\_article\_end
-------------------------
+wiki_start
+----------
 
-Add more things to do for wiki articles
+.. function:: wiki_start($this)
 
-::
+  Allows page template to be modified prior to article processing
 
-	$edata = $this->extensions-> universal_call('edit_wiki_article_end', $this, $query); if ($this->extensions->end_script === TRUE) return;
+  How it's called::
 
-$this
-~~~~~
+    $this->return_data = ee()->extensions->universal_call('wiki_start', $this);
+    if (ee()->extensions->end_script === TRUE) return;
 
-The current Wiki class object
+  :param object $this: The current Wiki class object
+  :returns: Modified page template (``$this->return_data``)
+  :rtype: String
 
-$query
-~~~~~~
+  .. versionadded:: 1.6.0
 
-The query object for the article
-
-:returns:
-    void
-
-Added in v1.6.0
-
-edit\_wiki\_article\_form\_end
-------------------------------
-
-Allows edit page to be modified
-
-::
-
-	$this->return_data = $this->extensions-> universal_call('edit_wiki_article_form_end', $this, $query); if ($this->extensions->end_script === TRUE) return;
-
-$this
-~~~~~
-
-The current Wiki class object
-
-$query
-~~~~~~
-
-The query object for the article
-
-:returns:
-    String
-
-Added in v1.6.0
-
-edit\_wiki\_article\_form\_start
---------------------------------
-
-Additional processing / complete takeover of the wiki article edit form
-
-::
-
-	$edata = $this->extensions-> universal_call('edit_wiki_article_form_start', $this, $title, $query); if ($this->extensions->end_script === TRUE) return;
-
-$this
-~~~~~
-
-The current Wiki class object
-
-$title
-~~~~~~
-
-The title of the article
-
-$query
-~~~~~~
-
-The query object for the requested title
-
-:returns:
-    void
-
-Added in v1.6.0
-
-wiki\_article\_end
+wiki_article_start
 ------------------
 
-Allows takeover of wiki article display
+.. function:: wiki_article_start($this, $title, $query)
 
-::
+  Additional processing/takeover of wiki article display.
 
-	$this->return_data = $this->extensions-> universal_call('wiki_article_end', $this, $query); if ($this->extensions->end_script === TRUE) return;
+  How it's called::
 
-$this
-~~~~~
+    ee()->extensions->universal_call('wiki_article_start', $this, $title, $query);
+    if (ee()->extensions->end_script === TRUE) return;
 
-The current Wiki class object
+  :param object $this: The current Wiki class object
+  :param string $title: The title of the requested article
+  :param object $query: The query object for the article
+  :rtype: Void
 
-$query
-~~~~~~
+  .. versionadded:: 1.6.0
 
-The query object for the article
+wiki_article_end
+----------------
 
-:returns:
-    String
+.. function:: wiki_article_end($this, $query)
 
-Added in v1.6.0
+  Allows takeover of wiki article display.
 
-wiki\_article\_start
---------------------
+  How it's called::
 
-Additional processing / takeover of wiki article display
+    $this->return_data = ee()->extensions->universal_call('wiki_article_end', $this, $query);
+    if (ee()->extensions->end_script === TRUE) return;
 
-::
+  :param object $this: The current Wiki class object
+  :param object $query: The query object for the article
+  :returns: Modified article display (``$this->return_data``)
+  :rtype: String
 
-	$edata = $this->extensions-> universal_call('wiki_article_start', $this, $title, $query); if ($this->extensions->end_script === TRUE) return;
+  .. versionadded:: 1.6.0
 
-$this
-~~~~~
+wiki_special_page
+-----------------
 
-The current Wiki class object
+.. function:: wiki_special_page($this, $topic)
 
-$title
-~~~~~~
+  Allows complete takeover of special pages.
 
-The title of the requested article
+  How it's called::
 
-$query
-~~~~~~
+    ee()->extensions->universal_call('wiki_special_page', $this, $topic);
+    if (ee()->extensions->end_script === TRUE) return;
 
-The query object for the article
+  :param object $this: The current Wiki class object
+  :param string $topic: The requested topic (e.g. categories, files, etc.)
+  :rtype: Void
 
-:returns:
-    void
+  .. versionadded:: 1.6.0
 
-Added in v1.6.0
+edit_wiki_article_end
+---------------------
 
-wiki\_special\_page
--------------------
+.. function:: edit_wiki_article_end($this, $query)
 
-Allows complete takeover of special pages
+  Add more things to do for wiki articles.
 
-::
+  How it's called::
 
-	$edata = $this->extensions-> universal_call('wiki_special_page', $this, $topic); if ($this->extensions->end_script === TRUE) return;
+    $edata = ee()->extensions->universal_call('edit_wiki_article_end', $this, $query);
+    if (ee()->extensions->end_script === TRUE) return;
 
-$this
-~~~~~
+  :param object $this: The current Wiki class object
+  :param object $query: The query object for the article
+  :rtype: Void
 
-The current Wiki class object
+  .. versionadded:: 1.6.0
 
-$topic
-~~~~~~
+edit_wiki_article_form_start
+----------------------------
 
-The requested topic (e.g. categories, files, etc.)
+.. function:: edit_wiki_article_form_start($this, $title, $query)
 
-:returns:
-    void
+  Additional processing/complete takeover of the wiki article edit form.
 
-Added in v1.6.0
+  How it's called::
 
-wiki\_start
------------
+    ee()->extensions->universal_call('edit_wiki_article_form_start', $this, $title, $query);
+    if (ee()->extensions->end_script === TRUE) return;
 
-Allows page template to be modified prior to article processing
+  :param object $this: The current Wiki class object
+  :param string $title: The title of the article
+  :param object $query: The query object for the requested title
+  :rtype: Void
 
-::
+  .. versionadded:: 1.6.0
 
-	$this->return_data = $this->extensions-> universal_call('wiki_start', $this); if ($this->extensions->end_script === TRUE) return;
+edit_wiki_article_form_end
+--------------------------
 
-$this
-~~~~~
+.. function:: edit_wiki_article_form_end($this, $query)
 
-The current Wiki class object
+  Allows edit page to be modified.
 
-:returns:
-    String
+  How it's called::
 
-Added in v1.6.0
+    $this->return_data = ee()->extensions->universal_call('edit_wiki_article_form_end', $this, $query);
+    if (ee()->extensions->end_script === TRUE) return;
+
+  :param object $this: The current Wiki class object
+  :param object $query: The query object for the article
+  :returns: Modified edit page (``$this->return_data``)
+  :rtype: String
+
+  .. versionadded:: 1.6.0
+

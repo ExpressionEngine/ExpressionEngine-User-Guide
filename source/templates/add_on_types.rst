@@ -15,6 +15,3 @@ ExpressionEngine includes different types of add-ons:
    information and add functionality to existing interfaces.
 -  Expansions add a new layer of functionality to ExpressionEngine.
    There is only one expansion: the Multiple Site Manager.
-
-Please see the `Developers
-area <http://expressionengine.com/developers/>`_ for more information.

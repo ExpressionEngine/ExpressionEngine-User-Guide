@@ -1,412 +1,448 @@
 Functions Class
 ===============
 
-The Functions class contains commonly required functions used throughout
-ExpressionEngine's scripts.
+.. class:: Functions
+
+  The Functions class contains commonly required functions used throughout
+  ExpressionEngine's scripts.
 
 .. contents::
-	:local:
+  :local:
 
-fetch\_site\_index(add\_slash [int], session\_id [int])
--------------------------------------------------------
+.. highlight:: php
 
-Returns site's main index URL.
+fetch_site_index
+----------------
 
-**Class:** Functions (functions)
+.. method:: fetch_site_index([$add_slash = FALSE[, $sess_id = TRUE]])
 
-**Description:** Returns the url of the main site index. If add\_slash
-is set to 1, then a slash is added to the end of the string. If
-session\_id is set to 1, then the session id is included (if sessions
-are being used on the user side and this function is called in a
-'webpage' template). Alternatively, those two values can be set to 0 and
-no slash will be added and no session id will be added, respecively.
-Default is 0 for add\_slash and 1 for session\_id.
+  Returns the url of the main site index.
 
-create\_url(segment [string], session\_id [boolean])
-----------------------------------------------------
+  :param boolean $add_slash: Set to ``TRUE`` to add a slash to the end
+    of the return value
+  :param boolean $sess_id: Set to ``FALSE`` to exclude the session id
+  :returns: Site index URL
+  :rtype: String
 
-Returns url for site.
+create_url
+----------
 
-**Class:** Functions (functions)
+.. method:: create_url($segment[, $sess_id = TRUE])
 
-**Description:** The segment inputed to this function is parsed and
-added to the full site URL to create a full URL/URI. If session\_id is
-set to FALSE, then the session id will not be included (if sessions are
-being used on the user side). Alternatively, session\_id can be set to
-true and the session id will be added. Default is true for session\_id.
+  The segment passed to this function is parsed and added to the full
+  site URL to create a full URL/URI.
 
-::
+  ::
 
-    $memberlist_url = $this->EE->functions->create_url('member/memberlist');
+    $memberlist_url = ee()->functions->create_url('member/memberlist');
     // returns "http://example.com/index.php/member/memberlist/"
 
-fetch\_current\_uri()
+  :param string $segment: The desired URL's URI
+  :param boolean $sess_id: If set to ``FALSE``, session_id will not be
+    included
+  :returns: Full site URL pointing to ``$segment``
+  :rtype: String
+
+fetch_current_uri
+-----------------
+
+.. method:: fetch_current_uri()
+
+  Returns uri for current page.
+
+  :returns: Current URI
+  :rtype: String
+
+
+remove_double_slashes
 ---------------------
 
-Returns uri for current page.
+.. method:: remove_double_slashes($str)
 
-**Class:** Functions (functions)
+  .. deprecated:: 2.6
+    Use String helper's ``reduce_double_slashes()`` instead.
 
-**Description:** Returns the full URI for the current page.
-Occassionally, used in forms when a return location is not set by
-default.
+  Removes all double slashes (``//``) from ``$str`` and returns the
+  string. Useful for cleaning up URLs. The double slashes in ``http://``
+  are preserved.
 
-remove\_double\_slashes(str [string])
--------------------------------------
+  :param string $str: String to remove double slashes from
+  :returns: Cleaned up ``$str``
+  :rtype: String
 
-Remove duplicate slashes from URL.
+extract_path
+------------
 
-**Class:** Functions (functions)
+.. method:: extract_path($str)
 
-**Description:** A clean up function that removes all double slashes
-(//) from str and returns the string. Useful for cleaning up URLs. The
-double slashes in ``http://`` are preserved.
+  Extract the template group/template name from ``$str``, like
+  ``{some_var path='channel/index'}``, and returns just the path.
 
-extract\_path(str [string])
----------------------------
-
-Removed session IDs from a URL.
-
-**Class:** Functions (functions)
-
-**Description:** Extract the template group/template name from str, like
-{some\_var path='channel/index'}, and returns just the path.
-
-::
+  ::
 
     // Parse permalink path
     $key = '{permalink path='channel/details'}'
-    if ($this->EE->functions->extract_path($key) != '' && $this->EE->functions->extract_path($key) != 'SITE_INDEX')
+    if (ee()->functions->extract_path($key) != '' && ee()->functions->extract_path($key) != 'SITE_INDEX')
     {
-        $path = $this->EE->functions->extract_path($key).'/'.$row['entry_id'];
+        $path = ee()->functions->extract_path($key).'/'.$row['entry_id'];
     }
     // function returns 'channel/details'
 
-var\_swap(str [string], data [array])
--------------------------------------
+  :param string $str: String to extract the path from
+  :returns: Template group/name pair
+  :rtype: String
 
-Replace array of variables in string.
+var_swap
+--------
 
-**Class:** Functions (functions)
+.. method:: var_swap($str, $data)
 
-**Description:** Returns a string where the data array is used to
-replace all of the occurrences of the data's keys with data's values in
-str.
+  Replace array of variables in string::
 
-::
-
-    $str = "Rick and Paul ate {meal} while sitting around the {item}"; 
+    $str = "Rick and Paul ate {meal} while sitting around the {item}";
     $swap = array('meal' => "Skittles", 'item' => "computer");
-    $msg = $this->EE->functions->var_swap($str, $swap);
+    $msg = ee()->functions->var_swap($str, $swap);
     // returns "Rick and Paul ate Skittles while sitting around the computer";
 
-redirect(location [string])
----------------------------
+  :param string $str: String to parse
+  :param array $data: Associative array of keys to replace with values
+  :returns: ``$str`` parsed with ``$data``
+  :rtype: String
 
-Redirect to location.
+redirect
+--------
 
-**Class:** Functions (functions)
+.. method:: redirect($location[, $method = FALSE[, $status_code = NULL]])
 
-**Description:** Redirects current browser page to location. Does
-redirect either by location or meta refresh, depending on the redirect
-method preference.
+  Redirect to location.
 
-random(type [string], length (string int))
-------------------------------------------
+  :param string $location: URL to redirect to
+  :param string $method: Optionally choose a method to redirect with
+    (can use ``refresh``, otherwise defaults to using ``Location``
+    header)
+  :param integer $status_code: Status code in the 300 block
+  :rtype: Void
 
-Random number/password generator.
+random
+------
 
-**Class:** Functions (functions)
+.. method:: random([$type = 'encrypt'[, $len = 8]])
 
-**Description:** Returns a random string based on the type and length
-specified. The default type is 'encrypt'.
+  Random number/password generator.
 
-There are four possible values for type:
+  :param string $type: There are four possible values:
 
--  **basic** - just a random number
--  **alpha** - string with length of length using only letters (upper
-   and lower case) of the alphabet
--  **numeric** - string with length of length using only numbers
--  **nozero** - string with length of length using all numbers except
-   zero
--  **md5** - string of a random number that has been md5'ed
--  **encrypt** - string of a random number that has been hash'ed
+    - ``basic`` - just a random number
+    - ``alpha`` - string with length of length using only letters (upper
+      and lower case) of the alphabet
+    - ``numeric`` - string with length of length using only numbers
+    - ``nozero`` - string with length of length using all numbers except
+      zero
+    - ``md5`` - string of a random number that has been ``md5``'ed
+    - ``encrypt`` - string of a random number that has been hash'ed
 
-form\_declaration(data [array])
--------------------------------
+  :param integer $len: Length of the string
+  :returns: Random string of characters
+  :rtype: String
 
-Creates opening form tag and hidden variables.
+form_declaration
+----------------
 
-**Class:** Functions (functions)
+.. method:: form_declaration($data)
 
-**Description:** The data array contains the attributes and any hidden
-fields for the form tag.
+  Creates opening form tag and hidden variables.
 
-Any form will accept the form\_class and form\_id parameters. Access
-the values with TMPL class properties of form\_id and form\_class.
+  Any form will accept the ``form_class`` and ``form_id`` parameters.
+  Access the values with TMPL class properties of ``form_id`` and
+  ``form_class``.
 
-::
+  ::
 
-    $form_details = array('action'     => '',
-                      'name'           => 'upload',
-                      'id'             => $this->EE->TMPL->form_id,
-                      'class'          => $this->EE->TMPL->form_class,
-                      'hidden_fields'  => array('new' => 'y'),
-                      'secure'         => TRUE,
-                      'onsubmit'       => "validate_form(); return false;"
-                      );    
+    $form_details = array(
+        'action'          => '',
+        'name'            => 'upload',
+        'id'              => ee()->TMPL->form_id,
+        'class'           => ee()->TMPL->form_class,
+        'hidden_fields'   => array('new' => 'y'),
+        'secure'          => TRUE,
+        'onsubmit'        => "validate_form(); return false;"
+    );
 
-    $r = $this->EE->functions->form_declaration($form_details);
+    $r = ee()->functions->form_declaration($form_details);
 
-form\_backtrack(offset [int])
------------------------------
+  :param array $data: Associative array of data (see above for example)
+  :returns: Opening form tag and hidden fields
+  :rtype: String
 
-Returns a URL for previously viewed page.
+form_backtrack
+--------------
 
-**Class:** Functions (functions)
+.. method:: form_backtrack([$offset = ''])
 
-**Description:** Returns a URL that allows us to return a user to a
-previously visited page after submitting a form. ExpressionEngine keeps
-track of the last five pages viewed by a visitor, and the page returned
-is determined by the value of offset. For example, 0 is the current
-page, -1 would be the form page, and -2 would be the page prior to the
-form page.
+  Returns a URL that allows us to return a user to a previously visited
+  page after submitting a form. ExpressionEngine keeps track of the last
+  five pages viewed by a visitor, and the page returned is determined by
+  the value of offset.
 
-::
+  ::
 
-    $data = array('title'   => 'Information Accepted',
-                  'heading' => 'Thank you',
-                  'content' => 'Thank you for the locale information',
-                  'link'    => array($this->EE->functions->form_backtrack('-2'), 'Return to entry')
-                  );
-                  
-    $this->EE->output->show_message($data);
+    $data = array(
+        'title'   => 'Information Accepted',
+        'heading' => 'Thank you',
+        'content' => 'Thank you for the locale information',
+        'link'    => array(ee()->functions->form_backtrack('-2'), 'Return to entry')
+    );
 
-evaluate(str [string])
-----------------------
+    ee()->output->show_message($data);
 
-Evaluates a string as PHP
+  :param integer $offset: How many pages you want to backtrack: ``0`` is
+    the current page, ``-1`` would be the form page, and ``-2`` would be
+    the page prior to the form page.
+  :returns: Previous URL
+  :rtype: String
 
-**Class:** Functions (functions)
+evaluate
+--------
 
-**Description:** Evaluates a str as PHP
+.. method:: evaluate($str)
 
-::
+  Evaluates a string as PHP::
 
     $str = "echo 3*4;";
 
     ob_start();
 
-    echo $this->EE->functions->evaluate($str);
+    echo ee()->functions->evaluate($str);
     $value = ob_get_contents();
 
-    ob_end_clean(); 
+    ob_end_clean();
 
     // $value is now equal to 12, since that is what would be outputted by the PHP.
 
-set\_cookie(name [string], value [string], expire [int])
---------------------------------------------------------
+  :param string $str: String to evaluate as PHP
+  :returns: Resulting value
+  :rtype: String
 
-Sets cookie for site.
 
-**Class:** Functions (functions)
+set_cookie
+----------
 
-**Description:** Sets cookie based on name and value. The optional
-expire parameter is added to the current time to specify when the cookie
-expires. If not set or set to '', then the cookie expiration is set in
-the past and should usually be evaluated as having expired.
+.. method:: set_cookie([$name = ''[, $value = ''[, $expire = '']]])
 
-The advantage to using this function over just the standard PHP function
-is because EE will automatically add the cookie domain, cookie prefix,
-and cookie path as specified in the preferences. Those are helpful for
-making these cookies unique to EE and not interfering with other cookies
-set for your site by other software.
+  Sets cookie based on name and value. The advantage to using this
+  function over just the standard PHP function is because EE will
+  automatically add the cookie domain, cookie prefix, and cookie path as
+  specified in the preferences. Those are helpful for making these
+  cookies unique to EE and not interfering with other cookies set for
+  your site by other software.
 
-char\_limiter(str [string], num [int])
---------------------------------------
+  :param string $name: Name of the cookie
+  :param string $value: Value of the cookie
+  :param integer $expire: When the cookie should expire, if left blank
+    the time is set to the past and the cookie will expire immediately
+  :rtype: Void
 
-Returns section of a string based on number of character.
+char_limiter
+------------
 
-**Class:** Functions (functions)
+.. method:: char_limiter($str[, $num = 500])
 
-**Description:** When given a str, it will return the string limited to
-a certain amount of characters but rounds the string up to the nearest
-word. The num parameter is optional and by default is set to 500
-characters
+  Returns section of a string limited to a certain amount of characters
+  but rounds the string up to the nearest word.
 
-word\_limiter(str [string], num [int])
---------------------------------------
+  :param string $str: String to limit
+  :param interger $num: Characters to limit to
+  :returns: Limited string
+  :rtype: String
 
-Returns section of a string based on number of words.
+word_limiter
+------------
 
-**Class:** Functions (functions)
+.. method:: word_limiter($str[, $num = 100])
 
-**Description:** When given a str, it will return the number of words
-specified by num. The num parameter is optional and by default is 100.
+  Returns section of a string based on number of words.
 
-fetch\_email\_template(name [string])
--------------------------------------
+  :param string $str: String to limit
+  :param interger $num: Words to limit to
+  :returns: Limited string
+  :rtype: String
 
-Returns the contents of email template.
+fetch_email_template
+--------------------
 
-**Class:** Functions (functions)
+.. method:: fetch_email_template($name)
 
-**Description:** Returns the contents of the email template requested
-based on the language settings of the user.
+  Returns the contents of the email template requested based on the
+  language settings of the user.
 
-language\_pack\_names(default [str])
-------------------------------------
+  :param string $name: Name of the email template
+  :returns: Email template parsed with the user's language
+  :rtype: String
 
-Returns form select menu of avaialable language packs
+language_pack_names
+-------------------
 
-**Class:** Functions (functions)
+.. method:: language_pack_names($default)
 
-**Description:** The optional parameter default is used to specify the
-currently selected or default value.
+  Returns form select menu of available language packs
 
-clear\_caching(which [str], sub-directory [str], relationships [bool])
-----------------------------------------------------------------------
+  :param string $default: Currently selected or default language
+  :returns: Div tag with a select tag that contains the listing of
+    languages
+  :rtype: String
 
-Clears one or all of the main cache folders
+clear_caching
+-------------
 
-**Class:** Functions (functions)
+.. method:: clear_caching($which[, $sub_dir = ''])
 
-**Description:** Set which to one of the six values 'page', 'tag',
-'db', 'sql', 'relationships', 'all' to empty the main ExpressionEngine
-cache directories. The optional parameter sub\_directory can be used to
-specify a specific folder or file in that the directories. relationships
-used only when clearing 'all' caches, lets you specify whether or not
-relationship caches should be emptied as well. Default is FALSE.
+  Clears one or all of the main cache folders
 
-There are certain times when changing data (prefs or templates, for
-instances) when you want changes to appear immediately. This allows you
-to clear the cache files and make sure the changes appear on the next
-viewing of the site.
+  :param string $which: ``'page'``, ``'tag'``, ``'db'``, ``'sql'``,
+    ``'relationships'``, ``'all'``
+  :param string $sub_dir: Define a specific folder or file in the cache
+    directory
+  :rtype: Void
 
-delete\_directory(path [str], delete root [boolean])
-----------------------------------------------------
+delete_directory
+----------------
 
-Empties a directory of any files.
+.. method:: delete_directory($path[, $del_root = FALSE])
 
-**Class:** Functions (functions)
+  Empties a directory of any files.
 
-**Description:** Set path to the absolute path of the directory you
-wish to empty. Remember to use the EE defined PATH constants to assist
-you in creating these paths.
+  :param string $path: Absolute path of the directory you wish to empty;
+    remember to use the path constants to make this easier
+  :param boolean $del_root: Set to ``TRUE`` to delete the directory as
+    well
+  :rtype: Void
 
-If you wish to delete the folder as well as the contents inside of it,
-then set the optional parameter delete root to TRUE, by default it is
-set to FALSE.
+fetch_assigned_channels
+-----------------------
 
-fetch\_assigned\_channels()
----------------------------
+.. method:: fetch_assigned_channels()
 
-Returns array of channels accessible by current user.
+  Returns array of channels accessible by current user.
 
-**Class:** Functions (functions)
+  :returns: Array of channels accessible by current user
+  :rtype: Array
 
-**Description:** Returns array of channels accessible by current user.
+fetch_action_id
+---------------
 
-fetch\_action\_id(class [str], method [str])
---------------------------------------------
+.. method:: fetch_action_id($class, $method)
 
-Returns a properly formated action id tag
+  Returns a tag in the format ``{AID:class:method}`` for use in the
+  frontend. (See also :doc:`EE->cp->fetch_action_id
+  </development/usage/cp>`).
 
-**Class:** Functions (functions)
+  ::
 
-**Description:** Modules have certain actions for forms, links, etc.
-that are recognized via an action ids that are inserted into the
-database upon installation of that module. This function returns a tag
-in the format {AID:class:method} for use in the frontend. (See also
-`EE->cp->fetch\_action\_id <../usage/cp.html#action_id>`_).
+    $action_id = ee()->functions->fetch_action_id('Comment', 'insert_new_comment');
 
-::
+  :param string $class: Class that contains the ``$method``
+  :param string $method: Name of the method that has an action ID
+  :returns: Valid action ID tag
+  :rtype: String
 
-    $action_id = $this->EE->functions->fetch_action_id('Comment', 'insert_new_comment');
+create_captcha
+--------------
 
-create\_captcha()
------------------
+.. method:: create_captcha($old_world = '')
 
-Returns <img> tag for newly created captcha
+  Using a random word chosen from the array stored in the
+  ``config/captcha.php`` file, this function will create a captcha image
+  and then store that word and the IP address of the current user in the
+  database. You can then put the returned ``<img>`` tag in your form
+  along with a text input field for the user submitted word. When the
+  form is submitted you can check the submitted word against the
+  database for the user's IP. If it matches, you continue processing the
+  form data. If it does not, then the form should fail. This is used to
+  prevent automated spamming tools from submitting spam.
 
-**Class:** Functions (functions)
+  :param string $old_word: Can specify the word to appear as a captcha
+  :returns: ``<img>`` tag
+  :rtype: String
 
-**Description:** Using a random word chosen from the array stored in
-the words.php file, this function will create a captcha image and then
-store that word and the IP address of the current user in the database.
-You can then put the returned <img> tag in your form along with a text
-input field for the user submitted word. When the form is submitted you
-can check the submitted word against the database for the user's IP. If
-it matches, you continue processing the form data. If it does not, then
-the form should fail. This is used to prevent automated spamming tools
-from submitting spam.
+sql_andor_string
+----------------
 
-sql\_andor\_string(str [str], field [str], prefix [str])
---------------------------------------------------------
+.. method:: sql_andor_string($str, $field[, $prefix = ''[, $null = FALSE]])
 
-Returns query string when tag parameter usings pipes
-
-**Class:** Functions (functions)
-
-**Description:** Certain tag parameters have the option to be in the
-form of 'value1\|value2' or 'not value1\|value2', which allows the
-acceptance of multiple values. This function takes that parameter as str
-and the field to check, along with the (optional) prefix of the table
-containing the field, and returns the query string required.
-
-::
+  Certain tag parameters have the option to be in the form of
+  ``'value1|value2'`` or ``'not value1|value2'``, which allows the
+  acceptance of multiple values. This function takes that parameter as
+  ``$str`` and the ``$field`` to check, along with the (optional)
+  ``$prefix`` of the table containing the field, and returns the query
+  string required::
 
     $str  = 'channel|news|sports';
     $sql  = "SELECT * FROM exp_channels WHERE site_id = 1 ";
-    $sql .= $this->EE->functions->sql_andor_string($str, 'channel_name');
+    $sql .= ee()->functions->sql_andor_string($str, 'channel_name');
     // $sql equals:
     // SELECT * FROM exp_channels WHERE site_id = 1
     // AND channel_name = 'channel' OR channel_name = 'news' OR channel_name = 'sports'
 
-assign\_variables(str [string], slash [string])
------------------------------------------------
+  :param string $str: Pipe delimited string from the tag parameter
+  :param string $field: Name of the database field
+  :param string $prefix: Field prefix, used when working with multiple
+    tables to define the table (e.g. ``database_table_name.field_name``)
+  :param boolean $null: Allow for null values in the ``$field``
+  :returns: Partial query string containing some of the ``WHERE`` clause
+  :rtype: String
 
-Assign variables of tag to array
+assign_variables
+----------------
 
-**Class:** Functions (functions)
+.. method:: assign_variables([$str = ''[, $slash = '/']])
 
-**Description:** This function extracts the variables contained within
-the current tag being parsed and assigns them to one of two arrays which
-are returned to you: var\_single or var\_pair. The slash variable is
-used to determine what form the backslash in tags is in, character (/)
-or entity (&#47;).
+  This function extracts the variables contained within the current tag
+  being parsed and assigns them to one of two arrays which are returned
+  to you: ``var_single`` or ``var_pair``.
 
-fetch\_date\_variables(str [string])
-------------------------------------
+  :param string $str: String to parse
+  :param string $slash: What kind of backslash is in the string (``/``
+    or ``&#47;``)
+  :returns: Associative array containing both ``var_single`` and
+    ``var_pair``
+  :rtype: Array
 
-Fetch date variables from tag
+fetch_date_variables
+--------------------
 
-**Class:** Functions (functions)
+.. method:: fetch_date_variables($datestr)
 
-**Description:** This function looks for a variable that has this
-prototype: {date format="%Y %m %d"}. If found, returns only the
-datecodes: %Y %m %d.
+  Fetch the date format (e.g. ``%Y %m %d``) from a date variable (e.g.
+  ``{date format="%Y %m %d"}``).
 
-assign\_parameters(tag [string])
---------------------------------
+  :param string $datestr: The string to look for a single date format in
+  :returns: Date format string
+  :rtype: String
 
-Fetch parameters for tag
+assign_parameters
+-----------------
 
-**Class:** Functions (functions)
+.. method:: assign_parameters($str)
 
-**Description:** Returns an array of parameters for the tag.
+  Fetch parameters for tag
 
-prep\_conditionals(str [string], variables [array], safety [string], prefix [string])
--------------------------------------------------------------------------------------
+  :param string $str: String containing tag parameters directly from the
+    :attr:`TMPL::$tagdata`
+  :returns: Associative array containing the tag parameters
+  :rtype: Array
 
-Parses conditionals and preps conditional for evaluation
+prep_conditionals
+-----------------
 
-**Class:** Functions (functions)
+.. method:: prep_conditionals($str, $vars[, $safety = 'n'[, $prefix = '']])
 
-**Description:** The first two parameters are requried. If safety is
-set to 'y', then some safety checks are performed to make sure
-conditionals are well formed. Normally, do not set this parameter. The
-prefix is used when your variables might have a prefix (ex:
-(your\_prefix->var\_name}), so that you only have to send the normal
-variables and the prefix opposed to two sets of variables (one with
-prefix and one without).
+  Parses conditionals and preps conditional for evaluation
+
+  :param string $str: Template :attr:`TMPL::$tagdata` to parse
+  :param array $vars: Associative array of conditionals to parse
+  :param string $safety: Set to ``'y'`` to ensure that some safety
+    checks are performed to make sure conditionals are well formed
+  :param string $prefix: Used when your variables have a prefix, parses
+    both prefixed and non-prefixed variables
+  :returns: ``$str`` with the conditionals from ``$var`` parsed
+  :rtype: String

@@ -13,7 +13,7 @@ admin/Host to see if the account has PHP available. If it does, then
 make sure it is set to process .php files (as opposed - or in addition -
 to something like .php4).
 
-**Note:** This problem can also be caused by memory leaks in the
-browser. Close all browser windows and try again.
+.. note:: This problem can also be caused by memory leaks in the
+	browser. Close all browser windows and try again.
 
 

@@ -21,7 +21,7 @@ the field name of "extra". The short name is typically used as the
 variable name in your category related tags.
 
 .. note:: Some words are reserved and cannot be used. Please see the
-   list of :ref:`reserved-words-fields` for details.
+   list of :ref:`reserved_words_fields` for details.
 
 Field Label
 ~~~~~~~~~~~
@@ -59,8 +59,8 @@ are three default choices:
    This might be useful if you want people to be able to use full HTML
    in this field.
 #. **XHTML**: The field content will be formatted with
-   ExpressionEngine's `Auto XHTML
-   feature. <../../../general/text_formatting.html>`_
+   ExpressionEngine's :doc:`Auto XHTML
+   feature. </general/text_formatting>`
 #. **Auto <br />**: All line breaks in the field content will be
    converted into <br /> tags.
 

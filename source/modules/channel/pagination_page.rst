@@ -1,11 +1,16 @@
 Channel Entry and Comment Pagination
 ====================================
 
-The pagination feature for both **channel entries** and **comments**
-works identically and allows you to display a limited number of entries
-and then automatically link to the next set. That way you can, for
-example, show comments 1-10 on the first page and automatically link to
-pages that display 11-20, 21-30, etc.
+.. contents::
+   :local:
+   :depth: 3
+
+The pagination feature for both :doc:`Channel Entries
+</modules/channel/channel_entries>` and :doc:`Comments
+</modules/comment/index>` works identically and allows you to display a
+limited number of entries and then automatically link to the next set.
+That way you can, for example, show comments 1-10 on the first page and
+automatically link to pages that display 11-20, 21-30, etc.
 
 You have two choices as to the style of the navigation element. The
 first method would look something like this::
@@ -27,7 +32,7 @@ Example Code
 ------------
 
 Here are two basic code examples, one for each of the methods mentioned
-above. Information about the variables and parameters are covered later. 
+above. Information about the variables and parameters are covered later.
 
 ::
 
@@ -35,31 +40,30 @@ above. Information about the variables and parameters are covered later.
         <h2>{title}</h2>
         {summary}
         {body}
-    
+
         {paginate}
-            <p>Page {current_page} of {total_pages} pages {pagination_links}</p> 
+            <p>Page {current_page} of {total_pages} pages {pagination_links}</p>
         {/paginate}
     {/exp:channel:entries}
 
-It is important to note that it does **not** matter where you put your
-{paginate} code within the channel entries tag. The pagination code will
-be "stripped out" of the regular output and placed in the appropriate
-location according to what you specify with the paginate= parameter
-(detailed below).
+.. note:: It does **not** matter where you put your ``{paginate}`` code
+  within the channel entries tag. The HTML markup within the
+  ``{paginate}`` tag pair will be placed in the appropriate location
+  according to what you specify with the ``paginate=`` parameter
+  (detailed below).
 
-And for the "next/previous" method
+And for the "next/previous" method::
 
-::
-
-	{exp:comment:entries channel="news" sort="desc" limit="1" paginate="bottom"}      
+	{exp:comment:entries channel="news" sort="desc" limit="1" paginate="bottom"}
 	    {comment}
 	    <p>By {name} on {comment_date format="%Y %m %d"}</p>
+
 	    {paginate}
 	        {if previous_page}
-	            <a href="{auto_path}">Previous Page</a> &nbsp; 
-	        {/if} 
-	        {if next_page} 
-	            <a href="{auto_path}">Next Page</a> 
+	            <a href="{auto_path}">Previous Page</a> &nbsp;
+	        {/if}
+	        {if next_page}
+	            <a href="{auto_path}">Next Page</a>
 	        {/if}
 	    {/paginate}
 	{/exp:comment:entries}
@@ -71,12 +75,10 @@ Parameters
 paginate=
 ~~~~~~~~~
 
-::
+This parameter determines where the pagination code will appear for your
+channel entries or comments::
 
 	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"
-
-This parameter determines where the pagination code will appear for your
-channel entries or comments:
 
 #. **top**: The navigation text and links will appear *above* your list
    of entries.
@@ -91,49 +93,56 @@ If no parameter is specified, the navigation block will default to the
 "bottom" behavior.
 
 
+.. _pagination_pagination_links:
+
 pagination_links
 ----------------
 
-::
+This variable shows the current page you are on as well as "surrounding"
+pages in addition to links for next/previous pages and first/last pages.
 
-	{pagination_links}
+You can use ``{pagination_links}`` in two ways. It can be used as a
+single variable::
 
-These show the current page you are on as well as "surrounding" pages in
-addition to links for nex/previous pages and first/last pages. You can use
-{pagination_links} in two ways. It can be used as a `single variable <#var_pagination_links>`_
-or as a pair. When used as a single variable, the output looks a like this::
+  {paginate}
+  	{pagination_links}
+  {/paginate}
+
+And the output looks like this::
 
 	« First  <  11 12 13 14 15 >  Last »
 
-When used as a pair, you have a bit more flexibility::
+When used as a pair, you have a lot more flexibility with the markup::
 
-	{pagination_links}
-		<ul>
-			{first_page}
-				<li><a href="{pagination_url}" class="page-first">First Page</a></li>
-			{/first_page}
+  {paginate}
+    {pagination_links}
+    	<ul>
+    		{first_page}
+    			<li><a href="{pagination_url}" class="page-first">First Page</a></li>
+    		{/first_page}
 
-			{previous_page}
-				<li><a href="{pagination_url}" class="page-previous">Previous Page</a></li>
-			{/previous_page}
+    		{previous_page}
+    			<li><a href="{pagination_url}" class="page-previous">Previous Page</a></li>
+    		{/previous_page}
 
-			{page}
-				<li><a href="{pagination_url}" class="page-{pagination_page_number} {if current_page}active{/if}">{pagination_page_number}</a></li>
-			{/page}
+    		{page}
+    			<li><a href="{pagination_url}" class="page-{pagination_page_number} {if current_page}active{/if}">{pagination_page_number}</a></li>
+    		{/page}
 
-			{next_page}
-				<li><a href="{pagination_url}" class="page-next">Next Page</a></li>
-			{/next_page}
+    		{next_page}
+    			<li><a href="{pagination_url}" class="page-next">Next Page</a></li>
+    		{/next_page}
 
-			{last_page}
-				<li><a href="{pagination_url}" class="page-last">Last Page</a></li>
-			{/last_page}
-		</ul>
-	{/pagination_links}
+    		{last_page}
+    			<li><a href="{pagination_url}" class="page-last">Last Page</a></li>
+    		{/last_page}
+    	</ul>
+    {/pagination_links}
+  {/paginate}
 
 
-There are two variables, five variable pairs, and one conditional variable
-available when using the {pagination_links} pair.
+There are two variables, five variable pairs, and one conditional
+variable available when using the {pagination_links} pair.
 
 Variables
 ~~~~~~~~~
@@ -142,69 +151,77 @@ Variables
 
 	{pagination_page_number}
 
-Outputs the page number associated with the current page in the {pagination_links} tag pair.
+Outputs the page number associated with the current page in the
+{pagination_links} tag pair.
 
 ::
 
 	{pagination_url}
 
-Outputs the URL associated with the current page in the {pagination_links} tag pair.
+Outputs the URL associated with the current page in the
+{pagination_links} tag pair.
 
 
 Variable Pairs
 ~~~~~~~~~~~~~~
+
+These four variable pairs can be used to display specific pages within
+the pagination:
+
+.. note:: The markup within the ``first_page`` and ``last_page``
+  variable pairs will only display when there are at least 4 pages of
+  content.
 
 ::
 
 	{first_page}
 		<li><a href="{pagination_url}" class="page-first">First Page</a></li>
 	{/first_page}
-	
+
+::
+
 	{previous_page}
 		<li><a href="{pagination_url}" class="page-previous">Previous Page</a></li>
 	{/previous_page}
-	
+
+::
+
 	{next_page}
 		<li><a href="{pagination_url}" class="page-next">Next Page</a></li>
 	{/next_page}
-	
+
+::
+
 	{last_page}
 		<li><a href="{pagination_url}" class="page-last">Last Page</a></li>
 	{/last_page}
 
-These four variable pairs are used when displaying specific pages within
-the pagination: the first page link, the previous page link, the next page 
-link, and the last page link.
-
-::
+The ``{page}`` variable pair can be used to display standard pagination
+links::
 
 	{page}
 		<li><a href="{pagination_url}" class="page-{pagination_page_number}">{pagination_page_number}</a></li>
 	{/page}
 
-The last variable pair is used for the standard pagination links.
-
 
 Conditional Variables
 ~~~~~~~~~~~~~~~~~~~~~
 
+Check and see if the current {page} link is the current page.
+
 ::
 
 	{if current_page}class="current"{/if}
-
-Check and see if the current {page} link is the current page.
 
 
 Variable Pairs
 --------------
 
 
+.. _pagination_paginate:
+
 paginate
 ~~~~~~~~
-
-::
-
-	{paginate}  {/paginate}
 
 The opening and closing tags for pagination. This can to be used in
 conjunction with the `paginate= <#par_paginate>`_ parameter to determine
@@ -212,28 +229,37 @@ where the contents of this tag will appear. See below for the available
 variables for use inside this tag. This tag is wrapped around either the
 single variables (see below) or the next/previous variable pairs.
 
+::
+
+	{paginate}  {/paginate}
+
+
+.. _pagination_next_page:
 
 if next\_page
 ~~~~~~~~~~~~~
-
-::
-
-	{if next_page}  {/if}
 
 This tag will conditionally display the code inside the tag if there is
 a "next" page. If there is no next page then the content simply will not
 be displayed.
 
-if previous\_page
-~~~~~~~~~~~~~~~~~
-
 ::
 
-	{if previous_page}  {/if}
+	{if next_page}  {/if}
+
+
+.. _pagination_previous_page:
+
+if previous\_page
+~~~~~~~~~~~~~~~~~
 
 This tag will conditionally display the code inside the tag if there is
 a "previous" page. If there is no previous page then the content simply
 will not be displayed.
+
+::
+
+	{if previous_page}  {/if}
 
 Variables
 ---------
@@ -245,10 +271,6 @@ These individual variables are for use inside the
 auto\_path
 ~~~~~~~~~~
 
-::
-
-	{auto_path}
-
 The {auto\_path} variable is used inside of the `{if
 next\_page} <#var_if_next_page>`_ and `{if
 previous\_page} <#var_if_previous_page>`_ variable pairs. It is
@@ -256,21 +278,25 @@ dynamically replaced with the correct path to the next/previous page.
 Unlike other "path" variables, this variable does **not** require the
 Template\_Group/Template to be specified.
 
+::
+
+	{auto_path}
+
 current\_page
 ~~~~~~~~~~~~~
+
+This variable is replaced by the page number of the current page you are
+viewing.
 
 ::
 
 	{current_page}
 
-This variable is replaced by the page number of the current page you are
-viewing.
-
 total\_pages
 ~~~~~~~~~~~~
+
+The total number of pages of channel entries or comments you have.
 
 ::
 
 	{total_pages}
-
-The total number of pages of channel entries or comments you have.

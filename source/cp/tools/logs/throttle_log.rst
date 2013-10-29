@@ -6,8 +6,7 @@ Throttle Log
 **Control Panel Location:** :menuselection:`Tools --> Logs --> Throttle Log`
 
 This section of the Control Panel allows you to view all the IPs that
-are currently by
-"`throttled <../../admin/throttling_settings.html>`_" by
+are currently by ":doc:`throttled </cp/admin/throttling_settings>`" by
 ExpressionEngine from your Control Panel. You can also black list
 selected IPs.
 

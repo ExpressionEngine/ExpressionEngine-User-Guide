@@ -38,7 +38,6 @@ Then add the following code to this newly created .htaccess file::
 		RewriteEngine On
 
 		# Removes index.php from ExpressionEngine URLs
-		RewriteCond $1 !\.(gif|jpe?g|png)$ [NC]
 		RewriteCond %{REQUEST_FILENAME} !-f
 		RewriteCond %{REQUEST_FILENAME} !-d
 		RewriteRule ^(.*)$ /index.php/$1 [L]
@@ -89,6 +88,6 @@ Note that Technical Support Staff may, during troubleshooting, ask you
 to reduce your .htaccess file to only these settings. Any additional
 content questions may be moved to the Community Help forum.
 
-**Note:** If using the Multiple Site Manager you can repeat the above
-steps for each site, assuming each site has its own public\_html or
-webroot folder.
+.. note:: If using the Multiple Site Manager you can repeat the above
+   steps for each site, assuming each site has its own public\_html or
+   webroot folder.

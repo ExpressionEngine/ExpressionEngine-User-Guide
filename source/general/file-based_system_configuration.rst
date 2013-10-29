@@ -51,7 +51,7 @@ in this order:
    loaded from the database.
 #. Configuration variables in ``config.php`` are loaded and override any
    settings loaded from the database or the CP index file.
- 
+
 
 Configuration Variables
 =======================
@@ -216,7 +216,7 @@ $config['allow_multi_logins'] = 'y';
 
 allow_textarea_tabs
 -------------------
-If not set the template editor and publish write mode allow for tabular input. Set to n to disable all tab input, set to y to force tab preservation in all publish textareas. 
+If not set the template editor and publish write mode allow for tabular input. Set to n to disable all tab input, set to y to force tab preservation in all publish textareas.
 
 ======== ===========
 Values   Behavior
@@ -298,8 +298,8 @@ If the :ref:`Auto-Assign Category Parents <auto-assign-categoryP-label>` option 
 ========= ===========
 Values    Behavior
 ========= ===========
-``y``     The “parent” category will be automatically assigned 
-``n``     Entry will only be assigned to the child category 
+``y``     The “parent” category will be automatically assigned
+``n``     Entry will only be assigned to the child category
 ========= ===========
 
 Example Usage: ::
@@ -399,7 +399,7 @@ The :ref:`URL <avatar-url-label>` to the Avatar Folder.
 ========= ===========
 Values    Behavior
 ========= ===========
-``URL``   URL to avatar folder 
+``URL``   URL to avatar folder
 ========= ===========
 
 Example Usage: ::
@@ -419,7 +419,7 @@ The :ref:`Banned IP Action <member-banned-ip-label>` specifies what action will 
 ============= ===========
 Values        Behavior
 ============= ===========
-``restrict``  Restrict the user to viewing the site only 
+``restrict``  Restrict the user to viewing the site only
 ``message``   Show the user a specific message
 ``bounce``    Redirect the user to another specified site
 ============= ===========
@@ -488,8 +488,8 @@ If the :ref:`Require IP Address and User Agent for Login <require-ip-logins-labe
 ========= ===========
 Values    Behavior
 ========= ===========
-``y``     IP address and User Agent must be present 
-``n``     Do not check IP address and User Agent 
+``y``     IP address and User Agent must be present
+``n``     Do not check IP address and User Agent
 ========= ===========
 
 Example Usage: ::
@@ -509,7 +509,7 @@ When dealing with :ref:`Throttling Configuration <throttle-prefs-label>` you may
 ========= ===========
 Values    Behavior
 ========= ===========
-``text``  Custom message to show user 
+``text``  Custom message to show user
 ========= ===========
 
 Example Usage: ::
@@ -532,8 +532,8 @@ The :ref:`Banned Type <throttle-prefs-label>` specifies what action will be take
 ============= ===========
 Values        Behavior
 ============= ===========
-``redirect``  Redirect the user to a specified URL 
-``message``   Show the user a custom message 
+``redirect``  Redirect the user to a specified URL
+``message``   Show the user a custom message
 ============= ===========
 
 
@@ -554,7 +554,7 @@ The :ref:`URL for Redirect <throttle-prefs-label>` specifies which URL to redire
 ========= ===========
 Values    Behavior
 ========= ===========
-``URL``   The URL to redirect to 
+``URL``   The URL to redirect to
 ========= ===========
 
 
@@ -1021,7 +1021,7 @@ Allows changing of the Control Panel Session Length to any number in seconds. Fo
 ========== ========
 Values     Behavior
 ========== ========
-``number`` Sets the control panel session length in seconds 
+``number`` Sets the control panel session length in seconds
 ========== ========
 
 Example Usage: ::
@@ -1031,7 +1031,7 @@ $config['cp_session_ttl'] = '300';
 
 cp_theme
 --------
-The :ref:`Default Control Panel Theme <general-config-cp-theme-label>` is the theme that members will see when logged in to the Control Panel. 
+The :ref:`Default Control Panel Theme <general-config-cp-theme-label>` is the theme that members will see when logged in to the Control Panel.
 
 ========== ========
 Values     Behavior
@@ -1483,7 +1483,7 @@ $config['enable_emoticons'] = "y";
 .. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Members --> System Administration --> Emoticon Preferences`: Display Smileys
-   
+
 
 enable_entry_view_tracking
 --------------------------
@@ -1503,7 +1503,7 @@ $config['enable_entry_view_tracking'] = "y";
 .. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Members --> Security and Privacy --> Tracking Preferences`: Enable Channel Entry View Tracking
- 
+
 
 enable_hit_tracking
 -------------------
@@ -1523,7 +1523,7 @@ $config['enable_hit_tracking'] = "y";
 .. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Members --> Security and Privacy --> Tracking Preferences`: Enable Template Hit Tracking
- 
+
 
 enable_hooks
 ------------
@@ -1560,7 +1560,7 @@ $config['enable_online_user_tracking'] = "y";
 
 **Control Panel Location:** :menuselection:`Members --> Security and Privacy --> Tracking Preferences`: Enable Online User Tracking
 
- 
+
 enable_hooks
 ------------
 If you would like to use the "hooks" feature you must enable it by setting this variable to TRUE (boolean)
@@ -1631,7 +1631,7 @@ $config['force_query_string'] = "TRUE";
 .. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Admin --> System Administration --> Output and Debugging`: Force URL query strings
- 
+
 
 enable_search_log
 -----------------
@@ -1651,11 +1651,11 @@ $config['enable_search_log'] = "TRUE";
 .. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Admin --> System Administration --> Search Log Configuration`: Enable Search Term Logging
- 
+
 
 enable_sql_caching
 ------------------
-The :ref:`Dynamic Channel Query Caching <caching-dynamic-channel-query-caching>` feature will improve the speed at which the {exp:channel:entries} tag is rendered by caching queries that are normally executed dynamically. This option cannot be used for all people, though.`
+The :ref:`Dynamic Channel Query Caching <caching_dynamic_channel_query_caching>` feature will improve the speed at which the {exp:channel:entries} tag is rendered by caching queries that are normally executed dynamically. This option cannot be used for all people, though.`
 
 ========== ========
 Values     Behavior
@@ -1691,7 +1691,7 @@ $config['enable_throttling'] = "n";
 .. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Throttling Preferences`: Enable Throttling
- 
+
 
 encode_removed_text
 -------------------
@@ -1798,7 +1798,7 @@ Values     Behavior
 Example Usage: ::
 
 $config['image_library_path'] = '/bin/gd2/';
- 
+
 
 image_resize_protocol
 ---------------------
@@ -1820,7 +1820,7 @@ $config['image_resize_protocol'] = "gd2";
 .. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Admin --> System Administration --> Image Resizing Preferences`: Image Resizing Protocol
- 
+
 
 index_page
 ----------
@@ -1950,7 +1950,7 @@ Each item that is logged has an associated date. You can use PHP date codes to s
 ========== ========
 Values     Behavior
 ========== ========
-``text``   Sets log date format 
+``text``   Sets log date format
 ========== ========
 
 Example Usage: ::
@@ -1965,7 +1965,7 @@ The :ref:`Log Email Console Messages <email-log-console-messages-label>` prefere
 ========== ========
 Values     Behavior
 ========== ========
-``y``      Default value, enables the logging of email console messages 
+``y``      Default value, enables the logging of email console messages
 ``n``      Disables the logging of email console messages
 ========== ========
 
@@ -1985,7 +1985,7 @@ Leave this BLANK unless you would like to set something other than the default s
 ========== ========
 Values     Behavior
 ========== ========
-``text``   Full server path to system log folder 
+``text``   Full server path to system log folder
 ========== ========
 
 Example Usage: ::
@@ -2000,7 +2000,7 @@ You can determine whether Referrer Tracking is performed by the system. When you
 ========== ========
 Values     Behavior
 ========== ========
-``y``      Default value, enables referrer tracking 
+``y``      Default value, enables referrer tracking
 ``n``      Disables referrers tracking
 ========== ========
 
@@ -2076,7 +2076,7 @@ Enables the mailing list.
 ======= ========
 Values  Behavior
 ======= ========
-``y``   Default value, enables mailing list 
+``y``   Default value, enables mailing list
 ``n``   Disables mailing list
 ======= ========
 
@@ -2096,7 +2096,7 @@ Recipient list for notification of new mailing list sign-ups.
 ======= ========
 Values  Behavior
 ======= ========
-``y``   Enables recipient list for notification of new mailing list sign-ups 
+``y``   Enables recipient list for notification of new mailing list sign-ups
 ``n``   Default value, disables recipient list for notification of new mailing list sign-ups
 ======= ========
 
@@ -2116,7 +2116,7 @@ Email Address of Notification Recipient(s).
 ======== ========
 Values   Behavior
 ======== ========
-``text`` Email address Notification Recipient(s) 
+``text`` Email address Notification Recipient(s)
 ======== ========
 
 Example Usage: ::
@@ -2125,7 +2125,7 @@ $config['mailinglist_notify_emails'] = 'joe@example.com';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-Ons --> Modules --> Mailing List`: Email Address of Notification Recipient(s) 
+**Control Panel Location:** :menuselection:`Add-Ons --> Modules --> Mailing List`: Email Address of Notification Recipient(s)
 
 
 max_logged_searches
@@ -2144,7 +2144,7 @@ $config['max_logged_searches'] = '500';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> System Administration --> Search Log Configuration`: Maximum number of recent search terms to save 
+**Control Panel Location:** :menuselection:`Admin --> System Administration --> Search Log Configuration`: Maximum number of recent search terms to save
 
 
 max_page_loads
@@ -2343,6 +2343,26 @@ $config['new_posts_clear_caches'] = "n";
 
 **Control Panel Location:** :menuselection:`Admin --> Channel Administration --> Global Channel Preferences`: Clear all caches when new entries are posted
 
+.. _advconfig-newrelic_app_name:
+
+newrelic_app_name
+-----------------
+:ref:`Customizing the Application Name <sysadmin-newrelic_app_name>`. If the New Relic extension is installed on your server, this sets the application name reported in the New Relic dashboard. This variable is also available to set via ``$assign_to_config`` for optionally setting a different application name per MSM site.
+
+======== ========
+Values   Behavior
+======== ========
+``text`` Sets name of reported application name in New Relic dashboard
+======== ========
+
+Example Usage: ::
+
+$config['newrelic_app_name'] = 'My Site';
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> System Administration --> Output and Debugging`
+
 
 new_version_check
 -----------------
@@ -2498,7 +2518,7 @@ $config['photo_max_width'] = "150";
 
 photo_path
 ----------
-The :ref:`Server Path to Photo Folder <member-photo-max-width-label>` is where you set the full server path to the member photos folder. By default, it is the member_photos folder inside the images folder. 
+The :ref:`Server Path to Photo Folder <member-photo-max-width-label>` is where you set the full server path to the member photos folder. By default, it is the member_photos folder inside the images folder.
 
 .. NOTE::
    Note: Must be a full server path, NOT a URL. Folder permissions must be set to 777.
@@ -2752,8 +2772,8 @@ With :ref:`Require Member Account Activation <member-account-activation-label>` 
 ========== ========
 Values     Behavior
 ========== ========
-``none``   Sets member activation to no activation required: New members are automatically activated and approved for the site. 
-``email``  Sets member activation to self-activation via email: New members are sent an email. 
+``none``   Sets member activation to no activation required: New members are automatically activated and approved for the site.
+``email``  Sets member activation to self-activation via email: New members are sent an email.
 ``manual`` Sets member activation to manual activation by an administrator
 ========== ========
 
@@ -2828,7 +2848,7 @@ $config['require_secure_passwords'] = 'n';
 
 require_terms_of_service
 ------------------------
-When new members register through the site, a “terms of service” block of text is displayed. The :ref:`Require Terms of Service <member-require-tos-label>` preference determines whether new members must indicate that they agree to abide by these terms before they can register. 
+When new members register through the site, a “terms of service” block of text is displayed. The :ref:`Require Terms of Service <member-require-tos-label>` preference determines whether new members must indicate that they agree to abide by these terms before they can register.
 
 ========== ========
 Values     Behavior
@@ -2966,7 +2986,7 @@ $config['save_tmpl_revisions'] = 'y';
 
 secure_forms
 ------------
-:ref:`Secure Form Mode <spam-protect-secure-form-mode-label>` prevents automated scripts (the most common way spam is generated) from repeatedly submitting comments or other form data. A submission is only allowed when a user manually loads a page and submits the form from your site. And once the form data is received, the user has to manually reload the page before they can submit again.
+:ref:`Secure Mode <spam-protect-secure-mode-label>` prevents automated scripts (the most common way spam is generated) from repeatedly submitting comments or other form data. A submission is only allowed when a user manually loads a page and submits the form from your site. And once the form data is received, the user has to manually reload the page before they can submit again.
 
 ========== ========
 Values     Behavior
@@ -2986,7 +3006,7 @@ $config['secure_forms'] = 'y';
 
 send_headers
 ------------
-:ref:`Generate HTTP Page Headers <spam-protect-secure-form-mode-label>` setting determines whether or not the server should automatically send HTTP page headers when it serves the pages to a user. Setting this preference to “Yes” causes headers to be explicitly sent by the server. Sending explicit headers is generally considered to be a good practice, although in some cases it can cause some problems.
+:ref:`Generate HTTP Page Headers <generate-http-headers-label>` setting determines whether or not the server should automatically send HTTP page headers when it serves the pages to a user. Setting this preference to “Yes” causes headers to be explicitly sent by the server. Sending explicit headers is generally considered to be a good practice, although in some cases it can cause some problems.
 
 ========== ========
 Values     Behavior
@@ -3002,6 +3022,23 @@ $config['send_headers'] = 'n';
 .. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Admin --> System Administration --> Output and Debugging`: Generate HTTP Page Headers
+
+
+server_offset
+-------------
+When a server's clock is off and you are unable to correct it at the server level, use this preference to correct the disparity. Use a negative integer to correct a server clock that is too fast.
+
+.. warning:: It's important to note that this preference permanently changes the value of timestamps as they are being written to the database. Changing this setting later on will not undo the offset already applied to existing timestamps. Rather than using this setting, we strongly urge you to work with your web host or sysadmin to correct the inaccurate server clock.
+
+=========== ========
+Values      Behavior
+=========== ========
+``integer`` Offsets the value of stored timestamps from given server time in minutes
+=========== ========
+
+Example Usage: ::
+
+$config['server_offset'] = '-15';
 
 
 show_profiler
@@ -3233,7 +3270,7 @@ $config['smart_static_parsing'] = 'n';
 
 smtp_password
 -------------
-:ref:`SMTP Password <email-smtp-password-label>` is the password used to log in to your SMTP server. Not all SMTP servers require you to authenticate, but many of them do. In those cases you will need to specify the username (above) and password.
+:ref:`SMTP Password <email-smtp-password-label>` When using SMTP as your mail protocol, this sets the password ExpressionEngine will use to authenticate with the SMTP server.
 
 ========== ========
 Values     Behavior
@@ -3252,7 +3289,7 @@ $config['smtp_password'] = 'ihateburpees';
 
 smtp_server
 -----------
-:ref:`SMTP Server Address <email-smtp-server-label>` If you chose SMTP as your email protocol above, then you will need to fill out this field, which specifies the server address of the SMTP server. This setting is ignored if “SMTP” is not selected as the email protocol.
+:ref:`SMTP Server Address <email-smtp-server-label>` When using SMTP as your mail protocol, this sets the server to be used. You can use ssl servers as long as OpenSSL is installed on the server ExpressionEngine is installed on. Check with your server administrator first.
 
 ========== ========
 Values     Behavior
@@ -3271,7 +3308,7 @@ $config['smtp_server'] = '10.2.3.12';
 
 smtp_port
 ---------
-:ref:`SMTP Server Port <email-smtp-server-port-label>` If you chose SMTP as your email protocol above, then you will need to fill out this field, which specifies the server address of the SMTP server. This setting is ignored if "SMTP" is not selected as the email protocol.
+:ref:`SMTP Server Port <email-smtp-server-port-label>` When using SMTP as your mail protocol, this will override the core Email class setting (25) for SMTP Port.
 
 ========== ========
 Values     Behavior
@@ -3290,7 +3327,7 @@ $config['smtp_port'] = "2525";
 
 smtp_username
 -------------
-:ref:`SMTP Username <email-smtp-username-label>` is the username used to log in to your SMTP server. Not all SMTP servers require you to authenticate, but many of them do.
+:ref:`SMTP Username <email-smtp-username-label>` When using SMTP as your mail protocol, this sets the username ExpressionEngine will use to authenticate with the SMTP server.
 
 ========== ========
 Values     Behavior
@@ -3455,7 +3492,7 @@ Values              Behavior
 ``PATH_INFO``       Uses the PATH_INFO
 ``QUERY_STRING``    Uses the QUERY_STRING
 ``REQUEST_URI``     Uses the REQUEST_URI
-``ORIG_PATH_INFO``  Uses the ORIG_PATH_INFO 
+``ORIG_PATH_INFO``  Uses the ORIG_PATH_INFO
 =================== ========
 
 Example Usage: ::

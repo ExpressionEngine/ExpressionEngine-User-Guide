@@ -29,9 +29,8 @@ configurations.
 1. Verify Server Compatibility
 ------------------------------
 
-Upload the :doc:`ExpressionEngine Server Wizard
-</installation/requirements>` to the new server and run it to verify
-basic compatibility with ExpressionEngine.
+Upload the :ref:`Server Compatibility Wizard <server-wizard>` to the new
+server and run it to verify basic compatibility with ExpressionEngine.
 
 2. Synchronize Templates
 ------------------------
@@ -135,26 +134,26 @@ You can also set many of these paths in your config.php file using
 configuration variables::
 
 	$config['site_url'] = "http://example.com/";
- 
+
 	$config['tmpl_file_basepath']   = "/home/user/example.com/templates/";
-	 
+
 	$config['theme_folder_url'] = "http://example.com/themes/";
 	$config['theme_folder_path'] = "/home/user/example.com/themes/";
-	 
+
 	$config['captcha_url'] = "http://example.com/images/captchas/";
 	$config['captcha_path'] = "/home/user/example.com/images/captchas/";
-	 
+
 	$config['emoticon_url'] = "http://example.com/images/smileys/";
-	 
+
 	$config['avatar_url'] = "http://example.com/images/avatars/";
 	$config['avatar_path'] = "/home/user/example.com/images/avatars/";
-	 
+
 	$config['photo_url'] = "http://example.com/images/member_photos/";
 	$config['photo_path'] = "/home/user/example.com/images/member_photos/";
-	 
+
 	$config['sig_img_url'] = "http://example.com/images/signature_attachments/";
 	$config['sig_img_path'] = "/home/user/example.com/images/signature_attachments/";
-	 
+
 	$config['upload_preferences'] = array(
 	    1 => array(                                                            // ID of upload destination
 	        'name'        => 'Image Uploads',                          // Display name in control panel
@@ -175,5 +174,5 @@ You're Done!
 At this point, your site should be fully functional. Check to make sure
 that there are no links still pointing to the previous server. It is
 recommended that links be generated using the :doc:`{path}
-</templates/globals/path>` or :ref:`{site\_url} <global-site_url>`
+</templates/globals/path>` or :ref:`{site\_url} <global_site_url>`
 variables for maximum portability.

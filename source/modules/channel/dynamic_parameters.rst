@@ -3,17 +3,17 @@ Dynamic Parameters
 
 The {exp:channel:entries} tag has a Dynamic Parameters feature that
 permits its parameters to be set "on the fly" using POST data submitted
-via a form. A practical use for this is to create some display options
-in a form on your page that your visitors can use to select their
-preferred page view.
+via a form (or GET data submitted via a form or in the URL). A practical
+use for this is to create some display options in a form on your page
+that your visitors can use to select their preferred page view.
 
-**Note:** This feature will only work if page caching is turned OFF for
-the template in which it is being used.
+.. note:: This feature will only work if page caching is turned OFF for
+	the template in which it is being used.
 
-Every :ref:`Parameter <channel-entries-parameters>` available to the channel tag can be
-set dynamically. However, as a security precaution you must specify
-which parameters you'll allow to be dynamic within a given channel tag,
-like this
+Every :ref:`Parameter <channel_entries_parameters>` available to the
+channel tag can be set dynamically. However, as a security precaution
+you must specify which parameters you'll allow to be dynamic within a
+given channel tag, like this
 
 ::
 
@@ -29,7 +29,7 @@ an example of such a form:
 
 Note that each form field is named exactly the same as the parameter
 name, and the form "action" must point to the template in which it is
-being used. 
+being used.
 
 ::
 
@@ -39,20 +39,24 @@ being used.
 	        <option value="date">Date</option>
 	        <option value="title">Title</option> <option value="comment_total">Most Comments</option>
 	    </select>
-	    <select name="sort"> 
-	        <option value="asc">Order In:</option> 
-	        <option value="asc">Ascending</option> 
-	        <option value="desc">Descending</option> 
+	    <select name="sort">
+	        <option value="asc">Order In:</option>
+	        <option value="asc">Ascending</option>
+	        <option value="desc">Descending</option>
 	    </select>
-	    <select name="limit"> 
-	        <option value="10">Result Limit:</option> 
-	        <option value="10">10</option> 
-	        <option value="20">20</option> 
-	        <option value="30">30</option> 
+	    <select name="limit">
+	        <option value="10">Result Limit:</option>
+	        <option value="10">10</option>
+	        <option value="20">20</option>
+	        <option value="30">30</option>
 	    </select>
-	    
-	    <input type="submit" value="Go!" />  
+
+	    <input type="submit" value="Go!" />
 	</form>
 
-**Note:** If you have pagination links on your page they will not retain
-the page layout options created dynamically using this feature.
+.. note:: If you have Secure Forms turned ON, you will need to add a
+  hidden input for the XID. ::
+    <input type="hidden" name="XID" value="{XID_HASH}" />
+
+.. note:: If you have pagination links on your page they will not retain
+	the page layout options created dynamically using this feature.

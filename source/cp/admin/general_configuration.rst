@@ -27,11 +27,8 @@ License Number
 
 The license number you were issued upon purchasing ExpressionEngine. The
 license number was included in the email purchase receipt. If you no
-longer have your license number, you may view a copy of your license
-number by going to the `Download
-Area <https://secure.expressionengine.com/download.php>`_ of the
-ExpressionEngine site and accessing the "Purchase History" for your
-product.
+longer have your license number, you can find it by visiting the
+`Manage Purchases <https://store.ellislab.com/manage>`_ section of EllisLab.com.
 
 Name of your site
 ~~~~~~~~~~~~~~~~~

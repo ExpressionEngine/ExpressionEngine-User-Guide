@@ -86,9 +86,8 @@ last\_comment\_date
 	{last_comment_date format="%m/%d/%Y %h:%i %a"}
 
 The date of the most recent comment. This variable can be affected by
-the channel= parameter. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+the channel= parameter. See :doc:`Date Variable Formatting
+</templates/date_variable_formatting>` for more information.
 
 last\_entry\_date
 ~~~~~~~~~~~~~~~~~
@@ -98,9 +97,8 @@ last\_entry\_date
 	{last_entry_date format="%m/%d/%Y %h:%i %a"}
 
 The date of the most recent entry. This variable can be affected by the
-channel= parameter. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+channel= parameter. See :doc:`Date Variable Formatting
+</templates/date_variable_formatting>` for more information.
 
 last\_visitor\_date
 ~~~~~~~~~~~~~~~~~~~
@@ -110,8 +108,7 @@ last\_visitor\_date
 	{last_visitor_date format="%m/%d/%Y %h:%i %a"}
 
 The date of most most recent visitor to the site. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+Formatting </templates/date_variable_formatting>` for more information.
 
 most\_visitor\_date
 ~~~~~~~~~~~~~~~~~~~
@@ -121,9 +118,8 @@ most\_visitor\_date
 	{most_visitor_date format="%m/%d/%Y %h:%i %a"}
 
 The date on which the most visitors were ever viewing the site at the
-same time. See `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_ for
-more information.
+same time. See `Date Variable Formatting
+</templates/date_variable_formatting>` for more information.
 
 most\_visitors
 ~~~~~~~~~~~~~~

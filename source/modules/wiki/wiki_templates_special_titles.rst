@@ -148,8 +148,8 @@ last\_updated
 Displays the time when an article was last updated.
 
 The **format** parameter is used to determine the date's formatting
-using ExpressionEngine's `Date Variable
-Formatting <../../templates/date_variable_formatting.html>`_.
+using ExpressionEngine's :doc:`Date Variable Formatting
+</templates/date_variable_formatting>`.
 
 path:view\_article
 ''''''''''''''''''

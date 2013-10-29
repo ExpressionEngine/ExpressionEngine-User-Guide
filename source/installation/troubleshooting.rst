@@ -4,10 +4,6 @@ Troubleshooting
 Main page content appears on every page / I get 404s except on the main page / "No Input File Specified"
 --------------------------------------------------------------------------------------------------------
 
-If you encounter any of the above while trying to navigate your site,
-please review `this
-FAQ <http://expressionengine.com/forums/viewthread/130554/>`_.
-
 Running PHP as CGI
 ------------------
 

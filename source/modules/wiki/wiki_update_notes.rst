@@ -14,9 +14,9 @@ Version 2.0
 Trailing Slashes Removed from URLs
 ==================================
 
-**Note:** if you are using unmodified default themes, and have replaced
-your themes with those that come with 2.0, you have no further steps to
-take.
+.. note:: if you are using unmodified default themes, and have replaced
+	your themes with those that come with 2.0, you have no further steps
+	to take.
 
 ExpressionEngine version 1.x used trailing slashes at the end of all
 URLs; 2.0 does not, so you may have some theme changes to make for your
@@ -116,9 +116,8 @@ Namespace Support Added
 =======================
 
 Namespace was added to this version. Please read the documentation on
-`Setting up Namespaces <../../modules/wiki/wiki_cp.html#namespaces>`_
-for more information. Also, you will have to update your default theme
-to the new version or, if you have modified your wiki theme, you will
-have to follow the `Wiki Theme update
-instructions <../../installation/version_notes_1.5.html#wiki_theme>`_
-for ExpressionEngine 1.5.
+:doc:`Setting up Namespaces </modules/wiki/wiki_cp>` for more
+information. Also, you will have to update your default theme to the new
+version or, if you have modified your wiki theme, you will have to
+follow the :doc:`Wiki Theme update instructions
+</installation/version_notes_1.5>` for ExpressionEngine 1.5.

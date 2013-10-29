@@ -19,7 +19,7 @@ installed and available on your server. The options are:
 
 - `GD <http://www.boutell.com/gd/>`_
 - `GD 2 <http://www.boutell.com/gd/>`_
-- `ImageMagick <http://www.imagemagick.org/>`_
+- `ImageMagick <http://www.imagemagick.org/script/index.php>`_
 - `NetPBM <http://netpbm.sourceforge.net/>`_
 
 Image Converter Path

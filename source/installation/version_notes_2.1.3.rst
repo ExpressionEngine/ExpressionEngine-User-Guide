@@ -11,10 +11,10 @@ stylesheet. Please add them to your custom themes.
     .publish_hidden .instruction_text { display: none; }
     .publish_hidden .hidden_blurb {
         text-align: center;
-        padding:    10px 5px; 
+        padding:    10px 5px;
     }
 
 
-:ref:`Return to Update Page <update-additional-steps>`
+:ref:`Return to Update Page <update_cleanup>`
 
 

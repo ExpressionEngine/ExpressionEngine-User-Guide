@@ -100,9 +100,9 @@ Added the following language keys in cp\_lang.php
 
     <?php
 
-	'nav_files'         => 'Files', 
-	'nav_file_manager'  => 'File Manager', 
-	'nav_batch_upload'  => 'Batch Upload', 
+	'nav_files'         => 'Files',
+	'nav_file_manager'  => 'File Manager',
+	'nav_batch_upload'  => 'Batch Upload',
 	'nav_sync_files'    => 'Synchronize Files',
 
 
@@ -112,8 +112,8 @@ Added the following language keys in admin_content_lang.php
 
     <?php
 
-	'exclude_from_channels_or_publish'  => 'Exclude from Channel or Field Category Assignment?', 
-	'publish'                           => 'Channel Assignment', 
+	'exclude_from_channels_or_publish'  => 'Exclude from Channel or Field Category Assignment?',
+	'publish'                           => 'Channel Assignment',
 	'files'                             => 'File Assignment',
 
 
@@ -127,4 +127,4 @@ Updated the following language keys in members_lang.php
 
 Update system/expressionengine/config/mimes.php
 
-:ref:`Return to Update Page <update-additional-steps>`
+:ref:`Return to Update Page <update_cleanup>`

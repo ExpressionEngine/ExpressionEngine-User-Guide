@@ -7,6 +7,13 @@ certain order.
 .. contents::
    :local:
 
+Create a Forum Board
+~~~~~~~~~~~~~~~~~~~~
+
+Before you can begin setting up your forums, you will need to have at least 
+one :doc:`forum board <forum_boards>` for your forums to belong to. 
+
+
 Set "Default Preferences"
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -28,4 +28,4 @@ The following view files were edited:
 - views/tools/import_from_xml.php
 
 
-:ref:`Return to Update Page <update-additional-steps>`
+:ref:`Return to Update Page <update_cleanup>`

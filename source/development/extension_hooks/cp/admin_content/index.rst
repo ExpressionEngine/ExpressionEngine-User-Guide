@@ -2,24 +2,49 @@ Admin Content Controller Extension Hooks
 ========================================
 
 .. contents::
-	:local:
-	:depth: 1
+  :local:
+  :depth: 1
 
+.. highlight:: php
 
-foreign\_character\_conversion\_array
--------------------------------------
+category_delete
+---------------
 
-Allows you to set the foreign character conversion array used to
-transliterate non-English characters for use in URLs.
+.. function:: category_delete($cat_ids)
 
-**Note:** If you only need to use one non-dynamically controlled array,
-you can simply modify system/expressionengine/config/foreign\_chars.php
+  This hook is executed when a category is deleted via the control
+  panel. It can be used to perform additional actions before the
+  category is deleted.
 
-::
+  How it's called::
 
-	$foreign_characters = $this->extensions->call('foreign_character_conversion_array');
+    ee()->extensions->call('category_delete', $cat_ids);
 
-:returns:
-    Array
+  :param array $cat_ids: Array of category IDs being deleted
+  :rtype: Void
 
-Added in v1.6.0
+  .. versionadded:: 2.7.0
+
+category_save
+-------------
+
+.. function:: category_save($cat_id, $data)
+
+  This hook is executed when a new category is saved or an existing
+  category was edited via the control panel. It can be used to perform
+  additional actions after the category is saved.
+
+  How it's called::
+
+    ee()->extensions->call('category_save', $cat_id, $category_data);
+
+  :param int $cat_id: ID of category saved
+  :param array $category_data: Category meta data
+  :rtype: Void
+
+  .. versionadded:: 2.7.0
+
+foreign_character_conversion_array
+----------------------------------
+
+See Content_publish's :func:`foreign_character_conversion_array`.
