@@ -25,3 +25,6 @@ The RSS Parser Class is singularly used as a factory to create
     ExpressionEngine's cache directory
   :returns: SimplePie object
   :rtype: Object
+
+  .. note:: If the ``$url`` of the feed cannot be found an ``Exception``
+    is thrown.

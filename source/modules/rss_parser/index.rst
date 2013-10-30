@@ -66,6 +66,11 @@ variables can be used to display the logo:
 - ``{logo_width}``
 - ``{logo_height}``
 
+Also, if there's an error in retrieving the feed, you can use the
+following variable to display the error:
+
+- ``{feed_error}``
+
 **************
 Pair Variables
 **************
@@ -107,3 +112,15 @@ The ``{item_categories}`` variable contains all of the categories that a
 feed item has been assigned. Each category has one useful variable:
 
 - ``{category_name}``
+
+************
+Conditionals
+************
+
+There are only two conditionals:
+
+- ``{if feed_error}``: In case of a feed error the parser will **only**
+  display content inside of this conditional, if the conditional does
+  not exist, nothing is shown.
+- ``{if no_results}``: Just like the Channel module, if there are no
+  results **only** show the contents of this conditional.
