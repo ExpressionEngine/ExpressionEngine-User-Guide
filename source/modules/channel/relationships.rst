@@ -686,17 +686,22 @@ further filter or sort the entries being retrieved.  They function the same
 as they do when used on the ``{exp:channel:entries}`` tag.  The available
 parameters are:
 
+* author_id
 * backspace
+* channel
+* entry_id
+* group_id
 * offset
 * orderby
+* show_expired
 * sort
-* entry_id
-* author_id
-* channel
-* group_id
+* start_on
+* status
+* stop_before
 * url_title
 * username
-* status
+
+
 
 
 Accessing Siblings
