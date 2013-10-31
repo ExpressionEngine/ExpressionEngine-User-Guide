@@ -25,6 +25,8 @@ you had put the expanded text into the template itself::
 You can create and edit Snippets at :menuselection:`Design --> Templates
 --> Snippets`.
 
+.. note:: Snippets may not be nested inside other snippets.
+
 What is the difference between a Snippet and a User-defined Global Variable?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

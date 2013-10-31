@@ -14,6 +14,6 @@ Snippets can contain *any content*, including ExpressionEngine tags and
 even PHP. For this reason, Snippets can only be edited by those with
 Template Administration privileges.
 
-.. note:: Snippets are not able to nested inside of other snippets.
+.. note:: Snippets may not be nested inside other snippets. 
 
 .. |Design Snippets| image:: ../../../images/design_snippets.png
