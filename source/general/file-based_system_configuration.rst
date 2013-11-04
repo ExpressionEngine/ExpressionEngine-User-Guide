@@ -85,7 +85,7 @@ Example Usage::
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security And
 Privacy --> Security And Sessions`: Control Panel Session Type
 
 
@@ -107,7 +107,7 @@ $config['allow_avatar_uploads'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Allow members to upload their own avatars
 
 
@@ -131,7 +131,7 @@ $config['allow_dictionary_pw'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Design --> Security And
+**Also found in CP:** :menuselection:`Design --> Security And
 Privacy --> Security And Sessions`: Allow Dictionary Words as Passwords
 
 
@@ -174,7 +174,7 @@ $config['allow_member_localization'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences -->
+**Also found in CP:** :menuselection:`Members --> Preferences -->
 Security And Sessions`: Allow members to set their own localization
 preferences
 
@@ -199,7 +199,7 @@ $config['allow_member_registration'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Allow New Member Registrations
 
 
@@ -227,7 +227,7 @@ $config['allow_multi_logins'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Design --> Security And
+**Also found in CP:** :menuselection:`Design --> Security And
 Privacy --> Security And Sessions`: Allow multiple log-ins from a single
 account
 
@@ -269,7 +269,7 @@ $config['allow_signatures'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Allow Users to have Signatures
 
 
@@ -293,7 +293,7 @@ $config['allow_username_change'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Design --> Security And
+**Also found in CP:** :menuselection:`Design --> Security And
 Privacy --> Security And Sessions`: Allow members to change their
 username
 
@@ -328,7 +328,7 @@ $config['auto_assign_cat_parents'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Channel
+**Also found in CP:** :menuselection:`Admin --> Channel
 Administration --> Global Channel Preferences`: Auto-Assign Category
 Parents
 
@@ -351,7 +351,7 @@ $config['avatar_max_height'] = '120';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Avatar Maximum Height
 
 
@@ -373,7 +373,7 @@ $config['avatar_max_kb'] = '60';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Avatar Maximum Size
 
 
@@ -395,7 +395,7 @@ $config['avatar_max_width'] = '120';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Avatar Maximum Width
 
 
@@ -416,7 +416,7 @@ $config['avatar_path'] = '/path/images/avatars/';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Server Path to Avatar Folder
 
 
@@ -436,7 +436,7 @@ $config['avatar_url'] = 'http://example.com/images/avatars';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 URL to Avatar Folder
 
 
@@ -460,7 +460,7 @@ $config['ban_action'] = 'message';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> User Banning`:
+**Also found in CP:** :menuselection:`Members --> User Banning`:
 When a banned IP tries to access the site
 
 
@@ -485,7 +485,7 @@ $config['ban_destination'] = 'http://www.example.com';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> User Banning`:
+**Also found in CP:** :menuselection:`Members --> User Banning`:
 When a banned IP tries to access the site
 
 
@@ -510,7 +510,7 @@ $config['ban_message'] = 'This site is currently unavailable';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> User Banning`:
+**Also found in CP:** :menuselection:`Members --> User Banning`:
 When a banned IP tries to access the site
 
 
@@ -538,7 +538,7 @@ $config['banish_masked_ips'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: Require IP Address and User Agent
 for Login
 
@@ -562,7 +562,7 @@ $config['banishment_message'] = 'You have exceeded the allowed page load frequen
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Throttling Preferences`: Custom Message
 
 
@@ -590,7 +590,7 @@ $config['banishment_type'] = 'message';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Security and
+**Also found in CP:** :menuselection:`Members --> Security and
 Privacy --> Throttling Preferences`: Action to Take
 
 
@@ -613,7 +613,7 @@ $config['banishment_url'] = 'http://www.example.com';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Security and
+**Also found in CP:** :menuselection:`Members --> Security and
 Privacy --> Throttling Preferences`: URL for Redirect
 
 
@@ -639,7 +639,7 @@ $config['banned_emails'] = 'user@example.com';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> User Banning`:
+**Also found in CP:** :menuselection:`Members --> User Banning`:
 Banned Email Addresses
 
 
@@ -664,7 +664,7 @@ $config['banned_ips'] = '123.321.*';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> User Banning`:
+**Also found in CP:** :menuselection:`Members --> User Banning`:
 Banned IP Address
 
 
@@ -688,7 +688,7 @@ $config['banned_ips'] = 'garfield';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> User Banning`: Restricted Screen Names
+**Also found in CP:** :menuselection:`Members --> User Banning`: Restricted Screen Names
 
 
 banned_usernames
@@ -711,7 +711,7 @@ $config['banned_ips'] = 'dsmith';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> User Banning`: Restricted Usernames
+**Also found in CP:** :menuselection:`Members --> User Banning`: Restricted Usernames
 
 
 base_url
@@ -732,7 +732,7 @@ $config['base_url'] = 'http://www.example.com';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> General
+**Also found in CP:** :menuselection:`Admin --> General
 Configuration`: URL to the root directory of your site
 
 
@@ -774,7 +774,7 @@ $config['captcha_font'] = 'n';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security And
 Privacy --> CAPTCHA Preferences`: Use TrueType Font for CAPTCHA
 
 
@@ -796,7 +796,7 @@ $config['captcha_path'] = '/var/www/html/example/images/captchas';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security And
 Privacy --> CAPTCHA Preferences`: Server Path to CAPTCHA Folder
 
 
@@ -820,7 +820,7 @@ $config['captcha_rand'] = 'n';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security And
 Privacy --> CAPTCHA Preferences`: Add Random Number to CAPTCHA Word
 
 
@@ -845,7 +845,7 @@ $config['captcha_require_members'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security And
 Privacy --> CAPTCHA Preferences`: Require CAPTCHA with logged-in members
 
 
@@ -867,7 +867,7 @@ $config['captcha_url'] = 'http://www.example.com/images/captchas';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security And
 Privacy --> CAPTCHA Preferences`: Full URL to CAPTCHA Folder
 
 
@@ -895,7 +895,7 @@ $config['censor_replacement'] = 'censored';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security And
 Privacy --> Word Censoring`: Censoring Replacement Word
 
 
@@ -921,7 +921,7 @@ $config['censored_words'] = 'blanket';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security And
 Privacy --> Word Censoring`: Censored Words
 
 
@@ -964,7 +964,7 @@ $config['comment_edit_time_limit'] = '120';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-Ons --> Modules -->
+**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
 Comment`: Comment Editing Time Limit
 
 
@@ -990,7 +990,7 @@ $config['comment_moderation_override'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-Ons --> Modules -->
+**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
 Comment`: Moderate expired entries
 
 
@@ -1018,7 +1018,7 @@ $config['comment_word_censoring'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-Ons --> Modules -->
+**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
 Comment`: Force word censoring for comments
 
 
@@ -1051,7 +1051,7 @@ $config['compress_output'] = 'n';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> System
+**Also found in CP:** :menuselection:`Admin --> System
 Administration --> Output and Debugging`: Enable GZIP Output
 
 
@@ -1072,7 +1072,7 @@ $config['cookie_domain'] = '.example.com';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Cookie Settings`: Cookie Domain
 
 
@@ -1100,7 +1100,7 @@ $config['cookie_path'] = '/folder/';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Cookie Settings`: Cookie Path
 
 
@@ -1123,7 +1123,7 @@ $config['cookie_prefix'] = 'site1';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Cookie Settings`: Cookie Prefix
 
 
@@ -1145,7 +1145,7 @@ $config['cookie_secure'] = 'TRUE';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Cookie Settings`: Cookie Prefix
 
 
@@ -1183,7 +1183,7 @@ $config['cp_theme'] = 'default';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> General
+**Also found in CP:** :menuselection:`Admin --> General
 Configuration`: Default Control Panel Theme
 
 
@@ -1241,7 +1241,7 @@ $config['debug'] = '1';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> System
+**Also found in CP:** :menuselection:`Admin --> System
 Administration --> Output and Debugging`: Debug Preference
 
 
@@ -1263,7 +1263,7 @@ $config['default_member_group'] = '6';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Default Member Group Assigned to New Members
 
 
@@ -1289,7 +1289,7 @@ $config['default_site_timezone'] = '';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Localization
+**Also found in CP:** :menuselection:`Admin --> Localization
 Settings`: Server Timezone
 
 
@@ -1313,7 +1313,7 @@ $config['deny_duplicate_data'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: Deny Duplicate Data
 
 
@@ -1373,7 +1373,7 @@ $config['doc_url'] = 'http://www.example.com/docs/';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> General
+**Also found in CP:** :menuselection:`Admin --> General
 Configuration`: URL to Documentation Directory
 
 
@@ -1404,7 +1404,7 @@ $config['dynamic_tracking_disabling'] = '350';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Tracking Preferences`: Suspend ALL tracking when number of
 online visitors exceeds:
 
@@ -1442,7 +1442,7 @@ $config['email_batch_size'] = '300';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Email
+**Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: Number of Emails Per Batch
 
 
@@ -1480,7 +1480,7 @@ $config['email_batchmode'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Email
+**Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: Use Batch Mode
 
 
@@ -1501,7 +1501,7 @@ $config['email_charset'] = 'utf-8';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Email
+**Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: Email Character Encoding
 
 
@@ -1526,7 +1526,7 @@ $config['email_console_timelock'] = "300";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Email
+**Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: Email Console Timelock
 
 
@@ -1567,7 +1567,7 @@ $config['email_debug'] = "y";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Email
+**Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: Enable Email Debugging
 
 
@@ -1592,7 +1592,7 @@ $config['email_module_captchas'] = "y";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Email
+**Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: Enable CAPTCHAs for Tell-a-Friend and Contact emails
 
 
@@ -1632,7 +1632,7 @@ $config['emoticon_url'] = "http://www.example.com/images/smileys/";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> System
+**Also found in CP:** :menuselection:`Admin --> System
 Administration --> Emoticon Preferences`: URL to the folder containing your smileys
 
 
@@ -1656,7 +1656,7 @@ $config['enable_avatars'] = "n";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`: Enable Avatars
+**Also found in CP:** :menuselection:`Members --> Preferences`: Enable Avatars
 
 
 enable_censoring
@@ -1679,7 +1679,7 @@ $config['enable_censoring'] = "y";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Security and
+**Also found in CP:** :menuselection:`Members --> Security and
 Privacy --> Word Censoring`: Enable Word Censoring
 
 
@@ -1720,7 +1720,7 @@ $config['enable_emoticons'] = "y";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> System
+**Also found in CP:** :menuselection:`Members --> System
 Administration --> Emoticon Preferences`: Display Smileys
 
 
@@ -1743,7 +1743,7 @@ $config['enable_entry_view_tracking'] = "y";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Security and
+**Also found in CP:** :menuselection:`Members --> Security and
 Privacy --> Tracking Preferences`: Enable Channel Entry View Tracking
 
 
@@ -1766,7 +1766,7 @@ $config['enable_hit_tracking'] = "y";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Security and
+**Also found in CP:** :menuselection:`Members --> Security and
 Privacy --> Tracking Preferences`: Enable Template Hit Tracking
 
 
@@ -1809,7 +1809,7 @@ $config['enable_online_user_tracking'] = "y";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Security and
+**Also found in CP:** :menuselection:`Members --> Security and
 Privacy --> Tracking Preferences`: Enable Online User Tracking
 
 
@@ -1850,7 +1850,7 @@ $config['enable_photos'] = "y";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Enable Member Photos
 
 
@@ -1889,7 +1889,7 @@ $config['force_query_string'] = "TRUE";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> System
+**Also found in CP:** :menuselection:`Admin --> System
 Administration --> Output and Debugging`: Force URL query strings
 
 
@@ -1913,7 +1913,7 @@ $config['enable_search_log'] = "TRUE";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> System
+**Also found in CP:** :menuselection:`Admin --> System
 Administration --> Search Log Configuration`: Enable Search Term Logging
 
 
@@ -1937,7 +1937,7 @@ $config['enable_sql_caching'] = "n";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Channel
+**Also found in CP:** :menuselection:`Admin --> Channel
 Administration --> Global Preferences`: Cache Dynamic Channel Queries
 
 
@@ -1959,7 +1959,7 @@ $config['enable_throttling'] = "n";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Throttling Preferences`: Enable Throttling
 
 
@@ -2098,7 +2098,7 @@ $config['image_resize_protocol'] = "gd2";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> System
+**Also found in CP:** :menuselection:`Admin --> System
 Administration --> Image Resizing Preferences`: Image Resizing Protocol
 
 
@@ -2121,7 +2121,7 @@ $config['index_page'] = 'coolpage.php';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> General
+**Also found in CP:** :menuselection:`Admin --> General
 Configuration`: Name of your site's index page
 
 
@@ -2178,7 +2178,7 @@ $config['is_system_on'] = "y";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> General
+**Also found in CP:** :menuselection:`Admin --> General
 Configuration`: Is system on
 
 language
@@ -2215,7 +2215,7 @@ $config['license_number'] = '4498-3348-9871-1123';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> General
+**Also found in CP:** :menuselection:`Admin --> General
 Configuration`: License Number
 
 
@@ -2236,7 +2236,7 @@ $config['lockout_time'] = '30';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Throttling Preferences`: Lockout Time
 
 
@@ -2275,7 +2275,7 @@ $config['log_email_console_msgs'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Email
+**Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: Log Email Console Messages
 
 
@@ -2355,7 +2355,7 @@ $config['mail_format'] = 'plain';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Email
+**Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: Default Mail Format
 
 
@@ -2377,7 +2377,7 @@ $config['mail_protocol'] = 'smtp';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Email
+**Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: Email Protocol
 
 
@@ -2398,7 +2398,7 @@ $config['mailinglist_enabled'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-Ons --> Modules -->
+**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
 Mailing List`: Mailing List is Enabled
 
 
@@ -2419,7 +2419,7 @@ $config['mailinglist_notify'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-Ons --> Modules -->
+**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
 Mailing List`: Enable recipient list for notification of new mailing
 list sign-ups
 
@@ -2440,7 +2440,7 @@ $config['mailinglist_notify_emails'] = 'joe@example.com';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-Ons --> Modules -->
+**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
 Mailing List`: Email Address of Notification Recipient(s)
 
 
@@ -2462,7 +2462,7 @@ $config['max_logged_searches'] = '500';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> System
+**Also found in CP:** :menuselection:`Admin --> System
 Administration --> Search Log Configuration`: Maximum number of recent
 search terms to save
 
@@ -2489,7 +2489,7 @@ $config['max_page_loads'] = '10';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Throttling Preferences`: Maximum Number of Page Loads
 
 
@@ -2510,7 +2510,7 @@ $config['max_tmpl_revisions'] = '10';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Design --> Templates -->
+**Also found in CP:** :menuselection:`Design --> Templates -->
 Global Template Preferences`: Maximum Number of Revisions to Keep
 
 
@@ -2532,7 +2532,7 @@ $config['mbr_notification_emails'] = 'joe@example.com';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Email address for notifications
 
 
@@ -2554,7 +2554,7 @@ $config['member_theme'] = 'default';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Default Member Profile Theme
 
 
@@ -2576,7 +2576,7 @@ $config['memberlist_sort_order'] = 'desc';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Member List - Order
 
 
@@ -2597,7 +2597,7 @@ $config['memberlist_row_limit'] = '20';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Member List - Rows
 
 
@@ -2623,7 +2623,7 @@ $config['memberlist_order_by'] = "total_posts";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Member List - Sort By
 
 
@@ -2644,7 +2644,7 @@ $config['name_of_dictionary_file'] = 'billy';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: Name of Dictionary File
 
 
@@ -2667,7 +2667,7 @@ $config['new_member_notification'] = "n";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Send new member notifications
 
 
@@ -2691,7 +2691,7 @@ $config['new_posts_clear_caches'] = "n";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Channel
+**Also found in CP:** :menuselection:`Admin --> Channel
 Administration --> Global Channel Preferences`: Clear all caches when
 new entries are posted
 
@@ -2717,7 +2717,7 @@ $config['newrelic_app_name'] = 'My Site';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> System
+**Also found in CP:** :menuselection:`Admin --> System
 Administration --> Output and Debugging`
 
 
@@ -2741,7 +2741,7 @@ $config['new_version_check'] = "n";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> General
+**Also found in CP:** :menuselection:`Admin --> General
 Configuration`: New Version Auto Check
 
 
@@ -2768,7 +2768,7 @@ $config['password_lockout'] = "n";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: Enable Password Lockout
 
 
@@ -2794,7 +2794,7 @@ $config['password_lockout_interval'] = "2.5";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: Time Interval for Lockout
 
 
@@ -2856,7 +2856,7 @@ $config['photo_max_height'] = "100";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Photo Maximum Height
 
 
@@ -2878,7 +2878,7 @@ $config['photo_max_kb'] = "50";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Photo Maximum Size (in Kilobytes)
 
 
@@ -2899,7 +2899,7 @@ $config['photo_max_width'] = "150";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Photo Maximum Width
 
 
@@ -2925,7 +2925,7 @@ $config['photo_path'] = "/path/to/folder/";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Server Path to Photo Folder
 
 
@@ -2946,7 +2946,7 @@ $config['photo_url'] = "http://www.example.com/images/memberphotos/";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 URL to Photos Folder
 
 
@@ -2988,7 +2988,7 @@ $config['profile_trigger'] = "fajkkalf89idjae8hjkfsldamvpp0";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Profile Triggering Word
 
 
@@ -3045,7 +3045,7 @@ $config['pw_min_len'] = '5';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: Minimum Password Length
 
 
@@ -3086,7 +3086,7 @@ $config['recount_batch_total'] = '10000';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Tools --> Data --> Recount
+**Also found in CP:** :menuselection:`Tools --> Data --> Recount
 Statistics --> Recount Preferences`: Total number of database rows
 processed per batch
 
@@ -3112,7 +3112,7 @@ $config['redirect_method'] = 'redirect';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> System
+**Also found in CP:** :menuselection:`Admin --> System
 Administration --> Output and Debugging`: Redirection Method
 
 
@@ -3137,7 +3137,7 @@ $config['redirect_submitted_links'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: Apply Rank Denial to User-submitted
 Links
 
@@ -3215,7 +3215,7 @@ $config['req_mbr_activation'] = 'none';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Require Member Account Activation
 
 
@@ -3242,7 +3242,7 @@ $config['require_ip_for_login'] = 'n';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: Require IP Address and User Agent
 for Login
 
@@ -3267,7 +3267,7 @@ $config['require_ip_for_posting'] = 'n';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: Require IP Address and User Agent
 for posting
 
@@ -3294,7 +3294,7 @@ $config['require_secure_passwords'] = 'n';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: Require Secure Passwords
 
 
@@ -3319,7 +3319,7 @@ $config['require_terms_of_service'] = 'n';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Member --> Preferences`:
+**Also found in CP:** :menuselection:`Member --> Preferences`:
 Require Terms of Service
 
 
@@ -3346,7 +3346,7 @@ $config['reserved_category_word'] = 'category';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Channel
+**Also found in CP:** :menuselection:`Admin --> Channel
 Administration --> Global Channel Preferences`: Category URL Indicator
 
 
@@ -3387,7 +3387,7 @@ $config['rte_default_toolset_id'] = '2';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-Ons --> Modules --> Rich
+**Also found in CP:** :menuselection:`Add-Ons --> Modules --> Rich
 Text Editor`: Default Toolset
 
 
@@ -3411,7 +3411,7 @@ $config['rte_enabled'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-Ons --> Modules --> Rich
+**Also found in CP:** :menuselection:`Add-Ons --> Modules --> Rich
 Text Editor`: Enable Rich Text Editor
 
 
@@ -3436,7 +3436,7 @@ $config['save_tmpl_files'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Design --> Templates -->
+**Also found in CP:** :menuselection:`Design --> Templates -->
 Global Template Preferences`: Save Templates as Files
 
 
@@ -3461,7 +3461,7 @@ $config['save_tmpl_revisions'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Design --> Templates -->
+**Also found in CP:** :menuselection:`Design --> Templates -->
 Global Template Preferences`: Save Template Revisions
 
 
@@ -3487,7 +3487,7 @@ $config['secure_forms'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: Process form data in Secure Mode
 
 
@@ -3513,7 +3513,7 @@ $config['send_headers'] = 'n';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> System
+**Also found in CP:** :menuselection:`Admin --> System
 Administration --> Output and Debugging`: Generate HTTP Page Headers
 
 
@@ -3561,7 +3561,7 @@ $config['show_profiler'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> System
+**Also found in CP:** :menuselection:`Admin --> System
 Administration --> Output and Debugging`: Display Output Profiler
 
 
@@ -3586,7 +3586,7 @@ $config['sig_allow_img_hotlink'] = 'n';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Allow image hot linking in signatures
 
 
@@ -3609,7 +3609,7 @@ $config['sig_allow_img_upload'] = 'y';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Allow users to upload an image in their signature
 
 
@@ -3631,7 +3631,7 @@ $config['sig_img_max_height'] = '150';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Maximum Height of Signature Image
 
 
@@ -3653,7 +3653,7 @@ $config['sig_img_max_width'] = '150';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Maximum Width of Signature Image
 
 
@@ -3675,7 +3675,7 @@ $config['sig_img_max_kb'] = '50';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Maximum Size (in Kilobytes) of Signature Image
 
 
@@ -3702,7 +3702,7 @@ $config['sig_img_path'] = '/path/to/image/folder/';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Server path to Signature Image Upload Folder
 
 
@@ -3724,7 +3724,7 @@ $config['sig_img_url'] = 'http://www.example.com/images/signatures/';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 URL to Signature Image Upload Folder
 
 
@@ -3746,7 +3746,7 @@ $config['sig_maxlength'] = '500';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Members --> Preferences`:
 Maximum number of characters per signature
 
 
@@ -3769,7 +3769,7 @@ $config['site_404'] = 'site/404';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Design --> Templates -->
+**Also found in CP:** :menuselection:`Design --> Templates -->
 Global Template Preferences`: 404 Page
 
 
@@ -3825,7 +3825,7 @@ $config['smtp_password'] = 'ihateburpees';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Email
+**Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: SMTP Password
 
 
@@ -3848,7 +3848,7 @@ $config['smtp_server'] = '10.2.3.12';
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Email
+**Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: SMTP Server Address
 
 
@@ -3870,7 +3870,7 @@ $config['smtp_port'] = "2525";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Email
+**Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: SMTP Server Port
 
 
@@ -3892,7 +3892,7 @@ $config['smtp_username'] = "joe@example.com";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Email
+**Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: SMTP Username
 
 
@@ -3952,7 +3952,7 @@ $config['template_debugging'] = "y";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> System
+**Also found in CP:** :menuselection:`Admin --> System
 Administration --> Output and Debugging`: Display Template Debugging
 
 
@@ -3968,7 +3968,7 @@ $config['template_group'] = "NEED";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Design --> Templates -->
+**Also found in CP:** :menuselection:`Design --> Templates -->
 Template Manager --> Edit Template Group`: Make the index template in
 this group your site's home page?
 
@@ -3990,7 +3990,7 @@ $config['theme_folder_path'] = "/home/usr/domain.com/public_html/themes/";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> General
+**Also found in CP:** :menuselection:`Admin --> General
 Configuration`: Theme Folder Path
 
 
@@ -4028,7 +4028,7 @@ $config['tmpl_file_basepath'] = "/home/usr/domain.com/system/expressionengine/te
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Design --> Templates -->
+**Also found in CP:** :menuselection:`Design --> Templates -->
 Template Preferences`: Server path to site's templates
 
 
@@ -4050,7 +4050,7 @@ $config['un_min_len'] = "5";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: Server path to site's templates
 
 
@@ -4093,7 +4093,7 @@ $config['un_min_len'] = "5";
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: Server path to site's templates
 
 
@@ -4151,7 +4151,7 @@ Example Usage::
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security And
 Privacy --> Security And Sessions`: User Session Type
 
 
@@ -4208,7 +4208,7 @@ Example Usage::
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Channel
+**Also found in CP:** :menuselection:`Admin --> Channel
 Administration --> Global Channel Preferences`: Word Separator for URL
 Titles
 
@@ -4231,7 +4231,7 @@ Example Usage::
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> General
+**Also found in CP:** :menuselection:`Admin --> General
 Configuration`: Default XML Language
 
 
