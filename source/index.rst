@@ -126,7 +126,7 @@ Reference Guides
 - :doc:`The Control Panel <cp/index>`
 - :doc:`templates/template_engine`
 - :doc:`templates/globals/index`
-- :doc:`general/hidden_configuration_variables`
+- :doc:`general/file-based_system_configuration`
 - :doc:`general/bbcode`
 - :doc:`general/text_formatting`
 - :doc:`templates/date_variable_formatting`
