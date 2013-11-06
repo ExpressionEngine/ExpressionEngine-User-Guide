@@ -26,11 +26,11 @@ The main table shows the following columns:
 
 -  **Display toggle**: Toggles the display of the full comment.
 -  **Comment**: The comment body, limited by default to 100 characters
-   with line breaks preserved (see :doc:`view_comment_chars 
-   </general/hidden_configuration_variables>` and 
-   :doc:`view_comment_leave_breaks 
-   </general/hidden_configuration_variables>` for formatting options). 
-   Clicking the comment text allows you to `view or edit the comment 
+   with line breaks preserved (see :doc:`view_comment_chars
+   </general/system_configuration_overrides>` and
+   :doc:`view_comment_leave_breaks
+   </general/system_configuration_overrides>` for formatting options).
+   Clicking the comment text allows you to `view or edit the comment
    <#editing-comments>`_.
 -  **Entry Title**: The title of the Entry the comment was posted to.
 -  **Name**: The commenter's name.
@@ -40,7 +40,7 @@ The main table shows the following columns:
 -  **Status**: The status of the comment (Pending, Open or Closed).
 
 .. note:: The 'Add IPs to Blacklist' checkbox is only available when
-   deleting comments. The :doc:`Blacklist Module 
+   deleting comments. The :doc:`Blacklist Module
    </modules/blacklist/index>` must be installed to use this feature.
 
 Comment Administration Privileges
@@ -69,7 +69,7 @@ Settings
 This screen allows you to edit Comment settings. Note that much of the
 behavior of the Comment Module is determined on a per Channel basis, and
 thus found in the Comment Posting Preferences section of the
-:doc:`Channel Preferences 
+:doc:`Channel Preferences
 </cp/admin/channels/channel_edit_preferences>`.
 
 .. _comment-force-censoring-label:
@@ -127,4 +127,3 @@ privileges, only the status will be editable.
 	:glob:
 	:titlesonly:
 	:hidden:
-	
