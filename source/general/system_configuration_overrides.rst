@@ -3,19 +3,26 @@ System Configuration Overrides
 
 By default, ExpressionEngine's system settings are managed in the
 Control Panel and stored in the database, but these settings can be
-overridden with one of 3 configuration files: the site index file, the
-CP index file, and the main configuration file.
+overridden with one of 3 configuration files: the main configuration
+file, the site index file, and the CP index file.
+
+The **main configuration file**, found at
+:file:`system/expressionengine/config/config.php`, is loaded every time
+the system is run, meaning that config overrides set in
+:file:`config.php` always affect the system's configuration.
 
 The **site index file** is the :file:`index.php` file found in the web
 root of the ExpressionEngine installation. This file acts like the
 gateway to the front-end of the site. Since all web requests for a
-site's front-end pass through the site index file, there are a *limited
-set* of configuration overrides you can include in this file to alter
+site's front-end pass through the site index file, there are a set of
+configuration overrides you can include in this file to alter
 ExpressionEngine's configuration. Keep in mind that any overrides set in
 the site index file only affect the system's behavior for front-end
 pages. (Even if you have :doc:`removed index.php from your site's
 URLs</urls/remove_index.php>`, all front-end web requests are still
 handled by the site index file.)
+
+.. note:: Overrides available for use in the site index file are limited to :ref:`cp_url <overrides-cp-url>`, :ref:`newrelic_app_name <overrides-newrelic-app-name>`, :ref:`site_404 <overrides-site-404>`, :ref:`site_index <overrides-site-index>`, :ref:`site_name <overrides-site-name>`, :ref:`site_url <overrides-site-url>`, :ref:`template <overrides-template>`, and :ref:`template_group <overrides-template-group>`.
 
 The **CP index file** is the :file:`admin.php` file also found in the
 installation's web root. The CP index file is similar to the site index
@@ -24,31 +31,15 @@ Control Panel. And similarly, any overrides set in the CP index file
 only affect the system's behavior for CP pages accessed through that
 particular CP index file (e.g. ``http://example.com/admin.php``).
 
-The **main configuration file**, found at
-:file:`system/expressionengine/config/config.php`, is loaded every time
-the system is run, meaning that config overrides set in
-:file:`config.php` always affect the system's configuration. Since
-:file:`config.php` is loaded last, it also means any settings in this
-file will override settings loaded from the database *and* the relevant
-index file.
+.. note:: Overrides available for use in the CP index file are limited to :ref:`cp_url <overrides-cp-url>`, :ref:`newrelic_app_name <overrides-newrelic-app-name>`, and :ref:`site_name <overrides-site-name>`.
 
-For serving up the front-end, ExpressionEngine loads settings in this
-order:
+Every time ExpressionEngine runs, settings are loaded in this order:
 
 #. Settings stored in the database are loaded.
-#. Settings in :file:`index.php` are loaded and override settings loaded
+#. Settings in :file:`config.php` are loaded and override settings loaded
    from the database.
-#. Settings in :file:`config.php` are loaded and override any settings
-   loaded from the database and the site index file.
-
-For serving Control Panel pages, ExpressionEngine loads settings in
-this order:
-
-#. Settings stored in the database are loaded.
-#. Settings in :file:`admin.php` are loaded and override settings loaded
-   from the database.
-#. Settings in :file:`config.php` are loaded and override any settings
-   loaded from the database and the CP index file.
+#. If a front-end page is being served, a limited array of settings in :file:`index.php` are loaded and override any settings loaded from the database and the main configuration file.
+#. If a CP page is being served, a limited array of settings in :file:`admin.php` are loaded and override any settings loaded from the database and the main configuration file.
 
 
 Configuration Variables
@@ -1136,12 +1127,13 @@ $config['cp_theme'] = 'default';
 Configuration`: Default Control Panel Theme
 
 
+.. _overrides-cp-url:
+
 cp_url
 ------
 The :ref:`URL to your Control Panel index page
 <general-config-url-cp-label>` is the full URL to your ExpressionEngine
 Control Panel.
-
 
 ========== ========
 Values     Behavior
@@ -1151,7 +1143,17 @@ Values     Behavior
 
 Example Usage::
 
-$config['cp_url'] = 'http://www.example.com/system/index.php';
+$config['cp_url'] = 'http://www.example.com/admin.php';
+
+Also available for use in the site index file, :file:`index.php`, and
+the CP index file, :file:`admin.php`. Example Usage::
+
+$assign_to_config['cp_url'] = 'http://domain2.com/admin.php';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> General Configuration`:
+URL to your Control Panel index page
 
 
 csrf_protection
@@ -2051,29 +2053,6 @@ $config['image_resize_protocol'] = "gd2";
 Administration --> Image Resizing Preferences`: Image Resizing Protocol
 
 
-index_page
-----------
-:ref:`Name of your site's index page <general-config-index-name-label>`
-is the filename of your site's "index" page. By default, this will be
-index.php, which is located in the base folder. You will only need to
-alter this setting if you have changed the filename.
-
-========== ========
-Values     Behavior
-========== ========
-``text``   Sets the name of your site's index page
-========== ========
-
-Example Usage::
-
-$config['index_page'] = 'coolpage.php';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> General
-Configuration`: Name of your site's index page
-
-
 install_lock
 ------------
 Prevents installing ExpressionEngine over an existing installation.
@@ -2644,7 +2623,7 @@ $config['new_posts_clear_caches'] = "n";
 Administration --> Global Channel Preferences`: Clear all caches when
 new entries are posted
 
-.. _advconfig-newrelic_app_name:
+.. _overrides-newrelic-app-name:
 
 newrelic_app_name
 -----------------
@@ -2663,6 +2642,11 @@ Values   Behavior
 Example Usage::
 
 $config['newrelic_app_name'] = 'My Site';
+
+Also available for use in the site index file, :file:`index.php`, and
+the CP index file, :file:`admin.php`. Example Usage::
+
+$assign_to_config['newrelic_app_name'] = 'My Second Site';
 
 .. rst-class:: cp-path
 
@@ -3699,22 +3683,28 @@ $config['sig_maxlength'] = '500';
 Maximum number of characters per signature
 
 
+.. _overrides-site-404:
+
 site_404
 --------
-:ref:`Maximum number of characters per signature
-<global-template-404-label>` determines which template should be
-displayed when someone tries to access an invalid URL. If you choose
-"None", a standard 404 message and server header will be shown.
+The :ref:`404 page <global-template-404-label>` determines which
+template should be displayed when someone tries to access an invalid
+URL.
 
-========== ========
-Values     Behavior
-========== ========
-``text``   Sets which template should be displayed when someone tries to access an invalid URL
-========== ========
+================================ ========
+Values                           Behavior
+================================ ========
+``template_group/template_name`` Sets which template should be displayed when someone tries to access an invalid URL
+================================ ========
 
 Example Usage::
 
 $config['site_404'] = 'site/404';
+
+Also available for use in the site index file, :file:`index.php`.
+Example Usage::
+
+$assign_to_config['site_404'] = 'site/notfound';
 
 .. rst-class:: cp-path
 
@@ -3735,6 +3725,90 @@ Values     Behavior
 Example Usage::
 
 $config['site_description'] = 'This is a website';
+
+
+.. _overrides-site-index:
+
+site_index
+----------
+:ref:`Name of your site's index page <general-config-index-name-label>`
+is the filename of your site's "index" page. By default, this will be
+index.php, which is located in the base folder. You will only need to
+alter this setting if you have changed the filename or you want to
+:doc:`remove index.php from your site's URLs</urls/remove_index.php>`.
+
+============ ========
+Values       Behavior
+============ ========
+``filename`` Sets the name of your site's index page
+============ ========
+
+Example Usage::
+
+$config['site_index'] = 'coolpage.php';
+
+Also available for use in the site index file, :file:`index.php`.
+Example Usage::
+
+$assign_to_config['site_index'] = 'secondsite.php';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> General
+Configuration`: Name of your site's index page
+
+
+.. _overrides-site-name:
+
+site_name
+---------
+Sets the short name of the website. The site created upon
+ExpressionEngine installation is called ``default_site`` by default, so
+this is typically only helpful for additional sites in :doc:`MSM-enabled
+installations </cp/sites/createsite>`.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets site short name
+========== ========
+
+Available for use only in the site index file, :file:`index.php`, and
+the CP index file, :file:`admin.php`. Example Usage::
+
+$assign_to_config['site_name'] = 'domain2_short_name';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Site Name --> Edit Sites -->
+Create New Site`: Site Short Name
+
+
+.. _overrides-site-url:
+
+site_url
+--------
+
+Sets the full URL to the site's web root.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the value for the full URL to the site's web root
+========== ========
+
+Example Usage::
+
+$config['site_url'] = 'http://example.com';
+
+Also available for use in the site index file, :file:`index.php`.
+Example Usage::
+
+$assign_to_config['site_url'] = 'http://domain2.com';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> General Configuration`: URL to the root directory of your site
 
 
 smart_static_parsing
@@ -3905,15 +3979,53 @@ $config['template_debugging'] = "y";
 Administration --> Output and Debugging`: Display Template Debugging
 
 
+.. _overrides-template:
+
+template
+--------
+Sets the default template. Must be used with :ref:`template_group <overrides-template-group>`, and the two overrides together set the template group and template shown on the front-end when the site is loaded without anything in the :doc:`URL segments </templates/globals/url_segments>`.
+
 ========== ========
 Values     Behavior
 ========== ========
-``NEED``   NEED
+``text``   Sets the default template
 ========== ========
 
 Example Usage::
 
-$config['template_group'] = "NEED";
+$config['template'] = "index";
+
+Also available for use in the site index file, :file:`index.php`.
+Example Usage::
+
+$assign_to_config['template'] = 'index';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Design --> Templates -->
+Template Manager --> Edit Template Group`: Make the index template in
+this group your site's home page?
+
+.. _overrides-template-group:
+
+template_group
+--------------
+Sets the default template group. Must be used with :ref:`template <overrides-template>`, and the two overrides together set the template group and template shown on the front-end when the site is loaded without anything in the :doc:`URL segments </templates/globals/url_segments>`.
+
+========== ========
+Values     Behavior
+========== ========
+``text``   Sets the default template group
+========== ========
+
+Example Usage::
+
+$config['template_group'] = "about";
+
+Also available for use in the site index file, :file:`index.php`.
+Example Usage::
+
+$assign_to_config['template_group'] = 'site_2';
 
 .. rst-class:: cp-path
 

@@ -36,8 +36,8 @@ is deployed on your server, you'll see an option in the *Output and
 Debugging* settings to customize the application name that is reported
 to New Relic.
 
-You can also set the application name as a :ref:`hidden configuration
-variable <advconfig-newrelic_app_name>`.
+You can also set the application name as a :ref:`configuration
+override <overrides-newrelic-app-name>`.
 
 
 Disabling New Relic's RUM JavaScript

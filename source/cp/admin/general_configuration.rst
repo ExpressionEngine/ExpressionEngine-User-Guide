@@ -55,7 +55,7 @@ URL to the root directory of your site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The full URL to the folder containing your site's index page. For
-example, if you index file is located at:
+example, if your index file is located at:
 
 http://example.com/index.php
 
@@ -71,7 +71,7 @@ URL to your Control Panel index page
 The full URL to your ExpressionEngine Control Panel. In most cases, this
 will be similar to:
 
-http://example.com/system/index.php
+http://example.com/admin.php
 
 .. _general-config-theme-url-label:
 
@@ -108,7 +108,7 @@ Default Language
 ~~~~~~~~~~~~~~~~
 
 The language pack that members will see when logged in to the Control
-Panel. This only affects the Control Panel. 
+Panel. This only affects the Control Panel.
 Members are able to override this setting in :doc:`/cp/my_account/index`.
 
 .. _general-config-default-xml-label:
