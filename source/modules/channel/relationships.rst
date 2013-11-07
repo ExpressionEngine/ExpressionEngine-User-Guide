@@ -609,8 +609,8 @@ Tag Parameters
    :depth: 2
 
 The following parameters are available to all looping relationship tags, allowing
-you order to further filter or sort the entries being retrieved.  They function
-the same as they do when used on the ``{exp:channel:entries}`` tag.  The available
+you to further filter or sort the entries being retrieved.  They function the
+same as they do when used on the ``{exp:channel:entries}`` tag.  The available
 parameters are:
 
 * author_id
@@ -847,7 +847,7 @@ Namespacing Variables
 =====================
 .. contents::
    :local:
-   :depth: 2
+   :depth: 1
 
 Any variable available to the channel entries tag can be used inside a
 relationship tag pair.  Use prefixes to specify which entry or set of entries
