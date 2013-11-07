@@ -4109,23 +4109,6 @@ Example Usage::
 $config['url_third_themes'] = "http://www.example.com/third_party/";
 
 
-user_session_ttl
-----------------
-Allows changing of the Users Session Length to any number in seconds.
-For instance, if users should be logged out after 10 minutes of
-inactivity, the value would be: 600
-
-========== ========
-Values     Behavior
-========== ========
-``number`` Time in seconds for Users Session Length
-========== ========
-
-Example Usage::
-
-$config['user_session_ttl'] = '600';
-
-
 webmaster_email
 ---------------
 Sets the Webmaster's email address.
@@ -4156,8 +4139,30 @@ Example Usage::
 $config['webmaster_name'] = "Joe";
 
 
+website_session_ttl
+-------------------
+Allows changing of the front-end session length to any number in
+seconds. For instance, if users should be logged out after 10 minutes of
+inactivity, the value would be: 600
+
+========== ========
+Values     Behavior
+========== ========
+``number`` Time in seconds for Users Session Length
+========== ========
+
+Example Usage::
+
+$config['website_session_ttl'] = '600';
+
+.. versionchanged:: 2.8
+
+   Variable was changed from ``user_session_ttl`` to
+   ``website_session_ttl``.
+
+
 website_session_type
------------------
+--------------------
 :ref:`Website Session Type <website-session-type-label>` determines how
 sessions are handled on the front-end of the site. You may use cookies,
 session IDs, or a combination.
