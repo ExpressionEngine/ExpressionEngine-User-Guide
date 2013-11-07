@@ -4148,7 +4148,7 @@ inactivity, the value would be: 600
 ========== ========
 Values     Behavior
 ========== ========
-``number`` Time in seconds for Users Session Length
+``number`` Sets the front-end session length in seconds
 ========== ========
 
 Example Usage::
