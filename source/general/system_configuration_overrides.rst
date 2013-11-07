@@ -57,29 +57,6 @@ Configuration Variables
     :local:
 
 
-admin_session_type
-------------------
-
-Sets the :ref:`Control Panel session type <cp-session-type-label>`.
-
-====== ========
-Values Behavior
-====== ========
-``c``  Sets the Control Panel to use cookies only
-``s``  Sets the Control Panel to use Session ID only
-``cs`` Sets the Control Panel to use Cookies and Session ID
-====== ========
-
-Example Usage::
-
- $config['admin_session_type'] = 's';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Security And
-Privacy --> Security And Sessions`: Control Panel Session Type
-
-
 allow_avatar_uploads
 --------------------
 Allows or disallows :ref:`avatar uploads <avatar-upload-label>`.
@@ -1155,6 +1132,34 @@ Values     Behavior
 Example Usage::
 
 $config['cp_session_ttl'] = '300';
+
+
+cp_session_type
+---------------
+
+Sets the :ref:`Control Panel session type <cp-session-type-label>`.
+
+====== ========
+Values Behavior
+====== ========
+``c``  Sets the Control Panel to use cookies only
+``s``  Sets the Control Panel to use Session ID only
+``cs`` Sets the Control Panel to use Cookies and Session ID
+====== ========
+
+Example Usage::
+
+ $config['cp_session_type'] = 's';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> Security And
+Privacy --> Security And Sessions`: Control Panel Session Type
+
+.. versionchanged:: 2.8
+
+   Variable was changed from ``admin_session_type`` to
+   ``cp_session_type``.
 
 
 cp_theme
@@ -4121,31 +4126,6 @@ Example Usage::
 $config['user_session_ttl'] = '600';
 
 
-user_session_type
------------------
-:ref:`User Session Type <user-session-type-label>` determines how
-sessions for regular users on your website are handled. You may use
-cookies, session IDs, or a combination.
-
-====== ========
-Values Behavior
-====== ========
-``c``  Sets the User Session to use cookies only
-``s``  Sets the User Session to use Session ID only
-``cs`` Sets the User Session to use Cookies and Session ID
-====== ========
-
-
-Example Usage::
-
- $config['user_session_type'] = 's';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Security And
-Privacy --> Security And Sessions`: User Session Type
-
-
 webmaster_email
 ---------------
 Sets the Webmaster's email address.
@@ -4174,6 +4154,36 @@ Values     Behavior
 Example Usage::
 
 $config['webmaster_name'] = "Joe";
+
+
+website_session_type
+-----------------
+:ref:`Website Session Type <website-session-type-label>` determines how
+sessions are handled on the front-end of the site. You may use cookies,
+session IDs, or a combination.
+
+====== ========
+Values Behavior
+====== ========
+``c``  Sets the User Session to use cookies only
+``s``  Sets the User Session to use Session ID only
+``cs`` Sets the User Session to use Cookies and Session ID
+====== ========
+
+
+Example Usage::
+
+ $config['website_session_type'] = 's';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> Security And
+Privacy --> Security And Sessions`: Website Session Type
+
+.. versionchanged:: 2.8
+
+   Variable was changed from ``user_session_type`` to
+   ``website_session_type``.
 
 
 word_separator

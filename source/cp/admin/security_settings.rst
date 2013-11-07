@@ -30,14 +30,14 @@ use cookies, session IDs, or a combination. The available options are:
   prevents you from accepting cookies in the event you are behind a
   firewall or due to some other technical issue.
 
-.. _user-session-type-label:
+.. _website-session-type-label:
 
-User Session Type
+Website Session Type
 ~~~~~~~~~~~~~~~~~
 
-This determines how sessions for regular users on your website are
-handled. You may use cookies, session IDs, or a combination. The
-available options are:
+This determines how sessions are handled for the front-end of the site.
+You may use cookies, session IDs, or a combination. The available
+options are:
 
 - **Cookies and session ID**: Both cookies and URL session ID
   parameters are used to track the user throughout their visit.
@@ -158,7 +158,7 @@ Allow Dictionary Words as Passwords
 Setting this preference to "No" will prevent users from being able to
 set their password using words and names that are commonly found in a
 dictionary. This will make "dictionary attacks" by hackers much more
-difficult. 
+difficult.
 
 .. note:: In order to be able to use this setting you must have a
   dictionary file installed for the system. See below.
