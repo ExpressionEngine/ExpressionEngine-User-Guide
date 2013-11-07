@@ -760,9 +760,6 @@ The syntax is::
 
 Parameters
 ----------
-.. contents::
-   :local:
-   :depth: 1
 
 In addition to the standard parameters, the following parameter may be used in
 this tag:
@@ -776,7 +773,6 @@ parameter to specify which field in the parent entry we should be pulling the
 siblings from. The syntax is::
 
     {siblings field="relationship_field"}
-
 
 Accessing Parents
 =================
@@ -825,9 +821,6 @@ the following syntax::
 
 Parameters
 ----------
-.. contents::
-   :local:
-   :depth: 1
 
 In addition to the standard parameters, the following parameter may be used in
 this tag:
@@ -842,12 +835,11 @@ The syntax is::
 
     {parents field="relationship_field"}
 
-
 Namespacing Variables
 =====================
 .. contents::
    :local:
-   :depth: 1
+   :depth: 2
 
 Any variable available to the channel entries tag can be used inside a
 relationship tag pair.  Use prefixes to specify which entry or set of entries
@@ -870,8 +862,6 @@ the variable belongs to::
 		{/parents}
 
 	{/exp:channel:entries}
-
-
 
 Grid Compatibility
 ------------------
