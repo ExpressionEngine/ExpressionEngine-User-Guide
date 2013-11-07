@@ -33,7 +33,7 @@ use cookies, session IDs, or a combination. The available options are:
 .. _website-session-type-label:
 
 Website Session Type
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 This determines how sessions are handled for the front-end of the site.
 You may use cookies, session IDs, or a combination. The available

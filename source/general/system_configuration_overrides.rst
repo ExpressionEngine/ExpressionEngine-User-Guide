@@ -6,18 +6,18 @@ Control Panel and stored in the database, but these settings can be
 overridden with one of 3 configuration files: the site index file, the
 CP index file, and the main configuration file.
 
-The **site index file** is the ``index.php`` file found in the web root
-of the ExpressionEngine installation. This file acts like the gateway to
-the front-end of the site. Since all web requests for a site's front-end
-pass through the site index file, there are a *limited set* of
-configuration overrides you can include in this file to alter
+The **site index file** is the :file:`index.php` file found in the web
+root of the ExpressionEngine installation. This file acts like the
+gateway to the front-end of the site. Since all web requests for a
+site's front-end pass through the site index file, there are a *limited
+set* of configuration overrides you can include in this file to alter
 ExpressionEngine's configuration. Keep in mind that any overrides set in
 the site index file only affect the system's behavior for front-end
 pages. (Even if you have :doc:`removed index.php from your site's
 URLs</urls/remove_index.php>`, all front-end web requests are still
 handled by the site index file.)
 
-The **CP index file** is the ``admin.php`` file also found in the
+The **CP index file** is the :file:`admin.php` file also found in the
 installation's web root. The CP index file is similar to the site index
 file except that it acts as the gateway for all web requests to the
 Control Panel. And similarly, any overrides set in the CP index file
@@ -25,28 +25,29 @@ only affect the system's behavior for CP pages accessed through that
 particular CP index file (e.g. ``http://example.com/admin.php``).
 
 The **main configuration file**, found at
-``system/expressionengine/config/config.php``, is loaded every time the
-system is run, meaning that config overrides set in ``config.php``
-always affect the system's configuration. Since ``config.php`` is loaded
-last, it also means any settings in this file will override settings
-loaded from the database *and* the relevant index file.
+:file:`system/expressionengine/config/config.php`, is loaded every time
+the system is run, meaning that config overrides set in
+:file:`config.php` always affect the system's configuration. Since
+:file:`config.php` is loaded last, it also means any settings in this
+file will override settings loaded from the database *and* the relevant
+index file.
 
 For serving up the front-end, ExpressionEngine loads settings in this
 order:
 
 #. Settings stored in the database are loaded.
-#. Settings in ``index.php`` are loaded and override settings loaded
+#. Settings in :file:`index.php` are loaded and override settings loaded
    from the database.
-#. Settings in ``config.php`` are loaded and override any settings
+#. Settings in :file:`config.php` are loaded and override any settings
    loaded from the database and the site index file.
 
 For serving Control Panel pages, ExpressionEngine loads settings in
 this order:
 
 #. Settings stored in the database are loaded.
-#. Settings in ``admin.php`` are loaded and override settings loaded
+#. Settings in :file:`admin.php` are loaded and override settings loaded
    from the database.
-#. Settings in ``config.php`` are loaded and override any settings
+#. Settings in :file:`config.php` are loaded and override any settings
    loaded from the database and the CP index file.
 
 
@@ -69,7 +70,6 @@ Values   Behavior
 ======== ===========
 
 Example Usage::
-
 
 $config['allow_avatar_uploads'] = 'y';
 
@@ -94,7 +94,6 @@ Values   Behavior
 
 Example Usage::
 
-
 $config['allow_dictionary_pw'] = 'y';
 
 .. rst-class:: cp-path
@@ -116,7 +115,6 @@ Values   Behavior
 
 Example Usage::
 
-
 $config['allow_extensions'] = 'y';
 
 
@@ -136,7 +134,6 @@ Values   Behavior
 ======== ===========
 
 Example Usage::
-
 
 $config['allow_member_localization'] = 'y';
 
@@ -161,7 +158,6 @@ Values   Behavior
 ======== ===========
 
 Example Usage::
-
 
 $config['allow_member_registration'] = 'y';
 
@@ -190,7 +186,6 @@ Values   Behavior
 
 Example Usage::
 
-
 $config['allow_multi_logins'] = 'y';
 
 .. rst-class:: cp-path
@@ -203,7 +198,7 @@ account
 allow_textarea_tabs
 -------------------
 If not set the template editor and publish write mode allow for tabular
-input. Set to n to disable all tab input, set to y to force tab
+input. Set to ``n`` to disable all tab input, set to ``y`` to force tab
 preservation in all publish textareas.
 
 ======== ===========
@@ -232,7 +227,6 @@ Values   Behavior
 
 Example Usage::
 
-
 $config['allow_signatures'] = 'y';
 
 .. rst-class:: cp-path
@@ -255,7 +249,6 @@ Values    Behavior
 ========= ===========
 
 Example Usage::
-
 
 $config['allow_username_change'] = 'y';
 
@@ -291,7 +284,6 @@ Values    Behavior
 
 Example Usage::
 
-
 $config['auto_assign_cat_parents'] = 'y';
 
 .. rst-class:: cp-path
@@ -314,7 +306,6 @@ Values    Behavior
 
 Example Usage::
 
-
 $config['avatar_max_height'] = '120';
 
 .. rst-class:: cp-path
@@ -335,7 +326,6 @@ Values    Behavior
 ========= ===========
 
 Example Usage::
-
 
 $config['avatar_max_kb'] = '60';
 
@@ -358,7 +348,6 @@ Values    Behavior
 
 Example Usage::
 
-
 $config['avatar_max_width'] = '120';
 
 .. rst-class:: cp-path
@@ -378,7 +367,6 @@ Values    Behavior
 ========= ===========
 
 Example Usage::
-
 
 $config['avatar_path'] = '/path/images/avatars/';
 
@@ -448,7 +436,6 @@ Values    Behavior
 
 Example Usage::
 
-
 $config['ban_destination'] = 'http://www.example.com';
 
 .. rst-class:: cp-path
@@ -472,7 +459,6 @@ Values    Behavior
 ========= ===========
 
 Example Usage::
-
 
 $config['ban_message'] = 'This site is currently unavailable';
 
@@ -501,7 +487,6 @@ Values    Behavior
 
 Example Usage::
 
-
 $config['banish_masked_ips'] = 'y';
 
 .. rst-class:: cp-path
@@ -524,7 +509,6 @@ Values    Behavior
 ========= ===========
 
 Example Usage::
-
 
 $config['banishment_message'] = 'You have exceeded the allowed page load frequency.';
 
@@ -550,9 +534,7 @@ Values        Behavior
 ``message``   Show the user a custom message
 ============= ===========
 
-
 Example Usage::
-
 
 $config['banishment_type'] = 'message';
 
@@ -573,9 +555,7 @@ Values    Behavior
 ``URL``   The URL to redirect to
 ========= ===========
 
-
 Example Usage::
-
 
 $config['banishment_url'] = 'http://www.example.com';
 
@@ -590,7 +570,7 @@ banned_emails
 The :ref:`Banned Email Addresses <member-banned-email-label>` allows you
 specify any email addresses you wish to ban. You may specify full email
 addresses or use wildcards to specify partial email addresses. For
-example, _*@example.com. Each address should be placed on a separate
+example, ``_*@example.com``. Each address should be placed on a separate
 line.
 
 ========= ===========
@@ -599,9 +579,7 @@ Values    Behavior
 ``email`` Email addresses or wildcard domain
 ========= ===========
 
-
 Example Usage::
-
 
 $config['banned_emails'] = 'user@example.com';
 
@@ -624,9 +602,7 @@ Values Behavior
 ``IP`` IP address
 ====== ========
 
-
 Example Usage::
-
 
 $config['banned_ips'] = '123.321.*';
 
@@ -648,9 +624,7 @@ Values           Behavior
 ``screen name``  Screen name or list of screen names to be restricted
 ================ ===========
 
-
 Example Usage::
-
 
 $config['banned_ips'] = 'garfield';
 
@@ -671,9 +645,7 @@ Values       Behavior
 ``username`` Username or list of usernames to be restricted
 ============ ========
 
-
 Example Usage::
-
 
 $config['banned_ips'] = 'dsmith';
 
@@ -734,9 +706,7 @@ Values Behavior
 ``n``  Disables use of TrueType fonts
 ====== ========
 
-
 Example Usage::
-
 
 $config['captcha_font'] = 'n';
 
@@ -756,9 +726,7 @@ Values   Behavior
 ``path`` Relative server path to CAPTCHA folder
 ======== ========
 
-
 Example Usage::
-
 
 $config['captcha_path'] = '/var/www/html/example/images/captchas';
 
@@ -780,9 +748,7 @@ Values Behavior
 ``n``  Do not add a random number to CAPTCHA word
 ====== ========
 
-
 Example Usage::
-
 
 $config['captcha_rand'] = 'n';
 
@@ -805,9 +771,7 @@ Values Behavior
 ``n``  Default value, does not require a logged-in member to enter a CAPTCHA word
 ====== ========
 
-
 Example Usage::
-
 
 $config['captcha_require_members'] = 'y';
 
@@ -827,9 +791,7 @@ Values   Behavior
 ``URL``  Full URL to the CAPTCHA folder
 ======== ========
 
-
 Example Usage::
-
 
 $config['captcha_url'] = 'http://www.example.com/images/captchas';
 
@@ -855,9 +817,7 @@ Values   Behavior
 ``word`` Word to be used as a replacement for censored words
 ======== ========
 
-
 Example Usage::
-
 
 $config['censor_replacement'] = 'censored';
 
@@ -873,7 +833,7 @@ You may list the words that you would like to :ref:`censor
 <censor-words-label>`. Wild cards are allowed by adding a _* to the
 beginning or end of a censored word. So, for example the wildcard test*
 would censor the words test, testing, and tester, while the wildcard
-_*gress would censor the words progress and congress.
+``_*gress`` would censor the words progress and congress.
 
 ======== ========
 Values   Behavior
@@ -881,9 +841,7 @@ Values   Behavior
 ``word`` Word to be censored
 ======== ========
 
-
 Example Usage::
-
 
 $config['censored_words'] = 'blanket';
 
@@ -904,9 +862,7 @@ Values       Behavior
 ``charset``  character set to be used
 ============ ========
 
-
 Example Usage::
-
 
 $config['charset'] = 'UTF-8';
 
@@ -924,9 +880,7 @@ Values     Behavior
 ``number`` Length of time (in seconds)
 ========== ========
 
-
 Example Usage::
-
 
 $config['comment_edit_time_limit'] = '120';
 
@@ -952,7 +906,6 @@ Values Behavior
 ====== ========
 
 Example Usage::
-
 
 $config['comment_moderation_override'] = 'y';
 
@@ -1031,7 +984,7 @@ set your cookie domain.
 ========= ========
 Values    Behavior
 ========= ========
-``text``  Sets .yourdomain.com for site-wide cookies
+``text``  Sets domain for site-wide cookies
 ========= ========
 
 Example Usage::
@@ -4174,7 +4127,6 @@ Values Behavior
 ``s``  Sets the User Session to use Session ID only
 ``cs`` Sets the User Session to use Cookies and Session ID
 ====== ========
-
 
 Example Usage::
 
