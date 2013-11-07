@@ -3,8 +3,8 @@ System Configuration Overrides
 
 By default, ExpressionEngine's system settings are managed in the
 Control Panel and stored in the database, but these settings can be
-overridden with one of ExpressionEngine's 3 configuration files: the
-site index file, the CP index file, and the main configuration file.
+overridden with one of 3 configuration files: the site index file, the
+CP index file, and the main configuration file.
 
 The **site index file** is the ``index.php`` file found in the web root
 of the ExpressionEngine installation. This file acts like the gateway to
@@ -12,7 +12,7 @@ the front-end of the site. Since all web requests for a site's front-end
 pass through the site index file, there are a *limited set* of
 configuration overrides you can include in this file to alter
 ExpressionEngine's configuration. Keep in mind that any overrides set in
-the site index file *only* affect the system's behavior for front-end
+the site index file only affect the system's behavior for front-end
 pages. (Even if you have :doc:`removed index.php from your site's
 URLs</urls/remove_index.php>`, all front-end web requests are still
 handled by the site index file.)
@@ -21,8 +21,8 @@ The **CP index file** is the ``admin.php`` file also found in the
 installation's web root. The CP index file is similar to the site index
 file except that it acts as the gateway for all web requests to the
 Control Panel. And similarly, any overrides set in the CP index file
-*only* affect the system's behavior for CP pages accessed through that
-particular CP index file (e.g. *http://example.com/admin.php*).
+only affect the system's behavior for CP pages accessed through that
+particular CP index file (e.g. ``http://example.com/admin.php``).
 
 The **main configuration file**, found at
 ``system/expressionengine/config/config.php``, is loaded every time the
