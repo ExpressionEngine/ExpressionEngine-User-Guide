@@ -783,9 +783,9 @@ In addition, the following parameters may be used:
 field
 +++++
 
-There can be multiple relationship fields in a field group, thus child entries 
-may be related to the same parent via different fields.  Use the ``field`` 
-parameter to specify which field in the parent entry we should be pulling the 
+There can be multiple relationship fields in a field group, thus child entries
+may be related to the same parent via different fields.  Use the ``field``
+parameter to specify which field in the parent entry we should be pulling the
 siblings from. The syntax is::
 
     {siblings field="relationship_field"}
@@ -869,9 +869,9 @@ In addition, the following parameters may be used:
 field
 +++++
 
-There can be multiple relationship fields in a field group, and thus an entry 
-may be selected as a child in multiple fields. Use the ``field`` parameter to 
-specify which field in the parent entry we should be checking for our child. 
+There can be multiple relationship fields in a field group, and thus an entry
+may be selected as a child in multiple fields. Use the ``field`` parameter to
+specify which field in the parent entry we should be checking for our child.
 The syntax is::
 
     {parents field="relationship_field"}
