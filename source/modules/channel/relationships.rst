@@ -688,20 +688,20 @@ parameters are:
 
 * author_id
 * backspace
+* category
 * channel
 * entry_id
 * group_id
 * offset
 * orderby
 * show_expired
+* show_future_entries
 * sort
 * start_on
 * status
 * stop_before
 * url_title
 * username
-
-
 
 
 Accessing Siblings
@@ -761,41 +761,34 @@ further filter or sort the entries being retrieved.  They function the same
 as they do when used on the ``{exp:channel:entries}`` tag.  The available
 parameters are:
 
+* author_id
 * backspace
+* category
+* channel
+* entry_id
+* group_id
 * offset
 * orderby
+* show_expired
+* show_future_entries
 * sort
-* entry_id
-* author_id
-* channel
-* group_id
+* start_on
+* status
+* stop_before
 * url_title
 * username
-* status
 
 In addition, the following parameters may be used:
 
-field -- Required
-+++++++++++++++++
+field
++++++
 
-This is a required parameters. Use the ``field`` parameter to specify which
-field in the parent entry we should be pulling the siblings from. The syntax
-is::
+There can be multiple relationship fields in a field group, thus child entries 
+may be related to the same parent via different fields.  Use the ``field`` 
+parameter to specify which field in the parent entry we should be pulling the 
+siblings from. The syntax is::
 
     {siblings field="relationship_field"}
-
-
-channel
-+++++++
-
-Since an entry can have multiple parent entries, we may need to specify which
-channel should be considered the parent when pulling an entry's siblings.  To
-this, use the channel parameter::
-
-    {siblings channel="parentChannel" field="relationship_field"}
-
-This will declare that we are looking for siblings of the current entry using
-``ParentChannel`` as the parent.
 
 
 Accessing Parents
@@ -854,40 +847,35 @@ further filter or sort the entries being retrieved.  They function the same
 as they do when used on the ``{exp:channel:entries}`` tag.  The available
 parameters are:
 
+* author_id
 * backspace
+* category
+* channel
+* entry_id
+* group_id
 * offset
 * orderby
+* show_expired
+* show_future_entries
 * sort
-* entry_id
-* author_id
-* channel
-* group_id
+* start_on
+* status
+* stop_before
 * url_title
 * username
-* status
 
 In addition, the following parameters may be used:
 
-field -- Required
-+++++++++++++++++
+field
++++++
 
-This is a required parameter. Use the ``field`` parameter to specify which
-field in the parent entry we should be checking for our child. The syntax is::
+There can be multiple relationship fields in a field group, and thus an entry 
+may be selected as a child in multiple fields. Use the ``field`` parameter to 
+specify which field in the parent entry we should be checking for our child. 
+The syntax is::
 
     {parents field="relationship_field"}
 
-
-channel
-+++++++
-
-Since an entry can have multiple parent entries in multiple channels,
-potentially with the same field, we may need to specify which channel we want
-to examine for parents. To this, use the channel parameter::
-
-    {parents channel="parentChannel" field="relationship_field"}
-
-This lets us declare which channel we want to look for parent entries in.  Only
-that channel will be examined.
 
 Grid Compatibility
 ------------------
