@@ -601,6 +601,39 @@ Tag Reference
    :local:
    :depth: 1
 
+
+Tag Parameters
+==============
+.. contents::
+   :local:
+   :depth: 2
+
+The following parameters are available to all looping relationship tags, allowing
+you order to further filter or sort the entries being retrieved.  They function
+the same as they do when used on the ``{exp:channel:entries}`` tag.  The available
+parameters are:
+
+* author_id
+* backspace
+* category
+* channel
+* entry_id
+* group_id
+* offset
+* orderby
+* show_expired
+* show_future_entries
+* sort
+* start_on
+* status
+* stop_before
+* url_title
+* username
+
+Some relationship tags may have additional parameters available.  These are
+included in the usage instructions below.
+
+
 Accessing Children
 ==================
 .. contents::
@@ -678,31 +711,6 @@ You would access the child entry in your template using the following syntax::
 
 No looping occurs.
 
-Parameters
-----------
-
-The following parameters are available on any looping child tag in order to
-further filter or sort the entries being retrieved.  They function the same
-as they do when used on the ``{exp:channel:entries}`` tag.  The available
-parameters are:
-
-* author_id
-* backspace
-* category
-* channel
-* entry_id
-* group_id
-* offset
-* orderby
-* show_expired
-* show_future_entries
-* sort
-* start_on
-* status
-* stop_before
-* url_title
-* username
-
 
 Accessing Siblings
 ==================
@@ -756,29 +764,8 @@ Parameters
    :local:
    :depth: 1
 
-The following parameters are available on the ``{siblings}`` tag in order to
-further filter or sort the entries being retrieved.  They function the same
-as they do when used on the ``{exp:channel:entries}`` tag.  The available
-parameters are:
-
-* author_id
-* backspace
-* category
-* channel
-* entry_id
-* group_id
-* offset
-* orderby
-* show_expired
-* show_future_entries
-* sort
-* start_on
-* status
-* stop_before
-* url_title
-* username
-
-In addition, the following parameters may be used:
+In addition to the standard parameters, the following parameter may be used in
+this tag:
 
 field
 +++++
@@ -842,29 +829,8 @@ Parameters
    :local:
    :depth: 1
 
-The following parameters are available on the ``{parents}`` tag in order to
-further filter or sort the entries being retrieved.  They function the same
-as they do when used on the ``{exp:channel:entries}`` tag.  The available
-parameters are:
-
-* author_id
-* backspace
-* category
-* channel
-* entry_id
-* group_id
-* offset
-* orderby
-* show_expired
-* show_future_entries
-* sort
-* start_on
-* status
-* stop_before
-* url_title
-* username
-
-In addition, the following parameters may be used:
+In addition to the standard parameters, the following parameter may be used in
+this tag:
 
 field
 +++++
