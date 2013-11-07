@@ -843,6 +843,36 @@ The syntax is::
     {parents field="relationship_field"}
 
 
+Namespacing Variables
+=====================
+.. contents::
+   :local:
+   :depth: 2
+
+Any variable available to the channel entries tag can be used inside a
+relationship tag pair.  Use prefixes to specify which entry or set of entries
+the variable belongs to::
+
+	{exp:channel:entries channel="childChannel"}
+
+		{parents}
+
+			{if parents:count == "1"}
+				<h3>Parents</h3>
+			{/if}
+
+			{parents:title} - {parents:field1} - {parents:field2}
+
+			{if parents:no_results}
+				No parent entries
+			{/if}
+
+		{/parents}
+
+	{/exp:channel:entries}
+
+
+
 Grid Compatibility
 ------------------
 
