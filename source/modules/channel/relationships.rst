@@ -856,6 +856,8 @@ the variable belongs to::
 				No parent entries
 			{/if}
 
+			{parents:switch="one|two"}
+
 		{/parents}
 
 	{/exp:channel:entries}
