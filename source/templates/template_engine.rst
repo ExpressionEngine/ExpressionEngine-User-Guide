@@ -79,6 +79,8 @@ bottom through each rendering stage.
 
 #. Parse :ref:`advanced conditionals <global_advanced_conditionals>`
 
+#. Process :doc:`template layouts </templates/layouts>`
+
 #. Process :doc:`embedded templates </templates/embedding>`
 
 #. Process :ref:`redirect variable <global_redirect>`
