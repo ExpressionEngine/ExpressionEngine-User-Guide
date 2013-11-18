@@ -177,7 +177,7 @@ template is currently showing::
 
     {if total_results == "1"}
       {body}
-      {layout:set name="title"}News | {title}{/layout:set}
+      {layout:set name="title" value="News | {title}"}
     {if:else}
       {summary}
     {/if}
@@ -299,7 +299,7 @@ change the sidebar to show an article list in addition to the search::
   {layout="news/.layout"}
 
   {exp:channel:entries channel="news" require_entry="yes"}
-    {layout:set name="title"}{title}{/layout:set}
+    {layout:set name="title" value="{title}"}
 
     <h1>{title}<h1>
     {body}
