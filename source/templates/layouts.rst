@@ -83,9 +83,9 @@ of two embeds::
     {summary}
   {/exp:channel:entries}
 
-Notice that the layout is a hidden template. This lets you prevent
-access to the layout template, which is most likely not useful to your
-users on its own.
+Notice that the layout is a :doc:`hidden template <./hidden_templates>`.
+This lets you prevent direct access to the layout template, which is
+most likely not useful to your users on its own.
 
 Layout Variables
 ----------------
@@ -162,12 +162,13 @@ window's title::
     </body>
   </html>
 
-By using a conditional we have made the title parameter optional. If the
-parameter is not given, or is blank, the title will simply be "Site
-Name". Any template using this layout can choose to add to the output of
-the title tag using the parameter. You can even take it a step further.
-After setting a default section title in the parameter you can override
-it dynamically based on what your template is currently showing::
+By using a :doc:`conditional <./globals/conditionals>` we have made the
+title parameter optional. If the parameter is not given, or is blank,
+the title will simply be "Site Name". Any template using this layout can
+choose to add to the output of the title tag using the parameter. You
+can even take it a step further. After setting a default section title
+in the parameter you can override it dynamically based on what your
+template is currently showing::
 
   {layout="site/.html-layout" title="News"}
 
@@ -185,8 +186,9 @@ it dynamically based on what your template is currently showing::
 Your title for this template will now show "Site Name | News" unless a
 single news entry is being displayed, in which case it will show a more
 user friendly title of "Site Name | News | Article Title". Unlike header
-and footer embeds, this can all be done using a single channel entries
-loop which will improve the overall performance of this template.
+and footer embeds, this can all be done using a single :doc:`Channel
+Entries <../modules/channel/channel_entries>` loop which will improve
+the overall :doc:`performance <../optimization/index>` of this template.
 
 Nesting and Embeds
 ------------------
@@ -196,7 +198,7 @@ Nested Layouts
 
 Each template on your site can only specify a single layout. However,
 each layout can also use a layout, thus progressively nesting your
-template. For more complex sites this allows you to have a single html
+template. For more complex sites this allows you to have a single HTML
 wrapper and still take advantage of layouts to build out the different
 sections of your site.
 
@@ -211,13 +213,13 @@ make your site more maintainable and it will help you spot performance
 bottlenecks more quickly.
 
 It is important to understand how layouts and embeds can affect each
-other. Layouts are processed before embeds, so that setting a layout
-variable inside an embed cannot affect the layout of the embedding
-template. If an embed is using a layout, then the embed will be wrapped
-by that layout before being placed in the embedding template. Setting a
-layout variable inside the embed will be usable by the embed's layout
-and that layout will have full access to the variables passed to the
-embed.
+other. Layouts are :doc:`processed before embeds
+<./template_engine>`, so that setting a layout variable inside an embed
+cannot affect the layout of the embedding template. If an embed is using
+a layout, then the embed will be wrapped by that layout before being
+placed in the embedding template. Setting a layout variable inside the
+embed will be usable by the embed's layout and that layout will have
+full access to the variables passed to the embed.
 
 +-----------------------+----------------------+----------------------------+-----------------------------+
 |                       | Read Embed Variables | Set Embed Layout Variables | Set Parent Layout Variables |
@@ -239,7 +241,7 @@ multiple dynamic sections. This example will add a sidebar and footer to
 the news example above.
 
 We will keep the existing "site/.html-layout" from before, with a small
-addition to allow for additional javascript and css to be set from the
+addition to allow for additional JavaScript and CSS to be set from the
 template::
 
   <html>
@@ -316,7 +318,8 @@ code in a layout, "news/.sidebar-layout"::
     {layout:contents}
   </div>
 
-Now we can create "news/.embed-search"::
+Now we can create "news/.embed-search" using the :doc:`Simple Search
+Form <../modules/search/simple>` tag::
 
   {layout="news/.sidebar-layout" header="Search"}
 
