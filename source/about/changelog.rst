@@ -71,6 +71,9 @@ Release Date: October 8, 2013
 
 - Developers:
 
+  - Made ``grid_row_id`` available for access via the ``$settings``
+    class property for Grid fieldtypes when calling ``replace_tag()``
+    and ``pre_process()``.
   - Fixed a bug (#19427) where objects could not be passed through to
     views.
   - Fixed a bug where the Grid field would send the wrong row ID to
