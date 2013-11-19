@@ -41,6 +41,7 @@ Development
 
 - Using ExpressionEngine Classes
 
+  - :doc:`Cache Class </development/usage/cache>`
   - :doc:`CP Class </development/usage/cp>`
   - :doc:`Database Class </development/usage/database>`
   - :doc:`Email Class </development/usage/email>`
