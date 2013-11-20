@@ -10,8 +10,8 @@ Introduction
 ------------
 
 ExpressionEngine's Cache Class gives developers easy ways to cache data.
-The Cache Class provides access to a key-value store in which the
-storage driver can be file-based, APC, Memcached or Redis.
+The Cache Class provides access to a key-value store. The storage driver
+can either file-based or memory-based.
 
 Unlike the :ref:`Session Cache <session_cache>`, items stored using the
 Cache class can persist across multiple page loads because cache items
@@ -38,12 +38,12 @@ using that driver, the Cache Class will attempt to make a key name
 unique to the particular site making the call.
 
 For example, if you save an item to the cache with a key name of
-``query``, it will be prefixed with the site's URL and appear as
+``query``, it will be prefixed with the site's URL and save as
 ``http://example.com:query``.
 
 The Cache Class also offers the ability to namespace cache items, either
-for organizational purposes or to prevent possibly collisions with
-other keys. For example, if we're developing an module, "My Module"
+for organizational purposes or to prevent possible collisions with
+other keys. For example, if we're developing a module, "My Module"
 perhaps, we may want to namespace our key names to my module if they are
 a little generic. Our previous ``query`` key would now be saved as
 ``http://example.com:mymodule:query``
@@ -112,7 +112,7 @@ Class Methods
   :returns: Success (TRUE) or failure (FALSE)
   :rtype: Boolean
 
-.. method:: clean($namespace)
+.. method:: clean()
 
   Flushes the cache for the entire site completely::
 
