@@ -667,6 +667,35 @@ $config['base_url'] = 'http://www.example.com';
 Configuration`: URL to the root directory of your site
 
 
+cache_driver
+------------
+Specify a different caching driver (link) to use.
+
+============= ========
+Values        Behavior
+============= ========
+``file``      Default value: file driver, path configured with `cache_path`_ config
+``apc``       APC driver
+``memcached`` Memcached driver, configured with `memcached`_ config
+``redis``     Redis driver, configured with `redis`_ config
+============= ========
+
+Example Usage::
+
+$config['cache_driver'] = 'memcached';
+
+
+cache_driver_backup
+-------------------
+Specify a backup caching driver (link) to use in case the one specified
+in `cache_driver`_ isn't available. Same values accepted as
+`cache_driver`_.
+
+Example Usage::
+
+$config['cache_driver'] = 'memcached';
+
+
 cache_path
 ----------
 Leave this BLANK unless you would like to set something other than the
@@ -2464,6 +2493,27 @@ $config['mbr_notification_emails'] = 'joe@example.com';
 Email address for notifications
 
 
+memcached
+---------
+If Memcached is the specified `cache_driver`_, allows configuration of
+multiple Memcached servers to be used for cache storage.
+
+Example Usage::
+
+  $config['memcached'] = array(
+    array(
+      'host' => '192.168.1.100',
+      'port' => 11211,
+      'weight' => 2,
+    ),
+    array(
+      'host' => '192.168.1.101',
+      'port' => 11211,
+      'weight' => 1,
+    )
+  );
+
+
 member_theme
 ------------
 The :ref:`Default Member Profile Theme <member-default-theme-label>` to
@@ -3073,6 +3123,21 @@ $config['redirect_submitted_links'] = 'y';
 **Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: Apply Rank Denial to User-submitted
 Links
+
+
+redis
+-----
+If Redis is the specified `cache_driver`_, allows configuration of
+a Redis server to be used for cache storage.
+
+Example Usage::
+
+  $config['redis'] = array(
+    'host' => '127.0.0.1',
+    'password' => NULL,
+    'port' => 6379,
+    'timeout' => 0
+  );
 
 
 relaxed_track_views
