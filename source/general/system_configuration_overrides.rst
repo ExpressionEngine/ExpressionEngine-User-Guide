@@ -678,6 +678,7 @@ Values        Behavior
 ``apc``       APC driver
 ``memcached`` Memcached driver, configured with `memcached`_ config
 ``redis``     Redis driver, configured with `redis`_ config
+``dummy``     Dummy driver, will not cache
 ============= ========
 
 Example Usage::
