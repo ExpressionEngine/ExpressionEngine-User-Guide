@@ -57,7 +57,7 @@ appropriately tailor the output processing.
 
 -  **Webpage**: This is the most common type of Template. Unless you
    specifically need one of the other two types you should use this one.
--  **CSS Stylesheet**: This type is used for Stylesheets. It tells
+-  **CSS**: This type is used for Stylesheets. It tells
    ExpressionEngine to send "text/css" MIME type server headers. 
 
    .. note:: CSS types are not processed using the main template parser
