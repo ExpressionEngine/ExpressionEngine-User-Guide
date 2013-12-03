@@ -18,11 +18,11 @@ used since its main function is to retrieve and display your site's content.
 The Channel Entries tag can display both multi-entry and single-entry content -
 that is, several entries on a page, or one specific entry. By default, Channel
 Entries will use :ref:`information in the URL <entries-and-other-things>` 
-to retrieve the right content. By using available paramters and variables,
-Channel Entries can display contnet from categories, specific days, monthly 
+to retrieve the right content. By using available parameters and variables,
+Channel Entries can display content from categories, specific days, monthly 
 archives, and more.
 
-Let's look at a basic Chanel Entries tag example:
+Let's look at a basic Channel Entries tag example:
 
 ::
 
@@ -64,12 +64,12 @@ Modify the parameter value using ``not`` to exclude Member IDs::
 	author_id="not 1|2|3"
 
 Use the ``CURRENT_USER`` constant to limit entries to the
-currently logged in user::
+currently logged-in user::
 
     author_id="CURRENT_USER"
 
 .. note:: ``CURRENT_USER`` will limit Channel Entries to return entries authored
-	by the currently logged in user. Users who are not logged in will not see any
+	by the currently logged-in user. Users who are not logged-in will not see any
 	output.
 
 Use the ``NOT_CURRENT_USER`` constant to limit entries **excluding** the currently
