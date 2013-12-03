@@ -218,8 +218,8 @@ username=
 
   username="petunia"
 
-This parameter limits the query by username. You can use the pipe character to
-query by multiple usernames::
+This parameter limits the query by username. You can use the pipe
+character to query by multiple usernames::
 
   username="tom|dick|harry"
 
@@ -227,8 +227,8 @@ Or you can add "not" to exclude usernames::
 
   username="not tom|dick|harry|fred"
 
-You can also use the constant "CURRENT\_USER" to show entries from only the
-currently logged in user::
+You can also use the constant "CURRENT\_USER" to show entries from only
+the currently logged in user::
 
   username="CURRENT_USER"
 
@@ -294,12 +294,13 @@ consider the following ReST:
 
     .. php:method:: some_method ( $foo [, $bar [, $bat]])
 
-      This function will perform some action. The ``$bar`` array must contain
-      a something and something else, and along with ``$bat`` is an optional
-      parameter.
+      This function will perform some action. The ``$bar`` array must
+      contain a something and something else, and along with ``$bat`` is
+      an optional parameter.
 
       :param int $foo: the foo id to do something in
-      :param mixed $bar: A data array that must contain aa something and something else
+      :param mixed $bar: A data array that must contain aa something and
+          something else
       :param bool $bat: whether or not to do something
       :returns: FALSE on failure, TRUE if successful
       :rtype: Boolean
@@ -324,8 +325,8 @@ consider the following ReST:
 
       See also :php:meth:`Some_class::should_do_something`
 
-      .. note:: Here is something that you should be aware of when using some_method().
-          For real.
+      .. note:: Here is something that you should be aware of when using
+        some_method(). For real.
 
   should_do_something()
   =====================
@@ -345,12 +346,13 @@ some_method()
 
   .. php:method:: some_method ( $foo [, $bar [, $bat]])
 
-    This function will perform some action. The ``$bar`` array must contain
-    a something and something else, and along with ``$bat`` is an optional
-    parameter.
+    This function will perform some action. The ``$bar`` array must
+    contain a something and something else, and along with ``$bat`` is
+    an optional parameter.
 
     :param int $foo: the foo id to do something in
-    :param mixed $bar: A data array that must contain aa something and something else
+    :param mixed $bar: A data array that must contain aa something and
+        something else
     :param bool $bat: whether or not to do something
     :returns: FALSE on failure, TRUE if successful
     :rtype: Boolean
