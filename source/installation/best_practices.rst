@@ -8,6 +8,8 @@ recommend that the system folder either be renamed or moved entirely
 above the public site folder (commonly named public\_html or referred to
 as simply "webroot") and that admin.php be renamed as well.
 
+.. _rename-system-directory:
+
 Renaming the System Directory
 -----------------------------
 
