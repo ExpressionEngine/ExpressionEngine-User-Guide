@@ -52,17 +52,24 @@ Then add the following code to this newly created .htaccess file::
 Exceptions
 ^^^^^^^^^^
 
+-  If your site's system directory (:file:`/system/`) :doc:`has been
+   renamed </installation/best_practices>` and is still accessible by
+   URL, modify the RewriteCond line above::
+
+    RewriteCond %{REQUEST_URI} !/newdirectoryname/.* [NC]
+
 -  If you are running EE from a sub-directory rather from the root of
-   your domain (e.g. http://example.com/myeesite/ instead of
-   http://example.com/), just remove the slash    preceeding index.php
-   in the RewriteRule line above, like so::
+   your domain (e.g. ``http://example.com/myeesite/`` instead of
+   ``http://example.com/``), just remove the slash preceding
+   :file:`index.php` in the RewriteRule line above, like so::
 
     RewriteRule ^(.*)$ index.php/$1 [L]
 
 -  If your host requires forcing query strings, try adding a question
-   mark following index.php in the RewriteRule line above, like so::
+   mark following :file:`index.php` in the RewriteRule line above, like
+   so::
 
-	RewriteRule ^(.*)$ /index.php?/$1 [L]
+	  RewriteRule ^(.*)$ /index.php?/$1 [L]
 
 2. Update General Configuration
 -------------------------------
