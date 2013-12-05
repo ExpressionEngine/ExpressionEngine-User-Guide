@@ -40,7 +40,7 @@ Then add the following code to this newly created .htaccess file::
 
 		# Removes index.php from ExpressionEngine URLs
 		RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
-		RewriteCond %{THE_REQUEST} !/system/.*
+		RewriteCond %{REQUEST_URI} !/system/.* [NC]
 		RewriteRule (.*?)index\.php/*(.*) /$1$2 [R=301,L]
 
 		# Directs all EE web requests through the site index file
