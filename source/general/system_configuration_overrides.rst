@@ -1220,28 +1220,28 @@ Default Member Group Assigned to New Members
 
 default_site_timezone
 ---------------------
-The :ref:`Server Time Zone <default-member-group-label>` lets you
-specify the time zone where your server is located. ExpressionEngine
+The :ref:`Site Timezone <sysadmin-site-timezone-label>` lets you
+specify the timezone where your server is located. ExpressionEngine
 uses native PHP functions to deal with dates and times, which base their
 output on the timezone of the server. If you do not set this preference
 so that it correctly reflects the location of your server it may cause
 problems with your dates and times. If you are not sure where you server
 is located please ask your hosting provider.
 
-========== ========
-Values     Behavior
-========== ========
-``NEED``   NEED
-========== ========
+============ ========
+Values       Behavior
+============ ========
+``timezone`` A valid `timezone supported by PHP <http://php.net/manual/en/timezones.php>`__
+============ ========
 
 Example Usage::
 
-$config['default_site_timezone'] = '';
+$config['default_site_timezone'] = 'America/Los_Angeles';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Localization
-Settings`: Server Timezone
+Settings`: Site Timezone
 
 
 deny_duplicate_data
