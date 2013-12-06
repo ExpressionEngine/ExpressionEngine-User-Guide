@@ -22,7 +22,13 @@ pages. (Even if you have :doc:`removed index.php from your site's
 URLs</urls/remove_index.php>`, all front-end web requests are still
 handled by the site index file.)
 
-.. note:: Overrides available for use in the site index file are limited to :ref:`cp_url <overrides-cp-url>`, :ref:`newrelic_app_name <overrides-newrelic-app-name>`, :ref:`site_404 <overrides-site-404>`, :ref:`site_index <overrides-site-index>`, :ref:`site_name <overrides-site-name>`, :ref:`site_url <overrides-site-url>`, :ref:`template <overrides-template>`, and :ref:`template_group <overrides-template-group>`.
+.. note:: Overrides available for use in the site index file are limited
+    to :ref:`cp_url <overrides-cp-url>`, :ref:`newrelic_app_name
+    <overrides-newrelic-app-name>`, :ref:`site_404
+    <overrides-site-404>`, :ref:`site_index <overrides-site-index>`,
+    :ref:`site_name <overrides-site-name>`, :ref:`site_url
+    <overrides-site-url>`, :ref:`template <overrides-template>`, and
+    :ref:`template_group <overrides-template-group>`.
 
 The **CP index file** is the :file:`admin.php` file also found in the
 installation's web root. The CP index file is similar to the site index
@@ -31,15 +37,22 @@ Control Panel. And similarly, any overrides set in the CP index file
 only affect the system's behavior for CP pages accessed through that
 particular CP index file (e.g. ``http://example.com/admin.php``).
 
-.. note:: Overrides available for use in the CP index file are limited to :ref:`cp_url <overrides-cp-url>`, :ref:`newrelic_app_name <overrides-newrelic-app-name>`, and :ref:`site_name <overrides-site-name>`.
+.. note:: Overrides available for use in the CP index file are limited
+    to :ref:`cp_url <overrides-cp-url>`, :ref:`newrelic_app_name
+    <overrides-newrelic-app-name>`, and :ref:`site_name
+    <overrides-site-name>`.
 
-Every time ExpressionEngine runs, settings are loaded in this order:
+ExpressionEngine's settings are loaded in this order at runtime:
 
 #. Settings stored in the database are loaded.
-#. Settings in :file:`config.php` are loaded and override settings loaded
-   from the database.
-#. If a front-end page is being served, a limited array of settings in :file:`index.php` are loaded and override any settings loaded from the database and the main configuration file.
-#. If a CP page is being served, a limited array of settings in :file:`admin.php` are loaded and override any settings loaded from the database and the main configuration file.
+#. Settings in :file:`config.php` are loaded and override settings
+   loaded from the database.
+#. If a front-end page is being served, a limited array of settings in
+   :file:`index.php` are loaded and override any settings loaded from
+   the database and the main configuration file.
+#. If a CP page is being served, a limited array of settings in
+   :file:`admin.php` are loaded and override any settings loaded from
+   the database and the main configuration file.
 
 
 Configuration Variables
@@ -1721,7 +1734,8 @@ Privacy --> Tracking Preferences`: Enable Template Hit Tracking
 enable_hooks
 ------------
 If you would like to use the "hooks" feature you must enable it by
-setting this variable to TRUE (boolean).  See the user guide for details.
+setting this variable to TRUE (boolean).  See the user guide for
+details.
 
 ========== ========
 Values     Behavior
@@ -3451,14 +3465,15 @@ server_offset
 -------------
 When a server's clock is off and you are unable to correct it at the
 server level, use this preference to correct the disparity. Use a
+positive integer to correct a server clock that is too slow, and a
 negative integer to correct a server clock that is too fast.
 
-.. warning:: It's important to note that this preference permanently
-    changes the value of timestamps as they are being written to the
-    database. Changing this setting later on will not undo the offset
-    already applied to existing timestamps. Rather than using this
-    setting, we strongly urge you to work with your web host or sysadmin
-    to correct the inaccurate server clock.
+.. warning:: This preference permanently changes the value of timestamps
+    as they are being written to the database. Changing this setting
+    later on will not undo the offset already applied to existing
+    timestamps. Rather than using this setting, we strongly urge you to
+    work with your web host or sysadmin to correct the inaccurate server
+    clock. In almost all cases, that's the best solution.
 
 =========== ========
 Values      Behavior
@@ -3980,7 +3995,11 @@ Administration --> Output and Debugging`: Display Template Debugging
 
 template
 --------
-Sets the default template. Must be used with :ref:`template_group <overrides-template-group>`, and the two overrides together set the template group and template shown on the front-end when the site is loaded without anything in the :doc:`URL segments </templates/globals/url_segments>`.
+Sets the default template. Must be used with :ref:`template_group
+<overrides-template-group>`, and the two overrides together set the
+template group and template shown on the front-end when the site is
+loaded without anything in the :doc:`URL segments
+</templates/globals/url_segments>`.
 
 ========== ========
 Values     Behavior
@@ -4007,7 +4026,11 @@ this group your site's home page?
 
 template_group
 --------------
-Sets the default template group. Must be used with :ref:`template <overrides-template>`, and the two overrides together set the template group and template shown on the front-end when the site is loaded without anything in the :doc:`URL segments </templates/globals/url_segments>`.
+Sets the default template group. Must be used with :ref:`template
+<overrides-template>`, and the two overrides together set the template
+group and template shown on the front-end when the site is loaded
+without anything in the :doc:`URL segments
+</templates/globals/url_segments>`.
 
 ========== ========
 Values     Behavior
@@ -4254,7 +4277,6 @@ Privacy --> Security And Sessions`: Website Session Type
 
 word_separator
 --------------
-
 When creating an entry in the PUBLISH page, if you do not manually enter
 a "URL Title" then the system will automatically create one based on the
 entry Title. The :ref:`Word Separator for URL Titles
