@@ -3397,7 +3397,7 @@ Global Template Preferences`: Save Template Revisions
 
 secure_forms
 ------------
-:ref:`Secure Mode <spam-protect-secure-mode-label>` prevents automated
+:ref:`Secure Mode <secure-mode-label>` prevents automated
 scripts (the most common way spam is generated) from repeatedly
 submitting comments or other form data. A submission is only allowed
 when a user manually loads a page and submits the form from your site.

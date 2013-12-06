@@ -69,7 +69,7 @@ the target destination.
 
 The setting is located at: :menuselection:`Admin --> Security and Privacy --> Security and Sessions`
 
-.. _spam-protect-secure-mode-label:
+.. _secure-mode-label:
 
 Secure Mode
 -----------
