@@ -69,6 +69,8 @@ the target destination.
 
 The setting is located at: :menuselection:`Admin --> Security and Privacy --> Security and Sessions`
 
+.. _secure-mode-label:
+
 Secure Mode
 -----------
 
