@@ -9,22 +9,20 @@ This section of the Control Panel allows you to define the **default**
 localization settings for your website.
 
 .. note:: Each member of your site can override these default settings
-   by changing their own :doc:`/cp/my_account/index` settings.
+   by changing their own
+   :doc:`localization settings </cp/my_account/index>`.
 
    .. _sysadmin-site-timezone-label:
 
 Site Timezone
 ~~~~~~~~~~~~~~~~
 
-This setting lets you specify the timezone where your **server** is
-located. ExpressionEngine uses native PHP functions to deal with dates
-and times, which base their output on the timezone of the server. If you
-do not set this preference so that it correctly reflects the location of
-your server it may cause problems with your dates and times. If you are
-not sure where you server is located please ask your hosting provider.
+Specify the default timezone for your site. All dates and times
+displayed by ExpressionEngine will be localized to this timezone unless
+overridden by a member's own localization preferences.
 
 Default Time Formatting
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-You may specify whether you would like the default time formatting to
-follow either the "United States" or "European" conventions.
+Specify whether your site should follow either the "United States" or
+"European" date and time formatting conventions.
