@@ -16,12 +16,11 @@ General Configuration
 Allow New Member Registrations?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This specifies whether your site allows people to sign up for a
-membership account. If set to "No", then new members will not be
-accepted.
+Set whether site visitors are allowed to register for accounts.
 
-Newer versions of ExpressionEngine default (EE 2.1.2 and later) to
-having New Member Registrations off when initially creating the site.
+.. versionchanged:: 2.1.2
+   New member registrations are disabled by default on new
+   installations.
 
 .. _member-account-activation-label:
 
@@ -59,9 +58,10 @@ Profile Templates --> Default --> Registration Form`.
 Allow members to set their own localization preferences?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If set to no all dates and times will be localized to the master site
-default, and the localization preferences will be disabled in the Member
-Profile and My Account pages.
+Set whether dates and times are localized to each members' own
+localization preferences. If set to "No", all dates and times will be
+localized to the site default and localization preferences will be
+disabled in the Member Profile and My Account pages.
 
 Enable Membership Captcha
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -226,12 +226,12 @@ you can optionally display with entries, comments, and forum posts.
 Allow members to upload their own avatars?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Specifies whether members are allowed to upload their own avatar image.
-If this is set to "No" but avatars are enabled, then members will only
-be able to choose from among the default avatars. 
+Set whether members can upload their own avatar. If this is set to "No"
+but avatars are enabled, members will only be able to choose from among
+the default avatars.
 
-.. note:: You can add your own Avatars, located in the avatars folder
-   within the images folder.
+.. note:: As a site admin, you can add your own avatars by uploading
+    them to :file:`/images/avatars/default_set/`.
 
 .. _avatar-url-label:
 
@@ -272,7 +272,7 @@ The maximum height (in pixels) allowed for user-uploaded avatars.
 Avatar Maximum Size (in Kilobytes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The maximum file size allowed for user-uploaded avatars. 
+The maximum file size allowed for user-uploaded avatars.
 
 .. note:: There are 1024 Kilobytes per Megabyte, so if you want to allow
    a 2 MB avatar you'll enter 2048.
@@ -326,7 +326,7 @@ The maximum height (in pixels) allowed for user-uploaded member photos.
 Photo Maximum Size (in Kilobytes)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The maximum file size allowed for user-uploaded member photos. 
+The maximum file size allowed for user-uploaded member photos.
 
 .. note:: There are 1024 Kilobytes per Megabyte, so if you want to allow
    a 2 MB photo you'll enter 2048.

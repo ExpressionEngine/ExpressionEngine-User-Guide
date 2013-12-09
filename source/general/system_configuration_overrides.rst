@@ -64,13 +64,14 @@ Configuration Variables
 
 allow_avatar_uploads
 --------------------
-Allows or disallows :ref:`avatar uploads <avatar-upload-label>`.
+
+Set whether members can upload their own avatar.
 
 ======== ===========
 Values   Behavior
 ======== ===========
-``y``    Yes, allow member to upload their own :ref:`avatar <avatar-upload-label>`
-``n``    No, do not allow member to upload their own avatar.
+``y``    Yes, allow members to upload their own avatar
+``n``    No, do not allow members to upload their own avatar
 ======== ===========
 
 Example Usage::
@@ -80,20 +81,23 @@ $config['allow_avatar_uploads'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Allow members to upload their own avatars
+:ref:`Allow members to upload their own avatars <avatar-upload-label>`
 
+
+.. _allow_dictionary_pw:
 
 allow_dictionary_pw
 -------------------
-:ref:`Allow Dictionary Words as Passwords <dict-passwds-label>` allows
-or disallows members to use passwords that are based on dictionary
-words.
+
+Set whether words commonly found in the dictionary can be used as
+passwords. Must be used in combination with
+:ref:`name_of_dictionary_file <name_of_dictionary_file>`.
 
 ======== ===========
 Values   Behavior
 ======== ===========
-``y``    Yes, allow user to members :ref:`dictionary based passwords <dict-passwds-label>`
-``n``    No, do not allow members to use dictionary based passwords.
+``y``    Yes, allow dictionary words as passwords
+``n``    No, do not allow dictionary words as passwords
 ======== ===========
 
 Example Usage::
@@ -102,39 +106,46 @@ $config['allow_dictionary_pw'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Design --> Security And
-Privacy --> Security And Sessions`: Allow Dictionary Words as Passwords
+**Also found in CP:** :menuselection:`Design --> Security and
+Privacy --> Security and Sessions`:
+:ref:`Allow Dictionary Words as Passwords <dict-passwds-label>`
 
 
 allow_extensions
 ----------------
-Enables or disables extensions in the Control Panel.
+
+Set whether extensions are enabled in the system. Disabling extensions
+will *not* uninstall extensions.
 
 ======== ===========
 Values   Behavior
 ======== ===========
-``y``    Enable Extensions
-``n``    Disable extensions
+``y``    Enable all extensions
+``n``    Disable all extensions
 ======== ===========
 
 Example Usage::
 
 $config['allow_extensions'] = 'y';
 
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Add-Ons --> Extensions`:
+:doc:`Disable Extensions? </cp/add-ons/extension_manager>`
+
 
 allow_member_localization
 -------------------------
-:ref:`Allow members to set their own localization preferences
-<allow-member-localization-label>` allows members to set their own
-localization. If set to "no" all dates and times will be localized to
-the master site default.
+
+Set whether dates and times are localized to each members' own
+localization preferences.
 
 
 ======== ===========
 Values   Behavior
 ======== ===========
-``y``    Allow members to set their own localization
-``n``    Do not allow members to set their own localization
+``y``    Show dates and times localized to each members' preferences
+``n``    Show all dates and times localized to the site default
 ======== ===========
 
 Example Usage::
@@ -144,21 +155,20 @@ $config['allow_member_localization'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences -->
-Security And Sessions`: Allow members to set their own localization
-preferences
-
+Security and Sessions`: :ref:`Allow members to set their own
+localization preferences <allow-member-localization-label>`
 
 
 allow_member_registration
 -------------------------
-Allow or disallow new :ref:`Member Registration
-<allow-member-register-label>` on your ExpressionEngine website.
+
+Set whether site visitors are allowed to register for accounts.
 
 ======== ===========
 Values   Behavior
 ======== ===========
-``y``    Allow members to register
-``n``    Do not allow members to register
+``y``    Allow front-end member registration
+``n``    Do not allow front-end member registration
 ======== ===========
 
 Example Usage::
@@ -168,24 +178,23 @@ $config['allow_member_registration'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Allow New Member Registrations
+:ref:`Allow New Member Registrations <allow-member-register-label>`
 
 
 allow_multi_logins
 ------------------
-:ref:`Allow multiple log-ins from a single account
-<allow-multi-logins-label>` determines whether more than one person can
-simultaneously access the system using the same user account.
+
+Set whether an account can have multiple active sessions at one time.
 
 .. note::
-   If your Session Type above is set to "Cookies Only" this feature will
-   not work.
+
+   This feature is incompatible with the "Cookies Only" session type.
 
 ======== ===========
 Values   Behavior
 ======== ===========
-``y``    Allow members to register
-``n``    Do not allow members to register
+``y``    Allow multiple active sessions per account
+``n``    Do not allow multiple active sessions per account
 ======== ===========
 
 Example Usage::
@@ -194,22 +203,22 @@ $config['allow_multi_logins'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Design --> Security And
-Privacy --> Security And Sessions`: Allow multiple log-ins from a single
-account
+**Also found in CP:** :menuselection:`Design --> Security and
+Privacy --> Security and Sessions`: :ref:`Allow multiple log-ins from a
+single account <allow-multi-logins-label>`
 
 
 allow_textarea_tabs
 -------------------
-If not set the template editor and publish write mode allow for tabular
-input. Set to ``n`` to disable all tab input, set to ``y`` to force tab
-preservation in all publish textareas.
+
+Set whether a tab keystroke produces a tab in Publish Page and Template
+Editor textareas. This is the default behavior.
 
 ======== ===========
 Values   Behavior
 ======== ===========
-``y``    Allow tabs in textareas
-``n``    Do not allow tabs in textareaas
+``y``    Insert tab on tab keystroke in textareas **(default)**
+``n``    Normal browser behavior on tab keystroke in textareas
 ======== ===========
 
 Example Usage::
@@ -258,8 +267,8 @@ $config['allow_username_change'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Design --> Security And
-Privacy --> Security And Sessions`: Allow members to change their
+**Also found in CP:** :menuselection:`Design --> Security and
+Privacy --> Security and Sessions`: Allow members to change their
 username
 
 
@@ -716,7 +725,7 @@ $config['captcha_font'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> CAPTCHA Preferences`: Use TrueType Font for CAPTCHA
 
 
@@ -736,7 +745,7 @@ $config['captcha_path'] = '/var/www/html/example/images/captchas';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> CAPTCHA Preferences`: Server Path to CAPTCHA Folder
 
 
@@ -758,7 +767,7 @@ $config['captcha_rand'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> CAPTCHA Preferences`: Add Random Number to CAPTCHA Word
 
 
@@ -781,7 +790,7 @@ $config['captcha_require_members'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> CAPTCHA Preferences`: Require CAPTCHA with logged-in members
 
 
@@ -801,7 +810,7 @@ $config['captcha_url'] = 'http://www.example.com/images/captchas';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> CAPTCHA Preferences`: Full URL to CAPTCHA Folder
 
 
@@ -827,7 +836,7 @@ $config['censor_replacement'] = 'censored';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Word Censoring`: Censoring Replacement Word
 
 
@@ -851,7 +860,7 @@ $config['censored_words'] = 'blanket';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security And
+**Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Word Censoring`: Censored Words
 
 
@@ -1110,8 +1119,8 @@ Example Usage::
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security And
-Privacy --> Security And Sessions`: Control Panel Session Type
+**Also found in CP:** :menuselection:`Admin --> Security and
+Privacy --> Security and Sessions`: Control Panel Session Type
 
 .. versionchanged:: 2.8
 
@@ -2566,10 +2575,13 @@ $config['memberlist_order_by'] = "total_posts";
 Member List - Sort By
 
 
+.. _name_of_dictionary_file:
+
 name_of_dictionary_file
 -----------------------
 The :ref:`Name of Dictionary File <dict-passwds-file-label>` is the
-filename of the dictionary file used for Dictionary Words as Passwords.
+filename of the dictionary file used for Dictionary Words as Passwords. Must be used in combination with
+:ref:`allow_dictionary_pw <allow_dictionary_pw>`.
 
 =========== ========
 Values      Behavior
@@ -4266,8 +4278,8 @@ Example Usage::
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security And
-Privacy --> Security And Sessions`: Website Session Type
+**Also found in CP:** :menuselection:`Admin --> Security and
+Privacy --> Security and Sessions`: Website Session Type
 
 .. versionchanged:: 2.8
 
