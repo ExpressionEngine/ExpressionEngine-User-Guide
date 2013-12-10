@@ -4,9 +4,10 @@ Forum Update Notes for Version 3.1.14
 Discussion Forum 3.1.14 requires version 2.7.0 or greater of
 ExpressionEngine.
 
-A number of additions have been made to the forum themes. If you have
-**not** customized your existing forum templates:
------------------------------------------------------------------------------------------------------------------------
+A number of additions have been made to the forum themes.
+
+If you have **not** customized your existing forum templates:
+-------------------------------------------------------------
 
 Simply replace your entire forum theme folder with the new set:
 
