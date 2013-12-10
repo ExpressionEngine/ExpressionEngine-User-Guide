@@ -5,7 +5,7 @@ Update Notes for Version 2.7.3
 Altered Profile Theme Files
 ---------------------------
 
-- HTML ``&lt;form&gt;`` tags were replaced with the ``{form_declaration}`` tag.
+- HTML ``<form>`` tags were replaced with the ``{form_declaration}`` tag.
 
 Affected files:
 

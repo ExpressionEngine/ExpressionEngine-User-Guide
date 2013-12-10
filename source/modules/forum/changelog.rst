@@ -1,6 +1,16 @@
 ExpressionEngine Forum Module Change Log
 ========================================
 
+Version 3.1.14
+--------------
+
+Release Date: December 10, 2013
+
+- Fixed a bug (#19893) where some forms improperly failed the secure
+  mode check. See :doc:`update notes </installation/version_notes_2.7.3>`
+  for more information.
+
+
 Version 3.1.13
 --------------
 

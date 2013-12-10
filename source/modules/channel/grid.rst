@@ -39,6 +39,8 @@ template code may look like this::
 Grid has a number of parameters and other variables available in order
 to get the information you need out of it.
 
+.. _grid_tag_params:
+
 Parameters
 ==========
 
@@ -155,6 +157,8 @@ sort=
 
 Specifies the direction of the sorting of the tag output. Defaults
 to ascending.
+
+.. _grid_tag_variables:
 
 Variables
 =========
