@@ -8,7 +8,7 @@ use for this is to create some display options in a form on your page
 that your visitors can use to select their preferred page view.
 
 .. note:: This feature will only work if page caching is turned OFF for
-	the template in which it is being used.
+	  the template in which it is being used.
 
 Every :ref:`Parameter <channel_entries_parameters>` available to the
 channel tag can be set dynamically. However, as a security precaution
@@ -51,12 +51,13 @@ being used.
 	        <option value="30">30</option>
 	    </select>
 
-	    <input type="submit" value="Go!" />
+	    <input type="submit" value="Go!">
 	</form>
 
-.. note:: If you have Secure Forms turned ON, you will need to add a
-  hidden input for the XID. ::
-    <input type="hidden" name="XID" value="{XID_HASH}" />
+.. note:: If you have :ref:`Secure Mode <secure-mode-label>` enabled,
+    you will need to add a hidden input for the XID. ::
+
+    <input type="hidden" name="XID" value="{XID_HASH}">
 
 .. note:: If you have pagination links on your page they will not retain
-	the page layout options created dynamically using this feature.
+	  the page layout options created dynamically using this feature.

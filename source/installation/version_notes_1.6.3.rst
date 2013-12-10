@@ -29,7 +29,3 @@ Remove extraneous </h2> from "Success" and "Error" themes. Change::
 to::
 
 	<div class='profileHeadingBG'><div class="tableHeading">{lang:heading}</div></div>
-
-:ref:`Return to Update Page <update_cleanup>`
-
-
