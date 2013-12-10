@@ -80,8 +80,8 @@ Allow members to change their username
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As the name suggests, this setting determines whether or not members are
-allowed to change their "username" after they register. Members will
-always be able to change their "screen name" if they choose to use one.
+allowed to change their own usernames after registration. (Members will
+always be able to change their own screen names.)
 
 .. _allow-multi-logins-label:
 
@@ -108,8 +108,8 @@ address.
 
 .. _require-ip-posting-submit-comments-label:
 
-Require IP Address and User Agent when receiving comments
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Require IP Address and User Agent for posting
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Similar to the previous setting, when turned on, this setting requires
 IP address and user agent information to be supplied when submitting

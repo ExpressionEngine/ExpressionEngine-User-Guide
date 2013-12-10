@@ -68,7 +68,7 @@ allow_avatar_uploads
 Set whether members can upload their own avatar.
 
 ======== ===========
-Values   Behavior
+Value    Behavior
 ======== ===========
 ``y``    Yes, allow members to upload their own avatar
 ``n``    No, do not allow members to upload their own avatar
@@ -94,7 +94,7 @@ passwords. Must be used in combination with
 :ref:`name_of_dictionary_file <name_of_dictionary_file>`.
 
 ======== ===========
-Values   Behavior
+Value    Behavior
 ======== ===========
 ``y``    Yes, allow dictionary words as passwords
 ``n``    No, do not allow dictionary words as passwords
@@ -118,7 +118,7 @@ Set whether extensions are enabled in the system. Disabling extensions
 will *not* uninstall extensions.
 
 ======== ===========
-Values   Behavior
+Value    Behavior
 ======== ===========
 ``y``    Enable all extensions
 ``n``    Disable all extensions
@@ -142,7 +142,7 @@ localization preferences.
 
 
 ======== ===========
-Values   Behavior
+Value    Behavior
 ======== ===========
 ``y``    Show dates and times localized to each members' preferences
 ``n``    Show all dates and times localized to the site default
@@ -165,7 +165,7 @@ allow_member_registration
 Set whether site visitors are allowed to register for accounts.
 
 ======== ===========
-Values   Behavior
+Value    Behavior
 ======== ===========
 ``y``    Allow front-end member registration
 ``n``    Do not allow front-end member registration
@@ -191,7 +191,7 @@ Set whether an account can have multiple active sessions at one time.
    This feature is incompatible with the "Cookies Only" session type.
 
 ======== ===========
-Values   Behavior
+Value    Behavior
 ======== ===========
 ``y``    Allow multiple active sessions per account
 ``n``    Do not allow multiple active sessions per account
@@ -215,7 +215,7 @@ Set whether a tab keystroke produces a tab in Publish Page and Template
 Editor textareas. This is the default behavior.
 
 ======== ===========
-Values   Behavior
+Value    Behavior
 ======== ===========
 ``y``    Insert tab on tab keystroke in textareas **(default)**
 ``n``    Normal browser behavior on tab keystroke in textareas
@@ -228,14 +228,14 @@ $config['allow_textarea_tabs'] = 'y';
 
 allow_signatures
 ----------------
-Allow or disallow members to have their own :ref:`signatures
-<allow-member-sigs-label>`.
+
+Set whether member signatures are enabled.
 
 ======== ===========
-Values   Behavior
+Value    Behavior
 ======== ===========
-``y``    Allow members to have their own signature
-``n``    Do not allow members to have their own signature
+``y``    Enable member signatures
+``n``    Disable member signatures
 ======== ===========
 
 Example Usage::
@@ -245,20 +245,19 @@ $config['allow_signatures'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Allow Users to have Signatures
+:ref:`Allow Users to have Signatures <allow-member-sigs-label>`
 
 
 allow_username_change
 ---------------------
-:ref:`Allow members to change their username
-<allow-member-username-label>` allows or disallows members to change
-their username.
+
+Set whether members can change their own usernames after registration.
 
 ========= ===========
-Values    Behavior
+Value     Behavior
 ========= ===========
-``y``     Allow members to change their username
-``n``     Do not allow members to change their username
+``y``     Allow members to change their own usernames
+``n``     Do not allow members to change their own usernames
 ========= ===========
 
 Example Usage::
@@ -268,31 +267,31 @@ $config['allow_username_change'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Design --> Security and
-Privacy --> Security and Sessions`: Allow members to change their
-username
+Privacy --> Security and Sessions`: :ref:`Allow members to change their
+username <allow-member-username-label>`
 
 
 app_version
 -----------
-The currently installed ExpressionEngine version.
+
+The installation's ExpressionEngine version.
 
 .. warning:: This configuration variable is automatically set by the
-    system and should not be modified.
+    system and **should not be modified**.
 
 
 auto_assign_cat_parents
 -----------------------
-If the :ref:`Auto-Assign Category Parents <auto-assign-categoryP-label>`
-option is set to "yes", when new entries that contain category
-assignments are submitted, the "parent" category of any sub-categories
-will be automatically assigned. If set to "no", the entry will only be
-assigned to the child category.
+
+Set whether to assign an entry to both the selected category and its
+parent category.
 
 ========= ===========
-Values    Behavior
+Value     Behavior
 ========= ===========
-``y``     The "parent" category will be automatically assigned
-``n``     Entry will only be assigned to the child category
+``y``     Entry will be assigned to the selected category and its parent
+          category
+``n``     Entry will only be assigned to the selected category
 ========= ===========
 
 Example Usage::
@@ -302,20 +301,20 @@ $config['auto_assign_cat_parents'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Channel
-Administration --> Global Channel Preferences`: Auto-Assign Category
-Parents
+Administration --> Global Channel Preferences`: :ref:`Auto-Assign
+Category Parents <auto-assign-categoryP-label>`
 
 
 avatar_max_height
 -----------------
-The :ref:`maximum height <avatar-max-height-label>` (in pixels) allowed
-for user-uploaded avatars.
 
-========= ===========
-Values    Behavior
-========= ===========
-``Num``   Numerical value depicting max height in pixels
-========= ===========
+Set the maximum height (in pixels) allowed for user-uploaded avatars.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Max height (in pixels)
+=========== ===========
 
 Example Usage::
 
@@ -324,40 +323,41 @@ $config['avatar_max_height'] = '120';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Avatar Maximum Height
+:ref:`Avatar Maximum Height <avatar-max-height-label>`
 
 
 avatar_max_kb
 -------------
-The :ref:`Maximum File Size <avatar-max-kb-label>` allowed for
-user-uploaded avatars.
 
-========= ===========
-Values    Behavior
-========= ===========
-``Num``   Numerical value depicting max size in Kilobytes
-========= ===========
+Set the maximum file size (in kilobytes) allowed for user-uploaded
+avatars.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Max file size (in kilobytes)
+=========== ===========
 
 Example Usage::
 
-$config['avatar_max_kb'] = '60';
+$config['avatar_max_kb'] = '200';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Avatar Maximum Size
+:ref:`Avatar Maximum Size <avatar-max-kb-label>`
 
 
 avatar_max_width
 ----------------
-The :ref:`Maximum Width <avatar-max-width-label>` (in pixels) allowed
-for user-uploaded avatars.
 
-========= ===========
-Values    Behavior
-========= ===========
-``Num``   Numerical value depicting max width in pixels
-========= ===========
+Set the maximum width (in pixels) allowed for user-uploaded avatars.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Max width (in pixels)
+=========== ===========
 
 Example Usage::
 
@@ -366,17 +366,18 @@ $config['avatar_max_width'] = '120';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Avatar Maximum Width
+:ref:`Avatar Maximum Width <avatar-max-width-label>`
 
 
 avatar_path
 -----------
-The :ref:`Server Path <avatar-path-label>` to the Avatar Folder.
+
+Set the server path to the avatar directory.
 
 ========= ===========
-Values    Behavior
+Value     Description
 ========= ===========
-``Path``  Full server path to avatar folder
+``path``  Full server path to avatar directory
 ========= ===========
 
 Example Usage::
@@ -386,17 +387,18 @@ $config['avatar_path'] = '/path/images/avatars/';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Server Path to Avatar Folder
+:ref:`Server Path to Avatar Folder <avatar-path-label>`
 
 
 avatar_url
 ----------
-The :ref:`URL <avatar-url-label>` to the Avatar Folder.
+
+Set the URL to the avatar directory.
 
 ========= ===========
-Values    Behavior
+Value     Description
 ========= ===========
-``URL``   URL to avatar folder
+``URL``   URL to avatar directory
 ========= ===========
 
 Example Usage::
@@ -406,21 +408,24 @@ $config['avatar_url'] = 'http://example.com/images/avatars';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-URL to Avatar Folder
+:ref:`URL to Avatar Folder <avatar-url-label>`
 
+
+.. _ban_action:
 
 ban_action
 ----------
-The :ref:`Banned IP Action <member-banned-ip-label>` specifies what
-action will be taken when a banned IP Address attempts to access your
-ExpressionEngine website.
+
+Set the action to be taken when a visitor with a banned IP address
+attempts access.
 
 ============= ===========
-Values        Behavior
+Value         Behavior
 ============= ===========
 ``restrict``  Restrict the user to viewing the site only
-``message``   Show the user a specific message
-``bounce``    Redirect the user to another specified site
+``message``   Show the user a :ref:`specific message <ban_message>`
+``bounce``    Redirect the user to a :ref:`specified site
+              <ban_destination>`
 ============= ===========
 
 Example Usage::
@@ -430,21 +435,23 @@ $config['ban_action'] = 'message';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> User Banning`:
-When a banned IP tries to access the site
+:ref:`When a banned IP tries to access the site
+<member-banned-ip-label>`
 
+
+.. _ban_destination:
 
 ban_destination
 ---------------
-The :ref:`Banned IP Destination <member-banned-ip-label>` specifies what
-URL you would like to redirect the user to.
 
-.. note::
-   This settings works with **$config['ban_action'] = 'bounce';**
+Set the redirect destination for visitors with banned IP addresses. Must
+be used in conjunction with :ref:`ban_action <ban_action>` set to
+``bounce``.
 
 ========= ===========
-Values    Behavior
+Value     Description
 ========= ===========
-``URL``   Send the user to this URL
+``URL``   Destination URL
 ========= ===========
 
 Example Usage::
@@ -454,37 +461,39 @@ $config['ban_destination'] = 'http://www.example.com';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> User Banning`:
-When a banned IP tries to access the site
+:ref:`When a banned IP tries to access the site
+<member-banned-ip-label>`
 
+
+.. _ban_message:
 
 ban_message
 -----------
-The :ref:`Banned IP Message <member-banned-ip-label>` specifies what
-message to show the user.
 
-.. note::
-   This settings works with **$config['ban_action'] = 'message';**
+Set the message shown to visitors with banned IP addresses. Must be used
+in conjunction with :ref:`ban_action <ban_action>` set to ``message``.
 
 ========= ===========
-Values    Behavior
+Value     Description
 ========= ===========
 ``text``  Message to be shown to user
 ========= ===========
 
 Example Usage::
 
-$config['ban_message'] = 'This site is currently unavailable';
+$config['ban_message'] = 'This site is currently unavailable.';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> User Banning`:
-When a banned IP tries to access the site
+:ref:`When a banned IP tries to access the site
+<member-banned-ip-label>`
 
 
 banish_masked_ips
 -----------------
-If the :ref:`Require IP Address and User Agent for Login
-<require-ip-logins-label>` option is set to "yes", then users will not
+If the Require IP Address and User Agent for Login
+ option is set to "yes", then users will not
 be able to log in unless their browser (or other access device)
 correctly supplies their IP address and User Agent (browser)
 information. Having this set to "Yes" can help prevent hackers from
@@ -492,10 +501,10 @@ logging in using direct socket connections or from trying to access the
 system with a masked IP address.
 
 ========= ===========
-Values    Behavior
+Value     Behavior
 ========= ===========
-``y``     IP address and User Agent must be present
-``n``     Do not check IP address and User Agent
+``y``     IP address and user agent must be present
+``n``     Do not check IP address and user agent
 ========= ===========
 
 Example Usage::
@@ -505,8 +514,8 @@ $config['banish_masked_ips'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: Require IP Address and User Agent
-for Login
+Privacy --> Security and Sessions`: :ref:`Require IP Address and User
+Agent for Login <require-ip-logins-label>`
 
 
 banishment_message
@@ -516,7 +525,7 @@ you may chose a custom message to show users when they have reached the
 allowed page load frequency.
 
 ========= ===========
-Values    Behavior
+Value     Behavior
 ========= ===========
 ``text``  Custom message to show user
 ========= ===========
@@ -541,7 +550,7 @@ be taken when throttling is enabled on your ExpressionEngine website.
    404 headers.
 
 ============= ===========
-Values        Behavior
+Value         Behavior
 ============= ===========
 ``redirect``  Redirect the user to a specified URL
 ``message``   Show the user a custom message
@@ -563,7 +572,7 @@ The :ref:`URL for Redirect <throttle-prefs-label>` specifies which URL
 to redirect to.
 
 ========= ===========
-Values    Behavior
+Value     Behavior
 ========= ===========
 ``URL``   The URL to redirect to
 ========= ===========
@@ -587,7 +596,7 @@ example, ``_*@example.com``. Each address should be placed on a separate
 line.
 
 ========= ===========
-Values    Behavior
+Value     Behavior
 ========= ===========
 ``email`` Email addresses or wildcard domain
 ========= ===========
@@ -610,7 +619,7 @@ addresses or use wildcards to specify blocks of IP addresses. For
 example, 123.321.*. Each IP address should be placed on a separate line.
 
 ====== ========
-Values Behavior
+Value  Behavior
 ====== ========
 ``IP`` IP address
 ====== ========
@@ -632,7 +641,7 @@ you to list screen names, preventing their use. This can be handy if you
 would like to reserve certain screen names for your own use.
 
 ================ ===========
-Values           Behavior
+Value            Behavior
 ================ ===========
 ``screen name``  Screen name or list of screen names to be restricted
 ================ ===========
@@ -653,7 +662,7 @@ to list usernames, preventing their use. This can be handy if you would
 like to reserve certain usernames for your own use.
 
 ============ ========
-Values       Behavior
+Value        Behavior
 ============ ========
 ``username`` Username or list of usernames to be restricted
 ============ ========
@@ -674,7 +683,7 @@ The :ref:`URL to the root directory of your site
 containing your site's index page.
 
 ======== ========
-Values   Behavior
+Value    Behavior
 ======== ========
 ``URL``  URL to the root directory of your site
 ======== ========
@@ -696,7 +705,7 @@ default system/cache/ folder.  Use a full server path with trailing
 slash.
 
 ======== ========
-Values   Behavior
+Value    Behavior
 ======== ========
 ``text`` Sets the server path to your cache folder
 ======== ========
@@ -713,7 +722,7 @@ your ExpressionEngine website by default. To disable set the value to
 "n".
 
 ====== ========
-Values Behavior
+Value  Behavior
 ====== ========
 ``y``  Default value, enables the use of TrueType Fonts
 ``n``  Disables use of TrueType fonts
@@ -734,7 +743,7 @@ captcha_path
 The :ref:`Server Path to you CAPTCHA Folder <captcha-notes-label>`.
 
 ======== ========
-Values   Behavior
+Value    Behavior
 ======== ========
 ``path`` Relative server path to CAPTCHA folder
 ======== ========
@@ -755,7 +764,7 @@ You may specify whether to :ref:`Add Random Number to CAPTCHA Word
 <captcha-notes-label>` or not. The default is "y".
 
 ====== ========
-Values Behavior
+Value  Behavior
 ====== ========
 ``y``  Default value, add a random number to CAPTCHA word
 ``n``  Do not add a random number to CAPTCHA word
@@ -778,7 +787,7 @@ allows you to specify whether logged in members must enter in a CAPTCHA
 word or not.
 
 ====== ========
-Values Behavior
+Value  Behavior
 ====== ========
 ``y``  Require that logged-in users enter a CAPTCHA word before a form is submitted
 ``n``  Default value, does not require a logged-in member to enter a CAPTCHA word
@@ -799,7 +808,7 @@ captcha_url
 The :ref:`Full URL to CAPTCHA Folder <captcha-notes-label>`.
 
 ======== ========
-Values   Behavior
+Value    Behavior
 ======== ========
 ``URL``  Full URL to the CAPTCHA folder
 ======== ========
@@ -825,7 +834,7 @@ used for each character that is censored, so "shucks" would be converted
 to "######".
 
 ======== ========
-Values   Behavior
+Value    Behavior
 ======== ========
 ``word`` Word to be used as a replacement for censored words
 ======== ========
@@ -849,7 +858,7 @@ would censor the words test, testing, and tester, while the wildcard
 ``_*gress`` would censor the words progress and congress.
 
 ======== ========
-Values   Behavior
+Value    Behavior
 ======== ========
 ``word`` Word to be censored
 ======== ========
@@ -870,7 +879,7 @@ This determines which character set is used by default in various
 methods that require a character set to be provided.
 
 ============ ========
-Values       Behavior
+Value        Behavior
 ============ ========
 ``charset``  character set to be used
 ============ ========
@@ -888,7 +897,7 @@ before comment editing is disallowed on the front end of the site. Set
 to 0 for no limit.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Length of time (in seconds)
 ========== ========
@@ -912,7 +921,7 @@ rules regarding whether members are exempt from moderation will be
 followed.
 
 ====== ========
-Values Behavior
+Value  Behavior
 ====== ========
 ``y``  Forces moderation of comment instead of closing after expiration
 ``n``  Default value, does not force moderation
@@ -940,7 +949,7 @@ word censoring is enabled, comments will still be censored regardless of
 this setting.
 
 ====== ========
-Values Behavior
+Value  Behavior
 ====== ========
 ``y``  Forces word censoring for comments
 ``n``  Default value, does not force censoring for comments
@@ -973,7 +982,7 @@ Internet Explorer does support this feature, it also contains bugs in
 its implementation which can have adverse consequences.)
 
 ========= ========
-Values    Behavior
+Value     Behavior
 ========= ========
 ``y``     When enabled, your site will be shown in a compressed format for faster page loading
 ``n``     Default value, does not compress output
@@ -995,7 +1004,7 @@ The :ref:`Cookie Domain <cookie-domain-label>` variable allows you to
 set your cookie domain.
 
 ========= ========
-Values    Behavior
+Value     Behavior
 ========= ========
 ``text``  Sets domain for site-wide cookies
 ========= ========
@@ -1022,7 +1031,7 @@ will not be available in directories above /joe/. The vast majority of
 people will leave this setting blank.
 
 ========= ========
-Values    Behavior
+Value     Behavior
 ========= ========
 ``path``  Relative path to cookie folder on your ExpressionEngine web
 server.
@@ -1046,7 +1055,7 @@ each installation. This :ref:`Cookie Prefix <cookie-prefix-label>` will
 prevent the cookies from interfering with each other.
 
 ========= ========
-Values    Behavior
+Value     Behavior
 ========= ========
 ``text``  Sets the cookie prefix for cookies when running multiple installations
 ========= ========
@@ -1067,7 +1076,7 @@ Secure cookies allow requiring a secure connection (HTTPS) in order to
 set cookies.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``TRUE``   Requires a secure connection in order to set cookies
 ``FALSE``  Default value, does not require a secure connection to set cookies
@@ -1090,7 +1099,7 @@ seconds. For instance, if users should be logged out after 10 minutes of
 inactivity, the value would be: 600
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets the control panel session length in seconds
 ========== ========
@@ -1106,7 +1115,7 @@ cp_session_type
 Sets the :ref:`Control Panel session type <cp-session-type-label>`.
 
 ====== ========
-Values Behavior
+Value  Behavior
 ====== ========
 ``c``  Sets the Control Panel to use cookies only
 ``s``  Sets the Control Panel to use Session ID only
@@ -1134,7 +1143,7 @@ The :ref:`Default Control Panel Theme <general-config-cp-theme-label>`
 is the theme that members will see when logged in to the Control Panel.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Name of theme to use for the Control Panel
 ========== ========
@@ -1158,7 +1167,7 @@ The :ref:`URL to your Control Panel index page
 Control Panel.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``URL``    Sets the URL to your ExpressionEngine Control Panel
 ========== ========
@@ -1183,7 +1192,7 @@ csrf_protection
 Determines whether Cross Site Request Forgery protection is enabled.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``TRUE``   Enables CSRF
 ``FALSE``  Default value, disables CSRF
@@ -1202,7 +1211,7 @@ often very useful during initial development, but they can be very
 confusing to regular site visitors. There are two options:
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``1``      Enables PHP/SQL error messages shown only to Super Admins
 ``2``      Enables PHP/SQL error messages shown to anyone - NOT SECURE
@@ -1225,7 +1234,7 @@ The :ref:`Default Member Group Assigned to New Members
 which approved members will be assigned.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Group ID of desired default member group
 ========== ========
@@ -1248,7 +1257,7 @@ localized to this timezone unless overridden by a member's own
 localization preferences.
 
 ============ ========
-Values       Behavior
+Value        Behavior
 ============ ========
 ``timezone`` A valid `timezone supported by PHP <http://php.net/manual/en/timezones.php>`__
 ============ ========
@@ -1271,7 +1280,7 @@ exists in your database. A malicious person can't submit the same
 information more than once.
 
 ======= ========
-Values  Behavior
+Value   Behavior
 ======= ========
 ``y``   Default value, enables protection against comments being submitted twice
 ``n``   Disables protection against comments being submitted twice
@@ -1295,7 +1304,7 @@ useful for server administrators who need a way to respond immediately
 to table locks during a traffic spike to keep the site running smoothly.
 
 ======= ========
-Values  Behavior
+Value   Behavior
 ======= ========
 ``y``   Disables all tracking (User, Template, Channel, Referrer)
 ======= ========
@@ -1313,7 +1322,7 @@ to temporarily disable it without hacking or modifying folder
 permissions.
 
 ======= ========
-Values  Behavior
+Value   Behavior
 ======= ========
 ``y``   Disables tag caching
 ``n``   Default value, tag caching is enabled
@@ -1332,7 +1341,7 @@ ExpressionEngine User Guide. This URL is used to create the User Guide
 link at the top of your Control Panel.
 
 ======= ========
-Values  Behavior
+Value   Behavior
 ======= ========
 ``URL`` Sets the URL to your documentation (User Guide link at the top of your Control Panel)
 ======= ========
@@ -1363,7 +1372,7 @@ discuss reasonable limits for your site.
    your site's traffic.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets the number of "online visitors" which will trigger the disabling of all tracking
 ========== ========
@@ -1401,7 +1410,7 @@ success you can increase it until you begin experiencing time-outs.
    lower batch size; 50-100 is typical.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets the number of emails to send in a batch (For average servers, 300 is a safe number)
 ========== ========
@@ -1438,7 +1447,7 @@ set the number of emails per batch in the "Number of Emails Per Batch"
 preference.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables batch mode
 ``n``      Default value, disables batch mode
@@ -1460,7 +1469,7 @@ email_charset
 specifies the character encoding that the emails will be sent with.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the encoding to be used by emails being sent
 ========== ========
@@ -1485,7 +1494,7 @@ another email.
    This only applies to the Email Console in the member profile pages.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` sets the number of minutes that must lapse before a member is allowed to send another email
 ========== ========
@@ -1506,7 +1515,7 @@ If set, overrides the core Email class setting for crlf characters in
 quoted-printable encoded emails (Email class $crlf property).
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Overrides the core Email class setting for crlf characters in quoted-printable encoded emails
 ========== ========
@@ -1525,7 +1534,7 @@ track down any problems you may be experiencing. If you are having
 difficulty sending email you are encouraged to enable this option.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables email debugging
 ``n``      Default value, email debugging is not enabled
@@ -1550,7 +1559,7 @@ need to ensure that your tags for those forms contain the appropriate
 CAPTCHA code.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables CAPTCHAS on Tell-a-Friend and Contact email forms
 ``n``      Default value, CAPTCHAS are not required on Tell-a-Friend and Contact email forms
@@ -1572,7 +1581,7 @@ If set, overrides the core Email class setting for newline characters
 (Email class $newline property).
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Overrides the core Email class setting for newline characters
 ========== ========
@@ -1591,7 +1600,7 @@ automatically be filled in during installation, so you should only need
 to change it if you have altered where your smiley graphics are stored.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``URL``    Specifies the URL of the folder where you have your smiley graphics located
 ========== ========
@@ -1614,7 +1623,7 @@ associate an image with their account that you can optionally display
 with entries, comments, and forum posts.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, enables avatars for your ExpressionEngine site
 ``n``      Disables avatars for your ExpressionEngine site
@@ -1637,7 +1646,7 @@ any specified words in channel entries, comments, forum posts, etc.
 according to your preference below
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables word censoring
 ``n``      Default value, disables word censoring
@@ -1659,7 +1668,7 @@ Forces ExpressionEngine to cache the output of database queries to text
 files.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables database caching
 ``n``      Default value, disables database caching
@@ -1678,7 +1687,7 @@ are rendered as graphics on your site.
 
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, enables smileys
 ``n``      Disables Smileys
@@ -1701,7 +1710,7 @@ When :ref:`Enable Channel Entry View Tracking
 utilize the Entry "Views" Tracking Tag feature of the Channel module.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables tracking views
 ``n``      Default value, disables tracking views
@@ -1724,7 +1733,7 @@ When :ref:`Enable Template Hit Tracking
 your templates will be tracked in your database on each page load.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, enables template hit tracking
 ``n``      Disables template hit tracking
@@ -1747,7 +1756,7 @@ setting this variable to TRUE (boolean).  See the user guide for
 details.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``TRUE``   Enables hooks
 ``FALSE``  Default value, disables hooks
@@ -1768,7 +1777,7 @@ for each page load so that the user statistics can be tracked and
 stored.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables enables online user tracking
 ``n``      Default value, disables online user tracking
@@ -1790,7 +1799,7 @@ If you would like to use the "hooks" feature you must enable it by
 setting this variable to TRUE (boolean)
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``TRUE``   Enables "hooks" feature
 ``FALSE``  Default value, disables "hooks" feature
@@ -1809,7 +1818,7 @@ will be able to upload an image to be displayed in their member profile
 area.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables member photos
 ``n``      Default value, disables member photos
@@ -1830,7 +1839,7 @@ enable_query_strings
 Toggles query strings
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``TRUE``   Enables query strings
 ``FALSE``  Default value, disables query strings
@@ -1848,7 +1857,7 @@ Setting :ref:`Force URL query strings
 use a standard query string in all your URLs.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``TRUE``   Forces query strings
 ``FALSE``  Default value, will not force query strings
@@ -1872,7 +1881,7 @@ set to yes, each search term submitted will be stored so you can view it
 at: :menuselection:`Tools --> Logs --> Search Logs`
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, enables search term log
 ``n``      Disables search term log
@@ -1896,7 +1905,7 @@ at which the {exp:channel:entries} tag is rendered by caching queries
 that are normally executed dynamically.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables query caching
 ``n``      Default value, query caching is not enabled
@@ -1918,7 +1927,7 @@ enable_throttling
 or disable this feature.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables throttling
 ``n``      Default value, throttling is disabled
@@ -1940,7 +1949,7 @@ If set, when an {encode=""} tag is encountered, but emails are not to be
 encoded, this text will be displayed in place of the tag.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets text to be used
 ========== ========
@@ -1957,7 +1966,7 @@ existing files or uploads that share a filename with an existing file
 will have an incrementing number appended to them.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Forces upload filenames to be unique
 ``n``      Default value
@@ -1973,7 +1982,7 @@ forum_trigger
 Forum trigger word, requires that forums be installed.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the forum trigger word
 ========== ========
@@ -1988,7 +1997,7 @@ global_xss_filtering
 Enables XSS filtering for your ExpressionEngine website.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables XSS filtering
 ``n``      Default value, disables XSS filtering
@@ -2005,7 +2014,7 @@ Set the character(s) to use at the beginning of a template name to
 consider it a "hidden" template. Default is a period'.'
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the character(s) to use at the beginning of a template name to consider it a "hidden" template
 ========== ========
@@ -2021,7 +2030,7 @@ Used by the Blacklist Module to write rules to your .htaccess file. This
 is the server path.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the server path to your .htaccess file.
 ========== ========
@@ -2036,7 +2045,7 @@ image_library_path
 Set the server path to the image library.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets path to image library
 ========== ========
@@ -2055,7 +2064,7 @@ available on your server. The options are: GD, GD 2, ImageMagick, and
 NetPBM.
 
 ================ ========
-Values           Behavior
+Value            Behavior
 ================ ========
 ``gd``           Sets the GD Library to be used as Image Resizing Protocol
 ``gd2``          Sets the GD2 Library to be used as Image Resizing Protocol
@@ -2078,7 +2087,7 @@ install_lock
 Prevents installing ExpressionEngine over an existing installation.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``1``      Install lock is enabled
 ========== ========
@@ -2095,7 +2104,7 @@ an index.php file in the root directory without ExpressionEngine trying
 to use it.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Sets ExpressionEngine to on
 ``n``      Sets ExpressionEngine to off
@@ -2114,7 +2123,7 @@ preference to "No" only members of the Super Admin group will be able to
 see the site.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Sets the site to live
 ``n``      Sets the site to offline
@@ -2136,7 +2145,7 @@ there is an available translation if you intend to use something other
 than ``english``.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Indicated which language files should be used
 ========== ========
@@ -2152,7 +2161,7 @@ The :ref:`License Number <general-config-license-number-label>` you were
 issued upon purchasing ExpressionEngine.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets your ExpressionEngine license number
 ========== ========
@@ -2173,7 +2182,7 @@ The :ref:`Lockout Time <throttling-lockout-time-label>` is the length of
 time in seconds that a user will be unable to use your site.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets lockout time in seconds
 ========== ========
@@ -2194,7 +2203,7 @@ Each item that is logged has an associated date. You can use PHP date
 codes to set your own date formatting
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets log date format
 ========== ========
@@ -2211,7 +2220,7 @@ preference lets you log all messages sent via the Email Console in the
 member profile pages.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, enables the logging of email console messages
 ``n``      Disables the logging of email console messages
@@ -2234,7 +2243,7 @@ default system/logs/ folder.  Use a full server path with trailing
 slash.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Full server path to system log folder
 ========== ========
@@ -2252,7 +2261,7 @@ query will be performed for each page load so that the statistics can be
 generated.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, enables referrer tracking
 ``n``      Disables referrers tracking
@@ -2269,7 +2278,7 @@ If you have enabled error logging, you can set an error threshold to
 determine what gets logged.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``0``      Disables logging, Error logging TURNED OFF
 ``1``      Error Messages (including PHP errors)
@@ -2291,7 +2300,7 @@ able to send HTML formatted emails. This preference sets whether the
 Communicate section has "Plain text" or "HTML" selected by default.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``plain``  Sets default email format to Plain Text
 ``html``   Sets defauly email format to HTML
@@ -2312,7 +2321,7 @@ mail_protocol
 The :ref:`Email Protocol <email-protocol-label>`. Email can be sent by ExpressionEngine by one of three protocols.
 
 ============ ========
-Values       Behavior
+Value        Behavior
 ============ ========
 ``mail``     Sets email protocol to PHP Mail
 ``smtp``     Sets email protocol to SMTP
@@ -2334,7 +2343,7 @@ mailinglist_enabled
 Enables the mailing list.
 
 ======= ========
-Values  Behavior
+Value   Behavior
 ======= ========
 ``y``   Default value, enables mailing list
 ``n``   Disables mailing list
@@ -2355,7 +2364,7 @@ mailinglist_notify
 Recipient list for notification of new mailing list sign-ups.
 
 ======= ========
-Values  Behavior
+Value   Behavior
 ======= ========
 ``y``   Enables recipient list for notification of new mailing list sign-ups
 ``n``   Default value, disables recipient list for notification of new mailing list sign-ups
@@ -2377,7 +2386,7 @@ mailinglist_notify_emails
 Email Address of Notification Recipient(s).
 
 ======== ========
-Values   Behavior
+Value    Behavior
 ======== ========
 ``text`` Email address Notification Recipient(s)
 ======== ========
@@ -2399,7 +2408,7 @@ The :ref:`Maximum number of recent search terms to save
 large.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets maximum number of recent search terms to save
 ========== ========
@@ -2426,7 +2435,7 @@ throttling feature will be triggered, locking them out of your site
 according to the parameters you set below.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets maximum number of page loads
 ========== ========
@@ -2447,7 +2456,7 @@ max_tmpl_revisions
 <global-template-max-revisions-label>` for each template.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets maximum number of template revisions to keep
 ========== ========
@@ -2469,7 +2478,7 @@ mbr_notification_emails
 addresses which should receive notifications.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Email address Notification Recipient(s)
 ========== ========
@@ -2491,7 +2500,7 @@ be used in the Member Profile area of your site. Available, installed
 themes are listed in the menu.
 
 =========== ========
-Values      Behavior
+Value       Behavior
 =========== ========
 ``text``    Sets the theme for the default member profile
 =========== ========
@@ -2512,7 +2521,7 @@ The :ref:`Member List - Order <member-list-order-label>` specifies
 whether to show the list in Ascending or Descending order.
 
 =========== ========
-Values      Behavior
+Value       Behavior
 =========== ========
 ``asc``     Sorts member list in Ascending order
 ``desc``    Deafult value, sorts member list in Descending order
@@ -2534,7 +2543,7 @@ The :ref:`Member List - Rows <member-list-rows-label>` specifies the
 number of rows to return by default.
 
 =========== ========
-Values      Behavior
+Value       Behavior
 =========== ========
 ``number``  Sets the number of rows to return by default
 =========== ========
@@ -2556,7 +2565,7 @@ sorting criteria to be used. Choices are: Total Posts, Screen Name,
 Total Comments, Total Entries, Join Date.
 
 ================== ========
-Values             Behavior
+Value              Behavior
 ================== ========
 ``total_posts``    Sorts member list by Total Posts
 ``screen_name``    Sorts member list by Screen Name
@@ -2584,7 +2593,7 @@ filename of the dictionary file used for Dictionary Words as Passwords. Must be 
 :ref:`allow_dictionary_pw <allow_dictionary_pw>`.
 
 =========== ========
-Values      Behavior
+Value       Behavior
 =========== ========
 ``text``    Indicates the filename of the dictionary file
 =========== ========
@@ -2606,7 +2615,7 @@ The :ref:`Send new member notifications
 sent.
 
 ======= ========
-Values  Behavior
+Value   Behavior
 ======= ========
 ``y``   Enables notifications
 ``n``   Default value, notification will not be sent
@@ -2630,7 +2639,7 @@ caches will be cleared when you post an entry. If set to "n", the new
 entry will not appear on your site until any cache expires.
 
 ======= ========
-Values  Behavior
+Value   Behavior
 ======= ========
 ``y``   Default value, new posts clear cache
 ``n``   New posts do not clear cache
@@ -2657,7 +2666,7 @@ also available to set via ``$assign_to_config`` for optionally setting
 a different application name per MSM site.
 
 ======== ========
-Values   Behavior
+Value    Behavior
 ======== ========
 ``text`` Sets name of reported application name in New Relic dashboard
 ======== ========
@@ -2685,7 +2694,7 @@ Control Panel when a new version of ExpressionEngine is available. It
 will not automatically download and install a new version.
 
 ======= ========
-Values  Behavior
+Value   Behavior
 ======= ========
 ``y``   Default value, enables new version auto check
 ``n``   Disables new version auto check
@@ -2712,7 +2721,7 @@ passwords. The account remains locked for the duration of the time
 period. Once the period expires it becomes unlocked.
 
 ======= ========
-Values  Behavior
+Value   Behavior
 ======= ========
 ``y``   Default value, enables password lockouts
 ``n``   Disables password lockouts
@@ -2739,7 +2748,7 @@ passwords. The account remains locked for the duration of the time
 period. Once the period expires it becomes unlocked.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Number is set in minutes. You are allowed to use decimal fractions. Example: 1.5
 ========== ========
@@ -2769,7 +2778,7 @@ Leave blank to allow all characters -- but only if you are insane.
 DO NOT CHANGE THIS UNLESS YOU FULLY UNDERSTAND THE REPERCUSSIONS!!
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the permitted URI characters
 ========== ========
@@ -2785,7 +2794,7 @@ Overrides the third_party paths so you can move your third_party
 directory outside of your system directory.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets path to third_party directory
 ========== ========
@@ -2801,7 +2810,7 @@ The :ref:`Photo Maximum Height <member-photo-max-height-label>` (in
 pixels) allowed for user-uploaded member photos.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets the maximum hight (in pixels) for member photos
 ========== ========
@@ -2823,7 +2832,7 @@ The :ref:`Photo Maximum Size (in Kilobytes)
 photos.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets the maximum Size (in Kilobytes) allowed for user-uploaded member photos.
 ========== ========
@@ -2844,7 +2853,7 @@ The :ref:`Photo Maximum Width <member-photo-max-width-label>` (in
 pixels) allowed for user-uploaded member photos.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets the maximum width (in pixels) allowed for user-uploaded member photos
 ========== ========
@@ -2870,7 +2879,7 @@ default, it is the member_photos folder inside the images folder.
    be set to 777.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the full server path to the photos folder
 ========== ========
@@ -2891,7 +2900,7 @@ The :ref:`URL to Photos Folder <member-photo-max-width-label>` on your
 site that contains the member photos.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the URL to the photos folder
 ========== ========
@@ -2912,7 +2921,7 @@ Determines whether or not links created by Typography class open in a
 new window.
 
 ======= ========
-Values  Behavior
+Value   Behavior
 ======= ========
 ``y``   Enables links created by Typography class open in a new window
 ``n``   Default value, disables links created by Typography class open in a new window
@@ -2933,7 +2942,7 @@ following would trigger ExpressionEngine to display the member profile
 area:
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the profile trigger word
 ========== ========
@@ -2954,7 +2963,7 @@ Prevents the advanced conditionals parser from processing anything in
 <script> tags. By default, it's set to 'y'.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, prevents the advanced conditionals parser from processing anything in <script> tags
 ``n``      Disables protect_javacript
@@ -2971,7 +2980,7 @@ Whitelist of reverse proxy servers that may forward the visitor's IP
 address.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Comma delimited list of IP addresses
 ========== ========
@@ -2990,7 +2999,7 @@ It is common practice to require passwords at least eight (8) characters
 long.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets the minimum password length
 ========== ========
@@ -3010,7 +3019,7 @@ publish_page_title_focus
 Makes the title field gain focus when the page is loaded
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, makes the title field gain focus when the page is loaded
 ``n``      Disables focus
@@ -3031,7 +3040,7 @@ dedicated servers you can increase this number and if your server is low
 on resources you may need to lower the number.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets the batch size
 ========== ========
@@ -3056,7 +3065,7 @@ especially with things like logging in/out and other membership related
 functions.
 
 ============ ========
-Values       Behavior
+Value        Behavior
 ============ ========
 ``redirect`` Sets the redirect method to Location (faster): This is the preferred method, which uses PHP's "location" functionality.
 ``refresh``  Sets the redirect method to Refresh (Windows servers) (Slower)
@@ -3081,7 +3090,7 @@ helps deter comment spam by preventing linked sites from gaining a page
 rank advantage.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Applies rank denial to user-submitted Links
 ``n``      Default value, does not apply rank denial to user-submitted Links
@@ -3105,7 +3114,7 @@ only one entry being returned by the tag, including channel query
 caching.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Allows Entry View Tracking
 ``n``      Default value, does not allow Entry View Tracking
@@ -3123,7 +3132,7 @@ HTML formatting buttons. Useful because most browsers no longer need it
 and Admins might want it gone.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Removes the close all button
 ``n``      Default value, does not remove the close all button
@@ -3140,7 +3149,7 @@ Enables the stripping of unparsed ExpressionEngine variables in
 templates when Debug has been forcibly set to 0 in your config file.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables stripping of unparsed ExpressionEngine variables
 ``n``      Default value, disables stripping of unparsed ExpressionEngine variables
@@ -3158,7 +3167,7 @@ With :ref:`Require Member Account Activation
 accounts are activated.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``none``   Sets member activation to no activation required: New members are automatically activated and approved for the site.
 ``email``  Sets member activation to self-activation via email: New members are sent an email.
@@ -3175,6 +3184,8 @@ $config['req_mbr_activation'] = 'none';
 Require Member Account Activation
 
 
+.. _require_ip_for_login:
+
 require_ip_for_login
 --------------------
 If the :ref:`Require IP Address and User Agent for Login
@@ -3186,7 +3197,7 @@ logging in using direct socket connections or from trying to access the
 system with a masked IP address.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, requires IP Address for Login
 ``n``      Disables Require IP Address and User Agent for Login
@@ -3211,7 +3222,7 @@ address and user agent information to be supplied when submitting
 comments.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, requires IP Address for submitting comments
 ``n``      Disables require IP Address and User Agent for submitting comments
@@ -3238,7 +3249,7 @@ character, and one numeric character. Passwords that follow this basic
 formula are much more difficult to guess.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, requires secure password
 ``n``      Disables require secure passwords
@@ -3263,7 +3274,7 @@ must indicate that they agree to abide by these terms before they can
 register.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, requires TOS
 ``n``      Disables require TOS
@@ -3291,7 +3302,7 @@ category is intended.
    template.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the category URL indicator
 ========== ========
@@ -3313,7 +3324,7 @@ rewrite the tags on-the-fly, enabling you to utilize that syntax in your
 view files. Options are TRUE or FALSE (boolean).
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``TRUE``   Enables rewrite short tags
 ``FALSE``  Disables rewrite short tags
@@ -3332,7 +3343,7 @@ specifically chosen one in Rich Text Editor Preferences.
 
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the default toolset id
 ========== ========
@@ -3355,7 +3366,7 @@ Editor will be applied to any Channel Fields of the Textarea (Rich Text)
 fieldtype. If "n", the field will appear as a normal textarea instead.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, if installed, enables RTE
 ``n``      Disables RTE and shows the normal textarea
@@ -3380,7 +3391,7 @@ editing via the editor of your choice. See Saving Templates as Text
 Files for more information.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Templates are saved as files
 ``n``      Default value, templates are not saved as files
@@ -3405,7 +3416,7 @@ you to keep a record of all changes made so that you can easily revert
 back to an earlier version of a Template if you need to do so.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Templates revisions are saved
 ``n``      Default value, templates revisions are not saved
@@ -3431,7 +3442,7 @@ And once the form data is received, the user has to manually reload the
 page before they can submit again.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, enables secure form mode
 ``n``      Disables secure form mode
@@ -3457,7 +3468,7 @@ explicit headers is generally considered to be a good practice, although
 in some cases it can cause some problems.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, enables generate HTTP headers
 ``n``      Disables generate HTTP headers
@@ -3488,7 +3499,7 @@ negative integer to correct a server clock that is too fast.
     clock. In almost all cases, that's the best solution.
 
 =========== ========
-Values      Behavior
+Value       Behavior
 =========== ========
 ``integer`` Offsets the value of stored timestamps from given server time in minutes
 =========== ========
@@ -3506,7 +3517,7 @@ submitted form data displayed at the bottom of the browser window. This
 is useful for debugging.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables output profiler
 ``n``      Default value, disables output profiler
@@ -3531,7 +3542,7 @@ do not like other people to hot link to their content since it basically
 "steals" their bandwidth.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables image hot linking protection
 ``n``      Default value, disables image hot linking protection
@@ -3554,7 +3565,7 @@ sig_allow_img_upload
 will be allowed to upload images to be used in their signatures.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables image uploading for signatures
 ``n``      Default value, disables image uploading for signatures
@@ -3577,7 +3588,7 @@ sig_img_max_height
 allowed for user-uploaded signature images.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets the maximum height (in pixels) for user-uploaded signature images
 ========== ========
@@ -3599,7 +3610,7 @@ sig_img_max_width
 allowed for user-uploaded signature images.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets the maximum width (in pixels) for user-uploaded signature images
 ========== ========
@@ -3621,7 +3632,7 @@ sig_img_max_kb
 user-uploaded signature images.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets the maximum file size allowed for user-uploaded signature images
 ========== ========
@@ -3648,7 +3659,7 @@ is the signature_attachments folder inside the images folder.
    to 777.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets full server path to the signature image uploads folder
 ========== ========
@@ -3670,7 +3681,7 @@ is the URL to the folder on your site that contains the signature image
 uploads.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the URL to the folder on your site that contains the signature image uploads
 ========== ========
@@ -3692,7 +3703,7 @@ sig_maxlength
 allowed within a member's signature.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets the maximum number of characters allowed within a member's signature
 ========== ========
@@ -3716,7 +3727,7 @@ template should be displayed when someone tries to access an invalid
 URL.
 
 ================================ ========
-Values                           Behavior
+Value                            Behavior
 ================================ ========
 ``template_group/template_name`` Sets which template should be displayed when someone tries to access an invalid URL
 ================================ ========
@@ -3741,7 +3752,7 @@ site_description
 Sets the site description.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets site description
 ========== ========
@@ -3762,7 +3773,7 @@ alter this setting if you have changed the filename or you want to
 :doc:`remove index.php from your site's URLs</urls/remove_index.php>`.
 
 ============ ========
-Values       Behavior
+Value        Behavior
 ============ ========
 ``filename`` Sets the name of your site's index page
 ============ ========
@@ -3792,7 +3803,7 @@ this is typically only helpful for additional sites in :doc:`MSM-enabled
 installations </cp/sites/createsite>`.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets site short name
 ========== ========
@@ -3816,7 +3827,7 @@ site_url
 Sets the full URL to the site's web root.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the value for the full URL to the site's web root
 ========== ========
@@ -3843,7 +3854,7 @@ template type "Static" will still be parsed as static if they can be
 setting is enabled by default.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Default value, enables smart static parsing
 ``n``      Disables smart static parsing
@@ -3861,7 +3872,7 @@ mail protocol, this sets the password ExpressionEngine will use to
 authenticate with the SMTP server.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the SMTP password
 ========== ========
@@ -3884,7 +3895,7 @@ servers as long as OpenSSL is installed on the server ExpressionEngine
 is installed on. Check with your server administrator first.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets SMTP server address
 ========== ========
@@ -3906,7 +3917,7 @@ as your mail protocol, this will override the core Email class setting
 (25) for SMTP Port.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Specifies which port to use for SMTP
 ========== ========
@@ -3928,7 +3939,7 @@ your mail protocol, this sets the username ExpressionEngine will use to
 authenticate with the SMTP server.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Specifies the SMTP username
 ========== ========
@@ -3950,7 +3961,7 @@ Set the value to the two letter ISO 639 language code for the spellcheck
 (ex: en, es, de)
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Specifies the language used in the spellchecking functions
 ========== ========
@@ -3966,7 +3977,7 @@ Allows you to set the filename/classname prefix when extending native
 libraries.  For more information please see the CodeIgniter user guide.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the subclass prefix
 ========== ========
@@ -3987,7 +3998,7 @@ Conditionals, Tags, PHP on Input/Ouput, Embeds, and Extension Hooks.
 This is an excellent tool for debugging your templates.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``y``      Enables template debugging
 ``n``      Default value, disables template debugging
@@ -4014,7 +4025,7 @@ loaded without anything in the :doc:`URL segments
 </templates/globals/url_segments>`.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the default template
 ========== ========
@@ -4045,7 +4056,7 @@ without anything in the :doc:`URL segments
 </templates/globals/url_segments>`.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the default template group
 ========== ========
@@ -4072,7 +4083,7 @@ theme_folder_path
 path to the "themes" folder.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the server path to the "themes" folder.
 ========== ========
@@ -4094,7 +4105,7 @@ folders completely out of the system/ and themes/ directory, which will
 make upgrading easier.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the path to your third party folders.
 ========== ========
@@ -4110,7 +4121,7 @@ tmpl_file_basepath
 server path (not URL) to the folder that holds the Template files.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the server path to the folder that holds the Template files
 ========== ========
@@ -4132,7 +4143,7 @@ minimum length required for a member username during new member
 registration. Specify the minimum number of characters required.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets the minimum length required for a member username during new member registration
 ========== ========
@@ -4154,7 +4165,7 @@ URI string.  The default setting of "AUTO" works for most servers. If
 your links do not seem to work, try one of the other delicious flavors.
 
 =================== ========
-Values              Behavior
+Value               Behavior
 =================== ========
 ``auto``            Default value, auto detects
 ``PATH_INFO``       Uses the PATH_INFO
@@ -4175,7 +4186,7 @@ minimum length required for a member username during new member
 registration. Specify the minimum number of characters required.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets the minimum length required for a member username during new member registration
 ========== ========
@@ -4196,7 +4207,7 @@ Overrides the third_party URL so you can move your third_party directory
 outside of your system directory.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets URL to third_party directory
 ========== ========
@@ -4211,7 +4222,7 @@ webmaster_email
 Sets the Webmaster's email address.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the webmaster's email address
 ========== ========
@@ -4226,7 +4237,7 @@ webmaster_name
 Sets the Webmaster's email address.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Sets the webmaster's name
 ========== ========
@@ -4243,7 +4254,7 @@ seconds. For instance, if users should be logged out after 10 minutes of
 inactivity, the value would be: 600
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``number`` Sets the front-end session length in seconds
 ========== ========
@@ -4265,7 +4276,7 @@ sessions are handled on the front-end of the site. You may use cookies,
 session IDs, or a combination.
 
 ====== ========
-Values Behavior
+Value  Behavior
 ====== ========
 ``c``  Sets the User Session to use cookies only
 ``s``  Sets the User Session to use Session ID only
@@ -4297,7 +4308,7 @@ underscore characters (_) or dashes (-) should be used when
 automatically creating the URL Title.
 
 ============== ========
-Values         Behavior
+Value          Behavior
 ============== ========
 ``dash``       Default value, sets Dash as the word separator
 ``underscore`` Sets underscore as the word separator
@@ -4321,7 +4332,7 @@ setting is typically used when outputting RSS feeds. Your feed will
 identify itself as having the language specified here.
 
 ============== ========
-Values         Behavior
+Value          Behavior
 ============== ========
 ``text``       Sets default XML language
 ============== ========
@@ -4341,7 +4352,7 @@ xss_clean_member_exception
 Sets the member IDs to exclude XSS cleaning on.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Pipe delimeted list of member IDs
 ========== ========
@@ -4356,7 +4367,7 @@ xss_clean_member_group_exception
 Sets the member IDs to exclude XSS cleaning on.
 
 ========== ========
-Values     Behavior
+Value      Behavior
 ========== ========
 ``text``   Pipe delimited list of member group IDs
 ========== ========
