@@ -492,19 +492,15 @@ $config['ban_message'] = 'This site is currently unavailable.';
 
 banish_masked_ips
 -----------------
-If the Require IP Address and User Agent for Login
- option is set to "yes", then users will not
-be able to log in unless their browser (or other access device)
-correctly supplies their IP address and User Agent (browser)
-information. Having this set to "Yes" can help prevent hackers from
-logging in using direct socket connections or from trying to access the
-system with a masked IP address.
+
+Set the system to deny a visitor access if the user's IP address cannot
+be determined while :ref:`throttling is enabled <enable_throttling>`.
 
 ========= ===========
 Value     Behavior
 ========= ===========
-``y``     IP address and user agent must be present
-``n``     Do not check IP address and user agent
+``y``     Deny access to visitors without IP addresses
+``n``     Allow access to visitors without IP addresses
 ========= ===========
 
 Example Usage::
@@ -514,18 +510,21 @@ $config['banish_masked_ips'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: :ref:`Require IP Address and User
-Agent for Login <require-ip-logins-label>`
+Privacy --> Security and Sessions`: :ref:`Deny Access if No IP Address
+is Present <throttling-no-ip-address-label>`
 
+
+.. _banishment_message:
 
 banishment_message
 ------------------
-When dealing with :ref:`Throttling Configuration <throttle-prefs-label>`
-you may chose a custom message to show users when they have reached the
-allowed page load frequency.
+
+Set a custom message to show throttled visitors. :ref:`Throttling must
+be enabled <enable_throttling>` and :ref:`banishment_type
+<banishment_type>` must be set to ``message``.
 
 ========= ===========
-Value     Behavior
+Value     Description
 ========= ===========
 ``text``  Custom message to show user
 ========= ===========
@@ -537,23 +536,23 @@ $config['banishment_message'] = 'You have exceeded the allowed page load frequen
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Throttling Preferences`: Custom Message
+Privacy --> Throttling Preferences`: :ref:`Custom Message
+<throttling-custom-message>`
 
+
+.. _banishment_type:
 
 banishment_type
 ---------------
-The :ref:`Banned Type <throttle-prefs-label>` specifies what action will
-be taken when throttling is enabled on your ExpressionEngine website.
 
-.. note::
-   If Throttling is enabled the default **Action to Take** is to send
-   404 headers.
+Set the system's method for handling throttled web requests.
 
 ============= ===========
 Value         Behavior
 ============= ===========
-``redirect``  Redirect the user to a specified URL
-``message``   Show the user a custom message
+``404``       Respond to the request with standard 404 headers **(default)**
+``redirect``  Redirect the user to a :ref:`specified URL <banishment_url>`
+``message``   Show the user a :ref:`custom message <banishment_message>`
 ============= ===========
 
 Example Usage::
@@ -563,28 +562,34 @@ $config['banishment_type'] = 'message';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Security and
-Privacy --> Throttling Preferences`: Action to Take
+Privacy --> Throttling Preferences`: :ref:`Action to Take
+<throttling-action-to-take>`
 
+
+.. _banishment_url:
 
 banishment_url
 --------------
-The :ref:`URL for Redirect <throttle-prefs-label>` specifies which URL
-to redirect to.
+
+Set a URL to serve as the redirect destination for throttled visitors.
+:ref:`Throttling must be enabled <enable_throttling>` and
+:ref:`banishment_type <banishment_type>` must be set to ``redirect``.
 
 ========= ===========
-Value     Behavior
+Value     Description
 ========= ===========
-``URL``   The URL to redirect to
+``URL``   Destination URL for throttled visitors
 ========= ===========
 
 Example Usage::
 
-$config['banishment_url'] = 'http://www.example.com';
+$config['banishment_url'] = 'http://www.yahoo.com';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Security and
-Privacy --> Throttling Preferences`: URL for Redirect
+Privacy --> Throttling Preferences`: :ref:`URL for Redirect
+<throttling-url-for-redirect>`
 
 
 banned_emails
@@ -1920,6 +1925,7 @@ $config['enable_sql_caching'] = "n";
 **Also found in CP:** :menuselection:`Admin --> Channel
 Administration --> Global Preferences`: Cache Dynamic Channel Queries
 
+.. _enable_throttling:
 
 enable_throttling
 -----------------
