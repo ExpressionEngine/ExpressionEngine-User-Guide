@@ -594,126 +594,105 @@ Privacy --> Throttling Preferences`: :ref:`URL for Redirect
 
 banned_emails
 -------------
-The :ref:`Banned Email Addresses <member-banned-email-label>` allows you
-specify any email addresses you wish to ban. You may specify full email
-addresses or use wildcards to specify partial email addresses. For
-example, ``_*@example.com``. Each address should be placed on a separate
-line.
+
+Specify email addresses to ban from site registration and login. Use
+wildcards for partial email addresses.
 
 ========= ===========
-Value     Behavior
+Value     Description
 ========= ===========
-``email`` Email addresses or wildcard domain
+``email`` Pipe-delimited list of email addresses and/or wildcard domains
 ========= ===========
 
 Example Usage::
 
-$config['banned_emails'] = 'user@example.com';
+$config['banned_emails'] = 'user@example.com|johndoe@example.com|*@spammydomain.com';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> User Banning`:
-Banned Email Addresses
+:ref:`Banned Email Addresses <member-banned-email-label>`
 
 
 banned_ips
 ----------
-The :ref:`Banned IP Addresses <member-banned-ip-label>` allow you to
-specify any IP addresses you wish to ban. You may specify full IP
-addresses or use wildcards to specify blocks of IP addresses. For
-example, 123.321.*. Each IP address should be placed on a separate line.
 
-====== ========
-Value  Behavior
-====== ========
-``IP`` IP address
-====== ========
+Specify IP addresses to ban from site registration and login. Use
+wildcards to ban blocks of IP addresses.
+
+====== ===========
+Value  Description
+====== ===========
+``IP`` Pipe-delimited list of IP addresses
+====== ===========
 
 Example Usage::
 
-$config['banned_ips'] = '123.321.*';
+$config['banned_ips'] = '123.456.789.1|123.321.*';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> User Banning`:
-Banned IP Address
+:ref:`Banned IP Address <member-banned-ip-label>`
 
 
 banned_screen_names
 -------------------
-The :ref:`Restricted Screen Names <member-banned-screename-label>` allow
-you to list screen names, preventing their use. This can be handy if you
-would like to reserve certain screen names for your own use.
+
+Specify screen names that cannot be used for member accounts, which can
+be handy for reserving certain screen names for your own use.
 
 ================ ===========
-Value            Behavior
+Value            Description
 ================ ===========
-``screen name``  Screen name or list of screen names to be restricted
+``screen name``  Pipe-delimited list of screen names to restrict
 ================ ===========
 
 Example Usage::
 
-$config['banned_ips'] = 'garfield';
+$config['banned_screen_names'] = 'Garfield|Snoopy|Hobbes';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> User Banning`: Restricted Screen Names
+**Also found in CP:** :menuselection:`Members --> User Banning`:
+:ref:`Restricted Screen Names <member-banned-screename-label>`
 
 
 banned_usernames
 ----------------
-The :ref:`Restricted Usernames <member-banned-username-label>` allow you
-to list usernames, preventing their use. This can be handy if you would
-like to reserve certain usernames for your own use.
 
-============ ========
-Value        Behavior
-============ ========
-``username`` Username or list of usernames to be restricted
-============ ========
+Specify usernames that cannot be used for member accounts, which can
+be handy for reserving certain usernames for your own use.
 
-Example Usage::
-
-$config['banned_ips'] = 'dsmith';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Members --> User Banning`: Restricted Usernames
-
-
-base_url
---------
-The :ref:`URL to the root directory of your site
-<general-config-url-root-label>` is the full URL to the folder
-containing your site's index page.
-
-======== ========
-Value    Behavior
-======== ========
-``URL``  URL to the root directory of your site
-======== ========
+================ ===========
+Value            Description
+================ ===========
+``username``     Pipe-delimited list of usernames to restrict
+================ ===========
 
 Example Usage::
 
-$config['base_url'] = 'http://www.example.com';
+$config['banned_usernames'] = 'garfield|snoopy|hobbes';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> General
-Configuration`: URL to the root directory of your site
+**Also found in CP:** :menuselection:`Members --> User Banning`:
+:ref:`Restricted Usernames <member-banned-username-label>`
 
 
 cache_path
 ----------
-Leave this BLANK unless you would like to set something other than the
-default system/cache/ folder.  Use a full server path with trailing
-slash.
 
-======== ========
-Value    Behavior
-======== ========
-``text`` Sets the server path to your cache folder
-======== ========
+Set the path to the system's cache directory. Leave blank to use the
+system default ``system/expressionengine/cache/``.
+
+.. note:: This directory must already exist.
+
+======== ===========
+Value    Description
+======== ===========
+``path`` Server path to cache directory
+======== ===========
 
 Example Usage::
 
@@ -722,14 +701,13 @@ $config['cache_path'] = '/path/to/cache/folder/';
 
 captcha_font
 ------------
-You can :ref:`use TrueType Font for CAPTCHA <captcha-notes-label>` on
-your ExpressionEngine website by default. To disable set the value to
-"n".
+
+Set whether TrueType fonts should be used for CAPTCHA images.
 
 ====== ========
 Value  Behavior
 ====== ========
-``y``  Default value, enables the use of TrueType Fonts
+``y``  Enables the use of TrueType fonts **(default)**
 ``n``  Disables use of TrueType fonts
 ====== ========
 
@@ -740,27 +718,30 @@ $config['captcha_font'] = 'n';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> CAPTCHA Preferences`: Use TrueType Font for CAPTCHA
+Privacy --> CAPTCHA Preferences`: :ref:`Use TrueType Font for CAPTCHA
+<captcha-use-truetype>`
 
 
 captcha_path
 ------------
-The :ref:`Server Path to you CAPTCHA Folder <captcha-notes-label>`.
 
-======== ========
-Value    Behavior
-======== ========
-``path`` Relative server path to CAPTCHA folder
-======== ========
+Set the path to the directory containing CAPTCHA images.
+
+======== ===========
+Value    Description
+======== ===========
+``path`` Server path to CAPTCHA directory
+======== ===========
 
 Example Usage::
 
-$config['captcha_path'] = '/var/www/html/example/images/captchas';
+$config['captcha_path'] = '/path/to/captcha/folder/';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> CAPTCHA Preferences`: Server Path to CAPTCHA Folder
+Privacy --> CAPTCHA Preferences`: :ref:`Server Path to CAPTCHA Folder
+<captcha-server-path>`
 
 
 captcha_rand
