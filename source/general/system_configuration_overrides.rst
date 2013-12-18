@@ -746,14 +746,16 @@ Privacy --> CAPTCHA Preferences`: :ref:`Server Path to CAPTCHA Folder
 
 captcha_rand
 ------------
-You may specify whether to :ref:`Add Random Number to CAPTCHA Word
-<captcha-notes-label>` or not. The default is "y".
+
+Specify whether to add a random three-digit number to the end of each
+generated CAPTCHA word. This makes it more difficult for scripts to
+guess or brute-force the form submission.
 
 ====== ========
 Value  Behavior
 ====== ========
-``y``  Default value, add a random number to CAPTCHA word
-``n``  Do not add a random number to CAPTCHA word
+``y``  Add random numbers to CAPTCHA words **(default)**
+``n``  Do not add random numbers to CAPTCHA words
 ====== ========
 
 Example Usage::
@@ -763,20 +765,21 @@ $config['captcha_rand'] = 'n';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> CAPTCHA Preferences`: Add Random Number to CAPTCHA Word
+Privacy --> CAPTCHA Preferences`: :ref:`Add Random Number to CAPTCHA
+Word <captcha-add-random-number>`
 
 
 captcha_require_members
 -----------------------
-:ref:`Require CAPTCHA with logged-in members <captcha-notes-label>`
-allows you to specify whether logged in members must enter in a CAPTCHA
-word or not.
+
+Specify whether to require logged-in members to pass CAPTCHA validation
+to post comments, assuming the CAPTCHA is already enabled for comments.
 
 ====== ========
 Value  Behavior
 ====== ========
-``y``  Require that logged-in users enter a CAPTCHA word before a form is submitted
-``n``  Default value, does not require a logged-in member to enter a CAPTCHA word
+``y``  Require logged-in members pass CAPTCHA validation
+``n``  Do not require logged-in members to pass CAPTCHA validation **(default)**
 ====== ========
 
 Example Usage::
@@ -786,18 +789,20 @@ $config['captcha_require_members'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> CAPTCHA Preferences`: Require CAPTCHA with logged-in members
+Privacy --> CAPTCHA Preferences`: :ref:`Require CAPTCHA with logged-in
+members <captcha-require-logged-in-members>`
 
 
 captcha_url
 -----------
-The :ref:`Full URL to CAPTCHA Folder <captcha-notes-label>`.
 
-======== ========
-Value    Behavior
-======== ========
-``URL``  Full URL to the CAPTCHA folder
-======== ========
+Set the full URL to the directory containing CAPTCHA images.
+
+======== ===========
+Value    Description
+======== ===========
+``URL``  Full URL to the CAPTCHA directory
+======== ===========
 
 Example Usage::
 
@@ -806,69 +811,73 @@ $config['captcha_url'] = 'http://www.example.com/images/captchas';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> CAPTCHA Preferences`: Full URL to CAPTCHA Folder
+Privacy --> CAPTCHA Preferences`: :ref:`Full URL to CAPTCHA Folder
+<captcha-full-url>`
 
 
 censor_replacement
 ------------------
-You may optionally specify a word or phrase to be used when
-:ref:`replacing censored words <censor-replace-label>`. For example, if
-you set "tisk tisk" as your replacement word, and "shucks" is in your
-censored list, then anytime "shucks" is used it will be replaced with
-"tisk tisk". If you do not set this preference, a pound symbol will be
-used for each character that is censored, so "shucks" would be converted
-to "######".
 
-======== ========
-Value    Behavior
-======== ========
-``word`` Word to be used as a replacement for censored words
-======== ========
+You may optionally specify a word or phrase to be used when replacing
+censored words. For example, if you set "tisk tisk" as your replacement
+word, and "shucks" is in your censored list, then anytime "shucks" is
+used it will be replaced with "tisk tisk". If you do not set this
+preference, a pound symbol will be used for each character that is
+censored, so "shucks" would be converted to "######".
+
+======== ===========
+Value    Description
+======== ===========
+``text`` Text to be used as a replacement for censored words
+======== ===========
 
 Example Usage::
 
-$config['censor_replacement'] = 'censored';
+$config['censor_replacement'] = 'tisk tisk';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Word Censoring`: Censoring Replacement Word
+Privacy --> Word Censoring`: :ref:`Censoring Replacement Word
+<censor-replace-label>`
 
 
 censored_words
 --------------
-You may list the words that you would like to :ref:`censor
-<censor-words-label>`. Wild cards are allowed by adding a _* to the
-beginning or end of a censored word. So, for example the wildcard test*
-would censor the words test, testing, and tester, while the wildcard
-``_*gress`` would censor the words progress and congress.
 
-======== ========
-Value    Behavior
-======== ========
-``word`` Word to be censored
-======== ========
+Specify a list of words to censor. Wildcards are allowed. For example,
+``test*`` would censor the words "test", "testing", and "tester", while
+``*gress`` would censor the words "progress" and "congress".
+
+======== ===========
+Value    Description
+======== ===========
+``word`` Pipe-delimited list of words to censor
+======== ===========
 
 Example Usage::
 
-$config['censored_words'] = 'blanket';
+$config['censored_words'] = 'dagnabbit|consarnit|golly gee willikers';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Word Censoring`: Censored Words
+Privacy --> Word Censoring`: :ref:`Censored Words <censor-words-label>`
 
 
 charset
 -------
-This determines which character set is used by default in various
-methods that require a character set to be provided.
 
-============ ========
-Value        Behavior
-============ ========
-``charset``  character set to be used
-============ ========
+Specify which character set for the system to use by default.
+
+.. warning:: Unless you have good reason and you know what you're doing,
+    leave this setting at its default value of ``UTF-8``.
+
+============ ===========
+Value        Description
+============ ===========
+``charset``  Character set to be used
+============ ===========
 
 Example Usage::
 
@@ -877,16 +886,16 @@ $config['charset'] = 'UTF-8';
 
 comment_edit_time_limit
 -----------------------
-The :ref:`Comment Editing Time Limit <comment-editing-time-label>`
-specifies the length of time (in seconds) that non-Superadmins have
-before comment editing is disallowed on the front end of the site. Set
-to 0 for no limit.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Length of time (in seconds)
-========== ========
+Set the length of time in seconds that members have to edit their
+comments on the front end of the site. Set to ``0`` for no limit.
+Members in the Super Admin group are exempt from this time limit.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Length of time in seconds
+=========== ===========
 
 Example Usage::
 
@@ -895,22 +904,22 @@ $config['comment_edit_time_limit'] = '120';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Comment`: Comment Editing Time Limit
+Comment`: :ref:`Comment Editing Time Limit <comment-editing-time-label>`
 
 
 comment_moderation_override
 ---------------------------
-:ref:`Moderate expired entries <comment-expired-comments-label>` forces
-moderation of comments once the Comment Expiration date for an entry is
-passed, rather than closing comments entirely. The existing moderation
-rules regarding whether members are exempt from moderation will be
-followed.
+
+By default, comments are no longer accepted for entries after their
+comment expiration date has passed. Set this preference to override that
+behavior and allow moderated comments on entries after comment
+expiration.
 
 ====== ========
 Value  Behavior
 ====== ========
-``y``  Forces moderation of comment instead of closing after expiration
-``n``  Default value, does not force moderation
+``y``  Allow *moderated* comments after comment expiration
+``n``  Do not allow any comments after comment expiration **(default)**
 ====== ========
 
 Example Usage::
@@ -920,25 +929,21 @@ $config['comment_moderation_override'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Comment`: Moderate expired entries
+Comment`: :ref:`Moderate expired entries
+<comment-expired-comments-label>`
 
 
 comment_word_censoring
 ----------------------
-:ref:`Word Censoring <censor-words-label>` normally applies to the
-entire site, affecting both channel entries and comments. The
-:ref:`force word censoring for comments <comment-force-censoring-label>`
-setting allows you to apply word censoring to comments, even when it is
-turn off for the site as a whole. The censored words and replacements
-are still determined by the Administration preferences, and if site-wide
-word censoring is enabled, comments will still be censored regardless of
-this setting.
+
+Apply word censoring to comments, even if censoring is not :ref:`enabled
+<enable_censoring>` system-wide.
 
 ====== ========
 Value  Behavior
 ====== ========
-``y``  Forces word censoring for comments
-``n``  Default value, does not force censoring for comments
+``y``  Enable censoring for comments
+``n``  Obey :ref:`system-wide setting <enable_censoring>` **(default)**
 ====== ========
 
 Example Usage::
@@ -948,40 +953,8 @@ $config['comment_word_censoring'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Comment`: Force word censoring for comments
-
-
-compress_output
----------------
-Setting :ref:`Enable GZIP Output <output-enable-gzip-label>` to "Y" will
-cause the web server to send out your pages in the compressed gzip
-format. Browsers will automatically decompress the pages and display
-them as normal; there will be no visible difference to your users apart
-from a faster page loading time.
-
-In order for this option to work your server must support the gzip
-format. Additionally, the browser being used to view your site must also
-support pages served in the gzip format. Many modern browser support
-this, but not all do, so if you are concerned with wide-spread
-compatibility you may want to set this to "n". (Also note that while
-Internet Explorer does support this feature, it also contains bugs in
-its implementation which can have adverse consequences.)
-
-========= ========
-Value     Behavior
-========= ========
-``y``     When enabled, your site will be shown in a compressed format for faster page loading
-``n``     Default value, does not compress output
-========= ========
-
-Example Usage::
-
-$config['compress_output'] = 'n';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: Enable GZIP Output
+Comment`: :ref:`Force word censoring for comments
+<comment-force-censoring-label>`
 
 
 cookie_domain
@@ -1624,6 +1597,8 @@ $config['enable_avatars'] = "n";
 **Also found in CP:** :menuselection:`Members --> Preferences`: Enable Avatars
 
 
+.. _enable_censoring:
+
 enable_censoring
 ----------------
 :ref:`Enable Word Censoring <censor-words-enable-label>` enables or
@@ -1993,6 +1968,37 @@ Value      Behavior
 Example Usage::
 
 $config['global_xss_filtering'] = "y";
+
+
+gzip_output
+-----------
+
+Set the system to serve compressed front-end pages for faster load times
+as long as the requesting browser supports gzip compression, PHP's zlib
+extension is loaded, and the web server is not already serving
+compressed pages.
+
+.. note:: This setting only controls whether ExpressionEngine itself
+    serves up compressed front-end pages. If the web server is
+    configured to serve compressed pages, this setting will have no
+    effect.
+
+========= ========
+Value     Behavior
+========= ========
+``y``     Compress front-end pages if possible
+``n``     Do not compress front-end pages **(default)**
+========= ========
+
+Example Usage::
+
+$config['gzip_output'] = 'y';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> System
+Administration --> Output and Debugging`: :ref:`Enable GZIP Output
+<output-enable-gzip-label>`
 
 
 hidden_template_indicator

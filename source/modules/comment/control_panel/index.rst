@@ -72,6 +72,7 @@ thus found in the Comment Posting Preferences section of the
 :doc:`Channel Preferences
 </cp/admin/channels/channel_edit_preferences>`.
 
+
 .. _comment-force-censoring-label:
 
 Force word censoring for comments
@@ -79,30 +80,29 @@ Force word censoring for comments
 
 :doc:`Word censoring </cp/admin/word_censoring>` normally applies to the
 entire site, affecting both channel entries and comments. This setting
-allows you to apply word censoring to comments, even when it is turn off
-for the site as a whole. The censored words and replacements are still
-determined by the Administration preferences, and if site-wide word
-censoring is enabled, comments will still be censored regardless of this
-setting.
+allows you to apply word censoring to comments, even when it is not
+enabled system-wide.
+
 
 .. _comment-expired-comments-label:
 
 Moderate expired comments
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Forces moderation of comments once the Comment Expiration date for an
-entry is passed, rather than closing comments entirely. The existing
-moderation rules regarding whether members are exempt from moderation
-will be followed.
+By default, comments are no longer accepted for entries after their
+comment expiration date has passed. Select this preference to override
+that behavior and allow moderated comments on entries after comment
+expiration.
+
 
 .. _comment-editing-time-label:
 
 Comment Editing Time Limit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This specifies the length of time (in seconds) that non-Superadmins have
-before comment editing is disallowed on the front end of the site. Set
-to 0 for no limit.
+Set the length of time in seconds that members have to edit their
+comments on the front end of the site. Set to "0" for no limit.
+Members in the Super Admin group are exempt from this time limit.
 
 Editing Comments
 ----------------
