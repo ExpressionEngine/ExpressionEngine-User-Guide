@@ -138,6 +138,8 @@ features that can be disabled. ::
    and the :doc:`category archives </modules/channel/category_archive>`
    tag.
 
+.. _caching_drivers:
+
 Caching Drivers
 ---------------
 
@@ -149,8 +151,8 @@ bottleneck due to disk I/O, or may cause issues in some Network File
 System instances, in which case you may want to use a memory-based
 caching driver.
 
-ExpressionEngine currently supports APC, Memcached and Redis for
-memory-based caching. You can set which driver is being used via the
+ExpressionEngine currently supports Memcached and Redis for memory-based
+caching. You can set which driver is being used via the
 ``cache_driver`` (link) hidden config.
 
 A backup driver (link) can also be specified in the case your primary
