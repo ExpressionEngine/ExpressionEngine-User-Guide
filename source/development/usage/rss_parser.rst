@@ -3,7 +3,7 @@ RSS Parser Class
 ################
 
 The RSS Parser Class is singularly used as a factory to create
-`SimplePie <http://simplepie.org>`_ objects.
+`SimplePie objects <http://simplepie.org/api/class-SimplePie.html>`_.
 
 .. method:: create($url[, $duration = 180[, $cache_name = '']])
 
@@ -18,6 +18,13 @@ The RSS Parser Class is singularly used as a factory to create
     );
 
     // Perform operations on SimplePie object...
+    $offset = 0;
+    $limit = 5;
+    foreach ($feed->get_items($offset, $limit) as $index => $item)
+    {
+      $title = $item->get_title();
+      $content = $item->get_content();
+      ...
 
   :param string $url: URL of the RSS feed to parse
   :param int $duration: (*optional*) Length of the cache in minutes
