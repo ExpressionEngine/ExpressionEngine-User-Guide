@@ -5,6 +5,123 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.7.3
+-------------
+
+Release Date: December 10, 2013
+
+- General Changes:
+
+  - Added :ref:`new parameters <relationship_tag_params>` (category,
+    show_expired, start_on, stop_before) to the relationship tag.
+  - Added "random" option to Grid's ``orderby``
+    :ref:`parameter <grid_tag_params>`.
+  - Added ``field_row_index`` and ``field_row_count``
+    :ref:`variables <grid_tag_variables>` to Grid.
+
+- Bug Fixes:
+
+  - Fixed a bug (#19772) where saving a Channel Form entry that excludes
+    the channel's Grid field can wipe out the data in that field.
+  - Fixed a bug where an error may appear on a member's public profile
+    page when the member's timezone wasn't set.
+  - Fixed a bug (#19797) where multiple channels using the same status
+    group would cause Channel Form default status settings display
+    incorrectly.
+  - Fixed a bug (#19824) where some fieldtypes used outside of the Channel
+    content type depended on a Typography library that wasn't loaded.
+  - Fixed a bug (#19852) where Grid couldn't exclude a single row ID.
+  - Fixed a bug (#19871) where ``{switch=}`` in Grid stared output with
+    the second option instead of the first.
+  - Fixed a bug (#19870) where clicking Select All in template access
+    options would not work.
+  - Fixed a bug (#19873) where PHP might get set to the wrong timezone.
+  - Fixed a bug (#19865) where Grid column name auto-population would not
+    work as expected upon validation error.
+  - Fixed a bug where an invalid date string may throw an uncaught
+    exception on some versions of PHP 5.2.
+  - Fixed a bug (#18176) where an extraneous ``stripslashes`` was causing
+    inconsistencies between Channel Forms and the control panel.
+  - Fixed a bug (#19301) where the status in the Channel Form statuses
+    loop would always be set to current set status for existing entries.
+  - Fixed a bug (#19037) where email addresses were being truncated at
+    varying lengths. All email addresses are now stored at 75 characters.
+    If you are using multiple email addresses for admin communication in
+    Simple Commerce you will need to modify those settings. We suggest
+    using Google Groups or a similar group email solution for contacting
+    multiple admins.
+  - Fixed a bug (#17434) where the Wiki themes had hardcoded language.
+  - Fixed a bug (#18114) where logout links do not have an XID when
+    Secure Mode is enabled.
+  - Fixed a bug (#19147) where comments were not included in an IP Search
+    of members.
+  - Fixed a bug (#19145) where the actions library did not support the
+    magic ``__call`` method.
+  - Fixed a bug (#19392) by removing a redundant line from our suggested
+    .htaccess file.
+  - Fixed a bug (#19840) where the update button on the edit Wiki template
+    screen returned to the list of templates.
+  - Fixed a bug (#19837) in the channel entry form where file fields could
+    be lost on edit if the image field was changed.
+  - Fixed a bug (#19243) where searching for phrases via the Entry Title
+    Live Search would fail if the title had punctuation but the search
+    phrase did not.
+  - Fixed a bug (#17800) where resizing an image from the image HTML
+    button would insert the image with the old height and width.
+  - Fixed a bug where the ``{comment_total}`` channel entries tag would
+    sometimes be inaccurate.
+  - Fixed a typo (#19800) where there was no space between properties in
+    an HTML input.
+  - Fixed a bug (#19843) where the Markdown plugin would cause an error if
+    the typography library wasn't loaded.
+  - Fixed a bug where Channel Form ``{categories}`` tags would not adhere to
+    the ``show_group`` parameter.
+  - Fixed a bug where manually uninstalling and reinstalling the
+    Relationship fieldtype would not have the correct relationship table
+    schema.
+  - Fixed a bug (#19782) where custom date fields in the channel entry
+    form could have invalid default dates.
+  - Fixed a bug (#19826) in the channel entry form where inline errors
+    would result in an invalid action message upon resubmitting the form.
+  - Fixed a bug (#19847) where some forms in the Member Profile templates
+    were being rejected by the secure mode check.
+  - Fixed a bug in the Agile themes member templates where the password
+    reset page was missing.
+  - Fixed a bug (#19868) in the search module where word searches failed
+    to return a result if the word was the very last word in the field.
+  - Fixed a bug (#19828) in the search module where invalid searches were
+    not treated consistently.
+  - Fixed a bug (#19885) where the Secure Mode check could fail after
+    image upload, though this had no practical impact on content entry.
+  - Fixed a bug (#19891) where improper database configuration settings
+    resulted in a white screen rather than the proper error message.
+  - Fixed a bug (#19889) where a PHP error could occur when sending
+    attachments using ``CI_Email``.
+  - Fixed a bug in the control panel's table sorting filter where an AJAX
+    call was run twice, resulting in an invisible secure mode failure the
+    second time.
+  - Fixed a bug (#19746) where a PHP error could occur if two template
+    groups with the same name exist.
+  - Fixed a bug (#19846) where a JavaScript error occurred in the control
+    panel when filtering content by a custom date range.
+  - Fixed a bug (#19443) where Relationship tags did not display category
+    custom field data.
+  - Fixed a bug (#19896) in the Simple Commerce module where encrypted
+    subscription links went to the single purchase PayPal checkout.
+  - Fixed a bug (#19879) in the Channel Form where including Relationship
+    fields caused a JavaScript error and the fields were not sortable.
+  - Fixed a bug where the Channel Form could only upload files to the
+    current site's directories.
+  - Fixed a bug in the frontend member list filter where the form
+    submission always failed the Secure Mode check.
+  - Fixed a bug (#19799) where Relationships would throw a PHP error on
+    the front-end if the PHP version was less than 5.2.9.
+  - Fixed a bug (#19844) where Simple Commerce purchases were not being
+    recorded after PayPal completed transactions.
+  - Fixed a bug where a language key would be exposed when viewing Admin >
+    General Configuration with items present in the Developer Log.
+
+
 Version 2.7.2
 -------------
 
@@ -71,6 +188,9 @@ Release Date: October 8, 2013
 
 - Developers:
 
+  - Made ``grid_row_id`` available for access via the ``$settings``
+    class property for Grid fieldtypes when calling ``replace_tag()``
+    and ``pre_process()``.
   - Fixed a bug (#19427) where objects could not be passed through to
     views.
   - Fixed a bug where the Grid field would send the wrong row ID to
@@ -148,7 +268,7 @@ Release Date: September 24, 2013
   - Fixed a bug (#19707) where the class parameter was not working on
     Channel Form.
   - Fixed a bug (#19702) where some member profile forms may show an
-    error upon submission when Secure Forms is turned on.
+    error upon submission when Secure Mode is turned on.
   - Fixed a bug where the search parameter wasn't working in Channel
     Calendar.
   - Fixed bugs (#17681, #16840) in Channel Forms where a file upload
@@ -1576,7 +1696,7 @@ Release Date: Jan 24, 2012
   - Fixed a bug (#16356) where http authentication did not always work
     on IIS servers.
   - Fixed a bug (#16562) where "view all posts by this member" link
-    resulted in a permission error when using secure forms.
+    resulted in a permission error when using Secure Mode.
   - Fixed a bug (#16504) where multiple versions of the same email on a
     page were not decoded correctly.
   - Fixed a bug (#16759) where categories with lots of channel fields

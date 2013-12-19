@@ -555,5 +555,3 @@ all of the new language keys, separated by the each language file that
 contains changes. To update your language pack, you can download this
 text file, make the changes, and simply copy the new keys to the
 appropriate language files.
-
-:ref:`Return to Update Page <update_cleanup>`

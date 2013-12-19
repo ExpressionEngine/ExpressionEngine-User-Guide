@@ -8,7 +8,7 @@ use for this is to create some display options in a form on your page
 that your visitors can use to select their preferred page view.
 
 .. note:: This feature will only work if page caching is turned OFF for
-	the template in which it is being used.
+    the template in which it is being used.
 
 Every :ref:`Parameter <channel_entries_parameters>` available to the
 channel tag can be set dynamically. However, as a security precaution
@@ -17,7 +17,7 @@ given channel tag, like this
 
 ::
 
-	{exp:channel:entries  dynamic_parameters="orderby|limit|sort"}
+  {exp:channel:entries  dynamic_parameters="orderby|limit|sort"}
 
 In the above example you would be allowing the orderby, limit, and sort
 parameters. Note that the allowed parameters are being separated with a
@@ -33,26 +33,26 @@ being used.
 
 ::
 
-	<form method="post" action="{path='template_group/template_name'}">
-	    <select name="orderby">
-	        <option value="date">Sort By:</option>
-	        <option value="date">Date</option>
-	        <option value="title">Title</option> <option value="comment_total">Most Comments</option>
-	    </select>
-	    <select name="sort">
-	        <option value="asc">Order In:</option>
-	        <option value="asc">Ascending</option>
-	        <option value="desc">Descending</option>
-	    </select>
-	    <select name="limit">
-	        <option value="10">Result Limit:</option>
-	        <option value="10">10</option>
-	        <option value="20">20</option>
-	        <option value="30">30</option>
-	    </select>
+  <form method="post" action="{path='template_group/template_name'}">
+      <select name="orderby">
+          <option value="date">Sort By:</option>
+          <option value="date">Date</option>
+          <option value="title">Title</option> <option value="comment_total">Most Comments</option>
+      </select>
+      <select name="sort">
+          <option value="asc">Order In:</option>
+          <option value="asc">Ascending</option>
+          <option value="desc">Descending</option>
+      </select>
+      <select name="limit">
+          <option value="10">Result Limit:</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+      </select>
 
-	    <input type="submit" value="Go!" />
-	</form>
+      <input type="submit" value="Go!">
+  </form>
 
 .. note:: If you have Secure Forms turned ON, you will need to add a
   hidden input for the XID. ::
@@ -60,4 +60,4 @@ being used.
     <input type="hidden" name="XID" value="{XID_HASH}" />
 
 .. note:: If you have pagination links on your page they will not retain
-	the page layout options created dynamically using this feature.
+    the page layout options created dynamically using this feature.

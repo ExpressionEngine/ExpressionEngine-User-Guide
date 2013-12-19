@@ -601,6 +601,40 @@ Tag Reference
    :local:
    :depth: 1
 
+.. _relationship_tag_params:
+
+Tag Parameters
+==============
+.. contents::
+   :local:
+   :depth: 2
+
+The following parameters are available to all looping relationship tags, allowing
+you to further filter or sort the entries being retrieved.  They function the
+same as they do when used on the ``{exp:channel:entries}`` tag.  The available
+parameters are:
+
+* author_id
+* backspace
+* category
+* channel
+* entry_id
+* group_id
+* offset
+* orderby
+* show_expired
+* show_future_entries
+* sort
+* start_on
+* status
+* stop_before
+* url_title
+* username
+
+Some relationship tags may have additional parameters available.  These are
+included in the usage instructions below.
+
+
 Accessing Children
 ==================
 .. contents::
@@ -667,7 +701,7 @@ taking a single child entry::
 		field1					Text
 		field2					Text
 
-You would access the child entry in your tempalte using the following syntax::
+You would access the child entry in your template using the following syntax::
 
 	{exp:channel:entries channel="parentChannel"}
 		{title} - {field1} - {field2}
@@ -677,26 +711,6 @@ You would access the child entry in your tempalte using the following syntax::
 	{/exp:channel:entries}
 
 No looping occurs.
-
-Parameters
-----------
-
-The following parameters are available on any looping child tag in order to
-further filter or sort the entries being retrieved.  They function the same
-as they do when used on the ``{exp:channel:entries}`` tag.  The available
-parameters are:
-
-* backspace
-* offset
-* orderby
-* sort
-* entry_id
-* author_id
-* channel
-* group_id
-* url_title
-* username
-* status
 
 
 Accessing Siblings
@@ -747,51 +761,19 @@ The syntax is::
 
 Parameters
 ----------
-.. contents::
-   :local:
-   :depth: 1
 
-The following parameters are available on the ``{siblings}`` tag in order to
-further filter or sort the entries being retrieved.  They function the same
-as they do when used on the ``{exp:channel:entries}`` tag.  The available
-parameters are:
+In addition to the standard parameters, the following parameter may be used in
+this tag:
 
-* backspace
-* offset
-* orderby
-* sort
-* entry_id
-* author_id
-* channel
-* group_id
-* url_title
-* username
-* status
+field
++++++
 
-In addition, the following parameters may be used:
-
-field -- Required
-+++++++++++++++++
-
-This is a required parameters. Use the ``field`` parameter to specify which
-field in the parent entry we should be pulling the siblings from. The syntax
-is::
+There can be multiple relationship fields in a field group, thus child entries
+may be related to the same parent via different fields.  Use the ``field``
+parameter to specify which field in the parent entry we should be pulling the
+siblings from. The syntax is::
 
     {siblings field="relationship_field"}
-
-
-channel
-+++++++
-
-Since an entry can have multiple parent entries, we may need to specify which
-channel should be considered the parent when pulling an entry's siblings.  To
-this, use the channel parameter::
-
-    {siblings channel="parentChannel" field="relationship_field"}
-
-This will declare that we are looking for siblings of the current entry using
-``ParentChannel`` as the parent.
-
 
 Accessing Parents
 =================
@@ -840,49 +822,46 @@ the following syntax::
 
 Parameters
 ----------
-.. contents::
-   :local:
-   :depth: 1
 
-The following parameters are available on the ``{parents}`` tag in order to
-further filter or sort the entries being retrieved.  They function the same
-as they do when used on the ``{exp:channel:entries}`` tag.  The available
-parameters are:
+In addition to the standard parameters, the following parameter may be used in
+this tag:
 
-* backspace
-* offset
-* orderby
-* sort
-* entry_id
-* author_id
-* channel
-* group_id
-* url_title
-* username
-* status
+field
++++++
 
-In addition, the following parameters may be used:
-
-field -- Required
-+++++++++++++++++
-
-This is a required parameter. Use the ``field`` parameter to specify which
-field in the parent entry we should be checking for our child. The syntax is::
+There can be multiple relationship fields in a field group, and thus an entry
+may be selected as a child in multiple fields. Use the ``field`` parameter to
+specify which field in the parent entry we should be checking for our child.
+The syntax is::
 
     {parents field="relationship_field"}
 
+Namespacing Variables
+=====================
 
-channel
-+++++++
+Any variable available to the channel entries tag can be used inside a
+relationship tag pair.  Use prefixes to specify which entry or set of entries
+the variable belongs to::
 
-Since an entry can have multiple parent entries in multiple channels,
-potentially with the same field, we may need to specify which channel we want
-to examine for parents. To this, use the channel parameter::
+	{exp:channel:entries channel="childChannel"}
 
-    {parents channel="parentChannel" field="relationship_field"}
+		{parents}
 
-This lets us declare which channel we want to look for parent entries in.  Only
-that channel will be examined.
+			{if parents:count == "1"}
+				<h3>Parents</h3>
+			{/if}
+
+			{parents:title} - {parents:field1} - {parents:field2}
+
+			{if parents:no_results}
+				No parent entries
+			{/if}
+
+			{parents:switch="one|two"}
+
+		{/parents}
+
+	{/exp:channel:entries}
 
 Grid Compatibility
 ------------------

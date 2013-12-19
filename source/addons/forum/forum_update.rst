@@ -68,6 +68,7 @@ Step 5: Version Specific Notes
 Please view the update notes that apply to any versions that are newer
 than the version you have been running.
 
+-  :doc:`Version Notes 3.1.14 <forum_update_notes_3.1.14>`
 -  :doc:`Version Notes 3.1.5 <forum_update_notes_3.1.5>`
 -  :doc:`Version Notes 3.1.4 <forum_update_notes_3.1.4>`
 -  :doc:`Version Notes 3.1.3 <forum_update_notes_3.1.3>`

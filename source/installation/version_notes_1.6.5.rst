@@ -20,7 +20,3 @@ The language file for this extension will already be updated if you have
 followed the instructions on updating your language folder, but you will
 need to upload the ext.cp\_jquery.php file from the download to your
 /system/extensions/ folder.
-
-:ref:`Return to Update Page <update_cleanup>`
-
-

@@ -39,6 +39,8 @@ template code may look like this::
 Grid has a number of parameters and other variables available in order
 to get the information you need out of it.
 
+.. _grid_tag_params:
+
 Parameters
 ==========
 
@@ -116,6 +118,7 @@ orderby=
 
 Allows the output of the tag pair to be ordered by a specific column,
 defaults to row order as set on the channel entry publish form.
+Entering ``random`` will return the rows in a random order.
 
 row\_id=
 --------
@@ -155,6 +158,8 @@ sort=
 Specifies the direction of the sorting of the tag output. Defaults
 to ascending.
 
+.. _grid_tag_variables:
+
 Variables
 =========
 
@@ -173,6 +178,24 @@ The "count" out of the current rows being displayed. If five rows
 are being displayed, then for the fourth entry the ``count`` variable
 would have a value of "4".
 
+field_row_count
+---------------
+
+::
+
+  {gallery:field_row_count}
+
+The count of the row inside the field regardless of tag output.
+
+field_row_index
+---------------
+
+::
+
+  {gallery:field_row_index}
+
+The index of the row inside the field regardless of tag output.
+
 field\_total\_rows
 ------------------
 
@@ -180,8 +203,7 @@ field\_total\_rows
 
   {gallery:field_total_rows}
 
-The total number of rows in the field regardless of current tag output
-criteria.
+The total number of rows in the field regardless of tag output criteria.
 
 index
 -----
@@ -190,7 +212,7 @@ index
 
   {gallery:index}
 
-The count of the rows as above, but starting at zero.
+The count of the rows but starting at zero.
 
 prev\_row
 ---------
@@ -215,6 +237,15 @@ next\_row
 
 Used as a tag pair within the parent Grid field tag pair, provides
 access to data in the next row in the dataset.
+
+row_id
+------
+
+::
+
+  {gallery:row_id}
+
+The database ID of the current row.
 
 switch=
 -------

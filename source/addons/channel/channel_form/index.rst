@@ -864,23 +864,18 @@ context of your form.
 Allowing Guests to Post Entries
 -------------------------------
 
-In order to allow guests to use your Channel Entry Form, you must
-first take a few steps to set up.
+Allowing guest posts is controlled in the Channel From settings at
+:menuselection:`Admin --> Channel Administration --> Channel Form`.
 
-#. Create a new member group (optional). You may use an existing member
-   group if you prefer, but you are advised to create a new member group
-   with *very* limited privileges.
-#. Edit the member group. Adjust the member group's Channel Posting
-   Privileges and Channel Assignment.
-#. Create a new member (optional). You may use an existing member if you
-   prefer.
-#. Select this member for the channel you're working with in the
-   channel form settings. OR, note the member id, and use that as the
-   ::
+To allow guests to post in a certain channel, locate the options for
+"Allow Guest Posts" next to the channel you want to allow guest posts
+for, and choose "Yes".
 
-       logged_out_member_id
+You can optionally require the guest to pass a captcha before they
+submit the Channel Form by choosing "Yes" under "Guest Captcha".
 
-   parameter of your entry form.
+Finally, you can optionally choose an author that entries entered as
+guests appear as authored by under Guest Author.
 
 ********
 Examples

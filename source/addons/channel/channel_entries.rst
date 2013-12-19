@@ -15,13 +15,14 @@ create and edit via your Control Panel's :menuselection:`Publish` section.
 It's the most powerful tag in ExpressionEngine, and the most commonly
 used since its main function is to retrieve and display your site's content.
 
-The Channel Entries tag can display both multi-entry and
-single-entry content - that is, several entries on a page, or one
-specific one (it dynamically adjusts its output based on the URL
-request). It can also show entries from specific categories, specific
-days, monthly archives, permalinks, and more.
+The Channel Entries tag can display both multi-entry and single-entry content -
+that is, several entries on a page, or one specific entry. By default, Channel
+Entries will use :ref:`information in the URL <entries-and-other-things>` 
+to retrieve the right content. By using available parameters and variables,
+Channel Entries can display content from categories, specific days, monthly 
+archives, and more.
 
-Here is a basic example of how this tag might be used:
+Let's look at a basic Channel Entries tag example:
 
 ::
 
@@ -31,9 +32,9 @@ Here is a basic example of how this tag might be used:
 	{/exp:channel:entries}
 
 In the above example, everything between the opening and closing
-exp:channel:entries tags is repeated 10 times (once for each entry in
-the "News" channel). {title} is replaced with the Title of each entry,
-and {body} is replaced with the content entered into the "Body" field
+``{exp:channel:entries}`` tags is repeated 10 times, once for each entry returned
+from the "News" channel. ``{title}`` is replaced with the Title of each entry,
+and ``{body}`` is replaced with the content from the "Body" field
 of each entry.
 
 .. _channel_entries_parameters:
@@ -49,62 +50,63 @@ Parameters
 author\_id=
 -----------
 
-::
+The ``author_id=`` parameter will limit the returned entries to the specified
+Member ID::
 
 	author_id="1"
 
-
-This parameter limits the query by the member ID of the entry's author.
-You can use the pipe character to query by multiple author IDs::
+Use the pipe delimiter to specify multiple Member IDs::
 
 	author_id="1|2|3"
 
-Or you can add "not" to exclude author IDs
-
-::
+Modify the parameter value using ``not`` to exclude Member IDs::
 
 	author_id="not 1|2|3"
 
-You can also use the constant "CURRENT\_USER" to show entries from only the currently logged in user.
-
-
-::
+Use the ``CURRENT_USER`` constant to limit entries to the
+currently logged-in user::
 
     author_id="CURRENT_USER"
 
+.. note:: ``CURRENT_USER`` will limit Channel Entries to return entries authored
+	by the currently logged-in user. Users who are not logged-in will not see any
+	output.
 
-This allows each logged-in user to get only their entries. Users who are
-not logged in won't see anything. Alternatively, you can use the
-constant "NOT\_CURRENT\_USER" to show entries **except** from the
-currently logged in user. ::
+Use the ``NOT_CURRENT_USER`` constant to limit entries **excluding** the currently
+logged in user::
 
 	author_id="NOT_CURRENT_USER"
 
 backspace=
 ----------
 
-::
+The ``backspace=`` parameter will remove characters, including spaces and line
+breaks, from the last iteration of the tag pair::
 
 	backspace="7"
 
+For example, if you use a ``<br />`` element after each entry, Channel Entries
+will output this markup::
 
-Backspacing removes characters (including spaces and line breaks) from
-the last iteration of the loop. For example, if you put a <br /> tag
-after each entry you'll have this::
+	Entry 1<br />
+	Entry 2<br />
+	Entry 3<br />
 
-	Entry 1<br />          Entry 2<br />  Entry 3<br />
+However, you may not want the ``<br />`` element after the last entry. Count the
+number of characters, including spaces and line breaks and use the result as the
+value for the parameter. The example ``<br />`` element includes 6 characters and
+a line break, for a total of 7::
 
-You might, however, not want the <br /> tag after the final item. Simply
-count the number of characters (including spaces and line breaks) you
-want to remove and add the backspace parameter to the tag. The <br />
-tag has 6 characters plus a new line character, so you would do this::
-
-	{exp:channel:entries backspace="7"}    {title}<br /> {/exp:channel:entries}
+	{exp:channel:entries backspace="7"}
+		{title}<br />
+	{/exp:channel:entries}
 
 
-That will produce code like this::
+Using ``backspace=``, Channel Entries will output this markup::
 
-	   Entry 1<br />             Entry 2<br />        Entry 3
+	Entry 1<br />
+	Entry 2<br />
+	Entry 3
 
 cache=, refresh=
 ----------------

@@ -21,7 +21,7 @@ Here you may specify the type of Template:
 
 -  **Webpage**: This is the most common type of Template. Unless you
    specifically need one of the other two types you should use this one.
--  **CSS Stylesheet**: This type is used for Stylesheets. It tells
+-  **CSS**: This type is used for Stylesheets. It tells
    ExpressionEngine to serve the Template as "text/css" MIME type.
    Further, the Template will *not* be parsed for EE Tags like normal.
    The Template is served "as-is".
