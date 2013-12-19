@@ -15,7 +15,7 @@ You **must** include both the template group and the template name in
 the embed tag.
 
 By default, you cannot use embeds inside of Forum templates. See
-:doc:`Other Features </modules/forum/other_features>` for
+:doc:`Other Features </addons/forum/other_features>` for
 instructions on running the forums through regular templates.
 
 .. _embed_variables:
@@ -92,7 +92,7 @@ Notes
    processed and included, which means you cannot break up tags between
    different templates and embed them in pieces.
 -  If you are using the Multiple Site Manager, you can embed templates
-   from one site into another site. Details can be found here: 
-   :ref:`Multiple Site Manager Variables and Parameters 
+   from one site into another site. Details can be found here:
+   :ref:`Multiple Site Manager Variables and Parameters
    <msm_code_embedding>`
 

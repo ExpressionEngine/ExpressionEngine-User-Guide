@@ -177,7 +177,7 @@ Send to Mailing List
 ~~~~~~~~~~~~~~~~~~~~
 
 You may select one or more of your existing mailing lists as recipients
-for the email. See the :doc:`/modules/mailinglist/index` section of the
+for the email. See the :doc:`/addons/mailinglist/index` section of the
 Modules area for more information on mailing lists. Mailing list emails
 are sent as regular recipients.
 
