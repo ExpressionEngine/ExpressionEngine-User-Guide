@@ -427,7 +427,7 @@ your URLs when determining whether to show a 404 page, since these segments will
 correlate to a Template Group and Template name (which represent your site's
 "pages"). Anything beyond the first two segments can not be used to show a 404
 page (with one notable exception, using the `require\_entry=
-<../../../modules/channel/parameters.html#par_req_entry>`_ parameter).
+<../../../addons/channel/parameters.html#par_req_entry>`_ parameter).
 
 For an explanation regarding how ExpressionEngine interprets your URLs, please
 see `ExpressionEngine URLs <../../../general/urls.html>`_ page.
