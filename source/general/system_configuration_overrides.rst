@@ -980,30 +980,30 @@ Privacy --> Cookie Settings`: Cookie Domain
 
 cookie_path
 -----------
-The :ref:`Cookie Path <cookie-path-label>` is an optional setting. You
-will only need to set this if you require a specific server path for
-your cookies. If you run multiple installations, or have your
-installation in a lower folder you can specify a folder from which to
-make the cooke available. If you set the path to /joe/, the cookie will
-only be available in the "joe" folder and any subdirectories of it. It
-will not be available in directories above /joe/. The vast majority of
-people will leave this setting blank.
+
+Optionally specify a cookie path. When a cookie path is set, the browser
+will only share cookies with ExpressionEngine when the beginning of the
+URL path matches the cookie path. For example, if the cookie path is set
+to ``/blog/``, a cookie for the domain ``example.com`` will only be sent
+by the browser if the URL begins with ``http://example.com/blog/``. This
+can be useful if you have ExpressionEngine installed in a sub-directory
+and want to ensure that only that particular installation has access to
+the cookies it sets.
 
 ========= ========
 Value     Behavior
 ========= ========
-``path``  Relative path to cookie folder on your ExpressionEngine web
-server.
+``path``  Restricts cookie sharing to pages with matching URL paths
 ========= ========
 
 Example Usage::
 
-$config['cookie_path'] = '/folder/';
+$config['cookie_path'] = '/blog/';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Cookie Settings`: Cookie Path
+Privacy --> Cookie Settings`: :ref:`Cookie Path <cookie-path-label>`
 
 
 cookie_prefix
@@ -1976,7 +1976,8 @@ gzip_output
 Set the system to serve compressed front-end pages for faster load times
 as long as the requesting browser supports gzip compression, PHP's zlib
 extension is loaded, and the web server is not already serving
-compressed pages.
+compressed pages. It's a good idea to enable this setting in most
+production environments.
 
 .. note:: This setting only controls whether ExpressionEngine itself
     serves up compressed front-end pages. If the web server is

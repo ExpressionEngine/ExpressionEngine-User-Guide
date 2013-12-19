@@ -8,6 +8,7 @@ Cookie Settings
 This section of the Control Panel allows you to define cookie settings
 for your website.
 
+
 .. _cookie-domain-label:
 
 Cookie Domain
@@ -29,18 +30,21 @@ set that here as well:
 
 .subdomain.example.com
 
+
 .. _cookie-path-label:
 
 Cookie Path
 ~~~~~~~~~~~
 
-This is an optional setting. You will only need to set this if you
-require a specific server path for your cookies. If you run multiple
-installations, or have your installation in a lower folder you can
-specify a folder from which to make the cooke available. If you set the
-path to /joe/, the cookie will only be available in the "joe" folder and
-any subdirectories of it. It will not be available in directories above
-/joe/. The vast majrity of people will leave this setting blank.
+Optionally specify a cookie path. When a cookie path is set, the browser
+will only share cookies with ExpressionEngine when the beginning of the
+URL path matches the cookie path. For example, if the cookie path is set
+to ``/blog/``, a cookie for the domain ``example.com`` will only be sent
+by the browser if the URL begins with ``http://example.com/blog/``. This
+can be useful if you have ExpressionEngine installed in a sub-directory
+and want to ensure that only that particular installation has access to
+the cookies it sets.
+
 
 .. _cookie-prefix-label:
 
