@@ -959,14 +959,48 @@ Comment`: :ref:`Force word censoring for comments
 
 cookie_domain
 -------------
-The :ref:`Cookie Domain <cookie-domain-label>` variable allows you to
-set your cookie domain.
 
-========= ========
-Value     Behavior
-========= ========
-``text``  Sets domain for site-wide cookies
-========= ========
+Optionally specify a domain the cookie is available to. By default, the
+exact hostname of the requested page is set as the cookie domain. For
+example, if the page at ``http://www.example.com/blog/an-entry-title``
+is loaded and the cookie domain is left blank in ExpressionEngine's
+configuration, the browser will use ``www.example.com`` as the cookie
+domain. The browser will only make these cookies available when the
+page's hostname is *exactly* ``www.example.com``.
+
+If the cookie domain is explicitly specified, however, the browser will
+make the cookie available whenever the requested page's hostname
+*contains* the cookie domain. For example, setting the cookie domain to
+``.example.com`` will ensure the cookie is shared whenever the requested
+page's hostname includes ``example.com``, ``www.example.com``,
+``admin.example.com``, ``blog.example.com``, and so on.
+
+It's important to note the difference between ``example.com`` and
+``.example.com``. When the cookie domain begins with a dot, browsers
+match any hostname that *includes* the cookie domain. Without the dot
+prefix, browsers are looking for an exact hostname match in the URL,
+which means cookies will not be available to subdomains.
+
+.. note:: A cookie set by PHP with an explicitly specified cookie domain
+    will always include the dot prefix, whether or not one is included
+    in this ExpressionEngine setting. For clarity's sake, the examples
+    here include a preceding dot when the cookie domain is being
+    explicitly set.
+
+.. note:: Browsers will not save cookies if the specified cookie domain
+    isn't included in the request's hostname. In other words, a site can
+    only set cookies for ``.example.com`` if its hostname actually
+    includes ``example.com``.
+
+If you're running multiple subdomains on a single ExpressionEngine
+installation and want member sessions to be valid across all subdomains,
+you should explicitly set the cookie domain.
+
+============= ========
+Value         Behavior
+============= ========
+``.hostname`` Makes browser cookies available to web requests at the given domain
+============= ========
 
 Example Usage::
 
@@ -975,7 +1009,7 @@ $config['cookie_domain'] = '.example.com';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Cookie Settings`: Cookie Domain
+Privacy --> Cookie Settings`: :ref:`Cookie Domain <cookie-domain-label>`
 
 
 cookie_path
