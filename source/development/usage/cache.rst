@@ -42,7 +42,7 @@ ExpressionEngine, whether they be from other add-ons or native code.
 We'll save and access our data like so::
 
   ee()->cache->save('/myaddon/mykey', $data);
-  ee()->cache->get('/myaddon/mykey');
+  $data = ee()->cache->get('/myaddon/mykey');
 
 We can go even further and nest our namespacing as deep as we want for
 further organization::
@@ -55,7 +55,8 @@ namespace, we make this call to :meth:`Cache::delete`::
 
   ee()->cache->delete('/myaddon/entries/');
 
-With that, all the items we saved under ``/entries/`` will be deleted.
+With that, all the items we saved under ``/entries/`` will be deleted
+while the rest of the items stored under our root namespace are kept.
 We can also clear the entire cache for our add-on without flushing out
 cache items for other add-ons or native components::
 
