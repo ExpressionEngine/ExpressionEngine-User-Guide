@@ -9,7 +9,7 @@ Moved Comment Management to the Comment Module Control Panel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 With the addition of a :doc:`Control Panel for the Comments Module
-</modules/comment/control_panel/index>`, all comment management was
+</addons/comment/control_panel/index>`, all comment management was
 moved to the Comment CP. In order to moderate comments, a member group
 must now have access to the Comment Module (set in :doc:`Member Groups -
 Create/Edit </cp/members/member_groups_edit>`).

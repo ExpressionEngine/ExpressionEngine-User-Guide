@@ -6,7 +6,7 @@ ExpressionEngine Emoticon Development
 
 Modifying or creating new sets of Emoticons for use with
 ExpressionEngine is fairly straightforward. Glyph translations are
-contained in the ``/system/modules/emoticon/emoticons.php`` file. This
+contained in the ``/system/addons/emoticon/emoticons.php`` file. This
 file contains an array, ``$smileys`` that provides instructions as to
 what glyphs should be replaced by which images, and what the properties
 of the image files are. The files themselves can be replaced or modified

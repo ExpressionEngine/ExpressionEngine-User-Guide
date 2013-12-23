@@ -7,8 +7,8 @@ for developers to easily extend to enable rich functionality. Like an operating
 system, it ships with a set of "apps" to cover the basic necessities right out
 of the box. We call those apps *Add-Ons*.
 
-Have a need for :doc:`RSS </modules/rss/index>`?  :doc:`Search
-</modules/search/index>`?  :doc:`Comments </modules/comment/index>`?  Install
+Have a need for :doc:`RSS </addons/rss/index>`?  :doc:`Search
+</addons/search/index>`?  :doc:`Comments </addons/comment/index>`?  Install
 those packages, and you'll have a whole new set of tools at your disposal.
 
 And just like an OS, Add-Ons that don't come :ref:`included with
