@@ -107,5 +107,3 @@ value='Search'
     value='{lang:search}'
 value='Submit'
     value='{lang:submit}'
-
-:ref:`Return to Update Page <update_cleanup>`

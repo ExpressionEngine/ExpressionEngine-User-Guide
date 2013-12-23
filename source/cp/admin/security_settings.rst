@@ -80,21 +80,19 @@ Allow members to change their username
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As the name suggests, this setting determines whether or not members are
-allowed to change their "username" after they register. Members will
-always be able to change their "screen name" if they choose to use one.
+allowed to change their own usernames after registration. (Members will
+always be able to change their own screen names.)
 
 .. _allow-multi-logins-label:
 
 Allow Multiple Log-ins From a Single Account
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This setting determines whether more than one person can simultaneously
-log-in and use ExpressionEngine with the same membership account.
+Set whether an account can have multiple active sessions at one time.
 
-.. note:: If the Session Type above is set to "Cookies Only" this
-  feature will not work. The system can only track multiple people using
-  the same account if a session is generated, which does not happen when
-  only cookies are used.
+.. note::
+
+   This feature is incompatible with the "Cookies Only" session type.
 
 .. _require-ip-logins-label:
 
@@ -110,8 +108,8 @@ address.
 
 .. _require-ip-posting-submit-comments-label:
 
-Require IP Address and User Agent when receiving comments
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Require IP Address and User Agent for posting
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Similar to the previous setting, when turned on, this setting requires
 IP address and user agent information to be supplied when submitting
@@ -155,13 +153,12 @@ much more difficult to guess.
 Allow Dictionary Words as Passwords
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Setting this preference to "No" will prevent users from being able to
-set their password using words and names that are commonly found in a
-dictionary. This will make "dictionary attacks" by hackers much more
+Set whether words commonly found in the dictionary can be used as
+passwords. Disabling will make "dictionary attacks" by hackers much more
 difficult.
 
-.. note:: In order to be able to use this setting you must have a
-  dictionary file installed for the system. See below.
+.. note:: In order to be able to use this setting you must have :ref:`a
+    dictionary file <dict-passwds-file-label>` installed.
 
 .. _dict-passwds-file-label:
 
@@ -169,16 +166,13 @@ Name of Dictionary File
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 This is the filename of the dictionary file used for the previous
-preference.
+preference. Download the `dictionary file
+<http://ellislab.com/asset/file/dictionary.zip>`__, unzip, and upload
+the text file (:file:`dictionary.txt`) to
+:file:`system/expressionengine/config/`.
 
-You may download a 230,000 word `dictionary
-file <http://ellislab.com/asset/file/dictionary.zip>`_ from
-ExpressionEngine.com. Simply unzip the download and place the text file
-(dictionary.txt) in the following location on your server:
-
-system/expressionengine/config/
-
-Submit the **name** of the file in this setting.
+Enter only the filename of the file (:file:`dictionary.txt`) in this
+field.
 
 .. _security-min-username-label:
 

@@ -52,10 +52,8 @@ names.
 Auto-Assign Category Parents
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If this option is set to "yes", when new entries that contain category
-assignments are submitted, the "parent" category of any sub-categories
-will be automatically assigned. If set to "no", the entry will only be
-assigned to the child category.
+Set whether to assign an entry to both the selected category and its
+parent category.
 
 .. _global-channel-clear-cache-label:
 
@@ -70,7 +68,7 @@ Cache Dynamic Channel Queries?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This feature will improve the speed at which your channel pages load by
-caching queries that are normally executed dynamically. 
+caching queries that are normally executed dynamically.
 
 .. note:: Enable this preference only if you **do not** use the "future
 	entries" or "expiring entries" feature.

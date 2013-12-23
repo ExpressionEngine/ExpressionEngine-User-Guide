@@ -26,18 +26,15 @@ although in some cases it can cause some problems.
 Enable GZIP Output?
 ~~~~~~~~~~~~~~~~~~~
 
-Setting this preference to "Yes" will cause the web server to send out
-your pages in the compressed gzip format. Browsers will automatically
-decompress the pages and display them as normal; there will be no
-visible difference to your users apart from a faster page loading time.
+Set the system to serve compressed front-end pages for faster load times
+as long as the requesting browser supports gzip compression, PHP's zlib
+extension is loaded, and the web server is not already serving
+compressed pages.
 
-In order for this option to work your server must support the gzip
-format. Additionally, the browser being used to view your site must also
-support pages served in the gzip format. Many modern browser support
-this, but not all do, so if you are concerned with wide-spread
-compatibility you may want to set this to "no". (Also note that while
-Internet Explorer does support this feature, it also contains bugs in
-its implementation which can have adverse consequences.)
+.. note:: This setting only controls whether ExpressionEngine itself
+    serves up compressed front-end pages. If the web server is
+    configured to serve compressed pages, this setting will have no
+    effect.
 
 .. _output-force-query-strings-label:
 
