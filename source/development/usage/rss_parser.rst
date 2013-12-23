@@ -28,8 +28,8 @@ The RSS Parser Class is singularly used as a factory to create
 
   :param string $url: URL of the RSS feed to parse
   :param int $duration: (*optional*) Length of the cache in minutes
-  :param string $cache_name: (*optional*) Name of the directory within
-    ExpressionEngine's cache directory
+  :param string $cache_name: (*optional*) Name of feed for namespacing
+    in the cache
   :returns: SimplePie object
   :rtype: Object
 
