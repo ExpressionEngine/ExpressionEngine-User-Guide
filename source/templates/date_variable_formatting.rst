@@ -1,17 +1,44 @@
+########################
 Date Variable Formatting
-========================
+########################
+
+.. contents::
+   :local:
+   :depth: 1
+
+************
+Introduction
+************
 
 Many tags, including channel fields of the "date" type, are designed to
 display dates and times. The output of these tags can be formatted so
-that the date and time appears in the manner you wish. Here is an
+that the date and time appears in the manner you wish. This includes the format
+of the date, a fixed timezone, and relative date formats. Here is an
 example of formatting the :ref:`{current\_time} <global_current_time>`
 global variable::
 
+	{current_time format="%F %d %Y" timezone="America/Los_Angeles" relative="today" units="hours|minutes" depth="1"}
+
+.. _date_variable_parameters:
+
+**********
+Parameters
+**********
+
+.. contents::
+   :local:
+   :depth: 1
+
+format=
+-------
+
+The ``format=`` parameter enables you to format the date using the Date
+Formatting Codes listed below. Each code letter is always preceded by a
+percent sign. The example::
+
 	{current_time format="%F %d %Y"}
 
-The "format" parameter enables you to format the date using the Date
-Formatting Codes listed below. Each code letter is always preceded by a
-percent sign. The example above would be rendered like this::
+would be rendered like this::
 
 	January 15 2006
 
@@ -94,18 +121,18 @@ Date Formatting Codes
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
 | **%z**     | day of the year                                                       | "0" to "365"                               |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
-| Other                                                                                                                           | 
+| Other                                                                                                                           |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
-| **%B**     | Swatch Internet time                                                  |                                            | 
+| **%B**     | Swatch Internet time                                                  |                                            |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
 | **%I**     | (capital i)                                                           | "1" if Daylight Saving Time, "0" otherwise |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
-| **%O**     | Difference to Greenwich time (GMT) in hours                           | "-0500"                                    | 
+| **%O**     | Difference to Greenwich time (GMT) in hours                           | "-0500"                                    |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
-| **%P**     | Difference to Greenwich time (GMT) with colon between hours and       | "-05:00"                                   | 
-|            | minutes                                                               |                                            | 
+| **%P**     | Difference to Greenwich time (GMT) with colon between hours and       | "-05:00"                                   |
+|            | minutes                                                               |                                            |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
-| **%r**     | RFC 2822 formatting                                                   | "Thu, 21 Dec 2000 16:01:07 +0200"          | 
+| **%r**     | RFC 2822 formatting                                                   | "Thu, 21 Dec 2000 16:01:07 +0200"          |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
 | **%S**     | English ordinal suffix, 2 characters                                  | "th", "nd"                                 |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
@@ -149,3 +176,53 @@ Variable              Equivalent                  Sample Rendering
 **{DATE\_W3C}**       %Y-%m-%dT%H:%i:%s%Q         2006-10-16T08:19:39-06:00
 ===================   =========================   ===============================
 
+timezone=
+---------
+
+The ``timezone=`` parameter will display convert the date to the specified
+timezone, rather than the timezone specified in the
+:doc:`localization settings </cp/admin/localization_settings>` in the control
+panel::
+
+	timezone="America/Los_Angeles"
+
+PHP.net has a `list of supported timezones <http://php.net/manual/en/timezones.php>`_.
+
+relative=
+---------
+
+The ``relative=`` parameter determines when to show a relative date (i.e. "4
+minutes ago"). The parameter accepts any valid parameter to PHP's
+`strtotime() <http://www.php.net/manual/en/function.strtotime.php>`_ function,
+or "yes". Unless relative is "yes" ExpressionEngine will generate a timestamp
+via strtotime() and compare that timestamp with the value of the date variable.
+When the date variable is greater than or equal to the relative timestamp the
+date will be displayed as a relative date::
+
+	relative="today|yesterday|-1 week"
+
+If you always want a relative date use "yes"::
+
+	relative="yes"
+
+
+units=
+------
+
+The ``units=`` parameter determines which parts of a relative date are
+calculated prior to displaying them. The default is equivalent to::
+
+	units="years|months|weeks|days|hours|minutes|seconds"
+
+depth=
+------
+
+The ``depth=`` parameter determines how many calculated date parts to display,
+starting from the largest unit to the smallest (i.e. "5 minutes ago" rather than
+"5 minutes and 18 seconds ago")::
+
+	depth="1"
+
+The default is to display all of the date parts, with each part separated
+by a comma (i.e. "1 year, 2 months, 3 weeks, 5 days, 6 hours, 7 minutes, and
+8 seconds ago").
