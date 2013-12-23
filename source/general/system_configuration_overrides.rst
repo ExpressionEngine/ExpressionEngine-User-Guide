@@ -688,7 +688,6 @@ Specify a different caching driver (link) to use.
 Values        Behavior
 ============= ========
 ``file``      Default value: file driver, path configured with `cache_path`_ config
-``apc``       APC driver
 ``memcached`` Memcached driver, configured with `memcached`_ config
 ``redis``     Redis driver, configured with `redis`_ config
 ``dummy``     Dummy driver, will not cache
