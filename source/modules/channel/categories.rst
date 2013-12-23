@@ -26,8 +26,8 @@ some markup you'll do this:
 ::
 
     {exp:channel:categories}
-        <a href="{path='channel/index'}">{category_name}</a> 
-        {if category_description}{category_description}{/if}    
+        <a href="{path='channel/index'}">{category_name}</a>
+        {if category_description}{category_description}{/if}
     {/exp:channel:categories}
 
 
@@ -233,17 +233,17 @@ parameter <#par_restrict_channel>`_ in conjunction with show\_empty
 
 By default, categories with no entries **will** be included.
 
-show_expired_entries=
----------------------
+show_expired=
+-------------
 ::
 
-	show_expired_entries="yes"
+	show_expired="yes"
 
-Determines whether expired entries are included when calculating whether 
-a category has entries when the `show\_empty parameter <#par_show_empty>`_ 
+Determines whether expired entries are included when calculating whether
+a category has entries when the `show\_empty parameter <#par_show_empty>`_
 is set to not show empty categories.
 
-By default, expired entries will **not** count when determining whether a 
+By default, expired entries will **not** count when determining whether a
 category is empty.
 
 show_future_entries=
@@ -252,12 +252,12 @@ show_future_entries=
 
 	show_future_entries="yes"
 
-Determines whether entries dated in the "future" to are included when 
-calculating whether a category has entries when the 
+Determines whether entries dated in the "future" to are included when
+calculating whether a category has entries when the
 `show\_empty parameter <#par_show_empty>`_ is set to not show empty categories.
 
-By default, future dated entries will **not** count when determining whether a 
-category is empty.  
+By default, future dated entries will **not** count when determining whether a
+category is empty.
 
 status=
 -------
@@ -489,9 +489,9 @@ You can also display categories in a dropdown menu using the following code:
 
 	<form name="catmenu" action="">
 	    <select name="selcat" onchange="location=document.catmenu.selcat.options[document.catmenu.selcat.selectedIndex].value;">
-	        <option value="">--Select Category--</option> 
-	        {exp:channel:categories channel="yourchannel" style="linear"}     
-	            <option value="{path='channel'}">{category_name}</option> 
+	        <option value="">--Select Category--</option>
+	        {exp:channel:categories channel="yourchannel" style="linear"}
+	            <option value="{path='channel'}">{category_name}</option>
 	        {/exp:channel:categories}
 	    </select>
 	</form>
@@ -505,17 +505,17 @@ Here are a few examples of the categories tag in use
 ::
 
     {exp:channel:categories channel="news" style="linear" backspace="7"}
-        <a href="{path='news/entry'}">{category_name}</a><br /> 
+        <a href="{path='news/entry'}">{category_name}</a><br />
     {/exp:channel:categories}
 
 This code would create a list of the categories in the "news" channel
 and link to the "news/entry" Template. It would also remove the <br />
-from the last entry. 
+from the last entry.
 
 ::
 
-	{exp:channel:categories channel="politics" style="nested"}  
-	    <a href="{path='SITE_INDEX'}">{category_name}</a>  
+	{exp:channel:categories channel="politics" style="nested"}
+	    <a href="{path='SITE_INDEX'}">{category_name}</a>
 	{/exp:channel:categories}
 
 This code would create a nested, unordered list of the categories from

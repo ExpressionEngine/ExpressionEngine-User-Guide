@@ -126,9 +126,9 @@ Comparison Operators
 You can use any of the following operators to compare a variable to a
 value:
 
-========  ========================
+========  ==========================================
 Operator  Name
-========  ========================
+========  ==========================================
 ==        Equal
 !=        Not Equal
 <         Less than
@@ -137,7 +137,8 @@ Operator  Name
 >=        Greater than or equal to
 <>        Not equal
 <>        Not equal
-========  ========================
+%		  Remainder of one number divided by another
+========  ==========================================
 
 
 .. note:: When comparing equality make sure to use **two** equal signs

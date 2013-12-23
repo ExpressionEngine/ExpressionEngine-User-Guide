@@ -62,6 +62,8 @@ http://example.com/index.php/channel/index
 .. note:: It is best if you **always** specify the Template
    Group name when you access content.
 
+.. _entries-and-other-things:
+
 Entries and Other Things
 ------------------------
 

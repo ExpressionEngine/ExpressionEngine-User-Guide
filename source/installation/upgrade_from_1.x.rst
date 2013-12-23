@@ -157,8 +157,6 @@ Update Wizard is finished, you **must** remove the
 :file:`system/installer/` directory from your server.
 
 
-.. _update_cleanup:
-
 7. Cleanup
 ----------
 
