@@ -101,12 +101,12 @@ Class Methods
   Given a key and a value to store, stores the item to the cache with the
   specified expiration time and namespace::
 
-    ee()->cache->save('query', $results, 3600, 'mymodule');
+    ee()->cache->save('/mymodule/mykey', $results, 3600);
 
   :param string $key: Key name of item saving to the cache
   :param mixed $value: Data to store in the cache, can be strings,
     integers, arrays or objects
-  :param int $ttl: Amount of time in seconds the item should last
+  :param int $ttl: Amount of time in seconds the item should live
     in the cache
   :param const $scope: ``Cache::LOCAL_SCOPE`` or ``Cache::GLOBAL_SCOPE``
     for local or global scoping of the cache item
@@ -118,7 +118,7 @@ Class Methods
 
   Returns a previously saved item from the cache::
 
-    ee()->cache->get('query', 'mymodule');
+    $data = ee()->cache->get('/mymodule/mykey');
 
   :param string $key: Key name of item in the cache
   :param const $scope: ``Cache::LOCAL_SCOPE`` or ``Cache::GLOBAL_SCOPE``
@@ -146,7 +146,11 @@ Class Methods
 
 .. method:: clean([$scope = Cache::LOCAL_SCOPE])
 
-  Flushes the entire cache for the specified scope::
+  Flushes the entire cache for the specified scope. Specifying a scope
+  of ``Cache::GLOBAL_SCOPE`` clears the cache for the entire
+  installation.
+
+  ::
 
     ee()->cache->clean();
 
@@ -170,7 +174,7 @@ Class Methods
 
   Returns metadata about a particular item in the cache::
 
-    $info = ee()->cache->get_metadata('query', 'mymodule');
+    $info = ee()->cache->get_metadata('/myaddon/mykey');
 
   :param string $key: Key name of item in the cache
   :param const $scope: ``Cache::LOCAL_SCOPE`` or ``Cache::GLOBAL_SCOPE``
