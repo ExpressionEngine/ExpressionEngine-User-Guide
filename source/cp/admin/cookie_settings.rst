@@ -70,7 +70,6 @@ the cookies it sets.
 Cookie Prefix
 ~~~~~~~~~~~~~
 
-If you will be running multiple installations of ExpressionEngine on the
-same server then you will want to specify a unique cookie prefix for
-each installation. This cookie prefix will prevent the cookies from
-interfering with each other.
+Specify a prefix for the cookie name set by ExpressionEngine. This
+protects against collisions from separate ExpressionEngine installations
+on the same cookie domain.

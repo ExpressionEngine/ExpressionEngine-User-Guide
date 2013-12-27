@@ -956,6 +956,7 @@ $config['comment_word_censoring'] = 'y';
 Comment`: :ref:`Force word censoring for comments
 <comment-force-censoring-label>`
 
+.. _cookie_domain:
 
 cookie_domain
 -------------
@@ -1041,16 +1042,16 @@ Privacy --> Cookie Settings`: :ref:`Cookie Path <cookie-path-label>`
 
 cookie_prefix
 -------------
-If you will be running multiple installations of ExpressionEngine on the
-same server then you will want to specify a unique cookie prefix for
-each installation. This :ref:`Cookie Prefix <cookie-prefix-label>` will
-prevent the cookies from interfering with each other.
 
-========= ========
-Value     Behavior
-========= ========
-``text``  Sets the cookie prefix for cookies when running multiple installations
-========= ========
+Specify a prefix for the cookie name set by ExpressionEngine. This
+protects against collisions from separate ExpressionEngine installations
+on the same :ref:`cookie domain <cookie_domain>`.
+
+========= ===========
+Value     Description
+========= ===========
+``text``  A word used as the prefix to the cookie name
+========= ===========
 
 Example Usage::
 
@@ -1059,29 +1060,24 @@ $config['cookie_prefix'] = 'site1';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Cookie Settings`: Cookie Prefix
+Privacy --> Cookie Settings`: :ref:`Cookie Prefix <cookie-prefix-label>`
 
 
 cookie_secure
 -------------
-Secure cookies allow requiring a secure connection (HTTPS) in order to
-set cookies.
+
+Require a secure connection (HTTPS) for ExpressionEngine to set cookies.
 
 ========== ========
 Value      Behavior
 ========== ========
-``TRUE``   Requires a secure connection in order to set cookies
-``FALSE``  Default value, does not require a secure connection to set cookies
+``TRUE``   Require a secure connection to set cookies
+``FALSE``  Do not require a secure connection to set cookies **(default)**
 ========== ========
 
 Example Usage::
 
-$config['cookie_secure'] = 'TRUE';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Cookie Settings`: Cookie Prefix
+$config['cookie_secure'] = TRUE;
 
 
 cp_session_ttl
