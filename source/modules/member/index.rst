@@ -76,7 +76,7 @@ Here is how you might use the tag::
 		{if auto_login}
 			<p><input type="checkbox" name="auto_login" value="1"> Auto-login on future visits</p>
 		{/if}
-		
+
 		<p><input type="checkbox" name="anon" value="1" checked="checked"> Show my name in the online users list</p>
 		<p><input type="submit" name="submit" value="Submit"></p>
 		<p><a href="{path='member/forgot_password'}">Forgot your password?</a></p>
@@ -139,6 +139,9 @@ Variables
 
 .. contents::
    :local:
+
+
+.. _if-auto-login:
 
 {if auto\_login}
 ----------------
@@ -652,7 +655,7 @@ ignore list of currently logged-in user or from a specified user.
    this tag. If you do not avoid caching, then data will not be dynamic for
    each user. Instead, whoever happens to load the page when it is cached
    will have their information shown for everyone until the cache expires.
-   Unlike this tag, :doc:`Global Variables </templates/globals/index>` 
+   Unlike this tag, :doc:`Global Variables </templates/globals/index>`
    can be used in templates that are cached.
 
 Here is the basic tag syntax::

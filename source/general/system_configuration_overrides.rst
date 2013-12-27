@@ -1082,17 +1082,19 @@ $config['cookie_secure'] = TRUE;
 
 cp_session_ttl
 --------------
-Allows changing of the Control Panel Session Length to any number in
-seconds. For instance, if users should be logged out after 10 minutes of
-inactivity, the value would be: 600
 
-Note 12/27: this doesn't alter the CP timeout modal. it only configures how long to keep the session active if they person signs in through the CP.
+Set the session length for members logging in through the Control Panel.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets the control panel session length in seconds
-========== ========
+.. note:: This does not affect the timing of the idle session modal that
+    appears when a CP page is left open and idle, and it is effectively
+    irrelevant if the member selects *Auto log-in on future visits?* on
+    the login page.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Control Panel session length in seconds
+=========== ===========
 
 Example Usage::
 
@@ -4274,15 +4276,17 @@ $config['webmaster_name'] = "Joe";
 
 website_session_ttl
 -------------------
-Allows changing of the front-end session length to any number in
-seconds. For instance, if users should be logged out after 10 minutes of
-inactivity, the value would be: 600
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets the front-end session length in seconds
-========== ========
+Set the session length for members logging in through the front-end.
+
+.. note:: This is effectively irrelevant if the member chooses the
+    :ref:`auto-login option <if-auto-login>` on the login page.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Front-end session length in seconds
+=========== ===========
 
 Example Usage::
 
