@@ -975,26 +975,25 @@ make the cookie available whenever the requested page's hostname
 page's hostname includes ``example.com``, ``www.example.com``,
 ``admin.example.com``, ``blog.example.com``, and so on.
 
-It's important to note the difference between ``example.com`` and
-``.example.com``. When the cookie domain begins with a dot, browsers
-match any hostname that *includes* the cookie domain. Without the dot
-prefix, browsers are looking for an exact hostname match in the URL,
-which means cookies will not be available to subdomains.
+If you're running multiple subdomains on a single ExpressionEngine
+installation and want member sessions to be valid across all subdomains,
+you should explicitly set the cookie domain.
 
-.. note:: A cookie set by PHP with an explicitly specified cookie domain
-    will always include the dot prefix, whether or not one is included
-    in this ExpressionEngine setting. For clarity's sake, the examples
-    here include a preceding dot when the cookie domain is being
-    explicitly set.
+.. note:: There's an important difference between ``example.com`` and
+    ``.example.com``. When the cookie domain begins with a dot, browsers
+    match any hostname that *includes* the cookie domain. Without the
+    dot prefix, browsers are looking for an exact hostname match in the
+    URL, which means cookies will not be available to subdomains. A
+    cookie set by PHP with an explicitly specified cookie domain will
+    always include the dot prefix, whether or not one is included in
+    this ExpressionEngine setting. For clarity's sake, the examples here
+    include a leading dot when the cookie domain is being explicitly
+    set.
 
 .. note:: Browsers will not save cookies if the specified cookie domain
     isn't included in the request's hostname. In other words, a site can
     only set cookies for ``.example.com`` if its hostname actually
     includes ``example.com``.
-
-If you're running multiple subdomains on a single ExpressionEngine
-installation and want member sessions to be valid across all subdomains,
-you should explicitly set the cookie domain.
 
 ============= ========
 Value         Behavior
@@ -1090,6 +1089,8 @@ cp_session_ttl
 Allows changing of the Control Panel Session Length to any number in
 seconds. For instance, if users should be logged out after 10 minutes of
 inactivity, the value would be: 600
+
+Note 12/27: this doesn't alter the CP timeout modal. it only configures how long to keep the session active if they person signs in through the CP.
 
 ========== ========
 Value      Behavior

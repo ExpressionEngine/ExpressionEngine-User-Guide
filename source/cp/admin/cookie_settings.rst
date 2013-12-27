@@ -14,21 +14,40 @@ for your website.
 Cookie Domain
 ~~~~~~~~~~~~~
 
-This preference allows you to set your cookie domain. The vast majority
-of people will want to set this to:
+Optionally specify a domain the cookie is available to. By default, the
+exact hostname of the requested page is set as the cookie domain. For
+example, if the page at ``http://www.example.com/blog/an-entry-title``
+is loaded and the cookie domain is left blank in ExpressionEngine's
+configuration, the browser will use ``www.example.com`` as the cookie
+domain. The browser will only make these cookies available when the
+page's hostname is *exactly* ``www.example.com``.
 
-.example.com
+If the cookie domain is explicitly specified, however, the browser will
+make the cookie available whenever the requested page's hostname
+*contains* the cookie domain. For example, setting the cookie domain to
+``.example.com`` will ensure the cookie is shared whenever the requested
+page's hostname includes ``example.com``, ``www.example.com``,
+``admin.example.com``, ``blog.example.com``, and so on.
 
-Obviously you'll use your actual domain name instead of ".example.com".
-Note the period at the beginning as it is very important. Setting the
-cookie domain like this will allow the cookies to work regardless of
-whether people specify your URL with the www part or only the
-``http://`` part.
+If you're running multiple subdomains on a single ExpressionEngine
+installation and want member sessions to be valid across all subdomains,
+you should explicitly set the cookie domain.
 
-If you want to restrict your cookies to a single subdomain then you may
-set that here as well:
+.. note:: There's an important difference between ``example.com`` and
+    ``.example.com``. When the cookie domain begins with a dot, browsers
+    match any hostname that *includes* the cookie domain. Without the
+    dot prefix, browsers are looking for an exact hostname match in the
+    URL, which means cookies will not be available to subdomains. A
+    cookie set by PHP with an explicitly specified cookie domain will
+    always include the dot prefix, whether or not one is included in
+    this ExpressionEngine setting. For clarity's sake, the examples here
+    include a leading dot when the cookie domain is being explicitly
+    set.
 
-.subdomain.example.com
+.. note:: Browsers will not save cookies if the specified cookie domain
+    isn't included in the request's hostname. In other words, a site can
+    only set cookies for ``.example.com`` if its hostname actually
+    includes ``example.com``.
 
 
 .. _cookie-path-label:
