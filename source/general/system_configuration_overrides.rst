@@ -701,12 +701,12 @@ $config['cache_driver'] = 'memcached';
 cache_driver_backup
 -------------------
 Specify a backup caching driver (link) to use in case the one specified
-in `cache_driver`_ isn't available. Same values accepted as
-`cache_driver`_.
+in `cache_driver`_ isn't available. Same values accepted and same
+default as `cache_driver`_.
 
 Example Usage::
 
-$config['cache_driver'] = 'memcached';
+$config['cache_driver_backup'] = 'file';
 
 
 cache_path
