@@ -2,7 +2,7 @@ Preferences Array Update
 ------------------------
 
 The way site pages are stored changed in this release to provide greater
-flexibility. If you use :doc:`Pages </modules/pages/index>` and have any
+flexibility. If you use :doc:`Pages </addons/pages/index>` and have any
 add-ons that might make use of this array, be certain to update the add-
 ons as part of this version update. Not doing so may result in broken
 pages. Add-ons that may be affected include Structure, LG Better Meta,

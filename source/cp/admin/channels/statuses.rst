@@ -20,7 +20,7 @@ appear on your site, whereas entries assigned as Open will typically
 show up.
 
 Through the use of *parameters* in your
-:doc:`/modules/channel/channel_entries` you can limit the display of
+:doc:`/addons/channel/channel_entries` you can limit the display of
 your entries based on the status. This is particularly useful if you
 need to create editorial workflow with your entries. Let's say you have
 several authors contributing content. You might create statuses such as
