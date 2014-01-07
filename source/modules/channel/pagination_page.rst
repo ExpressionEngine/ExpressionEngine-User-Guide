@@ -71,9 +71,9 @@ And for the "next/previous" method::
 	{/exp:comment:entries}
 
 
-***********
+**********
 Parameters
-***********
+**********
 
 paginate=
 =========
@@ -81,16 +81,19 @@ paginate=
 This parameter determines where the pagination code will appear for your
 channel entries or comments::
 
-	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"
+	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"  paginate="hidden"
 
-#. **top**: The navigation text and links will appear *above* your list
+#. ``top``: The navigation text and links will appear *above* your list
    of entries.
-#. **bottom**: The navigation text and links will appear *below* your
+#. ``bottom``: The navigation text and links will appear *below* your
    list of entries.
-#. **both**: The navigation text and links will appear both above and
+#. ``both``: The navigation text and links will appear both above and
    below your list of entries.
-#. **inline**: The navigation text and links will appear within the list
+#. ``inline``: The navigation text and links will appear within the list
    of entries for each entry.
+#. ``hidden``: The navigation text and links will **not** appear, but
+   your entries will be paginated. (This is useful for things like
+   JSON.)
 
 If no parameter is specified, the navigation block will default to the
 "bottom" behavior.
