@@ -1,5 +1,6 @@
+####################################
 Channel Entry and Comment Pagination
-====================================
+####################################
 
 .. contents::
    :local:
@@ -28,8 +29,9 @@ channel entries tag or you are viewing the entries of a category, then
 the pagination links will automatically restrict themselves to only
 entries in that category.
 
+************
 Example Code
-------------
+************
 
 Here are two basic code examples, one for each of the methods mentioned
 above. Information about the variables and parameters are covered later.
@@ -68,12 +70,13 @@ And for the "next/previous" method::
 	    {/paginate}
 	{/exp:comment:entries}
 
-Parameters
-----------
 
+***********
+Parameters
+***********
 
 paginate=
-~~~~~~~~~
+=========
 
 This parameter determines where the pagination code will appear for your
 channel entries or comments::
@@ -95,8 +98,9 @@ If no parameter is specified, the navigation block will default to the
 
 .. _pagination_pagination_links:
 
+****************
 pagination_links
-----------------
+****************
 
 This variable shows the current page you are on as well as "surrounding"
 pages in addition to links for next/previous pages and first/last pages.
@@ -141,11 +145,40 @@ When used as a pair, you have a lot more flexibility with the markup::
   {/paginate}
 
 
-There are two variables, five variable pairs, and one conditional
+There are one parameter, two variables, five variable pairs, and one conditional
 variable available when using the {pagination_links} pair.
 
+Parameters
+==========
+
+page_padding
+------------
+
+::
+
+  {pagination_links page_padding="1"}
+
+``page_padding`` will allow you to determine how many pages are shown on
+either side of the current page. For instance, if you're paginating over
+10 items and showing 1 item per page, if you're on the first page, you'd
+normally see this::
+
+  *1*  2  3  Next Page  Last Page
+
+If you changed ``page_padding`` to another value, say 5, you'd see more
+page numbers::
+
+  *1*  2  3  4  5  Next Page  Last Page
+
+If you later changed to page 4, you'd see this::
+
+  Previous Page  1  2  3  *4*  5  6  7  8  9  Next Page  Last Page
+
 Variables
-~~~~~~~~~
+=========
+
+pagination_page_number
+----------------------
 
 ::
 
@@ -153,6 +186,9 @@ Variables
 
 Outputs the page number associated with the current page in the
 {pagination_links} tag pair.
+
+pagination_url
+--------------
 
 ::
 
@@ -163,7 +199,7 @@ Outputs the URL associated with the current page in the
 
 
 Variable Pairs
-~~~~~~~~~~~~~~
+==============
 
 These four variable pairs can be used to display specific pages within
 the pagination:
@@ -205,7 +241,7 @@ links::
 
 
 Conditional Variables
-~~~~~~~~~~~~~~~~~~~~~
+=====================
 
 Check and see if the current {page} link is the current page.
 
@@ -214,14 +250,14 @@ Check and see if the current {page} link is the current page.
 	{if current_page}class="current"{/if}
 
 
+**************
 Variable Pairs
---------------
-
+**************
 
 .. _pagination_paginate:
 
 paginate
-~~~~~~~~
+========
 
 The opening and closing tags for pagination. This can to be used in
 conjunction with the `paginate= <#par_paginate>`_ parameter to determine
@@ -236,8 +272,8 @@ single variables (see below) or the next/previous variable pairs.
 
 .. _pagination_next_page:
 
-if next\_page
-~~~~~~~~~~~~~
+if next_page
+============
 
 This tag will conditionally display the code inside the tag if there is
 a "next" page. If there is no next page then the content simply will not
@@ -250,8 +286,8 @@ be displayed.
 
 .. _pagination_previous_page:
 
-if previous\_page
-~~~~~~~~~~~~~~~~~
+if previous_page
+================
 
 This tag will conditionally display the code inside the tag if there is
 a "previous" page. If there is no previous page then the content simply
@@ -261,15 +297,15 @@ will not be displayed.
 
 	{if previous_page}  {/if}
 
+*********
 Variables
----------
-
+*********
 
 These individual variables are for use inside the
 `{paginate} <#var_paginate>`_ tag pair.
 
-auto\_path
-~~~~~~~~~~
+auto_path
+=========
 
 The {auto\_path} variable is used inside of the `{if
 next\_page} <#var_if_next_page>`_ and `{if
@@ -282,8 +318,8 @@ Template\_Group/Template to be specified.
 
 	{auto_path}
 
-current\_page
-~~~~~~~~~~~~~
+current_page
+============
 
 This variable is replaced by the page number of the current page you are
 viewing.
@@ -292,8 +328,8 @@ viewing.
 
 	{current_page}
 
-total\_pages
-~~~~~~~~~~~~
+total_pages
+===========
 
 The total number of pages of channel entries or comments you have.
 
