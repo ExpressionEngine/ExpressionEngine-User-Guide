@@ -21,7 +21,7 @@ The Channel Module provides the following tags and features:
 -  :doc:`Category Archive Tag <category_archive>`
 -  :doc:`Category Heading Tag <category_heading>`
 -  :doc:`Channel Information Tag <channel_info>`
--  :doc:`Channel Entry and Comment Pagination <pagination_page>`
+-  :doc:`Pagination <pagination_page>`
 
 .. toctree::
 	:glob:

@@ -1,17 +1,16 @@
-####################################
-Channel Entry and Comment Pagination
-####################################
+##########
+Pagination
+##########
 
 .. contents::
    :local:
    :depth: 3
 
-The pagination feature for both :doc:`Channel Entries
-</modules/channel/channel_entries>` and :doc:`Comments
-</modules/comment/index>` works identically and allows you to display a
-limited number of entries and then automatically link to the next set.
-That way you can, for example, show comments 1-10 on the first page and
-automatically link to pages that display 11-20, 21-30, etc.
+Pagination works identically across all first-party modules and allows
+you to display a limited number of entries and then automatically link
+to the next set. That way you can, for example, show comments 1-10 on
+the first page and automatically link to pages that display 11-20,
+21-30, etc.
 
 You have two choices as to the style of the navigation element. The
 first method would look something like this::
@@ -78,8 +77,7 @@ Parameters
 paginate=
 =========
 
-This parameter determines where the pagination code will appear for your
-channel entries or comments::
+This parameter determines where the pagination code will appear::
 
 	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"  paginate="hidden"
 
@@ -334,7 +332,7 @@ viewing.
 total_pages
 ===========
 
-The total number of pages of channel entries or comments you have.
+The total number of pages you have.
 
 ::
 
