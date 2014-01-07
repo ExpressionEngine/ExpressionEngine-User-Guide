@@ -126,32 +126,9 @@ information. ::
 Pagination
 **********
 
-The pagination in the Query module works exactly like the :doc:`Channel
-and Comment Pagination </modules/channel/pagination_page>` with only one
-exception. Instead of using a LIMIT clause in your query, use the
-**limit=""** parameter to specify how many results to display per page,
-and ExpressionEngine will automatically modify your query to display the
-appropriate results. ::
-
-	{exp:query limit="5" sql="SELECT title,entry_date FROM exp_channel_titles ORDER BY entry_date DESC"}
-		<p>{title} - {entry_date format="%Y %m %d"}</p>
-		{paginate}
-			<p>Page {current_page} of {total_pages} pages {pagination_links}</p>
-		{/paginate}
-	{/exp:query}
-
-All variables and parameters used by the :doc:`Channel and Comment
-Pagination </modules/channel/pagination_page>` are available for the
-Query module as well. So, you can specify where to put the pagination
-links and what type of pagination links to show. ::
-
-	{exp:query limit="5" paginate="top" sql="SELECT title,entry_date FROM exp_channel_titles ORDER BY entry_date DESC"}
-		<p>{title} - {entry_date format="%Y %m %d"}</p>
-		{paginate}
-			{if previous_page} <a href="{auto_path}">Previous Page</a>   {/if}
-			{if next_page} <a href="{auto_path}">Next Page</a> {/if}
-		{/paginate}
-	{/exp:query}
+The Query module uses the same pagination syntax as all first-party
+modules. Please look at the :doc:`/modules/channel/pagination_page`
+documentation for more information.
 
 *******************
 Backspace Parameter

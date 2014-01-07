@@ -15,12 +15,12 @@ the first page and automatically link to pages that display 11-20,
 You have two choices as to the style of the navigation element. The
 first method would look something like this::
 
-	Page 27 of 344 pages  « First  <  11 12 13 14 15 >  Last »
+  Page 27 of 344 pages  « First  <  11 12 13 14 15 >  Last »
 
 The second method is a more traditional "next page" / "previous page"
 output::
 
-	Previous Page | Next Page
+  Previous Page | Next Page
 
 Pagination will also automatically restrict itself to any category
 you're currently viewing. So if you have a category specified in your
@@ -55,19 +55,19 @@ above. Information about the variables and parameters are covered later.
 
 And for the "next/previous" method::
 
-	{exp:comment:entries channel="news" sort="desc" limit="1" paginate="bottom"}
-	    {comment}
-	    <p>By {name} on {comment_date format="%Y %m %d"}</p>
+  {exp:comment:entries channel="news" sort="desc" limit="1" paginate="bottom"}
+      {comment}
+      <p>By {name} on {comment_date format="%Y %m %d"}</p>
 
-	    {paginate}
-	        {if previous_page}
-	            <a href="{auto_path}">Previous Page</a> &nbsp;
-	        {/if}
-	        {if next_page}
-	            <a href="{auto_path}">Next Page</a>
-	        {/if}
-	    {/paginate}
-	{/exp:comment:entries}
+      {paginate}
+          {if previous_page}
+              <a href="{auto_path}">Previous Page</a> &nbsp;
+          {/if}
+          {if next_page}
+              <a href="{auto_path}">Next Page</a>
+          {/if}
+      {/paginate}
+  {/exp:comment:entries}
 
 
 **********
@@ -79,7 +79,7 @@ paginate=
 
 This parameter determines where the pagination code will appear::
 
-	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"  paginate="hidden"
+  paginate="top" paginate="bottom"  paginate="both"  paginate="inline"  paginate="hidden"
 
 #. ``top``: The navigation text and links will appear *above* your list
    of entries.
@@ -96,12 +96,41 @@ This parameter determines where the pagination code will appear::
 If no parameter is specified, the navigation block will default to the
 "bottom" behavior.
 
+paginate_base=
+==============
+
+::
+
+  paginate_base="site/index"
+
+This tells ExpressionEngine to override the normal pagination link
+locations and point instead to the explicitly stated template group and
+template.
 
 .. _pagination_pagination_links:
 
-****************
+
+**************
+Variable Pairs
+**************
+
+.. _pagination_paginate:
+
+paginate
+========
+
+The opening and closing tags for pagination. This can to be used in
+conjunction with the `paginate= <#par_paginate>`_ parameter to determine
+where the contents of this tag will appear. See below for the available
+variables for use inside this tag. This tag is wrapped around either the
+single variables (see below) or the next/previous variable pairs.
+
+::
+
+  {paginate}  {/paginate}
+
 pagination_links
-****************
+================
 
 This variable shows the current page you are on as well as "surrounding"
 pages in addition to links for next/previous pages and first/last pages.
@@ -110,38 +139,38 @@ You can use ``{pagination_links}`` in two ways. It can be used as a
 single variable::
 
   {paginate}
-  	{pagination_links}
+    {pagination_links}
   {/paginate}
 
 And the output looks like this::
 
-	« First  <  11 12 13 14 15 >  Last »
+  « First  <  11 12 13 14 15 >  Last »
 
 When used as a pair, you have a lot more flexibility with the markup::
 
   {paginate}
     {pagination_links}
-    	<ul>
-    		{first_page}
-    			<li><a href="{pagination_url}" class="page-first">First Page</a></li>
-    		{/first_page}
+      <ul>
+        {first_page}
+          <li><a href="{pagination_url}" class="page-first">First Page</a></li>
+        {/first_page}
 
-    		{previous_page}
-    			<li><a href="{pagination_url}" class="page-previous">Previous Page</a></li>
-    		{/previous_page}
+        {previous_page}
+          <li><a href="{pagination_url}" class="page-previous">Previous Page</a></li>
+        {/previous_page}
 
-    		{page}
-    			<li><a href="{pagination_url}" class="page-{pagination_page_number} {if current_page}active{/if}">{pagination_page_number}</a></li>
-    		{/page}
+        {page}
+          <li><a href="{pagination_url}" class="page-{pagination_page_number} {if current_page}active{/if}">{pagination_page_number}</a></li>
+        {/page}
 
-    		{next_page}
-    			<li><a href="{pagination_url}" class="page-next">Next Page</a></li>
-    		{/next_page}
+        {next_page}
+          <li><a href="{pagination_url}" class="page-next">Next Page</a></li>
+        {/next_page}
 
-    		{last_page}
-    			<li><a href="{pagination_url}" class="page-last">Last Page</a></li>
-    		{/last_page}
-    	</ul>
+        {last_page}
+          <li><a href="{pagination_url}" class="page-last">Last Page</a></li>
+        {/last_page}
+      </ul>
     {/pagination_links}
   {/paginate}
 
@@ -150,10 +179,10 @@ There are one parameter, two variables, five variable pairs, and one conditional
 variable available when using the {pagination_links} pair.
 
 Parameters
-==========
+----------
 
 page_padding
-------------
+^^^^^^^^^^^^
 
 ::
 
@@ -176,31 +205,31 @@ If you later changed to page 4, you'd see this::
   Previous Page  1  2  3  *4*  5  6  7  8  9  Next Page  Last Page
 
 Variables
-=========
+---------
 
 pagination_page_number
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 ::
 
-	{pagination_page_number}
+  {pagination_page_number}
 
 Outputs the page number associated with the current page in the
 {pagination_links} tag pair.
 
 pagination_url
---------------
+^^^^^^^^^^^^^^
 
 ::
 
-	{pagination_url}
+  {pagination_url}
 
 Outputs the URL associated with the current page in the
 {pagination_links} tag pair.
 
 
 Variable Pairs
-==============
+--------------
 
 These four variable pairs can be used to display specific pages within
 the pagination:
@@ -211,64 +240,44 @@ the pagination:
 
 ::
 
-	{first_page}
-		<li><a href="{pagination_url}" class="page-first">First Page</a></li>
-	{/first_page}
+  {first_page}
+    <li><a href="{pagination_url}" class="page-first">First Page</a></li>
+  {/first_page}
 
 ::
 
-	{previous_page}
-		<li><a href="{pagination_url}" class="page-previous">Previous Page</a></li>
-	{/previous_page}
+  {previous_page}
+    <li><a href="{pagination_url}" class="page-previous">Previous Page</a></li>
+  {/previous_page}
 
 ::
 
-	{next_page}
-		<li><a href="{pagination_url}" class="page-next">Next Page</a></li>
-	{/next_page}
+  {next_page}
+    <li><a href="{pagination_url}" class="page-next">Next Page</a></li>
+  {/next_page}
 
 ::
 
-	{last_page}
-		<li><a href="{pagination_url}" class="page-last">Last Page</a></li>
-	{/last_page}
+  {last_page}
+    <li><a href="{pagination_url}" class="page-last">Last Page</a></li>
+  {/last_page}
 
 The ``{page}`` variable pair can be used to display standard pagination
 links::
 
-	{page}
-		<li><a href="{pagination_url}" class="page-{pagination_page_number}">{pagination_page_number}</a></li>
-	{/page}
+  {page}
+    <li><a href="{pagination_url}" class="page-{pagination_page_number}">{pagination_page_number}</a></li>
+  {/page}
 
 
 Conditional Variables
-=====================
+---------------------
 
 Check and see if the current {page} link is the current page.
 
 ::
 
-	{if current_page}class="current"{/if}
-
-
-**************
-Variable Pairs
-**************
-
-.. _pagination_paginate:
-
-paginate
-========
-
-The opening and closing tags for pagination. This can to be used in
-conjunction with the `paginate= <#par_paginate>`_ parameter to determine
-where the contents of this tag will appear. See below for the available
-variables for use inside this tag. This tag is wrapped around either the
-single variables (see below) or the next/previous variable pairs.
-
-::
-
-	{paginate}  {/paginate}
+  {if current_page}class="current"{/if}
 
 
 .. _pagination_next_page:
@@ -282,7 +291,7 @@ be displayed.
 
 ::
 
-	{if next_page}  {/if}
+  {if next_page}  {/if}
 
 
 .. _pagination_previous_page:
@@ -296,7 +305,7 @@ will not be displayed.
 
 ::
 
-	{if previous_page}  {/if}
+  {if previous_page}  {/if}
 
 *********
 Variables
@@ -317,7 +326,7 @@ Template\_Group/Template to be specified.
 
 ::
 
-	{auto_path}
+  {auto_path}
 
 current_page
 ============
@@ -327,7 +336,7 @@ viewing.
 
 ::
 
-	{current_page}
+  {current_page}
 
 total_pages
 ===========
@@ -336,4 +345,4 @@ The total number of pages you have.
 
 ::
 
-	{total_pages}
+  {total_pages}

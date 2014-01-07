@@ -21,11 +21,11 @@ Here is a simple example of a possible usage of this tag::
 		{categories}
 			{category_image} - <a href="{path='about/test'}">{category_name}</a><br>
 		{/categories}
-		
+
 		{if medium_file_url}
 			<p><a href="{id_path='gallery/comments'}"><img src="{medium_file_url}" width="{medium_width}" height="{medium_height}" alt="{title}" title="{title}" /></a></p>
 		{/if}
-		
+
 		{caption}
 	{/exp:file:entries}
 
@@ -66,10 +66,10 @@ Or use "not" to exclude categories
 	you are implicitly telling ExpressionEngine to only deal with
 	entries that have been assigned one or more categories. If you have
 	entries that haven't been categorized then they will be ignored and
-	not included in the results. However, if you are using exclusion 
+	not included in the results. However, if you are using exclusion
 	(``category="not 3|4"``), then you will be shown all entries without
 	those categories *including* those without any categories assigned.
-	To change this behavior when excluding categories use the 
+	To change this behavior when excluding categories use the
 	`uncategorized_entries=`_ parameter.
 
 .. note:: Using this parameter will automatically cause ExpressionEngine
@@ -205,40 +205,6 @@ options for this parameter include:
 
 -  orderby="date"
 -  orderby="random"
-
-paginate=
-~~~~~~~~~
-
-::
-
-	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"
-
-This parameter is for use with entry
-:doc:`pagination <../channel/pagination_page>` and determines where the
-pagination code will appear for your files:
-
-#. **top**: The navigation text and links will appear *above* your list
-   of files.
-#. **bottom**: The navigation text and links will appear *below* your
-   list of files.
-#. **both**: The navigation text and links will appear both above and
-   below your list of files.
-#. **inline**: The navigation text and links will appear within the list
-   of entries for each entry.
-
-If no parameter is specified, the navigation block will default to the
-"bottom" behavior.
-
-paginate\_base=
-~~~~~~~~~~~~~~~
-
-::
-
-	paginate_base="site/index"
-
-This tells ExpressionEngine to override the normal
-:doc:`pagination <../channel/pagination_page>` link locations and point
-instead to the explicitly stated template group and template.
 
 relaxed\_categories=
 ~~~~~~~~~~~~~~~~~~~~
@@ -680,5 +646,4 @@ variable::
 Pagination
 ----------
 
-The File module supports :doc:`File Pagination
-</modules/channel/pagination_page>`.
+The File module supports :doc:`/modules/channel/pagination_page`.

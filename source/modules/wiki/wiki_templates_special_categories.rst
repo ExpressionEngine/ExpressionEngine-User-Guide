@@ -321,16 +321,9 @@ paginate
 
 	{wiki:category_articles paginate=""}
 
-This determines the placement of pagination. For example, if the
-`limit <#catart_para_limit>`_ parameter is set to 20 and there are 55
-articles, then you can use this parameter to create pagination to browse
-all the articles.
-
-The values for the paginate parameter are:
-
--  **top**: pagination is placed on top.
--  **bottom**: pagination is placed on the bottom.
--  **both**: pagination is placed on the top and the bottom.
+The Wiki module uses the same pagination syntax as all first-party
+modules. Please look at the :doc:`/modules/channel/pagination_page`
+documentation for more information.
 
 {wiki:category\_articles} \| Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

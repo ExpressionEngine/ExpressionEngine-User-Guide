@@ -46,8 +46,9 @@ searches. Example::
 
   </table>
 
-Pagination follows the :doc:`Channel style of pagination
-</modules/channel/pagination_page>`.
+The Search module uses the same pagination syntax as all first-party
+modules. Please look at the :doc:`/modules/channel/pagination_page`
+documentation for more information.
 
 Parameters
 ==========
