@@ -200,7 +200,7 @@ current page.
   If you changed ``page_padding`` to another value, say 5, you'd see
   more page numbers::
 
-    *1*  2  3  4  5  Next Page  Last Page
+    *1*  2  3  4  5  6  Next Page  Last Page
 
   If you later changed to page 4, you'd see this::
 
