@@ -87,6 +87,8 @@ Notice that the layout is a :doc:`hidden template <./hidden_templates>`.
 This lets you prevent direct access to the layout template, which is
 most likely not useful to your users on its own.
 
+.. _layout_variables:
+
 Layout Variables
 ----------------
 

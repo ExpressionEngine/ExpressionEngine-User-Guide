@@ -53,6 +53,8 @@ bottom through each rendering stage.
 
 #. Parse :ref:`embed variables <embed_variables>`
 
+#. Parse :ref:`layout variables <layout_variables>`
+
 #. Parse :ref:`date formatting string constants <template_date_formatting_constants>`
 
 #. Parse :ref:`{template_edit_date} <global_template_edit_date>`
