@@ -4,7 +4,7 @@ Date Variable Formatting
 
 .. contents::
    :local:
-   :depth: 1
+   :depth: 2
 
 ************
 Introduction
@@ -13,17 +13,16 @@ Introduction
 Many tags, including channel fields of the "date" type, are designed to
 display dates and times. The output of these tags can be formatted so
 that the date and time appears in the manner you wish. This includes the format
-of the date, a fixed timezone, and relative date formats. Here is an
-example of formatting the :ref:`{current\_time} <global_current_time>`
-global variable::
+of the date, a fixed timezone, and relative date options.
 
-	{current_time format="%F %d %Y" timezone="America/Los_Angeles" relative="today" units="hours|minutes" depth="1"}
+**************
+Standard Dates
+**************
 
 .. _date_variable_parameters:
 
-**********
 Parameters
-**********
+==========
 
 .. contents::
    :local:
@@ -180,49 +179,197 @@ timezone=
 ---------
 
 The ``timezone=`` parameter will display convert the date to the specified
-timezone, rather than the timezone specified in the
-:doc:`localization settings </cp/admin/localization_settings>` in the control
-panel::
+timezone::
 
 	timezone="America/Los_Angeles"
 
-PHP.net has a `list of supported timezones <http://php.net/manual/en/timezones.php>`_.
+This will override the timezone specified in the
+:doc:`localization settings </cp/admin/localization_settings>` in the control
+panel, and the member's localization settings.  PHP.net has a
+`list of supported timezones <http://php.net/manual/en/timezones.php>`_.
 
-relative=
+**************
+Relative Dates
+**************
+
+Relative dates are always a string indicating the difference between the date
+and right now. By default the number of years, months, weeks, days, hours,
+minutes, and seconds are calculated, and the first non zero unit is displayed.
+Control over which units are calculated and how many units used in the display
+are available, as well as determining when to show a relative date.
+
+Any date can be displayed with relative language. For example, assuming a
+channel entry was posted 2 days ago, this::
+
+	{entry_date:relative}
+
+Would be rendered like this::
+
+	2 days ago
+
+This also works into the future. For example, assume you have a launch date
+just 2 days away, this::
+
+	{launch_date:relative}
+
+Would be rendered like this::
+
+	in 2 days
+
+Parameters
+==========
+
+.. contents::
+   :local:
+   :depth: 1
+
+depth=
+------
+
+The ``depth=`` parameter determines how many calculated units to display,
+starting from the largest non zero unit to the smallest. When depth 2 we will
+join the two units with ``and``. For example, assuming a relative date 4 days,
+3 hours, 2 minutes, and 1 second in the past this::
+
+	{entry_date:relative depth="2"}
+
+Would be rendered like this::
+
+	4 days and 3 hours ago
+
+When the depth is greater than 2 the units are displayed with the Oxford comma.
+Using the same date as above this::
+
+	{entry_date:relative depth="3"}
+
+Would be rendered like this::
+
+	4 days, 3 hours, and 2 minutes ago
+
+The default is equivalent to::
+
+	depth="1"
+
+future=
+-------
+
+The ``future=`` parameter determines what text is wrapped around the relative
+date when the date is in the future. Any text is allowed, and all copies of
+``%s`` will be replaced with the relative date. For example, assuming a date 2
+days into the future, this::
+
+	{entry_date:relative future="%s until"}
+
+Would be rendered like this::
+
+	2 days until
+
+Another example::
+
+	{entry_date:relative future="in %s time"}
+
+Would be rendered like this::
+
+	in 2 days time
+
+The default is equivalent to::
+
+	future="in %s"
+
+less_than=
+----------
+
+The ``less_than=`` parameter determines what text to use when the relative date
+is below the threshold of the smallest unit. For example, assuming a date only
+seconds old this::
+
+	{entry_date:relative units="minutes" less_than="not quite"}
+
+Would be rendered like this::
+
+	not quite one minute ago
+
+The default is equivalent to::
+
+	less_than="less than"
+
+past=
+-----
+
+The ``past=`` parameter determines what text is wrapped around the relative
+date when the date is in the past. Any text is allowed, and all copies of
+``%s`` will be replaced with the relative date. For example this (assuming a
+date 2 days ago)::
+
+	{entry_date:relative past="%s in the past"}
+
+Would be rendered like this::
+
+	2 days in the past
+
+The default is equivalent to::
+
+	past="ago"
+
+singular=
 ---------
 
-The ``relative=`` parameter determines when to show a relative date (i.e. "4
-minutes ago"). The parameter accepts any valid parameter to PHP's
-`strtotime() <http://www.php.net/manual/en/function.strtotime.php>`_ function,
-or "yes". Unless relative is "yes" ExpressionEngine will generate a timestamp
-via strtotime() and compare that timestamp with the value of the date variable.
-When the date variable is greater than or equal to the relative timestamp the
-date will be displayed as a relative date::
+The ``singular=`` parameter determines what text to display when the value of a
+given unit is 1. For example, assuming a date 1 day in the past this::
 
-	relative="today|yesterday|-1 week"
+	{entry_date:relative singular="1"}
 
-If you always want a relative date use "yes"::
+Would be rendered like this::
 
-	relative="yes"
+	1 day ago
 
+The default is equivalent to::
+
+	singular="one"
+
+stop=
+-----
+
+The ``stop=`` parameter determines when to stop calculating a relative date and
+instead display a standard date. Any valid date/time string parameter for PHP's
+`strtotime() <http://www.php.net/manual/en/function.strtotime.php>`_ function is
+acceptable. ExpressionEngine will compute a timestamp based on the date and the
+provided ``stop=`` duration. When the computed timestamp is greater than or
+equal to the current timestamp the date will be displayed as a standard date.
+
+For example, if you want relative dates but only for one day::
+
+	{entry_date:relative stop="+1 day"}
+
+Or perhaps you would rather show relative dates until midnight::
+
+	{entry_date:relative stop="tomorrow"}
+
+If an invalid value is used for ``stop=`` the date will display relative.
 
 units=
 ------
 
 The ``units=`` parameter determines which parts of a relative date are
-calculated prior to displaying them. The default is equivalent to::
+calculated prior to displaying them. The following units are available:
+
+-  ``years``
+-  ``months``
+-  ``weeks``
+-  ``days``
+-  ``hours``
+-  ``minutes``
+-  ``seconds``
+
+When a unit is omitted the next smallest unit will reflect it. For example,
+assuming a date 8 days old this::
+
+	{entry_date:relataive units="days"}
+
+Would be rendered like this::
+
+	8 days ago
+
+The default is equivalent to::
 
 	units="years|months|weeks|days|hours|minutes|seconds"
-
-depth=
-------
-
-The ``depth=`` parameter determines how many calculated date parts to display,
-starting from the largest unit to the smallest (i.e. "5 minutes ago" rather than
-"5 minutes and 18 seconds ago")::
-
-	depth="1"
-
-The default is to display all of the date parts, with each part separated
-by a comma (i.e. "1 year, 2 months, 3 weeks, 5 days, 6 hours, 7 minutes, and
-8 seconds ago").
