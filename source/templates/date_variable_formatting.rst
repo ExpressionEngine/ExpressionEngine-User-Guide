@@ -12,7 +12,7 @@ Introduction
 
 Many tags, including channel fields of the "date" type, are designed to
 display dates and times. The output of these tags can be formatted so
-that the date and time appears in the manner you wish. This includes the format
+that the date and time appear in the manner you wish. This includes the format
 of the date, a fixed timezone, and relative date options.
 
 **************
@@ -178,8 +178,7 @@ Variable              Equivalent                  Sample Rendering
 timezone=
 ---------
 
-The ``timezone=`` parameter will display convert the date to the specified
-timezone::
+The ``timezone=`` parameter will convert the date to the specified timezone::
 
 	timezone="America/Los_Angeles"
 
@@ -195,8 +194,8 @@ Relative Dates
 Relative dates are always a string indicating the difference between the date
 and right now. By default the number of years, months, weeks, days, hours,
 minutes, and seconds are calculated, and the first non zero unit is displayed.
-Control over which units are calculated and how many units used in the display
-are available, as well as determining when to show a relative date.
+Control over which units are calculated, how many units are used in the
+display, and determining when to stop showing a relative date are available.
 
 Any date can be displayed with relative language. For example, assuming a
 channel entry was posted 2 days ago, this::
@@ -227,8 +226,8 @@ depth=
 ------
 
 The ``depth=`` parameter determines how many calculated units to display,
-starting from the largest non zero unit to the smallest. When depth 2 we will
-join the two units with ``and``. For example, assuming a relative date 4 days,
+starting from the largest non zero unit to the smallest. When depth is 2 we will
+join the two units with "and". For example, assuming a relative date 4 days,
 3 hours, 2 minutes, and 1 second in the past this::
 
 	{entry_date:relative depth="2"}
@@ -237,8 +236,8 @@ Would be rendered like this::
 
 	4 days and 3 hours ago
 
-When the depth is greater than 2 the units are displayed with the Oxford comma.
-Using the same date as above this::
+When the depth is greater than 2 the units are displayed with commas. Using the
+same date as above this::
 
 	{entry_date:relative depth="3"}
 
@@ -298,8 +297,8 @@ past=
 
 The ``past=`` parameter determines what text is wrapped around the relative
 date when the date is in the past. Any text is allowed, and all copies of
-``%s`` will be replaced with the relative date. For example this (assuming a
-date 2 days ago)::
+``%s`` will be replaced with the relative date. For example, assuming a date 2
+days ago, this::
 
 	{entry_date:relative past="%s in the past"}
 
@@ -334,7 +333,7 @@ The ``stop=`` parameter determines when to stop calculating a relative date and
 instead display a standard date. Any valid date/time string parameter for PHP's
 `strtotime() <http://www.php.net/manual/en/function.strtotime.php>`_ function is
 acceptable. ExpressionEngine will compute a timestamp based on the date and the
-provided ``stop=`` duration. When the computed timestamp is greater than or
+provided ``stop=`` value. When the computed timestamp is greater than or
 equal to the current timestamp the date will be displayed as a standard date.
 
 For example, if you want relative dates but only for one day::
@@ -345,7 +344,7 @@ Or perhaps you would rather show relative dates until midnight::
 
 	{entry_date:relative stop="tomorrow"}
 
-If an invalid value is used for ``stop=`` the date will display relative.
+If an invalid value is used for ``stop=`` a relative date will be displayed.
 
 units=
 ------
@@ -363,6 +362,14 @@ calculated prior to displaying them. The following units are available:
 
 When a unit is omitted the next smallest unit will reflect it. For example,
 assuming a date 8 days old this::
+
+	{entry_date:relataive units="weeks|days"}
+
+Would be rendered like this::
+
+	one week ago
+
+But this::
 
 	{entry_date:relataive units="days"}
 
