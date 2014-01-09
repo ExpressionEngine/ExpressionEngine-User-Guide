@@ -226,9 +226,9 @@ depth=
 ------
 
 The ``depth=`` parameter determines how many calculated units to display,
-starting from the largest non zero unit to the smallest. When depth is 2 we will
-join the two units with "and". For example, assuming a relative date 4 days,
-3 hours, 2 minutes, and 1 second in the past this::
+starting from the largest non zero unit to the smallest. The defalut is "1".
+When depth is 2 we will join the two units with "and". For example, assuming a
+relative date 4 days, 3 hours, 2 minutes, and 1 second in the past this::
 
 	{entry_date:relative depth="2"}
 
@@ -245,17 +245,13 @@ Would be rendered like this::
 
 	4 days, 3 hours, and 2 minutes ago
 
-The default is equivalent to::
-
-	depth="1"
-
 future=
 -------
 
 The ``future=`` parameter determines what text is wrapped around the relative
 date when the date is in the future. Any text is allowed, and all copies of
-``%s`` will be replaced with the relative date. For example, assuming a date 2
-days into the future, this::
+``%s`` will be replaced with the relative date. The default is "in %s". For
+example, assuming a date 2 days into the future, this::
 
 	{entry_date:relative future="%s until"}
 
@@ -271,16 +267,12 @@ Would be rendered like this::
 
 	in 2 days time
 
-The default is equivalent to::
-
-	future="in %s"
-
 less_than=
 ----------
 
 The ``less_than=`` parameter determines what text to use when the relative date
-is below the threshold of the smallest unit. For example, assuming a date only
-seconds old this::
+is below the threshold of the smallest unit. The default is "less than". For
+example, assuming a date only seconds old this::
 
 	{entry_date:relative units="minutes" less_than="not quite"}
 
@@ -288,17 +280,13 @@ Would be rendered like this::
 
 	not quite one minute ago
 
-The default is equivalent to::
-
-	less_than="less than"
-
 past=
 -----
 
 The ``past=`` parameter determines what text is wrapped around the relative
 date when the date is in the past. Any text is allowed, and all copies of
-``%s`` will be replaced with the relative date. For example, assuming a date 2
-days ago, this::
+``%s`` will be replaced with the relative date. The default is "ago". For
+example, assuming a date 2 days ago, this::
 
 	{entry_date:relative past="%s in the past"}
 
@@ -306,25 +294,17 @@ Would be rendered like this::
 
 	2 days in the past
 
-The default is equivalent to::
-
-	past="ago"
-
 singular=
 ---------
 
 The ``singular=`` parameter determines what text to display when the value of a
-given unit is 1. For example, assuming a date 1 day in the past this::
+given unit is 1. The default is "one". For example, assuming a date 1 day in the past this::
 
 	{entry_date:relative singular="1"}
 
 Would be rendered like this::
 
 	1 day ago
-
-The default is equivalent to::
-
-	singular="one"
 
 stop=
 -----
