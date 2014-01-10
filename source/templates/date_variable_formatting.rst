@@ -313,8 +313,8 @@ The ``stop=`` parameter determines when to stop calculating a relative date and
 instead display a standard date. Any valid date/time string parameter for PHP's
 `strtotime() <http://www.php.net/manual/en/function.strtotime.php>`_ function is
 acceptable. ExpressionEngine will compute a timestamp based on the date and the
-provided ``stop=`` value. When the computed timestamp is greater than or
-equal to the current timestamp the date will be displayed as a standard date.
+provided ``stop=`` value. When the current timestamp is greater than or
+equal to the computed timestamp the date will be displayed as a standard date.
 
 For example, if you want relative dates but only for one day::
 
