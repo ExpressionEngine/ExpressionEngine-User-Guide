@@ -8,6 +8,8 @@ Message Pages
 Message Pages are intended for specific purposes. There are three main
 types of Specialty Templates:
 
+.. _email-notification-templates:
+
 Email Notification Templates
 ----------------------------
 
