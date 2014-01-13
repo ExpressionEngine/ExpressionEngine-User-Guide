@@ -180,7 +180,7 @@ A modulus operator finds the remainder of division of one number by
 another. This can be handy when you want to do something every nth
 iteration of a loop. For example, if we want to display a horizontal
 rule for every 5th entry in a :doc:`Channel Entries
-</modules/channel/channel_entries>` loop, we would write this
+</addons/channel/channel_entries>` loop, we would write this
 conditional::
 
   {if count % 5 == 0}

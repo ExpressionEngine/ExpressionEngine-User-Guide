@@ -217,8 +217,8 @@ Fetch an Action ID
   Modules have certain actions for forms, links, etc. that are
   recognized via an action ids that are inserted into the database upon
   installation of that module. This method returns the action id
-  number from the database. (See also :doc:`functions->fetch_action_id
-  </development/reference/functions>`)::
+  number from the database. (See also :ref:`functions->fetch_action_id
+  <fetch_action_id>`)::
 
     $aid = $this->EE->cp->fetch_action_id($class, $method);
 

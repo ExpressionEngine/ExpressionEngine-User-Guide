@@ -145,6 +145,9 @@ random
   :returns: Random string of characters
   :rtype: String
 
+
+.. _form_declaration:
+
 form_declaration
 ----------------
 
@@ -326,6 +329,9 @@ fetch_assigned_channels
 
   :returns: Array of channels accessible by current user
   :rtype: Array
+
+
+.. _fetch_action_id:
 
 fetch_action_id
 ---------------
