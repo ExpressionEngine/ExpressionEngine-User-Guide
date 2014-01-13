@@ -1,5 +1,5 @@
 #######
-Modules
+Add-Ons
 #######
 
 .. toctree::

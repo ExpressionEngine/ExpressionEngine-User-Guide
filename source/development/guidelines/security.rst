@@ -272,9 +272,9 @@ as a value for a hidden field called `XID`::
 Creating Template Forms from Add-ons
 ====================================
 
-If your addon is creating a form for the template, you should use
-:doc:`ee()->functions->form_declaration()
-</development/reference/functions>`. This automatically adds the csrf
+If your add-on is creating a form for the template, you should use
+:ref:`ee()->functions->form_declaration()
+<form_declaration>`. This automatically adds the csrf
 token as a hidden input field. It also allows any extensions the site
 may have installed to modify the form before it is served, thus creating
 a more uniform experience for the end user. ::
