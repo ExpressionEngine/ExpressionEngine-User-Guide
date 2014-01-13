@@ -66,7 +66,7 @@ CORRECT::
       echo "Here's my code!";
 
   /* End of file myfile.php */
-  /* Location: ./system/modules/mymodule/myfile.php */
+  /* Location: ./system/addons/mymodule/myfile.php */
 
 Class and Method Naming
 -----------------------

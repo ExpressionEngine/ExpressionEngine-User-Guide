@@ -1,9 +1,9 @@
 Multiple Site Manager
 =====================
 
-Manage multiple Sites from a single installation 
+Manage multiple Sites from a single installation
 
-.. note:: The Multiple Site Manager **does not** alter the 
+.. note:: The Multiple Site Manager **does not** alter the
 	:doc:`/about/license`. The license holder must be the owner of all
 	Sites on a single installation.
 
@@ -26,7 +26,7 @@ Key Features
 
 -  Multiple Sites from a single installation
 -  Multiple Forums from a single installation (requires :doc:`Discussion
-   Forums 3.0 </modules/forum/index>`)
+   Forums 3.0 </addons/forum/index>`)
 -  Member Database is "installation wide"
 -  Shared Member Groups across Sites
 -  Member Groups can have per Site preferences.
@@ -62,5 +62,5 @@ Table of Contents
 	:glob:
 	:hidden:
 	:titlesonly:
-	
+
 	*

@@ -215,7 +215,7 @@ visitor will receive a message.
 Enable Captcha for Comment Posting?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Determines whether or not you require :doc:`/security/captchas` to be 
+Determines whether or not you require :doc:`/security/captchas` to be
 used when submitting comments.
 
 Require email address to post comments?
@@ -265,7 +265,7 @@ preference sets the *default* setting for the channel. The setting can
 be overridden and changed on a per-entry basis.
 
 You may override this setting in the
-:doc:`/modules/comment/control_panel/index` section of the Comment
+:doc:`/addons/comment/control_panel/index` section of the Comment
 Module so that comments are set to be moderated rather than closed once
 the expiration period is passed.
 

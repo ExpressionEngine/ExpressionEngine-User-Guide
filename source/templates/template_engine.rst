@@ -11,8 +11,8 @@ being used in the Template.
    Templates. It doesn't apply to rendering theme files such as those
    used for :doc:`Member Profiles
    </cp/design/themes/member_profile_templates>`, the :doc:`Wiki
-   </modules/wiki/wiki_templates>` module, or the :doc:`Discussion
-   Forum </modules/forum/forum_themes>` module.
+   </addons/wiki/wiki_templates>` module, or the :doc:`Discussion
+   Forum </addons/forum/forum_themes>` module.
 
 ExpressionEngine goes through several stages to fully process each
 Template, and this article exposes the order of those rendering stages.

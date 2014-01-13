@@ -34,7 +34,7 @@ database on each page load.
 Enable Channel Entry View Tracking?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When set to "Yes", you can utilize the :doc:`/modules/channel/entry_tracking`
+When set to "Yes", you can utilize the :doc:`/addons/channel/entry_tracking`
 feature of the Channel module.
 
 Enable Referrer Tracking?
