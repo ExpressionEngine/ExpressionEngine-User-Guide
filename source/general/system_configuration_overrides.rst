@@ -1104,14 +1104,19 @@ $config['cp_session_ttl'] = '300';
 cp_session_type
 ---------------
 
-Sets the :ref:`Control Panel session type <cp-session-type-label>`.
+Set the method for session handling in the Control Panel.
+
+.. note:: The *Auto log-in on future visits?* option appears on the CP
+    login screen when the **cookies only** method is used, allowing
+    users to remain logged-in to the CP for up to 2 weeks since their
+    last visit.
 
 ====== ========
 Value  Behavior
 ====== ========
-``c``  Sets the Control Panel to use cookies only
-``s``  Sets the Control Panel to use Session ID only
-``cs`` Sets the Control Panel to use Cookies and Session ID
+``c``  Use cookies only
+``s``  Use session ID only
+``cs`` Use both cookies and session ID
 ====== ========
 
 Example Usage::
@@ -1121,7 +1126,8 @@ Example Usage::
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: Control Panel Session Type
+Privacy --> Security and Sessions`: :ref:`Control Panel Session Type
+<cp-session-type-label>`
 
 .. versionchanged:: 2.8
 
@@ -1131,14 +1137,15 @@ Privacy --> Security and Sessions`: Control Panel Session Type
 
 cp_theme
 --------
-The :ref:`Default Control Panel Theme <general-config-cp-theme-label>`
-is the theme that members will see when logged in to the Control Panel.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Name of theme to use for the Control Panel
-========== ========
+Set the default theme that users will see when logged-in to the Control
+Panel.
+
+========== ===========
+Value      Description
+========== ===========
+``string`` Name of CP theme
+========== ===========
 
 Example Usage::
 
@@ -1147,26 +1154,26 @@ $config['cp_theme'] = 'default';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> General
-Configuration`: Default Control Panel Theme
+Configuration`: :ref:`Default Control Panel Theme
+<general-config-cp-theme-label>`
 
 
 .. _overrides-cp-url:
 
 cp_url
 ------
-The :ref:`URL to your Control Panel index page
-<general-config-url-cp-label>` is the full URL to your ExpressionEngine
-Control Panel.
+
+Set the full URL to your Control Panel.
 
 ========== ========
-Value      Behavior
+Value      Description
 ========== ========
-``URL``    Sets the URL to your ExpressionEngine Control Panel
+``URL``    The full URL to your Control Panel
 ========== ========
 
 Example Usage::
 
-$config['cp_url'] = 'http://www.example.com/admin.php';
+$config['cp_url'] = 'http://example.com/admin.php';
 
 Also available for use in the site index file, :file:`index.php`, and
 the CP index file, :file:`admin.php`. Example Usage::
@@ -1176,37 +1183,44 @@ $assign_to_config['cp_url'] = 'http://domain2.com/admin.php';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> General Configuration`:
-URL to your Control Panel index page
+:ref:`URL to your Control Panel index page
+<general-config-url-cp-label>`
 
 
 csrf_protection
 ---------------
-Determines whether Cross Site Request Forgery protection is enabled.
+
+Enable cross-site request forgery protection.
 
 ========== ========
 Value      Behavior
 ========== ========
-``TRUE``   Enables CSRF
-``FALSE``  Default value, disables CSRF
+``TRUE``   Enables CSRF protection
+``FALSE``  Disables CSRF protection **(default)**
 ========== ========
 
 Example Usage::
 
-$config['csrf_protection'] = 'FALSE';
+$config['csrf_protection'] = 'TRUE';
 
 
 debug
 -----
-The :ref:`Debug Preference <output-debug-pref-label>` setting determines
-how PHP or database error messages are displayed. Error messages are
-often very useful during initial development, but they can be very
-confusing to regular site visitors. There are two options:
+
+Set display preferences for PHP and database error messages.
+
+.. note:: Error messages are helpful for troubleshooting and catching
+    errors during development, but since they can contain confusing
+    language or reveal sensitive system information like file paths, we
+    strongly recommend only showing them to Super Admin-level users once
+    the site is in production.
 
 ========== ========
 Value      Behavior
 ========== ========
-``1``      Enables PHP/SQL error messages shown only to Super Admins
-``2``      Enables PHP/SQL error messages shown to anyone - NOT SECURE
+``0``      Hide PHP/SQL error messages
+``1``      Show PHP/SQL error messages to only Super Admin users
+``2``      Show PHP/SQL error messages all users **NOT SECURE**
 ========== ========
 
 Example Usage::
@@ -1216,20 +1230,20 @@ $config['debug'] = '1';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: Debug Preference
+Administration --> Output and Debugging`: :ref:`Debug Preference
+<output-debug-pref-label>`
 
 
 default_member_group
 --------------------
-The :ref:`Default Member Group Assigned to New Members
-<default-member-group-label>` allows you to specify the Member Group to
-which approved members will be assigned.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Group ID of desired default member group
-========== ========
+Set the member group to which new users will be assigned.
+
+=========== ========
+Value       Description
+=========== ========
+``integer`` Member group ID
+=========== ========
 
 Example Usage::
 
@@ -1238,15 +1252,16 @@ $config['default_member_group'] = '6';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Default Member Group Assigned to New Members
+:ref:`Default Member Group Assigned to New Members
+<default-member-group-label>`
 
 
 default_site_timezone
 ---------------------
-Specify the :ref:`default timezone <sysadmin-site-timezone-label>` for
-your site. All dates and times displayed by ExpressionEngine will be
-localized to this timezone unless overridden by a member's own
-localization preferences.
+
+Set the default timezone. All dates and times displayed by
+ExpressionEngine will be localized to this timezone unless overridden by
+a member's own localization preferences.
 
 ============ ========
 Value        Behavior
@@ -1261,39 +1276,42 @@ $config['default_site_timezone'] = 'America/Los_Angeles';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Localization
-Settings`: Site Timezone
+Settings`: :ref:`Site Timezone <sysadmin-site-timezone-label>`
 
 
 deny_duplicate_data
 -------------------
-The :ref:`Deny Duplicate Data <deny-duplicate-data-label>` feature
-prevents a comment from being accepted if an identical one already
-exists in your database. A malicious person can't submit the same
-information more than once.
+
+Set whether to reject duplicate data submissions. This feature blocks a
+comment if an identical one already exists on the site.
 
 ======= ========
 Value   Behavior
 ======= ========
-``y``   Default value, enables protection against comments being submitted twice
-``n``   Disables protection against comments being submitted twice
+``y``   Enable protection against duplicate data submissions **(default)**
+``n``   Disable protection against duplicate data submissions
 ======= ========
 
 Example Usage::
 
-$config['deny_duplicate_data'] = 'y';
+$config['deny_duplicate_data'] = 'n';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: Deny Duplicate Data
+Privacy --> Security and Sessions`: :ref:`Deny Duplicate Data
+<deny-duplicate-data-label>`
 
 
 disable_all_tracking
 --------------------
-Disable all tracking is an emergency system configuration only
-preference which when set to 'y' will disable all tracking. This is
-useful for server administrators who need a way to respond immediately
-to table locks during a traffic spike to keep the site running smoothly.
+
+.. warning:: Use only under extreme circumstances.
+
+This is an emergency override which will disable all tracking when
+enabled. This is useful for server administrators who need a way to
+respond immediately to table locks during a traffic spike to keep the
+site running smoothly.
 
 ======= ========
 Value   Behavior
@@ -1308,6 +1326,9 @@ $config['disable_all_tracking'] = 'y';
 
 disable_tag_caching
 -------------------
+
+.. warning:: Use only under extreme circumstances.
+
 Disables tag caching, which if used unwisely on a high traffic site can
 lead to disastrous disk i/o. This setting allows quick thinking admins
 to temporarily disable it without hacking or modifying folder
@@ -1316,8 +1337,8 @@ permissions.
 ======= ========
 Value   Behavior
 ======= ========
-``y``   Disables tag caching
-``n``   Default value, tag caching is enabled
+``y``   Disable tag caching
+``n``   Enable tag caching **(default)**
 ======= ========
 
 Example Usage::
@@ -1327,47 +1348,45 @@ $config['disable_tag_caching'] = 'y';
 
 doc_url
 -------
-The :ref:`URL to Documentation Directory
-<general-config-URL-docs-label>` is the  full URL to location of the
-ExpressionEngine User Guide. This URL is used to create the User Guide
-link at the top of your Control Panel.
+
+Set the URL to the ExpressionEngine User Guide, used in the Control
+Panel to provide a direct link to the documentation.
 
 ======= ========
-Value   Behavior
+Value   Description
 ======= ========
-``URL`` Sets the URL to your documentation (User Guide link at the top of your Control Panel)
+``URL`` URL to ExpressionEngine User Guide
 ======= ========
 
 Example Usage::
 
-$config['doc_url'] = 'http://www.example.com/docs/';
+$config['doc_url'] = 'http://ellislab.com/expressionengine/user-guide/';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> General
-Configuration`: URL to Documentation Directory
+Configuration`: :ref:`URL to Documentation Directory
+<general-config-URL-docs-label>`
 
 
 dynamic_tracking_disabling
 --------------------------
-If a value is provided for :ref:`Suspend ALL tracking when number of
-online visitors exceeds <suspend-tracking-label>`, when the number of
-"online visitors" exceeds that value, all of the tracking features will
-be temporarily disabled until the number of online visitors drops below
-the indicated value. Recommended values for this feature will vary based
-on your hosting environment. Check with your server administrator to
-discuss reasonable limits for your site.
 
-.. note::
-   Online User Tracking must be enabled for this feature to work, or the
-   information will not be available to ExpressionEngine to determine
-   your site's traffic.
+Set a value for the maximum number of online visitors to track. Once
+this value is exceeded, all of the tracking features will be temporarily
+disabled until the number of online visitors drops below the indicated
+value. Recommended values for this feature will vary based on your
+hosting environment. Check with your server administrator to discuss
+reasonable limits for your site.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets the number of "online visitors" which will trigger the disabling of all tracking
-========== ========
+.. note:: :ref:`Online User Tracking <enable_online_user_tracking>` must
+    be enabled for this feature to work.
+
+=========== ========
+Value       Behavior
+=========== ========
+``integer`` Maximum number of online visitors to track
+=========== ========
 
 Example Usage::
 
@@ -1376,18 +1395,19 @@ $config['dynamic_tracking_disabling'] = '350';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Tracking Preferences`: Suspend ALL tracking when number of
-online visitors exceeds:
+Privacy --> Tracking Preferences`: :ref:`Suspend ALL tracking when number of
+online visitors exceeds <suspend-tracking-label>`:
 
 
 email_batch_size
 ----------------
-The :ref:`Number of Emails Per Batch <email-number-per-batch-label>`
-setting is used in conjunction with the "Use Batch Mode?" preference.
-This setting determines how many emails will be sent in each batch. The
-batch size you should use depend on many things; among them the email
-protocol you have chosen, the server configuration, and the server
-power, so you may need to experiment a little to get it right.
+
+Set the number of emails to be sent in each batch. The batch size you
+should use depend on many things; among them the email protocol you have
+chosen, the server configuration, and the server power, so you may need
+to experiment a little to get it right.
+
+.. note:: :ref:`Batch mode <email_batchmode>` must be enabled.
 
 If you are using one of the more robust mail protocols, like Sendmail or
 SMTP, you can set a greater batch total, possibly as high as several
@@ -1395,17 +1415,16 @@ hundred or even more if you are on a dedicated server. A batch size of
 300 in these cases is a good starting point. If you are having good
 success you can increase it until you begin experiencing time-outs.
 
-.. note::
-   Unless your mailing list numbers in the thousands you won't gain much
-   of a speed gain from setting large batches. If you are using the less
-   efficient "PHP mail" protocol then you will usually need to set a
-   lower batch size; 50-100 is typical.
+.. note:: Unless your mailing list numbers in the thousands, you won't
+    notice much of a speed gain from setting large batches. If you are
+    using the less efficient "PHP mail" protocol then you will usually
+    need to set a lower batch size; 50-100 is typical.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets the number of emails to send in a batch (For average servers, 300 is a safe number)
-========== ========
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` The number of emails per batch
+=========== ===========
 
 Example Usage::
 
@@ -1414,35 +1433,33 @@ $config['email_batch_size'] = '300';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: Number of Emails Per Batch
+Configuration`: :ref:`Number of Emails Per Batch
+<email-number-per-batch-label>`
 
+
+.. _email_batchmode:
 
 email_batchmode
 ---------------
-ExpressionEngine's mail handling routine allows the use of a :ref:`Batch
-Mode <email-use-batch-mode-label>` whenever it sends email via the
-Communicate section of your Control Panel.
 
-This mode splits up large numbers of emails into small batches which get
+Set whether to send email via the Communicate section of the Control
+Panel in batches.
+
+This mode splits up large numbers of emails into small batches which are
 sent at short intervals. This gives you the ability to send email to
-very large mailing lists without being in danger of exceeding your
-server's execution time limit. By default, PHP limits any process to 30
-seconds, which is not enough time to send a large amount of email.
-Enabling the Batch Mode can prevent server time-outs. A secondary
-benefit is that it is less taxing on your mail server and, in the case
-of people on shared hosting accounts, less likely to cause problems with
-your server administrator.
-
-Batch mode is turned off by default in ExpressionEngine. To enable batch
-mode, you must change the "Use Batch Mode" preference to Yes and then
-set the number of emails per batch in the "Number of Emails Per Batch"
-preference.
+very large mailing lists without running up against your server's
+execution time limit. By default, PHP limits any process to 30 seconds,
+which is not enough time to send a large amount of email. Enabling the
+batch mode can prevent server time-outs. A secondary benefit is that it
+is less taxing on your mail server and, in the case of people on shared
+hosting accounts, less likely to cause problems with your server
+administrator.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Enables batch mode
-``n``      Default value, disables batch mode
+``y``      Enable batch mode
+``n``      Disable batch mode **(default)**
 ========== ========
 
 Example Usage::
@@ -1452,19 +1469,19 @@ $config['email_batchmode'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: Use Batch Mode
+Configuration`: :ref:`Use Batch Mode <email-use-batch-mode-label>`
 
 
 email_charset
 -------------
-:ref:`Email Character Encoding <email-character-encoding-label>`
-specifies the character encoding that the emails will be sent with.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the encoding to be used by emails being sent
-========== ========
+Set the character encoding used on the content of outgoing messages.
+
+============ ===========
+Value        Description
+============ ===========
+``encoding`` Encoding to use for content of outgoing emails
+============ ===========
 
 Example Usage::
 
@@ -1473,23 +1490,24 @@ $config['email_charset'] = 'utf-8';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: Email Character Encoding
+Configuration`: :ref:`Email Character Encoding
+<email-character-encoding-label>`
 
 
 email_console_timelock
 ----------------------
-The :ref:`Email Console Timelock <email-console-timelock-label>` sets
-the number of minutes that must lapse before a member is allowed to send
-another email.
+
+Set the number of minutes that must lapse before a member is allowed to
+send another email.
 
 .. note::
    This only applies to the Email Console in the member profile pages.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` sets the number of minutes that must lapse before a member is allowed to send another email
-========== ========
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Number of minutes that must lapse before a member is allowed to send another email
+=========== ===========
 
 Example Usage::
 
@@ -1498,7 +1516,8 @@ $config['email_console_timelock'] = "300";
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: Email Console Timelock
+Configuration`: :ref:`Email Console Timelock
+<email-console-timelock-label>`
 
 
 email_crlf
@@ -1760,6 +1779,8 @@ Example Usage::
 
 $config['enable_hooks'] = "y";
 
+
+.. _enable_online_user_tracking:
 
 enable_online_user_tracking
 ---------------------------
