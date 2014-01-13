@@ -226,7 +226,7 @@ depth=
 ------
 
 The ``depth=`` parameter determines how many calculated units to display,
-starting from the largest non zero unit to the smallest. The defalut is "1".
+starting from the largest non zero unit to the smallest. The default is "1".
 When depth is 2 we will join the two units with "and". For example, assuming a
 relative date 4 days, 3 hours, 2 minutes, and 1 second in the past this::
 
