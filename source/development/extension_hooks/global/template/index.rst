@@ -26,7 +26,7 @@ template_fetch_template
 template_post_parse
 ---------------------
 
-.. function:: template_post_parse($final_template, $sub, $site_id)
+.. function:: template_post_parse($final_template, $is_partial, $site_id)
 
   Modify template after tag parsing
 
@@ -35,15 +35,19 @@ template_post_parse
     $this->final_template = ee()->extensions->call(
         'template_post_parse',
         $this->final_template,
-        $sub,
+        $is_partial,
         $site_id
     );
 
   :param string $final_template: The template string after template tags
     have been parsed
-  :param boolean $sub: ``TRUE`` if the current template is an embed
+  :param boolean $is_partial: ``TRUE`` if the current template is an
+    embed or a layout
   :param string $site_id: Site ID of the current template
   :returns: The adjusted ``$final_template``
   :rtype: String
+
+  .. note:: Before 2.8.0 ``$is_partial`` was called ``$is_sub`` and only
+    applied to embeds.
 
   .. versionadded:: 2.4.0

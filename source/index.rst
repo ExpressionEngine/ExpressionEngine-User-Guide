@@ -48,6 +48,7 @@ Templates
 ---------
 
 - :doc:`templates/embedding`
+- :doc:`templates/layouts`
 - :doc:`templates/hidden_templates`
 - :doc:`templates/plugins`
 - :doc:`templates/php`

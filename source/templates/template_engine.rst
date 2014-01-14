@@ -53,6 +53,8 @@ bottom through each rendering stage.
 
 #. Parse :ref:`embed variables <embed_variables>`
 
+#. Parse :ref:`layout variables <layout_variables>`
+
 #. Parse :ref:`date formatting string constants <template_date_formatting_constants>`
 
 #. Parse :ref:`{template_edit_date} <global_template_edit_date>`
@@ -78,6 +80,8 @@ bottom through each rendering stage.
 #. Write **template to cache file**
 
 #. Parse :ref:`advanced conditionals <global_advanced_conditionals>`
+
+#. Process :doc:`template layouts </templates/layouts>`
 
 #. Process :doc:`embedded templates </templates/embedding>`
 

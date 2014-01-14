@@ -265,6 +265,16 @@ lang
 This variable will be substituted for the **Default XML Language**
 preference under :menuselection:`Admin --> General Configuration`.
 
+layout
+------
+
+::
+
+  {layout="news/local"}
+
+This variable allows you to wrap a Template in another. Please
+see the :doc:`Template Layouts <../layouts>` section.
+
 location
 --------
 
