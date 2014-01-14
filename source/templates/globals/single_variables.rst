@@ -180,6 +180,8 @@ embed
 This variable allows you to embed one Template within another. Please
 see the :doc:`Embedded Templates <../embedding>` section.
 
+.. _global-encode:
+
 encode
 ------
 

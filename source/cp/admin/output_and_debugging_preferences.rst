@@ -41,24 +41,22 @@ compressed pages.
 Force URL query strings?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Setting this to "Yes" will force the system to use a standard query
-string in all your URLs like this:
+If enabled, ExpressionEngine will render URLs with a question mark
+following ``index.php`` in order to pass along segment information as a
+standard query string::
 
-``http://example.com/index.php?/channel/joe/`` (notice the question mark).
+    http://example.com/index.php?/channel/joe/
 
-When set to "No", the system uses a more search-engine friendly format
-similar to:
+This is necessary for only a few types of web servers to process
+ExpressionEngine's URLs correctly. ExpressionEngine's default is a much
+more search-engine friendly format::
 
-``http://example.com/index.php/channel/joe/``
+    http://example.com/index.php/channel/joe/
 
-The majority of servers will be able to use the default ("No") method,
-which is almost universally preferred by users. Some Windows servers
-(and very occasionally other types) do not support this feature and will
-have to be set to "Yes". You'll know if this affects you if none of your
-links seem to work.
 
-In addition, some people will need to use this variable in conjunction
-with editing the $qtype variable in your main site index.php file.
+In rare circumstances, you may need to use this variable in conjunction
+with editing the ``$qtype`` variable in your main site ``index.php``
+file.
 
 .. _output-debug-redirect-method-label:
 

@@ -815,6 +815,8 @@ Privacy --> CAPTCHA Preferences`: :ref:`Full URL to CAPTCHA Folder
 <captcha-full-url>`
 
 
+.. _censor_replacement:
+
 censor_replacement
 ------------------
 
@@ -841,6 +843,8 @@ $config['censor_replacement'] = 'tisk tisk';
 Privacy --> Word Censoring`: :ref:`Censoring Replacement Word
 <censor-replace-label>`
 
+
+.. _censored_words:
 
 censored_words
 --------------
@@ -1522,7 +1526,8 @@ Configuration`: :ref:`Email Console Timelock
 
 email_crlf
 ----------
-If set, overrides the core Email class setting for crlf characters in
+
+If set, this overrides the core Email class setting for crlf characters in
 quoted-printable encoded emails (Email class $crlf property).
 
 ========== ========
@@ -1538,17 +1543,16 @@ $config['email_crlf'] = "\r\n";
 
 email_debug
 -----------
-When :ref:`Enable Email Debugging <email-enable-debugging-label>` is
-enabled, detailed messages will be displayed whenever you send an email
-using the Communicate page. This information can be useful in helping to
-track down any problems you may be experiencing. If you are having
-difficulty sending email you are encouraged to enable this option.
+
+When enabled, detailed debugging information will be displayed whenever
+you send an email using the Communicate page. This information can be
+useful in helping to track down any problems you may be experiencing.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Enables email debugging
-``n``      Default value, email debugging is not enabled
+``y``      Enable email debugging
+``n``      Disable email debugging **(default)**
 ========== ========
 
 Example Usage::
@@ -1558,22 +1562,23 @@ $config['email_debug'] = "y";
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: Enable Email Debugging
+Configuration`: :ref:`Enable Email Debugging
+<email-enable-debugging-label>`
 
 
 email_module_captchas
 ---------------------
-With :ref:`Enable CAPTCHAs for Tell-a-Friend and Contact emails
-<email-enable-captchas-label>` enabled, users will need to fill out a
-CAPTCHA when using the Tell-a-Friend or Contact email forms. You will
-need to ensure that your tags for those forms contain the appropriate
-CAPTCHA code.
+
+When enabled, users will need to fill out a :doc:`CAPTCHA
+</security/captchas>` when using the Tell-a-Friend or Contact email
+forms. You will need to ensure that your tags for those forms contain
+the appropriate CAPTCHA code.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Enables CAPTCHAS on Tell-a-Friend and Contact email forms
-``n``      Default value, CAPTCHAS are not required on Tell-a-Friend and Contact email forms
+``y``      Enable CAPTCHAS on Tell-a-Friend and Contact email forms
+``n``      Disable CAPTCHAS on Tell-a-Friend and Contact email forms **(default)**
 ========== ========
 
 Example Usage::
@@ -1583,11 +1588,13 @@ $config['email_module_captchas'] = "y";
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: Enable CAPTCHAs for Tell-a-Friend and Contact emails
+Configuration`: :ref:`Enable CAPTCHAs for Tell-a-Friend and Contact
+emails <email-enable-captchas-label>`
 
 
 email_newline
 -------------
+
 If set, overrides the core Email class setting for newline characters
 (Email class $newline property).
 
@@ -1604,40 +1611,37 @@ $config['email_newline'] = "\r\n";
 
 emoticon_url
 ------------
-The :ref:`URL to the folder containing your smileys
-<emoticon-url-folder-label>` setting specifies the URL of the folder
-where you have your smiley graphics located. This setting will
-automatically be filled in during installation, so you should only need
-to change it if you have altered where your smiley graphics are stored.
 
-========== ========
-Value      Behavior
-========== ========
-``URL``    Specifies the URL of the folder where you have your smiley graphics located
-========== ========
+Set the URL to the base folder where smiley graphics are stored.
+
+========== ===========
+Value      Description
+========== ===========
+``URL``    URL to the location of smiley graphics
+========== ===========
 
 Example Usage::
 
-$config['emoticon_url'] = "http://www.example.com/images/smileys/";
+$config['emoticon_url'] = "http://example.com/images/smileys/";
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> System
-Administration --> Emoticon Preferences`: URL to the folder containing your smileys
+Administration --> Emoticon Preferences`: :ref:`URL to the folder
+containing your smileys <emoticon-url-folder-label>`
 
 
 enable_avatars
 --------------
-:ref:`Enable Avatars <avatar-enable-label>` determines whether avatars
-are enabled for your site. If enabled, then users will be able to
-associate an image with their account that you can optionally display
-with entries, comments, and forum posts.
+
+If enabled, users can associate an image with their account that you can
+optionally display with entries, comments, and forum posts.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Default value, enables avatars for your ExpressionEngine site
-``n``      Disables avatars for your ExpressionEngine site
+``y``      Enable avatars **(default)**
+``n``      Disable avatars
 ========== ========
 
 Example Usage::
@@ -1646,23 +1650,25 @@ $config['enable_avatars'] = "n";
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`: Enable Avatars
+**Also found in CP:** :menuselection:`Members --> Preferences`:
+:ref:`Enable Avatars <avatar-enable-label>`
 
 
 .. _enable_censoring:
 
 enable_censoring
 ----------------
-:ref:`Enable Word Censoring <censor-words-enable-label>` enables or
-disables word censoring. If you select "Yes", the system will replace
-any specified words in channel entries, comments, forum posts, etc.
-according to your preference below
+
+If enabled, the system will censor any :ref:`specified words
+<censored_words>` in channel entries, comments, forum posts, etc.
+Censored words will be replaced with the :ref:`censoring replacement
+word <censor_replacement>`.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Enables word censoring
-``n``      Default value, disables word censoring
+``y``      Enable word censoring
+``n``      Disable word censoring **(default)**
 ========== ========
 
 Example Usage::
@@ -1672,19 +1678,21 @@ $config['enable_censoring'] = "y";
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Security and
-Privacy --> Word Censoring`: Enable Word Censoring
+Privacy --> Word Censoring`: :ref:`Enable Word Censoring
+<censor-words-enable-label>`
 
 
 enable_db_caching
 -----------------
-Forces ExpressionEngine to cache the output of database queries to text
+
+If enabled, the system will cache the output of database queries to text
 files.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Enables database caching
-``n``      Default value, disables database caching
+``y``      Enable database caching
+``n``      Disable database caching **(default)**
 ========== ========
 
 Example Usage::
@@ -1694,16 +1702,16 @@ $config['enable_db_caching'] = "y";
 
 enable_emoticons
 ----------------
-With the :ref:`Display Smileys <emoticon-display-smileys-label>`
-preference you can choose whether or not the special codes for smileys
-are rendered as graphics on your site.
+
+If enabled, smileys entered as text will be displayed with graphic
+representations.
 
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Default value, enables smileys
-``n``      Disables Smileys
+``y``      Enable emoticons **(default)**
+``n``      Disable emoticons
 ========== ========
 
 Example Usage::
@@ -1713,20 +1721,22 @@ $config['enable_emoticons'] = "y";
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> System
-Administration --> Emoticon Preferences`: Display Smileys
+Administration --> Emoticon Preferences`: :ref:`Display Smileys
+<emoticon-display-smileys-label>`
 
 
 enable_entry_view_tracking
 --------------------------
-When :ref:`Enable Channel Entry View Tracking
-<tracking-enable-channel-entry-view-label>` is set to "Y", you can
-utilize the Entry "Views" Tracking Tag feature of the Channel module.
+
+If enabled, the :doc:`Entry "Views" Tracking Tag
+</addons/channel/entry_tracking>` feature of the Channel module is
+available for use.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Enables tracking views
-``n``      Default value, disables tracking views
+``y``      Enable tracking views
+``n``      Disable tracking views **(default)**
 ========== ========
 
 Example Usage::
@@ -1736,20 +1746,20 @@ $config['enable_entry_view_tracking'] = "y";
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Security and
-Privacy --> Tracking Preferences`: Enable Channel Entry View Tracking
+Privacy --> Tracking Preferences`: :ref:`Enable Channel Entry View
+Tracking <tracking-enable-channel-entry-view-label>`
 
 
 enable_hit_tracking
 -------------------
-When :ref:`Enable Template Hit Tracking
-<tracking-enable-template-hit-tracking-label>` is set to "Y", hits to
-your templates will be tracked in your database on each page load.
+
+If enabled, the hit will be tracked each time a template is loaded.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Default value, enables template hit tracking
-``n``      Disables template hit tracking
+``y``      Enable template hit tracking **(default)**
+``n``      Disable template hit tracking
 ========== ========
 
 Example Usage::
@@ -1759,43 +1769,24 @@ $config['enable_hit_tracking'] = "y";
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Security and
-Privacy --> Tracking Preferences`: Enable Template Hit Tracking
-
-
-enable_hooks
-------------
-If you would like to use the "hooks" feature you must enable it by
-setting this variable to TRUE (boolean).  See the user guide for
-details.
-
-========== ========
-Value      Behavior
-========== ========
-``TRUE``   Enables hooks
-``FALSE``  Default value, disables hooks
-========== ========
-
-Example Usage::
-
-$config['enable_hooks'] = "y";
+Privacy --> Tracking Preferences`: :ref:`Enable Template Hit Tracking
+<tracking-enable-template-hit-tracking-label>`
 
 
 .. _enable_online_user_tracking:
 
 enable_online_user_tracking
 ---------------------------
-:ref:`Enable Online User Tracking
-<tracking-enable-online-user-tracking-label>` allows you yo determine
-whether tracking of online users is performed by the system. When you
-have this preference set to "Yes", a database update will be performed
-for each page load so that the user statistics can be tracked and
-stored.
+
+If enabled, online user statistics are tracked and the user-based
+variables in the :doc:`Statistics </addons/statistics/index>` module
+are available for use.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Enables enables online user tracking
-``n``      Default value, disables online user tracking
+``y``      Enable online user tracking
+``n``      Disable online user tracking **(default)**
 ========== ========
 
 Example Usage::
@@ -1805,38 +1796,21 @@ $config['enable_online_user_tracking'] = "y";
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Security and
-Privacy --> Tracking Preferences`: Enable Online User Tracking
-
-
-enable_hooks
-------------
-If you would like to use the "hooks" feature you must enable it by
-setting this variable to TRUE (boolean)
-
-========== ========
-Value      Behavior
-========== ========
-``TRUE``   Enables "hooks" feature
-``FALSE``  Default value, disables "hooks" feature
-========== ========
-
-Example Usage::
-
-$config['enable_hooks'] = "TRUE";
+Privacy --> Tracking Preferences`: :ref:`Enable Online User Tracking
+<tracking-enable-online-user-tracking-label>`
 
 
 enable_photos
 -------------
-:ref:`Enable Member Photos <enable-member-photos-label>` determines
-whether member photos are enabled for your site. If enabled, then users
-will be able to upload an image to be displayed in their member profile
-area.
+
+If enabled, users can upload an image to be displayed in their member
+profile area.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Enables member photos
-``n``      Default value, disables member photos
+``y``      Enable member photos
+``n``      Disable member photos **(default)**
 ========== ========
 
 Example Usage::
@@ -1846,84 +1820,44 @@ $config['enable_photos'] = "y";
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Enable Member Photos
-
-
-enable_query_strings
---------------------
-Toggles query strings
-
-========== ========
-Value      Behavior
-========== ========
-``TRUE``   Enables query strings
-``FALSE``  Default value, disables query strings
-========== ========
-
-Example Usage::
-
-$config['enable_query_strings'] = "TRUE";
-
-
-force_query_string
-------------------
-Setting :ref:`Force URL query strings
-<output-force-query-strings-label>` to "Yes" will force the system to
-use a standard query string in all your URLs.
-
-========== ========
-Value      Behavior
-========== ========
-``TRUE``   Forces query strings
-``FALSE``  Default value, will not force query strings
-========== ========
-
-Example Usage::
-
-$config['force_query_string'] = "TRUE";
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: Force URL query strings
+:ref:`Enable Member Photos <enable-member-photos-label>`
 
 
 enable_search_log
 -----------------
-:ref:`Enable Search Term Logging <enable-search-term-log-label>`
-specifies whether to log the search terms submitted by your users. When
-set to yes, each search term submitted will be stored so you can view it
-at: :menuselection:`Tools --> Logs --> Search Logs`
+
+If enabled, each searched term will be logged and can be viewed in the
+:doc:`Search Log </cp/tools/logs/search_log>`.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Default value, enables search term log
-``n``      Disables search term log
+``y``      Enable search term log **(default)**
+``n``      Disable search term log
 ========== ========
 
 Example Usage::
 
-$config['enable_search_log'] = "TRUE";
+$config['enable_search_log'] = "n";
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> System
-Administration --> Search Log Configuration`: Enable Search Term Logging
+Administration --> Search Log Configuration`: :ref:`Enable Search Term
+Logging <enable-search-term-log-label>`
 
 
 enable_sql_caching
 ------------------
-The :ref:`Dynamic Channel Query Caching
-<caching_dynamic_channel_query_caching>` feature will improve the speed
-at which the {exp:channel:entries} tag is rendered by caching queries
-that are normally executed dynamically.
+
+Improves the speed at which the Channel Entries tag is rendered by
+caching queries that are normally executed dynamically.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Enables query caching
-``n``      Default value, query caching is not enabled
+``y``      Enable query caching
+``n``      Disable query caching **(default)**
 ========== ========
 
 Example Usage::
@@ -1933,42 +1867,48 @@ $config['enable_sql_caching'] = "n";
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Channel
-Administration --> Global Preferences`: Cache Dynamic Channel Queries
+Administration --> Global Preferences`: :ref:`Cache Dynamic Channel
+Queries <caching_dynamic_channel_query_caching>`
+
 
 .. _enable_throttling:
 
 enable_throttling
 -----------------
-:ref:`Enable Throttling <enable-throttling-label>` Allows you to enable
-or disable this feature.
+
+If enabled, the system will throttle excessive web requests from
+potentially malicious users.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Enables throttling
-``n``      Default value, throttling is disabled
+``y``      Enable throttling
+``n``      Disable throttling **(default)**
 ========== ========
 
 Example Usage::
 
-$config['enable_throttling'] = "n";
+$config['enable_throttling'] = "y";
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Throttling Preferences`: Enable Throttling
+Privacy --> Throttling Preferences`: :ref:`Enable Throttling
+<enable-throttling-label>`
 
 
 encode_removed_text
 -------------------
-If set, when an {encode=""} tag is encountered, but emails are not to be
-encoded, this text will be displayed in place of the tag.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets text to be used
-========== ========
+If set and ``$this->encode_email`` is set to ``FALSE`` in the Template
+class---which is not the default---this text will replace all instances
+of the :ref:`encode <global-encode>` global variable.
+
+========== ===========
+Value      Description
+========== ===========
+``text``   Replacement text
+========== ===========
 
 Example Usage::
 
@@ -1977,15 +1917,16 @@ $config['encode_removed_text'] = 'Encoded emails not allowed';
 
 filename_increment
 ------------------
-When set to "y", forces upload filenames to be unique. Re-uploads of
+
+Forces filenames of uploaded files to be unique. Secondary uploads of
 existing files or uploads that share a filename with an existing file
-will have an incrementing number appended to them.
+will have an incrementing number appended to the filename.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Forces upload filenames to be unique
-``n``      Default value
+``y``      Force upload filenames to be unique
+``n``      Allow duplicate filenames **(default)**
 ========== ========
 
 Example Usage::
@@ -1993,35 +1934,85 @@ Example Usage::
 $config['filename_increment'] = "y";
 
 
-forum_trigger
--------------
-Forum trigger word, requires that forums be installed.
+force_query_string
+------------------
+
+If enabled, ExpressionEngine will render URLs with a question mark
+following ``index.php`` in order to pass along segment information as a
+standard query string::
+
+    http://example.com/index.php?/channel/joe/
+
+This is necessary for only a few types of web servers to process
+ExpressionEngine's URLs correctly. ExpressionEngine's default is a much
+more search-engine friendly format::
+
+    http://example.com/index.php/channel/joe/
+
+
+In rare circumstances, you may need to use this variable in conjunction
+with editing the ``$qtype`` variable in your main site ``index.php``
+file.
 
 ========== ========
 Value      Behavior
 ========== ========
-``text``   Sets the forum trigger word
+``TRUE``   Forces query strings
+``FALSE``  Do not force query strings **(default)**
+========== ========
+
+Example Usage::
+
+$config['force_query_string'] = "TRUE";
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> System
+Administration --> Output and Debugging`: :ref:`Force URL query strings
+<output-force-query-strings-label>`
+
+
+.. _forum_is_installed:
+
+forum_is_installed
+------------------
+
+Automatically enabled when the :doc:`Discussion Forum
+</addons/forum/index>` module is installed.
+
+========== ===========
+Value      Description
+========== ===========
+``y``      Forum is installed **(default)**
+``n``      Forum is not installed
+========== ===========
+
+Example Usage::
+
+$config['forum_is_installed'] = "y";
+
+
+forum_trigger
+-------------
+
+Sets the forum triggering word if the :ref:`Discussion Forum module is
+installed <forum_is_installed>`.
+
+========== ========
+Value      Description
+========== ========
+``text``   Forum triggering word
 ========== ========
 
 Example Usage::
 
 $config['forum_trigger'] = "eerox";
 
+.. rst-class:: cp-path
 
-global_xss_filtering
---------------------
-Enables XSS filtering for your ExpressionEngine website.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Enables XSS filtering
-``n``      Default value, disables XSS filtering
-========== ========
-
-Example Usage::
-
-$config['global_xss_filtering'] = "y";
+**Also found in CP:** :menuselection:`Add-Ons --> Modules --> Discussion
+Forum --> Default Preferences`: :ref:`Forum Triggering Word
+<forum-forum_triggering_word>`
 
 
 gzip_output
@@ -2058,14 +2049,16 @@ Administration --> Output and Debugging`: :ref:`Enable GZIP Output
 
 hidden_template_indicator
 -------------------------
-Set the character(s) to use at the beginning of a template name to
-consider it a "hidden" template. Default is a period'.'
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the character(s) to use at the beginning of a template name to consider it a "hidden" template
-========== ========
+Specify the character(s) that denote a :doc:`hidden template
+</templates/hidden_templates>` when used to prefix a template name.
+The default is a dot, e.g. ``.my_hidden_template``.
+
+========== ===========
+Value      Description
+========== ===========
+``text``   Hidden template indicator characters
+========== ===========
 
 Example Usage::
 
@@ -2074,14 +2067,16 @@ $config['hidden_template_indicator'] = '_';
 
 htaccess_path
 -------------------------
-Used by the Blacklist Module to write rules to your .htaccess file. This
-is the server path.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the server path to your .htaccess file.
-========== ========
+Set the server path used by the :doc:`Blacklist/Whitelist
+</addons/blacklist/index>` module to :ref:`write rules to your
+.htaccess file <blacklist-writing_to_htaccess>`.
+
+========== ===========
+Value      Description
+========== ===========
+``path``   Server path to ``.htaccess`` file.
+========== ===========
 
 Example Usage::
 

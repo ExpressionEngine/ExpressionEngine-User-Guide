@@ -39,11 +39,9 @@ Specifies the character encoding that the emails will be sent with.
 Enable Email Debugging
 ~~~~~~~~~~~~~~~~~~~~~~
 
-When this option is enabled, detailed messages will be displayed
-whenever you send an email using the Communicate page. This information
-can be useful in helping to track down any problems you may be
-experiencing. If you are having difficulty sending email you are
-encouraged to enable this option.
+When enabled, detailed debugging information will be displayed whenever
+you send an email using the Communicate page. This information can be
+useful in helping to track down any problems you may be experiencing.
 
 .. _email-protocol-label:
 

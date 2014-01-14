@@ -16,10 +16,9 @@ events </optimization/handling_extreme_traffic>`.
 Enable Online User Tracking?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can determine whether tracking of online users is performed by the
-system. When you have this preference set to "Yes", a database update
-will be performed for each page load so that the user statistics can be
-tracked and stored.
+If enabled, online user statistics are tracked and the user-based
+variables in the :doc:`Statistics </addons/statistics/index>` module
+are available for use.
 
 .. _tracking-enable-template-hit-tracking-label:
 

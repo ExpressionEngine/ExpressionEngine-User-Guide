@@ -139,6 +139,9 @@ Site for Forum
 If the :doc:`Multiple Site Manager </cp/sites/index>` is installed, this
 allows you to determine which Site the forum board belongs to.
 
+
+.. _forum-forum_triggering_word:
+
 Forum Triggering Word
 ^^^^^^^^^^^^^^^^^^^^^
 

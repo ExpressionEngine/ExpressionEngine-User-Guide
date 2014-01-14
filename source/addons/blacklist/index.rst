@@ -139,6 +139,9 @@ alter any of your existing items in your lists.
    configuration is quite common on most web hosts and default server
    configurations.
 
+
+.. _blacklist-writing_to_htaccess:
+
 Writing Blacklist to .htaccess File
 -----------------------------------
 
