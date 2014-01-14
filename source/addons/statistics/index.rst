@@ -107,8 +107,9 @@ last\_visitor\_date
 
 	{last_visitor_date format="%m/%d/%Y %h:%i %a"}
 
-The date of most most recent visitor to the site. See `Date Variable
-Formatting </templates/date_variable_formatting>` for more information.
+The date of most most recent visitor to the site. See :doc:`Date
+Variable Formatting </templates/date_variable_formatting>` for more
+information.
 
 most\_visitor\_date
 ~~~~~~~~~~~~~~~~~~~
@@ -118,7 +119,7 @@ most\_visitor\_date
 	{most_visitor_date format="%m/%d/%Y %h:%i %a"}
 
 The date on which the most visitors were ever viewing the site at the
-same time. See `Date Variable Formatting
+same time. See :doc:`Date Variable Formatting
 </templates/date_variable_formatting>` for more information.
 
 most\_visitors
