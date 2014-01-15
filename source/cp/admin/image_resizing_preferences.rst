@@ -22,6 +22,8 @@ installed and available on your server. The options are:
 - `ImageMagick <http://www.imagemagick.org/script/index.php>`_
 - `NetPBM <http://netpbm.sourceforge.net/>`_
 
+.. _image-converter-path-label:
+
 Image Converter Path
 ~~~~~~~~~~~~~~~~~~~~
 

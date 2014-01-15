@@ -23,7 +23,8 @@ URLs</urls/remove_index.php>`, all front-end web requests are still
 handled by the site index file.)
 
 .. note:: Overrides available for use in the site index file are limited
-    to :ref:`cp_url <overrides-cp-url>`, :ref:`newrelic_app_name
+    to :ref:`cp_url <overrides-cp-url>`, :ref:`is_site_on
+    <is_site_on>`, :ref:`newrelic_app_name
     <overrides-newrelic-app-name>`, :ref:`site_404
     <overrides-site-404>`, :ref:`site_index <overrides-site-index>`,
     :ref:`site_name <overrides-site-name>`, :ref:`site_url
@@ -1191,23 +1192,6 @@ $assign_to_config['cp_url'] = 'http://domain2.com/admin.php';
 <general-config-url-cp-label>`
 
 
-csrf_protection
----------------
-
-Enable cross-site request forgery protection.
-
-========== ========
-Value      Behavior
-========== ========
-``TRUE``   Enables CSRF protection
-``FALSE``  Disables CSRF protection **(default)**
-========== ========
-
-Example Usage::
-
-$config['csrf_protection'] = 'TRUE';
-
-
 debug
 -----
 
@@ -1283,6 +1267,24 @@ $config['default_site_timezone'] = 'America/Los_Angeles';
 Settings`: :ref:`Site Timezone <sysadmin-site-timezone-label>`
 
 
+deft_lang
+---------
+
+Set the default language. ExpressionEngine ships with English, and
+additional :doc:`language packs </general/languages>` are available for
+download.
+
+============ ===========
+Value        Description
+============ ===========
+``language`` Name of language directory found in ``system/expressionengine/language/``
+============ ===========
+
+Example Usage::
+
+$config['deft_lang'] = 'french';
+
+
 deny_duplicate_data
 -------------------
 
@@ -1326,6 +1328,26 @@ Value   Behavior
 Example Usage::
 
 $config['disable_all_tracking'] = 'y';
+
+
+disable_csrf_protection
+-----------------------
+
+CSRF protection prevents automated scripts (the most common way spam is
+generated) from repeatedly submitting comments or other form data. A
+submission is only allowed when a user manually loads a page and submits
+the form from your site.
+
+========== ========
+Value      Behavior
+========== ========
+``y``      Disable CSRF protection
+``n``      Enable CSRF protection **(default)**
+========== ========
+
+Example Usage::
+
+$config['disable_csrf_protection'] = 'y';
 
 
 disable_tag_caching
@@ -2083,93 +2105,120 @@ Example Usage::
 $config['htaccess_path'] = '/server/path/to/your/.htaccess/';
 
 
+.. _image_library_path:
+
 image_library_path
 ------------------
-Set the server path to the image library.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets path to image library
-========== ========
+Set the path to the selected image library.
 
-Example Usage::
+.. note:: If you choose ImageMagick or NetPBM as the
+    :ref:`image_resize_protocol <image_resize_protocol>`, you must
+    specify the server path to that image library.
 
-$config['image_library_path'] = '/bin/gd2/';
-
-
-image_resize_protocol
----------------------
-:ref:`Image Resizing Protocol <image-resizing-protocol-label>` is where
-you indicate which resizing protocol to use. You may need to contact
-your Host or server admin to determine which protocols are installed and
-available on your server. The options are: GD, GD 2, ImageMagick, and
-NetPBM.
-
-================ ========
-Value            Behavior
-================ ========
-``gd``           Sets the GD Library to be used as Image Resizing Protocol
-``gd2``          Sets the GD2 Library to be used as Image Resizing Protocol
-``imagemagick``  Sets the ImageMagick Library to be used as Image Resizing Protocol
-``netpbm``       Sets the NetPBM Library to be used as Image Resizing Protocol
-================ ========
+========== ===========
+Value      Description
+========== ===========
+``path``   Path to image library
+========== ===========
 
 Example Usage::
 
-$config['image_resize_protocol'] = "gd2";
+$config['image_library_path'] = '/usr/bin/';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> System
-Administration --> Image Resizing Preferences`: Image Resizing Protocol
+Administration --> Image Resizing Preferences`: :ref:`Image Converter
+Path <image-converter-path-label>`
 
 
-install_lock
-------------
-Prevents installing ExpressionEngine over an existing installation.
+.. _image_resize_protocol:
 
-========== ========
-Value      Behavior
-========== ========
-``1``      Install lock is enabled
-========== ========
+image_resize_protocol
+---------------------
+
+Specify the image manipulation library to use. You may need to contact
+your web host or sysadmin to determine which protocols are installed and
+available on your server.
+
+.. note:: If you choose ImageMagick or NetPBM, you must set
+    :ref:`image_library_path <image_library_path>` in the configuration
+    as well.
+
+================ ===========
+Value            Description
+================ ===========
+``gd``           GD library
+``gd2``          GD2 library
+``imagemagick``  ImageMagick library
+``netpbm``       NetPBM library
+================ ===========
 
 Example Usage::
 
-$config['install_lock'] = '1';
+$config['image_resize_protocol'] = 'netpbm';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> System
+Administration --> Image Resizing Preferences`: :ref:`Image Resizing
+Protocol <image-resizing-protocol-label>`
+
+
+.. _is_site_on:
 
 is_site_on
 ----------
-Is site on refers to both MSM installations and a single site. Setting
-this variable to "n" will shut ExpressionEngine off allowing you to put
-an index.php file in the root directory without ExpressionEngine trying
-to use it.
+
+Specify whether the site should be viewable by the general public or
+taken offline. This can be helpful when performing maintenance on only
+one of several MSM sites.
+
+.. note:: This setting will have no effect unless :doc:`Multiple Site
+    Manager </cp/sites/index>` is installed and :ref:`multiple sites are
+    enabled <multiple_sites_enabled>`.
+
+.. note:: When used in the main configuration file, :file:`config.php`,
+    this setting has the same effect as :ref:`is_system_on
+    <is_system_on>` since it will apply to all sites in the system.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Sets ExpressionEngine to on
-``n``      Sets ExpressionEngine to off
+``y``      Makes site available to everyone
+``n``      Makes site only available to Super Admins
 ========== ========
 
 Example Usage::
 
-$config['is_site_on'] = "y";
+$config['is_site_on'] = 'n';
 
+Also available for use in the site index file, :file:`index.php`.
+Example Usage::
+
+$assign_to_config['is_site_on'] = 'n';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> General
+Configuration`: Is site on?
+
+
+.. _is_system_on:
 
 is_system_on
 ------------
-:ref:`Is system on <general-config-system-on-label>` indicates whether
-or not your site is "live" and displayed to the public. If you set this
-preference to "No" only members of the Super Admin group will be able to
-see the site.
+
+Specify whether the system's front-end should be viewable by the general
+public or taken offline. This can be helpful when performing
+maintenance.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Sets the site to live
-``n``      Sets the site to offline
+``y``      Makes system available to everyone
+``n``      Makes system only available to Super Admins
 ========== ========
 
 Example Usage::
@@ -2179,56 +2228,47 @@ $config['is_system_on'] = "y";
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> General
-Configuration`: Is system on
-
-language
---------
-This determines which set of language files should be used. Make sure
-there is an available translation if you intend to use something other
-than ``english``.
-
-========== ========
-Value      Behavior
-========== ========
-``text``   Indicated which language files should be used
-========== ========
-
-Example Usage::
-
-$config['language'] = "english";
+Configuration`: :ref:`Is system on? <general-config-system-on-label>`
 
 
 license_number
 --------------
-The :ref:`License Number <general-config-license-number-label>` you were
-issued upon purchasing ExpressionEngine.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets your ExpressionEngine license number
-========== ========
+Specify the software license number. You can find a record of your
+license number in your `EllisLab.com account
+<https://store.ellislab.com/manage>`__.
+
+.. important:: A properly licensed ExpressionEngine installation
+    **must** include a valid license number.
+
+========== ===========
+Value      Description
+========== ===========
+``number`` License number
+========== ===========
 
 Example Usage::
 
-$config['license_number'] = '4498-3348-9871-1123';
+$config['license_number'] = '1234-1234-1234-1234';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> General
-Configuration`: License Number
+Configuration`: :ref:`License Number
+<general-config-license-number-label>`
 
 
 lockout_time
 ------------
-The :ref:`Lockout Time <throttling-lockout-time-label>` is the length of
-time in seconds that a user will be unable to use your site.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets lockout time in seconds
-========== ========
+Set the length of time a throttled visitor will be locked out of the
+site.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Length of lockout time in seconds
+=========== ===========
 
 Example Usage::
 
@@ -2237,7 +2277,8 @@ $config['lockout_time'] = '30';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Throttling Preferences`: Lockout Time
+Privacy --> Throttling Preferences`: :ref:`Lockout Time
+<throttling-lockout-time-label>`
 
 
 log_date_format
@@ -2625,6 +2666,13 @@ $config['memberlist_order_by'] = "total_posts";
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
 Member List - Sort By
+
+
+.. _multiple_sites_enabled:
+
+multiple_sites_enabled
+----------------------
+
 
 
 .. _name_of_dictionary_file:
@@ -3473,32 +3521,6 @@ $config['save_tmpl_revisions'] = 'y';
 
 **Also found in CP:** :menuselection:`Design --> Templates -->
 Global Template Preferences`: Save Template Revisions
-
-
-secure_forms
-------------
-:ref:`Secure Mode <secure-mode-label>` prevents automated
-scripts (the most common way spam is generated) from repeatedly
-submitting comments or other form data. A submission is only allowed
-when a user manually loads a page and submits the form from your site.
-And once the form data is received, the user has to manually reload the
-page before they can submit again.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Default value, enables secure form mode
-``n``      Disables secure form mode
-========== ========
-
-Example Usage::
-
-$config['secure_forms'] = 'y';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: Process form data in Secure Mode
 
 
 send_headers
