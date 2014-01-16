@@ -1845,6 +1845,8 @@ $config['enable_photos'] = "y";
 :ref:`Enable Member Photos <enable-member-photos-label>`
 
 
+.. _enable_search_log:
+
 enable_search_log
 -----------------
 
@@ -2258,6 +2260,8 @@ Configuration`: :ref:`License Number
 <general-config-license-number-label>`
 
 
+.. _lockout_time:
+
 lockout_time
 ------------
 
@@ -2283,14 +2287,14 @@ Privacy --> Throttling Preferences`: :ref:`Lockout Time
 
 log_date_format
 ---------------
-Each item that is logged has an associated date. You can use PHP date
-codes to set your own date formatting
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets log date format
-========== ========
+Set the timestamp format for all items added to the log file.
+
+========== ===========
+Value      Description
+========== ===========
+``string`` `PHP date format <http://www.php.net/manual/en/function.date.php>`__
+========== ===========
 
 Example Usage::
 
@@ -2299,37 +2303,38 @@ $config['log_date_format'] = 'Y-m-d H:i:s';
 
 log_email_console_msgs
 ----------------------
-The :ref:`Log Email Console Messages <email-log-console-messages-label>`
-preference lets you log all messages sent via the Email Console in the
-member profile pages.
+
+Enable logging of all messages sent via the email console in the member
+profile pages.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Default value, enables the logging of email console messages
-``n``      Disables the logging of email console messages
+``y``      Enable logging **(default)**
+``n``      Disable logging
 ========== ========
 
 Example Usage::
 
-$config['log_email_console_msgs'] = 'y';
+$config['log_email_console_msgs'] = 'n';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: Log Email Console Messages
+Configuration`: :ref:`Log Email Console Messages
+<email-log-console-messages-label>`
 
 
 log_path
 --------
-Leave this BLANK unless you would like to set something other than the
-default system/logs/ folder.  Use a full server path with trailing
-slash.
+
+Set the path to the system log directory. Use a full server path with
+trailing slash.
 
 ========== ========
 Value      Behavior
 ========== ========
-``text``   Full server path to system log folder
+``path``   Full server path to system log folder
 ========== ========
 
 Example Usage::
@@ -2339,36 +2344,36 @@ $config['log_path'] = '/path/to/location/';
 
 log_referrers
 -------------
-You can determine whether Referrer Tracking is performed by the system.
-When you have this preference set to "Y", one additional database access
+
+Enable referrer tracking. When enabled, one additional database access
 query will be performed for each page load so that the statistics can be
 generated.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Default value, enables referrer tracking
-``n``      Disables referrers tracking
+``y``      Enable referrer tracking **(default)**
+``n``      Disable referrers tracking
 ========== ========
 
 Example Usage::
 
-$config['log_referrers'] = 'y';
+$config['log_referrers'] = 'n';
 
 
 log_threshold
 -------------
-If you have enabled error logging, you can set an error threshold to
-determine what gets logged.
+
+Set an error threshold to determine how much information is logged.
 
 ========== ========
 Value      Behavior
 ========== ========
-``0``      Disables logging, Error logging TURNED OFF
-``1``      Error Messages (including PHP errors)
-``2``      Debug Messages
-``3``      Informational Messages
-``4``      All Messages
+``0``      Disables logging
+``1``      Errors (including PHP errors)
+``2``      Errors & debug messages
+``3``      Errors, debug messages, & informational messages
+``4``      All messages
 ========== ========
 
 Example Usage::
@@ -2378,17 +2383,16 @@ $config['log_threshold'] = '1';
 
 mail_format
 -----------
-The :ref:`Default Mail Format <email-default-format-label>`. When you
-send email via the Communicate section of your Control Panel, you are
-able to send HTML formatted emails. This preference sets whether the
-Communicate section has "Plain text" or "HTML" selected by default.
 
-========== ========
-Value      Behavior
-========== ========
-``plain``  Sets default email format to Plain Text
-``html``   Sets defauly email format to HTML
-========== ========
+Set the default mail format selection for emails sent via the
+Communicate section.
+
+========== ===========
+Value      Description
+========== ===========
+``plain``  Plain Text
+``html``   HTML
+========== ===========
 
 Example Usage::
 
@@ -2397,19 +2401,20 @@ $config['mail_format'] = 'plain';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: Default Mail Format
+Configuration`: :ref:`Default Mail Format <email-default-format-label>`
 
 
 mail_protocol
 -------------
-The :ref:`Email Protocol <email-protocol-label>`. Email can be sent by ExpressionEngine by one of three protocols.
+
+Set the system's method for sending email.
 
 ============ ========
 Value        Behavior
 ============ ========
-``mail``     Sets email protocol to PHP Mail
-``smtp``     Sets email protocol to SMTP
-``sendmail`` Sets email protocol to Sendmail
+``mail``     PHP Mail
+``smtp``     SMTP
+``sendmail`` Sendmail
 ============ ========
 
 Example Usage::
@@ -2419,18 +2424,19 @@ $config['mail_protocol'] = 'smtp';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: Email Protocol
+Configuration`: :ref:`Email Protocol <email-protocol-label>`
 
 
 mailinglist_enabled
 -------------------
-Enables the mailing list.
+
+Enable the mailing list.
 
 ======= ========
 Value   Behavior
 ======= ========
-``y``   Default value, enables mailing list
-``n``   Disables mailing list
+``y``   Enable mailing list **(default)**
+``n``   Disable mailing list
 ======= ========
 
 Example Usage::
@@ -2440,18 +2446,20 @@ $config['mailinglist_enabled'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Mailing List`: Mailing List is Enabled
+Mailing List --> Mailing List Preferences`: Mailing List is Enabled
 
 
 mailinglist_notify
 ------------------
-Recipient list for notification of new mailing list sign-ups.
+
+Enable notification of a given :ref:`recipient list
+<mailinglist_notify_emails>` when new subscribers sign up.
 
 ======= ========
 Value   Behavior
 ======= ========
-``y``   Enables recipient list for notification of new mailing list sign-ups
-``n``   Default value, disables recipient list for notification of new mailing list sign-ups
+``y``   Enable notification
+``n``   Disable notification **(default)**
 ======= ========
 
 Example Usage::
@@ -2461,41 +2469,47 @@ $config['mailinglist_notify'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Mailing List`: Enable recipient list for notification of new mailing
+Mailing List --> Mailing List Preferences`: Enable recipient list for
+notification of new mailing
 list sign-ups
 
 
+.. _mailinglist_notify_emails:
+
 mailinglist_notify_emails
 -------------------------
-Email Address of Notification Recipient(s).
 
-======== ========
-Value    Behavior
-======== ========
-``text`` Email address Notification Recipient(s)
-======== ========
+List of email addresses to notify when new subscribers sign up for the
+mailing list.
+
+========== ===========
+Value      Description
+========== ===========
+``string`` Comma-delimited list of email addresses
+========== ===========
 
 Example Usage::
 
-$config['mailinglist_notify_emails'] = 'joe@example.com';
+$config['mailinglist_notify_emails'] = 'joe@example.com, jane@example.com';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Mailing List`: Email Address of Notification Recipient(s)
+Mailing List --> Mailing List Preferences`: Email Address of
+Notification Recipient(s)
 
 
 max_logged_searches
 -------------------
-The :ref:`Maximum number of recent search terms to save
-<max-search-save-label>`. This prevents your database from getting too
-large.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets maximum number of recent search terms to save
-========== ========
+Set the maximum number of most recent search terms to save in the
+:ref:`search log <enable_search_log>`.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Maximum number of search terms to save
+=========== ===========
 
 Example Usage::
 
@@ -2504,25 +2518,27 @@ $config['max_logged_searches'] = '500';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> System
-Administration --> Search Log Configuration`: Maximum number of recent
-search terms to save
+Administration --> Search Log Configuration`: :ref:`Maximum number of
+recent search terms to save <max-search-save-label>`
 
+
+.. _max_page_loads:
 
 max_page_loads
 --------------
-:ref:`Maximum Number of Page Loads <throttling-max-page-load-label>` is
-the total number of times a user is allowed to load your web pages
-(within the time interval below) before being locked out. For example,
-if you set this preference to 5 page loads within 10 seconds, a user can
-not browse more than 5 pages within a 10 second interval or the
-throttling feature will be triggered, locking them out of your site
-according to the parameters you set below.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets maximum number of page loads
-========== ========
+Set the maximum number of times a visitor is allowed to load your web
+pages within a given :ref:`time interval <time_interval>` before being
+locked out. If you set this preference to 5 page loads within 10
+seconds, a user can not browse more than 5 pages within a 10 second
+interval or the throttling feature will be triggered, locking them out
+for the given :ref:`lockout time <lockout_time>`.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Maximum number of page loads
+=========== ===========
 
 Example Usage::
 
@@ -2531,19 +2547,21 @@ $config['max_page_loads'] = '10';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Throttling Preferences`: Maximum Number of Page Loads
+Privacy --> Throttling Preferences`: :ref:`Maximum Number of Page Loads
+<throttling-max-page-load-label>`
 
 
 max_tmpl_revisions
 ------------------
-:ref:`Maximum Number of Revisions to Keep
-<global-template-max-revisions-label>` for each template.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets maximum number of template revisions to keep
-========== ========
+Set the maximum number of template revisions to save if :ref:`template
+revisions are enabled <save_tmpl_revisions>`.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Maximum number of template revisions to save
+=========== ===========
 
 Example Usage::
 
@@ -2552,42 +2570,45 @@ $config['max_tmpl_revisions'] = '10';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Design --> Templates -->
-Global Template Preferences`: Maximum Number of Revisions to Keep
+Global Template Preferences`: :ref:`Maximum Number of Revisions to Keep
+<global-template-max-revisions-label>`
 
+
+.. _mbr_notification_emails:
 
 mbr_notification_emails
 -----------------------
-:ref:`Email address for notifications
-<member-send-notifications-email-label>` allow you to specify the email
-addresses which should receive notifications.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Email address Notification Recipient(s)
-========== ========
+List of email addresses to notify if :ref:`notification is enabled
+<new_member_notification>` for new member registrations.
+
+========== ===========
+Value      Description
+========== ===========
+``string`` Comma-delimited list of email addresses
+========== ===========
 
 Example Usage::
 
-$config['mbr_notification_emails'] = 'joe@example.com';
+$config['mbr_notification_emails'] = 'joe@example.com, jane@example.com';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Email address for notifications
+:ref:`Email address for notifications
+<member-send-notifications-email-label>`
 
 
 member_theme
 ------------
-The :ref:`Default Member Profile Theme <member-default-theme-label>` to
-be used in the Member Profile area of your site. Available, installed
-themes are listed in the menu.
 
-=========== ========
-Value       Behavior
-=========== ========
-``text``    Sets the theme for the default member profile
-=========== ========
+Set the default member profile theme.
+
+============ ===========
+Value        Description
+============ ===========
+``theme``    Name of theme directory found in ``themes/profile_themes``
+============ ===========
 
 Example Usage::
 
@@ -2596,19 +2617,19 @@ $config['member_theme'] = 'default';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Default Member Profile Theme
+:ref:`Default Member Profile Theme <member-default-theme-label>`
 
 
 memberlist_sort_order
 ---------------------
-The :ref:`Member List - Order <member-list-order-label>` specifies
-whether to show the list in Ascending or Descending order.
+
+Set the default member list sort order.
 
 =========== ========
 Value       Behavior
 =========== ========
-``asc``     Sorts member list in Ascending order
-``desc``    Deafult value, sorts member list in Descending order
+``asc``     Sorts in ascending order
+``desc``    Sorts in descending order **(default)**
 =========== ========
 
 Example Usage::
@@ -2618,19 +2639,19 @@ $config['memberlist_sort_order'] = 'desc';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Member List - Order
+:ref:`Member List - Order <member-list-order-label>`
 
 
 memberlist_row_limit
 --------------------
-The :ref:`Member List - Rows <member-list-rows-label>` specifies the
-number of rows to return by default.
 
-=========== ========
-Value       Behavior
-=========== ========
-``number``  Sets the number of rows to return by default
-=========== ========
+Set the default number of rows for the member list to display.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Default number of rows
+=========== ===========
 
 Example Usage::
 
@@ -2639,33 +2660,32 @@ $config['memberlist_row_limit'] = '20';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Member List - Rows
+:ref:`Member List - Rows <member-list-rows-label>`
 
 
 memberlist_order_by
 -------------------
-The :ref:`Member List - Sort By <member-list-rows-label>` specifies the
-sorting criteria to be used. Choices are: Total Posts, Screen Name,
-Total Comments, Total Entries, Join Date.
+
+Set the default sorting criteria for the member list.
 
 ================== ========
 Value              Behavior
 ================== ========
-``total_posts``    Sorts member list by Total Posts
-``screen_name``    Sorts member list by Screen Name
-``total_comments`` Sorts member list by Total Comments
-``total_entries``  Sorts member list by Total Entries
-``join_date``      Sorts member list by Join Date
+``total_posts``    Sorts by Total Posts
+``screen_name``    Sorts by Screen Name
+``total_comments`` Sorts by Total Comments
+``total_entries``  Sorts by Total Entries
+``join_date``      Sorts by Join Date
 ================== ========
 
 Example Usage::
 
-$config['memberlist_order_by'] = "total_posts";
+$config['memberlist_order_by'] = 'total_posts';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Member List - Sort By
+:ref:`Member List - Sort By <member-list-rows-label>`
 
 
 .. _multiple_sites_enabled:
@@ -2673,94 +2693,118 @@ Member List - Sort By
 multiple_sites_enabled
 ----------------------
 
+Enable Multiple Site Manager.
+
+======= ========
+Value   Behavior
+======= ========
+``y``   Enable MSM
+``n``   Disable MSM
+======= ========
+
+Example Usage::
+
+$config['multiple_sites_enabled'] = 'y';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> General Configuration`:
+:doc:`Enable Multiple Site Manager </cp/sites/install>`
 
 
 .. _name_of_dictionary_file:
 
 name_of_dictionary_file
 -----------------------
-The :ref:`Name of Dictionary File <dict-passwds-file-label>` is the
-filename of the dictionary file used for Dictionary Words as Passwords. Must be used in combination with
-:ref:`allow_dictionary_pw <allow_dictionary_pw>`.
 
-=========== ========
-Value       Behavior
-=========== ========
-``text``    Indicates the filename of the dictionary file
-=========== ========
+Filename for the dictionary file. The official dictionary file is
+`available for download
+<http://ellislab.com/asset/file/dictionary.zip>`__. Must be used in
+combination with :ref:`allow_dictionary_pw <allow_dictionary_pw>`.
+
+============ ===========
+Value        Description
+============ ===========
+``filename`` Dictionary file found at :file:`system/expressionengine/config/`
+============ ===========
 
 Example Usage::
 
-$config['name_of_dictionary_file'] = 'billy';
+$config['name_of_dictionary_file'] = 'dictionary.txt';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: Name of Dictionary File
+Privacy --> Security and Sessions`: :ref:`Name of Dictionary File
+<dict-passwds-file-label>`
 
+
+.. _new_member_notification:
 
 new_member_notification
 -----------------------
-The :ref:`Send new member notifications
-<member-send-notifications-label>`, if enabled, notifications will be
-sent.
+
+Enables notification of a :ref:`given notification list
+<mbr_notification_emails>` for new member registrations.
 
 ======= ========
 Value   Behavior
 ======= ========
-``y``   Enables notifications
-``n``   Default value, notification will not be sent
+``y``   Enable notification
+``n``   Disable notification **(default)**
 ======= ========
 
 Example Usage::
 
-$config['new_member_notification'] = "n";
+$config['new_member_notification'] = 'n';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Send new member notifications
+:ref:`Send new member notifications <member-send-notifications-label>`
 
 
 new_posts_clear_caches
 ----------------------
-:ref:`Clear all caches when new entries are posted
-<global-channel-clear-cache-label>`. You can determine whether your
-caches will be cleared when you post an entry. If set to "n", the new
-entry will not appear on your site until any cache expires.
+
+Set caches to clear when new entries are posted.
+
+.. note:: If disabled, new entries will not appear until the cache
+    expires.
 
 ======= ========
 Value   Behavior
 ======= ========
-``y``   Default value, new posts clear cache
+``y``   New posts clear cache **(default)**
 ``n``   New posts do not clear cache
 ======= ========
 
 Example Usage::
 
-$config['new_posts_clear_caches'] = "n";
+$config['new_posts_clear_caches'] = 'n';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Channel
-Administration --> Global Channel Preferences`: Clear all caches when
-new entries are posted
+Administration --> Global Channel Preferences`: :ref:`Clear all caches
+when new entries are posted <global-channel-clear-cache-label>`
+
 
 .. _overrides-newrelic-app-name:
 
 newrelic_app_name
 -----------------
-:ref:`Customizing the Application Name <sysadmin-newrelic_app_name>`.
-If the New Relic extension is installed on your server, this sets the
-application name reported in the New Relic dashboard. This variable is
-also available to set via ``$assign_to_config`` for optionally setting
-a different application name per MSM site.
 
-======== ========
-Value    Behavior
-======== ========
-``text`` Sets name of reported application name in New Relic dashboard
-======== ========
+Sets the application name that is reported in the New Relic dashboard.
+If you're using New Relic to monitor the performance of multiple
+ExpressionEngine installations, you'll likely want those installations
+to show up separately in your New Relic dashboard.
+
+========== ===========
+Value      Description
+========== ===========
+``string`` Application name
+========== ===========
 
 Example Usage::
 
@@ -2774,121 +2818,97 @@ $assign_to_config['newrelic_app_name'] = 'My Second Site';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`
+Administration --> Output and Debugging`: :ref:`New Relic Application
+Name <sysadmin-newrelic_app_name>`
 
 
 new_version_check
 -----------------
-:ref:`New Version Auto Check <general-config-new-version-label>`.
-Enabling this feature will cause a message to be displayed in the
-Control Panel when a new version of ExpressionEngine is available. It
-will not automatically download and install a new version.
+
+Set ExpressionEngine to periodically check for available updates.
 
 ======= ========
 Value   Behavior
 ======= ========
-``y``   Default value, enables new version auto check
-``n``   Disables new version auto check
+``y``   Enable version check **(default)**
+``n``   Disable version check
 ======= ========
 
 Example Usage::
 
-$config['new_version_check'] = "n";
+$config['new_version_check'] = 'n';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> General
-Configuration`: New Version Auto Check
+Configuration`: :ref:`New Version Auto Check
+<general-config-new-version-label>`
 
+
+.. _password_lockout:
 
 password_lockout
 ----------------
-:ref:`Enable Password Lockout <security-enable-passwd-lockout-label>`.
-When this preference is set to "y", the system will lock a member
-account if more than four invalid login attempts are made within a
-specified time period (see next setting). This preference is designed to
-deter hackers from using collision attacks to guess poorly chosen
-passwords. The account remains locked for the duration of the time
-period. Once the period expires it becomes unlocked.
+
+If enabled, the system will lock a member account if more than four
+invalid login attempts are made within a :ref:`specified time period
+<password_lockout_interval>`. This is designed to deter hackers from
+using collision attacks to guess poorly chosen passwords. The account
+remains locked for the duration of the password lockout time period.
 
 ======= ========
 Value   Behavior
 ======= ========
-``y``   Default value, enables password lockouts
-``n``   Disables password lockouts
+``y``   Enable password lockouts **(default)**
+``n``   Disable password lockouts
 ======= ========
 
 Example Usage::
 
-$config['password_lockout'] = "n";
+$config['password_lockout'] = 'n';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: Enable Password Lockout
+Privacy --> Security and Sessions`: :ref:`Enable Password Lockout
+<security-enable-passwd-lockout-label>`
 
+
+.. _password_lockout_interval:
 
 password_lockout_interval
 -------------------------
-:ref:`Time Interval for Lockout <security-passwd-lockout-int-label>`.
-When this preference is set to "y", the system will lock a member
-account if more than four invalid login attempts are made within a
-specified time period (see next setting). This preference is designed to
-deter hackers from using collision attacks to guess poorly chosen
-passwords. The account remains locked for the duration of the time
-period. Once the period expires it becomes unlocked.
+
+Set the time period for measuring :ref:`invalid login attempts
+<password_lockout>` and locking accounts.
 
 ========== ========
 Value      Behavior
 ========== ========
-``number`` Number is set in minutes. You are allowed to use decimal fractions. Example: 1.5
+``number`` Lockout interval, in minutes. (Decimals allowed.)
 ========== ========
 
 Example Usage::
 
-$config['password_lockout_interval'] = "2.5";
+$config['password_lockout_interval'] = '2.5';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: Time Interval for Lockout
-
-
-permitted_uri_chars
--------------------
-This lets you specify which characters are permitted within your URLs.
-When someone tries to submit a URL with disallowed characters they will
-get a warning message.
-
-As a security measure you are STRONGLY encouraged to restrict URLs to as
-few characters as possible.  By default only these are allowed: a-z
-0-9~%.:_-
-
-Leave blank to allow all characters -- but only if you are insane.
-
-DO NOT CHANGE THIS UNLESS YOU FULLY UNDERSTAND THE REPERCUSSIONS!!
-
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the permitted URI characters
-========== ========
-
-Example Usage::
-
-$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\\-';
+Privacy --> Security and Sessions`: :ref:`Time Interval for Lockout
+<security-passwd-lockout-int-label>`
 
 
 path_third_themes
 -----------------
-Overrides the third_party paths so you can move your third_party
-directory outside of your system directory.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets path to third_party directory
-========== ========
+Set the path to the :file:`third_party` directory.
+
+========== ===========
+Value      Description
+========== ===========
+``text``   Path to third_party directory
+========== ===========
 
 Example Usage::
 
@@ -2897,14 +2917,15 @@ $config['path_third_themes'] = "/valid/path/to/directory/";
 
 photo_max_height
 ----------------
-The :ref:`Photo Maximum Height <member-photo-max-height-label>` (in
-pixels) allowed for user-uploaded member photos.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets the maximum hight (in pixels) for member photos
-========== ========
+Set the maximum height (in pixels) allowed for user-uploaded member
+photos.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Max height (in pixels)
+=========== ===========
 
 Example Usage::
 
@@ -2913,7 +2934,7 @@ $config['photo_max_height'] = "100";
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Photo Maximum Height
+:ref:`Photo Maximum Height <member-photo-max-height-label>`
 
 
 photo_max_kb
@@ -3497,6 +3518,8 @@ $config['save_tmpl_files'] = 'y';
 **Also found in CP:** :menuselection:`Design --> Templates -->
 Global Template Preferences`: Save Templates as Files
 
+
+.. _save_tmpl_revisions:
 
 save_tmpl_revisions
 -------------------
@@ -4178,6 +4201,35 @@ Value      Behavior
 Example Usage::
 
 $config['third_party_path'] = "/path/to/third_party/folders/";
+
+
+.. _time_interval:
+
+time_interval
+-------------
+
+Set the time interval for measuring the :ref:`number of page loads
+<max_page_loads>` that will trigger throttling. If you set this
+preference to 5 page loads within 10 seconds, a user can not browse more
+than 5 pages within a 10 second interval or the throttling feature will
+be triggered, locking them out for the given :ref:`lockout time
+<lockout_time>`.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Time interval in seconds
+=========== ===========
+
+Example Usage::
+
+$config['max_page_loads'] = '10';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> Security and
+Privacy --> Throttling Preferences`: :ref:`Time Interval
+<throttling-time-interval-label>`
 
 
 tmpl_file_basepath

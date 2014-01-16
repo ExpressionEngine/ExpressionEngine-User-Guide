@@ -39,6 +39,9 @@ not browse more than 5 pages within a 10 second interval or the
 throttling feature will be triggered, locking them out of your site
 according to the parameters you set below.
 
+
+.. _throttling-time-interval-label:
+
 Time Interval
 ~~~~~~~~~~~~~
 
