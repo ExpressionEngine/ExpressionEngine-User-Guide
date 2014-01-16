@@ -378,7 +378,7 @@ Set the server path to the avatar directory.
 ========= ===========
 Value     Description
 ========= ===========
-``path``  Full server path to avatar directory
+``path``  Full server path to writable avatar directory
 ========= ===========
 
 Example Usage::
@@ -2939,15 +2939,15 @@ $config['photo_max_height'] = '100';
 
 photo_max_kb
 ------------
-The :ref:`Photo Maximum Size (in Kilobytes)
-<member-photo-max-size-kb-label>` allowed for user-uploaded member
-photos.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets the maximum Size (in Kilobytes) allowed for user-uploaded member photos.
-========== ========
+Set the maximum file size (in kilobytes) allowed for user-uploaded
+member photos.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Max file size (in kilobytes)
+=========== ===========
 
 Example Usage::
 
@@ -2956,19 +2956,21 @@ $config['photo_max_kb'] = '50';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Photo Maximum Size (in Kilobytes)
+:ref:`Photo Maximum Size (in Kilobytes)
+<member-photo-max-size-kb-label>`
 
 
 photo_max_width
 ---------------
-The :ref:`Photo Maximum Width <member-photo-max-width-label>` (in
-pixels) allowed for user-uploaded member photos.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets the maximum width (in pixels) allowed for user-uploaded member photos
-========== ========
+Set the maximum width (in pixels) allowed for user-uploaded member
+photos.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Max width (in pixels)
+=========== ===========
 
 Example Usage::
 
@@ -2977,54 +2979,49 @@ $config['photo_max_width'] = '150';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Photo Maximum Width
+:ref:`Photo Maximum Width <member-photo-max-width-label>`
 
 
 photo_path
 ----------
-The :ref:`Server Path to Photo Folder <member-photo-max-width-label>` is
-where you set the full server path to the member photos folder. By
-default, it is the member_photos folder inside the images folder.
 
-.. note::
-   Note: Must be a full server path, NOT a URL. Folder permissions must
-   be set to 777.
+Set the server path to the member photo directory.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the full server path to the photos folder
-========== ========
+========= ===========
+Value     Description
+========= ===========
+``path``  Full server path to writable member photo directory
+========= ===========
 
 Example Usage::
 
-$config['photo_path'] = '/path/to/folder/';
+$config['photo_path'] = '/path/images/member_photos/';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Server Path to Photo Folder
+:ref:`Server Path to Photo Folder <member-photo-max-width-label>`
 
 
 photo_url
 ---------
-The :ref:`URL to Photos Folder <member-photo-max-width-label>` on your
-site that contains the member photos.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the URL to the photos folder
-========== ========
+Set the URL to the member photo directory.
+
+========= ===========
+Value     Description
+========= ===========
+``URL``   URL to member photo directory
+========= ===========
 
 Example Usage::
 
-$config['photo_url'] = 'http://www.example.com/images/memberphotos/';
+$config['photo_url'] = 'http://example.com/images/member_photos/';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-URL to Photos Folder
+:ref:`URL to Photos Folder <member-photo-max-width-label>`
 
 
 popup_link
