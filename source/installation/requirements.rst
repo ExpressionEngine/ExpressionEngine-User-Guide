@@ -22,7 +22,7 @@ Server Requirements
   -  ``INSERT``
   -  ``UPDATE``
   -  ``DELETE``
-  -  ``REATE``
+  -  ``CREATE``
   -  ``INDEX``
   -  ``ALTER``
   -  ``DROP``
