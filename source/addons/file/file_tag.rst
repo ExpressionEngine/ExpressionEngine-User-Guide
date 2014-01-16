@@ -190,7 +190,7 @@ limit=
 
 Allows you to limit the number of files. The limit will default to 100
 if a value is not specified. If you are using
-:doc:`pagination <../channel/pagination_page>` then this
+:doc:`pagination </templates/pagination>` then this
 will determine the number of files shown per page.
 
 orderby=
@@ -646,5 +646,5 @@ variable::
 Pagination
 ----------
 
-The File module supports :doc:`/modules/channel/pagination_page`.
+The File module supports :doc:`/templates/pagination`.
 </addons/channel/pagination_page>`.

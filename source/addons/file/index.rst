@@ -8,7 +8,7 @@ your :doc:`File Upload Directories
 -  :doc:`File Entries Tag <file_tag>`
 
 In addition, the File module supports
-:doc:`/modules/channel/pagination_page`.
+:doc:`/templates/pagination`.
 
 .. toctree::
 	:glob:

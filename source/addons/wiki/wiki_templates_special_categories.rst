@@ -322,8 +322,8 @@ paginate
 	{wiki:category_articles paginate=""}
 
 The Wiki module uses the same pagination syntax as all first-party
-modules. Please look at the :doc:`/modules/channel/pagination_page`
-documentation for more information.
+modules. Please look at the :doc:`/templates/pagination` documentation
+for more information.
 
 {wiki:category\_articles} \| Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
