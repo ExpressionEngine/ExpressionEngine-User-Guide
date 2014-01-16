@@ -1537,7 +1537,7 @@ Value       Description
 
 Example Usage::
 
-$config['email_console_timelock'] = "300";
+$config['email_console_timelock'] = '300';
 
 .. rst-class:: cp-path
 
@@ -1560,7 +1560,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['email_crlf'] = "\r\n";
+$config['email_crlf'] = '\r\n';
 
 
 email_debug
@@ -1579,7 +1579,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['email_debug'] = "y";
+$config['email_debug'] = 'y';
 
 .. rst-class:: cp-path
 
@@ -1605,7 +1605,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['email_module_captchas'] = "y";
+$config['email_module_captchas'] = 'y';
 
 .. rst-class:: cp-path
 
@@ -1628,7 +1628,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['email_newline'] = "\r\n";
+$config['email_newline'] = '\r\n';
 
 
 emoticon_url
@@ -1644,7 +1644,7 @@ Value      Description
 
 Example Usage::
 
-$config['emoticon_url'] = "http://example.com/images/smileys/";
+$config['emoticon_url'] = 'http://example.com/images/smileys/';
 
 .. rst-class:: cp-path
 
@@ -1668,7 +1668,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['enable_avatars'] = "n";
+$config['enable_avatars'] = 'n';
 
 .. rst-class:: cp-path
 
@@ -1695,7 +1695,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['enable_censoring'] = "y";
+$config['enable_censoring'] = 'y';
 
 .. rst-class:: cp-path
 
@@ -1719,7 +1719,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['enable_db_caching'] = "y";
+$config['enable_db_caching'] = 'y';
 
 
 enable_emoticons
@@ -1738,7 +1738,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['enable_emoticons'] = "y";
+$config['enable_emoticons'] = 'y';
 
 .. rst-class:: cp-path
 
@@ -1763,7 +1763,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['enable_entry_view_tracking'] = "y";
+$config['enable_entry_view_tracking'] = 'y';
 
 .. rst-class:: cp-path
 
@@ -1786,7 +1786,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['enable_hit_tracking'] = "y";
+$config['enable_hit_tracking'] = 'y';
 
 .. rst-class:: cp-path
 
@@ -1813,7 +1813,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['enable_online_user_tracking'] = "y";
+$config['enable_online_user_tracking'] = 'y';
 
 .. rst-class:: cp-path
 
@@ -1837,7 +1837,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['enable_photos'] = "y";
+$config['enable_photos'] = 'y';
 
 .. rst-class:: cp-path
 
@@ -1862,7 +1862,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['enable_search_log'] = "n";
+$config['enable_search_log'] = 'n';
 
 .. rst-class:: cp-path
 
@@ -1886,7 +1886,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['enable_sql_caching'] = "n";
+$config['enable_sql_caching'] = 'n';
 
 .. rst-class:: cp-path
 
@@ -1912,7 +1912,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['enable_throttling'] = "y";
+$config['enable_throttling'] = 'y';
 
 .. rst-class:: cp-path
 
@@ -1955,7 +1955,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['filename_increment'] = "y";
+$config['filename_increment'] = 'y';
 
 
 force_query_string
@@ -1987,7 +1987,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['force_query_string'] = "TRUE";
+$config['force_query_string'] = 'TRUE';
 
 .. rst-class:: cp-path
 
@@ -2013,7 +2013,7 @@ Value      Description
 
 Example Usage::
 
-$config['forum_is_installed'] = "y";
+$config['forum_is_installed'] = 'y';
 
 
 forum_trigger
@@ -2030,7 +2030,7 @@ Value      Description
 
 Example Usage::
 
-$config['forum_trigger'] = "eerox";
+$config['forum_trigger'] = 'eerox';
 
 .. rst-class:: cp-path
 
@@ -2225,7 +2225,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['is_system_on'] = "y";
+$config['is_system_on'] = 'y';
 
 .. rst-class:: cp-path
 
@@ -2912,7 +2912,7 @@ Value      Description
 
 Example Usage::
 
-$config['path_third_themes'] = "/valid/path/to/directory/";
+$config['path_third_themes'] = '/valid/path/to/directory/';
 
 
 photo_max_height
@@ -2929,7 +2929,7 @@ Value       Description
 
 Example Usage::
 
-$config['photo_max_height'] = "100";
+$config['photo_max_height'] = '100';
 
 .. rst-class:: cp-path
 
@@ -2951,7 +2951,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['photo_max_kb'] = "50";
+$config['photo_max_kb'] = '50';
 
 .. rst-class:: cp-path
 
@@ -2972,7 +2972,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['photo_max_width'] = "150";
+$config['photo_max_width'] = '150';
 
 .. rst-class:: cp-path
 
@@ -2998,7 +2998,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['photo_path'] = "/path/to/folder/";
+$config['photo_path'] = '/path/to/folder/';
 
 .. rst-class:: cp-path
 
@@ -3019,7 +3019,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['photo_url'] = "http://www.example.com/images/memberphotos/";
+$config['photo_url'] = 'http://www.example.com/images/memberphotos/';
 
 .. rst-class:: cp-path
 
@@ -3061,7 +3061,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['profile_trigger'] = "fajkkalf89idjae8hjkfsldamvpp0";
+$config['profile_trigger'] = 'fajkkalf89idjae8hjkfsldamvpp0';
 
 .. rst-class:: cp-path
 
@@ -3083,7 +3083,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['protect_javascript'] = "y";
+$config['protect_javascript'] = 'y';
 
 
 proxy_ips
@@ -4012,7 +4012,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['smtp_port'] = "2525";
+$config['smtp_port'] = '2525';
 
 .. rst-class:: cp-path
 
@@ -4034,7 +4034,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['smtp_username'] = "joe@example.com";
+$config['smtp_username'] = 'joe@example.com';
 
 .. rst-class:: cp-path
 
@@ -4072,7 +4072,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['subclass_prefix'] = "EE_";
+$config['subclass_prefix'] = 'EE_';
 
 
 template_debugging
@@ -4094,7 +4094,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['template_debugging'] = "y";
+$config['template_debugging'] = 'y';
 
 .. rst-class:: cp-path
 
@@ -4120,7 +4120,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['template'] = "index";
+$config['template'] = 'index';
 
 Also available for use in the site index file, :file:`index.php`.
 Example Usage::
@@ -4151,7 +4151,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['template_group'] = "about";
+$config['template_group'] = 'about';
 
 Also available for use in the site index file, :file:`index.php`.
 Example Usage::
@@ -4178,7 +4178,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['theme_folder_path'] = "/home/usr/domain.com/public_html/themes/";
+$config['theme_folder_path'] = '/home/usr/domain.com/public_html/themes/';
 
 .. rst-class:: cp-path
 
@@ -4200,7 +4200,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['third_party_path'] = "/path/to/third_party/folders/";
+$config['third_party_path'] = '/path/to/third_party/folders/';
 
 
 .. _time_interval:
@@ -4245,7 +4245,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['tmpl_file_basepath'] = "/home/usr/domain.com/system/expressionengine/templates/";
+$config['tmpl_file_basepath'] = '/home/usr/domain.com/system/expressionengine/templates/';
 
 .. rst-class:: cp-path
 
@@ -4267,7 +4267,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['un_min_len'] = "5";
+$config['un_min_len'] = '5';
 
 .. rst-class:: cp-path
 
@@ -4293,7 +4293,7 @@ Value               Behavior
 
 Example Usage::
 
-$config['uri_protocol'] = "PATH_INFO";
+$config['uri_protocol'] = 'PATH_INFO';
 
 
 un_min_len
@@ -4310,7 +4310,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['un_min_len'] = "5";
+$config['un_min_len'] = '5';
 
 .. rst-class:: cp-path
 
@@ -4331,7 +4331,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['url_third_themes'] = "http://www.example.com/third_party/";
+$config['url_third_themes'] = 'http://www.example.com/third_party/';
 
 
 webmaster_email
@@ -4346,7 +4346,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['webmaster_email'] = "joe@example.com";
+$config['webmaster_email'] = 'joe@example.com';
 
 
 webmaster_name
@@ -4361,7 +4361,7 @@ Value      Behavior
 
 Example Usage::
 
-$config['webmaster_name'] = "Joe";
+$config['webmaster_name'] = 'Joe';
 
 
 website_session_ttl
