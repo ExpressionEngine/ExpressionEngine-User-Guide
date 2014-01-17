@@ -1192,6 +1192,8 @@ $assign_to_config['cp_url'] = 'http://domain2.com/admin.php';
 <general-config-url-cp-label>`
 
 
+.. _overrides-debug:
+
 debug
 -----
 
@@ -2022,11 +2024,11 @@ forum_trigger
 Sets the forum triggering word if the :ref:`Discussion Forum module is
 installed <forum_is_installed>`.
 
-========== ========
+========== ===========
 Value      Description
-========== ========
+========== ===========
 ``text``   Forum triggering word
-========== ========
+========== ===========
 
 Example Usage::
 
@@ -3026,14 +3028,15 @@ $config['photo_url'] = 'http://example.com/images/member_photos/';
 
 popup_link
 ----------
-Determines whether or not links created by Typography class open in a
-new window.
+
+Specify whether links created by the :doc:`Typography class
+</development/usage/typography>` open in a new window.
 
 ======= ========
 Value   Behavior
 ======= ========
-``y``   Enables links created by Typography class open in a new window
-``n``   Default value, disables links created by Typography class open in a new window
+``y``   Links automatically open in new window
+``n``   Links do not automatically open in new window **(default)**
 ======= ========
 
 Example Usage::
@@ -3043,95 +3046,95 @@ $config['popup_link'] = 'y';
 
 profile_trigger
 ---------------
-When the :ref:`Profile Triggering Word <profile-trigger-word-label>` is
-encountered in your URL it will display your member profile area. The
-word you choose can not be the name of an existing template group. The
-default value of this is "member". That means that a URL like the
-following would trigger ExpressionEngine to display the member profile
-area:
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the profile trigger word
-========== ========
+Set the triggering word for the front-end members section. The default
+is "member", and the word you set cannot be the name of an existing
+template group.
+
+========== ===========
+Value      Description
+========== ===========
+``text``   Profile triggering word
+========== ===========
 
 Example Usage::
 
-$config['profile_trigger'] = 'fajkkalf89idjae8hjkfsldamvpp0';
+$config['profile_trigger'] = 'accounts';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Profile Triggering Word
+:ref:`Profile Triggering Word <profile-trigger-word-label>`
 
 
 protect_javascript
 ------------------
-Prevents the advanced conditionals parser from processing anything in
-<script> tags. By default, it's set to 'y'.
+
+Prevents the advanced conditionals parser from processing anything
+inside ``<script>`` tags.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Default value, prevents the advanced conditionals parser from processing anything in <script> tags
-``n``      Disables protect_javacript
+``y``      Enable **(default)**
+``n``      Disable
 ========== ========
 
 Example Usage::
 
-$config['protect_javascript'] = 'y';
+$config['protect_javascript'] = 'n';
 
 
 proxy_ips
 ---------
+
 Whitelist of reverse proxy servers that may forward the visitor's IP
 address.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Comma delimited list of IP addresses
-========== ========
+================ ===========
+Value            Description
+================ ===========
+``IP addresses`` Comma-delimited list of IP addresses
+================ ===========
 
 Example Usage::
 
-$config['proxy_ips'] = '10.0.1.25,10.0.1.26';
+$config['proxy_ips'] = '10.0.1.25, 10.0.1.26';
 
 
 pw_min_len
 ----------
-You may specify the :ref:`Minimum Password Length
-<profile-trigger-word-label>` required for a member password during new
-member registration. Specify the minimum number of characters required.
-It is common practice to require passwords at least eight (8) characters
-long.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets the minimum password length
-========== ========
+Set the minimum character length allowed for member passwords.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Minimum character length
+=========== ===========
 
 Example Usage::
 
-$config['pw_min_len'] = '5';
+$config['pw_min_len'] = '8';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: Minimum Password Length
+Privacy --> Security and Sessions`: :ref:`Minimum Password Length
+<profile-trigger-word-label>`
 
 
 publish_page_title_focus
 ------------------------
-Makes the title field gain focus when the page is loaded
+
+Specify whether the title field should gain focus when the publish page
+is loaded.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Default value, makes the title field gain focus when the page is loaded
-``n``      Disables focus
+``y``      Title field gains focus when the publish page is loaded **(default)**
+``n``      Title field does not gain focus when the publish page is loaded
 ========== ========
 
 Example Usage::
@@ -3141,22 +3144,25 @@ $config['publish_page_title_focus'] = 'n';
 
 recount_batch_total
 -------------------
-Because the recounting of statistics can impose some load on your
-server, the recounting is performed in batches. The Recount Preferences
-page allows you to define how large each processing batch should be. For
-most servers, a value of 1000 works well. For high-performance or
-dedicated servers you can increase this number and if your server is low
-on resources you may need to lower the number.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets the batch size
-========== ========
+Set the batch size for recounting statistics.
+
+Because the recounting of statistics can impose some load on your
+server, the recounting is performed in batches. This setting allows you
+to define how large each processing batch should be. For most servers, a
+value of 1000 works well. For high-performance or dedicated servers you
+can increase this number and if your server is low on resources you may
+need to lower the number.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Batch size
+=========== ===========
 
 Example Usage::
 
-$config['recount_batch_total'] = '10000';
+$config['recount_batch_total'] = '200';
 
 .. rst-class:: cp-path
 
@@ -3167,17 +3173,14 @@ processed per batch
 
 redirect_method
 ---------------
-The :ref:`Redirection Method <output-debug-redirect-method-label>`
-setting determines what method is used for page redirections. These
-redirections are used relatively frequently throughout the system,
-especially with things like logging in/out and other membership related
-functions.
+
+Set the method the system uses for page redirection.
 
 ============ ========
 Value        Behavior
 ============ ========
-``redirect`` Sets the redirect method to Location (faster): This is the preferred method, which uses PHP's "location" functionality.
-``refresh``  Sets the redirect method to Refresh (Windows servers) (Slower)
+``redirect`` Use ``header('Location: http://www.example.com/');`` **(default)**
+``refresh``  Use ``header('Refresh: 0;url=http://www.example.com/');`` (Windows servers) (slower)
 ============ ========
 
 Example Usage::
@@ -3187,22 +3190,23 @@ $config['redirect_method'] = 'redirect';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: Redirection Method
+Administration --> Output and Debugging`: :ref:`Redirection Method
+<output-debug-redirect-method-label>`
 
 
 redirect_submitted_links
 ------------------------
-The :ref:`Apply Rank Denial to User-submitted Links
-<security-apply-rank-denial-label>` option rewrites links submitted in
-comments so they first point to an intermediary redirect page. This
-helps deter comment spam by preventing linked sites from gaining a page
-rank advantage.
+
+Apply rank denial to user-submitted links. This feature rewrites links
+submitted in comments so they first point to an intermediate redirect
+page, helping deter comment spammers by preventing linked sites from
+gaining a search engine page rank advantage.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Applies rank denial to user-submitted Links
-``n``      Default value, does not apply rank denial to user-submitted Links
+``y``      Enable rank denial
+``n``      Disable rank denial **(default)**
 ========== ========
 
 Example Usage::
@@ -3212,21 +3216,22 @@ $config['redirect_submitted_links'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: Apply Rank Denial to User-submitted
-Links
+Privacy --> Security and Sessions`: :ref:`Apply Rank Denial to
+User-submitted Links <security-apply-rank-denial-label>`
 
 
 relaxed_track_views
 -------------------
-Allows Entry View Tracking to work for ANY combination that results in
-only one entry being returned by the tag, including channel query
-caching.
+
+Allow :doc:`Entry Views Tracking </addons/channel/entry_tracking>` to
+work for ANY combination that results in only one entry being returned
+by the tag, including Channel query caching.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Allows Entry View Tracking
-``n``      Default value, does not allow Entry View Tracking
+``y``      Enable relaxed Entry Views Tracking
+``n``      Disable relaxed Entry Views Tracking **(default)**
 ========== ========
 
 Example Usage::
@@ -3236,15 +3241,15 @@ $config['relaxed_track_views'] = 'y';
 
 remove_close_all_button
 -----------------------
-Removes the Close All button from the Publish/Edit page and user side
-HTML formatting buttons. Useful because most browsers no longer need it
-and Admins might want it gone.
+
+Remove the button to close all HTML tags from the publish page and
+user-side HTML formatting buttons. Most browsers no longer need it.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Removes the close all button
-``n``      Default value, does not remove the close all button
+``y``      Remove the close all button
+``n``      Display the close all button **(default)**
 ========== ========
 
 Example Usage::
@@ -3254,14 +3259,15 @@ $config['remove_close_all_button'] = 'y';
 
 remove_unparsed_vars
 --------------------
-Enables the stripping of unparsed ExpressionEngine variables in
-templates when Debug has been forcibly set to 0 in your config file.
+
+Remove unparsed ExpressionEngine variables upon output when the
+:ref:`debug <overrides-debug>` has been set to ``0``.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Enables stripping of unparsed ExpressionEngine variables
-``n``      Default value, disables stripping of unparsed ExpressionEngine variables
+``y``      Remove unparsed ExpressionEngine variables
+``n``      Leave unparsed ExpressionEngine variables untouched **(default)**
 ========== ========
 
 Example Usage::
@@ -3271,17 +3277,17 @@ $config['remove_unparsed_vars'] = 'y';
 
 req_mbr_activation
 ------------------
-With :ref:`Require Member Account Activation
-<member-account-activation-label>` you can choose how membership
-accounts are activated.
 
-========== ========
+Specify whether new member activation is automatic, requires email
+verification, or requires an administrator's approval.
+
+========== ===========
 Value      Behavior
-========== ========
-``none``   Sets member activation to no activation required: New members are automatically activated and approved for the site.
-``email``  Sets member activation to self-activation via email: New members are sent an email.
-``manual`` Sets member activation to manual activation by an administrator
-========== ========
+========== ===========
+``none``   Automatically activate new member accounts
+``email``  Require email verification for new member accounts
+``manual`` Require administrator's approval
+========== ===========
 
 Example Usage::
 
@@ -3290,26 +3296,25 @@ $config['req_mbr_activation'] = 'none';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Require Member Account Activation
+:ref:`Require Member Account Activation
+<member-account-activation-label>`
 
 
 .. _require_ip_for_login:
 
 require_ip_for_login
 --------------------
-If the :ref:`Require IP Address and User Agent for Login
-<require-ip-logins-label>` preference is set to "y", then users will not
-be able to log in unless their browser (or other access device)
-correctly supplies their IP address and User Agent (browser)
-information. Having this set to "y" can help prevent hackers from
-logging in using direct socket connections or from trying to access the
-system with a masked IP address.
+
+Require users have a valid IP address and browser user agent when
+logging in. This helps prevent hackers from logging in using direct
+socket connections or trying to access the system with a masked IP
+address.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Default value, requires IP Address for Login
-``n``      Disables Require IP Address and User Agent for Login
+``y``      Require IP address and user agent for login **(default)**
+``n``      Do not require IP address and user agent for login
 ========== ========
 
 Example Usage::
@@ -3319,22 +3324,21 @@ $config['require_ip_for_login'] = 'n';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: Require IP Address and User Agent
-for Login
+Privacy --> Security and Sessions`: :ref:`Require IP Address and User
+Agent for Login <require-ip-logins-label>`
 
 
 require_ip_for_posting
 ----------------------
-:ref:`Require IP Address and User Agent when receiving comments
-<require-ip-posting-submit-comments-label>` when turned on requires IP
-address and user agent information to be supplied when submitting
-comments.
+
+Require users have a valid IP address and browser user agent when
+posting comments or Channel Form entries.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Default value, requires IP Address for submitting comments
-``n``      Disables require IP Address and User Agent for submitting comments
+``y``      Require IP address and user agent for posting **(default)**
+``n``      Do not require IP address and user agent for posting
 ========== ========
 
 Example Usage::
@@ -3344,24 +3348,22 @@ $config['require_ip_for_posting'] = 'n';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: Require IP Address and User Agent
-for posting
+Privacy --> Security and Sessions`: :ref:`Require IP Address and User
+Agent for posting <require-ip-posting-submit-comments-label>`
 
 
 require_secure_passwords
 ------------------------
-If :ref:`Require Secure Passwords
-<security-require-secure-passwords-label>` is set to "y", then users
-will be required to choose a minimally "secure" password. In this case,
-a password containing at least one uppercase character, one lowercase
-character, and one numeric character. Passwords that follow this basic
-formula are much more difficult to guess.
+
+Require users' passwords to contain at least one uppercase character,
+one lowercase character, and one numeric character. Passwords that
+follow this basic formula are much more difficult to guess.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Default value, requires secure password
-``n``      Disables require secure passwords
+``y``      Require secure password **(default)**
+``n``      Do not require secure passwords
 ========== ========
 
 Example Usage::
@@ -3371,22 +3373,20 @@ $config['require_secure_passwords'] = 'n';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: Require Secure Passwords
+Privacy --> Security and Sessions`: :ref:`Require Secure Passwords
+<security-require-secure-passwords-label>`
 
 
 require_terms_of_service
 ------------------------
-When new members register through the site, a "terms of service" block
-of text is displayed. The :ref:`Require Terms of Service
-<member-require-tos-label>` preference determines whether new members
-must indicate that they agree to abide by these terms before they can
-register.
+
+Require new members to agree to your terms of service upon registration.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Default value, requires TOS
-``n``      Disables require TOS
+``y``      Require TOS **(default)**
+``n``      Do not require TOS
 ========== ========
 
 Example Usage::
@@ -3396,24 +3396,27 @@ $config['require_terms_of_service'] = 'n';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Member --> Preferences`:
-Require Terms of Service
+:ref:`Require Terms of Service <member-require-tos-label>`
 
 
 reserved_category_word
 ----------------------
-If you turn on :ref:`Category URL Indicator
-<global-channel-category-url-indicator-label>`, you must designate a
-special "indicator" word, which will be used in the URL whenever a
-category is intended.
 
-.. note::
-   Whatever word you chose CANNOT be the name of a template group or a
-   template.
+If :ref:`use_category_name <use_category_name>` is enabled, specify a
+word to use in category URLs to indicate to the system that the
+following segment is the category URL title. For example, if the
+indicator is set to "category" and the category URL title is
+"blogging"::
+
+    http://example.com/index.php/site/category/blogging/
+
+The word you set cannot be
+the name of an existing template group or template.
 
 ========== ========
-Value      Behavior
+Value      Description
 ========== ========
-``text``   Sets the category URL indicator
+``text``   Category URL indicator
 ========== ========
 
 Example Usage::
@@ -3423,39 +3426,22 @@ $config['reserved_category_word'] = 'category';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Channel
-Administration --> Global Channel Preferences`: Category URL Indicator
-
-
-rewrite_short_tags
-----------------------
-If your PHP installation does not have short tag support enabled CI can
-rewrite the tags on-the-fly, enabling you to utilize that syntax in your
-view files. Options are TRUE or FALSE (boolean).
-
-========== ========
-Value      Behavior
-========== ========
-``TRUE``   Enables rewrite short tags
-``FALSE``  Disables rewrite short tags
-========== ========
-
-Example Usage::
-
-$config['rewrite_short_tags'] = 'TRUE';
+Administration --> Global Channel Preferences`: :ref:`Category URL
+Indicator <global-channel-category-url-indicator-label>`
 
 
 rte_default_toolset_id
 ----------------------
-:ref:`Default Toolset <global-channel-category-url-indicator-label>`
-determines which Toolset will be shown for any member that has not
+
+Set the default RTE toolset shown for any member that has not
 specifically chosen one in Rich Text Editor Preferences.
 
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the default toolset id
-========== ========
+============== ===========
+Value          Description
+============== ===========
+``toolset ID`` Default RTE toolset ID
+============== ===========
 
 Example Usage::
 
@@ -3464,21 +3450,22 @@ $config['rte_default_toolset_id'] = '2';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Add-Ons --> Modules --> Rich
-Text Editor`: Default Toolset
+Text Editor`: :ref:`Default Toolset
+<global-channel-category-url-indicator-label>`
 
 
 rte_enabled
 -----------
-:ref:`Enable the Rich Text Editor
-<global-channel-category-url-indicator-label>` If "y", the Rich Text
-Editor will be applied to any Channel Fields of the Textarea (Rich Text)
-fieldtype. If "n", the field will appear as a normal textarea instead.
+
+If enabled, the Rich Text Editor will be applied to any *Textarea (Rich
+Text)* Channel Field. Otherwise, the field will appear as a normal
+textarea instead.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Default value, if installed, enables RTE
-``n``      Disables RTE and shows the normal textarea
+``y``      Enable RTE **(default)**
+``n``      Disable RTE and show normal textarea
 ========== ========
 
 Example Usage::
@@ -3488,7 +3475,8 @@ $config['rte_enabled'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Add-Ons --> Modules --> Rich
-Text Editor`: Enable Rich Text Editor
+Text Editor`: :ref:`Enable Rich Text Editor
+<global-channel-category-url-indicator-label>`
 
 
 save_tmpl_files
@@ -4329,6 +4317,12 @@ Value      Behavior
 Example Usage::
 
 $config['url_third_themes'] = 'http://www.example.com/third_party/';
+
+
+.. _use_category_name:
+
+use_category_name
+-----------------
 
 
 webmaster_email
