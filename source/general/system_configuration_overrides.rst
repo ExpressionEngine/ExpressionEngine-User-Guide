@@ -1341,13 +1341,13 @@ the form from your site.
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Disable CSRF protection
-``n``      Enable CSRF protection **(default)**
+``TRUE``   Disable CSRF protection
+``FALSE``  Enable CSRF protection **(default)**
 ========== ========
 
 Example Usage::
 
-$config['disable_csrf_protection'] = 'y';
+$config['disable_csrf_protection'] = TRUE;
 
 
 disable_tag_caching
