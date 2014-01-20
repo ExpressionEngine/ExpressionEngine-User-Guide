@@ -62,8 +62,8 @@ ExpressionEngine's settings are loaded in this order at runtime:
    the database and the main configuration file.
 
 
-Configuration Variables
-=======================
+Overrides
+=========
 
 .. contents::
     :local:
