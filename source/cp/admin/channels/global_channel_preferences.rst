@@ -8,12 +8,13 @@ Global Channel Preferences
 This section of the Control Panel sets global preferences for your
 channels. The following preferences are available:
 
+.. _global-channel-category-url-titles-label:
+
 Use Category URL Titles In Links?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This preference lets the name of each category appear in your URLs
-rather than the numeric indicator (e.g. "/C12/") on pages such as your
-Category Archive page.
+This preference sets the system to generate category links with category
+URL titles rather than the numeric category indicator (e.g. ``/C12/``).
 
 In order to use this feature, you **must** use the channel= parameter in
 the following tags, and if you specify multiple channels, they **must**

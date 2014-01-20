@@ -11,6 +11,9 @@ The **main configuration file**, found at
 the system is run, meaning that config overrides set in
 :file:`config.php` always affect the system's configuration.
 
+
+.. _site_index_file:
+
 The **site index file** is the :file:`index.php` file found in the web
 root of the ExpressionEngine installation. This file acts like the
 gateway to the front-end of the site. Since all web requests for a
@@ -30,6 +33,9 @@ handled by the site index file.)
     :ref:`site_name <overrides-site-name>`, :ref:`site_url
     <overrides-site-url>`, :ref:`template <overrides-template>`, and
     :ref:`template_group <overrides-template-group>`.
+
+
+.. _cp_index_file:
 
 The **CP index file** is the :file:`admin.php` file also found in the
 installation's web root. The CP index file is similar to the site index
@@ -71,8 +77,8 @@ Set whether members can upload their own avatar.
 ======== ===========
 Value    Behavior
 ======== ===========
-``y``    Yes, allow members to upload their own avatar
-``n``    No, do not allow members to upload their own avatar
+``y``    Allow members to upload their own avatar
+``n``    Do not allow members to upload their own avatar **(default)**
 ======== ===========
 
 Example Usage::
@@ -121,7 +127,7 @@ will *not* uninstall extensions.
 ======== ===========
 Value    Behavior
 ======== ===========
-``y``    Enable all extensions
+``y``    Enable all extensions **(default)**
 ``n``    Disable all extensions
 ======== ===========
 
@@ -1121,7 +1127,7 @@ Value  Behavior
 ====== ========
 ``c``  Use cookies only
 ``s``  Use session ID only
-``cs`` Use both cookies and session ID
+``cs`` Use both cookies and session ID **(default)**
 ====== ========
 
 Example Usage::
@@ -1180,8 +1186,9 @@ Example Usage::
 
 $config['cp_url'] = 'http://example.com/admin.php';
 
-Also available for use in the site index file, :file:`index.php`, and
-the CP index file, :file:`admin.php`. Example Usage::
+Also available for use in the :ref:`site index file <site_index_file>`,
+:file:`index.php`, and the :ref:`CP index file <cp_index_file>`,
+:file:`admin.php`. Example Usage::
 
 $assign_to_config['cp_url'] = 'http://domain2.com/admin.php';
 
@@ -2198,8 +2205,8 @@ Example Usage::
 
 $config['is_site_on'] = 'n';
 
-Also available for use in the site index file, :file:`index.php`.
-Example Usage::
+Also available for use in the :ref:`site index file <site_index_file>`,
+:file:`index.php`. Example Usage::
 
 $assign_to_config['is_site_on'] = 'n';
 
@@ -2405,6 +2412,8 @@ $config['mail_format'] = 'plain';
 **Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: :ref:`Default Mail Format <email-default-format-label>`
 
+
+.. _mail_protocol:
 
 mail_protocol
 -------------
@@ -2812,8 +2821,9 @@ Example Usage::
 
 $config['newrelic_app_name'] = 'My Site';
 
-Also available for use in the site index file, :file:`index.php`, and
-the CP index file, :file:`admin.php`. Example Usage::
+Also available for use in the :ref:`site index file <site_index_file>`,
+:file:`index.php`, and the :ref:`CP index file <cp_index_file>`,
+:file:`admin.php`. Example Usage::
 
 $assign_to_config['newrelic_app_name'] = 'My Second Site';
 
@@ -2901,15 +2911,19 @@ Privacy --> Security and Sessions`: :ref:`Time Interval for Lockout
 <security-passwd-lockout-int-label>`
 
 
+.. _path_third_themes:
+
 path_third_themes
 -----------------
 
-Set the path to the :file:`third_party` directory.
+Set the path to the third-party add-ons' :file:`themes` directory.
+Should be used in conjunction with :ref:`url_third_themes
+<url_third_themes>`.
 
 ========== ===========
 Value      Description
 ========== ===========
-``text``   Path to third_party directory
+``path``   Server path to the third-party add-ons' :file:`themes` directory
 ========== ===========
 
 Example Usage::
@@ -3105,7 +3119,7 @@ $config['proxy_ips'] = '10.0.1.25, 10.0.1.26';
 pw_min_len
 ----------
 
-Set the minimum character length allowed for member passwords.
+Set the minimum number of characters allowed for member passwords.
 
 =========== ===========
 Value       Description
@@ -3436,7 +3450,6 @@ rte_default_toolset_id
 Set the default RTE toolset shown for any member that has not
 specifically chosen one in Rich Text Editor Preferences.
 
-
 ============== ===========
 Value          Description
 ============== ===========
@@ -3481,17 +3494,15 @@ Text Editor`: :ref:`Enable Rich Text Editor
 
 save_tmpl_files
 ---------------
-:ref:`Save templates as files
-<global-template-save-templates-as-files-label>` determines whether your
-Templates are saved to files in addition to the datbase, allowing easy
-editing via the editor of your choice. See Saving Templates as Text
-Files for more information.
+
+Enable the saving of :doc:`templates as files
+</templates/templates_as_files>`.
 
 ========== ========
 Value      Behavior
 ========== ========
 ``y``      Templates are saved as files
-``n``      Default value, templates are not saved as files
+``n``      Templates are not saved as files **(default)**
 ========== ========
 
 Example Usage::
@@ -3501,24 +3512,24 @@ $config['save_tmpl_files'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Design --> Templates -->
-Global Template Preferences`: Save Templates as Files
+Global Template Preferences`: :ref:`Save Templates as Files
+<global-template-save-templates-as-files-label>`
 
 
 .. _save_tmpl_revisions:
 
 save_tmpl_revisions
 -------------------
-If :ref:`Save Template Revisions
-<global-template-save-templates-revisions-label>` is set to "y", then
-any changes you make to one of your Templates will be saved. This allows
-you to keep a record of all changes made so that you can easily revert
-back to an earlier version of a Template if you need to do so.
+
+Enable :ref:`template revisions <template-save-revision>`. Template
+history is saved when changes are made within the :doc:`template editor
+</cp/design/templates/edit_template>`.
 
 ========== ========
 Value      Behavior
 ========== ========
 ``y``      Templates revisions are saved
-``n``      Default value, templates revisions are not saved
+``n``      Templates revisions are not saved **(default)**
 ========== ========
 
 Example Usage::
@@ -3528,23 +3539,21 @@ $config['save_tmpl_revisions'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Design --> Templates -->
-Global Template Preferences`: Save Template Revisions
+Global Template Preferences`: :ref:`Save Template Revisions
+<global-template-save-templates-revisions-label>`
 
 
 send_headers
 ------------
-:ref:`Generate HTTP Page Headers <generate-http-headers-label>` setting
-determines whether or not the server should automatically send HTTP page
-headers when it serves the pages to a user. Setting this preference to
-"Yes" causes headers to be explicitly sent by the server. Sending
-explicit headers is generally considered to be a good practice, although
-in some cases it can cause some problems.
+
+Specify whether the system should automatically send HTTP page headers
+when it serves pages to a visitor.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Default value, enables generate HTTP headers
-``n``      Disables generate HTTP headers
+``y``      System sends HTTP headers **(default)**
+``n``      System does not send HTTP headers
 ========== ========
 
 Example Usage::
@@ -3554,11 +3563,13 @@ $config['send_headers'] = 'n';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: Generate HTTP Page Headers
+Administration --> Output and Debugging`: :ref:`Generate HTTP Page
+Headers <generate-http-headers-label>`
 
 
 server_offset
 -------------
+
 When a server's clock is off and you are unable to correct it at the
 server level, use this preference to correct the disparity. Use a
 positive integer to correct a server clock that is too slow, and a
@@ -3584,16 +3595,16 @@ $config['server_offset'] = '-15';
 
 show_profiler
 -------------
-If :ref:`Display Output Profiler <output-debug-display-profiler-label>`
-is enabled, Super Admins will see benchmark results, SQL queries, and
-submitted form data displayed at the bottom of the browser window. This
-is useful for debugging.
+
+Enable Output Profiler. When enabled, Super Admins will see benchmark
+results, SQL queries, and submitted form data displayed at the bottom of
+the browser window.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Enables output profiler
-``n``      Default value, disables output profiler
+``y``      Enable output profiler
+``n``      Disable output profiler **(default)**
 ========== ========
 
 Example Usage::
@@ -3603,22 +3614,21 @@ $config['show_profiler'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: Display Output Profiler
+Administration --> Output and Debugging`: :ref:`Display Output Profiler
+<output-debug-display-profiler-label>`
 
 
 sig_allow_img_hotlink
 ---------------------
-:ref:`Allow image hot linking in signatures
-<member-signature-hot-linking-label>` specifies whether or not members
-can "hot link" to images located on other sites or servers. Most sites
-do not like other people to hot link to their content since it basically
-"steals" their bandwidth.
+
+Specify whether members can link to images hosted on other websites as
+their signature image.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Enables image hot linking protection
-``n``      Default value, disables image hot linking protection
+``y``      Allow linking to external sites' images
+``n``      Do not allow linking to external sites' images **(default)**
 ========== ========
 
 Example Usage::
@@ -3628,21 +3638,21 @@ $config['sig_allow_img_hotlink'] = 'n';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Allow image hot linking in signatures
+:ref:`Allow image hot linking in signatures
+<member-signature-hot-linking-label>`
 
 
 sig_allow_img_upload
 --------------------
-:ref:`Allow users to upload an image in their signature
-<member-signature-allow-upload-label>` determines whether or not members
-will be allowed to upload images to be used in their signatures.
 
-========== ========
-Value      Behavior
-========== ========
-``y``      Enables image uploading for signatures
-``n``      Default value, disables image uploading for signatures
-========== ========
+Set whether members can upload their own signature image.
+
+======== ===========
+Value    Behavior
+======== ===========
+``y``    Allow members to upload their own signature image
+``n``    Do not allow members to upload their own signature image **(default)**
+======== ===========
 
 Example Usage::
 
@@ -3651,20 +3661,21 @@ $config['sig_allow_img_upload'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Allow users to upload an image in their signature
+:ref:`Allow users to upload an image in their signature
+<member-signature-allow-upload-label>`
 
 
 sig_img_max_height
 ------------------
-:ref:`Maximum Height of Signature Image
-<member-signature-max-height-label>` is the maximum height (in pixels)
-allowed for user-uploaded signature images.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets the maximum height (in pixels) for user-uploaded signature images
-========== ========
+Set the maximum height (in pixels) allowed for user-uploaded signature
+images.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Max height (in pixels)
+=========== ===========
 
 Example Usage::
 
@@ -3673,42 +3684,21 @@ $config['sig_img_max_height'] = '150';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Maximum Height of Signature Image
-
-
-sig_img_max_width
------------------
 :ref:`Maximum Height of Signature Image
-<member-signature-max-width-label>` is the maximum width (in pixels)
-allowed for user-uploaded signature images.
-
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets the maximum width (in pixels) for user-uploaded signature images
-========== ========
-
-Example Usage::
-
-$config['sig_img_max_width'] = '150';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Members --> Preferences`:
-Maximum Width of Signature Image
+<member-signature-max-height-label>`
 
 
 sig_img_max_kb
 --------------
-:ref:`Maximum Size (in Kilobytes) of Signature Image
-<member-signature-max-size-label>` is the maximum file size allowed for
-user-uploaded signature images.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets the maximum file size allowed for user-uploaded signature images
-========== ========
+Set the maximum file size (in kilobytes) allowed for user-uploaded
+signature images.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Max file size (in kilobytes)
+=========== ===========
 
 Example Usage::
 
@@ -3717,69 +3707,86 @@ $config['sig_img_max_kb'] = '50';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Maximum Size (in Kilobytes) of Signature Image
+:ref:`Maximum Size (in Kilobytes) of Signature Image
+<member-signature-max-size-label>`
+
+
+sig_img_max_width
+-----------------
+
+Set the maximum width (in pixels) allowed for user-uploaded signature
+images.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Max width (in pixels)
+=========== ===========
+
+Example Usage::
+
+$config['sig_img_max_width'] = '150';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Members --> Preferences`:
+:ref:`Maximum Width of Signature Image
+<member-signature-max-width-label>`
 
 
 sig_img_path
 ------------
-:ref:`Server path to Signature Image Upload Folder
-<member-signature-server-path-label>` is where you set the full server
-page (not the URL) to the signature image uploads folder. By default, it
-is the signature_attachments folder inside the images folder.
 
-.. note::
-   Must be a full server path, NOT a URL. Folder permissions must be set
-   to 777.
+Set the server path to the signature images directory.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets full server path to the signature image uploads folder
-========== ========
+========= ===========
+Value     Description
+========= ===========
+``path``  Full server path to writable signature images directory
+========= ===========
 
 Example Usage::
 
-$config['sig_img_path'] = '/path/to/image/folder/';
+$config['sig_img_path'] = '/path/image/folder/';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Server path to Signature Image Upload Folder
+:ref:`Server path to Signature Image Upload Folder
+<member-signature-server-path-label>`
 
 
 sig_img_url
 -----------
-:ref:`URL to Signature Image Upload Folder <member-signature-URL-label>`
-is the URL to the folder on your site that contains the signature image
-uploads.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the URL to the folder on your site that contains the signature image uploads
-========== ========
+Set the URL to the signature images directory.
+
+========= ===========
+Value     Description
+========= ===========
+``URL``   URL to signature images directory
+========= ===========
 
 Example Usage::
 
-$config['sig_img_url'] = 'http://www.example.com/images/signatures/';
+$config['sig_img_url'] = 'http://example.com/images/signatures/';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-URL to Signature Image Upload Folder
+:ref:`URL to Signature Image Upload Folder <member-signature-URL-label>`
 
 
 sig_maxlength
 -------------
-:ref:`Maximum number of characters per signature
-<member-signature-max-chars-label>` is the maximum number of characters
-allowed within a member's signature.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets the maximum number of characters allowed within a member's signature
-========== ========
+Set the maximum number of characters allowed in a member's signature.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Max number of characters allowed in a signature
+=========== ===========
 
 Example Usage::
 
@@ -3788,108 +3795,98 @@ $config['sig_maxlength'] = '500';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-Maximum number of characters per signature
+:ref:`Maximum number of characters per signature
+<member-signature-max-chars-label>`
 
 
 .. _overrides-site-404:
 
 site_404
 --------
-The :ref:`404 page <global-template-404-label>` determines which
-template should be displayed when someone tries to access an invalid
-URL.
 
-================================ ========
-Value                            Behavior
-================================ ========
-``template_group/template_name`` Sets which template should be displayed when someone tries to access an invalid URL
-================================ ========
+Set which template should be displayed when a visitor tries to access an
+invalid URL.
+
+================================ ===========
+Value                            Description
+================================ ===========
+``template_group/template_name`` Template to show for 404s
+================================ ===========
 
 Example Usage::
 
 $config['site_404'] = 'site/404';
 
-Also available for use in the site index file, :file:`index.php`.
-Example Usage::
+Also available for use in the :ref:`site index file <site_index_file>`,
+:file:`index.php`. Example Usage::
 
 $assign_to_config['site_404'] = 'site/notfound';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Design --> Templates -->
-Global Template Preferences`: 404 Page
-
-
-site_description
-----------------
-Sets the site description.
-
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets site description
-========== ========
-
-Example Usage::
-
-$config['site_description'] = 'This is a website';
+Global Template Preferences`: :ref:`404 Page
+<global-template-404-label>`
 
 
 .. _overrides-site-index:
 
 site_index
 ----------
-:ref:`Name of your site's index page <general-config-index-name-label>`
-is the filename of your site's "index" page. By default, this will be
-index.php, which is located in the base folder. You will only need to
-alter this setting if you have changed the filename or you want to
-:doc:`remove index.php from your site's URLs</urls/remove_index.php>`.
+
+Set the filename of the :ref:`site index file <site_index_file>`. By
+default, this will be :file:`index.php`, which is located in the base
+folder. You will only need to alter this setting if you have changed the
+filename or you want to :doc:`remove index.php from your site's
+URLs</urls/remove_index.php>`.
 
 ============ ========
-Value        Behavior
+Value        Description
 ============ ========
-``filename`` Sets the name of your site's index page
+``filename`` Name of your sites index file
 ============ ========
 
 Example Usage::
 
 $config['site_index'] = 'coolpage.php';
 
-Also available for use in the site index file, :file:`index.php`.
-Example Usage::
+Also available for use in the :ref:`site index file <site_index_file>`,
+:file:`index.php`. Example Usage::
 
 $assign_to_config['site_index'] = 'secondsite.php';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> General
-Configuration`: Name of your site's index page
+Configuration`: :ref:`Name of your site's index page
+<general-config-index-name-label>`
 
 
 .. _overrides-site-name:
 
 site_name
 ---------
-Sets the short name of the website. The site created upon
-ExpressionEngine installation is called ``default_site`` by default, so
-this is typically only helpful for additional sites in :doc:`MSM-enabled
-installations </cp/sites/createsite>`.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets site short name
-========== ========
+Set the short name of the site. The site created upon installation is
+named ``default_site``, so this is typically only helpful for additional
+sites in :doc:`MSM-enabled installations </cp/sites/createsite>`.
 
-Available for use only in the site index file, :file:`index.php`, and
-the CP index file, :file:`admin.php`. Example Usage::
+============= ========
+Value         Description
+============= ========
+``shortname``   Site short name
+============= ========
+
+Available for use only in the :ref:`site index file <site_index_file>`,
+:file:`index.php`, and the :ref:`CP index file <cp_index_file>`,
+:file:`admin.php`. Example Usage::
 
 $assign_to_config['site_name'] = 'domain2_short_name';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Site Name --> Edit Sites -->
-Create New Site`: Site Short Name
+Create New Site`: :doc:`Site Short Name </cp/sites/createsite>`
 
 
 .. _overrides-site-url:
@@ -3897,40 +3894,43 @@ Create New Site`: Site Short Name
 site_url
 --------
 
-Sets the full URL to the site's web root.
+Set the full URL to the site's web root.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the value for the full URL to the site's web root
-========== ========
+========== ===========
+Value      Description
+========== ===========
+``URL``    Full URL to the site's web root
+========== ===========
 
 Example Usage::
 
 $config['site_url'] = 'http://example.com';
 
-Also available for use in the site index file, :file:`index.php`.
-Example Usage::
+Also available for use in the :ref:`site index file <site_index_file>`,
+:file:`index.php`. Example Usage::
 
 $assign_to_config['site_url'] = 'http://domain2.com';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> General Configuration`: URL to the root directory of your site
+**Also found in CP:** :menuselection:`Admin --> General Configuration`:
+:ref:`URL to the root directory of your site
+<general-config-url-root-label>`
 
 
 smart_static_parsing
 --------------------
-When enabled, parsing of embedded templates that are not set to the
-template type "Static" will still be parsed as static if they can be
-(i.e. if they have no PHP or ExpressionEngine tags in them). This
-setting is enabled by default.
+
+When enabled, parsing of embedded templates that are not saved as
+:ref:`static templates <template-type-label>` will still be parsed as if
+they were, if at all possible (i.e. they contain no PHP or
+ExpressionEngine tags). This setting is enabled by default.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Default value, enables smart static parsing
-``n``      Disables smart static parsing
+``y``      Enable smart static parsing **(default)**
+``n``      Disable smart static parsing
 ========== ========
 
 Example Usage::
@@ -3940,60 +3940,66 @@ $config['smart_static_parsing'] = 'n';
 
 smtp_password
 -------------
-:ref:`SMTP Password <email-smtp-password-label>` When using SMTP as your
-mail protocol, this sets the password ExpressionEngine will use to
-authenticate with the SMTP server.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the SMTP password
-========== ========
+If :ref:`mail protocol <mail_protocol>` is set to ``smtp``, this sets
+the password the system will use to authenticate with the SMTP server.
+This information can be obtained from your email provider.
+
+============ ===========
+Value        Description
+============ ===========
+``password`` SMTP password
+============ ===========
 
 Example Usage::
 
-$config['smtp_password'] = 'ihateburpees';
+$config['smtp_password'] = 'ic6XpWJnv4ip';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: SMTP Password
+Configuration`: :ref:`SMTP Password <email-smtp-password-label>`
 
 
 smtp_server
 -----------
-:ref:`SMTP Server Address <email-smtp-server-label>` When using SMTP as
-your mail protocol, this sets the server to be used. You can use SSL
-servers as long as OpenSSL is installed on the server ExpressionEngine
-is installed on. Check with your server administrator first.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets SMTP server address
-========== ========
+If :ref:`mail protocol <mail_protocol>` is set to ``smtp``, this sets
+the mail server hostname. This information can be obtained from your
+email provider.
+
+.. note:: You can connect to SSL servers as long as OpenSSL is installed
+    on the server hosting ExpressionEngine. Please check with your
+    server administrator to confirm.
+
+============ ===========
+Value        Description
+============ ===========
+``hostname`` SMTP server hostname
+============ ===========
 
 Example Usage::
 
-$config['smtp_server'] = '10.2.3.12';
+$config['smtp_server'] = 'mail.example.com';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: SMTP Server Address
+Configuration`: :ref:`SMTP Server Address <email-smtp-server-label>`
 
 
 smtp_port
 ---------
-:ref:`SMTP Server Port <email-smtp-server-port-label>` When using SMTP
-as your mail protocol, this will override the core Email class setting
-(25) for SMTP Port.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Specifies which port to use for SMTP
-========== ========
+If :ref:`mail protocol <mail_protocol>` is set to ``smtp``, this sets
+the mail server port. This information can be obtained from your email
+provider.
+
+========== ===========
+Value      Description
+========== ===========
+``port``   SMTP port **(default is 25)**
+========== ===========
 
 Example Usage::
 
@@ -4002,20 +4008,21 @@ $config['smtp_port'] = '2525';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: SMTP Server Port
+Configuration`: :ref:`SMTP Server Port <email-smtp-server-port-label>`
 
 
 smtp_username
 -------------
-:ref:`SMTP Username <email-smtp-username-label>` When using SMTP as
-your mail protocol, this sets the username ExpressionEngine will use to
-authenticate with the SMTP server.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Specifies the SMTP username
-========== ========
+If :ref:`mail protocol <mail_protocol>` is set to ``smtp``, this sets
+the username the system will use to authenticate with the SMTP server.
+This information can be obtained from your email provider.
+
+============ ===========
+Value        Description
+============ ===========
+``username`` SMTP username
+============ ===========
 
 Example Usage::
 
@@ -4024,57 +4031,66 @@ $config['smtp_username'] = 'joe@example.com';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: SMTP Username
+Configuration`: :ref:`SMTP Username <email-smtp-username-label>`
 
 
 spellcheck_language_code
 ------------------------
-Allows you to specify the language used in the spellchecking functions.
-Set the value to the two letter ISO 639 language code for the spellcheck
-(ex: en, es, de)
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Specifies the language used in the spellchecking functions
-========== ========
+Set the language used by spell check.
+
+================= ===========
+Value             Description
+================= ===========
+``language code`` 2 letter ISO 639 language code (e.g. ``en``, ``es``, ``de``)
+================= ===========
 
 Example Usage::
 
 $config['spellcheck_language_code'] = 'en';
 
 
-subclass_prefix
----------------
-Allows you to set the filename/classname prefix when extending native
-libraries.  For more information please see the CodeIgniter user guide.
+.. _strict_urls:
+
+strict_urls
+-----------
+
+Set whether the system will allow templates from your default template
+group to be directly accessed in the first URL segment. If enabled, the
+system will require that the first URL segment be a valid template group
+only or a 404 page will be shown.
 
 ========== ========
 Value      Behavior
 ========== ========
-``text``   Sets the subclass prefix
+``y``      Enable Strict URLs **(default)**
+``n``      Disable Strict URLs
 ========== ========
 
 Example Usage::
 
-$config['subclass_prefix'] = 'EE_';
+$config['strict_urls'] = 'n';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Design --> Templates -->
+Global Template Preferences`: :ref:`Enable Strict URLs
+<strict_url_label>`
 
 
 template_debugging
 ------------------
-If :ref:`Display Template Debugging
-<output-debug-display-template-debug-label>` is enabled, a log of all
-processing that occurs while a page is being created in the
-ExpressionEngine Template parser will be shown to Super Admins at the
-bottom of the browser window. This includes Global Variables,
-Conditionals, Tags, PHP on Input/Ouput, Embeds, and Extension Hooks.
-This is an excellent tool for debugging your templates.
+
+If enabled, all processing that occurs while rendering a page will be
+logged and displayed to Super Admins at the bottom of the browser
+window. This includes Global Variables, conditionals, tags, PHP on
+Input/Ouput, Embeds, and extension hooks.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Enables template debugging
-``n``      Default value, disables template debugging
+``y``      Enable template debugging
+``n``      Disable template debugging **(default)**
 ========== ========
 
 Example Usage::
@@ -4084,31 +4100,33 @@ $config['template_debugging'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: Display Template Debugging
+Administration --> Output and Debugging`: :ref:`Display Template
+Debugging <output-debug-display-template-debug-label>`
 
 
 .. _overrides-template:
 
 template
 --------
+
 Sets the default template. Must be used with :ref:`template_group
 <overrides-template-group>`, and the two overrides together set the
 template group and template shown on the front-end when the site is
 loaded without anything in the :doc:`URL segments
 </templates/globals/url_segments>`.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the default template
-========== ========
+============ ===========
+Value        Description
+============ ===========
+``template`` Template name
+============ ===========
 
 Example Usage::
 
 $config['template'] = 'index';
 
-Also available for use in the site index file, :file:`index.php`.
-Example Usage::
+Also available for use in the :ref:`site index file <site_index_file>`,
+:file:`index.php`. Example Usage::
 
 $assign_to_config['template'] = 'index';
 
@@ -4118,28 +4136,30 @@ $assign_to_config['template'] = 'index';
 Template Manager --> Edit Template Group`: Make the index template in
 this group your site's home page?
 
+
 .. _overrides-template-group:
 
 template_group
 --------------
+
 Sets the default template group. Must be used with :ref:`template
 <overrides-template>`, and the two overrides together set the template
 group and template shown on the front-end when the site is loaded
 without anything in the :doc:`URL segments
 </templates/globals/url_segments>`.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the default template group
-========== ========
+================== ===========
+Value              Description
+================== ===========
+``template group`` Template group name
+================== ===========
 
 Example Usage::
 
 $config['template_group'] = 'about';
 
-Also available for use in the site index file, :file:`index.php`.
-Example Usage::
+Also available for use in the :ref:`site index file <site_index_file>`,
+:file:`index.php`. Example Usage::
 
 $assign_to_config['template_group'] = 'site_2';
 
@@ -4152,14 +4172,14 @@ this group your site's home page?
 
 theme_folder_path
 -----------------
-:ref:`Theme Folder Path <general-config-theme-path-label>` is the server
-path to the "themes" folder.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the server path to the "themes" folder.
-========== ========
+Set the server path to the :file:`themes` directory.
+
+========== ===========
+Value      Description
+========== ===========
+``path``   Server path to the :file:`themes` directory
+========== ===========
 
 Example Usage::
 
@@ -4168,20 +4188,22 @@ $config['theme_folder_path'] = '/home/usr/domain.com/public_html/themes/';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> General
-Configuration`: Theme Folder Path
+Configuration`: :ref:`Theme Folder Path
+<general-config-theme-path-label>`
 
 
 third_party_path
 ----------------
-With the third_party_path config variable, you can keep your third_party
-folders completely out of the system/ and themes/ directory, which will
-make upgrading easier.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the path to your third party folders.
-========== ========
+Set the server path to the :file:`third_party` add-ons directory.
+Separating the :file:`third_party` directory from its default location
+in the :file:`system` directory can make updating easier.
+
+========== ===========
+Value      Description
+========== ===========
+``path``   Server path to the :file:`third_party` add-ons directory
+========== ===========
 
 Example Usage::
 
@@ -4219,14 +4241,15 @@ Privacy --> Throttling Preferences`: :ref:`Time Interval
 
 tmpl_file_basepath
 ------------------
-:ref:`Theme Folder Path <general-config-theme-path-label>`  is the
-server path (not URL) to the folder that holds the Template files.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the server path to the folder that holds the Template files
-========== ========
+Set the server path to the :doc:`template files
+</templates/templates_as_files>` directory.
+
+========= ===========
+Value     Description
+========= ===========
+``path``  Full server path to writable template files directory
+========= ===========
 
 Example Usage::
 
@@ -4235,20 +4258,20 @@ $config['tmpl_file_basepath'] = '/home/usr/domain.com/system/expressionengine/te
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Design --> Templates -->
-Template Preferences`: Server path to site's templates
+Template Preferences`: :ref:`Server path to site's templates
+<general-config-theme-path-label>`
 
 
 un_min_len
 ----------
-:ref:`Minimum Username Length <security-min-username-label>`  is the
-minimum length required for a member username during new member
-registration. Specify the minimum number of characters required.
 
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets the minimum length required for a member username during new member registration
-========== ========
+Set the minimum number of characters allowed for member usernames.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Minimum character length
+=========== ===========
 
 Example Usage::
 
@@ -4257,19 +4280,22 @@ $config['un_min_len'] = '5';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: Server path to site's templates
+Privacy --> Security and Sessions`: :ref:`Minimum Username Length
+<security-min-username-label>`
 
 
 uri_protocol
 ------------
-This item determines which server global should be used to retrieve the
-URI string.  The default setting of "AUTO" works for most servers. If
-your links do not seem to work, try one of the other delicious flavors.
+
+Specify which server global should be used to retrieve the URI string.
+The default setting of ``AUTO`` works for most servers. `Learn more
+<http://www.php.net/manual/en/reserved.variables.server.php>`__ about
+these server globals.
 
 =================== ========
 Value               Behavior
 =================== ========
-``auto``            Default value, auto detects
+``AUTO``            Default value, auto detects
 ``PATH_INFO``       Uses the PATH_INFO
 ``QUERY_STRING``    Uses the QUERY_STRING
 ``REQUEST_URI``     Uses the REQUEST_URI
@@ -4281,42 +4307,24 @@ Example Usage::
 $config['uri_protocol'] = 'PATH_INFO';
 
 
-un_min_len
-----------
-:ref:`Minimum Username Length <security-min-username-label>` is the
-minimum length required for a member username during new member
-registration. Specify the minimum number of characters required.
-
-========== ========
-Value      Behavior
-========== ========
-``number`` Sets the minimum length required for a member username during new member registration
-========== ========
-
-Example Usage::
-
-$config['un_min_len'] = '5';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: Server path to site's templates
-
+.. _url_third_themes:
 
 url_third_themes
 -----------------
-Overrides the third_party URL so you can move your third_party directory
-outside of your system directory.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets URL to third_party directory
-========== ========
+Set the URL to the third-party add-ons' :file:`themes` directory. Should
+be used in conjunction with :ref:`path_third_themes
+<path_third_themes>`.
+
+========== ===========
+Value      Description
+========== ===========
+``URL``    URL to the third-party add-ons' :file:`themes` directory
+========== ===========
 
 Example Usage::
 
-$config['url_third_themes'] = 'http://www.example.com/third_party/';
+$config['url_third_themes'] = 'http://example.com/third_party/';
 
 
 .. _use_category_name:
@@ -4324,35 +4332,69 @@ $config['url_third_themes'] = 'http://www.example.com/third_party/';
 use_category_name
 -----------------
 
+Set the system to generate category links with category URL titles
+rather than the numeric category indicator (e.g. ``/C12/``).
 
-webmaster_email
----------------
-Sets the Webmaster's email address.
-
-========== ========
-Value      Behavior
-========== ========
-``text``   Sets the webmaster's email address
-========== ========
+======= ========
+Value   Behavior
+======= ========
+``y``   Enable category links with category URL titles
+``n``   Disable category links with category URL titles **(default)**
+======= ========
 
 Example Usage::
 
-$config['webmaster_email'] = 'joe@example.com';
+$config['use_category_name'] = 'y';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> Channel Administration
+--> Global Channel Preferences`: :ref:`Use Category URL Titles In Links?
+<global-channel-category-url-titles-label>`
+
+
+webmaster_email
+---------------
+
+Set the site's return email address for auto-generated emails.
+
+========== ===========
+Value      Description
+========== ===========
+``email``  Return email address for auto-generated emails
+========== ===========
+
+Example Usage::
+
+$config['webmaster_email'] = 'hello@example.com';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> Email Configuration`:
+:ref:`Return email address for auto-generated emails
+<email-site-return-email-label>`
 
 
 webmaster_name
 --------------
-Sets the Webmaster's email address.
+
+Set the *From* name for auto-generated emails.
 
 ========== ========
-Value      Behavior
+Value      Description
 ========== ========
-``text``   Sets the webmaster's name
+``string`` The *From* name for auto-generated emails.
 ========== ========
 
 Example Usage::
 
-$config['webmaster_name'] = 'Joe';
+$config['webmaster_name'] = 'Your Favorite Website';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> Email Configuration`:
+:ref:`Webmaster or site name for auto-generated emails
+<email-site-webmaster-name-label>`
 
 
 website_session_ttl
@@ -4381,26 +4423,26 @@ $config['website_session_ttl'] = '600';
 
 website_session_type
 --------------------
-:ref:`Website Session Type <website-session-type-label>` determines how
-sessions are handled on the front-end of the site. You may use cookies,
-session IDs, or a combination.
+
+Specify how sessions are handled on the front-end of the site.
 
 ====== ========
 Value  Behavior
 ====== ========
-``c``  Sets the User Session to use cookies only
-``s``  Sets the User Session to use Session ID only
-``cs`` Sets the User Session to use Cookies and Session ID
+``c``  Use cookies only **(default)**
+``s``  Use session ID only
+``cs`` Use both cookies and session ID
 ====== ========
 
 Example Usage::
 
- $config['website_session_type'] = 's';
+$config['website_session_type'] = 'c';
 
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: Website Session Type
+Privacy --> Security and Sessions`: :ref:`Website Session Type
+<website-session-type-label>`
 
 .. versionchanged:: 2.8
 
@@ -4410,18 +4452,15 @@ Privacy --> Security and Sessions`: Website Session Type
 
 word_separator
 --------------
-When creating an entry in the PUBLISH page, if you do not manually enter
-a "URL Title" then the system will automatically create one based on the
-entry Title. The :ref:`Word Separator for URL Titles
-<global-channel-word-seperator-label>` preference determines whether
-underscore characters (_) or dashes (-) should be used when
-automatically creating the URL Title.
+
+Specify the character the system will use to replace spaces when
+auto-generating a URL title based on the entry's title.
 
 ============== ========
 Value          Behavior
 ============== ========
-``dash``       Default value, sets Dash as the word separator
-``underscore`` Sets underscore as the word separator
+``dash``       Use a dash (``-``) as the word separator **(default)**
+``underscore`` Use an underscore (``_``) as the word separator
 ============== ========
 
 Example Usage::
@@ -4431,21 +4470,21 @@ Example Usage::
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> Channel
-Administration --> Global Channel Preferences`: Word Separator for URL
-Titles
+Administration --> Global Channel Preferences`: :ref:`Word Separator for
+URL Titles <global-channel-word-seperator-label>`
 
 
 xml_lang
 --------
-The :ref:`Default XML Language <general-config-default-xml-label>`
-setting is typically used when outputting RSS feeds. Your feed will
-identify itself as having the language specified here.
 
-============== ========
-Value          Behavior
-============== ========
-``text``       Sets default XML language
-============== ========
+Set the default XML language, typically used when outputting RSS feeds.
+Feeds will identify themselves as having the language specified here.
+
+================= ===========
+Value             Description
+================= ===========
+``language code`` 2 letter ISO 639 language code (e.g. ``en``, ``es``, ``de``)
+================= ===========
 
 Example Usage::
 
@@ -4454,34 +4493,37 @@ Example Usage::
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Admin --> General
-Configuration`: Default XML Language
+Configuration`: :ref:`Default XML Language
+<general-config-default-xml-label>`
 
 
 xss_clean_member_exception
 --------------------------
-Sets the member IDs to exclude XSS cleaning on.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Pipe delimeted list of member IDs
-========== ========
+Specify member IDs to exclude from XSS cleaning.
+
+========== ===========
+Value      Description
+========== ===========
+``text``   Comma-delimited list of member IDs
+========== ===========
 
 Example Usage::
 
-$config['xss_clean_member_exception'] = '3|14|83';
+$config['xss_clean_member_exception'] = '3, 14, 83';
 
 
 xss_clean_member_group_exception
 --------------------------------
-Sets the member IDs to exclude XSS cleaning on.
 
-========== ========
-Value      Behavior
-========== ========
-``text``   Pipe delimited list of member group IDs
-========== ========
+Specify member group IDs to exclude from XSS cleaning.
+
+========== ===========
+Value      Description
+========== ===========
+``text``   Comma-delimited list of member group IDs
+========== ===========
 
 Example Usage::
 
-$config['xss_clean_member_group_exception'] = '2|5';
+$config['xss_clean_member_group_exception'] = '2, 5';

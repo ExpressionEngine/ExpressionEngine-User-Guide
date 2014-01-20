@@ -11,6 +11,8 @@ site. These settings affect not only how emails are sent via the
 Communicate section of the Control Panel but also how emails are
 generally sent by the system.
 
+.. _email-site-return-email-label:
+
 Return email address for auto-generated emails
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -19,6 +21,8 @@ with system generated emails. With the increase in spam on the internet,
 many email servers will not accept emails without a valid From or
 Reply-to address, therefore we strongly recommend filling this field
 out.
+
+.. _email-site-webmaster-name-label:
 
 Webmaster or site name for auto-generated emails
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
