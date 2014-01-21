@@ -82,15 +82,17 @@ wiki\_name
 Displays the Wiki's Full Name (see the :doc:`Wiki Control
 Panel <wiki_cp>`).
 
-XID\_HASH
-~~~~~~~~~
+CSRF\_TOKEN
+~~~~~~~~~~~
 
 ::
 
-	{XID_HASH}
+	{CSRF_TOKEN}
 
-This variable is a required value for hidden form field 'XID' used in
-secure forms.
+This variable is a required value for hidden form field 'CSRF\_TOKEN'.
+
+.. note:: This variable was previously called as ``{XID_HASH}`` and used
+  in a field named 'XID'.
 
 Namespace Variables
 -------------------

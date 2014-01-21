@@ -44,6 +44,8 @@ Request Forgery <dev_guidelines_csrf_protection>` section of the security guidel
 
 .. method:: restore_xid([$xid = REQUEST_XID])
 
+  .. deprecated:: 2.8 CSRF Tokens are now multi-use.
+
   By default all XIDs are single use tokens. In some cases you may want
   to allow reuse of the token. To do this you can call ``restore_xid()``
   at any point during the request that consumed the token. ::
