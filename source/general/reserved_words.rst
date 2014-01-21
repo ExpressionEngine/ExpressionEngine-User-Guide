@@ -29,6 +29,7 @@ reserved words.
 
 -  lang
 -  charset
+-  CSRF\_TOKEN
 -  homepage
 -  debug\_mode
 -  gzip\_mode

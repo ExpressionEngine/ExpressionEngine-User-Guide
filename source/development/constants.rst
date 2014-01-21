@@ -56,7 +56,7 @@ Request Constants
 -----------------
 
 - ``REQ`` - One of: ``'PAGE'``, ``'CP'``, ``'ACT'``
-- ``AJAX_REQUEST`` - (``bool``) ``TRUE`` if request came from one of 
+- ``AJAX_REQUEST`` - (``bool``) ``TRUE`` if request came from one of
   jQuery's ajax functions
 
 Filesystem Mode Constants
@@ -88,8 +88,8 @@ Others
 - ``LD`` - Left template tag delimiter (usually ``{``)
 - ``RD`` - Right template tag delimiter (usually ``}``)
 - ``DEBUG`` - (``bool``) ``TRUE`` if ``$debug`` is set to 1
-- ``XID_SECURE_HASH`` - XID Hash if secure forms is enabled, blank
-  otherwise
+- ``CSRF_TOKEN`` - CSRF token, blank if csrf protection is disabled.
+- ``XID_SECURE_HASH`` - previous name of ``CSRF_TOKEN``
 - ``MASKED_CP`` - (``bool``) ``TRUE`` if the CP is masked for this
   request
 - ``EXT`` - File extension (``.php``)
