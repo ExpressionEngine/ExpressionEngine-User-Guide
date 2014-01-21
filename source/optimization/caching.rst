@@ -143,6 +143,8 @@ features that can be disabled. ::
 Caching Drivers
 ---------------
 
+**Control Panel Location:** :menuselection:`Admin --> General Configuration`
+
 By default, ExpressionEngine uses a file-based caching driver, meaning
 cached items are written to disk. This is the most-compatible option
 for all servers and works well in most cases. However, the traffic on
@@ -152,8 +154,11 @@ System instances, in which case you may want to use a memory-based
 caching driver.
 
 ExpressionEngine currently supports Memcached and Redis for memory-based
-caching. You can set which driver is being used via the
-``cache_driver`` (link) hidden config.
+caching. You can set which driver is being used in the control panel or
+via the ``cache_driver`` (link) hidden config. Memcached and Redis
+server information can also be set in ``config.php``, otherwise
+ExpressionEngine will try to connect to the default respective ports on
+localhost.
 
 A backup driver (link) can also be specified in the case your primary
 driver is unavailable. By default, the backup driver is the file driver

@@ -92,7 +92,7 @@ Default Language
 ~~~~~~~~~~~~~~~~
 
 The language pack that members will see when logged in to the Control
-Panel. This only affects the Control Panel. 
+Panel. This only affects the Control Panel.
 Members are able to override this setting in :doc:`/cp/my_account/index`.
 
 Default XML Language
@@ -100,6 +100,12 @@ Default XML Language
 
 This setting is typically used when outputting RSS feeds. Your feed will
 identify itself as having the language specified here.
+
+Caching Driver
+~~~~~~~~~~~~~~
+
+The :ref:`caching driver <caching_drivers>` ExpressionEngine is set to
+use.
 
 Maximum Number of Cachable URIs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

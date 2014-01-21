@@ -11,8 +11,9 @@ Introduction
 
 ExpressionEngine's Cache Class gives developers easy ways to cache data
 (strings, arrays, objects) in a key-value store. The storage driver can
-be either file-based or memory-based. More about supported drivers can
-be found under :ref:`Data Caching and Performance <caching_drivers>`.
+be either file-based or memory-based. More about supported drivers and
+configuration can be found under
+:ref:`Data Caching and Performance <caching_drivers>`.
 
 Unlike the :ref:`Session Cache <session_cache>`, items stored using the
 Cache class can persist across multiple page loads because cache items
