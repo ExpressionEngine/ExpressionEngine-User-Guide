@@ -2203,6 +2203,24 @@ Administration --> Image Resizing Preferences`: :ref:`Image Resizing
 Protocol <image-resizing-protocol-label>`
 
 
+ip2nation
+---------
+
+Enable checks against the :doc:`IP to Nation
+</addons/ip_to_nation/index>` database.
+
+========== ========
+Value      Behavior
+========== ========
+``y``      Enable IP to Nation checks **(default)**
+``n``      Disable IP to Nation checks
+========== ========
+
+Example Usage::
+
+$config['ip2nation'] = 'n';
+
+
 .. _is_site_on:
 
 is_site_on
