@@ -4306,6 +4306,28 @@ Configuration`: :ref:`Theme Folder Path
 <general-config-theme-path-label>`
 
 
+theme_folder_url
+----------------
+
+Set the URL to the :file:`themes` directory.
+
+========= ===========
+Value     Description
+========= ===========
+``URL``   URL to the :file:`themes` directory
+========= ===========
+
+Example Usage::
+
+$config['theme_folder_url'] = 'http://example.com/themes/';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> General
+Configuration`: :ref:`URL to your "themes" folder
+<general-config-theme-url-label>`
+
+
 third_party_path
 ----------------
 
