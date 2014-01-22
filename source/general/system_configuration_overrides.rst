@@ -689,16 +689,17 @@ $config['banned_usernames'] = 'garfield|snoopy|hobbes';
 
 cache_driver
 ------------
+
 Specify a different caching driver (link) to use.
 
-============= ========
-Values        Behavior
-============= ========
-``file``      Default value: file driver, path configured with `cache_path`_ config
+============= ===========
+Values        Description
+============= ===========
+``file``      File driver, path configured with `cache_path`_ config **(default)**
 ``memcached`` Memcached driver, configured with `memcached`_ config
 ``redis``     Redis driver, configured with `redis`_ config
 ``dummy``     Dummy driver, will not cache
-============= ========
+============= ===========
 
 Example Usage::
 
@@ -707,6 +708,7 @@ $config['cache_driver'] = 'memcached';
 
 cache_driver_backup
 -------------------
+
 Specify a backup caching driver (link) to use in case the one specified
 in `cache_driver`_ isn't available. Same values accepted and same
 default as `cache_driver`_.
@@ -2686,6 +2688,7 @@ $config['mbr_notification_emails'] = 'joe@example.com, jane@example.com';
 
 memcached
 ---------
+
 If Memcached is the specified `cache_driver`_, allows configuration of
 multiple Memcached servers to be used for cache storage.
 
@@ -3331,6 +3334,7 @@ User-submitted Links <security-apply-rank-denial-label>`
 
 redis
 -----
+
 If Redis is the specified `cache_driver`_, allows configuration of
 a Redis server to be used for cache storage.
 
