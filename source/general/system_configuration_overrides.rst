@@ -1981,8 +1981,8 @@ $config['encode_removed_text'] = 'Encoded emails not allowed';
 expire_session_on_browser_close
 -------------------------------
 
-Set the system to end a user's session when they close all browser
-windows or tabs with the site loaded.
+Set the system to end a user's session when the browser is closed. (In
+the case of Mac OS X, this means quitting the browser application.)
 
 ========== ========
 Value      Behavior
@@ -1997,10 +1997,11 @@ $config['expire_session_on_browser_close'] = 'y';
 
 .. versionchanged:: 2.8
 
-   Replaces ``user_session_ttl`` and ``cp_session_ttl``. If either
-   override has the value ``0`` in :file:`config.php` prior to the 2.8
-   update, they will be replaced with
-   ``$config['expire_session_on_browser_close'] = 'y';``
+   Replaced ``user_session_ttl`` and ``cp_session_ttl``. If either
+   override had the value ``0`` in :file:`config.php` prior to the 2.8
+   update, they were replaced with
+   ``$config['expire_session_on_browser_close'] = 'y';`` during the
+   update.
 
 
 filename_increment
