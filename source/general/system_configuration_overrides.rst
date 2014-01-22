@@ -1023,6 +1023,28 @@ $config['cookie_domain'] = '.example.com';
 Privacy --> Cookie Settings`: :ref:`Cookie Domain <cookie-domain-label>`
 
 
+cookie_httponly
+---------------
+
+Set the HttpOnly flag when setting a cookie. The HttpOnly flag is a
+security feature for cookies that prevents a client side script from
+accessing or deleting the cookie (if the browser supports it, as most
+modern browsers do). `Learn more.
+<https://www.owasp.org/index.php/HttpOnly>`__
+
+======== ===========
+Value    Behavior
+======== ===========
+``y``    Set HttpOnly flag **(default)**
+``n``    Do not set HttpOnly flag
+======== ===========
+
+Example Usage::
+
+$config['cookie_httponly'] = 'n';
+
+
+
 cookie_path
 -----------
 
