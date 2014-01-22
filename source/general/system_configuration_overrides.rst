@@ -1104,13 +1104,13 @@ Require a secure connection (HTTPS) for ExpressionEngine to set cookies.
 ========== ========
 Value      Behavior
 ========== ========
-``TRUE``   Require a secure connection to set cookies
-``FALSE``  Do not require a secure connection to set cookies **(default)**
+``y``      Require a secure connection to set cookies
+``n``      Do not require a secure connection to set cookies **(default)**
 ========== ========
 
 Example Usage::
 
-$config['cookie_secure'] = TRUE;
+$config['cookie_secure'] = 'y';
 
 
 cp_session_ttl
@@ -1372,13 +1372,13 @@ the form from your site.
 ========== ========
 Value      Behavior
 ========== ========
-``TRUE``   Disable CSRF protection
-``FALSE``  Enable CSRF protection **(default)**
+``y``      Disable CSRF protection
+``n``      Enable CSRF protection **(default)**
 ========== ========
 
 Example Usage::
 
-$config['disable_csrf_protection'] = TRUE;
+$config['disable_csrf_protection'] = 'y';
 
 
 disable_tag_caching
