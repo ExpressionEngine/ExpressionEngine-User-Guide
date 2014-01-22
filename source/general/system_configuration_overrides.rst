@@ -2012,8 +2012,8 @@ file.
 ========== ========
 Value      Behavior
 ========== ========
-``y``   Forces query strings
-``n``  Do not force query strings **(default)**
+``y``      Forces query strings
+``n``      Do not force query strings **(default)**
 ========== ========
 
 Example Usage::
