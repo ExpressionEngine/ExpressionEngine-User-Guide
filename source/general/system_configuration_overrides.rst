@@ -1990,13 +1990,13 @@ file.
 ========== ========
 Value      Behavior
 ========== ========
-``TRUE``   Forces query strings
-``FALSE``  Do not force query strings **(default)**
+``y``   Forces query strings
+``n``  Do not force query strings **(default)**
 ========== ========
 
 Example Usage::
 
-$config['force_query_string'] = 'TRUE';
+$config['force_query_string'] = 'y';
 
 .. rst-class:: cp-path
 
