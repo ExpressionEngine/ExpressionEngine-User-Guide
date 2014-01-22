@@ -1113,27 +1113,6 @@ Example Usage::
 $config['cookie_secure'] = 'y';
 
 
-cp_session_ttl
---------------
-
-Set the session length for members logging in through the Control Panel.
-
-.. note:: This does not affect the timing of the idle session modal that
-    appears when a CP page is left open and idle, and it is effectively
-    irrelevant if the member selects *Auto log-in on future visits?* on
-    the login page.
-
-=========== ===========
-Value       Description
-=========== ===========
-``integer`` Control Panel session length in seconds
-=========== ===========
-
-Example Usage::
-
-$config['cp_session_ttl'] = '300';
-
-
 cp_session_type
 ---------------
 
@@ -1968,6 +1947,31 @@ Value      Description
 Example Usage::
 
 $config['encode_removed_text'] = 'Encoded emails not allowed';
+
+
+expire_session_on_browser_close
+-------------------------------
+
+Set the system to end a user's session when they close all browser
+windows or tabs with the site loaded.
+
+========== ========
+Value      Behavior
+========== ========
+``y``      Expire user session when the browser closes
+``n``      Do not expire user session when the browser closes **(default)**
+========== ========
+
+Example Usage::
+
+$config['expire_session_on_browser_close'] = 'y';
+
+.. versionchanged:: 2.8
+
+   Replaces ``user_session_ttl`` and ``cp_session_ttl``. If either
+   override has the value ``0`` in :file:`config.php` prior to the 2.8
+   update, they will be replaced with
+   ``$config['expire_session_on_browser_close'] = 'y';``
 
 
 filename_increment
@@ -4417,30 +4421,6 @@ $config['webmaster_name'] = 'Your Favorite Website';
 **Also found in CP:** :menuselection:`Admin --> Email Configuration`:
 :ref:`Webmaster or site name for auto-generated emails
 <email-site-webmaster-name-label>`
-
-
-website_session_ttl
--------------------
-
-Set the session length for members logging in through the front-end.
-
-.. note:: This is effectively irrelevant if the member chooses the
-    :ref:`auto-login option <if-auto-login>` on the login page.
-
-=========== ===========
-Value       Description
-=========== ===========
-``integer`` Front-end session length in seconds
-=========== ===========
-
-Example Usage::
-
-$config['website_session_ttl'] = '600';
-
-.. versionchanged:: 2.8
-
-   Variable was changed from ``user_session_ttl`` to
-   ``website_session_ttl``.
 
 
 website_session_type
