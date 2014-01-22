@@ -215,24 +215,6 @@ Privacy --> Security and Sessions`: :ref:`Allow multiple log-ins from a
 single account <allow-multi-logins-label>`
 
 
-allow_textarea_tabs
--------------------
-
-Set whether a tab keystroke produces a tab in Publish Page and Template
-Editor textareas. This is the default behavior.
-
-======== ===========
-Value    Behavior
-======== ===========
-``y``    Insert tab on tab keystroke in textareas **(default)**
-``n``    Normal browser behavior on tab keystroke in textareas
-======== ===========
-
-Example Usage::
-
-$config['allow_textarea_tabs'] = 'y';
-
-
 allow_signatures
 ----------------
 
@@ -253,6 +235,24 @@ $config['allow_signatures'] = 'y';
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
 :ref:`Allow Users to have Signatures <allow-member-sigs-label>`
+
+
+allow_textarea_tabs
+-------------------
+
+Set whether a tab keystroke produces a tab in Publish Page and Template
+Editor textareas. This is the default behavior.
+
+======== ===========
+Value    Behavior
+======== ===========
+``y``    Insert tab on tab keystroke in textareas **(default)**
+``n``    Normal browser behavior on tab keystroke in textareas
+======== ===========
+
+Example Usage::
+
+$config['allow_textarea_tabs'] = 'y';
 
 
 allow_username_change
@@ -2631,49 +2631,6 @@ $config['member_theme'] = 'default';
 :ref:`Default Member Profile Theme <member-default-theme-label>`
 
 
-memberlist_sort_order
----------------------
-
-Set the default member list sort order.
-
-=========== ========
-Value       Behavior
-=========== ========
-``asc``     Sorts in ascending order
-``desc``    Sorts in descending order **(default)**
-=========== ========
-
-Example Usage::
-
-$config['memberlist_sort_order'] = 'desc';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Members --> Preferences`:
-:ref:`Member List - Order <member-list-order-label>`
-
-
-memberlist_row_limit
---------------------
-
-Set the default number of rows for the member list to display.
-
-=========== ===========
-Value       Description
-=========== ===========
-``integer`` Default number of rows
-=========== ===========
-
-Example Usage::
-
-$config['memberlist_row_limit'] = '20';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Members --> Preferences`:
-:ref:`Member List - Rows <member-list-rows-label>`
-
-
 memberlist_order_by
 -------------------
 
@@ -2697,6 +2654,49 @@ $config['memberlist_order_by'] = 'total_posts';
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
 :ref:`Member List - Sort By <member-list-rows-label>`
+
+
+memberlist_row_limit
+--------------------
+
+Set the default number of rows for the member list to display.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Default number of rows
+=========== ===========
+
+Example Usage::
+
+$config['memberlist_row_limit'] = '20';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Members --> Preferences`:
+:ref:`Member List - Rows <member-list-rows-label>`
+
+
+memberlist_sort_order
+---------------------
+
+Set the default member list sort order.
+
+=========== ========
+Value       Behavior
+=========== ========
+``asc``     Sorts in ascending order
+``desc``    Sorts in descending order **(default)**
+=========== ========
+
+Example Usage::
+
+$config['memberlist_sort_order'] = 'desc';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Members --> Preferences`:
+:ref:`Member List - Order <member-list-order-label>`
 
 
 .. _multiple_sites_enabled:
@@ -2801,6 +2801,29 @@ Administration --> Global Channel Preferences`: :ref:`Clear all caches
 when new entries are posted <global-channel-clear-cache-label>`
 
 
+new_version_check
+-----------------
+
+Set ExpressionEngine to periodically check for available updates.
+
+======= ========
+Value   Behavior
+======= ========
+``y``   Enable version check **(default)**
+``n``   Disable version check
+======= ========
+
+Example Usage::
+
+$config['new_version_check'] = 'n';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> General
+Configuration`: :ref:`New Version Auto Check
+<general-config-new-version-label>`
+
+
 .. _overrides-newrelic-app-name:
 
 newrelic_app_name
@@ -2832,29 +2855,6 @@ $assign_to_config['newrelic_app_name'] = 'My Second Site';
 **Also found in CP:** :menuselection:`Admin --> System
 Administration --> Output and Debugging`: :ref:`New Relic Application
 Name <sysadmin-newrelic_app_name>`
-
-
-new_version_check
------------------
-
-Set ExpressionEngine to periodically check for available updates.
-
-======= ========
-Value   Behavior
-======= ========
-``y``   Enable version check **(default)**
-``n``   Disable version check
-======= ========
-
-Example Usage::
-
-$config['new_version_check'] = 'n';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> General
-Configuration`: :ref:`New Version Auto Check
-<general-config-new-version-label>`
 
 
 .. _password_lockout:
@@ -3116,6 +3116,24 @@ Example Usage::
 $config['proxy_ips'] = '10.0.1.25, 10.0.1.26';
 
 
+publish_page_title_focus
+------------------------
+
+Specify whether the title field should gain focus when the publish page
+is loaded.
+
+========== ========
+Value      Behavior
+========== ========
+``y``      Title field gains focus when the publish page is loaded **(default)**
+``n``      Title field does not gain focus when the publish page is loaded
+========== ========
+
+Example Usage::
+
+$config['publish_page_title_focus'] = 'n';
+
+
 pw_min_len
 ----------
 
@@ -3136,24 +3154,6 @@ $config['pw_min_len'] = '8';
 **Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: :ref:`Minimum Password Length
 <profile-trigger-word-label>`
-
-
-publish_page_title_focus
-------------------------
-
-Specify whether the title field should gain focus when the publish page
-is loaded.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Title field gains focus when the publish page is loaded **(default)**
-``n``      Title field does not gain focus when the publish page is loaded
-========== ========
-
-Example Usage::
-
-$config['publish_page_title_focus'] = 'n';
 
 
 recount_batch_total
@@ -3961,6 +3961,29 @@ $config['smtp_password'] = 'ic6XpWJnv4ip';
 Configuration`: :ref:`SMTP Password <email-smtp-password-label>`
 
 
+smtp_port
+---------
+
+If :ref:`mail protocol <mail_protocol>` is set to ``smtp``, this sets
+the mail server port. This information can be obtained from your email
+provider.
+
+========== ===========
+Value      Description
+========== ===========
+``port``   SMTP port **(default is 25)**
+========== ===========
+
+Example Usage::
+
+$config['smtp_port'] = '2525';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> Email
+Configuration`: :ref:`SMTP Server Port <email-smtp-server-port-label>`
+
+
 smtp_server
 -----------
 
@@ -3986,29 +4009,6 @@ $config['smtp_server'] = 'mail.example.com';
 
 **Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: :ref:`SMTP Server Address <email-smtp-server-label>`
-
-
-smtp_port
----------
-
-If :ref:`mail protocol <mail_protocol>` is set to ``smtp``, this sets
-the mail server port. This information can be obtained from your email
-provider.
-
-========== ===========
-Value      Description
-========== ===========
-``port``   SMTP port **(default is 25)**
-========== ===========
-
-Example Usage::
-
-$config['smtp_port'] = '2525';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`SMTP Server Port <email-smtp-server-port-label>`
 
 
 smtp_username
@@ -4078,32 +4078,6 @@ Global Template Preferences`: :ref:`Enable Strict URLs
 <strict_url_label>`
 
 
-template_debugging
-------------------
-
-If enabled, all processing that occurs while rendering a page will be
-logged and displayed to Super Admins at the bottom of the browser
-window. This includes Global Variables, conditionals, tags, PHP on
-Input/Ouput, Embeds, and extension hooks.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Enable template debugging
-``n``      Disable template debugging **(default)**
-========== ========
-
-Example Usage::
-
-$config['template_debugging'] = 'y';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: :ref:`Display Template
-Debugging <output-debug-display-template-debug-label>`
-
-
 .. _overrides-template:
 
 template
@@ -4135,6 +4109,32 @@ $assign_to_config['template'] = 'index';
 **Also found in CP:** :menuselection:`Design --> Templates -->
 Template Manager --> Edit Template Group`: Make the index template in
 this group your site's home page?
+
+
+template_debugging
+------------------
+
+If enabled, all processing that occurs while rendering a page will be
+logged and displayed to Super Admins at the bottom of the browser
+window. This includes Global Variables, conditionals, tags, PHP on
+Input/Ouput, Embeds, and extension hooks.
+
+========== ========
+Value      Behavior
+========== ========
+``y``      Enable template debugging
+``n``      Disable template debugging **(default)**
+========== ========
+
+Example Usage::
+
+$config['template_debugging'] = 'y';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> System
+Administration --> Output and Debugging`: :ref:`Display Template
+Debugging <output-debug-display-template-debug-label>`
 
 
 .. _overrides-template-group:
