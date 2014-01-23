@@ -116,7 +116,7 @@ Require all Segments
 ~~~~~~~~~~~~~~~~~~~~
 
 If set to "yes" all segments defined in your Template Route must
-be contained in a URL in order for it to math. For example in this
+be contained in a URL in order for it to match. For example in this
 Template Route::
 
 	/name/{first_name}/{last_name}/{suffix}
