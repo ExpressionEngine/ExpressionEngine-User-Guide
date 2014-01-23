@@ -450,14 +450,14 @@ Configuration </cp/admin/email_configuration>`.
 
 .. _global_csrf_token:
 
-CSRF\_TOKEN
+csrf\_token
 -----------
 
 ::
 
-  {CSRF_TOKEN}
+  {csrf_token}
 
-This variable is a required value for the hidden form field 'CSRF_TOKEN'.
+This variable is a required value for the hidden form field 'csrf_token'.
 
 .. _global_alt_syntax:
 

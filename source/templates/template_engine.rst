@@ -116,7 +116,7 @@ bottom through each rendering stage.
    * {member_profile_link}
    * {captcha}
 
-#. Add :ref:`csrf tokens <dev_guidelines_csrf_protection>` to forms and parse :ref:`{CSRF_TOKEN} <global_csrf_token>`
+#. Add :ref:`csrf tokens <dev_guidelines_csrf_protection>` to forms and parse :ref:`{csrf_token} <global_csrf_token>`
 
 #. Parse remaining :doc:`standard global variables </templates/globals/single_variables>` (separately, in order given):
 
