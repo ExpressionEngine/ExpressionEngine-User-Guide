@@ -264,10 +264,10 @@ CSRF Tokens in Templates
 
 If you are manually creating templates that send POST requests you must
 include the CSRF token as part of the form. This is easily done using
-the ``CSRF_TOKEN`` :doc:`variable <../../templates/globals/single_variables>`
-as a value for a hidden field called ``CSRF_TOKEN``::
+the ``csrf_token`` :doc:`variable <../../templates/globals/single_variables>`
+as a value for a hidden field called ``csrf_token``::
 
-  <input type="hidden" name="CSRF_TOKEN" value="{CSRF_TOKEN}">
+  <input type="hidden" name="csrf_token" value="{csrf_token}">
 
 Creating Template Forms from Add-ons
 ====================================

@@ -34,7 +34,7 @@ being used.
 ::
 
   <form method="post" action="{path='template_group/template_name'}">
-    <input type="hidden" name="CSRF_TOKEN" value="{CSRF_TOKEN}" />
+    <input type="hidden" name="csrf_token" value="{csrf_token}" />
 
       <select name="orderby">
           <option value="date">Sort By:</option>
@@ -56,8 +56,8 @@ being used.
       <input type="submit" value="Go!">
   </form>
 
-.. note:: The CSRF_TOKEN field is required to protect against cross-site
-  request forgery attacks. ::
+.. note:: The ``csrf_token`` field is required to protect against
+  cross-site request forgery attacks.
 
 .. note:: If you have pagination links on your page they will not retain
     the page layout options created dynamically using this feature.
