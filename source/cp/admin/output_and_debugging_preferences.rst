@@ -122,6 +122,8 @@ Admins at the bottom of the browser window. This includes Global Variables,
 Conditionals, Tags, PHP on Input/Ouput, Embeds, and Extension Hooks.
 This is an excellent tool for debugging your templates.
 
+.. _output-debug-use-newrelic-label:
+
 Enable New Relic RUM JavaScript?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

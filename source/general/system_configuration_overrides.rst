@@ -312,6 +312,38 @@ Administration --> Global Channel Preferences`: :ref:`Auto-Assign
 Category Parents <auto-assign-categoryP-label>`
 
 
+autosave_interval_seconds
+-------------------------
+
+Set the interval between autosaves on the Publish Page.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Autosave interval in seconds **(default is 60)**
+=========== ===========
+
+Example Usage::
+
+$config['autosave_interval_seconds'] = '30';
+
+
+autosave_prune_hours
+--------------------
+
+Set the age at which Channel Entry autosaves are automatically deleted.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Pruning age in hours **(default is 6)**
+=========== ===========
+
+Example Usage::
+
+$config['autosave_prune_hours'] = '4';
+
+
 avatar_max_height
 -----------------
 
@@ -2156,6 +2188,24 @@ Example Usage::
 $config['hidden_template_indicator'] = '_';
 
 
+hidden_template_404
+-------------------------
+
+Set the system to show either a 404 page or the template group's index
+page when a hidden template is directly loaded in a browser.
+
+========= ========
+Value     Behavior
+========= ========
+``y``     Show 404 **(default)**
+``n``     Show template group's index page
+========= ========
+
+Example Usage::
+
+$config['hidden_template_404'] = 'y';
+
+
 htaccess_path
 -------------------------
 
@@ -2233,6 +2283,24 @@ $config['image_resize_protocol'] = 'netpbm';
 **Also found in CP:** :menuselection:`Admin --> System
 Administration --> Image Resizing Preferences`: :ref:`Image Resizing
 Protocol <image-resizing-protocol-label>`
+
+
+include_seconds
+---------------
+
+Set the system to include seconds when time is displayed in the
+interface.
+
+========== ========
+Value      Behavior
+========== ========
+``y``      Include seconds
+``n``      Do not include seconds **(default)**
+========== ========
+
+Example Usage::
+
+$config['include_seconds'] = 'y';
 
 
 ip2nation
@@ -2754,6 +2822,23 @@ $config['memberlist_order_by'] = 'total_posts';
 :ref:`Member List - Sort By <member-list-rows-label>`
 
 
+moblog_allow_nontextareas
+-------------------------
+
+Remove Moblog's textarea-only restriction for Channel Fields.
+
+====== ========
+Value  Behavior
+====== ========
+``y``  Remove textarea-only restriction
+``n``  Allow only textarea fieldtypes **(default)**
+====== ========
+
+Example Usage::
+
+$config['moblog_allow_nontextareas'] = 'y';
+
+
 memberlist_row_limit
 --------------------
 
@@ -3214,6 +3299,45 @@ Example Usage::
 $config['proxy_ips'] = '10.0.1.25, 10.0.1.26';
 
 
+prv_msg_throttling_period
+-------------------------
+
+Set the length of time users must wait between sending private messages.
+
+.. note:: Restriction does not apply to members in the Super Admin
+    group.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Throttling period in seconds **(default is 30)**
+=========== ===========
+
+Example Usage::
+
+$config['prv_msg_throttling_period'] = '60';
+
+
+prv_msg_waiting_period
+----------------------
+
+Set the length of time members must wait after registration before being
+allowed to send private messages.
+
+.. note:: Restriction does not apply to members in the Super Admin
+    group.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Wait time in hours **(default is 1)**
+=========== ===========
+
+Example Usage::
+
+$config['prv_msg_waiting_period'] = '4';
+
+
 publish_page_title_focus
 ------------------------
 
@@ -3655,6 +3779,196 @@ $config['save_tmpl_revisions'] = 'y';
 **Also found in CP:** :menuselection:`Design --> Templates -->
 Global Template Preferences`: :ref:`Save Template Revisions
 <global-template-save-templates-revisions-label>`
+
+
+sc_certificate_id
+-----------------
+
+Specify the unique ID that is supplied by PayPal after providing them
+with a :ref:`public certificate <sc-public-certificate-path-label>`.
+
+========== ===========
+Value      Description
+========== ===========
+``string`` Certificate ID
+========== ===========
+
+Example Usage::
+
+$config['sc_certificate_id'] = 'SX4DT7FDO1234';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
+Simple Commerce`: :ref:`ID Given to Public Certificate by PayPal
+<sc-certificate-id-label>`
+
+
+sc_encrypt_buttons
+------------------
+
+Enable encryption for PayPal purchase links and buttons created by
+Simple Commerce.
+
+.. important:: Enabling this requires that your server have
+    `OpenSSL <http://php.net/manual/en/ref.openssl.php>`_ support
+    compiled in PHP. Ask your server administrator for this information.
+
+.. note:: Enabling this requires that you use a public certificate and
+	private key. Please read the section on
+	:ref:`simple_commerce_encrypted_payments` for full details. To be the
+	most effective, you should set your PayPal account settings to only
+	accept encrypted payments.
+
+======== ===========
+Value    Behavior
+======== ===========
+``y``    Enable encryption
+``n``    Disable encryption **(default)**
+======== ===========
+
+Example Usage::
+
+$config['sc_encrypt_buttons'] = 'y';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
+Simple Commerce`: :ref:`Encrypt PayPal Buttons and Links?
+<sc-encrypt-buttons-label>`
+
+
+sc_paypal_account
+-----------------
+
+Specify the primary email address associated with the PayPal account
+processing payments for store purchases.
+
+========== ===========
+Value      Description
+========== ===========
+``string`` Primary PayPal email address
+========== ===========
+
+Example Usage::
+
+$config['sc_paypal_account'] = 'paypal_email@example.com';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
+Simple Commerce`: :ref:`PayPal Account
+<sc-paypal-account-label>`
+
+
+sc_paypal_certificate
+---------------------
+
+Specify the path to the PayPal-provided certificate file. Please read
+the section on :ref:`simple_commerce_encrypted_payments` for full
+details.
+
+.. note:: ExpressionEngine must have read access to this directory, but
+	for security we highly recommended you use a location above web	root
+	so that the certificate and key files are not accessible via the web.
+
+========= ===========
+Value     Description
+========= ===========
+``path``  Full server path to PayPal certificate file
+========= ===========
+
+Example Usage::
+
+$config['sc_paypal_certificate'] = "/path/to/paypal_certificate.pem";
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
+Simple Commerce`: :ref:`PayPal Certificate Path
+<sc-paypal-certificate-path-label>`
+
+
+sc_private_key
+--------------
+
+Specify the path to the private key file. Please read the section on
+:ref:`simple_commerce_encrypted_payments` for full details.
+
+.. note:: ExpressionEngine must have read access to this directory, but
+	for security we highly recommended you use a location above web	root
+	so that the certificate and key files are not accessible via the web.
+
+========= ===========
+Value     Description
+========= ===========
+``path``  Full server path to private key file
+========= ===========
+
+Example Usage::
+
+$config['sc_private_key'] = "/path/to/private_key.pem";
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
+Simple Commerce`: :ref:`Private Key Path
+<sc-private-key-path-label>`
+
+
+sc_public_certificate
+---------------------
+
+Specify the path to the public certificate file. Please read the
+section on :ref:`simple_commerce_encrypted_payments` for full details.
+
+.. note:: ExpressionEngine must have read access to this directory, but
+	for security we highly recommended you use a location above web	root
+	so that the certificate and key files are not accessible via the web.
+
+========= ===========
+Value     Description
+========= ===========
+``path``  Full server path to public certificate file
+========= ===========
+
+Example Usage::
+
+$config['sc_public_certificate'] = "/path/to/public_certificate.pem";
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
+Simple Commerce`: :ref:`Public Certificate Path
+<sc-public-certificate-path-label>`
+
+
+sc_temp_path
+------------
+
+Specify the path to the temporarily stored encrypted files. Please read
+the section on :ref:`simple_commerce_encrypted_payments` for full
+details.
+
+.. note:: ExpressionEngine must have read access to this directory, but
+	for security we highly recommended you use a location above web	root
+	so that the certificate and key files are not accessible via the web.
+
+========= ===========
+Value     Description
+========= ===========
+``path``  Full server path to temporarily stored encrypted files
+========= ===========
+
+Example Usage::
+
+$config['sc_temp_path'] = "/path/to/tmp";
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
+Simple Commerce`: :ref:`Temporary Encrypted Files Path
+<sc-temp-path-label>`
 
 
 send_headers
@@ -4420,6 +4734,33 @@ Privacy --> Security and Sessions`: :ref:`Minimum Username Length
 <security-min-username-label>`
 
 
+upload_preferences
+------------------
+
+With an associative array, specify upload destination paths, URLs, and
+titles.
+
+.. note:: Each key in the array is optional and only overrides existing
+    values in the database. New upload destinations cannot be created
+    using this config override.
+
+Example Usage::
+
+	$config['upload_preferences'] = array(
+	    1 => array(                                                            // ID of upload destination
+	        'name'        => 'Staging Image Uploads',                          // Display name in control panel
+	        'server_path' => '/home/user/example.com/staging/images/uploads/', // Server path to upload directory
+	        'url'         => 'http://staging.example.com/images/uploads/'      // URL of upload directory
+	    )
+	);
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Content --> Files -->
+File Upload Preferences`: :ref:`Edit Upload Destination
+<upload-destination-edit-label>`
+
+
 uri_protocol
 ------------
 
@@ -4489,6 +4830,50 @@ $config['use_category_name'] = 'y';
 <global-channel-category-url-titles-label>`
 
 
+use_forum_url
+-------------
+
+Set the system to use the forum URL specified in the :ref:`forum board
+preferences <forum-boards-forum-url-label>` rather than the :ref:`the
+main site URL <overrides-site-url>` to form the forum's URL.
+
+======= ========
+Value   Behavior
+======= ========
+``y``   Use forum URL from forum board preferences
+``n``   Use main site URL **(default)**
+======= ========
+
+Example Usage::
+
+$config['use_forum_url'] = 'y';
+
+
+use_newrelic
+------------
+
+When enabled, New Relic will add `Real User Monitoring JavaScript
+<https://newrelic.com/docs/features/real-user-monitoring>`__ to all
+ExpressionEngine-powered pages on both the front-end and in the CP.
+
+======= ========
+Value   Behavior
+======= ========
+``y``   Enable New Relic RUM JavaScript **(default)**
+``n``   Disable New Relic RUM JavaScript
+======= ========
+
+Example Usage::
+
+$config['use_newrelic'] = 'y';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> System Administration
+--> Output and Debugging`: :ref:`Enable New Relic RUM JavaScript?
+<output-debug-use-newrelic-label>`
+
+
 webmaster_email
 ---------------
 
@@ -4516,11 +4901,11 @@ webmaster_name
 
 Set the *From* name for auto-generated emails.
 
-========== ========
+========== ===========
 Value      Description
-========== ========
+========== ===========
 ``string`` The *From* name for auto-generated emails.
-========== ========
+========== ===========
 
 Example Usage::
 

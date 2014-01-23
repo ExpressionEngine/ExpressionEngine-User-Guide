@@ -128,6 +128,8 @@ Forum Board Short Name
 The "short name" for the forum board alias, used in the board= parameter
 of the Forum tag when running forums through regular templates.
 
+.. _forum-boards-forum-url-label:
+
 Forum URL
 ^^^^^^^^^
 
