@@ -380,22 +380,6 @@ logged\_out\_member\_id=
 In order to allow logged out users to use the entry form, you must
 specify a member\_id which will be used as the author of the entry.
 
-preserve\_checkboxes=
-~~~~~~~~~~~~~~~~~~~~~
-
-::
-
-	preserve_checkboxes="yes"
-
-If you are using an entry form to edit only some of your entry (like a
-form just to change status, for example), you should use this parameter.
-HTML checkboxes have an interesting property, which is that if
-unchecked, they are not sent in the POST request. Because of this unique
-nature, the form cannot distinguish between an unchecked checkbox and
-an intentional omission of the field itself from your form. You are
-provided this parameter to preserve the existing values without having
-to use a hidden field. Defaults to "no".
-
 require\_entry=
 ~~~~~~~~~~~~~~~
 
