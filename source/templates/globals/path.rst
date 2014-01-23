@@ -26,6 +26,19 @@ The path variable is most commonly used to create a link, like this::
 
 	<a href="{path='channel/archives'}">My Archives Page</a>
 
+If your template has a Template Route assigned to it you can assign
+values to your segment variables and generate a path like so::
+
+	{path='channel/archives' year='2009' month='june'}
+
+If the template has the following Template Route assigned::
+
+	/archive/{year}/{month}
+
+The previous path variable will be rendered as::
+
+	http://example.com/index.php/archive/2009/june/
+
 Why not hard code URLs instead?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
