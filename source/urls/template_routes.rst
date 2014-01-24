@@ -23,8 +23,6 @@ format is as follows::
 
 	/segment/{variable}/{variable:rule}/{variable:rule0|rule1[arg]}
 
-::
-
 This is a URL segment with no rules, you can use any alpha-numeric
 string for variable::
 
@@ -41,7 +39,7 @@ set in brackets and separated by commas if there are more than one.
 
 Here is an example of a full Template Route::
 
-	/name/{first_name:alpha}/{last_name|alpha}/{suffix:regex[(i|v|x)+]}
+	/name/{first_name:alpha}/{last_name:alpha}/{suffix:regex[(i|v|x)+]}
 
 This will match URLs such as::
 
