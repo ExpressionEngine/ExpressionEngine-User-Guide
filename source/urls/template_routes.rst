@@ -110,6 +110,8 @@ Matches all number types.
 
 Matches an arbitrary regular expression.
 
+.. note:: Regular expression matches are performed case insensitively
+
 Require all Segments
 ~~~~~~~~~~~~~~~~~~~~
 
