@@ -143,6 +143,8 @@ features that can be disabled. ::
 Caching Drivers
 ---------------
 
+.. rst-class:: cp-path
+
 **Control Panel Location:** :menuselection:`Admin --> General Configuration`
 
 By default, ExpressionEngine uses a file-based caching driver, meaning
