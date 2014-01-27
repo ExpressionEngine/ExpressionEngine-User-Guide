@@ -1,6 +1,8 @@
 System Configuration Overrides
 ******************************
 
+.. warning:: This article covers advanced topics.
+
 By default, ExpressionEngine's system settings are managed in the
 Control Panel and stored in the database, but these settings can be
 overridden with one of 3 configuration files: the main configuration
