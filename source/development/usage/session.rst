@@ -192,6 +192,8 @@ Flash Data for Redirects
     keep in mind that this data is stored in a cookie, which have
     limited capacity.
 
+.. _session_cache:
+
 Cache Access
 ------------
 
