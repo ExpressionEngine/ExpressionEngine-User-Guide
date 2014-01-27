@@ -70,6 +70,7 @@ Beyond the Basics
 - :doc:`general/add-ons`
 - :doc:`cp/sites/index`
 - :doc:`addons/forum/index`
+- :doc:`general/system_configuration_overrides`
 
 
 **************************************
@@ -126,7 +127,7 @@ Reference Guides
 - :doc:`The Control Panel <cp/index>`
 - :doc:`templates/template_engine`
 - :doc:`templates/globals/index`
-- :doc:`general/hidden_configuration_variables`
+- :doc:`general/system_configuration_overrides`
 - :doc:`general/bbcode`
 - :doc:`general/text_formatting`
 - :doc:`templates/date_variable_formatting`
