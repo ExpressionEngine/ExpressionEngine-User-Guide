@@ -215,12 +215,47 @@ Would be rendered like this::
 
 	in 2 days
 
+Rounding
+========
+
+Relative dates will be rounded to the least significant displayed unit. This
+only happens when fewer significant units are displayed than were calculated.
+We do this by examining the number of remaining seconds after we calculate
+least significant displayed unit. If the remainder equals or exceeds the
+threshold we round up. The thresholds are outlined in the table below.
+
+================   ===================
+Relative Date Thresholds
+--------------------------------------
+Unit Rounding To   Remainder Threshold
+================   ===================
+Years              345 days
+Months             25 days
+Weeks              6 days
+Days               22 hours
+Hours              45 minutes
+Minutes            45 seconds
+================   ===================
+
 Parameters
 ==========
 
 .. contents::
    :local:
    :depth: 1
+
+about=
+------
+
+The ``about=`` parameter determines what text to use when the date has been
+rounded. The default is "about". For example, assuming a date 1 hour and 50
+minutes ago this::
+
+	{entry_date:relative about="nearly"}
+
+Would be rendered like this::
+
+	nearly 2 hours ago
 
 depth=
 ------
