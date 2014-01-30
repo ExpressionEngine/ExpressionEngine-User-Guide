@@ -97,7 +97,7 @@ the section on :ref:`simple_commerce_encrypted_payments` for full
 details.
 
 .. note:: ExpressionEngine must have read access to this directory, but
-for security we highly recommended you use a location above web root
-so that the certificate and key files are not accessible via the web.
+  for security we highly recommended you use a location above web root
+  so that the certificate and key files are not accessible via the web.
 
 .. |Simple Commerce PayPal Settings| image:: ../../images/sc_paypal_settings.png
