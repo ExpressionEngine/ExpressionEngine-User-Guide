@@ -720,11 +720,12 @@ $config['banned_usernames'] = 'garfield|snoopy|hobbes';
 **Also found in CP:** :menuselection:`Members --> User Banning`:
 :ref:`Restricted Usernames <member-banned-username-label>`
 
+.. _cache_driver_config:
 
 cache_driver
 ------------
 
-Specify a different caching driver (link) to use.
+Specify a different :ref:`caching driver <caching_drivers>` to use.
 
 ============= ===========
 Values        Description
@@ -739,13 +740,14 @@ Example Usage::
 
 $config['cache_driver'] = 'memcached';
 
+.. _cache_driver_backup_config:
 
 cache_driver_backup
 -------------------
 
-Specify a backup caching driver (link) to use in case the one specified
-in `cache_driver`_ isn't available. Same values accepted and same
-default as `cache_driver`_.
+Specify a backup :ref:`caching driver <caching_drivers>` to use in case
+the one specified in `cache_driver`_ isn't available. Same values
+accepted and same default as `cache_driver`_.
 
 Example Usage::
 
@@ -2756,6 +2758,8 @@ $config['mbr_notification_emails'] = 'joe@example.com, jane@example.com';
 <member-send-notifications-email-label>`
 
 
+.. _memcached_config:
+
 memcached
 ---------
 
@@ -3457,6 +3461,8 @@ $config['redirect_submitted_links'] = 'y';
 Privacy --> Security and Sessions`: :ref:`Apply Rank Denial to
 User-submitted Links <security-apply-rank-denial-label>`
 
+
+.. _redis_config:
 
 redis
 -----
