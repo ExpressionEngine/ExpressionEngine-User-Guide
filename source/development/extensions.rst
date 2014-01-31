@@ -283,7 +283,7 @@ automatically create a form for your settings.
 
       // Creates a set of checkboxes, one for "Lowfat" (l) and one for "Salty" (s), and a
       // default of both items being checked
-      $settings['details']    = array('c', array('l' => "Lowfat", 's' => "Salty"), array('c', 's'));
+      $settings['details']    = array('c', array('l' => "Lowfat", 's' => "Salty"), array('l', 's'));
 
       // Creates a select dropdown with the options "France" (fr), "Germany" (de), and "United States"
       // (us), with a default of "United States"
