@@ -1244,11 +1244,11 @@ cp_url
 
 Set the full URL to your Control Panel.
 
-========== ========
+========== ===========
 Value      Description
-========== ========
+========== ===========
 ``URL``    The full URL to your Control Panel
-========== ========
+========== ===========
 
 Example Usage::
 
@@ -1265,6 +1265,24 @@ $assign_to_config['cp_url'] = 'http://domain2.com/admin.php';
 **Also found in CP:** :menuselection:`Admin --> General Configuration`:
 :ref:`URL to your Control Panel index page
 <general-config-url-cp-label>`
+
+
+date_format
+-----------
+
+Set the default format for displaying dates. If
+`allow_member_localization`_ is enabled and a member has their own
+localization preference set, that will override this setting.
+
+========== ===========
+Value      Description
+========== ===========
+``code``   Format string using :ref:`date formatting codes <date-formatting-codes>`
+========== ===========
+
+Example Usage::
+
+$config['date_format'] = '%F %d %Y';
 
 
 .. _overrides-debug:
@@ -4666,6 +4684,23 @@ Value      Description
 Example Usage::
 
 $config['third_party_path'] = '/path/to/third_party/folders/';
+
+
+time_format
+-----------
+
+Set default time format to either 12- or 24-hour time format.
+
+========== ===========
+Value      Description
+========== ===========
+``12``     12-hour time format
+``24``     24-hour time format
+========== ===========
+
+Example Usage::
+
+$config['time_format'] = '24';
 
 
 .. _time_interval:
