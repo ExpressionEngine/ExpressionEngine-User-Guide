@@ -21,8 +21,20 @@ Specify the default timezone for your site. All dates and times
 displayed by ExpressionEngine will be localized to this timezone unless
 overridden by a member's own localization preferences.
 
+Default Date Formatting
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Specify the default date format for your site. This is the format the Control
+Panel uses for displaying dates and for date input. The choices are an American
+`mm/dd/yy`, a more European `dd-mm-yy`, and the ISO 8601 `yyyy-mm-dd` format.
+
 Default Time Formatting
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Specify whether your site should follow either the "United States" or
-"European" date and time formatting conventions.
+Specify whether your site should display times in a 24-hour format or a 12-hour
+format with AM and PM.
+
+Include Seconds in the Default Time Format
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Specify whether your site should display seconds in times.
