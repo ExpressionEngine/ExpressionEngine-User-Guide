@@ -5,6 +5,156 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.8.0
+-------------
+
+Release Date: ?
+
+- General Changes:
+
+  - Added the ability to create
+    :doc:`Template Layouts </templates/layouts>`.
+  - Added the ability to create Template Routes.
+  - Added :ref:`caching drivers <caching_drivers>` to allow storage of
+    cache items in the filesystem, Memcached or Redis.
+  - Added a ``:relative`` modifier to all date tags
+  - Added the ability for all date variables to display as
+    :ref:`relative dates <relative_dates>`.
+  - Added a ``timezone=`` parameter for use on all date variables.
+  - Added date and time formats to the
+    :doc:`Localization Settings </cp/admin/localization_settings>`
+    replacing the choice between "United States" and "European" (fixes
+    bug #19492).
+  - Added :ref:`new parameters <relationship_tag_params>`
+    (``category=``, ``show_expired=``, ``start_on=``, ``stop_before=``)
+    to the Relationships field tag.
+  - Added a ``{cp_session_id}`` global template tag (fixes bug
+    #19501).
+  - Added ``{current_time}`` as a valid tag to the Wiki module (fixes
+    bug #17299).
+  - Added ``{current_time}`` as a valid tag to the Forum module.
+  - Added the ability to disable an extension without removing database
+    records tied to the extension.
+  - Add-ons now prompt to enable extensions if the package has an
+    extension and extensions are disabled.
+  - File, Forum, Member, Query, Search, Wiki, and Messages pagination
+    now uses the Channel style of pagination.
+  - Added the ability to always show first and last links for pagination.
+  - Added the ability to pad pagination page number links to whatever
+    number you want.
+  - Changed pagination behavior such that URLs that would request a page
+    that shouldn't exist (e.g. page 50 in a list of 10 pages) will
+    trigger the ``{if no_results}`` conditional.
+  - The idle modal now stays open indefinitely and no longer redirects to
+    the homepage after half an hour.
+  - Disabled the login modal when Remember Me is checked.
+  - Textareas in Grid have the option of showing formatting buttons.
+  - Query profiler shows information about where a query was run from.
+  - Renamed ``admin_session_type`` config item to ``cp_session_type``.
+  - Renamed ``user_session_type`` config item to
+    ``website_session_type``.
+  - All cookies now default to httponly. This may be changed using the
+    ``cookie_httponly``
+    :ref:`system configuration override <cookie_httponly_config>`.
+  - Added a nofollow attribute to the Redirect library's off-site links.
+  - Added an overflow style to the File Manager page to enable scrolling
+    of wide tables.
+  - Added a ``no_markup`` option to the Markdown processor.
+  - Deprecated Channel Form's ``preserve_checkboxes=`` parameter, all
+    checkboxes are now preserved by default.
+  - Disabled CSRF checks for Search module searches, to eliminate
+    that occasional bit of visitor frustration.
+  - Cleaned up the default config.php file to remove unnecessary and
+    non-functional config items.
+  - Made control panel URLs easier to read.
+
+- Bug Fixes:
+
+  - Fixed a bug where Control Panel forms were being redirected to the
+    homepage after logging back in with the idle modal.
+  - Fixed a bug where the Control Panel idle modal destroyed the
+    associated active frontend session.
+  - Fixed a bug where back button operation was spotty when using secure
+    forms.
+  - Fixed a bug where the login page would continually redirect back to
+    itself.
+  - Fixed a potential XSS vulnerability where some HTML entities were
+    handled incorrectly.
+  - Fixed a bug in Relationships where long optional branches caused the
+    result set to be truncated.
+  - Fixed an issue where the Channel Entries tag was not site aware when
+    using the `pages_only=` parameter.
+  - Fixed a bug (#20043) where global variables inside conditionals would
+    not parse if the conditional included a variable that was substring of
+    the global variable.
+  - Fixed a bug (#19936) where the ``{encode=}`` tag would fail if used
+    in a Text field or Textarea field using Markdown based formatting.
+  - Fixed a bug where a File field's undo function may not work correctly
+    when inside a Grid field.
+  - Fixed a bug (#19966) where deleting a Relationship field from a Grid
+    field may not clean up previous relationships.
+  - Fixed a bug (#19975) where adding a Grid row, deleting one, then
+    adding one may cause one of the new rows not to be saved.
+  - Fixed a bug where a Grid could not contain a column with the same name
+    as its parent Grid field.
+  - Fixed a bug where a Channel Entries loop containing a Grid field and a
+    Relationships field containing that same Grid field would cause the
+    first Grid field not to parse.
+  - Fixed a bug (#20034) where a the search parameter in a Grid field
+    that is not in a channel content type would not work.
+  - Fixed a bug (#20030) where the backspace parameter would not work in
+    a Grid field.
+  - Fixed a bug (#20038) where Channel Form's ``preserve_checkboxes=``
+    parameter wasn't being respected.
+  - Fixed a bug where Moblog couldn't parse emails where the entire email
+    was a single inline attachment.
+  - Fixed a bug where expiration and comment expiration field defaults
+    were not observing the Channel Preferences settings.
+  - Fixed a bug (#19941) where a MySQL error could occur when resetting a member's
+    publish count to 0.
+  - Fixed a bug (#19946) where a MySQL error could occur when changing the field
+    type of a member custom field.
+  - Fixed a bug (#19947) where the assigned field format type was not applied to
+    Grid fields for certain field types (Checkbox, Multi-Select, Radio, Select).
+  - Fixed a bug in the Moblog control panel where a successful moblog check did
+    not return a success message.
+  - Fixed a bug in ExpressionEngine Core (#19972) where a PHP error could occur in
+    the control panel under certain permission settings.
+  - Fixed a bug (#19977) where the keyword search could fail on the Content Edit
+    page.
+  - Fixed a bug (#20011) in the Channel Entries tag where the
+    ``show_pages=`` parameter did not work properly with entry_id set to
+    not show specific ids.
+  - Fixed a bug (#19982) in the Channel entry form where a PHP error could occur
+    using certain combinations of add-ons.
+  - Fixed a bug in the RSS module's feed tag where closed entries were not included
+    regardless of the status parameter specifications.
+  - Fixed a bug in the Wiki where the logout link did not work if Secure Mode was
+    enabled.
+  - Fixed a bug (#19964) where the entry confirmation page would show 0
+    comments, regardless of how many comments the entry actually had.
+
+- Developers:
+
+  - Added :doc:`Cache class </development/usage/cache>` which provides a
+    key-value cache store.
+  - Added ``channel_search_modify_search_query`` hook for modifying the
+    query stored by the search module.
+  - Added ``channel_search_modify_result_query`` hook for modifying the
+    query retrieved by the search module.
+  - Added a ``bool_config_item()`` helper function to retrieve y/n
+    config file items as booleans.
+  - Added a ``cp_url()`` helper function to create prettier control
+    panel URLs.
+  - Added ``parse_date_variables()`` method to the Template class for
+    proper handling of all date variables.
+  - Replaced Magpie with
+    :doc:`SimplePie </development/usage/rss_parser>` for RSS feed
+    parsing.
+  - Deprecated Functions::set_cookie(), please us EE_Input::set_cookie().
+  - Deprecated use of EE_Input::set_cookie() to delete cookies, please
+    use EE_Input::delete_cookie().
+
 Version 2.7.3
 -------------
 
