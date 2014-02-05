@@ -189,6 +189,8 @@ This will override the timezone specified in the
 panel, and the member's localization settings.  PHP.net has a
 `list of supported timezones <http://php.net/manual/en/timezones.php>`_.
 
+.. _relative_dates:
+
 **************
 Relative Dates
 **************

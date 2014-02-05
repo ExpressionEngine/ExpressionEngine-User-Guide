@@ -1090,6 +1090,8 @@ $config['cookie_domain'] = '.example.com';
 Privacy --> Cookie Settings`: :ref:`Cookie Domain <cookie-domain-label>`
 
 
+.. _cookie_httponly_config:
+
 cookie_httponly
 ---------------
 
