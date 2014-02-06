@@ -54,6 +54,7 @@ Templates
 - :doc:`templates/php`
 - :doc:`templates/templates_as_files`
 - :doc:`templates/comments`
+- :doc:`templates/pagination`
 
 URLs
 ----

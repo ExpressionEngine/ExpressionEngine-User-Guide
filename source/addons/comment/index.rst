@@ -14,7 +14,7 @@ The Comment Module allows you to show user-submitted comments on your
 site. Comments can be managed via the Comment Module Control Panel, and
 users can  edit their own comments via AJAX on the front-end of your
 site. In addition, the comment module supports :doc:`Comment Pagination
-</addons/channel/pagination_page>`.
+</templates/pagination>`.
 
 *******************
 Comment Entries Tag
@@ -111,7 +111,7 @@ limit=
 
 Allows you to limit the number of comments. The limit will default to
 100 comments if a value is not specified. If you are using
-:doc:`pagination <../channel/pagination_page>` then this
+:doc:`pagination </templates/pagination>` then this
 will determine the number of comments shown per page.
 
 .. _comment_entries_orderby:
@@ -141,7 +141,7 @@ paginate=
 	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"
 
 This parameter is for use with entry
-:doc:`pagination <../channel/pagination_page>` and determines where the
+:doc:`pagination </templates/pagination>` and determines where the
 pagination code will appear for your comments:
 
 #. **top**: The navigation text and links will appear *above* your list
@@ -164,7 +164,7 @@ paginate\_base=
 	paginate_base="site/index"
 
 This tells ExpressionEngine to override the normal
-:doc:`pagination <../channel/pagination_page>` link locations and point
+:doc:`pagination </templates/pagination>` link locations and point
 instead to the explicitly stated template group and template.
 
 show\_expired=
@@ -654,7 +654,7 @@ paginate=
 	paginate="top" paginate="bottom"  paginate="both"  paginate="inline"
 
 This parameter is for use with entry
-:doc:`pagination <../channel/pagination_page>` and
+:doc:`pagination </templates/pagination>` and
 determines where the pagination code will appear for your entries:
 
 #. **top**: The navigation text and links will appear *above* your list

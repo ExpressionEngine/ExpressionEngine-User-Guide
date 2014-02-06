@@ -17,9 +17,9 @@ used since its main function is to retrieve and display your site's content.
 
 The Channel Entries tag can display both multi-entry and single-entry content -
 that is, several entries on a page, or one specific entry. By default, Channel
-Entries will use :ref:`information in the URL <entries-and-other-things>` 
+Entries will use :ref:`information in the URL <entries-and-other-things>`
 to retrieve the right content. By using available parameters and variables,
-Channel Entries can display content from categories, specific days, monthly 
+Channel Entries can display content from categories, specific days, monthly
 archives, and more.
 
 Let's look at a basic Channel Entries tag example:
@@ -531,7 +531,7 @@ limit=
 
 This parameter limits the number of entries on any given page. The limit
 will default to 100 entries if a value is not specified. If you are
-using :doc:`pagination <pagination_page>` then this will determine
+using :doc:`pagination </templates/pagination>` then this will determine
 the number of entries shown per page.
 
 month\_limit=
@@ -660,7 +660,7 @@ paginate=
 
 	paginate="top"
 
-This parameter is for use with entry :doc:`pagination <pagination_page>`
+This parameter is for use with entry :doc:`pagination </templates/pagination>`
 and determines where the pagination
 code will appear for your channel entries:
 
@@ -682,7 +682,7 @@ paginate\_base=
 	paginate_base="site/index"
 
 This tells ExpressionEngine to override the normal
-:doc:`pagination <pagination_page>` link locations and point instead to
+:doc:`pagination </templates/pagination>` link locations and point instead to
 the explicitly stated template group and template.
 
 paginate\_type=
@@ -2560,7 +2560,7 @@ will automatically be available by its "short name" as a variable.
 Pagination
 **********
 
-The :doc:`Pagination <pagination_page>` feature allows you to create
+The :doc:`Pagination </templates/pagination>` feature allows you to create
 "next" and "previous" links between pages of entries.
 
 You can also span a single entry :doc:`across multiple

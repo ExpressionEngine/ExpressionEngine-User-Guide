@@ -9,22 +9,22 @@ long articles.
 Here's an example of what your channel entries tag might look like with
 this feature in action::
 
-   {exp:channel:entries channel="news" paginate_type="field" paginate="bottom"} 
+   {exp:channel:entries channel="news" paginate_type="field" paginate="bottom"}
       <h3>{title}</h3>
       {body}
       {multi_field="page1|page2|page3|page4"}
       <div>
-         Last updated on {edit_date format='%M %d, %Y'} at 
-            {edit_date format='%h:%i %A'}<br /> 
+         Last updated on {edit_date format='%M %d, %Y'} at
+            {edit_date format='%h:%i %A'}<br />
       </div>
       {paginate}
-         <p>Page {current_page} of {total_pages} pages for this article 
-            {pagination_links}</p> 
-      {/paginate}  
+         <p>Page {current_page} of {total_pages} pages for this article
+            {pagination_links}</p>
+      {/paginate}
    {/exp:channel:entries}
 
 You may notice that the code shares a lot in common with the code for
-:doc:`channel entry and comment pagination <pagination_page>`. In fact,
+:doc:`channel entry and comment pagination </templates/pagination>`. In fact,
 the feature is very similar.
 
 The ability to span a channel entry across multiple pages is only
@@ -72,7 +72,7 @@ Variable Pairs
 --------------
 
 The same variable pairs used in the :doc:`channel entry and comment
-pagination <pagination_page>` feature are available here. The
+pagination </templates/pagination>` feature are available here. The
 following links point to the entries for that feature.
 
 -  :ref:`{paginate} <pagination_paginate>`
