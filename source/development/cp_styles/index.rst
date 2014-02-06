@@ -21,6 +21,8 @@ Will result in::
 
   http://example.com/index.php?URL=http://www.google.com
 
+.. _cp_internal_links:
+
 Internal Links
 ~~~~~~~~~~~~~~
 

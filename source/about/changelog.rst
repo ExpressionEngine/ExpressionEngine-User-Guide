@@ -138,22 +138,25 @@ Release Date: ?
 
   - Added :doc:`Cache class </development/usage/cache>` which provides a
     key-value cache store.
-  - Added ``channel_search_modify_search_query`` hook for modifying the
-    query stored by the search module.
-  - Added ``channel_search_modify_result_query`` hook for modifying the
-    query retrieved by the search module.
   - Added a ``bool_config_item()`` helper function to retrieve y/n
     config file items as booleans.
-  - Added a ``cp_url()`` helper function to create prettier control
-    panel URLs.
+  - Added a ``cp_url()`` :ref:`helper function <cp_internal_links>` to
+    create prettier control panel URLs.
   - Added ``parse_date_variables()`` method to the Template class for
     proper handling of all date variables.
+  - Added ``channel_search_modify_search_query``
+    :doc:`hook </development/extension_hooks/module/search/index>` for
+    modifying the query cached by the search module.
+  - Added ``channel_search_modify_result_query``
+    :doc:`hook </development/extension_hooks/module/search/index>` for
+    modifying the query retrieved by the search module.
   - Replaced Magpie with
     :doc:`SimplePie </development/usage/rss_parser>` for RSS feed
     parsing.
-  - Deprecated Functions::set_cookie(), please us EE_Input::set_cookie().
-  - Deprecated use of EE_Input::set_cookie() to delete cookies, please
-    use EE_Input::delete_cookie().
+  - Deprecated ``Functions::set_cookie()``, please use
+    ``EE_Input::set_cookie()``.
+  - Deprecated use of ``EE_Input::set_cookie()`` to delete cookies,
+    please use ``EE_Input::delete_cookie()``.
 
 Version 2.7.3
 -------------

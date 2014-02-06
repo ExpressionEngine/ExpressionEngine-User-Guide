@@ -448,13 +448,15 @@ use "two", the third "three", the fourth "one", and so on.
 Date Variables
 ^^^^^^^^^^^^^^
 
-When the Template Parser encounters a variable with a date formatting
-parameter, it will automatically format the variable for you, so it is
-important to send date variables as UTC/GMT Unix timestamps.
-Localization will automatically occur according to the site and logged
-in user's preferences. ::
+When the Template Parser encounters a variable that looks like a date
+variable (format or timezone parameter, relative modifier), it will
+parse the variable using all of the
+:doc:`parsing options available </templates/date_variable_formatting>`
+to you for date variables, so it is important to send date variables as
+UTC/GMT Unix timestamps. Localization will automatically occur according
+to the site and logged in user's preferences. ::
 
-  $var['dob'] = -58924800;  // Nov 14, 1971 (UTC/GMT)
+  $var['dob'] = 58924800;  // Nov 14, 1971 (UTC/GMT)
 
 Path Variables
 ^^^^^^^^^^^^^^
