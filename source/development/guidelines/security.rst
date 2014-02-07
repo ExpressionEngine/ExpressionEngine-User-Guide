@@ -252,68 +252,67 @@ Cross Site Request Forgery
 **************************
 
 To help prevent spam and protect against Cross-site Request Forgery
-(CSRF), ExpressionEngine has a "Secure Form" setting that adds a random
-string to a hidden field on the form. A copy of this string - also know
-as a csrf token - is stored in the database along with the session id
-that the form was generated for. When the form is submitted this field
-is checked before any processing is done. If no csrf token is present or
-no match is found, then the submission is rejected.
+(CSRF), ExpressionEngine adds a random string to a hidden field on all
+forms. A copy of this string - also know as a CSRF token - is stored in
+the database along with the session id for which that form was generated.
+When the form is submitted this field is checked before any processing
+is done. If no CSRF token is present or no match is found, then the
+submission is rejected.
 
 CSRF Tokens in Templates
 ========================
 
 If you are manually creating templates that send POST requests you must
 include the CSRF token as part of the form. This is easily done using
-the XID_HASH :doc:`variable <../../templates/globals/single_variables>`
-as a value for a hidden field called `XID`::
+the ``csrf_token`` :doc:`variable <../../templates/globals/single_variables>`
+as a value for a hidden field called ``csrf_token``::
 
-  <input type="hidden" name="XID" value="{XID_HASH}">
+  <input type="hidden" name="csrf_token" value="{csrf_token}">
 
 Creating Template Forms from Add-ons
 ====================================
 
 If your add-on is creating a form for the template, you should use
 :ref:`ee()->functions->form_declaration()
-<form_declaration>`. This automatically adds the csrf
-token as a hidden input field. It also allows any extensions the site
-may have installed to modify the form before it is served, thus creating
-a more uniform experience for the end user. ::
+<form_declaration>`. This automatically adds the CSRF token as a hidden
+input field. It also allows any extensions the site may have installed
+to modify the form before it is served, thus creating a more uniform
+experience for the end user. ::
 
   ee()->functions->form_declaration(array(
     'action'  => ''
   ));
 
+If your form submits to a different site you should ensure that you are
+not leaking the user's CSRF token. You can either do this by manually
+creating the form open tag or setting the 'secure' option for the
+``form_declaration()`` method to ``FALSE``. ::
+
+  ee()->functions->form_declaration(array(
+    'secure'  => FALSE
+  ));
+
 Validating Form Hashes in Your Add-on
 =====================================
 
-For all regular frontend POST requests, ExpressionEngine will
-automatically check the csrf token before handing the request off to
-your addon. Asynchronous requests that include an `HTTP_REQUESTED_BY`
-header (this is set by most popular libraries, such as jQuery) default
-to being exempt from these checks as they provide a good layer of
-intrinsic security.
+ExpressionEngine will automatically check the CSRF token of all requests
+before handing the request off to your addon. This means that all forms
+and requests must include the ``csrf_token`` field. Asynchronous
+requests that include an `HTTP_REQUESTED_BY` header (this is set by most
+popular libraries, such as jQuery) default to being exempt from these
+checks as they provide a good layer of intrinsic security.
 
 There are several ways in which you can control this validation behavior
 of the CSRF tokens.
 
-Reusing the Token
-~~~~~~~~~~~~~~~~~
+Disabling the check
+~~~~~~~~~~~~~~~~~~~
 
-In some cases you may want to allow reuse of the current token. This
-will allow back button usage by the user. For example, your addon may
-have an error screen after a form that the user must manually navigate
-away from. You can restore the current csrf token by calling
-:doc:`ee()->security->restore_xid() </development/usage/security>`
-before rendering the error page.
-
-Disabling all checks
-~~~~~~~~~~~~~~~~~~~~
-
-For action requests you can disable all csrf token checks. This is done
+For action requests you can disable all CSRF token checks. This is done
 by setting the ``csrf_exempt`` column in the actions table to 1 for that
 action.
 
-You should only do this for requests that do not add, delete, or
+You should only do this for actions that do not add, delete, or
 otherwise modify data (e.g. search) or requests that are expect to be
 initiated by another site (e.g. webhooks, payment gateways, etc).
 
@@ -321,11 +320,11 @@ Forcing AJAX Validation
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 While the same origin restriction for AJAX requests provides a good
-level of intrinsic security from cross site request forgery, it is not
-bulletproof.
+level of security from cross-site request forgery, compromised browser
+add-ons can send these requests.
 
 If you have AJAX action requests that are performing sensitive
-operations, then you should consider forcing AJAX csrf validation for
+operations, then you should consider forcing AJAX CSRF validation for
 your add-on. This happens on per-class basis using a marker interface.
 You simply implement the `Strict_XID` interface on your action receiving
 class::
@@ -334,42 +333,19 @@ class::
 
 You can still disable the check on a per-action basis.
 
-Using AJAX to submit or validate your forms requires diligent exchanging
-of the XID field to preserve a smooth user experience. To ease this
-process, ajax requests can provide the XID token either through the
-regular POST data array, or through an ``HTTP_X_EEXID`` header.
-
-All ajax requests sent to ExpressionEngine will be returned a new valid
-XID in the ``HTTP_X_EEXID`` header of the response. As a result, if you
-are using jQuery, you can hide the XID exchange almost entirely using an
-ajax prefilter.
-
-.. code-block:: js
-
-  $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
-    var old_xid = EE.XID;
-
-    jqXHR.setRequestHeader("X-EEXID", old_xid);
-
-    jqXHR.complete(function(xhr) {
-      var new_xid = xhr.getResponseHeader('X-EEXID');
-
-      if (new_xid) {
-        EE.XID = new_xid;
-        $('input[name="XID"]').filter('[value="'+old_xid+'"]').val(new_xid);
-      }
-    });
-  });
-
 Forms in the Control Panel
 ==========================
 
 The Control Panel's Display class automatically adds hashes to any form
 using the `form_open()` helper. CSRF tokens are a requirement in the
-Control Panel and as such the check cannot be disabled. All Control
-Panel files are required to use the strict AJAX exchange. The jQuery
-ajax prefilter is part of the control panel javascript, so your addon
-should work without modification.
+Control Panel and as such the check cannot be disabled. The Control
+Panel includes a jQuery ajax prefilter that takes care of CSRF tokens
+on all AJAX requests and also handles periodic token refreshing for
+additional security.
+
+You should use ``EE.CSRF_TOKEN`` if you require the token in your
+JavaScript. Due to the ephemeral nature of CSRF tokens you should access
+this property when you need it. It should not be copied or cached.
 
 *************************
 Handling Form Submissions

@@ -34,6 +34,8 @@ being used.
 ::
 
   <form method="post" action="{path='template_group/template_name'}">
+    <input type="hidden" name="csrf_token" value="{csrf_token}" />
+
       <select name="orderby">
           <option value="date">Sort By:</option>
           <option value="date">Date</option>
@@ -54,10 +56,8 @@ being used.
       <input type="submit" value="Go!">
   </form>
 
-.. note:: If you have Secure Forms turned ON, you will need to add a
-  hidden input for the XID. ::
-
-    <input type="hidden" name="XID" value="{XID_HASH}" />
+.. note:: The ``csrf_token`` field is required to protect against
+  cross-site request forgery attacks.
 
 .. note:: If you have pagination links on your page they will not retain
     the page layout options created dynamically using this feature.

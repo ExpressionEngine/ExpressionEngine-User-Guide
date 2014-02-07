@@ -448,17 +448,16 @@ webmaster\_email
 The email address for the site, as specified in :doc:`Email
 Configuration </cp/admin/email_configuration>`.
 
-.. _global_xid_hash:
+.. _global_csrf_token:
 
-XID\_HASH
----------
+csrf\_token
+-----------
 
 ::
 
-  {XID_HASH}
+  {csrf_token}
 
-This variable is a required value for hidden form field 'XID' used in
-secure forms.
+This variable is a required value for the hidden form field 'csrf_token'.
 
 .. _global_alt_syntax:
 

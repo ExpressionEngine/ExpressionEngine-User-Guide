@@ -17,7 +17,6 @@ Release Date: ?
   - Added the ability to create Template Routes.
   - Added :ref:`caching drivers <caching_drivers>` to allow storage of
     cache items in the filesystem, Memcached or Redis.
-  - Added a ``:relative`` modifier to all date tags
   - Added the ability for all date variables to display as
     :ref:`relative dates <relative_dates>`.
   - Added a ``timezone=`` parameter for use on all date variables.
