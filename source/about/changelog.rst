@@ -159,6 +159,13 @@ Release Date: ?
     ``EE_Input::set_cookie()``.
   - Deprecated use of ``EE_Input::set_cookie()`` to delete cookies,
     please use ``EE_Input::delete_cookie()``.
+  - XIDs are now single use, as a result ``secure_forms_check()``,
+    ``check_xid()``, ``generate_xid()``, ``delete_xid()``,
+    ``restore_xid()``, and ``garbage_collect_xids()`` in ``EE_Security``
+    are all deprecated.
+  - The ``XID`` constant is deprecated, please use ``CSRF_TOKEN``.
+  - The ``XID`` field has been deprecated, please name your hidden
+    fields ``csrf_token`` or use one of the form helpers.
 
 Version 2.7.3
 -------------
