@@ -13,7 +13,8 @@ Usage
 -----
 
 You can set the route for a template using the Access section of the
-Template Manager.
+Template Manager. To see an overview of your site's routes use the 
+Template Route Manager.
 
 Template Route
 ~~~~~~~~~~~~~~
@@ -45,6 +46,17 @@ This will match URLs such as::
 
 	/member/Enrico/Fermi/III
 
+Template Routes override the default behaviour of URLS, Meaning you
+must add a segment for pagination and a segment for categories if you
+wish to use them in you templates. There are predefined rules for 
+matching both. Here is an example::
+
+    /blog/{section:category}/{page:pagination}
+
+Sometimes you may wish to use category titles instead of category IDs, 
+you can use a Template Route to accomplish this::
+
+    /blog/category/{section:alpha_dash}/{page:pagination}
 
 Rules
 ^^^^^
@@ -76,6 +88,12 @@ and "=".
 
 ::
 
+	category
+
+Matches EE style category segments (e.g. C10).
+
+::
+
 	integer
 
 Matches positive and negative integers.
@@ -103,6 +121,12 @@ Matches only natural numbers [0, +inf)
 	numeric
 
 Matches all number types.
+
+::
+
+	pagination
+
+Matches an EE style pagination segment (e.g. P20).
 
 ::
 
@@ -152,3 +176,10 @@ as::
 Then in your templates you can generate a path to that template using::
 
 	{path="template_group/template" first_name"Enrico" last_name="Fermi"}
+
+
+Template Route Manager
+----------------------
+
+This provides an overview of your site's URL structure, for more info
+see the control panel documentation.
