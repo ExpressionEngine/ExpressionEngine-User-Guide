@@ -43,7 +43,7 @@ with a slash::
 If the method accepts arguments, they can be passed in cleanly by adding
 them on the end separated by a slash::
 
-  cp_url('content_publish/method_name/5')
+  cp_url('content_publish/method_name/5');
 
 If the link requires any other GET parameters, they can be passed in via
 an associative array in the second parameter::
