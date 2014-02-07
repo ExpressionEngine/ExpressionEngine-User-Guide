@@ -32,7 +32,7 @@ channel_search_modify_search_query
 channel_search_modify_result_query
 ----------------------------------
 
-.. function:: channel_search_modify_result_query($this, $row
+.. function:: channel_search_modify_result_query($sql, $hash)
 
   Modify the query retrieved by the Search Module. When search results
   are displayed, a cached query is retrieved from the database to
