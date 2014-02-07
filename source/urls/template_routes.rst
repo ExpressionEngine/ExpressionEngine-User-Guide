@@ -26,7 +26,8 @@ format is as follows::
 
 Once you set a Template Route you can access the template by the
 URL you set. You can still access the template from the default
-group/template URL, but the segment variables will not be available.
+group/template URL, but the template route variables such as 
+{segment:variable} will not be available in your template.
 
 This is a URL segment with no rules, you can use any alpha-numeric
 string for variable::
