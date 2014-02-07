@@ -52,7 +52,7 @@ This will match URLs such as::
 
 Template Routes override the default behaviour of URLs, Meaning you
 must add a segment for pagination and a segment for categories if you
-wish to use them in you templates. There are predefined rules for 
+wish to use them in your routed templates. There are predefined rules for 
 matching both. Here is an example::
 
     /blog/{section:category}/{page:pagination}
