@@ -11,6 +11,8 @@ used "emoticons", such as :-). When smileys are turned on, the system
 will display a small graphic of a smiley-face instead of the emoticon
 text, like this: |Smile|
 
+.. _emoticon-display-smileys-label:
+
 Display Smileys?
 ~~~~~~~~~~~~~~~~
 
@@ -18,6 +20,8 @@ With this preference you can choose whether or not the special codes for
 smileys are rendered as graphics on your site. If this preference is set
 to "No" then the actual code such as :-) or :lol: will be displayed
 instead of the |image1| or |LOL|
+
+.. _emoticon-url-folder-label:
 
 URL to the folder containing your smileys
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

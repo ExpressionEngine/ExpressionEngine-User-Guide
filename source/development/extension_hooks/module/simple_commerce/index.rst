@@ -30,7 +30,7 @@ simple_commerce_evaluate_ipn_response
 simple_commerce_perform_actions_end
 -----------------------------------
 
-.. function:: simple_commerce_perform_actions_end($this, $row
+.. function:: simple_commerce_perform_actions_end($this, $row)
 
   After a purchase is recorded, do more processing.
 

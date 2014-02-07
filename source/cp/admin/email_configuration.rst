@@ -11,6 +11,8 @@ site. These settings affect not only how emails are sent via the
 Communicate section of the Control Panel but also how emails are
 generally sent by the system.
 
+.. _email-site-return-email-label:
+
 Return email address for auto-generated emails
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -20,6 +22,8 @@ many email servers will not accept emails without a valid From or
 Reply-to address, therefore we strongly recommend filling this field
 out.
 
+.. _email-site-webmaster-name-label:
+
 Webmaster or site name for auto-generated emails
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -27,19 +31,23 @@ This setting lets you specify a **name** to be used in the From and
 Reply-to email fields. As with the above field, we encourage you to set
 it to help prevent your emails from being filtered as spam.
 
+.. _email-character-encoding-label:
+
 Email Character Encoding
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Specifies the character encoding that the emails will be sent with.
 
+.. _email-enable-debugging-label:
+
 Enable Email Debugging
 ~~~~~~~~~~~~~~~~~~~~~~
 
-When this option is enabled, detailed messages will be displayed
-whenever you send an email using the Communicate page. This information
-can be useful in helping to track down any problems you may be
-experiencing. If you are having difficulty sending email you are
-encouraged to enable this option.
+When enabled, detailed debugging information will be displayed whenever
+you send an email using the Communicate page. This information can be
+useful in helping to track down any problems you may be experiencing.
+
+.. _email-protocol-label:
 
 Email Protocol
 ~~~~~~~~~~~~~~
@@ -72,6 +80,8 @@ Email can be sent by ExpressionEngine by one of three protocols.
    likely need to fill out the three fields following it to use this
    protocol.
 
+.. _email-smtp-server-label:
+
 SMTP Server Address
 ~~~~~~~~~~~~~~~~~~~
 
@@ -80,11 +90,15 @@ fill out this field, which specifies the server address of the SMTP
 server. This setting is ignored if "SMTP" is not selected as the email
 protocol.
 
+.. _email-smtp-server-port-label:
+
 SMTP Server Port
 ~~~~~~~~~~~~~~~~
 
-If you need to use a port other than 25 with your SMTP server, then fill out 
+If you need to use a port other than 25 with your SMTP server, then fill out
 this field. If you're planning on using port 25, you can leave this blank.
+
+.. _email-smtp-username-label:
 
 SMTP Username
 ~~~~~~~~~~~~~
@@ -93,12 +107,16 @@ The username used to log in to your SMTP server. Not all SMTP servers
 require you to *authenticate*, but many of them do. In those cases you
 will need to specify the username and password (below).
 
+.. _email-smtp-password-label:
+
 SMTP Password
 ~~~~~~~~~~~~~
 
 The password used to log in to your SMTP server. Not all SMTP servers
 require you to *authenticate*, but many of them do. In those cases you
 will need to specify the username (above) and password.
+
+.. _email-use-batch-mode-label:
 
 Use Batch Mode?
 ~~~~~~~~~~~~~~~
@@ -119,6 +137,8 @@ Batch mode is turned off by default in ExpressionEngine. To enable batch
 mode, you must change the "Use Batch Mode" preference to Yes and then
 set the number of emails per batch in the "Number of Emails Per Batch"
 preference (below).
+
+.. _email-number-per-batch-label:
 
 Number of Emails Per Batch
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -141,6 +161,8 @@ success you can increase it until you begin experiencing time-outs.
    using the less efficient "PHP mail" protocol then you will usually
    need to set a lower batch size; 50-100 is typical.
 
+.. _email-default-format-label:
+
 Default Mail Format
 ~~~~~~~~~~~~~~~~~~~
 
@@ -156,20 +178,26 @@ messages. This setting can be overridden when sending email using the
 Communicate page. It's generally recommended to enable this setting, as
 this is required to comply with the email specification.
 
+.. _email-console-timelock-label:
+
 Email Console Timelock
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The number of minutes that must lapse before a member is allowed to send
-another email. 
+another email.
 
 .. note:: This only applies to the Email Console in the member profile
    pages.
+
+.. _email-log-console-messages-label:
 
 Log Email Console Messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This preference lets you keep a copy of all messages sent via the Email
 Console in the member profile pages by logging them.
+
+.. _email-enable-captchas-label:
 
 Enable CAPTCHAs for Tell-a-Friend and Contact emails
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
