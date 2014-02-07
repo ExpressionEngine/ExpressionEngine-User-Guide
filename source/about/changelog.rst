@@ -38,7 +38,8 @@ Release Date: ?
   - Add-ons now prompt to enable extensions if the package has an
     extension and extensions are disabled.
   - File, Forum, Member, Query, Search, Wiki, and Messages pagination
-    now uses the Channel style of pagination.
+    now uses the
+    :doc:`Channel style of pagination </templates/pagination>`.
   - Added the ability to always show first and last links for pagination.
   - Added the ability to pad pagination page number links to whatever
     number you want.
