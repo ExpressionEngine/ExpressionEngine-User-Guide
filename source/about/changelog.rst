@@ -38,7 +38,8 @@ Release Date: ?
   - Add-ons now prompt to enable extensions if the package has an
     extension and extensions are disabled.
   - File, Forum, Member, Query, Search, Wiki, and Messages pagination
-    now uses the Channel style of pagination.
+    now uses the
+    :doc:`Channel style of pagination </templates/pagination>`.
   - Added the ability to always show first and last links for pagination.
   - Added the ability to pad pagination page number links to whatever
     number you want.
@@ -144,15 +145,17 @@ Release Date: ?
     create prettier control panel URLs.
   - Added ``parse_date_variables()`` method to the Template class for
     proper handling of all date variables.
-  - Added ``channel_search_modify_search_query``
-    :doc:`hook </development/extension_hooks/module/search/index>` for
-    modifying the query cached by the search module.
-  - Added ``channel_search_modify_result_query``
-    :doc:`hook </development/extension_hooks/module/search/index>` for
-    modifying the query retrieved by the search module.
+  - **Reactor:** Added :func:`channel_search_modify_search_query` hook
+    for modifying the query cached by the search module.
+  - **Reactor:** Added :func:`channel_search_modify_result_query` hook
+    for modifying the query retrieved by the search module.
   - Replaced Magpie with
     :doc:`SimplePie </development/usage/rss_parser>` for RSS feed
     parsing.
+  - Deprecated :func:`channel_module_create_pagination`, use
+    :func:`pagination_create` instead
+  - Deprecated :func:`channel_module_fetch_pagination_data`, use
+    :func:`pagination_fetch_data` instead
   - Deprecated ``Functions::set_cookie()``, please use
     ``EE_Input::set_cookie()``.
   - Deprecated use of ``EE_Input::set_cookie()`` to delete cookies,
