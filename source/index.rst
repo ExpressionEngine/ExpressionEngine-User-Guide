@@ -60,6 +60,7 @@ URLs
 ----
 
 - :doc:`urls/url_structure`
+- :doc:`urls/template_routes`
 - :doc:`urls/remove_index.php`
 - :doc:`urls/404pages`
 

@@ -14,6 +14,12 @@ Up to 9 URL segments can be accessed using the following variables::
 
 	{segment_1} {segment_2} {segment_3} {segment_4} {segment_5} {segment_6} {segment_7} {segment_8} {segment_9}
 
+In addition to the numbered segment variables, if your template has a
+Template Route assigned to it the segment names defing in you route
+will be available as such::
+
+	{segment:segment_name}
+
 Segment variables let you dynamically change aspects of your templates
 based on what appears in the URL.
 

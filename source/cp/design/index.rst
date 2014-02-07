@@ -12,6 +12,7 @@ Design
   - :doc:`templates/global_variables`
   - :doc:`templates/template_preferences_manager`
   - :doc:`templates/global_template_preferences`
+  - :doc:`templates/template_route_manager`
 
 - :doc:`message_pages/index`
 - Themes
