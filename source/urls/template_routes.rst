@@ -24,6 +24,10 @@ format is as follows::
 
 	/segment/{variable}/{variable:rule}/{variable:rule0|rule1[arg]}
 
+Once you set a Template Route you can access the template by the
+URL you set. You can still access the template from the default
+group/template URL, but the segments variables will not be available.
+
 This is a URL segment with no rules, you can use any alpha-numeric
 string for variable::
 
@@ -46,12 +50,25 @@ This will match URLs such as::
 
 	/member/Enrico/Fermi/III
 
-Template Routes override the default behaviour of URLS, Meaning you
+Template Routes override the default behaviour of URLs, Meaning you
 must add a segment for pagination and a segment for categories if you
 wish to use them in you templates. There are predefined rules for 
 matching both. Here is an example::
 
     /blog/{section:category}/{page:pagination}
+
+For this set up to work, "Require All Segments" must be set to no.
+With the above route and segments set to optional the following
+URLs will match::
+
+    /blog
+
+    /blog/C10
+
+    /blog/P20
+
+    /blog/C10/P20
+
 
 Sometimes you may wish to use category titles instead of category IDs, 
 you can use a Template Route to accomplish this::
