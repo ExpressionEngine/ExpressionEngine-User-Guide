@@ -102,7 +102,7 @@ in a module or plugin's tagdata::
     // nor $str = str_replace('&#47;', '/', $str);
 
 The ``CSRF_TOKEN`` constant is used primarily in frontend javascript. In
-the control panel it is automatically added to jQuery ajax requests.
+the control panel it is automatically added to jQuery AJAX requests.
 Additionally, if you are using the Form helper, it will automatically be
 added to control panel forms as needed.
 

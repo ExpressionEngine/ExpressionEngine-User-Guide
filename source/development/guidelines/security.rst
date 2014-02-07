@@ -253,10 +253,10 @@ Cross Site Request Forgery
 
 To help prevent spam and protect against Cross-site Request Forgery
 (CSRF), ExpressionEngine adds a random string to a hidden field on all
-forms. A copy of this string - also know as a csrf token - is stored in
-the database along with the session id that the form was generated for.
+forms. A copy of this string - also know as a CSRF token - is stored in
+the database along with the session id for which that form was generated.
 When the form is submitted this field is checked before any processing
-is done. If no csrf token is present or no match is found, then the
+is done. If no CSRF token is present or no match is found, then the
 submission is rejected.
 
 CSRF Tokens in Templates
@@ -274,7 +274,7 @@ Creating Template Forms from Add-ons
 
 If your add-on is creating a form for the template, you should use
 :ref:`ee()->functions->form_declaration()
-<form_declaration>`. This automatically adds the csrf token as a hidden
+<form_declaration>`. This automatically adds the CSRF token as a hidden
 input field. It also allows any extensions the site may have installed
 to modify the form before it is served, thus creating a more uniform
 experience for the end user. ::
@@ -284,7 +284,7 @@ experience for the end user. ::
   ));
 
 If your form submits to a different site you should ensure that you are
-not leaking the user's csrf token. You can either do this by manually
+not leaking the user's CSRF token. You can either do this by manually
 creating the form open tag or setting the 'secure' option for the
 ``form_declaration()`` method to ``FALSE``. ::
 
@@ -295,7 +295,7 @@ creating the form open tag or setting the 'secure' option for the
 Validating Form Hashes in Your Add-on
 =====================================
 
-ExpressionEngine will automatically check the csrf token of all requests
+ExpressionEngine will automatically check the CSRF token of all requests
 before handing the request off to your addon. This means that all forms
 and requests must include the ``csrf_token`` field. Asynchronous
 requests that include an `HTTP_REQUESTED_BY` header (this is set by most
@@ -308,7 +308,7 @@ of the CSRF tokens.
 Disabling the check
 ~~~~~~~~~~~~~~~~~~~
 
-For action requests you can disable all csrf token checks. This is done
+For action requests you can disable all CSRF token checks. This is done
 by setting the ``csrf_exempt`` column in the actions table to 1 for that
 action.
 
@@ -320,11 +320,11 @@ Forcing AJAX Validation
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 While the same origin restriction for AJAX requests provides a good
-level of security from cross site request forgery, compromised browser
+level of security from cross-site request forgery, compromised browser
 add-ons can send these requests.
 
 If you have AJAX action requests that are performing sensitive
-operations, then you should consider forcing AJAX csrf validation for
+operations, then you should consider forcing AJAX CSRF validation for
 your add-on. This happens on per-class basis using a marker interface.
 You simply implement the `Strict_XID` interface on your action receiving
 class::
@@ -339,12 +339,12 @@ Forms in the Control Panel
 The Control Panel's Display class automatically adds hashes to any form
 using the `form_open()` helper. CSRF tokens are a requirement in the
 Control Panel and as such the check cannot be disabled. The Control
-Panel includes a jQuery ajax prefilter that takes care of csrf tokens
-on all ajax requests and also handles periodic token refreshing for
+Panel includes a jQuery ajax prefilter that takes care of CSRF tokens
+on all AJAX requests and also handles periodic token refreshing for
 additional security.
 
 You should use ``EE.CSRF_TOKEN`` if you require the token in your
-javascript. Due to the ephemeral nature of csrf tokens you should access
+JavaScript. Due to the ephemeral nature of CSRF tokens you should access
 this property when you need it. It should not be copied or cached.
 
 *************************
