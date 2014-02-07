@@ -21,7 +21,7 @@ Blacklists
 ----------
 
 The ExpressionEngine :doc:`Blacklist/Whitelist Module
-</modules/blacklist/index>` is an integral part of EE's spam prevention
+</addons/blacklist/index>` is an integral part of EE's spam prevention
 capability. This Module allows you to specify URLs, IP addresses, and
 user agents that you want to deny (blacklist) or specifically allow
 (whitelist) from your site.
@@ -69,6 +69,8 @@ the target destination.
 
 The setting is located at: :menuselection:`Admin --> Security and Privacy --> Security and Sessions`
 
+.. _secure-mode-label:
+
 Secure Mode
 -----------
 
@@ -80,6 +82,8 @@ received, the user has to manually reload the page before they can
 submit again.
 
 The setting is located at: :menuselection:`Admin --> Security and Privacy --> Security and Sessions`
+
+.. _deny-duplicate-data-label:
 
 Deny Duplicate Data
 -------------------

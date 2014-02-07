@@ -82,5 +82,6 @@ Modules
   module/member_auth/index
   module/member_register/index
   module/member_settings/index
+  module/search/index
   module/simple_commerce/index
   module/wiki/index

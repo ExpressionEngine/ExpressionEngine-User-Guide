@@ -61,7 +61,7 @@ documentation for each add-on for any particular steps necessary to
 upgrade that add-on.
 
 .. important:: If you have :doc:`Discussion Forum
-   </modules/forum/forum_update>` or :doc:`Multiple Site Manager
+   </addons/forum/forum_update>` or :doc:`Multiple Site Manager
    </cp/sites/install>` installed, be sure to update them to the latest
    versions whenever you update ExpressionEngine.
 
@@ -156,8 +156,6 @@ Follow the on-screen instructions to upgrade ExpressionEngine. Once the
 Update Wizard is finished, you **must** remove the
 :file:`system/installer/` directory from your server.
 
-
-.. _update_cleanup:
 
 7. Cleanup
 ----------

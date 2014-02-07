@@ -9,6 +9,8 @@ This section of the Control Panel allows you to define the basic
 security-related settings for your website. These are security settings
 that apply throughout the website/system.
 
+.. _cp-session-type-label:
+
 Control Panel Session Type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -28,12 +30,14 @@ use cookies, session IDs, or a combination. The available options are:
   prevents you from accepting cookies in the event you are behind a
   firewall or due to some other technical issue.
 
-User Session Type
-~~~~~~~~~~~~~~~~~
+.. _website-session-type-label:
 
-This determines how sessions for regular users on your website are
-handled. You may use cookies, session IDs, or a combination. The
-available options are:
+Website Session Type
+~~~~~~~~~~~~~~~~~~~~
+
+This determines how sessions are handled for the front-end of the site.
+You may use cookies, session IDs, or a combination. The available
+options are:
 
 - **Cookies and session ID**: Both cookies and URL session ID
   parameters are used to track the user throughout their visit.
@@ -61,6 +65,8 @@ being processed if it is an exact duplicate of data that already exists.
 This setting is designed to deter automated spam attacks as well as
 multiple accidental submissions.
 
+.. _security-apply-rank-denial-label:
+
 Apply Rank Denial to User-submitted Links
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -68,23 +74,27 @@ This option rewrites links submitted in comments so they first point to
 an intermediary redirect page. This helps deter comment spam by
 preventing linked sites from gaining a page rank advantage.
 
+.. _allow-member-username-label:
+
 Allow members to change their username
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As the name suggests, this setting determines whether or not members are
-allowed to change their "username" after they register. Members will
-always be able to change their "screen name" if they choose to use one.
+allowed to change their own usernames after registration. (Members will
+always be able to change their own screen names.)
+
+.. _allow-multi-logins-label:
 
 Allow Multiple Log-ins From a Single Account
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This setting determines whether more than one person can simultaneously
-log-in and use ExpressionEngine with the same membership account.
+Set whether an account can have multiple active sessions at one time.
 
-.. note:: If the Session Type above is set to "Cookies Only" this
-  feature will not work. The system can only track multiple people using
-  the same account if a session is generated, which does not happen when
-  only cookies are used.
+.. note::
+
+   This feature is incompatible with the "Cookies Only" session type.
+
+.. _require-ip-logins-label:
 
 Require IP Address and User Agent for Login
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -96,12 +106,16 @@ to "Yes" can help prevent hackers from logging in using direct socket
 connections or from trying to access the system with a masked IP
 address.
 
-Require IP Address and User Agent when receiving comments
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _require-ip-posting-submit-comments-label:
+
+Require IP Address and User Agent for posting
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Similar to the previous setting, when turned on, this setting requires
 IP address and user agent information to be supplied when submitting
 comments.
+
+.. _security-enable-passwd-lockout-label:
 
 Enable Password Lockout
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,6 +127,8 @@ deter hackers from using collision attacks to guess poorly chosen
 passwords. The account remains locked for the duration of the time
 period. Once the period expires it becomes unlocked.
 
+.. _security-passwd-lockout-int-label:
+
 Time Interval for Lockout
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -120,6 +136,8 @@ This setting is used together with the previous preference. Here you can
 determine, in minutes, the time interval over which more than four
 invalid login attempts will trigger a lockout. You may use decimals to
 indicate fractions of a minute: e.g. 1.5 equals one and a half minutes.
+
+.. _security-require-secure-passwords-label:
 
 Require Secure Passwords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -130,31 +148,33 @@ containing at least one uppercase character, one lowercase character,
 and one numeric character. Passwords that follow this basic formula are
 much more difficult to guess.
 
+.. _dict-passwds-label:
+
 Allow Dictionary Words as Passwords
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Setting this preference to "No" will prevent users from being able to
-set their password using words and names that are commonly found in a
-dictionary. This will make "dictionary attacks" by hackers much more
-difficult. 
+Set whether words commonly found in the dictionary can be used as
+passwords. Disabling will make "dictionary attacks" by hackers much more
+difficult.
 
-.. note:: In order to be able to use this setting you must have a
-  dictionary file installed for the system. See below.
+.. note:: In order to be able to use this setting you must have :ref:`a
+    dictionary file <dict-passwds-file-label>` installed.
+
+.. _dict-passwds-file-label:
 
 Name of Dictionary File
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 This is the filename of the dictionary file used for the previous
-preference.
+preference. Download the `dictionary file
+<http://ellislab.com/asset/file/dictionary.zip>`__, unzip, and upload
+the text file (:file:`dictionary.txt`) to
+:file:`system/expressionengine/config/`.
 
-You may download a 230,000 word `dictionary
-file <http://ellislab.com/asset/file/dictionary.zip>`_ from
-ExpressionEngine.com. Simply unzip the download and place the text file
-(dictionary.txt) in the following location on your server:
+Enter only the filename of the file (:file:`dictionary.txt`) in this
+field.
 
-system/expressionengine/config/
-
-Submit the **name** of the file in this setting.
+.. _security-min-username-label:
 
 Minimum Username Length
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -162,6 +182,8 @@ Minimum Username Length
 You may specify the minimum length required for a member username during
 new member registration. Specify the minimum number of characters
 required.
+
+.. _security-min-password-label:
 
 Minimum Password Length
 ~~~~~~~~~~~~~~~~~~~~~~~

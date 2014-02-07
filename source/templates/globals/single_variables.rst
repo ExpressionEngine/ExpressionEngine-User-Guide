@@ -48,6 +48,20 @@ encoding::
 
   <meta http-equiv="Content-Type" content="text/html; charset={charset}" />
 
+cp_session_id
+-------------
+
+::
+
+  {cp_session_id}
+
+The session id for the control panel. This is the value needed in the "S="
+portion of the control panel URL. Only output for logged-in members who
+have access to the Control Panel.  It is typically used for "Edit This"
+style links::
+
+  {if author_id == logged_in_member_id OR logged_in_group_id == "1"}&bull; <a href="{cp_url}?S=0&amp;D=cp&amp;C=content_publish&amp;M=entry_form&amp;channel_id={channel_id}&amp;entry_id={entry_id}">Edit This</a>{/if}
+
 cp\_url
 -------
 
@@ -56,7 +70,7 @@ cp\_url
   {cp_url}
 
 The URL to the control panel for this site. Only output for logged-in
-members who have access to the Control Panel
+members who have access to the Control Panel.
 
 current_path
 ------------
@@ -166,6 +180,8 @@ embed
 This variable allows you to embed one Template within another. Please
 see the :doc:`Embedded Templates <../embedding>` section.
 
+.. _global-encode:
+
 encode
 ------
 
@@ -250,6 +266,16 @@ lang
 
 This variable will be substituted for the **Default XML Language**
 preference under :menuselection:`Admin --> General Configuration`.
+
+layout
+------
+
+::
+
+  {layout="news/local"}
+
+This variable allows you to wrap a Template in another. Please
+see the :doc:`Template Layouts <../layouts>` section.
 
 location
 --------

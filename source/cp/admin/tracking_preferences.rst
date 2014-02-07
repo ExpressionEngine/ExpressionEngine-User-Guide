@@ -11,13 +11,16 @@ settings can help decrease resource usage if you are not utilizing the
 features, as well as help you manage :doc:`extreme traffic
 events </optimization/handling_extreme_traffic>`.
 
+.. _tracking-enable-online-user-tracking-label:
+
 Enable Online User Tracking?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can determine whether tracking of online users is performed by the
-system. When you have this preference set to "Yes", a database update
-will be performed for each page load so that the user statistics can be
-tracked and stored.
+If enabled, online user statistics are tracked and the user-based
+variables in the :doc:`Statistics </addons/statistics/index>` module
+are available for use.
+
+.. _tracking-enable-template-hit-tracking-label:
 
 Enable Template Hit Tracking?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -25,10 +28,12 @@ Enable Template Hit Tracking?
 When set to "Yes", hits to your templates will be tracked in your
 database on each page load.
 
+.. _tracking-enable-channel-entry-view-label:
+
 Enable Channel Entry View Tracking?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When set to "Yes", you can utilize the :doc:`/modules/channel/entry_tracking`
+When set to "Yes", you can utilize the :doc:`/addons/channel/entry_tracking`
 feature of the Channel module.
 
 Enable Referrer Tracking?
@@ -46,6 +51,8 @@ You can limit the number of referrers stored in your database. This
 setting helps ensure that your database does not get too large due to
 storing referrers. Tracking does not cease when this number is reached,
 but will trigger automatic pruning of the collected referrer data.
+
+.. _suspend-tracking-label:
 
 Suspend ALL tracking when number of online visitors exceeds:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

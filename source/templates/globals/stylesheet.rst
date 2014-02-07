@@ -48,5 +48,5 @@ Using Tags and PHP in a Stylesheet
 Additionally, you can allow your stylesheets to run through the full
 template parser so tags and PHP can be used. To do so, just use a normal
 :doc:`path variable </templates/globals/path>` to access your stylesheet. If you specify
-a template this way make sure that it is set to "CSS Stylesheet" as the
+a template this way make sure that it is set to "CSS" as the
 Template Type.

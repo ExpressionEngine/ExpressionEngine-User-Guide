@@ -236,6 +236,9 @@ This is an "either/or" type situation. You may either have a forum
 thread created for you by specifying the title, text, and forum **or**
 you may associate the entry with an existing ID.
 
+
+.. _publish_revisions_tab:
+
 Revisions Tab
 -------------
 
@@ -261,7 +264,7 @@ Pages Tab
 ---------
 
 .. note:: This tab will only appear if you have the :doc:`Pages Module
-   </modules/pages/index>` installed.
+   </addons/pages/index>` installed.
 
 |Publish Pages|
 

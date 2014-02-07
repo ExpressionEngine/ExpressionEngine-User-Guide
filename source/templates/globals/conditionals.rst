@@ -92,7 +92,7 @@ results::
 And::
 
 	{if:else}
-	
+
 These work similar to standard PHP else and elseif constructs. Here is
 an example::
 
@@ -126,9 +126,9 @@ Comparison Operators
 You can use any of the following operators to compare a variable to a
 value:
 
-========  ========================
+========  ==========================================
 Operator  Name
-========  ========================
+========  ==========================================
 ==        Equal
 !=        Not Equal
 <         Less than
@@ -136,7 +136,9 @@ Operator  Name
 >         Greater than
 >=        Greater than or equal to
 <>        Not equal
-========  ========================
+<>        Not equal
+%		  Remainder of one number divided by another
+========  ==========================================
 
 
 .. note:: When comparing equality make sure to use **two** equal signs
@@ -170,6 +172,22 @@ So, if the member id of the site visitor is not 1 and their member group
 is not 5 *and* their username is Billy, they can view the data in the
 conditional. The table above lists the precedence of operators with the
 highest-precedence operators listed at the top of the table.
+
+Modulus Operator
+~~~~~~~~~~~~~~~~
+
+A modulus operator finds the remainder of division of one number by
+another. This can be handy when you want to do something every nth
+iteration of a loop. For example, if we want to display a horizontal
+rule for every 5th entry in a :doc:`Channel Entries
+</addons/channel/channel_entries>` loop, we would write this
+conditional::
+
+  {if count % 5 == 0}
+    <hr>
+  {/if}
+
+This works because the remainder of 5 divided by 5 is 0.
 
 Parentheses in Conditionals
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -222,8 +240,8 @@ This tag pair will display content within the pair if the person viewing
 the page is currently a logged in member.
 
 .. note:: This only tests whether or not someone is logged in. If you
-	want to restrict a particular page based on the member group 
-	assignment you'll do that in your Template preferences in the 
+	want to restrict a particular page based on the member group
+	assignment you'll do that in your Template preferences in the
 	Control Panel.
 
 if logged\_out

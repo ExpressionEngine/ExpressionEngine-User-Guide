@@ -7,17 +7,17 @@ Pagination Library Extension Hooks
 
 .. highlight:: php
 
-channel_module_create_pagination
---------------------------------
+pagination_create
+-----------------
 
-.. function:: channel_module_create_pagination($this, $count)
+.. function:: pagination_create($this, $count)
 
   Rewrite the pagination function in the Pagination library and possible
   expand the types of pagination available.
 
   How it's called::
 
-    $this->extensions->call('channel_module_create_pagination', $this, $count);
+    $this->extensions->call('pagination_create', $this, $count);
     if ($this->extensions->end_script === TRUE) return;
 
   :param object $this: Currently instantiated object for EE_Pagination
@@ -26,19 +26,28 @@ channel_module_create_pagination
   :param int $count: Number of items being paginated
   :rtype: Void
 
+  .. versionadded:: 2.8
+
+channel_module_create_pagination
+--------------------------------
+
+.. function:: channel_module_create_pagination($this, $count)
+
   .. versionadded:: 1.4.0
+  .. deprecated:: 2.8
+    Renamed in 2.8. Use :func:`pagination_create` instead.
 
-channel_module_fetch_pagination_data
-------------------------------------
+pagination_fetch_data
+---------------------
 
-.. function:: channel_module_fetch_pagination_data($this)
+.. function:: pagination_fetch_data($this)
 
-  Works with the 'channel_module_create_pagination' hook so you can
+  Works with the 'pagination_create' hook so you can
   modify rendered ``{paginate}`` tagdata.
 
   How it's called::
 
-    $this->extensions->call('channel_module_fetch_pagination_data', $this);
+    $this->extensions->call('pagination_fetch_data', $this);
     if ($this->extensions->end_script === TRUE) return;
 
   :param object $this: Currently instantiated object for EE_Pagination
@@ -46,4 +55,13 @@ channel_module_fetch_pagination_data
     the object.
   :rtype: Void
 
+  .. versionadded:: 2.8
+
+channel_module_fetch_pagination_data
+------------------------------------
+
+.. function:: channel_module_fetch_pagination_data($this)
+
   .. versionadded:: 1.4.0
+  .. deprecated:: 2.8
+    Renamed in 2.8. Use :func:`pagination_fetch_data` instead.

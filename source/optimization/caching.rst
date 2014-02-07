@@ -133,7 +133,50 @@ features that can be disabled. ::
 	{/exp:channel:entries}
 
 .. note:: You can also use disable="category\_fields" in
-   the :doc:`channel categories </modules/channel/categories>` tag,
-   the :doc:`category heading </modules/channel/category_heading>` tag,
-   and the :doc:`category archives </modules/channel/category_archive>`
+   the :doc:`channel categories </addons/channel/categories>` tag,
+   the :doc:`category heading </addons/channel/category_heading>` tag,
+   and the :doc:`category archives </addons/channel/category_archive>`
    tag.
+
+.. _caching_drivers:
+
+Caching Drivers
+---------------
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Admin --> General Configuration`
+
+By default, ExpressionEngine uses a file-based caching driver, meaning
+cached items are written to disk. This is the most-compatible option
+for all servers and works well in most cases. However, the traffic on
+your site may reach a point where the file-based caching becomes a
+bottleneck due to disk I/O, or may cause issues in some Network File
+System instances, in which case you may want to use a memory-based
+caching driver.
+
+ExpressionEngine currently supports Memcached and Redis for memory-based
+caching. You can set which driver is being used in the control panel or
+via the :ref:`cache_driver <cache_driver_config>` config override.
+:ref:`Memcached <memcached_config>` and :ref:`Redis <redis_config>`
+server information can also be set in ``config.php``,otherwise
+ExpressionEngine will try to connect to the default respective ports on
+localhost.
+
+A :ref:`backup driver <cache_driver_backup_config>` can also be
+specified in the case your primary driver is unavailable. By default,
+the backup driver is the file driver and it's likely the best failover
+option due to its reliability, but the backup driver is configurable.
+
+Add-on developers can find more information about using caching drivers
+to store and retrieve items in the :doc:`/development/usage/cache`
+documentation.
+
+.. note:: The Memcached driver is set to use PHP's
+   `Memcached <http://www.php.net/manual/en/book.memcached.php>`_
+   extension
+   by default. If it's not available, the driver will try to use
+   `Memcache <http://www.php.net/manual/en/book.memcached.php>`_ instead.
+
+.. note:: The Redis driver uses the
+   `PhpRedis <https://github.com/nicolasff/phpredis>`_ extension.

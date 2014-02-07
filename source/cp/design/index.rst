@@ -17,14 +17,14 @@ Design
 - Themes
 
   - :doc:`themes/member_profile_templates`
-  - :doc:`/modules/forum/forum_themes`
-  - :doc:`/modules/wiki/wiki_templates`
+  - :doc:`/addons/forum/forum_themes`
+  - :doc:`/addons/wiki/wiki_templates`
 
 
 .. toctree::
 	:glob:
 	:hidden:
-	
+
 	message_pages/index
 	templates/index
 	themes/index

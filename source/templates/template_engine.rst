@@ -11,8 +11,8 @@ being used in the Template.
    Templates. It doesn't apply to rendering theme files such as those
    used for :doc:`Member Profiles
    </cp/design/themes/member_profile_templates>`, the :doc:`Wiki
-   </modules/wiki/wiki_templates>` module, or the :doc:`Discussion
-   Forum </modules/forum/forum_themes>` module.
+   </addons/wiki/wiki_templates>` module, or the :doc:`Discussion
+   Forum </addons/forum/forum_themes>` module.
 
 ExpressionEngine goes through several stages to fully process each
 Template, and this article exposes the order of those rendering stages.
@@ -53,6 +53,8 @@ bottom through each rendering stage.
 
 #. Parse :ref:`embed variables <embed_variables>`
 
+#. Parse :ref:`layout variables <layout_variables>`
+
 #. Parse :ref:`date formatting string constants <template_date_formatting_constants>`
 
 #. Parse :ref:`{template_edit_date} <global_template_edit_date>`
@@ -78,6 +80,8 @@ bottom through each rendering stage.
 #. Write **template to cache file**
 
 #. Parse :ref:`advanced conditionals <global_advanced_conditionals>`
+
+#. Process :doc:`template layouts </templates/layouts>`
 
 #. Process :doc:`embedded templates </templates/embedding>`
 

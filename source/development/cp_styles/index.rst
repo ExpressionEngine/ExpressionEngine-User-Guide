@@ -21,12 +21,34 @@ Will result in::
 
   http://example.com/index.php?URL=http://www.google.com
 
+.. _cp_internal_links:
+
 Internal Links
 ~~~~~~~~~~~~~~
 
-::
+Internal control panel links should be generated with the ``cp_url()``
+helper function which generates control panel URLs based on parameters
+passed in.
 
-  <?='<a href="'.BASE.AMP.'C=controller_name'.AMP.'M=method_name">link text</a>';?>
+For example, to link to the ``content_publish`` controller, pass it in
+as the first parameter to ``cp_url()``::
+
+  cp_url('content_publish');
+
+To link to a particular method in a controller, add it to the parameter
+with a slash::
+
+  cp_url('content_publish/method_name');
+
+If the method accepts arguments, they can be passed in cleanly by adding
+them on the end separated by a slash::
+
+  cp_url('content_publish/method_name/5');
+
+If the link requires any other GET parameters, they can be passed in via
+an associative array in the second parameter::
+
+  cp_url('content_publish/entry_form', array('channel_id' => $channel_id));
 
 Control Panel Constants
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -137,7 +159,7 @@ Example Table-based Layout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following example is a single table row from the :doc:`Wiki Module
-</modules/wiki/index>` update.php view file. ::
+</addons/wiki/index>` update.php view file. ::
 
   <?php
       $this->table->set_heading(array(
