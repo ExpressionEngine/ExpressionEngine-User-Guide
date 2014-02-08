@@ -14,7 +14,8 @@ Release Date: ?
 
   - Added the ability to create
     :doc:`Template Layouts </templates/layouts>`.
-  - Added the ability to create Template Routes.
+  - Added the ability to create
+    :doc:`Template Routes </urls/template_routes>`.
   - Added :ref:`caching drivers <caching_drivers>` to allow storage of
     cache items in the filesystem, Memcached or Redis.
   - Added the ability for all date variables to display as
