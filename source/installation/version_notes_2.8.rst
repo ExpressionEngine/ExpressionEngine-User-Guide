@@ -1,6 +1,18 @@
 Update Notes for Version 2.8
 ============================
 
+PHP Version Requirement
+-----------------------
+
+The PHP version requirement has increased to version 5.3.10 or greater.
+If you are not already running a version of PHP that meets this
+requirement, please contact your host to upgrade your installed version
+of PHP *prior* to updating to ExpressionEngine 2.8.
+
+While the minimum requirement is PHP 5.3.10, we recommend that everyone
+look into upgrading to PHP 5.4 now. In 5.4, PHP uses far less memory,
+in some cases cutting memory usage in half for *each page load*.
+
 Channel Form's preserve_checkboxes= Parameter Deprecated
 --------------------------------------------------------
 
