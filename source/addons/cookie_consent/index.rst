@@ -28,8 +28,7 @@ See :doc:`Cookie Consent control panel <control_panel/index>` for more
 information.
 
 .. note:: Installing this module will prevent cookies from being set by all first 
-	party ExpressionEngine code and any code that uses the Function class' 
-	set_cookie() method.  Cookies may still be set by third party code using PHP,
+	party ExpressionEngine code.  Cookies may still be set by third party code using PHP,
 	JavasScript, third party scripts, etc. 
 
 

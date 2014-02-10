@@ -27,11 +27,6 @@ the superglobal arrays, it will still be available through the
 superglobals themselves. However, the input class does offer some
 benefits.
 
-Since the ExpressionEngine method for creating cookies---
-:meth:`Functions::set_cookie`---adds a prefix automatically to enable
-compatibility with other programs, it is recommended that you use the
-Input Class, since it automatically strips out that prefix.
-
 The superglobal methods all allow the specification of an optional
 second parameter that lets you run the data through the :doc:`XSS filter
 </development/usage/security>`. It's enabled by setting the second
@@ -184,3 +179,42 @@ automatically does the following:
 - Filters the ``POST``/``GET``/``COOKIE`` array keys, permitting only
   alpha-numeric (and a few other) characters.
 - Standardizes newline characters to ``\\n``
+
+Setting and Deleting Cookies
+----------------------------
+
+The input library contains two methods for manipulating cookies. One
+for setting them and one for deleting them before their expiration.
+
+set_cookie
+^^^^^^^^^^
+
+.. method:: set_cookie([$name = ''[, $value = ''[, $expire = '']]])
+
+  Sets cookie based on name and value. The advantage to using this
+  function over just the standard PHP function is because EE will
+  automatically add the cookie domain, cookie prefix, and cookie path as
+  specified in the preferences. Those are helpful for making these
+  cookies unique to EE and not interfering with other cookies set for
+  your site by other software.
+
+  :param string $name: Name of the cookie
+  :param string $value: Value of the cookie
+  :param integer $expire: When the cookie should expire, if left blank
+    the time is set to the past and the cookie will expire immediately
+
+  :rtype: Void
+
+delete_cookie
+^^^^^^^^^^^^^
+
+.. method:: delete_cookie($name)
+
+  Cleanly delete a cookie. The advantage to using this
+  function over just the standard PHP function is because EE will
+  automatically add the cookie domain, cookie prefix, and cookie path as
+  specified in the preferences.
+
+  :param string $name: Name of the cookie
+
+  :rtype: Void
