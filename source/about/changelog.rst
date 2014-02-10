@@ -161,7 +161,7 @@ Release Date: ?
     ``EE_Input::set_cookie()``.
   - Deprecated use of ``EE_Input::set_cookie()`` to delete cookies,
     please use ``EE_Input::delete_cookie()``.
-  - XIDs are now single use, as a result ``secure_forms_check()``,
+  - XIDs are now multi-use, as a result ``secure_forms_check()``,
     ``check_xid()``, ``generate_xid()``, ``delete_xid()``,
     ``restore_xid()``, and ``garbage_collect_xids()`` in ``EE_Security``
     are all deprecated.
