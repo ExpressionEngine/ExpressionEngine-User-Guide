@@ -5,6 +5,12 @@ Pages
 .. contents::
    :local:
 
+.. warning:: Used sparingly, the Pages Module is a very useful tool, but
+  when overused it can create an unmaintainable mess. If you've created
+  more than 10 pages, carefully consider your other options before
+  adding more pages because there's probably a much better way to do
+  what you want to do.
+
 ************
 Introduction
 ************
