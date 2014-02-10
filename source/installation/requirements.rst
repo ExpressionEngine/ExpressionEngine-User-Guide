@@ -4,7 +4,7 @@ System Requirements
 Server Requirements
 -------------------
 
--  `PHP <http://www.php.net/>`_ 5.3.10 or newer, compiled with the
+-  `PHP <http://www.php.net/>`_ 5.2.4 or newer, compiled with the
    `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_ library
 -  `MySQL <http://www.mysql.com/>`_ 5.0.3 or newer
 -  At least 32 MB memory allocated to PHP

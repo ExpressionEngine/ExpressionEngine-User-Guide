@@ -12,7 +12,6 @@ Release Date: ?
 
 - General Changes:
 
-  - Now requires PHP 5.3.10+
   - Added the ability to create
     :doc:`Template Layouts </templates/layouts>`.
   - Added the ability to create
