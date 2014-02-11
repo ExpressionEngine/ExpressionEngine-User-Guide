@@ -29,7 +29,7 @@ The path variable is most commonly used to create a link, like this::
 You can also provide additional URL segments, which can later be used
 as :doc:`Segment Variables </templates/globals/url_segments>`::
 
-  <a href="{path='company/employees/customer-service/joe'}">Customer Service Joe</a>
+  <a href="{path='company/employees/customer-service/joe'}">Joe, Customer Service</a>
 
 If your template has a :doc:`Template Route </urls/template_routes>`
 assigned to it you can assign values to your segment variables and
