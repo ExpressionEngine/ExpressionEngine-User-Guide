@@ -7,7 +7,7 @@ templates within your site. Here is the basic format::
 
 	{path='template_group/template'}
 
-Make sure you substitute "template\_group" and "template" with the name
+Make sure you substitute "template_group" and "template" with the name
 of an actual template group and template.
 
 When the path variable is rendered it will automatically include your
@@ -20,14 +20,20 @@ For example, a variable like this::
 
 Will be rendered like this::
 
-	http://example.com/index.php/channel/comments/
+	http://example.com/index.php/channel/comments
 
 The path variable is most commonly used to create a link, like this::
 
 	<a href="{path='channel/archives'}">My Archives Page</a>
 
-If your template has a Template Route assigned to it you can assign
-values to your segment variables and generate a path like so::
+You can also provide additional URL segments, which can later be used
+as :doc:`Segment Variables </templates/globals/url_segments>`::
+
+  <a href="{path='company/employees/customer-service/joe'}">Customer Service Joe</a>
+
+If your template has a :doc:`Template Route </urls/template_routes>`
+assigned to it you can assign values to your segment variables and
+generate a path like so::
 
 	{path='channel/archives' year='2009' month='june'}
 
@@ -37,7 +43,7 @@ If the template has the following Template Route assigned::
 
 The previous path variable will be rendered as::
 
-	http://example.com/index.php/archive/2009/june/
+	http://example.com/index.php/archive/2009/june
 
 Why not hard code URLs instead?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,7 +64,7 @@ There are several other "path" variables for specific purposes:
 Site Index
 ~~~~~~~~~~
 
-You can use site\_index in your path to point to your main site index::
+You can use site_index in your path to point to your main site index::
 
 	{path='site_index'}
 
