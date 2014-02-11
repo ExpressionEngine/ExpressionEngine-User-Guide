@@ -6,10 +6,12 @@ Pages
    :local:
 
 .. warning:: Used sparingly, the Pages Module is a very useful tool, but
-  when overused it can create an unmaintainable mess. If you've created
-  more than 10 pages, carefully consider your other options before
-  adding more pages because there's probably a much better way to do
-  what you want to do.
+  when overused it can create an unmaintainable site. A site built using
+  ExpressionEngine's :doc:`default URL behavior </urls/url_structure>`
+  will be much easier to create and maintain than a site that forces
+  every entry into a page. If you've created more than 10 pages,
+  carefully consider your other options before adding more pages because
+  there's probably a much better way to do what you want to do.
 
 ************
 Introduction
