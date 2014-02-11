@@ -47,16 +47,6 @@ options are:
 - **Session ID only**: Only URL session IDs are used to track the user
   throughout their visit.
 
-Process Form Data in Secure Mode
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This setting determines how form data is processed. When this preference
-is set to "Yes", forms are processed in :doc:`Secure
-Mode </security/spam_protection>`. This setting is designed
-to deter automated spam attacks as well as multiple accidental
-submissions. Enabling this feature does add one additional database
-query for each form submission.
-
 Deny Duplicate Data
 ~~~~~~~~~~~~~~~~~~~
 
