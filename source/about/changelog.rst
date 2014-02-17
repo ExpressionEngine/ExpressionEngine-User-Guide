@@ -14,7 +14,8 @@ Release Date: ?
 
   - Added the ability to create
     :doc:`Template Layouts </templates/layouts>`.
-  - Added the ability to create Template Routes.
+  - Added the ability to create
+    :doc:`Template Routes </urls/template_routes>`.
   - Added :ref:`caching drivers <caching_drivers>` to allow storage of
     cache items in the filesystem, Memcached or Redis.
   - Added the ability for all date variables to display as
@@ -159,7 +160,7 @@ Release Date: ?
     ``EE_Input::set_cookie()``.
   - Deprecated use of ``EE_Input::set_cookie()`` to delete cookies,
     please use ``EE_Input::delete_cookie()``.
-  - XIDs are now single use, as a result ``secure_forms_check()``,
+  - XIDs are now multi-use, as a result ``secure_forms_check()``,
     ``check_xid()``, ``generate_xid()``, ``delete_xid()``,
     ``restore_xid()``, and ``garbage_collect_xids()`` in ``EE_Security``
     are all deprecated.
