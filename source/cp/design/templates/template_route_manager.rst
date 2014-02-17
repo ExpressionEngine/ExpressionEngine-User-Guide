@@ -6,7 +6,10 @@ Template Route Manager
 **Control Panel Location:** :menuselection:`Design --> Templates --> Template Route Manager`
 
 The Template Route Manager provides an overview of all your templates and
-allows you to see which URL goes to which template at a glance.
+allows you to edit and manage your Template Routes.
+
+Routes are listed in the order that the Template Router will match your
+templates.
 
 |Template Route Manager|
 

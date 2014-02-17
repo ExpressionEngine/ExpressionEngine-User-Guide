@@ -16,6 +16,12 @@ You can set the route for a template using the Access section of the
 Template Manager. To see an overview of your site's routes use the 
 Template Route Manager.
 
+ExpressionEngine matches routes by starting with the shortest defined
+route and checking for a match, if the route does not match it will
+then check the next shortest route until a match is found. The Template
+Route Manager lists your Template Routes in the order they are
+processed when matching a URL.
+
 Template Route
 ~~~~~~~~~~~~~~
 
@@ -193,7 +199,11 @@ as::
 
 Then in your templates you can generate a path to that template using::
 
-	{path="template_group/template" first_name"Enrico" last_name="Fermi"}
+	{route="template_group/template" first_name"Enrico" last_name="Fermi"}
+
+The route variable requires the template group and template name. You
+can optionally provide values for your defined route segments, you must
+use the same variable defined in your route.
 
 
 Template Route Manager

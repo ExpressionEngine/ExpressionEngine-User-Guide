@@ -26,18 +26,33 @@ The path variable is most commonly used to create a link, like this::
 
 	<a href="{path='channel/archives'}">My Archives Page</a>
 
-If your template has a Template Route assigned to it you can assign
-values to your segment variables and generate a path like so::
 
-	{path='channel/archives' year='2009' month='june'}
+Route Variables
+~~~~~~~~~~~~~~~
+
+If you are using Template Routes you may wish to generate paths
+based on your defined template route instead of the default URL
+structure. The syntax for doing so looks like so::
+
+    {route='group/template'}
+
+Where "group" is the name of the group your template belongs to and
+"template" is the template name.
+
+If your template has a Template Route with defined segment variables
+you can assign values to your segment variables and generate a path
+like so::
+
+	{route='channel/archives' year='2009' month='june'}
 
 If the template has the following Template Route assigned::
 
 	/archive/{year}/{month}
 
-The previous path variable will be rendered as::
+The previous route variable will be rendered as::
 
 	http://example.com/index.php/archive/2009/june/
+
 
 Why not hard code URLs instead?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
