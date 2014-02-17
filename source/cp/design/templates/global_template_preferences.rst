@@ -10,6 +10,16 @@ preferences which affect all Templates.
 
 |Global Template Preferences|
 
+.. _enable_template_routes_label:
+
+Enable Template Routes
+~~~~~~~~~~~~~~~~~~~~~~
+
+This setting toggles whether or not Template Routes are used. If this
+is set to no, templates will not be accesible by their routes. When
+disabled the Template Route options will not appear in the Template
+Manager.
+
 .. _strict_url_label:
 
 Strict URLs
