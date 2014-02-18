@@ -60,7 +60,6 @@ Release Date: ?
   - Added a nofollow attribute to the Redirect library's off-site links.
   - Added an overflow style to the File Manager page to enable scrolling
     of wide tables.
-  - Added a ``no_markup`` option to the Markdown processor.
   - Deprecated Channel Form's ``preserve_checkboxes=`` parameter, all
     checkboxes are now preserved by default.
   - Disabled CSRF checks for Search module searches, to eliminate
@@ -145,6 +144,7 @@ Release Date: ?
     create prettier control panel URLs.
   - Added ``parse_date_variables()`` method to the Template class for
     proper handling of all date variables.
+  - Added a ``no_markup`` option to the Markdown processor.
   - **Reactor:** Added :func:`channel_search_modify_search_query` hook
     for modifying the query cached by the search module.
   - **Reactor:** Added :func:`channel_search_modify_result_query` hook
