@@ -149,7 +149,6 @@ Operator  Name
 >         Greater than
 >=        Greater than or equal to
 <>        Not equal
-<>        Not equal
 %		  Remainder of one number divided by another
 ========  ==========================================
 
