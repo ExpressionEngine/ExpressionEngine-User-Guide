@@ -21,7 +21,7 @@ logical operators such as OR, AND), and the conditional does not make
 use of the *else* or *elseif* control structures. In short, a simple
 conditional will look very much like this::
 
-	{if username == "joe"}  <h1>Hi Joe!</h1>  {/if}
+	{if embed:name == "joe"}  <h1>Info about Joe!</h1>  {/if}
 
 Currently the variables available for simple conditionals are:
 
