@@ -66,7 +66,7 @@ bottom through each rendering stage.
 
 #. Parse :ref:`PHP on Input <php_parsing_stage>`
 
-#. Parse :ref:`simple conditionals <global_simple_conditionals>`: segment, embed, global variables
+#. Parse :ref:`simple conditionals <global_simple_conditionals>`: segment, embed, layout, global variables
 
 #. Assign and parse :doc:`preload_replace variables </templates/globals/preload_replacement>`
 
