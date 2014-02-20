@@ -105,6 +105,15 @@ Similar to the previous setting, when turned on, this setting requires
 IP address and user agent information to be supplied when submitting
 comments.
 
+.. _apply-xss-filtering-to-uploaded-files-label:
+
+Apply XSS Filtering to Uploaded Files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Checks all file uploads for code injection attempts before finalizing the upload.  
+Superadmins are exempt from image XSS filtering.  
+
+
 .. _security-enable-passwd-lockout-label:
 
 Enable Password Lockout
