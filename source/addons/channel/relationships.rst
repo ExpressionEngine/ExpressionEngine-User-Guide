@@ -609,10 +609,11 @@ Tag Parameters
    :local:
    :depth: 2
 
-The following parameters are available to all looping relationship tags, allowing
-you to further filter or sort the entries being retrieved.  They function the
-same as they do when used on the ``{exp:channel:entries}`` tag.  The available
-parameters are:
+The following parameters are available to all looping relationship tags,
+allowing you to further filter or sort the entries being retrieved. They
+function the same as they do when used on the
+:ref:`{exp:channel:entries} tag <channel_entries_parameters>`. The
+available parameters are:
 
 * author_id
 * backspace

@@ -349,19 +349,21 @@ stop=
 -----
 
 The ``stop=`` parameter determines when to stop calculating a relative date and
-instead display a standard date. Any valid date/time string parameter for PHP's
-`strtotime() <http://www.php.net/manual/en/function.strtotime.php>`_ function is
-acceptable. ExpressionEngine will compute a timestamp based on the date and the
-provided ``stop=`` value. When the current timestamp is greater than or
-equal to the computed timestamp the date will be displayed as a standard date.
+instead display a standard date. When this happens the `format=`_ and
+`timezone=`_ parameters will be processed. Any valid date/time string parameter
+for PHP's `strtotime() <http://www.php.net/manual/en/function.strtotime.php>`_
+function is acceptable. ExpressionEngine will compute a timestamp based on the
+date and the provided ``stop=`` value. When the current timestamp is greater
+than or equal to the computed timestamp the date will be displayed as a
+standard date.
 
 For example, if you want relative dates but only for one day::
 
-	{entry_date:relative stop="+1 day"}
+	{entry_date:relative stop="+1 day" format="%F %d %Y"}
 
 Or perhaps you would rather show relative dates until midnight::
 
-	{entry_date:relative stop="tomorrow"}
+	{entry_date:relative stop="tomorrow" format="%F %d %Y" timezone="Pacific/Tahiti"}
 
 If an invalid value is used for ``stop=`` a relative date will be displayed.
 
@@ -382,7 +384,7 @@ calculated prior to displaying them. The following units are available:
 When a unit is omitted the next smallest unit will reflect it. For example,
 assuming a date 8 days old this::
 
-	{entry_date:relataive units="weeks|days"}
+	{entry_date:relative units="weeks|days"}
 
 Would be rendered like this::
 
@@ -390,7 +392,7 @@ Would be rendered like this::
 
 But this::
 
-	{entry_date:relataive units="days"}
+	{entry_date:relative units="days"}
 
 Would be rendered like this::
 
