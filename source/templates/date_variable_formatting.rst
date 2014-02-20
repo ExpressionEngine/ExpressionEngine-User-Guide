@@ -382,7 +382,7 @@ calculated prior to displaying them. The following units are available:
 When a unit is omitted the next smallest unit will reflect it. For example,
 assuming a date 8 days old this::
 
-	{entry_date:relataive units="weeks|days"}
+	{entry_date:relative units="weeks|days"}
 
 Would be rendered like this::
 
@@ -390,7 +390,7 @@ Would be rendered like this::
 
 But this::
 
-	{entry_date:relataive units="days"}
+	{entry_date:relative units="days"}
 
 Would be rendered like this::
 
