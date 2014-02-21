@@ -9,7 +9,7 @@ this URL structure::
 Template routes allow you to override this default behavior by allowing
 you to assign URL segments to variables and apply rules to them.
 
-Usage
+jsage
 -----
 
 You can set the route for a template using the Access section of the
@@ -22,7 +22,7 @@ check the next shortest route until a match is found. The
 :doc:`/cp/design/templates/template_route_manager` lists your Template
 Routes in the order they are processed when matching a URL.
 
-Template Route
+jemplate Route
 ~~~~~~~~~~~~~~
 
 This route determines the URLs that will match your template. The
@@ -57,10 +57,11 @@ This will match URLs such as::
 
   /member/Enrico/Fermi/III
 
-Template Routes override the default behavior of URLs, Meaning you must
-add a segment for pagination and a segment for categories if you wish to
-use them in your routed templates. There are predefined rules for
-matching both. Here is an example::
+Template Routes override the default behavior of URLs, which means you
+must manually provide a segment if you wish to use pagination or 
+categories. Likewise if you wish to use "require_entry" in a channel 
+enties tag you must provide a segments for entry names. Template Routes
+has built in rules for handling pagination and categories::
 
   /blog/{section:category}/{page:pagination}
 
