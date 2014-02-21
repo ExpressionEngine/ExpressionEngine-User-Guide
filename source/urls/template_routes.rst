@@ -9,7 +9,7 @@ this URL structure::
 Template routes allow you to override this default behavior by allowing
 you to assign URL segments to variables and apply rules to them.
 
-jsage
+Usage
 -----
 
 You can set the route for a template using the Access section of the
@@ -22,7 +22,7 @@ check the next shortest route until a match is found. The
 :doc:`/cp/design/templates/template_route_manager` lists your Template
 Routes in the order they are processed when matching a URL.
 
-jemplate Route
+Template Route
 ~~~~~~~~~~~~~~
 
 This route determines the URLs that will match your template. The
@@ -155,9 +155,12 @@ Matches an EE style pagination segment (e.g. P20).
 
 ::
 
-  regex[regular_expression]
+  regex[(regular_expression)]
 
-Matches an arbitrary regular expression.
+Matches an arbitrary regular expression. Your regular expression must
+be inside a named capturing group, for example::
+
+  regex[([0-9]{3})]
 
 .. note:: Regular expression matches are performed case insensitively
 
