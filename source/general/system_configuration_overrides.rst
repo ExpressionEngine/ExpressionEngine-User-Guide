@@ -2016,7 +2016,7 @@ $config['enable_template_routes'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Design --> Templates -->
-Template Routeslate Preferences`: :ref:`Enable Template Routes
+Global Template Preferences`: :ref:`Enable Template Routes
 <enable_template_routes_label>`
 
 .. _enable_throttling:
