@@ -22,6 +22,15 @@ check the next shortest route until a match is found. The
 :doc:`/cp/design/templates/template_route_manager` lists your Template
 Routes in the order they are processed when matching a URL.
 
+.. important:: Template Routes overrides the default behavior of URLs,
+   if you wish to use a Channel Entries Tag in your template you must
+   manually provide segments for any parameters that are normally set
+   in the URL. You must provide a segment for pagination, categories,
+   and entry titles if you wish to use those in your Channel Entries
+   Tag. Additionally, be careful when using dynamic="yes" with Template
+   Routes, this can cause issues if your route does not have an
+   appropriate segment set.
+
 Template Route
 ~~~~~~~~~~~~~~
 
@@ -57,11 +66,8 @@ This will match URLs such as::
 
   /member/Enrico/Fermi/III
 
-Template Routes override the default behavior of URLs, which means you
-must manually provide a segment if you wish to use pagination or 
-categories. Likewise if you wish to use "require_entry" in a channel 
-enties tag you must provide a segments for entry names. Template Routes
-has built in rules for handling pagination and categories::
+Template Routes has built in rules for handling pagination and
+categories::
 
   /blog/{section:category}/{page:pagination}
 
@@ -110,6 +116,10 @@ Matches only alphabetic characters.
 
 Matches base64 encoding; Alphabetic characters, 0 through 9, "/", "+",
 and "=".
+
+.. note:: Base64 allows slashes, so if you use this rule make sure you
+   only use it on the trailing URL segment, otherwise it can cause
+   issues with matching URLs.
 
 ::
 
