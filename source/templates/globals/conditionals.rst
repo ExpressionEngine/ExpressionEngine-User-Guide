@@ -41,6 +41,9 @@ Layout         {layout:name}
    in single or double-quotes. If you are testing against a number, then
    you do not need to use quotes.
 
+.. note:: The proscription against *elseif* applies to any conditionals inside 
+   the conditional tag pair.
+
 Protected Characters
 ~~~~~~~~~~~~~~~~~~~~
 
