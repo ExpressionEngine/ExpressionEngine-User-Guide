@@ -159,7 +159,7 @@ ExpressionEngine currently supports Memcached and Redis for memory-based
 caching. You can set which driver is being used in the control panel or
 via the :ref:`cache_driver <cache_driver_config>` config override.
 :ref:`Memcached <memcached_config>` and :ref:`Redis <redis_config>`
-server information can also be set in ``config.php``,otherwise
+server information can also be set in ``config.php``, otherwise
 ExpressionEngine will try to connect to the default respective ports on
 localhost.
 
@@ -180,3 +180,6 @@ documentation.
 
 .. note:: The Redis driver uses the
    `PhpRedis <https://github.com/nicolasff/phpredis>`_ extension.
+
+.. note:: A Dummy driver is available for selection to disable caching
+    entirely.
