@@ -191,12 +191,11 @@ set_cookie
 
 .. method:: set_cookie([$name = ''[, $value = ''[, $expire = '']]])
 
-  Sets cookie based on name and value. The advantage to using this
-  function over just the standard PHP function is because EE will
-  automatically add the cookie domain, cookie prefix, and cookie path as
-  specified in the preferences. Those are helpful for making these
-  cookies unique to EE and not interfering with other cookies set for
-  your site by other software.
+  Sets cookie based on name and value. The advantage to using this function
+  over the standard PHP function is EE will automatically add the cookie
+  domain, cookie prefix, and cookie path as specified in the preferences. Those
+  are helpful for making these cookies unique to EE and not interfering with
+  other cookies set for your site by other software.
 
   :param string $name: Name of the cookie
   :param string $value: Value of the cookie
@@ -211,7 +210,7 @@ delete_cookie
 .. method:: delete_cookie($name)
 
   Cleanly delete a cookie. The advantage to using this
-  function over just the standard PHP function is because EE will
+  function over the standard PHP function is EE will
   automatically add the cookie domain, cookie prefix, and cookie path as
   specified in the preferences.
 
