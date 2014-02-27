@@ -8,7 +8,7 @@ ExpressionEngine 2.x Change Log
 Version 2.8.0
 -------------
 
-Release Date: ?
+Release Date: February 27, 2014
 
 - General Changes:
 
@@ -133,7 +133,7 @@ Release Date: ?
     enabled.
   - Fixed a bug (#19964) where the entry confirmation page would show 0
     comments, regardless of how many comments the entry actually had.
-  - Fixed a bug (#20056) where dates were properly formatted in the Channel Form 
+  - Fixed a bug (#20056) where dates were properly formatted in the Channel Form
     if European date formatting was used.
 
 - Developers:
