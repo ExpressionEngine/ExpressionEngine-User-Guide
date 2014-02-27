@@ -227,23 +227,6 @@ evaluate
   :rtype: String
 
 
-set_cookie
-----------
-
-.. method:: set_cookie([$name = ''[, $value = ''[, $expire = '']]])
-
-  Sets cookie based on name and value. The advantage to using this
-  function over just the standard PHP function is because EE will
-  automatically add the cookie domain, cookie prefix, and cookie path as
-  specified in the preferences. Those are helpful for making these
-  cookies unique to EE and not interfering with other cookies set for
-  your site by other software.
-
-  :param string $name: Name of the cookie
-  :param string $value: Value of the cookie
-  :param integer $expire: When the cookie should expire, if left blank
-    the time is set to the past and the cookie will expire immediately
-  :rtype: Void
 
 char_limiter
 ------------
