@@ -133,9 +133,9 @@ features that can be disabled. ::
 	{/exp:channel:entries}
 
 .. note:: You can also use disable="category\_fields" in
-   the :doc:`channel categories </addons/channel/categories>` tag,
-   the :doc:`category heading </addons/channel/category_heading>` tag,
-   and the :doc:`category archives </addons/channel/category_archive>`
+   the :doc:`channel categories </add-ons/channel/categories>` tag,
+   the :doc:`category heading </add-ons/channel/category_heading>` tag,
+   and the :doc:`category archives </add-ons/channel/category_archive>`
    tag.
 
 .. _caching_drivers:

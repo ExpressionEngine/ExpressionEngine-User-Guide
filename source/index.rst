@@ -71,7 +71,7 @@ Beyond the Basics
 
 - :doc:`general/add-ons`
 - :doc:`cp/sites/index`
-- :doc:`addons/forum/index`
+- :doc:`add-ons/forum/index`
 - :doc:`general/system_configuration_overrides`
 
 
@@ -144,29 +144,29 @@ Add-Ons
 Included in ExpressionEngine
 ----------------------------
 
-- :doc:`addons/blacklist/index`
-- :doc:`addons/channel/index`
-- :doc:`addons/comment/index`
-- :doc:`addons/cookie_consent/index`
-- :doc:`addons/email/index`
-- :doc:`addons/emoticon/index`
-- :doc:`addons/file/index`
-- :doc:`addons/ip_to_nation/index`
-- :doc:`addons/jquery/index`
-- :doc:`addons/mailinglist/index`
-- :doc:`addons/member/index`
-- :doc:`addons/metaweblog_api/index`
-- :doc:`addons/moblog/index`
-- :doc:`addons/pages/index`
-- :doc:`addons/query/index`
-- :doc:`addons/referrer/index`
-- :doc:`addons/rss/index`
-- :doc:`addons/rss_parser/index`
-- :doc:`addons/rte/index`
-- :doc:`addons/search/index`
-- :doc:`addons/simple_commerce/index`
-- :doc:`addons/statistics/index`
-- :doc:`addons/wiki/index`
+- :doc:`add-ons/blacklist/index`
+- :doc:`add-ons/channel/index`
+- :doc:`add-ons/comment/index`
+- :doc:`add-ons/cookie_consent/index`
+- :doc:`add-ons/email/index`
+- :doc:`add-ons/emoticon/index`
+- :doc:`add-ons/file/index`
+- :doc:`add-ons/ip_to_nation/index`
+- :doc:`add-ons/jquery/index`
+- :doc:`add-ons/mailinglist/index`
+- :doc:`add-ons/member/index`
+- :doc:`add-ons/metaweblog_api/index`
+- :doc:`add-ons/moblog/index`
+- :doc:`add-ons/pages/index`
+- :doc:`add-ons/query/index`
+- :doc:`add-ons/referrer/index`
+- :doc:`add-ons/rss/index`
+- :doc:`add-ons/rss_parser/index`
+- :doc:`add-ons/rte/index`
+- :doc:`add-ons/search/index`
+- :doc:`add-ons/simple_commerce/index`
+- :doc:`add-ons/statistics/index`
+- :doc:`add-ons/wiki/index`
 
 .. _add_ons_available_for_download:
 
@@ -206,7 +206,7 @@ About ExpressionEngine
   how_to/index
   intro/index
   handling_bugs/index
-  addons/index
+  add-ons/index
   operations/index
   optimization/index
   monitoring/index

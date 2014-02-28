@@ -159,7 +159,7 @@ Example Table-based Layout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following example is a single table row from the :doc:`Wiki Module
-</addons/wiki/index>` update.php view file. ::
+</add-ons/wiki/index>` update.php view file. ::
 
   <?php
       $this->table->set_heading(array(

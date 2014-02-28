@@ -1848,7 +1848,7 @@ enable_entry_view_tracking
 --------------------------
 
 If enabled, the :doc:`Entry "Views" Tracking Tag
-</addons/channel/entry_tracking>` feature of the Channel module is
+</add-ons/channel/entry_tracking>` feature of the Channel module is
 available for use.
 
 ========== ========
@@ -1898,7 +1898,7 @@ enable_online_user_tracking
 ---------------------------
 
 If enabled, online user statistics are tracked and the user-based
-variables in the :doc:`Statistics </addons/statistics/index>` module
+variables in the :doc:`Statistics </add-ons/statistics/index>` module
 are available for use.
 
 ========== ========
@@ -2152,7 +2152,7 @@ forum_is_installed
 ------------------
 
 Automatically enabled when the :doc:`Discussion Forum
-</addons/forum/index>` module is installed.
+</add-ons/forum/index>` module is installed.
 
 ========== ===========
 Value      Description
@@ -2261,7 +2261,7 @@ htaccess_path
 -------------------------
 
 Set the server path used by the :doc:`Blacklist/Whitelist
-</addons/blacklist/index>` module to :ref:`write rules to your
+</add-ons/blacklist/index>` module to :ref:`write rules to your
 .htaccess file <blacklist-writing_to_htaccess>`.
 
 ========== ===========
@@ -2358,7 +2358,7 @@ ip2nation
 ---------
 
 Enable checks against the :doc:`IP to Nation
-</addons/ip_to_nation/index>` database.
+</add-ons/ip_to_nation/index>` database.
 
 ========== ========
 Value      Behavior
@@ -3530,7 +3530,7 @@ Example Usage::
 relaxed_track_views
 -------------------
 
-Allow :doc:`Entry Views Tracking </addons/channel/entry_tracking>` to
+Allow :doc:`Entry Views Tracking </add-ons/channel/entry_tracking>` to
 work for ANY combination that results in only one entry being returned
 by the tag, including Channel query caching.
 

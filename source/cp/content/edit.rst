@@ -33,7 +33,7 @@ The main table shows the following columns:
    template is specified in the
    :doc:`preferences </cp/admin/channels/channel_edit_preferences>`
    for the channel.
--  :doc:`Comments </addons/comment/control_panel/index>`: The "View"
+-  :doc:`Comments </add-ons/comment/control_panel/index>`: The "View"
    link allows you to edit the comments.
 -  **Author**: The name of the entry author.
 -  **Date**: The date and time assigned to the entry.

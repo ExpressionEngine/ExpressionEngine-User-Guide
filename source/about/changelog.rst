@@ -463,7 +463,7 @@ Release Date: August 27, 2013
 
 - General Changes:
 
-  - Added a new fieldtype called :doc:`Grid </addons/channel/grid>` for
+  - Added a new fieldtype called :doc:`Grid </add-ons/channel/grid>` for
     grouping fieldtypes in repeatable rows.
   - Added support for New Relic performance monitoring
   - Added Markdown plugin and field formatting option.
@@ -714,7 +714,7 @@ Release Date: April 23, 2013
   - Timezone selection menus now include all timezones for automatic
     date localization and handling of Daylight Saving Time rules.
   - Added Subscriber List tag to the :doc:`Comment Module
-    </addons/comment/index>`
+    </add-ons/comment/index>`
   - Added ``inline`` option to ``paginate`` parameter.
   - Added new variables to the Channel Next/Previous tags:
 
@@ -1573,7 +1573,7 @@ Release Date: May 7, 2012
 
 - General Changes:
 
-  - :doc:`Rich Text Editor </addons/rte/control_panel/index>`
+  - :doc:`Rich Text Editor </add-ons/rte/control_panel/index>`
 
     - Added new module and fieldtype for the new rich text editor.
     - Added user preferences for rich text editor under my preferences.
@@ -2340,7 +2340,7 @@ Release Date: June 22, 2011
 
 - General Changes:
 
-  - Added a :doc:`File Module </addons/file/index>` to display file
+  - Added a :doc:`File Module </add-ons/file/index>` to display file
     information on the frontend.
   - Added ability to edit file metadata from the File Manager.
   - Added several file types to the mimetype listing. **Please update
@@ -3231,7 +3231,7 @@ Build 20101018 (initial release)
   - Altered version update notification to notify users if a new
     ExpressionEngine release is a security release.
   - Altered the behavior of the :doc:`Channel Category tag's
-    </addons/channel/categories>` show_empty= parameter channel
+    </add-ons/channel/categories>` show_empty= parameter channel
     specific. (Waits for the cheering to die down....)
   - Altered member profile fields to disallow HTML.
   - Altered final file permissions on uploads to compensate for
@@ -3244,23 +3244,23 @@ Build 20101018 (initial release)
   - Added a template synchronization warning in the Search and Replace
     tool for users saving templates as files (issue #13551).
   - Added a restrict_channel= parameter to the :doc:`Channel Category
-    tag </addons/channel/categories>`, which allows overriding the
+    tag </add-ons/channel/categories>`, which allows overriding the
     new default behavior of its show_empty= parameter.
   - Added a :doc:`Control Panel
-    </addons/comment/control_panel/index>` to the Comment Module.
+    </add-ons/comment/control_panel/index>` to the Comment Module.
   - Added a new status for comments. Moderated comments will no go in
     with a status of 'Pending' rather than 'Closed' (though moderators
     may still set a comment to 'Closed' status.
   - Added new variables to the Comment Notification Templates (see
     :doc:`Version Notes </installation/version_notes_2.1.1>`).
-  - Added new :doc:`Settings </addons/comment/control_panel/index>`
+  - Added new :doc:`Settings </add-ons/comment/control_panel/index>`
     to the Comment Module (Force word censoring for comments and
     Moderate expired comments).
   - Added new variables to the :doc:`Comment Entries tag
-    </addons/comment/index>` ({member\_group\_id}, {username}, {if
+    </add-ons/comment/index>` ({member\_group\_id}, {username}, {if
     editable}, {if can\_moderate\_comment}, {comment\_stripped}).
   - Added new parameters to the :doc:`Comment Entries tag
-    </addons/comment/index>` (comment\_id=, entry\_status=, status=,
+    </add-ons/comment/index>` (comment\_id=, entry\_status=, status=,
     author\_id=_).
   - Added a random option to the Comment Entries
     :ref:`comment_entries_orderby` parameter.
@@ -3270,7 +3270,7 @@ Build 20101018 (initial release)
     <comment_submission_form>` ({if comments\_expired}, {if
     comments\_disabled}).
   - Added a Comment Notification tag to the :doc:`Comment Module
-    </addons/comment/index>` which gives members the ability to
+    </add-ons/comment/index>` which gives members the ability to
     subscribe to comment notifications for an entry without
     commenting.
   - Added the ability to :ref:`Allow Members to Edit Comments on the
@@ -3952,7 +3952,7 @@ Build 20100415 (initial release)
 - Added a check for required fields when saving custom layouts for the
   publish page.
 - Added a {exp:pages:load_site_pages} tag to the
-  :doc:`/addons/pages/index` for use with the Multiple Site Manager.
+  :doc:`/add-ons/pages/index` for use with the Multiple Site Manager.
 - Added a class variable to the xmlrpc library to increase consistency
   between the Metaweblog/Blogger modules and publishing using the
   control panel.
@@ -4916,7 +4916,7 @@ Build 20091204
   reset the password
 - Fixed bug (#10207 and #10241) Cleaned up display of module buttons in
   Corporate theme.
-- Fixed bug (#10410) addons/extensions\_settings\_custom.php view file
+- Fixed bug (#10410) add-ons/extensions\_settings\_custom.php view file
   missing in corporate theme.
 - Fixed bug (#10420) Fixed PHP Error when updating specialty templates.
 - Fixed bug (#10181) Front end login redirect did not include slash
@@ -4999,7 +4999,7 @@ Build 20091202 (initial release)
   - New custom field types: Multi-select, Checkbox, Radio, and Upload
   - Included jQuery and numerous plugins, themes, and UI effects as
     standard.
-  - Added a :doc:`jQuery module </addons/jquery/index>` to simplify
+  - Added a :doc:`jQuery module </add-ons/jquery/index>` to simplify
     access to jQuery script files in your ExpressionEngine
     installation.
   - Added additional security measures to help alert you if

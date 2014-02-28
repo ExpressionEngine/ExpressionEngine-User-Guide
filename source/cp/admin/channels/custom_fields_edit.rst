@@ -22,7 +22,7 @@ in your Channel Entries (add-ons can include their own as well):
    the build in file browser for your publishers to upload and insert
    files.
 #. **Grid**: The Grid field in ExpressionEngine provides a way to group
-   fieldtypes in repeatable rows.For more information see :doc:`/addons/channel/grid`.
+   fieldtypes in repeatable rows.For more information see :doc:`/add-ons/channel/grid`.
 #. **Multi Select**: Multi Select field types give a list of options in
    a standard multiple selection form control, letting publishers choose
    any or none of the available items.
@@ -40,7 +40,7 @@ in your Channel Entries (add-ons can include their own as well):
 #. **Relationships**: This is a special and very powerful field type. It
    enables you to create relationships between two or more channels so
    you can show content from one entry within another. For more
-   information see :doc:`/addons/channel/relationships`.
+   information see :doc:`/add-ons/channel/relationships`.
 #. **Select Dropdown**: This creates a standard HTML <select> drop-down
    list. You can define the contents of the list manually or
    pre-populate it from another field.
@@ -49,7 +49,7 @@ in your Channel Entries (add-ons can include their own as well):
 #. **Textarea**: This is a standard text entry box with multiple lines.
    This is often used for the body text of entries.
 #. **Textarea (Rich Text)**: This is a text entry box with multiple
-   lines that uses the built-in :doc:`/addons/rte/index`.
+   lines that uses the built-in :doc:`/add-ons/rte/index`.
 
 Field Label
 ~~~~~~~~~~~
@@ -69,7 +69,7 @@ This is the internal or "short name" for the field. This is a
 punctuation. The field name must be unique within the system, which
 means that you cannot have two field groups each containing a field with
 the field name of "body". The short name is typically used as the
-variable name in your :doc:`/addons/channel/channel_entries`
+variable name in your :doc:`/add-ons/channel/channel_entries`
 
 .. note:: Some words are reserved and cannot be used. Please
    see :doc:`/general/reserved_words` for details.

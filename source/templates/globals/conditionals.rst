@@ -41,7 +41,7 @@ Layout         {layout:name}
    in single or double-quotes. If you are testing against a number, then
    you do not need to use quotes.
 
-.. note:: The proscription against *elseif* applies to any conditionals inside 
+.. note:: The proscription against *elseif* applies to any conditionals inside
    the conditional tag pair.
 
 Protected Characters
@@ -195,7 +195,7 @@ A modulus operator finds the remainder of division of one number by
 another. This can be handy when you want to do something every nth
 iteration of a loop. For example, if we want to display a horizontal
 rule for every 5th entry in a :doc:`Channel Entries
-</addons/channel/channel_entries>` loop, we would write this
+</add-ons/channel/channel_entries>` loop, we would write this
 conditional::
 
   {if count % 5 == 0}

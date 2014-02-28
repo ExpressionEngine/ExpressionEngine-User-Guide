@@ -17,7 +17,7 @@ Enable Online User Tracking?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If enabled, online user statistics are tracked and the user-based
-variables in the :doc:`Statistics </addons/statistics/index>` module
+variables in the :doc:`Statistics </add-ons/statistics/index>` module
 are available for use.
 
 .. _tracking-enable-template-hit-tracking-label:
@@ -33,7 +33,7 @@ database on each page load.
 Enable Channel Entry View Tracking?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When set to "Yes", you can utilize the :doc:`/addons/channel/entry_tracking`
+When set to "Yes", you can utilize the :doc:`/add-ons/channel/entry_tracking`
 feature of the Channel module.
 
 Enable Referrer Tracking?
