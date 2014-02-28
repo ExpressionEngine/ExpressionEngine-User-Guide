@@ -8,7 +8,7 @@ Modules Manager
 |Modules|
 
 Modules provide the Tags that you can use in your :doc:`Templates </templates/index>`.
-ExpressionEngine includes a number of :doc:`Modules </addons/index>` by default,
+ExpressionEngine includes a number of :doc:`Modules </add-ons/index>` by default,
 and you can install or uninstall additional ones from this page.
 
 Some Modules include their own Control Panel, enabling you to perform

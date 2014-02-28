@@ -26,7 +26,7 @@ Key Features
 
 -  Multiple Sites from a single installation
 -  Multiple Forums from a single installation (requires :doc:`Discussion
-   Forums 3.0 </addons/forum/index>`)
+   Forums 3.0 </add-ons/forum/index>`)
 -  Member Database is "installation wide"
 -  Shared Member Groups across Sites
 -  Member Groups can have per Site preferences.

@@ -264,7 +264,7 @@ Pages Tab
 ---------
 
 .. note:: This tab will only appear if you have the :doc:`Pages Module
-   </addons/pages/index>` installed.
+   </add-ons/pages/index>` installed.
 
 |Publish Pages|
 

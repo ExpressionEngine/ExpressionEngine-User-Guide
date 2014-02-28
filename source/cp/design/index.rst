@@ -18,8 +18,8 @@ Design
 - Themes
 
   - :doc:`themes/member_profile_templates`
-  - :doc:`/addons/forum/forum_themes`
-  - :doc:`/addons/wiki/wiki_templates`
+  - :doc:`/add-ons/forum/forum_themes`
+  - :doc:`/add-ons/wiki/wiki_templates`
 
 
 .. toctree::

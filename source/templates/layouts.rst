@@ -189,7 +189,7 @@ Your title for this template will now show "Site Name | News" unless a
 single news entry is being displayed, in which case it will show a more
 user friendly title of "Site Name | News | Article Title". Unlike header
 and footer embeds, this can all be done using a single :doc:`Channel
-Entries <../addons/channel/channel_entries>` loop which will improve
+Entries <../add-ons/channel/channel_entries>` loop which will improve
 the overall :doc:`performance <../optimization/index>` of this template.
 
 Nesting and Embeds
@@ -321,7 +321,7 @@ code in a layout, "news/.sidebar-layout"::
   </div>
 
 Now we can create "news/.embed-search" using the :doc:`Simple Search
-Form <../addons/search/simple>` tag::
+Form <../add-ons/search/simple>` tag::
 
   {layout="news/.sidebar-layout" header="Search"}
 

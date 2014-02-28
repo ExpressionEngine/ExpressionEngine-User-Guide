@@ -15,7 +15,7 @@ You **must** include both the template group and the template name in
 the embed tag.
 
 By default, you cannot use embeds inside of Forum templates. See
-:doc:`Other Features </addons/forum/other_features>` for
+:doc:`Other Features </add-ons/forum/other_features>` for
 instructions on running the forums through regular templates.
 
 .. _embed_variables:
