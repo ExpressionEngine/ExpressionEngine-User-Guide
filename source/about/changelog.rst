@@ -8,7 +8,7 @@ ExpressionEngine 2.x Change Log
 Version 2.8.0
 -------------
 
-Release Date: February 27, 2014
+Release Date: February 28, 2014
 
 - General Changes:
 
