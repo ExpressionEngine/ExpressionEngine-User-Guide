@@ -10,6 +10,11 @@ Version 2.8.0
 
 Release Date: February 28, 2014
 
+- Important:
+
+  - Fixed a security issue that could result in arbitrary script
+    execution in certain circumstances.
+
 - General Changes:
 
   - Added the ability to create
