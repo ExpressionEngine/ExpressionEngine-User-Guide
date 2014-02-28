@@ -4,7 +4,7 @@ ExpressionEngine Forum Module Change Log
 Version 3.1.15
 --------------
 
-Release Date: February 27, 2014
+Release Date: February 28, 2014
 
 - Fixed a bug (#20039) where the logout link did not work if Secure Mode
   was enabled.
