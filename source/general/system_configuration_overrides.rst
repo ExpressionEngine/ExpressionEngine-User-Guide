@@ -1992,13 +1992,13 @@ Administration --> Global Preferences`: :ref:`Cache Dynamic Channel
 Queries <caching_dynamic_channel_query_caching>`
 
 
-.. _enable_template_routes
+.. _enable_template_routes:
 
 enable_template_routes
------------------
+----------------------
 
 This setting toggles whether or not Template Routes are used. If this
-is set to no, templates will not be accesible by their routes. When
+is set to no, templates will not be accessible by their routes. When
 disabled the Template Route options will not appear in the Template
 Manager.
 

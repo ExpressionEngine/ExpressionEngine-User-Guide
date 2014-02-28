@@ -4,7 +4,7 @@ Channel Form
 
 .. contents::
   :local:
-   :depth: 2
+  :depth: 2
 
 ************
 Introduction
