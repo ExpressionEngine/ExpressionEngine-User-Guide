@@ -6,7 +6,7 @@ Relationships
 
 Relationships was completely rewritten for this version, adding the ability to
 create multiple relationships for each entry and introducing a friendly new tag
-syntax. The template tags :doc:`described here </modules/channel/relationships>`
+syntax. The template tags :doc:`described here </add-ons/channel/relationships>`
 are not compatible with previous versions.
 
 Altered Language Files
@@ -65,7 +65,7 @@ Conditionals in Channel Entries Content
 
 We have removed parsing for conditionals within channel entry input
 data. This change does not affect the use of conditionals in templates
-or the :doc:`{exp:channel:entries} </modules/channel/channel_entries>` tag
+or the :doc:`{exp:channel:entries} </add-ons/channel/channel_entries>` tag
 pair. While we know that some users relied on this functionality, the
 vast majority of users benefit by encoding conditionals by default
 within Channel Entries content. If you are using EE conditionals (or

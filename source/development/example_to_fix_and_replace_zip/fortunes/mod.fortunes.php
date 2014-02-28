@@ -66,7 +66,7 @@ class Fortunes {
             
             if ($this->cookie_length != 'always' && $this->cookie_length > 0)
             {
-                $FNS->set_cookie($this->cookie_name, $query->row['fortune_id'], 60*60*ceil($this->cookie_length));
+                $IN->set_cookie($this->cookie_name, $query->row['fortune_id'], 60*60*ceil($this->cookie_length));
             }
         }
         else

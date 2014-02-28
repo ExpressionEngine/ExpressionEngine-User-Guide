@@ -11,8 +11,8 @@ being used in the Template.
    Templates. It doesn't apply to rendering theme files such as those
    used for :doc:`Member Profiles
    </cp/design/themes/member_profile_templates>`, the :doc:`Wiki
-   </modules/wiki/wiki_templates>` module, or the :doc:`Discussion
-   Forum </modules/forum/forum_themes>` module.
+   </add-ons/wiki/wiki_templates>` module, or the :doc:`Discussion
+   Forum </add-ons/forum/forum_themes>` module.
 
 ExpressionEngine goes through several stages to fully process each
 Template, and this article exposes the order of those rendering stages.
@@ -53,6 +53,8 @@ bottom through each rendering stage.
 
 #. Parse :ref:`embed variables <embed_variables>`
 
+#. Parse :ref:`layout variables <layout_variables>`
+
 #. Parse :ref:`date formatting string constants <template_date_formatting_constants>`
 
 #. Parse :ref:`{template_edit_date} <global_template_edit_date>`
@@ -64,7 +66,7 @@ bottom through each rendering stage.
 
 #. Parse :ref:`PHP on Input <php_parsing_stage>`
 
-#. Parse :ref:`simple conditionals <global_simple_conditionals>`: segment, embed, global variables
+#. Parse :ref:`simple conditionals <global_simple_conditionals>`: segment, embed, layout, global variables
 
 #. Assign and parse :doc:`preload_replace variables </templates/globals/preload_replacement>`
 
@@ -78,6 +80,8 @@ bottom through each rendering stage.
 #. Write **template to cache file**
 
 #. Parse :ref:`advanced conditionals <global_advanced_conditionals>`
+
+#. Process :doc:`template layouts </templates/layouts>`
 
 #. Process :doc:`embedded templates </templates/embedding>`
 
@@ -112,7 +116,7 @@ bottom through each rendering stage.
    * {member_profile_link}
    * {captcha}
 
-#. Add :ref:`csrf tokens <dev_guidelines_csrf_protection>` to forms and parse :ref:`{XID_HASH} <global_xid_hash>`
+#. Add :ref:`CSRF tokens <dev_guidelines_csrf_protection>` to forms and parse :ref:`{csrf_token} <global_csrf_token>`
 
 #. Parse remaining :doc:`standard global variables </templates/globals/single_variables>` (separately, in order given):
 

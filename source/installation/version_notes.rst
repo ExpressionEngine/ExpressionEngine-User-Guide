@@ -7,16 +7,16 @@ version you upgraded from.
 ExpressionEngine 2.x
 --------------------
 
-- :doc:`Version Notes 2.7.4 <version_notes_2.7.4>`
+- :doc:`Version Notes 2.8.0 <version_notes_2.8>`
 - :doc:`Version Notes 2.7.3 <version_notes_2.7.3>`
--	:doc:`Version Notes 2.7 <version_notes_2.7>`
--	:doc:`Version Notes 2.6 <version_notes_2.6>`
+-	:doc:`Version Notes 2.7.0 <version_notes_2.7>`
+-	:doc:`Version Notes 2.6.0 <version_notes_2.6>`
 -	:doc:`Version Notes 2.5.3 <version_notes_2.5.3>`
 -	:doc:`Version Notes 2.5.2 <version_notes_2.5.2>`
 -	:doc:`Version Notes 2.5.1 <version_notes_2.5.1>`
--	:doc:`Version Notes 2.5 <version_notes_2.5>`
--	:doc:`Version Notes 2.4 <version_notes_2.4>`
--	:doc:`Version Notes 2.3 <version_notes_2.3>`
+-	:doc:`Version Notes 2.5.0 <version_notes_2.5>`
+-	:doc:`Version Notes 2.4.0 <version_notes_2.4>`
+-	:doc:`Version Notes 2.3.0 <version_notes_2.3>`
 -	:doc:`Version Notes 2.2.2 <version_notes_2.2.2>`
 -	:doc:`Version Notes 2.2.1 <version_notes_2.2.1>`
 -	:doc:`Version Notes 2.2.0 <version_notes_2.2.0>`
@@ -25,10 +25,10 @@ ExpressionEngine 2.x
 -	:doc:`Version Notes 2.1.3 <version_notes_2.1.3>`
 -	:doc:`Version Notes 2.1.2 <version_notes_2.1.2>`
 -	:doc:`Version Notes 2.1.1 <version_notes_2.1.1>`
--	:doc:`Version Notes 2.1 <version_notes_2.1>`
+-	:doc:`Version Notes 2.1.0 <version_notes_2.1>`
 -	:doc:`Version Notes 2.0.2 <version_notes_2.0.2>`
 -	:doc:`Version Notes 2.0.1 <version_notes_2.0.1>`
--	:doc:`Version Notes 2.0 <version_notes_2.0>`
+-	:doc:`Version Notes 2.0.0 <version_notes_2.0>`
 
 ExpressionEngine 1.x
 --------------------

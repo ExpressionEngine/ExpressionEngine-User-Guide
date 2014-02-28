@@ -61,7 +61,7 @@ documentation for each add-on for any particular steps necessary to
 upgrade that add-on.
 
 .. important:: If you have :doc:`Discussion Forum
-   </modules/forum/forum_update>` or :doc:`Multiple Site Manager
+   </add-ons/forum/forum_update>` or :doc:`Multiple Site Manager
    </cp/sites/install>` installed, be sure to update them to the latest
    versions whenever you update ExpressionEngine.
 

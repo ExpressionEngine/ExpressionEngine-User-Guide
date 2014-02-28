@@ -101,11 +101,10 @@ in a module or plugin's tagdata::
     // neither $str = str_replace(SLASH, '/', $str);
     // nor $str = str_replace('&#47;', '/', $str);
 
-The ``XID_SECURE_HASH`` constant is used primarily in javascript as the
-secure forms hash. If you are using the Form helper, it will
-automatically be added to control panel forms as needed::
-
-  var data = "keywords=" + escape(keywords) + "&groups=" + search_groups + "&XID={XID_SECURE_HASH}";
+The ``CSRF_TOKEN`` constant is used primarily in frontend javascript. In
+the control panel it is automatically added to jQuery AJAX requests.
+Additionally, if you are using the Form helper, it will automatically be
+added to control panel forms as needed.
 
 Renamed Objects
 ===============

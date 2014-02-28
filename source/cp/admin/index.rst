@@ -17,7 +17,7 @@ Admin
 - Content Administration
 
   - :doc:`default_html_buttons`
-  - :doc:`Rich Text Editor Settings</modules/rte/control_panel/index>`
+  - :doc:`Rich Text Editor Settings</add-ons/rte/control_panel/index>`
 
 - System Administration
 
@@ -41,6 +41,6 @@ Admin
 	:glob:
 	:hidden:
 	:titlesonly:
-	
+
 	*
 	channels/index

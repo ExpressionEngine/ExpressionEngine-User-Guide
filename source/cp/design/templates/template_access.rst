@@ -2,6 +2,7 @@ Template Access Restriction
 ===========================
 
 |Template Access|
+
 Member Group
 ~~~~~~~~~~~~
 
@@ -51,3 +52,19 @@ information sent.
 
 .. |Template Access| image:: ../../../images/template_access.png
 .. |HTTP Authentication symbol example| image:: ../../../images/template_http_auth_key.png
+
+Template Route
+~~~~~~~~~~~~~~
+
+This route determines the URLs that will match your template. The
+format is as follows::
+
+	/segment/{variable}/{variable:rule}/{variable:rule0|rule1[arg]}
+
+For more info see: :doc:`../../../urls/template_routes`
+
+Require All Segments
+~~~~~~~~~~~~~~~~~~~~
+
+If set to "yes" all segments defined in your Template Route must
+be contained in a URL in order for it to match.
