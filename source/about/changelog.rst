@@ -5,6 +5,16 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.8.1
+-------------
+
+Release Date: March 14, 2014
+
+- Bug Fixes:
+
+  - Fixed a bug (#20165) where HTML elements with certain missing
+    attributes could cause a JavaScript error in the control panel.
+
 Version 2.8.0
 -------------
 
