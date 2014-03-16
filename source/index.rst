@@ -48,16 +48,19 @@ Templates
 ---------
 
 - :doc:`templates/embedding`
+- :doc:`templates/layouts`
 - :doc:`templates/hidden_templates`
 - :doc:`templates/plugins`
 - :doc:`templates/php`
 - :doc:`templates/templates_as_files`
 - :doc:`templates/comments`
+- :doc:`templates/pagination`
 
 URLs
 ----
 
 - :doc:`urls/url_structure`
+- :doc:`urls/template_routes`
 - :doc:`urls/remove_index.php`
 - :doc:`urls/404pages`
 
@@ -68,7 +71,8 @@ Beyond the Basics
 
 - :doc:`general/add-ons`
 - :doc:`cp/sites/index`
-- :doc:`modules/forum/index`
+- :doc:`add-ons/forum/index`
+- :doc:`general/system_configuration_overrides`
 
 
 **************************************
@@ -125,7 +129,7 @@ Reference Guides
 - :doc:`The Control Panel <cp/index>`
 - :doc:`templates/template_engine`
 - :doc:`templates/globals/index`
-- :doc:`general/hidden_configuration_variables`
+- :doc:`general/system_configuration_overrides`
 - :doc:`general/bbcode`
 - :doc:`general/text_formatting`
 - :doc:`templates/date_variable_formatting`
@@ -140,28 +144,29 @@ Add-Ons
 Included in ExpressionEngine
 ----------------------------
 
-- :doc:`modules/blacklist/index`
-- :doc:`modules/channel/index`
-- :doc:`modules/comment/index`
-- :doc:`modules/cookie_consent/index`
-- :doc:`modules/email/index`
-- :doc:`modules/emoticon/index`
-- :doc:`modules/file/index`
-- :doc:`modules/ip_to_nation/index`
-- :doc:`modules/jquery/index`
-- :doc:`modules/mailinglist/index`
-- :doc:`modules/member/index`
-- :doc:`modules/metaweblog_api/index`
-- :doc:`modules/moblog/index`
-- :doc:`modules/pages/index`
-- :doc:`modules/query/index`
-- :doc:`modules/referrer/index`
-- :doc:`modules/rss/index`
-- :doc:`modules/rte/index`
-- :doc:`modules/search/index`
-- :doc:`modules/simple_commerce/index`
-- :doc:`modules/statistics/index`
-- :doc:`modules/wiki/index`
+- :doc:`add-ons/blacklist/index`
+- :doc:`add-ons/channel/index`
+- :doc:`add-ons/comment/index`
+- :doc:`add-ons/cookie_consent/index`
+- :doc:`add-ons/email/index`
+- :doc:`add-ons/emoticon/index`
+- :doc:`add-ons/file/index`
+- :doc:`add-ons/ip_to_nation/index`
+- :doc:`add-ons/jquery/index`
+- :doc:`add-ons/mailinglist/index`
+- :doc:`add-ons/member/index`
+- :doc:`add-ons/metaweblog_api/index`
+- :doc:`add-ons/moblog/index`
+- :doc:`add-ons/pages/index`
+- :doc:`add-ons/query/index`
+- :doc:`add-ons/referrer/index`
+- :doc:`add-ons/rss/index`
+- :doc:`add-ons/rss_parser/index`
+- :doc:`add-ons/rte/index`
+- :doc:`add-ons/search/index`
+- :doc:`add-ons/simple_commerce/index`
+- :doc:`add-ons/statistics/index`
+- :doc:`add-ons/wiki/index`
 
 .. _add_ons_available_for_download:
 
@@ -201,7 +206,7 @@ About ExpressionEngine
   how_to/index
   intro/index
   handling_bugs/index
-  modules/index
+  add-ons/index
   operations/index
   optimization/index
   monitoring/index

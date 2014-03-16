@@ -1,17 +1,43 @@
+########################
 Date Variable Formatting
-========================
+########################
+
+.. contents::
+   :local:
+   :depth: 2
+
+************
+Introduction
+************
 
 Many tags, including channel fields of the "date" type, are designed to
 display dates and times. The output of these tags can be formatted so
-that the date and time appears in the manner you wish. Here is an
-example of formatting the :ref:`{current\_time} <global_current_time>`
-global variable::
+that the date and time appear in the manner you wish. This includes the format
+of the date, a fixed timezone, and relative date options.
+
+**************
+Standard Dates
+**************
+
+.. _date_variable_parameters:
+
+Parameters
+==========
+
+.. contents::
+   :local:
+   :depth: 1
+
+format=
+-------
+
+The ``format=`` parameter enables you to format the date using the Date
+Formatting Codes listed below. Each code letter is always preceded by a
+percent sign. The example::
 
 	{current_time format="%F %d %Y"}
 
-The "format" parameter enables you to format the date using the Date
-Formatting Codes listed below. Each code letter is always preceded by a
-percent sign. The example above would be rendered like this::
+would be rendered like this::
 
 	January 15 2006
 
@@ -23,6 +49,8 @@ parameter, **except** a percent sign. For example, this::
 Would be rendered like this::
 
 	Mon, January 15, 2006 - 10:23:45
+
+.. _date-formatting-codes:
 
 Date Formatting Codes
 ~~~~~~~~~~~~~~~~~~~~~
@@ -94,18 +122,18 @@ Date Formatting Codes
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
 | **%z**     | day of the year                                                       | "0" to "365"                               |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
-| Other                                                                                                                           | 
+| Other                                                                                                                           |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
-| **%B**     | Swatch Internet time                                                  |                                            | 
+| **%B**     | Swatch Internet time                                                  |                                            |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
 | **%I**     | (capital i)                                                           | "1" if Daylight Saving Time, "0" otherwise |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
-| **%O**     | Difference to Greenwich time (GMT) in hours                           | "-0500"                                    | 
+| **%O**     | Difference to Greenwich time (GMT) in hours                           | "-0500"                                    |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
-| **%P**     | Difference to Greenwich time (GMT) with colon between hours and       | "-05:00"                                   | 
-|            | minutes                                                               |                                            | 
+| **%P**     | Difference to Greenwich time (GMT) with colon between hours and       | "-05:00"                                   |
+|            | minutes                                                               |                                            |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
-| **%r**     | RFC 2822 formatting                                                   | "Thu, 21 Dec 2000 16:01:07 +0200"          | 
+| **%r**     | RFC 2822 formatting                                                   | "Thu, 21 Dec 2000 16:01:07 +0200"          |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
 | **%S**     | English ordinal suffix, 2 characters                                  | "th", "nd"                                 |
 +------------+-----------------------------------------------------------------------+--------------------------------------------+
@@ -149,3 +177,227 @@ Variable              Equivalent                  Sample Rendering
 **{DATE\_W3C}**       %Y-%m-%dT%H:%i:%s%Q         2006-10-16T08:19:39-06:00
 ===================   =========================   ===============================
 
+timezone=
+---------
+
+The ``timezone=`` parameter will convert the date to the specified timezone::
+
+	timezone="America/Los_Angeles"
+
+This will override the timezone specified in the
+:doc:`localization settings </cp/admin/localization_settings>` in the control
+panel, and the member's localization settings.  PHP.net has a
+`list of supported timezones <http://php.net/manual/en/timezones.php>`_.
+
+.. _relative_dates:
+
+**************
+Relative Dates
+**************
+
+Relative dates are always a string indicating the difference between the date
+and right now. By default the number of years, months, weeks, days, hours,
+minutes, and seconds are calculated, and the first non zero unit is displayed.
+Control over which units are calculated, how many units are used in the
+display, and determining when to stop showing a relative date are available.
+
+Any date can be displayed with relative language. For example, assuming a
+channel entry was posted 2 days ago, this::
+
+	{entry_date:relative}
+
+Would be rendered like this::
+
+	2 days ago
+
+This also works into the future. For example, assume you have a launch date
+just 2 days away, this::
+
+	{launch_date:relative}
+
+Would be rendered like this::
+
+	in 2 days
+
+Rounding
+========
+
+Relative dates will be rounded to the least significant displayed unit. This
+only happens when fewer significant units are displayed than were calculated.
+We do this by examining the number of remaining seconds after we calculate
+least significant displayed unit. If the remainder equals or exceeds the
+threshold we round up. The thresholds are outlined in the table below.
+
+================   ===================
+Relative Date Thresholds
+--------------------------------------
+Unit Rounding To   Remainder Threshold
+================   ===================
+Years              345 days
+Months             25 days
+Weeks              6 days
+Days               22 hours
+Hours              45 minutes
+Minutes            45 seconds
+================   ===================
+
+Parameters
+==========
+
+.. contents::
+   :local:
+   :depth: 1
+
+about=
+------
+
+The ``about=`` parameter determines what text to use when the date has been
+rounded. The default is "about". For example, assuming a date 1 hour and 50
+minutes ago this::
+
+	{entry_date:relative about="nearly"}
+
+Would be rendered like this::
+
+	nearly 2 hours ago
+
+depth=
+------
+
+The ``depth=`` parameter determines how many calculated units to display,
+starting from the largest non zero unit to the smallest. The default is "1".
+When depth is 2 we will join the two units with "and". For example, assuming a
+relative date 4 days, 3 hours, 2 minutes, and 1 second in the past this::
+
+	{entry_date:relative depth="2"}
+
+Would be rendered like this::
+
+	4 days and 3 hours ago
+
+When the depth is greater than 2 the units are displayed with commas. Using the
+same date as above this::
+
+	{entry_date:relative depth="3"}
+
+Would be rendered like this::
+
+	4 days, 3 hours, and 2 minutes ago
+
+future=
+-------
+
+The ``future=`` parameter determines what text is wrapped around the relative
+date when the date is in the future. Any text is allowed, and all copies of
+``%s`` will be replaced with the relative date. The default is "in %s". For
+example, assuming a date 2 days into the future, this::
+
+	{entry_date:relative future="%s until"}
+
+Would be rendered like this::
+
+	2 days until
+
+Another example::
+
+	{entry_date:relative future="in %s time"}
+
+Would be rendered like this::
+
+	in 2 days time
+
+less_than=
+----------
+
+The ``less_than=`` parameter determines what text to use when the relative date
+is below the threshold of the smallest unit. The default is "less than". For
+example, assuming a date only seconds old this::
+
+	{entry_date:relative units="minutes" less_than="not quite"}
+
+Would be rendered like this::
+
+	not quite one minute ago
+
+past=
+-----
+
+The ``past=`` parameter determines what text is wrapped around the relative
+date when the date is in the past. Any text is allowed, and all copies of
+``%s`` will be replaced with the relative date. The default is "ago". For
+example, assuming a date 2 days ago, this::
+
+	{entry_date:relative past="%s in the past"}
+
+Would be rendered like this::
+
+	2 days in the past
+
+singular=
+---------
+
+The ``singular=`` parameter determines what text to display when the value of a
+given unit is 1. The default is "one". For example, assuming a date 1 day in the past this::
+
+	{entry_date:relative singular="1"}
+
+Would be rendered like this::
+
+	1 day ago
+
+stop=
+-----
+
+The ``stop=`` parameter determines when to stop calculating a relative date and
+instead display a standard date. When this happens the `format=`_ and
+`timezone=`_ parameters will be processed. Any valid date/time string parameter
+for PHP's `strtotime() <http://www.php.net/manual/en/function.strtotime.php>`_
+function is acceptable. ExpressionEngine will compute a timestamp based on the
+date and the provided ``stop=`` value. When the current timestamp is greater
+than or equal to the computed timestamp the date will be displayed as a
+standard date.
+
+For example, if you want relative dates but only for one day::
+
+	{entry_date:relative stop="+1 day" format="%F %d %Y"}
+
+Or perhaps you would rather show relative dates until midnight::
+
+	{entry_date:relative stop="tomorrow" format="%F %d %Y" timezone="Pacific/Tahiti"}
+
+If an invalid value is used for ``stop=`` a relative date will be displayed.
+
+units=
+------
+
+The ``units=`` parameter determines which parts of a relative date are
+calculated prior to displaying them. The following units are available:
+
+-  ``years``
+-  ``months``
+-  ``weeks``
+-  ``days``
+-  ``hours``
+-  ``minutes``
+-  ``seconds``
+
+When a unit is omitted the next smallest unit will reflect it. For example,
+assuming a date 8 days old this::
+
+	{entry_date:relative units="weeks|days"}
+
+Would be rendered like this::
+
+	one week ago
+
+But this::
+
+	{entry_date:relative units="days"}
+
+Would be rendered like this::
+
+	8 days ago
+
+The default is equivalent to::
+
+	units="years|months|weeks|days|hours|minutes|seconds"

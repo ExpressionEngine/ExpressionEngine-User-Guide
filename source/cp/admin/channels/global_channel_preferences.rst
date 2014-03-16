@@ -8,12 +8,13 @@ Global Channel Preferences
 This section of the Control Panel sets global preferences for your
 channels. The following preferences are available:
 
+.. _global-channel-category-url-titles-label:
+
 Use Category URL Titles In Links?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This preference lets the name of each category appear in your URLs
-rather than the numeric indicator (e.g. "/C12/") on pages such as your
-Category Archive page.
+This preference sets the system to generate category links with category
+URL titles rather than the numeric category indicator (e.g. ``/C12/``).
 
 In order to use this feature, you **must** use the channel= parameter in
 the following tags, and if you specify multiple channels, they **must**
@@ -22,6 +23,8 @@ share identical Category Groups:
 -  {exp:channel:categories}
 -  {exp:channel:category\_heading}
 -  {exp:channel:entries}
+
+.. _global-channel-category-url-indicator-label:
 
 Category URL Indicator
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -45,13 +48,15 @@ The "indicator" word that you choose will become a 'reserved' word,
 which means that it **cannot** be used for Template Group or Template
 names.
 
+.. _auto-assign-categoryP-label:
+
 Auto-Assign Category Parents
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If this option is set to "yes", when new entries that contain category
-assignments are submitted, the "parent" category of any sub-categories
-will be automatically assigned. If set to "no", the entry will only be
-assigned to the child category.
+Set whether to assign an entry to both the selected category and its
+parent category.
+
+.. _global-channel-clear-cache-label:
 
 Clear all caches when new entries are posted?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -64,10 +69,12 @@ Cache Dynamic Channel Queries?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This feature will improve the speed at which your channel pages load by
-caching queries that are normally executed dynamically. 
+caching queries that are normally executed dynamically.
 
 .. note:: Enable this preference only if you **do not** use the "future
 	entries" or "expiring entries" feature.
+
+.. _global-channel-word-seperator-label:
 
 Word Separator for URL Titles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

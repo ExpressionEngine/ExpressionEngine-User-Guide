@@ -5,6 +5,186 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.8.1
+-------------
+
+Release Date: March 14, 2014
+
+- Bug Fixes:
+
+  - Fixed a bug (#20165) where HTML elements with certain missing
+    attributes could cause a JavaScript error in the control panel.
+
+Version 2.8.0
+-------------
+
+Release Date: February 28, 2014
+
+- Important:
+
+  - Fixed a security issue that could result in arbitrary script
+    execution in certain circumstances.
+
+- General Changes:
+
+  - Added the ability to create
+    :doc:`Template Layouts </templates/layouts>`.
+  - Added the ability to create
+    :doc:`Template Routes </urls/template_routes>`.
+  - Added :ref:`caching drivers <caching_drivers>` to allow storage of
+    cache items in the filesystem, Memcached or Redis.
+  - Added the ability for all date variables to display as
+    :ref:`relative dates <relative_dates>`.
+  - Added a ``timezone=`` parameter for use on all date variables.
+  - Added date and time formats to the
+    :doc:`Localization Settings </cp/admin/localization_settings>`
+    replacing the choice between "United States" and "European" (fixes
+    bug #19492).
+  - Added :ref:`new parameters <relationship_tag_params>`
+    (``category=``, ``show_expired=``, ``start_on=``, ``stop_before=``)
+    to the Relationships field tag.
+  - Added a ``{cp_session_id}`` global template tag (fixes bug
+    #19501).
+  - Added ``{current_time}`` as a valid tag to the Wiki module (fixes
+    bug #17299).
+  - Added ``{current_time}`` as a valid tag to the Forum module.
+  - Added the ability to disable an extension without removing database
+    records tied to the extension.
+  - Add-ons now prompt to enable extensions if the package has an
+    extension and extensions are disabled.
+  - File, Forum, Member, Query, Search, Wiki, and Messages pagination
+    now uses the
+    :doc:`Channel style of pagination </templates/pagination>`.
+  - Added the ability to always show first and last links for pagination.
+  - Added the ability to pad pagination page number links to whatever
+    number you want.
+  - Changed pagination behavior such that URLs that would request a page
+    that shouldn't exist (e.g. page 50 in a list of 10 pages) will
+    trigger the ``{if no_results}`` conditional.
+  - The idle modal now stays open indefinitely and no longer redirects to
+    the homepage after half an hour.
+  - Disabled the login modal when Remember Me is checked.
+  - Textareas in Grid have the option of showing formatting buttons.
+  - Query profiler shows information about where a query was run from.
+  - Renamed ``admin_session_type`` config item to ``cp_session_type``.
+  - Renamed ``user_session_type`` config item to
+    ``website_session_type``.
+  - All cookies now default to httponly. This may be changed using the
+    ``cookie_httponly``
+    :ref:`system configuration override <cookie_httponly_config>`.
+  - Added a nofollow attribute to the Redirect library's off-site links.
+  - Added an overflow style to the File Manager page to enable scrolling
+    of wide tables.
+  - Deprecated Channel Form's ``preserve_checkboxes=`` parameter, all
+    checkboxes are now preserved by default.
+  - Disabled CSRF checks for Search module searches, to eliminate
+    that occasional bit of visitor frustration.
+  - Cleaned up the default config.php file to remove unnecessary and
+    non-functional config items.
+  - Made control panel URLs easier to read.
+
+- Bug Fixes:
+
+  - Fixed a bug where Control Panel forms were being redirected to the
+    homepage after logging back in with the idle modal.
+  - Fixed a bug where the Control Panel idle modal destroyed the
+    associated active frontend session.
+  - Fixed a bug where back button operation was spotty when using secure
+    forms.
+  - Fixed a bug where the login page would continually redirect back to
+    itself.
+  - Fixed a potential XSS vulnerability where some HTML entities were
+    handled incorrectly.
+  - Fixed a bug in Relationships where long optional branches caused the
+    result set to be truncated.
+  - Fixed an issue where the Channel Entries tag was not site aware when
+    using the `pages_only=` parameter.
+  - Fixed a bug (#20043) where global variables inside conditionals would
+    not parse if the conditional included a variable that was substring of
+    the global variable.
+  - Fixed a bug (#19936) where the ``{encode=}`` tag would fail if used
+    in a Text field or Textarea field using Markdown based formatting.
+  - Fixed a bug where a File field's undo function may not work correctly
+    when inside a Grid field.
+  - Fixed a bug (#19966) where deleting a Relationship field from a Grid
+    field may not clean up previous relationships.
+  - Fixed a bug (#19975) where adding a Grid row, deleting one, then
+    adding one may cause one of the new rows not to be saved.
+  - Fixed a bug where a Grid could not contain a column with the same name
+    as its parent Grid field.
+  - Fixed a bug where a Channel Entries loop containing a Grid field and a
+    Relationships field containing that same Grid field would cause the
+    first Grid field not to parse.
+  - Fixed a bug (#20034) where a the search parameter in a Grid field
+    that is not in a channel content type would not work.
+  - Fixed a bug (#20030) where the backspace parameter would not work in
+    a Grid field.
+  - Fixed a bug (#20038) where Channel Form's ``preserve_checkboxes=``
+    parameter wasn't being respected.
+  - Fixed a bug where Moblog couldn't parse emails where the entire email
+    was a single inline attachment.
+  - Fixed a bug where expiration and comment expiration field defaults
+    were not observing the Channel Preferences settings.
+  - Fixed a bug (#19941) where a MySQL error could occur when resetting a member's
+    publish count to 0.
+  - Fixed a bug (#19946) where a MySQL error could occur when changing the field
+    type of a member custom field.
+  - Fixed a bug (#19947) where the assigned field format type was not applied to
+    Grid fields for certain field types (Checkbox, Multi-Select, Radio, Select).
+  - Fixed a bug in the Moblog control panel where a successful moblog check did
+    not return a success message.
+  - Fixed a bug in ExpressionEngine Core (#19972) where a PHP error could occur in
+    the control panel under certain permission settings.
+  - Fixed a bug (#19977) where the keyword search could fail on the Content Edit
+    page.
+  - Fixed a bug (#20011) in the Channel Entries tag where the
+    ``show_pages=`` parameter did not work properly with entry_id set to
+    not show specific ids.
+  - Fixed a bug (#19982) in the Channel entry form where a PHP error could occur
+    using certain combinations of add-ons.
+  - Fixed a bug in the RSS module's feed tag where closed entries were not included
+    regardless of the status parameter specifications.
+  - Fixed a bug in the Wiki where the logout link did not work if Secure Mode was
+    enabled.
+  - Fixed a bug (#19964) where the entry confirmation page would show 0
+    comments, regardless of how many comments the entry actually had.
+  - Fixed a bug (#20056) where dates were properly formatted in the Channel Form
+    if European date formatting was used.
+
+- Developers:
+
+  - Added :doc:`Cache class </development/usage/cache>` which provides a
+    key-value cache store.
+  - Added a ``bool_config_item()`` helper function to retrieve y/n
+    config file items as booleans.
+  - Added a ``cp_url()`` :ref:`helper function <cp_internal_links>` to
+    create prettier control panel URLs.
+  - Added ``parse_date_variables()`` method to the Template class for
+    proper handling of all date variables.
+  - Added a ``no_markup`` option to the Markdown processor.
+  - **Reactor:** Added :func:`channel_search_modify_search_query` hook
+    for modifying the query cached by the search module.
+  - **Reactor:** Added :func:`channel_search_modify_result_query` hook
+    for modifying the query retrieved by the search module.
+  - Replaced Magpie with
+    :doc:`SimplePie </development/usage/rss_parser>` for RSS feed
+    parsing.
+  - Deprecated :func:`channel_module_create_pagination`, use
+    :func:`pagination_create` instead
+  - Deprecated :func:`channel_module_fetch_pagination_data`, use
+    :func:`pagination_fetch_data` instead
+  - Deprecated ``Functions::set_cookie()``, please use
+    ``EE_Input::set_cookie()``.
+  - Deprecated use of ``EE_Input::set_cookie()`` to delete cookies,
+    please use ``EE_Input::delete_cookie()``.
+  - XIDs are now multi-use, as a result ``secure_forms_check()``,
+    ``check_xid()``, ``generate_xid()``, ``delete_xid()``,
+    ``restore_xid()``, and ``garbage_collect_xids()`` in ``EE_Security``
+    are all deprecated.
+  - The ``XID`` constant is deprecated, please use ``CSRF_TOKEN``.
+  - The ``XID`` field has been deprecated, please name your hidden
+    fields ``csrf_token`` or use one of the form helpers.
+
 Version 2.7.3
 -------------
 
@@ -298,7 +478,7 @@ Release Date: August 27, 2013
 
 - General Changes:
 
-  - Added a new fieldtype called :doc:`Grid </modules/channel/grid>` for
+  - Added a new fieldtype called :doc:`Grid </add-ons/channel/grid>` for
     grouping fieldtypes in repeatable rows.
   - Added support for New Relic performance monitoring
   - Added Markdown plugin and field formatting option.
@@ -549,7 +729,7 @@ Release Date: April 23, 2013
   - Timezone selection menus now include all timezones for automatic
     date localization and handling of Daylight Saving Time rules.
   - Added Subscriber List tag to the :doc:`Comment Module
-    </modules/comment/index>`
+    </add-ons/comment/index>`
   - Added ``inline`` option to ``paginate`` parameter.
   - Added new variables to the Channel Next/Previous tags:
 
@@ -1408,7 +1588,7 @@ Release Date: May 7, 2012
 
 - General Changes:
 
-  - :doc:`Rich Text Editor </modules/rte/control_panel/index>`
+  - :doc:`Rich Text Editor </add-ons/rte/control_panel/index>`
 
     - Added new module and fieldtype for the new rich text editor.
     - Added user preferences for rich text editor under my preferences.
@@ -2175,7 +2355,7 @@ Release Date: June 22, 2011
 
 - General Changes:
 
-  - Added a :doc:`File Module </modules/file/index>` to display file
+  - Added a :doc:`File Module </add-ons/file/index>` to display file
     information on the frontend.
   - Added ability to edit file metadata from the File Manager.
   - Added several file types to the mimetype listing. **Please update
@@ -3066,7 +3246,7 @@ Build 20101018 (initial release)
   - Altered version update notification to notify users if a new
     ExpressionEngine release is a security release.
   - Altered the behavior of the :doc:`Channel Category tag's
-    </modules/channel/categories>` show_empty= parameter channel
+    </add-ons/channel/categories>` show_empty= parameter channel
     specific. (Waits for the cheering to die down....)
   - Altered member profile fields to disallow HTML.
   - Altered final file permissions on uploads to compensate for
@@ -3079,23 +3259,23 @@ Build 20101018 (initial release)
   - Added a template synchronization warning in the Search and Replace
     tool for users saving templates as files (issue #13551).
   - Added a restrict_channel= parameter to the :doc:`Channel Category
-    tag </modules/channel/categories>`, which allows overriding the
+    tag </add-ons/channel/categories>`, which allows overriding the
     new default behavior of its show_empty= parameter.
   - Added a :doc:`Control Panel
-    </modules/comment/control_panel/index>` to the Comment Module.
+    </add-ons/comment/control_panel/index>` to the Comment Module.
   - Added a new status for comments. Moderated comments will no go in
     with a status of 'Pending' rather than 'Closed' (though moderators
     may still set a comment to 'Closed' status.
   - Added new variables to the Comment Notification Templates (see
     :doc:`Version Notes </installation/version_notes_2.1.1>`).
-  - Added new :doc:`Settings </modules/comment/control_panel/index>`
+  - Added new :doc:`Settings </add-ons/comment/control_panel/index>`
     to the Comment Module (Force word censoring for comments and
     Moderate expired comments).
   - Added new variables to the :doc:`Comment Entries tag
-    </modules/comment/index>` ({member\_group\_id}, {username}, {if
+    </add-ons/comment/index>` ({member\_group\_id}, {username}, {if
     editable}, {if can\_moderate\_comment}, {comment\_stripped}).
   - Added new parameters to the :doc:`Comment Entries tag
-    </modules/comment/index>` (comment\_id=, entry\_status=, status=,
+    </add-ons/comment/index>` (comment\_id=, entry\_status=, status=,
     author\_id=_).
   - Added a random option to the Comment Entries
     :ref:`comment_entries_orderby` parameter.
@@ -3105,7 +3285,7 @@ Build 20101018 (initial release)
     <comment_submission_form>` ({if comments\_expired}, {if
     comments\_disabled}).
   - Added a Comment Notification tag to the :doc:`Comment Module
-    </modules/comment/index>` which gives members the ability to
+    </add-ons/comment/index>` which gives members the ability to
     subscribe to comment notifications for an entry without
     commenting.
   - Added the ability to :ref:`Allow Members to Edit Comments on the
@@ -3787,7 +3967,7 @@ Build 20100415 (initial release)
 - Added a check for required fields when saving custom layouts for the
   publish page.
 - Added a {exp:pages:load_site_pages} tag to the
-  :doc:`/modules/pages/index` for use with the Multiple Site Manager.
+  :doc:`/add-ons/pages/index` for use with the Multiple Site Manager.
 - Added a class variable to the xmlrpc library to increase consistency
   between the Metaweblog/Blogger modules and publishing using the
   control panel.
@@ -4751,7 +4931,7 @@ Build 20091204
   reset the password
 - Fixed bug (#10207 and #10241) Cleaned up display of module buttons in
   Corporate theme.
-- Fixed bug (#10410) addons/extensions\_settings\_custom.php view file
+- Fixed bug (#10410) add-ons/extensions\_settings\_custom.php view file
   missing in corporate theme.
 - Fixed bug (#10420) Fixed PHP Error when updating specialty templates.
 - Fixed bug (#10181) Front end login redirect did not include slash
@@ -4834,7 +5014,7 @@ Build 20091202 (initial release)
   - New custom field types: Multi-select, Checkbox, Radio, and Upload
   - Included jQuery and numerous plugins, themes, and UI effects as
     standard.
-  - Added a :doc:`jQuery module </modules/jquery/index>` to simplify
+  - Added a :doc:`jQuery module </add-ons/jquery/index>` to simplify
     access to jQuery script files in your ExpressionEngine
     installation.
   - Added additional security measures to help alert you if

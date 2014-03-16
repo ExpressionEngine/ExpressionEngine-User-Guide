@@ -20,12 +20,12 @@ appear on your site, whereas entries assigned as Open will typically
 show up.
 
 Through the use of *parameters* in your
-:doc:`/modules/channel/channel_entries` you can limit the display of
+:doc:`/add-ons/channel/channel_entries` you can limit the display of
 your entries based on the status. This is particularly useful if you
 need to create editorial workflow with your entries. Let's say you have
 several authors contributing content. You might create statuses such as
 First Draft, Second Edit, Final Revision, Live, etc. to help manage the
-state of each entry. In this example only the "live" status would appear
+state of each entry. In this example only the "Live" status would appear
 on your site.
 
 The main Statuses screen shows a table of all the existing status

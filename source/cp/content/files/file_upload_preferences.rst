@@ -33,6 +33,8 @@ can create a new destination, or you can click the Edit icon to edit an
 existing destination. Either of these options will take you to the
 following page:
 
+.. _upload-destination-edit-label:
+
 Create/Edit Upload Destination
 ------------------------------
 
@@ -52,7 +54,7 @@ The **full server path** (not a URL) to the upload folder for
 this destination.  For example::
 
 	/home/user/example.com/public_html/images/uploads/
-	
+
 If you are not sure how to determine your server path please contact
 your hosting company.
 
@@ -60,26 +62,6 @@ URL of Upload Directory
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The **full URL** to the new destination. For example: http://example.com/images/uploads/
-
-Overriding Upload Paths and URLs Using Configuration Variables
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Once upload destinations are created, you can optionally override upload
-destination paths, URLs and titles in config.php. For each upload
-destination, you can add an associative array to the
-``$config['upload_preferences']`` variable::
-
-	$config['upload_preferences'] = array(
-	    1 => array(                                                            // ID of upload destination
-	        'name'        => 'Staging Image Uploads',                          // Display name in control panel
-	        'server_path' => '/home/user/example.com/staging/images/uploads/', // Server path to upload directory
-	        'url'         => 'http://staging.example.com/images/uploads/'      // URL of upload directory
-	    )
-	);
-
-Each key in the array is optional and only overrides existing values in
-the database, new upload destinations cannot be created using this
-configuration variable.
 
 Allowed File Types
 ~~~~~~~~~~~~~~~~~~

@@ -180,6 +180,8 @@ embed
 This variable allows you to embed one Template within another. Please
 see the :doc:`Embedded Templates <../embedding>` section.
 
+.. _global-encode:
+
 encode
 ------
 
@@ -264,6 +266,16 @@ lang
 
 This variable will be substituted for the **Default XML Language**
 preference under :menuselection:`Admin --> General Configuration`.
+
+layout
+------
+
+::
+
+  {layout="news/local"}
+
+This variable allows you to wrap a Template in another. Please
+see the :doc:`Template Layouts <../layouts>` section.
 
 location
 --------
@@ -436,17 +448,16 @@ webmaster\_email
 The email address for the site, as specified in :doc:`Email
 Configuration </cp/admin/email_configuration>`.
 
-.. _global_xid_hash:
+.. _global_csrf_token:
 
-XID\_HASH
----------
+csrf\_token
+-----------
 
 ::
 
-  {XID_HASH}
+  {csrf_token}
 
-This variable is a required value for hidden form field 'XID' used in
-secure forms.
+This variable is a required value for the hidden form field 'csrf_token'.
 
 .. _global_alt_syntax:
 

@@ -12,19 +12,20 @@ Design
   - :doc:`templates/global_variables`
   - :doc:`templates/template_preferences_manager`
   - :doc:`templates/global_template_preferences`
+  - :doc:`templates/template_route_manager`
 
 - :doc:`message_pages/index`
 - Themes
 
   - :doc:`themes/member_profile_templates`
-  - :doc:`/modules/forum/forum_themes`
-  - :doc:`/modules/wiki/wiki_templates`
+  - :doc:`/add-ons/forum/forum_themes`
+  - :doc:`/add-ons/wiki/wiki_templates`
 
 
 .. toctree::
 	:glob:
 	:hidden:
-	
+
 	message_pages/index
 	templates/index
 	themes/index

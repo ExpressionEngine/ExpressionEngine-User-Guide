@@ -8,6 +8,8 @@ Search Log Configuration
 This section of the Control Panel allows you to set the Search Term
 Logging preferences.
 
+.. _enable-search-term-log-label:
+
 Enable Search Term Logging
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -16,6 +18,8 @@ set to yes, each search term submitted will be stored so you can view it
 at:
 
 :menuselection:`Tools --> Logs --> Search Logs`
+
+.. _max-search-save-label:
 
 Maximum number of recent search terms to save
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

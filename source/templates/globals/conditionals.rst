@@ -16,17 +16,33 @@ Simple Conditionals
 A conditional is considered "simple" if it is evaluating variables that
 are already available by the time the :doc:`template parsing engine
 </templates/template_engine>` reaches the simple conditionals parsing
-stage (e.g. segment, embed, and global variables), the expression
-evaluates a single variable (i.e. contains no logical operators such as
-OR, AND), and the conditional does not make use of the *else* or
-*elseif* control structures. In short, a simple conditional will look
-very much like this::
+stage. The expression evaluates a single variable (i.e. contains no
+logical operators such as OR, AND), and the conditional does not make
+use of the *else* or *elseif* control structures. In short, a simple
+conditional will look very much like this::
 
-	{if username == "joe"}  <h1>Hi Joe!</h1>  {/if}
+	{if embed:name == "joe"}  <h1>Info about Joe!</h1>  {/if}
+
+Currently the variables available for simple conditionals are:
+
+=============  =============
+Variable Type  Example
+=============  =============
+Globals        {app_version}
+Snippets       {snp_name}
+Segments       {segment_1}
+Site           {site_label}
+Embed          {embed:name}
+Layout         {layout:name}
+=============  =============
+
 
 .. note:: If you are testing against a word, you should enclose the word
    in single or double-quotes. If you are testing against a number, then
    you do not need to use quotes.
+
+.. note:: The proscription against *elseif* applies to any conditionals inside
+   the conditional tag pair.
 
 Protected Characters
 ~~~~~~~~~~~~~~~~~~~~
@@ -136,7 +152,6 @@ Operator  Name
 >         Greater than
 >=        Greater than or equal to
 <>        Not equal
-<>        Not equal
 %		  Remainder of one number divided by another
 ========  ==========================================
 
@@ -180,7 +195,7 @@ A modulus operator finds the remainder of division of one number by
 another. This can be handy when you want to do something every nth
 iteration of a loop. For example, if we want to display a horizontal
 rule for every 5th entry in a :doc:`Channel Entries
-</modules/channel/channel_entries>` loop, we would write this
+</add-ons/channel/channel_entries>` loop, we would write this
 conditional::
 
   {if count % 5 == 0}

@@ -8,6 +8,8 @@ Image Resizing Preferences
 This section of the Control Panel allows you to define preferences for
 image resizing, such as creating thumbnails or resizing uploaded images.
 
+.. _image-resizing-protocol-label:
+
 Image Resizing Protocol
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -19,6 +21,8 @@ installed and available on your server. The options are:
 - `GD 2 <http://www.boutell.com/gd/>`_
 - `ImageMagick <http://www.imagemagick.org/script/index.php>`_
 - `NetPBM <http://netpbm.sourceforge.net/>`_
+
+.. _image-converter-path-label:
 
 Image Converter Path
 ~~~~~~~~~~~~~~~~~~~~

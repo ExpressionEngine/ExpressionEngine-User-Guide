@@ -10,6 +10,8 @@ output from the server to the user. This includes how debugging
 information is handled for your website. These are general settings that
 apply throughout the website/system.
 
+.. _generate-http-headers-label:
+
 Generate HTTP Page Headers?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -19,43 +21,44 @@ preference to "Yes" causes headers to be explicitly sent by the server.
 Sending explicit headers is generally considered to be a good practice,
 although in some cases it can cause some problems.
 
+.. _output-enable-gzip-label:
+
 Enable GZIP Output?
 ~~~~~~~~~~~~~~~~~~~
 
-Setting this preference to "Yes" will cause the web server to send out
-your pages in the compressed gzip format. Browsers will automatically
-decompress the pages and display them as normal; there will be no
-visible difference to your users apart from a faster page loading time.
+Set the system to serve compressed front-end pages for faster load times
+as long as the requesting browser supports gzip compression, PHP's zlib
+extension is loaded, and the web server is not already serving
+compressed pages.
 
-In order for this option to work your server must support the gzip
-format. Additionally, the browser being used to view your site must also
-support pages served in the gzip format. Many modern browser support
-this, but not all do, so if you are concerned with wide-spread
-compatibility you may want to set this to "no". (Also note that while
-Internet Explorer does support this feature, it also contains bugs in
-its implementation which can have adverse consequences.)
+.. note:: This setting only controls whether ExpressionEngine itself
+    serves up compressed front-end pages. If the web server is
+    configured to serve compressed pages, this setting will have no
+    effect.
+
+.. _output-force-query-strings-label:
 
 Force URL query strings?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Setting this to "Yes" will force the system to use a standard query
-string in all your URLs like this:
+If enabled, ExpressionEngine will render URLs with a question mark
+following ``index.php`` in order to pass along segment information as a
+standard query string::
 
-``http://example.com/index.php?/channel/joe/`` (notice the question mark).
+    http://example.com/index.php?/channel/joe/
 
-When set to "No", the system uses a more search-engine friendly format
-similar to:
+This is necessary for only a few types of web servers to process
+ExpressionEngine's URLs correctly. ExpressionEngine's default is a much
+more search-engine friendly format::
 
-``http://example.com/index.php/channel/joe/``
+    http://example.com/index.php/channel/joe/
 
-The majority of servers will be able to use the default ("No") method,
-which is almost universally preferred by users. Some Windows servers
-(and very occasionally other types) do not support this feature and will
-have to be set to "Yes". You'll know if this affects you if none of your
-links seem to work.
 
-In addition, some people will need to use this variable in conjunction
-with editing the $qtype variable in your main site index.php file.
+In rare circumstances, you may need to use this variable in conjunction
+with editing the ``$qtype`` variable in your main site ``index.php``
+file.
+
+.. _output-debug-redirect-method-label:
 
 Redirection Method
 ~~~~~~~~~~~~~~~~~~
@@ -71,6 +74,8 @@ functions. There are two options:
   for windows-based servers due to the poor way they handle PHP's
   "location" functionality. This method is usually slightly slower than
   the other method.
+
+.. _output-debug-pref-label:
 
 Debug Preference
 ~~~~~~~~~~~~~~~~
@@ -97,12 +102,16 @@ Javascript that may resemble EE code, including curly brackets, this
 setting **must** be 1 in order for the Javascript to function, or
 ExpressionEngine will hide Javascript output believing it to be an error.
 
+.. _output-debug-display-profiler-label:
+
 Display Output Profiler?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 If enabled, Super Admins will see benchmark results, SQL queries, and
 submitted form data displayed at the bottom of the browser window.
 This is useful for debugging.
+
+.. _output-debug-display-template-debug-label:
 
 Display Template Debugging?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -112,6 +121,8 @@ created in the ExpressionEngine Template parser will be shown to Super
 Admins at the bottom of the browser window. This includes Global Variables,
 Conditionals, Tags, PHP on Input/Ouput, Embeds, and Extension Hooks.
 This is an excellent tool for debugging your templates.
+
+.. _output-debug-use-newrelic-label:
 
 Enable New Relic RUM JavaScript?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

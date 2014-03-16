@@ -14,6 +14,8 @@ may use the letters a-z, the numbers 0-9, and the underscore and
 hyphen/dash characters. You should refrain from creating all-numeric
 Template names as they can cause confusion with Entry IDs used in URLs.
 
+.. _template-type-label:
+
 Template Type
 ~~~~~~~~~~~~~
 

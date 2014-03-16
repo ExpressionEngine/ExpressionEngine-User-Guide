@@ -31,7 +31,7 @@ preferences. New pages created in the 2.x versions will already be
 encoded, however imported data may not have been. Further, this update
 checks that page data is stored consistent with the 1.6.9 update.
 
-If you use :doc:`Pages </modules/pages/index>` and have any add-ons that
+If you use :doc:`Pages </add-ons/pages/index>` and have any add-ons that
 might make use of this array, be certain to update the add-ons as part
 of this version update. Not doing so may result in broken pages. Add-ons
 that may be affected include Structure, LG Better Meta, and the Nested

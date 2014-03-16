@@ -5,7 +5,7 @@ Building a Simple News Site from Start to Finish
 This guide will introduce you to the basic concepts behind ExpressionEngine.
 We'll create a simple two-page site with a news section to show a glimpse of the power,
 flexibility and level of control over your markup that ExpressionEngine offers over
-other systems. 
+other systems.
 
 .. contents::
 	:local:
@@ -37,7 +37,7 @@ we haven't created any content yet!) and the other is your site's Control Panel.
 Follow the link to your Control Panel (also known as the "back end") and log in
 using the same username and password you provided during installation. If you don't
 remember your Control Panel link, it's usually similar to: `<http://example.com/admin.php>`_
-	
+
 .. important:: If your Control Panel link just brings up the Installation Wizard
 	again, you need to remove the *system/installer* folder from your server as
 	outlined in the :doc:`Installation Instructions </installation/installation>`.
@@ -79,7 +79,7 @@ You'll see the new Channel we just created:
 	the other hand, is how you'll refer to this Channel in your actual code. Don't worry, we'll get
 	to that later.
 
-   
+
 **************
 Channel Fields
 **************
@@ -131,14 +131,14 @@ Behold, our beautiful new Channel Field:
 Channel Group Assignments
 *************************
 
-Even though we've created our **News** Channel, as well as our **News Fields** Group, we haven't explicitly 
+Even though we've created our **News** Channel, as well as our **News Fields** Group, we haven't explicitly
 linked the two together yet. Let's do that now.
 
 #. Go to :menuselection:`Admin --> Channel Administration --> Channels`.
 #. Click the *Edit Group Assignments* link located to the right of the **News** Channel.
 #. Leave **Category Group** set to "None".
 #. Set **Status Group** to "Statuses".
-#. Set **Channel Field Group** to "News Fields". 
+#. Set **Channel Field Group** to "News Fields".
 #. Click *Update*.
 
 .. figure:: ../images/getting_started_channel_group_assignments.png
@@ -164,7 +164,7 @@ this guide we've stuck with ExpressionEngine's default Status Group, which conta
 **Closed**. By default, content with an "Open" status will be shown, while content that is "Closed"
 will not appear at all. There are other creative uses for Statuses, especially when it comes to editorial
 workflows. See the :doc:`Statuses </cp/admin/channels/statuses>` section for more information.
- 
+
 Channel Field Group
 ===================
 
@@ -240,11 +240,11 @@ Template is specified. For example, if we create a new Template Group named **ne
 index template using just::
 
 	http://example.com/news
-	
+
 Creating a Template
 ===================
 
-Let's create our first Template, which will be a simple news page that displays Entries from our News Channel. 
+Let's create our first Template, which will be a simple news page that displays Entries from our News Channel.
 
 #. Go to :menuselection:`Design --> Templates --> Template Manager`.
 #. Click the *New Group* button.
@@ -314,11 +314,11 @@ This tag, like most, has three segments: **exp**, **channel**, and **entries**.
 
 #. **exp** simply tells ExpressionEngine that this is a Tag. All Tags will begin with this.
 #. **channel** refers to the *Module* we want to use to fetch our data. ExpressionEngine is made
-   up of various Modules, and each provides its own Tags. The :doc:`/modules/channel/index` is used to fetch
+   up of various Modules, and each provides its own Tags. The :doc:`/add-ons/channel/index` is used to fetch
    data from your Channels, and is the most commonly used Module in ExpressionEngine.
 #. **entries** refers to the type of data we want the Module to fetch, or in some cases,
    the action we want the Module to take. In this case, we're telling the Channel Module
-   that we want to retrieve our :doc:`Entries </modules/channel/channel_entries>`.
+   that we want to retrieve our :doc:`Entries </add-ons/channel/channel_entries>`.
 
 Parameters
 ==========
@@ -337,7 +337,7 @@ This tells the Channel Module that we want the 10 most recent Entries from the C
 *News*. Simple enough, right? Now that we've told it what to fetch, let's actually use that data!
 
 .. tip:: Here's the full list of available :ref:`parameters <channel_entries_parameters>`
-	for the :doc:`/modules/channel/channel_entries`. 
+	for the :doc:`/add-ons/channel/channel_entries`.
 
 Variables
 =========
@@ -348,7 +348,7 @@ of the Channel Field. Remember the News Body field we created earlier? You can g
 like so::
 
 	{news_body}
-	
+
 And the Title of the Entry is easily accessed with::
 
 	{title}
@@ -361,10 +361,10 @@ who it was submitted by, and much more. For example, to get the author of an Ent
 Now, we're ready to use this Tag in our Template.
 
 .. tip:: Here's the full list of available :ref:`variables <channel_entries_single_variables>`
-	for the :doc:`/modules/channel/channel_entries`. 
+	for the :doc:`/add-ons/channel/channel_entries`.
 
 ***********************
-Putting it All Together 
+Putting it All Together
 ***********************
 
 Switch back to the Template Editor tab in your browser and
@@ -378,16 +378,16 @@ update the Template with the following code::
 	</head>
 	<body>
 		<h1>All the news that's fit to pixelize.</h1>
-	
+
 		{exp:channel:entries channel="news" limit="10"}
 			<h2>{title}</h2>
 			<p>By {author}</p>
-			
+
 			{news_body}
 		{/exp:channel:entries}
 	</body>
 	</html>
-	
+
 After clicking *Update*, switch back over to the browser tab with the "Rendered Template" on it and
 hit Refresh. By default, the Channel Module sorts your Entries by newest to oldest, so
 you should now see your two previously-created Entries in all their glory:
@@ -395,7 +395,7 @@ you should now see your two previously-created Entries in all their glory:
 .. figure:: ../images/getting_started_template_v2.png
    :align: center
    :alt: Template with Dynamic Content
-   
+
 *****************
 The More You Know
 *****************
@@ -409,7 +409,7 @@ Tag Pairs vs. Single Tags
 
 Did you notice the {/exp:channel:entries} line in the code above? It's called a *closing tag*,
 and it is **required** in order to close the opening {exp:channel:entries} Tag, in
-much the same way that closing certain HTML elements is required. 
+much the same way that closing certain HTML elements is required.
 
 Most Tags in ExpressionEngine have both an opening and a closing Tag. We refer to them as
 *Tag Pairs* to differentiate them from *Single Tags*. Single Tags are just an opening Tag -
@@ -420,7 +420,7 @@ Looping Tag Pairs
 =================
 
 The {exp:channel:entries} Tag that we've used here is a good example of a *Looping Tag Pair*.
-It took the code we placed between its opening and closing Tags and actually processed it twice - 
+It took the code we placed between its opening and closing Tags and actually processed it twice -
 once for each Entry.
 
 This is a very powerful way to output information from multiple Entries, whether in a table,
@@ -465,7 +465,7 @@ Let's add this code::
 	<body>
 		<h1>Home, Sweet Home.</h1>
 		<p>Kick back and relax... you've made it home.</p>
-	
+
 		<h2>The Latest</h2>
 		<p>Check out the <a href="{path='news'}">latest news</a>:</p>
 		<ul>
@@ -492,7 +492,7 @@ This line may have caught your attention::
 		<p>Check out the <a href="{path='news'}">latest news</a>:</p>
 
 It contains the *path* variable, which creates a URL to a Template Group/Template.
-In this case we want to link to "news/index", but since "index" is implied we can leave it off.  
+In this case we want to link to "news/index", but since "index" is implied we can leave it off.
 The path variable is one of many :doc:`/templates/globals/index` you can use. *Global* just means
 that you can access it from anywhere inside your Template; it doesn't have to be inside a Tag Pair.
 
@@ -501,7 +501,7 @@ Then there's this line, which you'll notice *is* inside our Channel Entries Tag 
 				<li><a href="{url_title_path='news'}">{title}</a></li>
 
 *url_title_path* is one of the many :ref:`variables <channel_entries_single_variables>`
-you can use inside the :doc:`Channel Entries Tag </modules/channel/channel_entries>`,
+you can use inside the :doc:`Channel Entries Tag </add-ons/channel/channel_entries>`,
 in addition to the variables containing the content of your Channel Fields. It acts very
 similarly to the *path* variable we just discussed, but it also appends the Entry's **URL Title**
 to the URL which lets us link directly to the entry, as you'll see next.
@@ -509,7 +509,7 @@ to the URL which lets us link directly to the entry, as you'll see next.
 A Dynamic Duo
 =============
 
-Now follow the link to our "Hello, World!" Entry, which will look like 
+Now follow the link to our "Hello, World!" Entry, which will look like
 `<http://example.com/news/hello-world>`_ thanks to *url_title_path*. You'll be
 taken to our *News* Template Group. But wait, only one Entry is shown now!
 
@@ -529,7 +529,7 @@ influenced by what happens to be in the current URL. To disable this behavior, s
 		{exp:channel:entries channel="news" limit="10" dynamic="no"}
 
 Again, all of the Channel Entries' available parameters and variables are detailed in its
-:doc:`documentation page </modules/channel/channel_entries>`.
+:doc:`documentation page </add-ons/channel/channel_entries>`.
 
 *********************
 Go Forth and Conquer!
@@ -544,7 +544,7 @@ While you should read the User Guide in its entirety, here are some topics you m
 interested in:
 
 - :doc:`/intro/getting_the_most`
-- :doc:`/modules/index`
+- :doc:`/add-ons/index`
 - :doc:`/urls/remove_index.php`
 - :doc:`/cp/sites/index`
 - :doc:`/templates/php`
