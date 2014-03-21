@@ -121,6 +121,8 @@ retain the current query string, e.g.::
 .. note:: This variable has already been URL encoded so all characters
   are transported safely and ready to append to URLs as needed.
 
+.. _global_variable_current_url:
+
 current_url
 -----------
 

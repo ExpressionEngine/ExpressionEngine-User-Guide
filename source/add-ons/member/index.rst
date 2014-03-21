@@ -88,6 +88,19 @@ Parameters
 .. contents::
    :local:
 
+action=
+-------
+
+::
+
+  action="https://example.com/"
+
+Allows you to specify the action attribute of the <form> tag. Handy if
+you need to ensure that authentication points to SSL portions of your
+site from non-SSL portions. Often used in conjunction with the
+return= parameter and the :ref:`{current_url} global variable <global_variable_current_url>`
+so your visitors will go back to the page and domain they logged in from.
+
 form_class=
 -----------
 
