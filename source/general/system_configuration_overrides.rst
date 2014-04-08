@@ -1,6 +1,8 @@
 System Configuration Overrides
 ******************************
 
+.. highlight:: php
+
 .. warning:: This article covers advanced topics.
 
 By default, ExpressionEngine's system settings are managed in the
@@ -2225,8 +2227,8 @@ hidden_template_indicator
 -------------------------
 
 Specify the character(s) that denote a :doc:`hidden template
-</templates/hidden_templates>` when used to prefix a template name.
-The default is a dot, e.g. ``.my_hidden_template``.
+</templates/hidden_templates>` when used to prefix a template name. The
+default is an underscore, e.g. ``_my_hidden_template``.
 
 ========== ===========
 Value      Description
@@ -2236,7 +2238,7 @@ Value      Description
 
 Example Usage::
 
-$config['hidden_template_indicator'] = '_';
+$config['hidden_template_indicator'] = '.';
 
 
 hidden_template_404
