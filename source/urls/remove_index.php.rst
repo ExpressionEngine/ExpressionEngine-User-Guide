@@ -67,6 +67,25 @@ Exceptions
 
     RewriteRule ^(.*)$ index.php/$1 [L]
 
+-  If you are running EE from a sub-directory and it still doesn't work after 
+   removing the slash, you may need to specify the sub-directory in your 
+   rewrite rule.  For example, if your sub-folder is named testing, change::
+
+    RewriteRule (.*?)index\.php/*(.*) /$1$2 [R=301,NE,L]
+
+   To::
+
+    RewriteRule (.*?)index\.php/*(.*) testing/$1$2 [R=301,NE,L]
+
+   And change::
+
+    RewriteRule ^(.*)$ /index.php/$1 [L]
+
+   To::
+
+    RewriteRule ^(.*)$ ~dfintlco/index.php/$1 [L]  
+
+
 -  If your host requires forcing query strings, try adding a question
    mark following :file:`index.php` in the RewriteRule line above, like
    so::
