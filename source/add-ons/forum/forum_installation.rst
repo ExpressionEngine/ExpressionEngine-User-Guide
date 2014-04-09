@@ -23,7 +23,7 @@ Step 2
 Inside the unzipped software, you will find a forum directory. Upload
 this directory and everything inside it to your server and place it in
 the system/expressionengine/modules directory. You should end up with it
-located at system/expressionengine/add-ons/forum/.
+located at system/expressionengine/modules/forum/.
 
 Step 3
 ------
