@@ -83,7 +83,7 @@ Exceptions
 
    To::
 
-    RewriteRule ^(.*)$ ~dfintlco/index.php/$1 [L]  
+    RewriteRule ^(.*)$ testing/index.php/$1 [L]  
 
 
 -  If your host requires forcing query strings, try adding a question
