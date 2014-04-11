@@ -9,11 +9,7 @@ wouldn't want visitors to be able to view that template by itself on the
 front-end of your site.
 
 "Hidden" templates are just that: templates that cannot be accessed from
-a URL, but can be used as embedded templates. What makes a template
-"hidden"?
-
-ExpressionEngine uses a convention that is common among many file-
-systems, so it may already be familiar to you. To make a template
+a URL, but can be used as embedded templates. To make a template
 "hidden", simply give it a name preceded by an underscore, e.g.
 ``_my_hidden_template``.
 
