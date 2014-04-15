@@ -2586,8 +2586,8 @@ $config['log_referrers'] = 'n';
 log_search_terms
 ----------------
 
-Deprecated and unused in first party files, this configuration item exists to 
-allow backwards compatibility for any third party add-ons using it.
+Unused in first party files, this configuration item exists to allow backwards 
+compatibility for any third party add-ons using it.
 
 
 log_threshold
@@ -4827,12 +4827,6 @@ $config['tmpl_file_basepath'] = '/home/usr/domain.com/system/expressionengine/te
 **Also found in CP:** :menuselection:`Design --> Templates -->
 Template Preferences`: :ref:`Server path to site's templates
 <general-config-theme-path-label>`
-
-tz_country
-----------
-
-Deprecated and unused in first party files, this configuration item exists to 
-allow backwards compatibility for any third party add-ons using it.
 
 
 un_min_len
