@@ -2065,6 +2065,24 @@ Example Usage::
 $config['encode_removed_text'] = 'Encoded emails not allowed';
 
 
+encryption_key
+--------------
+
+May be used by third parties as part of encoding and decoding encrypted data.  
+The recommended length of the key is 32 characters (128 bits).  The key should 
+include numbers and uppercase and lowercase letters.
+
+========== ===========
+Value      Description
+========== ===========
+``string`` Key value
+========== ===========
+
+Example Usage::
+
+$config['encryption_key'] = 'sy22k6QK6JzH38u4nLZ65bHOdK6VL89d';
+
+
 expire_session_on_browser_close
 -------------------------------
 
@@ -2565,6 +2583,13 @@ Value      Behavior
 Example Usage::
 
 $config['log_referrers'] = 'n';
+
+
+log_search_terms
+----------------
+
+Unused in first party files, this configuration item exists to allow backwards 
+compatibility for any third party add-ons using it.
 
 
 log_threshold
@@ -3371,6 +3396,26 @@ Value       Description
 Example Usage::
 
 $config['prv_msg_throttling_period'] = '60';
+
+prv_msg_upload_path
+-------------------
+
+Set the server path to the private messages uploads directory.
+
+========= ===========
+Value     Description
+========= ===========
+``path``  Full server path to writable private message uploads directory
+========= ===========
+
+Example Usage::
+
+$config['prv_msg_upload_path'] = '/path/images/pm_attachments/';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Members --> Preferences`:
+:ref:`Server Path for Attachment Upload Directory <server-path-for-attachment-upload-directory>`
 
 
 prv_msg_waiting_period
