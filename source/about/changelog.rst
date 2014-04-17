@@ -18,10 +18,8 @@ Release Date: ?
 - General Changes:
 
   - Template Routes can now be reordered for a
-    :doc:`custom parse order </urls/template_routes>`.
-  - Added an ``action=`` :ref:`parameter <member_action_parameter>` to
-    the Member Login tag. Handy for ensuring that authentication goes to
-    an SSL portion of your site.
+    :doc:`custom parse order `.
+  - Added an ``action=`` :ref:`parameter ` to the Member Login tag.
   - Added the ``convert_curly=`` parameter to the Markdown plugin.
   - Added the ``[abbr]`` bbcode tag.
   - Changed the default hidden template indicator to an underscore (e.g.
@@ -142,19 +140,19 @@ Release Date: February 28, 2014
 - General Changes:
 
   - Added the ability to create
-    :doc:`Template Layouts </templates/layouts>`.
+    :doc:`Template Layouts `.
   - Added the ability to create
-    :doc:`Template Routes </urls/template_routes>`.
-  - Added :ref:`caching drivers <caching_drivers>` to allow storage of
+    :doc:`Template Routes `.
+  - Added :ref:`caching drivers ` to allow storage of
     cache items in the filesystem, Memcached or Redis.
   - Added the ability for all date variables to display as
-    :ref:`relative dates <relative_dates>`.
+    :ref:`relative dates `.
   - Added a ``timezone=`` parameter for use on all date variables.
   - Added date and time formats to the
-    :doc:`Localization Settings </cp/admin/localization_settings>`
+    :doc:`Localization Settings `
     replacing the choice between "United States" and "European" (fixes
     bug #19492).
-  - Added :ref:`new parameters <relationship_tag_params>`
+  - Added :ref:`new parameters `
     (``category=``, ``show_expired=``, ``start_on=``, ``stop_before=``)
     to the Relationships field tag.
   - Added a ``{cp_session_id}`` global template tag (fixes bug
@@ -168,7 +166,7 @@ Release Date: February 28, 2014
     extension and extensions are disabled.
   - File, Forum, Member, Query, Search, Wiki, and Messages pagination
     now uses the
-    :doc:`Channel style of pagination </templates/pagination>`.
+    :doc:`Channel style of pagination `.
   - Added the ability to always show first and last links for pagination.
   - Added the ability to pad pagination page number links to whatever
     number you want.
@@ -185,7 +183,7 @@ Release Date: February 28, 2014
     ``website_session_type``.
   - All cookies now default to httponly. This may be changed using the
     ``cookie_httponly``
-    :ref:`system configuration override <cookie_httponly_config>`.
+    :ref:`system configuration override `.
   - Added a nofollow attribute to the Redirect library's off-site links.
   - Added an overflow style to the File Manager page to enable scrolling
     of wide tables.
@@ -267,11 +265,11 @@ Release Date: February 28, 2014
 
 - Developers:
 
-  - Added :doc:`Cache class </development/usage/cache>` which provides a
+  - Added :doc:`Cache class ` which provides a
     key-value cache store.
   - Added a ``bool_config_item()`` helper function to retrieve y/n
     config file items as booleans.
-  - Added a ``cp_url()`` :ref:`helper function <cp_internal_links>` to
+  - Added a ``cp_url()`` :ref:`helper function ` to
     create prettier control panel URLs.
   - Added ``parse_date_variables()`` method to the Template class for
     proper handling of all date variables.
@@ -281,7 +279,7 @@ Release Date: February 28, 2014
   - **Reactor:** Added :func:`channel_search_modify_result_query` hook
     for modifying the query retrieved by the search module.
   - Replaced Magpie with
-    :doc:`SimplePie </development/usage/rss_parser>` for RSS feed
+    :doc:`SimplePie ` for RSS feed
     parsing.
   - Deprecated :func:`channel_module_create_pagination`, use
     :func:`pagination_create` instead
@@ -306,12 +304,12 @@ Release Date: December 10, 2013
 
 - General Changes:
 
-  - Added :ref:`new parameters <relationship_tag_params>` (category,
+  - Added :ref:`new parameters ` (category,
     show_expired, start_on, stop_before) to the relationship tag.
   - Added "random" option to Grid's ``orderby``
-    :ref:`parameter <grid_tag_params>`.
+    :ref:`parameter `.
   - Added ``field_row_index`` and ``field_row_count``
-    :ref:`variables <grid_tag_variables>` to Grid.
+    :ref:`variables ` to Grid.
 
 - Bug Fixes:
 
@@ -592,7 +590,7 @@ Release Date: August 27, 2013
 
 - General Changes:
 
-  - Added a new fieldtype called :doc:`Grid </add-ons/channel/grid>` for
+  - Added a new fieldtype called :doc:`Grid ` for
     grouping fieldtypes in repeatable rows.
   - Added support for New Relic performance monitoring
   - Added Markdown plugin and field formatting option.
@@ -843,7 +841,7 @@ Release Date: April 23, 2013
   - Timezone selection menus now include all timezones for automatic
     date localization and handling of Daylight Saving Time rules.
   - Added Subscriber List tag to the :doc:`Comment Module
-    </add-ons/comment/index>`
+    `
   - Added ``inline`` option to ``paginate`` parameter.
   - Added new variables to the Channel Next/Previous tags:
 
@@ -1702,7 +1700,7 @@ Release Date: May 7, 2012
 
 - General Changes:
 
-  - :doc:`Rich Text Editor </add-ons/rte/control_panel/index>`
+  - :doc:`Rich Text Editor `
 
     - Added new module and fieldtype for the new rich text editor.
     - Added user preferences for rich text editor under my preferences.
@@ -1866,7 +1864,7 @@ Release Date: May 7, 2012
     use __call() magic method.
   - Added ``myaccount_nav_setup`` hook to modify My Account navigation.
     See :doc:`documentation
-    </development/extension_hooks//cp/myaccount/index>` for more
+    ` for more
     information.
   - Added ``email_send`` hook to modify emails or take over email
     sending completely.
@@ -2469,7 +2467,7 @@ Release Date: June 22, 2011
 
 - General Changes:
 
-  - Added a :doc:`File Module </add-ons/file/index>` to display file
+  - Added a :doc:`File Module ` to display file
     information on the frontend.
   - Added ability to edit file metadata from the File Manager.
   - Added several file types to the mimetype listing. **Please update
@@ -2737,7 +2735,7 @@ Build 20110512
 - General Changes:
 
   - File Manager Changes (see :doc:`Version Update Notes
-    </installation/version_notes_2.1.5>`):
+    `):
 
     - Moved file information storage to the database
     - Moved File Upload Preferences to the File Manager
@@ -2772,7 +2770,7 @@ Build 20110512
     global variables within snippets.
   - Removed the Blogger API module.
   - Moved SafeCracker into native modules, **please see the**
-    :doc:`version notes </installation/version_notes_2.2.0>` **about
+    :doc:`version notes ` **about
     how to upgrade**.
 
 - Bug Fixes:
@@ -2962,7 +2960,7 @@ Build 20110101 (initial release)
 
 - File management overhaul stage one completed.
 - Added {exp:comment:edit\_comment\_script} tag to output comment
-  editor via a <script> tag.
+  editor via a  tag.
 - Added {if enable\_avatars}{/if} and {if enable\_photos}{/if} to
   members and forums menu.html theme files.
 - Optimized the Channel Entries tag to consistently not perform page
@@ -2971,121 +2969,121 @@ Build 20110101 (initial release)
   could occur if no additional statuses had been created.
 - Fixed a bug in the Metaweblog API settings page where some dropdown
   menus could populate incorrectly in Internet Explorer.
-- Fixed a bug (#14904) where links to edit entries could be incorrect
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14904" target="_blank">#14904</a>) where links to edit entries could be incorrect
   if the entry list was not fully loaded.
-- Fixed a bug (#13217) where file upload buttons did not submit in
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13217" target="_blank">#13217</a>) where file upload buttons did not submit in
   Internet Explorer 7.
-- Fixed a bug (#15125) where jQuery effects were not correctly combo-
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/15125" target="_blank">#15125</a>) where jQuery effects were not correctly combo-
   loaded.
-- Fixed a documentation error (#14913) where some update instructions
+- Fixed a documentation error (<a href="https://support.ellislab.com/bugs/detail/14913" target="_blank">#14913</a>) where some update instructions
   still advised forcing ASCII mode when uploading.
-- Fixed a documentation error (#15128) where a set of parameters was
+- Fixed a documentation error (<a href="https://support.ellislab.com/bugs/detail/15128" target="_blank">#15128</a>) where a set of parameters was
   out of order in the Module Tutorial.
-- Fixed a documentation error (#14883) where instructions for creating
+- Fixed a documentation error (<a href="https://support.ellislab.com/bugs/detail/14883" target="_blank">#14883</a>) where instructions for creating
   a new theme did not mention the images directory.
-- Fixed a bug (#14876) where some channel preference input fields were
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14876" target="_blank">#14876</a>) where some channel preference input fields were
   not clickable in the corporate theme.
-- Fixed a bug (#14708) where the control panel login did not redirect
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14708" target="_blank">#14708</a>) where the control panel login did not redirect
   with a session ids, breaking access in some cases.
-- Fixed a bug (#14868) in the Moblog where the field formatting
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14868" target="_blank">#14868</a>) in the Moblog where the field formatting
   settings were not respected.
-- Fixed a bug (#14851) in the Moblog where field overrides did not work
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14851" target="_blank">#14851</a>) in the Moblog where field overrides did not work
   properly.
 - Fixed a bug in the Moblog where email data were not properly stripped
   from the body content when no upload directory was specified in the
   Moblog settings.
-- Fixed a bug (#14952) in the Channel Entries API where formatting
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14952" target="_blank">#14952</a>) in the Channel Entries API where formatting
   specifications were removed.
-- Fixed a bug (#14884) in the Comment Entries tag where the channel
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14884" target="_blank">#14884</a>) in the Comment Entries tag where the channel
   parameter was not honored when dynamic was set to 'no'.
 - Fixed a bug where a comment could have an incorrect site\_id if
   entered from a different MSM site.
-- Fixed a bug (#14869) where Page URLs did not work properly using a
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14869" target="_blank">#14869</a>) where Page URLs did not work properly using a
   legacy multiple site setup.
 - Altered the behavior of the Publish Page's write mode editor to
-  always publish to field when the modal is closed as per #13164.
-- Fixed a bug (#14417) in the Metaweblog API where categories were not
+  always publish to field when the modal is closed as per <a href="https://support.ellislab.com/bugs/detail/13164" target="_blank">#13164</a>.
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14417" target="_blank">#14417</a>) in the Metaweblog API where categories were not
   properly entered when creating a new entry.
-- Fixed a bug (#13752) where disabled fields were forced to an enabled
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13752" target="_blank">#13752</a>) where disabled fields were forced to an enabled
   state when the Publish Page's toolbar was toggled.
-- Fixed a bug (#14888) where the comments module would ignore the sort
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14888" target="_blank">#14888</a>) where the comments module would ignore the sort
   parameter in certain cases.
-- Fixed a bug (#14902) where a PHP Error could occur on the publish
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14902" target="_blank">#14902</a>) where a PHP Error could occur on the publish
   page for non-super admin users.
-- Fixed a bug (#14882) where the Stats module incorrectly reported
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14882" target="_blank">#14882</a>) where the Stats module incorrectly reported
   last\_entry\_date when filtering to a specific channel.
-- Fixed a bug (#14299) where PHP errors would occur on the Blogger API
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14299" target="_blank">#14299</a>) where PHP errors would occur on the Blogger API
   control panel pages.
-- Fixed a bug (#14968) where a PHP error could occur when searching for
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14968" target="_blank">#14968</a>) where a PHP error could occur when searching for
   all member entries.
-- Fixed a bug (#14176) where libraries were unable to be loaded in the
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14176" target="_blank">#14176</a>) where libraries were unable to be loaded in the
   upd file during installation.
-- Fixed a bug (#14856) where load\_package\_css would not properly load
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14856" target="_blank">#14856</a>) where load\_package\_css would not properly load
   for themes other than default.
-- Fixed a bug (#14945) where improper breadcrumb trail was show in
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14945" target="_blank">#14945</a>) where improper breadcrumb trail was show in
   admin\_content area.
-- Fixed a bug (#14628) where the DATE\_ISO8601 variable was returning
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14628" target="_blank">#14628</a>) where the DATE\_ISO8601 variable was returning
   an incorrectly formatted date string.
-- Fixed a bug (#14788) where a language variable contained improper
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14788" target="_blank">#14788</a>) where a language variable contained improper
   capitalization.
-- Fixed a bug (#14855, #14999) where open fields in a saved layout
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14855" target="_blank">#14855</a>, <a href="https://support.ellislab.com/bugs/detail/14999" target="_blank">#14999</a>) where open fields in a saved layout
   could be closed when the custom field settings are altered.
-- Fixed a bug (#14779) where pagination's {previous\_page} and
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14779" target="_blank">#14779</a>) where pagination's {previous\_page} and
   {next\_page} variables were only evaluated once to check for
   conditional usage.
-- Fixed a bug (#14576) where some date variables returned nothing when
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14576" target="_blank">#14576</a>) where some date variables returned nothing when
   no format was given. No format will now result in a timestamp.
-- Fixed a bug (#14777) where the incorrect channel title was displayed
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14777" target="_blank">#14777</a>) where the incorrect channel title was displayed
   in the Autosaved Entries List.
-- Fixed a bug (#14989) where Member Profile template links do not
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14989" target="_blank">#14989</a>) where Member Profile template links do not
   reflect changed Profile Triggering Word.
-- Fixed a bug (#14822) where statuses were not properly filtered by
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14822" target="_blank">#14822</a>) where statuses were not properly filtered by
   status order on the publish page.
-- Fixed a bug (#14703) where the edit photo link would show regardless
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14703" target="_blank">#14703</a>) where the edit photo link would show regardless
   of member photo settings in the member & forum themes.
-- Fixed a bug (#14951) where a PHP error would occur on the Publish
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14951" target="_blank">#14951</a>) where a PHP error would occur on the Publish
   Pages Categories tab when a category group was deleted.
-- Fixed a bug (#14782) where publishing autosaved entries could result
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14782" target="_blank">#14782</a>) where publishing autosaved entries could result
   in a Fatal Error Message.
-- Fixed a bug (#12167) where the "Edit Categories" link was not removed
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12167" target="_blank">#12167</a>) where the "Edit Categories" link was not removed
   from view after being clicked to edit categories on the publish page.
-- Fixed a bug (#14947) where the revisions checkbox was not checked by
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14947" target="_blank">#14947</a>) where the revisions checkbox was not checked by
   default in the publish page revisions tab.
-- Fixed a bug (#14549) where when duplicate from Existing Template
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14549" target="_blank">#14549</a>) where when duplicate from Existing Template
   function creates from database and not from file.
-- Fixed a bug (#14821) where the category tree would not properly sort
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14821" target="_blank">#14821</a>) where the category tree would not properly sort
   by a custom order.
-- Fixed a bug (#14778) where the result from the file upload
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14778" target="_blank">#14778</a>) where the result from the file upload
   preferences query was not properly caching.
-- Fixed a bug (#14536) where comment preview did not maintain the page
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14536" target="_blank">#14536</a>) where comment preview did not maintain the page
   URI, resulting in improper page rendering.
-- Fixed a bug (#14814) where legacy multi-site setups did not properly
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14814" target="_blank">#14814</a>) where legacy multi-site setups did not properly
   function.
-- Fixed a bug (#12413, #14801) where the preview layout was not
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12413" target="_blank">#12413</a>, <a href="https://support.ellislab.com/bugs/detail/14801" target="_blank">#14801</a>) where the preview layout was not
   working.
-- Fixed a bug (#14682) where hidden custom fields were being shown
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14682" target="_blank">#14682</a>) where hidden custom fields were being shown
   after being edited.
 - Fixed a bug where field visibility wasn't being accounted for in the
   Fields sidebar on the publish page.
 - Fixed a bug where field width wasn't being retained when fields are
   hidden in publish layouts.
-- Fixed a bug (#14934) where the resize handle was missing from the
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14934" target="_blank">#14934</a>) where the resize handle was missing from the
   Corporate theme
-- Fixed a bug (#14967) where wildcard email addresses in the member
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14967" target="_blank">#14967</a>) where wildcard email addresses in the member
   banning preferences weren't working properly.
-- Fixed a bug (#14896) where parse\_variable\_rows was not handling
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14896" target="_blank">#14896</a>) where parse\_variable\_rows was not handling
   single variables with typography options.
-- Fixed a bug (#14877) where reverse related entries wouldn't properly
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14877" target="_blank">#14877</a>) where reverse related entries wouldn't properly
   sort on numeric fields.
-- Fixed a bug (#12442) where wrapping HTML buttons were overflowing out
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12442" target="_blank">#12442</a>) where wrapping HTML buttons were overflowing out
   of their toolbar.
-- Fixed a bug (#13579) where the category url title would not be
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13579" target="_blank">#13579</a>) where the category url title would not be
   created automatically on the publish page.
-- Fixed a bug (#15025) that would result in a PHP error when uploading
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/15025" target="_blank">#15025</a>) that would result in a PHP error when uploading
   a member signature photo on the front end.
-- Fixed a submission error spelling error (#15024) in the private
+- Fixed a submission error spelling error (<a href="https://support.ellislab.com/bugs/detail/15024" target="_blank">#15024</a>) in the private
   messaging system.
-- Fixed a bug (#15016) with front end comment editing when non-super
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/15016" target="_blank">#15016</a>) with front end comment editing when non-super
   admin users could not edit their own comments unless they had comment
   moderation privileges.
 
@@ -3103,20 +3101,20 @@ Build 20101220 (initial release)
   layouts.
 - Fixed a bug where a PHP error could be triggered if the
   publish\_form\_entry\_data hook was used.
-- Fixed a bug (#14792) where the Forum version was incorrectly
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14792" target="_blank">#14792</a>) where the Forum version was incorrectly
   identified.
-- Fixed a bug (#14723) where category and status dropdowns on the Edit
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14723" target="_blank">#14723</a>) where category and status dropdowns on the Edit
   page were not populated in Internet Explorer.
-- Fixed a bug (#14786) on the Publish page where field formatting
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14786" target="_blank">#14786</a>) on the Publish page where field formatting
   options would not show nor would they respect default settings.
-- Fixed a bug (#14794) where publishing an entry with a live view
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14794" target="_blank">#14794</a>) where publishing an entry with a live view
   template resulted in a PHP error.
-- Fixed a bug (#14785) where you could not successfully save an entry
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14785" target="_blank">#14785</a>) where you could not successfully save an entry
   with a required image field.
 - Documentation: Updated to use \_\_construct in development examples;
-  fixes #14787.
+  fixes <a href="https://support.ellislab.com/bugs/detail/14787" target="_blank">#14787</a>.
 - Documentation: Developer Guidelines Checklist still referenced PHP
-  4.3; fixes #14789.
+  4.3; fixes <a href="https://support.ellislab.com/bugs/detail/14789" target="_blank">#14789</a>.
 
 Version 2.1.2
 -------------
@@ -3172,7 +3170,7 @@ General Changes:
 - Removed the "Honor Entry DST" setting.
 - Removed the "Convert High ASCII" setting.
 - Removed all unused language keys pertaining to the Gallery module
-  (#14094).
+  (<a href="https://support.ellislab.com/bugs/detail/14094" target="_blank">#14094</a>).
 
 Developers:
 
@@ -3187,7 +3185,7 @@ Developers:
   in date. Please remove any calls to it.
 - Deprecated functions::clone\_object(), as it was a work around for
   PHP4.
-- Fixed a bug (#14741) where ci\_view\_path and package paths were not
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14741" target="_blank">#14741</a>) where ci\_view\_path and package paths were not
   properly set in Addons\_accessories::process\_request().
 - Abstracted the secure forms check to a new function
   secure\_forms\_check() in the Security Library.
@@ -3199,7 +3197,7 @@ Developers:
 Bugs:
 
 - Changed the 'Forgotten Password' emails for the Control Panel login
-  to use the existing email notification templates (see bug #14691).
+  to use the existing email notification templates (see bug <a href="https://support.ellislab.com/bugs/detail/14691" target="_blank">#14691</a>).
 - Fixed a bug where file uploads would not be run through xss\_clean in
   some cases.
 - Fixed a bug where cache directory deletion could result in a PHP
@@ -3222,112 +3220,112 @@ Bugs:
 - Fixed a bug in the Wiki Module where Category names could
   inadvertently include a trailing space when created using a link with
   an alternate display text.
-- Fixed a bug (#14404) where checkboxes on the Account/View
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14404" target="_blank">#14404</a>) where checkboxes on the Account/View
   Subscriptions were not visible.
-- Fixed a bug (#14418) where a language key did not properly parse on
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14418" target="_blank">#14418</a>) where a language key did not properly parse on
   the category edit page.
-- Fixed a bug (#14419) where the Multi-Category Edit Pages had display
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14419" target="_blank">#14419</a>) where the Multi-Category Edit Pages had display
   issues in all themes.
-- Fixed a bug (#14464) where the member\_group\_id tag did not properly
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14464" target="_blank">#14464</a>) where the member\_group\_id tag did not properly
   parse in the Comments Entries tag.
-- Fixed a bug (#14410) where the nav\_bubble\_top.png image was a
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14410" target="_blank">#14410</a>) where the nav\_bubble\_top.png image was a
   consistent height with the other themes.
-- Fixed a bug (#13534) where an upload location path was incorrect when
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13534" target="_blank">#13534</a>) where an upload location path was incorrect when
   using the Agile Records Theme.
-- Fixed a bug (#14319) where the Control Panel logs did not properly
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14319" target="_blank">#14319</a>) where the Control Panel logs did not properly
   use localized dates.
-- Fixed a bug (#14505) where the stylesheet parameter would display the
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14505" target="_blank">#14505</a>) where the stylesheet parameter would display the
   incorrect timestamp when the template is saved as a file.
-- Fixed a bug (#14302) where language keys did not properly parse on
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14302" target="_blank">#14302</a>) where language keys did not properly parse on
   the Edit Member Group Preferences page if the site\_id was over 9.
-- Fixed a bug (#13979) where pluralization of the phrase "Private
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13979" target="_blank">#13979</a>) where pluralization of the phrase "Private
   Messages" was not consistent between the member and forum modules.
-- Fixed a bug (#14522) where a low column limit in the accessories
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14522" target="_blank">#14522</a>) where a low column limit in the accessories
   table would prevent some member groups from being included on sites
   with a high number of member groups.
-- Fixed a bug (#14467) in the Channel Categories API where class
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14467" target="_blank">#14467</a>) in the Channel Categories API where class
   members were not correctly re-initialized on subsequent calls to
   category\_tree().
-- Fixed a bug (#14540) where dynamic\_start was improperly implemented
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14540" target="_blank">#14540</a>) where dynamic\_start was improperly implemented
   in the RSS Module.
-- Fixed a bug (#14544) where Default Publish Tabs did not properly
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14544" target="_blank">#14544</a>) where Default Publish Tabs did not properly
   render language variables.
-- Fixed a bug (#14545) where Email Class language variables were not
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14545" target="_blank">#14545</a>) where Email Class language variables were not
   properly parsed.
-- Fixed a bug (#14449) where Internet Explorer cached XMLHttpRequests,
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14449" target="_blank">#14449</a>) where Internet Explorer cached XMLHttpRequests,
   in certain instances, producing inaccurate data results in the
   control panel.
-- Fixed a bug (#14235) in the Comment Entries tag where a MySQL error
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14235" target="_blank">#14235</a>) in the Comment Entries tag where a MySQL error
   occurred when the entry\_id parameter was specified.
-- Fixed a bug (#14236) in the Comment Entries tag where the
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14236" target="_blank">#14236</a>) in the Comment Entries tag where the
   {total\_results} count was inaccurate.
-- Fixed a bug (#14452) where the Wiki Module tags ignored the paginate
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14452" target="_blank">#14452</a>) where the Wiki Module tags ignored the paginate
   parameter.
-- Fixed a bug (#14471) in the Wiki Module where renaming could result
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14471" target="_blank">#14471</a>) in the Wiki Module where renaming could result
   in an improper title when namespaces were used.
-- Fixed a bug (#14141) where the Throttle log did not display or sort
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14141" target="_blank">#14141</a>) where the Throttle log did not display or sort
   correctly.
-- Fixed a bug (#13418) where the maximum file size was not always
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13418" target="_blank">#13418</a>) where the maximum file size was not always
   checked properly (File Browser, Publish, and Wiki affected).
-- Fixed a bug (#14477) where related entries were not fully removed
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14477" target="_blank">#14477</a>) where related entries were not fully removed
   from custom fields on edit, resulting in placeholder data showing in
   frontend tags.
-- Fixed a bug (#13549) where the Channel Entries API was not properly
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13549" target="_blank">#13549</a>) where the Channel Entries API was not properly
   resetting variables on repeated calls.
-- Fixed a bug (#14422) where an improper field name was being used in
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14422" target="_blank">#14422</a>) where an improper field name was being used in
   the Channel Entries API, resulting in incorrect data being sent to
   some third party modules on entry update.
-- Fixed a bug (#14135) where the Channel Entries API was not properly
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14135" target="_blank">#14135</a>) where the Channel Entries API was not properly
   resetting the category data on repeated calls.
-- Fixed a bug (#14138) in the Field Types uninstaller where a PHP error
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14138" target="_blank">#14138</a>) in the Field Types uninstaller where a PHP error
   could occur when attempting to remove the field from custom layouts.
-- Fixed a bug (#14513) in the Wiki Module where page links were not
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14513" target="_blank">#14513</a>) in the Wiki Module where page links were not
   created properly when HTML formatting was set to 'Convert HTML into
   character entities'.
-- Fixed a bug (#14310) where disabling comments for a channel could
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14310" target="_blank">#14310</a>) where disabling comments for a channel could
   result in a PHP error on the Publish page when a custom layout was
   used.
-- Fixed a bug (#13938) where the formatting buttons were set not to
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13938" target="_blank">#13938</a>) where the formatting buttons were set not to
   show by default when initially imported.
-- Fixed a bug (#14613) in the Wiki Module where Category URLS could be
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14613" target="_blank">#14613</a>) in the Wiki Module where Category URLS could be
   truncated prematurely.
-- Fixed a bug (#14591) where date fields could have the wrong field
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14591" target="_blank">#14591</a>) where date fields could have the wrong field
   type in exp\_channel\_data, resulting in improper ordering by date.
-- Fixed a bug (#14686) in comment notifications where the
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14686" target="_blank">#14686</a>) in comment notifications where the
   {comment\_url} variable could be incorrect due to a missing slash.
-- Fixed a bug (#14611) where MySQL errors on the front end could cause
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14611" target="_blank">#14611</a>) where MySQL errors on the front end could cause
   a memory error when displayed.
-- Fixed a bug (#14237) in the Comment Entries tag where the comment\_id
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14237" target="_blank">#14237</a>) in the Comment Entries tag where the comment\_id
   parameter did nothing.
-- Fixed a bug (#14738) where the category URL title changed on edit
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14738" target="_blank">#14738</a>) where the category URL title changed on edit
   when the category title was changed.
-- Fixed a bug (#13740) where smiley replacements in the Member and
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13740" target="_blank">#13740</a>) where smiley replacements in the Member and
   Forum module did not work in Internet Explorer.
-- Fixed a bug (#14316) in the Wiki module where namespaces could not be
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14316" target="_blank">#14316</a>) in the Wiki module where namespaces could not be
   deleted.
-- Fixed a bug (#14175) where the Moblog module was unable to post when
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14175" target="_blank">#14175</a>) where the Moblog module was unable to post when
   using pings.
-- Fixed a bug (#13782) where downloading files from the file manager
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13782" target="_blank">#13782</a>) where downloading files from the file manager
   broke the delete action.
-- Fixed a bug (#14349) in the ExpressionEngine Info accessory, where
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14349" target="_blank">#14349</a>) in the ExpressionEngine Info accessory, where
   the current version and build were displayed incorrectly.
-- Fixed a bug (#14133) in the Filemanager where the table did not
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14133" target="_blank">#14133</a>) in the Filemanager where the table did not
   correctly sort on the date column.
-- Fixed a bug (#14439) where the directory helper was used without
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14439" target="_blank">#14439</a>) where the directory helper was used without
   explicitly being loaded in the current method.
-- Fixed a bug (#14432) where custom date fields defaulted to 1/1/1970
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14432" target="_blank">#14432</a>) where custom date fields defaulted to 1/1/1970
   under certain circumstances.
-- Fixed a bug (#12966) where menu items did not display correctly when
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12966" target="_blank">#12966</a>) where menu items did not display correctly when
   creating a new Moblog in Internet Explorer.
-- Fixed a bug (#14515) where publish page fields could be offset in
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14515" target="_blank">#14515</a>) where publish page fields could be offset in
   Internet Explorer for some users.
-- Fixed a bug (#14671) where a MySQL error could occur when attempting
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14671" target="_blank">#14671</a>) where a MySQL error could occur when attempting
   to access the frontend member pages with an improper URL.
-- Fixed a bug (#14592) where version information was not displayed on
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14592" target="_blank">#14592</a>) where version information was not displayed on
   the Extensions page.
-- Fixed a bug (#14733) where the Add Tab dialog on the Publish page did
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14733" target="_blank">#14733</a>) where the Add Tab dialog on the Publish page did
   not work properly in Internet Explorer.
-- Fixed a bug (#14663) where the file size in File Manager was
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14663" target="_blank">#14663</a>) where the file size in File Manager was
   incorrect.
 
 Version 2.1.1
@@ -3343,11 +3341,11 @@ Build 20101020 (additional changes and fixes)
   of the fieldtype settings.
 - Fixed a bug where javascript failed to load due to overzealous data
   sanitization.
-- Fixed a bug (#14235) in the Comment Entries tag where a MySQL error
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14235" target="_blank">#14235</a>) in the Comment Entries tag where a MySQL error
   occurred when the entry\_id parameter was specified.
-- Fixed a bug (#14236) in the Comment Entries tag where the
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14236" target="_blank">#14236</a>) in the Comment Entries tag where the
   {total\_results} count was inaccurate.
-- Fixed a bug (#14183) where the 30 day trial was referenced in
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14183" target="_blank">#14183</a>) where the 30 day trial was referenced in
   Installer Language Files.
 
 Build 20101018 (initial release)
@@ -3364,14 +3362,14 @@ Build 20101018 (initial release)
     specific. (Waits for the cheering to die down....)
   - Altered member profile fields to disallow HTML.
   - Altered final file permissions on uploads to compensate for
-    certain hosting environments. (#13930)
+    certain hosting environments. (<a href="https://support.ellislab.com/bugs/detail/13930" target="_blank">#13930</a>)
   - Added {last\_segment} global variable.
   - Added a way to trigger module updates from the main module listing
     page, so developers do not have to come up with their own sneaky
     methods of updating modules that do not have control panels (issue
-    #13568).
+    <a href="https://support.ellislab.com/bugs/detail/13568" target="_blank">#13568</a>).
   - Added a template synchronization warning in the Search and Replace
-    tool for users saving templates as files (issue #13551).
+    tool for users saving templates as files (issue <a href="https://support.ellislab.com/bugs/detail/13551" target="_blank">#13551</a>).
   - Added a restrict_channel= parameter to the :doc:`Channel Category
     tag </add-ons/channel/categories>`, which allows overriding the
     new default behavior of its show_empty= parameter.
@@ -3417,11 +3415,11 @@ Build 20101018 (initial release)
   - Modified the wording in the Comment module of the error message
     when someone submits an empty comment.
   - Changed the name of the zip file for multiple file download in the
-    File Manager from "images.zip" to "downloaded\_files.zip" (#13482)
+    File Manager from "images.zip" to "downloaded\_files.zip" (<a href="https://support.ellislab.com/bugs/detail/13482" target="_blank">#13482</a>)
   - Corrected case of some home page language variables for
-    consistency (#13532)
+    consistency (<a href="https://support.ellislab.com/bugs/detail/13532" target="_blank">#13532</a>)
   - Renamed references of the Tab Manager to Main Menu Manager.
-    (#13926)
+    (<a href="https://support.ellislab.com/bugs/detail/13926" target="_blank">#13926</a>)
   - Removed the trailing slash at the end of the URL produced by the
     comment\_url\_title\_auto\_path and comment\_entry\_id\_auto\_path
     variables in the Comment Entries Tag.
@@ -3439,7 +3437,7 @@ Build 20101018 (initial release)
   - Altered Api::is\_url\_safe() to return an explicit boolean
     response.
   - Altered functions->fetch\_file\_paths() to return an empty array
-    if no file upload directories exist. (#13737)
+    if no file upload directories exist. (<a href="https://support.ellislab.com/bugs/detail/13737" target="_blank">#13737</a>)
   - Modified EE\_Output::send\_ajax\_response() to ensure the
     JavaScript library is loaded.
   - Deprecated the old lang.name.php language file naming convention
@@ -3450,22 +3448,22 @@ Build 20101018 (initial release)
     </installation/version_notes_2.1.1>`.
   - Fixed a bug in the API where child drivers were not being
     initialized before consecutive instantiations.
-  - Fixed a bug (#14009) in the Channel Entries API where
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14009" target="_blank">#14009</a>) in the Channel Entries API where
     \_fetch\_channel\_preferences() did not honor the $channel\_id
     parameter.
-  - Fixed a bug (#14008) in the Channel Entries API where missing ping
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14008" target="_blank">#14008</a>) in the Channel Entries API where missing ping
     data could cause a PHP error.
-  - Fixed a bug (#13483) in the Channel Entries API where the required
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13483" target="_blank">#13483</a>) in the Channel Entries API where the required
     $channel\_id parameter for submit\_new\_entry() was not being
     added to the data array.
-  - Fixed a bug (#13610) where the FieldType update() method was not
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13610" target="_blank">#13610</a>) where the FieldType update() method was not
     being called properly.
   - CodeIgniter system folder set to ``0b88a4ed5303``
 
 - Bug Fixes
 
   - Fixed a minor issue with the module's displayed name on the Module
-    uninstall confirmation screen (#13766)
+    uninstall confirmation screen (<a href="https://support.ellislab.com/bugs/detail/13766" target="_blank">#13766</a>)
   - Fixed a bug where an inconsistent number of max URI segments were
     allowed.
   - Fixed a bug where the hover state of the navigation in Internet
@@ -3478,112 +3476,112 @@ Build 20101018 (initial release)
   - Fixed a bug where a MySQL error could occur when a member group
     had no access to file uploads and was publishing to a channel with
     a file fields.
-  - Fixed a bug (#13175) in the publish page datepicker where AM and
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13175" target="_blank">#13175</a>) in the publish page datepicker where AM and
     PM could not be modified.
-  - Fixed a bug (#13699) where a PHP error could occur when using
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13699" target="_blank">#13699</a>) where a PHP error could occur when using
     variable pairs and MSM.
-  - Fixed a bug (#13724) where the Channel Entries tag's search
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13724" target="_blank">#13724</a>) where the Channel Entries tag's search
     parameter did not always work for IS\_EMPTY.
-  - Fixed a bug (#13701) where mode on the publish page would not
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13701" target="_blank">#13701</a>) where mode on the publish page would not
     close for fields other than the first.
-  - Fixed a bug (#13319) in the Channel Entries module where an
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13319" target="_blank">#13319</a>) in the Channel Entries module where an
     improperly formatted custom variable could result in a PHP error.
-  - Fixed a bug (#13536) where the Search Results tag produced a MySQL
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13536" target="_blank">#13536</a>) where the Search Results tag produced a MySQL
     error when on pages other than the first.
-  - Fixed a bug (#13687) on the publish page where forum fields were
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13687" target="_blank">#13687</a>) on the publish page where forum fields were
     not properly hidden when editing.
-  - Fixed a bug (#13250) where form validation results were not
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13250" target="_blank">#13250</a>) where form validation results were not
     properly displayed when creating/editing categories.
-  - Fixed a bug (#13761) in the Member Module's Custom Profile tag
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13761" target="_blank">#13761</a>) in the Member Module's Custom Profile tag
     where {last\_activity} would not format properly and {last\_visit}
     showed the last activity date rather than the last visit date.
-  - Fixed a bug (#13570) in the Translation Utility where file
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13570" target="_blank">#13570</a>) in the Translation Utility where file
     permissions were incorrectly interpreted.
-  - Fixed a bug (#13697) on the Publish page where date validation was
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13697" target="_blank">#13697</a>) on the Publish page where date validation was
     different for custom fields as compared to entry dates.
-  - Fixed a bug (#13704) where undefined variable error could occur in
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13704" target="_blank">#13704</a>) where undefined variable error could occur in
     the Typography Class.
-  - Fixed a bug (#13714) where the multi-edit page styling was
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13714" target="_blank">#13714</a>) where the multi-edit page styling was
     inconsistent from the rest of the UI.
-  - Fixed a bug (#13854) where a PHP notice could occur in the Simple
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13854" target="_blank">#13854</a>) where a PHP notice could occur in the Simple
     Commerce Module if the add items form was submitted with no items
     marked to add.
-  - Fixed a bug (#13829) where snippets could be saved with spaces in
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13829" target="_blank">#13829</a>) where snippets could be saved with spaces in
     the snippet name.
-  - Fixed a bug (#13890) where comment\_url\_title\_auto\_path and
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13890" target="_blank">#13890</a>) where comment\_url\_title\_auto\_path and
     comment\_entry\_id\_auto\_path variables produced malformed links
     when used inside the comment entries tag.
-  - Fixed a bug (#13506) where the showToolBar link on the publish
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13506" target="_blank">#13506</a>) where the showToolBar link on the publish
     page rendered incorrectly in Internet Explorer.
-  - Fixed a bug (#13691) where the number of URI segments entered in
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13691" target="_blank">#13691</a>) where the number of URI segments entered in
     the Pages URI input on the publish page allowed for an unlimited
     number of URI Segments.
-  - Fixed a bug (#13682) where category management permissions for
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13682" target="_blank">#13682</a>) where category management permissions for
     non-super administrators were inconsistent.
-  - Fixed a bug (#13685) where a few special characters were being
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13685" target="_blank">#13685</a>) where a few special characters were being
     removed from entry titles in the edit entry form.
-  - Fixed a bug (#13497) where some modal confirmation dialogs were
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13497" target="_blank">#13497</a>) where some modal confirmation dialogs were
     not displaying in IE8.
-  - Fixed a bug (#13498) where Bookmarklets were not inserting the
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13498" target="_blank">#13498</a>) where Bookmarklets were not inserting the
     title and content into the publish form.
-  - Fixed a bug (#13071) with HTML formatting buttons where the
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13071" target="_blank">#13071</a>) with HTML formatting buttons where the
     shortcut keys (Ctrl+key) were not working.
-  - Fixed a bug (#13384) where the filtering menus for statuses and
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13384" target="_blank">#13384</a>) where the filtering menus for statuses and
     fields in the MetaWeblog API weren't working.
-  - Fixed a bug (#13655) with multi-site member login.
-  - Fixed a bug (#13611) which could result in a PHP error from a
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13655" target="_blank">#13655</a>) with multi-site member login.
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13611" target="_blank">#13611</a>) which could result in a PHP error from a
     Required Entry 404 redirect in edge cases.
-  - Fixed a bug (#13503) where deleting tabs from the publish layout
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13503" target="_blank">#13503</a>) where deleting tabs from the publish layout
     could cause kept tabs to be mislabeled.
-  - Fixed a bug (#13585) where the Wiki would not accept uploads if
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13585" target="_blank">#13585</a>) where the Wiki would not accept uploads if
     the allowed types was set to "Images only"
-  - Fixed a bug (#13618) where a JavaScript error was preventing the
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13618" target="_blank">#13618</a>) where a JavaScript error was preventing the
     saving of template Access settings. (hotfixed on August 17th)
-  - Fixed a bug (#13613) which would result in a MySQL error when
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13613" target="_blank">#13613</a>) which would result in a MySQL error when
     Session ID based sessions in the control panel expired.
-  - Fixed a bug (#13575) where the CP search was looking in the wrong
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13575" target="_blank">#13575</a>) where the CP search was looking in the wrong
     location for language keys.
-  - Fixed a bug (#13518) where using multiple {categories} tags with
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13518" target="_blank">#13518</a>) where using multiple {categories} tags with
     different limit= parameters inside the same entries tag would
     misbehave.
-  - Fixed a bug (#13598) where a redundant Upload language file was
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13598" target="_blank">#13598</a>) where a redundant Upload language file was
     preventing translation of Upload error messages.
-  - Fixed a bug (#13201) where beta installations did not have their
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13201" target="_blank">#13201</a>) where beta installations did not have their
     user guide URL updated to the new location at ExpressionEngine.com
-  - Fixed a bug (#13363) where {page\_url} variables were not
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13363" target="_blank">#13363</a>) where {page\_url} variables were not
     respecting the "Force Query Strings" setting.
-  - Fixed a bug (#13465) where the 'Open' status was available in the
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13465" target="_blank">#13465</a>) where the 'Open' status was available in the
     Multi-Entry Editor in cases where no status group was assigned to
     the entry.
-  - Fixed a bug (#13924) where the file field's file type restriction
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13924" target="_blank">#13924</a>) where the file field's file type restriction
     was ignored.
-  - Fixed a bug (#13995) in the Channel Module where an improper
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13995" target="_blank">#13995</a>) in the Channel Module where an improper
     segment could be used as the category url title.
-  - Fixed a bug (#13977) where the display of the default statuses was
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13977" target="_blank">#13977</a>) where the display of the default statuses was
     inconsistent.
-  - Fixed a bug (#14012) in the Channel Entries tag where the
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14012" target="_blank">#14012</a>) in the Channel Entries tag where the
     allow\_comments conditional ignored the channel permissions.
-  - Fixed a bug (#13309) on the Publish page where file fields could
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13309" target="_blank">#13309</a>) on the Publish page where file fields could
     lose the correct file directory when form validation failed.
-  - Fixed a bug (#14046) in the Template Edit page where clicking the
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14046" target="_blank">#14046</a>) in the Template Edit page where clicking the
     View Revision History button without selecting a revision would
     take you to a user error page.
-  - Fixed a bug (#13636) in the Channel Entries tag where pagination
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13636" target="_blank">#13636</a>) in the Channel Entries tag where pagination
     did not work correctly with date indicators in the URL.
-  - Fixed a bug (#14032) where you could not save a custom layout for
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14032" target="_blank">#14032</a>) where you could not save a custom layout for
     member groups with edit only permissions.
-  - Fixed a bug (#13948) in the Channel Entries tag where formatted
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13948" target="_blank">#13948</a>) in the Channel Entries tag where formatted
     dates could be displayed using the wrong date field under certain
     naming conventions.
-  - Fixed a bug (#13986) where a language variable was not properly
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13986" target="_blank">#13986</a>) where a language variable was not properly
     parsed in the member module.
-  - Fixed a bug (#13975) where a display error occurred in modal
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13975" target="_blank">#13975</a>) where a display error occurred in modal
     dialogues on the file edit page.
-  - Fixed a bug (#14026) where entry pagination on the content edit
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14026" target="_blank">#14026</a>) where entry pagination on the content edit
     page in the corporate theme was not functional.
-  - Fixed a bug (#14016) where the first and last link pagination text
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14016" target="_blank">#14016</a>) where the first and last link pagination text
     was not able to be translated.
-  - Fixed a bug (#14198) where the browse button was missing when a
+  - Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/14198" target="_blank">#14198</a>) where the browse button was missing when a
     publisher clicks on Add File.
 
 Version 2.1.0
@@ -3597,9 +3595,9 @@ Build 20100810 (additional changes and fixes)
 - Fixed a potential security issue in build 20100805 where in certain
   circumstances guest users might be incorrectly recognized as an
   authentic member.
-- Fixed a bug (#13516) where the language translation utility failed
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13516" target="_blank">#13516</a>) where the language translation utility failed
   due to new language file naming scheme created in the last build.
-- Fixed a bug (#13517) where the deprecated gallery modules language
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13517" target="_blank">#13517</a>) where the deprecated gallery modules language
   file was still present.
 
 Build 20100805 (additional changes and fixes)
@@ -3617,65 +3615,65 @@ Build 20100805 (additional changes and fixes)
   for custom category fields.
 - Fixed a bug where reverse related entries did not always sort
   properly when field names were duplicated across sites.
-- Fixed visual bugs (#13294) in the corporate theme control panel.
-- Fixed various bugs (#13150, #13160, #13329) where entry dates were
+- Fixed visual bugs (<a href="https://support.ellislab.com/bugs/detail/13294" target="_blank">#13294</a>) in the corporate theme control panel.
+- Fixed various bugs (<a href="https://support.ellislab.com/bugs/detail/13150" target="_blank">#13150</a>, <a href="https://support.ellislab.com/bugs/detail/13160" target="_blank">#13160</a>, <a href="https://support.ellislab.com/bugs/detail/13329" target="_blank">#13329</a>) where entry dates were
   changing into the future on edit.
-- Fixed a bug (#13300 and #13230) where Publish tabs did not work
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13300" target="_blank">#13300</a> and <a href="https://support.ellislab.com/bugs/detail/13230" target="_blank">#13230</a>) where Publish tabs did not work
   properly when the tab name was more than one word long.
-- Fixed a bug (#13258) where CodeIgniter language files could not be
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13258" target="_blank">#13258</a>) where CodeIgniter language files could not be
   localized consistently.
-- Fixed a bug (#13281) where the upload button magic markup was not
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13281" target="_blank">#13281</a>) where the upload button magic markup was not
   working on text input fields.
-- Fixed a bug (#13213) where glossary items could not be selected if
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13213" target="_blank">#13213</a>) where glossary items could not be selected if
   formatting buttons were disabled.
-- Fixed a bug (#13301) where Snippets could not be named using only a
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13301" target="_blank">#13301</a>) where Snippets could not be named using only a
   number.
-- Fixed a bug (#13308) where caches were not cleared after editing a
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13308" target="_blank">#13308</a>) where caches were not cleared after editing a
   user defined global variable.
-- Fixed a bug (#13139) where members with access to the control panel
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13139" target="_blank">#13139</a>) where members with access to the control panel
   could erroneously be denied access to control panel action requests.
-- Fixed a bug (#13354) in the Tab Manager where tabs did not always
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13354" target="_blank">#13354</a>) in the Tab Manager where tabs did not always
   sort correctly.
-- Fixed a bug (#13347) in the Channel Entries tag where setting
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13347" target="_blank">#13347</a>) in the Channel Entries tag where setting
   show\_pages="no" would result in no entries returned when no pages
   had been created.
-- Fixed a bug (#13386) where only a single category could be assigned
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13386" target="_blank">#13386</a>) where only a single category could be assigned
   to a channel during channel creation.
-- Fixed a bug (#12967) where the Moblog settings did not always
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12967" target="_blank">#12967</a>) where the Moblog settings did not always
   properly reflect the selected Upload Directory.
-- Fixed a bug (#13434) in Communicate where batched emails sent to
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13434" target="_blank">#13434</a>) in Communicate where batched emails sent to
   Mailing Lists could result in PHP errors and an incorrect message
   text.
-- Fixed a bug (#13262) where a fatal PHP error occurred when updating a
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13262" target="_blank">#13262</a>) where a fatal PHP error occurred when updating a
   Custom Field Group Name.
-- Fixed a bug (#13285) where a PHP error occurred on the advanced
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13285" target="_blank">#13285</a>) where a PHP error occurred on the advanced
   search page if categories were specified as a search parameter.
-- Fixed a bug (#13259) where a language key for the word 'or' was
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13259" target="_blank">#13259</a>) where a language key for the word 'or' was
   missing.
-- Fixed a bug (#13224) where an image 404 occurred when viewing a
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13224" target="_blank">#13224</a>) where an image 404 occurred when viewing a
   members edit avatar page as a super admin when the member had not
   chosen an avatar.
-- Fixed a bug (#13379) where an undefined variable error occurred on
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13379" target="_blank">#13379</a>) where an undefined variable error occurred on
   the search results page.
-- Fixed a bug (#13174) where some form validation error messages were
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13174" target="_blank">#13174</a>) where some form validation error messages were
   not ID10N compatible.
-- Fixed a bug (#13401) where field instructions where not hidden when a
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13401" target="_blank">#13401</a>) where field instructions where not hidden when a
   field was.
-- Fixed a bug (#13383) where no error message was displayed when a file
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13383" target="_blank">#13383</a>) where no error message was displayed when a file
   to translate is not writable.
-- Fixed a bug (#13156) where img width/height attributes could create
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13156" target="_blank">#13156</a>) where img width/height attributes could create
   broken image links in the Typography class.
-- Fixed a bug (#13249) where some stats would not update due to overly
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13249" target="_blank">#13249</a>) where some stats would not update due to overly
   aggressive database caching.
-- Fixed a bug (#13436) where a display error occurred in the Pages
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13436" target="_blank">#13436</a>) where a display error occurred in the Pages
   Module control panel.
-- Fixed a bug (#13444) where a display error occurred on the Edit
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13444" target="_blank">#13444</a>) where a display error occurred on the Edit
   Profile screen when custom member profile fields were present.
-- Fixed a bug (#13467) where a zIndex error made the file manager
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13467" target="_blank">#13467</a>) where a zIndex error made the file manager
   hidden if the publish write mode overlay was in use.
-- Fixed a bug (#13464) where long filenames in the Publish File Browser
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13464" target="_blank">#13464</a>) where long filenames in the Publish File Browser
   were cutoff.
-- Fixed a bug (#13472) where long paths to the template directory would
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13472" target="_blank">#13472</a>) where long paths to the template directory would
   be cut off in global template preferences.
 
 Build 20100720 (additional changes and fixes)
@@ -3691,39 +3689,39 @@ Build 20100720 (additional changes and fixes)
   ExpressionEngine as the user agent.
 - Fixed a bug where the show template revisions links were present even
   when template revision were disabled.
-- Fixed bugs (#13135, #13125) where the system directory constant was
+- Fixed bugs (<a href="https://support.ellislab.com/bugs/detail/13135" target="_blank">#13135</a>, <a href="https://support.ellislab.com/bugs/detail/13125" target="_blank">#13125</a>) where the system directory constant was
   incorrectly set when installing with a renamed system directory.
-- Fixed a bug (#13128) where some sites would show a PHP error on the
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13128" target="_blank">#13128</a>) where some sites would show a PHP error on the
   channel preferences page.
-- Fixed a bug (#13161) where the file manager sidebar could not be
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13161" target="_blank">#13161</a>) where the file manager sidebar could not be
   hidden.
-- Fixed a bug (#13150) where channel entry dates were not localized
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13150" target="_blank">#13150</a>) where channel entry dates were not localized
   correctly.
-- Fixed a bug (#13185) where the upload field of the stand-alone entry
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13185" target="_blank">#13185</a>) where the upload field of the stand-alone entry
   form did not work in some browsers.
-- Fixed a bug (#13106) where Channel pagination rendered an incorrect
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13106" target="_blank">#13106</a>) where Channel pagination rendered an incorrect
   value for {total\_pages} when on the first page of results.
-- Fixed a bug (#13140) where caches were not being cleared when editing
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13140" target="_blank">#13140</a>) where caches were not being cleared when editing
   Snippets.
-- Fixed a bug (#13129) where uninstalling the Comment Module could
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13129" target="_blank">#13129</a>) where uninstalling the Comment Module could
   cause a PHP error when custom layouts exist.
-- Fixed a bug (#13116) where stray fields were left in the database
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13116" target="_blank">#13116</a>) where stray fields were left in the database
   when custom fields were deleted.
-- Fixed a bug (#13176) where duplicate templates could be created when
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13176" target="_blank">#13176</a>) where duplicate templates could be created when
   saving templates as text files and using SQL caching.
-- Fixed a bug (#13234) in the Wiki Moduel where a PHP error could occur
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13234" target="_blank">#13234</a>) in the Wiki Moduel where a PHP error could occur
   when pagination was needed.
-- Fixed a bug (#13170) where the installed fieldtype array
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13170" target="_blank">#13170</a>) where the installed fieldtype array
   inconsistently defined paths for first party fields.
-- Fixed a bug (#13109) where the jQuery Module incorrectly referenced
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13109" target="_blank">#13109</a>) where the jQuery Module incorrectly referenced
   jQuery UI files.
-- Fixed a bug (#13151) where a MySQL error could occur on the
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13151" target="_blank">#13151</a>) where a MySQL error could occur on the
   content\_edit page.
-- Fixed a bug (#13163) where z-index of the publish page file browser
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13163" target="_blank">#13163</a>) where z-index of the publish page file browser
   was less than the write mode modal window.
-- Fixed a bug (#13184) where the Moblog Module would not properly
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13184" target="_blank">#13184</a>) where the Moblog Module would not properly
   create an entry.
-- Fixed a bug (#13203) where a language key was duplicated in the
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/13203" target="_blank">#13203</a>) where a language key was duplicated in the
   content language file.
 
 Build 20100712 (initial release)
@@ -3732,22 +3730,22 @@ Build 20100712 (initial release)
 - PHP 4 support is deprecated.
 - Updated jQuery to 1.4 and various javascript plugins to their latest
   versions.
-- Added site name to 'from' email in Simple Commerce emails. (#12466)
+- Added site name to 'from' email in Simple Commerce emails. (<a href="https://support.ellislab.com/bugs/detail/12466" target="_blank">#12466</a>)
 - Added additional checks on saved layouts for the publish page to
-  ensure proper formatting (see bug #12859).
+  ensure proper formatting (see bug <a href="https://support.ellislab.com/bugs/detail/12859" target="_blank">#12859</a>).
 - Added a warning if custom field names were greater than 32
-  characters, as MySQL would silently truncate the string. (#12920)
+  characters, as MySQL would silently truncate the string. (<a href="https://support.ellislab.com/bugs/detail/12920" target="_blank">#12920</a>)
 - Added an additional check on the site pages data to prevent possible
-  PHP errors that could occur due to malformed data (see #12351).
+  PHP errors that could occur due to malformed data (see <a href="https://support.ellislab.com/bugs/detail/12351" target="_blank">#12351</a>).
 - Added checks for duplicate records in the exp\_category\_posts,
   exp\_upload\_no\_access and exp\_message\_folders tables to the 2.0
   updater.
 - Added two variables to the Simple Commerce Module
   ($debug\_incoming\_ipn, $debug\_email\_address) to allow debugging of
   the incoming IPN data.
-- Refined file manager UI that was causing unexpected behavior.(#12212)
+- Refined file manager UI that was causing unexpected behavior.(<a href="https://support.ellislab.com/bugs/detail/12212" target="_blank">#12212</a>)
 - Refined clickable target area for expand/collapse buttons on the
-  publish page (#12324).
+  publish page (<a href="https://support.ellislab.com/bugs/detail/12324" target="_blank">#12324</a>).
 - Altered database caching to occur per site in order to prevent
   conflicts in MSM.
 - Altered the exp\_wiki\_page table to use an empty string as the
@@ -3758,11 +3756,11 @@ Build 20100712 (initial release)
   instead.
 - Removed reference to the Template Library on the Create New Template
   page.
-- Fixed various bugs (#12587, #11246, #11930) related to quirky
+- Fixed various bugs (<a href="https://support.ellislab.com/bugs/detail/12587" target="_blank">#12587</a>, <a href="https://support.ellislab.com/bugs/detail/11246" target="_blank">#11246</a>, <a href="https://support.ellislab.com/bugs/detail/11930" target="_blank">#11930</a>) related to quirky
   functionality of the html image buttons.
-- Fixed various bugs (#12504, #12396) related to the display of the
+- Fixed various bugs (<a href="https://support.ellislab.com/bugs/detail/12504" target="_blank">#12504</a>, <a href="https://support.ellislab.com/bugs/detail/12396" target="_blank">#12396</a>) related to the display of the
   control panel's pagination numbers.
-- Fixed various bugs (#11256, #12393, #12256) where custom date fields
+- Fixed various bugs (<a href="https://support.ellislab.com/bugs/detail/11256" target="_blank">#11256</a>, <a href="https://support.ellislab.com/bugs/detail/12393" target="_blank">#12393</a>, <a href="https://support.ellislab.com/bugs/detail/12256" target="_blank">#12256</a>) where custom date fields
   did not respect a users localization settings consistently.
 - Fixed a bug where database caches were not always properly cleared.
 - Fixed a bug where frontend member logout did not work correctly
@@ -3789,159 +3787,159 @@ Build 20100712 (initial release)
 - Fixed a bug in the Wiki where filesnames greater than 60 characters
   were allowed to be uploaded, resulting in missing files once the
   names were truncated for the database.
-- Fixed a bug (#12977) where a PHP error occurred on the IP To Nation
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12977" target="_blank">#12977</a>) where a PHP error occurred on the IP To Nation
   Ban Country page.
-- Fixed a bug (#12457) where invalid tags in commented out code
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12457" target="_blank">#12457</a>) where invalid tags in commented out code
   triggered template warning.
-- Fixed a bug (#12834) where load\_package\_css() and
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12834" target="_blank">#12834</a>) where load\_package\_css() and
   load\_package\_js() did not work in a module's constructor.
-- Fixed a bug (#12507) where the url title prefix was not honored by
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12507" target="_blank">#12507</a>) where the url title prefix was not honored by
   the publish page javascript.
-- Fixed a bug (#12374) where file fields were not saved correctly in
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12374" target="_blank">#12374</a>) where file fields were not saved correctly in
   the standalone entry form.
-- Fixed a bug (#12385) where upload directory formatting properties
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12385" target="_blank">#12385</a>) where upload directory formatting properties
   were not included when using the publish page filebrowser.
-- Fixed a bug (#12883) where field settings were not available to
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12883" target="_blank">#12883</a>) where field settings were not available to
   fieldtypes in the replace\_tag method.
-- Fixed a bug (#12948) where entry comments were not removed if their
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12948" target="_blank">#12948</a>) where entry comments were not removed if their
   parent entry was deleted.
-- Fixed a bug (#12808) where third party tabs did not have access to
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12808" target="_blank">#12808</a>) where third party tabs did not have access to
   their package resources.
-- Fixed a bug (#12630) where empty category groups could not be edited
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12630" target="_blank">#12630</a>) where empty category groups could not be edited
   from the publish page.
-- Fixed a bug (#12013) where tag parameters were not passed to the
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12013" target="_blank">#12013</a>) where tag parameters were not passed to the
   fieldtype correctly.
-- Fixed a bug (#12731) where logged in members without upload
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12731" target="_blank">#12731</a>) where logged in members without upload
   privileges were not able to view uploaded Wiki images.
-- Fixed a bug (#12884) where smilies could be parsed inside <pre> and
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12884" target="_blank">#12884</a>) where smilies could be parsed inside <pre> and
   <code> tags.
-- Fixed a bug (#12267) in the Wiki Module where there were unparsed
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12267" target="_blank">#12267</a>) in the Wiki Module where there were unparsed
   tags when editing a revision.
-- Fixed a bug (#12010) where the show\_pages="only" parameter was
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12010" target="_blank">#12010</a>) where the show\_pages="only" parameter was
   ignored when no pages exist.
-- Fixed a bug (#12375) where a new entry always had DST set to 'no'.
-- Fixed a bug (#12345) where the Pages tab display on the Publish page
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12375" target="_blank">#12375</a>) where a new entry always had DST set to 'no'.
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12345" target="_blank">#12345</a>) where the Pages tab display on the Publish page
   was not dependent on the module being installed.
-- Fixed a bug (#12373) in the Channel Module where custom category
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12373" target="_blank">#12373</a>) in the Channel Module where custom category
   field conditionals did not work in the Channel Entries tag.
-- Fixed a bug (#12368) where the Channel Module's heading tags were not
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12368" target="_blank">#12368</a>) where the Channel Module's heading tags were not
   always consistent with their corresponding entry dates.
-- Fixed a bug (#12505) where custom field conditionals in the Channel
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12505" target="_blank">#12505</a>) where custom field conditionals in the Channel
   Module's Category Heading tag did not work properly.
-- Fixed a bug (#12178) where folder permissions were incorrect for
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12178" target="_blank">#12178</a>) where folder permissions were incorrect for
   expressionengine\_info and ee\_version cache folders.
-- Fixed a bug (#12229) in the Channel Module where the require\_entry
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12229" target="_blank">#12229</a>) in the Channel Module where the require\_entry
   parameter could erroneously result in no results being found when
   both the entry\_id and pagination indicators were in the URL.
-- Fixed a bug (#12706) where unset custom profile field variables were
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12706" target="_blank">#12706</a>) where unset custom profile field variables were
   not parsed in the custom\_profile\_data tag.
-- Fixed a bug (#12722) in the Search and Replace Tool where the list of
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12722" target="_blank">#12722</a>) in the Search and Replace Tool where the list of
   custom fields by group was incorrect.
-- Fixed a bug (#12704) where checkbox type custom fields that were pre-
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12704" target="_blank">#12704</a>) where checkbox type custom fields that were pre-
   populated had an empty field placeholder option added.
-- Fixed a bug (#12588) where non-member module conditionals were
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12588" target="_blank">#12588</a>) where non-member module conditionals were
   stripped from the public\_html template before being parsed.
-- Fixed a bug (#12663) where the View Template Revisions dropdown did
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12663" target="_blank">#12663</a>) where the View Template Revisions dropdown did
   not work in all browsers by adding a submit button.
-- Fixed a bug (#12733) where the {week\_date} variable was not parsed
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12733" target="_blank">#12733</a>) where the {week\_date} variable was not parsed
   in the channel entries tag.
-- Fixed a bug (#12736) where the Multi Entry Editor never showed 'Allow
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12736" target="_blank">#12736</a>) where the Multi Entry Editor never showed 'Allow
   Comments' and 'Make Entry Sticky' to show as checked.
-- Fixed a bug (#12559) in the channel entries tag where member
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12559" target="_blank">#12559</a>) in the channel entries tag where member
   variables were not parsed if left NULL.
-- Fixed a bug (#12767) where permitted channels were not present in the
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12767" target="_blank">#12767</a>) where permitted channels were not present in the
   channel dropdown on the Publish/Edit pages.
-- Fixed a bug (#12428) in the Metaweblog API Module where the custom
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12428" target="_blank">#12428</a>) in the Metaweblog API Module where the custom
   field select options did not properly reflect the chosen channel.
-- Fixed a bug (#12601) where the Date Range selection on the Content
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12601" target="_blank">#12601</a>) where the Date Range selection on the Content
   Edit page was unclear.
-- Fixed a bug (#12383) where deleting a tab in a saved layout could
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12383" target="_blank">#12383</a>) where deleting a tab in a saved layout could
   result in a custom field being erroneously dropped from the layout in
   certain browsers.
-- Fixed a bug (#12797) in the Next/Previous Entry Linking where a PHP
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12797" target="_blank">#12797</a>) in the Next/Previous Entry Linking where a PHP
   error could when the categories parameter was specified.
 - Fixed a bug where Database SQL Query Caching was never enabled,
   regardless of the setting.
 - Fixed a bug where edited images could not always be saved on Windows
   servers.
-- Fixed a bug (#12878) where the Simple Commerce Module erroneously
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12878" target="_blank">#12878</a>) where the Simple Commerce Module erroneously
   required that the Purchase Identification Number (TXN ID) be numeric.
-- Fixed a bug (#12351) in the Pages Module where a PHP error could
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12351" target="_blank">#12351</a>) in the Pages Module where a PHP error could
   occur on the module configuration page when channels existed but no
   template groups had been created.
 - Fixed a bug where the Daylight Savings Time setting in the Control
   Panel always shows as 'yes' regardless of the individual's setting.
-- Fixed a bug (#12788) where autosaved publish data for file fields
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12788" target="_blank">#12788</a>) where autosaved publish data for file fields
   could have the wrong file upload folder associated with the image.
-- Fixed a bug (#12436) where Forum Administrators were allowed to edit
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12436" target="_blank">#12436</a>) where Forum Administrators were allowed to edit
   and delete posts by Superadmins.
-- Fixed a bug (#12730) in the custom layouts where you could not re-add
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12730" target="_blank">#12730</a>) in the custom layouts where you could not re-add
   a tab that had been deleted without saving the layout first.
 - Fixed a bug (#9540) where MySQL column data types were not altered
   when selecting a Numeric or Integer text field.
-- Fixed a bug (#12348) where MySQL data types were not consistently
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12348" target="_blank">#12348</a>) where MySQL data types were not consistently
   altered in the creation/edit of member custom fields.
-- Fixed a bug (#12372) where a limit of 0 on a Channel Entries tag
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12372" target="_blank">#12372</a>) where a limit of 0 on a Channel Entries tag
   would produce a PHP error.
-- Fixed a bug (#12406) where the maxlength input attribute did not
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12406" target="_blank">#12406</a>) where the maxlength input attribute did not
   properly appear on custom member profile text inputs.
-- Fixed a bug (#12449) where a typographical error caused a PHP error
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12449" target="_blank">#12449</a>) where a typographical error caused a PHP error
   on the publish page.
-- Fixed a bug (#12456) where a language key was missing on the
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12456" target="_blank">#12456</a>) where a language key was missing on the
   illegal\_characters fatal error when category groups are created.
-- Fixed a bug (#12474) where members without access to Fieldtypes would
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12474" target="_blank">#12474</a>) where members without access to Fieldtypes would
   still have a navigation option for fieldtypes.
-- Fixed a bug (#12562) where a fatal PHP error was encountered when
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12562" target="_blank">#12562</a>) where a fatal PHP error was encountered when
   attempting to load the Blogger API module.
-- Fixed a bug (#12526) where a PHP error could occur on a Stand-Alone
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12526" target="_blank">#12526</a>) where a PHP error could occur on a Stand-Alone
   Entry Form submission.
-- Fixed a bug (#12626) where when installing a module, the success
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12626" target="_blank">#12626</a>) where when installing a module, the success
   message would link to module control panels that did not exist.
-- Fixed a bug (#12510) where third party modules could not load models
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12510" target="_blank">#12510</a>) where third party modules could not load models
   in uninstall methods in the upd file.
-- Fixed a bug (#12617) where a display error occurred on the CP Search
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12617" target="_blank">#12617</a>) where a display error occurred on the CP Search
   Results page in the Default & Fruit Themes.
-- Fixed a bug (#12468) where a fatal error occurred on the mobile theme
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12468" target="_blank">#12468</a>) where a fatal error occurred on the mobile theme
   publish page.
-- Fixed a bug (#12558) where a PHP error occurred when using template
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12558" target="_blank">#12558</a>) where a PHP error occurred when using template
   caching.
-- Fixed a bug (#12687) where a default value was not selected on the
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12687" target="_blank">#12687</a>) where a default value was not selected on the
   clear caches page.
-- Fixed a bug (#12629) where deleting a custom field group would not
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12629" target="_blank">#12629</a>) where deleting a custom field group would not
   remove all field columns in the channel\_data table.
-- Fixed a bug (#12346) where CSS template calls would count towards
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12346" target="_blank">#12346</a>) where CSS template calls would count towards
   throttling checks.
-- Fixed a bug (#12718) where XSS Checks on image uploads would produce
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12718" target="_blank">#12718</a>) where XSS Checks on image uploads would produce
   a PHP error.
-- Fixed a bug (#12734) where a MySQL error would occur when using the
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12734" target="_blank">#12734</a>) where a MySQL error would occur when using the
   search and replace tool.
-- Fixed a bug (#12453) where the comment expiration date field would
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12453" target="_blank">#12453</a>) where the comment expiration date field would
   display on the publish page when commenting was disabled for the
   channel.
-- Fixed a bug (#12367) where ExpressionEngine.com could not be pinged
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12367" target="_blank">#12367</a>) where ExpressionEngine.com could not be pinged
   on entry submission.
-- Fixed a bug (#12765) where a spelling error occurred on the custom
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12765" target="_blank">#12765</a>) where a spelling error occurred on the custom
   field pages.
-- Fixed a bug (#12644) where CP textareas displayed with serif fonts.
-- Fixed a bug (#12693) where [img] tags were malforming urls with
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12644" target="_blank">#12644</a>) where CP textareas displayed with serif fonts.
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12693" target="_blank">#12693</a>) where [img] tags were malforming urls with
   spaces in the file names.
-- Fixed a bug (#12777) where the dialog 'close' button would produce a
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12777" target="_blank">#12777</a>) where the dialog 'close' button would produce a
   javascript error on the add author dialog.
 - Fixed a bug (#9417) where hidden templates are not a lower opacity in
   the template manager.
-- Fixed a bug (#12467) where a display error could occur upon prefs
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12467" target="_blank">#12467</a>) where a display error could occur upon prefs
   submission in the Simple Commerce Module.
-- Fixed a bug (#12509) where a PHP error could occur when Automatically
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12509" target="_blank">#12509</a>) where a PHP error could occur when Automatically
   Convert High ASCII Text to Entities is set to 'yes'.
-- Fixed a bug (#12519) where a PHP error would occur when the publish
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12519" target="_blank">#12519</a>) where a PHP error would occur when the publish
   page admin toolbar is exposed and the entry autosaves.
-- Fixed a bug (#12393) where date fields would populate with incorrect
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12393" target="_blank">#12393</a>) where date fields would populate with incorrect
   dates when using autosaved data.
-- Fixed a bug (#12746) where setting the form class & id on the Comment
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12746" target="_blank">#12746</a>) where setting the form class & id on the Comment
   Form did not properly function.
-- Fixed a bug (#12478) where a thumbnail was missing from the front
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12478" target="_blank">#12478</a>) where a thumbnail was missing from the front
   page of the publish page file manager.
-- Fixed a bug (#12408) where case sensitive databases would not
+- Fixed a bug (<a href="https://support.ellislab.com/bugs/detail/12408" target="_blank">#12408</a>) where case sensitive databases would not
   properly look up Stand Alone Entry Form action ids.
 - Fixed a bug (#12837) where member imports could fail due to max
   username/password fields not being consistent with database settings.
@@ -4091,7 +4089,7 @@ Build 20100415 (initial release)
 - Improved the blacklist IP check to be more specific in its matching.
 - Enhanced Password Lockout feature, improving protection against brute
   force attacks (hat tip to Jim at `Transmodern Media
-  <http://transmodern.net/>`_)
+  `_)
 - Altered the email field in the member table to 72 characters,
   consistent with the RFC2822 recommended header line limit.
 - Deprecated the 'Enable Image Resizing' global channel configuration
@@ -4694,7 +4692,7 @@ Build 20100121 (initial release)
   manager.
 - Fixed a bug (#9798) replaced delete text in channel manager with
   icon.
-- Fixed a bug (#10427) where there was an unclosed <div> tag on the
+- Fixed a bug (#10427) where there was an unclosed  tag on the
   Corporate Theme Add/Edit Custom Fields page.
 - Fixed a bug (#9648) where the item\_id was incorrectly referenced in
   Simple Commerce subscriptions.
@@ -4826,7 +4824,7 @@ Build 20100121 (initial release)
     global settings.
   - Added per field settings for showing smileys, spellcheck, etc.,
     please see the :doc:`Fieldtype documentation
-    </development/fieldtypes>` for details.
+    ` for details.
 
 Version 2.0.0 Public Beta
 -------------------------
@@ -5118,17 +5116,17 @@ Build 20091202 (initial release)
 - **General changes**
 
   - ExpressionEngine is now powered by
-    :ellislab:`CodeIgniter </codeigniter>`, the open source PHP
+    :ellislab:`CodeIgniter `, the open source PHP
     framework from EllisLab, Inc.
   - "Weblogs" are now known as "Channels"
   - ExpressionEngine now runs fully (and only) on UTF-8.
-  - Added :doc:`Snippets </templates/globals/snippets>`, a new early-
+  - Added :doc:`Snippets `, a new early-
     parsed type of global variable which can be reused throughout your
     templates and can include any dynamic information.
   - New custom field types: Multi-select, Checkbox, Radio, and Upload
   - Included jQuery and numerous plugins, themes, and UI effects as
     standard.
-  - Added a :doc:`jQuery module </add-ons/jquery/index>` to simplify
+  - Added a :doc:`jQuery module ` to simplify
     access to jQuery script files in your ExpressionEngine
     installation.
   - Added additional security measures to help alert you if
@@ -5136,26 +5134,26 @@ Build 20091202 (initial release)
   - ExpressionEngine generated URLs are even prettier, no longer use a
     trailing slash.
   - Added the {absolute_results} :ref:`variable
-    <channel_entries_single_variables>` to the Channel Entries tag.
+    ` to the Channel Entries tag.
   - Changed the behavior of the backspace parameter so that it no
     longer ignores whitespace.
   - Made "yes/no" tag parameters consistent.
-  - ExpressionEngine :doc:`Template Comments </templates/comments>`
+  - ExpressionEngine :doc:`Template Comments `
     can now be used in Global Variables and Snippets.
   - Added CodeIgniter Output Profiler for improved debugging.
   - Changed system offline message to output 503 headers with a 1 hour
     retry time.
   - {assign\_variable:} changed to :doc:`{preload\_replace:foo="bar"}
-    </templates/globals/preload_replacement>` and documentation
+    ` and documentation
     clarified.
   - The Simple Commerce Module now supports :ref:`subscriptions and
-    recurring payments <simple_commerce_recurring_payments>`
+    recurring payments `
   - The Trackback module has been removed from ExpressionEngine. See
-    the :doc:`version update notes </installation/version_notes_2.0>`
+    the :doc:`version update notes `
     for details.
   - The Photo Gallery module has been removed from ExpressionEngine.
     See the :doc:`version update notes
-    </installation/version_notes_2.0>` for details.
+    ` for details.
 
 - **Control Panel**
 
@@ -5165,7 +5163,7 @@ Build 20091202 (initial release)
     - Completely redesigned navigation.
     - Improved UI, including new table filtering and sorting
       capabilities.
-    - Added :doc:`Accessories </cp/add-ons/accessory_manager>`, a
+    - Added :doc:`Accessories `, a
       brand new control panel add-on type.
     - My Account sidebar gives quick access to personal settings.
     - Added context sensitive Help system.
@@ -5203,7 +5201,7 @@ Build 20091202 (initial release)
       not installed.
     - Added "create and edit" option when creating new templates.
     - Dramatically changed :doc:`flat-file template system
-      </templates/templates_as_files>`
+      `
 
       - When using this feature, templates and groups will be
         created automatically when you add them to the template
@@ -5211,7 +5209,7 @@ Build 20091202 (initial release)
       - Template Editor will indicate whether the loaded template is
         sourced from a file or the database
       - Easy to use :doc:`Synchronization Tool
-        </cp/design/templates/synchronize_templates>` to keep your
+        ` to keep your
         database and files in sync.
       - Files are now saved with the proper file extension, making
         syntax highlighting simpler in your favorite text/HTML/CSS
