@@ -31,7 +31,7 @@ want to have the following URLs::
 
   /events/04-30-2014
 
-Each URL should point to it's own template, one for showing a listing
+Each URL should point to its own template, one for showing a listing
 of events by date, and one for showing a listing by event type. We could
 use the following routes to match::
 
