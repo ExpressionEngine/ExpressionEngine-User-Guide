@@ -20,14 +20,13 @@ Release Date: ?
   - Template Routes can now be reordered for a
     :doc:`custom parse order </urls/template_routes>`.
   - Added an ``action=`` :ref:`parameter <member_action_parameter>` to
-    the Member Login tag. Handy for ensuring that authentication goes to
-    an SSL portion of your site.
-  - Added the ``convert_curly=`` parameter to the Markdown plugin.
+    the Member Login tag.
   - Added the ``[abbr]`` bbcode tag.
   - Changed the default hidden template indicator to an underscore (e.g.
     ``_``)
   - Added EllisLab username to license registration to assist with
     license organization and management.
+  - Added the ``convert_curly=`` parameter to the Markdown plugin.
   - Removed the ``encode_ee_tags=`` parameter from the Markdown plugin.
 
 - Bug Fixes:
