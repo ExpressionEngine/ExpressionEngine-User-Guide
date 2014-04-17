@@ -5,6 +5,118 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.8.2
+-------------
+
+Release Date: ?
+
+- Important:
+
+  - Fixed a security issue that could result in arbitrary script
+    execution in certain circumstances.
+
+- General Changes:
+
+  - Template Routes can now be reordered for a custom parse order.
+  - Added an ``action=`` parameter to the Member Login tag. Handy for
+    ensuring that authentication goes to an SSL portion of your site.
+  - Added the ``convert_curly=`` parameter to the Markdown plugin.
+  - Added the ``[abbr]`` bbcode tag.
+  - Changed the default hidden template indicator to an underscore (e.g.
+    ``_``)
+  - Added EllisLab username to license registration to assist with
+    license organization and management.
+  - Removed the ``encode_ee_tags=`` parameter from the Markdown plugin.
+
+- Bug Fixes:
+
+  - Altered control panel URLs to use only a single query marker to ensure
+    compatibility across server environments.
+  - Fixed a bug where plugins couldn't be used in the search parameter
+    of a Channel Entries tag.
+  - Fixed a bug where member groups with template editing permissions
+    but without template administration permissions could not navigate
+    template groups in the Template Manager.
+  - Fixed a bug where conditionals could fail to parse if advanced
+    conditionals were triggered by an add-on.
+  - Fixed a bug (#20176) where valid regex would throw an invalid regex
+    error in Template Routes.
+  - Fixed a bug (#19974) where default tab names became untranslatable
+    when saving publish tab layouts.
+  - Fixed a bug (#20235) where checking for duplicate routes caused PHP
+    errors.
+  - Fixed a bug where EE tags were not being encoded in the member
+    descriptions on the buddy and blocked lists of the member module.
+  - Fixed a bug (#20055) where a radio button with an ampersand in the
+    value would be double encoded.
+  - Fixed a bug (#18300) where members with the proper permissions could
+    not edit categories from a file edit view.
+  - Fixed a bug (#20190) where using an ampersand in a tab name and
+    clicking on it would cause all other tabs to disappear.
+  - Fixed a bug (#20248) where date tags inside relationships were not
+    being parsed.
+  - Fixed a bug (#20278) where some non-relative dates would be unparsed
+    if a relative date was present
+  - Fixed a bug (#20145) where the table headers in the template route
+    manager were not translatable.
+  - Fixed a bug (#20172) where a misspelling of library would cause a
+    PHP error when calling deprecated pagination hooks.
+  - Fixed a bug (#20149) where the fieldtype uninstallation warning
+    would show when an add-on is being installed.
+  - Fixed a bug (#20173) where an error was shown instead of a 404 in
+    the member module when a 404 was not defined in template
+    preferences.
+  - Fixed a bug (#20194) where previewing comments would result in a PHP
+    error.
+  - Fixed a bug (#20243) where the datepicker did not work while inside
+    of a Grid field in a Channel Form.
+  - Fixed a bug where using Markdown in a Channel where only Safe HTML
+    is allowed would result in unparsed HTML.
+  - Fixed a bug when parsing with Markdown would parse some variables.
+  - Fixed a bug (#20192) where control panel URLs could trigger a
+    disallowed message when overriding the ``uri_protocol`` setting.
+  - Fixed a bug (#20152) where a PHP error could occur if the category
+    indicator word was the very last segment in a URL.
+  - Fixed a bug (#20134) where specifying a backspace parameter value of
+    ``0`` in the Query module resulted in no results being returned.
+  - Fixed a bug (#20115) in the Channel Form display where select fields
+    did not display 0 values.
+  - Fixed a bug (#20112) in the Channel Form where default date
+    variables were not parsed for new entries when the datepicker
+    parameter was set to no.
+  - Fixed a bug (#20199) in the Moblog where user authorization in
+    emails always failed.
+  - Fixed a bug (#20198) in the Channel Form where date fields could
+    cause a JavaScript error if using the single variable tag for
+    display.
+  - Fixed a bug (#20123) in the File Field library where the upload link
+    displayed for users without access to the file upload directory
+    specified for that file.
+  - Fixed a bug (#20237) on the publish page where the edit categories
+    modal failed if sessions were required in the control panel.
+  - Fixed a bug where logout links would fail with an authorization
+    error message when CSRF protection was disabled.
+  - Removed some extraneous code from the installer (#20232).
+  - Fixed a bug (#20148) in the Metaweblog module where incoming calls
+    were refused.
+  - Fixed a bug (#20271) comment pagination did not work properly when
+    the dynamic parameter was set to no.
+  - Fixed a bug (#20298) where searching on date fields in Grid did not
+    work with ``IS_EMPTY`` when dates fixed dates were used.
+  - Fixed a bug (#20292) where image resizing could be off by 1 pixel in
+    some circumstances.
+  - Fixed a bug (#20306) in the Category Archive tag where dates were
+    unparsed when using linear style.
+  - Fixed a bug (#20310) in Channel Form where the field errors tag pair
+    was not properly parsed.
+  - Fixed a bug (#20307) where some emails with newly allowed TLDs were
+    rejected as invalid.
+
+- Developers:
+
+  - Removed the encode_ee_tags parameter from
+    ``EE_Typography::markdown()``.
+
 Version 2.8.1
 -------------
 

@@ -1,6 +1,22 @@
 ExpressionEngine Forum Module Change Log
 ========================================
 
+Version 3.1.16
+--------------
+
+Release Date: ?
+
+- Fixed a bug (#20280) where the ``{pagination_marker}`` was not removed
+  when a forum was empty.
+- Fixed a fatal PHP error on post preview if the forums are ran through
+  the standard template parser.
+- Fixed a bug (#20039) where the logout link did not work if CSRF
+  protection was enabled.
+- Fixed a bug where adding a member group as moderators caused a MySQL
+  error in strict mode.
+- Fixed a PHP error (bug #20302) on the delete forum board confirmation
+  page.
+
 Version 3.1.15
 --------------
 
