@@ -16,18 +16,45 @@ You can set the route for a template using the Access section of the
 Template Manager. To see an overview of your site's routes use the
 :doc:`/cp/design/templates/template_route_manager`.
 
-ExpressionEngine matches routes by starting with the shortest defined
-route and checking for a match, if the route does not match it will then
-check the next shortest route until a match is found. The
-:doc:`/cp/design/templates/template_route_manager` lists your Template
-Routes in the order they are processed when matching a URL.
+The :doc:`/cp/design/templates/template_route_manager` lists your
+Template Routes in the order they are processed when matching a URL.
+You can drag and drop your Template Routes in the Route Manager to set
+a custom parse order.
+
+Setting a custom parse order can be useful in situations where you have
+potentially ambiguous routes. For example, suppose you want to construct
+a URL pattern for an event calendar where you want to be able to show
+events by an event type or for a particular date. In this example we
+want to have the following URLs::
+
+  /events/bank-holidays
+
+  /events/04-30-2014
+
+Each URL should point to its own template, one for showing a listing
+of events by date, and one for showing a listing by event type. We could
+use the following routes to match::
+
+  /events/{type:alpha_dash}
+
+  /events/{date:regex[(\d{2}-\d{2}-\d{4})]}
+
+An issue arises if ExpressionEngine parses your routes in the above
+order when trying to match a URL. If we try to visit a URL with a date,
+like in our second URL, ExpressionEngine will try matching against the
+route with the ``alpha_dash`` rule first. Since our date rule is a
+subset of ``alpha_dash``, the ``alpha_dash`` rule will always match our
+date URLs before ExpressionEngine can route them to the correct
+template. By simply changing the parse order in the Template Route
+Manager so that the date route is first, ExpressionEngine will match the
+date URLs to the right template.
 
 .. important:: Template Routes overrides the default behavior of URLs,
    if you wish to use a Channel Entries Tag in your template you must
-   manually provide segments for any parameters that are normally set
-   in the URL. You must provide a segment for pagination, categories,
-   and entry titles if you wish to use those in your Channel Entries
-   Tag. Additionally, be careful when using dynamic="yes" with Template
+   manually provide segments for any parameters that are normally set in
+   the URL. You must provide a segment for pagination, categories, and
+   entry titles if you wish to use those in your Channel Entries Tag.
+   Additionally, be careful when using ``dynamic="yes"`` with Template
    Routes, this can cause issues if your route does not have an
    appropriate segment set.
 
