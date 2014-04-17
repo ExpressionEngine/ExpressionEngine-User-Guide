@@ -178,6 +178,8 @@ be automatically formatted as a valid HTML link to the address. If the
 option is "No" then the URL or email address will be treated and
 displayed as plain text.
 
+.. _server-path-for-attachment-upload-directory:
+
 Server Path for Attachment Upload Directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

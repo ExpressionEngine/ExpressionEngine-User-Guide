@@ -2068,8 +2068,8 @@ $config['encode_removed_text'] = 'Encoded emails not allowed';
 encryption_key
 --------------
 
-May be used by third parties as part of encoding and decoding encrypted data.  
-The recommended length of the key is 32 characters (128 bits).  The key should 
+May be used by third parties as part of encoding and decoding encrypted data.
+The recommended length of the key is 32 characters (128 bits).  The key should
 include numbers and uppercase and lowercase letters.
 
 ========== ===========
@@ -2588,7 +2588,7 @@ $config['log_referrers'] = 'n';
 log_search_terms
 ----------------
 
-Unused in first party files, this configuration item exists to allow backwards 
+Unused in first party files, this configuration item exists to allow backwards
 compatibility for any third party add-ons using it.
 
 
@@ -3415,7 +3415,8 @@ $config['prv_msg_upload_path'] = '/path/images/pm_attachments/';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
-:ref:`Server Path for Attachment Upload Directory <server-path-for-attachment-upload-directory>`
+:ref:`Server Path for Attachment Upload Directory
+<server-path-for-attachment-upload-directory>`
 
 
 prv_msg_waiting_period
