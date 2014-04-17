@@ -18,14 +18,16 @@ Release Date: ?
 - General Changes:
 
   - Template Routes can now be reordered for a
-    :doc:`custom parse order `.
-  - Added an ``action=`` :ref:`parameter ` to the Member Login tag.
+    :doc:`custom parse order </urls/template_routes>`.
+  - Added an ``action=`` :ref:`parameter <member_action_parameter>` to
+    the Member Login tag. Handy for ensuring that authentication goes to
+    an SSL portion of your site.
+  - Added the ``convert_curly=`` parameter to the Markdown plugin.
   - Added the ``[abbr]`` bbcode tag.
   - Changed the default hidden template indicator to an underscore (e.g.
     ``_``)
   - Added EllisLab username to license registration to assist with
-    license organization and management.  
-  - Added the ``convert_curly=`` parameter to the Markdown plugin.
+    license organization and management.
   - Removed the ``encode_ee_tags=`` parameter from the Markdown plugin.
 
 - Bug Fixes:
@@ -140,19 +142,19 @@ Release Date: February 28, 2014
 - General Changes:
 
   - Added the ability to create
-    :doc:`Template Layouts `.
+    :doc:`Template Layouts </templates/layouts>`.
   - Added the ability to create
-    :doc:`Template Routes `.
-  - Added :ref:`caching drivers ` to allow storage of
+    :doc:`Template Routes </urls/template_routes>`.
+  - Added :ref:`caching drivers <caching_drivers>` to allow storage of
     cache items in the filesystem, Memcached or Redis.
   - Added the ability for all date variables to display as
-    :ref:`relative dates `.
+    :ref:`relative dates <relative_dates>`.
   - Added a ``timezone=`` parameter for use on all date variables.
   - Added date and time formats to the
-    :doc:`Localization Settings `
+    :doc:`Localization Settings </cp/admin/localization_settings>`
     replacing the choice between "United States" and "European" (fixes
     bug #19492).
-  - Added :ref:`new parameters `
+  - Added :ref:`new parameters <relationship_tag_params>`
     (``category=``, ``show_expired=``, ``start_on=``, ``stop_before=``)
     to the Relationships field tag.
   - Added a ``{cp_session_id}`` global template tag (fixes bug
@@ -166,7 +168,7 @@ Release Date: February 28, 2014
     extension and extensions are disabled.
   - File, Forum, Member, Query, Search, Wiki, and Messages pagination
     now uses the
-    :doc:`Channel style of pagination `.
+    :doc:`Channel style of pagination </templates/pagination>`.
   - Added the ability to always show first and last links for pagination.
   - Added the ability to pad pagination page number links to whatever
     number you want.
@@ -183,7 +185,7 @@ Release Date: February 28, 2014
     ``website_session_type``.
   - All cookies now default to httponly. This may be changed using the
     ``cookie_httponly``
-    :ref:`system configuration override `.
+    :ref:`system configuration override <cookie_httponly_config>`.
   - Added a nofollow attribute to the Redirect library's off-site links.
   - Added an overflow style to the File Manager page to enable scrolling
     of wide tables.
@@ -265,11 +267,11 @@ Release Date: February 28, 2014
 
 - Developers:
 
-  - Added :doc:`Cache class ` which provides a
+  - Added :doc:`Cache class </development/usage/cache>` which provides a
     key-value cache store.
   - Added a ``bool_config_item()`` helper function to retrieve y/n
     config file items as booleans.
-  - Added a ``cp_url()`` :ref:`helper function ` to
+  - Added a ``cp_url()`` :ref:`helper function <cp_internal_links>` to
     create prettier control panel URLs.
   - Added ``parse_date_variables()`` method to the Template class for
     proper handling of all date variables.
@@ -279,7 +281,7 @@ Release Date: February 28, 2014
   - **Reactor:** Added :func:`channel_search_modify_result_query` hook
     for modifying the query retrieved by the search module.
   - Replaced Magpie with
-    :doc:`SimplePie ` for RSS feed
+    :doc:`SimplePie </development/usage/rss_parser>` for RSS feed
     parsing.
   - Deprecated :func:`channel_module_create_pagination`, use
     :func:`pagination_create` instead
@@ -304,12 +306,12 @@ Release Date: December 10, 2013
 
 - General Changes:
 
-  - Added :ref:`new parameters ` (category,
+  - Added :ref:`new parameters <relationship_tag_params>` (category,
     show_expired, start_on, stop_before) to the relationship tag.
   - Added "random" option to Grid's ``orderby``
-    :ref:`parameter `.
+    :ref:`parameter <grid_tag_params>`.
   - Added ``field_row_index`` and ``field_row_count``
-    :ref:`variables ` to Grid.
+    :ref:`variables <grid_tag_variables>` to Grid.
 
 - Bug Fixes:
 
@@ -590,7 +592,7 @@ Release Date: August 27, 2013
 
 - General Changes:
 
-  - Added a new fieldtype called :doc:`Grid ` for
+  - Added a new fieldtype called :doc:`Grid </add-ons/channel/grid>` for
     grouping fieldtypes in repeatable rows.
   - Added support for New Relic performance monitoring
   - Added Markdown plugin and field formatting option.
@@ -841,7 +843,7 @@ Release Date: April 23, 2013
   - Timezone selection menus now include all timezones for automatic
     date localization and handling of Daylight Saving Time rules.
   - Added Subscriber List tag to the :doc:`Comment Module
-    `
+    </add-ons/comment/index>`
   - Added ``inline`` option to ``paginate`` parameter.
   - Added new variables to the Channel Next/Previous tags:
 
@@ -1700,7 +1702,7 @@ Release Date: May 7, 2012
 
 - General Changes:
 
-  - :doc:`Rich Text Editor `
+  - :doc:`Rich Text Editor </add-ons/rte/control_panel/index>`
 
     - Added new module and fieldtype for the new rich text editor.
     - Added user preferences for rich text editor under my preferences.
@@ -1864,7 +1866,7 @@ Release Date: May 7, 2012
     use __call() magic method.
   - Added ``myaccount_nav_setup`` hook to modify My Account navigation.
     See :doc:`documentation
-    ` for more
+    </development/extension_hooks//cp/myaccount/index>` for more
     information.
   - Added ``email_send`` hook to modify emails or take over email
     sending completely.
@@ -2467,7 +2469,7 @@ Release Date: June 22, 2011
 
 - General Changes:
 
-  - Added a :doc:`File Module ` to display file
+  - Added a :doc:`File Module </add-ons/file/index>` to display file
     information on the frontend.
   - Added ability to edit file metadata from the File Manager.
   - Added several file types to the mimetype listing. **Please update
@@ -2735,7 +2737,7 @@ Build 20110512
 - General Changes:
 
   - File Manager Changes (see :doc:`Version Update Notes
-    `):
+    </installation/version_notes_2.1.5>`):
 
     - Moved file information storage to the database
     - Moved File Upload Preferences to the File Manager
@@ -2770,7 +2772,7 @@ Build 20110512
     global variables within snippets.
   - Removed the Blogger API module.
   - Moved SafeCracker into native modules, **please see the**
-    :doc:`version notes ` **about
+    :doc:`version notes </installation/version_notes_2.2.0>` **about
     how to upgrade**.
 
 - Bug Fixes:
@@ -2960,7 +2962,7 @@ Build 20110101 (initial release)
 
 - File management overhaul stage one completed.
 - Added {exp:comment:edit\_comment\_script} tag to output comment
-  editor via a  tag.
+  editor via a <script> tag.
 - Added {if enable\_avatars}{/if} and {if enable\_photos}{/if} to
   members and forums menu.html theme files.
 - Optimized the Channel Entries tag to consistently not perform page
@@ -3138,8 +3140,8 @@ General Changes:
 - Added an importer to the IP to Nations Module that allows updating the
   IP records directly from the ip2nations SQL file.
 - Added secure forms check to the frontend Comment Editor. See the
-  :doc:`Version Notes ` and update
-  your :ref:`JavaScript ` if needed.
+  :doc:`Version Notes </installation/version_notes_2.1.2>` and update
+  your :ref:`JavaScript <comment_editing>` if needed.
 - Added a setting to group preferences to disallow editing of html
   formatting buttons.
 - Added to the default message text for forwarded private messages to
@@ -3177,7 +3179,7 @@ Developers:
 - Added cp\_js\_end and cp\_css\_end Extension Hook to the Javascript
   Controller.
 - Added a new method
-  :doc:`settings\_modify\_column() `
+  :doc:`settings\_modify\_column() </installation/version_notes_2.1.2>`
   to Custom Fieldtypes.
 - Changed the API's initialize method visibility to protected.
 - Moved Javascript files to themes/javascript/compressed/.
@@ -3190,7 +3192,7 @@ Developers:
 - Abstracted the secure forms check to a new function
   secure\_forms\_check() in the Security Library.
 - Moved the :doc:`entry\_submission\_absolute\_end hook
-  ` from the Channel Entries API to
+  </installation/version_notes_2.1.2>` from the Channel Entries API to
   Content Publish and added a new parameter.
 - CodeIgniter system folder set to `` 0a18e0f60784``
 
@@ -3358,7 +3360,7 @@ Build 20101018 (initial release)
   - Altered version update notification to notify users if a new
     ExpressionEngine release is a security release.
   - Altered the behavior of the :doc:`Channel Category tag's
-    ` show_empty= parameter channel
+    </add-ons/channel/categories>` show_empty= parameter channel
     specific. (Waits for the cheering to die down....)
   - Altered member profile fields to disallow HTML.
   - Altered final file permissions on uploads to compensate for
@@ -3371,37 +3373,37 @@ Build 20101018 (initial release)
   - Added a template synchronization warning in the Search and Replace
     tool for users saving templates as files (issue #13551).
   - Added a restrict_channel= parameter to the :doc:`Channel Category
-    tag `, which allows overriding the
+    tag </add-ons/channel/categories>`, which allows overriding the
     new default behavior of its show_empty= parameter.
   - Added a :doc:`Control Panel
-    ` to the Comment Module.
+    </add-ons/comment/control_panel/index>` to the Comment Module.
   - Added a new status for comments. Moderated comments will no go in
     with a status of 'Pending' rather than 'Closed' (though moderators
     may still set a comment to 'Closed' status.
   - Added new variables to the Comment Notification Templates (see
-    :doc:`Version Notes `).
-  - Added new :doc:`Settings `
+    :doc:`Version Notes </installation/version_notes_2.1.1>`).
+  - Added new :doc:`Settings </add-ons/comment/control_panel/index>`
     to the Comment Module (Force word censoring for comments and
     Moderate expired comments).
   - Added new variables to the :doc:`Comment Entries tag
-    ` ({member\_group\_id}, {username}, {if
+    </add-ons/comment/index>` ({member\_group\_id}, {username}, {if
     editable}, {if can\_moderate\_comment}, {comment\_stripped}).
   - Added new parameters to the :doc:`Comment Entries tag
-    ` (comment\_id=, entry\_status=, status=,
+    </add-ons/comment/index>` (comment\_id=, entry\_status=, status=,
     author\_id=_).
   - Added a random option to the Comment Entries
     :ref:`comment_entries_orderby` parameter.
   - Added a new parameter to the :ref:`Comment Form tag
-    ` (return=).
+    <comment_submission_form>` (return=).
   - Added new conditionals to the :ref:`Comment Form tag
-    ` ({if comments\_expired}, {if
+    <comment_submission_form>` ({if comments\_expired}, {if
     comments\_disabled}).
   - Added a Comment Notification tag to the :doc:`Comment Module
-    ` which gives members the ability to
+    </add-ons/comment/index>` which gives members the ability to
     subscribe to comment notifications for an entry without
     commenting.
   - Added the ability to :ref:`Allow Members to Edit Comments on the
-    Front End `.
+    Front End <comment_editing>`.
   - Added a new notification template to the Comment Module to send a
     single digest when moderated comments are opened.)
   - Moved stats mcp file logic to a library for greater code
@@ -3443,9 +3445,9 @@ Build 20101018 (initial release)
   - Deprecated the old lang.name.php language file naming convention
     in favor of CodeIgniter's name\_lang.php.
   - Added a parameter to the :doc:`delete\_comment\_additional hook
-    `.
+    </installation/version_notes_2.1.1>`.
   - Removed the :doc:`comment\_form\_action hook
-    `.
+    </installation/version_notes_2.1.1>`.
   - Fixed a bug in the API where child drivers were not being
     initialized before consecutive instantiations.
   - Fixed a bug (#14009) in the Channel Entries API where
@@ -3811,8 +3813,8 @@ Build 20100712 (initial release)
   fieldtype correctly.
 - Fixed a bug (#12731) where logged in members without upload
   privileges were not able to view uploaded Wiki images.
-- Fixed a bug (#12884) where smilies could be parsed inside  and
-   tags.
+- Fixed a bug (#12884) where smilies could be parsed inside <pre> and
+  <code> tags.
 - Fixed a bug (#12267) in the Wiki Module where there were unparsed
   tags when editing a revision.
 - Fixed a bug (#12010) where the show\_pages="only" parameter was
@@ -4089,7 +4091,7 @@ Build 20100415 (initial release)
 - Improved the blacklist IP check to be more specific in its matching.
 - Enhanced Password Lockout feature, improving protection against brute
   force attacks (hat tip to Jim at `Transmodern Media
-  `_)
+  <http://transmodern.net/>`_)
 - Altered the email field in the member table to 72 characters,
   consistent with the RFC2822 recommended header line limit.
 - Deprecated the 'Enable Image Resizing' global channel configuration
@@ -4692,7 +4694,7 @@ Build 20100121 (initial release)
   manager.
 - Fixed a bug (#9798) replaced delete text in channel manager with
   icon.
-- Fixed a bug (#10427) where there was an unclosed  tag on the
+- Fixed a bug (#10427) where there was an unclosed <div> tag on the
   Corporate Theme Add/Edit Custom Fields page.
 - Fixed a bug (#9648) where the item\_id was incorrectly referenced in
   Simple Commerce subscriptions.
@@ -4824,7 +4826,7 @@ Build 20100121 (initial release)
     global settings.
   - Added per field settings for showing smileys, spellcheck, etc.,
     please see the :doc:`Fieldtype documentation
-    ` for details.
+    </development/fieldtypes>` for details.
 
 Version 2.0.0 Public Beta
 -------------------------
@@ -5116,17 +5118,17 @@ Build 20091202 (initial release)
 - **General changes**
 
   - ExpressionEngine is now powered by
-    :ellislab:`CodeIgniter `, the open source PHP
+    :ellislab:`CodeIgniter </codeigniter>`, the open source PHP
     framework from EllisLab, Inc.
   - "Weblogs" are now known as "Channels"
   - ExpressionEngine now runs fully (and only) on UTF-8.
-  - Added :doc:`Snippets `, a new early-
+  - Added :doc:`Snippets </templates/globals/snippets>`, a new early-
     parsed type of global variable which can be reused throughout your
     templates and can include any dynamic information.
   - New custom field types: Multi-select, Checkbox, Radio, and Upload
   - Included jQuery and numerous plugins, themes, and UI effects as
     standard.
-  - Added a :doc:`jQuery module ` to simplify
+  - Added a :doc:`jQuery module </add-ons/jquery/index>` to simplify
     access to jQuery script files in your ExpressionEngine
     installation.
   - Added additional security measures to help alert you if
@@ -5134,26 +5136,26 @@ Build 20091202 (initial release)
   - ExpressionEngine generated URLs are even prettier, no longer use a
     trailing slash.
   - Added the {absolute_results} :ref:`variable
-    ` to the Channel Entries tag.
+    <channel_entries_single_variables>` to the Channel Entries tag.
   - Changed the behavior of the backspace parameter so that it no
     longer ignores whitespace.
   - Made "yes/no" tag parameters consistent.
-  - ExpressionEngine :doc:`Template Comments `
+  - ExpressionEngine :doc:`Template Comments </templates/comments>`
     can now be used in Global Variables and Snippets.
   - Added CodeIgniter Output Profiler for improved debugging.
   - Changed system offline message to output 503 headers with a 1 hour
     retry time.
   - {assign\_variable:} changed to :doc:`{preload\_replace:foo="bar"}
-    ` and documentation
+    </templates/globals/preload_replacement>` and documentation
     clarified.
   - The Simple Commerce Module now supports :ref:`subscriptions and
-    recurring payments `
+    recurring payments <simple_commerce_recurring_payments>`
   - The Trackback module has been removed from ExpressionEngine. See
-    the :doc:`version update notes `
+    the :doc:`version update notes </installation/version_notes_2.0>`
     for details.
   - The Photo Gallery module has been removed from ExpressionEngine.
     See the :doc:`version update notes
-    ` for details.
+    </installation/version_notes_2.0>` for details.
 
 - **Control Panel**
 
@@ -5163,7 +5165,7 @@ Build 20091202 (initial release)
     - Completely redesigned navigation.
     - Improved UI, including new table filtering and sorting
       capabilities.
-    - Added :doc:`Accessories `, a
+    - Added :doc:`Accessories </cp/add-ons/accessory_manager>`, a
       brand new control panel add-on type.
     - My Account sidebar gives quick access to personal settings.
     - Added context sensitive Help system.
@@ -5201,7 +5203,7 @@ Build 20091202 (initial release)
       not installed.
     - Added "create and edit" option when creating new templates.
     - Dramatically changed :doc:`flat-file template system
-      `
+      </templates/templates_as_files>`
 
       - When using this feature, templates and groups will be
         created automatically when you add them to the template
@@ -5209,7 +5211,7 @@ Build 20091202 (initial release)
       - Template Editor will indicate whether the loaded template is
         sourced from a file or the database
       - Easy to use :doc:`Synchronization Tool
-        ` to keep your
+        </cp/design/templates/synchronize_templates>` to keep your
         database and files in sync.
       - Files are now saved with the proper file extension, making
         syntax highlighting simpler in your favorite text/HTML/CSS
@@ -5257,7 +5259,7 @@ Build 20091202 (initial release)
     your member profile themes.
   - Site themes are much easier to create and redistribute, following
     the same file structure as the new
-    :doc:`flat-file template system `.
+    :doc:`flat-file template system </templates/templates_as_files>`.
 
 - **Installer**
 
@@ -5273,18 +5275,18 @@ Build 20091202 (initial release)
 
 - **Development changes**
 
-  - Add-ons now come in :doc:`packages `,
+  - Add-ons now come in :doc:`packages </development/packages>`,
     increasing flexibility and simplifying updates and maintenance.
   - Add-ons can have their own CodeIgniter libraries, models, config,
     javascript, view files, etc.
   - Single third party folder for all add-on types.
   - New control panel add-on type:
-    :doc:`Accessories `.
+    :doc:`Accessories </development/accessories>`.
   - New Custom Field API lets you create your own custom field types.
     *Contact the development team for alpha documentation*.
   - Added simple methods for tags to :doc:`parse their template
-    variables `.
-  - Added :doc:`CP library ` which has many
+    variables </development/usage/template>`.
+  - Added :doc:`CP library </development/usage/cp>` which has many
     assistive methods and handles many things for you automatically.
   - Display class is deprecated!
   - CodeIgniter core increase ease and power of developing add-ons,
@@ -5302,8 +5304,8 @@ Build 20091202 (initial release)
   to gratefully acknowledge the following users for their wonderful
   contributions:
 
-  - `Cliff Persaud `_
-  - `David Genesse `_
-  - `Benedikte Vanderweeën `_
-  - `Colin Williams `_
+  - `Cliff Persaud <http://www.cubist.ca/>`_
+  - `David Genesse <http://www.davidgenesse.com/>`_
+  - `Benedikte Vanderweeën <http://www.bene.be/>`_
+  - `Colin Williams <http://wllmscncpts.tumblr.com/>`_
   - Charles Neely
