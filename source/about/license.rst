@@ -8,7 +8,7 @@ Add-ons you agree to be bound by the terms and conditions of this
 license. EllisLab, Inc. reserves the right to alter this agreement at
 any time, for any reason, without notice.**
 
-Revised on: 1 May, 2013
+Revised on: 11 April, 2014
 
 ExpressionEngine Installations
 ------------------------------
@@ -61,6 +61,8 @@ Unless you have been granted prior, written consent from EllisLab, Inc.,
    provide hosting services to others.
 -  Reproduce, distribute, or transfer the Software, or portions thereof,
    to any third party.
+-  Modify, tamper with, bypass, or in any way impede license registration
+   routines in the Software.
 -  Sell, rent, lease, assign, or sublet the Software or portions
    thereof.
 -  Grant rights to any other person.
