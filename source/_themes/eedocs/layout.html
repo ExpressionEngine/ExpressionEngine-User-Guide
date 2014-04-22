@@ -11,7 +11,7 @@
 {%- if project == 'MojoMotor' %}{% set project_abbreviation = 'mm' %}{% set project_domain = 'ellislab.com/mojomotor' %}{% endif -%}
 {%- set exclude_comments = ['index', 'license', 'changelog',
 							'development/index', 'development/extension_hooks/index',
-							'development/guidelines/template'] %}
+							'development/guidelines/template', 'development/developer_preview_program'] %}
 {% if pagename in ['index', 'general/languages'] -%}
 	{%- set script_files = script_files + ['_static/asset/js/jquery-github-repos.js'] %}
 {% endif %}
@@ -34,7 +34,7 @@
 	    {%- for cssfile in css_files %}
 	    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
 	    {%- endfor %}
-	
+
     {%- if not embedded %}
 	    <script type="text/javascript">
 	      var DOCUMENTATION_OPTIONS = {
@@ -53,7 +53,7 @@
 	    <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
 	    {%- endif %}
 	{%- endif %}
-	
+
 	{%- block linktags %}
 	    {%- if hasdoc('about') %}
 	    <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}" />
@@ -105,7 +105,7 @@
 				{%- block rootrellink %}
 				<li><a href="{{ pathto(master_doc) }}">User Guide Home</a>{%- if pagename != 'index' %}&nbsp;&nbsp;{{ reldelim1 }}{%- endif %}</li>
 				{%- endblock %}
-				
+
 				{%- for parent in parents %}
 				<li><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a>&nbsp;&nbsp; {{ reldelim1 }}</li>
 		        {%- endfor %}
@@ -124,8 +124,8 @@
 		{% if pagename not in exclude_comments -%}
 		<!-- {user_guide_comments} -->
 		{% endif %}
-	
-	{%- block footer %}			
+
+	{%- block footer %}
 		<div id="footer">
 			<p class="top"><a href="#header" title="Return to top">Return to top</a></p>
 			<p><a href="{{ project_url }}">{{ project }}</a> &ndash; Copyright &copy; {{ copyright }}</a></p>

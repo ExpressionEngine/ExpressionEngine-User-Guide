@@ -31,23 +31,24 @@ following benefits:
 - Build notes to help point out changes that are most likely to impact
   third-party add-ons
 - Access to the ExpressionEngine Developer forums to interact with the
-  entire EllisLab Team as well as other developers in the program
-- Can alert the EllisLab team to potential showstopping issues affecting
-  their add-ons, and work on solutions to those issues with EllisLab
-  Engineers prior to a release.
+  entire EllisLab Team as well as other developers in the program. This
+  includes alerting the EllisLab team to potential showstopping issues
+  affecting their add-ons, and working with EllisLab Engineers on
+  solutions to those issues prior to a release.
 
 How to Join
 -----------
 
 If you are interested in joining the Developer Preview Program, please
-send an email to wes.baker@ellislab.com and include a link to your
-publicly-available commercial add-ons in your request.
+send an email to `team@ellislab.com <team@ellislab.com?subject=Developer%20Preview%20Request>`_
+and include a link to your publicly-available commercial add-ons in your
+request.
 
 My Add-ons are Bespoke, Can I Join?
 -----------------------------------
 
-The Developer Preview Program is only available to developers with prevelant
-add-ons in order to maximize the effectiveness of the engineering
+The Developer Preview Program is only available to developers with prevalent
+commercial add-ons in order to maximize the effectiveness of the engineering
 resources devoted to the program at this time.
 
 Who Is in the Developer Preview?
