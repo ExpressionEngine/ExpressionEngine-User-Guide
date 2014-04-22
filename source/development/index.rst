@@ -30,6 +30,8 @@ General Development
 - :doc:`Control Panel Style Reference </development/cp_styles/index>`
 - :doc:`Emoticon Development </development/emoticons>`
 
+- :doc:`Developer Preview Program </development/developer_preview_program>`
+
 ***
 API
 ***
