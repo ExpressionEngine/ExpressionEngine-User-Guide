@@ -57,18 +57,19 @@ conversion list:
 To evaluate            Use instead
 =====================  ===========
 "                      &#34;
+'                      &#39;
 \\                     &#92;
 $                      &#36;
 (                      &#40;
 )                      &#41;
-{                      remove
-}                      remove
+{                      &#123;
+}                      &#125;
 \\n (linebreaks)       remove
 \\r (carriage return)  remove
 =====================  ===========
 
 If you are comparing a variable against a value that might include
-parentheses, you should use the HTML entities for parentheses listed in
+parentheses or curly braces, you should use the HTML entities listed in
 the table above instead. For example, if you want the conditional to
 evaluate whether the screen name is *John Smith (Owner)*, you would
 write the conditional like so::
@@ -373,3 +374,27 @@ syntax follows:
 -  logged\_in\_total\_forum\_posts
 -  logged\_in\_total\_forum\_topics
 
+Errors
+------
+
+There are two errors associated with conditionals.
+
+Invalid Conditional
+~~~~~~~~~~~~~~~~~~~
+
+The invalid conditional error is triggered by the following scenarios:
+
+* ``{if:`` is encountered in the template without it being either ``if:else``
+  or ``if:elseif``.
+* ``{/if}`` cannot be found. All ``{/if}`` inside a string (single or double-
+  quoted) are ignored.
+* There is an unclosed single or double-quoted string.
+* A closing ``}`` is not found.
+
+Unsafe Conditional
+~~~~~~~~~~~~~~~~~~
+
+The unsafe conditional error is triggered by the following scenarios:
+
+* Backticks (`````) are encountered outside a string.
+* PHP comments are present outside a string.
