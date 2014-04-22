@@ -47,8 +47,8 @@ request.
 My Add-ons are Bespoke, Can I Join?
 -----------------------------------
 
-The Developer Preview Program is only available to developers with prevelant
-add-ons in order to maximize the effectiveness of the engineering
+The Developer Preview Program is only available to developers with prevalent
+commercial add-ons in order to maximize the effectiveness of the engineering
 resources devoted to the program at this time.
 
 Who Is in the Developer Preview?
