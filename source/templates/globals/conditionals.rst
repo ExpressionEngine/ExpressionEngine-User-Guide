@@ -86,6 +86,11 @@ write the conditional like so::
 
 	{if screen_name == 'John Smith &#40;Owner&#41;'}
 
+Or if you want the conditional to evaluate whether the title is *Curly
+and the Braces: {}*, you would write the conditional like so::
+
+	{if title == 'Curly and the Braces: &#123;&#125;'}
+
 .. _global_advanced_conditionals:
 
 Advanced Conditionals
