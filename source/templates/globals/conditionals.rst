@@ -230,6 +230,13 @@ conditional::
 
 This works because the remainder of 5 divided by 5 is 0.
 
+String Concatenation Operator
+=============================
+
+You can use the string concatenation operator (``.``) to concatenate values::
+
+	{if segment_1 . '/' . segment_2 == 'site/index'}
+
 Parentheses in Conditionals
 ===========================
 
