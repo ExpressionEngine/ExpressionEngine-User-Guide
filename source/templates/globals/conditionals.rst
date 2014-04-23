@@ -164,15 +164,13 @@ Operator  Name
 >         Greater than
 >=        Greater than or equal to
 <>        Not equal
-%		  Remainder of one number divided by another
 ========  ==========================================
-
 
 .. note:: When comparing equality make sure to use **two** equal signs
    rather than one (e.g. **==**).
 
 Logical Operators
-~~~~~~~~~~~~~~~~~
+=================
 
 You can use the following operators to compare multiple variables to
 multiple values:
@@ -200,8 +198,24 @@ is not 5 *and* their username is Billy, they can view the data in the
 conditional. The table above lists the precedence of operators with the
 highest-precedence operators listed at the top of the table.
 
+Mathematic Operators
+====================
+
+You can use the following mathematical operators to compute values:
+
+========  ==========================================
+Operator  Name
+========  ==========================================
+\+        Addition
+\-        Subtraction
+%		  Remainder of one number divided by another
+========  ==========================================
+
+.. note:: When using these mathematical operators be sure to surround them with
+   whitespace.
+
 Modulus Operator
-~~~~~~~~~~~~~~~~
+----------------
 
 A modulus operator finds the remainder of division of one number by
 another. This can be handy when you want to do something every nth
