@@ -1,5 +1,14 @@
+############################
 Conditional Global Variables
-============================
+############################
+
+.. contents::
+   :local:
+   :depth: 1
+
+************
+Introduction
+************
 
 Conditional Variables are pair type variables, which allow you to
 conditionally show or hide information on your pages based on criteria
@@ -10,8 +19,9 @@ conditionals, which normally follows this form::
 
 .. _global_simple_conditionals:
 
+*******************
 Simple Conditionals
--------------------
+*******************
 
 A conditional is considered "simple" if it is evaluating variables that
 are already available by the time the :doc:`template parsing engine
@@ -45,7 +55,7 @@ Layout         {layout:name}
    the conditional tag pair.
 
 Protected Characters
-~~~~~~~~~~~~~~~~~~~~
+====================
 
 ExpressionEngine uses PHP to evaluate conditionals, and there are
 certain characters that must be protected in a variable so that they are
@@ -99,7 +109,7 @@ Or this example::
 	{/if}
 
 Else and Elseif
-~~~~~~~~~~~~~~~
+===============
 
 You can use two additional control structures to help tailor your
 results::
@@ -131,14 +141,15 @@ nor bob a default message is shown.
    the *right* of the prefix is what determines which conditional you
    are using.
 
+*********
 Operators
----------
+*********
 
 The following comparison and logical operators are allowed within
 conditionals:
 
 Comparison Operators
-~~~~~~~~~~~~~~~~~~~~
+====================
 
 You can use any of the following operators to compare a variable to a
 value:
@@ -206,7 +217,7 @@ conditional::
 This works because the remainder of 5 divided by 5 is 0.
 
 Parentheses in Conditionals
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================
 
 Like PHP, you can use parentheses to group parts of a conditional
 together to have the part of the conditional between the parentheses
@@ -221,20 +232,22 @@ So, if the member id of the visitor is either 1 or 2, and they are
 viewing the channel with id of 5, then they can see the contents of that
 conditional.
 
+******************
 Short Conditionals
-------------------
+******************
 
 Certain conditionals exist in a shortened form in order to improve
 template readability. These conditionals are usually checking to see if
 a certain thing is true or exists:
 
 
+*******************
 Global Conditionals
--------------------
+*******************
 
 
 if group\_id
-~~~~~~~~~~~~
+============
 
 ::
 
@@ -246,7 +259,7 @@ version of this conditional should be used inside of
 {exp:channel:entries} tags.
 
 if logged\_in
-~~~~~~~~~~~~~
+=============
 
 ::
 
@@ -261,7 +274,7 @@ the page is currently a logged in member.
 	Control Panel.
 
 if logged\_out
-~~~~~~~~~~~~~~
+==============
 
 ::
 
@@ -275,7 +288,7 @@ You'll notice in the "logout" link above that a special path is used:
 automatically render the correct path for someone to log out.
 
 if member\_group
-~~~~~~~~~~~~~~~~
+================
 
 ::
 
@@ -287,7 +300,7 @@ available above. {member\_group} will work correctly inside a
 {exp:channel:entries} tag, however.
 
 if member\_id
-~~~~~~~~~~~~~
+=============
 
 ::
 
@@ -296,7 +309,7 @@ if member\_id
 Test for the member ID of the currently logged in user.
 
 if screen\_name
-~~~~~~~~~~~~~~~
+===============
 
 ::
 
@@ -305,7 +318,7 @@ if screen\_name
 You can test against the screen name of the currently logged in user.
 
 if total\_comments
-~~~~~~~~~~~~~~~~~~
+==================
 
 ::
 
@@ -314,7 +327,7 @@ if total\_comments
 Test against the total number of comments submitted for the entire site.
 
 if total\_entries
-~~~~~~~~~~~~~~~~~
+=================
 
 ::
 
@@ -323,7 +336,7 @@ if total\_entries
 Test against the total number of entries submitted for the entire site.
 
 if segment\_*X*
-~~~~~~~~~~~~~~~
+===============
 
 ::
 
@@ -335,7 +348,7 @@ segment name. e.g. if you're interested in URL Segment 3, then use {if
 segment\_3}.
 
 if username
-~~~~~~~~~~~
+===========
 
 ::
 
@@ -343,8 +356,9 @@ if username
 
 You can test against the username of the currently logged in user.
 
+******************
 Alternative Syntax
-------------------
+******************
 
 In order to be able to use some member variables in conditionals inside
 a channel entries tag, which processes its own member information, it is
@@ -374,13 +388,14 @@ syntax follows:
 -  logged\_in\_total\_forum\_posts
 -  logged\_in\_total\_forum\_topics
 
+******
 Errors
-------
+******
 
 There are two errors associated with conditionals.
 
 Invalid Conditional
-~~~~~~~~~~~~~~~~~~~
+===================
 
 The invalid conditional error is triggered by the following scenarios:
 
@@ -392,7 +407,7 @@ The invalid conditional error is triggered by the following scenarios:
 * A closing ``}`` is not found.
 
 Unsafe Conditional
-~~~~~~~~~~~~~~~~~~
+==================
 
 The unsafe conditional error is triggered by the following scenarios:
 
