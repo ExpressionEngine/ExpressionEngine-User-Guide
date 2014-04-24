@@ -89,6 +89,9 @@ In short, a simple conditional will look very much like this::
 
 	{if embed:name == "joe"}  <h1>Info about Joe!</h1>  {/if}
 
+.. note:: Variables inside conditionals do not need to be wrapped in curly
+   braces (``{}``).
+
 .. note:: If you are testing against a word, you should enclose the word
    in single or double-quotes. If you are testing against a number, then
    you do not need to use quotes.
