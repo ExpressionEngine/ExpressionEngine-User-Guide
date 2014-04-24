@@ -2456,6 +2456,26 @@ $config['is_system_on'] = 'y';
 **Also found in CP:** :menuselection:`Admin --> General
 Configuration`: :ref:`Is system on? <general-config-system-on-label>`
 
+license_contact
+---------------
+
+Specify the email address for the license holder. Does not have to be
+specifically tied to your EllisLab.com account.
+
+========== ===========
+Value      Description
+========== ===========
+``text``   License holder contact email address
+========== ===========
+
+Example Usage::
+
+$config['license_contact'] = 'contact@example.com';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Admin --> Software
+License`: :ref:`License Holder Contact Email <software-license-license-contact-label>`
 
 license_number
 --------------
@@ -2479,9 +2499,8 @@ $config['license_number'] = '1234-1234-1234-1234';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> General
-Configuration`: :ref:`License Number
-<general-config-license-number-label>`
+**Also found in CP:** :menuselection:`Admin --> Software
+License`: :ref:`License Number <software-license-license-number-label>`
 
 
 .. _lockout_time:
