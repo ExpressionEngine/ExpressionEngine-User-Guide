@@ -283,7 +283,7 @@ via OR. ::
 	{if member_id != '1' && member_group != "5" OR username == "Billy"} Hi! {/if}
 
 So, if the member id of the site visitor is not 1 and their member group
-is not 5 *and* their username is Billy, they can view the data in the
+is not 5 *or* their username is Billy, they can view the data in the
 conditional. The table above lists the precedence of operators with the
 highest-precedence operators listed at the top of the table.
 
