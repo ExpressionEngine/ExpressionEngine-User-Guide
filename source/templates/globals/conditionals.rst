@@ -4,7 +4,7 @@ Conditional Global Variables
 
 .. contents::
    :local:
-   :depth: 1
+   :depth: 2
 
 ************
 Introduction
@@ -93,8 +93,9 @@ and the Braces: {}*, you would write the conditional like so::
 
 .. _global_advanced_conditionals:
 
+*********************
 Advanced Conditionals
----------------------
+*********************
 
 Any conditional that isn't a :ref:`simple conditional
 <global_simple_conditionals>` is considered an "advanced" conditional
@@ -146,15 +147,14 @@ nor bob a default message is shown.
    the *right* of the prefix is what determines which conditional you
    are using.
 
-*********
 Operators
-*********
+=========
 
 The following comparison and logical operators are allowed within
 conditionals:
 
 Comparison Operators
-====================
+--------------------
 
 You can use any of the following operators to compare a variable to a
 value:
@@ -175,7 +175,7 @@ Operator  Name
    rather than one (e.g. **==**).
 
 Logical Operators
-=================
+-----------------
 
 You can use the following operators to compare multiple variables to
 multiple values:
@@ -204,7 +204,7 @@ conditional. The table above lists the precedence of operators with the
 highest-precedence operators listed at the top of the table.
 
 Mathematic Operators
-====================
+--------------------
 
 You can use the following mathematical operators to compute values:
 
@@ -221,7 +221,7 @@ Operator  Name
    indicates subtraction.
 
 Modulus Operator
-----------------
+^^^^^^^^^^^^^^^^
 
 A modulus operator finds the remainder of division of one number by
 another. This can be handy when you want to do something every nth
@@ -237,7 +237,7 @@ conditional::
 This works because the remainder of 5 divided by 5 is 0.
 
 String Concatenation Operator
-=============================
+-----------------------------
 
 You can use the string concatenation operator (``.``) to concatenate values::
 
@@ -248,7 +248,7 @@ You can use the string concatenation operator (``.``) to concatenate values::
    `foo . bar` indicates concatenation.
 
 Parentheses in Conditionals
-===========================
+---------------------------
 
 Like PHP, you can use parentheses to group parts of a conditional
 together to have the part of the conditional between the parentheses
@@ -271,14 +271,12 @@ Certain conditionals exist in a shortened form in order to improve
 template readability. These conditionals are usually checking to see if
 a certain thing is true or exists:
 
-
-*******************
 Global Conditionals
-*******************
+===================
 
 
 if group\_id
-============
+------------
 
 ::
 
@@ -290,7 +288,7 @@ version of this conditional should be used inside of
 {exp:channel:entries} tags.
 
 if logged\_in
-=============
+-------------
 
 ::
 
@@ -305,7 +303,7 @@ the page is currently a logged in member.
 	Control Panel.
 
 if logged\_out
-==============
+--------------
 
 ::
 
@@ -319,7 +317,7 @@ You'll notice in the "logout" link above that a special path is used:
 automatically render the correct path for someone to log out.
 
 if member\_group
-================
+----------------
 
 ::
 
@@ -331,7 +329,7 @@ available above. {member\_group} will work correctly inside a
 {exp:channel:entries} tag, however.
 
 if member\_id
-=============
+-------------
 
 ::
 
@@ -340,7 +338,7 @@ if member\_id
 Test for the member ID of the currently logged in user.
 
 if screen\_name
-===============
+---------------
 
 ::
 
@@ -349,7 +347,7 @@ if screen\_name
 You can test against the screen name of the currently logged in user.
 
 if total\_comments
-==================
+------------------
 
 ::
 
@@ -358,7 +356,7 @@ if total\_comments
 Test against the total number of comments submitted for the entire site.
 
 if total\_entries
-=================
+-----------------
 
 ::
 
@@ -367,7 +365,7 @@ if total\_entries
 Test against the total number of entries submitted for the entire site.
 
 if segment\_*X*
-===============
+---------------
 
 ::
 
@@ -379,7 +377,7 @@ segment name. e.g. if you're interested in URL Segment 3, then use {if
 segment\_3}.
 
 if username
-===========
+-----------
 
 ::
 
