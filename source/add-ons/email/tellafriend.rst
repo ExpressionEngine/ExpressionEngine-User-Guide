@@ -445,14 +445,26 @@ tag.
 Preview
 *******
 
-By specifying a `preview=`_ URL, you can allow your users to preview
-their `message`_ before sending it. You'll have to add a preview submit
-input to your ``{exp:email:contact_form}``::
+Occasionally you'll want to provide a way for users to preview their
+email message before sending it. You'll start by specifying a
+`preview=`_ parameter in your opening tag::
+
+  {exp:email:contact_form preview="about/contact-preview"}
+
+  OR
+
+  {exp:email:tell_a_friend preview="about/tellafriend-preview"}
+
+Next, you'll need to add a preview submit input to your form, probably
+somewhere near the submit input::
 
   <input name="preview" type='submit' value='Preview' />
+  <input name="submit" type='submit' value='Send' />
 
-Within the ``{exp:email:preview}`` tagpair, you can use all of the `Form
-Fields`_ specified above::
+Last, you'll need to use the ``{exp:email:preview}`` tagpair in the
+template specified in the `preview=`_ parameter. You can use all of the
+`Form Fields`_ specified above and you'll typically have the preview
+directly above or below the email form::
 
   {exp:email:preview}
     <dl>
@@ -466,7 +478,10 @@ Fields`_ specified above::
     {message}
   {/exp:email:preview}
 
-Optionally, you can specify that the ``{message}`` contents should be
+  {exp:email:contact_form}
+    ...
+
+You can optionally specify that the ``{message}`` contents should be
 parsed with Markdown by using the same `markdown=`_ parameter that the
 contact form uses::
 
