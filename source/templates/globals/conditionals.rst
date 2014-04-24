@@ -60,29 +60,34 @@ and the Braces: {}*, you would write the conditional like so::
 Simple Conditionals
 *******************
 
-A conditional is considered "simple" if it is evaluating variables that
-are already available by the time the :doc:`template parsing engine
-</templates/template_engine>` reaches the simple conditionals parsing
-stage. The expression evaluates a single variable (i.e. contains no
-logical operators such as OR, AND), and the conditional does not make
-use of the *else* or *elseif* control structures. In short, a simple
-conditional will look very much like this::
+Simple conditionals evaluate early in the :doc:`template parsing engine
+</templates/template_engine>`. In order for a conditional to evaluate
+at this stage the following must all be true:
+
+* The expression evaluates a single variable:
+
+	* There are no `logical operators`_ in the expression.
+	* There are no `mathematic operators`_ in the expression.
+	* The `string concatenation operator`_ is not in the expression.
+
+* The expression does not use *else* or *elseif*.
+* The expression is in the format ``{if variable comparison-operator value}``.
+* The variable is one of the following types:
+
+==================================  =============
+Variable Type                       Example
+==================================  =============
+:doc:`Globals <single_variables>`   {app_version}
+:doc:`Snippets <snippets>`          {snp_name}
+:doc:`URL Segments <url_segments>`  {segment_1}
+:ref:`Site <msm_variables>`         {site_label}
+:ref:`Embed <embed_variables>`      {embed:name}
+:ref:`Layout <layout_variables>`    {layout:name}
+==================================  =============
+
+In short, a simple conditional will look very much like this::
 
 	{if embed:name == "joe"}  <h1>Info about Joe!</h1>  {/if}
-
-Currently the variables available for simple conditionals are:
-
-=============  =============
-Variable Type  Example
-=============  =============
-Globals        {app_version}
-Snippets       {snp_name}
-Segments       {segment_1}
-Site           {site_label}
-Embed          {embed:name}
-Layout         {layout:name}
-=============  =============
-
 
 .. note:: If you are testing against a word, you should enclose the word
    in single or double-quotes. If you are testing against a number, then
