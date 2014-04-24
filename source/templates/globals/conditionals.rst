@@ -181,7 +181,7 @@ Advanced Conditionals
 Any conditional that isn't a :ref:`simple conditional
 <global_simple_conditionals>` is considered an "advanced" conditional
 and is evaluated much later in the :doc:`template parsing order
-</templates/template_engine>`. More advanced conditionals can use
+</templates/template_engine>`. Advanced conditionals can use
 logical operators (ex: OR, AND) to compare multiple variables to
 multiple values. Consider this example::
 
