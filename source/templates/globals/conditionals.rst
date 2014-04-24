@@ -234,8 +234,7 @@ nor bob a default message is shown.
 Operators
 =========
 
-The following comparison and logical operators are allowed within
-conditionals:
+The following operators are allowed within conditionals:
 
 Comparison Operators
 --------------------
