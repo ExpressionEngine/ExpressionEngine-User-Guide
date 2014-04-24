@@ -5,7 +5,7 @@ Tell-A-Friend Form
 .. contents::
    :local:
    :depth: 1
-   
+
 ************
 Introduction
 ************
@@ -123,8 +123,8 @@ separating the email addresses with commas::
 
 .. note:: In the situation where recipients are specified with this
 	parameter and the regular "To:" field is *also* filled out, the
-	recipients specified with this parameter will be mailed using BCC 
-	(Blind Carbon Copy) so that the "To:" recipient does not see those 
+	recipients specified with this parameter will be mailed using BCC
+	(Blind Carbon Copy) so that the "To:" recipient does not see those
 	"hidden" email recipients.
 
 redirect=
@@ -229,6 +229,27 @@ to be sent. This parameter is useful if you have multiple entries with
 the same URL Title in different channels. Unless you restrict this EE
 tag to a particular channel then you might get Tell-a-Friend forms for
 all entries matching the URL Title.
+
+preview=
+~~~~~~~~
+
+::
+
+  preview="about/tell-a-friend-preview"
+
+Specify a URL where the user can preview their message before sending
+it. This can be used in conjunction with the `markdown=`_ parameter.
+
+markdown=
+~~~~~~~~~
+
+::
+
+  markdown="yes"
+
+Optionally enable `Markdown
+<https://daringfireball.net/projects/markdown/>`_ processing for
+`message`_ of the Tell-a-Friend form.
 
 form\_class=
 ~~~~~~~~~~~~
@@ -419,3 +440,35 @@ may be specified by separating them with a comma. You must include this
 form field, even if it is just a hidden field. This data may also be
 specified with the `recipients=`_ parameter of the
 tag.
+
+*******
+Preview
+*******
+
+By specifying a `preview=`_ URL, you can allow your users to preview
+their `message`_ before sending it. You'll have to add a preview submit
+input to your ``{exp:email:contact_form}``::
+
+  <input name="preview" type='submit' value='Preview' />
+
+Within the ``{exp:email:preview}`` tagpair, you can use all of the `Form
+Fields`_ specified above::
+
+  {exp:email:preview}
+    <dl>
+      <dt>From</dt>
+      <dd>{name} ({from})</dd>
+      <dt>To</dt>
+      <dd>{to}</dd>
+      <dt>Subject</dt>
+      <dd>{subject}</dd>
+    </dl>
+    {message}
+  {/exp:email:preview}
+
+Optionally, you can specify that the ``{message}`` contents should be
+parsed with Markdown by using the same `markdown=`_ parameter that the
+contact form uses::
+
+  {exp:email:preview markdown="yes"}
+
