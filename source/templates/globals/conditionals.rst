@@ -440,7 +440,8 @@ syntax follows:
 Errors
 ******
 
-There are two errors associated with conditionals.
+There are two errors associated with conditionals. The errors will be displayed
+based on your :ref:`debug preferences <output-debug-pref-label>`.
 
 Invalid Conditional
 ===================
