@@ -24,10 +24,13 @@ Release Date: ?
   - Added the ``[abbr]`` bbcode tag.
   - Changed the default hidden template indicator to an underscore (e.g.
     ``_``)
-  - Added EllisLab username to license registration to assist with
-    license organization and management.
+  - Added License Holder Contact Email and a
+    :doc:`software license page </cp/admin/software_license>` in the
+    control panel to assist with license registration, organization
+    and management.
   - Added the ``convert_curly=`` parameter to the Markdown plugin.
   - Removed the ``encode_ee_tags=`` parameter from the Markdown plugin.
+  - Added 404 headers for requests for non-existent member profile elements
 
 - Bug Fixes:
 

@@ -20,16 +20,6 @@ Admin group will be able to see the site. All other users will be shown
 the System Offline page, which you can edit at :menuselection:`Design
 --> Message Pages --> System Offline Template`.
 
-.. _general-config-license-number-label:
-
-License Number
-~~~~~~~~~~~~~~
-
-The license number you were issued upon purchasing ExpressionEngine. The
-license number was included in the email purchase receipt. If you no
-longer have your license number, you can find it by visiting the
-`Manage Purchases <https://store.ellislab.com/manage>`_ section of EllisLab.com.
-
 Name of your site
 ~~~~~~~~~~~~~~~~~
 

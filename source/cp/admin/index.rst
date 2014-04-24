@@ -37,6 +37,8 @@ Admin
   - :doc:`captcha_preferences`
   - :doc:`throttling_settings`
 
+- :doc:`software_license`
+
 .. toctree::
 	:glob:
 	:hidden:
