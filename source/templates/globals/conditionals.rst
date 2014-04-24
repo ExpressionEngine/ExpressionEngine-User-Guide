@@ -17,6 +17,43 @@ conditionals, which normally follows this form::
 
 	{if variable comparison-operator value}  Data between the tags that gets shown if the condition is met.  {/if}
 
+Protected Characters
+====================
+
+ExpressionEngine uses PHP to evaluate conditionals, and there are
+certain characters that must be protected in a variable so that they are
+not treated as PHP code. You should converting those characters
+into HTML entities or removing the character entirely. Here is the
+conversion list:
+
+=====================  ===========
+To evaluate            Use instead
+=====================  ===========
+"                      &#34;
+'                      &#39;
+\\                     &#92;
+$                      &#36;
+(                      &#40;
+)                      &#41;
+{                      &#123;
+}                      &#125;
+\\n (linebreaks)       remove
+\\r (carriage return)  remove
+=====================  ===========
+
+If you are comparing a variable against a value that might include
+parentheses or curly braces, you should use the HTML entities listed in
+the table above instead. For example, if you want the conditional to
+evaluate whether the screen name is *John Smith (Owner)*, you would
+write the conditional like so::
+
+	{if screen_name == 'John Smith &#40;Owner&#41;'}
+
+Or if you want the conditional to evaluate whether the title is *Curly
+and the Braces: {}*, you would write the conditional like so::
+
+	{if title == 'Curly and the Braces: &#123;&#125;'}
+
 .. _global_simple_conditionals:
 
 *******************
@@ -54,42 +91,81 @@ Layout         {layout:name}
 .. note:: The proscription against *elseif* applies to any conditionals inside
    the conditional tag pair.
 
-Protected Characters
-====================
+Examples
+========
 
-ExpressionEngine uses PHP to evaluate conditionals, and there are
-certain characters that must be protected in a variable so that they are
-not treated as PHP code. You should converting those characters
-into HTML entities or removing the character entirely. Here is the
-conversion list:
+if group\_id
+------------
 
-=====================  ===========
-To evaluate            Use instead
-=====================  ===========
-"                      &#34;
-'                      &#39;
-\\                     &#92;
-$                      &#36;
-(                      &#40;
-)                      &#41;
-{                      &#123;
-}                      &#125;
-\\n (linebreaks)       remove
-\\r (carriage return)  remove
-=====================  ===========
+::
 
-If you are comparing a variable against a value that might include
-parentheses or curly braces, you should use the HTML entities listed in
-the table above instead. For example, if you want the conditional to
-evaluate whether the screen name is *John Smith (Owner)*, you would
-write the conditional like so::
+	{if group_id == '7'}  You're an "Editor"!  {/if}
 
-	{if screen_name == 'John Smith &#40;Owner&#41;'}
+You can test against the Member Group. This tests the Member Group ID
+number. The alternate `{if member\_group == '3'} <#cond_member_group>`_
+version of this conditional should be used inside of
+{exp:channel:entries} tags.
 
-Or if you want the conditional to evaluate whether the title is *Curly
-and the Braces: {}*, you would write the conditional like so::
+if member\_group
+----------------
 
-	{if title == 'Curly and the Braces: &#123;&#125;'}
+::
+
+	{if member_group == '7'}  You're an "Editor"!  {/if}
+
+You can test against the Member Group. This tests the Member Group ID
+number. This variable/conditional is identical to the group\_id one
+available above. {member\_group} will work correctly inside a
+{exp:channel:entries} tag, however.
+
+if member\_id
+-------------
+
+::
+
+	{if member_id == '147'}  Ooh, you're really special, Frank!!  {/if}
+
+Test for the member ID of the currently logged in user.
+
+if screen\_name
+---------------
+
+::
+
+	{if screen_name == "Mr. Ed"}  Thanks for all your hard work on the site, Ed!  {/if}
+
+You can test against the screen name of the currently logged in user.
+
+if total\_comments
+------------------
+
+::
+
+	{if total_comments < 1}  What??  No one has commented on my site at all?!?!  {/if}
+
+Test against the total number of comments submitted for the entire site.
+
+if total\_entries
+-----------------
+
+::
+
+	{if total_entries > 1000}  Yowza!  This is one hot site!  {/if}
+
+Test against the total number of entries submitted for the entire site.
+
+if segment\_*X*
+---------------
+
+::
+
+	{if segment_3 == "private"}  You're seeing something private!  {/if}
+
+You can test against one of the :doc:`URL Segments <url_segments>` that
+are available. The conditional should be replaced with the correct
+segment name. e.g. if you're interested in URL Segment 3, then use {if
+segment\_3}.
+
 
 .. _global_advanced_conditionals:
 
@@ -217,7 +293,7 @@ Operator  Name
 ========  ==========================================
 
 .. note:: When using these mathematical operators be sure to surround them with
-   whitespace. Consider that `foo-bar` is a valid variable while `foo - bar`
+   whitespace. Consider that ``foo-bar`` is a valid variable while ``foo - bar``
    indicates subtraction.
 
 Modulus Operator
@@ -244,8 +320,8 @@ You can use the string concatenation operator (``.``) to concatenate values::
 	{if segment_1 . '/' . segment_2 == 'site/index'}
 
 .. note:: When using the string concatenation operator be sure to surround it
-   with whitespace. Consider that `foo.bar` is a valid variable while
-   `foo . bar` indicates concatenation.
+   with whitespace. Consider that ``foo.bar`` is a valid variable while
+   ``foo . bar`` indicates concatenation.
 
 Parentheses in Conditionals
 ---------------------------
@@ -263,6 +339,21 @@ So, if the member id of the visitor is either 1 or 2, and they are
 viewing the channel with id of 5, then they can see the contents of that
 conditional.
 
+Examples
+========
+
+if username
+-----------
+
+::
+
+	{if username == "elvira"}  Hi, mom!  I know it's you!  {/if}
+
+You can test against the username of the currently logged in user.
+
+.. note:: While this looks like a :ref:`simple conditional <global_simple_conditionals>`
+   it is actually an advanced conditional (see: `Alternative Syntax`_).
+
 ******************
 Short Conditionals
 ******************
@@ -271,21 +362,8 @@ Certain conditionals exist in a shortened form in order to improve
 template readability. These conditionals are usually checking to see if
 a certain thing is true or exists:
 
-Global Conditionals
-===================
-
-
-if group\_id
-------------
-
-::
-
-	{if group_id == '7'}  You're an "Editor"!  {/if}
-
-You can test against the Member Group. This tests the Member Group ID
-number. The alternate `{if member\_group == '3'} <#cond_member_group>`_
-version of this conditional should be used inside of
-{exp:channel:entries} tags.
+Examples
+========
 
 if logged\_in
 -------------
@@ -307,7 +385,10 @@ if logged\_out
 
 ::
 
-	{if logged_out}  You aren't a member or aren't logged in.<br /> <a href="{path='member/login'}">Login</a>  | <a href="{path='member/register'}">Register</a>  {/if}
+	{if logged_out}
+		You aren't a member or aren't logged in.<br />
+		<a href="{path='member/login'}">Login</a>  | <a href="{path='member/register'}">Register</a>
+	{/if}
 
 This tag pair will display content within the pair if the person viewing
 the page is **not** currently a logged in member.
@@ -315,75 +396,6 @@ the page is **not** currently a logged in member.
 You'll notice in the "logout" link above that a special path is used:
 {path='LOGOUT'}. This is a special-case path value that will
 automatically render the correct path for someone to log out.
-
-if member\_group
-----------------
-
-::
-
-	{if member_group == '7'}  You're an "Editor"!  {/if}
-
-You can test against the Member Group. This tests the Member Group ID
-number. This variable/conditional is identical to the group\_id one
-available above. {member\_group} will work correctly inside a
-{exp:channel:entries} tag, however.
-
-if member\_id
--------------
-
-::
-
-	{if member_id == '147'}  Ooh, you're really special, Frank!!  {/if}
-
-Test for the member ID of the currently logged in user.
-
-if screen\_name
----------------
-
-::
-
-	{if screen_name == "Mr. Ed"}  Thanks for all your hard work on the site, Ed!  {/if}
-
-You can test against the screen name of the currently logged in user.
-
-if total\_comments
-------------------
-
-::
-
-	{if total_comments < 1}  What??  No one has commented on my site at all?!?!  {/if}
-
-Test against the total number of comments submitted for the entire site.
-
-if total\_entries
------------------
-
-::
-
-	{if total_entries > 1000}  Yowza!  This is one hot site!  {/if}
-
-Test against the total number of entries submitted for the entire site.
-
-if segment\_*X*
----------------
-
-::
-
-	{if segment_3 == "private"}  You're seeing something private!  {/if}
-
-You can test against one of the :doc:`URL Segments <url_segments>` that
-are available. The conditional should be replaced with the correct
-segment name. e.g. if you're interested in URL Segment 3, then use {if
-segment\_3}.
-
-if username
------------
-
-::
-
-	{if username == "elvira"}  Hi, mom!  I know it's you!  {/if}
-
-You can test against the username of the currently logged in user.
 
 ******************
 Alternative Syntax
