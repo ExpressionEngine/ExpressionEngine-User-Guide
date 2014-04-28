@@ -115,6 +115,8 @@ Release Date: ?
     was not properly parsed.
   - Fixed a bug (#20307) where some emails with newly allowed TLDs were
     rejected as invalid.
+  - Fixed a bug where the updater would not load an addon's path before
+    running upgrades causing problems with included libraries and models.
 
 - Developers:
 
