@@ -158,6 +158,27 @@ character::
 
 	return="|Return to the Site"
 
+preview=
+--------
+
+::
+
+  preview="about/contact-preview"
+
+Specify a URL where the user can preview their message before sending
+it. This can be used in conjunction with the `markdown=`_ parameter.
+
+markdown=
+---------
+
+::
+
+  markdown="yes"
+
+Optionally enable `Markdown
+<https://daringfireball.net/projects/markdown/>`_ processing for
+`message`_ of the contact form.
+
 user\_recipients=
 -----------------
 
@@ -352,3 +373,50 @@ tag.
    allow users to access this field, consider using a <select> field to
    limit the email address to specific choices. Further, you should enable
    CAPTCHAs to help prevent automated abuse.
+
+*******
+Preview
+*******
+
+Occasionally you'll want to provide a way for users to preview their
+email message before sending it. You'll start by specifying a
+`preview=`_ parameter in your opening tag::
+
+  {exp:email:contact_form preview="about/contact-preview"}
+
+  OR
+
+  {exp:email:tell_a_friend preview="about/tellafriend-preview"}
+
+Next, you'll need to add a preview submit input to your form, probably
+somewhere near the submit input::
+
+  <input name="preview" type='submit' value='Preview' />
+  <input name="submit" type='submit' value='Send' />
+
+Last, you'll need to use the ``{exp:email:preview}`` tagpair in the
+template specified in the `preview=`_ parameter. You can use all of the
+`Form Fields`_ specified above and you'll typically have the preview
+directly above or below the email form::
+
+  {exp:email:preview}
+    <dl>
+      <dt>From</dt>
+      <dd>{name} ({from})</dd>
+      <dt>To</dt>
+      <dd>{to}</dd>
+      <dt>Subject</dt>
+      <dd>{subject}</dd>
+    </dl>
+    {message}
+  {/exp:email:preview}
+
+  {exp:email:contact_form}
+    ...
+
+You can optionally specify that the ``{message}`` contents should be
+parsed with Markdown by using the same `markdown=`_ parameter that the
+contact form uses::
+
+  {exp:email:preview markdown="yes"}
+
