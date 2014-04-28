@@ -115,7 +115,7 @@ Release Date: ?
     was not properly parsed.
   - Fixed a bug (#20307) where some emails with newly allowed TLDs were
     rejected as invalid.
-  - Fixed a bug where the updater would not load an addon's path before
+  - Fixed a bug where the updater would not load an add-on's path before
     running upgrades causing problems with included libraries and models.
 
 - Developers:
@@ -2167,8 +2167,8 @@ Release Date: October 17, 2011
 - Important:
 
   - Fixed a potential cross site scripting vulnerability.
-  - Modified a URL character check that was affecting third party addons
-    to be less strict.
+  - Modified a URL character check that was affecting third party add-
+    ons to be less strict.
 
 - Bug Fixes:
 
@@ -4253,7 +4253,7 @@ Build 20100415 (initial release)
 - Fixed a bug (#11830) where trailing slashes were inserted into URLs
   on the search module and {comment\_url\_title\_auto\_path} in the
   channel calendar.
-- Fixed a bug (#11792) where the addons language file was missing a
+- Fixed a bug (#11792) where the add-ons language file was missing a
   language key for 'fieldtype'.
 - Fixed a bug (#11515) where logout modals did not function properly in
   Internet Explorer.
@@ -4280,7 +4280,7 @@ Build 20100415 (initial release)
   is installed above the web root.
 - Fixed a bug (#11702) where php errors could occur if all settings
   array variables were not passed to checkboxes and radio fieldtypes in
-  third-party addons.
+  third-party add-ons.
 - Fixed a bug (#11471) where no user selected when clicking member from
   "Blocked List".
 - Fixed a bug (#11319) where alert notification icons were not
@@ -4964,7 +4964,7 @@ Build 20091211
   field types.
 - Fixed a bug (#10632) where index.php $assign\_to\_config
   'template\_group' and 'template' were not being utilized.
-- Changed addon installer to set proper paths for packages when
+- Changed add-on installer to set proper paths for packages when
   installed from the control panel.
 - As Channel preferences to hide various aspects of the Publish page
   are toggled in Channel Preferences, custom layouts will be altered to

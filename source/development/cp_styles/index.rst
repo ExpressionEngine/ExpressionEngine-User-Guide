@@ -226,7 +226,7 @@ Member Preferences Accordion
 |image2|
 
 The Member Preferences accordion makes use if the jQuery UI Accordion
-Widget. The basic setup in an addon controller would be::
+Widget. The basic setup in an add-on controller would be::
 
   <?php
   function my_cp_function()
