@@ -26,12 +26,12 @@ Inside the unzipped software, you will find a folder called forum.
 Using an FTP program, upload this folder and everything inside it to
 your server at this location:
 
-system/expressionengine/add-ons/
+system/expressionengine/modules/
 
 You will replace the existing forum folder with the new one,
 ending up with this:
 
-system/expressionengine/add-ons/forum/
+system/expressionengine/modules/forum/
 
 Step 3
 ------

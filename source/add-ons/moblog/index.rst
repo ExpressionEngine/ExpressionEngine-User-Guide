@@ -30,7 +30,7 @@ Supported Attachment Formats
 
 By default, ExpressionEngine's Moblog Module supports a large number of
 formats. If needed, you can also edit the available formats at the top
-of the system/add-ons/moblog/mod.moblog.php file.
+of the system/modules/moblog/mod.moblog.php file.
 
 -  **Images**: bmp, gif, jpe, jpeg, jpg, pdf, png, tif, tiff
 -  **Files**: doc, xls, zip, tar, tgz, swf, sit, php, txt, html, asp,
