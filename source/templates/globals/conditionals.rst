@@ -72,18 +72,20 @@ at this stage the following must all be true:
 
 * The expression does not use *else* or *elseif*.
 * The expression is in the format ``{if variable comparison-operator value}``.
-* The variable is one of the following types:
+* The variable is one of the following:
 
-==================================  =============
-Variable Type                       Example
-==================================  =============
-:doc:`Globals <single_variables>`   {app_version}
-:doc:`Snippets <snippets>`          {snp_name}
-:doc:`URL Segments <url_segments>`  {segment_1}
-:ref:`Site <msm_variables>`         {site_label}
-:ref:`Embed <embed_variables>`      {embed:name}
-:ref:`Layout <layout_variables>`    {layout:name}
-==================================  =============
+	* ``freelancer_version``
+	* ``last_segment``
+	* ``current_url``
+	* ``current_path``
+	* ``current_query_string``
+	* ``is_core``
+	* :doc:`Snippets <snippets>` (e.g. ``snp_name``)
+	* :doc:`URL Segments <url_segments>` (e.g. ``segment_1``)
+	* :ref:`MSM variables <msm_variables>` (e.g. ``site_label``)
+	* :ref:`Embed <embed_variables>` (e.g. ``embed:name``)
+	* :ref:`Layout <layout_variables>` (e.g. ``layout:name``)
+
 
 In short, a simple conditional will look very much like this::
 
