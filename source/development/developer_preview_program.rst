@@ -136,7 +136,7 @@ and encourage them to join!
 - Rein de Vries
 - Rob Sanchez
 - Robin Hodges
-- Robin Sobral
+- Robson Sobral
 - Robin Willmot
 - Ryan Bonnell
 - Ryan Irelan
