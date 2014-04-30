@@ -326,10 +326,6 @@ You can use the string concatenation operator (``.``) to concatenate values::
 
 	{if segment_1 . '/' . segment_2 == 'site/index'}
 
-.. note:: When using the string concatenation operator be sure to surround it
-   with whitespace. Consider that ``foo.bar`` is a valid variable while
-   ``foo . bar`` indicates concatenation.
-
 Parentheses in Conditionals
 ---------------------------
 
