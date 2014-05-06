@@ -105,7 +105,7 @@ Examples
 ========
 
 if group_id
-------------
+-----------
 
 ::
 
@@ -117,7 +117,7 @@ version of this conditional should be used inside of
 ``{exp:channel:entries}`` tags.
 
 if member_group
-----------------
+---------------
 
 ::
 
@@ -129,7 +129,7 @@ available above. ``{member_group}`` will work correctly inside a
 ``{exp:channel:entries}`` tag, however.
 
 if member_id
--------------
+------------
 
 ::
 
@@ -138,7 +138,7 @@ if member_id
 Test for the member ID of the currently logged in user.
 
 if screen_name
----------------
+--------------
 
 ::
 
@@ -147,7 +147,7 @@ if screen_name
 You can test against the screen name of the currently logged in user.
 
 if total_comments
-------------------
+-----------------
 
 ::
 
@@ -156,7 +156,7 @@ if total_comments
 Test against the total number of comments submitted for the entire site.
 
 if total_entries
------------------
+----------------
 
 ::
 
@@ -165,7 +165,7 @@ if total_entries
 Test against the total number of entries submitted for the entire site.
 
 if segment_*X*
----------------
+--------------
 
 ::
 
