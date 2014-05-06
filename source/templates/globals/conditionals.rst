@@ -91,7 +91,7 @@ In short, a simple conditional will look very much like this::
 
 	{if embed:name == "joe"}  <h1>Info about Joe!</h1>  {/if}
 
-.. note:: Variables inside conditionals do not need to be wrapped in curly
+.. note:: Variables inside conditionals should not be wrapped in curly
    braces (``{}``).
 
 .. note:: If you are testing against a word, you should enclose the word
@@ -104,7 +104,7 @@ In short, a simple conditional will look very much like this::
 Examples
 ========
 
-if group\_id
+if group_id
 ------------
 
 ::
@@ -114,9 +114,9 @@ if group\_id
 You can test against the Member Group. This tests the Member Group ID
 number. The alternate `{if member\_group == '3'} <#cond_member_group>`_
 version of this conditional should be used inside of
-{exp:channel:entries} tags.
+``{exp:channel:entries}`` tags.
 
-if member\_group
+if member_group
 ----------------
 
 ::
@@ -125,10 +125,10 @@ if member\_group
 
 You can test against the Member Group. This tests the Member Group ID
 number. This variable/conditional is identical to the group\_id one
-available above. {member\_group} will work correctly inside a
-{exp:channel:entries} tag, however.
+available above. ``{member_group}`` will work correctly inside a
+``{exp:channel:entries}`` tag, however.
 
-if member\_id
+if member_id
 -------------
 
 ::
@@ -137,7 +137,7 @@ if member\_id
 
 Test for the member ID of the currently logged in user.
 
-if screen\_name
+if screen_name
 ---------------
 
 ::
@@ -146,7 +146,7 @@ if screen\_name
 
 You can test against the screen name of the currently logged in user.
 
-if total\_comments
+if total_comments
 ------------------
 
 ::
@@ -155,7 +155,7 @@ if total\_comments
 
 Test against the total number of comments submitted for the entire site.
 
-if total\_entries
+if total_entries
 -----------------
 
 ::
@@ -164,7 +164,7 @@ if total\_entries
 
 Test against the total number of entries submitted for the entire site.
 
-if segment\_*X*
+if segment_*X*
 ---------------
 
 ::
@@ -173,8 +173,8 @@ if segment\_*X*
 
 You can test against one of the :doc:`URL Segments <url_segments>` that
 are available. The conditional should be replaced with the correct
-segment name. e.g. if you're interested in URL Segment 3, then use {if
-segment\_3}.
+segment name. e.g. if you're interested in URL Segment 3, then use ``{if
+segment_3}``.
 
 
 .. _global_advanced_conditionals:
