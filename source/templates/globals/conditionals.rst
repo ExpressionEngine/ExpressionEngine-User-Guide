@@ -4,7 +4,7 @@ Conditional Global Variables
 
 .. contents::
    :local:
-   :depth: 1
+   :depth: 2
 
 ************
 Introduction
@@ -16,43 +16,6 @@ being met. Conditional variables have the same syntax available in PHP
 conditionals, which normally follows this form::
 
 	{if variable comparison-operator value}  Data between the tags that gets shown if the condition is met.  {/if}
-
-.. _global_simple_conditionals:
-
-*******************
-Simple Conditionals
-*******************
-
-A conditional is considered "simple" if it is evaluating variables that
-are already available by the time the :doc:`template parsing engine
-</templates/template_engine>` reaches the simple conditionals parsing
-stage. The expression evaluates a single variable (i.e. contains no
-logical operators such as OR, AND), and the conditional does not make
-use of the *else* or *elseif* control structures. In short, a simple
-conditional will look very much like this::
-
-	{if embed:name == "joe"}  <h1>Info about Joe!</h1>  {/if}
-
-Currently the variables available for simple conditionals are:
-
-=============  =============
-Variable Type  Example
-=============  =============
-Globals        {app_version}
-Snippets       {snp_name}
-Segments       {segment_1}
-Site           {site_label}
-Embed          {embed:name}
-Layout         {layout:name}
-=============  =============
-
-
-.. note:: If you are testing against a word, you should enclose the word
-   in single or double-quotes. If you are testing against a number, then
-   you do not need to use quotes.
-
-.. note:: The proscription against *elseif* applies to any conditionals inside
-   the conditional tag pair.
 
 Protected Characters
 ====================
@@ -91,15 +54,139 @@ and the Braces: {}*, you would write the conditional like so::
 
 	{if title == 'Curly and the Braces: &#123;&#125;'}
 
+.. _global_simple_conditionals:
+
+*******************
+Simple Conditionals
+*******************
+
+Simple conditionals evaluate early in the :doc:`template parsing engine
+</templates/template_engine>`. In order for a conditional to evaluate
+at this stage the following must all be true:
+
+* The expression evaluates a single variable:
+
+	* There are no `logical operators`_ in the expression.
+	* There are no `mathematic operators`_ in the expression.
+	* The `string concatenation operator`_ is not in the expression.
+
+* The expression does not use *else* or *elseif*.
+* The expression is in the format ``{if variable comparison-operator value}``.
+* The variable is one of the following:
+
+	* ``freelancer_version``
+	* ``last_segment``
+	* ``current_url``
+	* ``current_path``
+	* ``current_query_string``
+	* ``is_core``
+	* :doc:`Snippets <snippets>` (e.g. ``snp_name``)
+	* :doc:`URL Segments <url_segments>` (e.g. ``segment_1``)
+	* :ref:`MSM variables <msm_variables>` (e.g. ``site_label``)
+	* :ref:`Embed <embed_variables>` (e.g. ``embed:name``)
+	* :ref:`Layout <layout_variables>` (e.g. ``layout:name``)
+
+
+In short, a simple conditional will look very much like this::
+
+	{if embed:name == "joe"}  <h1>Info about Joe!</h1>  {/if}
+
+.. note:: Variables inside conditionals should not be wrapped in curly
+   braces (``{}``).
+
+.. note:: If you are testing against a word, you should enclose the word
+   in single or double-quotes. If you are testing against a number, then
+   you do not need to use quotes.
+
+.. note:: The proscription against *elseif* applies to any conditionals inside
+   the conditional tag pair.
+
+Examples
+========
+
+if group_id
+-----------
+
+::
+
+	{if group_id == '7'}  You're an "Editor"!  {/if}
+
+You can test against the Member Group. This tests the Member Group ID
+number. The alternate `{if member\_group == '3'} <#cond_member_group>`_
+version of this conditional should be used inside of
+``{exp:channel:entries}`` tags.
+
+if member_group
+---------------
+
+::
+
+	{if member_group == '7'}  You're an "Editor"!  {/if}
+
+You can test against the Member Group. This tests the Member Group ID
+number. This variable/conditional is identical to the group\_id one
+available above. ``{member_group}`` will work correctly inside a
+``{exp:channel:entries}`` tag, however.
+
+if member_id
+------------
+
+::
+
+	{if member_id == '147'}  Ooh, you're really special, Frank!!  {/if}
+
+Test for the member ID of the currently logged in user.
+
+if screen_name
+--------------
+
+::
+
+	{if screen_name == "Mr. Ed"}  Thanks for all your hard work on the site, Ed!  {/if}
+
+You can test against the screen name of the currently logged in user.
+
+if total_comments
+-----------------
+
+::
+
+	{if total_comments < 1}  What??  No one has commented on my site at all?!?!  {/if}
+
+Test against the total number of comments submitted for the entire site.
+
+if total_entries
+----------------
+
+::
+
+	{if total_entries > 1000}  Yowza!  This is one hot site!  {/if}
+
+Test against the total number of entries submitted for the entire site.
+
+if segment_*X*
+--------------
+
+::
+
+	{if segment_3 == "private"}  You're seeing something private!  {/if}
+
+You can test against one of the :doc:`URL Segments <url_segments>` that
+are available. The conditional should be replaced with the correct
+segment name. e.g. if you're interested in URL Segment 3, then use ``{if
+segment_3}``.
+
+
 .. _global_advanced_conditionals:
 
+*********************
 Advanced Conditionals
----------------------
+*********************
 
 Any conditional that isn't a :ref:`simple conditional
 <global_simple_conditionals>` is considered an "advanced" conditional
 and is evaluated much later in the :doc:`template parsing order
-</templates/template_engine>`. More advanced conditionals can use
+</templates/template_engine>`. Advanced conditionals can use
 logical operators (ex: OR, AND) to compare multiple variables to
 multiple values. Consider this example::
 
@@ -146,15 +233,13 @@ nor bob a default message is shown.
    the *right* of the prefix is what determines which conditional you
    are using.
 
-*********
 Operators
-*********
+=========
 
-The following comparison and logical operators are allowed within
-conditionals:
+The following operators are allowed within conditionals:
 
 Comparison Operators
-====================
+--------------------
 
 You can use any of the following operators to compare a variable to a
 value:
@@ -175,7 +260,7 @@ Operator  Name
    rather than one (e.g. **==**).
 
 Logical Operators
-=================
+-----------------
 
 You can use the following operators to compare multiple variables to
 multiple values:
@@ -199,12 +284,12 @@ via OR. ::
 	{if member_id != '1' && member_group != "5" OR username == "Billy"} Hi! {/if}
 
 So, if the member id of the site visitor is not 1 and their member group
-is not 5 *and* their username is Billy, they can view the data in the
+is not 5 *or* their username is Billy, they can view the data in the
 conditional. The table above lists the precedence of operators with the
 highest-precedence operators listed at the top of the table.
 
 Mathematic Operators
-====================
+--------------------
 
 You can use the following mathematical operators to compute values:
 
@@ -217,11 +302,11 @@ Operator  Name
 ========  ==========================================
 
 .. note:: When using these mathematical operators be sure to surround them with
-   whitespace. Consider that `foo-bar` is a valid variable while `foo - bar`
+   whitespace. Consider that ``foo-bar`` is a valid variable while ``foo - bar``
    indicates subtraction.
 
 Modulus Operator
-----------------
+^^^^^^^^^^^^^^^^
 
 A modulus operator finds the remainder of division of one number by
 another. This can be handy when you want to do something every nth
@@ -237,18 +322,14 @@ conditional::
 This works because the remainder of 5 divided by 5 is 0.
 
 String Concatenation Operator
-=============================
+-----------------------------
 
 You can use the string concatenation operator (``.``) to concatenate values::
 
 	{if segment_1 . '/' . segment_2 == 'site/index'}
 
-.. note:: When using the string concatenation operator be sure to surround it
-   with whitespace. Consider that `foo.bar` is a valid variable while
-   `foo . bar` indicates concatenation.
-
 Parentheses in Conditionals
-===========================
+---------------------------
 
 Like PHP, you can use parentheses to group parts of a conditional
 together to have the part of the conditional between the parentheses
@@ -263,6 +344,21 @@ So, if the member id of the visitor is either 1 or 2, and they are
 viewing the channel with id of 5, then they can see the contents of that
 conditional.
 
+Examples
+========
+
+if username
+-----------
+
+::
+
+	{if username == "elvira"}  Hi, mom!  I know it's you!  {/if}
+
+You can test against the username of the currently logged in user.
+
+.. note:: While this looks like a :ref:`simple conditional <global_simple_conditionals>`
+   it is actually an advanced conditional (see: `Alternative Syntax`_).
+
 ******************
 Short Conditionals
 ******************
@@ -271,26 +367,11 @@ Certain conditionals exist in a shortened form in order to improve
 template readability. These conditionals are usually checking to see if
 a certain thing is true or exists:
 
-
-*******************
-Global Conditionals
-*******************
-
-
-if group\_id
-============
-
-::
-
-	{if group_id == '7'}  You're an "Editor"!  {/if}
-
-You can test against the Member Group. This tests the Member Group ID
-number. The alternate `{if member\_group == '3'} <#cond_member_group>`_
-version of this conditional should be used inside of
-{exp:channel:entries} tags.
+Examples
+========
 
 if logged\_in
-=============
+-------------
 
 ::
 
@@ -305,11 +386,14 @@ the page is currently a logged in member.
 	Control Panel.
 
 if logged\_out
-==============
+--------------
 
 ::
 
-	{if logged_out}  You aren't a member or aren't logged in.<br /> <a href="{path='member/login'}">Login</a>  | <a href="{path='member/register'}">Register</a>  {/if}
+	{if logged_out}
+		You aren't a member or aren't logged in.<br />
+		<a href="{path='member/login'}">Login</a>  | <a href="{path='member/register'}">Register</a>
+	{/if}
 
 This tag pair will display content within the pair if the person viewing
 the page is **not** currently a logged in member.
@@ -317,75 +401,6 @@ the page is **not** currently a logged in member.
 You'll notice in the "logout" link above that a special path is used:
 {path='LOGOUT'}. This is a special-case path value that will
 automatically render the correct path for someone to log out.
-
-if member\_group
-================
-
-::
-
-	{if member_group == '7'}  You're an "Editor"!  {/if}
-
-You can test against the Member Group. This tests the Member Group ID
-number. This variable/conditional is identical to the group\_id one
-available above. {member\_group} will work correctly inside a
-{exp:channel:entries} tag, however.
-
-if member\_id
-=============
-
-::
-
-	{if member_id == '147'}  Ooh, you're really special, Frank!!  {/if}
-
-Test for the member ID of the currently logged in user.
-
-if screen\_name
-===============
-
-::
-
-	{if screen_name == "Mr. Ed"}  Thanks for all your hard work on the site, Ed!  {/if}
-
-You can test against the screen name of the currently logged in user.
-
-if total\_comments
-==================
-
-::
-
-	{if total_comments < 1}  What??  No one has commented on my site at all?!?!  {/if}
-
-Test against the total number of comments submitted for the entire site.
-
-if total\_entries
-=================
-
-::
-
-	{if total_entries > 1000}  Yowza!  This is one hot site!  {/if}
-
-Test against the total number of entries submitted for the entire site.
-
-if segment\_*X*
-===============
-
-::
-
-	{if segment_3 == "private"}  You're seeing something private!  {/if}
-
-You can test against one of the :doc:`URL Segments <url_segments>` that
-are available. The conditional should be replaced with the correct
-segment name. e.g. if you're interested in URL Segment 3, then use {if
-segment\_3}.
-
-if username
-===========
-
-::
-
-	{if username == "elvira"}  Hi, mom!  I know it's you!  {/if}
-
-You can test against the username of the currently logged in user.
 
 ******************
 Alternative Syntax
@@ -423,7 +438,8 @@ syntax follows:
 Errors
 ******
 
-There are two errors associated with conditionals.
+There are two errors associated with conditionals. The errors will be displayed
+based on your :ref:`debug preferences <output-debug-pref-label>`.
 
 Invalid Conditional
 ===================
