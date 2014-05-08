@@ -134,3 +134,15 @@ You can submit pre-formatted text such as script examples. These will be
 replaced with <pre> </pre> HTML tags. Whitespace and line wrapping will
 be preserved as you input it. Note that very long lines will **not**
 automatically be wrapped and thus these could affect your site layout.
+
+Abbreviations
+-------------
+
+::
+
+  [abbr="Cascading Style Sheets"]CSS[/abbr]
+
+You can create HTML abbreviations using the above tags. The above tag
+would result in::
+
+  <abbr title="Cascading Style Sheets">CSS</abbr>
