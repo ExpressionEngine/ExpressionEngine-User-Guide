@@ -19,14 +19,7 @@ Template, and this article exposes the order of those rendering stages.
 Understanding how the system renders a template can help immensely when
 building pages and troubleshooting problems.
 
-The use of :doc:`Conditional Tags <conditionals>` provides
-a great example here. Simple conditionals are parsed *before* module
-tags, but advanced conditionals are parsed *after* module tags. If a
-simple conditional evaluates false, ExpressionEngine simply ignores a
-module tag within that conditional, neither rendering it nor displaying
-it. But if an advanced conditional evaluates false, ExpressionEngine can
-only hide the output of the already fully rendered module tag. That
-amounts to a big difference in performance.
+.. note:: As of 2.9.0 conditional tags evaluate *when ready*.
 
 Rendering Stages
 ----------------
