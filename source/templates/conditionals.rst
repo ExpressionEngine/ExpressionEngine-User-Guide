@@ -4,7 +4,7 @@ Conditional Tags
 
 .. contents::
    :local:
-   :depth: 1
+   :depth: 2
 
 ************
 Introduction
@@ -171,9 +171,88 @@ So, if the member id of the visitor is either 1 or 2, and they are
 viewing the channel with id of 5, then they can see the contents of that
 conditional.
 
-********
+***************
+Else and Elseif
+***************
+
+You can use two additional control structures to help tailor your
+results::
+
+  {if:elseif}
+
+And::
+
+  {if:else}
+
+These work similar to standard PHP else and elseif constructs. Here is
+an example::
+
+  {if username == "Joe"}
+    <h1>Hey, Joe! Where were you Tuesday?</h1>
+  {if:elseif username == "Bob"}
+    <h1>Hey, Bob! Thanks for the tickets!</h1>
+  {if:else}
+    <h1>Welcome to our site.</h1>
+  {/if}
+
+In the above example, if the currently logged in user has the username
+of "joe" he receives the first message. If not, EE evaluates the second
+conditional for the username of "bob". If the username is neither joe
+nor bob a default message is shown.
+
+.. note:: Don't be confused by the `{if:` prefix. This simply helps the
+   parsing engine identify each control structure. The information to
+   the *right* of the prefix is what determines which conditional you
+   are using.
+
+******************
+Short Conditionals
+******************
+
+Certain conditionals exist in a shortened form in order to improve
+template readability. These conditionals are usually checking to see if
+a certain thing is true or exists:
+
 Examples
-********
+========
+
+if logged\_in
+-------------
+
+::
+
+	{if logged_in}  Welcome back to the site!<br /> <a href="{path='LOGOUT'}">Logout</a>  {/if}
+
+This tag pair will display content within the pair if the person viewing
+the page is currently a logged in member.
+
+.. note:: This only tests whether or not someone is logged in. If you
+	want to restrict a particular page based on the member group
+	assignment you'll do that in your Template preferences in the
+	Control Panel.
+
+if logged\_out
+--------------
+
+::
+
+	{if logged_out}
+		You aren't a member or aren't logged in.<br />
+		<a href="{path='member/login'}">Login</a>  | <a href="{path='member/register'}">Register</a>
+	{/if}
+
+This tag pair will display content within the pair if the person viewing
+the page is **not** currently a logged in member.
+
+You'll notice in the "logout" link above that a special path is used:
+{path='LOGOUT'}. This is a special-case path value that will
+automatically render the correct path for someone to log out.
+
+****************************
+Global Conditional Variables
+****************************
+
+There are a handful of variables that are always available to conditionals.
 
 if group_id
 ===========
@@ -253,86 +332,9 @@ if username
 
 ::
 
-	{if username == "elvira"}  Hi, mom!  I know it's you!  {/if}
+  {if username == "elvira"}  Hi, mom!  I know it's you!  {/if}
 
 You can test against the username of the currently logged in user.
-
-***************
-Else and Elseif
-***************
-
-You can use two additional control structures to help tailor your
-results::
-
-  {if:elseif}
-
-And::
-
-  {if:else}
-
-These work similar to standard PHP else and elseif constructs. Here is
-an example::
-
-  {if username == "Joe"}
-    <h1>Hey, Joe! Where were you Tuesday?</h1>
-  {if:elseif username == "Bob"}
-    <h1>Hey, Bob! Thanks for the tickets!</h1>
-  {if:else}
-    <h1>Welcome to our site.</h1>
-  {/if}
-
-In the above example, if the currently logged in user has the username
-of "joe" he receives the first message. If not, EE evaluates the second
-conditional for the username of "bob". If the username is neither joe
-nor bob a default message is shown.
-
-.. note:: Don't be confused by the `{if:` prefix. This simply helps the
-   parsing engine identify each control structure. The information to
-   the *right* of the prefix is what determines which conditional you
-   are using.
-
-******************
-Short Conditionals
-******************
-
-Certain conditionals exist in a shortened form in order to improve
-template readability. These conditionals are usually checking to see if
-a certain thing is true or exists:
-
-Examples
-========
-
-if logged\_in
--------------
-
-::
-
-	{if logged_in}  Welcome back to the site!<br /> <a href="{path='LOGOUT'}">Logout</a>  {/if}
-
-This tag pair will display content within the pair if the person viewing
-the page is currently a logged in member.
-
-.. note:: This only tests whether or not someone is logged in. If you
-	want to restrict a particular page based on the member group
-	assignment you'll do that in your Template preferences in the
-	Control Panel.
-
-if logged\_out
---------------
-
-::
-
-	{if logged_out}
-		You aren't a member or aren't logged in.<br />
-		<a href="{path='member/login'}">Login</a>  | <a href="{path='member/register'}">Register</a>
-	{/if}
-
-This tag pair will display content within the pair if the person viewing
-the page is **not** currently a logged in member.
-
-You'll notice in the "logout" link above that a special path is used:
-{path='LOGOUT'}. This is a special-case path value that will
-automatically render the correct path for someone to log out.
 
 ******************
 Alternative Syntax
