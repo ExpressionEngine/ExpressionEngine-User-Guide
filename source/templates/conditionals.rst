@@ -254,8 +254,8 @@ Global Conditional Variables
 
 There are a handful of variables that are always available to conditionals.
 
-if group_id
-===========
+group_id
+========
 
 ::
 
@@ -266,8 +266,8 @@ number. The alternate `{if member\_group == '3'} <#cond_member_group>`_
 version of this conditional should be used inside of
 ``{exp:channel:entries}`` tags.
 
-if member_group
-===============
+member_group
+============
 
 ::
 
@@ -278,8 +278,8 @@ number. This variable/conditional is identical to the group\_id one
 available above. ``{member_group}`` will work correctly inside a
 ``{exp:channel:entries}`` tag, however.
 
-if member_id
-============
+member_id
+=========
 
 ::
 
@@ -287,8 +287,8 @@ if member_id
 
 Test for the member ID of the currently logged in user.
 
-if screen_name
-==============
+screen_name
+===========
 
 ::
 
@@ -296,8 +296,8 @@ if screen_name
 
 You can test against the screen name of the currently logged in user.
 
-if total_comments
-=================
+total_comments
+==============
 
 ::
 
@@ -305,8 +305,8 @@ if total_comments
 
 Test against the total number of comments submitted for the entire site.
 
-if total_entries
-================
+total_entries
+=============
 
 ::
 
@@ -314,8 +314,8 @@ if total_entries
 
 Test against the total number of entries submitted for the entire site.
 
-if segment_*X*
-==============
+segment_*X*
+===========
 
 ::
 
@@ -327,8 +327,8 @@ segment name. e.g. if you're interested in URL Segment 3, then use ``{if
 segment_3}``.
 
 
-if username
-===========
+username
+========
 
 ::
 
