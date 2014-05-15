@@ -121,7 +121,9 @@ Operator  Name
 ========  ==========================================
 \+        Addition
 \-        Subtraction
-%		  Remainder of one number divided by another
+\*        Multiplcation
+/         Division
+%		     Remainder of one number divided by another
 ========  ==========================================
 
 .. note:: When using these mathematical operators be sure to surround them with
