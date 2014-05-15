@@ -372,25 +372,40 @@ syntax follows:
 Errors
 ******
 
-There are two errors associated with conditionals. The errors will be displayed
-based on your :ref:`debug preferences <output-debug-pref-label>`.
-
-Invalid Conditional
-===================
-
-The invalid conditional error is triggered by the following scenarios:
+In the event that there is a problem parsing or evaluating a conditional
+an error will be displayed based on your :ref:`debug preferences <output-debug-pref-label>`.
+Errors are triggered in the following scenarios:
 
 * ``{if:`` is encountered in the template without it being either ``if:else``
-  or ``if:elseif``.
+  or ``if:elseif``. For example::
+
+  {if:foo}
+
 * ``{/if}`` cannot be found. All ``{/if}`` inside a string (single or double-
-  quoted) are ignored.
-* There is an unclosed single or double-quoted string.
-* A closing ``}`` is not found.
+  quoted) are ignored. For example::
 
-Unsafe Conditional
-==================
+  {if segment_1 == 'site'}HELLO WORLD
 
-The unsafe conditional error is triggered by the following scenarios:
+* There is an unclosed single or double-quoted string. For example::
 
-* Backticks (`````) are encountered outside a string.
-* PHP comments are present outside a string.
+  {if segment_1 == "site}HELLO WORLD{/if}
+
+* A closing ``}`` is not found. For example::
+
+  {if segment_1 == "site" HELLO WORLD{/if}
+
+* A valid operator is not found. For example::
+
+  {if segment_1 "site"}HELLO WORLD{/if}
+
+  or::
+
+  {if segment_1 ==== "site"}HELLO WORLD{/if}
+
+* A number followed by a colon (``:``) was found. For example::
+
+  {if 5:2}
+
+* A number has too many periods (``.``). For example::
+
+  {if 1.2.3}
