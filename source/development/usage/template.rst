@@ -618,7 +618,7 @@ value via an operator::
 
 There is a great deal more information about possible conditionals in
 the :doc:`Conditional Global Variables
-</templates/globals/conditionals>`, so we suggest you give it a quick
+</templates/conditionals>`, so we suggest you give it a quick
 look over.
 
 If you are scripting conditional variables in your module, then they

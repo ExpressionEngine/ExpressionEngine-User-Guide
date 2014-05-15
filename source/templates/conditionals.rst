@@ -1,6 +1,6 @@
-############################
-Conditional Global Variables
-############################
+################
+Conditional Tags
+################
 
 .. contents::
    :local:
