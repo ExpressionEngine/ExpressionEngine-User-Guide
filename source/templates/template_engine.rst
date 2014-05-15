@@ -66,7 +66,7 @@ bottom through each rendering stage.
 
 #. Parse :ref:`PHP on Input <php_parsing_stage>`
 
-#. Parse :ref:`simple conditionals <global_simple_conditionals>`: segment, embed, layout, global variables
+#. Parse :doc:`conditional tags <conditionals>`
 
 #. Assign and parse :doc:`preload_replace variables </templates/globals/preload_replacement>`
 
@@ -79,7 +79,7 @@ bottom through each rendering stage.
 
 #. Write **template to cache file**
 
-#. Parse :ref:`advanced conditionals <global_advanced_conditionals>`
+#. Parse :doc:`conditional tags <conditionals>`
 
 #. Process :doc:`template layouts </templates/layouts>`
 
