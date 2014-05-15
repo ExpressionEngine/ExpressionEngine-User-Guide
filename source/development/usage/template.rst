@@ -139,7 +139,7 @@ ExpressionEngine variables are simply a word or underscored phrase with
 curly brackets on either side. The names are usually quite simple and
 contextually understandable for the tag, thus making it easier for users
 to remember them and understand their usage. There are three kinds of
-variables in ExpressionEngine, single, pair, and conditional variables. ::
+variables in ExpressionEngine, single and pair. ::
 
   // Single Variable
   {summary}
@@ -148,11 +148,6 @@ variables in ExpressionEngine, single, pair, and conditional variables. ::
   {category}
 
   {/category}
-
-  // Conditional Variable
-  {if body != ""}
-
-  {/if}
 
 Parsing Variables
 -----------------
@@ -163,7 +158,7 @@ Overview
 The Template class makes parsing your module or plugin's variables a
 snap. Using the :meth:`TMPL::parse_variables` method, you supply the tag
 data, and an array containing all of your variables, organized as
-"rows". Your single, pair, and conditional variables will automatically
+"rows". Your single, pair, and conditional tags will automatically
 be parsed for you, and your module or plugin will also automatically
 have ``{count}`` and ``{switch}`` variables. Additionally, date
 variables will be parsed, and you can optionally have typography
@@ -521,7 +516,7 @@ Single and Pair Variables (Legacy)
 Before calling the module for the ExpressionEngine tag, the Template
 class parses out all of the variables contain in the tag's data and puts
 them into arrays which are Template class variables. This allows the
-module to have a list of all the single, pair, and conditional variables
+module to have a list of all the single, pair, and conditional tags
 that it needs to replace with content.
 
 Single variables output a single piece of content, and in the module's
@@ -594,10 +589,10 @@ believe there could be multiple instances of this variable pair). ::
       }
   }
 
-Conditional Variables
----------------------
+Conditional Tags
+----------------
 
-Conditional variables allow scripting to be added to your module's tag
+Conditional tags allow scripting to be added to your module's tag
 data in order to show data if certain defined criteria are met. The
 structure should be a variable being checked against another variable or
 value via an operator::
@@ -617,11 +612,11 @@ value via an operator::
   {/if}
 
 There is a great deal more information about possible conditionals in
-the :doc:`Conditional Global Variables
+the :doc:`Conditional Tags
 </templates/conditionals>`, so we suggest you give it a quick
 look over.
 
-If you are scripting conditional variables in your module, then they
+If you are scripting conditional tags in your module, then they
 should be done first when processing tag data before any other variables
 are parsed. Instead of writing your own conditional parsing routine,
 ExpressionEngine allows you to simply give your data to a method that
@@ -643,9 +638,9 @@ false. The example belows gives you an idea of how this should work::
 
   $tagdata = ee()->functions->prep_conditionals($tagdata, $cond);
 
-Once you send your tag data and your array of conditional variables, the
+Once you send your tag data and your array of conditional tags, the
 :meth:`Functions::prep_conditionals` method processes the conditionals
-so that they can be evaluated by the Template parser later.
+so that they can be evaluated by the Template parser.
 
 Method and Property Reference
 -----------------------------

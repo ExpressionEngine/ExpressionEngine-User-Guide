@@ -19,7 +19,7 @@ Template, and this article exposes the order of those rendering stages.
 Understanding how the system renders a template can help immensely when
 building pages and troubleshooting problems.
 
-The use of :doc:`Conditional Variables <conditionals>` provides
+The use of :doc:`Conditional Tags <conditionals>` provides
 a great example here. Simple conditionals are parsed *before* module
 tags, but advanced conditionals are parsed *after* module tags. If a
 simple conditional evaluates false, ExpressionEngine simply ignores a

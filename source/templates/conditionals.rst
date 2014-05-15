@@ -10,9 +10,9 @@ Conditional Tags
 Introduction
 ************
 
-Conditional Variables are pair type variables, which allow you to
+Conditional Tags are pair type tags, which allow you to
 conditionally show or hide information on your pages based on criteria
-being met. Conditional variables have the same syntax available in PHP
+being met. Conditional tags have the same syntax available in PHP
 conditionals, which normally follows this form::
 
 	{if variable comparison-operator value}  Data between the tags that gets shown if the condition is met.  {/if}

@@ -2056,14 +2056,14 @@ the week of the entry. See :doc:`Date Variable Formatting
 
 .. _channel_entries_conditional_variables:
 
-*********************
-Conditional Variables
-*********************
+****************
+Conditional Tags
+****************
 
 Conditionals allow you to more precisely control your content.
 
 .. note:: A more complete explanation of conditional control structures
-   and operators can be found on the :doc:`Global Conditionals
+   and operators can be found on the :doc:`Conditional Tags
    </templates/conditionals>` page.
 
 Here is an example that tests for the "summary" field being not empty
