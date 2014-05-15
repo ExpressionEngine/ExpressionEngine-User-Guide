@@ -85,17 +85,19 @@ Operator  Name
 Logical Operators
 =================
 
-You can use the following operators to compare multiple variables to
-multiple values:
+You can use the following operators to compare true / false (boolean) values.
+In this context strings that are not empty are true, and numbers greater than
+0 are true. Everything else is false.
 
 ========  =======  ===========================================================
 Operator  Name     Result
 ========  =======  ===========================================================
-&&        And      **TRUE** if *both* conditions are **TRUE**.
-\|\|      Or       **TRUE** if *either* condition is **TRUE**.
-AND       And      **TRUE** if *both* conditions are **TRUE**.
-XOR       Xor      **TRUE** if *either* condition is **TRUE**, *but not both*.
-OR        Or       **TRUE** if *either* condition is **TRUE**.
+!         Not      **TRUE** if the following value is **FALSE**.
+&&        And      **TRUE** if *both* values are **TRUE**.
+\|\|      Or       **TRUE** if *either* value is **TRUE**.
+AND       And      **TRUE** if *both* values are **TRUE**.
+XOR       Xor      **TRUE** if *either* value is **TRUE**, *but not both*.
+OR        Or       **TRUE** if *either* value is **TRUE**.
 ========  =======  ===========================================================
 
 Logical operators have a precedence that determines in what order the
