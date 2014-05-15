@@ -4,7 +4,7 @@ Conditional Tags
 
 .. contents::
    :local:
-   :depth: 2
+   :depth: 1
 
 ************
 Introduction
@@ -17,8 +17,9 @@ conditionals, which normally follows this form::
 
 	{if variable comparison-operator value}  Data between the tags that gets shown if the condition is met.  {/if}
 
+********************
 Protected Characters
-====================
+********************
 
 ExpressionEngine uses PHP to evaluate conditionals, and there are
 certain characters that must be protected in a variable so that they are
@@ -54,192 +55,14 @@ and the Braces: {}*, you would write the conditional like so::
 
 	{if title == 'Curly and the Braces: &#123;&#125;'}
 
-.. _global_simple_conditionals:
-
-*******************
-Simple Conditionals
-*******************
-
-Simple conditionals evaluate early in the :doc:`template parsing engine
-</templates/template_engine>`. In order for a conditional to evaluate
-at this stage the following must all be true:
-
-* The expression evaluates a single variable:
-
-	* There are no `logical operators`_ in the expression.
-	* There are no `mathematic operators`_ in the expression.
-	* The `string concatenation operator`_ is not in the expression.
-
-* The expression does not use *else* or *elseif*.
-* The expression is in the format ``{if variable comparison-operator value}``.
-* The variable is one of the following:
-
-	* ``freelancer_version``
-	* ``last_segment``
-	* ``current_url``
-	* ``current_path``
-	* ``current_query_string``
-	* ``is_core``
-	* :doc:`Snippets <snippets>` (e.g. ``snp_name``)
-	* :doc:`URL Segments <url_segments>` (e.g. ``segment_1``)
-	* :ref:`MSM variables <msm_variables>` (e.g. ``site_label``)
-	* :ref:`Embed <embed_variables>` (e.g. ``embed:name``)
-	* :ref:`Layout <layout_variables>` (e.g. ``layout:name``)
-
-
-In short, a simple conditional will look very much like this::
-
-	{if embed:name == "joe"}  <h1>Info about Joe!</h1>  {/if}
-
-.. note:: Variables inside conditionals should not be wrapped in curly
-   braces (``{}``).
-
-.. note:: If you are testing against a word, you should enclose the word
-   in single or double-quotes. If you are testing against a number, then
-   you do not need to use quotes.
-
-.. note:: The proscription against *elseif* applies to any conditionals inside
-   the conditional tag pair.
-
-Examples
-========
-
-if group_id
------------
-
-::
-
-	{if group_id == '7'}  You're an "Editor"!  {/if}
-
-You can test against the Member Group. This tests the Member Group ID
-number. The alternate `{if member\_group == '3'} <#cond_member_group>`_
-version of this conditional should be used inside of
-``{exp:channel:entries}`` tags.
-
-if member_group
----------------
-
-::
-
-	{if member_group == '7'}  You're an "Editor"!  {/if}
-
-You can test against the Member Group. This tests the Member Group ID
-number. This variable/conditional is identical to the group\_id one
-available above. ``{member_group}`` will work correctly inside a
-``{exp:channel:entries}`` tag, however.
-
-if member_id
-------------
-
-::
-
-	{if member_id == '147'}  Ooh, you're really special, Frank!!  {/if}
-
-Test for the member ID of the currently logged in user.
-
-if screen_name
---------------
-
-::
-
-	{if screen_name == "Mr. Ed"}  Thanks for all your hard work on the site, Ed!  {/if}
-
-You can test against the screen name of the currently logged in user.
-
-if total_comments
------------------
-
-::
-
-	{if total_comments < 1}  What??  No one has commented on my site at all?!?!  {/if}
-
-Test against the total number of comments submitted for the entire site.
-
-if total_entries
-----------------
-
-::
-
-	{if total_entries > 1000}  Yowza!  This is one hot site!  {/if}
-
-Test against the total number of entries submitted for the entire site.
-
-if segment_*X*
---------------
-
-::
-
-	{if segment_3 == "private"}  You're seeing something private!  {/if}
-
-You can test against one of the :doc:`URL Segments <url_segments>` that
-are available. The conditional should be replaced with the correct
-segment name. e.g. if you're interested in URL Segment 3, then use ``{if
-segment_3}``.
-
-
-.. _global_advanced_conditionals:
-
-*********************
-Advanced Conditionals
-*********************
-
-Any conditional that isn't a :ref:`simple conditional
-<global_simple_conditionals>` is considered an "advanced" conditional
-and is evaluated much later in the :doc:`template parsing order
-</templates/template_engine>`. Advanced conditionals can use
-logical operators (ex: OR, AND) to compare multiple variables to
-multiple values. Consider this example::
-
-	{if username == "Joe" OR username == "Bob"}
-	    <h1>Hey, Joe or Bob!</h1>
-	{/if}
-
-Or this example::
-
-	{if username != "Joe" AND username != "Bob"}
-	    <h1>Hey, people who are neither Joe nor Bob!</h1>
-	{/if}
-
-Else and Elseif
-===============
-
-You can use two additional control structures to help tailor your
-results::
-
-	{if:elseif}
-
-And::
-
-	{if:else}
-
-These work similar to standard PHP else and elseif constructs. Here is
-an example::
-
-	{if username == "Joe"}
-		<h1>Hey, Joe! Where were you Tuesday?</h1>
-	{if:elseif username == "Bob"}
-		<h1>Hey, Bob! Thanks for the tickets!</h1>
-	{if:else}
-		<h1>Welcome to our site.</h1>
-	{/if}
-
-In the above example, if the currently logged in user has the username
-of "joe" he receives the first message. If not, EE evaluates the second
-conditional for the username of "bob". If the username is neither joe
-nor bob a default message is shown.
-
-.. note:: Don't be confused by the `{if:` prefix. This simply helps the
-   parsing engine identify each control structure. The information to
-   the *right* of the prefix is what determines which conditional you
-   are using.
-
+*********
 Operators
-=========
+*********
 
 The following operators are allowed within conditionals:
 
 Comparison Operators
---------------------
+====================
 
 You can use any of the following operators to compare a variable to a
 value:
@@ -260,7 +83,7 @@ Operator  Name
    rather than one (e.g. **==**).
 
 Logical Operators
------------------
+=================
 
 You can use the following operators to compare multiple variables to
 multiple values:
@@ -276,7 +99,7 @@ OR        Or       **TRUE** if *either* condition is **TRUE**.
 ========  =======  ===========================================================
 
 Logical operators have a precedence that determines in what order the
-parts of a conditional are parsed. In the following advanced conditional
+parts of a conditional are parsed. In the following conditional
 the member\_id and member\_group parts of the conditional are compared
 *first* using &&, before their result is compared to the username part
 via OR. ::
@@ -289,7 +112,7 @@ conditional. The table above lists the precedence of operators with the
 highest-precedence operators listed at the top of the table.
 
 Mathematic Operators
---------------------
+====================
 
 You can use the following mathematical operators to compute values:
 
@@ -306,7 +129,7 @@ Operator  Name
    indicates subtraction.
 
 Modulus Operator
-^^^^^^^^^^^^^^^^
+----------------
 
 A modulus operator finds the remainder of division of one number by
 another. This can be handy when you want to do something every nth
@@ -322,14 +145,14 @@ conditional::
 This works because the remainder of 5 divided by 5 is 0.
 
 String Concatenation Operator
------------------------------
+=============================
 
 You can use the string concatenation operator (``.``) to concatenate values::
 
 	{if segment_1 . '/' . segment_2 == 'site/index'}
 
 Parentheses in Conditionals
----------------------------
+===========================
 
 Like PHP, you can use parentheses to group parts of a conditional
 together to have the part of the conditional between the parentheses
@@ -344,11 +167,85 @@ So, if the member id of the visitor is either 1 or 2, and they are
 viewing the channel with id of 5, then they can see the contents of that
 conditional.
 
+********
 Examples
-========
+********
+
+if group_id
+===========
+
+::
+
+  {if group_id == '7'}  You're an "Editor"!  {/if}
+
+You can test against the Member Group. This tests the Member Group ID
+number. The alternate `{if member\_group == '3'} <#cond_member_group>`_
+version of this conditional should be used inside of
+``{exp:channel:entries}`` tags.
+
+if member_group
+===============
+
+::
+
+  {if member_group == '7'}  You're an "Editor"!  {/if}
+
+You can test against the Member Group. This tests the Member Group ID
+number. This variable/conditional is identical to the group\_id one
+available above. ``{member_group}`` will work correctly inside a
+``{exp:channel:entries}`` tag, however.
+
+if member_id
+============
+
+::
+
+  {if member_id == '147'}  Ooh, you're really special, Frank!!  {/if}
+
+Test for the member ID of the currently logged in user.
+
+if screen_name
+==============
+
+::
+
+  {if screen_name == "Mr. Ed"}  Thanks for all your hard work on the site, Ed!  {/if}
+
+You can test against the screen name of the currently logged in user.
+
+if total_comments
+=================
+
+::
+
+  {if total_comments < 1}  What??  No one has commented on my site at all?!?!  {/if}
+
+Test against the total number of comments submitted for the entire site.
+
+if total_entries
+================
+
+::
+
+  {if total_entries > 1000}  Yowza!  This is one hot site!  {/if}
+
+Test against the total number of entries submitted for the entire site.
+
+if segment_*X*
+==============
+
+::
+
+  {if segment_3 == "private"}  You're seeing something private!  {/if}
+
+You can test against one of the :doc:`URL Segments <url_segments>` that
+are available. The conditional should be replaced with the correct
+segment name. e.g. if you're interested in URL Segment 3, then use ``{if
+segment_3}``.
+
 
 if username
------------
+===========
 
 ::
 
@@ -356,8 +253,39 @@ if username
 
 You can test against the username of the currently logged in user.
 
-.. note:: While this looks like a :ref:`simple conditional <global_simple_conditionals>`
-   it is actually an advanced conditional (see: `Alternative Syntax`_).
+***************
+Else and Elseif
+***************
+
+You can use two additional control structures to help tailor your
+results::
+
+  {if:elseif}
+
+And::
+
+  {if:else}
+
+These work similar to standard PHP else and elseif constructs. Here is
+an example::
+
+  {if username == "Joe"}
+    <h1>Hey, Joe! Where were you Tuesday?</h1>
+  {if:elseif username == "Bob"}
+    <h1>Hey, Bob! Thanks for the tickets!</h1>
+  {if:else}
+    <h1>Welcome to our site.</h1>
+  {/if}
+
+In the above example, if the currently logged in user has the username
+of "joe" he receives the first message. If not, EE evaluates the second
+conditional for the username of "bob". If the username is neither joe
+nor bob a default message is shown.
+
+.. note:: Don't be confused by the `{if:` prefix. This simply helps the
+   parsing engine identify each control structure. The information to
+   the *right* of the prefix is what determines which conditional you
+   are using.
 
 ******************
 Short Conditionals
