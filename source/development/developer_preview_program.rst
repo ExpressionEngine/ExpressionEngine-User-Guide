@@ -74,6 +74,7 @@ and encourage them to join!
 - Chris Barrett
 - Chris Newton
 - Christopher Imrie
+- Dan Diemer
 - Darren Miller
 - David DeHaan
 - David Dexter
@@ -84,7 +85,7 @@ and encourage them to join!
 - Dom Stubbs
 - Doug Thwaites
 - Eric Lamb
-- Eric Regan
+- Erik Reagan
 - Erwin van Lun
 - Filip Quivreux
 - Filip Vanderstappen
@@ -96,6 +97,8 @@ and encourage them to join!
 - Ira Salsberg
 - Isaac Rayway
 - Jack McDade
+- Jamie Pittock
+- Jamie Taylor
 - Jan van Lysebettens
 - Jason Ferrell
 - Jeremy Gimbel
@@ -136,8 +139,8 @@ and encourage them to join!
 - Rein de Vries
 - Rob Sanchez
 - Robin Hodges
-- Robson Sobral
 - Robin Willmot
+- Robson Sobral
 - Ryan Bonnell
 - Ryan Irelan
 - Ryan Masuga
@@ -151,5 +154,6 @@ and encourage them to join!
 - Travis Schmeisser
 - Travis Smith
 - Ty Wangsness
+- Websecret
 - Wouter Vervloet
 - Yuri Salimovskiy
