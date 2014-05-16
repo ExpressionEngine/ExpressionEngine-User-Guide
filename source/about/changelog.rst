@@ -5,7 +5,7 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
-Version 2.8.2
+Version 2.9.0
 -------------
 
 Release Date: ?
