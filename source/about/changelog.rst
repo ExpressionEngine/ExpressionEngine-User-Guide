@@ -117,6 +117,8 @@ Release Date: ?
     rejected as invalid.
   - Fixed a bug where the updater would not load an add-on's path before
     running upgrades causing problems with included libraries and models.
+  - Altered the behavior of the pagination library to accommodate add-ons that 
+    directly manipulate the site URL configuration (#20334).
 
 - Developers:
 
