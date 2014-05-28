@@ -10,48 +10,63 @@ Conditional Tags
 Introduction
 ************
 
-Conditional Tags are pair type tags, which allow you to
-conditionally show or hide information on your pages based on criteria
-being met. Conditional tags have the same syntax available in PHP
-conditionals, which normally follows this form::
+Conditional Tags are pair tags, which allow you to conditionally show or
+hide information on your pages based on criteria being met. They take
+on this general form::
 
-	{if variable comparison-operator value}  Data between the tags that gets shown if the condition is met.  {/if}
+  {if condition} data to show if condition is met {/if}
+
+The syntax available for the condition is comparable to most programming
+languages. Some examples:
+
+::
+
+  {!-- Basic truth tests --}
+  {if logged_in}Welcome back.{/if}
+
+  {!-- Comparisons --}
+  {if username == 'Bob'}Welcome back, Bob!{/if}
+
+  {!-- Math --}
+  {if (age + 5) == 100}Five years to go!{/if}
+
+  {!-- Logical operators --}
+  {if age == 30 and username == 'Bob'}Welcome back, Bob. 30 is the new 20.{/if}
+
+  {!-- Branching --}
+  {if age == 30}
+    You are 30!
+  {if:elseif username == 'Bob'}
+    You are Bob!
+  {if:else}
+    You're not 30 or Bob. That's all we know.
+  {/if}
+
+Don't worry if not all of these make sense. The operators and constructs
+will be discussed in detail below.
 
 ********************
 Protected Characters
 ********************
 
-ExpressionEngine uses PHP to evaluate conditionals, and there are
-certain characters that must be protected in a variable so that they are
-not treated as PHP code. You should converting those characters
-into HTML entities or removing the character entirely. Here is the
-conversion list:
+Certain characters must be protected in conditionals to prevent them
+from being mistaken for regular ExpressionEngine tags:
 
 =====================  ===========
 To evaluate            Use instead
 =====================  ===========
-"                      &#34;
-'                      &#39;
-\\                     &#92;
-$                      &#36;
-(                      &#40;
-)                      &#41;
 {                      &#123;
 }                      &#125;
-\\n (linebreaks)       remove
-\\r (carriage return)  remove
+\\n (linebreaks)       space
+\\r (carriage return)  space
+\\t (tab)              space
 =====================  ===========
 
-If you are comparing a variable against a value that might include
-parentheses or curly braces, you should use the HTML entities listed in
+If you are comparing a variable against a value that might include curly
+braces, then you should use the HTML entities listed in
 the table above instead. For example, if you want the conditional to
-evaluate whether the screen name is *John Smith (Owner)*, you would
+evaluate whether the title is *Curly and the Braces: {}*, you would
 write the conditional like so::
-
-	{if screen_name == 'John Smith &#40;Owner&#41;'}
-
-Or if you want the conditional to evaluate whether the title is *Curly
-and the Braces: {}*, you would write the conditional like so::
 
 	{if title == 'Curly and the Braces: &#123;&#125;'}
 
@@ -77,17 +92,42 @@ Operator  Name
 >         Greater than
 >=        Greater than or equal to
 <>        Not equal
+^=        Begins with
+\*=       Contains
+$=        Ends with
 ========  ==========================================
 
 .. note:: When comparing equality make sure to use **two** equal signs
    rather than one (e.g. **==**).
 
+Begins With Operator
+--------------------
+
+The begins with operator checks if a string begins with another string::
+
+  {if "ExpressionEngine" ^= "Express"}Yes it does{/if}
+
+
+Ends With Operator
+------------------
+
+The ends with operator checks if a string ends with another string::
+
+  {if url $= ".fr"}Your website is from France.{/if}
+
+Contains Operator
+-----------------
+
+The contains operator checks if a string contains another string::
+
+  {if body *= excerpt}Noone expected that.{/if}
+
 Logical Operators
 =================
 
-You can use the following operators to compare true / false (boolean) values.
-In this context strings that are not empty are true, and numbers greater than
-0 are true. Everything else is false.
+You can use the following operators to compare true / false (boolean)
+values. In this context strings that are not empty, numbers that are not
+0, and the TRUE keyword are all true. Everything else is false.
 
 ========  =======  ===========================================================
 Operator  Name     Result
@@ -100,37 +140,29 @@ XOR       Xor      **TRUE** if *either* value is **TRUE**, *but not both*.
 OR        Or       **TRUE** if *either* value is **TRUE**.
 ========  =======  ===========================================================
 
-Logical operators have a precedence that determines in what order the
-parts of a conditional are parsed. In the following conditional
-the member\_id and member\_group parts of the conditional are compared
-*first* using &&, before their result is compared to the username part
-via OR. ::
+These operators let you create complex rules for your templates::
 
 	{if member_id != '1' && member_group != "5" OR username == "Billy"} Hi! {/if}
-
-So, if the member id of the site visitor is not 1 and their member group
-is not 5 *or* their username is Billy, they can view the data in the
-conditional. The table above lists the precedence of operators with the
-highest-precedence operators listed at the top of the table.
 
 Mathematic Operators
 ====================
 
 You can use the following mathematical operators to compute values:
 
-========  ==========================================
-Operator  Name
-========  ==========================================
-\+        Addition
-\-        Subtraction
-\*        Multiplcation
-/         Division
-%		     Remainder of one number divided by another
-========  ==========================================
+=========  ==========================================
+Operator   Name
+=========  ==========================================
+\+         Addition
+\-         Subtraction / Negation
+\*         Multiplcation
+\** and ^  Exponentiation
+/          Division
+%          Remainder of one number divided by another
+=========  ==========================================
 
-.. note:: When using these mathematical operators be sure to surround them with
-   whitespace. Consider that ``foo-bar`` is a valid variable while ``foo - bar``
-   indicates subtraction.
+.. note:: When using these mathematical operators be sure to surround
+  them with whitespace. Consider that ``foo-bar`` is a valid variable
+  while ``foo - bar`` indicates subtraction.
 
 Modulus Operator
 ----------------
@@ -148,17 +180,51 @@ conditional::
 
 This works because the remainder of 5 divided by 5 is 0.
 
+Exponent Operators
+------------------
+
+There are two exponent operators: ``**`` and ``^``. They are treated
+the same, so use whichever you prefer::
+
+  {if count ** 2 == 25}What a strange way ...{/if}
+  {if count ^ 2 == 25}... to check if count is 5{/if}
+
+
+Exponentiation of Negatives
+===========================
+
+Negation happens *after* exponentiation. The following are true::
+
+  -5 ** 2 == -25
+  (-5) ** 2 == 25
+
+This is easy to remember, by keeping in mind that subtraction always
+happens after exponentiation. Of course, if the minus is itself in the
+exponent, then it is applied first::
+
+  5 ** -2 == 0.04
+
+Multiple Exponentiation
+=======================
+
+Exponents are processed from right to left. This means that ``2 ^ 3 ^ 2``
+is treated as ``2 ^ 9``, not as ``8 ^ 2``::
+
+  {if 2 ^ 3 ^ 2 == 512}this{/if}
+  {if 2 ^ 3 ^ 2 == 64}not this{/if}
+
 String Concatenation Operator
 =============================
 
-You can use the string concatenation operator (``.``) to concatenate values::
+You can use the string concatenation operator (``.``) to concatenate
+values::
 
 	{if segment_1 . '/' . segment_2 == 'site/index'}
 
 Parentheses in Conditionals
 ===========================
 
-Like PHP, you can use parentheses to group parts of a conditional
+You can use parentheses to group parts of a conditional
 together to have the part of the conditional between the parentheses
 evaluate before being compared to the part of the conditional outside
 the parentheses. For example, in the code below, the two member group
@@ -196,9 +262,9 @@ an example::
   {/if}
 
 In the above example, if the currently logged in user has the username
-of "joe" he receives the first message. If not, EE evaluates the second
-conditional for the username of "bob". If the username is neither joe
-nor bob a default message is shown.
+of "joe" he receives the first message. If not, ExpressionEngine
+evaluates the second conditional for the username of "bob". If the
+username is neither joe nor bob a default message is shown.
 
 .. note:: Don't be confused by the `{if:` prefix. This simply helps the
    parsing engine identify each control structure. The information to
@@ -209,21 +275,24 @@ nor bob a default message is shown.
 Embedding Tags
 **************
 
-We recommend not wrapping variables in braces (``{}``) for example, do this::
+We recommend not wrapping variables in braces (``{}``) for example, do
+this::
 
   {if my_snippet == "hello world"}
 
-instead of::
+instead of these::
 
   {if {my_snippet} == "hello world"}
+  {if "{my_snippet}" == "hello world"}
 
 Tags still require their braces, for example::
 
   {if {entry_date format="%Y"} == {current_date format="%Y"}}
 
-When using tags pay special attention to your quote marks. If you need more
-than one level of quotation you will need to either alternate between single
-and double quote marks, or escape your quotes. For example, instead of this::
+When using tags pay special attention to your quote marks. If you need
+more than one level of quotation you will need to either alternate
+between single and double quote marks, or escape your quotes. For example,
+instead of this::
 
   {if "{current_date format="%F"}" == "May"}
 
