@@ -20,7 +20,7 @@ rest of the tag block.
 		{/exp:channel:entries}
 	{if:else}
 		{exp:channel:entries channel="another_channel" category="not 6|7"}
-			<h2>{title</h2>
+			<h2>{title}</h2>
 		{/exp:channel:entries}
 	{/if}
 
