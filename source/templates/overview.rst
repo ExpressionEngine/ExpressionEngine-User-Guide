@@ -168,3 +168,32 @@ The format parameter is used to to create flexible date output::
   {current_time format="%F %d %Y"} {!-- March 22 2014 --}
 
 *More Information:* :doc:`Date Formatting <./date_variable_formatting>`
+
+Accessing the URL
+=================
+
+The ``{segment_#}`` variables allow you to access the different parts of
+the current ExpressionEngine URL::
+
+  {segment_1} {!-- usually the template group --}
+  {segment_2} {!-- usually the template name --}
+
+*More Information:* :doc:`./globals/url_segments`
+
+Adding CSS and JavaScript
+=========================
+
+Your external assets can be linked to as you normally would. They do not
+themselves need to be templates::
+
+  <link rel="stylesheet" href="/styles/main.css" type="text/css" />
+  <script src="/js/main.js"></script>
+
+If you do want to keep your CSS in a template, you can use the
+``{stylesheet=`` tag to let ExpressionEngine attempt to optimize
+how it serves the template::
+
+  <link rel="stylesheet" href="{stylesheet='group/template'}" type="text/css" />
+
+*More Information:* :doc:`./globals/stylesheet`,
+:doc:`ExpressionEngine Code in Stylesheets<../troubleshooting/templates/php_and_ee_tags_not_parsed_in_css>`
