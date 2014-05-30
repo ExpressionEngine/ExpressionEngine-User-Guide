@@ -11,7 +11,7 @@ eelexer = eelexer.eelexer:ExpressionEngineLexer
 
 setup(
     name         = 'pyeelexer',
-    version      = '0.2.1',
+    version      = '0.2.2',
     description  = __doc__,
     author       = "EllisLab, Inc.",
     packages     = ['eelexer'],

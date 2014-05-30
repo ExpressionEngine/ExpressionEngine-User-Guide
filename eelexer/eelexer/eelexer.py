@@ -67,7 +67,7 @@ class ExpressionEngineTagsLexer(RegexLexer):
 			(r'\s+', Text),
 			(r'\}', Punctuation, '#pop'),
 			(r'(or|and|xor)\b', Operator),
-			(r'[=!|<>!&%~\(\)\$\^\*\+\-]+', Operator),
+			(r'[=!|<>!&%~\(\)\$\^\*\+\-\.]+', Operator),
 			include('values'),
 		]
 	}
