@@ -41,7 +41,7 @@ clean:
 	-rm -rf $(BUILDDIR)/*
 
 html:
-	@echo "detected $(CORE_COUNT)"
+	@echo "Using $(CORE_COUNT) jobs"
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
