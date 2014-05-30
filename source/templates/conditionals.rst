@@ -95,6 +95,7 @@ Operator  Name
 ^=        Begins with
 \*=       Contains
 $=        Ends with
+~         Matches
 ========  ==========================================
 
 .. note:: When comparing equality make sure to use **two** equal signs
@@ -121,6 +122,44 @@ Contains Operator
 The contains operator checks if a string contains another string::
 
   {if body *= excerpt}Noone expected that.{/if}
+
+Matches Operator
+----------------
+
+The matches operator checks if a string matches a regular expression::
+
+  {if segment_3 ~ "/^P\d+/"}paginated{/if}
+
+.. note:: The second value must be a valid regular expression. All `PHP
+  PCRE pattern modifiers
+  <http://us1.php.net/manual/en/reference.pcre.pattern.modifiers.php>`_
+  are allowed.
+
+Using Comparison Operators with Numbers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+These operators will work with both numbers and strings, but with
+numbers it's important to remember that they will be turned into an
+unambiguous representation. This means that redundant leading and
+trailing zeros are removed.
+Floating point numbers < 1 will have a leading zero added if it is not
+present::
+
+  .7 becomes 0.7
+  7. becomes 7
+  .20 becomes 0.2
+  0002 becomes 2
+  002.5000 becomes 2.5
+
+This can be avoided by quoting your numbers::
+
+  {if 42.7 $= .7} - false, 42.7 does not end with 0.7
+  {if 42.7 $= '.7'} - true
+  {if '42.7' $= '.7'} - true
+
+  {if 42.70 $= 70} - false, 42.7 does not end in 70
+  {if '42.70' $= 70} - true
+  {if '42.70' $= '70'} - true
 
 Logical Operators
 =================
