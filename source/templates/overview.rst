@@ -56,7 +56,8 @@ counterparts::
       Url: {url}
   {/news_image}
 
-*More Information:* :ref:`channel_entry_file_field_pair`
+*More Information:* :ref:`File Field Variable Pair
+<channel_entry_file_field_pair>`
 
 *************
 Template Tags
