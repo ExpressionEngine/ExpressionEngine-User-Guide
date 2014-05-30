@@ -109,7 +109,8 @@ by ``{`` or ``}``::
   {logged_in_username} // outputs Bob
   {if logged_in_username == "Bob"}Hi Bob{/if}
 
-*More Information:* :doc:`Conditionals <./conditionals>`
+*More Information:* :doc:`Conditionals <./conditionals>`,
+:doc:`../troubleshooting/templates/tags_within_advanced_conditionals`
 
 Embedded Templates
 ==================
