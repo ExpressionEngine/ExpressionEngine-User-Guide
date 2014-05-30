@@ -136,8 +136,8 @@ Parameters
 **********
 
 Many ExpressionEngine tags and variables can accept parameters.
-Parameters are used to change how the tag behaves. They look just like
-HTML parameters, with a name and a value::
+Parameters are used to change how the tag or variable behaves. They look
+just like HTML parameters, with a name and a value::
 
   {!-- show the five latest news entry titles --}
   {exp:channel:entries channel="news" limit="5"}
