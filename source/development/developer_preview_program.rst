@@ -55,6 +55,14 @@ public add-ons and an ExpressionEngine license in order to maximize the
 effectiveness of the engineering resources devoted to the program at
 this time.
 
+Security Researchers and Reporters
+----------------------------------
+
+We're always happy to work with security researchers and reporters and
+if you've reported at least one valid security issue, we want you to be
+part of the developer preview. If you've submitted an issue in the past
+and aren't part of the program, just email us at `team@ellislab.com`_.
+
 Who Is in the Developer Preview?
 --------------------------------
 
