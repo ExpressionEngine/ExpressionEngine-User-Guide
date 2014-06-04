@@ -44,8 +44,8 @@ The Control Panel
 The Front-End
 =============
 
-Templates
----------
+:doc:`templates/index`
+----------------------
 
 - :doc:`templates/embedding`
 - :doc:`templates/layouts`
@@ -56,8 +56,8 @@ Templates
 - :doc:`templates/comments`
 - :doc:`templates/pagination`
 
-URLs
-----
+:doc:`urls/index`
+-----------------
 
 - :doc:`urls/url_structure`
 - :doc:`urls/template_routes`
