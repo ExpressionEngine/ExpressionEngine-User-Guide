@@ -118,7 +118,7 @@ Embedded Templates
 Templates can be embedded in other templates. This way you can create
 reusable template partials::
 
-  {embed="templategroup/template"}
+  {embed="template_group/template"}
 
 *More Information:* :doc:`Embeds <./embedding>`
 
@@ -128,7 +128,7 @@ Layouts
 You can wrap a template in a layout to reuse wrapping code between
 several templates::
 
-  {layout="templategroup/template"}
+  {layout="template_group/template"}
 
 *More Information:* :doc:`Layouts <./layouts>`
 
@@ -155,7 +155,7 @@ Creating Links
 All regular HTML links will work. The paths to ExpressionEngine pages
 can be created with the ``{path=`` tag::
 
-  <a href="{path="templategroup/template"}">Great template</a>
+  <a href="{path="template_group/template"}">Great template</a>
 
 *More Information:* :doc:`./globals/path`, :ref:`Channel Entry Path
 <channel_entries_url_title_path>`
