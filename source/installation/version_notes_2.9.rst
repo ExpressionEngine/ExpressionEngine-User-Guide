@@ -13,11 +13,11 @@ rewrite any affected by these changes.
 * Nested quotes need to either alternate between single (``'``) and double
   quotes (``"``) or you need to escape your inner quotes (i.e. ``"\""``). For example::
 
-	  {if "{entry_date format='%Y%m%d'}" == "20140606"}
+	  {if store == "Pascal's BBQ"}
 
 or::
 
-	  {if "{entry_date format=\"%Y%m%d\"}" == "20140606"}
+	  {if store == 'Pascal\'s BBQ'}
 
 * Variables inside conditionals can no longer start or end with a dash (i.e.
   ``{-foo}`` or ``{bar-}``).
