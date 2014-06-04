@@ -5,7 +5,7 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
-Version 2.8.2
+Version 2.9.0
 -------------
 
 Release Date: ?
@@ -30,7 +30,10 @@ Release Date: ?
     and management.
   - Added the ``convert_curly=`` parameter to the Markdown plugin.
   - Removed the ``encode_ee_tags=`` parameter from the Markdown plugin.
-  - Added 404 headers for requests for non-existent member profile elements
+  - Added 404 headers for requests for non-existent member profile
+    elements
+  - Upgrading the Markdown parser to `Markdown Extra
+    <http://michelf.ca/projects/php-markdown/extra/>`_
 
 - Bug Fixes:
 
@@ -117,6 +120,10 @@ Release Date: ?
     rejected as invalid.
   - Fixed a bug where the updater would not load an add-on's path before
     running upgrades causing problems with included libraries and models.
+  - Altered the behavior of the pagination library to accommodate add-ons that
+    directly manipulate the site URL configuration (#20334).
+  - Fixed a bug where the Channel Form combo loader might be missing from
+    the database on older installations that never used Safecracker.
 
 - Developers:
 
