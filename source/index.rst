@@ -47,6 +47,7 @@ The Front-End
 :doc:`templates/index`
 ----------------------
 
+- :doc:`templates/overview`
 - :doc:`templates/embedding`
 - :doc:`templates/layouts`
 - :doc:`templates/hidden_templates`
