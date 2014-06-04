@@ -87,15 +87,15 @@ Operator  Name
 ========  ==========================================
 ==        Equal
 !=        Not Equal
+<>        Not equal
 <         Less than
 <=        Less than or equal to
 >         Greater than
 >=        Greater than or equal to
-<>        Not equal
-^=        Begins with
-\*=       Contains
-$=        Ends with
-~         Matches
+^=        `Begins with <Begins With Operator_>`_
+\*=       `Contains <Ends With Operator_>`_
+$=        `Ends with <Contains Operator_>`_
+~         `Matches <Matches Operator_>`_
 ========  ==========================================
 
 .. note:: When comparing equality make sure to use **two** equal signs
@@ -194,9 +194,9 @@ Operator   Name
 \+         Addition
 \-         Subtraction / Negation
 \*         Multiplcation
-\** and ^  Exponentiation
+\** and ^  `Exponentiation <Exponent Operators_>`_
 /          Division
-%          Remainder of one number divided by another
+%          `Remainder of one number divided by another <Modulus Operator_>`_
 =========  ==========================================
 
 .. note:: When using these mathematical operators be sure to surround
