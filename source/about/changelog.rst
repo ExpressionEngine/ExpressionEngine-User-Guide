@@ -30,7 +30,10 @@ Release Date: ?
     and management.
   - Added the ``convert_curly=`` parameter to the Markdown plugin.
   - Removed the ``encode_ee_tags=`` parameter from the Markdown plugin.
-  - Added 404 headers for requests for non-existent member profile elements
+  - Added 404 headers for requests for non-existent member profile
+    elements
+  - Upgrading the Markdown parser to `Markdown Extra
+    <http://michelf.ca/projects/php-markdown/extra/>`_
 
 - Bug Fixes:
 
