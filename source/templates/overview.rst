@@ -106,7 +106,7 @@ on any other content using conditional tags. Please note that when
 variables are used inside conditionals they do not need to be surrounded
 by ``{`` or ``}``::
 
-  {logged_in_username} // outputs Bob
+  {logged_in_username} {!-- outputs Bob --}
   {if logged_in_username == "Bob"}Hi Bob{/if}
 
 *More Information:* :doc:`Conditionals <./conditionals>`,
