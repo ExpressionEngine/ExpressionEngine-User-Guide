@@ -30,7 +30,7 @@ with a ``}`` character.
 Template Variables
 ******************
 
-Variables are the primary data providers for your template.
+Variables are the primary way to show content in your template.
 When you need something output to the page, you will usually use a
 variable.
 
