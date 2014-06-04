@@ -179,6 +179,12 @@ the current ExpressionEngine URL::
   {segment_1} {!-- usually the template group --}
   {segment_2} {!-- usually the template name --}
 
+The ``{current_url}`` and ``{current_path}`` variables give you access
+to the full url and the path (all segments), respectively::
+
+  {current_url} {!-- http://example.com/something/great --}
+  {current_path} {!-- /something/great --}
+
 *More Information:* :doc:`./globals/url_segments`
 
 Adding CSS and JavaScript
