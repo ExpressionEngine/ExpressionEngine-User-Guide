@@ -50,6 +50,8 @@ Variable pairs expose several single variables between them to allow
 for more granular access to the data than their single variable
 counterparts::
 
+  {news_image} {!-- shows: <img src="image.ext" alt="file_name" /> --}
+
   {news_image}
       File name: {file_name}
       File extension: {extension}
