@@ -20,5 +20,5 @@ or::
 	  {if store == 'Pascal\'s BBQ'}
 
 * Variables inside conditionals can no longer start or end with a dash (i.e.
-  ``{-foo}`` or ``{bar-}``).
-* Numbers are no longer valid variables (i.e. ``{555}``).
+  ``-foo`` or ``bar-``).
+* Numbers are no longer valid variables (i.e. ``555``).
