@@ -70,6 +70,22 @@ write the conditional like so::
 
 	{if title == 'Curly and the Braces: &#123;&#125;'}
 
+*******************************
+Boolean Values (True and False)
+*******************************
+
+When determinig Boolean values the following are considered **FALSE**:
+
+  * the keyword ``FALSE``
+  * the integer ``0``
+  * the floating point number ``0.0``
+  * an empty string ``""`` or ``''``
+
+Everything else is considered **TRUE**.
+
+.. note:: The string ``"0"`` is considered **TRUE** since it is a non-empty
+   string.
+
 *********
 Operators
 *********
