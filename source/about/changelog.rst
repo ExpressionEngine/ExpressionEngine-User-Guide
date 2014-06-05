@@ -129,6 +129,8 @@ Release Date: ?
 
   - Removed the encode_ee_tags parameter from
     ``EE_Typography::markdown()``.
+  - :ref:`Boolean values <conditional_boolean_values>` in conditionals are now
+    consistent. ``0`` is always FALSE but ``"0"`` is always TRUE.
 
 Version 2.8.1
 -------------

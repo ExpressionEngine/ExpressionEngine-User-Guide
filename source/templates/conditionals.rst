@@ -70,6 +70,8 @@ write the conditional like so::
 
 	{if title == 'Curly and the Braces: &#123;&#125;'}
 
+.. _conditional_boolean_values:
+
 *******************************
 Boolean Values (True and False)
 *******************************
