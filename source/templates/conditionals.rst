@@ -76,7 +76,7 @@ write the conditional like so::
 Boolean Values (True and False)
 *******************************
 
-When determinig Boolean values the following are considered **FALSE**:
+When determining Boolean values the following are considered **FALSE**:
 
   * the keyword ``FALSE``
   * the integer ``0``
@@ -88,8 +88,8 @@ Everything else is considered **TRUE**.
 .. note:: The string ``"0"`` is considered **TRUE** since it is a non-empty
    string.
 
-Bloolean Comparisions
-=====================
+Bloolean Comparisons
+====================
 
 The following table illustrates comparing Boolean values with respect to the
 equality (``==``) operator.
