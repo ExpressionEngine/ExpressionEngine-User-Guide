@@ -232,8 +232,8 @@ is just using the ``{field:...}`` tag::
 
 However, sometimes you'll need to customize your ``<input>`` for one
 reason or another. In those cases you have a few options depending on
-what you want to do. If it's a simple field, just name sure the name is
-the same thing as the field name and provide the variable as the value::
+what you want to do. If it's a simple field, just make sure the name is
+the same as the input's ``name`` and provide the variable as the value::
 
   <input type="text" name="my_field_name" id="my_field_name" value="{my_field_name}">
 
