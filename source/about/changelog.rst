@@ -34,6 +34,7 @@ Release Date: ?
     elements
   - Upgrading the Markdown parser to `Markdown Extra
     <http://michelf.ca/projects/php-markdown/extra/>`_
+  - When using Markdown, SmartyPants is now on by default
 
 - Bug Fixes:
 
