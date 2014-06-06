@@ -11,10 +11,10 @@ Introduction
 ************
 
 The Channel Form makes it possible to add and edit entries from outside
-of the Control Panel using a regular form inside a template. Thank you to
-`Barrett Newton <http://barrettnewton.com/>`_ for developing the original
-(under the name of SafeCracker) and working with EllisLab to provide it
-to the ExpressionEngine community.
+of the Control Panel using a regular form inside a template. Thank you
+to `Barrett Newton <http://barrettnewton.com/>`_ for developing the
+original (under the name of SafeCracker) and working with EllisLab to
+provide it to the ExpressionEngine community.
 
 - Allows guest (logged out) users to use the entry form, with optional
   CAPTCHA support.
@@ -225,17 +225,40 @@ Or use the alternative syntax. ::
 Other Channel Fields
 ~~~~~~~~~~~~~~~~~~~~
 
-Set other channel fields. Use the field name as the form input. Make use
-of the {field:my\_field\_name} and {options:my\_field\_name} tags. ::
+For all of the other channel fields, you have a few options. The easiest
+is just using the ``{field:...}`` tag::
+
+  {field:my_field_name}
+
+However, sometimes you'll need to customize your ``<input>`` for one
+reason or another. In those cases you have a few options depending on
+what you want to do. If it's a simple field, just name sure the name is
+the same thing as the field name and provide the variable as the value::
 
   <input type="text" name="my_field_name" id="my_field_name" value="{my_field_name}">
-  {field:my_field_name}
+
+If you're creating a select list, you'll need to pull in the options,
+using ``{options:my_field_name}`` but otherwise things look pretty
+similar::
 
   <select name="my_field_name" id="my_field_name">
     {options:my_field_name}
       <option value="{option_value}"{selected}>{option_name}</option>
     {/options:my_field_name}
   </select>
+
+Last, if you're using a file field, you'll need to provide two
+additional hidden inputs to determine what upload directory the file is
+uploaded to and the existing file for when the entry is edited::
+
+  <input type="file" name="my_field_name" />
+  <input type="hidden" name="my_field_name_directory" value="1" />
+  <input type="hidden" name="my_field_name_hidden_file" value="{my_field_name}{file_name}{/my_field_name}" />
+
+.. note:: In the file field example's ``hidden_file`` input, we're using
+  the :ref:`variable pair <file_field_variable_pair_usage>` and pulling
+  *only* the ``{file_name}`` since we're already providing the directory
+  above.
 
 Parameters
 ----------
