@@ -256,7 +256,7 @@ uploaded to and the existing file for when the entry is edited::
   <input type="hidden" name="my_field_name_hidden_file" value="{my_field_name}{file_name}{/my_field_name}" />
 
 .. note:: In the file field example's ``hidden_file`` input, we're using
-  the :ref:`variable pair <file_field_variable_pair_usage>` and pulling
+  the :ref:`variable pair <channel_entry_file_field_pair>` and pulling
   *only* the ``{file_name}`` since we're already providing the directory
   above.
 

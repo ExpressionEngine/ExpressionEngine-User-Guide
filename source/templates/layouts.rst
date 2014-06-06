@@ -164,7 +164,7 @@ window's title::
     </body>
   </html>
 
-By using a :doc:`conditional <./globals/conditionals>` we have made the
+By using a :doc:`conditional <./conditionals>` we have made the
 title parameter optional. If the parameter is not given, or is blank,
 the title will simply be "Site Name". Any template using this layout can
 choose to add to the output of the title tag using the parameter. You

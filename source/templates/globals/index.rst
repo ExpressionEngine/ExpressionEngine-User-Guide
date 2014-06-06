@@ -10,7 +10,6 @@ system information, control access to areas of your site, and more.
 -  :doc:`/templates/globals/stylesheet`
 -  :doc:`/templates/globals/single_variables`
 -  :doc:`/templates/globals/snippets`
--  :doc:`/templates/globals/conditionals`
 -  :doc:`/templates/globals/url_segments`
 -  :doc:`/templates/globals/user_defined`
 -  :doc:`/templates/globals/preload_replacement`
@@ -19,5 +18,5 @@ system information, control access to areas of your site, and more.
 	:glob:
 	:titlesonly:
 	:hidden:
-	
+
 	*

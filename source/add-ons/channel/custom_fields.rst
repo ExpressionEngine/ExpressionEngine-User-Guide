@@ -67,7 +67,11 @@ Which will output as::
 
 	<img src="http://example.com/dir/filename.ext" alt="filename" />
 
+<<<<<<< HEAD
 .. _file_field_variable_pair_usage:
+=======
+.. _channel_entry_file_field_pair:
+>>>>>>> FETCH_HEAD
 
 Variable Pair Usage
 ===================

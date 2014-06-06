@@ -1,7 +1,7 @@
 import re
 import copy
 
-from pygments.lexer import DelegatingLexer, RegexLexer, bygroups
+from pygments.lexer import DelegatingLexer, RegexLexer, bygroups, include
 from pygments.token import Text, Comment, Operator, Keyword, Name, String, \
 	 Number, Other, Punctuation, Literal
 from pygments.lexers.templates import HtmlPhpLexer
@@ -32,35 +32,42 @@ class ExpressionEngineTagsLexer(RegexLexer):
 	mimetypes = ['text/html', 'application/xhtml+xml']
 
 	flags = re.IGNORECASE | re.DOTALL | re.MULTILINE
+
 	tokens = {
 		'root': [
-			(r'[^\{]+', Other),
-			(r'{!--.*?--}', Comment.Multiline),																# Comments
-			(r'({)(/)?([a-z0-9_-]+)(})', bygroups(Punctuation, Name.Variable, Name.Variable, Punctuation)),	# Run of the mill single and pair variables
-			(r'({)(if)(\s)+', bygroups(Punctuation, Name.Tag, Text), 'conditional'),
-			(r'({)(/)?([a-z0-9:_-]+)(\s*)', bygroups(Punctuation, Name.Function, Name.Function, Text), 'tag'),		# Plugin and Module tags
-			(r'{', Other)																					# Doesn't look like EE, leave it alone
+			# Find a {
+			(r'[^{]+', Other),
+			# Comments
+			(r'{!--.*?--}', Comment.Multiline),
+			# Conditionals
+			(r'(\{)(/)?(if(?:\:else(?:if)?)?)(\s*)', bygroups(Punctuation, Name.Function, Keyword, Text), 'conditional'),
+			# Tags
+			(r'(\{)(/)?(\w*[a-zA-Z_:]+\w*)(\s*)', bygroups(Punctuation, Name.Function, Name.Function, Text), 'tag'),
+			# Not EE
+			(r'\{', Other)
 		],
-		'path': [
-			(r'\s+', Text),
-			(r'".*?"', String, '#pop'),
-			(r"'.*?'", String, '#pop'),
-			(r'(\s*)(})', bygroups(Text, Punctuation), '#pop'),
+		'strings': [
+			(r'"(\\\\|\\"|[^"])*"', String.Double),
+			(r"'(\\\\|\\'|[^'])*'", String.Single),
 		],
-		'conditional': [
-			(r'[=!<>:&|]+\s*', Operator, 'attr'),
-			(r'([a-z0-9_:-]+)(\s*)', bygroups(Name.Attribute, Text)),
-			(r'}', Punctuation, '#pop'),
+		'values': [ # numbers, strings, booleans, variables
+			(r'\b(\d+\.\d*|\d*\.\d+|\d+)\b', Number),
+			include('strings'),
+			(r'(true|false)\b', Keyword.Pseudo),
+			(r'\w*([a-zA-Z]([\w:-]+\w)?|(\w[\w:-]+)?[a-zA-Z])\w*', Name.Variable),
 		],
 		'tag': [
 			(r'\s+', Text),
-			(r'=', Punctuation, 'attr'),
-			(r'([a-z0-9_:-]+)(\s*)(=)', bygroups(Name.Attribute, Text, Punctuation), 'attr'),
-			(r'(\s*)(})', bygroups(Text, Punctuation), '#pop'),
+			(r'\}', Punctuation, '#pop'),
+			(r'\w*([a-zA-Z]([\w:-]+\w)?|(\w[\w:-]+)?[a-zA-Z])\w*', Name.Attribute),
+			(r'=', Punctuation),
+			include('strings'),
 		],
-		'attr': [
-			(r'".*?"', String, '#pop'),
-			(r"'.*?'", String, '#pop'),
-			(r'[^\s\}]+', String, '#pop'),
-		],
+		'conditional': [
+			(r'\s+', Text),
+			(r'\}', Punctuation, '#pop'),
+			(r'(or|and|xor)\b', Operator),
+			(r'[=!|<>!&%~\(\)\$\^\*\+\-\.]+', Operator),
+			include('values'),
+		]
 	}

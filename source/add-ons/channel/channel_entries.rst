@@ -906,11 +906,11 @@ that contain "sandwich" **nor** those that contain the word "salad".
 	tag, as long as each one is searching a different field. e.g.::
 
 		{exp:channel:entries search:style="=ale" search:region="germany|belgium" search:rating="=3|4|5"}
-		
-When using multiple search parameters, all search parameters must be matched in 
-order for an entry to be included.  The above example would pull back only those 
-entries where the style is 'ale', the region is 'germany' or 'belgium' and the 
-rating is 1, 2 or 3.		
+
+When using multiple search parameters, all search parameters must be matched in
+order for an entry to be included.  The above example would pull back only those
+entries where the style is 'ale', the region is 'germany' or 'belgium' and the
+rating is 1, 2 or 3.
 
 show\_current\_week=
 --------------------
@@ -2056,15 +2056,15 @@ the week of the entry. See :doc:`Date Variable Formatting
 
 .. _channel_entries_conditional_variables:
 
-*********************
-Conditional Variables
-*********************
+****************
+Conditional Tags
+****************
 
 Conditionals allow you to more precisely control your content.
 
 .. note:: A more complete explanation of conditional control structures
-   and operators can be found on the :doc:`Global Conditionals
-   </templates/globals/conditionals>` page.
+   and operators can be found on the :doc:`Conditional Tags
+   </templates/conditionals>` page.
 
 Here is an example that tests for the "summary" field being not empty
 
