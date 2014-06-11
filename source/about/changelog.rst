@@ -130,6 +130,9 @@ Release Date: ?
     Safecracker.
   - Fixed a bug (#20403) where the ``MB_ENABLED`` constant is not
     defined if UTF-8 support is not enabled.
+  - Fixed a bug where a PHP error may show when trying to display
+    entries from an MSM site on a template and the Pages module was
+    not installed.
 
 - Developers:
 
