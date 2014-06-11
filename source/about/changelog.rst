@@ -38,8 +38,8 @@ Release Date: ?
 
 - Bug Fixes:
 
-  - Altered control panel URLs to use only a single query marker to ensure
-    compatibility across server environments.
+  - Altered control panel URLs to use only a single query marker to
+    ensure compatibility across server environments.
   - Fixed a bug where plugins couldn't be used in the search parameter
     of a Channel Entries tag.
   - Fixed a bug where member groups with template editing permissions
@@ -120,11 +120,16 @@ Release Date: ?
   - Fixed a bug (#20307) where some emails with newly allowed TLDs were
     rejected as invalid.
   - Fixed a bug where the updater would not load an add-on's path before
-    running upgrades causing problems with included libraries and models.
-  - Altered the behavior of the pagination library to accommodate add-ons that
+    running upgrades causing problems with included libraries and
+    models.
+  - Altered the behavior of the pagination library to accommodate
+    add-ons that
     directly manipulate the site URL configuration (#20334).
-  - Fixed a bug where the Channel Form combo loader might be missing from
-    the database on older installations that never used Safecracker.
+  - Fixed a bug where the Channel Form combo loader might be missing
+    from the database on older installations that never used
+    Safecracker.
+  - Fixed a bug (#20403) where the ``MB_ENABLED`` constant is not
+    defined if UTF-8 support is not enabled.
 
 - Developers:
 
