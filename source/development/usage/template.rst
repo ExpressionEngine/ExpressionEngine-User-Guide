@@ -471,7 +471,9 @@ Conditionals
 
 Your variables will automatically be made available to conditionals. No
 special processing is necessary in your add-on to handle conditionals
-for variables you send to the parser.
+for variables you send to the parser. However, please be aware that in
+the ExpressionEngine template language, the string "0" is not considered
+falsy.
 
 Parsing Full Results
 ~~~~~~~~~~~~~~~~~~~~
