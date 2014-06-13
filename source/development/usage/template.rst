@@ -19,7 +19,9 @@ templates, tag and template caching, PHP processing, and it performs the
 calling of modules and plugins when their tags are found in the
 template.
 
-A typical module or plugin tag in ExpressionEngine looks like this::
+A typical module or plugin tag in ExpressionEngine looks like this:
+
+.. code-block:: ee
 
   {exp:channel:channel_name}
 
@@ -66,21 +68,19 @@ supplied::
   if ( ! $channel = ee()->TMPL->fetch_param('channel'))
   {
       ee()->language->fetch_language_file('module');
-      ee()->output->fatal_error(ee()->language->line('module_invalid_channel'));
-      exit;
+      ee()->output->fatal_error(lang('module_invalid_channel'));
   }
-  else
+
+  $str = ee()->functions->sql_andor_string($channel, 'channel_name');
+
+  if (strncmp($str, 'AND', 3) == 0)
   {
-      $str = ee()->functions->sql_andor_string($channel, 'channel_name');
-
-      if (strncmp($str, 'AND', 3) == 0)
-      {
-          $str = substr($str, 3);
-      }
-
-      $sql .= "SELECT channel_id FROM exp_channels WHERE ".$str;
-      $query = ee()->db->query($sql);
+      $str = substr($str, 3);
   }
+
+  $sql .= "SELECT channel_id FROM exp_channels WHERE ".$str;
+  $query = ee()->db->query($sql);
+
   // If channel is not specified, then an error is output.
   // Otherwise, perform query.
 
@@ -107,7 +107,9 @@ the :attr:`TMPL::$tagdata` variable.
 
 **Module code in template.** The tag data is everything from the end
 of the opening tag to the beginning of the closing tag, basically the
-HTML and tag variables::
+HTML and tag variables:
+
+.. code-block:: ee
 
   {exp:magic:spell}
 
@@ -139,7 +141,9 @@ ExpressionEngine variables are simply a word or underscored phrase with
 curly brackets on either side. The names are usually quite simple and
 contextually understandable for the tag, thus making it easier for users
 to remember them and understand their usage. There are three kinds of
-variables in ExpressionEngine, single and pair. ::
+variables in ExpressionEngine, single and pair.
+
+.. code-block:: ee
 
   // Single Variable
   {summary}
@@ -304,7 +308,9 @@ class, which returns the parsed output. ::
 
   $output = ee()->TMPL->parse_variables(ee()->TMPL->tagdata, $variables);
 
-Assuming that our tagdata is as follows::
+Assuming that our tagdata is as follows:
+
+.. code-block:: ee
 
   <h1>{name}</h1>
   <ul>
@@ -321,7 +327,9 @@ Assuming that our tagdata is as follows::
 
   {bio}
 
-Our returned output would be::
+Our returned output would be:
+
+.. code-block:: ee
 
   <h1>Chameleon</h1>
   <ul>
@@ -358,7 +366,7 @@ The following subsections break down the procedures in detail.
 Single Variables
 ~~~~~~~~~~~~~~~~
 
-::
+.. code-block:: ee
 
   <h1>{name}</h1>
   <ul>
@@ -396,7 +404,7 @@ result in Typography being parsed with the class defaults. ::
 Pair Variables
 ~~~~~~~~~~~~~~
 
-::
+.. code-block:: ee
 
   <ul>
   {powers}
@@ -424,15 +432,21 @@ Automatic Variables
 
 If you are using the :meth:`TMPL::parse_variables` method to handle
 variable parsing in your add-on, then your tag will automatically
-inherit the ability to use the following variables::
+inherit the ability to use the following variables:
+
+.. code-block:: ee
 
   {count}
 
-The "count" of the output; the iteration of the tag pair loop. ::
+The "count" of the output; the iteration of the tag pair loop.
+
+.. code-block:: ee
 
   {total_results}
 
-The total number of results, or "rows", that your tag will output. ::
+The total number of results, or "rows", that your tag will output.
+
+.. code-block:: ee
 
   {switch="one|two|three"}
 
@@ -457,7 +471,9 @@ Path Variables
 ^^^^^^^^^^^^^^
 
 Path variables are used to create URLS and may require a unique
-indicator be appended to the final url. ::
+indicator be appended to the final url.
+
+.. code-block:: ee
 
   {id_path="template_group/template"}
 
@@ -548,7 +564,9 @@ making sure that the variable is replaced correctly in the template. ::
 Pair variables are a bit more complicated since they are often used for
 performing a loop within the tag data when there are multiple pieces of
 content of a similar type. A good example of this is the channel module
-where an entry might have multiple categories. ::
+where an entry might have multiple categories.
+
+.. code-block:: ee
 
   {exp:channel:entries}
 
@@ -595,7 +613,9 @@ Conditional Tags
 Conditional tags allow scripting to be added to your module's tag
 data in order to show data if certain defined criteria are met. The
 structure should be a variable being checked against another variable or
-value via an operator::
+value via an operator:
+
+.. code-block:: ee
 
   // Structure
   {if variable comparison-operator value}
