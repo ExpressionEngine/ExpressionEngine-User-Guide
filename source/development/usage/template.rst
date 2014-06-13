@@ -9,27 +9,20 @@ Template Class
 Introduction
 ------------
 
-In ExpressionEngine, a template is effectively taking the place of a
-page on a site and when rendered displays content from modules and
-plugins. Whenever a page is requested within an ExpressionEngine site,
-the system calls the Template class to discover which template is being
-requested and then does all of the parsing and processing required for
-rendering the template. This processing includes the embedding of other
-templates, tag and template caching, PHP processing, and it performs the
-calling of modules and plugins when their tags are found in the
-template.
+If you are not familiar with the ExpressionEngine template language,
+you may wish to read the :doc:`../../templates/overview`.
 
-A typical module or plugin tag in ExpressionEngine looks like this:
+When you create a :doc:`Plugin <../plugins>` or
+:doc:`Module <../modules>`, the name of your add-on and any of its
+public methods become available as ExpressionEngine tags for use in
+templates:
 
 .. code-block:: ee
 
-  {exp:channel:channel_name}
+  {exp:addon:method} some template data {/exp:addon:method}
 
-The first part of the tag, exp:, tells ExpressionEngine that this is a
-tag. The second part, channel, is the module or the plugin that the tag
-belongs to, in this case the ``channel`` module. The third part is the
-specific method from within the module or plugin that you're calling; in
-this case the method to display the ``channel_name``.
+When one of these tags is encountered, the associated method will be
+called and has a chance to transform this part of the template.
 
 Calling the Template Class
 --------------------------
