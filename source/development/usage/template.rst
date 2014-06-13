@@ -58,24 +58,11 @@ supplied::
   // Default value is 'random'
   $order = ee()->TMPL->fetch_param('order', 'random');
 
-  if ( ! $channel = ee()->TMPL->fetch_param('channel'))
+  // If they don't specify title
+  if ( ! ee()->TMPL->fetch_param('title'))
   {
-      ee()->language->fetch_language_file('module');
-      ee()->output->fatal_error(lang('module_invalid_channel'));
+      ee()->output->fatal_error('The "title" parameter is required.');
   }
-
-  $str = ee()->functions->sql_andor_string($channel, 'channel_name');
-
-  if (strncmp($str, 'AND', 3) == 0)
-  {
-      $str = substr($str, 3);
-  }
-
-  $sql .= "SELECT channel_id FROM exp_channels WHERE ".$str;
-  $query = ee()->db->query($sql);
-
-  // If channel is not specified, then an error is output.
-  // Otherwise, perform query.
 
 .. note:: values of ``'y'``, ``'on'`` and ``'yes'`` will all return
   ``'yes'``, while ``'n'``, ``'off'`` and ``'no'`` all return
