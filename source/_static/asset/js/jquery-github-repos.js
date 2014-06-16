@@ -56,7 +56,7 @@ $(document).ready(function() {
 	// for the homepage
 	$('.github-addon-repos').githubRepositories(function(repos) {
 
-		var isAddonRepo = function(el) { return el.description == 'ExpressionEngine Add-on'; },
+		var isAddonRepo = function(el) { return el.description.indexOf('ExpressionEngine Add-on') != -1; },
 			repoName = function(el) { return (el.repoName = el.name.replace(/-/g, ' '), el); };
 
 		// Grab all the repos that have 'ExpressionEngine Add-on' in their description
