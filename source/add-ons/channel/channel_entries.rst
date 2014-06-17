@@ -1404,15 +1404,6 @@ channel\_short\_name
 
 The short name of the channel of the currently displayed entry.
 
-yahoo\_im
----------
-
-::
-
-	{yahoo_im}
-
-The author's Yahoo IM account name.
-
 comment\_auto\_path
 -------------------
 
@@ -1487,6 +1478,20 @@ count
 The "count" out of the current entries being displayed. If five entries
 are being displayed, then for the fourth entry the {count} variable
 would have a value of "4".
+
+cp_edit_entry_url
+-----------------
+
+::
+
+  {if logged_in}
+    <a href="{cp_edit_entry_url}">Edit Entry</a>
+  {/if}
+
+The URL of the entry form in the control panel where this entry can be
+edited. It is recommended you wrap this variable in an
+``{if logged_in}`` conditional to hide your control panel's URL from
+regular site visitors.
 
 edit\_date
 ----------
@@ -2053,6 +2058,15 @@ the week date will fall on Sunday for the week of the entry. When
 ``start_day="Monday"`` is used, the week date will fall on Monday for
 the week of the entry. See :doc:`Date Variable Formatting
 </templates/date_variable_formatting>` for more information.
+
+yahoo\_im
+---------
+
+::
+
+  {yahoo_im}
+
+The author's Yahoo IM account name.
 
 .. _channel_entries_conditional_variables:
 

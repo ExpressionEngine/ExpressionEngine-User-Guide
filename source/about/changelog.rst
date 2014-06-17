@@ -27,6 +27,8 @@ Release Date: ?
     in conditionals: ``^=``, ``*=``, ``&=``, and ``~``.
   - Template Routes can now be reordered for a
     :doc:`custom parse order </urls/template_routes>`.
+  - Added ``{cp_edit_entry_url}`` variable to the :doc:`Channel Entries
+    </add-ons/channel/channel_entries>` tag.
   - Added an ``action=`` :ref:`parameter <member_action_parameter>` to
     the Member Login tag.
   - Added the ``[abbr]`` bbcode tag.
