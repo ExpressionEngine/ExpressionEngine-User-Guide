@@ -1491,7 +1491,13 @@ cp_edit_entry_url
 The URL of the entry form in the control panel where this entry can be
 edited. It is recommended you wrap this variable in an
 ``{if logged_in}`` conditional to hide your control panel's URL from
-regular site visitors.
+regular site visitors. If you are running a membership based site, hide
+it behind an appropriate ``logged_in_group_id`` conditional. For
+example, to hide this link from everyone but Super Admins::
+
+  {if logged_in_group_id == 1}
+    <a href="{cp_edit_entry_url}">Edit Entry</a>
+  {/if}
 
 edit\_date
 ----------
