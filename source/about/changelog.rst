@@ -17,6 +17,14 @@ Release Date: ?
 
 - General Changes:
 
+  - :doc:`Conditionals parser </templates/conditionals>` is more
+    performant, consistent, and has new operators.
+  - Added new :ref:`math operators <mathmatic_operators>` for use in
+    conditionals: ``+``, ``-``, ``*``, ``/``, ``^`` and ``**``
+  - Added :ref:`string concatenation operator
+    <string_concatenation_operator>` for use in conditionals: ``.``
+  - Added new :ref:`comparison operators <comparison_operators>` for use
+    in conditionals: ``^=``, ``*=``, ``&=``, and ``~``.
   - Template Routes can now be reordered for a
     :doc:`custom parse order </urls/template_routes>`.
   - Added an ``action=`` :ref:`parameter <member_action_parameter>` to

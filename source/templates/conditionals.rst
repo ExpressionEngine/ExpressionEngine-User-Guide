@@ -120,6 +120,8 @@ Operators
 
 The following operators are allowed within conditionals:
 
+.. _comparison_operators:
+
 Comparison Operators
 ====================
 
@@ -136,14 +138,16 @@ Operator  Name
 <=        Less than or equal to
 >         Greater than
 >=        Greater than or equal to
-^=        `Begins with <Begins With Operator_>`_
-\*=       `Contains <Ends With Operator_>`_
-$=        `Ends with <Contains Operator_>`_
-~         `Matches <Matches Operator_>`_
+^=        :ref:`Begins with <begins_with_operator>`
+\*=       :ref:`Contains <contains_operator>`
+$=        :ref:`Ends with <ends_with_operator>`
+~         :ref:`Matches <matches_operator>`
 ========  ==========================================
 
 .. note:: When comparing equality make sure to use **two** equal signs
    rather than one (e.g. **==**).
+
+.. _begins_with_operator:
 
 Begins With Operator
 --------------------
@@ -152,6 +156,7 @@ The begins with operator checks if a string begins with another string::
 
   {if "ExpressionEngine" ^= "Express"}Yes it does{/if}
 
+.. _ends_with_operator:
 
 Ends With Operator
 ------------------
@@ -160,12 +165,16 @@ The ends with operator checks if a string ends with another string::
 
   {if url $= ".fr"}Your website is from France.{/if}
 
+.. _contains_operator:
+
 Contains Operator
 -----------------
 
 The contains operator checks if a string contains another string::
 
   {if body *= excerpt}Noone expected that.{/if}
+
+.. _matches_operator:
 
 Matches Operator
 ----------------
@@ -227,6 +236,8 @@ These operators let you create complex rules for your templates::
 
 	{if member_id != '1' && member_group != "5" OR username == "Billy"} Hi! {/if}
 
+.. _mathmatic_operators:
+
 Mathematic Operators
 ====================
 
@@ -237,7 +248,7 @@ Operator   Name
 =========  ==========================================
 \+         Addition
 \-         Subtraction / Negation
-\*         Multiplcation
+\*         Multiplication
 \** and ^  `Exponentiation <Exponent Operators_>`_
 /          Division
 %          `Remainder of one number divided by another <Modulus Operator_>`_
@@ -295,6 +306,8 @@ is treated as ``2 ^ 9``, not as ``8 ^ 2``::
 
   {if 2 ^ 3 ^ 2 == 512}this{/if}
   {if 2 ^ 3 ^ 2 == 64}not this{/if}
+
+.. _string_concatenation_operator:
 
 String Concatenation Operator
 =============================
