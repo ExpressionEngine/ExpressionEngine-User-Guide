@@ -42,8 +42,10 @@ Release Date: ?
   - Removed the ``encode_ee_tags=`` parameter from the Markdown plugin.
   - Added 404 headers for requests for non-existent member profile
     elements
-  - Upgrading the Markdown parser to `Markdown Extra
-    <http://michelf.ca/projects/php-markdown/extra/>`_
+  - Upgraded the Markdown parser to `Markdown Extra
+    <http://michelf.ca/projects/php-markdown/extra/>`_, and the underlying
+    Markdown Lib from version 1.2.7 to
+    `1.4.1 <https://github.com/michelf/php-markdown#version-history>`_.
   - When using Markdown, SmartyPants is now on by default
 
 - Bug Fixes:
