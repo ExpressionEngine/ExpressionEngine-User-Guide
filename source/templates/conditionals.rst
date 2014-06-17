@@ -503,10 +503,10 @@ segment_*X*
 
   {if segment_3 == "private"}  You're seeing something private!  {/if}
 
-You can test against one of the :doc:`URL Segments <url_segments>` that
-are available. The conditional should be replaced with the correct
-segment name. e.g. if you're interested in URL Segment 3, then use ``{if
-segment_3}``.
+You can test against one of the :doc:`URL Segments
+<globals/url_segments>` that are available. The conditional should be
+replaced with the correct segment name. e.g. if you're interested in URL
+Segment 3, then use ``{if segment_3}``.
 
 
 username
