@@ -16,7 +16,7 @@ Developer Guidelines Checklist
   - No use of deprecated core methods (check the
     :doc:`Developer Log </cp/tools/logs/developer_log>` to make
     sure no deprecation warnings have surfaced from your add-on)
-  - All code is PHP 5.2.4+ compatible
+  - All code is PHP 5.3.10+ compatible
   - Proper use of ``ee()->session->set_cache()`` and
     ``ee()->session->cache()``
   - Class and filenames are prefixed to avoid overlap when the name
