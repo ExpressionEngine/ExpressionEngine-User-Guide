@@ -46,7 +46,8 @@ Release Date: ?
     <http://michelf.ca/projects/php-markdown/extra/>`_, and the underlying
     Markdown Lib from version 1.2.7 to
     `1.4.1 <https://github.com/michelf/php-markdown#version-history>`_.
-  - When using Markdown, SmartyPants is now on by default
+  - When using Markdown, SmartyPants is now on by default.
+  - ExpressionEngine now requires at least PHP 5.3.10.
 
 - Bug Fixes:
 
