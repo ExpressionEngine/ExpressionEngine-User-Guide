@@ -326,22 +326,22 @@ instead of these::
 
 Tags still require their braces, for example::
 
-  {if {entry_date format="%Y"} == {current_date format="%Y"}}
+  {if {entry_date format="%Y"} == {current_time format="%Y"}}
 
 When using tags pay special attention to your quote marks. If you need
 more than one level of quotation you will need to either alternate
 between single and double quote marks, or escape your quotes. For example,
 instead of this::
 
-  {if "{current_date format="%F"}" == "May"}
+  {if "{current_time format="%F"}" == "May"}
 
 do this::
 
-  {if "{current_date format='%F'}" == "May"}
+  {if "{current_time format='%F'}" == "May"}
 
 or this::
 
-  {if "{current_date format=\"%F\"}" == "May"}
+  {if "{current_time format=\"%F\"}" == "May"}
 
 ******************
 Short Conditionals
