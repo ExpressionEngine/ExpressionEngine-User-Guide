@@ -42,6 +42,8 @@ Release Date: ?
   - Removed the ``encode_ee_tags=`` parameter from the Markdown plugin.
   - Added 404 headers for requests for non-existent member profile
     elements
+  - The `protect_javascript` configuration item was removed and turned
+    into a per-template setting.
   - Upgraded the Markdown parser to `Markdown Extra
     <http://michelf.ca/projects/php-markdown/extra/>`_, and the underlying
     Markdown Lib from version 1.2.7 to

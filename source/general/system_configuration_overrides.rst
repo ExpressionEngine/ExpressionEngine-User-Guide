@@ -3363,24 +3363,6 @@ $config['profile_trigger'] = 'accounts';
 :ref:`Profile Triggering Word <profile-trigger-word-label>`
 
 
-protect_javascript
-------------------
-
-Prevents the advanced conditionals parser from processing anything
-inside ``<script>`` tags.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Enable **(default)**
-``n``      Disable
-========== ========
-
-Example Usage::
-
-$config['protect_javascript'] = 'n';
-
-
 proxy_ips
 ---------
 
