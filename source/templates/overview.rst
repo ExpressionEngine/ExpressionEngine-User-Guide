@@ -11,6 +11,9 @@ exhaustive list of all pages covering the template engine. If you're new
 to ExpressionEngine you may want to begin with the :doc:`News Site
 Tutorial <../how_to/building_a_simple_news_site>`.
 
+If you are a developer, you may also wish to read the
+:doc:`../development/usage/template` documentation.
+
 .. contents::
    :local:
    :depth: 2

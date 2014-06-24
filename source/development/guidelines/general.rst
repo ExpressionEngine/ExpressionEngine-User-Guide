@@ -371,7 +371,7 @@ Compatibility
 -------------
 
 Unless specifically mentioned in your add-on's documentation, all code
-must be compatible with PHP version 5.2.4+. Additionally, do not use PHP
+must be compatible with PHP version 5.3.10+. Additionally, do not use PHP
 functions that require non-default libraries to be installed unless your
 code contains an alternative method when the function is not available,
 or you explicitly document that your add-on requires said PHP libraries.

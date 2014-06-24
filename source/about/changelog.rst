@@ -17,8 +17,18 @@ Release Date: ?
 
 - General Changes:
 
+  - :doc:`Conditionals parser </templates/conditionals>` is more
+    performant, consistent, and has new operators.
+  - Added new :ref:`math operators <mathmatic_operators>` for use in
+    conditionals: ``+``, ``-``, ``*``, ``/``, ``^`` and ``**``
+  - Added :ref:`string concatenation operator
+    <string_concatenation_operator>` for use in conditionals: ``.``
+  - Added new :ref:`comparison operators <comparison_operators>` for use
+    in conditionals: ``^=``, ``*=``, ``&=``, and ``~``.
   - Template Routes can now be reordered for a
     :doc:`custom parse order </urls/template_routes>`.
+  - Added ``{cp_edit_entry_url}`` variable to the :doc:`Channel Entries
+    </add-ons/channel/channel_entries>` tag.
   - Added an ``action=`` :ref:`parameter <member_action_parameter>` to
     the Member Login tag.
   - Added the ``[abbr]`` bbcode tag.
@@ -32,9 +42,12 @@ Release Date: ?
   - Removed the ``encode_ee_tags=`` parameter from the Markdown plugin.
   - Added 404 headers for requests for non-existent member profile
     elements
-  - Upgrading the Markdown parser to `Markdown Extra
-    <http://michelf.ca/projects/php-markdown/extra/>`_
-  - When using Markdown, SmartyPants is now on by default
+  - Upgraded the Markdown parser to `Markdown Extra
+    <http://michelf.ca/projects/php-markdown/extra/>`_, and the underlying
+    Markdown Lib from version 1.2.7 to
+    `1.4.1 <https://github.com/michelf/php-markdown#version-history>`_.
+  - When using Markdown, SmartyPants is now on by default.
+  - ExpressionEngine now requires at least PHP 5.3.10.
 
 - Bug Fixes:
 
@@ -130,11 +143,16 @@ Release Date: ?
     Safecracker.
   - Fixed a bug (#20403) where the ``MB_ENABLED`` constant is not
     defined if UTF-8 support is not enabled.
+  - Fixed a bug where a PHP error may show when trying to display
+    entries from an MSM site on a template and the Pages module was
+    not installed.
 
 - Developers:
 
   - Removed the encode_ee_tags parameter from
     ``EE_Typography::markdown()``.
+  - :ref:`Boolean values <conditional_boolean_values>` in conditionals are now
+    consistent. ``0`` is always FALSE but ``"0"`` is always TRUE.
 
 Version 2.8.1
 -------------
