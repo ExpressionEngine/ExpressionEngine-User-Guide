@@ -1,6 +1,13 @@
 Multiple Site Manager
 =====================
 
+Version 2.1.7
+-------------
+
+Release Date: ?
+
+- Fixed a bug (#20185) where MSM may show a deprecation notice.
+
 Version 2.1.6
 -------------
 
