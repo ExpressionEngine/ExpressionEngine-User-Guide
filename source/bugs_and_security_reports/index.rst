@@ -1,158 +1,144 @@
-Handling Bugs
-=============
+Bugs and Security Reports
+=========================
+
+.. contents::
+   :local:
 
 This is a quick guide on how to submit a bug report and an overview of
-what we do with bugs once they're submitted.
-
-
-Suspect a Bug?
---------------
-
-First thing's first: make sure it's a bug. If you're not sure, or if you
-don't yet have clear steps to reproduce the bug, head over to the
-`Technical Support
-Forum <http://ellislab.com/forums/viewforum/105/>`_ to work
-through it with the Technical Support Specialists. Technical support is
-**not** provided through the bug tracker, and if we're unable to
-reproduce the bug using the information provided in your bug report, it
-may be rejected as a bug and you will be referred back to the forums.
-
-For security related bugs, you should email a report to
-`developers@ellislab.com <mailto:developers@ellislab.com>`_ and you will
-receive a reply back within one working day.
-
--  Update your ExpressionEngine installation with the latest bug fix and
-   security update.
-   
-   *For example, if you're running EE 2.2, update your installation to
-   the latest 2.2.x update available.*
-
--  Check that your preferences have been set correctly, and look for
-   typos.
--  :elsupport:`Check the bug tracker </bugs>` to see if this specific 
-   bug has already been submitted.
--  Make sure you can reproduce the bug in a separate, fresh installation
-   of ExpressionEngine running the latest update for your version.
-   
-   *This will also help you narrow down the exact conditions necessary
-   to produce the bug, so take good notes. This is information that will
-   be vital in your bug report.*
-
-If your preferences are set correctly, the bug report doesn't already
-exist in the bug tracker, and you're able to consistently reproduce the
-bug, it's time to submit a bug report.
+what we do with bugs once they're submitted, as well as how to report
+security issues with ExpressionEngine.
 
 Submitting a Bug Report
 -----------------------
 
-We take bugs seriously, so it's important that bug reports are clearly
-explained and provide steps to consistently reproduce the bug in
-question. Our community is a huge part of what makes ExpressionEngine
-great, and bug reports from members of our community can go a long way
-in making ExpressionEngine even better.
+You can submit bug reports in the :elsupport:`ExpressionEngine Bug
+Tracker </bugs>`. Tips and guidelines are updated periodically on the
+:elsupport:`bug submission page </bugs/submit>`. If your bug is security
+related, please see the `Security Reporting Guidelines`_. Some common
+best practices for reporting bugs are:
 
-Visit the bug tracker to :elsupport:`report the bug </bugs/submit>`, and
-take note of the following fields when filling out the bug report form:
+- Make sure this is a bug. The best way to do this is to review the
+  appropriate section of the User Guide, check your preferences, and
+  look for typos. We strongly suggest you submit a :elsupport:`support ticket </>`
+  if there is any doubt that this is a bug and not a user or server error.
+- Check the list of recently reported bugs and/or perform a bug search
+  to see if its already been reported.
+- Tell us what you expected to happen that didn't. For example,
+  "I thought doing this task would produce this result."
+- Then explain what actually happened. "But instead, something else happened."
+- Be sure to include *the exact wording* of any error messages.
+- If possible provide a URI where the bug can be reviewed.
 
-#. **Short Description**: Make sure it's clear and concise so others
-   scanning the bug tracker can easily find your bug if they're
-   experiencing the same issue.
-#. **Bug Details**
 
-   -  Tell us what you expected to happen that didn't. For example, "I
-      thought doing this task would produce this result."
-   -  Then explain what actually happened. "But instead, this other
-      thing happened."
-   -  Be sure to include any error messages.
-   -  If the bug's effects are visible on a live site, please include a
-      URL where those effects can be observed.
-   -  Most importantly, include the steps our developers must take to
-      reproduce your bug. **Remember: if we can't reproduce it, we won't
-      be able to fix it!**
+Bug Tracker Statuses
+~~~~~~~~~~~~~~~~~~~~
 
-#. **Bug Type**: Carefully categorize the bug so that your bug report
-   can be easily found by our developers and other community members
-   through searches and filtering.
-#. **Version**: Choose the specific version of your EE installation.
-   Remember, you should've already applied the latest bug fix and
-   security update while troubleshooting this bug.
-#. **Severity** Choose one of the four main levels of severity based on
-   the following guidelines:
+When you enter a bug report, it will go in with a status of 'New'.
+Once a staff members has evaluated the bug, the status will be changed
+to one of the following options:
 
-   -  **Trivial**
-      Aesthetic bugs, errors in JS that are not mission-critical,
-      spelling errors, errors in the User Guide, PHP errors after the
-      upgrade user survey.
-   -  **Minor**
-      Errors that aren't merely aesthetic, but can be worked around
-      until a fix is available. E.g. JS error when using control + arrow
-      keys, slow CP on certain pages, etc.
-   -  **Major**
-      MySQL or PHP errors or a break in core functionality that
-      interrupts usage but would only rarely occur and would likely
-      affect only a small portion of the EE community.
-   -  **Critical**
-      Any bug where security is compromised. Any MySQL or PHP error or
-      a break in core functionality that interrupts usage and would be
-      an issue that most users are experiencing. The impact on the EE
-      community from this single bug should be pretty widespread.
-
-   Within those main levels of severity, you can further fine-tune the
-   severity by choosing *low*, *medium*, and *high*. If you're not sure,
-   just choose *medium*.
-#. **Forum Support Thread**: If you've already worked through this with
-   the Technical Support Specialists in the support forum, enter that
-   URL here so we can reference the thread for more information.
-
-What to Expect After Submitting a Bug Report
---------------------------------------------
-
-Our goal is to respond to all bug reports within two business days of
-posting time. The bug's severity may also be adjusted at that time. When
-you enter a bug report, it will go in with a status of 'New'. Once a
-staff members has evaluated the bug, the status will be changed to one
-of the following options:
-
--  **Confirmed:** The bug has been replicated and turned over to the
-   development team to address.
--  **In Progress:** The development team is actively working on a fix.
--  **Unconfirmed:** We are unable to replicate the bug. In such cases, a
-   comment will be made to the bug report asking for more details in
-   order to try and replicate the error.
--  **Not a Bug:** While the behavior may not be desireable, the software
-   is working as expected. Often times an issue designated 'Not a bug'
-   would be better submitted as a feature request.
+-  **Accepted:** The bug has been confirmed and will be addressed by
+   our engineers.
 -  **Duplicate:** A bug report already exists for this issue and a
-   comment should be made linking you to the existing issue.
--  **External:** The cause of the problem lies outside of
-   ExpressionEngine's code (such as a third party add-on or a pinger
-   server that is inaccessible).
--  **Fixed for Next Release:** The bug has been fixed and the fix will
-   be in the next release. Where possible, a comment will walk you
-   through adding a temporary fix to your own code.
--  **Directed to Support:** The bug cannot be replicated and given the
-   behavior it is unlikely that a bug exists. However, the Tech Support
-   Specialists on the forum can provide you with help in accomplishing
-   your overarching goal.
+   link will be provided to the existing issue.
+-  **Clarification Requested:** We are unable to duplicate the bug as
+   reported, and need additional information to determine if it is a
+   bug or some other issue.
+-  **Fixed is in Upcoming Release:** The bug has been fixed and the fix
+   will be in the next release. Where possible, a solution will walk you
+   through adding a temporary fix to your own installation.
+-  **Bug Fixed:** The bug has been fixed in the publicly released
+   software.
+-  **See Comments:** The reported issue may not be a bug, or may be an
+   issue with an external application or service. Where possible, we
+   will try to explain how to solve the reported problem.
 
-When a change is made to the bug's status, a comment will also be added
-to the bug report, enabling you to receive email notifications of the
-bug's progress.
+Security Reporting Guidelines
+-----------------------------
 
-Security and Critical bugs should be fixed within 1 week of the initial
-response. Depending on how the severity and scope of the bug, a public
-upgrade may be deemed necessary. In such a case, our target is 2 weeks
-until release. If a public release is not deemed necessary, every effort
-will be made to get provide a temporary patch until the fix is made
-public, which should be no more than 1 month after the initial response.
+We take security issues very seriously, and encourage responsible
+reporting with a high priority on making security fixes or patches
+available rapidly, prior to any public disclosure of the vulnerability.
+We find this is the best balance of giving security issues the attention
+they rightly deserve, and protecting end users and site visitors from
+malicious individuals and script kiddies.
 
-Major bug fixes should be released to the public within 1 month of the
-initial response, while Minor and Trivial bugs should be included in a
-public release no more than 2 months after the initial response.
+All software has vulnerabilities, but when we work together with developers
+and researchers, we can all help make the Internet a safer and better
+place. We love to acknowledge researchers who make valid security reports
+and work with us, and while we do not have a bounty program, sometimes
+will donate software or swag for being classy.
 
-For all bugs, a short term fix will be provided in the bug comments if
-that is feasible.
+If you have a security issue to report, you can let us know at
+`team@ellislab.com <mailto:team@ellislab.com?subject=Security%20Vulnerability>`_
+or if you prefer at `HackerOne <https://hackerone.com>`_.
 
-Hotfixes
---------
+What are Security Issues?
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When we speak about security related bugs, we are most interested in:
+
+- `Cross-site Scripting (XSS) <http://en.wikipedia.org/wiki/Cross-site_Scripting>`_
+- `Cross-site Request Forgery (CSRF) <http://en.wikipedia.org/wiki/Cross-site_request_forgery>`_
+- `Privilege Escalation <http://en.wikipedia.org/wiki/Privilege_escalation>`_
+- `Session Hijacking <http://en.wikipedia.org/wiki/Session_hijacking>`_
+- `Arbitrary Code Execution <http://en.wikipedia.org/wiki/Arbitrary_code_execution>`_
+
+Making Good Security Reports
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We don't have rigid guidelines for what a security bug report should
+include, as we want to minimize barriers—ultimately we just want to
+receive the information. That said, the best security reports not only
+describe the vulnerability, but include a proof of concept as well as
+how it might be exploited in a realistic situation. Bonus points for
+including your recommended solution.
+
+On the converse, security reports that are merely the output of
+penetration testing software are generally not only unhelpful, but
+typically contain false-positives as the software cannot grasp the
+context or implications of a piece of code that checks off one of the
+items on the vendor's preset list of vulnerabilities.
+
+Unfortunately, our team only speaks English, so all security reports
+must be made in English, and communication will be in that language.
+
+Reporting and Disclosure
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+One you have reported the security issue, a number of steps will be
+taken to assess and address the reported issue prior to disclosure.
+
+- The report will be triaged within 48 hours to determine if the issue
+  is a legitimate security issue. Issues reported on weekends or U.S.
+  holidays may take 72–96 hours to be triaged.
+- Immediately after being triaged, an engineer will be assigned as the
+  owner of the issue and will contact you regarding your report.
+- If confirmed, the engineer will set to work on resolving the issue,
+  providing the reporter with a patch to test the prospective fix.
+- We try to have all security issues fixed within two weeks of being
+  triaged, often much more quickly. All valid security reports have a
+  high priority, but will be addressed in a relative priority based on:
+
+  - Whether a known exploit is in the wild
+  - The severity of the exploit
+  - The likelihood of user impact
+  - Complexity of the issue
+
+- In any case, the engineer assigned to the issue will maintain regular
+  contact with the reporter throughout the process, at minimum once per
+  week.
+- The security bug fix will typically be included in the next software release.
+  Depending on the priority conditions above and how distance the next
+  planned release is, we may issue a release and/or patch that only
+  addresses the reported security bug.
+- We disclose in our application :doc:`Change Log </about/changelog>` that a security
+  bug has been fixed, and what type. We do not disclose the steps or
+  circumstances to reproduce the bug.
+- Releases are posted to our :ellislab:`blog </blog>`, and for users who have
+  left the default feature enabled, receive notification when logged in
+  to their control panel.
+- Public disclosure of a security bug prior to resolution makes our
+  engineers and customers quite unhappy, and will not be met with gratitude.
+
 
