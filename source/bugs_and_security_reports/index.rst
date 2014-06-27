@@ -45,8 +45,9 @@ to one of the following options:
    reported, and need additional information to determine if it is a
    bug or some other issue.
 -  **Fixed is in Upcoming Release:** The bug has been fixed and the fix
-   will be in the next release. Where possible, a solution will walk you
-   through adding a temporary fix to your own installation.
+   will be included in a future release (typically the very next one).
+   Where possible, a solution will walk you through adding a temporary
+   fix to your own installation.
 -  **Bug Fixed:** The bug has been fixed in the publicly released
    software.
 -  **See Comments:** The reported issue may not be a bug, or may be an
