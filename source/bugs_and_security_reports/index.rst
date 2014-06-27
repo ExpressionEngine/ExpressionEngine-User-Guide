@@ -106,7 +106,7 @@ must be made in English, and communication will be in that language.
 Reporting and Disclosure
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-One you have reported the security issue, a number of steps will be
+Once you have reported the security issue, a number of steps will be
 taken to assess and address the reported issue prior to disclosure.
 
 - The report will be triaged within 48 hours to determine if the issue
