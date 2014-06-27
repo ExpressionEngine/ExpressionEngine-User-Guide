@@ -100,8 +100,8 @@ typically contain false-positives as the software cannot grasp the
 context or implications of a piece of code that checks off one of the
 items on the vendor's preset list of vulnerabilities.
 
-Unfortunately, our team only speaks English, so all security reports
-must be made in English, and communication will be in that language.
+Since our team only speaks English all security reports must be made in
+English, and communication will be in that language.
 
 Reporting and Disclosure
 ~~~~~~~~~~~~~~~~~~~~~~~~
