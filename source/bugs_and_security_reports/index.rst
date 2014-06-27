@@ -21,8 +21,8 @@ best practices for reporting bugs are:
   appropriate section of the User Guide, check your preferences, and
   look for typos. We strongly suggest you submit a :elsupport:`support ticket </>`
   if there is any doubt that this is a bug and not a user or server error.
-- Check the list of recently reported bugs and/or perform a bug search
-  to see if its already been reported.
+- Check the list of :elsupport:`recently reported bugs </bugs>` and/or
+  perform a bug search to see if its already been reported.
 - Tell us what you expected to happen that didn't. For example,
   "I thought doing this task would produce this result."
 - Then explain what actually happened. "But instead, something else happened."
