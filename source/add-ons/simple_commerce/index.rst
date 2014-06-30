@@ -264,6 +264,9 @@ The PayPal URL to add the item to the PayPal shopping cart. The example
 shown is a typical usage as a popup link. Recurring payments *cannot* be
 made using the cart.
 
+.. note:: If using encrypted payments, this link may be cutoff in some browsers.  
+Purchase buttons are recommended as an alternative. 
+
 buy\_now\_url
 ~~~~~~~~~~~~~
 
@@ -271,8 +274,8 @@ buy\_now\_url
 
 	<a href="{buy_now_url}" onclick="window.open(this.href);return false;">Buy Now</a>
 
-The "Buy Now" PayPal URL. The example shown is a typical usage as a
-popup link.
+.. note:: If using encrypted payments, this link may be cutoff in some browsers.  
+Purchase buttons are recommended as an alternative. 
 
 view\_cart\_url
 ~~~~~~~~~~~~~~~
@@ -284,8 +287,8 @@ view\_cart\_url
 The PayPal URL to view the contents of the shopping cart. The example
 shown is a typical usage as a popup link.
 
-view\_cart\_url
-~~~~~~~~~~~~~~~
+subscribe_now_url
+~~~~~~~~~~~~~~~~~
 
 ::
 
@@ -293,6 +296,9 @@ view\_cart\_url
 
 The "Subscribe Now" PayPal URL. The example shown is a typical usage as
 a popup link.
+
+.. note:: If using encrypted payments, this link may be cutoff in some browsers.  
+Purchase buttons are recommended as an alternative. 
 
 Purchase Buttons
 ----------------
