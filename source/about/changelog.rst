@@ -50,6 +50,8 @@ Release Date: ?
     `1.4.1 <https://github.com/michelf/php-markdown#version-history>`_.
   - When using Markdown, SmartyPants is now on by default.
   - ExpressionEngine now requires at least PHP 5.3.10.
+  - Made ``layout:contents`` available to conditionals.
+  - Strictly enforcing the reserved status of ``layout:contents``.
 
 - Bug Fixes:
 
