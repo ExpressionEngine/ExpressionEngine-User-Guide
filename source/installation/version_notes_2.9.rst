@@ -22,3 +22,12 @@ or::
 * Variables inside conditionals can no longer start or end with a dash (i.e.
   ``-foo`` or ``bar-``).
 * Numbers are no longer valid variables (i.e. ``555``).
+
+Changes to Layouts
+------------------
+
+The ``contents`` reserved name is now strictly enforced and will throw an error
+if ``{layout="group/template" contents="some value"}`` or
+``{layout:set name="contents"}`` are found in the template.
+
+In addition, ``layout:contents`` is now available to conditionals.
