@@ -71,5 +71,5 @@ Accessing the Feed
 ------------------
 
 When utilizing the JSON version feed, please restrict calls to no more
-than once per day. Abuse of the resource by a specific user or will
-result in terminated access to the JSON version feed for that user.
+than once per day. Abuse of the resource by a specific user will result
+in terminated access to the JSON version feed for that user.
