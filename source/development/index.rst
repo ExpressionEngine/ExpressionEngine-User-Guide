@@ -32,6 +32,7 @@ General Development
 
 - :doc:`1.x to 2.x Conversion </development/conversion/index>`
 - :doc:`Developer Preview Program </development/developer_preview_program>`
+- :doc:`JSON Version Feed </development/json_version_feed>`
 
 ***
 API
