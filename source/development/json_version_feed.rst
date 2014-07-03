@@ -61,11 +61,11 @@ version_history
 A hash table of all versions and release dates for ExpressionEngine,
 including the most current.
 
-==============  ==========
+==============  =========================
 Key             Value
-==============  ==========
-version number  yyyy-mm-dd
-==============  ==========
+==============  =========================
+version number  release date (yyyy-mm-dd)
+==============  =========================
 
 Accessing the Feed
 ------------------
