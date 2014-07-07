@@ -70,6 +70,7 @@ version number  release date (yyyy-mm-dd)
 Accessing the Feed
 ------------------
 
-When utilizing the JSON version feed, please restrict calls to no more
-than once per day. Abuse of the resource by a specific user will result
-in terminated access to the JSON version feed for that user.
+When utilizing the JSON version feed, please utilize caching and
+restrict calls to no more than once per day. Abuse of the resource by a
+specific user will result in terminated access to the JSON version feed
+for that user.
