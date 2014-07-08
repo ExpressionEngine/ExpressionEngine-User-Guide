@@ -16,8 +16,8 @@ default.
 Pagination Changes
 ------------------
 
-All pagination within ExpressionEngine is now consistent which means
-that some templates will need to be updated:
+All :doc:`/templates/pagination` within ExpressionEngine is now
+consistent which means that some templates will need to be updated:
 
 - Uses of ``{if paginate}`` have been deprecated, use
   ``{paginate}...{/paginate}`` instead
