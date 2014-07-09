@@ -110,6 +110,7 @@ Solving Problems
 - :doc:`troubleshooting/index`
 - :ellislab:`EllisLab Support </support>`
 - :ellislab:`Community Support Forum </forums/viewannounce/230174_114/>`
+- :doc:`bugs_and_security_reports/index`
 
 
 *************
@@ -206,7 +207,7 @@ About ExpressionEngine
   general/index
   how_to/index
   intro/index
-  handling_bugs/index
+  bugs_and_security_reports/index
   add-ons/index
   operations/index
   optimization/index
