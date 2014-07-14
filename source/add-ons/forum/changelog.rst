@@ -4,7 +4,7 @@ ExpressionEngine Forum Module Change Log
 Version 3.1.16
 --------------
 
-Release Date: ?
+Release Date: July 15, 2014
 
 - Fixed a bug (#20280) where the ``{pagination_marker}`` was not removed
   when a forum was empty.

@@ -4,7 +4,7 @@ Multiple Site Manager
 Version 2.1.7
 -------------
 
-Release Date: ?
+Release Date: July 15, 2014
 
 - Fixed a bug (#20185) where MSM may show a deprecation notice.
 
