@@ -3,8 +3,8 @@ Simple Commerce
 ###############
 
 .. contents::
-	:local:
-	:depth: 2
+  :local:
+  :depth: 2
 
 ************
 Introduction
@@ -14,20 +14,22 @@ The Simple Commerce Module is a basic but flexible module
 that easily integrates ExpressionEngine with PayPal.
 
 .. note:: The Simple Commerce Module is available only with a `purchased
-	<https://store.ellislab.com/>`_ ExpressionEngine license.
+  <https://store.ellislab.com/>`_ ExpressionEngine license.
 
--  Integrates with ExpressionEngine's Channel Module to define items for sale
--  Tracks purchases automatically utilizing PayPal's `Instant Payment
-   Notification <https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&content_ID=developer/e_howto_admin_IPNIntro>`__
-   (external link)
--  Lets you create any number of customized email notification templates
-   for both the administrator and customers, even a different
-   email template for *every item*!
--  Add and Edit multiple items at once
--  Ability to assign sale prices to items, and easily mark items "on sale"
--  Allows purchases of items to change the user's member group
--  Supports PayPal Encrypted Payments
--  Tab delimited export of items and purchases
+- Integrates with ExpressionEngine's Channel Module to define items for
+  sale
+- Tracks purchases automatically utilizing PayPal's `Instant Payment
+  Notification <https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&content_ID=developer/e_howto_admin_IPNIntro>`__
+  (external link)
+- Lets you create any number of customized email notification templates
+  for both the administrator and customers, even a different
+  email template for *every item*!
+- Add and Edit multiple items at once
+- Ability to assign sale prices to items, and easily mark items
+  "on sale"
+- Allows purchases of items to change the user's member group
+- Supports PayPal Encrypted Payments
+- Tab delimited export of items and purchases
 
 
 .. _simple_commerce_purchase_tag:
@@ -42,33 +44,33 @@ a Channel Entries tag, as store items are actually Channel Entries.
 
 Here is a simple example::
 
-	 {exp:simple_commerce:purchase entry_id="{entry_id}" success="site/success" cancel="site/index"}
-	 	<h3>{item_name}</h3>
-	 	
-	 	<p><strong>{item_sale_price}</strong></p>
-	 	
-	 	{if item_type == "purchase"}
-	 		<p><a href="{buy_now_url}" onclick="window.open(this.href);return false;">Buy Now</a></p>
-	 		<p><a href="{add_to_cart_url}" onclick="window.open(this.href);return false;">Add to Cart</a></p>
-	 		<p><a href="{view_cart_url}" onclick="window.open(this.href);return false;">View Cart</a></p>
-	 	{/if}
-	 	{if item_type == "subscription"}
-	 		<p><a href="{subscribe_now_url}" onclick="window.open(this.href);return false;">Subscribe Now</a></p>
-	 	{/if}
-	 {/exp:simple_commerce:purchase}
+   {exp:simple_commerce:purchase entry_id="{entry_id}" success="site/success" cancel="site/index"}
+    <h3>{item_name}</h3>
+
+    <p><strong>{item_sale_price}</strong></p>
+
+    {if item_type == "purchase"}
+      <p><a href="{buy_now_url}" onclick="window.open(this.href);return false;">Buy Now</a></p>
+      <p><a href="{add_to_cart_url}" onclick="window.open(this.href);return false;">Add to Cart</a></p>
+      <p><a href="{view_cart_url}" onclick="window.open(this.href);return false;">View Cart</a></p>
+    {/if}
+    {if item_type == "subscription"}
+      <p><a href="{subscribe_now_url}" onclick="window.open(this.href);return false;">Subscribe Now</a></p>
+    {/if}
+   {/exp:simple_commerce:purchase}
 
 Parameters
 ==========
 
 .. contents::
-	:local:
+  :local:
 
 cancel=
 -------
 
 ::
 
-	cancel="store/cancel"
+  cancel="store/cancel"
 
 You may specify a particular Template to display if a purchase is
 cancelled mid-transaction. This takes a standard
@@ -81,7 +83,7 @@ country\_code=
 
 ::
 
-	country_code="DE"
+  country_code="DE"
 
 This parameter controls the language that will be used on the initial
 PayPal shopping cart / log in screen when someone makes a purchase from
@@ -95,7 +97,7 @@ currency=
 
 ::
 
-	currency="USD"
+  currency="USD"
 
 The three letter representation of the currency for the item prices in
 the store, using the ISO 4217 standard. Default is "USD" (U.S. Dollars).
@@ -107,7 +109,7 @@ decimal=
 
 ::
 
-	decimal=","
+  decimal=","
 
 Change the decimal separator for display. For example, instead of
 display 3.95, you can have the price outputted as 3,95.
@@ -117,7 +119,7 @@ entry\_id=
 
 ::
 
-	entry_id="{entry_id}"
+  entry_id="{entry_id}"
 
 **REQUIRED**. As the Simple Commerce Purchase tag is designed to be used
 inside a Channel Entries tag, the {entry\_id} variable of the Channel
@@ -130,28 +132,28 @@ show\_disabled=
 
 ::
 
-	show_disabled="yes"
+  show_disabled="yes"
 
 Allows the Simple Commerce Purchase tag to output information for store
 items that are not enabled. This can be used in conjunction with an
 item\_enabled conditional to display information for enabled / disabled
 items. e.g.::
 
-	{if item_enabled == 'n'}
-		<p><strong>NOT AVAILABLE</strong></p>
-	{if:else}
-		<p>{item_sale_price}</p>
-		<p><a href="{buy_now_url}" onclick="window.open(this.href);return false;">Buy Now</a></p>
-		<p><a href="{add_to_cart_url}" onclick="window.open(this.href);return false;">Add to Cart</a></p>
-		<p><a href="{view_cart_url}" onclick="window.open(this.href);return false;">View Cart</a></p>
-	{/if}
+  {if item_enabled == 'n'}
+    <p><strong>NOT AVAILABLE</strong></p>
+  {if:else}
+    <p>{item_sale_price}</p>
+    <p><a href="{buy_now_url}" onclick="window.open(this.href);return false;">Buy Now</a></p>
+    <p><a href="{add_to_cart_url}" onclick="window.open(this.href);return false;">Add to Cart</a></p>
+    <p><a href="{view_cart_url}" onclick="window.open(this.href);return false;">View Cart</a></p>
+  {/if}
 
 success=
 --------
 
 ::
 
-	success="store/thank_you"
+  success="store/thank_you"
 
 **REQUIRED**. You must specify a particular Template to display after a
 successful purchase transaction. This takes a standard
@@ -163,7 +165,7 @@ Variables
 =========
 
 .. contents::
-	:local:
+  :local:
 
 Item Details
 ------------
@@ -173,7 +175,7 @@ item\_id
 
 ::
 
-	{item_id}
+  {item_id}
 
 The store item's id.
 
@@ -182,7 +184,7 @@ item\_name
 
 ::
 
-	{item_name}
+  {item_name}
 
 The descriptive name of the item.
 
@@ -191,7 +193,7 @@ item\_enabled
 
 ::
 
-	{item_enabled}
+  {item_enabled}
 
 Whether or not the store item is enabled (y/n). This can be useful if
 you use custom queries to access information about your store items. If
@@ -203,7 +205,7 @@ item\_purchases
 
 ::
 
-	{item_purchases}
+  {item_purchases}
 
 The number of times the item has been purchased.
 
@@ -212,7 +214,7 @@ item\_regular\_price
 
 ::
 
-	{item_regular_price}
+  {item_regular_price}
 
 The item's regular price.
 
@@ -221,7 +223,7 @@ item\_sale\_price
 
 ::
 
-	{item_sale_price}
+  {item_sale_price}
 
 The item's sale price.
 
@@ -230,7 +232,7 @@ item\_use\_sale
 
 ::
 
-	{item_use_sale}
+  {item_use_sale}
 
 Whether or not the item is on sale (y/n). Useful in conditionals and
 custom queries. If the item is marked as on sale, the PayPal purchase
@@ -241,14 +243,14 @@ item\_type
 
 ::
 
-	{item_type}
+  {item_type}
 
 Whether item is a recurring item (subscription/purchase). Useful in
 conditionals and custom queries.
 
 .. note:: Recurring payments cannot be made using the shopping cart.
-	Thus item\_type conditionals should be used if you offer cart links
-	and are mixing recurring and non-recurring items.
+  Thus item\_type conditionals should be used if you offer cart links
+  and are mixing recurring and non-recurring items.
 
 Purchase Links
 --------------
@@ -258,31 +260,31 @@ add\_to\_cart\_url
 
 ::
 
-	<a href="{add_to_cart_url}" onclick="window.open(this.href);return false;">Add to Cart</a>
+  <a href="{add_to_cart_url}" onclick="window.open(this.href);return false;">Add to Cart</a>
 
 The PayPal URL to add the item to the PayPal shopping cart. The example
 shown is a typical usage as a popup link. Recurring payments *cannot* be
 made using the cart.
 
-.. note:: If using encrypted payments, this link may be cutoff in some browsers.  
-Purchase buttons are recommended as an alternative. 
+.. note:: If using encrypted payments, this link may be cutoff in some
+  browsers. Purchase buttons are recommended as an alternative.
 
 buy\_now\_url
 ~~~~~~~~~~~~~
 
 ::
 
-	<a href="{buy_now_url}" onclick="window.open(this.href);return false;">Buy Now</a>
+  <a href="{buy_now_url}" onclick="window.open(this.href);return false;">Buy Now</a>
 
-.. note:: If using encrypted payments, this link may be cutoff in some browsers.  
-Purchase buttons are recommended as an alternative. 
+.. note:: If using encrypted payments, this link may be cutoff in some
+  browsers. Purchase buttons are recommended as an alternative.
 
 view\_cart\_url
 ~~~~~~~~~~~~~~~
 
 ::
 
-	<a href="{view_cart_url}" onclick="window.open(this.href);return false;">View Cart</a>
+  <a href="{view_cart_url}" onclick="window.open(this.href);return false;">View Cart</a>
 
 The PayPal URL to view the contents of the shopping cart. The example
 shown is a typical usage as a popup link.
@@ -292,13 +294,13 @@ subscribe_now_url
 
 ::
 
-	<a href="{subscribe_now_url}" onclick="window.open(this.href);return false;">Subscribe Now</a>
+  <a href="{subscribe_now_url}" onclick="window.open(this.href);return false;">Subscribe Now</a>
 
 The "Subscribe Now" PayPal URL. The example shown is a typical usage as
 a popup link.
 
-.. note:: If using encrypted payments, this link may be cutoff in some browsers.  
-Purchase buttons are recommended as an alternative. 
+.. note:: If using encrypted payments, this link may be cutoff in some
+  browsers. Purchase buttons are recommended as an alternative.
 
 Purchase Buttons
 ----------------
@@ -311,7 +313,7 @@ add\_to\_cart\_button
 
 ::
 
-	{add_to_cart_button}Add to Cart{/add_to_cart_button}
+  {add_to_cart_button}Add to Cart{/add_to_cart_button}
 
 A button that adds the item to the PayPal shopping cart.
 
@@ -320,7 +322,7 @@ buy\_now\_button
 
 ::
 
-	{buy_now_button}Buy Now{/buy_now_button}
+  {buy_now_button}Buy Now{/buy_now_button}
 
 A "Buy Now" PayPal button.
 
@@ -329,7 +331,7 @@ view\_cart\_button
 
 ::
 
-	{view_cart_button}View Cart{/view_cart_button}
+  {view_cart_button}View Cart{/view_cart_button}
 
 A button to view the contents of the shopping cart.
 
@@ -340,12 +342,12 @@ Recurring Payments
 ******************
 
 The Simple Commerce Module supports Paypal `Subscriptions and Recurring
-Payments <https://www.paypal.com/us/cgi-bin/?cmd=p/xcl/rec/subscr-intro-outside>`_
-(offsite link). Using recurring payments, you can offer your users
-automatically recurring subscriptions. For purchases managed through the
-module, you can specify emails to be sent upon a recurring purchase,
-emails to be sent when a recurring payment is cancelled, and alter a
-member's group assignment based on their subscription status.
+Payments <https://www.paypal.com/us/cgi-bin/?cmd=p/xcl/rec/subscr-intro-
+outside>`_ (offsite link). Using recurring payments, you can offer your
+users automatically recurring subscriptions. For purchases managed
+through the module, you can specify emails to be sent upon a recurring
+purchase, emails to be sent when a recurring payment is canceled, and
+alter a member's group assignment based on their subscription status.
 
 .. note:: Automatic emails and member group changes rely on :doc:`Instant
    Payment Notification <sc_cp_ipn>`. New subscription automated
@@ -357,9 +359,8 @@ Recurring Payment Variables in Template Tags
 ============================================
 
 Paypal does not allow recurring payments to be added to the shopping
-cart. It is therefore important to use the `item_type`_
-variable in a conditional if you use
-shopping cart links.
+cart. It is therefore important to use the `item_type`_ variable in a
+conditional if you use shopping cart links.
 
 Recurring Payment Subscription Expiration Date
 ==============================================
@@ -372,10 +373,10 @@ terminated.
 How Recurring Payments may be terminated
 ========================================
 
-Paypal will send an instant payment notification if the purchaser has
-cancelled their subscription. You may also cancel a subscription through
-the paypal control panel, triggering an instant payment notification.
-See the Paypal documentation for details.
+PayPal will send an instant payment notification if the purchaser has
+canceled their subscription. You may also cancel a subscription through
+the PayPal control panel, triggering an instant payment notification.
+See the PayPal documentation for details.
 
 
 *****************
@@ -428,7 +429,7 @@ to enable the module's debug mode. To do so, open
 mod.simple\_commerce.php, and near the top where the class variables are
 defined, set $debug to TRUE. ::
 
-	var $debug                = TRUE;
+  var $debug                = TRUE;
 
 Remember to set this variable to FALSE when you wish to take your store
 live and route purchases to the real PayPal website.
@@ -489,7 +490,7 @@ The **private key** is the portion of the encryption method that is kept
 secret and not sent to anyone. To create your private key, key in the
 following at the command line::
 
-	openssl genrsa -out private_key.pem 1024
+  openssl genrsa -out private_key.pem 1024
 
 "private\_key.pem" is the name of the file that will be created in the
 directory you are running the command from. You will need to upload this
@@ -508,7 +509,7 @@ you provide PayPal to enable them to accept encrypted payments for you.
 To create your public certificate, key in the following at the command
 line::
 
-	openssl req -new -key private_key.pem -x509 -days 730 -out public_certificate.pem
+  openssl req -new -key private_key.pem -x509 -days 730 -out public_certificate.pem
 
 "private\_key.pem" is the name of the private key file generated in step
 one. This command needs to be ran from the same directory, or provide a
@@ -603,8 +604,8 @@ on:
 
 
 .. toctree::
-	:glob:
-	:titlesonly:
-	:hidden:
-	
-	*
+  :glob:
+  :titlesonly:
+  :hidden:
+
+  *
