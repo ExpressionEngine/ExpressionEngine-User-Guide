@@ -88,8 +88,8 @@ Everything else is considered **TRUE**.
 .. note:: The string ``"0"`` is considered **TRUE** since it is a non-empty
    string.
 
-Bloolean Comparisons
-====================
+Boolean Comparisons
+===================
 
 The following table illustrates comparing Boolean values with respect to the
 equality (``==``) operator.
