@@ -13,7 +13,14 @@ Release Date: July 15, 2014
 - Important:
 
   - Fixed a security issue that could result in arbitrary script
-    execution in certain circumstances.
+    execution in certain circumstances. (Thanks to security researcher
+    `Matthew Barry <http://deathby.ninja/>`_ for working with us on this
+    one.)
+  - Fixed a limited XSS vulnerability relating to URL manipulation.
+    (Thanks to security engineer `Mehment INCE <https://twitter.com/mmetince>`_
+    for reporting the issue.)
+  - Fixed a bug which allowed modification of arbitrary channel fields
+    from Grid Channel Forms in certain circumstances.
 
 - General Changes:
 
