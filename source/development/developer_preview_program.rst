@@ -80,7 +80,7 @@ and encourage them to join!
 - Ben Croker
 - Benjamin Kohl (Masuga Design)
 - Benoit Marchal
-- Bjorn Borresen
+- Bjørn Børresen
 - Brad Boegler (Nexcess)
 - Brad Morse
 - Brad Parscale (DevDemon)
