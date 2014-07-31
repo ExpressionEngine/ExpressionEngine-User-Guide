@@ -47,8 +47,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'ExpressionEngine'
-copyright = u'2002-2014 &ndash; <a href="http://ellislab.com/">EllisLab, Inc.</a>'
-project_url = u'http://ellislab.com/expressionengine'
+copyright = u'2002-2014 &ndash; <a href="https://ellislab.com/">EllisLab, Inc.</a>'
+project_url = u'https://ellislab.com/expressionengine'
 
 
 # The version info for the project you're documenting, acts as replacement for
@@ -97,7 +97,7 @@ primary_domain = 'php'
 
 # Links
 extlinks = {
-    'ellislab': ('http://ellislab.com%s', 'ellislab'),
+    'ellislab': ('https://ellislab.com%s', 'ellislab'),
     'elstore': ('https://store.ellislab.com%s', 'elstore'),
     'elsupport': ('https://support.ellislab.com%s', 'elsupport'),
     'forum_thread': ('https://ellislab.com/forums/viewthread/%s/', 'forum_thread')

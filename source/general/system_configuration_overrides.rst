@@ -1485,7 +1485,7 @@ Value   Description
 
 Example Usage::
 
-$config['doc_url'] = 'http://ellislab.com/expressionengine/user-guide/';
+$config['doc_url'] = 'https://ellislab.com/expressionengine/user-guide/';
 
 .. rst-class:: cp-path
 
@@ -3012,7 +3012,7 @@ name_of_dictionary_file
 
 Filename for the dictionary file. The official dictionary file is
 `available for download
-<http://ellislab.com/asset/file/dictionary.zip>`__. Must be used in
+<https://ellislab.com/asset/file/dictionary.zip>`__. Must be used in
 combination with :ref:`allow_dictionary_pw <allow_dictionary_pw>`.
 
 ============ ===========

@@ -35,7 +35,7 @@ Server Compatibility Wizard
 If you're not sure whether your server meets the minimum requirements,
 the server wizard will run some tests and give you an answer.
 
--  `Download <http://ellislab.com/asset/file/ee_server_wizard.zip>`_
+-  `Download <https://ellislab.com/asset/file/ee_server_wizard.zip>`_
    and unzip the archive.
 -  Upload the folder to your server.
 -  Point your web browser to the folder. For example:

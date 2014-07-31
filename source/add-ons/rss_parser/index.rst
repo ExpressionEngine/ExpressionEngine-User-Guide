@@ -14,10 +14,10 @@ Example
 *******
 
 Here's a simple example where we're pulling the `EllisLab blog
-<http://ellislab.com/blog/>`_ feed and showing the five most recent
+<https://ellislab.com/blog/>`_ feed and showing the five most recent
 posts::
 
-  {exp:rss_parser url="http://ellislab.com/blog/rss-feed" limit="5"}
+  {exp:rss_parser url="https://ellislab.com/blog/rss-feed" limit="5"}
   <h1>{feed_title}</h1>
   <ul>
       {feed_items}
