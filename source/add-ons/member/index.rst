@@ -3,8 +3,8 @@ Member Management
 #################
 
 .. contents::
-   :local:
-   :depth: 2
+  :local:
+  :depth: 2
 
 ************
 Introduction
@@ -32,7 +32,7 @@ You'll find many member management options available at:
   having access to your Control Panel. Typically, this Member Profile area
   is found at::
 
-	http://example.com/index.php/member/profile/
+  http://example.com/index.php/member/profile/
 
 ************************
 Member Profile Templates
@@ -41,7 +41,7 @@ Member Profile Templates
 The public profile area has its own set of templates which can be edited
 to change the look. You'll find the templates located at::
 
-	themes/profile_themes/default
+  themes/profile_themes/default
 
 These templates can be edited with a text editor, or you may choose to
 edit them via your Control Panel at :menuselection:`Design --> Themes
@@ -59,28 +59,29 @@ Login Form Tag
 The Login Form Tag allows you to place a login form in any
 template you choose, so that site members can log in.
 
-.. note:: The Member Profile Templates described above also contain a login form, which appears
-   when someone who is not logged in tries to access a member-only area.
+.. note:: The Member Profile Templates described above also contain a
+  login form, which appears when someone who is not logged in tries to
+  access a member-only area.
 
 Here is how you might use the tag::
 
-	{exp:member:login_form return="site/index"}
-		<p>
-			<label>Username</label><br>
-			<input type="text" name="username" value="" maxlength="32" size="25">
-		</p>
-		<p>
-			<label>Password</label><br>
-			<input type="password" name="password" value="" maxlength="32" size="25">
-		</p>
-		{if auto_login}
-			<p><input type="checkbox" name="auto_login" value="1"> Auto-login on future visits</p>
-		{/if}
+  {exp:member:login_form return="site/index"}
+    <p>
+      <label>Username</label><br>
+      <input type="text" name="username" value="" maxlength="32" size="25">
+    </p>
+    <p>
+      <label>Password</label><br>
+      <input type="password" name="password" value="" maxlength="32" size="25">
+    </p>
+    {if auto_login}
+      <p><input type="checkbox" name="auto_login" value="1"> Auto-login on future visits</p>
+    {/if}
 
-		<p><input type="checkbox" name="anon" value="1" checked="checked"> Show my name in the online users list</p>
-		<p><input type="submit" name="submit" value="Submit"></p>
-		<p><a href="{path='member/forgot_password'}">Forgot your password?</a></p>
-	{/exp:member:login_form}
+    <p><input type="checkbox" name="anon" value="1" checked="checked"> Show my name in the online users list</p>
+    <p><input type="submit" name="submit" value="Submit"></p>
+    <p><a href="{path='member/forgot_password'}">Forgot your password?</a></p>
+  {/exp:member:login_form}
 
 Parameters
 ==========
@@ -108,7 +109,7 @@ form_class=
 
 ::
 
-	form_class="login"
+  form_class="login"
 
 This parameter allows you to specify the class attribute for the <form>
 tag.
@@ -118,7 +119,7 @@ form_id=
 
 ::
 
-	form_id="login"
+  form_id="login"
 
 This parameter allows you to specify the id attribute for the <form>
 tag.
@@ -128,7 +129,7 @@ form_name=
 
 ::
 
-	form_name="login"
+  form_name="login"
 
 This parameter allows you to specify a name attribute for the <form>
 tag.
@@ -138,7 +139,7 @@ return=
 
 ::
 
-	return="site/index"
+  return="site/index"
 
 This parameter allows you to define where the user will be returned
 after successfully logging in. The parameter can be defined in two ways:
@@ -163,7 +164,7 @@ Variables
 
 ::
 
-	{if auto_login} {/if}
+  {if auto_login} {/if}
 
 It is recommended that you use this variable as indicated in the example
 code at the top. This conditional will display the contents inside
@@ -171,9 +172,9 @@ code at the top. This conditional will display the contents inside
 preference is set. In order for this feature to work you must be set to
 use "cookies only" and not sessions.::
 
-	{if auto_login}
-		<p><input class="checkbox" type="checkbox" name="auto_login" value="1"> Auto-login on future visits</p>
-	{/if}
+  {if auto_login}
+    <p><input class="checkbox" type="checkbox" name="auto_login" value="1"> Auto-login on future visits</p>
+  {/if}
 
 .. _creating_member_links:
 
@@ -191,11 +192,11 @@ Log In
 This link points to the personal profile login page. To create the link,
 use this variable::
 
-	{path='member/login'}
+  {path='member/login'}
 
 Place the variable inside of a link tag::
 
-	<a href="{path='member/login'}">Log In</a>
+  <a href="{path='member/login'}">Log In</a>
 
 Log Out
 =======
@@ -203,11 +204,11 @@ Log Out
 This link allows users to log-out of the system. To create the link, use
 this variable::
 
-	{path='logout'}
+  {path='logout'}
 
 Place the variable inside of a link tag::
 
-	<a href="{path='logout'}">Log Out</a>
+  <a href="{path='logout'}">Log Out</a>
 
 Registration Page
 =================
@@ -215,11 +216,11 @@ Registration Page
 This link points to the member registration page. To create the link,
 use this variable::
 
-	{path='member/register'}
+  {path='member/register'}
 
 Place the variable inside of a link tag::
 
-	<a href="{path='member/register'}">Register as a new member</a>
+  <a href="{path='member/register'}">Register as a new member</a>
 
 View Memberlist
 ===============
@@ -227,11 +228,11 @@ View Memberlist
 This link points to the page showing a list of all registered members.
 To create the link, use this variable::
 
-	{path='member/memberlist'}
+  {path='member/memberlist'}
 
 Place the variable inside of a link tag::
 
-	<a href="{path='member/memberlist'}">View the Memberlist</a>
+  <a href="{path='member/memberlist'}">View the Memberlist</a>
 
 Member Profile Page
 ===================
@@ -240,11 +241,11 @@ This link points to the personal profile page of the logged-in user,
 allowing them to edit any of their settings. To create the link, use
 this variable::
 
-	{path='member/profile'}
+  {path='member/profile'}
 
 Place the variable inside of a link tag::
 
-	<a href="{path='member/profile'}">Edit your profile</a>
+  <a href="{path='member/profile'}">Edit your profile</a>
 
 When the link is rendered it will appear similar to:
 http://example.com/index.php/member/profile/
@@ -254,11 +255,11 @@ Forgotten Password?
 
 This link points to the page where users can retrieve their password::
 
-	{path='member/forgot_password'}
+  {path='member/forgot_password'}
 
 Place the variable inside of a link tag::
 
-	<a href="{path='member/forgot_password'}">Forget your password?</a>
+  <a href="{path='member/forgot_password'}">Forget your password?</a>
 
 Member Navigation
 =================
@@ -267,16 +268,16 @@ A good strategy for the above links is to use them within conditional
 tags that let you present links based on whether someone is logged in or
 not. Here's an example::
 
-	{if logged_in}
-		<a href="{path='member/profile'}">Edit your profile</a><br>
-		<a href="{path='member/memberlist'}">View the Memberlist</a><br>
-		<a href="{path='logout'}">Log Out</a>
-	{/if}
-	{if logged_out}
-		Are you a member? Please <a href="{path='member/login'}">log-in</a>.<br>
-		Not a member? <a href="{path='member/register'}">Register</a>.<br>
-		Have you <a href="{path='member/forgot'}">forgotten your password</a>?
-	{/if}
+  {if logged_in}
+    <a href="{path='member/profile'}">Edit your profile</a><br>
+    <a href="{path='member/memberlist'}">View the Memberlist</a><br>
+    <a href="{path='logout'}">Log Out</a>
+  {/if}
+  {if logged_out}
+    Are you a member? Please <a href="{path='member/login'}">log-in</a>.<br>
+    Not a member? <a href="{path='member/register'}">Register</a>.<br>
+    Have you <a href="{path='member/forgot'}">forgotten your password</a>?
+  {/if}
 
 
 ***********************
@@ -295,9 +296,9 @@ or from a specified user using the member_id="" parameter.
 
 Here is a basic example::
 
-	{exp:member:custom_profile_data}
-		<p>{age}, {gender}</p>
-	{/exp:member:custom_profile_data}
+  {exp:member:custom_profile_data}
+    <p>{age}, {gender}</p>
+  {/exp:member:custom_profile_data}
 
 .. important:: If you omit the member_id= parameter as in the above example,
    do *not* enable Template Caching on any Template containing this tag. Otherwise
@@ -310,14 +311,14 @@ Parameters
 ==========
 
 .. contents::
-	:local:
+  :local:
 
 member_id=
 ----------
 
 ::
 
-	member_id="147"
+  member_id="147"
 
 Specifies a particular member's information to display. By default
 (if you do not include the member_id parameter), the tag will simply display
@@ -327,53 +328,53 @@ Variables
 =========
 
 .. contents::
-	:local:
+  :local:
 
 avatar_height
 -------------
 
 ::
 
-	{avatar_height}
+  {avatar_height}
 
 The height of the avatar image associated with the user. Typically used as such::
 
-	{if avatar}
-		<img src="{avatar_url}" width="{avatar_width}" height="{avatar_height}" alt="{screen_name}'s avatar">
-	{/if}
+  {if avatar}
+    <img src="{avatar_url}" width="{avatar_width}" height="{avatar_height}" alt="{screen_name}'s avatar">
+  {/if}
 
 avatar_width
 ------------
 
 ::
 
-	{avatar_width}
+  {avatar_width}
 
 The width of the avatar image associated with the user. Typically used as such::
 
-	{if avatar}
-		<img src="{avatar_url}" width="{avatar_width}" height="{avatar_height}" alt="{screen_name}'s avatar">
-	{/if}
+  {if avatar}
+    <img src="{avatar_url}" width="{avatar_width}" height="{avatar_height}" alt="{screen_name}'s avatar">
+  {/if}
 
 avatar_url
 ----------
 
 ::
 
-	{avatar_url}
+  {avatar_url}
 
 The URL to the avatar image associated with the user. Typically used as such::
 
-	{if avatar}
-		<img src="{avatar_url}" width="{avatar_width}" height="{avatar_height}" alt="{screen_name}'s avatar">
-	{/if}
+  {if avatar}
+    <img src="{avatar_url}" width="{avatar_width}" height="{avatar_height}" alt="{screen_name}'s avatar">
+  {/if}
 
 bio
 ---
 
 ::
 
-	{bio}
+  {bio}
 
 The user's biography.
 
@@ -382,7 +383,7 @@ birthday
 
 ::
 
-	{birthday}
+  {birthday}
 
 The user's birthday.
 
@@ -391,7 +392,7 @@ email
 
 ::
 
-	{email}
+  {email}
 
 The user's Javascript-encoded email address.
 
@@ -400,7 +401,7 @@ group_id
 
 ::
 
-	{group_id}
+  {group_id}
 
 The user's Group ID.
 
@@ -409,7 +410,7 @@ join_date
 
 ::
 
-	{join_date format="%Y %m %d"}
+  {join_date format="%Y %m %d"}
 
 The date the user joined the site.
 
@@ -418,7 +419,7 @@ language
 
 ::
 
-	{language}
+  {language}
 
 The user's language.
 
@@ -427,7 +428,7 @@ location
 
 ::
 
-	{location}
+  {location}
 
 The location (as entered in their profile) of the user.
 
@@ -437,7 +438,7 @@ last_activity
 ::
 
 
-	{last_activity format="%Y %m %d"}
+  {last_activity format="%Y %m %d"}
 
 The time of the user's last page load.
 
@@ -446,7 +447,7 @@ last_comment_date
 
 ::
 
-	{last_comment_date format="%Y %m %d"}
+  {last_comment_date format="%Y %m %d"}
 
 The date of the user's last comment.
 
@@ -455,7 +456,7 @@ last_entry_date
 
 ::
 
-	{last_entry_date format="%Y %m %d"}
+  {last_entry_date format="%Y %m %d"}
 
 The date of the user's last channel entry.
 
@@ -464,7 +465,7 @@ last_forum_post_date
 
 ::
 
-	{last_forum_post_date format="%Y %m %d"}
+  {last_forum_post_date format="%Y %m %d"}
 
 The date of the user's last forum post.
 
@@ -473,7 +474,7 @@ last_visit
 
 ::
 
-	{last_visit format="%Y %m %d"}
+  {last_visit format="%Y %m %d"}
 
 The date when the user was last active on the site PRIOR to their current session.
 
@@ -482,7 +483,7 @@ local_time
 
 ::
 
-	{local_time format="%Y %m %d"}
+  {local_time format="%Y %m %d"}
 
 The user's local time.
 
@@ -491,7 +492,7 @@ member_group
 
 ::
 
-	{member_group}
+  {member_group}
 
 The user's member group.
 
@@ -500,7 +501,7 @@ member_id
 
 ::
 
-	{member_id}
+  {member_id}
 
 The user's Member ID.
 
@@ -509,39 +510,39 @@ photo_height
 
 ::
 
-	{photo_height}
+  {photo_height}
 
 The height of the photo image associated with the user. Typically used as such::
 
-	{if photo}
-		<img src="{photo_url}" width="{photo_width}" height="{photo_height}" alt="{screen_name}'s photo">
-	{/if}
+  {if photo}
+    <img src="{photo_url}" width="{photo_width}" height="{photo_height}" alt="{screen_name}'s photo">
+  {/if}
 
 photo_width
 -----------
 
 ::
 
-	{photo_width}
+  {photo_width}
 
 The width of the photo image associated with the user. Typically used as such::
 
-	{if photo}
-		<img src="{photo_url}" width="{photo_width}" height="{photo_height}" alt="{screen_name}'s photo">
-	{/if}
+  {if photo}
+    <img src="{photo_url}" width="{photo_width}" height="{photo_height}" alt="{screen_name}'s photo">
+  {/if}
 
 photo_url
 ---------
 
 ::
 
-	{photo_url}
+  {photo_url}
 
 The URL to the photo image associated with the user. Typically used as such::
 
-	{if photo}
-		<img src="{photo_url}" width="{photo_width}" height="{photo_height}" alt="{screen_name}'s photo">
-	{/if}
+  {if photo}
+    <img src="{photo_url}" width="{photo_width}" height="{photo_height}" alt="{screen_name}'s photo">
+  {/if}
 
 
 screen_name
@@ -549,7 +550,7 @@ screen_name
 
 ::
 
-	{screen_name}
+  {screen_name}
 
 The user's screen name.
 
@@ -558,29 +559,29 @@ search_path
 
 ::
 
-	{search_path}
+  {search_path}
 
 The search path to show entries and posts by this user::
 
-	<a href="{search_path}">View Entries by User</a>
+  <a href="{search_path}">View Entries by User</a>
 
 send_private_message
 --------------------
 
 ::
 
-	{send_private_message}
+  {send_private_message}
 
 The URL to send a Private Message to this user::
 
-	<a href="{send_private_message}">Send Private Message to {screen_name}.</a>
+  <a href="{send_private_message}">Send Private Message to {screen_name}.</a>
 
 signature
 ---------
 
 ::
 
-	{signature}
+  {signature}
 
 The user's signature.
 
@@ -589,7 +590,7 @@ timezone
 
 ::
 
-	{timezone}
+  {timezone}
 
 The user's timezone.
 
@@ -598,7 +599,7 @@ total_comments
 
 ::
 
-	{total_comments}
+  {total_comments}
 
 The total number of comments made by the user.
 
@@ -607,7 +608,7 @@ total_entries
 
 ::
 
-	{total_entries}
+  {total_entries}
 
 The total number of entries made by the user.
 
@@ -616,7 +617,7 @@ total_forum_posts
 
 ::
 
-	{total_forum_posts}
+  {total_forum_posts}
 
 The total number of forum posts made by the user.
 
@@ -625,7 +626,7 @@ total_forum_topics
 
 ::
 
-	{total_forum_topics}
+  {total_forum_topics}
 
 The total number of forum topics made by the user.
 
@@ -634,7 +635,7 @@ url
 
 ::
 
-	{url}
+  {url}
 
 The user's URL.
 
@@ -643,7 +644,7 @@ username
 
 ::
 
-	{username}
+  {username}
 
 The user's username.
 
@@ -652,10 +653,10 @@ Other Member Fields
 
 All other member fields that you created can be accessed using the Short Name of the field::
 
-	{age}
-	{gender}
-	{zodiac}
-	etc..
+  {age}
+  {gender}
+  {zodiac}
+  etc..
 
 
 ***************
@@ -675,9 +676,9 @@ ignore list of currently logged-in user or from a specified user.
 
 Here is the basic tag syntax::
 
-	{exp:member:ignore_list}
-		<p>{ignore_screen_name}</p>
-	{/exp:member:ignore_list}
+  {exp:member:ignore_list}
+    <p>{ignore_screen_name}</p>
+  {/exp:member:ignore_list}
 
 Parameters
 ==========
@@ -690,7 +691,7 @@ member\_id=
 
 ::
 
-	member_id="147"
+  member_id="147"
 
 You can specify a particular member's information to display. By default
 (if you do not include the member\_id parameter), the tag will simply
