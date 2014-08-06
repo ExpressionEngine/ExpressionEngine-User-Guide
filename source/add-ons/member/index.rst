@@ -52,6 +52,16 @@ folder, then edit your copy so you can leave the **default** files
 intact. Set your new copy as the site default under :menuselection:`Members
 --> Preferences --> Default Member Profile Theme`
 
+.. note:: When building your member profile templates, consider that any
+  external links will pass along referrer data. This can cause security
+  problems if someone clicks on an external link from a secure page. For
+  example, the password reset page as the external site *could* use the
+  password reset link from the referrer data to gain access to a user's
+  account.
+
+  You can strip everything but the base URL by linking to
+  ``{site_url}?URL=<your url>``.
+
 **************
 Login Form Tag
 **************
