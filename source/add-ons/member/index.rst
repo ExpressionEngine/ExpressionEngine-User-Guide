@@ -55,12 +55,12 @@ intact. Set your new copy as the site default under :menuselection:`Members
 .. note:: When building your member profile templates, consider that any
   external links will pass along referrer data. This can cause security
   problems if someone clicks on an external link from a secure page. For
-  example, the password reset page as the external site *could* use the
-  password reset link from the referrer data to gain access to a user's
-  account.
+  example, if a user clicks an external link from the password reset
+  page, the external site *could* use the password reset link from the
+  referrer data to gain access to a user's account.
 
   You can strip everything but the base URL by linking to
-  ``{site_url}?URL=<your url>``.
+  ``{path=""}?URL=<your url>``.
 
 **************
 Login Form Tag
