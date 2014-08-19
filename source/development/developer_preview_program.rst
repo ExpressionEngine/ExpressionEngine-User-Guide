@@ -163,6 +163,7 @@ and encourage them to join!
 - Pierre-Vincent Ledoux
 - Rein de Vries
 - Rob Sanchez
+- Robin Bailey
 - Robin Hodges
 - Robson Sobral
 - Robin Willmot (Coffee Bean Design)
