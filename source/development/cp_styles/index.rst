@@ -89,9 +89,49 @@ As a security precaution, the default theme's PHP files are not actually
 located in ``themes/cp_themes/default`` but are instead located within
 the system folder at ``system/expressionengine/views``. If you would
 like to override any of those files in your own theme, copy them to your
-own theme's directory, making sure that the copied files maintain the
-same directory structure in your theme as they do in the ``views``
-directory.
+own theme's directory in a ``views`` folder, making sure that the copied
+files maintain the same directory structure in your theme as they do in
+the ``views`` directory. E.g.:
+
+- themes/cp_themes/
+
+  - my_theme
+
+    - css/
+    - images/
+    - views/
+
+      - .htaccess
+      - _shared/
+
+        - overview.php
+        - sidebar.php
+
+      - errors
+
+        - error_general.php
+
+Notice the addition of a ``.htaccess`` file. Since the files in the themes
+folder are publicly accessible, for security you want to disallow direct
+access to your PHP view files. For Apache v2.2, the contents of this
+.htaccess file should be:
+
+.. code-block:: apache
+
+  Order deny, allow
+  Deny from all
+
+And for Apache 2.4:
+
+.. code-block:: apache
+
+  Require all denied
+
+This will prevent direct access to your PHP files from a web browser such as
+``http://example.com/themes/cp_themes/my_theme/views/errors/error_general.php``,
+but will not affect ExpressionEngine's ability to read the files as neeeded,
+nor of the web browser being able to access the theme's CSS, images,
+JavaScript, etc.
 
 Overriding Control Panel Style
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
