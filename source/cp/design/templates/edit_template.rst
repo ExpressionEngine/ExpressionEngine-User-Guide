@@ -50,6 +50,8 @@ follow the standard URL naming rules.
 .. note:: The "index" template can not be renamed. Each template group
    must have an index template.
 
+.. _template-type:
+
 Type
 ~~~~
 
