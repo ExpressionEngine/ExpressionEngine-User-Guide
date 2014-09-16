@@ -1659,8 +1659,9 @@ Value      Behavior
 
 Example Usage::
 
-$config['email_crlf'] = '\r\n';
+$config['email_crlf'] = "\r\n";
 
+.. note:: Double quotes must be used around this value, as per example.
 
 email_debug
 -----------
@@ -1727,8 +1728,9 @@ Value      Behavior
 
 Example Usage::
 
-$config['email_newline'] = '\r\n';
+$config['email_newline'] = "\r\n";
 
+.. note:: Double quotes must be used around this value, as per example.
 
 emoticon_url
 ------------
