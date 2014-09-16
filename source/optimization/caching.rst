@@ -183,3 +183,56 @@ documentation.
 
 .. note:: A Dummy driver is available for selection to disable caching
     entirely.
+
+.. _caching_clearing_caches:
+
+Clearing Caches
+---------------
+
+Caches are cleared automatically when certain actions occur: 
+
+  - Deleting a Category Group (clears all caches)
+  - Ordering categories (clears database cache)
+  - Updating, creating or deleting a Category Custom Field (clears all caches)
+  - Deleting a Field Group (clears all caches)
+  - Updating, creating or deleting a Custom Field (clears all caches)
+  - Deleting a Status Group (clears all caches)
+  - Updating Multi Entries (clears if needed either all or sql cache)
+  - Updating Multi Categories (clears if needed either all or sql cache)
+  - Deleting Watermark Preferences (clears db cache)
+  - Updating or Deleting Upload Preferences (clears db cache)
+  - Updating or creating a Snippet (clears all caches)
+  - Updating or creating a Global Variable (clears all caches)
+  - Updating a Template (clears all caches)
+  - Creating a Template from File (clears db cache)
+  - Updating an Email Notification (clears all caches)
+  - Updating a Theme Template (clears all caches)
+  - Running a Template Sync (clears all caches)
+  - Submission, updating or deleting of an Entry through API (clears if needed either all or sql cache).  See :doc:`Clear all caches when new entries are posted </admin/channels/global_channel_preferences#pagination>`.
+  - Comment Module:
+
+    - Creating, updating or deleting a Comment (clears all caches)
+    - Change Comment Status (clears all caches)
+    - Comment Preview (clears all caches)
+
+  - Metaweblog Module:
+
+    - Publish or Edit Metaweblog Post (clears if needed either all or sql cache)
+    - Set Metaweblog Post Category (clears if needed either all or sql cache)
+
+  - Moblog Module:
+
+    - Checking Moblog (clears if needed either all or sql cache)
+
+  - Simple Commerce Module:
+
+    - Create or Update Simple Commerce item (clears page cache)
+
+  - Wiki Module:
+
+    - Deleting files from Wiki (clears db cache)
+    - Update Wiki Template (clears all caches)
+    - Editing Wiki Article (clears db cache)
+    - Opening or closing a Wiki Revision (clears db cache) 
+
+You may also :doc:`manually clear caches </cp/tools/data/clear_cached_data_files>` through the control panel.
