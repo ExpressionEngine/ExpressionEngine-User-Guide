@@ -139,6 +139,6 @@ Accessories have the ability to process requests for actions like AJAX
 calls. Methods designed for this purpose must have a ``process_``
 prefix. For example, the the following URL could be called ::
 
-  C=addons_accessories&M=process_request&accessory=my_accessory&method=example
+  C=addons_accessories&M=process_request&accessory=my_accessory&method=process_example
 
 This will request the ``process_example`` method in ``my_accessory``.
