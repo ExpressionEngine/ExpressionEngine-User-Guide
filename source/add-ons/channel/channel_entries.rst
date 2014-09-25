@@ -1074,17 +1074,22 @@ status=
 You may restrict to entries with a particular :doc:`status
 </cp/admin/channels/statuses>`. The two statuses "open" and "closed" are
 default statuses that are always available, so you can always specify
-those if needed. You can choose multiple statuses using a pipe::
+those if needed. If no status parameter is specified, only open status entries
+will be returned.  You can choose multiple statuses using a pipe::
 
-	status="draft|reviewed|published"
+	status="draft|reviewed|published|closed"
+
+
 
 Or exclude statuses using "not"
 
 ::
 
-	status="not submitted|processing|closed"
+	status="not submitted|processing"
 
-If no status parameter is specified, only open status entries will be returned.
+Note that closed status entries will not be included in the results when using
+"not" regardless of whether it is in the piped list.
+
 
 stop\_before=
 -------------
