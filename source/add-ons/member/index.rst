@@ -32,7 +32,7 @@ You'll find many member management options available at:
   having access to your Control Panel. Typically, this Member Profile area
   is found at::
 
-  http://example.com/index.php/member/profile/
+    http://example.com/index.php/member/profile/
 
 ************************
 Member Profile Templates

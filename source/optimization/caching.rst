@@ -189,7 +189,7 @@ documentation.
 Clearing Caches
 ---------------
 
-Caches are cleared automatically when certain actions occur: 
+Caches are cleared automatically when certain actions occur:
 
   - Deleting a Category Group (clears all caches)
   - Ordering categories (clears database cache)
@@ -208,7 +208,7 @@ Caches are cleared automatically when certain actions occur:
   - Updating an Email Notification (clears all caches)
   - Updating a Theme Template (clears all caches)
   - Running a Template Sync (clears all caches)
-  - Submission, updating or deleting of an Entry through API (clears if needed either all or sql cache).  See :doc:`Clear all caches when new entries are posted </admin/channels/global_channel_preferences#pagination>`.
+  - Submission, updating or deleting of an Entry through API (clears if needed either all or sql cache).  See :ref:`global-channel-clear-cache-label`.
   - Comment Module:
 
     - Creating, updating or deleting a Comment (clears all caches)
@@ -233,6 +233,6 @@ Caches are cleared automatically when certain actions occur:
     - Deleting files from Wiki (clears db cache)
     - Update Wiki Template (clears all caches)
     - Editing Wiki Article (clears db cache)
-    - Opening or closing a Wiki Revision (clears db cache) 
+    - Opening or closing a Wiki Revision (clears db cache)
 
 You may also :doc:`manually clear caches </cp/tools/data/clear_cached_data_files>` through the control panel.

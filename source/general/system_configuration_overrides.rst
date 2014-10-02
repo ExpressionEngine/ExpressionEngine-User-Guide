@@ -313,7 +313,7 @@ $config['auto_assign_cat_parents'] = 'y';
 
 **Also found in CP:** :menuselection:`Admin --> Channel
 Administration --> Global Channel Preferences`: :ref:`Auto-Assign
-Category Parents <auto-assign-categoryP-label>`
+Category Parents <auto-assign-category-parents-label>`
 
 
 autosave_interval_seconds
