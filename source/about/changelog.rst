@@ -28,6 +28,7 @@ Release Date: October 2, 2014
     panel.
   - Fixed a few stored XSS issues that admins could exploit against one
     another.
+  - Fixed a potential for XSS in data URIs.
   - Improved validation of CSRF token.
   - Improved flood control protection for password reset emails.
   - Improved accuracy of XSS event handler filtering.
