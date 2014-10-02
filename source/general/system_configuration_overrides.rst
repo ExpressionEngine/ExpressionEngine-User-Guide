@@ -3141,22 +3141,26 @@ Administration --> Output and Debugging`: :ref:`New Relic Application
 Name <sysadmin-newrelic_app_name>`
 
 
+.. _overrides-newrelic-include-version-number:
+
 newrelic_include_version_number
 -------------------------------
 
 Whether or not to append the version number to the Application name
 in the New Relic dashboard.
 
+.. versionadded:: 2.9.1
+
 ======= ========
 Value   Behavior
 ======= ========
-``y``   Append version number **(default)**
-``n``   Do not append version number
+``y``   Append version number
+``n``   Do not append version number **(default)**
 ======= ========
 
 Example Usage::
 
-$config['newrelic_include_version_number'] = 'n';
+$config['newrelic_include_version_number'] = 'y';
 
 
 .. _password_lockout:
