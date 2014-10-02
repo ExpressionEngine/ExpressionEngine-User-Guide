@@ -69,6 +69,8 @@ Control Panel Constants
 - ``PATH_JQUERY`` - Server path to jQuery files at
   ``system/expressionengine/javascript/compressed/jquery``
 
+.. _customizing_the_control_panel_theme:
+
 Customizing the Control Panel Theme
 -----------------------------------
 
