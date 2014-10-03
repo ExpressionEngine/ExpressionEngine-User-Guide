@@ -8,7 +8,7 @@ ExpressionEngine 2.x Change Log
 Version 2.9.1
 -------------
 
-Release Date: October 2, 2014
+Release Date: October 3, 2014
 
 - Important:
 

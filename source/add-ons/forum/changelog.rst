@@ -4,7 +4,7 @@ ExpressionEngine Forum Module Change Log
 Version 3.1.17
 --------------
 
-Release Date: October 2, 2014
+Release Date: October 3, 2014
 
 - Fixed a bad link in the control panel breadcrumbs that occurred on
   template edit pages (#20341).
