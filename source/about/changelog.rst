@@ -5,6 +5,22 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.9.2
+-------------
+
+Release Date: October 4, 2014
+
+
+- General Changes:
+
+  - Several fields in the control panel now automatically trim the
+    white space from their contents (URLs, site index, group names).
+
+- Bug Fixes:
+
+  - Fixed a bug (#20594) where you could not create a new channel.
+
+
 Version 2.9.1
 -------------
 
