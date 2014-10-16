@@ -34,6 +34,9 @@ You'll find many member management options available at:
 
     http://example.com/index.php/member/profile/
 
+.. note:: A member account's Username and Screen Name can be identical,
+  but must be unique system-wide.
+
 ************************
 Member Profile Templates
 ************************
