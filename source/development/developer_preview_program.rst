@@ -86,6 +86,7 @@ and encourage them to join!
 - Brad Parscale (DevDemon)
 - Brandon Kelly
 - Brian Litzinger
+- Bryan Burgers
 - Carl Crawley
 - Chris Barrett
 - Chris Newton
@@ -131,6 +132,7 @@ and encourage them to join!
 - Justin Kimbrell
 - Keith Mancuso (Familiar)
 - Kelly Sims
+- Kelsey Martens
 - Kevin Smith
 - Kurt Deutscher
 - Laisvunas Sopauskas
