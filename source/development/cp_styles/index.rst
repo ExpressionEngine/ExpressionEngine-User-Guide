@@ -120,7 +120,7 @@ access to your PHP view files. For Apache v2.2, the contents of this
 
 .. code-block:: apache
 
-  Order deny, allow
+  Order deny,allow
   Deny from all
 
 And for Apache 2.4:
