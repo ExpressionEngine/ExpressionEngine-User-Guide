@@ -63,6 +63,16 @@ Using ExpressionEngine Classes
 
   usage/*
 
+*************************
+ExpressionEngine Services
+*************************
+
+.. toctree::
+  :maxdepth: 1
+  :glob:
+
+  services/*
+
 ********************************
 ExpressionEngine Data Structures
 ********************************
