@@ -4,28 +4,33 @@ System Requirements
 Server Requirements
 -------------------
 
--  `PHP <http://www.php.net/>`_ 5.3.10 or newer, compiled with the
-   `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_ library
--  `MySQL <http://www.mysql.com/>`_ 5.0.3 or newer
--  At least 32 MB memory allocated to PHP
--  At least 10 MB of available disk space for the ExpressionEngine
-   software and modules
--  At least 2 MB of database space
+- `PHP <http://www.php.net/>`_ 5.3.10 or newer, compiled with the
+  `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_ library
 
-   .. note:: Disk space usage and the database size will increase as
-      content is added.
+  .. note:: PHP 5.3.10 can also be read as five-point-three-point-*ten*.
+    That means 5.3.10 is **greater than** 5.3.1, 5.3.2, 5.3.3, and all
+    the way up to 5.3.9.
 
--  The MySQL user connecting to the database must have the following
-   privileges:
+- `MySQL <http://www.mysql.com/>`_ 5.0.3 or newer
+- At least 32 MB memory allocated to PHP
+- At least 10 MB of available disk space for the ExpressionEngine
+  software and modules
+- At least 2 MB of database space
 
-  -  ``SELECT``
-  -  ``INSERT``
-  -  ``UPDATE``
-  -  ``DELETE``
-  -  ``CREATE``
-  -  ``INDEX``
-  -  ``ALTER``
-  -  ``DROP``
+  .. note:: Disk space usage and the database size will increase as
+     content is added.
+
+- The MySQL user connecting to the database must have the following
+  privileges:
+
+  - ``SELECT``
+  - ``INSERT``
+  - ``UPDATE``
+  - ``DELETE``
+  - ``CREATE``
+  - ``INDEX``
+  - ``ALTER``
+  - ``DROP``
 
   .. _server-wizard:
 
