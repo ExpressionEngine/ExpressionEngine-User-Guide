@@ -64,7 +64,7 @@ Control Panel Constants
   directory
 - ``PATH_PI`` - Server path to the ``system/expressionengine/plugins``
   directory
-- ``PATH_THIRD`` - Server path to the
+- ``PATH_ADDONS`` - Server path to the
   ``system/expressionengine/third_party`` directory
 - ``PATH_JQUERY`` - Server path to jQuery files at
   ``system/expressionengine/javascript/compressed/jquery``

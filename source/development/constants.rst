@@ -9,7 +9,7 @@ of the ExpressionEngine installer.
 Path Constants
 --------------
 
-- ``PATH_THIRD`` - Path to the ``system/expressionengine/third_party``
+- ``PATH_ADDONS`` - Path to the ``system/expressionengine/third_party``
   folder.
 - ``PATH_THEMES`` - Path to the ``/themes`` folder.
 - ``APPPATH`` - Path to the ``/expressionengine`` folder.
@@ -19,7 +19,7 @@ Path Constants
 - ``PATH_EXT`` - Path to the first party extensions folder.
 - ``PATH_ACC`` - Path to the first party accessories folder.
 - ``PATH_FT`` - Path to the first party fieldtypes folder.
-- ``PATH_THIRD_THEMES`` - Path to the third party themes folder.
+- ``PATH_ADDONS_THEMES`` - Path to the third party themes folder.
 - ``PATH_MBR_THEMES`` - Path to the member themes folder.
 - ``PATH_CP_GBL_IMG`` - Path to the global image folder.
 - ``PATH_JAVASCRIPT`` - Path to the javascript folder.
