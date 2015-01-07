@@ -933,6 +933,36 @@ current entry's author has an avatar image specified. ::
 
 	{if avatar} <img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar" /> {/if}
 
+
+if comments_expired
+-------------------
+
+::
+
+	{if comments_expired}
+
+If commenting has expired (and expiration is not set to be
+:doc:`overridden by moderation </add-ons/comment/control_panel/index>`),
+the contents of this conditional will be displayed.
+
+.. note:: ``{if no_results}`` has precedence over this conditional. If there are
+  no comments, this conditional is not evaluated.
+
+
+if comments_disabled
+--------------------
+
+::
+
+	{if comments_disabled}
+
+If commenting has been disabled, the contents of this conditional will
+be displayed.
+
+.. note:: ``{if no_results}`` has precedence over this conditional. If there are
+  no comments, this conditional is not evaluated.
+
+
 if is\_ignored
 --------------
 
@@ -1414,7 +1444,7 @@ of the conditional ({if captcha}) tag will only appear if you have the
 CAPTCHA preference turned on for comments in the channel the entry is
 associated with.
 
-comments\_expired
+comments_expired
 -----------------
 
 ::
@@ -1425,7 +1455,7 @@ If commenting has expired (and expiration is not set to be
 :doc:`overridden by moderation </add-ons/comment/control_panel/index>`),
 the contents of this conditional will replace all other tag contents.
 
-comments\_disabled
+comments_disabled
 ------------------
 
 ::
