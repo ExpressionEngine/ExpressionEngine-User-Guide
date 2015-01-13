@@ -28,7 +28,6 @@ For member screen names, member usernames, and member email addresses
 the Form Validation class needs a reference value. This value will be
 ignored when checking for duplicates.
 
-<<<<<<< HEAD
 .. method:: set_old_value($key[, $value = ''])
 
   Is used to set a reference value for a given key::
