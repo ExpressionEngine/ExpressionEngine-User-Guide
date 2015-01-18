@@ -9,13 +9,13 @@ Model Service
 Simple Example
 --------------
 
-ExpressionEngine has a complex set of data types, such as Channels and
-Categories. These are sometimes even stored on multiple tables with
-conditions and constraints on their use. The model service helps smooth
-out interacting with ExpressionEngine's data types by providing an API
-that mimics the human description as closely as is feasible. You do not
-query for ``channel_data`` joined on ``channel_titles``; instead, you
-simply get a channel entry::
+ExpressionEngine has a complex set of data types, such as Channels,
+Members, and Categories. These have properties and constraints, as well
+as relationships and complex storage requirements. The model service
+helps smooth out interacting with ExpressionEngine's data types by
+providing an API that mimics their natural language description as
+closely as is feasible. You do not query for ``channel_data`` joined on
+``channel_titles``; instead, you simply get a channel entry::
 
   $my_first_entry = ee('Model')->get('ChannelEntry')->filter('title', 'Hello World')->first();
 
@@ -25,7 +25,7 @@ simply get a channel entry::
 Creating Your Own Models
 ------------------------
 
-A model class has four requirements. It must...
+A model class has four requirements. It must ...
 
 - ... extend ``EllisLab\ExpressionEngine\Service\Model\Model``
 - ... define a primary key
@@ -78,7 +78,7 @@ be passed to the event handler::
 
 Inside your model you can automatically bind to events. To do so, first
 create a public method with the format ``on<EventName>``, and then listen
-to the event by adding an `_events` metadata array that lists the event::
+to the event by adding a static ``$_events`` array that lists the event::
 
   protected static $_events = array('beforeSave');
 
@@ -89,6 +89,12 @@ to the event by adding an `_events` metadata array that lists the event::
 
 .. note:: Event names typically start with a lowercase letter, but the
   method name will have them as uppercase due to the ``on`` prefix.
+
+
+Relationships
+-------------
+
+
 
 
 Validation
@@ -104,19 +110,54 @@ Service <./validation>`. They should be added as a static property called
   );
 
 
+Getters and Setters
+-------------------
+
+By default setting and getting of properties behaves the way it does for
+any object. However, you can create your own modifying getters and
+setters by creating methods in the format of ``get__<property>`` or
+``set__<property>``::
+
+  protected $first_name;
+  protected $last_name;
+
+  protected function get__name()
+  {
+    return $this->first_name.' '.$this->last_name;
+  }
+
+  protected function set__name($value)
+  {
+    list($first, $last) = explode(' ', $value);
+
+    $this->first_name = $first;
+    $this->last_name = $last;
+  }
+
+  $my_model->name = 'Bob Bobson';
+  $my_model->first_name; // Bob
+
+.. note:: These methods break the camelCase naming convention in order
+  to match the snake_case database column names. It also serves as a
+  clear indicator that these methods should not be called directly.
+
 Typed Columns
 -------------
 
 Model properties can have some basic type constraints set on them. These
-constraints allow for simple get/set typecasting for common values. These
-are defined in `_typed_columns`::
+constraints allow for simple get/set typecasting of common values. They
+are defined in a static property called ``$_typed_columns``::
 
   protected static $_typed_columns = array(
-    'id' => 'int'
+    'id' => 'int',
+    'created_at' => 'timestamp'
   );
 
   $my_model->id = '5'; // set to int 5
   $my_model->id; // always returns an integer
+
+  $my_model->created_at; // returns a DateTime object
+  $my_model->created_at = new DateTime('2015-03-22'); // sets a timestamp
 
 The available options include:
 
@@ -138,34 +179,75 @@ The available options include:
 | timestamp  | Cast to timestamp | Cast to DateTime |
 +------------+-------------------+------------------+
 
-
-Getters and Setters
--------------------
-
-You can create your own modifying getters and setters by creating
-methods in the format of ``get__<property>`` or ``set__<property>``::
-
-  protected $first_name;
-  protected $last_name;
-
-  protected function get__name()
-  {
-    return $this->first_name.' '.$this->last_name;
-  }
-
-  protected function set__name($value)
-  {
-    list($first, $last) = explode(' ', $value);
-
-    $this->first_name = $first;
-    $this->last_name = $last;
-  }
-
-  $my_model->name = 'Bob Bobson';
-  $my_model->first_name; // Bob
-
 Composite Columns
 -----------------
+
+Sometimes a database column may contain serialized data. Instead of
+treating this data merely as a string or array (using getters and setters),
+you can automatically turn it into sub-objects by defining a composite
+column.
+
+First, add a static ``$_composite_columns`` array to your model where the
+key is the name of the column and the value is the name of the composite
+class you wish to use.
+
+::
+
+  protected static $_composite_columns = array(
+    'coordinates' => 'Coordinates'
+  );
+
+Next, create a class that describes the composite column. Place it under
+``<your\model\namespace>\Column\``::
+
+  use EllisLab\ExpressionEngine\Service\Model\Column\Composite;
+
+  class Coordinates extends Composite {
+
+    protected $latitude;
+    protected $longitude;
+
+  }
+
+Lastly, define two methods - ``serialize`` and ``unserialize`` on your
+composite column to describe how it should be saved and loaded::
+
+  protected function serialize($data)
+  {
+    return json_encode($data);
+  }
+
+  protected function unserialize($data)
+  {
+    return json_decode($data);
+  }
+
+Now you can access your composite column by calling
+``get<CompositeName>`` and modify it as you see fit. Saving the parent
+model will automatically synchronize any changes to the column::
+
+  $coordinates = $my_model->getCoordinates();
+
+  $coordinates->latitude = 42.3550496;
+  $coordinates->longitude = -71.0656267;
+
+  $my_model->save();
+
+If you don't wish to implement your own, a few common serializations are
+included under ``EllisLab\ExpressionEngine\Service\Model\Column\``:
+
++----------------------------------+---------------------------------+
+| Class                            | Serialization                   |
++==================================+=================================+
+| Composite (parent class)         | None, must implement your own   |
++----------------------------------+---------------------------------+
+| JsonComposite                    | json_encode($data)              |
++----------------------------------+---------------------------------+
+| SerializedComposite              | serialize($data)                |
++----------------------------------+---------------------------------+
+| Base64EncodedSerializedComposite | base64_encode(serialize($data)) |
++----------------------------------+---------------------------------+
+
 
 Multiple Tables
 ---------------
