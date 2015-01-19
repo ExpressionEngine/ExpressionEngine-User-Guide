@@ -61,12 +61,12 @@ To listen to an event on a model, use the ``on`` method::
     echo 'boom event happened on '.$model->getName();
   });
 
-To initiate an event, use the ``trigger`` method::
+To initiate an event, use the ``emit`` method::
 
-  $my_model->trigger('boom');
+  $my_model->emit('boom');
 
 The first parameter passed to the event handler will always be the
-model instance. Any additional parameters passed to trigger will also
+model instance. Any additional parameters passed to emit will also
 be passed to the event handler::
 
   $my_model->on('boom', function($model, $year)
@@ -74,7 +74,7 @@ be passed to the event handler::
     echo 'boom event happened on '.$model->getName().' in '.$year;
   });
 
-  $my_model->trigger('boom', 2015);
+  $my_model->emit('boom', 2015);
 
 Inside your model you can automatically bind to events. To do so, first
 create a public method with the format ``on<EventName>``, and then listen
@@ -138,13 +138,13 @@ setters by creating methods in the format of ``get__<property>`` or
   $my_model->first_name; // Bob
 
 .. note:: These methods break the camelCase naming convention in order
-  to match the snake_case database column names. It also serves as a
-  clear indicator that these methods should not be called directly.
+  to match the snake_case property names. It also serves as a clear
+  indicator that these methods should not be called directly.
 
 Typed Columns
 -------------
 
-Model properties can have some basic type constraints set on them. These
+Model properties can have basic type constraints set on them. These
 constraints allow for simple get/set typecasting of common values. They
 are defined in a static property called ``$_typed_columns``::
 
@@ -157,7 +157,8 @@ are defined in a static property called ``$_typed_columns``::
   $my_model->id; // always returns an integer
 
   $my_model->created_at; // returns a DateTime object
-  $my_model->created_at = new DateTime('2015-03-22'); // sets a timestamp
+  $my_model->created_at = new DateTime('2015-01-30'); // sets an int timestamp
+  $my_model->created_at = 1421558529; // also ok
 
 The available options include:
 
