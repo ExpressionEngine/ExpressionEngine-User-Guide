@@ -149,12 +149,12 @@ constraints allow for simple get/set typecasting of common values. They
 are defined in a static property called ``$_typed_columns``::
 
   protected static $_typed_columns = array(
-    'id' => 'int',
+    'model_id' => 'int',
     'created_at' => 'timestamp'
   );
 
-  $my_model->id = '5'; // set to int 5
-  $my_model->id; // always returns an integer
+  $my_model->model_id = '5'; // set to int 5
+  $my_model->model_id; // always returns an integer
 
   $my_model->created_at; // returns a DateTime object
   $my_model->created_at = new DateTime('2015-01-30'); // sets an int timestamp
@@ -235,7 +235,8 @@ model will automatically synchronize any changes to the column::
   $my_model->save();
 
 If you don't wish to implement your own, a few common serializations are
-included under ``EllisLab\ExpressionEngine\Service\Model\Column\``:
+included in the ``EllisLab\ExpressionEngine\Service\Model\Column\``
+namespace:
 
 +----------------------------------+---------------------------------+
 | Class                            | Serialization                   |
