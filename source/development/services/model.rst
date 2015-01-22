@@ -3,6 +3,7 @@ Model Service
 
 .. contents::
   :local:
+  :depth: 1
 
 .. highlight:: php
 
@@ -90,6 +91,33 @@ to the event by adding a static ``$_events`` array that lists the event::
 .. note:: Event names typically start with a lowercase letter, but the
   method name will have them as uppercase due to the ``on`` prefix.
 
+Default Events
+~~~~~~~~~~~~~~
+
+
++----------------+--------------------------------------+
+| Event Name     | When                                 |
++================+======================================+
+| beforeCreate   | Before saving a new model            |
++----------------+--------------------------------------+
+| afterCreate    | After saving a new model             |
++----------------+--------------------------------------+
+| beforeUpdate   | Before saving an existing model      |
++----------------+--------------------------------------+
+| afterUpdate    | After saving an existing model       |
++----------------+--------------------------------------+
+| beforeSave     | Before saving a model                |
++----------------+--------------------------------------+
+| afterSave      | After saving a model                 |
++----------------+--------------------------------------+
+| beforeValidate | Before validating                    |
++----------------+--------------------------------------+
+| afterValidate  | After validating                     |
++----------------+--------------------------------------+
+| beforeDelete   | Before deleting                      |
++----------------+--------------------------------------+
+| afterDelete    | After deleteing                      |
++----------------+--------------------------------------+
 
 Relationships
 -------------
