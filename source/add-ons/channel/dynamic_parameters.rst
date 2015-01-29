@@ -17,18 +17,17 @@ given channel tag, like this
 
 ::
 
-  {exp:channel:entries  dynamic_parameters="orderby|limit|sort"}
+  {exp:channel:entries  dynamic_parameters="orderby|limit|category"}
 
-In the above example you would be allowing the orderby, limit, and sort
+In the above example you would be allowing the orderby, limit, and category
 parameters. Note that the allowed parameters are being separated with a
-"pipe" character: \|
+"pipe" character: |.
 
 Once you've enabled the parameters as indicated above, you can create a
 form on one of your pages to generate the parameters dynamically. Here's
 an example of such a form:
 
-Note that each form field is named exactly the same as the parameter
-name, and the form "action" must point to the template in which it is
+Note that each form field is named the same as the parameter name, and the form "action" must point to the template in which it is
 being used.
 
 ::
@@ -39,25 +38,40 @@ being used.
       <select name="orderby">
           <option value="date">Sort By:</option>
           <option value="date">Date</option>
-          <option value="title">Title</option> <option value="comment_total">Most Comments</option>
+          <option value="title">Title</option> 
+          <option value="comment_total">Most Comments</option>
       </select>
       <select name="sort">
           <option value="asc">Order In:</option>
           <option value="asc">Ascending</option>
           <option value="desc">Descending</option>
       </select>
-      <select name="limit">
-          <option value="10">Result Limit:</option>
-          <option value="10">10</option>
-          <option value="20">20</option>
-          <option value="30">30</option>
+      <select name="category[]">
+          <option value="">Result Limit:</option>
+          <option value="1">Dogs</option>
+          <option value="3">Cats</option>
+          <option value="5">Gerbils</option>
       </select>
 
       <input type="submit" value="Go!">
   </form>
 
+Note the inclusion of the ``[]`` at the end of the field name.  This allows more than one option to be specified for the category field:
+::
+      <select name="category[]">
+
+By default, if multiple values are submitted for a single field name, they will be treated as pipe delimited values by the tag.  In the above example, if both "Dogs" and "Cats" are selected, then entries in either the Dogs category or the Cats category would be returned.
+
+To designate multiple values be treated as an inclusive stack, add a ``[&]`` to the field name in the parameter:
+::
+
+  dynamic_parameters="orderby|limit|category[&]"
+
+In this example, if both "Dogs" and "Cats" are selected, only entries in both the Dogs and the Cats categories would be returned.
+
+
 .. note:: The ``csrf_token`` field is required to protect against
   cross-site request forgery attacks.
 
 .. note:: If you have pagination links on your page they will not retain
-    the page layout options created dynamically using this feature.
+    the dynamically generated values using this feature.
