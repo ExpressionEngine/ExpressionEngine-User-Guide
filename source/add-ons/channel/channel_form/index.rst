@@ -41,7 +41,8 @@ provide it to the ExpressionEngine community.
   * The *File* fieldtype is now compatible with *Channel Form*.
   * *Stand-Alone Entry Form* has been removed.
   * *SafeCracker File* has been removed.
-
+  * The stylesheet path has changed from ``{path=css/_ee_saef_css}`` to  
+    ``{path=css/_ee_channel_form_css}``.
 
 ******************
 Using Channel Form
