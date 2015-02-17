@@ -106,6 +106,7 @@ Release Date: unreleased
   - Fixed a PHP notice error (Undefined variable: ``tgpref``) in the Template Manager
 
 - Developers:
+
   - ``Member_field_model::save_field()`` now returns the modified $data
     associative array.
 
