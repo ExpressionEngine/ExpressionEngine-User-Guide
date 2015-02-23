@@ -104,6 +104,8 @@ Release Date: unreleased
   - Fixed a bug where you would be incorrectly redirected when attempting
     to modify someone else's signature as an admin.
   - Fixed a PHP notice error (Undefined variable: ``tgpref``) in the Template Manager
+  - Fixed a bug where preg_callback was using a deprecated modifier when
+    censoring words.
 
 - Developers:
 
