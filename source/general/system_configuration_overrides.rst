@@ -219,6 +219,26 @@ Privacy --> Security and Sessions`: :ref:`Allow multiple log-ins from a
 single account <allow-multi-logins-label>`
 
 
+.. _overrides-allow-pending-login:
+
+allow_pending_login
+-------------------
+
+Set whether members of the Pending member group can log in or not.
+By default, Pending members cannot log in.
+
+======== ===========
+Value    Behavior
+======== ===========
+``y``    Allow Pending member log in
+``n``    Disallow Pending member log in
+======== ===========
+
+Example Usage::
+
+$config['allow_pending_login'] = 'y';
+
+
 allow_signatures
 ----------------
 
