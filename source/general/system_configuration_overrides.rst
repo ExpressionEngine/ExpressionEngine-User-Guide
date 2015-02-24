@@ -231,7 +231,7 @@ By default, Pending members cannot log in.
 Value    Behavior
 ======== ===========
 ``y``    Allow Pending member log in
-``n``    Disallow Pending member log in
+``n``    Do not allow Pending members to log in **(default)**
 ======== ===========
 
 Example Usage::
