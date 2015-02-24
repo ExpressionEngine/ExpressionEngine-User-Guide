@@ -5,6 +5,11 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 3.0.0 PLACEHOLDER
+-------------------------
+
+- added Relationships tag shortcut to fetch just a list of the entry IDs
+
 Version 2.8.2
 -------------
 
