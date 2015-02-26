@@ -699,6 +699,10 @@ custom\_fields
       <textarea id="{field_name}" name="{field_name}" dir="{text_direction}" rows="{rows}">{field_data}</textarea>
     {/if}
 
+    {if rte}
+      <textarea id="{field_name}" name="{field_name}" dir="{text_direction}" rows="{rows}" class="WysiHat-field">{field_data}</textarea>
+    {/if}
+
     {if text}
       <input type="text" dir="{text_direction}" id="{field_name}" name="{field_name}" value="{field_data}" maxlength="{maxlength}" size="50">
     {/if}
