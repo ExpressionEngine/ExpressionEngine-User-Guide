@@ -24,6 +24,8 @@ Release Date: unreleased
     with PHP 5.6.
   - Added a robot meta tag to the intermediate URL redirect page to prevent search
     engine indexing.
+  - Added ``allow_pending_login`` :ref:`config override <overrides-allow-pending-login>`
+    to allow the Pending member group to log in.
 
 - Bug Fixes:
 
