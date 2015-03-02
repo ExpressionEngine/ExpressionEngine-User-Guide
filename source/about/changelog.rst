@@ -111,6 +111,7 @@ Release Date: unreleased
 
   - ``Member_field_model::save_field()`` now returns the modified $data
     associative array.
+  - Table Toggle All checkboxes now fire Javascript `change` events.
 
 
 Version 2.9.2
