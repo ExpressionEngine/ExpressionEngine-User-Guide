@@ -96,6 +96,8 @@ Release Date: unreleased
     was wrong.
   - Fixed a bug (#20755) where the new member notifications email field only
     accepted one email address.
+  - Fixed a bug (#20793) where attempting to clear Template revisions resulted
+    in an 'invalid id' error.
   - Fixed a bug where Moblog might show a PHP error while processing
     attachments.
   - Fixed a bug where the caching driver setting could not be set via the
