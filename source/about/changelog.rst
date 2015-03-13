@@ -110,6 +110,7 @@ Release Date: unreleased
   - Fixed a PHP notice error (Undefined variable: ``tgpref``) in the Template Manager
   - Fixed a bug where preg_callback was using a deprecated modifier when
     censoring words.
+  - Fixed a bug where redundant queries could be called in the {exp:categories} tag.
 
 - Developers:
 
