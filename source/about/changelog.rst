@@ -114,6 +114,9 @@ Release Date: unreleased
 
 - Developers:
 
+  - Added hooks for additional processing after a user resets their password.
+    :func:`member_process_reset_password` for front end, and
+    :func:`cp_member_reset_password` for the control panel.
   - ``Member_field_model::save_field()`` now returns the modified $data
     associative array.
   - Table Toggle All checkboxes now fire Javascript `change` events.
