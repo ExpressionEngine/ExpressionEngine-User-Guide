@@ -113,6 +113,7 @@ Release Date: unreleased
   - Fixed a bug where preg_replace_callback was using a deprecated modifier when
     censoring words.
   - Fixed a bug where redundant queries could be called in the {exp:categories} tag.
+  - Fixed a bug where opcode caches obscured config file updates.
 
 - Developers:
 
