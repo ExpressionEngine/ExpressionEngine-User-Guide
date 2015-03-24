@@ -14,8 +14,10 @@ Release Date: unreleased
 
   - SECURITY: Added ``autocomplete="off"`` to idle logout modal.
   - Added the license number and license owner to the control panel footer.
-  - Improved date field input interpretation for ambiguous control panel date
-    formats (e.g. dd/mm/yy).
+  - Changed all date formats to use four digit years.
+  - Any date matching the pattern ##-##-## is now invalid.
+  - Changed date input interpretation to use the specified date format when
+    parsing dates.
   - Set the default behavior for member deletions to re-assign entries rather
     than delete them.
   - CSRF tokens stored in cookies refresh with page refresh.
