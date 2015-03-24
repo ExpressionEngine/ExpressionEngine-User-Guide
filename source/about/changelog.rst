@@ -82,9 +82,9 @@ Release Date: unreleased
     unload the package paths.
   - Fixed a bug (#20730) where properties in EE_Template were not declared
     before use.
-  - Fixed a bug (#20731) where EE_Config::_update_confg() would not
+  - Fixed a bug (#20731) where ``EE_Config::_update_config()`` would not
     appropriately write array items to the config file.
-  - Fixed a bug (#20732) where EE_Config::_update_config() would not set
+  - Fixed a bug (#20732) where ``EE_Config::_update_config()`` would not set
     a config item if also unsetting it in the same call.
   - Fixed a bug (#20734) where clicking the submit button on the Edit page
     with no entries selected would show "undefined" in the error notice.
@@ -108,7 +108,7 @@ Release Date: unreleased
   - Fixed a bug where you would be incorrectly redirected when attempting
     to modify someone else's signature as an admin.
   - Fixed a PHP notice error (Undefined variable: ``tgpref``) in the Template Manager
-  - Fixed a bug where preg_callback was using a deprecated modifier when
+  - Fixed a bug where preg_replace_callback was using a deprecated modifier when
     censoring words.
   - Fixed a bug where redundant queries could be called in the {exp:categories} tag.
 
