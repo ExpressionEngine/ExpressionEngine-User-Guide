@@ -48,7 +48,7 @@ The "indicator" word that you choose will become a 'reserved' word,
 which means that it **cannot** be used for Template Group or Template
 names.
 
-.. _auto-assign-categoryP-label:
+.. _auto-assign-category-parents-label:
 
 Auto-Assign Category Parents
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

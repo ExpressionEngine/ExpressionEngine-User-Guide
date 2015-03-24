@@ -134,11 +134,29 @@ Parsing the Formatted Data
 
   This method is of more use to ExpressionEngine than anyone else, but
   it's here if you need it. When you have template content that has
-  ``{filedir_n}``s all over the place, you need to parse them, so the
+  ``{filedir_n}``'s all over the place, you need to parse them, so the
   ``{filedir_n}`` tag is replaced with the actual URL::
 
     ee()->file_field->parse_field($data);
 
   :param string $data: the template to parse
   :returns: the template with ``{filedir_n}`` parsed out
+  :rtype: String
+
+*********************************
+Parsing ``{filedir_n}`` Variables
+*********************************
+
+.. method:: parse_string($data[, $parse_encoded = FALSE])
+
+  This method parses all ``{filedir_n}`` variables within a given string
+  (``$data``) and can optionally look for already encoded
+  ``{filedir_n}`` tags (e.g. ``&#123;filedir_n&#125;``)::
+
+    ee()->file_field->parse_string($data);
+
+  :param string $data: The string to parse ``{filedir_n}`` in
+  :param bool $parse_encoded: Set to ``TRUE`` to parse encoded (e.g.
+    ``&#123;``) tags
+  :returns: The original string with all ``{filedir_n}``'s parsed
   :rtype: String

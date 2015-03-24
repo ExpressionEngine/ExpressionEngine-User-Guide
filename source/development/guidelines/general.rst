@@ -367,6 +367,10 @@ is buffered, so whitespace in your files can cause output to begin
 before ExpressionEngine outputs its content, leading to errors and an
 inability for ExpressionEngine to send proper headers.
 
+When aligning multiple lines (e.g. in an associative array), use spaces
+instead of tabs. This is helpful when displaying the code on the web, in
+a GitHub commit for instance.
+
 Compatibility
 -------------
 

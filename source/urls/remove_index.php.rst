@@ -67,8 +67,8 @@ Exceptions
 
     RewriteRule ^(.*)$ index.php/$1 [L]
 
--  If you are running EE from a sub-directory and it still doesn't work after 
-   removing the slash, you may need to specify the sub-directory in your 
+-  If you are running EE from a sub-directory and it still doesn't work after
+   removing the slash, you may need to specify the sub-directory in your
    rewrite rule.  For example, if your sub-folder is named testing, change::
 
     RewriteRule (.*?)index\.php/*(.*) /$1$2 [R=301,NE,L]
@@ -83,7 +83,7 @@ Exceptions
 
    To::
 
-    RewriteRule ^(.*)$ testing/index.php/$1 [L]  
+    RewriteRule ^(.*)$ testing/index.php/$1 [L]
 
 
 -  If your host requires forcing query strings, try adding a question
@@ -91,6 +91,20 @@ Exceptions
    so::
 
 	  RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+- If your host is running PHP-FPM and you get a 503 Internal Server Error
+  in the browser, and this error in your server error logs:
+
+    Request exceeded the limit of 10 internal redirects due to probable configuration error.
+
+  Your host may be running PHP through a Unix socket. To make sure your
+  rewrites do not end up in an infinite loop you should add::
+
+    RewriteCond %{REQUEST_URI} !^/php-fpm/*
+
+  If that does not work, check with your host on what ``Alias`` directive
+  is defined in your Apache config, and replace ``php-fpm`` above with
+  the correct alias.
 
 2. Update General Configuration
 -------------------------------

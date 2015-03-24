@@ -69,6 +69,8 @@ Control Panel Constants
 - ``PATH_JQUERY`` - Server path to jQuery files at
   ``system/expressionengine/javascript/compressed/jquery``
 
+.. _customizing_the_control_panel_theme:
+
 Customizing the Control Panel Theme
 -----------------------------------
 
@@ -89,9 +91,49 @@ As a security precaution, the default theme's PHP files are not actually
 located in ``themes/cp_themes/default`` but are instead located within
 the system folder at ``system/expressionengine/views``. If you would
 like to override any of those files in your own theme, copy them to your
-own theme's directory, making sure that the copied files maintain the
-same directory structure in your theme as they do in the ``views``
-directory.
+own theme's directory in a ``views`` folder, making sure that the copied
+files maintain the same directory structure in your theme as they do in
+the ``views`` directory. E.g.:
+
+- themes/cp_themes/
+
+  - my_theme
+
+    - css/
+    - images/
+    - views/
+
+      - .htaccess
+      - _shared/
+
+        - overview.php
+        - sidebar.php
+
+      - errors
+
+        - error_general.php
+
+Notice the addition of a ``.htaccess`` file. Since the files in the themes
+folder are publicly accessible, for security you want to disallow direct
+access to your PHP view files. For Apache v2.2, the contents of this
+.htaccess file should be:
+
+.. code-block:: apache
+
+  Order deny,allow
+  Deny from all
+
+And for Apache 2.4:
+
+.. code-block:: apache
+
+  Require all denied
+
+This will prevent direct access to your PHP files from a web browser such as
+``http://example.com/themes/cp_themes/my_theme/views/errors/error_general.php``,
+but will not affect ExpressionEngine's ability to read the files as neeeded,
+nor of the web browser being able to access the theme's CSS, images,
+JavaScript, etc.
 
 Overriding Control Panel Style
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -220,149 +262,5 @@ Tab Menu
 
 |image1|
 
-Member Preferences Accordion
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-|image2|
-
-The Member Preferences accordion makes use if the jQuery UI Accordion
-Widget. The basic setup in an add-on controller would be::
-
-  <?php
-  function my_cp_function()
-  {
-      ee()->load->library('table');
-      ee()->load->helper('form');
-
-      ee()->cp->add_js_script('ui', 'accordion');
-      ee()->javascript->output('
-          $("#my_accordion").accordion({autoHeight: false,header: "h3"});
-      ');
-
-      ee()->javascript->compile();
-  }
-
-And in the view file::
-
-  <?=form_open('C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=my_module',
-          array('id'=>'my_accordion'))?>
-
-  <?php
-      ee()->table->set_template($cp_pad_table_template);
-      ee()->table->template['thead_open'] = '<thead class="visualEscapism">';
-  ?>
-
-  <div>
-      <h3 class="accordion"><?=lang('accordion_header_1)?></h3>
-      <div>
-          <?php
-            // Add Markup into the table
-            echo $this->table->generate();
-            // Clear out of the next one
-            $this->table->clear();
-          ?>
-      </div>
-      <h3 class="accordion"><?=lang('accordion_header_2)?></h3>
-      <div>
-          <?php
-            // Add Markup into the table
-            echo $this->table->generate();
-            // Clear out of the next one
-            $this->table->clear();
-          ?>
-      </div>
-  </div>
-
-Forum Preferences Accordion
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Controller Code::
-
-  function forum_prefs($is_new = FALSE)
-  {
-    // Preferences Matrix
-
-    $P = array(
-        'general' => array(
-            'board_label'   => array('t', '150'),
-            'board_name'    => array('t', '50'),
-            'board_forum_url'   => array('t', '150'),
-            'board_site_id'   => array('f', '_forum_site_menu'),
-            'board_forum_trigger' => array('t', '70'),
-            'board_enabled'   => array('r', array('y' => 'yes', 'n' => 'no'))
-        ),
-
-        'php' => array(
-            'board_allow_php' => array('r', array('y' => 'yes', 'n' => 'no')),
-            'board_php_stage' => array('r', array('i' => 'input', 'o' => 'output'))
-        )
-    );
-
-Javascript
-
-.. code-block:: js
-
-  $(".editAccordion > div").hide();
-  $(".editAccordion > h3").css("cursor", "pointer").addClass("collapsed").parent().addClass("collapsed");
-
-  $(".editAccordion").css("borderTop", $(".editAccordion").css("borderBottom"));
-
-  $(".editAccordion h3").click(function() {
-      if ($(this).hasClass("collapsed")) {
-          $(this).siblings().slideDown("fast");
-          $(this).removeClass("collapsed").parent().removeClass("collapsed");
-      }
-      else {
-          $(this).siblings().slideUp("fast");
-          $(this).addClass("collapsed").parent().addClass("collapsed");
-      }
-  });
-
-  $("#toggle_all").toggle(function() {
-      $(".editAccordion h3").removeClass("collapsed").parent().removeClass("collapsed");
-      $(".editAccordion > div").show();
-  }, function() {
-      $(".editAccordion h3").addClass("collapsed").parent().addClass("collapsed");
-      $(".editAccordion > div").hide();
-  });
-
-  $(".editAccordion.open h3").each(function() {
-      $(this).siblings().show();
-      $(this).removeClass("collapsed").parent().removeClass("collapsed");
-  });
-
-View Markup::
-
-  <?php foreach ($P as $title => $menu): ?>
-      <div class="editAccordion <?=($title == 'general') ? 'open' : ''; ?>">
-          <h3><?=lang('forum_prefs_'.$title)?></h3>
-          <div>
-              <table class="templateTable templateEditorTable" border="0" cellspacing="0" cellpadding="0" style="margin: 0;">
-
-                  <?php foreach($menu as $item => $parts): ?>
-                      <tr>
-                          <td style="width: 50%"><?=$parts['label'].$parts['subtext']; ?>
-                          <td><?=$parts['field']?></td>
-                      </tr>
-                  <?php endforeach;?>
-
-              </table>
-          </div>
-      </div>
-
-      <?php if ($title == 'image'): ?>
-          </div>
-
-          <h3><?=lang('forum_board_prefs_default')?></h3>
-          <p><?=lang('forum_board_prefs_default_inst')?></p>
-
-          <div class="shun">
-      <?php endif; ?>
-  <?php endofreach; ?>
-
-|image3|
-
 .. |image0| image:: ../../images/development_right_nav.png
 .. |image1| image:: ../../images/development_tab_menu.png
-.. |image2| image:: ../../images/development_member_acc.png
-.. |image3| image:: ../../images/development_accordion.png

@@ -22,4 +22,4 @@ themes simply by choosing a new one under Default Preferences.
 
 For anyone creating their own theme or modifying one, the original "PSD"
 version of the "ExpressionEngine Forums" graphic `is available for
-download <http://ellislab.com/asset/file/forum_logo_psd.zip>`_.
+download <https://ellislab.com/asset/file/forum_logo_psd.zip>`_.

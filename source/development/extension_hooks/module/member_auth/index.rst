@@ -77,3 +77,21 @@ member_member_logout
   :rtype: Void
 
   .. versionadded:: 1.6.1
+
+member_process_reset_password
+-----------------------------
+
+.. function:: member_process_reset_password()
+
+  Perform additional actions after the user resets their password.
+
+  How it's called::
+
+    $data = ee()->extensions->call('member_process_reset_password', $data);
+    if (ee()->extensions->end_script === TRUE) return;
+
+  :param array $data: An ``Output::show_message()`` ``$data`` array.
+  :rtype: Void
+
+  .. versionadded:: 2.9.3
+

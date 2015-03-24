@@ -219,6 +219,26 @@ Privacy --> Security and Sessions`: :ref:`Allow multiple log-ins from a
 single account <allow-multi-logins-label>`
 
 
+.. _overrides-allow-pending-login:
+
+allow_pending_login
+-------------------
+
+Set whether members of the Pending member group can log in or not.
+By default, Pending members cannot log in.
+
+======== ===========
+Value    Behavior
+======== ===========
+``y``    Allow Pending member log in
+``n``    Do not allow Pending members to log in **(default)**
+======== ===========
+
+Example Usage::
+
+$config['allow_pending_login'] = 'y';
+
+
 allow_signatures
 ----------------
 
@@ -313,7 +333,7 @@ $config['auto_assign_cat_parents'] = 'y';
 
 **Also found in CP:** :menuselection:`Admin --> Channel
 Administration --> Global Channel Preferences`: :ref:`Auto-Assign
-Category Parents <auto-assign-categoryP-label>`
+Category Parents <auto-assign-category-parents-label>`
 
 
 autosave_interval_seconds
@@ -1485,7 +1505,7 @@ Value   Description
 
 Example Usage::
 
-$config['doc_url'] = 'http://ellislab.com/expressionengine/user-guide/';
+$config['doc_url'] = 'https://ellislab.com/expressionengine/user-guide/';
 
 .. rst-class:: cp-path
 
@@ -1659,8 +1679,9 @@ Value      Behavior
 
 Example Usage::
 
-$config['email_crlf'] = '\r\n';
+$config['email_crlf'] = "\r\n";
 
+.. note:: Double quotes must be used around this value, as per example.
 
 email_debug
 -----------
@@ -1727,7 +1748,28 @@ Value      Behavior
 
 Example Usage::
 
-$config['email_newline'] = '\r\n';
+$config['email_newline'] = "\r\n";
+
+.. note:: Double quotes must be used around this value, as per example.
+
+
+email_smtp_crypto
+-----------------
+
+Cryptographic protocol (Secure Sockets Layer or Transport Layer Security
+allowed) for SMTP, when a secure connection is required.
+
+========== ========
+Value      Behavior
+========== ========
+``ssl``    Set the SMTP protocol to SSL
+---------- --------
+``tls``    Set the SMTP protocol to TLS
+========== ========
+
+Example Usage::
+
+$config['email_smtp_crypto'] = 'tls';
 
 
 emoticon_url
@@ -3012,7 +3054,7 @@ name_of_dictionary_file
 
 Filename for the dictionary file. The official dictionary file is
 `available for download
-<http://ellislab.com/asset/file/dictionary.zip>`__. Must be used in
+<https://ellislab.com/asset/file/dictionary.zip>`__. Must be used in
 combination with :ref:`allow_dictionary_pw <allow_dictionary_pw>`.
 
 ============ ===========
@@ -3137,6 +3179,28 @@ $assign_to_config['newrelic_app_name'] = 'My Second Site';
 **Also found in CP:** :menuselection:`Admin --> System
 Administration --> Output and Debugging`: :ref:`New Relic Application
 Name <sysadmin-newrelic_app_name>`
+
+
+.. _overrides-newrelic-include-version-number:
+
+newrelic_include_version_number
+-------------------------------
+
+Whether or not to append the version number to the Application name
+in the New Relic dashboard.
+
+.. versionadded:: 2.9.1
+
+======= ========
+Value   Behavior
+======= ========
+``y``   Append version number
+``n``   Do not append version number **(default)**
+======= ========
+
+Example Usage::
+
+$config['newrelic_include_version_number'] = 'y';
 
 
 .. _password_lockout:

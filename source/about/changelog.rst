@@ -5,6 +5,284 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.9.3
+-------------
+
+Release Date: March 24, 2015
+
+- General Changes:
+
+  - SECURITY: Added ``autocomplete="off"`` to idle logout modal.
+  - Added the license number and license owner to the control panel footer.
+  - Changed all date formats to use four digits for the year.
+  - Any date matching the pattern ##-##-## is now invalid.
+  - Changed date input interpretation to use the configured date format when
+    parsing dates.
+  - Set the default behavior for member deletions to re-assign entries rather
+    than delete them.
+  - CSRF tokens stored in cookies refresh with page refresh.
+  - Email sending limits no longer apply to Super Admins.
+  - Updated usage() method declarations in first-party plugins to be compatible
+    with PHP 5.6.
+  - Added a robot meta tag to the intermediate URL redirect page to prevent search
+    engine indexing.
+  - Added ``allow_pending_login`` :ref:`config override <overrides-allow-pending-login>`
+    to allow the Pending member group to log in.
+
+- Bug Fixes:
+
+  - Fix for bug (#20285) where template route variable names were being hashed to
+    an invalid subpattern name in PCRE 8.34
+  - Fixed a bug (#20496) where CSS asset links created with
+    ``{stylesheet=}`` did not work with a ``uri_protocol`` of
+    ``QUERY_STRING``.
+  - Fixed a bug (#20525) where periods in URLs resulted in an empty session.
+  - Fixed a bug (#20565) where masked CP URLs did not work with a
+    ``uri_protocol`` of ``QUERY_STRING``.
+  - Fixed a bug (#20576) where variables with ``NULL`` values would leave conditional
+    annotations in the output in Member Profile templates.
+  - Fixed a bug (#20581) where simple conditionals did not work with the default
+    channel entry date variables.
+  - Optimized parameter parsing for single fields in the Channel Fields API (#20590).
+  - Fixed a bad link (#20603) on the member search template used for private message
+    recipients and buddy searches.
+  - Fixed a bug (#20609) where dates could erroneously be treated as invalid in
+    the Channel Entries form.
+  - Fixed a bug (#20614) where action ID URIs would not work with a
+    ``uri_protocol`` of ``QUERY_STRING``.
+  - Fixed a bug (#20615) where the Metaweblog file preferences ignored file upload
+    overrides in the configuration file.
+  - Fixed a bug (#20621) where fieldtype modifiers were not working in
+    conditionals unless they were braced and quoted.
+  - Fixed a bug (#20650) where custom url titles were lost when publishing a new
+    entry and the entry did not validate
+  - Fixed a bug (#20656) where relative dates weren't fully translateable
+  - Fixed a bug (#20657) in the control panel where deleting a member and their
+    channel entries could leave orphaned channel field data in the database.
+  - Fixed a bug (#20659) where editing a file without a category was generating
+    a Javascript error
+  - Fixed a bug (#20660) in Forum where the "ignore" link was displaying for
+    logged out users
+  - Fixed an error message (#20661) when you try to use duplicate segment variables in
+    a Template Route.
+  - Fixed a bug (#20664) where the template cache would not expire when
+    using the Redis cache driver.
+  - Fixed a bug (#20665) where the file cache driver may show errors when
+    a concurrent PHP process is also modifying the cache directory.
+  - Fixed a bug (#20667) where, in certain cases, Api_channel_entries::save_entry()
+    was returning an array instead of FALSE.
+  - Fixed a bug (#20673) where recounting member statistics may show a PHP
+    error when the comment module is not installed.
+  - Fixed a bug (#20683) where a PHP error may occur when using PHP's
+    older Memcache extension.
+  - Fixed a bug (#20704) where Grid tags may not parse correctly if
+    multiple Grid tag pairs are present and one tag pair contains no
+    variables.
+  - Fixed a bug (#20714) where extension hooks with multiple priorities
+    would clear out the ``Extensions::in_progress`` property.
+  - Fixed a bug (#20717) where calling an extension hook could potentially
+    unload the package paths.
+  - Fixed a bug (#20730) where properties in EE_Template were not declared
+    before use.
+  - Fixed a bug (#20731) where ``EE_Config::_update_config()`` would not
+    appropriately write array items to the config file.
+  - Fixed a bug (#20732) where ``EE_Config::_update_config()`` would not set
+    a config item if also unsetting it in the same call.
+  - Fixed a bug (#20734) where clicking the submit button on the Edit page
+    with no entries selected would show "undefined" in the error notice.
+  - Fixed a bug (#20735) where load_class() would look to CodeIgniter's
+    classes before trying to load EE's classes.
+  - Fixed a bug (#20738) where using EE's cache system with Memcached
+    could cause a PHP error.
+  - Fixed a bug (#20754) where the title of the Pages module control panel page
+    was wrong.
+  - Fixed a bug (#20755) where the new member notifications email field only
+    accepted one email address.
+  - Fixed a bug (#20793) where attempting to clear Template revisions resulted
+    in an 'invalid id' error.
+  - Fixed a bug where Moblog might show a PHP error while processing
+    attachments.
+  - Fixed a bug where the caching driver setting could not be set via the
+    control panel.
+  - Fixed the Stylesheet library to return a 404 response when a bad path is
+    specified.
+  - Fixed a bug where you couldn't delete a signature image from a member.
+  - Fixed a bug where you would be incorrectly redirected when attempting
+    to modify someone else's signature as an admin.
+  - Fixed a PHP notice error (Undefined variable: ``tgpref``) in the Template Manager
+  - Fixed a bug where preg_replace_callback was using a deprecated modifier when
+    censoring words.
+  - Fixed a bug where redundant queries could be called in the {exp:categories} tag.
+  - Fixed a bug where opcode caches obscured config file updates.
+
+- Developers:
+
+  - Added hooks for additional processing after a user resets their password.
+    :func:`member_process_reset_password` for front end, and
+    :func:`cp_member_reset_password` for the control panel.
+  - ``Member_field_model::save_field()`` now returns the modified $data
+    associative array.
+  - Table Toggle All checkboxes now fire Javascript `change` events.
+
+
+Version 2.9.2
+-------------
+
+Release Date: October 4, 2014
+
+
+- General Changes:
+
+  - Several fields in the control panel now automatically trim the
+    white space from their contents (URLs, site index, group names).
+
+- Bug Fixes:
+
+  - Fixed a bug (#20594) where you could not create a new channel.
+
+
+Version 2.9.1
+-------------
+
+Release Date: October 3, 2014
+
+- Important:
+
+  - Fixed potential SQL injection vulnerabilities in various parts of
+    the control panel.
+  - Fixed a potential cookie vulnerability (Thanks to security
+    researcher `Robin Bailey of Dionach <http://www.dionach.com/>`_ for
+    working with us on this one).
+  - Fixed a few control panel XSS issues where someone with CP access
+    could cause problems on the front-end and the control panel.
+  - Fixed a potential stored XSS issue in member front end.
+  - Fixed a bug where old sessions were not properly destroyed upon
+    password reset.
+  - Fixed a few installer XSS issues where one could attack oneself if
+    one was so inclined.
+  - Fixed a potential XSS issue in the My Account area of the control
+    panel.
+  - Fixed a few stored XSS issues that admins could exploit against one
+    another.
+  - Fixed a potential for XSS in data URIs.
+  - Improved validation of CSRF token.
+  - Improved flood control protection for password reset emails.
+  - Improved accuracy of XSS event handler filtering.
+  - Improved security of PHP's native session cookie for sites that use
+    it (matches your cookie security settings).
+  - Improved XSS filtering for certain types of file uploads.
+  - Improved XSS filtering in the comments module.
+  - Improved security in SQL Manager against unintended DB writes.
+
+- General Changes:
+
+  - Made ``{cp_edit_entry_url}`` available to Admin Notification of New Entry
+  - Added the ability to select MySQLi as the database driver during installation.
+  - Added ``newrelic_include_version_number``
+    :ref:`config override <overrides-newrelic-include-version-number>`:
+    to the New Relic library.
+  - Added a template log item for page cache garbage collection.
+  - Optimized conditional parsing for pair variables in the Channel Form.
+  - Improved Control Panel
+    :ref:`custom theme organization <customizing_the_control_panel_theme>`:
+    view files can now be stored in a ``views`` subfolder.
+  - Improved extension hook developer log deprecation messages.
+  - Changed the Content Edit table Author column to link to the member account
+    page instead of a ``mailto:`` link.
+
+- Bug Fixes:
+
+  - Fixed a bug where ``orderby="random"`` in Channel Entries would not
+    work properly with pagination.
+  - Fixed a bug (#20346) where thumbnails for files with spaces in the
+    name would not appear in the file browser modal.
+  - Fixed a bug (#20471) where the site index template would be rendered
+    after the site's 404 template.
+  - Fixed a bug (#20524) where page cache garbage collection may use
+    excessive memory.
+  - Fixed a bug (#20377) where a member with control panel access could
+    not access the control panel if logging in from the front-end.
+  - Fixed a bug (#20540) where the next and previous rows could not be
+    accessed inside a Grid field tag pair when the row ID was specified.
+  - Fixed a "returned by reference" warning in PHP 5.6.
+  - Fixed bugs (#20512, #20586) where Grid may not work with content
+    types other than Channel.
+  - Fixed a bug (#20462) where new grid rows would trigger a validation
+    warning.
+  - Fixed a bug that caused PHP errors when using the bookmarklet
+    feature on newer versions of PHP.
+  - Fixed a bug (#20477) that would result in a PHP warning on member
+    profile pages.
+  - Fixed a bug (#20501) where the entity ``&39;`` in a submitted entry
+    could cause the application to time out.
+  - Fixed a bug (#20535) where using the image button on a text field
+    was not working.
+  - Fixed a bug (#20465) where the "Update and Finished" button in the
+    template editor would not return to the Template Manager.
+  - Fixed a bug where going directly to the ``update_signature`` page
+    would clear out your signature.
+  - Fixed a bug where the memberlist sort would not persist between page
+    loads.
+  - Fixed two bugs that would cause errors when updating from
+    using Channel Forms.
+  - Fixed a documentation bug (#20550) where an extraneous ``access_cp`` was
+    listed under :meth:`Session::userdata`.
+  - Fixed a bug (#20559) where a deprecation could interfere with a query
+    being generated.
+  - Fixed two bugs that would cause errors when updating from
+    ExpressionEngine 1.x to ExpressionEngine 2.x.
+  - Fixed a bug (#20294) where a PHP error could occur when database caching was
+    turned on.
+  - Altered the site URL so that when sessions are required on the frontend the
+    session ID variable is not included in the URL if logged out (#20315).
+  - Clarified a language variable for member profile deletion confirmation (#20312).
+  - Fixed a bug (#20419) where a PHP error could occur in the Channel Entries tag
+    when relaxed view tracking was on.
+  - Fixed a bug (#20414) in the File module where a MySQL error could occur if
+    there was no file data found.
+  - Fixed a bug in the 404 redirect behavior when used inside a no_results tag on
+    an embedded template.
+  - Fixed a bug (#20473) in the File module where the category_group parameter was
+    treated as a category parameter.
+  - Fixed a minor header error in the control panel's simple_header view (#20457).
+  - Replaced some hard coded terms with language keys in the control panel (#20456,
+    #20461).
+  - Fixed a bug (#20529) that affected the Multiple Site Manager, preventing site
+    switching by non-Super Admin.
+  - Fixed a bug (#20479) where a MySQL error could occur when updating from version
+    2.7 or older.
+  - Fixed a bug (#20533) where a MySQL error could occur in the 2.1.5 update if
+    the Blogger module was installed.
+  - Fixed a bug (#20431) in the Channel Entry tag's date variable pair where Sunday
+    entries were improperly handled when using Monday as the start day.
+  - Fixed a bug (#20485) where the last template global value could be incorrect.
+  - Fixed a bug where in the member import where a MySQL error could occur if using
+    MySQLi.
+  - Fixed a bug (#20557) where a PHP error could occur when installing the Relationship
+    field type.
+  - Fixed a bug (#20556) in the File module where thumbnail data was not populated
+    when more than a single directory was included in the results.
+  - Fixed a bug (#20499) in the control panel where the View Members page could
+    have duplicate members across pages.
+  - Fixed a bug (#20511) in the Content edit page filter where searches beginning
+    with punctuation characters could be handled improperly.
+  - Fixed a bug in the comment entries tag (#20447) where the gmt_comment_date and
+    total_comments variables were not always properly parsed.
+  - Fixed a bug (#20563) where a PHP error could occur on sites with large numbers
+    of custom fields when parsing conditionals.
+  - Fixed a bug (#20538) on the publish page where autosave silently failed if
+    there were validation errors.
+  - Removed some unnecessary queries when displaying category images
+    (thanks to Robson Sobral).
+
+- Developers:
+
+  - ``Extensions::active_hook()`` will now return `FALSE` if
+    ``allow_extensions`` is set to ``'n'``.
+  - Moved ``get_bool_from_string()`` from the String Helper to
+    Common.php.
+  - Removed a stray null parameter from the `member_create_start` hook.
+
 Version 2.9.0
 -------------
 
@@ -13,7 +291,14 @@ Release Date: July 15, 2014
 - Important:
 
   - Fixed a security issue that could result in arbitrary script
-    execution in certain circumstances.
+    execution in certain circumstances. (Thanks to security researcher
+    `Matthew Barry <http://deathby.ninja/>`_ for working with us on this
+    one.)
+  - Fixed a limited XSS vulnerability relating to URL manipulation.
+    (Thanks to security engineer `Mehment INCE <https://twitter.com/mmetince>`_
+    for reporting the issue.)
+  - Fixed a bug which allowed modification of arbitrary channel fields
+    from Grid Channel Forms in certain circumstances.
 
 - General Changes:
 

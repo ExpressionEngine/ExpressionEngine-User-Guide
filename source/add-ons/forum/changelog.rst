@@ -1,6 +1,26 @@
 ExpressionEngine Forum Module Change Log
 ========================================
 
+Version 3.1.18
+--------------
+
+Release Date: unreleased
+
+- Fixed a bug (#20640) where a language key for Bulletin Board was not
+  available for use in forum templates.
+- Fixed a bug (#20641, #20642) where pagination did not work on the
+  forum's thread split page.
+
+Version 3.1.17
+--------------
+
+Release Date: October 3, 2014
+
+- Fixed a bad link in the control panel breadcrumbs that occurred on
+  template edit pages (#20341).
+- Fixed a bad redirect after submitting a member to your ignore list
+  from the topic page link (20539).
+
 Version 3.1.16
 --------------
 

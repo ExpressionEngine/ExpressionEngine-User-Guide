@@ -198,22 +198,22 @@ worry, most of your applications will make use of Active Record. ::
 
   function _sort_rows($a, $b)
   {
-      foreach ($this->sort as $key => $dir)
-      {
-          if ($a[$key] !== $b[$key])
-          {
-              $ret = +1;
+	foreach ($this->sort as $key => $dir)
+	{
+		if ($a[$key] === $b[$key])
+		{
+			return 0;
+		}
 
-              if ($a[$key] < $b[$key] OR $dir == 'desc')
-              {
-                  $ret = -1;
-              }
-
-              return $ret;
-          }
-      }
-
-      return 0;
+    	if ($dir == 'desc')
+        {
+ 			return ($a[$key] < $b[$key]) ? 1 : -1;
+        }
+		else
+		{
+			return ($a[$key] > $b[$key]) ? 1 : -1;
+        }
+    }
   }
 
 If you reload the page, you should now have clickable headers that sort

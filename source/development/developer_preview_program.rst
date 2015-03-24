@@ -70,26 +70,31 @@ Curious if the developer of one of your installed add-ons is in the
 program? If you do not see them in the list below, please email them
 and encourage them to join!
 
+.. Any edits made to this list should also be made to the developer
+.. preview member snippet.
+
 - Aaron Walden
-- Adrian Macneil
+- Adrian Macneil (Exp:resso)
+- Andrew Fairlie (Red Carrot)
 - Andrew Weaver
 - Ben Croker
-- Benjamin Kohl
+- Benjamin Kohl (Masuga Design)
 - Benoit Marchal
-- Bjorn Borresen
-- Brad Boegler
+- Bjørn Børresen
+- Brad Boegler (Nexcess)
 - Brad Morse
-- Brad Parscale
+- Brad Parscale (DevDemon)
 - Brandon Kelly
 - Brian Litzinger
+- Bryan Burgers
 - Carl Crawley
 - Chris Barrett
 - Chris Newton
 - Christopher Imrie
+- Dan Decker
 - Dan Diemer
 - Darren Miller
-- David DeHaan
-- David Dexter
+- David Dexter (Brilliant2)
 - David Pak
 - Derek Hogue
 - Digital Surgeons
@@ -106,11 +111,13 @@ and encourage them to join!
 - Greg Ferrell
 - Gurudutt Verma
 - Iain Urquhart
+- Ian Young (Expresso)
 - Ira Salsberg
 - Isaac Rayway
 - Jack McDade
+- James Smith
 - Jamie Pittock
-- Jamie Taylor
+- Jamie Taylor (Percipio)
 - Jan van Lysebettens
 - Jason Ferrell
 - Jeremy Gimbel
@@ -123,49 +130,59 @@ and encourage them to join!
 - John Morton
 - John Wells
 - Justin Kimbrell
+- Keith Mancuso (Familiar)
 - Kelly Sims
+- Kelsey Martens
+- Kevin Smith
 - Kurt Deutscher
 - Laisvunas Sopauskas
 - Leevi Graham
 - Leon Dijk
+- Leslie Camacho
 - Lodewijk
 - Malcolm Elsworth
+- Marcus Neto
 - Mark Croxton
 - Mark Drzycimski
 - Mark Huot
+- Matt Barry
 - Matt Weinberg
 - Max Lazar
+- Maxim WEB (Websecret)
 - Michael Boyink
 - Michael Rog
-- Michael Witwicki
+- Michael Witwicki (Booyant)
 - Mike Hughes
+- Nathan Pitman
 - Nicco De Gols
 - Nick Le Guillou
 - Nicolas Bottari
 - Nigel Hughes
 - Padraig Kennedy
-- Patrick Pohler
+- Patrick Pohler (Anecka)
 - Patrick Woodcock
 - Peter Felix
 - Pierre-Vincent Ledoux
 - Rein de Vries
 - Rob Sanchez
+- Robin Bailey
 - Robin Hodges
-- Robin Willmot
 - Robson Sobral
+- Robin Willmot (Coffee Bean Design)
 - Ryan Bonnell
 - Ryan Irelan
 - Ryan Masuga
 - Sam Lomax
 - Satya Prakash
 - Scott Henderson
+- Seth Giammanco
 - Solspace
 - Stephen Callender
 - Steve Fickus
 - Tom Jaeger
 - Travis Schmeisser
-- Travis Smith
+- Travis Smith (Hop Studios)
 - Ty Wangsness
-- Websecret
 - Wouter Vervloet
-- Yuri Salimovskiy
+- Yahya Jokhab (UXspan)
+- Yuri Salimovskiy (IntoEEtive)
