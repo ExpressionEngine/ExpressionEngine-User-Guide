@@ -2868,6 +2868,22 @@ Global Template Preferences`: :ref:`Maximum Number of Revisions to Keep
 <global-template-max-revisions-label>`
 
 
+max_url_segments
+----------------
+
+Set the maximum number of URL segments allows in requests made to your site.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Maximum number of URL segments to allow **(default is 12)**
+=========== ===========
+
+Example Usage::
+
+$config['max_url_segments'] = '12';
+
+
 .. _mbr_notification_emails:
 
 mbr_notification_emails
