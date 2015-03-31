@@ -54,6 +54,11 @@ only ever be images, you should only allow images.
 .htaccess (or similar)
 ======================
 
+.. note:: ``.htaccess`` files only work on Apache servers that permit
+  their usage. You should test to see if this method actually prevents
+  files from running by placing a simple PHP file in the same directory
+  and test to see if it executes.
+
 If you have to allow files other than images, than we recommend a simple
 ``.htaccess`` file at the root of the directory where you'll be allowing
 user uploads::
