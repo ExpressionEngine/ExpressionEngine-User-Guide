@@ -189,6 +189,19 @@ fieldset{ border: 0; }
 			margin: 20px 0;
 		}
 
+	.danger{
+		background-color: #FFEBEB;
+		border: 1px solid #BC4848;
+		color: #BC4848;
+		margin: 20px 0;
+		padding: 10px 10px 8px;
+		-moz-box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
+		-webkit-box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
+		box-shadow: 4px 4px 0 rgba(0,0,0,0.03);
+	}
+
+		.danger .admonition-title{ color: #BC4848; }
+
 .comments .codeblock{
 	background-color: #10618F;
 	border: 0;
