@@ -46,10 +46,10 @@ execution:
 File Types
 ==========
 
-When setting up a file upload directory, forum attachments, private
-message attachments, or **[fill in the blanks here]** you should
-restrict it as much as you are able. If this is something that should
-only ever be images, you should only allow images.
+When setting up a file upload directory, forum attachments, or private
+message attachments you should restrict it as much as you are able. If
+this is something that should only ever be images, you should only allow
+images.
 
 .htaccess (or similar)
 ======================
