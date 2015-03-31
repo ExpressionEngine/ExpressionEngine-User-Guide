@@ -20,6 +20,15 @@ your customers' data.
 Prevention
 **********
 
+ExpressionEngine prevents the upload of code to your server when using
+any of the native file upload tools including the custom file field in
+the control panel and Channel Forms, forum attachments, and private
+message attachments.
+
+***************
+Recommendations
+***************
+
 We have two recommendations when it comes to preventing arbitrary code
 execution:
 
