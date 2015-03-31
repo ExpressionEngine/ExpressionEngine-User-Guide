@@ -9,12 +9,20 @@ Wikipedia is:
   an attacker's ability to execute any commands of the attacker's choice
   on a target machine or in a target process
 
-Essentially, someone finds a way to upload an executable file to your
-site and run it. In the case of ExpressionEngine, this means the
-attacker is bypassing safeguards like accounts and permissions. The
-worst case scenario is they manage to transfer all of your files and
-database tables to a server they control, gaining all of your data and
-your customers' data.
+Essentially, someone finds a way to run code of theirs on your site.
+This is typically achieved by uploading a file to your server using
+legitimate methods like forum attachments, private messages, or channel
+forms. However, it's also possible for the attacker to execute code if
+you had PHP enabled in your templates and allow user input to be
+executed as PHP; or if an add-on somehow permitted the execution of the
+attacker's code.
+
+With these attacks, the attacker is bypassing ExpressionEngine's typical
+safeguards like accounts and permissions.
+
+.. warning:: This form of attack is the worst case scenario. If they
+  can upload code and run it, they can take any data or files from your
+  server.
 
 **********
 Prevention
