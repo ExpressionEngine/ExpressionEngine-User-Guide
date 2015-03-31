@@ -58,14 +58,11 @@ If you have to allow files other than images, than we recommend a simple
 ``.htaccess`` file at the root of the directory where you'll be allowing
 user uploads::
 
-  <FilesMatch "(?i)\.(php[s0-9]?|phtml)$">
-    Order Deny,Allow
-    Deny from All
-  </FilesMatch>
+  SetHandler default-handler
 
-All this does is prevent any PHP files in this directory or any
-sub-directories from running, essentially preventing arbitrary code
-execution for those directories.
+This forces the Apache server to send any files in that directory, and
+any sub-directories, as if they were static content, completely
+preventing the execution of any files in that directory.
 
 Starting with ExpressionEngine 2.10 we ship with this exact
 ``.htaccess`` file in the ``images/`` directory. If you have any upload
