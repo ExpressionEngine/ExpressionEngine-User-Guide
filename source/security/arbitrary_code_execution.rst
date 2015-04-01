@@ -74,8 +74,20 @@ Starting with ExpressionEngine 2.10 we ship with this exact
 directories outside of ``images/``, it's highly recommended that you
 copy this ``.htaccess`` into that directory.
 
-.. note:: This .htaccess file prevents **all** files from being executed
-  in the directory which it's located. You should aim to cover as many
-  files and directories as possible with this ``.htaccess`` file for
-  maximum security, but make sure you aren't preventing
-  ExpressionEngine's ``index.php`` and ``admin.php`` files from running.
+In the event that the above ``.htaccess`` doesn't work you can also try
+the following ``.htaccess``::
+
+  <FilesMatch "(?i)\.(php[s0-9]?|phtml)$">
+    Order Deny,Allow
+    Deny from All
+  </FilesMatch>
+
+In the event that neither ``.htaccess`` file works, contact your hosting
+company or server administrator.
+
+.. note:: Both ``.htaccess`` files prevent **all** files from being
+  executed in the directory which they're located. You should aim to
+  cover as many files and directories as possible with this
+  ``.htaccess`` file for maximum security, but make sure you aren't
+  preventing ExpressionEngine's ``index.php`` and ``admin.php`` files
+  from running.
