@@ -61,7 +61,9 @@ images.
 .. note:: ``.htaccess`` files only work on Apache servers that permit
   their usage. You should test to see if this method actually prevents
   files from running by placing a simple PHP file in the same directory
-  and test to see if it executes.
+  and test to see if it executes, like the following::
+
+    <?php echo "This should not be visible.";
 
 If you have to allow files other than images, then we recommend a simple
 ``.htaccess`` file at the root of the directory where you'll be allowing
