@@ -33,6 +33,10 @@ any of the native file upload tools including the custom file field in
 the control panel and Channel Forms, forum attachments, and private
 message attachments.
 
+However, given the seriousness of such attacks if they do occur, we
+recommend additional steps to prevent the uploading and execution of
+code in upload directories.
+
 ***************
 Recommendations
 ***************
