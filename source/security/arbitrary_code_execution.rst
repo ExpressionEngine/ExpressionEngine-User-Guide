@@ -59,7 +59,7 @@ images.
   files from running by placing a simple PHP file in the same directory
   and test to see if it executes.
 
-If you have to allow files other than images, than we recommend a simple
+If you have to allow files other than images, then we recommend a simple
 ``.htaccess`` file at the root of the directory where you'll be allowing
 user uploads::
 
