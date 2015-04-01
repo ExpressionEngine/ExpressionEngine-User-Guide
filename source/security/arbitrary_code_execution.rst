@@ -13,7 +13,7 @@ Essentially, someone finds a way to run code of theirs on your site.
 This is typically achieved by uploading a file to your server using
 legitimate methods like forum attachments, private messages, or channel
 forms. However, it's also possible for the attacker to execute code if
-you had PHP enabled in your templates and allow user input to be
+you have PHP enabled in your templates and allow user input to be
 executed as PHP; or if an add-on somehow permitted the execution of the
 attacker's code.
 
