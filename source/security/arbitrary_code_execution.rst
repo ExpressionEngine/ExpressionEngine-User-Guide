@@ -9,7 +9,7 @@ Wikipedia is:
   an attacker's ability to execute any commands of the attacker's choice
   on a target machine or in a target process
 
-Essentially, someone finds a way to run code of theirs on your site.
+Essentially, someone finds a way to execute code of theirs on your site.
 This is typically achieved by uploading a file to your server using
 legitimate methods like forum attachments, private messages, or channel
 forms. However, it's also possible for the attacker to execute code if
@@ -60,8 +60,8 @@ images.
 
 .. note:: ``.htaccess`` files only work on Apache servers that permit
   their usage. You should test to see if this method actually prevents
-  files from running by placing a simple PHP file in the same directory
-  and test to see if it executes, like the following::
+  files from executing by placing a simple PHP file in the same
+  directory and test to see if it executes, like the following::
 
     <?php echo "This should not be visible.";
 
