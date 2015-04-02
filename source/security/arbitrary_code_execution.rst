@@ -88,12 +88,15 @@ the following ``.htaccess``::
     Deny from All
   </FilesMatch>
 
+Both ``.htaccess`` files will prevent PHP files from being executed in
+the directory which they're located, however the former ``.htaccess``
+file has the added benefit that it prevents any and all code from being
+executed.
+
 In the event that neither ``.htaccess`` file works, contact your hosting
 company or server administrator.
 
-.. note:: Both ``.htaccess`` files prevent **all** files from being
-  executed in the directory which they're located. You should aim to
-  cover as many files and directories as possible with this
-  ``.htaccess`` file for maximum security, but make sure you aren't
-  preventing ExpressionEngine's ``index.php`` and ``admin.php`` files
-  from running.
+.. note:: You should aim to cover as many files and directories as
+  possible with either ``.htaccess`` file for maximum security, but make
+  sure you aren't preventing ExpressionEngine's ``index.php`` and
+  ``admin.php`` files from executing.
