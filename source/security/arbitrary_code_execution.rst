@@ -21,8 +21,8 @@ With these attacks, the attacker is bypassing ExpressionEngine's typical
 safeguards like accounts and permissions.
 
 .. danger:: This form of attack is the worst case scenario. If they can
-  upload code and run it, they can take any data or files from your
-  server.
+  upload code and execute it, they can modify, deface, lock you out of,
+  and steal data from your own site.
 
 **********
 Prevention
