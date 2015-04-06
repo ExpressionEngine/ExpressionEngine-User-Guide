@@ -2979,6 +2979,56 @@ $config['memberlist_order_by'] = 'total_posts';
 :ref:`Member List - Sort By <member-list-rows-label>`
 
 
+.. _overrides-mime-whitelist-additions:
+
+mime_whitelist_additions
+------------------------
+
+With an array, add Mime Types to the whitelist.
+
+Example Usage::
+
+  $config['mime_whitelist_additions'] = array(
+    'image/vnd.adobe.photoshop'
+  );
+
+
+.. _overrides-mime-whitelist-member-exception:
+
+mime_whitelist_member_exception
+-------------------------------
+
+Specify member IDs to exclude from Mime Type whitelist restrictions.
+
+========== ===========
+Value      Description
+========== ===========
+``text``   Comma-delimited list of member IDs
+========== ===========
+
+Example Usage::
+
+$config['mime_whitelist_member_exception'] = '3, 14, 83';
+
+
+.. _overrides-mime-whitelist-member-group-exception:
+
+mime_whitelist_member_group_exception
+-------------------------------------
+
+Specify member group IDs to exclude from Mime Type whitelist restrictions.
+
+========== ===========
+Value      Description
+========== ===========
+``text``   Comma-delimited list of member group IDs
+========== ===========
+
+Example Usage::
+
+$config['mime_whitelist_member_group_exception'] = '2, 5';
+
+
 moblog_allow_nontextareas
 -------------------------
 
