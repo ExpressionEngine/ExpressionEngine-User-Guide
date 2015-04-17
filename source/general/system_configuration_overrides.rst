@@ -4985,6 +4985,18 @@ Privacy --> Security and Sessions`: :ref:`Minimum Username Length
 <security-min-username-label>`
 
 
+upload_file_name_blacklist
+--------------------------
+
+With an array, add a case insensitive list of file names that cannot be uploaded.
+
+Example Usage::
+
+  $config['upload_file_name_blacklist'] = array(
+    'logo.png',
+  );
+
+
 upload_preferences
 ------------------
 
