@@ -83,7 +83,7 @@ copy this ``.htaccess`` into that directory.
 In the event that the above ``.htaccess`` doesn't work you can also try
 the following ``.htaccess``::
 
-  <FilesMatch "(?i)\.(php[s0-9]?|phtml)$">
+  <FilesMatch "(?i)\.(php[s0-9]?|phtml)">
     Order Deny,Allow
     Deny from All
   </FilesMatch>
