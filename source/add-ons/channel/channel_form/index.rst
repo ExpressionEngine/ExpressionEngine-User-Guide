@@ -302,6 +302,8 @@ categories by separating the Category ID with the pipe character::
 
   category="3|7|13|42"
 
+This parameter only applies to new entries and will be ignored for edits.
+
 
 channel=
 ~~~~~~~~
@@ -545,7 +547,8 @@ status=
 
   status="pending"
 
-Set the status to use for the entry.
+Set the status to use for the entry.  This parameter only applies to new entries
+and will be ignored for edits.
 
 sticky\_entry=
 ~~~~~~~~~~~~~~
@@ -554,7 +557,8 @@ sticky\_entry=
 
   sticky_entry="yes"
 
-Force the entry to be "sticky" or not.
+Force the entry to be "sticky" or not.  This parameter only applies to new
+entries and will be ignored for edits.
 
 url\_title=
 ~~~~~~~~~~~
