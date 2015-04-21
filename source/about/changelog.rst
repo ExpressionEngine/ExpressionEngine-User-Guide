@@ -5,6 +5,78 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.10.0
+--------------
+
+Release Date: ?
+
+- Important:
+
+  - Added .htaccess to images directory to prevent execution of
+    PHP files.
+  - Removed config from the output profiler.
+  - Fixed a bug where, given a valid stolen session ID, a
+    malicious user could create a valid session in rare circumstances.
+  - Changed the config/mimes.php file format: it is now a whitelist of MIME Types
+    available for upload.
+  - Preventing hidden files from being uploaded.
+  - Added a config override to blacklist certain filenames from being uploaded.
+
+- General Changes:
+
+  - Added option to enable or disable private messages site-wide.
+  - Added option to allow or disallow attachments in private messages
+    site-wide.
+  - Added new conditional variable to forum templates, `{if pm_enabled}`,
+    for conditionally displaying content if private messages are enabled
+    for the logged-in user.
+  - Added a DD-MM-YYYY date format
+  - Added Channel ID to Channel Management page.
+  - Added Field Group ID to Channel Fields Management page.
+  - Added Status Group ID and Status ID to Status Group and Status
+    Management pages.
+  - Added Channel name to Content Edit page.
+  - Channel Form date fields now accept the date and time format setup in
+    your localization settings instead of requiring
+    ``yyyy-mm-dd hh:mm PM``.
+  - Added ``max_url_segments`` config override. Increased default to 12.
+  - Updated some date formatting defaults to use 4 digit years.
+  - Optimized queries used in new channel field creation.
+
+- Bug Fixes:
+
+  - Fixed a MySQL deprecation notice in the updater survey in PHP versions
+    5.5 and greater.
+  - Fixed a bug (#20859) where the 2.9.3 updater may show an error.
+    referencing Template Routes when upgrading ExpressionEngine Core.
+  - Fixed a bug (#20912) where switch variables were not parsed in Channel
+    Categories.
+  - Fixed a bug (#20926) where `IS_EMPTY` did not account for `NULL`
+    database values.
+  - Fixed a bug with relationships, where some template code combinations
+    could trigger PHP errors.
+  - Fixed a bug where private message attachments would not be removed from the
+    file system when the message was deleted.
+  - Fixed a bug (#20893) where some dd/mm/yyyy dates were incorrectly marked
+    invalid.
+  - Fixed a bug (#20114) where SVG files were not an acceptable image format.
+  - Fixed a bug (#20862) where yyyy-dd-mm date formats would not be
+    accepted.
+  - Fixed a bug (#20866) where the upload file button did not work in the
+    File Manager.
+  - Fixed a bug (#20864) where the select all checkbox at the bottom of
+    Manage Database Tables did not work.
+  - Fixed a bug where the ``valid_date`` form validation would fail on
+    some date formats.
+  - Fixed a bug (#20705) where category custom field creation was not consistent
+    with regard to field types.
+  - Fixed a bug (#20708) where the updater could fail when trying to display a
+    survey if PHP short tags were disabled.
+
+- Developers:
+
+  - Added a new MIME Type library for detecting mime types.
+
 Version 2.9.3
 -------------
 
