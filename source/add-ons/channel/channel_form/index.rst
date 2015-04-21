@@ -99,9 +99,9 @@ Set the URL title of the entry. ::
 Entry Date
 ~~~~~~~~~~
 
-.. note:: All date formats should match what the userhas defined in localization
-  settings. The date fields will autmatically use that format and validate
-  against it.
+.. note:: All date formats should match what the user has defined in
+  localization settings. The date fields will autmatically use that format and
+  validate against it.
 
 Set the date of the entry::
 
