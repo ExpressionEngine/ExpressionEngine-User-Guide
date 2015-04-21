@@ -41,7 +41,7 @@ provide it to the ExpressionEngine community.
   * The *File* fieldtype is now compatible with *Channel Form*.
   * *Stand-Alone Entry Form* has been removed.
   * *SafeCracker File* has been removed.
-  * The stylesheet path has changed from ``{path=css/_ee_saef_css}`` to  
+  * The stylesheet path has changed from ``{path=css/_ee_saef_css}`` to
     ``{path=css/_ee_channel_form_css}``.
 
 ******************
@@ -99,16 +99,18 @@ Set the URL title of the entry. ::
 Entry Date
 ~~~~~~~~~~
 
-Set the date of the entry, which must be in the format YYYY-MM-DD hh:mm
-PM. ::
+.. note:: All date formats should match what the userhas defined in localization
+  settings. The date fields will autmatically use that format and validate
+  against it.
+
+Set the date of the entry::
 
   <p>Date <br> <input type="text" name="entry_date" value="{entry_date}" maxlength="23" size="25"></p>
 
 Expiration Date
 ~~~~~~~~~~~~~~~
 
-Set the expiration date of the entry, which must be in the format
-YYYY-MM-DD hh:mm PM. ::
+Set the expiration date of the entry::
 
   <p>Expiration Date <br>
     <input type="text" name="expiration_date" value="{expiration_date}" maxlength="23" size="25">
@@ -117,8 +119,7 @@ YYYY-MM-DD hh:mm PM. ::
 Comment Expiration Date
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Set the comment expiration date if desired. This is specified in the format
-YYYY-MM-DD hh:mm PM exactly as in the Control Panel Publish section. ::
+Set the comment expiration date if desired::
 
   <p>Comment Expiration Date <br>
   <input type="text" name="comment_expiration_date" value="{comment_expiration_date}" maxlength="23" size="25" />
