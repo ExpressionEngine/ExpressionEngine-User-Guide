@@ -66,7 +66,7 @@ Release Date: ?
     File Manager.
   - Fixed a bug (#20864) where the select all checkbox at the bottom of
     Manage Database Tables did not work.
-  - Fixed a bug where the ``valid_date`` form validation would fail on
+  - Fixed a bug (#20892) where the ``valid_date`` form validation would fail on
     some date formats.
   - Fixed a bug (#20705) where category custom field creation was not consistent
     with regard to field types.
