@@ -93,6 +93,11 @@ This will match URLs such as::
 
   /member/Enrico/Fermi/III
 
+A Template Route will not match a URL that has more segments than specified in
+the Template Route.  So the full Template Route above will not match:
+
+  /member/Enrico/Fermi/III/P2
+
 Template Routes has built in rules for handling pagination and
 categories::
 
