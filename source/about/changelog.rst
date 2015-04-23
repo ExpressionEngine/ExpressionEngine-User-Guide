@@ -12,16 +12,16 @@ Release Date: ?
 
 - Important:
 
-  - Added ``.htaccess`` to images directory to prevent execution of
-    PHP files.
+  - Added ``.htaccess`` to images directory to :doc:`prevent execution
+    of PHP files </security/arbitrary_code_execution>`.
   - Removed ``config`` from the output profiler.
   - Fixed a bug where, given a valid stolen session ID, a
     malicious user could create a valid session in rare circumstances.
   - Changed the ``config/mimes.php`` file format: it is now a whitelist
     of MIME Types available for upload.
-  - Preventing hidden files from being uploaded.
-  - Added a config override to blacklist certain filenames from being
-    uploaded.
+  - Added hidden file upload prevention.
+  - Added a config override to :ref:`blacklist certain filenames from
+    being uploaded <upload_file_name_blacklist>`.
 
 - General Changes:
 
@@ -40,7 +40,8 @@ Release Date: ?
   - Channel Form date fields now accept the date and time format setup in
     your localization settings instead of requiring
     ``yyyy-mm-dd hh:mm PM``.
-  - Added ``max_url_segments`` config override. Increased default to 12.
+  - Added :ref:`max_url_segments` config override. Increased default to
+    12.
   - Updated some date formatting defaults to use 4 digit years.
   - Optimized queries used in new channel field creation.
 
