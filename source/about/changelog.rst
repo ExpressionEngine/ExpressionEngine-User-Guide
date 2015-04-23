@@ -12,25 +12,26 @@ Release Date: ?
 
 - Important:
 
-  - Added .htaccess to images directory to prevent execution of
+  - Added ``.htaccess`` to images directory to prevent execution of
     PHP files.
-  - Removed config from the output profiler.
+  - Removed ``config`` from the output profiler.
   - Fixed a bug where, given a valid stolen session ID, a
     malicious user could create a valid session in rare circumstances.
-  - Changed the config/mimes.php file format: it is now a whitelist of MIME Types
-    available for upload.
+  - Changed the ``config/mimes.php`` file format: it is now a whitelist
+    of MIME Types available for upload.
   - Preventing hidden files from being uploaded.
-  - Added a config override to blacklist certain filenames from being uploaded.
+  - Added a config override to blacklist certain filenames from being
+    uploaded.
 
 - General Changes:
 
   - Added option to enable or disable private messages site-wide.
   - Added option to allow or disallow attachments in private messages
     site-wide.
-  - Added new conditional variable to forum templates, `{if pm_enabled}`,
-    for conditionally displaying content if private messages are enabled
-    for the logged-in user.
-  - Added a DD-MM-YYYY date format
+  - Added new conditional variable to forum templates,
+    ``{if pm_enabled}``, for conditionally displaying content if private
+    messages are enabled for the logged-in user.
+  - Added a ``DD-MM-YYYY`` date format
   - Added Channel ID to Channel Management page.
   - Added Field Group ID to Channel Fields Management page.
   - Added Status Group ID and Status ID to Status Group and Status
@@ -51,16 +52,17 @@ Release Date: ?
     referencing Template Routes when upgrading ExpressionEngine Core.
   - Fixed a bug (#20912) where switch variables were not parsed in Channel
     Categories.
-  - Fixed a bug (#20926) where `IS_EMPTY` did not account for `NULL`
+  - Fixed a bug (#20926) where ``IS_EMPTY`` did not account for ``NULL``
     database values.
   - Fixed a bug with relationships, where some template code combinations
     could trigger PHP errors.
   - Fixed a bug where private message attachments would not be removed from the
     file system when the message was deleted.
-  - Fixed a bug (#20893) where some dd/mm/yyyy dates were incorrectly marked
-    invalid.
-  - Fixed a bug (#20114) where SVG files were not an acceptable image format.
-  - Fixed a bug (#20862) where yyyy-dd-mm date formats would not be
+  - Fixed a bug (#20893) where some ``dd/mm/yyyy`` dates were
+    incorrectly marked invalid.
+  - Fixed a bug (#20114) where SVG files were not an acceptable image
+    format.
+  - Fixed a bug (#20862) where ``yyyy-dd-mm`` date formats would not be
     accepted.
   - Fixed a bug (#20866) where the upload file button did not work in the
     File Manager.
