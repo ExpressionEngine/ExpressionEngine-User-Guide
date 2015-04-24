@@ -75,6 +75,8 @@ Release Date: ?
     with regard to field types.
   - Fixed a bug (#20708) where the updater could fail when trying to display a
     survey if PHP short tags were disabled.
+  - Fixed a bug (#20939) where member group category permissions were not being
+    saved
 
 - Developers:
 
