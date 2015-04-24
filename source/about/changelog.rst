@@ -77,6 +77,9 @@ Release Date: ?
     survey if PHP short tags were disabled.
   - Fixed a bug (#20939) where member group category permissions were not being
     saved
+  - Fixed a bug (#20745) where channel forms did not respect the "Can edit
+    entries authored by others" permission.
+
 
 - Developers:
 
