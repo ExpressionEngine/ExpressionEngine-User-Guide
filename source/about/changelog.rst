@@ -59,7 +59,7 @@ Release Date: ?
     could trigger PHP errors.
   - Fixed a bug where private message attachments would not be removed from the
     file system when the message was deleted.
-  - Fixed a bug (#20893) where some ``dd/mm/yyyy`` dates were
+  - Fixed a bug (#20893, #20941) where some ``dd/mm/yyyy`` dates were
     incorrectly marked invalid.
   - Fixed a bug (#20114) where SVG files were not an acceptable image
     format.
