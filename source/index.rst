@@ -92,6 +92,7 @@ Securing ExpressionEngine
 - :doc:`security/arbitrary_code_execution`
 - :doc:`security/spam_protection`
 - :doc:`security/captchas`
+- :doc:`security/general_tips`
 
 Optimizing ExpressionEngine
 ===========================
