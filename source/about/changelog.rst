@@ -8,29 +8,30 @@ ExpressionEngine 2.x Change Log
 Version 2.10.0
 --------------
 
-Release Date: ?
+Release Date: April 29, 2015
 
 - Important:
 
-  - Added .htaccess to images directory to prevent execution of
-    PHP files.
-  - Removed config from the output profiler.
+  - Added ``.htaccess`` to images directory to :doc:`prevent execution
+    of PHP files </security/arbitrary_code_execution>`.
+  - Removed ``config`` from the output profiler.
   - Fixed a bug where, given a valid stolen session ID, a
     malicious user could create a valid session in rare circumstances.
-  - Changed the config/mimes.php file format: it is now a whitelist of MIME Types
-    available for upload.
-  - Preventing hidden files from being uploaded.
-  - Added a config override to blacklist certain filenames from being uploaded.
+  - Changed the ``config/mimes.php`` file format: it is now a whitelist
+    of MIME Types available for upload.
+  - Added hidden file upload prevention.
+  - Added a config override to :ref:`blacklist certain filenames from
+    being uploaded <upload_file_name_blacklist>`.
 
 - General Changes:
 
   - Added option to enable or disable private messages site-wide.
   - Added option to allow or disallow attachments in private messages
     site-wide.
-  - Added new conditional variable to forum templates, `{if pm_enabled}`,
-    for conditionally displaying content if private messages are enabled
-    for the logged-in user.
-  - Added a DD-MM-YYYY date format
+  - Added new conditional variable to forum templates,
+    ``{if pm_enabled}``, for conditionally displaying content if private
+    messages are enabled for the logged-in user.
+  - Added a ``DD-MM-YYYY`` date format
   - Added Channel ID to Channel Management page.
   - Added Field Group ID to Channel Fields Management page.
   - Added Status Group ID and Status ID to Status Group and Status
@@ -39,7 +40,8 @@ Release Date: ?
   - Channel Form date fields now accept the date and time format setup in
     your localization settings instead of requiring
     ``yyyy-mm-dd hh:mm PM``.
-  - Added ``max_url_segments`` config override. Increased default to 12.
+  - Added :ref:`max_url_segments` config override. Increased default to
+    12.
   - Updated some date formatting defaults to use 4 digit years.
   - Optimized queries used in new channel field creation.
 
@@ -51,16 +53,17 @@ Release Date: ?
     referencing Template Routes when upgrading ExpressionEngine Core.
   - Fixed a bug (#20912) where switch variables were not parsed in Channel
     Categories.
-  - Fixed a bug (#20926) where `IS_EMPTY` did not account for `NULL`
+  - Fixed a bug (#20926) where ``IS_EMPTY`` did not account for ``NULL``
     database values.
   - Fixed a bug with relationships, where some template code combinations
     could trigger PHP errors.
   - Fixed a bug where private message attachments would not be removed from the
     file system when the message was deleted.
-  - Fixed a bug (#20893) where some dd/mm/yyyy dates were incorrectly marked
-    invalid.
-  - Fixed a bug (#20114) where SVG files were not an acceptable image format.
-  - Fixed a bug (#20862) where yyyy-dd-mm date formats would not be
+  - Fixed a bug (#20893, #20941) where some ``dd/mm/yyyy`` dates were
+    incorrectly marked invalid.
+  - Fixed a bug (#20114) where SVG files were not an acceptable image
+    format.
+  - Fixed a bug (#20862) where ``yyyy-dd-mm`` date formats would not be
     accepted.
   - Fixed a bug (#20866) where the upload file button did not work in the
     File Manager.
@@ -72,6 +75,11 @@ Release Date: ?
     with regard to field types.
   - Fixed a bug (#20708) where the updater could fail when trying to display a
     survey if PHP short tags were disabled.
+  - Fixed a bug (#20939) where member group category permissions were not being
+    saved
+  - Fixed a bug (#20745) where channel forms did not respect the "Can edit
+    entries authored by others" permission.
+
 
 - Developers:
 

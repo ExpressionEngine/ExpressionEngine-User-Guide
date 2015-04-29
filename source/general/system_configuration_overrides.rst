@@ -2867,6 +2867,7 @@ $config['max_tmpl_revisions'] = '10';
 Global Template Preferences`: :ref:`Maximum Number of Revisions to Keep
 <global-template-max-revisions-label>`
 
+.. _max_url_segments:
 
 max_url_segments
 ----------------
@@ -4984,6 +4985,7 @@ $config['un_min_len'] = '5';
 Privacy --> Security and Sessions`: :ref:`Minimum Username Length
 <security-min-username-label>`
 
+.. _upload_file_name_blacklist:
 
 upload_file_name_blacklist
 --------------------------
