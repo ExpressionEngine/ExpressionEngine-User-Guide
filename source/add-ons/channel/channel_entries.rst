@@ -439,8 +439,6 @@ entry\_id=
 
 	entry_id="147"
 
-You can hard code the channel tag to show a specific channel entry.
-
 You can hard code the channel tag to show a specific channel entry. You
 may also specify multiple entries by separating them with the pipe
 character::

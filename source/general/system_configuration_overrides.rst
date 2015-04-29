@@ -2867,6 +2867,23 @@ $config['max_tmpl_revisions'] = '10';
 Global Template Preferences`: :ref:`Maximum Number of Revisions to Keep
 <global-template-max-revisions-label>`
 
+.. _max_url_segments:
+
+max_url_segments
+----------------
+
+Set the maximum number of URL segments allows in requests made to your site.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Maximum number of URL segments to allow **(default is 12)**
+=========== ===========
+
+Example Usage::
+
+$config['max_url_segments'] = '12';
+
 
 .. _mbr_notification_emails:
 
@@ -2961,6 +2978,56 @@ $config['memberlist_order_by'] = 'total_posts';
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
 :ref:`Member List - Sort By <member-list-rows-label>`
+
+
+.. _overrides-mime-whitelist-additions:
+
+mime_whitelist_additions
+------------------------
+
+With an array, add Mime Types to the whitelist.
+
+Example Usage::
+
+  $config['mime_whitelist_additions'] = array(
+    'image/vnd.adobe.photoshop'
+  );
+
+
+.. _overrides-mime-whitelist-member-exception:
+
+mime_whitelist_member_exception
+-------------------------------
+
+Specify member IDs to exclude from Mime Type whitelist restrictions.
+
+========== ===========
+Value      Description
+========== ===========
+``text``   Comma-delimited list of member IDs
+========== ===========
+
+Example Usage::
+
+$config['mime_whitelist_member_exception'] = '3, 14, 83';
+
+
+.. _overrides-mime-whitelist-member-group-exception:
+
+mime_whitelist_member_group_exception
+-------------------------------------
+
+Specify member group IDs to exclude from Mime Type whitelist restrictions.
+
+========== ===========
+Value      Description
+========== ===========
+``text``   Comma-delimited list of member group IDs
+========== ===========
+
+Example Usage::
+
+$config['mime_whitelist_member_group_exception'] = '2, 5';
 
 
 moblog_allow_nontextareas
@@ -4917,6 +4984,19 @@ $config['un_min_len'] = '5';
 **Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: :ref:`Minimum Username Length
 <security-min-username-label>`
+
+.. _upload_file_name_blacklist:
+
+upload_file_name_blacklist
+--------------------------
+
+With an array, add a case insensitive list of file names that cannot be uploaded.
+
+Example Usage::
+
+  $config['upload_file_name_blacklist'] = array(
+    'logo.png',
+  );
 
 
 upload_preferences
