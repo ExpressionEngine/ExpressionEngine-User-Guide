@@ -66,6 +66,8 @@ Remove Unused Add-ons and Applications
 When an add-on or other application on the server is no longer used, we
 recommend removing the associated code.
 
+.. _arbitrary_code_execution:
+
 ****************************
 Disable Uploaded Executables
 ****************************
