@@ -5,6 +5,24 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.10.1
+--------------
+
+Release Date: May 1, 2015
+
+- Bug Fixes:
+
+  - Fixed a bug where ordering a Grid field by random on an MSM site
+    could break nested relationship tags.
+  - Fixed a bug where new versions were not reported consistently.
+  - Fixed a bug (#20743) where submitting an empty form while removing plugins
+    caused a PHP error
+  - Fixed a bug (#20954) where viewing a member's account in the Control Panel
+    would result in a white screen.
+  - Fixed a bug where the selected entries pane of a relationship field
+    wouldn't show up when you didn't have enough entries selected to fill
+    it.
+
 Version 2.10.0
 --------------
 
@@ -12,8 +30,8 @@ Release Date: April 29, 2015
 
 - Important:
 
-  - Added ``.htaccess`` to images directory to :doc:`prevent execution
-    of PHP files </security/arbitrary_code_execution>`.
+  - Added ``.htaccess`` to images directory to :ref:`prevent execution
+    of PHP files <arbitrary_code_execution>`.
   - Removed ``config`` from the output profiler.
   - Fixed a bug where, given a valid stolen session ID, a
     malicious user could create a valid session in rare circumstances.
@@ -69,7 +87,7 @@ Release Date: April 29, 2015
     File Manager.
   - Fixed a bug (#20864) where the select all checkbox at the bottom of
     Manage Database Tables did not work.
-  - Fixed a bug where the ``valid_date`` form validation would fail on
+  - Fixed a bug (#20892) where the ``valid_date`` form validation would fail on
     some date formats.
   - Fixed a bug (#20705) where category custom field creation was not consistent
     with regard to field types.
