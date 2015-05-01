@@ -21,7 +21,9 @@ to stay ahead of the ever evolving exploit landscape.
 Limit User Permissions
 **********************
 
-You should only provide people with the minimum permissions they need to do what they need to do. In ExpressionEngine parlance, don't put everyone in the Super Admin member group.
+You should only provide people with the minimum permissions they need to
+do what they need to do. In ExpressionEngine parlance, don't put everyone
+in the Super Admin member group.
 
 This also applies to access to your webserver. Do not provide others with
 FTP or SSL access unless it is absolutely necessary. Periodically review
