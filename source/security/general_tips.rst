@@ -83,12 +83,10 @@ or your server is compromised in any other way, we recommend using your
 web-servers native security features to further lock down file upload
 directories.
 
-If you have to allow files other than images, then we recommend a simple
-``.htaccess`` file at the root of the directory where you'll be allowing
-user uploads::
+We recommend a simple ``.htaccess`` file at the root of the directory
+where you'll be allowing user uploads::
 
   SetHandler default-handler
-
 
 .. note:: ``.htaccess`` files only work on Apache servers that permit
   their usage. You should test to see if this method actually prevents
