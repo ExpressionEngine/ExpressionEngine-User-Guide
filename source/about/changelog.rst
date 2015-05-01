@@ -19,6 +19,9 @@ Release Date: May 1, 2015
     caused a PHP error
   - Fixed a bug (#20954) where viewing a member's account in the Control Panel
     would result in a white screen.
+  - Fixed a bug where the selected entries pane of a relationship field
+    wouldn't show up when you didn't have enough entries selected to fill
+    it.
 
 Version 2.10.0
 --------------
