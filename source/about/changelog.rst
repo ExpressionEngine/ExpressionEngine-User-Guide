@@ -14,8 +14,7 @@ Release Date: May 1, 2015
 
   - Fixed a bug where ordering a Grid field by random on an MSM site
     could break nested relationship tags.
-  - Fixed a bug where the ExpressionEngine Info Accessory did not report
-    the new version correctly.
+  - Fixed a bug where new versions were not reported consistently.
   - Fixed a bug (#20743) where submitting an empty form while removing plugins
     caused a PHP error
   - Fixed a bug (#20954) where viewing a member's account in the Control Panel
