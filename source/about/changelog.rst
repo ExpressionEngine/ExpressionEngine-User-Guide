@@ -12,8 +12,8 @@ Release Date: April 29, 2015
 
 - Important:
 
-  - Added ``.htaccess`` to images directory to :doc:`prevent execution
-    of PHP files </security/arbitrary_code_execution>`.
+  - Added ``.htaccess`` to images directory to :ref:`prevent execution
+    of PHP files <arbitrary_code_execution>`.
   - Removed ``config`` from the output profiler.
   - Fixed a bug where, given a valid stolen session ID, a
     malicious user could create a valid session in rare circumstances.

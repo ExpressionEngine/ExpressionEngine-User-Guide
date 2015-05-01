@@ -2,14 +2,7 @@ Spam Protection
 ===============
 
 Comment spamming and other types of spamming have become common problems
-for systems that permit user-submitted information. If you are not
-familiar with comment spamming, it is when someone repeatedly submits
-malicious comments into your system. This can be done by someone
-manually, or if the person is more sophisticated, it can be done using
-scripts designed to insert hundreds, or even thousands of comments
-automatically. The purpose of spam is to increase traffic at the
-spammer's web site. By leaving comments linking to their site, they
-increase their position in Search Engine listings.
+for systems that permit user-submitted information.
 
 ExpressionEngine has several security features aimed at preventing
 spamming. There is no "silver bullet", as spammers adapt their tactics
@@ -26,9 +19,8 @@ capability. This Module allows you to specify URLs, IP addresses, and
 user agents that you want to deny (blacklist) or specifically allow
 (whitelist) from your site.
 
-The blacklist checks all content that is submitted to your site.
-ExpressionEngine will compare the submitted content against your
-blacklist/whitelist and then behave accordingly.
+The module checks all content that is submitted to your site and allows
+or denies it, according to the rules you have set.
 
 CAPTCHAs
 --------
