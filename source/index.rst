@@ -89,7 +89,7 @@ Maintenance & Operations
 Securing ExpressionEngine
 =========================
 
-- :doc:`security/arbitrary_code_execution`
+- :doc:`security/general_tips`
 - :doc:`security/spam_protection`
 - :doc:`security/captchas`
 
