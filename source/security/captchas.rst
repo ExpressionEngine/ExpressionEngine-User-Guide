@@ -3,11 +3,11 @@ CAPTCHAs
 
 ExpressionEngine supports what are known as "CAPTCHAs", or Completely
 Automated Public Turing tests to tell Computers and Humans Apart. A
-CAPTCHA is a computer-generated test that humans can pass but that are
-computationally difficult for computers to do.
+CAPTCHA is a computer-generated test that humans can easily pass, but
+that is computationally difficult for a computer to do.
 
 So how does this work? An image is generated in real time for a user
-loading a web page. This image contains a word that the user must submit
+loading a web page. This image contains a word that the user must enter
 in a form. The concept is effective because computers are generally not
 very good at reading images, but it is something humans can do with
 little effort.
@@ -90,9 +90,6 @@ these legitimate users to be able to use your site.
 You should determine for yourself whether or not CAPTCHAs are
 appropriate for your situation and your website audience.
 
-In addition, your server must have the GD (or GD 2) image library
-support installed in order for CAPTCHAs to work.
-
 For ExpressionEngine installations that power multiple domains or
 subdomains, you may need to place the *server* path for the **Relative
 Path to Captcha Folder** setting under :menuselection:`Admin --> Captcha
@@ -100,10 +97,6 @@ Preferences`. A server path is typically something similar to
 /home/domain.com/http\_docs/images/captchas/. The specific setting will
 vary from server to server so you may need to contact your Host or
 server admin to determine what your correct "server path" is.
-
-If your server does not have True Type font support compiled into PHP
-you should disable the use of True Type fonts under :menuselection:`Admin
---> Security` and :menuselection:`Privacy --> Captcha Preferences`.
 
 Special CAPTCHA Files
 ---------------------
