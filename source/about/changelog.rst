@@ -5,6 +5,22 @@ ExpressionEngine 2.x Change Log
    :local:
    :depth: 1
 
+Version 2.10.1
+--------------
+
+Release Date: May 1, 2015
+
+- Bug Fixes:
+
+  - Fixed a bug where ordering a Grid field by random on an MSM site
+    could break nested relationship tags.
+  - Fixed a bug where the ExpressionEngine Info Accessory did not report
+    the new version correctly.
+  - Fixed a bug (#20743) where submitting an empty form while removing plugins
+    caused a PHP error
+  - Fixed a bug (#20954) where viewing a member's account in the Control Panel
+    would result in a white screen.
+
 Version 2.10.0
 --------------
 
