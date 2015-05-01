@@ -57,6 +57,13 @@ you only expect images to be uploaded, you should only allow images. Be
 as strict as you can be initially, and loosen requirements on a
 case-by-case basis.
 
+**************************************
+Remove Unused Add-ons and Applications
+**************************************
+
+When an add-on or other application on the server is no longer used, we
+recommend removing the associated code.
+
 ****************************
 Disable Uploaded Executables
 ****************************
