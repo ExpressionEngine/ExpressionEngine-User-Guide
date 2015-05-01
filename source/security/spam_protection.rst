@@ -19,9 +19,8 @@ capability. This Module allows you to specify URLs, IP addresses, and
 user agents that you want to deny (blacklist) or specifically allow
 (whitelist) from your site.
 
-The blacklist checks all content that is submitted to your site.
-ExpressionEngine will compare the submitted content against your
-blacklist/whitelist and then behave accordingly.
+The module checks all content that is submitted to your site and allows
+or denies it, according to the rules you have set.
 
 CAPTCHAs
 --------
