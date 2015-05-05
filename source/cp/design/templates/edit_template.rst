@@ -111,6 +111,25 @@ Hit Counter
 If you wish to manually revise the hit counter for a Template you may do
 so.
 
+Template Size
+~~~~~~~~~~~~~
+
+The Template Size field allows you to change the size of the main
+editing form in this page. The change you make will be applied globally
+to all templates, but **only** for your particular membership account.
+Each member of your site that has Template editing privileges can set
+their own Template Size so that the editing field fits the size of their
+particular computer monitor and web browser.
+
+Protect JavaScript
+~~~~~~~~~~~~~~~~~~
+
+Heavily compressed JavaScript can sometimes look like valid template
+tags (e.g. ``{if ...}``). When this setting is enabled, the template
+parser will not attempt any conditional parsing inside ``<script>``
+tags. If there is no JavaScript in this template, or the JavaScript is
+not compressed, then you do not need to worry about this setting.
+
 Access
 ~~~~~~
 
@@ -126,32 +145,12 @@ Template Notes
 The Template Notes tab enables you to save notes and information about
 your template. This information is available only in this page.
 
-Template Size
-~~~~~~~~~~~~~
-
-The Template Size field allows you to change the size of the main
-editing form in this page. The change you make will be applied globally
-to all templates, but **only** for your particular membership account.
-Each member of your site that has Template editing privileges can set
-their own Template Size so that the editing field fits the size of their
-particular computer monitor and web browser.
-
-Export Template
-~~~~~~~~~~~~~~~
-
-This immediately downloads an editable file of the currently displayed
-template. Files are saved with an appropriate extension based on their
-template type, e.g. Web Page templates are saved as .html, RSS Page
-templates are saved as .xml, etc.
-
 Template Syntax Warnings
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-After you save your template, ExpressionEngine looks for modules and
+As you write your template, ExpressionEngine looks for modules and
 plugins that are either not installed or do not exist. In the event that
-matches are found it returns to the template editor with a template
-syntax warning. Frequently these are misspellings, so a find and replace
-utility is provided in those cases to easily make global replacements.
+matches are found it will indicate these with a red dotted underline.
 
 .. |Template Edit| image:: ../../../images/template_edit.png
 .. |Template Preferences| image:: ../../../images/template_preferences.png
