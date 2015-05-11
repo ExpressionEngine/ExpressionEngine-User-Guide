@@ -124,8 +124,8 @@ a field based on the value of another field::
 
   $validator->setRules(array(
     'notify-type' => 'required|enum[email,sms]',
-    'email' => 'whenNotifyType[email]|required|email',
-    'sms' => 'whenNotifyType[sms]|required|regex[/^\d{3}-\d{3}-\d{4}$/]',
+    'email' => 'whenNotifyTypeIs[email]|required|email',
+    'sms' => 'whenNotifyTypeIs[sms]|required|regex[/^\d{3}-\d{3}-\d{4}$/]',
   ));
 
 
