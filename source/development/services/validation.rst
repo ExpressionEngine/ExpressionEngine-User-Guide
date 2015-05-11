@@ -102,7 +102,32 @@ validator object. This is done by calling the ``defineRule`` method::
     'age' => 'required|impossible'
   ));
 
-  $result = $validator->validate();
+  $result = $validator->validate($data);
+
+
+Custom Conditional Rules
+------------------------
+
+Custom conditional rules can be created by returning the ``SKIP`` class
+constant from ``EllisLab\ExpressionEngine\Service\Validation\Validator``.
+This can be useful, for example, if you need to conditionally validate
+a field based on the value of another field::
+
+  use EllisLab\ExpressionEngine\Service\Validation\Validator;
+
+  $data = $_POST;
+
+  $validator->defineRule('whenNotifyTypeIs', function($key, $value, $parameters) use ($data)
+  {
+    return ($data['notify-type'] == $parameters[0]) ? TRUE : Validator::SKIP;
+  });
+
+  $validator->setRules(array(
+    'notify-type' => 'required|enum[email,sms]',
+    'email' => 'whenNotifyType[email]|required|email',
+    'sms' => 'whenNotifyType[sms]|required|regex[/^\d{3}-\d{3}-\d{4}$/]',
+  ));
+
 
 Built in Rules
 --------------
