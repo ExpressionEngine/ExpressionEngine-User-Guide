@@ -63,12 +63,6 @@ localization preferences. If set to "No", all dates and times will be
 localized to the site default and localization preferences will be
 disabled in the Member Profile and My Account pages.
 
-Enable Membership Captcha
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Here you can determine whether :doc:`CAPTCHAs </security/captchas>` are
-required for new members registering.
-
 .. _default-member-group-label:
 
 Default Member Group Assigned to New Members

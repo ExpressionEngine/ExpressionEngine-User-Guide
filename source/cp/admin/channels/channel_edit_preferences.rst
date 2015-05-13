@@ -212,12 +212,6 @@ post. If this preferences is set to "Yes" and an unregistered visitor
 attempts to post a comment the comment will not be accepted and the
 visitor will receive a message.
 
-Enable Captcha for Comment Posting?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Determines whether or not you require :doc:`/security/captchas` to be
-used when submitting comments.
-
 Require email address to post comments?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

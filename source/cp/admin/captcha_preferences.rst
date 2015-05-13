@@ -10,6 +10,18 @@ This section of the Control Panel allows you to set
 website.
 
 
+.. _captcha-require:
+
+Require CAPTCHA?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you enable this preference, then site visitors will be required to
+pass a CAPTCHA to submit any front-end form, including Channel Form,
+comment forms, and member registrations. If members are logged in, they
+will not have to enter a CAPTCHA unless the
+:ref:`Require CAPTCHA with logged-in members? <captcha-require-logged-in-members>`
+preference is enabled below.
+
 .. _captcha-server-path:
 
 Server Path to CAPTCHA Folder

@@ -849,7 +849,8 @@ captcha_require_members
 -----------------------
 
 Specify whether to require logged-in members to pass CAPTCHA validation
-to post comments, assuming the CAPTCHA is already enabled for comments.
+to submit front-end forms, such as Channel Form, comment forms and email
+forms.
 
 ====== ========
 Value  Behavior
@@ -864,8 +865,8 @@ $config['captcha_require_members'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> CAPTCHA Preferences`: :ref:`Require CAPTCHA with logged-in
+**Also found in CP:** :menuselection:`Settings --> CAPTCHA`:
+:ref:`Require CAPTCHA with logged-in
 members <captcha-require-logged-in-members>`
 
 
@@ -1685,32 +1686,6 @@ $config['email_debug'] = 'y';
 **Also found in CP:** :menuselection:`Admin --> Email
 Configuration`: :ref:`Enable Email Debugging
 <email-enable-debugging-label>`
-
-
-email_module_captchas
----------------------
-
-When enabled, users will need to fill out a :doc:`CAPTCHA
-</security/captchas>` when using the Tell-a-Friend or Contact email
-forms. You will need to ensure that your tags for those forms contain
-the appropriate CAPTCHA code.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Enable CAPTCHAS on Tell-a-Friend and Contact email forms
-``n``      Disable CAPTCHAS on Tell-a-Friend and Contact email forms **(default)**
-========== ========
-
-Example Usage::
-
-$config['email_module_captchas'] = 'y';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`Enable CAPTCHAs for Tell-a-Friend and Contact
-emails <email-enable-captchas-label>`
 
 
 email_newline
@@ -3710,6 +3685,24 @@ $config['req_mbr_activation'] = 'none';
 :ref:`Require Member Account Activation
 <member-account-activation-label>`
 
+.. _require_captcha:
+
+require_captcha
+---------------
+
+When enabled, site visitors will be required to pass a CAPTCHA to submit
+any front-end form, including Channel Form, comment forms, and member
+registrations.
+
+========== ========
+Value      Behavior
+========== ========
+``y``      Enable CAPTCHAS front-end forms
+``n``      Disable CAPTCHAS on front-end forms **(default)**
+========== ========
+
+**Also found in CP:** :menuselection:`Settings --> CAPTCHA`:
+:ref:`Require CAPTCHA <captcha-require>`
 
 .. _require_ip_for_login:
 

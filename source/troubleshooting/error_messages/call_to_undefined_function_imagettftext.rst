@@ -15,5 +15,5 @@ admin and have them upgrade to a PHP version that has such support
 compiled in.
 
 If that is not an option, **Use TrueType Font for Captcha?** should be
-set to *No* under :menuselection:`Admin --> Captcha Preferences` or
+set to *No* under :menuselection:`Settings --> CAPTCHA` or
 CAPTCHAs should be disabled altogether.
