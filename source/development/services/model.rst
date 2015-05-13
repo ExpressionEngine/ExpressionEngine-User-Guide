@@ -167,8 +167,8 @@ setters by creating methods in the format of ``get__<property>`` or
   {
     list($first, $last) = explode(' ', $value);
 
-    $this->first_name = $first;
-    $this->last_name = $last;
+    $this->setRawProperty('first_name', $first);
+    $this->setRawProperty('last_name', $last);
   }
 
   $my_model->name = 'Bob Bobson';
@@ -177,6 +177,9 @@ setters by creating methods in the format of ``get__<property>`` or
 .. note:: These methods break the camelCase naming convention in order
   to match the snake_case property names. It also serves as a clear
   indicator that these methods should not be called directly.
+
+When setting properties manually you should take care to use
+`setRawProperty`, which will correctly track changes to the property.
 
 Typed Columns
 -------------
@@ -291,3 +294,46 @@ namespace:
 Multiple Tables
 ---------------
 
+
+Model Methods
+-------------
+
+.. class:: EllisLab\\ExpressionEngine\\Service\\Model\\Model
+
+.. method:: getProperty($name)
+
+  Get a model property, calling any getters that were defined by
+  the model.
+
+  :param string $name: The name of the property
+  :returns: The value of the property
+  :rtype: Mixed
+
+.. method:: setProperty($name, $value)
+
+  Set a model property and track its dirty state. Calls any setters that
+  were defined by the model.
+
+  :param string $name: The name of the property
+  :param mixed $value: The value to set the property to
+  :returns: $this
+  :rtype: Model
+
+.. method:: getRawProperty($name)
+
+  Get a model property, *without* calling any getters that were defined
+  by the model.
+
+  :param string $name: The name of the property
+  :returns: The value of the property
+  :rtype: Mixed
+
+.. method:: setRawProperty($name, $value)
+
+  Set a model property and track its dirty state. Does not call any
+  setters that were defined by the model.
+
+  :param string $name: The name of the property
+  :param mixed $value: The value to set the property to
+  :returns: $this
+  :rtype: Model
