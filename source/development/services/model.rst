@@ -300,6 +300,27 @@ Model Methods
 
 .. class:: EllisLab\\ExpressionEngine\\Service\\Model\\Model
 
+.. method:: getId()
+
+  Get the primary key value
+
+  :returns: The primary key value
+  :rtype: Int (or null if not yet saved)
+
+.. method:: getName()
+
+  Get the model alias that was registered with ExpressionEngine.
+
+  :returns: The model alias
+  :rtype: String
+
+.. method:: getPrimaryKey()
+
+  Get the primary key name
+
+  :returns: The primary key name
+  :rtype: String
+
 .. method:: getProperty($name)
 
   Get a model property, calling any getters that were defined by
