@@ -137,6 +137,15 @@ Service <./validation>`. They should be added as a static property called
     'email' => 'required|email'
   );
 
+To test a model for errors, call the `->validate()` method. The returned
+object will be a result class of the Validation Service::
+
+  $result = $model->validate();
+
+  if ($result->isValid())
+  {
+    // yay
+  }
 
 Getters and Setters
 -------------------
