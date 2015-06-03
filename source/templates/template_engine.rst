@@ -105,6 +105,7 @@ bottom through each rendering stage.
    * {charset}
    * {lang}
    * {doc_url}
+   * {password_max_length}
    * {theme_folder_url}
    * {member_profile_link}
    * {captcha}

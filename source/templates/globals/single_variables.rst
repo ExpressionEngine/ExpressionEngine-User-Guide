@@ -320,6 +320,19 @@ member's screen name. For instance, the output might be::
 
   <a href="http://example.com/index.php/member/1/">Joe Smith</a>
 
+
+password_max_length
+-------------------
+
+::
+
+  {password_max_length}
+
+This variable is used the ``maxlength`` property of password inputs on
+login forms::
+
+  <input type="password" name="password" maxlength="{password_max_length}" autocomplete='off' />
+
 .. _global_redirect:
 
 redirect

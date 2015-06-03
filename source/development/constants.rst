@@ -95,3 +95,4 @@ Others
 - ``EXT`` - File extension (``.php``)
 - ``UTF8_ENABLED`` - Server has proper UTF-8 support
 - ``MB_ENABLED`` - Server has multibyte function support
+- ``PASSWORD_MAX_LENGTH`` - Maximum number of characters for a password.
