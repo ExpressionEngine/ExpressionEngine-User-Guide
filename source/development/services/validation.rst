@@ -41,7 +41,7 @@ The rules are processed from left to right::
 Some rules may also take parameters. These are added in braces after the
 rule name::
 
-  "required|enum[blue, red, yellow]" // only allow these three color names
+  "required|enum[blue,red,yellow]" // only allow these three color names
 
 
 .. _validation-service-required:
@@ -108,18 +108,18 @@ validator object. This is done by calling the ``defineRule`` method::
 Custom Conditional Rules
 ------------------------
 
-Custom conditional rules can be created by returning the ``SKIP`` class
-constant from ``EllisLab\ExpressionEngine\Service\Validation\Validator``.
-This can be useful, for example, if you need to conditionally validate
-a field based on the value of another field::
+Custom conditional rules can be created by calling ``skip()`` on the
+``ValidationRule`` object. This can be useful, for example, if you
+need to conditionally validate a field based on the value of another
+field::
 
   use EllisLab\ExpressionEngine\Service\Validation\Validator;
 
   $data = $_POST;
 
-  $validator->defineRule('whenNotifyTypeIs', function($key, $value, $parameters) use ($data)
+  $validator->defineRule('whenNotifyTypeIs', function($key, $value, $parameters, $rule) use ($data)
   {
-    return ($data['notify-type'] == $parameters[0]) ? TRUE : Validator::SKIP;
+    return ($data['notify-type'] == $parameters[0]) ? TRUE : $rule->skip();
   });
 
   $validator->setRules(array(
@@ -129,7 +129,7 @@ a field based on the value of another field::
   ));
 
 
-Built in Rules
+Built-in Rules
 --------------
 
 +------------------------+--------------------------------------------+--------------------------+
@@ -144,6 +144,9 @@ Built in Rules
 | **alphaNumeric**       | Alpha plus numbers                         | ``alphaNumeric``         |
 |                        |                                            |                          |
 +------------------------+--------------------------------------------+--------------------------+
+| **boolean**            | Must be of boolean type                    | ``boolean``              |
+|                        |                                            |                          |
++------------------------+--------------------------------------------+--------------------------+
 | **email**              | Email addresses                            | ``email``                |
 |                        |                                            |                          |
 +------------------------+--------------------------------------------+--------------------------+
@@ -152,6 +155,12 @@ Built in Rules
 +------------------------+--------------------------------------------+--------------------------+
 | **exactLength**        | Input must have exactly ``n`` characters   | ``exactLength[4]``       |
 |                        |                                            |                          |
++------------------------+--------------------------------------------+--------------------------+
+| **fileExists**         | File or path must exist                    | ``fileExists``           |
+|                        |                                            |                          |
++------------------------+--------------------------------------------+--------------------------+
+| **hexColor**           | A three or six-character hex code          | ``hexColor`              |
+|                        | without a pound sign                       |                          |
 +------------------------+--------------------------------------------+--------------------------+
 | **integer**            | Must be an integer                         | ``integer``              |
 |                        |                                            |                          |
@@ -171,6 +180,9 @@ Built in Rules
 | **minLength**          | No fewer than ``n`` characters             | ``minLength[8]``         |
 |                        |                                            |                          |
 +------------------------+--------------------------------------------+--------------------------+
+| **noHtml**             | Must not contain HTML                      | ``noHtml``               |
+|                        |                                            |                          |
++------------------------+--------------------------------------------+--------------------------+
 | **numeric**            | Any number, including decimals             | ``numeric``              |
 |                        |                                            |                          |
 +------------------------+--------------------------------------------+--------------------------+
@@ -180,9 +192,18 @@ Built in Rules
 | **required**           | Must not be blank.                         | ``required``             |
 |                        | See :ref:`validation-service-required`     |                          |
 +------------------------+--------------------------------------------+--------------------------+
+| **url**                | Must be a valid URL                        | ``url``                  |
+|                        |                                            |                          |
++------------------------+--------------------------------------------+--------------------------+
 | **validBase64**        | Base64 character set only                  | ``validBase64``          |
 |                        |                                            |                          |
 +------------------------+--------------------------------------------+--------------------------+
 | **whenPresent**        | Only validate if field was sent.           | ``whenPresent``          |
 |                        | See :ref:`validation-service-when-present` |                          |
++------------------------+--------------------------------------------+--------------------------+
+| **writeable**          | File or path must be writeable             | ``writeable``            |
+|                        |                                            |                          |
++------------------------+--------------------------------------------+--------------------------+
+| **xss**                | Must not contain content that looks like   | ``xss``                  |
+|                        | XSS (Cross Site Scripting)                 |                          |
 +------------------------+--------------------------------------------+--------------------------+
