@@ -1019,48 +1019,28 @@ display to a specific date range.
 Format
 ~~~~~~
 
-The date/time **must** be specified in the following format:
+The `start_on=`_ parameter accepts any input that an ExpressionEngine
+Date field would accept. This means you have a wide variety of options::
 
--  YYYY-MM-DD HH:MM
-
-Here, YYYY is the four-digit year, MM is the two-digit month, DD is the
-two-digit day of the month, HH is the two-digit hour of the day, and MM
-is the two-digit minute of the hour. If the month, day, hour or minute
-has only one digit, precede that digit with a zero. (E.g. "March 9,
-2004" would become "2004-03-09".) All date/times are given in local
-time, according to your ExpressionEngine configuration.
-
-You may optionally use a 12 hour time format by including am/pm notation
-(2004-06-05 20:00 is equivalent to: 2004-06-05 08:00 PM and 2004-06-05
-08:00 pm; 2004-06-05 08:00 is equivalent to: 2004-06-05 08:00 AM and
-2004-06-05 08:00 am).
-
-.. note:: If you are using a non-English language pack, it's necessary
-	to use a 24 hour format only, as the AM/PM indicators may have been
-	changed.
+  start_on="October 21st, 2015 4:30 PM"
+  start_on="today"
+  start_on="yesterday"
+  start_on="last Monday"
+  start_on="-2 months"
 
 Common Uses
 ~~~~~~~~~~~
 
 This parameter can be used in conjunction with :ref:`global_current_time`::
 
-	{exp:channel:entries channel="{my_weblog}" sort="desc" start_on="{current_time format='%Y-%m-%d %H:%i'}" show_future_entries="yes"}
+	{exp:channel:entries channel="{my_weblog}" sort="desc" start_on="{current_time}" show_future_entries="yes"}
 
 The above would display future entries starting from the current time.
 
-If the date needs to be set dynamically, then PHP must often be used.
-:doc:`Enable PHP </templates/php>` in the Template and set
-it to be parsed on "input". One example usage is::
+To display up to 5 entries with entry dates that fall within the
+previous 24 hours::
 
-	<?php
-		$start_time = ee()->localize->format_date('%Y-%m-%d %H:%i', ee()->localize->now - 86400);
-	?>
-
-	{exp:channel:entries channel="{my_weblog}" limit="5" sort="desc" start_on="<?php echo $start_time; ?>"}
-
-The above would display up to 5 entries with entry dates that fall
-within the previous 24 hours (86400 seconds is the number of seconds in
-one day: 60 seconds \* 60 minutes \* 24 hours).
+	{exp:channel:entries channel="{my_weblog}" limit="5" sort="desc" start_on="-24 hours"}
 
 status=
 -------
@@ -1102,19 +1082,8 @@ entries that are before this date will be included in the display
 is often used together with the `start_on=`_ parameter
 for limiting the entry display to a specific date range.
 
-If the date needs to be set dynamically, then PHP must often be used.
-:doc:`Enable PHP </templates/php>` in the Template and set
-it to be parsed on "input" and then use something like this::
-
-	<?php
-		$current_time = ee()->localize->format_date('%Y-%m-%d %H:%i', ee()->localize->now - 518400);
-	?>
-
-	{exp:channel:entries channel="{my_weblog}" orderby="date" sort="desc" stop_before="<?php echo $current_time; ?>"}
-
-The above would display entries in descending date from six days in the
-past (518400 is the number of seconds in six days : 60 seconds \* 60
-minutes \* 24 hours \* 6 days).
+This parameter accepts the same date formats as the `start_on=`_
+parameter.
 
 sticky=
 -------
