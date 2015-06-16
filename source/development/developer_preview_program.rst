@@ -114,7 +114,6 @@ and encourage them to join!
 - Ian Young (Expresso)
 - Ira Salsberg
 - Isaac Rayway
-- Jack McDade
 - James Smith
 - Jamie Pittock
 - Jamie Taylor (Percipio)
