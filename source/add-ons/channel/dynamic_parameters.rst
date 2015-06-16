@@ -17,11 +17,11 @@ given channel tag, like this
 
 ::
 
-  {exp:channel:entries  dynamic_parameters="orderby|limit|category"}
+  {exp:channel:entries dynamic_parameters="orderby|limit|category"}
 
 In the above example you would be allowing the orderby, limit, and category
 parameters. Note that the allowed parameters are being separated with a
-"pipe" character: |.
+"pipe" character: \|.
 
 Once you've enabled the parameters as indicated above, you can create a
 form on one of your pages to generate the parameters dynamically. Here's
@@ -38,7 +38,7 @@ being used.
       <select name="orderby">
           <option value="date">Sort By:</option>
           <option value="date">Date</option>
-          <option value="title">Title</option> 
+          <option value="title">Title</option>
           <option value="comment_total">Most Comments</option>
       </select>
       <select name="sort">
@@ -57,12 +57,14 @@ being used.
   </form>
 
 Note the inclusion of the ``[]`` at the end of the field name.  This allows more than one option to be specified for the category field:
+
 ::
       <select name="category[]">
 
 By default, if multiple values are submitted for a single field name, they will be treated as pipe delimited values by the tag.  In the above example, if both "Dogs" and "Cats" are selected, then entries in either the Dogs category or the Cats category would be returned.
 
 To designate multiple values be treated as an inclusive stack, add a ``[&]`` to the field name in the parameter:
+
 ::
 
   dynamic_parameters="orderby|limit|category[&]"
