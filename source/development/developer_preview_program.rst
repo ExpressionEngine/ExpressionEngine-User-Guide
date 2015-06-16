@@ -85,7 +85,7 @@ and encourage them to join!
 - Brad Morse
 - Brad Parscale (DevDemon)
 - Brandon Kelly
-- Brian Litzinger
+- Brian Litzinger (BoldMinded)
 - Bryan Burgers
 - Carl Crawley
 - Chris Barrett
