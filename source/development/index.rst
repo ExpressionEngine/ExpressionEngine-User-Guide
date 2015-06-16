@@ -13,6 +13,7 @@ ExpressionEngine.
 General Development
 *******************
 
+- :doc:`The addon.setup.php File </development/addon_setup_php_file>`
 - :doc:`2.0 Conversion </development/conversion/index>`
 - :doc:`Constants Reference </development/constants>`
 - :doc:`Accessory Development </development/accessories>`
