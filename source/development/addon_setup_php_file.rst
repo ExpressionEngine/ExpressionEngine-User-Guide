@@ -1,6 +1,8 @@
 The ``addon.setup.php`` File
 ============================
 
+.. highlight:: php
+
 Starting with version 3.0 Each add-on in ExpressionEngine must have an
 ``addon.setup.php`` file in its package directory. This file provides
 descriptive data about a specific add-on such as author, name, and version.
