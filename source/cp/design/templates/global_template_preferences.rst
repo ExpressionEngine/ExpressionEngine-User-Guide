@@ -3,7 +3,7 @@ Global Template Preferences
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Design --> Templates --> Template Preferences`
+**Control Panel Location:** :menuselection:`Design --> Templates --> Global Preferences`
 
 This section of the Control Panel allows you to define global
 preferences which affect all Templates.

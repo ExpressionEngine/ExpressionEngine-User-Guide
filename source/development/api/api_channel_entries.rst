@@ -33,7 +33,10 @@ Save Entry
 
 .. method:: save_entry($data[, $channel_id = NULL[, $entry_id = 0[, $autosave = FALSE]]])
 
-  Saves a new or existing channel entry::
+  Saves a new or existing channel entry.  The data array must
+  contain a title and data for all required fields. If the entry date or
+  edit date are not included in the data array, current time will be
+  used instead.::
 
     ee()->api_channel_entries->save_entry($data, $channel_id, $entry_id, $autosave);
 
@@ -43,6 +46,41 @@ Save Entry
   :param boolean $autosave: Whether the entry is being autosaved or not
   :returns: Whether the new entry was successfully created or updated
   :rtype: Boolean
+
+  Example Usage::
+
+    ee()->load->library('api');
+    ee()->api->instantiate('channel_entries');
+    ee()->api->instantiate('channel_fields');
+
+    $data = array(
+        'title'         => 'Breaking News Story!',
+        'entry_date'    => '1256953732',
+        'edit_date'     => '1351653729',
+        'field_id_6'    => 'Some data',
+        'field_ft_6'    => 'none',
+        'field_id_19'   => 'More data',
+        'field_ft_19'   => 'xhtml'
+    );
+
+    ee()->api_channel_fields->setup_entry_settings($channel_id, $data);
+
+    $success = ee()->api_channel_entries->save_entry($data, $channel_id);
+
+	if ( ! $success)
+	{
+		show_error(implode('<br />', $this->api_channel_entries->errors));
+	}
+
+  See also :meth:`Api_channel_fields::setup_entry_settings` in the
+  Channel Fields API.
+
+  .. note:: As part of the data normalization, custom data with a
+    value of NULL is transformed to an empty string before database
+    insertion.
+
+  .. note:: Successful submission requires a valid session exist for a user 
+    with the necessary posting privileges.
 
 Submit New Entry
 ~~~~~~~~~~~~~~~~
@@ -64,32 +102,6 @@ Submit New Entry
   :param boolean $autosave: Whether the entry is being autosaved or not
   :returns: Whether the new entry was successfully created
   :rtype: Boolean
-
-  Example Usage::
-
-    ee()->load->library('api');
-    ee()->api->instantiate('channel_entries');
-    ee()->api->instantiate('channel_fields');
-
-    $data = array(
-        'title'         => 'Breaking News Story!',
-        'entry_date'    => '1256953732',
-        'edit_date'     => '1351653729',
-        'field_id_6'    => 'Some data',
-        'field_ft_6'    => 'none',
-        'field_id_19'   => 'More data',
-        'field_ft_19'   => 'xhtml'
-    );
-
-    ee()->api_channel_fields->setup_entry_settings($channel_id, $data);
-
-    if (ee()->api_channel_entries->submit_new_entry($channel_id, $data) === FALSE)
-    {
-        show_error('An Error Occurred Creating the Entry');
-    }
-
-  See also :meth:`Api_channel_fields::setup_entry_settings` in the
-  Channel Fields API.
 
   .. note:: As part of the data normalization, custom data with a
     value of NULL is transformed to an empty string before database

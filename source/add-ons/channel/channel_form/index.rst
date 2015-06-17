@@ -11,10 +11,10 @@ Introduction
 ************
 
 The Channel Form makes it possible to add and edit entries from outside
-of the Control Panel using a regular form inside a template. Thank you to
-`Barrett Newton <http://barrettnewton.com/>`_ for developing the original
-(under the name of SafeCracker) and working with EllisLab to provide it
-to the ExpressionEngine community.
+of the Control Panel using a regular form inside a template. Thank you
+to `Barrett Newton <http://barrettnewton.com/>`_ for developing the
+original (under the name of SafeCracker) and working with EllisLab to
+provide it to the ExpressionEngine community.
 
 - Allows guest (logged out) users to use the entry form, with optional
   CAPTCHA support.
@@ -41,7 +41,8 @@ to the ExpressionEngine community.
   * The *File* fieldtype is now compatible with *Channel Form*.
   * *Stand-Alone Entry Form* has been removed.
   * *SafeCracker File* has been removed.
-
+  * The stylesheet path has changed from ``{path=css/_ee_saef_css}`` to
+    ``{path=css/_ee_channel_form_css}``.
 
 ******************
 Using Channel Form
@@ -98,16 +99,18 @@ Set the URL title of the entry. ::
 Entry Date
 ~~~~~~~~~~
 
-Set the date of the entry, which must be in the format YYYY-MM-DD hh:mm
-PM. ::
+.. note:: All date formats should match what the user has defined in
+  localization settings. The date fields will autmatically use that format and
+  validate against it.
+
+Set the date of the entry::
 
   <p>Date <br> <input type="text" name="entry_date" value="{entry_date}" maxlength="23" size="25"></p>
 
 Expiration Date
 ~~~~~~~~~~~~~~~
 
-Set the expiration date of the entry, which must be in the format
-YYYY-MM-DD hh:mm PM. ::
+Set the expiration date of the entry::
 
   <p>Expiration Date <br>
     <input type="text" name="expiration_date" value="{expiration_date}" maxlength="23" size="25">
@@ -116,8 +119,7 @@ YYYY-MM-DD hh:mm PM. ::
 Comment Expiration Date
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Set the comment expiration date if desired. This is specified in the format
-YYYY-MM-DD hh:mm PM exactly as in the Control Panel Publish section. ::
+Set the comment expiration date if desired::
 
   <p>Comment Expiration Date <br>
   <input type="text" name="comment_expiration_date" value="{comment_expiration_date}" maxlength="23" size="25" />
@@ -225,17 +227,40 @@ Or use the alternative syntax. ::
 Other Channel Fields
 ~~~~~~~~~~~~~~~~~~~~
 
-Set other channel fields. Use the field name as the form input. Make use
-of the {field:my\_field\_name} and {options:my\_field\_name} tags. ::
+For all of the other channel fields, you have a few options. The easiest
+is just using the ``{field:...}`` tag::
+
+  {field:my_field_name}
+
+However, sometimes you'll need to customize your ``<input>`` for one
+reason or another. In those cases you have a few options depending on
+what you want to do. If it's a simple field, just make sure the name is
+the same as the input's ``name`` and provide the variable as the value::
 
   <input type="text" name="my_field_name" id="my_field_name" value="{my_field_name}">
-  {field:my_field_name}
+
+If you're creating a select list, you'll need to pull in the options,
+using ``{options:my_field_name}`` but otherwise things look pretty
+similar::
 
   <select name="my_field_name" id="my_field_name">
     {options:my_field_name}
       <option value="{option_value}"{selected}>{option_name}</option>
     {/options:my_field_name}
   </select>
+
+Last, if you're using a file field, you'll need to provide two
+additional hidden inputs to determine what upload directory the file is
+uploaded to and the existing file for when the entry is edited::
+
+  <input type="file" name="my_field_name" />
+  <input type="hidden" name="my_field_name_directory" value="1" />
+  <input type="hidden" name="my_field_name_hidden_file" value="{my_field_name}{file_name}{/my_field_name}" />
+
+.. note:: In the file field example's ``hidden_file`` input, we're using
+  the :ref:`variable pair <channel_entry_file_field_pair>` and pulling
+  *only* the ``{file_name}`` since we're already providing the directory
+  above.
 
 Parameters
 ----------
@@ -276,6 +301,8 @@ parameter. Specify the category by Category ID. You may specify multiple
 categories by separating the Category ID with the pipe character::
 
   category="3|7|13|42"
+
+This parameter only applies to new entries and will be ignored for edits.
 
 
 channel=
@@ -520,7 +547,8 @@ status=
 
   status="pending"
 
-Set the status to use for the entry.
+Set the status to use for the entry.  This parameter only applies to new entries
+and will be ignored for edits.
 
 sticky\_entry=
 ~~~~~~~~~~~~~~
@@ -529,7 +557,8 @@ sticky\_entry=
 
   sticky_entry="yes"
 
-Force the entry to be "sticky" or not.
+Force the entry to be "sticky" or not.  This parameter only applies to new
+entries and will be ignored for edits.
 
 url\_title=
 ~~~~~~~~~~~
@@ -673,6 +702,10 @@ custom\_fields
 
     {if textarea}
       <textarea id="{field_name}" name="{field_name}" dir="{text_direction}" rows="{rows}">{field_data}</textarea>
+    {/if}
+
+    {if rte}
+      <textarea id="{field_name}" name="{field_name}" dir="{text_direction}" rows="{rows}" class="WysiHat-field">{field_data}</textarea>
     {/if}
 
     {if text}

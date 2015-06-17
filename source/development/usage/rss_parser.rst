@@ -12,7 +12,7 @@ The RSS Parser Class is singularly used as a factory to create
 
     ee()->load->library('rss_parser');
     $feed = ee()->rss_parser->create(
-        'http://ellislab.com/blog/rss-feed',
+        'https://ellislab.com/blog/rss-feed',
         30, // 30 minute cache
         'blog_feed'
     );

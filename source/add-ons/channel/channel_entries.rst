@@ -439,8 +439,6 @@ entry\_id=
 
 	entry_id="147"
 
-You can hard code the channel tag to show a specific channel entry.
-
 You can hard code the channel tag to show a specific channel entry. You
 may also specify multiple entries by separating them with the pipe
 character::
@@ -906,11 +904,11 @@ that contain "sandwich" **nor** those that contain the word "salad".
 	tag, as long as each one is searching a different field. e.g.::
 
 		{exp:channel:entries search:style="=ale" search:region="germany|belgium" search:rating="=3|4|5"}
-		
-When using multiple search parameters, all search parameters must be matched in 
-order for an entry to be included.  The above example would pull back only those 
-entries where the style is 'ale', the region is 'germany' or 'belgium' and the 
-rating is 1, 2 or 3.		
+
+When using multiple search parameters, all search parameters must be matched in
+order for an entry to be included.  The above example would pull back only those
+entries where the style is 'ale', the region is 'germany' or 'belgium' and the
+rating is 1, 2 or 3.
 
 show\_current\_week=
 --------------------
@@ -1021,48 +1019,28 @@ display to a specific date range.
 Format
 ~~~~~~
 
-The date/time **must** be specified in the following format:
+The `start_on=`_ parameter accepts any input that an ExpressionEngine
+Date field would accept. This means you have a wide variety of options::
 
--  YYYY-MM-DD HH:MM
-
-Here, YYYY is the four-digit year, MM is the two-digit month, DD is the
-two-digit day of the month, HH is the two-digit hour of the day, and MM
-is the two-digit minute of the hour. If the month, day, hour or minute
-has only one digit, precede that digit with a zero. (E.g. "March 9,
-2004" would become "2004-03-09".) All date/times are given in local
-time, according to your ExpressionEngine configuration.
-
-You may optionally use a 12 hour time format by including am/pm notation
-(2004-06-05 20:00 is equivalent to: 2004-06-05 08:00 PM and 2004-06-05
-08:00 pm; 2004-06-05 08:00 is equivalent to: 2004-06-05 08:00 AM and
-2004-06-05 08:00 am).
-
-.. note:: If you are using a non-English language pack, it's necessary
-	to use a 24 hour format only, as the AM/PM indicators may have been
-	changed.
+  start_on="October 21st, 2015 4:30 PM"
+  start_on="today"
+  start_on="yesterday"
+  start_on="last Monday"
+  start_on="-2 months"
 
 Common Uses
 ~~~~~~~~~~~
 
 This parameter can be used in conjunction with :ref:`global_current_time`::
 
-	{exp:channel:entries channel="{my_weblog}" sort="desc" start_on="{current_time format='%Y-%m-%d %H:%i'}" show_future_entries="yes"}
+	{exp:channel:entries channel="{my_weblog}" sort="desc" start_on="{current_time}" show_future_entries="yes"}
 
 The above would display future entries starting from the current time.
 
-If the date needs to be set dynamically, then PHP must often be used.
-:doc:`Enable PHP </templates/php>` in the Template and set
-it to be parsed on "input". One example usage is::
+To display up to 5 entries with entry dates that fall within the
+previous 24 hours::
 
-	<?php
-		$start_time = ee()->localize->format_date('%Y-%m-%d %H:%i', ee()->localize->now - 86400);
-	?>
-
-	{exp:channel:entries channel="{my_weblog}" limit="5" sort="desc" start_on="<?php echo $start_time; ?>"}
-
-The above would display up to 5 entries with entry dates that fall
-within the previous 24 hours (86400 seconds is the number of seconds in
-one day: 60 seconds \* 60 minutes \* 24 hours).
+	{exp:channel:entries channel="{my_weblog}" limit="5" sort="desc" start_on="-24 hours"}
 
 status=
 -------
@@ -1074,17 +1052,22 @@ status=
 You may restrict to entries with a particular :doc:`status
 </cp/admin/channels/statuses>`. The two statuses "open" and "closed" are
 default statuses that are always available, so you can always specify
-those if needed. You can choose multiple statuses using a pipe::
+those if needed. If no status parameter is specified, only open status entries
+will be returned.  You can choose multiple statuses using a pipe::
 
-	status="draft|reviewed|published"
+	status="draft|reviewed|published|closed"
+
+
 
 Or exclude statuses using "not"
 
 ::
 
-	status="not submitted|processing|closed"
+	status="not submitted|processing"
 
-If no status parameter is specified, only open status entries will be returned.
+Note that closed status entries will not be included in the results when using
+"not" regardless of whether it is in the piped list.
+
 
 stop\_before=
 -------------
@@ -1099,19 +1082,8 @@ entries that are before this date will be included in the display
 is often used together with the `start_on=`_ parameter
 for limiting the entry display to a specific date range.
 
-If the date needs to be set dynamically, then PHP must often be used.
-:doc:`Enable PHP </templates/php>` in the Template and set
-it to be parsed on "input" and then use something like this::
-
-	<?php
-		$current_time = ee()->localize->format_date('%Y-%m-%d %H:%i', ee()->localize->now - 518400);
-	?>
-
-	{exp:channel:entries channel="{my_weblog}" orderby="date" sort="desc" stop_before="<?php echo $current_time; ?>"}
-
-The above would display entries in descending date from six days in the
-past (518400 is the number of seconds in six days : 60 seconds \* 60
-minutes \* 24 hours \* 6 days).
+This parameter accepts the same date formats as the `start_on=`_
+parameter.
 
 sticky=
 -------
@@ -1404,15 +1376,6 @@ channel\_short\_name
 
 The short name of the channel of the currently displayed entry.
 
-yahoo\_im
----------
-
-::
-
-	{yahoo_im}
-
-The author's Yahoo IM account name.
-
 comment\_auto\_path
 -------------------
 
@@ -1487,6 +1450,26 @@ count
 The "count" out of the current entries being displayed. If five entries
 are being displayed, then for the fourth entry the {count} variable
 would have a value of "4".
+
+cp_edit_entry_url
+-----------------
+
+::
+
+  {if logged_in}
+    <a href="{cp_edit_entry_url}">Edit Entry</a>
+  {/if}
+
+The URL of the entry form in the control panel where this entry can be
+edited. It is recommended you wrap this variable in an
+``{if logged_in}`` conditional to hide your control panel's URL from
+regular site visitors. If you are running a membership based site, hide
+it behind an appropriate ``logged_in_group_id`` conditional. For
+example, to hide this link from everyone but Super Admins::
+
+  {if logged_in_group_id == 1}
+    <a href="{cp_edit_entry_url}">Edit Entry</a>
+  {/if}
 
 edit\_date
 ----------
@@ -2054,17 +2037,26 @@ the week date will fall on Sunday for the week of the entry. When
 the week of the entry. See :doc:`Date Variable Formatting
 </templates/date_variable_formatting>` for more information.
 
+yahoo\_im
+---------
+
+::
+
+  {yahoo_im}
+
+The author's Yahoo IM account name.
+
 .. _channel_entries_conditional_variables:
 
-*********************
-Conditional Variables
-*********************
+****************
+Conditional Tags
+****************
 
 Conditionals allow you to more precisely control your content.
 
 .. note:: A more complete explanation of conditional control structures
-   and operators can be found on the :doc:`Global Conditionals
-   </templates/globals/conditionals>` page.
+   and operators can be found on the :doc:`Conditional Tags
+   </templates/conditionals>` page.
 
 Here is an example that tests for the "summary" field being not empty
 

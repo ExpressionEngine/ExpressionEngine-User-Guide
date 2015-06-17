@@ -44,9 +44,10 @@ The Control Panel
 The Front-End
 =============
 
-Templates
----------
+:doc:`templates/index`
+----------------------
 
+- :doc:`templates/overview`
 - :doc:`templates/embedding`
 - :doc:`templates/layouts`
 - :doc:`templates/hidden_templates`
@@ -56,8 +57,8 @@ Templates
 - :doc:`templates/comments`
 - :doc:`templates/pagination`
 
-URLs
-----
+:doc:`urls/index`
+-----------------
 
 - :doc:`urls/url_structure`
 - :doc:`urls/template_routes`
@@ -88,6 +89,7 @@ Maintenance & Operations
 Securing ExpressionEngine
 =========================
 
+- :doc:`security/general_tips`
 - :doc:`security/spam_protection`
 - :doc:`security/captchas`
 
@@ -109,6 +111,7 @@ Solving Problems
 - :doc:`troubleshooting/index`
 - :ellislab:`EllisLab Support </support>`
 - :ellislab:`Community Support Forum </forums/viewannounce/230174_114/>`
+- :doc:`bugs_and_security_reports/index`
 
 
 *************
@@ -205,7 +208,7 @@ About ExpressionEngine
   general/index
   how_to/index
   intro/index
-  handling_bugs/index
+  bugs_and_security_reports/index
   add-ons/index
   operations/index
   optimization/index

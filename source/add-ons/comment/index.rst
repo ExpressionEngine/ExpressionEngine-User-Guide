@@ -1043,8 +1043,9 @@ current entry's author has a signature image specified. ::
 Comment Notification Links Tag
 ******************************
 
-The {exp:comment:notification\_links} tag can be to allow members to
-subscribe to an entry without commenting via a simple link. This tag may only be used on a single entry page. ::
+The ``{exp:comment:notification_links}`` tag can be to allow members to
+subscribe to an entry without commenting via a simple link. This tag may only be
+used on a single entry page.::
 
 	{exp:comment:notification_links}
 		{if subscribed}
@@ -1059,6 +1060,10 @@ as "comment" pages.
 
 .. note:: Only logged in members may subscribe without commenting. The
    tag will return nothing for non-logged in members.
+
+.. note:: If your URL does not contain the entry ID or url_title, you must use
+  either the ``entry_id=`` or ``url_title=`` parameter on your
+  ``{exp:comment:notification_links}`` tag.
 
 ***************************
 Comment Subscriber List Tag

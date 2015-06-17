@@ -110,8 +110,8 @@ comments.
 Apply XSS Filtering to Uploaded Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Checks all file uploads for code injection attempts before finalizing the upload.  
-Superadmins are exempt from image XSS filtering.  
+Checks all file uploads for code injection attempts before finalizing the upload.
+Superadmins are exempt from image XSS filtering.
 
 
 .. _security-enable-passwd-lockout-label:
@@ -166,7 +166,7 @@ Name of Dictionary File
 
 This is the filename of the dictionary file used for the previous
 preference. Download the `dictionary file
-<http://ellislab.com/asset/file/dictionary.zip>`__, unzip, and upload
+<https://ellislab.com/asset/file/dictionary.zip>`__, unzip, and upload
 the text file (:file:`dictionary.txt`) to
 :file:`system/expressionengine/config/`.
 

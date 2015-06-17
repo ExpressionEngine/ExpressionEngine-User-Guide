@@ -15,6 +15,3 @@ Add the following code where you wish the preference to appear::
 	</tr><tr><td class='tableCellOne' colspan='2'><div class='defaultBold'><input type='checkbox' name='accept_messages' value='y' {state:accept_messages} />  {lang:accept_messages}</div></td>
 
 :doc:`Return to Update Page <forum_update>`
-
-`ExpressionEngine <http://ellislab.com/expressionengine>`_ – Copyright ©
-2002-2011 – `EllisLab, Inc. <http://ellislab.com/>`_

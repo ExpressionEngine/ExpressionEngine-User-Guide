@@ -60,7 +60,7 @@ page of the control panel and make sure your IP to Nation module is
 installed.
 
 .. note:: Please `download the flag
-   icons <http://ellislab.com/asset/file/world_flags.zip>`_ from
+   icons <https://ellislab.com/asset/file/world_flags.zip>`_ from
    ExpressionEngine.com. Once downloaded, unzip the archive, then upload
    the "world\_flags" folder to your server. The folder can go anywhere
    since you'll set the URL in the tag as described below.
@@ -96,5 +96,5 @@ by using the type="text" parameter.
 
 .. |image0| image:: flag_us.gif
 
-.. note:: This product includes GeoLite data created by MaxMind, 
+.. note:: This product includes GeoLite data created by MaxMind,
   available from `http://maxmind.com/ <http://maxmind.com/>`_.

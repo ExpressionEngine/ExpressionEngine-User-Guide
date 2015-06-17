@@ -8,7 +8,7 @@ of the field::
 	{body}
 	{summary}
 	{extended}
-	
+
 	etc..
 
 There are a number of field types included with ExpressionEngine, and
@@ -20,6 +20,7 @@ control panel at
 	:local:
 	:depth: 1
 
+.. _file_field_variable_usage:
 
 **********
 File Field
@@ -67,6 +68,8 @@ Which will output as::
 
 	<img src="http://example.com/dir/filename.ext" alt="filename" />
 
+.. _channel_entry_file_field_pair:
+
 Variable Pair Usage
 ===================
 
@@ -105,7 +108,7 @@ extension
 ::
 
 	{extension}
-	
+
 The file's extension, if it has one.
 
 file_id
@@ -114,7 +117,7 @@ file_id
 ::
 
 	{file_id}
-	
+
 The unique id of the file.
 
 file_name
@@ -123,7 +126,7 @@ file_name
 ::
 
 	{file_name}
-	
+
 The full name of the file (including its extension).
 
 file_size
@@ -132,7 +135,7 @@ file_size
 ::
 
 	{file_size}
-	
+
 The size of the file (in bytes).
 
 height
@@ -141,7 +144,7 @@ height
 ::
 
 	{height}
-	
+
 The height of the image (in pixels) if applicable.
 
 location
@@ -178,7 +181,7 @@ path
 ::
 
 	{path}
-	
+
 The URL to the folder containing the file, including a trailing slash.
 
 title
@@ -187,7 +190,7 @@ title
 ::
 
 	{title}
-	
+
 The title assigned to the file.
 
 upload_date
@@ -210,21 +213,21 @@ url
 	{url}
 
 The full URL to the file.
-	
+
 If you have defined any :ref:`image_manipulations` you can modify this
 tag with the Short Name of the manipulation. For example, if you've
 defined a "small" manipulation, the following will output the URL to
 that version::
 
 	{url:small}
-	
+
 width
 -----
 
 ::
 
 	{width}
-	
+
 The width of the image (in pixels) if applicable.
 
 ***************
@@ -232,7 +235,7 @@ Checkbox Fields
 ***************
 
 Like file fields, checkbox fields are special in that they can be used
-as a single tag and as a tag pair. 
+as a single tag and as a tag pair.
 
 ::
 
@@ -312,9 +315,9 @@ field
 
 ::
 
-	{age} 
-	{gender} 
-	{zodiac} 
+	{age}
+	{gender}
+	{zodiac}
 	etc...
 
 These are totally dynamic in that any profile field you create for your

@@ -13,8 +13,8 @@ ExpressionEngine.
 General Development
 *******************
 
-- :doc:`2.0 Conversion </development/conversion/index>`
 - :doc:`Constants Reference </development/constants>`
+- :doc:`The Template Class </development/usage/template>`
 - :doc:`Accessory Development </development/accessories>`
 - :doc:`Extensions Development </development/extensions>`
 
@@ -30,7 +30,9 @@ General Development
 - :doc:`Control Panel Style Reference </development/cp_styles/index>`
 - :doc:`Emoticon Development </development/emoticons>`
 
+- :doc:`1.x to 2.x Conversion </development/conversion/index>`
 - :doc:`Developer Preview Program </development/developer_preview_program>`
+- :doc:`JSON Version Feed </development/json_version_feed>`
 
 ***
 API

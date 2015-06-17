@@ -19,7 +19,7 @@ installations as needed to support the live installation (such as
 development and a staging servers). Additional installations require
 additional license purchases. If you have specific installation needs
 not covered by this license, please `Contact
-Us <http://ellislab.com/about>`_.
+Us <https://ellislab.com/about>`_.
 
 Permitted Use
 -------------
@@ -80,8 +80,8 @@ Giving Credit
 
 Core License Users are required to display a "powered by ExpressionEngine"
 link or graphic on their publicly accessible site, pointing to
-`http://ellislab.com/expressionengine
-<http://ellislab.com/expressionengine>`_. Users of a purchased Standard
+`https://ellislab.com/expressionengine
+<https://ellislab.com/expressionengine>`_. Users of a purchased Standard
 license are exempt from this requirement.
 
 Making Copies
@@ -114,7 +114,7 @@ Due to the non-returnable nature of downloadable software, EllisLab, Inc. does
 not issue refunds once a transaction has been completed. If you have questions
 about whether or not ExpressionEngine will work for you, please try the `Core
 <https://store.ellislab.com/#ee-core>`__ edition or `contact us
-<http://ellislab.com/about>`_ with any questions. We encourage you to thoroughly
+<https://ellislab.com/about>`_ with any questions. We encourage you to thoroughly
 test the system you are interested in before purchasing to determine its
 suitability for your purposes and compatibility with your hosting account.
 

@@ -128,7 +128,7 @@ relationships_query_result
 relationships_modify_rows
 -------------------------
 
-.. function:: relationships_post_save($rows, $node)
+.. function:: relationships_modify_rows($rows, $node)
 
   Allows developers to modify or add to the relationship rows right before
   parsing happens.

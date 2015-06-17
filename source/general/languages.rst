@@ -21,7 +21,7 @@ Download any of the available language packs from the GitHub repositories. You
 may want to check the repository's tags for translations that are compatible
 with different versions of ExpressionEngine.
 
-.. Heads up: general_languages.js relies on .github-languag-repos! See notes there.
+.. Heads up: jquery-github-repos.js relies on .github-language-repos! See notes there.
 
 .. rst-class:: github-language-repos
 

@@ -117,9 +117,9 @@ Downloading ExpressionEngine.com Lists
 
 EllisLab, Inc. maintains its own Blacklist and Whitelist, which are
 available for licensed purchasers of ExpressionEngine. These lists are
-maintained with the help of our users. If you have an item that you
-believe should be added to the Blacklist or Whitelist, please email
-blacklist@ellislab.com.
+maintained with the help of our users. If you have an IP address, user
+agent, or URL that you believe should be added to the Blacklist or
+Whitelist, please email blacklist@ellislab.com.
 
 To download the ExpressionEngine Lists, you must have your License
 Number entered into the :menuselection:`Admin --> General Configuration`

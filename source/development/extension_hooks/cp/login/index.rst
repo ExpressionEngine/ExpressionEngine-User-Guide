@@ -59,3 +59,20 @@ cp_member_logout
   :rtype: Void
 
   .. versionadded:: 1.6.1
+
+cp_member_reset_password
+------------------------
+
+.. function:: cp_member_reset_password()
+
+  Perform additional actions after a user resets their password via the
+  control panel.
+
+  How it's called::
+
+    $this->extensions->call('cp_member_process_reset_password');
+    if ($this->extensions->end_script === TRUE) return;
+
+  :rtype: Void
+
+  .. versionadded:: 2.9.3

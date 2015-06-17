@@ -16,32 +16,6 @@ indicate in a UTF-8 encoded file, and the BOM can have a negative side
 effect in PHP of sending output, preventing the application from being
 able to set its own headers. Unix line endings should be used (LF).
 
-Here is how to apply these settings in some of the more common text
-editors. Instructions for your text editor may vary; check your text
-editor's documentation.
-
-TextMate
-~~~~~~~~
-
-#. Open the Application Preferences
-#. Click Advanced, and then the "Saving" tab
-#. In "File Encoding", select "UTF-8 (recommended)"
-#. In "Line Endings", select "LF (recommended)"
-#. *Optional:* Check "Use for existing files as well" if you wish to
-   modify the line endings of files you open to your new preference.
-
-BBEdit
-~~~~~~
-
-#. Open the Application Preferences
-#. Select "Text Encodings" on the left.
-#. In "Default text encoding for new documents", select "Unicode
-   (UTF-8, no BOM)"
-#. *Optional:* In "If file's encoding can't be guessed, use", select
-   "Unicode (UTF-8, no BOM)"
-#. Select "Text Files" on the left.
-#. In "Default line breaks", select "Mac OS X and Unix (LF)"
-
 PHP Closing Tag
 ---------------
 
@@ -50,9 +24,10 @@ parser. However, if used, any whitespace following the closing tag,
 whether introduced by the developer, user, or an FTP application, can
 cause unwanted output, PHP errors, or if the latter are suppressed,
 blank pages. For this reason, all PHP files should **OMIT** the
-closing PHP tag, and instead use a comment block to mark the end of
-file and it's location relative to the application root. This allows
-you to still identify a file as being complete and not truncated.
+closing PHP tag, and instead use a comment to mark the end of the file.
+This allows you to still identify a file as being complete and not
+truncated. For files that contain a single class the end comment is
+optional.
 
 INCORRECT::
 
@@ -65,41 +40,48 @@ CORRECT::
   <?php
       echo "Here's my code!";
 
-  /* End of file myfile.php */
-  /* Location: ./system/modules/mymodule/myfile.php */
+  // EOF
 
 Class and Method Naming
 -----------------------
 
+.. versionchanged:: 2.10
+  New classes and methods should conform to the PHP standard library
+  api format, which also matches the PSR-1 code standard. You will see
+  old code not following the format below. "When in Rome" applies when
+  editing old files.
+
 Class names should always have their first letter uppercase, and the
 constructor method should use ``__construct()``. Multiple words
-should be separated with an underscore, and not CamelCased. All other
-class methods should be entirely lowercased and named to clearly
-indicate their function, preferably including a verb. Try to avoid
-overly long and verbose names.
+should be PascalCased, and not separated with an underscore.
 
 INCORRECT::
 
   class superclass
-  class SuperClass
+  class Super_class
 
 CORRECT::
 
-  class Super_class
+  class SuperClass
+
+Class methods should be camelCased, starting with a lowercased letter,
+and named to clearly indicate their function, preferably including a
+verb. Try to avoid overly long and verbose names, these may indicate
+that the method has too much responsibility and should be split up.
 
 Example of an improper and proper constructor method:
 
 INCORRECT::
 
-  class Super_class {
-      function Super_class()      // does not use __construct()
+  class SuperClass {
+      function SuperClass()      // does not use __construct()
       {
       }
   }
 
 CORRECT::
 
-  class Super_class {
+  class SuperClass {
       function __construct()
       {
       }
@@ -109,15 +91,40 @@ Examples of improper and proper method naming:
 
 INCORRECT::
 
-  function fileproperties()       // not descriptive and needs underscore separator
-  function fileProperties()       // not descriptive and uses CamelCase
-  function getfileproperties()    // Better!  But still missing underscore separator
-  function getFileProperties()    // uses CamelCase
-  function get_the_file_properties_from_the_file()  // wordy
+  function fileproperties()       // not descriptive, not camelCase
+  function file_properties()      // not descriptive and not camelCase
+  function get_file_properties()  // Better!  But still not camelCase
+  function getTheFilePropertiesFromTheFile()  // wordy
 
 CORRECT::
 
-  function get_file_properties()  // descriptive, underscore separator, and all lowercase letters
+  function getFileProperties()  // descriptive, camelCase
+
+Namespaces and File Names
+-------------------------
+
+Filenames should match the name of the class, including case. When using
+namespaces the entire path and namespace should match the class naming
+conventions.::
+
+  class Member                 // Member.php
+  class Addon\Commerce\Gateway // Addon/Commerce/PaymentGateway.php
+
+When using namespaces, the namespace declaration should be the first
+line in the code, before any comments. The namespace declaration and the
+import declarations should be separated by a blank line::
+
+  <?php
+
+  namespace MyAddon\Addon;
+
+  use Vendor\ClassName;
+  use Member\PrivateMessages;
+
+  /**
+   * Comment describing the class
+   */
+  class Awesome {
 
 Variable Names
 --------------
@@ -172,7 +179,6 @@ picked up by IDEs::
       /**
       * Encodes string for use in XML
       *
-      * @access  public
       * @param   string
       * @return  string
       */
@@ -303,6 +309,12 @@ boolean ``TRUE`` becomes ``"1"``::
 
   $str = (string) $str; // cast $str as a string
 
+
+.. note:: When choosing return values for your own methods, prefer
+  ``NULL`` over ``FALSE`` to indicate that a value does not exist.
+  ``FALSE`` is a valid boolean value, whereas ``NULL`` has no value.
+
+
 Comparing Version Numbers
 -------------------------
 
@@ -367,11 +379,15 @@ is buffered, so whitespace in your files can cause output to begin
 before ExpressionEngine outputs its content, leading to errors and an
 inability for ExpressionEngine to send proper headers.
 
+When aligning multiple lines (e.g. in an associative array), use spaces
+instead of tabs. This is helpful when displaying the code on the web, in
+a GitHub commit for instance.
+
 Compatibility
 -------------
 
 Unless specifically mentioned in your add-on's documentation, all code
-must be compatible with PHP version 5.2.4+. Additionally, do not use PHP
+must be compatible with PHP version 5.3.10+. Additionally, do not use PHP
 functions that require non-default libraries to be installed unless your
 code contains an alternative method when the function is not available,
 or you explicitly document that your add-on requires said PHP libraries.
@@ -432,6 +448,8 @@ prevent collision. Always realize that your end users may be running
 other add-ons or third party PHP scripts. Choose a prefix that is unique
 to your identity as a developer or company.
 
+.. note:: This does not apply to namespaced classes.
+
 INCORRECT::
 
   class Email
@@ -478,14 +496,11 @@ CORRECT::
 
     exp_pre_email_addresses_of_registered_users_in_seattle_washington
 
-One File per Class
+One Class per File
 ------------------
 
-Use separate files for each class your add-on uses, unless the classes
-are *closely related*. An example of ExpressionEngine files that
-contains multiple classes is the Database class file, which contains
-both the DB class and the ``DB_Cache`` class, and the Magpie plugin,
-which contains both the ``Magpie`` and ``Snoopy`` classes.
+Use separate files for each class. This makes it much easier to find
+classes.
 
 Whitespace
 ----------
@@ -493,9 +508,7 @@ Whitespace
 Use tabs for whitespace in your code, not spaces. This may seem like a
 small thing, but using tabs instead of whitespace allows the developer
 looking at your code to have indentation at levels that they prefer and
-customize in whatever application they use. And as a side benefit, it
-results in (slightly) more compact files, storing one tab character
-versus, say, four space characters.
+customize in whatever application they use.
 
 Line Breaks
 -----------
@@ -619,12 +632,15 @@ variables in your module's lang file to allow localization::
 Private Methods and Variables
 -----------------------------
 
-Methods and variables that are only accessed internally by your class,
-such as utility and helper functions that your public methods use for
-code abstraction, should be prefixed with an underscore::
+Methods and variables that are only accessed internally by your class
+should be declared as private or protected. If the methods are internal
+to the current package or namespace, it may be acceptable to follow the
+convention of marking the method or property with an underscore::
 
-  convert_text()        // public method
-  _convert_text()     // private method
+  public function convert_text()     // public method
+  private function convert_text()    // private method
+
+  public function _convert_text()    // internal method (not recommended)
 
 PHP Errors
 ----------
@@ -681,7 +697,8 @@ INCORRECT::
 
 CORRECT::
 
-  $foo = 'this'; $bar = 'that';
+  $foo = 'this';
+  $bar = 'that';
   $bat = str_replace($foo, $bar, $bag);
 
 Strings

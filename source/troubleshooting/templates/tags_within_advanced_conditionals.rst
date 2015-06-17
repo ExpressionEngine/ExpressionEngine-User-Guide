@@ -1,16 +1,16 @@
-Tags within Advanced Conditionals
-=================================
+Tags within Conditionals
+========================
 
-When using an opening tag within an advanced conditional, additional
-conditions do not affect output.
+When using an opening tag within a conditional, additional conditions
+do not affect output.
 
-Advanced Conditionals and Tags
-------------------------------
+Conditionals and Tags
+---------------------
 
-When using ExpressionEngine tags within Advanced Conditionals the entire
-tag block must be contained within the conditional. Advanced
-Conditionals *cannot* be used to specify different opening tags with
-shared markup for the rest of the tag block.
+When using ExpressionEngine tags within Conditionals the entire tag
+block must be contained within the conditional. Conditionals *cannot*
+be used to specify different opening tags with shared markup for the
+rest of the tag block.
 
 **Right:** ::
 
@@ -20,7 +20,7 @@ shared markup for the rest of the tag block.
 		{/exp:channel:entries}
 	{if:else}
 		{exp:channel:entries channel="another_channel" category="not 6|7"}
-			<h2>{title</h2>
+			<h2>{title}</h2>
 		{/exp:channel:entries}
 	{/if}
 

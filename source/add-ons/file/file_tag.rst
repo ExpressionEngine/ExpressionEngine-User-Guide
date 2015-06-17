@@ -5,6 +5,11 @@ File Entries Tag
    :local:
    :depth: 1
 
+.. note:: If you're looking for how to use file fields in your channel
+  entries loops, you should look at :ref:`the file field variable
+  usage documentation <file_field_variable_usage>` in the channel fields
+  documentation.
+
 Introduction
 ------------
 
@@ -647,4 +652,3 @@ Pagination
 ----------
 
 The File module supports :doc:`/templates/pagination`.
-</add-ons/channel/pagination_page>`.

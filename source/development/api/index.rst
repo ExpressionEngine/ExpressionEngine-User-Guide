@@ -17,7 +17,7 @@ Typically operations of this sort are complex with multiple steps to
 maintain database consistency. That makes them prone to errors and
 difficult to maintain. Making use of the provided APIs removes the
 burden of staying up-to-date with all of the required steps and ensures
-that your addons will remain functional even if the underlying
+that your add-ons will remain functional even if the underlying
 architecture changes.
 
 Calling the API

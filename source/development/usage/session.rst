@@ -69,7 +69,6 @@ User Data Information
   - ``time_format`` - ``eu``/``us``
   - ``group_id`` - Group ID number (1-Superadmin, 2-Banned, 3-Guests,
     4-Pending, 5-Members, 6+ Other Member Groups
-  - ``access_cp`` - ``y``/``n``
   - ``is_banned`` - ``0``/``1``
   - ``channel_id`` - Default channel's ``channel_id`` number
   - ``tmpl_group_id`` - Default template's ``group_id`` number
