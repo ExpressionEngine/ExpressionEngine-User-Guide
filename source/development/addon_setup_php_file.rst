@@ -13,12 +13,12 @@ The file must return an associative array. For example::
   <?php
 
   return array(
-  	'author'     => 'Example, Inc',
-  	'author_url' => 'http://example.com',
-  	'name'       => 'Hello World',
+  	'author'      => 'Example, Inc',
+  	'author_url'  => 'http://example.com',
+  	'name'        => 'Hello World',
   	'description' => 'Displays a friendly "Hello world!" messsage.',
-  	'version'    => '2.0.0',
-  	'namespace'  => 'Example\HelloWorld'
+  	'version'     => '2.0.0',
+  	'namespace'   => 'Example\HelloWorld'
   );
 
 Available Keys
