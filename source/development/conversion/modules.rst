@@ -176,18 +176,22 @@ documentation. For now enjoy this cryptic bit of code::
 The Alert Service
 -----------------
 
-At some point we'll have a real overview here with a link to the full
-documentation. For now enjoy this cryptic bit of code::
+Alerts are for providing feedback on an action and calling attention to warnings
+or errors. We describe, in detail, how to build different kinds of alerts in our
+`CP style-guide <https://ellislab.com/style-guide/c/alerts>`_. We have also created
+an Alert Service for creating alerts in your code. For example::
 
   ee('Alert')->makeInline('fortune-cookie-form')
 	->asIssue()
-	->withTitle(lang('toolset_error'))
-	->addToBody(lang('toolset_error_desc'))
+	->withTitle(lang('fortune_cookie_save_error'))
+	->addToBody(lang('fortune_cookie_save_error_desc'))
 	->now();
 
 And::
 
   <?=ee('Alert')->get('fortune-cookie-form')?>
+
+See :doc:`/development/services/alert` for full documentation.
 
 The Shared Settings Form
 ------------------------
