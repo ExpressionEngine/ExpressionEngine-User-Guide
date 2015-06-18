@@ -226,3 +226,35 @@ documentation. For now enjoy this cryptic bit of code::
 And::
 
   <?php $this->ee_view('_shared/form')?>
+
+Modals
+------
+
+Under 3.0 modals belong to a specific spot in the Control Panel's DOM, and that
+place isn't accessible from a module's view. To solve that we have introduced
+named view blocks. There are two basic calls to use within your view files,
+``$this->startOrAppendBlock('modals')`` and ``$this->endBlock();``. Everything between
+those two lines will be be stored in the modals block and output in the correct
+spot of the DOM.
+
+Example
+~~~~~~~
+
+::
+
+  <?php $this->startOrAppendBlock('modals'); ?>
+
+  <div class="modal-wrap modal-test">
+  	<div class="modal">
+  		<div class="col-group">
+  			<div class="col w-16">
+  				<a class="m-close" href="#"></a>
+  				<div class="box">
+					Hello World!
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+
+  <?php $this->endBlock(); ?>
