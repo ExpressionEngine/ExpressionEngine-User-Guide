@@ -145,7 +145,7 @@ and encourage them to join!
 - Mark Drzycimski
 - Mark Huot
 - Matt Barry
-- Matt Weinberg
+- Matt Weinberg (Vector Media Group)
 - Max Lazar
 - Maxim WEB (Websecret)
 - Michael Boyink
