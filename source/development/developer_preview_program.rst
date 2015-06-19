@@ -80,6 +80,7 @@ and encourage them to join!
 - Ben Croker
 - Benjamin Kohl (Masuga Design)
 - Benoit Marchal
+- Berry Timmermans
 - Bjørn Børresen
 - Brad Boegler (Nexcess)
 - Brad Morse
@@ -90,17 +91,18 @@ and encourage them to join!
 - Carl Crawley
 - Chris Barrett
 - Chris Newton
+- Christofer Sandin (Republic Factory)
 - Christopher Imrie
 - Dan Decker
 - Dan Diemer
 - Darren Miller
-- David Dexter (Brilliant2)
+- David Dexter (Codesly)
 - David Pak
 - Derek Hogue
 - Digital Surgeons
-- Dimitar Mihaylov
 - Dom Stubbs
 - Doug Thwaites
+- Eli Van Zoeren
 - Eric Lamb
 - Erik Reagan
 - Erwin van Lun
@@ -118,9 +120,11 @@ and encourage them to join!
 - Jamie Pittock
 - Jamie Taylor (Percipio)
 - Jan van Lysebettens
-- Jason Ferrell
+- Jason Siffring (Surprise Highway)
+- Jelle de Jong
 - Jeremy Gimbel
 - Jeremy Worboys
+- Jesse Schutt
 - Joe Paravisini
 - Joel Bradbury
 - John Baxter
@@ -128,27 +132,32 @@ and encourage them to join!
 - John Henry Donovan
 - John Morton
 - John Wells
+- Jon Thomas (AnalyticL)
 - Justin Kimbrell
 - Keith Mancuso (Familiar)
-- Kelly Sims
+- Kelly Sims (Codesly)
 - Kelsey Martens
 - Kevin Smith
 - Kurt Deutscher
 - Laisvunas Sopauskas
+- Lance Johnson (Green Egg Media)
 - Leevi Graham
 - Leon Dijk
 - Leslie Camacho
 - Lodewijk
+- Louis Dekeister (Hop Studios)
 - Malcolm Elsworth
+- Marc Miller
 - Marcus Neto
 - Mark Croxton
 - Mark Drzycimski
 - Mark Huot
 - Matt Barry
-- Matt Weinberg
+- Matt Weinberg (Vector Media Group)
 - Max Lazar
 - Maxim WEB (Websecret)
 - Michael Boyink
+- Michael Leigeber
 - Michael Rog
 - Michael Witwicki (Booyant)
 - Mike Hughes
@@ -160,14 +169,16 @@ and encourage them to join!
 - Padraig Kennedy
 - Patrick Pohler (Anecka)
 - Patrick Woodcock
+- Pedro Guimaraes (Willow Light Studio)
 - Peter Felix
 - Pierre-Vincent Ledoux
+- Ragnar Frostason (Republic Factory)
 - Rein de Vries
 - Rob Sanchez
-- Robin Bailey
+- Robin Baily (Dionach)
 - Robin Hodges
-- Robson Sobral
 - Robin Willmot (Coffee Bean Design)
+- Robson Sobral
 - Ryan Bonnell
 - Ryan Irelan
 - Ryan Masuga
