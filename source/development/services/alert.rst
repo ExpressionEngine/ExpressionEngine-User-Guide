@@ -82,9 +82,9 @@ Alert Service Methods
   :returns: The rendered HTML of the alert
   :rtype: String
 
-.. method:: getAllStandard()
+.. method:: getStandard()
 
-  Gets the rendered value of all standard alerts.
+  Gets the rendered value of the standard alert.
 
   :returns: The rendered HTML of the alert
   :rtype: String
@@ -118,7 +118,7 @@ Alert Object Methods
 
 .. method:: withTitle($title)
 
-  Adds a title to the alert.
+  Sets the title of the alert.
 
   :param string $title: The title of the alert
   :returns: $this
@@ -128,7 +128,8 @@ Alert Object Methods
 
   Adds content to the body of the alert.
 
-  :param string $item: The item to display
+  :param string|array $item: The item to display. If it's an array it will be
+  rendred as a list.
   :param string $class: An optional CSS class to add to the item
   :returns: $this
   :rtype: Alert
@@ -142,7 +143,7 @@ Alert Object Methods
 
 .. method:: setSubAlert($alert)
 
-  Adds an alert to the alert
+  Adds an alert to the alert.
 
   :param string $alert: An alert to render in this alert
   :returns: $this
@@ -164,19 +165,21 @@ Alert Object Methods
 
 .. method:: render()
 
-  Renders the alert
+  Renders the alert to HTML
 
-  :returns: The rendered HTML of the alert
+  :returns: The rendered HTML of the alert.
   :rtype: String
 
 .. method:: defer()
 
-  Defers rendering and displaying of the alert until the next CP request
+  Defers rendering and displaying of the alert until the next CP request.
 
-  :rtype: Void
+  :returns: $this
+  :rtype: Alert
 
 .. method:: now()
 
-  Queues the alert to be rendered and displayed during this request
+  Saves the alert to be rendered and displayed during this request.
 
-  :rtype: Void
+  :returns: $this
+  :rtype: Alert
