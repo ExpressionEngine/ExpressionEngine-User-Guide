@@ -128,8 +128,7 @@ Alert Object Methods
 
   Adds content to the body of the alert.
 
-  :param string|array $item: The item to display. If it's an array it will be
-  rendred as a list.
+  :param string|array $item: The item to display. If it's an array it will be rendred as a list.
   :param string $class: An optional CSS class to add to the item
   :returns: $this
   :rtype: Alert
