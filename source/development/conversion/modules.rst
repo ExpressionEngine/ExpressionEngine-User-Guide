@@ -162,16 +162,17 @@ documentation. For now enjoy this cryptic bit of code::
 The Pagination Service
 ----------------------
 
-At some point we'll have a real overview here with a link to the full
-documentation. For now enjoy this cryptic bit of code::
+Adding pagination to the control panel is a common task and we created a
+pagination service to assist. This service follows our `style-guide
+<https://ellislab.com/style-guide/c/listings#pagination>`_ handling all the
+mathematical calculations. All you need is the number of items you are going to
+paginate and a URL object::
 
-  $pagination = new Pagination(
-  	$vars['table']['limit'],
-  	$vars['table']['total_rows'],
-  	$vars['table']['page']
-  );
-  $vars['pagination'] = $pagination->cp_links($this->_base_url);
+  $base_url = ee('CP/URL', 'publish/edit');
+  $pagination = ee('CP/Pagination')->make($total_count)
+  	->render($base_url);
 
+See :doc:`/development/services/pagination` for full documentation.
 
 The Alert Service
 -----------------
