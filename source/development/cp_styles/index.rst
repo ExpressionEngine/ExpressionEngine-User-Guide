@@ -54,6 +54,8 @@ an associative array in the second parameter::
 
   ee('CP/URL', 'publish/edit', array('filter_by_channel' => $channel_id));
 
+See :doc:`/development/services/url` for the full documentation.
+
 Control Panel Constants
 ~~~~~~~~~~~~~~~~~~~~~~~
 
