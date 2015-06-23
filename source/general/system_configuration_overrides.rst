@@ -1709,32 +1709,6 @@ Configuration`: :ref:`Enable Email Debugging
 <email-enable-debugging-label>`
 
 
-email_module_captchas
----------------------
-
-When enabled, users will need to fill out a :doc:`CAPTCHA
-</security/captchas>` when using the Tell-a-Friend or Contact email
-forms. You will need to ensure that your tags for those forms contain
-the appropriate CAPTCHA code.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Enable CAPTCHAS on Tell-a-Friend and Contact email forms
-``n``      Disable CAPTCHAS on Tell-a-Friend and Contact email forms **(default)**
-========== ========
-
-Example Usage::
-
-$config['email_module_captchas'] = 'y';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`Enable CAPTCHAs for Tell-a-Friend and Contact
-emails <email-enable-captchas-label>`
-
-
 email_newline
 -------------
 
