@@ -127,12 +127,8 @@ the on-screen instructions to upgrade ExpressionEngine.
    outline any version-specific changes that you may need to make to your
    installation.
 
+#. Review our :doc:`best practices </installation/best_practices>` for
+   recommendations on protecting your installation against common security
+   risks.
+
 You're Done! ExpressionEngine is now fully upgraded.
-
-
-Post-Installation Best Practices
---------------------------------
-
-Once you are confident that ExpressionEngine 2 is working normally on your
-server, we recommend a few :doc:`best practices </installation/best_practices>`
-for protecting your installation against common security risks.
