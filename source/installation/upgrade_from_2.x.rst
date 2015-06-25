@@ -33,25 +33,27 @@ Upgrading from ExpressionEngine 2
 2. Copy Files
 *************
 
-.. todo: What happens when a user has set custom paths for templates and addons?
-
 Now **copy** the following files from the backup of your current site to the
 newly downloaded ExpressionEngine 3.x directory:
 
-#. Copy :file:`system/expressionengine/config/config.php` to
+1. Copy :file:`system/expressionengine/config/config.php` to
    the :file:`system/user/config/config.php`
 
-#. Copy :file:`system/expressionengine/config/database.php` to
+2. Copy :file:`system/expressionengine/config/database.php` to
    :file:`system/user/config/database.php`
 
-#. If you save templates as files, copy all files and directories from
-   :file:`system/expressionengine/templates/` to :file:`system/user/templates/`.
-
-#. If you have any languages other than English in your Control Panel, copy all
+3. If you have any languages other than English in your Control Panel, copy all
    files and directories  *except* ``english`` from
    :file:`system/expressionengine/language/` to :file:`system/user/language/`.
 
-#. If you have any third-party add-ons, copy all files and directories from
+.. note:: If you have changed the paths for ``templates`` and/or ``third_party``
+  using :doc:`/general/system_configuration_overrides`, you can safely ignore
+  the following steps.
+
+4. If you save templates as files, copy all files and directories from
+   :file:`system/expressionengine/templates/` to :file:`system/user/templates/`.
+
+5. If you have any third-party add-ons, copy all files and directories from
    :file:`system/expressionengine/third_party/` to :file:`system/user/addons/`.
 
    .. note:: If any of your add-ons have updates, we recommend downloading them
