@@ -24,7 +24,7 @@ Updates & Upgrades
 ==================
 
 - :doc:`installation/update`
-- :doc:`installation/upgrade_from_1.x`
+- :doc:`installation/upgrade_from_2.x`
 - :doc:`installation/upgrade_from_core`
 - :doc:`installation/version_notes`
 
