@@ -1846,24 +1846,6 @@ Privacy --> Word Censoring`: :ref:`Enable Word Censoring
 <censor-words-enable-label>`
 
 
-enable_db_caching
------------------
-
-If enabled, the system will cache the output of database queries to text
-files.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Enable database caching
-``n``      Disable database caching **(default)**
-========== ========
-
-Example Usage::
-
-$config['enable_db_caching'] = 'y';
-
-
 enable_emoticons
 ----------------
 
