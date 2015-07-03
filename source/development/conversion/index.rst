@@ -19,6 +19,7 @@ Guidelines
 
 - :doc:`/development/addon_setup_php_file`
 - :doc:`General Syntax Changes <syntax>`
+- :doc:`Contol Panel Pages </development/cp_styles/index>`
 - :doc:`Plugin Specific Changes <plugins>`
 - :doc:`Module Specific Changes <modules>`
 - :doc:`Module Conversion Walk-through <walk-through>`

@@ -6,12 +6,19 @@ Control Panel Styles
 
 .. highlight:: php
 
-General Guidelines
-------------------
+Style Guidelines
+----------------
 
-We have published an `ExpressionEngine 3.0 CP style-guide
-<https://ellislab.com/style-guide>`_ which is what we use internally when
-working on the Control Panel. Below are some PHP related guidelines.
+For UI we have published the `ExpressionEngine 3.0 CP style-guide
+<https://ellislab.com/style-guide>`_ which should be used when
+building user interfaces for the Control Panel.
+
+For UX we have published the (link) Human Interface Guidelines for
+interactions in the Control Panel so users have a consistent
+experience throughout the application.
+
+PHP Related Guidelines
+----------------------
 
 External Links
 ~~~~~~~~~~~~~~
