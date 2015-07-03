@@ -1,5 +1,5 @@
 CP\\Pagination Service
-=====================
+======================
 
 .. contents::
   :local:
