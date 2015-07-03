@@ -13,9 +13,9 @@ ExpressionEngine.
 General Development
 *******************
 
+- :doc:`The addon.setup.php File </development/addon_setup_php_file>`
+- :doc:`3.0 Conversion </development/conversion/index>`
 - :doc:`Constants Reference </development/constants>`
-- :doc:`The Template Class </development/usage/template>`
-- :doc:`Accessory Development </development/accessories>`
 - :doc:`Extensions Development </development/extensions>`
 
   - :doc:`/development/extension_hooks/index`

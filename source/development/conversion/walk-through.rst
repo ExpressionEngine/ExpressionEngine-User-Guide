@@ -3,68 +3,17 @@ Module Conversion Walk-through
 
 .. highlight:: php
 
-#. `Create Update File`_
-#. `Modify Language File`_
-#. `Modify Core Module File (mod.package_name.php)`_
-#. Create View Files (Optional)
+#. `Create addon.setup.php File`_
 #. `Modify Control Panel File (mcp.package_name.php)`_
+#. `Modify Plugin File (pi.package_name.php)`_
 
-Create Update File
-------------------
-
-Every module must have a ``upd.package_name.php`` with at least three
-methods: ``install()``, ``uninistall()``, ``update()``.
-
-#. Copy your ``mcp.package_name.php`` file and rename it
-   ``upd.package_name.php``
-#. Rename class ``upd.package_name.php`` to ``Package_name_upd`` and
-   constructor to ``__construct()``
-#. Remove all methods except ``module_install()``,
-   ``module_deinstall()``, any
-   upgrade method, and any dependencies
-#. Rename the methods: ``module_install`` → ``install``,
-   ``module_deinstall`` → ``uninstall``.
-#. Make sure you have a method named update and that it accepts one
-   argument ``$current``, which will be the current installed version of
-   the module in the database::
-
-    function update($current = '')
-
-#. Convert any relevant syntax to the :doc:`new format <syntax>`.
-#. Make certain your queries are converted to use :ellislab:`active
-   record </codeigniter/user-guide/database/active_record.html>`
-   or :ellislab:`database forge
-   </codeigniter/user-guide/database/forge.html>` (for database
-   manipulation).
-#. Save, you're done with your update file!
-
-.. note:: If your module requires user input to complete the install,
-  that should occur on first-run of the module control panel, and not
-  the primary installer. This allows your module to be installed during
-  the ExpressionEngine installer process. See the Wiki module for an
-  example if needed.
-
-Modify Language File
---------------------
-
-#. The ``lang.package_name.php`` file must be renamed
-   ``package_name_lang.php``.
-#. Rename the ``$L`` array containing language variables to ``$lang``.
-
-Modify Core Module File (``mod.package_name.php``)
---------------------------------------------------
-
-Converting the ``mod.package_name.php`` file is simply a matter of
-altering the existing syntax. See :doc:`the syntax conversion notes
-<syntax>` for more detail. Don't forget to:
-
-- Call the super object
-- Switch to active record for your queries
-- Take advantage of the new :doc:`Template variable parser
-  </development/usage/template>`
+Create ``addon.setup.php`` File
+-------------------------------
 
 Modify Control Panel File (``mcp.package_name.php``)
 ----------------------------------------------------
+
+.. note:: The following text needs to be edited for it is wrong for 3.0
 
 The control panel uses an MVC development approach, and your module can
 take advantage of this by using view files instead of creating your
@@ -119,3 +68,7 @@ it is an easier to edit and more organized developmental strategy.
     return ee()->load->view('view_filename', $vars, TRUE);
 
 #. Celebrate, you're done!
+
+
+Modify Plugin File (``pi.package_name.php``)
+--------------------------------------------
