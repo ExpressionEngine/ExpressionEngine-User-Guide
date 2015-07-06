@@ -11,7 +11,7 @@ Simple Example
 --------------
 
 Building URLs in the Control Panel is a common, but exacting task. We have a
-CP\URL Service to make building these URLs simple. For example::
+CP\\URL Service to make building these URLs simple. For example::
 
   $url = ee('CP/URL', 'publish/create/1');
 
