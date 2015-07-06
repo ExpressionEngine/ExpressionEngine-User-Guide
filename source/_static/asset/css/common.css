@@ -932,33 +932,36 @@ table .last td,
   text-align: right;
 }
 .code,
+.highlight-apache,
 .highlight-ee,
 .highlight-bash,
-.highlight-ee,
 .highlight-ci,
 .highlight-html,
 .highlight-js,
+.highlight-json,
+.highlight-md,
+.highlight-none,
 .highlight-perl,
 .highlight-php,
-.highlight-rst,
-.highlight-json,
-.highlight-apache {
+.highlight-rst {
   background-color: #ffffff;
   border: 1px solid #cfcfcf;
   margin: 15px 0;
   padding: 10px;
 }
 .code pre,
+.highlight-apache pre,
 .highlight-ee pre,
 .highlight-bash pre,
 .highlight-ci pre,
 .highlight-html pre,
 .highlight-js pre,
+.highlight-json pre,
+.highlight-md pre,
+.highlight-none pre,
 .highlight-perl pre,
 .highlight-php pre,
-.highlight-rst pre,
-.highlight-json pre,
-.highlight-apache pre {
+.highlight-rst pre {
   font-size: 12px;
   line-height: 1.5;
   tab-size: 4;
