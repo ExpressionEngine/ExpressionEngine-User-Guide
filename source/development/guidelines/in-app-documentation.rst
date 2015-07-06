@@ -71,7 +71,7 @@ The template below demonstrates sections to include, the order to include them, 
   - `param_name` (required) - This is what this parameter does
   - `another_param` - And this one is for such and such
 
-  or using level 5 headers like below. The latter should be used if you need more than a brief sentence to describe how to use the parameters. Choose one or the other, do not mix the two styles.
+  or use level 5 headers like below. The latter should be used if you need more than a brief sentence to describe how to use the parameters. Choose one or the other, do not mix the two styles.
 
   ##### param_name (*required*)
 
@@ -88,7 +88,7 @@ The template below demonstrates sections to include, the order to include them, 
   - `{variable_name}` - The thing
   - `{another_variable}` - The other thing
 
-  or using level 5 headers like below. The latter should be used if you need more than a brief sentence to describe how to use the variables. Choose one or the other, do not mix the two styles.
+  or use level 5 headers like below. The latter should be used if you need more than a brief sentence to describe how to use the variables. Choose one or the other, do not mix the two styles.
 
   ##### param_name (*required*)
 
