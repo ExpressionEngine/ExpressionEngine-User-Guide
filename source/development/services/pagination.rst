@@ -23,7 +23,9 @@ paginate and a URL object::
 CP\Pagination Service Methods
 -----------------------------
 
-.. class:: EllisLab\\ExpressionEngine\\Library\\CP\\Pagination
+.. namespace:: EllisLab\ExpressionEngine\Library\CP
+
+.. class:: Pagination
 
 .. method:: perPage($per_page)
 

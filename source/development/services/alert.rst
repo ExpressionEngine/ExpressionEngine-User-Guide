@@ -24,7 +24,9 @@ an Alert Service for creating alerts in your code. For example::
 Alert Service Methods
 ---------------------
 
-.. class:: EllisLab\\ExpressionEngine\\Service\\Alert\\AlertCollection
+.. namespace:: EllisLab\ExpressionEngine\Service\Alert
+
+.. class:: AlertCollection
 
 .. method:: make($name, $type = 'inline')
 
