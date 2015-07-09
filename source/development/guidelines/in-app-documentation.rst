@@ -57,11 +57,11 @@ The template below demonstrates sections to include, the order to include them, 
   #### Example Usage
 
   ```
-    {exp:addon:method}
-      Put a typical code example here.
-      You can use code fencing or indented code blocks.
-      It will be converted to a textarea in ExpressionEngine for each copying and pasting.
-    {/exp:addon:method}
+  {exp:addon:method}
+    Put a typical code example here.
+    You can use code fencing or indented code blocks.
+    It will be converted to a textarea in ExpressionEngine for each copying and pasting.
+  {/exp:addon:method}
   ```
 
   #### Parameters
