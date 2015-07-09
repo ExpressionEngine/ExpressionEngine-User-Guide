@@ -75,7 +75,9 @@ and encourage them to join!
 
 - Aaron Walden
 - Adrian Macneil (Exp:resso)
+- Aidann Bowley (BridgingUnit)
 - Andrew Fairlie (Red Carrot)
+- Andrew Gunstone (Thirst Studios)
 - Andrew Weaver
 - Ben Croker
 - Benjamin Kohl (Masuga Design)
@@ -95,14 +97,18 @@ and encourage them to join!
 - Christopher Imrie
 - Dan Decker
 - Dan Diemer
+- Danny Bull (Digi Nut)
 - Darren Miller
 - David Dexter (Codesly)
 - David Pak
 - Derek Hogue
 - Digital Surgeons
+- Dimitar Mihaylov
 - Dom Stubbs
 - Doug Thwaites
 - Eli Van Zoeren
+- Elliot Lewis (no two the same)
+- Emily Fitton (Punch Buggy Digital Agency)
 - Eric Lamb
 - Erik Reagan
 - Erwin van Lun
@@ -120,6 +126,7 @@ and encourage them to join!
 - Jamie Pittock
 - Jamie Taylor (Percipio)
 - Jan van Lysebettens
+- Jason Ferrell
 - Jason Siffring (Surprise Highway)
 - Jelle de Jong
 - Jeremy Gimbel
@@ -131,8 +138,10 @@ and encourage them to join!
 - John de Beer
 - John Henry Donovan
 - John Morton
+- John Moylan
 - John Wells
 - Jon Thomas (AnalyticL)
+- Josh Clark (dynam)
 - Justin Kimbrell
 - Keith Mancuso (Familiar)
 - Kelly Sims (Codesly)
@@ -175,7 +184,7 @@ and encourage them to join!
 - Ragnar Frostason (Republic Factory)
 - Rein de Vries
 - Rob Sanchez
-- Robin Baily (Dionach)
+- Robin Bailey (Dionach)
 - Robin Hodges
 - Robin Willmot (Coffee Bean Design)
 - Robson Sobral
@@ -194,6 +203,9 @@ and encourage them to join!
 - Travis Schmeisser
 - Travis Smith (Hop Studios)
 - Ty Wangsness
+- Tyson Oshiro
+- Will Hyman
+- Willem de Boer
 - Wouter Vervloet
 - Yahya Jokhab (UXspan)
 - Yuri Salimovskiy (IntoEEtive)
