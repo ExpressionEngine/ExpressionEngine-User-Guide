@@ -18,9 +18,9 @@ Upgrading from ExpressionEngine 2
 #. Back-up all of your ExpressionEngine files and directories.
 
 #. Download the latest release of ExpressionEngine (either
-   `ExpressionEngine Core <https://store.ellislab.com/#ee-core>`__ or the
-   `standard edition <https://store.ellislab.com/manage>`__, whichever your site
-   is currently running) and unzip the files to a folder on your computer.
+   :elstore:`ExpressionEngine Core </#ee-core>` or the
+   :elstore:`standard edition </manage>`, whichever your site is currently
+   running) and unzip the files to a folder on your computer.
 
 #. Take your site offline:
 
