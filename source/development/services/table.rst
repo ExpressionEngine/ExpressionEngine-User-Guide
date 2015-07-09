@@ -121,3 +121,122 @@ Here are the available options:
 |                     | headings will not be click-able, highlighted, or show  | respectively.         |                   |
 |                     | the visual sort direction indicators.                  |                       |                   |
 +---------------------+--------------------------------------------------------+-----------------------+-------------------+
+
+Setting the columns
+-------------------
+
+Now that our Table object is set up, let's start describing our data.
+First, we'll set up the headings for each column. Let's say we want to
+show a list of Channels, we'll then pass in an array of language keys
+that represent the relevant columns::
+
+  $table->setColumns(
+    array(
+      'id',
+      'channel',
+      'short_name',
+      'manage' => array(
+        'type'  => CP\Table::COL_TOOLBAR
+      ),
+      array(
+        'type'  => CP\Table::COL_CHECKBOX
+      )
+    )
+  );
+
+Notice we specified some extra parameters for two of the columns. The
+"Manage" column is going to be of type ``COL_TOOLBAR`` which can have
+various action buttons related to the individual Channel. And our last
+column is just for checkboxes, so that a user can select Channels to
+perform actions on them in bulk.
+
+While we're here, let's set the no results text. This is the message
+that appears in the table when there are no items to display, and also
+provides a call-to-action to add items to the table::
+
+  $table->setNoResultsText('no_channels', 'create_channel', ee('CP/URL', 'channels/create'));
+
+The first parameter is the language key that lets the user know there
+are no Channels to display. The second parameter is the text for the
+call-to-action button, and the third parameter is the URL for the
+button.
+
+We should be at a point where we can see how our table is coming along.
+To show the table in a view, we'll ask the Table object to compile data
+to be consumed by a view, and then pass that data to our view::
+
+  // Pass in a base URL to create sorting links
+  $vars['table'] = $table->viewData(ee('CP/URL', 'channels'));
+
+  ee()->cp->render('channels/index', $vars);
+
+In our view, we'll take the data and render the table markup by loading
+a shared view::
+
+  <?php $this->view('_shared/table', $table); ?>
+
+Given what we've done so far, our table looks like this:
+
+.. figure:: ../../images/table_service_1.png
+
+TODO: List table column options
+
+Setting the data
+----------------
+
+For the purposes of this guide, we'll get all the Channels for the
+current site::
+
+  $channels = ee('Model')->get('Channel')
+    ->filter('site_id', ee()->config->item('site_id'))
+    ->all();
+
+Next, we'll construct an array with the Channel data we want to
+display::
+
+  $data = array();
+  foreach ($channels as $channel)
+  {
+    $data[] = array(
+      $channel->getId(),
+      $channel->channel_title,
+      $channel->channel_name,
+      array('toolbar_items' => array(
+        'edit' => array(
+          'href' => ee('CP/URL', 'channels/edit/'.$channel->getId()),
+          'title' => lang('edit')
+        ),
+        'settings' => array(
+          'href' => ee('CP/URL', 'channels/settings/'.$channel->getId()),
+          'title' => lang('settings')
+        )
+      )),
+      array(
+        'name' => 'channels[]',
+        'value' => $channel->getId(),
+        'data'  => array(
+          'confirm' => lang('channel') . ': <b>' . htmlentities($channel->channel_title, ENT_QUOTES) . '</b>'
+        )
+      )
+    );
+  }
+
+Notice the data is in the same order we set the columns. For the toolbar
+column, we pass a specifically-formatted array that tells the Table
+service what kind of button to show, as well as the link but the button
+and its title text. For the checkbox column, we need to specify the
+input name for the checkboxes, its value, as well as any optional data
+like the data we set here to work with an action modal.
+
+Finally, we'll tell our Table object about our data::
+
+  $table->setData($data);
+
+Our table should now be filled with the available data and look the way
+we've configured:
+
+.. figure:: ../../images/table_service_2.png
+
+TODO:
+Reorder javascript
+Using as Grid input
