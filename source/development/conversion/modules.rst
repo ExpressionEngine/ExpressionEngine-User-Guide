@@ -104,15 +104,25 @@ Add-On Name Configuration``. In our fortune cookie module example we would have
 ``Add-On Manager / Fortune Cookies`` as the breadcrumb and ``Fortune Cookie
 Configuration`` as the heading.
 
-If you return an associative array it must contain the keys ``body``,
-``heading``, and ``breadcrumb``. The ``body`` key should contain an HTML string
-which will be used in the "body" section of the Control Panel layout inside our
-Add-On Manager. The ``heading`` key should contain a string for use as the
-heading (i.e. ``Fortune Cookie Management``). Finally, the ``breadcrumb`` key
-should contain an associative array of URLs as keys and strings for the bodies.
-The first pair in the array should be ``ee('CP/URL', 'addons') =>
-lang('addon_manager')``. You need to only define the path to you; the header
-value will be added as the final segment in the breadcrumb.
+If you return an associative array it must contain the key ``body`` and may
+contain the keys ``breadcrumb``, ``heading``, and ``sidebar``. The ``body`` key
+should contain an HTML string which will be used in the "body" section of the
+Control Panel layout inside our Add-On Manager.
+The ``breadcrumb`` key should contain an associative array of URLs as
+keys and strings for the bodies. The header value will be added as the final
+segment in the breadcrumb.  The ``heading`` key should
+contain a string for use as the heading (i.e. ``Fortune Cookie Management``). Finally,
+the ``sidebar`` key should contain an array which conforms to the following:
+
+  * A string will be converted into a section heading.
+  * An array key, which corresponds to a language key and will be the displayed
+    section heading, whose value is an associative array which defines an
+    ``href`` key, with a URL as its value, an optional ``class`` key with a CSS
+    class to use for the heading, and an optional ``button`` key with an
+    associative aray as its value with an ``href`` key (with a URL as its
+    value) and a ``text`` key (with a string to use for display as its value).
+  * An associative array will be used to create links where the key is the
+    language string for the link and the value is a URL.
 
 Example
 ~~~~~~~
@@ -121,11 +131,29 @@ Example
 
   return array(
     'body'       => ee()->load->view('index', $vars, TRUE),
-    'heading'    => lang('edit_fortune_cookie'),
     'breadcrumb' => array(
-	  ee('CP/URL', 'addons') => lang('addon_manager'),
-	  ee('CP/URL', 'addons/settings/fortune_cookie') => lang('fortune_cookie_management')
+	  ee('CP/URL', 'addons/settings/fortune_cookie')->compile() => lang('fortune_cookie_management')
 	),
+    'heading'    => lang('edit_fortune_cookie'),
+	'sidebar'    => array(
+	  'fortunes' => array(
+	    'href'   => ee('CP/URL', 'addons/settings/fortune_cookie/'),
+		'class'  => 'cookies',
+		'button' => array(
+		  'href' => ee('CP/URL', 'addons/settings/fortune_cookie/create'),
+		  'text' => 'new'
+		)
+	  ),
+	  array(
+	    'recent_fortunes'   => ee('CP/URL', 'addons/settings/fortune_cookie/recent'),
+		'archived_fortunes' => ee('CP/URL', 'addons/settings/fortune_cookie/archived'),
+	  ),
+	  'statistics',
+	  array(
+	    'most_viewed' => ee('CP/URL', 'addons/settings/fortune_cookie/most_viewed'),
+	    'popular' => ee('CP/URL', 'addons/settings/fortune_cookie/popular'),
+	  )
+	)
   );
 
 Display Tools
