@@ -24,7 +24,8 @@ Known Issues
 - Updating from 2.0 currently is incomplete, work with fresh installs only.
 - MSM incomplete (site creation, etc.)
 - Forum module themes are not yet implemented
-- Documentation is incomplete
+- In-app documentation for native add-ons is incomplete
+- This documentation is incomplete
 - ...including this list
 
 
