@@ -323,7 +323,7 @@ fetch_action_id
 
   Returns a tag in the format ``{AID:class:method}`` for use in the
   frontend. (See also :doc:`EE->cp->fetch_action_id
-  </development/usage/cp>`).
+  <cp>`).
 
   ::
 
