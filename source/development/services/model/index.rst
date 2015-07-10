@@ -92,7 +92,7 @@ Validation
 
 After making changes to a model, you should call ``validate()`` to ensure it
 will save successfully. The result returned from validation is a result object
-from the :doc:`Validation Service <./validaiton>`::
+from the :doc:`Validation Service <../validation>`::
 
   $template->template_name = 'Mike';
   $result = $template->validate();
@@ -107,7 +107,15 @@ Working with Relationships
 
 Getting
   - lazy load
+
 Setting
 Adding
 Saving
 Removing
+
+
+.. toctree::
+  :glob:
+
+  fetching
+  relationships

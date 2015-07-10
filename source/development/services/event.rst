@@ -1,10 +1,14 @@
 Event Service
 =============
 
+.. todo:: This article is a STUB and needs to be completed.
+
 .. highlight:: php
 
 Simple Example
 --------------
+
+::
 
   $event_bus = ee('Event');
 

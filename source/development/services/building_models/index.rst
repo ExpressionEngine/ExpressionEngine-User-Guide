@@ -134,7 +134,7 @@ Validation
 ----------
 
 Validation rules are added using the same format as the :doc:`Validation
-Service <./validation>`. They should be added to a metadata item called
+Service <../validation>`. They should be added to a metadata item called
 ``$_validation_rules``::
 
   protected static $_validation_rules = array(
