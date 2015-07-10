@@ -226,6 +226,8 @@ See :doc:`/development/services/alert` for full documentation.
 The Shared Settings Form
 ------------------------
 
+.. todo:: This article is a STUB and needs to be completed.
+
 At some point we'll have a real overview here with a link to the full
 documentation. For now enjoy this cryptic bit of code::
 
