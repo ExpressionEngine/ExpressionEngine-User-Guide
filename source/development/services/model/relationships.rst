@@ -79,6 +79,10 @@ To unset a relationship, simply assign ``NULL``::
 
   $member->MemberGroup = NULL;
 
+.. Caution:: Unsetting a relationship may result in the deletion of the child,
+  where it would otherwise be orphaned. This can be prevented by establishing
+  a new relationship before calling ``save()``.
+
 To remove a related model from a collection, call ``remove()`` with the related
 model or its primary key value::
 
