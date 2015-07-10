@@ -93,7 +93,7 @@ javascript/
 ~~~~~~~~~~~
 
 (optional) Folder containing javascript files - refer to the :doc:`cp
-library documentation </development/usage/cp>` on how to include these
+library documentation </development/legacy/libraries/cp>` on how to include these
 files.
 
 language/

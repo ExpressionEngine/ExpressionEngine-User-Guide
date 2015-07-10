@@ -39,3 +39,13 @@ Guidelines
 - :doc:`Plugin Specific Changes <conversion/plugins>`
 - :doc:`Module Specific Changes <conversion/modules>`
 - :doc:`Module Conversion Walk-through <conversion/walk-through>`
+
+.. toctree::
+  :hidden:
+  :glob:
+  :titlesonly:
+
+  conversion/*
+  services/*
+  legacy/index
+

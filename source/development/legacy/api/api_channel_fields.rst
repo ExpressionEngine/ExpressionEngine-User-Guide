@@ -106,7 +106,7 @@ Setup Entry Settings
   This method will properly populate the settings array for all fields
   in the specified channel. It returns an array of all field settings,
   and is typically used before the Channel Entries API's
-  :doc:`submit_new_entry() </development/api/api_channel_entries>`
+  :doc:`submit_new_entry() </development/legacy/api/api_channel_entries>`
   method::
 
     ee()->api_channel_fields->setup_entry_settings((string) $channel_id, (array) $entry_data, (bool) $bookmarklet);

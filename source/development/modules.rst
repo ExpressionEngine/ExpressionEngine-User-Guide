@@ -463,7 +463,7 @@ Working with Forms
 While creating forms for the backend is fairly routine, there are
 several differences/additions worth noting:
 
-- The :doc:`Form Validation library </development/usage/form_validation>` is the
+- The :doc:`Form Validation library </development/legacy/libraries/form_validation>` is the
   best means of checking submitted form data and returning in-line
   errors in the case of failed validation.
 - After form submission, you will generally want to output a success

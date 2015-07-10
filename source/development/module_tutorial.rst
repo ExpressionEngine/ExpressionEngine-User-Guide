@@ -163,7 +163,7 @@ guide/database/forge.html>`)::
 
 Lastly, we ensure that any saved publish layouts have our new tab data
 added to the saved layout via the layout library's
-:doc:`add_layout_tabs() function </development/usage/layout>`. Once all
+:doc:`add_layout_tabs() function </development/legacy/libraries/layout>`. Once all
 of this has completed, the function should return ``TRUE``::
 
       ee()->load->library('layout');
@@ -209,7 +209,7 @@ this function::
 
 
 Note the use of the layout library's :doc:`delete_layout_tabs() function
-</development/usage/layout>` to remove our tab from saved layouts.
+</development/legacy/libraries/layout>` to remove our tab from saved layouts.
 
 Update Function
 ~~~~~~~~~~~~~~~
@@ -710,10 +710,10 @@ that according to our tag, this function is expected to be named
 The function first checks for the existence of the required
 ``entry_id``, queries to find all download records for that id, and
 returns the ``no_results`` function if no records exist. If there are
-records to parse, the :doc:`Typography class <usage/typography>` is
+records to parse, the :doc:`Typography class </development/legacy/libraries/typography>` is
 initialized and the data parsed out and returned.
 
-The :doc:`Template class <usage/template>`, offers two general
+The :doc:`Template class </development/legacy/libraries/template>`, offers two general
 approaches to parsing out the data. Here we use the simple
 ``parse_variables`` method, where we simply need to pass a
 multidimensional associative array where our tags are the keys and the

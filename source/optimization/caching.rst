@@ -169,7 +169,7 @@ the backup driver is the file driver and it's likely the best failover
 option due to its reliability, but the backup driver is configurable.
 
 Add-on developers can find more information about using caching drivers
-to store and retrieve items in the :doc:`/development/usage/cache`
+to store and retrieve items in the :doc:`/development/legacy/libraries/cache`
 documentation.
 
 .. note:: The Memcached driver is set to use PHP's

@@ -3414,7 +3414,7 @@ popup_link
 ----------
 
 Specify whether links created by the :doc:`Typography class
-</development/usage/typography>` open in a new window.
+</development/legacy/libraries/typography>` open in a new window.
 
 ======= ========
 Value   Behavior
