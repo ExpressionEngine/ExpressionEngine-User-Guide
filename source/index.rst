@@ -8,6 +8,8 @@ Welcome to the ExpressionEngine User Guide. The guide you are reading right now 
 - What's new, what's deprecated, and what's gone?
 - What steps do I need to take to convert my existing add-ons?
 
+Full reference API documentation auto-generated from our docblocks is coming soon.
+
 If you have questions or feedback, don't hesitate to drop a thread into the :ellislab:`Developer Preview Forums <forums/viewforum/128/>` or the private `Developer Preview Slack group <https://eedevpreview.slack.com/>`_.
 
 .. toctree::
