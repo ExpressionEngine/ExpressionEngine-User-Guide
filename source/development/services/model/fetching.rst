@@ -14,7 +14,8 @@ Use the ``get()`` method with a model name to begin a query::
   $builder = ee('Model')->get('Template');
 
 This will return a builder object, which we will use narrow down the selection.
-When you're ready to retrieve the matching data, call ``all()``::
+When you're ready to retrieve the matching data, call ``all()``. You will be
+returned a :doc:`Collection <./collection>`::
 
   $templates = $builder->all();
 

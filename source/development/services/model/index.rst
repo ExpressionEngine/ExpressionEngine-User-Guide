@@ -105,17 +105,13 @@ from the :doc:`Validation Service <../validation>`::
 Working with Relationships
 --------------------------
 
-Getting
-  - lazy load
+*Full Documentation:* :doc:`Working with Relationships <./relationships>`
 
-Setting
-Adding
-Saving
-Removing
+Models can be related to other models. All relationships can be accessed
+directly with their uppercase name::
 
+  $channel->ChannelEntries;
 
-.. toctree::
-  :glob:
-
-  fetching
-  relationships
+Depending on the type of relationship, this may return either a collection or
+a single other model. By convention, if the name is singular it returns a model
+otherwise it returns a collection.
