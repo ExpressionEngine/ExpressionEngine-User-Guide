@@ -14,4 +14,6 @@ get a channel entry with its fields.
   :glob:
 
   model/index
+  model/fetching
+  model/relationships
   building_models/index
