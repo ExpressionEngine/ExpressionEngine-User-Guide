@@ -2,6 +2,8 @@
 ExpressionEngine Fieldtypes
 ###########################
 
+.. todo:: Audit for 3.0
+
 .. contents::
   :local:
   :depth: 2
@@ -141,17 +143,17 @@ screen. The individual settings are in a table, so they need to use
           lang('latitude', 'latitude'),
           form_input('latitude', $latitude)
       );
-		
+
       ee()->table->add_row(
           lang('longitude', 'longitude'),
           form_input('longitude', $longitude)
       );
-		
+
       ee()->table->add_row(
           lang('zoom', 'zoom'),
           form_dropdown('zoom', range(1, 20), $zoom)
       );
-		
+
       // Map preview
       $this->_cp_js();
       ee()->javascript->output(
@@ -159,13 +161,13 @@ screen. The individual settings are in a table, so they need to use
           // the map, so we'll wait for activate to fire once
           '$("#ft_google_maps").one("activate", gmaps);'
       );
-		
+
       ee()->table->add_row(
           lang('preview'),
           '<div style="height: 300px;"><div id="map_canvas" style="width: 100%; height: 100%"></div></div>'
       );
 	}
-	
+
 Saving Individual Settings
 ==========================
 

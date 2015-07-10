@@ -1,6 +1,8 @@
 Extensions Development
 ======================
 
+.. todo:: Audit for 3.0
+
 -  `Overview`_
 -  `Naming Convention`_
 -  `The Base Extension Class`_

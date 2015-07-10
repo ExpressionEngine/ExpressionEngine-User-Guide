@@ -1,6 +1,8 @@
 Javascript Table Plugin
 =======================
 
+.. todo:: Audit for 3.0
+
 .. js:class:: $.fn.table
 
 The javascript table plugin provides the javascript counterpart to the

@@ -1,6 +1,8 @@
 ExpressionEngine Modules
 ========================
 
+.. todo:: Audit for 3.0
+
 Modules are the most complex form of add-on. They can have their own
 database tables, backend control panels, tabs and fields that are
 included on the publish page, as well as their own tags for use in

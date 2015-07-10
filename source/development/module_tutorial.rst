@@ -1,6 +1,8 @@
 Module Tutorial
 ===============
 
+.. todo:: Audit for 3.0
+
 .. highlight:: php
 
 The best way to understand ExpressionEngine modules is to dissect one.

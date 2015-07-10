@@ -1,6 +1,8 @@
 ExpressionEngine Plugin API
 ===========================
 
+.. todo:: Audit for 3.0
+
 .. highlight:: php
 
 Tag Construction
