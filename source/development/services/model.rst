@@ -15,3 +15,5 @@ get a channel entry with its fields.
 
   model/index
   building_models/index
+  model/fetching
+  model/relationships
