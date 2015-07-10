@@ -136,7 +136,7 @@ supplied data array::
       )
   );
 
-:doc:`ee()->db->update() </development/legacy/libraries/usage/database>` is the preferred method
+:doc:`ee()->db->update() </development/legacy/libraries/database>` is the preferred method
 for ``UPDATE`` queries, as values are escaped automatically in the
 supplied data and ``where`` arrays::
 
