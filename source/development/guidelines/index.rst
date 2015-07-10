@@ -33,7 +33,7 @@ code prior to submission.
 In-app Documentation
 --------------------
 
-You are strongly encouraged to make use of `<in-app-documentation>` for
+You are strongly encouraged to make use of :doc:`in-app-documentation` for
 a consistent user experience.
 
 
