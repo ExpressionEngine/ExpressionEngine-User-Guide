@@ -1,6 +1,8 @@
 Developer Guidelines Checklist
 ==============================
 
+.. todo:: Audit for 3.0
+
 - General Syntax and Correctness:
 
   - Classes and methods are properly named and cased
