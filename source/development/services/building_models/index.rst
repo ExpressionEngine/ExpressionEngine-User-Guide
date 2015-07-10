@@ -230,9 +230,13 @@ The available options include:
 +------------+-------------------+------------------+
 | float      | Cast to float     | Cast to float    |
 +------------+-------------------+------------------+
+| double     | Cast to float     | Cast to float    |
++------------+-------------------+------------------+
 | string     | Cast to string    | Cast to string   |
 +------------+-------------------+------------------+
 | boolString | Cast to y/n       | Cast to boolean  |
++------------+-------------------+------------------+
+| yesNo      | Cast to y/n       | Cast to boolean  |
 +------------+-------------------+------------------+
 | boolInt    | Cast to 0/1       | Cast to boolean  |
 +------------+-------------------+------------------+
@@ -242,73 +246,39 @@ The available options include:
 Composite Columns
 -----------------
 
+Composite Types
+---------------
+
 Sometimes a database column may contain serialized data. Instead of
-treating this data merely as a string or array (using getters and setters),
-you can automatically turn it into sub-objects by defining a composite
-column.
+treating this data merely as a string or using getters and setters,
+you can automatically turn it into an array or object. These are also
+defined in the ``$_typed_columns`` metadata array::
 
-First, add a static ``$_composite_columns`` array to your model where the
-key is the name of the column and the value is the name of the composite
-class you wish to use.
-
-::
-
-  protected static $_composite_columns = array(
-    'coordinates' => 'Coordinates'
+  protected static $_typed_columns = array(
+    'settings' => 'json'
   );
 
-Next, create a class that describes the composite column. Place it under
-``<your\model\namespace>\Column\``::
-
-  use EllisLab\ExpressionEngine\Service\Model\Column\Composite;
-
-  class Coordinates extends Composite {
-
-    protected $latitude;
-    protected $longitude;
-
-  }
-
-Lastly, define two methods - ``serialize`` and ``unserialize`` on your
-composite column to describe how it should be saved and loaded::
-
-  protected function serialize($data)
-  {
-    return json_encode($data);
-  }
-
-  protected function unserialize($data)
-  {
-    return json_decode($data);
-  }
-
-Now you can access your composite column by calling
-``get<CompositeName>`` and modify it as you see fit. Saving the parent
-model will automatically synchronize any changes to the column::
-
-  $coordinates = $my_model->getCoordinates();
-
-  $coordinates->latitude = 42.3550496;
-  $coordinates->longitude = -71.0656267;
-
-  $my_model->save();
+  $my_model->settings = array('name' => 'Bob'); // stores: {"name": "Bob"}
+  $my_model->settings['name']; // 'Bob'
 
 If you don't wish to implement your own, a few common serializations are
 included in the ``EllisLab\ExpressionEngine\Service\Model\Column\``
 namespace:
 
-+----------------------------------+---------------------------------+
-| Class                            | Serialization                   |
-+==================================+=================================+
-| Composite (parent class)         | None, must implement your own   |
-+----------------------------------+---------------------------------+
-| JsonComposite                    | json_encode($data)              |
-+----------------------------------+---------------------------------+
-| SerializedComposite              | serialize($data)                |
-+----------------------------------+---------------------------------+
-| Base64EncodedSerializedComposite | base64_encode(serialize($data)) |
-+----------------------------------+---------------------------------+
++------------------+---------------------------------+
+| Name             | Serialization                   |
++==================+=================================+
+| base64           | base64_encode($data)            |
++------------------+---------------------------------+
+| json             | json_encode($data)              |
++------------------+---------------------------------+
+| serialized       | serialize($data)                |
++------------------+---------------------------------+
+| base64Serialized | base64_encode(serialize($data)) |
++------------------+---------------------------------+
 
+Please refer to :doc:`Creating Column Types <./column_types>` to learn how to add your
+own.
 
 Multiple Tables
 ---------------
