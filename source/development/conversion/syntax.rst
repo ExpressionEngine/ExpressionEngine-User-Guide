@@ -33,4 +33,5 @@ For the full documentation see :doc:`/development/services/model`.
 CP URLs
 -------
 
-Instead of using ``cp_url(...)`` we recommend using ``ee('CP/URL', '...')``.
+``cp_url(...)`` has been deprecated, please use ``ee('CP/URL', '...')``.
+For the full documentation see :doc:`/development/cp_styles/index`.

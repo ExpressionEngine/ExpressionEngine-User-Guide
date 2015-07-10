@@ -7,8 +7,7 @@
 {%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
 {% set project_abbreviation = 'ee' %}{% set project_domain = 'ellislab.com/expressionengine' %}
 {%- if project == 'ExpressionEngine' %}{% set project_abbreviation = 'ee' %}{% set project_domain = 'ellislab.com/expressionengine' %}{% endif -%}
-{%- if project == 'CodeIgniter' %}{% set project_abbreviation = 'ci' %}{% set project_domain = 'ellislab.com/codeigniter' %}{% endif -%}
-{%- if project == 'MojoMotor' %}{% set project_abbreviation = 'mm' %}{% set project_domain = 'ellislab.com/mojomotor' %}{% endif -%}
+
 {%- set exclude_comments = ['index', 'license', 'changelog',
 							'development/index', 'development/extension_hooks/index',
 							'development/guidelines/template', 'development/developer_preview_program'] %}
@@ -107,6 +106,17 @@
 								<option>Download 1.x User Guide</option>
 							</select>
 						</form>
+						<h1>Add-on Development</h1>
+							<h2><a href="{{ url_root }}development/conversion/index.html">What's New in 3.0</a></h2>
+							<ul>
+								<li><a href="{{ url_root }}development/addon_setup_php_file.html">The addon.setup.php File</a></li>
+								<li><a href="{{ url_root }}development/conversion/syntax.html">General Syntax Changes</a></li>
+								<li><a href="{{ url_root }}development/cp_styles/index.html">Control Panel Pages</a></li>
+								<li><a href="{{ url_root }}development/conversion/plugins.html">Plugin Specific Changes</a></li>
+								<li><a href="{{ url_root }}development/conversion/modules.html">Module Specific Changes</a></li>
+							</ul>
+							<h2><a href="{{ url_root }}development/conversion/walk-through.html">Add-on Conversion Walk-through</a></h2>
+
 						<!-- @todo organize and add table of contents -->
 					</div>
 				</section>
