@@ -33,6 +33,23 @@ Known Issues
   :hidden:
   :titlesonly:
 
-  conversion/*
-  services/*
-  legacy/index
+  development/index
+
+  about/index
+  about/license
+  about/changelog
+  installation/index
+  cp/index
+  general/index
+  how_to/index
+  intro/index
+  bugs_and_security_reports/index
+  add-ons/index
+  operations/index
+  optimization/index
+  monitoring/index
+  security/index
+  templates/index
+  troubleshooting/index
+  urls/index
+  development/index
