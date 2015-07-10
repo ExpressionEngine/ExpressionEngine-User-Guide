@@ -48,4 +48,5 @@ Guidelines
   conversion/*
   services/*
   legacy/index
+  extensions
 

@@ -595,3 +595,10 @@ processed after that point. The ``$this->extensions->end_script`` exists
 solely for that purpose. If you set this value to TRUE, then once your
 extension is done being processed the execution of the hook is finished,
 as is the script that the extension hook is contained within.
+
+.. toctree::
+  :hidden:
+  :glob:
+  :titlesonly:
+
+  extension_hooks/index
