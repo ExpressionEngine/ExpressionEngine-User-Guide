@@ -85,6 +85,8 @@ for the rules to be applied::
     'email' => 'whenPresent[newsletter]|required|email'
   );
 
+.. _validation-service-custom-rules:
+
 Custom Rules
 ------------
 
