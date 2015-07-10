@@ -14,6 +14,7 @@
 {% if pagename in ['index', 'general/languages'] -%}
 	{%- set script_files = script_files + ['_static/asset/js/jquery-github-repos.js'] %}
 {% endif %}
+{%- set script_files = script_files + ['_static/asset/js/common.js'] %}
 
 <html>
 	<head>
