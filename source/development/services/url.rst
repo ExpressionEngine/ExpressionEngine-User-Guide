@@ -25,10 +25,12 @@ Or::
   $url = ee('CP/URL', 'publish/edit')
   	->setQueryStringVariable('filter_by_channel', 1);
 
-CP\URL Service Methods
-----------------------
+CP\\URL Service Methods
+-----------------------
 
-.. class:: EllisLab\\ExpressionEngine\\Library\\CP\\URL
+.. namespace:: EllisLab\ExpressionEngine\Library\CP
+
+.. class:: URL
 
 .. method:: setQueryStringVariable($key, $value)
 
