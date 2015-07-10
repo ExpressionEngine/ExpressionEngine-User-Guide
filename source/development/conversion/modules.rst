@@ -164,28 +164,29 @@ We have a few display tools available that are useful when creating your output.
 The Table Service
 -----------------
 
-At some point we'll have a real overview here with a link to the full
-documentation. For now enjoy this cryptic bit of code::
+Tables are the most common way to view and navigate data in the
+ExpressionEngine control panel. Since tables share a lot of common
+functionality, we've abstracted most of it out to a Table service to
+handle tasks such as displaying the table markup, and sorting and
+filtering tabular content::
 
   $table = ee('CP/Table', array('autosort' => TRUE, 'autosearch' => FALSE, 'limit' => 20));
   $table->setColumns(
-  	array(
-  		'tool_set',
-  		'status',
-  		'manage' => array(
-  			'type'	=> Table::COL_TOOLBAR
-  		),
-  		array(
-  			'type'	=> Table::COL_CHECKBOX
-  		)
-  	)
+    array(
+      'tool_set',
+      'status',
+      'manage' => array(
+        'type'  => Table::COL_TOOLBAR
+      ),
+      array(
+        'type'  => Table::COL_CHECKBOX
+      )
+    )
   );
 
-  $table->setNoResultsText('no_tool_sets');
   $table->setData($data);
 
-  $vars['table'] = $table->viewData($this->_base_url);
-  $vars['base_url'] = clone $vars['table']['base_url'];
+See :doc:`/development/services/table` for full documentation.
 
 The Pagination Service
 ----------------------
