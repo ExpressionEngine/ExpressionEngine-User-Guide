@@ -25,6 +25,8 @@ Known Issues
 - MSM incomplete (site creation, etc.)
 - Forum module themes are not yet implemented
 - In-app documentation for native add-ons is incomplete
+- Control panel interfaces for some native add-ons are incomplete
+- Deleting categories or other models with recursive relationships does not work
 - Publish required validation is not functional
 - This documentation is incomplete
 - ...including this list
