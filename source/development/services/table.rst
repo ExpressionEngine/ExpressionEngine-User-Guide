@@ -291,7 +291,7 @@ to write some custom JavaScript to bind the plugin to our table, as well
 as perform any callback actions we may need::
 
   $('table').eeTableReorder({
-    afterSort: function(event, row) {
+    afterSort: function(row) {
       // Whatever you like
     }
   });

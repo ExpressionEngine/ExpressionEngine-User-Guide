@@ -1,6 +1,8 @@
 ExpressionEngine RTE tools API
 ==============================
 
+.. todo:: Audit for 3.0
+
 .. highlight:: php
 
 Basic File Structure

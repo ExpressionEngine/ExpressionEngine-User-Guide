@@ -1,6 +1,8 @@
 Third Party Package Structure
 =============================
 
+.. todo:: Audit for 3.0
+
 Third Party Add-ons in ExpressionEngine are organized into "packages".
 An add-on package can include Plugins, Modules, Extensions, and control
 panel Accessories. Additionally, an add-on package can use its own
@@ -93,7 +95,7 @@ javascript/
 ~~~~~~~~~~~
 
 (optional) Folder containing javascript files - refer to the :doc:`cp
-library documentation </development/usage/cp>` on how to include these
+library documentation </development/legacy/libraries/cp>` on how to include these
 files.
 
 language/

@@ -10,10 +10,10 @@ Introduction
 ------------
 
 If you are not familiar with the ExpressionEngine template language,
-you may wish to read the :doc:`../../templates/overview`.
+you may wish to read the :doc:`../../../templates/overview`.
 
-When you create a :doc:`Plugin <../plugins>` or
-:doc:`Module <../modules>`, the name of your add-on and any of its
+When you create a :doc:`Plugin <../../plugins>` or
+:doc:`Module <../../modules>`, the name of your add-on and any of its
 public methods become available as ExpressionEngine tags for use in
 templates:
 

@@ -30,3 +30,4 @@ Guidelines
   :titlesonly:
 
   *
+  ../cp_styles/index

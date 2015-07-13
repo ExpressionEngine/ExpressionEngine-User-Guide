@@ -698,7 +698,7 @@ Release Date: February 28, 2014
 
 - Developers:
 
-  - Added :doc:`Cache class </development/usage/cache>` which provides a
+  - Added :doc:`Cache class </development/legacy/libraries/cache>` which provides a
     key-value cache store.
   - Added a ``bool_config_item()`` helper function to retrieve y/n
     config file items as booleans.
@@ -712,7 +712,7 @@ Release Date: February 28, 2014
   - **Reactor:** Added :func:`channel_search_modify_result_query` hook
     for modifying the query retrieved by the search module.
   - Replaced Magpie with
-    :doc:`SimplePie </development/usage/rss_parser>` for RSS feed
+    :doc:`SimplePie </development/legacy/libraries/rss_parser>` for RSS feed
     parsing.
   - Deprecated :func:`channel_module_create_pagination`, use
     :func:`pagination_create` instead
@@ -5716,8 +5716,8 @@ Build 20091202 (initial release)
   - New Custom Field API lets you create your own custom field types.
     *Contact the development team for alpha documentation*.
   - Added simple methods for tags to :doc:`parse their template
-    variables </development/usage/template>`.
-  - Added :doc:`CP library </development/usage/cp>` which has many
+    variables </development/legacy/libraries/template>`.
+  - Added :doc:`CP library </development/legacy/libraries/cp>` which has many
     assistive methods and handles many things for you automatically.
   - Display class is deprecated!
   - CodeIgniter core increase ease and power of developing add-ons,

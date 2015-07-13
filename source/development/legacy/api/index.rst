@@ -40,15 +40,15 @@ Calling the API
 Available APIs
 --------------
 
-- :doc:`Channel Categories </development/api/api_channel_categories>` – Retrieve
+- :doc:`Channel Categories </development/legacy/api/api_channel_categories>` – Retrieve
   information on Channel Categories.
-- :doc:`Channel Entries </development/api/api_channel_entries>` – Retrieve
+- :doc:`Channel Entries </development/legacy/api/api_channel_entries>` – Retrieve
   information on Channel Entries.
-- :doc:`Channel Fields </development/api/api_channel_fields>` – Retrieve information
+- :doc:`Channel Fields </development/legacy/api/api_channel_fields>` – Retrieve information
   on Channel Fields.
-- :doc:`Channel Structure </development/api/api_channel_structure>` – Create, Modify,
+- :doc:`Channel Structure </development/legacy/api/api_channel_structure>` – Create, Modify,
   Delete & Update Channels.
-- :doc:`Template Structure </development/api/api_template_structure>` – Retrieve
+- :doc:`Template Structure </development/legacy/api/api_template_structure>` – Retrieve
   information on Template Groups.
 
 Function Reference

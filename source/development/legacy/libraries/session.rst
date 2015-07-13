@@ -181,7 +181,7 @@ Flash Data for Redirects
   :rtype: Void
 
   Flash data will often be used to specify a :doc:`Control panel class
-  </development/usage/cp>` $cp_message variable (``'message_success'``,
+  <cp>` $cp_message variable (``'message_success'``,
   ``'message_notice'``, ``'message_error'``, ``'message_failure'``) the
   key and the message as the value, as such default view variables are
   displayed automatically.

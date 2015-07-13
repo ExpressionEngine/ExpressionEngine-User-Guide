@@ -39,3 +39,27 @@ Guidelines
 - :doc:`Plugin Specific Changes <conversion/plugins>`
 - :doc:`Module Specific Changes <conversion/modules>`
 - :doc:`Module Conversion Walk-through <conversion/walk-through>`
+
+.. toctree::
+  :hidden:
+  :glob:
+  :titlesonly:
+
+  conversion/*
+  services/*
+  legacy/index
+  extensions
+  addon_setup_php_file
+  constants
+  cp_javascript/index
+  developer_preview_program
+  emoticons
+  fieldtypes
+  guidelines/index
+  json_version_feed
+  modules
+  packages
+  plugins
+  rte_tools
+  reference/tree_datastructure
+

@@ -2,6 +2,8 @@
 Javascript Notification Plugin
 ##############################
 
+.. todo:: Audit for 3.0
+
 The javascript notification plugin provides a unified way to notify
 users of javascript triggered control panel events.
 
