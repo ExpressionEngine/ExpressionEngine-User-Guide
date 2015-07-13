@@ -25,7 +25,7 @@ Known Issues
 - MSM incomplete (site creation, etc.)
 - Forum module themes are not yet implemented
 - In-app documentation for native add-ons is incomplete
-- Publish required fields are not functional
+- Publish required validation is not functional
 - This documentation is incomplete
 - ...including this list
 
