@@ -127,7 +127,80 @@ Default Events
 Relationships
 -------------
 
-Relationships to other models can be defined
+*In-Depth Documentation:* :doc:`Relating Models <./relationships>`
+
+Models can be related to other models using just a little bit of metadata. They
+are defined on a ``$_relationships`` metadata array. The array keys should be
+the relationship names, and their values will be a description of the
+relationship::
+
+  protected static $_relationships = array(
+    'Author' => array(
+      'model' => 'Member',
+      'type' => 'BelongsTo'
+    )
+  );
+
+  $my_model->Author; // fetches member that created this entry
+
+The type name is *required*, all other fields have predictable defaults. The
+``model`` key will default to the relationship name. You may need to modify
+the key names that are used to match the relationship. To do so, specify a
+``from_key`` and a ``to_key``, where the ``from_key`` is a property name on
+this model, and the ``to_key`` is a property name on the related model::
+
+  protected static $_relationships = array(
+    'Author' => array(
+      'model' => 'Member',
+      'type' => 'BelongsTo',
+      'from_key' => 'author_id',
+      'to_key' => 'member_id'
+    )
+  );
+
+The following types are available:
+
++---------------------+--------------------------+--------------------------+
+| Type                | Default ``from_key``     | Default ``to_key``       |
++=====================+==========================+==========================+
+| HasOne              | This primary key name    | This primary key         |
++---------------------+--------------------------+--------------------------+
+| HasMany             | This primary key name    | This primary key         |
++---------------------+--------------------------+--------------------------+
+| BelongsTo           | Related primary key name | Related primary key name |
++---------------------+--------------------------+--------------------------+
+| HasAndBelongsToMany | This primary key name    | Related primary key name |
++---------------------+--------------------------+--------------------------+
+
+HasAndBelongsToMany
+~~~~~~~~~~~~~~~~~~~
+
+The keys for the ``HasAndBelongsToMany`` relationship work slightly differently
+from the rest. This is because this relationship type requires a pivot table
+to work. The ``from_key`` and ``to_key`` still specify a property on the models,
+but there is an additional ``pivot`` key for the pivot table name::
+
+  protected static $_relationships = array(
+    'Editors' => array(
+      'model' => 'Member',
+      'type' => 'HasAndBelongsToMany',
+      'pivot' => 'my_model_editors'
+      'from_key' => 'editor_id',
+      'to_key' => 'member_id'
+    )
+  );
+
+If your pivot table key names do not match the primary key names, you can
+specify them as well, by turning the pivot item into an array::
+
+  'pivot' => array(
+    'table' => 'my_model_editors',
+    'left' => 'editor_id',
+    'right' => 'member_id'
+  )
+
+The ``left`` column will be matched to your ``from_key`` property and the
+``right`` column will be matched to your ``to_key`` property.
 
 
 Validation
@@ -243,8 +316,8 @@ The available options include:
 | timestamp  | Cast to timestamp | Cast to DateTime |
 +------------+-------------------+------------------+
 
-Composite Columns
------------------
+Please refer to :doc:`Creating Column Types <./column-types>` to learn how to add your
+own.
 
 Composite Types
 ---------------
@@ -261,9 +334,7 @@ defined in the ``$_typed_columns`` metadata array::
   $my_model->settings = array('name' => 'Bob'); // stores: {"name": "Bob"}
   $my_model->settings['name']; // 'Bob'
 
-If you don't wish to implement your own, a few common serializations are
-included in the ``EllisLab\ExpressionEngine\Service\Model\Column\``
-namespace:
+The following composite types are included:
 
 +------------------+---------------------------------+
 | Name             | Serialization                   |
@@ -277,12 +348,13 @@ namespace:
 | base64Serialized | base64_encode(serialize($data)) |
 +------------------+---------------------------------+
 
-Please refer to :doc:`Creating Column Types <./column_types>` to learn how to add your
+Please refer to :doc:`Creating Column Types <./column-types>` to learn how to add your
 own.
 
 Multiple Tables
 ---------------
 
+.. todo:: This section is a STUB and needs to be completed.
 
 Model Methods
 -------------
