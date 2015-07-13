@@ -2,6 +2,8 @@
 ExpressionEngine 3.0 Module Changes
 ***********************************
 
+.. todo:: Audit for 3.0
+
 .. highlight:: php
 
 In addition to the :doc:`syntax changes <syntax>` already discussed, modules
