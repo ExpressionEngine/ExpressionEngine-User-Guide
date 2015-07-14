@@ -19,11 +19,6 @@ Path Constants
 
 - ``PATH_ADDONS`` - Path to the first-party addons directory
 - ``PATH_THEMES`` - Path to the themes directory
-- ``PATH_MOD`` - Path to the first party modules directory
-- ``PATH_PI`` - Path to the first party plugins directory
-- ``PATH_EXT`` - Path to the first party extensions directory
-- ``PATH_ACC`` - Path to the first party accessories directory
-- ``PATH_FT`` - Path to the first party fieldtypes directory
 - ``PATH_RTE`` - Path to the first party RTE tools directory
 - ``PATH_MBR_THEMES`` - Path to the member themes directory
 - ``PATH_CP_GBL_IMG`` - Path to the global image directory
