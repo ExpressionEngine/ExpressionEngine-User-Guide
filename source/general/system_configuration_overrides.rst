@@ -3281,6 +3281,26 @@ Privacy --> Security and Sessions`: :ref:`Time Interval for Lockout
 <security-passwd-lockout-int-label>`
 
 
+.. _path_addons_themes:
+
+path_addons_themes
+-----------------
+
+Set the path to the third-party add-ons' :file:`themes` directory.
+Should be used in conjunction with :ref:`url_third_themes
+<url_third_themes>`.
+
+========== ===========
+Value      Description
+========== ===========
+``path``   Server path to the third-party add-ons' :file:`themes` directory
+========== ===========
+
+Example Usage::
+
+$config['path_addons_themes'] = '/valid/path/to/directory/';
+
+
 photo_max_height
 ----------------
 
@@ -5002,6 +5022,26 @@ Value               Behavior
 Example Usage::
 
 $config['uri_protocol'] = 'PATH_INFO';
+
+
+.. _url_third_themes:
+
+url_third_themes
+-----------------
+
+Set the URL to the third-party add-ons' :file:`themes` directory. Should
+be used in conjunction with :ref:`path_addons_themes
+<path_addons_themes>`.
+
+========== ===========
+Value      Description
+========== ===========
+``URL``    URL to the third-party add-ons' :file:`themes` directory
+========== ===========
+
+Example Usage::
+
+$config['url_third_themes'] = 'http://example.com/third_party/';
 
 
 .. _use_category_name:
