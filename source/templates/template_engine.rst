@@ -133,4 +133,4 @@ bottom through each rendering stage.
 
 #. Parse :ref:`alternative syntax <global_alt_syntax>` forms of the member variables above
 
-#. Parse :doc:`path variables </templates/globals/path>`
+#. Parse :doc:`path variables </templates/globals/path>` (including :doc:`{route=...} paths </urls/template_routes>`)

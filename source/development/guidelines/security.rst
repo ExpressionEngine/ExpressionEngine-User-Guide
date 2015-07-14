@@ -2,6 +2,8 @@
 Security Guidelines
 ###################
 
+.. todo:: Audit for 3.0
+
 .. contents::
   :local:
   :depth: 2
@@ -46,7 +48,7 @@ Keys are converted to UTF-8 and new lines in data are normalized
 However, for performance reasons, data are not automatically run through
 the xss filter. If you are storing or displaying data from these
 variables, you should use the :doc:`Input class's get(), post(), or
-get_post() methods </development/usage/input>` and pass ``TRUE`` as
+get_post() methods </development/legacy/libraries/input>` and pass ``TRUE`` as
 the second parameter so the value will be XSS cleaned.
 
 If the user input is in the Control Panel, such as a module's back end,
@@ -68,7 +70,7 @@ TRUE)`` before being stored in the database.
 Outputting Data to the Page
 ===========================
 
-Use the :doc:`Typography class </development/usage/typography>` whenever
+Use the :doc:`Typography class </development/legacy/libraries/typography>` whenever
 outputting blocks of content from user submitted data. It is regularly
 updated to improve security and performance, saving you both time and
 energy.
@@ -111,7 +113,7 @@ query. This means that even variables passed as arguments to a method
 must be escaped before being used in a query.
 
 Manually written queries should use both XSS cleaned data and
-:doc:`ee()->db->escape_str() <../usage/database>` on variables, even if
+:doc:`ee()->db->escape_str() </development/legacy/libraries/database>` on variables, even if
 you think the value is trusted::
 
   $data = ee()->security->xss_clean($foo);
@@ -124,7 +126,7 @@ you think the value is trusted::
 
   $query = ee()->db->query("SELECT field FROM table WHERE column = '".ee()->db->escape_str($data)."'");
 
-:doc:`ee()->db->insert() <../usage/database>` is the preferred method
+:doc:`ee()->db->insert() </development/legacy/libraries/database>` is the preferred method
 for ``INSERT`` queries, as values are escaped automatically in the
 supplied data array::
 
@@ -136,7 +138,7 @@ supplied data array::
       )
   );
 
-:doc:`ee()->db->update() <../usage/database>` is the preferred method
+:doc:`ee()->db->update() </development/legacy/libraries/database>` is the preferred method
 for ``UPDATE`` queries, as values are escaped automatically in the
 supplied data and ``where`` arrays::
 

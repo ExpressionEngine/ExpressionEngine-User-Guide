@@ -2,6 +2,8 @@
 ExpressionEngine Emoticon Development
 #####################################
 
+.. todo:: Audit for 3.0
+
 .. highlight:: php
 
 Modifying or creating new sets of Emoticons for use with

@@ -29,7 +29,7 @@ benefits.
 
 The superglobal methods all allow the specification of an optional
 second parameter that lets you run the data through the :doc:`XSS filter
-</development/usage/security>`. It's enabled by setting the second
+<security>`. It's enabled by setting the second
 parameter to boolean TRUE.
 
 Lastly, the superglobal methods will check to see if the item is set

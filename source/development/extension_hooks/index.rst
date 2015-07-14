@@ -2,6 +2,8 @@
 Extension Hooks
 ###############
 
+.. todo:: Audit for 3.0
+
 The list below details all available extension hooks in ExpressionEngine.
 
 ******

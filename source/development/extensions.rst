@@ -1,6 +1,8 @@
 Extensions Development
 ======================
 
+.. todo:: Audit for 3.0
+
 -  `Overview`_
 -  `Naming Convention`_
 -  `The Base Extension Class`_
@@ -110,7 +112,7 @@ settings (if any).
 If your extension has a language file, then you the $name and
 $description class variables can be set in the constructor by calling
 the language file and variables using the :doc:`Language ($LANG)
-class </development/usage/language>`. If your plugin is likely to be used
+class </development/legacy/libraries/language>`. If your plugin is likely to be used
 internationally and by non-English speakers this is a recommended course
 of action.
 
@@ -595,3 +597,10 @@ processed after that point. The ``$this->extensions->end_script`` exists
 solely for that purpose. If you set this value to TRUE, then once your
 extension is done being processed the execution of the hook is finished,
 as is the script that the extension hook is contained within.
+
+.. toctree::
+  :hidden:
+  :glob:
+  :titlesonly:
+
+  extension_hooks/index

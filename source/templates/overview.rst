@@ -12,7 +12,7 @@ to ExpressionEngine you may want to begin with the :doc:`News Site
 Tutorial <../how_to/building_a_simple_news_site>`.
 
 If you are a developer, you may also wish to read the
-:doc:`../development/usage/template` documentation.
+:doc:`../development/legacy/libraries/template` documentation.
 
 .. contents::
    :local:

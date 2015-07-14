@@ -1,6 +1,8 @@
 Constants Reference
 ===================
 
+.. todo:: Audit for 3.0
+
 The ExpressionEngine core defines a variety of constants to ensure
 consistency in several aspects. Please be aware that some of the
 constants may not be defined, or have different meaning, in the context
