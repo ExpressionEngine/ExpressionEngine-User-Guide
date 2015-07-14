@@ -43,8 +43,9 @@ URL Constants
 - ``AMP`` - ``&amp;``
 - ``QUERY_MARKER`` - Question mark if forcing query strings, blank
   otherwise
+
 - ``URL_THEMES`` - URL to the theme folder
-- ``URL_THIRD_THEMES`` - URL to the third party theme folder
+- ``URL_THIRD_THEMES`` - URL to the third-party theme folder
 
 HTML Constants
 --------------
