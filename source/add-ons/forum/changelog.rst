@@ -1,6 +1,24 @@
 ExpressionEngine Forum Module Change Log
 ========================================
 
+Version 3.1.19
+--------------
+
+Release Date: April 29, 2015
+
+- Added new conditional variable to forum templates,
+  ``{if pm_enabled}``, for conditionally displaying content if private
+
+Version 3.1.18
+--------------
+
+Release Date: March 24, 2015
+
+- Fixed a bug (#20640) where a language key for Bulletin Board was not
+  available for use in forum templates.
+- Fixed a bug (#20641, #20642) where pagination did not work on the
+  forum's thread split page.
+
 Version 3.1.17
 --------------
 
@@ -919,4 +937,3 @@ Release Date: July 30, 2005
    not post.
 -  Removed posting permissions checkboxes for guests, pending, and
    banned members in the forum control panel since they don't apply.
-

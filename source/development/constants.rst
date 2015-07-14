@@ -1,6 +1,8 @@
 Constants Reference
 ===================
 
+.. todo:: Audit for 3.0
+
 The ExpressionEngine core defines a variety of constants to ensure
 consistency in several aspects. Please be aware that some of the
 constants may not be defined, or have different meaning, in the context
@@ -96,3 +98,4 @@ Others
 - ``EXT`` - File extension (``.php``)
 - ``UTF8_ENABLED`` - Server has proper UTF-8 support
 - ``MB_ENABLED`` - Server has multibyte function support
+- ``PASSWORD_MAX_LENGTH`` - Maximum number of characters for a password.

@@ -219,6 +219,26 @@ Privacy --> Security and Sessions`: :ref:`Allow multiple log-ins from a
 single account <allow-multi-logins-label>`
 
 
+.. _overrides-allow-pending-login:
+
+allow_pending_login
+-------------------
+
+Set whether members of the Pending member group can log in or not.
+By default, Pending members cannot log in.
+
+======== ===========
+Value    Behavior
+======== ===========
+``y``    Allow Pending member log in
+``n``    Do not allow Pending members to log in **(default)**
+======== ===========
+
+Example Usage::
+
+$config['allow_pending_login'] = 'y';
+
+
 allow_signatures
 ----------------
 
@@ -849,7 +869,8 @@ captcha_require_members
 -----------------------
 
 Specify whether to require logged-in members to pass CAPTCHA validation
-to post comments, assuming the CAPTCHA is already enabled for comments.
+to submit front-end forms, such as Channel Form, comment forms and email
+forms.
 
 ====== ========
 Value  Behavior
@@ -864,8 +885,8 @@ $config['captcha_require_members'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> CAPTCHA Preferences`: :ref:`Require CAPTCHA with logged-in
+**Also found in CP:** :menuselection:`Settings --> CAPTCHA`:
+:ref:`Require CAPTCHA with logged-in
 members <captcha-require-logged-in-members>`
 
 
@@ -1688,32 +1709,6 @@ Configuration`: :ref:`Enable Email Debugging
 <email-enable-debugging-label>`
 
 
-email_module_captchas
----------------------
-
-When enabled, users will need to fill out a :doc:`CAPTCHA
-</security/captchas>` when using the Tell-a-Friend or Contact email
-forms. You will need to ensure that your tags for those forms contain
-the appropriate CAPTCHA code.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Enable CAPTCHAS on Tell-a-Friend and Contact email forms
-``n``      Disable CAPTCHAS on Tell-a-Friend and Contact email forms **(default)**
-========== ========
-
-Example Usage::
-
-$config['email_module_captchas'] = 'y';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`Enable CAPTCHAs for Tell-a-Friend and Contact
-emails <email-enable-captchas-label>`
-
-
 email_newline
 -------------
 
@@ -1731,6 +1726,26 @@ Example Usage::
 $config['email_newline'] = "\r\n";
 
 .. note:: Double quotes must be used around this value, as per example.
+
+
+email_smtp_crypto
+-----------------
+
+Cryptographic protocol (Secure Sockets Layer or Transport Layer Security
+allowed) for SMTP, when a secure connection is required.
+
+========== ========
+Value      Behavior
+========== ========
+``ssl``    Set the SMTP protocol to SSL
+---------- --------
+``tls``    Set the SMTP protocol to TLS
+========== ========
+
+Example Usage::
+
+$config['email_smtp_crypto'] = 'tls';
+
 
 emoticon_url
 ------------
@@ -1803,24 +1818,6 @@ $config['enable_censoring'] = 'y';
 **Also found in CP:** :menuselection:`Members --> Security and
 Privacy --> Word Censoring`: :ref:`Enable Word Censoring
 <censor-words-enable-label>`
-
-
-enable_db_caching
------------------
-
-If enabled, the system will cache the output of database queries to text
-files.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Enable database caching
-``n``      Disable database caching **(default)**
-========== ========
-
-Example Usage::
-
-$config['enable_db_caching'] = 'y';
 
 
 enable_emoticons
@@ -2827,6 +2824,23 @@ $config['max_tmpl_revisions'] = '10';
 Global Template Preferences`: :ref:`Maximum Number of Revisions to Keep
 <global-template-max-revisions-label>`
 
+.. _max_url_segments:
+
+max_url_segments
+----------------
+
+Set the maximum number of URL segments allows in requests made to your site.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Maximum number of URL segments to allow **(default is 12)**
+=========== ===========
+
+Example Usage::
+
+$config['max_url_segments'] = '12';
+
 
 .. _mbr_notification_emails:
 
@@ -2921,6 +2935,56 @@ $config['memberlist_order_by'] = 'total_posts';
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
 :ref:`Member List - Sort By <member-list-rows-label>`
+
+
+.. _overrides-mime-whitelist-additions:
+
+mime_whitelist_additions
+------------------------
+
+With an array, add Mime Types to the whitelist.
+
+Example Usage::
+
+  $config['mime_whitelist_additions'] = array(
+    'image/vnd.adobe.photoshop'
+  );
+
+
+.. _overrides-mime-whitelist-member-exception:
+
+mime_whitelist_member_exception
+-------------------------------
+
+Specify member IDs to exclude from Mime Type whitelist restrictions.
+
+========== ===========
+Value      Description
+========== ===========
+``text``   Comma-delimited list of member IDs
+========== ===========
+
+Example Usage::
+
+$config['mime_whitelist_member_exception'] = '3, 14, 83';
+
+
+.. _overrides-mime-whitelist-member-group-exception:
+
+mime_whitelist_member_group_exception
+-------------------------------------
+
+Specify member group IDs to exclude from Mime Type whitelist restrictions.
+
+========== ===========
+Value      Description
+========== ===========
+``text``   Comma-delimited list of member group IDs
+========== ===========
+
+Example Usage::
+
+$config['mime_whitelist_member_group_exception'] = '2, 5';
 
 
 moblog_allow_nontextareas
@@ -3330,7 +3394,7 @@ popup_link
 ----------
 
 Specify whether links created by the :doc:`Typography class
-</development/usage/typography>` open in a new window.
+</development/legacy/libraries/typography>` open in a new window.
 
 ======= ========
 Value   Behavior
@@ -3659,6 +3723,24 @@ $config['req_mbr_activation'] = 'none';
 :ref:`Require Member Account Activation
 <member-account-activation-label>`
 
+.. _require_captcha:
+
+require_captcha
+---------------
+
+When enabled, site visitors will be required to pass a CAPTCHA to submit
+any front-end form, including Channel Form, comment forms, and member
+registrations.
+
+========== ========
+Value      Behavior
+========== ========
+``y``      Enable CAPTCHAS front-end forms
+``n``      Disable CAPTCHAS on front-end forms **(default)**
+========== ========
+
+**Also found in CP:** :menuselection:`Settings --> CAPTCHA`:
+:ref:`Require CAPTCHA <captcha-require>`
 
 .. _require_ip_for_login:
 
@@ -4857,6 +4939,19 @@ $config['un_min_len'] = '5';
 **Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: :ref:`Minimum Username Length
 <security-min-username-label>`
+
+.. _upload_file_name_blacklist:
+
+upload_file_name_blacklist
+--------------------------
+
+With an array, add a case insensitive list of file names that cannot be uploaded.
+
+Example Usage::
+
+  $config['upload_file_name_blacklist'] = array(
+    'logo.png',
+  );
 
 
 upload_preferences

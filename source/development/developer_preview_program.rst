@@ -75,32 +75,40 @@ and encourage them to join!
 
 - Aaron Walden
 - Adrian Macneil (Exp:resso)
+- Aidann Bowley (BridgingUnit)
 - Andrew Fairlie (Red Carrot)
+- Andrew Gunstone (Thirst Studios)
 - Andrew Weaver
 - Ben Croker
 - Benjamin Kohl (Masuga Design)
 - Benoit Marchal
+- Berry Timmermans
 - Bjørn Børresen
 - Brad Boegler (Nexcess)
 - Brad Morse
 - Brad Parscale (DevDemon)
 - Brandon Kelly
-- Brian Litzinger
+- Brian Litzinger (BoldMinded)
 - Bryan Burgers
 - Carl Crawley
 - Chris Barrett
 - Chris Newton
+- Christofer Sandin (Republic Factory)
 - Christopher Imrie
 - Dan Decker
 - Dan Diemer
+- Danny Bull (Digi Nut)
 - Darren Miller
-- David Dexter (Brilliant2)
+- David Dexter (Codesly)
 - David Pak
 - Derek Hogue
 - Digital Surgeons
 - Dimitar Mihaylov
 - Dom Stubbs
 - Doug Thwaites
+- Eli Van Zoeren
+- Elliot Lewis (no two the same)
+- Emily Fitton (Punch Buggy Digital Agency)
 - Eric Lamb
 - Erik Reagan
 - Erwin van Lun
@@ -114,42 +122,51 @@ and encourage them to join!
 - Ian Young (Expresso)
 - Ira Salsberg
 - Isaac Rayway
-- Jack McDade
 - James Smith
 - Jamie Pittock
 - Jamie Taylor (Percipio)
 - Jan van Lysebettens
 - Jason Ferrell
+- Jason Siffring (Surprise Highway)
+- Jelle de Jong
 - Jeremy Gimbel
 - Jeremy Worboys
+- Jesse Schutt
 - Joe Paravisini
 - Joel Bradbury
 - John Baxter
 - John de Beer
 - John Henry Donovan
 - John Morton
+- John Moylan
 - John Wells
+- Jon Thomas (AnalyticL)
+- Josh Clark (dynam)
 - Justin Kimbrell
 - Keith Mancuso (Familiar)
-- Kelly Sims
+- Kelly Sims (Codesly)
 - Kelsey Martens
 - Kevin Smith
 - Kurt Deutscher
 - Laisvunas Sopauskas
+- Lance Johnson (Green Egg Media)
 - Leevi Graham
 - Leon Dijk
 - Leslie Camacho
 - Lodewijk
+- Louis Dekeister (Hop Studios)
 - Malcolm Elsworth
+- Marc Miller
 - Marcus Neto
 - Mark Croxton
 - Mark Drzycimski
 - Mark Huot
 - Matt Barry
-- Matt Weinberg
+- Matt Weinberg (Vector Media Group)
 - Max Lazar
 - Maxim WEB (Websecret)
 - Michael Boyink
+- Michael Leigeber
 - Michael Rog
 - Michael Witwicki (Booyant)
 - Mike Hughes
@@ -161,14 +178,16 @@ and encourage them to join!
 - Padraig Kennedy
 - Patrick Pohler (Anecka)
 - Patrick Woodcock
+- Pedro Guimaraes (Willow Light Studio)
 - Peter Felix
 - Pierre-Vincent Ledoux
+- Ragnar Frostason (Republic Factory)
 - Rein de Vries
 - Rob Sanchez
-- Robin Bailey
+- Robin Bailey (Dionach)
 - Robin Hodges
-- Robson Sobral
 - Robin Willmot (Coffee Bean Design)
+- Robson Sobral
 - Ryan Bonnell
 - Ryan Irelan
 - Ryan Masuga
@@ -179,10 +198,13 @@ and encourage them to join!
 - Solspace
 - Stephen Callender
 - Steve Fickus
+- TJ Draper
 - Tom Jaeger
 - Travis Schmeisser
 - Travis Smith (Hop Studios)
 - Ty Wangsness
+- Tyson Oshiro
+- Will Hyman
 - Wouter Vervloet
 - Yahya Jokhab (UXspan)
 - Yuri Salimovskiy (IntoEEtive)

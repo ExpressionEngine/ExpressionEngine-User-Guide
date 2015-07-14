@@ -1,6 +1,8 @@
 Custom jQuery Events
 ====================
 
+.. todo:: Audit for 3.0
+
 ExpressionEngine exposes some custom jQuery events to help capture
 interactions that are common in a content management system.
 

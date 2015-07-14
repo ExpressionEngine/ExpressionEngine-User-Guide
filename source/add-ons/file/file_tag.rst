@@ -652,4 +652,3 @@ Pagination
 ----------
 
 The File module supports :doc:`/templates/pagination`.
-</add-ons/channel/pagination_page>`.

@@ -32,6 +32,9 @@ Server Requirements
   - ``ALTER``
   - ``DROP``
 
+- The `File Information (fileinfo) 
+  <http://php.net/manual/en/book.fileinfo.php>`_ PHP extension
+
   .. _server-wizard:
 
 Server Compatibility Wizard

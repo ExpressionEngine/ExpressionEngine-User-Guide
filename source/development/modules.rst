@@ -1,6 +1,8 @@
 ExpressionEngine Modules
 ========================
 
+.. todo:: Audit for 3.0
+
 Modules are the most complex form of add-on. They can have their own
 database tables, backend control panels, tabs and fields that are
 included on the publish page, as well as their own tags for use in
@@ -463,7 +465,7 @@ Working with Forms
 While creating forms for the backend is fairly routine, there are
 several differences/additions worth noting:
 
-- The :doc:`Form Validation library </development/usage/form_validation>` is the
+- The :doc:`Form Validation library </development/legacy/libraries/form_validation>` is the
   best means of checking submitted form data and returning in-line
   errors in the case of failed validation.
 - After form submission, you will generally want to output a success

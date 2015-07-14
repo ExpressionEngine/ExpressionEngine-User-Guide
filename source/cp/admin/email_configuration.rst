@@ -196,13 +196,3 @@ Log Email Console Messages
 
 This preference lets you keep a copy of all messages sent via the Email
 Console in the member profile pages by logging them.
-
-.. _email-enable-captchas-label:
-
-Enable CAPTCHAs for Tell-a-Friend and Contact emails
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-With this enabled, users will need to fill out a
-:doc:`CAPTCHA </security/captchas>` when using the Tell-a-Friend
-or Contact email forms. You will need to ensure that your tags for those
-forms contain the appropriate CAPTCHA code.
