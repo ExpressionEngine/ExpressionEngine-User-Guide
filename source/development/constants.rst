@@ -11,24 +11,22 @@ of the ExpressionEngine installer.
 Path Constants
 --------------
 
-- ``PATH_THIRD`` - Path to the ``system/expressionengine/third_party``
-  folder.
-- ``PATH_THEMES`` - Path to the ``/themes`` folder.
-- ``APPPATH`` - Path to the ``/expressionengine`` folder.
-- ``BASEPATH`` - Path to the ``system`` folder.
-- ``PATH_MOD`` - Path to the first party modules folder.
-- ``PATH_PI`` - Path to the first party plugins folder.
-- ``PATH_EXT`` - Path to the first party extensions folder.
-- ``PATH_ACC`` - Path to the first party accessories folder.
-- ``PATH_FT`` - Path to the first party fieldtypes folder.
-- ``PATH_THIRD_THEMES`` - Path to the third party themes folder.
-- ``PATH_MBR_THEMES`` - Path to the member themes folder.
-- ``PATH_CP_GBL_IMG`` - Path to the global image folder.
-- ``PATH_JAVASCRIPT`` - Path to the javascript folder.
-- ``PATH_JQUERY`` - Path to the jQuery folder.
 - ``SELF`` - Name of the bootstrap file
 - ``FCPATH`` - Path to the bootstrap file
-- ``SYSDIR`` - Name of the system folder
+- ``SYSDIR`` - Name of the system directory
+- ``SYSPATH`` - Path of the system directory
+- ``APPPATH`` and ``BASEPATH`` - Path to the ``system/ee/legacy`` directory
+
+- ``PATH_ADDONS`` - Path to the first-party addons directory
+- ``PATH_THEMES`` - Path to the themes directory
+- ``PATH_RTE`` - Path to the first party RTE tools directory
+- ``PATH_MBR_THEMES`` - Path to the member themes directory
+- ``PATH_CP_GBL_IMG`` - Path to the global image directory
+- ``PATH_JAVASCRIPT`` - Path to the javascript directory
+- ``PATH_JQUERY`` - Path to the jQuery directory
+
+- ``PATH_THIRD`` - Path to third-party addons directory
+- ``PATH_THIRD_THEMES`` - Path to the third-party themes directory
 
 Version Constants
 -----------------
@@ -45,7 +43,9 @@ URL Constants
 - ``AMP`` - ``&amp;``
 - ``QUERY_MARKER`` - Question mark if forcing query strings, blank
   otherwise
-- ``URL_THIRD_THEMES`` - URL to the third party theme folder
+
+- ``URL_THEMES`` - URL to the theme folder
+- ``URL_THIRD_THEMES`` - URL to the third-party theme folder
 
 HTML Constants
 --------------

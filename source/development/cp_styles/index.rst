@@ -68,11 +68,10 @@ Control Panel Constants
 
 - ``BASE`` - Name of control panel file with the users session id
 - ``AMP`` - Will render ``&amp;``
-- ``AJAX_REQUEST`` - Returns Boolean TRUE if a request was made via an
-  Ajax Request
+- ``AJAX_REQUEST`` - Returns Boolean TRUE if a request was made via an Ajax Request
 - ``QUERY_MARKER`` - Renders a query marker (``?``)
 - ``APPPATH`` - Server path to the ``system/ee/legacy`` directory
-- ``PATH_THIRD`` - Server path to the
-  ``system/user/addons`` directory
+- ``PATH_ADDONS`` - Server path to the first-party addons directory
+- ``PATH_THIRD`` - Server path to the third-party addons directory
 - ``PATH_JQUERY`` - Server path to jQuery files at
-  ``system/expressionengine/javascript/compressed/jquery``
+  ``themes/ee/javascript/compressed/jquery``
