@@ -3281,9 +3281,9 @@ Privacy --> Security and Sessions`: :ref:`Time Interval for Lockout
 <security-passwd-lockout-int-label>`
 
 
-.. _path_addons_themes:
+.. _path_third_themes:
 
-path_addons_themes
+path_third_themes
 -----------------
 
 Set the path to the third-party add-ons' :file:`themes` directory.
@@ -3298,7 +3298,7 @@ Value      Description
 
 Example Usage::
 
-$config['path_addons_themes'] = '/valid/path/to/directory/';
+$config['path_third_themes'] = '/valid/path/to/directory/';
 
 
 photo_max_height
@@ -5030,8 +5030,8 @@ url_third_themes
 -----------------
 
 Set the URL to the third-party add-ons' :file:`themes` directory. Should
-be used in conjunction with :ref:`path_addons_themes
-<path_addons_themes>`.
+be used in conjunction with :ref:`path_third_themes
+<path_third_themes>`.
 
 ========== ===========
 Value      Description
