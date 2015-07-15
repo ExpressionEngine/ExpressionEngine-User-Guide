@@ -8,19 +8,19 @@ Upgrading from ExpressionEngine 2
 1. Backup and Prepare
 *********************
 
-- Clear the cache in ExpressionEngine by going to :menuselection:`Tools --> Data --> Clear Caching`. Select **All Caches** and click Submit.
+#. Clear the cache in ExpressionEngine by going to :menuselection:`Tools --> Data --> Clear Caching`. Select **All Caches** and click Submit.
 
-- Back-up your ExpressionEngine database.
+#. Back-up your ExpressionEngine database.
 
-- Back-up all of your ExpressionEngine files and directories.
+#. Back-up all of your ExpressionEngine files and directories.
 
-- Download the latest release of ExpressionEngine (either :elstore:`ExpressionEngine Core </#ee-core>` or the :elstore:`standard edition </manage>`, whichever your site is currently running) and unzip the files to a folder on your computer.
+#. Download the latest release of ExpressionEngine (either :elstore:`ExpressionEngine Core </#ee-core>` or the :elstore:`standard edition </manage>`, whichever your site is currently running) and unzip the files to a folder on your computer.
 
-- Take your site offline:
+#. Take your site offline:
 
-  - Copy :file:`system/expressionengine/utilities/offline.html` to your web root directory (the same place you have your main :file:`index.php` file).
+   #. Copy :file:`system/expressionengine/utilities/offline.html` to your web root directory (the same place you have your main :file:`index.php` file).
 
-  - Rename :file:`offline.html` to :file:`index.html`. Now your visitors will see the "offline" page while you update your site.
+   #. Rename :file:`offline.html` to :file:`index.html`. Now your visitors will see the "offline" page while you update your site.
 
 *************
 2. Copy Files
@@ -28,21 +28,21 @@ Upgrading from ExpressionEngine 2
 
 Now **copy** the following files from the backup of your current site to the newly downloaded ExpressionEngine 3.x directory:
 
-- Copy :file:`system/expressionengine/config/config.php` to the :file:`system/user/config/config.php`
+1. Copy :file:`system/expressionengine/config/config.php` to the :file:`system/user/config/config.php`
 
-- Copy :file:`system/expressionengine/config/database.php` to :file:`system/user/config/database.php`
+2. Copy :file:`system/expressionengine/config/database.php` to :file:`system/user/config/database.php`
 
-- If you have any languages other than English in your Control Panel, copy all files and directories  *except* ``english`` from :file:`system/expressionengine/language/` to :file:`system/user/language/`.
+3. If you have any languages other than English in your Control Panel, copy all files and directories  *except* ``english`` from :file:`system/expressionengine/language/` to :file:`system/user/language/`.
 
-- If you have the forum module installed, copy the directory :file:`themes/forum_themes/` to :file:`themes/user/forum_themes/`.
+4. If you have the forum module installed, copy the directory :file:`themes/forum_themes/` to :file:`themes/user/forum_themes/`.
 
-- If you have the wiki module installed, copy the directory :file:`themes/wiki_themes/` to :file:`themes/user/wiki_themes/`.
+5. If you have the wiki module installed, copy the directory :file:`themes/wiki_themes/` to :file:`themes/user/wiki_themes/`.
 
 .. note:: If you have changed the paths for ``templates`` and/or ``third_party`` using :doc:`/general/system_configuration_overrides`, you can safely ignore the following steps.
 
-- If you save templates as files, copy all files and directories from :file:`system/expressionengine/templates/` to :file:`system/user/templates/`.
+6. If you save templates as files, copy all files and directories from :file:`system/expressionengine/templates/` to :file:`system/user/templates/`.
 
-- If you have any third-party add-ons, copy all files and directories from :file:`system/expressionengine/third_party/` to :file:`system/user/addons/` and all files and directories from :file:`themes/third_party` to :file:`themes/user/`.
+7. If you have any third-party add-ons, copy all files and directories from :file:`system/expressionengine/third_party/` to :file:`system/user/addons/` and all files and directories from :file:`themes/third_party` to :file:`themes/user/`.
 
 .. note:: If any of your add-ons have updates, we recommend downloading them and putting them into the :file:`system/user/addons/` directory now.
 
@@ -58,10 +58,10 @@ On the server, rename the following files and directories:
 
 Then upload the following files and directories:
 
-- :file:`admin.php`
-- :file:`index.php`
-- :file:`system/`
-- :file:`themes/`
+-  :file:`admin.php`
+-  :file:`index.php`
+-  :file:`system/`
+-  :file:`themes/`
 
 .. note:: If you've moved your system directory, make sure to change both :file:`index.php` and :file:`admin.php` to point to the correct directory.
 
@@ -101,14 +101,14 @@ Go to your site's control panel URL (typically found at ``http://example.com/adm
 6. Clean up
 ***********
 
-- Remove or rename the offline :file:`index.html` file from your site.
+1. Remove or rename the offline :file:`index.html` file from your site.
 
-- If the updater could not automatically rename the installer, rename or remove :file:`system/installer/` directory manually.
+2. If the updater could not automatically rename the installer, rename or remove :file:`system/installer/` directory manually.
 
 .. note:: The installer directory can be safely removed after installing ExpressionEngine.
 
-- Review any :doc:`Version Notes </installation/version_notes>` since they outline any version-specific changes that you may need to make to your installation.
+3. Review any :doc:`Version Notes </installation/version_notes>` since they outline any version-specific changes that you may need to make to your installation.
 
-- Review our :doc:`best practices </installation/best_practices>` for recommendations on protecting your installation against common security risks.
+4. Review our :doc:`best practices </installation/best_practices>` for recommendations on protecting your installation against common security risks.
 
 You're Done! ExpressionEngine is now fully upgraded.
