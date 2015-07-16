@@ -411,7 +411,8 @@ Function Reference
   Handles any custom logic after an entry is saved.
 
   Called after an entry is added or updated. Available data is identical
-  to save, but the settings array includes an ``entry_id``.
+  to save. This is a good method to implement if you need the content ID
+  of the fieldtype's newly-saved parent content type.
 
   :param array $data: Current field data, blank for new entries
   :rtype: Void
