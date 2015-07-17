@@ -10,8 +10,7 @@ View Service
 Simple Example
 --------------
 
-Views are how you display your data. They contain the markup and formatting
-information. Separating these from application code keeps your application logic
+Views are how you display your data. Separating these from application code keeps your application logic
 neat and concise. It also prevents markup changes from triggering large code
 changes.
 
@@ -51,28 +50,73 @@ The keys of this array will be accessible as local variables inside the view::
   (``<?=``) and the `alternative syntax <https://secure.php.net/manual/en/control-structures.alternative-syntax.php>`_
   for control structures can help improve readability of your views.
 
-Including Sub-Views
+Disabling View Features
+-----------------------
+
+Reusing a view sometimes requires small reductions in markup. For example, a
+profile image may require some wrapping markup for most of the site, but not
+universally. To avoid passing around boolean values, views can have have
+disabled features::
+
+  $view->disable(array('figure', 'data-attribute'));
+
+In the view, these can be checked using the ``$this->disabled()`` and
+``$this->enabled()`` helper methods::
+
+  <?php if ($this->enabled('figure')): ?>
+    <figure><?=$username?></figure>
+  <?php endif; ?>
+
+.. Note:: By default all features are enabled.
+
+Embedding Sub-Views
 -------------------
 
-It can be useful to embed views inside of each other. This can be done in one of
-two ways:
+Views can be rendered directly inside of another view. This is done using the
+``$this->embed()`` helper method::
 
-The most intuitive approach is to render the subviews separately and then pass
-their output to the primary view as variables. This may be preferred when the
-views have very little shared data. Splitting it up this way can help make data
-dependencies more obvious::
+  <p><?php $this->embed('sub/view') ?></p>
 
-  $mini_profile = ee('View')->make('member/mini-profile')->render(array('member' => $member));
-  $sidebar = ee('View')->make('sidebar')->render(compact('mini_profile'));
-
-The second approach is to render a view directly inside of another view. This
-can be done with the `view()` helper method::
-
-  <p><?php $this->view('sub/view') ?></p>
-
-Notice that you do not need to echo the output of this method, it is added to
-the right place automatically. Additionally, all of the current views variables
-are passed to the subview. You can optionally pass additional ones in the second
-parameter::
+All of the current view variables are automatically made available to the
+subview. You can optionally pass additional ones in the second parameter::
 
   <p><?php $this->view('sub/view', array('username' => $member->username)) ?></p>
+
+Notice that you do not need to echo the output of this method, it is added to
+the right place automatically.
+
+You can also disable features in a view, using the third parameter::
+
+  <p><?php $this->view('sub/view', array(), 'figure') ?></p>
+
+Extending Parent Views
+----------------------
+
+A view can extend another view, by calling the ``$this->extend()`` helper method::
+
+  <?php $this->extend('html-wrapper'); ?>
+
+The rendered child view will be available to the parent as ``$child_view``::
+
+  <section><?=$child_view?></section>
+
+The api for this this method is otherwise identical to ``embed()``. The second
+and third parameter are used for additional variables and disabled features,
+respectively.
+
+View Blocks
+-----------
+
+Passing large chunks of data from a child view to a parent can be tedious. To
+solve this problem, the child view can create blocks of content that are passed
+to the parent view automatically::
+
+  <?php $this->extend('html_wrapper') ?>
+
+  <?php $this->startBlock('js') ?>
+    <script> ... </script>
+  <?php $this->endBlock() ?>
+
+This data is passed to the parent view as an associative array called ``$blocks``::
+
+  <?=$blocks['js']?>
