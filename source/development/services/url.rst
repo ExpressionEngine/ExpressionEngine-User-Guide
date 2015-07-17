@@ -51,7 +51,8 @@ CP\\URL Service Methods
 
 .. method:: compile()
 
-  Compiles and returns a URL.
+  Compiles and returns the URL as a string. Typically this is used when you
+  need to use a URL as an array key, or want to json_encode() a URL.
 
   :returns: string
   :rtype: The URL
