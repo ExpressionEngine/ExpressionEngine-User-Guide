@@ -56,3 +56,10 @@ CP\\URL Service Methods
 
   :returns: string
   :rtype: The URL
+
+.. method:: __toString()
+
+	When accessed as a string simply complile the URL and return that.
+
+  :returns: string
+  :rtype: The URL
