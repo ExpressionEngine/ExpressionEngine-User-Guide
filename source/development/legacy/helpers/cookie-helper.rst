@@ -10,6 +10,8 @@ cookies.
 .. contents::
   :local:
 
+.. highlight:: php
+
 Loading this Helper
 ===================
 

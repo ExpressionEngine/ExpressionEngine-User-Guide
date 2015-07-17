@@ -9,6 +9,8 @@ The Security Helper file contains security related functions.
 .. contents::
   :local:
 
+.. highlight:: php
+
 Loading this Helper
 ===================
 

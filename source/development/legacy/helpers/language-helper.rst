@@ -10,6 +10,8 @@ language files.
 .. contents::
   :local:
 
+.. highlight:: php
+
 Loading this Helper
 ===================
 

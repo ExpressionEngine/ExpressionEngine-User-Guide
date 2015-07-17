@@ -9,6 +9,8 @@ The File Helper file contains functions that assist in working with files.
 .. contents::
   :local:
 
+.. highlight:: php
+
 Loading this Helper
 ===================
 

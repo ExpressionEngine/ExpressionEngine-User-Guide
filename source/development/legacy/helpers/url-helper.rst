@@ -9,6 +9,8 @@ The URL Helper file contains functions that assist in working with URLs.
 .. contents::
   :local:
 
+.. highlight:: php
+
 Loading this Helper
 ===================
 

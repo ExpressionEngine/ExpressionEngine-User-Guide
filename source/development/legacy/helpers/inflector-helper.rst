@@ -10,6 +10,8 @@ words to plural, singular, camel case, etc.
 .. contents::
   :local:
 
+.. highlight:: php
+
 Loading this Helper
 ===================
 

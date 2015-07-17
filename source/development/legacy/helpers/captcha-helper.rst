@@ -10,6 +10,8 @@ CAPTCHA images.
 .. contents::
   :local:
 
+.. highlight:: php
+
 Loading this Helper
 ===================
 

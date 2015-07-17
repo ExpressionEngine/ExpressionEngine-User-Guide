@@ -13,6 +13,8 @@ Class <../libraries/email>`.
 .. contents::
   :local:
 
+.. highlight:: php
+
 Loading this Helper
 ===================
 

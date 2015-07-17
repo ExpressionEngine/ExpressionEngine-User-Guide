@@ -10,6 +10,8 @@ file paths on the server.
 .. contents::
   :local:
 
+.. highlight:: php
+
 Loading this Helper
 ===================
 

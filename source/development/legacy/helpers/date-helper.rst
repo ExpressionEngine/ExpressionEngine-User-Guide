@@ -9,6 +9,8 @@ The Date Helper file contains functions that help you work with dates.
 .. contents::
   :local:
 
+.. highlight:: php
+
 Loading this Helper
 ===================
 

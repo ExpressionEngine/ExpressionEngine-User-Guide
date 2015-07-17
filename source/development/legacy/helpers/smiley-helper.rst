@@ -10,6 +10,8 @@ The Smiley Helper file contains functions that let you manage smileys
 .. contents::
   :local:
 
+.. highlight:: php
+
 Loading this Helper
 ===================
 
