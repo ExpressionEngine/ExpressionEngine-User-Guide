@@ -51,7 +51,7 @@ Available Functions
 		$segments = array('news', 'local', '123');
 		echo site_url($segments);
 
-	This function is an alias for ``CI_Config::site_url()``. For more info,
+	This function is an alias for ``EE_Config::site_url()``. For more info,
 	please see the :doc:`Config Library <../libraries/config>` documentation.
 
 
@@ -85,7 +85,7 @@ Available Functions
 	This would give you something like:
 	*http://example.com/images/icons/edit.png*
 
-	This function is an alias for ``CI_Config::base_url()``. For more info,
+	This function is an alias for ``EE_Config::base_url()``. For more info,
 	please see the :doc:`Config Library <../libraries/config>` documentation.
 
 
@@ -114,7 +114,7 @@ Available Functions
 
 		blog/comments/123
 
-	This function is an alias for ``CI_Config::uri_string()``. For more info,
+	This function is an alias for ``EE_Config::uri_string()``. For more info,
 	please see the :doc:`Config Library <../libraries/config>` documentation.
 
 
