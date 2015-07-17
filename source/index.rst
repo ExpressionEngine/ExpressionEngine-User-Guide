@@ -28,6 +28,7 @@ Known Issues
 - Control panel interfaces for some native add-ons are incomplete
 - Deleting categories or other models with recursive relationships does not work
 - Entry and comment count on the homepage is inaccurate
+- Channel Entry revisions is not yet implemented
 - This documentation is incomplete
 - ...including this list
 
