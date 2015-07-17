@@ -39,6 +39,17 @@ documentation on arrays <http://php.net/manual/en/language.types.array.php>`_:
 *Illegal offset type.*" You will also want to compile the object when you want
 to JSON encode the URL otherwise you will get a JSON object instead of a string.
 
+For example::
+
+  $breadcrumb = array(
+    ee('CP/URL', 'addons/settings/fortune_cookie')->compile() => lang('fortune_cookie_management')
+  );
+
+  ee()->javascript->set_global(array(
+    'fortune_cookie.autosave.URL' => ee('CP/URL', 'addons/settings/fortune_cookie/autosave/')->compile()
+  ));
+
+
 CP\\URL Service Methods
 -----------------------
 
