@@ -29,6 +29,7 @@ Known Issues
 - Deleting categories or other models with recursive relationships does not work
 - Entry and comment count on the homepage is inaccurate
 - Channel Entry revisions is not yet implemented
+- Publish Tab validation is not yet implemented
 - This documentation is incomplete
 - ...including this list
 
