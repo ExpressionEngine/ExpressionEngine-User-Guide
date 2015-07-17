@@ -411,7 +411,8 @@ Function Reference
   Handles any custom logic after an entry is saved.
 
   Called after an entry is added or updated. Available data is identical
-  to save, but the settings array includes an ``entry_id``.
+  to save. This is a good method to implement if you need the content ID
+  of the fieldtype's newly-saved parent content type.
 
   :param array $data: Current field data, blank for new entries
   :rtype: Void
@@ -833,7 +834,6 @@ Method                        Exception
 ``display_global_settings()`` No unique Grid method required
 ``save_global_settings()``    No unique Grid method required
 ``settings_modify_column()``  Must use Grid Column Settings methods
-``display_settings()``        Must use :meth:`~EE_Fieldtype::grid_display_settings`
 ``validate_settings()``       Must use :meth:`~EE_Fieldtype::grid_validate_settings`
 ============================= ==========================
 
@@ -847,7 +847,7 @@ your fieldtype where there is overlapping logic to run. For example,
 some of our native fieldtypes require slightly different code to render
 the HTML needed to display fields in ``display_field()`` and
 ``grid_display_field()``, so we try to centralize the the common logic
-between them for better code maintenance.
+between them for better code maintainability.
 
 Grid Fieldtype Settings Class Property
 ======================================

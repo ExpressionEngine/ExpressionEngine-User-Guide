@@ -25,6 +25,20 @@ Or::
   $url = ee('CP/URL', 'publish/edit')
   	->setQueryStringVariable('filter_by_channel', 1);
 
+When to use ``compile()``
+-------------------------
+
+The CP\\URL object has a magic ``__toString()`` method that compiles the object
+into a string when the object is treated as a string (see: PHP's documentation
+on the magic `__toString() method
+<http://php.net/manual/en/language.oop5.magic.php#object.tostring>`_ for more
+information). The ``compile()`` method exists for those occasions when the
+object is treated as an object but you need a string instead. As per `PHP's
+documentation on arrays <http://php.net/manual/en/language.types.array.php>`_:
+"Arrays and objects can not be used as keys. Doing so will result in a warning:
+*Illegal offset type.*" You will also want to compile the object when you want
+to JSON encode the URL otherwise you will get a JSON object instead of a string.
+
 CP\\URL Service Methods
 -----------------------
 
@@ -51,7 +65,15 @@ CP\\URL Service Methods
 
 .. method:: compile()
 
-  Compiles and returns a URL.
+  Compiles and returns the URL as a string. Typically this is used when you
+  need to use a URL as an array key, or want to json_encode() a URL.
+
+  :returns: string
+  :rtype: The URL
+
+.. method:: __toString()
+
+	When accessed as a string simply complile the URL and return that.
 
   :returns: string
   :rtype: The URL

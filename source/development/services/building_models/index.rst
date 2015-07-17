@@ -419,3 +419,10 @@ Model Methods
   :param mixed $value: The value to set the property to
   :returns: $this
   :rtype: Model
+
+.. toctree::
+  :glob:
+  :maxdepth: 1
+
+  column-types
+  relationships

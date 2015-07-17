@@ -22,7 +22,7 @@ Known Issues
 ============
 
 - Updating from 2.0 currently is incomplete, work with fresh installs only.
-- MSM incomplete (site creation, etc.)
+- MSM will no longer offer to duplicate a site.
 - Forum module themes are not yet implemented
 - In-app documentation for native add-ons is incomplete
 - Control panel interfaces for some native add-ons are incomplete
