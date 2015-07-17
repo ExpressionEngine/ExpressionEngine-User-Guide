@@ -62,4 +62,5 @@ Guidelines
   plugins
   rte_tools
   reference/tree_datastructure
+  shared_form_view
 
