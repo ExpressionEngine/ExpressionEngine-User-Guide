@@ -8,7 +8,7 @@ ExpressionEngine 3.0 Module Changes
 
 In addition to the :doc:`syntax changes <syntax>` already discussed, modules
 require some fundamental alterations to the control panel file. A new
-:doc:```addon.setup.php`` <development/addon_setup_php_file>` file has been
+:doc:`addon.setup.php </development/addon_setup_php_file>` file has been
 introduced.
 
 A fictional Fortune Cookies module is used in the following examples.
@@ -65,8 +65,8 @@ following method signagure::
 
   public function edit_cookie($id) {...}
 
-The addon.setup.php File
-========================
+The ``addon.setup.php`` File
+============================
 
 With 3.0 we are introducing a new metadata provider file named
 ``addon.setup.php``. It defines required and basic information about your
@@ -75,8 +75,8 @@ from the Add-On Manger.
 
 See :doc:`/development/addon_setup_php_file` for full documentation.
 
-Control Panel File (mcp.package_name.php)
-=========================================
+Control Panel File (``mcp.package_name.php``)
+=============================================
 
 If your module does not have a control panel, you still need an mcp file
 in the format::
@@ -134,28 +134,28 @@ Example
   return array(
     'body'       => ee()->load->view('index', $vars, TRUE),
     'breadcrumb' => array(
-	  ee('CP/URL', 'addons/settings/fortune_cookie')->compile() => lang('fortune_cookie_management')
-	),
-    'heading'    => lang('edit_fortune_cookie'),
-	'sidebar'    => array(
-	  'fortunes' => array(
-	    'href'   => ee('CP/URL', 'addons/settings/fortune_cookie/'),
-		'class'  => 'cookies',
-		'button' => array(
-		  'href' => ee('CP/URL', 'addons/settings/fortune_cookie/create'),
-		  'text' => 'new'
-		)
-	  ),
-	  array(
-	    'recent_fortunes'   => ee('CP/URL', 'addons/settings/fortune_cookie/recent'),
-		'archived_fortunes' => ee('CP/URL', 'addons/settings/fortune_cookie/archived'),
-	  ),
-	  'statistics',
-	  array(
-	    'most_viewed' => ee('CP/URL', 'addons/settings/fortune_cookie/most_viewed'),
-	    'popular' => ee('CP/URL', 'addons/settings/fortune_cookie/popular'),
-	  )
-	)
+      ee('CP/URL', 'addons/settings/fortune_cookie')->compile() => lang('fortune_cookie_management')
+    ),
+    'heading'  => lang('edit_fortune_cookie'),
+    'sidebar'  => array(
+      'fortunes' => array(
+        'href'   => ee('CP/URL', 'addons/settings/fortune_cookie/'),
+        'class'  => 'cookies',
+        'button' => array(
+          'href' => ee('CP/URL', 'addons/settings/fortune_cookie/create'),
+          'text' => 'new'
+        )
+      ),
+      array(
+        'recent_fortunes'   => ee('CP/URL', 'addons/settings/fortune_cookie/recent'),
+        'archived_fortunes' => ee('CP/URL', 'addons/settings/fortune_cookie/archived'),
+      ),
+      'statistics',
+      array(
+        'most_viewed' => ee('CP/URL', 'addons/settings/fortune_cookie/most_viewed'),
+        'popular'     => ee('CP/URL', 'addons/settings/fortune_cookie/popular'),
+      )
+    )
   );
 
 Display Tools
