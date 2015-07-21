@@ -178,9 +178,9 @@ we call within the class, and a few have changes to their parameters:
   * ``publish_data_delete_db()`` has been renamed to ``delete()``. It is now
     passed an indexed array of Entry IDs that have been deleted.
 
-A tab's ``save()`` method is called during a ``ChannelEntry``'s ``afterSave``
-event. Likewise a tab's ``delete()`` method is called during a ``ChannelEntry``'s
-``afterDelete`` event.
+A tab's ``save()`` method is called during a ``ChannelEntry`` entity's
+``afterSave`` event. Likewise a tab's ``delete()`` method is called during a
+``ChannelEntry`` entity's ``afterDelete`` event.
 
 Display Tools
 =============
