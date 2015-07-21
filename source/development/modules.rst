@@ -260,10 +260,10 @@ The Tab File (tab.module_name.php)
 Tab File Function Reference
 ---------------------------
 
-publish_tabs($channel_id, $entry_id = '') *
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+display($channel_id, $entry_id = '') *
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. method:: publish_tabs($channel_id[, $entry_id = ''])
+.. method:: display($channel_id[, $entry_id = ''])
 
   This function creates the fields that will be displayed on the publish
   page. It must return ``$settings``, a multidimensional associative array
@@ -294,67 +294,73 @@ publish_tabs($channel_id, $entry_id = '') *
       'field_type'            => '...'  // may be any existing field type
     )
 
-validate_publish($params) *
+validate($entry, $values) *
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. method:: validate_publish($params)
+.. method:: validate($entry, $values)
 
   Allows you to validate the data after the publish form has been
   submitted but before any additions to the database::
 
-    function validate_publish($params)
+    function validate($entry, $values)
     {
-        $errors = FALSE;
+      $validator = ee('Validation')->make(array(
+        'foo_field_one' => 'required',
+        'foo_field_two' => 'required|enum[y,n]',
+      ));
 
-        if ( ! isset($params[0]['revision_post']['field_name_one']))
-        {
-            $errors = array(lang('required') => 'field__name_one');
-        }
-
-        return $errors;
+      return $validator->validate($values);
     }
 
-  :param array $params: all of the data available on the current
-    submission
-  :returns: ``FALSE`` if no errors, otherwise an array of errors
-  :rtype: Boolean/Array
+  :param EllisLab\ExpressionEngine\Module\Channel\Model\ChannelEntry $entry: The
+    channel entry entity
+  :param array $values: an associative array with field names as keys and form
+    submission data as the value (i.e. ``array('fortune' => 'All your hard work
+    will soon pay off.'))``. The keys are derrived from the data returned by
+    ``display()``.
+  :returns: A result object
+  :rtype: EllisLab\ExpressionEngine\Service\Validation\Result
 
-publish_data_db($params) *
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+save($entry, $values) *
+~~~~~~~~~~~~~~~~~~~~~~~
 
-.. method:: publish_data_db($params)
+.. method:: save($entry, $values)
 
-  Allows the insertion of data after the core insert/update has been
-  done, thus making available the current ``$entry_id``::
+  Called during a ``ChannelEntry`` entity's ``afterSave`` event, this allows
+  you to insert data/update data::
 
-    function publish_data_db($params)
+    function save($entry, $values)
     {
-        if (! isset($params['mod_data']['field_name_one'])  OR $params['mod_data']['field_name_one'] == '')
+        if (! isset($values['field_name_one']) OR $values['field_name_one'] == '')
         {
             return;
         }
 
         $data = array(
-            'entry_id' => $params['entry_id'],
-            'file_id' => $params['mod_data']['field_name_one']
-            );
+            'entry_id' => $entry->entry_id,
+            'file_id' => $values['field_name_one']
+        );
 
-            ee()->db->insert('table_name', $data);
+        ee()->db->insert('table_name', $data);
     }
 
-  :param array $params: top level array consists of ``meta``, ``data``,
-    ``mod_data``, and ``entry_id``
+  :param EllisLab\ExpressionEngine\Module\Channel\Model\ChannelEntry $entry: The
+    channel entry entity
+  :param array $values: an associative array with field names as keys and form
+    submission data as the value (i.e. ``array('fortune' => 'Do not make extra
+    work for yourself.'))``. The keys are derrived from the data returned by
+    ``display()``.
   :rtype: Void
 
-publish_data_delete_db($params) *
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+delete($entry_ids) *
+~~~~~~~~~~~~~~~~~~~~
 
-.. method:: publish_data_delete_db($params)
+.. method:: delete($entry_ids)
 
-  Called near the end of the entry delete function, this allows you to
-  sync your records if any are tied to channel entry_ids.
+  Called during a ``ChannelEntry`` entity's ``afterDelete`` event, this allows
+  you to sync your records if any are tied to channel entry_ids.
 
-  :param array $param: array of entry IDs
+  :param array $entry_ids: An indexed array of entry IDs that were deleted
   :rtype: Void
 
 The Control Panel File (mcp.module_name.php)
