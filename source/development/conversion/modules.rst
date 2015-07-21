@@ -158,6 +158,30 @@ Example
     )
   );
 
+Publish Tab File (``tab.package_name.php``)
+===========================================
+
+We have made a few changes to the Publish Tab API. We have renamed the methods
+we call within the class, and a few have changes to their parameters:
+
+  * ``publish_tabs()`` has been renamed to ``display()``.
+  * ``validate_publish()`` has been renamed to ``validate()``.  It is now passed
+    two arguments (in order): a ``ChannelEntry`` instance and an associative
+    array with field names as keys and form submission data as the value (i.e.
+    ``array('fortune' => 'All your hard work will soon pay off.'))``. The keys
+    are derrived from the data returned by ``display()``.
+  * ``publish_data_db()`` has been renamed to ``save()``.  It is now passed
+    two arguments (in order): a ``ChannelEntry`` instance and an associative
+    array with field names as keys and form submission data as the value (i.e.
+    ``array('fortune' => 'Do not make extra work for yourself.'))``. The keys
+    are derrived from the data returned by ``display()``.
+  * ``publish_data_delete_db()`` has been renamed to ``delete()``. It is now
+    passed an indexed array of Entry IDs that have been deleted.
+
+A tab's ``save()`` method is called during a ``ChannelEntry``'s ``afterSave``
+event. Likewise a tab's ``delete()`` method is called during a ``ChannelEntry``'s
+``afterDelete`` event.
+
 Display Tools
 =============
 
