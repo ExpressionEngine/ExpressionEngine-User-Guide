@@ -180,7 +180,7 @@ we call within the class, and a few have changes to their parameters:
 
 A tab's ``save()`` method is called during a ``ChannelEntry`` entity's
 ``afterSave`` event. Likewise a tab's ``delete()`` method is called during a
-``ChannelEntry`` entity's ``afterDelete`` event.
+``ChannelEntry`` entity's ``beforeDelete`` event.
 
 Display Tools
 =============

@@ -357,7 +357,7 @@ delete($entry_ids) *
 
 .. method:: delete($entry_ids)
 
-  Called during a ``ChannelEntry`` entity's ``afterDelete`` event, this allows
+  Called during a ``ChannelEntry`` entity's ``beforeDelete`` event, this allows
   you to sync your records if any are tied to channel entry_ids.
 
   :param array $entry_ids: An indexed array of entry IDs that were deleted
