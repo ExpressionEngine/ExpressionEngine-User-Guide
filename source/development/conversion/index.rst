@@ -14,6 +14,8 @@ Panel Style Reference </development/cp_styles/index>`. Fortunately, updating to
 3.0 is fairly simple. This guide is an overview of the changes you will need to
 make to have your add-ons up and running under 3.0.
 
+Be sure to check the :doc:`/cp/tools/logs/developer_log` in the control panel for messages regarding method deprecation to make sure your add-on is not calling any deprecated code.
+
 Guidelines
 ----------
 
