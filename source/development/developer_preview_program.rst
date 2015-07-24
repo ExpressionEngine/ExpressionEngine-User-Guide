@@ -88,7 +88,7 @@ and encourage them to join!
 - Brad Morse
 - Brad Parscale (DevDemon)
 - Brandon Kelly
-- Brian Litzinger (BoldMinded)
+- Brian Litzinger
 - Bryan Burgers
 - Carl Crawley
 - Chris Barrett
@@ -97,13 +97,13 @@ and encourage them to join!
 - Christopher Imrie
 - Dan Decker
 - Dan Diemer
+- Daniel Grebb
 - Danny Bull (Digi Nut)
 - Darren Miller
 - David Dexter (Codesly)
 - David Pak
 - Derek Hogue
 - Digital Surgeons
-- Dimitar Mihaylov
 - Dom Stubbs
 - Doug Thwaites
 - Eli Van Zoeren
@@ -118,6 +118,7 @@ and encourage them to join!
 - Gerhard Dalenoort
 - Greg Ferrell
 - Gurudutt Verma
+- Iain Saxon (EE-Garage)
 - Iain Urquhart
 - Ian Young (Expresso)
 - Ira Salsberg
@@ -126,20 +127,20 @@ and encourage them to join!
 - Jamie Pittock
 - Jamie Taylor (Percipio)
 - Jan van Lysebettens
-- Jason Ferrell
 - Jason Siffring (Surprise Highway)
 - Jelle de Jong
 - Jeremy Gimbel
 - Jeremy Worboys
+- Jeroen Dewaele (Bits of Love)
 - Jesse Schutt
 - Joe Paravisini
 - Joel Bradbury
 - John Baxter
-- John de Beer
 - John Henry Donovan
 - John Morton
 - John Moylan
 - John Wells
+- John de Beer
 - Jon Thomas (AnalyticL)
 - Josh Clark (dynam)
 - Justin Kimbrell
@@ -162,6 +163,7 @@ and encourage them to join!
 - Mark Drzycimski
 - Mark Huot
 - Matt Barry
+- Matt D. Johnson (EE Harbor)
 - Matt Weinberg (Vector Media Group)
 - Max Lazar
 - Maxim WEB (Websecret)
@@ -178,6 +180,7 @@ and encourage them to join!
 - Padraig Kennedy
 - Patrick Pohler (Anecka)
 - Patrick Woodcock
+- Paul Sijpkes
 - Pedro Guimaraes (Willow Light Studio)
 - Peter Felix
 - Pierre-Vincent Ledoux
@@ -195,11 +198,16 @@ and encourage them to join!
 - Satya Prakash
 - Scott Henderson
 - Seth Giammanco
+- Shane Eckert (EE Harbor)
+- Shane Nielsen (EE Harbor)
+- Shane Woodward (thotbox)
 - Solspace
 - Stephen Callender
 - Steve Fickus
+- Steven Peercy
 - TJ Draper
-- Tom Jaeger
+- Taylor Daughtry (STAMP)
+- Tom Jaeger (EE Harbor)
 - Travis Schmeisser
 - Travis Smith (Hop Studios)
 - Ty Wangsness
