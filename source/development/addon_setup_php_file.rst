@@ -144,6 +144,33 @@ associative array of parameter names as keys, and an associative array with the
 keys ``description`` and ``example`` as its value. This value is used in the
 manual display for plugins, as such it is a **required** key for all plugins.
 
+services
+~~~~~~~~
+
+::
+
+  'services' => array(
+    'MyService' => function($addon)
+    {
+      return new ServiceClass();
+    }
+  )
+
+This is an associative arrays of services to register on the
+:doc:`Dependency Container<./core/dependencies>`.
+
+models
+~~~~~~
+
+::
+
+  'models' => array(
+    'Name' => 'Model\ClassName'
+  )
+
+This is an associate array of models exposed by this addon. The class name
+should be relative to the addon namespace. Typically addons will be in a
+``Model`` directory in the addon's folder.
 
 API Access
 ----------
