@@ -81,73 +81,69 @@
 		{%- block extrahead %} {% endblock %}
 	</head>
 	<body id="top">
-		<section class="col-group">
-			<section class="col w-16">
-				<section class="docs-header">
-					<h1>{{ project }}<b class="reg-mark">&reg;</b> {{ release }} User Guide</h1>
-					<a class="small-menu" href="#"></a>
-					<form class="search" method="get" action="https://www.google.com/search">
-						<input type="text" name="q" id="q" placeholder="Search user guide...">
-						<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="{{ project_domain }}/user-guide/" />
-					</form>
+		<section class="fill">
+			<section class="row align-right fluid-fix">
+				<section class="w-12 fluid-col" id="docs-main">
+					<div class="box docs-wrap">
+						<div class="docs-header">
+							<a class="small-menu" href="#docs-nav"></a>
+							<h1>{{ project }}&reg; User Guide</h1>
+							<form class="docs-download">
+								<select>
+									<option>Download 3.x User Guide</option>
+									<option>Download 2.x User Guide</option>
+									<option>Download 1.x User Guide</option>
+								</select>
+							</form>
+						</div>
+
+					{%- block content %}
+						<div class="top-nav">
+							<ul class="breadcrumb">
+								{%- block rootrellink %}
+								<li><a href="{{ pathto(master_doc) }}">Home</a></li>
+								{%- endblock %}
+
+								{%- for parent in parents %}
+								<li><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a></li>
+								{%- endfor %}
+
+								{%- if pagename != 'index' %}
+								<li class="last">{{ title }}</li>
+								{%- endif %}
+							</ul>
+						</div>
+						{{ body }}
+
+						{% if pagename not in exclude_comments -%}
+							<!-- {user_guide_comments} -->
+						{% endif %}
+
+					{%- endblock %}
+
+					{%- block footer %}
+						<div class="docs-footer">
+							<p>{{ project }}<b class="reg-mark">&reg;</b> {{ release }} User Guide<br><span>{{ copyright }}</span></p>
+							<p><a class="scroll" href="#top"></a></p>
+						</div>
+					{%- endblock %}
+
+					</div>
 				</section>
-			</section>
-		</section>
 
-		<section class="docs-content">
-
-			<section class="col-group">
-				<section class="col w-4">
-					<div class="box sidebar">
-						<h1>Welcome</h1>
-						<form class="download">
-							<select>
-								<option>Download 3.x User Guide</option>
-								<option>Download 2.x User Guide</option>
-								<option>Download 1.x User Guide</option>
-							</select>
+				<section class="w-4 fixed-col" id="docs-nav">
+					<div class="box docs-sidebar">
+						<form class="docs-search" method="get" action="https://www.google.com/search">
+							<input type="text" name="q" id="q" placeholder="search eecms docs">
+							<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="{{ project_domain }}/user-guide/" />
 						</form>
+
 						{%- include "static_toc.html" %}
 						<!-- @todo organize and add table of contents -->
 					</div>
 				</section>
-	{%- block content %}
-				<section class="col w-12 content-main">
-					<ul class="breadcrumb">
-						{%- block rootrellink %}
-						<li><a href="{{ pathto(master_doc) }}">Home</a></li>
-						{%- endblock %}
-
-						{%- for parent in parents %}
-						<li><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a></li>
-				        {%- endfor %}
-
-						{%- if pagename != 'index' %}
-						<li class="last">{{ title }}</li>
-						{%- endif %}
-					</ul>
-
-					{{ body }}
-	{%- endblock %}
-				</section>
-			</section>
-
-		{% if pagename not in exclude_comments -%}
-		<!-- {user_guide_comments} -->
-		{% endif %}
-
-			</section><!-- / docs-content -->
-
-		{%- block footer %}
-		<section class="col-group">
-			<section class="col w-16">
-				<section class="docs-footer">
-					<p>{{ project }}<b class="reg-mark">&reg;</b> {{ release }} User Guide<br><span>{{ copyright }}</span></p>
-					<p><a class="scroll" href="#top"></a></p>
-				</section>
 			</section>
 		</section>
-		{%- endblock %}
 
 		{%- for scriptfile in script_files %}
 		<script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
