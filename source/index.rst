@@ -21,12 +21,10 @@ If you have questions or feedback, don't hesitate to drop a thread into the :ell
 Known Issues
 ============
 
-- Updating from 2.0 currently is incomplete, work with fresh installs only.
 - MSM will no longer offer to duplicate a site.
 - Forum module themes are not yet implemented
 - In-app documentation for native add-ons is incomplete
 - Control panel interfaces for some native add-ons are incomplete
-- Deleting categories or other models with recursive relationships does not work
 - Entry and comment count on the homepage is inaccurate
 - Channel Entry revisions is not yet implemented
 - The 'Add Category’ button on the Publish page is not yet implemented
