@@ -299,3 +299,32 @@ The shared form view is ready to take a form validation result object from the :
   $vars['errors'] = $result;
 
 As long is the field names in validation match up with the form input names, the shared form view will automatically show error messages next to their respective fields and apply the appropriate :ellislab:`styles denoting field errors </style-guide/c/forms#setting-field-errors>`.
+
+Tabs
+----
+
+The shared form view is capable of adding tabs in accordance with our `style guide <https://ellislab.com/style-guide/c/tabs>`_. To do so assign a ``tabs`` variable to the view's variable's array::
+
+  $vars['tabs'] = $tabs;
+
+The view expects the ``tabs`` variable to be an associative array where the key is the language key for the text of the tab and the value is the rendered HTML of the tab itself::
+
+  $tabs = array(
+    'hello_world' => '<h2>Hello world!</h2>',
+    'goodbye'     => '<p>What, so soon?</p>'
+  );
+
+Adding forms to tabs is a matter of rendering our form data to HTML. In many cases this simply means rendering a sections array::
+
+  $permissions_tab = '';
+
+  // Assuming $sections looks like $var['sections'] as above
+	foreach ($sections as $name => $settings)
+	{
+		$permissions_tab .= ee('View')->make('ee:_shared/form/section')
+			->render(array('name' => $name, 'settings' => $settings));
+	}
+
+  $var['tabs'] = array(
+    'permissions' => $permissions_tab
+  );
