@@ -1,4 +1,4 @@
-CP\\Pagination Service
+CP/Pagination Service
 ======================
 
 .. contents::
@@ -20,7 +20,7 @@ paginate and a URL object::
   $pagination = ee('CP/Pagination')->make($total_count)
   	->render($base_url);
 
-CP\\Pagination Service Methods
+CP/Pagination Service Methods
 ------------------------------
 
 .. namespace:: EllisLab\ExpressionEngine\Library\CP

@@ -1,4 +1,4 @@
-CP\\URL Service
+CP/URL Service
 ===============
 
 .. contents::
@@ -11,7 +11,7 @@ Simple Example
 --------------
 
 Building URLs in the Control Panel is a common, but exacting task. We have a
-CP\\URL Service to make building these URLs simple. For example::
+CP/URL Service to make building these URLs simple. For example::
 
   $url = ee('CP/URL', 'publish/create/1');
 
@@ -28,7 +28,7 @@ Or::
 When to use ``compile()``
 -------------------------
 
-The CP\\URL object has a magic ``__toString()`` method that compiles the object
+The CP/URL object has a magic ``__toString()`` method that compiles the object
 into a string when the object is treated as a string (see: PHP's documentation
 on the magic `__toString() method
 <http://php.net/manual/en/language.oop5.magic.php#object.tostring>`_ for more
@@ -50,7 +50,7 @@ For example::
   ));
 
 
-CP\\URL Service Methods
+CP/URL Service Methods
 -----------------------
 
 .. namespace:: EllisLab\ExpressionEngine\Library\CP
