@@ -105,6 +105,14 @@ Header Methods
   :returns: $this
   :rtype: Header
 
+.. method:: urlIsExternal($external = TRUE)
+
+  Sets the URL is external property
+
+  :param bool $external: (optional) TRUE if it is external, FALSE if not
+  :returns: $this
+  :rtype: Header
+
 .. method:: isActive()
 
   Marks the header as active
@@ -163,6 +171,14 @@ BasicItem Methods
 
   :param $url: A CP\URL object or string containing the URL for the item.
   :type $url: CP/URL or string
+  :returns: $this
+  :rtype: BasicItem
+
+.. method:: urlIsExternal($external = TRUE)
+
+  Sets the URL is external property
+
+  :param bool $external: (optional) TRUE if it is external, FALSE if not
   :returns: $this
   :rtype: BasicItem
 
@@ -231,6 +247,14 @@ FolderItem Methods
 
   :param $url: A CP\URL object or string containing the URL for the item.
   :type $url: CP/URL or string
+  :returns: $this
+  :rtype: FolderItem
+
+.. method:: urlIsExternal($external = TRUE)
+
+  Sets the URL is external property
+
+  :param bool $external: (optional) TRUE if it is external, FALSE if not
   :returns: $this
   :rtype: FolderItem
 
