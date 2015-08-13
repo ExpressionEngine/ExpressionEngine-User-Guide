@@ -189,10 +189,11 @@ BasicItem Methods
   :returns: $this
   :rtype: BasicItem
 
-.. method:: asDeleteAction()
+.. method:: asDeleteAction($modal_name = '')
 
   Marks the item as a delete action
 
+  :param string $modal_name: The name of the modal this delete action will trigger
   :returns: $this
   :rtype: BasicItem
 
