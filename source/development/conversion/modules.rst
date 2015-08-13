@@ -107,14 +107,16 @@ Add-On Name Configuration``. In our fortune cookie module example we would have
 Configuration`` as the heading.
 
 If you return an associative array it must contain the key ``body`` and may
-contain the keys ``breadcrumb``, ``heading``, and ``sidebar``. The ``body`` key
+contain the keys ``breadcrumb``, and ``heading``. The ``body`` key
 should contain an HTML string which will be used in the "body" section of the
 Control Panel layout inside our Add-On Manager.
 The ``breadcrumb`` key should contain an associative array of URLs as
 keys and strings for the bodies. The header value will be added as the final
 segment in the breadcrumb.  The ``heading`` key should
-contain a string for use as the heading (i.e. ``Fortune Cookie Management``). Finally,
-the ``sidebar`` key should contain a :doc:`Sidebar </development/services/sidebar>` object.
+contain a string for use as the heading (i.e. ``Fortune Cookie Management``).
+
+If your add-on needs a `sidebar <https://ellislab.com/style-guide/c/structure#content-box-sidebar>`_
+use the :doc:`Sidebar Service </development/services/sidebar>`.
 
 Example
 ~~~~~~~
@@ -127,7 +129,6 @@ Example
       ee('CP/URL', 'addons/settings/fortune_cookie')->compile() => lang('fortune_cookie_management')
     ),
     'heading'  => lang('edit_fortune_cookie'),
-    'sidebar'  => $sidebar
   );
 
 Publish Tab File (``tab.package_name.php``)
