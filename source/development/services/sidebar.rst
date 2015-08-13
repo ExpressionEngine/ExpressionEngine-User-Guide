@@ -204,6 +204,14 @@ FolderList Methods
   :returns: $this
   :rtype: FolderList
 
+.. method:: withRemovalKey($key)
+
+  Sets the name of variable passed with the removal action.
+
+  :param string $key: The name of the variable with.
+  :returns: $this
+  :rtype: FolderList
+
 .. method:: withNoResultsText($msg)
 
   Sets the no results text which will display if this header's list(s) are empty.
