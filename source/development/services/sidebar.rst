@@ -204,6 +204,14 @@ FolderList Methods
   :returns: $this
   :rtype: FolderList
 
+.. method:: withNoResultsText($msg)
+
+  Sets the no results text which will display if this header's list(s) are empty.
+
+  :param string $msg: The text to display when the list(s) are empty.
+  :returns: $this
+  :rtype: FolderList
+
 FolderItem Methods
 ------------------
 
