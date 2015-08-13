@@ -105,6 +105,13 @@ Header Methods
   :returns: $this
   :rtype: Header
 
+.. method:: isActive()
+
+  Marks the header as active
+
+  :returns: $this
+  :rtype: Header
+
 .. method:: withButton($text, $url)
 
   Sets the button property of the header
