@@ -24,10 +24,11 @@ Known Issues
 - MSM will no longer offer to duplicate a site.
 - Forum module themes are not yet implemented
 - In-app documentation for native add-ons is incomplete
-- Control panel interfaces for some native add-ons are incomplete
 - Entry and comment count on the homepage is inaccurate
-- The 'Add Category’ button on the Publish page is not yet implemented
 - This documentation is incomplete
+- Cannot delete channels
+- Cannot delete status groups
+- Buggy per-page filter in the File Manager
 - ...including this list
 
 
