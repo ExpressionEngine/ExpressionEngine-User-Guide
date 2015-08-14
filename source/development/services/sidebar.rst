@@ -78,6 +78,7 @@ Sidebar Methods
 .. method:: render()
 
   Renders the sidebar
+
   :returns: The rendered HTML of the sidebar
   :rtype: String
 
