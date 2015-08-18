@@ -26,8 +26,6 @@ Known Issues
 - In-app documentation for native add-ons is incomplete
 - Entry and comment count on the homepage is inaccurate
 - This documentation is incomplete
-- Cannot delete channels
-- Cannot delete status groups
 - ...including this list
 
 
