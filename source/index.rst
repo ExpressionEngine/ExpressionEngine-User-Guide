@@ -28,8 +28,6 @@ Known Issues
 - This documentation is incomplete
 - Cannot delete channels
 - Cannot delete status groups
-- Buggy per-page filter in the File Manager
-- Cannot install with a custom DB prefix
 - ...including this list
 
 
