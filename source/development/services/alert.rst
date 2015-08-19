@@ -1,5 +1,5 @@
-Alert Service
-=============
+CP/Alert Service
+================
 
 .. contents::
   :local:
@@ -15,14 +15,14 @@ or errors. We describe, in detail, how to build different kinds of alerts in our
 `CP style-guide <https://ellislab.com/style-guide/c/alerts>`_. We have also created
 an Alert Service for creating alerts in your code. For example::
 
-  ee('Alert')->makeInline('fortune-cookie-form')
+  ee('CP/Alert')->makeInline('fortune-cookie-form')
 	->asIssue()
 	->withTitle(lang('fortune_cookie_save_error'))
 	->addToBody(lang('fortune_cookie_save_error_desc'))
 	->now();
 
-Alert Service Methods
----------------------
+CP/Alert Service Methods
+------------------------
 
 .. namespace:: EllisLab\ExpressionEngine\Service\Alert
 

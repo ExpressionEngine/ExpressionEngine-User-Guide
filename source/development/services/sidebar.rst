@@ -1,5 +1,5 @@
-Sidebar Service
-===============
+CP/Sidebar Service
+==================
 
 .. contents::
   :local:
@@ -12,7 +12,7 @@ Simple Example
 
 The Control Panel's left sidebar is built with the Sidebar Service::
 
-  $sidebar = ee('Sidebar')->make();
+  $sidebar = ee('CP/Sidebar')->make();
 
 In accordance with our `style guide <https://ellislab.com/style-guide/c/structure#content-box-sidebar>`_ sidebars have headers::
 
@@ -52,7 +52,7 @@ Complete Example
 
 This will build a sidebar with a header, which has a button and two items underneath it::
 
-  $sidebar = ee('Sidebar')->make();
+  $sidebar = ee('CP/Sidebar')->make();
 
   $fortunes = $sidebar->addHeader(lang('forutnes))
     ->withButton(lang('new'), ee('CP/URL', 'addons/settings/fortune_cookie/create'));
@@ -61,8 +61,8 @@ This will build a sidebar with a header, which has a button and two items undern
   $fortunes_list->addItem(lang('recent_fortunes'), ee('CP/URL', 'addons/settings/fortune_cookie/recent'))
   $fortunes_list->addItem(lang('archived_fortunes'), ee('CP/URL', 'addons/settings/fortune_cookie/archived'));
 
-Sidebar Methods
----------------
+CP/Sidebar Methods
+------------------
 
 .. namespace:: EllisLab\ExpressionEngine\Service\Sidebar
 

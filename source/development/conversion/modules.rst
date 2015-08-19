@@ -202,15 +202,15 @@ paginate and a URL object::
 
 See :doc:`/development/services/pagination` for full documentation.
 
-The Alert Service
------------------
+The CP/Alert Service
+--------------------
 
 Alerts are for providing feedback on an action and calling attention to warnings
 or errors. We describe, in detail, how to build different kinds of alerts in our
 `CP style-guide <https://ellislab.com/style-guide/c/alerts>`_. We have also created
 an Alert Service for creating alerts in your code. For example::
 
-  ee('Alert')->makeInline('fortune-cookie-form')
+  ee('CP/Alert')->makeInline('fortune-cookie-form')
 	->asIssue()
 	->withTitle(lang('fortune_cookie_save_error'))
 	->addToBody(lang('fortune_cookie_save_error_desc'))
@@ -218,7 +218,7 @@ an Alert Service for creating alerts in your code. For example::
 
 And::
 
-  <?=ee('Alert')->get('fortune-cookie-form')?>
+  <?=ee('CP/Alert')->get('fortune-cookie-form')?>
 
 See :doc:`/development/services/alert` for full documentation.
 
