@@ -24,7 +24,6 @@ Known Issues
 - MSM will no longer offer to duplicate a site.
 - Forum module themes are not yet implemented
 - In-app documentation for native add-ons is incomplete
-- Entry and comment count on the homepage is inaccurate
 - This documentation is incomplete
 - ...including this list
 
