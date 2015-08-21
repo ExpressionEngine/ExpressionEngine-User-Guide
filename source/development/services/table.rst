@@ -61,6 +61,10 @@ Here are the available options:
 |                     | sort via SQL or other means before handing the data    |                       |                   |
 |                     | off to the table.                                      |                       |                   |
 +---------------------+--------------------------------------------------------+-----------------------+-------------------+
+| **class**           | An optional CSS class to add to the table tag          | String                | ``NULL``          |
+|                     |                                                        |                       |                   |
+|                     |                                                        |                       |                   |
++---------------------+--------------------------------------------------------+-----------------------+-------------------+
 | **lang_cols**       | Whether or not to run passed column names through the  | ``TRUE`` or ``FALSE`` | ``TRUE``          |
 |                     | ``lang()`` helper on the front-end.                    | to enable or disable, |                   |
 |                     |                                                        | respectively.         |                   |
