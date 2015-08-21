@@ -4215,7 +4215,7 @@ show_profiler
 
 Enable Output Profiler. When enabled, Super Admins will see benchmark
 results, SQL queries, and submitted form data displayed at the bottom of
-the browser window.
+the browser window. Template debugging is included on the front end.
 
 ========== ========
 Value      Behavior
@@ -4726,32 +4726,6 @@ $assign_to_config['template'] = 'index';
 **Also found in CP:** :menuselection:`Design --> Templates -->
 Template Manager --> Edit Template Group`: Make the index template in
 this group your site's home page?
-
-
-template_debugging
-------------------
-
-If enabled, all processing that occurs while rendering a page will be
-logged and displayed to Super Admins at the bottom of the browser
-window. This includes Global Variables, conditionals, tags, PHP on
-Input/Ouput, Embeds, and extension hooks.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Enable template debugging
-``n``      Disable template debugging **(default)**
-========== ========
-
-Example Usage::
-
-$config['template_debugging'] = 'y';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: :ref:`Display Template
-Debugging <output-debug-display-template-debug-label>`
 
 
 .. _overrides-template-group:

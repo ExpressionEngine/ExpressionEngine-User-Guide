@@ -109,18 +109,9 @@ Display Output Profiler?
 
 If enabled, Super Admins will see benchmark results, SQL queries, and
 submitted form data displayed at the bottom of the browser window.
-This is useful for debugging.
-
-.. _output-debug-display-template-debug-label:
-
-Display Template Debugging?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If enabled, a log of all processing that occurs while a page is being
-created in the ExpressionEngine Template parser will be shown to Super
-Admins at the bottom of the browser window. This includes Global Variables,
+On the front end, this includes Global Variables,
 Conditionals, Tags, PHP on Input/Ouput, Embeds, and Extension Hooks.
-This is an excellent tool for debugging your templates.
+This is an excellent tool for debugging.
 
 .. _output-debug-use-newrelic-label:
 
