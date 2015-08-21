@@ -228,13 +228,17 @@ display::
   $data = array();
   foreach ($channels as $channel)
   {
+    $edit_url = ee('CP/URL', 'channels/edit/'.$channel->getId());
     $data[] = array(
       $channel->getId(),
-      $channel->channel_title,
+      array(
+        'content' => $channel->channel_title,
+        'href' => $edit_url
+      ),
       $channel->channel_name,
       array('toolbar_items' => array(
         'edit' => array(
-          'href' => ee('CP/URL', 'channels/edit/'.$channel->getId()),
+          'href' => $edit_url,
           'title' => lang('edit')
         ),
         'settings' => array(
@@ -258,6 +262,12 @@ service what kind of button to show, as well as the link but the button
 and its title text. For the checkbox column, we need to specify the
 input name for the checkboxes, its value, as well as any optional data
 like the data we set here to work with an action modal.
+
+Passing an array with the keys ``content`` and ``href`` will wrap the contents
+in an ``<a>`` tag, but only if the column has ``encode`` set to ``TRUE``.
+
+.. note:: Only use an edit URL when sending an ``href`` key along with the
+  contents of a column.
 
 Finally, we'll tell our Table object about our data::
 
