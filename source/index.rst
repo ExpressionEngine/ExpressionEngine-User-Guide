@@ -21,6 +21,8 @@ If you have questions or feedback, don't hesitate to drop a thread into the :ell
 Known Issues
 ============
 
+- Deleting channels throws an exception.
+- File fields do not save data in the publish form.
 - MSM will no longer offer to duplicate a site.
 - Forum module themes are not yet implemented
 - In-app documentation for native add-ons is incomplete
