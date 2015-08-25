@@ -16,7 +16,7 @@ changes.
 
 ::
 
-  $view = ee('View')->make('member/profile');
+  $view = ee('View')->make('addon_name:member/profile');
 
   $output = $view->render(array(
     'member' => $current_member
@@ -27,9 +27,9 @@ Creating a View
 
 All views are represented as separate objects. To create a new view instance,
 simply call ``make()`` on the core view service and pass in a the path to a
-view file::
+view file, prefixed with the folder name of your add-on::
 
-  $view = ee('View')->make('member/profile');
+  $view = ee('View')->make('addon_name:member/profile');
 
 The view file should be a plain ``.php`` file in the ``views`` folder. In this
 case it would be: ``views/member/profile.php``
@@ -75,19 +75,19 @@ Embedding Sub-Views
 Views can be rendered directly inside of another view. This is done using the
 ``$this->embed()`` helper method::
 
-  <p><?php $this->embed('sub/view') ?></p>
+  <p><?php $this->embed('addon_name:sub/view') ?></p>
 
 All of the current view variables are automatically made available to the
 subview. You can optionally pass additional ones in the second parameter::
 
-  <p><?php $this->view('sub/view', array('username' => $member->username)) ?></p>
+  <p><?php $this->view('addon_name:sub/view', array('username' => $member->username)) ?></p>
 
 Notice that you do not need to echo the output of this method, it is added to
 the right place automatically.
 
 You can also disable features in a view, using the third parameter::
 
-  <p><?php $this->view('sub/view', array(), 'figure') ?></p>
+  <p><?php $this->view('addon_name:sub/view', array(), 'figure') ?></p>
 
 Extending Parent Views
 ----------------------
@@ -100,7 +100,7 @@ The rendered child view will be available to the parent as ``$child_view``::
 
   <section><?=$child_view?></section>
 
-The api for this this method is otherwise identical to ``embed()``. The second
+The API for this this method is otherwise identical to ``embed()``. The second
 and third parameter are used for additional variables and disabled features,
 respectively.
 

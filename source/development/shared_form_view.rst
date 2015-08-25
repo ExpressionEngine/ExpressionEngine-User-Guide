@@ -61,7 +61,15 @@ Let's get started creating a general settings form for ExpressionEngine. We'll s
     'save_btn_text_working' = 'btn_saving'
   );
 
-  ee()->cp->render('settings/form', $vars);
+Given we have a view file named `form.php` with this as the contents::
+
+  <div class="box">
+    <?php $this->embed('ee:_shared/form')?>
+  </div>
+
+We can then render the form by returning this at the end of our controller method::
+
+  return ee('View')->make('addon_name:form')->render($vars);
 
 Assuming our language keys are defined above, we should end up with a form that looks like this:
 
@@ -319,11 +327,11 @@ Adding forms to tabs is a matter of rendering our form data to HTML. In many cas
   $permissions_tab = '';
 
   // Assuming $sections looks like $var['sections'] as above
-	foreach ($sections as $name => $settings)
-	{
-		$permissions_tab .= ee('View')->make('ee:_shared/form/section')
-			->render(array('name' => $name, 'settings' => $settings));
-	}
+  foreach ($sections as $name => $settings)
+  {
+    $permissions_tab .= ee('View')->make('ee:_shared/form/section')
+      ->render(array('name' => $name, 'settings' => $settings));
+  }
 
   $var['tabs'] = array(
     'permissions' => $permissions_tab
