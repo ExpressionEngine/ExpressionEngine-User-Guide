@@ -21,8 +21,17 @@ If you have questions or feedback, don't hesitate to drop a thread into the :ell
 Known Issues
 ============
 
-- Deleting channels, status groups or upload destinations throws an exception.
-- File fields do not save data in the publish form.
+- Member groups can no longer have site-specific settings.
+- Models: Cannot unassign a category from an entry on publish form.
+- The publish form is showing text on the buttons instead of the proper Glyphs.
+- Quick links are being altered after entered, and cause a disallowed key characters error.
+- Save button does not appear until required field loses
+- Models: Channel -> CategoryGroups relationship not working with multiple category groups
+- Filepicker modal doesn't select already chosen file when launched from the Publish page.
+- PHP error when creating template group with insufficient permissions
+- Converting from Textarea to RTE generates errors
+- Package Path Loading/Unloading refactor
+- Route paths don't work across MSM sites...
 - MSM will no longer offer to duplicate a site.
 - Forum module themes are not yet implemented
 - In-app documentation for native add-ons is incomplete
