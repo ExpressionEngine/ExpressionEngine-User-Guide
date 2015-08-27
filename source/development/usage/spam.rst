@@ -18,9 +18,9 @@ Class Methods
 
 ::
 
-  classify($text)
+  isSpam($text)
 
-Classify takes a single parameter, a string, and returns TRUE if it's
+isSpam takes a single parameter, a string, and returns TRUE if it's
 classified as spam and FALSE otherwise. The classify method will use
 the same classifier used for catching comment and forum spam. If you
 wish to use a custom classifier please see the documentation for the
