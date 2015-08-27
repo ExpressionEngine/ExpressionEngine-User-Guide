@@ -3,17 +3,14 @@ CAPTCHAs
 
 ExpressionEngine supports what are known as "CAPTCHAs", or Completely
 Automated Public Turing tests to tell Computers and Humans Apart. A
-CAPTCHA is a computer-generated test that humans can pass but computer
-programs cannot. It's most commonly used to prevent automated Bots from
-spamming comments, or from signing up for web services. Yahoo, for
-example, uses a CAPTCHA when you sign up for an account.
+CAPTCHA is a computer-generated test that humans can easily pass, but
+that is computationally difficult for a computer to do.
 
 So how does this work? An image is generated in real time for a user
-loading a web page. This image contains a word that the user must submit
-in a form. The concept is effective because automated scripts generally
-can't read images, only humans can. Of course there is optical
-recognition software that can be used to get around CAPTCHAs but this
-technology can easily be fooled by distorting the image.
+loading a web page. This image contains a word that the user must enter
+in a form. The concept is effective because computers are generally not
+very good at reading images, but it is something humans can do with
+little effort.
 
 In ExpressionEngine, CAPTCHAs can be used in several places:
 
@@ -21,24 +18,17 @@ In ExpressionEngine, CAPTCHAs can be used in several places:
 #. `Member Registration Form <#member_registration_form>`_
 #. `Contact and Tell-a-Friend Email Forms <#email_forms>`_
 
+The settings to require CAPTCHAs for these forms are located at
+:menuselection:`Settings --> CAPTCHA` in the control panel.
+
 Comment Forms
 -------------
-
-In order to use CAPTCHAs on the comment form, you must first enable the
-preference. In the Admin section of the Control Panel go to Channel
-Management and look for the "Enable Captcha for Comment Posting?"
-preferences. Set this preference to "Yes".
 
 Once you have the preference turned on, you'll need to add the CAPTCHA
 code to your :ref:`comment_submission_form`. See below for the `CAPTCHA Code`_.
 
 Member Registration Form
 ------------------------
-
-In order to use CAPTCHAs on the member registration form, you must first
-enable the preference. In the Admin section of the Control Panel go to
-Membership Preferences and look for the "Enable Membership Captcha"
-preferences. Set this preference to "Yes".
 
 The necessary CAPTCHA code already exists in the Member Templates by
 default, so you should not need to add it. If you have a version of
@@ -48,12 +38,8 @@ otherwise need the code, see below for the `CAPTCHA Code`_.
 Contact and Tell-a-Friend Email Forms
 -------------------------------------
 
-Both the Contact Form as well as Tell-a-Friend email forms can take
-advantage of CAPTCHAs. In order to use CAPTCHAs on them, you must first
-enable the preference. In the Admin section of the Control Panel go to
-System Preferences then click Email Configuration and look for the
-"Enable CAPTHCAs for Tell-a-Friend and Contact emails?" preferences. Set
-this preference to "Yes".
+Once you have the preference turned on, you'll need to add the CAPTCHA
+code. See below for the `CAPTCHA Code`_.
 
 CAPTCHA Code
 ------------
@@ -93,9 +79,6 @@ these legitimate users to be able to use your site.
 You should determine for yourself whether or not CAPTCHAs are
 appropriate for your situation and your website audience.
 
-In addition, your server must have the GD (or GD 2) image library
-support installed in order for CAPTCHAs to work.
-
 For ExpressionEngine installations that power multiple domains or
 subdomains, you may need to place the *server* path for the **Relative
 Path to Captcha Folder** setting under :menuselection:`Admin --> Captcha
@@ -103,10 +86,6 @@ Preferences`. A server path is typically something similar to
 /home/domain.com/http\_docs/images/captchas/. The specific setting will
 vary from server to server so you may need to contact your Host or
 server admin to determine what your correct "server path" is.
-
-If your server does not have True Type font support compiled into PHP
-you should disable the use of True Type fonts under :menuselection:`Admin
---> Security` and :menuselection:`Privacy --> Captcha Preferences`.
 
 Special CAPTCHA Files
 ---------------------

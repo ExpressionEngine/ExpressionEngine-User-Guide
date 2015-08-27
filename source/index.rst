@@ -1,201 +1,50 @@
-###########################
-ExpressionEngine User Guide
-###########################
+#############################################
+ExpressionEngine Developer Preview User Guide
+#############################################
 
-*******
-Welcome
-*******
+.. note:: The Developer Preview is a work in progress, we have a lot left to do! Please excuse the ongoing construction and dust as we continue to work on ExpressionEngine itself as well as reorganizating and rewriting much of the documentation.
 
-- :doc:`intro/getting_the_most`
-- :doc:`intro/the_big_picture`
-- :ellislab:`EllisLab Support </support>`
+Welcome to the ExpressionEngine Developer Preview User Guide.
 
-*****************
-Application Setup
-*****************
+Currently the table of contents on the left will only take you to areas that are relevant to your goals for the Developer Preview, namely the Add-on Developer section of the User Guide. The objective is to answer the following questions for you:
 
-Installation
+- What are the over-arching things I need to know?
+- What's new, what's deprecated, and what's gone?
+- What steps do I need to take to convert my existing add-ons?
+
+Full reference API documentation auto-generated from our docblocks is coming soon.
+
+Installation steps are essentially unchanged from 2.0, though we've simplified the installer itself quite a bit. Simply unzip the package, place it in a local vhost directory of your choice, and point your browser at `/system/` or `/admin.php`.
+
+If you have questions or feedback, don't hesitate to drop a thread into the :ellislab:`Developer Preview Forums <forums/viewforum/128/>` or the private `Developer Preview Slack group <https://eedevpreview.slack.com/>`_.
+
+Known Issues
 ============
 
-- :doc:`installation/requirements`
-- :doc:`installation/installation`
+- Member groups can no longer have site-specific settings.
+- Models: Cannot unassign a category from an entry on publish form.
+- The publish form is showing text on the buttons instead of the proper Glyphs.
+- Quick links are being altered after entered, and cause a disallowed key characters error.
+- Save button does not appear until required field loses
+- Models: Channel -> CategoryGroups relationship not working with multiple category groups
+- Filepicker modal doesn't select already chosen file when launched from the Publish page.
+- PHP error when creating template group with insufficient permissions
+- Converting from Textarea to RTE generates errors
+- Package Path Loading/Unloading refactor
+- Route paths don't work across MSM sites...
+- MSM will no longer offer to duplicate a site.
+- Forum module themes are not yet implemented
+- In-app documentation for native add-ons is incomplete
+- This documentation is incomplete
+- ...including this list
 
-Updates & Upgrades
-==================
-
-- :doc:`installation/update`
-- :doc:`installation/upgrade_from_1.x`
-- :doc:`installation/upgrade_from_core`
-- :doc:`installation/version_notes`
-
-**********************
-Using ExpressionEngine
-**********************
-
-- :doc:`intro/the_big_picture`
-- :doc:`how_to/hello-world`
-
-The Control Panel
-=================
-
-- :doc:`The Control Panel <cp/index>`
-- :doc:`general/languages`
-
-The Front-End
-=============
-
-Templates
----------
-
-- :doc:`templates/embedding`
-- :doc:`templates/layouts`
-- :doc:`templates/hidden_templates`
-- :doc:`templates/plugins`
-- :doc:`templates/php`
-- :doc:`templates/templates_as_files`
-- :doc:`templates/comments`
-- :doc:`templates/pagination`
-
-URLs
-----
-
-- :doc:`urls/url_structure`
-- :doc:`urls/template_routes`
-- :doc:`urls/remove_index.php`
-- :doc:`urls/404pages`
-
-
-*****************
-Beyond the Basics
-*****************
-
-- :doc:`general/add-ons`
-- :doc:`cp/sites/index`
-- :doc:`add-ons/forum/index`
-- :doc:`general/system_configuration_overrides`
-
-
-**************************************
-Application Maintenance & Optimization
-**************************************
-
-Maintenance & Operations
-========================
-
-- :doc:`operations/moving`
-- :doc:`operations/database_backup`
-
-Securing ExpressionEngine
-=========================
-
-- :doc:`security/spam_protection`
-- :doc:`security/captchas`
-
-Optimizing ExpressionEngine
-===========================
-
-- :doc:`optimization/caching`
-- :doc:`optimization/throttling`
-- :doc:`optimization/handling_extreme_traffic`
-
-Performance Monitoring
-======================
-
-- :doc:`New Relic <monitoring/new-relic>`
-
-Solving Problems
-================
-
-- :doc:`troubleshooting/index`
-- :ellislab:`EllisLab Support </support>`
-- :ellislab:`Community Support Forum </forums/viewannounce/230174_114/>`
-
-
-*************
-How-To Guides
-*************
-
-- :doc:`how_to/hello-world`
-- :doc:`how_to/building_a_simple_news_site`
-
-
-*******************
-Technical Reference
-*******************
-
-Reference Guides
-================
-
-- :doc:`The Control Panel <cp/index>`
-- :doc:`templates/template_engine`
-- :doc:`templates/globals/index`
-- :doc:`general/system_configuration_overrides`
-- :doc:`general/bbcode`
-- :doc:`general/text_formatting`
-- :doc:`templates/date_variable_formatting`
-- :doc:`templates/hit_counter`
-- :doc:`general/quick_reference`
-
-Add-Ons
-=======
-
-.. _add_ons_included_in_expressionengine:
-
-Included in ExpressionEngine
-----------------------------
-
-- :doc:`add-ons/blacklist/index`
-- :doc:`add-ons/channel/index`
-- :doc:`add-ons/comment/index`
-- :doc:`add-ons/cookie_consent/index`
-- :doc:`add-ons/email/index`
-- :doc:`add-ons/emoticon/index`
-- :doc:`add-ons/file/index`
-- :doc:`add-ons/ip_to_nation/index`
-- :doc:`add-ons/jquery/index`
-- :doc:`add-ons/mailinglist/index`
-- :doc:`add-ons/member/index`
-- :doc:`add-ons/metaweblog_api/index`
-- :doc:`add-ons/moblog/index`
-- :doc:`add-ons/pages/index`
-- :doc:`add-ons/query/index`
-- :doc:`add-ons/referrer/index`
-- :doc:`add-ons/rss/index`
-- :doc:`add-ons/rss_parser/index`
-- :doc:`add-ons/rte/index`
-- :doc:`add-ons/search/index`
-- :doc:`add-ons/simple_commerce/index`
-- :doc:`add-ons/statistics/index`
-- :doc:`add-ons/wiki/index`
-
-.. _add_ons_available_for_download:
-
-Available for Download
-----------------------
-
-.. rst-class:: github-addon-repos
-
- - `GitHub Repositories <https://github.com/EllisLab>`_
-
-*******************************
-Developing for ExpressionEngine
-*******************************
-
-- :doc:`Add-On Development <development/index>`
-- :ellislab:`Development & Programming Forum </forums/viewannounce/230178_116/>`
-
-
-**********************
-About ExpressionEngine
-**********************
-
-- :doc:`License Agreement </about/license>`
-- :doc:`Change Log </about/changelog>`
 
 .. toctree::
   :glob:
-  :titlesonly:
   :hidden:
+  :titlesonly:
+
+  development/index
 
   about/index
   about/license
@@ -205,7 +54,7 @@ About ExpressionEngine
   general/index
   how_to/index
   intro/index
-  handling_bugs/index
+  bugs_and_security_reports/index
   add-ons/index
   operations/index
   optimization/index

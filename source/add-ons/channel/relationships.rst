@@ -837,6 +837,54 @@ The syntax is::
 
     {parents field="relationship_field"}
 
+Fetching Entry IDs Only
+=======================
+
+Sometimes it's useful to get just a list of the entry IDs of related entries,
+to pass on to a plugin as a tag a parameter or similar. If you need to do this,
+you can use the single variable ``:entry_ids`` shortcut modifier::
+
+	{relationship_field:entry_ids}
+
+Outputs in the format::
+
+	43|58|127
+
+Note that this is not used inside a relationships tag pair, but is a standalone variable.
+
+Usage
+-----
+
+For children::
+
+	{relationship_field:entry_ids}
+
+For parents::
+
+	{parents:entry_ids}
+
+	{!-- or --}
+
+	{parents:entry_ids field="relationship_field"}
+
+Parameters
+----------
+
+The `entry_ids` shortcut tag has only one optional parameter:
+
+delimiter
++++++++++
+
+By default the entry IDs will be pipe-delimited, but you can choose to
+have them delimited with something else::
+
+	{relationship_field:entry_ids delimiter=","}
+
+Would output in the format::
+
+	43,48,127
+
+
 Namespacing Variables
 =====================
 

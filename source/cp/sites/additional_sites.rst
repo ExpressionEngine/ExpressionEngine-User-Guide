@@ -40,3 +40,15 @@ Upload each of these files to their respective directories within your Expressio
 
 Now your installation will have the ability to power that many more MSM
 Sites. The next step is to :doc:`set up the new MSM Site <createsite>` in your installation.
+
+.. note:: There is no explicit limit on the number of MSM sites that can be installed on
+   a single installation of ExpressionEngine.  However, there is a technical
+   limit on the size of your MySQL database tables (see the `MySQL documentation <http://dev.mysql.com/doc/refman/5.0/en/column-count-limit.html>`__).
+   This effectively limits the total number of custom channel fields, and thus
+   ultimately the number of sites you can install.  Depending on the types of
+   fields and the MySQL storage engine, row size limits could pose a problem with
+   anywhere between 500 - 2,000 custom fields.  If you are concerned you may be
+   using too many custom fields, our support team can help you decide whether more
+   sites can be supported.
+
+

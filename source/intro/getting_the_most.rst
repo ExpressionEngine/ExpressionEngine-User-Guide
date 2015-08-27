@@ -18,10 +18,10 @@ Get Involved in the Community Forums
 ************************************
 
 We can't stress enough the importance of the `EllisLab Community Forums
-<http://ellislab.com/forums/>`_. We have one of the best user communities on the
+<https://ellislab.com/forums/>`_. We have one of the best user communities on the
 Internet, and you'll find people who can help you with just about anything in
 the forums. You might want to get started by hanging out in
-`The Lounge <http://ellislab.com/forums/viewforum/28/>`_.
+`The Lounge <https://ellislab.com/forums/viewforum/28/>`_.
 
 Go ahead and explore the Forums and get involved. Teaching and helping others
 troubleshoot can be one of the best ways to boost your own ExpressionEngine skills.

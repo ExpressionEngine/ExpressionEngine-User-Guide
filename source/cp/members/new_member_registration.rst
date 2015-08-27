@@ -11,6 +11,9 @@ included. You may specify custom member fields to include using the 'Is
 field visible in the control panel's administrative registration page?'
 setting in :doc:`Member Fields <custom_member_fields>`.
 
+.. note:: A member account's Username and Screen Name can be identical,
+  but must be unique system-wide.
+
 |Member Registration Page|
 
 .. |Member Registration Page| image:: ../../images/member_registration.png

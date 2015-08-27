@@ -20,6 +20,7 @@ forum templates:
 -  {include:spellcheck_js}
 -  {module_version}
 -  {page_title}
+-  {password_max_length}
 -  {path:advanced_search}
 -  {path:atom}
 -  {path:do_search}

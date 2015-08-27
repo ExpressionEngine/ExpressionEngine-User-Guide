@@ -13,6 +13,17 @@ lead to data coming up missing in these checkbox fields, so the
 parameter has been removed and now all checkbox data is preserved by
 default.
 
+Pagination Changes
+------------------
+
+All :doc:`/templates/pagination` within ExpressionEngine is now
+consistent which means that some templates will need to be updated:
+
+- Uses of ``{if paginate}`` have been deprecated, use
+  ``{paginate}...{/paginate}`` instead
+- Use of ``{include:pagination_link}`` has been deprecated, use
+  ``{pagination_links}`` instead
+
 Change in Behavior for Accessing Non-Existent Paginated Pages
 -------------------------------------------------------------
 

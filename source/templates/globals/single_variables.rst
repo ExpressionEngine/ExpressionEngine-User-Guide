@@ -320,6 +320,19 @@ member's screen name. For instance, the output might be::
 
   <a href="http://example.com/index.php/member/1/">Joe Smith</a>
 
+
+password_max_length
+-------------------
+
+::
+
+  {password_max_length}
+
+This variable is used the ``maxlength`` property of password inputs on
+login forms::
+
+  <input type="password" name="password" maxlength="{password_max_length}" autocomplete='off' />
+
 .. _global_redirect:
 
 redirect
@@ -383,6 +396,36 @@ This variable will be substituted with your site URL as defined under
 :menuselection:`Admin --> General Configuration`.
 
 .. _global_template_edit_date:
+
+template_name
+-------------
+
+This variable displays the name of the template currently being processed.::
+
+  {template_name}
+
+template_group
+--------------
+
+This variable displays the name of the template group for the template
+currently being processed.::
+
+  {template_group}
+
+template_id
+-----------
+
+This variable displays the numeric ID of the template currently being processed.::
+
+  {template_id}
+
+template_type
+-------------
+
+This variable displays the :ref:`type <template-type>` of the template
+currently being processed (e.g. "webpage", "rss", "xml", etc.).::
+
+  {template_type}
 
 template\_edit\_date
 --------------------

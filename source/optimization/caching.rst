@@ -169,17 +169,70 @@ the backup driver is the file driver and it's likely the best failover
 option due to its reliability, but the backup driver is configurable.
 
 Add-on developers can find more information about using caching drivers
-to store and retrieve items in the :doc:`/development/usage/cache`
+to store and retrieve items in the :doc:`/development/legacy/libraries/cache`
 documentation.
 
 .. note:: The Memcached driver is set to use PHP's
    `Memcached <http://www.php.net/manual/en/book.memcached.php>`_
    extension
    by default. If it's not available, the driver will try to use
-   `Memcache <http://www.php.net/manual/en/book.memcached.php>`_ instead.
+   `Memcache <http://www.php.net/manual/en/book.memcache.php>`_ instead.
 
 .. note:: The Redis driver uses the
    `PhpRedis <https://github.com/nicolasff/phpredis>`_ extension.
 
 .. note:: A Dummy driver is available for selection to disable caching
     entirely.
+
+.. _caching_clearing_caches:
+
+Clearing Caches
+---------------
+
+Caches are cleared automatically when certain actions occur:
+
+  - Deleting a Category Group (clears all caches)
+  - Ordering categories (clears database cache)
+  - Updating, creating or deleting a Category Custom Field (clears all caches)
+  - Deleting a Field Group (clears all caches)
+  - Updating, creating or deleting a Custom Field (clears all caches)
+  - Deleting a Status Group (clears all caches)
+  - Updating Multi Entries (clears if needed either all or sql cache)
+  - Updating Multi Categories (clears if needed either all or sql cache)
+  - Deleting Watermark Preferences (clears db cache)
+  - Updating or Deleting Upload Preferences (clears db cache)
+  - Updating or creating a Snippet (clears all caches)
+  - Updating or creating a Global Variable (clears all caches)
+  - Updating a Template (clears all caches)
+  - Creating a Template from File (clears db cache)
+  - Updating an Email Notification (clears all caches)
+  - Updating a Theme Template (clears all caches)
+  - Running a Template Sync (clears all caches)
+  - Submission, updating or deleting of an Entry through API (clears if needed either all or sql cache).  See :ref:`global-channel-clear-cache-label`.
+  - Comment Module:
+
+    - Creating, updating or deleting a Comment (clears all caches)
+    - Change Comment Status (clears all caches)
+    - Comment Preview (clears all caches)
+
+  - Metaweblog Module:
+
+    - Publish or Edit Metaweblog Post (clears if needed either all or sql cache)
+    - Set Metaweblog Post Category (clears if needed either all or sql cache)
+
+  - Moblog Module:
+
+    - Checking Moblog (clears if needed either all or sql cache)
+
+  - Simple Commerce Module:
+
+    - Create or Update Simple Commerce item (clears page cache)
+
+  - Wiki Module:
+
+    - Deleting files from Wiki (clears db cache)
+    - Update Wiki Template (clears all caches)
+    - Editing Wiki Article (clears db cache)
+    - Opening or closing a Wiki Revision (clears db cache)
+
+You may also :doc:`manually clear caches </cp/tools/data/clear_cached_data_files>` through the control panel.

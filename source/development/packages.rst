@@ -1,6 +1,8 @@
 Third Party Package Structure
 =============================
 
+.. todo:: Audit for 3.0
+
 Third Party Add-ons in ExpressionEngine are organized into "packages".
 An add-on package can include Plugins, Modules, Extensions, and control
 panel Accessories. Additionally, an add-on package can use its own
@@ -21,6 +23,7 @@ plugin is needed for except field formatting, and we strongly encourage
 formatting plugins to be distributed as separate add-ons::
 
   /system/expressionengine/third_party/foo_bar
+    addon.setup.php
     acc.foo_bar.php
     config/
     ext.foo_bar.php
@@ -41,6 +44,13 @@ Details of the "Foo Bar" Package Structure
 Below are the details of the significance of each file and directory,
 along with the required naming convention for the PHP class in each
 add-on file.
+
+addon.setup.php
+~~~~~~~~~~~~~~~
+
+Metadata Provider File.
+
+See :doc:`addon_setup_php_file`
 
 acc.foo_bar.php
 ~~~~~~~~~~~~~~~
@@ -85,7 +95,7 @@ javascript/
 ~~~~~~~~~~~
 
 (optional) Folder containing javascript files - refer to the :doc:`cp
-library documentation </development/usage/cp>` on how to include these
+library documentation </development/legacy/libraries/cp>` on how to include these
 files.
 
 language/

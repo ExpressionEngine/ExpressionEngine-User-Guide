@@ -19,14 +19,7 @@ Template, and this article exposes the order of those rendering stages.
 Understanding how the system renders a template can help immensely when
 building pages and troubleshooting problems.
 
-The use of :doc:`Conditional Variables <globals/conditionals>` provides
-a great example here. Simple conditionals are parsed *before* module
-tags, but advanced conditionals are parsed *after* module tags. If a
-simple conditional evaluates false, ExpressionEngine simply ignores a
-module tag within that conditional, neither rendering it nor displaying
-it. But if an advanced conditional evaluates false, ExpressionEngine can
-only hide the output of the already fully rendered module tag. That
-amounts to a big difference in performance.
+.. note:: As of 2.9.0 conditional tags evaluate *when ready*.
 
 Rendering Stages
 ----------------
@@ -66,7 +59,7 @@ bottom through each rendering stage.
 
 #. Parse :ref:`PHP on Input <php_parsing_stage>`
 
-#. Parse :ref:`simple conditionals <global_simple_conditionals>`: segment, embed, layout, global variables
+#. Parse :doc:`conditional tags <conditionals>`
 
 #. Assign and parse :doc:`preload_replace variables </templates/globals/preload_replacement>`
 
@@ -79,7 +72,7 @@ bottom through each rendering stage.
 
 #. Write **template to cache file**
 
-#. Parse :ref:`advanced conditionals <global_advanced_conditionals>`
+#. Parse :doc:`conditional tags <conditionals>`
 
 #. Process :doc:`template layouts </templates/layouts>`
 
@@ -112,6 +105,7 @@ bottom through each rendering stage.
    * {charset}
    * {lang}
    * {doc_url}
+   * {password_max_length}
    * {theme_folder_url}
    * {member_profile_link}
    * {captcha}
@@ -139,4 +133,4 @@ bottom through each rendering stage.
 
 #. Parse :ref:`alternative syntax <global_alt_syntax>` forms of the member variables above
 
-#. Parse :doc:`path variables </templates/globals/path>`
+#. Parse :doc:`path variables </templates/globals/path>` (including :doc:`{route=...} paths </urls/template_routes>`)

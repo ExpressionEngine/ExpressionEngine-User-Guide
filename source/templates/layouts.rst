@@ -40,7 +40,7 @@ footer embed on each template::
   {embed="site/.header"}
 
   {exp:channel:entries channel="news"}
-    <h2>{title}<h2>
+    <h2>{title}</h2>
     {summary}
   {/exp:channel:entries}
 
@@ -79,7 +79,7 @@ of two embeds::
   {layout="site/.html-layout"}
 
   {exp:channel:entries channel="news"}
-    <h2>{title}<h2>
+    <h2>{title}</h2>
     {summary}
   {/exp:channel:entries}
 
@@ -164,7 +164,7 @@ window's title::
     </body>
   </html>
 
-By using a :doc:`conditional <./globals/conditionals>` we have made the
+By using a :doc:`conditional <./conditionals>` we have made the
 title parameter optional. If the parameter is not given, or is blank,
 the title will simply be "Site Name". Any template using this layout can
 choose to add to the output of the title tag using the parameter. You
@@ -175,7 +175,7 @@ template is currently showing::
   {layout="site/.html-layout" title="News"}
 
   {exp:channel:entries channel="news"}
-    <h2>{title}<h2>
+    <h2>{title}</h2>
 
     {if total_results == "1"}
       {body}
@@ -287,7 +287,7 @@ use an embed for the search and come back to it later::
   {layout="news/.layout" title="Recent"}
 
   {exp:channel:entries channel="news" limit="30" dynamic="no"}
-    <h2><a href="{url_title_path='news/article'}">{title}</a><h2>
+    <h2><a href="{url_title_path='news/article'}">{title}</a></h2>
     {summary}
   {/exp:channel:entries}
 

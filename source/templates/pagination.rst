@@ -69,6 +69,8 @@ And for the "next/previous" method::
       {/paginate}
   {/exp:comment:entries}
 
+.. note:: You can have multiple ``{paginate}`` blocks with different
+  content, but you'll need to use ``paginate=inline``.
 
 **********
 Parameters

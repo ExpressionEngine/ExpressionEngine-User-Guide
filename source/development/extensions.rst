@@ -1,6 +1,8 @@
 Extensions Development
 ======================
 
+.. todo:: Audit for 3.0
+
 -  `Overview`_
 -  `Naming Convention`_
 -  `The Base Extension Class`_
@@ -91,7 +93,7 @@ settings (if any).
       var $version        = '1.0';
       var $description    = 'Truncates long links';
       var $settings_exist = 'y';
-      var $docs_url       = ''; // 'http://ellislab.com/expressionengine/user-guide/';
+      var $docs_url       = ''; // 'https://ellislab.com/expressionengine/user-guide/';
 
       var $settings       = array();
 
@@ -110,7 +112,7 @@ settings (if any).
 If your extension has a language file, then you the $name and
 $description class variables can be set in the constructor by calling
 the language file and variables using the :doc:`Language ($LANG)
-class </development/usage/language>`. If your plugin is likely to be used
+class </development/legacy/libraries/language>`. If your plugin is likely to be used
 internationally and by non-English speakers this is a recommended course
 of action.
 
@@ -131,7 +133,7 @@ the method in your extension's class to call for this hook.
    *
    * This function enters the extension into the exp_extensions table
    *
-   * @see http://ellislab.com/codeigniter/user-guide/database/index.html for
+   * @see https://ellislab.com/codeigniter/user-guide/database/index.html for
    * more information on the db class.
    *
    * @return void
@@ -522,7 +524,7 @@ method might look like:
    * This function is the meat & potatoes of the extension, where all
    * the work is done.
    *
-   * @see http://ellislab.com/expressionengine/user-guide/development/extension_hooks/global/typography/index.html#typography-parse-type-end
+   * @see https://ellislab.com/expressionengine/user-guide/development/extension_hooks/global/typography/index.html#typography-parse-type-end
    *
    * @param   string  string to look
    * @param   object  typography object
@@ -595,3 +597,10 @@ processed after that point. The ``$this->extensions->end_script`` exists
 solely for that purpose. If you set this value to TRUE, then once your
 extension is done being processed the execution of the hook is finished,
 as is the script that the extension hook is contained within.
+
+.. toctree::
+  :hidden:
+  :glob:
+  :titlesonly:
+
+  extension_hooks/index

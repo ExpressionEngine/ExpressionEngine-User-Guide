@@ -58,14 +58,14 @@ ui=
 
 ::
 
-	{exp:jquery:script_tag ui='accordion'}
+	{exp:jquery:script_tag ui='datepicker'}
 
 The name of the requested UI Widget/Interaction. Note that the 'ui'
 prefix and 'js' file extension is not used, just the name of the UI
 item.
 
 Output example:<script type="text/javascript" charset="utf-8"
-src="http://example.com/index.php?ACT=jquery&amp;ui=accordion"></script>
+src="http://example.com/index.php?ACT=jquery&amp;ui=datepicker"></script>
 
 Before using jQuery UI effects you must first call the jQuery UI Core::
 
@@ -134,13 +134,13 @@ ui=
 
 ::
 
-	{exp:jquery:script_src ui='accordion'}
+	{exp:jquery:script_src ui='datepicker'}
 
 The name of the requested UI Widget/Interaction. Note that the 'ui'
 prefix and 'js' file extension is not used, just the name of the UI
 item.
 
-Output example: http://example.com/index.php?ACT=jquery&amp;ui=accordion
+Output example: http://example.com/index.php?ACT=jquery&amp;ui=datepicker
 
 effect=
 -------
@@ -177,8 +177,8 @@ Outputs the actual script to the browser, with proper headers.
 	content from the template this tag is used on will be output, and
 	execution will be halted as soon as this tag is processed. It is
 	typically not necessary to use these tags in a template, but the
-	option exists if for some reason you need a specific URL structure 
-	to your jQuery resources. 
+	option exists if for some reason you need a specific URL structure
+	to your jQuery resources.
 
 ::
 
@@ -208,7 +208,7 @@ ui=
 
 ::
 
-	{exp:jquery:output_javascript ui='accordion'}
+	{exp:jquery:output_javascript ui='datepicker'}
 
 The name of the requested UI Widget/Interaction. Note that the 'ui'
 prefix and 'js' file extension is not used, just the name of the UI

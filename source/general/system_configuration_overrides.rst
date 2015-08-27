@@ -219,6 +219,26 @@ Privacy --> Security and Sessions`: :ref:`Allow multiple log-ins from a
 single account <allow-multi-logins-label>`
 
 
+.. _overrides-allow-pending-login:
+
+allow_pending_login
+-------------------
+
+Set whether members of the Pending member group can log in or not.
+By default, Pending members cannot log in.
+
+======== ===========
+Value    Behavior
+======== ===========
+``y``    Allow Pending member log in
+``n``    Do not allow Pending members to log in **(default)**
+======== ===========
+
+Example Usage::
+
+$config['allow_pending_login'] = 'y';
+
+
 allow_signatures
 ----------------
 
@@ -313,7 +333,7 @@ $config['auto_assign_cat_parents'] = 'y';
 
 **Also found in CP:** :menuselection:`Admin --> Channel
 Administration --> Global Channel Preferences`: :ref:`Auto-Assign
-Category Parents <auto-assign-categoryP-label>`
+Category Parents <auto-assign-category-parents-label>`
 
 
 autosave_interval_seconds
@@ -849,7 +869,8 @@ captcha_require_members
 -----------------------
 
 Specify whether to require logged-in members to pass CAPTCHA validation
-to post comments, assuming the CAPTCHA is already enabled for comments.
+to submit front-end forms, such as Channel Form, comment forms and email
+forms.
 
 ====== ========
 Value  Behavior
@@ -864,8 +885,8 @@ $config['captcha_require_members'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> CAPTCHA Preferences`: :ref:`Require CAPTCHA with logged-in
+**Also found in CP:** :menuselection:`Settings --> CAPTCHA`:
+:ref:`Require CAPTCHA with logged-in
 members <captcha-require-logged-in-members>`
 
 
@@ -1485,7 +1506,7 @@ Value   Description
 
 Example Usage::
 
-$config['doc_url'] = 'http://ellislab.com/expressionengine/user-guide/';
+$config['doc_url'] = 'https://ellislab.com/expressionengine/user-guide/';
 
 .. rst-class:: cp-path
 
@@ -1659,8 +1680,9 @@ Value      Behavior
 
 Example Usage::
 
-$config['email_crlf'] = '\r\n';
+$config['email_crlf'] = "\r\n";
 
+.. note:: Double quotes must be used around this value, as per example.
 
 email_debug
 -----------
@@ -1687,32 +1709,6 @@ Configuration`: :ref:`Enable Email Debugging
 <email-enable-debugging-label>`
 
 
-email_module_captchas
----------------------
-
-When enabled, users will need to fill out a :doc:`CAPTCHA
-</security/captchas>` when using the Tell-a-Friend or Contact email
-forms. You will need to ensure that your tags for those forms contain
-the appropriate CAPTCHA code.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Enable CAPTCHAS on Tell-a-Friend and Contact email forms
-``n``      Disable CAPTCHAS on Tell-a-Friend and Contact email forms **(default)**
-========== ========
-
-Example Usage::
-
-$config['email_module_captchas'] = 'y';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`Enable CAPTCHAs for Tell-a-Friend and Contact
-emails <email-enable-captchas-label>`
-
-
 email_newline
 -------------
 
@@ -1727,7 +1723,28 @@ Value      Behavior
 
 Example Usage::
 
-$config['email_newline'] = '\r\n';
+$config['email_newline'] = "\r\n";
+
+.. note:: Double quotes must be used around this value, as per example.
+
+
+email_smtp_crypto
+-----------------
+
+Cryptographic protocol (Secure Sockets Layer or Transport Layer Security
+allowed) for SMTP, when a secure connection is required.
+
+========== ========
+Value      Behavior
+========== ========
+``ssl``    Set the SMTP protocol to SSL
+---------- --------
+``tls``    Set the SMTP protocol to TLS
+========== ========
+
+Example Usage::
+
+$config['email_smtp_crypto'] = 'tls';
 
 
 emoticon_url
@@ -1801,24 +1818,6 @@ $config['enable_censoring'] = 'y';
 **Also found in CP:** :menuselection:`Members --> Security and
 Privacy --> Word Censoring`: :ref:`Enable Word Censoring
 <censor-words-enable-label>`
-
-
-enable_db_caching
------------------
-
-If enabled, the system will cache the output of database queries to text
-files.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Enable database caching
-``n``      Disable database caching **(default)**
-========== ========
-
-Example Usage::
-
-$config['enable_db_caching'] = 'y';
 
 
 enable_emoticons
@@ -2825,6 +2824,23 @@ $config['max_tmpl_revisions'] = '10';
 Global Template Preferences`: :ref:`Maximum Number of Revisions to Keep
 <global-template-max-revisions-label>`
 
+.. _max_url_segments:
+
+max_url_segments
+----------------
+
+Set the maximum number of URL segments allows in requests made to your site.
+
+=========== ===========
+Value       Description
+=========== ===========
+``integer`` Maximum number of URL segments to allow **(default is 12)**
+=========== ===========
+
+Example Usage::
+
+$config['max_url_segments'] = '12';
+
 
 .. _mbr_notification_emails:
 
@@ -2921,6 +2937,56 @@ $config['memberlist_order_by'] = 'total_posts';
 :ref:`Member List - Sort By <member-list-rows-label>`
 
 
+.. _overrides-mime-whitelist-additions:
+
+mime_whitelist_additions
+------------------------
+
+With an array, add Mime Types to the whitelist.
+
+Example Usage::
+
+  $config['mime_whitelist_additions'] = array(
+    'image/vnd.adobe.photoshop'
+  );
+
+
+.. _overrides-mime-whitelist-member-exception:
+
+mime_whitelist_member_exception
+-------------------------------
+
+Specify member IDs to exclude from Mime Type whitelist restrictions.
+
+========== ===========
+Value      Description
+========== ===========
+``text``   Comma-delimited list of member IDs
+========== ===========
+
+Example Usage::
+
+$config['mime_whitelist_member_exception'] = '3, 14, 83';
+
+
+.. _overrides-mime-whitelist-member-group-exception:
+
+mime_whitelist_member_group_exception
+-------------------------------------
+
+Specify member group IDs to exclude from Mime Type whitelist restrictions.
+
+========== ===========
+Value      Description
+========== ===========
+``text``   Comma-delimited list of member group IDs
+========== ===========
+
+Example Usage::
+
+$config['mime_whitelist_member_group_exception'] = '2, 5';
+
+
 moblog_allow_nontextareas
 -------------------------
 
@@ -3012,7 +3078,7 @@ name_of_dictionary_file
 
 Filename for the dictionary file. The official dictionary file is
 `available for download
-<http://ellislab.com/asset/file/dictionary.zip>`__. Must be used in
+<https://ellislab.com/asset/file/dictionary.zip>`__. Must be used in
 combination with :ref:`allow_dictionary_pw <allow_dictionary_pw>`.
 
 ============ ===========
@@ -3139,6 +3205,28 @@ Administration --> Output and Debugging`: :ref:`New Relic Application
 Name <sysadmin-newrelic_app_name>`
 
 
+.. _overrides-newrelic-include-version-number:
+
+newrelic_include_version_number
+-------------------------------
+
+Whether or not to append the version number to the Application name
+in the New Relic dashboard.
+
+.. versionadded:: 2.9.1
+
+======= ========
+Value   Behavior
+======= ========
+``y``   Append version number
+``n``   Do not append version number **(default)**
+======= ========
+
+Example Usage::
+
+$config['newrelic_include_version_number'] = 'y';
+
+
 .. _password_lockout:
 
 password_lockout
@@ -3191,27 +3279,6 @@ $config['password_lockout_interval'] = '2.5';
 **Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Security and Sessions`: :ref:`Time Interval for Lockout
 <security-passwd-lockout-int-label>`
-
-
-.. _path_third_themes:
-
-path_third_themes
------------------
-
-Set the path to the third-party add-ons' :file:`themes` directory.
-Should be used in conjunction with :ref:`url_third_themes
-<url_third_themes>`.
-
-========== ===========
-Value      Description
-========== ===========
-``path``   Server path to the third-party add-ons' :file:`themes` directory
-========== ===========
-
-Example Usage::
-
-$config['path_third_themes'] = '/valid/path/to/directory/';
-
 
 photo_max_height
 ----------------
@@ -3326,7 +3393,7 @@ popup_link
 ----------
 
 Specify whether links created by the :doc:`Typography class
-</development/usage/typography>` open in a new window.
+</development/legacy/libraries/typography>` open in a new window.
 
 ======= ========
 Value   Behavior
@@ -3361,24 +3428,6 @@ $config['profile_trigger'] = 'accounts';
 
 **Also found in CP:** :menuselection:`Members --> Preferences`:
 :ref:`Profile Triggering Word <profile-trigger-word-label>`
-
-
-protect_javascript
-------------------
-
-Prevents the advanced conditionals parser from processing anything
-inside ``<script>`` tags.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Enable **(default)**
-``n``      Disable
-========== ========
-
-Example Usage::
-
-$config['protect_javascript'] = 'n';
 
 
 proxy_ips
@@ -3673,6 +3722,24 @@ $config['req_mbr_activation'] = 'none';
 :ref:`Require Member Account Activation
 <member-account-activation-label>`
 
+.. _require_captcha:
+
+require_captcha
+---------------
+
+When enabled, site visitors will be required to pass a CAPTCHA to submit
+any front-end form, including Channel Form, comment forms, and member
+registrations.
+
+========== ========
+Value      Behavior
+========== ========
+``y``      Enable CAPTCHAS front-end forms
+``n``      Disable CAPTCHAS on front-end forms **(default)**
+========== ========
+
+**Also found in CP:** :menuselection:`Settings --> CAPTCHA`:
+:ref:`Require CAPTCHA <captcha-require>`
 
 .. _require_ip_for_login:
 
@@ -4148,7 +4215,7 @@ show_profiler
 
 Enable Output Profiler. When enabled, Super Admins will see benchmark
 results, SQL queries, and submitted form data displayed at the bottom of
-the browser window.
+the browser window. Template debugging is included on the front end.
 
 ========== ========
 Value      Behavior
@@ -4661,32 +4728,6 @@ Template Manager --> Edit Template Group`: Make the index template in
 this group your site's home page?
 
 
-template_debugging
-------------------
-
-If enabled, all processing that occurs while rendering a page will be
-logged and displayed to Super Admins at the bottom of the browser
-window. This includes Global Variables, conditionals, tags, PHP on
-Input/Ouput, Embeds, and extension hooks.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Enable template debugging
-``n``      Disable template debugging **(default)**
-========== ========
-
-Example Usage::
-
-$config['template_debugging'] = 'y';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: :ref:`Display Template
-Debugging <output-debug-display-template-debug-label>`
-
-
 .. _overrides-template-group:
 
 template_group
@@ -4872,6 +4913,19 @@ $config['un_min_len'] = '5';
 Privacy --> Security and Sessions`: :ref:`Minimum Username Length
 <security-min-username-label>`
 
+.. _upload_file_name_blacklist:
+
+upload_file_name_blacklist
+--------------------------
+
+With an array, add a case insensitive list of file names that cannot be uploaded.
+
+Example Usage::
+
+  $config['upload_file_name_blacklist'] = array(
+    'logo.png',
+  );
+
 
 upload_preferences
 ------------------
@@ -4921,27 +4975,6 @@ Value               Behavior
 Example Usage::
 
 $config['uri_protocol'] = 'PATH_INFO';
-
-
-.. _url_third_themes:
-
-url_third_themes
------------------
-
-Set the URL to the third-party add-ons' :file:`themes` directory. Should
-be used in conjunction with :ref:`path_third_themes
-<path_third_themes>`.
-
-========== ===========
-Value      Description
-========== ===========
-``URL``    URL to the third-party add-ons' :file:`themes` directory
-========== ===========
-
-Example Usage::
-
-$config['url_third_themes'] = 'http://example.com/third_party/';
-
 
 .. _use_category_name:
 
