@@ -21,6 +21,9 @@ If you have questions or feedback, don't hesitate to drop a thread into the :ell
 Known Issues
 ============
 
+- There is currently no built in method for importing data in the Spam Module.
+  You will need to manually import the sql we provide after you install the
+  Spam Module to get everything up and running.
 - Member groups can no longer have site-specific settings.
 - Models: Cannot unassign a category from an entry on publish form.
 - The publish form is showing text on the buttons instead of the proper Glyphs.
