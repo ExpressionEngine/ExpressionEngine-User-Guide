@@ -24,11 +24,9 @@ Known Issues
 - There is currently no built in method for importing data in the Spam Module.
   You will need to manually import the sql we provide after you install the
   Spam Module to get everything up and running.
-- Member groups can no longer have site-specific settings.
 - Models: Cannot unassign a category from an entry on publish form.
-- The publish form is showing text on the buttons instead of the proper Glyphs.
 - Quick links are being altered after entered, and cause a disallowed key characters error.
-- Save button does not appear until required field loses
+- Save button does not appear until required field loses focus on some forms
 - Models: Channel -> CategoryGroups relationship not working with multiple category groups
 - Filepicker modal doesn't select already chosen file when launched from the Publish page.
 - PHP error when creating template group with insufficient permissions
