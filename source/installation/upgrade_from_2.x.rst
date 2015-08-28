@@ -28,7 +28,7 @@ Upgrading from ExpressionEngine 2
 
 Now **copy** the following files from the backup of your current site to the newly downloaded ExpressionEngine 3.x directory:
 
-1. Copy :file:`system/expressionengine/config/config.php` to the :file:`system/user/config/config.php`
+1. Copy :file:`system/expressionengine/config/config.php` to :file:`system/user/config/config.php`
 
 2. Copy :file:`system/expressionengine/config/database.php` to :file:`system/user/config/database.php`
 
@@ -42,7 +42,7 @@ Now **copy** the following files from the backup of your current site to the new
 
 6. If you save templates as files, copy all files and directories from :file:`system/expressionengine/templates/` to :file:`system/user/templates/`.
 
-7. If you have any third-party add-ons, copy all files and directories from :file:`system/expressionengine/third_party/` to :file:`system/user/addons/` and all files and directories from :file:`themes/third_party` to :file:`themes/user/`.
+7. If you have any third-party add-ons, copy all files and directories from :file:`system/expressionengine/third_party/` to :file:`system/user/addons/` and all files and directories from :file:`themes/third_party/` to :file:`themes/user/addons/`.
 
 .. note:: If any of your add-ons have updates, we recommend downloading them and putting them into the :file:`system/user/addons/` directory now.
 
@@ -55,6 +55,7 @@ On the server, rename the following files and directories:
 - Rename :file:`system/` to :file:`system_old/`
 - Rename :file:`themes/` to :file:`themes_old/`
 - Rename :file:`index.php` to :file:`index.php.old`
+- Rename :file:`admin.php` to :file:`admin.php.old`
 
 Then upload the following files and directories:
 
