@@ -24,12 +24,22 @@ Known Issues
 - There is currently no built in method for importing data in the Spam Module.
   You will need to manually import the sql we provide after you install the
   Spam Module to get everything up and running.
+- Relationships don't save on new entries
+- Grid file field content is showing up in a different file field on publish page
+- Modals can open such that all you see is a black screen.
+- File browser on publish page still shows system default directories.
+- The create bookmarklets form is not displaying the "Create New ..." button when there are no channels or channel fields available.
+- In FF the success alerts disappear.
+- On publish page, category tab is blank if no cat group assigned.
+- The login view when no site name has an incorrect header.
+- Installer not redirecting to login.
+- Installer browser title is incorrect.
 - Models: Cannot unassign a category from an entry on publish form.
 - Quick links are being altered after entered, and cause a disallowed key characters error.
 - Save button does not appear until required field loses focus on some forms
 - Models: Channel -> CategoryGroups relationship not working with multiple category groups
 - Filepicker modal doesn't select already chosen file when launched from the Publish page.
-- PHP error when creating template group with insufficient permissions
+- There is a PHP error when creating template group with insufficient permissions.
 - Converting from Textarea to RTE generates errors
 - Package Path Loading/Unloading refactor
 - Route paths don't work across MSM sites...
