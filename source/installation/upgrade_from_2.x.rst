@@ -59,10 +59,10 @@ On the server, rename the following files and directories:
 
 Then upload the following files and directories:
 
--  :file:`admin.php`
--  :file:`index.php`
 -  :file:`system/`
 -  :file:`themes/`
+-  :file:`index.php`
+-  :file:`admin.php`
 
 .. note:: If you've moved your system directory, make sure to change both :file:`index.php` and :file:`admin.php` to point to the correct directory.
 
