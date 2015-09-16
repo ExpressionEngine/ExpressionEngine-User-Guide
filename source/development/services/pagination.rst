@@ -17,7 +17,7 @@ mathematical calculations. All you need is the number of items you are going to
 paginate and a URL object::
 
   $base_url = ee('CP/URL', 'publish/edit');
-  $pagination = ee('CP/Pagination')->make($total_count)
+  $pagination = ee('CP/Pagination', $total_count)
   	->render($base_url);
 
 CP/Pagination Service Methods
