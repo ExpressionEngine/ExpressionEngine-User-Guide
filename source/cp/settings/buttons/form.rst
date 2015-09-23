@@ -1,5 +1,5 @@
-HTML Buttons
-============
+Create/Edit HTML Buttons
+========================
 
 .. rst-class:: cp-path
 
@@ -24,14 +24,23 @@ Permission Restrictions
 
 * Access settings: General Settings
 
-.. todo:: Document this.
-
-Settings
---------
+Fields
+------
 
 .. contents::
   :local:
   :depth: 1
 
-.. Each Action/Section
+.. Each Field
 
+Name
+~~~~
+
+Opening tag
+~~~~~~~~~~~
+
+Closing tag
+~~~~~~~~~~~
+
+Tag shortcut
+~~~~~~~~~~~~

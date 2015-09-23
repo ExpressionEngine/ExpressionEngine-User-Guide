@@ -24,7 +24,7 @@ Contents
 - :doc:`content-design`
 
   - :doc:`comments`
-  - :doc:`buttons`
+  - :doc:`buttons/index`
   - :doc:`template`
   - :doc:`/cp/addons/settings/pages/settings`
   - :doc:`word-censor`
@@ -45,3 +45,4 @@ Contents
 	:titlesonly:
 
 	*
+  buttons/index

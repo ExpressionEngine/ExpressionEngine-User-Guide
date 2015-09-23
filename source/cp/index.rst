@@ -53,7 +53,7 @@ Developer Tools
 - :doc:`settings/content-design`
 
   - :doc:`settings/comments`
-  - :doc:`settings/buttons`
+  - :doc:`settings/buttons/index`
   - :doc:`settings/template`
   - :doc:`/cp/addons/settings/pages/settings`
   - :doc:`settings/word-censor`
