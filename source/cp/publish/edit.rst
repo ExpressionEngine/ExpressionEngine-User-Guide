@@ -12,7 +12,7 @@ Entry Manager
 In this section you can edit and update previously posted Entries. The list can
 be filtered by Channel, Category, Status, or Date range, and it can be sorted
 by ID, Title, Comments, Date, and Status. In addition, you can select multiple
-entries using the checkboxes on the right, then either delete them.
+entries using the checkboxes on the right, then delete them.
 
 .. Permissions
 
@@ -50,6 +50,11 @@ Title links
 
 This will take you to the :doc:`edit form <form>` for that entry. This is
 identical to the Edit_ icon.
+
+Comment links
+~~~~~~~~~~~~~
+
+If an entry has comments the number of comments will be a link that will take you to the :doc:`comments/index`.
 
 Manage
 ~~~~~~
