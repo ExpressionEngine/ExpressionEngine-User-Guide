@@ -32,12 +32,11 @@ Settings
 Require CAPTCHA?
 ~~~~~~~~~~~~~~~~
 
-If you enable this preference, then site visitors will be required to
-pass a CAPTCHA to submit any front-end form, including Channel Form,
-comment forms, and member registrations. If members are logged in, they
-will not have to enter a CAPTCHA unless the
-:ref:`Require CAPTCHA with logged-in members? <require-captcha-while-logged-in>`
-preference is enabled below.
+If you enable this preference, then site visitors will be required to pass a
+CAPTCHA to submit any front-end form, including Channel Form, comment forms,
+and member registrations. If members are logged in, they will not have to enter
+a CAPTCHA unless the `Require CAPTCHA while logged in?`_ preference is enabled
+below.
 
 Use TrueType font?
 ~~~~~~~~~~~~~~~~~~
