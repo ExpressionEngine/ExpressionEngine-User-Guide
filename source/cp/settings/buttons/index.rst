@@ -29,7 +29,6 @@ Actions
 
 .. contents::
   :local:
-  :depth: 1
 
 .. Each Action
 
