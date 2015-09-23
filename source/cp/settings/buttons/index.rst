@@ -63,8 +63,8 @@ submit button will be made available in the lower righthand corner of the table.
 Remove
 ^^^^^^
 
-Removing buttons will cause a confirmation modal to appear that will summarize
-the action.
+The selected buttons will be removed. Removing buttons will cause a
+confirmation modal to appear that will summarize the action.
 
 Add Preset Button:
 ~~~~~~~~~~~~~~~~~~

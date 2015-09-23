@@ -76,5 +76,11 @@ submit button will be made available in the lower righthand corner of the table.
 Remove
 ^^^^^^
 
-Removing entries will cause a confirmation modal to appear that will summarize
-the action.
+The selected entries will be removed. Removing entries will cause a
+confirmation modal to appear that will summarize the action.
+
+.. toctree::
+	:hidden:
+	:titlesonly:
+
+	comments/index
