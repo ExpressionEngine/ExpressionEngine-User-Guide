@@ -9,17 +9,72 @@ Entry Manager
 
 .. Overview
 
+In this section you can edit and update previously posted Entries. The list can
+be filtered by Channel, Category, Status, or Date range, and it can be sorted
+by ID, Title, Comments, Date, and Status. In addition, you can select multiple
+entries using the checkboxes on the right, then either delete them.
+
 .. Permissions
 
 Permission Restrictions
 -----------------------
 
-Settings
---------
+* Access settings: Design & Content
+* Allowed actions: Create Entries
+* Allowed actions: Edit Own Entries
+* Allowed actions: Delete Own Entries
+* Allowed actions: Edit Entries, By Others
+* Allowed actions: Delete Entries, By Others
+* Allowed channels
+
+Actions
+-------
 
 .. contents::
   :local:
-  :depth: 1
 
-.. Each Action/Section
+.. Each Action
 
+Search entries
+~~~~~~~~~~~~~~
+
+This will search entries by title, respecting the current filters.
+
+Create New
+~~~~~~~~~~
+
+This will take you to the :doc:`create form <form>` for the indicated channel.
+
+Title links
+~~~~~~~~~~~
+
+This will take you to the :doc:`edit form <form>` for that entry. This is
+identical to the Edit_ icon.
+
+Manage
+~~~~~~
+
+The icons in the manage column perform actions on the entry in its row.
+
+View
+^^^^
+
+When a Channel has a defined live look template this action will be made available and will take you to the frontend to view the entry.
+
+Edit
+^^^^
+
+This will take you to the :doc:`edit form <form>`.
+
+Bulk Actions
+~~~~~~~~~~~~
+
+The checkbox in the right-most column of the table selects a button for a bulk
+action. When at least one checkbox is checked the bulk action dropdown menu and
+submit button will be made available in the lower righthand corner of the table.
+
+Remove
+^^^^^^
+
+Removing entries will cause a confirmation modal to appear that will summarize
+the action.
