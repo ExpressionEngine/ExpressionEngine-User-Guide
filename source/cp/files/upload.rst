@@ -9,6 +9,8 @@ File Upload
 
 .. Overview
 
+This part of the control panel allows you to upload files to a specific upload
+directory.
 
 .. Permissions
 

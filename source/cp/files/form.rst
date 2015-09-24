@@ -9,6 +9,9 @@ Edit File Meta Data
 
 .. Overview
 
+This part of the control panel allows you to edit the title, description,
+credit, and location for a file.
+
 .. Permissions
 
 Permission Restrictions
