@@ -40,9 +40,9 @@ Contents
   - :doc:`captcha`
 
 .. toctree::
-	:glob:
-	:hidden:
-	:titlesonly:
+  :glob:
+  :hidden:
+  :titlesonly:
 
-	*
+  *
   buttons/index
