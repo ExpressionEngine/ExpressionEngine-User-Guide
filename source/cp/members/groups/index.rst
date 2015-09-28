@@ -74,7 +74,7 @@ submit button will be made available in the lower righthand corner of the table.
 Remove
 ^^^^^^
 
-The selected member groupss will be removed. Removing a member group will cause a
+The selected member groups will be removed. Removing a member group will cause a
 confirmation modal to appear that will summarize the action.
 
 .. toctree::
