@@ -86,7 +86,7 @@ This will take you to :doc:`/cp/settings/members`.
 Username Links
 ~~~~~~~~~~~~~~
 
-This will take you to the member's :doc:`profile <profile>`.
+This will take you to the member's :doc:`profile <profile/index>`.
 
 Username Email Links
 ~~~~~~~~~~~~~~~~~~~~
@@ -101,7 +101,7 @@ The icons in the manage column perform actions on the member in its row.
 Edit
 ^^^^
 
-This will take you to the member's :doc:`profile <profile>`.
+This will take you to the member's :doc:`profile <profile/index>`.
 
 Bulk Actions
 ~~~~~~~~~~~~
