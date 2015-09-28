@@ -3,26 +3,26 @@ HTML Buttons
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Settings --> HTML Buttons`
+**Control Panel Location:** :menuselection:`Members --> Profile --> HTML Buttons`
 
 .. Screenshot (optional)
 
 .. Overview
 
-This section of the Control Panel allows you to manage your default
-*HTML buttons*. HTML buttons appear in the PUBLISH page and allow you to
-add basic HTML to your entries.
-
-.. note:: Each member of your site is allowed to specify their own HTML
-	buttons via their My Account page. These default buttons are **only**
-	used with members that have not defined their own.
+Each member may also specify their own HTML Formatting buttons. These
+buttons are available for use when creating or editing channel entries.
+By default, these will include the buttons specified in the
+:doc:`/cp/settings/buttons` area. The user may edit or add to
+the buttons as desired. More information on button creation/editing is
+available on the :doc:`/cp/settings/buttons` page.
 
 .. Permissions
 
 Permission Restrictions
 -----------------------
 
-* Access settings: General Settings
+* Access settings: Members
+* Members Allowed actions: Can Edit Own HTML Formatting Buttons
 
 Actions
 -------
