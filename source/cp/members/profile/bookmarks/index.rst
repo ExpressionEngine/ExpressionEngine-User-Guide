@@ -60,7 +60,7 @@ submit button will be made available in the lower righthand corner of the table.
 Remove
 ^^^^^^
 
-The selected bookmarklet will be removed. Removing bookmarklet will cause a
+The selected bookmarklet will be removed. Removing a bookmarklet will cause a
 confirmation modal to appear that will summarize the action.
 
 .. toctree::
