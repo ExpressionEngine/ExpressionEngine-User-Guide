@@ -18,6 +18,7 @@ Permission Restrictions
 -----------------------
 
 * Access settings: Members
+* Members Allowed actions: Edit Members
 
 Actions
 -------

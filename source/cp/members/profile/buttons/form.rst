@@ -22,7 +22,9 @@ add basic HTML to your entries.
 Permission Restrictions
 -----------------------
 
-* Access settings: General Settings
+* Access settings: Members
+* Members Allowed actions: Edit Members
+* Members Allowed actions: Can Edit Own HTML Formatting Buttons
 
 Fields
 ------

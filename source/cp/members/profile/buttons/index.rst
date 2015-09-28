@@ -22,6 +22,7 @@ Permission Restrictions
 -----------------------
 
 * Access settings: Members
+* Members Allowed actions: Edit Members
 * Members Allowed actions: Can Edit Own HTML Formatting Buttons
 
 Actions
