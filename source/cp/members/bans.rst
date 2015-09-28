@@ -29,6 +29,11 @@ Actions
 
 .. Each Action
 
+Settings
+~~~~~~~~
+
+This will take you to :doc:`/cp/settings/members`.
+
 Search Members
 ~~~~~~~~~~~~~~
 

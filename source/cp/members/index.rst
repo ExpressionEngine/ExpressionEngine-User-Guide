@@ -34,6 +34,11 @@ Actions
 
 .. Each Action
 
+Settings
+~~~~~~~~
+
+This will take you to :doc:`/cp/settings/members`.
+
 Search Members
 ~~~~~~~~~~~~~~
 
@@ -77,11 +82,6 @@ Member Fields
 ^^^^^^^^^^^^^
 
 This will allow you to :doc:`manage your custom mememb fields <fields/index>`.
-
-Settings
-~~~~~~~~
-
-This will take you to :doc:`/cp/settings/members`.
 
 Username Links
 ~~~~~~~~~~~~~~
