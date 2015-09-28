@@ -113,7 +113,7 @@ submit button will be made available in the lower righthand corner of the table.
 Remove
 ^^^^^^
 
-The selected members will be removed. Removing a file will cause a
+The selected members will be removed. Removing a member will cause a
 confirmation modal to appear that will summarize the action.
 
 .. toctree::
