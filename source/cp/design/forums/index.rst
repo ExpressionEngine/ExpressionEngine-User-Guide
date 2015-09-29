@@ -30,20 +30,7 @@ Actions
 
 .. Each Action
 
-Settings
-~~~~~~~~
-
-This will take you to :doc:`/cp/settings/template`.
-
-Export All
-~~~~~~~~~~
-
-All files will be zipped and downloaded.
-
-Search Templates
-~~~~~~~~~~~~~~~~
-
-.. todo:: Document what _exactly_ is searched.
+.. include:: /cp/design/header.rst
 
 Theme Selector
 ~~~~~~~~~~~~~~
