@@ -133,4 +133,7 @@ confirmation modal to appear that will summarize the action.
   :titlesonly:
 
   *
-  */index
+  cat/index
+  fields/groups/index
+  layouts/index
+  status/index

@@ -79,10 +79,3 @@ Remove
 
 The selected statuses will be removed. Removing a status will cause a
 confirmation modal to appear that will summarize the action.
-
-.. toctree::
-  :glob:
-  :hidden:
-  :titlesonly:
-
-  *
