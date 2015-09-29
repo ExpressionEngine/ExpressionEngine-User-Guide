@@ -1,9 +1,9 @@
-Site Manager
-============
+Utilities
+=========
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Site Manager`
+**Control Panel Location:** :menuselection:`Developer Tools --> Utilities`
 
 .. Screenshot (optional)
 
