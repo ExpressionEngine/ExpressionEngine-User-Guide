@@ -12,6 +12,7 @@ Template Manager
 The Template Manager allows you to create, edit and delete Template Groups
 and Templates. Clicking a particular Template Group name will reveal that Group
 so that you can work with it.
+
 .. Permissions
 
 Permission Restrictions
@@ -119,17 +120,17 @@ This will allow you to :doc:`create a new template variable <variables/form>`.
 Template Routes
 ^^^^^^^^^^^^^^^
 
-This will take you to the :doc:`routes/index`.
+This will take you to the :doc:`routes`.
 
 Create New Template
 ~~~~~~~~~~~~~~~~~~~
 
-This will take you to the :doc:`create template form <template/form>`.
+This will take you to the :doc:`create form <template/form>`.
 
 Template Links
 ~~~~~~~~~~~~~~
 
-This will take you to the template's :doc:`edit template form <template/form>`.
+This will take you to the template's :doc:`edit form <template/form>`.
 
 Manage
 ~~~~~~
@@ -145,7 +146,7 @@ rendered on your site.
 Edit
 ^^^^
 
-This will take you to the template's :doc:`edit template form <template/form>`.
+This will take you to the template's :doc:`edit form <template/form>`.
 
 Settings
 ^^^^^^^^
