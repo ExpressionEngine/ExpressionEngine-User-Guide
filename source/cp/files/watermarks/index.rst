@@ -39,6 +39,8 @@ Actions
 
 .. Each Action
 
+.. include:: /cp/files/header.rst
+
 Create New
 ~~~~~~~~~~
 
