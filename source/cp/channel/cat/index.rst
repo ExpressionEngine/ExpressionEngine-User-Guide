@@ -9,6 +9,17 @@ Category Groups
 
 .. Overview
 
+This section of the Control Panel is for the management of channel
+categories. It is where categories and category groups are created,
+deleted, and preferences are set.
+
+Category groups are *collections* of categories that can be assigned to
+channels. You can create a separate group for each channel or use the
+same group on multiple channels.
+
+The main Categories screen shows a table of all the existing
+category groups. It lists the category group name and provides links to
+edit the preferences.
 
 .. Permissions
 
