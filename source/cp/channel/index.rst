@@ -133,3 +133,4 @@ confirmation modal to appear that will summarize the action.
   :titlesonly:
 
   *
+  */index
