@@ -41,7 +41,7 @@ Settings
 This will take you to the :doc:`/cp/settings/comments`.
 
 Search comments
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 This will search comments, respecting the current filters.
 
