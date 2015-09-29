@@ -27,11 +27,9 @@ Permission Restrictions
 -----------------------
 
 * Access settings: Design & Content
-* Template Management Allowed actions: Manage Template Settings
-* Template Management Allowed actions: Create New Templates
-* Template Management Allowed actions: Edit Templates
-* Template Management Allowed actions: Delete Templates
-* Template Management Allowed template groups
+* Template variables: Create New Variables
+* Template variables: Edit Variables
+* Template variables: Delete Variables
 
 Actions
 -------
