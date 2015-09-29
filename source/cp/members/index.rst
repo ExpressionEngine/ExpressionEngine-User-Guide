@@ -5,7 +5,9 @@ Member Manager
 
 **Control Panel Location:** :menuselection:`Members`
 
-.. Screenshot (optional)
+.. figure:: ../images/members_view_all.png
+   :align: center
+   :alt: Member Control Panel
 
 .. Overview
 
