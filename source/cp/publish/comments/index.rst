@@ -91,7 +91,7 @@ The selected comments will have their status set to "Pending".
 
 .. toctree::
   :glob:
-	:hidden:
-	:titlesonly:
+  :hidden:
+  :titlesonly:
 
-	*
+  *
