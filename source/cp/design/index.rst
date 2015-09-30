@@ -9,6 +9,8 @@ Template Manager
 
 .. Overview
 
+.. figure:: ../../images/template_manager.png
+
 .. Permissions
 
 Permission Restrictions

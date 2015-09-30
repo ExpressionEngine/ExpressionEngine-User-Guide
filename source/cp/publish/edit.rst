@@ -14,6 +14,8 @@ be filtered by Channel, Category, Status, or Date range, and it can be sorted
 by ID, Title, Comments, Date, and Status. In addition, you can select multiple
 entries using the checkboxes on the right, then delete them.
 
+.. figure:: ../../images/edit.png
+
 .. Permissions
 
 Permission Restrictions

@@ -5,15 +5,13 @@ Member Manager
 
 **Control Panel Location:** :menuselection:`Members`
 
-.. figure:: ../images/members_view_all.png
-   :align: center
-   :alt: Member Control Panel
-
 .. Overview
 
 This page is used both to search and to browse through active members within
 your ExpressionEngine installation. Also, you can filter the members by member
 group and search members.
+
+.. figure:: ../../images/members.png
 
 .. Permissions
 

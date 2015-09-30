@@ -9,6 +9,8 @@ Channel Manager
 
 .. Overview
 
+.. figure:: ../../images/channel_manager.png
+
 .. Permissions
 
 Permission Restrictions

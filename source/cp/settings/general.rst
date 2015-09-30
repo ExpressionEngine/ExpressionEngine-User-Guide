@@ -13,6 +13,8 @@ This section of the Control Panel allows you to define the basic
 settings of your site. If you are using the :doc:`/cp/msm/index`, note that
 these settings are per-site.
 
+.. figure:: ../../images/general_settings.png
+
 .. Permissions
 
 Permission Restrictions

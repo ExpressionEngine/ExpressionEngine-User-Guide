@@ -15,6 +15,8 @@ You can also select multiple files using the checkboxes on the right, and then
 download the files or delete them using the dropdown menu at the bottom of the
 page.
 
+.. figure:: ../../images/file_manager.png
+
 .. Permissions
 
 Permission Restrictions
