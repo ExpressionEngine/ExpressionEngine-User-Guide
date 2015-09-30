@@ -9,17 +9,38 @@ Utilities
 
 .. Overview
 
-.. Permissions
-
-Permission Restrictions
------------------------
-
-Settings
+Contents
 --------
 
-.. contents::
-  :local:
-  :depth: 1
+- :doc:`communicate/index`
 
-.. Each Action/Section
+  - :doc:`communicate/sent`
 
+- CP Translation
+
+  - :doc:`translate/index`
+
+- :doc:`php`
+- :doc:`extensions`
+- Import Tools
+
+  - :doc:`import-converter`
+  - :doc:`member-import`
+
+- :doc:`sql`
+
+  - :doc:`query`
+
+- Data Operations
+
+  - :doc:`cache`
+  - :doc:`stats`
+  - :doc:`sandr`
+
+.. toctree::
+  :glob:
+  :hidden:
+  :titlesonly:
+
+  *
+  */index
