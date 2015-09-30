@@ -3,23 +3,24 @@ System Logs
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> System Logs`
+**Control Panel Location:** :menuselection:`Developer Tools --> Logs`
 
 .. Screenshot (optional)
 
 .. Overview
 
-.. Permissions
-
-Permission Restrictions
------------------------
-
-Settings
+Contents
 --------
 
-.. contents::
-  :local:
-  :depth: 1
+- :doc:`developer`
+- :doc:`cp`
+- :doc:`throttling`
+- :doc:`email`
+- :doc:`search`
 
-.. Each Action/Section
+.. toctree::
+  :glob:
+  :hidden:
+  :titlesonly:
 
+  *
