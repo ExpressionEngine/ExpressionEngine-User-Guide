@@ -1,16 +1,16 @@
-Form Layouts
-============
+Status Groups
+=============
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> layouts`
+**Control Panel Location:** :menuselection:`Developer Tools --> Status Groups`
 
 .. Screenshot (optional)
 
 .. Overview
 
-The Publish/Edit page can be customized, with the layout saved per
-member group, per channel.
+This section of the Control Panel is where status groups are created, edited and
+deleted.
 
 .. Permissions
 
@@ -18,7 +18,9 @@ Permission Restrictions
 -----------------------
 
 * Access settings: Design & Content
-* Channels: Edit Channels
+* Statuses: Create Statuses
+* Statuses: Edit Statuses
+* Statuses: Delete Statuses
 
 Actions
 -------
@@ -36,20 +38,25 @@ Create New
 
 This will take you to the :doc:`create form <form>`.
 
-Names Links
-~~~~~~~~~~~
+Group Name Links
+~~~~~~~~~~~~~~~~
 
-This will take you to the layout's :doc:`edit form <form>`.
+This will take you to the status group's :doc:`edit form <form>`.
 
 Manage
 ~~~~~~
 
-The icons in the manage column perform actions on the channel in its row.
+The icons in the manage column perform actions on the status group in its row.
+
+View
+^^^^
+
+This will take you to the :doc:`status list <status-list>`.
 
 Edit
 ^^^^
 
-This will take you to the layout's :doc:`edit form <form>`.
+This will take you to the status group's :doc:`edit form <form>`.
 
 Bulk Actions
 ~~~~~~~~~~~~
@@ -61,7 +68,7 @@ submit button will be made available in the lower righthand corner of the table.
 Remove
 ^^^^^^
 
-The selected layouts will be removed. Removing a layouts will cause a
+The selected status groups will be removed. Removing a status group will cause a
 confirmation modal to appear that will summarize the action.
 
 .. toctree::

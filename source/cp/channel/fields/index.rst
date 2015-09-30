@@ -1,16 +1,16 @@
-Form Layouts
-============
+Custom Fields
+=============
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> layouts`
+**Control Panel Location:** :menuselection:`Developer Tools --> Field Groups --> fields`
 
 .. Screenshot (optional)
 
 .. Overview
 
-The Publish/Edit page can be customized, with the layout saved per
-member group, per channel.
+This section of the Control Panel is where custom fields are created, edited and
+deleted.
 
 .. Permissions
 
@@ -18,7 +18,9 @@ Permission Restrictions
 -----------------------
 
 * Access settings: Design & Content
-* Channels: Edit Channels
+* Channel fields: Create Channel Fields
+* Channel fields: Edit Channel Fields
+* Channel fields: Delete Channel Fields
 
 Actions
 -------
@@ -36,20 +38,20 @@ Create New
 
 This will take you to the :doc:`create form <form>`.
 
-Names Links
-~~~~~~~~~~~
+Group Name Links
+~~~~~~~~~~~~~~~~
 
-This will take you to the layout's :doc:`edit form <form>`.
+This will take you to the field's :doc:`create edit <form>`.
 
 Manage
 ~~~~~~
 
-The icons in the manage column perform actions on the channel in its row.
+The icons in the manage column perform actions on the field in its row.
 
 Edit
 ^^^^
 
-This will take you to the layout's :doc:`edit form <form>`.
+This will take you to the field's :doc:`create edit <form>`.
 
 Bulk Actions
 ~~~~~~~~~~~~
@@ -61,8 +63,8 @@ submit button will be made available in the lower righthand corner of the table.
 Remove
 ^^^^^^
 
-The selected layouts will be removed. Removing a layouts will cause a
-confirmation modal to appear that will summarize the action.
+The selected channel groups will be removed. Removing a channel group will
+cause a confirmation modal to appear that will summarize the action.
 
 .. toctree::
   :glob:

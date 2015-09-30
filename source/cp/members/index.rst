@@ -5,13 +5,13 @@ Member Manager
 
 **Control Panel Location:** :menuselection:`Members`
 
+.. Screenshot (optional)
+
 .. Overview
 
 This page is used both to search and to browse through active members within
 your ExpressionEngine installation. Also, you can filter the members by member
 group and search members.
-
-.. figure:: ../../images/members.png
 
 .. Permissions
 
@@ -34,16 +34,7 @@ Actions
 
 .. Each Action
 
-Settings
-~~~~~~~~
-
-This will take you to :doc:`/cp/settings/members`.
-
-Search Members
-~~~~~~~~~~~~~~
-
-This will search members by id, username, screen name, and email, respecting
-the current filters.
+.. include:: /cp/members/header.rst
 
 Sidebar
 ~~~~~~~
@@ -122,3 +113,4 @@ confirmation modal to appear that will summarize the action.
   :titlesonly:
 
   *
+  */index
