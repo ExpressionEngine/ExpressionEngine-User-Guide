@@ -5,7 +5,7 @@ Channel Manager
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager`
 
-.. Screenshot (optional)
+.. figure:: ../../images/channel_manager.png
 
 .. Overview
 

@@ -5,7 +5,7 @@ Template Manager
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Template Manager`
 
-.. Screenshot (optional)
+.. figure:: ../../images/template_manager.png
 
 .. Overview
 
