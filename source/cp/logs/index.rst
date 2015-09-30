@@ -15,7 +15,7 @@ Contents
 - :doc:`developer`
 - :doc:`cp`
 - :doc:`throttling`
-- :doc:`email`
+- :doc:`email/index`
 - :doc:`search`
 
 .. toctree::
@@ -24,3 +24,4 @@ Contents
   :titlesonly:
 
   *
+  */index
