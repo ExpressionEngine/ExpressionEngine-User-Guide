@@ -7,6 +7,8 @@ Email Templates
 
 .. Overview
 
+.. todo:: Add an overview
+
 .. Screenshot (optional)
 
 .. Permissions
