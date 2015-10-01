@@ -7,7 +7,20 @@ System Message Templates
 
 .. Overview
 
-.. todo:: Add an overview
+This section of the Control Panel is for managing the system message templates,
+such as the Site Offline template and the User Messages template.
+
+In the :doc:`/cp/settings/general` section of the Control
+Panel you can specify whether or not your site is "Live". If the site is
+not live then people will be presented with a message when they try to
+access your page. This can be useful if you are performing maintenance
+or other such things. This Message Page allows you to define the page
+that will be shown to people when your site is not "Live".
+
+Users often receive messages after performing actions in ExpressionEngine:
+logging in, submitting a form, etc. In addition, they may sometimes be shown
+error messages. You can determine how the page looks that displays these
+messages.
 
 .. Screenshot (optional)
 
