@@ -12,9 +12,9 @@ HTML Buttons
 Each member may also specify their own HTML Formatting buttons. These
 buttons are available for use when creating or editing channel entries.
 By default, these will include the buttons specified in the
-:doc:`/cp/settings/buttons` area. The user may edit or add to
+:doc:`/cp/settings/buttons/index` settings page. The user may edit or add to
 the buttons as desired. More information on button creation/editing is
-available on the :doc:`/cp/settings/buttons` page.
+available on the :doc:`/cp/settings/buttons/index` settings page.
 
 .. Permissions
 
