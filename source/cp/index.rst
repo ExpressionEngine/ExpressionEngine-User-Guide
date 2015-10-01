@@ -75,3 +75,6 @@ Developer Tools
   :maxdepth: 1
 
   settings/index
+
+:doc:`footer`
+-------------
