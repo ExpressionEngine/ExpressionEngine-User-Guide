@@ -5,13 +5,13 @@ Member Manager
 
 **Control Panel Location:** :menuselection:`Members`
 
-.. figure:: ../../images/members.png
-
 .. Overview
 
 This page is used both to search and to browse through active members within
 your ExpressionEngine installation. Also, you can filter the members by member
 group and search members.
+
+.. figure:: ../../images/members.png
 
 .. Permissions
 
@@ -72,7 +72,7 @@ This will take you to the :doc:`create member group form <groups/form>`.
 Member Fields
 ^^^^^^^^^^^^^
 
-This will allow you to :doc:`manage your custom mememb fields <fields/index>`.
+This will allow you to :doc:`manage your custom member fields <fields/index>`.
 
 Username Links
 ~~~~~~~~~~~~~~
