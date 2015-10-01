@@ -7,7 +7,7 @@ System Logs
 
 .. Overview
 
-.. todo:: Add an overview
+This section of the Control Panel allows you to view the various logs.
 
 .. Screenshot (optional)
 
