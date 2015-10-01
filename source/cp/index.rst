@@ -15,13 +15,14 @@ Content Creators
 ----------------
 
 .. toctree::
-	:titlesonly:
-	:maxdepth: 1
+  :titlesonly:
+  :maxdepth: 1
 
-	publish/create
-	publish/edit
-	files/index
-	members/index
+  overview
+  publish/create
+  publish/edit
+  files/index
+  members/index
 
 Site Builders
 -------------
