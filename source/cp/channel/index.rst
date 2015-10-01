@@ -5,12 +5,12 @@ Channel Manager
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager`
 
-.. figure:: ../../images/channel_manager.png
-
 .. Overview
 
 This section of the Control Panel is where channels are created, edited and
 deleted.
+
+.. figure:: ../../images/channel_manager.png
 
 .. Permissions
 
