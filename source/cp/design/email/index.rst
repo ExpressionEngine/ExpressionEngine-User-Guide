@@ -7,7 +7,10 @@ Email Templates
 
 .. Overview
 
-.. todo:: Add an overview
+These Message Pages are for the various "notification" emails that are
+sent by the system. For example, when someone registers at your site,
+account activation instructions are emailed to them. The formatting of
+the email is controlled in one of the Message Pages.
 
 .. Screenshot (optional)
 
