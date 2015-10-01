@@ -7,7 +7,7 @@ Member Profile
 
 .. Overview
 
-This setion of the Control Panel is where membership account information is
+This section of the Control Panel is where membership account information is
 edited.
 
 Contents
