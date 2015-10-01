@@ -5,13 +5,14 @@ Access Throttling
 
 **Control Panel Location:** :menuselection:`Settings --> Access Throttling`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to manage the Throttling
 feature. See :doc:`/optimization/throttling` for more information
 regarding this feature.
+
+.. Screenshot (optional)
+
 .. Permissions
 
 Permission Restrictions

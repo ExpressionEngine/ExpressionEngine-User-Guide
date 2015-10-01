@@ -5,12 +5,12 @@ Custom Fields
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Field Groups --> fields`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel is where custom fields are created, edited and
 deleted.
+
+.. Screenshot (optional)
 
 .. Permissions
 

@@ -5,11 +5,11 @@ Blocked Members
 
 **Control Panel Location:** :menuselection:`Members --> Profile --> Blocked Members`
 
-.. Screenshot (optional)
-
 .. Overview
 
 .. todo:: Add an overview (include the sortability of the table)
+
+.. Screenshot (optional)
 
 .. Permissions
 

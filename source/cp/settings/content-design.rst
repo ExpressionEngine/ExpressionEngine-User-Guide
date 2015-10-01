@@ -5,11 +5,11 @@ Content & Design
 
 **Control Panel Location:** :menuselection:`Settings --> Content & Design`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to define settings for caching, image resizing, and emoticons.
+
+.. Screenshot (optional)
 
 .. Permissions
 

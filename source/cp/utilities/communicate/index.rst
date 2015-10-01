@@ -5,9 +5,9 @@ Communicate
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> Communicate`
 
-.. Screenshot (optional)
-
 .. Overview
+
+.. Screenshot (optional)
 
 .. Permissions
 

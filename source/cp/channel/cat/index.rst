@@ -5,8 +5,6 @@ Category Groups
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Category Groups`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel is for the management of channel
@@ -20,6 +18,8 @@ same group on multiple channels.
 The main Categories screen shows a table of all the existing
 category groups. It lists the category group name and provides links to
 edit the preferences.
+
+.. Screenshot (optional)
 
 .. Permissions
 

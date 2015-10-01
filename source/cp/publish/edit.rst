@@ -5,14 +5,14 @@ Entry Manager
 
 **Control Panel Location:** :menuselection:`Edit`
 
-.. Screenshot (optional)
-
 .. Overview
 
 In this section you can edit and update previously posted Entries. The list can
 be filtered by Channel, Category, Status, or Date range, and it can be sorted
 by ID, Title, Comments, Date, and Status. In addition, you can select multiple
 entries using the checkboxes on the right, then delete them.
+
+.. Screenshot (optional)
 
 .. figure:: ../../images/edit.png
 

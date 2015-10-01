@@ -5,13 +5,13 @@ CAPTCHA Settings
 
 **Control Panel Location:** :menuselection:`Settings --> CAPTCHA Settings`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to set
 :doc:`CAPTCHA </security/captchas>` preferences for your
 website.
+
+.. Screenshot (optional)
 
 .. Permissions
 

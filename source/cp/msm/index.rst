@@ -5,8 +5,6 @@ Site Manager
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Site Manager`
 
-.. Screenshot (optional)
-
 .. Overview
 
 Manage multiple Sites from a single installation
@@ -14,6 +12,8 @@ Manage multiple Sites from a single installation
 .. note:: The Multiple Site Manager **does not** alter the
 	:doc:`/about/license`. The license holder must be the owner of all
 	Sites on a single installation.
+
+.. Screenshot (optional)
 
 One Installation, Multiple Websites
 -----------------------------------

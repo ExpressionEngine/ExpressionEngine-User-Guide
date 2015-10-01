@@ -5,8 +5,6 @@ Watermarks
 
 **Control Panel Location:** :menuselection:`Files --> Watermarks`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to manage watermark settings. A
@@ -15,6 +13,8 @@ your images to mark them as "yours" and to hamper other people from being able
 to "steal" your images. You can create as many watermark types as you need and
 apply them to your automatically created thumbnails while
 :doc:`creating or editing an upload directory </cp/files/uploads/form>`.
+
+.. Screenshot (optional)
 
 .. Permissions
 

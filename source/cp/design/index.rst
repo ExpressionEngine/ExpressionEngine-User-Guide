@@ -5,13 +5,15 @@ Template Manager
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Template Manager`
 
-.. figure:: ../../images/template_manager.png
-
 .. Overview
 
 The Template Manager allows you to create, edit and delete Template Groups
 and Templates. Clicking a particular Template Group name will reveal that Group
 so that you can work with it.
+
+.. Screenshot (optional)
+
+.. figure:: ../../images/template_manager.png
 
 .. Permissions
 

@@ -5,12 +5,12 @@ Member Settings
 
 **Control Panel Location:** :menuselection:`Settings --> Member Settings`
 
-.. Screenshot (optional)
-
 .. Overview
 
 The Membership Preferences section of the Control Panel allows you to set all
 of your membership-related preferences.
+
+.. Screenshot (optional)
 
 .. Permissions
 

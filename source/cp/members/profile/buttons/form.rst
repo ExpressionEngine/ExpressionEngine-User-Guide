@@ -5,13 +5,13 @@ Create/Edit HTML Buttons
 
 **Control Panel Location:** :menuselection:`Settings --> HTML Buttons`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to define your
 *HTML buttons*. HTML buttons appear in the PUBLISH page and allow you to
 add basic HTML to your entries.
+
+.. Screenshot (optional)
 
 .. Permissions
 

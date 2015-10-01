@@ -5,8 +5,6 @@ Search Logs
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Logs -> Search`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to view any logged search
@@ -16,6 +14,8 @@ The Search Term Logging feature lets you keep track of any search terms
 your site visitors submit via your simple or advanced search forms. This
 information can be useful in determining what information is being
 looked for at your site.
+
+.. Screenshot (optional)
 
 .. Permissions
 

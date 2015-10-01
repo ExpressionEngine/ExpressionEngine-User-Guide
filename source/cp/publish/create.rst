@@ -5,9 +5,9 @@ Create
 
 **Control Panel Location:** :menuselection:`Create`
 
-.. Screenshot (optional)
-
 .. Overview
+
+.. Screenshot (optional)
 
 .. Permissions
 

@@ -5,8 +5,6 @@ Template Variables
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Template Variables`
 
-.. Screenshot (optional)
-
 .. Overview
 
 In this section of the Control Panel you can define custom data that you would
@@ -20,6 +18,8 @@ immediately see the effects everywhere.
 
 Global Variables can contain text, HTML, javascript, etc. but cannot
 contain PHP code or ExpressionEngine tags that you wish to have parsed.
+
+.. Screenshot (optional)
 
 .. Permissions
 

@@ -5,12 +5,12 @@ Custom Member Fields
 
 **Control Panel Location:** :menuselection:`Members --> Member Fields`
 
-.. Screenshot (optional)
-
 .. Overview
 
 The *Member Fields* feature permits you to add fields to the member
 registration form and/or member profile and My Account areas.
+
+.. Screenshot (optional)
 
 .. Permissions
 

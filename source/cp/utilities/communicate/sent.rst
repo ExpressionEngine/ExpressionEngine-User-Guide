@@ -5,13 +5,13 @@ Sent Emails
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> Sent`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel shows a table of all the previously sent
 emails. It lists the email title (subject), when it was sent, number of
 recipients, a re-send link, and a delete checkbox.
+
+.. Screenshot (optional)
 
 .. Permissions
 

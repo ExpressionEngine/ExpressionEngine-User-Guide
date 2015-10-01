@@ -5,12 +5,12 @@ Field Groups
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Field Groups`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel is where field groups are created, edited and
 deleted.
+
+.. Screenshot (optional)
 
 .. Permissions
 

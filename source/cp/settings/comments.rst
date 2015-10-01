@@ -5,13 +5,13 @@ Comment Settings
 
 **Control Panel Location:** :menuselection:`Settings --> Comment Settings`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to define comment
 settings of your site. If you are using the :doc:`/cp/msm/index`, note that
 these settings are per-site.
+
+.. Screenshot (optional)
 
 .. Permissions
 

@@ -5,11 +5,11 @@ Current Subscriptions
 
 **Control Panel Location:** :menuselection:`Members --> Profile --> Current Subscriptions`
 
-.. Screenshot (optional)
-
 .. Overview
 
 .. todo:: Add an overview (include the sortability of the table)
+
+.. Screenshot (optional)
 
 .. Permissions
 

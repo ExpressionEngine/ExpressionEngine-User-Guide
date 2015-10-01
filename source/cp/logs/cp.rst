@@ -5,13 +5,13 @@ Control Panel Access Logs
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Logs --> Control Panel`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to view access logs for
 your Control Panel. The system tracks all logins, logouts, and various
 other actions. You can also clear the current set of logs.
+
+.. Screenshot (optional)
 
 .. Permissions
 

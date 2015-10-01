@@ -5,9 +5,9 @@ Email Templates
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Template Manager --> Email`
 
-.. Screenshot (optional)
-
 .. Overview
+
+.. Screenshot (optional)
 
 .. Permissions
 

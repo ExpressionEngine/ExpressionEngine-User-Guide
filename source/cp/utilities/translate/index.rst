@@ -5,8 +5,6 @@ Language Files
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> CP Translate`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This Translation Utility page of the Control Panel allows you to
@@ -22,6 +20,8 @@ system/expressionengine/translations/
 
 The main Translation Utility screen shows a list of all the language
 files currently installed.
+
+.. Screenshot (optional)
 
 .. Permissions
 

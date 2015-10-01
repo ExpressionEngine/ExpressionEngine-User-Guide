@@ -5,12 +5,12 @@ Messaging Settings
 
 **Control Panel Location:** :menuselection:`Settings --> Messaging Settings`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to define the messaging
 settings of your site.
+
+.. Screenshot (optional)
 
 .. Permissions
 

@@ -5,12 +5,12 @@ Banned Members
 
 **Control Panel Location:** :menuselection:`Members --> Manage Bans`
 
-.. Screenshot (optional)
-
 .. Overview
 
 The User Banning section of the Control Panel allows you to ban users by IP
 address, email, or name.
+
+.. Screenshot (optional)
 
 .. Permissions
 

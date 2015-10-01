@@ -11,6 +11,8 @@ This page is used both to search and to browse through active members within
 your ExpressionEngine installation. Also, you can filter the members by member
 group and search members.
 
+.. Screenshot (optional)
+
 .. figure:: ../../images/members.png
 
 .. Permissions

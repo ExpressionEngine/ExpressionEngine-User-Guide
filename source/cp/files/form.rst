@@ -5,12 +5,12 @@ Edit File Meta Data
 ..
 .. **Control Panel Location:** :menuselection:`Files`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This part of the control panel allows you to edit the title, description,
 credit, and location for a file.
+
+.. Screenshot (optional)
 
 .. Permissions
 

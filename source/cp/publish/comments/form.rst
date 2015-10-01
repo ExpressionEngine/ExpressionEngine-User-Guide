@@ -5,12 +5,12 @@ Edit Comment
 ..
 .. **Control Panel Location:** :menuselection:`Settings --> HTML Buttons`
 
-.. Screenshot (optional)
-
 .. Overview
 
 Here you can change the status of a comment, edit the comment content, or move
 the comment to a different entry.
+
+.. Screenshot (optional)
 
 .. Permissions
 

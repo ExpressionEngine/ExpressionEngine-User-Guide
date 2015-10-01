@@ -5,8 +5,6 @@ HTML Buttons
 
 **Control Panel Location:** :menuselection:`Members --> Profile --> HTML Buttons`
 
-.. Screenshot (optional)
-
 .. Overview
 
 Each member may also specify their own HTML Formatting buttons. These
@@ -15,6 +13,8 @@ By default, these will include the buttons specified in the
 :doc:`/cp/settings/buttons/index` settings page. The user may edit or add to
 the buttons as desired. More information on button creation/editing is
 available on the :doc:`/cp/settings/buttons/index` settings page.
+
+.. Screenshot (optional)
 
 .. Permissions
 

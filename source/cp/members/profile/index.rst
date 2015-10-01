@@ -3,12 +3,12 @@ Member Profile
 
 **Control Panel Location:** :menuselection:`Members --> Edit`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel is where membership account information is
 edited.
+
+.. Screenshot (optional)
 
 Contents
 --------

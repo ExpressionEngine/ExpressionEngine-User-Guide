@@ -5,12 +5,12 @@ Status Groups
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Status Groups`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel is where status groups are created, edited and
 deleted.
+
+.. Screenshot (optional)
 
 .. Permissions
 

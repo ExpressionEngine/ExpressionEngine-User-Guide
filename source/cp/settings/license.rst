@@ -5,13 +5,13 @@ License & Registration
 
 **Control Panel Location:** :menuselection:`Settings --> License & Registration`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to upload a license file, which
 determines if the install is licensed, who it is licensed to, and determines
 the number of sites available
+
+.. Screenshot (optional)
 
 .. Permissions
 

@@ -5,12 +5,12 @@ Categories
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Category Groups --> View`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel is for the management of channel categories.
 It is where categories are created, ordered, edited, and deleted.
+
+.. Screenshot (optional)
 
 .. Permissions
 

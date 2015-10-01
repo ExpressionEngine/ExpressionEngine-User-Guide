@@ -5,9 +5,9 @@ Forum Templates
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Template Manager --> Forums`
 
-.. Screenshot (optional)
-
 .. Overview
+
+.. Screenshot (optional)
 
 .. Permissions
 

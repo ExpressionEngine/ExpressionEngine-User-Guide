@@ -5,11 +5,11 @@ Create/Edit Watermark
 ..
 .. **Control Panel Location:** :menuselection:`Files`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to create or edit a watermark.
+
+.. Screenshot (optional)
 
 .. Permissions
 

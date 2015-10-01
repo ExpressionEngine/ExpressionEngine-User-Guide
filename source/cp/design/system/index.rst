@@ -5,9 +5,9 @@ System Message Templates
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Template Manager --> Messages`
 
-.. Screenshot (optional)
-
 .. Overview
+
+.. Screenshot (optional)
 
 .. Permissions
 

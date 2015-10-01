@@ -5,12 +5,12 @@ Developer Logs
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Logs --> Developer`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to view log messages for
 developers set by ExpressionEngine or third-party developers.
+
+.. Screenshot (optional)
 
 .. Permissions
 

@@ -5,13 +5,13 @@ Bookmarklets
 
 **Control Panel Location:** :menuselection:`Members --> Profile --> Bookmarklets`
 
-.. Screenshot (optional)
-
 .. Overview
 
 The Bookmarklet section will allows you to create a customized
 bookmarklet, permitting you to add entries to your site while browsing
 the internet.
+
+.. Screenshot (optional)
 
 .. Permissions
 

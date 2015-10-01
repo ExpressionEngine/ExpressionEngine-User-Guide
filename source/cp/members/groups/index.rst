@@ -5,8 +5,6 @@ Member Groups
 
 **Control Panel Location:** :menuselection:`Members --> Member Groups`
 
-.. Screenshot (optional)
-
 .. Overview
 
 The *Member Groups* area of the Control Panel permits you to manage your
@@ -17,6 +15,8 @@ These groups allow you to restrict and control what a given member is
 allowed to do, and which pages they are allowed to access. Each Member
 Group has over 50 different privileges that can be allowed or denied,
 giving you precise control over what each of your members can do.
+
+.. Screenshot (optional)
 
 .. Permissions
 

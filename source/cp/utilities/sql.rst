@@ -5,8 +5,6 @@ SQL Manager
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> SQL Manager`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to manage your database.
@@ -15,6 +13,8 @@ tables, and more.
 
 The main SQL Manager screen shows a table of your basic database
 information.
+
+.. Screenshot (optional)
 
 .. Permissions
 

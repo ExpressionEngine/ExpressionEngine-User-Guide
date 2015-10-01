@@ -5,13 +5,13 @@ Email Logs
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Logs --> Email`
 
-.. Screenshot (optional)
-
 .. Overview
 
 The Email Console Logs section of the Control Panel allows you to view
 email messages that have been sent through the Email Console in the
 member profile pages.
+
+.. Screenshot (optional)
 
 .. Permissions
 

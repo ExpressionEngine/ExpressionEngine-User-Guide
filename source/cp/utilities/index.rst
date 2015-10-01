@@ -5,9 +5,9 @@ Utilities
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Utilities`
 
-.. Screenshot (optional)
-
 .. Overview
+
+.. Screenshot (optional)
 
 Contents
 --------

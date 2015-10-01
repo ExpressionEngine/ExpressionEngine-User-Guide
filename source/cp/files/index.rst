@@ -5,8 +5,6 @@ File Manager
 
 **Control Panel Location:** :menuselection:`Files`
 
-.. Screenshot (optional)
-
 .. Overview
 
 On the main File Manager page you can view all of your previously uploaded
@@ -14,6 +12,8 @@ files. Files can be searched by keyword as well as filtered by upload location.
 You can also select multiple files using the checkboxes on the right, and then
 download the files or delete them using the dropdown menu at the bottom of the
 page.
+
+.. Screenshot (optional)
 
 .. figure:: ../../images/file_manager.png
 

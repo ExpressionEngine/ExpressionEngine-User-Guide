@@ -5,8 +5,6 @@ Sync Directory
 
 **Control Panel Location:** :menuselection:`Files --> Sync`
 
-.. Screenshot (optional)
-
 .. Overview
 
 The Synchronize Files page allows you to synchronize the file records in
@@ -16,6 +14,8 @@ against the file records in the database. If there is no record in the
 database, one will be added. For images, any additional sizes will be
 generated and watermarked according to the file upload preferences for
 that directory.
+
+.. Screenshot (optional)
 
 .. todo:: Confirm the behavior.
 .. Lastly, any records in the database that do not have a

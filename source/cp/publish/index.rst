@@ -5,9 +5,9 @@ Site Manager
 
 **Control Panel Location:** :menuselection:`Settings --> HTML Buttons`
 
-.. Screenshot (optional)
-
 .. Overview
+
+.. Screenshot (optional)
 
 .. Permissions
 

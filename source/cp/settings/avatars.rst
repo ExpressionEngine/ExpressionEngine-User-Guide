@@ -5,12 +5,12 @@ Avatar Settings
 
 **Control Panel Location:** :menuselection:`Settings --> Avatar Settings`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to define the avatar settings of
 your site.
+
+.. Screenshot (optional)
 
 .. Permissions
 

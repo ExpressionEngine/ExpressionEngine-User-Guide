@@ -5,12 +5,12 @@ Quick Links
 
 **Control Panel Location:** :menuselection:`Members --> Profile --> Quick Links`
 
-.. Screenshot (optional)
-
 .. Overview
 
 Use this page to add personal links to the quick links menu in the control
 panel nav bar. These links will be visible only to you.
+
+.. Screenshot (optional)
 
 .. Permissions
 

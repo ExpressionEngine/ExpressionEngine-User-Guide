@@ -5,12 +5,12 @@ Form Layouts
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> layouts`
 
-.. Screenshot (optional)
-
 .. Overview
 
 The Publish/Edit page can be customized, with the layout saved per
 member group, per channel.
+
+.. Screenshot (optional)
 
 .. Permissions
 

@@ -5,12 +5,12 @@ Template Settings
 
 **Control Panel Location:** :menuselection:`Settings --> Template Settings`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to define global preferences which
 affect all Templates.
+
+.. Screenshot (optional)
 
 .. Permissions
 

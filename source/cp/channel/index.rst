@@ -10,6 +10,8 @@ Channel Manager
 This section of the Control Panel is where channels are created, edited and
 deleted.
 
+.. Screenshot (optional)
+
 .. figure:: ../../images/channel_manager.png
 
 .. Permissions

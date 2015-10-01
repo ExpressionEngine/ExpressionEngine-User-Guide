@@ -5,13 +5,13 @@ Security & Privacy
 
 **Control Panel Location:** :menuselection:`Settings --> Security & Privacy`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to define the basic
 security-related settings for your website. These are security settings that
 apply throughout the website/system.
+
+.. Screenshot (optional)
 
 .. Permissions
 

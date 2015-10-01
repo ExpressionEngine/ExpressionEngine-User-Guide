@@ -5,14 +5,15 @@ Manage Add-on Extensions
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> Debug Extensions`
 
-.. Screenshot (optional)
-
 .. Overview
 
 Since Extensions are calling code within the ExpressionEngine code there is
 a chance that an extension will interfere with how your site is working.
 If you are unsure of which extension might be causing a problem you can
 either turn them off one by one until the problem disappears.
+
+.. Screenshot (optional)
+
 .. Permissions
 
 Permission Restrictions

@@ -5,9 +5,9 @@ Create/Edit Upload Directory
 ..
 .. **Control Panel Location:** :menuselection:`Files`
 
-.. Screenshot (optional)
-
 .. Overview
+
+.. Screenshot (optional)
 
 .. Permissions
 

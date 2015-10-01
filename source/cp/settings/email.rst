@@ -5,14 +5,14 @@ Outgoing Email
 
 **Control Panel Location:** :menuselection:`Settings --> Outgoing Email`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows an administrator to set the
 preferences relating to how Email is sent within an ExpressionEngine site.
 These settings affect not only how Emails are sent via the Communicate section
 of the Control Panel but also how Emails are generally sent by the system.
+
+.. Screenshot (optional)
 
 .. Permissions
 

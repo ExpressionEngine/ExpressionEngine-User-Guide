@@ -5,14 +5,14 @@ Debugging & Output
 
 **Control Panel Location:** :menuselection:`Settings --> Debugging & Output`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to define how your site is output
 from the server to the user. This includes how debugging information is handled
 for your website. These are general settings that apply throughout the
 website/system.
+
+.. Screenshot (optional)
 
 .. Permissions
 

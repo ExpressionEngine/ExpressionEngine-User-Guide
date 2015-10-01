@@ -5,14 +5,14 @@ Access Throttling Logs
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Logs --> Throttling`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to view all the IPs that
 are currently by ":doc:`throttled </cp/settings/throttling>`" by
 ExpressionEngine from your Control Panel. You can also black list
 selected IPs.
+
+.. Screenshot (optional)
 
 .. Permissions
 

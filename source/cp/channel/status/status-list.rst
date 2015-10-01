@@ -5,12 +5,12 @@ Statuses
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Status Groups --> View`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel is where statuses are created, edited and
 deleted.
+
+.. Screenshot (optional)
 
 .. Permissions
 

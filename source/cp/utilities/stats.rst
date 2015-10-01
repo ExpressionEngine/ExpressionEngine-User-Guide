@@ -5,8 +5,6 @@ Manage Statistics
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> Statistics`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This section of the Control Panel allows you to force the system to recount
@@ -14,6 +12,8 @@ different types of statistics. This section is rarely necessary, but every once
 in a while a statistic can become out of sync or otherwise not reflect the
 correct data. This section will allow you to make the system update the
 information.
+
+.. Screenshot (optional)
 
 .. Permissions
 

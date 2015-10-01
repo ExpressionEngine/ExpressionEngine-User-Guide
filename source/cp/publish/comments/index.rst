@@ -5,8 +5,6 @@ Comments
 ..
 .. **Control Panel Location:** :menuselection:`Edit --> `
 
-.. Screenshot (optional)
-
 .. Overview
 
 In this section you can manage comments, including setting their status,
@@ -14,6 +12,8 @@ editing the comment content, and removing comments. The list can be filtered by
 Channel, Status, or Date range, and it can be sorted by Comment, Date, IP, and
 Status. In addition, you can select multiple entries using the checkboxes on
 the right, then either delete them, or set their status.
+
+.. Screenshot (optional)
 
 .. Permissions
 

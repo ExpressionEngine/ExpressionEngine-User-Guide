@@ -5,12 +5,12 @@ Template Partials
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Template Partials`
 
-.. Screenshot (optional)
-
 .. Overview
 
 In this section of the Control Panel you can create and edit
 :doc:`Template Partials </templates/globals/snippets>`.
+
+.. Screenshot (optional)
 
 .. Permissions
 

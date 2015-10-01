@@ -5,9 +5,9 @@ System Logs
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Logs`
 
-.. Screenshot (optional)
-
 .. Overview
+
+.. Screenshot (optional)
 
 Contents
 --------

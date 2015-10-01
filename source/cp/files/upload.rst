@@ -5,12 +5,12 @@ File Upload
 ..
 .. **Control Panel Location:** :menuselection:`Files`
 
-.. Screenshot (optional)
-
 .. Overview
 
 This part of the control panel allows you to upload files to a specific upload
 directory.
+
+.. Screenshot (optional)
 
 .. Permissions
 
