@@ -43,10 +43,3 @@ Unsubscribe
 ^^^^^^^^^^^
 
 The member will be unsubscribbed from the seletecd content.
-
-.. toctree::
-	:glob:
-	:hidden:
-	:titlesonly:
-
-	*

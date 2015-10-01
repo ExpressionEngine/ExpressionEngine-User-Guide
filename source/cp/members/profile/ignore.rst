@@ -45,9 +45,3 @@ Remove
 The selected members will be removed from the blocked list. Removing a member
 will cause a confirmation modal to appear that will summarize the action.
 
-.. toctree::
-	:glob:
-	:hidden:
-	:titlesonly:
-
-	*
