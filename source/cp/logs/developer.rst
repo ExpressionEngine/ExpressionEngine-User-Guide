@@ -17,8 +17,7 @@ developers set by ExpressionEngine or third-party developers.
 Permission Restrictions
 -----------------------
 
-* Access Tools sections: Tools: Logs
-* Super Admins
+* Member Group: Super Admins
 
 Actions
 -------

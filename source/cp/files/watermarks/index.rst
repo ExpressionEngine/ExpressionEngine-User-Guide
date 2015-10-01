@@ -21,14 +21,7 @@ apply them to your automatically created thumbnails while
 Permission Restrictions
 -----------------------
 
-.. todo:: Confirm the permissions for this
-
-* Asset upload directories: Create Upload Directories
 * Asset upload directories: Edit Upload Directories
-* Asset upload directories: Delete Upload Directories
-* Assets: Upload New Assets
-* Assets: Edit Assets
-* Assets: Delete Assets
 
 Actions
 -------
