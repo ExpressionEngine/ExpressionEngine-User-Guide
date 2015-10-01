@@ -7,4 +7,4 @@ Search Members
 ~~~~~~~~~~~~~~
 
 This will search members by id, username, screen name, and email, respecting
-the current filters. This will render the :doc:`index`.
+the current filters. This will render the :doc:`/cp/members/index`.
