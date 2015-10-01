@@ -7,7 +7,24 @@ Member Profile Templates
 
 .. Overview
 
-.. todo:: Add an overview
+The public profile area has its own set of templates which can be edited
+to change the look. You'll find the templates located at::
+
+  themes/profile_themes/default
+
+A good strategy is to make a copy of the entire **default** templates
+folder, then edit your copy so you can leave the **default** files
+intact. Set your new copy as the site default under :menuselection:`Settings --> Members`
+
+.. note:: When building your member profile templates, consider that any
+  external links will pass along referrer data. This can cause security
+  problems if someone clicks on an external link from a secure page. For
+  example, if a user clicks an external link from the password reset
+  page, the external site *could* use the password reset link from the
+  referrer data to gain access to a user's account.
+
+  You can strip everything but the base URL by linking to
+  ``{path=""}?URL=<your url>``.
 
 .. Screenshot (optional)
 
