@@ -9,13 +9,9 @@ Create/Edit HTML Buttons
 
 .. Overview
 
-This section of the Control Panel allows you to define your default
+This section of the Control Panel allows you to define your
 *HTML buttons*. HTML buttons appear in the PUBLISH page and allow you to
 add basic HTML to your entries.
-
-.. note:: Each member of your site is allowed to specify their own HTML
-	buttons via their My Account page. These default buttons are **only**
-	used with members that have not defined their own.
 
 .. Permissions
 
