@@ -1,9 +1,9 @@
-Site Manager
-============
+Publish
+=======
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Settings --> HTML Buttons`
+.. **Control Panel Location:** :menuselection:`Settings --> HTML Buttons`
 
 .. Overview
 
