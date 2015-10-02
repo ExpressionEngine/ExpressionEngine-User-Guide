@@ -752,7 +752,7 @@ Specify a different :ref:`caching driver <caching_drivers>` to use.
 ============= ===========
 Values        Description
 ============= ===========
-``file``      File driver, path configured with `cache_path`_ config **(default)**
+``file``      File driver, ``/system/user/cache/`` **(default)**
 ``memcached`` Memcached driver, configured with `memcached`_ config
 ``redis``     Redis driver, configured with `redis`_ config
 ``dummy``     Dummy driver, will not cache
@@ -774,25 +774,6 @@ accepted and same default as `cache_driver`_.
 Example Usage::
 
 $config['cache_driver_backup'] = 'file';
-
-
-cache_path
-----------
-
-Set the path to the system's cache directory. Leave blank to use the
-system default ``system/expressionengine/cache/``.
-
-.. note:: This directory must already exist.
-
-======== ===========
-Value    Description
-======== ===========
-``path`` Server path to cache directory
-======== ===========
-
-Example Usage::
-
-$config['cache_path'] = '/path/to/cache/folder/';
 
 
 captcha_font
@@ -2567,23 +2548,6 @@ Configuration`: :ref:`Log Email Console Messages
 <email-log-console-messages-label>`
 
 
-log_path
---------
-
-Set the path to the system log directory. Use a full server path with
-trailing slash.
-
-========== ========
-Value      Behavior
-========== ========
-``path``   Full server path to system log folder
-========== ========
-
-Example Usage::
-
-$config['log_path'] = '/path/to/location/';
-
-
 log_referrers
 -------------
 
@@ -2612,6 +2576,8 @@ compatibility for any third party add-ons using it.
 
 log_threshold
 -------------
+
+.. note:: In order to save anything to log files, you'll need to create the ``/system/user/log/`` directory and ensure it's writable.
 
 Set an error threshold to determine how much information is logged.
 
@@ -4805,24 +4771,6 @@ Configuration`: :ref:`URL to your "themes" folder
 <general-config-theme-url-label>`
 
 
-third_party_path
-----------------
-
-Set the server path to the :file:`third_party` add-ons directory.
-Separating the :file:`third_party` directory from its default location
-in the :file:`system` directory can make updating easier.
-
-========== ===========
-Value      Description
-========== ===========
-``path``   Server path to the :file:`third_party` add-ons directory
-========== ===========
-
-Example Usage::
-
-$config['third_party_path'] = '/path/to/third_party/folders/';
-
-
 time_format
 -----------
 
@@ -4867,29 +4815,6 @@ $config['max_page_loads'] = '10';
 **Also found in CP:** :menuselection:`Admin --> Security and
 Privacy --> Throttling Preferences`: :ref:`Time Interval
 <throttling-time-interval-label>`
-
-
-tmpl_file_basepath
-------------------
-
-Set the server path to the :doc:`template files
-</templates/templates_as_files>` directory.
-
-========= ===========
-Value     Description
-========= ===========
-``path``  Full server path to writable template files directory
-========= ===========
-
-Example Usage::
-
-$config['tmpl_file_basepath'] = '/home/usr/domain.com/system/expressionengine/templates/';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Design --> Templates -->
-Template Preferences`: :ref:`Server path to site's templates
-<general-config-theme-path-label>`
 
 
 un_min_len

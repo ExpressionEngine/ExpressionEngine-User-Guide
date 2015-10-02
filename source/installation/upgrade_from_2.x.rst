@@ -38,8 +38,6 @@ Now **copy** the following files from the backup of your current site to the new
 
 5. If you have the wiki module installed, copy the directory :file:`themes/wiki_themes/` to :file:`themes/user/wiki_themes/`.
 
-.. note:: If you have changed the paths for ``templates`` and/or ``third_party`` using :doc:`/general/system_configuration_overrides`, you can safely ignore the following steps.
-
 6. If you save templates as files, copy all files and directories from :file:`system/expressionengine/templates/` to :file:`system/user/templates/`.
 
 7. If you have any third-party add-ons, copy all files and directories from :file:`system/expressionengine/third_party/` to :file:`system/user/addons/` and all files and directories from :file:`themes/third_party/` to :file:`themes/user/addons/`.
