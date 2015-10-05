@@ -19,6 +19,9 @@ either turn them off one by one until the problem disappears.
 Permission Restrictions
 -----------------------
 
+* Access Tools sections: Utilities
+* Install or remove add-ons
+
 Actions
 -------
 

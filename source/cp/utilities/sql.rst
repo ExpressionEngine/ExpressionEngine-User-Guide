@@ -21,6 +21,9 @@ information.
 Permission Restrictions
 -----------------------
 
+* Access Tools sections: Utilities
+* Access Tools sections: SQL Management
+
 Actions
 -------
 
@@ -41,7 +44,7 @@ Manage
 View
 ^^^^
 
-This will run a ``SELECT * FROM`` query for the table.
+This will run a ``SELECT * FROM`` :doc:`query <query>` for the table.
 
 Bulk Actions
 ~~~~~~~~~~~~

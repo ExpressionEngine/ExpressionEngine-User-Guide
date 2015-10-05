@@ -18,6 +18,9 @@ recipients, a re-send link, and a delete checkbox.
 Permission Restrictions
 -----------------------
 
+* Access Tools sections: Utilities
+* Access Tools sections: Communicate
+
 Actions
 -------
 
