@@ -90,7 +90,7 @@ The Pages Module adds the following variables for use in the
 Multiple Site Manager
 *********************
 
-If you are using the :doc:`Multiple Site Manager </cp/sites/index>`,
+If you are using the :doc:`Multiple Site Manager </cp/msm/index>`,
 page data are only available for the current site. If you wish to show
 the {page\_uri} or {page\_url} for an entry from a different site, you
 will need to use the {exp:pages:load\_site\_pages} tag on the relevant
