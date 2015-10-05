@@ -4,7 +4,7 @@ Moblog Module Control Panel
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-Ons --> Modules --> Moblog`
+**Control Panel Location:** :menuselection:`Add-On Manager --> Moblog`
 
 The Moblog Module Control Panel lists your existing Moblogs and allows you
 to edit, delete or perform a check on any of them.
@@ -14,41 +14,43 @@ to edit, delete or perform a check on any of them.
    :depth: 1
 
 
-*******************
-Create a New Moblog
-*******************
+**********************
+Moblog Creation Fields
+**********************
 
-This button creates a new Moblog account.
+.. contents::
+  :local:
+  :depth: 2
 
 General Settings
 ================
 
-Full Moblog Name
-----------------
+Moblog name
+-----------
 
 The full display name of the Moblog account.
 
-Short Name
+Short name
 ----------
 
 The short name for the Moblog account. It must be a single word with no
 spaces or special punctuation.
 
-Time Between Checks
+Time between checks
 -------------------
 
 The amount of time that will elapse between checks of your Moblog
 account. This is used in conjunction with the
 :ref:`check_moblog_tag` on your page.
 
-Moblog Enabled
---------------
+Moblog enabled?
+---------------
 
 You can determine whether or not the Moblog account is enabled. If the
 account is disabled then it will not be included when checks are made.
 
-File Archive Mode
------------------
+File archive mode enabled?
+--------------------------
 
 Enabling this preference basically means that your moblog is only used
 for uploading files. With this enabled, entries in the corresponding
@@ -57,46 +59,46 @@ channel will not be created when a moblog email is processed.
 Channel Entry Settings
 ======================
 
-Choose Channel
---------------
+Channel
+-------
 
 Determine with which channel the Moblog account will be associated. When
 you send in an entry, the entry will go into this channel. If you do not
 specify a channel, then no entries will be created when you send an
 email; only the attachments will be processed.
 
-Default Categories
+Default categories
 ------------------
 
 You may choose which category or categories the entry will be assigned
 to. This choice is simply a default; it can be overridden when sending
 the email. Field must be of the textarea type.
 
-Default Field
+Default field
 -------------
 
 You may choose which field the entry will be assigned to. This choice is
 simply a default; it can be overridden when sending the email.
 
-Default Status
+Default status
 --------------
 
 You may choose which status the entry will be assigned to. This choice
 is simply a default; it can be overridden when sending the email.
 
-Default Author
+Default author
 --------------
 
 You may choose which field the entry will be assigned to. This choice is
 simply a default; it can be overridden when sending the email.
 
-Make Entry Sticky?
+Make entry sticky?
 ------------------
 
 You may choose whether or not entries submitted via the Moblog should be
 marked as "sticky" by default.
 
-Allow Overrides in Email?
+Allow overrides in email?
 -------------------------
 
 This allows you to specify whether or not you can override the default
@@ -105,7 +107,7 @@ values specified on this page by including
 turned on, this preference will cause the Moblog to ignore any overrides
 sent along with the email.
 
-Moblog Template
+Moblog template
 ---------------
 
 Define how the information you submit in your email is
@@ -269,19 +271,19 @@ The width (in pixels) of the uploaded image.
 Email Settings
 ==============
 
-Email Account Type
+Email account type
 ------------------
 
 The type of email account. Currently, only POP3 accounts are supported.
 
-Email Address
+Email address
 -------------
 
 This is the email account to which you will be sending your emails.
 ExpressionEngine will check this account to find emails you've sent that
 should be processed by the Moblog Module.
 
-Incoming Mail Server
+Incoming mail server
 --------------------
 
 The email server on which the email account you specified resides. This
@@ -290,7 +292,7 @@ typically something like mail.example.com. If you are using POP3 over
 SSL, you must prefix the server address with **ssl://**, e.g.
 **ssl://pop.gmail.com**.
 
-Email Account Username
+Email account username
 ----------------------
 
 The username for the specified email account. Once submitted, the
@@ -298,13 +300,13 @@ information will be encrypted in ExpressionEngine. Remember that some
 email accounts require you to use the full email address as the
 "username": username@example.com.
 
-Email Account Password
+Email account password
 ----------------------
 
 The password for the specified email account. Once submitted, the
 information will be encrypted in ExpressionEngine.
 
-Moblog Subject Prefix
+Moblog subject prefix
 ---------------------
 
 When ExpressionEngine checks the specified email account, it will ignore
@@ -314,7 +316,7 @@ can appear anywhere in the subject. If you leave this setting blank,
 then all emails will be processed. By default, any text in the subject
 that is *not* the subject prefix will be used for the entry title.
 
-Authorization Required in Email?
+Authorization required in email?
 --------------------------------
 
 If this preferences is set to Yes, then you will need to provide a valid
@@ -323,7 +325,7 @@ security so that only authorized people will be able to post via the
 Moblog Modules. If the user authentication from the email fails then an
 entry will not be posted.
 
-Delete Unauthorized Moblog Emails?
+Delete unauthorized moblog emails?
 ----------------------------------
 
 You may determine how ExpressionEngine will handle an "unauthorized"
@@ -370,24 +372,24 @@ order to remove the desired content.
 File Settings
 =============
 
-Upload Directory for Files
+Upload directory for files
 --------------------------
 
 You may determine into which of your File Upload directories the file
 attachments will be placed. These upload directories are defined in the
-:doc:`/cp/content/files/file_upload_preferences` section.
+:doc:`/cp/files/uploads/form` section.
 
-Image Size
+Image size
 ----------
 
 Choose the image from your defined image dimensions from the selected
 upload directory. If you don't choose a size, the image will upload at
 full size. These sizes are defined in the
-:doc:`/cp/content/files/file_upload_preferences` section.
+:doc:`/cp/files/uploads/form` section.
 
-Thumb Size
+Thumb size
 ----------
 
 Choose the thumbnail size from your defined image dimensions from the
 selected upload directory. These sizes are defined in the
-:doc:`/cp/content/files/file_upload_preferences` section.
+:doc:`/cp/files/uploads/form` section.
