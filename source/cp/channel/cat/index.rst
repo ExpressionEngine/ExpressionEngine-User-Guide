@@ -3,7 +3,7 @@ Category Groups
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Category Groups`
+**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Category Groups`
 
 .. Overview
 

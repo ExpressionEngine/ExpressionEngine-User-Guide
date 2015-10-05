@@ -3,7 +3,7 @@ Field Groups
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Field Groups`
+**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Field Groups`
 
 .. Overview
 
@@ -51,7 +51,7 @@ The icons in the manage column perform actions on the field group in its row.
 Edit
 ^^^^
 
-This will take you to the field group's :doc:`create edit <form>`.
+This will take you to the field group's :doc:`create/edit <form>`.
 
 fields
 ^^^^^^

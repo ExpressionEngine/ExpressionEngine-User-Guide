@@ -3,7 +3,7 @@ Statuses
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Status Groups --> View`
+**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Status Groups --> Statuses`
 
 .. Overview
 

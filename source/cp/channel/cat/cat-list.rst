@@ -3,7 +3,8 @@ Categories
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Category Groups --> View`
+
+**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Category Groups --> Categories`
 
 .. Overview
 
@@ -36,7 +37,7 @@ Actions
 Create New
 ~~~~~~~~~~
 
-This will take you to the :doc:`create form <form-cat>`.
+This will take you to the category :doc:`create form <form-cat>`.
 
 Order
 ~~~~~
@@ -47,7 +48,7 @@ the categories by dragging and dropping the rows.
 Edit
 ~~~~
 
-This will take you to the category group's :doc:`edit form <form-cat>`.
+This will take you to the category edit :doc:`edit form <form-cat>`.
 
 Bulk Actions
 ~~~~~~~~~~~~

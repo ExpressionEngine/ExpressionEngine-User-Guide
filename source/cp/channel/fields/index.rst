@@ -3,7 +3,7 @@ Custom Fields
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Field Groups --> fields`
+**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Field Groups --> Custom Fields`
 
 .. Overview
 
