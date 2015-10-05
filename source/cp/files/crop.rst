@@ -2,8 +2,8 @@ Crop, Rotate & Resize Image
 ===========================
 
 .. .. rst-class:: cp-path
-..
-.. **Control Panel Location:** :menuselection:`Files`
+
+**Control Panel Location:** :menuselection:`Files --> Crop`
 
 .. Overview
 
@@ -37,8 +37,12 @@ Crop
 Constraints
 ^^^^^^^^^^^
 
+Maximum width and height to crop this image down to.
+
 Coordinates
 ^^^^^^^^^^^
+
+x (horizontal) and y (vertical) axis coordinates to start the crop from.
 
 Rotate
 ~~~~~~
@@ -46,8 +50,13 @@ Rotate
 Rotation
 ^^^^^^^^
 
+Image will be rotated clockwise or counter-clockwise 90° rotations, or flipped
+your image vertically and horizontally.
+
 Resize
 ~~~~~~
 
 Constraints
 ^^^^^^^^^^^
+
+Maximum width and height to resize this image to.
