@@ -28,6 +28,9 @@ files currently installed.
 Permission Restrictions
 -----------------------
 
+* Access Tools sections: Utilities
+* Access Tools sections: Translation
+
 Actions
 -------
 

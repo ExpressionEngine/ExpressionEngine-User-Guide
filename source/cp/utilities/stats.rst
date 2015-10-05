@@ -20,6 +20,9 @@ information.
 Permission Restrictions
 -----------------------
 
+* Access Tools sections: Utilities
+* Access Tools sections: Data Operations
+
 Actions
 -------
 

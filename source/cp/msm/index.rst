@@ -68,8 +68,8 @@ Requirements
 
 .. Permissions
 
-Permission Restrictions
------------------------
+.. Permission Restrictions
+.. -----------------------
 
 Actions
 -------

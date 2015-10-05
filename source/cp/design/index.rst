@@ -94,7 +94,7 @@ This will take you to the :doc:`snippets/index`.
 New Template Partial
 ^^^^^^^^^^^^^^^^^^^^
 
-This will allow you to :doc:`create a new temlate partial <snippets/form>`.
+This will allow you to :doc:`create a new template partial <snippets/form>`.
 
 Template Variables
 ^^^^^^^^^^^^^^^^^^
@@ -114,12 +114,12 @@ This will take you to the :doc:`routes`.
 Create New Template
 ~~~~~~~~~~~~~~~~~~~
 
-This will take you to the :doc:`create form <template/form>`.
+This will take you to the :doc:`create form <template/create>`.
 
 Template Links
 ~~~~~~~~~~~~~~
 
-This will take you to the template's :doc:`edit form <template/form>`.
+This will take you to the template's :doc:`edit form <template/edit>`.
 
 Manage
 ~~~~~~
@@ -135,7 +135,7 @@ rendered on your site.
 Edit
 ^^^^
 
-This will take you to the template's :doc:`edit form <template/form>`.
+This will take you to the template's :doc:`edit form <template/edit>`.
 
 Settings
 ^^^^^^^^

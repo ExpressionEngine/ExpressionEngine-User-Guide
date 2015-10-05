@@ -2,8 +2,8 @@ File Upload
 ===========
 
 .. .. rst-class:: cp-path
-..
-.. **Control Panel Location:** :menuselection:`Files`
+
+**Control Panel Location:** :menuselection:`Files --> Upload New File`
 
 .. Overview
 
@@ -31,14 +31,25 @@ Fields
 File
 ~~~~
 
+Choose a file to upload.
+
 Title
 ~~~~~
+
+A title to use when listing the file in the File Manager.
 
 Description
 ~~~~~~~~~~~
 
+A description of the file.
+
 Credit
 ~~~~~~
 
+Crediting the author/owner of the file.
+
 Location
 ~~~~~~~~
+
+Where was the file created?
+
