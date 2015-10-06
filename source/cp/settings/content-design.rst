@@ -107,3 +107,7 @@ This setting specifies the URL of the folder where you have your smiley
 graphics located. This setting will automatically be filled in during
 installation, so you should only need to change it if you have altered
 where your smiley graphics are stored.
+
+.. |Smile| image:: /images/smile.gif
+.. |image1| image:: /images/smile.gif
+.. |LOL| image:: /images/lol.gif
