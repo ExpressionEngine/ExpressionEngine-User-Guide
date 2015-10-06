@@ -70,7 +70,7 @@ Save template revisions?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 If this preference is set to "Yes", then any changes you make to one of
-your :doc:`Templates <edit_template>` will be saved. This allows you to
+your :doc:`Templates </cp/design/template/edit>` will be saved. This allows you to
 keep a record of all changes made so that you can easily revert back to
 an earlier version of a Template if you need to do so.
 

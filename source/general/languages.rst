@@ -75,7 +75,7 @@ your changes to your fork of the repository, and `send us a pull request
 take a look at your pull request, make sure everything looks alright,
 and merge it in.
 
-(The :doc:`/cp/tools/utilities/translation_utility` can help create new a
+(The :doc:`/cp/utilities/translate/index` can help create new a
 language pack or update an existing one.)
 
 If you want to provide us with a translation we don't already have, the best way

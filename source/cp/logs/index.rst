@@ -16,7 +16,7 @@ Contents
 
 - :doc:`developer`
 - :doc:`cp`
-- :doc:`throttling`
+- :doc:`throttle`
 - :doc:`email/index`
 - :doc:`search`
 

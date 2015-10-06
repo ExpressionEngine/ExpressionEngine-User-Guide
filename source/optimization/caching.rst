@@ -235,4 +235,4 @@ Caches are cleared automatically when certain actions occur:
     - Editing Wiki Article (clears db cache)
     - Opening or closing a Wiki Revision (clears db cache)
 
-You may also :doc:`manually clear caches </cp/tools/data/clear_cached_data_files>` through the control panel.
+You may also :doc:`manually clear caches </cp/utilities/cache>` through the control panel.

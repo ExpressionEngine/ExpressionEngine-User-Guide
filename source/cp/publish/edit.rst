@@ -45,12 +45,12 @@ This will search entries by title, respecting the current filters.
 Create New
 ~~~~~~~~~~
 
-This will take you to the :doc:`create form <form>` for the indicated channel.
+This will take you to the :doc:`create form <create>` for the indicated channel.
 
 Title links
 ~~~~~~~~~~~
 
-This will take you to the :doc:`edit form <form>` for that entry. This is
+This will take you to the :doc:`edit form <create>` for that entry. This is
 identical to the Edit_ icon.
 
 Comment links
@@ -71,7 +71,7 @@ When a Channel has a defined live look template this action will be made availab
 Edit
 ^^^^
 
-This will take you to the :doc:`edit form <form>`.
+This will take you to the :doc:`edit form <create>`.
 
 Bulk Actions
 ~~~~~~~~~~~~

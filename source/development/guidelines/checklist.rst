@@ -16,7 +16,7 @@ Developer Guidelines Checklist
   - No debugging code leftover unless commented out
   - No whitespace before or after opening/closing PHP tags in files
   - No use of deprecated core methods (check the
-    :doc:`Developer Log </cp/tools/logs/developer_log>` to make
+    :doc:`Developer Log </cp/logs/developer>` to make
     sure no deprecation warnings have surfaced from your add-on)
   - All code is PHP 5.3.10+ compatible
   - Proper use of ``ee()->session->set_cache()`` and

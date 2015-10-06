@@ -22,7 +22,7 @@ Enable the Rich Text Editor
 ===========================
 
 If "Yes", the Rich Text Editor will be applied to any Channel Fields of
-the :doc:`Textarea (Rich Text)</cp/admin/channels/custom_fields_edit>`
+the :doc:`Textarea (Rich Text)</cp/channel/fields/form>`
 fieldtype. If "No", the field will appear as a normal textarea instead.
 
 .. note:: If using the :doc:`/cp/msm/index`, this preference is per-site.

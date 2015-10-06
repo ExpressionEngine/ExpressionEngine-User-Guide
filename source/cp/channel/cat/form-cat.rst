@@ -38,7 +38,7 @@ URL title
 ~~~~~~~~~
 
 The human readable category name used in the URL when using :doc:`Category
-URL Titles in Links <global_channel_preferences>`.
+URL Titles in Links </cp/settings/content-design>`.
 
 Description
 ~~~~~~~~~~~
@@ -64,4 +64,5 @@ level" category with no parent.
 Custom Fields
 -------------
 
-Any :doc:`custom category fields <fields/index>` that exist for this category group will be included in the form.
+Any :doc:`custom category fields <field/index>` that exist for this category
+group will be included in the form.

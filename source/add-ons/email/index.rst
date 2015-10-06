@@ -15,7 +15,7 @@ ability to create contact forms and tell-a-friend forms.
 .. note::
    The Email Module is not installed by default, so before using
    these tags make sure it is installed via the :doc:`Modules
-   Page </cp/add-ons/module_manager>` at :menuselection:`Admin --> Modules`.
+   Page </cp/addons/index>` at :menuselection:`Admin --> Modules`.
 
 .. toctree::
 	:glob:

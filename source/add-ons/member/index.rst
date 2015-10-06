@@ -22,7 +22,7 @@ You'll find many member management options available at:
 - The :doc:`Members </cp/members/index>` section, which
   hosts a comprehensive suite of member management utilities
   including
-  the :doc:`Membership Preferences </cp/members/membership_preferences>`
+  the :doc:`Membership Preferences </cp/settings/members>`
   page.
 - The My Account Page, accessible from the Control Panel's sidebar.
   It can also display information for any member if you choose a

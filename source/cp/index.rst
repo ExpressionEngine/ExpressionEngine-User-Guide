@@ -56,7 +56,7 @@ Developer Tools
   - :doc:`settings/comments`
   - :doc:`settings/buttons/index`
   - :doc:`settings/template`
-  - :doc:`/cp/addons/settings/pages/settings`
+  - :doc:`/add-ons/pages/control_panel/index`
   - :doc:`settings/word-censor`
 
 - :doc:`settings/members`

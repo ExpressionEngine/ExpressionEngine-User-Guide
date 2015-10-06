@@ -62,8 +62,7 @@ Requirements
 -  Purchased license of the latest version of ExpressionEngine
 -  All Sites must reside on the same server
 -  If using sub-domains or domains, directories must be able to access
-   your main installation system directory. Please see :doc:`Setup Domains
-   and Sub-domains <domainsetup>` for more information.
+   your main installation system directory.
 -  License holder must be the owner of all Sites
 
 .. Permissions

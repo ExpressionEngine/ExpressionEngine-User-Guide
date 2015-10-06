@@ -117,7 +117,7 @@ to. This variable is **required** unless you only have a single channel.
 Multiple channels may also be specified.
 
 You must specify this parameter if you use the :doc:`category name in
-URL </cp/admin/channels/global_channel_preferences>` feature.
+URL </cp/settings/content-design>` feature.
 
 class=
 ------

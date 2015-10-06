@@ -1,7 +1,7 @@
 Settings
 ~~~~~~~~
 
-This will take you to :doc:`form-settings`.
+This will take you to :doc:`/cp/channel/form-settings`.
 
 Search
 ~~~~~~

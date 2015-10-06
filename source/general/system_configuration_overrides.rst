@@ -142,7 +142,7 @@ $config['allow_extensions'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Utilities --> Debug Extensions`:
-:doc:`Disable Extensions? </cp/utilities/extensions/`
+:doc:`Disable Extensions? </cp/utilities/extensions/>`
 
 
 allow_member_localization
@@ -1949,7 +1949,7 @@ enable_search_log
 -----------------
 
 If enabled, each searched term will be logged and can be viewed in the
-:doc:`Search Log </cp/tools/logs/search_log>`.
+:doc:`Search Log </cp/logs/search>`.
 
 ========== ========
 Value      Behavior

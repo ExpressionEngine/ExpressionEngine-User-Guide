@@ -20,6 +20,6 @@ the :menuselection:`My Account --> Administrative Options` page.
 
 If you do not wish to permit your members to set their own localization
 preferences you can disable the feature in the :doc:`Membership
-Preferences </cp/members/membership_preferences>` page of the
+Preferences </cp/settings/members>` page of the
 Control Panel. When disabled, the localization preferences page will not
 be accessible to members in their member profile area.

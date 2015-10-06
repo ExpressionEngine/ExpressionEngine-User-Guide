@@ -31,7 +31,7 @@ Contents
   - :doc:`ignore`
   - :doc:`group`
   - :doc:`cp-settings`
-  - :doc:`/cp/utilities/communicate`
+  - :doc:`/cp/utilities/communicate/index`
   - :doc:`login`
   - :doc:`delete`
 

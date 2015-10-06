@@ -26,7 +26,7 @@ Contents
   - :doc:`comments`
   - :doc:`buttons/index`
   - :doc:`template`
-  - :doc:`/cp/addons/settings/pages/settings`
+  - :doc:`/add-ons/pages/control_panel/index`
   - :doc:`word-censor`
 
 - :doc:`members`

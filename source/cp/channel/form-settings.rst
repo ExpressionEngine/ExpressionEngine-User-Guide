@@ -98,14 +98,14 @@ Status
 ~~~~~~
 
 The default status for new channel entries. The available options depend
-on what :doc:`Status Group <channel_groups>` the channel is assigned to
+on what :doc:`Status Group <status/index>` the channel is assigned to
 use and which statuses are defined for that group.
 
 Category
 ~~~~~~~~
 
 The default category for new channel entries. The available options
-depend on what :doc:`Category Group <channel_groups>` the channel is
+depend on what :doc:`Category Group <cat/index>` the channel is
 assigned to use and which categories are defined for that group. In
 addition to the categories from that group, the "None" option is also
 available, in which case no category will be selected by default.
@@ -115,7 +115,7 @@ Search excerpt
 
 You can specify which field from your entries to use in search result
 excerpts. The list is dynamically populated depending on which :doc:`Field
-Group <channel_groups>` the channel is assigned to use and which
+Group <fields/groups/index>` the channel is assigned to use and which
 fields are defined for that group. Only fields that have been set as
 "searchable" will be included.
 
@@ -220,7 +220,8 @@ Determines whether or not comments are allowed in this channel.
 Allow comments default?
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-When set to yes, the "Allow comments" option on the publish page will be set to "yes" by default
+When set to yes, the "Allow comments" option on the publish page will be set to
+"yes" by default
 
 Require membership?
 ~~~~~~~~~~~~~~~~~~~
@@ -235,7 +236,7 @@ Require Email?
 
 You can optionally require that anyone posting comments must list an
 email address. You can determine in your
-:doc:`/cp/design/templates/index` whether or not the address is shown
+:doc:`/cp/design/index` whether or not the address is shown
 publicly, but requiring an email address in order to post comments can
 help reduce the number of "spam" comments you receive since the visitor
 must submit a valid email address.
@@ -249,7 +250,7 @@ review/moderation by an administrator.
 
 Member Groups (such as the SuperAdmin Group by default) can be set to
 bypass comment moderation and have their comments posted immediately.
-That option can be set at :menuselection:`Admin --> Member Groups`.
+That option can be set at :menuselection:`Members --> Member Groups`.
 
 Maximum characters allowed?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

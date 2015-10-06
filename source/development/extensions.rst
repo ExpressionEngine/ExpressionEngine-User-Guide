@@ -32,7 +32,7 @@ itself.
 An Extension is an add-on script that is placed in the
 ``/system/user/addons/<package_name>/`` directory and
 then enabled via the :doc:`Add-on Manager
-</cp/add-ons/index>` in the Control Panel. Extensions can
+</cp/addons/index>` in the Control Panel. Extensions can
 have their own settings and their own database tables, if necessary, but
 neither is required. If settings are available for an Extension, a
 language file is required, but unlike a module there is no control panel

@@ -45,14 +45,14 @@ Displaying Page content is as easy as displaying normal Channel entries.
 The primary difference is that when a Page URI is requested, the URL
 segments do not correlate to a template group and template, as that is
 determined by the template that the particular "page" entry was assigned
-to use on the :doc:`Pages tab </cp/content/publish>` of the Publish
+to use on the :doc:`Pages tab </cp/publish/create>` of the Publish
 form.
 
 Additionally, the page will automatically be treated as a single entry
 page for that page entry, so other tags on the template will need to use
 the dynamic="no" parameter (if available) to display other content.
 
-In the Template chosen on the :doc:`Pages tab </cp/content/publish>` of
+In the Template chosen on the :doc:`Pages tab </cp/publish/create>` of
 the Page entry, use a normal :doc:`Channel Entries tag
 </add-ons/channel/channel_entries>` with any parameters and variables
 that you desire to display the entry, e.g.::

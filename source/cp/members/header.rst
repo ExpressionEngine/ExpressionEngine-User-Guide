@@ -1,7 +1,7 @@
 Settings
 ~~~~~~~~
 
-This will take you to :doc:`/cp/settings/members`.
+This will take you to :doc:`/cp/settings/memberss`.
 
 Search Members
 ~~~~~~~~~~~~~~

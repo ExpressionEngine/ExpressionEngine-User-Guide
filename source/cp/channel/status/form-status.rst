@@ -1,4 +1,4 @@
-Status Create/Edit 
+Status Create/Edit
 ===================
 
 .. rst-class:: cp-path
@@ -41,7 +41,7 @@ Highlight color
 ~~~~~~~~~~~~~~~
 
 This optional field allows you to specify a highlight color for this
-status. This is the color of the status name in the :doc:`/cp/content/edit`
+status. This is the color of the status name in the :doc:`/cp/publish/edit`
 main table. Entries assigned to this status will have their status name
 in this color. That way you can easily make a specific status stand out
 in that table.

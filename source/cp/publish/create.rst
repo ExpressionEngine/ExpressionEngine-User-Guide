@@ -26,9 +26,9 @@ publishing new Entries to your Channels. If you have more than one Channel,
 moving your cursor over the Publish menu will show all of your Channels and
 allow you to select one.
 
-.. tip:: site builders can customize the display of the Publish Page on a per 
-   Channel bases by creating a custom layout.  Just go to the :doc:`Channel 
-   manager <../channel/index>` and click 'layouts' to access the :doc:`Form 
+.. tip:: site builders can customize the display of the Publish Page on a per
+   Channel bases by creating a custom layout.  Just go to the :doc:`Channel
+   manager <../channel/index>` and click 'layouts' to access the :doc:`Form
    layout  <../channel/layouts/index>`.
 
 The Publish interface is broken into the following tabs:
@@ -42,7 +42,9 @@ Title Field
 This field contains the title of your channel entry. Titles can be up to
 100 characters in length.
 
-.. tip:: For those times where 'Title' isn't really the appropriate title, you can set a custom descriptive name for this field on a per channel basis.  Just :doc:`edit the channel settings<../channel/settings>` and specify a **Title field label**.
+.. tip:: For those times where 'Title' isn't really the appropriate title, you
+   can set a custom descriptive name for this field on a per channel basis.
+   Just :doc:`edit the channel settings <../channel/settings>` and specify a **Title field label**.
 
 URL Title
 ~~~~~~~~~
@@ -77,7 +79,7 @@ Entry Fields
 ~~~~~~~~~~~~
 
 The names and types of entry fields displayed will be determined by what
-:doc:`/cp/admin/channels/custom_channel_fields` you have defined for
+:doc:`/cp/channel/fields/index` you have defined for
 this channel. If an entry field is set to be "hidden" by default, it
 will have to be expanded by clicking on the field name before content
 can be entered. In addition to the field itself, you can also choose the
@@ -164,7 +166,7 @@ Status
 There are two primary statuses that are always available: Open and
 Closed. Typically, "open" entries are viewable at your site, and
 "closed" entries are not. You can add additional statuses for editorial
-workflow in your :doc:`/cp/admin/channels/statuses` page, and opt to
+workflow in your :doc:`/cp/channel/status/index` page, and opt to
 display or suppress entries assigned to these by modifying the "status"
 parameter found in the various "Channel" Tags in your Templates.
 

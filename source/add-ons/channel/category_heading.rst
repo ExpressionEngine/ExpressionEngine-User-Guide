@@ -76,7 +76,7 @@ to.
 	separate category groups.
 
 You must specify this parameter if you use the :doc:`Category URL Titles
-In Links </cp/admin/channels/global_channel_preferences>` feature.
+In Links </cp/settings/content-design>` feature.
 
 *********
 Variables

@@ -47,7 +47,7 @@ Short name
 
 The "short name" for the channel is the name used internally within the
 program. It is also used when specifying a channel in variables of
-parameters in your :doc:`/cp/design/templates/index`. It is not normally
+parameters in your :doc:`/cp/design/index`. It is not normally
 shown to visitors or otherwise exposed outside of your channel "setup".
 
 The channel's short name is a required field. It must be a single word
@@ -57,7 +57,7 @@ channel's "short name" might be joe_channel.
 Status groups
 ~~~~~~~~~~~~~
 
-Sets the :doc:`status group <statuses>` assigned to the channel.
+Sets the :doc:`status group <status/index>` assigned to the channel.
 This determines what statuses are associated with the channel. The list
 is dynamically populated with all the existing groups as well as "None".
 
@@ -74,7 +74,7 @@ Sets the title field label in the Publish form for this channel.
 Custom field group
 ~~~~~~~~~~~~~~~~~~
 
-Sets the :doc:`field group <custom_channel_fields>` assigned to
+Sets the :doc:`field group <fields/groups/index>` assigned to
 the channel. This determines which channel fields are associated with
 the channel. The list is dynamically populated with all the existing
 groups as well as "None".
@@ -82,7 +82,7 @@ groups as well as "None".
 Category groups
 ~~~~~~~~~~~~~~~
 
-Sets the :doc:`category groups <category_management>` assigned
+Sets the :doc:`category groups <cat/index>` assigned
 to the channel. This determines what categories are associated with the
 channel. The list is dynamically populated with all the existing groups
 as well as "None".
