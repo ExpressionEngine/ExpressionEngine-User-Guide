@@ -101,7 +101,7 @@ Human-readable time
 
   Returns a common human-readable date format conforming to
   ExpressionEngine's :doc:`default time formatting setting
-  </cp/admin/localization_settings>`. This method is most commonly used
+  </cp/settings/general>`. This method is most commonly used
   to express dates in the control panel. ::
 
     ee()->localize->human_time();

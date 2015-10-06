@@ -11,8 +11,8 @@ Make sure you substitute "template_group" and "template" with the name
 of an actual template group and template.
 
 When the path variable is rendered it will automatically include your
-site URL, as you've defined in your :doc:`General Configuration
-</cp/admin/general_configuration>`.
+site URL, as you've defined in your :doc:`URL and Path Settings 
+</cp/settings/urls>`.
 
 For example, a variable like this::
 

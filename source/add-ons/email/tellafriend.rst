@@ -359,7 +359,7 @@ that it is only displayed if necessary::
 
 The setting to disable or enable CAPTCHA for the tell-a-friend form can
 be found in the :doc:`Email Configuration
-</cp/admin/email_configuration>` preferences.
+</cp/settings/email>` preferences.
 
 from
 ~~~~

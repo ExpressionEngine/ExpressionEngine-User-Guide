@@ -13,7 +13,7 @@ If people browsing your site are not members, or if they have not set a
 time zone preferences in their personal profile, the times will instead
 be shown according to your master system localization settings found in
 the :doc:`Localization
-Settings </cp/admin/localization_settings>` area of
+Settings </cp/settings/general>` area of
 your Control Panel. If you prefer that the localization settings of a
 particular member be used as the site default this can be specified in
 the :menuselection:`My Account --> Administrative Options` page.

@@ -185,7 +185,7 @@ The ``timezone=`` parameter will convert the date to the specified timezone::
 	timezone="America/Los_Angeles"
 
 This will override the timezone specified in the
-:doc:`localization settings </cp/admin/localization_settings>` in the control
+:doc:`localization settings </cp/settings/general>` in the control
 panel, and the member's localization settings.  PHP.net has a
 `list of supported timezones <http://php.net/manual/en/timezones.php>`_.
 

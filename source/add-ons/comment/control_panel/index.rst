@@ -78,7 +78,7 @@ thus found in the Comment Posting Preferences section of the
 Force word censoring for comments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:doc:`Word censoring </cp/admin/word_censoring>` normally applies to the
+:doc:`Word censoring </cp/settings/word-censor>` normally applies to the
 entire site, affecting both channel entries and comments. This setting
 allows you to apply word censoring to comments, even when it is not
 enabled system-wide.

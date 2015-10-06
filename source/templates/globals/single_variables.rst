@@ -491,7 +491,7 @@ webmaster\_email
   {encode="{webmaster_email}" title="Contact Us"}
 
 The email address for the site, as specified in :doc:`Email
-Configuration </cp/admin/email_configuration>`.
+Configuration </cp/settings/email>`.
 
 .. _global_csrf_token:
 
