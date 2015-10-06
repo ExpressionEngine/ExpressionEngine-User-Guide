@@ -105,10 +105,3 @@ Update
 ^^^^^^
 
 The selected add-ons will be updated.
-
-.. toctree::
-  :glob:
-  :hidden:
-  :titlesonly:
-
-  *
