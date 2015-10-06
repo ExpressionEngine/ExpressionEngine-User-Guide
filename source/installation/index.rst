@@ -5,40 +5,47 @@ Installation & Updates
 Installation
 ************
 
-- :doc:`/installation/requirements`
-- :doc:`/installation/installation`
-- :doc:`/installation/best_practices`
+- :doc:`requirements`
+- :doc:`installation`
+- :doc:`best_practices`
 
 
 Updates & Upgrades
 ******************
 
-- :doc:`/installation/update`
-- :doc:`/installation/upgrade_from_2.x`
-- :doc:`/installation/upgrade_from_core`
-- :doc:`/installation/version_notes`
+- :doc:`update`
+- :doc:`upgrade_from_2.x`
+- :doc:`upgrade_from_core`
+- :doc:`version_notes`
 
 Maintenance & Operations
 ************************
 
 .. toctree::
+  :titlesonly:
+  :maxdepth: 2
 
   ../operations/index
-
 
 Performance Monitoring
 **********************
 
 .. toctree::
+  :titlesonly:
+  :maxdepth: 2
 
   ../monitoring/index
-
 
 .. toctree::
-	:glob:
-	:titlesonly:
-	:hidden:
+  :titlesonly:
+  :hidden:
 
+  requirements
+  installation
+  best_practices
+  update
+  upgrade_from_2.x
+  upgrade_from_core
+  version_notes
   ../operations/index
   ../monitoring/index
-	*

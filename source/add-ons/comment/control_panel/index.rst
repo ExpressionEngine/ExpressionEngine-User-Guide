@@ -47,7 +47,7 @@ Comment Administration Privileges
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Comment administration permissions are set on a per member group basis
-in :doc:`Create/Edit Member Groups </cp/members/member_groups_edit>`.
+in :doc:`Create/Edit Member Groups </cp/members/groups/form>`.
 
 -  **Can Moderate Comments**: Can view all comments and change the
    status of any comment.

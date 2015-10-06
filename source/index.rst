@@ -19,10 +19,8 @@ The Back-End
 
   cp/index
   add-ons/index
-  operations/index
   optimization/index
   security/index
-  monitoring/index
 
 *************
 The Front-End

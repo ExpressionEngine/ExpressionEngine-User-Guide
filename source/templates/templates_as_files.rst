@@ -86,9 +86,13 @@ addition to updating the database).
 Creating Templates Via Flat Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you load the :doc:`Template Manager
-</cp/design/index>` ExpressionEngine automatically searches your 
-template directory and creates new template groups and templates for any appropriately named files and folders that do not already have an associated template.
+When you load the :doc:`Template Manager </cp/design/index>` ExpressionEngine
+automatically searches your template directory and creates new template groups
+and templates for any appropriately named files and folders that do not already
+have an associated template. automatically searches your template directory and
+creates new template groups and templates for any appropriately named files and
+folders that do not already have an associated template. >>>>>>> Fixing some
+doc links
 
 .. note:: In order to edit flat files through the control panel and have
    new files automatically synced to the database, text files must be

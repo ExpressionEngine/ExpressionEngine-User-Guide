@@ -69,12 +69,15 @@ Developer Tools
   - :doc:`settings/throttling`
   - :doc:`settings/captcha`
 
+:doc:`footer`
+-------------
+
+
 .. toctree::
   :hidden:
   :titlesonly:
   :maxdepth: 1
 
   settings/index
-
-:doc:`footer`
--------------
+  footer
+  overview

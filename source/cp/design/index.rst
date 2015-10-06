@@ -167,3 +167,5 @@ The selected templates will be zipped and downloaded.
 
   *
   */index
+  group/form
+  template/*

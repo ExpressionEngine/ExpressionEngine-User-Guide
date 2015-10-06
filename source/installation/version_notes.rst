@@ -57,3 +57,10 @@ ExpressionEngine 1.x
 -	:doc:`Version Notes 1.2.1 <version_notes_1.2.1>`
 -	:doc:`Version Notes 1.2 <version_notes_1.2>`
 -	:doc:`Version Notes 1.1 <version_notes_1.1>`
+
+.. toctree::
+  :glob:
+  :titlesonly:
+  :hidden:
+
+  version_notes*

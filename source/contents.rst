@@ -1,5 +1,6 @@
 .. toctree::
 
+  index
   about/index
   intro/index
   installation/index
@@ -11,3 +12,5 @@
   urls/index
   how_to/index
   development/index
+  troubleshooting/index
+  bugs_and_security_reports/index
