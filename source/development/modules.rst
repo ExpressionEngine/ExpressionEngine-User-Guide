@@ -383,7 +383,7 @@ The Control Panel File (mcp.module_name.php)
     // END CLASS
 
     /* End of file mcp.module_name.php */
-    /* Location: ./system/expressionengine/third_party/modules/module_name/mcp.module_name.php */
+    /* Location: ./system/user/addons/modules/module_name/mcp.module_name.php */
 
 Control Panel URLS
 ~~~~~~~~~~~~~~~~~~

@@ -16,12 +16,12 @@ What you've done is created a template group and set that group's index template
 as your site's home page.
 
 After creating the group, you'll be taken to the 
-:doc:`Template Manager </cp/design/templates/templates>`.
+:doc:`Template Manager </cp/design/index>`.
 
 |Template Group|
 
 Click `Index` in the **Edit Template** column. This will take you to the 
-:doc:`Template Editor </cp/design/templates/edit_template>`.
+:doc:`Template Editor </cp/design/template/edit>`.
 
 |Template Edit|
 

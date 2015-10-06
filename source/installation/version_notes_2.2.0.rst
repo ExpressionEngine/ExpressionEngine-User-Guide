@@ -8,9 +8,9 @@ Since SafeCracker is being integrated into the core of ExpressionEngine,
 there are a few steps to take when upgrading to 2.2.0 if you currently
 have SafeCracker installed:
 
-#. Remove system/expressionengine/third\_party/safecracker/
-#. Remove system/expressionengine/third\_party/safecracker\_file/
-#. Copy the new system/expressionengine/third\_party/safecracker\_file/
+#. Remove system/user/addons/safecracker/
+#. Remove system/user/addons/safecracker\_file/
+#. Copy the new system/user/addons/safecracker\_file/
    into your third\_party directory
 
 Added Views

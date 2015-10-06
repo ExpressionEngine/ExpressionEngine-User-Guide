@@ -56,7 +56,7 @@ Restore any modifications made to these files, such as updating the system direc
   - :file:`admin.php`
   - :file:`index.php`
 
-.. note:: If you are using :doc:`/cp/sites/index`, the same should be done for each MSM site's :file:`index.php` and :file:`admin.php` file.
+.. note:: If you are using :doc:`/cp/msm/index`, the same should be done for each MSM site's :file:`index.php` and :file:`admin.php` file.
 
 ********************
 5. Check Permissions

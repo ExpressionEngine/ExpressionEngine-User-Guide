@@ -141,8 +141,8 @@ $config['allow_extensions'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Add-Ons --> Extensions`:
-:doc:`Disable Extensions? </cp/add-ons/extension_manager>`
+**Also found in CP:** :menuselection:`Utilities --> Debug Extensions`:
+:doc:`Disable Extensions? </cp/utilities/extensions/`
 
 
 allow_member_localization
@@ -2401,7 +2401,7 @@ taken offline. This can be helpful when performing maintenance on only
 one of several MSM sites.
 
 .. note:: This setting will have no effect unless :doc:`Multiple Site
-    Manager </cp/sites/index>` is installed and :ref:`multiple sites are
+    Manager </cp/msm/index>` is installed and :ref:`multiple sites are
     enabled <multiple_sites_enabled>`.
 
 .. note:: When used in the main configuration file, :file:`config.php`,
@@ -3950,7 +3950,7 @@ save_tmpl_revisions
 
 Enable :ref:`template revisions <template-save-revision>`. Template
 history is saved when changes are made within the :doc:`template editor
-</cp/design/templates/edit_template>`.
+</cp/design/template/edit>`.
 
 ========== ========
 Value      Behavior

@@ -30,4 +30,4 @@ $lang = array(
 );
 
 /* End of file lang.fortunes.php */
-/* Location: ./system/expressionengine/third_party/language/english/lang.fortunes.php */
+/* Location: ./system/user/addons/language/english/lang.fortunes.php */

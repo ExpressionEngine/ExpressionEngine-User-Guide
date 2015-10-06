@@ -77,7 +77,7 @@ Scoping
 Items stored in the cache by default are scoped to the site currently
 saving or retrieving from the cache. This prevents cache keys from
 colliding when the same keys are used in
-:doc:`multiple sites </cp/sites/index>` in the same ExpressionEngine
+:doc:`multiple sites </cp/msm/index>` in the same ExpressionEngine
 install.
 
 But you may want the same cache item available across all sites in

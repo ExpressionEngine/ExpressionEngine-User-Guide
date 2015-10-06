@@ -35,7 +35,7 @@ much of our file naming conventions. Based on this name, we need to
 create a folder named 'download' in ExpressionEngines's third party
 package folder::
 
-  /system/expressionengine/third_party/download/
+  /system/user/addons/download/
 
 Inside that folder, there are 4 required files. In addition, this module
 adds a tab to the publish page, and we will have numerous view files

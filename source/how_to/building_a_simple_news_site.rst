@@ -546,6 +546,6 @@ interested in:
 - :doc:`/intro/getting_the_most`
 - :doc:`/add-ons/index`
 - :doc:`/urls/remove_index.php`
-- :doc:`/cp/sites/index`
+- :doc:`/cp/msm/index`
 - :doc:`/templates/php`
 - :doc:`/templates/comments`

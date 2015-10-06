@@ -28,7 +28,7 @@ the Control Panel::
   // END Strip_tags_rte class
 
   /* End of file rte.strip_tags.php */
-  /* Location: ./system/expressionengine/third_party/strip_tags/rte.strip_tags.php */
+  /* Location: ./system/user/addons/strip_tags/rte.strip_tags.php */
 
 Example Tool
 ------------

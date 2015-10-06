@@ -63,11 +63,8 @@ Why not hard code URLs instead?
 
 The biggest advantage to using the path variable whenever you must
 create a link is that if your site URL ever changes you can simply
-update your :doc:`General Configuration
-</cp/admin/general_configuration>` page with the new URL and every link
-in your templates will update accordingly. Using the path variable is
-also less prone to errors since you only need to know two pieces of
-information: The Template Group name and the template name.
+update your :doc:`URL and Path Settings </cp/settings/urls>` page with the 
+new URL and every link in your templates will update accordingly. Using the path variable is also less prone to errors since you only need to know two pieces of information: The Template Group name and the template name.
 
 Other Path Variables
 --------------------

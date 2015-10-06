@@ -70,7 +70,7 @@ Creating Flat Files Via the Template Editor
 
 If saving templates as text files is enabled, you will see a new
 checkbox become available at the bottom of your :doc:`Template editing
-page </cp/design/templates/edit_template>`. When you submit your
+page </cp/design/template/edit>`. When you submit your
 template with the box checked, the Template will be saved as a file (in
 addition to updating the database).
 
@@ -86,27 +86,13 @@ addition to updating the database).
 Creating Templates Via Flat Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you load either the :doc:`Template Manager
-</cp/design/templates/templates>` or the :doc:`Synchronize Templates
-page </cp/design/templates/synchronize_templates>` ExpressionEngine
-automatically searches your template directory and creates new template
-groups and templates for any appropriately named files and folders that
-do not already have an associated template.
+When you load the :doc:`Template Manager
+</cp/design/index>` ExpressionEngine automatically searches your 
+template directory and creates new template groups and templates for any appropriately named files and folders that do not already have an associated template.
 
 .. note:: In order to edit flat files through the control panel and have
    new files automatically synced to the database, text files must be
    writable (file permissions set to 666 or equivalent).
-
-Synchronizing Templates
-~~~~~~~~~~~~~~~~~~~~~~~
-
-On occasion, you may have a number of templates flagged to 'save as
-file' but no associated files. Rather than going to each template
-individually and saving it, you can :doc:`Synchronize Templates
-</cp/design/templates/synchronize_templates>` and any missing files for
-templates set to 'save files' will be recreated based on the database
-version of the template. This will also batch update the database copies
-of any templates whose files are newer.
 
 Running your Site with Flat File Templates
 ------------------------------------------
