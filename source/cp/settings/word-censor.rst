@@ -28,12 +28,16 @@ Settings
 
 .. Each Action/Section
 
+.. _censor-words-enable-label:
+
 Enable censorship?
 ~~~~~~~~~~~~~~~~~~
 
 You may enable or disable word censoring. If you select "Yes", the
 system will replace any specified words in channel entries, comments,
 forum posts, etc. according to your preference below.
+
+.. _censor-replace-label:
 
 Replacement characters
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -44,6 +48,8 @@ word, and "shucks" is in your censored list, then anytime "shucks" is
 used it will be replaced with "tisk tisk". If you do not set this
 preference, a pound symbol will be used for each character that is
 censored, so "shucks" would be converted to "######".
+
+.. _censor-words-label:
 
 Words to censor
 ~~~~~~~~~~~~~~~

@@ -112,6 +112,8 @@ the maximum width setting blank if you do not with to impose a limit. The size
 is defined in pixels. This option only applies to uploaded images and not other
 file types.
 
+.. _image_manipulations:
+
 Constrain or Crop
 ~~~~~~~~~~~~~~~~~
 

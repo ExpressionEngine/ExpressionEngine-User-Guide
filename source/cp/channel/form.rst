@@ -28,8 +28,6 @@ Fields
 
 .. Each Field
 
-
-
 Name
 ~~~~
 
@@ -40,7 +38,6 @@ your site.
 The full channel name is a required field. Spaces, punctuation, and
 other special characters are allowed. For example, the channel's
 descriptive name might be Joe's Personal Channel.
-
 
 Short name
 ~~~~~~~~~~
@@ -64,12 +61,10 @@ is dynamically populated with all the existing groups as well as "None".
 If you choose to not assign a status group to a channel, only Super
 Admins will be able to post entries with an 'open' status.
 
-
 Title field label
 ~~~~~~~~~~~~~~~~~
 
 Sets the title field label in the Publish form for this channel.
-
 
 Custom field group
 ~~~~~~~~~~~~~~~~~~

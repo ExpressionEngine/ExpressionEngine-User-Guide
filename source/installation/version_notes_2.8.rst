@@ -35,8 +35,8 @@ conditional in your template.
 New Variable Available in Forgotten Password Instructions
 ---------------------------------------------------------
 
-The ``{username}`` variable can now be used in the :ref:`Forgotten
-Password Instructions <email-notification-templates>` email template,
+The ``{username}`` variable can now be used in the :doc:`Forgotten
+Password Instructions </cp/design/email/index>` email template,
 and installations that have this particular template unmodified from the
 default are updated automatically by the update wizard. If you have
 customized the this email template, you may want to reference the new

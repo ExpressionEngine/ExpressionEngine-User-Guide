@@ -27,6 +27,8 @@ Settings
 
 .. Each Action/Section
 
+.. _global-channel-clear-cache-label:
+
 Clear cache for new entries?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -43,11 +45,15 @@ caching queries that are normally executed dynamically.
 .. note:: Enable this preference only if you **do not** use the "future
 	entries" or "expiring entries" feature.
 
+.. _auto-assign-category-parents-label:
+
 Assign category parents?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Set whether to assign an entry to both the selected category and its
 parent category.
+
+.. _image-resizing-protocol-label:
 
 Protocol
 ~~~~~~~~
@@ -60,6 +66,8 @@ installed and available on your server. The options are:
 - `GD 2 <http://www.boutell.com/gd/>`_
 - `ImageMagick <http://www.imagemagick.org/script/index.php>`_
 - `NetPBM <http://netpbm.sourceforge.net/>`_
+
+.. _image-converter-path-label:
 
 Converter path
 ~~~~~~~~~~~~~~
@@ -80,6 +88,8 @@ a thumbnail image. "thumb" is used by default.
 If the original image was flowers.jpg then the thumbnail would be
 flowers\_thumb.jpg.
 
+.. _emoticon-display-smileys-label:
+
 Enable emoticons?
 ~~~~~~~~~~~~~~~~~
 
@@ -88,6 +98,8 @@ smileys are rendered as graphics on your site. If this preference is set
 to "No" then the actual code such as :-) or :lol: will be displayed
 instead of the |image1| or |LOL|
 
+.. _emoticon-url-folder-label:
+
 URL
 ~~~
 
@@ -95,7 +107,3 @@ This setting specifies the URL of the folder where you have your smiley
 graphics located. This setting will automatically be filled in during
 installation, so you should only need to change it if you have altered
 where your smiley graphics are stored.
-
-.. |Smile| image:: /images/smile.gif
-.. |image1| image:: /images/smile.gif
-.. |LOL| image:: /images/lol.gif

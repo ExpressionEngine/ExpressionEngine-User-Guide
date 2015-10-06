@@ -28,12 +28,16 @@ Settings
 
 .. Each Action/Section
 
+.. _avatar-enable-label:
+
 Allow avatars?
 ~~~~~~~~~~~~~~
 
 This determines whether avatars are enabled for your site. If enabled,
 then users will be able to associate an image with their account that
 you can optionally display with entries, comments, and forum posts.
+
+.. _avatar-upload-label:
 
 Allow avatar uploads?
 ~~~~~~~~~~~~~~~~~~~~~
@@ -45,6 +49,8 @@ the default avatars.
 .. note:: As a site admin, you can add your own avatars by uploading
     them to :file:`/images/avatars/default_set/`.
 
+.. _avatar-url-label:
+
 Avatar directory
 ~~~~~~~~~~~~~~~~
 
@@ -54,6 +60,8 @@ similar to:
  - http://example.com/images/avatars/
  - ///example.com/images/avatars/
  - /images/avatars/
+
+.. _avatar-path-label:
 
 Avatar path
 ~~~~~~~~~~~
@@ -69,15 +77,21 @@ If you do not know what to use for your full server path, contact your Host or
 server admin. Remember that this upload folder must be set to 777 permissions
 (or otherwise be "writable").
 
+.. _avatar-max-width-label:
+
 Maximum width
 ~~~~~~~~~~~~~
 
 The maximum width (in pixels) allowed for user-uploaded avatars.
 
+.. _avatar-max-height-label:
+
 Maximum height
 ~~~~~~~~~~~~~~
 
 The maximum height (in pixels) allowed for user-uploaded avatars.
+
+.. _avatar-max-kb-label:
 
 Maximum file size (kb)
 ~~~~~~~~~~~~~~~~~~~~~~

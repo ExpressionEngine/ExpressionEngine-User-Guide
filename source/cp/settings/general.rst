@@ -43,10 +43,10 @@ Short name
 
 This will be used in any code-based references to your Site.
 
+.. _general-config-system-on-label:
+
 Website online?
 ~~~~~~~~~~~~~~~
-
-.. todo:: Add link to the '"Offline" Website Access permission' text.
 
 This indicates whether or not your site is "live" and displayed to the public.
 If you set this preference to "Offline" only members of the Super Admin group,
@@ -54,6 +54,8 @@ and all groups with the "Offline" Website Access permission, will be able to
 see the site. All other users will be shown the System Offline page, which you
 can edit at :menuselection:`Developer Tools --> Template Manager --> Messages
 --> System Offline`.
+
+.. _general-config-new-version-label:
 
 New version auto check
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -74,6 +76,8 @@ Language
 The language pack that members will see when logged in to the Control
 Panel. This only affects the Control Panel.
 Members are able to override this setting in :doc:`/cp/members/profile/settings`.
+
+.. _sysadmin-site-timezone-label:
 
 Timezone
 ~~~~~~~~

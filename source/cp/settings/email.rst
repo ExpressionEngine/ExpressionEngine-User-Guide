@@ -31,6 +31,8 @@ Settings
 .. Each Action/Section
 
 
+.. _email-site-return-email-label:
+
 Address
 ~~~~~~~
 
@@ -40,6 +42,8 @@ many Email servers will not accept Emails without a valid From or
 Reply-to address, therefore we strongly recommend filling this field
 out.
 
+.. _email-site-webmaster-name-label:
+
 From name
 ~~~~~~~~~
 
@@ -47,10 +51,14 @@ This setting lets you specify a **name** to be used in the From and
 Reply-to email fields. As with the above field, we encourage you to set
 it to help prevent your emails from being filtered as spam.
 
+.. _email-character-encoding-label:
+
 Character encoding
 ~~~~~~~~~~~~~~~~~~
 
 Specifies the character encoding that the emails will be sent with.
+
+.. _email-protocol-label:
 
 Protocol
 ~~~~~~~~
@@ -83,6 +91,8 @@ Email can be sent by ExpressionEngine by one of three protocols.
    likely need to fill out the three fields following it to use this
    protocol.
 
+.. _email-smtp-server-label:
+
 Server address
 ~~~~~~~~~~~~~~
 
@@ -91,6 +101,8 @@ fill out this field, which specifies the server address of the SMTP
 server. This setting is ignored if "SMTP" is not selected as the email
 protocol.
 
+.. _email-smtp-username-label:
+
 Username
 ~~~~~~~~
 
@@ -98,12 +110,16 @@ The username used to log in to your SMTP server. Not all SMTP servers
 require you to *authenticate*, but many of them do. In those cases you
 will need to specify the username and password (below).
 
+.. _email-smtp-password-label:
+
 Password
 ~~~~~~~~
 
 The password used to log in to your SMTP server. Not all SMTP servers
 require you to *authenticate*, but many of them do. In those cases you
 will need to specify the username (above) and password.
+
+.. _email-default-format-label:
 
 Mail format
 ~~~~~~~~~~~

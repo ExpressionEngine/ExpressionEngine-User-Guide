@@ -4950,8 +4950,8 @@ Example Usage::
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Content --> Files -->
-File Upload Preferences`: :ref:`Edit Upload Destination
-<upload-destination-edit-label>`
+File Upload Preferences`: :doc:`Edit Upload Destination
+</cp/files/uploads/form>`
 
 
 uri_protocol

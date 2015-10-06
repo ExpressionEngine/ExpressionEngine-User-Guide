@@ -29,6 +29,8 @@ Settings
 
 .. Each Action/Section
 
+.. _captcha-require:
+
 Require CAPTCHA?
 ~~~~~~~~~~~~~~~~
 
@@ -38,6 +40,8 @@ and member registrations. If members are logged in, they will not have to enter
 a CAPTCHA unless the `Require CAPTCHA while logged in?`_ preference is enabled
 below.
 
+.. _captcha-use-truetype:
+
 Use TrueType font?
 ~~~~~~~~~~~~~~~~~~
 
@@ -46,12 +50,16 @@ setting. If you receive errors such as Call to undefined function:
 imagettftext() on your site then your server does not support TrueType
 Fonts and you should set this to "No".
 
+.. _captcha-add-random-number:
+
 Add random number?
 ~~~~~~~~~~~~~~~~~~
 
 Specify whether to add a random three-digit number to the end of each
 generated CAPTCHA word. This makes it more difficult for scripts to
 guess or brute-force the form submission.
+
+.. _captcha-require-logged-in-members:
 
 Require CAPTCHA while logged in?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,6 +68,8 @@ If you enable this preference, then members who are logged in will need
 to fill out CAPTCHA information in order to post comments (assuming
 you've enabled CAPTCHA support for comment posting). If you disable this
 setting, then members who are logged in can bypass the CAPTCHA check.
+
+.. _captcha-full-url:
 
 CAPTCHA directory
 ~~~~~~~~~~~~~~~~~
@@ -70,6 +80,8 @@ will be similar to:
  - http://example.com/images/captchas/
  - ///example.com/images/captchas/
  - /images/captchas/
+
+.. _captcha-server-path:
 
 CAPTCHA path
 ~~~~~~~~~~~~

@@ -31,7 +31,12 @@ Fields
 Name
 ~~~~
 
-The name of the Template. This must be a single word with no spaces. You may use the letters a-z, the numbers 0-9, and the underscore and hyphen/dash characters. You should refrain from creating all-numeric Template names as they can cause confusion with Entry IDs used in URLs.
+The name of the Template. This must be a single word with no spaces. You may
+use the letters a-z, the numbers 0-9, and the underscore and hyphen/dash
+characters. You should refrain from creating all-numeric Template names as they
+can cause confusion with Entry IDs used in URLs.
+
+.. _template-type-label:
 
 Type
 ~~~~
@@ -59,4 +64,5 @@ Here you may specify the type of Template:
 Duplicate existing template?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You may choose one of your existing Templates to duplicate its contents. The options are listed by Template\_Group/Template.
+You may choose one of your existing Templates to duplicate its contents. The
+options are listed by Template\_Group/Template.

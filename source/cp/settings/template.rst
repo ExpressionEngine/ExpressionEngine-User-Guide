@@ -28,6 +28,8 @@ Settings
 
 .. Each Action/Section
 
+.. _strict_url_label:
+
 Enable strict URLs?
 ~~~~~~~~~~~~~~~~~~~
 
@@ -49,6 +51,8 @@ relevant 404 pages, and does not allow your content to be shown with
 variances in the URL structure. However, for legacy reasons, Strict URLs
 are disabled by default.
 
+.. _global-template-404-label:
+
 404 page
 ~~~~~~~~
 
@@ -66,6 +70,8 @@ using the :ref:`channel_entries_require_entry` parameter).
 For an explanation regarding how ExpressionEngine interprets your URLs,
 please see :doc:`/urls/url_structure` page.
 
+.. _global-template-save-templates-revisions-label:
+
 Save template revisions?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -73,6 +79,8 @@ If this preference is set to "Yes", then any changes you make to one of
 your :doc:`Templates </cp/design/template/edit>` will be saved. This allows you to
 keep a record of all changes made so that you can easily revert back to
 an earlier version of a Template if you need to do so.
+
+.. _global-template-max-revisions-label:
 
 Maximum revisions?
 ~~~~~~~~~~~~~~~~~~
@@ -82,6 +90,8 @@ template. For example, if you set this to 5, only the most recent 5
 revisions will be saved for any given template. This setting helps
 ensure that your database does not get too large due to storing Template
 revisions.
+
+.. _global-template-save-templates-as-files-label:
 
 Save templates as files?
 ~~~~~~~~~~~~~~~~~~~~~~~~

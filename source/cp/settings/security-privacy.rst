@@ -29,6 +29,8 @@ Settings
 
 .. Each Action/Section
 
+.. _cp-session-type-label:
+
 CP session type
 ~~~~~~~~~~~~~~~
 
@@ -48,6 +50,8 @@ use cookies, session IDs, or a combination. The available options are:
   prevents you from accepting cookies in the event you are behind a
   firewall or due to some other technical issue.
 
+.. _website-session-type-label:
+
 Website Session type
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -62,6 +66,8 @@ options are:
   option since it prevents URLs from showing session IDs.
 - **Session ID only**: Only URL session IDs are used to track the user
   throughout their visit.
+
+.. _cookie-domain-label:
 
 Domain
 ~~~~~~
@@ -101,6 +107,8 @@ you should explicitly set the cookie domain.
     only set cookies for ``.example.com`` if its hostname actually
     includes ``example.com``.
 
+.. _cookie-path-label:
+
 Path
 ~~~~
 
@@ -113,6 +121,8 @@ can be useful if you have ExpressionEngine installed in a sub-directory
 and want to ensure that only that particular installation has access to
 the cookies it sets.
 
+.. _cookie-prefix-label:
+
 Prefix
 ~~~~~~
 
@@ -123,8 +133,16 @@ on the same cookie domain.
 Send cookies over HTTP only?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+When set to yes, cookies will not be accessible through JavaScript.
+
 Send cookies securely?
 ~~~~~~~~~~~~~~~~~~~~~~
+
+When set to yes, cookies will only be transmitted over a secure HTTPS connection.
+
+.. note:: Your site must use SSL everywhere for this to work.
+
+.. _allow-member-username-label:
 
 Allow members to change username?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -133,6 +151,8 @@ As the name suggests, this setting determines whether or not members are
 allowed to change their own usernames after registration. (Members will
 always be able to change their own screen names.)
 
+.. _security-min-username-label:
+
 Minimum username length
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -140,14 +160,16 @@ You may specify the minimum length required for a member username during
 new member registration. Specify the minimum number of characters
 required.
 
+.. _allow-multi-logins-label:
+
 Allow multiple logins?
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Set whether an account can have multiple active sessions at one time.
 
-.. note::
+.. note:: This feature is incompatible with the "Cookies Only" session type.
 
-   This feature is incompatible with the "Cookies Only" session type.
+.. _require-ip-logins-label:
 
 Require user agent and IP for login?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -159,6 +181,8 @@ to "Yes" can help prevent hackers from logging in using direct socket
 connections or from trying to access the system with a masked IP
 address.
 
+.. _security-enable-passwd-lockout-label:
+
 Enable password lock out?
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -169,6 +193,8 @@ deter hackers from using collision attacks to guess poorly chosen
 passwords. The account remains locked for the duration of the time
 period. Once the period expires it becomes unlocked.
 
+.. _security-passwd-lockout-int-label:
+
 Password lock out interval
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -176,6 +202,8 @@ This setting is used together with the previous preference. Here you can
 determine, in minutes, the time interval over which more than four
 invalid login attempts will trigger a lockout. You may use decimals to
 indicate fractions of a minute: e.g. 1.5 equals one and a half minutes.
+
+.. _security-require-secure-passwords-label:
 
 Require secure passwords?
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -186,6 +214,8 @@ containing at least one uppercase character, one lowercase character,
 and one numeric character. Passwords that follow this basic formula are
 much more difficult to guess.
 
+.. _security-min-password-label:
+
 Minimum password length
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -193,6 +223,8 @@ You may specify the minimum length required for a member password during
 new member registration. Specify the minimum number of characters
 required. It is common practice to require passwords at least eight (8)
 characters long.
+
+.. _dict-passwds-label:
 
 Allow dictionary words in passwords?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -202,6 +234,8 @@ passwords. Disabling will make "dictionary attacks" by hackers much more
 difficult.
 
 .. note:: In order to be able to use this setting you must have :ref:`a dictionary file <dict-passwds-file-label>` installed.
+
+.. _dict-passwds-file-label:
 
 Dictionary file
 ~~~~~~~~~~~~~~~
@@ -222,6 +256,8 @@ This option prevents data submitted by users (such as comments) from
 being processed if it is an exact duplicate of data that already exists.
 This setting is designed to deter automated spam attacks as well as
 multiple accidental submissions.
+
+.. _require-ip-posting-submit-comments-label:
 
 Require user agent and IP for posting?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

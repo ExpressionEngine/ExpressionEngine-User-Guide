@@ -185,6 +185,8 @@ When this option is unchecked, your comment submission form will be
 suppressed. Any existing comments will still appear.
 
 
+.. _publish_forum_tab:
+
 Forum Tab
 ---------
 

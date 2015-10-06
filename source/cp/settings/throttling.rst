@@ -29,16 +29,22 @@ Settings
 
 .. Each Action/Section
 
+.. _enable-throttling-label:
+
 Enable throttling?
 ~~~~~~~~~~~~~~~~~~
 
 Allows you to enable or disable this feature.
+
+.. _throttling-no-ip-address-label:
 
 Require IP?
 ~~~~~~~~~~~
 
 Set the system to deny a visitor access if the user's IP address cannot
 be determined while throttling is enabled.
+
+.. _throttling-max-page-load-label:
 
 Maximum page loads
 ~~~~~~~~~~~~~~~~~~
@@ -50,17 +56,23 @@ not browse more than 5 pages within a 10 second interval or the
 throttling feature will be triggered, locking them out of your site
 according to the parameters you set below.
 
+.. _throttling-time-interval-label:
+
 Time interval
 ~~~~~~~~~~~~~
 
 The number of **seconds** during which the above number of page loads
 are allowed.
 
+.. _throttling-lockout-time-label:
+
 Lockout time
 ~~~~~~~~~~~~
 
 The length of time in **seconds** that a user will be unable to use your
 site.
+
+.. _throttling-action-to-take:
 
 Lock out action
 ~~~~~~~~~~~~~~~
@@ -75,11 +87,15 @@ options are:
 -  :guilabel:`Show custom message`: This option will display a custom message
    you can specify.
 
+.. _throttling-url-for-redirect:
+
 Redirect
 ~~~~~~~~
 
 If you choose the :guilabel:`URL Redirect` option above, this preference
 enables you to set the destination URL.
+
+.. _throttling-custom-message:
 
 Message
 ~~~~~~~

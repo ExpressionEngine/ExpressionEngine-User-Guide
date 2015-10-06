@@ -29,12 +29,16 @@ Settings
 
 .. Each Action/Section
 
+.. _general-config-index-name-label:
+
 Website index page
 ~~~~~~~~~~~~~~~~~~
 
 This is the filename of your site's "index" page. By default, this will
 be index.php, which is located in the base folder. You will only need to
 alter this setting if you have changed the filename.
+
+.. _general-config-url-root-label:
 
 Website root directory
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -50,6 +54,8 @@ Then the correct setting would be any of the following:
  - ///example.com/
  - /
 
+.. _general-config-url-cp-label:
+
 Control panel directory
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -60,6 +66,8 @@ will be similar to:
  - ///example.com/admin.php
  - /admin.php
 
+.. _general-config-theme-url-label:
+
 Themes directory
 ~~~~~~~~~~~~~~~~
 
@@ -69,6 +77,8 @@ similar to:
  - http://example.com/themes/
  - ///example.com/themes/
  - /themes/
+
+.. _general-config-theme-path-label:
 
 Themes path
 ~~~~~~~~~~~
