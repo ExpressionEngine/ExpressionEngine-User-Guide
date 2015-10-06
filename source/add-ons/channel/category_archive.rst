@@ -249,7 +249,7 @@ status=
 	status="open"
 
 You may restrict to entries with a particular :doc:`status
-</cp/admin/channels/statuses>`. You can choose multiple statuses using a
+</cp/channel/status/index>`. You can choose multiple statuses using a
 pipe
 
 ::

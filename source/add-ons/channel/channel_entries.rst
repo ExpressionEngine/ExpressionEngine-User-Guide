@@ -206,7 +206,7 @@ category\_group=
 
 
 Category Groups are specified by ID number (the ID number of each
-:doc:`category group </cp/admin/channels/category_management>` is
+:doc:`category group </cp/channel/cat/index>` is
 displayed in the Control Panel). The reason we use the ID is because
 category groups can be called anything (with spaces, quotes, etc.), and
 also renamed. It would be much more difficult to have to update the tag
@@ -237,7 +237,7 @@ channel=
 
 	channel="news"
 
-From which :doc:`channel </cp/admin/channels/channel_management>` to
+From which :doc:`channel </cp/channel/index>` to
 show the entries (will show all channels if no channel is specified).
 Additionally, you can use the pipe character to separate multiple
 channels::
@@ -589,7 +589,7 @@ options for this parameter include:
 -  ``orderby="view_count_four"``
 
 In addition you can order by a :doc:`channel field
-</cp/admin/channels/custom_channel_fields>`. Use the "short\_name" of
+</cp/channel/fields/groups/index>`. Use the "short\_name" of
 the field::
 
 	orderby="name_of_field"
@@ -1050,7 +1050,7 @@ status=
 	status="open"
 
 You may restrict to entries with a particular :doc:`status
-</cp/admin/channels/statuses>`. The two statuses "open" and "closed" are
+</cp/channel/status/index>`. The two statuses "open" and "closed" are
 default statuses that are always available, so you can always specify
 those if needed. If no status parameter is specified, only open status entries
 will be returned.  You can choose multiple statuses using a pipe::

@@ -204,7 +204,7 @@ status=
 
 	status="open"
 
-The channel :doc:`status </cp/admin/channels/statuses>` you would like
+The channel :doc:`status </cp/channel/status/index>` you would like
 entries restricted to. This is useful if you will be displaying entries
 with a status other than "open". You can choose multiple statuses using
 a pipe::

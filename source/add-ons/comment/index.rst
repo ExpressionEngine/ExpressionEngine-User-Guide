@@ -210,7 +210,7 @@ channel=
 
 	channel="which"
 
-From which :doc:`channel </cp/admin/channels/channel_management>` to
+From which :doc:`channel </cp/channel/index>` to
 show the comments (will show comments from any channel if no channel is
 specified). Additionally, you can use the pipe character to separate
 multiple channels::

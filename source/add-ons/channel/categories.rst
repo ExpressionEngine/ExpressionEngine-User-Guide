@@ -87,7 +87,7 @@ category\_group=
 	category_group="2"
 
 Category Groups are specified by ID number (the ID number of each
-:doc:`category group </cp/admin/channels/category_management>` is
+:doc:`category group </cp/channel/cat/index>` is
 displayed in the Control Panel). The reason we use the ID is because
 category groups can be called anything (with spaces, quotes, etc.), and
 also renamed. It would be much more difficult to have to update the tag
@@ -267,7 +267,7 @@ status=
 	status="open"
 
 You may restrict to categories with entries with a particular
-:doc:`status </cp/admin/channels/statuses>`. The two statuses "open" and
+:doc:`status </cp/channel/status/index>`. The two statuses "open" and
 "closed" are default statuses that are always available, so you can
 always specify those if needed. You can choose multiple statuses using a
 pipe

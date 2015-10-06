@@ -153,7 +153,7 @@ Category Group
 
 Categories are a nice way to better organize all of your content in each Channel.
 While we aren't creating any Categories for the purposes of this guide, know that they are a very
-powerful feature with full hiearchy support and more. See the :doc:`Categories </cp/admin/channels/category_management>`
+powerful feature with full hiearchy support and more. See the :doc:`Categories </cp/channel/cat/index>`
 section for more information.
 
 Status Group
@@ -163,7 +163,7 @@ Statuses are typically used to control whether or not (or to whom) a piece of co
 this guide we've stuck with ExpressionEngine's default Status Group, which contains two Statuses: **Open** and
 **Closed**. By default, content with an "Open" status will be shown, while content that is "Closed"
 will not appear at all. There are other creative uses for Statuses, especially when it comes to editorial
-workflows. See the :doc:`Statuses </cp/admin/channels/statuses>` section for more information.
+workflows. See the :doc:`Statuses </cp/channel/status/index>` section for more information.
 
 Channel Field Group
 ===================
