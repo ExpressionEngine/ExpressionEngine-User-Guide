@@ -48,7 +48,12 @@ Solving Problems
 Developing for ExpressionEngine
 *******************************
 
-- :doc:`Add-On Development <development/index>`
+.. toctree::
+  :titlesonly:
+  :maxdepth: 2
+
+  development/index
+
 - :ellislab:`Development & Programming Forum </forums/viewannounce/230178_116/>`
 
 .. For Breadcrumbs
