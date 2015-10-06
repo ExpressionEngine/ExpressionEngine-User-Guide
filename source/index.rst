@@ -117,7 +117,7 @@ Developing for ExpressionEngine
 - :ellislab:`Development & Programming Forum </forums/viewannounce/230178_116/>`
 
 .. toctree::
-  :includehidden:
+  :titlesonly:
   :hidden:
 
   about/index
