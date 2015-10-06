@@ -8,8 +8,6 @@ your store's purchases.
 Simple Commerce Home Page Options
 ---------------------------------
 
-|Simple Commerce Purchases|
-
 Add Purchase
 ~~~~~~~~~~~~
 
@@ -35,8 +33,6 @@ file as a serialized array.
 Purchase Management
 -------------------
 
-|Simple Commerce Purchase Management|
-
 Overview
 ~~~~~~~~
 
@@ -49,8 +45,6 @@ button on the top right.
 
 Adding / Editing Purchases
 --------------------------
-
-|Simple Commerce Add Purchase|
 
 Purchase Identification Number (TXN ID)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -78,6 +72,3 @@ Item Cost
 
 The price payed for the item purchased.
 
-.. |Simple Commerce Purchases| image:: ../../images/sc_cp_purchases.png
-.. |Simple Commerce Purchase Management| image:: ../../images/sc_store_purchases.png
-.. |Simple Commerce Add Purchase| image:: ../../images/sc_add_purchase.png
