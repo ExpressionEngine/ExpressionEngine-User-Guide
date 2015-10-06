@@ -8,17 +8,33 @@ ExpressionEngine 3.0  User Guide
 
   intro/index
   installation/index
+
+************
+The Back-End
+************
+
+.. toctree::
+  :titlesonly:
+  :maxdepth: 2
+
   cp/index
   add-ons/index
-  templates/index
-  urls/index
-  development/index
   operations/index
   optimization/index
   security/index
   monitoring/index
-  how_to/index
 
+*************
+The Front-End
+*************
+
+.. toctree::
+  :titlesonly:
+  :maxdepth: 2
+
+  templates/index
+  urls/index
+  how_to/index
 
 Solving Problems
 ================
@@ -27,6 +43,13 @@ Solving Problems
 - :ellislab:`EllisLab Support </support>`
 - :ellislab:`Community Support Forum </forums/viewannounce/230174_114/>`
 - :doc:`bugs_and_security_reports/index`
+
+*******************************
+Developing for ExpressionEngine
+*******************************
+
+- :doc:`Add-On Development <development/index>`
+- :ellislab:`Development & Programming Forum </forums/viewannounce/230178_116/>`
 
 .. For Breadcrumbs
 
