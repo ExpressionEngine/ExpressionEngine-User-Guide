@@ -64,8 +64,7 @@ The selected categories will be removed. Removing a category will
 cause a confirmation modal to appear that will summarize the action.
 
 .. toctree::
-  :glob:
   :hidden:
   :titlesonly:
 
-  *
+  form-cat
