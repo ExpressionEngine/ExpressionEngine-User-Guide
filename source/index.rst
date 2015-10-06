@@ -55,13 +55,3 @@ Developing for ExpressionEngine
   development/index
 
 - :ellislab:`Development & Programming Forum </forums/viewannounce/230178_116/>`
-
-.. For Breadcrumbs
-
-.. toctree::
-  :glob:
-  :hidden:
-  :titlesonly:
-
-  about/*
-  */index
