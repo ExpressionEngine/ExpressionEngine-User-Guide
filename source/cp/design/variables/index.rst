@@ -48,7 +48,7 @@ Create New
 This will take you to the :doc:`create template form <form>`.
 
 variable Links
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 This will take you to the template variable's :doc:`edit form <form>`.
 
@@ -82,7 +82,7 @@ The selected template variables will be removed. Removing a template variable
 will cause a confirmation modal to appear that will summarize the action.
 
 Export variables
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^
 
 The selected template variables will be zipped and downloaded.
 
