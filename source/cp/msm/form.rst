@@ -13,8 +13,10 @@ This allows you to create or edit a new Site.
 
 .. Permissions
 
-.. Permission Restrictions
-.. -----------------------
+Permission Restrictions
+-----------------------
+
+* Member Group: Super Admins
 
 Fields
 ------

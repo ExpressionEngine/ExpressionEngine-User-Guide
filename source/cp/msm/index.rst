@@ -67,8 +67,10 @@ Requirements
 
 .. Permissions
 
-.. Permission Restrictions
-.. -----------------------
+Permission Restrictions
+-----------------------
+
+* Member Group: Super Admins
 
 Actions
 -------
