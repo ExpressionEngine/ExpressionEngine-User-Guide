@@ -5,7 +5,10 @@ CP Overview
 
 **Control Panel Location:** :menuselection:`Home`
 
+
 The overview page is shown when a member has logged into the control panel, or has clicked the Home icon next to the name of the site in the top navigation bar. The overview page provides a quick glance at site statistics, and provides convenient links to relevant action items. Here's an overview of all the sections that can be visible based on member permissions on the overview page.
+
+.. figure:: ../images/overview.png
 
 Comments
 --------
