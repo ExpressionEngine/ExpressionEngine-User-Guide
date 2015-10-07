@@ -9,6 +9,8 @@ Create/Edit Form Layouts
 
 .. Screenshot (optional)
 
+.. figure:: ../../../images/layout-form.png
+
 .. Permissions
 
 Permission Restrictions

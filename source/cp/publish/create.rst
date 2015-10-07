@@ -11,6 +11,8 @@ Create
 
 .. Screenshot (optional)
 
+.. figure:: ../../images/create.png
+
 .. Permissions
 
 Permission Restrictions
