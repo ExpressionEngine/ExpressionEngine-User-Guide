@@ -54,6 +54,17 @@ The Back-End
   - :doc:`add-ons/spam/index`
   - :doc:`add-ons/statistics/index`
 
+- :doc:`fieldtypes/index`
+
+  - :doc:`fieldtypes/date`
+  - :doc:`fieldtypes/file`
+  - :doc:`fieldtypes/grid`
+  - :doc:`fieldtypes/relationships`
+  - :doc:`fieldtypes/rte`
+  - :doc:`fieldtypes/select`
+  - :doc:`fieldtypes/text`
+  - :doc:`fieldtypes/textarea`
+
 - :doc:`optimization/index`
 
   - :doc:`optimization/caching`
