@@ -3,7 +3,7 @@ Create/Edit Member Group Assignment
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`NULL -> NULL`
+**Control Panel Location:** :menuselection:`Profile -> Member Group`
 
 .. Overview
 
@@ -29,7 +29,3 @@ Member Group
 ~~~~~~~~~~~~
 
 The member group to assign the user to.
-
-Current Password
-~~~~~~~~~~~~~~~~
-

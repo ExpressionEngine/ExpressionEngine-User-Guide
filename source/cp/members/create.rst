@@ -3,7 +3,7 @@ Create/Edit Register a New Member
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`NULL -> NULL`
+**Control Panel Location:** :menuselection:`Members -> Create`
 
 .. Overview
 
@@ -44,7 +44,3 @@ Password
 ~~~~~~~~
 
 Change the user's password.
-
-Confirm Password
-~~~~~~~~~~~~~~~~
-

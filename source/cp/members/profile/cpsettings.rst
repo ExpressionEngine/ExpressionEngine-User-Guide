@@ -1,9 +1,9 @@
-Create/Edit 
-============
+Create/Edit CP Settings
+=======================
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`NULL -> NULL`
+**Control Panel Location:** :menuselection:`Profile -> CP Settings`
 
 .. Overview
 
@@ -24,11 +24,6 @@ Fields
 
 .. Each Field
 
-Login and redirect to
-~~~~~~~~~~~~~~~~~~~~~
-
-Current Password
+Default homepage
 ~~~~~~~~~~~~~~~~
-
-Change the user's password.
 

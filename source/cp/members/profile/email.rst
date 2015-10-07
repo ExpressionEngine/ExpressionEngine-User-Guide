@@ -3,7 +3,7 @@ Create/Edit Email Settings
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`NULL -> NULL`
+**Control Panel Location:** :menuselection:`Profile -> Email Settings`
 
 .. Overview
 
@@ -39,7 +39,3 @@ Options
 ~~~~~~~
 
 Select when notifications are sent for this user.
-
-Current Password
-~~~~~~~~~~~~~~~~
-

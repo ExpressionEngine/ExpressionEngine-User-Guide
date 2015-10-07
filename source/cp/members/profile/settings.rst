@@ -3,7 +3,7 @@ Create/Edit Personal Settings
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`NULL -> NULL`
+**Control Panel Location:** :menuselection:`Profile -> Personal Settings`
 
 .. Overview
 

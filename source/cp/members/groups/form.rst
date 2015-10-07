@@ -3,7 +3,8 @@ Create/Edit All Member Groups
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`NULL -> NULL`
+**Control Panel Location:** :menuselection:`Members -> Member Groups ->
+Create`
 
 .. Overview
 
@@ -28,8 +29,12 @@ Fields
 Name
 ~~~~
 
+The display name of the Member Group.
+
 Description
 ~~~~~~~~~~~
+
+A brief description of the Member Group.
 
 Include members in
 ~~~~~~~~~~~~~~~~~~
