@@ -1,6 +1,10 @@
 Simple Commerce – Managing Store Items
 ======================================
 
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Add-On Manager --> Simple Commerce`
+
 The Items screen gives you at a glance an overview of your store
 items, their price, sale status, and number of purchases. You may select
 items to edit or delete by checking the boxes on the right and selecting
@@ -8,7 +12,7 @@ the appropriate action from the drop-down menu next to the Submit
 button. Items may be added by clicking the **Create New** button on the
 top right.
 
-Simple Commerce Home Page Options
+Items Home Page Options
 ---------------------------------
 
 Create New Item

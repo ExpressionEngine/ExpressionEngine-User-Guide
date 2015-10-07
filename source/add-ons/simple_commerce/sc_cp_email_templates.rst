@@ -1,27 +1,28 @@
 Simple Commerce – Email Templates
 =================================
 
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Add-On Manager --> Simple Commerce --> Email Templates`
+
 Email templates allow you to create highly customized notification
 templates that you can associate with store items. Email templates can
 be created and used for both administrator notifications and customer
 notifications.
 
-Simple Commerce Home Page Options
+Email Templates Home Page Options
 ---------------------------------
-
-|Simple Commerce Purchases|
 
 Add Email Template
 ~~~~~~~~~~~~~~~~~~
 
-The **Add Email Template** link allows you to create email notification
+The **Create New** button allows you to create email notification
 templates.
 
 Edit Email Templates
 ~~~~~~~~~~~~~~~~~~~~
 
-The **Edit Email Templates** link allows you to view and edit existing
-email templates.
+To edit email templates, click the edit button in the toolbar next to the name of the email template you wish to edit.
 
 Add / Edit Email Template
 -------------------------
@@ -29,10 +30,15 @@ Add / Edit Email Template
 Below is an example of a typical administrator purchase notification
 email. ::
 
-	Purchase completed!  QTY {quantity} - {item_name}  Total Payment: {payment_gross} PayPal Transaction Fee: {payment_fee}  --------------------------  Buyer ({payer_status}):  {first_name} {last_name} {payer_business_name}  Address ({address_status}):  {address_name} {address_street} {address_city}, {address_state}  {address_zip} {address_country}
+  Purchase completed!  QTY {quantity} - {item_name}
+  Total Payment: {payment_gross}
+  PayPal TransactionFee: {payment_fee}
+  --------------------------
+  Buyer ({payer_status}): {first_name} {last_name} {payer_business_name}
+  Address ({address_status}): {address_name} {address_street} {address_city}, {address_state}  {address_zip} {address_country}
 
-Email Template Name
-~~~~~~~~~~~~~~~~~~~
+Name
+~~~~
 
 A descriptive name for the email template. This will be shown in the
 email template drop-down menus of the store :doc:`item
@@ -98,5 +104,3 @@ or the email body.
 -  {txn\_id}
 -  {txn\_type}
 -  {verify\_sign}
-
-.. |Simple Commerce Purchases| image:: ../../images/sc_cp_emails.png

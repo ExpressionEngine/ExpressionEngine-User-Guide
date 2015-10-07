@@ -1,23 +1,20 @@
 Simple Commerce – PayPal Settings
 =================================
 
-The bottom section of the Simple Commerce module's control panel defines
-your PayPal settings.
+.. rst-class:: cp-path
 
-|Simple Commerce PayPal Settings|
-
+**Control Panel Location:** :menuselection:`Add-On Manager --> Simple Commerce --> Settings`
 
 .. _sc-paypal-account-label:
 
-PayPal Account
---------------
+PayPal Account Email
+--------------------
 
 Specify the primary email address associated with the PayPal account
 processing payments for store purchases.
 
 Encryption Settings
 -------------------
-
 
 .. _sc-encrypt-buttons-label:
 
@@ -40,8 +37,8 @@ Simple Commerce.
 
 .. _sc-certificate-id-label:
 
-ID Given to Public Certificate by PayPal
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Public Certification ID
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Specify the unique ID that is supplied by PayPal after providing them
 with a public certificate.
@@ -99,5 +96,3 @@ details.
 .. note:: ExpressionEngine must have read access to this directory, but
   for security we highly recommended you use a location above web root
   so that the certificate and key files are not accessible via the web.
-
-.. |Simple Commerce PayPal Settings| image:: ../../images/sc_paypal_settings.png
