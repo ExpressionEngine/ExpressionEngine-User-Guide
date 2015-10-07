@@ -3,7 +3,7 @@ Comment Module Control Panel
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-Ons --> Modules --> Comment`
+**Control Panel Location:** :menuselection:`CP Overview --> Review All New`
 
 .. contents::
 	:local:
@@ -14,8 +14,6 @@ status, or date range. You can select multiple comments
 using the checkboxes on the right, then either delete them or change
 their status using the option menu at the bottom of the page.
 
-|Comment Control Panel|
-
 Main Display
 ------------
 
@@ -24,24 +22,11 @@ Search and Filter
 
 The main table shows the following columns:
 
--  **Display toggle**: Toggles the display of the full comment.
--  **Comment**: The comment body, limited by default to 100 characters
-   with line breaks preserved (see :doc:`view_comment_chars
-   </general/system_configuration_overrides>` and
-   :doc:`view_comment_leave_breaks
-   </general/system_configuration_overrides>` for formatting options).
-   Clicking the comment text allows you to `view or edit the comment
-   <#editing-comments>`_.
--  **Entry Title**: The title of the Entry the comment was posted to.
--  **Name**: The commenter's name.
--  **Email**: The commenter's email address.
+-  **Comment**: The comment body, limited by default to 50 characters. Also includes the commenter's name and the title of the entry commented on.
 -  **Date**: The date and time assigned to the comment.
 -  **IP**: The commenter's IP address.
 -  **Status**: The status of the comment (Pending, Open or Closed).
-
-.. note:: The 'Add IPs to Blacklist' checkbox is only available when
-   deleting comments. The :doc:`Blacklist Module
-   </add-ons/blacklist/index>` must be installed to use this feature.
+-  **Manage**: Contains a link to view full comment details and to edit the comment.
 
 Comment Administration Privileges
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -75,8 +60,8 @@ thus found in the Comment Posting Preferences section of the
 
 .. _comment-force-censoring-label:
 
-Force word censoring for comments
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Enable Word Censoring?
+~~~~~~~~~~~~~~~~~~~~~~
 
 :doc:`Word censoring </cp/settings/word-censor>` normally applies to the
 entire site, affecting both channel entries and comments. This setting
@@ -86,7 +71,7 @@ enabled system-wide.
 
 .. _comment-expired-comments-label:
 
-Moderate expired comments
+Moderate Expired Entries?
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By default, comments are no longer accepted for entries after their
@@ -110,18 +95,13 @@ Editing Comments
 The edit page shows the recorded comment data and allows editing of the
 individual comment.
 
-|Comment Edit Control Panel|
-
 Comments by registered members will use the member data when displaying
-name, email, url and location. Thus these fields will not be editable
+name, email, URL and location. Thus these fields will not be editable
 for registered members.
 
 If accessed by an administrator with only 'Can Moderate Comments'
 privileges, only the status will be editable.
 
-
-.. |Comment Control Panel| image:: ../../../images/comment_cp.png
-.. |Comment Edit Control Panel| image:: ../../../images/comment_edit_form.png
 
 .. toctree::
 	:glob:
