@@ -17,7 +17,6 @@ that directory.
 
 .. Screenshot (optional)
 
-.. todo:: Confirm the behavior.
 .. Lastly, any records in the database that do not have a
 .. corresponding file in the main directory will be deleted from the
 .. database along with any existing resized images. Existing images may
