@@ -7,7 +7,15 @@ Create
 
 .. Overview
 
-.. todo:: Add an overview
+This is the area where you'll create content for your site by
+publishing new Entries to your Channels. If you have more than one Channel,
+moving your cursor over the Publish menu will show all of your Channels and
+allow you to select one.
+
+.. tip:: site builders can customize the display of the Publish Page on a per
+   Channel bases by creating a custom layout.  Just go to the :doc:`Channel
+   manager <../channel/index>` and click 'layouts' to access the :doc:`Form
+   layout  <../channel/layouts/index>`.
 
 .. Screenshot (optional)
 
@@ -21,19 +29,6 @@ Permission Restrictions
 * Access settings: Design & Content
 * Allowed actions: Create Entries
 * Allowed channels
-
-
-This is the area where you'll create content for your site by
-publishing new Entries to your Channels. If you have more than one Channel,
-moving your cursor over the Publish menu will show all of your Channels and
-allow you to select one.
-
-.. tip:: site builders can customize the display of the Publish Page on a per
-   Channel bases by creating a custom layout.  Just go to the :doc:`Channel
-   manager <../channel/index>` and click 'layouts' to access the :doc:`Form
-   layout  <../channel/layouts/index>`.
-
-The Publish interface is broken into the following tabs:
 
 Publish Form Tab
 ----------------
