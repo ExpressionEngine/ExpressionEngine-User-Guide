@@ -29,7 +29,7 @@ Actions
 
 .. Each Action
 
-.. include:: /cp/channel/header.rst
+.. include:: /cp/channel/_header.rst
 
 Create New
 ~~~~~~~~~~

@@ -29,7 +29,7 @@ Actions
 
 .. Each Action
 
-.. include:: /cp/members/header.rst
+.. include:: /cp/members/_header.rst
 
 Username Links
 ~~~~~~~~~~~~~~
