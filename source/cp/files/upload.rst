@@ -1,7 +1,7 @@
 File Upload
 ===========
 
-.. .. rst-class:: cp-path
+.. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Files --> Upload New File`
 

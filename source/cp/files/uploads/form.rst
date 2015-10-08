@@ -1,7 +1,7 @@
 Create/Edit Upload Directory
 ============================
 
-.. .. rst-class:: cp-path
+.. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Files --> New/Edit`
 

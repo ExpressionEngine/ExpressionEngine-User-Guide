@@ -1,7 +1,7 @@
 Edit File Meta Data
 ===================
 
-.. .. rst-class:: cp-path
+.. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Files --> Edit`
 
