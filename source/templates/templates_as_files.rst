@@ -46,8 +46,7 @@ as well as recreate your Template\_Group/Template structure.
 3. Set Template Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-From the Control Panel, go to :menuselection:`Design --> Templates -->
-Global Preferences`.
+From the Control Panel, go to :menuselection:`Settings --> Template Settings`.
 
 #. Set **Allow templates to be saved as files?** to *Yes*.
 #. Set the **Basepath to Template File Directory**: You must place the

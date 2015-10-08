@@ -150,8 +150,7 @@ doc\_url
   {doc_url}
 
 This variable will be substituted with the URL found in **URL to
-Documentation Directory** under :menuselection:`Admin --> General
-Config`.
+Documentation Directory** under :menuselection:`Settings --> URL and Path Settings`.
 
 elapsed\_time
 -------------
@@ -246,8 +245,7 @@ homepage
   {homepage}
 
 This variable will be substituted with the **URL to the root directory of
-your site** preference under :menuselection:`Admin --> General
-Configuration`.
+your site** preference under :menuselection:`Settings --> URL and Path Settings`.
 
 ip\_address
 -----------
@@ -267,7 +265,7 @@ lang
   {lang}
 
 This variable will be substituted for the **Default XML Language**
-preference under :menuselection:`Admin --> General Configuration`.
+preference under :menuselection:`Settings --> General Settings`.
 
 layout
 ------
@@ -381,7 +379,7 @@ site\_name
   {site_name}
 
 This variable will be substituted with your site name as defined under
-:menuselection:`Admin --> General Configuration`.
+:menuselection:`Settings --> General Settings`.
 
 .. _global_site_url:
 
@@ -393,7 +391,7 @@ site\_url
   {site_url}
 
 This variable will be substituted with your site URL as defined under
-:menuselection:`Admin --> General Configuration`.
+:menuselection:`Settings --> URL and Path Settings`.
 
 .. _global_template_edit_date:
 
