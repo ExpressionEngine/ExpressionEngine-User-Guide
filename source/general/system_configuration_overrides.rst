@@ -91,7 +91,7 @@ $config['allow_avatar_uploads'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Avatar Settings`:
 :ref:`Allow members to upload their own avatars <avatar-upload-label>`
 
 
@@ -117,8 +117,7 @@ $config['allow_dictionary_pw'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Design --> Security and
-Privacy --> Security and Sessions`:
+**Also found in CP:** :menuselection:`Settings --> Security & Privacy`:
 :ref:`Allow Dictionary Words as Passwords <dict-passwds-label>`
 
 
@@ -165,8 +164,7 @@ $config['allow_member_localization'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences -->
-Security and Sessions`: :ref:`Allow members to set their own
+**Also found in CP:** :menuselection:`Settings --> Members`: :ref:`Allow members to set their own
 localization preferences <allow-member-localization-label>`
 
 
@@ -188,7 +186,7 @@ $config['allow_member_registration'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Members`:
 :ref:`Allow New Member Registrations <allow-member-register-label>`
 
 
@@ -214,8 +212,7 @@ $config['allow_multi_logins'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Design --> Security and
-Privacy --> Security and Sessions`: :ref:`Allow multiple log-ins from a
+**Also found in CP:** :menuselection:`Settings --> Security & Privacy`: :ref:`Allow multiple log-ins from a
 single account <allow-multi-logins-label>`
 
 
@@ -255,10 +252,10 @@ Example Usage::
 
 $config['allow_signatures'] = 'y';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Members --> Preferences`:
-:ref:`Allow Users to have Signatures <allow-member-sigs-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Members --> Preferences`:
+.. :ref:`Allow Users to have Signatures <allow-member-sigs-label>`
 
 
 allow_textarea_tabs
@@ -297,8 +294,7 @@ $config['allow_username_change'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Design --> Security and
-Privacy --> Security and Sessions`: :ref:`Allow members to change their
+**Also found in CP:** :menuselection:`Settings --> Security & Privacy`: :ref:`Allow members to change their
 username <allow-member-username-label>`
 
 
@@ -331,8 +327,7 @@ $config['auto_assign_cat_parents'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Channel
-Administration --> Global Channel Preferences`: :ref:`Auto-Assign
+**Also found in CP:** :menuselection:`Settings --> Content & Design`: :ref:`Auto-Assign
 Category Parents <auto-assign-category-parents-label>`
 
 
@@ -385,7 +380,7 @@ $config['avatar_max_height'] = '120';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Avatars`:
 :ref:`Avatar Maximum Height <avatar-max-height-label>`
 
 
@@ -407,7 +402,7 @@ $config['avatar_max_kb'] = '200';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Avatars`:
 :ref:`Avatar Maximum Size <avatar-max-kb-label>`
 
 
@@ -428,7 +423,7 @@ $config['avatar_max_width'] = '120';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Avatars`:
 :ref:`Avatar Maximum Width <avatar-max-width-label>`
 
 
@@ -449,7 +444,7 @@ $config['avatar_path'] = '/path/images/avatars/';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Avatars`:
 :ref:`Server Path to Avatar Folder <avatar-path-label>`
 
 
@@ -470,7 +465,7 @@ $config['avatar_url'] = 'http://example.com/images/avatars';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Avatars`:
 :ref:`URL to Avatar Folder <avatar-url-label>`
 
 
@@ -495,11 +490,11 @@ Example Usage::
 
 $config['ban_action'] = 'message';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Members --> User Banning`:
-:ref:`When a banned IP tries to access the site
-<member-banned-ip-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Members --> User Banning`:
+.. :ref:`When a banned IP tries to access the site
+.. <member-banned-ip-label>`
 
 
 .. _ban_destination:
@@ -521,11 +516,11 @@ Example Usage::
 
 $config['ban_destination'] = 'http://www.example.com';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Members --> User Banning`:
-:ref:`When a banned IP tries to access the site
-<member-banned-ip-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Members --> User Banning`:
+.. :ref:`When a banned IP tries to access the site
+.. <member-banned-ip-label>`
 
 
 .. _ban_message:
@@ -548,9 +543,9 @@ $config['ban_message'] = 'This site is currently unavailable.';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> User Banning`:
-:ref:`When a banned IP tries to access the site
-<member-banned-ip-label>`
+.. **Also found in CP:** :menuselection:`Members --> User Banning`:
+.. :ref:`When a banned IP tries to access the site
+.. <member-banned-ip-label>`
 
 
 banish_masked_ips
@@ -572,8 +567,7 @@ $config['banish_masked_ips'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: :ref:`Deny Access if No IP Address
+**Also found in CP:** :menuselection:`Settings --> Access Throttling`: :ref:`Deny Access if No IP Address
 is Present <throttling-no-ip-address-label>`
 
 
@@ -598,8 +592,7 @@ $config['banishment_message'] = 'You have exceeded the allowed page load frequen
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Throttling Preferences`: :ref:`Custom Message
+**Also found in CP:** :menuselection:`Settings --> Access Throttling`: :ref:`Custom Message
 <throttling-custom-message>`
 
 
@@ -624,8 +617,7 @@ $config['banishment_type'] = 'message';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Security and
-Privacy --> Throttling Preferences`: :ref:`Action to Take
+**Also found in CP:** :menuselection:`Settings --> Access Throttling`: :ref:`Action to Take
 <throttling-action-to-take>`
 
 
@@ -650,8 +642,7 @@ $config['banishment_url'] = 'http://www.yahoo.com';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Security and
-Privacy --> Throttling Preferences`: :ref:`URL for Redirect
+**Also found in CP:** :menuselection:`Settings --> Access Throttling`: :ref:`URL for Redirect
 <throttling-url-for-redirect>`
 
 
@@ -673,7 +664,7 @@ $config['banned_emails'] = 'user@example.com|johndoe@example.com|*@spammydomain.
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> User Banning`:
+**Also found in CP:** :menuselection:`Members --> Manage Bans`:
 :ref:`Banned Email Addresses <member-banned-email-label>`
 
 
@@ -695,7 +686,7 @@ $config['banned_ips'] = '123.456.789.1|123.321.*';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> User Banning`:
+**Also found in CP:** :menuselection:`Members --> Manage Bans`:
 :ref:`Banned IP Address <member-banned-ip-label>`
 
 
@@ -717,7 +708,7 @@ $config['banned_screen_names'] = 'Garfield|Snoopy|Hobbes';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> User Banning`:
+**Also found in CP:** :menuselection:`Members --> Manage Bans`:
 :ref:`Restricted Screen Names <member-banned-screename-label>`
 
 
@@ -739,7 +730,7 @@ $config['banned_usernames'] = 'garfield|snoopy|hobbes';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> User Banning`:
+**Also found in CP:** :menuselection:`Members --> Manage Bans`:
 :ref:`Restricted Usernames <member-banned-username-label>`
 
 .. _cache_driver_config:
@@ -813,8 +804,7 @@ $config['captcha_font'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> CAPTCHA Preferences`: :ref:`Use TrueType Font for CAPTCHA
+**Also found in CP:** :menuselection:`Settings --> CAPTCHA`: :ref:`Use TrueType Font for CAPTCHA
 <captcha-use-truetype>`
 
 
@@ -835,8 +825,7 @@ $config['captcha_path'] = '/path/to/captcha/folder/';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> CAPTCHA Preferences`: :ref:`Server Path to CAPTCHA Folder
+**Also found in CP:** :menuselection:`Settings --> CAPTCHA`: :ref:`Server Path to CAPTCHA Folder
 <captcha-server-path>`
 
 
@@ -860,8 +849,7 @@ $config['captcha_rand'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> CAPTCHA Preferences`: :ref:`Add Random Number to CAPTCHA
+**Also found in CP:** :menuselection:`Settings --> CAPTCHA`: :ref:`Add Random Number to CAPTCHA
 Word <captcha-add-random-number>`
 
 
@@ -907,8 +895,7 @@ $config['captcha_url'] = 'http://www.example.com/images/captchas';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> CAPTCHA Preferences`: :ref:`Full URL to CAPTCHA Folder
+**Also found in CP:** :menuselection:`Settings --> CAPTCHA`: :ref:`Full URL to CAPTCHA Folder
 <captcha-full-url>`
 
 
@@ -936,8 +923,7 @@ $config['censor_replacement'] = 'tisk tisk';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Word Censoring`: :ref:`Censoring Replacement Word
+**Also found in CP:** :menuselection:`Settings --> Word Censoring`: :ref:`Censoring Replacement Word
 <censor-replace-label>`
 
 
@@ -962,8 +948,7 @@ $config['censored_words'] = 'dagnabbit|consarnit|golly gee willikers';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Word Censoring`: :ref:`Censored Words <censor-words-label>`
+**Also found in CP:** :menuselection:`Settings --> Word Censoring`: :ref:`Censored Words <censor-words-label>`
 
 
 charset
@@ -1004,8 +989,7 @@ $config['comment_edit_time_limit'] = '120';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Comment`: :ref:`Comment Editing Time Limit <comment-editing-time-label>`
+**Also found in CP:** :menuselection:`Settings --> Comment Settings`: :ref:`Comment Editing Time Limit <comment-editing-time-label>`
 
 
 comment_moderation_override
@@ -1029,8 +1013,7 @@ $config['comment_moderation_override'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Comment`: :ref:`Moderate expired entries
+**Also found in CP:** :menuselection:`Settings --> Comment Settings`: :ref:`Moderate expired entries
 <comment-expired-comments-label>`
 
 
@@ -1053,8 +1036,7 @@ $config['comment_word_censoring'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Comment`: :ref:`Force word censoring for comments
+**Also found in CP:** :menuselection:`Settings --> Comment Settings`: :ref:`Force word censoring for comments
 <comment-force-censoring-label>`
 
 .. _cookie_domain:
@@ -1109,8 +1091,8 @@ $config['cookie_domain'] = '.example.com';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Cookie Settings`: :ref:`Cookie Domain <cookie-domain-label>`
+**Also found in CP:** :menuselection:`Settings --> Security &
+Privacy`: :ref:`Cookie Domain <cookie-domain-label>`
 
 
 .. _cookie_httponly_config:
@@ -1161,8 +1143,8 @@ $config['cookie_path'] = '/blog/';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Cookie Settings`: :ref:`Cookie Path <cookie-path-label>`
+**Also found in CP:** :menuselection:`Settings --> Security &
+Privacy`: :ref:`Cookie Path <cookie-path-label>`
 
 
 cookie_prefix
@@ -1184,8 +1166,8 @@ $config['cookie_prefix'] = 'site1';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Cookie Settings`: :ref:`Cookie Prefix <cookie-prefix-label>`
+**Also found in CP:** :menuselection:`Settings --> Security &
+Privacy`: :ref:`Cookie Prefix <cookie-prefix-label>`
 
 
 cookie_secure
@@ -1229,37 +1211,14 @@ Example Usage::
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: :ref:`Control Panel Session Type
+**Also found in CP:** :menuselection:`Settings --> Security &
+Privacy`: :ref:`Control Panel Session Type
 <cp-session-type-label>`
 
 .. versionchanged:: 2.8
 
    Variable was changed from ``admin_session_type`` to
    ``cp_session_type``.
-
-
-cp_theme
---------
-
-Set the default theme that users will see when logged-in to the Control
-Panel.
-
-========== ===========
-Value      Description
-========== ===========
-``string`` Name of CP theme
-========== ===========
-
-Example Usage::
-
-$config['cp_theme'] = 'default';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> General
-Configuration`: :ref:`Default Control Panel Theme
-<general-config-cp-theme-label>`
 
 
 .. _overrides-cp-url:
@@ -1287,7 +1246,7 @@ $assign_to_config['cp_url'] = 'http://domain2.com/admin.php';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> General Configuration`:
+**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`:
 :ref:`URL to your Control Panel index page
 <general-config-url-cp-label>`
 
@@ -1337,8 +1296,7 @@ $config['debug'] = '1';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: :ref:`Debug Preference
+**Also found in CP:** :menuselection:`Settings --> Debugging & Output`: :ref:`Debug Preference
 <output-debug-pref-label>`
 
 
@@ -1359,7 +1317,7 @@ $config['default_member_group'] = '6';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Members`:
 :ref:`Default Member Group Assigned to New Members
 <default-member-group-label>`
 
@@ -1383,8 +1341,7 @@ $config['default_site_timezone'] = 'America/Los_Angeles';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Localization
-Settings`: :ref:`Site Timezone <sysadmin-site-timezone-label>`
+**Also found in CP:** :menuselection:`Settings --> General Settings`: :ref:`Site Timezone <sysadmin-site-timezone-label>`
 
 
 deft_lang
@@ -1424,8 +1381,7 @@ $config['deny_duplicate_data'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: :ref:`Deny Duplicate Data
+**Also found in CP:** :menuselection:`Settings --> Security & Privacy`: :ref:`Deny Duplicate Data
 <deny-duplicate-data-label>`
 
 
@@ -1510,8 +1466,7 @@ $config['doc_url'] = 'https://ellislab.com/expressionengine/user-guide/';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> General
-Configuration`: :ref:`URL to Documentation Directory
+**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`: :ref:`URL to Documentation Directory
 <general-config-URL-docs-label>`
 
 
@@ -1540,8 +1495,7 @@ $config['dynamic_tracking_disabling'] = '350';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Tracking Preferences`: :ref:`Suspend ALL tracking when number of
+**Also found in CP:** :menuselection:`Settings --> Hit Tracking`: :ref:`Suspend ALL tracking when number of
 online visitors exceeds <suspend-tracking-label>`:
 
 
@@ -1576,11 +1530,11 @@ Example Usage::
 
 $config['email_batch_size'] = '300';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`Number of Emails Per Batch
-<email-number-per-batch-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Admin --> Email
+.. Configuration`: :ref:`Number of Emails Per Batch
+.. <email-number-per-batch-label>`
 
 
 .. _email_batchmode:
@@ -1612,10 +1566,10 @@ Example Usage::
 
 $config['email_batchmode'] = 'y';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`Use Batch Mode <email-use-batch-mode-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Admin --> Email
+.. Configuration`: :ref:`Use Batch Mode <email-use-batch-mode-label>`
 
 
 email_charset
@@ -1635,8 +1589,7 @@ $config['email_charset'] = 'utf-8';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`Email Character Encoding
+**Also found in CP:** :menuselection:`Settings --> Outgoing Email`: :ref:`Email Character Encoding
 <email-character-encoding-label>`
 
 
@@ -1659,11 +1612,11 @@ Example Usage::
 
 $config['email_console_timelock'] = '300';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`Email Console Timelock
-<email-console-timelock-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Admin --> Email
+.. Configuration`: :ref:`Email Console Timelock
+.. <email-console-timelock-label>`
 
 
 email_crlf
@@ -1702,11 +1655,11 @@ Example Usage::
 
 $config['email_debug'] = 'y';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`Enable Email Debugging
-<email-enable-debugging-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Admin --> Email
+.. Configuration`: :ref:`Enable Email Debugging
+.. <email-enable-debugging-label>`
 
 
 email_newline
@@ -1764,8 +1717,7 @@ $config['emoticon_url'] = 'http://example.com/images/smileys/';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Emoticon Preferences`: :ref:`URL to the folder
+**Also found in CP:** :menuselection:`Settings --> Content & Design`: :ref:`URL to the folder
 containing your smileys <emoticon-url-folder-label>`
 
 
@@ -1788,7 +1740,7 @@ $config['enable_avatars'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Avatar Settings`:
 :ref:`Enable Avatars <avatar-enable-label>`
 
 
@@ -1815,8 +1767,7 @@ $config['enable_censoring'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Security and
-Privacy --> Word Censoring`: :ref:`Enable Word Censoring
+**Also found in CP:** :menuselection:`Settings --> Word Censorship`: :ref:`Enable Word Censoring
 <censor-words-enable-label>`
 
 
@@ -1840,8 +1791,7 @@ $config['enable_emoticons'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> System
-Administration --> Emoticon Preferences`: :ref:`Display Smileys
+**Also found in CP:** :menuselection:`Settings --> Content & Design`: :ref:`Display Smileys
 <emoticon-display-smileys-label>`
 
 
@@ -1865,8 +1815,7 @@ $config['enable_entry_view_tracking'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Security and
-Privacy --> Tracking Preferences`: :ref:`Enable Channel Entry View
+**Also found in CP:** :menuselection:`Settings --> Hit Tracking`: :ref:`Enable Channel Entry View
 Tracking <tracking-enable-channel-entry-view-label>`
 
 
@@ -1888,8 +1837,7 @@ $config['enable_hit_tracking'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Security and
-Privacy --> Tracking Preferences`: :ref:`Enable Template Hit Tracking
+**Also found in CP:** :menuselection:`Settings --> Hit Tracking`: :ref:`Enable Template Hit Tracking
 <tracking-enable-template-hit-tracking-label>`
 
 
@@ -1915,8 +1863,7 @@ $config['enable_online_user_tracking'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Security and
-Privacy --> Tracking Preferences`: :ref:`Enable Online User Tracking
+**Also found in CP:** :menuselection:`Settings --> Hit Tracking`: :ref:`Enable Online User Tracking
 <tracking-enable-online-user-tracking-label>`
 
 
@@ -1939,7 +1886,7 @@ $config['enable_photos'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Avatars`:
 :ref:`Enable Member Photos <enable-member-photos-label>`
 
 
@@ -1962,11 +1909,11 @@ Example Usage::
 
 $config['enable_search_log'] = 'n';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Search Log Configuration`: :ref:`Enable Search Term
-Logging <enable-search-term-log-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Admin --> System
+.. Administration --> Search Log Configuration`: :ref:`Enable Search Term
+.. Logging <enable-search-term-log-label>`
 
 
 enable_sql_caching
@@ -1988,8 +1935,7 @@ $config['enable_sql_caching'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Channel
-Administration --> Global Preferences`: :ref:`Cache Dynamic Channel
+**Also found in CP:** :menuselection:`Settings --> Content & Design`: :ref:`Cache Dynamic Channel
 Queries <caching_dynamic_channel_query_caching>`
 
 
@@ -2014,11 +1960,11 @@ Example Usage::
 
 $config['enable_template_routes'] = 'y';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Design --> Templates -->
-Global Template Preferences`: :ref:`Enable Template Routes
-<enable_template_routes_label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Design --> Templates -->
+.. Global Template Preferences`: :ref:`Enable Template Routes
+.. <enable_template_routes_label>`
 
 .. _enable_throttling:
 
@@ -2041,8 +1987,7 @@ $config['enable_throttling'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Throttling Preferences`: :ref:`Enable Throttling
+**Also found in CP:** :menuselection:`Settings --> Access Throttling`: :ref:`Enable Throttling
 <enable-throttling-label>`
 
 
@@ -2160,8 +2105,7 @@ $config['force_query_string'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: :ref:`Force URL query strings
+**Also found in CP:** :menuselection:`Settings --> Debugging & Output`: :ref:`Force URL query strings
 <output-force-query-strings-label>`
 
 
@@ -2203,8 +2147,8 @@ $config['forum_trigger'] = 'eerox';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Add-Ons --> Modules --> Discussion
-Forum --> Default Preferences`: :ref:`Forum Triggering Word
+**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager --> Discussion
+Forum Settings --> Edit`: :ref:`Forum Triggering Word
 <forum-forum_triggering_word>`
 
 
@@ -2235,8 +2179,7 @@ $config['gzip_output'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: :ref:`Enable GZIP Output
+**Also found in CP:** :menuselection:`Settings --> Debugging & Output`: :ref:`Enable GZIP Output
 <output-enable-gzip-label>`
 
 
@@ -2317,8 +2260,7 @@ $config['image_library_path'] = '/usr/bin/';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Image Resizing Preferences`: :ref:`Image Converter
+**Also found in CP:** :menuselection:`Settings --> Content & Design`: :ref:`Image Converter
 Path <image-converter-path-label>`
 
 
@@ -2350,8 +2292,7 @@ $config['image_resize_protocol'] = 'netpbm';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Image Resizing Preferences`: :ref:`Image Resizing
+**Also found in CP:** :menuselection:`Settings --> Content & Design`: :ref:`Image Resizing
 Protocol <image-resizing-protocol-label>`
 
 
@@ -2426,8 +2367,7 @@ $assign_to_config['is_site_on'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> General
-Configuration`: Is site on?
+**Also found in CP:** :menuselection:`Settings --> General Settings`: Is site on?
 
 
 .. _is_system_on:
@@ -2452,55 +2392,7 @@ $config['is_system_on'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> General
-Configuration`: :ref:`Is system on? <general-config-system-on-label>`
-
-license_contact
----------------
-
-Specify the email address for the license holder. Does not have to be
-specifically tied to your EllisLab.com account.
-
-========== ===========
-Value      Description
-========== ===========
-``text``   License holder contact email address
-========== ===========
-
-Example Usage::
-
-$config['license_contact'] = 'contact@example.com';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Software
-License`: :ref:`License Holder Contact Email <software-license-license-contact-label>`
-
-license_number
---------------
-
-Specify the software license number. You can find a record of your
-license number in your `EllisLab.com account
-<https://store.ellislab.com/manage>`__.
-
-.. important:: A properly licensed ExpressionEngine installation
-    **must** include a valid license number.
-
-========== ===========
-Value      Description
-========== ===========
-``number`` License number
-========== ===========
-
-Example Usage::
-
-$config['license_number'] = '1234-1234-1234-1234';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Software
-License`: :ref:`License Number <software-license-license-number-label>`
-
+**Also found in CP:** :menuselection:`Settings --> General Settings`: :ref:`Is system on? <general-config-system-on-label>`
 
 .. _lockout_time:
 
@@ -2522,8 +2414,7 @@ $config['lockout_time'] = '30';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Throttling Preferences`: :ref:`Lockout Time
+**Also found in CP:** :menuselection:`Settings --> Access Throttling`: :ref:`Lockout Time
 <throttling-lockout-time-label>`
 
 
@@ -2560,11 +2451,11 @@ Example Usage::
 
 $config['log_email_console_msgs'] = 'n';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`Log Email Console Messages
-<email-log-console-messages-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Admin --> Email
+.. Configuration`: :ref:`Log Email Console Messages
+.. <email-log-console-messages-label>`
 
 
 log_path
@@ -2649,8 +2540,7 @@ $config['mail_format'] = 'plain';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`Default Mail Format <email-default-format-label>`
+**Also found in CP:** :menuselection:`Settings --> Outgoing Email`: :ref:`Default Mail Format <email-default-format-label>`
 
 
 .. _mail_protocol:
@@ -2674,80 +2564,7 @@ $config['mail_protocol'] = 'smtp';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`Email Protocol <email-protocol-label>`
-
-
-mailinglist_enabled
--------------------
-
-Enable the mailing list.
-
-======= ========
-Value   Behavior
-======= ========
-``y``   Enable mailing list **(default)**
-``n``   Disable mailing list
-======= ========
-
-Example Usage::
-
-$config['mailinglist_enabled'] = 'y';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Mailing List --> Mailing List Preferences`: Mailing List is Enabled
-
-
-mailinglist_notify
-------------------
-
-Enable notification of a given :ref:`recipient list
-<mailinglist_notify_emails>` when new subscribers sign up.
-
-======= ========
-Value   Behavior
-======= ========
-``y``   Enable notification
-``n``   Disable notification **(default)**
-======= ========
-
-Example Usage::
-
-$config['mailinglist_notify'] = 'y';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Mailing List --> Mailing List Preferences`: Enable recipient list for
-notification of new mailing
-list sign-ups
-
-
-.. _mailinglist_notify_emails:
-
-mailinglist_notify_emails
--------------------------
-
-List of email addresses to notify when new subscribers sign up for the
-mailing list.
-
-========== ===========
-Value      Description
-========== ===========
-``string`` Comma-delimited list of email addresses
-========== ===========
-
-Example Usage::
-
-$config['mailinglist_notify_emails'] = 'joe@example.com, jane@example.com';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Mailing List --> Mailing List Preferences`: Email Address of
-Notification Recipient(s)
+**Also found in CP:** :menuselection:`Settings --> Outgoing Email`: :ref:`Email Protocol <email-protocol-label>`
 
 
 max_logged_searches
@@ -2766,11 +2583,11 @@ Example Usage::
 
 $config['max_logged_searches'] = '500';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Search Log Configuration`: :ref:`Maximum number of
-recent search terms to save <max-search-save-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Admin --> System
+.. Administration --> Search Log Configuration`: :ref:`Maximum number of
+.. recent search terms to save <max-search-save-label>`
 
 
 .. _max_page_loads:
@@ -2797,8 +2614,7 @@ $config['max_page_loads'] = '10';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Throttling Preferences`: :ref:`Maximum Number of Page Loads
+**Also found in CP:** :menuselection:`Settings --> Access Throttling`: :ref:`Maximum Number of Page Loads
 <throttling-max-page-load-label>`
 
 
@@ -2820,8 +2636,7 @@ $config['max_tmpl_revisions'] = '10';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Design --> Templates -->
-Global Template Preferences`: :ref:`Maximum Number of Revisions to Keep
+**Also found in CP:** :menuselection:`Settings --> Template Settings`: :ref:`Maximum Number of Revisions to Keep
 <global-template-max-revisions-label>`
 
 .. _max_url_segments:
@@ -2862,7 +2677,7 @@ $config['mbr_notification_emails'] = 'joe@example.com, jane@example.com';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Members`:
 :ref:`Email address for notifications
 <member-send-notifications-email-label>`
 
@@ -2908,7 +2723,7 @@ $config['member_theme'] = 'default';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Members`:
 :ref:`Default Member Profile Theme <member-default-theme-label>`
 
 
@@ -2933,7 +2748,7 @@ $config['memberlist_order_by'] = 'total_posts';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Members`:
 :ref:`Member List - Sort By <member-list-rows-label>`
 
 
@@ -3021,7 +2836,7 @@ $config['memberlist_row_limit'] = '20';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Members`:
 :ref:`Member List - Rows <member-list-rows-label>`
 
 
@@ -3043,7 +2858,7 @@ $config['memberlist_sort_order'] = 'desc';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Members`:
 :ref:`Member List - Order <member-list-order-label>`
 
 
@@ -3067,7 +2882,7 @@ $config['multiple_sites_enabled'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> General Configuration`:
+**Also found in CP:** :menuselection:`Settings --> General Settings`:
 :doc:`Enable Multiple Site Manager </cp/sites/install>`
 
 
@@ -3093,8 +2908,7 @@ $config['name_of_dictionary_file'] = 'dictionary.txt';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: :ref:`Name of Dictionary File
+**Also found in CP:** :menuselection:`Settings --> Security & Privacy`: :ref:`Name of Dictionary File
 <dict-passwds-file-label>`
 
 
@@ -3119,7 +2933,7 @@ $config['new_member_notification'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Members`:
 :ref:`Send new member notifications <member-send-notifications-label>`
 
 
@@ -3144,8 +2958,7 @@ $config['new_posts_clear_caches'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Channel
-Administration --> Global Channel Preferences`: :ref:`Clear all caches
+**Also found in CP:** :menuselection:`Settings --> Content & Design`: :ref:`Clear all caches
 when new entries are posted <global-channel-clear-cache-label>`
 
 
@@ -3167,8 +2980,7 @@ $config['new_version_check'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> General
-Configuration`: :ref:`New Version Auto Check
+**Also found in CP:** :menuselection:`Settings --> General Settings`: :ref:`New Version Auto Check
 <general-config-new-version-label>`
 
 
@@ -3198,11 +3010,11 @@ Also available for use in the :ref:`site index file <site_index_file>`,
 
 $assign_to_config['newrelic_app_name'] = 'My Second Site';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: :ref:`New Relic Application
-Name <sysadmin-newrelic_app_name>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Admin --> System
+.. Administration --> Output and Debugging`: :ref:`New Relic Application
+.. Name <sysadmin-newrelic_app_name>`
 
 
 .. _overrides-newrelic-include-version-number:
@@ -3251,8 +3063,7 @@ $config['password_lockout'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: :ref:`Enable Password Lockout
+**Also found in CP:** :menuselection:`Settings --> Security & Privacy`: :ref:`Enable Password Lockout
 <security-enable-passwd-lockout-label>`
 
 
@@ -3276,8 +3087,7 @@ $config['password_lockout_interval'] = '2.5';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: :ref:`Time Interval for Lockout
+**Also found in CP:** :menuselection:`Settings --> Security & Privacy`: :ref:`Time Interval for Lockout
 <security-passwd-lockout-int-label>`
 
 photo_max_height
@@ -3298,7 +3108,7 @@ $config['photo_max_height'] = '100';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Avatars`:
 :ref:`Photo Maximum Height <member-photo-max-height-label>`
 
 
@@ -3320,7 +3130,7 @@ $config['photo_max_kb'] = '50';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Avatars`:
 :ref:`Photo Maximum Size (in Kilobytes)
 <member-photo-max-size-kb-label>`
 
@@ -3343,7 +3153,7 @@ $config['photo_max_width'] = '150';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Avatars`:
 :ref:`Photo Maximum Width <member-photo-max-width-label>`
 
 
@@ -3364,7 +3174,7 @@ $config['photo_path'] = '/path/images/member_photos/';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Avatars`:
 :ref:`Server Path to Photo Folder <member-photo-max-width-label>`
 
 
@@ -3385,7 +3195,7 @@ $config['photo_url'] = 'http://example.com/images/member_photos/';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Avatars`:
 :ref:`URL to Photos Folder <member-photo-max-width-label>`
 
 
@@ -3426,7 +3236,7 @@ $config['profile_trigger'] = 'accounts';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`:
 :ref:`Profile Triggering Word <profile-trigger-word-label>`
 
 
@@ -3482,7 +3292,7 @@ $config['prv_msg_upload_path'] = '/path/images/pm_attachments/';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Messages`:
 :ref:`Server Path for Attachment Upload Directory
 <server-path-for-attachment-upload-directory>`
 
@@ -3542,8 +3352,7 @@ $config['pw_min_len'] = '8';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: :ref:`Minimum Password Length
+**Also found in CP:** :menuselection:`Settings --> Security & Privacy`: :ref:`Minimum Password Length
 <profile-trigger-word-label>`
 
 
@@ -3569,11 +3378,11 @@ Example Usage::
 
 $config['recount_batch_total'] = '200';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Tools --> Data --> Recount
-Statistics --> Recount Preferences`: Total number of database rows
-processed per batch
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Tools --> Data --> Recount
+.. Statistics --> Recount Preferences`: Total number of database rows
+.. processed per batch
 
 
 redirect_method
@@ -3594,8 +3403,7 @@ $config['redirect_method'] = 'redirect';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: :ref:`Redirection Method
+**Also found in CP:** :menuselection:`Settings --> Debugging & Output`: :ref:`Redirection Method
 <output-debug-redirect-method-label>`
 
 
@@ -3618,11 +3426,11 @@ Example Usage::
 
 $config['redirect_submitted_links'] = 'y';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: :ref:`Apply Rank Denial to
-User-submitted Links <security-apply-rank-denial-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Admin --> Security and
+.. Privacy --> Security and Sessions`: :ref:`Apply Rank Denial to
+.. User-submitted Links <security-apply-rank-denial-label>`
 
 
 .. _redis_config:
@@ -3718,7 +3526,7 @@ $config['req_mbr_activation'] = 'none';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Members`:
 :ref:`Require Member Account Activation
 <member-account-activation-label>`
 
@@ -3764,8 +3572,7 @@ $config['require_ip_for_login'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: :ref:`Require IP Address and User
+**Also found in CP:** :menuselection:`Settings --> Security & Privacy`: :ref:`Require IP Address and User
 Agent for Login <require-ip-logins-label>`
 
 
@@ -3788,8 +3595,7 @@ $config['require_ip_for_posting'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: :ref:`Require IP Address and User
+**Also found in CP:** :menuselection:`Settings --> Security & Privacy`: :ref:`Require IP Address and User
 Agent for posting <require-ip-posting-submit-comments-label>`
 
 
@@ -3813,8 +3619,7 @@ $config['require_secure_passwords'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: :ref:`Require Secure Passwords
+**Also found in CP:** :menuselection:`Settings --> Security & Privacy`: :ref:`Require Secure Passwords
 <security-require-secure-passwords-label>`
 
 
@@ -3836,7 +3641,7 @@ $config['require_terms_of_service'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Member --> Preferences`:
+**Also found in CP:** :menuselection:`Settings --> Members`:
 :ref:`Require Terms of Service <member-require-tos-label>`
 
 
@@ -3866,8 +3671,7 @@ $config['reserved_category_word'] = 'category';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Channel
-Administration --> Global Channel Preferences`: :ref:`Category URL
+**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`: :ref:`Category URL
 Indicator <global-channel-category-url-indicator-label>`
 
 
@@ -3889,8 +3693,8 @@ $config['rte_default_toolset_id'] = '2';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Add-Ons --> Modules --> Rich
-Text Editor`: :ref:`Default Toolset
+**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager --> Rich
+Text Editor Settings`: :ref:`Default Toolset
 <global-channel-category-url-indicator-label>`
 
 
@@ -3914,8 +3718,8 @@ $config['rte_enabled'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Add-Ons --> Modules --> Rich
-Text Editor`: :ref:`Enable Rich Text Editor
+**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager --> Rich
+Text Editor Settings`: :ref:`Enable Rich Text Editor
 <global-channel-category-url-indicator-label>`
 
 
@@ -3938,8 +3742,7 @@ $config['save_tmpl_files'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Design --> Templates -->
-Global Template Preferences`: :ref:`Save Templates as Files
+**Also found in CP:** :menuselection:`Settings --> Template Settings`: :ref:`Save Templates as Files
 <global-template-save-templates-as-files-label>`
 
 
@@ -3965,8 +3768,7 @@ $config['save_tmpl_revisions'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Design --> Templates -->
-Global Template Preferences`: :ref:`Save Template Revisions
+**Also found in CP:** :menuselection:`Settings --> Template Settings`: :ref:`Save Template Revisions
 <global-template-save-templates-revisions-label>`
 
 
@@ -3988,8 +3790,8 @@ $config['sc_certificate_id'] = 'SX4DT7FDO1234';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Simple Commerce`: :ref:`ID Given to Public Certificate by PayPal
+**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+Simple Commerce Settings`: :ref:`ID Given to Public Certificate by PayPal
 <sc-certificate-id-label>`
 
 
@@ -4022,8 +3824,8 @@ $config['sc_encrypt_buttons'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Simple Commerce`: :ref:`Encrypt PayPal Buttons and Links?
+**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+Simple Commerce Settings`: :ref:`Encrypt PayPal Buttons and Links?
 <sc-encrypt-buttons-label>`
 
 
@@ -4045,8 +3847,8 @@ $config['sc_paypal_account'] = 'paypal_email@example.com';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Simple Commerce`: :ref:`PayPal Account
+**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+Simple Commerce Settings`: :ref:`PayPal Account
 <sc-paypal-account-label>`
 
 
@@ -4073,8 +3875,8 @@ $config['sc_paypal_certificate'] = "/path/to/paypal_certificate.pem";
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Simple Commerce`: :ref:`PayPal Certificate Path
+**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+Simple Commerce Settings`: :ref:`PayPal Certificate Path
 <sc-paypal-certificate-path-label>`
 
 
@@ -4100,8 +3902,8 @@ $config['sc_private_key'] = "/path/to/private_key.pem";
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Simple Commerce`: :ref:`Private Key Path
+**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+Simple Commerce Settings`: :ref:`Private Key Path
 <sc-private-key-path-label>`
 
 
@@ -4127,8 +3929,8 @@ $config['sc_public_certificate'] = "/path/to/public_certificate.pem";
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Simple Commerce`: :ref:`Public Certificate Path
+**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+Simple Commerce Settings`: :ref:`Public Certificate Path
 <sc-public-certificate-path-label>`
 
 
@@ -4155,8 +3957,8 @@ $config['sc_temp_path'] = "/path/to/tmp";
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Add-Ons --> Modules -->
-Simple Commerce`: :ref:`Temporary Encrypted Files Path
+**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+Simple Commerce Settings`: :ref:`Temporary Encrypted Files Path
 <sc-temp-path-label>`
 
 
@@ -4179,8 +3981,7 @@ $config['send_headers'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: :ref:`Generate HTTP Page
+**Also found in CP:** :menuselection:`Settings --> Debugging & Output`: :ref:`Generate HTTP Page
 Headers <generate-http-headers-label>`
 
 
@@ -4230,8 +4031,7 @@ $config['show_profiler'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> System
-Administration --> Output and Debugging`: :ref:`Display Output Profiler
+**Also found in CP:** :menuselection:`Settings --> Debugging & Output`: :ref:`Display Output Profiler
 <output-debug-display-profiler-label>`
 
 
@@ -4252,11 +4052,11 @@ Example Usage::
 
 $config['sig_allow_img_hotlink'] = 'n';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Members --> Preferences`:
-:ref:`Allow image hot linking in signatures
-<member-signature-hot-linking-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Members --> Preferences`:
+.. :ref:`Allow image hot linking in signatures
+.. <member-signature-hot-linking-label>`
 
 
 sig_allow_img_upload
@@ -4275,11 +4075,11 @@ Example Usage::
 
 $config['sig_allow_img_upload'] = 'y';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Members --> Preferences`:
-:ref:`Allow users to upload an image in their signature
-<member-signature-allow-upload-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Members --> Preferences`:
+.. :ref:`Allow users to upload an image in their signature
+.. <member-signature-allow-upload-label>`
 
 
 sig_img_max_height
@@ -4298,11 +4098,11 @@ Example Usage::
 
 $config['sig_img_max_height'] = '150';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Members --> Preferences`:
-:ref:`Maximum Height of Signature Image
-<member-signature-max-height-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Members --> Preferences`:
+.. :ref:`Maximum Height of Signature Image
+.. <member-signature-max-height-label>`
 
 
 sig_img_max_kb
@@ -4321,11 +4121,11 @@ Example Usage::
 
 $config['sig_img_max_kb'] = '50';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Members --> Preferences`:
-:ref:`Maximum Size (in Kilobytes) of Signature Image
-<member-signature-max-size-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Members --> Preferences`:
+.. :ref:`Maximum Size (in Kilobytes) of Signature Image
+.. <member-signature-max-size-label>`
 
 
 sig_img_max_width
@@ -4344,11 +4144,11 @@ Example Usage::
 
 $config['sig_img_max_width'] = '150';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Members --> Preferences`:
-:ref:`Maximum Width of Signature Image
-<member-signature-max-width-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Members --> Preferences`:
+.. :ref:`Maximum Width of Signature Image
+.. <member-signature-max-width-label>`
 
 
 sig_img_path
@@ -4366,11 +4166,11 @@ Example Usage::
 
 $config['sig_img_path'] = '/path/image/folder/';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Members --> Preferences`:
-:ref:`Server path to Signature Image Upload Folder
-<member-signature-server-path-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Members --> Preferences`:
+.. :ref:`Server path to Signature Image Upload Folder
+.. <member-signature-server-path-label>`
 
 
 sig_img_url
@@ -4388,10 +4188,10 @@ Example Usage::
 
 $config['sig_img_url'] = 'http://example.com/images/signatures/';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Members --> Preferences`:
-:ref:`URL to Signature Image Upload Folder <member-signature-URL-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Members --> Preferences`:
+.. :ref:`URL to Signature Image Upload Folder <member-signature-URL-label>`
 
 
 sig_maxlength
@@ -4409,11 +4209,11 @@ Example Usage::
 
 $config['sig_maxlength'] = '500';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Members --> Preferences`:
-:ref:`Maximum number of characters per signature
-<member-signature-max-chars-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Members --> Preferences`:
+.. :ref:`Maximum number of characters per signature
+.. <member-signature-max-chars-label>`
 
 
 .. _overrides-site-404:
@@ -4441,8 +4241,7 @@ $assign_to_config['site_404'] = 'site/notfound';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Design --> Templates -->
-Global Template Preferences`: :ref:`404 Page
+**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`: :ref:`404 Page
 <global-template-404-label>`
 
 
@@ -4474,8 +4273,7 @@ $assign_to_config['site_index'] = 'secondsite.php';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> General
-Configuration`: :ref:`Name of your site's index page
+**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`: :ref:`Name of your site's index page
 <general-config-index-name-label>`
 
 
@@ -4502,8 +4300,7 @@ $assign_to_config['site_name'] = 'domain2_short_name';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Site Name --> Edit Sites -->
-Create New Site`: :doc:`Site Short Name </cp/sites/createsite>`
+**Also found in CP:** :menuselection:`Developer Tools --> Site Manager --> Edit`: :doc:`Site Short Name </cp/sites/createsite>`
 
 
 .. _overrides-site-url:
@@ -4530,7 +4327,7 @@ $assign_to_config['site_url'] = 'http://domain2.com';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> General Configuration`:
+**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`:
 :ref:`URL to the root directory of your site
 <general-config-url-root-label>`
 
@@ -4574,8 +4371,7 @@ $config['smtp_password'] = 'ic6XpWJnv4ip';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`SMTP Password <email-smtp-password-label>`
+**Also found in CP:** :menuselection:`Settings --> Outgoing Email`: :ref:`SMTP Password <email-smtp-password-label>`
 
 
 smtp_port
@@ -4595,10 +4391,10 @@ Example Usage::
 
 $config['smtp_port'] = '2525';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`SMTP Server Port <email-smtp-server-port-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Admin --> Email
+.. Configuration`: :ref:`SMTP Server Port <email-smtp-server-port-label>`
 
 
 smtp_server
@@ -4624,8 +4420,7 @@ $config['smtp_server'] = 'mail.example.com';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`SMTP Server Address <email-smtp-server-label>`
+**Also found in CP:** :menuselection:`Settings --> Outgoing Email`: :ref:`SMTP Server Address <email-smtp-server-label>`
 
 
 smtp_username
@@ -4647,8 +4442,7 @@ $config['smtp_username'] = 'joe@example.com';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Email
-Configuration`: :ref:`SMTP Username <email-smtp-username-label>`
+**Also found in CP:** :menuselection:`Settings --> Outgoing Email`: :ref:`SMTP Username <email-smtp-username-label>`
 
 
 spellcheck_language_code
@@ -4690,8 +4484,7 @@ $config['strict_urls'] = 'n';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Design --> Templates -->
-Global Template Preferences`: :ref:`Enable Strict URLs
+**Also found in CP:** :menuselection:`Settings --> Template Settings`: :ref:`Enable Strict URLs
 <strict_url_label>`
 
 
@@ -4723,8 +4516,7 @@ $assign_to_config['template'] = 'index';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Design --> Templates -->
-Template Manager --> Edit Template Group`: Make the index template in
+**Also found in CP:** :menuselection:`Developer Tools --> Template Manager -> New/Edit`: Make the index template in
 this group your site's home page?
 
 
@@ -4756,8 +4548,7 @@ $assign_to_config['template_group'] = 'site_2';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Design --> Templates -->
-Template Manager --> Edit Template Group`: Make the index template in
+**Also found in CP:** :menuselection:`Developer Tools --> Template Manager -> New/Edit`: Make the index template in
 this group your site's home page?
 
 
@@ -4778,8 +4569,7 @@ $config['theme_folder_path'] = '/home/usr/domain.com/public_html/themes/';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> General
-Configuration`: :ref:`Theme Folder Path
+**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`: :ref:`Theme Folder Path
 <general-config-theme-path-label>`
 
 
@@ -4800,8 +4590,7 @@ $config['theme_folder_url'] = 'http://example.com/themes/';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> General
-Configuration`: :ref:`URL to your "themes" folder
+**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`: :ref:`URL to your "themes" folder
 <general-config-theme-url-label>`
 
 
@@ -4864,8 +4653,7 @@ $config['max_page_loads'] = '10';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Throttling Preferences`: :ref:`Time Interval
+**Also found in CP:** :menuselection:`Settings --> Access Throttling`: :ref:`Time Interval
 <throttling-time-interval-label>`
 
 
@@ -4885,11 +4673,11 @@ Example Usage::
 
 $config['tmpl_file_basepath'] = '/home/usr/domain.com/system/expressionengine/templates/';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Design --> Templates -->
-Template Preferences`: :ref:`Server path to site's templates
-<general-config-theme-path-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Design --> Templates -->
+.. Template Preferences`: :ref:`Server path to site's templates
+.. <general-config-theme-path-label>`
 
 
 un_min_len
@@ -4909,8 +4697,7 @@ $config['un_min_len'] = '5';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: :ref:`Minimum Username Length
+**Also found in CP:** :menuselection:`Settings --> Security & Privacy`: :ref:`Minimum Username Length
 <security-min-username-label>`
 
 .. _upload_file_name_blacklist:
@@ -4949,8 +4736,7 @@ Example Usage::
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Content --> Files -->
-File Upload Preferences`: :doc:`Edit Upload Destination
+**Also found in CP:** :menuselection:`Files`: :doc:`Edit Upload Destination
 </cp/files/uploads/form>`
 
 
@@ -4997,8 +4783,7 @@ $config['use_category_name'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Channel Administration
---> Global Channel Preferences`: :ref:`Use Category URL Titles In Links?
+**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`: :ref:`Use Category URL Titles In Links?
 <global-channel-category-url-titles-label>`
 
 
@@ -5039,11 +4824,11 @@ Example Usage::
 
 $config['use_newrelic'] = 'y';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> System Administration
---> Output and Debugging`: :ref:`Enable New Relic RUM JavaScript?
-<output-debug-use-newrelic-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Admin --> System Administration
+.. --> Output and Debugging`: :ref:`Enable New Relic RUM JavaScript?
+.. <output-debug-use-newrelic-label>`
 
 
 webmaster_email
@@ -5063,7 +4848,7 @@ $config['webmaster_email'] = 'hello@example.com';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Email Configuration`:
+**Also found in CP:** :menuselection:`Settings --> Outgoing Email`:
 :ref:`Return email address for auto-generated emails
 <email-site-return-email-label>`
 
@@ -5085,7 +4870,7 @@ $config['webmaster_name'] = 'Your Favorite Website';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Email Configuration`:
+**Also found in CP:** :menuselection:`Settings --> Outgoing Email`:
 :ref:`Webmaster or site name for auto-generated emails
 <email-site-webmaster-name-label>`
 
@@ -5109,8 +4894,7 @@ $config['website_session_type'] = 'c';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Security and
-Privacy --> Security and Sessions`: :ref:`Website Session Type
+**Also found in CP:** :menuselection:`Settings --> Security & Privacy`: :ref:`Website Session Type
 <website-session-type-label>`
 
 .. versionchanged:: 2.8
@@ -5138,8 +4922,7 @@ Example Usage::
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Admin --> Channel
-Administration --> Global Channel Preferences`: :ref:`Word Separator for
+**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`: :ref:`Word Separator for
 URL Titles <global-channel-word-seperator-label>`
 
 
@@ -5159,11 +4942,11 @@ Example Usage::
 
  $config['xml_lang'] = 'en';
 
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Admin --> General
-Configuration`: :ref:`Default XML Language
-<general-config-default-xml-label>`
+.. .. rst-class:: cp-path
+..
+.. **Also found in CP:** :menuselection:`Admin --> General
+.. Configuration`: :ref:`Default XML Language
+.. <general-config-default-xml-label>`
 
 
 xss_clean_member_exception
