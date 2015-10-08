@@ -65,13 +65,6 @@ Title will have a number appended to the end to make it unique.
    underscores you can change it with the **Word Separator for URL Titles**
    preference under :menuselection:`Admin --> Channel Administration --> Global Channel Preferences`.
 
-Formatting Buttons
-~~~~~~~~~~~~~~~~~~
-
-If the user accessing the Publish page has any HTML Formatting Buttons
-specified in their My Account page they will be displayed for use with
-the entry fields. Each user is allowed their own formatting buttons.
-
 Entry Fields
 ~~~~~~~~~~~~
 
@@ -79,10 +72,7 @@ The names and types of entry fields displayed will be determined by what
 :doc:`/cp/channel/fields/index` you have defined for
 this channel. If an entry field is set to be "hidden" by default, it
 will have to be expanded by clicking on the field name before content
-can be entered. In addition to the field itself, you can also choose the
-type of :doc:`/general/text_formatting` to apply to that field. You'll
-also notice "Check Spelling", "Glossary", and "Smileys" options beneath
-each field.
+can be entered.
 
 Save Revision
 ~~~~~~~~~~~~~
@@ -211,11 +201,11 @@ Entry. This variable is replaced by the URL set in the **Comment Page
 URL** preference under :menuselection:`Admin --> Channel Management`. The
 URL Title of the entry will be automatically added. For example, this::
 
-	             <a href="{permalink}">my entry</a>
+  <a href="{permalink}">my entry</a>
 
 Would be rendered like this::
 
-	             <a href="http://example.com/index.php/channel/comments/ice_cream/">my entry</a>
+  <a href="http://example.com/index.php/channel/comments/ice_cream/">my entry</a>
 
 Forum
 ~~~~~
@@ -287,41 +277,3 @@ Template
 
 Here you can choose which template to use to display this "page" entry
 when the above URI is requested.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Settings
---------
-
-.. contents::
-  :local:
-  :depth: 1
-
-.. Each Action/Section
-
-
-
-
-
-
-
