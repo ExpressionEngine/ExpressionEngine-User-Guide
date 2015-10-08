@@ -7,7 +7,7 @@ Create/Edit Upload Directory
 
 .. Overview
 
-.. todo:: Add an overview
+Here you can create and edit upload directories, changing the URL and path of the files, along with restricting the types, the default modal view, the maximum file size, image height and width, and image manipulations.
 
 .. Screenshot (optional)
 
