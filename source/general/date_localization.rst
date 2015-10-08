@@ -16,7 +16,7 @@ the :doc:`Localization
 Settings </cp/settings/general>` area of
 your Control Panel. If you prefer that the localization settings of a
 particular member be used as the site default this can be specified in
-the :menuselection:`My Account --> Administrative Options` page.
+the :menuselection:`Profile -> Personal Settings` page.
 
 If you do not wish to permit your members to set their own localization
 preferences you can disable the feature in the :doc:`Membership
