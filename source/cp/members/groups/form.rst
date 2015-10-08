@@ -3,8 +3,7 @@ Create/Edit All Member Groups
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members -> Member Groups ->
-Create`
+**Control Panel Location:** :menuselection:`Members -> Member Groups -> Create/Edit`
 
 .. Overview
 
