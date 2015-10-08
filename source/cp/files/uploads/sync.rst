@@ -25,11 +25,8 @@ Lastly, any records in the database that do not have a corresponding file in the
 Permission Restrictions
 -----------------------
 
-.. todo:: Confirm the permissions for this
-
 * Files: Upload New Files
 * Files: Edit Files
-* Files: Delete Files
 
 .. Fields
 .. ------
