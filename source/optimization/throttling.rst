@@ -3,7 +3,7 @@ Throttling Control
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> Security and Privacy --> Throttling Preferences`
+**Control Panel Location:** :menuselection:`Settings --> Access Throttling`
 
 ExpressionEngine has a Throttling feature that permits you to limit the
 number of page requests by a single IP address within a given time
