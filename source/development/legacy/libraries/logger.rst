@@ -23,7 +23,7 @@ The control panel contains a developer log, which is a log for
 ExpressionEngine and its third-party developers to bring notices or
 warnings to the attention of the Super Admin.
 
-**Control Panel Location:** :menuselection:`Tools --> Logs --> Developer Log`
+**Control Panel Location:** :menuselection:`Developer Tools --> Logs --> Developer`
 
 For example, EllisLab uses the developer log to warn developers if a core
 function that is planned to be deprecated is being used by any third-party
