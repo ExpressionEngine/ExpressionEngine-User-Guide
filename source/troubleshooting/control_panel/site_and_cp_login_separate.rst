@@ -14,13 +14,12 @@ login. Then when visiting then go to the Control Panel EE notes that the
 correct cookie is set; however the PHP session is not set. So EE
 displays the login in order to have the session set.
 
-To login to both at once, navigate to :menuselection:`Admin --> Security
-and Privacy --> Security and Session` and change the **Control Panel
-Session Type** and **User Session Type** to *Cookies only*. After doing
-that, all logins will automatically be logged in to both the Control
-Panel and front-end at the same time. It should be mentioned, however,
-that requiring PHP sessions to access the Control Panel adds an
-additional layer of security and the site administrator should assess
+To login to both at once, navigate to :menuselection:`Settings --> Security &
+Privacy` and change the **Control Panel Session Type** and **User Session
+Type** to *Cookies only*. After doing that, all logins will automatically be
+logged in to both the Control Panel and front-end at the same time. It should
+be mentioned, however, that requiring PHP sessions to access the Control Panel
+adds an additional layer of security and the site administrator should assess
 whether to remove that added security layer by only requiring cookies.
 
 
