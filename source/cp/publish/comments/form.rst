@@ -1,7 +1,7 @@
 Edit Comment
 ============
 
-.. rst-class:: cp-path
+.. .. rst-class:: cp-path
 ..
 .. **Control Panel Location:** :menuselection:`Settings --> HTML Buttons`
 
