@@ -26,6 +26,7 @@ Contents
   - :doc:`comments`
   - :doc:`buttons/index`
   - :doc:`template`
+  - :doc:`hit-tracking`
   - :doc:`/add-ons/pages/control_panel/index`
   - :doc:`word-censor`
 
