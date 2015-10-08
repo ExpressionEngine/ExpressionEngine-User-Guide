@@ -98,8 +98,7 @@ Query Strings
 Some web servers — typically Windows-based servers — still have
 difficulty with the default ExpressionEngine setup that doesn't use
 query strings. In cases like this, you can tell the system to **Force
-URL Query Strings** under :menuselection:`Admin --> System
-Administration --> Output and Debugging`.
+URL Query Strings** under :menuselection:`Settings --> Debugging & Output`.
 
 With this option enabled, the URLs output by ExpressionEngine are
 slightly different, but still far more readable and search

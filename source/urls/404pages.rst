@@ -13,7 +13,7 @@ Displaying a Custom 404 Page
 If you would like to change the default way that ExpressionEngine handles 404
 error codes, you can do that in the Control Panel.
 
-:menuselection:`Design --> Templates --> Global Preferences`
+:menuselection:`Settings --> Template Settings`
 
 .. image:: /images/ee2-template-global-prefs.png
 
@@ -48,7 +48,7 @@ this error checking beyond the first segment we need to use a conditional and
 the :ref:`{redirect=} global variable <global_redirect>`. ::
 
   {if segment_3 != ''}
-    {redirect="404"} 
+    {redirect="404"}
   {/if}
 
 
