@@ -34,8 +34,14 @@ Fields
 Status
 ~~~~~~
 
+Status of this comment.
+
 Comment content
 ~~~~~~~~~~~~~~~
 
+Content of this comment.
+
 Move Comment?
 ~~~~~~~~~~~~~
+
+Enter an Entry ID to move this comment to.
