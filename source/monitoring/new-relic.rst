@@ -27,7 +27,7 @@ Customizing the Application Name
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> System Administration --> Output and Debugging`
+**Control Panel Location:** :menuselection:`Settings --> Debugging & Output`
 
 If you're using New Relic to monitor the performance of multiple
 ExpressionEngine installations, you'll likely want those installations
@@ -45,7 +45,7 @@ Disabling New Relic's RUM JavaScript
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> System Administration --> Output and Debugging`
+**Control Panel Location:** :menuselection:`Settings --> Debugging & Output`
 
 It may be desirable at times to disable New Relic's `Real User
 Monitoring JavaScript <https://newrelic.com/docs/features/real-user-
