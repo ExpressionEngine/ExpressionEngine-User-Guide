@@ -131,14 +131,14 @@ There is an internal limit of 1000 regardless of your preference.
 
 .. _output-debug-use-newrelic-label:
 
-Enable New Relic RUM JavaScript?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This preference only appears when the New Relic PHP extension has
-been installed on your server. For more details, please visit
-:doc:`/monitoring/new-relic`.
-
-New Relic application name
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Changes the name of the application that appears in the New Relic dashboard for this installation of ExpressionEngine.
+.. Enable New Relic RUM JavaScript?
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..
+.. This preference only appears when the New Relic PHP extension has
+.. been installed on your server. For more details, please visit
+.. :doc:`/monitoring/new-relic`.
+..
+.. New Relic application name
+.. ~~~~~~~~~~~~~~~~~~~~~~~~~~
+..
+.. Changes the name of the application that appears in the New Relic dashboard for this installation of ExpressionEngine.
