@@ -3,7 +3,7 @@ CAPTCHA Settings
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Settings --> CAPTCHA Settings`
+**Control Panel Location:** :menuselection:`Settings --> CAPTCHA`
 
 .. Overview
 
