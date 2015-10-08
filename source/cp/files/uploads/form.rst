@@ -16,9 +16,9 @@ Create/Edit Upload Directory
 Permission Restrictions
 -----------------------
 
-* Asset upload directories: Create Upload Directories
-* Asset upload directories: Edit Upload Directories
-* Asset upload directories: Delete Upload Directories
+* File upload directories: Create Upload Directories
+* File upload directories: Edit Upload Directories
+* File upload directories: Delete Upload Directories
 
 Fields
 ------

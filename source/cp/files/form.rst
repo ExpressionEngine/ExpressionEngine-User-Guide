@@ -17,7 +17,7 @@ credit, and location for a file.
 Permission Restrictions
 -----------------------
 
-* Assets: Edit Assets
+* Files: Edit Files
 
 Actions
 -------

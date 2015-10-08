@@ -20,7 +20,7 @@ control panel.
 Permission Restrictions
 -----------------------
 
-* Assets: Edit Assets
+* Files: Edit Files
 
 Fields
 ------

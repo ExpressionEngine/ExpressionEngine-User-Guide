@@ -17,7 +17,7 @@ directory.
 Permission Restrictions
 -----------------------
 
-* Assets: Upload New Assets
+* Files: Upload New Files
 
 Fields
 ------

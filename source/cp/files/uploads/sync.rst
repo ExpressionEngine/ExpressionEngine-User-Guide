@@ -30,9 +30,9 @@ Permission Restrictions
 
 .. todo:: Confirm the permissions for this
 
-* Assets: Upload New Assets
-* Assets: Edit Assets
-* Assets: Delete Assets
+* Files: Upload New Files
+* Files: Edit Files
+* Files: Delete Files
 
 .. Fields
 .. ------
