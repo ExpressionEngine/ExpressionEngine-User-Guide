@@ -43,7 +43,7 @@ This setting defines the amount of time that must lapse between comment
 postings. A malicious user will have to wait until the time has lapsed
 before being able to post again.
 
-The setting is located at: :menuselection:`Admin --> Channel Administration --> Channels --> Edit Preferences`
+The setting is located at: :menuselection:`Developer Tools --> Channel Manager --> Settings`
 
 Rank Denial
 -----------
@@ -59,7 +59,7 @@ altering all links submitted by users so that they point to an
 intermediary "redirect page" at your site first, before being sent to
 the target destination.
 
-The setting is located at: :menuselection:`Admin --> Security and Privacy --> Security and Sessions`
+The setting is located at: :menuselection:`Settings --> Security & Privacy`
 
 .. _deny-duplicate-data-label:
 
@@ -70,7 +70,7 @@ The "Deny Duplicate Data" feature prevents a comment from being accepted
 if an identical one already exists in your database. A malicious person
 can't submit the same information more than once.
 
-The setting is located at: :menuselection:`Admin --> Security and Privacy --> Security and Sessions`
+The setting is located at: :menuselection:`Settings --> Security & Privacy`
 
 Site Membership
 ---------------
