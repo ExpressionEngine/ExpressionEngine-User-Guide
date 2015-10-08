@@ -4,7 +4,7 @@ Moblog Module Control Panel
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-On Manager --> Moblog`
+**Control Panel Location:** :menuselection:`Developer Tools --> Add-On Manager --> Moblog`
 
 The Moblog Module Control Panel lists your existing Moblogs and allows you
 to edit, delete or perform a check on any of them.

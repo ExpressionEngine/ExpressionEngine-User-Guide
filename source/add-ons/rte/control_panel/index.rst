@@ -4,7 +4,7 @@ Rich Text Editor Module Control Panel
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-On Manager --> Rich Text Editor`
+**Control Panel Location:** :menuselection:`Developer Tools --> Add-On Manager --> Rich Text Editor`
 
 This page allows you to configure ExpressionEngine's built-in Rich Text Editor (RTE).
 

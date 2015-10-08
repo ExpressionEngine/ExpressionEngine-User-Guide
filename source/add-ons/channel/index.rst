@@ -2,10 +2,10 @@
 Channel
 #######
 
-ExpressionEngine's Channel Module allows you to display content created
-using the :menuselection:`Publish` section of the Control Panel. It's the
-most powerful module of ExpressionEngine, allowing you a great deal
-of flexibility for displaying your content.
+ExpressionEngine's Channel Module allows you to display content created using
+the :menuselection:`Create` or :menuselection:`Edit` section of the Control
+Panel. It's the most powerful module of ExpressionEngine, allowing you a great
+deal of flexibility for displaying your content.
 
 The Channel Module provides the following tags and features:
 

@@ -3,7 +3,7 @@ Simple Commerce – Managing Store Items
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-On Manager --> Simple Commerce`
+**Control Panel Location:** :menuselection:`Developer Tools --> Add-On Manager --> Simple Commerce`
 
 The Items screen gives you at a glance an overview of your store
 items, their price, sale status, and number of purchases. You may select

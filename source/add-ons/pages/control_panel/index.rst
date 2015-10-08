@@ -4,7 +4,7 @@ Pages Module Control Panel
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-On Manager --> Pages`
+**Control Panel Location:** :menuselection:`Developer Tools --> Add-On Manager --> Pages`
 
 The Pages Module Control Panel allows you to create, edit, view and delete your Pages.
 

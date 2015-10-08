@@ -26,7 +26,7 @@ You'll find many member management options available at:
   page.
 - The My Account Page, accessible from the Control Panel's sidebar.
   It can also display information for any member if you choose a
-  particular member from :menuselection:`Members --> View All`.
+  particular member from :menuselection:`Members`.
 - The public side of your website also has a Member Profile area, enabling
   your site members to manage their personal profile information without
   having access to your Control Panel. Typically, this Member Profile area
@@ -46,14 +46,13 @@ to change the look. You'll find the templates located at::
 
   themes/profile_themes/default
 
-These templates can be edited with a text editor, or you may choose to
-edit them via your Control Panel at :menuselection:`Design --> Themes
---> Member Profile Templates`
+These templates can be edited with a text editor, or you may choose to edit
+them via your Control Panel at :menuselection:`Developer Tools --> Template
+Manager --> Members`
 
-A good strategy is to make a copy of the entire **default** templates
-folder, then edit your copy so you can leave the **default** files
-intact. Set your new copy as the site default under :menuselection:`Members
---> Preferences --> Default Member Profile Theme`
+A good strategy is to make a copy of the entire **default** templates folder,
+then edit your copy so you can leave the **default** files intact. Set your new
+copy as the site default under :menuselection:`Settings --> Member Settings`
 
 .. note:: When building your member profile templates, consider that any
   external links will pass along referrer data. This can cause security

@@ -68,10 +68,10 @@ should end up with:
 Step 7
 ------
 
-Log into your ExpressionEngine Control Panel with a SuperAdmin user. Go
-to :menuselection:`Add-Ons --> Modules`. You will see an entry listed for the "Discussion
-Forum". On the right side of the table, click the Install link
-corresponding to the Discussion Forum Module. This will install the
-necessary database tables and settings for the forum.
+Log into your ExpressionEngine Control Panel with a SuperAdmin user. Go to
+:menuselection:`Developer Tools --> Add-On Manager`. You will see an entry
+listed for the "Discussion Forum". On the right side of the table, click the
+Install link corresponding to the Discussion Forum Module. This will install
+the necessary database tables and settings for the forum.
 
 You are now ready to start using your new forum!

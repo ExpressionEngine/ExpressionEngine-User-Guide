@@ -14,7 +14,7 @@ of the field::
 There are a number of field types included with ExpressionEngine, and
 add-ons can make even more available. Channel fields are managed in your
 control panel at
-:menuselection:`Admin --> Channel Administration --> Channel Fields`.
+:menuselection:`Developer Tools --> Channel Manager --> Field Groups`.
 
 .. contents::
 	:local:

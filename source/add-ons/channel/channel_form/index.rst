@@ -889,8 +889,8 @@ context of your form.
 Allowing Guests to Post Entries
 -------------------------------
 
-Allowing guest posts is controlled in the Channel From settings at
-:menuselection:`Admin --> Channel Administration --> Channel Form`.
+Allowing guest posts is controlled in the Channel Form settings at
+:menuselection:`Developer Tools --> Channel Manager --> Settings`.
 
 To allow guests to post in a certain channel, locate the options for
 "Allow Guest Posts" next to the channel you want to allow guest posts

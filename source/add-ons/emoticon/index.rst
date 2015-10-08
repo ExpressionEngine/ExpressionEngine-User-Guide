@@ -49,10 +49,10 @@ Then, use the following code to create a table containing the smileys::
 Note the "column" parameter in the emoticon tag. It allows you to
 specify how many columns of smilies the table will show.
 
-ExpressionEngine will then automatically populate the table with all of
-the smiley images that you have in whatever directory you have specified
-as your "smilies" directory in the :menuselection:`Admin --> System
-Administration --> Emoticon Preferences` section of the Control Panel.
+ExpressionEngine will then automatically populate the table with all of the
+smiley images that you have in whatever directory you have specified as your
+"smilies" directory in the :menuselection:`Settings --> Content & Design`
+section of the Control Panel.
 
 Creating or Modifying Emoticons
 -------------------------------

@@ -3,7 +3,7 @@ IP to Nation
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Add-On Manager --> IP to Nation`
+**Control Panel Location:** :menuselection:`Developer Tools --> Add-On Manager --> IP to Nation`
 
 .. contents::
    :local:
@@ -25,7 +25,7 @@ Database Updates
 ----------------
 
 To update your installation, simply make sure that you are running the
-latest version of ExpressionEngine, and visit the :menuselection:`Add-On Manager --> IP to Nation` page in your Control Panel and click the Update IP Database button. The update
+latest version of ExpressionEngine, and visit the :menuselection:`Developer Tools --> Add-On Manager --> IP to Nation` page in your Control Panel and click the Update IP Database button. The update
 may take a few seconds; do not click any links or refresh the page while
 the auto-update is taking place.
 
@@ -33,7 +33,7 @@ Banning Counties
 ----------------
 
 To look up the country associated with an IP address, or to ban a
-country, go to :menuselection:`Add-On Manager --> IP to Nation` in your Control
+country, go to :menuselection:`Developer Tools --> Add-On Manager --> IP to Nation` in your Control
 Panel and enter an IP address in the "Search for an IP address" field.
 
 To ban a country, make sure your IP database is updated, then find the country you wish to ban in the "Banned countries" checklist. Make a selection and click Save Banlist.

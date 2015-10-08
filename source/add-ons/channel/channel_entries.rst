@@ -10,10 +10,11 @@ Channel Entries Tag
 Introduction
 ************
 
-The Channel Entries tag is the primary tag used to show the content you
-create and edit via your Control Panel's :menuselection:`Publish` section.
-It's the most powerful tag in ExpressionEngine, and the most commonly
-used since its main function is to retrieve and display your site's content.
+The Channel Entries tag is the primary tag used to show the content you create
+and edit via your Control Panel's :menuselection:`Create` or
+:menuselection:`Edit` section. It's the most powerful tag in ExpressionEngine,
+and the most commonly used since its main function is to retrieve and display
+your site's content.
 
 The Channel Entries tag can display both multi-entry and single-entry content -
 that is, several entries on a page, or one specific entry. By default, Channel
@@ -1384,7 +1385,7 @@ comment\_auto\_path
 	{comment_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL**
-preference under :menuselection:`Admin --> Channel Management`. No entry
+preference under :menuselection:`Developer Tools --> Channel Manager --> Settings`. No entry
 id, URL Title, or other information is included; this is the exact URL
 from the preference.
 
@@ -1396,7 +1397,7 @@ comment\_entry\_id\_auto\_path
 	{comment_entry_id_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL**
-preference under :menuselection:`Admin --> Channel Management`. The ID
+preference under :menuselection:`Developer Tools --> Channel Manager --> Settings`. The ID
 number of the entry will be automatically added. For example, this::
 
 	<a href="{comment_entry_id_auto_path}">my entry</a>
@@ -1431,7 +1432,7 @@ comment\_url\_title\_auto\_path
 	{comment_url_title_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL**
-preference under :menuselection:`Admin --> Channel Management`. The URL
+preference under :menuselection:`Developer Tools --> Channel Manager --> Settings`. The URL
 Title of the entry will be automatically added. For example, this::
 
 	<a href="{comment_url_title_auto_path}">my entry</a>
