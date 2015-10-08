@@ -15,12 +15,10 @@ database, one will be added. For images, any additional sizes will be
 generated and watermarked according to the file upload preferences for
 that directory.
 
+Lastly, any records in the database that do not have a corresponding file in the main directory will be highlighted as not found.
+
 .. Screenshot (optional)
 
-.. Lastly, any records in the database that do not have a
-.. corresponding file in the main directory will be deleted from the
-.. database along with any existing resized images. Existing images may
-.. also be set to regenerate resized images from this page.
 
 .. Permissions
 
