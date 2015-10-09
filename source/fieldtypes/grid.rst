@@ -111,7 +111,7 @@ Offsets the number of rows output by the tag pair to the number
 specified here.
 
 orderby=
---------
+^^^^^^^^
 
 ::
 
@@ -122,7 +122,7 @@ defaults to row order as set on the channel entry publish form.
 Entering ``random`` will return the rows in a random order.
 
 row\_id=
---------
+^^^^^^^^
 
 ::
 
@@ -138,7 +138,7 @@ Or use "not" to exclude rows::
   row_id="not 8|15|87"
 
 search:column\_name=
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 ::
 
@@ -150,7 +150,7 @@ criteria. The behavior and syntax is identical to the
 </add-ons/channel/channel_entries>` module.
 
 sort=
------
+^^^^^
 
 ::
 
@@ -162,14 +162,14 @@ to ascending.
 .. _grid_tag_variables:
 
 Variables
-=========
+---------
 
 .. contents::
    :local:
    :depth: 1
 
 count
------
+^^^^^
 
 ::
 
@@ -180,7 +180,7 @@ are being displayed, then for the fourth entry the ``count`` variable
 would have a value of "4".
 
 field_row_count
----------------
+^^^^^^^^^^^^^^^
 
 ::
 
@@ -189,7 +189,7 @@ field_row_count
 The count of the row inside the field regardless of tag output.
 
 field_row_index
----------------
+^^^^^^^^^^^^^^^
 
 ::
 
@@ -198,7 +198,7 @@ field_row_index
 The index of the row inside the field regardless of tag output.
 
 field\_total\_rows
-------------------
+^^^^^^^^^^^^^^^^^^
 
 ::
 
@@ -207,7 +207,7 @@ field\_total\_rows
 The total number of rows in the field regardless of tag output criteria.
 
 index
------
+^^^^^
 
 ::
 
@@ -216,7 +216,7 @@ index
 The count of the rows but starting at zero.
 
 prev\_row
----------
+^^^^^^^^^
 
 ::
 
@@ -228,7 +228,7 @@ Used as a tag pair within the parent Grid field tag pair, provides
 access to data in the previous row in the dataset.
 
 next\_row
----------
+^^^^^^^^^
 
 ::
 
@@ -240,7 +240,7 @@ Used as a tag pair within the parent Grid field tag pair, provides
 access to data in the next row in the dataset.
 
 row_id
-------
+^^^^^^
 
 ::
 
@@ -249,7 +249,7 @@ row_id
 The database ID of the current row.
 
 switch=
--------
+^^^^^^^
 
 ::
 
@@ -261,7 +261,7 @@ the :doc:`Channel Entries
 Grid field.
 
 total\_rows
------------
+^^^^^^^^^^^
 
 ::
 
@@ -270,7 +270,7 @@ total\_rows
 The total number of rows being returned by the current display criteria.
 
 Modifiers
-=========
+---------
 
 .. contents::
    :local:
@@ -280,7 +280,7 @@ All modifiers have access to the tag parameters available to the
 primary tag which are listed above.
 
 :average
---------
+^^^^^^^^
 
 ::
 
@@ -291,7 +291,7 @@ column values in that field, or in the dataset paired down by additional
 criteria such as search.
 
 :highest
---------
+^^^^^^^^
 
 ::
 
@@ -302,7 +302,7 @@ column values in that field, or in the dataset paired down by additional
 criteria such as search.
 
 :lowest
---------
+^^^^^^^
 
 ::
 
@@ -313,7 +313,7 @@ column values in that field, or in the dataset paired down by additional
 criteria such as search.
 
 :sum
---------
+^^^^
 
 ::
 
@@ -324,7 +324,7 @@ column values in that field, or in the dataset paired down by additional
 criteria such as search.
 
 :table
-------
+^^^^^^
 
 ::
 
@@ -347,7 +347,7 @@ to the primary tag are available in addition to these:
 - **width=** Sets width attribute on the table's HTML element
 
 :total_rows
------------
+^^^^^^^^^^^
 
 ::
 
@@ -357,7 +357,7 @@ When outside of a Grid field tag pair, this modifier can be used to get
 the total number of rows in a field given a specific criteria.
 
 :next_row
----------
+^^^^^^^^^
 
 ::
 
@@ -369,7 +369,7 @@ Given a row ID, this tag pair will provide access to the next row in the
 field criteria. The ``row_id`` may be populated via a segment variable.
 
 :prev_row
----------
+^^^^^^^^^
 
 ::
 

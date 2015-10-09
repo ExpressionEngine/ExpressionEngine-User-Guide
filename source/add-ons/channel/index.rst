@@ -10,9 +10,7 @@ deal of flexibility for displaying your content.
 The Channel Module provides the following tags and features:
 
 - :doc:`Channel Entries Tag <channel_entries>`
-- :doc:`Custom Fields <custom_fields>`
 - :doc:`Next/Prev Entry Linking <entry_linking>`
-- :doc:`Relationships Field <relationships>`
 - :doc:`Channel Form <channel_form/index>`
 - :doc:`Calendar Tag <calendar>`
 - :doc:`Archive Month Links Tag <archive_month_links>`

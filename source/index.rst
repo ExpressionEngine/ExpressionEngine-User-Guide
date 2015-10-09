@@ -136,6 +136,7 @@ Developing for ExpressionEngine
   installation/index
   cp/index
   add-ons/index
+  fieldtypes/index
   optimization/index
   security/index
   templates/index

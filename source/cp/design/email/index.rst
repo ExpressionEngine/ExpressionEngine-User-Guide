@@ -35,7 +35,7 @@ Actions
 
 .. Each Action
 
-.. include:: /cp/design/header.rst
+.. include:: /cp/design/_header.rst
 
 Template Links
 ~~~~~~~~~~~~~~
