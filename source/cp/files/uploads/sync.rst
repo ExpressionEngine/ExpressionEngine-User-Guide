@@ -26,7 +26,6 @@ Permission Restrictions
 -----------------------
 
 * Files: Upload New Files
-* Files: Edit Files
 
 .. Fields
 .. ------
