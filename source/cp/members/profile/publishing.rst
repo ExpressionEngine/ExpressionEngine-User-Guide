@@ -1,5 +1,5 @@
-Create/Edit Publishing Settings
-===============================
+Publishing Settings
+===================
 
 .. rst-class:: cp-path
 

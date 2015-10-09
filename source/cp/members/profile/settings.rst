@@ -1,5 +1,5 @@
-Create/Edit Personal Settings
-=============================
+Personal Settings
+=================
 
 .. rst-class:: cp-path
 

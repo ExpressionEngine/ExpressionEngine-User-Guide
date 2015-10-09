@@ -1,5 +1,5 @@
-Create/Edit Date & Time Settings
-================================
+Date & Time Settings
+====================
 
 .. rst-class:: cp-path
 

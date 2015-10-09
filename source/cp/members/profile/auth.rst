@@ -1,5 +1,5 @@
-Create/Edit Username & Password
-===============================
+Username & Password
+===================
 
 .. rst-class:: cp-path
 

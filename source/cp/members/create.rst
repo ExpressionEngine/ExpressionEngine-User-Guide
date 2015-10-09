@@ -1,5 +1,5 @@
-Create/Edit Register a New Member
-=================================
+Register a New Member
+=====================
 
 .. rst-class:: cp-path
 

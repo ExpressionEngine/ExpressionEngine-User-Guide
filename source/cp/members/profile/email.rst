@@ -1,5 +1,5 @@
-Create/Edit Email Settings
-==========================
+Email Settings
+==============
 
 .. rst-class:: cp-path
 

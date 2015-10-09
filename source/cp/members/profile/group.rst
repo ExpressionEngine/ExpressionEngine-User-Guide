@@ -1,5 +1,5 @@
-Create/Edit Member Group Assignment
-===================================
+Member Group Assignment
+=======================
 
 .. rst-class:: cp-path
 
