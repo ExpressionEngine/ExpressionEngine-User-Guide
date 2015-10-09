@@ -16,7 +16,7 @@ This section of the Control Panel allows you to create or edit a watermark.
 Permission Restrictions
 -----------------------
 
-* File upload directories: Edit Upload Directories
+* File upload directories: Create Upload Directories
 
 Fields
 ------

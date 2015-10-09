@@ -21,7 +21,7 @@ apply them to your automatically created thumbnails while
 Permission Restrictions
 -----------------------
 
-* File upload directories: Edit Upload Directories
+* File upload directories: Create Upload Directories
 
 Actions
 -------
