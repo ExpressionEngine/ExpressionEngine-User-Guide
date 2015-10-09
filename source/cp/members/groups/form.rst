@@ -126,10 +126,10 @@ Access control panel
 
 When set to **yes**, users assigned to this group may access the control panel.
 
-Default CP homepage
-~~~~~~~~~~~~~~~~~~~
+Default :abbr:`CP (Control Panel)` homepage
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Page of the Control Panel this group should see when logging in.
+Page of the :abbr:`CP (Control Panel)` this group should see when logging in.
 
 Access footer helper links
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
