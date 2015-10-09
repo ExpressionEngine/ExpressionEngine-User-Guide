@@ -3,7 +3,7 @@ Create/Edit HTML Buttons
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Profile -> HTML Buttons`
+**Control Panel Location:** :menuselection:`Profile --> HTML Buttons`
 
 .. Overview
 

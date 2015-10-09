@@ -3,7 +3,7 @@ Create/Edit Register a New Member
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members -> Create`
+**Control Panel Location:** :menuselection:`Members --> Create`
 
 .. Overview
 

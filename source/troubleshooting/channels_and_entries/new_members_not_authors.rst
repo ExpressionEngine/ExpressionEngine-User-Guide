@@ -13,4 +13,4 @@ name and checking **Include user in PUBLISH page multi-author list?** under
 "Member Preferences".
 
 The appropriate permission for entire member groups can be set at
-:menuselection:`Members -> Member Groups -> Create/Edit`
+:menuselection:`Members --> Member Groups --> Create/Edit`

@@ -45,7 +45,7 @@ displayed to visitors and users who have not customized their own settings.
 
 Users may customize their own account in one of two locations. First, if the
 user has access to the Control Panel then they may customize their preferred
-language under :menuselection:`Profile -> Personal Settings`. For
+language under :menuselection:`Profile --> Personal Settings`. For
 regular users of a site, they will simply access their Member Profile and then
 select Localization Settings. Users who have customized their settings and are
 logged in will see user messages, dates, and the Control Panel in their chosen

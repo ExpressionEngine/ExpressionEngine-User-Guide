@@ -3,7 +3,7 @@ Create/Edit Email Settings
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Profile -> Email Settings`
+**Control Panel Location:** :menuselection:`Profile --> Email Settings`
 
 .. Overview
 

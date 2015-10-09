@@ -3,7 +3,7 @@ Create/Edit Date & Time Settings
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Profile -> Date & Time`
+**Control Panel Location:** :menuselection:`Profile --> Date & Time`
 
 .. Overview
 

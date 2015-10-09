@@ -1,6 +1,8 @@
 Member Profile
 ==============
 
+.. rst-class:: cp-path
+
 **Control Panel Location:** :menuselection:`Members --> Edit`
 
 .. Overview

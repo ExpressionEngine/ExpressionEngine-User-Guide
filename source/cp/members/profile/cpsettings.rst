@@ -3,7 +3,7 @@ Create/Edit CP Settings
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Profile -> CP Settings`
+**Control Panel Location:** :menuselection:`Profile --> CP Settings`
 
 .. Overview
 

@@ -3,7 +3,7 @@ Create/Edit All Member Groups
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members -> Member Groups -> Create/Edit`
+**Control Panel Location:** :menuselection:`Members --> Member Groups --> Create/Edit`
 
 .. Overview
 
@@ -15,6 +15,9 @@ This sections allows you to set the various permissions and settings for the sel
 
 Permission Restrictions
 -----------------------
+
+* Member Groups Allowed actions: Create New Groups
+* Member Groups Allowed actions: Edit Groups
 
 Fields
 ------
@@ -53,17 +56,17 @@ Users in this group will be allowed access to the website for each status mode s
 Access public profiles
 ~~~~~~~~~~~~~~~~~~~~~~
 
-When set to <b>yes</b>, users assigned to this group may view public profiles of other members.
+When set to **yes**, users assigned to this group may view public profiles of other members.
 
 Email other members
 ~~~~~~~~~~~~~~~~~~~
 
-When set to <b>yes</b>, users assigned to this group may send emails to other members via the system.
+When set to **yes**, users assigned to this group may send emails to other members via the system.
 
 Delete account
 ~~~~~~~~~~~~~~
 
-When set to <b>yes</b>, users assigned to this group may delete their own accounts without approval
+When set to **yes**, users assigned to this group may delete their own accounts without approval
 
 Recipient(s) for delete notifications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -73,7 +76,7 @@ All recipients will be notified anytime a user deletes their account. Separate e
 Submit comments
 ~~~~~~~~~~~~~~~
 
-When set to <b>yes</b>, users assigned to this group may submit comments to the website.
+When set to **yes**, users assigned to this group may submit comments to the website.
 
 Bypass moderation
 ~~~~~~~~~~~~~~~~~
@@ -86,7 +89,7 @@ Users in this group will be allowed to perform all of the selected actions.
 Access search utility
 ~~~~~~~~~~~~~~~~~~~~~
 
-When set to <b>yes</b>, users assigned to this group may use the search functionality of the website.
+When set to **yes**, users assigned to this group may use the search functionality of the website.
 
 Search limit (in seconds)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -96,7 +99,7 @@ Length of time between searches a user must wait before performing another searc
 Access personal messages
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-When set to <b>yes</b>, users assigned to this group may send and receive personal messages.
+When set to **yes**, users assigned to this group may send and receive personal messages.
 
 Per day maximum
 ~~~~~~~~~~~~~~~
@@ -111,22 +114,22 @@ Maximum number of personal messages a user may store in their account.
 Allow attachments
 ~~~~~~~~~~~~~~~~~
 
-When set to <b>yes</b>, users assigned to this group may attach files to personal messages.
+When set to **yes**, users assigned to this group may attach files to personal messages.
 
 Access bulletins
 ~~~~~~~~~~~~~~~~
 
-When set to <b>yes</b>, users assigned to this group may send and receive bulletins.
+When set to **yes**, users assigned to this group may send and receive bulletins.
 
 Access control panel
 ~~~~~~~~~~~~~~~~~~~~
 
-When set to <b>yes</b>, users assigned to this group may access the control panel.
+When set to **yes**, users assigned to this group may access the control panel.
 
-Default <abbr title="Control Panel">CP</abbr> homepage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Default CP homepage
+~~~~~~~~~~~~~~~~~~~
 
-Page of the <abbr title="Control Panel">CP</abbr> this group should see when logging in.
+Page of the Control Panel this group should see when logging in.
 
 Access footer helper links
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -186,7 +189,7 @@ Users can perform all selected actions.
 Manage general design settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When set to <b>yes</b>, users assigned to this group may manage content and design settings.
+When set to **yes**, users assigned to this group may manage content and design settings.
 
 Template groups
 ~~~~~~~~~~~~~~~
@@ -211,7 +214,7 @@ Users can perform all the above selected actions on all selected template groups
 Install or remove add-ons
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When set to <b>yes</b>, users assigned to this group may install and remove add-ons.
+When set to **yes**, users assigned to this group may install and remove add-ons.
 
 Allowed add-on access
 ~~~~~~~~~~~~~~~~~~~~~
