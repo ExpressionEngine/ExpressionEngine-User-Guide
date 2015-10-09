@@ -1,5 +1,5 @@
-Create/Edit CP Settings
-=======================
+CP Settings
+===========
 
 .. rst-class:: cp-path
 
