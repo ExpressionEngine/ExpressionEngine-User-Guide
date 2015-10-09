@@ -32,7 +32,7 @@ Actions
 
 .. Each Action
 
-.. include:: /cp/files/header.rst
+.. include:: /cp/files/_header.rst
 
 Create New
 ~~~~~~~~~~
