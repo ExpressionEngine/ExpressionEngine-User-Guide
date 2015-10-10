@@ -147,16 +147,10 @@ Channel Group Assignments
 Even though we've created our **News** Channel, as well as our **News Fields** Group, we haven't explicitly
 linked the two together yet. Let's do that now.
 
-#. Go to :menuselection:`Admin --> Channel Administration --> Channels`.
-#. Click the *Edit Group Assignments* link located to the right of the **News** Channel.
-#. Leave **Category Group** set to "None".
-#. Set **Status Group** to "Statuses".
+#. Go back to the *Channels* by clicking the link in the left navigation.  Click on your *News* channel.
 #. Set **Channel Field Group** to "News Fields".
-#. Click *Update*.
-
-.. figure:: ../images/getting_started_channel_group_assignments.png
-   :align: center
-   :alt: Channel Group Assignments Page
+#. Leave **Category Group** set to "None".
+#. Save your your edits and you're ready to start adding content.
 
 As you've just seen, every Channel can have
 three types of Groups assigned to it. Let's go over each one in a bit more detail.
@@ -166,7 +160,7 @@ Category Group
 
 Categories are a nice way to better organize all of your content in each Channel.
 While we aren't creating any Categories for the purposes of this guide, know that they are a very
-powerful feature with full hiearchy support and more. See the :doc:`Categories </cp/channel/cat/index>`
+powerful feature with full hierarchy support and more. See the :doc:`Categories </cp/channel/cat/index>`
 section for more information.
 
 Status Group
@@ -203,25 +197,23 @@ Channel and creating a new *Entry* in it. You can think of *Entries* as being sy
 *posts*, but the term *Entry* better encompasses all of the different types of data you can
 store in ExpressionEngine.
 
-#. Go to :menuselection:`Content --> Publish`. Since we only have one Channel (News), ExpressionEngine
-   automatically chooses it.
-#. For the **Title**, type "Hello, World!". Notice that we did not have to create this field
-   ourselves - all Entries automatically have a Title field.
+#. Click the *Create* button in the top left corner and select the *News* channel to publish in.  This will open up your publish form, custom built based on the fields, statuses and categories you have assigned to your channel.
+
+.. figure:: ../images/getting_started_news_publish.png
+   :align: center
+   :alt: Publish Page
+
+#. For the **Title**, type "What to do this Weekend?". Notice that we did not have to create this field ourselves - all Entries automatically have a Title field.  You can change the label of this field by editing your *News* channel.
 #. ExpressionEngine provides a sensible **URL Title** for you. This is another
    automatic field that allows your entries to be easily linked to via a URL.
    See :doc:`/urls/url_structure` for more information.
 #. Enter some text in the **News Body** field. Make it good!
-#. Click *Submit* to publish the Entry.
+#. Click *Publish* to publish the Entry.
 
 
-.. figure:: ../images/getting_started_publish.png
-   :align: center
-   :alt: Publish Page
+Upon submitting, you'll be taken to the Edit screen, which displays all of your entries in a filterable table:
 
-Upon submitting, you'll be taken to the View Entry page, which simply provides an overview of
-all the content you just entered:
-
-.. figure:: ../images/getting_started_publish_view.png
+.. figure:: ../images/getting_started_edit_page.png
    :align: center
    :alt: View Entry Page
 
