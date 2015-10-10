@@ -76,13 +76,9 @@ create a Channel to hold this content.
 Creating a Channel
 ==================
 
-#. For the **Create Channel** button or the **New** button to open up the :doc:`Create Channel </cp/channel/form>`.
+#. For the **Create Channel** button or the **New** button to open up the :doc:`Create Channel form</cp/channel/form>`.
 
-
-todo
-MAKE IMAGE!!!!
-
-.. figure:: ../images/getting_started_channels.png
+.. figure:: ../images/getting_started_channel_create_form.png
    :align: center
    :alt: Channels Page
 
