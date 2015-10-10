@@ -5,7 +5,9 @@ Hello, World!
 Congratulations! You have installed ExpressionEngine... now what? Why not say 
 "Hello"!
 
-Visit :menuselection:`Design --> Templates --> Edit --> Create Group`
+Visit Developer Tools in the top right corner and select *Template Manager*.  Click the *NEW* button next to *Template Groups* in the left navigation.
+
+
 
 Fill in the field for **Template Group Name**, for this example use "site". 
 Ignore **Duplicate an Existing Template Group?** for now and check the 

@@ -56,7 +56,7 @@ On the :doc:`General Settings </cp/settings/general>` page, give your site a des
 
 Click the Developer Tools icon in the top right corner and select *Channel Manager*. 
 
-.. figure:: ../images/getting_started_general-settings-w-nav
+.. figure:: ../images/getting_started_general_settings_w_nav.png
    :align: center
    :alt: Control Panel Home
 
