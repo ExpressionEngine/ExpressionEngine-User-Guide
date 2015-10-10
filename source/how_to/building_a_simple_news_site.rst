@@ -89,8 +89,6 @@ MAKE IMAGE!!!!
 #  Name our new channel "News".
 #. ExpressionEngine will automatically provide a sensible **Short Name** for you, in this case, "news".
 #  For now, we don't have any field or category groups to assign to our channel, so save your new channel clicking **Save Channel** and we'll go create some.
-#. Click *Submit*.
-
 
 .. tip:: A Channel's **Full Name** should be a friendly, human-readable name. The **Short Name**, on
 	the other hand, is how you'll refer to this Channel in your actual code. Don't worry, we'll get
@@ -112,36 +110,34 @@ set of Channel Fields. We'll discuss groups further in a bit.
 Creating a Channel Field Group
 ==============================
 
-#. Go to :menuselection:`Admin --> Channel Administration --> Channel Fields`.
-#. Click the *Create a New Channel Field Group* button in the upper-right.
+#. Click *NEW* next to the *Category Groups* link in the left navigation to go directly to the :doc:`Create Field Group form</cp/channel/fields/groups/form>`.
 #. Let's be startlingly creative and name this group "News Fields".
-#. Click *Submit*.
+#. Click *Safe Field Group* your new field group.
 
-Our new Channel Field Group is shown, as well as the fact that it currently holds zero (0) fields:
+You should see your new Channel Field Group:
 
-.. figure:: ../images/getting_started_channel_field_groups.png
+.. figure:: ../images/getting_started_field_group.png
    :align: center
    :alt: Channel Field Groups Page
 
 
-For our simple news section, let's create a basic Textarea field to hold the content, or "body", of each
-news article.
+For our simple news section, let's create a Rich Text field to hold the content, or "body", of each news article.
 
-Creating a Channel Field
-========================
+Creating a Field
+================
 
-#. Click the *News Fields* group.
-#. Click the *Create a New Channel Field* button in the upper-right.
-#. For **Type**, choose Textarea. (Notice the other available types - exciting, no? Add-ons can even provide completely new types of fields.)
-#. For **Field Label**, type "News Body".
-#. ExpressionEngine will automatically provide a sensible **Short Name** for you, in this case, "news_body".
-#. Let's keep it simple and leave the rest of the settings at their defaults. Click the *Submit* button at the bottom of the page.
+#. Click the *Fields* button for your *News* group.
+#. Click the *Create New* button to open up the :doc:`Create Field form</cp/channel/fields/form>`.
 
-Behold, our beautiful new Channel Field:
-
-.. figure:: ../images/getting_started_channel_fields.png
+.. figure:: ../images/getting_started_field_create.png
    :align: center
    :alt: Channel Fields Page
+
+
+#. For **Type**, choose Rich Text Editor. (Notice the other available types - exciting, no? Add-ons can even provide completely new types of fields.)
+#. For **Field Label**, type "News Body".
+#. ExpressionEngine will automatically provide a sensible **Short Name** for you, in this case, "news_body".
+#. Let's require our field, include it in our searchable fields and leave the rest of the settings at their defaults. Save your new field.
 
 
 *************************
