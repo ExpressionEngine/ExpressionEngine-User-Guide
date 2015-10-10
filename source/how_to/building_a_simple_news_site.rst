@@ -20,10 +20,8 @@ we recommend `j-learning.org's basic HTML tutorial <http://www.j-learning.org/bu
 
 If you have not installed ExpressionEngine yet, :doc:`please do so now </installation/installation>`,
 making sure to choose "None - Empty Installation" for your Site Theme when prompted.
-The other available theme, **Agile Records**, is a complete website for a fictitious music label
-and is simply a more complex and fully fleshed-out version of what we're going to build here.
-It's okay if you've already installed ExpressionEngine with the Agile Records theme, but most of
-what we do here will have already been done for you. You can still easily follow along, though.
+The other available theme, **Default Theme**, is a complete website and a good example of a more complex and fully fleshed-out site.
+It's okay if you've already installed ExpressionEngine with the Default theme, as you can build your news section along side the default site.
 
 
 *****************
@@ -39,14 +37,29 @@ using the same username and password you provided during installation. If you do
 remember your Control Panel link, it's usually similar to: `<http://example.com/admin.php>`_
 
 .. important:: If your Control Panel link just brings up the Installation Wizard
-	again, you need to remove the *system/installer* folder from your server as
+	again, you need to remove the *system/ee/installer* folder from your server as
 	outlined in the :doc:`Installation Instructions </installation/installation>`.
 
-After logging in, you'll be greeted by the Control Panel Home page:
+After logging in, you'll be greeted by the Control Panel Overview page:
 
-.. figure:: ../images/cp_home.png
+.. figure:: ../images/getting_started_overview.png
    :align: center
    :alt: Control Panel Home
+
+There isn't a lot to overview, as you have no entries, no comments, no content.  But you can give your site a name!  Click in the 'Name your site' field at the top left of your screen and let's get some basics setup.
+
+****************
+General Settings
+****************
+
+On the :doc:`General Settings </cp/settings/general>` page, give your site a descriptive name and set your default localization values.  To access this page in the future, just click the Settings cog in the top right corner.  But for now, it's time to start adding some content.  And to do that, we first need to create a channel.  
+
+Click the Developer Tools icon in the top right corner and select *Channel Manager*. 
+
+.. figure:: ../images/getting_started_general-settings-w-nav
+   :align: center
+   :alt: Control Panel Home
+
 
 ********
 Channels
@@ -63,17 +76,21 @@ create a Channel to hold this content.
 Creating a Channel
 ==================
 
-#. Go to :menuselection:`Admin --> Channel Administration --> Channels`.
-#. Click the *Create a New Channel* button in the upper-right.
-#. For the **Full Channel Name**, call it "News".
-#. ExpressionEngine will automatically provide a sensible **Short Name** for you, in this case, "news".
-#. Click *Submit*.
+#. For the **Create Channel** button or the **New** button to open up the :doc:`Create Channel </cp/channel/form>`.
 
-You'll see the new Channel we just created:
+
+todo
+MAKE IMAGE!!!!
 
 .. figure:: ../images/getting_started_channels.png
    :align: center
    :alt: Channels Page
+
+#  Name our new channel "News".
+#. ExpressionEngine will automatically provide a sensible **Short Name** for you, in this case, "news".
+#  For now, we don't have any field or category groups to assign to our channel, so save your new channel clicking **Save Channel** and we'll go create some.
+#. Click *Submit*.
+
 
 .. tip:: A Channel's **Full Name** should be a friendly, human-readable name. The **Short Name**, on
 	the other hand, is how you'll refer to this Channel in your actual code. Don't worry, we'll get
