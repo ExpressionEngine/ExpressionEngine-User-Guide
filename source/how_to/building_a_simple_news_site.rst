@@ -235,7 +235,7 @@ how to display our content. That's where *Templates* come in.
 
 Templates control what gets shown to the outside world (also known as the site's "front end")
 and are grouped together into (you guessed it!) *Template Groups*. As usual, you can have as many
-Templates and Groups as you need. Templates are very important because they also define the URL structure
+Templates and Groups as you need. Templates are very important because by default, they define the URL structure
 of your site. Here's how Template Groups and Templates make up an ExpressionEngine URL::
 
 	http://example.com/template_group/template_name
@@ -251,15 +251,15 @@ Creating a Template
 
 Let's create our first Template, which will be a simple news page that displays Entries from our News Channel.
 
-#. Go to :menuselection:`Design --> Templates --> Template Manager`.
-#. Click the *New Group* button.
+#. Click on *Developer Tools* in the top right and select *Template Manager*.
+#. Click the *NEW* button by *Template Groups* in the left navigation.
 #. For **Template Group Name**, type "news".
 #. Check the box next to **Make the index template in this group your site's home page?**
-#. Click *Submit*.
+#. Click *Save Template Group*.
 
 As expected, this automatically creates an **index** Template in our new **news** Group:
 
-.. figure:: ../images/getting_started_template_manager.png
+.. figure:: ../images/getting_started_template_group_created.png
    :align: center
    :alt: Template Manager
 
@@ -286,7 +286,7 @@ with a blank slate. Let's add some skeleton HTML::
    :align: center
    :alt: Template Edit
 
-Click *Update* to save our changes and stay on the page (*Update and Finished* will return you to
+Click *Save Template* to save our changes and stay on the page (*Save & Finish Editing* will return you to
 the Template Manager). Then click the *View Rendered Template* button in the upper-right, which
 should open the page in a new browser tab. It may not be very exciting, but it's something:
 
@@ -456,7 +456,7 @@ default.
 #. Click the *New Group* button.
 #. For **Template Group Name**, type "site".
 #. Tick the **Make the index template in this group your site's home page?** checkbox.
-#. Click *Submit*.
+#. Submit.
 
 Now click the **index** Template of our new "site" Group to open the Template Editor.
 Let's add this code::
