@@ -16,14 +16,7 @@ This section of the Control Panel allows you to create or edit a watermark.
 Permission Restrictions
 -----------------------
 
-.. todo:: Confirm the permissions for this
-
 * File upload directories: Create Upload Directories
-* File upload directories: Edit Upload Directories
-* File upload directories: Delete Upload Directories
-* Files: Upload New Files
-* Files: Edit Files
-* Files: Delete Files
 
 Fields
 ------

@@ -1,9 +1,9 @@
-Create/Edit Username & Password
-===============================
+Username & Password
+===================
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Profile -> Username & Password`
+**Control Panel Location:** :menuselection:`Profile --> Username & Password`
 
 .. Overview
 

@@ -1,9 +1,9 @@
-Create/Edit Publishing Settings
-===============================
+Publishing Settings
+===================
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Profile -> Publishing Settings`
+**Control Panel Location:** :menuselection:`Profile --> Publishing Settings`
 
 .. Overview
 

@@ -197,7 +197,7 @@ The author's screen name, if it exists; otherwise, this variable will display th
 {comment_auto_path}
 -------------------
 
-This variable is replaced by the URL set in the "Comment Page URL" preference under :menuselection:`Admin -> Channel Management`. No entry id, URL Title, or other information is included; this is the exact URL from the preference.
+This variable is replaced by the URL set in the "Comment Page URL" preference under :menuselection:`Admin --> Channel Management`. No entry id, URL Title, or other information is included; this is the exact URL from the preference.
 
 {custom_field}
 --------------

@@ -1,9 +1,9 @@
-Create/Edit Personal Settings
-=============================
+Personal Settings
+=================
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Profile -> Personal Settings`
+**Control Panel Location:** :menuselection:`Profile --> Personal Settings`
 
 .. Overview
 

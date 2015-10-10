@@ -9,7 +9,7 @@ Add-On Manager
 
 This section of the Control Panel is where add-on functionality is installed,
 updated, configured, and removed. They can be filtered by status and developer,
-and sorted by the add-on name and versionx. This section is divided into to
+and sorted by the add-on name and version. This section is divided into to
 sections, one for add-on functionality included with ExpressionEngine, and one
 for third party add-ons.
 

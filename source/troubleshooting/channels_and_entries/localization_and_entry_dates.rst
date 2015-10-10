@@ -11,7 +11,7 @@ settings are accurate:
 
 -  :menuselection:`Settings --> General Settings` are set properly for the hosting
    server's environment.
--  :menuselection:`Profile -> Personal Settings` are set appropriately for the
+-  :menuselection:`Profile --> Personal Settings` are set appropriately for the
    visiting user's environment.
 
 .. note:: ExpressionEngine does not auto-detect localization settings

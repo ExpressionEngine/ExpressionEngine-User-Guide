@@ -3,7 +3,7 @@ Search Logs
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Logs -> Search`
+**Control Panel Location:** :menuselection:`Developer Tools --> Logs --> Search`
 
 .. Overview
 

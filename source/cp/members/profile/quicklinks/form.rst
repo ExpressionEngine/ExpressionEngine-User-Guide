@@ -3,7 +3,7 @@ Create/Edit Quick Links
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Profile -> Quick Links`
+**Control Panel Location:** :menuselection:`Profile --> Quick Links`
 
 .. Overview
 

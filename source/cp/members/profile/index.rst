@@ -1,6 +1,8 @@
 Member Profile
 ==============
 
+.. rst-class:: cp-path
+
 **Control Panel Location:** :menuselection:`Members --> Edit`
 
 .. Overview
@@ -32,8 +34,10 @@ Contents
   - :doc:`group`
   - :doc:`cp-settings`
   - :doc:`/cp/utilities/communicate/index`
-  - :doc:`login`
-  - :doc:`delete`
+
+.. todo:: Create pages for login and delete
+.. - :doc:`login`
+.. - :doc:`delete`
 
 .. toctree::
   :glob:

@@ -1,9 +1,9 @@
-Create/Edit Member Group Assignment
-===================================
+Member Group Assignment
+=======================
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Profile -> Member Group`
+**Control Panel Location:** :menuselection:`Profile --> Member Group`
 
 .. Overview
 
