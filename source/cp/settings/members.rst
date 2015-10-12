@@ -39,6 +39,8 @@ Set whether site visitors are allowed to register for accounts.
    New member registrations are disabled by default on new
    installations.
 
+.. _member-account-activation-label:
+
 Account activation type
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -55,6 +57,8 @@ Here you can choose how membership accounts are activated:
 -  **Manual activation by an administrator**: New members may only be
    activated by an admin visiting the :menuselection:`Members -->
    Activate Pending` section of the Control Panel.
+
+.. _member-require-tos-label:
 
 Require terms of service?
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -76,11 +80,15 @@ localization preferences. If set to "No", all dates and times will be
 localized to the site default and localization preferences will be
 disabled in the Member Profile and My Account pages.
 
+.. _default-member-group-label:
+
 Default member group
 ~~~~~~~~~~~~~~~~~~~~
 
 This allows you to specify the Member Group to which approved members
 will be assigned.
+
+.. _member-default-theme-label:
 
 Member profile theme
 ~~~~~~~~~~~~~~~~~~~~
@@ -94,21 +102,29 @@ Sort by
 Specifies the sorting criteria to be used. Choices are: Total Posts,
 Screen Name, Total Comments, Total Entries, Join Date.
 
+.. _member-list-order-label:
+
 Order by
 ~~~~~~~~
 
 Specifies whether to show the list in *Ascending* or *Descending* order.
+
+.. _member-list-rows-label:
 
 Total results
 ~~~~~~~~~~~~~
 
 Specifies the number of results to return by default.
 
+.. _member-send-notifications-label:
+
 Enable new member notifications?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If enabled, notifications will be sent to the email addresses specified in the
 next preference field.
+
+.. _member-send-notifications-email-label:
 
 Notification recipients
 ~~~~~~~~~~~~~~~~~~~~~~~

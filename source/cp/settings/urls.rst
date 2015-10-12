@@ -91,11 +91,15 @@ similar to::
 Server paths will vary from server to server, so you should contact your
 Host or server admin if you are unsure of what your setting should be.
 
+.. _general-config-url-docs-label:
+
 Documentation directory
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The full URL to location of the ExpressionEngine User Guide. This URL is
 used to create the User Guide link at the top of your Control Panel.
+
+.. _profile-trigger-word-label:
 
 Profile URL segment
 ~~~~~~~~~~~~~~~~~~~
@@ -107,6 +111,8 @@ URL like the following would trigger ExpressionEngine to display the
 member profile area:
 
 http://example.com/index.php/member/profile/
+
+.. _global-channel-category-url-indicator-label:
 
 Category URL segment
 ~~~~~~~~~~~~~~~~~~~~
@@ -130,6 +136,8 @@ The "indicator" word that you choose will become a 'reserved' word,
 which means that it **cannot** be used for Template Group or Template
 names.
 
+.. _global-channel-category-url-titles-label:
+
 Category URL
 ~~~~~~~~~~~~
 
@@ -143,6 +151,8 @@ share identical Category Groups:
 -  {exp:channel:categories}
 -  {exp:channel:category\_heading}
 -  {exp:channel:entries}
+
+.. _global-channel-word-seperator-label:
 
 URL title separator
 ~~~~~~~~~~~~~~~~~~~
