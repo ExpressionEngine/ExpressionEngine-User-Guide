@@ -29,7 +29,6 @@ Let's get started creating a general settings form for ExpressionEngine. We'll s
     array(
       array(
         'title' => 'site_name',
-        'desc' => 'site_name_desc',
         'fields' => array(
           'site_name' => array(
             'type' => 'text',
@@ -213,7 +212,6 @@ Given what we now know about how to define field definitions and the types of fi
     array(
       array(
         'title' => 'site_name',
-        'desc' => 'site_name_desc',
         'fields' => array(
           'site_name' => array(
             'type' => 'text',
