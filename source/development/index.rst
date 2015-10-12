@@ -45,9 +45,9 @@ Guidelines
   :glob:
   :titlesonly:
 
-  core/*
   conversion/*
-  services/*
+  core/index
+  services/index
   legacy/index
   extensions
   addon_setup_php_file
@@ -66,4 +66,3 @@ Guidelines
   reference/tree_datastructure
   shared_form_view
   usage/*
-
