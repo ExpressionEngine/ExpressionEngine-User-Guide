@@ -1,5 +1,5 @@
-Spam Class
-===========
+Spam Service
+============
 
 .. contents::
   :local:
@@ -9,8 +9,8 @@ Spam Class
 Introduction
 ------------
 
-ExpressionEngine's Spam Class gives developers a general method for
-classifying any text as spam or ham. The Spam Class requires the 
+ExpressionEngine's Spam service gives developers a general method for
+classifying any text as spam or ham. The Spam service requires the
 Spam Module to be installed.
 
 Class Methods
@@ -18,7 +18,7 @@ Class Methods
 
 ::
 
-  isSpam($text)
+  ee('Spam')->isSpam($text)
 
 isSpam takes a single parameter, a string, and returns TRUE if it's
 classified as spam and FALSE otherwise. The classify method will use
@@ -29,11 +29,11 @@ always return FALSE.
 
 ::
 
-  moderate($file, $class, $method, $data, $text)
+  ee('Spam')->moderate($file, $class, $method, $data, $text)
 
 The moderate method will store content flagged as spam. Once content is
 stored Admins can use the Spam Module Control Panel page to flag false
-positives and ensure the classifier is accurate. The moderate method 
+positives and ensure the classifier is accurate. The moderate method
 essentially stores a callback to run when something is marked as a false
 positive and the the original text. $file stores the path to the file
 containing your call back, $class contains the class name your callback

@@ -22,7 +22,6 @@ For legacy documentation of libraries that were inherited from CodeIgniter, plea
   core/index
   services/index
   shared_form_view
-  usage/*
   constants
   plugins
   modules
