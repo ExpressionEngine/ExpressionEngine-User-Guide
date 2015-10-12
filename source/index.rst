@@ -111,6 +111,19 @@ The Front-End
   - :doc:`how_to/building_a_simple_news_site`
   - :doc:`how_to/hello-world`
 
+*******************
+General Information
+*******************
+
+- :doc:`general/add-ons`
+- :doc:`general/bbcode`
+- :doc:`general/date_localization`
+- :doc:`general/languages`
+- :doc:`general/quick_reference`
+- :doc:`general/reserved_words`
+- :doc:`general/system_configuration_overrides`
+- :doc:`general/text_formatting`
+
 ****************
 Solving Problems
 ****************
@@ -143,5 +156,6 @@ Developing for ExpressionEngine
   urls/index
   how_to/index
   development/index
+  general/index
   troubleshooting/index
   bugs_and_security_reports/index
