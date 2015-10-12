@@ -2571,5 +2571,5 @@ of times an entry has been viewed.
 Relationships
 *************
 
-The Channel Module supports a powerful :doc:`Relationship <fieldtypes/relationships>`
+The Channel Module supports a powerful :doc:`Relationship </fieldtypes/relationships>`
 feature that lets you associate one entry to another.

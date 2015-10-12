@@ -6,7 +6,7 @@ Relationships
 
 Relationships was completely rewritten for this version, adding the ability to
 create multiple relationships for each entry and introducing a friendly new tag
-syntax. The template tags :doc:`described here </channel/relationships>`
+syntax. The template tags :doc:`described here </fieldtypes/relationships>`
 are not compatible with previous versions.
 
 Altered Language Files
