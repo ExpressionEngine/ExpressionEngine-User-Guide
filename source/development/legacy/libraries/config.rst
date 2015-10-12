@@ -173,14 +173,13 @@ Class Reference
 
 .. class:: CI_Config
 
-	.. attribute:: $config
+	.. attr:: $config
 
 		Array of all loaded config values
 
-	.. attribute:: $is_loaded
+	.. attr:: $is_loaded
 
 		Array of all loaded config files
-
 
 	.. method:: item($item[, $index=''])
 
