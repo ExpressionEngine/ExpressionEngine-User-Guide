@@ -7,8 +7,11 @@ Hit Tracking
 
 .. Overview
 
-This section of the Control Panel allows you to define the messaging
-settings of your site.
+This section of the Control Panel allows you to define preferences for various
+tracking features of ExpressionEngine. Adjustments to these settings can help
+decrease resource usage if you are not utilizing the features, as well as help
+you manage :doc:`extreme traffic
+events</optimization/handling_extreme_traffic>`.
 
 .. Screenshot (optional)
 
