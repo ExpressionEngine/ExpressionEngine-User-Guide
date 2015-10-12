@@ -15,10 +15,10 @@ CP/URL Service to make building these URLs simple. For example::
 
   $url = ee('CP/URL', 'publish/create/1');
 
-The service automatically takes care of appending the session ID, if it is
-required. We also provide means of adding arbitrary query string variables::
+The service automatically takes care of appending the session ID when it is
+required. For more complex URLs we also provide means of adding arbitrary query string variables using the ``make`` method::
 
-  $url = ee('CP/URL', 'publish/edit', array('filter_by_channel' => 1));
+  $url = ee('CP/URL')->make('publish/edit', array('filter_by_channel' => 1));
 
 Or::
 
@@ -54,6 +54,44 @@ CP/URL Service Methods
 -----------------------
 
 .. namespace:: EllisLab\ExpressionEngine\Library\CP
+
+.. class:: URLFactory
+
+.. method:: make($path, $qs = array(), $cp_url = '', $session_id = NULL)
+
+  Makes a URL object.
+
+  :param string $path: The path of the url (ie. 'publish/edit/2')
+  :param array $qs: An associative array of query string variables to append to the rendered URL.
+  :param string $cp_url The base URL to which all else will be appended (ie. 'admin.php'
+  :param string|NULL $session_id: A session ID to append to the rendered URL
+  :returns: A URL object
+  :rtype: URL
+
+.. method:: makeFromString($url)
+
+  Makes a URL object from a string.
+
+  :param string $url: The URL to be parsed into a URL object
+  :returns: A URL object
+  :rtype: URL
+
+.. method:: getCurrentUrl()
+
+  Makes a URL object representing the requested URL.
+
+  :returns: A URL object
+  :rtype: URL
+
+.. method:: decodeUrl($url)
+
+  Decodes a base64 encoded, seralized URL object.
+
+  :returns: A URL object
+  :rtype: URL
+
+CP/URL Object Methods
+-----------------------
 
 .. class:: URL
 
