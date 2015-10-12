@@ -45,6 +45,7 @@ Guidelines
   :glob:
   :titlesonly:
 
+  core/*
   conversion/*
   services/*
   legacy/index
@@ -63,4 +64,5 @@ Guidelines
   rte_tools
   reference/tree_datastructure
   shared_form_view
+  usage/*
 

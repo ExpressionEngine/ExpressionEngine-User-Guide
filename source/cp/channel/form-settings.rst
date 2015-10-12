@@ -6,7 +6,10 @@ Channel Settings
 **Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Channel Settings`
 
 .. Overview
-This screen allows you to edit the preferences and settings associated with the channel. They include General, Administrative, Channel Posting, and Comment Posting settings.
+
+This screen allows you to edit the preferences and settings associated with the
+channel. They include General, Administrative, Channel Posting, and Comment
+Posting settings.
 
 .. Screenshot (optional)
 

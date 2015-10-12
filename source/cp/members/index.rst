@@ -49,7 +49,7 @@ Display all the members. This is the default view.
 New Member
 ^^^^^^^^^^
 
-This will take you to the :doc:`create member form <form>`.
+This will take you to the :doc:`create member form <create>`.
 
 Pending Activation
 ^^^^^^^^^^^^^^^^^^

@@ -34,7 +34,7 @@ Actions
 Username Links
 ~~~~~~~~~~~~~~
 
-This will take you to the member's :doc:`profile <profile>`.
+This will take you to the member's :doc:`profile <profile/index>`.
 
 Username Email Links
 ~~~~~~~~~~~~~~~~~~~~
@@ -49,7 +49,7 @@ The icons in the manage column perform actions on the member in its row.
 Edit
 ^^^^
 
-This will take you to the member's :doc:`profile <profile>`.
+This will take you to the member's :doc:`profile <profile/index>`.
 
 Bulk Actions
 ~~~~~~~~~~~~
@@ -73,6 +73,8 @@ Fields
 
 .. Each Field
 
+.. _member-banned-ip-label:
+
 IP addresses
 ~~~~~~~~~~~~
 
@@ -89,6 +91,8 @@ access the site:
 -  Show the user a specific message.
 -  Redirect the user to another specified site.
 
+.. _member-banned-email-label:
+
 Email addresses
 ~~~~~~~~~~~~~~~
 
@@ -97,11 +101,15 @@ wildcards for partial email addresses. For example,
 ``*@spammydomain.com``. Each address should be placed on a separate
 line.
 
+.. _member-banned-username-label:
+
 Restricted usernames
 ~~~~~~~~~~~~~~~~~~~~
 
 Specify usernames that cannot be used for member accounts, which can
 be handy for reserving certain usernames for your own use.
+
+.. _member-banned-screename-label:
 
 Restricted screen names
 ~~~~~~~~~~~~~~~~~~~~~~~

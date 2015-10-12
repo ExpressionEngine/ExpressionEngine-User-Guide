@@ -29,7 +29,7 @@ traffic events, there are a few tracking features of ExpressionEngine
 that update certain tables on every page load, resulting in a queue of
 locked tables as MySQL tries to keep up. These can be disabled in your
 Control Panel :doc:`Tracking Preferences
-</cp/settings/tracking>`. If you are unable to access your site
+</cp/settings/hit-tracking>`. If you are unable to access your site
 due to the traffic, you or your server administrator can manually
 override these features in your config.php file as follows:
 
@@ -39,37 +39,37 @@ config.php Extreme Traffic Overrides
 ::
 
 	$config['enable_online_user_tracking']
-	
+
 (y/n) - Corresponds to :doc:`Enable Online User Tracking?
-(</cp/settings/tracking>`
+(</cp/settings/hit-tracking>`
 
 ::
 
 	$config['enable_hit_tracking']
 
 (y/n) - Corresponds to :doc:`Enable Template Hit Tracking?
-(</cp/settings/tracking>`
+(</cp/settings/hit-tracking>`
 
 ::
-	
+
 	$config['enable_entry_view_tracking']
 
 (y/n) - Corresponds to :doc:`Enable Channel Entry View Tracking?
-(</cp/settings/tracking>`
+(</cp/settings/hit-tracking>`
 
 ::
 
 	$config['log_referrers']
 
 (y/n) - Corresponds to :doc:`Enable Referrer Logging?
-(</cp/settings/tracking>`
+(</cp/settings/hit-tracking>`
 
 ::
 
 	$config['dynamic_tracking_disabling']
 
 (numeric) - Corresponds to :doc:`Suspend ALL tracking when number of
-(online visitors exceeds: </cp/settings/tracking>`
+(online visitors exceeds: </cp/settings/hit-tracking>`
 
 ::
 
@@ -91,7 +91,7 @@ table lock. If you find this to be the case, you can have the server
 administrator run the following query after killing the locks, to delay
 the individual updates for members until a later time, perhaps when
 traffic is less tense. The example below pushes this off for another 20
-hours (72000 seconds). 
+hours (72000 seconds).
 
 ::
 
