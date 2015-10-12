@@ -215,6 +215,8 @@ of the email alert. You may define a single email address or list
 multiple addresses by separating them with a comma. Ex:
 "admin@example.com, joe@example.com"
 
+.. _channel_prefs_allow_comments:
+
 Allow comments?
 ~~~~~~~~~~~~~~~
 

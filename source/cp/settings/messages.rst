@@ -68,6 +68,8 @@ similar to:
  - ///example.com/images/pm\_attachments/
  - /images/pm\_attachments/
 
+.. _server-path-for-attachment-upload-directory:
+
 Upload path
 ~~~~~~~~~~~
 

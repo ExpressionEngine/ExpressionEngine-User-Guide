@@ -78,8 +78,7 @@ Submit comments
 
 When set to **yes**, users assigned to this group may submit comments to the website.
 
-Bypass moderation
-~~~~~~~~~~~~~~~~~
+.. _comment_admin_privs:
 
 Moderation actions
 ~~~~~~~~~~~~~~~~~~
