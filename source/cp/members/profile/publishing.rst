@@ -35,6 +35,8 @@ Enable Rich Text Editor?
 
 When set to enable, the below chosen RTE will appear in publishing forms for this user.
 
+.. _my_account_rte_prefs:
+
 RTE tool set
 ~~~~~~~~~~~~
 
