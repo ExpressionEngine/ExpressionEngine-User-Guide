@@ -53,8 +53,8 @@ The Back-End
 
 - :doc:`channel/index`
 - :doc:`comment/index`
-- :doc:`member/index`
 - :doc:`fieldtypes/index`
+- :doc:`member/index`
 
   - :doc:`fieldtypes/date`
   - :doc:`fieldtypes/file`
@@ -136,7 +136,10 @@ Developing for ExpressionEngine
   installation/index
   cp/index
   add-ons/index
+  channel/index
+  comment/index
   fieldtypes/index
+  member/index
   optimization/index
   security/index
   templates/index

@@ -24,7 +24,12 @@ The Channel Module provides the following tags and features:
 .. toctree::
 	:glob:
 	:titlesonly:
+	:maxdepth: 1
 	:hidden:
+
+	*
+
+	*
 
 	*
 	channel_form/index
