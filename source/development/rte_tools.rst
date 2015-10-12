@@ -1,4 +1,4 @@
-ExpressionEngine RTE tools API
+ExpressionEngine RTE Tools API
 ==============================
 
 .. todo:: Audit for 3.0
