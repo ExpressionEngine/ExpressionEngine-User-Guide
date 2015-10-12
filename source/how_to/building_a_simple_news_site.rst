@@ -15,30 +15,16 @@ other systems.
 Before You Begin
 ****************
 
-ExpressionEngine assumes that you are comfortable with basic HTML. If you aren't,
-we recommend `j-learning.org's basic HTML tutorial <http://www.j-learning.org/build_it/page/basic_html/>`_.
+.. note:: ExpressionEngine assumes that you are comfortable with basic HTML. 
 
-If you have not installed ExpressionEngine yet, :doc:`please do so now </installation/installation>`,
-making sure to choose "None - Empty Installation" for your Site Theme when prompted.
-The other available theme, **Default Theme**, is a complete website and a good example of a more complex and fully fleshed-out site.
-It's okay if you've already installed ExpressionEngine with the Default theme, as you can build your news section along side the default site.
-
+If you have not installed ExpressionEngine yet, :doc:`please do so now </installation/installation>`.
 
 *****************
 The Control Panel
 *****************
 
-Upon completing the installation you are given two links. One is your
-site's homepage, which isn't very exciting (in fact it should appear blank since
-we haven't created any content yet!) and the other is your site's Control Panel.
-
-Follow the link to your Control Panel (also known as the "back end") and log in
-using the same username and password you provided during installation. If you don't
+Upon completing the installation, you will land on your Control Panel login page.  Login to the control panel (also known as the "back end") using the same username and password you provided during installation. If you don't
 remember your Control Panel link, it's usually similar to: `<http://example.com/admin.php>`_
-
-.. important:: If your Control Panel link just brings up the Installation Wizard
-	again, you need to remove the *system/ee/installer* folder from your server as
-	outlined in the :doc:`Installation Instructions </installation/installation>`.
 
 After logging in, you'll be greeted by the Control Panel Overview page:
 
@@ -46,13 +32,15 @@ After logging in, you'll be greeted by the Control Panel Overview page:
    :align: center
    :alt: Control Panel Home
 
-There isn't a lot to overview, as you have no entries, no comments, no content.  But you can give your site a name!  Click in the 'Name your site' field at the top left of your screen and let's get some basics setup.
+There isn't a lot to overview, as you have no entries, no comments and no content.  Your site doesn't even have a name yet.  Let's fix that.  Click in the 'Name your site' field at the top left of your screen and let's go add  some general settings.
 
 ****************
 General Settings
 ****************
 
-On the :doc:`General Settings </cp/settings/general>` page, give your site a descriptive name and set your default localization values.  To access this page in the future, just click the Settings cog in the top right corner.  But for now, it's time to start adding some content.  And to do that, we first need to create a channel.  
+On the :doc:`General Settings </cp/settings/general>` page, give your site a descriptive name and set your default localization values.  To access this page in the future, just click the Settings cog in the top right corner.  
+
+Now it's time to add some content.  To do that, we first need to create a channel.  
 
 Click the Developer Tools icon in the top right corner and select *Channel Manager*. 
 
@@ -70,21 +58,20 @@ that can be as simple or as complex as you need it to be, depending on your cont
 You can have as many Channels as you need, each with a different structure
 tailored to the content it holds.
 
-For our new site, we know we'll want to keep visitors informed of what's new. Let's
-create a Channel to hold this content.
+For our new News site, we'll want a channel to hold our news articles. 
 
 Creating a Channel
 ==================
 
-#. For the **Create Channel** button or the **New** button to open up the :doc:`Create Channel form</cp/channel/form>`.
+1. Click the **Create Channel** button or the **New** button to open up the :doc:`Create Channel form</cp/channel/form>`.
+2.  Name our new channel "News".
+3. ExpressionEngine will automatically provide a sensible **Short Name** for you, in this case, "news".
 
 .. figure:: ../images/getting_started_channel_create_form.png
    :align: center
    :alt: Channels Page
 
-#  Name our new channel "News".
-#. ExpressionEngine will automatically provide a sensible **Short Name** for you, in this case, "news".
-#  For now, we don't have any field or category groups to assign to our channel, so save your new channel clicking **Save Channel** and we'll go create some.
+4.  For now, we don't have any field or category groups to assign to our channel, so save your new channel clicking **Save Channel** and we'll go create some.
 
 .. tip:: A Channel's **Full Name** should be a friendly, human-readable name. The **Short Name**, on
 	the other hand, is how you'll refer to this Channel in your actual code. Don't worry, we'll get
@@ -108,7 +95,7 @@ Creating a Channel Field Group
 
 #. Click *NEW* next to the *Category Groups* link in the left navigation to go directly to the :doc:`Create Field Group form</cp/channel/fields/groups/form>`.
 #. Let's be startlingly creative and name this group "News Fields".
-#. Click *Safe Field Group* your new field group.
+#. Click *Save Field Group* your new field group.
 
 You should see your new Channel Field Group:
 
@@ -124,16 +111,17 @@ Creating a Field
 
 #. Click the *Fields* button for your *News* group.
 #. Click the *Create New* button to open up the :doc:`Create Field form</cp/channel/fields/form>`.
+#. For **Type**, choose Rich Text Editor. (Notice the :doc:`other available types</fieldtypes/index>` - exciting, no? Add-ons can even provide completely new types of fields.)
+#. For **Field Label**, type "News Body".
+#. ExpressionEngine will automatically provide a sensible **Short Name** for you, in this case, "news_body".
+#. Let's require our field, include it in our searchable fields and leave the rest of the settings at their defaults.
 
 .. figure:: ../images/getting_started_field_create.png
    :align: center
    :alt: Channel Fields Page
 
 
-#. For **Type**, choose Rich Text Editor. (Notice the other available types - exciting, no? Add-ons can even provide completely new types of fields.)
-#. For **Field Label**, type "News Body".
-#. ExpressionEngine will automatically provide a sensible **Short Name** for you, in this case, "news_body".
-#. Let's require our field, include it in our searchable fields and leave the rest of the settings at their defaults. Save your new field.
+#. Save your new field.
 
 
 *************************
@@ -194,16 +182,17 @@ Channel and creating a new *Entry* in it. You can think of *Entries* as being sy
 store in ExpressionEngine.
 
 #. Click the *Create* button in the top left corner and select the *News* channel to publish in.  This will open up your publish form, custom built based on the fields, statuses and categories you have assigned to your channel.
-
-.. figure:: ../images/getting_started_news_publish.png
-   :align: center
-   :alt: Publish Page
-
 #. For the **Title**, type "What to do this Weekend?". Notice that we did not have to create this field ourselves - all Entries automatically have a Title field.  You can change the label of this field by editing your *News* channel.
 #. ExpressionEngine provides a sensible **URL Title** for you. This is another
    automatic field that allows your entries to be easily linked to via a URL.
    See :doc:`/urls/url_structure` for more information.
 #. Enter some text in the **News Body** field. Make it good!
+
+.. figure:: ../images/getting_started_news_publish.png
+   :align: center
+   :alt: Publish Page
+
+
 #. Click *Publish* to publish the Entry.
 
 
@@ -216,7 +205,7 @@ Upon submitting, you'll be taken to the Edit screen, which displays all of your 
 From here you could edit the Entry to make any necessary corrections, or navigate to another area
 of the Control Panel.
 
-For the purposes of this guide, **publish a second Entry** by following the same steps as before, but
+For the purposes of this guide, publish a second Entry by following the same steps as before, but
 with a different Title and News Body. That will give us two Entries to work with later.
 
 .. _getting_started_templates:
@@ -448,8 +437,7 @@ Template Group is specified in the URL.
 Let's change this by creating another Template Group and making it the new
 default.
 
-#. Go to :menuselection:`Design --> Templates --> Template Manager`.
-#. Click the *New Group* button.
+#. From the *Template Manager* click **NEW** next to **Template Groups** again.
 #. For **Template Group Name**, type "site".
 #. Tick the **Make the index template in this group your site's home page?** checkbox.
 #. Submit.
@@ -548,5 +536,4 @@ interested in:
 - :doc:`/add-ons/index`
 - :doc:`/urls/remove_index.php`
 - :doc:`/cp/msm/index`
-- :doc:`/templates/php`
 - :doc:`/templates/comments`
