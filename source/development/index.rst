@@ -59,6 +59,7 @@ Guidelines
   guidelines/index
   json_version_feed
   modules
+  module_tutorial
   packages
   plugins
   rte_tools
