@@ -4,41 +4,13 @@ Add-On Development
 
 Guidelines, reference material, and tutorials for developing add-ons for ExpressionEngine.
 
-.. contents::
-  :local:
-
 Legacy Documentation
 ====================
 
-The following are areas that exist relatively unchanged from ExpressionEngine 2.0 and are earmarked
-for replacement in the future, but are not yet deprecated. Use these freely until replacement libraries
-or services are created.
+Many of the libraries and helpers available in ExpressionEngine 2 continue to function as expected. They are earmarked for replacement in the future, but are not yet deprecated. Use these freely until replacement libraries or services are created.
 
-Updating ExpressionEngine 2.0 Add-ons to 3.0
-============================================
+For legacy documentation of libraries that were inherited from CodeIgniter, please refer to the `CodeIgniter documentation <https://ellislab.com/codeigniter/user-guide>`_.
 
-Overview
---------
-
-ExpressionEngine 3.0 adopts `PSR-1 <http://www.php-fig.org/psr/psr-1/>`_ and
-`PSR-4 <http://www.php-fig.org/psr/psr-4/>`_, which means ``StudlyCaps`` for
-class names, ``camelCase`` for method names, `namespaces
-<http://php.net/namespace>`_, and `autoloading <http://php.net/autoload>`_. The
-most notable changes to add-ons are the
-:doc:`/development/addon_setup_php_file`, namespaces, and the new :doc:`Control
-Panel Style Reference </development/cp_styles/index>`. Fortunately, updating to
-3.0 is fairly simple. This guide is an overview of the changes you will need to
-make to have your add-ons up and running under 3.0.
-
-Guidelines
-----------
-
-- :doc:`/development/addon_setup_php_file`
-- :doc:`General Syntax Changes <conversion/syntax>`
-- :doc:`Contol Panel Pages </development/cp_styles/index>`
-- :doc:`Plugin Specific Changes <conversion/plugins>`
-- :doc:`Module Specific Changes <conversion/modules>`
-- :doc:`Module Conversion Walk-through <conversion/walk-through>`
 
 .. toctree::
   :hidden:
@@ -46,23 +18,21 @@ Guidelines
   :titlesonly:
 
   conversion/index
+  addon_setup_php_file
   core/index
   services/index
-  legacy/index
-  extensions
-  addon_setup_php_file
-  constants
-  cp_javascript/index
-  developer_preview_program
-  emoticons
-  fieldtypes
-  guidelines/index
-  json_version_feed
-  modules
-  module_tutorial
-  packages
-  plugins
-  rte_tools
-  reference/tree_datastructure
   shared_form_view
   usage/*
+  constants
+  plugins
+  modules
+  extensions
+  fieldtypes
+  rte_tools
+  cp_javascript/index
+  legacy/index
+  guidelines/index
+  reference/tree_datastructure
+  emoticons
+  developer_preview_program
+  json_version_feed
