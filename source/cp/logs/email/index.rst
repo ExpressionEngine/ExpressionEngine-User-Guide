@@ -54,8 +54,8 @@ Remove All email Logs
 
 Removes all the email log entries.
 
-.. contents::
-  :local:
-  :depth: 1
+.. toctree::
+  :hidden:
+  :titlesonly:
 
   view
