@@ -162,7 +162,7 @@ to ascending.
 .. _grid_tag_variables:
 
 Variables
----------
+~~~~~~~~~
 
 .. contents::
    :local:
@@ -270,7 +270,7 @@ total\_rows
 The total number of rows being returned by the current display criteria.
 
 Modifiers
----------
+~~~~~~~~~
 
 .. contents::
    :local:
