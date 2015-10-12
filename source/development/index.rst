@@ -45,7 +45,7 @@ Guidelines
   :glob:
   :titlesonly:
 
-  conversion/*
+  conversion/index
   core/index
   services/index
   legacy/index

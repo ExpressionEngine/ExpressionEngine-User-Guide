@@ -35,16 +35,13 @@ control panel should look like:
     (front end file)
   - ``system/user/addons/package_name/upd.package_name.php``
     (installation, uninstall and updates)
-  - ``system/user/addons/package_name/views/`` (contains all
+  - ``system/user/addons/package_name/View/`` (contains all
     views)
 
-      - ``system/user/addons/package_name/views/index.php``
-      - ``system/user/addons/package_name/views/another_page.php``
+      - ``system/user/addons/package_name/View/index.php``
+      - ``system/user/addons/package_name/View/another_page.php``
 
   - ``system/user/addons/package_name/language/english/package_name_lang.php``
-
-The reference page for :doc:`Add-on Packages </development/packages>`
-gives greater detail on the above structure.
 
 .. note:: It is recommended to put a placeholder index.html file in any
   of your folders.
@@ -59,7 +56,7 @@ a fortune cookie module with a view for list our cookies its URL would be
 all public methods in your ``mcp.package_name.php`` are automatically routed.
 We will also pass any arguments to your method found in the url. If the URL is
 ``addons/settings/fortune_cookie/edit_cookie/3`` we would need to have the
-following method signagure::
+following method signature::
 
   public function edit_cookie($id) {...}
 
