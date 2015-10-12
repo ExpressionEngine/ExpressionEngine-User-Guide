@@ -46,6 +46,7 @@ Performance Monitoring
   update
   upgrade_from_2.x
   upgrade_from_core
+  troubleshooting
   version_notes
   ../operations/index
   ../monitoring/index
