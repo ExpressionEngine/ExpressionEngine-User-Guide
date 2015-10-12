@@ -63,7 +63,7 @@ CP/URL Service Methods
 
   :param string $path: The path of the url (ie. 'publish/edit/2')
   :param array $qs: An associative array of query string variables to append to the rendered URL.
-  :param string $cp_url The base URL to which all else will be appended (ie. 'admin.php')
+  :param string $cp_url: The base URL to which all else will be appended (ie. 'admin.php')
   :param string|NULL $session_id: A session ID to append to the rendered URL
   :returns: A URL object
   :rtype: URL
