@@ -272,7 +272,7 @@ with a blank slate. Let's add some skeleton HTML::
    :alt: Template Edit
 
 Click *Save Template* to save our changes and stay on the page (*Save & Finish Editing* will return you to
-the Template Manager). Then click the *View Rendered Template* button in the upper-right, which
+the Template Manager). Then click the *View Rendered* button in the upper-right, which
 should open the page in a new browser tab. It may not be very exciting, but it's something:
 
 .. figure:: ../images/getting_started_template_v1.png
@@ -465,7 +465,7 @@ Let's add this code::
 	</body>
 	</html>
 
-As usual, click *Update* and then *View Rendered Template* to see the results:
+As usual, click *Update* and then *View Rendered* to see the results:
 
 .. figure:: ../images/getting_started_template_v3.png
    :align: center
