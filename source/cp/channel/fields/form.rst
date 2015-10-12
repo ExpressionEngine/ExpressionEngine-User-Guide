@@ -35,9 +35,9 @@ Type
 ExpressionEngine includes the following types of fields for use
 in your Channel Entries (add-ons can include their own as well):
 
-#. **Checkboxes**: Checkbox fields display a list of options in the
+#. **Checkboxes**: :doc:`Checkbox fields <../../../fieldtypes/select>` display a list of options in the
    publish form that you choose by clicking the checkboxes.
-#. **Date**: Date field types are designed to store dates. Next to the
+#. **Date**: :doc:`Date fields <../../../fieldtypes/date>` are designed to store dates. Next to the
    date field in your PUBLISH page you'll see a calendar and two options
    for your date:
 
@@ -45,28 +45,27 @@ in your Channel Entries (add-ons can include their own as well):
       user browsing your site.
    -  **Fixed**: The date will NOT be localized and instead shown at the
       exact date/time you submit.
-#. **File**: File fields store uploaded files and images, and utilize
+#. **File**: :doc:`File fields <../../../fieldtypes/file>` store uploaded files and images, and utilize
    the build in file browser for your publishers to upload and insert
    files.
-#. **Grid**: The Grid field in ExpressionEngine provides a way to group
-   fieldtypes in repeatable rows.For more information see :doc:`/add-ons/channel/grid`.
-#. **Multi Select**: Multi Select field types give a list of options in
+#. **Grid**: The :doc:`Grid field <../../../fieldtypes/grid>` in ExpressionEngine provides a way to group
+   fieldtypes in repeatable rows.
+#. **Multi Select**: :doc:`Multi Select field types <../../../fieldtypes/select>` give a list of options in
    a standard multiple selection form control, letting publishers choose
    any or none of the available items.
-#. **Radio Buttons**: Radio buttons are similar to Checkbox fields,
+#. **Radio Buttons**: :doc:`Radio buttons <../../../fieldtypes/select>` are similar to Checkbox fields,
    except that you can only select one of the items from the list.
-#. **Relationships**: This is a special and very powerful field type. It
+#. **Relationships**: The :doc:`Relationship field <../../../fieldtypes/relationships>` is a special and very powerful field type. It
    enables you to create relationships between two or more channels so
-   you can show content from one entry within another. For more
-   information see :doc:`/add-ons/channel/relationships`.
-#. **Rich Text Editor**: This is a text entry box with multiple
+   you can show content from one entry within another. 
+#. **Rich Text Editor**: The :doc:`Rich Text Editor <../../../fieldtypes/rte>` is a text entry box with multiple
    lines that uses the built-in :doc:`/add-ons/rte/index`.
-#. **Select Dropdown**: This creates a standard HTML <select> drop-down
+#. **Select Dropdown**: :doc:`Select fields <../../../fieldtypes/select>` are simply a standard HTML <select> drop-down
    list. You can define the contents of the list manually or
    pre-populate it from another field.
-#. **Text**: This is a single input line for text. It is the type
+#. **Text**: The :doc:`Text field <../../../fieldtypes/text>`is a single input line for text. It is the type
    of field you might use for a title, name, or other short information.
-#. **Textarea**: This is a standard text entry box with multiple lines.
+#. **Textarea**: The :doc:`Textarea field <../../../fieldtypes/textarea>` is a standard text entry box with multiple lines.
    This is often used for the body text of entries.
 
 Name
@@ -126,5 +125,4 @@ will first have to open using the link provided on the publish page.
 Field Options
 -------------
 
-Each field type may have additional field options.  See the individual field 
-types for details.
+Each field type may have additional field options.  See the :doc:`individual field types <../../../fieldtypes/index>` for details.
