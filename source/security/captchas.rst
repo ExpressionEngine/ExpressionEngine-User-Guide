@@ -79,13 +79,12 @@ these legitimate users to be able to use your site.
 You should determine for yourself whether or not CAPTCHAs are
 appropriate for your situation and your website audience.
 
-For ExpressionEngine installations that power multiple domains or
-subdomains, you may need to place the *server* path for the **Relative
-Path to Captcha Folder** setting under :menuselection:`Admin --> Captcha
-Preferences`. A server path is typically something similar to
-/home/domain.com/http\_docs/images/captchas/. The specific setting will
-vary from server to server so you may need to contact your Host or
-server admin to determine what your correct "server path" is.
+For ExpressionEngine installations that power multiple domains or subdomains,
+you may need to place the *server* path for the **Relative Path to Captcha
+Folder** setting under :menuselection:`Settings --> CAPTCHA`. A server path is
+typically something similar to /home/domain.com/http\_docs/images/captchas/.
+The specific setting will vary from server to server so you may need to contact
+your Host or server admin to determine what your correct "server path" is.
 
 Special CAPTCHA Files
 ---------------------

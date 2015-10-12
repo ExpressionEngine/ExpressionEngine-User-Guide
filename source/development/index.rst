@@ -1,6 +1,6 @@
-###################################
-ExpressionEngine Add-On Development
-###################################
+##################
+Add-On Development
+##################
 
 Guidelines, reference material, and tutorials for developing add-ons for ExpressionEngine.
 

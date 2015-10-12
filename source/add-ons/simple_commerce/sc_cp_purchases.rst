@@ -1,19 +1,24 @@
 Simple Commerce – Managing Store Purchases
 ==========================================
 
-Managing store purchases in the Simple Commerce Module's control panel
-is simple and efficient. You can view, edit, manually add, or export
-your store's purchases.
+.. rst-class:: cp-path
 
-Simple Commerce Home Page Options
----------------------------------
+**Control Panel Location:** :menuselection:`Developer Tools --> Add-On Manager --> Simple Commerce --> Purchases`
 
-|Simple Commerce Purchases|
+The Purchases screen gives you at a glance an overview of your
+store purchases, the purchaser, date, and price of purchases. You may
+select items to edit or delete by checking the boxes on the right and
+selecting the appropriate action from the drop-down menu next to the
+Submit button. Purchases may be added by clicking the **Create New**
+button on the top right.
 
-Add Purchase
-~~~~~~~~~~~~
+Purchases Home Page Options
+---------------------------
 
-The **Add Purchase** link allows you to manually add purchases to your
+Create New Purchase
+~~~~~~~~~~~~~~~~~~~
+
+The **Create New** button allows you to manually add purchases to your
 store. This can be useful if you want to keep track of purchases made
 before you began using the Simple Commerce system, or that come from a
 source other than PayPal.
@@ -21,36 +26,15 @@ source other than PayPal.
 Edit Purchases
 ~~~~~~~~~~~~~~
 
-The **Edit Purchases** link allows you to view and edit information for
-existing store purchases.
+To edit purchases, click the edit button in the toolbar in the row of the purchase you wish to edit.
 
 Export Purchases
 ~~~~~~~~~~~~~~~~
 
-The **Export Purchases** link will export and download a tab-delimited
-file of all of your store purchases, for easy import into other
-applications. The details of the PayPal transaction are output to the
-file as a serialized array.
-
-Purchase Management
--------------------
-
-|Simple Commerce Purchase Management|
-
-Overview
-~~~~~~~~
-
-The Edit Purchases screen gives you at a glance an overview of your
-store purchases, the purchaser, date, and price of purchases. You may
-select items to edit or delete by checking the boxes on the right and
-selecting the appropriate action from the drop-down menu next to the
-Submit button. Purchases may be added by clicking the **Add Purchases**
-button on the top right.
+To export purchases, click the export button next to "All Purchases" to export and download a tab-delimited file of all of your purchases, for easy import into other applications. The details of the PayPal transaction are output to the file as a serialized array.
 
 Adding / Editing Purchases
 --------------------------
-
-|Simple Commerce Add Purchase|
 
 Purchase Identification Number (TXN ID)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,7 +42,7 @@ Purchase Identification Number (TXN ID)
 The transaction id (TXN ID) provided by PayPal for the completed
 purchase.
 
-Purchaser's Screen Name
+Screen Name
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The screen name of the member who purchased the item.
@@ -68,16 +52,12 @@ Item Purchased
 
 The item that was purchased.
 
-Date Purchased
-~~~~~~~~~~~~~~
+Date of Purchase
+~~~~~~~~~~~~~~~~
 
 The date of the purchase.
 
-Item Cost
-~~~~~~~~~
+Price
+~~~~~
 
 The price payed for the item purchased.
-
-.. |Simple Commerce Purchases| image:: ../../images/sc_cp_purchases.png
-.. |Simple Commerce Purchase Management| image:: ../../images/sc_store_purchases.png
-.. |Simple Commerce Add Purchase| image:: ../../images/sc_add_purchase.png

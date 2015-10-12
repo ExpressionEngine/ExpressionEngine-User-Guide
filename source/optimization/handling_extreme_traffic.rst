@@ -29,7 +29,7 @@ traffic events, there are a few tracking features of ExpressionEngine
 that update certain tables on every page load, resulting in a queue of
 locked tables as MySQL tries to keep up. These can be disabled in your
 Control Panel :doc:`Tracking Preferences
-</cp/admin/tracking_preferences>`. If you are unable to access your site
+</cp/settings/tracking>`. If you are unable to access your site
 due to the traffic, you or your server administrator can manually
 override these features in your config.php file as follows:
 
@@ -41,35 +41,35 @@ config.php Extreme Traffic Overrides
 	$config['enable_online_user_tracking']
 	
 (y/n) - Corresponds to :doc:`Enable Online User Tracking?
-(</cp/admin/tracking_preferences>`
+(</cp/settings/tracking>`
 
 ::
 
 	$config['enable_hit_tracking']
 
 (y/n) - Corresponds to :doc:`Enable Template Hit Tracking?
-(</cp/admin/tracking_preferences>`
+(</cp/settings/tracking>`
 
 ::
 	
 	$config['enable_entry_view_tracking']
 
 (y/n) - Corresponds to :doc:`Enable Channel Entry View Tracking?
-(</cp/admin/tracking_preferences>`
+(</cp/settings/tracking>`
 
 ::
 
 	$config['log_referrers']
 
 (y/n) - Corresponds to :doc:`Enable Referrer Logging?
-(</cp/admin/tracking_preferences>`
+(</cp/settings/tracking>`
 
 ::
 
 	$config['dynamic_tracking_disabling']
 
 (numeric) - Corresponds to :doc:`Suspend ALL tracking when number of
-(online visitors exceeds: </cp/admin/tracking_preferences>`
+(online visitors exceeds: </cp/settings/tracking>`
 
 ::
 
@@ -112,7 +112,7 @@ resource usage) due to the increased disk activity.
 :ref:`caching_tag_caching` and :ref:`caching_template_caching` on such
 environments should be minimal unless experienced review of your
 templates has been performed with the assistance of the :doc:`Template
-Debugging utility </cp/admin/output_and_debugging_preferences>`, and
+Debugging utility </cp/settings/debug-output>`, and
 revealed resource intensive tags or templates that are greatly improved
 after enabling the respective caching mechanism.
 

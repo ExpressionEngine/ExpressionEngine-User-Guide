@@ -3,8 +3,7 @@ User-Defined Global Variables
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Design --> Templates -->
-Global Variables`
+**Control Panel Location:** :menuselection:`Developer Tools --> Template Variables`
 
 Custom, user-defined global variables can be created for use in any
 Template.
@@ -29,7 +28,7 @@ ExpressionEngine such as other Global Variables. Please see the list of
 .. note:: User-defined global variables are not run through the template
 	engine, so you cannot place EE Tags, PHP, or variables inside them.
 	Also note that Global Variables are one of the last things parsed in
-	your Templates. This means that you cannot use a Global Variable as 
+	your Templates. This means that you cannot use a Global Variable as
 	the value for an EE Tag parameter. For instance, if you had a Global
 	Variable called "special\_channel", the following **would not work**
 	::

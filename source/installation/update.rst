@@ -10,7 +10,7 @@ This guide will help you update your site from a previous version of ExpressionE
 1. Backup and Prepare
 *********************
 
-#. Clear the cache in ExpressionEngine by going to :menuselection:`Tools --> Data --> Clear Caching`. Select **All Caches** and click Submit.
+#. Clear the cache in ExpressionEngine by going to :menuselection:`Developer Tools --> Utilities --> Cache Manager`. Select **All Caches** and click Clear Caches.
 
 #. Back-up your ExpressionEngine database.
 
@@ -56,7 +56,7 @@ Restore any modifications made to these files, such as updating the system direc
   - :file:`admin.php`
   - :file:`index.php`
 
-.. note:: If you are using :doc:`/cp/sites/index`, the same should be done for each MSM site's :file:`index.php` and :file:`admin.php` file.
+.. note:: If you are using :doc:`/cp/msm/index`, the same should be done for each MSM site's :file:`index.php` and :file:`admin.php` file.
 
 ********************
 5. Check Permissions

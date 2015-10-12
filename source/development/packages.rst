@@ -22,7 +22,7 @@ plugin, since the module's front-end file can handle any tasks that a
 plugin is needed for except field formatting, and we strongly encourage
 formatting plugins to be distributed as separate add-ons::
 
-  /system/expressionengine/third_party/foo_bar
+  /system/user/addons/foo_bar
     addon.setup.php
     acc.foo_bar.php
     config/

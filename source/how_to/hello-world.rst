@@ -5,7 +5,9 @@ Hello, World!
 Congratulations! You have installed ExpressionEngine... now what? Why not say 
 "Hello"!
 
-Visit :menuselection:`Design --> Templates --> Edit --> Create Group`
+Visit Developer Tools in the top right corner and select *Template Manager*.  Click the *NEW* button next to *Template Groups* in the left navigation.
+
+
 
 Fill in the field for **Template Group Name**, for this example use "site". 
 Ignore **Duplicate an Existing Template Group?** for now and check the 
@@ -16,12 +18,12 @@ What you've done is created a template group and set that group's index template
 as your site's home page.
 
 After creating the group, you'll be taken to the 
-:doc:`Template Manager </cp/design/templates/templates>`.
+:doc:`Template Manager </cp/design/index>`.
 
 |Template Group|
 
 Click `Index` in the **Edit Template** column. This will take you to the 
-:doc:`Template Editor </cp/design/templates/edit_template>`.
+:doc:`Template Editor </cp/design/template/edit>`.
 
 |Template Edit|
 

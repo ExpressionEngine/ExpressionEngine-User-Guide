@@ -204,7 +204,7 @@ status=
 
 	status="open"
 
-The channel :doc:`status </cp/admin/channels/statuses>` you would like
+The channel :doc:`status </cp/channel/status/index>` you would like
 entries restricted to. This is useful if you will be displaying entries
 with a status other than "open". You can choose multiple statuses using
 a pipe::
@@ -359,7 +359,7 @@ that it is only displayed if necessary::
 
 The setting to disable or enable CAPTCHA for the tell-a-friend form can
 be found in the :doc:`Email Configuration
-</cp/admin/email_configuration>` preferences.
+</cp/settings/email>` preferences.
 
 from
 ~~~~

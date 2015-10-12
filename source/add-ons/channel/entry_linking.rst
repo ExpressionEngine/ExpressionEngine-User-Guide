@@ -53,7 +53,7 @@ category=
 	category="2"
 
 Categories are specified by ID number (the ID number of each
-:doc:`category </cp/admin/channels/category_edit>` is displayed in the
+:doc:`category </cp/channel/cat/form-cat>` is displayed in the
 Control Panel). The reason we use the ID is because categories can be
 called anything (with spaces, quotes, etc.), and also renamed. It would
 be much more difficult to have to update the tag parameters every time
@@ -100,7 +100,7 @@ category\_group=
 	category_group="2"
 
 Category Groups are specified by ID number (the ID number of each
-`category group </cp/admin/channels/category_management>` is displayed
+`category group </cp/channel/cat/index>` is displayed
 in the Control Panel). The reason we use the ID is because category
 groups can be called anything (with spaces, quotes, etc.), and also
 renamed. It would be much more difficult to have to update the tag
@@ -176,7 +176,7 @@ status=
 	status="open"
 
 You may restrict to entries assigned to a particular :doc:`status
-</cp/admin/channels/statuses>`. You can choose multiple statuses using a
+</cp/channel/status/index>`. You can choose multiple statuses using a
 pipe::
 
 	status="draft|reviewed|published"

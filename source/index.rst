@@ -1,49 +1,147 @@
-###########################################
-ExpressionEngine 3.0 Public Beta User Guide
-###########################################
+################################
+ExpressionEngine 3.0  User Guide
+################################
 
-.. note:: The ExpressionEngine 3.0 docs are a work in progress, we have a lot left to do! Please excuse the ongoing construction and dust as we continue to work on ExpressionEngine itself as well as reorganizing and rewriting much of the documentation.
+- Introduction
 
-Welcome to the ExpressionEngine 3.0 Public Beta User Guide.
+  - :doc:`intro/getting_the_most`
+  - :doc:`intro/the_big_picture`
 
-The user guide is incomplete. Currently the documentation focuses on the :ellislab:`Developer Preview </expressionengine/user-guide/development/developer_preview_program.html>`, for writing or converting add-ons to be compatible with ExpressionEngine 3. Currently the table of contents on the left will only take you to areas that are relevant to goals of the Developer Preview, namely the Add-on Developer section of the User Guide. The objective is to answer the following questions for you:
+- :doc:`installation/index`
 
-- What are the over-arching things I need to know?
-- What's new, what's deprecated, and what's gone?
-- What steps do I need to take to convert my existing add-ons?
+  - :doc:`operations/index`
+  - :doc:`monitoring/index`
 
-Full reference API documentation auto-generated from our docblocks is coming soon.
+************
+The Back-End
+************
 
-Installation steps are essentially unchanged from 2.0, though we've simplified the installer itself quite a bit. Simply unzip the package, place it in a local vhost directory of your choice, and point your browser at `/system/` or `/admin.php`.
+- :doc:`cp/index`
 
-Known Issues
-============
+  - :doc:`cp/publish/create`
+  - :doc:`cp/publish/edit`
+  - :doc:`cp/files/index`
+  - :doc:`cp/members/index`
+  - :doc:`cp/channel/index`
+  - :doc:`cp/design/index`
+  - :doc:`cp/msm/index`
+  - :doc:`cp/addons/index`
+  - :doc:`cp/utilities/index`
+  - :doc:`cp/logs/index`
+  - :doc:`cp/settings/index`
 
-For a list of known issues, refer to the :elstore:`Public Beta page </manage/beta>`.
+- :doc:`add-ons/index`
 
+  - :doc:`add-ons/blacklist/index`
+  - :doc:`add-ons/channel/index`
+  - :doc:`add-ons/comment/index`
+  - :doc:`add-ons/email/index`
+  - :doc:`add-ons/emoticon/index`
+  - :doc:`add-ons/file/index`
+  - :doc:`add-ons/forum/index`
+  - :doc:`add-ons/ip_to_nation/index`
+  - :doc:`add-ons/jquery/index`
+  - :doc:`add-ons/member/index`
+  - :doc:`add-ons/metaweblog_api/index`
+  - :doc:`add-ons/moblog/index`
+  - :doc:`add-ons/pages/index`
+  - :doc:`add-ons/query/index`
+  - :doc:`add-ons/rss/index`
+  - :doc:`add-ons/rss_parser/index`
+  - :doc:`add-ons/rte/index`
+  - :doc:`add-ons/search/index`
+  - :doc:`add-ons/simple_commerce/index`
+  - :doc:`add-ons/spam/index`
+  - :doc:`add-ons/statistics/index`
+
+- :doc:`fieldtypes/index`
+
+  - :doc:`fieldtypes/date`
+  - :doc:`fieldtypes/file`
+  - :doc:`fieldtypes/grid`
+  - :doc:`fieldtypes/relationships`
+  - :doc:`fieldtypes/rte`
+  - :doc:`fieldtypes/select`
+  - :doc:`fieldtypes/text`
+  - :doc:`fieldtypes/textarea`
+
+- :doc:`optimization/index`
+
+  - :doc:`optimization/caching`
+  - :doc:`optimization/handling_extreme_traffic`
+  - :doc:`optimization/throttling`
+
+- :doc:`security/index`
+
+  - :doc:`security/captchas`
+  - :doc:`security/general_tips`
+  - :doc:`security/spam_protection`
+
+*************
+The Front-End
+*************
+
+- :doc:`templates/index`
+
+  - :doc:`templates/add_on_types`
+  - :doc:`templates/comments`
+  - :doc:`templates/conditionals`
+  - :doc:`templates/date_variable_formatting`
+  - :doc:`templates/embedding`
+  - :doc:`templates/globals/index`
+  - :doc:`templates/hidden_templates`
+  - :doc:`templates/hit_counter`
+  - :doc:`templates/layouts`
+  - :doc:`templates/overview`
+  - :doc:`templates/pagination`
+  - :doc:`templates/php`
+  - :doc:`templates/plugins`
+  - :doc:`templates/template_engine`
+  - :doc:`templates/templates_as_files`
+
+- :doc:`urls/index`
+
+  - :doc:`urls/404pages`
+  - :doc:`urls/remove_index.php`
+  - :doc:`urls/template_routes`
+  - :doc:`urls/url_structure`
+
+- :doc:`how_to/index`
+
+  - :doc:`how_to/building_a_simple_news_site`
+  - :doc:`how_to/hello-world`
+
+****************
+Solving Problems
+****************
+
+- :doc:`troubleshooting/index`
+- :ellislab:`EllisLab Support </support>`
+- :ellislab:`Community Support Forum </forums/viewannounce/230174_114/>`
+- :doc:`bugs_and_security_reports/index`
+
+*******************************
+Developing for ExpressionEngine
+*******************************
+
+- :doc:`development/index`
+- :ellislab:`Development & Programming Forum </forums/viewannounce/230178_116/>`
 
 .. toctree::
-  :glob:
-  :hidden:
   :titlesonly:
-
-  development/index
+  :hidden:
 
   about/index
-  about/license
-  about/changelog
+  intro/index
   installation/index
   cp/index
-  general/index
-  how_to/index
-  intro/index
-  bugs_and_security_reports/index
   add-ons/index
-  operations/index
+  fieldtypes/index
   optimization/index
-  monitoring/index
   security/index
   templates/index
-  troubleshooting/index
   urls/index
+  how_to/index
   development/index
+  troubleshooting/index
+  bugs_and_security_reports/index

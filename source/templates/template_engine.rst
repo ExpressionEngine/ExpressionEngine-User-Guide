@@ -10,8 +10,7 @@ being used in the Template.
 .. note:: The information in this article applies only to rendering
    Templates. It doesn't apply to rendering theme files such as those
    used for :doc:`Member Profiles
-   </cp/design/themes/member_profile_templates>`, the :doc:`Wiki
-   </add-ons/wiki/wiki_templates>` module, or the :doc:`Discussion
+   </cp/design/members/index>`, or the :doc:`Discussion
    Forum </add-ons/forum/forum_themes>` module.
 
 ExpressionEngine goes through several stages to fully process each
@@ -29,11 +28,11 @@ bottom through each rendering stage.
 
 #. Determine template to process based on request :doc:`URI </urls/url_structure>`
 
-#. Get **template from database**, check :doc:`template access permissions </cp/design/templates/template_access>`, and increment the :doc:`hit counter </templates/hit_counter>`
+#. Get **template from database**, check :doc:`template access permissions </cp/design/template/edit>`, and increment the :doc:`hit counter </templates/hit_counter>`
 
 #. If it exists, get :doc:`template from file </templates/templates_as_files>`
 
-#. If template type is :doc:`static </cp/design/templates/new_template>`, return template and end parsing
+#. If template type is :doc:`static </cp/design/template/create>`, return template and end parsing
 
 #. Parse (as a group, so order is irrelevant):
 

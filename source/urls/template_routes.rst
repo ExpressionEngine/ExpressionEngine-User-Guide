@@ -14,9 +14,9 @@ Usage
 
 You can set the route for a template using the Access section of the
 Template Manager. To see an overview of your site's routes use the
-:doc:`/cp/design/templates/template_route_manager`.
+:doc:`/cp/design/routes`.
 
-The :doc:`/cp/design/templates/template_route_manager` lists your
+The :doc:`/cp/design/routes` lists your
 Template Routes in the order they are processed when matching a URL.
 You can drag and drop your Template Routes in the Route Manager to set
 a custom parse order.
@@ -257,4 +257,4 @@ Template Route Manager
 
 This provides an overview of your site's URL structure, for more info
 see :doc:`the control panel documentation
-</cp/design/templates/template_route_manager>`.
+</cp/design/routes>`.

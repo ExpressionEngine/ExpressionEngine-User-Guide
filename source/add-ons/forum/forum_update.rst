@@ -52,15 +52,13 @@ Step 4
 ------
 
 Log into your ExpressionEngine Control Panel and visit
-:menuselection:`Add-ons --> Modules --> Discussion Forum`.
-This will cause ExpressionEngine to automatically perform
-any internal updates that are needed for the new version.
+:menuselection:`Developer Tools --> Add-On Manager`. This will offer an update
+button that will perform any internal updates that are needed for the new
+version.
 
-.. important:: When you click on the link to the Discussion Forum
-   module, the update will begin taking place. Do not close your browser
-   window or click on any links until the page has finished loading.
-   Depending on the size of your forums, the update may take several
-   seconds to complete.
+.. important:: When you click on the update button do not close your browser
+  window or click on any links until the page has finished loading. Depending on
+  the size of your forums, the update may take several seconds to complete.
 
 Step 5: Version Specific Notes
 ------------------------------

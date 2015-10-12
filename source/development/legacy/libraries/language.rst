@@ -18,7 +18,7 @@ Calling the Language Class
 
   ExpressionEngine also requires that every module have a file in the
   language directory (ex:
-  ``/system/expressionengine/third_party/language/english/`` for third
+  ``/system/user/addons/language/english/`` for third
   party modules) for the module with its filename in this form:
   ``your_module_name_lang.php``. Contained in this file with be an array
   (``$lang``) of all the language variables for your module. Every

@@ -8,7 +8,7 @@ In order for existing files to be properly added to the database, you
 will want to synchronize each existing file upload preferences by going
 to :menuselection:`Content --> Files --> File Upload Preferences` and
 selecting the sychronize icon. See :doc:`Synchronize Files
-</cp/content/files/sync_files>` for details.
+</cp/files/uploads/sync>` for details.
 
 Language Additions
 ------------------

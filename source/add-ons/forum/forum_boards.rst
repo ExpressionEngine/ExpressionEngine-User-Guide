@@ -138,7 +138,7 @@ The base URL where the forum board alias will be displayed.
 Site for Forum
 ^^^^^^^^^^^^^^
 
-If the :doc:`Multiple Site Manager </cp/sites/index>` is installed, this
+If the :doc:`Multiple Site Manager </cp/msm/index>` is installed, this
 allows you to determine which Site the forum board belongs to.
 
 

@@ -10,10 +10,11 @@ Channel Entries Tag
 Introduction
 ************
 
-The Channel Entries tag is the primary tag used to show the content you
-create and edit via your Control Panel's :menuselection:`Publish` section.
-It's the most powerful tag in ExpressionEngine, and the most commonly
-used since its main function is to retrieve and display your site's content.
+The Channel Entries tag is the primary tag used to show the content you create
+and edit via your Control Panel's :menuselection:`Create` or
+:menuselection:`Edit` section. It's the most powerful tag in ExpressionEngine,
+and the most commonly used since its main function is to retrieve and display
+your site's content.
 
 The Channel Entries tag can display both multi-entry and single-entry content -
 that is, several entries on a page, or one specific entry. By default, Channel
@@ -140,7 +141,7 @@ category=
 	category="2"
 
 Categories are specified by ID number (the ID number of each
-:doc:`category </cp/admin/channels/category_edit>` is displayed in the
+:doc:`category </cp/channel/cat/form-cat>` is displayed in the
 Control Panel). The reason we use the ID is because categories can be
 called anything (with spaces, quotes, etc.), and also renamed. It would
 be much more difficult to have to update the tag parameters every time
@@ -206,7 +207,7 @@ category\_group=
 
 
 Category Groups are specified by ID number (the ID number of each
-:doc:`category group </cp/admin/channels/category_management>` is
+:doc:`category group </cp/channel/cat/index>` is
 displayed in the Control Panel). The reason we use the ID is because
 category groups can be called anything (with spaces, quotes, etc.), and
 also renamed. It would be much more difficult to have to update the tag
@@ -237,7 +238,7 @@ channel=
 
 	channel="news"
 
-From which :doc:`channel </cp/admin/channels/channel_management>` to
+From which :doc:`channel </cp/channel/index>` to
 show the entries (will show all channels if no channel is specified).
 Additionally, you can use the pipe character to separate multiple
 channels::
@@ -250,7 +251,7 @@ channels::
 	channel="not channel1|channel2|channel3"
 
 You must specify this parameter if you use the :doc:`category name in
-URL </cp/admin/channels/global_channel_preferences>` feature.
+URL </cp/settings/content-design>` feature.
 
 disable=
 --------
@@ -589,7 +590,7 @@ options for this parameter include:
 -  ``orderby="view_count_four"``
 
 In addition you can order by a :doc:`channel field
-</cp/admin/channels/custom_channel_fields>`. Use the "short\_name" of
+</cp/channel/fields/groups/index>`. Use the "short\_name" of
 the field::
 
 	orderby="name_of_field"
@@ -1050,7 +1051,7 @@ status=
 	status="open"
 
 You may restrict to entries with a particular :doc:`status
-</cp/admin/channels/statuses>`. The two statuses "open" and "closed" are
+</cp/channel/status/index>`. The two statuses "open" and "closed" are
 default statuses that are always available, so you can always specify
 those if needed. If no status parameter is specified, only open status entries
 will be returned.  You can choose multiple statuses using a pipe::
@@ -1384,7 +1385,7 @@ comment\_auto\_path
 	{comment_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL**
-preference under :menuselection:`Admin --> Channel Management`. No entry
+preference under :menuselection:`Developer Tools --> Channel Manager --> Settings`. No entry
 id, URL Title, or other information is included; this is the exact URL
 from the preference.
 
@@ -1396,7 +1397,7 @@ comment\_entry\_id\_auto\_path
 	{comment_entry_id_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL**
-preference under :menuselection:`Admin --> Channel Management`. The ID
+preference under :menuselection:`Developer Tools --> Channel Manager --> Settings`. The ID
 number of the entry will be automatically added. For example, this::
 
 	<a href="{comment_entry_id_auto_path}">my entry</a>
@@ -1431,7 +1432,7 @@ comment\_url\_title\_auto\_path
 	{comment_url_title_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL**
-preference under :menuselection:`Admin --> Channel Management`. The URL
+preference under :menuselection:`Developer Tools --> Channel Manager --> Settings`. The URL
 Title of the entry will be automatically added. For example, this::
 
 	<a href="{comment_url_title_auto_path}">my entry</a>

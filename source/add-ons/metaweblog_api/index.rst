@@ -1,9 +1,14 @@
 Metaweblog API / Movable Type
 =============================
 
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Developer Tools --> Add-On Manager --> Metaweblog API`
+
 .. contents::
    :local:
-   
+   :depth: 2
+
 Introduction
 ------------
 
@@ -20,25 +25,24 @@ not support comments, etc. Thus, it is typically only used for simple entry
 posting purposes. The Movable Type API is slightly more flexible in that it
 supports posting content to up to four Channel Fields.
 
-
 Configuration
 -------------
 
 The Metaweblog API Control Panel is accessed via
-:menuselection:`Add-Ons --> Modules --> Metaweblog API` in the Control Panel.
+:menuselection:`Developer Tools --> Add-On Manager --> Metaweblog API` in the Control Panel.
 This page lists all of your existing configurations as well as the URL to be
 used for connecting to that configuration with your Metaweblog API-compatible
 software.
 
 Click on a configuration's name to edit it. The following options are available:
 
-Configuration Name
-~~~~~~~~~~~~~~~~~~
+Name
+~~~~
 
 The name of this configuration.
 
-Use Default Text Formatting Preferences
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Use default text formatting preferences?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If Yes, the Channel Fields' content will be sent as if they are being displayed
 on a webpage, with the field's Text Formatting preference respected. If No, the
@@ -47,58 +51,58 @@ fields' content will be sent untouched.
 The "No" setting is useful when you want to publish and edit content in its "raw"
 state with your software, regardless of how it will actually appear on the site.
 
-Entry Status
-~~~~~~~~~~~~
+Status
+~~~~~~
 
 Choose the Entry Status for all entries submitted using this
 Configuration. If you choose the 'Do Not Set Status' option, then
 whatever the Client sends for status (open or closed) will be accepted.
 
-Channel Field Group
-~~~~~~~~~~~~~~~~~~~
+Channel
+~~~~~~~
 
-Here you choose the Field Group to use for this Configuration. This
+Here you choose the Channel to use for this Configuration. This
 choice determines which fields are available for selection in the
 following preferences.
 
-Excerpt Field
-~~~~~~~~~~~~~
+Excerpt
+~~~~~~~
 
 Here you determine which field from your Field Group corresponds to the
 "Excerpt Field" in your Metaweblog API-compatible program. Only
 text-type fields are available for selection. This field is only
 available when using the Movable Type API.
 
-Content Field
-~~~~~~~~~~~~~
+Content
+~~~~~~~
 
 Here you determine which field from your Field Group corresponds to the
 "Content Field" in your Metaweblog API-compatible program. Only
 text-type fields are available for selection.
 
-More Field
-~~~~~~~~~~
+More
+~~~~
 
 Here you determine which field from your Field Group corresponds to the
 "More Field" in your Metaweblog API-compatible program. Only text-type
 fields are available for selection. This field is only available
 when using the Movable Type API.
 
-Keywords Field
-~~~~~~~~~~~~~~
+Keywords
+~~~~~~~~
 
 Here you determine which field from your Field Group corresponds to the
 "Keywords Field" in your Metaweblog API-compatible program. Only
 text-type fields are available for selection. This field is only
 available when using the Movable Type API.
 
-Upload Folder for File Uploading
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Allowed directory
+~~~~~~~~~~~~~~~~~
 
 If your Metaweblog API-compatible program allows you to upload files,
 you may specify into which folder you want files uploaded. Your
 choices are determined by what you have set up at
-:menuselection:`Content --> Files --> File Upload Preferences`.
+:menuselection:`Files --> Upload Directories`.
 
 The user sending the files via the Metaweblog API must have permission to
 upload to that folder. If you do not wish to allow uploads via the Metaweblog API,
@@ -114,8 +118,7 @@ Connecting with a Metaweblog API Compatible Program
 ---------------------------------------------------
 
 In general, you will use the URL of your desired configuration as shown
-on the Metaweblog API Control Panel page at :menuselection:`Add-Ons -->
-Modules --> Metaweblog API` to connect with your program. Below is
+on the Metaweblog API Control Panel page at :menuselection:`Developer Tools --> Add-On Manager --> Metaweblog API` to connect with your program. Below is
 information specific to some common programs.
 
 MarsEdit
@@ -128,8 +131,7 @@ MarsEdit
 #. For *System Name*, choose **ExpressionEngine**.
 #. For *System API*, ensure **Movable Type API** is selected.
 #. For *API Endpoint URL*, enter the URL of your desired configuration
-   as shown on the Metaweblog API Control Panel page at
-   :menuselection:`Add-Ons --> Modules --> Metaweblog API`.
+   as shown on the Metaweblog API Control Panel page at :menuselection:`Developer Tools --> Add-On Manager --> Metaweblog API`.
 #. For *Blog ID*, enter the **Channel ID** of the Channel you'll
    be posting to.
 #. Click **OK**, then right-click on the newly created Blog in the
@@ -144,8 +146,7 @@ Ecto
 #. Click **New Account**.
 #. For *System*, choose **ExpressionEngine** or **MovableType**.
 #. For *Access Point*, enter the URL of your desired configuration
-   as shown on the Metaweblog API Control Panel page at
-   :menuselection:`Add-Ons --> Modules --> Metaweblog API`.
+   as shown on the Metaweblog API Control Panel page at :menuselection:`Developer Tools --> Add-On Manager --> Metaweblog API`.
 #. Enter the **username** and **password** for your ExpressionEngine
    account.
 #. At first, ecto will show the existing entries from all Channels

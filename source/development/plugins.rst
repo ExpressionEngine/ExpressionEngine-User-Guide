@@ -75,7 +75,7 @@ A plugin consists of a class and at least one function::
   }
 
   /* End of file pi.plugin_name.php */
-  /* Location: ./system/expressionengine/third_party/plugin_name/pi.plugin_name.php */
+  /* Location: ./system/user/addons/plugin_name/pi.plugin_name.php */
 
 .. note:: Always deny direct access to your script by checking for the
   ``BASEPATH`` constant.
@@ -536,4 +536,4 @@ functions. Your finished Plugin would look like this::
       // END
   }
   /* End of file pi.memberlist.php */
-  /* Location: ./system/expressionengine/third_party/memberlist/pi.memberlist.php */
+  /* Location: ./system/user/addons/memberlist/pi.memberlist.php */

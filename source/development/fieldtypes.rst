@@ -43,7 +43,7 @@ $info array with a name and version number.
   // END Google_maps_ft class
 
   /* End of file ft.google_maps.php */
-  /* Location: ./system/expressionengine/third_party/google_maps/ft.google_maps.php */
+  /* Location: ./system/user/addons/google_maps/ft.google_maps.php */
 
 *********************
 Example - Google Maps
