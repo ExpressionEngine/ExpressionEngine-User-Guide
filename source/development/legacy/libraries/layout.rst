@@ -16,8 +16,6 @@ Calling the Layout Class
   serialized array in the database, any additions or deletions to publish
   page tabs and fields must be synced to any saved layouts. The control
   panel library provides 4 methods to facilitate custom layout updates.
-  (See also :doc:`Module Tutorial: Update file.
-  </development/module_tutorial>`)
 
   ::
 

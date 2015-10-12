@@ -12,8 +12,6 @@ require some fundamental alterations to the control panel file. A new
 introduced.
 
 A fictional Fortune Cookies module is used in the following examples.
-For more examples, see the :doc:`full Module Development
-tutorial </development/module_tutorial>`.
 
 .. contents::
   :local:
