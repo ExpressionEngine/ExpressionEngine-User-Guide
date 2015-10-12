@@ -19,7 +19,7 @@ Gives the option to limit the file field's ability to browse and upload to certa
 Show Existing Files?
 ~~~~~~~~~~~~~~~~~~~~
 
-When the form is rendered on the front-end using :doc:`/add-ons/channel/channel_form/index`, this setting allows you to specify whether or not you'd like to show existing files in the selected upload directory and allow the user to choose from those in addition to being able to upload a new file, or do not show existing files and only allow the user to upload a new file.
+When the form is rendered on the front-end using :doc:`/channel/channel_form/index`, this setting allows you to specify whether or not you'd like to show existing files in the selected upload directory and allow the user to choose from those in addition to being able to upload a new file, or do not show existing files and only allow the user to upload a new file.
 
 Existing Files Limit
 ~~~~~~~~~~~~~~~~~~~~

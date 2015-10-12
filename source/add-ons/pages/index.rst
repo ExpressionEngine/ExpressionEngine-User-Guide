@@ -54,7 +54,7 @@ the dynamic="no" parameter (if available) to display other content.
 
 In the Template chosen on the :doc:`Pages tab </cp/publish/create>` of
 the Page entry, use a normal :doc:`Channel Entries tag
-</add-ons/channel/channel_entries>` with any parameters and variables
+</channel/channel_entries>` with any parameters and variables
 that you desire to display the entry, e.g.::
 
 	{exp:channel:entries channel="personnel"}

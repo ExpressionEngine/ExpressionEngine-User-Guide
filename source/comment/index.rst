@@ -942,7 +942,7 @@ if comments_expired
 	{if comments_expired}
 
 If commenting has expired (and expiration is not set to be
-:doc:`overridden by moderation </add-ons/comment/control_panel/index>`),
+:doc:`overridden by moderation </comment/control_panel/index>`),
 the contents of this conditional will be displayed.
 
 .. note:: ``{if no_results}`` has precedence over this conditional. If there are
@@ -1457,7 +1457,7 @@ comments_expired
 	{if comments_expired}
 
 If commenting has expired (and expiration is not set to be
-:doc:`overridden by moderation </add-ons/comment/control_panel/index>`),
+:doc:`overridden by moderation </comment/control_panel/index>`),
 the contents of this conditional will replace all other tag contents.
 
 comments_disabled

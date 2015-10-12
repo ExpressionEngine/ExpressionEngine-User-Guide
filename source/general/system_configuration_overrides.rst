@@ -1780,7 +1780,7 @@ enable_entry_view_tracking
 --------------------------
 
 If enabled, the :doc:`Entry "Views" Tracking Tag
-</add-ons/channel/entry_tracking>` feature of the Channel module is
+</channel/entry_tracking>` feature of the Channel module is
 available for use.
 
 ========== ========
@@ -3420,7 +3420,7 @@ Example Usage::
 relaxed_track_views
 -------------------
 
-Allow :doc:`Entry Views Tracking </add-ons/channel/entry_tracking>` to
+Allow :doc:`Entry Views Tracking </channel/entry_tracking>` to
 work for ANY combination that results in only one entry being returned
 by the tag, including Channel query caching.
 

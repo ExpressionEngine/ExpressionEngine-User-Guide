@@ -279,7 +279,7 @@ preference sets the *default* setting for the channel. The setting can
 be overridden and changed on a per-entry basis.
 
 You may override this setting in the
-:doc:`/add-ons/comment/control_panel/index` section of the Comment
+:doc:`/comment/control_panel/index` section of the Comment
 Module so that comments are set to be moderated rather than closed once
 the expiration period is passed.
 

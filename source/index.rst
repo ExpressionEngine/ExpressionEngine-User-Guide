@@ -33,15 +33,12 @@ The Back-End
 - :doc:`add-ons/index`
 
   - :doc:`add-ons/blacklist/index`
-  - :doc:`add-ons/channel/index`
-  - :doc:`add-ons/comment/index`
   - :doc:`add-ons/email/index`
   - :doc:`add-ons/emoticon/index`
   - :doc:`add-ons/file/index`
   - :doc:`add-ons/forum/index`
   - :doc:`add-ons/ip_to_nation/index`
   - :doc:`add-ons/jquery/index`
-  - :doc:`add-ons/member/index`
   - :doc:`add-ons/metaweblog_api/index`
   - :doc:`add-ons/moblog/index`
   - :doc:`add-ons/pages/index`
@@ -54,6 +51,9 @@ The Back-End
   - :doc:`add-ons/spam/index`
   - :doc:`add-ons/statistics/index`
 
+- :doc:`channel/index`
+- :doc:`comment/index`
+- :doc:`member/index`
 - :doc:`fieldtypes/index`
 
   - :doc:`fieldtypes/date`

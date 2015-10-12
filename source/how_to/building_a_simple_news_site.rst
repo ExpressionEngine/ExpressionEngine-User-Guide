@@ -15,7 +15,7 @@ other systems.
 Before You Begin
 ****************
 
-.. note:: ExpressionEngine assumes that you are comfortable with basic HTML. 
+.. note:: ExpressionEngine assumes that you are comfortable with basic HTML.
 
 If you have not installed ExpressionEngine yet, :doc:`please do so now </installation/installation>`.
 
@@ -38,11 +38,11 @@ There isn't a lot to overview, as you have no entries, no comments and no conten
 General Settings
 ****************
 
-On the :doc:`General Settings </cp/settings/general>` page, give your site a descriptive name and set your default localization values.  To access this page in the future, just click the Settings cog in the top right corner.  
+On the :doc:`General Settings </cp/settings/general>` page, give your site a descriptive name and set your default localization values.  To access this page in the future, just click the Settings cog in the top right corner.
 
-Now it's time to add some content.  To do that, we first need to create a channel.  
+Now it's time to add some content.  To do that, we first need to create a channel.
 
-Click the Developer Tools icon in the top right corner and select *Channel Manager*. 
+Click the Developer Tools icon in the top right corner and select *Channel Manager*.
 
 .. figure:: ../images/getting_started_general_settings_w_nav.png
    :align: center
@@ -58,7 +58,7 @@ that can be as simple or as complex as you need it to be, depending on your cont
 You can have as many Channels as you need, each with a different structure
 tailored to the content it holds.
 
-For our new News site, we'll want a channel to hold our news articles. 
+For our new News site, we'll want a channel to hold our news articles.
 
 Creating a Channel
 ==================
@@ -304,11 +304,11 @@ This tag, like most, has three segments: **exp**, **channel**, and **entries**.
 
 #. **exp** simply tells ExpressionEngine that this is a Tag. All Tags will begin with this.
 #. **channel** refers to the *Module* we want to use to fetch our data. ExpressionEngine is made
-   up of various Modules, and each provides its own Tags. The :doc:`/add-ons/channel/index` is used to fetch
+   up of various Modules, and each provides its own Tags. The :doc:`/channel/index` is used to fetch
    data from your Channels, and is the most commonly used Module in ExpressionEngine.
 #. **entries** refers to the type of data we want the Module to fetch, or in some cases,
    the action we want the Module to take. In this case, we're telling the Channel Module
-   that we want to retrieve our :doc:`Entries </add-ons/channel/channel_entries>`.
+   that we want to retrieve our :doc:`Entries </channel/channel_entries>`.
 
 Parameters
 ==========
@@ -327,7 +327,7 @@ This tells the Channel Module that we want the 10 most recent Entries from the C
 *News*. Simple enough, right? Now that we've told it what to fetch, let's actually use that data!
 
 .. tip:: Here's the full list of available :ref:`parameters <channel_entries_parameters>`
-	for the :doc:`/add-ons/channel/channel_entries`.
+	for the :doc:`/channel/channel_entries`.
 
 Variables
 =========
@@ -351,7 +351,7 @@ who it was submitted by, and much more. For example, to get the author of an Ent
 Now, we're ready to use this Tag in our Template.
 
 .. tip:: Here's the full list of available :ref:`variables <channel_entries_single_variables>`
-	for the :doc:`/add-ons/channel/channel_entries`.
+	for the :doc:`/channel/channel_entries`.
 
 ***********************
 Putting it All Together
@@ -490,7 +490,7 @@ Then there's this line, which you'll notice *is* inside our Channel Entries Tag 
 				<li><a href="{url_title_path='news'}">{title}</a></li>
 
 *url_title_path* is one of the many :ref:`variables <channel_entries_single_variables>`
-you can use inside the :doc:`Channel Entries Tag </add-ons/channel/channel_entries>`,
+you can use inside the :doc:`Channel Entries Tag </channel/channel_entries>`,
 in addition to the variables containing the content of your Channel Fields. It acts very
 similarly to the *path* variable we just discussed, but it also appends the Entry's **URL Title**
 to the URL which lets us link directly to the entry, as you'll see next.
@@ -518,7 +518,7 @@ influenced by what happens to be in the current URL. To disable this behavior, s
 		{exp:channel:entries channel="news" limit="10" dynamic="no"}
 
 Again, all of the Channel Entries' available parameters and variables are detailed in its
-:doc:`documentation page </add-ons/channel/channel_entries>`.
+:doc:`documentation page </channel/channel_entries>`.
 
 *********************
 Go Forth and Conquer!

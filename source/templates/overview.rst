@@ -100,7 +100,7 @@ between them will be replaced with the values of each row of content::
   add-on to learn about how it is used.
 
 *More Information:* :doc:`Channel Module
-<../add-ons/channel/channel_entries>`, :doc:`../add-ons/index`,
+<../channel/channel_entries>`, :doc:`../add-ons/index`,
 :doc:`./plugins`
 
 Conditionals

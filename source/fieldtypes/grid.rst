@@ -58,7 +58,7 @@ backspace=
 
 Just like the backspace parameter on the
 :doc:`Channel Entries
-</add-ons/channel/channel_entries>` module,
+</channel/channel_entries>` module,
 backspacing removes characters (including spaces and line breaks) from
 the last iteration of the loop.
 
@@ -147,7 +147,7 @@ search:column\_name=
 Tells the tag pair to return rows only matching a certain search
 criteria. The behavior and syntax is identical to the
 :ref:`search parameter <search_parameter>` of the :doc:`Channel Entries
-</add-ons/channel/channel_entries>` module.
+</channel/channel_entries>` module.
 
 sort=
 ^^^^^
@@ -257,7 +257,7 @@ switch=
 
 Identical to the :ref:`switch variable <switch_variable>` available in
 the :doc:`Channel Entries
-</add-ons/channel/channel_entries>` tag pair, but prefixed for your
+</channel/channel_entries>` tag pair, but prefixed for your
 Grid field.
 
 total\_rows

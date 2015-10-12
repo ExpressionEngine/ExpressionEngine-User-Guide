@@ -10,7 +10,7 @@ system, it ships with a set of "apps" to cover the basic necessities right out
 of the box. We call those apps *Add-Ons*.
 
 Have a need for :doc:`RSS </add-ons/rss/index>`?  :doc:`Search
-</add-ons/search/index>`?  :doc:`Comments </add-ons/comment/index>`?  Install
+</add-ons/search/index>`?  :doc:`Comments </comment/index>`?  Install
 those packages, and you'll have a whole new set of tools at your disposal.
 
 And just like an OS, Add-Ons that don't come included with

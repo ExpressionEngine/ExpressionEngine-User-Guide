@@ -57,7 +57,7 @@ in your Channel Entries (add-ons can include their own as well):
    except that you can only select one of the items from the list.
 #. **Relationships**: The :doc:`Relationship field <../../../fieldtypes/relationships>` is a special and very powerful field type. It
    enables you to create relationships between two or more channels so
-   you can show content from one entry within another. 
+   you can show content from one entry within another.
 #. **Rich Text Editor**: The :doc:`Rich Text Editor <../../../fieldtypes/rte>` is a text entry box with multiple
    lines that uses the built-in :doc:`/add-ons/rte/index`.
 #. **Select Dropdown**: :doc:`Select fields <../../../fieldtypes/select>` are simply a standard HTML <select> drop-down
@@ -86,7 +86,7 @@ This is the internal or "short name" for the field. This is a
 punctuation. The field name must be unique within the system, which
 means that you cannot have two field groups each containing a field with
 the field name of "body". The short name is typically used as the
-variable name in your :doc:`/add-ons/channel/channel_entries`
+variable name in your :doc:`/channel/channel_entries`
 
 .. note:: Some words are reserved and cannot be used. Please
    see :doc:`/general/reserved_words` for details.

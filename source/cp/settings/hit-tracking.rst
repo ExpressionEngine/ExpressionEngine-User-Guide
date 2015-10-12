@@ -53,7 +53,7 @@ database on each page load.
 Enable entry view tracking?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When set to "Yes", you can utilize the :doc:`/add-ons/channel/entry_tracking`
+When set to "Yes", you can utilize the :doc:`/channel/entry_tracking`
 feature of the Channel module.
 
 .. _suspend-tracking-label:

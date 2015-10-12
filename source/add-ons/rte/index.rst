@@ -20,7 +20,7 @@ document's **head** element::
 
 	<script type="text/javascript" src="{exp:rte:script_url selector=".my-class"}"></script>
 
-.. important:: If you're using the :doc:`Channel Form </add-ons/channel/channel_form/index>`,
+.. important:: If you're using the :doc:`Channel Form </channel/channel_form/index>`,
    it's preferable to use the :ref:`channel_form_rte_selector` parameter instead
    of this module's tag.
 

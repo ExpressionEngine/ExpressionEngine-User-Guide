@@ -61,7 +61,7 @@ This is the internal or "short name" for the field. This is a
 punctuation. The field name must be unique within the system, which
 means that you cannot have two field groups each containing a field with
 the field name of "body". The short name is typically used as the
-variable name in your :doc:`/add-ons/channel/channel_entries`
+variable name in your :doc:`/channel/channel_entries`
 
 .. note:: Some words are reserved and cannot be used. Please
    see :doc:`/general/reserved_words` for details.

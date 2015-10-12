@@ -13,7 +13,7 @@ containing the name of the author, the character encoding, etc., while
 the main channel tag renders the actual rows.
 
 The RSS Module Tag is intended to be used in conjunction with the
-:doc:`/add-ons/channel/channel_entries`.
+:doc:`/channel/channel_entries`.
 The entire RSS feed is enclosed between the following tags::
 
 	{exp:rss:feed}

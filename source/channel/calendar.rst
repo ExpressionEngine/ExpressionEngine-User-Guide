@@ -112,7 +112,7 @@ wish, modify it as needed, or simply ignore it.
 Parameters
 **********
 
-Most of the :doc:`Parameters </add-ons/channel/channel_entries>` of the
+Most of the :doc:`Parameters </channel/channel_entries>` of the
 standard {exp:channel:entries} tag are available. In addition, the
 following are special to the channel calendar tag.
 
