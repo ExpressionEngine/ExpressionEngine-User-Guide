@@ -5,9 +5,7 @@ Working with Relationships
    :local:
    :depth: 1
 
-
-Basic Usage
------------
+.. highlight:: php
 
 
 Accessing Related Models

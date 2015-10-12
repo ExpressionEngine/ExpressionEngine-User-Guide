@@ -6,6 +6,8 @@ Fetching Models
    :local:
    :depth: 1
 
+.. highlight:: php
+
 Basic Usage
 -----------
 
