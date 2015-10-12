@@ -6,6 +6,6 @@ Fieldtypes are what allow you to enter specific types of information and provide
 .. toctree::
   :glob:
   :titlesonly:
-	:maxdepth: 1
+  :maxdepth: 1
 
   *
