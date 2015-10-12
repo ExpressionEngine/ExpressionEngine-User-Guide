@@ -63,7 +63,7 @@ in your Channel Entries (add-ons can include their own as well):
 #. **Select Dropdown**: :doc:`Select fields <../../../fieldtypes/select>` are simply a standard HTML <select> drop-down
    list. You can define the contents of the list manually or
    pre-populate it from another field.
-#. **Text**: The :doc:`Text field <../../../fieldtypes/text>`is a single input line for text. It is the type
+#. **Text**: The :doc:`Text field <../../../fieldtypes/text>` is a single input line for text. It is the type
    of field you might use for a title, name, or other short information.
 #. **Textarea**: The :doc:`Textarea field <../../../fieldtypes/textarea>` is a standard text entry box with multiple lines.
    This is often used for the body text of entries.
