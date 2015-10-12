@@ -60,8 +60,8 @@ Including Assets
 ----------------
 
 If you plan on using the formatting buttons or the :doc:`Grid
-</channel/grid>`, :doc:`Relationships
-</channel/relationships>`, :doc:`Rich Text Editor
+</fieldtypes/grid>`, :doc:`Relationships
+</fieldtypes/relationships>`, :doc:`Rich Text Editor
 </add-ons/rte/index>`, Date, or File fieldtypes, include a link to the
 Channel Form stylesheet in your template::
 

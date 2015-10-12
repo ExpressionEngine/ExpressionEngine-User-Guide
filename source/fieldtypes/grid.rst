@@ -69,7 +69,7 @@ dynamic\_parameters=
 
   dynamic_parameters="orderby|limit|sort"
 
-The :doc:`Dynamic Parameters <dynamic_parameters>` feature permits a
+The :doc:`Dynamic Parameters </channel/dynamic_parameters>` feature permits a
 Grid field tag's parameters to be set "on the fly" using POST data
 data submitted via a form. A practical use for this is to create some
 display options in a form on your page that your visitors can use to

@@ -3585,9 +3585,8 @@ $config['save_tmpl_files'] = 'y';
 save_tmpl_revisions
 -------------------
 
-Enable :ref:`template revisions <template-save-revision>`. Template
-history is saved when changes are made within the :doc:`template editor
-</cp/design/template/edit>`.
+Enable template revisions. Template history is saved when changes are made
+within the :doc:`template editor </cp/design/template/edit>`.
 
 ========== ========
 Value      Behavior
