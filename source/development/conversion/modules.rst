@@ -2,8 +2,6 @@
 ExpressionEngine 3.0 Module Changes
 ***********************************
 
-.. todo:: Audit for 3.0
-
 .. highlight:: php
 
 In addition to the :doc:`syntax changes <syntax>` already discussed, modules
@@ -220,10 +218,9 @@ See :doc:`/development/services/alert` for full documentation.
 The Shared Settings Form
 ------------------------
 
-.. todo:: This article is a STUB and needs to be completed.
-
-At some point we'll have a real overview here with a link to the full
-documentation. For now enjoy this cryptic bit of code::
+Forms are created by creating an array of field descriptions. This keeps the
+view code consistent and modular. Below is an example of a simple form with
+a text input and a checkbox::
 
   $vars['sections'] = array(
   	array(
@@ -255,36 +252,35 @@ documentation. For now enjoy this cryptic bit of code::
 
 And::
 
-  <?php $this->ee_view('_shared/form')?>
+  <?php $this->embed('ee:_shared/form')?>
+
+
+See :doc:`/development/shared_form_view` for full documentation.
 
 Modals
 ------
 
 Under 3.0 modals belong to a specific spot in the Control Panel's DOM, and that
-place isn't accessible from a module's view. To solve that we have introduced
-named view blocks. There are two basic calls to use within your view files,
-``$this->startOrAppendBlock('modals')`` and ``$this->endBlock();``. Everything between
-those two lines will be be stored in the modals block and output in the correct
-spot of the DOM.
-
-Example
-~~~~~~~
+place isn't accessible from a module's view. To solve that we have created a
+modal service. There are two basic calls to use it within your view files,
+``ee('CP/Modal')->startModal($name);`` and ``ee('CP/Modal')->endModal();``.
+Everything between those two lines will be be stored in the modals block and
+output in the correct spot of the DOM.
 
 ::
 
-  <?php $this->startOrAppendBlock('modals'); ?>
-
+  <?php ee('CP/Modal')->startModal($name); ?>
   <div class="modal-wrap modal-test">
   	<div class="modal">
   		<div class="col-group">
   			<div class="col w-16">
-  				<a class="m-close" href="#"></a>
   				<div class="box">
-					Hello World!
+  					...
   				</div>
   			</div>
   		</div>
   	</div>
   </div>
+  <?php ee('CP/Modal')->endModal(); ?>
 
-  <?php $this->endBlock(); ?>
+See :doc:`/development/services/modal` for full documentation.
