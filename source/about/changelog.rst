@@ -24,6 +24,11 @@ Release Date: October 13, 2015
 
 - Spam Module
 
+  - Unified anti-spam service for first and third party code.
+  - Comes pre-trained for common spam, but can be further trained your site's specific content.
+  - No subscription needed and all data remains on your site.
+  - Training data is exportable for sharing with others and future site builds.
+
 - Installer
 
   - Installation is now a one page form.
