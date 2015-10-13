@@ -4,15 +4,6 @@ Other Features
 .. contents::
    :local:
 
-Re-Synchronize Forums
-~~~~~~~~~~~~~~~~~~~~~
-
-At the bottom of the main Forum Management page there is a
-"Re-synchronize Forums" link. If for some reason the forums get out of
-order as far as their assignment to a particular category goes, you can
-use this link to re-synchronized them. This feature is almost never
-needed, but it is available if necessary.
-
 Using PHP in the Forum Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -54,7 +45,7 @@ Your forum will then be run inside the regular EE template engine, which
 means that you can include standard EE Tags in the forum theme
 Templates. The forum is then accessed through whichever Template you
 created above, so the Template name is used in place of the "trigger"
-word mentioned earlier.  Note that due to the nature of forum URLs, segment 
+word mentioned earlier.  Note that due to the nature of forum URLs, segment
 globals are not parsed when used in the forum templates.
 
 The down side of this approach is that it adds more processing overhead,

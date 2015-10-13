@@ -17,22 +17,12 @@ for setup and to create and assign Moderators and Administrators. You
 can even easily change the look and feel of your forum by simply
 applying another "theme" to it.
 
-.. important:: The Discussion Forum is an ExpressionEngine Module, and
-   therefore requires that you be running ExpressionEngine. This module
-   requires a `purchased <https://store.ellislab.com/>`_
-   ExpressionEngine license.
-
-*******************
-Initial Forum Setup
-*******************
-
--  :doc:`Setting Up Your Forums for the First Time <forum_setup>`
-
 ***********************
 Features and Management
 ***********************
 
--  :doc:`Forum Boards <forum_boards>`
+-  :doc:`Setting Up Your Forums for the First Time <forum_setup>`
+-  :doc:`Forum Boards and Aliases <forum_boards>`
 -  :doc:`User Management <forum_user_management>`
 -  :doc:`Forum Themes <forum_themes>`
 -  :doc:`Forum Global Variables <forum_global_variables>`
@@ -41,15 +31,9 @@ Features and Management
 -  :doc:`Associating Channel Entries with Forum Topics <channel_forum>`
 -  :doc:`Other Features <other_features>`
 
-**********
-Change Log
-**********
-
--  :doc:`Change Log <changelog>`
-
 .. toctree::
 	:glob:
 	:titlesonly:
 	:hidden:
-	
+
 	*
