@@ -24,7 +24,6 @@ Guidelines
 - :doc:`Control Panel Pages </development/cp_styles/index>`
 - :doc:`Plugin Specific Changes <plugins>`
 - :doc:`Module Specific Changes <modules>`
-- :doc:`Module Conversion Walk-through <walk-through>`
 
 .. toctree::
   :glob:
