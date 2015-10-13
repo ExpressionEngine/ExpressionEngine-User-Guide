@@ -12,6 +12,77 @@ Release Date: October 13, 2015
 
 - Control Panel
 
+  - General
+    - Responsive design is a pleasure on mobile devices.
+    - 100% image free, fast and beautiful on regular and high density displays
+    - Inline error messages consistently used on all forms.
+    - The control panel navigation and logic is now based on the idea of **Content Creators** and **Site Builders**, with navigation related to content creators on the left and site builders on the right.
+    - Many application defaults have been modified to reflect how people most often use ExpressionEngine.
+    - Control Panel landing pages are customizable per member group, or even per member
+    - In-app links to the documentation, support, and bug tracker are visible to member groups of your choice.
+    - Improved contextual search in the control panel.
+    - Uses a consistent visual language across the board.
+    - Enabling/disabling CAPTCHA has been consolidated to a single site-wide setting.
+    - Unified Upload Directories: Everything that used to be a special folder (Member photos, avatars, etc..) is now available in the File Manager and can use the usual file manipulations and other upload preferences.
+    - Smart interactions (for example, if you have no channels, then clicking **Create** will take you to the channel manager to make one).
+    - Bulk actions don't clutter the UI, they onlyappear only when needed.
+    - The new style guide allows both 1st and 3rd party to build awesome UX.
+    - The new design will allow simple iterative niceties in the future, such as adding some minimal color and branding for your clients. 
+    - Comments are no longer a separate module. Comments can be accessed from the Overview page.
+
+  - Overview Page
+	 - The **Home Page** is now the overview page.  
+	 - Completely rewritten to show a quick overview of your content, including  recent comments, member counts and latest entry information.
+	
+  - Create
+	 - Content -> Publish has moved to the top level Create tab.
+    - The Publish Layout manager has moved to its own page in the Channel  Manager. 
+    - Titles can now have different labels, set in the Channel Manager.
+
+  - Edit
+	 - Content -> Edit has moved to the top level Edit tab.
+
+  - Files
+	 - Content -> Files has moved to the top level Edit tab.
+	
+  - Members
+	 - Member Group permissions are now more granular.
+
+  - Developer Tools
+    - Channel Manager
+      - Admin -> Channel Administration is now a subsection under developer 
+tools. All Channel, Status, Category and Field settings are accessed here.
+      - Channel layouts have a dedicated form for managing the publish/edit 
+layouts.
+      - Categories have drag and drop sorting and nesting.
+
+	 - Template Manager	
+      - Moved from Design -> Templates -> Template Manager
+      - Snippets were renamed **Template Partials**
+      - Global variables were renamed **Template Variables**
+      - Synchronization page removed as this is now fully automated.
+      - Consistency in the display of any **System templates** (Email, Members, Forums, etc.).
+
+	 - Site Manager		
+      - Access to the manager moved from the site title dropdown.
+      - Removed the ability to duplicate existing sites.
+
+	 - Add-On Manager
+      - Add-ons are no longer a top level menu tab.	
+      - Add-ons are all on one page.
+      - Third party plugins are grouped together.
+      - Plugins must now be installed as part of the move toward more consistent behavior.
+      - Built-in non-optional add-ons are hidden from the table
+	
+	 - Utilities
+      - Consolidated several **Tools* sections: Communicate, Utilities and  Data.
+      - Extension debugging section added here to allow disabling of  individual extensions.	
+	 - Logs
+      - 	Moved from Tools -> Logs
+
+  - Settings
+
+
 - Multiple Site Manager
 
   - Now included with ExpressionEngine.
@@ -40,11 +111,6 @@ Release Date: October 13, 2015
   - Removed Referrer module.
   - Removed Mailing List module.
   - Removed Wiki module.
-  - Control Panel landing pages are customizable per member group, or even per member
-  - In-app links to the documentation, support, and bug tracker are visible to member groups of your choice
-  - Many application defaults have been modified to reflect how people most often use ExpressionEngine
-  - Enabling/disabling CAPTCHA has been consolidated to a single site-wide setting.
-  - Unified Upload Directories: Everything that used to be a special folder (Member photos, avatars, etc..) is now available in the File Manager and can use the usual file manipulations and other upload preferences.
   - Template routes can now be set in the config file.
   - Improved template route parsing.
   - Improved Profiler and Debugging.
