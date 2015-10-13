@@ -1,17 +1,23 @@
 Prefixes
 ########
 
+.. highlight:: php
+
+In a system that runs add-on code from potentially many different developers it
+can be difficult to prevent naming collisions. Namespaces work well when dealing
+with native objects, but the ability to alias long namespace names gets lost when
+using strings to identify files and class names.
+
+To consistently solve this problem, ExpressionEngine assigns a prefix to all independent
+code sources. For any native code this prefix is **ee:**. All addons are assigned
+a prefix that matches the addon folder name. This also matches the name used in the
+templating engine.
+
+The following services currently support the prefix naming conventions:
+
 .. contents::
   :local:
   :depth: 1
-
-.. highlight:: php
-
-Addon Prefix
-============
-
-All addons automatically have a prefix that matches the addon folder. This prefix
-works with many of the native services:
 
 Config Service
 ==============
