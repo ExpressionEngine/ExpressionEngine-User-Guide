@@ -15,7 +15,7 @@ error codes, you can do that in the Control Panel.
 
 :menuselection:`Settings --> Template Settings`
 
-.. image:: /images/ee2-template-global-prefs.png
+.. image:: /images/template_settings.png
 
 
 The 404 page setting tells ExpressionEngine which template to use for all the

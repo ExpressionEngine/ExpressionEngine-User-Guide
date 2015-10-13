@@ -59,9 +59,7 @@ Version 3.1.14
 Release Date: December 10, 2013
 
 - Fixed a bug (#19893) where some forms improperly failed the secure
-  mode check. See :doc:`update notes <forum_update_notes_3.1.14>`
-  for more information.
-
+  mode check. 
 
 Version 3.1.13
 --------------
@@ -648,11 +646,10 @@ Release Date: June 19, 2007
 -  Added Text Formatting preference for posts
 -  Added ability to move individual replies between threads
 -  Added ability to link directly to reply in search results where the
-   search terms were found in a reply (see :doc:`version update
-   notes <forum_update_notes_2.0>`).
+   search terms were found in a reply.
 -  Added :doc:`forums= </add-ons/forum/recent_forum_topics>` and
    `boards= </add-ons/forum/recent_forum_topics>` parameters to the
-   Topic Titles tag
+   Topic Titles tag.
 -  Added
    `{auto\_thread\_path} </add-ons/forum/recent_forum_topics>`,
    `{board\_label} </add-ons/forum/recent_forum_topics>`,
@@ -773,8 +770,7 @@ Release Date: August 20, 2006
    developers.
 -  Added new email notification and template for Discussion Forum
    moderation actions (move, split, and merge)
--  Added the ability to use post anchors. See version specific notes in
-   the User Guide for details.
+-  Added the ability to use post anchors. 
 -  Added pagination for when you are splitting long threads
 -  Modified Private Message and Discussion Forum file attachments to use
    a hashed URL so file attachments have URLs that are difficult (nigh
