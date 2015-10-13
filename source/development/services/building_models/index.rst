@@ -333,8 +333,6 @@ The available options include:
 | timestamp  | Cast to timestamp | Cast to DateTime |
 +------------+-------------------+------------------+
 
-Please refer to :doc:`Creating Column Types <./column-types>` to learn how to add your
-own.
 
 Composite Types
 ---------------
@@ -364,9 +362,6 @@ The following composite types are included:
 +------------------+---------------------------------+
 | base64Serialized | base64_encode(serialize($data)) |
 +------------------+---------------------------------+
-
-Please refer to :doc:`Creating Column Types <./column-types>` to learn how to add your
-own.
 
 Model Methods
 -------------
