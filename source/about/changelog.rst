@@ -30,6 +30,11 @@ Release Date: October 13, 2015
     - The new style guide allows both 1st and 3rd party to build awesome UX.
     - The new design will allow simple iterative niceties in the future, such as adding some minimal color and branding for your clients.
     - Comments are no longer a separate module. Comments can be accessed from the Overview page.
+    - Accessories no longer exist.
+    - Quicklinks and custom tabs were consolidated into only Quicklinks.
+    - Table zebra-striping JS has been removed. Zebra-striping is handled automatically by the CSS.
+    - Pre-populating the Name and URL fields of quicklinks when the ‘+ New Link’ button is clicked.
+    - Added a default modal view setting to upload destinations.
 
   - Overview Page
 
@@ -39,7 +44,7 @@ Release Date: October 13, 2015
   - Create
 
 	 - Content -> Publish has moved to the top level Create tab.
-
+	 - Improved category create modal.
     - The Publish Layout manager has moved to its own page in the Channel  Manager.
     - Titles can now have different labels, set in the Channel Manager.
 
@@ -94,6 +99,8 @@ Release Date: October 13, 2015
       - Moved from Tools -> Logs
 
   - Settings
+
+      -The new **Settings** page consolidates a number of settings that were scattered throughout the version 2 control panel.  Notably the **Global Template**, *Member message and avatar** and **Comment** preferences can be found here.  That's in addition to the other preferences that move over from the version 2 **Admin* tab.
 
 - Multiple Site Manager
 
