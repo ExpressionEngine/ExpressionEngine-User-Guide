@@ -15,7 +15,8 @@ ExpressionEngine's core is built around a dependency container::
 
   $di = new DependencyContainer();
 
-This is simply a container of named objects or factories.
+This is simply a container of named objects or factories. The container itself
+is not public. Additions are made by declaring them in the ``addon.setup`` file.
 
 Retrieving Data
 ===============
@@ -23,6 +24,10 @@ Retrieving Data
 Anything stored on a dependency container can be retrieve with ``make()``::
 
   $di->make('Something');
+
+This method is exposed globally as ``ee()``::
+
+  ee('Something');
 
 Adding Objects
 ==============
