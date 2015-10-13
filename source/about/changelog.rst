@@ -44,8 +44,8 @@ Release Date: October 13, 2015
 
   - Create
 
-	 - Content -> Publish has moved to the top level Create tab.
-	 - Improved category create modal.
+    - Content -> Publish has moved to the top level Create tab.
+    - Improved category create modal.
     - The Publish Layout manager has moved to its own page in the Channel  Manager.
     - Titles can now have different labels, set in the Channel Manager.
     - Improved behavior of entry filtering in Relationship fields on the publish form so it searches all entries.
@@ -71,7 +71,7 @@ Release Date: October 13, 2015
       - Channel layouts have a dedicated form for managing the publish/edit layouts.
       - Categories have drag and drop sorting and nesting.
 
-	 - Template Manager
+    - Template Manager
 
       - Moved from Design -> Templates -> Template Manager
       - Snippets were renamed **Template Partials**
@@ -79,12 +79,12 @@ Release Date: October 13, 2015
       - Synchronization page removed as this is now fully automated.
       - Consistency in the display of any **System templates** (Email, Members, Forums, etc.).
 
-	 - Site Manager
+    - Site Manager
 
       - Access to the manager moved from the site title dropdown.
       - Removed the ability to duplicate existing sites.
 
-	 - Add-On Manager
+    - Add-On Manager
 
       - Add-ons are no longer a top level menu tab.
       - Add-ons are all on one page.
@@ -92,18 +92,18 @@ Release Date: October 13, 2015
       - Plugins must now be installed as part of the move toward more consistent behavior.
       - Built-in non-optional add-ons are hidden from the table
 
-	 - Utilities
+    - Utilities
 
       - Consolidated several **Tools* sections: Communicate, Utilities and  Data.
       - Extension debugging section added here to allow disabling of  individual extensions.
 
-	 - Logs
+    - Logs
 
       - Moved from Tools -> Logs
 
   - Settings
 
-      -The new **Settings** page consolidates a number of settings that were scattered throughout the version 2 control panel.  Notably the **Global Template**, *Member message and avatar** and **Comment** preferences can be found here.  That's in addition to the other preferences that move over from the version 2 **Admin** tab.
+    - The new **Settings** page consolidates a number of settings that were scattered throughout the version 2 control panel.  Notably the **Global Template**, *Member message and avatar** and **Comment** preferences can be found here.  That's in addition to the other preferences that move over from the version 2 **Admin** tab.
 
 - Multiple Site Manager
 
