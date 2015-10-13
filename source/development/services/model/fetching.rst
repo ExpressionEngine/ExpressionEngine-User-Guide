@@ -111,12 +111,91 @@ the ``count()`` method instead of ``all()``::
 
   $total_templates = ee('Model')->get('Template')->count();
 
-Partial Data
---------------
-
-TODO Explain the ``fields()`` method.
 
 Relationships
 -------------
 
-TODO Explain dot notation, aliasing, and link to eager loading relationships docs
+To access a related model, you can simply access the relationship name as it
+is defined in the model. By convention, relationships that are singular will
+return a single model (or null), whereas plural relationships will return a
+collection of related models::
+
+  // singular
+  $template = ee('Model')->get('Template')->first();
+  $template_group = $template->TemplateGroup;
+
+  // plural
+  $status_group = ee('Model')->get('StatusGroup')->first();
+  $statuses = $status_group->Statuses;
+
+
+By default, all relationship data is loaded on a need-to-know basis. When a
+related model is accessed, its data is automatically retrieved::
+
+  $template = ee('Model')->get('Template')->first();
+
+  $template_group = $template->TemplateGroup; // fetches the correct template group behind the scenes
+
+This lazy loading behavior is good for single models, but it can cause
+performance bottlenecks when it is put inside a loop. For example::
+
+  $templates = ee('Model')->get('Template')->all();
+
+  foreach ($templates as $template)
+  {
+    $group = $template->TemplateGroup; // BAD, triggers a fetch for each iteration
+  }
+
+Eager Loading
+~~~~~~~~~~~~~
+
+To get around this problem, you can specify a relationship to be loaded with
+the original query. This is done using the ``with()`` method. The above snippet
+then becomes::
+
+  $templates = ee('Model')->get('Template')->with('TemplateGroup')->all();
+
+  foreach ($templates as $template)
+  {
+    $group = $template->TemplateGroup; // OK, already loaded
+  }
+
+These eager queries can also be nested to retrieve complex model hierarchies::
+
+  ->get('Template')->with(array('LastAuthor' => 'MemberGroup'));
+
+Filtering on Relationships
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Eager loading also enables more advanced filtering and sorting. To specify a
+column that is not on the main model, simply prefix it with the relationship name::
+
+  ->get('Template')->with('TemplateGroup')->filter('TemplateGroup.group_name', 'blog')->all()
+
+Aliasing
+--------
+
+To simplify writing complex filters, any named model can be aliased and the
+alias used instead::
+
+  ->get('Template as t')
+  ->with('TemplateGroup as tg')
+  ->filter('tg.group_name', 'news')
+  ->sort('t.template_name')
+  ->all();
+
+Partial Data
+--------------
+
+In order to reduce memory usage, you can ask for only a subset of the available
+data. This is done with the ``fields()`` method, which takes as arguments the
+names of the fields you want to fetch::
+
+  $template = ee('Model')
+    ->get('Template')
+    ->fields('template_id', 'template_name')
+    ->first();
+
+.. note:: This method should only be used for querying data. It should not be
+  used for models that will be edited, deleted, or passed to other code for
+  processing.
