@@ -13,6 +13,21 @@ This section gives a detailed description on how to implement your own models.
 
 .. highlight:: php
 
+Registering Models
+------------------
+
+All models must be registered in your :doc:`addon.setup.php </development/addon_setup_php_file>`
+file. They should be in an array called ``models``, where the key is their name
+and the value is the class of the model relative to your namespace. By convention
+this should be inside a ``Model`` directory::
+
+  'models' => array(
+    'Author' => 'Model\Author',
+    'MyModel' => 'Model\MyModel'
+  )
+
+.. note:: Your addon prefix will be prepended automatically.
+
 Model Skeleton
 --------------
 
@@ -352,11 +367,6 @@ The following composite types are included:
 
 Please refer to :doc:`Creating Column Types <./column-types>` to learn how to add your
 own.
-
-Multiple Tables
----------------
-
-.. todo:: This section is a STUB and needs to be completed.
 
 Model Methods
 -------------
