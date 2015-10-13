@@ -431,5 +431,4 @@ Model Methods
   :glob:
   :maxdepth: 1
 
-  column-types
   relationships

@@ -53,8 +53,9 @@ The Back-End
 
 - :doc:`channel/index`
 - :doc:`comment/index`
-- :doc:`fieldtypes/index`
 - :doc:`member/index`
+- :doc:`msm/index`
+- :doc:`fieldtypes/index`
 
   - :doc:`fieldtypes/date`
   - :doc:`fieldtypes/file`
@@ -153,6 +154,7 @@ Developing for ExpressionEngine
   comment/index
   fieldtypes/index
   member/index
+  msm/index
   optimization/index
   security/index
   templates/index

@@ -117,7 +117,7 @@ Example
 ::
 
   return array(
-    'body'       => ee()->load->view('index', $vars, TRUE),
+    'body'       => ee('View')->make('fortune_cookie:index')->render($vars),
     'breadcrumb' => array(
       ee('CP/URL', 'addons/settings/fortune_cookie')->compile() => lang('fortune_cookie_management')
     ),

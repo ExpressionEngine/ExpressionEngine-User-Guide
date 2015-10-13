@@ -2826,7 +2826,6 @@ $config['multiple_sites_enabled'] = 'y';
 .. rst-class:: cp-path
 
 **Also found in CP:** :menuselection:`Settings --> General Settings`:
-:doc:`Enable Multiple Site Manager </cp/sites/install>`
 
 
 .. _name_of_dictionary_file:
@@ -4117,7 +4116,7 @@ site_name
 
 Set the short name of the site. The site created upon installation is
 named ``default_site``, so this is typically only helpful for additional
-sites in :doc:`MSM-enabled installations </cp/sites/createsite>`.
+sites in :doc:`MSM-enabled installations </msm/index>`.
 
 ============= ========
 Value         Description
@@ -4133,7 +4132,7 @@ $assign_to_config['site_name'] = 'domain2_short_name';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Site Manager --> Edit`: :doc:`Site Short Name </cp/sites/createsite>`
+**Also found in CP:** :menuselection:`Developer Tools --> Site Manager --> Edit`: :doc:`Site Short Name </cp/msm/form>`
 
 
 .. _overrides-site-url:
