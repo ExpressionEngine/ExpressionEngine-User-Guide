@@ -7,6 +7,13 @@ Using the Model Service
 
 .. highlight:: php
 
+Naming Conventions
+------------------
+
+Models follow the :doc:`prefix naming conventions</development/core/prefixes>`. Native
+models can be referred to either prefix-free or with the ``ee:`` prefix. All
+add-on models must be used with the add-on prefix.
+
 Creating
 --------
 
@@ -75,6 +82,8 @@ Events
 
 All models have basic support for the built-in event system. To listen to an
 event on a model, use the ``on`` method::
+
+  $my_model = ee('Model')->make('myaddon:MyModel');
 
   $my_model->on('boom', function() use ($my_model)
   {
