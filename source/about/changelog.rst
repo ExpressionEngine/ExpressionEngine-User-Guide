@@ -32,7 +32,7 @@ Release Date: October 13, 2015
 - Installer
 
   - One-page installation.
-  - Updating is much easier thanks to the new user servicable directory. Just replace `` system/ee`` and ``themes/ee`` and update.
+  - Updating is much easier thanks to the new user servicable directory. Just replace ``system/ee`` and ``themes/ee`` and update.
   - Third-party add-ons are no longer updated during the EE update.
 
 - General Changes
