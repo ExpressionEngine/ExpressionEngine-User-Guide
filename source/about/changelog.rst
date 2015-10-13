@@ -56,6 +56,8 @@ Release Date: October 13, 2015
 
 - Developers
 
+  - All new :doc:`Model Service </development/services/model/index>` which replaces our APIs.
+  - Added a :doc:`Dependency Injection Container </development/core/dependencies>`.
   - Channel fields, Member fields, and Category fields now all use the same API
   - New FilePicker service for displaying file browser modals
   - Use the `require_captcha` setting to determine whether to require CAPTCHA or not for your front-end forms.
