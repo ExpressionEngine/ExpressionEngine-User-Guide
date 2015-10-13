@@ -90,11 +90,17 @@
 							<h1>{{ project }}&reg; User Guide</h1>
 							<form class="docs-download">
 								<select>
-									<option>Download 3.x User Guide</option>
-									<option>Download 2.x User Guide</option>
-									<option>Download 1.x User Guide</option>
+									<option value="">&mdash;</option>
+									<option value="http://f1bf67d549f4bace9133-ade10a3daf314fd3c70740a7fe56076c.r0.cf1.rackcdn.com/EEDocs3.0.0.zip">Download 3.x User Guide</option>
+									<option value="http://f1bf67d549f4bace9133-ade10a3daf314fd3c70740a7fe56076c.r0.cf1.rackcdn.com/EEDocs2.10.1.zip">Download 2.x User Guide</option>
+									<option value="http://f1bf67d549f4bace9133-ade10a3daf314fd3c70740a7fe56076c.r0.cf1.rackcdn.com/EEDocs1.7.3.zip">Download 1.x User Guide</option>
 								</select>
 							</form>
+							<script>
+								document.querySelector('.docs-download select').onchange = function() {
+									window.location.href = this.value;
+								};
+							</script>
 						</div>
 
 					{%- block content %}
