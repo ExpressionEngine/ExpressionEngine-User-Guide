@@ -14,7 +14,13 @@ Release Date: October 13, 2015
 
 - Multiple Site Manager
 
+  - Now included with ExpressionEngine.
+  - All ExpressionEngine licenses come with one site and you only pay for additional sites, not the ability to add additional sites.
+  - When you upgrade your ExpressionEngine license, you can merge in a Multiple Site Manager license to add sites to that license.
+
 - Discussion Forums
+
+  - Now included with ExpressionEngine.
 
 - Spam Module
 
