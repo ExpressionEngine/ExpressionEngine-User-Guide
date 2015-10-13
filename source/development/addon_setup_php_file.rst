@@ -120,34 +120,6 @@ plugin.typography
 This indicates whether or not the add-on provides a plugin that should be made
 available as a text formatter to some Channel Fields. The default is ``FALSE``.
 
-plugin.usage
-~~~~~~~~~~~~
-
-::
-
-  'plugin.usage' => 'Add {exp:hello_world} to your template.'
-
-Or::
-
-  'plugin.usage' => array(
-    'description' => 'Adds a friendly "Hello World!" message to your template',
-	'example' => '{exp:hello_world}',
-	'parameters' => array(
-	  'language' => array(
-	    'description' => 'The language to use for the greeting',
-		'example' => '{exp:hello_world language="en"}'
-	  )
-	)
-  )
-
-This is the usage documentation for the plugin in the add-on. It can either be
-a string or an associative array. If it is an associative array it must define
-the keys ``description`` and ``example``. An additional key of ``parameters`` is
-available to document each parameter available to the plugin. It is itself an
-associative array of parameter names as keys, and an associative array with the
-keys ``description`` and ``example`` as its value. This value is used in the
-manual display for plugins, as such it is a **required** key for all plugins.
-
 services
 ~~~~~~~~
 
