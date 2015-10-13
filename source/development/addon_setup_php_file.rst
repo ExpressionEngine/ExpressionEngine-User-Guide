@@ -84,8 +84,12 @@ namespace
 
   'namespace' => 'Example\HelloWorld'
 
-This is the `PHP namespace <http://php.net/namespace>`_ for the add-on. This is
+This is the `PHP namespace <http://php.net/namespace>`_ for your add-on. This is
 a **required** key.
+
+This key associates your add-on directory with a namespace. ExpressionEngine will
+will look inside your add-on directory any time it encounters a class name that
+begins with this namespace.
 
 settings_exist
 ~~~~~~~~~~~~~~
