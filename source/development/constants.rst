@@ -34,7 +34,6 @@ Version Constants
 - ``APP_NAME`` - Application Name
 - ``APP_VER`` - Version number
 - ``APP_BUILD`` - Build number
-- ``CI_VERSION`` - CodeIgniter version
 
 URL Constants
 -------------
