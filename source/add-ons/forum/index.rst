@@ -22,19 +22,17 @@ applying another "theme" to it.
    requires a `purchased <https://store.ellislab.com/>`_
    ExpressionEngine license.
 
-*********************************
-Installation, Updating, and Setup
-*********************************
+*******************
+Initial Forum Setup
+*******************
 
--  :doc:`Installation <forum_installation>`
--  :doc:`Updating to a Newer Version <forum_update>`
 -  :doc:`Setting Up Your Forums for the First Time <forum_setup>`
 
 ***********************
 Features and Management
 ***********************
 
--  :doc:`Forum Boards and Aliases <forum_boards>`
+-  :doc:`Forum Boards <forum_boards>`
 -  :doc:`User Management <forum_user_management>`
 -  :doc:`Forum Themes <forum_themes>`
 -  :doc:`Forum Global Variables <forum_global_variables>`

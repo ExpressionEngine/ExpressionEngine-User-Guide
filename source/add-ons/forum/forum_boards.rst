@@ -1,5 +1,5 @@
-Forum Boards and Aliases
-========================
+Forum Boards
+============
 
 Overview
 --------
@@ -9,158 +9,105 @@ enabling you to run separate forums on one installation. Each board can
 have its own URL, making it possible for you to have separate boards for
 each site, or even run multiple distinct boards on a single site.
 
-Aliases allow you to use alternative URLs from which to display your
-boards.
 
 Managing Boards
 ---------------
 
-The "Forum Board Home" tab reveals a drop-down menu to access the forum
-boards you have setup, as well as a link to "Edit Forum Boards".
+The "Forum Boards" are displayed in the left navigation.  From there you can add new boards and edit or delete existing ones.
 
-|Forum Board Dropdown|
+|Forum Boards|
+
 
 Forum Board Management
 ~~~~~~~~~~~~~~~~~~~~~~
 
 |Forum Board Management|
 
-Board ID
-^^^^^^^^
+General Settings
+~~~~~~~~~~~~~~~~~~~~~~
 
-The unique ID for the forum board.
+Enable Board
+^^^^^^^^^^^^
 
-Forum Board Label
-^^^^^^^^^^^^^^^^^
+Yes / No. Whether or not the forum board is turned on.
 
-The label that is displayed for the forum board.
+Name
+^^^^
 
-Forum Board Short Name
-^^^^^^^^^^^^^^^^^^^^^^
+Full descriptive name of this board.
+
+Short Name
+^^^^^^^^^^
 
 The "short name" for the forum board, used in the board= parameter of
 the Forum tag when running forums through regular templates.
 
-Enabled?
-^^^^^^^^
+Forum Directory
+^^^^^^^^^^^^^^^
 
-Yes / No. Whether or not the forum board is turned on.
+URL to the forum.
 
-Edit Board
-^^^^^^^^^^
-
-This link will take you to the board's edit preference form.
-
-Delete
-^^^^^^
-
-This link will delete the board *and all forum data* contained within
-it.
-
-Add a New Forum Board?
-^^^^^^^^^^^^^^^^^^^^^^
-
-This link allows you to create a new forum board.
-
-Forum Alias Management
-~~~~~~~~~~~~~~~~~~~~~~
-
-|Forum Alias Management|
-Board ID
-^^^^^^^^
-
-The unique ID for the forum board alias.
-
-Forum Board Alias Label
-^^^^^^^^^^^^^^^^^^^^^^^
-
-The label that is displayed for the forum board alias.
-
-Forum Board Alias Short Name
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The "short name" for the forum board alias, used in the board= parameter
-of the Forum tag when running forums through regular templates.
-
-Enabled?
-^^^^^^^^
-
-Yes / No. Whether or not the forum board alias is turned on.
-
-Edit Alias
-^^^^^^^^^^
-
-This link will take you to the alias's edit preference form.
-
-Delete
-^^^^^^
-
-This link will delete the forum board alias. The original board and
-forum data that the alias was pointing to are not removed.
-
-Add a New Forum Board alias?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This link allows you to create a new forum board alias.
-
-Forum Board Alias Details
--------------------------
-
-|Forum Board Alias Details|
-
-Forum Board Alias Settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The Forum Board Alias settings are essentially the same as the General
-Settings for a normal forum board. The difference is that an existing
-forum board is selected as the one being aliased. This enables you to
-display a forum board on different sites / locations within the same
-ExpressionEngine installation as the normal location.
-
-Forum Board Label
+Forum URL segment
 ^^^^^^^^^^^^^^^^^
 
-The label that is displayed for the forum board alias.
+Word that triggers forum display. Cannot be the same as a template or template group.
 
-Forum Board Short Name
-^^^^^^^^^^^^^^^^^^^^^^
 
-The "short name" for the forum board alias, used in the board= parameter
-of the Forum tag when running forums through regular templates.
+PHP Settings
+~~~~~~~~~~~~
 
-.. _forum-boards-forum-url-label:
-
-Forum URL
+Allow PHP
 ^^^^^^^^^
 
-The base URL where the forum board alias will be displayed.
+Allows the use of standard PHP within forum templates.
 
-Site for Forum
-^^^^^^^^^^^^^^
+PHP parsing stage
+^^^^^^^^^^^^^^^^^
+When set to output, PHP will be parsed after the template.
 
-If the :doc:`Multiple Site Manager </cp/msm/index>` is installed, this
-allows you to determine which Site the forum board belongs to.
+Attachment Settings
+~~~~~~~~~~~~~~~~~~~
 
+Attachments per post
+^^^^^^^^^^^^^^^^^^^^
+Maximum attachments allowed per post.
 
-.. _forum-forum_triggering_word:
+Upload directory
+^^^^^^^^^^^^^^^^
+URL to the upload directory.
 
-Forum Triggering Word
-^^^^^^^^^^^^^^^^^^^^^
-
-When this word is encountered in your URL it will display your forum.
-The word you choose cannot be the name of an existing template group.
-
-Enable Forum Board
+Allowed file types
 ^^^^^^^^^^^^^^^^^^
+You may specify any allowed file type or images only.
 
-Yes / No. Whether or not the forum board alias is turned on.
+File size
+^^^^^^^^^
+Maximum file size in megabytes.
 
-Forum Board Being Aliased
+Image width
+^^^^^^^^^^^
+Maximum image width in pixels
+
+Image height
+^^^^^^^^^^^^
+Maximum image height in pixels.
+
+Enable thumbnail creation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The Forum Board that this Alias points to.
+When set to enable, clickable thumbnails will be shown in posts.
 
-.. |Forum Board Dropdown| image:: ../../images/forum_board_dropdown.png
+Thumbnail width
+^^^^^^^^^^^^^^^
+
+Maximum thumbnail width in pixels.
+
+Thumbnail height
+^^^^^^^^^^^^^^^^
+
+Maximum thumbnail height in pixels.
+
+
+
+.. |Forum Boards| image:: ../../images/forum_boards.png
 .. |Forum Board Management| image:: ../../images/forum_board_management.png
-.. |Forum Alias Management| image:: ../../images/forum_alias_management.png
-.. |Forum Board Alias Details| image:: ../../images/forum_board_alias_details.png
