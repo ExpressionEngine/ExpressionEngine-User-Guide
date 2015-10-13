@@ -94,7 +94,7 @@ Release Date: October 13, 2015
 
     - Utilities
 
-      - Consolidated several **Tools* sections: Communicate, Utilities and  Data.
+      - Consolidated several **Tools** sections: Communicate, Utilities and  Data.
       - Extension debugging section added here to allow disabling of  individual extensions.
 
     - Logs
