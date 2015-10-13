@@ -13,6 +13,7 @@ Release Date: October 13, 2015
 - Control Panel
 
   - General
+
     - Responsive design is a pleasure on mobile devices.
     - 100% image free, fast and beautiful on regular and high density displays
     - Inline error messages consistently used on all forms.
@@ -27,61 +28,72 @@ Release Date: October 13, 2015
     - Smart interactions (for example, if you have no channels, then clicking **Create** will take you to the channel manager to make one).
     - Bulk actions don't clutter the UI, they onlyappear only when needed.
     - The new style guide allows both 1st and 3rd party to build awesome UX.
-    - The new design will allow simple iterative niceties in the future, such as adding some minimal color and branding for your clients. 
+    - The new design will allow simple iterative niceties in the future, such as adding some minimal color and branding for your clients.
     - Comments are no longer a separate module. Comments can be accessed from the Overview page.
 
   - Overview Page
-	 - The **Home Page** is now the overview page.  
+
+	 - The **Home Page** is now the overview page.
 	 - Completely rewritten to show a quick overview of your content, including  recent comments, member counts and latest entry information.
-	
+
   - Create
+
 	 - Content -> Publish has moved to the top level Create tab.
-    - The Publish Layout manager has moved to its own page in the Channel  Manager. 
+
+    - The Publish Layout manager has moved to its own page in the Channel  Manager.
     - Titles can now have different labels, set in the Channel Manager.
 
   - Edit
+
 	 - Content -> Edit has moved to the top level Edit tab.
 
   - Files
+
 	 - Content -> Files has moved to the top level Edit tab.
-	
+
   - Members
+
 	 - Member Group permissions are now more granular.
 
   - Developer Tools
+
     - Channel Manager
-      - Admin -> Channel Administration is now a subsection under developer 
-tools. All Channel, Status, Category and Field settings are accessed here.
-      - Channel layouts have a dedicated form for managing the publish/edit 
-layouts.
+
+      - Admin -> Channel Administration is now a subsection under developer tools. All Channel, Status, Category and Field settings are accessed here.
+      - Channel layouts have a dedicated form for managing the publish/edit layouts.
       - Categories have drag and drop sorting and nesting.
 
-	 - Template Manager	
+	 - Template Manager
+
       - Moved from Design -> Templates -> Template Manager
       - Snippets were renamed **Template Partials**
       - Global variables were renamed **Template Variables**
       - Synchronization page removed as this is now fully automated.
       - Consistency in the display of any **System templates** (Email, Members, Forums, etc.).
 
-	 - Site Manager		
+	 - Site Manager
+
       - Access to the manager moved from the site title dropdown.
       - Removed the ability to duplicate existing sites.
 
 	 - Add-On Manager
-      - Add-ons are no longer a top level menu tab.	
+
+      - Add-ons are no longer a top level menu tab.
       - Add-ons are all on one page.
       - Third party plugins are grouped together.
       - Plugins must now be installed as part of the move toward more consistent behavior.
       - Built-in non-optional add-ons are hidden from the table
-	
+
 	 - Utilities
+
       - Consolidated several **Tools* sections: Communicate, Utilities and  Data.
-      - Extension debugging section added here to allow disabling of  individual extensions.	
+      - Extension debugging section added here to allow disabling of  individual extensions.
+
 	 - Logs
-      - 	Moved from Tools -> Logs
+
+      - Moved from Tools -> Logs
 
   - Settings
-
 
 - Multiple Site Manager
 
