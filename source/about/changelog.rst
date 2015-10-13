@@ -35,24 +35,24 @@ Release Date: October 13, 2015
   - Updating is much easier thanks to the new user servicable directory. Just replace `` system/ee`` and ``themes/ee`` and update.
   - Third-party add-ons are no longer updated during the EE update.
 
-  - General Changes
+- General Changes
 
-    - Removed Referrer module.
-    - Removed Mailing List module.
-    - Removed Wiki module.
-    - Control Panel landing pages are customizable per member group, or even per member
-    - In-app links to the documentation, support, and bug tracker are visible to member groups of your choice
-    - Many application defaults have been modified to reflect how people most often use ExpressionEngine
-    - Enabling/disabling CAPTCHA has been consolidated to a single site-wide setting.
-    - Unified Upload Directories: Everything that used to be a special folder (Member photos, avatars, etc..) is now available in the File Manager and can use the usual file manipulations and other upload preferences.
-    - Template routes can now be set in the config file.
-    - Improved template route parsing.
-    - Improved Profiler and Debugging.
-    - Screen Names no longer have to be unique.
-    - Updated Markdown Extra to v1.5.0.
-    - Changed password maximum length to 72 characters.
-    - Added ``{if no_results}`` to ``{categories}`` tag pair in ``{exp:channel:entries}`` loop
-    - Added ``{if no_results}`` to ``{exp:channel:categories}``
+  - Removed Referrer module.
+  - Removed Mailing List module.
+  - Removed Wiki module.
+  - Control Panel landing pages are customizable per member group, or even per member
+  - In-app links to the documentation, support, and bug tracker are visible to member groups of your choice
+  - Many application defaults have been modified to reflect how people most often use ExpressionEngine
+  - Enabling/disabling CAPTCHA has been consolidated to a single site-wide setting.
+  - Unified Upload Directories: Everything that used to be a special folder (Member photos, avatars, etc..) is now available in the File Manager and can use the usual file manipulations and other upload preferences.
+  - Template routes can now be set in the config file.
+  - Improved template route parsing.
+  - Improved Profiler and Debugging.
+  - Screen Names no longer have to be unique.
+  - Updated Markdown Extra to v1.5.0.
+  - Changed password maximum length to 72 characters.
+  - Added ``{if no_results}`` to ``{categories}`` tag pair in ``{exp:channel:entries}`` loop
+  - Added ``{if no_results}`` to ``{exp:channel:categories}``
 
 - Developers
 
