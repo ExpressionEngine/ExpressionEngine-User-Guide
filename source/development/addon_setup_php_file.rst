@@ -62,7 +62,7 @@ description
 
 ::
 
-  'description' => 'Displays a friendly "Hello world!" messsage.'
+  'description' => 'Displays a friendly "Hello world!" message.'
 
 This is a brief description of the add-on. This value is used in the manual
 display for plugins, as such this is a **required** key for all plugins.
@@ -131,14 +131,14 @@ Or::
 	'parameters' => array(
 	  'language' => array(
 	    'description' => 'The language to use for the greeting',
-		'exmaple' => '{exp:hello_world language="en"}'
+		'example' => '{exp:hello_world language="en"}'
 	  )
 	)
   )
 
 This is the usage documentation for the plugin in the add-on. It can either be
 a string or an associative array. If it is an associative array it must define
-the keys ``dscription`` and ``example``. An additional key of ``parameters`` is
+the keys ``description`` and ``example``. An additional key of ``parameters`` is
 available to document each parameter available to the plugin. It is itself an
 associative array of parameter names as keys, and an associative array with the
 keys ``description`` and ``example`` as its value. This value is used in the
