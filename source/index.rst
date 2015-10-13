@@ -4,6 +4,7 @@ ExpressionEngine 3.0  User Guide
 
 - Introduction
 
+  - `ExpressionEngine License Agreement <https:expressionengine.com/license>`_
   - :doc:`intro/getting_the_most`
   - :doc:`intro/the_big_picture`
 
