@@ -27,7 +27,7 @@ lexers['php'] = PhpLexer(startinline=True)
 # -- General configuration -----------------------------------------------------
 
 # Developer Preview and internal review only
-todo_include_todos = True
+todo_include_todos = False
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #needs_sphinx = '1.0'
