@@ -10,6 +10,7 @@ Version 3.0.0
 
 Release Date: October 13, 2015
 
+
 - Control Panel
 
   - General
@@ -47,10 +48,12 @@ Release Date: October 13, 2015
 	 - Improved category create modal.
     - The Publish Layout manager has moved to its own page in the Channel  Manager.
     - Titles can now have different labels, set in the Channel Manager.
+    - Improved behavior of entry filtering in Relationship fields on the publish form so it searches all entries.
 
   - Edit
 
 	 - Content -> Edit has moved to the top level Edit tab.
+	 - The search has live filtering, and you can now bookmark the results directly.
 
   - Files
 
@@ -100,7 +103,7 @@ Release Date: October 13, 2015
 
   - Settings
 
-      -The new **Settings** page consolidates a number of settings that were scattered throughout the version 2 control panel.  Notably the **Global Template**, *Member message and avatar** and **Comment** preferences can be found here.  That's in addition to the other preferences that move over from the version 2 **Admin* tab.
+      -The new **Settings** page consolidates a number of settings that were scattered throughout the version 2 control panel.  Notably the **Global Template**, *Member message and avatar** and **Comment** preferences can be found here.  That's in addition to the other preferences that move over from the version 2 **Admin** tab.
 
 - Multiple Site Manager
 
@@ -138,6 +141,7 @@ Release Date: October 13, 2015
   - Changed password maximum length to 72 characters.
   - Added ``{if no_results}`` to ``{categories}`` tag pair in ``{exp:channel:entries}`` loop
   - Added ``{if no_results}`` to ``{exp:channel:categories}``
+  - A custom database port can be specified in the database configuration array
 
 - Developers
 
