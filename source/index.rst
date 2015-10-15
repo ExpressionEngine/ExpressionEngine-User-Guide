@@ -140,6 +140,7 @@ Developing for ExpressionEngine
 *******************************
 
 - :doc:`development/index`
+- :ellislab:`Style Guide </style-guide/>`
 - :ellislab:`Development & Programming Forum </forums/viewannounce/230178_116/>`
 
 .. toctree::
