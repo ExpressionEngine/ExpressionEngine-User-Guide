@@ -79,6 +79,7 @@ and encourage them to join!
 - Andrew Fairlie (Red Carrot)
 - Andrew Gunstone (Thirst Studios)
 - Andrew Weaver
+- Andris Sevcenko (Pixel and Tonic)
 - Ben Croker
 - Benjamin Kohl (Masuga Design)
 - Benoit Marchal
