@@ -1,5 +1,5 @@
-ExpressionEngine Plugin API
-===========================
+ExpressionEngine Plugins
+========================
 
 .. highlight:: php
 
@@ -73,7 +73,7 @@ A plugin consists of a class and at least one function::
   }
 
   /* End of file pi.plugin_name.php */
-  /* Location: ./system/expressionengine/third_party/plugin_name/pi.plugin_name.php */
+  /* Location: ./system/user/addons/plugin_name/pi.plugin_name.php */
 
 .. note:: Always deny direct access to your script by checking for the
   ``BASEPATH`` constant.
@@ -418,32 +418,28 @@ In addition to the class and function, you should also add some
 information that will display in the Plugin Manager section of the
 Control Panel. There are two parts to this information.
 
-$plugin_info array
+Plugin Information
 ~~~~~~~~~~~~~~~~~~
 
-At the top of your file you can specify a PHP array that contains
-information about the Plugin. The array follows this format::
+Your plugin can describe itself in a little more detail by using a series of
+public static properties::
 
-  $plugin_info = array(
-      'pi_name'         => 'Member List',
-      'pi_version'      => '1.0',
-      'pi_author'       => 'Jane Doe',
-      'pi_author_url'   => 'http://example.com/',
-      'pi_description'  => 'Returns a list of site members',
-      'pi_usage'        => Memberlist::usage()
-  );
+  public static $name         = 'Member List';
+  public static $version      = '1.0';
+  public static $author       = 'Jane Doe';
+  public static $author_url   = 'http://example.com/';
+  public static $description  = 'Returns a list of site members';
+  public static $typography   = FALSE;
 
 The information is as follows:
 
-- ``pi_name``: The display name of the Plugin
-- ``pi_version``: The Plugin version number
-- ``pi_author``: The name of the Plugin author
-- ``pi_author_url``: The URL associated with the author (or a URL to
+- ``$name``: The display name of the Plugin
+- ``$version``: The Plugin version number
+- ``$author``: The name of the Plugin author
+- ``$author_url``: The URL associated with the author (or a URL to
   a page about the Plugin)
-- ``pi_description``: A short description of the purpose of the Plugin
-- ``pi_usage``: This array item is special. It should be the name of
-  the Plugin 'class' followed by ``::usage``. So for the ``Memberlist``
-  class it is ``Memberlist::usage``.
+- ``$description``: A short description of the purpose of the Plugin
+- ``$typography``: A boolean indicating if this plugin is used for text conversion
 
 usage() function
 ~~~~~~~~~~~~~~~~
@@ -452,10 +448,7 @@ The "usage" function is designed to easily allow you to give a
 description of how to use your new Plugin, including giving example
 ExpressionEngine code.
 
-This function should be placed inside the 'class', just like the other
-functions. Your finished Plugin would look like this::
-
-  <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+::
 
   /**
    * Memberlist Class
@@ -466,72 +459,65 @@ functions. Your finished Plugin would look like this::
    * @copyright       Copyright (c) 2010, Jane Doe
    * @link        http://example.com/memberlist/
    */
-
-  $plugin_info = array(
-      'pi_name'         => 'Member List',
-      'pi_version'      => '1.0',
-      'pi_author'       => 'Jane Doe',
-      'pi_author_url'   => 'http://example.com/',
-      'pi_description'  => 'Returns a list of site members',
-      'pi_usage'        => Memberlist::usage()
-  );
-
   class Memberlist
   {
+    public static $name         = 'Member List';
+    public static $version      = '1.0';
+    public static $author       = 'Jane Doe';
+    public static $author_url   = 'http://example.com/';
+    public static $description  = 'Returns a list of site members';
+    public static $typography   = FALSE;
 
-      public $return_data = "";
+    public $return_data = "";
 
-      // --------------------------------------------------------------------
+    // --------------------------------------------------------------------
 
-      /**
-       * Memberlist
-       *
-       * This function returns a list of members
-       *
-       * @access  public
-       * @return  string
-       */
-      public function __construct()
+    /**
+     * Memberlist
+     *
+     * This function returns a list of members
+     *
+     * @access  public
+     * @return  string
+     */
+    public function __construct()
+    {
+      $query = ee()->db->select('screen_name')
+        ->get('members', 15);
+
+      foreach($query->result_array() as $row)
       {
-          $query = ee()->db->select('screen_name')
-              ->get('members', 15);
-
-          foreach($query->result_array() as $row)
-          {
-              $this->return_data .= $row['screen_name'];
-              $this->return_data .= "<br />";
-          }
+        $this->return_data .= $row['screen_name'];
+        $this->return_data .= "<br />";
       }
+    }
 
-      // --------------------------------------------------------------------
+    // --------------------------------------------------------------------
 
-      /**
-       * Usage
-       *
-       * This function describes how the plugin is used.
-       *
-       * @access  public
-       * @return  string
-       */
-      public static function usage()
-      {
-          ob_start();  ?>
+    /**
+     * Usage
+     *
+     * This function describes how the plugin is used.
+     *
+     * @access  public
+     * @return  string
+     */
+    public static function usage()
+    {
+      ob_start();  ?>
 
-  The Memberlist Plugin simply outputs a
-  list of 15 members of your site.
+    The Memberlist Plugin simply outputs a
+    list of 15 members of your site.
 
-      {exp:memberlist}
+    {exp:memberlist}
 
-  This is an incredibly simple Plugin.
+    This is an incredibly simple Plugin.
 
 
-      <?php
-          $buffer = ob_get_contents();
-          ob_end_clean();
+    <?php
+        $buffer = ob_get_contents();
+        ob_end_clean();
 
-          return $buffer;
-      }
-      // END
+        return $buffer;
+    }
   }
-  /* End of file pi.memberlist.php */
-  /* Location: ./system/expressionengine/third_party/memberlist/pi.memberlist.php */

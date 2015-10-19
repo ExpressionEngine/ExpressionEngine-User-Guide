@@ -2,6 +2,8 @@
 ExpressionEngine Emoticon Development
 #####################################
 
+.. todo:: Audit for 3.0
+
 .. highlight:: php
 
 Modifying or creating new sets of Emoticons for use with
@@ -98,4 +100,4 @@ Emoticon Images
 
 The file names in the ``$smileys`` array correspond to the files in the
 directory specified as the "smilies" directory in the Control Panel at
-:menuselection:`Admin --> Emoticon Preferences`.
+:menuselection:`Settings --> Content & Design`.

@@ -48,7 +48,7 @@ category=
 	category="2"
 
 Categories are specified by ID number (the ID number of each
-:doc:`category </cp/admin/channels/category_edit>` is displayed in the
+:doc:`category </cp/channel/cat/form-cat>` is displayed in the
 Control Panel). The reason we use the ID is because categories can be
 called anything (with spaces, quotes, etc.), and also renamed. It would
 be much more difficult to have to update the tag parameters every time
@@ -91,7 +91,7 @@ category\_group=
 	category_group="2"
 
 Category Groups are specified by ID number (the ID number of each
-:doc:`category group </cp/admin/channels/category_management>` is
+:doc:`category group </cp/channel/cat/index>` is
 displayed in the Control Panel). The reason we use the ID is because
 category groups can be called anything (with spaces, quotes, etc.), and
 also renamed. It would be much more difficult to have to update the tag
@@ -121,7 +121,7 @@ directory\_id=
 	directory_id="3"
 
 From which :doc:`file upload directory
-</cp/content/files/file_upload_preferences>` to show the files (will
+</cp/files/index>` to show the files (will
 show files from any directory if none is specified). Additionally, you
 can use the pipe character to separate multiple directories::
 

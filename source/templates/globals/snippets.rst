@@ -1,3 +1,5 @@
+.. todo:: These are now named Template Variables.
+
 Snippets
 ========
 
@@ -22,8 +24,7 @@ you had put the expanded text into the template itself::
 
 	{entry_date format="%m-%d-%Y"}
 
-You can create and edit Snippets at :menuselection:`Design --> Templates
---> Snippets`.
+You can create and edit Snippets at :menuselection:`Developer Tools --> Template Partials`.
 
 .. note:: Snippets may not be nested inside other snippets.
 

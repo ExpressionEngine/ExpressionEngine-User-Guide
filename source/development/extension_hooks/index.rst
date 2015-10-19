@@ -2,6 +2,8 @@
 Extension Hooks
 ###############
 
+.. todo:: Audit for 3.0
+
 The list below details all available extension hooks in ExpressionEngine.
 
 ******
@@ -49,11 +51,8 @@ Modules
   :hidden:
   :titlesonly:
 
-  api/channel_entries/index
   api/template_structure/index
   cp/admin_content/index
-  cp/content_edit/index
-  cp/content_publish/index
   cp/css/index
   cp/design/index
   cp/javascript/index

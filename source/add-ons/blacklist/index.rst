@@ -1,25 +1,22 @@
-Blacklist/Whitelist
-===================
+Black/White List
+================
+
+.. rst-class:: cp-path
+
+**Control Panel Location:** :menuselection:`Developer Menu --> Add-On Manager --> Black/White List`
 
 .. contents::
    :local:
-
-Introduction
-------------
+   :depth: 2
 
 The Blacklist/Whitelist Module is one of ExpressionEngine's native spam
-prevention systems. It helps prevent spam from occuring in comments,
+prevention systems. It helps prevent spam from occurring in comments,
 referrers, and other posted information. Used in combination with other
 :doc:`Spam Prevention Features </security/spam_protection>`, the
 occurrence of spam on your site should be rare.
 
 .. note:: The Blacklist/Whitelist Module is available only with a
    `purchased <https://store.ellislab.com/>`_ ExpressionEngine license.
-
-This Module is accessed via :menuselection:`Admin --> Modules --> Blacklist/Whitelist` in your
-Control Panel. This will bring up a screen where you can access either
-the Blacklist or the Whitelist, which are explained below.
-
 
 Blacklist
 ---------
@@ -56,6 +53,12 @@ There are three types of content that you can add to the Blacklist:
    ExpressionEngine.com Blacklist. As with the other settings, you may
    specify partial strings and EE will match any user agent that
    contains that string.
+
+.. note:: ExpressionEngine does **not** search through existing comments and
+   delete them when new items are added to the Blacklist. Mass deleting
+   of comments via a simple search of a term is not recommended, since
+   it might have unforeseen results and the deleted comments are not
+   retrievable.
 
 Whitelist
 ---------
@@ -94,24 +97,6 @@ These are identical to the ones in the Blacklist:
    you may specify partial strings and EE will match any user agent that
    contains that string.
 
-Updating your Blacklist
------------------------
-
-When you update the Blacklist with new items (i.e. when you hit the
-Update button or download the ExpressionEngine.com Blacklist),
-ExpressionEngine will determine what new items have been added and
-search through previously posted referrers looking for matches. If any
-matches are found, EE will check to ensure that they do not match any
-items in your Whitelist before automatically deleting them. This means
-that as you update your Blacklist you can automatically clean out
-existing referrers that match your new entries.
-
-.. note:: ExpressionEngine does **not** search through comments and
-   delete them when new items are added to the Blacklist. Mass deleting
-   of comments via a simple search of a term is not recommended, since
-   it might have unforeseen results and the deleted comments are not
-   retrievable.
-
 Downloading ExpressionEngine.com Lists
 --------------------------------------
 
@@ -121,10 +106,10 @@ maintained with the help of our users. If you have an IP address, user
 agent, or URL that you believe should be added to the Blacklist or
 Whitelist, please email blacklist@ellislab.com.
 
-To download the ExpressionEngine Lists, you must have your License
-Number entered into the :menuselection:`Admin --> General Configuration`
+To download the ExpressionEngine Lists, you must have a valid license file
+entered into the :menuselection:`Settings --> License & Registration`
 area of the Control Panel. To download the Lists, go into the
-:menuselection:`Add-Ons --> Modules` and choose *Blacklist/Whitelist*.
+:menuselection:`Developer Menu --> Add-On Manager --> Black/White List`.
 In the main menu for the module are links that you can click to
 automatically download and add the ExpressionEngine.com Lists to your
 own.
@@ -163,9 +148,8 @@ done.
 #. Once you have a .htaccess file at the site root on your server, you
    will need to **change its permissions to 666** so that it is
    "writable" and ExpressionEngine can add content to it.
-#. In your ExpressionEngine Control Panel, go to :menuselection:`Admin --> Modules --> Blacklist/Whitelist`.
-   At the bottom of the table you'll see a "Write
-   Blacklist to .htaccess file?" setting. In this setting, you will need
+#. In your ExpressionEngine Control Panel, go to :menuselection:`Developer Menu --> Add-On Manager --> Black/White List`.
+   At the top of the page you'll see a "Add to .htaccess file?" setting. In this setting, you will need
    to place the *full server path* to the .htaccess file. The full server
    path might look something like
 
@@ -175,7 +159,7 @@ done.
    If you do not know what to use for your full server path, contact your
    Host or server admin.
 
-#. Press the Submit button on the form and ExpressionEngine will add the
+#. Press the Save Settings button on the form and ExpressionEngine will add the
    contents of your Blacklist to the .htaccess file, blocking them from
    being able to access your site at all.
 
@@ -183,4 +167,4 @@ Also note that an "override" is included for any referrers that include
 your own server name (i.e. example.com) to make sure that there is no
 chance that you block your own site by accident. In order to include
 this "override" you need to ensure that your "Cookie Domain" preference
-is set under :menuselection:`Admin --> Security and Privacy --> Cookie Settings`.
+is set under :menuselection:`Settings --> Security & Privacy`.

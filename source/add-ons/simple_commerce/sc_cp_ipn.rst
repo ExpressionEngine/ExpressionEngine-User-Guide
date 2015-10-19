@@ -6,7 +6,6 @@ Notification) allow you to fully integrate PayPal with your store,
 automatically keeping track of purchases, and sending notification
 emails to both administrators and customers.
 
-|Simple Commerce Instant Payment Notification|
 PayPal's Instant Payment Notification service processes transactions on
 their server, and notifies ExpressionEngine when the transaction is
 complete, so purchases are not recorded in your store until they are
@@ -38,5 +37,3 @@ preferences.
 .. note:: For ExpressionEngine to reliably track PayPal transactions
    within Simple Commerce, you must enter your primary PayPal email
    address as the **PayPal Account** in the Simple Commerce preferences.
-
-.. |Simple Commerce Instant Payment Notification| image:: ../../images/sc_cp_ipn.png

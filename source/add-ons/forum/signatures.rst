@@ -1,5 +1,5 @@
-Signatures, Avatars, and Member Photos
-======================================
+Signatures and Avatars
+======================
 
 Users in your forum can create Avatars and Signatures, if you allow it.
 Avatars are small images that get displayed along with the user's name
@@ -17,8 +17,4 @@ You can enable or disable Avatars and determine their settings in the
 Avatar Preferences section. Likewise, you can set up Signatures under
 the Signature Preferences section.
 
-Member Photos will appear in the user's profile area when other users
-view it. You can enable or disable this feature under the Member Photo
-Preferences section.
-
-By default, Avatars, Signatures, and Member Photos are *disabled*.
+By default, Avatars and Signatures are *disabled*.

@@ -1,102 +1,37 @@
-###################################
-ExpressionEngine Add-On Development
-###################################
+##################
+Add-On Development
+##################
 
-In the menu below you will find links to guidelines, reference material,
-and tutorials for developing Plugins, Modules, and Extensions for
-ExpressionEngine.
+Guidelines, reference material, and tutorials for developing add-ons for ExpressionEngine.
 
-.. contents::
-  :local:
+Legacy Documentation
+====================
 
-*******************
-General Development
-*******************
+Many of the libraries and helpers available in ExpressionEngine 2 continue to function as expected. They are earmarked for replacement in the future, but are not yet deprecated. Use these freely until replacement libraries or services are created.
 
-- :doc:`Constants Reference </development/constants>`
-- :doc:`The Template Class </development/usage/template>`
-- :doc:`Accessory Development </development/accessories>`
-- :doc:`Extensions Development </development/extensions>`
+For legacy documentation of libraries that were inherited from CodeIgniter, please refer to the `CodeIgniter documentation <https://ellislab.com/codeigniter/user-guide>`_.
 
-  - :doc:`/development/extension_hooks/index`
-
-- :doc:`Fieldtype Development </development/fieldtypes>`
-- :doc:`Plugin Development </development/plugins>`
-- :doc:`Module Development </development/modules>`
-
-  -  :doc:`Module Development Tutorial </development/module_tutorial>`
-
-- :doc:`Rich Text Editor Tool Development </development/rte_tools>`
-- :doc:`Control Panel Style Reference </development/cp_styles/index>`
-- :doc:`Emoticon Development </development/emoticons>`
-
-- :doc:`1.x to 2.x Conversion </development/conversion/index>`
-- :doc:`Developer Preview Program </development/developer_preview_program>`
-- :doc:`JSON Version Feed </development/json_version_feed>`
-
-***
-API
-***
 
 .. toctree::
-  :maxdepth: 1
+  :hidden:
   :glob:
+  :titlesonly:
 
-  api/index
-  api/*
-
-**********
-Guidelines
-**********
-
-.. toctree::
-  :maxdepth: 1
-  :glob:
-
-  guidelines/*
-
-******************************
-Using ExpressionEngine Classes
-******************************
-
-.. toctree::
-  :maxdepth: 1
-  :glob:
-
-  usage/*
-
-********************************
-ExpressionEngine Data Structures
-********************************
-
-.. toctree::
-  :maxdepth: 1
-  :glob:
-
-  reference/*
-
-*****************************************
-ExpressionEngine Control Panel JavaScript
-*****************************************
-
-.. toctree::
-  :maxdepth: 1
-  :glob:
-
-  cp_javascript/*
-  cp_javascript/*/index
-
-.. toctree::
-	:glob:
-	:hidden:
-	:titlesonly:
-
-	*
-	api/index
-	conversion/index
-	cp_javascript/*
-	cp_styles/index
-	extension_hooks/index
-	guidelines/index
-	reference/*
-	usage/*
+  conversion/index
+  addon_setup_php_file
+  core/index
+  services/index
+  shared_form_view
+  constants
+  plugins
+  modules
+  extensions
+  fieldtypes
+  rte_tools
+  cp_javascript/index
+  legacy/index
+  guidelines/index
+  reference/tree_datastructure
+  emoticons
+  developer_preview_program
+  json_version_feed

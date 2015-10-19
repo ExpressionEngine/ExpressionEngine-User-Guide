@@ -5,7 +5,7 @@ Tell-A-Friend Form
 .. contents::
    :local:
    :depth: 1
-   
+
 ************
 Introduction
 ************
@@ -123,8 +123,8 @@ separating the email addresses with commas::
 
 .. note:: In the situation where recipients are specified with this
 	parameter and the regular "To:" field is *also* filled out, the
-	recipients specified with this parameter will be mailed using BCC 
-	(Blind Carbon Copy) so that the "To:" recipient does not see those 
+	recipients specified with this parameter will be mailed using BCC
+	(Blind Carbon Copy) so that the "To:" recipient does not see those
 	"hidden" email recipients.
 
 redirect=
@@ -204,7 +204,7 @@ status=
 
 	status="open"
 
-The channel :doc:`status </cp/admin/channels/statuses>` you would like
+The channel :doc:`status </cp/channel/status/index>` you would like
 entries restricted to. This is useful if you will be displaying entries
 with a status other than "open". You can choose multiple statuses using
 a pipe::
@@ -229,6 +229,27 @@ to be sent. This parameter is useful if you have multiple entries with
 the same URL Title in different channels. Unless you restrict this EE
 tag to a particular channel then you might get Tell-a-Friend forms for
 all entries matching the URL Title.
+
+preview=
+~~~~~~~~
+
+::
+
+  preview="about/tell-a-friend-preview"
+
+Specify a URL where the user can preview their message before sending
+it. This can be used in conjunction with the `markdown=`_ parameter.
+
+markdown=
+~~~~~~~~~
+
+::
+
+  markdown="yes"
+
+Optionally enable `Markdown
+<https://daringfireball.net/projects/markdown/>`_ processing for
+`message`_ of the Tell-a-Friend form.
 
 form\_class=
 ~~~~~~~~~~~~
@@ -338,7 +359,7 @@ that it is only displayed if necessary::
 
 The setting to disable or enable CAPTCHA for the tell-a-friend form can
 be found in the :doc:`Email Configuration
-</cp/admin/email_configuration>` preferences.
+</cp/settings/email>` preferences.
 
 from
 ~~~~
@@ -419,3 +440,50 @@ may be specified by separating them with a comma. You must include this
 form field, even if it is just a hidden field. This data may also be
 specified with the `recipients=`_ parameter of the
 tag.
+
+*******
+Preview
+*******
+
+Occasionally you'll want to provide a way for users to preview their
+email message before sending it. You'll start by specifying a
+`preview=`_ parameter in your opening tag::
+
+  {exp:email:contact_form preview="about/contact-preview"}
+
+  OR
+
+  {exp:email:tell_a_friend preview="about/tellafriend-preview"}
+
+Next, you'll need to add a preview submit input to your form, probably
+somewhere near the submit input::
+
+  <input name="preview" type='submit' value='Preview' />
+  <input name="submit" type='submit' value='Send' />
+
+Last, you'll need to use the ``{exp:email:preview}`` tagpair in the
+template specified in the `preview=`_ parameter. You can use all of the
+`Form Fields`_ specified above and you'll typically have the preview
+directly above or below the email form::
+
+  {exp:email:preview}
+    <dl>
+      <dt>From</dt>
+      <dd>{name} ({from})</dd>
+      <dt>To</dt>
+      <dd>{to}</dd>
+      <dt>Subject</dt>
+      <dd>{subject}</dd>
+    </dl>
+    {message}
+  {/exp:email:preview}
+
+  {exp:email:contact_form}
+    ...
+
+You can optionally specify that the ``{message}`` contents should be
+parsed with Markdown by using the same `markdown=`_ parameter that the
+contact form uses::
+
+  {exp:email:preview markdown="yes"}
+

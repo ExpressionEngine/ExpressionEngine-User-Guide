@@ -43,7 +43,7 @@ $info array with a name and version number.
   // END Google_maps_ft class
 
   /* End of file ft.google_maps.php */
-  /* Location: ./system/expressionengine/third_party/google_maps/ft.google_maps.php */
+  /* Location: ./system/user/addons/google_maps/ft.google_maps.php */
 
 *********************
 Example - Google Maps
@@ -124,48 +124,72 @@ everything can be changed.
 Individual Settings
 ===================
 
-The default map may not always be the desired choice for each map field,
-so on the regular settings page it will display a similar configuration
-screen. The individual settings are in a table, so they need to use
-``add_row()``.
+The default map may not always be the desired choice for each map field, so on the regular settings page it will display a similar configuration screen. We will use the familiar :doc:`/development/shared_form_view` format to display our settings.
 
 ::
 
   function display_settings()
   {
-      $latitude	= isset($data['latitude']) ? $data['latitude'] : $this->settings['latitude'];
-      $longitude	= isset($data['longitude']) ? $data['longitude'] : $this->settings['longitude'];
-      $zoom		= isset($data['zoom']) ? $data['zoom'] : $this->settings['zoom'];
+      $latitude   = isset($data['latitude']) ? $data['latitude'] : $this->settings['latitude'];
+      $longitude  = isset($data['longitude']) ? $data['longitude'] : $this->settings['longitude'];
+      $zoom       = isset($data['zoom']) ? $data['zoom'] : $this->settings['zoom'];
 
-      ee()->table->add_row(
-          lang('latitude', 'latitude'),
-          form_input('latitude', $latitude)
+      $settings = array(
+          array(
+              'title' => 'latitude',
+              'desc' => 'latitude_desc',
+              'fields' => array(
+                  'latitude' => array(
+                      'type' => 'text',
+                      'value' => $latitude,
+                  )
+              )
+          ),
+          array(
+              'title' => 'longitude',
+              'desc' => 'longitude_desc',
+              'fields' => array(
+                  'longitude' => array(
+                      'type' => 'text',
+                      'value' => $longitude,
+                  )
+              )
+          ),
+          array(
+              'title' => 'zoom',
+              'desc' => 'zoom_desc',
+              'fields' => array(
+                  'zoom' => array(
+                      'type' => 'select',
+                      'choices' => range(1, 20),
+                      'value' => $zoom,
+                  )
+              )
+          ),
+          array(
+              'title' => 'preview',
+              'desc' => 'preview_desc',
+              'wide' => TRUE,
+              'fields' => array(
+                  'preview' => array(
+                      'type' => 'html',
+                      'content' => '<div style="height: 300px;"><div id="map_canvas" style="width: 100%; height: 100%"></div></div>'
+                  )
+              )
+          )
       );
-		
-      ee()->table->add_row(
-          lang('longitude', 'longitude'),
-          form_input('longitude', $longitude)
-      );
-		
-      ee()->table->add_row(
-          lang('zoom', 'zoom'),
-          form_dropdown('zoom', range(1, 20), $zoom)
-      );
-		
+
       // Map preview
       $this->_cp_js();
-      ee()->javascript->output(
-          // Map container needs to be visible when you create
-          // the map, so we'll wait for activate to fire once
-          '$("#ft_google_maps").one("activate", gmaps);'
-      );
-		
-      ee()->table->add_row(
-          lang('preview'),
-          '<div style="height: 300px;"><div id="map_canvas" style="width: 100%; height: 100%"></div></div>'
-      );
-	}
-	
+      ee()->javascript->output('$(window).load(gmaps);');
+
+      return array('field_options_google_maps' => array(
+          'label' => 'field_options',
+          'group' => 'google_maps',
+          'settings' => $settings
+      ));
+  }
+
 Saving Individual Settings
 ==========================
 
@@ -409,7 +433,8 @@ Function Reference
   Handles any custom logic after an entry is saved.
 
   Called after an entry is added or updated. Available data is identical
-  to save, but the settings array includes an ``entry_id``.
+  to save. This is a good method to implement if you need the content ID
+  of the fieldtype's newly-saved parent content type.
 
   :param array $data: Current field data, blank for new entries
   :rtype: Void
@@ -452,51 +477,35 @@ Function Reference
 
 .. method:: display_settings($data)
 
-  Display the settings page. The default ExpressionEngine rows can be
-  created using built in methods. All of these take the current
-  ``$data`` and the fieldtype name as parameters::
-
-    $this->field_formatting_row($data, 'google_maps');
-
-  - ``$this->text_direction_row()`` - text direction toggle
-  - ``$this->field_formatting_row()`` - field formatting options
-    (xhtml, br, none)
-  - ``$this->field_show_smileys_row()`` - yes/no toggle to show
-    smileys
-  - ``$this->field_show_glossary_row()`` - yes/no toggle to show the
-    glossary
-  - ``$this->field_show_spellcheck_row()`` - yes/no toggle to show
-    spellcheck
-  - ``$this->field_show_file_selector_row()`` - yes/no toggle to show
-    the file selector button
-  - ``$this->field_show_writemode_row()`` - yes/no toggle to show the
-    writemode button
+  Display the settings page.
 
   :param array $data: Field settings
-  :returns: Either nothing, or a string for your settings fields
-  :rtype: Void/String
+  :returns: An array in the :doc:`/development/shared_form_view` format
+  :rtype: Array
 
 .. method:: validate_settings($data)
 
-  Validate fieldtype settings. In this method, you can set rules via the
-  Form Validation library to ensure values entered in your settings form
-  are valid. Here is an example from our File field::
+  Validate fieldtype settings. In this method, you can use the
+  :doc:`/development/services/validation` to ensure values entered in
+  your settings form are valid. Here is an example from our File field::
 
     function validate_settings($data)
     {
-        ee()->form_validation->set_rules(
-            'file_allowed_directories',
-            'lang:allowed_dirs_file',
-            'required|callback__check_directories'
-        );
+        $validator = ee('Validation')->make(array(
+            'allowed_directories' => 'required|allowedDirectories'
+        ));
+
+        $validator->defineRule('allowedDirectories', array($this, '_validate_file_settings'));
+
+        return $validator->validate($settings);
     }
 
   Callbacks may be specified as well, as you see above we are calling
-  a method called ``_check_directories`` to ensure upload destinations
-  exist before creating a new file field.
+  a method called ``_validate_file_settings`` to ensure upload
+  destinations exist before creating a new file field.
 
   :param array $data: Submitted settings for this field
-  :rtype: Void
+  :rtype: Validation result object
 
 .. method:: save_settings($data)
 
@@ -642,161 +651,7 @@ content type. For example::
   }
 
 Once that's done, your fieldtype will show up in the list
-of fieldtypes available for use when setting up a new Grid column.
-
-Grid Column Settings
-====================
-
-.. method:: grid_display_settings($data)
-
-  Displays settings for your Grid fieldtype::
-
-    public function grid_display_settings($data)
-    {
-        return array(
-            $this->grid_field_formatting_row($data),
-            $this->grid_text_direction_row($data),
-            $this->grid_max_length_row($data)
-        );
-    }
-
-  Each array item should be a string.
-
-  :param array $data: Column settings
-  :returns: Array of settings for the column
-  :rtype: Array
-
-Much like in :meth:`~EE_Fieldtype::display_settings`, we provide several
-helpers to insert the settings rows you may need:
-
-.. method:: grid_settings_row($label, $content[, $wide = FALSE])
-
-  Adds a generic settings row to a Grid column.
-
-  :param string $label: Label for the setting
-  :param string $content: HTML for the form element(s) for the setting
-  :param boolean $wide: If ``TRUE``, gives more room to the content
-    portion of the setting
-  :returns: String of HTML ready to use as a Grid settings row
-  :rtype: String
-
-.. method:: grid_dropdown_row($label, $name, $data[, $selected = NULL[, $multiple = FALSE[, $wide = FALSE[, $attributes]]]])
-
-  Adds a dropdown settings row to a Grid column.
-
-  :param string $label: Label for the setting
-  :param string $name: Value for the name attribute of the dropdown
-  :param array $data: Array of options to show in the dropdown
-  :param string $selected: Selected value of the setting
-  :param boolean $multiple: Whether or not this is a multiselect
-  :param boolean $wide: If ``TRUE``, gives more visual room to the
-    dropdown portion of the setting
-  :param string $attributes: Any extra HTML attributes to put on the
-    dropdown
-  :returns: String of HTML ready to use as a Grid settings row
-  :rtype: String
-
-.. method:: grid_checkbox_row($label, $name, $value, $checked)
-
-  Adds a settings row with a single Checkbox to a Grid column.
-
-  :param string $label: Label for the setting
-  :param string $name: Value for the name attribute of the checkbox
-  :param string $value: Value for the value attribute of the checkbox
-  :param boolean $checked: Whether or not the box is checked on display
-  :returns: String of HTML ready to use as a Grid settings row
-  :rtype: String
-
-.. method:: grid_yes_no_row($label, $name, $data)
-
-  Adds a settings row with a Yes radio button and a No radio button to a
-  Grid column.
-
-  :param string $label: Label for the setting
-  :param string $name: Value for the name attribute of the radio buttons
-  :param array $data: Data array passed to ``grid_display_settings()``
-  :returns: String of HTML ready to use as a Grid settings row
-  :rtype: String
-
-.. method:: grid_text_direction_row($$data)
-
-  Adds a settings row with a dropdown of text direction options.
-
-  :param array $data: Data array passed to ``grid_display_settings()``
-  :returns: String of HTML ready to use as a Grid settings row
-  :rtype: String
-
-.. method:: grid_field_formatting_row($$data)
-
-  Adds a settings row with a dropdown of text formatting options.
-
-  :param array $data: Data array passed to ``grid_display_settings()``
-  :returns: String of HTML ready to use as a Grid settings row
-  :rtype: String
-
-.. method:: grid_max_length_row($$data)
-
-  Adds a settings row with a small textbox to enter the maximum number
-  of characters your fieldtype accepts.
-
-  :param array $data: Data array passed to ``grid_display_settings()``
-  :returns: String of HTML ready to use as a Grid settings row
-  :rtype: String
-
-.. method:: grid_multi_item_row($$data)
-
-  Adds a settings row with a textarea for entering options to be used
-  in a fieldtype where the content is limited to multiple options to
-  select from, such as radio buttons.
-
-  :param array $data: Data array passed to ``grid_display_settings()``
-  :returns: String of HTML ready to use as a Grid settings row
-  :rtype: String
-
-.. method:: grid_textarea_max_rows_row($$data)
-
-  Adds a settings row with a small textbox to enter the maximum number
-  of rows a textarea may show.
-
-  :param array $data: Data array passed to ``grid_display_settings()``
-  :returns: String of HTML ready to use as a Grid settings row
-  :rtype: String
-
-Check the implementations of :meth:`~EE_Fieldtype::grid_display_settings`
-in our native fieldtypes to see examples of the above helper methods
-being used as well as other ways to display custom settings.
-
-Validating Grid Settings
-------------------------
-
-.. method:: grid_validate_settings($data)
-
-  Validating your Grid column's settings is similar to validating field
-  contents. Unlike :meth:`~EE_Fieldtype::validate_settings`, you cannot
-  use the Form Validation library, rather you simply check the array of
-  settings passed to your fieldtype, and then return TRUE or an error
-  message if the settings do not validate.
-
-  For example, here is the validation method for a File field's settings
-  when used as a Grid column::
-
-    function grid_validate_settings($data)
-    {
-        if ( ! $this->_check_directories())
-        {
-            ee()->lang->loadfile('filemanager');
-            return lang('please_add_upload');
-        }
-
-        return TRUE;
-    }
-
-  If the ``_check_directories()`` check fails, we return an error message.
-  Otherwise if it passes, we return ``TRUE``.
-
-  :param array $data: Submitted settings for this field
-  :rtype: Void
-
+of fieldtypes available for use when setting up a new Grid column.å
 
 Grid Fieldtype Events
 =====================
@@ -830,9 +685,7 @@ Method                        Exception
 ``uninstall()``               No unique Grid method required
 ``display_global_settings()`` No unique Grid method required
 ``save_global_settings()``    No unique Grid method required
-``settings_modify_column()``  Must use Grid Column Settings methods
-``display_settings()``        Must use :meth:`~EE_Fieldtype::grid_display_settings`
-``validate_settings()``       Must use :meth:`~EE_Fieldtype::grid_validate_settings`
+``settings_modify_column()``  Must use ``grid_settings_modify_column()``
 ============================= ==========================
 
 The idea is that most fieldtypes should be able to use the same code to
@@ -845,7 +698,7 @@ your fieldtype where there is overlapping logic to run. For example,
 some of our native fieldtypes require slightly different code to render
 the HTML needed to display fields in ``display_field()`` and
 ``grid_display_field()``, so we try to centralize the the common logic
-between them for better code maintenance.
+between them for better code maintainability.
 
 Grid Fieldtype Settings Class Property
 ======================================

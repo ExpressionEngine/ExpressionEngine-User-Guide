@@ -15,11 +15,10 @@ corrupted so that the database needs to be repaired.
 Repairing the database through ExpressionEngine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If ExpressionEngine's Control Panel is still accessible, the database
-can be repaired via the built-in SQL Manager at :menuselection:`Tools
---> Data --> SQL Manager --> Manage Database Tables`. Select the tables
-to repair, then choose *Repair selected tables* at the bottom and click
-Submit.
+If ExpressionEngine's Control Panel is still accessible, the database can be
+repaired via the built-in SQL Manager at :menuselection:`Developer Tools -->
+Utilities --> SQL Manager`. Select the tables to repair, then choose *Repair
+selected tables* at the bottom and click Submit.
 
 Repairing the database by other means
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

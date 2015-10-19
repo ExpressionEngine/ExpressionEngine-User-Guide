@@ -18,24 +18,17 @@ In ExpressionEngine, CAPTCHAs can be used in several places:
 #. `Member Registration Form <#member_registration_form>`_
 #. `Contact and Tell-a-Friend Email Forms <#email_forms>`_
 
+The settings to require CAPTCHAs for these forms are located at
+:menuselection:`Settings --> CAPTCHA` in the control panel.
+
 Comment Forms
 -------------
-
-In order to use CAPTCHAs on the comment form, you must first enable the
-preference. In the Admin section of the Control Panel go to Channel
-Management and look for the "Enable Captcha for Comment Posting?"
-preferences. Set this preference to "Yes".
 
 Once you have the preference turned on, you'll need to add the CAPTCHA
 code to your :ref:`comment_submission_form`. See below for the `CAPTCHA Code`_.
 
 Member Registration Form
 ------------------------
-
-In order to use CAPTCHAs on the member registration form, you must first
-enable the preference. In the Admin section of the Control Panel go to
-Membership Preferences and look for the "Enable Membership Captcha"
-preferences. Set this preference to "Yes".
 
 The necessary CAPTCHA code already exists in the Member Templates by
 default, so you should not need to add it. If you have a version of
@@ -45,12 +38,8 @@ otherwise need the code, see below for the `CAPTCHA Code`_.
 Contact and Tell-a-Friend Email Forms
 -------------------------------------
 
-Both the Contact Form as well as Tell-a-Friend email forms can take
-advantage of CAPTCHAs. In order to use CAPTCHAs on them, you must first
-enable the preference. In the Admin section of the Control Panel go to
-System Preferences then click Email Configuration and look for the
-"Enable CAPTHCAs for Tell-a-Friend and Contact emails?" preferences. Set
-this preference to "Yes".
+Once you have the preference turned on, you'll need to add the CAPTCHA
+code. See below for the `CAPTCHA Code`_.
 
 CAPTCHA Code
 ------------
@@ -90,13 +79,12 @@ these legitimate users to be able to use your site.
 You should determine for yourself whether or not CAPTCHAs are
 appropriate for your situation and your website audience.
 
-For ExpressionEngine installations that power multiple domains or
-subdomains, you may need to place the *server* path for the **Relative
-Path to Captcha Folder** setting under :menuselection:`Admin --> Captcha
-Preferences`. A server path is typically something similar to
-/home/domain.com/http\_docs/images/captchas/. The specific setting will
-vary from server to server so you may need to contact your Host or
-server admin to determine what your correct "server path" is.
+For ExpressionEngine installations that power multiple domains or subdomains,
+you may need to place the *server* path for the **Relative Path to Captcha
+Folder** setting under :menuselection:`Settings --> CAPTCHA`. A server path is
+typically something similar to /home/domain.com/http\_docs/images/captchas/.
+The specific setting will vary from server to server so you may need to contact
+your Host or server admin to determine what your correct "server path" is.
 
 Special CAPTCHA Files
 ---------------------

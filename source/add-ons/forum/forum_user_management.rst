@@ -20,11 +20,10 @@ Module.
 Administrators
 ~~~~~~~~~~~~~~
 
-Find this area under the Administrators link in the User Management
-section. Administrators are **very** powerful users. Administrators have
+The Administrators section is accessed by clicking the orange icon associated with a forum board. Administrators are **very** powerful users. Administrators have
 all rights when it comes to the forums. They can ban users, delete
 posts, move threads, close threads, etc. They have the same rights that
-a member of the "SuperAdmin" Member Group does, except they can't ban
+a member of the "Super Admin" Member Group does, except they can't ban
 SuperAdmins or delete threads made by a SuperAdmin.
 
 Administrators in the forums are **very** powerful. Be extremely careful
@@ -33,7 +32,7 @@ when assigning this privilege to a member or Member Group.
 Moderators
 ~~~~~~~~~~
 
-Find this area under the Moderators link in the User Management section.
+The Administrators section is accessed by clicking the blue icon associated with a forum board.
 Moderators are special members or Member Groups. You can add Moderators
 on a forum-by-forum basis and assign them permissions *above and beyond*
 those you normally assign through the regular forum permissions.
@@ -59,8 +58,7 @@ be assigned to the Member Group when the forum was set up.
 Member Ranks
 ~~~~~~~~~~~~
 
-Find this area under the Member Ranks link in the User Management
-section. Here you can set up levels or steps that users of the forums
+Here you can set up levels or steps that users of the forums
 can reach. For instance, you might set it so that all users who have
 less than 50 posts are labeled as "New Member". Those with 51-200 might
 be "Regular Member".

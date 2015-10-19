@@ -35,6 +35,8 @@ server and run it to verify basic compatibility with ExpressionEngine.
 2. Synchronize Templates
 ------------------------
 
+.. todo:: This needs review and rewriting. Synchroniziation is automatic in 3.0.
+
 You can skip this step if you are not saving templates as files.
 
 From the Control Panel, go to :menuselection:`Design --> Templates -->
@@ -44,8 +46,8 @@ click Submit.
 3. Clear Caches
 ----------------
 
-Go to :menuselection:`Tools --> Data --> Clear Caching`. Select **All
-Caches** and click Submit.
+Go to :menuselection:`Developer Tools --> Utilities --> Cache Manager`. Select
+**All Caches** and click Submit.
 
 4. Back-up Database and Files
 -----------------------------
@@ -122,13 +124,12 @@ and **9** are correct.
 There are typically several areas of the Control Panel in which paths
 may need to be updated, including:
 
--  :menuselection:`Admin --> General Configuration`
--  :menuselection:`Admin --> Security and Privacy --> Captcha Preferences`
--  :menuselection:`Admin --> System Administration --> Emoticon Preferences`
--  :menuselection:`Content --> Files --> File Upload Preferences`
--  :menuselection:`Members --> Preferences`
--  :menuselection:`Design --> Templates --> Global Preferences`
--  :menuselection:`Admin --> Channel Administration --> Channels`
+-  :menuselection:`Settings --> URL and Path Settings`
+-  :menuselection:`Settings --> CAPTCHA`
+-  :menuselection:`Settings --> Content & Design`
+-  :menuselection:`Settings --> Avatars`
+-  :menuselection:`Developer Tools --> Channel Manager`
+-  :menuselection:`Files`
 
 You can also set many of these paths in your config.php file using
 configuration variables::
@@ -165,8 +166,8 @@ configuration variables::
 11. Clear Caches (Again!)
 -------------------------
 
-Go to :menuselection:`Tools --> Data --> Clear Caching`. Select **All
-Caches** and click Submit.
+Go to :menuselection:`Developer Tools --> Utilities --> Cache Manager`. Select
+**All Caches** and click Submit.
 
 You're Done!
 ------------

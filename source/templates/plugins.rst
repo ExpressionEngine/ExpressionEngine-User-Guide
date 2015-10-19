@@ -15,14 +15,14 @@ Follow these steps to install a plugin:
 #. Download the Plugin to your local computer. You'll usually need to
    unzip the file.
 #. Upload the Plugin's **folder** to your
-   **system/expressionengine/third\_party/** folder.
+   **system/user/addons/** folder.
 
 For instance, the No Follow plugin would be placed like so:
 
--  system/expressionengine/third\_party/no\_follow/pi.no\_follow.php
+-  system/user/addons/no\_follow/pi.no\_follow.php
 
 Once the Plugin is installed, you should be able to see it listed in the
-:doc:`Plugin Manager </cp/add-ons/plugin_manager>` in your
+:doc:`Add-on Manager </cp/addons/index>` in your
 ExpressionEngine Control Panel.
 
 .. note:: Some Plugins may have additional installation requirements

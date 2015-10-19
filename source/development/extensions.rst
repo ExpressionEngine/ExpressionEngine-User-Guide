@@ -1,6 +1,8 @@
 Extensions Development
 ======================
 
+.. todo:: Audit for 3.0
+
 -  `Overview`_
 -  `Naming Convention`_
 -  `The Base Extension Class`_
@@ -28,9 +30,9 @@ within your templates, they instead allow you to modify the core system
 itself.
 
 An Extension is an add-on script that is placed in the
-``/system/expressionengine/third_party/<package_name>/`` directory and
-then enabled via the :doc:`Extensions Manager
-</cp/add-ons/extension_manager>` in the Control Panel. Extensions can
+``/system/user/addons/<package_name>/`` directory and
+then enabled via the :doc:`Add-on Manager
+</cp/addons/index>` in the Control Panel. Extensions can
 have their own settings and their own database tables, if necessary, but
 neither is required. If settings are available for an Extension, a
 language file is required, but unlike a module there is no control panel
@@ -110,7 +112,7 @@ settings (if any).
 If your extension has a language file, then you the $name and
 $description class variables can be set in the constructor by calling
 the language file and variables using the :doc:`Language ($LANG)
-class </development/usage/language>`. If your plugin is likely to be used
+class </development/legacy/libraries/language>`. If your plugin is likely to be used
 internationally and by non-English speakers this is a recommended course
 of action.
 
@@ -256,7 +258,7 @@ have to make sure that you have your ``$settings_exist`` class variable
 set to '``y``'. Second, you need a language file for your extension with
 the file name of the language file being the extension's lower-cased
 class name with a suffix of '``_lang.php``'. Make sure the language file
-is put in the ``/system/expressionengine/third_party/package
+is put in the ``/system/user/addons/package
 name/language/`` directory too. And finally, you need to have a method
 in your extension's class called ``settings()``. This function will
 return an array in a certain form that will help the Extensions Manager
@@ -395,7 +397,7 @@ View File
   <?=form_close()?>
   <?php
   /* End of file index.php */
-  /* Location: ./system/expressionengine/third_party/link_truncator/views/index.php */
+  /* Location: ./system/user/addons/link_truncator/views/index.php */
 
 Save Settings
 ^^^^^^^^^^^^^
@@ -595,3 +597,10 @@ processed after that point. The ``$this->extensions->end_script`` exists
 solely for that purpose. If you set this value to TRUE, then once your
 extension is done being processed the execution of the hook is finished,
 as is the script that the extension hook is contained within.
+
+.. toctree::
+  :hidden:
+  :glob:
+  :titlesonly:
+
+  extension_hooks/index

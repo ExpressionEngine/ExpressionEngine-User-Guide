@@ -75,11 +75,10 @@ cleared, momentarily overriding the normal caching preferences.
 Dynamic Channel Query Caching
 -----------------------------
 
-This feature is found under :menuselection:`Admin --> Channel
-Administration --> Global Preferences`. This feature will improve the
-speed at which the {exp:channel:entries} tag is rendered by caching
-queries that are normally executed dynamically. This option cannot be
-used for all people, though.
+This feature is found under :menuselection:`Settings --> Content & Design`.
+This feature will improve the speed at which the {exp:channel:entries} tag is
+rendered by caching queries that are normally executed dynamically. This option
+cannot be used for all people, though.
 
 Enable this feature only if you **do not** use future entries, expiring
 entries, or random entries.
@@ -133,9 +132,9 @@ features that can be disabled. ::
 	{/exp:channel:entries}
 
 .. note:: You can also use disable="category\_fields" in
-   the :doc:`channel categories </add-ons/channel/categories>` tag,
-   the :doc:`category heading </add-ons/channel/category_heading>` tag,
-   and the :doc:`category archives </add-ons/channel/category_archive>`
+   the :doc:`channel categories </channel/categories>` tag,
+   the :doc:`category heading </channel/category_heading>` tag,
+   and the :doc:`category archives </channel/category_archive>`
    tag.
 
 .. _caching_drivers:
@@ -145,7 +144,7 @@ Caching Drivers
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Admin --> General Configuration`
+**Control Panel Location:** :menuselection:`Settings --> Debugging & Output`
 
 By default, ExpressionEngine uses a file-based caching driver, meaning
 cached items are written to disk. This is the most-compatible option
@@ -169,7 +168,7 @@ the backup driver is the file driver and it's likely the best failover
 option due to its reliability, but the backup driver is configurable.
 
 Add-on developers can find more information about using caching drivers
-to store and retrieve items in the :doc:`/development/usage/cache`
+to store and retrieve items in the :doc:`/development/legacy/libraries/cache`
 documentation.
 
 .. note:: The Memcached driver is set to use PHP's
@@ -235,4 +234,4 @@ Caches are cleared automatically when certain actions occur:
     - Editing Wiki Article (clears db cache)
     - Opening or closing a Wiki Revision (clears db cache)
 
-You may also :doc:`manually clear caches </cp/tools/data/clear_cached_data_files>` through the control panel.
+You may also :doc:`manually clear caches </cp/utilities/cache>` through the control panel.

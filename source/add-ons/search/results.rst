@@ -111,7 +111,7 @@ appended to the end. Unlike other "path" variables, this variable does
 **not** require the Template\_Group/Template to be specified. Instead,
 the path will automatically be determined by the Search Results URL
 setting for the channel in :doc:`Channel
-Management </cp/admin/channels/channel_management>`.
+Management </cp/channel/index>`.
 
 excerpt
 -------
@@ -122,7 +122,7 @@ excerpt
 
 An excerpt from the entry. The excerpt consists of the first 50 words
 from the field specified for search excerpting in your :doc:`Channel
-Management </cp/admin/channels/channel_management>` settings for your
+Management </cp/channel/index>` settings for your
 channels. HTML markup is stripped prior to output.
 
 full\_text
@@ -134,7 +134,7 @@ full\_text
 
 The text from the entry. Unlike the {excerpt} variable, this one returns
 the entire text from the field specified for search excerpting in your
-:doc:`Channel Management </cp/admin/channels/channel_management>`
+:doc:`Channel Management </cp/channel/index>`
 settings for your channels.
 
 id\_auto\_path
@@ -149,7 +149,7 @@ appended to the end. Unlike other "path" variables, this variable does
 **not** require the Template\_Group/Template to be specified. Instead,
 the path will automatically be determined by the Channel URL setting for
 the channel in `Channel Management
-</cp/admin/channels/channel_management>`.
+</cp/channel/index>`.
 
 member\_path
 ------------

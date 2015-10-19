@@ -2,6 +2,8 @@
 Javascript Notification Plugin
 ##############################
 
+.. todo:: Audit for 3.0
+
 The javascript notification plugin provides a unified way to notify
 users of javascript triggered control panel events.
 
@@ -79,8 +81,7 @@ Hiding the Notifications
   function.
 
   To avoid overriding important system notifications, this function
-  should only be used in your own module control panel. Never from an
-  accessory. ::
+  should only be used in your own module control panel. ::
 
     $.ee_notice.destroy();
 

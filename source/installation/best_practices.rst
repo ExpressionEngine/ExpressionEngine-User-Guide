@@ -29,8 +29,8 @@ location of your system folder to be known.
 .. note:: There may also be some areas in the Control Panel where you
   will need to update the server path. For example:
 
-  - :menuselection:`Design --> Templates --> Global Preferences`
-  - :menuselection:`Content --> Files --> File Upload Preferences`
+  - :menuselection:`Settings --> URL and Path Settings`
+  - :menuselection:`Files`
 
 Moving the System Directory Above Webroot
 -----------------------------------------
@@ -91,8 +91,8 @@ browser.
 .. note:: There may also be some areas in the Control Panel where you
   will need to update the server path. For example:
 
-  - :menuselection:`Design --> Templates --> Global Preferences`
-  - :menuselection:`Content --> Files --> File Upload Preferences`
+  - :menuselection:`Settings --> URL and Path Settings`
+  - :menuselection:`Files`
 
 Renaming admin.php
 ------------------

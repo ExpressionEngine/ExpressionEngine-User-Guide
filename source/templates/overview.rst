@@ -12,7 +12,7 @@ to ExpressionEngine you may want to begin with the :doc:`News Site
 Tutorial <../how_to/building_a_simple_news_site>`.
 
 If you are a developer, you may also wish to read the
-:doc:`../development/usage/template` documentation.
+:doc:`../development/legacy/libraries/template` documentation.
 
 .. contents::
    :local:
@@ -100,7 +100,7 @@ between them will be replaced with the values of each row of content::
   add-on to learn about how it is used.
 
 *More Information:* :doc:`Channel Module
-<../add-ons/channel/channel_entries>`, :doc:`../add-ons/index`,
+<../channel/channel_entries>`, :doc:`../add-ons/index`,
 :doc:`./plugins`
 
 Conditionals

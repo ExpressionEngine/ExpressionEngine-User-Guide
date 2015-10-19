@@ -9,9 +9,9 @@ Troubleshooting Localization
 When setting up the ExpressionEngine installation ensure that several
 settings are accurate:
 
--  :menuselection:`Admin --> Localization Settings` are set properly for the hosting
+-  :menuselection:`Settings --> General Settings` are set properly for the hosting
    server's environment.
--  :menuselection:`My Account --> Localization Settings` are set appropriately for the
+-  :menuselection:`Profile --> Personal Settings` are set appropriately for the
    visiting user's environment.
 
 .. note:: ExpressionEngine does not auto-detect localization settings

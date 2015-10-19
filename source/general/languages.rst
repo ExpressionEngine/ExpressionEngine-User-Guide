@@ -40,12 +40,12 @@ Setting the Default Language
 ----------------------------
 
 Set the default language for your Control Panel and website under
-:menuselection:`Admin --> General Configuration`. This will be the language
+:menuselection:`Settings --> General Settings`. This will be the language
 displayed to visitors and users who have not customized their own settings.
 
 Users may customize their own account in one of two locations. First, if the
 user has access to the Control Panel then they may customize their preferred
-language under :menuselection:`My Account --> Localization Settings`. For
+language under :menuselection:`Profile --> Personal Settings`. For
 regular users of a site, they will simply access their Member Profile and then
 select Localization Settings. Users who have customized their settings and are
 logged in will see user messages, dates, and the Control Panel in their chosen
@@ -75,7 +75,7 @@ your changes to your fork of the repository, and `send us a pull request
 take a look at your pull request, make sure everything looks alright,
 and merge it in.
 
-(The :doc:`/cp/tools/utilities/translation_utility` can help create new a
+(The :doc:`/cp/utilities/translate/index` can help create new a
 language pack or update an existing one.)
 
 If you want to provide us with a translation we don't already have, the best way

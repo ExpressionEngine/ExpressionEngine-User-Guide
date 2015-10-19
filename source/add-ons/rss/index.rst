@@ -13,7 +13,7 @@ containing the name of the author, the character encoding, etc., while
 the main channel tag renders the actual rows.
 
 The RSS Module Tag is intended to be used in conjunction with the
-:doc:`/add-ons/channel/channel_entries`.
+:doc:`/channel/channel_entries`.
 The entire RSS feed is enclosed between the following tags::
 
 	{exp:rss:feed}
@@ -44,7 +44,7 @@ channel=
 	channel="which"
 
 **Required**. From which :doc:`channel
-</cp/admin/channels/channel_management>` to show the meta data
+</cp/channel/index>` to show the meta data
 information.
 
 show\_expired=
@@ -78,7 +78,7 @@ status=
 	status="open"
 
 You may restrict to a particular :doc:`status
-</cp/admin/channels/statuses>`. You can choose multiple statuses using a
+</cp/channel/status/index>`. You can choose multiple statuses using a
 pipe::
 
 	status="draft|reviewed|published"
@@ -183,7 +183,7 @@ channel\_url
 
 The URL associated with the channel as set in the "Channel URL"
 preference under :doc:`Channel Administration
-</cp/admin/channels/channel_management>`.
+</cp/channel/index>`.
 
 date
 ~~~~

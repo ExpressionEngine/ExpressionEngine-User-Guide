@@ -5,7 +5,7 @@ The forum helper tag allows you to display the status of recent support
 forum posts in your standard Templates. You could use this to list
 recent threads in a sidebar on your site's main page, for instance.
 
-..note:: This tag is for use in any of your ExpressionEngine templates
+.. note:: This tag is for use in any of your ExpressionEngine templates
 	that are accessible via the TEMPLATES page in the control panel. It is
 	not available for use in your forum templates. If you would like to show
 	the support helper in your forum templates please use the
@@ -47,7 +47,7 @@ grids using variable pairs::
 	 					<td>Last reply</td>
 	 				</tr>
  			{/status_header}
- 					<tr>             
+ 					<tr>
  						<td><a href="{thread_path='forums/viewthread'}">{title}</a></td>
  						<td>
  							Last response: {last_post_date format="%m/%d/%Y %h:%i %a"}<br />
@@ -80,7 +80,7 @@ grids using variable pairs::
  			{/status_footer}
  		{/status_group}
  	{/exp:forum:forum_helper}
- 	
+
 Parameters
 ----------
 

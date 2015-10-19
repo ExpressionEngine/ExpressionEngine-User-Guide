@@ -1,5 +1,5 @@
-Forum Boards and Aliases
-========================
+Forum Boards
+============
 
 Overview
 --------
@@ -15,98 +15,99 @@ boards.
 Managing Boards
 ---------------
 
-The "Forum Board Home" tab reveals a drop-down menu to access the forum
-boards you have setup, as well as a link to "Edit Forum Boards".
+The "Forum Boards" are displayed in the left navigation.  From there you can add new boards and edit or delete existing ones.
 
-|Forum Board Dropdown|
+Adding/Editing a Forum Board
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Forum Board Management
-~~~~~~~~~~~~~~~~~~~~~~
+Enable board
+^^^^^^^^^^^^
 
-|Forum Board Management|
+When set to **enable**, this forum board will be accessible to member groups with proper permissions
 
-Board ID
-^^^^^^^^
+Name
+^^^^
 
-The unique ID for the forum board.
+Full descriptive name of this board.
 
-Forum Board Label
-^^^^^^^^^^^^^^^^^
-
-The label that is displayed for the forum board.
-
-Forum Board Short Name
-^^^^^^^^^^^^^^^^^^^^^^
+Short name
+^^^^^^^^^^
 
 The "short name" for the forum board, used in the board= parameter of
-the Forum tag when running forums through regular templates.
+the Forum tag when running forums through regular templates. No spaces. Underscores and dashes are allowed.
 
-Enabled?
-^^^^^^^^
+Forum directory
+^^^^^^^^^^^^^^^
 
-Yes / No. Whether or not the forum board is turned on.
+URL location to the forum.
 
-Edit Board
+Forum URL segment
+^^^^^^^^^^^^^^^^^
+
+Word that triggers forum display. Cannot be the same as a template or template group.
+
+Default theme
+^^^^^^^^^^^^^
+
+Forum theme for this forum.
+
+Allow PHP?
 ^^^^^^^^^^
 
-This link will take you to the board's edit preference form.
+Allows the use of standard PHP within forum templates.
 
-Delete
-^^^^^^
+PHP parsing stage
+^^^^^^^^^^^^^^^^^
 
-This link will delete the board *and all forum data* contained within
-it.
+When set to **output**, PHP will be parsed after the template.
 
-Add a New Forum Board?
-^^^^^^^^^^^^^^^^^^^^^^
+Attachments per post
+^^^^^^^^^^^^^^^^^^^^
 
-This link allows you to create a new forum board.
+Maximum attachments allowed per post.
 
-Forum Alias Management
-~~~~~~~~~~~~~~~~~~~~~~
+Upload directory
+^^^^^^^^^^^^^^^^
 
-|Forum Alias Management|
-Board ID
-^^^^^^^^
+URL location of this upload directory.
 
-The unique ID for the forum board alias.
+Allowed file types?
+^^^^^^^^^^^^^^^^^^^
 
-Forum Board Alias Label
-^^^^^^^^^^^^^^^^^^^^^^^
+The type of files that can be uploaded as attachments.
 
-The label that is displayed for the forum board alias.
+File size
+^^^^^^^^^
 
-Forum Board Alias Short Name
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Maximum file size in megabytes.
 
-The "short name" for the forum board alias, used in the board= parameter
-of the Forum tag when running forums through regular templates.
+Image width
+^^^^^^^^^^^
 
-Enabled?
-^^^^^^^^
+Maximum image width in pixels.
 
-Yes / No. Whether or not the forum board alias is turned on.
+Image height
+^^^^^^^^^^^^
 
-Edit Alias
-^^^^^^^^^^
+Maximum image height in pixels.
 
-This link will take you to the alias's edit preference form.
+Enable thumbnail creation?
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Delete
-^^^^^^
+When set to **enable**, clickable thumbnails will be shown in posts.
 
-This link will delete the forum board alias. The original board and
-forum data that the alias was pointing to are not removed.
+Thumbnail width
+^^^^^^^^^^^^^^^
 
-Add a New Forum Board alias?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Maximum thumbnail width in pixels.
 
-This link allows you to create a new forum board alias.
+Thumbnail height
+^^^^^^^^^^^^^^^^
+
+Maximum thumbnail height in pixels.
 
 Forum Board Alias Details
 -------------------------
-
-|Forum Board Alias Details|
 
 Forum Board Alias Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -138,7 +139,7 @@ The base URL where the forum board alias will be displayed.
 Site for Forum
 ^^^^^^^^^^^^^^
 
-If the :doc:`Multiple Site Manager </cp/sites/index>` is installed, this
+If the :doc:`Multiple Site Manager </cp/msm/index>` is installed, this
 allows you to determine which Site the forum board belongs to.
 
 
@@ -159,8 +160,3 @@ Forum Board Being Aliased
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The Forum Board that this Alias points to.
-
-.. |Forum Board Dropdown| image:: ../../images/forum_board_dropdown.png
-.. |Forum Board Management| image:: ../../images/forum_board_management.png
-.. |Forum Alias Management| image:: ../../images/forum_alias_management.png
-.. |Forum Board Alias Details| image:: ../../images/forum_board_alias_details.png
