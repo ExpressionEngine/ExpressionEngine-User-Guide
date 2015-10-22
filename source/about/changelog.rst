@@ -5,6 +5,39 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.0.1
+-------------
+
+Release Date: October 26, 2015
+
+- Fixed a bug (#21191) where creating a layout for a channel without categories misbehaved.
+- Fixed a bug (#21191) where moving a field into a new tab caused it's hidden tool to malfunction.
+- Fixed a bug (#21196) where Core would report a PHP Notice when editing the profile of a member.
+- Fixed a bug (#21199) where 404 pages were not seting a 404 header.
+- Fixed a bug (#21199) where the "+ New Upload Directory" link resulted in a 404.
+- Fixed a bug (#21204) where certain versions of PHP could not determine empty of a function.
+- Fixed a bug (#21205) where the Filepicker wouldn't play nice with Core.
+- Fixed a bug (#21206) where disabling comments still displayed comment data on the Overview page.
+- Fixed a bug (#21213) where turning on "Save Templates as Files" was a little overprotective and rewrote the index template with "Directory access is forbidden."
+- Fixed a bug (#21218) where Quick Links were permanent.
+- Fixed a bug (#21219) where the template manager was too eager about keeping templates in sync across all sites instead of the current site.
+- Fixed a bug (#21220) where moving a required field to a new tab removed the required class.
+- Fixed a bug (#21221) where accessing the templates model during a session_start hook threw an exception.
+- Fixed a bug (#21224) where PHP would sometimes generate a warning when it tried to delete a file.
+- Fixed a bug (#21231) where members were being denied access to add-ons they had access to.
+- Fixed a bug (#21233) where an empty line in the spam module caused PHP errors.
+- Fixed a bug (#21233) where running apc_delete_file sometimes generated a warning.
+- Fixed a bug (#21235) where static template route segments were not being included when using {route=...}
+- Fixed a bug where creating a second layout for a channel would result in an Exception.
+- Fixed a bug where adding and saving an empty tab to a channel layout prevented futher editing of the tab.
+- Fixed a bug where alerts were not being displayed while creating a layout and preforming unallowed actions.
+- Fixed a bug where a required field could be dropped into a hidden tab.
+- Fixed a bug where dismissing alerts on the Create/Edit Form Layout page refreshed the page.
+- Fixed a bug where the thumbnail view of the filepicker was not responsive.
+- Add-ons are no longer "Removed", they are "Uninstalled".
+- Fixed a bug where 'yes' and 'no' weren't localizable. Lo siento.
+- Removed CSS that forced capitalization on `.choice`
+
 Version 3.0.0
 -------------
 
