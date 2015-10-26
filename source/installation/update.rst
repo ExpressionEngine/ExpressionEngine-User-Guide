@@ -20,9 +20,9 @@ This guide will help you update your site from a previous version of ExpressionE
 
 Working either locally with your backed up files, or on the server (**not recommended**), **copy** the following files from the newly downloaded release to your site:
 
-#. Copy :file:`system/user/` to :file:`system/user/`
+#. Copy :file:`system/ee/` to :file:`system/ee/`
 
-#. Copy :file:`themes/user/` to :file:`themes/user/`
+#. Copy :file:`themes/ee/` to :file:`themes/ee/`
 
 ************************
 3. Run The Update Wizard
