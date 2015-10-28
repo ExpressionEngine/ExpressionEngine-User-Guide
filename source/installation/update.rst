@@ -20,7 +20,7 @@ This guide will help you update your site from a previous version of ExpressionE
 
 #. Take your site offline:
 
-   #. Copy :file:`system/expressionengine/utilities/offline.html` to your web root directory (the same place you have your main :file:`index.php` file).
+   #. Copy :file:`system/ee/legacy/utilities/offline.html` to your web root directory (the same place you have your main :file:`index.php` file).
 
    #. Rename :file:`offline.html` to :file:`index.html`. Now your visitors will see the "offline" page while you update your site.
 
