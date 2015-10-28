@@ -290,7 +290,7 @@ If it's too technically challenging or you're just unwilling to get your
 hands dirty in this regard, you may be able to find an add-on that takes
 care of the entire backup process for you.
 
-There are `several add-ons <http://devot-ee.com/search/results?keywords=backup>`_
+There are `several add-ons <https://devot-ee.com/search/results?keywords=backup&collection=addons&addon_version_support=>`_
 available for ExpressionEngine that offer to do just this. When
 evaluating these add-ons, it's important to ask many of the same
 questions you would when evaluating a host's backup plan:
