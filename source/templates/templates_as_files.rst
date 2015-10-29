@@ -22,41 +22,13 @@ Templates and then FTP the changes to the server.
 Enabling Saving Templates as Files
 ----------------------------------
 
-1. Prepare the template folder
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+From the Control Panel, go to :menuselection:`Settings --> Template Settings` and
+set **Allow templates to be saved as files?** to *Yes*.
 
-ExpressionEngine ships with a system/expressionengine/templates folder
-that can be used to store saved template files. You can create and use a
-different folder elsewhere if you wish.
-
-.. note:: ExpressionEngine will not create Template Group folders
-   directly in this folder, but rather in a subfolder named after the
-   Site Short Name, which defaults to "default\_site" on a single
-   installation, e.g.: /home/usr/domain.com/public\_html/system/expressionengine/templates/*default\_site*/my\_template\_group.group.
-   This adds clarity and prevents file conflicts should you ever use
-   the Multiple Site Manager.
-
-2. Set folder permissions
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Make the folder writable by setting its permissions to 777 (or
-equivalent) so that ExpressionEngine will be allowed to save the files
-as well as recreate your Template\_Group/Template structure.
-
-3. Set Template Preferences
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-From the Control Panel, go to :menuselection:`Settings --> Template Settings`.
-
-#. Set **Allow templates to be saved as files?** to *Yes*.
-#. Set the **Basepath to Template File Directory**: You must place the
-   *server path* to the directory you created above in this preference.
-
-It is important that you use the server path for the preference and not
-a URL. Server paths will vary from server to server, so contact your
-host if you are unsure of what it should be. A server path often looks
-similar to:
-/home/usr/domain.com/public\_html/system/expressionengine/templates
+.. note:: Your templates will be saved in ``system/user/templates``. Make the
+   folder writable by setting its permissions to 777 (or equivalent) so that
+   ExpressionEngine will be allowed to save the files as well as recreate your
+   Template_Group/Template structure.
 
 Creating and Synchronizing Templates and Files
 ----------------------------------------------
