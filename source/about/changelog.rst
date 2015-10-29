@@ -5,6 +5,39 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.0.2
+-------------
+
+Release Date: November 2, 2015
+
+- Fixed a bug (#21214) where ExpressionEngine Core had Phantom Template Routes Syndrome which was causing PHP errors.
+- Fixed a bug (#21217) where the "owned by" link in the License & Registration page resulted in a 404.
+- Fixed a bug (#21222) where the CP was referencing "default.png" which retired and is on vacation in the south of France.
+- Fixed a bug (#21223) where clicking on the sort handle in grid settings refreshed the page.
+- Fixed a bug (#21225) where editing an entry with a file in a grid column could result in a PHP error.
+- Fixed a bug (#21226) where field groups refused to be assigned to any site but your first one.
+- Fixed a bug (#21228) where files could be uploaded to any upload destination via the publish form.
+- Fixed a bug (#21236) where the Black/White List add-on generated errors when trying to download the EE Blacklist.
+- Fixed a bug (#21239) where the IP to Nation add-on wouldn't let you unban all countries once you'd banned at least one.
+- Fixed a bug (#21244 & #21198 & #21193) where field settings had a case of amnesia.
+- Fixed a bug (#21248) where choosing a thumbnail in the filepicker did nothing.
+- Fixed a bug (#21249) where the path of saved translations was incorrect.
+- Fixed a bug (#21251) where creating an entry didn't set an `edit_date`.
+- Fixed a bug (#21252) where adding a custom member field could result in an exception.
+- Fixed a bug (#21253) where `{edit_date}` formatted dates incorrectly.
+- Fixed a bug (#21264) where updating a member would sometimes cause PHP notices.
+- Fixed a bug (#21266) where new channel entries ignored the Channel Settings for default status, category, entry title, and url title prefix.
+- Fixed a bug (#21275) where under the right conditions a required custom field could be hidden on the Publish page.
+- Fixed a bug (#21276) where categories had the option of setting themselves as their own parent; it was a genealogical nightmare.
+- Fixed a bug where new sites could not be created via the Site Manager.
+- Fixed several bugs where certain relationship template tag combinations would result in a PHP error. You should see the therapy bill.
+- Fixed a bug where PHP 5.3 objected to an array access in the Relationship fieldtype on the publish page.
+- Fixed a bug where saving a custom member field wanted you to "Save Layout".
+- Fixed a bug where long folder list names were overlapping the toolbars.
+- Fixed a bug where remove tools would appear without a left border.
+- Added blockquote support to in app add on docs.
+- Changed bg color for login screens.
+
 Version 3.0.1
 -------------
 
@@ -29,7 +62,7 @@ Release Date: October 26, 2015
 - Fixed a bug (#21233) where running apc_delete_file sometimes generated a warning.
 - Fixed a bug (#21235) where static template route segments were not being included when using {route=...}
 - Fixed a bug where creating a second layout for a channel would result in an Exception.
-- Fixed a bug where adding and saving an empty tab to a channel layout prevented futher editing of the tab.
+- Fixed a bug where adding and saving an empty tab to a channel layout prevented further editing of the tab.
 - Fixed a bug where alerts were not being displayed while creating a layout and preforming unallowed actions.
 - Fixed a bug where a required field could be dropped into a hidden tab.
 - Fixed a bug where dismissing alerts on the Create/Edit Form Layout page refreshed the page.
