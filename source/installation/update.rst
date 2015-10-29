@@ -4,7 +4,7 @@ Updating ExpressionEngine 3
 
 This guide will help you update your site from a previous version of ExpressionEngine 3 to the latest version of ExpressionEngine 3.
 
-.. important:: If you are upgrading from ExpressionEngine 2 to ExpressionEngine 3, see :doc:`/installation/upgrade_from_2.x`.
+.. seealso:: If you are upgrading from ExpressionEngine 2 to ExpressionEngine 3, see :doc:`/installation/upgrade_from_2.x`.
 
 *********************
 1. Backup and Prepare
