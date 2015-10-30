@@ -17,7 +17,7 @@ before_channel_entry_insert
 
   How it's called::
 
-    $this->extensions->call('before_channel_entry_insert', $this, $this->getValues());
+    ee()->extensions->call('before_channel_entry_insert', $this, $this->getValues());
 
   :param object $this: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
@@ -37,7 +37,7 @@ after_channel_entry_insert
 
   How it's called::
 
-    $this->extensions->call('after_channel_entry_insert', $this, $this->getValues());
+    ee()->extensions->call('after_channel_entry_insert', $this, $this->getValues());
 
   :param object $this: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
@@ -56,7 +56,7 @@ before_channel_entry_update
 
   How it's called::
 
-    $this->extensions->call('before_channel_entry_update', $this, $this->getValues(), $modified);
+    ee()->extensions->call('before_channel_entry_update', $this, $this->getValues(), $modified);
 
   :param object $this: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
@@ -77,7 +77,7 @@ after_channel_entry_update
 
   How it's called::
 
-    $this->extensions->call('after_channel_entry_update', $this, $this->getValues(), $modified);
+    ee()->extensions->call('after_channel_entry_update', $this, $this->getValues(), $modified);
 
   :param object $this: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
@@ -98,7 +98,7 @@ before_channel_entry_save
 
   How it's called::
 
-    $this->extensions->call('before_channel_entry_save', $this, $this->getValues());
+    ee()->extensions->call('before_channel_entry_save', $this, $this->getValues());
 
   :param object $this: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
@@ -118,7 +118,7 @@ after_channel_entry_save
 
   How it's called::
 
-    $this->extensions->call('after_channel_entry_save', $this, $this->getValues());
+    ee()->extensions->call('after_channel_entry_save', $this, $this->getValues());
 
   :param object $this: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
@@ -139,7 +139,7 @@ before_channel_entry_delete
 
   How it's called::
 
-    $this->extensions->call('before_channel_entry_delete', $this, $this->getValues());
+    ee()->extensions->call('before_channel_entry_delete', $this, $this->getValues());
 
   :param object $this: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
@@ -160,7 +160,7 @@ after_channel_entry_delete
 
   How it's called::
 
-    $this->extensions->call('after_channel_entry_delete', $this, $this->getValues());
+    ee()->extensions->call('after_channel_entry_delete', $this, $this->getValues());
 
   :param object $this: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
