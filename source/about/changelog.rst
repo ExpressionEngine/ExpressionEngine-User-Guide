@@ -29,8 +29,9 @@ Release Date: November 2, 2015
 - Fixed a bug (#21266) where new channel entries ignored the Channel Settings for default status, category, entry title, and url title prefix.
 - Fixed a bug (#21275) where under the right conditions a required custom field could be hidden on the Publish page.
 - Fixed a bug (#21276) where categories had the option of setting themselves as their own parent; it was a genealogical nightmare.
-- Fixed a bug where new sites could not be created via the Site Manager.
 - Fixed several bugs where certain relationship template tag combinations would result in a PHP error. You should see the therapy bill.
+- Fixed a bug where some model validation errors tried to convert an array to a string.
+- Fixed a bug where new sites could not be created via the Site Manager.
 - Fixed a bug where PHP 5.3 objected to an array access in the Relationship fieldtype on the publish page.
 - Fixed a bug where saving a custom member field wanted you to "Save Layout".
 - Fixed a bug where long folder list names were overlapping the toolbars.
