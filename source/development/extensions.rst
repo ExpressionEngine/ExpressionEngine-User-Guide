@@ -52,6 +52,24 @@ standard PHP suffix of ``.php``. So, if we have an extension named
 '``ext.link_truncator.php``' and the class would be called
 '``Link_truncator_ext``'.
 
+Addon Setup file
+----------------
+
+All addons must have an ``addon.setup.php`` file. This one will be quite simple::
+
+  <?php
+
+  return array(
+    'author'      => 'Me',
+    'author_url'  => 'http://example.com/',
+    'name'        => 'Link Truncator',
+    'description' => '',
+    'version'     => '1.0.0',
+    'namespace'   => 'MyAddon\LinkTruncator',
+    'settings_exist' => TRUE
+  );
+
+
 The Base Extension Class
 ------------------------
 
