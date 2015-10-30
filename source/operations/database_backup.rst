@@ -301,7 +301,3 @@ questions you would when evaluating a host's backup plan:
 * Are multiple revisions kept?
 * Are there offsite backup options?
 * Is the add-on well-reviewed, documented, and seem well-supported?
-
-Backup add-ons tend to work better for smaller sites. As our support
-team has noticed, once databases reach a size where PHP cannot handle it
-it memory, backups may no longer function.
