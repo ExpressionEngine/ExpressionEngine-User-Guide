@@ -334,75 +334,75 @@ extension's class called ``settings_form()``.
    */
   function settings_form($current)
   {
-      ee()->load->helper('form');
-      ee()->load->library('table');
+    $name = 'link_truncator';
 
-      $vars = array();
+    if ($current == '')
+    {
+      $current = array();
+    }
 
-      $max_length = isset($current['max_link_length']) ? $current['max_link_length'] : 20;
+    $defaults = array(
+      'max_link_length' => 20,
+      'truncate_cp_links' => 'n'
+    );
 
-      $trunc_cp_links = (isset($current['truncate_cp_links'])) ? $current['truncate_cp_links'] : 'no';
+    $values = array_replace($defaults, $current);
 
-      $yes_no_options = array(
-          'yes'   => lang('yes'),
-          'no'    => lang('no')
-      );
+    $vars = array(
+      'base_url' => ee('CP/URL')->make('addons/settings/' . $name . '/save'),
+      'cp_page_title' => 'Link Truncator Settings',
+      'save_btn_text' => 'btn_save_settings',
+      'save_btn_text_working' => 'btn_saving',
+      'alerts_name' => 'link-truncator-save',
+      'sections' => array(array())
+    );
 
-      $vars['settings'] = array(
-          'max_link_length'   => form_input('max_link_length', $max_length),
-          'truncate_cp_links' => form_dropdown(
-                      'truncate_cp_links',
-                      $yes_no_options,
-                      $trunc_cp_links)
-          );
+    $vars['sections'] = array(
+      array(
+        array(
+          'title' => 'max_link_length',
+          'fields' => array(
+            'max_link_length' => array(
+              'type' => 'text',
+              'value' => $values['max_link_length'],
+              'required' => TRUE
+            )
+          )
+        ),
+        // Site short name field
+        array(
+          'title' => 'truncate_cp_links',
+          'desc' => 'truncate_cp_links_desc',
+          'fields' => array(
+            'truncate_cp_links' => array(
+              'type' => 'yes_no',
+              'value' => $values['truncate_cp_links'],
+              'required' => TRUE
+            )
+          )
+        )
+      )
+    );
 
-      if (ee()->config->item('forum_is_installed') == 'y')
-      {
-          $use_in_forum = isset($current['use_in_forum']) ? $current['use_in_forum'] : 'no';
-
-          $vars['settings']['use_in_forum'] = form_dropdown(
-                      'use_in_forum',
-                      $yes_no_options,
-                      $use_in_forum);
-      }
-
-      return ee()->load->view('index', $vars, TRUE);
+    return ee('View')->make('link_truncator:index')->render($vars);
   }
 
 View File
 ~~~~~~~~~
 
+Since we're using the :doc:`/development/shared_form_view`, our view file remains
+quite simple. In this case we will call it `Views/index.php`
+
 ::
 
-  <?=form_open('C=addons_extensions'.AMP.'M=save_extension_settings'.AMP.'file=link_truncator');?>
-
-  <?php
-  $this->table->set_template($cp_pad_table_template);
-  $this->table->set_heading(
-      array('data' => lang('preference'), 'style' => 'width:50%;'),
-      lang('setting')
-  );
-
-  foreach ($settings as $key => $val)
-  {
-      $this->table->add_row(lang($key, $key), $val);
-  }
-
-  echo $this->table->generate();
-
-  ?>
-
-  <p><?=form_submit('submit', lang('submit'), 'class="submit"')?></p>
-  <?php $this->table->clear()?>
-  <?=form_close()?>
-  <?php
-  /* End of file index.php */
-  /* Location: ./system/user/addons/link_truncator/views/index.php */
+  <div class="box">
+    <?php $this->embed('ee:_shared/form')?>
+  </div>
 
 Save Settings
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~
 
-Lastly, you will need to ave a method in your extension's class called
+Lastly, you will need to have a method in your extension's class called
 ``save_settings()``. This function will be called when your
 ``settings_form()`` method's form is submitted. Use it to process the
 data sent and put it into the exp_extensions database table. Remember
@@ -426,31 +426,28 @@ appropriately.
           show_error(lang('unauthorized_access'));
       }
 
-      unset($_POST['submit']);
-
       ee()->lang->loadfile('link_truncator');
 
       $len = ee()->input->post('max_link_length');
 
       if ( ! is_numeric($len) OR $len <= 0)
       {
-          ee()->session->set_flashdata(
-                  'message_failure',
-                  sprintf(lang('max_link_length_range'),
-                      $len)
-          );
-          ee()->functions->redirect(
-              BASE.AMP.'C=addons_extensions'.AMP.'M=extension_settings'.AMP.'file=link_truncator'
-          );
+        ee('CP/Alert')->makeInline('link-truncator-save')
+          ->asIssue()
+          ->withTitle(lang('message_failure'))
+          ->addToBody(sprintf(lang('max_link_length_range'), $len))
+          ->defer();
+      }
+      else
+      {
+        ee('CP/Alert')->makeInline('link-truncator-save')
+          ->asSuccess()
+          ->withTitle(lang('message_success'))
+          ->addToBody(lang('preferences_updated'))
+          ->defer();
       }
 
-      ee()->db->where('class', __CLASS__);
-      ee()->db->update('extensions', array('settings' => serialize($_POST)));
-
-      ee()->session->set_flashdata(
-          'message_success',
-          lang('preferences_updated')
-      );
+      ee()->functions->redirect(ee('CP/URL')->make('addons/settings/link_truncator'));
   }
 
 Calling of the Extension
@@ -515,8 +512,6 @@ method might look like:
 
       return $matches[1].$link_text.'</a>';
   }
-
-  // ----------------------------------------------------------------
 
   /**
    * Truncate This
