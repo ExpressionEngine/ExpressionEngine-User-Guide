@@ -41,7 +41,7 @@ provide it to the ExpressionEngine community.
   * The *File* fieldtype is now compatible with *Channel Form*.
   * *Stand-Alone Entry Form* has been removed.
   * *SafeCracker File* has been removed.
-  * The stylesheet path has changed from ``{path=css/_ee_saef_css}`` to
+  * The stylesheet path has changed from ``{path=css/_ee_saef_css}`` to  
     ``{path=css/_ee_channel_form_css}``.
 
 ******************
@@ -102,7 +102,7 @@ Entry Date
 .. note:: All date formats should match what the user has defined in
   localization settings. The date fields will autmatically use that format and
   validate against it.
-
+ 
 Set the date of the entry::
 
   <p>Date <br> <input type="text" name="entry_date" value="{entry_date}" maxlength="23" size="25"></p>
@@ -153,6 +153,49 @@ Or use the alternative syntax. ::
       <option value="{category_id}"{selected}>{category_name}</option>
     {/categories}
   </select>
+
+Categories Tag Pair Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+All of the category tag pair parameters available in the channel entries tag are available in the form:
+
+backspace=
+^^^^^^^^^^
+
+::
+
+	{categories backspace="5"}
+
+limit=
+^^^^^^
+
+::
+
+	{categories limit="1"}
+
+show=
+^^^^^
+
+::
+
+	{categories show="4|7"}
+	
+You may alternatively specify which categories to not show::
+
+	{categories show="not 3|6|8"}	
+
+show_group=
+^^^^^^^^^^^^
+
+::
+
+	{categories show_group="1|3"}
+
+You may alternatively specify which category groups to not show::
+
+	{categories show_group="not 2|4"}
+
+
 
 
 The following variables are available inside the Category Menu and Categories
@@ -227,40 +270,19 @@ Or use the alternative syntax. ::
 Other Channel Fields
 ~~~~~~~~~~~~~~~~~~~~
 
-For all of the other channel fields, you have a few options. The easiest
-is just using the ``{field:...}`` tag::
+For all of the other channel fields, you have several options for outputting
+the form field. 
+
+The Custom fields tag pair loops through all of the custom fields, outputting custom fields with the minimum number of tags but also a limited amount of design flexibility.
+
+To output a single field, the ``{field:...}`` tag is available::
 
   {field:my_field_name}
 
-However, sometimes you'll need to customize your ``<input>`` for one
-reason or another. In those cases you have a few options depending on
-what you want to do. If it's a simple field, just make sure the name is
-the same as the input's ``name`` and provide the variable as the value::
+The `field tag` should output all of the required html needed for either a new entry or an edit.
 
-  <input type="text" name="my_field_name" id="my_field_name" value="{my_field_name}">
+If you need to further customize input fields, most can be manually constructed using the field shortname. 
 
-If you're creating a select list, you'll need to pull in the options,
-using ``{options:my_field_name}`` but otherwise things look pretty
-similar::
-
-  <select name="my_field_name" id="my_field_name">
-    {options:my_field_name}
-      <option value="{option_value}"{selected}>{option_name}</option>
-    {/options:my_field_name}
-  </select>
-
-Last, if you're using a file field, you'll need to provide two
-additional hidden inputs to determine what upload directory the file is
-uploaded to and the existing file for when the entry is edited::
-
-  <input type="file" name="my_field_name" />
-  <input type="hidden" name="my_field_name_directory" value="1" />
-  <input type="hidden" name="my_field_name_hidden_file" value="{my_field_name}{file_name}{/my_field_name}" />
-
-.. note:: In the file field example's ``hidden_file`` input, we're using
-  the :ref:`variable pair <channel_entry_file_field_pair>` and pulling
-  *only* the ``{file_name}`` since we're already providing the directory
-  above.
 
 Parameters
 ----------
@@ -303,7 +325,6 @@ categories by separating the Category ID with the pipe character::
   category="3|7|13|42"
 
 This parameter only applies to new entries and will be ignored for edits.
-
 
 channel=
 ~~~~~~~~
@@ -547,8 +568,7 @@ status=
 
   status="pending"
 
-Set the status to use for the entry.  This parameter only applies to new entries
-and will be ignored for edits.
+Set the status to use for the entry.  This parameter only applies to new  entries and will be ignored for edits.
 
 sticky\_entry=
 ~~~~~~~~~~~~~~
@@ -557,7 +577,7 @@ sticky\_entry=
 
   sticky_entry="yes"
 
-Force the entry to be "sticky" or not.  This parameter only applies to new
+Force the entry to be "sticky" or not.  This parameter only applies to new 
 entries and will be ignored for edits.
 
 url\_title=
@@ -901,6 +921,135 @@ submit the Channel Form by choosing "Yes" under "Guest Captcha".
 
 Finally, you can optionally choose an author that entries entered as
 guests appear as authored by under Guest Author.
+
+
+Manually Constructed Input Fields
+---------------------------------
+
+In rare cases, the field tag may not be flexible enough for the desired output.  In that case, most native fields can be manually coded.
+
+
+Checkbox field
+~~~~~~~~~~~~~~
+ ::
+
+  {options:my_field_name}
+    <input type="checkbox" name="my_field_name[]" value="{option_value}"
+      {checked}>  {option_name}</br>
+  {/options:my_field_name}
+
+See the {options:my_field_name} tag pair.
+
+
+Date field
+~~~~~~~~~~
+ ::
+
+  <input type="text" id="my_field_name" name="my_field_name"
+    value="{my_field_name}" size="50">
+
+.. note:: inclusion of the localization select field is not currently supported, whether constructing the field manually or using variables.
+
+File field
+~~~~~~~~~~
+
+There are several additional variables that may be specified when manually constructing a file field:
+
+- ``my_field_name_directory`` - the file directory the image is assigned to.  
+    This field is required if submitting a file.
+- ``my_field_name_hidden_directory`` - if specified, this will take precedence 
+  over ``my_field_name_directory`` and can be used to allow editing.
+- ``my_field_name_hidden_file`` - the name of an existing, uploaded file.  If 
+  specified, this will take precedence over ``my_field_name`` and can be used 
+  to allow editing.
+
+If editing entries, you will need to specify the existing directory and file
+name or the file content will be lost ::
+
+  <input type="file" name="my_field_name" />
+  <input type="hidden" name="my_field_name_directory" value="1" />
+  <input type="hidden" name="my_field_name_hidden_file" value="{my_field_name}{file_name}{/my_field_name}" />
+
+.. note:: For the ``hidden_file`` input, use the :ref:`variable pair <channel_entry_file_field_pair>` to pull in *only* the ``{file_name}`` since we're already providing the directory above.
+
+.. note:: If you want to allow users to change the file associated with the
+   entry when editing, you will need to provide a way (typically Javascript)
+   to reset the my_field_name_hidden_file to empty.
+
+
+Grid field
+~~~~~~~~~~
+
+Manual construction of grid type fields is not supported.  Most customization
+of grid fields can be done by overriding the CSS.
+
+Multi Select field
+~~~~~~~~~~~~~~~~~~
+ ::
+
+  <select name="my_field_name[]" id="my_field_name" multiple size="2">
+    {options:my_field_name}
+      <option value="{option_value}"{selected}>{option_name}</option>
+    {/options:my_field_name}
+  </select>
+
+See ``{options:my_field_name}`` tag pair.
+
+Radio field
+~~~~~~~~~~~
+ ::
+
+  {options:my_field_name}
+    <input type="radio" name="my_field_name" value="{option_value}" {checked}>
+      {option_name}</br>
+  {/options:my_field_name}
+
+See ``{options:my_field_name}`` tag pair.
+
+Relationship field
+~~~~~~~~~~~~~~~~~~
+
+Simple relationship fields with only 1 relationship allowed are very similar
+in format to Multi Select fields, though note the slight variation in name::
+
+  <select name="my_field_name[data][]" id="my_field_name">
+    {options:my_field_name}
+      <option value="{option_value}"{selected}>{option_name}</option>
+    {/options:my_field_name}
+  </select>
+
+For relationship fields that allow multiple selections, you may also set the sort order::
+
+    {options:my_field_name}
+		Order: <input type="text" name="my_field_name[sort][]" value="{option_order}" />	<input type="checkbox" name="my_field_name[data][]" value="{option_value}" {checked}/> {option_name}<br />
+    {/options:my_field_name}
+
+
+Select field
+~~~~~~~~~~~~
+ ::
+
+  <select name="my_field_name" id="my_field_name">
+    {options:my_field_name}
+      <option value="{option_value}"{selected}>{option_name}</option>
+    {/options:my_field_name}
+  </select>
+
+See ``{options:my_field_name}`` tag pair.
+
+Text Input field
+~~~~~~~~~~~~~~~~~
+ ::
+
+  <input type="text" name="my_field_name" id="my_field_name" value="{my_field_name}">
+
+Textarea field
+~~~~~~~~~~~~~~
+ ::
+
+  <textarea name="my_field_name" id="my_field_name" cols="90" rows="10">{my_field_name}</textarea>
+
+
 
 ********
 Examples
