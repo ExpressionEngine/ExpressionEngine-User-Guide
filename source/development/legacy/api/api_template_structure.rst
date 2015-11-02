@@ -15,7 +15,7 @@ Calling the Class
   The Template Structure class is called with the ``api->instantiate()``
   function::
 
-    ee()->load->library('api'); ee()->api->instantiate('template_structure');
+    ee()->load->library('api'); ee()->legacy_api->instantiate('template_structure');
 
 Function Reference
 ------------------

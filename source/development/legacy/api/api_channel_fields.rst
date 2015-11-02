@@ -14,7 +14,7 @@ Calling the Class
 
   The Channel Fields class is called with the api->instantiate() function::
 
-    ee()->load->library('api'); ee()->api->instantiate('channel_fields');
+    ee()->load->library('api'); ee()->legacy_api->instantiate('channel_fields');
 
 Function Reference
 ------------------
