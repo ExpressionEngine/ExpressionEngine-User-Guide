@@ -10,7 +10,7 @@ This guide will help you update your site from a previous version of ExpressionE
 1. Backup and Prepare
 *********************
 
-#. Back-up your ExpressionEngine database and files.
+#. :doc:`Back-up your ExpressionEngine database and files </operations/database_backup>`.
 
 #. Download the latest release of ExpressionEngine (either :elstore:`ExpressionEngine Core </#ee-core>` or the :elstore:`standard edition </manage>`, whichever your site is currently running) and unzip the files to a folder on your computer.
 
