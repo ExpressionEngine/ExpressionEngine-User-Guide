@@ -16,7 +16,7 @@ Calling the Class
   function::
 
     ee()->load->library('api');
-    ee()->api->instantiate('channel_entries');
+    ee()->legacy_api->instantiate('channel_entries');
 
   .. note:: The API uses a Singleton pattern and does not currently
     support nesting of calls. Thus instantiating a new call while in
@@ -50,8 +50,8 @@ Save Entry
   Example Usage::
 
     ee()->load->library('api');
-    ee()->api->instantiate('channel_entries');
-    ee()->api->instantiate('channel_fields');
+    ee()->legacy_api->instantiate('channel_entries');
+    ee()->legacy_api->instantiate('channel_fields');
 
     $data = array(
         'title'         => 'Breaking News Story!',
@@ -79,7 +79,7 @@ Save Entry
     value of NULL is transformed to an empty string before database
     insertion.
 
-  .. note:: Successful submission requires a valid session exist for a user 
+  .. note:: Successful submission requires a valid session exist for a user
     with the necessary posting privileges.
 
 Submit New Entry

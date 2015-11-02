@@ -32,7 +32,7 @@ Calling the API
   After loading the parent API library, the child classes are loaded with
   ``instantiate()``::
 
-    ee()->api->instantiate('channel_entries');
+    ee()->legacy_api->instantiate('channel_entries');
 
   At this point, methods within the api\_channel\_entries api are callable
   via ``ee()->api_channel_entries->method_name();``
@@ -66,7 +66,7 @@ Instantiate
 
   Instantiate an API::
 
-    ee()->api->instantiate('channel_entries');
+    ee()->legacy_api->instantiate('channel_entries');
 
   :param string $which: Name of the API to instantiate. Options: ``channel_categories``, ``channel_entries``, ``channel_fields``, ``channel_structure``, and ``template_structure``.
   :exception: Raises an exception if the specified API doesn't exist
@@ -79,7 +79,7 @@ Error Count
 
   Get the number of API errors::
 
-    ee()->api->error_count();
+    ee()->legacy_api->error_count();
 
   :returns: The number of errors generated in API functions
   :rtype: Integer
@@ -93,7 +93,7 @@ Make URL Safe
 
     ee()->load->library('api');
     $str = 'this is a string that's not URL safe.  (we will clean it for $5).';
-    $str = ee()->api->make_url_safe($str); // Result thisisastringthatsnotURLsafe.wewillcleanitfor5.
+    $str = ee()->legacy_api->make_url_safe($str); // Result thisisastringthatsnotURLsafe.wewillcleanitfor5.
 
   .. note:: Valid Characters are: a-zA-Z0-9\_-.
 
@@ -110,7 +110,7 @@ Is String URL Safe?
 
     ee()->load->library('api');
     $str = 'this is a string that\'s not URL safe.  (we will clean it for $5).';
-    if ( ! ee()->api->is_url_safe($str))
+    if ( ! ee()->legacy_api->is_url_safe($str))
     {
         // Do additional Processing on the string to make it URL safe
     }
