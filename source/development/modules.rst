@@ -480,15 +480,14 @@ While you aren't required to use views to create your backend pages,
 they are the most modular and easy to read, modify, and edit approach to
 building control panel pages. A view is simply an html page, or snippet
 of a page, with some minimal php used to output variables. The variables
-are passed to the view in an array when you load it. Setting the third
-parameter of the load call to true will return the view to you as a
-string::
+are passed to the view in an array when you make it::
 
-  return ee()->load->view('index', $vars, TRUE);
+  return ee('View')->make('fortune_cookie:index')->render($vars);
 
 This would return the index.php view page, located in a ``views``
 folder. The view file is passed an array with all of the variables used
-by the view, and those variables are simple 'plugged into' the html.
+by the view, and those variables are simple 'plugged into' the html. See the
+:doc:`/development/services/view` for more details.
 
 It is recommended that in view pages only, you use the :doc:`PHP's alternate
 syntax </development/guidelines/view_php_syntax>` in your views, as it makes
