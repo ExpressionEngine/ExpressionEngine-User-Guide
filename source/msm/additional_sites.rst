@@ -21,13 +21,13 @@ After completing the order, head back to your `manage purchases
 will need to :doc:`upload the new license key </cp/settings/license>` before you
 can add your new sites.
 
-.. note:: There is no explicit limit on the number of MSM sites that can be 
-installed on a single installation of ExpressionEngine.  However, there is a 
-technical limit on the size of your MySQL database table rows (see the `MySQL 
-documentation <http://dev.mysql.com/doc/refman/5.0/en/column-count-limit.html>`__). This 
-effectively limits the total number of custom channel fields, and thus 
-ultimately the number of sites you can install.  Depending on the types of 
-fields and the MySQL storage engine, row size limits could pose a problem with 
-anywhere between 500 - 2,000 custom fields.  If you are concerned you may be 
-using too many custom fields, our support team can help you decide whether 
+.. note:: There is no explicit limit on the number of MSM sites that can be
+installed on a single installation of ExpressionEngine. However, there is a
+technical limit on the size of your MySQL database table rows (see the `MySQL
+documentation <http://dev.mysql.com/doc/refman/5.0/en/column-count-limit.html>`__). This
+effectively limits the total number of custom channel fields, and thus
+ultimately the number of sites you can install. Depending on the types of
+fields and the MySQL storage engine, row size limits could pose a problem with
+anywhere between 500 - 2,000 custom fields. If you are concerned you may be
+using too many custom fields, our support team can help you decide whether
 more sites can be supported.
