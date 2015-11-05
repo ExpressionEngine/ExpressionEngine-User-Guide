@@ -5,6 +5,20 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.0.3
+-------------
+
+Release Date: November 9, 2015
+
+- Added the SMTP port to the Outgoing Email settings page.
+- Fixed a bug (#21299) where a Grid-compatible fieldtype whose markup contained a table would make the Grid field behave incorrectly.
+- Fixed a bug where some site settings did not save correctly.
+- Fixed a bug (#21272) where default field formatting was not respected when publishing. Chastised the offending code.
+- Fixed a bug (#21296) where new templates were shy and wouldn't let anyone but Super Admins view them.
+- Fixed a bug (#21301) where there was only one default template group per install, not per site.
+- Fixed a bug with Discussion Forum theme image URLs
+- Fixed a bug where the Discussion Forum front end was 404'ing. Where did it go?
+
 Version 3.0.2
 -------------
 
