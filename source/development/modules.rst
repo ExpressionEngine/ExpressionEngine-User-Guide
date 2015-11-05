@@ -482,7 +482,7 @@ building control panel pages. A view is simply an html page, or snippet
 of a page, with some minimal php used to output variables. The variables
 are passed to the view in an array when you make it::
 
-  return ee('View')->make('fortune_cookie:index')->render($vars);
+  return ee('View')->make('module_name:index')->render($vars);
 
 This would return the index.php view page, located in a ``views``
 folder. The view file is passed an array with all of the variables used
