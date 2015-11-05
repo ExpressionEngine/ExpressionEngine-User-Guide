@@ -388,29 +388,18 @@ The Control Panel File (mcp.module_name.php)
 Control Panel URLS
 ~~~~~~~~~~~~~~~~~~
 
-If your module does have a backend, the url logic is very easy for a
-human to parse. For example::
+The Control Panel URLs for your module follow the pattern
+``addons/settings/package_name/method_name/arguments``. For example, if we had
+a fortune cookie module with a view for list our cookies its URL would be
+``addons/settings/fortune_cookie/cookies``. Like 2.x the routing is automatic;
+all public methods in your ``mcp.package_name.php`` are automatically routed.
+We will also pass any arguments to your method found in the url. If the URL is
+``addons/settings/fortune_cookie/edit_cookie/3`` we would need to have the
+following method signature::
 
-  C=addons_modules&M=show_module_cp&module=module_name&method=add_record.
+  public function edit_cookie($id) {...}
 
-``C=addons_modules``
-  ``C`` represents the ``controller``, all of which are located in
-  ``expressionengine/controllers/``. In this example, the controller is
-  ``addons_modules``. Controller names map directly to the urls.
-``M=show_module_cp``
-  ``M`` specifies the controller ``method``. In this case the
-  ``show_module_cp()`` method in the addons_modules controller.
-``module=module_name``
-  The module control panel---this is the name of your class, all lower
-  case.
-``method=add_record``
-  The ``method`` being called in the url maps directly to the method
-  name in your control panel file. There is no need to route them
-  manually.
-
-Thus the above url would output whatever is returned by the
-``add_record()`` method in your ``Module_name_mcp`` class. If no method
-is specified, it will output the ``index()`` method by default.
+We have a :doc:`/development/services/url` to help you construct your URLs.
 
 Useful Control Panel Functions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -433,13 +422,9 @@ control panel file:
         lang('mymodule_module_name')
     );
 
-- If your module backend has multiple pages, you may want to create
-  fourth level navigation. This is easily done in the constructor using
-  the ``set_right_nav()`` function::
-
-    ee()->cp->set_right_nav(array(
-        'add_record'        => BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name'.AMP.'method=add_record'
-    ));
+- If your module backend has multiple pages, you may want to create a `sidebar
+  <https://ellislab.com/style-guide/c/structure#content-box-sidebar>`_. This is
+  easily done using the :doc:`Sidebar Service </development/services/sidebar>`.
 
 Javascript
 ~~~~~~~~~~
