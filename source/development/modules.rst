@@ -456,14 +456,13 @@ Working with Forms
 While creating forms for the backend is fairly routine, there are
 several differences/additions worth noting:
 
-- The :doc:`Form Validation library </development/legacy/libraries/form_validation>` is the
-  best means of checking submitted form data and returning in-line
-  errors in the case of failed validation.
+- The :doc:`Form Validation library
+  </development/legacy/libraries/form_validation>` is available, but the best
+  means of checking submitted form data and returning in-line errors is to
+  either use :ref:`Model Validation <model_validation>` or the
+  :doc:`/development/services/validation`.
 - After form submission, you will generally want to output a success
-  (or failure) message and redirect to a new page::
-
-    ee()->session->set_flashdata('message_success', lang('record_added'));
-    ee()->functions->redirect(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name');
+  (or failure) message using the :doc:`/development/services/alert`.
 
 Outputting Pages
 ~~~~~~~~~~~~~~~~
