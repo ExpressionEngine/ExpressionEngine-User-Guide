@@ -418,7 +418,7 @@ control panel file:
   easy navigation back to your main page::
 
     ee()->cp->set_breadcrumb(
-        BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name',
+        ee('CP/URL', 'addons/setttings/addon_name/addon_method'),
         lang('mymodule_module_name')
     );
 
