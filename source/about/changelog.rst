@@ -18,6 +18,7 @@ Release Date: November 9, 2015
 - Fixed a bug (#21301) where there was only one default template group per install, not per site.
 - Fixed a bug with Discussion Forum theme image URLs
 - Fixed a bug where the Discussion Forum front end was 404'ing. Where did it go?
+- Fixed a bug (#21286) where there was a syntax error in the file picker on lower versions of PHP.
 
 Version 3.0.2
 -------------
