@@ -58,6 +58,18 @@ Here you can choose how membership accounts are activated:
    activated by an admin visiting the :menuselection:`Members -->
    Activate Pending` section of the Control Panel.
 
+Notify members when approved?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When set to **yes**, members will receive an email notification when their
+member registration is approved.
+
+Notify members when declined?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When set to **yes**, members will receive an email notification when their
+member registration is declined.
+
 .. _member-require-tos-label:
 
 Require terms of service?
