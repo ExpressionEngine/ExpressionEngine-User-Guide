@@ -5,6 +5,24 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.0.4
+-------------
+
+Release Date: November 16, 2015
+
+- Fixed a bug (#21282) where publish tabs pulled a bait and switch and saved their defaults instead of your data. They are looking at hours of community service.
+- Fixed a bug (#21305) where the button text on a Channel entry publish form would not be reset after a validation error when revisions were enabled.
+- Fixed a bug (#21320) where a PHP error would appear when using the `{member_search_path}` variable inside an Channel Entries tag pair.
+- Fixed a bug (#21326) where the template manager was insensitive toward case sensitive file systems and you could not edit Forum Templates.
+- Fixed a bug where you couldn't Communicate if you had a large number of members.
+- Fixed a bug where listing member groups couldn't handle large numbers of members.
+- Fixed a bug where the CP complained with esoteric errors when you had enough members for pagination.
+- Fixed a bug where membership was elitist and pending members could not be approved.
+- Fixed a bug where the Forums fibbed about the Upload Directory being a URL when really it's a path. We washed Forum's mouth out with soap.
+- Fixed a bug where removing the Forum theme named "default" prevented the Template Manager from finding any Forum themes.
+- Fixed a bug where some buttons were rougishly displaying a raw language key, rather than actual language data.
+- Added site-wide yes/no settings for notifying pending members when they are approved or denied.
+
 Version 3.0.3
 -------------
 
