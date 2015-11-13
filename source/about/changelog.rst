@@ -12,19 +12,27 @@ Release Date: November 16, 2015
 
 - Fixed a bug (#21099) where line breaks in member signatures were being converted to literal ``\n``. Literally.
 - Fixed a bug (#21282) where publish tabs pulled a bait and switch and saved their defaults instead of your data. They are looking at hours of community service.
+- Fixed a bug (#21289) where some Javascript events didn't happen.
 - Fixed a bug (#21295) where clicking, insetead of dragging, on the move icon in Channel Layouts refreshed the page.
 - Fixed a bug (#21305) where the button text on a Channel entry publish form would not be reset after a validation error when revisions were enabled.
+- Fixed a bug (#21307) where LocalPath::__get generated PHP errors.
 - Fixed a bug (#21308) where listing member groups couldn't handle large numbers of members.
+- Fixed a bug (#21313) where submitting forms or clicking links would occastionally result in a blank page.
 - Fixed a bug (#21320) where a PHP error would appear when using the `{member_search_path}` variable inside an Channel Entries tag pair.
 - Fixed a bug (#21321) where empty relationship fields sometimes generated errors. Somtimes you just need a little alone time.
 - Fixed a bug (#21325) where certain add-ons refused to acknowledge their new version number after they were updated.
 - Fixed a bug (#21326) where the template manager was insensitive toward case sensitive file systems and you could not edit Forum Templates.
-- Fixed a bug where you couldn't Communicate if you had a large number of members.
+- Fixed a bug (#21328) where we still referenced the constant SYSTEM. It's now SYSPATH.
+- Fixed a bug (#21332) where some template paths had double slashes (//) when saving as files.
+- Fixed a bug (#21334) where template groups which were not the default template group bullied the default template group into renouncing it's defaultness. We've had some harsh words and they promise not to do it again.- Fixed a bug where you couldn't Communicate if you had a large number of members.
 - Fixed a bug where the CP complained with esoteric errors when you had enough members for pagination.
 - Fixed a bug where membership was elitist and pending members could not be approved.
 - Fixed a bug where the Forums fibbed about the Upload Directory being a URL when really it's a path. We washed Forum's mouth out with soap.
 - Fixed a bug where removing the Forum theme named "default" prevented the Template Manager from finding any Forum themes.
 - Fixed a bug where some buttons were rougishly displaying a raw language key, rather than actual language data.
+- Fixed a bug where categories could not be assigned via Channel Form.
+- Fixed a bug that prevented grid column widths from affecting the publish UI. (note: column widths will not affect grid columns with RTE, Relationships or Textarea fields)
+- Fixed a bug where run-on sentences made the RTE puff up with pride inside grid fields, we pulled him aside and set him straight.
 - Added site-wide yes/no settings for notifying pending members when they are approved or denied.
 
 Version 3.0.3
