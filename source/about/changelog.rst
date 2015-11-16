@@ -34,6 +34,7 @@ Release Date: November 16, 2015
 - Fixed a bug where removing the Forum theme named "default" prevented the Template Manager from finding any Forum themes.
 - Fixed a bug where some buttons were rougishly displaying a raw language key, rather than actual language data.
 - Added site-wide yes/no settings for notifying pending members when they are approved or denied.
+- Fixed a bug (#21283) where upload directory synchronization may not apply image manipulations to some files.
 
 Version 3.0.3
 -------------
