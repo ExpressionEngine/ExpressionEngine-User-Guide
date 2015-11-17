@@ -32,7 +32,7 @@ Release Date: November 16, 2015
 - Fixed a bug where membership was elitist and pending members could not be approved.
 - Fixed a bug where the Forums fibbed about the Upload Directory being a URL when really it's a path. We washed Forum's mouth out with soap.
 - Fixed a bug where removing the Forum theme named "default" prevented the Template Manager from finding any Forum themes.
-- Fixed a bug where some buttons were rougishly displaying a raw language key, rather than actual language data.
+- Fixed a bug where some buttons were roguishly displaying a raw language key, rather than actual language data.
 - Added site-wide yes/no settings for notifying pending members when they are approved or denied.
 - Fixed a bug (#21283) where upload directory synchronization may not apply image manipulations to some files.
 
