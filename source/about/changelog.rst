@@ -10,6 +10,9 @@ Version 3.0.4
 
 Release Date: November 18, 2015
 
+- Fixed a bug that allowed `.codemirror` to stand on top of `.sub-menu`
+- Fixed a bug that prevented grid column widths from affecting the publish UI. (note: column widths will not affect grid columns with RTE, Relationships or Textarea fields)
+- Fixed a bug where run-on sentences made the RTE puff up with pride inside grid fields, we pulled him aside and set him straight.
 - Fixed a bug (#21099) where line breaks in member signatures were being converted to literal ``\n``. Literally.
 - Fixed a bug (#21282) where publish tabs pulled a bait and switch and saved their defaults instead of your data. They are looking at hours of community service.
 - Fixed a bug (#21289) where some JavaScript events didn't happen.
