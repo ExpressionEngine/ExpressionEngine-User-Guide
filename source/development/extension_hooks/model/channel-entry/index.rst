@@ -10,7 +10,7 @@ Channel Entry Model Extension Hooks
 before_channel_entry_insert
 ---------------------------
 
-.. function:: before_channel_entry_insert($this, $values)
+.. function:: before_channel_entry_insert($entry, $values)
 
   Called before the channel entry object is inserted. Changes made to the
   object will be saved automatically.
@@ -19,7 +19,7 @@ before_channel_entry_insert
 
     ee()->extensions->call('before_channel_entry_insert', $this, $this->getValues());
 
-  :param object $this: Current ChannelEntry model object
+  :param object $entry: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
   :returns: void
   :rtype: NULL
@@ -29,7 +29,7 @@ before_channel_entry_insert
 after_channel_entry_insert
 --------------------------
 
-.. function:: after_channel_entry_insert($this, $values)
+.. function:: after_channel_entry_insert($entry, $values)
 
   Called after the channel entry object is inserted. Changes made to the object
   object will **not** be saved automatically. Saving the object may trigger the
@@ -39,7 +39,7 @@ after_channel_entry_insert
 
     ee()->extensions->call('after_channel_entry_insert', $this, $this->getValues());
 
-  :param object $this: Current ChannelEntry model object
+  :param object $entry: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
   :returns: void
   :rtype: NULL
@@ -49,7 +49,7 @@ after_channel_entry_insert
 before_channel_entry_update
 ---------------------------
 
-.. function:: before_channel_entry_update($this, $values, $modified)
+.. function:: before_channel_entry_update($entry, $values, $modified)
 
   Called before the channel entry object is updated. Changes made to the
   object will be saved automatically.
@@ -58,7 +58,7 @@ before_channel_entry_update
 
     ee()->extensions->call('before_channel_entry_update', $this, $this->getValues(), $modified);
 
-  :param object $this: Current ChannelEntry model object
+  :param object $entry: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
   :param array $modified: An array of all the old values that were changed
   :returns: void
@@ -69,7 +69,7 @@ before_channel_entry_update
 after_channel_entry_update
 --------------------------
 
-.. function:: after_channel_entry_update($this, $values, $modified)
+.. function:: after_channel_entry_update($entry, $values, $modified)
 
   Called after the channel entry object is updated. Changes made to the
   object will **not** be saved automatically. Calling save may fire additional
@@ -79,7 +79,7 @@ after_channel_entry_update
 
     ee()->extensions->call('after_channel_entry_update', $this, $this->getValues(), $modified);
 
-  :param object $this: Current ChannelEntry model object
+  :param object $entry: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
   :param array $modified: An array of all the old values that were changed
   :returns: void
@@ -91,7 +91,7 @@ after_channel_entry_update
 before_channel_entry_save
 -------------------------
 
-.. function:: before_channel_entry_save($this, $values)
+.. function:: before_channel_entry_save($entry, $values)
 
   Called before the channel entry object is inserted or updated. Changes made to
   the object will be saved automatically.
@@ -100,7 +100,7 @@ before_channel_entry_save
 
     ee()->extensions->call('before_channel_entry_save', $this, $this->getValues());
 
-  :param object $this: Current ChannelEntry model object
+  :param object $entry: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
   :returns: void
   :rtype: NULL
@@ -110,7 +110,7 @@ before_channel_entry_save
 after_channel_entry_save
 ------------------------
 
-.. function:: after_channel_entry_save($this, $values)
+.. function:: after_channel_entry_save($entry, $values)
 
   Called after the channel entry object is inserted or updated. Changes made to the
   object will **not** be saved automatically. Calling save may fire additional
@@ -120,7 +120,7 @@ after_channel_entry_save
 
     ee()->extensions->call('after_channel_entry_save', $this, $this->getValues());
 
-  :param object $this: Current ChannelEntry model object
+  :param object $entry: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
   :returns: void
   :rtype: NULL
@@ -130,7 +130,7 @@ after_channel_entry_save
 before_channel_entry_delete
 ---------------------------
 
-.. function:: before_channel_entry_delete($this, $values)
+.. function:: before_channel_entry_delete($entry, $values)
 
   Called before the channel entry object is deleted. If you are conditionally
   deleting one of your own models, please consider creating an :ref:`inverse
@@ -141,7 +141,7 @@ before_channel_entry_delete
 
     ee()->extensions->call('before_channel_entry_delete', $this, $this->getValues());
 
-  :param object $this: Current ChannelEntry model object
+  :param object $entry: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
   :returns: void
   :rtype: NULL
@@ -151,7 +151,7 @@ before_channel_entry_delete
 after_channel_entry_delete
 ---------------------------
 
-.. function:: after_channel_entry_delete($this, $values)
+.. function:: after_channel_entry_delete($entry, $values)
 
   Called after the channel entry object is deleted. If you are conditionally
   deleting one of your own models, please consider creating an :ref:`inverse
@@ -162,7 +162,7 @@ after_channel_entry_delete
 
     ee()->extensions->call('after_channel_entry_delete', $this, $this->getValues());
 
-  :param object $this: Current ChannelEntry model object
+  :param object $entry: Current ChannelEntry model object
   :param array $values: The ChannelEntry model object data as an array
   :returns: void
   :rtype: NULL
