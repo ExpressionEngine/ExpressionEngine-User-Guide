@@ -8,7 +8,7 @@ ExpressionEngine 3.x Change Log
 Version 3.0.4
 -------------
 
-Release Date: November 16, 2015
+Release Date: November 18, 2015
 
 - Fixed a bug (#21099) where line breaks in member signatures were being converted to literal ``\n``. Literally.
 - Fixed a bug (#21282) where publish tabs pulled a bait and switch and saved their defaults instead of your data. They are looking at hours of community service.
@@ -24,17 +24,20 @@ Release Date: November 16, 2015
 - Fixed a bug (#21326) where the template manager was insensitive toward case sensitive file systems and you could not edit Forum Templates.
 - Fixed a bug (#21328) where we still referenced the constant SYSTEM. It's now SYSPATH.
 - Fixed a bug (#21332) where some template paths had double slashes (//) when saving as files.
-- Fixed a bug (#21334) where template groups which were not the default template group bullied the default template group into renouncing it's defaultness. We've had some harsh words and they promise not to do it again.
+- Fixed a bug (#21334) where template groups which were not the default template group bullied the default template group into renouncing its defaultness.
 - Fixed a bug where categories could not be assigned via Channel Form.
 - Fixed a bug where you couldn't Communicate if you had a large number of members.
-- Fixed a bug where listing member groups couldn't handle large numbers of members.
 - Fixed a bug where the CP complained with esoteric errors when you had enough members for pagination.
 - Fixed a bug where membership was elitist and pending members could not be approved.
-- Fixed a bug where the Forums fibbed about the Upload Directory being a URL when really it's a path. We washed Forum's mouth out with soap.
+- Fixed a bug where the Forums fibbed about the Upload Directory being a URL when really it's a path.
 - Fixed a bug where removing the Forum theme named "default" prevented the Template Manager from finding any Forum themes.
 - Fixed a bug where some buttons were roguishly displaying a raw language key, rather than actual language data.
-- Added site-wide yes/no settings for notifying pending members when they are approved or denied.
 - Fixed a bug (#21283) where upload directory synchronization may not apply image manipulations to some files.
+- Fixed a bug (#21259) in the Email mdoule where PHP errors were thrown after sending emails.
+- Fixed a bug (#21274) where a member group with file access couldn't open the file picker.
+- Fixed a bug where avatar images where showing up in the file picker.
+- Fixed a bug where you couldn't upload images if the file picker only had one directory to choose from.
+- Added site-wide yes/no settings for notifying pending members when they are approved or denied.
 
 Version 3.0.3
 -------------
