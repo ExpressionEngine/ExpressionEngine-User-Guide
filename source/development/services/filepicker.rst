@@ -109,7 +109,6 @@ Disable the file picker's filtering UI::
 Re-enable the file picker's filtering UI. This is the default::
 
   $link->enableFilters();
-;
 
 ``disableUploads()``
 ~~~~~~~~~~~~~~~~~~~~
