@@ -10,7 +10,7 @@ Category Model Extension Hooks
 before_category_insert
 ----------------------
 
-.. function:: before_category_insert($this, $values)
+.. function:: before_category_insert($category, $values)
 
   Called before the category object is inserted. Changes made to the
   object will be saved automatically.
@@ -19,7 +19,7 @@ before_category_insert
 
     ee()->extensions->call('before_category_insert', $this, $this->getValues());
 
-  :param object $this: Current Category model object
+  :param object $category: Current Category model object
   :param array $values: The Category model object data as an array
   :returns: void
   :rtype: NULL
@@ -29,7 +29,7 @@ before_category_insert
 after_category_insert
 ---------------------
 
-.. function:: after_category_insert($this, $values)
+.. function:: after_category_insert($category, $values)
 
   Called after the category object is inserted. Changes made to the object
   object will **not** be saved automatically. Saving the object may trigger the
@@ -39,7 +39,7 @@ after_category_insert
 
     ee()->extensions->call('after_category_insert', $this, $this->getValues());
 
-  :param object $this: Current Category model object
+  :param object $category: Current Category model object
   :param array $values: The Category model object data as an array
   :returns: void
   :rtype: NULL
@@ -49,7 +49,7 @@ after_category_insert
 before_category_update
 ----------------------
 
-.. function:: before_category_update($this, $values, $modified)
+.. function:: before_category_update($category, $values, $modified)
 
   Called before the category object is updated. Changes made to the
   object will be saved automatically.
@@ -58,7 +58,7 @@ before_category_update
 
     ee()->extensions->call('before_category_update', $this, $this->getValues(), $modified);
 
-  :param object $this: Current Category model object
+  :param object $category: Current Category model object
   :param array $values: The Category model object data as an array
   :param array $modified: An array of all the old values that were changed
   :returns: void
@@ -69,7 +69,7 @@ before_category_update
 after_category_update
 ---------------------
 
-.. function:: after_category_update($this, $values, $modified)
+.. function:: after_category_update($category, $values, $modified)
 
   Called after the category object is updated. Changes made to the
   object will **not** be saved automatically. Calling save may fire additional
@@ -79,7 +79,7 @@ after_category_update
 
     ee()->extensions->call('after_category_update', $this, $this->getValues(), $modified);
 
-  :param object $this: Current Category model object
+  :param object $category: Current Category model object
   :param array $values: The Category model object data as an array
   :param array $modified: An array of all the old values that were changed
   :returns: void
@@ -91,7 +91,7 @@ after_category_update
 before_category_save
 --------------------
 
-.. function:: before_category_save($this, $values)
+.. function:: before_category_save($category, $values)
 
   Called before the category object is inserted or updated. Changes made to
   the object will be saved automatically.
@@ -100,7 +100,7 @@ before_category_save
 
     ee()->extensions->call('before_category_save', $this, $this->getValues());
 
-  :param object $this: Current Category model object
+  :param object $category: Current Category model object
   :param array $values: The Category model object data as an array
   :returns: void
   :rtype: NULL
@@ -110,7 +110,7 @@ before_category_save
 after_category_save
 -------------------
 
-.. function:: after_category_save($this, $values)
+.. function:: after_category_save($category, $values)
 
   Called after the category object is inserted or updated. Changes made to the
   object will **not** be saved automatically. Calling save may fire additional
@@ -120,7 +120,7 @@ after_category_save
 
     ee()->extensions->call('after_category_save', $this, $this->getValues());
 
-  :param object $this: Current Category model object
+  :param object $category: Current Category model object
   :param array $values: The Category model object data as an array
   :returns: void
   :rtype: NULL
@@ -130,7 +130,7 @@ after_category_save
 before_category_delete
 ----------------------
 
-.. function:: before_category_delete($this, $values)
+.. function:: before_category_delete($category, $values)
 
   Called before the category object is deleted. If you are conditionally
   deleting one of your own models, please consider creating an :ref:`inverse
@@ -141,7 +141,7 @@ before_category_delete
 
     ee()->extensions->call('before_category_delete', $this, $this->getValues());
 
-  :param object $this: Current Category model object
+  :param object $category: Current Category model object
   :param array $values: The Category model object data as an array
   :returns: void
   :rtype: NULL
@@ -151,7 +151,7 @@ before_category_delete
 after_category_delete
 ---------------------
 
-.. function:: after_category_delete($this, $values)
+.. function:: after_category_delete($category, $values)
 
   Called after the category object is deleted. If you are conditionally
   deleting one of your own models, please consider creating an :ref:`inverse
@@ -162,7 +162,7 @@ after_category_delete
 
     ee()->extensions->call('after_category_delete', $this, $this->getValues());
 
-  :param object $this: Current Category model object
+  :param object $category: Current Category model object
   :param array $values: The Category model object data as an array
   :returns: void
   :rtype: NULL
