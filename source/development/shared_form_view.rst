@@ -114,6 +114,14 @@ This is the first level in a fieldset definition. Here are what these keys and v
 |              | have the full width of the fieldset *below* the field name and       |                 |               |
 |              | description. It's a good idea to use this displaying a Grid input.   |                 |               |
 +--------------+----------------------------------------------------------------------+-----------------+---------------+
+| ``attrs``    | Specify any extra attributes such as classes or data attributes on   | Array           | N/A           |
+|              | the parent ``fieldset`` element of the field(s). An array can be     |                 |               |
+|              | passed in the format of ``array('attr-name' => 'value')`` and        |                 |               |
+|              | multiple attributes can be specified.                                |                 |               |
++--------------+----------------------------------------------------------------------+-----------------+---------------+
+| ``group``    | Specify the group name this fieldset should be included in. See      | String          | N/A           |
+|              | `Toggling field visibility`_  for more information.                  |                 |               |
++--------------+----------------------------------------------------------------------+-----------------+---------------+
 
 Individual field definitions
 ----------------------------
@@ -130,42 +138,46 @@ Fieldsets can contain multiple fields, and they are defined in the ``fields`` ar
 
 The key for each field defintiion is the field's input name. We'll dive deeper into that array to see how we can show and customize different kinds of fields. Here are the keys available to a field definition array:
 
-+----------------+---------------------------------------------------------------------+-----------------+---------------+
-| Option name    | Description                                                         | Accepted values | Default value |
-+================+=====================================================================+=================+===============+
-| ``type``       | Type of field, required. All field types are listed below.          | String name of  | N/A           |
-|                |                                                                     | valid field     |               |
-|                |                                                                     | type names      |               |
-+----------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``value``      | Value of field to populate on page load.                            | String          | N/A           |
-+----------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``required``   | Whether or not the field is required for form submission, applies   | Boolean         | ``FALSE``     |
-|                | the required style :ellislab:`as shown in the style guide </style-  |                 |               |
-|                | guide/c/forms#setting-field-required>`.                             |                 |               |
-+----------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``disabled``   | Whether or not the field input element is disabled.                 | Boolean         | ``FALSE``     |
-+----------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``choices``    | For field types that have multiple options to choose from, such as  | Array           | ``NULL``      |
-|                | radio buttons or checkboxes, sets the selectable choices for that   |                 |               |
-|                | field. Array format is ``'value' => lang('label')``.                |                 |               |
-+----------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``maxlength``  | Sets the ``maxlength=`` parameter on text inputs.                   | Boolean         | ``FALSE``     |
-+----------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``no_results`` | For checkboxes, radio buttons and select fields, can be set to show | Array           | ``NULL``      |
-|                | a "no results" message and a call-to-action link button to create   |                 |               |
-|                | content that would populate options for the field.                  |                 |               |
-+----------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``label``      | Normally, the label for the field is specified in the fieldset      | String          | ``NULL``      |
-|                | definition, but some field types may allow a secondary label to be  |                 |               |
-|                | set such as the ``sort-text`` field because it is normally paired   |                 |               |
-|                | with other ``short-text`` fields and each may need their own label. |                 |               |
-+----------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``wrap``       | Whether or not to wrap the field in a scrollable div, good for      | Boolean         | ``FALSE``     |
-|                | potentially long lists of selectable options.                       |                 |               |
-+----------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``content``    | When ``type`` is set to ``html``, allows for any freeform markup to | String          | ``NULL``      |
-|                | be used as the field.                                               |                 |               |
-+----------------+---------------------------------------------------------------------+-----------------+---------------+
++------------------+---------------------------------------------------------------------+-----------------+---------------+
+| Option name      | Description                                                         | Accepted values | Default value |
++==================+=====================================================================+=================+===============+
+| ``type``         | Type of field, required. All field types are listed below.          | String name of  | N/A           |
+|                  |                                                                     | valid field     |               |
+|                  |                                                                     | type names      |               |
++------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``value``        | Value of field to populate on page load.                            | String          | N/A           |
++------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``required``     | Whether or not the field is required for form submission, applies   | Boolean         | ``FALSE``     |
+|                  | the required style :ellislab:`as shown in the style guide </style-  |                 |               |
+|                  | guide/c/forms#setting-field-required>`.                             |                 |               |
++------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``disabled``     | Whether or not the field input element is disabled.                 | Boolean         | ``FALSE``     |
++------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``choices``      | For field types that have multiple options to choose from, such as  | Array           | ``NULL``      |
+|                  | radio buttons or checkboxes, sets the selectable choices for that   |                 |               |
+|                  | field. Array format is ``'value' => lang('label')``.                |                 |               |
++------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``maxlength``    | Sets the ``maxlength=`` parameter on text inputs.                   | Boolean         | ``FALSE``     |
++------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``no_results``   | For checkboxes, radio buttons and select fields, can be set to show | Array           | ``NULL``      |
+|                  | a "no results" message and a call-to-action link button to create   |                 |               |
+|                  | content that would populate options for the field.                  |                 |               |
++------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``label``        | Normally, the label for the field is specified in the fieldset      | String          | ``NULL``      |
+|                  | definition, but some field types may allow a secondary label to be  |                 |               |
+|                  | set such as the ``sort-text`` field because it is normally paired   |                 |               |
+|                  | with other ``short-text`` fields and each may need their own label. |                 |               |
++------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``wrap``         | Whether or not to wrap the field in a scrollable div, good for      | Boolean         | ``FALSE``     |
+|                  | potentially long lists of selectable options.                       |                 |               |
++------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``content``      | When ``type`` is set to ``html``, allows for any freeform markup to | String          | ``NULL``      |
+|                  | be used as the field.                                               |                 |               |
++------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``group_toggle`` | If this field is to toggle the visibility of other fields,          | Array           | N/A           |
+|                  | specifies the rules for that toggling. See                          |                 |               |
+|                  | `Toggling field visibility`_  for more information.                 |                 |               |
++------------------+---------------------------------------------------------------------+-----------------+---------------+
 
 Available field input types
 ---------------------------
@@ -296,6 +308,153 @@ With these additions, our form should now look like this:
 .. figure:: ../images/shared_form_2.png
 
 Our form is fully rendered and ready to write a form handler for without having to write any markup.
+
+Toggling field visibility
+-------------------------
+
+Sometimes you may want to toggle the visibility of certain fields based on the value of another field. A common case is selecting an option in a dropdown or radio button and having a different set of fields appear or disappear. This can be achieved automagically with form groups. Take this small example. We have a small form with a select field, then two sections of fields we want to show based on the value of the select box. Here's how we would construct this form normally::
+
+  $vars['sections'] = array(
+    array(
+      array(
+        'title' => 'type',
+        'fields' => array(
+          'type' => array(
+            'type' => 'select',
+            'choices' => array(
+              'text' => lang('text'),
+              'image' => lang('image')
+            ),
+            'value' => $type
+          )
+        )
+      ),
+    ),
+    'text_options' => array(
+      array(
+        'title' => 'text',
+        'fields' => array(
+          'text' => array(
+            'type' => 'text',
+            'value' => $text
+          )
+        )
+      ),
+    ),
+    'image_options' => array(
+      array(
+        'title' => 'image_path',
+        'fields' => array(
+          'image_path' => array(
+            'type' => 'text',
+            'value' => $image_path
+          )
+        )
+      )
+    )
+  );
+
+Pretty standard form. Now we want to modify it to give it the logical groupings we want and to specify which field is going to control the toggling::
+
+  $vars['sections'] = array(
+    array(
+      array(
+        'title' => 'type',
+        'fields' => array(
+          'type' => array(
+            'type' => 'select',
+            'choices' => array(
+              'text' => lang('text'),
+              'image' => lang('image')
+            ),
+            'group_toggle' => array(
+              'text' => 'text_options',
+              'image' => 'image_options'
+            ),
+            'value' => $type
+          )
+        )
+      ),
+    ),
+    'text_options' => array(
+      'group' => 'text_options',
+      'settings' => array(
+        array(
+          'title' => 'text',
+          'fields' => array(
+            'text' => array(
+              'type' => 'text',
+              'value' => $text
+            )
+          )
+        ),
+      )
+    ),
+    'image_options' => array(
+      'group' => 'image_options',
+      'settings' => array(
+        array(
+          'title' => 'image_path',
+          'fields' => array(
+            'image_path' => array(
+              'type' => 'text',
+              'value' => $image_path
+            )
+          )
+        )
+      )
+    )
+  );
+
+Notice what's different. We added a ``group_toggle`` key to the select's field definition that specifies for each value of the select dropdown which group to show. Next, we needed to specify what fields are in which group. We did that by adding a ``group`` key to each section, and then nesting those field definitions under a ``settings`` key. If we have multiple fields in that section, they will all be shown/hidden based on the value of our ``group_toggle`` field. If we just want to tag specific settings to toggle and not an entire section, we can set the group key on a fieldset definition and allow all the fields to share the same section of the form::
+
+  $vars['sections'] = array(
+    array(
+      array(
+        'title' => 'type',
+        'fields' => array(
+          'type' => array(
+            'type' => 'select',
+            'choices' => array(
+              'text' => lang('text'),
+              'image' => lang('image')
+            ),
+            'group_toggle' => array(
+              'text' => 'text_options',
+              'image' => 'image_options'
+            ),
+            'value' => $type
+          )
+        )
+      ),
+      array(
+        'title' => 'text',
+        'group' => 'text_options'
+        'fields' => array(
+          'text' => array(
+            'type' => 'text',
+            'value' => $text
+          )
+        )
+      ),
+      array(
+        'title' => 'image_path',
+        'group' => 'image_options',
+        'fields' => array(
+          'image_path' => array(
+            'type' => 'text',
+            'value' => $image_path
+          )
+        )
+      )
+    )
+  );
+
+Finally, we must include the JavaScript to make it all work::
+
+  ee()->cp->add_js_script(array(
+    'file' => array('cp/form_group'),
+  ));
 
 Form validation
 ---------------
