@@ -468,7 +468,7 @@ As long is the field names in validation match up with the form input names, the
 Tabs
 ----
 
-The shared form view is capable of adding tabs in accordance with our `style guide <https://ellislab.com/style-guide/c/tabs>`_. To do so assign a ``tabs`` variable to the view's variable's array::
+The shared form view is capable of adding tabs in accordance with our :ellislab:`style guide </style-guide/c/tabs>`. To do so assign a ``tabs`` variable to the view's variable's array::
 
   $vars['tabs'] = $tabs;
 
