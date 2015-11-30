@@ -5,6 +5,33 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.0.5
+-------------
+
+Release Date: December 2, 2015
+
+- Fixed a bug (#21338) where categories with an ampersand in the title would not maintain its selection state on the entry publish form.
+- Fixed a bug (#21300) where the RTE's image tool may place the selected image in another RTE when there are multiple on a publish form.
+- Fixed a bug where a PHP error would appear in the control panel if the ``cp_css_end`` hook was active.
+- Fixed a bug where some Channel entry date variables would not work in conditionals without having brackets around them.
+- Fixed a bug (#21378) where the ``cp_css_end`` hook was never fired.
+- Fixed a bug (#21394) where an incorrect language key was used for the working state of some buttons in the Members section.
+- Fixed a bug (#21395) where a PHP error may appear on some actions dealing with file thumbnails.
+- Fixed a bug (#21389) where some OGV files would not be accepted for upload.
+- Fixed a bug (#21388) where validation for URL titles in Channel entries would incorrectly flag periods as not allowed.
+- Fixed a bug where global snippets could not be edited.
+- Fixed a bug where saving entries did not clear caches if that setting was enabled.
+- Fixed a bug where the default homepage could be set to the publish page of no channel.
+- Fixed a bug where only super admins could edit status groups.
+- Fixed a bug where form success messages were removed too eagerly.
+- Fixed a bug where modals were shy and did not scroll into view when using Firefox.
+- Fixed a bug (#21380) where logging in as another member from the control panel would show a PHP error.
+- Fixed a bug where channel layouts did not play nicely with the profiler.
+- Fixed a bug (#21344) where the file modal would not restrict to the allowed directory when defaulted to a thumbnail view and switched to a list view.
+- Fixed a bug (#21387, #21273) where the File module was not installed.
+- Fixed a bug (#21373) where two file fields in one Channel would not work on the Publish page.
+- Fixed a bug (#21344) where the file modal would not restrict you to the allowed directory when switching filters.
+
 Version 3.0.4
 -------------
 
