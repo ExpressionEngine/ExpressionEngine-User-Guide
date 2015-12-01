@@ -31,6 +31,10 @@ Release Date: December 2, 2015
 - Fixed a bug (#21387, #21273) where the File module was not installed.
 - Fixed a bug (#21373) where two file fields in one Channel would not work on the Publish page.
 - Fixed a bug (#21344) where the file modal would not restrict you to the allowed directory when switching filters.
+- Fixing a bug where no notice was shown when deleting a newly created publish layout tab with a field in it.
+- Fixed a bug (#21406) where the "view" link in the CP for your MSM site did not open in a new tab.
+- Fixed a bug (#21407) where extending the Category class revealed a PHP Runtime error.
+- Fixed a bug (#21342) where CSV exports were really Comma-and-Space Separated Values.
 
 Version 3.0.4
 -------------
