@@ -27,7 +27,6 @@ Release Date: December 2, 2015
 - Fixed a bug where modals were shy and did not scroll into view when using Firefox.
 - Fixed a bug (#21380) where logging in as another member from the control panel would show a PHP error.
 - Fixed a bug where channel layouts did not play nicely with the profiler.
-- Fixed a bug (#21344) where the file modal would not restrict to the allowed directory when defaulted to a thumbnail view and switched to a list view.
 - Fixed a bug (#21387, #21273) where the File module was not installed.
 - Fixed a bug (#21373) where two file fields in one Channel would not work on the Publish page.
 - Fixed a bug (#21344) where the file modal would not restrict you to the allowed directory when switching filters.
