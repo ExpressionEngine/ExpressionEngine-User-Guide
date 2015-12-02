@@ -90,11 +90,12 @@
 							<h1>{{ project }}&reg; User Guide</h1>
 							<form class="docs-download">
 								<select>
-									<option value="">&mdash;</option>
-									<option value="http://f1bf67d549f4bace9133-ade10a3daf314fd3c70740a7fe56076c.r0.cf1.rackcdn.com/EEDocs{{ release }}.zip">Download 3.x User Guide</option>
-									<option value="http://f1bf67d549f4bace9133-ade10a3daf314fd3c70740a7fe56076c.r0.cf1.rackcdn.com/EEDocs2.10.1.zip">Download 2.x User Guide</option>
-									<option value="http://f1bf67d549f4bace9133-ade10a3daf314fd3c70740a7fe56076c.r0.cf1.rackcdn.com/EEDocs1.7.3.zip">Download 1.x User Guide</option>
+									<option value="">Switch Version</option>
+									<option value="https://docs.expressionengine.com/latest/">Latest</option>
+									<option value="https://docs.expressionengine.com/v2/">v2</option>
+									<option value="https://docs.expressionengine.com/v1/">v1</option>
 								</select>
+								<a href="http://f1bf67d549f4bace9133-ade10a3daf314fd3c70740a7fe56076c.r0.cf1.rackcdn.com/EEDocs{{ release }}.zip">Download</a>
 							</form>
 							<script>
 								document.querySelector('.docs-download select').onchange = function() {
@@ -120,16 +121,12 @@
 							</ul>
 						</div>
 						{{ body }}
-
-						{% if pagename not in exclude_comments -%}
-							<!-- {user_guide_comments} -->
-						{% endif %}
-
 					{%- endblock %}
 
 					{%- block footer %}
 						<div class="docs-footer">
-							<p>{{ project }}<b class="reg-mark">&reg;</b> {{ release }} User Guide<br><span>{{ copyright }}</span></p>
+							<p><a href="https://support.ellislab.com/bugs/new">Report a problem with this page</a><br>
+								{{ project }}<b class="reg-mark">&reg;</b> {{ release }} User Guide<br><span>{{ copyright }}</span></p>
 							<p><a class="scroll" href="#top"></a></p>
 						</div>
 					{%- endblock %}
