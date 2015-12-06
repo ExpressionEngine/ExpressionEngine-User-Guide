@@ -85,17 +85,22 @@
 			<section class="row align-right fluid-fix">
 				<section class="w-12 fluid-col" id="docs-main">
 					<div class="box docs-wrap">
+						<nav class="ver-nav">
+							Switch to:
+							<a href="https://docs.expressionengine.com/latest/"><b>v3</b> (Latest)</a>
+							<a href="https://docs.expressionengine.com/v2/"><b>v2</b></a>
+							<a href="https://docs.expressionengine.com/v1/"><b>v1</b></a>
+						</nav>
 						<div class="docs-header">
 							<a class="small-menu" href="#docs-nav"></a>
 							<h1>{{ project }}&reg; User Guide</h1>
 							<form class="docs-download">
 								<select>
-									<option value="">Switch Version</option>
-									<option value="https://docs.expressionengine.com/latest/">Latest</option>
-									<option value="https://docs.expressionengine.com/v2/">v2</option>
-									<option value="https://docs.expressionengine.com/v1/">v1</option>
+									<option value="">Download&hellip;</option>
+									<option value="http://f1bf67d549f4bace9133-ade10a3daf314fd3c70740a7fe56076c.r0.cf1.rackcdn.com/EEDocs{{ release }}.zip">Download v3 User Guide</option>
+									<option value="http://f1bf67d549f4bace9133-ade10a3daf314fd3c70740a7fe56076c.r0.cf1.rackcdn.com/EEDocs2.10.1.zip">Download v2 User Guide</option>
+									<option value="http://f1bf67d549f4bace9133-ade10a3daf314fd3c70740a7fe56076c.r0.cf1.rackcdn.com/EEDocs1.7.3.zip">Download v1 User Guide</option>
 								</select>
-								<a href="http://f1bf67d549f4bace9133-ade10a3daf314fd3c70740a7fe56076c.r0.cf1.rackcdn.com/EEDocs{{ release }}.zip">Download</a>
 							</form>
 							<script>
 								document.querySelector('.docs-download select').onchange = function() {
