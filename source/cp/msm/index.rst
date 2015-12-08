@@ -10,7 +10,7 @@ Site Manager
 Manage multiple Sites from a single installation
 
 .. note:: The Multiple Site Manager **does not** alter the
-	`ExpressionEngine License Agreement <https:expressionengine.com/license>`_. The license holder must be the owner of all Sites on a single installation.
+	`ExpressionEngine License Agreement <https://expressionengine.com/license>`_. The license holder must be the owner of all Sites on a single installation.
 
 .. Screenshot (optional)
 
