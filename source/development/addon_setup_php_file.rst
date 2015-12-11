@@ -42,7 +42,7 @@ author_url
 
 ::
 
-  'author_url' => 'http://example.com',
+  'author_url' => 'http://example.com'
 
 This is the URL associated with the add-on. This value is used in manual
 display for plugins, as such this is a **required** key for all plugins.
@@ -87,9 +87,9 @@ namespace
 This is the `PHP namespace <http://php.net/namespace>`_ for your add-on. This is
 a **required** key.
 
-This key associates your add-on directory with a namespace. ExpressionEngine will
-will look inside your add-on directory any time it encounters a class name that
-begins with this namespace.
+This key associates your add-on directory with a namespace. ExpressionEngine
+will will look inside your add-on directory any time it encounters a class name
+that begins with this namespace.
 
 settings_exist
 ~~~~~~~~~~~~~~
