@@ -132,7 +132,7 @@ services
     }
   )
 
-This is an associative arrays of services to register on the
+This is an associative array of services to register on the
 :doc:`Dependency Container<./core/dependencies>`.
 
 models
