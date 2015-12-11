@@ -12,10 +12,10 @@ ExpressionEngine Fieldtypes
 Basic File Structure
 ********************
 
-All fieldtypes should be placed into the third_party folder in a package
-and be named after that package name. So in a packaged named google_maps
-the fieldtype file will be ``ft.google_maps.php``. All fieldtypes must
-inherit from the ``EE_Fieldtype`` base class and they must provide an
+All fieldtypes should be placed into the ``sysetm/user/addons`` folder in a
+package and be named after that package name. So in a packaged named
+google_maps the fieldtype file will be ``ft.google_maps.php``. All fieldtypes
+must inherit from the ``EE_Fieldtype`` base class and they must provide an
 $info array with a name and version number.
 
 ::
