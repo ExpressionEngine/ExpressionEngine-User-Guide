@@ -5,7 +5,9 @@ The ``addon.setup.php`` File
 
 Starting with version 3.0 each add-on in ExpressionEngine must have an
 ``addon.setup.php`` file in its package directory. This file provides
-descriptive data about a specific add-on such as author, name, and version.
+descriptive data about a specific add-on such as author, name, and version. See
+the :doc:`./services/addon` for API access.
+
 
 Format
 ------
@@ -185,30 +187,3 @@ models
 This is an associate array of models exposed by this addon. The class name
 should be relative to the addon namespace. Typically addons will be in a
 ``Model`` directory in the addon's folder.
-
-API Access
-----------
-
-Read-only access to the data in an ``addon.setup.php`` file is made available
-via the object returned from a ``ee('App')->get($addon_name)`` call. The returned
-object has a ``get($key)`` method to retrieve data. For example::
-
-  $info = ee('App')->get('hello_world');
-  echo $info->get('description');
-
-We also provide the following convenience methods on that object.
-
-getAuthor()
-~~~~~~~~~~~
-
-Returns the value of the ``author`` key.
-
-getName()
-~~~~~~~~~
-
-Returns the value of the ``name`` key.
-
-getVersion()
-~~~~~~~~~~~~
-
-Returns the value of the ``author`` key.
