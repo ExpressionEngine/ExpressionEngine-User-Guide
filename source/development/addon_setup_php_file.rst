@@ -139,7 +139,24 @@ Fields.
 
 As of 3.1.0 fieldtypes can specify their compatibility. When editing a Channel
 Field the fieldtype options will be restricted to those fieldtypes that have
-the same compatibility.
+the same compatibility. ExpressionEngine's native fieldtypes have the following
+compatibilities:
+
++---------------+------------------------------------------------------------------------------------+
+| Compatibility | Fieldtypes                                                                         |
++===============+====================================================================================+
+| date          | :doc:`/fieldtypes/date`                                                            |
++---------------+------------------------------------------------------------------------------------+
+| file          | :doc:`/fieldtypes/file`                                                            |
++---------------+------------------------------------------------------------------------------------+
+| grid          | :doc:`/fieldtypes/grid`                                                            |
++---------------+------------------------------------------------------------------------------------+
+| list          | :doc:`/fieldtypes/select`                                                          |
++---------------+------------------------------------------------------------------------------------+
+| relationship  | :doc:`/fieldtypes/relationships`                                                   |
++---------------+------------------------------------------------------------------------------------+
+| text          | :doc:`/fieldtypes/rte`, :doc:`/fieldtypes/text`, :doc:`/fieldtypes/textarea`       |
++---------------+------------------------------------------------------------------------------------+
 
 services
 ~~~~~~~~
