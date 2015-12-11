@@ -120,6 +120,27 @@ plugin.typography
 This indicates whether or not the add-on provides a plugin that should be made
 available as a text formatter to some Channel Fields. The default is ``FALSE``.
 
+fieldtypes
+~~~~~~~~~~
+
+::
+
+  'fieldtypes' => array(
+    'hello_world' => array(
+      'name' => 'Hello World',
+      'compatibility' => 'text'
+    )
+  )
+
+This is an associative array of the fieldtypes the add-on contains where the
+key corresponds to the fieldtype, ``ft.hello_world.php`` in the above example.
+Each fieldtype defines its name which is used when creating or editing Channel
+Fields.
+
+As of 3.1.0 fieldtypes can specify their compatibility. When editing a Channel
+Field the fieldtype options will be restricted to those fieldtypes that have
+the same compatibility.
+
 services
 ~~~~~~~~
 
