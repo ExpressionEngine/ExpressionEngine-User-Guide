@@ -54,12 +54,46 @@ This will build a sidebar with a header, which has a button and two items undern
 
   $sidebar = ee('CP/Sidebar')->make();
 
-  $fortunes = $sidebar->addHeader(lang('forutnes))
+  $fortunes = $sidebar->addHeader(lang('fortunes'))
     ->withButton(lang('new'), ee('CP/URL', 'addons/settings/fortune_cookie/create'));
 
   $fortunes_list = $fortunes->addBasicList();
   $fortunes_list->addItem(lang('recent_fortunes'), ee('CP/URL', 'addons/settings/fortune_cookie/recent'))
   $fortunes_list->addItem(lang('archived_fortunes'), ee('CP/URL', 'addons/settings/fortune_cookie/archived'));
+
+Reorderable Folder Lists
+------------------------
+
+Folder lists can be reordered::
+
+  $folder_list->canReorder();
+
+Calling ``canReorder()`` will automatically bind the appropriate JavaScript and styles to the list to enable its folder items to be dragged and sorted. Reordering list items won't cause them to stick from request to request, that's something you would need to implement to suit your particular add-on. To hook into the sort event to perform custom operations on sort, set a callback like so:
+
+.. code-block:: javascript
+
+  EE.cp.folderList.onSort('list-name', function(list) {
+    // Do as you wish with the passed list object
+  });
+
+Where ``'list-name'`` is the unique name you have your folder list. A jQuery object of the folder list element will be passed to the callback, in which you have access to various data about your list items. For example, you may want to gather the unique identifiers for the folder items and send them to an AJAX request, as we do for template groups:
+
+.. code-block:: javascript
+
+  // Reorder template groups
+  EE.cp.folderList.onSort('template-group', function(list) {
+    // Create an array of template group names
+    var template_groups = $.map($('> li', list), function(list_item) {
+      return $(list_item).data('group_name');
+    });
+
+    $.ajax({
+      url: EE.templage_groups_reorder_url,
+      data: { 'groups': template_groups },
+      type: 'POST',
+      dataType: 'json'
+    });
+  });
 
 CP/Sidebar Methods
 ------------------
@@ -235,6 +269,13 @@ FolderList Methods
   Sets the no results text which will display if this header's list(s) are empty.
 
   :param string $msg: The text to display when the list(s) are empty.
+  :returns: $this
+  :rtype: FolderList
+
+.. method:: canReorder()
+
+  Allows the folder list to be reordered.
+
   :returns: $this
   :rtype: FolderList
 
