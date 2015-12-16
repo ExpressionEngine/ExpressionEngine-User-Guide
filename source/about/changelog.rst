@@ -5,6 +5,35 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.0.6
+-------------
+
+Release Date: December 17, 2015
+
+- Fixed a bug (#21240) where some templates rendered with errors relating to "protect_javascript".
+- Fixed a bug (#21310) where Channel Layouts did not allow you to reposition fields that were added after the layout was created.
+- Fixed a bug (#21400) where the Contact Form generated errors.
+- Fixed a bug (#21400) where the Contact Form returned a white screen when the Spam module was enabled.
+- Fixed a bug (#21412) where some categories appeared on the Publish tab.
+- Fixed a bug (#21420) where the Relationship field could no longer organize its related items after searching.
+- Fixed a bug (#21436) where RTEs were named inconsistently as fields vs. Grid columns.
+- Fixed a bug where some elseif branches in template conditionals were not pruned correctly.
+- Fixed a bug where searching withing a Relationship field would unsort your related entries.
+- Fixed a bug where publish forms with large Relationship fields could overflow the POST data and result in data loss.
+- Fixed a bug where new rows added to a Grid with a Relationship column could have pre-populated Relationship fields.
+- Fixed a bug where filtering or searching a Relationship inside a Grid caused that Relationship to ignore the selection.
+- Fixed a bug with some overzealous Markdown parsing.
+- Fixed a bug where the Member module would not be installed when upgrading a Core installation to Standard.
+- Fixed the ``{cp_edit_entry_url}`` variable.
+- Fixed a bug where forum previews did not fall back to using the default index template if running the forums through the templates.
+- Adjusted sub menus to scroll when they are long.
+- Improved New Relic transaction reporting.
+- Pre-release versions now include a visual indication that they're pre-release and also include the version identifier (e.g. ``dp.4``) in the extended version information.
+- Added a check for the required PHP Fileinfo extension to the installer.
+- Added a feature (#21418): duplicating a Template did not duplicate its allowed member groups.
+- Added a feature (#21427): the Edit Manager's category filter is now populated based on the channel filter.
+- Added a feature: comments can be formatted with any formatter you have installed. EE, we have Markdown!
+
 Version 3.0.5
 -------------
 
