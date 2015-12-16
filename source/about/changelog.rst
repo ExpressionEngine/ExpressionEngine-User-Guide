@@ -29,6 +29,7 @@ Release Date: December 17, 2015
 - Adjusted sub menus to scroll when they are long.
 - Improved New Relic transaction reporting.
 - Pre-release versions now include a visual indication that they're pre-release and also include the version identifier (e.g. ``dp.4``) in the extended version information.
+- The installer has been calmed down a bit and won't skip showing you error messages when they exist.
 - Added a check for the required PHP Fileinfo extension to the installer.
 - Added a feature (#21418): duplicating a Template did not duplicate its allowed member groups.
 - Added a feature (#21427): the Edit Manager's category filter is now populated based on the channel filter.
