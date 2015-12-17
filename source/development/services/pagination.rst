@@ -10,11 +10,7 @@ CP/Pagination Service
 Simple Example
 --------------
 
-Adding pagination to the control panel is a common task and we created a
-pagination service to assist. This service follows our `style-guide
-<https://ellislab.com/style-guide/c/listings#pagination>`_ handling all the
-mathematical calculations. All you need is the number of items you are going to
-paginate and a URL object::
+Adding pagination to the control panel is a common task and we created a pagination service to assist. This service follows our :style_guide:`style-guide <c/listings#pagination>` handling all the mathematical calculations. All you need is the number of items you are going to paginate and a URL object::
 
   $base_url = ee('CP/URL', 'publish/edit');
   $pagination = ee('CP/Pagination', $total_count)
@@ -33,7 +29,7 @@ CP/Pagination Service Methods
 
   :param int $per_page: The number of items per page
   :returns: $this
-  :rtype: Alert
+  :rtype: Pagination
 
 .. method:: currentPage($current_page)
 
@@ -41,7 +37,7 @@ CP/Pagination Service Methods
 
   :param int $current_page: The current page (defaults to 1)
   :returns: $this
-  :rtype: Alert
+  :rtype: Pagination
 
 .. method:: queryStringVariable($page_variable)
 
@@ -49,7 +45,7 @@ CP/Pagination Service Methods
 
   :param string $page_variable: The name of the page variable in the query string (defaults to 'page')
   :returns: $this
-  :rtype: Alert
+  :rtype: Pagination
 
 .. method:: displayPageLinks($pages_to_display)
 
@@ -57,7 +53,7 @@ CP/Pagination Service Methods
 
   :param int $pages: The number of numbered pages to calculate (defaults to 3)
   :returns: $this
-  :rtype: Alert
+  :rtype: Pagination
 
 .. method:: render($base_url)
 
