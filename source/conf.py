@@ -103,7 +103,8 @@ extlinks = {
     'ellislab': ('https://ellislab.com%s', 'ellislab'),
     'elstore': ('https://store.ellislab.com%s', 'elstore'),
     'elsupport': ('https://support.ellislab.com%s', 'elsupport'),
-    'forum_thread': ('https://ellislab.com/forums/viewthread/%s/', 'forum_thread')
+    'forum_thread': ('https://ellislab.com/forums/viewthread/%s/', 'forum_thread'),
+    'style_guide': ('https://ellislab.com/style-guide/%s', 'style_guide')
 }
 
 # -- Options for HTML output ---------------------------------------------------

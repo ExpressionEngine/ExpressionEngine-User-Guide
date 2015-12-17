@@ -14,7 +14,7 @@ The Control Panel's left sidebar is built with the Sidebar Service::
 
   $sidebar = ee('CP/Sidebar')->make();
 
-In accordance with our `style guide <https://ellislab.com/style-guide/c/structure#content-box-sidebar>`_ sidebars have headers::
+In accordance with our :style_guide:`style guide <c/structure#content-box-sidebar>` sidebars have headers::
 
   $header = $sidebar->addHeader($text, $url);
 
