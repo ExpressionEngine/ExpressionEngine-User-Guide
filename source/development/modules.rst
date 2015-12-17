@@ -440,7 +440,7 @@ Within your control panel method, or potentially the constructor, just set ``ee(
     'search_button_value' => lang('search_templates')
   );
 
-- ``header`` (string): The string to display as the :style_guide:`Section Header <c/structure#section-header>`
+- ``title`` (string): The string to display as the :style_guide:`Section Header <c/structure#section-header>`
 - ``form_url`` (string): The form action for the :style_guide:`Section Header <c/structure#section-header>` search form. The ``name`` of the text input is ``search``.
 - ``search_button_value`` (string): By default, we'll use the word "Search" for the :style_guide:`Section Header <c/structure#section-header>` search form's button, but you can define a different wording here.
 - ``toolbar_items`` (array): An associative array of :style_guide:`buttons <c/structure#section-settings>` to go in front of the title. The key will define the class and provide an icon (e.g. ``settings`` and ``download``), and the value is another associative array containing the ``href`` and the ``title`` of the link.
