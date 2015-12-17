@@ -1,5 +1,6 @@
+########################
 ExpressionEngine Modules
-========================
+########################
 
 .. todo:: Audit for 3.0
 
@@ -14,8 +15,9 @@ templates.
 
 .. highlight:: php
 
+********************
 Basic File Structure
---------------------
+********************
 
 Modules should be placed into the third_party folder in a package and
 be named after that package name. At a minimum, there are 4 required
@@ -46,8 +48,9 @@ files that may be useful for modules:
 With the possible exception of library files, file names and folders
 should be lower-case and contain no spaces.
 
+*************************************
 The Update file (upd.module_name.php)
--------------------------------------
+*************************************
 
 .. class:: Module_name_upd
 
@@ -62,11 +65,13 @@ The Update file (upd.module_name.php)
 
         var $version = '1.0';
 
+******************************
 Update File Function Reference
-------------------------------
+******************************
+
 
 install() *
-~~~~~~~~~~~
+===========
 
 .. method:: install()
 
@@ -112,7 +117,7 @@ install() *
   :rtype: Boolean
 
 update($current = '') *
-~~~~~~~~~~~~~~~~~~~~~~~
+=======================
 
 .. method:: update($current = '')
 
@@ -142,7 +147,7 @@ update($current = '') *
   :rtype: Boolean
 
 uninstall() *
-~~~~~~~~~~~~~
+=============
 
 .. method:: uninstall()
 
@@ -162,7 +167,7 @@ uninstall() *
   :rtype: Boolean
 
 tabs()
-~~~~~~
+======
 
 .. method:: tabs()
 
@@ -196,8 +201,9 @@ tabs()
   :returns: Associative array of the tab name and tab fields
   :rtype: Array
 
+****************************************
 The Language File (module_name_lang.php)
-----------------------------------------
+****************************************
 
 The Language file contains an array named ``$lang``, which is used along
 with the Language class to display text on a page in whatever language
@@ -221,7 +227,7 @@ description of the module to be viewable on the MODULES page::
   );
 
 module tab label
-~~~~~~~~~~~~~~~~
+================
 
 In addition to the two required fields you can have a custom tab label
 for your publish fields. Just assign the desired label to a key which
@@ -238,8 +244,9 @@ shares the name of your module name::
 
     'module_name' => 'Tab label'
 
+**********************************
 The Tab File (tab.module_name.php)
-----------------------------------
+**********************************
 
 .. class:: Module_name_tab
 
@@ -257,11 +264,12 @@ The Tab File (tab.module_name.php)
     to include the ``tabs()`` function in the update file, and use it
     when updating custom layouts on installation and uninstallation.
 
+***************************
 Tab File Function Reference
----------------------------
+***************************
 
 display($channel_id, $entry_id = '') *
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+======================================
 
 .. method:: display($channel_id[, $entry_id = ''])
 
@@ -295,7 +303,7 @@ display($channel_id, $entry_id = '') *
     )
 
 validate($entry, $values) *
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================
 
 .. method:: validate($entry, $values)
 
@@ -322,7 +330,7 @@ validate($entry, $values) *
   :rtype: EllisLab\ExpressionEngine\Service\Validation\Result
 
 save($entry, $values) *
-~~~~~~~~~~~~~~~~~~~~~~~
+=======================
 
 .. method:: save($entry, $values)
 
@@ -353,7 +361,7 @@ save($entry, $values) *
   :rtype: Void
 
 delete($entry_ids) *
-~~~~~~~~~~~~~~~~~~~~
+====================
 
 .. method:: delete($entry_ids)
 
@@ -363,8 +371,9 @@ delete($entry_ids) *
   :param array $entry_ids: An indexed array of entry IDs that were deleted
   :rtype: Void
 
+********************************************
 The Control Panel File (mcp.module_name.php)
---------------------------------------------
+********************************************
 
 .. class:: Module_name_mcp
 
@@ -386,7 +395,7 @@ The Control Panel File (mcp.module_name.php)
     /* Location: ./system/user/addons/modules/module_name/mcp.module_name.php */
 
 Control Panel URLS
-~~~~~~~~~~~~~~~~~~
+==================
 
 The Control Panel URLs for your module follow the pattern
 ``addons/settings/package_name/method_name/arguments``. For example, if we had
@@ -402,7 +411,7 @@ following method signature::
 We have a :doc:`/development/services/url` to help you construct your URLs.
 
 Useful Control Panel Functions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==============================
 
 While all of the libraries and helpers from CodeIgniter and
 ExpressionEngine (as well as your own libraries) are available, there
@@ -427,7 +436,7 @@ control panel file:
   easily done using the :doc:`Sidebar Service </development/services/sidebar>`.
 
 Javascript
-~~~~~~~~~~
+==========
 
 While it is preferable that your module work for users who disable
 javascript, you may well want to provide increased functionality for the
@@ -451,7 +460,7 @@ JavaScript in your control panel:
     ee()->javascript->compile();
 
 Working with Forms
-~~~~~~~~~~~~~~~~~~
+==================
 
 While creating forms for the backend is fairly routine, there are
 several differences/additions worth noting:
@@ -465,7 +474,7 @@ several differences/additions worth noting:
   (or failure) message using the :doc:`/development/services/alert`.
 
 Outputting Pages
-~~~~~~~~~~~~~~~~
+================
 
 There are two ways to output content to the screen. For very simple
 pages, you may want to simply return the desired output in a string. Any
@@ -473,8 +482,9 @@ string that the method returns is placed inside the cp page's content
 container. With all but the simplest of output, the use of View files
 will be the preferred method for handling your markup and presentation.
 
+**********
 View Files
-----------
+**********
 
 While you aren't required to use views to create your backend pages,
 they are the most modular and easy to read, modify, and edit approach to
@@ -496,7 +506,7 @@ supported by your server, ExpressionEngine will automatically rewrite
 the tags.
 
 The Core Module File (mod.module_name.php)
-------------------------------------------
+==========================================
 
 .. class:: Module_name
 
