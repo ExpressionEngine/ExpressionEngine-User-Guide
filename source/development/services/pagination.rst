@@ -10,11 +10,7 @@ CP/Pagination Service
 Simple Example
 --------------
 
-Adding pagination to the control panel is a common task and we created a
-pagination service to assist. This service follows our `style-guide
-<https://ellislab.com/style-guide/c/listings#pagination>`_ handling all the
-mathematical calculations. All you need is the number of items you are going to
-paginate and a URL object::
+Adding pagination to the control panel is a common task and we created a pagination service to assist. This service follows our :style_guide:`style-guide <c/listings#pagination>` handling all the mathematical calculations. All you need is the number of items you are going to paginate and a URL object::
 
   $base_url = ee('CP/URL', 'publish/edit');
   $pagination = ee('CP/Pagination', $total_count)

@@ -10,12 +10,7 @@ CP/Table Service
 Overview
 --------
 
-Tables are the most common way to view and navigate data in the
-ExpressionEngine control panel. Since tables share a lot of common
-functionality, we've abstracted most of it out to a Table service to
-handle tasks such as displaying the table markup, and sorting and
-filtering tabular content. The Table service should handle most idioms
-covered in the `style-guide for tables <https://ellislab.com/style-guide/c/listings#tables-common>`_.
+Tables are the most common way to view and navigate data in the ExpressionEngine control panel. Since tables share a lot of common functionality, we've abstracted most of it out to a Table service to handle tasks such as displaying the table markup, and sorting and filtering tabular content. The Table service should handle most idioms covered in the :style_guide:`style-guide for tables <c/listings#tables-common>`.
 
 Below, we'll cover the steps needed to create a table from inside a
 controller.
