@@ -130,7 +130,8 @@ Publish Tab File (``tab.package_name.php``)
 We have made a few changes to the Publish Tab API. We have renamed the methods
 we call within the class, and a few have changes to their parameters:
 
-  * ``publish_tabs()`` has been renamed to ``display()``.
+  * ``publish_tabs()`` has been renamed to ``display()`` and now returns an
+    associative array using the ``field_id`` as the key.
   * ``validate_publish()`` has been renamed to ``validate()``.  It is now passed
     two arguments (in order): a ``ChannelEntry`` instance and an associative
     array with field names as keys and form submission data as the value (i.e.
