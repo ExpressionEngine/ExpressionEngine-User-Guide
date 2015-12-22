@@ -125,7 +125,9 @@
 								{%- endif %}
 							</ul>
 						</div>
+						<div id="content">
 						{{ body }}
+						</div>
 					{%- endblock %}
 
 					{%- block footer %}
@@ -141,9 +143,8 @@
 
 				<section class="w-4 fixed-col" id="docs-nav">
 					<div class="box docs-sidebar">
-						<form class="docs-search" method="get" action="https://www.google.com/search">
+						<form class="docs-search" method="get" action="https://docs.expressionengine.com/search/latest/">
 							<input type="text" name="q" id="q" placeholder="search eecms docs">
-							<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="docs.expressionengine.com/latest/" />
 						</form>
 
 						{{ toctree(includehidden=True) }}
