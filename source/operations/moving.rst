@@ -1,30 +1,11 @@
 Moving ExpressionEngine to Another Server
 =========================================
 
-As you use ExpressionEngine, you'll probably find the need to move the
-project to another server at some point. A variety of possible reasons
-include:
-
--  You developed the site locally, and now it's time to go live on a
-   production server!
--  The site's traffic is growing, and you need to move to a server
-   that's better able to handle the demand.
--  You want to duplicate your existing site to create a testing
-   environment (for troubleshooting problems or testing new features).
--  You want to upgrade ExpressionEngine in a safe environment, test the
-   site, and then move it to your production server.
-
-All great reasons to move your ExpressionEngine installation, of course.
-And since development and upgrades should never be performed on a live
-installation, it's important to know how to copy and migrate an
-installation to another server.
-
-Just as it is with many things related to ExpressionEngine, there are a
-variety of ways to migrate between servers with ExpressionEngine. This
-article outlines the basic procedure for moving ExpressionEngine to
-another server. Please note that you may need to perform additional
-steps if you are using any third-party add-ons that store their own path
-configurations.
+There are many workflows available to move between servers, much that
+comes down to developer preference. This article outlines the basic
+procedure for moving ExpressionEngine to another server. Please note
+that you may need to perform additional steps if you are using any
+third-party add-ons that store their own path configurations.
 
 1. Verify Server Compatibility
 ------------------------------
@@ -133,28 +114,29 @@ may need to be updated, including:
 You can also set many of these paths in your config.php file using
 configuration variables::
 
-	$config['site_url'] = "http://example.com/";
+  $config['site_url'] = "http://example.com/";
 
-	$config['theme_folder_url'] = "http://example.com/themes/";
-	$config['theme_folder_path'] = "/home/user/example.com/themes/";
+  $config['theme_folder_url'] = "http://example.com/themes/";
+  $config['theme_folder_path'] = "/home/user/example.com/themes/";
 
-	$config['captcha_url'] = "http://example.com/images/captchas/";
+  $config['captcha_url'] = "http://example.com/images/captchas/";
+  $config['captcha_path'] = "/home/user/example.com/images/captchas/";
 
-	$config['emoticon_url'] = "http://example.com/images/smileys/";
+  $config['emoticon_url'] = "http://example.com/images/smileys/";
 
-	$config['avatar_url'] = "http://example.com/images/avatars/";
-	$config['avatar_path'] = "/home/user/example.com/images/avatars/";
+  $config['avatar_url'] = "http://example.com/images/avatars/";
+  $config['avatar_path'] = "/home/user/example.com/images/avatars/";
 
-	$config['sig_img_url'] = "http://example.com/images/signature_attachments/";
-	$config['sig_img_path'] = "/home/user/example.com/images/signature_attachments/";
+  $config['sig_img_url'] = "http://example.com/images/signature_attachments/";
+  $config['sig_img_path'] = "/home/user/example.com/images/signature_attachments/";
 
-	$config['upload_preferences'] = array(
-	    1 => array(                                                            // ID of upload destination
-	        'name'        => 'Image Uploads',                          // Display name in control panel
-	        'server_path' => '/home/user/example.com/images/uploads/', // Server path to upload directory
-	        'url'         => 'http://example.com/images/uploads/'      // URL of upload directory
-	    )
-	);
+  $config['upload_preferences'] = array(
+      1 => array(                                                            // ID of upload destination
+          'name'        => 'Image Uploads',                          // Display name in control panel
+          'server_path' => '/home/user/example.com/images/uploads/', // Server path to upload directory
+          'url'         => 'http://example.com/images/uploads/'      // URL of upload directory
+      )
+  );
 
 10. Clear Caches (Again!)
 -------------------------
