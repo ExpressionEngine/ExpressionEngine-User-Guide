@@ -171,12 +171,12 @@ to be consumed by a view, and then pass that data to our view::
   // Pass in a base URL to create sorting links
   $vars['table'] = $table->viewData(ee('CP/URL', 'channels'));
 
-  ee()->cp->render('channels/index', $vars);
+  return ee('View')->make('channels/index')->render($vars);
 
 In our view, we'll take the data and render the table markup by loading
 a shared view::
 
-  <?php $this->view('_shared/table', $table); ?>
+  <?php $this->embed('ee:_shared/table', $table); ?>
 
 Given what we've done so far, our table looks like this:
 
