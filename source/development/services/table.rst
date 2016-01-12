@@ -187,6 +187,11 @@ Table columns can have the following options set on them:
 +---------------------+--------------------------------------------------------+---------------------------+-----------------------------+
 |     Option name     |                Description                             |    Accepted values        |        Default value        |
 +=====================+========================================================+===========================+=============================+
+| **label**           | If you'd rather not specify the label has the options  | String                    | NULL                        |
+|                     | array's key as done above, you can specify it here.    |                           |                             |
+|                     | This would also allow columns to have the same label,  |                           |                             |
+|                     | if needed.                                             |                           |                             |
++---------------------+--------------------------------------------------------+---------------------------+-----------------------------+
 | **encode**          | Whether or not to encode and escape the content of the | ``TRUE`` or ``FALSE`` to  | ``TRUE``                    |
 |                     | cell to prevent markup or other code from executing on | enable or disable,        |                             |
 |                     | display. It's typically best practice when dynamic,    | respectively.             |                             |
