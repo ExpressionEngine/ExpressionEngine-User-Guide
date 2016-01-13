@@ -18,7 +18,7 @@ returned object has a ``get($key)`` method to retrieve data. For example::
   echo $info->get('description');
 
 Addon Service Methods
-------------------------
+---------------------
 
 .. namespace:: EllisLab\\ExpressionEngine\\Service\\Addon
 
