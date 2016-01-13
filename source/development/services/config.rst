@@ -12,6 +12,14 @@ Config Service
 Simple Example
 **************
 
+This service will read items from a config file. By default all add-ons have a
+config directory located at ``./config/`` relative to their ``addon.setup.php`` file.
+To fetch items from your config simply do::
+
+  ee('Config')->get('my_addon:my_config.my_item');
+
+.. note:: This does not replace ``ee()->config``
+
 **********************
 Config Service Methods
 **********************
