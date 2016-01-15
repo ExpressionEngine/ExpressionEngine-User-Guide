@@ -123,6 +123,8 @@ everything can be changed.
       return array_merge($this->settings, $_POST);
   }
 
+.. _fieldtype_settings:
+
 Individual Settings
 ===================
 

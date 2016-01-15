@@ -20,7 +20,7 @@ The file must return an associative array. For example::
   	'author'      => 'Example, Inc',
   	'author_url'  => 'http://example.com',
   	'name'        => 'Hello World',
-  	'description' => 'Displays a friendly "Hello world!" messsage.',
+  	'description' => 'Displays a friendly "Hello world!" message.',
   	'version'     => '2.0.0',
   	'namespace'   => 'Example\HelloWorld'
   );
@@ -138,6 +138,8 @@ This is an associative array of the fieldtypes the add-on contains where the
 key corresponds to the fieldtype, ``ft.hello_world.php`` in the above example.
 Each fieldtype defines its name which is used when creating or editing Channel
 Fields.
+
+.. _fieldtype_compatibility_options:
 
 As of 3.1.0 fieldtypes can specify their compatibility. When editing a Channel
 Field the fieldtype options will be restricted to those fieldtypes that have
