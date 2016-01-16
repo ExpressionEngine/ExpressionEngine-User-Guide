@@ -1,17 +1,25 @@
-###################################
-ExpressionEngine 3.0 Syntax Changes
-###################################
+##############
+Syntax Changes
+##############
 
 .. highlight:: php
 
-ExpressionEngine 3.0 introduces a new API for interacting with models. The
-majority of the 2.x style models are now deprecated. In addition to a new
-models API we have a dependency injection container. This section is an
-overview of syntax changes for third party integration with the new
-ExpressionEngine.
+This section is an overview of syntax changes for third party integration with
+the new ExpressionEngine.
 
 General Syntax Changes
 ======================
+
+ExpressionEngine 3.0 adopts `PSR-1 <http://www.php-fig.org/psr/psr-1/>`_ and
+`PSR-4 <http://www.php-fig.org/psr/psr-4/>`_, which means ``StudlyCaps`` for
+class names, ``camelCase`` for method names, `namespaces
+<http://php.net/namespace>`_, and `autoloading <http://php.net/autoload>`_.
+
+CP URLs
+-------
+
+``cp_url(...)`` has been deprecated, please use ``ee('CP/URL', '...')``.
+For the full documentation see :doc:`/development/cp_styles/index`.
 
 Model Service
 -------------
@@ -29,9 +37,3 @@ closely as is feasible. You do not query for ``channel_data`` joined on
   $oscar->save();
 
 For the full documentation see :doc:`/development/services/model`.
-
-CP URLs
--------
-
-``cp_url(...)`` has been deprecated, please use ``ee('CP/URL', '...')``.
-For the full documentation see :doc:`/development/cp_styles/index`.
