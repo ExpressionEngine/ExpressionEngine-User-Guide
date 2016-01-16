@@ -10,6 +10,7 @@ Version 3.1.0
 
 Release Date: January 18, 2016
 
+- Compatible with PHP 7 and MySQL 5.7
 - Snippets and Global Variables can now be saved as files.
 - Added the ability to manage categories from the Channel entry publish form.
 - CodeMirror textareas (think Templates) are now resizable.
@@ -21,6 +22,7 @@ Release Date: January 18, 2016
 - Changed File listing to sort by date by default.
 - Changed Add-on listings so the add-on name always links to the module control panel or settings if they exist.
 - Changed wording of File field button on Publish page.
+- Fixed a bug where the Filepicker could run out of memory.
 - Fixed a bug where ``load_package_js`` did not work on fieldtype publish pages.
 - Fixed a bug where validation did not work consistently on some numeric types.
 - Fixed a bug (#21255) where the "Assign category parents?" setting had no effect.
@@ -426,4 +428,3 @@ Release Date: October 13, 2015
 
     - ``cp_url()`` helper method, use ``ee('CP/URL')`` instead.
     - Extension's ``universal_call()``, use ``call()`` instead.
-
