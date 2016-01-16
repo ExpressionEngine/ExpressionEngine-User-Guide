@@ -1,6 +1,6 @@
-###################
+####################
 Downloadable Add-ons
-###################
+####################
 
 .. contents::
    :local:
@@ -9,10 +9,10 @@ Downloadable Add-ons
 *******
 License
 *******
-The EllisLab downloadable add-ons listed below are open source and freely available 
+The EllisLab downloadable add-ons listed below are open source and freely available
 on `Github <https://github.com/EllisLab/>`_
 
-The full license for each add-on is included in a LICENSE file as part of the 
+The full license for each add-on is included in a LICENSE file as part of the
 download.  A typical example of the license may be found `here  <https://github.com/EllisLab/Kanban-Board/blob/master/LICENSE>`_
 
 
@@ -26,8 +26,8 @@ Add-ons
 Allow EE Code
 -------------
 
-Allows ExpressionEngine code to be used in entries. This add-on should be used 
-with extreme caution, if at all. Ask yourself if you should really be putting 
+Allows ExpressionEngine code to be used in entries. This add-on should be used
+with extreme caution, if at all. Ask yourself if you should really be putting
 tags inside content. If you are confident the answer is yes, here you go!
 
 `Releases <https://github.com/EllisLab/Allow-Eecode/releases>`_
@@ -47,9 +47,9 @@ Char Limit
 Cron
 ----
 
-Allows the calling of plugin and module scripts on a regular, scheduled basis. 
-Unlike a true server cron that can be scheduled to the second, it is triggered 
-by hits to the page that includes your cron tag. It should be used on templates 
+Allows the calling of plugin and module scripts on a regular, scheduled basis.
+Unlike a true server cron that can be scheduled to the second, it is triggered
+by hits to the page that includes your cron tag. It should be used on templates
 that get regular traffic, or that are themselves accessed by a server cron.
 
 `Releases <https://github.com/EllisLab/Cron/releases>`_
@@ -57,7 +57,7 @@ that get regular traffic, or that are themselves accessed by a server cron.
 Cron Blacklist
 --------------
 
-For use with the Cron add-on.  This add-on downloads the ExpressionEngine.com 
+For use with the Cron add-on.  This add-on downloads the ExpressionEngine.com
 Blacklist and appends it to the site's current Blacklist.
 
 `Releases <https://github.com/EllisLab/Cron-Blacklist/releases>`_
@@ -66,7 +66,7 @@ Blacklist and appends it to the site's current Blacklist.
 Cron Clean Cache
 ----------------
 
-For use with the Cron add-on.  Automatically clean out a directory located in 
+For use with the Cron add-on.  Automatically clean out a directory located in
 the /user/cache/ directory of your ExpressionEngine site.
 `Releases <https://github.com/EllisLab/Cron-Clean-Cache/releases>`_
 
@@ -74,7 +74,7 @@ the /user/cache/ directory of your ExpressionEngine site.
 Cron Email
 ----------
 
-For use with the Cron add-on.  Allows you to schedule the sending of an email 
+For use with the Cron add-on.  Allows you to schedule the sending of an email
 to the email addresses specified in the parameters.
 
 `Releases <https://github.com/EllisLab/Cron-Email/releases>`_
@@ -95,8 +95,8 @@ Duplicate Email Check
 HTML Attribute Content
 ----------------------
 
-HTML Attribute Content takes a string and preps it for use inside HTML tag attributes. 
-You might find this handy when using content inside attributes of certain tags, 
+HTML Attribute Content takes a string and preps it for use inside HTML tag attributes.
+You might find this handy when using content inside attributes of certain tags,
 like `<meta>` tags used by `Twitter Cards<https://dev.twitter.com/docs/cards>_`.
 `Releases <https://github.com/EllisLab/HTML-Attribute-Content/releases>`_
 
@@ -109,7 +109,7 @@ Kanban Board
 List Maker
 ----------
 
-This add-on creates HTML lists from plain text data, and optionally accepts user-defined 
+This add-on creates HTML lists from plain text data, and optionally accepts user-defined
 delimiters.
 
 
@@ -128,7 +128,7 @@ No Formatting
 
 This plugin does absolutely nothing formatting wise. It's a dummy formatting option.
 
-It is useful when selected as a formatting option for third party add-ons that 
+It is useful when selected as a formatting option for third party add-ons that
 allow formatting selections and do not include an option for "no formatting"
 
 
@@ -163,7 +163,7 @@ Reading Time
 Search Hilite
 -------------
 
-Using a CSS class, this plugin will highlight the terms searched for whenever 
+Using a CSS class, this plugin will highlight the terms searched for whenever
 someone arrives at a template using various search engines.
 
 `Releases <https://github.com/EllisLab/Search-Hilite/releases>`_
@@ -171,7 +171,7 @@ someone arrives at a template using various search engines.
 Valid Url
 ---------
 
-Makes sure that a URL has a protocol, that ampersands are converted to entities, 
+Makes sure that a URL has a protocol, that ampersands are converted to entities,
 and all other characters are properly URL encoded.
 
 `Releases <https://github.com/EllisLab/Valid-Url/releases>`_
@@ -183,7 +183,7 @@ Wiki
 Wiki Toc
 --------
 
-This add-on is used as a formatting option, typically with the ExpressionEngine Wiki. 
+This add-on is used as a formatting option, typically with the ExpressionEngine Wiki.
 The add-on will format your article with your preferred formatting plugin, and create a table of contents
 		in place of your [TOC] tag, in the form of an HTML unordered list.
 
@@ -206,10 +206,10 @@ Prevents words from being longer than a certain length
 World Weather
 -------------
 
-World Weather is a plugin for ExpressionEngine that allows you to displays weather 
-conditions from around the world on your site. The plugin fetches weather information 
-generated by a nationwide network of weather reporting station that are usually 
-located at airports. These stations generally report weather conditions every 
+World Weather is a plugin for ExpressionEngine that allows you to displays weather
+conditions from around the world on your site. The plugin fetches weather information
+generated by a nationwide network of weather reporting station that are usually
+located at airports. These stations generally report weather conditions every
 three to six hours and the information that is reported (or not reported) can vary from station to station.
 
 `Releases <https://github.com/EllisLab/World-Weather/releases>`_
