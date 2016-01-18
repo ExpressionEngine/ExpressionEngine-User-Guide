@@ -215,8 +215,8 @@ Template Route::
 
   /name/{first_name}/{last_name}/{suffix}
 
-If "Require all Segments" is set to "No" (the default) then all of the
-following URLs will match::
+If "Require all Segments" is set to "No" (the default) then only static segments 
+are required.  Thus all of the following URLs will match::
 
   /name/Enrico/Fermi/III
 
@@ -227,6 +227,10 @@ following URLs will match::
   /name
 
 Otherwise if all segments are required only the first URL will match.
+
+Neither setting would allow the route to match::
+
+  /not_name
 
 
 Segment variables and Paths
