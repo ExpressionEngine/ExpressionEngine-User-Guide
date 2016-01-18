@@ -13,4 +13,4 @@ Add-Ons
 Additional Downloadable Add-ons
 ===============================
 
-:doc:`/add-ons/downloadable_add-ons/index`
+:doc:`/add-ons/downloadable_add-ons`

@@ -30,18 +30,18 @@ Allows ExpressionEngine code to be used in entries. This add-on should be used
 with extreme caution, if at all. Ask yourself if you should really be putting
 tags inside content. If you are confident the answer is yes, here you go!
 
-`Releases <https://github.com/EllisLab/Allow-Eecode/releases>`_
+`Releases <https://github.com/EllisLab/Allow-Eecode>`_
 
 Auto Linker
 -----------
 
 Automatically creates links from URLs and/or email addresses contained within the given text.
 
-`Releases <https://github.com/EllisLab/Auto-Linker/releases>`_
+`Releases <https://github.com/EllisLab/Auto-Linker>`_
 
 Char Limit
 ----------
-`Releases <https://github.com/EllisLab/Char-Limit/releases>`_
+`Releases <https://github.com/EllisLab/Char-Limit>`_
 
 
 Cron
@@ -52,7 +52,7 @@ Unlike a true server cron that can be scheduled to the second, it is triggered
 by hits to the page that includes your cron tag. It should be used on templates
 that get regular traffic, or that are themselves accessed by a server cron.
 
-`Releases <https://github.com/EllisLab/Cron/releases>`_
+`Releases <https://github.com/EllisLab/Cron>`_
 
 Cron Blacklist
 --------------
@@ -60,7 +60,7 @@ Cron Blacklist
 For use with the Cron add-on.  This add-on downloads the ExpressionEngine.com
 Blacklist and appends it to the site's current Blacklist.
 
-`Releases <https://github.com/EllisLab/Cron-Blacklist/releases>`_
+`Releases <https://github.com/EllisLab/Cron-Blacklist>`_
 
 
 Cron Clean Cache
@@ -68,7 +68,7 @@ Cron Clean Cache
 
 For use with the Cron add-on.  Automatically clean out a directory located in
 the /user/cache/ directory of your ExpressionEngine site.
-`Releases <https://github.com/EllisLab/Cron-Clean-Cache/releases>`_
+`Releases <https://github.com/EllisLab/Cron-Clean-Cache>`_
 
 
 Cron Email
@@ -77,19 +77,19 @@ Cron Email
 For use with the Cron add-on.  Allows you to schedule the sending of an email
 to the email addresses specified in the parameters.
 
-`Releases <https://github.com/EllisLab/Cron-Email/releases>`_
+`Releases <https://github.com/EllisLab/Cron-Email>`_
 
 
 Css Switcher
 ------------
 
 The CSS Switcher plugin is a simple way to allow skinning on a CSS formatted site.
-`Releases <https://github.com/EllisLab/Css-Switcher/releases>`_
+`Releases <https://github.com/EllisLab/Css-Switcher>`_
 
 Duplicate Email Check
 ---------------------
 
-`Releases <https://github.com/EllisLab/Duplicate-Email-Check/releases>`_
+`Releases <https://github.com/EllisLab/Duplicate-Email-Check>`_
 
 
 HTML Attribute Content
@@ -98,7 +98,7 @@ HTML Attribute Content
 HTML Attribute Content takes a string and preps it for use inside HTML tag attributes.
 You might find this handy when using content inside attributes of certain tags,
 like `<meta>` tags used by `Twitter Cards<https://dev.twitter.com/docs/cards>_`.
-`Releases <https://github.com/EllisLab/HTML-Attribute-Content/releases>`_
+`Releases <https://github.com/EllisLab/HTML-Attribute-Content>`_
 
 
 Kanban Board
@@ -113,7 +113,7 @@ This add-on creates HTML lists from plain text data, and optionally accepts user
 delimiters.
 
 
-`Releases <https://github.com/EllisLab/List-Maker/releases>`_
+`Releases <https://github.com/EllisLab/List-Maker>`_
 
 
 No Follow
@@ -121,7 +121,7 @@ No Follow
 
 Looks for hyperlinks in the text and adds rel="nofollow" attribute to them
 
-`Releases <https://github.com/EllisLab/No-Follow/releases>`_
+`Releases <https://github.com/EllisLab/No-Follow>`_
 
 No Formatting
 -------------
@@ -132,7 +132,7 @@ It is useful when selected as a formatting option for third party add-ons that
 allow formatting selections and do not include an option for "no formatting"
 
 
-`Releases <https://github.com/EllisLab/No-Formatting/releases>`_
+`Releases <https://github.com/EllisLab/No-Formatting>`_
 
 
 Parse Url
@@ -140,19 +140,19 @@ Parse Url
 
 Parses URL in a string and returns only specified parts.
 
-`Releases <https://github.com/EllisLab/Parse-Url/releases>`_
+`Releases <https://github.com/EllisLab/Parse-Url>`_
 
 Ptobr
 -----
 
 This add-on converts `<p>` tags to `<br />` tags.
 
-`Releases <https://github.com/EllisLab/Ptobr/releases>`_
+`Releases <https://github.com/EllisLab/Ptobr>`_
 
 Randomizer
 ----------
 
-`Releases <https://github.com/EllisLab/Randomizer/releases>`_
+`Releases <https://github.com/EllisLab/Randomizer>`_
 
 Reading Time
 ------------
@@ -166,7 +166,7 @@ Search Hilite
 Using a CSS class, this plugin will highlight the terms searched for whenever
 someone arrives at a template using various search engines.
 
-`Releases <https://github.com/EllisLab/Search-Hilite/releases>`_
+`Releases <https://github.com/EllisLab/Search-Hilite>`_
 
 Valid Url
 ---------
@@ -174,11 +174,14 @@ Valid Url
 Makes sure that a URL has a protocol, that ampersands are converted to entities,
 and all other characters are properly URL encoded.
 
-`Releases <https://github.com/EllisLab/Valid-Url/releases>`_
+`Releases <https://github.com/EllisLab/Valid-Url>`_
 
 Wiki
 ----
-`Releases <https://github.com/EllisLab/Wiki/releases>`_
+The ExpressionEngine Wiki Module provides a powerful `wiki <https://en.wikipedia.org/wiki/Wiki>`_ 
+that integrates seamlessly with ExpressionEngine.
+
+`Releases <https://github.com/EllisLab/Wiki>`_
 
 Wiki Toc
 --------
@@ -187,21 +190,21 @@ This add-on is used as a formatting option, typically with the ExpressionEngine 
 The add-on will format your article with your preferred formatting plugin, and create a table of contents
 		in place of your [TOC] tag, in the form of an HTML unordered list.
 
-`Releases <https://github.com/EllisLab/Wiki-Toc/releases>`_
+`Releases <https://github.com/EllisLab/Wiki-Toc>`_
 
 Word Limit
 ----------
 
 Permits you to limit the number of words in some text.
 
-`Releases <https://github.com/EllisLab/Word-Limit/releases>`_
+`Releases <https://github.com/EllisLab/Word-Limit>`_
 
 Word Safe
 ---------
 
 Prevents words from being longer than a certain length
 
-`Releases <https://github.com/EllisLab/Word-Safe/releases>`_
+`Releases <https://github.com/EllisLab/Word-Safe>`_
 
 World Weather
 -------------
@@ -212,9 +215,9 @@ generated by a nationwide network of weather reporting station that are usually
 located at airports. These stations generally report weather conditions every
 three to six hours and the information that is reported (or not reported) can vary from station to station.
 
-`Releases <https://github.com/EllisLab/World-Weather/releases>`_
+`Releases <https://github.com/EllisLab/World-Weather>`_
 
-Xhtml
+XHTML
 -----
 
 This add-on converts certain characters into typographically correct entities.
@@ -223,7 +226,7 @@ Quotes are converted to curly quotes, hyphens into em-dashes, three periods into
 
 There are two ways to use this plugin depending on whether you want line breaks turned into `<p>` tags.
 
-`Releases <https://github.com/EllisLab/Xhtml/releases>`_
+`Releases <https://github.com/EllisLab/Xhtml>`_
 
 
 **********
