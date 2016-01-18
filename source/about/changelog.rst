@@ -57,6 +57,8 @@ Release Date: January 18, 2016
 - Fixed a bug (#21462) for PHP 5.3 which would lead to a fatal ``Using $this when not in object context...`` error. Time to upgrade PHP!
 - Fixed a bug where stop word removal in the search module was not UTF-8 compatible. Zaro Ağa is no longer Zaro Ğ.
 - Fixed an obscure URI detection bug that could lead to duplicate content duplicate content.
+- Fixed a bug in Template Routes where it was ignoring the "Require all Segments" setting.
+- Renamed Template Route's "Require all Segments" setting to "Require all Variables" to match its behavior.
 
 - Developers:
 
