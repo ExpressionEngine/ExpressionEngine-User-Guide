@@ -232,7 +232,6 @@ Neither setting would allow the route to match::
 
   /not_name
 
-
 Segment variables and Paths
 ---------------------------
 
