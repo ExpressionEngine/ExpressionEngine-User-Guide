@@ -206,8 +206,8 @@ be inside a named capturing group, for example::
 
 .. note:: Regular expression matches are performed case insensitively
 
-Require all Segments
-~~~~~~~~~~~~~~~~~~~~
+Require all Variables
+~~~~~~~~~~~~~~~~~~~~~
 
 If set to "yes" all segments defined in your Template Route must be
 contained in a URL in order for it to match. For example in this
@@ -215,8 +215,8 @@ Template Route::
 
   /name/{first_name}/{last_name}/{suffix}
 
-If "Require all Segments" is set to "No" (the default) then all of the
-following URLs will match::
+If "Require all Variables" is set to "No" (the default) then only static segments 
+are required.  Thus all of the following URLs will match::
 
   /name/Enrico/Fermi/III
 
@@ -226,8 +226,11 @@ following URLs will match::
 
   /name
 
-Otherwise if all segments are required only the first URL will match.
+If all segments are required only the first URL will match.
 
+Neither setting would allow this route to match::
+
+  /not_name
 
 Segment variables and Paths
 ---------------------------

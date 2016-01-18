@@ -52,6 +52,41 @@ update_comment_additional
 Frontend Comment Hooks (mod.comment.php)
 ****************************************
 
+comment_entries_query_result
+----------------------------
+
+.. function:: comment_entries_query_result($results)
+
+  Take the result of the query that gathers the data to display in the Comment Entries tag and modify it.
+
+  How it's called::
+
+    $results = ee()->extensions->call('comment_entries_query_result', $results);
+    if (ee()->extensions->end_script === TRUE) return ee()->TMPL->tagdata;
+
+  :param array $results: Database result array
+  :returns: Modified ``$results``
+  :rtype: Array
+
+  .. versionadded:: 3.1.0
+
+comment_entries_comment_ids_query
+---------------------------------
+
+.. function:: comment_entries_comment_ids_query($db)
+
+  Take the database query object that is building the query to gather IDs for comments to be shown via the Comment Entries tag and manipulate it with your own ``->where()`` clauses. No need to return the object after use.
+
+  How it's called::
+
+    ee()->extensions->call('comment_entries_comment_ids_query', ee()->db);
+    if (ee()->extensions->end_script === TRUE) return ee()->TMPL->tagdata;
+
+  :param Database object $db: Query builder instance for the comment IDs query
+  :rtype: Void
+
+  .. versionadded:: 3.1.0
+
 comment_entries_comment_format
 ------------------------------
 

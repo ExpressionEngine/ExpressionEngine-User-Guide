@@ -173,7 +173,7 @@ Alert Object Methods
 
 .. method:: defer()
 
-  Defers rendering and displaying of the alert until the next CP request.
+  Defers rendering and displaying of the alert until the next control panel request.
 
   :returns: $this
   :rtype: Alert

@@ -1,90 +1,64 @@
-***********************************
-ExpressionEngine 3.0 Module Changes
-***********************************
+**************
+Module Changes
+**************
 
 .. highlight:: php
 
-In addition to the :doc:`syntax changes <syntax>` already discussed, modules
-require some fundamental alterations to the control panel file. A new
-:doc:`addon.setup.php </development/addon_setup_php_file>` file has been
-introduced.
+Most of the changes to modules in ExpressionEngine 3 will be in the control panel
+files. All parsing code should be backwards compatible.
 
 A fictional Fortune Cookies module is used in the following examples.
 
 .. contents::
   :local:
+  :depth: 1
 
 3.0 Module Overview
 ===================
 
-Basic file structure
---------------------
+The module changes in ExpressionEngine 3 are mostly related to the control panel
+redesign. Your parsing code should remain identical, which means you can focus
+just on updating the control panel.
 
-The typical file structure for a third party module that employs a
-control panel should look like:
+New URL Logic
+-------------
 
-- ``system/user/addons/package_name/``
+The Control Panel URLs for your module follow the pattern::
 
-  - ``system/user/addons/package_name/addon.setup.php``
-    (metadata file)
-  - ``system/user/addons/package_name/mcp.package_name.php``
-    (control panel file)
-  - ``system/user/addons/package_name/mod.package_name.php``
-    (front end file)
-  - ``system/user/addons/package_name/upd.package_name.php``
-    (installation, uninstall and updates)
-  - ``system/user/addons/package_name/View/`` (contains all
-    views)
+  addons/settings/package_name/method_name/arguments
 
-      - ``system/user/addons/package_name/View/index.php``
-      - ``system/user/addons/package_name/View/another_page.php``
+For example, if we had a fortune cookie module with a method to list our cookies
+its URL might be::
 
-  - ``system/user/addons/package_name/language/english/package_name_lang.php``
+  addons/settings/fortune_cookie/cookies
 
-.. note:: It is recommended to put a placeholder index.html file in any
-  of your folders.
+Like 2.x the routing is automatic; all public methods in your ``mcp.package_name.php``
+are automatically routed. We will also pass any arguments to your method found in the url.
+For this URL::
 
-URL Logic
----------
+  addons/settings/fortune_cookie/edit_cookie/3
 
-The Control Panel URLs for your module follow the pattern
-``addons/settings/package_name/method_name/arguments``. For example, if we had
-a fortune cookie module with a view for list our cookies its URL would be
-``addons/settings/fortune_cookie/cookies``. Like 2.x the routing is automatic;
-all public methods in your ``mcp.package_name.php`` are automatically routed.
-We will also pass any arguments to your method found in the url. If the URL is
-``addons/settings/fortune_cookie/edit_cookie/3`` we would need to have the
-following method signature::
+We would need to have the following method signature::
 
   public function edit_cookie($id) {...}
 
-The ``addon.setup.php`` File
-============================
 
-With 3.0 we are introducing a new metadata provider file named
-``addon.setup.php``. It defines required and basic information about your
-add-on. It is a **required** file; if it is absent your add-on will be absent
-from the Add-On Manger.
-
-See :doc:`/development/addon_setup_php_file` for full documentation.
 
 Control Panel File (``mcp.package_name.php``)
 =============================================
 
-If your module does not have a control panel, you still need an mcp file
+If your module does not have a control panel, you still need an blank mcp file
 in the format::
 
-  <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+  <?php
 
   class Package_name_mcp
   {
       var $version = '1.0';
 
   }
-  /* END Class */
 
-  /* End of file mcp.package_name.php */
-  /* Location: ./system/system/user/addons/package_name/mcp.package_name.php */
+.. _module_mcp_output:
 
 Control Panel Output, Breadcrumbs, and Headings
 -----------------------------------------------
@@ -116,10 +90,12 @@ Example
 
 ::
 
+  $url = ee('CP/URL', 'addons/settings/fortune_cookie')->compile();
+
   return array(
     'body'       => ee('View')->make('fortune_cookie:index')->render($vars),
     'breadcrumb' => array(
-      ee('CP/URL', 'addons/settings/fortune_cookie')->compile() => lang('fortune_cookie_management')
+      $url => lang('fortune_cookie_management')
     ),
     'heading'  => lang('edit_fortune_cookie'),
   );
