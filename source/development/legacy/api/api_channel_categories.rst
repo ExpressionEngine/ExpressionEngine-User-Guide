@@ -16,7 +16,7 @@ Calling the Class
   function::
 
     ee()->load->library('api');
-    ee()->api->instantiate('channel_categories');
+    ee()->legacy_api->instantiate('channel_categories');
 
 Function Reference
 ------------------

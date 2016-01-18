@@ -10,12 +10,7 @@ CP/Table Service
 Overview
 --------
 
-Tables are the most common way to view and navigate data in the
-ExpressionEngine control panel. Since tables share a lot of common
-functionality, we've abstracted most of it out to a Table service to
-handle tasks such as displaying the table markup, and sorting and
-filtering tabular content. The Table service should handle most idioms
-covered in the `style-guide for tables <https://ellislab.com/style-guide/c/listings#tables-common>`_.
+Tables are the most common way to view and navigate data in the ExpressionEngine control panel. Since tables share a lot of common functionality, we've abstracted most of it out to a Table service to handle tasks such as displaying the table markup, and sorting and filtering tabular content. The Table service should handle most idioms covered in the :style_guide:`style-guide for tables <c/listings#tables-common>`.
 
 Below, we'll cover the steps needed to create a table from inside a
 controller.
@@ -176,12 +171,12 @@ to be consumed by a view, and then pass that data to our view::
   // Pass in a base URL to create sorting links
   $vars['table'] = $table->viewData(ee('CP/URL', 'channels'));
 
-  ee()->cp->render('channels/index', $vars);
+  return ee('View')->make('channels/index')->render($vars);
 
 In our view, we'll take the data and render the table markup by loading
 a shared view::
 
-  <?php $this->view('_shared/table', $table); ?>
+  <?php $this->embed('ee:_shared/table', $table); ?>
 
 Given what we've done so far, our table looks like this:
 
@@ -192,6 +187,11 @@ Table columns can have the following options set on them:
 +---------------------+--------------------------------------------------------+---------------------------+-----------------------------+
 |     Option name     |                Description                             |    Accepted values        |        Default value        |
 +=====================+========================================================+===========================+=============================+
+| **label**           | If you'd rather not specify the label has the options  | String                    | NULL                        |
+|                     | array's key as done above, you can specify it here.    |                           |                             |
+|                     | This would also allow columns to have the same label,  |                           |                             |
+|                     | if needed.                                             |                           |                             |
++---------------------+--------------------------------------------------------+---------------------------+-----------------------------+
 | **encode**          | Whether or not to encode and escape the content of the | ``TRUE`` or ``FALSE`` to  | ``TRUE``                    |
 |                     | cell to prevent markup or other code from executing on | enable or disable,        |                             |
 |                     | display. It's typically best practice when dynamic,    | respectively.             |                             |

@@ -100,16 +100,3 @@ This determines whether your Templates are saved to files
 in addition to the datbase, allowing easy editing via the
 editor of your choice. See :doc:`/templates/templates_as_files` for
 more information.
-
-Template directory
-~~~~~~~~~~~~~~~~~~
-
-This is the *server path* (not URL) to the folder that holds the
-Template files. A server path often looks similar to::
-
-	/home/usr/domain.com/system/expressionengine/templates/
-
-Server paths will vary from server to server, so you should contact your
-Host or server admin if you are unsure of what your setting should be.
-
-See :doc:`/templates/templates_as_files` for more information.

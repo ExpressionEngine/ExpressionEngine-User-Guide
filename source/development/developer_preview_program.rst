@@ -74,7 +74,6 @@ and encourage them to join!
 .. preview member snippet.
 
 - Aaron Walden
-- Adrian Macneil (Exp:resso)
 - Aidann Bowley (BridgingUnit)
 - Andrew Fairlie (Red Carrot)
 - Andrew Gunstone (Thirst Studios)

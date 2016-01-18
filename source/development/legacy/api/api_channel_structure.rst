@@ -15,7 +15,7 @@ Calling the Class
   The Channel Structure class is called with the ``api->instantiate()``
   function::
 
-    ee()->load->library('api'); ee()->api->instantiate('channel_structure');
+    ee()->load->library('api'); ee()->legacy_api->instantiate('channel_structure');
 
 Function Reference
 ------------------

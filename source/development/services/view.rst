@@ -80,14 +80,14 @@ Views can be rendered directly inside of another view. This is done using the
 All of the current view variables are automatically made available to the
 subview. You can optionally pass additional ones in the second parameter::
 
-  <p><?php $this->view('addon_name:sub/view', array('username' => $member->username)) ?></p>
+  <p><?php $this->embed('addon_name:sub/view', array('username' => $member->username)) ?></p>
 
 Notice that you do not need to echo the output of this method, it is added to
 the right place automatically.
 
 You can also disable features in a view, using the third parameter::
 
-  <p><?php $this->view('addon_name:sub/view', array(), 'figure') ?></p>
+  <p><?php $this->embed('addon_name:sub/view', array(), 'figure') ?></p>
 
 Extending Parent Views
 ----------------------

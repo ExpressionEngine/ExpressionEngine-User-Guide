@@ -85,15 +85,21 @@
 			<section class="row align-right fluid-fix">
 				<section class="w-12 fluid-col" id="docs-main">
 					<div class="box docs-wrap">
+						<nav class="ver-nav">
+							Switch to:
+							<a href="https://docs.expressionengine.com/latest/"><b>v3</b> (Latest)</a>
+							<a href="https://docs.expressionengine.com/v2/"><b>v2</b></a>
+							<a href="https://docs.expressionengine.com/v1/"><b>v1</b></a>
+						</nav>
 						<div class="docs-header">
 							<a class="small-menu" href="#docs-nav"></a>
 							<h1>{{ project }}&reg; User Guide</h1>
 							<form class="docs-download">
 								<select>
-									<option value="">&mdash;</option>
-									<option value="http://f1bf67d549f4bace9133-ade10a3daf314fd3c70740a7fe56076c.r0.cf1.rackcdn.com/EEDocs3.0.0.zip">Download 3.x User Guide</option>
-									<option value="http://f1bf67d549f4bace9133-ade10a3daf314fd3c70740a7fe56076c.r0.cf1.rackcdn.com/EEDocs2.10.1.zip">Download 2.x User Guide</option>
-									<option value="http://f1bf67d549f4bace9133-ade10a3daf314fd3c70740a7fe56076c.r0.cf1.rackcdn.com/EEDocs1.7.3.zip">Download 1.x User Guide</option>
+									<option value="">Download&hellip;</option>
+									<option value="https://docs.expressionengine.com/downloads/v3">Download v3 User Guide</option>
+									<option value="https://docs.expressionengine.com/downloads/v2">Download v2 User Guide</option>
+									<option value="https://docs.expressionengine.com/downloads/v1">Download v1 User Guide</option>
 								</select>
 							</form>
 							<script>
@@ -119,17 +125,15 @@
 								{%- endif %}
 							</ul>
 						</div>
+						<div id="content">
 						{{ body }}
-
-						{% if pagename not in exclude_comments -%}
-							<!-- {user_guide_comments} -->
-						{% endif %}
-
+						</div>
 					{%- endblock %}
 
 					{%- block footer %}
 						<div class="docs-footer">
-							<p>{{ project }}<b class="reg-mark">&reg;</b> {{ release }} User Guide<br><span>{{ copyright }}</span></p>
+							<p><a href="https://support.ellislab.com/bugs/new">Report a problem with this page</a><br>
+								{{ project }}<b class="reg-mark">&reg;</b> {{ release }} User Guide<br><span>{{ copyright }}</span></p>
 							<p><a class="scroll" href="#top"></a></p>
 						</div>
 					{%- endblock %}
@@ -139,13 +143,11 @@
 
 				<section class="w-4 fixed-col" id="docs-nav">
 					<div class="box docs-sidebar">
-						<form class="docs-search" method="get" action="https://www.google.com/search">
+						<form class="docs-search" method="get" action="https://docs.expressionengine.com/search/latest/">
 							<input type="text" name="q" id="q" placeholder="search eecms docs">
-							<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="{{ project_domain }}/user-guide/" />
 						</form>
 
 						{{ toctree(includehidden=True) }}
-						<!-- @todo organize and add table of contents -->
 					</div>
 				</section>
 			</section>

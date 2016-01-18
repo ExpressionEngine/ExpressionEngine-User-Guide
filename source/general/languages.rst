@@ -33,8 +33,8 @@ Installing a Language Pack
 Unzip the downloaded language pack, and you'll find a folder with the language
 name and translation files inside.
 
-Take that folder and upload it to ``system/expressionengine/language/`` on your
-server. (Use the ``english`` folder that's already there as a reference.)
+Take that folder and upload it to ``system/user/language/`` on your
+server.
 
 Setting the Default Language
 ----------------------------

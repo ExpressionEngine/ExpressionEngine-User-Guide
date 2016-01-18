@@ -93,7 +93,7 @@ Custom Rules
 ExpressionEngine allows you to create one-off validation rules on any
 validator object. This is done by calling the ``defineRule`` method::
 
-  $validator = ee('Validation');
+  $validator = ee('Validation')->make();
 
   $validator->defineRule('impossible', function($key, $value, $parameters)
   {

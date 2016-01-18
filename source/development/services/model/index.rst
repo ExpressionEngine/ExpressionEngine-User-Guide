@@ -96,6 +96,8 @@ To initiate an event, use the ``emit()`` method::
 
 Any additional arguments passed to emit, will be passed on to the event handler.
 
+.. _model_validation:
+
 Validation
 ----------
 

@@ -84,7 +84,6 @@ Release Date: January 18, 2016
     - Category
     - Comment
 
-
 Version 3.0.6
 -------------
 

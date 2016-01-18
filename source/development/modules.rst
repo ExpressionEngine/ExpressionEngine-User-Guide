@@ -1,5 +1,6 @@
+########################
 ExpressionEngine Modules
-========================
+########################
 
 .. todo:: Audit for 3.0
 
@@ -14,8 +15,9 @@ templates.
 
 .. highlight:: php
 
+********************
 Basic File Structure
---------------------
+********************
 
 Modules should be placed into the third_party folder in a package and
 be named after that package name. At a minimum, there are 4 required
@@ -46,8 +48,9 @@ files that may be useful for modules:
 With the possible exception of library files, file names and folders
 should be lower-case and contain no spaces.
 
+*************************************
 The Update file (upd.module_name.php)
--------------------------------------
+*************************************
 
 .. class:: Module_name_upd
 
@@ -62,11 +65,13 @@ The Update file (upd.module_name.php)
 
         var $version = '1.0';
 
+******************************
 Update File Function Reference
-------------------------------
+******************************
+
 
 install() *
-~~~~~~~~~~~
+===========
 
 .. method:: install()
 
@@ -112,7 +117,7 @@ install() *
   :rtype: Boolean
 
 update($current = '') *
-~~~~~~~~~~~~~~~~~~~~~~~
+=======================
 
 .. method:: update($current = '')
 
@@ -142,7 +147,7 @@ update($current = '') *
   :rtype: Boolean
 
 uninstall() *
-~~~~~~~~~~~~~
+=============
 
 .. method:: uninstall()
 
@@ -162,7 +167,7 @@ uninstall() *
   :rtype: Boolean
 
 tabs()
-~~~~~~
+======
 
 .. method:: tabs()
 
@@ -196,8 +201,9 @@ tabs()
   :returns: Associative array of the tab name and tab fields
   :rtype: Array
 
+****************************************
 The Language File (module_name_lang.php)
-----------------------------------------
+****************************************
 
 The Language file contains an array named ``$lang``, which is used along
 with the Language class to display text on a page in whatever language
@@ -221,7 +227,7 @@ description of the module to be viewable on the MODULES page::
   );
 
 module tab label
-~~~~~~~~~~~~~~~~
+================
 
 In addition to the two required fields you can have a custom tab label
 for your publish fields. Just assign the desired label to a key which
@@ -238,8 +244,9 @@ shares the name of your module name::
 
     'module_name' => 'Tab label'
 
+**********************************
 The Tab File (tab.module_name.php)
-----------------------------------
+**********************************
 
 .. class:: Module_name_tab
 
@@ -257,16 +264,17 @@ The Tab File (tab.module_name.php)
     to include the ``tabs()`` function in the update file, and use it
     when updating custom layouts on installation and uninstallation.
 
+***************************
 Tab File Function Reference
----------------------------
+***************************
 
 display($channel_id, $entry_id = '') *
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+======================================
 
 .. method:: display($channel_id[, $entry_id = ''])
 
   This function creates the fields that will be displayed on the publish
-  page. It must return ``$settings``, a multidimensional associative array
+  page. It must return ``$settings``, an associative array
   specifying the display settings and values associated with each of
   your fields.
 
@@ -279,23 +287,25 @@ display($channel_id, $entry_id = '') *
   The settings array elements::
 
     Array(
-      'field_id'              => '...', // name of the field
-      'field_label'           => '...', // field label, typically a language variable is used here
-      'field_required'        => '...', // whether to include the 'required' class next to the field label: y/n
-      'field_data'            => '...', // current data, if applicable
-      'field_list_items'      => '...', // array of options, otherwise empty string
-      'options'               => '...', // array of options, otherwise empty string
-      'selected'              => '...', // selected value if applicable to the field_type
-      'field_fmt'             => '...', // allowed field format options, if applicable
-      'field_instructions'    => '...', // instructions to be displayed for this field on the publish page
-      'field_show_fmt'        => '...', // whether the field format dropdown shows: y/n. Note: if 'y', you must specify the options available in field_fmt
-      'field_pre_populate'    => '...', // can pre-populate a field when it's a new entry
-      'field_text_direction'  => '...', // direction of the text: ltr/rtl
-      'field_type'            => '...'  // may be any existing field type
+      '...' => Array( // name of the field (same as 'field_id' below)
+        'field_id'              => '...', // name of the field
+        'field_label'           => '...', // field label, typically a language variable is used here
+        'field_required'        => '...', // whether to include the 'required' class next to the field label: y/n
+        'field_data'            => '...', // current data, if applicable
+        'field_list_items'      => '...', // array of options, otherwise empty string
+        'options'               => '...', // array of options, otherwise empty string
+        'selected'              => '...', // selected value if applicable to the field_type
+        'field_fmt'             => '...', // allowed field format options, if applicable
+        'field_instructions'    => '...', // instructions to be displayed for this field on the publish page
+        'field_show_fmt'        => '...', // whether the field format dropdown shows: y/n. Note: if 'y', you must specify the options available in field_fmt
+        'field_pre_populate'    => '...', // can pre-populate a field when it's a new entry
+        'field_text_direction'  => '...', // direction of the text: ltr/rtl
+        'field_type'            => '...'  // may be any existing field type
+      )
     )
 
 validate($entry, $values) *
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================
 
 .. method:: validate($entry, $values)
 
@@ -322,7 +332,7 @@ validate($entry, $values) *
   :rtype: EllisLab\ExpressionEngine\Service\Validation\Result
 
 save($entry, $values) *
-~~~~~~~~~~~~~~~~~~~~~~~
+=======================
 
 .. method:: save($entry, $values)
 
@@ -353,7 +363,7 @@ save($entry, $values) *
   :rtype: Void
 
 delete($entry_ids) *
-~~~~~~~~~~~~~~~~~~~~
+====================
 
 .. method:: delete($entry_ids)
 
@@ -363,17 +373,13 @@ delete($entry_ids) *
   :param array $entry_ids: An indexed array of entry IDs that were deleted
   :rtype: Void
 
+********************************************
 The Control Panel File (mcp.module_name.php)
---------------------------------------------
+********************************************
 
 .. class:: Module_name_mcp
 
-  Used to create the backend control panel, it includes a class with a
-  name that is a combination of the package's name with a ``_mcp``
-  suffix. The first letter and only the first letter of the class name
-  should be capitalized. There are no required class variables. The
-  control panel file for a module without a backend control panel would
-  look like::
+  Used to create the backend control panel, it includes a class with a name that is a combination of the package's name with a ``_mcp`` suffix. The first letter and only the first letter of the class name should be capitalized. There are no required class variables. The control panel file for a module without a backend control panel would look like::
 
     <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
@@ -386,71 +392,65 @@ The Control Panel File (mcp.module_name.php)
     /* Location: ./system/user/addons/modules/module_name/mcp.module_name.php */
 
 Control Panel URLS
-~~~~~~~~~~~~~~~~~~
+==================
 
-If your module does have a backend, the url logic is very easy for a
-human to parse. For example::
+The Control Panel URLs for your module follow the pattern ``addons/settings/package_name/method_name/arguments``. For example, if we had a fortune cookie module with a view for list our cookies its URL would be ``addons/settings/fortune_cookie/cookies``. Like 2.x the routing is automatic; all public methods in your ``mcp.package_name.php`` are automatically routed. We will also pass any arguments to your method found in the url. If the URL is ``addons/settings/fortune_cookie/edit_cookie/3`` we would need to have the following method signature::
 
-  C=addons_modules&M=show_module_cp&module=module_name&method=add_record.
+  public function edit_cookie($id) {...}
 
-``C=addons_modules``
-  ``C`` represents the ``controller``, all of which are located in
-  ``expressionengine/controllers/``. In this example, the controller is
-  ``addons_modules``. Controller names map directly to the urls.
-``M=show_module_cp``
-  ``M`` specifies the controller ``method``. In this case the
-  ``show_module_cp()`` method in the addons_modules controller.
-``module=module_name``
-  The module control panel---this is the name of your class, all lower
-  case.
-``method=add_record``
-  The ``method`` being called in the url maps directly to the method
-  name in your control panel file. There is no need to route them
-  manually.
+We have a :doc:`/development/services/url` to help you construct your URLs.
 
-Thus the above url would output whatever is returned by the
-``add_record()`` method in your ``Module_name_mcp`` class. If no method
-is specified, it will output the ``index()`` method by default.
+Output, Breadcrumbs, and Headings
+=================================
 
-Useful Control Panel Functions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+There are two ways to output your control panels. You may either return an HTML string, or you may return an associative array.
 
-While all of the libraries and helpers from CodeIgniter and
-ExpressionEngine (as well as your own libraries) are available, there
-are a few CP library functions that will typically be used in any
-control panel file:
+If you return a string that data will be used in the "body" section of the Control Panel layout inside our Add-On Manager. The breadcrumb will default to ``Add-On Manager / Your Add-On Name`` and the heading will default to ``Your Add-On Name Configuration``. In our fortune cookie module example we would have ``Add-On Manager / Fortune Cookies`` as the breadcrumb and ``Fortune Cookie Configuration`` as the heading.
 
-- Set the page title, which is also displayed in the breadcrumb. Any
-  displayed control panel page should include a title::
+If you return an associative array it must contain the key ``body`` and may contain the keys ``breadcrumb``, and ``heading``::
 
-    ee()->view->cp_page_title = lang('mymodule_module_name');
+  return array(
+    'body'       => $html,
+    'breadcrumb' => array(
+      ee('CP/URL')->make('addons/settings/module_name')->compile() => lang('module_name')
+    ),
+    'heading' => lang('module_name_settings')
+  );
 
-- For interior pages, you will want to add to the breadcrumb, allowing
-  easy navigation back to your main page::
+- ``body`` (string): HTML string which will be used in the "body" section of the Control Panel layout inside the Add-On manager
+- ``breadcrumb`` (array): Associative array containing key/value pairs where the key is the :doc:`CP/URL </development/services/url>` and the value is the string to display as the breadcrumb
+- ``heading`` (string): The string to display as the page ``<title>`` and the :style_guide:`Section Header <c/structure#section-header>`
 
-    ee()->cp->set_breadcrumb(
-        BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name',
-        lang('mymodule_module_name')
-    );
+If your add-on needs a :style_guide:`sidebar <c/structure#content-box-sidebar>` use the :doc:`Sidebar Service </development/services/sidebar>`.
 
-- If your module backend has multiple pages, you may want to create
-  fourth level navigation. This is easily done in the constructor using
-  the ``set_right_nav()`` function::
+ee()->cp->header
+----------------
 
-    ee()->cp->set_right_nav(array(
-        'add_record'        => BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name'.AMP.'method=add_record'
-    ));
+This variable allows you to further customize your :style_guide:`Section Header <c/structure#section-header>` by defining a search box and/or :style_guide:`Section settings <c/structure#section-settings>`, and potentially overriding the ``heading``.
+
+Within your control panel method, or potentially the constructor, just set ``ee()->cp->header``::
+
+  ee()->cp->header = array(
+    'title' => lang('template_manager'),
+    'form_url' => ee('CP/URL')->make('design/template/search', array('return' => $return)),
+    'toolbar_items' => array(
+      'settings' => array(
+        'href' => ee('CP/URL')->make('settings/template'),
+        'title' => lang('settings')
+      ),
+    ),
+    'search_button_value' => lang('search_templates')
+  );
+
+- ``title`` (string): The string to display as the :style_guide:`Section Header <c/structure#section-header>`
+- ``form_url`` (string): The form action for the :style_guide:`Section Header <c/structure#section-header>` search form. The ``name`` of the text input is ``search``.
+- ``search_button_value`` (string): By default, we'll use the word "Search" for the :style_guide:`Section Header <c/structure#section-header>` search form's button, but you can define a different wording here.
+- ``toolbar_items`` (array): An associative array of :style_guide:`buttons <c/structure#section-settings>` to go in front of the title. The key will define the class and provide an icon (e.g. ``settings`` and ``download``), and the value is another associative array containing the ``href`` and the ``title`` of the link.
 
 Javascript
-~~~~~~~~~~
+==========
 
-While it is preferable that your module work for users who disable
-javascript, you may well want to provide increased functionality for the
-majority of users who don't. ExpressionEngine 2.x includes both its own
-JavaScript library as well as the `The jQuery <http://jquery.com/>`_
-JavaScript library, enabling developers to easily include JavaScript
-enhancements. It is worth noting some 'best practices' when using
-JavaScript in your control panel:
+ExpressionEngine includes both its own JavaScript library as well as the `The jQuery <http://jquery.com/>`_ JavaScript library, enabling developers to easily include JavaScript enhancements. It is worth noting some 'best practices' when using JavaScript in your control panel:
 
 - Loading jQuery plugins::
 
@@ -466,45 +466,34 @@ JavaScript in your control panel:
     ee()->javascript->compile();
 
 Working with Forms
-~~~~~~~~~~~~~~~~~~
+==================
 
-While creating forms for the backend is fairly routine, there are
-several differences/additions worth noting:
+While creating forms for the backend is fairly routine, there are several differences/additions worth noting:
 
-- The :doc:`Form Validation library </development/legacy/libraries/form_validation>` is the
-  best means of checking submitted form data and returning in-line
-  errors in the case of failed validation.
-- After form submission, you will generally want to output a success
-  (or failure) message and redirect to a new page::
-
-    ee()->session->set_flashdata('message_success', lang('record_added'));
-    ee()->functions->redirect(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=module_name');
+- The :doc:`Form Validation library </development/legacy/libraries/form_validation>` is available, but the best means of checking submitted form data and returning in-line errors is to either use :ref:`Model Validation <model_validation>` or the :doc:`/development/services/validation`.
+- After form submission, you will generally want to output a success (or failure) message using the :doc:`/development/services/alert`.
 
 Outputting Pages
-~~~~~~~~~~~~~~~~
+================
 
-There are two ways to output content to the screen. For very simple
-pages, you may want to simply return the desired output in a string. Any
-string that the method returns is placed inside the cp page's content
-container. With all but the simplest of output, the use of View files
-will be the preferred method for handling your markup and presentation.
+There are two ways to output content to the screen. For very simple pages, you may want to simply return the desired output in a string. Any string that the method returns is placed inside the cp page's content container. With all but the simplest of output, the use of View files will be the preferred method for handling your markup and presentation.
 
+**********
 View Files
-----------
+**********
 
 While you aren't required to use views to create your backend pages,
 they are the most modular and easy to read, modify, and edit approach to
 building control panel pages. A view is simply an html page, or snippet
 of a page, with some minimal php used to output variables. The variables
-are passed to the view in an array when you load it. Setting the third
-parameter of the load call to true will return the view to you as a
-string::
+are passed to the view in an array when you make it::
 
-  return ee()->load->view('index', $vars, TRUE);
+  return ee('View')->make('module_name:index')->render($vars);
 
 This would return the index.php view page, located in a ``views``
 folder. The view file is passed an array with all of the variables used
-by the view, and those variables are simple 'plugged into' the html.
+by the view, and those variables are simple 'plugged into' the html. See the
+:doc:`/development/services/view` for more details.
 
 It is recommended that in view pages only, you use the :doc:`PHP's alternate
 syntax </development/guidelines/view_php_syntax>` in your views, as it makes
@@ -513,7 +502,7 @@ supported by your server, ExpressionEngine will automatically rewrite
 the tags.
 
 The Core Module File (mod.module_name.php)
-------------------------------------------
+==========================================
 
 .. class:: Module_name
 

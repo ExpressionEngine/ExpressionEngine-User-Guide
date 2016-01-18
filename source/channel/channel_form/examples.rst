@@ -70,8 +70,102 @@ More Complex Example
         <input type="submit" name="submit" value="Submit">
     {/exp:channel:form}
 
-Entry Form without using the {custom\_fields} loop
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Entry Form using the {custom_fields} loop
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+    {exp:channel:form channel="channel_name" return="channel_name/edit/ENTRY_ID" entry_id="{segment_3}"}
+
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+
+        <label for="url_title">URL Title</label>
+        <input type="text" name="url_title" id="url_title" value="{url_title}" maxlength="75" size="50">
+
+        {custom_fields}
+            <label for="{field_name}">{if required}* {/if}{field_label}</label>
+            {field_instructions}
+            {formatting_buttons}
+
+            {if error}
+              <p class="error">{error}</p>
+            {/if}
+
+
+            {if text}
+              <input type="text" dir="{text_direction}" id="{field_name}" name="{field_name}" value="{field_data}" maxlength="{maxlength}" size="50">
+            {/if}
+
+            {if grid}
+              {display_field}
+            {/if}
+
+            {if multiselect}
+              <select id="{field_name}" name="{field_name}[]" multiple="multiple">
+                {options}
+                  <option value="{option_value}"{selected}>{option_name}</option>
+                {/options}
+              </select>
+          {/if}
+
+        {/custom_fields}
+
+
+        <input type="submit" name="submit" value="Submit">
+    {/exp:channel:form}
+
+
+
+Entry Form using the {file:...} tag and inline errors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+	{exp:channel:form channel="products" return="form_template/ENTRY_ID" entry_id="{segment_2}" error_handling="inline"}
+
+		{if global_errors:count > 0 OR field_errors:count > 0}
+			<ul class="errors">
+				{global_errors}
+				<li>{error}</li>
+				{/global_errors}
+				{field_errors}
+				<li>{error}</li>
+				{/field_errors}
+			</ul>
+		{/if}
+
+		<label for="title">Title</label><div class="error">{error:my_field_name}</div>
+		<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+
+		<label for="url_title">URL Title</label><div class="error">{error:my_field_name}</div>
+		<input type="text" name="url_title" id="url_title" value="{url_title}" maxlength="75" size="50">
+
+		<label for="entry_date">Date</label>
+		<input type="text" name="entry_date" id="entry_date" value="{entry_date}" maxlength="23" size="25">
+
+		<label for="my_field_name">Your Custom Field (Text field)</label><div class="error">{error:my_field_name}</div>
+		{field:my_field_name}
+
+		<label for="my_field_name">Your Custom Field (Checkbox field)</label><div class="error">{error:my_field_name}</div>
+		{field:my_field_name}
+		
+		<label for="my_field_name">Your Custom Field (Grid field)</label><div class="error">{error:my_field_name}</div>	
+		{field:my_field_name}
+
+		<label for="my_field_name">Your 3rd Party WYSIWYG Field</label><div class="error">{error:my_field_name}</div>
+		{field:my_field_name}
+
+		<input type="submit" name="submit" value="Submit">
+	{/exp:channel:form}
+
+
+Entry Form using manually constructed fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Note the date fields will have the calendar JavaScript automatically applied 
+unless ``include_assets="no"``.
 
 ::
 
@@ -85,19 +179,80 @@ Entry Form without using the {custom\_fields} loop
 		<label for="entry_date">Date</label>
 		<input type="text" name="entry_date" id="entry_date" value="{entry_date}" maxlength="23" size="25">
 
-		<label for="my_field_name">Your Custom Field</label>
+		<label for="my_field_name">Your Custom Field (Date field)</label>
+		<input type="text" id="my_field_name" name="my_field_name" value="{my_field_name}" size="50">
+
+		<label for="my_field_name">Your Custom Field (Text field)</label>
 		<input type="text" name="my_field_name" id="my_field_name" value="{my_field_name}">
 
-		<label for="my_field_name">Your Custom Field (a field with options)</label>
+		<label for="my_field_name">Your Custom Field (Textarea field)</label>
+		<textarea name="my_field_name" id="my_field_name" cols="90" rows="10">{my_field_name}</textarea>
+
+		<label for="my_field_name">Your Custom Field (Select field)</label>
 		<select name="my_field_name">
 			{options:my_field_name}
 				<option value="{option_value}"{selected}>{option_name}</option>
 			{/options:my_field_name}
 		</select>
+		
+		<label for="my_field_name">Your Custom Field (Multi-Select field)</label>
+		<select name="my_field_name[]">
+			{options:my_field_name}
+				<option value="{option_value}"{selected}>{option_name}</option>
+			{/options:my_field_name}
+		</select>		
 
-		<label for="my_field_name">Your 3rd Party WYSIWYG Field</label> {field:my_field_name}
+		<label for="my_field_name">Your Custom Field (Checkbox field)</label>
+		{options:my_field_name}
+			<input type="checkbox" name="my_field_name[]" value="{option_value}" {checked}>  {option_name}</br>
+		{/options:my_field_name}
+		
+		<label for="my_field_name">Your Custom Field (Radio field)</label>
+		{options:my_field_name}
+			<input type="radio" name="my_field_name" value="{option_value}" {checked}>  {option_name}</br>
+		{/options:my_field_name}
+
 		<input type="submit" name="submit" value="Submit">
 	{/exp:channel:form}
+
+
+Entry Forms using manually constructed file field
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this example, the file directory is hard coded and the form is not editable, 
+as there is no way to replace an existing field's data when editing an existing 
+entry.
+
+::
+
+	{exp:channel:form channel="products" return="form_template/ENTRY_ID"}
+		<label for="title">Title</label>
+		<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+
+		{a_file}File name: {file_name}{/a_file}
+
+		<input type="file" name="my_field_name" />
+		<input type="hidden" name="my_field_name_directory" value="1" />
+
+		<input type="submit" name="submit" value="Submit">
+	{/exp:channel:form}
+
+
+	
+::
+
+	{exp:channel:form channel="products" return="form_template/ENTRY_ID"}
+		<label for="title">Title</label>
+		<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+
+		<input type="file" name="my_field_name" />
+		<input type="hidden" name="my_field_name_directory" value="1" />
+		<input type="hidden" name="my_field_name_hidden_file" value="{my_field_name}{file_name}{/my_field_name}" />
+
+		<input type="submit" name="submit" value="Submit">
+	{/exp:channel:form}	
+
+
 
 AJAX-driven Entry Form
 ~~~~~~~~~~~~~~~~~~~~~~

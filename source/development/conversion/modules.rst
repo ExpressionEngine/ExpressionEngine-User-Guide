@@ -82,7 +82,7 @@ keys and strings for the bodies. The header value will be added as the final
 segment in the breadcrumb.  The ``heading`` key should
 contain a string for use as the heading (i.e. ``Fortune Cookie Management``).
 
-If your add-on needs a `sidebar <https://ellislab.com/style-guide/c/structure#content-box-sidebar>`_
+If your add-on needs a :style_guide:`sidebar <c/structure#content-box-sidebar>`
 use the :doc:`Sidebar Service </development/services/sidebar>`.
 
 Example
@@ -106,7 +106,8 @@ Publish Tab File (``tab.package_name.php``)
 We have made a few changes to the Publish Tab API. We have renamed the methods
 we call within the class, and a few have changes to their parameters:
 
-  * ``publish_tabs()`` has been renamed to ``display()``.
+  * ``publish_tabs()`` has been renamed to ``display()`` and now returns an
+    associative array using the ``field_id`` as the key.
   * ``validate_publish()`` has been renamed to ``validate()``.  It is now passed
     two arguments (in order): a ``ChannelEntry`` instance and an associative
     array with field names as keys and form submission data as the value (i.e.
@@ -160,8 +161,8 @@ The Pagination Service
 ----------------------
 
 Adding pagination to the control panel is a common task and we created a
-pagination service to assist. This service follows our `style-guide
-<https://ellislab.com/style-guide/c/listings#pagination>`_ handling all the
+pagination service to assist. This service follows our :style_guide:`style-guide
+<c/listings#pagination>` handling all the
 mathematical calculations. All you need is the number of items you are going to
 paginate and a URL object::
 
@@ -174,10 +175,10 @@ See :doc:`/development/services/pagination` for full documentation.
 The CP/Alert Service
 --------------------
 
-Alerts are for providing feedback on an action and calling attention to warnings
-or errors. We describe, in detail, how to build different kinds of alerts in our
-`CP style-guide <https://ellislab.com/style-guide/c/alerts>`_. We have also created
-an Alert Service for creating alerts in your code. For example::
+Alerts are for providing feedback on an action and calling attention to
+warnings or errors. We describe, in detail, how to build different kinds
+of alerts in our :style_guide:`CP style-guide <c/alerts>`. We have also
+created an Alert Service for creating alerts in your code. For example::
 
   ee('CP/Alert')->makeInline('fortune-cookie-form')
 	->asIssue()

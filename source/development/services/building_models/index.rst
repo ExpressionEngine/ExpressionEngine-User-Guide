@@ -34,6 +34,7 @@ Model Skeleton
 All models **must** declare a primary key, a table name, and a set of properties.
 The basic skeleton looks as follows::
 
+  namespace My\Namespace\Model\MyModel\Model;
 
   use EllisLab\ExpressionEngine\Service\Model\Model;
 

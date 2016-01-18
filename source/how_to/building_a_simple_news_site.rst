@@ -93,8 +93,8 @@ set of Channel Fields. We'll discuss groups further in a bit.
 Creating a Channel Field Group
 ==============================
 
-#. Click *NEW* next to the *Category Groups* link in the left navigation to go directly to the :doc:`Create Field Group form</cp/channel/fields/groups/form>`.
-#. Let's be startlingly creative and name this group "News Fields".
+#. Click *NEW* next to the *Field Groups* link in the left navigation to go directly to the :doc:`Create Field Group form</cp/channel/fields/groups/form>`.
+#. Let's be startlingly creative and name this group "News".
 #. Click *Save Field Group* your new field group.
 
 You should see your new Channel Field Group:
