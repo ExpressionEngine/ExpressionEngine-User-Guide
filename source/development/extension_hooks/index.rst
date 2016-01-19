@@ -36,6 +36,16 @@ Control Panel
 
   cp/*/index
 
+******
+Models
+******
+
+.. toctree::
+  :maxdepth: 1
+  :glob:
+  
+  model/*/index
+
 *******
 Modules
 *******

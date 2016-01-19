@@ -1,9 +1,9 @@
 Saving Templates as Text Files
 ==============================
 
-ExpressionEngine supports saving Template Groups and Templates as
-regular folders and files on your server, so that you can use your
-preferred text editor (e.g. Dreamweaver, Coda, BBEdit, etc.) to edit
+ExpressionEngine supports saving Template Groups, Templates, Global Variable, and
+Template Partials as regular folders and files on your server, so that you can
+use your preferred text editor (e.g. Dreamweaver, Coda, BBEdit, etc.) to edit
 Templates and then FTP the changes to the server.
 
 -  Template Group folder names must end with *.group* and the preceding
@@ -22,61 +22,42 @@ Templates and then FTP the changes to the server.
 Enabling Saving Templates as Files
 ----------------------------------
 
-From the Control Panel, go to :menuselection:`Settings --> Template Settings` and
-set **Allow templates to be saved as files?** to *Yes*.
+All templates will be saved to the ``system/user/templates`` directory.
 
-.. note:: Your templates will be saved in ``system/user/templates``. Make the
-   folder writable by setting its permissions to 777 (or equivalent) so that
-   ExpressionEngine will be allowed to save the files as well as recreate your
-   Template_Group/Template structure.
+1. Set folder permissions
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Make the ``system/user/templates`` folder writable by setting its permissions to
+777 (or equivalent) so that ExpressionEngine will be allowed to save the files
+as well as recreate your Template\_Group/Template structure.
+
+2. Set Template Preferences
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+From the Control Panel, go to :menuselection:`Settings --> Template Settings`.
+
+#. Set **Allow templates to be saved as files?** to *Yes*.
 
 Creating and Synchronizing Templates and Files
 ----------------------------------------------
 
-Once your site is set up to save templates as text files, there are
-three ways to create templates and their related files.
+Once your site is set up to save templates as text files, the files and the
+database will be kept in sync automatically. An edited or newly created template
+file is synced when it is used in any way; this includes loading it on the frontend
+or opening it in the Template Editor.
 
-Creating Flat Files Via the Template Editor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. note:: The templates are kept in sync based on their edit date. If the
+   flat file has been edited more recently than the database, then its contents
+   will be copied to the database. Similarly, if the database version is newer
+   than the file, or a file does not exist, then the file will be written from
+   the information in the database.
 
-If saving templates as text files is enabled, you will see a new
-checkbox become available at the bottom of your :doc:`Template editing
-page </cp/design/template/edit>`. When you submit your
-template with the box checked, the Template will be saved as a file (in
-addition to updating the database).
-
-.. note:: The template edit page will load the latest version of the
-   template based on edit date. If the flat file has been edited since
-   the last database version was saved, the editor will load the content
-   from the file rather than the database. The editor will indicate
-   whether the content was loaded from the database of the flat file.
-   If the editor loads from file, until you click "save", the database
-   will still contain the last (outdated) version you saved via the
-   Control Panel.
-
-Creating Templates Via Flat Files
+Deleting Templates Saved as Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you load the :doc:`Template Manager </cp/design/index>` ExpressionEngine
-automatically searches your template directory and creates new template groups
-and templates for any appropriately named files and folders that do not already
-have an associated template. automatically searches your template directory and
-creates new template groups and templates for any appropriately named files and
-folders that do not already have an associated template. >>>>>>> Fixing some
-doc links
-
-.. note:: In order to edit flat files through the control panel and have
-   new files automatically synced to the database, text files must be
-   writable (file permissions set to 666 or equivalent).
-
-Running your Site with Flat File Templates
-------------------------------------------
-
-If a file exists for a template flagged to save templates as text files,
-ExpressionEngine will use the file version of the Template instead of
-the database whenever your pages are viewed. Because ExpressionEngine is
-using the file version, you can then use an external editor to make
-changes to the file without using the Control Panel.
+Templates can only be deleted in the :doc:`Template Manager </cp/design/index>`.
+Deleting a template file will not remove it from the database and the file will
+be recreated the next time that database entry is seen.
 
 Saved Templates and the Multiple Site Manager
 ---------------------------------------------

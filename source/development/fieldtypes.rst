@@ -45,6 +45,8 @@ $info array with a name and version number.
   /* End of file ft.google_maps.php */
   /* Location: ./system/user/addons/google_maps/ft.google_maps.php */
 
+.. note:: All add-ons are required to have an :doc:`addon.setup.php file <addon_setup_php_file>`. This is where Fieldtypes can declare their compatibility with other Fieldtypes.
+
 *********************
 Example - Google Maps
 *********************
@@ -120,6 +122,8 @@ everything can be changed.
   {
       return array_merge($this->settings, $_POST);
   }
+
+.. _fieldtype_settings:
 
 Individual Settings
 ===================

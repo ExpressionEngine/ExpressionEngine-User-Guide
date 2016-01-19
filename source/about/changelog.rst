@@ -5,6 +5,85 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.1.0
+-------------
+
+Release Date: January 18, 2016
+
+- Compatible with PHP 7 and MySQL 5.7
+- Snippets and Global Variables can now be saved as files.
+- Added the ability to manage categories from the Channel entry publish form.
+- CodeMirror textareas (think Templates) are now resizable.
+- Channel entries now default sort by entry date with the newest at the top.
+- New member groups default to allowing online website access.
+- Updated language in the installer to identify the directory that needs to be deleted if we can't automatically rename the installer directory.
+- Template groups can be reordered in the sidebar again.
+- Removed duplicate queries when displaying multiple relationship fields on the publish form.
+- Changed File listing to sort by date by default.
+- Changed Add-on listings so the add-on name always links to the module control panel or settings if they exist.
+- Changed wording of File field button on Publish page.
+- Fixed a bug where the Filepicker could run out of memory.
+- Fixed a bug where ``load_package_js`` did not work on fieldtype publish pages.
+- Fixed a bug where validation did not work consistently on some numeric types.
+- Fixed a bug (#21255) where the "Assign category parents?" setting had no effect.
+- Fixed a bug where the JavaScript for the Rich Tech Editor could not be loaded on the front-end.
+- Fixed a bug (#21118) where custom member fields could not be populated.
+- Fixed a bug (#21309) where custom member fields could not be rendered in a template.
+- Fixed a bug where a PHP error would appear in the control panel if the `cp_css_end` hook was active.
+- Fixed a bug where using the `logged_out_member_id=` parameter on Channel Form would throw an exception for logged-out users.
+- Fixed a bug where duplicating a template group would not reset the hit counts for those templates or copy template permissions.
+- Fixed a bug where new installs may be tracking template hits despite the setting appearing disabled.
+- Fixed a bug (#21157) where files sizes could not be less than 1MB.
+- Fixed a bug where bulk action checkboxes failed to work in the Entry Manager after searching.
+- Fixed a bug (#21104) where add-ons with mutliple fieldtypes couldn't use their fieldtypes.
+- Fixed a bug where the installer wouldn't automatically rename if you still had the mailing list export in your cache.
+- Fixed a bug (24518) where file uploads did not work in the Channel form.
+- Fixed a bug (21442) in the Channel form where PHP errors occurred when editing an entry with a file.
+- Fixed a bug in the Channel form where PHP errors could occur when submitting an entry with no category assigned.
+- Fixed a bug where CAPTCHA was not working properly on the Channel form.
+- Fixed a bug where ENTRY_ID was not properly replaced on return after submitting the Channel form.
+- Fixed a bug where the default status was not being used by the Channel form.
+- Fixed a bug where new sites could not be created via the Site Manager.
+- Fixed a bug (#21491) where the Grid model's cache could not be cleared on subsequent data queries.
+- Fixed a bug (#21464) where removing a file didn't remove it's manipulated copies. It's hard saying good-bye.
+- Fixed a bug (#21482) where templates were jealous and refused to show you their previous revisions.
+- Fixed a bug (#21472) where checkboxes, radio buttons, and multiselect fieldtypes didn't pay attention when given their menu options on create.
+- Fixed a bug where adding category groups to a channel that had a layout wouldn't let you move that category group in the layout.
+- Fixed a bug (#21490) where "Populate the menu from another channel field" option in Channel Fields forgot which field you wanted to use.
+- Fixed some language keys.
+- Fixed a PHP warning when editing the Developer Forum theme templates.
+- Fixed a bug where a duplicated Grid column would create two copies when duplicated.
+- Fixed a Markdown bug with URLs that contain spaces when using Safe HTML.
+- Fixed a bug (#21462) for PHP 5.3 which would lead to a fatal ``Using $this when not in object context...`` error. Time to upgrade PHP!
+- Fixed a bug where stop word removal in the search module was not UTF-8 compatible. Zaro Ağa is no longer Zaro Ğ.
+- Fixed an obscure URI detection bug that could lead to duplicate content duplicate content.
+- Fixed a bug in Template Routes where it was ignoring the "Require all Segments" setting.
+- Renamed Template Route's "Require all Segments" setting to "Require all Variables" to match its behavior.
+
+- Developers:
+
+  - Changed the event emitter to trigger subscriber events before manually bound ones
+  - Model events will no longer trigger if the described event does not take place (no ``onAfterSave`` if save is called on an unchanged model)
+  - Added ``less_than`` and ``greater_than`` validation rules
+  - ``string_override`` key in publish form tab definitions works again.
+  - Fixed a bug where asking a model query to return columns that didn't include the primary key would only return one result.
+  - Class names can now be set on fieldsets via the shared form attributes array.
+  - Fixed a bug in the legacy Addons library where incorrect paths would be returned from the `get_installed()` method.
+  - Fixed a bug where alerts that were deferred would not carry over their manually-set close/cannot close setting.
+  - Date fields with the date picker bound to them can set a custom date format via a `data-date-format` parameter on the text input.
+  - The date picker can be bound to a text input using `EE.cp.datePicker.bind(element)`.
+  - Added `comment_entries_query_result` hook for modifying the query result set for `{exp:comment:entries}`.
+  - Added `comment_entries_comment_ids_query` hook for modifying the query that selects the IDs for comments to display in `{exp:comment:entries}`.
+  - Added the ability for Folder List sidebars to be reordered.
+  - Added a pause and resume method to the form validation JS.
+  - Added: Channel Fields can now declare their compatibility type allowing editing of the type itself (i.e. RTE to Textarea).
+  - Added a number of hooks to the following models:
+
+    - Channel Entry
+    - Member
+    - Category
+    - Comment
+
 Version 3.0.6
 -------------
 
@@ -350,4 +429,3 @@ Release Date: October 13, 2015
 
     - ``cp_url()`` helper method, use ``ee('CP/URL')`` instead.
     - Extension's ``universal_call()``, use ``call()`` instead.
-

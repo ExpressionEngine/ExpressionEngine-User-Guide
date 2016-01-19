@@ -1,5 +1,5 @@
-Member Model Extension Hooks
-============================
+Legacy Member Model Extension Hooks
+===================================
 
 .. contents::
   :local:
@@ -76,7 +76,7 @@ member_update_end
 
 .. function:: member_update_end($member_id, $data)
 
-  Provides an opportunity for extra code to be executed immediately before the 
+  Provides an opportunity for extra code to be executed immediately before the
   update of the member data and member custom field data.
 
   How it's called::

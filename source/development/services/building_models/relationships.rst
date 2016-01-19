@@ -146,6 +146,8 @@ Picture it like a row of dominoes with the pivot in the center:
 
 **ThisModel**::``from_key``--``left``::**pivot**::``right``--``to_key``::**RelatedModel**
 
+.. _third_party_relationships:
+
 Inverse Relationships
 ---------------------
 

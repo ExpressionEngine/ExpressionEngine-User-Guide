@@ -274,7 +274,7 @@ display($channel_id, $entry_id = '') *
 .. method:: display($channel_id[, $entry_id = ''])
 
   This function creates the fields that will be displayed on the publish
-  page. It must return ``$settings``, a multidimensional associative array
+  page. It must return ``$settings``, an associative array
   specifying the display settings and values associated with each of
   your fields.
 
@@ -287,19 +287,21 @@ display($channel_id, $entry_id = '') *
   The settings array elements::
 
     Array(
-      'field_id'              => '...', // name of the field
-      'field_label'           => '...', // field label, typically a language variable is used here
-      'field_required'        => '...', // whether to include the 'required' class next to the field label: y/n
-      'field_data'            => '...', // current data, if applicable
-      'field_list_items'      => '...', // array of options, otherwise empty string
-      'options'               => '...', // array of options, otherwise empty string
-      'selected'              => '...', // selected value if applicable to the field_type
-      'field_fmt'             => '...', // allowed field format options, if applicable
-      'field_instructions'    => '...', // instructions to be displayed for this field on the publish page
-      'field_show_fmt'        => '...', // whether the field format dropdown shows: y/n. Note: if 'y', you must specify the options available in field_fmt
-      'field_pre_populate'    => '...', // can pre-populate a field when it's a new entry
-      'field_text_direction'  => '...', // direction of the text: ltr/rtl
-      'field_type'            => '...'  // may be any existing field type
+      '...' => Array( // name of the field (same as 'field_id' below)
+        'field_id'              => '...', // name of the field
+        'field_label'           => '...', // field label, typically a language variable is used here
+        'field_required'        => '...', // whether to include the 'required' class next to the field label: y/n
+        'field_data'            => '...', // current data, if applicable
+        'field_list_items'      => '...', // array of options, otherwise empty string
+        'options'               => '...', // array of options, otherwise empty string
+        'selected'              => '...', // selected value if applicable to the field_type
+        'field_fmt'             => '...', // allowed field format options, if applicable
+        'field_instructions'    => '...', // instructions to be displayed for this field on the publish page
+        'field_show_fmt'        => '...', // whether the field format dropdown shows: y/n. Note: if 'y', you must specify the options available in field_fmt
+        'field_pre_populate'    => '...', // can pre-populate a field when it's a new entry
+        'field_text_direction'  => '...', // direction of the text: ltr/rtl
+        'field_type'            => '...'  // may be any existing field type
+      )
     )
 
 validate($entry, $values) *
