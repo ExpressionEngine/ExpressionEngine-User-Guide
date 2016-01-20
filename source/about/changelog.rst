@@ -5,6 +5,20 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.1.1
+-------------
+
+Release Date: January 20, 2016
+
+- Fixed a bug (#21460) where interacting with a Relationship field's filter inside a new Grid row would cause an error on entry save.
+- Fixed a bug where the contact form could throw a PHP error.
+- Fixed a bug (#21507) where creating template groups with save as files would throw PHP errors.
+- Fixed a bug (#21512) where using the filepicker in the publish form could result in an "Invalid selection" error.
+- Fixed a bug where the filepicker for file fields forgot about the default modal view setting.
+- Fixed a bug (#21511) where the status filter on the Entry Manager ignored your selected channel.
+- Fixed a bug where Template Variables would not automatically sync from files.
+- Fixed a bug where the Metaweblog API errored when attempting to send or receive data.
+
 Version 3.1.0
 -------------
 
