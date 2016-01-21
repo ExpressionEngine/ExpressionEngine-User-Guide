@@ -123,9 +123,15 @@ thus::
 Custom Filters
 **************
 
-When none of the built-in filters will suit your needs, it's time for a custom filter. Using a custom filter is much like using one of the built-in ones in terms of how they behave, how the render, and how you fetch their values. With a custom filter you provide the options, control whether or not there is a custom text input, and what placeholder attribute to use.
+When none of the built-in filters will suit your needs, it's time for a custom
+filter. Using a custom filter is much like using one of the built-in ones in
+terms of how they behave, how the render, and how you fetch their values. With
+a custom filter you provide the options, control whether or not there is a
+custom text input, and what placeholder attribute to use.
 
-Making a new custom filter requires three pieces of information: the POST/GET variable name, the label name, and an associative array of options to be rendered::
+Making a new custom filter requires three pieces of information: the POST/GET
+variable name, the label name, and an associative array of options to be
+rendered::
 
   $categories = ee('Model')->get('Category')
     ->fields('cat_id', 'cat_name')
