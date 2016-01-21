@@ -8,7 +8,7 @@ Add-Ons
   :maxdepth: 1
 
   */index
-  */downloadable_add-ons
+  downloadable_add-ons
 
 Additional Downloadable Add-ons
 ===============================
