@@ -252,4 +252,4 @@ group and per channel basis. Since these custom layouts are saved as a
 serialized array in the database, any additions or deletions to publish
 page tabs and fields must be synced to any saved layouts. The control
 panel library provides 4 methods to facilitate custom layout updates.
-(See also :ref:`Module Tutorial: Update file. <module_update_file>`)
+(See also :ref:`tab-file-function-reference`)

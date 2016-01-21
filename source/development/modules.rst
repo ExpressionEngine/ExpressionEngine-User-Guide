@@ -264,6 +264,8 @@ The Tab File (tab.module_name.php)
     to include the ``tabs()`` function in the update file, and use it
     when updating custom layouts on installation and uninstallation.
 
+.. _tab-file-function-reference:
+
 ***************************
 Tab File Function Reference
 ***************************
