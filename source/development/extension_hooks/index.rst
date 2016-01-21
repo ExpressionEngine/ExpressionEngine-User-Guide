@@ -43,7 +43,7 @@ Models
 .. toctree::
   :maxdepth: 1
   :glob:
-  
+
   model/*/index
 
 *******
@@ -68,7 +68,6 @@ Modules
   cp/javascript/index
   cp/login/index
   cp/members/index
-  cp/menu/index
   cp/myaccount/index
   global/core/index
   global/email/index

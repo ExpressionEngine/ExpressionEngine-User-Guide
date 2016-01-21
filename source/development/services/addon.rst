@@ -76,42 +76,42 @@ Addon Object Methods
 
   Get the plugin or module class
 
-  :returns:The fqcn or $class
+  :returns: The fqcn or $class
   :rtype: String
 
 .. method:: getModuleClass()
 
   Get the module class
 
-  :returns:The fqcn or $class
+  :returns: The fqcn or $class
   :rtype: String
 
 .. method:: getPluginClass()
 
   Get the plugin class
 
-  :returns:The fqcn or $class
+  :returns: The fqcn or $class
   :rtype: String
 
 .. method:: getInstallerClass()
 
-  Get the *_upd class
+  Get the ``*_upd`` class
 
-  :returns:The fqcn or $class
+  :returns: The fqcn or $class
   :rtype: String
 
 .. method:: getControlPanelClass()
 
-  Get the *_mcp class
+  Get the ``*_mcp`` class
 
-  :returns:The fqcn or $class
+  :returns: The fqcn or $class
   :rtype: String
 
 .. method:: getExtensionClass()
 
   Get the extension class
 
-  :returns:The fqcn or $class
+  :returns: The fqcn or $class
   :rtype: String
 
 .. method:: hasManual()
