@@ -2,31 +2,31 @@
 Hello, World!
 #############
 
-Congratulations! You have installed ExpressionEngine... now what? Why not say 
+Congratulations! You have installed ExpressionEngine... now what? Why not say
 "Hello"!
 
-Visit Developer Tools in the top right corner and select *Template Manager*. 
+Visit Developer Tools in the top right corner and select *Template Manager*.
 
 |Template Group|
 
 Click the *NEW* button next to *Template Groups* in the left navigation.
 
-Fill in the field for **Template Group Name**, for this example use "site". 
-Ignore **Duplicate an Existing Template Group?** for now and check the 
-box for **Make the index template in this group your site's home page?**. Now, 
+Fill in the field for **Template Group Name**, for this example use "site".
+Ignore **Duplicate an Existing Template Group?** for now and check the
+box for **Make default group?**. Now,
 click `Save Template Group`.
 
 What you've done is created a template group and set that group's index template as your site's home page.
 
-After creating the group, you'll be taken to the 
+After creating the group, you'll be taken to the
 :doc:`Template Manager </cp/design/index>`.
 
-Click `Index` in the **Template** column. This will take you to the 
+Click `Index` in the **Template** column. This will take you to the
 :doc:`Template Editor </cp/design/template/edit>`.
 
 |Template Edit|
 
-You should see a completely blank slate. That's rather uninteresting... let's 
+You should see a completely blank slate. That's rather uninteresting... let's
 add some code! ::
 
   <!DOCTYPE html>
@@ -35,7 +35,7 @@ add some code! ::
 		<meta charset="UTF-8">
 		<title>Hello, World!</title>
 	</head>
-  
+
 	<body>
  		<h1>Hello, World!</h1>
  		<p>
@@ -44,17 +44,17 @@ add some code! ::
 	</body>
   </html>
 
-To save your changes, click `Save Template`. 
+To save your changes, click `Save Template`.
 
-Ready to admire your work? Click `View Rendered` in the 
-upper-right area above the **Template Editor**. You'll be taken to your site 
+Ready to admire your work? Click `View Rendered` in the
+upper-right area above the **Template Editor**. You'll be taken to your site
 to see what the world will see.
 
 Have a look at the URL - ``example.com/index.php/site``.
-ExpressionEngine uses :doc:`URL Segments </templates/globals/url_segments>` to 
-do its magic, and here you can see ``site`` in Segment 1. That 
-tells ExpressionEngine to look for a Template Group named "site" and the lack of 
-Segment 2 (since there is nothing past ``site/``) let's ExpressionEngine know to 
+ExpressionEngine uses :doc:`URL Segments </templates/globals/url_segments>` to
+do its magic, and here you can see ``site`` in Segment 1. That
+tells ExpressionEngine to look for a Template Group named "site" and the lack of
+Segment 2 (since there is nothing past ``site/``) let's ExpressionEngine know to
 use the group's "index" template.
 
 Try a couple of other URLs:
@@ -65,15 +65,15 @@ Try a couple of other URLs:
 You'll see the same output as before. In the fist example, adding Segment 2
 (``index``), alerts ExpressionEngine to precisely the template we want from the
 group "site". In the second example, going straight to the root URL should bring
-up the home page. Remember, we set ExpressionEngine to use the "index" template 
+up the home page. Remember, we set ExpressionEngine to use the "index" template
 from the group "site" as our site's home page.
 
 You can add more HTML to your template and have some fun. Create a few other
-templates in this group, or some new groups altogether. Spend some time playing 
+templates in this group, or some new groups altogether. Spend some time playing
 with how ExpressionEngine uses the URL.
 
-Now that you're' comfortable with static ExpressionEngine templates, how about 
-:doc:`Building a Simple Site <building_a_simple_news_site>`? 
+Now that you're' comfortable with static ExpressionEngine templates, how about
+:doc:`Building a Simple Site <building_a_simple_news_site>`?
 
 .. |Template Group| image:: ../images/template-manager-hw.png
 .. |Template Edit| image:: ../images/template-editor-hw.png
