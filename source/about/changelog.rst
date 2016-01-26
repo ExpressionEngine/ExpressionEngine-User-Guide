@@ -5,6 +5,36 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.1.2
+-------------
+
+Release Date: January 26, 2016
+
+- Fixed a bug (#21408) where the Show File Chooser checkbox would not save for text input fields.
+- Fixed a bug (#21488) where updating your member password could result in a PHP error.
+- Fixed a bug (#21493) where a "more info" link in the Security & Privacy settings 404d.
+- Fixed a bug (#21498) where using `dynamic_parameters` resulted in a PHP error.
+- Fixed a bug (#21505) where the template creation form would not have its submit buttons re-enabled after a validation error.
+- Fixed a bug (#21508) where form validation messages were not presented properly when editing a member's profile.
+- Fixed a bug (#21515) where the file upload modal didn't work when opened from the Rich Text Editor or the Textarea fields.
+- Fixed a bug (#21520) where the installer did not use the system config override for theme URL.
+- Fixed a bug (#21521) where extension settings were not wrapped in the proper markup.
+- Fixed a bug (#21523) where member groups listing in channel layouts table was missing a space.
+- Fixed a bug (#21526) where an error would appear when saving a category field.
+- Fixed a bug (#21532) where accessing some files wrongly accused you of attempting to access files outside of a directory.
+- Fixed a bug (#21537) where PHP 5.3 didn't like something the Pages module was doing and complained loudly.
+- Fixed a bug where the moblog settings page could run out of memory on large sites.
+- Fixed a bug where `upload_directory` config overrides weren't overriding on error display in the File Manager
+- Fixed a bug where relationship parsing could result in conditional errors.
+- Fixed a bug where channel form did not work without a url title field.
+- Fixed a bug in channel form where the validation parameters could be ignored.
+- Fixed a bug where deleting a field group didn't delete its fields.
+- Fixed a bug where Site filters never showed.
+- Fixed a bug where uploading an avatar could result in an error about unlinking a directory.
+- Fixed a bug where the installer incorrectly showed errors when moving avatars.
+- Fixed a bug in the Channel form where non-superadmins did not always have access to all of their allowed channels.
+- Added a warning to the File Manager when the upload directory you are browsing at is not on the file system.
+
 Version 3.1.1
 -------------
 
