@@ -81,8 +81,8 @@ Release Date: January 18, 2016
 - Fixed a bug where bulk action checkboxes failed to work in the Entry Manager after searching.
 - Fixed a bug (#21104) where add-ons with mutliple fieldtypes couldn't use their fieldtypes.
 - Fixed a bug where the installer wouldn't automatically rename if you still had the mailing list export in your cache.
-- Fixed a bug (24518) where file uploads did not work in the Channel form.
-- Fixed a bug (21442) in the Channel form where PHP errors occurred when editing an entry with a file.
+- Fixed a bug (#21458) where file uploads did not work in the Channel form.
+- Fixed a bug (#21442) in the Channel form where PHP errors occurred when editing an entry with a file.
 - Fixed a bug in the Channel form where PHP errors could occur when submitting an entry with no category assigned.
 - Fixed a bug where CAPTCHA was not working properly on the Channel form.
 - Fixed a bug where ENTRY_ID was not properly replaced on return after submitting the Channel form.
