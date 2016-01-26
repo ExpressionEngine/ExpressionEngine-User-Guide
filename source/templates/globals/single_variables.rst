@@ -257,21 +257,6 @@ ip\_address
 This variable will be substituted with the IP address of the currently
 logged in user.
 
-is_ajax_request
----------------
-
-::
-
-  {is_ajax_request}
-
-Boolean (TRUE/FALSE) variable representing whether or not the template is being accessed via an Ajax request (XMLHttpRequest header). Most commonly this would be used to prevent direct access of template stubs used as content providers for Ajax, e.g.::
-
-  {if ! is_ajax_request}
-    {redirect="404"}
-  {/if}
-
-  {!-- ExpressionEngine tags below to define content to return --}
-
 lang
 ----
 
