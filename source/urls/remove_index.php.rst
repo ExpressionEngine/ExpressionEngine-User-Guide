@@ -110,7 +110,7 @@ Exceptions
 -------------------------------
 
 In the Control Panel, go to :menuselection:`Settings --> URL and Path
-Settings`, set **Name of your site's index page** to blank (empty), and click
+Settings`, set **Website index page** to blank (empty), and click
 Submit.
 
 3. Test
