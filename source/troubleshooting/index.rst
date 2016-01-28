@@ -52,6 +52,7 @@ Email
 *****
 
 - :doc:`Emails sent via EE are not reaching their destination <email/emails_not_reaching_destination>`
+- :doc:`Problems using Gmail <email/problems_using_gmail>`
 
 **********************
 Simple Commerce Module

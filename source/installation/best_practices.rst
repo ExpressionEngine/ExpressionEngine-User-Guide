@@ -104,7 +104,7 @@ something less obvious as well.
 #. FTP to your server and change the name of the admin.php file to
    something else that is not easily guessed. For example, let's say
    you've renamed it to razzle.php.
-#. Open system/expressionengine/config/config.php (or whatever you have
+#. Open ``system/user/config/config.php`` (or whatever you have
    renamed the system folder to) and update the URL to the admin.php
    file
 
