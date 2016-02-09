@@ -32,6 +32,7 @@ Control Panel
 *************
 
 - :doc:`Control Panel has no CSS <control_panel/unstyled_cp>`
+- :doc:`Missing Glyphicon Icon UI Elements <control_panel/missing_glyphicon_icon_ui_elements>`
 - :doc:`Categories do not appear as filter options in the Edit tab <control_panel/categories_not_appearing_in_edit_tab>`
 - :doc:`Why do I have to re-login to the CP if I'm logged in to the site <control_panel/site_and_cp_login_separate>`
 - :doc:`I can not log into the Control Panel on my Windows-based server <control_panel/no_login_on_windows_server>`
@@ -70,7 +71,7 @@ Error Messages
 - :doc:`Client does not support authentication protocol request by server <error_messages/client_does_not_support_authentication_protocol>`
 - :doc:`A problem was encountered while trying to upload your file <error_messages/a_problem_was_encountered_while_trying_to_upload_your_file>`
 - :doc:`Unable to receive your comment at this time <error_messages/unable_to_receive_your_comment>`
-- :doc:`MySQL Error 1030: Got error 28 <error_messages/mysql_error_1030_got_error_28>` 
+- :doc:`MySQL Error 1030: Got error 28 <error_messages/mysql_error_1030_got_error_28>`
 - :doc:`Can't open file: 'exp\_online\_users.MYI' <error_messages/can't_open_file_exp_online_users.myi>`
 - :doc:`Allowed memory size of xxxx bytes exhausted <error_messages/allowed_memory_size_exhausted>`
 - :doc:`Warning: Cannot modify header information <error_messages/cannot_modify_header_information>`
