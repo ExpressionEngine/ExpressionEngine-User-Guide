@@ -1,11 +1,28 @@
 In-app Documentation
 ====================
 
+.. contents::
+  :local:
+
 ExpressionEngine will render beautiful documentation for your add-on directly in the control panel if you follow a few simple guidelines. By including a `README.md` file in your add-on folder (like you probably already do on GitHub/BitBucket/etc.), and using the following Markdown as a template, your documentation will render nicely, and give your users a consistent experience throughout the control panel. And on its own outside of ExpressionEngine, it is still easy to read, and easy to write.
 
-.. todo::
+.. image:: /images/rss-parser-readme.png
 
-  add screenshot
+.. tip:: If you use GitHub, you can include a symlink at the top level of your repository to display your in-app documentation on your repo's home page without having to duplicate any files. e.g.
+
+  .. code-block:: none
+
+    Your Repo
+    ├── your_addon
+    │   ├── addon.setup.php
+    │   ├── pi.your_addon.php
+    │   └── README.md (your in-app documentation readme)
+    └── README.md (symlink to the real README file)
+
+  To create a symlink, use the following command in your root folder: ``ln -s ./<your_addon>/README.md ./README.md``
+
+Markdown File Structure
+-----------------------
 
 The basic structure is:
 
@@ -27,6 +44,9 @@ The basic structure is:
   │   └── X.Y.Z
   ├── Disclaimer (optional)
   └── License (optional)
+
+Documentation Template
+----------------------
 
 The template below demonstrates sections to include, the order to include them, and the meaning behind each header level.
 
