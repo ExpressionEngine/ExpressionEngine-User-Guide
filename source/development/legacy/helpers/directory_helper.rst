@@ -2,18 +2,9 @@
 Directory Helper
 ################
 
-The Directory Helper file contains functions that assist in working with directories.
-
-.. contents::
-  :local:
-
 .. highlight:: php
 
-*******************
-Loading this Helper
-*******************
-
-This helper is loaded using the following code::
+The Directory Helper file contains functions that assist in working with directories. This helper is loaded using the following code::
 
 	ee()->load->helper('directory');
 

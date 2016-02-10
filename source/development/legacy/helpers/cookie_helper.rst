@@ -2,18 +2,9 @@
 Cookie Helper
 #############
 
-The Cookie Helper file contains functions that assist in working with cookies.
-
-.. contents::
-  :local:
-
 .. highlight:: php
 
-*******************
-Loading this Helper
-*******************
-
-This helper is loaded using the following code::
+The Cookie Helper file contains functions that assist in working with cookies. This helper is loaded using the following code::
 
 	ee()->load->helper('cookie');
 

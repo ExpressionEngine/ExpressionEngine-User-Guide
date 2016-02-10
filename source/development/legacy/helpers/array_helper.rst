@@ -2,18 +2,9 @@
 Array Helper
 ############
 
-The Array Helper file contains functions that assist in working with arrays.
-
 .. highlight:: php
 
-.. contents::
-  :local:
-
-*******************
-Loading this Helper
-*******************
-
-This helper is loaded using the following code::
+The Array Helper file contains functions that assist in working with arrays. This helper is loaded using the following code::
 
 	ee()->load->helper('array');
 
