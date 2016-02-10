@@ -38,28 +38,27 @@ Permission Service Methods
 
 .. class:: Permission
 
-.. method:: has()
+.. method:: has($permission)
 
   Checks a session object for a single permission
 
-  :param string A single permission name
+  :param string $permission: A single permission name
   :returns: TRUE if allowed FALSE if not
   :rtype: Boolean
 
-.. method:: hasAny()
+.. method:: hasAny($permission)
 
   Checks a session object for any matches against a collection of permissions, from one on up.
 
-  :param mixed Any number of permission names
+  :param mixed $permission: Any number of permission names
   :returns: TRUE if allowed FALSE if not
   :rtype: Boolean
 
-.. method:: hasAll()
+.. method:: hasAll($permission)
 
-  Checks that session object matches all permissions in a collection of permissions, from one on up.
+  Checks a session object matches all permissions in a collection of permissions, from one on up.
 
-  :param mixed Any number of permission names
+  :param mixed $permission: Any number of permission names
   :returns: TRUE if allowed FALSE if not
   :rtype: Boolean
-
 
