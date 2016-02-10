@@ -10,15 +10,25 @@ Permission Service
 Simple Example
 --------------
 
-The permission service checks for member authorization. For example::
+The permission service checks for member authorization as indicated in the session userdata. Superadmins automatically have permission.
 
-  if (ee('Permission')->hasAll('can_edit_all_comments'))
+To check for exactly 1 permission::
+
+  if (ee('Permission')->has('can_edit_all_comments'))
   {
-    $this->edit_comment_form();
+    $this->show_form();
   }
 
-The service automatically takes takes member group overrides for Superadmins into account.
+To check for the existence of at least one permission among a list of permissions::
 
+  if (ee('Permission')->hasAny('can_create_template_partials', 'can_edit_template_partials', 'can_delete_template_partials'))
+  {
+    $this->show_header();
+  }
+
+To check for the existence of all listed permissions::
+
+  $can_delete = ee('Permission')->hasAll('can_delete_all_comments', 'can_delete_own_comments')
 
 
 Permission Service Methods
