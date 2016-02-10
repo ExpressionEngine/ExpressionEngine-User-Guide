@@ -51,7 +51,7 @@ HTTP Headers
 ------------
 
 Some "PHP as CGI" servers also do not like it if ExpressionEngine
-explicitly sends its own HTTP Headers. In this case, try setting 
+explicitly sends its own HTTP Headers. In this case, try setting
 :doc:`Generate HTTP Page Headers? </cp/settings/debug-output>`
 to "No".
 
