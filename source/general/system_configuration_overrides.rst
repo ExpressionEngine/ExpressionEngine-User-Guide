@@ -11,7 +11,7 @@ overridden with one of 3 configuration files: the main configuration
 file, the site index file, and the CP index file.
 
 The **main configuration file**, found at
-:file:`system/expressionengine/config/config.php`, is loaded every time
+:file:`system/user/config/config.php`, is loaded every time
 the system is run, meaning that config overrides set in
 :file:`config.php` always affect the system's configuration.
 

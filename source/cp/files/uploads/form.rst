@@ -66,10 +66,11 @@ files. You have two choices for this preference:
    be possible for someone to upload a malicious file.
 
 .. note:: Only file types that are specified in ExpressionEngine's Mime
-	Type file are allowed to be uploaded. If you are uploading something
+	Type file are allowed to be uploaded. The Mime Type file can be found at:
+	``system/ee/legacy/config/mimes.php``.  If you are uploading something
 	uncommon and run into problems you may need to add the mime type for
-	your file. The Mime Type file can be found at:
-	``system/expressionengine/config/mimes.php``
+	your file to the whitelist in the configuration file found at: 
+	``system/user/config/config.php``.
 
 Default modal view?
 ~~~~~~~~~~~~~~~~~~~

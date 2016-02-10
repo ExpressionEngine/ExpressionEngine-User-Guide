@@ -56,6 +56,6 @@ explicitly sends its own HTTP Headers. In this case, try setting
 to "No".
 
 If you cannot log into the Control Panel, then you can manually
-change the setting via system/expressionengine/config/config.php::
+change the setting via system/user/config/config.php::
 
 	$config['send_headers'] = 'n';

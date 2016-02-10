@@ -30,6 +30,6 @@ Changing the Hidden Template Indicator
 
 By default, a template is hidden when an underscore prefixes the
 template name, but this can be changed with a configuration variable set
-in ``system/expressionengine/config/config.php``::
+in ``system/user/config/config.php``::
 
   $config['hidden_template_indicator'] = '.';

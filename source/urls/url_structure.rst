@@ -113,6 +113,6 @@ with the addition of the question mark.
 
 In a select few cases, turning on **Force URL Query Strings** by itself
 won't be enough. If URLs continue to not work even with that setting on,
-then open system/expressionengine/config/config.php and set::
+then open system/user/config/config.php and set::
 
 $config['uri_protocol']	= 'QUERY_STRING';

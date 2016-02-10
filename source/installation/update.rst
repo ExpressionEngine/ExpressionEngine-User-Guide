@@ -38,7 +38,7 @@ Go to your site's control panel URL (typically found at ``http://example.com/adm
 
 You're Done! ExpressionEngine is now fully updated. But before you go...
 
-- If the updater could not automatically rename the installer, rename or remove :file:`system/installer/` directory manually. The installer directory can be safely removed after installing ExpressionEngine.
+- If the updater could not automatically rename the installer, rename or remove :file:`system/ee/installer/` directory manually. The installer directory can be safely removed after installing ExpressionEngine.
 
 - Review the :doc:`Version Notes </installation/version_notes>` since they outline any version-specific changes that you may need to make to your installation.
 
