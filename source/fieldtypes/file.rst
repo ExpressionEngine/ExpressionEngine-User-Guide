@@ -243,4 +243,4 @@ tag with the Short Name of the manipulation. For example, if you've
 defined a "small" manipulation, the following will output the width of
 that version::
 
-  {url:width}
+  {width:small}
