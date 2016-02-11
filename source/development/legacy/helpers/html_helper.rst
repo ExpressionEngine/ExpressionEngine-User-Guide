@@ -6,7 +6,7 @@ HTML Helper
 
 The HTML Helper file contains functions that assist in working with HTML. This helper is loaded using the following code::
 
-	$this->load->helper('html');
+	ee()->load->helper('html');
 
 *******************
 Available Functions
