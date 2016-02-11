@@ -40,12 +40,6 @@ Automatically creates links from URLs and/or email addresses contained within th
 `Get Auto Linker <https://github.com/EllisLab/Auto-Linker>`__
 
 
-Char Limit
-----------
-
-`Get Char Limit <https://github.com/EllisLab/Char-Limit>`__
-
-
 Cron
 ----
 
@@ -100,12 +94,6 @@ This plugin takes the content within the tag pair and forces a file download in 
 `Get Download Content <https://github.com/EllisLab/Download-Content>`__
 
 
-Duplicate Email Check
----------------------
-
-`Get Duplicate Email Check <https://github.com/EllisLab/Duplicate-Email-Check>`__
-
-
 HTML Attribute Content
 ----------------------
 
@@ -114,12 +102,6 @@ You might find this handy when using content inside attributes of certain tags,
 like `<meta>` tags used by `Twitter Cards<https://dev.twitter.com/docs/cards>_`.
 
 `Get HTML Attribute Content <https://github.com/EllisLab/HTML-Attribute-Content>`__
-
-
-Kanban Board
-------------
-
-`Get Kanban Board <https://github.com/EllisLab/Kanban-Board>`__
 
 
 List Maker
