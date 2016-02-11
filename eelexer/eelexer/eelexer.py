@@ -42,7 +42,7 @@ class ExpressionEngineTagsLexer(RegexLexer):
 			# Conditionals
 			(r'(\{)(/)?(if(?:\:else(?:if)?)?)(\s*)', bygroups(Punctuation, Name.Function, Keyword, Text), 'conditional'),
 			# Tags
-			(r'(\{)(/)?(\w*[a-zA-Z_:]+\w*)(\s*)', bygroups(Punctuation, Name.Function, Name.Function, Text), 'tag'),
+			(r'(\{)(/)?(\w*[a-zA-Z_\-:]+\w*)(\s*)', bygroups(Punctuation, Name.Function, Name.Function, Text), 'tag'),
 			# Not EE
 			(r'\{', Other)
 		],

@@ -12,16 +12,16 @@ This indicates an error in the template being loaded, at the line
 indicated at the error.
 
 One common cause is whitespace in Javascript code that is causing the
-Javascript to be parsed as a conditional. 
+Javascript to be parsed as a conditional.
 
 ::
 
 	<script>
-	function foo(){if(cond...
+	function foo(){if(cond...) ...code... };
 	</script>
 
 Add whitespace around the curly bracket to fix the error::
 
 	<script>
-	function foo() { if (cond...
+	function foo() { if (cond...) ...code... };
 	</script>

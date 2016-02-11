@@ -38,10 +38,10 @@ The Template Groups name is "company" and the Template name is
 each person. Here's an example of a channel tag in which the URL title
 changes based on the 3rd segment::
 
-	{exp:channel:entries  url_title="{segment_3}"}
-		<h1>{title}</h1>
-		<p>{body}</p>
-	{/exp:channel:entries}
+  {exp:channel:entries url_title="{segment_3}"}
+    <h1>{title}</h1>
+    <p>{body}</p>
+  {/exp:channel:entries}
 
 .. _global_last_segment:
 

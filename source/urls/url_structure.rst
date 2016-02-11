@@ -20,7 +20,9 @@ In order to accomplish this, the use of query strings was eliminated
 from the URLs.
 
 Most dynamic publishing systems use query strings. That is, URLs that
-look like this::
+look like this:
+
+.. code-block:: none
 
 	http://example.com/index.php?id=2&page=1
 

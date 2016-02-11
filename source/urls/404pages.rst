@@ -55,11 +55,8 @@ the :ref:`{redirect=} global variable <global_redirect>`. ::
 With the above code, if the third segment is not empty, ExpressionEngine will
 show the 404 template that we have defined.
 
-Examples
-========
-
-Example 1
----------
+Example
+=======
 
 Often URLs entered by hand are not typed correctly, especially if the URL
 includes the title of an entry. Avoiding mistyped URLs is much easier when
@@ -84,42 +81,16 @@ a specific title URL title found in the segment of the URL.
 Now we need a way to deal with the times there are no results returned. To do
 this we use a global variable and test for results. ::
 
-  {if no_results}
+  {if no_results}
     {redirect="404"}
   {/if}
 
 So a completed block code would look like this. ::
 
-  {exp:channel:entries channel="blog" limit="1" require_entry="yes"  url_title="{segment_2}"}
-  {if no_results}
-  {redirect="404"}
-  {/if}
-  Stuff here
-  {/exp:channel:entries} 
+  {exp:channel:entries channel="blog" limit="1" require_entry="yes" url_title="{segment_3}"}
+    {if no_results}
+      {redirect="404"}
+    {/if}
 
-
-Example 2
----------
-
-Automatically correct too many segments.
-
-In this example you would like to restrict visitors to just the blog and a
-specific article. Anything beyond that, you prefer not to show the 404 page but
-rather just push your user back to the template group and article they intended.
-
-``example.com/blog/title-of-article/another/segment``
-
-Placing this code will auto correct that. This will require that PHP be enabled
-in the template. ::
-
-  {if segment_3!=""}
-  <?
-  Header( "HTTP/1.1 301 Moved Permanently" );
-  Header( "Location: /{segment_1}/{segment_2}" );
-  die();
-  ?>
-  {/if}
-
-
-What we did was check to see that segment 3 was empty. If segment 3 send the
-visitor to the current template group and template.
+    Stuff here.
+  {/exp:channel:entries}

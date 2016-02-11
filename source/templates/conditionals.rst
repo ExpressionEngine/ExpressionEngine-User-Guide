@@ -376,14 +376,16 @@ this::
 
   {if my_snippet == "hello world"}
 
-instead of these::
+instead of these:
+
+.. code-block:: none
 
   {if {my_snippet} == "hello world"}
   {if "{my_snippet}" == "hello world"}
 
 Tags still require their braces, for example::
 
-  {if {entry_date format="%Y"} == {current_time format="%Y"}}
+  {if "{entry_date format='%Y'}" == "{current_time format='%'}"}
 
 When using tags pay special attention to your quote marks. If you need
 more than one level of quotation you will need to either alternate
@@ -572,7 +574,9 @@ an error will be displayed based on your :ref:`debug preferences <output-debug-p
 Errors are triggered in the following scenarios:
 
 * ``{if:`` is encountered in the template without it being either ``if:else``
-  or ``if:elseif``. For example::
+  or ``if:elseif``. For example:
+
+.. code-block:: none
 
   {if:foo}
 
@@ -581,11 +585,15 @@ Errors are triggered in the following scenarios:
 
   {if segment_1 == 'site'}HELLO WORLD
 
-* There is an unclosed single or double-quoted string. For example::
+* There is an unclosed single or double-quoted string. For example:
+
+.. code-block:: none
 
   {if segment_1 == "site}HELLO WORLD{/if}
 
-* A closing ``}`` is not found. For example::
+* A closing ``}`` is not found. For example:
+
+.. code-block:: none
 
   {if segment_1 == "site" HELLO WORLD{/if}
 
@@ -597,7 +605,9 @@ Errors are triggered in the following scenarios:
 
   {if segment_1 ==== "site"}HELLO WORLD{/if}
 
-* A number followed by a colon (``:``) was found. For example::
+* A number followed by a colon (``:``) was found. For example:
+
+.. code-block:: none
 
   {if 5:2}
 
