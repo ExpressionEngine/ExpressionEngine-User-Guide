@@ -51,6 +51,7 @@ The Back-End
   - :doc:`add-ons/simple_commerce/index`
   - :doc:`add-ons/spam/index`
   - :doc:`add-ons/statistics/index`
+  - :doc:`add-ons/downloadable_add-ons`
 
 - :doc:`channel/index`
 - :doc:`comment/index`
