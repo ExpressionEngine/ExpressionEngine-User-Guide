@@ -6,6 +6,7 @@ Legacy Reference
   :titlesonly:
   :maxdepth: 1
 
+  database/index
   libraries/index
   helpers/index
   api/index
