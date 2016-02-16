@@ -9,4 +9,8 @@ ExpressionEngine comes with a full-featured and very fast abstracted database cl
   :titlesonly:
   :maxdepth: 1
 
-  *
+  queries
+  results
+  metadata
+  utilities
+  forge
