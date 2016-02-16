@@ -1,6 +1,6 @@
-################
-Helper Functions
-################
+#######
+Helpers
+#######
 
 .. highlight:: php
 
