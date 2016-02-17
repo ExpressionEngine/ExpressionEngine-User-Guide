@@ -104,7 +104,7 @@ Metadata
 		- ``primary_key`` - 1 if the column is a primary key
 		- ``type`` - the type of the column
 
-	:rtype: Object
+	:rtype: :class:`CI_DB_result`
 
 .. method:: platform()
 
