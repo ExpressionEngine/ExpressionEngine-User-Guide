@@ -12,6 +12,7 @@
 # serve to show the default.
 
 import sys, os
+from datetime import date
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -50,7 +51,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'ExpressionEngine'
-copyright = u'&copy;2002–2015 <a href="https://ellislab.com/" rel="external">EllisLab, Inc.</a>'
+copyright = u'&copy;2002–%d <a href="https://ellislab.com/" rel="external">EllisLab, Inc.</a>' % date.today().year
 project_url = u'https://ellislab.com/expressionengine'
 
 
