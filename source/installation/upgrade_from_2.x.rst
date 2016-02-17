@@ -102,7 +102,7 @@ Go to your site's control panel URL (typically found at ``http://example.com/adm
 
 1. Remove or rename the offline :file:`index.html` file from your site.
 
-2. If the updater could not automatically rename the installer, rename or remove :file:`system/installer/` directory manually.
+2. If the updater could not automatically rename the installer, rename or remove :file:`system/ee/installer/` directory manually.
 
 .. note:: The installer directory can be safely removed after installing ExpressionEngine.
 

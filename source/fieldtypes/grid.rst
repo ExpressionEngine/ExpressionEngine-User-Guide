@@ -140,7 +140,7 @@ Or use "not" to exclude rows::
 search:column\_name=
 ^^^^^^^^^^^^^^^^^^^^
 
-::
+.. code-block:: none
 
   search:height="<=20"
 

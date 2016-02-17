@@ -674,7 +674,7 @@ is the template::
       <div class="past-bands">
         <ul>
         {parents field="members"}
-          <li class="band-name"><a href="{path="bands/index"}/{parents:url-title}">{parents:title}</a></li>
+          <li class="band-name"><a href="{path="bands/index"}/{parents:url_title}">{parents:title}</a></li>
         {/parents}
         </ul>
       </div>
@@ -686,7 +686,7 @@ The relevant section is this::
   <div class="past-bands">
     <ul>
     {parents field="members"}
-      <li class="band-name"><a href="{path="bands/index"}/{parents:url-title}">{parents:title}</a></li>
+      <li class="band-name"><a href="{path="bands/index"}/{parents:url_title}">{parents:title}</a></li>
     {/parents}
     </ul>
   </div>

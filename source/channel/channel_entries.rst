@@ -166,7 +166,7 @@ Or use "not" to exclude categories
 And, you can use an inclusive stack to only get entries with *all* of
 the categories
 
-::
+.. code-block:: none
 
 	category="3&7&8"
 
@@ -174,7 +174,7 @@ the categories
 Or you can negate the inclusive stack and get entries that do not of
 *all* of those categories
 
-::
+.. code-block:: none
 
 	category="not 3&5"
 
@@ -826,12 +826,16 @@ term "pickles" **nor** contained the term "shoes".
 "Contains" matching also lets you use an inclusive set of terms. Instead
 of separating the terms with a pipe symbol, you would separate them with
 double ampersands (so that single ampersands may still be used as part
-of search terms). ::
+of search terms).
+
+.. code-block:: none
 
 	search:body="pickles&&shoes"
 
 This example would return all entries that contained **both** the term
-"pickles" **and** the term "shoes". ::
+"pickles" **and** the term "shoes".
+
+.. code-block:: none
 
 	search:body="not pickles&&shoes"
 
@@ -858,7 +862,9 @@ Numeric Matching
 ~~~~~~~~~~~~~~~~
 
 If you have a field containing numeric data, you may use greater-than
-or less-than operators to search through them. ::
+or less-than operators to search through them.
+
+.. code-block:: none
 
   search:numeric_field="<20"
 

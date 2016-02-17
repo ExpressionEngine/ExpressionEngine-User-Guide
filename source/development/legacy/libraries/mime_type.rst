@@ -21,8 +21,8 @@ Calling the Mime Type Class
 
     ee()->load->library('mime_type');
 
-.. note:: The Mime Type library uses the Mime Type whitelist file at
-    ``system/expressionengine/config/mimes.php`` when determining if a file is
+.. note:: The Mime Type library uses the Mime Type at
+    ``system/ee/legacy/config/mimes.php`` when determining if a file is
     safe for uploading or is an image.
 
 .. note:: There is a ``mime_whitelist_additions`` :ref:`config override <overrides-mime-whitelist-additions>`

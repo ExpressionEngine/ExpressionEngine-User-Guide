@@ -33,7 +33,9 @@ want to have the following URLs::
 
 Each URL should point to its own template, one for showing a listing
 of events by date, and one for showing a listing by event type. We could
-use the following routes to match::
+use the following routes to match:
+
+.. code-block:: none
 
   /events/{type:alpha_dash}
 
@@ -62,7 +64,9 @@ Template Route
 ~~~~~~~~~~~~~~
 
 This route determines the URLs that will match your template. The
-format is as follows::
+format is as follows:
+
+.. code-block:: none
 
   /segment/{variable}/{variable:rule}/{variable:rule0|rule1[arg]}
 
@@ -78,14 +82,18 @@ string for variable::
 
 A segment can have multiple rules applied to it. Rules allow you to
 limit the URLs that will match your template route. The format for using
-rules looks like this::
+rules looks like this:
+
+.. code-block:: none
 
   {variable:rule0|rule1|rule2[arg0, arg1, ...]|...}
 
 Rules are separated by a ``|`` and if a rule has arguments they are set
 in brackets and separated by commas if there are more than one.
 
-Here is an example of a full Template Route::
+Here is an example of a full Template Route:
+
+.. code-block:: none
 
   /name/{first_name:alpha}/{last_name:alpha}/{suffix:regex[(i|v|x)+]}
 
@@ -215,8 +223,8 @@ Template Route::
 
   /name/{first_name}/{last_name}/{suffix}/{page:pagination}
 
-If "Require all Variables" is set to "No" (the default) then only static segments 
-are required.  Any or all of the non-static segments may be omitted.  Thus all of 
+If "Require all Variables" is set to "No" (the default) then only static segments
+are required.  Any or all of the non-static segments may be omitted.  Thus all of
 the following URLs will match::
 
   /name/Enrico/Fermi/III

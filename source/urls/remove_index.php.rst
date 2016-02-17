@@ -34,7 +34,9 @@ Using your FTP client, create a new file named :file:`.htaccess`
    to show **all** files, including hidden ones.
 
 Then add the following code to this newly created :file:`.htaccess`
-file::
+file.
+
+.. code-block:: apache
 
 	<IfModule mod_rewrite.c>
 		RewriteEngine On

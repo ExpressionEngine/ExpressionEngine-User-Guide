@@ -176,7 +176,7 @@ embed
 
 ::
 
-  {embed=news/local}
+  {embed='news/local'}
 
 This variable allows you to embed one Template within another. Please
 see the :doc:`Embedded Templates <../embedding>` section.
