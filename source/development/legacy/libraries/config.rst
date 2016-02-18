@@ -92,11 +92,11 @@ Class Reference
 
 .. class:: EE_Config
 
-.. attribute:: $config
+.. attr:: config
 
 	Array of all loaded config values
 
-.. attribute:: $is_loaded
+.. attr:: is_loaded
 
 	Array of all loaded config files
 

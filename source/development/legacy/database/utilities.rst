@@ -18,12 +18,12 @@ Database Utility Class
 
 	Returns an array of database names::
 
-	$dbs = ee()->dbutil->list_databases();
+		$dbs = ee()->dbutil->list_databases();
 
-	foreach ($dbs as $db)
-	{
-		echo $db;
-	}
+		foreach ($dbs as $db)
+		{
+			echo $db;
+		}
 
 	:returns: Array of database names
 	:rtype: array

@@ -16,7 +16,9 @@ Class Reference
 
 .. class:: EE_Output
 
-.. attribute:: $parse_exec_vars = TRUE;
+.. attr:: parse_exec_vars
+
+	Defaults to ``TRUE``.
 
 	Enables/disables parsing of the ``{elapsed_time}`` and ``{memory_usage}`` pseudo-variables.
 
@@ -149,7 +151,7 @@ Class Reference
 	:returns:	EE_Output instance (method chaining)
 	:rtype:	EE_Output
 
-	Permits you to enable/disable the :doc:`Profiler </development/legacy/libraries/profiling>`, which will display benchmark and other data at the bottom of your pages for debugging and optimization purposes.
+	Permits you to enable/disable the :doc:`Profiler </development/legacy/libraries/profiler>`, which will display benchmark and other data at the bottom of your pages for debugging and optimization purposes.
 
 	To enable the profiler place the following line anywhere within your
 	:doc:`Controller </development/legacy/controllers>` methods::
@@ -168,7 +170,7 @@ Class Reference
 	:returns:	EE_Output instance (method chaining)
 	:rtype:	EE_Output
 
-	Permits you to enable/disable specific sections of the Profiler when it is enabled. Please refer to the :doc:`Profiler </development/legacy/libraries/profiling>` documentation for further information.
+	Permits you to enable/disable specific sections of the Profiler when it is enabled. Please refer to the :doc:`Profiler </development/legacy/libraries/profiler>` documentation for further information.
 
 .. method:: cache($time)
 
@@ -178,7 +180,7 @@ Class Reference
 
 	Caches the current page for the specified amount of seconds.
 
-	For more information, please see the :doc:`caching documentation </development/legacy/libraries/caching>`.
+	For more information, please see the :doc:`caching documentation </development/legacy/libraries/cache>`.
 
 .. method:: _display([$output = ''])
 

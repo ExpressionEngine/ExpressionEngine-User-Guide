@@ -8,7 +8,7 @@ Javascript Class
 Class Reference
 ***************
 
-.. class:: EE_Benchmark
+.. class:: EE_Javascript
 
 	The library is loaded using the following code::
 

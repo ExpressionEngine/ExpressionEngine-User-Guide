@@ -70,7 +70,7 @@ A good practice is use the processing function conditionally, showing an error u
 .. note:: You can optionally specify the HTML formatting to be applied to the errors, by submitting the opening/closing tags in the function, like this
 	::
 
-	ee()->image_lib->display_errors('<p>', '</p>');
+		ee()->image_lib->display_errors('<p>', '</p>');
 
 .. _processing-preferences:
 

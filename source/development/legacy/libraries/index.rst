@@ -4,7 +4,7 @@ Libraries
 
 .. highlight:: php
 
-All of the available libraries are located in your ``system/ee/legacy/libraries/`` directory. In most cases, to use one of these classes involves initializing it within a :doc:`controller <controllers>` using the following initialization method::
+All of the available libraries are located in your ``system/ee/legacy/libraries/`` directory. In most cases, to use one of these classes involves initializing it within a :doc:`controller </development/legacy/controllers>` using the following initialization method::
 
   ee()->load->library('class_name');
 
