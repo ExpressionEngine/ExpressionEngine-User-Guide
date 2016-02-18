@@ -1,0 +1,185 @@
+###########
+Controllers
+###########
+
+Controllers are the heart of your application, as they determine how HTTP requests should be handled.
+
+.. highlight:: php
+
+.. contents::
+	:local:
+	:depth: 1
+
+*********************
+What is a Controller?
+*********************
+
+**A Controller is simply a class file that is named in a way that can be associated with a URI.** ExpressionEngine uses Controllers for all of it's Control Panel pages. An ``mcp`` file within a module is a controller as well and typically what you'll be dealing with.
+
+Consider this URI::
+
+	example.com/system/index.php?/cp/addons/settings/my_addon
+
+In the above example, ExpressionEngine would attempt to find a controller named ``mcp.my_addon.php`` within the ``system/ee/user/addons/my_addon/`` directory and load it.
+
+************
+Let's try it
+************
+
+First, ensure that your add-on has ``settings_exist`` set to true in it's :doc:`addon.setup.php file </development/addon_setup_php_file>`. Then create a simple module control panel so you can see it in action. Using your text editor, create a file called ``mcp.my_addon.php``, and put the following code in it::
+
+	<?php
+
+	class My_addon_rte {
+
+		public function index()
+		{
+			return 'Hello World!';
+		}
+	}
+
+Then save the file to your ``system/ee/user/addons/my_addon/`` directory.
+
+.. important:: The file must be called ``mcp.my_addon.php`` and be placed in the ``system/ee/user/addons/my_addon/`` directory. You can change ``my_addon`` to whatever you want, but both the directory and file must match.
+
+Now visit the Add-on Manager and click on the cog next to your add-on's name. If you did it right, you should see:
+
+	Hello World!
+
+.. important:: Class names must start with an uppercase letter.
+
+This is valid::
+
+	class My_addon_rte {
+
+This is **not** valid::
+
+	class my_addon_rte {
+
+*******
+Methods
+*******
+
+In the above example the method name is ``index()``. The "index" method is always loaded by default if there is no parameter after your add-on's name. Another way to show your "Hello World" message would be this::
+
+	example.com/system/index.php?/cp/addons/settings/my_addon/index
+
+**The second segment of the URI determines which method in the controller gets called.**
+
+Let's try it. Add a new method to your controller::
+
+	<?php
+	class My_addon_rte {
+
+		public function index()
+		{
+			return 'Hello World!';
+		}
+
+		public function comments()
+		{
+			return 'Look at this!';
+		}
+	}
+
+Now load the following URL to see the comment method::
+
+	example.com/system/index.php?/cp/addons/settings/my_addon/comments
+
+You should see your new message.
+
+************************************
+Passing URI Segments to your methods
+************************************
+
+In order to pass additional segments to your ``mcp``'s methods, you should use the :doc:`/development/services/url`.
+
+**********************
+Remapping Method Calls
+**********************
+
+As noted above, the second segment of the URI typically determines which method in the controller gets called. ExpressionEngine permits you to override this behavior through the use of the ``_remap()`` method::
+
+	public function _remap()
+	{
+		// Some code here...
+	}
+
+.. important:: If your controller contains a method named ``_remap()``, it will **always** get called regardless of what your URI contains. It overrides the normal behavior in which the URI determines which method is called, allowing you to define your own method routing rules.
+
+The overridden method call (typically the second segment of the URI) will be passed as a parameter to the ``_remap()`` method::
+
+	public function _remap($method)
+	{
+		if ($method === 'some_method')
+		{
+			$this->$method();
+		}
+		else
+		{
+			$this->default_method();
+		}
+	}
+
+Any extra segments after the method name are passed into ``_remap()`` as an optional second parameter. This array can be used in combination with PHP's `call_user_func_array() <http://php.net/call_user_func_array>`_ to emulate ExpressionEngine's default behavior.
+
+Example::
+
+	public function _remap($method, $params = array())
+	{
+		$method = 'process_'.$method;
+		if (method_exists($this, $method))
+		{
+			return call_user_func_array(array($this, $method), $params);
+		}
+		show_404();
+	}
+
+***************
+Private methods
+***************
+
+In some cases you may want certain methods hidden from public access. In order to achieve this, simply declare the method as being private or protected and it will not be served via a URL request. For example, if you were to have a method like this::
+
+	private function utility()
+	{
+		// some code
+	}
+
+Trying to access it via the URL, like this, will not work::
+
+	example.com/system/index.php?/cp/addons/settings/my_addon/utility
+
+*********************
+Reserved method names
+*********************
+
+Since your controller classes will extend the main application controller you must be careful not to name your methods identically to the ones used by that class, otherwise your local functions will override them. See :doc:`/general/reserved_words` for a full list.
+
+.. important:: You should also never have a method named identically to its class name. If you do, and there is no ``__construct()`` method in the same class, then your e.g. ``Index::index()`` method will be executed as a class constructor! This is a PHP4 backwards-compatibility feature.
+
+*****************
+Processing Output
+*****************
+
+ExpressionEngine has an output class that takes care of sending your final rendered data to the web browser automatically. More information on this can be found in the :doc:`Views <views>` and :doc:`Output Class </development/legacy/libraries/output>` pages. In some cases, however, you might want to post-process the finalized data in some way and send it to the browser yourself. ExpressionEngine permits you to add a method named ``_output()`` to your controller that will receive the finalized output data.
+
+.. important:: If your controller contains a method named ``_output()``, it will **always** be called by the output class instead of echoing the finalized data directly. The first parameter of the method will contain the finalized output.
+
+Here is an example::
+
+	public function _output($output)
+	{
+	echo $output;
+	}
+
+.. note:: Please note that your ``_output()`` method will receive the data in its finalized state. Benchmark and memory usage data will be rendered, cache files written (if you have caching enabled), and headers will be sent (if you use that :doc:`feature </development/legacy/libraries/output>`) before it is handed off to the ``_output()`` method. To have your controller's output cached properly, its ``_output()`` method can use
+
+	::
+
+		if (ee()->output->cache_expiration > 0)
+		{
+			ee()->output->_write_cache($output);
+		}
+
+	If you are using this feature the page execution timer and memory usage stats might not be perfectly accurate since they will not take into account any further processing you do. For an alternate way to control output *before* any of the final processing is done, please see the available methods in the :doc:`Output Library </development/legacy/libraries/output>`.
