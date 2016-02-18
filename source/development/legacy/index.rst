@@ -9,6 +9,10 @@ Legacy Reference
   database/index
   libraries/index
   helpers/index
+  mvc
+  models
+  views
+  controllers
+  drivers
   api/index
-
-For legacy documentation of libraries that were inherited from CodeIgniter, please refer to the `CodeIgniter documentation <https://ellislab.com/codeigniter/user-guide>`_.
+  common_functions
