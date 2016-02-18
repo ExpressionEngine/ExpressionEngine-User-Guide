@@ -1,6 +1,6 @@
-#########################
-Using CodeIgniter Drivers
-#########################
+#######
+Drivers
+#######
 
 .. highlight:: php
 
