@@ -26,5 +26,6 @@ This field is primarily useful with conditionals::
     No
   {/if}
 
-When used as a single variable it will output a ``1`` for the "on" position and
-a ``0`` for the "off" position.
+When used as a single variable, e.g. ``{toggle_field}``, it will output a ``1`` for the "on" position and ``0`` for the "off" position. Handy if you are exporting channel data for later import or external use. Or writing templates for robot overlords. Or for switching between two images::
+
+  <img src="/images/robot_{toggle_field}.png"> <!-- robot_0.png or robot_1.png -->
