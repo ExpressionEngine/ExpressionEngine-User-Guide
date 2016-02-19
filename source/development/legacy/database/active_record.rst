@@ -466,7 +466,7 @@ Selecting Data
 		ee()->db->order_by(42, 'RANDOM');
 		// Produces: ORDER BY RAND(42)
 
-	:param mixed $key: Either the field for the ``ORDER BY`` clause or an associative array containing the field as the key and the direction as the value
+	:param mixed $orderby: The field to ``ORDER BY``
 	:param string $direction: The direction to ``ORDER BY``: ``ASC``, ``DESC``, or ``RANDOM``
 	:param boolean $escape: Set to ``FALSE`` to prevent :meth:`CI_DB_driver::protect_identifiers()` and :meth:`CI_DB_driver::escape()`
 	:returns: The Active Record object
@@ -482,6 +482,18 @@ Selecting Data
 
 		ee()->db->limit(10, 20);  // Produces: LIMIT 20, 10 (in MySQL.  Other databases have slightly different syntax)
 
+	:param int $value: The number of rows to ``LIMIT``
+	:param int $offset: The number of rows to offset
+	:returns: The Active Record object
+	:rtype: :class:`CI_DB_active_record`
+
+.. method:: offset($offset)
+
+	Lets you set the offset separately from :meth:`limit()`::
+
+		ee()->db->offset(10);  // Produces: LIMIT n, 10
+
+	:param int $offset: The number of rows to offset
 	:returns: The Active Record object
 	:rtype: :class:`CI_DB_active_record`
 
@@ -586,7 +598,7 @@ Inserting Data
 
 	Usage of the :meth:`set()` method is also allowed and all fields are automatically escaped, just like with :meth:`insert()`.
 
-	:param string $table: The name of the table to ``INSERT INTO``
+	:param string $table: The name of the table to ``REPLACE INTO``
 	:param array $set: An associative array of field names as keys and the values as values
 	:returns: A query result object
 	:rtype: :class:`CI_DB_result`
@@ -763,7 +775,7 @@ Deleting Data
 	:param string $table: The name of the table to ``DELETE`` from
 	:param array $where: An associative array representing the :meth:`where()` clause
 	:param int $limit: Set to a numerical value to ``LIMIT`` the ``DELETE``
-	:param boolean $reset_data: Set to ``FALSE`` tro not reset Active Record's "write" values
+	:param boolean $reset_data: Set to ``FALSE`` to not reset Active Record's "write" values
 	:returns: A query result object
 	:rtype: :class:`CI_DB_result`
 
@@ -824,21 +836,21 @@ Query grouping allows you to create groups of ``WHERE`` clauses by enclosing the
 	Starts a new group by adding an opening parenthesis to the ``WHERE`` clause of the query.
 
 	:returns: A query result object
-	:rtype: :class:`CI_DB_result`
+	:rtype: :class:`CI_DB_active_record`
 
 .. method:: or_start_group()
 
 	Starts a new group by adding an opening parenthesis to the ``WHERE`` clause of the query, prefixing it with ``OR``.
 
 	:returns: A query result object
-	:rtype: :class:`CI_DB_result`
+	:rtype: :class:`CI_DB_active_record`
 
 .. method:: end_group()
 
 	Ends the current group by adding an closing parenthesis to the ``WHERE`` clause of the query.
 
 	:returns: A query result object
-	:rtype: :class:`CI_DB_result`
+	:rtype: :class:`CI_DB_active_record`
 
 ***************
 Method Chaining
