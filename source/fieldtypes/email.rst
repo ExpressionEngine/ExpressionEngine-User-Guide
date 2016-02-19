@@ -1,6 +1,6 @@
-=============
+#############
 Email Address
-=============
+#############
 
 Email Address is a field type for storing email addresses. This field type is validated for the content author, ensuring only proper email addresses are stored.
 
