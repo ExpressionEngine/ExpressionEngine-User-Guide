@@ -1,5 +1,5 @@
-ExpressionEngine Plugins
-========================
+Plugins
+=======
 
 .. highlight:: php
 
