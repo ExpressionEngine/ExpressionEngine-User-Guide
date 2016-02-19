@@ -4,6 +4,8 @@ Views
 
 .. highlight:: php
 
+.. note:: With 3.0, the older style of views (what this page documents) are no longer preferred. **They are not deprecated at the moment**, however we recommend using the new :doc:`/development/services/view`.
+
 .. contents::
 	:local:
 	:depth: 1

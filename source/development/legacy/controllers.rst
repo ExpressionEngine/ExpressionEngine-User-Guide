@@ -14,7 +14,7 @@ Controllers are the heart of your application, as they determine how HTTP reques
 What is a Controller?
 *********************
 
-**A Controller is simply a class file that is named in a way that can be associated with a URI.** ExpressionEngine uses Controllers for all of it's Control Panel pages. An ``mcp`` file within a module is a controller as well and typically what you'll be dealing with.
+**A Controller is simply a class file that is named in a way that can be associated with a URI.** ExpressionEngine uses Controllers for all of its Control Panel pages. An ``mcp`` file within a module is a controller as well and typically what you'll be dealing with.
 
 Consider this URI::
 
@@ -26,11 +26,11 @@ In the above example, ExpressionEngine would attempt to find a controller named 
 Let's try it
 ************
 
-First, ensure that your add-on has ``settings_exist`` set to true in it's :doc:`addon.setup.php file </development/addon_setup_php_file>`. Then create a simple module control panel so you can see it in action. Using your text editor, create a file called ``mcp.my_addon.php``, and put the following code in it::
+First, ensure that your add-on has ``settings_exist`` set to true in its :doc:`addon.setup.php file </development/addon_setup_php_file>`. Then create a simple module control panel so you can see it in action. Using your text editor, create a file called ``mcp.my_addon.php``, and put the following code in it::
 
 	<?php
 
-	class My_addon_rte {
+	class My_addon_mcp {
 
 		public function index()
 		{
@@ -50,7 +50,7 @@ Now visit the Add-on Manager and click on the cog next to your add-on's name. If
 
 This is valid::
 
-	class My_addon_rte {
+	class My_addon_mcp {
 
 This is **not** valid::
 
@@ -60,7 +60,7 @@ This is **not** valid::
 Methods
 *******
 
-In the above example the method name is ``index()``. The "index" method is always loaded by default if there is no parameter after your add-on's name. Another way to show your "Hello World" message would be this::
+In the above example the method name is ``index()``. The "index" method is always loaded by default if there is no segment after your add-on's name. Another way to show your "Hello World" message would be this::
 
 	example.com/system/index.php?/cp/addons/settings/my_addon/index
 
@@ -69,7 +69,7 @@ In the above example the method name is ``index()``. The "index" method is alway
 Let's try it. Add a new method to your controller::
 
 	<?php
-	class My_addon_rte {
+	class My_addon_mcp {
 
 		public function index()
 		{
@@ -113,11 +113,11 @@ The overridden method call (typically the second segment of the URI) will be pas
 	{
 		if ($method === 'some_method')
 		{
-			$this->$method();
+			return $this->$method();
 		}
 		else
 		{
-			$this->default_method();
+			returtn $this->default_method();
 		}
 	}
 
@@ -149,14 +149,6 @@ In some cases you may want certain methods hidden from public access. In order t
 Trying to access it via the URL, like this, will not work::
 
 	example.com/system/index.php?/cp/addons/settings/my_addon/utility
-
-*********************
-Reserved method names
-*********************
-
-Since your controller classes will extend the main application controller you must be careful not to name your methods identically to the ones used by that class, otherwise your local functions will override them. See :doc:`/general/reserved_words` for a full list.
-
-.. important:: You should also never have a method named identically to its class name. If you do, and there is no ``__construct()`` method in the same class, then your e.g. ``Index::index()`` method will be executed as a class constructor! This is a PHP4 backwards-compatibility feature.
 
 *****************
 Processing Output
