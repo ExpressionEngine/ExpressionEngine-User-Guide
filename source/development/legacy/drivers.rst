@@ -35,7 +35,7 @@ Creating Your Own Drivers
 
 Sample driver directory and file structure layout::
 
-	/application/libraries/Driver_name/
+	system/ee/user/addons/my_addon/libraries/Driver_name/
 	├── Driver_name.php
 	└── drivers/
 	    ├── Driver_name_subclass_1.php
