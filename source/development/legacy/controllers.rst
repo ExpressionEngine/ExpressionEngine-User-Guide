@@ -92,7 +92,19 @@ You should see your new message.
 Passing URI Segments to your methods
 ************************************
 
-In order to pass additional segments to your ``mcp``'s methods, you should use the :doc:`/development/services/url`.
+You can pass additional URI segments to your methods when :doc:`creating URLs </development/services/url>` like so::
+
+	example.com/system/index.php?cp/addons/settings/my_addon/comments/asc/10
+
+Then back in your controller::
+
+	public function comments($direction = 'desc', $limit = '25')
+	{
+		...
+
+If you want to use this functionality for the ``index()`` method, be sure to specify ``index`` in your URLs::
+
+	example.com/system/index.php?cp/addons/settings/my_addon/index/asc/10
 
 **********************
 Remapping Method Calls
