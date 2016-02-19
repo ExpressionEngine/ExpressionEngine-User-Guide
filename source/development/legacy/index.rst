@@ -9,7 +9,6 @@ Legacy Reference
   database/index
   libraries/index
   helpers/index
-  mvc
   models
   views
   controllers
