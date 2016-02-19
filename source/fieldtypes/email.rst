@@ -23,10 +23,10 @@ or with other custom data and encoded by ExpressionEngine for spam protection (s
 
   {encode="{contact_email_address}?subject=Some%20Subject" title="Send an Email to {first_name}"}
 
-Mailto Manipulation
-===================
+Mailto Modifier
+===============
 
-The Email Address field can also conveniently output links for you using the ``mailto`` manipulation, with optional titles and subjects. For spam protection, Mailto manipulations are encoded by default, but you can override this parameter if you wish. Here is an example with all of the options::
+The Email Address field can also conveniently output links for you using the ``mailto`` modifier, with optional titles and subjects. For spam protection, Mailto modifiers are encoded by default, but you can override this parameter if you wish. Here is an example with all of the options::
 
   {contact_email_address:mailto title="Email about their dog" subject="Question about your dog" encode="no"}
 
@@ -53,7 +53,7 @@ subject=
 
   subject="Question about your dog"
 
-A pre-set subject for the email. Most email clients will read and use this to pre-fill the subject line. It is URL encoded automatically for you.
+A pre-set subject for the email. Most email clients will read and use this to pre-fill the subject line. It is URL-encoded automatically for you.
 
 encode=
 ~~~~~~~
