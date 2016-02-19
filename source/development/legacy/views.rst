@@ -81,7 +81,7 @@ And here's an example using an object::
 	$data = new Someclass();
 	ee()->load->view('view', $data);
 
-.. note:: If you use an object, the class variables will be turned into array elements.
+.. note:: If you use an object, the class variables will be turned into array elements. The new :doc:`/development/services/view` does **not** convert objects into arrays.
 
 Let's try it with your controller file. Open it add this code::
 
