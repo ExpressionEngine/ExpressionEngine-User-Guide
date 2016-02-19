@@ -2,7 +2,7 @@
 URL
 ===
 
-URL is a field type for storing URLs. This field type is validated for the content author, so that only fully formed and valid URLs are allowed. The site builder can determine which URL schemes are allowed. URLs are entity encoded so that they may be used directly in links and other HTML attributes, e.g.::
+URL is a fieldtype for storing URLs. This fieldtype is validated for the content author, so that only fully-formed and valid URLs are allowed. The site builder can determine which URL schemes are allowed. URLs are entity-encoded so that they may be used directly in links and other HTML attributes, e.g.::
 
   <a href="{your_url_field}">Your Link</a>
 
