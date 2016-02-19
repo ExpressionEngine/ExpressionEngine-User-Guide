@@ -72,7 +72,7 @@ Selecting Data
 		$query = ee()->db->get('mytable');
 
 	:param string $select: The columns to select, omit to ``SELECT *``
-	:param boolean $escape: Set to ``FALSE`` to prevent :meth:`CI_DB_driver::protect_identifiers()` and :meth:`CI_DB_driver:escape()`
+	:param boolean $escape: Set to ``FALSE`` to prevent :meth:`CI_DB_driver::protect_identifiers()` and :meth:`CI_DB_driver::escape()`
 	:returns: The Active Record object
 	:rtype: :class:`CI_DB_active_record`
 
@@ -229,7 +229,7 @@ Selecting Data
 
 	:param string $key: Either the field to compare or an ``array`` containing the fields as keys and the value as the value. The field will contain the comparison operators (e.g. ``<``, ``<=``, ``>``, ``>=``, ``!=``, ``=``). By default ``=`` is used if no comparison operator is provided.
 	:param string $value: The value to compare to
-	:param boolean $escape: Set to ``FALSE`` to prevent :meth:`CI_DB_driver::protect_identifiers()` and :meth:`CI_DB_driver:escape()`
+	:param boolean $escape: Set to ``FALSE`` to prevent :meth:`CI_DB_driver::protect_identifiers()` and :meth:`CI_DB_driver::escape()`
 	:returns: The Active Record object
 	:rtype: :class:`CI_DB_active_record`
 
@@ -242,7 +242,7 @@ Selecting Data
 
 	:param string $key: Either the field to compare or an ``array`` containing the fields as keys and the value as the value. The field will contain the comparison operators (e.g. ``<``, ``<=``, ``>``, ``>=``, ``!=``, ``=``). By default ``=`` is used if no comparison operator is provided.
 	:param string $value: The value to compare to
-	:param boolean $escape: Set to ``FALSE`` to prevent :meth:`CI_DB_driver::protect_identifiers()` and :meth:`CI_DB_driver:escape()`
+	:param boolean $escape: Set to ``FALSE`` to prevent :meth:`CI_DB_driver::protect_identifiers()` and :meth:`CI_DB_driver::escape()`
 	:returns: The Active Record object
 	:rtype: :class:`CI_DB_active_record`
 
@@ -418,7 +418,7 @@ Selecting Data
 
 	:param mixed $key: Either the field for the ``HAVING`` clause or an associative array containing the field as the key and the condition as the value
 	:param string $value: The condition to check for
-	:param boolean $escape: Set to ``FALSE`` to prevent :meth:`CI_DB_driver::protect_identifiers()` and :meth:`CI_DB_driver:escape()`
+	:param boolean $escape: Set to ``FALSE`` to prevent :meth:`CI_DB_driver::protect_identifiers()` and :meth:`CI_DB_driver::escape()`
 	:returns: The Active Record object
 	:rtype: :class:`CI_DB_active_record`
 
@@ -428,7 +428,7 @@ Selecting Data
 
 	:param mixed $key: Either the field for the ``HAVING`` clause or an associative array containing the field as the key and the condition as the value
 	:param string $value: The condition to check for
-	:param boolean $escape: Set to ``FALSE`` to prevent :meth:`CI_DB_driver::protect_identifiers()` and :meth:`CI_DB_driver:escape()`
+	:param boolean $escape: Set to ``FALSE`` to prevent :meth:`CI_DB_driver::protect_identifiers()` and :meth:`CI_DB_driver::escape()`
 	:returns: The Active Record object
 	:rtype: :class:`CI_DB_active_record`
 
@@ -468,7 +468,7 @@ Selecting Data
 
 	:param mixed $key: Either the field for the ``ORDER BY`` clause or an associative array containing the field as the key and the direction as the value
 	:param string $direction: The direction to ``ORDER BY``: ``ASC``, ``DESC``, or ``RANDOM``
-	:param boolean $escape: Set to ``FALSE`` to prevent :meth:`CI_DB_driver::protect_identifiers()` and :meth:`CI_DB_driver:escape()`
+	:param boolean $escape: Set to ``FALSE`` to prevent :meth:`CI_DB_driver::protect_identifiers()` and :meth:`CI_DB_driver::escape()`
 	:returns: The Active Record object
 	:rtype: :class:`CI_DB_active_record`
 
@@ -639,7 +639,7 @@ Inserting Data
 
 	:param mixed $key: Either the field for the ``SET`` clause or an associative array containing the field as the key and the value as the value
 	:param string $value: The value to ``SET``
-	:param boolean $escape: Set to ``FALSE`` to prevent :meth:`CI_DB_driver::protect_identifiers()` and :meth:`CI_DB_driver:escape()`
+	:param boolean $escape: Set to ``FALSE`` to prevent :meth:`CI_DB_driver::protect_identifiers()` and :meth:`CI_DB_driver::escape()`
 	:returns: The Active Record object
 	:rtype: :class:`CI_DB_active_record`
 
