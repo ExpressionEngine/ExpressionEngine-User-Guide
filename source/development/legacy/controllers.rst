@@ -149,29 +149,3 @@ In some cases you may want certain methods hidden from public access. In order t
 Trying to access it via the URL, like this, will not work::
 
 	example.com/system/index.php?/cp/addons/settings/my_addon/utility
-
-*****************
-Processing Output
-*****************
-
-ExpressionEngine has an output class that takes care of sending your final rendered data to the web browser automatically. More information on this can be found in the :doc:`Views <views>` and :doc:`Output Class </development/legacy/libraries/output>` pages. In some cases, however, you might want to post-process the finalized data in some way and send it to the browser yourself. ExpressionEngine permits you to add a method named ``_output()`` to your controller that will receive the finalized output data.
-
-.. important:: If your controller contains a method named ``_output()``, it will **always** be called by the output class instead of echoing the finalized data directly. The first parameter of the method will contain the finalized output.
-
-Here is an example::
-
-	public function _output($output)
-	{
-	echo $output;
-	}
-
-.. note:: Please note that your ``_output()`` method will receive the data in its finalized state. Benchmark and memory usage data will be rendered, cache files written (if you have caching enabled), and headers will be sent (if you use that :doc:`feature </development/legacy/libraries/output>`) before it is handed off to the ``_output()`` method. To have your controller's output cached properly, its ``_output()`` method can use
-
-	::
-
-		if (ee()->output->cache_expiration > 0)
-		{
-			ee()->output->_write_cache($output);
-		}
-
-	If you are using this feature the page execution timer and memory usage stats might not be perfectly accurate since they will not take into account any further processing you do. For an alternate way to control output *before* any of the final processing is done, please see the available methods in the :doc:`Output Library </development/legacy/libraries/output>`.
