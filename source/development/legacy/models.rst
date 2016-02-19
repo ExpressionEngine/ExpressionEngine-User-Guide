@@ -61,7 +61,7 @@ Models are PHP classes that are designed to work with information in your databa
 Anatomy of a Model
 ==================
 
-Model classes are stored in your ``system/user/ee/addons/addon/models/`` directory. They can be nested within sub-directories if you want this type of organization.
+Model classes are stored in your ``system/user/ee/addons/my_addon/models/`` directory. They can be nested within sub-directories if you want this type of organization.
 
 The basic prototype for a model class is this::
 
@@ -89,7 +89,7 @@ The file name must match the class name. For example, if this is your class::
 
 Your file will be this::
 
-	system/user/ee/addons/addon/models/User_model.php
+	system/user/ee/addons/my_addon/models/User_model.php
 
 Loading a Model
 ===============
@@ -98,7 +98,7 @@ Your models will typically be loaded and called from within your :doc:`controlle
 
 	ee()->load->model('model_name');
 
-If your model is located in a sub-directory, include the relative path from your models directory. For example, if you have a model located at ``system/user/ee/addons/addon/models/blog/Queries.php`` you'll load it using::
+If your model is located in a sub-directory, include the relative path from your models directory. For example, if you have a model located at ``system/user/ee/addons/my_addon/models/blog/Queries.php`` you'll load it using::
 
 	ee()->load->model('blog/queries');
 
