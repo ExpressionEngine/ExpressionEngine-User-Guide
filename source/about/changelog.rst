@@ -8,7 +8,7 @@ ExpressionEngine 3.x Change Log
 Version 3.1.2
 -------------
 
-Release Date: January 26, 2016
+Release Date: January 28, 2016
 
 - Fixed a bug (#21408) where the Show File Chooser checkbox would not save for text input fields.
 - Fixed a bug (#21488) where updating your member password could result in a PHP error.
@@ -23,6 +23,7 @@ Release Date: January 26, 2016
 - Fixed a bug (#21526) where an error would appear when saving a category field.
 - Fixed a bug (#21532) where accessing some files wrongly accused you of attempting to access files outside of a directory.
 - Fixed a bug (#21537) where PHP 5.3 didn't like something the Pages module was doing and complained loudly.
+- Fixed a bug (#21546) where one could not delete more than one category at a time via the category manager.
 - Fixed a bug where the moblog settings page could run out of memory on large sites.
 - Fixed a bug where `upload_directory` config overrides weren't overriding on error display in the File Manager
 - Fixed a bug where relationship parsing could result in conditional errors.

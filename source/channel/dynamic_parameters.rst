@@ -65,7 +65,7 @@ By default, if multiple values are submitted for a single field name, they will 
 
 To designate multiple values be treated as an inclusive stack, add a ``[&]`` to the field name in the parameter:
 
-::
+.. code-block:: none
 
   dynamic_parameters="orderby|limit|category[&]"
 

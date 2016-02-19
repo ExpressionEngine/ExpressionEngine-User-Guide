@@ -42,7 +42,9 @@ Route
 ~~~~~
 
 This route determines the URLs that will match your template. The
-format is as follows::
+format is as follows:
+
+.. code-block:: none
 
 	/segment/{variable}/{variable:rule}/{variable:rule0|rule1[arg]}
 

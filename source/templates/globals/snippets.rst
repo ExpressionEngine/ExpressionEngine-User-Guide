@@ -17,6 +17,8 @@ immediately see the effects everywhere that you've used it. For example,
 you could create a Snippet named my\_date\_formatting with a value of
 format="%m-%d-%Y" and use it in any date variable thusly::
 
+.. code-block:: none
+
 	{entry_date {my_date_formatting}}
 
 It will be instantly expanded before your template is parsed, just as if

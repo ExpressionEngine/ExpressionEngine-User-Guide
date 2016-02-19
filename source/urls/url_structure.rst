@@ -20,7 +20,9 @@ In order to accomplish this, the use of query strings was eliminated
 from the URLs.
 
 Most dynamic publishing systems use query strings. That is, URLs that
-look like this::
+look like this:
+
+.. code-block:: none
 
 	http://example.com/index.php?id=2&page=1
 
@@ -113,6 +115,6 @@ with the addition of the question mark.
 
 In a select few cases, turning on **Force URL Query Strings** by itself
 won't be enough. If URLs continue to not work even with that setting on,
-then open system/expressionengine/config/config.php and set::
+then open system/user/config/config.php and set::
 
 $config['uri_protocol']	= 'QUERY_STRING';

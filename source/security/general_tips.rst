@@ -105,7 +105,9 @@ directories outside of ``images/``, it's highly recommended that you
 copy this ``.htaccess`` into that directory.
 
 In the event that the above ``.htaccess`` doesn't work you can also try
-the following ``.htaccess``::
+the following ``.htaccess``:
+
+.. code-block:: apache
 
   <FilesMatch "(?i)\.(php[s0-9]?|phtml)">
     Order Deny,Allow

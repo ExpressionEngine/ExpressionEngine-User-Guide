@@ -428,7 +428,7 @@ path=
 
 ::
 
-	{path=template_group/template'}
+	{path='template_group/template'}
 
 The path (template\_group/template) where you want to show the
 categories. This is typically used within a standard HTML link tag

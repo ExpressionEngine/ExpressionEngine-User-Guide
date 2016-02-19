@@ -160,7 +160,9 @@ with the current date. You could then run this command via a
 or any interval you choose.
 
 If you would rather store your backups as compressed archives, it's as
-easy as tacking on the command::
+easy as tacking on the command:
+
+.. code-block:: bash
 
   rsync -ahvz --delete user@production_server:~/public/ ~/backups/backup_latest/ &&
   tar pcvzfC ~/backups/$(date +%F).tgz --same-owner ~/backups/backup_latest .

@@ -32,7 +32,9 @@ the DOM across elements.
 If we just worked with text, we could count characters (including the
 newline) and say that our range starts at 8 and ends at 45. While this
 works, it is not always enough information. Let's look at the HTML that
-was used to create this text::
+was used to create this text:
+
+.. code-block:: html
 
   <div><p><span>Look at </span><em>me</em> still talking</p><p><span>when there's Science to do!</span><p></div>
 

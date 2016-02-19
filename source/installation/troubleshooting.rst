@@ -51,11 +51,11 @@ HTTP Headers
 ------------
 
 Some "PHP as CGI" servers also do not like it if ExpressionEngine
-explicitly sends its own HTTP Headers. In this case, try setting 
+explicitly sends its own HTTP Headers. In this case, try setting
 :doc:`Generate HTTP Page Headers? </cp/settings/debug-output>`
 to "No".
 
 If you cannot log into the Control Panel, then you can manually
-change the setting via system/expressionengine/config/config.php::
+change the setting via system/user/config/config.php::
 
 	$config['send_headers'] = 'n';

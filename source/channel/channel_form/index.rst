@@ -41,7 +41,7 @@ provide it to the ExpressionEngine community.
   * The *File* fieldtype is now compatible with *Channel Form*.
   * *Stand-Alone Entry Form* has been removed.
   * *SafeCracker File* has been removed.
-  * The stylesheet path has changed from ``{path=css/_ee_saef_css}`` to  
+  * The stylesheet path has changed from ``{path=css/_ee_saef_css}`` to
     ``{path=css/_ee_channel_form_css}``.
 
 ******************
@@ -65,7 +65,7 @@ If you plan on using the formatting buttons or the :doc:`Grid
 </add-ons/rte/index>`, Date, or File fieldtypes, include a link to the
 Channel Form stylesheet in your template::
 
-  <link href="{path=css/_ee_channel_form_css}" type="text/css" rel="stylesheet" media="screen">
+  <link href="{path='css/_ee_channel_form_css'}" type="text/css" rel="stylesheet" media="screen">
 
 The Channel Form tag will automatically load jQuery for you. If you
 prefer to include your own version of jQuery, use the `include_jquery=`_
@@ -102,7 +102,7 @@ Entry Date
 .. note:: All date formats should match what the user has defined in
   localization settings. The date fields will autmatically use that format and
   validate against it.
- 
+
 Set the date of the entry::
 
   <p>Date <br> <input type="text" name="entry_date" value="{entry_date}" maxlength="23" size="25"></p>
@@ -179,10 +179,10 @@ show=
 ::
 
 	{categories show="4|7"}
-	
+
 You may alternatively specify which categories to not show::
 
-	{categories show="not 3|6|8"}	
+	{categories show="not 3|6|8"}
 
 show_group=
 ^^^^^^^^^^^^
@@ -271,7 +271,7 @@ Other Channel Fields
 ~~~~~~~~~~~~~~~~~~~~
 
 For all of the other channel fields, you have several options for outputting
-the form field. 
+the form field.
 
 The Custom fields tag pair loops through all of the custom fields, outputting custom fields with the minimum number of tags but also a limited amount of design flexibility.
 
@@ -281,7 +281,7 @@ To output a single field, the ``{field:...}`` tag is available::
 
 The `field tag` should output all of the required html needed for either a new entry or an edit.
 
-If you need to further customize input fields, most can be manually constructed using the field shortname. 
+If you need to further customize input fields, most can be manually constructed using the field shortname.
 
 
 Parameters
@@ -577,7 +577,7 @@ sticky\_entry=
 
   sticky_entry="yes"
 
-Force the entry to be "sticky" or not.  This parameter only applies to new 
+Force the entry to be "sticky" or not.  This parameter only applies to new
 entries and will be ignored for edits.
 
 url\_title=
@@ -955,12 +955,12 @@ File field
 
 There are several additional variables that may be specified when manually constructing a file field:
 
-- ``my_field_name_directory`` - the file directory the image is assigned to.  
+- ``my_field_name_directory`` - the file directory the image is assigned to.
     This field is required if submitting a file.
-- ``my_field_name_hidden_directory`` - if specified, this will take precedence 
+- ``my_field_name_hidden_directory`` - if specified, this will take precedence
   over ``my_field_name_directory`` and can be used to allow editing.
-- ``my_field_name_hidden_file`` - the name of an existing, uploaded file.  If 
-  specified, this will take precedence over ``my_field_name`` and can be used 
+- ``my_field_name_hidden_file`` - the name of an existing, uploaded file.  If
+  specified, this will take precedence over ``my_field_name`` and can be used
   to allow editing.
 
 If editing entries, you will need to specify the existing directory and file
