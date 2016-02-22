@@ -9,9 +9,6 @@ Legacy Documentation
 
 Many of the libraries and helpers available in ExpressionEngine 2 continue to function as expected. They are earmarked for replacement in the future, but are not yet deprecated. Use these freely until replacement libraries or services are created.
 
-For legacy documentation of libraries that were inherited from CodeIgniter, please refer to the `CodeIgniter documentation <https://ellislab.com/codeigniter/user-guide>`_.
-
-
 .. toctree::
   :hidden:
   :glob:
