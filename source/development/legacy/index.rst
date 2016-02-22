@@ -6,7 +6,12 @@ Legacy Reference
   :titlesonly:
   :maxdepth: 1
 
-  api/index
+  database/index
   libraries/index
-
-For legacy documentation of libraries that were inherited from CodeIgniter, please refer to the `CodeIgniter documentation <https://ellislab.com/codeigniter/user-guide>`_.
+  helpers/index
+  models
+  views
+  controllers
+  drivers
+  api/index
+  common_functions
