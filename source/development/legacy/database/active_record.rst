@@ -737,7 +737,7 @@ Updating Data
 
 	The first parameter will contain the table name, the second is an associative array of values, the third parameter is the where key.
 
-	.. note:: :meth:`affected_rows()` won't give you proper results with this method, due to the very nature of how it works. Instead, :meth:`update_batch()` returns the number of rows affected.
+	.. note:: :meth:`CI_DB_driver::affected_rows()` won't give you proper results with this method, due to the very nature of how it works. Instead, :meth:`update_batch()` returns the number of rows affected.
 
 	:param string $table: The name of the table to ``UPDATE``
 	:param array $set: An associative array with fields as the keys and values as the values

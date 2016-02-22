@@ -120,8 +120,6 @@ Query Results
 		$row = $query->next_row('array');
 		$row = $query->previous_row('array');
 
-	.. note:: all the functions above will load the whole result into memory (prefetching) use :meth:`unbuffered_row()` for processing large result sets.
-
 	:param int $n: The specific row to return
 	:returns: An array representing the row
 	:rtype: array
