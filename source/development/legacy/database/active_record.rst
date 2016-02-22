@@ -753,7 +753,10 @@ Deleting Data
 
 	Generates a delete SQL string and runs the query::
 
-		ee()->db->delete('mytable', array('id' => $id));  // Produces: // DELETE FROM mytable  // WHERE id = $id
+		ee()->db->delete('mytable', array('id' => $id));
+		// Produces:
+		// DELETE FROM mytable
+		// WHERE id = $id
 
 	The first parameter is the table name, the second is the where clause. You can also use the :meth:`where()` or :meth:`or_where()` functions instead of passing the data to the second parameter of the function::
 
