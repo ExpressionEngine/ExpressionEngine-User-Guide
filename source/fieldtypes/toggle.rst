@@ -2,7 +2,10 @@
 Toggle
 ######
 
-Toggle is a fieldtype for storing yes/no or on/off data.
+Toggle is a fieldtype for storing yes/no or on/off data. On the publish form it
+is rendered thus:
+
+.. figure:: ../images/toggle_fieldtype.gif
 
 *************
 Field Options
