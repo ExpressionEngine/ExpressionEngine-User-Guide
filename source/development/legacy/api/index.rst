@@ -1,5 +1,5 @@
-ExpressionEngine API
-====================
+Legacy API Library
+==================
 
 .. contents::
   :local:
