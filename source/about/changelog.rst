@@ -5,6 +5,31 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.2.0
+-------------
+
+Release Date: Not Yet Released
+
+- Fixed a bug (#21250) where sidebar items could not be marked inactive. Now they can.
+- Fixed a bug where the Core version tried to use the Spam service.
+- Fixed a bug where the comment module could throw a PHP error for guest posts.
+- Yay: we deprecated the jQuery module! Boo: we made it installable so you can still use it. Really, just use their CDN an include it yourself.
+- Added Forum Aliases.
+- Added the Forum Publish Tab back in.
+- **NEW:** Added template tags for modified image file dimensions i.e. ``{image}{width:small}{/image}``.
+- **NEW:** Added a Toggle Fieldtype for all your on/off and yes/no needs.
+- **NEW:** Added URL Field Type
+- **NEW:** Added Email Address Field Type
+- Added global template variable/conditional ``is_ajax_request``
+
+- Developers:
+
+  - Added `output_show_message` hook for modifying the output of front-end system messages.
+  - Added an ``$antipool`` parameter to ``random_string()`` in the string helper, to blacklist characters from the alphanumeric-type pools. Uses are for unambiguous strings for humans, i.e. order numbers, coupon codes, etc
+    ::
+
+    $secret_code = strtoupper(random_string('alnum', 8, '0OoDd1IiLl8Bb5Ss2Zz'));
+
 Version 3.1.2
 -------------
 
