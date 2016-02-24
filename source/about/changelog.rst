@@ -25,10 +25,7 @@ Release Date: Not Yet Released
 - Developers:
 
   - Added `output_show_message` hook for modifying the output of front-end system messages.
-  - Added an ``$antipool`` parameter to ``random_string()`` in the string helper, to blacklist characters from the alphanumeric-type pools. Uses are for unambiguous strings for humans, i.e. order numbers, coupon codes, etc
-    ::
-
-      $secret_code = strtoupper(random_string('alnum', 8, '0OoDd1IiLl8Bb5Ss2Zz'));
+  - Added an ``$antipool`` parameter to ``random_string()`` in the string helper, to blacklist characters from the alphanumeric-type pools. Uses are for unambiguous strings for humans, i.e. order numbers, coupon codes, etc: ``$secret_code = strtoupper(random_string('alnum', 8, '0OoDd1IiLl8Bb5Ss2Zz'));``
 
 Version 3.1.2
 -------------
