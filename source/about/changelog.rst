@@ -10,6 +10,13 @@ Version 3.1.3
 
 Release Date: February x, 2016
 
+- Added visual indicators to required grid columns.
+- Grid's data type options now use the same names as the custom field's type options.
+- When editing a grid column's data type the options are now filtered based on field type compatibility.
+- Member listing setting "Sort By" choices now match available columns.
+- Made some parameters in some Active Record methods required.
+- Our CodeMirror linter had an epiphany and now realizes that installed plugins can have underscores in their tag names.
+- Tweaked Performance tab of the Profiler for clearer display.
 - Fixed a bug (#21457) where unchecked checkboxes in a publish form didn't stay unchecked.
 - Fixed a bug (#21558) where some Pages module variables were empty (and potentially some other items if retrieved with ``config_item()``).
 - Fixed a bug (#21566) where the `beforeSort` and `afterSort` Grid publish form events were not working.
@@ -40,14 +47,7 @@ Release Date: February x, 2016
 - Fixed a bug where the Revisions tab on the publish entry form only showed two versions instead of all your versions.
 - Fixed a bug where the profiler did not display the URI of the current page call.
 - Fixed a bug on the Superadmin group edit page, where the checkboxes for including in the author list and member list were incorrect.
-- Added visual indicators to required grid columns.
-- Grid's data type options now use the same names as the custom field's type options.
-- When editing a grid column's data type the options are now filtered based on field type compatibility.
-- Member listing setting "Sort By" choices now match available columns.
-- Made some parameters in some Active Record methods required.
 - Fixed a bug where the confirmation notice would not be shown after deleting a large number of entries.
-- Our CodeMirror linter had an epiphany and now realizes that installed plugins can have underscores in their tag names.
-- Tweaked Performance tab of the Profiler for clearer display.
 
 Version 3.1.2
 -------------
