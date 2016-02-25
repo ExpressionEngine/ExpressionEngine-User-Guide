@@ -8,7 +8,7 @@ ExpressionEngine 3.x Change Log
 Version 3.1.3
 -------------
 
-Release Date: February x, 2016
+Release Date: February 25, 2016
 
 - Added visual indicators to required grid columns.
 - Grid's data type options now use the same names as the custom field's type options.
