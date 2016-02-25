@@ -5,6 +5,50 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.1.3
+-------------
+
+Release Date: February x, 2016
+
+- Fixed a bug (#21457) where unchecked checkboxes in a publish form didn't stay unchecked.
+- Fixed a bug (#21558) where some Pages module variables were empty (and potentially some other items if retrieved with ``config_item()``).
+- Fixed a bug (#21566) where the `beforeSort` and `afterSort` Grid publish form events were not working.
+- Fixed a bug (#21569) where categories of the same name thought they were all selected when only some of them were.
+- Fixed a bug (#21581) where a MySQL error occured on the publish page if no member groups were included in the author list.
+- Fixed a bug (#21593) where a front-end logout link may show a warning in PHP 7.
+- Fixed a bug (#21594) where `number` input types were not bound to AJAX form validation and had no styling.
+- Fixed a bug (#21595) where categories created under another MSM site could not be assigned to an entry.
+- Fixed a bug (#21603) where Grid's JavaScript may try to manipulate table elements that are part of custom fieldtype markup.
+- Fixed a bug (#21604) where relationships inside grid fields did not work consistently on MSM sites.
+- Fixed a bug (#21605) where the documentation link for the "Suspend threshold" setting was broken.
+- Fixed a bug (#21606) where the units used for the Lockout Time setting were not specified in the field description.
+- Fixed a bug (#21609) where errors may appear when downloading a new blacklist under PHP 7.
+- Fixed bugs (#21612 & #21616) where entry comment counts where not updated when adding or deleting comments.
+- Fixed a bug (#21614) where one could not delete the last image manipulation for an upload directory.
+- Fixed a bug (#21615) where there were a few misspellings of "entries" in the CP.
+- Fixed a bug where Relationship fields could not be filtered when using session IDs for control panel sessions.
+- Fixed a bug where the header search box did not repopulate correctly.
+- Fixed a bug where a control panel search in the channel section could throw a PHP error.
+- Fixed a bug where some default avatars were no longer displayed on the frontend.
+- Fixed a bug where accepting the core file change notice resulted in a 404.
+- Fixed a bug where custom fields could use reserved words as their short name.
+- Fixed a bug where a Super Admin could delete his/her own account.
+- Fixed a bug where installing an add-on with a publish tab would break existing publish form layouts.
+- Fixed a bug where under the right conditions a member group that should have permissions to a forum doesn't.
+- Fixed a bug where `glob()` could return `FALSE` and cause all manner of errors in the Add-On Manager.
+- Fixed a bug where saving a template did not clear any of the caches.
+- Fixed a bug where the Revisions tab on the publish entry form only showed two versions instead of all your versions.
+- Fixed a bug where the profiler did not display the URI of the current page call.
+- Fixed a bug on the Superadmin group edit page, where the checkboxes for including in the author list and member list were incorrect.
+- Added visual indicators to required grid columns.
+- Grid's data type options now use the same names as the custom field's type options.
+- When editing a grid column's data type the options are now filtered based on field type compatibility.
+- Member listing setting "Sort By" choices now match available columns.
+- Made some parameters in some Active Record methods required.
+- Fixed a bug where the confirmation notice would not be shown after deleting a large number of entries.
+- Our CodeMirror linter had an epiphany and now realizes that installed plugins can have underscores in their tag names.
+- Tweaked Performance tab of the Profiler for clearer display.
+
 Version 3.1.2
 -------------
 
