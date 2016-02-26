@@ -2657,7 +2657,7 @@ Set the default member profile theme.
 ============ ===========
 Value        Description
 ============ ===========
-``theme``    Name of theme directory found in ``themes/profile_themes``
+``theme``    Name of theme directory found in ``themes/member``
 ============ ===========
 
 Example Usage::
