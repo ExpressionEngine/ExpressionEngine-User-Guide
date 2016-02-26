@@ -5,6 +5,13 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.1.4
+-------------
+
+Release Date: February 26, 2016
+
+- Fixed a **CRITICAL** bug where saving or deleting comments may cause data loss in certain areas of the associated Channel entries, caused by a change in 3.1.3. Only installations of 3.1.3 were affected.
+
 Version 3.1.3
 -------------
 
