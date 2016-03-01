@@ -244,7 +244,7 @@ This is the filename of the dictionary file used for the previous
 preference. Download the `dictionary file
 <https://ellislab.com/asset/file/dictionary.zip>`__, unzip, and upload
 the text file (:file:`dictionary.txt`) to
-:file:`system/expressionengine/config/`.
+:file:`system/user/config/`.
 
 Enter only the filename of the file (:file:`dictionary.txt`) in this
 field.
