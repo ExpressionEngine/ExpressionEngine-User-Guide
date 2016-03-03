@@ -1,6 +1,6 @@
-###########################
-ExpressionEngine Fieldtypes
-###########################
+##########
+Fieldtypes
+##########
 
 .. contents::
   :local:
