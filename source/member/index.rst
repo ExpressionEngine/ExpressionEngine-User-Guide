@@ -44,7 +44,7 @@ Member Profile Templates
 The public profile area has its own set of templates which can be edited
 to change the look. You'll find the templates located at::
 
-  themes/profile_themes/default
+  themes/member/default
 
 These templates can be edited with a text editor, or you may choose to edit
 them via your Control Panel at :menuselection:`Developer Tools --> Template

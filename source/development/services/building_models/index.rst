@@ -329,8 +329,6 @@ The available options include:
 +------------+-------------------+------------------+
 | yesNo      | Cast to y/n       | Cast to boolean  |
 +------------+-------------------+------------------+
-| boolInt    | Cast to 0/1       | Cast to boolean  |
-+------------+-------------------+------------------+
 | timestamp  | Cast to timestamp | Cast to DateTime |
 +------------+-------------------+------------------+
 

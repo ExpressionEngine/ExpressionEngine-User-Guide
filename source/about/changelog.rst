@@ -14,18 +14,97 @@ Release Date: Not Yet Released
 - **NEW:** Added a Toggle Fieldtype for all your on/off and yes/no needs.
 - **NEW:** Added URL Field Type
 - **NEW:** Added Email Address Field Type
+- The default database engine is now InnoDB
 - Added Forum Aliases.
 - Added the Forum Publish Tab back in.
 - Added global template variable/conditional ``is_ajax_request``
 - Yay: we deprecated the jQuery module! Boo: we made it installable so you can still use it. Really, just use their CDN and include it yourself.
+- Added a notice to the Site Manager when the site limit has been reached.
+- Changed the file display to use the file's name for non-images instead of the missing image thumbnail. (Bug #21270)
+- Changed the behavior of the "Any ..." options in the Relationship settings such that it and the specific options are mutually exclusive, i.e. "Any channel" or a specific channel, but not both. (Bug #21659)
 - Fixed a bug (#21250) where sidebar items could not be marked inactive. Now they can.
 - Fixed a bug where the Core version tried to use the Spam service.
 - Fixed a bug where the comment module could throw a PHP error for guest posts.
+- Fixed a bug (#21650) where one could not remove all rows in a Grid field.
+- Fixed a bug (#21647) where there could be an undefined variable error on the Publish screen.
+- Fixed a bug (#21628) where categories would not maintain their selection on the Publish form when there was a validation error.
+- Fixed a bug (#21626) where the path for the passwords dictionary file was pointing to the wrong location.
+- Fixed a bug where formatting buttons on textareas would not work on new Grid rows.
+- Fixed a bug (#21638) where textareas with a file chooser available would have non-images inserted as an image tag.
+- Fixed a bug (#21567) where sites with OPcache enabled can result in a false erorr after a fresh install.
+- Fixed a bug (#21555) where empty tabs could not be removed from a layout.
+- Fixed a bug (#21545) where email templates could not be edited.
+- Fixed a bug (#21655) where template versions could sometimes generate erorrs.
+- Fixed a bug (#21656) where Template Revisions were displayed unsorted, rather than sorted by date.
+- Fixed a bug (#21565) where channel field text formatting could not update existing entries.
+- Fixed a bug (#21103) where installing from https would configure the site for http instead of https.
+- Fixed a bug (#21187) where Channel Form would sometimes be a little too strict about required fields.
+- Fixed a bug (#21215) where updating a site with template routes from a version before 2.9.3 would generate errors.
+- Fixed a bug (#21651) where we had a spelling mistake in an language key.
+- Fixed a bug (#21561) where the translation utitliy would truncate some HTML when saving.
+- Fixed a bug (#21293) where the translation utility would break the form if the translation contained a quotation mark.
+- Fixed a bug where you could not erase the contents of RTE field once it had been saved.
+- Fixed a bug where commenting as a Guest generated an error.
+- Fixed a bug (#21577) where the RTE would grow when switching from WYSIWYG to Source View.
+- Fixed a bug where the front-end email settings page didn't require a password when you weren't changing your email address.
 
 - Developers:
 
   - Added `output_show_message` hook for modifying the output of front-end system messages.
   - Added an ``$antipool`` parameter to ``random_string()`` in the string helper, to blacklist characters from the alphanumeric-type pools. Uses are for unambiguous strings for humans, i.e. order numbers, coupon codes, etc: ``$secret_code = strtoupper(random_string('alnum', 8, '0OoDd1IiLl8Bb5Ss2Zz'));``
+  - The `cp_search_index` table was removed.
+  - The VariableColumnModel no longer marks properties as dirty when filling.
+
+Version 3.1.4
+-------------
+
+Release Date: February 26, 2016
+
+- Fixed a **CRITICAL** bug where saving or deleting comments may cause data loss in certain areas of the associated Channel entries, caused by a change in 3.1.3. Only installations of 3.1.3 were affected.
+
+Version 3.1.3
+-------------
+
+Release Date: February 25, 2016
+
+- Added visual indicators to required grid columns.
+- Grid's data type options now use the same names as the custom field's type options.
+- When editing a grid column's data type the options are now filtered based on field type compatibility.
+- Member listing setting "Sort By" choices now match available columns.
+- Made some parameters in some Active Record methods required.
+- Our CodeMirror linter had an epiphany and now realizes that installed plugins can have underscores in their tag names.
+- Tweaked Performance tab of the Profiler for clearer display.
+- Fixed a bug (#21457) where unchecked checkboxes in a publish form didn't stay unchecked.
+- Fixed a bug (#21558) where some Pages module variables were empty (and potentially some other items if retrieved with ``config_item()``).
+- Fixed a bug (#21566) where the `beforeSort` and `afterSort` Grid publish form events were not working.
+- Fixed a bug (#21569) where categories of the same name thought they were all selected when only some of them were.
+- Fixed a bug (#21581) where a MySQL error occured on the publish page if no member groups were included in the author list.
+- Fixed a bug (#21593) where a front-end logout link may show a warning in PHP 7.
+- Fixed a bug (#21594) where `number` input types were not bound to AJAX form validation and had no styling.
+- Fixed a bug (#21595) where categories created under another MSM site could not be assigned to an entry.
+- Fixed a bug (#21603) where Grid's JavaScript may try to manipulate table elements that are part of custom fieldtype markup.
+- Fixed a bug (#21604) where relationships inside grid fields did not work consistently on MSM sites.
+- Fixed a bug (#21605) where the documentation link for the "Suspend threshold" setting was broken.
+- Fixed a bug (#21606) where the units used for the Lockout Time setting were not specified in the field description.
+- Fixed a bug (#21609) where errors may appear when downloading a new blacklist under PHP 7.
+- Fixed bugs (#21612 & #21616) where entry comment counts where not updated when adding or deleting comments.
+- Fixed a bug (#21614) where one could not delete the last image manipulation for an upload directory.
+- Fixed a bug (#21615) where there were a few misspellings of "entries" in the CP.
+- Fixed a bug where Relationship fields could not be filtered when using session IDs for control panel sessions.
+- Fixed a bug where the header search box did not repopulate correctly.
+- Fixed a bug where a control panel search in the channel section could throw a PHP error.
+- Fixed a bug where some default avatars were no longer displayed on the frontend.
+- Fixed a bug where accepting the core file change notice resulted in a 404.
+- Fixed a bug where custom fields could use reserved words as their short name.
+- Fixed a bug where a Super Admin could delete his/her own account.
+- Fixed a bug where installing an add-on with a publish tab would break existing publish form layouts.
+- Fixed a bug where under the right conditions a member group that should have permissions to a forum doesn't.
+- Fixed a bug where `glob()` could return `FALSE` and cause all manner of errors in the Add-On Manager.
+- Fixed a bug where saving a template did not clear any of the caches.
+- Fixed a bug where the Revisions tab on the publish entry form only showed two versions instead of all your versions.
+- Fixed a bug where the profiler did not display the URI of the current page call.
+- Fixed a bug on the Superadmin group edit page, where the checkboxes for including in the author list and member list were incorrect.
+- Fixed a bug where the confirmation notice would not be shown after deleting a large number of entries.
 
 Version 3.1.2
 -------------
