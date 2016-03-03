@@ -47,6 +47,7 @@ Release Date: Not Yet Released
 - Fixed a bug where commenting as a Guest generated an error.
 - Fixed a bug (#21577) where the RTE would grow when switching from WYSIWYG to Source View.
 - Fixed a bug where the front-end email settings page didn't require a password when you weren't changing your email address.
+- Fixed a bug (#21287) where RTE fields could not be resized.
 
 - Developers:
 
