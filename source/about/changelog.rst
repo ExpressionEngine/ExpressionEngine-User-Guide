@@ -8,7 +8,7 @@ ExpressionEngine 3.x Change Log
 Version 3.2.0
 -------------
 
-Release Date: Not Yet Released
+Release Date: March 8, 2016
 
 - **NEW:** Added template tags for modified image file dimensions i.e. ``{image}{width:small}{/image}``.
 - **NEW:** Added a Toggle Fieldtype for all your on/off and yes/no needs.
