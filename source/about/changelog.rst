@@ -43,11 +43,24 @@ Release Date: March 8, 2016
 - Fixed a bug (#21651) where we had a spelling mistake in an language key.
 - Fixed a bug (#21561) where the translation utitliy would truncate some HTML when saving.
 - Fixed a bug (#21293) where the translation utility would break the form if the translation contained a quotation mark.
+- Fixed a bug (#21648) where the last field in a layout would sometimes refuse to move.
+- Fixed a bug (#21587) where removing custom fields that were in a layout could break the layout.
+- Fixed a bug (#21487) where enabling versioning after creating a layout would generate errors.
+- Fixed a bug (#21329) where sending HTML email via the Communicate utility could add non breaking spaces.
+- Fixed a bug (#21318) where partial translations could not be saved.
+- Fixed a bug (#21335) where channel form couldn't tell if an option was checked or not.
+- Fixed a bug where Grid column clones were jealous and quietly assumed the identity of the original.
 - Fixed a bug where you could not erase the contents of RTE field once it had been saved.
 - Fixed a bug where commenting as a Guest generated an error.
 - Fixed a bug (#21577) where the RTE would grow when switching from WYSIWYG to Source View.
 - Fixed a bug where the front-end email settings page didn't require a password when you weren't changing your email address.
 - Fixed a bug (#21287) where RTE fields could not be resized.
+- Fixed a bug where database errors could sometimes not be displayed.
+- Fixed a bug (#21601) where extension settings were only saved to the first method in the database.
+- Fixed a bug (#21599) where the no_results conditional on nested relationship tags would have some of the initial characters cut off.
+- Fixed a bug (#21584) where you couldn't properly duplicate the Super Admin member group.
+- Fixed a bug (#21627) where the comment form didn't work when using Session or Session and Cookie front-end session types.
+
 
 - Developers:
 
