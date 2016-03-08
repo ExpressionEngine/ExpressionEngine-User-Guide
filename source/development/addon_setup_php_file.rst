@@ -159,7 +159,8 @@ compatibilities:
 +---------------+------------------------------------------------------------------------------------+
 | relationship  | :doc:`/fieldtypes/relationships`                                                   |
 +---------------+------------------------------------------------------------------------------------+
-| text          | :doc:`/fieldtypes/rte`, :doc:`/fieldtypes/text`, :doc:`/fieldtypes/textarea`       |
+| text          | :doc:`/fieldtypes/email_address`, :doc:`/fieldtypes/rte`, :doc:`/fieldtypes/text`, |
+|               | :doc:`/fieldtypes/textarea`, :doc:`/fieldtypes/url`                                |
 +---------------+------------------------------------------------------------------------------------+
 
 services
