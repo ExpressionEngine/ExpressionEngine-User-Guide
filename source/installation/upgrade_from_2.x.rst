@@ -34,7 +34,7 @@ Now **copy** the following files from the backup of your current site to the new
 
 3. If you have any languages other than English in your Control Panel, copy all files and directories  *except* ``english`` from :file:`system/expressionengine/language/` to :file:`system/user/language/`.
 
-4. If you have the forum module installed, copy the directory :file:`themes/forum_themes/` to :file:`themes/user/forum_themes/`.
+4. If you have the forum module installed, copy the directory :file:`themes/forum_themes/` to :file:`themes/user/forum/`.
 
 5. If you have the wiki module installed, copy the directory :file:`themes/wiki_themes/` to :file:`themes/user/wiki_themes/`.
 
