@@ -148,6 +148,13 @@ height
 
 The height of the image (in pixels) if applicable.
 
+If you have defined any :ref:`image_manipulations` you can modify this
+tag with the Short Name of the manipulation. For example, if you've
+defined a "small" manipulation, the following will output the height of
+that version::
+
+  {height:small}
+
 location
 ^^^^^^^^
 
@@ -230,3 +237,10 @@ width
   {width}
 
 The width of the image (in pixels) if applicable.
+
+If you have defined any :ref:`image_manipulations` you can modify this
+tag with the Short Name of the manipulation. For example, if you've
+defined a "small" manipulation, the following will output the width of
+that version::
+
+  {width:small}

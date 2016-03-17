@@ -1,6 +1,6 @@
-###########################
-ExpressionEngine Fieldtypes
-###########################
+##########
+Fieldtypes
+##########
 
 .. contents::
   :local:
@@ -45,7 +45,7 @@ $info array with a name and version number.
   /* End of file ft.google_maps.php */
   /* Location: ./system/user/addons/google_maps/ft.google_maps.php */
 
-.. note:: All add-ons are required to have an :doc:`addon.setup.php file <addon_setup_php_file>`. This is where Fieldtypes can declare their compatibility with other Fieldtypes.
+.. note:: All add-ons are required to have an :doc:`addon.setup.php file <addon_setup_php_file>`. This is where Fieldtypes can declare their compatibility with other Fieldtypes, allowing a site builder to switch an existing field to another compatible type, e.g. `text` can be switched to `email` and vice-versa. Please see :ref:`Fieldtype Compatibility Options <fieldtype_compatibility_options>` for more details.
 
 *********************
 Example - Google Maps

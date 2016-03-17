@@ -104,10 +104,17 @@ Go to your site's control panel URL (typically found at ``http://example.com/adm
 
 2. If the updater could not automatically rename the installer, rename or remove :file:`system/ee/installer/` directory manually.
 
-.. note:: The installer directory can be safely removed after installing ExpressionEngine.
+    .. note:: The installer directory can be safely removed after installing ExpressionEngine.
 
 3. Review any :doc:`Version Notes </installation/version_notes>` since they outline any version-specific changes that you may need to make to your installation.
 
 4. Review our :doc:`best practices </installation/best_practices>` for recommendations on protecting your installation against common security risks.
+
+5. Go to the Add-On Manager and run the updates for any of your compatible add-ons.
+
+    .. rst-class:: cp-path
+
+    **Control Panel Location:** :menuselection:`Developer Menu --> Add-On Manager`
+
 
 You're Done! ExpressionEngine is now fully upgraded.

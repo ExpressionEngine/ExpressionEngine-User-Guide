@@ -86,7 +86,6 @@ The Front-End
 
 - :doc:`templates/index`
 
-  - :doc:`templates/add_on_types`
   - :doc:`templates/comments`
   - :doc:`templates/conditionals`
   - :doc:`templates/date_variable_formatting`

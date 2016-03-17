@@ -1,6 +1,6 @@
-#####################################
-ExpressionEngine Emoticon Development
-#####################################
+####################
+Emoticon Development
+####################
 
 .. todo:: Audit for 3.0
 

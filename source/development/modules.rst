@@ -1,6 +1,6 @@
-########################
-ExpressionEngine Modules
-########################
+#######
+Modules
+#######
 
 .. todo:: Audit for 3.0
 

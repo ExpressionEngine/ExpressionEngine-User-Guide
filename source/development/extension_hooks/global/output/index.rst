@@ -7,6 +7,27 @@ Output Library Extension Hooks
 
 .. highlight:: php
 
+output_show_message
+-------------------
+
+.. function:: output_show_message($data, $output)
+
+  Modify the output of front-end system messages.
+
+  How it's called::
+
+    if (ee()->extensions->active_hook('output_show_message') === TRUE)
+    {
+      $output = ee()->extensions->call('output_show_message', $data, $output);
+    }
+
+  :param array $data: Array of data describing the message
+  :param string $output: HTML rendered from the default message template
+  :returns: New rendered output for the message
+  :rtype: String
+
+  .. versionadded:: 3.2.0
+
 template_types
 --------------
 

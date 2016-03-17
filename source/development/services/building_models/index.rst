@@ -5,7 +5,7 @@ Building your own Models
 This section gives a detailed description on how to implement your own models.
 
 .. note:: Please review the basic
-  :doc:`Model Usage <../model/index>` before attempting to write your own.
+  :doc:`Model Usage <../model/index>` before attempting to write your own. Creating a model does not automatically create the corresponding database tables if they do not exist; you should use DB Forge to create your add-on's tables.
 
 .. contents::
   :local:

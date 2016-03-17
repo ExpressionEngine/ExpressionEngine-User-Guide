@@ -514,7 +514,7 @@ Value     Description
 
 Example Usage::
 
-$config['ban_destination'] = 'http://www.example.com';
+  $config['ban_destination'] = 'http://www.example.com';
 
 .. .. rst-class:: cp-path
 ..
@@ -539,13 +539,10 @@ Value     Description
 
 Example Usage::
 
-$config['ban_message'] = 'This site is currently unavailable.';
+  $config['ban_message'] = 'This site is currently unavailable.';
 
-.. rst-class:: cp-path
-
-.. **Also found in CP:** :menuselection:`Members --> User Banning`:
-.. :ref:`When a banned IP tries to access the site
-.. <member-banned-ip-label>`
+.. .. rst-class:: cp-path
+.. **Also found in CP:** :menuselection:`Members --> User Banning`: :ref:`When a banned IP tries to access the site <member-banned-ip-label>`
 
 
 banish_masked_ips
@@ -563,7 +560,7 @@ Value     Behavior
 
 Example Usage::
 
-$config['banish_masked_ips'] = 'y';
+  $config['banish_masked_ips'] = 'y';
 
 .. rst-class:: cp-path
 
