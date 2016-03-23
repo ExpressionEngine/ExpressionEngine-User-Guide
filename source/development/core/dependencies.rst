@@ -13,7 +13,8 @@ Introduction
 
 ExpressionEngine's core is built around a dependency container::
 
-  $di = new DependencyContainer();
+  use EllisLab\ExpressionEngine\Service\Dependency\InjectionContainer;
+  $di = new InjectionContainer();
 
 This is simply a container of named objects or factories. The container itself
 is not public. Additions are made by declaring them in the ``addon.setup`` file.
