@@ -314,7 +314,7 @@ Class Reference
 
 	Adding a package path instructs the Loader class to prepend a given path for subsequent requests for resources. As an example, the "Foo Bar" application package above has a library named Foo_bar.php. In our controller, we'd do the following::
 
-		ee()->load->add_package_path(APPPATH.'third_party/foo_bar/')
+		ee()->load->add_package_path(APPPATH.'addons/foo_bar/')
 			->library('foo_bar');
 
 .. method:: remove_package_path([$path = ''])
@@ -327,7 +327,7 @@ Class Reference
 
 	Or to remove a specific package path, specify the same path previously given to ``add_package_path()`` for a package.::
 
-		ee()->load->remove_package_path(APPPATH.'third_party/foo_bar/');
+		ee()->load->remove_package_path(APPPATH.'addons/foo_bar/');
 
 .. method:: get_package_paths([$include_base = TRUE])
 

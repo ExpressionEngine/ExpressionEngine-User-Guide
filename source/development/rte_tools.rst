@@ -8,7 +8,7 @@ RTE Tools API
 Basic File Structure
 --------------------
 
-All RTE tools should be placed into the ``third_party`` folder in a
+All RTE tools should be placed into the ``addons`` folder in a
 package and be named after that package name. So in a package named
 ``strip_tags`` the RTE tools file will be ``rte.strip_tags.php``. All
 RTE tools must provide an ``$info`` array with a name, version number,

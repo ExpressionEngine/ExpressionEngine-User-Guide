@@ -146,7 +146,7 @@ Loading Third-Party JavaScript Files
 
   This will load from the current package's ``javascript`` directory::
 
-    /third_party/my_package/javascript/my_file.js
+    system/user/addons/my_package/javascript/my_file.js
 
   :param string $file: JavaScript file to load, path relative to the current package's JavaScript directory
   :rtype: Void
