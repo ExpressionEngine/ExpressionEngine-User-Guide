@@ -386,6 +386,15 @@ screen\_name
 
 The screen name for the currently logged-in user.
 
+site\_description
+-----------------
+
+::
+
+  {site_description}
+
+Available to MSM sites only, this variable will be substituted with your site's description as defined under :menuselection:`Developer Tools --> Site Manager`.
+
 site\_name
 ----------
 
