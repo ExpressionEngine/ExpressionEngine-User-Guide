@@ -5,6 +5,23 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.2.1
+-------------
+
+Release Date: March 16, 2016
+
+- Fixed a bug (#21679) where the file field could lose content when saving existing entries.
+- Fixed a bug where apostrophes were not escaped in the Translation Utility.
+- Fixed a bug where entries without authors would generate a PHP error.
+- Fixed a bug where using channel form with a channel that has no channel form settings would generate PHP errors.
+- Fixed a bug (#20554) where the RTE stored full URLs instead of ``{filedir_n}`` tags.
+- Fixed a bug where usage of ``CI_DB_active_rec::distinct()`` would cause an exception.
+- Fixed bugs (#21544, #21353) with uploading and assigning avatars.
+
+- Developers:
+
+  - Added member_ids to ``cp_members_validate_members`` hook.
+
 Version 3.2.0
 -------------
 

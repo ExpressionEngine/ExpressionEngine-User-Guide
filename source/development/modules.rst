@@ -19,29 +19,29 @@ templates.
 Basic File Structure
 ********************
 
-Modules should be placed into the third_party folder in a package and
+Modules should be placed into the addons folder in a package and
 be named after that package name. At a minimum, there are 4 required
 files for any module:
 
-- ``third_party/module_name/upd.module_name.php`` - installs, uninstalls
+- ``addons/module_name/upd.module_name.php`` - installs, uninstalls
   and updates the module
-- ``third_party/module_name/mcp.module_name.php`` - the backend control
+- ``addons/module_name/mcp.module_name.php`` - the backend control
   panel
-- ``third_party/module_name/mod.module_name.php`` - the core module
+- ``addons/module_name/mod.module_name.php`` - the core module
   file, which process module tags used in templates
-- ``third_party/module_name/language/english/module_name_lang.php`` -
+- ``addons/module_name/language/english/module_name_lang.php`` -
   holds all language variables, allowing multiple language versions of
   the module
 
 In addition to these required files, there are a number of optional
 files that may be useful for modules:
 
-- ``third_party/module_name/tab.module_name.php`` - required to add a
+- ``addons/module_name/tab.module_name.php`` - required to add a
   tab/fields to the publish page
-- ``third_party/module_name/views/anyname.html`` - multiple view files
+- ``addons/module_name/views/anyname.html`` - multiple view files
   inside the view folder are the primary method of presenting the
   backend control panel pages
-- ``third_party/module_name/libraries/anyname.php`` - modules may make
+- ``addons/module_name/libraries/anyname.php`` - modules may make
   use of their own libraries, either extending existing libraries or
   adding new ones for use within the module
 

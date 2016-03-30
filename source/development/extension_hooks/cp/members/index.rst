@@ -72,9 +72,10 @@ cp_members_validate_members
 
   How it's called::
 
-    $this->extensions->call('cp_members_validate_members');
+    $this->extensions->call('cp_members_validate_members', $ids);
     if ($this->extensions->end_script === TRUE) return;
 
+  :param array $ids: IDs of members being validated
   :rtype: Void
 
   .. versionadded:: 1.5.2
