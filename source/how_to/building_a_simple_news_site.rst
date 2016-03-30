@@ -112,7 +112,7 @@ Creating a Field
 #. Click the *Fields* button for your *News* group.
 #. Click the *Create New* button to open up the :doc:`Create Field form</cp/channel/fields/form>`.
 #. For **Type**, choose Rich Text Editor. (Notice the :doc:`other available types</fieldtypes/index>` - exciting, no? Add-ons can even provide completely new types of fields.)
-#. For **Field Label**, type "News Body".
+#. For **Name**, type "News Body".
 #. ExpressionEngine will automatically provide a sensible **Short Name** for you, in this case, "news_body".
 #. Let's require our field, include it in our searchable fields and leave the rest of the settings at their defaults.
 
@@ -132,8 +132,8 @@ Even though we've created our **News** Channel, as well as our **News Fields** G
 linked the two together yet. Let's do that now.
 
 #. Go back to the *Channels* by clicking the link in the left navigation.  Click on your *News* channel.
-#. Set **Channel Field Group** to "News Fields".
-#. Leave **Category Group** set to "None".
+#. Set **Custom field group** to "News Fields".
+#. Leave **Category groups** set to "None".
 #. Save your your edits and you're ready to start adding content.
 
 As you've just seen, every Channel can have
