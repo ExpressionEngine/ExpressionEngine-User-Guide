@@ -1,6 +1,6 @@
-################################
-ExpressionEngine 3.0  User Guide
-################################
+###############################
+ExpressionEngine 3.0 User Guide
+###############################
 
 - Introduction
 
@@ -112,6 +112,7 @@ The Front-End
 
   - :doc:`how_to/building_a_simple_news_site`
   - :doc:`how_to/hello-world`
+  - :doc:`how_to/syntax_highlighting`
 
 *******************
 General Information
