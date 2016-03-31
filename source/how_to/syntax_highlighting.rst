@@ -4,7 +4,17 @@ Syntax Highlighting
 
 .. highlight:: html
 
-As of ExpressionEngine 3.3.0, we're no longer automatically syntax highlighting ``[code]`` and Markdown code blocks. Instead, you'll have to use a javascript syntax highlighting library. Most of the available libraries offer the ability to pick the only the languages that you need (therefore saving bandwidth on languages you don't) and provide themes that allow for greater customization of the output compared to ExpressionEngine's previous highlighted code.
+``[code]`` and Markdown code blocks output clean and properly marked up code samples ready for you to style. [#change-in-3.3.0]_
+
+::
+
+  <pre>
+      <code>
+          ... your code sample...
+      </code>
+  </pre>
+
+The result is agnostic, flexible, and ready for you to style how you like. This guide shows you how easy it is to use popular highlighting libraries for pretty code.
 
 ************
 highlight.js
@@ -41,3 +51,5 @@ Other Options
 *************
 
 Besides `highlight.js`_ we also recommend `Prism <http://prismjs.com/>`_ and `Rainbow <https://craig.is/making/rainbows>`_.  While highlight.js allows you to *optionally* specify the language, both Prism and Rainbow **require** that you specify the language. Beyond that, they work very similarly to highlight.js.
+
+.. [#change-in-3.3.0] As of version 3.3.0, ExpressionEngine no longer outputs ugly span tag syntax highlighting for code blocks.
