@@ -22,9 +22,19 @@ If you want to specify a language, add a class to the ``<code>`` element::
 
   <pre><code class="html">...</code></pre>
 
+You can also do that using Markdown::
+
+  ``` .html
+
+Or using bbcode::
+
+  [code="html"]
+
 If you want to *prevent* syntax highlighting, add a class of ``nohighlight`` to the ``<code>`` element::
 
   <pre><code class="nohighlight">...</code></pre>
+  ``` .nohightlight
+  [code="nohighlight"]
 
 *************
 Other Options
