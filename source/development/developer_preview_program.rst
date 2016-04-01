@@ -153,7 +153,6 @@ and encourage them to join!
 - Lance Johnson (Green Egg Media)
 - Leevi Graham
 - Leon Dijk
-- Leslie Camacho
 - Lodewijk
 - Louis Dekeister (Hop Studios)
 - Malcolm Elsworth
