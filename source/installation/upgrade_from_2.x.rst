@@ -2,7 +2,7 @@
 Upgrading from ExpressionEngine 2
 #################################
 
-.. important:: Third-party add-ons from 2.x will not work with ExpressionEngine 3. Check with each the add-on authors to see if there are updates available.
+.. important:: Third-party add-ons from 2.x will not work with ExpressionEngine 3. Check with each the add-on authors to see if there are updates available. If you maintain your own add-ons, please see the :doc:`/development/conversion/index`.
 
 *********************
 1. Backup and Prepare
