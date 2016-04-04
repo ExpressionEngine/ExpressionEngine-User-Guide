@@ -186,7 +186,6 @@ and encourage them to join!
 - Ragnar Frostason (Republic Factory)
 - Rein de Vries
 - Rob Sanchez
-- Robin Bailey (Dionach)
 - Robin Hodges
 - Robin Willmot (Coffee Bean Design)
 - Robson Sobral
