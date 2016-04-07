@@ -41,7 +41,7 @@ This field contains the title of your channel entry. Titles can be up to
 
 .. tip:: For those times where 'Title' isn't really the appropriate title, you
    can set a custom descriptive name for this field on a per channel basis.
-   Just :doc:`edit the channel settings <../channel/settings>` and specify a **Title field label**.
+   Just :doc:`edit the channel settings <../channel/form>` and specify a **Title field label**.
 
 URL Title
 ~~~~~~~~~
