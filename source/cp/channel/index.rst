@@ -83,6 +83,11 @@ Create New
 
 This will take you to the :doc:`create form <form>`.
 
+Import
+~~~~~~
+
+This will take you to :doc:`import`.
+
 Channel Links
 ~~~~~~~~~~~~~
 
@@ -107,6 +112,13 @@ layouts
 ^^^^^^^
 
 This will take you to :doc:`layouts/index`.
+
+.. _channel_set_export:
+
+Export
+^^^^^^
+
+This will download a :doc:`Channel Set </channel/sets>`.
 
 Bulk Actions
 ~~~~~~~~~~~~
