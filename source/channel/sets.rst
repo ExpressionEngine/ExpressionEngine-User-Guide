@@ -30,7 +30,7 @@ Channel Sets are zip files containing the following files::
 ``"custom_fields"``
 ===================
 
-Custom fields are all represented as JSON objects. Each custom field exports it's own properties, but ``label``, ``instructions``, and ``order`` are always inclued. If after exporting you realize you want to order your fields differently, simply set the ``order`` property in the order you want the field to appear in::
+Custom fields are all represented as JSON objects. Each custom field exports its own properties, but ``label``, ``instructions``, and ``order`` are always inclued. If after exporting you realize you want to order your fields differently, simply set the ``order`` property in the order you want the field to appear in::
 
   {
       "label": "Content",
