@@ -19,6 +19,7 @@ Release Date: ?
 - **NEW**: Added FontAwesome to the Control Panel.
 - **NEW**: Added a ``{site_description}`` global variable.
 - **NEW**: Added an unordered list button to the predefined HTML buttons.
+- **NEW**: Comments column on control panel entries listing will not show if comments are disabled and no comments are present on the site.
 - **NEW**: Added variables to the following email templates:
 
   - 'User - Account declined notification' (``{username}``)
@@ -64,6 +65,15 @@ Release Date: ?
 - Fixed a bug (#21769) where we had a small typo in new member notifications language.
 - Fixed a bug (#21770) where a language key wasn't getting the proper substitution.
 - Fixed a bug (#21771) where a language key wasn't in our language files.
+- Fixed some langauge string bugs (#21754 and #21753).
+- Fixed a bug (#21707) where some old auto saved entries refused to go away.
+- Fixed a bug (#21750) where the File field could show an undefined index error if its data wasn't pre-cached.
+- Fixed a bug where the default CP homepage could not be saved for members other than the logged-in member.
+- Fixed a bug (#21683) where URL titles had to be unique site-wide instead of per-Channel.
+- Fixed a number of display bugs (#21671) in the translator.
+- Fixed a MySQL error when recounting statistics and the Forum was installed (#21780).
+- Fixed a bug where the comment form could show despite comments being globally disabled.
+- Fixed a bug on the member profile page where the link to the member group form did not show for superadmins.
 
 - Developers:
 
