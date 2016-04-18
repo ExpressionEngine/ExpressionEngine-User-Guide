@@ -278,8 +278,8 @@ the contents in <li> tags and nest them correctly to show the hierarchy.
 
 When using the "nested" style of display, the opening <ul> tag of the
 list will have an id of "nav\_cat\_archive" applied to it. This can be
-used as a "hook" for javascript or CSS in providing DHTML or other
-functionality. 
+used as a selector for javascript or CSS to create expanding lists or
+menus.
 
 ::
 

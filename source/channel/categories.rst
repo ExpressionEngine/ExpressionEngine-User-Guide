@@ -339,9 +339,8 @@ get a "nested" list.
 
 When using the "nested" style of display, the opening <ul> tag of the
 list will have an id of "nav\_categories" applied to it. This can be
-used as a "hook" for javascript or CSS in providing DHTML or other
-functionality. You may change this by using the `id= <#par_id>`_
-parameter.
+used as a selector for javascript or CSS to create expanding lists or
+menus. You may change this by using the `id= <#par_id>`_ parameter.
 
 *********
 Variables
