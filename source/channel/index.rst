@@ -20,6 +20,7 @@ The Channel Module provides the following tags and features:
 - :doc:`Channel Information Tag <channel_info>`
 - :doc:`/templates/pagination`
 - :doc:`pagination_spanning`
+- :doc:`sets`
 
 .. toctree::
 	:glob:
