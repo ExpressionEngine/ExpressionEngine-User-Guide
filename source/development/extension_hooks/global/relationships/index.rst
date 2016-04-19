@@ -46,6 +46,34 @@ relationships_display_field
 
   .. versionadded:: 2.6.0
 
+
+relationships_display_field_options
+-----------------------------------
+
+.. function:: relationships_display_field_options($entry_id, $field_id, $sql)
+
+  Allows developers to add additional filters to the entries that populate the
+  select options available to the relationship field.
+
+  How it's called::
+
+    if (ee()->extensions->active_hook('relationships_display_field_options') === TRUE)
+    {
+        ee()->extensions->call(
+            'relationships_display_field_options',
+            $entries,
+            $this->field_id,
+            $this->settings
+        );
+    }
+
+  :param object $entries: ChannelEntry model object.
+  :param int $field_id: Field ID of field currently being loaded.
+  :param array $settings: The field settings for the field being loaded.
+  :rtype: Void
+
+  .. versionadded:: 3.3.0
+
 relationships_post_save
 -----------------------
 

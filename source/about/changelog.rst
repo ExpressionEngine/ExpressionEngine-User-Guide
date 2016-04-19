@@ -5,6 +5,83 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.3.0
+-------------
+
+Release Date: April 19, 2016
+
+- **NEW**: Added Channel Sets.
+- **NEW**: Added the default theme.
+- **NEW**: Added the ability to add language information to a bbcode block (e.g. ``[code="php"]``).
+- **NEW**: ``{logged_in_...}`` member variables are now parsed early.
+- **NEW**: Super Admins using "Login as" retain debugging information.
+- **NEW**: Member localization will now "stick" with the site's preferences unless they have specified localization settings for their own account.
+- **NEW**: Added FontAwesome to the Control Panel.
+- **NEW**: Added a ``{site_description}`` global variable.
+- **NEW**: Added an unordered list button to the predefined HTML buttons.
+- **NEW**: Comments column on control panel entries listing will not show if comments are disabled and no comments are present on the site.
+- **NEW**: Added variables to the following email templates:
+
+  - 'User - Account declined notification' (``{username}``)
+  - 'User - Account validation notification' (``{username}``, ``{email}``)
+
+- The RTE fieldtype no longer manipulates the HTML it generates. What you save is what you get.
+- Changed the email setting's SMTP password field and the moblog setting's email account password fields from plain text to password fields.
+- Linked category group and field group names in the control panel now link to their respective category and field listings.
+- Optimized relationship parent tag query.
+- Updated `PHP Markdown <https://michelf.ca/projects/php-markdown/>`_ to 1.6.0.
+- Removed code highlighting in ``[code]`` blocks.
+- Removed Glyphicons from the Control Panel.
+- Fixed a bug (#21697) where an error may show when an exception is thrown in PHP 7.
+- Fixed a bug (#21696) where the Manage Categories toggle was unstyled.
+- Fixed a bug (#21667) where the image formatting button on a textarea did not use the file picker.
+- Fixed a bug (#21688) where validation errors set via AJAX on Grid fields would sometimes be unresolvable.
+- Fixed a bug where channel form could sometimes overwrite fields that were not in the form.
+- Fixed a bug (#21644) where the file manager did not load for users with a lot of files.
+- Fixed a bug where grid with more than one relationship could not parse all of them.
+- Fixed a bug where the RTE fieldtype wasn't always installed.
+- Fixed a bug (#21582) where layouts missing the Categories tab would generate errors on the publish page.
+- Fixed a bug (#21733) where layouts missing the Publish tab would generate errors on the publish page.
+- Fixed a bug (#21677) where recalcuatling statistics didn't recalculate the comment counts.
+- Fixed a bug (#21682) where the list for duplicating an existing template, when creating a new template, was unsorted.
+- Fixed a bug (#21704) where Firefox wouldn't scroll to top in the CP.
+- Fixed a bug (#21705) where saving an entry could trigger a PHP error.
+- Fixed a bug (#21710) where the file modal's table did not sort.
+- Fixed a bug (#21619) where ``[code]`` blocks and Markdown codeblocks did not properly add ``<pre>`` tags.
+- Fixed a bug where the Channel Form would inadvertently remove add-on tags when editing entries.
+- Fixed a MySQL error that would occur on invalid forum feed requests.
+- Fixed a stray PHP 7 incompatibility in Channel Form
+- Fixed a bug (#21711) where CSS assets were not being delivered in ``{path='css/_ee_channel_form_css'}`` requests.
+- Fixed a bug where ``layout:`` globals were parsed in content.
+- Fixed a bug in site settings where the HTML button form required a closing tag.
+- Fixed a bug (#21699) where a PHP error occurred when editing an entry via the channel form if the instructions or label tags were present.
+- Fixed a bug (#21671) where a 'Disallowed Key Characters' error occurred when saving the channel_lang.php translation file.
+- Fixed a bug (#21700) where a PHP error occurred on the member group page in the control panel when pagination was present.
+- Fixed a bug (#21755) where there were unused language keys.
+- Fixed a few bugs (#21756, #21757, #21758, #21761, #21760, #21762, #21759, #21774) with duplicate language keys.
+- Fixed a bug (#21765) where some language keys had grammar issues.
+- Fixed a few bugs (#21766, #21767) where we weren't using language keys.
+- Fixed a bug (#21768) where HTML button names were not being translated.
+- Fixed a bug (#21769) where we had a small typo in new member notifications language.
+- Fixed a bug (#21770) where a language key wasn't getting the proper substitution.
+- Fixed a bug (#21771) where a language key wasn't in our language files.
+- Fixed some langauge string bugs (#21754 and #21753).
+- Fixed a bug (#21707) where some old auto saved entries refused to go away.
+- Fixed a bug (#21750) where the File field could show an undefined index error if its data wasn't pre-cached.
+- Fixed a bug where the default CP homepage could not be saved for members other than the logged-in member.
+- Fixed a bug (#21683) where URL titles had to be unique site-wide instead of per-Channel.
+- Fixed a number of display bugs (#21671) in the translator.
+- Fixed a MySQL error when recounting statistics and the Forum was installed (#21780).
+- Fixed a bug where the comment form could show despite comments being globally disabled.
+- Fixed a bug on the member profile page where the link to the member group form did not show for superadmins.
+
+- Developers:
+
+  - **NEW**: Added ``relationships_display_field_options`` hook to allow additional filters on the options in the publish field.
+  - **NEW**: Added extension hooks for CategoryField, CategoryGroup, ChannelField, ChannelFieldGroup, File, MemberField, MemberGroup, Template, TemplateGroup, TemplateRoute models.
+
+
+
 Version 3.2.1
 -------------
 

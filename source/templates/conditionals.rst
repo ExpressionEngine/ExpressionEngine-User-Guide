@@ -451,47 +451,134 @@ Global Conditional Variables
 
 There are a handful of variables that are always available to conditionals.
 
-group_id
-========
+logged_in_email
+===============
 
 ::
 
-  {if group_id == '7'}  You're an "Editor"!  {/if}
+  {if logged_in_email $= 'example.com'}  One of us! One of us!  {/if}
 
-You can test against the Member Group. This tests the Member Group ID
-number. The alternate `{if member\_group == '3'} <#cond_member_group>`_
-version of this conditional should be used inside of
-``{exp:channel:entries}`` tags.
+You can test against the email address of the currently logged in user.
 
-member_group
-============
+logged_in_group_description
+===========================
 
 ::
 
-  {if member_group == '7'}  You're an "Editor"!  {/if}
+  {if logged_in_group_description *= 'games'}  Shall we play a game?  {/if}
 
-You can test against the Member Group. This tests the Member Group ID
-number. This variable/conditional is identical to the group\_id one
-available above. ``{member_group}`` will work correctly inside a
-``{exp:channel:entries}`` tag, however.
+You can test against the group description of the currently logged in user.
 
-member_id
-=========
+logged_in_group_id
+==================
 
 ::
 
-  {if member_id == '147'}  Ooh, you're really special, Frank!!  {/if}
+  {if logged_in_group_id == '7'}  You're an "Editor"!  {/if}
+
+You can test against the Member Group of the currently logged in user.
+
+logged_in_ip_address
+====================
+
+::
+
+  {if logged_in_ip_address == '127.0.0.1'}  There's no place like home.  {/if}
+
+You can test against the IP address of the currently logged in user.
+
+logged_in_location
+==================
+
+::
+
+  {if logged_in_location *= 'Vulcan'}  Live long and prosper.  {/if}
+
+You can test against the location of the currently logged in user.
+
+logged_in_member_id
+===================
+
+::
+
+  {if logged_in_member_id == '147'}  Ooh, you're really special, Frank!!  {/if}
 
 Test for the member ID of the currently logged in user.
 
-screen_name
+logged_in_private_messages
+==========================
+
+::
+
+  {if logged_in_private_messages > 0}  You have unread private messages.  {/if}
+
+Test against the number of unread private messages.
+
+logged_in_screen_name
+=====================
+
+::
+
+  {if logged_in_screen_name == "Mr. Ed"}  Thanks for all your hard work on the site, Ed!  {/if}
+
+You can test against the screen name of the currently logged in user.
+
+logged_in_total_comments
+========================
+
+::
+
+  {if logged_in_total_comments < 1}  Care to comment?  {/if}
+
+Test against the total number of comments submitted by the currently logged in user.
+
+logged_in_total_entries
+=======================
+
+::
+
+  {if logged_in_total_entries > 1000}  Gold star contributor!  {/if}
+
+Test against the total number of entries submitted by the currently logged in user.
+
+logged_in_total_forum_posts
+===========================
+
+::
+
+  {if logged_in_total_forum_posts > 1000}  Loquacious aren't we?  {/if}
+
+Test against the total number of forum posts by the currently logged in user.
+
+logged_in_total_forum_topics
+============================
+
+::
+
+  {if logged_in_total_forum_topics < 1}  Care to start something?  {/if}
+
+Test against the total number of forum topics by the currently logged in user.
+
+logged_in_username
+==================
+
+::
+
+  `{if username != "HAL9000"}  I'm sorry Dave, I'm afraid I can't do that.  {/if}`
+
+You can test against the username of the currently logged in user.
+
+segment_*X*
 ===========
 
 ::
 
-  {if screen_name == "Mr. Ed"}  Thanks for all your hard work on the site, Ed!  {/if}
+  {if segment_3 == "private"}  You're seeing something private!  {/if}
 
-You can test against the screen name of the currently logged in user.
+You can test against one of the :doc:`URL Segments
+<globals/url_segments>` that are available. The conditional should be
+replaced with the correct segment name. e.g. if you're interested in URL
+Segment 3, then use ``{if segment_3}``.
 
 total_comments
 ==============
@@ -510,60 +597,6 @@ total_entries
   {if total_entries > 1000}  Yowza!  This is one hot site!  {/if}
 
 Test against the total number of entries submitted for the entire site.
-
-segment_*X*
-===========
-
-::
-
-  {if segment_3 == "private"}  You're seeing something private!  {/if}
-
-You can test against one of the :doc:`URL Segments
-<globals/url_segments>` that are available. The conditional should be
-replaced with the correct segment name. e.g. if you're interested in URL
-Segment 3, then use ``{if segment_3}``.
-
-
-username
-========
-
-::
-
-  {if username == "elvira"}  Hi, mom!  I know it's you!  {/if}
-
-You can test against the username of the currently logged in user.
-
-******************
-Alternative Syntax
-******************
-
-In order to be able to use some member variables in conditionals inside
-a channel entries tag, which processes its own member information, it is
-necessary to use an alternative syntax. All of the member variables may
-be used in conditionals with the addition of the prefix "logged\_in\_". ::
-
-	{exp:channel:entries channel="default_site"}
-		{if logged_in_member_id == author_id}
-			<p>You wrote this entry!</p>
-		{/if}
-	{/exp:channel:entries}
-
-A list of the available member variables that utilize this alternate
-syntax follows:
-
--  logged\_in\_member\_id
--  logged\_in\_group\_id
--  logged\_in\_group\_description
--  logged\_in\_username
--  logged\_in\_screen\_name
--  logged\_in\_email
--  logged\_in\_ip\_address
--  logged\_in\_location
--  logged\_in\_total\_entries
--  logged\_in\_total\_comments
--  logged\_in\_private\_messages
--  logged\_in\_total\_forum\_posts
--  logged\_in\_total\_forum\_topics
 
 ******
 Errors
