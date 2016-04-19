@@ -79,22 +79,26 @@ and encourage them to join!
 - Andrew Gunstone (Thirst Studios)
 - Andrew Weaver
 - Andris Sevcenko (Pixel and Tonic)
+- Anthony Mellor (Climbing Turn)
 - Ben Croker
 - Benjamin Kohl (Masuga Design)
 - Benoit Marchal
 - Berry Timmermans
 - Bjørn Børresen
+- Brad Bell
 - Brad Boegler (Nexcess)
 - Brad Morse
 - Brad Parscale (DevDemon)
 - Brandon Kelly
-- Brian Litzinger (BoldMinded)
+- Brian Litzinger
 - Bryan Burgers
 - Carl Crawley
+- Casey Reid (Clearfire)
 - Chris Barrett
 - Chris Newton
 - Christofer Sandin (Republic Factory)
 - Christopher Imrie
+- Clinton Reeves (Q Digital Studio)
 - Dan Decker
 - Dan Diemer
 - Daniel Grebb
@@ -106,6 +110,7 @@ and encourage them to join!
 - Digital Surgeons
 - Dom Stubbs
 - Doug Thwaites
+- Douglas Green
 - Eli Van Zoeren
 - Elliot Lewis (no two the same)
 - Emily Fitton (Punch Buggy Digital Agency)
@@ -116,8 +121,9 @@ and encourage them to join!
 - Filip Vanderstappen
 - Filippo Salza
 - Gerhard Dalenoort
-- Greg Ferrell
+- Grant Rowley (Q Digital Studio)
 - Gurudutt Verma
+- Gustavs Gutmanis (Solspace)
 - Iain Saxon (EE-Garage)
 - Iain Urquhart
 - Ian Young (Expresso)
@@ -132,19 +138,20 @@ and encourage them to join!
 - Jeremy Gimbel
 - Jeremy Worboys
 - Jeroen Dewaele (Bits of Love)
+- Jerry Price
 - Jesse Schutt
+- Jimmy Fursman (Mercutio Consulting)
 - Joe Paravisini
 - Joel Bradbury
 - John Baxter
+- John de Beer
 - John Henry Donovan
 - John Morton
 - John Moylan
 - John Wells
-- John de Beer
 - Jon Thomas (AnalyticL)
 - Josh Clark (dynam)
 - Justin Kimbrell
-- Keith Mancuso (Familiar)
 - Kelly Sims (Codesly)
 - Kelsey Martens
 - Kevin Smith
@@ -156,6 +163,7 @@ and encourage them to join!
 - Lodewijk
 - Louis Dekeister (Hop Studios)
 - Malcolm Elsworth
+- Manuel Payano (DevDemon)
 - Marc Miller
 - Marcus Neto
 - Mark Croxton
@@ -171,6 +179,7 @@ and encourage them to join!
 - Michael Rog
 - Michael Witwicki (Booyant)
 - Mike Hughes
+- Mike Wenger (Q Digital Studio)
 - Nathan Pitman
 - Nicco De Gols
 - Nick Le Guillou
@@ -189,6 +198,7 @@ and encourage them to join!
 - Robin Hodges
 - Robin Willmot (Coffee Bean Design)
 - Robson Sobral
+- Roger Huges (Triad)
 - Ryan Bonnell
 - Ryan Irelan
 - Ryan Masuga
@@ -203,11 +213,13 @@ and encourage them to join!
 - Stephen Callender
 - Steve Fickus
 - Steven Peercy
+- Susan Snipes (Q Digital Studio)
+- Taylor Daughtry (Caddis)
 - TJ Draper
-- Taylor Daughtry (STAMP)
 - Tom Jaeger (EE Harbor)
 - Travis Schmeisser
 - Travis Smith (Hop Studios)
+- Trevor Davis (Viget Labs)
 - Ty Wangsness
 - Tyson Oshiro
 - Will Hyman

@@ -40,7 +40,7 @@ bottom through each rendering stage.
    * :doc:`Snippets </templates/globals/snippets>`
    * :ref:`MSM variables <msm_variables>`: {site_id}, {site_label}, {site_shortname}
    * :ref:`{last_segment} <global_last_segment>`
-   * :ref:`Member variables <_member_variables>`
+   * :ref:`Member variables <member_variables>`
 
 #. Parse :doc:`segment variables </templates/globals/url_segments>`
 
