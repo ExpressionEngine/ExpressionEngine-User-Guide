@@ -7,11 +7,11 @@ that they are subject to ExpressionEngine's :doc:`parsing order
 </templates/template_engine>`, which can affect their availability when
 used inside other tags.
 
-Variables
-=========
-
 .. contents::
   :local:
+
+Variables
+=========
 
 app\_build
 ----------
