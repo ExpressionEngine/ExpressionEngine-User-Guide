@@ -429,7 +429,7 @@ Notice what's different. We added a ``group_toggle`` key to the select's field d
       ),
       array(
         'title' => 'text',
-        'group' => 'text_options'
+        'group' => 'text_options',
         'fields' => array(
           'text' => array(
             'type' => 'text',

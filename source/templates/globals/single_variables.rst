@@ -7,10 +7,6 @@ that they are subject to ExpressionEngine's :doc:`parsing order
 </templates/template_engine>`, which can affect their availability when
 used inside other tags.
 
-Also note that there is an :ref:`alternative syntax <global_alt_syntax>`
-for member variables that may be used in situations where an naming
-conflict with a module's variables may occur.
-
 Variables
 =========
 
@@ -162,15 +158,6 @@ elapsed\_time
 The amount of time, in seconds, it took ExpressionEngine to render the
 current page.
 
-email
------
-
-::
-
-  {email}
-
-The email address for the currently logged-in user.
-
 embed
 -----
 
@@ -199,23 +186,6 @@ for the link. ::
 
   Email Me!
 
-group\_id
----------
-
-::
-
-  {group_id}
-
-The Member Group ID number for the currently logged-in user.
-
-group\_title
-------------
-
-::
-
-  {group_title}
-
-The title of the member group for the currently logged-in user.
 
 gzip\_mode
 ----------
@@ -246,16 +216,6 @@ homepage
 
 This variable will be substituted with the **URL to the root directory of
 your site** preference under :menuselection:`Settings --> URL and Path Settings`.
-
-ip\_address
------------
-
-::
-
-  {ip_address}
-
-This variable will be substituted with the IP address of the currently
-logged in user.
 
 is_ajax_request
 ---------------
@@ -292,16 +252,6 @@ layout
 This variable allows you to wrap a Template in another. Please
 see the :doc:`Template Layouts <../layouts>` section.
 
-location
---------
-
-::
-
-  {location}
-
-The location (as entered in their profile) for the currently logged-in
-user.
-
 member\_group
 -------------
 
@@ -310,15 +260,6 @@ member\_group
   {member_group}
 
 The Member Group ID number for the currently logged-in user.
-
-member\_id
-----------
-
-::
-
-  {member_id}
-
-The Member ID for the currently logged-in user.
 
 member\_profile\_link
 ---------------------
@@ -377,14 +318,14 @@ code
 <http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection>`_
 (e.g. 301, 302).
 
-screen\_name
-------------
+site\_description
+-----------------
 
 ::
 
-  {screen_name}
+  {site_description}
 
-The screen name for the currently logged-in user.
+Available to MSM sites only, this variable will be substituted with your site's description as defined under :menuselection:`Developer Tools --> Site Manager`.
 
 site\_name
 ----------
@@ -449,15 +390,6 @@ updated. As with other date variables, you will use the standard
 
   {template_edit_date format="%Y %m %d %H:%i:%s"}
 
-total\_comments
----------------
-
-::
-
-  {total_comments}
-
-The total number of comments posted by the currently logged-in user.
-
 theme\_folder\_url
 ------------------
 
@@ -467,15 +399,6 @@ theme\_folder\_url
 
 The URL to your theme folder.
 
-total\_entries
---------------
-
-::
-
-  {total_entries}
-
-The total number of entries posted by the currently logged-in user.
-
 total\_queries
 --------------
 
@@ -484,15 +407,6 @@ total\_queries
   {total_queries}
 
 The total number of database queries used to generate the current page.
-
-username
---------
-
-::
-
-  {username}
-
-The username for the currently logged-in user.
 
 webmaster\_email
 ----------------
@@ -517,36 +431,144 @@ csrf\_token
 
 This variable is a required value for the hidden form field 'csrf_token'.
 
-.. _global_alt_syntax:
+.. _member_variables:
 
-Alternative Syntax
-==================
+Member Variables
+================
 
-In order to be able to use some member variables inside tags that
-already parse their own member information, such as the channel entries
-tag, it is necessary to use an alternative syntax. All of the member
-variables may be used with the addition of the prefix "logged\_in\_". ::
+logged\_in\_email
+-----------------
 
-  {exp:channel:entries channel="default_site"}
-    This article was written by: {screen_name}<br />
-    The currently logged in user is: {logged_in_screen_name}
-  {/exp:channel:entries}
+::
 
-A list of the available member variables that utilize this alternate
-syntax follows:
+  {logged_in_email}
 
--  logged\_in\_member\_id
--  logged\_in\_group\_id
--  logged\_in\_group\_description
--  logged\_in\_username
--  logged\_in\_screen\_name
--  logged\_in\_email
--  logged\_in\_ip\_address
--  logged\_in\_location
--  logged\_in\_total\_entries
--  logged\_in\_total\_comments
--  logged\_in\_private\_messages
--  logged\_in\_total\_forum\_topics
--  logged\_in\_total\_forum\_replies
--  logged\_in\_total\_forum\_posts
+The email address for the currently logged-in user.
 
+logged\_in\_group\_description
+------------------------------
+
+::
+
+  {logged_in_group_description}
+
+The Member Group description for the currently logged-in user.
+
+logged\_in\_group\_id
+---------------------
+
+::
+
+  {logged_in_group_id}
+
+The Member Group ID number for the currently logged-in user.
+
+logged\_in\_group\_title
+------------------------
+
+::
+
+  {logged_in_group_title}
+
+The title of the member group for the currently logged-in user.
+
+logged\_in\_ip\_address
+-----------------------
+
+::
+
+  {logged_in_ip_address}
+
+This variable will be substituted with the IP address of the currently
+logged in user.
+
+logged\_in\_location
+--------------------
+
+::
+
+  {logged_in_location}
+
+The location (as entered in their profile) for the currently logged-in
+user.
+
+logged\_in\_member\_id
+----------------------
+
+::
+
+  {logged_in_member_id}
+
+The Member ID for the currently logged-in user.
+
+logged\_in\_private\_messages
+-----------------------------
+
+::
+
+  {logged_in_private_messages}
+
+The number of unread private messages for the currently logged-in user.
+
+logged\_in\_screen\_name
+------------------------
+
+::
+
+  {logged_in_screen_name}
+
+The screen name for the currently logged-in user.
+
+logged\_in\_total\_comments
+---------------------------
+
+::
+
+  {logged_in_total_comments}
+
+The total number of comments posted by the currently logged-in user.
+
+logged\_in\_total\_entries
+--------------------------
+
+::
+
+  {logged_in_total_entries}
+
+The total number of entries posted by the currently logged-in user.
+
+logged\_in\_total\_forum\_posts
+-------------------------------
+
+::
+
+  {logged_in_total_forum_posts}
+
+The total number of forum posts made by the currently logged-in user.
+
+logged\_in\_total\_forum\_replies
+---------------------------------
+
+::
+
+  {logged_in_total_forum_replies}
+
+The total number of replies to forum posts by the currently logged-in user.
+
+logged\_in\_total\_forum\_topics
+--------------------------------
+
+::
+
+  {logged_in_total_forum_topics}
+
+The total number of forum topics made by the currently logged-in user.
+
+logged\_in\_username
+--------------------
+
+::
+
+  {logged_in_username}
+
+The username for the currently logged-in user.

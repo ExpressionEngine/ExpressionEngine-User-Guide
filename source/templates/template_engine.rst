@@ -40,6 +40,7 @@ bottom through each rendering stage.
    * :doc:`Snippets </templates/globals/snippets>`
    * :ref:`MSM variables <msm_variables>`: {site_id}, {site_label}, {site_shortname}
    * :ref:`{last_segment} <global_last_segment>`
+   * :ref:`Member variables <_member_variables>`
 
 #. Parse :doc:`segment variables </templates/globals/url_segments>`
 
@@ -129,7 +130,5 @@ bottom through each rendering stage.
    * {total_forum_posts}
    * {total_forum_topics}
    * {total_forum_replies}
-
-#. Parse :ref:`alternative syntax <global_alt_syntax>` forms of the member variables above
 
 #. Parse :doc:`path variables </templates/globals/path>` (including :doc:`{route=...} paths </urls/template_routes>`)
