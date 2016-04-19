@@ -8,7 +8,7 @@ ExpressionEngine 3.x Change Log
 Version 3.3.0
 -------------
 
-Release Date: ?
+Release Date: April 19, 2016
 
 - **NEW**: Added Channel Sets.
 - **NEW**: Added the default theme.
