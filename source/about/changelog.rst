@@ -10,10 +10,10 @@ Version 3.3.0
 
 Release Date: April 19, 2016
 
-- **NEW**: Added Channel Sets.
+- **NEW**: Added :doc:`Channel Sets </channel/sets>`.
 - **NEW**: Added the default theme.
 - **NEW**: Added the ability to add language information to a bbcode block (e.g. ``[code="php"]``).
-- **NEW**: ``{logged_in_...}`` member variables are now parsed early.
+- **NEW**: ``{logged_in_...}`` :ref:`Member variables <member_variables>` are now parsed early.
 - **NEW**: Super Admins using "Login as" retain debugging information.
 - **NEW**: Member localization will now "stick" with the site's preferences unless they have specified localization settings for their own account.
 - **NEW**: Added FontAwesome to the Control Panel.
