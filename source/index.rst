@@ -94,7 +94,6 @@ The Front-End
   - :doc:`templates/hidden_templates`
   - :doc:`templates/hit_counter`
   - :doc:`templates/layouts`
-  - :doc:`templates/overview`
   - :doc:`templates/pagination`
   - :doc:`templates/php`
   - :doc:`templates/plugins`

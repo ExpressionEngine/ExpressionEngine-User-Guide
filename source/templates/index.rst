@@ -6,7 +6,7 @@ This page is a quick overview of the syntax and terminology used
 throughout the user guide when talking about ExpressionEngine Templates
 (:ref:`What are Templates? <getting_started_templates>`). For more
 information on each topic, please refer to the additional pages linked
-in each section or go to the :doc:`index` area of this guide for an
+in the sidebar under this area of the guide for an
 exhaustive list of all pages covering the template engine. If you're new
 to ExpressionEngine you may want to begin with the :doc:`News Site
 Tutorial <../how_to/building_a_simple_news_site>`.
