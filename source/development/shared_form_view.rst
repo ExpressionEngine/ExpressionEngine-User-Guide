@@ -169,7 +169,7 @@ The key for each field defintiion is the field's input name. We'll dive deeper i
 +----------------------+---------------------------------------------------------------------+-----------------+---------------+
 | ``label``            | Normally, the label for the field is specified in the fieldset      | String          | ``NULL``      |
 |                      | definition, but some field types may allow a secondary label to be  |                 |               |
-|                      | set such as the ``sort-text`` field because it is normally paired   |                 |               |
+|                      | set such as the ``short-text`` field because it is normally paired   |                 |               |
 |                      | with other ``short-text`` fields and each may need their own label. |                 |               |
 +----------------------+---------------------------------------------------------------------+-----------------+---------------+
 | ``wrap``             | Whether or not to wrap the field in a scrollable div, good for      | Boolean         | ``FALSE``     |
