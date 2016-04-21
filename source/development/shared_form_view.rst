@@ -145,7 +145,9 @@ The key for each field defintiion is the field's input name. We'll dive deeper i
 |                      |                                                                     | valid field     |               |
 |                      |                                                                     | type names      |               |
 +----------------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``value``            | Value of field to populate on page load.                            | String          | N/A           |
+| ``value``            | Value of field to populate on page load.                            | String (or      | N/A           |
+|                      |                                                                     | Array when type |               |
+|                      |                                                                     | is 'checkbox')  |               |
 +----------------------+---------------------------------------------------------------------+-----------------+---------------+
 | ``required``         | Whether or not the field is required for form submission, applies   | Boolean         | ``FALSE``     |
 |                      | the required style :ellislab:`as shown in the style guide </style-  |                 |               |
