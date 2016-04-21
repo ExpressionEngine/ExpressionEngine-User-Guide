@@ -74,6 +74,11 @@ Release Date: April 19, 2016
 - Fixed a MySQL error when recounting statistics and the Forum was installed (#21780).
 - Fixed a bug where the comment form could show despite comments being globally disabled.
 - Fixed a bug on the member profile page where the link to the member group form did not show for superadmins.
+- Reduced the password reset token's timeout. (thanks to security researcher |sjibe_kanti|)
+
+.. |sjibe_kanti| raw:: html
+
+  <a class="reference external" href="https://twitter.com/Sajibekantibd" rel="nofollow">Sjibe Kanti</a>
 
 - Developers:
 
