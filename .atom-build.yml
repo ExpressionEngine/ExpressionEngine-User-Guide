@@ -1,0 +1,4 @@
+name: "Build Documentation"
+cmd: "make html"
+sh: true
+cwd: "{PROJECT_PATH}"
