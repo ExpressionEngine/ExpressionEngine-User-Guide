@@ -57,7 +57,7 @@ Let's get started creating a general settings form for ExpressionEngine. We'll s
     'base_url' => ee('CP/URL', 'settings/general'),
     'cp_page_title' => lang('general_settings'),
     'save_btn_text' => 'btn_save_settings',
-    'save_btn_text_working' = 'btn_saving'
+    'save_btn_text_working' => 'btn_saving'
   );
 
 Given we have a view file named `form.php` with this as the contents::
