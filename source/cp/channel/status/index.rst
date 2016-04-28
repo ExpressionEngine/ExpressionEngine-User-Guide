@@ -76,4 +76,5 @@ confirmation modal to appear that will summarize the action.
   :hidden:
   :titlesonly:
 
-  *
+  form
+  status-list
