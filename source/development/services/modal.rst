@@ -67,6 +67,8 @@ Constructing our link to display the modal will require a little bit more data t
      data-confirm="Content Item: <b>My Entry</b>"
      data-content_id="23">Delete</a>
 
+.. warning:: The ``m-link`` class is essential. You can add other classes to your link, but you must have the ``m-link`` class for the modal to work properly.
+
 Finally, we need some JavaScript to tie it all together. We want to accomplish two goals: show the name of the item being deleted, and pass along relevant data to the form inside the modal so that our controller code knows which item is being deleted:
 
 .. code-block:: javascript
