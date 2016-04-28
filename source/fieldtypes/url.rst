@@ -16,8 +16,8 @@ Allowed URL Schemes
 Which URL Schemes the content author is allowed to use in this URL field. Available options are:
 
 - ``http://``
-- ``http://``
-- ``//`` (domain-relative URLs)
+- ``https://``
+- ``//`` (`protocol-relative URLs <https://en.wikipedia.org/wiki/Wikipedia:Protocol-relative_URL>`_)
 - ``ftp://``
 - ``sftp://``
 - ``ssh://``
