@@ -90,5 +90,6 @@ cause a confirmation modal to appear that will summarize the action.
   :hidden:
   :titlesonly:
 
-  *
+  cat-list
+  form
   */index
