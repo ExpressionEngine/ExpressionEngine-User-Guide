@@ -214,7 +214,7 @@ Built-in Rules
 | **required**        | Must not be blank.                         | ``required``              |
 |                     | See :ref:`validation-service-required`     |                           |
 +---------------------+--------------------------------------------+---------------------------+
-| **unique_email**    | Must be a unique email. Gmail addresses    | ``uniqueEmail``           |
+| **uniqueEmail**     | Must be a unique email. Gmail addresses    | ``uniqueEmail``           |
 |                     | strip ``.`` before checking for uniqueness |                           |
 +---------------------+--------------------------------------------+---------------------------+
 | **url**             | Must be a valid URL                        | ``url``                   |
