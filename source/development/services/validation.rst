@@ -131,6 +131,20 @@ field::
   ));
 
 
+Checking a Single Rule
+----------------------
+
+.. method:: check($rule, $value)
+
+  Occasionally, you might need to check whether a value passes a validation rule, you can do that using the ``check()`` method::
+
+    $valid = ee('Validation')->check('uniqueEmail', 'email@example.com');
+
+  :param string $rule: The rule to check, see `Built-in Rules`_
+  :param string $value: The value to check
+  :returns: TRUE if the ``$value`` is valid
+  :rtype: boolean
+
 Built-in Rules
 --------------
 
@@ -199,6 +213,9 @@ Built-in Rules
 +---------------------+--------------------------------------------+---------------------------+
 | **required**        | Must not be blank.                         | ``required``              |
 |                     | See :ref:`validation-service-required`     |                           |
++---------------------+--------------------------------------------+---------------------------+
+| **unique_email**    | Must be a unique email. Gmail addresses    | ``uniqueEmail``           |
+|                     | strip ``.`` before checking for uniqueness |                           |
 +---------------------+--------------------------------------------+---------------------------+
 | **url**             | Must be a valid URL                        | ``url``                   |
 |                     |                                            |                           |
