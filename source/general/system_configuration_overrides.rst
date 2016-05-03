@@ -2107,6 +2107,24 @@ Forum Settings --> Edit`: :ref:`Forum Triggering Word
 <forum-forum_triggering_word>`
 
 
+gmail_duplication_prevention
+----------------------------
+
+.. versionadded:: 3.4.0
+
+Gmail email addresses can optionally include any number of ``.``'s and they're equivalent to the same address without ``.``'s. For example ``example@gmail.com`` is the same as ``e.x.a.m.p.l.e@gmail.com``. By default, ExpressionEngine prevents duplicate registration from the same address, but you can disable the prevention.
+
+========= ========
+Value     Behavior
+========= ========
+``y``     Prevent duplicate Gmail addresses from signing up **(default)**
+``n``     Do not prevent duplicate Gmail addresses
+========= ========
+
+Example Usage::
+
+  $config['gmail_duplication_prevention'] = 'n';
+
 gzip_output
 -----------
 
