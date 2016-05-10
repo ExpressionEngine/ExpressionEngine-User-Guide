@@ -5,6 +5,34 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.3.1
+-------------
+
+Release Date: May 10th, 2016
+
+- **NEW**: Added additional logging when changing email address and password.
+- Eliminated some extra, duplicate, and redundant queries when editing templates that are saved as files.
+- Fixed a security bug where logged out users could be shown altered system messages.
+- Fixed a bug (#21426) where status colors were not correctly shown on the Edit page.
+- Fixed a bug (#21712) where the toggle fieldtype sometimes generated an error when used in Channel Form.
+- Fixed a bug (#21713) where the file field on a publish form wouldn't let go of an old file name when you replaced it. Let it go.
+- Fixed a bug (#21775) in the Moblog module where PHP errors could occur when saving an edited moblog and multiple allowed emails were specified.
+- Fixed a bug (#21806) where the Channel Form would inadvertently remove embed tags when editing entries.
+- Fixed a bug (#21808) when using formatting types other than Markdown that effectively ignored a Channel's "Render URLs and Email addresses as links?" setting.
+- Fixed a bug (#21813) where an PHP error may show when viewing a member profile on older versions of PHP.
+- Fixed a bug (#21816) where there was an unrendered language key in the Simple Commerce email templates listing.
+- Fixed a bug (#21819) where the new Channel entry notifications were not working.
+- Fixed a bug (#21820) where an unordered HTML button proudly declared itself instead of just using its icon.
+- Fixed a bug (#21821) where email templates felt there were perfect as-is and didn't save any edits.
+- Fixed a bug (#21824) where dates could display improperly on the Publish and Edit pages.
+- Fixed a bug (#21825) with Channel Set exports where exporting some field types could result in a corrupted zip file.
+- Fixed a bug (#21833) where the Active Record class may show an error in PHP 7.
+- Fixed a bug where a PHP error could occur when uploading files to a file field with a single directory specified.
+- Fixed a bug where adding a new row to a grid wouldn't register any file upload buttons for textareas.
+- Fixed a bug where moblog settings did not properly display selected categories.
+- Fixed a bug where some relationship fields on the publish form would not scroll.
+- Fixed an obscure bug in channel entries where a specifying an invalid month, day and/or year in the parameters or the URI caused a MySQL error.
+
 Version 3.3.0
 -------------
 

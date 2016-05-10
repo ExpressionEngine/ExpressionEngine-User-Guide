@@ -58,7 +58,7 @@ New Field Group
 
 This will allow you to :doc:`create a new field group <fields/groups/form>`.
 
-Gategory Groups
+Category Groups
 ^^^^^^^^^^^^^^^
 
 This will take you to the :doc:`cat/index`.
@@ -106,7 +106,7 @@ This will take you to the channel's :doc:`edit form <form>`.
 Settings
 ^^^^^^^^
 
-This will take you to :doc:`settings`.
+This will take you to :doc:`form-settings`.
 
 layouts
 ^^^^^^^

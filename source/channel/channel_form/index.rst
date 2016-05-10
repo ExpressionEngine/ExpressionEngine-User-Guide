@@ -561,15 +561,6 @@ You may exclude fields by placing the word "not" in front of the list::
   show_fields="not image_thumbnail|source|rating"
 
 
-status=
-~~~~~~~
-
-::
-
-  status="pending"
-
-Set the status to use for the entry.  This parameter only applies to new  entries and will be ignored for edits.
-
 sticky\_entry=
 ~~~~~~~~~~~~~~
 
