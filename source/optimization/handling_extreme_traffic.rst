@@ -22,6 +22,8 @@ These can be disabled in your Control Panel :doc:`Tracking Preferences </cp/sett
 config.php Extreme Traffic Overrides
 ------------------------------------
 
+.. highlight:: php
+
 ::
 
 	$config['enable_online_user_tracking']
