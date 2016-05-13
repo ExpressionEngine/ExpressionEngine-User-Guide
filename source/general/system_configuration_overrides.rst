@@ -1366,12 +1366,9 @@ $config['deny_duplicate_data'] = 'n';
 disable_all_tracking
 --------------------
 
-.. warning:: Use only under extreme circumstances.
+This is an emergency override which will disable all tracking when enabled. This is useful for server administrators who need a way to respond immediately to a traffic spike to help keep the site running smoothly.
 
-This is an emergency override which will disable all tracking when
-enabled. This is useful for server administrators who need a way to
-respond immediately to table locks during a traffic spike to keep the
-site running smoothly.
+.. note:: Hit tracking features are disabled by default, so if you have not intentionally enabled them, you can ignore this setting. It is only useful if you have enabled :doc:`Hit Tracking </cp/settings/hit-tracking>` and can't access your control panel to disable them. In that rare instance, you can add this to your ``config.php`` file as an emergency override.
 
 ======= ========
 Value   Behavior
