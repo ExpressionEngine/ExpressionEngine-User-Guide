@@ -5,7 +5,6 @@ Handling Extreme Traffic
 high-volume traffic spikes or as a permanent solution for radically high
 volume sites.
 
-
 These ExpressionEngine features will help Server Admins decrease server
 resource usage and keep an ExpressionEngine installation running
 smoothly in the event of a traffic spike or as a way of dealing with the
@@ -14,24 +13,11 @@ day-to-day reality of radically high-volume sites.
 Database Activity
 -----------------
 
-ExpressionEngine uses the default MySQL storage engine as specified by
-the MySQL server when it is installed, which in nearly every case will
-be MyISAM. This is an appropriate choice since ExpressionEngine is
-primarily a read-heavy application, hosts are typically much more
-familiar with tuning the server for that storage engine, and using
-different storage engines for different tables requires greater resource
-usage and more nuanced server management than most administrators will
-typically allow.
+In general, we recommend using the InnoDB storage engine for ExpressionEngine's MySQL tables, and that is what is used by default when ExpressionEngine is installed. While ExpressionEngine will run fine with MyISAM, the MyISAM storage engine has to lock an entire table when it inserts a new row. Especially in extreme traffic events, this characteristic of MyISAM can bring a database server to its knees.
 
-MyISAM requires MySQL to establish a file lock to update a table. In
-normal operation, this is perfectly fine. However, during extreme
-traffic events, there are a few tracking features of ExpressionEngine
-that update certain tables on every page load, resulting in a queue of
-locked tables as MySQL tries to keep up. These can be disabled in your
-Control Panel :doc:`Tracking Preferences
-</cp/settings/hit-tracking>`. If you are unable to access your site
-due to the traffic, you or your server administrator can manually
-override these features in your config.php file as follows:
+There are a few optional tracking features of ExpressionEngine that will update tables on every page load. These trackers are not enabled by default, but if you have enabled them, and experience an extreme traffic event, you may want to disable them to help ease the load on the server.
+
+These can be disabled in your Control Panel :doc:`Tracking Preferences </cp/settings/hit-tracking>`. If you are unable to access your site due to the traffic, you or your server administrator can manually override these features in your config.php file as follows:
 
 config.php Extreme Traffic Overrides
 ------------------------------------
@@ -40,84 +26,42 @@ config.php Extreme Traffic Overrides
 
 	$config['enable_online_user_tracking']
 
-(y/n) - Corresponds to :doc:`Enable Online User Tracking?
-(</cp/settings/hit-tracking>`
+(y/n) - Corresponds to :doc:`Enable Online User Tracking? </cp/settings/hit-tracking>`
 
 ::
 
 	$config['enable_hit_tracking']
 
-(y/n) - Corresponds to :doc:`Enable Template Hit Tracking?
-(</cp/settings/hit-tracking>`
+(y/n) - Corresponds to :doc:`Enable Template Hit Tracking? </cp/settings/hit-tracking>`
 
 ::
 
 	$config['enable_entry_view_tracking']
 
-(y/n) - Corresponds to :doc:`Enable Channel Entry View Tracking?
-(</cp/settings/hit-tracking>`
+(y/n) - Corresponds to :doc:`Enable Channel Entry View Tracking? </cp/settings/hit-tracking>`
 
 ::
 
 	$config['log_referrers']
 
-(y/n) - Corresponds to :doc:`Enable Referrer Logging?
-(</cp/settings/hit-tracking>`
+(y/n) - Corresponds to :doc:`Enable Referrer Logging? </cp/settings/hit-tracking>`
 
 ::
 
 	$config['dynamic_tracking_disabling']
 
-(numeric) - Corresponds to :doc:`Suspend ALL tracking when number of
-(online visitors exceeds: </cp/settings/hit-tracking>`
+(numeric) - Corresponds to :doc:`Suspend ALL tracking when number of online visitors exceeds: </cp/settings/hit-tracking>`
 
 ::
 
 	$config['disable_all_tracking']
 
-(y/n) - Emergency config.php only preference which when set to 'y' will disable all of the above. This is useful for server administrators who need a way to respond immediately to table locks during a traffic spike to keep the site running smoothly.
-
-If you have public facing ExpressionEngine-generated forms, you may also
-find it beneficial to disable the :doc:`Secure Forms </security/spam_protection>`
-feature, though be aware that that hinders ExpressionEngine's ability to
-help prevent CSRF and spam attacks on your site. Or you may temporarily
-remove the forms or move them to a less popular URL (such as off of the
-index page) to mitigate the additional database use.
-
-Lastly, if you have a membership based site and have a sudden and
-tremendous influx of traffic of members who have not visited your site
-in a number of hours, the update of their last activity may cause a
-table lock. If you find this to be the case, you can have the server
-administrator run the following query after killing the locks, to delay
-the individual updates for members until a later time, perhaps when
-traffic is less tense. The example below pushes this off for another 20
-hours (72000 seconds).
-
-::
-
-	UPDATE exp_members SET last_activity = (UNIX_TIMESTAMP() + 72000)
+(y/n) - config.php only preference which can be set to ``y`` in an emergency, which will disable all of the above. This is useful for server administrators who need a way to respond immediately and can't access the control panel.
 
 
 Disk I/O
 --------
 
-ExpressionEngine's caching mechanisms can help reduce database load in
-most situations. However if your site is hosted on an environment using
-NAS/SAN storage for single or load-balanced web servers,
-:ref:`caching_dynamic_channel_query_caching` in most cases should **not
-be used**. Doing so could be doubling up on caching efforts and
-inadvertently negate any caching benefits (or perhaps even worsen server
-resource usage) due to the increased disk activity.
+ExpressionEngine's caching mechanisms can help reduce database load in most situations. However if you use file-based caching, that may transfer some of the resources saved from the database server to the web server. Thus, it is recommended that you use either the Memcached or Redis :ref:`caching driver <caching_drivers>` instead of the file driver, especially on high-traffic sites. The increased disk i/o from file caches being created and destroyed during a high traffic event consumes significantly more server resources than the memory-based caching drivers.
 
-:ref:`caching_tag_caching` and :ref:`caching_template_caching` on such
-environments should be minimal unless experienced review of your
-templates has been performed with the assistance of the :doc:`Template
-Debugging utility </cp/settings/debug-output>`, and
-revealed resource intensive tags or templates that are greatly improved
-after enabling the respective caching mechanism.
-
-Likewise, :doc:`saving templates as files
-</templates/templates_as_files>` can marginally increase disk i/o as
-each template must be retrieved from disk in addition to the standard
-database query responsible for managing your template's meta data
-(access, PHP parsing, template type, etc.).
+If you are running in a PHP environment without Opcode caching, :doc:`saving templates as files </templates/templates_as_files>` can marginally increase disk i/o as each template must be retrieved from disk. We recommend running PHP 7 or greater so that this type of file activity is managed better by the server.
