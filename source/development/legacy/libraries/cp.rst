@@ -87,7 +87,7 @@ Add JavaScript Files to the JavaScript Combo Loader
   requests. As an example, the call to load ``filename.js`` file from
   the ``themes/javascript`` directory would look like this::
 
-    ee()->add_js_script('file', 'filename');
+    ee()->cp->add_js_script('file', 'filename');
 
   :param string $script_type: Type of script to load
   :param string $script_name: Name of script to load
@@ -108,20 +108,20 @@ Add JavaScript Files to the JavaScript Combo Loader
 
   An example call to load one of the jQuery plugins::
 
-    ee()->add_js_script('plugin', 'tablesorter');
+    ee()->cp->add_js_script('plugin', 'tablesorter');
 
   The `jQuery UI <http://jqueryui.com>`__ interactions and widgets are
   also included with ExpressionEngine for third-party developers to use.
   The call to load the jQuery UI Autocomplete plugin would look like
   this, for example::
 
-    ee()->add_js_script('ui', 'autocomplete');
+    ee()->cp->add_js_script('ui', 'autocomplete');
 
 .. method:: add_js_script([$script = array()[, $in_footer = TRUE]])
 
   Several scripts can be included in a single call as an array::
 
-    ee()->add_js_script(
+    ee()->cp->add_js_script(
         array(
             'ui'      => array('widget', 'position', 'autocomplete'),
             'plugins'  => array('ee_notice', 'ee_table')
