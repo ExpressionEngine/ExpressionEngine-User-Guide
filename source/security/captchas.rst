@@ -89,12 +89,12 @@ your Host or server admin to determine what your correct "server path" is.
 Special CAPTCHA Files
 ---------------------
 
-The CAPTCHA system uses a couple of special files inside the backend:
+The CAPTCHA system uses a couple of special files inside the system folder:
 
-#. system/expressionengine/fonts/texb.ttf - This is the True Type Font
+#. ``system/ee/legacy/fonts/texb.ttf`` - This is the True Type Font
    that the CAPTCHA system will use in order to create the image files
    correctly. You should **not** alter this file.
-#. system/expressionengine/config/captcha.php - The list of words from
+#. ``system/ee/legacy/config/captcha.php`` - The list of words from
    which the CAPTCHAs will be chosen. You may alter the list, but you
    need to ensure that you don't reduce the total number of available
    words.

@@ -1332,7 +1332,7 @@ download.
 ============ ===========
 Value        Description
 ============ ===========
-``language`` Name of language directory found in ``system/expressionengine/language/``
+``language`` Name of language directory found in ``system/user/language/``
 ============ ===========
 
 Example Usage::
@@ -2835,7 +2835,7 @@ combination with :ref:`allow_dictionary_pw <allow_dictionary_pw>`.
 ============ ===========
 Value        Description
 ============ ===========
-``filename`` Dictionary file found at :file:`system/expressionengine/config/`
+``filename`` Dictionary file found at :file:`system/user/config/`
 ============ ===========
 
 Example Usage::
