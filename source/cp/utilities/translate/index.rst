@@ -12,11 +12,11 @@ translate the core language files into other languages.
 
 When you use this utility it will create a copy of any file you have
 translated and put it into the following folder:
-system/expressionengine/translations/
+``system/ee/legacy/translations/``
 
 In order to be able to create translation files, you need to set the
 file permissions to 666 or 777 for the following folder:
-system/expressionengine/translations/
+``system/ee/legacy/translations/``
 
 The main Translation Utility screen shows a list of all the language
 files currently installed.
