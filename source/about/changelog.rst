@@ -5,6 +5,37 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.3.2
+-------------
+
+Release Date: May 20, 2016
+
+- Saving entry revisions is now automatic so we removed the "Save Revision" button.
+- Updated Date formatting variables to allow day of the week, ISO-8601 year number, timezone identifier, ISO-8601 date, and microseconds. See :doc:`/templates/date_variable_formatting` for details.
+- Optimized the create and edit template page to reduce the number of queries needed.
+- Fixed a bug (#21227) where the images in the RTE did not have the proper overlay when hovering over them.
+- Fixed a bug (#21288) where you may not be able to reliably paste text into an RTE field that had an image in it.
+- Fixed a bug (#21870) where the Simple Commerce and Pages modules were missing a link to their settings.
+- Fixed a bug where ``EXPLAIN`` queries could not be run in the SQL manager.
+- Fixed a bug where relationship data was not deleted completely.
+- Fixed a model bug where pivot table relationships were not always reversed correctly.
+- Fixed a bug (#21443) where assigning Allowed Channels with MSM would cause other sites to lose their assignments.
+- Fixed a bug where checking the Mime Type of a CSS file could return ``"text/plain"`` instead of ``"text/css"``.
+- Fixed a bug (#21663) where a raw language string would be returned if an add-on fails to install.
+- Fixed a bug (#21731) where status permissions were not being respected.
+- Fixed a bug (#21749) where a member group with only edit entry permissions did not have the Edit nav menu.
+- Fixed a bug (#21797) where we provided edit and delete icons for categories and then denied access when you tried to use them. Sorry.
+- Fixed a bug where add-ons could not specify a settings icon in the header.
+- Fixed a bug (#21866) where Markdown ``[code]`` blocks were not rendering correctly.
+- Fixed a bug where the default theme could not be installed.
+- Fixed a bug where the category parameter on the default theme slideshow could cause an error on some servers.
+- Fixed a bug where URLs in an add-on's README.md file would not mask the CP url.
+- Fixed a bug where Channel ``{total_entries}`` was not updated when publishing a new entry.
+- Fixed a bug where Channel ``{total_entries}`` was not updated by the Statistics sync utility.
+- Fixed a bug where disabled checkboxes sorta looked enabley.
+- Fixed a bug where settings were not passed to Extension constructors on the Extensions settings page.
+- Fixed a bug (#21860) where update 3.1.0 could throw a PHP error in some situations.
+
 Version 3.3.1
 -------------
 

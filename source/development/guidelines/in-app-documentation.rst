@@ -56,7 +56,7 @@ The template below demonstrates sections to include, the order to include them, 
 
   A description of the add-on. Might include what it's purpose is, sample output, or use-case. The level 1 header is ignored in ExpressionEngine since we already output the Add-on name in the header. This full description however is rendered.
 
-  Any level 2 and 3 headers will appear in the side navigation as links. Thus, the structure below should be used. Your readme.md will be easy to write and consume for GitHub, and look beautiful in ExpressionEngine and meet your users' expectations of a consistent experience throughout the control panel.
+  Any level 2 and 3 headers will appear in the side navigation as links. Thus, the structure below should be used. Your `README.md` will be easy to write and consume for GitHub, and look beautiful in ExpressionEngine and meet your users' expectations of a consistent experience throughout the control panel.
 
   ## Requirements
 

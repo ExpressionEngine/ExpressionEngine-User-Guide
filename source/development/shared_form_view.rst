@@ -145,7 +145,9 @@ The key for each field defintiion is the field's input name. We'll dive deeper i
 |                      |                                                                     | valid field     |               |
 |                      |                                                                     | type names      |               |
 +----------------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``value``            | Value of field to populate on page load.                            | String          | N/A           |
+| ``value``            | Value of field to populate on page load.                            | String (or      | N/A           |
+|                      |                                                                     | Array when type |               |
+|                      |                                                                     | is 'checkbox')  |               |
 +----------------------+---------------------------------------------------------------------+-----------------+---------------+
 | ``required``         | Whether or not the field is required for form submission, applies   | Boolean         | ``FALSE``     |
 |                      | the required style :ellislab:`as shown in the style guide </style-  |                 |               |
@@ -169,7 +171,7 @@ The key for each field defintiion is the field's input name. We'll dive deeper i
 +----------------------+---------------------------------------------------------------------+-----------------+---------------+
 | ``label``            | Normally, the label for the field is specified in the fieldset      | String          | ``NULL``      |
 |                      | definition, but some field types may allow a secondary label to be  |                 |               |
-|                      | set such as the ``sort-text`` field because it is normally paired   |                 |               |
+|                      | set such as the ``short-text`` field because it is normally paired   |                 |               |
 |                      | with other ``short-text`` fields and each may need their own label. |                 |               |
 +----------------------+---------------------------------------------------------------------+-----------------+---------------+
 | ``wrap``             | Whether or not to wrap the field in a scrollable div, good for      | Boolean         | ``FALSE``     |

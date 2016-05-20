@@ -56,7 +56,7 @@ Depending on what parts your add-on has, you should also review the following pa
 In-App Documentation
 ====================
 
-Add-ons can now provide some in-app documentation by including a ``readme.md`` file
+Add-ons can now provide some in-app documentation by including a ``README.md`` file
 in the main directory of the add-on. This file will be parsed as markdown. Please
 note that the first h1 heading will be ignored. All other headings will automatically
 be listed in the sidebar.
