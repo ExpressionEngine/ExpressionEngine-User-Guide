@@ -103,6 +103,25 @@ description
 
 The description assigned to the file.
 
+directory_id
+^^^^^^^^^^^^
+
+::
+
+  {directory_id}
+
+The ID number of the file upload directory
+
+directory_title
+^^^^^^^^^^^^^^^
+
+::
+
+  {directory_title}
+
+This variable simply displays the content from the "Descriptive name of
+upload directory" setting for the directory that the file is in.
+
 extension
 ^^^^^^^^^
 
@@ -137,7 +156,20 @@ file_size
 
   {file_size}
 
-The size of the file (in bytes).
+The size of the file (in bytes). To display the size in a human friendly manner, (e.g. ``147KB``) use::
+
+  {file_size:human}
+
+This includes the appropriate ``<abbr>`` HTML tag. Or, if you prefer to have the units spelled out, (e.g. ``147 kilobytes``), use::
+
+  {file_size:human_long}
+
+If you have defined any :ref:`image_manipulations` you can modify this tag with the Short Name of the manipulation. For example, if you've
+defined a "small" manipulation, the following will output the file size of that version::
+
+  {file_size:small}
+  {file_size:small:human}
+  {file_size:small:human_long}
 
 height
 ^^^^^^
@@ -154,6 +186,22 @@ defined a "small" manipulation, the following will output the height of
 that version::
 
   {height:small}
+
+id_path
+^^^^^^^
+
+::
+
+  {id_path='gallery/full_image'}
+
+The URL to the specified template. The ID number of the entry will be
+automatically added. For example, this::
+
+  <a href="{id_path='gallery/full_image'}">my picture</a>
+
+Would be rendered like this::
+
+  <a href="http://example.com/index.php/gallery/full_image/234/">my picture</a>
 
 location
 ^^^^^^^^
