@@ -1426,28 +1426,6 @@ Example Usage::
 $config['disable_tag_caching'] = 'y';
 
 
-doc_url
--------
-
-Set the URL to the ExpressionEngine User Guide, used in the Control
-Panel to provide a direct link to the documentation.
-
-======= ========
-Value   Description
-======= ========
-``URL`` URL to ExpressionEngine User Guide
-======= ========
-
-Example Usage::
-
-$config['doc_url'] = 'https://ellislab.com/expressionengine/user-guide/';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`: :ref:`URL to Documentation Directory
-<general-config-URL-docs-label>`
-
-
 dynamic_tracking_disabling
 --------------------------
 

@@ -145,8 +145,7 @@ doc\_url
 
   {doc_url}
 
-This variable will be substituted with the URL found in **URL to
-Documentation Directory** under :menuselection:`Settings --> URL and Path Settings`.
+This variable will be substituted with the user guide URL.
 
 elapsed\_time
 -------------
