@@ -68,6 +68,17 @@ cp\_url
 The URL to the control panel for this site. Only output for logged-in
 members who have access to the Control Panel.
 
+.. _global_csrf_token:
+
+csrf\_token
+-----------
+
+::
+
+  {csrf_token}
+
+This variable is a required value for the hidden form field 'csrf_token'.
+
 current_path
 ------------
 
@@ -419,16 +430,6 @@ webmaster\_email
 The email address for the site, as specified in :doc:`Email
 Configuration </cp/settings/email>`.
 
-.. _global_csrf_token:
-
-csrf\_token
------------
-
-::
-
-  {csrf_token}
-
-This variable is a required value for the hidden form field 'csrf_token'.
 
 .. _member_variables:
 

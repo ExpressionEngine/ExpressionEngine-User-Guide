@@ -371,13 +371,13 @@ Allow Templates to be Saved as Files?
 
 This determines whether your Templates are saved out to a flat text file when you save them. See the `Flat File Templates <../../../templates/flat_file_templates.html>`_ section for specific information.
 
-***********************************
-Basepath to Template File Directory
-***********************************
+*********************************
+Basepath to Doesn't Exist Anymore
+*********************************
 
 This is the *server path* to the folder you have created to hold the Template files. It is important that you use the server path for the preference and not a URL. A server path often looks similar to:
 
-:dfn:`/home/usr/domain.com/http\_docs/system/expressionengine/template\_files/`
+:dfn:`/home/usr/domain.com/http\_docs/system/user/some\_where/`
 
 Server paths will vary from server to server, so you should contact your Host or server admin if you are unsure of what your setting should be.
 

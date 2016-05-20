@@ -138,46 +138,52 @@ Fieldsets can contain multiple fields, and they are defined in the ``fields`` ar
 
 The key for each field defintiion is the field's input name. We'll dive deeper into that array to see how we can show and customize different kinds of fields. Here are the keys available to a field definition array:
 
-+------------------+---------------------------------------------------------------------+-----------------+---------------+
-| Option name      | Description                                                         | Accepted values | Default value |
-+==================+=====================================================================+=================+===============+
-| ``type``         | Type of field, required. All field types are listed below.          | String name of  | N/A           |
-|                  |                                                                     | valid field     |               |
-|                  |                                                                     | type names      |               |
-+------------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``value``        | Value of field to populate on page load.                            | String          | N/A           |
-+------------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``required``     | Whether or not the field is required for form submission, applies   | Boolean         | ``FALSE``     |
-|                  | the required style :ellislab:`as shown in the style guide </style-  |                 |               |
-|                  | guide/c/forms#setting-field-required>`.                             |                 |               |
-+------------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``disabled``     | Whether or not the field input element is disabled.                 | Boolean         | ``FALSE``     |
-+------------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``choices``      | For field types that have multiple options to choose from, such as  | Array           | ``NULL``      |
-|                  | radio buttons or checkboxes, sets the selectable choices for that   |                 |               |
-|                  | field. Array format is ``'value' => lang('label')``.                |                 |               |
-+------------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``maxlength``    | Sets the ``maxlength=`` parameter on text inputs.                   | Boolean         | ``FALSE``     |
-+------------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``no_results``   | For checkboxes, radio buttons and select fields, can be set to show | Array           | ``NULL``      |
-|                  | a "no results" message and a call-to-action link button to create   |                 |               |
-|                  | content that would populate options for the field.                  |                 |               |
-+------------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``label``        | Normally, the label for the field is specified in the fieldset      | String          | ``NULL``      |
-|                  | definition, but some field types may allow a secondary label to be  |                 |               |
-|                  | set such as the ``sort-text`` field because it is normally paired   |                 |               |
-|                  | with other ``short-text`` fields and each may need their own label. |                 |               |
-+------------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``wrap``         | Whether or not to wrap the field in a scrollable div, good for      | Boolean         | ``FALSE``     |
-|                  | potentially long lists of selectable options.                       |                 |               |
-+------------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``content``      | When ``type`` is set to ``html``, allows for any freeform markup to | String          | ``NULL``      |
-|                  | be used as the field.                                               |                 |               |
-+------------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``group_toggle`` | If this field is to toggle the visibility of other fields,          | Array           | N/A           |
-|                  | specifies the rules for that toggling. See                          |                 |               |
-|                  | `Toggling field visibility`_  for more information.                 |                 |               |
-+------------------+---------------------------------------------------------------------+-----------------+---------------+
++----------------------+---------------------------------------------------------------------+-----------------+---------------+
+| Option name          | Description                                                         | Accepted values | Default value |
++======================+=====================================================================+=================+===============+
+| ``type``             | Type of field, required. All field types are listed below.          | String name of  | N/A           |
+|                      |                                                                     | valid field     |               |
+|                      |                                                                     | type names      |               |
++----------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``value``            | Value of field to populate on page load.                            | String (or      | N/A           |
+|                      |                                                                     | Array when type |               |
+|                      |                                                                     | is 'checkbox')  |               |
++----------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``required``         | Whether or not the field is required for form submission, applies   | Boolean         | ``FALSE``     |
+|                      | the required style :ellislab:`as shown in the style guide </style-  |                 |               |
+|                      | guide/c/forms#setting-field-required>`.                             |                 |               |
++----------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``disabled``         | Whether or not the field input element is disabled.                 | Boolean         | ``FALSE``     |
++----------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``choices``          | For field types that have multiple options to choose from, such as  | Array           | ``NULL``      |
+|                      | radio buttons or checkboxes, sets the selectable choices for that   |                 |               |
+|                      | field. Array format is ``'value' => lang('label')``.                |                 |               |
++----------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``disabled_choices`` | For checkboxes, indicates options that are not currently choosable  | Array           | ``NULL``      |
+|                      | with an array of field values whose checkboxes should be disabled,  |                 |               |
+|                      | e.g. ``['value', 'another']``                                       |                 |               |
++----------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``maxlength``        | Sets the ``maxlength=`` parameter on text inputs.                   | Boolean         | ``FALSE``     |
++----------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``no_results``       | For checkboxes, radio buttons and select fields, can be set to show | Array           | ``NULL``      |
+|                      | a "no results" message and a call-to-action link button to create   |                 |               |
+|                      | content that would populate options for the field.                  |                 |               |
++----------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``label``            | Normally, the label for the field is specified in the fieldset      | String          | ``NULL``      |
+|                      | definition, but some field types may allow a secondary label to be  |                 |               |
+|                      | set such as the ``short-text`` field because it is normally paired   |                 |               |
+|                      | with other ``short-text`` fields and each may need their own label. |                 |               |
++----------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``wrap``             | Whether or not to wrap the field in a scrollable div, good for      | Boolean         | ``FALSE``     |
+|                      | potentially long lists of selectable options.                       |                 |               |
++----------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``content``          | When ``type`` is set to ``html``, allows for any freeform markup to | String          | ``NULL``      |
+|                      | be used as the field.                                               |                 |               |
++----------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``group_toggle``     | If this field is to toggle the visibility of other fields,          | Array           | N/A           |
+|                      | specifies the rules for that toggling. See                          |                 |               |
+|                      | `Toggling field visibility`_  for more information.                 |                 |               |
++----------------------+---------------------------------------------------------------------+-----------------+---------------+
 
 Available field input types
 ---------------------------
