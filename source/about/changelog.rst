@@ -25,6 +25,14 @@ Release Date: June 6, 2016
 - Fixed a bug (#21485) where text fields with numeric content types would throw exceptions when saving with an empty value.
 - Fixed a bug where private messages wouldn't show up in the member portal.
 - Fixed a bug (#21535) where there was as missing image for the front-end member templates.
+- Fixed a bug (#21851) on sites using MSM where templates from one site could be erroneously copied over to all other sites.
+- Fixed a bug (#21583) where a PHP error could occur in the channel form when specifying an invalid entry_id to edit.
+- Fixed a bug (#21800) where setting a default template group for a new MSM site unset the default templates on all other sites.
+- Fixed a bug where a PHP error could occur on the control panel member profile page when not on the default site.
+- Fixed a bug (#21840) where the user language setting did not override the default language setting.
+- Altered the member group defaults so that new member groups default to unlocked (see bug #21879).
+- Fixed a bug (#2186) in frontend member registration where a MySQL occurred if there were custom member fields included on the form.
+- Fixed a bug where a blank status highlight color could cause an exception on the content edit page.
 - Fixed a bug (#21421) where index.html, index.php, and index.htm would accidentally be synced to a file upload directory.
 - Fixed a bug (#21424) where category fields were not using the appropriate field formatting (since it was never set).
 - Fixed a bug where you couldn't update the field formatting for a category field for all existing categories.
