@@ -11,6 +11,8 @@ Version 3.3.3
 Release Date: June 6, 2016
 
 - Added back search to the file picker, addresses bug #21109.
+- Improved SQL display in the application profiler.
+- Altered the member group defaults so that new member groups default to unlocked (see bug #21879).
 - Fixed a bug (#21862) where the file picker modal may not be able to paginate in list view.
 - Fixed a bug (#21873) where loading the member fields listing would load a different language key for the Member Groups sidebar link.
 - Fixed a bug (#21890) where category assignments could be lost if the category field was not included in the form.
@@ -30,7 +32,6 @@ Release Date: June 6, 2016
 - Fixed a bug (#21800) where setting a default template group for a new MSM site unset the default templates on all other sites.
 - Fixed a bug where a PHP error could occur on the control panel member profile page when not on the default site.
 - Fixed a bug (#21840) where the user language setting did not override the default language setting.
-- Altered the member group defaults so that new member groups default to unlocked (see bug #21879).
 - Fixed a bug (#2186) in frontend member registration where a MySQL occurred if there were custom member fields included on the form.
 - Fixed a bug where a blank status highlight color could cause an exception on the content edit page.
 - Fixed a bug (#21421) where index.html, index.php, and index.htm would accidentally be synced to a file upload directory.
@@ -38,7 +39,6 @@ Release Date: June 6, 2016
 - Fixed a bug where you couldn't update the field formatting for a category field for all existing categories.
 - Fixed a bug (#21877) in the 3.1.0 updater that was reaching outside of the database prefix to try to change some tables.
 - Fixed a bug where updating your software license file would not be immediately reflected on your EllisLab.com Manage Purchases page.
-- Improved SQL display in the application profiler.
 - Fixed a bug where Developer Log items made at the same second might be sorted randomly by MySQL.
 - Fixed a bug where Template Partial and Variable updated from the control panel were not reflected in the file system.
 - Fixed a bug in the XML-RPC Server implementation that could cause XML parsing failures on newer versions of PHP.
