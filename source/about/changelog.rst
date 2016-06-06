@@ -12,12 +12,14 @@ Release Date: June 6, 2016
 
 - Added back search to the file picker, addresses bug #21109.
 - Improved SQL display in the application profiler.
+- Fixed a bug where HTML could be rendered in the application profiler for expanded template log details.
+- Fixed a bug where show/hide details link didn't work in the application profiler.
 - Altered the member group defaults so that new member groups default to unlocked (see bug #21879).
 - Fixed a bug (#21862) where the file picker modal may not be able to paginate in list view.
 - Fixed a bug (#21873) where loading the member fields listing would load a different language key for the Member Groups sidebar link.
 - Fixed a bug (#21890) where category assignments could be lost if the category field was not included in the form.
 - Fixed a bug where using the `{exp:jquery:script_tag}` would generate a PHP exception.
-- Fixed a bug where deleting a member and reassigning their conent missed their versioned Channel entries.
+- Fixed a bug where deleting a member and reassigning their content missed their versioned Channel entries.
 - Fixed a bug (#21692) where the channel filter search on the Entry Manger would sometimes not work.
 - Fixed a bug (#21783) where HTML buttons had blank previews when they contained HTML entities.
 - Fixed a bug (#21735) channel form entries didn't update the edit date.
