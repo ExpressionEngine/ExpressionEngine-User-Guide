@@ -34,7 +34,7 @@ Release Date: June 6, 2016
 - Fixed a bug (#21800) where setting a default template group for a new MSM site unset the default templates on all other sites.
 - Fixed a bug where a PHP error could occur on the control panel member profile page when not on the default site.
 - Fixed a bug (#21840) where the user language setting did not override the default language setting.
-- Fixed a bug (#2186) in frontend member registration where a MySQL occurred if there were custom member fields included on the form.
+- Fixed a bug (#21861) in frontend member registration where a MySQL occurred if there were custom member fields included on the form.
 - Fixed a bug where a blank status highlight color could cause an exception on the content edit page.
 - Fixed a bug (#21421) where index.html, index.php, and index.htm would accidentally be synced to a file upload directory.
 - Fixed a bug (#21424) where category fields were not using the appropriate field formatting (since it was never set).
