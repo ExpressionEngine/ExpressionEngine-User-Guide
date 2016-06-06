@@ -48,6 +48,8 @@ Security Lock
 
 When set to enable, only Super Admins can add or remove members from this group.
 
+If you allow frontend member registration, the group the user will be assigned to upon registration must be unlocked.
+
 Website Access
 ~~~~~~~~~~~~~~
 
@@ -57,6 +59,8 @@ Access public profiles
 ~~~~~~~~~~~~~~~~~~~~~~
 
 When set to **yes**, users assigned to this group may view public profiles of other members.
+
+If you allow frontend member registration, the group the user will be assigned to upon registration must be unlocked
 
 Email other members
 ~~~~~~~~~~~~~~~~~~~
