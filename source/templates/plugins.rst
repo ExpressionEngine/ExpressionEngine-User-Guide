@@ -41,6 +41,14 @@ by the plugin::
 
 In the above example, the content would be XML Encoded.
 
+There is also a `Markdown <http://daringfireball.net/projects/markdown/>`_ plugin where you can parse any content for Markdown syntax::
+
+	{exp:markdown}
+		{title}
+	{/exp:markdown}
+
+That's if you already haven't set Markdown as the :doc:`Text Formatting </general/text_formatting>` option for the field.
+
 .. _templates_nested_plugins:
 
 Nested Plugins
