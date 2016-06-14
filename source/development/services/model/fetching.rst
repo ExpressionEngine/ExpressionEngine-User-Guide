@@ -61,6 +61,26 @@ Operator        Constraint                 Example
 ``NOT IN``      Not in list of options     ``filter('id', '==', array(5, 8))``
 =============   =========================  ===================================
 
+Searching
+---------
+
+You can create basic search functionality using the ``search()`` method. It takes
+a field, or list of fields, as well as a search term and creates a SQL ``LIKE``
+query to find these items::
+
+    // find titles that contain "hello" and "world"
+    ->search('title', 'hello world')
+    // find titles or body fields that contain "hello" and "world"
+    ->search(['title', 'body'], 'hello world')
+
+The search function knows about more advanced search conventions. It treats quoted
+strings as single words and excludes words that start with a minus sign::
+
+    // find titles that contain "hello world", but not dog
+    ->search('title', '"hello world" -dog');
+
+.. note:: Searches are always appended as an ``AND`` to the end of the query and
+  cannot be used inside filter groups.
 
 Sorting
 -------
