@@ -48,9 +48,9 @@ be applied by using the ``orFilter()`` method::
 Available filters
 ~~~~~~~~~~~~~~~~~
 
-=============   =========================  ===================================
+=============   =========================  =======================================
 Operator        Constraint                 Example
-=============   =========================  ===================================
+=============   =========================  =======================================
 ``==``          Equal                      ``filter('id', '==', 5)``
 ``!=``          Not equal                  ``filter('id', '!=', 5)``
 ``<``           Less than                  ``filter('id', '<' 5)``
@@ -58,8 +58,8 @@ Operator        Constraint                 Example
 ``<=``          Less than or equals        ``filter('id', '<=', 5)``
 ``>=``          Greater than or equals     ``filter('id', '>=', 5)``
 ``IN``          In list of options         ``filter('id', 'IN', array(5, 8))``
-``NOT IN``      Not in list of options     ``filter('id', '==', array(5, 8))``
-=============   =========================  ===================================
+``NOT IN``      Not in list of options     ``filter('id', 'NOT IN', array(5, 8))``
+=============   =========================  =======================================
 
 Searching
 ---------

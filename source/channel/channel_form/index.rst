@@ -399,10 +399,10 @@ include_assets=
 
 ::
 
-  include_assets="no"
+  include_assets="yes"
 
-Adds necessary Javascript to your form. If you don't require the
-Javascript functionality, set to "no". Defaults to "yes".
+Adds necessary Javascript to your form. If you require the
+Javascript functionality, set to "yes". Defaults to "no".
 
 
 include\_jquery=

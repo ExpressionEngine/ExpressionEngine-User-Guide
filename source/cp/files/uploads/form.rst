@@ -67,10 +67,14 @@ files. You have two choices for this preference:
 
 .. note:: Only file types that are specified in ExpressionEngine's Mime
 	Type file are allowed to be uploaded. The Mime Type file can be found at:
-	``system/ee/legacy/config/mimes.php``.  If you are uploading something
+	``system/ee/legacy/config/mimes.php``.
+
+	If you are uploading something
 	uncommon and run into problems you may need to add the mime type for
 	your file to the whitelist in the configuration file found at:
-	``system/user/config/config.php``.
+	``system/user/config/config.php``. See :ref:`MIME whitelist<overrides-mime-whitelist-additions>`
+	and :ref:`Mime member exception whitelist <overrides-mime-whitelist-member-exception>` for available options.
+
 
 Default modal view?
 ~~~~~~~~~~~~~~~~~~~

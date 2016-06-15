@@ -5,6 +5,47 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.3.3
+-------------
+
+Release Date: June 6, 2016
+
+- Added back search to the file picker, addresses bug #21109.
+- Improved SQL display in the application profiler.
+- Fixed a bug where HTML could be rendered in the application profiler for expanded template log details.
+- Fixed a bug where show/hide details link didn't work in the application profiler.
+- Altered the member group defaults so that new member groups default to unlocked (see bug #21879).
+- Fixed a bug (#21862) where the file picker modal may not be able to paginate in list view.
+- Fixed a bug (#21873) where loading the member fields listing would load a different language key for the Member Groups sidebar link.
+- Fixed a bug (#21890) where category assignments could be lost if the category field was not included in the form.
+- Fixed a bug where using the `{exp:jquery:script_tag}` would generate a PHP exception.
+- Fixed a bug where deleting a member and reassigning their content missed their versioned Channel entries.
+- Fixed a bug (#21692) where the channel filter search on the Entry Manger would sometimes not work.
+- Fixed a bug (#21783) where HTML buttons had blank previews when they contained HTML entities.
+- Fixed a bug (#21735) channel form entries didn't update the edit date.
+- Fixed a bug (#21899) where channel form would ignore custom inline error tags.
+- Fixed a bug (#21784) where a PHP error would be shown when going to an edit entry page without an entry_id.
+- Fixed a bug (#21391) where New Relic would not be displayed as enabled when it was enabled by default.
+- Fixed a bug (#21485) where text fields with numeric content types would throw exceptions when saving with an empty value.
+- Fixed a bug where private messages wouldn't show up in the member portal.
+- Fixed a bug (#21535) where there was as missing image for the front-end member templates.
+- Fixed a bug (#21851) on sites using MSM where templates from one site could be erroneously copied over to all other sites.
+- Fixed a bug (#21583) where a PHP error could occur in the channel form when specifying an invalid entry_id to edit.
+- Fixed a bug (#21800) where setting a default template group for a new MSM site unset the default templates on all other sites.
+- Fixed a bug where a PHP error could occur on the control panel member profile page when not on the default site.
+- Fixed a bug (#21840) where the user language setting did not override the default language setting.
+- Fixed a bug (#21861) in frontend member registration where a MySQL occurred if there were custom member fields included on the form.
+- Fixed a bug where a blank status highlight color could cause an exception on the content edit page.
+- Fixed a bug (#21421) where index.html, index.php, and index.htm would accidentally be synced to a file upload directory.
+- Fixed a bug (#21424) where category fields were not using the appropriate field formatting (since it was never set).
+- Fixed a bug where you couldn't update the field formatting for a category field for all existing categories.
+- Fixed a bug (#21877) in the 3.1.0 updater that was reaching outside of the database prefix to try to change some tables.
+- Fixed a bug where updating your software license file would not be immediately reflected on your EllisLab.com Manage Purchases page.
+- Fixed a bug where Developer Log items made at the same second might be sorted randomly by MySQL.
+- Fixed a bug where Template Partial and Variable updated from the control panel were not reflected in the file system.
+- Fixed a bug in the XML-RPC Server implementation that could cause XML parsing failures on newer versions of PHP.
+
+
 Version 3.3.2
 -------------
 
