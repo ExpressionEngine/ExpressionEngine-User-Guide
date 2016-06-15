@@ -25,7 +25,7 @@ cp_custom_menu
 
     // call addSubmenu to create a dropdown menu
     // this returns a submenu object
-    $sub = $menu->addItem('Title');
+    $sub = $menu->addSubmenu('Title');
 
   The submenu object is of type ``EllisLab\ExpressionEngine\Service\CustomMenu\Submenu`` and implements the following API::
 
