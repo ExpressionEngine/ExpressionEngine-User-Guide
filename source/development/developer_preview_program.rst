@@ -178,7 +178,6 @@ and encourage them to join!
 - Michael Leigeber
 - Michael Rog
 - Michael Witwicki (Booyant)
-- Mike Hughes
 - Mike Wenger (Q Digital Studio)
 - Nathan Pitman
 - Nicco De Gols
