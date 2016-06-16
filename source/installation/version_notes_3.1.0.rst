@@ -12,6 +12,4 @@ Double check your config file to ensure ``avatar_path`` is set to a valid path. 
 
 .. error:: Please correct the permissions on your avatar directory.
 
-Ensure that the correct permissions are set on your avatar directory. You'll want them to be 777, or the equivalent for IIS::
-
-  chmod 777 /path/to/images/avatars
+Ensure that the correct permissions are set on your avatar directory. It must be writable. See :doc:`/troubleshooting/general/file_permissions` for details.

@@ -6,6 +6,7 @@ Troubleshooting
 General
 *******
 
+- :doc:`general/file_permissions`
 - :doc:`Performing some action results in a blank page <general/blank_pages>`
 - :doc:`Submitting a form has no effect and the page simply reloads <general/form_submissions>`
 

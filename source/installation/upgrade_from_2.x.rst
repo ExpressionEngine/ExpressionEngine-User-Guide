@@ -71,13 +71,13 @@ Then upload the following files and directories:
 Apache
 ======
 
-These permissions are typical for PHP-based applications running on Apache, though you may want to check with your web host to see if more restrictive permissions can be used to allow PHP to write to files and directories.
+You need to enable write access to the following files and folders. In a worst-case scenario that would be ``666`` for files and ``777`` for directories. You should check with your web host to see if more restrictive permissions can be used to allow PHP to write to files and directories. See :doc:`/troubleshooting/general/file_permissions` for details.
 
-Set this file to 666:
+Make this file writable:
 
 - :file:`system/user/config/config.php`
 
-Set these directories (and their subdirectories) to 777:
+Make these directories (and their subdirectories) writable:
 
 - :file:`system/user/cache/`
 - :file:`system/user/templates/`

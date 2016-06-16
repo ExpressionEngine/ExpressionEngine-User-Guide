@@ -12,8 +12,7 @@ This error is usually caused by insufficient permissions or incorrect
 configuration:
 
 -  The Upload Directory needs sufficient permissions for PHP to write
-   files to the filesystem. On a UNIX type server this usually means
-   "777" permissions are required.
+   files to the filesystem. See :doc:`/troubleshooting/general/file_permissions` for details.
 -  The error can also occur if ExpressionEngine could not copy or move
    the uploaded file from the temporary upload directory, as specified
    by the server. The upload directory needs appropriate permissions.

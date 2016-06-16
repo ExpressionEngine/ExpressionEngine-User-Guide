@@ -10,8 +10,7 @@ are displayed. The Forum Module comes with a "default" theme, which is
 located in your installation under themes/user/forum/.
 
 In order to edit the Templates inside the Control Panel, set the theme
-folders and files to 666 permissions (for Windows servers, you need to
-make them "writable").
+folders and files to be writable. See :doc:`/troubleshooting/general/file_permissions` for details.
 
 If you plan to make changes to your theme, we recommend that you make a
 copy of the themes/user/forum/default/ directory, name it something
