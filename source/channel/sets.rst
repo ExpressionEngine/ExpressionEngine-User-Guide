@@ -18,7 +18,9 @@ When using Relationships, your Channel Set export will export related Channels a
 Channel Set Structure
 *********************
 
-Channel Sets are zip files containing the following files::
+Channel Sets are zip files containing the following files
+
+.. code-block:: text
 
   ├── channel_set.json
   └── custom_fields

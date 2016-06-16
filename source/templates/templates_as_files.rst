@@ -27,9 +27,7 @@ All templates will be saved to the ``system/user/templates`` directory.
 1. Set folder permissions
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Make the ``system/user/templates`` folder writable by setting its permissions to
-777 (or equivalent) so that ExpressionEngine will be allowed to save the files
-as well as recreate your Template\_Group/Template structure.
+Make the ``system/user/templates`` folder writable so that ExpressionEngine will be allowed to save the files as well as recreate your Template\_Group/Template structure. See :doc:`/troubleshooting/general/file_permissions` for details.
 
 2. Set Template Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

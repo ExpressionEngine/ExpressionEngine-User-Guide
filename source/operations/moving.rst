@@ -50,18 +50,13 @@ configured to run with the system folder renamed or above web root.
 6. Verify File Permissions
 --------------------------
 
-The following permissions are typical for UNIX-based hosts. You may want
-to check with your host to see if more restrictive permissions can be
-used to allow PHP to write to files (666) and folders (777). On Windows
-servers the following will not apply, but you will need to ensure that
-the files and folders are writable by ExpressionEngine. You may need to
-contact your host for this.
+You need to enable write access to the following files and folders. In a worst-case scenario that would be ``666`` for files and ``777`` for directories. You should check with your web host to see if more restrictive permissions can be used to allow PHP to write to files and directories. See :doc:`/troubleshooting/general/file_permissions` for details.
 
--  Ensure the following file is set to **666**:
+-  Ensure the following file is writable:
 
    -  system/user/config/config.php
 
--  Ensure the following folders are set to **777**:
+-  Ensure the following folders are writable:
 
    -  system/user/cache/
    -  system/user/templates/
