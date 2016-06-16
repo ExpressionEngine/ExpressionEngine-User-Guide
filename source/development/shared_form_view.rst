@@ -163,7 +163,9 @@ The key for each field defintiion is the field's input name. We'll dive deeper i
 |                      | with an array of field values whose checkboxes should be disabled,  |                 |               |
 |                      | e.g. ``['value', 'another']``                                       |                 |               |
 +----------------------+---------------------------------------------------------------------+-----------------+---------------+
-| ``maxlength``        | Sets the ``maxlength=`` parameter on text inputs.                   | Boolean         | ``FALSE``     |
+| ``maxlength``        | Sets the ``maxlength=`` attribute on text inputs.                   | Boolean         | ``FALSE``     |
++----------------------+---------------------------------------------------------------------+-----------------+---------------+
+| ``placeholder``      | Sets the ``placeholder=`` attribute on text inputs.                 | String          | ``NULL``      |
 +----------------------+---------------------------------------------------------------------+-----------------+---------------+
 | ``no_results``       | For checkboxes, radio buttons and select fields, can be set to show | Array           | ``NULL``      |
 |                      | a "no results" message and a call-to-action link button to create   |                 |               |
