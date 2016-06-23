@@ -68,14 +68,28 @@ Number Formatter
 
 .. class:: Number
 
-.. method:: bytes($abbr = TRUE, $include_markup = TRUE))
+.. method:: bytes($abbr = TRUE, $include_markup = TRUE)
 
   Formats a binary byte multiple into a human-readable measure of units, e.g. B, KB, MB, GB.
 
   :param bool $abbr: Use the abbreviated form of the byte format
   :param bool $include_markup: Output with ``<abbr>`` HTML. Only affects abbreviated forms.
   :returns: A Formatter object
-  :rtype: Number
+  :rtype: object
+
+Text Formatter
+--------------
+
+.. namespace:: EllisLab\ExpressionEngine\Service\Formatter\Formats
+
+.. class:: Text
+
+.. method:: attributeEscape()
+
+  Escapes a string for use in an HTML attribute.
+
+  :returns: A Formatter object
+  :rtype: object
 
 When to use ``compile()``
 -------------------------
