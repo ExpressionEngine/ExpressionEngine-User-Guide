@@ -61,10 +61,10 @@ All Formatters
     $array = array('size' => (string) ee('Format')->make('Number', $content)->bytes());
 
 
+.. namespace:: EllisLab\ExpressionEngine\Service\Formatter\Formats
+
 Number Formatter
 ----------------
-
-.. namespace:: EllisLab\ExpressionEngine\Service\Formatter\Formats
 
 .. class:: Number
 
@@ -79,8 +79,6 @@ Number Formatter
 
 Text Formatter
 --------------
-
-.. namespace:: EllisLab\ExpressionEngine\Service\Formatter\Formats
 
 .. class:: Text
 
