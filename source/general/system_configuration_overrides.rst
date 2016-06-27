@@ -948,6 +948,40 @@ Example Usage::
 $config['charset'] = 'UTF-8';
 
 
+.. _code_block_wrappers:
+
+code_block_pre
+--------------
+
+Custom markup to use wrap ``[code]`` blocks, works with ``code_block_post`` below to wrap the standard ``<pre><code>...</code></pre>`` with your custom markup.
+
+================== ===========
+Value              Description
+================== ===========
+``code_block_pre`` Markup to prepend to code blocks.
+================== ===========
+
+Example Usage::
+
+$config['code_block_pre'] = '<div class="codeblock">';
+$config['code_block_post'] = '</div>';
+
+code_block_post
+---------------
+
+Custom markup to use wrap ``[code]`` blocks, works with ``code_block_pre`` above to wrap the standard ``<pre><code>...</code></pre>`` with your custom markup.
+
+=================== ===========
+Value               Description
+=================== ===========
+``code_block_post`` Markup to append to code blocks.
+=================== ===========
+
+Example Usage::
+
+$config['code_block_pre'] = '<div class="codeblock">';
+$config['code_block_post'] = '</div>';
+
 comment_edit_time_limit
 -----------------------
 
