@@ -5,10 +5,10 @@ User-Defined Global Variables
 
 **Control Panel Location:** :menuselection:`Developer Tools --> Template Variables`
 
-Custom, user-defined global variables can be created for use in any
+Custom, user-defined template variables can be created for use in any
 Template.
 
-User-defined global variables can hold any **static** information. These
+Template variables can hold any **static** information. These
 variables can be useful for things like site header, footers, copyright
 notices, etc. Since these variables can go in any template it makes the
 information very portable and simple to update.
@@ -20,17 +20,17 @@ this way::
 
 	{copyright}
 
-**Important:** You cannot give a user-defined global variable the same
+**Important:** You cannot give a template variable the same
 name as an existing variable. This includes variables native to
 ExpressionEngine such as other Global Variables. Please see the list of
 :doc:`/general/reserved_words` for details.
 
-.. note:: User-defined global variables are not run through the template
+.. note:: Template variables are not run through the template
 	engine, so you cannot place EE Tags, PHP, or variables inside them.
-	Also note that Global Variables are one of the last things parsed in
-	your Templates. This means that you cannot use a Global Variable as
-	the value for an EE Tag parameter. For instance, if you had a Global
-	Variable called "special\_channel", the following **would not work**
+	Also note that Template variables are one of the last things parsed in
+	your Templates. This means that you cannot use a Template variable as
+	the value for an EE Tag parameter. For instance, if you had a Template variable 
+	called "special_channel", the following **would not work**
 	::
 
 		{exp:channel:entries channel="{special_channel}" limit="10"}

@@ -11,7 +11,7 @@ system information, control access to areas of your site, and more.
 -  :doc:`/templates/globals/single_variables`
 -  :doc:`/templates/globals/template_partials`
 -  :doc:`/templates/globals/url_segments`
--  :doc:`/templates/globals/user_defined`
+-  :doc:`/templates/globals/template_variable`
 -  :doc:`/templates/globals/preload_replacement`
 
 .. toctree::

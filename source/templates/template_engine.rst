@@ -80,8 +80,8 @@ bottom through each rendering stage.
 
 #. Process :ref:`redirect variable <global_redirect>`
 
-#. Parse :doc:`user-defined global variables
-   </templates/globals/user_defined>`
+#. Parse :doc:`template-variables
+   </templates/globals/template_variable>`
 
 #. Parse some :doc:`standard global variables </templates/globals/single_variables>` (separately, in order given):
 
