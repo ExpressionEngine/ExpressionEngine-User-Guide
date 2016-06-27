@@ -10,7 +10,7 @@ Member Profile Templates
 The public profile area has its own set of templates which can be edited
 to change the look. You'll find the templates located at::
 
-  themes/member/default
+  themes/ee/member/default
 
 A good strategy is to make a copy of the entire **default** templates
 folder, then edit your copy so you can leave the **default** files
