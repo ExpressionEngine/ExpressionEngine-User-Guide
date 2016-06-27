@@ -35,5 +35,5 @@ ExpressionEngine such as other Global Variables. Please see the list of
 
 		{exp:channel:entries channel="{special_channel}" limit="10"}
 
-	In this case, you would need to consider using a :doc:`Snippet
-	<snippets>`.
+	In this case, you would need to consider using a :doc:`Template partial
+	<template_partials>`.

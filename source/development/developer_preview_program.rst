@@ -71,7 +71,7 @@ program? If you do not see them in the list below, please email them
 and encourage them to join!
 
 .. Any edits made to this list should also be made to the developer
-.. preview member snippet.
+.. preview member template partial.
 
 - Aaron Walden
 - Aidann Bowley (BridgingUnit)

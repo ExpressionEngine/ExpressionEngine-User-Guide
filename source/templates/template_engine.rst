@@ -37,7 +37,7 @@ bottom through each rendering stage.
 #. Parse (as a group, so order is irrelevant):
 
    * {freelancer_version}
-   * :doc:`Snippets </templates/globals/snippets>`
+   * :doc:`Template partials </templates/globals/template_partials>`
    * :ref:`MSM variables <msm_variables>`: {site_id}, {site_label}, {site_shortname}
    * :ref:`{last_segment} <global_last_segment>`
    * :ref:`Member variables <member_variables>`

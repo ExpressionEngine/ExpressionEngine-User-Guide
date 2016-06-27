@@ -1,7 +1,7 @@
 "Table already exists" error when upgrading
 ===========================================
 
-You receive an error such as "Table 'exp\_snippets' already exists" when
+You receive an error such as "Table 'exp_extensions' already exists" when
 performing an upgrade.
 
 Troubleshooting
