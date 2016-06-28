@@ -66,9 +66,9 @@ Changing Parsing Order
 You may change the parsing order and instruct ExpressionEngine to parse
 an outer plugin first. This is done by adding a parse="inward" parameter
 to the plugin opening tag. Using that parameter will tell EE to parse
-that plugin before parsing any plugins inside of it.::
+that plugin before parsing any plugins inside of it::
 
-	parse="inward"
+     parse="inward"
 
 Examples
 ~~~~~~~~
@@ -77,7 +77,7 @@ Here are some examples to help illustrate the parsing order.::
 
 	{exp:rss_parser url="https://ellislab.com/blog/rss-feed" limit="5" parse="inward"}
 		{feed_items}
-			<a href="{item_link}">{item_title}</a><
+			<a href="{item_link}">{item_title}</a><br />
 			{exp:word_limit total="20"}
 				{content}
 			{/exp:word_limit}<br />
