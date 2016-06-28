@@ -10,11 +10,16 @@ Member Profile Templates
 The public profile area has its own set of templates which can be edited
 to change the look. You'll find the templates located at::
 
-  themes/ee/member/default
+  themes/ee/member/default/
 
-A good strategy is to make a copy of the entire **default** templates
-folder, then edit your copy so you can leave the **default** files
-intact. Set your new copy as the site default under :menuselection:`Settings --> Members`
+To customize member themes, you may save a copy of any theme files you would like to customize 
+in::
+
+  themes/user/member/custom_theme_name/
+
+ExpressionEngine will look in the custom theme folder first before falling back to the default files.
+
+You can set your new copy as the site default under :menuselection:`Settings --> Members`
 
 .. note:: When building your member profile templates, consider that any
   external links will pass along referrer data. This can cause security
