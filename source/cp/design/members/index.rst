@@ -12,12 +12,10 @@ to change the look. You'll find the templates located at::
 
   themes/ee/member/default/
 
-To customize member themes, you may save a copy of any theme files you would like to customize 
-in::
+A good strategy is to make a copy of the entire **default** templates folder,
+then edit your copy so you can leave the **default** files intact. Save your new copy to::
 
   themes/user/member/custom_theme_name/
-
-ExpressionEngine will look in the custom theme folder first before falling back to the default files.
 
 You can set your new copy as the site default under :menuselection:`Settings --> Members`
 
