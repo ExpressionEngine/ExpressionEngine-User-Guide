@@ -1,5 +1,5 @@
-User-Defined Global Variables
-=============================
+Template Variables
+==================
 
 .. rst-class:: cp-path
 
@@ -25,15 +25,20 @@ name as an existing variable. This includes variables native to
 ExpressionEngine such as other Global Variables. Please see the list of
 :doc:`/general/reserved_words` for details.
 
-.. note:: Template variables are not run through the template
-	engine, so you cannot place EE Tags, PHP, or variables inside them.
-	Also note that Template variables are one of the last things parsed in
-	your Templates. This means that you cannot use a Template variable as
-	the value for an EE Tag parameter. For instance, if you had a Template variable 
-	called "special_channel", the following **would not work**
-	::
+How to choose between a Template Variable and a Template Partial
+----------------------------------------------------------------
 
-		{exp:channel:entries channel="{special_channel}" limit="10"}
+In both cases, ExpressionEngine is simply swapping out a tag with the contents of that tag.  However, there is a big difference in **when** that swap takes place,
 
-	In this case, you would need to consider using a :doc:`Template partial
-	<template_partials>`.
+Template variables are one of the last tags on the template that are parsed, so they are great for static content, meaning content that does not contain other tags.
+
+Template partials are one of the first tags parsed, so if you want to put other tags in a Template partial, those tags will still be seen and parsed just fine.
+
+For instance, if you wanted to store a channel name in a tag called "tp_special_channel" and use it as a parameter in a channel entry tag, you would want to use a Template partial::
+
+		{exp:channel:entries channel="{tp_special_channel}" limit="10"}
+
+The tag would use the value of the Template partial "tp_special_channel" as the value of that channel parameter.
+
+If you used a Template variable "tv_special_channel" instead, the channel entry tag would would look for a channel with the short name "{tv_special_channel}".
+
