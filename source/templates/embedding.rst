@@ -50,8 +50,8 @@ You may also use embed variables in conditionals::
 		{embed:dog_name} will never be as cool as Shadow.
 	{/if}
 
-How to choose between an Embedded Template and a Snippet
---------------------------------------------------------
+How to choose between an Embedded Template and a Template Partial
+-----------------------------------------------------------------
 
 Since :doc:`Template partials <globals/template_partials>` can also contain tags,
 variables, and PHP, the question often arises: which do I choose? If
@@ -71,7 +71,7 @@ template.
 -  You need to more discretely control which users are allowed to modify
    this content.
 
-In all other cases, Snippets are typically the better solution, as the
+In all other cases, Template partials are typically the better solution, as the
 above features do come with a minor associated cost in terms of resource
 usage. Choose the right tool for the right task!
 

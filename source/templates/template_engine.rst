@@ -4,7 +4,7 @@ The Template Engine
 At a basic level, :ref:`Templates <getting_started_templates>` contain
 almost everything you want displayed on the front-end of the site. When
 ExpressionEngine serves up each Template, the system must go through a
-rendering process to parse out the Tags, Variables, Snippets, and Embeds
+rendering process to parse out the Tags, Variables, Template Partials, and Embeds
 being used in the Template.
 
 .. note:: The information in this article applies only to rendering
