@@ -67,7 +67,6 @@ template.
    is being added to.
 -  You need to also be able to access this template on its own directly
    via the URL.
--  You need to edit this content using the flat-file template system.
 -  You need to more discretely control which users are allowed to modify
    this content.
 
