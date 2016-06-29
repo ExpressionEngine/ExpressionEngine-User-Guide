@@ -370,7 +370,7 @@ Version 3.1.0
 Release Date: January 18, 2016
 
 - Compatible with PHP 7 and MySQL 5.7
-- Snippets and Global Variables can now be saved as files.
+- Template partials and Template variables can now be saved as files.
 - Added the ability to manage categories from the Channel entry publish form.
 - CodeMirror textareas (think Templates) are now resizable.
 - Channel entries now default sort by entry date with the newest at the top.
@@ -487,7 +487,7 @@ Release Date: December 2, 2015
 - Fixed a bug (#21395) where a PHP error may appear on some actions dealing with file thumbnails.
 - Fixed a bug (#21389) where some OGV files would not be accepted for upload.
 - Fixed a bug (#21388) where validation for URL titles in Channel entries would incorrectly flag periods as not allowed.
-- Fixed a bug where global snippets could not be edited.
+- Fixed a bug where global template partials could not be edited.
 - Fixed a bug where saving entries did not clear caches if that setting was enabled.
 - Fixed a bug where the default homepage could be set to the publish page of no channel.
 - Fixed a bug where only super admins could edit status groups.
