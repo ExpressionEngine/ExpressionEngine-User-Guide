@@ -2,7 +2,7 @@ Using Plugins
 =============
 
 ExpressionEngine is designed so that features can be added through the
-use of Plugins. A list of first party ExpressionEngine plugins can be
+use of plugins. A list of first party ExpressionEngine plugins can be
 found on `EllisLab's GitHub page <https://github.com/EllisLab/>`_, along
 with installation and usage instructions for each one. It is important
 to review the notes for the specific plugin you wish to use.
@@ -12,22 +12,22 @@ Installation
 
 Follow these steps to install a plugin:
 
-#. Download the Plugin to your local computer. You'll usually need to
+#. Download the plugin to your local computer. You'll usually need to
    unzip the file.
-#. Upload the Plugin's **folder** to your
+#. Upload the plugin's **folder** to your
    **system/user/addons/** folder.
 
 For instance, the No Follow plugin would be placed like so:
 
--  system/user/addons/no\_follow/pi.no\_follow.php
+-  system/user/addons/no_follow/pi.no_follow.php
 
-Once the Plugin is installed, you should be able to see it listed in the
+Once the plugin is installed, you should be able to see it listed in the
 :doc:`Add-on Manager </cp/addons/index>` in your
 ExpressionEngine Control Panel.
 
-.. note:: Some Plugins may have additional installation requirements
-   specific to that particular Plugin. Be sure to read any instructions,
-   readme files, etc. that may come with the Plugin.
+.. note:: Some plugins may have additional installation requirements
+   specific to that particular plugin. Be sure to read any instructions,
+   readme files, etc. that may come with the plugin.
 
 Basic Usage
 -----------
@@ -46,7 +46,7 @@ In the above example, the content would be XML Encoded.
 Nested Plugins
 --------------
 
-It is possible to nest Plugins in order for content to be affected by
+It is possible to nest plugins in order for content to be affected by
 more than one plugin. For example, you can do this::
 
 	{exp:word_limit total="35"}
@@ -55,8 +55,8 @@ more than one plugin. For example, you can do this::
 		{/exp:xml_encode}
 	{/exp:word_limit}
 
-By default, ExpressionEngine will process the innermost Plugin first,
-then the next Plugin, and so on until all the plugins wrapping a given
+By default, ExpressionEngine will process the innermost plugin first,
+then the next plugin, and so on until all the plugins wrapping a given
 piece of content have been parsed. In the above example, the content is
 XML Encoded first and then the result of that is limited to 35 words.
 
@@ -64,50 +64,50 @@ Changing Parsing Order
 ----------------------
 
 You may change the parsing order and instruct ExpressionEngine to parse
-an outer Plugin first. This is done by adding a parse="inward" parameter
-to the Plugin opening tag. Using that parameter will tell EE to parse
-that Plugin before parsing any Plugins inside of it. ::
+an outer plugin first. This is done by adding a parse="inward" parameter
+to the plugin opening tag. Using that parameter will tell EE to parse
+that plugin before parsing any plugins inside of it::
 
-	parse="inward"
+     parse="inward"
 
 Examples
 ~~~~~~~~
 
-Here are some examples to help illustrate the parsing order. ::
+Here are some examples to help illustrate the parsing order.::
 
-	{exp:magpie url="http://some-site.com" parse="inward"}
-		{items}
-			<a href="{link}">{title}</a><br />
+	{exp:rss_parser url="https://ellislab.com/blog/rss-feed" limit="5" parse="inward"}
+		{feed_items}
+			<a href="{item_link}">{item_title}</a><br />
 			{exp:word_limit total="20"}
 				{content}
 			{/exp:word_limit}<br />
-		{/items}
-	{/exp:magpie}
+		{/feed_items}
+	{/exp:rss_parser}
 
-With the above, the "magpie" Plugin will be parsed first. This will
+With the above, the RSS plugin will be parsed first. This will
 allow the content of the {content} variable to be available to the
-other, nested Plugin: "word\_limit".
+other, nested plugin: "word_limit".
 
 Here is a much more complicated example that demonstrates both parsing
-orders in action. ::
+orders in action.::
 
-	{exp:magpie url="http://some-site.com" limit="15" refresh="720" parse="inward"}
+	{exp:rss_parser url="https://ellislab.com/blog/rss-feed" limit="5" parse="inward"}
 		<ul>
-			{items}
-				<li><a href="{link}">{title}</a><br />
+		{feed_items}
+			<li><a href="{item_link}">{item_title}</a><br />
 					{exp:word_limit total="35"}
 						{exp:xml_encode}
 							{content}
 						{/exp:xml_encode}
 					{/exp:word_limit}
 				</li>
-			{/items}
+		{/feed_items}
 		</ul>
-	{/exp:magpie}
+	{/exp:rss_parser}	
 
-The outer "magpie" Plugin has the parameter set to parse inward, so it
+The outer RSS plugin has the parameter set to parse inward, so it
 is parsed first. This makes the {content} variable's content available
-to the other Plugins. Next, is the "word\_limit" Plugin. However, since
-by default EE parses Plugins outward, the "xml\_encode" Plugin is parsed
-first and then "word\_limit" after it. In this way, "word\_limit" will
-never erase the closing tag for the "xml\_encode" Plugin.
+to the other plugins. Next, is the "word_limit" plugin. However, since
+by default EE parses plugins outward, the "xml_encode" plugin is parsed
+first and then "word_limit" after it. In this way, "word_limit" will
+never erase the closing tag for the "xml_encode" plugin.

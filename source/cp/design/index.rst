@@ -89,12 +89,12 @@ This will take you to the :doc:`forums/index`.
 Template Partials
 ^^^^^^^^^^^^^^^^^
 
-This will take you to the :doc:`snippets/index`.
+This will take you to the :doc:`template_partials/index`.
 
 New Template Partial
 ^^^^^^^^^^^^^^^^^^^^
 
-This will allow you to :doc:`create a new template partial <snippets/form>`.
+This will allow you to :doc:`create a new template partial <template_partials/form>`.
 
 Template Variables
 ^^^^^^^^^^^^^^^^^^

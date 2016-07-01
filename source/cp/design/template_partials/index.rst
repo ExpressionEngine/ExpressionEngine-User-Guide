@@ -8,7 +8,7 @@ Template Partials
 .. Overview
 
 In this section of the Control Panel you can create and edit
-:doc:`Template Partials </templates/globals/snippets>`.
+:doc:`Template Partials </templates/globals/template_partials>`.
 
 .. Screenshot (optional)
 
