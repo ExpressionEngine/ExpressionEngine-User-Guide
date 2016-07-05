@@ -33,7 +33,7 @@ Control Panel
 *************
 
 - :doc:`Control Panel has no CSS <control_panel/unstyled_cp>`
-- :doc:`Missing Glyphicon Icon UI Elements <control_panel/missing_glyphicon_icon_ui_elements>`
+- :doc:`Missing Glyphicon Icon UI Elements <control_panel/missing_icon_ui_elements>`
 - :doc:`Categories do not appear as filter options in the Edit tab <control_panel/categories_not_appearing_in_edit_tab>`
 - :doc:`Why do I have to re-login to the CP if I'm logged in to the site <control_panel/site_and_cp_login_separate>`
 - :doc:`I can not log into the Control Panel on my Windows-based server <control_panel/no_login_on_windows_server>`
