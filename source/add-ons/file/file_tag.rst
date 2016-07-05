@@ -418,6 +418,15 @@ location
 The user-defined geographic location information associated with the
 entry, typically used for photos.
 
+mime_type
+^^^^^^^^^
+
+::
+
+  {mime_type}
+
+The automatically-detected MIME type of the file.
+
 modified_date
 ~~~~~~~~~~~~~
 
