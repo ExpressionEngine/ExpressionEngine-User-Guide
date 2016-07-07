@@ -41,6 +41,10 @@ If you have multiple forums, you can specify which forum to load using the
 
 	{exp:forum board="board_name"}
 
+And you can also specify a theme using the "theme" parameter::
+
+	{exp:forum theme="my_theme"}
+
 Your forum will then be run inside the regular EE template engine, which
 means that you can include standard EE Tags in the forum theme
 Templates. The forum is then accessed through whichever Template you
