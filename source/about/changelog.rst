@@ -5,6 +5,33 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.3.4
+-------------
+
+Release Date: July 7, 2016
+
+- Security:
+
+  - Fixed potential SQL and XSS injection vulnerabilities in the control panel.
+
+- Added an .htaccess file to the themes folder to allow the control panel font assets to be used across domains and subdomains.
+- Publish file modal search now matches the file manager search behavior, searching in file names, file titles and by mime type (addresses bug #21912).
+
+- Fixed a PHP error when sending emails from extension hooks in the Session class.
+- Fixed a SQL error introduced in 3.3.3 when using the ``orderby="random"`` parameter with the ``{exp:file:entries}`` tag.
+- Fixed a PHP error introduced in 3.3.3 with the ``{exp:file:entries}`` tag in certain circumstances.
+- Fixed a bug in the Discussion Forum that prevented errors from being thrown on some invalid post submissions.
+- Fixed a PHP error when deleting a channel that contains entries that have comments.
+- Fixed a bug (#21630) where multiple channel forms on the same page could result in unparsed variables.
+- Fixed a bug (#21934) on non-default MSM sites, category custom field variables are unparsed on frontend.
+
+
+- Developers:
+
+  - Added a public `build_message()` method as an entrance point if needed within the `email_send` extension hook.
+
+
+
 Version 3.3.3
 -------------
 
