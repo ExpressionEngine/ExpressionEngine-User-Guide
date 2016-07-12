@@ -193,6 +193,7 @@ and encourage them to join!
 - Pierre-Vincent Ledoux
 - Ragnar Frostason (Republic Factory)
 - Rein de Vries
+- Richard Whitmer
 - Rob Sanchez
 - Robin Hodges
 - Robin Willmot (Coffee Bean Design)
