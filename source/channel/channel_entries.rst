@@ -1276,6 +1276,16 @@ absolute\_results
 This variable will always display the absolute total number of results
 that are returned by the tag, regardless of pagination.
 
+absolute_reverse_count
+----------------------
+
+::
+
+	{absolute_reverse_count}
+
+The *opposite* of ``{absolute_count}``, in that it displays the entry count position counting backwards from the absolute total. Works across pagination, so the fifth entry in a list of fifteen entries would display "10".
+
+
 aol\_im
 -------
 
@@ -1793,6 +1803,15 @@ The amount of time that has passed between when the entry was submitted
 and the current time. The output is displayed in the format 1 day, 3
 hours, 45 minutes. This variable is useful for displaying something such
 as "This entry was posted 1 day, 3 hours, 45 minutes ago."
+
+reverse_count
+-------------
+
+::
+
+	{reverse_count}
+
+The *opposite* of ``{count}``, in that it displays the entry count position counting backwards from the total. Like ``{count}``, this is relative to the number of entries the tag is currently displaying. If you want the counts to include paginated results, you may want ``{absolute_reverse_count}``.
 
 screen\_name
 ------------
