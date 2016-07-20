@@ -213,6 +213,7 @@ and encourage them to join!
 - Stephen Callender
 - Steve Fickus
 - Steven Peercy
+- Strukt
 - Susan Snipes (Q Digital Studio)
 - Taylor Daughtry (Caddis)
 - TJ Draper
