@@ -56,3 +56,8 @@ Location
 
 Where was the file created?
 
+Categories
+~~~~~~~~~~
+
+Assign the file to categories from the category group(s) assigned to the file's upload directory.
+

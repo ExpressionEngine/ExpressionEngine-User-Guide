@@ -176,4 +176,6 @@ upload files.
 Allowed category groups
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The following category groups are allowed to upload to this directory.
+Files may be assigned to specific categories, just like entries are.  Here you 
+can specify which category groups you want to make available to files in this upload directory. Images can be displayed by category using the doc:`File Module
+</add-ons/file/index>`.
