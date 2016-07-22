@@ -70,7 +70,7 @@ within this group.
 Exclude group from?
 ~~~~~~~~~~~~~~~~~~~
 
-Both channel entries and files can be assigned to categories, the categories available limited to the member group(s) assigned.
+Both channel entries and files can be assigned to categories, the categories available are limited to the member group(s) assigned.
 
 Some category groups may only make sense for files and some may only make sense for entries.  With this setting, you can set the category group not to show as an option available when assigning channel
 or upload preferences.
