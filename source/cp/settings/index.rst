@@ -29,6 +29,7 @@ Contents
   - :doc:`hit-tracking`
   - :doc:`/add-ons/pages/control_panel/index`
   - :doc:`word-censor`
+  - :doc:`menu/index`
 
 - :doc:`members`
 
@@ -47,3 +48,4 @@ Contents
 
   *
   buttons/index
+

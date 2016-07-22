@@ -56,8 +56,10 @@ Developer Tools
   - :doc:`settings/comments`
   - :doc:`settings/buttons/index`
   - :doc:`settings/template`
+  - :doc:`settings/hit-tracking`
   - :doc:`/add-ons/pages/control_panel/index`
   - :doc:`settings/word-censor`
+  - :doc:`settings/menu/index`
 
 - :doc:`settings/members`
 
@@ -81,3 +83,4 @@ Developer Tools
   settings/index
   footer
   overview
+
