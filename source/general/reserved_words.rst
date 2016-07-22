@@ -24,7 +24,7 @@ Reserved for Global Variables
 -----------------------------
 
 There are some words reserved for ExpressionEngine's use that may not be
-used in naming :doc:`/templates/globals/user_defined`. Below is a list of
+used in naming :doc:`/templates/globals/template_variable`. Below is a list of
 reserved words.
 
 -  lang

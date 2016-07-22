@@ -146,8 +146,7 @@ done.
    will not overwrite existing content or delete the file; it will only
    add new content.
 #. Once you have a .htaccess file at the site root on your server, you
-   will need to **change its permissions to 666** so that it is
-   "writable" and ExpressionEngine can add content to it.
+   will need to make it writable. See :doc:`/troubleshooting/general/file_permissions` for details.
 #. In your ExpressionEngine Control Panel, go to :menuselection:`Developer Menu --> Add-On Manager --> Black/White List`.
    At the top of the page you'll see a "Add to .htaccess file?" setting. In this setting, you will need
    to place the *full server path* to the .htaccess file. The full server

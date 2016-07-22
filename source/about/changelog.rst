@@ -5,6 +5,33 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.3.4
+-------------
+
+Release Date: July 7, 2016
+
+- Security:
+
+  - Fixed potential SQL and XSS injection vulnerabilities in the control panel.
+
+- Added an .htaccess file to the themes folder to allow the control panel font assets to be used across domains and subdomains.
+- Publish file modal search now matches the file manager search behavior, searching in file names, file titles and by mime type (addresses bug #21912).
+
+- Fixed a PHP error when sending emails from extension hooks in the Session class.
+- Fixed a SQL error introduced in 3.3.3 when using the ``orderby="random"`` parameter with the ``{exp:file:entries}`` tag.
+- Fixed a PHP error introduced in 3.3.3 with the ``{exp:file:entries}`` tag in certain circumstances.
+- Fixed a bug in the Discussion Forum that prevented errors from being thrown on some invalid post submissions.
+- Fixed a PHP error when deleting a channel that contains entries that have comments.
+- Fixed a bug (#21630) where multiple channel forms on the same page could result in unparsed variables.
+- Fixed a bug (#21934) on non-default MSM sites, category custom field variables are unparsed on frontend.
+
+
+- Developers:
+
+  - Added a public `build_message()` method as an entrance point if needed within the `email_send` extension hook.
+
+
+
 Version 3.3.3
 -------------
 
@@ -370,7 +397,7 @@ Version 3.1.0
 Release Date: January 18, 2016
 
 - Compatible with PHP 7 and MySQL 5.7
-- Snippets and Global Variables can now be saved as files.
+- Template partials and Template variables can now be saved as files.
 - Added the ability to manage categories from the Channel entry publish form.
 - CodeMirror textareas (think Templates) are now resizable.
 - Channel entries now default sort by entry date with the newest at the top.
@@ -487,7 +514,7 @@ Release Date: December 2, 2015
 - Fixed a bug (#21395) where a PHP error may appear on some actions dealing with file thumbnails.
 - Fixed a bug (#21389) where some OGV files would not be accepted for upload.
 - Fixed a bug (#21388) where validation for URL titles in Channel entries would incorrectly flag periods as not allowed.
-- Fixed a bug where global snippets could not be edited.
+- Fixed a bug where global template partials could not be edited.
 - Fixed a bug where saving entries did not clear caches if that setting was enabled.
 - Fixed a bug where the default homepage could be set to the publish page of no channel.
 - Fixed a bug where only super admins could edit status groups.

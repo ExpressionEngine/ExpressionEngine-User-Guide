@@ -4,7 +4,7 @@ The Template Engine
 At a basic level, :ref:`Templates <getting_started_templates>` contain
 almost everything you want displayed on the front-end of the site. When
 ExpressionEngine serves up each Template, the system must go through a
-rendering process to parse out the Tags, Variables, Snippets, and Embeds
+rendering process to parse out the Tags, Variables, Template Partials, and Embeds
 being used in the Template.
 
 .. note:: The information in this article applies only to rendering
@@ -37,7 +37,7 @@ bottom through each rendering stage.
 #. Parse (as a group, so order is irrelevant):
 
    * {freelancer_version}
-   * :doc:`Snippets </templates/globals/snippets>`
+   * :doc:`Template partials </templates/globals/template_partials>`
    * :ref:`MSM variables <msm_variables>`: {site_id}, {site_label}, {site_shortname}
    * :ref:`{last_segment} <global_last_segment>`
    * :ref:`Member variables <member_variables>`
@@ -80,8 +80,8 @@ bottom through each rendering stage.
 
 #. Process :ref:`redirect variable <global_redirect>`
 
-#. Parse :doc:`user-defined global variables
-   </templates/globals/user_defined>`
+#. Parse :doc:`template-variables
+   </templates/globals/template_variable>`
 
 #. Parse some :doc:`standard global variables </templates/globals/single_variables>` (separately, in order given):
 

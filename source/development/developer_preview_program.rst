@@ -71,7 +71,7 @@ program? If you do not see them in the list below, please email them
 and encourage them to join!
 
 .. Any edits made to this list should also be made to the developer
-.. preview member snippet.
+.. preview member template partial.
 
 - Aaron Walden
 - Aidann Bowley (BridgingUnit)
@@ -178,7 +178,6 @@ and encourage them to join!
 - Michael Leigeber
 - Michael Rog
 - Michael Witwicki (Booyant)
-- Mike Hughes
 - Mike Wenger (Q Digital Studio)
 - Nathan Pitman
 - Nicco De Gols
@@ -194,6 +193,7 @@ and encourage them to join!
 - Pierre-Vincent Ledoux
 - Ragnar Frostason (Republic Factory)
 - Rein de Vries
+- Richard Whitmer
 - Rob Sanchez
 - Robin Hodges
 - Robin Willmot (Coffee Bean Design)
@@ -213,6 +213,7 @@ and encourage them to join!
 - Stephen Callender
 - Steve Fickus
 - Steven Peercy
+- Strukt
 - Susan Snipes (Q Digital Studio)
 - Taylor Daughtry (Caddis)
 - TJ Draper

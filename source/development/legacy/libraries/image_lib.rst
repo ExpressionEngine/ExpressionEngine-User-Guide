@@ -167,7 +167,7 @@ Just as with the other methods (resizing, cropping, and rotating) the general pr
 
 The above example will use a 16 pixel True Type font to create the text "Copyright 2006 - John Doe". The watermark will be positioned at the bottom/center of the image, 20 pixels from the bottom of the image.
 
-.. note:: In order for the image class to be allowed to do any processing, the image file must have "write" file permissions For example, 777.
+.. note:: In order for the image class to be allowed to do any processing, the image file must have "write" file permissions. See :doc:`/troubleshooting/general/file_permissions` for details.
 
 Watermarking Preferences
 ========================

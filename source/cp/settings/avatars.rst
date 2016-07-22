@@ -74,8 +74,7 @@ The server path might look something like::
   /home/example.com/public\_html/images/avatars/
 
 If you do not know what to use for your full server path, contact your Host or
-server admin. Remember that this upload folder must be set to 777 permissions
-(or otherwise be "writable").
+server admin. Remember that this upload folder must be writable. See :doc:`/troubleshooting/general/file_permissions` for details.
 
 .. _avatar-max-width-label:
 
