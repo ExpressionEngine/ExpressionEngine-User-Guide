@@ -4740,6 +4740,20 @@ Example Usage::
 **Also found in CP:** :menuselection:`Settings --> URL and Path Settings`: :ref:`Word Separator for
 URL Titles <global-channel-word-seperator-label>`
 
+x_frame_options
+---------------
+
+Set the ``X-Frame-Options`` header to control where your site can be
+included in frames or iframes. This setting only affects the frontend
+of the site. The control panel will always use the default "SAMEORIGIN".
+
+================= ===========
+Value             Description
+================= ===========
+``NONE``          Disable the header, allow framing from anywhere (not recommended)
+``SAMEORIGIN``    Only allow framing from the site itself **(default)**
+``DENY``          Do not allow framing of any sort
+================= ===========
 
 xml_lang
 --------
