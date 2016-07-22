@@ -7,8 +7,8 @@ Template Routes
 
 .. Overview
 
-The Template Route Manager provides an overview of all your templates and
-allows you to edit and manage your Template Routes.
+The Template Route Manager shows all templates that are assigned a template route and
+allows you to add, edit and manage your Template Routes.
 
 Routes are listed in the order that the Template Router will match your
 templates.
@@ -55,3 +55,9 @@ Require all Segments?
 
 If set to "yes" all segments defined in your Template Route must
 be contained in a URL in order for it to match.
+
+Create New
+~~~~~~~~~~
+
+Creates a new row where you may add a new route, specifying the template, the route and whether segments are required.
+
