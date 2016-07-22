@@ -5,6 +5,91 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.4.0
+-------------
+
+Release Date: July 26, 2016
+
+- Security:
+
+  - Improved security in the Forums with additional CSRF checks.
+  - Improved security by decoding IDN encoded domain names in links.
+  - Improved XSS security when using polls in the Forums.
+  - Improved XSS security when searching for members.
+  - Improved clickjacking defense by defaulting all requests to SAMEORIGIN framing rules.
+
+- Added a menu manager to create custom control panel menus.
+- Added a "Maximum number of entries" setting to Channels.
+- Added base URL and base path settings to the URL and Path Settings to make building URLs and paths easier when environments change.
+- Added ``{reverse_count}`` and ``{absolute_reverse_count}`` variables to the Channel Entries tag, for displaying entry count "countdowns".
+- Added a new config override `x_frame_options` to control the framing rules.
+- Added an EllisLab news feed to the homepage.
+- Added a permission to enable/disable the news on the CP homepage.
+- Added a colorpicker to status highlight colors.
+- Added live preview for status color picker.
+- Added :ref:`system overrides <code_block_wrappers>` ``code_block_pre`` and ``code_block_post`` to give additional control over the output of ``[code]`` blocks.
+- Added the ability to override the forum theme with a parameter: ``{exp:forum theme='my_theme'}``.
+- When creating and editing Channel entries you now "Save" or "Save & Close" the form.
+- Files have regained their ability to be categorized.
+- Improved the UI for Template Routes
+- The publish form will no longer have an empty category tab, unless you have a Layout that says it should.
+- Switching sites in the CP will take you that site's homepage.
+- The File Chooser for Textareas and the RTE injested some ginko biloba and will remember your filters while editing or creating an entry.
+- Deprecation notices are back; Super Admins will see an alert in the "admin" sections of the CP.
+- Improved search on the edit page. It now includes entry data along with titles.
+- Improved template partial parsing time by a factor of ten.
+- Simplified Profiler Performance tab, and broke out time spent accessing the database.
+- Language packs saved using the translation utility are now saved in their respective `system/user/language` folder.
+- Channel Sets now export and import category fields.
+- Removed some items from the config for new installs. Existing installs can safely remove the following preferences if you're using their default values
+  - ``debug``: ``1``
+  - ``is_system_on``: ``y``
+  - ``allow_extensions``: ``y``
+  - ``cache_driver``: ``file``
+  - ``uri_protocol``: ``AUTO``
+  - ``charset``: ``UTF-8``
+  - ``subclass_prefix``: ``EE_``
+  - ``log_threshold``: ``0``
+  - ``log_date_format``: ``Y-m-d H:i:s``
+  - ``rewrite_short_tags``: ``TRUE``
+- **File Improvements**:
+
+  - Gave parity between File field type and ``{exp:file:entries}`` variables.
+
+    + :doc:`/fieldtypes/file` fields now have ``{directory_id}``, ``{directory_title}``, and ``{id_path=}``.
+    + The :doc:`/add-ons/file/file_tag` now has ``{extension}``, ``{file_id}``, ``{file_name}``, ``{file_size}``, ``{mime_type}``, ``{modified_date}``, ``{path}``, ``{upload_date}``, and ``{url}``.
+
+  - File size variables now have human readable modifiers.
+
+    + ``{file_size}`` display bytes as always: ``295903``.
+    + ``{file_size:human}`` displays an intelligently abbreviated size: ``289KB``. (Full HTML: ``289<abbr title="kilobytes">KB</abbr>``)
+    + ``{file_size:human_long}`` displays with the long form of the byte unit: ``289 kilobytes``.
+
+- Fixed a bug where a File field tag may be unable to parse information about image manipulations for an upload directory belonging to another site.
+- Fixed a bug (#21578) where a File field inside a Grid inside Channel Form would not have its data saved.
+- Fixed a bug when saving a new Grid row that contained a Relationship field may show an error in rare cases.
+- Fixed a bug (#21952) in the relationship field display where entries from other sites would not show up in the selectable options.
+- Fixed a bug where radio buttons in sortable tables may lose their state after sorting.
+- Fixed a bug (#21918) where parsing Grid fields from multiple content types could show errors in rare cases.
+- Fixed a bug where `{cp_edit_entry_url}` did not specify the site ID.
+- Fixed a bug where Channel Form would populate a DateTime object into the POST data for the `recent_comment_date` field.
+- Fixed a bug where fields in a new layout tab could not be reordered until the layout was saved.
+- Fixed a bug where Channel Sets only exported and imported the first Category Group of a Channel.
+- Fixes a bug where MSM sites didn't always have the Default Status Group.
+- Fixed a pagination bug on the Member Groups page.
+- Fixed a bug where MSM site prefs might not be updated for all sites during updates.
+
+- Developers:
+
+  - Added a `parse_config_variables()` global function for parsing `{base_url}` and `{base_path}` variables in strings.
+  - Added a validation rule, `limitHtml`, for limiting the kinds of HTML tags allowed in a string.
+  - Added a `placeholder` key to the field definition for text fields in the shared form view.
+  - Added the ability to extend native config files.
+  - Added a `cp_custom_menu` hook that allows you to create custom menu items. This replaces `cp_menu_array` from version 2.
+  - Added a `search()` method to the model query builder for easy search implementations.
+  - CP/Alerts without a title, body, and a sub-alert will no longer render.
+  - Sweet new formatters, via the :docs:`/development/services/format` Service. Currently includes attribute prepping and formatting byte sizes. More to come, huzzah!
+
 Version 3.3.4
 -------------
 

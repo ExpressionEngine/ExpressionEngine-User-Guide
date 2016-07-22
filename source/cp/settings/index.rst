@@ -48,4 +48,5 @@ Contents
 
   *
   buttons/index
+  menu/index
 
