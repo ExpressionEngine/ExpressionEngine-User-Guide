@@ -80,6 +80,7 @@ Release Date: July 26, 2016
 - Fixes a bug where MSM sites didn't always have the Default Status Group.
 - Fixed a pagination bug on the Member Groups page.
 - Fixed a bug where MSM site prefs might not be updated for all sites during updates.
+- Fixed a bug (#21832) where apostrophes in checkbox, radio and select field values could cause validation errors when selecting those values in the publish form.
 
 - Developers:
 
