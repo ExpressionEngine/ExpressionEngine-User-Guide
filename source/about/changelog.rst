@@ -41,7 +41,8 @@ Release Date: July 26, 2016
 - Simplified Profiler Performance tab, and broke out time spent accessing the database.
 - Language packs saved using the translation utility are now saved in their respective `system/user/language` folder.
 - Channel Sets now export and import category fields.
-- Removed some items from the config for new installs. Existing installs can safely remove the following preferences if you're using their default values
+- Removed some items from the config for new installs. Existing installs can safely remove the following preferences if you're using their default values:
+
   - ``debug``: ``1``
   - ``is_system_on``: ``y``
   - ``allow_extensions``: ``y``
@@ -52,6 +53,7 @@ Release Date: July 26, 2016
   - ``log_threshold``: ``0``
   - ``log_date_format``: ``Y-m-d H:i:s``
   - ``rewrite_short_tags``: ``TRUE``
+
 - **File Improvements**:
 
   - Gave parity between File field type and ``{exp:file:entries}`` variables.
