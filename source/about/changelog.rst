@@ -62,7 +62,7 @@ Release Date: July 26, 2016
   - File size variables now have human readable modifiers.
 
     + ``{file_size}`` display bytes as always: ``295903``.
-    + ``{file_size:human}`` displays an intelligently abbreviated size: ``289KB``. (Full HTML: ``289<abbr title="kilobytes">KB</abbr>``)
+    + ``{file_size:human}`` displays an intelligently abbreviated size: ``289KB``.
     + ``{file_size:human_long}`` displays with the long form of the byte unit: ``289 kilobytes``.
 
 - Fixed a bug where a File field tag may be unable to parse information about image manipulations for an upload directory belonging to another site.
@@ -88,7 +88,7 @@ Release Date: July 26, 2016
   - Added a `cp_custom_menu` hook that allows you to create custom menu items. This replaces `cp_menu_array` from version 2.
   - Added a `search()` method to the model query builder for easy search implementations.
   - CP/Alerts without a title, body, and a sub-alert will no longer render.
-  - Sweet new formatters, via the :docs:`/development/services/format` Service. Currently includes attribute prepping and formatting byte sizes. More to come, huzzah!
+  - Sweet new formatters, via the :doc:`Format Service </development/services/format>`. Currently includes attribute prepping and formatting byte sizes. More to come, huzzah!
 
 Version 3.3.4
 -------------

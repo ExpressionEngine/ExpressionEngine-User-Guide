@@ -46,7 +46,7 @@ View, edit, set the sort order and delete all existing menu items in this set.
 
 
 Add Menu Items
-~~~~~~~~~
+~~~~~~~~~~~~~~
 
 Clicking the **Add Menu Item** button or the edit link next to an existing menu item will bring up the menu item's :doc:`modal`. 
 
