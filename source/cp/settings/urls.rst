@@ -29,6 +29,30 @@ Settings
 
 .. Each Action/Section
 
+.. _general-config-base-url-label:
+
+Default base URL
+~~~~~~~~~~~~~~~~
+
+The value given to the ``{base_url}`` control panel variable.  This is one of few tags than can be used in control panel settings, and it is highly recommended as it makes your site more portable.
+
+Typically the value of the default path will be the URL to the folder containing your site's index page.  For example, if your index file is located at::
+
+	http://example.com/index.php
+
+Then the correct setting would be::
+
+	http://example.com
+
+.. _general-config-base-path-label:
+
+Default base path
+~~~~~~~~~~~~~~~~~
+
+The value given to the ``{base_path}`` control panel variable.  This is one of few tags than can be used in control panel settings, and it is highly recommended as it makes your site more portable.
+
+Typically the value of the default base path will be the full path to the folder containing your site's index page, though you don't want to go so deep in the directory structure that you can't use the tag when defining any of your control panel paths.
+
 .. _general-config-index-name-label:
 
 Website index page
@@ -36,7 +60,7 @@ Website index page
 
 This is the filename of your site's "index" page. By default, this will
 be index.php, which is located in the base folder. You will only need to
-alter this setting if you have changed the filename.
+alter this setting if you have changed the filename.  If you remove index.php from your urls, then you'll want this field to be empty.
 
 .. _general-config-url-root-label:
 
@@ -44,15 +68,13 @@ Website root directory
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The URL to the folder containing your site's index page. For
-example, if your index file is located at:
+example, if you have defined your ``{base_url}`` as recommended and your index file is located at::
 
-http://example.com/index.php
+	http://example.com/index.php
 
-Then the correct setting would be any of the following:
+Then the correct setting would be::
 
- - http://example.com/
- - ///example.com/
- - /
+	{base_path}/index.php
 
 .. _general-config-url-cp-label:
 
@@ -60,11 +82,9 @@ Control panel directory
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The URL to your ExpressionEngine Control Panel. In most cases, this
-will be similar to:
+will be similar to::
 
- - http://example.com/admin.php
- - ///example.com/admin.php
- - /admin.php
+	{base_url}/admin.php
 
 .. _general-config-theme-url-label:
 
@@ -72,11 +92,10 @@ Themes directory
 ~~~~~~~~~~~~~~~~
 
 The URL to your "themes" folder. In most cases, this will be
-similar to:
+similar to::
 
- - http://example.com/themes/
- - ///example.com/themes/
- - /themes/
+	{base_url}/themes/
+
 
 .. _general-config-theme-path-label:
 
@@ -86,7 +105,7 @@ Themes path
 The *server path* to the "themes" folder. A server path often looks
 similar to::
 
-	/home/usr/domain.com/public_html/themes/
+	{base_path}themes/
 
 Server paths will vary from server to server, so you should contact your
 Host or server admin if you are unsure of what your setting should be.
@@ -108,9 +127,9 @@ When this word is encountered in your URL it will display your member
 profile area. The word you choose cannot be the name of an existing
 template group. The default value of this is "member". That means that a
 URL like the following would trigger ExpressionEngine to display the
-member profile area:
+member profile area::
 
-http://example.com/index.php/member/profile/
+     http://example.com/index.php/member/profile/
 
 .. _global-channel-category-url-indicator-label:
 

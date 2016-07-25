@@ -39,16 +39,21 @@ uploading files via the PUBLISH page.
 Upload directory
 ~~~~~~~~~~~~~~~~
 
-The **full URL** to the new destination. For example:
-http://example.com/images/uploads/
+.. note:: We recommend using the default base URL variable ``{base_url}`` defined in :doc:`URL and Path Settings </cp/settings/urls>` in your directory URLS.
+
+The **full URL** to the new destination. For example::
+
+     {base_url}/images/uploads/
 
 Upload path
 ~~~~~~~~~~~
 
+.. note:: We recommend using the default base path variable ``{base_path}`` defined in :doc:`URL and Path Settings </cp/settings/urls>` in your directory paths.
+
 The **full server path** (not a URL) to the upload folder for
 this destination.  For example::
 
-	/home/user/example.com/public_html/images/uploads/
+	{base_path}/images/uploads/
 
 If you are not sure how to determine your server path please contact
 your hosting company.

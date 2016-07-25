@@ -32,6 +32,8 @@ Fields
 .. Each Field
 
 
+.. note:: We recommend using the default base URL variable ``{base_url}`` defined in :doc:`URL and Path Settings </cp/settings/urls>` in your URL settings.
+
 Description
 ~~~~~~~~~~~
 
@@ -60,11 +62,12 @@ http://example.com/index.php/channel/comments/
 Search results
 ~~~~~~~~~~~~~~
 
+
 The full URL where you would like search results from this channel to be
 pointed. The URL should include the Template Group and Template. For
 example, if you wish that links off the search results page point to
 your "comments" Template you might use:
-http://example.com/index.php/channel/comments/.
+{base_url}/index.php/channel/comments/.
 
 RSS feed
 ~~~~~~~~~
@@ -194,8 +197,6 @@ author member in the system.
 
 Enable channel entry notification?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 If the previous setting is set to "Yes", then these are the recipients
 of the email alert. You may define a single email address or list
