@@ -4740,6 +4740,8 @@ Example Usage::
 **Also found in CP:** :menuselection:`Settings --> URL and Path Settings`: :ref:`Word Separator for
 URL Titles <global-channel-word-seperator-label>`
 
+.. _x_frame_options:
+
 x_frame_options
 ---------------
 

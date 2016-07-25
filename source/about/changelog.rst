@@ -10,19 +10,17 @@ Version 3.4.0
 
 Release Date: July 26, 2016
 
-- Security:
+- Security (big thanks to security researchers at HackerOne for helping us continue to keep ExpressionEngine secure!):
 
-  - Improved security in the Forums with additional CSRF checks.
-  - Improved security by decoding IDN encoded domain names in links.
-  - Improved XSS security when using polls in the Forums.
-  - Improved XSS security when searching for members.
-  - Improved clickjacking defense by defaulting all requests to SAMEORIGIN framing rules.
+  - Improved XSS and CSRF security in the Forum module.
+  - Improved XSS security in the Member module.
+  - Improved security by decoding IDN encoded domain names in user-submitted links.
+  - Improved clickjacking defense by defaulting all requests to SAMEORIGIN framing rules. See the new :ref:`x_frame_options` config override for details and header options.
 
 - Added a menu manager to create custom control panel menus.
 - Added a "Maximum number of entries" setting to Channels.
 - Added base URL and base path settings to the URL and Path Settings to make building URLs and paths easier when environments change.
 - Added ``{reverse_count}`` and ``{absolute_reverse_count}`` variables to the Channel Entries tag, for displaying entry count "countdowns".
-- Added a new config override `x_frame_options` to control the framing rules.
 - Added an EllisLab news feed to the homepage.
 - Added a permission to enable/disable the news on the CP homepage.
 - Added a colorpicker to status highlight colors.
