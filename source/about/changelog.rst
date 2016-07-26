@@ -8,7 +8,7 @@ ExpressionEngine 3.x Change Log
 Version 3.4.0
 -------------
 
-Release Date: July 26, 2016
+Release Date: July 27, 2016
 
 - Security (big thanks to security researchers at HackerOne for helping us continue to keep ExpressionEngine secure!):
 
