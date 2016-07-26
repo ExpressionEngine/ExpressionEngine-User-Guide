@@ -1,6 +1,6 @@
-###############################
-ExpressionEngine 3.0 User Guide
-###############################
+#############################
+ExpressionEngine 3 User Guide
+#############################
 
 - Introduction
 
