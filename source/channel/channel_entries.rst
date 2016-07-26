@@ -447,6 +447,8 @@ character::
 	entry_id="13|42|147" Or use "not" to exclude entries::
 
 	entry_id="not 45|534|807"
+	
+If you set the entry_id parameter to no value, the parameter will be ignored.
 
 entry\_id\_from=
 ----------------
