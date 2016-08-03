@@ -447,7 +447,7 @@ character::
 	entry_id="13|42|147" Or use "not" to exclude entries::
 
 	entry_id="not 45|534|807"
-	
+
 If you set the entry_id parameter to no value, the parameter will be ignored.
 
 entry\_id\_from=
@@ -2186,6 +2186,23 @@ like so::
 	{/if}
 
 .. _channel_entries_if_no_results:
+
+if has_categories
+-----------------
+
+Handy conditional for displaying markup or content based on whether or not the entry has been assigned any categories.
+
+::
+
+	{if has_categories}
+		<h3>Categories</h3>
+
+		<div id="categories">
+			{categories}
+				...
+			{/categories}
+		</div>
+	{/if}
 
 if no\_results
 --------------
