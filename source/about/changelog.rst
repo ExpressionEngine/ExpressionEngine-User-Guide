@@ -10,7 +10,7 @@ Version 3.4.1
 
 Release Date: August 05, 2016
 
-- Security 
+- Security
 
   - Improved XSS protection in the CP when searching.
   - Improved XSS protection in the CP's table filters.
@@ -29,7 +29,7 @@ Release Date: August 05, 2016
 - Fixed a bug where when editing a status the example forgot to reflect reality.
 - Fixed a bug where non-Super Admins were not presented with a Site switcher in the control panel if there are exactly two Sites.
 - Fixed a PHP warning that could occur when publishing an entry with admin email notifications enabled.
-- Fixed a bug where add-ons ``require``ing native config files might throw a PHP error.
+- Fixed a bug where add-ons ``require()``-ing native config files might throw a PHP error.
 - Fixed a bug (#21944) where category fields were not available when editing categories on the publish page.
 - Fixed a bug (#21864) on the member profile member list page where a MySQL error could occur when using some default sort orders.
 - Fixed a bug (#21984) where a PHP error could occur when uploading avatars in the control panel.
