@@ -8,7 +8,7 @@ ExpressionEngine 3.x Change Log
 Version 3.4.1
 -------------
 
-Release Date: August 05, 2016
+Release Date: August 08, 2016
 
 - Security
 
@@ -37,6 +37,7 @@ Release Date: August 05, 2016
 - Fixed a bug (#21993) on the default HTML buttons settings page where the buttons were not limited to the current site.
 - Fixed a bug (#21922) where there was no way to remove a selected file from a file field in the channel entry form.
 - Fixed a bug (#21980) where a select field type would sometimes not validate when it should.
+- Fixed a bug where duplicating a channel would carry over its `total_records` count.
 
 Version 3.4.0
 -------------
