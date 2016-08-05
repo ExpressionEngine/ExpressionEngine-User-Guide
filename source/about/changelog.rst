@@ -15,6 +15,7 @@ Release Date: August 05, 2016
   - Improved XSS protection in the CP when searching.
   - Improved XSS protection in the CP's table filters.
   - Additional obscuring of file system paths when displaying exceptions.
+  - Improved XSS protection in Markdown typography.
 
 - Long filenames now wrap in their table views in the File Manager and picker.
 - Fixed a bug where file modals were blank if no upload directories existed.
@@ -35,6 +36,7 @@ Release Date: August 05, 2016
 - Fixed a bug (#21984) where a PHP error could occur when uploading avatars in the control panel.
 - Fixed a bug (#21993) on the default HTML buttons settings page where the buttons were not limited to the current site.
 - Fixed a bug (#21922) where there was no way to remove a selected file from a file field in the channel entry form.
+- Fixed a bug (#21980) where a select field type would sometimes not validate when it should.
 
 Version 3.4.0
 -------------
