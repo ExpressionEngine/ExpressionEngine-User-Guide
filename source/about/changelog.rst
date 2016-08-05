@@ -27,7 +27,7 @@ Release Date: August 08, 2016
 - Fixed a bug (#21982) where template partials were not parsed when inside other template partials.
 - Fixed a bug (#21981) where the "Show news on CP homepage" always showed "no" even when saved as "yes".
 - Fixed a bug (#21983) where sometimes upload destinations didn't have their `{base_path}` parsed.
-- - Fixed a bug where when you edited a status the preview was always grey, instead of your specified color.
+- Fixed a bug where when you edited a status the preview was always grey, instead of your specified color.
 - Fixed a bug where non-Super Admins were not presented with a Site switcher in the control panel if there are exactly two Sites.
 - Fixed a PHP warning that could occur when publishing an entry with admin email notifications enabled.
 - Fixed a bug where add-ons ``require()``-ing native config files might throw a PHP error.
