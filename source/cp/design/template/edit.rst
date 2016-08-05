@@ -121,7 +121,7 @@ When set to enable, users with permissions will have to login to view this templ
 
 .. note::
 
-  If you are running PHP-FPM / FastCGI, you may need to add this to your ``.htaccess`` so the server makes the necessary environment variables available to PHP
+  If you are running PHP-FPM / FastCGI, you will probably need to add this to your ``.htaccess`` so the server makes the necessary environment variables available to PHP & ExpressionEngine.
 
   .. code-block:: apache
 
