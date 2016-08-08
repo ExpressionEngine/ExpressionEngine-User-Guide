@@ -19,6 +19,7 @@ Release Date: August 08, 2016
 
 - Long filenames now wrap in their table views in the File Manager and picker.
 - Fixed a bug where file modals were blank if no upload directories existed.
+- Fixed an issue where the top and bottom buttons on the publish page did not match.
 - Fixed an issue where changes to authentication rules could show a confusing form when logging in.
 - Fixed a bug (#21931) where the datepicker did not work consistently with non-default date formats.
 - Fixed a bug (#21950) where the ChannelSubscription model did not have the correct relationships.
