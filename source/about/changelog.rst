@@ -38,6 +38,8 @@ Release Date: August 08, 2016
 - Fixed a bug (#21922) where there was no way to remove a selected file from a file field in the channel entry form.
 - Fixed a bug (#21980) where a select field type would sometimes not validate when it should.
 - Fixed a bug where duplicating a channel would carry over its `total_records` count.
+- Fixed a bug where filling in a required File field on the publish form would not clear any associated validation error.
+- Fixed a bug (#22010) where deleting rows with invalid cells in a Grid would not clear its validation error.
 
 Version 3.4.0
 -------------
