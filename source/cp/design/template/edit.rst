@@ -119,6 +119,14 @@ Enable HTTP Authentication?
 
 When set to enable, users with permissions will have to login to view this template.
 
+.. note::
+
+  If you are running PHP-FPM / FastCGI, you will probably need to add this to your ``.htaccess`` so the server makes the necessary environment variables available to PHP & ExpressionEngine.
+
+  .. code-block:: apache
+
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
 Template route override
 ^^^^^^^^^^^^^^^^^^^^^^^
 

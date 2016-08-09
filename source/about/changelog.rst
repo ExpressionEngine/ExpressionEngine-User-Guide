@@ -5,6 +5,43 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.4.1
+-------------
+
+Release Date: August 08, 2016
+
+- Security
+
+  - Improved XSS protection in the CP when searching.
+  - Improved XSS protection in the CP's table filters.
+  - Additional obscuring of file system paths when displaying exceptions.
+  - Improved XSS protection in Markdown typography.
+
+- Long filenames now wrap in their table views in the File Manager and picker.
+- Fixed a bug where file modals were blank if no upload directories existed.
+- Fixed an issue where the top and bottom buttons on the publish page did not match.
+- Fixed an issue where changes to authentication rules could show a confusing form when logging in.
+- Fixed a bug (#21931) where the datepicker did not work consistently with non-default date formats.
+- Fixed a bug (#21950) where the ChannelSubscription model did not have the correct relationships.
+- Fixed a bug (#21940) where some member groups could not see template groups they created.
+- Fixed a bug (#21951) where the conditional parser removed too much whitespace.
+- Fixed a bug (#21982) where template partials were not parsed when inside other template partials.
+- Fixed a bug (#21981) where the "Show news on CP homepage" always showed "no" even when saved as "yes".
+- Fixed a bug (#21983) where sometimes upload destinations didn't have their `{base_path}` parsed.
+- Fixed a bug where when you edited a status the preview was always grey, instead of your specified color.
+- Fixed a bug where non-Super Admins were not presented with a Site switcher in the control panel if there are exactly two Sites.
+- Fixed a PHP warning that could occur when publishing an entry with admin email notifications enabled.
+- Fixed a bug where add-ons ``require()``-ing native config files might throw a PHP error.
+- Fixed a bug (#21944) where category fields were not available when editing categories on the publish page.
+- Fixed a bug (#21864) on the member profile member list page where a MySQL error could occur when using some default sort orders.
+- Fixed a bug (#21984) where a PHP error could occur when uploading avatars in the control panel.
+- Fixed a bug (#21993) on the default HTML buttons settings page where the buttons were not limited to the current site.
+- Fixed a bug (#21922) where there was no way to remove a selected file from a file field in the channel entry form.
+- Fixed a bug (#21980) where a select field type would sometimes not validate when it should.
+- Fixed a bug where duplicating a channel would carry over its `total_records` count.
+- Fixed a bug where filling in a required File field on the publish form would not clear any associated validation error.
+- Fixed a bug (#22010) where deleting rows with invalid cells in a Grid would not clear its validation error.
+
 Version 3.4.0
 -------------
 
