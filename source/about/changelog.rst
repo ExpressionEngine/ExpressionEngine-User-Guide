@@ -5,6 +5,37 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.4.2
+-------------
+
+Release Date: August 18, 2016
+
+- Added new Debugging & Output preference: "Enable Developer Log Alerts?"
+- Added ``<mark>`` to Safe HTML Typography and are now allowing its use in Channel Entries ``{title}``.
+- Enhanced XSS protection in the Simple Commerce control panel.
+- Eliminated some PHP warnings in the Forum template editor if a custom theme had nested folders that were not explicitly supported.
+- Fixed a bug where Channel Form fields would not prefill their values on submission error.
+- Fixed a bug where caching a tag with a conditional in it would always generate a cache and never read from it.
+- Fixed a bug where partials created externally with disallowed characters might throw a PHP error.
+- Fixed a bug where the Email class would not load values from site config unless the developer had manually initialized it.
+- Fixed a bug where the file picker did not have an initial sorting applied.
+- Fixed a bug where updating a site's Template Settings would save all partials and variables to disk, not just the current site's.
+- Fixed a bug (#21417) where some HTML Buttons could not be created due to overzealous validation.
+- Fixed a bug (#21863) wherre the ``{avatar_url}`` tag was inaccurate when using a default avatar.
+- Fixed a bug (#21989) where image manipulations would always save with a default site ID of 1.
+- Fixed a bug (#21998) where date fields on the publish form would repopulate with a Unix timestamp after form validation failure.
+- Fixed a bug (#22001) where viewing pending members sorted by join date would show an error.
+- Fixed a bug (#22005) where the new category form may show encoded HTML entities in the parent category dropdown.
+- Fixed a bug (#22014) where control panels under MSM might not follow a member group's CP Homepage redirect.
+- Fixed a bug (#22017, #21945) where toolbar buttons within Grid cells may be removed when manipulating rows.
+- Fixed a bug (#22018) where choosing a file in the filepicker could generate multiple click events.
+- Fixed a bug (#22019) where the ``TemplateGroup`` model may generate duplicate queries in the control panel.
+
+- Developers:
+
+  - Added a parameter to ``form_dropdown()`` and ``form_multiselect()`` turn off automatic encoding of display values.
+  - Added file and line number information to config file deprecation notices.
+
 Version 3.4.1
 -------------
 
