@@ -14,9 +14,13 @@ Release Date: August 18, 2016
 - Added ``<mark>`` to Safe HTML Typography and are now allowing its use in Channel Entries ``{title}``.
 - Enhanced XSS protection in the Simple Commerce control panel.
 - Eliminated some PHP warnings in the Forum template editor if a custom theme had nested folders that were not explicitly supported.
+- Fixed a PHP warning on the Forum Template editor if the admin had removed the default theme.
 - Fixed a bug where Channel Form fields would not prefill their values on submission error.
+- Fixed a bug where Default Category Channel pref was not being respected and added some tests so that it doth not regresseth again.
+- Fixed a bug where bulk actions in the forum were playing an endless game of hide-and-seek.
 - Fixed a bug where caching a tag with a conditional in it would always generate a cache and never read from it.
-- Fixed a bug where partials created externally with disallowed characters might throw a PHP error.
+- Fixed a bug where changing the commented status via the bulk action dropdown in the control panel affected unselected comments.
+- Fixed a bug where partials created from add-ons with disallowed characters might throw a PHP error.
 - Fixed a bug where the Email class would not load values from site config unless the developer had manually initialized it.
 - Fixed a bug where the file picker did not have an initial sorting applied.
 - Fixed a bug where updating a site's Template Settings would save all partials and variables to disk, not just the current site's.
@@ -30,6 +34,7 @@ Release Date: August 18, 2016
 - Fixed a bug (#22017, #21945) where toolbar buttons within Grid cells may be removed when manipulating rows.
 - Fixed a bug (#22018) where choosing a file in the filepicker could generate multiple click events.
 - Fixed a bug (#22019) where the ``TemplateGroup`` model may generate duplicate queries in the control panel.
+- Fixed a potential HTML injection (non-XSS) issue.
 
 - Developers:
 
