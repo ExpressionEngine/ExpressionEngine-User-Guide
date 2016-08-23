@@ -7,6 +7,13 @@ File Field Class
 
 .. highlight:: php
 
+***********************
+Recommended Alternative
+***********************
+
+     The file field class is not recommended for use in ExpressionEngine version 3.  
+     When creating a file upload in the control panel, use the :doc:`CP/FilePicker Service </development/services/filepicker>`.
+
 ****************************
 Calling the File Field Class
 ****************************
@@ -46,8 +53,7 @@ Initializing a File Browser
 
 .. method:: browser($config = array()[, $endpoint_url = 'C=content_publish&M=filemanager_actions'])
 
-  The File Field class loads most of what you need for your file
-  browser: javascript and css especially. What you need to do is
+  What you need to do is
   initialize the file browser by optionally passing it two parameters::
 
     ee()->file_field->browser($config, $endpoint_url);
@@ -85,6 +91,8 @@ Initializing a File Browser
         function (file, field) {
             console.log(file, field);
         }
+
+     You will need to add CSS and JavaScript to achieve a fully functioning file browser.
 
 ***************************************
 Validating the data from the File Field
