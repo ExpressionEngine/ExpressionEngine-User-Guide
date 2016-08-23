@@ -8,7 +8,7 @@ ExpressionEngine 3.x Change Log
 Version 3.4.2
 -------------
 
-Release Date: August 18, 2016
+Release Date: August 23, 2016
 
 - Added new Debugging & Output preference: "Enable Developer Log Alerts?"
 - Added ``<mark>`` to Safe HTML Typography and are now allowing its use in Channel Entries ``{title}``.
