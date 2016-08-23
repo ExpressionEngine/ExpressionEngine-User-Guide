@@ -10,9 +10,13 @@ Version 3.4.2
 
 Release Date: August 23, 2016
 
+- Security
+
+  - Enhanced XSS protection in the Simple Commerce control panel.
+  - Fixed a potential HTML injection (non-XSS) issue.
+
 - Added new Debugging & Output preference: "Enable Developer Log Alerts?"
 - Added ``<mark>`` to Safe HTML Typography and are now allowing its use in Channel Entries ``{title}``.
-- Enhanced XSS protection in the Simple Commerce control panel.
 - Eliminated some PHP warnings in the Forum template editor if a custom theme had nested folders that were not explicitly supported.
 - Fixed a PHP warning on the Forum Template editor if the admin had removed the default theme.
 - Fixed a bug where Channel Form fields would not prefill their values on submission error.
@@ -34,7 +38,6 @@ Release Date: August 23, 2016
 - Fixed a bug (#22017, #21945) where toolbar buttons within Grid cells may be removed when manipulating rows.
 - Fixed a bug (#22018) where choosing a file in the filepicker could generate multiple click events.
 - Fixed a bug (#22019) where the ``TemplateGroup`` model may generate duplicate queries in the control panel.
-- Fixed a potential HTML injection (non-XSS) issue.
 
 - Developers:
 
