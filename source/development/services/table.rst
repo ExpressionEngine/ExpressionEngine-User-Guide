@@ -445,7 +445,7 @@ definition should look something like this::
     'fields' => array(
       'image_manipulations' => array(
         'type' => 'html',
-        'content' => ee()->cp->render('_shared/table', $grid->viewData(), TRUE)
+        'content' => ee()->cp->render('ee:_shared/table', $grid->viewData(), TRUE)
       )
     )
   )
