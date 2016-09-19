@@ -5,6 +5,33 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.4.3
+-------------
+
+Release Date: September 20, 2016
+
+- Security
+
+  - Fixed a potential PHP injection issue when redirecing within the CP. (Thanks to the folks at https://www.ripstech.com with their static code analyzer RIPS)
+
+- Improved metadata protection in Channel Form submissions.
+- Optimized queries on pending/banned member tables.
+- Namespaced add-ons now respond to the director's call. ACTION! (Fixed a bug where ACTION requests to namespaced add-ons failed).
+- Fixed a bug (#21855) where layouts could not expand a field that was configured to be hidden.
+- Fixed a bug (#22028) where opening a file picker modal in thumbnail view with an empty directory selected would show a PHP error.
+- Fixed a bug (#22029) where where the cURL library had an incorrect query string separator.
+- Fixed a bug (#22035) where ``{base_url}`` was not parsed in Pages Module URLs.
+- Fixed a bug (#22081) where several site variables were not available in conditionals.
+- Fixed a bug (#22114) where there was an undefined variable on the Reset Password screen.
+- Fixed a bug (#22115) where front-end member registration may not have password validation.
+- Fixed a bug in layouts where you could not collapse/uncollapse a field after you moved it without first saving the layout.
+- Fixed a bug in the Discussion Forum where the forum order in the front end and back end did not match.
+- Fixed a bug where cache files may be unable to be read by EE in certain hosting environments.
+- Fixed a bug where some layout fields were being added old skool which caused PHP errors.
+- Fixed a bug where the IP to Nation module could not update its IP database on PHP 7.
+- Fixed a bug where the ``View All`` link on the control panel edit submenu didn't show when it should have.
+- Fixed a Channel Form bug where model hooks would see the wrong author if a default Channel Form author for guest posts was set.
+
 Version 3.4.2
 -------------
 
