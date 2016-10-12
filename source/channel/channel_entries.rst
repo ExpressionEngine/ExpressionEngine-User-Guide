@@ -710,6 +710,8 @@ related\_categories\_mode=
    pages are ones that show only a single entry, specified by the ID number
    or URL Title in the URL.
 
+.. note:: If you are using Template Routes, you may need to use the ``url_title=`` or ``entry_id=`` parameters in this tag to instruct it as to which segment the entry identifier is in the URL.
+
 When enabled, this parameter alters the behavior of the
 {exp:channel:entries} tag, causing it to ignore the entry ID or URL
 title found in the URL, and *instead* show a list of entries that are in
