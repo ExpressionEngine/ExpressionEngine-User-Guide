@@ -3,6 +3,7 @@ Validation Service
 
 .. contents::
   :local:
+  :depth: 1
 
 .. highlight:: php
 
@@ -235,3 +236,51 @@ Built-in Rules
 | **xss**             | Must not contain content that looks like   | ``xss``                   |
 |                     | XSS (Cross Site Scripting)                 |                           |
 +---------------------+--------------------------------------------+---------------------------+
+
+Handling Results
+----------------
+
+Handling validation results can be as fine grained as you need it to be. A call
+to ``validate()`` will return a result object::
+
+  $result = $validator->validate($data);
+
+Passed? Failed.
+~~~~~~~~~~~~~~~
+
+The most basic result check is to see if validation passed or failed. This is
+done with ``isValid()`` and ``isNotValid()``::
+
+  $result->isValid(); // true | false
+  $result->isNotValid(); // false | true
+
+Checking Individual Fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To check if an individual field failed validation, use ``hasErrors()`` with the
+name of the field::
+
+  $result->hasErrors('username'); // true | false
+
+Getting Error Messages
+~~~~~~~~~~~~~~~~~~~~~~
+
+Error messages can be read directly from the result object using ``getAllErrors()``.
+This will return an array that is keyed first by the field name, then by the rule name,
+and lastly contains the localized failure message::
+
+  $errors = $result->getAllErrors(); // $errors['fieldname']['rulename'] = 'Message';
+
+This will return an empty array if nothing has failed.
+
+Individual field errors can either be read by accessing the ``getAllErrors()``
+result array or by using ``getErrors`` with the field name as the first parameter::
+
+  // either:
+  $errors = $result->getAllErrors();
+  $username_errors = $errors['username'];
+
+  // or better:
+  $username_errors = $result->getErrors('username');
+
+The latter will return an empty array if there were no errors.
