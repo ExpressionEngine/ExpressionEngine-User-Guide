@@ -8,8 +8,11 @@ Sync Directory
 .. Overview
 
 The Synchronize Files page allows you to synchronize the file records in
-the database with the files stored in a given upload directory. When
-submitted, all allowed file types in the directory will be checked
+the database with the files stored in a given upload directory. To load this
+page, click on the directory you wish to sync in the sidebar, then click on the
+sync icon next to the title in the main content area.
+
+When submitted, all allowed file types in the directory will be checked
 against the file records in the database. If there is no record in the
 database, one will be added. For images, any additional sizes will be
 generated and watermarked according to the file upload preferences for

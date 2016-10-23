@@ -78,19 +78,17 @@ and encourage them to join!
 - Andrew Fairlie (Red Carrot)
 - Andrew Gunstone (Thirst Studios)
 - Andrew Weaver
-- Andris Sevcenko (Pixel and Tonic)
 - Anthony Mellor (Climbing Turn)
 - Ben Croker
 - Benjamin Kohl (Masuga Design)
 - Benoit Marchal
 - Berry Timmermans
 - Bjørn Børresen
-- Brad Bell
 - Brad Boegler (Nexcess)
 - Brad Morse
 - Brad Parscale (DevDemon)
-- Brandon Kelly
 - Brian Litzinger
+- Brian Mallett (BlackBeltDesigns)
 - Bryan Burgers
 - Carl Crawley
 - Casey Reid (Clearfire)
@@ -142,7 +140,6 @@ and encourage them to join!
 - Jesse Schutt
 - Jimmy Fursman (Mercutio Consulting)
 - Joe Paravisini
-- Joel Bradbury
 - John Baxter
 - John de Beer
 - John Henry Donovan
@@ -218,7 +215,6 @@ and encourage them to join!
 - Taylor Daughtry (Caddis)
 - TJ Draper
 - Tom Jaeger (EE Harbor)
-- Travis Schmeisser
 - Travis Smith (Hop Studios)
 - Trevor Davis (Viget Labs)
 - Ty Wangsness

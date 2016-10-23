@@ -5,6 +5,109 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.4.3
+-------------
+
+Release Date: September 20, 2016
+
+- Security
+
+  - Fixed a potential PHP injection issue when redirecing within the CP. (Thanks to the folks at https://www.ripstech.com with their static code analyzer RIPS)
+
+- Improved metadata protection in Channel Form submissions.
+- Optimized queries on pending/banned member tables.
+- Namespaced add-ons now respond to the director's call. ACTION! (Fixed a bug where ACTION requests to namespaced add-ons failed).
+- Fixed a bug (#21855) where layouts could not expand a field that was configured to be hidden.
+- Fixed a bug (#22028) where opening a file picker modal in thumbnail view with an empty directory selected would show a PHP error.
+- Fixed a bug (#22029) where where the cURL library had an incorrect query string separator.
+- Fixed a bug (#22035) where ``{base_url}`` was not parsed in Pages Module URLs.
+- Fixed a bug (#22081) where several site variables were not available in conditionals.
+- Fixed a bug (#22114) where there was an undefined variable on the Reset Password screen.
+- Fixed a bug (#22115) where front-end member registration may not have password validation.
+- Fixed a bug in layouts where you could not collapse/uncollapse a field after you moved it without first saving the layout.
+- Fixed a bug in the Discussion Forum where the forum order in the front end and back end did not match.
+- Fixed a bug where cache files may be unable to be read by EE in certain hosting environments.
+- Fixed a bug where some layout fields were being added old skool which caused PHP errors.
+- Fixed a bug where the IP to Nation module could not update its IP database on PHP 7.
+- Fixed a bug where the ``View All`` link on the control panel edit submenu didn't show when it should have.
+- Fixed a Channel Form bug where model hooks would see the wrong author if a default Channel Form author for guest posts was set.
+
+Version 3.4.2
+-------------
+
+Release Date: August 23, 2016
+
+- Security
+
+  - Enhanced XSS protection in the Simple Commerce control panel.
+  - Fixed a potential HTML injection (non-XSS) issue.
+
+- Added new Debugging & Output preference: "Enable Developer Log Alerts?"
+- Added ``<mark>`` to Safe HTML Typography and are now allowing its use in Channel Entries ``{title}``.
+- Eliminated some PHP warnings in the Forum template editor if a custom theme had nested folders that were not explicitly supported.
+- Fixed a PHP warning on the Forum Template editor if the admin had removed the default theme.
+- Fixed a bug where Channel Form fields would not prefill their values on submission error.
+- Fixed a bug where Default Category Channel pref was not being respected and added some tests so that it doth not regresseth again.
+- Fixed a bug where bulk actions in the forum were playing an endless game of hide-and-seek.
+- Fixed a bug where caching a tag with a conditional in it would always generate a cache and never read from it.
+- Fixed a bug where changing the commented status via the bulk action dropdown in the control panel affected unselected comments.
+- Fixed a bug where partials created from add-ons with disallowed characters might throw a PHP error.
+- Fixed a bug where the Email class would not load values from site config unless the developer had manually initialized it.
+- Fixed a bug where the file picker did not have an initial sorting applied.
+- Fixed a bug where updating a site's Template Settings would save all partials and variables to disk, not just the current site's.
+- Fixed a bug (#21417) where some HTML Buttons could not be created due to overzealous validation.
+- Fixed a bug (#21863) wherre the ``{avatar_url}`` tag was inaccurate when using a default avatar.
+- Fixed a bug (#21989) where image manipulations would always save with a default site ID of 1.
+- Fixed a bug (#21998) where date fields on the publish form would repopulate with a Unix timestamp after form validation failure.
+- Fixed a bug (#22001) where viewing pending members sorted by join date would show an error.
+- Fixed a bug (#22005) where the new category form may show encoded HTML entities in the parent category dropdown.
+- Fixed a bug (#22014) where control panels under MSM might not follow a member group's CP Homepage redirect.
+- Fixed a bug (#22017, #21945) where toolbar buttons within Grid cells may be removed when manipulating rows.
+- Fixed a bug (#22018) where choosing a file in the filepicker could generate multiple click events.
+- Fixed a bug (#22019) where the ``TemplateGroup`` model may generate duplicate queries in the control panel.
+
+- Developers:
+
+  - Added a parameter to ``form_dropdown()`` and ``form_multiselect()`` turn off automatic encoding of display values.
+  - Added file and line number information to config file deprecation notices.
+
+Version 3.4.1
+-------------
+
+Release Date: August 08, 2016
+
+- Security
+
+  - Improved XSS protection in the CP when searching.
+  - Improved XSS protection in the CP's table filters.
+  - Additional obscuring of file system paths when displaying exceptions.
+  - Improved XSS protection in Markdown typography.
+
+- Long filenames now wrap in their table views in the File Manager and picker.
+- Fixed a bug where file modals were blank if no upload directories existed.
+- Fixed an issue where the top and bottom buttons on the publish page did not match.
+- Fixed an issue where changes to authentication rules could show a confusing form when logging in.
+- Fixed a bug (#21931) where the datepicker did not work consistently with non-default date formats.
+- Fixed a bug (#21950) where the ChannelSubscription model did not have the correct relationships.
+- Fixed a bug (#21940) where some member groups could not see template groups they created.
+- Fixed a bug (#21951) where the conditional parser removed too much whitespace.
+- Fixed a bug (#21982) where template partials were not parsed when inside other template partials.
+- Fixed a bug (#21981) where the "Show news on CP homepage" always showed "no" even when saved as "yes".
+- Fixed a bug (#21983) where sometimes upload destinations didn't have their `{base_path}` parsed.
+- Fixed a bug where when you edited a status the preview was always grey, instead of your specified color.
+- Fixed a bug where non-Super Admins were not presented with a Site switcher in the control panel if there are exactly two Sites.
+- Fixed a PHP warning that could occur when publishing an entry with admin email notifications enabled.
+- Fixed a bug where add-ons ``require()``-ing native config files might throw a PHP error.
+- Fixed a bug (#21944) where category fields were not available when editing categories on the publish page.
+- Fixed a bug (#21864) on the member profile member list page where a MySQL error could occur when using some default sort orders.
+- Fixed a bug (#21984) where a PHP error could occur when uploading avatars in the control panel.
+- Fixed a bug (#21993) on the default HTML buttons settings page where the buttons were not limited to the current site.
+- Fixed a bug (#21922) where there was no way to remove a selected file from a file field in the channel entry form.
+- Fixed a bug (#21980) where a select field type would sometimes not validate when it should.
+- Fixed a bug where duplicating a channel would carry over its `total_records` count.
+- Fixed a bug where filling in a required File field on the publish form would not clear any associated validation error.
+- Fixed a bug (#22010) where deleting rows with invalid cells in a Grid would not clear its validation error.
+
 Version 3.4.0
 -------------
 

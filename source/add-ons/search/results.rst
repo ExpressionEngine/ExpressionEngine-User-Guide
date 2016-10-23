@@ -86,6 +86,17 @@ That will produce code like this::
 	   Entry 2<br />
 	   Entry 3
 
+.. _search-id-parameter:
+
+search_id=
+----------
+
+::
+
+	search_id="{segment_4}"
+	
+The search_id is a 32 character ID number automatically included in search URLs and used to retrieved cached search results.  The search_id can be 
+manually specified via parameter in cases where the URL does not follow the standard template_group/template pattern.
 
 Variables
 ==========
@@ -177,7 +188,9 @@ This may also be used on the template specified by the
 :doc:`simple search form <simple>` and :doc:`advanced search form
 <advanced>`.
 
-There are no parameters or variables associated with this
+The only parameter for this tag is the :ref:`search-id-parameter` parameter.
+
+There are no variables associated with this
 ExpressionEngine tag.
 
 ************************
@@ -195,8 +208,7 @@ This may also be used on the template specified by the
 :doc:`simple search form <simple>` and :doc:`advanced search form
 <advanced>`.
 
-There are no parameters or variables associated with this
-ExpressionEngine tag.
+The only parameter for this tag is the :ref:`search-id-parameter` parameter.
 
 You may alternatively use the tag pair::
 
@@ -204,4 +216,5 @@ You may alternatively use the tag pair::
 		{total_results}
 	{/exp:search:total_results}
 
-The only variable associated with this tag is {total\_results}.
+The only variable associated with this tag is {total_results}.
+

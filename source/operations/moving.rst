@@ -126,7 +126,7 @@ configuration variables::
   $config['sig_img_path'] = "/home/user/example.com/images/signature_attachments/";
 
   $config['upload_preferences'] = array(
-      1 => array(                                                            // ID of upload destination
+      6 => array(                                                    // ID of upload destination
           'name'        => 'Image Uploads',                          // Display name in control panel
           'server_path' => '/home/user/example.com/images/uploads/', // Server path to upload directory
           'url'         => 'http://example.com/images/uploads/'      // URL of upload directory

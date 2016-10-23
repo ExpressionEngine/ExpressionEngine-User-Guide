@@ -171,12 +171,20 @@ services
   'services' => array(
     'MyService' => function($addon)
     {
-      return new ServiceClass();
+      $dependency = new SupportingClass();
+      return new ServiceClass(dependency);
     }
   )
 
 This is an associative array of services to register on the
-:doc:`Dependency Container<./core/dependencies>`.
+:doc:`Dependency Injection Container<./core/dependencies>`. This is typically used to help you place class construction code in a single place that can be easily called throughout your app. If your service code is written to be unit-testable, you may have several classes you need to insert through dependency injection. Instead of having to copy and paste boiler plate code to set up your service throughout your add-on, you can just register it in the Dependency Injection Container and call it from your add-on like this::
+
+  ee('example:MyService');
+
+Where ``example`` is the short package name of your add-on.
+
+.. note:: You may need to include your service code's namespace in the addon.setup.php file. Assuming it's stored in a Service directory in your addon, it may look like:
+  ``use Example\HelloWorld\Service\ServiceClass;``
 
 models
 ~~~~~~

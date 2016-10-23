@@ -8,7 +8,7 @@ Member Import
 .. Overview
 
 The Member Import Utility enables you to import members from other systems
-utilizing ExpressionEngine's special XML format.
+utilizing ExpressionEngine's :doc:`special Member Import XML format <member-import-xml-format>`.
 
 .. Screenshot (optional)
 

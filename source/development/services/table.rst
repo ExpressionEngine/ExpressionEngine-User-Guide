@@ -424,13 +424,35 @@ JavaScript assets and initialization::
 
 Finally, just as we do with regular tables, we call ``viewData()`` and
 pass the data to our view where we render it with the
-``_shared/table`` view::
+``ee:_shared/table`` view in our add-on view::
 
   $vars['grid'] = $grid->viewData();
 
-  ee()->cp->render('myaddon/myview', $vars);
+  return ee()->cp->render('myaddon/myview', $vars);
 
 Here is the final, fully functional output of our code:
 
 .. figure:: ../../images/table_service_4.png
 
+If you're using the :doc:`/development/shared_form_view`, your fieldset
+definition should look something like this::
+
+  array(
+    'title' => 'constrain_or_crop',
+    'desc' => 'constrain_or_crop_desc',
+    'wide' => TRUE,
+    'grid' => TRUE,
+    'fields' => array(
+      'image_manipulations' => array(
+        'type' => 'html',
+        'content' => ee()->cp->render('ee:_shared/table', $grid->viewData(), TRUE)
+      )
+    )
+  )
+
+Note we're setting ``wide`` to denote the field should take up the entire width
+of the form, and ``grid`` so the form display logic can do the necessary markup
+tweaks for proper styling and behavior of the Grid.
+
+For those not using the Shared Form View, make sure your Grid is in a div tag
+instead of a fieldset tag and make sure it has a class of ``grid-publish``.
