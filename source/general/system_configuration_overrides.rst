@@ -730,6 +730,52 @@ $config['banned_usernames'] = 'garfield|snoopy|hobbes';
 **Also found in CP:** :menuselection:`Members --> Manage Bans`:
 :ref:`Restricted Usernames <member-banned-username-label>`
 
+
+base_path
+---------
+
+Set your site's base server path for use in other path configurations. Once set,
+this value is made available via a ``{base_path}`` variable that can be placed
+in server path fields in the control panel for easy environment management.
+
+================ ===========
+Value            Description
+================ ===========
+``path``         Server path, typically to your site's root
+================ ===========
+
+Example Usage::
+
+$config['base_path'] = '/var/www/html/';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`:
+:ref:`Default base path <general-config-base-path-label>`
+
+base_url
+--------
+
+Set your site's base URL for use in other URL configurations. Once set, this
+value is made available via a ``{base_url}`` variable that can be placed in
+other URL configuration fields in the control panel for easy environment
+management.
+
+================ ===========
+Value            Description
+================ ===========
+``URL``          URL to your site
+================ ===========
+
+Example Usage::
+
+$config['base_url'] = 'http://example.com';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`:
+:ref:`Default base URL <general-config-base-url-label>`
+
 .. _cache_driver_config:
 
 cache_driver
