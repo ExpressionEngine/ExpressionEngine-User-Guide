@@ -5,6 +5,49 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.4.4
+-------------
+
+Release Date: October 27, 2016
+
+- Added a search_id parameter to the search module tags to allow non-standard URLs to function properly (see bug #22411).
+- Clarified language of the "Allow multiple logins?" Security setting (including changing to "Allow multiple sessions?").
+- Fixed a bug (#21610) where deleting a Forum would show PHP errors.
+- Fixed a bug (#21747) where deleting a custom field would show a PHP error in some environments.
+- Fixed a bug (#22021) where actions could not be taken on items in the Spam module.
+- Fixed a bug (#22026) where the legacy channel entries API was saving the ``edit_date`` in the wrong format.
+- Fixed a bug (#22037) where some modules weren't updating their version numbers upon update.
+- Fixed a bug (#22039) where editing a menu set link would change the link's order in the set.
+- Fixed a bug (#22049) where changing the field group of a channel with a saved layout would append new fields to the Categories tab.
+- Fixed a bug (#22112) where the translation utility showed the wrong value on the left.
+- Fixed a bug (#22383) where deleting and then adding the same template route before saving could not be done.
+- Fixed a bug (#22412) where assigned channels on member groups may be bypassed.
+- Fixed a bug (#22421) where deleting a channel entry would call ``save()`` on module publish tabs.
+- Fixed a bug (#22422) where the `{base_path}` variable was not being parsed in the Black/White List module.
+- Fixed a bug (#22425) where automatic URL title generation for categories did not include the foreign characters array.
+- Fixed a bug (#22707) where clicking the Save button after editing a form with a success alert may cause the form to shift and the button not to be clicked.
+- Fixed a bug (#22711) where a non-existant language key was used on a control panel member profile form.
+- Fixed a bug (#22717) where comment-editing JavaScript would not allow other events to be bound to its links.
+- Fixed a bug (#22722) where an admin logging in as another member when "Allow multiple sessions?" is disabled would result in a PHP error.
+- Fixed a bug (#22724) where file upload options were not always correct for non-superadmins in the file manager.
+- Fixed a bug (#22725) where cloning a Grid column would not carry over checkbox values in some browsers.
+- Fixed a bug (#22726) where some fieldtypes may show PHP errors when used in non-channel content types.
+- Fixed a bug where Default Category Channel pref was not being respected in the channel entry form.
+- Fixed a bug where Member custom fields were not available on the Memberlist member theme template.
+- Fixed a bug where PDO was returning the wrong data types for some columns.
+- Fixed a bug where channel forms using the site parameter did not display properly in layouts if there were no results.
+- Fixed a bug where deleting a category group assigned to a channel that has multiple category groups would cause errors when publishing.
+- Fixed a bug where field creation via the Member Importer would not create all necessary columns in the ``member_data`` table.
+- Fixed a bug where invalid ``category/category-names`` in the URL did not throw ``{if no_results}``. These requests will now 404 ftw.
+- Fixed a bug where simple commerce could display a PHP warning.
+- Fixed a bug where the Edit Upload Directory form would not properly reflect overridden path and URL values from the config file.
+- Fixed a bug where the ``{member_group}`` global variable was playing hide-and-seek. Found it!
+- Fixed a bug where the category filter on the Entry Manager did not respect your category orders. Line up, soldier!
+- Fixed a bug with server response times in New Relic transaction reporting for front-end requests.
+- Fixed a bug with the Member Importer where member field creation validaton would not work.
+- Fixed an obscure bug (#22718) where a MySQL error could occur during installation on some environments.
+- Fixed security bug where XSS may be injected by query string on certain control panel pages.
+
 Version 3.4.3
 -------------
 
