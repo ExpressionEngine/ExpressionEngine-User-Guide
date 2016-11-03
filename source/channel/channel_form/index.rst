@@ -571,6 +571,16 @@ sticky\_entry=
 Force the entry to be "sticky" or not.  This parameter only applies to new
 entries and will be ignored for edits.
 
+unique\_url\_title=
+~~~~~~~~~~~~~~~~~~~
+
+::
+
+  unique_url_title="yes"
+
+When set to "yes", will ensure the URL title of the entry will be unique so
+there is no risk of creating an entry with a duplicate URL title.
+
 url\_title=
 ~~~~~~~~~~~
 
