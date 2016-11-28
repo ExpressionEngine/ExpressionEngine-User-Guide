@@ -954,7 +954,7 @@ Date field
 File field
 ~~~~~~~~~~
 
-There are several additional variables that may be specified when manually constructing a file field:
+There are several additional inputs that may be specified when manually constructing a file field:
 
 - ``my_field_name_directory`` - the file directory the image is assigned to.
     This field is required if submitting a file.
