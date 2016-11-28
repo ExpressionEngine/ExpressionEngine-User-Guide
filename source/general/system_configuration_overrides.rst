@@ -4119,7 +4119,7 @@ $assign_to_config['site_404'] = 'site/notfound';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`: :ref:`404 Page
+**Also found in CP:** :menuselection:`Settings --> Template Settings`: :ref:`404 Page
 <global-template-404-label>`
 
 
