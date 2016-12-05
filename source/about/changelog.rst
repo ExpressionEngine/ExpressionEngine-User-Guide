@@ -5,6 +5,55 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.4.5
+-------------
+
+Release Date: December 6, 2016
+
+- Added a link to the Multiple Site Manager in the site switcher menu.
+- Added ``autocomplete="off"`` to all password fields in the control panel.
+- Added clickjacking prevention to the URL redirect warning page.
+- Improved performance of and fixed various issues filtering Relationship fields on the publish form.
+- Improved accuracy of error message with File fields in Channel Form.
+- Fixed a bug (#22754) where the SQL manager could not sort by table disk size.
+- Fixed a bug (#22721) where the Redirect library may mistakenly think a protocol-relative URL was malicious.
+- Fixed a bug (#22720) where the add-ons list in the control panel was not filtered by member access for non-Super Admins.
+- Fixed a bug (#22736) where running the updater with templates saved as files may show an error.
+- Fixed bugs (#22427 & #22080) where Channel Form would not allow setting of certain fields, and would eat global variables.
+- Fixed a bug (#22766) where Channels that have reached their maximum entry limit may not be able to edit existing entries.
+- Fixed a bug (#22761) where certain settings in the member profile would appear unsaved.
+- Fixed a bug (#22030) where entry revisions were created regardless of Channel preference.
+- Fixed a bug (#22089) where editing checkbox fields in Channel Form that were populated by another channel field would not show their checked status.
+- Fixed a bug (#22007) where setting the ID parameter on a Channel Form would cause the date picker not to initialize.
+- Fixed a bug where member notification emails were always sent in plain text regardless of the mail format setting.
+- Fixed a bug where links bound with the FilePicker may have their callback overwritten with a default callback.
+- Fixed a bug (#22755) where editing an entry with a Relationship field may show its entry choices in the wrong order.
+- Fixed a bug (#22756) where deselecting an entry in a single Relationship field may re-select the entry upon filtering.
+- Fixed a bug (#22053) where saving a ``ChannelEntry`` model with properties initialized in the ``make()`` method would show an error.
+- Fixed a bug (#22008) where the ``category=`` parameter did not work in Channel Form.
+- Fixed a bug (#21999) where setting the field group or status group to None when editing a Channel would not stick.
+- Fixed a bug (#22777) where the settings forms with date localization settings may show an error under PHP 7.1.
+- Fixed a bug (#22768) where rendering an empty file field with a variable pair would replace its ``{url}`` variable with the author's URL.
+- Fixed a bug (#22795) where the saving template partials may show an invalid language key on the button while saving.
+- Fixed a bug where selecting a channel when creating a new bookmarklet would not update the channel field dropdown.
+- Fixed a bug (#22796) bookmarklets could not set content for more than one custom field via query string manipulation.
+- Fixed a bug (#21721) where editing a URL title in an entry to change its case would show a validation error.
+- Fixed a bug (#22797) where deleting a quicklink sometimes would not work.
+- Fixed a bug (#21590) where custom field variable pairs could not be parsed in Channel Form.
+- Fixed a bug (#21492) where the ``show=`` parameter was not working for the ``{categories}`` tag pair in Channel Form.
+- Fixed a bug (#22024) where switching to an MSM site in the control panel would not respect the member's CP homepage setting.
+- Fixed a bug on the control panel profile section's ban members page where a MySQL error occurred when searching banned members.
+- Fixed a security issue in the Email module.
+- Fixed a bug where Super Admins could not edit Channel Form entries authored by others when ``author_only=`` was used.
+- Fixed a potential bug with Channel Form with Site Manager when sites have identically named Channels.
+- Fixed a bug where editing the system offline and user message page templates might truncate the closing body and html tags.
+- Fixed the template order in the Channel settings Live Look drop-down. Straighten up!
+- Fixed a bug where editing the system offline and user message page templates might truncate the closing body and html tags.
+- Fixed a bug where bulk email sending from the Communicate page would overzealously try to send to more recipients than existed.
+- Fixed the sum of the Batch emails from the Communicate page. (We love you forever, Roman Moroni.)
+- Fixed a bug where you could not change an existing Channel Field from File to third-party field types with ``file`` compatibility.
+
+
 Version 3.4.4
 -------------
 
