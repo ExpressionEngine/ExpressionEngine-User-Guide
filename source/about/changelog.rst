@@ -42,6 +42,8 @@ Release Date: December 6, 2016
 - Fixed a bug (#21590) where custom field variable pairs could not be parsed in Channel Form.
 - Fixed a bug (#21492) where the ``show=`` parameter was not working for the ``{categories}`` tag pair in Channel Form.
 - Fixed a bug (#22024) where switching to an MSM site in the control panel would not respect the member's CP homepage setting.
+- Fixed a bug (#22798) where the ``{entry_date}`` variable may always show the current date in Channel Form.
+- Fixed a bug (#22798) where the the ``use_live_url=`` parameter would not work in Channel Form.
 - Fixed a bug on the control panel profile section's ban members page where a MySQL error occurred when searching banned members.
 - Fixed a security issue in the Email module.
 - Fixed a bug where Super Admins could not edit Channel Form entries authored by others when ``author_only=`` was used.
