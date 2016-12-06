@@ -1670,30 +1670,6 @@ $config['email_crlf'] = "\r\n";
 
 .. note:: Double quotes must be used around this value, as per example.
 
-email_debug
------------
-
-When enabled, detailed debugging information will be displayed whenever
-you send an email using the Communicate page. This information can be
-useful in helping to track down any problems you may be experiencing.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Enable email debugging
-``n``      Disable email debugging **(default)**
-========== ========
-
-Example Usage::
-
-$config['email_debug'] = 'y';
-
-.. .. rst-class:: cp-path
-..
-.. **Also found in CP:** :menuselection:`Admin --> Email
-.. Configuration`: :ref:`Enable Email Debugging
-.. <email-enable-debugging-label>`
-
 
 email_newline
 -------------
@@ -4143,7 +4119,7 @@ $assign_to_config['site_404'] = 'site/notfound';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`: :ref:`404 Page
+**Also found in CP:** :menuselection:`Settings --> Template Settings`: :ref:`404 Page
 <global-template-404-label>`
 
 
