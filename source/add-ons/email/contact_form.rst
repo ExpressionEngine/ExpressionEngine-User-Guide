@@ -53,16 +53,25 @@ Parameters
 .. contents::
    :local:
 
+allow_attachments=
+------------------
+
+::
+
+	allow_attachments="yes"
+
+If set to "yes", will allow a file `attachment`_ to be sent with the email. Default is "no".
+
 charset=
 --------
 
 ::
 
-	charset="utf-8"
+	charset="iso-8859-1"
 
 This allows you to set the character set of the email being sent. Use
-this if your form's template is using a character set other than
-iso-8859-1.
+this only if your form's template is using a character set **other** than
+the default utf-8.
 
 name=
 -----
@@ -273,6 +282,17 @@ Form Fields
 
 .. contents::
    :local:
+
+attachment
+----------
+
+::
+
+	<input type="file" name="attachment">
+
+Works in conjunction with the `allow_attachments=`_ parameter, to let users add a file attachment to the email.
+
+.. warning:: Email attachments should only be opened from trusted senders. ExpressionEngine cannot protect your personal computer from malicious software.
 
 captcha
 -------
