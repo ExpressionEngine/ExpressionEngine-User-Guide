@@ -5,6 +5,25 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.4.6
+-------------
+
+Release Date: December 13, 2016
+
+- Fixed a bug (#22785) where the parsing a template may show an undefined index error in rare cases.
+- Fixed a bug (#22798) where RTE tool buttons may appear multiple times when rendered via Channel Form.
+- Fixed a bug (#22799) where all "unauthorized" error messages came with a 500 status code instead of a 403.
+- Fixed a bug (#22803) where an alternate MySQL port number entered in the installer would not get written to the config.php file.
+- Fixed a bug (#22811) where there was a typo in a language key.
+- Fixed a bug (#22813) where the ``relationships_display_field_options`` hook was passed invalid arguments.
+- Fixed a bug (#22814) where deleting a member from their profile page may show a PHP error.
+- Fixed a bug (#22816) where the Relationship fields could not be filtered when filtering from more than nine channels.
+- Fixed a bug (#22817) where Grid and Relationship field data was not revisioned.
+- Fixed a bug (#22818) where channel form inline errors for custom fields didn't display.
+- Fixed an issue where the Add-on Manager would be empty on some servers by accommodating an issue (#22819) with incorrectly typed variables from the database on environments with improper/non-standard PDO configuration.
+- Fixed a bug where the updater may attempt to add the same database column more than once.
+
+
 Version 3.4.5
 -------------
 
