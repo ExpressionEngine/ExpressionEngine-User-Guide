@@ -60,7 +60,7 @@ can edit at :menuselection:`Developer Tools --> Template Manager --> Messages
 New version auto check
 ~~~~~~~~~~~~~~~~~~~~~~
 
-When set to "auto" ExpressionEnigne will cause a message to be displayed in the
+When set to "auto" ExpressionEngine will cause a message to be displayed in the
 Control Panel when a new version of ExpressionEngine is available. It
 will **not** automatically download and install a new version.
 
