@@ -5,6 +5,47 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.0
+-------------
+
+Release Date: ?
+
+- Added PHP 7.1 compatibility.
+- Added value/label option capability to :doc:`fieldtypes/select`
+- Added ``{if has_categories}`` conditional to the Channel Entries tag.
+- Added ``{category_count}``, ``{category_reverse_count}``, and ``{category_total_results}`` variables to the Channel Entries ``{categories}{/categories}`` variable pair.
+- Added ``entry_id=`` and ``url_title=`` parameters to the :ref:`Related Categories Mode <create_ref_in_user_guide>` of the Channel Entries Tag, to enable this tag to function with custom template routing.
+- The ``{redirect=}`` variable can now take full URLs, including external URLs instead of just path segments.
+- Usernames and screen names now have a maximum length of 75 characters.
+- Improved clarity and usability of File field interface.
+- Greatly improved model query performance.
+- The ``{category_name}`` variable is now run through typography parsing for pretty quotes and dashes.
+- Updated the SimplePie parser version used by the :doc:`RSS parser </development/legacy/libraries/rss_parser>` to 1.4.3.
+- Discussion Forums:
+
+  - Updated code sample formatting to use the new styleable blocks. Highlight/Prism/Rainbow/etc. your code samples in forum posts.
+  - Made special forum conditionals nestable.
+  - Added ``{forum_id}`` variable to the Thread Rows partial.
+  - Added ``{if is_moderator}`` conditionals to Threads and Thread Rows partials.
+  - Added ``{topic_date}`` variable to Threads partial.
+  - Added ``{topic_class}`` variable to Topic Rows partial.
+  - Made Poll data available to Thread Rows, so polls can be shown inline with the author's post.
+
+- Fixed a bug where models could not set NULL values.
+- Fixed a bug where model foreign key changes did not trigger reloads.
+- Fixed a bug where the ``unique_url_title=`` title parameter was not working in Channel Form.
+- Fixed a bug (#22838) where the HTML Button creation form would show a PHP error if no other HTML buttons existed.
+- Fixed a bug where switching MSM sites may show a PHP error if the member is set to redirect to the publish form but no Channel is set.
+- Fixed a bug (#22841) where deleting a member from their profile page would not give an option to reassign their entries.
+- Fixed a bug (#20308) where you could only upload the same file name 99 times. Upload as many as you want!
+- Fixed a bug on the control panel profile section's ban members page where a MySQL error occurred when searching banned members.
+- Developers:
+
+  - Added an Encrypt service: ``ee('Encrypt')`` that uses OpenSSL for encryption, as Mcrypt has ben deprecated as of PHP 7.1.
+  - Added ``core_boot`` hook to run tasks on every ExpressionEngine request.
+  - Added request caching to member field model structure to eliminate duplicate queries for some operations.
+
+
 Version 3.4.6
 -------------
 
