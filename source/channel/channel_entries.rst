@@ -788,8 +788,10 @@ by using the field's short name immediately after "search:". You can
 search based on whether a field is an exact match to your provided term
 or whether or not a field simply contains your term.
 
-.. note:: Only fields of the type "Text Input", "Textarea", and
-	"Drop-down Lists" are searched with this parameter.
+.. note:: Only fields of the type "Text Input", "Textarea", "Rich Text Editor",
+	"File", "Email Address", "Date", "URL", "Toggle", "Select Dropdown",
+	"Multi Select", "Checkboxes", "Radio Buttons" are searched with this
+	parameter.
 
 "Exact" Matching
 ~~~~~~~~~~~~~~~~

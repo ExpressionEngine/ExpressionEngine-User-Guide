@@ -132,7 +132,7 @@
 
 					{%- block footer %}
 						<div class="docs-footer">
-							<p><a href="https://support.ellislab.com/bugs/submit">Report a problem with this page</a><br>
+							<p><a href="https://expressionengine.com/support/bugs/new">Report a problem with this page</a><br>
 								{{ project }}<b class="reg-mark">&reg;</b> {{ release }} User Guide<br><span>{{ copyright }}</span></p>
 							<p><a class="scroll" href="#top"></a></p>
 						</div>
@@ -156,5 +156,17 @@
 		{%- for scriptfile in script_files %}
 		<script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
 		{%- endfor %}
+		<script>
+		!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+		n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+		document,'script','https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '565259520351602'); // Insert your pixel ID here.
+		fbq('track', 'PageView');
+		</script>
+		<noscript><img height="1" width="1" style="display:none"
+		src="https://www.facebook.com/tr?id=565259520351602&ev=PageView&noscript=1"
+		/></noscript>
 	</body>
 </html>

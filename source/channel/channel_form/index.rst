@@ -571,6 +571,16 @@ sticky\_entry=
 Force the entry to be "sticky" or not.  This parameter only applies to new
 entries and will be ignored for edits.
 
+unique\_url\_title=
+~~~~~~~~~~~~~~~~~~~
+
+::
+
+  unique_url_title="yes"
+
+When set to "yes", will ensure the URL title of the entry will be unique so
+there is no risk of creating an entry with a duplicate URL title.
+
 url\_title=
 ~~~~~~~~~~~
 
@@ -944,7 +954,7 @@ Date field
 File field
 ~~~~~~~~~~
 
-There are several additional variables that may be specified when manually constructing a file field:
+There are several additional inputs that may be specified when manually constructing a file field:
 
 - ``my_field_name_directory`` - the file directory the image is assigned to.
     This field is required if submitting a file.

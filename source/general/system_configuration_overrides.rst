@@ -730,6 +730,52 @@ $config['banned_usernames'] = 'garfield|snoopy|hobbes';
 **Also found in CP:** :menuselection:`Members --> Manage Bans`:
 :ref:`Restricted Usernames <member-banned-username-label>`
 
+
+base_path
+---------
+
+Set your site's base server path for use in other path configurations. Once set,
+this value is made available via a ``{base_path}`` variable that can be placed
+in server path fields in the control panel for easy environment management.
+
+================ ===========
+Value            Description
+================ ===========
+``path``         Server path, typically to your site's root
+================ ===========
+
+Example Usage::
+
+$config['base_path'] = '/var/www/html/';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`:
+:ref:`Default base path <general-config-base-path-label>`
+
+base_url
+--------
+
+Set your site's base URL for use in other URL configurations. Once set, this
+value is made available via a ``{base_url}`` variable that can be placed in
+other URL configuration fields in the control panel for easy environment
+management.
+
+================ ===========
+Value            Description
+================ ===========
+``URL``          URL to your site
+================ ===========
+
+Example Usage::
+
+$config['base_url'] = 'http://example.com';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`:
+:ref:`Default base URL <general-config-base-url-label>`
+
 .. _cache_driver_config:
 
 cache_driver
@@ -1623,30 +1669,6 @@ Example Usage::
 $config['email_crlf'] = "\r\n";
 
 .. note:: Double quotes must be used around this value, as per example.
-
-email_debug
------------
-
-When enabled, detailed debugging information will be displayed whenever
-you send an email using the Communicate page. This information can be
-useful in helping to track down any problems you may be experiencing.
-
-========== ========
-Value      Behavior
-========== ========
-``y``      Enable email debugging
-``n``      Disable email debugging **(default)**
-========== ========
-
-Example Usage::
-
-$config['email_debug'] = 'y';
-
-.. .. rst-class:: cp-path
-..
-.. **Also found in CP:** :menuselection:`Admin --> Email
-.. Configuration`: :ref:`Enable Email Debugging
-.. <email-enable-debugging-label>`
 
 
 email_newline
@@ -4097,7 +4119,7 @@ $assign_to_config['site_404'] = 'site/notfound';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Settings --> URL and Path Settings`: :ref:`404 Page
+**Also found in CP:** :menuselection:`Settings --> Template Settings`: :ref:`404 Page
 <global-template-404-label>`
 
 
