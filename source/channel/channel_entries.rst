@@ -698,6 +698,8 @@ channel entry fields so that you can automatically have an entry span
 multiple pages. See the :doc:`Spanning a Channel Entry Across Multiple
 Pages <pagination_spanning>` page.
 
+.. _related_categories_mode:
+
 related\_categories\_mode=
 --------------------------
 

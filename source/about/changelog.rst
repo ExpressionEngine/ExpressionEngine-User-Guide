@@ -11,10 +11,10 @@ Version 3.5.0
 Release Date: ?
 
 - Added PHP 7.1 compatibility.
-- Added value/label option capability to :doc:`fieldtypes/select`
+- Added value/label option capability to :doc:`/fieldtypes/select`
 - Added ``{if has_categories}`` conditional to the Channel Entries tag.
 - Added ``{category_count}``, ``{category_reverse_count}``, and ``{category_total_results}`` variables to the Channel Entries ``{categories}{/categories}`` variable pair.
-- Added ``entry_id=`` and ``url_title=`` parameters to the :ref:`Related Categories Mode <create_ref_in_user_guide>` of the Channel Entries Tag, to enable this tag to function with custom template routing.
+- Added ``entry_id=`` and ``url_title=`` parameters to the :ref:`Related Categories Mode <related_categories_mode>` of the Channel Entries Tag, to enable this tag to function with custom template routing.
 - The ``{redirect=}`` variable can now take full URLs, including external URLs instead of just path segments.
 - Usernames and screen names now have a maximum length of 75 characters.
 - Improved clarity and usability of File field interface.
@@ -41,7 +41,7 @@ Release Date: ?
 - Fixed a bug on the control panel profile section's ban members page where a MySQL error occurred when searching banned members.
 - Developers:
 
-  - Added an Encrypt service: ``ee('Encrypt')`` that uses OpenSSL for encryption, as Mcrypt has ben deprecated as of PHP 7.1.
+  - Added an :doc:`Encrypt service </development/services/encrypt>` that uses OpenSSL for encryption, as Mcrypt has ben deprecated as of PHP 7.1.
   - Added ``core_boot`` hook to run tasks on every ExpressionEngine request.
   - Added request caching to member field model structure to eliminate duplicate queries for some operations.
 
