@@ -21,6 +21,7 @@ Release Date: ?
 - Greatly improved model query performance.
 - The ``{category_name}`` variable is now run through typography parsing for pretty quotes and dashes.
 - Updated the SimplePie parser version used by the :doc:`RSS parser </development/legacy/libraries/rss_parser>` to 1.4.3.
+- Members must verify themselves when creating a member with control panel access.
 - Discussion Forums:
 
   - Updated code sample formatting to use the new styleable blocks. Highlight/Prism/Rainbow/etc. your code samples in forum posts.
