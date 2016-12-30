@@ -33,10 +33,6 @@ Release Date: ?
 
 - Fixed a bug where models could not set NULL values.
 - Fixed a bug where model foreign key changes did not trigger reloads.
-- Fixed a bug where the ``unique_url_title=`` title parameter was not working in Channel Form.
-- Fixed a bug (#22838) where the HTML Button creation form would show a PHP error if no other HTML buttons existed.
-- Fixed a bug where switching MSM sites may show a PHP error if the member is set to redirect to the publish form but no Channel is set.
-- Fixed a bug (#22841) where deleting a member from their profile page would not give an option to reassign their entries.
 - Fixed a bug (#20308) where you could only upload the same file name 99 times. Upload as many as you want!
 - Fixed a bug on the control panel profile section's ban members page where a MySQL error occurred when searching banned members.
 - Developers:
