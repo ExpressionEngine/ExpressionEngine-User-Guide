@@ -5,6 +5,26 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.4.7
+-------------
+
+Release Date: December 30, 2016
+
+- Security
+
+  - Hardened security in the Email library, prevents attacks similar to PHPMailer CVE-2016-10033, CVE-2016-10045, and Swift Mailer CVE-2016-10074.
+
+- Optimized an inefficient query in the file model.
+- Fixed a bug where the `unique_url_title=` title parameter was not working in Channel Form.
+- Fixed a bug (#22838) where the HTML Button creation form would show a PHP error if no other HTML buttons existed.
+- Fixed a bug where switching MSM sites may show a PHP error if the member is set to redirect to the publish form but no Channel is set.
+- Fixed a bug (#22841) where deleting a member from their profile page would not give an option to reassign their entries.
+- Fixed a bug (#22849) where deleting a member would also delete any files they had uploaded.
+- Fixed a bug (#22842) where the author would have to focus the URL title field to validate the field despite it being autofilled by the Title field.
+- Fixed a bug (#22013) where if saving Grid settings failed due to duplicate column labels/names, deleting the offending column would not clear the validation errors.
+- Fixed a bug (#22858) where statuses on the publish form were not displayed in their set status order.
+
+
 Version 3.4.6
 -------------
 
