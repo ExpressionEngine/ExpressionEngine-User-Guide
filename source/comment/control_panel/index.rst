@@ -71,8 +71,8 @@ enabled system-wide.
 
 .. _comment-expired-comments-label:
 
-Moderate Expired Entries?
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Moderate After Comments Expire?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By default, comments are no longer accepted for entries after their
 comment expiration date has passed. Select this preference to override
