@@ -36,6 +36,9 @@ Release Date: ?
 - Fixed a bug where model foreign key changes did not trigger reloads.
 - Fixed a bug (#20308) where you could only upload the same file name 99 times. Upload as many as you want!
 - Fixed a bug on the control panel profile section's ban members page where a MySQL error occurred when searching banned members.
+- Fixed a bug (#22864) where members registering via the Member module could not register if secure passwords were required.
+- Fixed a bug (#22865) where if a high minimum username or password length was set, the validation error message would not show the configuration value correctly.
+- Fixed a bug (#22867) where deleting a category from the publish screen would uncheck any existing category selections for that entry.
 - Developers:
 
   - Added an :doc:`Encrypt service </development/services/encrypt>` that uses OpenSSL for encryption, as Mcrypt has ben deprecated as of PHP 7.1.
