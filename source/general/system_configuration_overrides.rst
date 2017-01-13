@@ -1693,15 +1693,14 @@ $config['email_newline'] = "\r\n";
 email_smtp_crypto
 -----------------
 
-Cryptographic protocol (Secure Sockets Layer or Transport Layer Security
-allowed) for SMTP, when a secure connection is required.
+Cryptographic protocol for SMTP, when a secure connection is required.
 
 ========== ========
 Value      Behavior
 ========== ========
-``ssl``    Set the SMTP protocol to SSL
+``ssl``    Set the SMTP protocol to SSL (ssl://)
 ---------- --------
-``tls``    Set the SMTP protocol to TLS
+``tls``    Set the SMTP protocol to Opportunistic TLS (STARTTLS)
 ========== ========
 
 Example Usage::
