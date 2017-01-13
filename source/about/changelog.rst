@@ -8,7 +8,7 @@ ExpressionEngine 3.x Change Log
 Version 3.5.0
 -------------
 
-Release Date: January 12, 2017
+Release Date: January 16, 2017
 
 - Added PHP 7.1 compatibility.
 - Added value/label option capability to :doc:`/fieldtypes/select`
