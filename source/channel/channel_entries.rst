@@ -698,6 +698,8 @@ channel entry fields so that you can automatically have an entry span
 multiple pages. See the :doc:`Spanning a Channel Entry Across Multiple
 Pages <pagination_spanning>` page.
 
+.. _related_categories_mode:
+
 related\_categories\_mode=
 --------------------------
 
@@ -709,6 +711,8 @@ related\_categories\_mode=
    are using the channel tag within "single entry" pages. Single entry
    pages are ones that show only a single entry, specified by the ID number
    or URL Title in the URL.
+
+.. note:: If you are using Template Routes, you may need to use the ``url_title=`` or ``entry_id=`` parameters in this tag to instruct it as to which segment the entry identifier is in the URL.
 
 When enabled, this parameter alters the behavior of the
 {exp:channel:entries} tag, causing it to ignore the entry ID or URL
@@ -2189,6 +2193,23 @@ like so::
 
 .. _channel_entries_if_no_results:
 
+if has_categories
+-----------------
+
+Handy conditional for displaying markup or content based on whether or not the entry has been assigned any categories.
+
+::
+
+	{if has_categories}
+		<h3>Categories</h3>
+
+		<div id="categories">
+			{categories}
+				...
+			{/categories}
+		</div>
+	{/if}
+
 if no\_results
 --------------
 
@@ -2485,6 +2506,17 @@ active
 You may use this conditional to test whether the category shown is the
 active category or not, based on the dynamic URI segment.
 
+category_count
+^^^^^^^^^^^^^^
+
+::
+
+	{category_count}
+
+The "count" out of the current categories being displayed. If five categories
+are being displayed, then for the fourth category the {category_count} variable
+would have a value of "4".
+
 category\_description
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -2512,16 +2544,6 @@ category\_id
 
 The category ID associated with the category.
 
-parent\_id
-^^^^^^^^^^
-
-::
-
-	{parent_id}
-
-The category ID associated with the category's parent (or 0 in the case
-of a top level category).
-
 category\_image
 ^^^^^^^^^^^^^^^
 
@@ -2541,6 +2563,24 @@ category\_name
 
 This displays the name of the category.
 
+category_reverse_count
+^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+	{category_reverse_count}
+
+The *opposite* of ``{category_count}``, in that it displays the category count position counting backwards from the total. Countdown all the things!
+
+category_total_results
+^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+	{category_total_results}
+
+The total number of categories being displayed.
+
 category\_url\_title
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -2550,8 +2590,18 @@ category\_url\_title
 
 This variable displays the URL title of the category
 
-path=''
-^^^^^^^
+parent\_id
+^^^^^^^^^^
+
+::
+
+	{parent_id}
+
+The category ID associated with the category's parent (or 0 in the case
+of a top level category).
+
+path=
+^^^^^
 
 ::
 
