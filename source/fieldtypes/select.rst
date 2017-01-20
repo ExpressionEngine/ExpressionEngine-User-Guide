@@ -48,26 +48,58 @@ Or, the list may be populated by the contents of another channel field from your
 Template Tags
 -------------
 
-Fields where multiple items can be selected (Checkboxes and Multiselect) can be rendered using a single tag or a tag pair.
+Checkboxes and Multiselect can have multiple items selected, whereas Select and Radio Buttons only allow a single item selection.
+
+Multiple Items
+~~~~~~~~~~~~~~
+
+Fields where multiple items can be selected (Checkboxes and Multiselect) will usually be rendered using a variable pair.
 
 ::
 
-  {poll_options}
+  {field_name}
       {item}<br />
-  {/poll_options}
+  {/field_name}
 
-By default, ``{item}`` will render the item's label. To access the value and label separately, simply add a ``:value`` or ``:label`` modifier to the ``{item}`` variable::
+By default, ``{item}`` will render the item's value. To access the value and label separately, simply add a ``:value`` or ``:label`` modifier to the ``{item}`` variable::
 
-  {poll_options}
-      Label: {item}<br />
+  {field_name}
+      Value: {item}<br />
       Value: {item:value}<br />
       Label: {item:label}<br />
-  {/poll_options}
+  {/field_name}
 
-For single-choice fields, such as Select and Radio Buttons, simply add the modifier to the single variable name::
 
-  {poll_option:value}
-  {poll_option:label}
+.. note:: You can use a single variable for Checkboxes and Multiselect, e.g. `{field_name}`, and you will get a comma-separated list of the labels.
+
+Single Items
+~~~~~~~~~~~~
+
+Single-choice fields, such as Select and Radio Buttons, just use the modifier to the single variable name, and do not use a variable pair::
+
+  Value: {field_name}<br />
+  Value: {field_name:value}<br />
+  Label: {field_name:label}<br />
+
+In all cases, these variables are also available as conditionals. Let's say you had the following value/label options:
+
++-------+-------+
+| Value | Label |
++=======+=======+
+| 1     | One   |
++-------+-------+
+| 2     | Two   |
++-------+-------+
+| 3     | Three |
++-------+-------+
+
+Given that the selection option is 2/Two::
+
+  {if field_name == 2}Yep!{/if}
+  {if field_name:value == 2}Yep!{/if}
+  {if field_name:label == 'Two'}Yep!{/if}
+
+.. tip:: It is recommended that you use the value in conditionals, as it typically will not change over time. That way, if you ever need to change the wording, spelling, or even casing of labels in your publish/edit UI, you will not need to modify your templates.
 
 Limit Parameter
 ~~~~~~~~~~~~~~~
