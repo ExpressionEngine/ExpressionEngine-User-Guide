@@ -58,15 +58,15 @@ Fields where multiple items can be selected (Checkboxes and Multiselect) will us
 ::
 
   {field_name}
-      {item}<br />
+      {item}<br>
   {/field_name}
 
 By default, ``{item}`` will render the item's value. To access the value and label separately, simply add a ``:value`` or ``:label`` modifier to the ``{item}`` variable::
 
   {field_name}
-      Value: {item}<br />
-      Value: {item:value}<br />
-      Label: {item:label}<br />
+      Value: {item}<br>
+      Value: {item:value}<br>
+      Label: {item:label}<br>
   {/field_name}
 
 
@@ -77,9 +77,9 @@ Single Items
 
 Single-choice fields, such as Select and Radio Buttons, just use the modifier to the single variable name, and do not use a variable pair::
 
-  Value: {field_name}<br />
-  Value: {field_name:value}<br />
-  Label: {field_name:label}<br />
+  Value: {field_name}<br>
+  Value: {field_name:value}<br>
+  Label: {field_name:label}<br>
 
 In all cases, these variables are also available as conditionals. Let's say you had the following value/label options:
 
@@ -118,7 +118,7 @@ markup="ol" to change the output to the equivalent html list
 
 ::
 
-  {field_name markup="ul"}
+  {field_name markup='ul'}
 
 Which will render as
 
@@ -135,7 +135,7 @@ Backspace Parameter
 
 When used as a tag pair, the multi option fields are a looping pair.
 Backspacing removes characters (including spaces and line breaks) from
-the last iteration of the loop. For example, if you put a <br /> tag
+the last iteration of the loop. For example, if you put a ``<br>`` tag
 after each item you'll have this
 
 ::
