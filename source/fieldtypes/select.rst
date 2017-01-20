@@ -118,7 +118,7 @@ markup="ol" to change the output to the equivalent html list
 
 ::
 
-  {poll_options markup="ul"}
+  {field_name markup="ul"}
 
 Which will render as
 
@@ -140,21 +140,16 @@ after each item you'll have this
 
 ::
 
-  {poll_options backspace="7"}
-      {item}<br />
-  {/poll_options}
+  {field_name backspace='5'}
+      {item}<br>
+  {/field_name}
 
 Which will render as
 
 ::
 
-  <ul>
-      <li>Green</li><br />
-      <li>Blue</li><br />
-      <li>Orange</li><br />
-  </ul>
+  Green<br>
+  Blue<br>
+  Orange
 
-You might, however, not want the <br /> tag after the final item. Simply
-count the number of characters (including spaces and line breaks) you
-want to remove and add the backspace parameter to the tag. The <br />
-tag has 6 characters plus a new line character.
+In this example, we do not want the ``<br>`` tag after the final item. Simply count the number of characters (including spaces, tabs, and line breaks) you want to remove and add the backspace parameter to the tag. The ``<br>`` tag has 4 characters plus a new line character between it and the closing tag.
