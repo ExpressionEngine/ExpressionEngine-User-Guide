@@ -297,8 +297,9 @@ allow_comments=
 
   allow_comments="yes"
 
-Force the allow comments value for the submitted entry, for both new entries and edits. If set, form fields will not affect the entry's allow comments setting.
-In addition to the channel entry allow comments setting, the Channel's :ref:`channel_prefs_allow_comments` preference must also be set to yes in order to allow comments on any entries in that channel.
+Whether to allow comments on the submitted entry. If this parameter is
+not specified, the Channel's :ref:`channel_prefs_allow_comments` preference
+will be used.
 
 author\_only=
 ~~~~~~~~~~~~~
@@ -559,6 +560,16 @@ You may exclude fields by placing the word "not" in front of the list::
 
   show_fields="not image_thumbnail|source|rating"
 
+
+sticky\_entry=
+~~~~~~~~~~~~~~
+
+::
+
+  sticky_entry="yes"
+
+Force the entry to be "sticky" or not.  This parameter only applies to new
+entries and will be ignored for edits.
 
 unique\_url\_title=
 ~~~~~~~~~~~~~~~~~~~

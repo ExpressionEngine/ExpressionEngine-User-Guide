@@ -74,7 +74,7 @@ example, if you have defined your ``{base_url}`` as recommended and your index f
 
 Then the correct setting would be::
 
-	{base_url}/index.php
+	{base_path}/index.php
 
 .. _general-config-url-cp-label:
 

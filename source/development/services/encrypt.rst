@@ -25,7 +25,7 @@ Encrypting some data::
 
 Decrypting the same data::
 
-  $meta = ee('Encrypt')->decrypt($_POST['meta']);
+  $meta = ee('Encrypt')->encrypt($_POST['meta']);
   $meta = unserialize($meta);
 
 .. note:: Use ``encode()`` and ``decode()`` if you'd like the data automatically base64 encoded.
@@ -54,7 +54,7 @@ Encrypt Methods
   :returns: The encrypted string on success or FALSE on failure
   :rtype: string
 
-.. method:: decrypt($data, $key = '')
+.. method:: decode($data, $key = '')
 
   Takes an encrypted string and key and decrypts it.
 
