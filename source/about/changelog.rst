@@ -5,6 +5,27 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.1
+-------------
+
+Release Date: January 20, 2017
+
+- Improved security of the Encrypt Service to protect against man-in-the-middle attacks.
+- Value/Label pairs can now be used in custom member and category fields.
+- Changed the file field to display directories alphabetically in the directory select dropdown on the field settings page.
+- Removed the requirement for specifying a replacement value in the search and replace utility.
+- Channel form URL title creation now matches the publish page behavior, creating lower case titles by default.
+- Ever get the login modal in the CP but you were sure you checked “remember me” when you logged in? We fixed that.
+- Fixed a bug where the Loader class may sometimes show an error about a non-numeric value under PHP 7.1.
+- Fixed a bug where the updater may show an error if certain add-ons are installed.
+- Fixed a bug (#22886) where unchecking the ``sticky`` or ``allow_comments`` checkboxes in Channel Form would not apply the change.
+- Fixed a bug where data encrypted in older versions of ExpressionEngine would not decrypt without using the specific algorithm-method it was originally encrypted with.
+- Fixed a bug (#22880) where Channel Sets didn't export upload destinations for file fields in a Grid.
+- Fixed a bug where validation could fail when adding a new member in the control panel due to a field playing hide-and-seek, but not playing fair.
+- Fixed a display issue with the new File Field UI with long filenames/titles.
+- Fixed a bug in the control panel where the member profile delete member confirmation modal included invalid members in the list of members to reassign entries to.
+
+
 Version 3.5.0
 -------------
 

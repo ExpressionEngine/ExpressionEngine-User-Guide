@@ -48,26 +48,60 @@ Or, the list may be populated by the contents of another channel field from your
 Template Tags
 -------------
 
-Fields where multiple items can be selected (Checkboxes and Multiselect) can be rendered using a single tag or a tag pair.
+Checkboxes and Multiselect can have multiple items selected, whereas Select and Radio Buttons only allow a single item selection.
+
+Multiple Items
+~~~~~~~~~~~~~~
+
+Fields where multiple items can be selected (Checkboxes and Multiselect) will usually be rendered using a variable pair.
 
 ::
 
-  {poll_options}
-      {item}<br />
-  {/poll_options}
+  {field_name}
+      {item}<br>
+  {/field_name}
 
-By default, ``{item}`` will render the item's label. To access the value and label separately, simply add a ``:value`` or ``:label`` modifier to the ``{item}`` variable::
+By default, ``{item}`` will render the item's value. To access the value and label separately, simply add a ``:value`` or ``:label`` modifier to the ``{item}`` variable::
 
-  {poll_options}
-      Label: {item}<br />
-      Value: {item:value}<br />
-      Label: {item:label}<br />
-  {/poll_options}
+  {field_name}
+      Value: {item}<br>
+      Value: {item:value}<br>
+      Label: {item:label}<br>
+  {/field_name}
 
-For single-choice fields, such as Select and Radio Buttons, simply add the modifier to the single variable name::
 
-  {poll_option:value}
-  {poll_option:label}
+.. note:: You can use a single variable for Checkboxes and Multiselect, e.g. `{field_name}`, and you will get a comma-separated list of the labels.
+
+Single Items
+~~~~~~~~~~~~
+
+Single-choice fields, such as Select and Radio Buttons, just use the modifier to the single variable name, and do not use a variable pair::
+
+  Value: {field_name}<br>
+  Value: {field_name:value}<br>
+  Label: {field_name:label}<br>
+
+In all cases, these variables are also available as conditionals. Let's say you had the following value/label options:
+
++-------+-------+
+| Value | Label |
++=======+=======+
+| 1     | One   |
++-------+-------+
+| 2     | Two   |
++-------+-------+
+| 3     | Three |
++-------+-------+
+
+Given that the selection option is 2/Two::
+
+  {if field_name == 2}Yep!{/if}
+  {if field_name:value == 2}Yep!{/if}
+  {if field_name:label == 'Two'}Yep!{/if}
+
+.. tip:: It is recommended that you use the value in conditionals, as it typically will not change over time. That way, if you ever need to change the wording, spelling, or even casing of labels in your publish/edit UI, you will not need to modify your templates.
+
+.. note:: For Select fields used in :doc:`/cp/members/fields/index` and :doc:`/cp/channel/cat/field/index`, the modifiers are not currently available in conditionals, and *must* be based on the value, e.g. ``{if some_cat_field == 2}``
 
 Limit Parameter
 ~~~~~~~~~~~~~~~
@@ -84,7 +118,7 @@ markup="ol" to change the output to the equivalent html list
 
 ::
 
-  {poll_options markup="ul"}
+  {field_name markup='ul'}
 
 Which will render as
 
@@ -101,26 +135,21 @@ Backspace Parameter
 
 When used as a tag pair, the multi option fields are a looping pair.
 Backspacing removes characters (including spaces and line breaks) from
-the last iteration of the loop. For example, if you put a <br /> tag
+the last iteration of the loop. For example, if you put a ``<br>`` tag
 after each item you'll have this
 
 ::
 
-  {poll_options backspace="7"}
-      {item}<br />
-  {/poll_options}
+  {field_name backspace='5'}
+      {item}<br>
+  {/field_name}
 
 Which will render as
 
 ::
 
-  <ul>
-      <li>Green</li><br />
-      <li>Blue</li><br />
-      <li>Orange</li><br />
-  </ul>
+  Green<br>
+  Blue<br>
+  Orange
 
-You might, however, not want the <br /> tag after the final item. Simply
-count the number of characters (including spaces and line breaks) you
-want to remove and add the backspace parameter to the tag. The <br />
-tag has 6 characters plus a new line character.
+In this example, we do not want the ``<br>`` tag after the final item. Simply count the number of characters (including spaces, tabs, and line breaks) you want to remove and add the backspace parameter to the tag. The ``<br>`` tag has 4 characters plus a new line character between it and the closing tag.
