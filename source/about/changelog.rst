@@ -18,6 +18,7 @@ Release Date: January 20, 2017
 - Ever get the login modal in the CP but you were sure you checked “remember me” when you logged in? We fixed that.
 - Fixed a bug where the Loader class may sometimes show an error about a non-numeric value under PHP 7.1.
 - Fixed a bug where the updater may show an error if certain add-ons are installed.
+- Fixed a bug (#22893) where new template routes could not be added.
 - Fixed a bug (#22886) where unchecking the ``sticky`` or ``allow_comments`` checkboxes in Channel Form would not apply the change.
 - Fixed a bug where data encrypted in older versions of ExpressionEngine would not decrypt without using the specific algorithm-method it was originally encrypted with.
 - Fixed a bug (#22880) where Channel Sets didn't export upload destinations for file fields in a Grid.
