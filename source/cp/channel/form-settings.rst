@@ -79,8 +79,7 @@ Live Look template
 ~~~~~~~~~~~~~~~~~~
 
 The template that will be used for a Live Look at your entries. Links
-are available from both the main Edit section of the control panel as
-well as the "View Entry" page that displays after submitting an entry.
+are available on the main Edit section of the control panel and will use the format site_url/template_group/template_name/entry_id. 
 If you do not want to use a Live Look Template with a channel, simply
 set this preference to "No Live Look Template".
 
