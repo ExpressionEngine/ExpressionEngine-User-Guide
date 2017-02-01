@@ -5,6 +5,32 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.2
+-------------
+
+Release Date: February 1, 2017
+
+- Fixed a security bug where some path names were not properly sanitized.
+- Fixed a bug (#22882) where one could not delete a forum category.
+- Fixed a bug (#22883) where saving an existing entry would not highlight its row in the entries table.
+- Fixed a bug (#22888) where saving a new channel field set to be hidden would not be collapsed on the publish form.
+- Fixed a bug (#22902) where Channel Sets that contain fields with value/label pairs would not import correctly.
+- Fixed a bug (#22901) where changing your password due to admin password requirements would not update the account's password.
+- Fixed a bug where fieldtypes in Grid may not parse using the configured field format.
+- Fixed a bug (#22905) where a multi-relationship field in Channel Form would try to use the field's control panel UI.
+- Fixed a bug (#22908) where upgrading from a pre-2.7 installation may truncate some channel data columns if they aren't set as ``text``.
+- Fixed a bug (#22914) where the FTP library's ``delete_dir()`` may fail.
+- Fixed a bug when decrypting old values using the default key.
+- Removed the profiler from the CP login page.
+- Clarified the language for the authenticate and save actions.
+- Fixed a bug where non-ExpressionEngine cookies were run through security checks when the cookie prefix was not explicitly set.
+- Fixed a bug where the channel form Allow Comments field did not respect the default in the channel settings.
+- Fixed a bug where a PHP error could occur on the CP Overview page when RSS feeds contained code blocks under PHP 5.3.
+- Developers:
+
+  - Fixed a bug where the `post_save_settings` event could fire on a fieldtype when an entry was saved.
+
+
 Version 3.5.1
 -------------
 
