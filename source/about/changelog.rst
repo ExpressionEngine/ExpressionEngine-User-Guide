@@ -8,7 +8,7 @@ ExpressionEngine 3.x Change Log
 Version 3.5.2
 -------------
 
-Release Date: February 1, 2017
+Release Date: February 2, 2017
 
 - Fixed a security bug where some path names were not properly sanitized.
 - Fixed a bug (#22882) where one could not delete a forum category.
