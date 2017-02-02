@@ -11,6 +11,7 @@ Version 3.5.2
 Release Date: February 2, 2017
 
 - Fixed a security bug where some path names were not properly sanitized.
+- Fixed a security bug involving PHP object injection.
 - Fixed a bug (#22882) where one could not delete a forum category.
 - Fixed a bug (#22883) where saving an existing entry would not highlight its row in the entries table.
 - Fixed a bug (#22888) where saving a new channel field set to be hidden would not be collapsed on the publish form.
