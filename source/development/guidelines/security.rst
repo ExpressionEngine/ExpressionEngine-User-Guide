@@ -473,11 +473,10 @@ do not expect or desire. If *absolutely* required, encode them:
   *possible* values. This is not bulletproof of course, as the
   hacker needs only to know what the possible values are to be able
   to utilize them.
-- PHP has the `Mcrypt
-  library <http://us2.php.net/manual/en/ref.mcrypt.php>`_ and other
+- PHP has the `OpenSSL
+  library <http://php.net/manual/en/book.openssl.php>`_ and other
   PHP libraries which have encryption and decryption with a salt.
-  CodeIgniter has an :ellislab:`Encryption class
-  </codeigniter/user-guide/libraries/encryption.html>`, incidentally.
+- ExpressionEngine has an :doc:`Encryption service </development/services/encrypt>` available to developers that uses OpenSSL.
 
 Yes / No Preferences
 ====================

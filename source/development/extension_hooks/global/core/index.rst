@@ -7,6 +7,32 @@ Core Library Extension Hooks
 
 .. highlight:: php
 
+core_boot
+---------
+
+.. function:: core_boot()
+
+  Run tasks on every ExpressionEngine request.
+
+  How it's called::
+
+    ee()->extensions->call('core_boot');
+    if (ee()->extensions->end_script === TRUE) return;
+
+  :rtype: Void
+
+  .. note:: This hook fires on every ExpressionEngine request, so be mindful of the speed and resource usage of your code here. If you need to run code based on the type of request, the ``REQ`` constant can be checked to determine the type of request. It will either be ``PAGE`` for front-end requests, ``CP`` for control panel requests, or ``ACTION`` for module action requests (``ACT=`` URLs). e.g.:
+
+    .. code-block:: php
+
+      if (REQ != 'CP')
+      {
+        // Do work only on control panel requests
+        return;
+      }
+
+  .. versionadded:: 3.5.0
+
 core_template_route
 -------------------
 

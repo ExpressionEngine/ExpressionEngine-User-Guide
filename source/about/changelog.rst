@@ -5,6 +5,146 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.2
+-------------
+
+Release Date: February 2, 2017
+
+- Fixed a security bug where some path names were not properly sanitized.
+- Fixed a security bug involving PHP object injection.
+- Fixed a bug (#22882) where one could not delete a forum category.
+- Fixed a bug (#22883) where saving an existing entry would not highlight its row in the entries table.
+- Fixed a bug (#22888) where saving a new channel field set to be hidden would not be collapsed on the publish form.
+- Fixed a bug (#22902) where Channel Sets that contain fields with value/label pairs would not import correctly.
+- Fixed a bug (#22901) where changing your password due to admin password requirements would not update the account's password.
+- Fixed a bug where fieldtypes in Grid may not parse using the configured field format.
+- Fixed a bug (#22905) where a multi-relationship field in Channel Form would try to use the field's control panel UI.
+- Fixed a bug (#22908) where upgrading from a pre-2.7 installation may truncate some channel data columns if they aren't set as ``text``.
+- Fixed a bug (#22914) where the FTP library's ``delete_dir()`` may fail.
+- Fixed a bug when decrypting old values using the default key.
+- Removed the profiler from the CP login page.
+- Clarified the language for the authenticate and save actions.
+- Fixed a bug where non-ExpressionEngine cookies were run through security checks when the cookie prefix was not explicitly set.
+- Fixed a bug where the channel form Allow Comments field did not respect the default in the channel settings.
+- Fixed a bug where a PHP error could occur on the CP Overview page when RSS feeds contained code blocks under PHP 5.3.
+- Developers:
+
+  - Fixed a bug where the `post_save_settings` event could fire on a fieldtype when an entry was saved.
+
+
+Version 3.5.1
+-------------
+
+Release Date: January 20, 2017
+
+- Improved security of the Encrypt Service to protect against man-in-the-middle attacks.
+- Value/Label pairs can now be used in custom member and category fields.
+- Changed the file field to display directories alphabetically in the directory select dropdown on the field settings page.
+- Removed the requirement for specifying a replacement value in the search and replace utility.
+- Channel form URL title creation now matches the publish page behavior, creating lower case titles by default.
+- Ever get the login modal in the CP but you were sure you checked “remember me” when you logged in? We fixed that.
+- Fixed a bug where the Loader class may sometimes show an error about a non-numeric value under PHP 7.1.
+- Fixed a bug where the updater may show an error if certain add-ons are installed.
+- Fixed a bug (#22893) where new template routes could not be added.
+- Fixed a bug (#22886) where unchecking the ``sticky`` or ``allow_comments`` checkboxes in Channel Form would not apply the change.
+- Fixed a bug where data encrypted in older versions of ExpressionEngine would not decrypt without using the specific algorithm-method it was originally encrypted with.
+- Fixed a bug (#22880) where Channel Sets didn't export upload destinations for file fields in a Grid.
+- Fixed a bug where validation could fail when adding a new member in the control panel due to a field playing hide-and-seek, but not playing fair.
+- Fixed a display issue with the new File Field UI with long filenames/titles.
+- Fixed a bug in the control panel where the member profile delete member confirmation modal included invalid members in the list of members to reassign entries to.
+
+
+Version 3.5.0
+-------------
+
+Release Date: January 16, 2017
+
+- Added PHP 7.1 compatibility.
+- Added value/label option capability to :doc:`/fieldtypes/select`
+- Added ``{if has_categories}`` conditional to the Channel Entries tag.
+- Added ``{category_count}``, ``{category_reverse_count}``, and ``{category_total_results}`` variables to the Channel Entries ``{categories}{/categories}`` variable pair.
+- Added ``entry_id=`` and ``url_title=`` parameters to the :ref:`Related Categories Mode <related_categories_mode>` of the Channel Entries Tag, to enable this tag to function with custom template routing.
+- The ``{redirect=}`` variable can now take full URLs, including external URLs instead of just path segments.
+- Usernames and screen names now have a maximum length of 75 characters.
+- Improved clarity and usability of File field interface.
+- Greatly improved model query performance.
+- The ``{category_name}`` variable is now run through typography parsing for pretty quotes and dashes.
+- Updated the SimplePie parser version used by the :doc:`RSS parser </development/legacy/libraries/rss_parser>` to 1.4.3.
+- Members must verify themselves when creating a member with control panel access.
+- Added Email Newline and Connection Type to Outgoing Email Settings, to simplify configuration with some email providers (formerly available as config overrides only, ``email_newline`` and ``email_smtp_crypto``).
+- Discussion Forums:
+
+  - Updated code sample formatting to use the new styleable blocks. Highlight/Prism/Rainbow/etc. your code samples in forum posts.
+  - Made special forum conditionals nestable.
+  - Added ``{forum_id}`` variable to the Thread Rows partial.
+  - Added ``{if is_moderator}`` conditionals to Threads and Thread Rows partials.
+  - Added ``{topic_date}`` variable to Threads partial.
+  - Added ``{topic_class}`` variable to Topic Rows partial.
+  - Made Poll data available to Thread Rows, so polls can be shown inline with the author's post.
+
+- Fixed a bug where models could not set NULL values.
+- Fixed a bug where model foreign key changes did not trigger reloads.
+- Fixed a bug (#20308) where you could only upload the same file name 99 times. Upload as many as you want!
+- Fixed a bug on the control panel profile section's ban members page where a MySQL error occurred when searching banned members.
+- Fixed an Obscurum Insectum when ``mbstring.func_overload`` is enabled, entry content contains multibyte characters, and there is a relationship field with no relationships set.
+- Fixed a bug (#22864) where members registering via the Member module could not register if secure passwords were required.
+- Fixed a bug (#22865) where if a high minimum username or password length was set, the validation error message would not show the configuration value correctly.
+- Fixed a bug (#22867) where deleting a category from the publish screen would uncheck any existing category selections for that entry.
+- Fixed a bug (#22872) where changing Channels fields from one type to another may destroy data.
+- Fixed a bug (#22869) where repeated searches in the template manager may show a "Request-URI Too Large" error.
+- Fixed a bug (#22874) where File fields may show an "Undefined index" error on the front end in rare cases.
+- Fixed a bug (#22875) where URL titles generated by Channel Form's ``unique_url_title=`` parameter did not respect the ``word_separator`` preference.
+- Fixed a bug (#22876) where the wrong member was marked as the author for entry revisions.
+- Fixed a bug (#22873) where having a ``:total_rows`` Grid modifier in a conditional in a template may show an error when certain add-ons are present.
+- Fixed a bug where Channel entry titles that had a ``;`` show up to the party uninvited, when an ``&`` was in the title. No longer: Channel entries titles are by invitation only.
+- Altered frontend system message redirects to default to use a JavaScript redirect in order to accommodate a rare IE form submission quirk.
+- Worked around a Safari bug where searching for entries in the control panel with autofill enabled on a site using SSL would repeatedly select the text in the textbox.
+- Developers:
+
+  - Added an :doc:`Encrypt service </development/services/encrypt>` that uses OpenSSL for encryption, as Mcrypt has ben deprecated as of PHP 7.1.
+  - Added ``core_boot`` hook to run tasks on every ExpressionEngine request.
+  - Added request caching to member field model structure to eliminate duplicate queries for some operations.
+
+
+Version 3.4.7
+-------------
+
+Release Date: December 30, 2016
+
+- Security
+
+  - Hardened security in the Email library, prevents attacks similar to PHPMailer CVE-2016-10033, CVE-2016-10045, and Swift Mailer CVE-2016-10074.
+
+- Optimized an inefficient query in the file model.
+- Fixed a bug where the ``unique_url_title=`` title parameter was not working in Channel Form.
+- Fixed a bug (#22838) where the HTML Button creation form would show a PHP error if no other HTML buttons existed.
+- Fixed a bug where switching MSM sites may show a PHP error if the member is set to redirect to the publish form but no Channel is set.
+- Fixed a bug (#22841) where deleting a member from their profile page would not give an option to reassign their entries.
+- Fixed a bug (#22849) where deleting a member would also delete any files they had uploaded.
+- Fixed a bug (#22842) where the author would have to focus the URL title field to validate the field despite it being autofilled by the Title field.
+- Fixed a bug (#22013) where if saving Grid settings failed due to duplicate column labels/names, deleting the offending column would not clear the validation errors.
+- Fixed a bug (#22858) where statuses on the publish form were not displayed in their set status order.
+
+
+Version 3.4.6
+-------------
+
+Release Date: December 13, 2016
+
+- Fixed a bug (#22785) where the parsing a template may show an undefined index error in rare cases.
+- Fixed a bug (#22798) where RTE tool buttons may appear multiple times when rendered via Channel Form.
+- Fixed a bug (#22799) where all "unauthorized" error messages came with a 500 status code instead of a 403.
+- Fixed a bug (#22803) where an alternate MySQL port number entered in the installer would not get written to the config.php file.
+- Fixed a bug (#22811) where there was a typo in a language key.
+- Fixed a bug (#22813) where the ``relationships_display_field_options`` hook was passed invalid arguments.
+- Fixed a bug (#22814) where deleting a member from their profile page may show a PHP error.
+- Fixed a bug (#22816) where the Relationship fields could not be filtered when filtering from more than nine channels.
+- Fixed a bug (#22817) where Grid and Relationship field data was not revisioned.
+- Fixed a bug (#22818) where channel form inline errors for custom fields didn't display.
+- Fixed an issue where the Add-on Manager would be empty on some servers by accommodating an issue (#22819) with incorrectly typed variables from the database on environments with improper/non-standard PDO configuration.
+- Fixed a bug where the updater may attempt to add the same database column more than once.
+
+
 Version 3.4.5
 -------------
 

@@ -37,16 +37,16 @@ The most common usage for layouts is to provide the skeleton structure
 of your site. With embeds, this can be done with using a header and
 footer embed on each template::
 
-  {embed="site/.header"}
+  {embed="site/_header"}
 
   {exp:channel:entries channel="news"}
     <h2>{title}</h2>
     {summary}
   {/exp:channel:entries}
 
-  {embed="site/.footer"}
+  {embed="site/_footer"}
 
-With a "site/.header" template::
+With a "site/_header" template::
 
   <html>
     <head>
@@ -54,14 +54,14 @@ With a "site/.header" template::
     </head>
     <body>
 
-And a "site/.footer" template::
+And a "site/_footer" template::
 
     </body>
   </html>
 
 As you add more code to your header and footer templates this approach
 can become a little messy. With layouts, we can define our header and
-footer in a single template called "site/.html-layout" in this
+footer in a single template called "site/_html-layout" in this
 example::
 
   <html>
@@ -76,7 +76,7 @@ example::
 You can now write the main template using a single layout tag instead
 of two embeds::
 
-  {layout="site/.html-layout"}
+  {layout="site/_html-layout"}
 
   {exp:channel:entries channel="news"}
     <h2>{title}</h2>
@@ -102,7 +102,7 @@ Parameter Variables
 In the layout tag you can use parameters to pass additional data to your
 layout template::
 
-  {layout="site/.html-layout" color="blue"}
+  {layout="site/_html-layout" color="blue"}
 
 In your layout this will be available as a ``{layout:color}`` tag::
 
@@ -133,7 +133,7 @@ capturing the output of plugin or module tags. With the tag pair you do
 not need the value parameter, instead the data inside the pair will be
 used as the variable value. The name parameter must still be given::
 
-  {layout="site/.html-layout"}
+  {layout="site/_html-layout"}
 
   {exp:channel:entries channel="colors" limit="1"}
     {title}
@@ -172,7 +172,7 @@ can even take it a step further. After setting a default section title
 in the parameter you can override it dynamically based on what your
 template is currently showing::
 
-  {layout="site/.html-layout" title="News"}
+  {layout="site/_html-layout" title="News"}
 
   {exp:channel:entries channel="news"}
     <h2>{title}</h2>
@@ -242,7 +242,7 @@ Putting all of these together lets you create flexible page layouts with
 multiple dynamic sections. This example will add a sidebar and footer to
 the news example above.
 
-We will keep the existing "site/.html-layout" from before, with a small
+We will keep the existing "site/_html-layout" from before, with a small
 addition to allow for additional JavaScript and CSS to be set from the
 template::
 
@@ -260,9 +260,9 @@ template::
   </html>
 
 For the news section we will now have a separate layout that defines
-the structure of a given news page. Let's call it "news/.layout"::
+the structure of a given news page. Let's call it "news/_layout"::
 
-  {layout="site/.html-layout"}
+  {layout="site/_html-layout"}
   {layout:set name="title"}News{if layout:title != ''} | {layout:title}{/if}{/layout:set}
 
   {layout:set name="css"}
@@ -284,7 +284,7 @@ Our news homepage "news/index" will use the news layout to show a list
 of recent entries and also provide a search box in the sidebar. We will
 use an embed for the search and come back to it later::
 
-  {layout="news/.layout" title="Recent"}
+  {layout="news/_layout" title="Recent"}
 
   {exp:channel:entries channel="news" limit="30" dynamic="no"}
     <h2><a href="{url_title_path='news/article'}">{title}</a></h2>
@@ -292,13 +292,13 @@ use an embed for the search and come back to it later::
   {/exp:channel:entries}
 
   {layout:set name="sidebar"}
-    {embed="news/.embed-search"}
+    {embed="news/_embed-search"}
   {/layout:set}
 
 We will use the "news/article" template to display the full article and
 change the sidebar to show an article list in addition to the search::
 
-  {layout="news/.layout"}
+  {layout="news/_layout"}
 
   {exp:channel:entries channel="news" require_entry="yes"}
     {layout:set name="title" value="{title}"}
@@ -308,31 +308,31 @@ change the sidebar to show an article list in addition to the search::
   {/exp:channel:entries}
 
   {layout:set name="sidebar"}
-    {embed="news/.embed-search"}
-    {embed="news/.embed-recent-articles"}
+    {embed="news/_embed-search"}
+    {embed="news/_embed-recent-articles"}
   {/layout:set}
 
 For each element in the sidebar we will have a small piece of wrapping
-code in a layout, "news/.sidebar-layout"::
+code in a layout, "news/_sidebar-layout"::
 
   <div class="sidebar-item">
     <header>{layout:header}</header>
     {layout:contents}
   </div>
 
-Now we can create "news/.embed-search" using the :doc:`Simple Search
+Now we can create "news/_embed-search" using the :doc:`Simple Search
 Form <../add-ons/search/simple>` tag::
 
-  {layout="news/.sidebar-layout" header="Search"}
+  {layout="news/_sidebar-layout" header="Search"}
 
   {exp:search:simple_form channel="news"}
     <input type="search" name="keywords" maxlength="100">
     <input type="submit" value="Submit">
   {/exp:search:simple_form}
 
-And "news/.embed-recent-articles"::
+And "news/_embed-recent-articles"::
 
-  {layout="news/.sidebar-layout" header="Recent Articles"}
+  {layout="news/_sidebar-layout" header="Recent Articles"}
 
   <ul>
     {exp:channel:entries channel="news" limit="10" dynamic="no" disable="custom_fields"}
