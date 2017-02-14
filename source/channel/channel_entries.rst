@@ -874,13 +874,19 @@ or less-than operators to search through them.
 
 .. code-block:: none
 
-  search:numeric_field="<20"
+  search:numeric_field='<20'
 
-  search:numeric_field=">20"
+  search:numeric_field='>20'
 
-  search:numeric_field="<=20"
+  search:numeric_field='<=20'
 
-  search:numeric_field=">=20"
+  search:numeric_field='>=20'
+
+To specify a range, use a piped list. For instance to search a field for values between and including 10 through 20:
+
+.. code-block:: none
+
+  search:numeric_field='>=10|<=20'
 
 Including / Excluding Empty Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
