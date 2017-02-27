@@ -147,7 +147,6 @@ Developing for ExpressionEngine
   :titlesonly:
   :hidden:
 
-  about/index
   intro/index
   installation/index
   cp/index
@@ -166,3 +165,4 @@ Developing for ExpressionEngine
   general/index
   troubleshooting/index
   bugs_and_security_reports/index
+  about/changelog
