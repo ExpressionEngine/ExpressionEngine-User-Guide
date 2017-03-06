@@ -262,7 +262,7 @@ as::
 
 Then in your templates you can generate a path to that template using::
 
-  {route="template_group/template" first_name"Enrico" last_name="Fermi"}
+  {route="template_group/template" first_name="Enrico" last_name="Fermi"}
 
 The route variable requires the template group and template name. You
 can optionally provide values for your defined route segments, you must

@@ -201,6 +201,8 @@ Saving individual field settings works largely the same as saving global
 settings. Keep be aware that they are later merged with global settings,
 so they can override a global setting.
 
+If your fieldtype needs a wide style on the publish form, like Grid or a Textarea, then be sure to include ``'field_wide' => TRUE`` in your settings array.
+
 ::
 
   function save_settings($data)

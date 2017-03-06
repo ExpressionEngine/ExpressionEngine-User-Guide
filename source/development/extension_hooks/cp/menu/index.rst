@@ -21,7 +21,7 @@ cp_custom_menu
   The ``$menu`` object is of type ``EllisLab\ExpressionEngine\Service\CustomMenu\Menu`` and implements the following API::
 
     // call addItem to create a link in this menu
-    $menu->addItem('Title', ee('CP/URL')->make('/myaddon'));
+    $menu->addItem('Title', ee('CP/URL')->make('addons/settings/myaddon'));
 
     // call addSubmenu to create a dropdown menu
     // this returns a submenu object
@@ -30,10 +30,10 @@ cp_custom_menu
   The submenu object is of type ``EllisLab\ExpressionEngine\Service\CustomMenu\Submenu`` and implements the following API::
 
     // call addItem to create a link in this menu
-    $sub->addItem('Title', ee('CP/URL')->make('/myaddon'));
+    $sub->addItem('Title', ee('CP/URL')->make('addons/settings/myaddon'));
 
     // call withAddLink to add a new/create link to the menu
-    $sub->withAddLink('Title', ee('CP/URL')->make('/myaddon/create'));
+    $sub->withAddLink('Title', ee('CP/URL')->make('addons/settings/myaddon/create'));
 
     // call withFilter to add a create fuzzy filter searchbox inside the menu
     // the first and only parameter is the input's placeholder text

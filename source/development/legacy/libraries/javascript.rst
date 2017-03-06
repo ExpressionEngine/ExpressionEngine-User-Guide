@@ -12,7 +12,7 @@ Class Reference
 
 	The library is loaded using the following code::
 
-		ee()->load->library('benchmark');
+		ee()->load->library('javascript');
 
 .. method:: set_global($var[, $val = ''])
 

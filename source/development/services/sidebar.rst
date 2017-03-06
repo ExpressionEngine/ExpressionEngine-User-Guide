@@ -315,6 +315,34 @@ FolderItem Methods
   :returns: $this
   :rtype: FolderItem
 
+.. method:: canEdit()
+
+  Shows the edit button on the sidebar item.
+
+  :returns: $this
+  :rtype: FolderItem
+
+.. method:: cannotEdit()
+
+  Hides the edit button on the sidebar item.
+
+  :returns: $this
+  :rtype: FolderItem
+
+.. method:: canRemove()
+
+  Shows the delete button on the sidebar item.
+
+  :returns: $this
+  :rtype: FolderItem
+
+.. method:: cannotRemove()
+
+  Hides the delete button on the sidebar item.
+
+  :returns: $this
+  :rtype: FolderItem
+
 .. method:: withEditUrl($url)
 
   Sets the edit URL property of the item
