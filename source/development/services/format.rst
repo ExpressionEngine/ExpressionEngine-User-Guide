@@ -89,6 +89,13 @@ Text Formatter
   :returns: A Formatter object
   :rtype: object
 
+.. method:: convertToEntities()
+
+  Converts all applicable characters to HTML entities
+
+  :returns: a Formatter object
+  :rtype: object
+
 When to use ``compile()``
 -------------------------
 
