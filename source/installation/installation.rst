@@ -29,17 +29,16 @@ After :elstore:`purchasing ExpressionEngine </>`, download it from :elstore:`you
 3. Set File Permissions
 ***********************
 
-Apache
-======
+You need to enable write access to the following files and folders.
 
-You need to enable write access to the following files and folders. In a worst-case scenario that would be ``666`` for files and ``777`` for directories. You should check with your web host to see if more restrictive permissions can be used to allow PHP to write to files and directories. See :doc:`/troubleshooting/general/file_permissions` for details.
+For Apache, that would be ``666`` for files and ``777`` for directories, in a worst-case scenario. You should check with your web host to see if more restrictive permissions can be used to allow PHP to write to files and directories. See :doc:`/troubleshooting/general/file_permissions` for details.
 
-Set this file to be writeable:
+For IIS, provide all permissions to the IIS user for these files and directories.
 
+Set these files and directories to be writeable:
+
+- :file:`system/ee/*`
 - :file:`system/user/config/config.php`
-
-Set these directories to be writeable:
-
 - :file:`system/user/cache/`
 - :file:`system/user/templates/`
 - :file:`images/avatars/`
@@ -48,20 +47,7 @@ Set these directories to be writeable:
 - :file:`images/pm_attachments/`
 - :file:`images/signature_attachments/`
 - :file:`images/uploads/`
-
-IIS
-===
-
-Provide all permissions to the IIS user for these directories:
-
-- :file:`system/user/cache/`
-- :file:`system/user/templates/`
-- :file:`images/avatars/`
-- :file:`images/captchas/`
-- :file:`images/member_photos/`
-- :file:`images/pm_attachments/`
-- :file:`images/signature_attachments/`
-- :file:`images/uploads/`
+- :file:`themes/ee/*`
 
 
 ******************************
