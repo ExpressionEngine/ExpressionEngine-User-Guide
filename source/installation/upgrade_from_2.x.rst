@@ -4,6 +4,10 @@ Upgrading from ExpressionEngine 2
 
 .. important:: Third-party add-ons from 2.x will not work with ExpressionEngine 3. Check with each the add-on authors to see if there are updates available. If you maintain your own add-ons, please see the :doc:`/development/conversion/index`.
 
+ Uninstall any 2.x add-ons that will not be used in 3.x before upgrading to 3.x.
+
+ If needed, the `Playa & Matrix Importer <https://github.com/EllisLab/PlayaMatrixImporter>`_ should be run while still on 2.x.
+
 *********************
 1. Backup and Prepare
 *********************
@@ -40,9 +44,7 @@ Now **copy** the following files from the backup of your current site to the new
 
 6. If you save templates as files, copy all files and directories from :file:`system/expressionengine/templates/` to :file:`system/user/templates/`.
 
-7. If you have any third-party add-ons, copy all files and directories from :file:`system/expressionengine/third_party/` to :file:`system/user/addons/` and all files and directories from :file:`themes/third_party/` to :file:`themes/user/`.
-
-.. note:: If any of your add-ons have updates, we recommend downloading them and putting them into the :file:`system/user/addons/` directory now.
+.. note:: If any of your third party add-ons have updates, we recommend downloading them and putting them into the :file:`system/user/addons/` directory now.
 
 ***************
 3. Upload Files
