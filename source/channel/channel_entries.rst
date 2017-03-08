@@ -1294,15 +1294,6 @@ absolute_reverse_count
 The *opposite* of ``{absolute_count}``, in that it displays the entry count position counting backwards from the absolute total. Works across pagination, so the fifth entry in a list of fifteen entries would display "10".
 
 
-aol\_im
--------
-
-::
-
-	{aol_im}
-
-The author's AOL IM account name.
-
 author
 ------
 
@@ -1363,15 +1354,6 @@ Typically used as such::
 	{if avatar}
 		<img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
 	{/if}
-
-bio
----
-
-::
-
-	{bio}
-
-The author's bio as entered in their profile.
 
 channel
 -------
@@ -1613,25 +1595,7 @@ The date on which the entry was last edited in GMT. This variable is
 **not** localized for each user's date settings. See :doc:`Date Variable
 Formatting </templates/date_variable_formatting>` for more information.
 
-icq
----
-
-::
-
-	{icq}
-
-The author's ICQ IM user identification number.
-
-interests
----------
-
-::
-
-	{interests}
-
-The author's "interests" as entered in their profile.
-
-ip\_address
+ip_address
 -----------
 
 ::
@@ -1639,15 +1603,6 @@ ip\_address
 	{ip_address}
 
 The IP address of the author when they posted the entry.
-
-location
---------
-
-::
-
-	{location}
-
-The author's location as entered in their profile.
 
 member\_search\_path
 --------------------
@@ -1664,23 +1619,6 @@ example::
 
 	<a href="{member_search_path='search/results'}">View entries by this member</a>
 
-msn\_im
--------
-
-::
-
-	{msn_im}
-
-The author's MSN IM account name.
-
-occupation
-----------
-
-::
-
-	{occupation}
-
-The author's occupation as entered in their profile.
 
 .. _channel_entries_page_uri:
 
@@ -1979,44 +1917,6 @@ The domain name for your site, trimmed of any subdomains. For instance,
 example.com becomes example.com. Typically only used in the Atom feed
 Template.
 
-url
----
-
-::
-
-	{url}
-
-The author's raw URL, if it exists.
-
-url\_or\_email
---------------
-
-::
-
-	{url_or_email}
-
-The author's URL if it exists, otherwise the raw email address.
-
-url\_or\_email\_as\_author
---------------------------
-
-::
-
-	{url_or_email_as_author}
-
-A hyperlink to the author's URL if it exists, otherwise it will be an
-email link for the author's email address. The text of the link will be
-the author's screenname if it exists, otherwise it will be the username.
-
-url\_or\_email\_as\_link
-------------------------
-
-::
-
-	{url_or_email_as_link}
-
-This is similar to the above variable. The difference is that the text
-for the link will be either the URL or the email address.
 
 url\_title
 ----------
@@ -2070,15 +1970,6 @@ the week date will fall on Sunday for the week of the entry. When
 ``start_day="Monday"`` is used, the week date will fall on Monday for
 the week of the entry. See :doc:`Date Variable Formatting
 </templates/date_variable_formatting>` for more information.
-
-yahoo\_im
----------
-
-::
-
-  {yahoo_im}
-
-The author's Yahoo IM account name.
 
 .. _channel_entries_conditional_variables:
 
