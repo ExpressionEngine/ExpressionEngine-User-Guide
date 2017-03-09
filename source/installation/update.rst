@@ -19,6 +19,8 @@ Troubleshooting
 
 Below are potential issues you may run into while using ExpressionEngine's one-click updater.
 
+If you hit an error you cannot resolve and need to contact support, there should be a log file located at :file:`system/user/cache/ee_update/update.log` that may contain helpful information to help us diagnose.
+
 "The following paths are not writable:"
 """""""""""""""""""""""""""""""""""""""
 
