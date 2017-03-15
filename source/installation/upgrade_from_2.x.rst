@@ -64,6 +64,8 @@ Then upload the following files and directories:
 
 .. note:: If you've moved your system directory, make sure to change both :file:`index.php` and :file:`admin.php` to point to the correct directory.
 
+.. note:: If you have MSM installed using subfolders, make sure to update the :file:`index.php` and :file:`admin.php` files in those folders as well.
+
 ********************
 4. Check Permissions
 ********************
