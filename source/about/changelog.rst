@@ -10,7 +10,7 @@ Version 3.5.4
 
 Release Date: March 16, 2017
 
-- Browsers will (mostly) now be tricked into not autofilling password setting fields (e.g. SMTP username & password) in the control panel with your password, even if the browser's autofill is enabled. Commence fist shaking at browser vendors for their algorithms that try to guess those fields and not providing a reliable way to prevent it. **Developers: ** If you are using the :doc:`<development/shared_form_view>`, your inputs with ``type="password"`` will automatically benefit.
+- Browsers will (mostly) now be tricked into not autofilling password setting fields (e.g. SMTP username & password) in the control panel with your password, even if the browser's autofill is enabled. Commence fist shaking at browser vendors for their algorithms that try to guess those fields and not providing a reliable way to prevent it. **Developers:** If you are using the :doc:`/development/shared_form_view`, your inputs with ``type="password"`` will automatically benefit.
 - Improved the clarity of an error message if something goes wrong with your site preferences in the database.
 - Improved breadcrumb clarity when editing fields in the Channel Manager.
 - Made the Status Groups UI consistent with other areas of the Channel Manager.
@@ -20,6 +20,7 @@ Release Date: March 16, 2017
 - Fixed a bug (#23005) where Relationship field filtering on the publish may not work if editing an MSM site with a different domain than the control panel.
 - Fixed a bug (#22419) where the ``:total_results`` shortcut relationship variable would return the wrong count when used inside Grid.
 - Fixed a bug (#22789) where deleting a channel entry with a comment would trigger PHP errors.
+- Fixed a bug where children were overlooked while some deeply nested relationships were partying with grids.
 - The new View Activity won't try to hoodwink you into thinking other members are stalking you, or that so many significant events occurred at the start of the Unix Epoch.
 - Fixed a PHP error that would occur when trying to destructively overwrite non-image files on upload.
 - Trying to edit a field group that doesn't exist now 404s instead of complaining in an unhelpful manner with PHP warnings.
