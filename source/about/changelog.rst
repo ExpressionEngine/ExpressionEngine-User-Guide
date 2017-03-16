@@ -10,6 +10,10 @@ Version 3.5.4
 
 Release Date: March 16, 2017
 
+- Important:
+
+  - Fixed a potential data loss issue when deleting admins who have edited templates.
+
 - Browsers will (mostly) now be tricked into not autofilling password setting fields (e.g. SMTP username & password) in the control panel with your password, even if the browser's autofill is enabled. Commence fist shaking at browser vendors for their algorithms that try to guess those fields and not providing a reliable way to prevent it. **Developers:** If you are using the :doc:`/development/shared_form_view`, your inputs with ``type="password"`` will automatically benefit.
 - Improved the clarity of an error message if something goes wrong with your site preferences in the database.
 - Improved breadcrumb clarity when editing fields in the Channel Manager.
