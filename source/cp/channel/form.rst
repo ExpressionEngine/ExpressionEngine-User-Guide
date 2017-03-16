@@ -51,6 +51,11 @@ The channel's short name is a required field. It must be a single word
 with no spaces. The underscore character is allowed. For example, the
 channel's "short name" might be joe_channel.
 
+Maximum number of entries
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This limits the number of entries that are allowed to be published in the channel. This can be useful for channels that need their content creation limited to a set number of entries. For example a limit of 1 will make this channel effectively a "single entry channel" and only allow a single entry to be created. A limit of 5 would allow between 0 and 5 entries to be created. Leaving this setting blank (the default) applies no limits to the number of entries a channel can contain.
+
 Status groups
 ~~~~~~~~~~~~~
 
