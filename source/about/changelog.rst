@@ -5,6 +5,37 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.4
+-------------
+
+Release Date: March 16, 2017
+
+- Important:
+
+  - Fixed a potential data loss issue when deleting admins who have edited templates.
+
+- Browsers will (mostly) now be tricked into not autofilling password setting fields (e.g. SMTP username & password) in the control panel with your password, even if the browser's autofill is enabled. Commence fist shaking at browser vendors for their algorithms that try to guess those fields and not providing a reliable way to prevent it. **Developers:** If you are using the :doc:`/development/shared_form_view`, your inputs with ``type="password"`` will automatically benefit.
+- Improved the clarity of an error message if something goes wrong with your site preferences in the database.
+- Improved breadcrumb clarity when editing fields in the Channel Manager.
+- Made the Status Groups UI consistent with other areas of the Channel Manager.
+- Modified the Redirect library that handles links from the control panel to external sites to be ok with URLs with query string parameters.
+- Fixed a bug where parsing category fields may show a PHP error.
+- Fixed a bug (#22993) where the RTE field may not show underlined text properly in the publish field.
+- Fixed a bug (#23005) where Relationship field filtering on the publish may not work if editing an MSM site with a different domain than the control panel.
+- Fixed a bug (#22419) where the ``:total_results`` shortcut relationship variable would return the wrong count when used inside Grid.
+- Fixed a bug (#22789) where deleting a channel entry with a comment would trigger PHP errors.
+- Fixed a bug where children were overlooked while some deeply nested relationships were partying with grids.
+- The new View Activity won't try to hoodwink you into thinking other members are stalking you, or that so many significant events occurred at the start of the Unix Epoch.
+- Fixed a PHP error that would occur when trying to destructively overwrite non-image files on upload.
+- Trying to edit a field group that doesn't exist now 404s instead of complaining in an unhelpful manner with PHP warnings.
+- Fixed a bug where default HTML buttons were not always added to the correct site when adding new buttons.
+- Fixed a bug where entry revisions could be duplicated and entry revision pruning did not obey the max revision setting.
+- Fixed a bug where pagination limits weren't applied to banned and pending memeber pages in the control panel.
+- Developers:
+
+  - Fixed a bug in the ``cp_js_end`` hook where you could not use the CP/URL Service.
+
+
 Version 3.5.3
 -------------
 
