@@ -10,6 +10,12 @@ Version 3.5.5
 
 Release Date: April 10, 2017
 
+- Security Fixes:
+
+  - Mitigated a potential remote code execution vulnerability.
+  - Improved cryptographic security when pseudo-random numbers are used.
+  - Further hardened protections against SQL injection.
+
 - Option fields (select, multiselect, radio, and checkboxes) can now have one blank value.
 - Channels who have no more room for entries will not show under the Create menu.
 - The uncommon "Disallowed Key Characters" error will now reveal which input key was blocked when ``$debug`` is set to ``1`` in your ``index.php`` and ``admin.php`` files.
