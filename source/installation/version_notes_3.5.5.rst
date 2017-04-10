@@ -16,8 +16,8 @@ You will need to manually edit your Edit Preferences Template (forum_member/edit
 
 Replace::
 
-  -<form method="post" action="{path:update_edit_preferences}">
-  -<input type="hidden" name="XID" value="{XID_HASH}" />
+  <form method="post" action="{path:update_edit_preferences}">
+  <input type="hidden" name="XID" value="{XID_HASH}" />
 
 With::
 
