@@ -5,6 +5,35 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.5
+-------------
+
+Release Date: April 10, 2017
+
+- Security Fixes:
+
+  - Mitigated a potential remote code execution vulnerability.
+  - Improved cryptographic security when pseudo-random numbers are used.
+  - Further hardened protections against SQL injection.
+
+- Option fields (select, multiselect, radio, and checkboxes) can now have one blank value.
+- Channels who have no more room for entries will not show under the Create menu.
+- The uncommon "Disallowed Key Characters" error will now reveal which input key was blocked when ``$debug`` is set to ``1`` in your ``index.php`` and ``admin.php`` files.
+- Improved performance of categories in Channel Form new entry forms when massive numbers of categories are involved.
+- Fixed a bug (#23040) causing a Notice-level PHP error in Channels with Versioning enabled on first-save.
+- Fixed a bug where an Ajax call was being made to update the order of categories when it should not have.
+- Fixed a bug (#22894) where removing a category group from a channel may cause category groups not to be reorderable in the layout editor.
+- Fixed a bug (#23021) where avatar upload and selection might not work on some multi-site installs.
+- Fixed a bug (#23020) where visiting the control panel with no URI segments upon already being logged in would not redirect you to your preferred homepage.
+- Fixed a bug (#23029) where using a Relationship shortcut tag inside a Grid tag pair would not parse when it was the only Relationship field in the channel.
+- Fixed a bug where the ``{date_header}`` and ``{date_footer}`` template variables did not work inside Relationships.
+- Fixed a bug (#22389) where multiple Channel Forms on single page may not work.
+- Fixed a bug (#23044) where an "Unable to load the requested file" error may appear when editing a custom field.
+- Fixed a bug in the forum templates where editing your member profile preferences was not allowed on the frontend.  See the :doc:`version notes </installation/version_notes_3.5.5>` for details.
+- Developers:
+
+  - Fixed a bug where the Curl service could not send parameters along with POST requests.
+
 Version 3.5.4
 -------------
 

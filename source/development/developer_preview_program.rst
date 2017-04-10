@@ -182,6 +182,7 @@ and encourage them to join!
 - Nick Le Guillou
 - Nicolas Bottari
 - Nigel Hughes
+- Nikolay Bronskiy
 - Padraig Kennedy
 - Patrick Pohler (Anecka)
 - Patrick Woodcock
