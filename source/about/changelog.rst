@@ -5,6 +5,18 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.6
+-------------
+
+Release Date: April 13, 2017
+
+- Fixed a bug where floating point numbers could not be used in queries.
+- Fixed a bug where the Rich Text Editor field did not honor the required setting.
+- Fixed an issue where enabling Gzip compression would prevent front-end pages with PHP errors from rendering in most browsers.
+- Improved memory footprint of the control panel homepage when a site has thousands of Banned members.
+- ``<cite>`` is now allowed in Channel Entry titles.
+- Fixed an issue in the control panel where the banned member page and pending member page searches included all members.
+
 Version 3.5.5
 -------------
 
