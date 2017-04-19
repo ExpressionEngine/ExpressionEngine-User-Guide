@@ -127,7 +127,7 @@ can be useful if you have ExpressionEngine installed in a sub-directory
 and want to ensure that only that particular installation has access to
 the cookies it sets.
 
-By default, the cookie path is set to ``/``.
+By default, the cookie path is set to ``/``, so cookies will be available within the entire domain.
 
 .. _cookie-prefix-label:
 
