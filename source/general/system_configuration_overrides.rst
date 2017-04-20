@@ -3600,28 +3600,24 @@ $config['rte_enabled'] = 'y';
 Text Editor Settings`: :ref:`Enable Rich Text Editor
 <global-channel-category-url-indicator-label>`
 
+.. _overrides-save-tmpl-files:
 
 save_tmpl_files
 ---------------
 
-Enable the saving of :doc:`templates as files
+Disable the saving of :doc:`templates as files
 </templates/templates_as_files>`.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Templates are saved as files
-``n``      Templates are not saved as files **(default)**
+``y``      Templates are saved as files **(default)**
+``n``      Templates are not saved as files
 ========== ========
 
 Example Usage::
 
-$config['save_tmpl_files'] = 'y';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Settings --> Template Settings`: :ref:`Save Templates as Files
-<global-template-save-templates-as-files-label>`
+$config['save_tmpl_files'] = 'n';
 
 
 .. _save_tmpl_revisions:
