@@ -47,7 +47,7 @@ Custom fields are all represented as JSON objects. Each custom field exports its
       }
   }
 
-.. note:: Only first party fieldtypes are currently supported.
+.. note:: All fieldtypes included in the channel set must already be installed in order to import the channel set.
 
 ``channel_set.json``
 ====================
