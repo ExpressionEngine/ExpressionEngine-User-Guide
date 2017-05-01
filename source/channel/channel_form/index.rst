@@ -86,7 +86,7 @@ Title
 Set the title of the entry. This is a **required** parameter. ::
 
   <label for="title">Title</label>
-  <input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+  <input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle(event);">
 
 URL Title
 ~~~~~~~~~
