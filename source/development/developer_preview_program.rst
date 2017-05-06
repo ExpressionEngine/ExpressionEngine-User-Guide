@@ -127,6 +127,7 @@ and encourage them to join!
 - Ian Young (Expresso)
 - Ira Salsberg
 - Isaac Rayway
+- Jace Richardson (EE Harbor)
 - James Smith
 - Jamie Pittock
 - Jamie Taylor (Percipio)
@@ -181,6 +182,7 @@ and encourage them to join!
 - Nick Le Guillou
 - Nicolas Bottari
 - Nigel Hughes
+- Nikolay Bronskiy
 - Padraig Kennedy
 - Patrick Pohler (Anecka)
 - Patrick Woodcock

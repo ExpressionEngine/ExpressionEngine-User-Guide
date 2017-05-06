@@ -2849,6 +2849,14 @@ $config['memberlist_sort_order'] = 'desc';
 **Also found in CP:** :menuselection:`Settings --> Members`:
 :ref:`Member List - Order <member-list-order-label>`
 
+multi_login_sites
+-----------------
+
+The login routine can set cookies for multiple domains if needed. This allows sites who run separate domains to have a way to enable users to log-in once and remain logged-in across domains. Separate each domain with a pipe.
+
+Example Usage::
+
+$config['multi_login_sites'] = "https://www.example.com/|https://www.domain.com";
 
 .. _multiple_sites_enabled:
 
@@ -3600,28 +3608,24 @@ $config['rte_enabled'] = 'y';
 Text Editor Settings`: :ref:`Enable Rich Text Editor
 <global-channel-category-url-indicator-label>`
 
+.. _overrides-save-tmpl-files:
 
 save_tmpl_files
 ---------------
 
-Enable the saving of :doc:`templates as files
+Disable the saving of :doc:`templates as files
 </templates/templates_as_files>`.
 
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Templates are saved as files
-``n``      Templates are not saved as files **(default)**
+``y``      Templates are saved as files **(default)**
+``n``      Templates are not saved as files
 ========== ========
 
 Example Usage::
 
-$config['save_tmpl_files'] = 'y';
-
-.. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Settings --> Template Settings`: :ref:`Save Templates as Files
-<global-template-save-templates-as-files-label>`
+$config['save_tmpl_files'] = 'n';
 
 
 .. _save_tmpl_revisions:

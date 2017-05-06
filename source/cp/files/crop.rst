@@ -7,11 +7,7 @@ Crop, Rotate & Resize Image
 
 .. Overview
 
-The Image Editor page of the Control Panel allows you perform basic
-image editing tasks directly from ExpressionEngine. It is not intended
-to replace powerful image editing software such as Photoshop, but rather
-to provide a quick option for common tasks from within the control
-panel.
+The Image Editor page of the Control Panel allows you to perform basic image editing tasks directly from ExpressionEngine. It is not intended to replace powerful image editing software such as Photoshop, but rather to provide a quick option for common tasks from within the control panel.
 
 .. Screenshot (optional)
 
