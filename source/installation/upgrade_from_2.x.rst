@@ -2,7 +2,9 @@
 Upgrading from ExpressionEngine 2
 #################################
 
-.. important:: Third-party add-ons from 2.x will not work with ExpressionEngine 3. Check with each the add-on authors to see if there are updates available. If you maintain your own add-ons, please see the :doc:`/development/conversion/index`.
+.. important:: Third-party add-ons from v2 will not work with ExpressionEngine 3. Check with each add-on author to see if there are updates available. If you maintain your own add-ons, please see the :doc:`/development/conversion/index`.
+
+  Add-ons that you will not be using in v3 must be uninstalled and refactored out of your site **before** upgrading. ExpressionEngine 3 will not be able to run incompatible code to uninstall those add-ons after upgrading. For example, the `Playa & Matrix Importer <https://github.com/EllisLab/PlayaMatrixImporter>`_ can be used to convert those third-party field types to native ExpressionEngine Relationship and Grid fields, and should be run while still on v2.
 
 *********************
 1. Backup and Prepare
@@ -40,9 +42,7 @@ Now **copy** the following files from the backup of your current site to the new
 
 6. If you save templates as files, copy all files and directories from :file:`system/expressionengine/templates/` to :file:`system/user/templates/`.
 
-7. If you have any third-party add-ons, copy all files and directories from :file:`system/expressionengine/third_party/` to :file:`system/user/addons/` and all files and directories from :file:`themes/third_party/` to :file:`themes/user/`.
-
-.. note:: If any of your add-ons have updates, we recommend downloading them and putting them into the :file:`system/user/addons/` directory now.
+.. note:: We recommend putting ExpressionEngine 3 compatible third-party add-ons into the :file:`system/user/addons/` directory now.
 
 ***************
 3. Upload Files
@@ -63,6 +63,8 @@ Then upload the following files and directories:
 -  :file:`admin.php`
 
 .. note:: If you've moved your system directory, make sure to change both :file:`index.php` and :file:`admin.php` to point to the correct directory.
+
+.. note:: If you have MSM installed using subfolders, make sure to update the :file:`index.php` and :file:`admin.php` files in those folders as well.
 
 ********************
 4. Check Permissions
