@@ -17,6 +17,10 @@ This guide will help you update your site from ExpressionEngine 3 to the latest 
 
 Working either locally with your backed up files, or on the server (**not recommended**), **copy** the following files from the newly downloaded release to your site:
 
+#. Copy :file:`admin.php` to :file:`admin.php`
+
+#. Copy :file:`system/index.php` to :file:`system/index.php`
+
 #. Copy :file:`system/ee/` to :file:`system/ee/`
 
 #. Copy :file:`themes/ee/` to :file:`themes/ee/`
