@@ -35,9 +35,8 @@ For Apache, that would be ``666`` for files and ``777`` for directories, in a wo
 
 For IIS, provide all permissions to the IIS user for these files and directories.
 
-Set these files and directories to be writeable:
-
-- :file:`system/ee/*`
+- :file:`system/ee/`
+- :file:`system/ee/*` (top-level only)
 - :file:`system/user/config/config.php`
 - :file:`system/user/cache/`
 - :file:`system/user/templates/`
@@ -47,7 +46,8 @@ Set these files and directories to be writeable:
 - :file:`images/pm_attachments/`
 - :file:`images/signature_attachments/`
 - :file:`images/uploads/`
-- :file:`themes/ee/*`
+- :file:`themes/ee/`
+- :file:`themes/ee/*` (top-level only)
 
 
 ******************************
