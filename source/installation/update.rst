@@ -46,7 +46,7 @@ If an error occurs while ExpressionEngine is updating its files or database, the
 #. Navigate to :file:`system/user/cache/ee_update/backups/` and check to make sure there are backups in the :file:`system_ee` folders and :file:`themes_ee` folders.
 #. Delete the contents of :file:`system/ee/` and move the contents of :file:`system_ee` to :file:`system/ee/`.
 #. Delete the contents of :file:`themes/ee/` and move the contents of :file:`themes_ee` to :file:`themes/ee/`.
-#. If there is an SQL file located at :file:`system/user/cache/ee_update/database.sql`, import that into your database to rollback database changes.
+#. If there is an SQL file located at :file:`system/user/cache/ee_update/database.sql`, import that into your database to rollback database changes. This is only a partial backup to restore what the updater has changed, so do NOT delete the contents of your database first.
 #. Open :file:`system/user/config/config.php` and set the ``is_system_on`` config to ``y``.
 
 At this point, your site should be restored and you should be able to re-enter your control panel.
