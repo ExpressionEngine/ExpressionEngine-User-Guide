@@ -10,9 +10,21 @@ One-click Updating
 
 ExpressionEngine offers a one-click updater to make updating fast and easy for you. When an update is available, you'll see the version number in the control panel turn yellow or red. Click the version number, and then click "Update Now".
 
-TODO: Docs for command line once that's fleshed out
+You can also update ExpressionEngine via the command line on your server. This allows you to keep your installation's files only writable by your user and not also by your web service.
 
-If you cannot use the one-click updater, you can still do a :ref:`manual update<manual_updating>`.
+To update via the command line, execute the tool located at `system/ee/eecms`::
+
+  php system/ee/eecms upgrade
+
+If you ``chmod +x eecms`` and change to the ``ee`` directory, you can also execute it like this::
+
+  ./eecms upgrade
+
+If you encounter a problem that requires rolling back the upgrade, you can run this command::
+
+  ./eecms upgrade --rollback
+
+If you cannot use the one-click updater or command-line updater, you can still do a :ref:`manual update<manual_updating>`.
 
 Troubleshooting
 ^^^^^^^^^^^^^^^
