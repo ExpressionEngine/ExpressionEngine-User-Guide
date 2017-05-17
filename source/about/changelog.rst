@@ -5,6 +5,24 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.7
+-------------
+
+Release Date: May 18, 2017
+
+- Fixed a bug (#23080) where the File Manager may have performance problems for non-super admins when many member groups and upload folders are present.
+- Fixed a bug (#23076) where slashes could not be saved in extension settings.
+- Fixed a bug (#23053) where ``liveUrlTitle()`` may not work when multiple Channel Forms are present.
+- Fixed a bug where the template parser would be unable to parse a large number of global variables.
+- Fixed a bug where an entry's year, month and day fields could be saved as 0 when using dd/mm/yyyy localization.
+- If a Channel is limited to 1 entry, and 1 entry already exists, the Edit menu will take you straight to edit that entry for simplicity. Automated tests for the win.
+- Simplified a query in the RSS module that was necessary in versions < 1.4.0. No typo.
+- Fixed a bug where comment expiration date field was visible when a channel allows comments, but comments are disabled at the system level.
+- Fixed a bug (#23090) where the edit category modal on the Publish page would not properly close and reflect a successful edit.
+- Fixed a bug where member accepte and decline notifications did not always respect the control panel settings.
+- Fixed a bug where the frontend member profile email console pop-up did not display properly.
+
+
 Version 3.5.6
 -------------
 
