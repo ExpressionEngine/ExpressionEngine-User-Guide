@@ -19,8 +19,9 @@ Release Date: May 18, 2017
 - Simplified a query in the RSS module that was necessary in versions < 1.4.0. No typo.
 - Fixed a bug where comment expiration date field was visible when a channel allows comments, but comments are disabled at the system level.
 - Fixed a bug (#23090) where the edit category modal on the Publish page would not properly close and reflect a successful edit.
-- Fixed a bug where member accepte and decline notifications did not always respect the control panel settings.
+- Fixed a bug where member accept and decline notifications did not always respect the control panel settings.
 - Fixed a bug where the frontend member profile email console pop-up did not display properly.
+- Fixed a bug where the control panel login could improperly redirect if a custom homepage was set but no URL was entered.
 
 
 Version 3.5.6
