@@ -16,6 +16,7 @@ Release Date: May 18, 2017
 - Fixed a bug where the template parser would be unable to parse a large number of global variables.
 - Fixed a bug where an entry's year, month and day fields could be saved as 0 when using dd/mm/yyyy localization.
 - If a Channel is limited to 1 entry, and 1 entry already exists, the Edit menu will take you straight to edit that entry for simplicity. Automated tests for the win.
+- Grid fields now respect assigned column widths.
 - Simplified a query in the RSS module that was necessary in versions < 1.4.0. No typo.
 - Fixed a bug where comment expiration date field was visible when a channel allows comments, but comments are disabled at the system level.
 - Fixed a bug (#23090) where the edit category modal on the Publish page would not properly close and reflect a successful edit.
