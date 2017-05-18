@@ -24,7 +24,7 @@ More Complex Example
     {exp:channel:form channel="channel_name" return="channel_name/edit/ENTRY_ID" entry_id="{segment_3}"}
 
         <label for="title">Title</label>
-        <input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+        <input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle(event);">
 
         <label for="url_title">URL Title</label>
         <input type="text" name="url_title" id="url_title" value="{url_title}" maxlength="75" size="50">
@@ -79,7 +79,7 @@ Entry Form using the {custom_fields} loop
     {exp:channel:form channel="channel_name" return="channel_name/edit/ENTRY_ID" entry_id="{segment_3}"}
 
         <label for="title">Title</label>
-        <input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+        <input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle(event);">
 
         <label for="url_title">URL Title</label>
         <input type="text" name="url_title" id="url_title" value="{url_title}" maxlength="75" size="50">
@@ -137,7 +137,7 @@ Entry Form using the {file:...} tag and inline errors
 		{/if}
 
 		<label for="title">Title</label><div class="error">{error:my_field_name}</div>
-		<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+		<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle(event);">
 
 		<label for="url_title">URL Title</label><div class="error">{error:my_field_name}</div>
 		<input type="text" name="url_title" id="url_title" value="{url_title}" maxlength="75" size="50">
@@ -150,8 +150,8 @@ Entry Form using the {file:...} tag and inline errors
 
 		<label for="my_field_name">Your Custom Field (Checkbox field)</label><div class="error">{error:my_field_name}</div>
 		{field:my_field_name}
-		
-		<label for="my_field_name">Your Custom Field (Grid field)</label><div class="error">{error:my_field_name}</div>	
+
+		<label for="my_field_name">Your Custom Field (Grid field)</label><div class="error">{error:my_field_name}</div>
 		{field:my_field_name}
 
 		<label for="my_field_name">Your 3rd Party WYSIWYG Field</label><div class="error">{error:my_field_name}</div>
@@ -164,14 +164,14 @@ Entry Form using the {file:...} tag and inline errors
 Entry Form using manually constructed fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Note the date fields will have the calendar JavaScript automatically applied 
+Note the date fields will have the calendar JavaScript automatically applied
 unless ``include_assets="no"``.
 
 ::
 
 	{exp:channel:form channel="products" return="form_template/ENTRY_ID" entry_id="{segment_2}"}
 		<label for="title">Title</label>
-		<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+		<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle(event);">
 
 		<label for="url_title">URL Title</label>
 		<input type="text" name="url_title" id="url_title" value="{url_title}" maxlength="75" size="50">
@@ -194,19 +194,19 @@ unless ``include_assets="no"``.
 				<option value="{option_value}"{selected}>{option_name}</option>
 			{/options:my_field_name}
 		</select>
-		
+
 		<label for="my_field_name">Your Custom Field (Multi-Select field)</label>
 		<select name="my_field_name[]">
 			{options:my_field_name}
 				<option value="{option_value}"{selected}>{option_name}</option>
 			{/options:my_field_name}
-		</select>		
+		</select>
 
 		<label for="my_field_name">Your Custom Field (Checkbox field)</label>
 		{options:my_field_name}
 			<input type="checkbox" name="my_field_name[]" value="{option_value}" {checked}>  {option_name}</br>
 		{/options:my_field_name}
-		
+
 		<label for="my_field_name">Your Custom Field (Radio field)</label>
 		{options:my_field_name}
 			<input type="radio" name="my_field_name" value="{option_value}" {checked}>  {option_name}</br>
@@ -219,15 +219,15 @@ unless ``include_assets="no"``.
 Entry Forms using manually constructed file field
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In this example, the file directory is hard coded and the form is not editable, 
-as there is no way to replace an existing field's data when editing an existing 
+In this example, the file directory is hard coded and the form is not editable,
+as there is no way to replace an existing field's data when editing an existing
 entry.
 
 ::
 
 	{exp:channel:form channel="products" return="form_template/ENTRY_ID"}
 		<label for="title">Title</label>
-		<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+		<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle(event);">
 
 		{a_file}File name: {file_name}{/a_file}
 
@@ -238,19 +238,19 @@ entry.
 	{/exp:channel:form}
 
 
-	
+
 ::
 
 	{exp:channel:form channel="products" return="form_template/ENTRY_ID"}
 		<label for="title">Title</label>
-		<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+		<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle(event);">
 
 		<input type="file" name="my_field_name" />
 		<input type="hidden" name="my_field_name_directory" value="1" />
 		<input type="hidden" name="my_field_name_hidden_file" value="{my_field_name}{file_name}{/my_field_name}" />
 
 		<input type="submit" name="submit" value="Submit">
-	{/exp:channel:form}	
+	{/exp:channel:form}
 
 
 
@@ -284,7 +284,7 @@ AJAX-driven Entry Form
 		<body>
 			{exp:channel:form channel="products" return="form_template/ENTRY_ID" entry_id="{segment_2}" json="yes"}
 				<label for="title">Title</label>
-				<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle();">
+				<input type="text" name="title" id="title" value="{title}" size="50" maxlength="100" onkeyup="liveUrlTitle(event);">
 
 				<label for="url_title">URL Title</label>
 				<input type="text" name="url_title" id="url_title" value="{url_title}" maxlength="75" size="50">
