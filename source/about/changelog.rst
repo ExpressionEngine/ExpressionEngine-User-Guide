@@ -10,11 +10,12 @@ Version 3.5.8
 
 Release Date: June 15, 2017
 
-- Security Fixes:
+- Security Fixes (thanks again to Mustafa Hasan from HackerOne!):
 
-  - For image only uploads we are now doing extra validation to ensure the upload is, in fact, an image.
-  - Added additional limitations on allowed file types based on the file extension in addition to the existing mime type checks. (Identified by Erik McClements)
-  - Fixed some potential XSS issues.
+  - Eliminated a couple areas that could disclose the full server path.
+  - Fixed a potential remote code execution issue (identified by Erik McClements).
+  - Improved XSS protection in a few areas of the control panel.
+  - Tightened off-site redirect protection / warning.
 
 - Optimized entry saving on installations with large numbers of categories.
 - Optimized `{category_menu}` tag parsing in the channel entry form.
