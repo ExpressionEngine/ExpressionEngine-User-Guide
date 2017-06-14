@@ -34,7 +34,7 @@ Release Date: June 15, 2017
 - Fixed a bug (#23136) where the maximum file size field description incorrectly said megabytes instead of kilobytes.
 - Fixed a bug (#23132) where value/label pairs could not be used in member fields.
 - Fixed a bug (#23131) where templates could not be deleted from the template manager search results screen.
-- Fixed a bug with grid column widths; some wanted a percentage!
+- Fixed a bug (#23148) with grid column widths; some wanted a percentage!
 - Fixed a bug (#23118) where the 3.1.0 updater was checking if a variable exists after using it. Impulse control!
 - (#23115) Open/Closed statuses now respect your language pack's translation in the Entry Manager.
 
