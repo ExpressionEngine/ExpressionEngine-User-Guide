@@ -5,6 +5,41 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.8
+-------------
+
+Release Date: June 15, 2017
+
+- Security Fixes (thanks again to Mustafa Hasan from HackerOne!):
+
+  - Eliminated a couple areas that could disclose the full server path.
+  - Fixed a potential remote code execution issue (identified by Erik McClements).
+  - Improved XSS protection in a few areas of the control panel.
+  - Tightened off-site redirect protection / warning.
+
+- Optimized entry saving on installations with large numbers of categories.
+- Optimized `{category_menu}` tag parsing in the channel entry form.
+- Modified upload filename sanitization so that numeric segments are no longer suffixed with an underscore.
+- Channel Form's Grid CSS jumped the starting block. It has been reset and issued a warning.
+- Fixed a syntax error in compressed Channel Form JavaScript introduced in 3.5.7.
+- Added a crossing guard to prevent PHP errors from entering traffic when the Pages module references non-existent entries.
+- Added some extra no cache headers for Chrome so it would stop trying to server the CSRF token from cache.
+- Fixed a bug (#23125) where the Pages module did not have a nested view.
+- Fixed a bug (#23119) where the Relationship field filter would not work unless the member has access to the Relationship module.
+- Fixed a bug (#23098) where sticky entries were not sticky in Relationship field output.
+- Fixed a bug (#23111) where permissions to send email to member groups and to view the email cache could not be set.
+- Fixed a bug (#23106) where the date picker may appear blank in Firefox.
+- Fixed a bug (#23108) where selecting a category for an entry in Channel Form would not automatically assign its parents to the entry.
+- Fixed a bug (#23097) where third-party RTE tools would not be loaded.
+- Fixed a bug (#23136) where the maximum file size field description incorrectly said megabytes instead of kilobytes.
+- Fixed a bug (#23132) where value/label pairs could not be used in member fields.
+- Fixed a bug (#23131) where templates could not be deleted from the template manager search results screen.
+- Fixed a bug (#23148) with grid column widths; some wanted a percentage!
+- Fixed a bug (#23118) where the 3.1.0 updater was checking if a variable exists after using it. Impulse control!
+- (#23115) Open/Closed statuses now respect your language pack's translation in the Entry Manager.
+
+
+
 Version 3.5.7
 -------------
 
