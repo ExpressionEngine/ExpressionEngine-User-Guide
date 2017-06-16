@@ -10,6 +10,9 @@ One-click Updating
 
 ExpressionEngine offers a one-click updater to make updating fast and easy for you. When an update is available, you'll see the version number in the control panel turn yellow or red. Click the version number, and then click "Update Now".
 
+Updating via command line
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
 You can also update ExpressionEngine via the command line on your server. This allows you to keep your installation's files only writable by your user and not also by your web service.
 
 To update via the command line, execute the tool located at `system/ee/eecms`::
