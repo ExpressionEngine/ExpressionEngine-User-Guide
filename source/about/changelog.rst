@@ -5,6 +5,15 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.9
+-------------
+
+Release Date: June 16, 2017
+
+- Improved the display of long filenames in grid fields.
+- Fixed a bug (#23153) where manually-sorted multi-relationship fields may not appear sorted correctly on the front-end.
+
+
 Version 3.5.8
 -------------
 
