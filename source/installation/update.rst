@@ -26,6 +26,8 @@ If you encounter a problem that requires rolling back the upgrade, you can run t
 
 If you cannot use the one-click updater or command-line updater, you can still do a :ref:`manual update<manual_updating>`.
 
+.. note:: If you have code in your ``config.php`` that relies on ``$_SERVER`` variables or anything else not available in a command-line environment, you can check for ``REQ == 'CLI'`` to set alternate values.
+
 Troubleshooting
 ^^^^^^^^^^^^^^^
 
