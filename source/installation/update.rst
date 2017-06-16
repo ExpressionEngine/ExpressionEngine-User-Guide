@@ -20,7 +20,7 @@ If you ``chmod +x eecms`` and change to the ``ee`` directory, you can also execu
 
   ./eecms upgrade
 
-If you encounter a problem that requires rolling back the upgrade, you can run this command::
+Add a ``-v`` flag for verbose output. If you encounter a problem that requires rolling back the upgrade, you can run this command::
 
   ./eecms upgrade --rollback
 
