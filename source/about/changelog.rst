@@ -13,7 +13,7 @@ Release Date: June 27, 2017
 - Security Fixes
 
 
-  - Fixed a potential stored XSS issue.
+  - Fixed a potential reflected XSS issue.
   - Fixed a potential issue that could lead to arbitrary execution of ExpressionEngine tags.
 
 - Optimized Relationship control panel display query.
