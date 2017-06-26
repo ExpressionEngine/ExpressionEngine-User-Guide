@@ -12,16 +12,16 @@ Release Date: June 27, 2017
 
 - Security Fixes
 
-  - Fixed a bug where ``{current_url}`` and ``{current_path}`` were entirely unencoded.
+
   - Fixed a potential stored XSS issue.
   - Fixed a potential issue that could lead to arbitrary execution of ExpressionEngine tags.
 
+- Optimized Relationship control panel display query.
+- Fixed a missing language key in the member module.
 - Fixed a bug (#23133) where image could not be resized proportionally in the File Manager.
 - Fixed a bug (#23157) where saving a channel entry may attempt to assign categories twice.
 - Fixed a bug (#23160) where member groups without member deletion permissions may see an error in the control panel.
-- Optimized Relationship control panel display query.
-- Fixed a missing language key in the member module.
-
+- Fixed a bug where ``{current_url}`` and ``{current_path}`` were entirely unencoded.
 
 Version 3.5.9
 -------------
