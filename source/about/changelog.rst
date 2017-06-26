@@ -18,7 +18,7 @@ Release Date: June 27, 2017
 
 - Optimized Relationship control panel display query.
 - Fixed a missing language key in the member module.
-- Fixed a bug (#23133) where image could not be resized proportionally in the File Manager.
+- Fixed a bug (#23133) where images could not be resized proportionally in the File Manager.
 - Fixed a bug (#23157) where saving a channel entry may attempt to assign categories twice.
 - Fixed a bug (#23160) where member groups without member deletion permissions may see an error in the control panel.
 - Fixed a bug where ``{current_url}`` and ``{current_path}`` were entirely unencoded.
