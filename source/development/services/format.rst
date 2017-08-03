@@ -82,9 +82,73 @@ Text Formatter
 
 .. class:: Text
 
-.. method:: attributeEscape()
+.. method:: attributeEscape($double_encode = TRUE)
 
   Escapes a string for use in an HTML attribute.
+
+  :param bool $double_encode: Whether to double encode existing HTML entities
+  :returns: A Formatter object
+  :rtype: object
+
+.. method:: attributeSafe($options = [])
+
+  Makes content safe to use in an HTML attribute. In addition to escaping like attributeEscape(), it allows for character limiting, and unicode punctuation—handy for meta tags where entities may not be parsed.
+
+  :param array $options:
+
+    - (bool) **double_encode** (default: FALSE) - whether to double encode existing entities
+    - (string) **end_char** (default: &#8230;) - character to use when the limit terminates the string
+    - (int) **limit** (default: no limit) - number of characters to limit to, retains whole words
+    - (bool) **unicode_punctuation** (default: TRUE) - whether or not to use unicode punctuation characters instead of entities
+
+  :returns: A Formatter object
+  :rtype: object
+
+.. method:: limitChars($options = [])
+
+  Limit to X characters, with an optional end character
+
+  :param array $options:
+
+    - (int) **characters** (default: 500) - number of characters to limit to, does not preserve whole words
+    - (string) **end_char** (default: &#8230;) - character to use when the limit terminates the string
+
+  :returns: A Formatter object
+  :rtype: object
+
+.. method:: formPrep()
+
+  Preps the content for use in a form field
+
+  :returns: A Formatter object
+  :rtype: object
+
+.. method:: encrypt($options = [])
+
+  Encrypt the text
+
+  :param array $options:
+
+    - (string) **key** (optional encryption key, when not provided, uses the application encryption key)
+    - (bool) **encode** (default: FALSE) - whether or not to base64 encode the encrypted data for safe transport
+
+  :returns: A Formatter object
+  :rtype: object
+
+.. method:: encodeEETags($options = [])
+
+  Encode ExpressionEngine Tags. By default encodes all curly braces so variables are also protected.
+
+  :param array $options:
+
+    - (bool) **encode_vars** (default: TRUE) - whether or not to convert curly braces on variables along with tags
+
+  :returns: A Formatter object
+  :rtype: object
+
+.. method:: getLength()
+
+  Replace the contents with the length of the string
 
   :returns: A Formatter object
   :rtype: object
