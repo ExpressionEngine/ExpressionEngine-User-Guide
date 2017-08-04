@@ -43,7 +43,7 @@ All Formatters
 
 .. method:: compile()
 
-  Compiles and returns the URL as a string. Typically this is used when you
+  Compiles and returns the content as a string. Typically this is used when you
   need to use a content as an array key, or want to json_encode() the content.
 
   :returns: string
