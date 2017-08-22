@@ -59,7 +59,7 @@ Below are potential issues you may run into while using ExpressionEngine's autom
 "The following paths are not writable:"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This error occurs when the process running the updater does not have proper filesystem permissions to move the new ExpressionEngine files into place. Take a look at the :ref:`Set File Permissions <file_permissions>` section of the installation guide to make sure corret permissions are set.
+This error occurs when the process running the updater does not have proper filesystem permissions to move the new ExpressionEngine files into place. Take a look at the :ref:`Set File Permissions <file_permissions>` section of the installation guide to make sure correct permissions are set.
 
 Cannot rollback a failed upgrade
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -114,6 +114,8 @@ Go to your site's control panel URL (typically found at ``http://example.com/adm
 You're Done! ExpressionEngine is now fully updated. But before you go...
 
 - If the updater could not automatically rename the installer, rename or remove :file:`system/ee/installer/` directory manually. The installer directory can be safely removed after installing ExpressionEngine.
+
+- To enable you to use the one-click updater next time, make sure your :ref:`file permissions <file_permissions>` are all set.
 
 - Review the :doc:`Version Notes </installation/version_notes>` since they outline any version-specific changes that you may need to make to your installation.
 

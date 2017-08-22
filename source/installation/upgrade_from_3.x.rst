@@ -39,6 +39,8 @@ You're Done! ExpressionEngine is now fully updated. But before you go...
 
 - If the updater could not automatically rename the installer, rename or remove :file:`system/ee/installer/` directory manually. The installer directory can be safely removed after installing ExpressionEngine.
 
+- To enable one-click updating, make sure your :ref:`file permissions <file_permissions>` are all set.
+
 - Review the :doc:`Version Notes </installation/version_notes>` since they outline any version-specific changes that you may need to make to your installation.
 
 - Review :ref:`file permissions <file_permissions>` if something isn't working quite right.
