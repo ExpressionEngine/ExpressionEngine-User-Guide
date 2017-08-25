@@ -5,6 +5,35 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.11
+--------------
+
+Release Date: August 24, 2017
+
+- Optimized the entry manager for speed.
+- Restored check for banned email addresses when registering/updating a member record.
+- Added per page filter to a number of tables in the control panel.
+- Altered the AJAX response headers to accomidate IE's JSON ignorance.
+- Fixed a bug where clearing out a File field may fire off numerous form validation AJAX requests.
+- Fixed a bug (#23171) where the template parser got overwhelemd with really large templates and found a happy place instead of doing work.
+- Fixed a bug where trying to automatically resize SVG files would throw an error.
+- Fixed a display issue with abstracted Extension settings when there are many checkboxes/multi-select options.
+- Fixed a bug where abstracted Extension settings items could not have field instructions.
+- Fixed a bug (#23174) where Simple Commerce emails did not respect the Mail Format email preference, preventing it from being able to send HTML emails.
+- Fixed a bug where setting PHP memory in gigabytes setting could result in memory errors when uploading.
+- Fixed a bug (#22741) in the installer where the superadmin user created during installation was assumed to have a member_id of 1.  We all know what they say about assumptions, don't we?
+- Fixed a bug where the list of addons in the member group permissions included some non-addons.
+- Fixed a bug (#23183) where the template create button did not show on the template manager page for some member groups with permission to create templates.
+- Fixed a bug where saving templates when caching was disabled caused an error.
+- Fixed a bug where thumbnails were not removed when deleting a file record with a missing file.
+- Fixed a bug (#23181) where it was not possible to delete the last row in a grid field when editing via the channel entry form.
+- Fixed a bug (#23195) where third party fieldtypes could not be uninstalled if the file name wasn't standard issue.
+- Fixed a bug in the forum settings where you couldn't manage moderator notifications.
+- Developers:
+
+  - Fixed a bug (#21702) where the legacy file model's ``ee()->file_model->delete_files($Id);`` would show a system error if deleting a record that has a missing image file and fail to delete any stray thumbnails.
+  - Fixed a bug (#23207) where the legacy form validation error for too short passwords didn't display the required password length properly.
+
 Version 3.5.10
 --------------
 

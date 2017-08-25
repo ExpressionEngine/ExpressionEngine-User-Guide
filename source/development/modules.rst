@@ -428,25 +428,19 @@ If your add-on needs a :style_guide:`sidebar <c/structure#content-box-sidebar>` 
 ee()->cp->header
 ----------------
 
-This variable allows you to further customize your :style_guide:`Section Header <c/structure#section-header>` by defining a search box and/or :style_guide:`Section settings <c/structure#section-settings>`, and potentially overriding the ``heading``.
+This variable allows you to further customize your :style_guide:`Section Header <c/structure#section-header>` by specifying icons to go in front of the title.
 
 Within your control panel method, or potentially the constructor, just set ``ee()->cp->header``::
 
   ee()->cp->header = array(
-    'title' => lang('template_manager'),
-    'form_url' => ee('CP/URL')->make('design/template/search', array('return' => $return)),
     'toolbar_items' => array(
       'settings' => array(
         'href' => ee('CP/URL')->make('settings/template'),
         'title' => lang('settings')
       ),
-    ),
-    'search_button_value' => lang('search_templates')
+    )
   );
 
-- ``title`` (string): The string to display as the :style_guide:`Section Header <c/structure#section-header>`
-- ``form_url`` (string): The form action for the :style_guide:`Section Header <c/structure#section-header>` search form. The ``name`` of the text input is ``search``.
-- ``search_button_value`` (string): By default, we'll use the word "Search" for the :style_guide:`Section Header <c/structure#section-header>` search form's button, but you can define a different wording here.
 - ``toolbar_items`` (array): An associative array of :style_guide:`buttons <c/structure#section-settings>` to go in front of the title. The key will define the class and provide an icon (e.g. ``settings`` and ``download``), and the value is another associative array containing the ``href`` and the ``title`` of the link.
 
 Javascript
