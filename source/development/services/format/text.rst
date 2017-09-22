@@ -222,7 +222,7 @@ API Reference
   :param array $options:
 
     - (string) **key** (optional encryption key, when not provided, uses the application encryption key)
-    - (bool) **encode** (default: FALSE) - whether or not to base64 encode the encrypted data for safe transport
+    - (bool) **encode** (default: TRUE) - whether or not to base64 encode the encrypted data for safe transport
 
   :returns: A Formatter object
   :rtype: object
