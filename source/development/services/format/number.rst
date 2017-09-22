@@ -30,13 +30,45 @@ Currency
 
 ::
 
-  $money = ee('Format')->make('Number', 1.42)->currency();
-  // $1.42 (presuming default / US locale in the PHP environment)
+  $money = ee('Format')->make('Number', 4736234.5)->currency();
+  // $4,736,234.58 (presuming default / US locale in the PHP environment)
 
   $money = ee('Format')->make('Number', 4736234.58)->currency(['locale' => 'de_DE', 'currency' => 'EUR']);
   // 4.736.234,58 €
 
-.. warning:: For the greatest accuracy, the PHP intl extension must be available. Without it, the currency symbol may be placed in the wrong position for non-US locales. The fallback also relies on `strfmon` which is not available on all systems, such as Windows. Thankfully the PHP intl extension is available by default, so your environment would have had to intentionally disabled it (why??) for it to be unavailable.
+.. warning:: For the greatest accuracy, the PHP intl extension must be available (PHP's default). Without it, the currency symbol may be placed in the wrong position for non-US locales. The fallback also relies on `strfmon` which is not available on all systems, such as Windows.
+
+Duration
+--------
+
+::
+
+  $duration = ee('Format')->make('Number', 112358)->duration();
+  // 31:12:38
+
+Ordinal
+-------
+
+::
+
+  $ordinal = ee('Format')->make('Number', 43)->ordinal();
+  // 43rd
+
+Spellout
+--------
+
+::
+
+  $written_check = ee('Format')->make('Number', 112358.13)->spellout();
+  // one hundred twelve thousand three hundred fifty-eight point one three
+
+  $written_check = ee('Format')->make('Number', 112358.13)->spellout(['capitalize' => 'ucwords']);
+  // One Hundred Twelve Thousand Three Hundred Fifty-eight Point One Three
+
+  $written_check = ee('Format')->make('Number', 112358.13)->spellout(['locale' => 'de_DE']);
+  // ein­hundert­zwölf­tausend­drei­hundert­acht­und­fünfzig Komma eins drei
+
+.. warning:: This method requires the PHP intl extension (enabled by default).
 
 *************
 API Reference
