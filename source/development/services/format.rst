@@ -4,7 +4,7 @@ Format Service
 
 .. contents::
   :local:
-  :depth: 1
+  :depth: 2
 
 .. highlight:: php
 
@@ -77,10 +77,63 @@ Number Formatter
   :returns: A Formatter object
   :rtype: object
 
+.. method:: currency($options = [])
+
+  Formats as currency. Greatest accuracy requires the PHP intl extension to be available
+
+  :param array $options:
+
+    - (string) **currency** code (USD, EUR, etc.)
+    - (string) **locale** (default: en_US.UTF-8)
+
+  :returns: A Formatter object
+  :rtype: object
+
+  .. method:: duration($options = [])
+
+    Formats as a duration using a rule-based format, e.g.: hh:mm:ss, mm:ss, or ss sec.
+
+    :param array $options:
+
+      - (string) **locale** (default: en_US.UTF-8)
+
+    :returns: A Formatter object
+    :rtype: object
+
+  .. method:: ordinal($options = [])
+
+    Formats with an ordinal suffix, e.g. ``127th``. Locales other than English require the PHP intl extension.
+
+    :param array $options:
+
+      - (string) **locale** (default: en_US.UTF-8)
+
+    :returns: A Formatter object
+    :rtype: object
+
+  .. method:: spellout($options = [])
+
+    Spell out the number as words. Requires the PHP intl extension.
+
+    :param array $options:
+
+      - (string) **capitalize** 'ucfirst' or 'ucwords'
+      - (string) **locale** (default: en_US.UTF-8)
+
+    :returns: A Formatter object
+    :rtype: object
+
 Text Formatter
 --------------
 
 .. class:: Text
+
+.. method:: accentsToAscii($options = [])
+
+  Converts accented / multi-byte characters, e.g. ü, é, ß to ASCII transliterations. Uses foreign_chars.php config, either the default or user override, as a map
+
+  :returns: A Formatter object
+  :rtype: object
 
 .. method:: attributeEscape($double_encode = TRUE)
 
@@ -104,21 +157,27 @@ Text Formatter
   :returns: A Formatter object
   :rtype: object
 
-.. method:: limitChars($options = [])
+.. method:: censor()
 
-  Limit to X characters, with an optional end character
-
-  :param array $options:
-
-    - (int) **characters** (default: 500) - number of characters to limit to, does not preserve whole words
-    - (string) **end_char** (default: &#8230;) - character to use when the limit terminates the string
+  Censor naughty words, respects application preferences
 
   :returns: A Formatter object
   :rtype: object
 
-.. method:: formPrep()
+.. method:: convertToEntities($options = [])
 
-  Preps the content for use in a form field
+  Converts all applicable characters into HTML entities
+
+  :returns: A Formatter object
+  :rtype: object
+
+.. method:: encodeEETags($options = [])
+
+  Encode ExpressionEngine Tags. By default encodes all curly braces so variables are also protected.
+
+  :param array $options:
+
+    - (bool) **encode_vars** (default: TRUE) - whether or not to convert curly braces on variables along with tags
 
   :returns: A Formatter object
   :rtype: object
@@ -135,13 +194,9 @@ Text Formatter
   :returns: A Formatter object
   :rtype: object
 
-.. method:: encodeEETags($options = [])
+.. method:: formPrep()
 
-  Encode ExpressionEngine Tags. By default encodes all curly braces so variables are also protected.
-
-  :param array $options:
-
-    - (bool) **encode_vars** (default: TRUE) - whether or not to convert curly braces on variables along with tags
+  Preps the content for use in a form field
 
   :returns: A Formatter object
   :rtype: object
@@ -153,11 +208,77 @@ Text Formatter
   :returns: A Formatter object
   :rtype: object
 
-.. method:: convertToEntities()
+.. method:: json($options = [])
 
-  Converts all applicable characters to HTML entities
+  Encode as JSON
 
-  :returns: a Formatter object
+  :param array $options:
+
+    - (bool) **double_encode** (default: TRUE) - whether to double encode already-encoded entities
+    - (bool) **enclose with quotes** (default: TRUE) - whether or not to return the JSON enclosed in double quotes
+    - (string) **options** Pipe-delimited list of PHP JSON bitmask constants
+
+  :returns: A Formatter object
+  :rtype: object
+
+.. method:: limitChars($options = [])
+
+  Limit to X characters, with an optional end character
+
+  :param array $options:
+
+    - (int) **characters** (default: 500) - number of characters to limit to, does not preserve whole words
+    - (string) **end_char** (default: &#8230;) - character to use when the limit terminates the string
+
+  :returns: A Formatter object
+  :rtype: object
+
+.. method:: replace($options = [])
+
+  Encrypt the text
+
+  :param array $options:
+
+    - (string) **find** - the text to be replaced
+    - (string) **replace** - the replacement text
+    - (bool) **case_sensitive** (default: TRUE) - whether or not the replacement is case-sensitive (has no effect if regex replacement is used, in those cases use the ``i`` regex flag)
+    - (bool) **regex** (default: FALSE) - whether the find string should be processed as a regex replacement
+
+  :returns: A Formatter object
+  :rtype: object
+
+.. method:: urlDecode($options = [])
+
+  URL encode the text
+
+  :param array $options:
+
+    - (bool) **plus_encoded_spaces** (default: FALSE) - whether or not to decode ``+`` to spaces
+
+  :returns: A Formatter object
+  :rtype: object
+
+.. method:: urlEncode($options = [])
+
+  URL encode the text
+
+  :param array $options:
+
+    - (bool) **plus_encoded_spaces** (default: FALSE) - whether or not to encode spaces as ``+`` instead of ``%20``
+
+  :returns: A Formatter object
+  :rtype: object
+
+.. method:: urlSlug($options = [])
+
+  Make a URL slug from the text
+
+  :param array $options:
+
+    - (string) **separator** (default: ``-``) - the character used to separate words. If not specified, will respect the application preferences.
+    - (bool) **lowercase** (default: TRUE) - whether or not to force lowercase
+
+  :returns: A Formatter object
   :rtype: object
 
 When to use ``compile()``
