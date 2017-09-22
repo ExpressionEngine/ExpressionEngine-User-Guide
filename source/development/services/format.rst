@@ -61,67 +61,11 @@ All Formatters
     $array = array('size' => (string) ee('Format')->make('Number', $content)->bytes());
 
 
-.. namespace:: EllisLab\ExpressionEngine\Service\Formatter\Formats
+
 
 Number Formatter
 ----------------
 
-.. class:: Number
-
-.. method:: bytes($abbr = TRUE, $include_markup = TRUE)
-
-  Formats a binary byte multiple into a human-readable measure of units, e.g. B, KB, MB, GB.
-
-  :param bool $abbr: Use the abbreviated form of the byte format
-  :param bool $include_markup: Output with ``<abbr>`` HTML. Only affects abbreviated forms.
-  :returns: A Formatter object
-  :rtype: object
-
-.. method:: currency($options = [])
-
-  Formats as currency. Greatest accuracy requires the PHP intl extension to be available
-
-  :param array $options:
-
-    - (string) **currency** code (USD, EUR, etc.)
-    - (string) **locale** (default: en_US.UTF-8)
-
-  :returns: A Formatter object
-  :rtype: object
-
-  .. method:: duration($options = [])
-
-    Formats as a duration using a rule-based format, e.g.: hh:mm:ss, mm:ss, or ss sec.
-
-    :param array $options:
-
-      - (string) **locale** (default: en_US.UTF-8)
-
-    :returns: A Formatter object
-    :rtype: object
-
-  .. method:: ordinal($options = [])
-
-    Formats with an ordinal suffix, e.g. ``127th``. Locales other than English require the PHP intl extension.
-
-    :param array $options:
-
-      - (string) **locale** (default: en_US.UTF-8)
-
-    :returns: A Formatter object
-    :rtype: object
-
-  .. method:: spellout($options = [])
-
-    Spell out the number as words. Requires the PHP intl extension.
-
-    :param array $options:
-
-      - (string) **capitalize** 'ucfirst' or 'ucwords'
-      - (string) **locale** (default: en_US.UTF-8)
-
-    :returns: A Formatter object
-    :rtype: object
 
 Text Formatter
 --------------
@@ -300,3 +244,11 @@ For example::
   ee()->javascript->set_global(array(
     'form.some_input.value' => ee('Format')->make('String', $content)->attribute_escape()->compile()
   ));
+
+.. toctree::
+  :hidden:
+  :glob:
+  :titlesonly:
+
+  format/number
+  format/string
