@@ -1,5 +1,5 @@
-Wrapping Templates in Layouts
-=============================
+DRY: Template Layouts
+=====================
 
 .. contents::
    :local:
