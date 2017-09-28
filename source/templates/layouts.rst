@@ -78,47 +78,172 @@ Layout Variables
 
 .. contents::
    :local:
-   :depth: 1
+   :depth: 2
 
-Parameter Variables
-~~~~~~~~~~~~~~~~~~~
+Dynamic Variables & Lists
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the layout tag you can use parameters to pass additional data to your layout template::
+You can set variables in your templates that can later be used in your layouts. For instance you can set the contents of the page title tag, or breadcrumb navigation, sidebar content, etc. The content can be set in one of three ways, depending on how you need to use it in your layout:
 
-  {layout="site/_html-layout" color="blue"}
+{layout:set}
+^^^^^^^^^^^^
 
-In your layout this will be available as a ``{layout:color}`` tag::
+**Setting** a variable works similarly to setting a string variable in a programming language, like JavaScript. The contents are set to the variable name you provide. In your template::
 
-  I drive a {layout:color} car.
+  {layout:set name='title'}{title}{/layout:set}
+
+And then in the layout, wherever you need to use this variable, reference it by name, e.g. ``{layout:title}``::
+
+  <title>{if layout:title}{layout:title} | {/if} Example Site Name</title>
+
+{layout:set:append}
+^^^^^^^^^^^^^^^^^^^
+
+**Appending** a variable works well with lists, and is similar to setting an array in a programming language, like JavaScript. Use this tag in a loop, when you want to capture the contents as individual items::
+
+  {layout:set:append name='titles'}{title}{/layout:set:append}
+
+And then in the layout, wherever you want to display the variable, use a tag pair, and loop through the values::
+
+  {layout:titles}
+    {value}<br>
+  {/layout:titles}
+
+Like most pair variables, you have access to ``{count}``, ``{total_results}``, and the ``{value}`` variables (``{index}`` is described below) for output and use in conditionals::
+
+  {layout:titles}
+    {if count == 1}
+      <ol>
+    {/if}
+
+    <li>{value}</li>
+
+    {if count == total_results}
+      </ol>
+    {/if}
+  {/layout:titles}
+
+{layout:set:prepend}
+^^^^^^^^^^^^^^^^^^^^
+
+**Prepending** a variable works identical to ``{layout:set:append}`` above, except the new item gets pushed to the **front** of the list instead of added to the back.
+
+Using Layout Lists Together
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Sometimes it is helpful to be able to reference a specific item in a list, such as when you have set multiple layout variables with corresponding content. For example, setting a list of URLs and corresponding titles for use in HTML and JSON-LD breadcrumbs. In your template you might use::
+
+  {layout:set:append name='breadcrumb_urls'}{path='overlanding'}{/layout:set:append}
+  {layout:set:append name='breadcrumb_titles'}Overlanding{/layout:set:append}
+  {layout:set:append name='breadcrumb_jsonld_positions'}2{/layout:set:append}
+
+  {layout:set:append name='breadcrumb_urls'}{path='overlanding/kitchens'}{/layout:set:append}
+  {layout:set:append name='breadcrumb_titles'}Kitchens{/layout:set:append}
+  {layout:set:append name='breadcrumb_jsonld_positions'}3{/layout:set:append}
+
+We now have 3 items in each list, and the URL, titles, and JSON-LD ListItem position correspond to each other in each list. In our parent layout we can now use these lists to create both sets of breadcrumbs::
+
+  <ul class="crumbs">
+    <li><a href="{homepage}">Home</a></li>
+    {layout:breadcrumb_urls}
+      <li><a href="{value}">{layout:breadcrumb_titles index='{index}'}</a></li>
+    {/layout:breadcrumb_urls}
+  </ul>
+
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "{homepage}",
+          "name": "Home"
+        }
+      }
+      {layout:breadcrumb_urls}
+        ,{
+          "@type": "ListItem",
+          "position": {layout:breadcrumb_jsonld_positions index='{index}'},
+          "item": {
+            "@id": "{value}",
+            "name": "{layout:breadcrumb_titles index='{index}'}"
+          }
+        }
+      {/layout:breadcrumb_urls}
+    ]
+  }
+  </script>
+
+Resulting in::
+
+  <ul class="crumbs">
+    <li><a href="https://example.com">Home</a></li>
+    <li><a href="https://example.com/overlanding">Overlanding</a></li>
+    <li><a href="https://example.com/overlanding/kitchens">Kitchens</a></li>
+  </ul>
+
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://example.com",
+          "name": "Home"
+        }
+      }
+      ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://example.com/overlanding",
+          "name": "Overlanding"
+        }
+      }
+      ,{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https://example.com/overlanding/kitchens",
+          "name": "Kitchens"
+        }
+      }
+    ]
+  }
+  </script>
+
+Notice how you only have to loop through one of the lists, and to output the correct counterpart from another list, we simply reference them by **index**. Every looping list will output its current index, and every list variable can reference a single item from its own list with the ``index=`` parameter::
+
+  {layout:variable_list index='3'}
+
+Static Variables
+~~~~~~~~~~~~~~~~
+
+For static content, short words, etc. that are defined directly in the template, and not from a variable, there are two shortcuts available. In the layout tag itself you can use parameters to pass additional data to your layout template::
+
+  {layout="site/_html-layout" login_required="yes"}
+
+In your layout this will be available as a ``{layout:login_required}`` variable::
+
+  {if layout:login_required == 'yes' && logged_in_member_id == 0}
+    {embed='site/_login-modal'}
+  {/if}
+
+Or you can use the ``{layout:set}`` static-variable shortcut::
+
+  {layout:set name='login_required' value='yes'}
+
+.. note:: The ``{layout:set}`` tags are not output on the template itself, since they are intended to be output on the parent layout. If you need the contents to also display inside the ``{layout:contents}``, you must output it separately.
+
+.. note:: Using ``{layout:set}`` in a looping tag pair will set the layout variable with the last item in the loop. Layout variables can be intentionally overwritten this way, but is something to be mindful of.
 
 .. important:: The name ``contents`` is reserved for the template data.
-
-Dynamic Variables
-~~~~~~~~~~~~~~~~~
-
-Layout tags should be placed as high in the template as possible and they **must** be used **before** any module or plugin (``{exp: }``) tags. This restriction presents a problem when trying to pass data from a module to your layout.
-
-In order to get around this problem, layout variables can be set throughout the template using the ``{layout:set}`` tag::
-
-  {layout:set name="color" value="red"}
-
-The name parameter specifies the name of the variable and the value parameter contains the data you want to pass to the layout. Using this tag will override any equally named parameters on the main
-``{layout=""}`` tag.
-
-You can also set variables using a tag pair; this is useful for capturing the output of plugin or module tags. With the tag pair you do not need the value parameter, instead the data inside the pair will be used as the variable value. The name parameter must still be given::
-
-  {layout="site/_html-layout"}
-
-  {exp:channel:entries channel="colors" limit="1"}
-    {title}
-    {layout:set name="color"}{title}{/layout:set}
-  {/exp:channel:entries}
-
-The ``{layout:set}`` tag will always be fully removed from your template so you must show the data you are saving separately.
-
-.. note::
-  Using ``{layout:set}`` in a looping tag pair will populate the value
-  of the layout variable with the last element of the pair.
 
 Expanded Example
 ----------------
@@ -141,9 +266,9 @@ By using a :doc:`conditional <./conditionals>` we have made the title parameter 
   {exp:channel:entries channel="news"}
     <h2>{title}</h2>
 
-    {if total_results == "1"}
+    {if total_results == 1}
       {body}
-      {layout:set name="title" value="News | {title}"}
+      {layout:set name="title"}News | {title}{/layout:set}
     {if:else}
       {summary}
     {/if}
