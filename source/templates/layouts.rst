@@ -105,13 +105,13 @@ And then in the layout, wherever you need to use this variable, reference it by 
     {layout:set:append name='titles'}{title}{/layout:set:append}
   {/exp:channel:entries}
 
-And then in the layout, wherever you want to display the variable, use a tag pair, and loop through the values::
+And then in the layout, wherever you want to display the variable, use a tag pair, and loop through the values with the ``{value}`` variable::
 
   {layout:titles}
     {value}<br>
   {/layout:titles}
 
-Like most pair variables, you have access to ``{count}``, ``{total_results}``, and the ``{value}`` variables (``{index}`` is described below) for output and use in conditionals::
+Like most pair variables, you have access to ``{count}``, ``{total_results}`` as well::
 
   {layout:titles}
     {if count == 1}
