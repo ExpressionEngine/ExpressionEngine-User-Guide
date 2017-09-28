@@ -101,7 +101,9 @@ And then in the layout, wherever you need to use this variable, reference it by 
 
 **Appending** a variable creates lists, and is similar to setting an array in a programming language, like JavaScript. Use this tag in a loop, when you want to capture the contents as individual items::
 
-  {layout:set:append name='titles'}{title}{/layout:set:append}
+  {exp:channel:entries channel='news'}
+    {layout:set:append name='titles'}{title}{/layout:set:append}
+  {/exp:channel:entries}
 
 And then in the layout, wherever you want to display the variable, use a tag pair, and loop through the values::
 
