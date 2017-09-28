@@ -99,7 +99,7 @@ And then in the layout, wherever you need to use this variable, reference it by 
 {layout:set:append}
 ^^^^^^^^^^^^^^^^^^^
 
-**Appending** a variable works well with lists, and is similar to setting an array in a programming language, like JavaScript. Use this tag in a loop, when you want to capture the contents as individual items::
+**Appending** a variable creates lists, and is similar to setting an array in a programming language, like JavaScript. Use this tag in a loop, when you want to capture the contents as individual items::
 
   {layout:set:append name='titles'}{title}{/layout:set:append}
 
