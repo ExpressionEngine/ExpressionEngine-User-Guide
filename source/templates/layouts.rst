@@ -90,11 +90,11 @@ You can set variables in your templates that can later be used in your layouts. 
 
 **Setting** a variable works similarly to setting a string variable in a programming language, like JavaScript. The contents are set to the variable name you provide. In your template::
 
-  {layout:set name='title'}{title}{/layout:set}
+  {layout:set name='title'}My Page Title{/layout:set}
 
 And then in the layout, wherever you need to use this variable, reference it by name, e.g. ``{layout:title}``::
 
-  <title>{if layout:title}{layout:title} | {/if} Example Site Name</title>
+  <title>{layout:title}</title>
 
 {layout:set:append}
 ^^^^^^^^^^^^^^^^^^^
@@ -133,7 +133,27 @@ Like most pair variables, you have access to ``{count}``, ``{total_results}`` as
 Using Layout Lists Together
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Sometimes it is helpful to be able to reference a specific item in a list, such as when you have set multiple layout variables with corresponding content. For example, setting a list of URLs and corresponding titles for use in HTML and JSON-LD breadcrumbs. In your template you might use::
+Sometimes it is helpful to be able to reference a specific item in a list, such as when you have set multiple layout variables with corresponding content. As a simple example, pairing URLs with titles::
+
+  {exp:channel:entries channel='news' limit='5'}
+    {layout:set:append name='titles'}{title}{/layout:set:append}
+    {layout:set:append name='urls'}{url_title_path='news/story'}{/layout:set:append}
+  {/exp:channel:entries}
+
+Then you can use them in the layout like so::
+
+  {layout:urls}
+    <li><a href="{value}">{layout:titles index='{index}'}</a></li>
+  {/layout:urls}
+
+Notice how you only have to loop through one of the lists, and to output the correct counterpart from another list, we simply reference them by **index**. Every looping list will output its current index, and every list variable can reference a single item from its own list with the ``index=`` parameter::
+
+  {layout:list_variable index='3'}
+
+Example: Breadcrumbs
+""""""""""""""""""""
+
+In this more verbose example, we use this basic idea to set a list of URLs and corresponding titles for use in HTML and JSON-LD breadcrumbs. In your template you might use::
 
   {layout:set:append name='breadcrumb_urls'}{path='overlanding'}{/layout:set:append}
   {layout:set:append name='breadcrumb_titles'}Overlanding{/layout:set:append}
@@ -219,10 +239,6 @@ Resulting in::
     ]
   }
   </script>
-
-Notice how you only have to loop through one of the lists, and to output the correct counterpart from another list, we simply reference them by **index**. Every looping list will output its current index, and every list variable can reference a single item from its own list with the ``index=`` parameter::
-
-  {layout:variable_list index='3'}
 
 Static Variables
 ~~~~~~~~~~~~~~~~
