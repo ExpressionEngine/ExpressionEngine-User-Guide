@@ -657,7 +657,7 @@ content type. For example::
   }
 
 Once that's done, your fieldtype will show up in the list
-of fieldtypes available for use when setting up a new Grid column.å
+of fieldtypes available for use when setting up a new Grid column.
 
 Grid Fieldtype Events
 =====================
@@ -788,3 +788,38 @@ callback function. There are a few data attributes available on the
 cell object such as ``fieldtype``, ``column-id`` and ``row-id``
 (``row-id`` will be undefined for new rows). Plus since it's a jQuery
 object, you have all DOM traversal methods available to act upon.
+
+*********************************
+Fluid Block Fieldtype Development
+*********************************
+
+To make your fieldtype recognized by Fluid Blocks as a compatible
+fieldtype, you need to modify your implementation of
+:meth:`~EE_Fieldtype::accepts_content_type` to accept the ``fluid_block``
+content type. For example::
+
+  public function accepts_content_type($name)
+  {
+      return ($name == 'channel' || $name == 'fluid_block');
+  }
+
+Once that's done, your fieldtype will show up in the list
+of fieldtypes available for use when setting up a new Fluid Block field.
+
+Fluid Block Fieldtype Settings Class Property
+=============================================
+
+When your fieldtype is in the context of Fluid Block, it will have an additional
+item available to you in your fieldtype's ``$settings`` class property.
+
++-----------------------+----------------------------------------------+
+| Settings Key Name     | Description                                  |
++=======================+==============================================+
+| ``block_data_id``     | When available, ID of the Fluid Block Data   |
+|                       | entity.                                      |
++-----------------------+----------------------------------------------+
+
+This is accessed as array keys of your ``$settings`` class property
+like so::
+
+  $this->settings['block_data_id'];
