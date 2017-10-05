@@ -823,3 +823,51 @@ This is accessed as array keys of your ``$settings`` class property
 like so::
 
   $this->settings['block_data_id'];
+
+Fluid Block Javascript Events
+=============================
+
+Several Javascript events are fired on certain actions to let your
+fieldtypes know when those actions have taken place. Here is an
+overview.
+
++-----------------------+-----------+---------------------------------+
+| Event Name            | Description                                 |
++=======================+===========+=================================+
+| **add**               | Called when a field is added to a Fluid     |
+|                       | block                                       |
++-----------------------+-----------+---------------------------------+
+| **remove**            | Called when a field is removed from a Fluid |
+|                       | block                                       |
++-----------------------+-----------+---------------------------------+
+| **beforeSort**        | Called before a field starts sorting on the |
+|                       | publish form                                |
++-----------------------+-----------+---------------------------------+
+| **afterSort**         | Called after a field finishes sorting on the|
+|                       | publish form                                |
++-----------------------+-----------+---------------------------------+
+
+To bind an event, use the below Javascript as an example::
+
+  FluidBlock.on("date", "remove", function(element)
+  {
+      // Act on event
+  });
+
+Here are the usage details for this function:
+
+.. js:function:: FluidBlock.on(fieldtype, event, callback)
+
+  :param string fieldtype: Your short fieldtype name
+  :param string: Event name
+  :param callback: Callback function to use for the event
+  :rtype: Void
+
+A jQuery object of the field being affected by the current event is passed to
+the callback function. When the add event is triggered an additional jQuery
+object of the field template is passed::
+
+  FluidBlock.on("date", "add", function(element, element_template)
+  {
+      // Act on event
+  });
