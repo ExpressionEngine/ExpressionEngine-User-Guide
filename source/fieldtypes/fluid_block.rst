@@ -17,9 +17,7 @@ For example, if you have a fluid block ``fluid_content`` with a text field ``flu
   {fluid_content}
 
     {fluid_content:fluid_text}
-
       {content}
-
     {/fluid_content:fluid_text}
 
   {/fluid_content}
@@ -81,6 +79,7 @@ A fluid field can handle the output of all of those fields, as many as they add,
         {/content}
       </div>
     {/fluid_block:featured_entry}
+
   {/fluid_block}
 
 
