@@ -2,7 +2,9 @@
 Fluid Block
 ###########
 
-A fluid block is a collection of fields that can be used at the author's discretion when creating or editing an entry.  The fields in the fluid block can be used multiple times in an entry and the order of the fields specified during publication.  Fluid blocks give the author control over the layout of various page elements without the need for markup while ensuring the output doesn't break out of the design.
+A fluid block is a collection of fields.  A fluid block can contain any native field type except another field block.  The fields assigned to the field block can then be used multiple times in the same entry when creating/editing the entry.  The author also has control over the order of the fields.
+
+Fluid blocks give the author control over the structure of their content, while ensuring the final output uses the correct design elements.  All that is done without the author worrying about markup or html.  They simply add content to the fields, and template can wrap each field in the proper markup.
 
 *************
 Template Tags
@@ -15,7 +17,9 @@ For example, if you have a fluid block ``fluid_content`` with a text field ``flu
   {fluid_content}
 
     {fluid_content:fluid_text}
+
       {content}
+
     {/fluid_content:fluid_text}
 
   {/fluid_content}
@@ -36,11 +40,9 @@ In this example, the fluid block has short name ``page_content_block`` with a fi
   {page_content_block}
 
     {page_content_block:hero_image}
-
-    {content}
-      <img src="{url:med}" height="{height:med}">
-    {/content}
-
+      {content}
+        <img src="{url:med}" height="{height:med}">
+      {/content}
     {/page_content_block:hero_image}
 
   {/page_content_block}
@@ -54,11 +56,13 @@ Fluid fields are most useful when multiple fields may be included in the present
 A fluid field can handle the output of all of those fields, as many as they add, respecting the order they specify when publishing.::
 
   {fluid_block}
-	{fluid_block:full_text}
-		<div class="text">
-			{content}
-		</div>
-	{/fluid_block:full_text}
+
+    {fluid_block:full_text}
+      <div class="text">
+        {content}
+      </div>
+    {/fluid_block:full_text}
+
     {fluid_block:img_card}
       <div class="card">
         <img src="{content:grid_image_colum}">
@@ -103,7 +107,7 @@ For checkbox and multiselect single variables::
 
   {my_fluid_block}
     {my_fluid_block:my_checkbox}
-		{content}
+      {content}
     {/my_fluid_block:my_checkbox}
   {/my_fluid_block}
 
@@ -113,11 +117,11 @@ For checkbox and multiselect variable pairs::
 
  {my_fluid_block}
    {my_fluid_block:my_checkbox}
-	{content}
+     {content}
       Value: {item}<br>
       Value: {item:value}<br>
       Label: {item:label}<br>
-	{content}
+    {/content}
    {/my_fluid_block:my_checkbox}
  {/my_fluid_block}
 
@@ -131,7 +135,7 @@ Date Fields
 
   {my_fluid_block}
     {my_fluid_block:my_date}
-		{content format="%F %d %Y"}
+      {content format="%F %d %Y"}
     {/my_fluid_block:my_date}
   {/my_fluid_block}
 
@@ -144,7 +148,7 @@ Email Address Fields
 
   {my_fluid_block}
     {my_fluid_block:my_email}
-		{content:mailto title="Email about their dog" subject="Question about your dog" encode="no"}
+      {content:mailto title="Email about their dog" subject="Question about your dog" encode="no"}
     {/my_fluid_block:my_email}
   {/my_fluid_block}
 
@@ -158,10 +162,10 @@ A file field variable pair::
   {my_fluid_block}
     {fluid_block:my_image}
       {content}
-	  	Extension: {extension}
-		Upload date: {upload_date format="%Y %m %d"}
-		URL: {url}
-		Custom med thumbnail url: {url:med}
+        Extension: {extension}
+        Upload date: {upload_date format="%Y %m %d"}
+        URL: {url}
+        Custom med thumbnail url: {url:med}
       {/content}
     {/fluid_block:my_image}
   {/my_fluid_block}
@@ -171,8 +175,8 @@ Single variable file field::
   {my_fluid_block}
     {my_fluid_block:my_image}
       link: {content wrap="link"}
-	  URL: {content}
-	  URL 'med' image thumb: {content:med}
+      URL: {content}
+      URL 'med' image thumb: {content:med}
     {/my_fluid_block:my_image}
   {/my_fluid_block}
 
@@ -185,23 +189,23 @@ Grid Fields
 
   {my_fluid_block}
     {my_fluid_block:my_grid}
-		{content}
-			{if content:count == 1}<h3>Grid total rows: {content:total_rows}{/if}
-			Date field: {content:my_grid format="%Y %m"}
-			Toggle: {if content:my_toggle}YES there is a toggle value!{/if}
+      {content}
+        {if content:count == 1}<h3>Grid total rows: {content:total_rows}{/if}
+        Date field: {content:my_grid format="%Y %m"}
+        Toggle: {if content:my_toggle}YES there is a toggle value!{/if}
 
-			File field pair:
-			{content:my_file}
-				Upload date: {upload_date format="%Y %m %d"}
-				Custom med thumbnail url: {url:med}
-			{/content:my_file}
+        File field pair:
+        {content:my_file}
+          Upload date: {upload_date format="%Y %m %d"}
+          Custom med thumbnail url: {url:med}
+        {/content:my_file}
 
-			Relationship field pair:
-			{content:my_relationship}
-				{if content:my_relationship:count == 1}<h3>Relationship {content:my_relationship:total_results}){/if}
-				{content:my_relationship:title}<br>
-				{/content:my_relationship}
-		{/content}
+        Relationship field pair:
+        {content:my_relationship}
+          {if content:my_relationship:count == 1}<h3>Relationship {content:my_relationship:total_results}){/if}
+          {content:my_relationship:title}<br>
+        {/content:my_relationship}
+      {/content}
     {/my_fluid_block:my_grid}
   {/my_fluid_block}
 
@@ -215,10 +219,9 @@ Radio and single select fields use single variables::
 
   {my_fluid_block}
     {my_fluid_block:my_radio}
-		{content}
-		Value = {content}
-		{if content == 'no'}Nope!{/if}
-    {/my_fluid_block:my_radio}
+        Value = {content}
+        {if content == 'no'}Nope!{/if}
+      {/my_fluid_block:my_radio}
   {/my_fluid_block}
 
 .. _fluid-block-relationship:
@@ -229,19 +232,19 @@ Relationship Fields
 ::
 
   {my_fluid_block}
-	{my_fluid_block:my_relationship}
-		{content}
-			{if content:count == 1}<h3>Relationships ({content:total_results})</h3>{/if}
+    {my_fluid_block:my_relationship}
+      {content status="open"}
+        {if content:count == 1}<h3>Relationships ({content:total_results})</h3>{/if}
 
-			Related entry title: {content:title}
-			Related entry file field, med custom image size: {content:my_file:med wrap="image"}
+        Related entry title: {content:title}
+        Related entry file field, med custom image size: {content:my_file:med wrap="image"}
 
-			Related field in the related child entry:
-			{content:my_related_field_in_child_entry}
-				{content:cmy_related_field_in_child_entry:title}
-			{/content:my_related_field_in_child_entry}
-		{/content}
-	{/my_fluid_block:my_relationship}
+        Related field in the related child entry:
+        {content:my_related_field_in_child_entry}
+          {content:cmy_related_field_in_child_entry:title}
+        {/content:my_related_field_in_child_entry}
+      {/content}
+    {/my_fluid_block:my_relationship}
   {/my_fluid_block}
 
 .. _fluid-block-text:
@@ -253,7 +256,7 @@ RTF Text and Textare Fields
 
   {my_fluid_block}
     {my_fluid_block:my_textarea}
-		{content}
+      {content}
     {/my_fluid_block:my_textarea}
   {/my_fluid_block}
 
@@ -266,10 +269,9 @@ Toggle Fields
 
   {my_fluid_block}
     {my_fluid_block:my_toggle}
-		{if content}YES there is a toggle value!{/if}
+      {if content}YES there is a toggle value!{/if}
     {/my_fluid_block:my_toggle}
   {/my_fluid_block}
-
 
 
 .. _fluid-block-url:
@@ -281,8 +283,6 @@ URL Fields
 
   {my_fluid_block}
     {my_fluid_block:my_url}
-		<a href="{content}">Your Link</a>
+      <a href="{content}">Your Link</a>
     {/my_fluid_block:my_url}
   {/my_fluid_block}
-
-
