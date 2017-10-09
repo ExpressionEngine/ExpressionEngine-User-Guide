@@ -849,7 +849,7 @@ overview.
 
 To bind an event, use the below Javascript as an example::
 
-  FluidBlock.on("date", "remove", function(element)
+  FluidBlock.on("date", "add", function(element)
   {
       // Act on event
   });
@@ -864,10 +864,4 @@ Here are the usage details for this function:
   :rtype: Void
 
 A jQuery object of the field being affected by the current event is passed to
-the callback function. When the add event is triggered an additional jQuery
-object of the field template is passed::
-
-  FluidBlock.on("date", "add", function(element, element_template)
-  {
-      // Act on event
-  });
+the callback function.
