@@ -13,7 +13,7 @@ Server Requirements
     That means 5.3.10 is **greater than** 5.3.1, 5.3.2, 5.3.3, and all
     the way up to 5.3.9.
 
-- `MySQL <http://www.mysql.com/>`_ 5.0.3 or newer
+- `MySQL <http://www.mysql.com/>`_ 5.5.3 or newer
 - At least 32 MB memory allocated to PHP
 - At least 10 MB of available disk space for the ExpressionEngine
   software and modules
