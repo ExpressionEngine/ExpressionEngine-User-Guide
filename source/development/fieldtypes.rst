@@ -790,41 +790,41 @@ cell object such as ``fieldtype``, ``column-id`` and ``row-id``
 object, you have all DOM traversal methods available to act upon.
 
 *********************************
-Fluid Block Fieldtype Development
+Fluid Field Fieldtype Development
 *********************************
 
-To make your fieldtype recognized by Fluid Blocks as a compatible
+To make your fieldtype recognized by Fluid Fields as a compatible
 fieldtype, you need to modify your implementation of
-:meth:`~EE_Fieldtype::accepts_content_type` to accept the ``fluid_block``
+:meth:`~EE_Fieldtype::accepts_content_type` to accept the ``fluid_field``
 content type. For example::
 
   public function accepts_content_type($name)
   {
-      return ($name == 'channel' || $name == 'fluid_block');
+      return ($name == 'channel' || $name == 'fluid_field');
   }
 
 Once that's done, your fieldtype will show up in the list
-of fieldtypes available for use when setting up a new Fluid Block field.
+of fieldtypes available for use when setting up a new Fluid Field field.
 
-Fluid Block Fieldtype Settings Class Property
+Fluid Field Fieldtype Settings Class Property
 =============================================
 
-When your fieldtype is in the context of Fluid Block, it will have an additional
+When your fieldtype is in the context of Fluid Field, it will have an additional
 item available to you in your fieldtype's ``$settings`` class property.
 
-+-----------------------+----------------------------------------------+
-| Settings Key Name     | Description                                  |
-+=======================+==============================================+
-| ``block_data_id``     | When available, ID of the Fluid Block Data   |
-|                       | entity.                                      |
-+-----------------------+----------------------------------------------+
++-------------------------+----------------------------------------------+
+| Settings Key Name       | Description                                  |
++=========================+==============================================+
+| ``fluid_field_data_id`` | When available, ID of the Fluid Field Data   |
+|                         | entity.                                      |
++-------------------------+----------------------------------------------+
 
 This is accessed as array keys of your ``$settings`` class property
 like so::
 
-  $this->settings['block_data_id'];
+  $this->settings['fluid_field_data_id'];
 
-Fluid Block Javascript Events
+Fluid Field Javascript Events
 =============================
 
 Several Javascript events are fired on certain actions to let your
@@ -835,10 +835,10 @@ overview.
 | Event Name            | Description                                 |
 +=======================+===========+=================================+
 | **add**               | Called when a field is added to a Fluid     |
-|                       | block                                       |
+|                       | field                                       |
 +-----------------------+-----------+---------------------------------+
 | **remove**            | Called when a field is removed from a Fluid |
-|                       | block                                       |
+|                       | field                                       |
 +-----------------------+-----------+---------------------------------+
 | **beforeSort**        | Called before a field starts sorting on the |
 |                       | publish form                                |
@@ -849,14 +849,14 @@ overview.
 
 To bind an event, use the below Javascript as an example::
 
-  FluidBlock.on("date", "add", function(element)
+  FluidField.on("date", "add", function(element)
   {
       // Act on event
   });
 
 Here are the usage details for this function:
 
-.. js:function:: FluidBlock.on(fieldtype, event, callback)
+.. js:function:: FluidField.on(fieldtype, event, callback)
 
   :param string fieldtype: Your short fieldtype name
   :param string: Event name
