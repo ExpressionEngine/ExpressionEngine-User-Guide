@@ -39,4 +39,8 @@ cp_custom_menu
     // the first and only parameter is the input's placeholder text
     $sub->withFilter('find entries ...');
 
+    // call withFilterLink if you'd like to provide a "View All" link in addition
+    // to the fuzzy searchbox
+    $sub->withFilterLink('find entries ...', ee('CP/URL')->make('addons/settings/my_addon/list');
+
   .. versionadded:: 3.4.0
