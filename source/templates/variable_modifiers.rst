@@ -67,6 +67,21 @@ Format a number as currency.
 
 .. note:: |PHP-intl-recommended|
 
+:decrypt
+********
+
+Decrypt the content.
+
+::
+
+  {secret:decrypt}
+  {!-- No more secrets --}
+
+:Parameters:
+
+  - **encode=** (default: 'yes') Base64-decode the content (necessary for safe transport, e.g. submitted in a form)
+  - **key=** Custom encryption key to use. Allows you to potentially share encrypted data with another party without having to compromise your ExpressionEngine installation's primary encryption key.
+
 :encrypt
 ********
 
