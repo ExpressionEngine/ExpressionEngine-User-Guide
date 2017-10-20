@@ -36,7 +36,7 @@ For Apache, that would be ``666`` for files and ``777`` for directories, in a wo
 For IIS, provide all permissions to the IIS user for these files and directories.
 
 - :file:`system/ee/`
-- :file:`system/ee/*` (top-level only)
+- :file:`system/ee/*` (only top-level files and directories need modifying)
 - :file:`system/user/config/config.php`
 - :file:`system/user/cache/`
 - :file:`system/user/templates/`
@@ -47,8 +47,15 @@ For IIS, provide all permissions to the IIS user for these files and directories
 - :file:`images/signature_attachments/`
 - :file:`images/uploads/`
 - :file:`themes/ee/`
-- :file:`themes/ee/*` (top-level only)
+- :file:`themes/ee/*` (only top-level files and directories need modifying)
 
+.. tip::
+
+  On a Unix based system, you can use the following pattern to set permissions recursively to what you need for folders and files. In this example, we are setting all directories in `system/ee` to **755** and all files therein to **644**, recursively:
+
+    .. code-block:: bash
+
+      find system/ee \( -type d -exec chmod 755 {} \; \) -o \( -type f -exec chmod 644 {} \; \)
 
 ******************************
 4. Run The Installation Wizard
