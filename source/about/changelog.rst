@@ -5,6 +5,117 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.11
+--------------
+
+Release Date: August 24, 2017
+
+- Optimized the entry manager for speed.
+- Restored check for banned email addresses when registering/updating a member record.
+- Added per page filter to a number of tables in the control panel.
+- Altered the AJAX response headers to accomidate IE's JSON ignorance.
+- Fixed a bug where clearing out a File field may fire off numerous form validation AJAX requests.
+- Fixed a bug (#23171) where the template parser got overwhelemd with really large templates and found a happy place instead of doing work.
+- Fixed a bug where trying to automatically resize SVG files would throw an error.
+- Fixed a display issue with abstracted Extension settings when there are many checkboxes/multi-select options.
+- Fixed a bug where abstracted Extension settings items could not have field instructions.
+- Fixed a bug (#23174) where Simple Commerce emails did not respect the Mail Format email preference, preventing it from being able to send HTML emails.
+- Fixed a bug where setting PHP memory in gigabytes setting could result in memory errors when uploading.
+- Fixed a bug (#22741) in the installer where the superadmin user created during installation was assumed to have a member_id of 1.  We all know what they say about assumptions, don't we?
+- Fixed a bug where the list of addons in the member group permissions included some non-addons.
+- Fixed a bug (#23183) where the template create button did not show on the template manager page for some member groups with permission to create templates.
+- Fixed a bug where saving templates when caching was disabled caused an error.
+- Fixed a bug where thumbnails were not removed when deleting a file record with a missing file.
+- Fixed a bug (#23181) where it was not possible to delete the last row in a grid field when editing via the channel entry form.
+- Fixed a bug (#23195) where third party fieldtypes could not be uninstalled if the file name wasn't standard issue.
+- Fixed a bug in the forum settings where you couldn't manage moderator notifications.
+- Developers:
+
+  - Fixed a bug (#21702) where the legacy file model's ``ee()->file_model->delete_files($Id);`` would show a system error if deleting a record that has a missing image file and fail to delete any stray thumbnails.
+  - Fixed a bug (#23207) where the legacy form validation error for too short passwords didn't display the required password length properly.
+
+Version 3.5.10
+--------------
+
+Release Date: June 27, 2017
+
+- Security Fixes
+
+
+  - Fixed a potential reflected XSS issue.
+  - Fixed a potential issue that could lead to arbitrary execution of ExpressionEngine tags.
+
+- Optimized Relationship control panel display query.
+- Fixed a missing language key in the member module.
+- Fixed a bug (#23133) where images could not be resized proportionally in the File Manager.
+- Fixed a bug (#23157) where saving a channel entry may attempt to assign categories twice.
+- Fixed a bug (#23160) where member groups without member deletion permissions may see an error in the control panel.
+- Fixed a bug where ``{current_url}`` and ``{current_path}`` were entirely unencoded.
+
+Version 3.5.9
+-------------
+
+Release Date: June 16, 2017
+
+- Improved the display of long filenames in grid fields.
+- Fixed a bug (#23153) where manually-sorted multi-relationship fields may not appear sorted correctly on the front-end.
+
+
+Version 3.5.8
+-------------
+
+Release Date: June 15, 2017
+
+- Security Fixes (thanks again to Mustafa Hasan from HackerOne!):
+
+  - Eliminated a couple areas that could disclose the full server path.
+  - Fixed a potential remote code execution issue (identified by Erik McClements).
+  - Improved XSS protection in a few areas of the control panel.
+  - Tightened off-site redirect protection / warning.
+
+- Optimized entry saving on installations with large numbers of categories.
+- Optimized `{category_menu}` tag parsing in the channel entry form.
+- Modified upload filename sanitization so that numeric segments are no longer suffixed with an underscore.
+- Channel Form's Grid CSS jumped the starting block. It has been reset and issued a warning.
+- Fixed a syntax error in compressed Channel Form JavaScript introduced in 3.5.7.
+- Added a crossing guard to prevent PHP errors from entering traffic when the Pages module references non-existent entries.
+- Added some extra no cache headers for Chrome so it would stop trying to server the CSRF token from cache.
+- Fixed a bug (#23125) where the Pages module did not have a nested view.
+- Fixed a bug (#23119) where the Relationship field filter would not work unless the member has access to the Relationship module.
+- Fixed a bug (#23098) where sticky entries were not sticky in Relationship field output.
+- Fixed a bug (#23111) where permissions to send email to member groups and to view the email cache could not be set.
+- Fixed a bug (#23106) where the date picker may appear blank in Firefox.
+- Fixed a bug (#23108) where selecting a category for an entry in Channel Form would not automatically assign its parents to the entry.
+- Fixed a bug (#23097) where third-party RTE tools would not be loaded.
+- Fixed a bug (#23136) where the maximum file size field description incorrectly said megabytes instead of kilobytes.
+- Fixed a bug (#23132) where value/label pairs could not be used in member fields.
+- Fixed a bug (#23131) where templates could not be deleted from the template manager search results screen.
+- Fixed a bug (#23148) with grid column widths; some wanted a percentage!
+- Fixed a bug (#23118) where the 3.1.0 updater was checking if a variable exists after using it. Impulse control!
+- (#23115) Open/Closed statuses now respect your language pack's translation in the Entry Manager.
+
+
+
+Version 3.5.7
+-------------
+
+Release Date: May 18, 2017
+
+- Fixed a bug (#23080) where the File Manager may have performance problems for non-super admins when many member groups and upload folders are present.
+- Fixed a bug (#23076) where slashes could not be saved in extension settings.
+- Fixed a bug (#23053) where ``liveUrlTitle()`` may not work when multiple Channel Forms are present.
+- Fixed a bug where the template parser would be unable to parse a large number of global variables.
+- Fixed a bug where an entry's year, month and day fields could be saved as 0 when using dd/mm/yyyy localization.
+- If a Channel is limited to 1 entry, and 1 entry already exists, the Edit menu will take you straight to edit that entry for simplicity. Automated tests for the win.
+- Grid fields now respect assigned column widths.
+- Simplified a query in the RSS module that was necessary in versions < 1.4.0. No typo.
+- Fixed a bug where comment expiration date field was visible when a channel allows comments, but comments are disabled at the system level.
+- Fixed a bug (#23090) where the edit category modal on the Publish page would not properly close and reflect a successful edit.
+- Fixed a bug where member accept and decline notifications did not always respect the control panel settings.
+- Fixed a bug where the frontend member profile email console pop-up did not display properly.
+- Fixed a bug where the control panel login could improperly redirect if a custom homepage was set but no URL was entered.
+
+
 Version 3.5.6
 -------------
 

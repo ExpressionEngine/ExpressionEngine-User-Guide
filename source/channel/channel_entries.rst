@@ -874,19 +874,13 @@ or less-than operators to search through them.
 
 .. code-block:: none
 
-  search:numeric_field='<20'
+  search:numeric_field="<20"
 
-  search:numeric_field='>20'
+  search:numeric_field=">20"
 
-  search:numeric_field='<=20'
+  search:numeric_field="<=20"
 
-  search:numeric_field='>=20'
-
-To specify a range, use a piped list. For instance to search a field for values between and including 10 through 20:
-
-.. code-block:: none
-
-  search:numeric_field='>=10|<=20'
+  search:numeric_field=">=20"
 
 Including / Excluding Empty Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -944,20 +938,19 @@ set to "yes", it displays the current week by default (i.e. no
 pagination in the URL) and automatically adjusts the pagination links to
 indicate the correct page for that week.
 
-show_expired=
+show\_expired=
 --------------
 
 ::
 
-	show_expired="no" show_expired="yes" show_expired="only"
+	show_expired="yes"
 
-There are three valid options for this parameter: "yes", "no", "only".  The default is "no", with expired entries not shown.
-If set to "yes", expired entries are included in the results.  If set to "only", only expired entries are included.
-
+You can determine whether you wish for entries that have "expired" to be
+included.
 
 .. _channel_entries_show_future_entries:
 
-show_future_entries=
+show\_future\_entries=
 ----------------------
 
 ::
@@ -1112,10 +1105,10 @@ sticky=
 
 ::
 
-	sticky="yes" sticky="no" sticky="only"
+	sticky="no"
 
-By default, sticky topics always remain at the top of the page ("yes"). You can
-manually turn off stickies by setting the parameter to "no".  If set to "only", only "sticky" entries are included in the results.
+By default, sticky topics always remain at the top of the page. You can
+manually turn off stickies by using the above parameter.
 
 .. _channel_entries_track_views:
 

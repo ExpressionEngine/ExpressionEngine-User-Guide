@@ -58,7 +58,7 @@ This will build a sidebar with a header, which has a button and two items undern
     ->withButton(lang('new'), ee('CP/URL', 'addons/settings/fortune_cookie/create'));
 
   $fortunes_list = $fortunes->addBasicList();
-  $fortunes_list->addItem(lang('recent_fortunes'), ee('CP/URL', 'addons/settings/fortune_cookie/recent'))
+  $fortunes_list->addItem(lang('recent_fortunes'), ee('CP/URL', 'addons/settings/fortune_cookie/recent'));
   $fortunes_list->addItem(lang('archived_fortunes'), ee('CP/URL', 'addons/settings/fortune_cookie/archived'));
 
 Reorderable Folder Lists

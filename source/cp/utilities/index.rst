@@ -31,7 +31,6 @@ Contents
 
 - :doc:`sql`
 
-  - :doc:`backup_utility`
   - :doc:`query`
 
 - Data Operations
@@ -45,15 +44,5 @@ Contents
   :hidden:
   :titlesonly:
 
-  communicate/index
-  translate/index
-  php
-  extensions
-  import-converter
-  member-import
-  backup_utility
-  sql
-  query
-  cache
-  stats
-  sandr
+  *
+  */index
