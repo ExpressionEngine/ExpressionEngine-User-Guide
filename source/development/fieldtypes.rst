@@ -657,7 +657,7 @@ content type. For example::
   }
 
 Once that's done, your fieldtype will show up in the list
-of fieldtypes available for use when setting up a new Grid column.
+of fieldtypes available for use when setting up a new Grid column.å
 
 Grid Fieldtype Events
 =====================
@@ -788,80 +788,3 @@ callback function. There are a few data attributes available on the
 cell object such as ``fieldtype``, ``column-id`` and ``row-id``
 (``row-id`` will be undefined for new rows). Plus since it's a jQuery
 object, you have all DOM traversal methods available to act upon.
-
-*********************************
-Fluid Block Fieldtype Development
-*********************************
-
-To make your fieldtype recognized by Fluid Blocks as a compatible
-fieldtype, you need to modify your implementation of
-:meth:`~EE_Fieldtype::accepts_content_type` to accept the ``fluid_block``
-content type. For example::
-
-  public function accepts_content_type($name)
-  {
-      return ($name == 'channel' || $name == 'fluid_block');
-  }
-
-Once that's done, your fieldtype will show up in the list
-of fieldtypes available for use when setting up a new Fluid Block field.
-
-Fluid Block Fieldtype Settings Class Property
-=============================================
-
-When your fieldtype is in the context of Fluid Block, it will have an additional
-item available to you in your fieldtype's ``$settings`` class property.
-
-+-----------------------+----------------------------------------------+
-| Settings Key Name     | Description                                  |
-+=======================+==============================================+
-| ``block_data_id``     | When available, ID of the Fluid Block Data   |
-|                       | entity.                                      |
-+-----------------------+----------------------------------------------+
-
-This is accessed as array keys of your ``$settings`` class property
-like so::
-
-  $this->settings['block_data_id'];
-
-Fluid Block Javascript Events
-=============================
-
-Several Javascript events are fired on certain actions to let your
-fieldtypes know when those actions have taken place. Here is an
-overview.
-
-+-----------------------+-----------+---------------------------------+
-| Event Name            | Description                                 |
-+=======================+===========+=================================+
-| **add**               | Called when a field is added to a Fluid     |
-|                       | block                                       |
-+-----------------------+-----------+---------------------------------+
-| **remove**            | Called when a field is removed from a Fluid |
-|                       | block                                       |
-+-----------------------+-----------+---------------------------------+
-| **beforeSort**        | Called before a field starts sorting on the |
-|                       | publish form                                |
-+-----------------------+-----------+---------------------------------+
-| **afterSort**         | Called after a field finishes sorting on the|
-|                       | publish form                                |
-+-----------------------+-----------+---------------------------------+
-
-To bind an event, use the below Javascript as an example::
-
-  FluidBlock.on("date", "add", function(element)
-  {
-      // Act on event
-  });
-
-Here are the usage details for this function:
-
-.. js:function:: FluidBlock.on(fieldtype, event, callback)
-
-  :param string fieldtype: Your short fieldtype name
-  :param string: Event name
-  :param callback: Callback function to use for the event
-  :rtype: Void
-
-A jQuery object of the field being affected by the current event is passed to
-the callback function.

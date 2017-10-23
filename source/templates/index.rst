@@ -154,17 +154,6 @@ just like HTML parameters, with a name and a value::
 Common Tasks
 ************
 
-Modifying Variables
-===================
-
-Most `Single Variables`_ can be modified by applying... a modifier!
-
-::
-
-  <meta name="description" content="{seo_descrip:attr_safe limit='150'}">
-
-*More Information:* :doc:`./variable_modifiers`
-
 Creating Links
 ==============
 
