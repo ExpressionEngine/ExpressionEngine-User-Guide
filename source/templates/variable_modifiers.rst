@@ -255,10 +255,10 @@ Create a URL slug from the content.
 
 ::
 
-  {excerpt:url_title}
+  {excerpt:url_slug}
   {!-- a-phrase-with-words-from-the-stopwords-list --}
 
-  {excerpt:url_title remove_stopwords='yes'}
+  {excerpt:url_slug remove_stopwords='yes'}
   {!-- phrase-words-stopwords-list --}
 
 :Parameters:
