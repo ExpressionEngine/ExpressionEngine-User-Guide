@@ -25,24 +25,6 @@ Fields
 
 .. Each Field
 
-Personal website
-~~~~~~~~~~~~~~~~
-
-The URL for the user's personal homepage.
-
-Location
-~~~~~~~~
-
-The user's geographic location.
-
-Birthday
-~~~~~~~~
-
-Biography
-~~~~~~~~~
-
-A brief biographic description of the user.
-
 Language
 ~~~~~~~~
 
