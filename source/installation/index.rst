@@ -14,7 +14,7 @@ Updates & Upgrades
 ******************
 
 - :doc:`update`
-- :doc:`upgrade_from_2.x`
+- :doc:`upgrade_from_3.x`
 - :doc:`upgrade_from_core`
 - :doc:`version_notes`
 
@@ -44,7 +44,7 @@ Performance Monitoring
   installation
   best_practices
   update
-  upgrade_from_2.x
+  upgrade_from_3.x
   upgrade_from_core
   troubleshooting
   version_notes
