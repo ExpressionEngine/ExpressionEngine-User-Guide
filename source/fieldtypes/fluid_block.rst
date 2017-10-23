@@ -1,18 +1,18 @@
 ###########
-Fluid Block
+Fluid Field
 ###########
 
-A fluid block is a collection of fields.  A fluid block can contain any native field type except another field block.  The fields assigned to the field block can then be used multiple times in the same entry when creating/editing the entry.  The author also has control over the order of the fields.
+A Fluid Field is a collection of fields.  A Fluid Field can contain any native field type except another field block.  The fields assigned to the field block can then be used multiple times in the same entry when creating/editing the entry.  The author also has control over the order of the fields.
 
-Fluid blocks give the author control over the structure of their content, while ensuring the final output uses the correct design elements.  All that is done without the author worrying about markup or html.  They simply add content to the fields, and template can wrap each field in the proper markup.
+Fluid Fields give the author control over the structure of their content, while ensuring the final output uses the correct design elements.  All that is done without the author worrying about markup or html.  They simply add content to the fields, and template can wrap each field in the proper markup.
 
 *************
 Template Tags
 *************
 
-Fluid block content is ouput using variable pairs.  An outer variable pair using the fluid block field's shortname wraps all content.  Within that wrapper variable pair, each field in the block can be output using a prefixed variable pair and the ``{content}`` variable.  Within the prefixed variable pair, the ``{content}`` variable is used in place of the field's shortname.
+Fluid Field content is ouput using variable pairs.  An outer variable pair using the Fluid Field field's shortname wraps all content.  Within that wrapper variable pair, each field in the block can be output using a prefixed variable pair and the ``{content}`` variable.  Within the prefixed variable pair, the ``{content}`` variable is used in place of the field's shortname.
 
-For example, if you have a fluid block ``fluid_content`` with a text field ``fluid_text`` your template code may look like this::
+For example, if you have a Fluid Field ``fluid_content`` with a text field ``fluid_text`` your template code may look like this::
 
   {fluid_content}
 
@@ -31,9 +31,9 @@ The prefixed tag pair is a looping tag pair.  You can have more than one ``fluid
 Displaying a Pair variable
 ==========================
 
-Fields that use a variable pair to output content work like they would outside of a fluid block, with the the ``{content}`` variable taking the place of the field shortname.
+Fields that use a variable pair to output content work like they would outside of a Fluid Field, with the the ``{content}`` variable taking the place of the field shortname.
 
-In this example, the fluid block has short name ``page_content_block`` with a file field ``hero_image``.  The template code to output a modified image would look like::
+In this example, the Fluid Field has short name ``page_content_block`` with a file field ``hero_image``.  The template code to output a modified image would look like::
 
   {page_content_block}
 
@@ -83,12 +83,12 @@ A fluid field can handle the output of all of those fields, as many as they add,
   {/fluid_block}
 
 
-Fluid Block Notes
+Fluid Field Notes
 =================
 
 - The ```{if no_results}``` tag is not valid within the prefixed variable pairs.
 - Count variables available in some variable pairs (grid and relationship) restart at 1 each loop.  So the total_results for a relationship tag pair would refer to the total number of relationships for that specific instance of the relationship field.
-- All native fields aside from a fluid block field can be included in a fluid block.
+- All native fields aside from a Fluid Field field can be included in a Fluid Field.
 
 Field Examples
 ==============
