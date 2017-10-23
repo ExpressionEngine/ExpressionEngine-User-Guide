@@ -36,7 +36,6 @@ files for any module:
 In addition to these required files, there are a number of optional
 files that may be useful for modules:
 
-- ``addons/module_name/spam.module_name.php`` - required if the add-on uses the :doc:`services/spam`.
 - ``addons/module_name/tab.module_name.php`` - required to add a
   tab/fields to the publish page
 - ``addons/module_name/views/anyname.html`` - multiple view files

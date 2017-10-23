@@ -76,7 +76,7 @@ everything out just right, but they are left wondering where the cats are.
 Let's take care of that. This is a single entry page, so we can use
 :ref:`require_entry= <channel_entries_require_entry>` in our channel entries tag
 pair. This tells the channel entries tag pair to only return results if there is
-a specific title URL title found in the segment of the URL.
+a specific URL title found in the segment of the URL.
 
 Now we need a way to deal with the times there are no results returned. To do
 this we use a global variable and test for results. ::

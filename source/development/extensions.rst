@@ -336,10 +336,10 @@ will automatically retrieve it for you.
 Built In Settings Form and Processing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Alternatively, if your settings require a special form that cannot
+Alternatively, if your settings require a special form that cannot be
 created by the abstracted layer above, then ExpressionEngine permits you
 to create your own settings form and processing functions within your
-Extension. First, you need to will need have a method in your
+Extension. First, you will need to have a method in your
 extension's class called ``settings_form()``.
 
 ::

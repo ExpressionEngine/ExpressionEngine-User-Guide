@@ -87,12 +87,11 @@ member_process_reset_password
 
   How it's called::
 
-    $data = ee()->extensions->call('member_process_reset_password', $data, $member_id_query->row('member_id'));
+    $data = ee()->extensions->call('member_process_reset_password', $data);
     if (ee()->extensions->end_script === TRUE) return;
 
   :param array $data: An ``Output::show_message()`` ``$data`` array.
-  :param int $member_id: The Member ID of the user whose password is being reset. (Added in 4.0.0)
   :rtype: Void
 
   .. versionadded:: 2.9.3
-  .. versionchanged:: 4.0.0
+
