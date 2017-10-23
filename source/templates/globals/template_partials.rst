@@ -14,10 +14,10 @@ One idea would be to hold a particular :doc:`date format string
 </templates/date_variable_formatting>` that you wish to reuse over and
 over. By making it a Template partial you can change it in one place and
 immediately see the effects everywhere that you've used it. For example,
-you could create a Template partial named my\_date\_formatting with a value of
-format="%m-%d-%Y" and use it in any date variable thusly::
+you could create a Template partial named ``my_date_formatting`` with a value of
+``format="%m-%d-%Y"`` and use it in any date variable thusly
 
-.. code-block:: none
+.. code-block:: plain
 
 	{entry_date {my_date_formatting}}
 

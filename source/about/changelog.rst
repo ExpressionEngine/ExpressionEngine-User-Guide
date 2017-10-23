@@ -5,6 +5,78 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.6
+-------------
+
+Release Date: April 13, 2017
+
+- Fixed a bug where floating point numbers could not be used in queries.
+- Fixed a bug where the Rich Text Editor field did not honor the required setting.
+- Fixed an issue where enabling Gzip compression would prevent front-end pages with PHP errors from rendering in most browsers.
+- Improved memory footprint of the control panel homepage when a site has thousands of Banned members.
+- ``<cite>`` is now allowed in Channel Entry titles.
+- Fixed an issue in the control panel where the banned member page and pending member page searches included all members.
+
+Version 3.5.5
+-------------
+
+Release Date: April 10, 2017
+
+- Security Fixes:
+
+  - Mitigated a potential remote code execution vulnerability.
+  - Improved cryptographic security when pseudo-random numbers are used.
+  - Further hardened protections against SQL injection.
+
+- Option fields (select, multiselect, radio, and checkboxes) can now have one blank value.
+- Channels who have no more room for entries will not show under the Create menu.
+- The uncommon "Disallowed Key Characters" error will now reveal which input key was blocked when ``$debug`` is set to ``1`` in your ``index.php`` and ``admin.php`` files.
+- Improved performance of categories in Channel Form new entry forms when massive numbers of categories are involved.
+- Fixed a bug (#23040) causing a Notice-level PHP error in Channels with Versioning enabled on first-save.
+- Fixed a bug where an Ajax call was being made to update the order of categories when it should not have.
+- Fixed a bug (#22894) where removing a category group from a channel may cause category groups not to be reorderable in the layout editor.
+- Fixed a bug (#23021) where avatar upload and selection might not work on some multi-site installs.
+- Fixed a bug (#23020) where visiting the control panel with no URI segments upon already being logged in would not redirect you to your preferred homepage.
+- Fixed a bug (#23029) where using a Relationship shortcut tag inside a Grid tag pair would not parse when it was the only Relationship field in the channel.
+- Fixed a bug where the ``{date_header}`` and ``{date_footer}`` template variables did not work inside Relationships.
+- Fixed a bug (#22389) where multiple Channel Forms on single page may not work.
+- Fixed a bug (#23044) where an "Unable to load the requested file" error may appear when editing a custom field.
+- Fixed a bug in the forum templates where editing your member profile preferences was not allowed on the frontend.  See the :doc:`version notes </installation/version_notes_3.5.5>` for details.
+- Developers:
+
+  - Fixed a bug where the Curl service could not send parameters along with POST requests.
+
+Version 3.5.4
+-------------
+
+Release Date: March 16, 2017
+
+- Important:
+
+  - 🗑🔒‼️ Fixed a potential data loss issue when deleting admins who have edited templates.
+
+- Browsers will (mostly) now be tricked into not autofilling password setting fields (e.g. SMTP username & password) in the control panel with your password, even if the browser's autofill is enabled. Commence fist shaking at browser vendors for their algorithms that try to guess those fields and not providing a reliable way to prevent it. **Developers:** If you are using the :doc:`/development/shared_form_view`, your inputs with ``type="password"`` will automatically benefit.
+- Improved the clarity of an error message if something goes wrong with your site preferences in the database.
+- Improved breadcrumb clarity when editing fields in the Channel Manager.
+- Made the Status Groups UI consistent with other areas of the Channel Manager.
+- Modified the Redirect library that handles links from the control panel to external sites to be ok with URLs with query string parameters.
+- Fixed a bug where parsing category fields may show a PHP error.
+- Fixed a bug (#22993) where the RTE field may not show underlined text properly in the publish field.
+- Fixed a bug (#23005) where Relationship field filtering on the publish may not work if editing an MSM site with a different domain than the control panel.
+- Fixed a bug (#22419) where the ``:total_results`` shortcut relationship variable would return the wrong count when used inside Grid.
+- Fixed a bug (#22789) where deleting a channel entry with a comment would trigger PHP errors.
+- Fixed a bug where children were overlooked while some deeply nested relationships were partying with grids.
+- The new View Activity won't try to hoodwink you into thinking other members are stalking you, or that so many significant events occurred at the start of the Unix Epoch.
+- Fixed a PHP error that would occur when trying to destructively overwrite non-image files on upload.
+- Trying to edit a field group that doesn't exist now 404s instead of complaining in an unhelpful manner with PHP warnings.
+- Fixed a bug where default HTML buttons were not always added to the correct site when adding new buttons.
+- Fixed a bug where entry revisions could be duplicated and entry revision pruning did not obey the max revision setting.
+- Fixed a bug where pagination limits weren't applied to banned and pending memeber pages in the control panel.
+- Developers:
+
+  - Fixed a bug in the ``cp_js_end`` hook where you could not use the CP/URL Service.
+
+
 Version 3.5.3
 -------------
 
