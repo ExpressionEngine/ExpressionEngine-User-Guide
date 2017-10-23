@@ -1,7 +1,7 @@
 Saving Templates as Text Files
 ==============================
 
-By default, ExpressionEngine saves Template Groups, Templates, Global Variable, and
+ExpressionEngine supports saving Template Groups, Templates, Global Variable, and
 Template Partials as regular folders and files on your server, so that you can
 use your preferred text editor (e.g. Dreamweaver, Coda, BBEdit, etc.) to edit
 Templates and then FTP the changes to the server.
@@ -22,13 +22,19 @@ Templates and then FTP the changes to the server.
 Enabling Saving Templates as Files
 ----------------------------------
 
-All templates will be saved to the ``system/user/templates`` directory in a folder with the site's shortname.
+All templates will be saved to the ``system/user/templates`` directory.
 
+1. Set folder permissions
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Set folder permissions
-~~~~~~~~~~~~~~~~~~~~~~
+Make the ``system/user/templates`` folder writable so that ExpressionEngine will be allowed to save the files as well as recreate your Template\_Group/Template structure. See :doc:`/troubleshooting/general/file_permissions` for details.
 
-Make the ``system/user/templates`` folder writable so that ExpressionEngine will be allowed to save the files as well as recreate your Template_Group/Template structure. See :doc:`/troubleshooting/general/file_permissions` for details.
+2. Set Template Preferences
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+From the Control Panel, go to :menuselection:`Settings --> Template Settings`.
+
+#. Set **Allow templates to be saved as files?** to *Yes*.
 
 Creating and Synchronizing Templates and Files
 ----------------------------------------------
@@ -54,7 +60,12 @@ be recreated the next time that database entry is seen.
 Saved Templates and the Multiple Site Manager
 ---------------------------------------------
 
-When creating a new Site in the Multiple Site
+Sites under the Multiple Site Manager have their own preferences for
+saving templates as text files. As such, when setting up a new Site
+under the Multiple Site Manager, you must set up a new location for
+saving those templates.
+
+When importing or duplicating to a new Site in the Multiple Site
 Manager, if you wish to use existing templates which are saved as text
 files, then the template directory must be manually copied to the
 directory for the new Site.
