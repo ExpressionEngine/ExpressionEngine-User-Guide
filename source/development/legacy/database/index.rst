@@ -14,3 +14,4 @@ ExpressionEngine comes with a full-featured and very fast abstracted database dr
   raw
   utilities
   forge
+  connecting-to-an-external-database
