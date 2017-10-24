@@ -65,6 +65,8 @@ What's new?
 What's changed?
 ---------------
 
+* ExpressionEngine now requires at least PHP 5.4 and MySQL 5.5.3.
+
 * Channel field entry data is now stored in a table per field to allow for virtually-infinite scaling. Existing installs will keep data for existing fields in the ``channel_data`` table, but any new fields will use the new storage format. New installs will not use ``channel_data`` for field data at all. If you primarily use the ``ChannelEntry`` models for querying data, good news: the change is transparent to you. But if you manually query for entry data, you'll likely need to make some changes.
 
 * The relationships between channels, field groups, and fields have changed. It's basically now a many-to-many, or ``hasAndBelongsToMany`` in modal parlance, between everything. So again, if you're doing any manual querying and depending on the old field relationship structure, changes will be needed.
