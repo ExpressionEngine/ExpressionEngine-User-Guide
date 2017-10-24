@@ -1,5 +1,5 @@
-4.0 Upgrade Notes
-=================
+v4 Add-on Migration
+===================
 
 .. highlight:: javascript
 

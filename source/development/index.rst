@@ -14,8 +14,8 @@ Many of the libraries and helpers available in ExpressionEngine 2 continue to fu
   :glob:
   :titlesonly:
 
-  4x_upgrade_notes
-  3x_conversion/index
+  v4_addon_migration
+  v3_addon_migration/index
   addon_setup_php_file
   core/index
   services/index
