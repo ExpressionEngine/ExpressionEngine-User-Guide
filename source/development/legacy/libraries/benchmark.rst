@@ -46,26 +46,6 @@ Here's an example using real code::
 		echo ee()->benchmark->elapsed_time('cat', 'bird');
 		echo ee()->benchmark->elapsed_time('dog', 'bird');
 
-
-Profiling Your Benchmark Points
-===============================
-
-If you want your benchmark data to be available to the :doc:`/development/legacy/libraries/profiler` all of your marked points must be set up in pairs, and each mark point name must end with ``_start`` and ``_end``. Each pair of points must otherwise be named identically. Example::
-
-	ee()->benchmark->mark('my_mark_start');
-
-	// Some code happens here...
-
-	ee()->benchmark->mark('my_mark_end');
-
-	ee()->benchmark->mark('another_mark_start');
-
-	// Some more code happens here...
-
-	ee()->benchmark->mark('another_mark_end');
-
-Please read the :doc:`/development/legacy/libraries/profiler` for more information.
-
 Displaying Total Execution Time
 ===============================
 
