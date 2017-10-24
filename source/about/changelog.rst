@@ -1,9 +1,16 @@
-ExpressionEngine 3.x Change Log
+ExpressionEngine 4.x Change Log
 ===============================
 
 .. contents::
    :local:
    :depth: 1
+
+Version 4.0.0
+--------------
+
+Release Date: October 24, 2017
+
+- TBD
 
 Version 3.5.11
 --------------
