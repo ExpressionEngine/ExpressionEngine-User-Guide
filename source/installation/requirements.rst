@@ -6,14 +6,10 @@ System Requirements
 Server Requirements
 *******************
 
-- `PHP <http://www.php.net/>`_ 5.3.10 or newer, compiled with the
+- `PHP <http://www.php.net/>`_ 5.4.0 or newer, compiled with the
   `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_ library
 
-  .. note:: PHP 5.3.10 can also be read as five-point-three-point-*ten*.
-    That means 5.3.10 is **greater than** 5.3.1, 5.3.2, 5.3.3, and all
-    the way up to 5.3.9.
-
-- `MySQL <http://www.mysql.com/>`_ 5.0.3 or newer
+- `MySQL <http://www.mysql.com/>`_ 5.5.3 or newer
 - At least 32 MB memory allocated to PHP
 - At least 10 MB of available disk space for the ExpressionEngine
   software and modules
