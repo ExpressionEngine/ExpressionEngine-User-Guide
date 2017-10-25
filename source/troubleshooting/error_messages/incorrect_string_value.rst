@@ -8,4 +8,5 @@ Troubleshooting
 
 This error happens when ExpressionEngine tries to save content with an emoji to
 the database, and that database is not using the ``utf8mb4`` character set. Use
-our Emoji Suport add-on to update your database.
+our `Emoji Suport add-on <https://github.com/ellislab/emoji-support>`_ to update
+your database.
