@@ -107,6 +107,7 @@ and encourage them to join!
 - Derek Hogue
 - Digital Surgeons
 - Dom Stubbs
+- Doug Black, Jr. (American Bible Society)
 - Doug Thwaites
 - Douglas Green
 - Eli Van Zoeren
