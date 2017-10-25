@@ -657,7 +657,7 @@ content type. For example::
   }
 
 Once that's done, your fieldtype will show up in the list
-of fieldtypes available for use when setting up a new Grid column.å
+of fieldtypes available for use when setting up a new Grid column.
 
 Grid Fieldtype Events
 =====================

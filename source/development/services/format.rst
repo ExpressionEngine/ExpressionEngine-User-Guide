@@ -101,4 +101,3 @@ For example::
 
   format/number
   format/text
-
