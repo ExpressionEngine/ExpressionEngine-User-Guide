@@ -284,6 +284,11 @@ With AutoMySQLBackup, you just take a few minutes to set it up, and then
 simply incorporate the resulting files into your established file backup
 routine.
 
+ExpressionEngine SQL Manager Backups
+====================================
+
+ExpressionEngine also comes with a :doc:`simple database backup utility </cp/utilities/backup_utility>` that can be used if you don't have access to create your own backups from your web host.
+
 *******************
 Third-Party Add-Ons
 *******************

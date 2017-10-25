@@ -2,7 +2,7 @@
 Upgrading from ExpressionEngine 2
 #################################
 
-.. important:: Third-party add-ons from v2 will not work with ExpressionEngine 3. Check with each add-on author to see if there are updates available. If you maintain your own add-ons, please see the :doc:`/development/conversion/index`.
+.. important:: Third-party add-ons from v2 will not work with ExpressionEngine 3. Check with each add-on author to see if there are updates available. If you maintain your own add-ons, please see the :doc:`/development/v3_addon_migration/index`.
 
   Add-ons that you will not be using in v3 must be uninstalled and refactored out of your site **before** upgrading. ExpressionEngine 3 will not be able to run incompatible code to uninstall those add-ons after upgrading. For example, the `Playa & Matrix Importer <https://github.com/EllisLab/PlayaMatrixImporter>`_ can be used to convert those third-party field types to native ExpressionEngine Relationship and Grid fields, and should be run while still on v2.
 

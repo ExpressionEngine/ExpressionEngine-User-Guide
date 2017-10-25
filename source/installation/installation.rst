@@ -29,17 +29,15 @@ After :elstore:`purchasing ExpressionEngine </>`, download it from :elstore:`you
 3. Set File Permissions
 ***********************
 
-Apache
-======
+You need to enable write access to the following files and folders.
 
-You need to enable write access to the following files and folders. In a worst-case scenario that would be ``666`` for files and ``777`` for directories. You should check with your web host to see if more restrictive permissions can be used to allow PHP to write to files and directories. See :doc:`/troubleshooting/general/file_permissions` for details.
+For Apache, that would be ``666`` for files and ``777`` for directories, in a worst-case scenario. You should check with your web host to see if more restrictive permissions can be used to allow PHP to write to files and directories. See :doc:`/troubleshooting/general/file_permissions` for details.
 
-Set this file to be writeable:
+For IIS, provide all permissions to the IIS user for these files and directories.
 
+- :file:`system/ee/`
+- :file:`system/ee/*` (only top-level files and directories need modifying)
 - :file:`system/user/config/config.php`
-
-Set these directories to be writeable:
-
 - :file:`system/user/cache/`
 - :file:`system/user/templates/`
 - :file:`images/avatars/`
@@ -48,21 +46,16 @@ Set these directories to be writeable:
 - :file:`images/pm_attachments/`
 - :file:`images/signature_attachments/`
 - :file:`images/uploads/`
+- :file:`themes/ee/`
+- :file:`themes/ee/*` (only top-level files and directories need modifying)
 
-IIS
-===
+.. tip::
 
-Provide all permissions to the IIS user for these directories:
+  On a Unix based system, you can use the following pattern to set permissions recursively to what you need for folders and files. In this example, we are setting all directories in `system/ee` to **755** and all files therein to **644**, recursively:
 
-- :file:`system/user/cache/`
-- :file:`system/user/templates/`
-- :file:`images/avatars/`
-- :file:`images/captchas/`
-- :file:`images/member_photos/`
-- :file:`images/pm_attachments/`
-- :file:`images/signature_attachments/`
-- :file:`images/uploads/`
+    .. code-block:: bash
 
+      find system/ee \( -type d -exec chmod 755 {} \; \) -o \( -type f -exec chmod 644 {} \; \)
 
 ******************************
 4. Run The Installation Wizard

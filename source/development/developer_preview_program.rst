@@ -132,6 +132,7 @@ and encourage them to join!
 - Jamie Pittock
 - Jamie Taylor (Percipio)
 - Jan van Lysebettens
+- Jason Boothman (Reusser Design)
 - Jason Siffring (Surprise Highway)
 - Jelle de Jong
 - Jeremy Gimbel
@@ -186,6 +187,7 @@ and encourage them to join!
 - Padraig Kennedy
 - Patrick Pohler (Anecka)
 - Patrick Woodcock
+- Paul Larson (Creative Arc)
 - Paul Sijpkes
 - Pedro Guimaraes (Willow Light Studio)
 - Peter Felix
