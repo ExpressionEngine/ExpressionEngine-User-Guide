@@ -138,7 +138,6 @@ and encourage them to join!
 - Jelle de Jong
 - Jeremy Gimbel
 - Jeremy Worboys
-- Jeroen Dewaele (Bits of Love)
 - Jerry Price
 - Jesse Schutt
 - Jimmy Fursman (Mercutio Consulting)
