@@ -27,6 +27,7 @@ Installation
 
 - :doc:`Browser is attempting to download install.php instead of showing it <install_and_update/browser_downloading_install_php>`
 - :doc:`"Table already exists" error when upgrading <install_and_update/table_already_exists>`
+- :doc:`Emoji suppport <install_and_update/emoji_support>`
 
 *************
 Control Panel
