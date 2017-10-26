@@ -73,12 +73,14 @@ Error Messages
 - :doc:`A problem was encountered while trying to upload your file <error_messages/a_problem_was_encountered_while_trying_to_upload_your_file>`
 - :doc:`Unable to receive your comment at this time <error_messages/unable_to_receive_your_comment>`
 - :doc:`MySQL Error 1030: Got error 28 <error_messages/mysql_error_1030_got_error_28>`
+- :doc:`MySQL Error 1366: Incorrect string value <error_messages/incorrect_string_value>`
 - :doc:`Can't open file: 'exp\_online\_users.MYI' <error_messages/can't_open_file_exp_online_users.myi>`
 - :doc:`Allowed memory size of xxxx bytes exhausted <error_messages/allowed_memory_size_exhausted>`
 - :doc:`Warning: Cannot modify header information <error_messages/cannot_modify_header_information>`
 - :doc:`Supplied argument is not a valid MySQL-Link resource <error_messages/supplied_argument_is_not_a_valid_mysql-link_resource>`
 - :doc:`Call to undefined function: imagettftext() <error_messages/call_to_undefined_function_imagettftext>`
 - :doc:`You are not authorized to perform this action <error_messages/you_are_not_authorized_to_perform_this_action>`
+
 
 .. toctree::
 	:glob:
