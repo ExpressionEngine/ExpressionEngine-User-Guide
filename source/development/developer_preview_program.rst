@@ -158,6 +158,7 @@ and encourage them to join!
 - Laisvunas Sopauskas
 - Lance Johnson (Green Egg Media)
 - Leevi Graham
+- Levi Durfee (Bulldog Creative Services)
 - Leon Dijk
 - Lodewijk
 - Louis Dekeister (Hop Studios)
