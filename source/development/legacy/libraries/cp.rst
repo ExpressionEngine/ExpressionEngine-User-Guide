@@ -100,8 +100,7 @@ Add JavaScript Files to the JavaScript Combo Loader
 
   Several custom jQuery plugins are included with ExpressionEngine and
   available for third-party developers to use. Plugins available include
-  :ref:`ee_interact.event <jquery-interact>`, :doc:`ee_notice
-  </development/cp_javascript/notification>`, `tablesorter
+  :ref:`ee_interact.event <jquery-interact>`, `tablesorter
   <http://tablesorter.com/docs/>`__, :doc:`ee_table
   </development/cp_javascript/table>`, and :doc:`wysihat
   </development/cp_javascript/rte/wysihat_api>`.
@@ -227,22 +226,6 @@ Fetch an Action ID
   :returns: Action ID
   :rtype: Integer
 
-Control Panel Messages
-----------------------
-
-The control panel class creates a default view variable
-``$cp_messages``, which you will typically use to display messages after
-form submission. By default, this is an empty array. Using
-:meth:`Session::set_flashdata` (requires a redirect), you may specify a
-success and/or failure message. The message content will be displayed
-using the ``./themes/cp_themes/default/_shared/message.php`` view, with
-a class of ``success`` or ``failure`` as needed. If javascript is
-enabled, the html notification will automatically be hidden and the
-message will be displayed by the :doc:`notification plugin
-</development/cp_javascript/notification>` with the appropriate message
-type indicated. After redirecting, a javascript success notification bar
-would show briefly, followed by an error message. Error messages, if
-shown, remain visible until manually closed.
 
 Publish Page Layout Methods
 ---------------------------

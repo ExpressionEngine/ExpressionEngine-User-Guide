@@ -128,7 +128,7 @@ row\_id=
 
   row_id="5"
 
-Tells the tag pair to only output rows for the rows specified. Multiple
+Tells the tag pair to only output rows for the database IDs of the rows specified. Multiple
 rows may be specified by separating them with a pipe character::
 
   row_id="11|5|55"

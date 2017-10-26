@@ -91,3 +91,12 @@ revisions will be saved for any given template. This setting helps
 ensure that your database does not get too large due to storing Template
 revisions.
 
+.. _global-template-save-templates-as-files-label:
+
+Save templates as files?
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+This determines whether your Templates are saved to files
+in addition to the datbase, allowing easy editing via the
+editor of your choice. See :doc:`/templates/templates_as_files` for
+more information.

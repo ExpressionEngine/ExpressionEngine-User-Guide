@@ -151,7 +151,7 @@ Class Reference
 	:returns:	EE_Output instance (method chaining)
 	:rtype:	EE_Output
 
-	Permits you to enable/disable the :doc:`Profiler </development/legacy/libraries/profiler>`, which will display benchmark and other data at the bottom of your pages for debugging and optimization purposes.
+	Permits you to enable/disable the Output Debugger, which will display benchmark and other data at the bottom of your pages for debugging and optimization purposes.
 
 	To enable the profiler place the following line anywhere within your
 	:doc:`Controller </development/legacy/controllers>` methods::
@@ -163,14 +163,6 @@ Class Reference
 	To disable the profiler you would use::
 
 		ee()->output->enable_profiler(FALSE);
-
-.. method:: set_profiler_sections($sections)
-
-	:param	array	$sections: Profiler sections
-	:returns:	EE_Output instance (method chaining)
-	:rtype:	EE_Output
-
-	Permits you to enable/disable specific sections of the Profiler when it is enabled. Please refer to the :doc:`Profiler </development/legacy/libraries/profiler>` documentation for further information.
 
 .. method:: cache($time)
 

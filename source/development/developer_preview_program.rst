@@ -107,6 +107,7 @@ and encourage them to join!
 - Derek Hogue
 - Digital Surgeons
 - Dom Stubbs
+- Doug Black, Jr. (American Bible Society)
 - Doug Thwaites
 - Douglas Green
 - Eli Van Zoeren
@@ -132,11 +133,11 @@ and encourage them to join!
 - Jamie Pittock
 - Jamie Taylor (Percipio)
 - Jan van Lysebettens
+- Jason Boothman (Reusser Design)
 - Jason Siffring (Surprise Highway)
 - Jelle de Jong
 - Jeremy Gimbel
 - Jeremy Worboys
-- Jeroen Dewaele (Bits of Love)
 - Jerry Price
 - Jesse Schutt
 - Jimmy Fursman (Mercutio Consulting)
@@ -186,6 +187,7 @@ and encourage them to join!
 - Padraig Kennedy
 - Patrick Pohler (Anecka)
 - Patrick Woodcock
+- Paul Larson (Creative Arc)
 - Paul Sijpkes
 - Pedro Guimaraes (Willow Light Studio)
 - Peter Felix

@@ -15,14 +15,16 @@ One idea would be to hold a particular :doc:`date format string
 over. By making it a Template partial you can change it in one place and
 immediately see the effects everywhere that you've used it. For example,
 you could create a Template partial named ``my_date_formatting`` with a value of
-``format="%m-%d-%Y"`` and use it in any date variable thusly
+``format="%m-%d-%Y"`` and use it in any date variable thusly:
 
-.. code-block:: plain
+.. code-block:: text
 
 	{entry_date {my_date_formatting}}
 
 It will be instantly expanded before your template is parsed, just as if
-you had put the expanded text into the template itself::
+you had put the expanded text into the template itself:
+
+.. code-block:: text
 
 	{entry_date format="%m-%d-%Y"}
 
