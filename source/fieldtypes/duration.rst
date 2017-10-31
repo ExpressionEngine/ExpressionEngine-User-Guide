@@ -16,7 +16,7 @@ Field Options
 Units
 =====
 
-Units can be set to Hours, Minutes or Seconds. This is used to determine the length of time being described when a content other enters a whole number like "42". The publish form will automatically display the unit in the field's placeholder text to give the author input reminders.
+Units can be set to Hours, Minutes or Seconds. This is used to determine the length of time being described when a content author enters a whole number like "42". The publish form will automatically display the unit in the field's placeholder text to give the author input reminders.
 
 ***************
 Alternate Input
