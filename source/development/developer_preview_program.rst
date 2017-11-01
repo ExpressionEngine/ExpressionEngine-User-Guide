@@ -217,6 +217,7 @@ and encourage them to join!
 - Steven Peercy
 - Strukt
 - Susan Snipes (Q Digital Studio)
+- Tad Ward (Blue Fish)
 - Taylor Daughtry (Caddis)
 - TJ Draper
 - Tom Jaeger (EE Harbor)
