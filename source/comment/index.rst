@@ -298,6 +298,14 @@ This can be useful for creating links to the commenter's member profile::
 
 	<a href="http://example.com/index.php/member/{author_id}/">{name}</a>
 
+aol\_im
+-------
+
+::
+
+	{aol_im}
+
+The author's AOL IM account name
 
 avatar\_image\_height
 ---------------------
@@ -551,7 +559,25 @@ The date of the comment but **not** localized for the user. See
 :doc:`Date Variable Formatting </templates/date_variable_formatting>`
 for more information.
 
-ip_address
+icq
+---
+
+::
+
+	{icq}
+
+The author's ICQ IM user identification number
+
+interests
+---------
+
+::
+
+	{interests}
+
+The author's "interests" as entered in their profile
+
+ip\_address
 -----------
 
 ::
@@ -592,6 +618,24 @@ Template\_Group/Template that you use to display search results. For
 example::
 
 	<a href="{member_search_path='search/results'}">View entries by this member</a>
+
+msn\_im
+-------
+
+::
+
+	{msn_im}
+
+The author's MSN IM account name
+
+occupation
+----------
+
+::
+
+	{occupation}
+
+The author's occupation as entered in their profile
 
 name
 ----
@@ -766,6 +810,53 @@ total\_comments
 
 The total number of comments for this tag on all pages.
 
+url
+---
+
+::
+
+	{url}
+
+The author's raw URL, if it exists
+
+url\_as\_author
+---------------
+
+::
+
+	{url_as_author}
+
+Hyperlink pointing to the URL (if it exists) with the author name as the
+link title. If the URL does not exist simply the name is returned.
+
+url\_or\_email
+--------------
+
+::
+
+	{url_or_email}
+
+URL if it exists, otherwise the email address
+
+url\_or\_email\_as\_author
+--------------------------
+
+::
+
+	{url_or_email_as_author}
+
+Hyperlink or email link as author screen\_name (or username if they
+haven't specified a screen name)
+
+url\_or\_email\_as\_link
+------------------------
+
+::
+
+	{url_or_email_as_link}
+
+Same as above only it will display the URL or email address as a link
+
 url\_title\_path
 ----------------
 
@@ -801,6 +892,14 @@ channel\_id
 
 The ID number of the actual channel
 
+yahoo\_im
+---------
+
+::
+
+	{yahoo_im}
+
+The author's Yahoo IM account name
 
 Custom Member Fields
 ====================

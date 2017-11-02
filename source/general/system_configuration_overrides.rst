@@ -3600,7 +3600,6 @@ $config['rte_enabled'] = 'y';
 Text Editor Settings`: :ref:`Enable Rich Text Editor
 <global-channel-category-url-indicator-label>`
 
-.. _overrides-save-tmpl-files:
 
 save_tmpl_files
 ---------------
