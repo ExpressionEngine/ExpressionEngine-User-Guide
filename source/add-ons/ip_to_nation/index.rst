@@ -29,8 +29,8 @@ latest version of ExpressionEngine, and visit the :menuselection:`Developer Tool
 may take a few seconds; do not click any links or refresh the page while
 the auto-update is taking place.
 
-Banning Countries
------------------
+Banning Counties
+----------------
 
 To look up the country associated with an IP address, or to ban a
 country, go to :menuselection:`Developer Tools --> Add-On Manager --> IP to Nation` in your Control
