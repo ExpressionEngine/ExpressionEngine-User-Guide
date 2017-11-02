@@ -14,8 +14,7 @@ Many of the libraries and helpers available in ExpressionEngine 2 continue to fu
   :glob:
   :titlesonly:
 
-  v4_addon_migration
-  v3_addon_migration/index
+  conversion/index
   addon_setup_php_file
   core/index
   services/index

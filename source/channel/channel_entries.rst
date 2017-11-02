@@ -874,19 +874,13 @@ or less-than operators to search through them.
 
 .. code-block:: none
 
-  search:numeric_field='<20'
+  search:numeric_field="<20"
 
-  search:numeric_field='>20'
+  search:numeric_field=">20"
 
-  search:numeric_field='<=20'
+  search:numeric_field="<=20"
 
-  search:numeric_field='>=20'
-
-To specify a range, use a piped list. For instance to search a field for values between and including 10 through 20:
-
-.. code-block:: none
-
-  search:numeric_field='>=10|<=20'
+  search:numeric_field=">=20"
 
 Including / Excluding Empty Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -944,20 +938,19 @@ set to "yes", it displays the current week by default (i.e. no
 pagination in the URL) and automatically adjusts the pagination links to
 indicate the correct page for that week.
 
-show_expired=
+show\_expired=
 --------------
 
 ::
 
-	show_expired="no" show_expired="yes" show_expired="only"
+	show_expired="yes"
 
-There are three valid options for this parameter: "yes", "no", "only".  The default is "no", with expired entries not shown.
-If set to "yes", expired entries are included in the results.  If set to "only", only expired entries are included.
-
+You can determine whether you wish for entries that have "expired" to be
+included.
 
 .. _channel_entries_show_future_entries:
 
-show_future_entries=
+show\_future\_entries=
 ----------------------
 
 ::
@@ -1112,10 +1105,10 @@ sticky=
 
 ::
 
-	sticky="yes" sticky="no" sticky="only"
+	sticky="no"
 
-By default, sticky topics always remain at the top of the page ("yes"). You can
-manually turn off stickies by setting the parameter to "no".  If set to "only", only "sticky" entries are included in the results.
+By default, sticky topics always remain at the top of the page. You can
+manually turn off stickies by using the above parameter.
 
 .. _channel_entries_track_views:
 
@@ -1301,6 +1294,15 @@ absolute_reverse_count
 The *opposite* of ``{absolute_count}``, in that it displays the entry count position counting backwards from the absolute total. Works across pagination, so the fifth entry in a list of fifteen entries would display "10".
 
 
+aol\_im
+-------
+
+::
+
+	{aol_im}
+
+The author's AOL IM account name.
+
 author
 ------
 
@@ -1361,6 +1363,15 @@ Typically used as such::
 	{if avatar}
 		<img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
 	{/if}
+
+bio
+---
+
+::
+
+	{bio}
+
+The author's bio as entered in their profile.
 
 channel
 -------
@@ -1602,7 +1613,25 @@ The date on which the entry was last edited in GMT. This variable is
 **not** localized for each user's date settings. See :doc:`Date Variable
 Formatting </templates/date_variable_formatting>` for more information.
 
-ip_address
+icq
+---
+
+::
+
+	{icq}
+
+The author's ICQ IM user identification number.
+
+interests
+---------
+
+::
+
+	{interests}
+
+The author's "interests" as entered in their profile.
+
+ip\_address
 -----------
 
 ::
@@ -1610,6 +1639,15 @@ ip_address
 	{ip_address}
 
 The IP address of the author when they posted the entry.
+
+location
+--------
+
+::
+
+	{location}
+
+The author's location as entered in their profile.
 
 member\_search\_path
 --------------------
@@ -1626,6 +1664,23 @@ example::
 
 	<a href="{member_search_path='search/results'}">View entries by this member</a>
 
+msn\_im
+-------
+
+::
+
+	{msn_im}
+
+The author's MSN IM account name.
+
+occupation
+----------
+
+::
+
+	{occupation}
+
+The author's occupation as entered in their profile.
 
 .. _channel_entries_page_uri:
 
@@ -1924,6 +1979,44 @@ The domain name for your site, trimmed of any subdomains. For instance,
 example.com becomes example.com. Typically only used in the Atom feed
 Template.
 
+url
+---
+
+::
+
+	{url}
+
+The author's raw URL, if it exists.
+
+url\_or\_email
+--------------
+
+::
+
+	{url_or_email}
+
+The author's URL if it exists, otherwise the raw email address.
+
+url\_or\_email\_as\_author
+--------------------------
+
+::
+
+	{url_or_email_as_author}
+
+A hyperlink to the author's URL if it exists, otherwise it will be an
+email link for the author's email address. The text of the link will be
+the author's screenname if it exists, otherwise it will be the username.
+
+url\_or\_email\_as\_link
+------------------------
+
+::
+
+	{url_or_email_as_link}
+
+This is similar to the above variable. The difference is that the text
+for the link will be either the URL or the email address.
 
 url\_title
 ----------
@@ -1977,6 +2070,15 @@ the week date will fall on Sunday for the week of the entry. When
 ``start_day="Monday"`` is used, the week date will fall on Monday for
 the week of the entry. See :doc:`Date Variable Formatting
 </templates/date_variable_formatting>` for more information.
+
+yahoo\_im
+---------
+
+::
+
+  {yahoo_im}
+
+The author's Yahoo IM account name.
 
 .. _channel_entries_conditional_variables:
 
