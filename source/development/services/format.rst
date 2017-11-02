@@ -4,7 +4,7 @@ Format Service
 
 .. contents::
   :local:
-  :depth: 2
+  :depth: 1
 
 .. highlight:: php
 
@@ -61,18 +61,33 @@ All Formatters
     $array = array('size' => (string) ee('Format')->make('Number', $content)->bytes());
 
 
-
+.. namespace:: EllisLab\ExpressionEngine\Service\Formatter\Formats
 
 Number Formatter
 ----------------
 
-See :doc:`format/number` for details.
+.. class:: Number
+
+.. method:: bytes($abbr = TRUE, $include_markup = TRUE)
+
+  Formats a binary byte multiple into a human-readable measure of units, e.g. B, KB, MB, GB.
+
+  :param bool $abbr: Use the abbreviated form of the byte format
+  :param bool $include_markup: Output with ``<abbr>`` HTML. Only affects abbreviated forms.
+  :returns: A Formatter object
+  :rtype: object
 
 Text Formatter
 --------------
 
-See :doc:`format/text` for details.
+.. class:: Text
 
+.. method:: attributeEscape()
+
+  Escapes a string for use in an HTML attribute.
+
+  :returns: A Formatter object
+  :rtype: object
 
 When to use ``compile()``
 -------------------------
@@ -93,11 +108,3 @@ For example::
   ee()->javascript->set_global(array(
     'form.some_input.value' => ee('Format')->make('String', $content)->attribute_escape()->compile()
   ));
-
-.. toctree::
-  :hidden:
-  :glob:
-  :titlesonly:
-
-  format/number
-  format/text
