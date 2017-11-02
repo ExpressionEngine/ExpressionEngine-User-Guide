@@ -97,6 +97,7 @@ and encourage them to join!
 - Christofer Sandin (Republic Factory)
 - Christopher Imrie
 - Clinton Reeves (Q Digital Studio)
+- Damien Majer (Optima Graphic Design Consultants Limited)
 - Dan Decker
 - Dan Diemer
 - Daniel Grebb
