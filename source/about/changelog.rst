@@ -11,6 +11,10 @@ Version 3.5.12
 
 Release Date: November 3, 2017
 
+- Important:
+
+  - 🗑🔒‼️ Fixed a bug (#23266) where all member group permission assignments were lost when a Site was deleted. Make certain to update to version 3.5.12 before deleting an MSM site.
+
 - Loosened the redirect warning for external links in the control panel to allow redirects to all subdomains.
 - Optimized a query used in the category archive tag.
 - Updated the developer documentation regarding the legacy Output class (#23215).
@@ -23,9 +27,8 @@ Release Date: November 3, 2017
 - Fixed a bug where the control panel log didn't have enough room to save a valid username.
 - Fixed a bug in the forum where the visitor statistics section did not appear.
 - Fixed a bug (#23191) in the control panel entry search where quoted searches failed.
-- Fixed some incorrect doc blocks (#23245).
+- Fixed some incorrect DocBlocks (#23245).
 - Fixed a bug (#23236) where channel sets used the channel title instead of the channel short name.
-- Fixed a bug (#23266) where all member group permission assignments were lost when a Site was deleted.
 - Fixed a bug where when a member group left town it left some if its things behind.
 - Developers:
 
