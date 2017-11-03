@@ -25,6 +25,8 @@ Release Date: November 3, 2017
 - Fixed a bug (#23191) in the control panel entry search where quoted searches failed.
 - Fixed some incorrect doc blocks (#23245).
 - Fixed a bug (#23236) where channel sets used the channel title instead of the channel short name.
+- Fixed a bug (#23266) where all member group permission assignments were lost when a Site was deleted.
+- Fixed a bug where when a member group left town it left some if its things behind.
 - Developers:
 
   - Added a URL_TITLE_MAX_LENGTH constant.
