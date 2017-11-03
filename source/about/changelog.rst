@@ -13,7 +13,7 @@ Release Date: November 3, 2017
 
 - Important:
 
-  - 🗑🔒‼️ Fixed a bug (#23266) where all member group permission assignments were lost when a Site was deleted. Make certain to update to version 3.5.12 before deleting an MSM site.
+  - 🗑🔒‼️ If you are using the Site Manager and are planning on deleting a Site, make certain to update to version 3.5.12 first: Fixed a bug (#23266) where member group setting assignments were lost when a Site was deleted.
 
 - Loosened the redirect warning for external links in the control panel to allow redirects to all subdomains.
 - Optimized a query used in the category archive tag.
