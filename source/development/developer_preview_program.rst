@@ -132,7 +132,6 @@ and encourage them to join!
 - James Smith
 - Jamie Pittock
 - Jamie Taylor (Percipio)
-- Jan van Lysebettens
 - Jason Boothman (Reusser Design)
 - Jason Siffring (Surprise Highway)
 - Jelle de Jong
