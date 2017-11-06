@@ -97,6 +97,7 @@ and encourage them to join!
 - Christofer Sandin (Republic Factory)
 - Christopher Imrie
 - Clinton Reeves (Q Digital Studio)
+- Damien Majer (Optima Graphic Design Consultants Limited)
 - Dan Decker
 - Dan Diemer
 - Daniel Grebb
@@ -132,7 +133,6 @@ and encourage them to join!
 - James Smith
 - Jamie Pittock
 - Jamie Taylor (Percipio)
-- Jan van Lysebettens
 - Jason Boothman (Reusser Design)
 - Jason Siffring (Surprise Highway)
 - Jelle de Jong

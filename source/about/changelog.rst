@@ -12,6 +12,34 @@ Release Date: October 24, 2017
 
 - TBD
 
+Version 3.5.12
+--------------
+
+Release Date: November 3, 2017
+
+- Important:
+
+  - 🗑🔒‼️ If you are using the Site Manager and are planning on deleting a Site, make certain to update to version 3.5.12 first: Fixed a bug (#23266) where member group setting assignments were lost when a Site was deleted.
+
+- Loosened the redirect warning for external links in the control panel to allow redirects to all subdomains.
+- Optimized a query used in the category archive tag.
+- Updated the developer documentation regarding the legacy Output class (#23215).
+- Fixed a bug (#23218) where the live look template view button went on holiday (it took all the colors from the custom statuses too!).
+- Fixed a bug (#21743) where date fields belligerently remained localized.
+- Fixed a bug (#23253) where you could not edit entries that have existing content in the Discussion Forum tab.
+- Fixed a bug (#23265) where guest Channel Forms could white screen (fatal PHP error) in certain circumstances.
+- Fixed a bug in the forum module where permission to upload settings did not always stick.
+- Fixed a bug in the forum module where you could not uncheck all permission checkboxes and have it stick.
+- Fixed a bug where the control panel log didn't have enough room to save a valid username.
+- Fixed a bug in the forum where the visitor statistics section did not appear.
+- Fixed a bug (#23191) in the control panel entry search where quoted searches failed.
+- Fixed some incorrect DocBlocks (#23245).
+- Fixed a bug (#23236) where channel sets used the channel title instead of the channel short name.
+- Fixed a bug where when a member group left town it left some if its things behind.
+- Developers:
+
+  - Added a URL_TITLE_MAX_LENGTH constant.
+
 Version 3.5.11
 --------------
 

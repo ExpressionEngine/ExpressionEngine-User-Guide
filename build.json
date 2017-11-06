@@ -1,0 +1,21 @@
+{
+    "tag": "3.5.12",
+
+    "repositories": {
+        "app": "git@github.com:EllisLab/ExpressionEngine",
+        "docs": "git@github.com:EllisLab/ExpressionEngine-User-Guide"
+    },
+
+    "core_exclude": [
+        "blacklist",
+        "email",
+        "forum",
+        "ip_to_nation",
+        "member",
+        "moblog",
+        "query",
+        "simple_commerce",
+        "spam",
+        "wiki"
+    ]
+}
