@@ -40,7 +40,7 @@ How to Join
 -----------
 
 In order to join the program you must have a publicly-available add-on
-and have at least one ExpressionEngine 2 license in your account. If you
+and have at least one ExpressionEngine license in your account. If you
 are interested in joining the Developer Preview Program, please send an
 email to `team@ellislab.com`_ and include your EllisLab.com username and
 a link to your publicly-available add-ons in your request.
@@ -97,6 +97,7 @@ and encourage them to join!
 - Christofer Sandin (Republic Factory)
 - Christopher Imrie
 - Clinton Reeves (Q Digital Studio)
+- Damien Majer (Optima Graphic Design Consultants Limited)
 - Dan Decker
 - Dan Diemer
 - Daniel Grebb
@@ -132,6 +133,7 @@ and encourage them to join!
 - Jamie Pittock
 - Jamie Taylor (Percipio)
 - Jan van Lysebettens
+- Jason Boothman (Reusser Design)
 - Jason Siffring (Surprise Highway)
 - Jelle de Jong
 - Jeremy Gimbel
@@ -186,6 +188,7 @@ and encourage them to join!
 - Padraig Kennedy
 - Patrick Pohler (Anecka)
 - Patrick Woodcock
+- Paul Larson (Creative Arc)
 - Paul Sijpkes
 - Pedro Guimaraes (Willow Light Studio)
 - Peter Felix
