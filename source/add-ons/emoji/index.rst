@@ -30,13 +30,21 @@ This tag outputs a list of all cataloged emoji::
 Variables
 =========
 
-{html_entity}
+html_entity
 -------------
+
+::
+
+  {html_entity}
 
 The HTML entity which will render the emoji.
 
-{short_name}
+short_name
 ------------
+
+::
+
+  {short_name}
 
 The short name for the emoji, e.g. `joy`, `man-woman-girl-boy`. Note that this does *not* include the `:` before and after the short name that would be necessary for ExpressionEngine to parse and render it for you.
 
@@ -81,7 +89,7 @@ The door is wide open for how and where you can implement a clickable emoji cata
           return false;
         });
         addEmoji = function(emoji) {
-          comment = $('#comment_form textarea[name=comment]');
+          var comment = $('#comment_form textarea[name=comment]');
             comment.val(comment.val() + ' ' + emoji + ' ');
             return false;
         }
