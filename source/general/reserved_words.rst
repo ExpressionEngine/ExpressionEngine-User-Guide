@@ -48,7 +48,6 @@ To avoid potential parsing conflicts, some words are reserved and are
 not available to use as channel or member fields. Below is a list of
 reserved words.
 
--  aol\_im
 -  app\_version
 -  author
 -  author\_id
@@ -83,19 +82,14 @@ reserved words.
 -  gzip\_mode
 -  hits
 -  homepage
--  icq
--  interests
 -  ip\_address
 -  ip\_hostname
 -  lang
--  location
 -  member\_group
 -  member\_id
 -  member\_profile\_link
 -  member\_search\_path
 -  most\_recent\_comment
--  msn\_im
--  occupation
 -  path
 -  permalink
 -  photo\_image\_height
@@ -127,10 +121,6 @@ reserved words.
 -  total\_queries
 -  total\_results
 -  trimmed\_url
--  url
--  url\_as\_email\_as\_link
--  url\_or\_email
--  url\_or\_email\_as\_author
 -  url\_title
 -  url\_title\_path
 -  username
@@ -142,5 +132,5 @@ reserved words.
 -  channel
 -  channel\_id
 -  webmaster\_email
--  yahoo\_im
+
 
