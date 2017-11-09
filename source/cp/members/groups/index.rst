@@ -8,7 +8,7 @@ Member Groups
 .. Overview
 
 The *Member Groups* area of the Control Panel permits you to manage your
-Member Groups. Thge member groups can be sorted by ID, Group Title, and Status.
+Member Groups. The member groups can be sorted by ID, Group Title, and Status.
 
 Each member of your site must be a member of one of your Member Groups.
 These groups allow you to restrict and control what a given member is

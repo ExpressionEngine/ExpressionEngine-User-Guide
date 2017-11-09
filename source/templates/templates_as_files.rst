@@ -34,7 +34,7 @@ Make the ``system/user/templates`` folder writable so that ExpressionEngine will
 
 From the Control Panel, go to :menuselection:`Settings --> Template Settings`.
 
-#. Set **Allow templates to be saved as files?** to *Yes*.
+#. Set **Save Templates as Files** to *Yes*.
 
 Creating and Synchronizing Templates and Files
 ----------------------------------------------

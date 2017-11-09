@@ -304,7 +304,7 @@ in your Templates. The data can either be shown from the currently logged-in use
 or from a specified user using the member_id="" parameter.
 
 .. note:: Remember that the profile information for the current visitor, such as
-   {screen_name}, {email}, etc. are always available in any template
+   {screen_name}, {location}, {email}, etc. are always available in any template
    as :doc:`Global Variables </templates/globals/index>`. Therefore, only use this
    tag if you need to show custom profile data (that is, Member Fields that you have
    created yourself) or information for a specific user.
@@ -384,6 +384,23 @@ The URL to the avatar image associated with the user. Typically used as such::
     <img src="{avatar_url}" width="{avatar_width}" height="{avatar_height}" alt="{screen_name}'s avatar">
   {/if}
 
+bio
+---
+
+::
+
+  {bio}
+
+The user's biography.
+
+birthday
+--------
+
+::
+
+  {birthday}
+
+The user's birthday.
 
 email
 -----
@@ -421,6 +438,14 @@ language
 
 The user's language.
 
+location
+--------
+
+::
+
+  {location}
+
+The location (as entered in their profile) of the user.
 
 last_activity
 -------------
@@ -619,6 +644,15 @@ total_forum_topics
   {total_forum_topics}
 
 The total number of forum topics made by the user.
+
+url
+---
+
+::
+
+  {url}
+
+The user's URL.
 
 username
 --------
