@@ -1,6 +1,10 @@
 Emoticon
 ========
 
+.. warning::
+
+  The Emoticon module will be removed in ExpressionEngine 5. Use the :ref:`{exp:emoji:list} tag <{exp:emoji:list}>` instead.
+
 .. contents::
    :local:
 

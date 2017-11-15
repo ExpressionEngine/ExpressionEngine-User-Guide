@@ -43,7 +43,7 @@ This feature will improve the speed at which your channel pages load by
 caching queries that are normally executed dynamically.
 
 .. note:: Enable this preference only if you **do not** use the "future
-	entries" or "expiring entries" feature.
+  entries" or "expiring entries" feature.
 
 .. _auto-assign-category-parents-label:
 
@@ -93,10 +93,7 @@ flowers\_thumb.jpg.
 Enable emoticons?
 ~~~~~~~~~~~~~~~~~
 
-With this preference you can choose whether or not the special codes for
-smileys are rendered as graphics on your site. If this preference is set
-to "No" then the actual code such as :-) or :lol: will be displayed
-instead of the |image1| or |LOL|
+With this preference you can choose whether or not to auto-convert text-based smileys (``:P``, ``>:-(``) to their emoji counterparts (😛, 😡). If this preference is disabled, then text that contains smileys such as ``:-)`` will not be converted to emoji.
 
 .. _emoticon-url-folder-label:
 

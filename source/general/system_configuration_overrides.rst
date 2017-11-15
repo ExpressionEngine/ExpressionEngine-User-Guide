@@ -1782,8 +1782,7 @@ $config['enable_censoring'] = 'y';
 enable_emoticons
 ----------------
 
-If enabled, smileys entered as text will be displayed with graphic
-representations.
+If enabled, smileys entered as text will be replaced by emoji.
 
 
 ========== ========
@@ -1799,7 +1798,7 @@ $config['enable_emoticons'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Settings --> Content & Design`: :ref:`Display Smileys
+**Also found in CP:** :menuselection:`Settings --> Content & Design`: :ref:`Enable emoticons?
 <emoticon-display-smileys-label>`
 
 
