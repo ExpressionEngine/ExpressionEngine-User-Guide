@@ -119,6 +119,15 @@ thus::
   $values = $filters->values();
   $username_value = $values['filter_by_username'];
 
+Keyword Filter
+==============
+
+The keyword filter is just a text field placed next to the other filters, allowing the user to search your list via arbitrary text. It's used thus::
+
+  $filters = ee('CP/Filter')->add('Keyword');
+  $values = $filters->values();
+  $keyword_value = $values['filter_by_keyword'];
+
 **************
 Custom Filters
 **************
