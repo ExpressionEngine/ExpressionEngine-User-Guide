@@ -12,19 +12,19 @@ Introduction
 
 The Emoji module can make it easy for you to provide your visitors with a catalog / click-interface to add expressive emoji to their content. It also enables you to parse emoji code shorthand in content that ExpressionEngine hasn't parsed, such as from an external data source.
 
-.. _{exp:emoji:list}:
+.. _{exp:emoji:emoji_list}:
 
 ****************
-{exp:emoji:list}
+{exp:emoji:emoji_list}
 ****************
 
 This tag outputs a list of all cataloged emoji::
 
   <dl>
-    {exp:emoji:list}
+    {exp:emoji:emoji_list}
       <dt>{short_name}</dt>
       <dd>{html_entity}</dd>
-    {/exp:emoji:list}
+    {/exp:emoji:emoji_list}
   </dl>
 
 Variables
@@ -109,9 +109,9 @@ The door is wide open for how and where you can implement a clickable emoji cata
     </style>
 
     <div class="container">
-      {exp:emoji:list}
+      {exp:emoji:emoji_list}
         <div class="item"><a href="#" onclick="addEmoji(':{short_name}:');">{html_entity}</a></div>
-      {/exp:emoji:list}
+      {/exp:emoji:emoji_list}
     </div>
 
 #. 🎉💃🕺✨🌐✨

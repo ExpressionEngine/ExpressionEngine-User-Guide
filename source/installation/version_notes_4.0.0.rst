@@ -31,7 +31,7 @@ Member bday_d, bday_m, bday_y default member fields were replaced by a birthday 
 Emoticon Module
 ===============
 
-The Emoticon module has been replaced with the Emoji module. The Emoticon module will be removed in ExpressionEngine 5, so you will want to replace your ``{exp:emoticon}`` tags with ``{exp:emoji:list}`` tags. The Emoji module's tags are vastly superior to the old Emoticon module. Please see the :doc:`/add-ons/emoji/index` module documentation for details.
+The Emoticon module has been replaced with the Emoji module. The Emoticon module will be removed in ExpressionEngine 5, so you will want to replace your ``{exp:emoticon}`` tags with ``{exp:emoji:emoji_list}`` tags. The Emoji module's tags are vastly superior to the old Emoticon module. Please see the :doc:`/add-ons/emoji/index` module documentation for details.
 
 =============
 Other Changes
