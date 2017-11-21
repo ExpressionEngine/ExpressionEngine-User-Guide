@@ -1,18 +1,41 @@
-###########
-Fluid Field
-###########
+#####
+Fluid
+#####
 
-A Fluid Field is a collection of fields.  A Fluid Field can contain any native field type except another Fluid Field.  The fields assigned to the Fluid Field can then be used multiple times in the same entry when creating/editing the entry.  The author also has control over the order of the fields.
+A Fluid field is a collection of fields.  A Fluid field can contain any native field type except another Fluid field.  The fields assigned to the Fluid field can then be used multiple times in the same entry when creating/editing the entry.  The author also has control over the order of the fields.
 
-Fluid Fields give the author control over the structure of their content, while ensuring the final output uses the correct design elements.  All that is done without the author worrying about markup or html.  They simply add content to the fields, and template can wrap each field in the proper markup.
+Fluid fields give the author control over the structure of their content, while ensuring the final output uses the correct design elements.  All that is done without the author worrying about markup or html.  They simply add content to the fields, and template can wrap each field in the proper markup.
+
+*************
+Field Options
+*************
+
+Custom Fields
+=============
+
+Select all fields that you want available in your fluid field on the publish page.  All native fieldtypes except another fluid field are available.
+
+************
+Publish Page
+************
+
+Add
+===
+
+A fluid field is initially displayed as a simple dropdown 'Add', populated with the field names assigned to the fluid field.  When you choose a field from the dropdown, it adds it to the page, maintaing all of the field's settings, instructions and requirements.
+
+Fields can be used more than once and in any order.  They can be re-ordered within the fluid field by dragging up or down.
+
+The frontend will output the various field contents in the order specified in the entry.
+
 
 *************
 Template Tags
 *************
 
-Fluid Field content is ouput using variable pairs.  An outer variable pair using the Fluid Field field's shortname wraps all content.  Within that wrapper variable pair, each field can be output using a prefixed variable pair and the ``{content}`` variable.  Within the prefixed variable pair, the ``{content}`` variable is used in place of the field's shortname.
+Fluid field content is ouput using variable pairs.  An outer variable pair using the Fluid field's shortname wraps all content.  Within that wrapper variable pair, each field can be output using a prefixed variable pair and the ``{content}`` variable.  Within the prefixed variable pair, the ``{content}`` variable is used in place of the field's shortname.
 
-For example, if you have a Fluid Field ``fluid_content`` with a text field ``fluid_text`` your template code may look like this::
+For example, if you have a Fluid field ``fluid_content`` with a text field ``fluid_text`` your template code may look like this::
 
   {fluid_content}
 
@@ -31,9 +54,9 @@ The prefixed tag pair is a looping tag pair.  You can have more than one ``fluid
 Displaying a Pair variable
 ==========================
 
-Fields that use a variable pair to output content work like they would outside of a Fluid Field, with the the ``{content}`` variable taking the place of the field shortname.
+Fields that use a variable pair to output content work like they would outside of a Fluid field, with the the ``{content}`` variable taking the place of the field shortname.
 
-In this example, the Fluid Field has short name ``news_content`` with a file field ``hero_image``.  The template code to output a modified image would look like::
+In this example, the Fluid field has short name ``news_content`` with a file field ``hero_image``.  The template code to output a modified image would look like::
 
   {news_content}
 
@@ -88,7 +111,7 @@ Fluid Field Notes
 
 - The ```{if no_results}``` tag is not valid within the prefixed variable pairs.
 - Count variables available in some variable pairs (grid and relationship) restart at 1 each loop.  So the total_results for a relationship tag pair would refer to the total number of relationships for that specific instance of the relationship field.
-- All native fields aside from a Fluid Field field can be included in a Fluid Field.
+- All native fields aside from a Fluid field can be included in a Fluid field.
 
 Field Examples
 ==============

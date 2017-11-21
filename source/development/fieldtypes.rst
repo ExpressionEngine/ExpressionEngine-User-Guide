@@ -789,11 +789,11 @@ cell object such as ``fieldtype``, ``column-id`` and ``row-id``
 (``row-id`` will be undefined for new rows). Plus since it's a jQuery
 object, you have all DOM traversal methods available to act upon.
 
-*********************************
-Fluid Field Fieldtype Development
-*********************************
+***************************
+Fluid Fieldtype Development
+***************************
 
-To make your fieldtype recognized by Fluid Fields as a compatible
+To make your fieldtype recognized by Fluid fields as a compatible
 fieldtype, you need to modify your implementation of
 :meth:`~EE_Fieldtype::accepts_content_type` to accept the ``fluid_field``
 content type. For example::
@@ -804,18 +804,18 @@ content type. For example::
   }
 
 Once that's done, your fieldtype will show up in the list
-of fieldtypes available for use when setting up a new Fluid Field field.
+of fieldtypes available for use when setting up a new Fluid field.
 
-Fluid Field Fieldtype Settings Class Property
-=============================================
+Fluid Fieldtype Settings Class Property
+=======================================
 
-When your fieldtype is in the context of Fluid Field, it will have an additional
+When your fieldtype is in the context of Fluid field, it will have an additional
 item available to you in your fieldtype's ``$settings`` class property.
 
 +-------------------------+----------------------------------------------+
 | Settings Key Name       | Description                                  |
 +=========================+==============================================+
-| ``fluid_field_data_id`` | When available, ID of the Fluid Field Data   |
+| ``fluid_field_data_id`` | When available, ID of the Fluid field Data   |
 |                         | entity.                                      |
 +-------------------------+----------------------------------------------+
 
@@ -824,8 +824,8 @@ like so::
 
   $this->settings['fluid_field_data_id'];
 
-Fluid Field Javascript Events
-=============================
+Fluid Javascript Events
+======-================
 
 Several Javascript events are fired on certain actions to let your
 fieldtypes know when those actions have taken place. Here is an
