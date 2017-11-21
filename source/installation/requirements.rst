@@ -24,7 +24,7 @@ the server wizard will run some tests and give you an answer.
 Okay, The Bare Minimums
 ***********************
 
-If you are stuck in an older environment, no worries. ExpressionEngine is compatible with PHP 5.4.0+ with 32M of memory, and MySQL 5.5.3+. That said, running older versions not only hurts performance—increasing the cost of your website—but also puts your site **at risk of security vulnerabilities**. The PHP Group `stopped providing security patches <http://php.net/eol.php>`_ for PHP 5.5 on July 21, 2016, and even 5.6 only has security support `until December 31, 2018 <http://php.net/supported-versions.php>`_. Oracle will also cease providing security support for MySQL 5.5 at the same time.
+If you are stuck in an older environment, ExpressionEngine _can_ run on PHP 5.4.0+ with 32M of memory, and MySQL 5.5.3+. That said, running older versions not only hurts performance—increasing the cost of your website—but also puts your site **at risk of security vulnerabilities**. The PHP Group `stopped providing security patches <http://php.net/eol.php>`_ for PHP 5.5 on July 21, 2016, and even 5.6 only has security support `until December 31, 2018 <http://php.net/supported-versions.php>`_. Oracle will also cease providing security support for MySQL 5.5 at the same time.
 
 Why not save yourself the worry and hassle, enjoy a faster and more secure site that costs less to maintain, and upgrade now? Here's an email you can send to your host if they need a little nudge:
 
@@ -42,7 +42,7 @@ Why not save yourself the worry and hassle, enjoy a faster and more secure site 
 Control Panel Browser Requirements
 **********************************
 
-ExpressionEngine's Control Panel is tested extensively with the final-release versions of the web browsers listed here, so it's important to keep your browser up to date. These requirements do not apply to your website, which **you are 100% in control of**, just ExpressionEngine's control panel.
+ExpressionEngine's Control Panel targets compatibility with the final-release versions of the web browsers listed here, so it's important to keep your browser up to date. These requirements do not apply to your website, which **you are 100% in control of**, just ExpressionEngine's control panel.
 
 - Chrome
 - Safari
@@ -57,7 +57,7 @@ ExpressionEngine's Control Panel is tested extensively with the final-release ve
 Details and Notes
 *****************
 
-You can safely ignored the rest of this page unless you are experiencing problems, or are a sysadmin setting up a custom environment. All of the following are readily available in most managed environments.
+You can safely ignore the rest of this page unless you are experiencing problems, or are a sysadmin setting up a custom environment. All of the following are readily available in most managed environments.
 
 PHP Extensions Required
 -----------------------
