@@ -14,9 +14,9 @@ The Emoji module can make it easy for you to provide your visitors with a catalo
 
 .. _{exp:emoji:emoji_list}:
 
-****************
+**********************
 {exp:emoji:emoji_list}
-****************
+**********************
 
 This tag outputs a list of all cataloged emoji::
 
