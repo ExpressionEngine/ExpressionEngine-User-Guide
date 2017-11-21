@@ -149,7 +149,7 @@ search\_in=
 
 ::
 
-	search_in="entries" 
+	search_in="entries"
 	search_in="everywhere"
 	search_in="titles"
 
@@ -192,6 +192,22 @@ set in the future will be included in search results. The default
 behavior is for future entries to *not* be included. You may set this
 parameter to "yes" or "no". You may also let the user choose by using an
 `Include Future Entries <#field_show_future_entries>`_ form field.
+
+site=
+~~~~~
+
+::
+
+	site="default_site"
+
+You can include sites other than the current site in search results. Use the
+pipe character to include multiple sites::
+
+	site="default_site|boston|new_york"
+
+Or add the word "not" (followed by a space) to exclude sites::
+
+	site="not chicago|los_angeles"
 
 status=
 ~~~~~~~
