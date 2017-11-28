@@ -108,6 +108,7 @@ and encourage them to join!
 - Derek Hogue
 - Digital Surgeons
 - Dom Stubbs
+- Dorothy Molloy (Climbing Turn)
 - Doug Thwaites
 - Douglas Green
 - Eli Van Zoeren
