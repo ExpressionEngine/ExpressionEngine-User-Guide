@@ -3,7 +3,7 @@ Create/Edit Field Group
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Field Groups --> New/Edit Field Group`
+**Control Panel Location:** :menuselection:`Developer --> Channel Manager --> Field Groups --> New/Edit Field Group`
 
 .. Overview
 

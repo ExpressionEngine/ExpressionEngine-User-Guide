@@ -2131,7 +2131,7 @@ $config['forum_trigger'] = 'eerox';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager --> Discussion
+**Also found in CP:** :menuselection:`Developer --> Add-On Manager --> Discussion
 Forum Settings --> Edit`: :ref:`Forum Triggering Word
 <forum-forum_triggering_word>`
 
@@ -3570,7 +3570,7 @@ $config['rte_default_toolset_id'] = '2';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager --> Rich
+**Also found in CP:** :menuselection:`Developer --> Add-On Manager --> Rich
 Text Editor Settings`: :ref:`Default Toolset
 <global-channel-category-url-indicator-label>`
 
@@ -3595,7 +3595,7 @@ $config['rte_enabled'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager --> Rich
+**Also found in CP:** :menuselection:`Developer --> Add-On Manager --> Rich
 Text Editor Settings`: :ref:`Enable Rich Text Editor
 <global-channel-category-url-indicator-label>`
 
@@ -3667,7 +3667,7 @@ $config['sc_certificate_id'] = 'SX4DT7FDO1234';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+**Also found in CP:** :menuselection:`Developer --> Add-On Manager -->
 Simple Commerce Settings`: :ref:`ID Given to Public Certificate by PayPal
 <sc-certificate-id-label>`
 
@@ -3701,7 +3701,7 @@ $config['sc_encrypt_buttons'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+**Also found in CP:** :menuselection:`Developer --> Add-On Manager -->
 Simple Commerce Settings`: :ref:`Encrypt PayPal Buttons and Links?
 <sc-encrypt-buttons-label>`
 
@@ -3724,7 +3724,7 @@ $config['sc_paypal_account'] = 'paypal_email@example.com';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+**Also found in CP:** :menuselection:`Developer --> Add-On Manager -->
 Simple Commerce Settings`: :ref:`PayPal Account
 <sc-paypal-account-label>`
 
@@ -3752,7 +3752,7 @@ $config['sc_paypal_certificate'] = "/path/to/paypal_certificate.pem";
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+**Also found in CP:** :menuselection:`Developer --> Add-On Manager -->
 Simple Commerce Settings`: :ref:`PayPal Certificate Path
 <sc-paypal-certificate-path-label>`
 
@@ -3779,7 +3779,7 @@ $config['sc_private_key'] = "/path/to/private_key.pem";
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+**Also found in CP:** :menuselection:`Developer --> Add-On Manager -->
 Simple Commerce Settings`: :ref:`Private Key Path
 <sc-private-key-path-label>`
 
@@ -3806,7 +3806,7 @@ $config['sc_public_certificate'] = "/path/to/public_certificate.pem";
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+**Also found in CP:** :menuselection:`Developer --> Add-On Manager -->
 Simple Commerce Settings`: :ref:`Public Certificate Path
 <sc-public-certificate-path-label>`
 
@@ -3834,7 +3834,7 @@ $config['sc_temp_path'] = "/path/to/tmp";
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+**Also found in CP:** :menuselection:`Developer --> Add-On Manager -->
 Simple Commerce Settings`: :ref:`Temporary Encrypted Files Path
 <sc-temp-path-label>`
 
@@ -4177,7 +4177,7 @@ $assign_to_config['site_name'] = 'domain2_short_name';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Site Manager --> Edit`: :doc:`Site Short Name </cp/msm/form>`
+**Also found in CP:** :menuselection:`Developer --> Site Manager --> Edit`: :doc:`Site Short Name </cp/msm/form>`
 
 
 .. _overrides-site-url:
@@ -4393,7 +4393,7 @@ $assign_to_config['template'] = 'index';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Template Manager --> New/Edit`: Make the index template in
+**Also found in CP:** :menuselection:`Developer --> Template Manager --> New/Edit`: Make the index template in
 this group your site's home page?
 
 
@@ -4425,7 +4425,7 @@ $assign_to_config['template_group'] = 'site_2';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Template Manager --> New/Edit`: Make the index template in
+**Also found in CP:** :menuselection:`Developer --> Template Manager --> New/Edit`: Make the index template in
 this group your site's home page?
 
 

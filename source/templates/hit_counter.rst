@@ -7,7 +7,7 @@ the number of hits, put the following variable in any template::
 	{hits}
 
 The hit count for each template can be manually altered in the
-template's preferences under :menuselection:`Developer Tools --> Template Manager`.
+template's preferences under :menuselection:`Developer --> Template Manager`.
 
 Entry "View" Tracking
 ---------------------

@@ -4,7 +4,7 @@ Categories
 .. rst-class:: cp-path
 
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Category Groups --> Categories`
+**Control Panel Location:** :menuselection:`Developer --> Channel Manager --> Category Groups --> Categories`
 
 .. Overview
 

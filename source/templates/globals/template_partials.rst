@@ -28,7 +28,7 @@ you had put the expanded text into the template itself:
 
 	{entry_date format="%m-%d-%Y"}
 
-You can create and edit Template partials at :menuselection:`Developer Tools --> Template Partials`.
+You can create and edit Template partials at :menuselection:`Developer --> Template Partials`.
 
 .. note:: Template partials may not be nested inside other Template partials.
 

@@ -3,7 +3,7 @@ Field Groups
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Field Groups`
+**Control Panel Location:** :menuselection:`Developer --> Channel Manager --> Field Groups`
 
 .. Overview
 

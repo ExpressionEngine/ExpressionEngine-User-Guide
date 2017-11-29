@@ -3,7 +3,7 @@ Forum Templates
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Template Manager --> Forums`
+**Control Panel Location:** :menuselection:`Developer --> Template Manager --> Forums`
 
 .. Overview
 

@@ -3,7 +3,7 @@ Add-On Manager
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Add-On Manager`
+**Control Panel Location:** :menuselection:`Developer --> Add-On Manager`
 
 .. Overview
 

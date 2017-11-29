@@ -3,7 +3,7 @@ Create/Edit Channel
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> New/Edit Channel`
+**Control Panel Location:** :menuselection:`Developer --> Channel Manager --> New/Edit Channel`
 
 .. Overview
 

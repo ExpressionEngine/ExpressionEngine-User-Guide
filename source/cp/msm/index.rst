@@ -3,7 +3,7 @@ Site Manager
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Site Manager`
+**Control Panel Location:** :menuselection:`Developer --> Site Manager`
 
 .. Overview
 

@@ -3,7 +3,7 @@ Data Search and Replace
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> Search and Replace`
+**Control Panel Location:** :menuselection:`Developer --> Utilities --> Search and Replace`
 
 .. Overview
 

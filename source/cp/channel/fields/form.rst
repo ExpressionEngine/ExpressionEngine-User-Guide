@@ -3,7 +3,7 @@ Create/Edit Field
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Field Groups --> Fields --> New/Edit Field`
+**Control Panel Location:** :menuselection:`Developer --> Channel Manager --> Field Groups --> Fields --> New/Edit Field`
 
 .. Overview
 

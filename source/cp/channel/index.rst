@@ -3,7 +3,7 @@ Channels
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager`
+**Control Panel Location:** :menuselection:`Developer --> Channel Manager`
 
 .. Overview
 

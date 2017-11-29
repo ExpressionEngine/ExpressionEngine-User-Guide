@@ -3,7 +3,7 @@ Status Create/Edit
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Status Groups --> New/Edit Status`
+**Control Panel Location:** :menuselection:`Developer --> Channel Manager --> Status Groups --> New/Edit Status`
 
 .. Overview
 

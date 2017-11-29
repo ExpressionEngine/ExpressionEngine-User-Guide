@@ -3,7 +3,7 @@ Form Layouts
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> layouts`
+**Control Panel Location:** :menuselection:`Developer --> Channel Manager --> layouts`
 
 .. Overview
 

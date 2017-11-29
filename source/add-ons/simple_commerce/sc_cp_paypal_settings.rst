@@ -3,7 +3,7 @@ Simple Commerce – PayPal Settings
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Add-On Manager --> Simple Commerce --> Settings`
+**Control Panel Location:** :menuselection:`Developer --> Add-On Manager --> Simple Commerce --> Settings`
 
 .. _sc-paypal-account-label:
 

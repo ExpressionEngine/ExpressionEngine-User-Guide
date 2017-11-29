@@ -3,7 +3,7 @@ Create/Edit Category Groups
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Category Groups --> New/Edit Category Groups`
+**Control Panel Location:** :menuselection:`Developer --> Channel Manager --> Category Groups --> New/Edit Category Groups`
 
 .. Overview
 

@@ -29,7 +29,7 @@ to:
 
 * Go to :menuselection:`Settings --> Debugging & Output` and ensure that **Debug Preference** is set to *1: PHP/SQL
   error messages shown only to Super Admins*.
-* Go to :menuselection:`Developer Tools --> Utilities --> PHP Info` and search the
+* Go to :menuselection:`Developer --> Utilities --> PHP Info` and search the
   page for "display\_errors". Ensure it is set to *On* under the Local
   column. If it is not, your host can help change this setting for you.
 * Check your server's error logs or contact your host to assist you in

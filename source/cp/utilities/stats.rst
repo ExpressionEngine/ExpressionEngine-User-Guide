@@ -3,7 +3,7 @@ Manage Statistics
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> Statistics`
+**Control Panel Location:** :menuselection:`Developer --> Utilities --> Statistics`
 
 .. Overview
 

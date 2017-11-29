@@ -3,7 +3,7 @@ Simple Commerce Control Panel
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Add-On Manager --> Simple Commerce`
+**Control Panel Location:** :menuselection:`Developer --> Add-On Manager --> Simple Commerce`
 
 The Simple Commerce Module's control panel allows you to easily create
 and track your store's items as well as set and maintain your PayPal

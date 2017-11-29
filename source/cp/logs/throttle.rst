@@ -3,7 +3,7 @@ Access Throttling Logs
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Logs --> Throttling`
+**Control Panel Location:** :menuselection:`Developer --> Logs --> Throttling`
 
 .. Overview
 

@@ -3,7 +3,7 @@ Create/Edit Template Partial
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Template Partials --> New/Edit`
+**Control Panel Location:** :menuselection:`Developer --> Template Partials --> New/Edit`
 
 .. Overview
 
