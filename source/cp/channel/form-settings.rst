@@ -1,13 +1,13 @@
-Channel Settings
-================
+Channel Settings Tab
+====================
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer --> Channel Manager --> Channel Settings`
+**Control Panel Location:** :menuselection:`Developer --> Channels --> New/Edit Channel --> Settings`
 
 .. Overview
 
-This screen allows you to edit the preferences and settings associated with the
+This tab allows you to edit the preferences and settings associated with the
 channel. They include General, Administrative, Channel Posting, and Comment
 Posting settings.
 
@@ -79,7 +79,7 @@ Live Look template
 ~~~~~~~~~~~~~~~~~~
 
 The template that will be used for a Live Look at your entries. Links
-are available on the main Edit section of the control panel and will use the format site_url/template_group/template_name/entry_id. 
+are available on the main Edit section of the control panel and will use the format site_url/template_group/template_name/entry_id.
 If you do not want to use a Live Look Template with a channel, simply
 set this preference to "No Live Look Template".
 

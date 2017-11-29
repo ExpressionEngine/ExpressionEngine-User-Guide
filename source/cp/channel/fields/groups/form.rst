@@ -34,5 +34,10 @@ Fields
 Name
 ~~~~
 
-Field group name
+Field group name.
+
+Fields
+~~~~~~
+
+Fields to include in the new field group.
 

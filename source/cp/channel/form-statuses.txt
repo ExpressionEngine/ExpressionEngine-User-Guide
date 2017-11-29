@@ -1,12 +1,13 @@
-Status Create/Edit
-===================
+Channel Statuses Tab
+====================
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer --> Channel Manager --> Status Groups --> New/Edit Status`
+**Control Panel Location:** :menuselection:`Developer --> Channels --> New/Edit Channel --> Statuses`
 
 .. Overview
 
+This tab allows you to assign statuses to your channel.
 
 .. Screenshot (optional)
 
@@ -20,8 +21,19 @@ Permission Restrictions
 * Statuses: Edit Statuses
 * Statuses: Delete Statuses
 
-Fields
-------
+The Statuses tab shows all existing statuses in an orderable multi-select.  **Open** and **Closed** statuses are required and any other statuses can be included on a per channel basis.
+
+Status Links
+~~~~~~~~~~~~
+Opens the **Edit Status** modal for that particular status.
+
+Add Status
+~~~~~~~~~~
+Opens the **New Status** model.
+
+
+Modal Fields
+------------
 
 .. contents::
   :local:

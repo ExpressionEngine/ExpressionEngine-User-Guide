@@ -43,7 +43,7 @@ This setting defines the amount of time that must lapse between comment
 postings. A malicious user will have to wait until the time has lapsed
 before being able to post again.
 
-The setting is located at: :menuselection:`Developer --> Channel Manager --> Settings`
+The setting is located at: :menuselection:`Developer --> Channels` in the channel's **Settings** tab
 
 Rank Denial
 -----------

@@ -1,12 +1,13 @@
-Create/Edit Category Groups
-===========================
+Channel Categories Tab
+======================
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer --> Categories --> New/Edit Category Group`
+**Control Panel Location:** :menuselection:`Developer --> Channels --> New/Edit Channel --> Categories`
 
 .. Overview
 
+This tab allows you to create and assign category groups to your channel.
 
 .. Screenshot (optional)
 
@@ -20,8 +21,21 @@ Permission Restrictions
 * Channel categories: Edit Categories
 * Channel categories: Delete Categories
 
-Fields
-------
+
+
+Category Group Links
+~~~~~~~~~~~~~~~~~~~~
+
+Opens the **Edit Category Group** modal for that particular group.
+
+Add Category Group
+~~~~~~~~~~~~~~~~~~
+
+Opens the **New Category Group** model.
+
+
+Modal Fields
+------------
 
 .. contents::
   :local:
@@ -50,27 +64,12 @@ is handled. There are three options:
    character entities and the raw code will be seen upon viewing.
 #. **Allow ALL HTML**: This leaves the HTML code as written and the code
    will then be interpreted by the browser when the entry is viewed.
-
-Edit Categories
-~~~~~~~~~~~~~~~
-
-Member groups who have "Can Edit Categories" privileges will be
-displayed in this list. You can select or deselect from these member
-groups to selectively allow or disallow access to editing categories
-within this group.
-
-Delete Categories
-~~~~~~~~~~~~~~~~~
-
-Member groups who have "Can Delete Categories" privileges will be
-displayed in this list. You can select or deselect from these member
-groups to selectively allow or disallow access to deleting categories
-within this group.
-
+   
 Exclude group from?
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~   
 
 Both channel entries and files can be assigned to categories, the categories available are limited to the member group(s) assigned.
 
 Some category groups may only make sense for files and some may only make sense for entries.  With this setting, you can set the category group not to show as an option available when assigning channel
 or upload preferences.
+

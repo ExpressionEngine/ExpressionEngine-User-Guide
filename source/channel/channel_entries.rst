@@ -1391,7 +1391,7 @@ comment\_auto\_path
 	{comment_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL**
-preference under :menuselection:`Developer --> Channel Manager --> Settings`. No entry
+preference under :menuselection:`Developer --> Channels` in the channel's **Settings** tab. No entry
 id, URL Title, or other information is included; this is the exact URL
 from the preference.
 
@@ -1403,7 +1403,7 @@ comment\_entry\_id\_auto\_path
 	{comment_entry_id_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL**
-preference under :menuselection:`Developer --> Channel Manager --> Settings`. The ID
+preference under :menuselection:`Developer --> Channels` in the channel's **Settings** tab. The ID
 number of the entry will be automatically added. For example, this::
 
 	<a href="{comment_entry_id_auto_path}">my entry</a>
@@ -1438,7 +1438,7 @@ comment\_url\_title\_auto\_path
 	{comment_url_title_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL**
-preference under :menuselection:`Developer --> Channel Manager --> Settings`. The URL
+preference under :menuselection:`Developer --> Channels` in the channel's **Settings** tab. The URL
 Title of the entry will be automatically added. For example, this::
 
 	<a href="{comment_url_title_auto_path}">my entry</a>

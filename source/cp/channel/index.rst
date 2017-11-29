@@ -3,7 +3,7 @@ Channels
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer --> Channel Manager`
+**Control Panel Location:** :menuselection:`Developer --> Channels`
 
 .. Overview
 
@@ -35,8 +35,15 @@ Actions
 
 .. include:: /cp/channel/_header.rst
 
-Sidebar
-~~~~~~~
+
+New
+^^^
+
+This button will allow you to :doc:`create a new channel <form>`.
+
+Import
+~~~~~~
+
 
 Channels
 ^^^^^^^^
@@ -86,7 +93,7 @@ This will take you to the :doc:`create form <form>`.
 Import
 ~~~~~~
 
-This will take you to :doc:`import`.
+This will take you to :doc:`import` where you can import a :doc:`channel set </channel/sets>`.
 
 Channel Links
 ~~~~~~~~~~~~~
@@ -103,22 +110,19 @@ Edit
 
 This will take you to the channel's :doc:`edit form <form>`.
 
-Settings
-^^^^^^^^
+Export
+^^^^^^
 
-This will take you to :doc:`form-settings`.
+This will download a :doc:`Channel Set </channel/sets>`.
 
-layouts
+Layouts
 ^^^^^^^
 
 This will take you to :doc:`layouts/index`.
 
 .. _channel_set_export:
 
-Export
-^^^^^^
 
-This will download a :doc:`Channel Set </channel/sets>`.
 
 Bulk Actions
 ~~~~~~~~~~~~
@@ -140,6 +144,4 @@ confirmation modal to appear that will summarize the action.
 
   *
   cat/index
-  fields/groups/index
-  layouts/index
-  status/index
+  fields/index

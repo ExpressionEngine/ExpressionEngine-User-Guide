@@ -3,7 +3,7 @@ Create/Edit Category Field
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer --> Channel Manager --> Category Groups --> Category Fields --> New/Edit Category Field`
+**Control Panel Location:** :menuselection:`Developer --> Categories --> Category Fields --> New/Edit Category Field`
 
 .. Overview
 

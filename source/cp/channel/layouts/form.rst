@@ -3,7 +3,7 @@ Create/Edit Form Layouts
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer --> Channel Manager --> layouts --> New/Edit`
+**Control Panel Location:** :menuselection:`Developer --> Channels --> Layouts --> New/Edit`
 
 .. Overview
 

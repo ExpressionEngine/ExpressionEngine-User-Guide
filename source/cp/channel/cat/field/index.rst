@@ -3,7 +3,7 @@ Category Fields
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer --> Channel Manager --> Category Groups --> Category Fields`
+**Control Panel Location:** :menuselection:`Developer --> Categories`
 
 .. Overview
 
