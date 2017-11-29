@@ -35,6 +35,8 @@ Developer Tools
   :maxdepth: 1
 
   channel/index
+  channel/fields/index
+  channel/cat/index
   design/index
   msm/index
   addons/index

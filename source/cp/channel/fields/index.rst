@@ -1,5 +1,5 @@
-Custom Fields
-=============
+Fields
+======
 
 .. rst-class:: cp-path
 

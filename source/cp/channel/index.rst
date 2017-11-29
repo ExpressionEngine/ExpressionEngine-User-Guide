@@ -1,5 +1,5 @@
-Channel Manager
-===============
+Channels
+========
 
 .. rst-class:: cp-path
 

@@ -1,5 +1,5 @@
-Category Groups
-===============
+Categories
+==========
 
 .. rst-class:: cp-path
 
