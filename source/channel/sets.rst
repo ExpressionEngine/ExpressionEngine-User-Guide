@@ -6,7 +6,7 @@ Channel Sets
 
 .. versionadded:: 3.3.0
 
-Channel Sets are an easy way for you to save the structure of a Channel and import it elsewhere. The structure of a channel is made up of its :doc:`/cp/channel/form-settings`, :doc:`/cp/channel/cat/index`, :doc:`/cp/channel/fields/index`, and :doc:`Status Group </cp/channel/status/index>`. When you :ref:`export your Channel Set <channel_set_export>`, you're provided with a zip file that contains all of the data needed to recreate that same Channel on any other ExpressionEngine installation by using the :doc:`/cp/channel/import` page.
+Channel Sets are an easy way for you to save the structure of a Channel and import it elsewhere. The structure of a channel is made up of its :doc:`/cp/channel/form-settings`, :doc:`/cp/channel/form-categories`, :doc:`/cp/channel/form-fields`, and :doc:`Statuses </cp/channel/form-statuses>`. When you :ref:`export your Channel Set <channel_set_export>`, you're provided with a zip file that contains all of the data needed to recreate that same Channel on any other ExpressionEngine installation by using the :doc:`/cp/channel/import` page.
 
 When using Relationships, your Channel Set export will export related Channels and continue following the relationships. So if you have a Game Channel that has a Relationship field that has the Team Channel selected, the Team Channel will also be exported. This continues to the Team Channel as well: if that Channel has a Relationship field that has the Player Channel selected, the Player Channel will be exported.
 
@@ -78,28 +78,22 @@ Your ``channel_set.json`` file ties everything together. It will contain structu
 
 The array of channels will contain objects that represent each Channel. Each Channel has a ``channel_title``, ``status_group``, ``field_group``, and ``cat_groups``, though they can be empty. In addition, you can supply ``title_field_label`` to change the Title Label on the publish page.
 
-``status_groups``
+``statuses``
 -----------------
 
 ::
 
-  {
-      "status_groups": [
-          {
-              "name": "Default",
-              "statuses": [
-                  {
-                      "name": "Featured",
-                      "highlight": "66ccff"
-                  }
-              ]
-          }
-      ],
-  }
+  "statuses": [
+        {
+            "name": "Default Page",
+            "highlight": "2051B3"
+        }
+    ],
 
-The array of ``status_groups`` contains objects that represent the related status group. If you're using the "Default" status group, we don't export the "open" or "closed" status, only the additional statuses.
 
-Each object will contain a ``name`` for the Status Group and it will contain an array of ``statuses`` that have objects defining the status that contain the ``status``'s name and *optionally* the ``highlight`` color.
+We don't export the default "open" or "closed" status, only any additional statuses.
+
+Each object will contain an array of ``statuses`` that have objects defining the status that contain the ``status``'s name and *optionally* the ``highlight`` color.
 
 ``category_groups``
 -------------------

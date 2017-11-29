@@ -142,8 +142,8 @@ Channel
 
 This option is only available when *editing* an entry.
 
-This drop-down list will contain all channels that share the same Field
-Group, Category Group, and Status Group with the current channel for the
+This drop-down list will contain all channels that share the same Fields, Field
+Groups, Category Groups, and Statuses with the current channel for the
 entry. Using this option, you can move an entry from one channel to
 another channel that is set up similarly.
 

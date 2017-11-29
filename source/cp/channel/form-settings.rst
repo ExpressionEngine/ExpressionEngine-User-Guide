@@ -103,8 +103,8 @@ Status
 ~~~~~~
 
 The default status for new channel entries. The available options depend
-on what :doc:`Status Group <status/index>` the channel is assigned to
-use and which statuses are defined for that group.
+on what :doc:`Statuses <form-statuses>` the channel is assigned to
+use.
 
 Category
 ~~~~~~~~

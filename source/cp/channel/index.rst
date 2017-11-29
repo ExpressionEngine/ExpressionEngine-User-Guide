@@ -41,54 +41,6 @@ New
 
 This button will allow you to :doc:`create a new channel <form>`.
 
-Import
-~~~~~~
-
-
-Channels
-^^^^^^^^
-
-This will take you to the :doc:`index`.
-
-New Channel
-^^^^^^^^^^^
-
-This will allow you to :doc:`create a new channel <form>`.
-
-Field Groups
-~~~~~~~~~~~~
-
-This will take you to the :doc:`fields/groups/index`.
-
-New Field Group
-~~~~~~~~~~~~~~~
-
-This will allow you to :doc:`create a new field group <fields/groups/form>`.
-
-Category Groups
-^^^^^^^^^^^^^^^
-
-This will take you to the :doc:`cat/index`.
-
-New Category Group
-^^^^^^^^^^^^^^^^^^
-
-This will allow you to :doc:`create a new category group <cat/form>`.
-
-Status Groups
-^^^^^^^^^^^^^
-
-This will take you to the :doc:`status/index`.
-
-New Status Group
-^^^^^^^^^^^^^^^^
-
-This will allow you to :doc:`create a new status group <status/form>`.
-
-Create New
-~~~~~~~~~~
-
-This will take you to the :doc:`create form <form>`.
 
 Import
 ~~~~~~
@@ -121,7 +73,6 @@ Layouts
 This will take you to :doc:`layouts/index`.
 
 .. _channel_set_export:
-
 
 
 Bulk Actions
