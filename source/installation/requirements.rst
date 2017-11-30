@@ -71,7 +71,7 @@ Though the following are available in PHP by default, some hosts may have them d
 
   ::
 
-  extension = fileinfo.so
+    extension = fileinfo.so
 
 PHP Extensions Recommended
 --------------------------
