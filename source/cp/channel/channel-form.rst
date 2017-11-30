@@ -62,6 +62,7 @@ Settings tab
 
 The doc:`Settings tab <tab-settings>` holds a large number of channel specific settings, including channel specific default URLs, publish page defaults, channel form settings, revision and notification settings, and comment and formatting settings.
 
+
 .. toctree::
    :hidden:
    :glob:

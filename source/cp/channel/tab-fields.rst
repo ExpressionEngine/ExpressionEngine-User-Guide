@@ -45,10 +45,6 @@ Opens the **New Field** modal.
 New Field Group Modal Fields
 ----------------------------
 
-.. contents::
-  :local:
-  :depth: 1
-
 Name
 ~~~~
 
@@ -62,9 +58,5 @@ Fields to include in the new field group.
 
 New Field Modal Fields
 ----------------------
-
-.. contents::
-  :local:
-  :depth: 1
 
 .. include:: /cp/channel/fields/_field_form_fields.rst

@@ -85,12 +85,6 @@ Settings
 
 This will take you to :doc:`/cp/settings/general`.
 
-Search
-~~~~~~
-
-This will search sites by name and short name, respecting the current
-filters.
-
 Sidebar
 ~~~~~~~
 

@@ -29,8 +29,6 @@ Actions
 
 .. Each Action
 
-.. include:: /cp/channel/_header.rst
-
 Create New
 ~~~~~~~~~~
 

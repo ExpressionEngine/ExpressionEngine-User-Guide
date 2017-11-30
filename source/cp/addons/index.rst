@@ -44,11 +44,6 @@ Actions
 
 .. Each Action
 
-Search
-~~~~~~
-
-This will search add-ons by name respecting the current filters.
-
 Manage
 ~~~~~~
 

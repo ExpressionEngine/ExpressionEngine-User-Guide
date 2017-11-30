@@ -32,8 +32,6 @@ Actions
 
 .. Each Action
 
-.. include:: /cp/channel/_header.rst
-
 Create New
 ~~~~~~~~~~
 
@@ -68,9 +66,7 @@ The selected channel groups will be removed. Removing a channel group will
 cause a confirmation modal to appear that will summarize the action.
 
 .. toctree::
-  :glob:
-  :hidden:
-  :titlesonly:
+   :hidden:
 
-  *
-  groups/index
+   form
+   form-group
