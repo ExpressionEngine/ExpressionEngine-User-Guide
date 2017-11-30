@@ -56,7 +56,7 @@ Specify the category group of the categories displayed in the main table.
 Edit Category Group
 ^^^^^^^^^^^^^^^^^^^
 
-This will take you to the :doc:`category group's edit form <form>`.
+This will take you to the :doc:`category group's edit form <form-cat>`.
 
 Remove Category Group
 ^^^^^^^^^^^^^^^^^^^^^
@@ -71,7 +71,7 @@ Main Table
 Create New
 ~~~~~~~~~~
 
-This will take you to the category :doc:`create form <form-cat>`.
+This will take you to the category :doc:`create fotab-settings-cat>`.
 
 Order
 ~~~~~
@@ -82,7 +82,7 @@ the categories by dragging and dropping the rows.
 Edit
 ~~~~
 
-This will take you to the category edit :doc:`edit form <form-cat>`.
+This will take you to the category edit :doc:`edit fotab-settings-cat>`.
 
 Bulk Actions
 ~~~~~~~~~~~~
@@ -103,6 +103,5 @@ cause a confirmation modal to appear that will summarize the action.
   :hidden:
   :titlesonly:
 
-  cat-list
   form
   */index

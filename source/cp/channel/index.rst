@@ -70,9 +70,8 @@ This will download a :doc:`Channel Set </channel/sets>`.
 Layouts
 ^^^^^^^
 
-This will take you to :doc:`layouts/index`.
+This will take you to the channel's :doc:`Layouts </channel/layouts/index`.
 
-.. _channel_set_export:
 
 
 Bulk Actions
@@ -88,11 +87,3 @@ Remove
 The selected channels will be removed. Removing a channel will cause a
 confirmation modal to appear that will summarize the action.
 
-.. toctree::
-  :glob:
-  :hidden:
-  :titlesonly:
-
-  *
-  cat/index
-  fields/index

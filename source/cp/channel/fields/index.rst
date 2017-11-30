@@ -41,7 +41,7 @@ This will take you to the :doc:`create form <form>`.
 Group Name Links
 ~~~~~~~~~~~~~~~~
 
-This will take you to the field's :doc:`create edit <form>`.
+This will take you to the field group's :doc:`edit form <groups/form>`.
 
 Manage
 ~~~~~~

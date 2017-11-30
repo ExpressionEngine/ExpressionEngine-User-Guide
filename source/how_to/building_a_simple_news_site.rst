@@ -129,7 +129,7 @@ Status Tab
 Statuses are typically used to control whether or not (or to whom) a piece of content will appear on your site. In this guide we'll stick with ExpressionEngine's default Statuses, **Open** and
 **Closed**. By default, content with an "Open" status will be shown, while content that is "Closed"
 will not appear at all. There are other creative uses for Statuses, especially when it comes to editorial
-workflows. See the :doc:`Statuses </cp/channel/status/index>` section for more information.
+workflows. See the :doc:`Statuses </cp/channel/tab-statuses>` section for more information.
 
 ************
 Settings Tab
