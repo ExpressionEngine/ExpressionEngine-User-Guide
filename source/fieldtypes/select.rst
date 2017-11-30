@@ -101,7 +101,7 @@ Given that the selection option is 2/Two::
 
 .. tip:: It is recommended that you use the value in conditionals, as it typically will not change over time. That way, if you ever need to change the wording, spelling, or even casing of labels in your publish/edit UI, you will not need to modify your templates.
 
-.. note:: For Select fields used in :doc:`/cp/members/fields/index` and :doc:`/cp/channel/cat/field/index`, the modifiers are not currently available in conditionals, and *must* be based on the value, e.g. ``{if some_cat_field == 2}``
+.. note:: For Select fields used in :doc:`/cp/members/fields/index` and :doc:`/cp/channel/cat/tab-fields`, the modifiers are not currently available in conditionals, and *must* be based on the value, e.g. ``{if some_cat_field == 2}``
 
 Limit Parameter
 ~~~~~~~~~~~~~~~

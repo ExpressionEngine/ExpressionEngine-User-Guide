@@ -1,15 +1,10 @@
-Create/Edit Category Field
-===========================
+Category Group Details Tab
+==========================
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer --> Categories --> Category Fields --> New/Edit Category Field`
+**Control Panel Location:** :menuselection:`Developer --> Categories --> New/Edit Category Group -> Fields`
 
-.. Overview
-
-.. Screenshot (optional)
-
-.. Permissions
 
 Permission Restrictions
 -----------------------
@@ -72,7 +67,3 @@ Require field?
 You may determine whether this field is required. If the field is
 required and the user leaves it blank, upon submission they will receive
 an error message prompting them to correct it.
-
-
-
-

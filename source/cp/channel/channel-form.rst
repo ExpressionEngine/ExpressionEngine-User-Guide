@@ -54,10 +54,18 @@ The doc:`Categories tab <tab-categories>` has the  channel's category assignment
 Statuses tab
 ************
 
-The doc:`Statuses tab <tab-statuses>` allows management of the channel's assigned statuses.  By default, a channel will have **Open** and **Closed* statuses assigned, but new statsuses can be created on this tab and their assignment to the channel managed.
+The doc:`Statuses tab <tab-statuses>` allows management of the channel's assigned statuses.  By default, a channel will have **Open** and **Closed** statuses assigned, but new statsuses can be created on this tab and their assignment to the channel managed.
 
 
 Settings tab
 ************
 
 The doc:`Settings tab <tab-settings>` holds a large number of channel specific settings, including channel specific default URLs, publish page defaults, channel form settings, revision and notification settings, and comment and formatting settings.
+
+.. toctree::
+   :hidden:
+   :glob:
+
+   tab-*
+   *
+

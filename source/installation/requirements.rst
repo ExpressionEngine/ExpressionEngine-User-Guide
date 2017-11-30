@@ -69,7 +69,7 @@ Though the following are available in PHP by default, some hosts may have them d
 
 .. note:: If you're on MediaTemple you will need `to create a phprc file <http://wiki.dreamhost.com/PHP.ini#How_to_add_a_phprc_file>`_ that contains the following::
 
-    extension = fileinfo.so
+  extension = fileinfo.so
 
 PHP Extensions Recommended
 --------------------------

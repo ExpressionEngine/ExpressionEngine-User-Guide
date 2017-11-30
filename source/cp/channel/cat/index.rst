@@ -29,6 +29,12 @@ Permission Restrictions
 * Channel categories: Edit Categories
 * Channel categories: Delete Categories
 
+.. toctree::
+   :hidden:
+
+   form-cat_group
+   form-cat
+
 Actions
 -------
 
@@ -46,7 +52,7 @@ Sidebar
 New
 ^^^
 
-Create a new category group.  This will take you to the category group :doc:`create form <form>`.
+Create a new category group.  This will take you to the :doc:`category group create form <form-cat_group>`.
 
 Category Group Links
 ^^^^^^^^^^^^^^^^^^^^
@@ -56,7 +62,7 @@ Specify the category group of the categories displayed in the main table.
 Edit Category Group
 ^^^^^^^^^^^^^^^^^^^
 
-This will take you to the :doc:`category group's edit form <form-cat>`.
+This will take you to the :doc:`category group edit form <form-cat_group>`.
 
 Remove Category Group
 ^^^^^^^^^^^^^^^^^^^^^
@@ -71,7 +77,7 @@ Main Table
 Create New
 ~~~~~~~~~~
 
-This will take you to the category :doc:`create fotab-settings-cat>`.
+This will take you to the :doc:`category create form <form-cat>`.
 
 Order
 ~~~~~
@@ -82,7 +88,7 @@ the categories by dragging and dropping the rows.
 Edit
 ~~~~
 
-This will take you to the category edit :doc:`edit fotab-settings-cat>`.
+This will take you to the :doc:`category edit form <form-cat>`.
 
 Bulk Actions
 ~~~~~~~~~~~~
@@ -97,11 +103,3 @@ Remove
 The selected categories will be removed. Removing a category will
 cause a confirmation modal to appear that will summarize the action.
 
-
-.. toctree::
-  :glob:
-  :hidden:
-  :titlesonly:
-
-  form
-  */index

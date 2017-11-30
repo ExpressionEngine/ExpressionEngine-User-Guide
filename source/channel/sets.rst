@@ -6,7 +6,7 @@ Channel Sets
 
 .. versionadded:: 3.3.0
 
-Channel Sets are an easy way for you to save the structure of a Channel and import it elsewhere. The structure of a channel is made up of its :doc:`/cp/channel/tab-settings`, :doc:`/cp/channel/tab-categories`, :doc:`/cp/channel/tab-fields`, and :doc:`Statuses </cp/channel/tab-statuses>`. When you :ref:`export your Channel Set <channel_set_export>`, you're provided with a zip file that contains all of the data needed to recreate that same Channel on any other ExpressionEngine installation by using the :doc:`/cp/channel/import` page.
+Channel Sets are an easy way for you to save the structure of a Channel and import it elsewhere. The structure of a channel is made up of its :doc:`/cp/channel/tab-settings`, :doc:`/cp/channel/tab-categories`, :doc:`/cp/channel/tab-fields`, and :doc:`Statuses </cp/channel/tab-statuses>`. When you :doc:`export your Channel Set </cp/channel/index>`, you're provided with a zip file that contains all of the data needed to recreate that same Channel on any other ExpressionEngine installation by using the :doc:`/cp/channel/import` page.
 
 When using Relationships, your Channel Set export will export related Channels and continue following the relationships. So if you have a Game Channel that has a Relationship field that has the Team Channel selected, the Team Channel will also be exported. This continues to the Team Channel as well: if that Channel has a Relationship field that has the Player Channel selected, the Player Channel will be exported.
 
@@ -88,7 +88,7 @@ The array of channels will contain objects that represent each Channel. Each Cha
             "name": "Default Page",
             "highlight": "2051B3"
         }
-    ],
+  ],
 
 
 We don't export the default "open" or "closed" status, only any additional statuses.

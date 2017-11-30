@@ -63,7 +63,7 @@ For our new News site, we'll want a channel to hold our news articles.
 Creating a Channel
 ==================
 
-Click the **Create Channel** link or the **New** button to open up the :doc:`Create Channel form</cp/channel/form>`.
+Click the **Create Channel** link or the **New** button to open up the :doc:`Create Channel form</cp/channel/channel-form>`.
 
 This form allows you to create all of the structural elements you need to handle your data.
 
@@ -135,7 +135,7 @@ workflows. See the :doc:`Statuses </cp/channel/tab-statuses>` section for more i
 Settings Tab
 ************
 
-There are a number of channel specific settings, all of which are detailed in the :doc:`Channel settings </cp/channel/form-settings>` section.
+There are a number of channel specific settings, all of which are detailed in the :doc:`Channel settings </cp/channel/tab-settings>` section.
 
 
 ******************

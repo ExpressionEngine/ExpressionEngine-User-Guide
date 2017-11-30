@@ -24,6 +24,13 @@ Permission Restrictions
 * Channels: Edit Channels
 * Channels: Delete Channels
 
+.. toctree::
+   :hidden:
+
+   channel-form
+   layouts/index
+
+
 Actions
 -------
 
@@ -39,7 +46,7 @@ Actions
 New
 ^^^
 
-This button will allow you to :doc:`create a new channel <form>`.
+This button will allow you to :doc:`create a new channel <channel-form>`.
 
 
 Import
@@ -50,7 +57,7 @@ This will take you to :doc:`import` where you can import a :doc:`channel set </c
 Channel Links
 ~~~~~~~~~~~~~
 
-This will take you to the channel's :doc:`edit form <form>`.
+This will take you to the channel's :doc:`edit form <channel-form>`.
 
 Manage
 ~~~~~~
@@ -60,7 +67,7 @@ The icons in the manage column perform actions on the channel in its row.
 Edit
 ^^^^
 
-This will take you to the channel's :doc:`edit form <form>`.
+This will take you to the channel's :doc:`edit form <channel-form>`.
 
 Export
 ^^^^^^
@@ -70,7 +77,7 @@ This will download a :doc:`Channel Set </channel/sets>`.
 Layouts
 ^^^^^^^
 
-This will take you to the channel's :doc:`Layouts </channel/layouts/index`.
+This will take you to the channel's :doc:`Layouts </cp/channel/layouts/index>`.
 
 
 
