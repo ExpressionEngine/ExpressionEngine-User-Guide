@@ -31,7 +31,7 @@ Opens the **Edit Category Group** modal for that particular group.
 Add Category Group
 ~~~~~~~~~~~~~~~~~~
 
-Opens the **New Category Group** model.
+Opens the **New Category Group** modal.
 
 
 Modal Fields
@@ -64,9 +64,9 @@ is handled. There are three options:
    character entities and the raw code will be seen upon viewing.
 #. **Allow ALL HTML**: This leaves the HTML code as written and the code
    will then be interpreted by the browser when the entry is viewed.
-   
+
 Exclude group from?
-~~~~~~~~~~~~~~~~~~~   
+~~~~~~~~~~~~~~~~~~~
 
 Both channel entries and files can be assigned to categories, the categories available are limited to the member group(s) assigned.
 
