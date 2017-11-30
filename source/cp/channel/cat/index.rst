@@ -29,12 +29,6 @@ Permission Restrictions
 * Channel categories: Edit Categories
 * Channel categories: Delete Categories
 
-.. toctree::
-   :hidden:
-
-   form-cat_group
-   form-cat
-
 Actions
 -------
 
@@ -100,4 +94,10 @@ Remove
 
 The selected categories will be removed. Removing a category will
 cause a confirmation modal to appear that will summarize the action.
+
+.. toctree::
+   :hidden:
+
+   form-cat_group
+   form-cat
 

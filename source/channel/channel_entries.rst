@@ -592,7 +592,7 @@ options for this parameter include:
 -  ``orderby="view_count_four"``
 
 In addition you can order by a :doc:`channel field
-</cp/channel/fields/groups/index>`. Use the "short\_name" of
+</cp/channel/fields/index>`. Use the "short\_name" of
 the field::
 
 	orderby="name_of_field"

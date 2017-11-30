@@ -29,6 +29,7 @@ Permission Restrictions
 
    channel-form
    layouts/index
+   import
 
 
 Actions

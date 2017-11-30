@@ -50,7 +50,8 @@ The doc:`Fields tab <tab-fields>` allow you to manage all custom fields for the 
 
 .. toctree::
    :hidden:
-   :glob:
 
-   tab-*
-   *
+   tab-details
+   tab-permissions
+   tab-fields
+

@@ -119,10 +119,7 @@ Search excerpt
 ~~~~~~~~~~~~~~
 
 You can specify which field from your entries to use in search result
-excerpts. The list is dynamically populated depending on which :doc:`Field
-Group <fields/groups/index>` the channel is assigned to use and which
-fields are defined for that group. Only fields that have been set as
-"searchable" will be included.
+excerpts. The list is dynamically populated depending on which :doc:`Fields <fields/index>` the channel is assigned to use. Only fields that have been set as "searchable" will be included.
 
 HTML formatting
 ~~~~~~~~~~~~~~~
