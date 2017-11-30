@@ -67,7 +67,9 @@ Though the following are available in PHP by default, some hosts may have them d
 - `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_ library
 - The `File Information (fileinfo) <http://php.net/manual/en/book.fileinfo.php>`_ PHP extension
 
-.. note:: If you're on MediaTemple you will need `to create a phprc file <http://wiki.dreamhost.com/PHP.ini#How_to_add_a_phprc_file>`_ that contains the following::
+.. note:: If you're on MediaTemple you will need `to create a phprc file <http://wiki.dreamhost.com/PHP.ini#How_to_add_a_phprc_file>`_ that contains the following
+
+  ::
 
     extension = fileinfo.so
 
@@ -76,7 +78,7 @@ PHP Extensions Recommended
 
 These are recommended, but not required.
 
-- The `Internationalization <http://php.net/manual/en/book.intl.php>`_ extension, for full functionality of :doc:`variable modifiers </templates/varaible_modifiers>`
+- The `Internationalization <http://php.net/manual/en/book.intl.php>`_ extension, for full functionality of :doc:`variable modifiers </templates/variable_modifiers>`
 - Multibyte String (`mbstring <http://php.net/manual/en/mbstring.installation.php>`_) handling
 
 For full support of multibyte encodings, ask your web host or server admin to set ``mbstring.func_overload`` to ``6`` in your server configuration by editing :file:`php.ini` as shown below::

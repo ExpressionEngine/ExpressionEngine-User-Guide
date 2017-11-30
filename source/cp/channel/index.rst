@@ -96,3 +96,4 @@ confirmation modal to appear that will summarize the action.
   *
   cat/index
   fields/index
+  layouts/index

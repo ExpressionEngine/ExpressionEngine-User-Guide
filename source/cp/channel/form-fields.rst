@@ -34,12 +34,12 @@ Actions
 Add Group
 ~~~~~~~~~
 
-Opens the **New Field Group** model.
+Opens the **New Field Group** modal.
 
 Add Field
 ~~~~~~~~~
 
-Opens the **New Field** model.
+Opens the **New Field** modal.
 
 
 New Field Group Modal Fields

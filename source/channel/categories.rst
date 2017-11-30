@@ -43,7 +43,7 @@ backspace=
 
 ::
 
-	backspace="5"
+    backspace="5"
 
 Backspacing removes characters (including spaces and line breaks) from
 the last iteration of the loop. For example, if you put a <br> tag
@@ -62,9 +62,9 @@ tag has 4 characters plus a new line character, so you would do this
 
 ::
 
-	{exp:channel:categories style="linear" backspace="5"}
-	    {category_name}<br>
-	{/exp:channel:categories}
+    {exp:channel:categories style="linear" backspace="5"}
+        {category_name}<br>
+    {/exp:channel:categories}
 
 That will produce code like:
 
@@ -84,7 +84,7 @@ category\_group=
 
 ::
 
-	category_group="2"
+    category_group="2"
 
 Category Groups are specified by ID number (the ID number of each
 :doc:`category group </cp/channel/cat/index>` is
@@ -97,20 +97,20 @@ And as with many other parameters, you can stack category groups
 
 ::
 
-	category_group="1|2|4"
+    category_group="1|2|4"
 
 Or use "not" to exclude categories
 
 ::
 
-	category_group="not 2"
+    category_group="not 2"
 
 channel=
 --------
 
 ::
 
-	channel="channel_name"
+    channel="channel_name"
 
 The name (short name) of the channel that the categories are assigned
 to. This variable is **required** unless you only have a single channel.
@@ -124,7 +124,7 @@ class=
 
 ::
 
-	class="my_custom_class"
+    class="my_custom_class"
 
 When using the "nested" style of display (see the `style= <#par_style>`_
 parameter), this lets you specify the value of the "class" attribute in
@@ -135,14 +135,14 @@ then the beginning of the nested category output would be
 
 ::
 
-	<ul class="my_custom_class">
+    <ul class="my_custom_class">
 
 disable=
 --------
 
 ::
 
-	disable="category_fields"
+    disable="category_fields"
 
 The disable= parameter allows you to turn off aspects of the tag that
 you might not be using in order to improve performance. Valid options
@@ -155,7 +155,7 @@ id=
 
 ::
 
-	id="my_custom_id"
+    id="my_custom_id"
 
 When using the "nested" style of display (see the `style= <#par_style>`_
 parameter), this lets you specify the value of the "id" attribute in the
@@ -166,14 +166,14 @@ beginning of the nested category output would be
 
 ::
 
-	<ul id="my_custom_id">
+    <ul id="my_custom_id">
 
 parent\_only=
 -------------
 
 ::
 
-	parent_only="yes"
+    parent_only="yes"
 
 This parameter allows you to limit the category display to only "parent"
 categories; no sub-categories will be displayed.
@@ -183,7 +183,7 @@ restrict\_channel=
 
 ::
 
-	restrict_channel="no"
+    restrict_channel="no"
 
 This parameter may be used to alter the behavior of the `show\_empty
 parameter <#par_show_empty>`_ and has no effect unless that parameter is
@@ -198,7 +198,7 @@ show=
 
 ::
 
-	show="4|7"
+    show="4|7"
 
 With this parameter, you can specify which categories will be included
 in the list. For instance, if you wanted to keep a particular category
@@ -211,7 +211,7 @@ You may alternatively specify which categories to not show
 
 ::
 
-	show="not 3|6|8"
+    show="not 3|6|8"
 
 If you specify that a parent category is not shown, then any children of
 that parent category are then unable to be shown by the tag. The parent
@@ -222,7 +222,7 @@ show\_empty=
 
 ::
 
-	show_empty="no"
+    show_empty="no"
 
 This parameter determines whether or not categories that contain no
 entries for the specific channel are displayed. If you set the parameter
@@ -237,7 +237,7 @@ show_expired=
 -------------
 ::
 
-	show_expired="yes"
+    show_expired="yes"
 
 Determines whether expired entries are included when calculating whether
 a category has entries when the `show\_empty parameter <#par_show_empty>`_
@@ -250,7 +250,7 @@ show_future_entries=
 --------------------
 ::
 
-	show_future_entries="yes"
+    show_future_entries="yes"
 
 Determines whether entries dated in the "future" to are included when
 calculating whether a category has entries when the
@@ -264,23 +264,23 @@ status=
 
 ::
 
-	status="open"
+    status="open"
 
 You may restrict to categories with entries with a particular
-:doc:`status </cp/channel/status/index>`. The two statuses "open" and
+:doc:`status </cp/channel/form-statuses>`. The two statuses "open" and
 "closed" are default statuses that are always available, so you can
 always specify those if needed. You can choose multiple statuses using a
 pipe
 
 ::
 
-	status="draft|reviewed|published"
+    status="draft|reviewed|published"
 
 Or exclude statuses using "not"
 
 ::
 
-	status="not submitted|processing|closed"
+    status="not submitted|processing|closed"
 
 By default, the Categories tag will display categories that contain any
 entries with a status *other than* closed.  This parameter has no effect unless
@@ -293,7 +293,7 @@ style=
 
 ::
 
-	style="nested"
+    style="nested"
 
 There are two list "styles" for your categories: "nested" and "linear".
 
@@ -332,7 +332,7 @@ A "linear" category is one that shows a pure list with no HTML inserted
 
 ::
 
-	News Regional World Sports National Football Basketball Lakers Knicks
+    News Regional World Sports National Football Basketball Lakers Knicks
 
 By default, if you do not specify the "style" parameter then you will
 get a "nested" list.
@@ -354,7 +354,7 @@ category\_description
 
 ::
 
-	{category_description}
+    {category_description}
 
 This variable simply displays the content from the "category
 description" field. The variable may also be wrapped in a conditional
@@ -362,14 +362,14 @@ statement so that it only displays if there is content in the field
 
 ::
 
-	{if category_description}{category_description}{/if}
+    {if category_description}{category_description}{/if}
 
 category\_id
 ------------
 
 ::
 
-	{category_id}
+    {category_id}
 
 The category ID associated with the category.
 
@@ -378,7 +378,7 @@ parent\_id
 
 ::
 
-	{parent_id}
+    {parent_id}
 
 The category ID associated with the category's parent (or 0 in the case
 of a top level category).
@@ -388,7 +388,7 @@ category\_image
 
 ::
 
-	{category_image}
+    {category_image}
 
 The image link (or other information) you can optionally store with each
 category within the Control Panel.
@@ -398,7 +398,7 @@ category\_name
 
 ::
 
-	{category_name}
+    {category_name}
 
 This variable simply displays the name of the category.
 
@@ -407,7 +407,7 @@ category\_url\_title
 
 ::
 
-	{category_url_title}
+    {category_url_title}
 
 This variable displays the URL title of the category
 
@@ -416,7 +416,7 @@ count
 
 ::
 
-	{count}
+    {count}
 
 The "count" out of the current categories being displayed. If five
 categories are being displayed, then for the fourth category the {count}
@@ -427,14 +427,14 @@ path=
 
 ::
 
-	{path='template_group/template'}
+    {path='template_group/template'}
 
 The path (template\_group/template) where you want to show the
 categories. This is typically used within a standard HTML link tag
 
 ::
 
-	<a href="{path='channel/index'}">{category_name}</a>
+    <a href="{path='channel/index'}">{category_name}</a>
 
 You can also use SITE\_INDEX in your path to point to your main site
 index page. If you show your channel on your home page, using
@@ -442,14 +442,14 @@ SITE\_INDEX is preferable since it will make the URL cleaner.
 
 ::
 
-	<a href="{path='SITE_INDEX'}">{category_name}</a>
+    <a href="{path='SITE_INDEX'}">{category_name}</a>
 
 total\_results
 --------------
 
 ::
 
-	{total_results}
+    {total_results}
 
 The total number of categories being displayed.
 
@@ -459,7 +459,7 @@ Custom Category Fields
 All custom fields assigned to a category can be accessed using the
 "short name" of the field::
 
-	{class} {extended_description} {category_name_fr} etc..
+    {class} {extended_description} {category_name_fr} etc..
 
 These are totally dynamic in that any field you create for your category
 will automatically be available by its "short name" as a variable.
@@ -473,7 +473,7 @@ active
 
 ::
 
-	<a href="{path='news/index'}"{if active} class="active"{/if}>{category_name}</a>
+    <a href="{path='news/index'}"{if active} class="active"{/if}>{category_name}</a>
 
 You may use this conditional to test whether the category shown is the
 active category or not, based on the dynamic URI segment.
@@ -486,14 +486,14 @@ You can also display categories in a dropdown menu using the following code:
 
 ::
 
-	<form name="catmenu" action="">
-	    <select name="selcat" onchange="location=document.catmenu.selcat.options[document.catmenu.selcat.selectedIndex].value;">
-	        <option value="">--Select Category--</option>
-	        {exp:channel:categories channel="yourchannel" style="linear"}
-	            <option value="{path='channel'}">{category_name}</option>
-	        {/exp:channel:categories}
-	    </select>
-	</form>
+    <form name="catmenu" action="">
+        <select name="selcat" onchange="location=document.catmenu.selcat.options[document.catmenu.selcat.selectedIndex].value;">
+            <option value="">--Select Category--</option>
+            {exp:channel:categories channel="yourchannel" style="linear"}
+                <option value="{path='channel'}">{category_name}</option>
+            {/exp:channel:categories}
+        </select>
+    </form>
 
 ********
 Examples
@@ -513,9 +513,9 @@ from the last entry.
 
 ::
 
-	{exp:channel:categories channel="politics" style="nested"}
-	    <a href="{path='SITE_INDEX'}">{category_name}</a>
-	{/exp:channel:categories}
+    {exp:channel:categories channel="politics" style="nested"}
+        <a href="{path='SITE_INDEX'}">{category_name}</a>
+    {/exp:channel:categories}
 
 This code would create a nested, unordered list of the categories from
 the "politics" channel as links to the main channel page.

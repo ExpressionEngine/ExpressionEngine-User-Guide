@@ -29,7 +29,7 @@ Opens the **Edit Status** modal for that particular status.
 
 Add Status
 ~~~~~~~~~~
-Opens the **New Status** model.
+Opens the **New Status** modal.
 
 
 Modal Fields

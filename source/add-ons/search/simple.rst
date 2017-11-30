@@ -2,8 +2,8 @@ Simple Search Form Tag
 ======================
 
 .. contents::
-	:local:
-	:depth: 1
+    :local:
+    :depth: 1
 
 Introduction
 ------------
@@ -12,18 +12,18 @@ The Simple Search Form Tag allows you to easily add a single-form search
 field to your site. This allows you to have a simple search box in a
 sidebar of your site. Example::
 
-	{exp:search:simple_form channel="news"}
-		<p>
-			<label for="keywords">Search:</label><br>
-			<input type="text" name="keywords" id="keywords" value="" size="18" maxlength="100">
-		</p>
-		<p>
-			<a href="{path='search/index'}">Advanced Search</a>
-		</p>
-		<p>
-			<input type="submit" value="submit" class="submit">
-		</p>
-	{/exp:search:simple_form}
+    {exp:search:simple_form channel="news"}
+        <p>
+            <label for="keywords">Search:</label><br>
+            <input type="text" name="keywords" id="keywords" value="" size="18" maxlength="100">
+        </p>
+        <p>
+            <a href="{path='search/index'}">Advanced Search</a>
+        </p>
+        <p>
+            <input type="submit" value="submit" class="submit">
+        </p>
+    {/exp:search:simple_form}
 
 The search results are displayed on the page you specify as the
 `result\_page= <#par_result_page>`_ page. Results are displayed with the
@@ -33,7 +33,7 @@ Input Fields
 ------------
 
 .. contents::
-	:local:
+    :local:
 
 Keywords
 ~~~~~~~~
@@ -42,8 +42,8 @@ The primary search method is to search by keyword. If you change the
 form field, you need to be sure to leave the name="keywords" attribute
 alone. ::
 
-	<label for="keywords">Keywords:</label><br>
-	<input type="text" name="keywords" id="keywords" maxlength="100" size="20">
+    <label for="keywords">Keywords:</label><br>
+    <input type="text" name="keywords" id="keywords" maxlength="100" size="20">
 
 Member Name
 ~~~~~~~~~~~
@@ -52,8 +52,8 @@ You may *optionally* search by member name (the screen name) by adding
 this field to your form. If you change the form field, you need to be
 sure to leave the name="member\_name" attribute alone. ::
 
-	<label for="member_name">Member Name:</label><br>
-	<input type="text" name="member_name" id="member_name" maxlength="100" size="40">
+    <label for="member_name">Member Name:</label><br>
+    <input type="text" name="member_name" id="member_name" maxlength="100" size="40">
 
 Exact Matching
 ~~~~~~~~~~~~~~
@@ -63,8 +63,8 @@ offer the option of matching partial member names or exact member names.
 If you change the form field, you need to be sure to leave the
 name="exact\_match" attribute alone. ::
 
-	<input type="checkbox" name="exact_match" id="exact_match" value="y">
-	<label for="exact_match">Match Name Exactly</label>
+    <input type="checkbox" name="exact_match" id="exact_match" value="y">
+    <label for="exact_match">Match Name Exactly</label>
 
 Include Expired Entries
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -75,11 +75,11 @@ also possible to include a form field to let the user choose. If you
 change the form field, you need to be sure to leave the
 name="show\_expired" attribute alone. ::
 
-	<label for="field_show_expired">Include Expired Entries?</label>
-	<select name="show_expired" id="field_show_expired">
-		<option value="no">No</option>
-		<option value="yes">Yes</option>
-	</select>
+    <label for="field_show_expired">Include Expired Entries?</label>
+    <select name="show_expired" id="field_show_expired">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+    </select>
 
 Include Future Entries
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -90,24 +90,24 @@ parameter, it is also possible to include a form field to let the user
 choose. If you change the form field, you need to be sure to leave the
 name="show\_future\_entries" attribute alone. ::
 
-	<label for="field_show_future_entries">Include Future Entries?</label>
-	<select name="show_future_entries" id="field_show_future_entries">
-		<option value="no">No</option>
-		<option value="yes">Yes</option>
-	</select>
+    <label for="field_show_future_entries">Include Future Entries?</label>
+    <select name="show_future_entries" id="field_show_future_entries">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+    </select>
 
 Parameters
 ----------
 
 .. contents::
-	:local:
+    :local:
 
 name=
 ~~~~~
 
 ::
 
-	name="search_form"
+    name="search_form"
 
 Specify the name attribute for the <form> tag, which will allow you to
 specify CSS and JavaScript to the form more easily.
@@ -117,7 +117,7 @@ no\_result\_page=
 
 ::
 
-	no_result_page="search/noresults"
+    no_result_page="search/noresults"
 
 You may specify a particular Template to display in the case when there
 are no results. This takes a standard "Template\_Group/Template" as
@@ -128,7 +128,7 @@ result\_page=
 
 ::
 
-	result_page="news/searches"
+    result_page="news/searches"
 
 The Template\_Group/Template where you would like the search results to
 be shown. If you do not specify this parameter, then it will default to
@@ -140,7 +140,7 @@ results=
 
 ::
 
-	results="20"
+    results="20"
 
 The number of results to show per page on the search results.
 
@@ -149,9 +149,9 @@ search\_in=
 
 ::
 
-	search_in="entries"
-	search_in="everywhere"
-	search_in="titles"
+    search_in="entries"
+    search_in="everywhere"
+    search_in="titles"
 
 This parameter specifies which fields you would like to include in the
 searching. There are three possible values:
@@ -172,7 +172,7 @@ show\_expired=
 
 ::
 
-	show_expired="yes"
+    show_expired="yes"
 
 With this parameter you can specify whether or not expired entries will
 be included in search results. The default behavior is for expired
@@ -185,7 +185,7 @@ show\_future\_entries=
 
 ::
 
-	show_future_entries="yes"
+    show_future_entries="yes"
 
 With this parameter you can specify whether or not entries with the date
 set in the future will be included in search results. The default
@@ -198,60 +198,60 @@ site=
 
 ::
 
-	site="default_site"
+    site="default_site"
 
 You can include sites other than the current site in search results. Use the
 pipe character to include multiple sites::
 
-	site="default_site|boston|new_york"
+    site="default_site|boston|new_york"
 
 Or add the word "not" (followed by a space) to exclude sites::
 
-	site="not chicago|los_angeles"
+    site="not chicago|los_angeles"
 
 status=
 ~~~~~~~
 
 ::
 
-	status="open"
+    status="open"
 
 You may restrict the result to entries assigned to a particular
-:doc:`status </cp/channel/status/index>`. You can choose multiple
+:doc:`status </cp/channel/form-statuses>`. You can choose multiple
 statuses using a pipe::
 
-	status="draft|reviewed|published"
+    status="draft|reviewed|published"
 
 Or exclude statuses using "not"
 
 ::
 
-	status="not submitted|processing|closed"
+    status="not submitted|processing|closed"
 
 channel=
 ~~~~~~~~
 
 ::
 
-	channel="which"
+    channel="which"
 
 From which :doc:`channel </cp/channel/index>` to
 search the entries. Additionally, you can use the pipe character to
 separate multiple channels::
 
-	channel="channel1|channel2|channel3"
+    channel="channel1|channel2|channel3"
 
 Or you can add the word "not" (with a space after it) to exclude
 channels::
 
-	channel="not channel1|channel2|channel3"
+    channel="not channel1|channel2|channel3"
 
 where=
 ~~~~~~
 
 ::
 
-	where="all"
+    where="all"
 
 This parameter allows you to specify how matching in searches are
 performed. The options are:
@@ -270,7 +270,7 @@ form\_class=
 
 ::
 
-	form_class="search_form"
+    form_class="search_form"
 
 With this parameter, you can specify the css class you want the form to
 have, enabling fine-grained styling of the form.
@@ -280,7 +280,7 @@ form\_id=
 
 ::
 
-	form_id="my_search_form"
+    form_id="my_search_form"
 
 With this parameter, you can specify the css id you want the form to
 have.

@@ -83,13 +83,14 @@ The array of channels will contain objects that represent each Channel. Each Cha
 
 ::
 
-  "statuses": [
-        {
-            "name": "Default Page",
-            "highlight": "2051B3"
-        }
-    ],
-
+  {
+    "statuses": [
+          {
+              "name": "Default Page",
+              "highlight": "2051B3"
+          }
+      ],
+  }
 
 We don't export the default "open" or "closed" status, only any additional statuses.
 

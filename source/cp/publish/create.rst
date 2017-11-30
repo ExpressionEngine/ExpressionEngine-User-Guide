@@ -153,7 +153,7 @@ Status
 There are two primary statuses that are always available: Open and
 Closed. Typically, "open" entries are viewable at your site, and
 "closed" entries are not. You can add additional statuses for editorial
-workflow in your :doc:`/cp/channel/status/index` page, and opt to
+workflow in your :doc:`/cp/channel/form-statuses` page, and opt to
 display or suppress entries assigned to these by modifying the "status"
 parameter found in the various "Channel" Tags in your Templates.
 

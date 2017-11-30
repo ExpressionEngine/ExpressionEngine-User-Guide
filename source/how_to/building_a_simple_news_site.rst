@@ -8,8 +8,8 @@ flexibility and level of control over your markup that ExpressionEngine offers o
 other systems.
 
 .. contents::
-	:local:
-	:depth: 1
+    :local:
+    :depth: 1
 
 ****************
 Before You Begin
@@ -83,8 +83,8 @@ The channel tab is where you name your channel and set whether there is a limit 
 3.  Click the **Fields** tab so we can add some custom fields to hold our news data.
 
 .. tip:: A Channel's **Full Name** should be a friendly, human-readable name. The **Short Name**, on
-	the other hand, is how you'll refer to this Channel in your actual code. Don't worry, we'll get
-	to that later.
+    the other hand, is how you'll refer to this Channel in your actual code. Don't worry, we'll get
+    to that later.
 
 
 *********
@@ -129,7 +129,7 @@ Status Tab
 Statuses are typically used to control whether or not (or to whom) a piece of content will appear on your site. In this guide we'll stick with ExpressionEngine's default Statuses, **Open** and
 **Closed**. By default, content with an "Open" status will be shown, while content that is "Closed"
 will not appear at all. There are other creative uses for Statuses, especially when it comes to editorial
-workflows. See the :doc:`Statuses </cp/channel/status/index>` section for more information.
+workflows. See the :doc:`Statuses </cp/channel/form-statuses>` section for more information.
 
 ************
 Settings Tab
@@ -189,13 +189,13 @@ and are grouped together into (you guessed it!) *Template Groups*. As usual, you
 Templates and Groups as you need. Templates are very important because by default, they define the URL structure
 of your site. Here's how Template Groups and Templates make up an ExpressionEngine URL::
 
-	http://example.com/template_group/template_name
+    http://example.com/template_group/template_name
 
 Every Template Group has at least one Template named **index**, which acts as the default if no other
 Template is specified. For example, if we create a new Template Group named **news**, you can access its
 index template using just::
 
-	http://example.com/news
+    http://example.com/news
 
 Creating a Template
 ===================
@@ -222,16 +222,16 @@ Editing a Template
 Click on the **index** Template to open it in the Template Editor. You'll be greeted, unsurprisingly,
 with a blank slate. Let's add some skeleton HTML::
 
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<title>What's New</title>
-		<meta charset="utf-8">
-	</head>
-	<body>
-		<h1>All the news that's fit to pixelize.</h1>
-	</body>
-	</html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>What's New</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>All the news that's fit to pixelize.</h1>
+    </body>
+    </html>
 
 .. figure:: ../images/getting_started_template_edit.png
    :align: center
@@ -263,7 +263,7 @@ Tags
 *Tags* fetch the content you've entered into ExpressionEngine and display it in your Templates
 just the way you want. Here's how a typical Tag starts::
 
-	{exp:channel:entries}
+    {exp:channel:entries}
 
 This tag, like most, has three segments: **exp**, **channel**, and **entries**.
 
@@ -282,17 +282,17 @@ We often need to give more information to a Module about what we want it to do.
 In our example above, for instance, we still need to tell the Channel Module which Channel
 we want to fetch Entries from. This is easily done with *parameters*::
 
-	{exp:channel:entries channel="news"}
+    {exp:channel:entries channel="news"}
 
 You can specify multiple parameters, too::
 
-	{exp:channel:entries channel="news" limit="10"}
+    {exp:channel:entries channel="news" limit="10"}
 
 This tells the Channel Module that we want the 10 most recent Entries from the Channel named
 *News*. Simple enough, right? Now that we've told it what to fetch, let's actually use that data!
 
 .. tip:: Here's the full list of available :ref:`parameters <channel_entries_parameters>`
-	for the :doc:`/channel/channel_entries`.
+    for the :doc:`/channel/channel_entries`.
 
 Variables
 =========
@@ -302,21 +302,21 @@ makes available to us. To get some content from an Entry, for example, use the S
 of the Channel Field. Remember the News Body field we created earlier? You can get its contents
 like so::
 
-	{news_body}
+    {news_body}
 
 And the Title of the Entry is easily accessed with::
 
-	{title}
+    {title}
 
 There is also a lot of additional information about each Entry, such as when it was submitted,
 who it was submitted by, and much more. For example, to get the author of an Entry::
 
-	{author}
+    {author}
 
 Now, we're ready to use this Tag in our Template.
 
 .. tip:: Here's the full list of available :ref:`variables <channel_entries_single_variables>`
-	for the :doc:`/channel/channel_entries`.
+    for the :doc:`/channel/channel_entries`.
 
 ***********************
 Putting it All Together
@@ -325,23 +325,23 @@ Putting it All Together
 Switch back to the Template Editor tab in your browser and
 update the Template with the following code::
 
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<title>What's New</title>
-		<meta charset="utf-8">
-	</head>
-	<body>
-		<h1>All the news that's fit to pixelize.</h1>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>What's New</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>All the news that's fit to pixelize.</h1>
 
-		{exp:channel:entries channel="news" limit="10"}
-			<h2>{title}</h2>
-			<p>By {author}</p>
+        {exp:channel:entries channel="news" limit="10"}
+            <h2>{title}</h2>
+            <p>By {author}</p>
 
-			{news_body}
-		{/exp:channel:entries}
-	</body>
-	</html>
+            {news_body}
+        {/exp:channel:entries}
+    </body>
+    </html>
 
 After clicking *Update*, switch back over to the browser tab with the "Rendered Template" on it and
 hit Refresh. By default, the Channel Module sorts your Entries by newest to oldest, so
@@ -381,11 +381,11 @@ once for each Entry.
 This is a very powerful way to output information from multiple Entries, whether in a table,
 blog format, or even a simple list. For example::
 
-	<ul>
-		{exp:channel:entries channel="news" limit="10"}
-			<li>{title}</li>
-		{/exp:channel:entries}
-	</ul>
+    <ul>
+        {exp:channel:entries channel="news" limit="10"}
+            <li>{title}</li>
+        {/exp:channel:entries}
+    </ul>
 
 ****************
 Turning the Page
@@ -410,25 +410,25 @@ default.
 Now click the **index** Template of our new "site" Group to open the Template Editor.
 Let's add this code::
 
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<title>Home</title>
-		<meta charset="utf-8">
-	</head>
-	<body>
-		<h1>Home, Sweet Home.</h1>
-		<p>Kick back and relax... you've made it home.</p>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Home</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Home, Sweet Home.</h1>
+        <p>Kick back and relax... you've made it home.</p>
 
-		<h2>The Latest</h2>
-		<p>Check out the <a href="{path='news'}">latest news</a>:</p>
-		<ul>
-			{exp:channel:entries channel="news" limit="10"}
-				<li><a href="{url_title_path='news'}">{title}</a></li>
-			{/exp:channel:entries}
-		</ul>
-	</body>
-	</html>
+        <h2>The Latest</h2>
+        <p>Check out the <a href="{path='news'}">latest news</a>:</p>
+        <ul>
+            {exp:channel:entries channel="news" limit="10"}
+                <li><a href="{url_title_path='news'}">{title}</a></li>
+            {/exp:channel:entries}
+        </ul>
+    </body>
+    </html>
 
 As usual, click *Update* and then *View Rendered* to see the results:
 
@@ -443,7 +443,7 @@ Linking to Templates and Entries
 
 This line may have caught your attention::
 
-		<p>Check out the <a href="{path='news'}">latest news</a>:</p>
+        <p>Check out the <a href="{path='news'}">latest news</a>:</p>
 
 It contains the *path* variable, which creates a URL to a Template Group/Template.
 In this case we want to link to "news/index", but since "index" is implied we can leave it off.
@@ -452,7 +452,7 @@ that you can access it from anywhere inside your Template; it doesn't have to be
 
 Then there's this line, which you'll notice *is* inside our Channel Entries Tag Pair::
 
-				<li><a href="{url_title_path='news'}">{title}</a></li>
+                <li><a href="{url_title_path='news'}">{title}</a></li>
 
 *url_title_path* is one of the many :ref:`variables <channel_entries_single_variables>`
 you can use inside the :doc:`Channel Entries Tag </channel/channel_entries>`,
@@ -480,7 +480,7 @@ showing a list of recent Entries from various Channels, and we didn't want that 
 influenced by what happens to be in the current URL. To disable this behavior, set the
 *dynamic* parameter to "no"::
 
-		{exp:channel:entries channel="news" limit="10" dynamic="no"}
+        {exp:channel:entries channel="news" limit="10" dynamic="no"}
 
 Again, all of the Channel Entries' available parameters and variables are detailed in its
 :doc:`documentation page </channel/channel_entries>`.

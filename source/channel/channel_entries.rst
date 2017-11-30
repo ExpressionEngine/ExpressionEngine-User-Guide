@@ -27,10 +27,10 @@ Let's look at a basic Channel Entries tag example:
 
 ::
 
-	{exp:channel:entries channel="news" limit="10"}
-	    <h2>{title}</h2>
-	    {body}
-	{/exp:channel:entries}
+    {exp:channel:entries channel="news" limit="10"}
+        <h2>{title}</h2>
+        {body}
+    {/exp:channel:entries}
 
 In the above example, everything between the opening and closing
 ``{exp:channel:entries}`` tags is repeated 10 times, once for each entry returned
@@ -54,15 +54,15 @@ author\_id=
 The ``author_id=`` parameter will limit the returned entries to the specified
 Member ID::
 
-	author_id="1"
+    author_id="1"
 
 Use the pipe delimiter to specify multiple Member IDs::
 
-	author_id="1|2|3"
+    author_id="1|2|3"
 
 Modify the parameter value using ``not`` to exclude Member IDs::
 
-	author_id="not 1|2|3"
+    author_id="not 1|2|3"
 
 Use the ``CURRENT_USER`` constant to limit entries to the
 currently logged-in user::
@@ -70,13 +70,13 @@ currently logged-in user::
     author_id="CURRENT_USER"
 
 .. note:: ``CURRENT_USER`` will limit Channel Entries to return entries authored
-	by the currently logged-in user. Users who are not logged-in will not see any
-	output.
+    by the currently logged-in user. Users who are not logged-in will not see any
+    output.
 
 Use the ``NOT_CURRENT_USER`` constant to limit entries **excluding** the currently
 logged in user::
 
-	author_id="NOT_CURRENT_USER"
+    author_id="NOT_CURRENT_USER"
 
 backspace=
 ----------
@@ -84,37 +84,37 @@ backspace=
 The ``backspace=`` parameter will remove characters, including spaces and line
 breaks, from the last iteration of the tag pair::
 
-	backspace="7"
+    backspace="7"
 
 For example, if you use a ``<br />`` element after each entry, Channel Entries
 will output this markup::
 
-	Entry 1<br />
-	Entry 2<br />
-	Entry 3<br />
+    Entry 1<br />
+    Entry 2<br />
+    Entry 3<br />
 
 However, you may not want the ``<br />`` element after the last entry. Count the
 number of characters, including spaces and line breaks and use the result as the
 value for the parameter. The example ``<br />`` element includes 6 characters and
 a line break, for a total of 7::
 
-	{exp:channel:entries backspace="7"}
-		{title}<br />
-	{/exp:channel:entries}
+    {exp:channel:entries backspace="7"}
+        {title}<br />
+    {/exp:channel:entries}
 
 
 Using ``backspace=``, Channel Entries will output this markup::
 
-	Entry 1<br />
-	Entry 2<br />
-	Entry 3
+    Entry 1<br />
+    Entry 2<br />
+    Entry 3
 
 cache=, refresh=
 ----------------
 
 ::
 
-	cache="yes" refresh="60"
+    cache="yes" refresh="60"
 
 This parameter enables tag caching. Refresh is the number of minutes
 between cache refreshes.
@@ -124,21 +124,21 @@ cat\_limit=
 
 ::
 
-	cat_limit="30"
+    cat_limit="30"
 
 This parameter lets you set a different limit for the category display
 than the regular display. For example, let's say you normally only want
 10 entries on your main channel page, but you want 100 entries shown
 when viewing a specific category. For that, you could do this::
 
-	{exp:channel:entries limit="10" cat_limit="100"}
+    {exp:channel:entries limit="10" cat_limit="100"}
 
 category=
 ---------
 
 ::
 
-	category="2"
+    category="2"
 
 Categories are specified by ID number (the ID number of each
 :doc:`category </cp/channel/cat/form-cat>` is displayed in the
@@ -154,13 +154,13 @@ get entries with any of those categories
 
 ::
 
-	category="2|45|4|9"
+    category="2|45|4|9"
 
 Or use "not" to exclude categories
 
 ::
 
-	category="not 4|5|7"
+    category="not 4|5|7"
 
 
 And, you can use an inclusive stack to only get entries with *all* of
@@ -168,7 +168,7 @@ the categories
 
 .. code-block:: none
 
-	category="3&7&8"
+    category="3&7&8"
 
 
 Or you can negate the inclusive stack and get entries that do not of
@@ -176,7 +176,7 @@ Or you can negate the inclusive stack and get entries that do not of
 
 .. code-block:: none
 
-	category="not 3&5"
+    category="not 3&5"
 
 
 .. note:: When you use the ``category="3|4"`` parameter (not excluding), you
@@ -203,7 +203,7 @@ category\_group=
 
 ::
 
-	category_group="2"
+    category_group="2"
 
 
 Category Groups are specified by ID number (the ID number of each
@@ -217,38 +217,38 @@ And as with some of the other parameters, you can stack category groups
 
 ::
 
-	category_group="1|2|4"
+    category_group="1|2|4"
 
 Or use "not" to exclude categories
 
 ::
 
-	category_group="not 2"
+    category_group="not 2"
 
 .. note:: Using this parameter will automatically cause ExpressionEngine
-	to *ignore* any category information specified via the URL. For
-	instance, if you are on a "category page" (e.g. a ``/C13/`` segment
-	in the URL) that will be completely ignored in favor of whatever you
-	have specified via the parameter.
+    to *ignore* any category information specified via the URL. For
+    instance, if you are on a "category page" (e.g. a ``/C13/`` segment
+    in the URL) that will be completely ignored in favor of whatever you
+    have specified via the parameter.
 
 channel=
 --------
 
 ::
 
-	channel="news"
+    channel="news"
 
 From which :doc:`channel </cp/channel/index>` to
 show the entries (will show all channels if no channel is specified).
 Additionally, you can use the pipe character to separate multiple
 channels::
 
-	channel="channel1|channel2|channel3"
+    channel="channel1|channel2|channel3"
 
 Or you can add the word "not" (with a space after it) to exclude
 channels::
 
-	channel="not channel1|channel2|channel3"
+    channel="not channel1|channel2|channel3"
 
 You must specify this parameter if you use the :doc:`category name in
 URL </cp/settings/content-design>` feature.
@@ -258,7 +258,7 @@ disable=
 
 ::
 
-	disable="categories"
+    disable="categories"
 
 The disable= parameter allows you to turn off aspects of the tag that
 you might not be using in order to improve performance. The channel tag
@@ -283,7 +283,7 @@ DISABLE"``. The following items can be turned off:
 You may specify multiple items to disable by separating them with the
 pipe character::
 
-	disable="categories|member_data"
+    disable="categories|member_data"
 
 The best approach is to examine the data you are showing in each
 instance of the tag. If there is a type of data you are not utilizing,
@@ -292,9 +292,9 @@ turn it off.
 For example, let's say you are using an instance of your channel tag to
 show your 10 most recent entry titles::
 
-	{exp:channel:entries orderby="date" sort="desc" limit="10"}
-		<a href="{title_permalink='channel/comments'}">{title}</a><br>
-	{/exp:channel:entries}
+    {exp:channel:entries orderby="date" sort="desc" limit="10"}
+        <a href="{title_permalink='channel/comments'}">{title}</a><br>
+    {/exp:channel:entries}
 
 In this example you are only showing the title of your entries and
 nothing else; yet, the channel tag automatically fetches categories and
@@ -302,16 +302,16 @@ other data. Using the disable= parameter you can turn off the unneeded
 features from being queried. In this case, you don't need any of the
 features that can be disabled. ::
 
-	{exp:channel:entries orderby="date" sort="desc" limit="10" disable="categories|custom_fields|member_data|pagination"}
-		<a href="{title_permalink='channel/comments'}">{title}</a><br>
-	{/exp:channel:entries}
+    {exp:channel:entries orderby="date" sort="desc" limit="10" disable="categories|custom_fields|member_data|pagination"}
+        <a href="{title_permalink='channel/comments'}">{title}</a><br>
+    {/exp:channel:entries}
 
 display\_by=
 ------------
 
 ::
 
-	display_by="month"
+    display_by="month"
 
 There are three optional "display types" that let you limit the display
 of your entries. If you **do not** use these parameters the default
@@ -321,38 +321,38 @@ These parameters interact with the "limit" parameter to tailor the
 number of entries per page. For example, if you want to show only the
 last month that contains entries you'll do this::
 
-	display_by="month" limit="1"
+    display_by="month" limit="1"
 
 At 12 AM on the first day of the month, based on your server time, the
 previous month will no longer be visible. If you want to show three
 months you'll do this::
 
-	display_by="month" limit="3"
+    display_by="month" limit="3"
 
 If you want to show only one day you'll do this::
 
-	display_by="day" limit="1"
+    display_by="day" limit="1"
 
 If you want to show 14 days you'll do this::
 
-	display_by="day" limit="14"
+    display_by="day" limit="14"
 
 These are all optional. If you do not use this parameter your entries
 will be limited by number. In other words::
 
-	limit="20"
+    limit="20"
 
 Will show 20 entries.
 
 ::
 
-	display_by="week"
+    display_by="week"
 
 The ``display_by="week"`` parameter allows the displaying of entries by
 week. To simply show the last week that contains entries, you can use
 this::
 
-	display_by="week" limit="1"
+    display_by="week" limit="1"
 
 The ``display_by="week"`` parameter can be used with other parameters like
 `show_current_week=`_, `start_day=`_ and `week_sort=`_ to give more control
@@ -361,7 +361,7 @@ over how the weeks are displayed and used with pagination.
 For example, if you want to display the current week by default but also
 show entries in future weeks with pagination, you can use this::
 
-	display_by="week" limit="1" show_future_entries="yes" show_current_week="yes"
+    display_by="week" limit="1" show_future_entries="yes" show_current_week="yes"
 
 .. note:: The display\_by parameter uses the last unit of time provided that
    has entries. If you ``display_by="day"`` then it will show the last day that
@@ -377,7 +377,7 @@ dynamic=
 
 ::
 
-	dynamic="no"
+    dynamic="no"
 
 The channel display engine sets some parameters dynamically, based on
 what is in the URL. There are times, however, where you do not want the
@@ -391,16 +391,16 @@ your site you visit (main page, archives, comments, etc.). By setting
 passed in the URL.
 
 .. note:: You may allow the tag to be sensitive to pagination data in
-	the url by including the `paginate=`_ parameter. If that tag
-	is used in conjunction with the dynamic parameter, the tag will act
-	dynamically for pagination data only.
+    the url by including the `paginate=`_ parameter. If that tag
+    is used in conjunction with the dynamic parameter, the tag will act
+    dynamically for pagination data only.
 
 dynamic_parameters=
 -------------------
 
 ::
 
-	dynamic_parameters="orderby|limit|sort"
+    dynamic_parameters="orderby|limit|sort"
 
 The :doc:`Dynamic Parameters <dynamic_parameters>` feature permits a
 {exp:channel:entries} tag's parameters to be set "on the fly" using POST
@@ -409,7 +409,7 @@ display options in a form on your page that your visitors can use to
 select their preferred page view.
 
 .. note:: This feature will only work if page caching is turned OFF for
-	the template in which it is being used.
+    the template in which it is being used.
 
 Every Parameter available to the channel tag can be set dynamically.
 
@@ -420,7 +420,7 @@ dynamic\_start=
 
 ::
 
-	dynamic_start="yes"
+    dynamic_start="yes"
 
 This parameter is only used in the tag when used in an RSS/Atom feed. It
 will not do anything in any other circumstance. The default value is
@@ -438,15 +438,15 @@ entry\_id=
 
 ::
 
-	entry_id="147"
+    entry_id="147"
 
 You can hard code the channel tag to show a specific channel entry. You
 may also specify multiple entries by separating them with the pipe
 character::
 
-	entry_id="13|42|147" Or use "not" to exclude entries::
+    entry_id="13|42|147" Or use "not" to exclude entries::
 
-	entry_id="not 45|534|807"
+    entry_id="not 45|534|807"
 
 If you set the entry_id parameter to no value, the parameter will be ignored.
 
@@ -455,7 +455,7 @@ entry\_id\_from=
 
 ::
 
-	entry_id_from="20"
+    entry_id_from="20"
 
 This parameter is used together with
 `entry_id_to=`_ to designate a range of entries to
@@ -468,7 +468,7 @@ entry\_id\_to=
 
 ::
 
-	entry_id_to="40"
+    entry_id_to="40"
 
 This parameter is used together with
 `entry_id_from=`_ to designate a range of entries
@@ -480,7 +480,7 @@ fixed\_order=
 
 ::
 
-	fixed_order="3|7|1"
+    fixed_order="3|7|1"
 
 You can hard code the channel entries tag to show entries in a specific
 order based on their entry ids. Entries will be displayed in the order
@@ -491,35 +491,35 @@ If you wish, you can also cause the entries to be displayed in the
 *reverse* of the order you specified. To do this, use the sort= param,
 setting it to 'desc'::
 
-	fixed_order="3|7|1" sort="desc"
+    fixed_order="3|7|1" sort="desc"
 
 In the above example, three entries would be displayed, in the order: 1,
 7, and then 3.
 
 .. note:: Using this parameter will automatically constrain the entries
-	tag to the entry id's you specify, effectively setting the
-	`entry_id=`_ parameter to the same id's given to the
-	``fixed_order=`` parameter.
+    tag to the entry id's you specify, effectively setting the
+    `entry_id=`_ parameter to the same id's given to the
+    ``fixed_order=`` parameter.
 
 group\_id=
 ----------
 
 ::
 
-	group_id="4"
+    group_id="4"
 
 You can decide from which Member Groups (by specifying the group ID) you
 wish entries to be shown. If you choose "4", then only entries created
 by members of the Member Group with the ID of 4 will be shown. You can
 choose multiple Member Groups using a pipe::
 
-	group_id="2|3|4"
+    group_id="2|3|4"
 
 Or exclude groups using "not"
 
 ::
 
-	group_id="not 2|3|4"
+    group_id="not 2|3|4"
 
 .. _channel_entries_limit:
 
@@ -528,7 +528,7 @@ limit=
 
 ::
 
-	limit="12"
+    limit="12"
 
 This parameter limits the number of entries on any given page. The limit
 will default to 100 entries if a value is not specified. If you are
@@ -540,27 +540,27 @@ month\_limit=
 
 ::
 
-	month_limit="30"
+    month_limit="30"
 
 This parameter lets you set a different limit for the month display than
 the regular display. For example, let's say you normally only want 10
 entries on your main channel page, but you want 100 entries shown when
 viewing a specific month. For that, you could do this::
 
-	{exp:channel:entries limit="10" month_limit="100"}
+    {exp:channel:entries limit="10" month_limit="100"}
 
 offset=
 -------
 
 ::
 
-	offset="1"
+    offset="1"
 
 This parameter offsets the display by X number of entries. For example,
 if you want to show all entries except the three latest ones, you would
 do this::
 
-	offset="3"
+    offset="3"
 
 .. _channel_entries_orderby:
 
@@ -569,7 +569,7 @@ orderby=
 
 ::
 
-	orderby="date"
+    orderby="date"
 
 The ``orderby`` parameter sets the display order of the entries. Setting
 options for this parameter include:
@@ -595,15 +595,15 @@ In addition you can order by a :doc:`channel field
 </cp/channel/fields/groups/index>`. Use the "short\_name" of
 the field::
 
-	orderby="name_of_field"
+    orderby="name_of_field"
 
 .. note:: Ordering by a Relationship field will cause entries to appear
-	in the order the relationships were made, not based on any content
-	from the related entries.
+    in the order the relationships were made, not based on any content
+    from the related entries.
 
 .. note:: When ordering by "random", entries that have been marked as
-	"sticky" will not appear first; they will appear randomly with all
-	other entries.
+    "sticky" will not appear first; they will appear randomly with all
+    other entries.
 
 **Multiple Orders and Sorts**
 
@@ -615,41 +615,41 @@ For example, if you wish to order by **screen\_name** *alphabetically*
 and then have the **most recent entries** *first*, you would use the
 following parameters::
 
-	orderby="screen_name|date" sort="asc|desc"
+    orderby="screen_name|date" sort="asc|desc"
 
 **Multiple Site Manager and orderby=**
 
 The orderby= parameter can accept a site short-name in the namespace. ::
 
-	orderby="default_site:body|second_site:summary"
+    orderby="default_site:body|second_site:summary"
 
 When ordering by multiple fields from multiple Sites, remember that
 entries from another site will have no data for that field, and the
 entries will be ordered as such. This results in ordering entries by
 Site and then Field(s)::
 
-	orderby="default_site:body|second_site:summary"
+    orderby="default_site:body|second_site:summary"
 
 Will result in::
 
-	Default Site - Entry One - Albert
-	Default Site - Entry Two - Bobby
-	Second Site    - Entry One - Alligator
-	Second Site    - Entry Two - Buffalo
+    Default Site - Entry One - Albert
+    Default Site - Entry Two - Bobby
+    Second Site    - Entry One - Alligator
+    Second Site    - Entry Two - Buffalo
 
 If you have multiple Sites where each site has a field with the same
 exact short name, then you can specify that short name (without the site
 specified) and ExpressionEngine will treat those two fields as the same
 value and be able to order them as if they were the same field::
 
-	orderby="body"
+    orderby="body"
 
 ::
 
-	Default Site - Entry One - Albert
-	Second Site    - Entry One - Alligator
-	Default Site - Entry Two - Bobby
-	Second Site    - Entry Two - Buffalo
+    Default Site - Entry One - Albert
+    Second Site    - Entry One - Alligator
+    Default Site - Entry Two - Bobby
+    Second Site    - Entry Two - Buffalo
 
 Thus, the output will then be ordered by the body, regardless of the
 originating site.
@@ -659,7 +659,7 @@ paginate=
 
 ::
 
-	paginate="top"
+    paginate="top"
 
 This parameter is for use with entry :doc:`pagination </templates/pagination>`
 and determines where the pagination
@@ -680,7 +680,7 @@ paginate\_base=
 
 ::
 
-	paginate_base="site/index"
+    paginate_base="site/index"
 
 This tells ExpressionEngine to override the normal
 :doc:`pagination </templates/pagination>` link locations and point instead to
@@ -691,7 +691,7 @@ paginate\_type=
 
 ::
 
-	paginate_type="field"
+    paginate_type="field"
 
 This tells ExpressionEngine to function in "pagination" mode for your
 channel entry fields so that you can automatically have an entry span
@@ -705,7 +705,7 @@ related\_categories\_mode=
 
 ::
 
-	related_categories_mode="no" related_categories_mode="yes"
+    related_categories_mode="no" related_categories_mode="yes"
 
 .. important:: This parameter is intended for use **only** when you
    are using the channel tag within "single entry" pages. Single entry
@@ -732,11 +732,11 @@ displaying of field data and member data respectively. By default, those
 two parameters are both set to "no" to reduce load. Below is a
 simplified example with both optional parameters enabled::
 
-	{exp:channel:entries related_categories_mode="yes" custom_fields="yes" member_data="yes"}
-		<h2>{title}</h2>
-		{body}
-		<div class="posted">Posted by {author} on {entry_date format='%m/%d'} at {entry_date format='%h:%i %A'}</div>
-	{/exp:channel:entries}
+    {exp:channel:entries related_categories_mode="yes" custom_fields="yes" member_data="yes"}
+        <h2>{title}</h2>
+        {body}
+        <div class="posted">Posted by {author} on {entry_date format='%m/%d'} at {entry_date format='%h:%i %A'}</div>
+    {/exp:channel:entries}
 
 .. note:: Relationships, Reverse Relationships, Pagination, and
    Categories are not available when Related Category Mode is enabled.
@@ -746,7 +746,7 @@ relaxed\_categories=
 
 ::
 
-	relaxed_categories="yes"
+    relaxed_categories="yes"
 
 This parameter allows you to use the category indicator in your URLs
 with an entries tag specifying multiple channels that do **not** share
@@ -759,7 +759,7 @@ require\_entry=
 
 ::
 
-	require_entry="yes"
+    require_entry="yes"
 
 This parameter tells the channel tag that it should expect the URL to
 contain a valid entry ID or a valid URL title. If an ID is not found in
@@ -773,7 +773,7 @@ doesn't contain a valid ID, this parameter will tell the tag that you do
 not wish the template to display anything.
 
 .. note:: You will often use this parameter in conjunction with the
-	`if no_results`_ conditional.
+    `if no_results`_ conditional.
 
 .. _search_parameter:
 
@@ -782,7 +782,7 @@ search:field\_name=
 
 ::
 
-	search:body="pickles"
+    search:body="pickles"
 
 The "search:" parameter allows you to constrain Channel Entries output
 based on content within your fields. You specify which field to search
@@ -791,9 +791,9 @@ search based on whether a field is an exact match to your provided term
 or whether or not a field simply contains your term.
 
 .. note:: Only fields of the type "Text Input", "Textarea", "Rich Text Editor",
-	"File", "Email Address", "Date", "URL", "Toggle", "Select Dropdown",
-	"Multi Select", "Checkboxes", "Radio Buttons" are searched with this
-	parameter.
+    "File", "Email Address", "Date", "URL", "Toggle", "Select Dropdown",
+    "Multi Select", "Checkboxes", "Radio Buttons" are searched with this
+    parameter.
 
 "Exact" Matching
 ~~~~~~~~~~~~~~~~
@@ -802,14 +802,14 @@ Use "Exact" matching when you only want entries whose fields match your
 terms exactly. To trigger "Exact" matching, precede your search terms
 with an equal sign (=). You may provide a pipe-delimited list of terms. ::
 
-	search:body="=pickles|shoes"
+    search:body="=pickles|shoes"
 
 This example would return all entries where the 'body' field was either
 'pickles' or 'shoes'.
 
 Or you can use "not" to exclude entries::
 
-	search:body="=not pickles|shoes"
+    search:body="=not pickles|shoes"
 
 This example would return all entries where the 'body' field was
 **neither** 'pickles' **nor** 'shoes'. Note that the equal sign precedes
@@ -821,12 +821,12 @@ the keyword "not".
 Use "Contains" matching when you are interested only if a field contains
 your terms, anywhere in the field. ::
 
-	search:body="pickles|shoes"
+    search:body="pickles|shoes"
 
 This example would return all entries that contained the term "pickles"
 or contained the term "shoes". ::
 
-	search:body="not pickles|shoes"
+    search:body="not pickles|shoes"
 
 This example would return all entries that contained **neither** the
 term "pickles" **nor** contained the term "shoes".
@@ -838,14 +838,14 @@ of search terms).
 
 .. code-block:: none
 
-	search:body="pickles&&shoes"
+    search:body="pickles&&shoes"
 
 This example would return all entries that contained **both** the term
 "pickles" **and** the term "shoes".
 
 .. code-block:: none
 
-	search:body="not pickles&&shoes"
+    search:body="not pickles&&shoes"
 
 This example would return all entries that **do not** contain **both**
 the term "pickles" **and** the term "shoes". It would still display
@@ -861,7 +861,7 @@ you can add the special trigger \\W after the term.
 
 ::
 
-	search:body="cat\W"
+    search:body="cat\W"
 
 The above example will return all entries that contain the whole word "cat".
 It will not match entries where the phrase "cat" only lies within another word.
@@ -888,11 +888,11 @@ Including / Excluding Empty Fields
 If you wish to only display entries that have (or do not have) content,
 use the special search constant IS\_EMPTY. ::
 
-	search:body="IS_EMPTY"
+    search:body="IS_EMPTY"
 
 This example would return all results where the body field is empty. ::
 
-	search:body="not IS_EMPTY"
+    search:body="not IS_EMPTY"
 
 This example would return all results where the body field is **not**
 empty, i.e. only entries where the body field had content.
@@ -900,25 +900,25 @@ empty, i.e. only entries where the body field had content.
 The IS\_EMPTY search constant can also be used in conjunction with other
 search terms, for both "Exact" and "Contains" type matching. ::
 
-	search:body="=IS_EMPTY|sandwich"
+    search:body="=IS_EMPTY|sandwich"
 
 Since it is prefixed with =, this example is an "Exact" match and would
 return all results where the body is empty or is "sandwich". ::
 
-	search:body="IS_EMPTY|sandwich"
+    search:body="IS_EMPTY|sandwich"
 
 This example is a "Contains" match and would return all results where
 the body is empty **or** contains the word "sandwich". ::
 
-	search:body="not IS_EMPTY|sandwich|salad"
+    search:body="not IS_EMPTY|sandwich|salad"
 
 This example returns only entries that have content, but **not** those
 that contain "sandwich" **nor** those that contain the word "salad".
 
 .. note:: You may use multiple search: parameters in a channel entries
-	tag, as long as each one is searching a different field. e.g.::
+    tag, as long as each one is searching a different field. e.g.::
 
-		{exp:channel:entries search:style="=ale" search:region="germany|belgium" search:rating="=3|4|5"}
+        {exp:channel:entries search:style="=ale" search:region="germany|belgium" search:rating="=3|4|5"}
 
 When using multiple search parameters, all search parameters must be matched in
 order for an entry to be included.  The above example would pull back only those
@@ -930,7 +930,7 @@ show\_current\_week=
 
 ::
 
-	show_current_week="yes"
+    show_current_week="yes"
 
 Requires use of the
 `display_by=`_ "week" parameter. When
@@ -943,7 +943,7 @@ show\_expired=
 
 ::
 
-	show_expired="yes"
+    show_expired="yes"
 
 You can determine whether you wish for entries that have "expired" to be
 included.
@@ -955,7 +955,7 @@ show\_future\_entries=
 
 ::
 
-	show_future_entries="yes"
+    show_future_entries="yes"
 
 You can determine whether you wish for entries dated in the "future" to
 be included. This option is useful when doing things like creating a
@@ -970,7 +970,7 @@ show\_pages=
 
 ::
 
-	show_pages="only" show_pages="no"
+    show_pages="only" show_pages="no"
 
 Allows you to tell the Channel module whether to show those entries that
 have been used to create pages with the Pages module. You can also set
@@ -987,7 +987,7 @@ sort=
 
 ::
 
-	sort="asc" sort="desc"
+    sort="asc" sort="desc"
 
 The sort order can be ascending or descending. The order will default to
 "descending" if nothing is specified.
@@ -1001,7 +1001,7 @@ levels. For example, if you wish to order by screen\_name alphabetically
 and then have the most recent entries first, you would use the following
 parameters::
 
-	orderby="screen_name|date" sort="asc|desc"
+    orderby="screen_name|date" sort="asc|desc"
 
 If no sort value or an incorrect value is specified for an order, then
 the default will be "descending".
@@ -1011,7 +1011,7 @@ start\_day=
 
 ::
 
-	start_day="Monday"
+    start_day="Monday"
 
 Requires use of the
 `display_by=`_ "week" parameter. Allows
@@ -1023,7 +1023,7 @@ start\_on=
 
 ::
 
-	start_on="2004-06-05 20:00"
+    start_on="2004-06-05 20:00"
 
 You can specify a particular date/time on which to start the entries.
 Only entries that are on or after this date will be included in the
@@ -1048,29 +1048,29 @@ Common Uses
 
 This parameter can be used in conjunction with :ref:`global_current_time`::
 
-	{exp:channel:entries channel="{my_weblog}" sort="desc" start_on="{current_time}" show_future_entries="yes"}
+    {exp:channel:entries channel="{my_weblog}" sort="desc" start_on="{current_time}" show_future_entries="yes"}
 
 The above would display future entries starting from the current time.
 
 To display up to 5 entries with entry dates that fall within the
 previous 24 hours::
 
-	{exp:channel:entries channel="{my_weblog}" limit="5" sort="desc" start_on="-24 hours"}
+    {exp:channel:entries channel="{my_weblog}" limit="5" sort="desc" start_on="-24 hours"}
 
 status=
 -------
 
 ::
 
-	status="open"
+    status="open"
 
 You may restrict to entries with a particular :doc:`status
-</cp/channel/status/index>`. The two statuses "open" and "closed" are
+</cp/channel/form-statuses>`. The two statuses "open" and "closed" are
 default statuses that are always available, so you can always specify
 those if needed. If no status parameter is specified, only open status entries
 will be returned.  You can choose multiple statuses using a pipe::
 
-	status="draft|reviewed|published|closed"
+    status="draft|reviewed|published|closed"
 
 
 
@@ -1078,7 +1078,7 @@ Or exclude statuses using "not"
 
 ::
 
-	status="not submitted|processing"
+    status="not submitted|processing"
 
 Note that closed status entries will not be included in the results when using
 "not" regardless of whether it is in the piped list.
@@ -1089,7 +1089,7 @@ stop\_before=
 
 ::
 
-	stop_before="2004-06-12 20:00"
+    stop_before="2004-06-12 20:00"
 
 You can specify a particular date/time on which to end the entries. Only
 entries that are before this date will be included in the display
@@ -1105,7 +1105,7 @@ sticky=
 
 ::
 
-	sticky="no"
+    sticky="no"
 
 By default, sticky topics always remain at the top of the page. You can
 manually turn off stickies by using the above parameter.
@@ -1126,12 +1126,12 @@ different page).
 To enable the view counter you will use one of these four parameters in
 the tag located in the page you want tracked. ::
 
-	track_views="one" track_views="two" track_views="three" track_views="four"
+    track_views="one" track_views="two" track_views="three" track_views="four"
 
 Each of the above four parameters corresponds to these variables, which
 can be shown within any tag::
 
-	{view_count_one}{view_count_two}{view_count_three}{view_count_four}
+    {view_count_one}{view_count_two}{view_count_three}{view_count_four}
 
 .. _channel_entries_uncategorized_entries:
 
@@ -1140,7 +1140,7 @@ uncategorized\_entries=
 
 ::
 
-	uncategorized_entries="no"
+    uncategorized_entries="no"
 
 By default, when specifying the `category=`_ parameter with 'not ' at the
 beginning , ExpressionEngine will show all entries without those
@@ -1153,16 +1153,16 @@ url\_title=
 
 ::
 
-	url_title="my_wedding"
+    url_title="my_wedding"
 
 This parameter limits the query by an entry's url\_title. You can use
 the pipe character to query by multiple url\_titles::
 
-	url_title="my_wedding|my_honeymoon|my_kids"
+    url_title="my_wedding|my_honeymoon|my_kids"
 
 Or you can add "not" to exclude url\_titles::
 
-	url_title="not my_in_laws"
+    url_title="not my_in_laws"
 
 .. note:: It is strongly suggested you use the ``channel=""`` parameter when
    using the ``url_title=""`` parameter as ExpressionEngine can be set up to
@@ -1173,38 +1173,38 @@ username=
 
 ::
 
-	username="petunia"
+    username="petunia"
 
 This parameter limits the query by username. You can use the pipe
 character to query by multiple usernames::
 
-	username="tom|dick|harry"
+    username="tom|dick|harry"
 
 Or you can add "not" to exclude usernames
 
 ::
 
-	username="not tom|dick|harry|fred"
+    username="not tom|dick|harry|fred"
 
 You can also use the constant ``"CURRENT_USER"`` to show entries from only the currently logged in user.
 
 ::
 
-	username="CURRENT_USER"
+    username="CURRENT_USER"
 
 This allow each logged-in user to get only their entries. Users who are
 not logged in won't see anything. Alternatively, you can use the
 constant ``"NOT_CURRENT_USER"`` to show entries **except** from the
 currently logged in user. ::
 
-	username="NOT_CURRENT_USER"
+    username="NOT_CURRENT_USER"
 
 week\_sort=
 -----------
 
 ::
 
-	week_sort="asc"
+    week_sort="asc"
 
 Requires the `display_by=`_ "week"
 parameter. Changes the sort order of the weeks so that you can either
@@ -1217,30 +1217,30 @@ year=, month=, day=
 
 ::
 
-	year="2003"
+    year="2003"
 
 ::
 
-	month="12"
+    month="12"
 
 ::
 
-	day="23"
+    day="23"
 
 You can limit queries by year, month, or day. For example, to show all
 of year 2002 you'll use only::
 
-	year="2002"
+    year="2002"
 
 To show only the month of December in 2003 you'll do this
 
 ::
 
-	year="2003"
+    year="2003"
 
 ::
 
-	month="12"
+    month="12"
 
 .. note:: Don't combine these parameters with the ``display_by`` parameter
    discussed previously, as these take precedence over that parameter. In
@@ -1262,7 +1262,7 @@ absolute\_count
 
 ::
 
-	{absolute_count}
+    {absolute_count}
 
 The absolute "count" out of the current entries being displayed by the
 tag, including those entries on previous pages (if using pagination).
@@ -1279,7 +1279,7 @@ absolute\_results
 
 ::
 
-	{absolute_results}
+    {absolute_results}
 
 This variable will always display the absolute total number of results
 that are returned by the tag, regardless of pagination.
@@ -1289,7 +1289,7 @@ absolute_reverse_count
 
 ::
 
-	{absolute_reverse_count}
+    {absolute_reverse_count}
 
 The *opposite* of ``{absolute_count}``, in that it displays the entry count position counting backwards from the absolute total. Works across pagination, so the fifth entry in a list of fifteen entries would display "10".
 
@@ -1299,7 +1299,7 @@ author
 
 ::
 
-	{author}
+    {author}
 
 The author's screen name, if it exists; otherwise, this variable will
 display the username.
@@ -1309,7 +1309,7 @@ author\_id
 
 ::
 
-	{author_id}
+    {author_id}
 
 The member ID of the author.
 
@@ -1318,49 +1318,49 @@ avatar\_image\_height
 
 ::
 
-	{avatar_image_height}
+    {avatar_image_height}
 
 The height of the avatar image associated with the entry's author.
 Typically used as such::
 
-	{if avatar}
-		<img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
-	{/if}
+    {if avatar}
+        <img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
+    {/if}
 
 avatar\_image\_width
 --------------------
 
 ::
 
-	{avatar_image_width}
+    {avatar_image_width}
 
 The width of the avatar image associated with the entry's author.
 Typically used as such::
 
-	{if avatar}
-		<img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
-	{/if}
+    {if avatar}
+        <img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
+    {/if}
 
 avatar\_url
 -----------
 
 ::
 
-	{avatar_url}
+    {avatar_url}
 
 The URL to the avatar image associated with the entry's author.
 Typically used as such::
 
-	{if avatar}
-		<img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
-	{/if}
+    {if avatar}
+        <img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
+    {/if}
 
 channel
 -------
 
 ::
 
-	{channel}
+    {channel}
 
 The name of the channel that the currently displayed entry is assigned
 to.
@@ -1370,7 +1370,7 @@ channel\_id
 
 ::
 
-	{channel_id}
+    {channel_id}
 
 The ID number of the actual channel (not the *entry*.)
 
@@ -1379,7 +1379,7 @@ channel\_short\_name
 
 ::
 
-	{channel_short_name}
+    {channel_short_name}
 
 The short name of the channel of the currently displayed entry.
 
@@ -1388,7 +1388,7 @@ comment\_auto\_path
 
 ::
 
-	{comment_auto_path}
+    {comment_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL**
 preference under :menuselection:`Developer --> Channels` in the channel's **Settings** tab. No entry
@@ -1400,24 +1400,24 @@ comment\_entry\_id\_auto\_path
 
 ::
 
-	{comment_entry_id_auto_path}
+    {comment_entry_id_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL**
 preference under :menuselection:`Developer --> Channels` in the channel's **Settings** tab. The ID
 number of the entry will be automatically added. For example, this::
 
-	<a href="{comment_entry_id_auto_path}">my entry</a>
+    <a href="{comment_entry_id_auto_path}">my entry</a>
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/comments/234">my entry</a>
+    <a href="http://example.com/index.php/channel/comments/234">my entry</a>
 
 comment\_subscriber\_total
 --------------------------
 
 ::
 
-	{comment_subscriber_total}
+    {comment_subscriber_total}
 
 Total number of subscribers to comments for a particular entry.
 
@@ -1426,7 +1426,7 @@ comment\_total
 
 ::
 
-	{comment_total}
+    {comment_total}
 
 The total number of comments for a particular entry.
 
@@ -1435,24 +1435,24 @@ comment\_url\_title\_auto\_path
 
 ::
 
-	{comment_url_title_auto_path}
+    {comment_url_title_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL**
 preference under :menuselection:`Developer --> Channels` in the channel's **Settings** tab. The URL
 Title of the entry will be automatically added. For example, this::
 
-	<a href="{comment_url_title_auto_path}">my entry</a>
+    <a href="{comment_url_title_auto_path}">my entry</a>
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/comments/ice_cream/">my entry</a>
+    <a href="http://example.com/index.php/channel/comments/ice_cream/">my entry</a>
 
 count
 -----
 
 ::
 
-	{count}
+    {count}
 
 The "count" out of the current entries being displayed. If five entries
 are being displayed, then for the fourth entry the {count} variable
@@ -1483,7 +1483,7 @@ edit\_date
 
 ::
 
-	{edit_date format="%Y %m %d"}
+    {edit_date format="%Y %m %d"}
 
 The date on which the entry was last edited. See :doc:`Date Variable
 Formatting </templates/date_variable_formatting>` for more information.
@@ -1493,7 +1493,7 @@ email
 
 ::
 
-	{email}
+    {email}
 
 The author's raw email address.
 
@@ -1502,7 +1502,7 @@ entry\_date
 
 ::
 
-	{entry_date format="%Y %m %d"}
+    {entry_date format="%Y %m %d"}
 
 The date the entry was submitted. See :doc:`Date Variable Formatting
 </templates/date_variable_formatting>` for more information.
@@ -1512,7 +1512,7 @@ entry\_id
 
 ::
 
-	{entry_id}
+    {entry_id}
 
 The ID number of the channel entry.
 
@@ -1523,23 +1523,23 @@ entry\_id\_path
 
 ::
 
-	{entry_id_path='channel/archives'}
+    {entry_id_path='channel/archives'}
 
 The URL to the specified template. The ID number of the entry will be
 automatically added. For example, this::
 
-	<a href="{entry_id_path='channel/archives'}">my entry</a>
+    <a href="{entry_id_path='channel/archives'}">my entry</a>
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/archives/234/">my entry</a>
+    <a href="http://example.com/index.php/channel/archives/234/">my entry</a>
 
 entry\_site\_id
 ---------------
 
 ::
 
-	{entry_site_id}
+    {entry_site_id}
 
 The Site ID of the channel entry.
 
@@ -1548,7 +1548,7 @@ expiration\_date
 
 ::
 
-	{expiration_date format="%Y %m %d"}
+    {expiration_date format="%Y %m %d"}
 
 The expiration date of the entry. See :doc:`Date Variable Formatting
 </templates/date_variable_formatting>` for more information.
@@ -1560,16 +1560,16 @@ forum\_topic\_id
 
 ::
 
-	{forum_topic_id}
+    {forum_topic_id}
 
 If you have the Discussion Forum Module installed and if you have
 associated a forum thread with a channel entry (via the "Forum" section
 of the Publish tab), this is the ID number of the forum thread. It will
 typically be used like so::
 
-	{if forum_topic}
-		<a href="{path='forums/viewthread'}{forum_topic_id}">Discuss this in our forums</a>
-	{/if}
+    {if forum_topic}
+        <a href="{path='forums/viewthread'}{forum_topic_id}">Discuss this in our forums</a>
+    {/if}
 
 .. _channel_entries_gmt_entry_date:
 
@@ -1578,7 +1578,7 @@ gmt\_entry\_date
 
 ::
 
-	{gmt_entry_date format="%Y %m %d"}
+    {gmt_entry_date format="%Y %m %d"}
 
 The date the entry was submitted in GMT. This variable is **not**
 localized for each user's date settings. See :doc:`Date Variable
@@ -1589,7 +1589,7 @@ gmt\_edit\_date
 
 ::
 
-	{gmt_edit_date format="%Y %m %d"}
+    {gmt_edit_date format="%Y %m %d"}
 
 The date on which the entry was last edited in GMT. This variable is
 **not** localized for each user's date settings. See :doc:`Date Variable
@@ -1600,7 +1600,7 @@ ip_address
 
 ::
 
-	{ip_address}
+    {ip_address}
 
 The IP address of the author when they posted the entry.
 
@@ -1609,7 +1609,7 @@ member\_search\_path
 
 ::
 
-	{member_search_path='search/results'}
+    {member_search_path='search/results'}
 
 This variable is replaced by a URL that passes the author's member name
 to your search results Template. In this way, you can display all
@@ -1617,7 +1617,7 @@ entries made by the author. You should specify the
 Template\_Group/Template that you use to display search results. For
 example::
 
-	<a href="{member_search_path='search/results'}">View entries by this member</a>
+    <a href="{member_search_path='search/results'}">View entries by this member</a>
 
 
 .. _channel_entries_page_uri:
@@ -1627,14 +1627,14 @@ page\_uri
 
 ::
 
-	{page_uri}
+    {page_uri}
 
 If you have the Pages Module installed and if you have associated a
 static page with a channel entry (via the "Pages" section of the Publish
 tab), this is the page uri for the page. It will typically be used like
 so::
 
-	{if page_uri != ''} <a href="{page_uri}">View this page</a> {/if}
+    {if page_uri != ''} <a href="{page_uri}">View this page</a> {/if}
 
 .. _channel_entries_page_url:
 
@@ -1643,41 +1643,41 @@ page\_url
 
 ::
 
-	{page_url}
+    {page_url}
 
 If you have the Pages Module installed and if you have associated a
 static page with a channel entry (via the "Pages" section of the Publish
 tab), this is the page url for the page (the site URL + the page URI).
 It will typically be used like so::
 
-	{if page_url != ''} <a href="{page_url}">View this page</a> {/if}
+    {if page_url != ''} <a href="{page_url}">View this page</a> {/if}
 
 permalink
 ---------
 
 ::
 
-	{permalink}
+    {permalink}
 
 This variable defaults to site index with entry ID number::
 
-	http://example.com/index.php/235/
+    http://example.com/index.php/235/
 
 In addition, you can specify a template group/template and the entry ID
 will automatically be added::
 
-	{permalink="channel/archives"}
+    {permalink="channel/archives"}
 
 Will render as::
 
-	http://example.com/index.php/channel/archives/235/
+    http://example.com/index.php/channel/archives/235/
 
 photo\_url
 ----------
 
 ::
 
-	{photo_url}
+    {photo_url}
 
 This variable supplies the URL to the member photo (if you have that
 option enabled and the member has uploaded their photo). It is intended
@@ -1688,7 +1688,7 @@ photo\_image\_height
 
 ::
 
-	{photo_image_height}
+    {photo_image_height}
 
 This variable supplies the height of the member photo. It is intended
 for use in an image tag.
@@ -1698,7 +1698,7 @@ photo\_image\_width
 
 ::
 
-	{photo_image_width}
+    {photo_image_width}
 
 This variable supplies the width of the member photo. It is intended for
 use in an image tag.
@@ -1708,19 +1708,19 @@ profile\_path
 
 ::
 
-	{profile_path='member'}
+    {profile_path='member'}
 
 The URL to the author of the current entry. The ID number of the author
 will be automatically added. Used in a link::
 
-	<a href="{profile_path='member'}">{author}</a>
+    <a href="{profile_path='member'}">{author}</a>
 
 recent\_comment\_date
 ---------------------
 
 ::
 
-	{recent_comment_date format="%Y %m %d"}
+    {recent_comment_date format="%Y %m %d"}
 
 The date of the most recent comment associated with the entry. See
 :doc:`Date Variable Formatting </templates/date_variable_formatting>`
@@ -1731,7 +1731,7 @@ relative\_url
 
 ::
 
-	{relative_url}
+    {relative_url}
 
 The URL stored in your Channel URL setting under Channel Management,
 with the domain information removed. For example, if your setting is
@@ -1743,7 +1743,7 @@ relative\_date
 
 ::
 
-	{relative_date}
+    {relative_date}
 
 The amount of time that has passed between when the entry was submitted
 and the current time. The output is displayed in the format 1 day, 3
@@ -1755,7 +1755,7 @@ reverse_count
 
 ::
 
-	{reverse_count}
+    {reverse_count}
 
 The *opposite* of ``{count}``, in that it displays the entry count position counting backwards from the total. Like ``{count}``, this is relative to the number of entries the tag is currently displaying. If you want the counts to include paginated results, you may want ``{absolute_reverse_count}``.
 
@@ -1764,7 +1764,7 @@ screen\_name
 
 ::
 
-	{screen_name}
+    {screen_name}
 
 The author's screen name, if it exists. This variable will not return
 anything if the author does not have a screen name defined.
@@ -1774,61 +1774,61 @@ signature
 
 ::
 
-	{signature}
+    {signature}
 
 The signature associated with the entry's author. Typically used as
 such::
 
-	{if signature} <p>{signature}</p> {/if}
+    {if signature} <p>{signature}</p> {/if}
 
 signature\_image\_height
 ------------------------
 
 ::
 
-	{signature_image_height}
+    {signature_image_height}
 
 The height of the signature image associated with the entry's author.
 Typically used as such::
 
-	{if signature_image}
-		<img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature">
-	{/if}
+    {if signature_image}
+        <img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature">
+    {/if}
 
 signature\_image\_url
 ---------------------
 
 ::
 
-	{signature_image_url}
+    {signature_image_url}
 
 The URL to the signature image associated with the entry's author.
 Typically used as such::
 
-	{if signature_image}
-		<img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature">
-	{/if}
+    {if signature_image}
+        <img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature">
+    {/if}
 
 signature\_image\_width
 -----------------------
 
 ::
 
-	{signature_image_width}
+    {signature_image_width}
 
 The width of the signature image associated with the entry's author.
 Typically used as such::
 
-	{if signature_image}
-		<img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature">
-	{/if}
+    {if signature_image}
+        <img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature">
+    {/if}
 
 status
 ------
 
 ::
 
-	{status}
+    {status}
 
 The status of the entry (open, closed, etc.)
 
@@ -1839,7 +1839,7 @@ switch=
 
 ::
 
-	{switch='option_one|option_two|option_three'}
+    {switch='option_one|option_two|option_three'}
 
 This variable permits you to rotate through any number of values as the
 entries are displayed. The first entry will use "option\_one", the
@@ -1849,12 +1849,12 @@ second will use "option\_two", the third "option\_three", the fourth
 The most straightforward use for this would be to alternate colors. It
 could be used like so::
 
-	{exp:channel:entries channel="yourchannel"}
-		<div class="{switch='one|two'}">
-			<h2>{title}</h2>
-			{body}
-		</div>
-	{/exp:channel:entries}
+    {exp:channel:entries channel="yourchannel"}
+        <div class="{switch='one|two'}">
+            <h2>{title}</h2>
+            {body}
+        </div>
+    {/exp:channel:entries}
 
 The entries would then alternate between ``<div class="one">`` and ``<div
 class="two">``.
@@ -1867,7 +1867,7 @@ title
 
 ::
 
-	{title}
+    {title}
 
 The title of the entry
 
@@ -1876,33 +1876,33 @@ title\_permalink
 
 ::
 
-	{title_permalink}
+    {title_permalink}
 
 This variable uses the "url title" as the link. It defaults to the site
 index with the "url title"::
 
-	http://example.com/index.php/my_ugly_boyfriend/
+    http://example.com/index.php/my_ugly_boyfriend/
 
 In addition, you can specify a specific template group/template and the
 "url title" will automatically be added::
 
-	{title_permalink="channel/archives"}
+    {title_permalink="channel/archives"}
 
 Will render as::
 
-	http://example.com/index.php/channel/archives/my_ugly_boyfriend/
+    http://example.com/index.php/channel/archives/my_ugly_boyfriend/
 
 .. note:: When creating a new entry, if you don't supply the "url title"
-	then it will be automatically created from the actual entry title.
-	Spaces are turned into underscores and quotes are removed. For
-	example, "Joe's night out" becomes "joes\_night\_out".
+    then it will be automatically created from the actual entry title.
+    Spaces are turned into underscores and quotes are removed. For
+    example, "Joe's night out" becomes "joes\_night\_out".
 
 total\_results
 --------------
 
 ::
 
-	{total_results}
+    {total_results}
 
 The total number of entries being displayed.
 
@@ -1911,7 +1911,7 @@ trimmed\_url
 
 ::
 
-	{trimmed_url}
+    {trimmed_url}
 
 The domain name for your site, trimmed of any subdomains. For instance,
 example.com becomes example.com. Typically only used in the Atom feed
@@ -1923,7 +1923,7 @@ url\_title
 
 ::
 
-	{url_title}
+    {url_title}
 
 The human readable title used in the URL as a permalink.
 
@@ -1934,23 +1934,23 @@ url\_title\_path
 
 ::
 
-	{url_title_path='channel/archives'}
+    {url_title_path='channel/archives'}
 
 The URL to the specified template. The "url title" of the entry will be
 automatically added. For example, this::
 
-	<a href="{url_title_path='channel/archives'}">permalink</a>
+    <a href="{url_title_path='channel/archives'}">permalink</a>
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/archives/ice_cream/">permalink</a>
+    <a href="http://example.com/index.php/channel/archives/ice_cream/">permalink</a>
 
 username
 --------
 
 ::
 
-	{username}
+    {username}
 
 The author's username.
 
@@ -1959,7 +1959,7 @@ week\_date
 
 ::
 
-	{week_date format="%Y %m %d"}
+    {week_date format="%Y %m %d"}
 
 The date that the week of the currently displayed entry started on, most
 commonly used in "weekly" scenarios with the `date_heading`_ variable
@@ -1987,17 +1987,17 @@ Here is an example that tests for the "summary" field being not empty
 
 ::
 
-	{if summary != ""}
-	    The summary is not empty!
-	{/if}
+    {if summary != ""}
+        The summary is not empty!
+    {/if}
 
 An alternate, shorthand syntax can accomplish the same thing
 
 ::
 
-	{if summary}
-	    The summary is not empty!
-	{/if}
+    {if summary}
+        The summary is not empty!
+    {/if}
 
 If only the variable name is in the conditional statement it tests for
 "not empty".
@@ -2014,40 +2014,40 @@ if allow\_comments
 
 ::
 
-	{if allow_comments} content {/if}
+    {if allow_comments} content {/if}
 
 This special conditional lets you conditionally display content if the
 current entry is set to allow comments. This conditional will return
 FALSE if commenting has expired. ::
 
-	{if allow_comments}
-		({comment_total}) <a href="{comment_path='channel/comments'}">Comments</a>
-	{/if}
+    {if allow_comments}
+        ({comment_total}) <a href="{comment_path='channel/comments'}">Comments</a>
+    {/if}
 
 Or you can display content if commenting is disabled::
 
-	{if allow_comments == FALSE} content {/if}
+    {if allow_comments == FALSE} content {/if}
 
 if avatar
 ---------
 
 ::
 
-	{if avatar} content {/if}
+    {if avatar} content {/if}
 
 This special conditional lets you conditionally display content if the
 current entry's author has an avatar image specified. ::
 
-	{if avatar}
-		<img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
-	{/if}
+    {if avatar}
+        <img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
+    {/if}
 
 if category\_request
 --------------------
 
 ::
 
-	{if category_request} content {/if}
+    {if category_request} content {/if}
 
 This special conditional lets you conditionally display content if the
 current tag is being displayed based on a category specified in the URL.
@@ -2060,7 +2060,7 @@ if count
 
 ::
 
-	{if count > 5} content {/if}
+    {if count > 5} content {/if}
 
 This conditional allows you to test against which number entry is being
 displayed. You could use this to apply different styles to the first
@@ -2071,16 +2071,16 @@ if forum\_topic
 
 ::
 
-	{if forum_topic} content {/if}
+    {if forum_topic} content {/if}
 
 You may use this conditional for displaying content when a forum topic
 has been associated with a channel entry. That option is only available
 if the Discussion Forum Module is installed. It will typically be used
 like so::
 
-	{if forum_topic}
-		<a href="{path='forums/viewthread'}/{forum_topic_id}">Discuss this in our forums</a>
-	{/if}
+    {if forum_topic}
+        <a href="{path='forums/viewthread'}/{forum_topic_id}">Discuss this in our forums</a>
+    {/if}
 
 .. _channel_entries_if_no_results:
 
@@ -2091,22 +2091,22 @@ Handy conditional for displaying markup or content based on whether or not the e
 
 ::
 
-	{if has_categories}
-		<h3>Categories</h3>
+    {if has_categories}
+        <h3>Categories</h3>
 
-		<div id="categories">
-			{categories}
-				...
-			{/categories}
-		</div>
-	{/if}
+        <div id="categories">
+            {categories}
+                ...
+            {/categories}
+        </div>
+    {/if}
 
 if no\_results
 --------------
 
 ::
 
-	{if no_results} content {/if}
+    {if no_results} content {/if}
 
 You may use this conditional for displaying a message in the case when
 no entries are returned. The contents inside of the conditional will be
@@ -2114,7 +2114,7 @@ displayed in cases where there are no results returned for the tag.
 
 ::
 
-	{if no_results}  <p>There are no entries available.</p>  {/if}
+    {if no_results}  <p>There are no entries available.</p>  {/if}
 
 Further, you may specify that another Template be shown in a case when
 there are no results. In order to do that, you must use the redirect=
@@ -2122,21 +2122,21 @@ variable
 
 ::
 
-	{if no_results} {redirect="channel/noresult"} {/if}
+    {if no_results} {redirect="channel/noresult"} {/if}
 
 Lastly, if you want to simply display your 404 page (with 404 headers)
 when no entries are returned, simply use "404" as the template name.
 
 ::
 
-	{if no_results} {redirect="404"} {/if}
+    {if no_results} {redirect="404"} {/if}
 
 if not\_category\_request
 -------------------------
 
 ::
 
-	{if not_category_request} content {/if}
+    {if not_category_request} content {/if}
 
 This special conditional lets you conditionally display content if the
 current tag is *not* being displayed based on a category specified in
@@ -2149,54 +2149,54 @@ if not\_forum\_topic
 
 ::
 
-	{if not_forum_topic} content {/if}
+    {if not_forum_topic} content {/if}
 
 You may use this conditional for displaying content when *no* forum
 topic has been associated with a channel entry. That option is only
 available if the Discussion Forum Module is installed. It will typically
 be used like so::
 
-	{if not_forum_topic} There is no forum discussion available. {/if}
+    {if not_forum_topic} There is no forum discussion available. {/if}
 
 if photo
 --------
 
 ::
 
-	{if photo} content {/if}
+    {if photo} content {/if}
 
 This special conditional lets you conditionally display content if the
 current entry's author has a photo image specified. ::
 
-	{if photo}
-		<img src="{photo_url}" width="{photo_image_width}" height="{photo_image_height}" alt="{author}'s photo">
-	{/if}
+    {if photo}
+        <img src="{photo_url}" width="{photo_image_width}" height="{photo_image_height}" alt="{author}'s photo">
+    {/if}
 
 if signature\_image
 -------------------
 
 ::
 
-	{if signature_image} content {/if}
+    {if signature_image} content {/if}
 
 This special conditional lets you conditionally display content if the
 current entry's author has a signature image specified. ::
 
-	{if signature_image}
-		<img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature">
-	{/if}
+    {if signature_image}
+        <img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature">
+    {/if}
 
 if sticky
 ---------
 
 ::
 
-	{if sticky == 'y'} content {/if}
+    {if sticky == 'y'} content {/if}
 
 You may test whether an entry is set to be "sticky". You may also test
 whether it is not "sticky". ::
 
-	{if sticky == 'n'} content {/if}
+    {if sticky == 'n'} content {/if}
 
 **************
 Variable Pairs
@@ -2205,7 +2205,7 @@ Variable Pairs
 Variable pairs contain an opening and closing tag as well as content
 in-between. Example::
 
-	{date_heading}  <h1>{entry_date format="%Y %m %d"}</h1>  {/date_heading}
+    {date_heading}  <h1>{entry_date format="%Y %m %d"}</h1>  {/date_heading}
 
 The reason variable pairs have an opening and closing pair is because
 the information between the pairs can be shown or not shown if the
@@ -2223,13 +2223,13 @@ date\_footer
 
 ::
 
-	{date_footer display="daily"}  <p>That's all from today!</p>  {/date_footer}
+    {date_footer display="daily"}  <p>That's all from today!</p>  {/date_footer}
 
 The date footer can be used to show a footer at certain intervals. The
 interval can be set to show hourly, daily, weekly, monthly, or yearly.
 An optional "display" parameter can be used to set the display interval::
 
-	{date_footer display="daily"}
+    {date_footer display="daily"}
 
 Choices for the "display" parameter are:
 
@@ -2251,18 +2251,18 @@ date\_heading
 
 ::
 
-	{date_heading}  <h1>{entry_date format="%Y %m %d"}</h1>  {/date_heading}
+    {date_heading}  <h1>{entry_date format="%Y %m %d"}</h1>  {/date_heading}
 
 The date heading can be used to show a heading at certain intervals. The
 interval can be set to show hourly, daily, weekly, monthly, or yearly.
 
 When using weekly intervals, the `week_date`_ variable would typically be used. ::
 
-	{date_heading display="weekly"}Week of {week_date format="%Y %m %d"}{/date_heading}
+    {date_heading display="weekly"}Week of {week_date format="%Y %m %d"}{/date_heading}
 
 An optional "display" parameter can be used to set the display interval::
 
-	{date_heading display="daily"}
+    {date_heading display="daily"}
 
 Choices for the "display" parameter are:
 
@@ -2286,10 +2286,10 @@ Categories are unique in that they are a "looping pair". Since you can
 have multiple categories per entry, we need a mechanism to show as many
 categories as exist for each entry. ::
 
-	{categories}
-		{category_image}
-		<a href="{path='channel/index'}">{category_name}</a>
-	{/categories}
+    {categories}
+        {category_image}
+        <a href="{path='channel/index'}">{category_name}</a>
+    {/categories}
 
 .. contents::
    :local:
@@ -2306,37 +2306,37 @@ backspace=
 
 ::
 
-	{categories backspace="5"}
+    {categories backspace="5"}
 
 Backspacing removes characters (including spaces and line breaks) from
 the last iteration of the loop. For example, if you put a <br> tag
 after each category you'll have this::
 
-	Local News<br>
-	Health News<br>
-	Science News<br>
+    Local News<br>
+    Health News<br>
+    Science News<br>
 
 You might, however, not want the <br> tag after the final item. Simply
 count the number of characters (including spaces and line breaks) you
 want to remove and add the backspace parameter to the tag. The <br>
 tag has 4 characters plus a new line character, so you would do this::
 
-	{categories backspace="5"}
-		{category_name}<br>
-	{/categories}
+    {categories backspace="5"}
+        {category_name}<br>
+    {/categories}
 
 That will produce code like this::
 
-	   Local News<br>
-	   Health News<br>
-	   Science News
+       Local News<br>
+       Health News<br>
+       Science News
 
 limit=
 ^^^^^^
 
 ::
 
-	{categories limit="1"}
+    {categories limit="1"}
 
 This parameter limits the number of categories output by this variable
 pair. When in use, it will limit the output to the number provided,
@@ -2348,7 +2348,7 @@ show=
 
 ::
 
-	{categories show="4|7"}
+    {categories show="4|7"}
 
 With this parameter, you can specify which categories can be included
 when listing them with the {categories} variable pair. For instance, if
@@ -2360,14 +2360,14 @@ to specify more than one category.
 
 You may alternatively specify which categories to not show::
 
-	{categories show="not 3|6|8"}
+    {categories show="not 3|6|8"}
 
 show\_group=
 ^^^^^^^^^^^^
 
 ::
 
-	{categories show_group="1|3"}
+    {categories show_group="1|3"}
 
 With this parameter, you can specify which category groups can be
 included when listing categories with the {categories} variable pair.
@@ -2379,7 +2379,7 @@ than one category group.
 
 You may alternatively specify which category groups to not show::
 
-	{categories show_group="not 2|4"}
+    {categories show_group="not 2|4"}
 
 Categories Tag Pair Variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2392,7 +2392,7 @@ active
 
 ::
 
-	{if active} This category is active {/if}
+    {if active} This category is active {/if}
 
 You may use this conditional to test whether the category shown is the
 active category or not, based on the dynamic URI segment.
@@ -2402,7 +2402,7 @@ category_count
 
 ::
 
-	{category_count}
+    {category_count}
 
 The "count" out of the current categories being displayed. If five categories
 are being displayed, then for the fourth category the {category_count} variable
@@ -2413,7 +2413,7 @@ category\_description
 
 ::
 
-	{category_description}
+    {category_description}
 
 The description associated with the category.
 
@@ -2422,7 +2422,7 @@ category\_group
 
 ::
 
-	{category_group}
+    {category_group}
 
 The category group ID of the category.
 
@@ -2431,7 +2431,7 @@ category\_id
 
 ::
 
-	{category_id}
+    {category_id}
 
 The category ID associated with the category.
 
@@ -2440,7 +2440,7 @@ category\_image
 
 ::
 
-	{category_image}
+    {category_image}
 
 The image link (or other information) you can optionally store with each
 category within the Control Panel.
@@ -2450,7 +2450,7 @@ category\_name
 
 ::
 
-	{category_name}
+    {category_name}
 
 This displays the name of the category.
 
@@ -2459,7 +2459,7 @@ category_reverse_count
 
 ::
 
-	{category_reverse_count}
+    {category_reverse_count}
 
 The *opposite* of ``{category_count}``, in that it displays the category count position counting backwards from the total. Countdown all the things!
 
@@ -2468,7 +2468,7 @@ category_total_results
 
 ::
 
-	{category_total_results}
+    {category_total_results}
 
 The total number of categories being displayed.
 
@@ -2477,7 +2477,7 @@ category\_url\_title
 
 ::
 
-	{category_url_title}
+    {category_url_title}
 
 This variable displays the URL title of the category
 
@@ -2486,7 +2486,7 @@ parent\_id
 
 ::
 
-	{parent_id}
+    {parent_id}
 
 The category ID associated with the category's parent (or 0 in the case
 of a top level category).
@@ -2496,7 +2496,7 @@ path=
 
 ::
 
-	{path='channel/index'}
+    {path='channel/index'}
 
 This variable will be replaced by a URL to the specifies Template
 Group/Template. The category designation information will automatically
@@ -2506,7 +2506,7 @@ category to display.
 If you want the category links to point to your site index instead of a
 particular template group/template you can use SITE\_INDEX instead::
 
-	{categories}  <a href="{path='SITE_INDEX'}">{category_name}</a>  {/categories}
+    {categories}  <a href="{path='SITE_INDEX'}">{category_name}</a>  {/categories}
 
 Custom Category Fields
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -2514,7 +2514,7 @@ Custom Category Fields
 All custom fields assigned to a category can be accessed using the
 "short name" of the field::
 
-	{class} {extended_description} {category_name_fr} etc..
+    {class} {extended_description} {category_name_fr} etc..
 
 These are totally dynamic in that any field you create for your category
 will automatically be available by its "short name" as a variable.

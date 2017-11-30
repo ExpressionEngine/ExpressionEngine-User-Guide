@@ -1,7 +1,7 @@
 Settings
 ~~~~~~~~
 
-This will take you to :doc:`cp/settings/content-design`.
+This will take you to :doc:`/cp/settings/content-design`.
 
 Search
 ~~~~~~
