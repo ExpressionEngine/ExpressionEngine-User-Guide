@@ -29,7 +29,6 @@ Channel form tabs
 .. Each Field
 
 
-
 Channel tab
 ***********
 
@@ -65,8 +64,11 @@ The doc:`Settings tab <tab-settings>` holds a large number of channel specific s
 
 .. toctree::
    :hidden:
-   :glob:
 
-   tab-*
-   *
+   tab-channel
+   tab-categories
+   tab-fields
+   tab-statuses
+   tab-settings
+
 
