@@ -21,7 +21,7 @@ Release Date: December 5, 2017
 
 - Fluid Fieldtype
 
-  - Added the Fluid Fieldtype, a special fieldtype that can contain multiple instances of other Fieldtypes!
+  - Added the :doc:`Fluid Fieldtype </fieldtypes/fluid>`, a special fieldtype that can contain multiple instances of other Fieldtypes!
   - Gives content authors 100% control over the order and types of content used to build an entry, while the site builder retains 100% control over the layout and markup. Goodbye WYSIWYG tag soup!
   - Yes, Fluid fields can contain Grids and Relationships. 😉
 
@@ -91,7 +91,7 @@ Release Date: December 5, 2017
 - Emoji 😀🌐
 
   - Increased MySQL requirements to fully supports emoji. If you are upgrading, please see the :doc:`/installation/version_notes_4.0.0` for details.
-  - Added support for emoji codes (``:joy:`` becomes 😂) wherever Typography is performed. See `Emoji Catalog <https://unicodey.com/emoji-data/table.htm>`_ for a full list of supported short names.
+  - Added support for emoji codes wherever Typography is performed (``:joy:`` becomes 😂). See `Emoji Catalog <https://unicodey.com/emoji-data/table.htm>`_ for a full list of supported short names.
   - Added an Emoji module. If you are using the Emoticon module, you should modernize and use the ``{exp:emoji}`` tags instead. The Emoticon module will be removed in the next major version. See the :doc:`/installation/version_notes_4.0.0` for details.
 
 - Spam Module Improvements
@@ -107,7 +107,7 @@ Release Date: December 5, 2017
 
   - Added the ability to set the image quality when specifying a resize or crop on your upload destinations.
   - User-level errors on the front end are now sent with 403 status codes.
-  - Email module Contact Form now has the ability to include a file attachment.
+  - Email module :doc:`Contact Form </add-ons/email/contact_form>`` now has the ability to include a file attachment.
   - Eliminated some redundant queries when Channel Entries are saved.
   - Debugging errors no longer require an extra click to display the stack trace.
   - Error reporting can now be enabled for *all* site visitors from the control panel.
@@ -118,7 +118,7 @@ Release Date: December 5, 2017
 
 - Security
 
-  - Added an ``.htaccess`` file to the ``user/config`` folder to deny any web requests.
+  - Added an ``.htaccess`` file to the ``user/config`` folder to deny any web requests. But you've moved your system folder :doc:`above webroot </installation/best_practices>` anyway, right?
 
 - Bug Fixes (only itemized bugs fixed in v4 that were *not* already backported to v3)
 
