@@ -6,6 +6,12 @@ Version Notes for 4.0.0
    :local:
    :depth: 1
 
+==================================
+PHP & MySQL Requirements Increased
+==================================
+
+Please see the :doc:`/installation/requirements` for details.' The MySQL version increase was largely to allow Emoji support, details below.
+
 ===================================
 Templates Now Always Saved as Files
 ===================================
