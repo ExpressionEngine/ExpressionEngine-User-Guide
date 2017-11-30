@@ -111,7 +111,7 @@ Release Date: December 5, 2017
   - Eliminated some redundant queries when Channel Entries are saved.
   - Debugging errors no longer require an extra click to display the stack trace.
   - Error reporting can now be enabled for *all* site visitors from the control panel.
-  - The :doc:`cookie path setting </cp/settings/security-privacy>` now defaults to `/` on new installations.
+  - The :doc:`cookie path setting </cp/settings/security-privacy>` now defaults to ``/`` on new installations.
   - Removed the following default member fields, creating custom fields for any that had content: URL, location, occupation, interests, birthday, AOL IM, Yahoo IM, MSM IM, ICQ, bio.
   - Added the date field type to available member field types.
   - Channel display names now must be unique per-site.
