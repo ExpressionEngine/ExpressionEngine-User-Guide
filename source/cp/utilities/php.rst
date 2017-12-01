@@ -3,7 +3,7 @@ PHP Info
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> PHP Info`
+**Control Panel Location:** :menuselection:`Developer --> Utilities --> PHP Info`
 
 The PHP Info page of the Control Panel allows you to see the
 configuration details of your PHP installation, via the standard

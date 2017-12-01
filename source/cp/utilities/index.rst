@@ -3,7 +3,7 @@ Utilities
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Utilities`
+**Control Panel Location:** :menuselection:`Developer --> Utilities`
 
 .. Overview
 

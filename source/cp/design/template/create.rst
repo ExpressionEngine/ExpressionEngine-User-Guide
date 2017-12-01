@@ -3,7 +3,7 @@ Create Template
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Template Manager --> Create New Template`
+**Control Panel Location:** :menuselection:`Developer --> Template Manager --> Create New Template`
 
 .. Overview
 

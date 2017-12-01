@@ -16,7 +16,7 @@ Repairing the database through ExpressionEngine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If ExpressionEngine's Control Panel is still accessible, the database can be
-repaired via the built-in SQL Manager at :menuselection:`Developer Tools -->
+repaired via the built-in SQL Manager at :menuselection:`Developer -->
 Utilities --> SQL Manager`. Select the tables to repair, then choose *Repair
 selected tables* at the bottom and click Submit.
 

@@ -3,7 +3,7 @@ Cache Manager
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> Cache Manager`
+**Control Panel Location:** :menuselection:`Developer --> Utilities --> Cache Manager`
 
 .. Overview
 

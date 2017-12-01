@@ -3,7 +3,7 @@ Control Panel Access Logs
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Logs --> Control Panel`
+**Control Panel Location:** :menuselection:`Developer --> Logs --> Control Panel`
 
 .. Overview
 

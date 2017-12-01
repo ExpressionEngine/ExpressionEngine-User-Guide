@@ -3,7 +3,7 @@ Member Import
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> Member Import`
+**Control Panel Location:** :menuselection:`Developer --> Utilities --> Member Import`
 
 .. Overview
 

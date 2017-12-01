@@ -1,9 +1,9 @@
-Custom Fields
-=============
+Fields
+======
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Field Groups --> Custom Fields`
+**Control Panel Location:** :menuselection:`Developer --> Channel Manager --> Field Groups --> Custom Fields`
 
 .. Overview
 
@@ -11,6 +11,8 @@ This section of the Control Panel is where custom fields are created, edited and
 deleted.
 
 .. Screenshot (optional)
+
+.. figure:: ../../../images/field_manager.png
 
 .. Permissions
 
@@ -22,6 +24,7 @@ Permission Restrictions
 * Channel fields: Edit Channel Fields
 * Channel fields: Delete Channel Fields
 
+
 Actions
 -------
 
@@ -31,8 +34,6 @@ Actions
 
 .. Each Action
 
-.. include:: /cp/channel/_header.rst
-
 Create New
 ~~~~~~~~~~
 
@@ -41,7 +42,7 @@ This will take you to the :doc:`create form <form>`.
 Group Name Links
 ~~~~~~~~~~~~~~~~
 
-This will take you to the field's :doc:`create edit <form>`.
+This will take you to the field group's :doc:`edit form <form-group>`.
 
 Manage
 ~~~~~~
@@ -67,8 +68,7 @@ The selected channel groups will be removed. Removing a channel group will
 cause a confirmation modal to appear that will summarize the action.
 
 .. toctree::
-  :glob:
-  :hidden:
-  :titlesonly:
+   :hidden:
 
-  *
+   form
+   form-group

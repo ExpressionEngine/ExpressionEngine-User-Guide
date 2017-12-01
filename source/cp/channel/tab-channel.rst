@@ -1,12 +1,11 @@
-Create/Edit Channel
-===================
+Channel Tab
+===========
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> New/Edit Channel`
+**Control Panel Location:** :menuselection:`Developer --> Channels --> New/Edit Channel --> Channel`
 
 .. Overview
-
 
 .. Screenshot (optional)
 
@@ -55,35 +54,4 @@ Maximum number of entries
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This limits the number of entries that are allowed to be published in the channel. This can be useful for channels that need their content creation limited to a set number of entries. For example a limit of 1 will make this channel effectively a "single entry channel" and only allow a single entry to be created. A limit of 5 would allow between 0 and 5 entries to be created. Leaving this setting blank (the default) applies no limits to the number of entries a channel can contain.
-
-Status groups
-~~~~~~~~~~~~~
-
-Sets the :doc:`status group <status/index>` assigned to the channel.
-This determines what statuses are associated with the channel. The list
-is dynamically populated with all the existing groups as well as "None".
-
-If you choose to not assign a status group to a channel, only Super
-Admins will be able to post entries with an 'open' status.
-
-Title field label
-~~~~~~~~~~~~~~~~~
-
-Sets the title field label in the Publish form for this channel.
-
-Custom field group
-~~~~~~~~~~~~~~~~~~
-
-Sets the :doc:`field group <fields/groups/index>` assigned to
-the channel. This determines which channel fields are associated with
-the channel. The list is dynamically populated with all the existing
-groups as well as "None".
-
-Category groups
-~~~~~~~~~~~~~~~
-
-Sets the :doc:`category groups <cat/index>` assigned
-to the channel. This determines what categories are associated with the
-channel. The list is dynamically populated with all the existing groups
-as well as "None".
 

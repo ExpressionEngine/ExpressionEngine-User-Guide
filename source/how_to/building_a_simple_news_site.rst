@@ -38,11 +38,11 @@ There isn't a lot to overview, as you have no entries, no comments and no conten
 General Settings
 ****************
 
-On the :doc:`General Settings </cp/settings/general>` page, give your site a descriptive name and set your default localization values.  To access this page in the future, just click the Settings cog in the top right corner.
+On the :doc:`General Settings </cp/settings/general>` page, give your site a descriptive name and double check your default timezone values.  To access this page in the future, just click the Settings button in the top right corner.
 
 Now it's time to add some content.  To do that, we first need to create a channel.
 
-Click the Developer Tools icon in the top right corner and select *Channel Manager*.
+Click the Developer button in the top right corner and select *Channels*.
 
 .. figure:: ../images/getting_started_general_settings_w_nav.png
    :align: center
@@ -53,7 +53,7 @@ Click the Developer Tools icon in the top right corner and select *Channel Manag
 Channels
 ********
 
-ExpressionEngine stores all of your information inside *Channels*. A *Channel* is simply a container
+ExpressionEngine stores your information inside *Channels*. A *Channel* is simply a container
 that can be as simple or as complex as you need it to be, depending on your content.
 You can have as many Channels as you need, each with a different structure
 tailored to the content it holds.
@@ -63,112 +63,80 @@ For our new News site, we'll want a channel to hold our news articles.
 Creating a Channel
 ==================
 
-1. Click the **Create Channel** button or the **New** button to open up the :doc:`Create Channel form</cp/channel/form>`.
-2.  Name our new channel "News".
-3. ExpressionEngine will automatically provide a sensible **Short Name** for you, in this case, "news".
+Click the **Create Channel** link or the **New** button to open up the :doc:`Create Channel form</cp/channel/channel-form>`.
+
+This form allows you to create all of the structural elements you need to handle your data.
+
+***********
+Channel Tab
+***********
+
+The channel tab is where you name your channel and set whether there is a limit to the number of entries in the channel.
+
+1. Name our new channel "News".
+2. ExpressionEngine will automatically provide a sensible **Short Name** for you, in this case, "news".
 
 .. figure:: ../images/getting_started_channel_create_form.png
    :align: center
    :alt: Channels Page
 
-4.  For now, we don't have any field or category groups to assign to our channel, so save your new channel clicking **Save Channel** and we'll go create some.
+3.  Click the **Fields** tab so we can add some custom fields to hold our news data.
 
 .. tip:: A Channel's **Full Name** should be a friendly, human-readable name. The **Short Name**, on
 	the other hand, is how you'll refer to this Channel in your actual code. Don't worry, we'll get
 	to that later.
 
 
-**************
-Channel Fields
-**************
+*********
+Field Tab
+*********
 
-We have our **News** Channel, but we haven't given it any structure to hold our content yet.
-*Channel Fields* let us do just that. There are many types of fields, and a Channel can hold
-any number of Channel Fields.
-
-First, we need to create a Channel Field Group to hold our Channel Fields. Why is
-this? Simply put, Channel Field Groups make it easy to organize and re-use a particular
-set of Channel Fields. We'll discuss groups further in a bit.
-
-Creating a Channel Field Group
-==============================
-
-#. Click *NEW* next to the *Field Groups* link in the left navigation to go directly to the :doc:`Create Field Group form</cp/channel/fields/groups/form>`.
-#. Let's be startlingly creative and name this group "News".
-#. Click *Save Field Group* your new field group.
-
-You should see your new Channel Field Group:
-
-.. figure:: ../images/getting_started_field_group.png
-   :align: center
-   :alt: Channel Field Groups Page
-
+We need to create a structure to hold our news content. The field tab is where you can assign existing fields and/or groups of fields to your channel.  Since we don't have any existing fields, we'll need to create some.
 
 For our simple news section, let's create a Rich Text field to hold the content, or "body", of each news article.
 
 Creating a Field
 ================
 
-#. Click the *Fields* button for your *News* group.
-#. Click the *Create New* button to open up the :doc:`Create Field form</cp/channel/fields/form>`.
+#. Click the *Add New* link to open up the :doc:`Create Field modal</cp/channel/fields/form>`.
 #. For **Type**, choose Rich Text Editor. (Notice the :doc:`other available types</fieldtypes/index>` - exciting, no? Add-ons can even provide completely new types of fields.)
-#. For **Name**, type "News Body".
-#. ExpressionEngine will automatically provide a sensible **Short Name** for you, in this case, "news_body".
-#. Let's require our field, include it in our searchable fields and leave the rest of the settings at their defaults.
+#. For **Name**, type "Main content".
+#. ExpressionEngine will automatically provide a sensible **Short Name** for you, in this case, "main_content".
+#. Let's include the field in our searchable fields and leave the rest of the settings at their defaults.
+#. Save your new field. Since we're only adding 1 field, click the **Save** button to create the field and return to the **Field** tab.  If you needed to create multiple new fields, choosing *Save & New** would save the current field and open a new field form.
 
 .. figure:: ../images/getting_started_field_create.png
    :align: center
    :alt: Channel Fields Page
 
+.. tip:: A Channel's **Full Name** should be a friendly, human-readable name. The **Short Name**, on
 
-#. Save your new field.
 
+************
+Category Tab
+************
 
-*************************
-Channel Group Assignments
-*************************
+Categories are a nice way to better organize all of your content in each Channel.  You can assign existing category groups to your channel on this tab.  A category group is simply a collection of categories. If you need to create a new group, you can do it on the fly in by clicking the **Add New** link.
 
-Even though we've created our **News** Channel, as well as our **News Fields** Group, we haven't explicitly
-linked the two together yet. Let's do that now.
-
-#. Go back to the *Channels* by clicking the link in the left navigation.  Click on your *News* channel.
-#. Set **Custom field group** to "News Fields".
-#. Leave **Category groups** set to "None".
-#. Save your your edits and you're ready to start adding content.
-
-As you've just seen, every Channel can have
-three types of Groups assigned to it. Let's go over each one in a bit more detail.
-
-Category Group
-==============
-
-Categories are a nice way to better organize all of your content in each Channel.
 While we aren't creating any Categories for the purposes of this guide, know that they are a very
 powerful feature with full hierarchy support and more. See the :doc:`Categories </cp/channel/cat/index>`
 section for more information.
 
-Status Group
-============
+**********
+Status Tab
+**********
 
-Statuses are typically used to control whether or not (or to whom) a piece of content will appear on your site. In
-this guide we've stuck with ExpressionEngine's default Status Group, which contains two Statuses: **Open** and
+Statuses are typically used to control whether or not (or to whom) a piece of content will appear on your site. In this guide we'll stick with ExpressionEngine's default Statuses, **Open** and
 **Closed**. By default, content with an "Open" status will be shown, while content that is "Closed"
 will not appear at all. There are other creative uses for Statuses, especially when it comes to editorial
-workflows. See the :doc:`Statuses </cp/channel/status/index>` section for more information.
+workflows. See the :doc:`Statuses </cp/channel/tab-statuses>` section for more information.
 
-Channel Field Group
-===================
+************
+Settings Tab
+************
 
-Channel Fields are the core of ExpressionEngine's content management abilities. They allow the system
-to fit to your content, instead of the other way around.
+There are a number of channel specific settings, all of which are detailed in the :doc:`Channel settings </cp/channel/tab-settings>` section.
 
-Why Groups?
-===========
-
-As you've probably noticed, Categories, Statuses and Channel Fields are all contained within groups.
-This allows for easy re-use without duplicating effort. For example, if in the future we create a new
-Channel, but decide that it will use similar Categories, Statuses or Channel Fields, we can simply
-assign the already-existing group(s) to the new Channel.
 
 ******************
 Publishing Entries
@@ -186,27 +154,25 @@ store in ExpressionEngine.
 #. ExpressionEngine provides a sensible **URL Title** for you. This is another
    automatic field that allows your entries to be easily linked to via a URL.
    See :doc:`/urls/url_structure` for more information.
-#. Enter some text in the **News Body** field. Make it good!
+#. Enter some text in the **Main content** field. Make it good!
 
 .. figure:: ../images/getting_started_news_publish.png
    :align: center
    :alt: Publish Page
 
 
-#. Click *Publish* to publish the Entry.
+#. Click *Save & Close* to publish the entry and return to the **Edit** page.
 
 
 Upon submitting, you'll be taken to the Edit screen, which displays all of your entries in a filterable table:
 
 .. figure:: ../images/getting_started_edit_page.png
    :align: center
-   :alt: View Entry Page
+   :alt: Edit Page
 
-From here you could edit the Entry to make any necessary corrections, or navigate to another area
-of the Control Panel.
 
 For the purposes of this guide, publish a second Entry by following the same steps as before, but
-with a different Title and News Body. That will give us two Entries to work with later.
+with a different Title and Main content. That will give us two entries to work with later.
 
 .. _getting_started_templates:
 
@@ -236,7 +202,7 @@ Creating a Template
 
 Let's create our first Template, which will be a simple news page that displays Entries from our News Channel.
 
-#. Click on *Developer Tools* in the top right and select *Template Manager*.
+#. Click on the *Developer* button in the top right and select *Templates*.
 #. Click the *NEW* button by *Template Groups* in the left navigation.
 #. For **Template Group Name**, type "news".
 #. Check the box next to **Make the index template in this group your site's home page?**
@@ -271,7 +237,7 @@ with a blank slate. Let's add some skeleton HTML::
    :align: center
    :alt: Template Edit
 
-Click *Save Template* to save our changes and stay on the page (*Save & Finish Editing* will return you to
+Click *Save* to save our changes and stay on the page (*Save & Close* will return you to
 the Template Manager). Then click the *View Rendered* button in the upper-right, which
 should open the page in a new browser tab. It may not be very exciting, but it's something:
 
@@ -281,8 +247,7 @@ should open the page in a new browser tab. It may not be very exciting, but it's
 
 
 .. tip:: You're not confined to editing your markup inside ExpressionEngine's Template Editor.
-   You can enable :doc:`/templates/templates_as_files` and then work with Template files using
-   any editor you choose.
+   By default templates are also saved as files you can edit using any editor you choose. See :doc:`Saving Templates as Text Files </templates/templates_as_files>` for details.
 
 "This is all well and good," you might be saying. "ExpressionEngine is outputting my markup exactly
 as entered; no more or less, which is awesome. But it's still not showing any of the content

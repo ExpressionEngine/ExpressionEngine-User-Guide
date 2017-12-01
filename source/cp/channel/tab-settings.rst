@@ -1,13 +1,13 @@
-Channel Settings
-================
+Channel Settings Tab
+====================
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Channel Settings`
+**Control Panel Location:** :menuselection:`Developer --> Channels --> New/Edit Channel --> Settings`
 
 .. Overview
 
-This screen allows you to edit the preferences and settings associated with the
+This tab allows you to edit the preferences and settings associated with the
 channel. They include General, Administrative, Channel Posting, and Comment
 Posting settings.
 
@@ -21,6 +21,7 @@ Permission Restrictions
 * Access settings: Design & Content
 * Channels: Create Channels
 * Channels: Edit Channels
+
 
 Fields
 ------
@@ -62,7 +63,6 @@ http://example.com/index.php/channel/comments/
 Search results
 ~~~~~~~~~~~~~~
 
-
 The full URL where you would like search results from this channel to be
 pointed. The URL should include the Template Group and Template. For
 example, if you wish that links off the search results page point to
@@ -79,7 +79,7 @@ Live Look template
 ~~~~~~~~~~~~~~~~~~
 
 The template that will be used for a Live Look at your entries. Links
-are available on the main Edit section of the control panel and will use the format site_url/template_group/template_name/entry_id. 
+are available on the main Edit section of the control panel and will use the format site_url/template_group/template_name/entry_id.
 If you do not want to use a Live Look Template with a channel, simply
 set this preference to "No Live Look Template".
 
@@ -103,8 +103,8 @@ Status
 ~~~~~~
 
 The default status for new channel entries. The available options depend
-on what :doc:`Status Group <status/index>` the channel is assigned to
-use and which statuses are defined for that group.
+on what :doc:`Statuses <tab-statuses>` the channel is assigned to
+use.
 
 Category
 ~~~~~~~~
@@ -119,10 +119,7 @@ Search excerpt
 ~~~~~~~~~~~~~~
 
 You can specify which field from your entries to use in search result
-excerpts. The list is dynamically populated depending on which :doc:`Field
-Group <fields/groups/index>` the channel is assigned to use and which
-fields are defined for that group. Only fields that have been set as
-"searchable" will be included.
+excerpts. The list is dynamically populated depending on which :doc:`Fields <fields/index>` the channel is assigned to use. Only fields that have been set as "searchable" will be included.
 
 HTML formatting
 ~~~~~~~~~~~~~~~

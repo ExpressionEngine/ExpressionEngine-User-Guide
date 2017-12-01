@@ -195,7 +195,6 @@ Caches are cleared automatically when certain actions occur:
   - Updating, creating or deleting a Category Custom Field (clears all caches)
   - Deleting a Field Group (clears all caches)
   - Updating, creating or deleting a Custom Field (clears all caches)
-  - Deleting a Status Group (clears all caches)
   - Updating Multi Entries (clears if needed either all or sql cache)
   - Updating Multi Categories (clears if needed either all or sql cache)
   - Deleting Watermark Preferences (clears db cache)

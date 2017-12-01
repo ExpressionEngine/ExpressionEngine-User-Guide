@@ -3,7 +3,7 @@ Email Templates
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Template Manager --> Email`
+**Control Panel Location:** :menuselection:`Developer --> Template Manager --> Email`
 
 .. Overview
 

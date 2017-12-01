@@ -16,7 +16,7 @@ server and run it to verify basic compatibility with ExpressionEngine.
 2. Clear Caches
 ----------------
 
-Go to :menuselection:`Developer Tools --> Utilities --> Cache Manager`. Select
+Go to :menuselection:`Developer --> Utilities --> Cache Manager`. Select
 **All Caches** and click Submit.
 
 3. Back-up Database and Files
@@ -103,7 +103,7 @@ may need to be updated, including:
 -  :menuselection:`Settings --> CAPTCHA`
 -  :menuselection:`Settings --> Content & Design`
 -  :menuselection:`Settings --> Avatars`
--  :menuselection:`Developer Tools --> Channel Manager`
+-  :menuselection:`Developer --> Channel Manager`
 -  :menuselection:`Files`
 
 You can also set many of these paths in your config.php file using
@@ -136,7 +136,7 @@ configuration variables::
 10. Clear Caches (Again!)
 -------------------------
 
-Go to :menuselection:`Developer Tools --> Utilities --> Cache Manager`. Select
+Go to :menuselection:`Developer --> Utilities --> Cache Manager`. Select
 **All Caches** and click Submit.
 
 You're Done!

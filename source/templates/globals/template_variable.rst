@@ -3,7 +3,7 @@ Template Variables
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Template Variables`
+**Control Panel Location:** :menuselection:`Developer --> Template Variables`
 
 Custom, user-defined template variables can be created for use in any
 Template.

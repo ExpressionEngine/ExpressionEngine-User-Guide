@@ -3,7 +3,7 @@ Create/Edit Category
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Category Groups --> Categories --> New/Edit Category`
+**Control Panel Location:** :menuselection:`Developer --> Categories --> New/Edit Category`
 
 .. Overview
 
@@ -64,5 +64,5 @@ level" category with no parent.
 Custom Fields
 -------------
 
-Any :doc:`custom category fields <field/index>` that exist for this category
+Any :doc:`custom category fields <tab-fields>` that exist for this category
 group will be included in the form.

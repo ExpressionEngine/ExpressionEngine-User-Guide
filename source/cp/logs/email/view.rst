@@ -3,7 +3,7 @@ View Email
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Logs --> Email --> subject link`
+**Control Panel Location:** :menuselection:`Developer --> Logs --> Email --> subject link`
 
 .. Overview
 

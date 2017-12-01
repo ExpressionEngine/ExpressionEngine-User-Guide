@@ -141,7 +141,7 @@ category=
 	category="2"
 
 Categories are specified by ID number (the ID number of each
-:doc:`category </cp/channel/cat/form-cat>` is displayed in the
+:doc:`category </cp/channel/cat/index>` is displayed in the
 Control Panel). The reason we use the ID is because categories can be
 called anything (with spaces, quotes, etc.), and also renamed. It would
 be much more difficult to have to update the tag parameters every time
@@ -592,7 +592,7 @@ options for this parameter include:
 -  ``orderby="view_count_four"``
 
 In addition you can order by a :doc:`channel field
-</cp/channel/fields/groups/index>`. Use the "short\_name" of
+</cp/channel/fields/index>`. Use the "short\_name" of
 the field::
 
 	orderby="name_of_field"
@@ -1065,7 +1065,7 @@ status=
 	status="open"
 
 You may restrict to entries with a particular :doc:`status
-</cp/channel/status/index>`. The two statuses "open" and "closed" are
+</cp/channel/tab-statuses>`. The two statuses "open" and "closed" are
 default statuses that are always available, so you can always specify
 those if needed. If no status parameter is specified, only open status entries
 will be returned.  You can choose multiple statuses using a pipe::
@@ -1391,7 +1391,7 @@ comment\_auto\_path
 	{comment_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL**
-preference under :menuselection:`Developer Tools --> Channel Manager --> Settings`. No entry
+preference under :menuselection:`Developer --> Channels` in the channel's **Settings** tab. No entry
 id, URL Title, or other information is included; this is the exact URL
 from the preference.
 
@@ -1403,7 +1403,7 @@ comment\_entry\_id\_auto\_path
 	{comment_entry_id_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL**
-preference under :menuselection:`Developer Tools --> Channel Manager --> Settings`. The ID
+preference under :menuselection:`Developer --> Channels` in the channel's **Settings** tab. The ID
 number of the entry will be automatically added. For example, this::
 
 	<a href="{comment_entry_id_auto_path}">my entry</a>
@@ -1438,7 +1438,7 @@ comment\_url\_title\_auto\_path
 	{comment_url_title_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL**
-preference under :menuselection:`Developer Tools --> Channel Manager --> Settings`. The URL
+preference under :menuselection:`Developer --> Channels` in the channel's **Settings** tab. The URL
 Title of the entry will be automatically added. For example, this::
 
 	<a href="{comment_url_title_auto_path}">my entry</a>

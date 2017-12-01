@@ -78,7 +78,7 @@ status=
 	status="open"
 
 You may restrict to a particular :doc:`status
-</cp/channel/status/index>`. You can choose multiple statuses using a
+</cp/channel/tab-statuses>`. You can choose multiple statuses using a
 pipe::
 
 	status="draft|reviewed|published"

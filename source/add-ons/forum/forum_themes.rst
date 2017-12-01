@@ -3,7 +3,7 @@ Forum Themes
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Template Manager --> Forums`
+**Control Panel Location:** :menuselection:`Developer --> Template Manager --> Forums`
 
 The ExpressionEngine Forums make use of "themes" to determine how they
 are displayed. The Forum Module comes with a "default" theme, which is

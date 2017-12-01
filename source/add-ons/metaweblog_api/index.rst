@@ -3,7 +3,7 @@ Metaweblog API / Movable Type
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Add-On Manager --> Metaweblog API`
+**Control Panel Location:** :menuselection:`Developer --> Add-Ons --> Metaweblog API`
 
 .. contents::
    :local:
@@ -29,7 +29,7 @@ Configuration
 -------------
 
 The Metaweblog API Control Panel is accessed via
-:menuselection:`Developer Tools --> Add-On Manager --> Metaweblog API` in the Control Panel.
+:menuselection:`Developer --> Add-Ons --> Metaweblog API` in the Control Panel.
 This page lists all of your existing configurations as well as the URL to be
 used for connecting to that configuration with your Metaweblog API-compatible
 software.
@@ -118,7 +118,7 @@ Connecting with a Metaweblog API Compatible Program
 ---------------------------------------------------
 
 In general, you will use the URL of your desired configuration as shown
-on the Metaweblog API Control Panel page at :menuselection:`Developer Tools --> Add-On Manager --> Metaweblog API` to connect with your program. Below is
+on the Metaweblog API Control Panel page at :menuselection:`Developer --> Add-Ons --> Metaweblog API` to connect with your program. Below is
 information specific to some common programs.
 
 MarsEdit
@@ -131,7 +131,7 @@ MarsEdit
 #. For *System Name*, choose **ExpressionEngine**.
 #. For *System API*, ensure **Movable Type API** is selected.
 #. For *API Endpoint URL*, enter the URL of your desired configuration
-   as shown on the Metaweblog API Control Panel page at :menuselection:`Developer Tools --> Add-On Manager --> Metaweblog API`.
+   as shown on the Metaweblog API Control Panel page at :menuselection:`Developer --> Add-Ons --> Metaweblog API`.
 #. For *Blog ID*, enter the **Channel ID** of the Channel you'll
    be posting to.
 #. Click **OK**, then right-click on the newly created Blog in the
@@ -146,7 +146,7 @@ Ecto
 #. Click **New Account**.
 #. For *System*, choose **ExpressionEngine** or **MovableType**.
 #. For *Access Point*, enter the URL of your desired configuration
-   as shown on the Metaweblog API Control Panel page at :menuselection:`Developer Tools --> Add-On Manager --> Metaweblog API`.
+   as shown on the Metaweblog API Control Panel page at :menuselection:`Developer --> Add-Ons --> Metaweblog API`.
 #. Enter the **username** and **password** for your ExpressionEngine
    account.
 #. At first, ecto will show the existing entries from all Channels
