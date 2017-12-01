@@ -3,7 +3,7 @@ Simple Commerce – PayPal Settings
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer --> Add-On Manager --> Simple Commerce --> Settings`
+**Control Panel Location:** :menuselection:`Developer --> Add-Ons --> Simple Commerce --> Settings`
 
 .. _sc-paypal-account-label:
 
@@ -29,10 +29,10 @@ Simple Commerce.
     compiled in PHP. Ask your server administrator for this information.
 
 .. note:: Enabling this requires that you use a public certificate and
-	private key. Please read the section on
-	:ref:`simple_commerce_encrypted_payments` for full details. To be the
-	most effective, you should set your PayPal account settings to only
-	accept encrypted payments.
+    private key. Please read the section on
+    :ref:`simple_commerce_encrypted_payments` for full details. To be the
+    most effective, you should set your PayPal account settings to only
+    accept encrypted payments.
 
 
 .. _sc-certificate-id-label:
@@ -53,8 +53,8 @@ Specify the path to the public certificate file. Please read the
 section on :ref:`simple_commerce_encrypted_payments` for full details.
 
 .. note:: ExpressionEngine must have read access to this directory, but
-	for security we highly recommended you use a location above web	root
-	so that the certificate and key files are not accessible via the web.
+    for security we highly recommended you use a location above web root
+    so that the certificate and key files are not accessible via the web.
 
 
 .. _sc-private-key-path-label:
@@ -66,8 +66,8 @@ Specify the path to the private key file. Please read the section on
 :ref:`simple_commerce_encrypted_payments` for full details.
 
 .. note:: ExpressionEngine must have read access to this directory, but
-	for security we highly recommended you use a location above web	root
-	so that the certificate and key files are not accessible via the web.
+    for security we highly recommended you use a location above web root
+    so that the certificate and key files are not accessible via the web.
 
 
 .. _sc-paypal-certificate-path-label:
@@ -80,8 +80,8 @@ the section on :ref:`simple_commerce_encrypted_payments` for full
 details.
 
 .. note:: ExpressionEngine must have read access to this directory, but
-	for security we highly recommended you use a location above web	root
-	so that the certificate and key files are not accessible via the web.
+    for security we highly recommended you use a location above web root
+    so that the certificate and key files are not accessible via the web.
 
 
 .. _sc-temp-path-label:
