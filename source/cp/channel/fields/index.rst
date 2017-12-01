@@ -12,6 +12,8 @@ deleted.
 
 .. Screenshot (optional)
 
+.. figure:: ../../../images/field_manager.png
+
 .. Permissions
 
 Permission Restrictions

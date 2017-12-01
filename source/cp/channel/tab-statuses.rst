@@ -7,7 +7,7 @@ Channel Statuses Tab
 
 .. Overview
 
-This tab allows you to assign statuses to your channel.
+This tab allows you to assign statuses to your channel.  The Statuses tab shows all existing statuses in an orderable multi-select.  **Open** and **Closed** statuses are required and any other statuses can be included on a per channel basis.
 
 .. Screenshot (optional)
 
@@ -21,19 +21,42 @@ Permission Restrictions
 * Statuses: Edit Statuses
 * Statuses: Delete Statuses
 
-The Statuses tab shows all existing statuses in an orderable multi-select.  **Open** and **Closed** statuses are required and any other statuses can be included on a per channel basis.
 
-Status Links
-~~~~~~~~~~~~
-Opens the **Edit Status** modal for that particular status.
+Actions
+-------
+
+.. contents::
+  :local:
+  :depth: 1
+
+.. Each Action
 
 Add Status
-~~~~~~~~~~
-Opens the **New Status** model.
+^^^^^^^^^^
+
+Opens the **New Status** modal.
+
+Status Links
+^^^^^^^^^^^^
+
+Opens the **Edit Status** modal for that particular status.
+
+Delete Status
+^^^^^^^^^^^^^
+
+Any custom status can be deleted by clicking the trash icon.
+
+Fields
+------
+
+Statuses
+^^^^^^^^
+
+All statuses populate an orderable multi-select.  Open and Closed statuses are required.
 
 
-Modal Fields
-------------
+Add/Edit Modal Fields
+---------------------
 
 .. contents::
   :local:
@@ -42,7 +65,7 @@ Modal Fields
 .. Each Field
 
 Name
-~~~~
+^^^^
 
 This is the name for the status. It is what will be displayed when
 creating a new channel entry. This is a **required** field and it may
@@ -50,7 +73,7 @@ contain spaces or punctuation.
 
 
 Highlight color
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 This optional field allows you to specify a highlight color for this
 status. This is the color of the status name in the :doc:`/cp/publish/edit`
@@ -66,7 +89,7 @@ could define a specific RGB value in a standard method such as #f00 or
 
 
 Status access
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
 If any of your Member Groups (besides the Super Admin group) have
 access to the Control Panel you will see a table that allows you to

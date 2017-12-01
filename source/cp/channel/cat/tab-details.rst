@@ -20,7 +20,14 @@ Permission Restrictions
 * Channel categories: Edit Categories
 * Channel categories: Delete Categories
 
+Fields
+------
 
+.. contents::
+  :local:
+  :depth: 1
+
+.. Each Field
 
 Name
 ~~~~

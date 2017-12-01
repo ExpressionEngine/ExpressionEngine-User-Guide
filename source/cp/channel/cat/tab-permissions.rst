@@ -6,6 +6,15 @@ Category Group Permissions Tab
 **Control Panel Location:** :menuselection:`Developer --> Categories --> New/Edit Category Group -> Permissions`
 
 
+Fields
+------
+
+.. contents::
+  :local:
+  :depth: 1
+
+.. Each Field
+
 Edit Categories
 ~~~~~~~~~~~~~~~
 

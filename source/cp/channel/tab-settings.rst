@@ -22,6 +22,7 @@ Permission Restrictions
 * Channels: Create Channels
 * Channels: Edit Channels
 
+
 Fields
 ------
 
@@ -61,7 +62,6 @@ http://example.com/index.php/channel/comments/
 
 Search results
 ~~~~~~~~~~~~~~
-
 
 The full URL where you would like search results from this channel to be
 pointed. The URL should include the Template Group and Template. For

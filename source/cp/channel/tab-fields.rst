@@ -21,7 +21,6 @@ Permission Restrictions
 * Channels: Edit Channel Fields
 * Channels: Delete Channel Fields
 
-
 Actions
 -------
 
@@ -32,26 +31,39 @@ Actions
 .. Each Action
 
 Add Group
-~~~~~~~~~
+^^^^^^^^^
 
 Opens the **New Field Group** modal.
 
 Add Field
-~~~~~~~~~
+^^^^^^^^^
 
 Opens the **New Field** modal.
+
+Fields
+------
+
+Field groups
+^^^^^^^^^^^^
+
+A multi-select comprised of all field groups.  A channel can have multiple field groups or no field groups.
+
+Fields
+^^^^^^
+
+A multi-select comprised of all fields, including those in field groups.  A channel can have any combination of fields and field groups, and fields can be used in more than one channel.
 
 
 New Field Group Modal Fields
 ----------------------------
 
 Name
-~~~~
+^^^^
 
 Field group name.
 
 Fields
-~~~~~~
+^^^^^^
 
 Fields to include in the new field group.
 

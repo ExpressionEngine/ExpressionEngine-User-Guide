@@ -1,12 +1,11 @@
-Create/Edit Channel
-===================
+Channel Tab
+===========
 
 .. rst-class:: cp-path
 
 **Control Panel Location:** :menuselection:`Developer --> Channels --> New/Edit Channel --> Channel`
 
 .. Overview
-
 
 .. Screenshot (optional)
 
@@ -27,11 +26,6 @@ Fields
   :depth: 1
 
 .. Each Field
-
-The channel form is broken out into 5 tabs: Channel, Fields, Categories, Statuses, Settings.
-
-Channel tab
-***********
 
 Name
 ~~~~

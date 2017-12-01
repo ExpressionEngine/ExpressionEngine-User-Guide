@@ -1,3 +1,6 @@
+Field Settings
+^^^^^^^^^^^^^^
+
 Type
 ~~~~
 
@@ -92,6 +95,6 @@ collapsed by default and in order to enter content into the field you
 will first have to open using the link provided on the publish page.
 
 Field Options
--------------
+^^^^^^^^^^^^^
 
 Each field type may have additional field options.  See the :doc:`individual field types <../../../fieldtypes/index>` for details.

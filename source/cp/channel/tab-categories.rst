@@ -21,21 +21,30 @@ Permission Restrictions
 * Channel categories: Edit Categories
 * Channel categories: Delete Categories
 
+Actions
+-------
 
+.. contents::
+  :local:
+  :depth: 1
 
-Category Group Links
-~~~~~~~~~~~~~~~~~~~~
-
-Opens the **Edit Category Group** modal for that particular group.
+.. Each Action
 
 Add Category Group
-~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^
 
 Opens the **New Category Group** modal.
 
+Fields
+------
 
-Modal Fields
-------------
+Category Groups
+^^^^^^^^^^^^^^^
+
+A multi-select field comprised of all categories groups.  A channel can have multiple category groups or no category groups and category groups can be used in multiple channels.
+
+New Category Group Modal Fields
+-------------------------------
 
 .. contents::
   :local:
@@ -44,12 +53,12 @@ Modal Fields
 .. Each Field
 
 Name
-~~~~
+^^^^
 
 Field group name
 
 HTML formatting
-~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^
 
 This setting determines how raw HTML code within custom category fields
 is handled. There are three options:
@@ -66,7 +75,7 @@ is handled. There are three options:
    will then be interpreted by the browser when the entry is viewed.
 
 Exclude group from?
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 Both channel entries and files can be assigned to categories, the categories available are limited to the member group(s) assigned.
 
