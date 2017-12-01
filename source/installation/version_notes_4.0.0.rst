@@ -44,3 +44,4 @@ Other Changes
 =============
 
 - Text field types that have been set to a number content type will now show zero by default when empty.
+- The underlying storage schema for Channel Entries has changed. Existing fields will not be modified, as trying to perform the necessary MySQL options via an HTTP request with the updater would not be reliable. In time, a migration utility will be made available for those who want their pre-v4 channel fields to use the new storage schema. In the meantime, there are **no functional differences** between legacy fields and new, except that legacy fields cannot be shared across Sites in the Site Manager. All of your channel entries tags and even manual SQL that accesses legacy fields will continue to work as normal.
