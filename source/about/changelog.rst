@@ -49,6 +49,7 @@ Release Date: December 5, 2017
     + When changing a Single Link menu set item to Dropdown, the first row will be auto-filled with the Single Link data.
 
   - Added a new utility for backing up your database.
+  - Smart, filterable, ajaxified select fields everywhere you need them.
   - Radio fields now display with the first option selected by default on new entries.
   - Added a :ref:`CodeMirror height <codemirror_height>` config override to customize the height of the Template Editor.
   - Enable/disable settings now all use a toggle UI for a simpler, unified experience administrating preferences.
@@ -86,6 +87,7 @@ Release Date: December 5, 2017
     + Added ``show_expired="only"`` option to the Channel Entry ``show_expired`` parameter, which will bring back only expired entries.
     + Added ``sticky="only"`` option to the Channel Entry ``sticky`` parameter, which will bring back only entries marked sticky.
     + ``search:field=`` for numeric fields now supports piped values to allow ranges, e.g. ``search:year_discovered='>=1970|<1980'``
+  - The search module now supports the site parameter, allowing searching across site.
   - Added ``{username}`` and ``{screen_name}`` variables to the Member Reset Password Form template.
 
 - Emoji 😀🌐
