@@ -1028,6 +1028,23 @@ Example Usage::
 $config['code_block_pre'] = '<div class="codeblock">';
 $config['code_block_post'] = '</div>';
 
+.. _codemirror_height:
+
+codemirror_height
+-----------------
+
+Set the height of any CodeMirror textareas in the control panel, such as the Template Editor.
+
+===================== ===========
+Value                 Description
+===================== ===========
+``codemirror_height`` Height to use, in CSS units.
+===================== ===========
+
+Example Usage::
+
+$config['codemirror_height'] = '18em';
+
 comment_edit_time_limit
 -----------------------
 
