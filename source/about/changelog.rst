@@ -109,7 +109,7 @@ Release Date: December 5, 2017
 
   - Added the ability to set the image quality when specifying a resize or crop on your upload destinations.
   - User-level errors on the front end are now sent with 403 status codes.
-  - Email module :doc:`Contact Form </add-ons/email/contact_form>`` now has the ability to include a file attachment.
+  - Email module :doc:`Contact Form </add-ons/email/contact_form>` now has the ability to include a file attachment.
   - Eliminated some redundant queries when Channel Entries are saved.
   - Debugging errors no longer require an extra click to display the stack trace.
   - Error reporting can now be enabled for *all* site visitors from the control panel.

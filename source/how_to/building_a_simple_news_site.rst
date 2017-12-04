@@ -93,7 +93,7 @@ Field Tab
 
 We need to create a structure to hold our news content. The field tab is where you can assign existing fields and/or groups of fields to your channel.  Since we don't have any existing fields, we'll need to create some.
 
-For our simple news section, let's create a Rich Text field to hold the content, or "body", of each news article.
+For our simple news section, let's create a Rich Text field to hold the content of each news article.
 
 Creating a Field
 ================
@@ -102,7 +102,7 @@ Creating a Field
 #. For **Type**, choose Rich Text Editor. (Notice the :doc:`other available types</fieldtypes/index>` - exciting, no? Add-ons can even provide completely new types of fields.)
 #. For **Name**, type "Main content".
 #. ExpressionEngine will automatically provide a sensible **Short Name** for you, in this case, "main_content".
-#. Let's include the field in our searchable fields and leave the rest of the settings at their defaults.
+#. Let's include the field in our searchable fields, set the field as a required field, and leave the rest of the settings at their defaults.
 #. Save your new field. Since we're only adding 1 field, click the **Save** button to create the field and return to the **Field** tab.  If you needed to create multiple new fields, choosing *Save & New** would save the current field and open a new field form.
 
 .. figure:: ../images/getting_started_field_create.png
@@ -299,10 +299,10 @@ Variables
 
 *Variables* are the actual pieces of information that ExpressionEngine retrieves and
 makes available to us. To get some content from an Entry, for example, use the Short Name
-of the Channel Field. Remember the News Body field we created earlier? You can get its contents
+of the Channel Field. Remember the **Main content** field we created earlier? You can get its contents
 like so::
 
-	{news_body}
+	{main_content}
 
 And the Title of the Entry is easily accessed with::
 
@@ -338,7 +338,7 @@ update the Template with the following code::
 			<h2>{title}</h2>
 			<p>By {author}</p>
 
-			{news_body}
+			{main_content}
 		{/exp:channel:entries}
 	</body>
 	</html>
