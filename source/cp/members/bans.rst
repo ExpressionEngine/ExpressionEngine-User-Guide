@@ -1,9 +1,9 @@
-Banned Members
-==============
+Ban Settings
+============
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Manage Bans`
+**Control Panel Location:** :menuselection:`Members --> Ban Settings`
 
 .. Overview
 

@@ -661,7 +661,7 @@ $config['banned_emails'] = 'user@example.com|johndoe@example.com|*@spammydomain.
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Manage Bans`:
+**Also found in CP:** :menuselection:`Members --> Ban Settings`:
 :ref:`Banned Email Addresses <member-banned-email-label>`
 
 
@@ -683,7 +683,7 @@ $config['banned_ips'] = '123.456.789.1|123.321.*';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Manage Bans`:
+**Also found in CP:** :menuselection:`Members --> Ban Settings`:
 :ref:`Banned IP Address <member-banned-ip-label>`
 
 
@@ -705,7 +705,7 @@ $config['banned_screen_names'] = 'Garfield|Snoopy|Hobbes';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Manage Bans`:
+**Also found in CP:** :menuselection:`Members --> Ban Settings`:
 :ref:`Restricted Screen Names <member-banned-screename-label>`
 
 
@@ -727,7 +727,7 @@ $config['banned_usernames'] = 'garfield|snoopy|hobbes';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Manage Bans`:
+**Also found in CP:** :menuselection:`Members --> Ban Settings`:
 :ref:`Restricted Usernames <member-banned-username-label>`
 
 
@@ -3628,7 +3628,7 @@ Enable the saving of :doc:`templates as files
 Value      Behavior
 ========== ========
 ``y``      Templates are saved as files **(default)**
-``n``      Templates are not saved as files 
+``n``      Templates are not saved as files
 ========== ========
 
 Example Usage::
