@@ -56,8 +56,8 @@ Pending Activation
 
 This will display only pending members.
 
-Manage Bans
-^^^^^^^^^^^
+Ban Settings
+^^^^^^^^^^^^
 
 This will take you to :doc:`bans`.
 
