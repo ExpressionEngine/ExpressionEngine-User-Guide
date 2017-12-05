@@ -78,6 +78,7 @@ Release Date: December 5, 2017
     + ``:url_slug``
 
   - Added an :doc:`{exp:http_header} </add-ons/http_header/index>` native plugin allowing you to set custom headers in your templates.
+  - Layout Variables can now append and prepend to existing Layout Variables, opening up a new world of staying DRY!
   - Layout and embed variables that contain dates can now accept all parameters and modifiers available to date variables.
   - Added ``title`` as a valid option to the File Entries tag ``orderby=`` parameter.
   - ``{if toggle_field}`` conditionals now work as expected regardless of MySQL environment issues.
