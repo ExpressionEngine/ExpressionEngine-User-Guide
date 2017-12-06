@@ -1,5 +1,5 @@
 #############################
-ExpressionEngine 3 User Guide
+ExpressionEngine 4 User Guide
 #############################
 
 - Introduction
