@@ -8,7 +8,7 @@ ExpressionEngine v4 Change Log
 Version 4.0.0
 --------------
 
-Release Date: December 5, 2017
+Release Date: December 6, 2017
 
 - One-click Updater
 
