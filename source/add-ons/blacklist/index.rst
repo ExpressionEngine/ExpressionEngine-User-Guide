@@ -3,7 +3,7 @@ Black/White List
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Menu --> Add-On Manager --> Black/White List`
+**Control Panel Location:** :menuselection:`Developer --> Add-Ons --> Black/White List`
 
 .. contents::
    :local:
@@ -109,7 +109,7 @@ Whitelist, please email blacklist@ellislab.com.
 To download the ExpressionEngine Lists, you must have a valid license file
 entered into the :menuselection:`Settings --> License & Registration`
 area of the Control Panel. To download the Lists, go into the
-:menuselection:`Developer Menu --> Add-On Manager --> Black/White List`.
+:menuselection:`Developer --> Add-Ons --> Black/White List`.
 In the main menu for the module are links that you can click to
 automatically download and add the ExpressionEngine.com Lists to your
 own.
@@ -147,7 +147,7 @@ done.
    add new content.
 #. Once you have a .htaccess file at the site root on your server, you
    will need to make it writable. See :doc:`/troubleshooting/general/file_permissions` for details.
-#. In your ExpressionEngine Control Panel, go to :menuselection:`Developer Menu --> Add-On Manager --> Black/White List`.
+#. In your ExpressionEngine Control Panel, go to :menuselection:`Developer --> Add-Ons --> Black/White List`.
    At the top of the page you'll see a "Add to .htaccess file?" setting. In this setting, you will need
    to place the *full server path* to the .htaccess file. The full server
    path might look something like

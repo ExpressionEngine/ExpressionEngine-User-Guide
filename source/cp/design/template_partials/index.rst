@@ -3,7 +3,7 @@ Template Partials
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Template Partials`
+**Control Panel Location:** :menuselection:`Developer --> Template Partials`
 
 .. Overview
 

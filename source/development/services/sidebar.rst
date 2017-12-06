@@ -14,7 +14,7 @@ The Control Panel's left sidebar is built with the Sidebar Service::
 
   $sidebar = ee('CP/Sidebar')->make();
 
-In accordance with our :style_guide:`style guide <c/structure#content-box-sidebar>` sidebars have headers::
+You can add a header::
 
   $header = $sidebar->addHeader($text, $url);
 
@@ -46,6 +46,21 @@ Folder list items may also be marked as default::
 Basic list items may also be marked as a delete action::
 
   $basic_item->asDeleteAction();
+
+You can add a folder list directly to a sidebar without a header::
+
+  $folder_list = $sidebar->addFolderList($name);
+
+Sidebars can have an action bar at the bottom with one or two buttons::
+
+  $sidebar->addActionBar()
+    ->withLeftButton(
+      $left_button_text,
+      $left_button_url
+    )->withRightButton(
+      $right_button_text,
+      $right_button_url
+    );
 
 Complete Example
 ----------------
@@ -125,6 +140,21 @@ CP/Sidebar Methods
   :type $url: CP/URL or string
   :returns: A new Header object.
   :rtype: Header
+
+.. method:: addFolderList($name)
+
+  Adds a folder list to the sidebar
+
+  :param string $name: The name of the folder list
+  :returns: A new FolderList object
+  :rtype: FolderList
+
+.. method:: addActionBar()
+
+  Adds an action bar to the bottom of the sidebar
+
+  :returns: A new ActionBar object
+  :rtype: ActionBar
 
 Header Methods
 --------------
@@ -367,3 +397,30 @@ FolderItem Methods
   :param string $val: The value to place in the data attribute for use when removing an item
   :returns: $this
   :rtype: FolderItem
+
+ActionBar Methods
+-----------------
+
+.. class:: ActionBar
+
+.. method:: withLeftButton($text, $url, $rel = NULL)
+
+  Sets the button that appears on the left side of the bar.
+
+  :param string $text: The text of the item
+  :param $url: A CP\URL object or string containing the URL for the item.
+  :param string $rel: Optional string to set on the ``rel=`` attribute of the button.
+  :type $url: CP/URL or string
+  :returns: $this
+  :rtype: ActionBar
+
+.. method:: withRightButton($text, $url, $rel = NULL)
+
+  Sets the button that appears on the right side of the bar.
+
+  :param string $text: The text of the item
+  :param $url: A CP\URL object or string containing the URL for the item.
+  :param string $rel: Optional string to set on the ``rel=`` attribute of the button.
+  :type $url: CP/URL or string
+  :returns: $this
+  :rtype: ActionBar

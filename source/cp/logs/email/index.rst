@@ -3,7 +3,7 @@ Email Logs
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Logs --> Email`
+**Control Panel Location:** :menuselection:`Developer --> Logs --> Email`
 
 .. Overview
 

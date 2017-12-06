@@ -3,7 +3,7 @@ Communicate
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> Communicate`
+**Control Panel Location:** :menuselection:`Developer --> Utilities --> Communicate`
 
 .. Overview
 

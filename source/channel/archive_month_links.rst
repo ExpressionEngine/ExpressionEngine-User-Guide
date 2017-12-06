@@ -90,7 +90,7 @@ status=
 	status="open"
 
 You may restrict to entries with a particular :doc:`status
-</cp/channel/status/index>`. The two statuses "open" and "closed" are
+</cp/channel/tab-statuses>`. The two statuses "open" and "closed" are
 default statuses that are always available, so you can always specify
 those if needed. You can choose multiple statuses using a pipe::
 

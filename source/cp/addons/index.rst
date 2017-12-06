@@ -3,7 +3,7 @@ Add-On Manager
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Add-On Manager`
+**Control Panel Location:** :menuselection:`Developer --> Add-Ons`
 
 .. Overview
 
@@ -24,7 +24,7 @@ install an extension you must first place the add-on package in your
 add-on will automatically be available for you to install.
 
 .. note:: Add-ons might require other tasks to function correct, so
-	make sure to follow any instructions included with the add-on.
+    make sure to follow any instructions included with the add-on.
 
 .. Permissions
 
@@ -43,11 +43,6 @@ Actions
   :depth: 1
 
 .. Each Action
-
-Search
-~~~~~~
-
-This will search add-ons by name respecting the current filters.
 
 Manage
 ~~~~~~

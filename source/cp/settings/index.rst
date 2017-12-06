@@ -27,19 +27,19 @@ Contents
   - :doc:`buttons/index`
   - :doc:`template`
   - :doc:`hit-tracking`
-  - :doc:`/add-ons/pages/control_panel/index`
-  - :doc:`word-censor`
+  - :doc:`Pages Settings </add-ons/pages/control_panel/index>`
+  - :doc:`Word Censoring <word-censor>`
   - :doc:`menu/index`
 
 - :doc:`members`
 
-  - :doc:`messages`
-  - :doc:`avatars`
+  - :doc:`Messages <messages>`
+  - :doc:`Avatars <avatars>`
 
 - :doc:`security-privacy`
 
   - :doc:`throttling`
-  - :doc:`captcha`
+  - :doc:`Captcha <captcha>`
 
 .. toctree::
   :glob:

@@ -298,14 +298,6 @@ This can be useful for creating links to the commenter's member profile::
 
 	<a href="http://example.com/index.php/member/{author_id}/">{name}</a>
 
-aol\_im
--------
-
-::
-
-	{aol_im}
-
-The author's AOL IM account name
 
 avatar\_image\_height
 ---------------------
@@ -401,7 +393,7 @@ comment\_auto\_path
 	{comment_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL** preference
-under :menuselection:`Developer Tools --> Channel Manager --> Settings`. No
+under :menuselection:`Developer --> Channels` in the channel's **Settings** tab. No
 entry id, URL Title, or other information is included; this is simply the exact
 URL from the preference.
 
@@ -424,7 +416,7 @@ comment\_entry\_id\_auto\_path
 	{comment_entry_id_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL** preference
-under :menuselection:`Developer Tools --> Channel Manager --> Settings`. The ID
+under :menuselection:`Developer --> Channels` in the channel's **Settings** tab. The ID
 number of the entry will be automatically added. For example, this::
 
 	<a href="{comment_entry_id_auto_path}">my entry</a>
@@ -459,7 +451,7 @@ comment\_url\_title\_auto\_path
 	{comment_url_title_auto_path}
 
 This variable is replaced by the URL set in the **Comment Page URL** preference
-under :menuselection:`Developer Tools --> Channel Manager --> Settings`. The
+under :menuselection:`Developer --> Channels` in the channel's **Settings** tab. The
 URL Title of the entry will be automatically added. For example, this::
 
 	<a href="{comment_url_title_auto_path}">my entry</a>
@@ -559,25 +551,7 @@ The date of the comment but **not** localized for the user. See
 :doc:`Date Variable Formatting </templates/date_variable_formatting>`
 for more information.
 
-icq
----
-
-::
-
-	{icq}
-
-The author's ICQ IM user identification number
-
-interests
----------
-
-::
-
-	{interests}
-
-The author's "interests" as entered in their profile
-
-ip\_address
+ip_address
 -----------
 
 ::
@@ -618,24 +592,6 @@ Template\_Group/Template that you use to display search results. For
 example::
 
 	<a href="{member_search_path='search/results'}">View entries by this member</a>
-
-msn\_im
--------
-
-::
-
-	{msn_im}
-
-The author's MSN IM account name
-
-occupation
-----------
-
-::
-
-	{occupation}
-
-The author's occupation as entered in their profile
 
 name
 ----
@@ -810,53 +766,6 @@ total\_comments
 
 The total number of comments for this tag on all pages.
 
-url
----
-
-::
-
-	{url}
-
-The author's raw URL, if it exists
-
-url\_as\_author
----------------
-
-::
-
-	{url_as_author}
-
-Hyperlink pointing to the URL (if it exists) with the author name as the
-link title. If the URL does not exist simply the name is returned.
-
-url\_or\_email
---------------
-
-::
-
-	{url_or_email}
-
-URL if it exists, otherwise the email address
-
-url\_or\_email\_as\_author
---------------------------
-
-::
-
-	{url_or_email_as_author}
-
-Hyperlink or email link as author screen\_name (or username if they
-haven't specified a screen name)
-
-url\_or\_email\_as\_link
-------------------------
-
-::
-
-	{url_or_email_as_link}
-
-Same as above only it will display the URL or email address as a link
-
 url\_title\_path
 ----------------
 
@@ -892,14 +801,6 @@ channel\_id
 
 The ID number of the actual channel
 
-yahoo\_im
----------
-
-::
-
-	{yahoo_im}
-
-The author's Yahoo IM account name
 
 Custom Member Fields
 ====================

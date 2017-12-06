@@ -3,7 +3,7 @@ Member Profile Templates
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Template Manager --> Members`
+**Control Panel Location:** :menuselection:`Developer --> Template Manager --> Members`
 
 .. Overview
 

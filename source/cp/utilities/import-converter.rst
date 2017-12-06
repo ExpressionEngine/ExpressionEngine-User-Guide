@@ -3,7 +3,7 @@ Import File Converter
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> File Converter`
+**Control Panel Location:** :menuselection:`Developer --> Utilities --> File Converter`
 
 .. Overview
 

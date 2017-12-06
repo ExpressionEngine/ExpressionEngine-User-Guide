@@ -1,9 +1,9 @@
-Banned Members
-==============
+Ban Settings
+============
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Members --> Manage Bans`
+**Control Panel Location:** :menuselection:`Members --> Ban Settings`
 
 .. Overview
 
@@ -31,38 +31,6 @@ Actions
 
 .. include:: /cp/members/_header.rst
 
-Username Links
-~~~~~~~~~~~~~~
-
-This will take you to the member's :doc:`profile <profile/index>`.
-
-Username Email Links
-~~~~~~~~~~~~~~~~~~~~
-
-This will allow you to email the member using your default mail client.
-
-Manage
-~~~~~~
-
-The icons in the manage column perform actions on the member in its row.
-
-Edit
-^^^^
-
-This will take you to the member's :doc:`profile <profile/index>`.
-
-Bulk Actions
-~~~~~~~~~~~~
-
-The checkbox in the right-most column of the table selects a button for a bulk
-action. When at least one checkbox is checked the bulk action dropdown menu and
-submit button will be made available in the lower righthand corner of the table.
-
-Remove
-^^^^^^
-
-The selected members will be removed. Removing a member will cause a
-confirmation modal to appear that will summarize the action.
 
 Fields
 ------

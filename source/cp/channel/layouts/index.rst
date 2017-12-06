@@ -3,7 +3,7 @@ Form Layouts
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> layouts`
+**Control Panel Location:** :menuselection:`Developer --> Channels --> Layouts`
 
 .. Overview
 
@@ -28,8 +28,6 @@ Actions
   :depth: 1
 
 .. Each Action
-
-.. include:: /cp/channel/_header.rst
 
 Create New
 ~~~~~~~~~~

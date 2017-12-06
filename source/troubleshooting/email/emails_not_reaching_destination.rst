@@ -12,7 +12,7 @@ Troubleshooting
    with this requirement.)
 #. Try a different Email Protocol.
 #. Attempt to send an email via
-   :menuselection:`Developer Tools --> Utilities --> Communicate`. If that
+   :menuselection:`Developer --> Utilities --> Communicate`. If that
    fails it will output an error that will assist with troubleshooting the
    problem.
 #. If no error message is received it means that EE is successfully opening a

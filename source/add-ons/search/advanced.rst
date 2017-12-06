@@ -13,16 +13,16 @@ form that will allow your users to make "power searches" to find the
 information they need. Example::
 
 	{exp:search:advanced_form result_page="search/results"}
-	
+
 		<table cellpadding='4' cellspacing='6' border='0' width='100%'>
 		<tr>
 		<td>
-		
+
 		<fieldset class="fieldset">
 			<legend>{lang:search_by_keyword}</legend>
-		
+
 			<input type="text" class="input" maxlength="100" size="40" name="keywords" style="width:100%;" />
-		
+
 			<div class="default">
 				<select name="search_in">
 					<option value="titles" selected="selected">{lang:search_in_titles}</option>
@@ -30,7 +30,7 @@ information they need. Example::
 					<option value="everywhere" >{lang:search_everywhere}</option>
 				</select>
 			</div>
-		
+
 			<div class="default">
 				<select name="where">
 					<option value="exact" selected="selected">{lang:exact_phrase_match}</option>
@@ -39,57 +39,57 @@ information they need. Example::
 					<option value="word" >{lang:search_exact_word}</option>
 				</select>
 			</div>
-		
+
 		</fieldset>
-		
+
 		</td><td>
-		
+
 		<fieldset class="fieldset">
 			<legend>{lang:search_by_member_name}</legend>
-		
+
 			<input type="text" class="input" maxlength="100" size="40" name="member_name" style="width:100%;" />
 			<div class="default"><input type="checkbox" class="checkbox" name="exact_match" value="y"  /> {lang:exact_name_match}</div>
-		
+
 		</fieldset>
-		
+
 		</td>
 		</tr>
 		</table>
-		
-		<table cellpadding='4' cellspacing='6' border='0' width='100%'>    
+
+		<table cellpadding='4' cellspacing='6' border='0' width='100%'>
 		<tr>
 		<td valign="top" width="50%">
-		
+
 		<table cellpadding='0' cellspacing='0' border='0'>
 		<tr>
 		<td valign="top">
-		
+
 		<div class="defaultBold">{lang:channels}</div>
-		
+
 			<select id="channel_id" name='channel_id[]' class='multiselect' size='12' multiple='multiple' onchange='changemenu(this.selectedIndex);'>
 				{channel_names}
 			</select>
-		
+
 		</td>
 		<td valign="top" width="16">&nbsp;</td>
 		<td valign="top">
-		
+
 		<div class="defaultBold">{lang:categories}</div>
-		
+
 			<select name='cat_id[]' size='12'  class='multiselect' multiple='multiple'>
 				<option value='all' selected="selected">{lang:any_category}</option>
 			</select>
-		
+
 		</td>
 		</tr>
 		</table>
-		
+
 		</td>
 		<td valign="top" width="50%">
-		
+
 		<fieldset class="fieldset">
 			<legend>{lang:search_entries_from}</legend>
-		
+
 			<select name="date" style="width:150px">
 				<option value="0" selected="selected">{lang:any_date}</option>
 				<option value="1" >{lang:today_and}</option>
@@ -99,41 +99,41 @@ information they need. Example::
 				<option value="180" >{lang:six_months_ago_and}</option>
 				<option value="365" >{lang:one_year_ago_and}</option>
 			</select>
-		
+
 		<div class="default">
 			<input type='radio' name='date_order' value='newer' class='radio' checked="checked" />&nbsp;{lang:newer}
 			<input type='radio' name='date_order' value='older' class='radio' />&nbsp;{lang:older}
 		</div>
-		
+
 		</fieldset>
-		
+
 		<div class="default"><br /></div>
-		
+
 		<fieldset class="fieldset">
 			<legend>{lang:sort_results_by}</legend>
-		
+
 			<select name="orderby">
 				<option value="date" >{lang:date}</option>
 				<option value="title" >{lang:title}</option>
 				<option value="most_comments" >{lang:most_comments}</option>
 				<option value="recent_comment" >{lang:recent_comment}</option>
 			</select>
-		
+
 		<div class="default">
 			<input type='radio' name='sort_order' class="radio" value='desc' checked="checked" /> {lang:descending}
 			<input type='radio' name='sort_order' class="radio" value='asc' /> {lang:ascending}
 		</div>
-		
+
 		</fieldset>
-		
+
 		</td>
 		</tr>
 		</table>
-		
+
 		<div class='searchSubmit'>
 			<input type='submit' value='Search' class='submit' />
 		</div>
-	
+
 	{/exp:search:advanced_form}
 
 
@@ -269,6 +269,24 @@ name="show\_future\_entries" attribute alone. ::
 		<option value="yes">Yes</option>
 	</select>
 
+site=
+~~~~~
+
+::
+
+	site="default_site"
+
+You can include sites other than the current site in search results. Use the
+pipe character to include multiple sites::
+
+	site="default_site|boston|new_york"
+
+Or add the word "not" (followed by a space) to exclude sites::
+
+	site="not chicago|los_angeles"
+
+.. note:: The site parameter affects the sites that the search is performed on, but does not affect the form data such as channels and categories in the select fields.
+
 status=
 ~~~~~~~
 
@@ -277,7 +295,7 @@ status=
 	status="open"
 
 You may restrict the results to a particular :doc:`status
-</cp/channel/status/index>`. You can choose multiple statuses using a
+</cp/channel/tab-statuses>`. You can choose multiple statuses using a
 pipe::
 
 	status="draft|reviewed|published"

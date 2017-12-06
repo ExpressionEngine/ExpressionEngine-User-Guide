@@ -3,7 +3,7 @@ Create/Edit Template Group
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Template Manager --> New/Edit`
+**Control Panel Location:** :menuselection:`Developer --> Template Manager --> New/Edit`
 
 .. Overview
 

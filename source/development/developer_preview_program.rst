@@ -40,7 +40,7 @@ How to Join
 -----------
 
 In order to join the program you must have a publicly-available add-on
-and have at least one ExpressionEngine license in your account. If you
+and have at least one ExpressionEngine 2 license in your account. If you
 are interested in joining the Developer Preview Program, please send an
 email to `team@ellislab.com`_ and include your EllisLab.com username and
 a link to your publicly-available add-ons in your request.
@@ -108,6 +108,7 @@ and encourage them to join!
 - Derek Hogue
 - Digital Surgeons
 - Dom Stubbs
+- Doug Black, Jr. (American Bible Society)
 - Doug Thwaites
 - Douglas Green
 - Eli Van Zoeren
@@ -132,13 +133,11 @@ and encourage them to join!
 - James Smith
 - Jamie Pittock
 - Jamie Taylor (Percipio)
-- Jan van Lysebettens
 - Jason Boothman (Reusser Design)
 - Jason Siffring (Surprise Highway)
 - Jelle de Jong
 - Jeremy Gimbel
 - Jeremy Worboys
-- Jeroen Dewaele (Bits of Love)
 - Jerry Price
 - Jesse Schutt
 - Jimmy Fursman (Mercutio Consulting)
@@ -159,6 +158,7 @@ and encourage them to join!
 - Laisvunas Sopauskas
 - Lance Johnson (Green Egg Media)
 - Leevi Graham
+- Levi Durfee (Bulldog Creative Services)
 - Leon Dijk
 - Lodewijk
 - Louis Dekeister (Hop Studios)
@@ -217,6 +217,7 @@ and encourage them to join!
 - Steven Peercy
 - Strukt
 - Susan Snipes (Q Digital Studio)
+- Tad Ward (Blue Fish)
 - Taylor Daughtry (Caddis)
 - TJ Draper
 - Tom Jaeger (EE Harbor)

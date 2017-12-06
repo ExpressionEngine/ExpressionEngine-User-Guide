@@ -69,12 +69,6 @@ options are:
 
 .. _cookie-domain-label:
 
-Cookie Settings
-~~~~~~~~~~~~~~~
-Cookie settings apply to all native ExpressionEngine cookies and all third party add-ons following recommended standards. 
-For added security for addons that use PHP sessions, they are also used to set PHP 
-`session parameters <http://php.net/manual/en/function.session-set-cookie-params.php>`_.
-
 Domain
 ~~~~~~
 
@@ -126,8 +120,6 @@ by the browser if the URL begins with ``http://example.com/blog/``. This
 can be useful if you have ExpressionEngine installed in a sub-directory
 and want to ensure that only that particular installation has access to
 the cookies it sets.
-
-By default, the cookie path is set to ``/``, so cookies will be available within the entire domain.
 
 .. _cookie-prefix-label:
 

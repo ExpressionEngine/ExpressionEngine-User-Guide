@@ -2,126 +2,122 @@
 System Requirements
 ###################
 
-*******************
-Server Requirements
-*******************
+**For the best experience**, ExpressionEngine requires:
 
-- `PHP <http://www.php.net/>`_ 5.3.10 or newer, compiled with the
-  `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_ library
+- `PHP <http://www.php.net/>`_ 7 or newer, running with `PHP-FPM <http://php.net/manual/en/install.fpm.php>`_
+- `MySQL <http://www.mysql.com/>`_ 5.6 or newer **OR** `Percona <https://www.percona.com/software/mysql-database/percona-server>`_ 5.6 or newer
 
-  .. note:: PHP 5.3.10 can also be read as five-point-three-point-*ten*.
-    That means 5.3.10 is **greater than** 5.3.1, 5.3.2, 5.3.3, and all
-    the way up to 5.3.9.
+.. _server-wizard:
 
-- `MySQL <http://www.mysql.com/>`_ 5.0.3 or newer
-- At least 32 MB memory allocated to PHP
-- At least 10 MB of available disk space for the ExpressionEngine
-  software and modules
-- At least 2 MB of database space
-
-  .. note:: Disk space usage and the database size will increase as
-     content is added.
-
-- The MySQL user connecting to the database must have the following
-  privileges:
-
-  - ``SELECT``
-  - ``INSERT``
-  - ``UPDATE``
-  - ``DELETE``
-  - ``CREATE``
-  - ``INDEX``
-  - ``ALTER``
-  - ``DROP``
-
-- The `File Information (fileinfo)
-  <http://php.net/manual/en/book.fileinfo.php>`_ PHP extension
-
-.. note:: If you're on MediaTemple you will need `to create a phprc file <http://wiki.dreamhost.com/PHP.ini#How_to_add_a_phprc_file>`_ that contains the following::
-
-    extension = fileinfo.so
-
-  .. _server-wizard:
-
+***************************
 Server Compatibility Wizard
-===========================
+***************************
 
 If you're not sure whether your server meets the minimum requirements,
 the server wizard will run some tests and give you an answer.
 
--  `Download <https://ellislab.com/asset/file/ee_server_wizard.zip>`_
-   and unzip the archive.
+-  `Download <https://ellislab.com/asset/file/ee_server_wizard.zip>`_ and unzip the archive.
 -  Upload the folder to your server.
--  Point your web browser to the folder. For example:
-   ``http://example.com/ee_wizard``
-
+-  Point your web browser to the folder. For example: ``http://example.com/ee_wizard``
 
 ***********************
-CP Browser Requirements
+Okay, The Bare Minimums
 ***********************
 
-ExpressionEngine's Control Panel is tested extensively with the
-final-release versions of the web browsers listed here. Please note that
-these are the minimum browser requirements necessary to use the Control
-Panel. They will not apply to your site's front-end pages.
+If you are stuck in an older environment, ExpressionEngine *can* run on PHP 5.4.0+ with 32M of memory, and MySQL 5.5.3+. That said, running older versions not only hurts performance—increasing the cost of your website—but also puts your site **at risk of security vulnerabilities**. The PHP Group `stopped providing security patches <http://php.net/eol.php>`_ for PHP 5.5 on July 21, 2016, and even 5.6 only has security support `until December 31, 2018 <http://php.net/supported-versions.php>`_. Oracle will also cease providing security support for MySQL 5.5 at the same time.
 
-- Internet Explorer 8 and above
-- Firefox 13
-- Safari 5.1
-- Chrome 19
-- Opera 11.64
+Why not save yourself the worry and hassle, enjoy a faster and more secure site that costs less to maintain, and upgrade now? Here's an email you can send to your host if they need a little nudge:
 
-.. note:: JavaScript must be enabled to use the Control Panel.
+.. code-block:: text
 
+  Hey there!
 
-*********************
-Optional Requirements
-*********************
+  I'm running the PHP/MySQL based content management system ExpressionEngine, and would like to make sure it's speedy, secure, and making the most efficient use of the resources available on my server.
 
-Spell Check
-===========
+  Could I speak with someone about moving to an environment that has PHP 7+ and MySQL 5.6+? If they are available, I'd love to use PHP-FPM to implement PHP, and Percona as a drop-in replacement for MySQL, too.
 
-To use the spell check feature, your server must have PHP compiled with
-`pspell <http://us2.php.net/pspell>`_ support or be able to contact
-remote servers though PHP. If you are unsure if your server is set up
-for this, ask your web host or server admin to check for you.
+  Thanks!
 
-Multibyte Support
-=================
+**********************************
+Control Panel Browser Requirements
+**********************************
 
-For full support of multibyte encodings, ask your web host or server
-admin to set ``mbstring.func_overload`` to ``6`` in your server
-configuration by editing :file:`php.ini` as shown below::
+ExpressionEngine's Control Panel targets compatibility with the final-release versions of the web browsers listed here, so it's important to keep your browser up to date. These requirements do not apply to your website, which **you are 100% in control of**, just ExpressionEngine's control panel.
 
-	; overload(replace) single byte functions by mbstring functions.
-	; mail(), ereg(), etc are overloaded by mb_send_mail(), mb_ereg(),
-	; etc. Possible values are 0,1,2,4 or combination of them.
-	; For example, 7 for overload everything.
-	; 0: No overload
-	; 1: Overload mail() function
-	; 2: Overload str*() functions
-	; 4: Overload ereg*() functions
-	mbstring.func_overload = 6
+- Chrome
+- Safari
+- Firefox
+- Opera
+- Microsoft Edge
+- Internet Explorer 10+
 
-*****
-Notes
-*****
+.. note:: In all cases, JavaScript must be enabled to use the Control Panel.
+
+*****************
+Details and Notes
+*****************
+
+You can safely ignore the rest of this page unless you are experiencing problems, or are a sysadmin setting up a custom environment. All of the following are readily available in most managed environments.
+
+PHP Extensions Required
+-----------------------
+
+Though the following are available in PHP by default, some hosts may have them disabled until you ask for them.
+
+- `GD (or GD 2) <http://www.php.net/manual/en/ref.image.php>`_ library
+- The `File Information (fileinfo) <http://php.net/manual/en/book.fileinfo.php>`_ PHP extension
+
+.. note:: If you're on MediaTemple you will need `to create a phprc file <http://wiki.dreamhost.com/PHP.ini#How_to_add_a_phprc_file>`_ that contains the following
+
+  ::
+
+    extension = fileinfo.so
+
+PHP Extensions Recommended
+--------------------------
+
+These are recommended, but not required.
+
+- The `Internationalization <http://php.net/manual/en/book.intl.php>`_ extension, for full functionality of :doc:`variable modifiers </templates/variable_modifiers>`
+- Multibyte String (`mbstring <http://php.net/manual/en/mbstring.installation.php>`_) handling
+
+For full support of multibyte encodings, ask your web host or server admin to set ``mbstring.func_overload`` to ``6`` in your server configuration by editing :file:`php.ini` as shown below::
+
+  ; overload(replace) single byte functions by mbstring functions.
+  ; mail(), ereg(), etc are overloaded by mb_send_mail(), mb_ereg(),
+  ; etc. Possible values are 0,1,2,4 or combination of them.
+  ; For example, 7 for overload everything.
+  ; 0: No overload
+  ; 1: Overload mail() function
+  ; 2: Overload str*() functions
+  ; 4: Overload ereg*() functions
+  mbstring.func_overload = 6
+
+MySQL Privileges
+----------------
+The MySQL user connecting to the database must have the following privileges:
+
+- ``SELECT``
+- ``INSERT``
+- ``UPDATE``
+- ``DELETE``
+- ``CREATE``
+- ``INDEX``
+- ``ALTER``
+- ``DROP``
 
 Apache Server
-=============
+-------------
 
-If you are hosted on an Apache server, the ``AcceptPathInfo`` option
-needs to be enabled for URLs to work properly. Most servers are
-configured this way by default, but if yours is not, you have a few
-options:
+If you are hosted on an Apache server, the ``AcceptPathInfo`` option needs to be enabled for URLs to work properly. Most servers are configured this way by default, but if yours is not, you have a few options:
 
 - Include ``AcceptPathInfo On`` in your ``.htaccess`` file to enable it
 - Ask your web host or server admin to enable the option
 - Set your site's URLs to use :ref:`query strings <query-strings>`
 
 URL Segment Support
-===================
+-------------------
 
-If the :ref:`Server Compatibility Wizard <server-wizard>` lists URL
-Segment Support as *Unsupported*, you will need to set your site's URLs
-to use :ref:`query strings <query-strings>`.
+If the :ref:`Server Compatibility Wizard <server-wizard>` lists URL Segment Support as *Unsupported*, you will need to set your site's URLs to use :ref:`query strings <query-strings>`.
+
+

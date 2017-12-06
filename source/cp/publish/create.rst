@@ -12,7 +12,7 @@ publishing new Entries to your Channels. If you have more than one Channel,
 moving your cursor over the Publish menu will show all of your Channels and
 allow you to select one.
 
-.. tip:: site builders can customize the display of the Publish Page on a per
+.. tip:: Site builders can customize the display of the Publish Page on a per
    Channel bases by creating a custom layout.  Just go to the :doc:`Channel
    manager <../channel/index>` and click 'layouts' to access the :doc:`Form
    layout  <../channel/layouts/index>`.
@@ -41,7 +41,7 @@ This field contains the title of your channel entry. Titles can be up to
 
 .. tip:: For those times where 'Title' isn't really the appropriate title, you
    can set a custom descriptive name for this field on a per channel basis.
-   Just :doc:`edit the channel settings <../channel/form>` and specify a **Title field label**.
+   Just :doc:`edit the channel settings <../channel/channel-form>` and specify a **Title field label**.
 
 URL Title
 ~~~~~~~~~
@@ -142,8 +142,8 @@ Channel
 
 This option is only available when *editing* an entry.
 
-This drop-down list will contain all channels that share the same Field
-Group, Category Group, and Status Group with the current channel for the
+This drop-down list will contain all channels that share the same Fields, Field
+Groups, Category Groups, and Statuses with the current channel for the
 entry. Using this option, you can move an entry from one channel to
 another channel that is set up similarly.
 
@@ -153,7 +153,7 @@ Status
 There are two primary statuses that are always available: Open and
 Closed. Typically, "open" entries are viewable at your site, and
 "closed" entries are not. You can add additional statuses for editorial
-workflow in your :doc:`/cp/channel/status/index` page, and opt to
+workflow in your :doc:`/cp/channel/tab-statuses` page, and opt to
 display or suppress entries assigned to these by modifying the "status"
 parameter found in the various "Channel" Tags in your Templates.
 

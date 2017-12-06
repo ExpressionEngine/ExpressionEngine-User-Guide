@@ -3,7 +3,7 @@ Template Routes
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Template Routes`
+**Control Panel Location:** :menuselection:`Developer --> Template Routes`
 
 .. Overview
 

@@ -9,3 +9,5 @@ Thumbs.db
 
 #build dir shouldn't be revisioned
 build/
+
+node_modules/

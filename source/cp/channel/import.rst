@@ -6,7 +6,7 @@ Channel Set Import
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Channel Manager --> Import Channel`
+**Control Panel Location:** :menuselection:`Developer --> Channel Manager --> Import Channel`
 
 .. Permissions
 

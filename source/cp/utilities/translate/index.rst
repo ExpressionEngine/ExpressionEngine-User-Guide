@@ -3,7 +3,7 @@ Language Files
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> CP Translate`
+**Control Panel Location:** :menuselection:`Developer --> Utilities --> CP Translate`
 
 .. Overview
 
