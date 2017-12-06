@@ -14,6 +14,8 @@ The site="" parameter is available to the following:
 -  Channel Module: Every single tag.
 -  Comment Module: Every single tag.
 -  RSS Module
+-  Search Module
+-  Statistics Module
 
 When you use the site="" parameter it will exclude all other Sites. If
 the site="" parameter is not specified then the current site is used.

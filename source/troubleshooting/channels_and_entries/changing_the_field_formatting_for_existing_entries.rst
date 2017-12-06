@@ -7,8 +7,7 @@ Troubleshooting
 ---------------
 
 Changing the default formatting options for a channel field at
-:menuselection:`Developer Tools --> Channel Manager --> Category Groups --> Category Fields`
-will only affect future entries.
+:menuselection:`Developer --> Categories` will only affect future entries.
 
 If the new formatting is to be applied to existing fields as well, care
 must be taken to select **Update all existing weblog entries with your

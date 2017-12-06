@@ -3,7 +3,7 @@ SQL Manager
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> SQL Manager`
+**Control Panel Location:** :menuselection:`Developer --> Utilities --> SQL Manager`
 
 .. Overview
 

@@ -48,18 +48,24 @@ be applied by using the ``orFilter()`` method::
 Available filters
 ~~~~~~~~~~~~~~~~~
 
-=============   =========================  =======================================
-Operator        Constraint                 Example
-=============   =========================  =======================================
-``==``          Equal                      ``filter('id', '==', 5)``
-``!=``          Not equal                  ``filter('id', '!=', 5)``
-``<``           Less than                  ``filter('id', '<' 5)``
-``>``           Greater than               ``filter('id', '>', 5)``
-``<=``          Less than or equals        ``filter('id', '<=', 5)``
-``>=``          Greater than or equals     ``filter('id', '>=', 5)``
-``IN``          In list of options         ``filter('id', 'IN', array(5, 8))``
-``NOT IN``      Not in list of options     ``filter('id', 'NOT IN', array(5, 8))``
-=============   =========================  =======================================
+==============   ===========================   ===========================================
+Operator         Constraint                    Example
+==============   ===========================   ===========================================
+``==``           Equal                         ``filter('id', '==', 5)``
+``!=``           Not equal                     ``filter('id', '!=', 5)``
+``<``            Less than                     ``filter('id', '<' 5)``
+``>``            Greater than                  ``filter('id', '>', 5)``
+``<=``           Less than or equals           ``filter('id', '<=', 5)``
+``>=``           Greater than or equals        ``filter('id', '>=', 5)``
+``IN``           In list of options            ``filter('id', 'IN', array(5, 8))``
+``NOT IN``       Not in list of options        ``filter('id', 'NOT IN', array(5, 8))``
+``LIKE``         Matches wildcard string       ``filter('title', 'LIKE', 'hello%')``
+``NOT LIKE``     No wildcard matches           ``filter('title', 'NOT LIKE', 'hello%')``
+``REGEXP``       Matches regular expression    ``filter('title', 'REGEXP', '^w')``
+``NOT REGEXP``   No regular expression match   ``filter('title', 'NOT REGEXP', 'hello%')``
+``IS``           Is ``NULL``                   ``filter('title', 'IS', NULL)``
+``IS NOT``       Is not ``NULL``               ``filter('title', 'IS NOT', NULL)``
+==============   ===========================   ===========================================
 
 Searching
 ---------

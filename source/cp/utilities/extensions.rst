@@ -3,7 +3,7 @@ Manage Add-on Extensions
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> Debug Extensions`
+**Control Panel Location:** :menuselection:`Developer --> Utilities --> Debug Extensions`
 
 .. Overview
 

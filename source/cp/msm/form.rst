@@ -3,7 +3,7 @@ Create/Edit Sites
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Site Manager --> New/Edit`
+**Control Panel Location:** :menuselection:`Developer --> Site Manager --> New/Edit`
 
 .. Overview
 

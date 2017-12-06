@@ -3,7 +3,7 @@ Developer Logs
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Logs --> Developer`
+**Control Panel Location:** :menuselection:`Developer --> Logs --> Developer`
 
 .. Overview
 

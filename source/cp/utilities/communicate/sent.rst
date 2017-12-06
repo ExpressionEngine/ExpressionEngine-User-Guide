@@ -3,7 +3,7 @@ Sent Emails
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> Sent`
+**Control Panel Location:** :menuselection:`Developer --> Utilities --> Sent`
 
 .. Overview
 

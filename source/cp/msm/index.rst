@@ -3,7 +3,7 @@ Site Manager
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Site Manager`
+**Control Panel Location:** :menuselection:`Developer --> Site Manager`
 
 .. Overview
 
@@ -84,12 +84,6 @@ Settings
 ~~~~~~~~
 
 This will take you to :doc:`/cp/settings/general`.
-
-Search
-~~~~~~
-
-This will search sites by name and short name, respecting the current
-filters.
 
 Sidebar
 ~~~~~~~

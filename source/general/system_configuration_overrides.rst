@@ -661,7 +661,7 @@ $config['banned_emails'] = 'user@example.com|johndoe@example.com|*@spammydomain.
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Manage Bans`:
+**Also found in CP:** :menuselection:`Members --> Ban Settings`:
 :ref:`Banned Email Addresses <member-banned-email-label>`
 
 
@@ -683,7 +683,7 @@ $config['banned_ips'] = '123.456.789.1|123.321.*';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Manage Bans`:
+**Also found in CP:** :menuselection:`Members --> Ban Settings`:
 :ref:`Banned IP Address <member-banned-ip-label>`
 
 
@@ -705,7 +705,7 @@ $config['banned_screen_names'] = 'Garfield|Snoopy|Hobbes';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Manage Bans`:
+**Also found in CP:** :menuselection:`Members --> Ban Settings`:
 :ref:`Restricted Screen Names <member-banned-screename-label>`
 
 
@@ -727,7 +727,7 @@ $config['banned_usernames'] = 'garfield|snoopy|hobbes';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Members --> Manage Bans`:
+**Also found in CP:** :menuselection:`Members --> Ban Settings`:
 :ref:`Restricted Usernames <member-banned-username-label>`
 
 
@@ -1027,6 +1027,23 @@ Example Usage::
 
 $config['code_block_pre'] = '<div class="codeblock">';
 $config['code_block_post'] = '</div>';
+
+.. _codemirror_height:
+
+codemirror_height
+-----------------
+
+Set the height of any CodeMirror textareas in the control panel, such as the Template Editor.
+
+===================== ===========
+Value                 Description
+===================== ===========
+``codemirror_height`` Height to use, in CSS units.
+===================== ===========
+
+Example Usage::
+
+$config['codemirror_height'] = '18em';
 
 comment_edit_time_limit
 -----------------------
@@ -1782,8 +1799,7 @@ $config['enable_censoring'] = 'y';
 enable_emoticons
 ----------------
 
-If enabled, smileys entered as text will be displayed with graphic
-representations.
+If enabled, smileys entered as text will be replaced by emoji.
 
 
 ========== ========
@@ -1799,7 +1815,7 @@ $config['enable_emoticons'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Settings --> Content & Design`: :ref:`Display Smileys
+**Also found in CP:** :menuselection:`Settings --> Content & Design`: :ref:`Enable emoticons?
 <emoticon-display-smileys-label>`
 
 
@@ -2132,7 +2148,7 @@ $config['forum_trigger'] = 'eerox';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager --> Discussion
+**Also found in CP:** :menuselection:`Developer --> Add-Ons --> Discussion
 Forum Settings --> Edit`: :ref:`Forum Triggering Word
 <forum-forum_triggering_word>`
 
@@ -3571,7 +3587,7 @@ $config['rte_default_toolset_id'] = '2';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager --> Rich
+**Also found in CP:** :menuselection:`Developer --> Add-Ons --> Rich
 Text Editor Settings`: :ref:`Default Toolset
 <global-channel-category-url-indicator-label>`
 
@@ -3596,10 +3612,11 @@ $config['rte_enabled'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager --> Rich
+**Also found in CP:** :menuselection:`Developer --> Add-Ons --> Rich
 Text Editor Settings`: :ref:`Enable Rich Text Editor
 <global-channel-category-url-indicator-label>`
 
+.. _overrides-save-tmpl-files:
 
 save_tmpl_files
 ---------------
@@ -3610,8 +3627,8 @@ Enable the saving of :doc:`templates as files
 ========== ========
 Value      Behavior
 ========== ========
-``y``      Templates are saved as files
-``n``      Templates are not saved as files **(default)**
+``y``      Templates are saved as files **(default)**
+``n``      Templates are not saved as files
 ========== ========
 
 Example Usage::
@@ -3619,10 +3636,6 @@ Example Usage::
 $config['save_tmpl_files'] = 'y';
 
 .. rst-class:: cp-path
-
-**Also found in CP:** :menuselection:`Settings --> Template Settings`: :ref:`Save Templates as Files
-<global-template-save-templates-as-files-label>`
-
 
 .. _save_tmpl_revisions:
 
@@ -3667,7 +3680,7 @@ $config['sc_certificate_id'] = 'SX4DT7FDO1234';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+**Also found in CP:** :menuselection:`Developer --> Add-Ons -->
 Simple Commerce Settings`: :ref:`ID Given to Public Certificate by PayPal
 <sc-certificate-id-label>`
 
@@ -3701,7 +3714,7 @@ $config['sc_encrypt_buttons'] = 'y';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+**Also found in CP:** :menuselection:`Developer --> Add-Ons -->
 Simple Commerce Settings`: :ref:`Encrypt PayPal Buttons and Links?
 <sc-encrypt-buttons-label>`
 
@@ -3724,7 +3737,7 @@ $config['sc_paypal_account'] = 'paypal_email@example.com';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+**Also found in CP:** :menuselection:`Developer --> Add-Ons -->
 Simple Commerce Settings`: :ref:`PayPal Account
 <sc-paypal-account-label>`
 
@@ -3752,7 +3765,7 @@ $config['sc_paypal_certificate'] = "/path/to/paypal_certificate.pem";
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+**Also found in CP:** :menuselection:`Developer --> Add-Ons -->
 Simple Commerce Settings`: :ref:`PayPal Certificate Path
 <sc-paypal-certificate-path-label>`
 
@@ -3779,7 +3792,7 @@ $config['sc_private_key'] = "/path/to/private_key.pem";
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+**Also found in CP:** :menuselection:`Developer --> Add-Ons -->
 Simple Commerce Settings`: :ref:`Private Key Path
 <sc-private-key-path-label>`
 
@@ -3806,7 +3819,7 @@ $config['sc_public_certificate'] = "/path/to/public_certificate.pem";
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+**Also found in CP:** :menuselection:`Developer --> Add-Ons -->
 Simple Commerce Settings`: :ref:`Public Certificate Path
 <sc-public-certificate-path-label>`
 
@@ -3834,7 +3847,7 @@ $config['sc_temp_path'] = "/path/to/tmp";
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Add-On Manager -->
+**Also found in CP:** :menuselection:`Developer --> Add-Ons -->
 Simple Commerce Settings`: :ref:`Temporary Encrypted Files Path
 <sc-temp-path-label>`
 
@@ -4177,7 +4190,7 @@ $assign_to_config['site_name'] = 'domain2_short_name';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Site Manager --> Edit`: :doc:`Site Short Name </cp/msm/form>`
+**Also found in CP:** :menuselection:`Developer --> Site Manager --> Edit`: :doc:`Site Short Name </cp/msm/form>`
 
 
 .. _overrides-site-url:
@@ -4393,7 +4406,7 @@ $assign_to_config['template'] = 'index';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Template Manager --> New/Edit`: Make the index template in
+**Also found in CP:** :menuselection:`Developer --> Template Manager --> New/Edit`: Make the index template in
 this group your site's home page?
 
 
@@ -4425,7 +4438,7 @@ $assign_to_config['template_group'] = 'site_2';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer Tools --> Template Manager --> New/Edit`: Make the index template in
+**Also found in CP:** :menuselection:`Developer --> Template Manager --> New/Edit`: Make the index template in
 this group your site's home page?
 
 

@@ -1,5 +1,5 @@
 #############################
-ExpressionEngine 3 User Guide
+ExpressionEngine 4 User Guide
 #############################
 
 - Introduction
@@ -121,7 +121,6 @@ General Information
 - :doc:`general/bbcode`
 - :doc:`general/date_localization`
 - :doc:`general/languages`
-- :doc:`general/quick_reference`
 - :doc:`general/reserved_words`
 - :doc:`general/system_configuration_overrides`
 - :doc:`general/text_formatting`

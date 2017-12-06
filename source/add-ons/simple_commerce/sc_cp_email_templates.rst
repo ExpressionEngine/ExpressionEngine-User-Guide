@@ -3,7 +3,7 @@ Simple Commerce – Email Templates
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Add-On Manager --> Simple Commerce --> Email Templates`
+**Control Panel Location:** :menuselection:`Developer --> Add-Ons --> Simple Commerce --> Email Templates`
 
 Email templates allow you to create highly customized notification
 templates that you can associate with store items. Email templates can

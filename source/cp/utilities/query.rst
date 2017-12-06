@@ -3,7 +3,7 @@ SQL Query Form
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> Query Form`
+**Control Panel Location:** :menuselection:`Developer --> Utilities --> Query Form`
 
 .. Overview
 

@@ -4,7 +4,7 @@ Moblog Module Control Panel
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Add-On Manager --> Moblog`
+**Control Panel Location:** :menuselection:`Developer --> Add-Ons --> Moblog`
 
 The Moblog Module Control Panel lists your existing Moblogs and allows you
 to edit, delete or perform a check on any of them.
@@ -113,20 +113,20 @@ Moblog template
 Define how the information you submit in your email is
 handled. A simple example::
 
-	{images}<img src="{file}" width="{width}" height="{height}" alt="pic" />{/images}
-	{text}
+    {images}<img src="{file}" width="{width}" height="{height}" alt="pic" />{/images}
+    {text}
 
 A more complex example::
 
-	{field name="body" format="xhtml"} {text} {/field}
-	{field name="body_image" format="none"} {images} <img src="{file}" width="{width}" height="{height}" alt="pic" /> {/images} {/field}
+    {field name="body" format="xhtml"} {text} {/field}
+    {field name="body_image" format="none"} {images} <img src="{file}" width="{width}" height="{height}" alt="pic" /> {/images} {/field}
 
 audio
 ~~~~~
 
 ::
 
-	{audio} <p>Listen to the <a href="{file}">audio</a>!</p> {/audio}
+    {audio} <p>Listen to the <a href="{file}">audio</a>!</p> {/audio}
 
 This tag pair allows you to specify how to process an audio file that's
 attached to the email. The {file} variable inside the tag pair will
@@ -137,7 +137,7 @@ field
 
 ::
 
-	{field name="extended" format="xhtml"} {text} {/field}
+    {field name="extended" format="xhtml"} {text} {/field}
 
 This tag pair allows you to specify into which field you would like the
 contents placed. If you do not specify a field with this variable then
@@ -157,7 +157,7 @@ file
 
 ::
 
-	{audio} <p>Listen to the <a href="{file}">audio</a>!</p> {/audio}
+    {audio} <p>Listen to the <a href="{file}">audio</a>!</p> {/audio}
 
 This variable will be replaced by the URL to the uploaded file.
 
@@ -166,7 +166,7 @@ files
 
 ::
 
-	{files match="movie|files"} <p>View the <a href="{file}">presentation</a>.</p> {/files}
+    {files match="movie|files"} <p>View the <a href="{file}">presentation</a>.</p> {/files}
 
 This tag pair allows you to specify how to process a standard file
 that's attached to the email. The {file} variable inside the tag pair
@@ -185,14 +185,14 @@ are:
 Multiple format types may be specified by separating them with the pipe
 character::
 
-	{files match="audio|files"}
+    {files match="audio|files"}
 
 height
 ~~~~~~
 
 ::
 
-	<img src="{file}" width="{width}" height="{height}" alt="pic" />
+    <img src="{file}" width="{width}" height="{height}" alt="pic" />
 
 The height (in pixels) of the uploaded image.
 
@@ -201,7 +201,7 @@ images
 
 ::
 
-	{images} <img src="{file}" width="{width}" height="{height}" alt="pic" /> {/images}
+    {images} <img src="{file}" width="{width}" height="{height}" alt="pic" /> {/images}
 
 This tag pair allows you to specify how to process an image file that's
 attached to the email. The {file} variable inside the tag pair will
@@ -212,7 +212,7 @@ movie
 
 ::
 
-	{movie} <p>Watch our new <a href="{file}">movie</a> now.</p> {/movie}
+    {movie} <p>Watch our new <a href="{file}">movie</a> now.</p> {/movie}
 
 This tag pair allows you to specify how to process an movie file that's
 attached to the email. The {file} variable inside the tag pair will
@@ -223,7 +223,7 @@ text
 
 ::
 
-	{field name="extended" format="xhtml"} {text} {/field}
+    {field name="extended" format="xhtml"} {text} {/field}
 
 The text content of the email. Typically this will be a description of
 the attached file.
@@ -233,7 +233,7 @@ thumbnail
 
 ::
 
-	{images} <img src="{thumbnail}" width="{thumb_width}" height="{thumb_height}" alt="thumbnail image" /> {/images}
+    {images} <img src="{thumbnail}" width="{thumb_width}" height="{thumb_height}" alt="thumbnail image" /> {/images}
 
 The URL to an automatically-generated thumbnail version of the attached
 image.
@@ -243,7 +243,7 @@ thumb\_height
 
 ::
 
-	{images} <img src="{thumbnail}" width="{thumb_width}" height="{thumb_height}" alt="thumbnail image" /> {/images}
+    {images} <img src="{thumbnail}" width="{thumb_width}" height="{thumb_height}" alt="thumbnail image" /> {/images}
 
 The height (in pixels) of the automatically-generated thumbnail version
 of the attached image.
@@ -253,7 +253,7 @@ thumb\_width
 
 ::
 
-	{images} <img src="{thumbnail}" width="{thumb_width}" height="{thumb_height}" alt="thumbnail image" /> {/images}
+    {images} <img src="{thumbnail}" width="{thumb_width}" height="{thumb_height}" alt="thumbnail image" /> {/images}
 
 The width (in pixels) of the automatically-generated thumbnail version
 of the attached image.
@@ -263,7 +263,7 @@ width
 
 ::
 
-	<img src="{file}" width="{width}" height="{height}" alt="pic" />
+    <img src="{file}" width="{width}" height="{height}" alt="pic" />
 
 The width (in pixels) of the uploaded image.
 

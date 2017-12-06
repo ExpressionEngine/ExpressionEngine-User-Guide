@@ -107,42 +107,7 @@ Hash Algorithm 1 (sha1) hash. `[RFC
 	of encryption, the passwords will not work, and users will need to
 	use the "Forgot Password" link to log in.
 
-Birthday Tag
-------------
 
-The <birthday> tag is an exception to tag and database field name
-matching. While you *can* use <bday\_d>, <bday\_m>, and <bday\_y>, the
-<birthday> tag and its children were created to allow for a more
-semantic member XML file. The <birthday> tag contains no value itself,
-but rather has three child elements.
-
-<month>
-~~~~~~~
-
-The two digit month of the member's birthday. Example: **02**
-
-<day>
-~~~~~
-
-The two digit day of the month of the member's birthday. Example: **19**
-
-<year>
-~~~~~~
-
-The four digit year of the member's birthday. Example: **1977**
-
-For the above examples, a birthday element of a member XML file would
-look like::
-
-	<birthday>             <month>02</month>             <day>19</day>             <year>1977</year>         </birthday>
-
-The example above would be equivalent to:
-
-::
-
-    <bday_m>02</bday_m>
-    <bday_d>19</bday_d>
-    <bday_y>1977</bday_y>
 
 Available Member Data Tags
 --------------------------
@@ -150,30 +115,17 @@ Available Member Data Tags
 -  <accept\_admin\_email>
 -  <accept\_messages>
 -  <accept\_user\_email>
--  <aol\_im>
 -  <authcode>
 -  <avatar\_filename>
 -  <avatar\_height>
 -  <avatar\_width>
--  <bday\_d>
--  <bday\_m>
--  <bday\_y>
--  <birthday>
-
-   -  <day>
-   -  <month>
-   -  <year>
-
--  <bio>
 -  <cp\_theme>
 -  <display\_avatars>
 -  <display\_signatures>
 -  <email>
 -  <forum\_theme>
 -  <group\_id>
--  <icq>
 -  <in\_authorlist>
--  <interests>
 -  <ip\_address>
 -  <join\_date>
 -  <language>
@@ -186,14 +138,11 @@ Available Member Data Tags
 -  <last\_view\_bulletins>
 -  <last\_visit>
 -  <localization\_is\_site\_default>
--  <location>
 -  <member\_id>
--  <msn\_im>
 -  <notepad>
 -  <notepad\_size>
 -  <notify\_by\_default>
 -  <notify\_of\_pm>
--  <occupation>
 -  <password>
 -  <photo\_filename>
 -  <photo\_height>
@@ -219,8 +168,6 @@ Available Member Data Tags
 -  <total\_forum\_topics>
 -  <tracker>
 -  <upload\_id>
--  <url>
 -  <username>
 -  <channel\_id>
--  <yahoo\_im>
 

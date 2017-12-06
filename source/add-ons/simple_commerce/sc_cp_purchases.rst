@@ -3,7 +3,7 @@ Simple Commerce – Managing Store Purchases
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Add-On Manager --> Simple Commerce --> Purchases`
+**Control Panel Location:** :menuselection:`Developer --> Add-Ons --> Simple Commerce --> Purchases`
 
 The Purchases screen gives you at a glance an overview of your
 store purchases, the purchaser, date, and price of purchases. You may

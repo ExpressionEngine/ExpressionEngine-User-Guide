@@ -3,7 +3,7 @@ Member Import
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer Tools --> Utilities --> Member Import`
+**Control Panel Location:** :menuselection:`Developer --> Utilities --> Member Import`
 
 .. Overview
 
@@ -64,3 +64,10 @@ Create custom fields?
 
 When set to yes, import will automatically create custom member fields for any
 data that does not match a default member field.
+
+.. toctree::
+  :glob:
+  :hidden:
+  :titlesonly:
+
+  member-import-xml-format
