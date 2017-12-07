@@ -25,6 +25,8 @@ Working either locally with your backed up files, or on the server (**not recomm
 
 #. Copy :file:`themes/ee/` to :file:`themes/ee/`
 
+#. Copy :file:`system/user/config/license.key` to :file:`system/user/config/license.key`
+
 3. Run The Update Wizard
 ------------------------
 
