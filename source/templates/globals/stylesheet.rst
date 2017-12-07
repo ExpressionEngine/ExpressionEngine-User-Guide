@@ -18,7 +18,7 @@ stylesheet is located::
 
 	<link rel="stylesheet" type="text/css" media="all" href="{stylesheet='channel/channel_css'}" />
 
-In many respects, this variable works much like the {path=''} global
+In many respects, this variable works much like the ``{path=''}`` global
 variable. However, there are some special considerations for the
 stylesheet variable:
 

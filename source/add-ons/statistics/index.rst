@@ -199,8 +199,8 @@ in users::
 	{member_names}
 		<a href="{member_path='member/index'}">{name}</a><br>
 	{/member_names}
-	
-The {member\_path=''} variable allows you to create a link that points
+
+The {member\_path=} variable allows you to create a link that points
 to the member's profile page. The example above illustrates how it can
 be used.
 

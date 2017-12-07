@@ -149,7 +149,7 @@ search\_in=
 
 ::
 
-	search_in="entries" 
+	search_in="entries"
 	search_in="everywhere"
 	search_in="titles"
 
@@ -273,5 +273,5 @@ Variables
 ---------
 
 There are no specific variables associated with the Simple Search Form.
-You may use the :doc:`{path=''} </templates/globals/path>` Global
+You may use the :doc:`{path=} </templates/globals/path>` Global
 Variable to create a link to an Advanced Search Form if you wish.

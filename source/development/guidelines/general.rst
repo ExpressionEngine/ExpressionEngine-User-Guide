@@ -205,8 +205,8 @@ Constants
 ---------
 
 Constants follow the same guidelines as do variables, except constants
-should always be fully uppercase. *Always use ExpressionEngine constants
-when appropriate, i.e. ``LD``, ``RD``, ``PATH_CACHE``, etc.*
+should always be fully uppercase. Always use ExpressionEngine constants
+when appropriate, i.e. ``LD``, ``RD``, ``PATH_CACHE``, etc.
 
 INCORRECT::
 
