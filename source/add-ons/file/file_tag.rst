@@ -632,8 +632,8 @@ category_url_title
 
 This variable displays the URL title of the category
 
-path=''
-~~~~~~~
+path=
+~~~~~
 
 ::
 
