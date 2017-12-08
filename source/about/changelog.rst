@@ -5,6 +5,25 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.0.1
+-------------
+
+Release Date: December 8, 2017
+
+- The thumbnail view of the file picker now defaults to showing 25 at a time.
+- Fixed a bug with ordering channel entries by custom fields.
+- Fixed a bug where some file tags were left unparsed.
+- Fixed a bug where relationshp fields threw errors when sorting by a relationship field.
+- Fixed a bug (#23308) where settings for new channels had the wrong defaults applied, causing some entries to encode their HTML.
+- Fixed a bug (#23307) where adding a field to an existing channel then editing an entry woudln't save the new field data.
+- Fixed a bug where adding a field to an existing channel with a layout wouldn't always let you move that field in the layout.
+- Fixed a bug where pagination forgot your filters in the Field Manager.
+- Fixed a bug (#23313) where resolving a filename conflict on upload didn't work.
+- Fixed a bug (#23303) where there was an HTML encoding issue on the CP Settings member profile page.
+- Fixed a bug (#23309) where a textarea inside a Grid inside a Fluid field with formatting buttons showing would show an error on field render.
+- Fixed a bug (#23312) where there might be an undefined constant error on some environments.
+
+
 Version 4.0.0
 --------------
 
