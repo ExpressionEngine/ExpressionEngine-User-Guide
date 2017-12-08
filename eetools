@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Open a prompt on the Docker container to fiddle
+if [ "$1" == "prompt" ]; then
+	docker run -t -i -p 8080:80 -v $(pwd):/app sphinx /bin/bash
+elif [ "$1" == "createcontainer" ]; then
+	docker build -t sphinx .
+elif [ "$1" == "make" ]; then
+	shift
+	CLEAN=false
+	while getopts ":c" opt; do
+	  case $opt in
+	    c)
+	      CLEAN=true
+	      ;;
+	    \?)
+	      echo "Invalid option: -$OPTARG" >&2
+	      ;;
+	  esac
+	done
+
+	if [ "$CLEAN" == true ]; then
+		rm -rf ./build/*
+	fi
+
+	docker run --rm -it -v $(pwd):/docs/ sphinx make html
+else
+	echo "Usage: ./eetools <target> where <target> is one of:"
+	echo "  createcontainer    to create the Docker container (required first)"
+	echo "  make [-c]          to build the docs, optionally clean to build from scratch"
+	echo "  prompt             to open a prompt on the Docker container"
+fi
+
