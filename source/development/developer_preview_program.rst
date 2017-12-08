@@ -108,6 +108,7 @@ and encourage them to join!
 - Derek Hogue
 - Digital Surgeons
 - Dom Stubbs
+- Dorothy Molloy (Climbing Turn)
 - Doug Black, Jr. (American Bible Society)
 - Doug Thwaites
 - Douglas Green
