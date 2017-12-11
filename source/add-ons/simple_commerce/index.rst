@@ -584,9 +584,7 @@ only accepts encrypted payments. This will make it impossible for people
 to alter the price or information for a purchase unless they obtain your
 public certificate and private key (keep them safe!).
 
-To block unencrypted payments, log in to PayPal and click the Profile
-subtab. Click Website Payment Preferences in the right-hand menu, and
-then select "On" next to "Block Non-encrypted Website Payments".
+To block unencrypted payments, log in to PayPal and navigate to My Selling Tools > Website preferences (under “Selling online” heading) > Encrypted Website Payments, and then select "On" next to "Block Non-encrypted Website Payments".
 
 
 *************
