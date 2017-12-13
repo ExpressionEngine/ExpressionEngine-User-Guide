@@ -18,8 +18,8 @@ ability to create contact forms and tell-a-friend forms.
    :menuselection:`Developer --> Add-Ons`.
 
 .. toctree::
-	:glob:
-	:titlesonly:
-	:hidden:
+  :titlesonly:
+  :hidden:
 
-	*
+  contact_form
+  tellafriend

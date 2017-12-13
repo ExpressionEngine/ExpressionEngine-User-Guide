@@ -166,36 +166,7 @@ its domain, so ExpressionEngine will use the site's webmaster email
 address to get past this restriction while still allowing any replies to
 go to the sender of the email.
 
-return=
-~~~~~~~
-
-::
-
-	return="http://example.com/index.php"
-
-This parameter lets the admin specify to where the user is directed
-after the form is submitted. Upon submission, the user is presented with
-a standard "thank you" message and a link. The return parameter lets the
-location, as well as the text, for the link be specified. If this
-parameter is **not** specified, then the link will point to the page
-they were on prior to arriving at the email form and the text for the
-link will be the Site Name.
-
-The return URL and link text can be specified by separating the two
-pieces of information with the pipe character. If you are only
-specifying the second piece (the link text) then you must preceed it by
-the pipe character. For example, these would all be legitimate examples
-of the parameter::
-
-	return="http://example.com/index.php"
-
-::
-
-	return="http://example.com/index.php|Home Page"
-
-::
-
-	return="|Return to the Entry"
+.. include:: _email_module_return_parameter.rst
 
 status=
 ~~~~~~~
