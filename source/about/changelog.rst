@@ -5,6 +5,28 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.0.2
+-------------
+
+Release Date: December 13, 2017
+
+- Increased security against potential environment information leakage.
+- Adjusted the ``return=`` parameter of the contact form to accept template_group/template paths.
+- Fixed a bug (#23318) where hidding the Channel field in an Entry would trigger a validation error on save.
+- Fixed a bug (#23319) where a single relationship field could not have its selection deselected.
+- Fixed a bug (#23320) where certain grid fields didn't always parse their variables.
+- Fixed a bug (#23321) where the contact form would sometimes submit to an invalid URL.
+- Fixed a bug (#23322) where members could not assign an RTE toolset.
+- Fixed a bug (#23325) where an RTE field may appear twice inside a Grid inside a Fluid field.
+- Fixed a bug (#23326) where hiding the author field in a layout could make autosaves throw an error on edit.
+- Fixed a bug (#23327) where an empty custom layout tab refused to be deleted.
+- Fixed a bug (#23329) where the sticky toggle in channel entries didn't stick.
+- Fixed a bug in Channel Form where ``{status_menu}`` wouldn't include custom statii (as they say in dog-latin).
+- Fixed a bug where populating fields with content from another channel could produce fatal errors.
+- Fixed a bug where some tags were left unparsed in PHP 5.x.
+- Fixed a fatal PHP error in the Core version that could occur when submitting a comment.
+
+
 Version 4.0.1
 -------------
 
