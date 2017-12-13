@@ -5,6 +5,18 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.13
+--------------
+
+Release Date: December 13, 2017
+
+.. important:: This release marks the last normal patch update for ExpressionEngine 3. With the release of ExpressionEngine 4, v3 is now `Legacy software <https://expressionengine.com/support/faq#what-is-a-legacy-product-what-is-a-retired-product>`_ and will only receive critical bug fixes such as security patches and protections against dataloss, for one year. Please consider `upgrading <https://expressionengine.com/store/purchases/upgradeable>`_.
+
+- 🔒 & 🏎
+- Added PHP 7.2 compatibility.
+- Fixed a potential stored XSS bug in the control panel.
+- Increased security against potential environment information leakage.
+- Fixed a bug (#23281) where a PHP error could be thrown by a non-functional filter in the Pages module control panel.
 
 Version 3.5.12
 --------------

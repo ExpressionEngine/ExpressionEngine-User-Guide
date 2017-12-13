@@ -108,6 +108,7 @@ and encourage them to join!
 - Derek Hogue
 - Digital Surgeons
 - Dom Stubbs
+- Dorothy Molloy (Climbing Turn)
 - Doug Thwaites
 - Douglas Green
 - Eli Van Zoeren
@@ -132,7 +133,6 @@ and encourage them to join!
 - James Smith
 - Jamie Pittock
 - Jamie Taylor (Percipio)
-- Jan van Lysebettens
 - Jason Boothman (Reusser Design)
 - Jason Siffring (Surprise Highway)
 - Jelle de Jong
