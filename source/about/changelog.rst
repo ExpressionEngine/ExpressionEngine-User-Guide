@@ -5,6 +5,13 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.14
+--------------
+
+Release Date: December 15, 2017
+
+- Fixed a bug in SimplePie that prevented the RSS Parser (and ExpressionEngine news feed) from working in CentOS 6 and other environments with outdated cURL libs. (Hey CentOS, they fixed that in 2010…)
+
 Version 3.5.13
 --------------
 
