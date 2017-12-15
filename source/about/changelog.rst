@@ -5,6 +5,24 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.0.3
+-------------
+
+Release Date: December 15, 2017
+
+- Version checks are still cached if caching is disabled.
+- Fixed a bug where the installer may not properly determine the correct database collation to use.
+- Fixed a bug (#23340) where the Menu Manager would show JSON output when adding a menu item in Firefox.
+- Fixed a bug where some drop down menus might have two scroll bars.
+- Fixed a bug where deleting a Grid column that contained validation errors would not re-enable the Save buttons.
+- Fixed a bug (#23346) where submitting the Fluid field settings form while the field list is filtered would show a field removal warning.
+- Fixed a bug (#23347) where the Quick Links management page would show an error under PHP 7.2.
+- Fixed a bug where a relationship to an entry with a Fluid field didn't parse the Fluid field tags.
+- Fixed a bug (#23339) where a PHP warning was issued in the CP Logs utility.
+- Fixed a bug in SimplePie that prevented the RSS Parser (and ExpressionEngine news feed) from working in CentOS 6 and other environments with outdated cURL libs. (Hey CentOS, they fixed that in 2010...)
+- Fixed a bug where a channel form posting to a channel not on the current site could trigger an author validation error if guest posting was enabled.
+
+
 Version 4.0.2
 -------------
 
