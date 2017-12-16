@@ -27,6 +27,8 @@ Working either locally with your backed up files, or on the server (**not recomm
 
 #. Copy :file:`system/user/config/license.key` to :file:`system/user/config/license.key`
 
+.. note:: If you’ve moved your system directory, make sure to change both index.php and admin.php to point to the correct directory.
+
 3. Run The Update Wizard
 ------------------------
 
