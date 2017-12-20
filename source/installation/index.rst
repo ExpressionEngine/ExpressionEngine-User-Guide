@@ -18,24 +18,6 @@ Updates & Upgrades
 - :doc:`upgrade_from_core`
 - :doc:`version_notes`
 
-Maintenance & Operations
-************************
-
-.. toctree::
-  :titlesonly:
-  :maxdepth: 2
-
-  ../operations/index
-
-Performance Monitoring
-**********************
-
-.. toctree::
-  :titlesonly:
-  :maxdepth: 2
-
-  ../monitoring/index
-
 .. toctree::
   :titlesonly:
   :hidden:
