@@ -5,6 +5,29 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.0.4
+-------------
+
+Release Date: December 22, 2017
+
+- Fixed a PHP error in the Metaweblog control panel where it erroneously tried to use a field group id to populate the fields.
+- Fixed a PHP warning that could occur if you tried to update ExpressionEngine while unable to connect to the internet.
+- Fixed a bug (#23353) where it may not be clear which site a template belongs to in the Duplicate Template list.
+- Fixed a bug (#23354) where the first variable in a Layout list may not parse.
+- Fixed a bug (#23357) where the Entry Manager listing may load in the wrong scroll position in Firefox.
+- Fixed a bug (#23358) where Channels may have malformed category group associations saved to them.
+- Fixed a bug (#23360) where the `base_path` config override may not be applied in some cases.
+- Fixed a bug (#23365) where the 4.0.1 update routine may fail if there are orhpaned Channel layout records.
+- Fixed a bug (#23367) where the Search module may show an SQL error if the `search_in=` parameter was set.
+- Fixed a bug in the control panel member profile page, where the Avatar path was not correctly filtered for the current Site's preferences.
+- Fixed a bug where Channel preferences like "Render URLs and Email addresses as links?" were not respected in Relationship variables.
+- Fixed a bug where some third-party tables could cause an error when importing SQL backups made with the Database Backup utility.
+- Fixed a bug where submitting the channel form could show an error if the URL title field was not included on the form.
+- Fixed a bug where the Pages template dropdown may break if there is a numerically-named template group.
+- Fixed some PHP warnings in the Comment module when certain variables were accessed (e.g. ``{comment_url_title_auto_path}``)
+- **Developers:** Fixed a bug where the ``parseTagParameters()`` method returned an empty array rather than the default parameter array when there were no parameters set in the tag.
+
+
 Version 4.0.3
 -------------
 
