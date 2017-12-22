@@ -12,6 +12,8 @@ This guide will help you update your site from ExpressionEngine 3 to the latest 
 
 #. Download the latest release of ExpressionEngine (either :elstore:`ExpressionEngine Core </#ee-core>` or the :elstore:`standard edition </manage>`, whichever your site is currently running) and unzip the files to a folder on your computer.
 
+.. note:: Check your third-party add-ons to see if you need updated versions for v4. Most add-ons do not need updating from v3, or only need minor changes. Your add-on vendor(s) can let you know what, if anything, you need to do for your installed add-ons.
+
 2. Copy Files
 -------------
 
