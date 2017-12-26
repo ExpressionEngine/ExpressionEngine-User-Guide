@@ -196,6 +196,7 @@ and encourage them to join!
 - Pierre-Vincent Ledoux
 - Ragnar Frostason (Republic Factory)
 - Rein de Vries
+- Ric Solivan
 - Richard Whitmer
 - Rob Sanchez
 - Robin Hodges
