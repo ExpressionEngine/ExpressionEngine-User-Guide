@@ -601,9 +601,7 @@ the field::
 	in the order the relationships were made, not based on any content
 	from the related entries.
 
-.. note:: When ordering by "random", entries that have been marked as
-	"sticky" will not appear first; they will appear randomly with all
-	other entries.
+.. note:: **Random** ordered entries have special rules applied.  "Sticky" entries will not appear first; they will appear randomly with all other entries. If the tag is not paginated, each page load, a new selection of random entries will be returned.  If the tag **is** paginated, then the order of the entries is randomly set on the first page load and stored for the user's session so that entries show up only once in the paginated results.
 
 **Multiple Orders and Sorts**
 
@@ -938,19 +936,19 @@ set to "yes", it displays the current week by default (i.e. no
 pagination in the URL) and automatically adjusts the pagination links to
 indicate the correct page for that week.
 
-show\_expired=
---------------
+show_expired=
+-------------
 
 ::
 
-	show_expired="yes"
+	show_expired="no" show_expired="yes" show_expired="only"
 
-You can determine whether you wish for entries that have "expired" to be
-included.
+There are three valid options for this parameter: "yes", "no", "only".  The default is "no", with expired entries not shown.
+If set to "yes", expired entries are included in the results.  If set to "only", only expired entries are included.
 
 .. _channel_entries_show_future_entries:
 
-show\_future\_entries=
+show_future_entries=
 ----------------------
 
 ::
@@ -1105,10 +1103,9 @@ sticky=
 
 ::
 
-	sticky="no"
+	sticky="yes" sticky="no" sticky="only"
 
-By default, sticky topics always remain at the top of the page. You can
-manually turn off stickies by using the above parameter.
+By default, sticky topics always remain at the top of the page ("yes"). You can manually turn off stickies by setting the parameter to "no".  If set to "only", only "sticky" entries are included in the results.
 
 .. _channel_entries_track_views:
 
