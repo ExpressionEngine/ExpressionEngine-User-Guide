@@ -22,19 +22,15 @@ Templates and then FTP the changes to the server.
 Enabling Saving Templates as Files
 ----------------------------------
 
-All templates will be saved to the ``system/user/templates`` directory.
+By default, templates are saved to the ``system/user/templates`` directory.
 
-1. Set folder permissions
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Troubleshooting
+~~~~~~~~~~~~~~~
 
-Make the ``system/user/templates`` folder writable so that ExpressionEngine will be allowed to save the files as well as recreate your Template\_Group/Template structure. See :doc:`/troubleshooting/general/file_permissions` for details.
+If templates are not saved as files, first check your folder permissions.  The ``system/user/templates`` folder must be writable. See :doc:`/troubleshooting/general/file_permissions` for details.
 
-2. Set Template Preferences
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If your permissions are correct, check to see if the :ref:`configuration override <overrides-save-tmpl-files>` is being used.
 
-From the Control Panel, go to :menuselection:`Settings --> Template Settings`.
-
-#. Set **Save Templates as Files** to *Yes*.
 
 Creating and Synchronizing Templates and Files
 ----------------------------------------------
