@@ -18,6 +18,7 @@ Templates and then FTP the changes to the server.
    -  *.css* creates a 'css' template type
    -  *.js* creates a 'js' template type
    -  *.xml* creates an 'xml' template type
+-  Template group names (not including the .group) and template names (not including the .extension) are limited to 50 characters.  Anything longer than that will be truncated by the database and fail to match the file.
 
 Enabling Saving Templates as Files
 ----------------------------------
