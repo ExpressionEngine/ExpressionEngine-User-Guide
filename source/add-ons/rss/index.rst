@@ -223,19 +223,19 @@ encoding
 
 The XML character encoding for the channel.
 
-gmt\_entry\_date
-~~~~~~~~~~~~~~~~
+gmt_entry_date
+~~~~~~~~~~~~~~
 
 ::
 
-	{gmt_date format="%Y %m %d"}
+	{gmt_entry_date format="%Y %m %d"}
 
 The date the entry was submitted in GMT. This variable is **not**
 localized for each user's date settings. See :doc:`Date Variable
 Formatting </templates/date_variable_formatting>` for more information.
 
-gmt\_edit\_date
-~~~~~~~~~~~~~~~
+gmt_edit_date
+~~~~~~~~~~~~~
 
 ::
 
