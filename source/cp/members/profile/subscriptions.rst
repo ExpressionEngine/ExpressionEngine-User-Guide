@@ -42,4 +42,4 @@ submit button will be made available in the lower righthand corner of the table.
 Unsubscribe
 ^^^^^^^^^^^
 
-The member will be unsubscribbed from the seletecd content.
+The member will be unsubscribed from the selected content.
