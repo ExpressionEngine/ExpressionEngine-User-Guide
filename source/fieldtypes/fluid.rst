@@ -85,10 +85,12 @@ A fluid field can handle the output of all of those fields, as many as they add,
     {/fluid_field:full_text}
 
     {fluid_field:img_card}
-      <div class="card">
-        <img src="{content:grid_image_colum}">
-        {content:grid_text_colum}
-      </div>
+      {content}
+        <div class="card">
+          <img src="{content:grid_image_column}">
+          {content:grid_text_column}
+        </div>
+      {/content}
     {/fluid_field:img_card}
 
     {fluid_field:featured_entry}
