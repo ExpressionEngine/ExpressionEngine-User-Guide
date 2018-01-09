@@ -5,6 +5,41 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+
+Version 4.0.5
+-------------
+
+Release Date: January 09, 2018
+
+- Changed template selection UI for template routes to a dropdown.
+- Made toggle fields accessible to screen readers.
+- When editing a field, the groups the field is in now show as active in the field group navigation menu.
+- Fixed a bug (#23372) where adding a Grid row may also alter the markup of some third-party fieldtypes within the Grid.
+- Fixed a bug (#23368) where Grid variable modifiers may not render.
+- Fixed a bug (#23364) where the Member Import utility would not import data into custom fields.
+- Fixed a bug (#23376) where pressing the escape key to dismiss a modal may not always work.
+- Fixed a bug where a template with conditionals may show an error under PHP 7.2.
+- Fixed a bug where the filter on the Fluid field's Add button was not working.
+- Fixed a bug (#23380) where saving a category field without entering a name would show a PHP error.
+- Fixed a bug (#23380) where deleting a category group that has category fields may show an error.
+- Fixed a bug (#23379) where saving a channel saved in EE 3 may show an error regarding the search excerpt.
+- Fixed a bug (#23383) where the button text on the idle login modal may disappear.
+- Fixed a bug (#23391) where you may not be able to limit a File field to a specific upload directory in a Grid.
+- Fixed a bug (#23393) where applying a new field format to existing entries may fail.
+- Fixed a bug where multi-channel Channel Entry tags would sometimes show a PHP error.
+- Fixed a bug where Grid couldn't add new rows in Channel Form.
+- Fixed a bug in the manual updater where the displayed update step was actually one step behind what it was running.
+- Fixed a reference in the RSS module to the legacy Member "URL" field.
+- Fixed a SQL error in Channel Form when using Dropdown fields pre-populated by newly created custom fields.
+- Fixed a bug (#23375) where the Search and Replace utility was not saving Template changes to the filesystem.
+- Fixed a bug (#23384) where accented characters (ä, ö, ü, ß, etc.) in Channel or Field names were not being translated to their ascii equivalents (ae, oe, ue, ss, etc.).
+- Fixed a username length validation message (bug #23288).
+- Fixed a bug (#23388) where a validation error was wrongly triggered when editing a Metaweblog configuration.
+- Fixed a bug where a PHP error occurred when non-superadmins filtered the templates by a specific template group, even though they had permission to access the group.
+- Fixed a bug (#23386) where new fields were not always assigned to a group when using 'Save & New' to create multiple fields in a group.
+- Removed usage of PHP 7.2's deprecated ```each()`` function in the XSS library.
+- **Developers:** Fixed some erroneous, old, hand-written SQL references to field groups in the legacy API. You won't notice, because you're using ExpressionEngine's modern APIs.
+
 Version 4.0.4
 -------------
 
