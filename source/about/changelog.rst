@@ -5,6 +5,32 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.0.6
+-------------
+
+Release Date: January 16, 2018
+
+- Changed the location on the toggle arrow in the publish form, to better show which field it works on.
+- Tweaked spacing of section header
+- Fixed the Contact Us page in the default theme for the Core version.
+- Replaced fatal PHP error on PHP 7.1+ with a 404 page when fiddling around with some URLs in the control panel.
+- Fixed a bug where the channel form could fail to display for non-logged in members despite allowing guest posting.
+- Fixed a bug where the control panel may zoom when filling in forms on iOS.
+- Fixed a bug where Checkboxes or Multi Select fields may save their selections out of order.
+- Fixed a bug (#23397) where going to a member's publishing settings would show an error if the RTE wasn't installed.
+- Fixed a bug (#23400) where parsing custom category fields may not work in certain Channel module tags.
+- Fixed a bug (#23403) where the language in the "show" filter were not consistently pulled from language files.
+- Fixed a bug (#23404) where front-end template error messages might parse tag samples (``{exp:email:contact_form}``) as emoji short codes. Though the ``{exp✉️}`` module is pretty rad.
+- Fixed a bug (#23406) where some variables could not be used inside a Fluid field tag pair.
+- Fixed a bug (#23407) where the Member module's member list may show an error if an invalid ``memberlist_order_by`` is set.
+- Fixed a bug (#23408) where Channel Layouts got a bit dizzy and lightheaded and couldn't remember how you organized your fields.
+- Fixed a bug (#23409) where custom field tags inside a Relationship field may show errors if the custom field doesn't belong to the related entry's channel.
+- Fixed a bug (#23410) where the Auto Saved publish form tab was not appearing for new entries.
+- Fixed a bug (#23412) where errors may show when saving an empty Fluid field.
+- Fixed a bug (#23413) where the SMTP connection type option may have the wrong value selected.
+- Fixed a bug when "Enable emoticons?" is enabled, and an HTML entity is immediately followed by a closing parenthesis (``&entity;)`` would become ``&entity:wink:``)
+- Fixed a deprecation notice in the developer log for Fluid fields (#23418).
+
 
 Version 4.0.5
 -------------
@@ -37,7 +63,7 @@ Release Date: January 09, 2018
 - Fixed a bug (#23388) where a validation error was wrongly triggered when editing a Metaweblog configuration.
 - Fixed a bug where a PHP error occurred when non-superadmins filtered the templates by a specific template group, even though they had permission to access the group.
 - Fixed a bug (#23386) where new fields were not always assigned to a group when using 'Save & New' to create multiple fields in a group.
-- Removed usage of PHP 7.2's deprecated ```each()`` function in the XSS library.
+- Removed usage of PHP 7.2's deprecated ``each()`` function in the XSS library.
 - **Developers:** Fixed some erroneous, old, hand-written SQL references to field groups in the legacy API. You won't notice, because you're using ExpressionEngine's modern APIs.
 
 Version 4.0.4
