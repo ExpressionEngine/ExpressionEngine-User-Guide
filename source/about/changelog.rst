@@ -63,7 +63,7 @@ Release Date: January 09, 2018
 - Fixed a bug (#23388) where a validation error was wrongly triggered when editing a Metaweblog configuration.
 - Fixed a bug where a PHP error occurred when non-superadmins filtered the templates by a specific template group, even though they had permission to access the group.
 - Fixed a bug (#23386) where new fields were not always assigned to a group when using 'Save & New' to create multiple fields in a group.
-- Removed usage of PHP 7.2's deprecated ```each()`` function in the XSS library.
+- Removed usage of PHP 7.2's deprecated ``each()`` function in the XSS library.
 - **Developers:** Fixed some erroneous, old, hand-written SQL references to field groups in the legacy API. You won't notice, because you're using ExpressionEngine's modern APIs.
 
 Version 4.0.4
