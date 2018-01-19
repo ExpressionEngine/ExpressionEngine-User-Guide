@@ -5,6 +5,19 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.0.7
+-------------
+
+Release Date: January 19, 2018
+
+- Improved the OPcache conditional check to include opcache.restrict_api path restrictions so you don't get an anoying PHP error on oddly configured hosts.
+- Core version: Fixed a missing Spam module error in comment moderation.
+- Eliminated a PHP warning when deleting Grid fields that contain a Toggle column.
+- Fixed a bug where variable modifiers didn't work with option field value and label variables.
+- Fixed a bug (#23428) where one couldn't save a new Channel if there were more than eight existing Channels.
+- Fixed a bug (#23431) where some Relationship field settings may not appear to stick.
+
+
 Version 4.0.6
 -------------
 
