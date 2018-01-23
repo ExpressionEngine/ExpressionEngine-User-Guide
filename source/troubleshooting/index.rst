@@ -14,7 +14,7 @@ General
 Templates
 *********
 
-- :doc:`Tags within Advanced Conditionals <templates/tags_within_advanced_conditionals>`
+- :doc:`"Enable HTTP Authentication" Doesn't Work <templates/http_authentication_setting_not_working>`
 - :doc:`Embedded Templates not using my Assigned Variables <templates/embedded_templates_not_using_assigned_variables>`
 - :doc:`PHP and EE tags are not parsed in my Stylesheet <templates/php_and_ee_tags_not_parsed_in_css>`
 - :doc:`Content from my newly created field doesn't appear on the page <templates/content_from_new_custom_field_not_appearing>`
