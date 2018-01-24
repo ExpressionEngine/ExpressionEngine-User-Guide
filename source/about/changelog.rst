@@ -5,6 +5,13 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.15
+--------------
+
+Release Date: January 24, 2018
+
+Fixed a bug where validation did not force selecting an heir when deleting a member and 'Reassign' entries was selecting, which could result in data loss.
+
 Version 3.5.14
 --------------
 
