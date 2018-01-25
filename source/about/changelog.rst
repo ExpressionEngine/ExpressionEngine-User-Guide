@@ -10,6 +10,7 @@ Version 4.0.8
 
 Release Date: January 25, 2018
 
+- A warning has been added if you've upgraded but forgotten to update your software license.
 - Fixed a bug (#23433) where an external link did not open in a new window.
 - Fixed a bug where the list of changed values passed to ``after`` model event hooks may not be complete.
 - Fixed a bug where Textareas in Fluid fields didn't show their formatting bar on edit.
