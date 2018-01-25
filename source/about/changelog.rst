@@ -5,6 +5,24 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.0.8
+-------------
+
+Release Date: January 25, 2018
+
+- Fixed a bug (#23433) where an external link did not open in a new window.
+- Fixed a bug where the list of changed values passed to ``after`` model event hooks may not be complete.
+- Fixed a bug where Textareas in Fluid fields didn't show their formatting bar on edit.
+- Fixed a bug (#23435) where Channel Form would throw a fatal PHP error when using tag pairs instead of the standard `{field:fieldname}` Channel Form syntax.
+- Fixed a bug (#23443) where `y-axis` was not translated in non-English language packs.
+- Fixed a bug (#23427) where BBCode was being parsed in fields with formatting set to "None".
+- Fixed a bug where there were errors on the frontend member registration page if custom date fields were on the form.
+- Fixed a bug on the frontend member profile editor where superadmins could properly see fields not included publically but their edits didn't 'stick'.
+- Fixed a bug (#23425) where file size limitation for uploads was not being enforced properly.
+- Fixed a bug where validation did not force selecting an heir when deleting a member and ‘Reassign’ entries was selected.
+- Fixed a bug where a PHP error could occur deleting a member who had entries if you chose to delete those entries too, resulting in the member not being deleted.
+
+
 Version 4.0.7
 -------------
 
