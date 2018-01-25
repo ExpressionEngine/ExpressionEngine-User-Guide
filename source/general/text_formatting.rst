@@ -62,4 +62,4 @@ formatted this way.
 None
 ------------------------------
 
-ExpressionEngine will use your text exactly as you have entered it.
+ExpressionEngine will use your text exactly as you have entered it.  This includes disabling :doc:`BBCode </general/bbcode>`.
