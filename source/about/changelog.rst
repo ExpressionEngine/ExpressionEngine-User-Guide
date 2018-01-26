@@ -5,6 +5,38 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.0.8
+-------------
+
+Release Date: January 25, 2018
+
+- A warning has been added if you've upgraded but forgotten to update your software license.
+- Fixed a bug (#23433) where an external link did not open in a new window.
+- Fixed a bug where the list of changed values passed to ``after`` model event hooks may not be complete.
+- Fixed a bug where Textareas in Fluid fields didn't show their formatting bar on edit.
+- Fixed a bug (#23435) where Channel Form would throw a fatal PHP error when using tag pairs instead of the standard `{field:fieldname}` Channel Form syntax.
+- Fixed a bug (#23443) where `y-axis` was not translated in non-English language packs.
+- Fixed a bug (#23427) where BBCode was being parsed in fields with formatting set to "None".
+- Fixed a bug where there were errors on the frontend member registration page if custom date fields were on the form.
+- Fixed a bug on the frontend member profile editor where superadmins could properly see fields not included publically but their edits didn't 'stick'.
+- Fixed a bug (#23425) where file size limitation for uploads was not being enforced properly.
+- Fixed a bug where validation did not force selecting an heir when deleting a member and ‘Reassign’ entries was selected.
+- Fixed a bug where a PHP error could occur deleting a member who had entries if you chose to delete those entries too, resulting in the member not being deleted.
+
+
+Version 4.0.7
+-------------
+
+Release Date: January 19, 2018
+
+- Improved the OPcache conditional check to include opcache.restrict_api path restrictions so you don't get an anoying PHP error on oddly configured hosts.
+- Core version: Fixed a missing Spam module error in comment moderation.
+- Eliminated a PHP warning when deleting Grid fields that contain a Toggle column.
+- Fixed a bug where variable modifiers didn't work with option field value and label variables.
+- Fixed a bug (#23428) where one couldn't save a new Channel if there were more than eight existing Channels.
+- Fixed a bug (#23431) where some Relationship field settings may not appear to stick.
+
+
 Version 4.0.6
 -------------
 
