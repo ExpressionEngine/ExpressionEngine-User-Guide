@@ -389,9 +389,9 @@ Showing the contents of a grid field in a related child, sibling or parent entry
 
   {relationship_field}
     {relationship_field:title}
-    {relationship_field:grid_field1}
-      {grid_field1:grid_column_a}<br />
-    {/relationship_field:grid_field1}
+    {relationship_field:grid_field}
+      {grid_field:grid_column_a}<br />
+    {/relationship_field:grid_field}
   {/relationship_field}
 
 
@@ -404,18 +404,18 @@ Relationships can also be used in :doc:`Fluid Fields <fluid>` and they can outpu
 
   {relationship_field}
     {relationship_field:title}
-    {relationship_field:fluid_field1}
-      {relationship_field:fluid_field1:text_field}
+    {relationship_field:fluid_field}
+      {relationship_field:fluid_field:text_field}
         {content}
-      {/relationship_field:fluid_field1:text_field}
-      {relationship_field:fluid_field1:checkbox_field_pair}
+      {/relationship_field:fluid_field:text_field}
+      {relationship_field:fluid_field:checkbox_field_pair}
         <ul>
             {content}
             <li>{item}</li>
             {/content}
         </ul>
-      {/relationship_field:fluid_field1:checkbox_field_pair}
-     {/relationship_field:fluid_field1}
+      {/relationship_field:fluid_field:checkbox_field_pair}
+     {/relationship_field:fluid_field}
   {/relationship_field}
 
 
