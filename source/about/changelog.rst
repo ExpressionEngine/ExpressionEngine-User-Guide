@@ -5,6 +5,22 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.0.9
+-------------
+
+Release Date: February 5, 2018
+
+- Fixed a bug (#23445) where multiple Fluid field tags in a template would multiply results.
+- Fixed a bug (#23447) where a PHP error could occur creating new channels and duplicating an existing channel that had already been duplicated.
+- Fixed a bug where a PHP error could occur when using relationship tags if parameter filters resulted in no valid relationships to return.
+- Fixed a bug where custom member fields didn't parse in the member profile templates.
+- Fixed a bug where member field conditionals were not properly parsed in the custom profile data tag.
+- Fixed a bug where updating ExpressionEngine via the command line may not work.
+- Fixed a bug with localization of placeholder text in the Duration fieldtype.
+- Fixed a fatal PHP error when manually constructing Grid fields in a Channel Form (``{field:my_grid_field}`` is recommended over manual construction, incidentally).
+- Fixed the Channel URL setting for the Blog channel when installing the default theme.
+- Prevented a potential memory exhaustion error on the Profile page when you have hundreds of thousands of member records.
+
 Version 4.0.8
 -------------
 
