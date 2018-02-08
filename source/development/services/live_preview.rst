@@ -15,7 +15,7 @@ The LivePreview service provides a mechanism to check for, and fetch, preview da
 Simple example
 --------------
 
-If your add-on fetches its data when rendering a front-end request, you will want to check and see if there is any Live Preview entry data. If there is you'll want to use that data instead of what you would fetch from the database::
+If your fieldtype add-on fetches data when rendering a front-end request, you will want to check and see if there is any Live Preview entry data. If there is you'll want to use that data instead of what you would fetch from the database::
 
   if (ee('LivePreview')->hasEntryData())
   {
