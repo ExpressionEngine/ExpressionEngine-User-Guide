@@ -24,6 +24,7 @@ If your fieldtype add-on fetches data when rendering a front-end request, you wi
     $my_data[$entry_id] = $data;
   }
 
+
 LivePreview Service Methods
 ---------------------------
 
@@ -40,7 +41,7 @@ Check if there is preview entry data.
 
 .. method:: getEntryData()
 
-  Gets the preview entry data.
+  Gets the preview entry data. This data matches the POST data when saving a Channel entry.
 
   :returns: An array of entry data, or ``FALSE`` if there is no data
   :rtype: Array/Boolean

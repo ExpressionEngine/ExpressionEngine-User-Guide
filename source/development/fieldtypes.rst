@@ -865,3 +865,11 @@ Here are the usage details for this function:
 
 A jQuery object of the field being affected by the current event is passed to
 the callback function.
+
+*************************
+Working with Live Preview
+*************************
+
+If your fieldtype retrieves its data, rather than using the data parameter, when
+rendering one of its tags you will need to use the :doc:`LivePreview service <services/live_preview>`
+to check for and use any present preview data.
