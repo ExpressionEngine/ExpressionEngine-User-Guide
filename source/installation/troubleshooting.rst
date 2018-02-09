@@ -4,6 +4,17 @@ Troubleshooting
 Main page content appears on every page / I get 404s except on the main page / "No Input File Specified"
 --------------------------------------------------------------------------------------------------------
 
+The main/first page of your site works fine.  When you go to another page, the URL changes but the content is still from your main page OR all pages but your main page display 404 errors.
+
+The problem here is that your server isn’t correctly supporting the ”path_info” server variable.  You might want to contact your Host or server admin about having it supported, since that would be the ideal way to run ExpressionEngine.  However, you can also run EE without that setting.  In the Control Panel Settings, turn on the “Force Query String” preference in the Debugging and Output section.
+
+When you force query strings, ExpressionEngine will add a '?' to system generated frontend URLs::
+
+	http://example.com/index.php?/blog/11245/
+
+If you are using .htaccess to remove the index.php from your URLs, don't force query strings.  Instead, :doc:`add the query string to your htaccess code </urls/remove_index.php>`
+
+
 Running PHP as CGI
 ------------------
 
