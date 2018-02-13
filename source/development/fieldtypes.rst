@@ -825,7 +825,7 @@ like so::
   $this->settings['fluid_field_data_id'];
 
 Fluid Javascript Events
-======-================
+=======================
 
 Several Javascript events are fired on certain actions to let your
 fieldtypes know when those actions have taken place. Here is an
@@ -873,3 +873,12 @@ Working with Live Preview
 If your fieldtype retrieves its data, rather than using the data parameter, when
 rendering one of its tags you will need to use the :doc:`LivePreview service <services/live_preview>`
 to check for and use any present preview data.
+
+Live Preivew Javascript
+=======================
+
+Live Preview automatically refreshes when HTML inputs, selects, and textareas
+are interacted with. If your fieldtype has Javascript interactions that then
+need to update the preview you'll need to use the following Javascript::
+
+  $('body').trigger('entry:preview');
