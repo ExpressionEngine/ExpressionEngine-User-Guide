@@ -47,6 +47,7 @@ Table of Contents
 
 -  :doc:`Overview of the Multiple Site Manager <overview>`
 -  :doc:`Setup domains and sub-domains <domainsetup>`
+-  :doc:`Multi site login <multi_site_login>`
 -  :doc:`Sites Variables and Parameters <code>`
 -  :doc:`Purchase Additional Sites <additional_sites>`
 -  :doc:`Change Log <msm_changelog>`
@@ -58,6 +59,7 @@ Table of Contents
 
   Overview <overview>
   domainsetup
+  Multi Site Login <multi_site_login>
   code
   additional_sites
   Change Log <msm_changelog>
