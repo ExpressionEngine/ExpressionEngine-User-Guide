@@ -870,15 +870,56 @@ the callback function.
 Working with Live Preview
 *************************
 
-If your fieldtype retrieves its data, rather than using the data parameter, when
-rendering one of its tags you will need to use the :doc:`LivePreview service <services/live_preview>`
-to check for and use any present preview data.
+In order for your fieldtype to render in a template under live preview, it needs
+to be able to render using data from the publish form, which is essentially your
+fieldtype's POST data. You will not access your data from ``$_POST``, your
+fieldtype's data should be sent automatically to your ``replace_tag()`` method.
+If you're missing any data, you can access the entry's entire preview data via
+the :doc:`LivePreview service <services/live_preview>`.
+
+This means if your fieldtype does extra processing before your data is saved and
+your ``replace_tag()`` method expects data in a different format than what is
+returned directly from the publish form, you'll need to make accommodations.
+
+For instance, say your fieldtype has inputs that look like this:
+
+.. code-block:: html
+
+  <input type="text" name="field_id_1[text1]">
+  <input type="text" name="field_id_1[text2]">
+
+And your ``save()`` and ``replace_tag()`` routines looks like this::
+
+  function save($data)
+  {
+      // Concatenate this data to save in the database
+      return $data['text1'] . $data['text2'];
+  }
+
+  function replace_tag($data)
+  {
+      // Data is preformatted, just return it!
+      return $data;
+  }
+
+You may want to change your ``replace_tag()`` routine to format its data on the fly::
+
+  function replace_tag($data)
+  {
+      // Looks like we're in live preview, reformat our data for presentation
+      if (ee('LivePreview')->hasEntryData())
+      {
+          return $data['text1'] . $data['text2'];
+      }
+
+      return $data;
+  }
 
 Live Preivew Javascript
 =======================
 
 Live Preview automatically refreshes when HTML inputs, selects, and textareas
-are interacted with. If your fieldtype has Javascript interactions that then
-need to update the preview you'll need to use the following Javascript::
+are interacted with. If your fieldtype has other interactions that need to
+update the live preview, you can use the following JavaScript::
 
   $(document).trigger('entry:preview');
