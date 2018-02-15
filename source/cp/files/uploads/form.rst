@@ -91,7 +91,7 @@ File size
 
 You can optionally set a maximum allowed size for uploaded file. Leave
 the setting blank if you do not wish to impose a limit. The size is
-defined in megabytes.
+defined in kilobytes.
 
 .. note:: Servers usually also have built-in limits on the amount of
 	data that can be uploaded via PHP at one time. The default value for
@@ -181,6 +181,6 @@ upload files.
 Allowed category groups
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Files may be assigned to specific categories, just like entries are.  Here you 
+Files may be assigned to specific categories, just like entries are.  Here you
 can specify which category groups you want to make available to files in this upload directory. Images can be displayed by category using the doc:`File Module
 </add-ons/file/index>`.

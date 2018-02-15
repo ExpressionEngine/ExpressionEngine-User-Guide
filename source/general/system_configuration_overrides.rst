@@ -2866,6 +2866,25 @@ $config['memberlist_sort_order'] = 'desc';
 :ref:`Member List - Order <member-list-order-label>`
 
 
+.. _multi_login_sites:
+
+multi_login_sites
+-----------------
+
+Sets the frontend login to apply to multiple sites.
+
+========= ===========
+Value     Description
+========= ===========
+``URLs``   URLs to frontend sites
+========= ===========
+
+Example Usage::
+
+$config['multi_login_sites'] = 'http://example.com|http://different_example.com';
+
+For more information, see :doc:`MSM multi site login </msm/multi_site_login>`
+
 .. _multiple_sites_enabled:
 
 multiple_sites_enabled

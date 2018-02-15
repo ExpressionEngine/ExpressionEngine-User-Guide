@@ -125,6 +125,12 @@ When set to enable, users with permissions will have to login to view this templ
 
   .. code-block:: apache
 
+    SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+
+  or:
+
+  .. code-block:: apache
+
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
 Template route override

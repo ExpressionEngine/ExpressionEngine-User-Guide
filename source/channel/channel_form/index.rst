@@ -107,6 +107,12 @@ Set the date of the entry::
 
   <p>Date <br> <input type="text" name="entry_date" value="{entry_date}" maxlength="23" size="25"></p>
 
+In order for the datepicker to apply to the field, it must be enabled and you must include ``rel="date-picker"``.  In addition, for full compatibility with all available date formats, include the ``data-timestamp="{entry_timestamp}"``.
+
+Set the date of the entry and apply an enabled datepicker::
+
+  <p>Date <br> <input type="text" name="entry_date" value="{entry_date}" maxlength="23" size="25" rel="date-picker" data-timestamp="{entry_timestamp}"></p>
+
 Expiration Date
 ~~~~~~~~~~~~~~~
 
@@ -116,14 +122,27 @@ Set the expiration date of the entry::
     <input type="text" name="expiration_date" value="{expiration_date}" maxlength="23" size="25">
   </p>
 
+Set the expiration date of the entry and apply an enabled datepicker::
+
+  <p>Expiration Date <br>
+    <input type="text" name="expiration_date" value="{expiration_date}" maxlength="23" size="25" rel="date-picker" data-timestamp="{expiration_timestamp}">
+  </p>
+
 Comment Expiration Date
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Set the comment expiration date if desired::
+Set the comment expiration date of the entry::
 
   <p>Comment Expiration Date <br>
   <input type="text" name="comment_expiration_date" value="{comment_expiration_date}" maxlength="23" size="25" />
   </p>
+
+Set the comment expiration date of the entry and apply an enabled datepicker::
+
+  <p>Comment Expiration Date <br>
+  <input type="text" name="comment_expiration_date" value="{comment_expiration_date}" maxlength="23" size="25" rel="date-picker" data-timestamp="{comment_expiration_timestamp}">
+  </p>
+
 
 Make Entry Sticky
 ~~~~~~~~~~~~~~~~~
@@ -351,6 +370,8 @@ datepicker=
   datepicker="no"
 
 Adds the datepicker to your date fields. Defaults to "yes".
+
+.. note:: If you are manually constructing a date field, in order to apply the date picker you must include ``rel="date-picker"``.
 
 dynamic\_title=
 ~~~~~~~~~~~~~~~

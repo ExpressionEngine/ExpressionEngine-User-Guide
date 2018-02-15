@@ -14,6 +14,8 @@ you leave a comment. It cannot normally be used in a Template.
   prevent malicious people from posting naughty HTML or code through
   them.
 
+.. note:: BBCode is automatically disabled if a field's :doc:`text formatting </general/text_formatting>` is set to `none`.
+
 URLs and Linking
 ----------------
 

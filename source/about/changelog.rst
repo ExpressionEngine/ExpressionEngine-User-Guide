@@ -5,6 +5,138 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.0.9
+-------------
+
+Release Date: February 5, 2018
+
+- Fixed a bug (#23445) where multiple Fluid field tags in a template would multiply results.
+- Fixed a bug (#23447) where a PHP error could occur creating new channels and duplicating an existing channel that had already been duplicated.
+- Fixed a bug where a PHP error could occur when using relationship tags if parameter filters resulted in no valid relationships to return.
+- Fixed a bug where custom member fields didn't parse in the member profile templates.
+- Fixed a bug where member field conditionals were not properly parsed in the custom profile data tag.
+- Fixed a bug where updating ExpressionEngine via the command line may not work.
+- Fixed a bug with localization of placeholder text in the Duration fieldtype.
+- Fixed a fatal PHP error when manually constructing Grid fields in a Channel Form (``{field:my_grid_field}`` is recommended over manual construction, incidentally).
+- Fixed the Channel URL setting for the Blog channel when installing the default theme.
+- Prevented a potential memory exhaustion error on the Profile page when you have hundreds of thousands of member records.
+
+Version 4.0.8
+-------------
+
+Release Date: January 25, 2018
+
+- A warning has been added if you've upgraded but forgotten to update your software license.
+- Fixed a bug (#23433) where an external link did not open in a new window.
+- Fixed a bug where the list of changed values passed to ``after`` model event hooks may not be complete.
+- Fixed a bug where Textareas in Fluid fields didn't show their formatting bar on edit.
+- Fixed a bug (#23435) where Channel Form would throw a fatal PHP error when using tag pairs instead of the standard `{field:fieldname}` Channel Form syntax.
+- Fixed a bug (#23443) where `y-axis` was not translated in non-English language packs.
+- Fixed a bug (#23427) where BBCode was being parsed in fields with formatting set to "None".
+- Fixed a bug where there were errors on the frontend member registration page if custom date fields were on the form.
+- Fixed a bug on the frontend member profile editor where superadmins could properly see fields not included publically but their edits didn't 'stick'.
+- Fixed a bug (#23425) where file size limitation for uploads was not being enforced properly.
+- Fixed a bug where validation did not force selecting an heir when deleting a member and ‘Reassign’ entries was selected.
+- Fixed a bug where a PHP error could occur deleting a member who had entries if you chose to delete those entries too, resulting in the member not being deleted.
+
+
+Version 4.0.7
+-------------
+
+Release Date: January 19, 2018
+
+- Improved the OPcache conditional check to include opcache.restrict_api path restrictions so you don't get an anoying PHP error on oddly configured hosts.
+- Core version: Fixed a missing Spam module error in comment moderation.
+- Eliminated a PHP warning when deleting Grid fields that contain a Toggle column.
+- Fixed a bug where variable modifiers didn't work with option field value and label variables.
+- Fixed a bug (#23428) where one couldn't save a new Channel if there were more than eight existing Channels.
+- Fixed a bug (#23431) where some Relationship field settings may not appear to stick.
+
+
+Version 4.0.6
+-------------
+
+Release Date: January 16, 2018
+
+- Changed the location on the toggle arrow in the publish form, to better show which field it works on.
+- Tweaked spacing of section header
+- Fixed the Contact Us page in the default theme for the Core version.
+- Replaced fatal PHP error on PHP 7.1+ with a 404 page when fiddling around with some URLs in the control panel.
+- Fixed a bug where the channel form could fail to display for non-logged in members despite allowing guest posting.
+- Fixed a bug where the control panel may zoom when filling in forms on iOS.
+- Fixed a bug where Checkboxes or Multi Select fields may save their selections out of order.
+- Fixed a bug (#23397) where going to a member's publishing settings would show an error if the RTE wasn't installed.
+- Fixed a bug (#23400) where parsing custom category fields may not work in certain Channel module tags.
+- Fixed a bug (#23403) where the language in the "show" filter were not consistently pulled from language files.
+- Fixed a bug (#23404) where front-end template error messages might parse tag samples (``{exp:email:contact_form}``) as emoji short codes. Though the ``{exp✉️}`` module is pretty rad.
+- Fixed a bug (#23406) where some variables could not be used inside a Fluid field tag pair.
+- Fixed a bug (#23407) where the Member module's member list may show an error if an invalid ``memberlist_order_by`` is set.
+- Fixed a bug (#23408) where Channel Layouts got a bit dizzy and lightheaded and couldn't remember how you organized your fields.
+- Fixed a bug (#23409) where custom field tags inside a Relationship field may show errors if the custom field doesn't belong to the related entry's channel.
+- Fixed a bug (#23410) where the Auto Saved publish form tab was not appearing for new entries.
+- Fixed a bug (#23412) where errors may show when saving an empty Fluid field.
+- Fixed a bug (#23413) where the SMTP connection type option may have the wrong value selected.
+- Fixed a bug when "Enable emoticons?" is enabled, and an HTML entity is immediately followed by a closing parenthesis (``&entity;)`` would become ``&entity:wink:``)
+- Fixed a deprecation notice in the developer log for Fluid fields (#23418).
+
+
+Version 4.0.5
+-------------
+
+Release Date: January 09, 2018
+
+- Changed template selection UI for template routes to a dropdown.
+- Made toggle fields accessible to screen readers.
+- When editing a field, the groups the field is in now show as active in the field group navigation menu.
+- Fixed a bug (#23372) where adding a Grid row may also alter the markup of some third-party fieldtypes within the Grid.
+- Fixed a bug (#23368) where Grid variable modifiers may not render.
+- Fixed a bug (#23364) where the Member Import utility would not import data into custom fields.
+- Fixed a bug (#23376) where pressing the escape key to dismiss a modal may not always work.
+- Fixed a bug where a template with conditionals may show an error under PHP 7.2.
+- Fixed a bug where the filter on the Fluid field's Add button was not working.
+- Fixed a bug (#23380) where saving a category field without entering a name would show a PHP error.
+- Fixed a bug (#23380) where deleting a category group that has category fields may show an error.
+- Fixed a bug (#23379) where saving a channel saved in EE 3 may show an error regarding the search excerpt.
+- Fixed a bug (#23383) where the button text on the idle login modal may disappear.
+- Fixed a bug (#23391) where you may not be able to limit a File field to a specific upload directory in a Grid.
+- Fixed a bug (#23393) where applying a new field format to existing entries may fail.
+- Fixed a bug where multi-channel Channel Entry tags would sometimes show a PHP error.
+- Fixed a bug where Grid couldn't add new rows in Channel Form.
+- Fixed a bug in the manual updater where the displayed update step was actually one step behind what it was running.
+- Fixed a reference in the RSS module to the legacy Member "URL" field.
+- Fixed a SQL error in Channel Form when using Dropdown fields pre-populated by newly created custom fields.
+- Fixed a bug (#23375) where the Search and Replace utility was not saving Template changes to the filesystem.
+- Fixed a bug (#23384) where accented characters (ä, ö, ü, ß, etc.) in Channel or Field names were not being translated to their ascii equivalents (ae, oe, ue, ss, etc.).
+- Fixed a username length validation message (bug #23288).
+- Fixed a bug (#23388) where a validation error was wrongly triggered when editing a Metaweblog configuration.
+- Fixed a bug where a PHP error occurred when non-superadmins filtered the templates by a specific template group, even though they had permission to access the group.
+- Fixed a bug (#23386) where new fields were not always assigned to a group when using 'Save & New' to create multiple fields in a group.
+- Removed usage of PHP 7.2's deprecated ``each()`` function in the XSS library.
+- **Developers:** Fixed some erroneous, old, hand-written SQL references to field groups in the legacy API. You won't notice, because you're using ExpressionEngine's modern APIs.
+
+Version 4.0.4
+-------------
+
+Release Date: December 22, 2017
+
+- Fixed a PHP error in the Metaweblog control panel where it erroneously tried to use a field group id to populate the fields.
+- Fixed a PHP warning that could occur if you tried to update ExpressionEngine while unable to connect to the internet.
+- Fixed a bug (#23353) where it may not be clear which site a template belongs to in the Duplicate Template list.
+- Fixed a bug (#23354) where the first variable in a Layout list may not parse.
+- Fixed a bug (#23357) where the Entry Manager listing may load in the wrong scroll position in Firefox.
+- Fixed a bug (#23358) where Channels may have malformed category group associations saved to them.
+- Fixed a bug (#23360) where the `base_path` config override may not be applied in some cases.
+- Fixed a bug (#23365) where the 4.0.1 update routine may fail if there are orhpaned Channel layout records.
+- Fixed a bug (#23367) where the Search module may show an SQL error if the `search_in=` parameter was set.
+- Fixed a bug in the control panel member profile page, where the Avatar path was not correctly filtered for the current Site's preferences.
+- Fixed a bug where Channel preferences like "Render URLs and Email addresses as links?" were not respected in Relationship variables.
+- Fixed a bug where some third-party tables could cause an error when importing SQL backups made with the Database Backup utility.
+- Fixed a bug where submitting the channel form could show an error if the URL title field was not included on the form.
+- Fixed a bug where the Pages template dropdown may break if there is a numerically-named template group.
+- Fixed some PHP warnings in the Comment module when certain variables were accessed (e.g. ``{comment_url_title_auto_path}``)
+- **Developers:** Fixed a bug where the ``parseTagParameters()`` method returned an empty array rather than the default parameter array when there were no parameters set in the tag.
+
+
 Version 4.0.3
 -------------
 

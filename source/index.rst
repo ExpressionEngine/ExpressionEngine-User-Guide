@@ -60,13 +60,18 @@ The Back-End
 - :doc:`fieldtypes/index`
 
   - :doc:`fieldtypes/date`
+  - :doc:`fieldtypes/duration`
+  - :doc:`fieldtypes/email_address`
   - :doc:`fieldtypes/file`
+  - :doc:`fieldtypes/fluid`
   - :doc:`fieldtypes/grid`
   - :doc:`fieldtypes/relationships`
   - :doc:`fieldtypes/rte`
   - :doc:`fieldtypes/select`
   - :doc:`fieldtypes/text`
   - :doc:`fieldtypes/textarea`
+  - :doc:`fieldtypes/toggle`
+  - :doc:`fieldtypes/url`
 
 - :doc:`optimization/index`
 

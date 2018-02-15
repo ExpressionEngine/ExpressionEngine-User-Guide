@@ -778,6 +778,10 @@ not wish the template to display anything.
 search:field\_name=
 -------------------
 
+.. contents::
+   :local:
+   :depth: 1
+
 ::
 
 	search:body="pickles"
@@ -788,10 +792,7 @@ by using the field's short name immediately after "search:". You can
 search based on whether a field is an exact match to your provided term
 or whether or not a field simply contains your term.
 
-.. note:: Only fields of the type "Text Input", "Textarea", "Rich Text Editor",
-	"File", "Email Address", "Date", "URL", "Toggle", "Select Dropdown",
-	"Multi Select", "Checkboxes", "Radio Buttons" are searched with this
-	parameter.
+.. note:: Some fields store their content in a manner that affects the ability to work with this parameter. Grid fields, for instance, could only use this parameter for columns with "Include in search?" enabled.
 
 "Exact" Matching
 ~~~~~~~~~~~~~~~~
@@ -879,6 +880,22 @@ or less-than operators to search through them.
   search:numeric_field="<=20"
 
   search:numeric_field=">=20"
+
+You can also specify ranges to the search by piping your numeric match parameters. For all values between (and including) 20 through 30:
+
+.. code-block:: none
+
+  search:numeric_field='>=20|<=30'
+
+Or for all values *outside of* 20 through 30:
+
+.. code-block:: none
+
+  search:numeric_field='<20|>30'
+
+.. tip::
+
+  Numeric matching is also used for custom date fields. With date fields, search and filter using a `Unix timestamp <https://www.unixtimestamp.com>`__ (external link).
 
 Including / Excluding Empty Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
