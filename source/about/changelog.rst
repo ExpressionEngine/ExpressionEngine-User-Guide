@@ -5,6 +5,32 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.1.0
+-------------
+
+Release Date: ?
+
+- Added Live Preview to the Channel entry publish form.
+- Added Quick Edit to bulk options menu in Entry Manager.
+- Added Add Categories to bulk options menu in Entry Manager.
+- Added Remove Categories to bulk options menu in Entry Manager.
+- Security enhancement: Members are now emailed a confirmation when they change their password on the front end. See the new email notification template, "User — Password changed notification"
+- Added timestamp variables to the default date fields in the channel form for better date format compatibility in the datepicker.
+- Added tips to Email notification templates to better describe their purpose.
+- Improved header and breadcrumbs on the publish page for clarity and consistency.
+- Fixed a bug where Channel Entry notification emails were ignoring the Mail Format email preference.
+- Fixed a bug (#23399) where images with very large dimensions could cause a fatal PHP error when processing.
+- Fixed a bug (#23467) where fetching partial data from model wielded inconsistent results.
+- Fixed a bug (#23463) where EE may generate faulty ``CREATE TABLE`` syntax.
+- Fixed a bug where doing a keyword search containing dobule quotes could trigger invalid GET data errors.
+- Fixed a bug where duplicating templates would sometimes throw an error.
+- **Developers**
+
+  - Added docs for :ref:`Live Preview compatibilty <live_preview_compatibilty>`.
+  - Added a new alert style: ``tip``. See the documentation for details.
+  - Added a new :doc:`Memory service </development/services/memory>`.
+
+
 Version 4.0.9
 -------------
 
@@ -20,6 +46,7 @@ Release Date: February 5, 2018
 - Fixed a fatal PHP error when manually constructing Grid fields in a Channel Form (``{field:my_grid_field}`` is recommended over manual construction, incidentally).
 - Fixed the Channel URL setting for the Blog channel when installing the default theme.
 - Prevented a potential memory exhaustion error on the Profile page when you have hundreds of thousands of member records.
+
 
 Version 4.0.8
 -------------

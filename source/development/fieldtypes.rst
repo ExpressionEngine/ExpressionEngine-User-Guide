@@ -866,6 +866,8 @@ Here are the usage details for this function:
 A jQuery object of the field being affected by the current event is passed to
 the callback function.
 
+.. _live_preview_compatibilty:
+
 *************************
 Working with Live Preview
 *************************
