@@ -917,7 +917,7 @@ You may want to change your ``replace_tag()`` routine to format its data on the 
       return $data;
   }
 
-Live Preivew Javascript
+Live Preview Javascript
 =======================
 
 Live Preview automatically refreshes when HTML inputs, selects, and textareas
