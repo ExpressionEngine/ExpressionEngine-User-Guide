@@ -881,4 +881,4 @@ Live Preview automatically refreshes when HTML inputs, selects, and textareas
 are interacted with. If your fieldtype has Javascript interactions that then
 need to update the preview you'll need to use the following Javascript::
 
-  $('body').trigger('entry:preview');
+  $(document).trigger('entry:preview');
