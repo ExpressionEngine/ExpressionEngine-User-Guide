@@ -3,7 +3,7 @@ System Message Templates
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer --> Template Manager --> Messages`
+**Control Panel Location:** :menuselection:`Developer --> Templates --> Messages`
 
 .. Overview
 

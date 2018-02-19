@@ -103,7 +103,7 @@ may need to be updated, including:
 -  :menuselection:`Settings --> CAPTCHA`
 -  :menuselection:`Settings --> Content & Design`
 -  :menuselection:`Settings --> Avatars`
--  :menuselection:`Developer --> Channel Manager`
+-  :menuselection:`Developer --> Channels`
 -  :menuselection:`Files`
 
 You can also set many of these paths in your config.php file using

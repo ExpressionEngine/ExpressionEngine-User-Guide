@@ -3,7 +3,7 @@ Create/Edit Template Group
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer --> Template Manager --> New/Edit`
+**Control Panel Location:** :menuselection:`Developer --> Templates --> New/Edit`
 
 .. Overview
 
@@ -48,4 +48,4 @@ template groups be considered your site default page. This page will be
 shown if **only** the Template Group is specified in the URL. For
 example::
 
-	http://example.com/index.php/template_group/
+    http://example.com/index.php/template_group/

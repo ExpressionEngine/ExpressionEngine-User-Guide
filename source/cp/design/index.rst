@@ -3,7 +3,7 @@ Template Manager
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer --> Template Manager`
+**Control Panel Location:** :menuselection:`Developer --> Templates`
 
 .. Overview
 

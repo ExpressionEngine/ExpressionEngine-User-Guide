@@ -3,7 +3,7 @@ Template Variables
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer --> Template Variables`
+**Control Panel Location:** :menuselection:`Developer --> Templates --> Template Variables`
 
 .. Overview
 

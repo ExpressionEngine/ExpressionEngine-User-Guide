@@ -3,7 +3,7 @@ Edit Template
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer --> Template Manager --> Members --> Edit`
+**Control Panel Location:** :menuselection:`Developer --> Templates --> Members --> Edit`
 
 .. Overview
 
