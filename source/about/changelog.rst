@@ -10,7 +10,7 @@ Version 4.1.0
 
 Release Date: ?
 
-- Security enhancement: Members are now emailed a confirmation when they change their password. See the new email notification template, "User — Password changed notification"
+- Security enhancement: Members are now emailed a confirmation when when their password is changed. See the new email notification template, "User — Password changed notification"
 - Security enhancement: Members are now emailed a confirmation to their old address when their email is changed. See the new email notification template, "User — Email changed notification"
 - Added Live Preview to the Channel entry publish form.
 - Added Quick Edit to bulk options menu in Entry Manager.
