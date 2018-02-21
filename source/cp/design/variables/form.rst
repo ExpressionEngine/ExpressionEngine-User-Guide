@@ -3,7 +3,7 @@ Create/Edit Template Variable
 
 .. rst-class:: cp-path
 
-**Control Panel Location:** :menuselection:`Developer --> Template Variables --> New/Edit`
+**Control Panel Location:** :menuselection:`Developer --> Templates ->> Template Variables --> New/Edit`
 
 .. Overview
 

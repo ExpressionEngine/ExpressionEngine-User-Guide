@@ -4425,7 +4425,7 @@ $assign_to_config['template'] = 'index';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer --> Template Manager --> New/Edit`: Make the index template in
+**Also found in CP:** :menuselection:`Developer --> Templates --> New/Edit`: Make the index template in
 this group your site's home page?
 
 
@@ -4457,7 +4457,7 @@ $assign_to_config['template_group'] = 'site_2';
 
 .. rst-class:: cp-path
 
-**Also found in CP:** :menuselection:`Developer --> Template Manager --> New/Edit`: Make the index template in
+**Also found in CP:** :menuselection:`Developer --> Templates --> New/Edit`: Make the index template in
 this group your site's home page?
 
 
