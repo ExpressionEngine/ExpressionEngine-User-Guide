@@ -63,6 +63,7 @@ Format a number as currency.
 :Parameters:
 
   - **currency=** (default: USD) International currency code
+  - **decimals=** (default, standard for ICU locale) Decimal precision
   - **locale=** (default: en_US.UTF-8) The ICU locale ID
 
 .. note:: |PHP-intl-recommended|
