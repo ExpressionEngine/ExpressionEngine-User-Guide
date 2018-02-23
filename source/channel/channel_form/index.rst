@@ -173,6 +173,23 @@ Or use the alternative syntax. ::
     {/categories}
   </select>
 
+The following parameters are available as category_menu tag pairs:
+
+show=
+^^^^^
+
+::
+
+ 	{category_menu show="4|7"}
+
+show_group=
+^^^^^^^^^^^^
+
+::
+
+ 	{category_menu show_group="1|3"}
+
+
 Categories Tag Pair Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -213,8 +230,6 @@ show_group=
 You may alternatively specify which category groups to not show::
 
 	{categories show_group="not 2|4"}
-
-
 
 
 The following variables are available inside the Category Menu and Categories
