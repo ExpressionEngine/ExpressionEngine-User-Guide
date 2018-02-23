@@ -52,7 +52,7 @@ This indicates whether or not your site is "live" and displayed to the public.
 If you set this preference to "Offline" only members of the Super Admin group,
 and all groups with the "Offline" Website Access permission, will be able to
 see the site. All other users will be shown the System Offline page, which you
-can edit at :menuselection:`Developer --> Template Manager --> Messages
+can edit at :menuselection:`Developer --> Templates --> Messages
 --> System Offline`.
 
 .. _general-config-new-version-label:

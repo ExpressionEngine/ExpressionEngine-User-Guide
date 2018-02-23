@@ -1,10 +1,17 @@
-######
-jQuery
-######
+###################
+jQuery (Deprecated)
+###################
+
+.. warning:: This module has been deprecated and will be removed in the next version of ExpressionEngine. Instead, include jQuery in your templates from any reputable CDN, such as:
+
+  - `<http://code.jquery.com>`_
+  - `<https://cdnjs.com/libraries/jquery/>`_
+  - `<https://developers.google.com/speed/libraries/#jquery>`_
+  - `<https://www.jsdelivr.com/package/npm/jquery>`_
 
 .. contents::
    :local:
-   :depth: 2
+   :depth: 1
 
 ************
 Introduction
@@ -27,9 +34,9 @@ resource.::
 	{exp:jquery:script_tag}
 
 When used as above, with no tag parameters, the outputted tag will
-request the main jQuery file, e.g.:
-<script type="text/javascript" charset="utf-8"
-src="http://example.com/index.php?ACT=jquery"></script>
+request the main jQuery file, e.g.::
+
+  <script type="text/javascript" charset="utf-8" src="http://example.com/index.php?ACT=jquery"></script>
 
 The following tag parameters allow you to request tags for specific
 jQuery resources.
@@ -50,8 +57,9 @@ plugin=
 The name of the requested plugin. Note that the 'js' file extension is
 not used, just the name of the plugin.
 
-Output example: <script type="text/javascript" charset="utf-8"
-src="http://example.com/index.php?ACT=jquery&amp;plugin=corner"></script>
+Output example::
+
+  <script type="text/javascript" charset="utf-8" src="http://example.com/index.php?ACT=jquery&amp;plugin=corner"></script>
 
 ui=
 ---
@@ -64,8 +72,9 @@ The name of the requested UI Widget/Interaction. Note that the 'ui'
 prefix and 'js' file extension is not used, just the name of the UI
 item.
 
-Output example:<script type="text/javascript" charset="utf-8"
-src="http://example.com/index.php?ACT=jquery&amp;ui=datepicker"></script>
+Output example::
+
+  <script type="text/javascript" charset="utf-8" src="http://example.com/index.php?ACT=jquery&amp;ui=datepicker"></script>
 
 Before using jQuery UI effects you must first call the jQuery UI Core::
 
@@ -81,8 +90,9 @@ effect=
 The name of the requested UI Effect. Note that the 'effect' prefix and
 'js' file extension is not used, just the name of the UI Effect.
 
-Output example: <script type="text/javascript" charset="utf-8"
-src="http://example.com/index.php?ACT=jquery&amp;effect=slide"></script>
+Output example::
+
+  <script type="text/javascript" charset="utf-8" src="http://example.com/index.php?ACT=jquery&amp;effect=slide"></script>
 
 file=
 -----
@@ -94,8 +104,9 @@ file=
 The name of the requested non-jQuery file. Outputs a URL to a JavaScript
 file in the main javascript folder in ExpressionEngine's system folder.
 
-Output example: <script type="text/javascript" charset="utf-8"
-src="http://example.com/index.php?ACT=jquery&amp;file=foo"></script>
+Output example::
+
+  <script type="text/javascript" charset="utf-8" src="http://example.com/index.php?ACT=jquery&amp;file=foo"></script>
 
 *****************
 Script Source Tag
@@ -107,7 +118,7 @@ The Script Source tag outputs a URL to the requested jQuery resource. ::
 
 When used as above, with no tag parameters, the outputted URL will
 request the main jQuery file, e.g.
-http://example.com/index.php?ACT=jquery. The following tag parameters
+``http://example.com/index.php?ACT=jquery``. The following tag parameters
 allow you to request URLs to specific jQuery resources.
 
 Parameters
@@ -126,8 +137,9 @@ plugin=
 The name of the requested plugin. Note that the 'js' file extension is
 not used, just the name of the plugin.
 
-Output example:
-http://example.com/index.php?ACT=jquery&amp;plugin=corner
+Output example::
+
+  http://example.com/index.php?ACT=jquery&amp;plugin=corner
 
 ui=
 ---
@@ -140,7 +152,9 @@ The name of the requested UI Widget/Interaction. Note that the 'ui'
 prefix and 'js' file extension is not used, just the name of the UI
 item.
 
-Output example: http://example.com/index.php?ACT=jquery&amp;ui=datepicker
+Output example::
+
+  http://example.com/index.php?ACT=jquery&amp;ui=datepicker
 
 effect=
 -------
@@ -152,7 +166,9 @@ effect=
 The name of the requested UI Effect. Note that the 'effect' prefix and
 'js' file extension is not used, just the name of the UI Effect.
 
-Output example: http://example.com/index.php?ACT=jquery&amp;effect=slide
+Output example::
+
+  http://example.com/index.php?ACT=jquery&amp;effect=slide
 
 file=
 -----
@@ -164,7 +180,9 @@ file=
 The name of the requested non-jQuery file. Outputs a URL to a JavaScript
 file in the main javascript folder in ExpressionEngine's system folder.
 
-Output example: http://example.com/index.php?ACT=jquery&amp;file=foo
+Output example::
+
+  http://example.com/index.php?ACT=jquery&amp;file=foo
 
 *********************
 Output JavaScript Tag

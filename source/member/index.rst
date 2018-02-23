@@ -47,8 +47,7 @@ to change the look. You'll find the templates located at::
   themes/ee/member/default/
 
 These templates can be edited with a text editor, or you may choose to edit
-them via your Control Panel at :menuselection:`Developer --> Template
-Manager --> Members`
+them via your Control Panel at :menuselection:`Developer --> Templates --> Members`
 
 A good strategy is to make a copy of the entire **default** templates folder,
 then edit your copy so you can leave the **default** files intact. Save your new copy to::

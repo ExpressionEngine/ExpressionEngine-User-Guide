@@ -4,10 +4,10 @@ Hit Counters
 Every time a template is accessed a counter is incremented. To display
 the number of hits, put the following variable in any template::
 
-	{hits}
+    {hits}
 
 The hit count for each template can be manually altered in the
-template's preferences under :menuselection:`Developer --> Template Manager`.
+template's preferences under :menuselection:`Developer --> Templates`.
 
 Entry "View" Tracking
 ---------------------
