@@ -86,16 +86,17 @@ typically something similar to /home/domain.com/http\_docs/images/captchas/.
 The specific setting will vary from server to server so you may need to contact
 your Host or server admin to determine what your correct "server path" is.
 
-Special CAPTCHA Files
----------------------
+CAPTCHA Words
+-------------
 
-The CAPTCHA system uses a couple of special files inside the system folder:
+The CAPTCHA system uses a default dictionary. You can override these by adding a special user config file and returning an array of words you want to use instead. Create a PHP file at ``system/user/config/captcha.php`` with the format::
 
-#. ``system/ee/legacy/fonts/texb.ttf`` - This is the True Type Font
-   that the CAPTCHA system will use in order to create the image files
-   correctly. You should **not** alter this file.
-#. ``system/ee/legacy/config/captcha.php`` - The list of words from
-   which the CAPTCHAs will be chosen. You may alter the list, but you
-   need to ensure that you don't reduce the total number of available
-   words.
+  <?php
+
+  return [
+    'your',
+    'words',
+    'here',
+    /* ... */
+  ];
 
