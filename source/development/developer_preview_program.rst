@@ -116,7 +116,6 @@ and encourage them to join!
 - Elliot Lewis (no two the same)
 - Emily Fitton (Punch Buggy Digital Agency)
 - Eric Lamb
-- Erik Reagan
 - Erwin van Lun
 - Filip Quivreux
 - Filip Vanderstappen
