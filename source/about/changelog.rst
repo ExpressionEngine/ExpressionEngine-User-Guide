@@ -12,11 +12,14 @@ Release Date: ?
 
 - Security enhancement: Members are now emailed a confirmation when when their password is changed. See the new email notification template, "User — Password changed notification"
 - Security enhancement: Members are now emailed a confirmation to their old address when their email is changed. See the new email notification template, "User — Email changed notification"
+- Security: Fixed a bug where new template access restrictions redirects were saved incorrectly.
 - Added Live Preview to the Channel entry publish form.
-- Added Quick Edit to bulk options menu in Entry Manager.
+- Added Bulk Edit to bulk options menu in Entry Manager.
 - Added Add Categories to bulk options menu in Entry Manager.
 - Added Remove Categories to bulk options menu in Entry Manager.
 - Added timestamp variables to the default date fields in the channel form for better date format compatibility in the datepicker.
+- Added the ``show`` and ``show_group`` parameters to the channel form's ``category_menu`` tag (see bug #23459).
+- Altered the behavior of template access restrictions so redirecting to a template that is restricted results in a 404.
 - Added tips to Email notification templates to better describe their purpose.
 - Improved header and breadcrumbs on the publish page for clarity and consistency.
 - Fixed a bug (#23399) where images with very large dimensions could cause a fatal PHP error when processing.
@@ -24,14 +27,19 @@ Release Date: ?
 - Fixed a bug (#23467) where fetching partial data from model wielded inconsistent results.
 - Fixed a bug (#23476) where the control panel allowed assigning illegal category relationships.
 - Fixed a bug (#23482) where creating a field with value/label pairs would create an extra empty pair.
+- Fixed a bug (#23494) where sorting templates in the Template Manager by "hits" resulted in PHP error.
 - Fixed a bug where Channel Entry notification emails were ignoring the Mail Format email preference.
 - Fixed a bug where doing a keyword search containing dobule quotes could trigger invalid GET data errors.
 - Fixed a bug where duplicating templates would sometimes throw an error.
 - Fixed a bug where some member fields didn't parse in the member templates.
 - Fixed a bug where a period would appear in empty toolbar cells.
 - Fixed a bug where repeat grid tags in a template could throw PHP errors.
+- Fixed a bug where phantom validation erorrs appeared on Grids with required columns in Fluid fields.
 - Fixed a bug where member custom field conditionals did not parse on the member profile page.
 - Fixed a bug where some private message pages failed to display in the frontend member pages.
+- Fixed a bug where template access redirect options were not 'ajaxified'.
+- Fixed a bug where template debugging wasn't showing for superadmins 'logged in' as non-superadmins.
+- Fixed a bug where a PHP error occured when submitting a channel form with a category tag pair on it and no category selected.
 - **Developers**
 
   - Added docs for :ref:`Live Preview compatibilty <live_preview_compatibilty>`.

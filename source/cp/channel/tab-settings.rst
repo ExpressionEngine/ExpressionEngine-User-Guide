@@ -75,13 +75,15 @@ RSS feed
 The URL where you can view the RSS feed for this channel. For example:
 http://example.com/index.php/channel/rss_2.0
 
-Live Look template
-~~~~~~~~~~~~~~~~~~
+Preview URL
+~~~~~~~~~~~
 
-The template that will be used for a Live Look at your entries. Links
-are available on the main Edit section of the control panel and will use the format site_url/template_group/template_name/entry_id.
-If you do not want to use a Live Look Template with a channel, simply
-set this preference to "No Live Look Template".
+The template path, or route, to use for previewing entries in this Channel. You
+can use the variables ``{entry_id}`` and ``{url_title}`` which will be replaced
+with the entry's ID or URL Title when rendering your template.
+For example: ``blog/entry/{url_title}``
+
+.. note:: If an Entry has a Page URI it will be used instead of the Preview URL for the channel.
 
 Generated title
 ~~~~~~~~~~~~~~~
@@ -341,5 +343,3 @@ When this option is set to "Yes", any full URLs or email addresses will
 be automatically formatted as a valid HTML link to the address. If the
 option is "No" then the URL or email address will be treated and
 displayed as plain text.
-
-
