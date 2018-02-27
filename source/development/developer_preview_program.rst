@@ -80,7 +80,6 @@ and encourage them to join!
 - Andrew Weaver
 - Anthony Mellor (Climbing Turn)
 - Ben Croker
-- Benjamin Kohl (Masuga Design)
 - Benoit Marchal
 - Berry Timmermans
 - Bjørn Børresen
@@ -204,7 +203,6 @@ and encourage them to join!
 - Roger Huges (Triad)
 - Ryan Bonnell
 - Ryan Irelan
-- Ryan Masuga
 - Sam Lomax
 - Satya Prakash
 - Scott Henderson
