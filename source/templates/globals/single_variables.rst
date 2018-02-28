@@ -419,6 +419,25 @@ total\_queries
 
 The total number of database queries used to generate the current page.
 
+.. _global_variable_time:
+
+variable_time
+-------------
+
+::
+
+  {variable_time}
+
+This variable accepts a date parameter in the form of a human readable date, including :ref:`relative_dates`.
+
+In the case of relative dates, the date is relative to the current user's localized time.  If no date is specified, the tag works just like the ``{current_time}`` variable.
+
+As with other date variables, you can use the standard :doc:`date variable formatting</templates/date_variable_formatting>`::
+
+  {variable_time date="2 days ago" format="%Y %m %d %H:%i:%s"}
+
+.. note:: Like the ``{current_time}`` variable, ``{variable_time}`` is parsed very early on in the Template parser, allowing it to be used as a tag parameter.
+
 webmaster\_email
 ----------------
 
