@@ -20,7 +20,7 @@ Release Date: March 1, 2018
 
   - Added Live Preview!
   - Fully responsive, mobile and desktop friendly. Just click "Preview" from the publish form to get started.
-  - See change in real-time *prior* to publishing.
+  - See changes in real-time *prior* to publishing.
   - Works with all native field types.
   - Most third-party fields work out-of-the-box, others may need to make minor changes. Developers, see :ref:`Live Preview compatibilty <live_preview_compatibility>` for details.
   - Fully compatible with the Pages module.
