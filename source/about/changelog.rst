@@ -28,7 +28,7 @@ Release Date: March 1, 2018
 
 - **Powerful Bulk Editing**
 
-  - Added Bulk Edit to bulk options menu in Entry Manager.
+  - Added Bulk Edit to bulk action menu in the Entry Manager.
   - Intuitive entry selection and filtering gives you confidence in precision of your bulk edits.
   - Make mass changes on the fly to:
 
