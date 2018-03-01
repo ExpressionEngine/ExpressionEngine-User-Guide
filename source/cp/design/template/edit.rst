@@ -112,7 +112,7 @@ Choose which member groups are allowed to access the template.
 No access redirect
 ^^^^^^^^^^^^^^^^^^
 
-Page to redirect users without permissions to.
+Page to redirect users without permissions to.  If a template is selected the user does not have access to, the 404 page will be displayed instead.
 
 Enable HTTP Authentication?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^

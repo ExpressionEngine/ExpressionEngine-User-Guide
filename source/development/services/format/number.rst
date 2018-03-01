@@ -94,6 +94,7 @@ API Reference
   :param array $options:
 
     - (string) **currency** code (USD, EUR, etc.)
+    - (string) **decimals** decimal precision (default based on locale)
     - (string) **locale** (default: en_US.UTF-8)
 
   :returns: A Formatter object
