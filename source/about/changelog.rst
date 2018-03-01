@@ -79,7 +79,7 @@ Release Date: March 1, 2018
 - **Developers** 💻
 
   - Added docs for :ref:`Live Preview compatibilty <live_preview_compatibility>`.
-  - Added a new alert style: ``tip``. See the documentation for details.
+  - Added a new alert style: ``tip``. See the ``asTip()`` method in the :doc:`/development/services/alert` documentation.
   - Added a new :doc:`Memory service </development/services/memory>`.
   - Added ``decimals`` option to the :doc:`Currency Number formatter </development/services/format/number>` so you can override decimal precision.
 
