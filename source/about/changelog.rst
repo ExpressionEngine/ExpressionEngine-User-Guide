@@ -55,7 +55,7 @@ Release Date: March 1, 2018
 - **Bug Fixes** 💃🐛
 
   - Fixed a bug (#23278) in the frontend member settings where localization could not be set to use the default and changes to the 'show seconds' preference didn't stick.
-  - Fixed a bug (#23287) where the Channel options on the control panel homepage redirect settings were not properly limited for uperadmins viewing non-superadmin profiles.
+  - Fixed a bug (#23287) where the Channel options on the control panel homepage redirect settings were not properly limited for Super Admins viewing non-Super Admin profiles.
   - Fixed a bug (#23399) where images with very large dimensions could cause a fatal PHP error when processing.
   - Fixed a bug (#23463) where EE may generate faulty ``CREATE TABLE`` syntax.
   - Fixed a bug (#23467) where fetching partial data from model wielded inconsistent results.
