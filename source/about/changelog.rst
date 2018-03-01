@@ -10,13 +10,13 @@ Version 4.1.0
 
 Release Date: March 1, 2018
 
-- **Security**
+- **Security** 🔒
 
   - Members are now emailed a confirmation when when their password is changed. See the new email notification template, "User — Password changed notification"
   - Members are now emailed a confirmation to their old address when their email is changed. See the new email notification template, "User — Email changed notification"
   - Fixed a bug where new Template Access restrictions redirects were saved incorrectly.
 
-- **Live Preview 🍾🎉**
+- **Live Preview** 🍾🎉
 
   - Added Live Preview!
   - Fully responsive, mobile and desktop friendly. Just click "Preview" from the publish form to get started.
@@ -26,7 +26,7 @@ Release Date: March 1, 2018
   - Fully compatible with the Pages module.
   - Replaces "Live Look" methodology. To enable for a Channel, just set a Preview URL in the :doc:`/cp/channel/tab-settings`.
 
-- **Powerful Bulk Editing**
+- **Powerful Bulk Editing** ✏️✏️✏️
 
   - Added Bulk Edit to bulk action menu in the Entry Manager.
   - Intuitive entry selection and filtering gives you confidence in precision of your bulk edits.
@@ -42,7 +42,7 @@ Release Date: March 1, 2018
   - You can now add categories to entries without destroying their existing category selections, via the new "Add Categories" bulk action in the Entry Manager.
   - You can also remove categories from entries intuitively, without affecting their other individual categories, via the new "Remove Categories" bulk action in the Entry Manager.
 
-- **General Changes**
+- **General Changes** 🆕
 
   - Added ``{entry_timestamp}`` ``{expiration_timestamp}``, and ``{comment_expiration_timestamp}`` variables to Channel Form for better compatibility with the datepicker. See :doc:`/channel/channel_form/index` for details.
   - Added the ``show=`` and ``show_group=`` parameters to Channel Form's ``{category_menu}`` variable pair (see bug #23459).
@@ -52,7 +52,7 @@ Release Date: March 1, 2018
   - Added "Save & New" and "Save & Close" buttons throughout the CP.
   - Improved header and breadcrumbs on the publish page for clarity and consistency.
 
-- **Bug Fixes**
+- **Bug Fixes** 💃🐛
 
   - Fixed a bug (#23278) in the frontend member settings where localization could not be set to use the default and changes to the 'show seconds' preference didn't stick.
   - Fixed a bug (#23287) where the Channel options on the control panel homepage redirect settings were not properly limited for Super Admins viewing non-Auper Admin profiles.
@@ -76,7 +76,7 @@ Release Date: March 1, 2018
   - Fixed a bug where a PHP error occured when submitting a Channel Form with a category tag pair on it and no category selected.
   - Fixed a PHP error on the frontend member public profile page.
 
-- **Developers**
+- **Developers** 💻
 
   - Added docs for :ref:`Live Preview compatibilty <live_preview_compatibility>`.
   - Added a new alert style: ``tip``. See the documentation for details.
