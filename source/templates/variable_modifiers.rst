@@ -60,6 +60,10 @@ Format a number as currency.
   {cost:currency currency='EUR' locale='de_DE'}
   {!-- 142,73 € --}
 
+  {cost:currency decimals='0'}
+  {!-- $399,000 --}
+
+
 :Parameters:
 
   - **currency=** (default: USD) International currency code
