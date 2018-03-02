@@ -12,7 +12,7 @@ Release Date: March 2, 2018
 
 - Fixed a bug (#23502) on iOS devices where the preview side of Live Preview refused to scroll.
 - Fixed a bug when clicking the Live Preview button from the Entry Manager you might see a "phantom" row in the preview of your Grid fields until you start editing. 👻🔦
-- Fixed a bug where Relationshps inside a Grid inside a Fluid field didn't want to be previewed.
+- Fixed a bug where Relationships inside a Grid inside a Fluid field didn't want to be previewed.
 - Fixed a bug where autosave notices stacked.
 - Made Live Preview modal text translateable.
 
