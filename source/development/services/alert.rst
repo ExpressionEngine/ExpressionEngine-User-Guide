@@ -110,7 +110,7 @@ Alert Object Methods
 
 .. method:: asTip()
 
-  Marks the alert as a tip alert.
+  Marks the alert as a tip alert. This should be used very sparingly, if at all. For instance, in the entire application, it is **only** used natively in the Email Notification templates, to advise the site builder of what variables are available to the template without having to look in the documentation.
 
   :returns: $this
   :rtype: Alert
