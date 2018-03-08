@@ -11,10 +11,7 @@ Introduction
 ************
 
 The Channel Form makes it possible to add and edit entries from outside
-of the Control Panel using a regular form inside a template. Thank you
-to `Barrett Newton <http://barrettnewton.com/>`_ for developing the
-original (under the name of SafeCracker) and working with EllisLab to
-provide it to the ExpressionEngine community.
+of the Control Panel using a regular form inside a template.
 
 - Allows guest (logged out) users to use the entry form, with optional
   CAPTCHA support.
@@ -28,9 +25,7 @@ provide it to the ExpressionEngine community.
 - Specify a default status, or set forms to override default statuses.
 - Specify different return URLs for different member groups by the
   group\_id. Send visitors to one page, and admins to another.
-- Server-side form validation using the :ellislab:`CodeIgniter Form
-  Validation class
-  </codeigniter/user-guide/libraries/form_validation.html>`.
+- Server-side validation.
 - Handles AJAX requests and can output responses in JSON.
 
 .. versionchanged:: 2.7
@@ -512,13 +507,11 @@ rules:my\_field\_name=
   rules:my_field_name="required|min_length[5]"
 
 Add additional validation rules to your fields. Separate multiple rules
-with the pipe \| character. You may use the native :ellislab:`CodeIgniter
-rules </codeigniter/user-guide/libraries/form_validation.html#rulereference>`
+with the pipe \| character. You may use any of these rules:
 (required, matches, min\_length, max\_length, exact\_length, alpha,
 alpha\_numeric, alpha\_dash, numeric, integer, is\_natural,
-is\_natural\_no\_zero, valid\_email, valid\_emails, valid\_ip,
-valid\_base64), and these additional ExpressionEngine-specific rules:
-valid\_ee\_date.
+is\_natural\_no\_zero, valid\_ee\_date, valid\_email, valid\_emails, valid\_ip,
+valid\_base64).
 
 .. _channel_form_rte_selector:
 
@@ -925,10 +918,8 @@ can display the number field-related entry submission errors.
 Form Validation
 ---------------
 
-Channel Form uses the CodeIgniter Form Validation class. You can create
-field-by-field `validation rules <#rules-my-field-name>`_. By default,
-validaiton errors will be displayed using the ExpressionEngine user
-message template. If you prefer, you can also use `inline error handling
+By default, validation errors will be displayed using the User
+Message Template. If you prefer, you can also use `inline error handling
 <#error-handling>`_ to display form validation errors in the
 context of your form.
 

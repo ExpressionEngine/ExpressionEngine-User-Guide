@@ -5,6 +5,98 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.1.1
+-------------
+
+Release Date: March 2, 2018
+
+- Fixed a bug (#23502) on iOS devices where the preview side of Live Preview refused to scroll.
+- Fixed a bug when clicking the Live Preview button from the Entry Manager you might see a "phantom" row in the preview of your Grid fields until you start editing. 👻🔦
+- Fixed a bug where Relationshps inside a Grid inside a Fluid field didn't want to be previewed.
+- Fixed a bug where autosave notices stacked.
+- Made Live Preview modal text translateable.
+
+
+Version 4.1.0
+-------------
+
+Release Date: March 1, 2018
+
+- **Security** 🔒
+
+  - Members are now emailed a confirmation when when their password is changed. See the new email notification template, "User — Password changed notification"
+  - Members are now emailed a confirmation to their old address when their email is changed. See the new email notification template, "User — Email changed notification"
+  - Fixed a bug where new Template Access restrictions redirects were saved incorrectly.
+
+- **Live Preview** 🍾🎉
+
+  - Added Live Preview!
+  - Fully responsive, mobile and desktop friendly. Just click "Preview" from the publish form to get started.
+  - See changes in real-time *prior* to publishing.
+  - Works with all native field types.
+  - Most third-party fields work out-of-the-box, others may need to make minor changes. Developers, see :ref:`Live Preview compatibilty <live_preview_compatibility>` for details.
+  - Fully compatible with the Pages module.
+  - Replaces "Live Look" methodology. To enable for a Channel, just set a Preview URL in the :doc:`/cp/channel/tab-settings`.
+
+- **Powerful Bulk Editing** ✏️✏️✏️
+
+  - Added Bulk Edit to bulk action menu in the Entry Manager.
+  - Intuitive entry selection and filtering gives you confidence in the precision of your bulk edits.
+  - Make mass changes on the fly to:
+
+    + Status
+    + Expiration Date
+    + Sticky
+    + Author
+    + Allow comments?
+    + Comment expiration date
+
+  - You can now add categories to entries without destroying their existing category selections, via the new "Add Categories" bulk action in the Entry Manager.
+  - You can also remove categories from entries intuitively, without affecting their other individual categories, via the new "Remove Categories" bulk action in the Entry Manager.
+
+- **General Changes** 🆕
+
+  - Added ``{entry_timestamp}`` ``{expiration_timestamp}``, and ``{comment_expiration_timestamp}`` variables to Channel Form for better compatibility with the datepicker. See :doc:`/channel/channel_form/index` for details.
+  - Added the ``show=`` and ``show_group=`` parameters to Channel Form's ``{category_menu}`` variable pair (see bug #23459).
+  - Added ``decimals`` parameter to the :doc:`Currency modifier </templates/variable_modifiers>` so you can override decimal precision, including ``decimals='0'`` to display whole numbers only.
+  - Altered the behavior of Template Access restrictions so redirecting to a template that is restricted results in a 404.
+  - Added tips to Email notification templates to better describe their purpose.
+  - Added "Save & New" and "Save & Close" buttons throughout the CP.
+  - Improved header and breadcrumbs on the publish page for clarity and consistency.
+
+- **Bug Fixes** 💃🐛
+
+  - Fixed a bug (#23278) in the frontend member settings where localization could not be set to use the default and changes to the 'show seconds' preference didn't stick.
+  - Fixed a bug (#23287) where the Channel options on the control panel homepage redirect settings were not properly limited for Super Admins viewing non-Super Admin profiles.
+  - Fixed a bug (#23399) where images with very large dimensions could cause a fatal PHP error when processing.
+  - Fixed a bug (#23463) where EE may generate faulty ``CREATE TABLE`` syntax.
+  - Fixed a bug (#23467) where fetching partial data from model wielded inconsistent results.
+  - Fixed a bug (#23476) where the control panel allowed assigning illegal category relationships.
+  - Fixed a bug (#23482) where creating a field with value/label pairs would create an extra empty pair.
+  - Fixed a bug (#23494) where sorting templates in the Template Manager by "hits" resulted in PHP error.
+  - Fixed a bug where Channel Entry notification emails were ignoring the Mail Format email preference.
+  - Fixed a bug where doing a keyword search containing double quotes could trigger invalid GET data errors.
+  - Fixed a bug where duplicating templates would sometimes throw an error.
+  - Fixed a bug where some member fields didn't parse in the member templates.
+  - Fixed a bug where a period would appear in empty toolbar cells.
+  - Fixed a bug where repeat grid tags in a template could throw PHP errors.
+  - Fixed a bug where phantom validation erorrs appeared on Grids with required columns in Fluid fields.
+  - Fixed a bug where member custom field conditionals did not parse on the member profile page.
+  - Fixed a bug where some private message pages failed to display in the frontend member pages.
+  - Fixed a bug where template access redirect options were not 'Ajaxified'.
+  - Fixed a bug where template debugging wasn't showing for Super Admins 'logged in' as non-Super Admins.
+  - Fixed a bug where a PHP error occured when submitting a Channel Form with a category tag pair on it and no category selected.
+  - Fixed a PHP error on the frontend member public profile page.
+
+- **Developers** 💻
+
+  - Added docs for :ref:`Live Preview compatibilty <live_preview_compatibility>`.
+  - Added a new alert style: ``tip``. See the ``asTip()`` method in the :doc:`/development/services/alert` documentation.
+  - Added a new :doc:`Memory service </development/services/memory>`.
+  - Added ``decimals`` option to the :doc:`Currency Number formatter </development/services/format/number>` so you can override decimal precision.
+
+
+
 Version 4.0.9
 -------------
 
@@ -20,6 +112,7 @@ Release Date: February 5, 2018
 - Fixed a fatal PHP error when manually constructing Grid fields in a Channel Form (``{field:my_grid_field}`` is recommended over manual construction, incidentally).
 - Fixed the Channel URL setting for the Blog channel when installing the default theme.
 - Prevented a potential memory exhaustion error on the Profile page when you have hundreds of thousands of member records.
+
 
 Version 4.0.8
 -------------

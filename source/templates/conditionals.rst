@@ -31,7 +31,7 @@ languages. Some examples:
   {if (age + 5) == 100}Five years to go!{/if}
 
   {!-- Logical operators --}
-  {if age == 30 and username == 'Bob'}Welcome back, Bob. 30 is the new 20.{/if}
+  {if age == 30 AND username == 'Bob'}Welcome back, Bob. 30 is the new 20.{/if}
 
   {!-- Branching --}
   {if age == 30}

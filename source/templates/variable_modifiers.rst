@@ -60,9 +60,14 @@ Format a number as currency.
   {cost:currency currency='EUR' locale='de_DE'}
   {!-- 142,73 € --}
 
+  {cost:currency decimals='0'}
+  {!-- $399,000 --}
+
+
 :Parameters:
 
   - **currency=** (default: USD) International currency code
+  - **decimals=** (default, standard for ICU locale) Decimal precision
   - **locale=** (default: en_US.UTF-8) The ICU locale ID
 
 .. note:: |PHP-intl-recommended|

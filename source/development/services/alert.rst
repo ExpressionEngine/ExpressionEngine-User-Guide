@@ -101,16 +101,25 @@ Alert Object Methods
   :returns: $this
   :rtype: Alert
 
-.. method:: asWarning()
+.. method:: asSuccess()
 
-  Marks the alert as a warning alert.
+  Marks the alert as a success alert.
 
   :returns: $this
   :rtype: Alert
 
-.. method:: asSuccess()
+.. method:: asTip()
 
-  Marks the alert as a success alert.
+  Marks the alert as a tip alert. This should be used very sparingly, if at all. For instance, in the entire application, it is **only** used natively in the Email Notification templates, to advise the site builder of what variables are available to the template without having to look in the documentation.
+
+  :returns: $this
+  :rtype: Alert
+
+  .. versionadded:: 4.1.0
+
+.. method:: asWarning()
+
+  Marks the alert as a warning alert.
 
   :returns: $this
   :rtype: Alert
