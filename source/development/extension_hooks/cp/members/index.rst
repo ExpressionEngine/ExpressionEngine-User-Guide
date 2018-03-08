@@ -42,7 +42,6 @@ cp_members_member_create
   :rtype: Void
 
   .. versionadded:: 1.4.0
-    Notes about addition
 
 cp_members_member_delete_end
 ----------------------------
