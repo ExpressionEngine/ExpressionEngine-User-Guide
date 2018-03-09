@@ -49,3 +49,11 @@ shown if **only** the Template Group is specified in the URL. For
 example::
 
     http://example.com/index.php/template_group/
+
+Allowed member groups
+~~~~~~~~~~~~~~~~~~~~~
+
+Specify which member groups can manage templates in this group.  The specific priveleges the group(s) have are determined by the
+:doc:`member group settings </cp/members/groups/form>`.  This option is only available if the administrator's member group has permission
+to administrate member group settings.
+
