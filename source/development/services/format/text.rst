@@ -142,6 +142,19 @@ URL Encode
   $text = ee('Format')->make('Text', $str)->urlEncode(['plus_encoded_spaces' => TRUE]);
   // A+discussion+about+%22Wonko+the+Sane%22
 
+URL Normalization
+-----------------
+
+::
+
+  $str = 'www.example.com';
+  $url = ee('Format')->make('Text', $str)->url();
+  // http://www.example.com
+
+  $str = 'https://';
+  $url = ee('Format')->make('Text', $str)->url();
+  // empty string, URL is invalid
+
 URL Slug
 --------
 
@@ -276,6 +289,13 @@ API Reference
     - (string) **replace** - the replacement text
     - (bool) **case_sensitive** (default: TRUE) - whether or not the replacement is case-sensitive (has no effect if regex replacement is used, in those cases use the ``i`` regex flag)
     - (bool) **regex** (default: FALSE) - whether the find string should be processed as a regex replacement
+
+  :returns: A Formatter object
+  :rtype: object
+
+.. method:: url()
+
+  Normalize a URL for use in markup.
 
   :returns: A Formatter object
   :rtype: object
