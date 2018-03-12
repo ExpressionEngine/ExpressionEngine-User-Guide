@@ -43,7 +43,7 @@ The Emoticon module has been replaced with the Emoji module. The Emoticon module
 Reserved Word Additions
 =======================
 
-- ``content`` is now a reserved word and will conflict with your Fluid Fields. Rename the field(s) and update your templates accordingly.
+- ``content`` is now a reserved word and will conflict with your Fluid Fields. If you havee a custom field name ``content``, please rename the field(s) and update your templates accordingly.
 
 =============
 Other Changes
