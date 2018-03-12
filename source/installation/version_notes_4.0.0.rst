@@ -39,6 +39,12 @@ Emoticon Module
 
 The Emoticon module has been replaced with the Emoji module. The Emoticon module will be removed in ExpressionEngine 5, so you will want to replace your ``{exp:emoticon}`` tags with ``{exp:emoji:emoji_list}`` tags. The Emoji module's tags are vastly superior to the old Emoticon module. Please see the :doc:`/add-ons/emoji/index` module documentation for details.
 
+=======================
+Reserved Word Additions
+=======================
+
+- ``content`` is now a reserved word and will conflict with your Fluid Fields. Rename the field(s) and update your templates accordingly.
+
 =============
 Other Changes
 =============
