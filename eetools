@@ -24,9 +24,13 @@ elif [ "$1" == "make" ]; then
 	fi
 
 	docker run --rm -it -v $(pwd):/docs/ ellislab/sphinx make html
+elif [ "$1" == "build" ]; then
+	rm -rf ./build/*
+	docker run --rm -i -v $(pwd):/docs/ ellislab/sphinx make html
 else
 	echo "Usage: ./eetools <target> where <target> is one of:"
 	echo "  createcontainer    to create the Docker container (required first)"
 	echo "  make [-c]          to build the docs, optionally clean to build from scratch"
+	echo "  build              used by our appplication build script, runs without tty"
 	echo "  prompt             to open a prompt on the Docker container"
 fi
