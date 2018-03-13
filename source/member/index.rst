@@ -42,19 +42,20 @@ Member Profile Templates
 ************************
 
 The public profile area has its own set of templates which can be edited
-to change the look. You'll find the templates located at::
+to change the look. You'll find the default templates located at::
 
   themes/ee/member/default/
 
-These templates can be edited with a text editor, or you may choose to edit
-them via your Control Panel at :menuselection:`Developer --> Templates --> Members`
-
-A good strategy is to make a copy of the entire **default** templates folder,
-then edit your copy so you can leave the **default** files intact. Save your new copy to::
+To customize the templates, copy them over to::
 
   themes/user/member/custom_theme_name/
 
-Set your new copy as the site default under :menuselection:`Settings --> Member Settings`
+.. note:: Any changes made to files in themes/ee/ will be lost during an update.  Customized themes must be saved in the themes/user/ folder.
+
+Templates in `themes/user/member/` can be edited with a text editor, or you may choose to edit
+them via your Control Panel at :menuselection:`Developer --> Templates --> Members`
+
+If you do create a custom theme, you may set it as the site default under :menuselection:`Settings --> Member Settings`
 
 .. note:: When building your member profile templates, consider that any
   external links will pass along referrer data. This can cause security

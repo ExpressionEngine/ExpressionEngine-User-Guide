@@ -5,6 +5,31 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.1.2
+-------------
+
+Release Date: March 13, 2018
+
+- **Security:** Tightened security to filter additional invisible control characters from input.
+- Added a loading state to the Live Preview UI.
+- The Communicate utility will now throw an error when the ``email_batch_size`` config override is set to an invalid value.
+- For member and forum themes, only those themes in the themes/user directory are available in the control panel template editor.
+- Fixed a bug (#23487) where clicking the reorder handle on a new column in the Grid field settings would refresh the page.
+- Fixed a bug (#23498) where ``content`` was not a reserved word for fields. See :doc:`/installation/version_notes_4.0.0` for details on resolving this if you have an existing field with that name.
+- Fixed a bug (#23509) where previewing a new entry with an empty Grid and Relationship would trigger PHP errors.
+- Fixed a bug (#23519) to get a better result. #iseewhatyoudidthere
+- Fixed a bug where ``-`` and other characters could not be used in Layout Variable names.
+- Fixed a bug where importing a Grid field with a Relationship column disregarded the "allow multiple" setting.
+- Fixed a bug where member custom field conditionals were not properly parsed on the member profile templates.
+- Fixed a bug where member custom fields did not respect the display settings on the member profile templates.
+- Fixed a bug where previewing a new entry was so exciting that new entry showed up in all your Channel Entries tags.
+- Fixed a bug where renaming a Fluid field when importing a Channel Set would result in a PHP error.
+- Fixed a bug where the "allow multiple" setting of Relationshp fileds was ignored on export.
+- Fixed a bug where the Preview button would show when a Preview wasn't available.
+- Fixed a bug where the new email and password change notification templates in 4.1.0 were only added to the primary site.
+- Fixed a bug where the updater may show the wrong version is it updating to if the cache is stale.
+
+
 Version 4.1.1
 -------------
 
