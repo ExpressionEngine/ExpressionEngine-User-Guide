@@ -15,24 +15,15 @@ output it to various formats.  Pages are written in human-readable
 Prerequisites
 =============
 
-Sphinx requires Python, which is already installed if you are running OS X.
-You can confirm in a Terminal window by executing the ``python`` command
-without any parameters.  It should load up and tell you which version you have
-installed.  If you're not on 2.7+, go ahead and install 2.7.2 from
-http://python.org/download/releases/2.7.2/
+In order to build our documents, you will need to have Docker installed.
 
-Installation
-============
+Installing Docker
+=================
 
-1. Install `easy_install <http://peak.telecommunity.com/DevCenter/EasyInstall#installing-easy-install>`_. 
-   Shouldn't need to install this if you're running Mac OS X.
-2. ``(sudo) easy_install -U sphinx``
-3. ``(sudo) easy_install -U sphinxcontrib-phpdomain``
-4. ``git clone git@github.com:EllisLab/ExpressionEngine-User-Guide.git``
-5. ``cd ExpressionEngine-User-Guide``
-6. ``git checkout develop``
-7. Install the EE Lexer which allows EE syntax highlighting in code examples (see *eelexer/README*)
-8. ``make html``
+Download and install the Docker dmg, available `here <https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac>`_.
+
+Have DJ or Kevin add you to the dockerhub container image (as it's private).
+
 
 Editing and Creating Documentation
 ==================================
@@ -49,9 +40,15 @@ primary documentation that our users encounter.  Since revisions to the built
 files are not of value, they are not under source control.  This also allows
 you to regenerate as necessary if you want to "preview" your work.  Generating
 the HTML is very simple.  From the root directory of your user guide repo
-fork issue the command you used at the end of the installation instructions::
+fork issue this command ::
 
-	make html
+	eetools make
+
+If you want to rebuild all files instead of just the changed ones, use ::
+
+	eetools make -c
+
+Note, on MAMP you may get a `eetools: command not found`, as your shell maybe isn’t looking in the current working directory. Just use `./eetools` instead.
 
 You will see it do a whiz-bang compilation, at which point the fully rendered
 user guide and images will be in *build/html/*.  After the HTML has been built,
