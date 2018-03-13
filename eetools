@@ -25,7 +25,6 @@ elif [ "$1" == "make" ]; then
 
 	docker run --rm -it -v $(pwd):/docs/ ellislab/sphinx make html
 elif [ "$1" == "build" ]; then
-	rm -rf ./build/*
 	docker run --rm -i -v $(pwd):/docs/ ellislab/sphinx make html
 else
 	echo "Usage: ./eetools <target> where <target> is one of:"
