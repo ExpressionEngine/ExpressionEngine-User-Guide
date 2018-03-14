@@ -22,7 +22,7 @@ Installing Docker
 
 Download and install the Docker dmg, available `here <https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac>`_.
 
-Have DJ or Kevin add you to the dockerhub container image (as it's private).
+Yes, it's just that simple.
 
 
 Editing and Creating Documentation
