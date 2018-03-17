@@ -46,7 +46,7 @@ installation's web root. The CP index file is similar to the site index
 file except that it acts as the gateway for all web requests to the
 Control Panel. And similarly, any overrides set in the CP index file
 only affect the system's behavior for CP pages accessed through that
-particular CP index file (e.g. ``http://example.com/admin.php``).
+particular CP index file (e.g. ``https://example.com/admin.php``).
 
 .. note:: Overrides available for use in the CP index file are limited
     to :ref:`cp_url <overrides-cp-url>`, :ref:`newrelic_app_name
@@ -461,7 +461,7 @@ Value     Description
 
 Example Usage::
 
-$config['avatar_url'] = 'http://example.com/images/avatars';
+$config['avatar_url'] = 'https://example.com/images/avatars';
 
 .. rst-class:: cp-path
 
@@ -769,7 +769,7 @@ Value            Description
 
 Example Usage::
 
-$config['base_url'] = 'http://example.com';
+$config['base_url'] = 'https://example.com';
 
 .. rst-class:: cp-path
 
@@ -1201,7 +1201,7 @@ Optionally specify a cookie path. When a cookie path is set, the browser
 will only share cookies with ExpressionEngine when the beginning of the
 URL path matches the cookie path. For example, if the cookie path is set
 to ``/blog/``, a cookie for the domain ``example.com`` will only be sent
-by the browser if the URL begins with ``http://example.com/blog/``. This
+by the browser if the URL begins with ``https://example.com/blog/``. This
 can be useful if you have ExpressionEngine installed in a sub-directory
 and want to ensure that only that particular installation has access to
 the cookies it sets.
@@ -1311,7 +1311,7 @@ Value      Description
 
 Example Usage::
 
-$config['cp_url'] = 'http://example.com/admin.php';
+$config['cp_url'] = 'https://example.com/admin.php';
 
 Also available for use in the :ref:`site index file <site_index_file>`,
 :file:`index.php`, and the :ref:`CP index file <cp_index_file>`,
@@ -1738,7 +1738,7 @@ Value      Description
 
 Example Usage::
 
-$config['emoticon_url'] = 'http://example.com/images/smileys/';
+$config['emoticon_url'] = 'https://example.com/images/smileys/';
 
 .. rst-class:: cp-path
 
@@ -2080,13 +2080,13 @@ If enabled, ExpressionEngine will render URLs with a question mark
 following ``index.php`` in order to pass along segment information as a
 standard query string::
 
-    http://example.com/index.php?/channel/joe/
+    https://example.com?/channel/joe/
 
 This is necessary for only a few types of web servers to process
 ExpressionEngine's URLs correctly. ExpressionEngine's default is a much
 more search-engine friendly format::
 
-    http://example.com/index.php/channel/joe/
+    https://example.com/channel/joe/
 
 
 In rare circumstances, you may need to use this variable in conjunction
@@ -2881,7 +2881,7 @@ Value     Description
 
 Example Usage::
 
-$config['multi_login_sites'] = 'http://example.com|http://different_example.com';
+$config['multi_login_sites'] = 'https://example.com|http://different_example.com';
 
 For more information, see :doc:`MSM multi site login </msm/multi_site_login>`
 
@@ -3567,7 +3567,7 @@ following segment is the category URL title. For example, if the
 indicator is set to "category" and the category URL title is
 "blogging"::
 
-    http://example.com/index.php/site/category/blogging/
+    https://example.com/site/category/blogging/
 
 The word you set cannot be
 the name of an existing template group or template.
@@ -4095,7 +4095,7 @@ Value     Description
 
 Example Usage::
 
-$config['sig_img_url'] = 'http://example.com/images/signatures/';
+$config['sig_img_url'] = 'https://example.com/images/signatures/';
 
 .. .. rst-class:: cp-path
 ..
@@ -4227,7 +4227,7 @@ Value      Description
 
 Example Usage::
 
-$config['site_url'] = 'http://example.com';
+$config['site_url'] = 'https://example.com';
 
 Also available for use in the :ref:`site index file <site_index_file>`,
 :file:`index.php`. Example Usage::
@@ -4495,7 +4495,7 @@ Value     Description
 
 Example Usage::
 
-$config['theme_folder_url'] = 'http://example.com/themes/';
+$config['theme_folder_url'] = 'https://example.com/themes/';
 
 .. rst-class:: cp-path
 

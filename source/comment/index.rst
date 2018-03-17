@@ -281,7 +281,7 @@ author
 The comment author's screen name, if a member; otherwise, this variable
 will display the name submitted with the comment. ::
 
-	<a href="http://example.com/index.php/member/{author_id}/">{author}</a>
+	<a href="https://example.com/member/{author_id}/">{author}</a>
 
 author\_id
 ----------
@@ -296,7 +296,7 @@ Non-registered commenters will return a zero (0).
 
 This can be useful for creating links to the commenter's member profile::
 
-	<a href="http://example.com/index.php/member/{author_id}/">{name}</a>
+	<a href="https://example.com/member/{author_id}/">{name}</a>
 
 
 avatar\_image\_height
@@ -423,7 +423,7 @@ number of the entry will be automatically added. For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/comments/234/">my entry</a>
+	<a href="https://example.com/channel/comments/234/">my entry</a>
 
 comment\_id
 -----------
@@ -458,7 +458,7 @@ URL Title of the entry will be automatically added. For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/comments/ice_cream/">my entry</a>
+	<a href="https://example.com/channel/comments/ice_cream/">my entry</a>
 
 count
 -----
@@ -538,7 +538,7 @@ this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/comments/234/">my entry</a>
+	<a href="https://example.com/channel/comments/234/">my entry</a>
 
 gmt\_comment\_date
 ------------------
@@ -781,7 +781,7 @@ example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/comments/ice_cream/">permalink</a>
+	<a href="https://example.com/channel/comments/ice_cream/">permalink</a>
 
 username
 --------
@@ -1314,7 +1314,7 @@ after submitting a comment. The parameter can be defined in two ways:
    return the user. For instance, if you want the user to be returned to
    the "local" Template in the "news" Template Group, you would use:
    return="news/local"
-#. Use a full URL. For example: return="http://example.com/return.html"
+#. Use a full URL. For example: return="https://example.com/return.html"
 
 If this parameter is not defined, they will be returned to the form
 page.

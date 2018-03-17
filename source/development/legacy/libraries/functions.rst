@@ -35,7 +35,7 @@ create_url
   ::
 
     $memberlist_url = ee()->functions->create_url('member/memberlist');
-    // returns "http://example.com/index.php/member/memberlist/"
+    // returns "https://example.com/member/memberlist/"
 
   :param string $segment: The desired URL's URI
   :param boolean $sess_id: If set to ``FALSE``, session_id will not be

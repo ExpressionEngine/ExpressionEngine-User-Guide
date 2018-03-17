@@ -37,7 +37,7 @@ Available Functions
 
 		echo site_url('news/local/123');
 
-	The above example would return something like: ``http://example.com/index.php/news/local/123``
+	The above example would return something like: ``https://example.com/news/local/123``
 
 	Here is an example of segments passed as an array::
 
@@ -63,13 +63,13 @@ Available Functions
 
 		echo base_url("blog/post/123");
 
-	The above example would return something like: ``http://example.com/blog/post/123``
+	The above example would return something like: ``https://example.com/blog/post/123``
 
 	This is useful because unlike :func:`site_url()`, you can supply a string to a file, such as an image or stylesheet. For example::
 
 		echo base_url("images/icons/edit.png");
 
-	This would give you something like: ``http://example.com/images/icons/edit.png``
+	This would give you something like: ``https://example.com/images/icons/edit.png``
 
 	This function is an alias for :meth:`EE_Config::base_url()`.
 
@@ -128,13 +128,13 @@ Available Functions
 	Here are some examples::
 
 		echo anchor('news/local/123', 'My News', 'title="News title"');
-		// Prints: <a href="http://example.com/index.php/news/local/123" title="News title">My News</a>
+		// Prints: <a href="https://example.com/news/local/123" title="News title">My News</a>
 
 		echo anchor('news/local/123', 'My News', array('title' => 'The best news!'));
-		// Prints: <a href="http://example.com/index.php/news/local/123" title="The best news!">My News</a>
+		// Prints: <a href="https://example.com/news/local/123" title="The best news!">My News</a>
 
 		echo anchor('', 'Click here');
-		// Prints: <a href="http://example.com">Click Here</a>
+		// Prints: <a href="https://example.com">Click Here</a>
 
 
 .. function:: anchor_popup($uri = '', $title = '', $attributes = FALSE)

@@ -1424,7 +1424,7 @@ number of the entry will be automatically added. For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/comments/234">my entry</a>
+	<a href="https://example.com/channel/comments/234">my entry</a>
 
 comment\_subscriber\_total
 --------------------------
@@ -1459,7 +1459,7 @@ Title of the entry will be automatically added. For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/comments/ice_cream/">my entry</a>
+	<a href="https://example.com/channel/comments/ice_cream/">my entry</a>
 
 count
 -----
@@ -1546,7 +1546,7 @@ automatically added. For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/archives/234/">my entry</a>
+	<a href="https://example.com/channel/archives/234/">my entry</a>
 
 entry\_site\_id
 ---------------
@@ -1675,7 +1675,7 @@ permalink
 
 This variable defaults to site index with entry ID number::
 
-	http://example.com/index.php/235/
+	https://example.com/235/
 
 In addition, you can specify a template group/template and the entry ID
 will automatically be added::
@@ -1684,7 +1684,7 @@ will automatically be added::
 
 Will render as::
 
-	http://example.com/index.php/channel/archives/235/
+	https://example.com/channel/archives/235/
 
 photo\_url
 ----------
@@ -1749,7 +1749,7 @@ relative\_url
 
 The URL stored in your Channel URL setting under Channel Management,
 with the domain information removed. For example, if your setting is
-http://example.com/index.php/site/index/ the variable will output
+https://example.com/site/index/ the variable will output
 /index.php/site/index/. Typically only used in the Atom feed Template.
 
 relative\_date
@@ -1895,7 +1895,7 @@ title\_permalink
 This variable uses the "url title" as the link. It defaults to the site
 index with the "url title"::
 
-	http://example.com/index.php/my_ugly_boyfriend/
+	https://example.com/my_ugly_boyfriend/
 
 In addition, you can specify a specific template group/template and the
 "url title" will automatically be added::
@@ -1904,7 +1904,7 @@ In addition, you can specify a specific template group/template and the
 
 Will render as::
 
-	http://example.com/index.php/channel/archives/my_ugly_boyfriend/
+	https://example.com/channel/archives/my_ugly_boyfriend/
 
 .. note:: When creating a new entry, if you don't supply the "url title"
 	then it will be automatically created from the actual entry title.
@@ -1957,7 +1957,7 @@ automatically added. For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/archives/ice_cream/">permalink</a>
+	<a href="https://example.com/channel/archives/ice_cream/">permalink</a>
 
 username
 --------
@@ -2066,7 +2066,7 @@ if category\_request
 This special conditional lets you conditionally display content if the
 current tag is being displayed based on a category specified in the URL.
 For instance, if the URL being viewed were
-http://example.com/index.php/channel/archives/C13/ that could trigger
+https://example.com/channel/archives/C13/ that could trigger
 this conditional.
 
 if count
@@ -2155,7 +2155,7 @@ if not\_category\_request
 This special conditional lets you conditionally display content if the
 current tag is *not* being displayed based on a category specified in
 the URL. For instance, if the URL being viewed were
-http://example.com/index.php/channel/archives/C13/ that would not
+https://example.com/channel/archives/C13/ that would not
 trigger this conditional.
 
 if not\_forum\_topic

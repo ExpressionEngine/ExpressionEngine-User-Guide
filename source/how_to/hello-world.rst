@@ -50,7 +50,7 @@ Ready to admire your work? Click `View Rendered` in the
 upper-right area above the **Template Editor**. You'll be taken to your site
 to see what the world will see.
 
-Have a look at the URL - ``example.com/index.php/site``.
+Have a look at the URL - ``example.com/site``.
 ExpressionEngine uses :doc:`URL Segments </templates/globals/url_segments>` to
 do its magic, and here you can see ``site`` in Segment 1. That
 tells ExpressionEngine to look for a Template Group named "site" and the lack of
@@ -59,8 +59,8 @@ use the group's "index" template.
 
 Try a couple of other URLs:
 
-	- ``http://example.com/index.php/site/index``
-	- ``http://example.com/``
+	- ``https://example.com/site/index``
+	- ``https://example.com/``
 
 You'll see the same output as before. In the fist example, adding Segment 2
 (``index``), alerts ExpressionEngine to precisely the template we want from the

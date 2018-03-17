@@ -75,7 +75,7 @@ cancel=
 You may specify a particular Template to display if a purchase is
 cancelled mid-transaction. This takes a standard
 "Template\_Group/Template" as input, or you may provide a full URL, e.g.
-http://example.com/index.php/store/cancel/. If this parameter is not
+https://example.com/store/cancel/. If this parameter is not
 supplied, your site's main index template will be displayed.
 
 country\_code=
@@ -158,7 +158,7 @@ success=
 **REQUIRED**. You must specify a particular Template to display after a
 successful purchase transaction. This takes a standard
 "Template\_Group/Template" as input, or you may provide a full URL, e.g.
-http://example.com/index.php/store/thank\_you/.
+https://example.com/store/thank\_you/.
 
 
 Variables

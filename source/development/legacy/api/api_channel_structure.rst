@@ -111,7 +111,7 @@ Create Channel
         'channel_title' => 'News',
         'channel_name'  => 'news',
         'field_group' => 2,
-        'channel_url' => 'http://example.com/index.php/news/',
+        'channel_url' => 'https://example.com/news/',
         'status_group'  => 1
     );
 

@@ -48,4 +48,4 @@ template groups be considered your site default page. This page will be
 shown if **only** the Template Group is specified in the URL. For
 example::
 
-    http://example.com/index.php/template_group/
+    https://example.com/template_group/

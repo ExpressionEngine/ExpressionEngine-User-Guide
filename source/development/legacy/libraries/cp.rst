@@ -158,10 +158,10 @@ Masking the Control Panel URL in links
   When creating external links in the users Control Panel, the system
   folder should not show in server referral logs::
 
-    ee()->cp->masked_url('http://example.com');
+    ee()->cp->masked_url('https://example.com');
 
   Creates the a the following link:
-  ``http://example.com/index.php?URL=http://example.com``
+  ``https://example.com?URL=https://example.com``
 
   :param string $url: URL to mask
   :returns: The masked URL

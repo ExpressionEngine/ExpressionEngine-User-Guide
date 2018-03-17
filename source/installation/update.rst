@@ -104,7 +104,7 @@ Working either locally with your backed up files, or on the server (**not recomm
 3. Run The Update Wizard
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Go to your site's control panel URL (typically found at ``http://example.com/admin.php`` or ``http://example.com/system/``) and follow the on-screen instructions to update ExpressionEngine.
+Go to your site's control panel URL (typically found at ``https://example.com/admin.php`` or ``https://example.com/system/``) and follow the on-screen instructions to update ExpressionEngine.
 
 .. _update_cleanup:
 

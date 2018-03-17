@@ -174,7 +174,7 @@ picked up by IDEs::
   * @subpackage  Subpackage
   * @category    Category
   * @author  Author Name
-  * @link    http://example.com
+  * @link    https://example.com
   */
   class Super_class {
 
@@ -198,7 +198,7 @@ large comment blocks and code::
   // read.  Don't hesitate to link to permanent external resources
   // that may provide greater detail:
   //
-  // http://example.com/information_about_something/in_particular/
+  // https://example.com/information_about_something/in_particular/
   $parts = $this->foo($parts);
 
 Constants

@@ -58,7 +58,7 @@ Comment form
 
 The full URL to the "comments" page for this channel. The URL should
 include the Template Group and Template. For example:
-http://example.com/index.php/channel/comments/
+https://example.com/channel/comments/
 
 Search results
 ~~~~~~~~~~~~~~
@@ -73,7 +73,7 @@ RSS feed
 ~~~~~~~~~
 
 The URL where you can view the RSS feed for this channel. For example:
-http://example.com/index.php/channel/rss_2.0
+https://example.com/channel/rss_2.0
 
 Preview URL
 ~~~~~~~~~~~
