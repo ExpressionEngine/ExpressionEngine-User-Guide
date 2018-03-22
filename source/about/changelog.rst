@@ -5,6 +5,34 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.1.3
+-------------
+
+Release Date: March 23, 2018
+
+- **Security:** Made it clearer if clicking an outside link is sending you to a different host than the URL appears to be.
+- **Security:** Improved blocking of reverse tabnabbing.
+- **Security:** - Tightened Filesystem security.
+- Fixed a bug (#23520) where some cache keys may fail to write when using Docker for Windows.
+- Fixed a bug (#23495) where the Search and Replace utility did not work with the new channel field database schema.
+- Fixed a bug where removing a bunch of fields from a Fluid field overwhelmed the CP Log; the CP Log can handle it now.
+- Fixed a bug (#23284) where deleting a field used for search excerpts didn't reset that setting in the channel(s).
+- Fixed a bug (#23457) where existing layouts stuck newly added category groups in the third tab, rather than the categories tab.
+- Fixed a bug where the Preview button for new entries would not work when the Pages module was installed but the Channel had no preview_url setting.
+- Fixed a bug (#23531) where the Preview icon would show in the Channel Entry listing when a preview wasn't available.
+- Fixed a bug (#23423) where Relationship meta tags in conditionals inside a Fluid field didn't parse unless braced and quoted.
+- Fixed a bug (#23532) where a site's 404 template setting included templates it didn't have.
+- Fixed a bug (#23526) where cloning a Grid column didn't accurately clone the text formatting setting.
+- Fixed a bug where in rare circumstances channel layout changes did not 'stick' on edit.
+- Fixed a bug where new Template Partials and Variables files were only synced when requested on the front end.
+- Fixed the Template export feature. It now includes Template Partials and Variables, exports templates from all Sites, and is only available to Super Admins.
+- Fixed a fatal PHP error if you were beginning an update from a version older than 2.11.0.
+- Fixed a bug where the grid field table modifier caused PHP errors when used.
+- Fixed a bug (#23525) where OPcache path restrictions could cause a PHP warning when running the 1-click updater.
+- Fixed a bug where validation errors could occur when select values were not in the original field options in 'Ajaxified' fields.
+- Fixed a bug where radio fields caused a PHP error on channel forms.
+
+
 Version 4.1.2
 -------------
 
