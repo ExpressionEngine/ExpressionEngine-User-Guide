@@ -54,7 +54,7 @@ installed.
 The "world flags" tag can be used within your {exp:comment:entries} or
 {exp:channel:entries} like this::
 
-	{exp:ip_to_nation:world_flags image_url="http://example.com/images/world_flags/"}
+	{exp:ip_to_nation:world_flags image_url="https://example.com/images/world_flags/"}
 		{ip_address}
 	{/exp:ip_to_nation:world_flags}
 
@@ -72,7 +72,7 @@ This URL to your "world\_flags" folder.
 Make sure you include the folder name in the URL and include a trailing
 slash::
 
-	http://example.com/images/world_flags/
+	https://example.com/images/world_flags/
 
 type="text"
 ~~~~~~~~~~~

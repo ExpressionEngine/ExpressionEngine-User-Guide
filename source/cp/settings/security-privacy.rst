@@ -116,7 +116,7 @@ Optionally specify a cookie path. When a cookie path is set, the browser
 will only share cookies with ExpressionEngine when the beginning of the
 URL path matches the cookie path. For example, if the cookie path is set
 to ``/blog/``, a cookie for the domain ``example.com`` will only be sent
-by the browser if the URL begins with ``http://example.com/blog/``. This
+by the browser if the URL begins with ``https://example.com/blog/``. This
 can be useful if you have ExpressionEngine installed in a sub-directory
 and want to ensure that only that particular installation has access to
 the cookies it sets.

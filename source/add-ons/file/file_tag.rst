@@ -406,7 +406,7 @@ automatically added. For example, this::
 
 Would be rendered like this::
 
-  <a href="http://example.com/index.php/gallery/full_image/234/">my picture</a>
+  <a href="https://example.com/gallery/full_image/234/">my picture</a>
 
 location
 ~~~~~~~~

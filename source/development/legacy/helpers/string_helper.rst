@@ -88,8 +88,8 @@ Available Functions
 
 	Example::
 
-		$string = "http://example.com//index.php";
-		echo reduce_double_slashes($string); // results in "http://example.com/index.php"
+		$string = "https://example.com//index.php";
+		echo reduce_double_slashes($string); // results in "https://example.com"
 
 .. function:: strip_slashes($data)
 

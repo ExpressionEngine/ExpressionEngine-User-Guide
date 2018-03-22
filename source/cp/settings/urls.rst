@@ -38,11 +38,11 @@ The value given to the ``{base_url}`` control panel variable.  This is one of fe
 
 Typically the value of the default path will be the URL to the folder containing your site's index page.  For example, if your index file is located at::
 
-	http://example.com/index.php
+	https://example.com
 
 Then the correct setting would be::
 
-	http://example.com
+	https://example.com
 
 .. _general-config-base-path-label:
 
@@ -70,7 +70,7 @@ Website root directory
 The URL to the folder containing your site's index page. For
 example, if you have defined your ``{base_url}`` as recommended and your index file is located at::
 
-	http://example.com/index.php
+	https://example.com
 
 Then the correct setting would be::
 
@@ -129,7 +129,7 @@ template group. The default value of this is "member". That means that a
 URL like the following would trigger ExpressionEngine to display the
 member profile area::
 
-     http://example.com/index.php/member/profile/
+     https://example.com/member/profile/
 
 .. _global-channel-category-url-indicator-label:
 
@@ -141,12 +141,12 @@ If you turn on the preceding preference, you must designate a special
 intended. For example, URLs that indicate a category normally use the ID
 number like this by default::
 
-	http://example.com/index.php/site/C12/
+	https://example.com/site/C12/
 
 If you instead specify that the category URL title should be used, the
 URL will look like this::
 
-	http://example.com/index.php/site/category/blogging/
+	https://example.com/site/category/blogging/
 
 In this example, the *indicator* is "category" and the category URL
 title is "blogging".

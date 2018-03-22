@@ -8,7 +8,7 @@ Removing index.php from URLs
 
 The ``index.php`` appears in your URLs because it is the file
 responsible for processing all requests to the system. In a URL such as
-``http://example.com/index.php/template_group/template``, the
+``https://example.com/template_group/template``, the
 ``template_group/template`` segments are simply information passed to
 :file:`index.php` and do not refer to actual files or folders in the server's filesystem.
 
@@ -63,8 +63,8 @@ Exceptions
     RewriteCond %{REQUEST_URI} !/newdirectoryname/.* [NC]
 
 -  If you are running EE from a sub-directory rather from the root of
-   your domain (e.g. ``http://example.com/myeesite/`` instead of
-   ``http://example.com/``), just remove the slash preceding
+   your domain (e.g. ``https://example.com/myeesite/`` instead of
+   ``https://example.com/``), just remove the slash preceding
    :file:`index.php` in the RewriteRule line above, like so::
 
     RewriteRule ^(.*)$ index.php/$1 [L]

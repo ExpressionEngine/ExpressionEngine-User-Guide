@@ -73,13 +73,13 @@ If enabled, ExpressionEngine will render URLs with a question mark
 following ``index.php`` in order to pass along segment information as a
 standard query string::
 
-    http://example.com/index.php?/channel/joe/
+    https://example.com?/channel/joe/
 
 This is necessary for only a few types of web servers to process
 ExpressionEngine's URLs correctly. ExpressionEngine's default is a much
 more search-engine friendly format::
 
-    http://example.com/index.php/channel/joe/
+    https://example.com/channel/joe/
 
 
 In rare circumstances, you may need to use this variable in conjunction

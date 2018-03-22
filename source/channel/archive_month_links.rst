@@ -156,7 +156,7 @@ Will be rendered like this
 
 ::
 
-	<a href="example.com/index.php/channel/archives/2003/12/">December, 2003</a>
+	<a href="example.com/channel/archives/2003/12/">December, 2003</a>
 
 .. note:: The path setting can optionally be enclosed in quotes
 
