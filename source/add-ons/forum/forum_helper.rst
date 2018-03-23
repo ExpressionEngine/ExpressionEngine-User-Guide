@@ -187,7 +187,7 @@ For example, this:
 ``<a href="{auto_thread_path}">{title}</a>``
 Would be rendered like this:
 
-``<a href="http://example.com/index.php/forums/viewthread/11245/">My forum topic</a>``
+``<a href="https://example.com/forums/viewthread/11245/">My forum topic</a>``
 board\_label
 ~~~~~~~~~~~~
 
@@ -243,7 +243,7 @@ thread itself. For example, this:
 ``<a href="{last_author_profile_path='forums/member'}">{last_author}</a>``
 Would be rendered like this:
 
-``<a href="http://example.com/index.php/forums/member/147/">Fred Smith</a>``
+``<a href="https://example.com/forums/member/147/">Fred Smith</a>``
 last\_post\_date
 ~~~~~~~~~~~~~~~~
 
@@ -291,7 +291,7 @@ The URL to the member profile of the thread author. For example, this:
 ``<a href="{profile_path='forums/member'}">{author}</a>``
 Would be rendered like this:
 
-``<a href="http://example.com/index.php/forums/member/147/">Fred Smith</a>``
+``<a href="https://example.com/forums/member/147/">Fred Smith</a>``
 status
 ~~~~~~
 
@@ -307,7 +307,7 @@ The URL to the thread at the specified Template. For example, this:
 ``<a href="{thread_path='forums/viewthread'}">{title}</a>``
 Would be rendered like this:
 
-``<a href="http://example.com/index.php/forums/viewthread/42/">My Forum Thread</a>``
+``<a href="https://example.com/forums/viewthread/42/">My Forum Thread</a>``
 title
 ~~~~~
 

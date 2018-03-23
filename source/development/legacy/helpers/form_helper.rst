@@ -30,7 +30,7 @@ Available Functions
 
 	The above example would create a form that points to your base URL plus the "email/send" URI segments, like this::
 
-		<form method="post" accept-charset="utf-8" action="http://example.com/index.php/email/send">
+		<form method="post" accept-charset="utf-8" action="https://example.com/email/send">
 
 	**Adding Attributes**
 
@@ -46,7 +46,7 @@ Available Functions
 
 		The above examples would create a form similar to this::
 
-			<form method="post" accept-charset="utf-8" action="http://example.com/index.php/email/send" class="email" id="myform">
+			<form method="post" accept-charset="utf-8" action="https://example.com/email/send" class="email" id="myform">
 
 	**Adding Hidden Input Fields**
 
@@ -60,7 +60,7 @@ Available Functions
 
 		The above example would create a form similar to this::
 
-			<form method="post" accept-charset="utf-8" action="http://example.com/index.php/email/send">
+			<form method="post" accept-charset="utf-8" action="https://example.com/email/send">
 				<input type="hidden" name="username" value="Joe" />
 				<input type="hidden" name="member_id" value="234" />
 
@@ -93,7 +93,7 @@ Available Functions
 		$data = array(
 			'name'	=> 'John Doe',
 			'email'	=> 'john@example.com',
-			'url'	=> 'http://example.com'
+			'url'	=> 'https://example.com'
 		);
 
 		echo form_hidden($data);
@@ -102,7 +102,7 @@ Available Functions
 			Would produce:
 			<input type="hidden" name="name" value="John Doe" />
 			<input type="hidden" name="email" value="john@example.com" />
-			<input type="hidden" name="url" value="http://example.com" />
+			<input type="hidden" name="url" value="https://example.com" />
 		*/
 
 	You can also pass an associative array to the value field::
@@ -110,7 +110,7 @@ Available Functions
 		$data = array(
 			'name'	=> 'John Doe',
 			'email'	=> 'john@example.com',
-			'url'	=> 'http://example.com'
+			'url'	=> 'https://example.com'
 		);
 
 		echo form_hidden('my_array', $data);
@@ -120,7 +120,7 @@ Available Functions
 
 			<input type="hidden" name="my_array[name]" value="John Doe" />
 			<input type="hidden" name="my_array[email]" value="john@example.com" />
-			<input type="hidden" name="my_array[url]" value="http://example.com" />
+			<input type="hidden" name="my_array[url]" value="https://example.com" />
 		*/
 
 	If you want to create hidden input fields with extra attributes::

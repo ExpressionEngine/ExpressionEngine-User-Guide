@@ -36,7 +36,7 @@ resource.::
 When used as above, with no tag parameters, the outputted tag will
 request the main jQuery file, e.g.::
 
-  <script type="text/javascript" charset="utf-8" src="http://example.com/index.php?ACT=jquery"></script>
+  <script type="text/javascript" charset="utf-8" src="https://example.com?ACT=jquery"></script>
 
 The following tag parameters allow you to request tags for specific
 jQuery resources.
@@ -59,7 +59,7 @@ not used, just the name of the plugin.
 
 Output example::
 
-  <script type="text/javascript" charset="utf-8" src="http://example.com/index.php?ACT=jquery&amp;plugin=corner"></script>
+  <script type="text/javascript" charset="utf-8" src="https://example.com?ACT=jquery&amp;plugin=corner"></script>
 
 ui=
 ---
@@ -74,7 +74,7 @@ item.
 
 Output example::
 
-  <script type="text/javascript" charset="utf-8" src="http://example.com/index.php?ACT=jquery&amp;ui=datepicker"></script>
+  <script type="text/javascript" charset="utf-8" src="https://example.com?ACT=jquery&amp;ui=datepicker"></script>
 
 Before using jQuery UI effects you must first call the jQuery UI Core::
 
@@ -92,7 +92,7 @@ The name of the requested UI Effect. Note that the 'effect' prefix and
 
 Output example::
 
-  <script type="text/javascript" charset="utf-8" src="http://example.com/index.php?ACT=jquery&amp;effect=slide"></script>
+  <script type="text/javascript" charset="utf-8" src="https://example.com?ACT=jquery&amp;effect=slide"></script>
 
 file=
 -----
@@ -106,7 +106,7 @@ file in the main javascript folder in ExpressionEngine's system folder.
 
 Output example::
 
-  <script type="text/javascript" charset="utf-8" src="http://example.com/index.php?ACT=jquery&amp;file=foo"></script>
+  <script type="text/javascript" charset="utf-8" src="https://example.com?ACT=jquery&amp;file=foo"></script>
 
 *****************
 Script Source Tag
@@ -118,7 +118,7 @@ The Script Source tag outputs a URL to the requested jQuery resource. ::
 
 When used as above, with no tag parameters, the outputted URL will
 request the main jQuery file, e.g.
-``http://example.com/index.php?ACT=jquery``. The following tag parameters
+``https://example.com?ACT=jquery``. The following tag parameters
 allow you to request URLs to specific jQuery resources.
 
 Parameters
@@ -139,7 +139,7 @@ not used, just the name of the plugin.
 
 Output example::
 
-  http://example.com/index.php?ACT=jquery&amp;plugin=corner
+  https://example.com?ACT=jquery&amp;plugin=corner
 
 ui=
 ---
@@ -154,7 +154,7 @@ item.
 
 Output example::
 
-  http://example.com/index.php?ACT=jquery&amp;ui=datepicker
+  https://example.com?ACT=jquery&amp;ui=datepicker
 
 effect=
 -------
@@ -168,7 +168,7 @@ The name of the requested UI Effect. Note that the 'effect' prefix and
 
 Output example::
 
-  http://example.com/index.php?ACT=jquery&amp;effect=slide
+  https://example.com?ACT=jquery&amp;effect=slide
 
 file=
 -----
@@ -182,7 +182,7 @@ file in the main javascript folder in ExpressionEngine's system folder.
 
 Output example::
 
-  http://example.com/index.php?ACT=jquery&amp;file=foo
+  https://example.com?ACT=jquery&amp;file=foo
 
 *********************
 Output JavaScript Tag

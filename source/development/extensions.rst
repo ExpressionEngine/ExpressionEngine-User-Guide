@@ -61,7 +61,7 @@ All addons must have an ``addon.setup.php`` file. This one will be quite simple:
 
   return array(
     'author'      => 'Me',
-    'author_url'  => 'http://example.com/',
+    'author_url'  => 'https://example.com/',
     'name'        => 'Link Truncator',
     'description' => '',
     'version'     => '1.0.0',

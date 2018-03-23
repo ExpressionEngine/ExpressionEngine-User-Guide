@@ -64,7 +64,7 @@ Upload directory
 The URL to your attachments folder. In most cases, this will be
 similar to:
 
- - http://example.com/images/pm\_attachments/
+ - https://example.com/images/pm\_attachments/
  - ///example.com/images/pm\_attachments/
  - /images/pm\_attachments/
 

@@ -238,7 +238,7 @@ Would be rendered like this
 
 ::
 
-	<a href="http://example.com/index.php/channel/comments/234/">my entry</a>
+	<a href="https://example.com/channel/comments/234/">my entry</a>
 
 comment\_url\_title\_auto\_path
 -------------------------------
@@ -259,7 +259,7 @@ Would be rendered like this
 
 ::
 
-	<a href="http://example.com/index.php/channel/comments/ice_cream/">my entry</a>
+	<a href="https://example.com/channel/comments/ice_cream/">my entry</a>
 
 comment\_path
 -------------
@@ -275,7 +275,7 @@ automatically added. For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/comments/234/">comments</a>
+	<a href="https://example.com/channel/comments/234/">comments</a>
 
 This is only available for use inside the {entries}{/entries} variable
 pair.
@@ -326,7 +326,7 @@ Template that shows your multiple entries. For example, this::
 
 Might be rendered like this::
 
-	<a href="http://example.com/index.php/channel/2003/02/17/">17</a>
+	<a href="https://example.com/channel/2003/02/17/">17</a>
 
 entry\_id\_path
 ---------------
@@ -342,7 +342,7 @@ automatically added. For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/comments/234/">my entry</a>
+	<a href="https://example.com/channel/comments/234/">my entry</a>
 
 This is only available for use inside the {entries}{/entries} variable
 pair.
@@ -379,7 +379,7 @@ permalink
 
 This variable defaults to site index with entry ID number::
 
-	http://example.com/235/
+	https://example.com/235/
 
 In addition, you can specify a template group/template and the entry ID
 will automatically be added::
@@ -388,7 +388,7 @@ will automatically be added::
 
 Will render as::
 
-	http://example.com/channel/archives/235/
+	https://example.com/channel/archives/235/
 
 This is only available for use inside the {entries}{/entries} variable
 pair.
@@ -464,7 +464,7 @@ title\_permalink
 This variable uses the "url title" as the link. It defaults to the site
 index with the "url title"::
 
-	http://example.com/my_ugly_boyfriend/
+	https://example.com/my_ugly_boyfriend/
 
 In addition, you can specify a specific template group/template and the
 "url title" will automatically be added::
@@ -473,7 +473,7 @@ In addition, you can specify a specific template group/template and the
 
 Will render as::
 
-	http://example.com/channel/archives/my_ugly_boyfriend/
+	https://example.com/channel/archives/my_ugly_boyfriend/
 
 .. note:: When creating a new entry, if you don't supply the "url title"
     then it will be automatically created from the actual entry title.
@@ -497,7 +497,7 @@ automatically added. For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/archives/ice_cream/">permalink</a>
+	<a href="https://example.com/channel/archives/ice_cream/">permalink</a>
 
 This is only available for use inside the {entries}{/entries} variable
 pair.

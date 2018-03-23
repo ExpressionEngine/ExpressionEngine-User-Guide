@@ -20,7 +20,7 @@ ee()->uri->segment()
   segment number you wish to retrieve. Segments are numbered from left
   to right. For example, if your full URL is this::
 
-    http://example.com/index.php/news/local/metro/crime_is_up
+    https://example.com/news/local/metro/crime_is_up
 
   The segment numbers would be this:
 
@@ -144,7 +144,7 @@ ee()->uri->uri_string()
   Returns a string with the complete current URI. For example, if this
   is your current URL::
 
-    http://example.com/index.php/news/local/345
+    https://example.com/news/local/345
 
   The method would return this::
 

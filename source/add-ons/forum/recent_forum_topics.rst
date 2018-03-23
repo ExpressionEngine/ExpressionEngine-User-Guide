@@ -22,7 +22,7 @@ sidebar on your site's main page, for instance. An example:
 			<td>Views</td>
 			<td>Last Post Info</td>
 		</tr>
-	
+
 		{exp:forum:topic_titles orderby="post_date" sort="desc" limit="10"}
 			<tr>
 				<td><a href="{thread_path='forums/viewthread'}">{title}</a></td>
@@ -147,7 +147,7 @@ For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/forums/viewthread/11245/">My forum topic</a>
+	<a href="https://example.com/forums/viewthread/11245/">My forum topic</a>
 
 board\_label
 ~~~~~~~~~~~~
@@ -226,7 +226,7 @@ thread itself. For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/forums/member/147/">Fred Smith</a>
+	<a href="https://example.com/forums/member/147/">Fred Smith</a>
 
 last\_post\_date
 ~~~~~~~~~~~~~~~~
@@ -304,7 +304,7 @@ The URL to the member profile of the thread author. For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/forums/member/147/">Fred Smith</a>
+	<a href="https://example.com/forums/member/147/">Fred Smith</a>
 
 thread\_path
 ~~~~~~~~~~~~
@@ -319,7 +319,7 @@ The URL to the thread at the specified Template. For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/forums/viewthread/42/">My Forum Thread</a>
+	<a href="https://example.com/forums/viewthread/42/">My Forum Thread</a>
 
 title
 ~~~~~

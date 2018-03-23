@@ -10,7 +10,7 @@ The problem here is that your server isn’t correctly supporting the ”path_in
 
 When you force query strings, ExpressionEngine will add a '?' to system generated frontend URLs::
 
-	http://example.com/index.php?/blog/11245/
+	https://example.com?/blog/11245/
 
 If you are using .htaccess to remove the index.php from your URLs, don't force query strings.  Instead, :doc:`add the query string to your htaccess code </urls/remove_index.php>`
 

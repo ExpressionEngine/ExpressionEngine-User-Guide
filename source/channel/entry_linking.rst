@@ -252,7 +252,7 @@ will be automatically added. For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/comments/234/">Next entry</a>
+	<a href="https://example.com/channel/comments/234/">Next entry</a>
 
 comment_url_title_auto_path
 ---------------------------
@@ -269,7 +269,7 @@ will be automatically added. For example, this::
 
 Would be rendered like this::
 
-	<a href="http://example.com/index.php/channel/comments/ice_cream/">Next entry</a>
+	<a href="https://example.com/channel/comments/ice_cream/">Next entry</a>
 
 
 entry\_id

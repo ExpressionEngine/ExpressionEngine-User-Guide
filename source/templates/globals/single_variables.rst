@@ -283,7 +283,7 @@ This variable will be substituted with a link to the public profile page
 for the currently logged in user. The text of the link will be the
 member's screen name. For instance, the output might be::
 
-  <a href="http://example.com/index.php/member/1/">Joe Smith</a>
+  <a href="https://example.com/member/1/">Joe Smith</a>
 
 
 password_max_length

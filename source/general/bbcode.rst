@@ -21,8 +21,8 @@ URLs and Linking
 
 ::
 
-  [url]http://example.com/[/url]
-  [url=http://example.com/]my site[/url]
+  [url]https://example.com/[/url]
+  [url=https://example.com/]my site[/url]
 
 You can easily create links with custom text or simply with the URL
 itself as the link.  You may even add attributes to your link, though
@@ -30,7 +30,7 @@ your allowed HTML settings influence what may be included.
 
 ::
 
-  [url=http://example.com/ class="link"]my site[/url]
+  [url=https://example.com/ class="link"]my site[/url]
 
 Safe HTML will allow the following attributes: rel, title, class, style,
 and target.  Note that quotes are required when specifying attributes.
@@ -52,7 +52,7 @@ Images
 
 ::
 
-  [img]http://example.com/pic.jpg[/img]
+  [img]https://example.com/pic.jpg[/img]
 
 You can easily display an image.
 

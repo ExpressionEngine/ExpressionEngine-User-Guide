@@ -6,7 +6,7 @@ in your URL segments. By "segments", we mean the segments of the URL
 that appear after your index.php page. For example, this URL has two
 segments::
 
-	http://example.com/index.php/products/shirts/
+	https://example.com/products/shirts/
 
 **products** is Segment 1 and **shirts** is Segment 2.
 
@@ -30,7 +30,7 @@ person's name. In this scenario you could use a single template to
 dynamically show each employee's information based on what is in the
 URL. Consider this URL::
 
-	http://example.com/index.php/company/employees/joe/
+	https://example.com/company/employees/joe/
 
 The Template Groups name is "company" and the Template name is
 "employees". Based on the information in the 3rd segment (in this case,
@@ -51,13 +51,13 @@ Last Segment
 The {last\_segment} global variable gives you the ability to determine
 the last segment of your URL when the number of URI segments is unknown.
 
-``http://example.com/index.php/company/``
+``https://example.com/company/``
 
 ::
 
 	{if last_segment == 'joe'}     Hey Joe, where you goin' with that? {/if}
 
-``http://example.com/index.php/company/employees/joe``
+``https://example.com/company/employees/joe``
 
 ::
 

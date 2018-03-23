@@ -32,7 +32,7 @@ You'll find many member management options available at:
   having access to your Control Panel. Typically, this Member Profile area
   is found at::
 
-    http://example.com/index.php/member/profile/
+    https://example.com/member/profile/
 
 .. note:: A member account's Username and Screen Name can be identical,
   but must be unique system-wide.
@@ -163,7 +163,7 @@ after successfully logging in. The parameter can be defined in two ways:
    return the user. For instance, if you want the user to be returned to
    the "local" Template in the "news" Template Group, you would use:
    return="news/local"
-#. Use a full URL. For example: return="http://example.com/return.html"
+#. Use a full URL. For example: return="https://example.com/return.html"
 
 Variables
 =========
@@ -263,7 +263,7 @@ Place the variable inside of a link tag::
   <a href="{path='member/profile'}">Edit your profile</a>
 
 When the link is rendered it will appear similar to:
-http://example.com/index.php/member/profile/
+https://example.com/member/profile/
 
 Forgotten Password?
 ===================
