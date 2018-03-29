@@ -224,7 +224,7 @@ Field Examples
 .. _fluid-field-multi:
 
 Checkbox and Multi Select Fields
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 For checkbox and multiselect single variables::
 
@@ -252,7 +252,7 @@ For checkbox and multiselect variable pairs::
 .. _fluid-field-date:
 
 Date Fields
-~~~~~~~~~~~
+-----------
 
 ::
 
@@ -265,7 +265,7 @@ Date Fields
 .. _fluid-field-email:
 
 Email Address Fields
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 ::
 
@@ -278,7 +278,7 @@ Email Address Fields
 .. _fluid-field-file:
 
 File Fields
-~~~~~~~~~~~
+-----------
 
 A file field variable pair::
 
@@ -306,7 +306,7 @@ Single variable file field::
 .. _fluid-field-grid:
 
 Grid Fields
-~~~~~~~~~~~
+-----------
 
 ::
 
@@ -336,7 +336,7 @@ Grid Fields
 .. _fluid-field-select:
 
 Radio and Select Fields
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 Radio and single select fields use single variables::
 
@@ -350,7 +350,7 @@ Radio and single select fields use single variables::
 .. _fluid-field-relationship:
 
 Relationship Fields
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 ::
 
@@ -373,7 +373,7 @@ Relationship Fields
 .. _fluid-field-text:
 
 RTF Text and Textare Fields
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 ::
 
@@ -386,7 +386,7 @@ RTF Text and Textare Fields
 .. _fluid-field-toggle:
 
 Toggle Fields
-~~~~~~~~~~~~~
+-------------
 
 ::
 
@@ -400,7 +400,7 @@ Toggle Fields
 .. _fluid-field-url:
 
 URL Fields
-~~~~~~~~~~
+----------
 
 ::
 
