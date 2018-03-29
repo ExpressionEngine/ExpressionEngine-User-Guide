@@ -54,6 +54,12 @@ Variables
    :local:
    :depth: 1
 
+When using any of these tags with a parameter in a conditional you will have to
+wrap them in braces (``{}``), like so::
+
+  {if {fluid_content:first name="text_body"}}
+
+
 total_fields
 ------------
 
