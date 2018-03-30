@@ -367,6 +367,8 @@ username is neither joe nor bob a default message is shown.
    the *right* of the prefix is what determines which conditional you
    are using.
 
+.. _embedding_tags_in_conditionals:
+
 **************
 Embedding Tags
 **************
