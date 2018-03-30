@@ -49,7 +49,6 @@ ExpressionEngine's Control Panel targets compatibility with the final-release ve
 - Firefox
 - Opera
 - Microsoft Edge
-- Internet Explorer 10+
 
 .. note:: In all cases, JavaScript must be enabled to use the Control Panel.
 
