@@ -2,7 +2,7 @@
 Fluid
 #####
 
-A Fluid field is a collection of fields.  A Fluid field can contain any native field type except another Fluid field.  The fields assigned to the Fluid field can then be used multiple times in the same entry when creating/editing the entry.  The author also has control over the order of the fields.
+A Fluid field is a collection of fields.  A Fluid field can contain any native fieldtype except another Fluid field.  The fields assigned to the Fluid field can then be used multiple times in the same entry when creating/editing the entry.  The author also has control over the order of the fields.
 
 Fluid fields give the author control over the structure of their content, while ensuring the final output uses the correct design elements.  All that is done without the author worrying about markup or html.  They simply add content to the fields, and template can wrap each field in the proper markup.
 
@@ -80,7 +80,7 @@ The "count" out of the current field being displayed. If five fields
 are being displayed, then for the fourth field the ``count`` variable
 would have a value of "4". The following parameters are available:
 
-- **type=** Filters the fields by field type
+- **type=** Filters the fields by fieldtype
 - **name=** Filters the fields by field name
 
 index
@@ -93,7 +93,7 @@ index
 The index of the current field being displayed starting at 0. The following
 parameters are available:
 
-- **type=** Filters the fields by field type
+- **type=** Filters the fields by fieldtype
 - **name=** Filters the fields by field name
 
 next_field_name
@@ -141,7 +141,7 @@ first
 
 True, if the current field is the first one. The following parameters are available:
 
-- **type=** Filters the fields by field type
+- **type=** Filters the fields by fieldtype
 - **name=** Filters the fields by field name
 
 last
@@ -153,7 +153,7 @@ last
 
 True, if the current field is the last one. The following parameters are available:
 
-- **type=** Filters the fields by field type
+- **type=** Filters the fields by fieldtype
 - **name=** Filters the fields by field name
 
 Displaying a Pair variable
