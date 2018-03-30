@@ -11,7 +11,7 @@ Make sure you substitute "template_group" and "template" with the name
 of an actual template group and template.
 
 When the path variable is rendered it will automatically include your
-site URL, as you've defined in your :doc:`URL and Path Settings 
+site URL, as you've defined in your :doc:`URL and Path Settings
 </cp/settings/urls>`.
 
 For example, a variable like this::
@@ -20,7 +20,7 @@ For example, a variable like this::
 
 Will be rendered like this::
 
-	http://example.com/index.php/channel/comments
+	https://example.com/channel/comments
 
 The path variable is most commonly used to create a link, like this::
 
@@ -55,7 +55,7 @@ If the template has the following Template Route assigned::
 
 The previous route variable will be rendered as::
 
-	http://example.com/index.php/archive/2009/june
+	https://example.com/archive/2009/june
 
 
 Why not hard code URLs instead?
@@ -63,7 +63,7 @@ Why not hard code URLs instead?
 
 The biggest advantage to using the path variable whenever you must
 create a link is that if your site URL ever changes you can simply
-update your :doc:`URL and Path Settings </cp/settings/urls>` page with the 
+update your :doc:`URL and Path Settings </cp/settings/urls>` page with the
 new URL and every link in your templates will update accordingly. Using the path variable is also less prone to errors since you only need to know two pieces of information: The Template Group name and the template name.
 
 Other Path Variables

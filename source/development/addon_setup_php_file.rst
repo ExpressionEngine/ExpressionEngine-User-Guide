@@ -18,7 +18,7 @@ The file must return an associative array. For example::
 
   return array(
   	'author'      => 'Example, Inc',
-  	'author_url'  => 'http://example.com',
+  	'author_url'  => 'https://example.com',
   	'name'        => 'Hello World',
   	'description' => 'Displays a friendly "Hello world!" message.',
   	'version'     => '2.0.0',
@@ -44,7 +44,7 @@ author_url
 
 ::
 
-  'author_url' => 'http://example.com'
+  'author_url' => 'https://example.com'
 
 This is the URL associated with the add-on. This value is used in manual
 display for plugins, as such this is a **required** key for all plugins.
@@ -108,7 +108,7 @@ docs_url
 
 ::
 
-  'docs_url' => 'http://example.com/hello_world/docs'
+  'docs_url' => 'https://example.com/hello_world/docs'
 
 This is an external URL for additional documentation.
 

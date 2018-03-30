@@ -110,9 +110,9 @@ something less obvious as well.
 
 ::
 
-	  $config['cp_url'] = "http://example.com/razzle.php";
+	  $config['cp_url'] = "https://example.com/razzle.php";
 
 Removing index.php from your URLs
 ---------------------------------
 
-ExpressionEngine is a PHP application, so it is invoked whenever the web server requests the ``index.php`` file, e.g.: *https://example.com/index.php/some/url*. You can configure your server to invoke this file without having it appear in the URL. See :doc:`/urls/remove_index.php` for details on how to accomplish this.
+ExpressionEngine is a PHP application, so it is invoked whenever the web server requests the ``index.php`` file, e.g.: *https://example.com/some/url*. You can configure your server to invoke this file without having it appear in the URL. See :doc:`/urls/remove_index.php` for details on how to accomplish this.

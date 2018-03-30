@@ -18,7 +18,7 @@ the server wizard will run some tests and give you an answer.
 
 -  `Download <https://ellislab.com/asset/file/ee_server_wizard.zip>`_ and unzip the archive.
 -  Upload the folder to your server.
--  Point your web browser to the folder. For example: ``http://example.com/ee_wizard``
+-  Point your web browser to the folder. For example: ``https://example.com/ee_wizard``
 
 ***********************
 Okay, The Bare Minimums

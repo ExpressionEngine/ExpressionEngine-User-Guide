@@ -24,7 +24,7 @@ The Control Panel
 *****************
 
 Upon completing the installation, you will land on your Control Panel login page.  Login to the control panel (also known as the "back end") using the same username and password you provided during installation. If you don't
-remember your Control Panel link, it's usually similar to: `<http://example.com/admin.php>`_
+remember your Control Panel link, it's usually similar to: `<https://example.com/admin.php>`_
 
 After logging in, you'll be greeted by the Control Panel Overview page:
 
@@ -189,13 +189,13 @@ and are grouped together into (you guessed it!) *Template Groups*. As usual, you
 Templates and Groups as you need. Templates are very important because by default, they define the URL structure
 of your site. Here's how Template Groups and Templates make up an ExpressionEngine URL::
 
-	http://example.com/template_group/template_name
+	https://example.com/template_group/template_name
 
 Every Template Group has at least one Template named **index**, which acts as the default if no other
 Template is specified. For example, if we create a new Template Group named **news**, you can access its
 index template using just::
 
-	http://example.com/news
+	https://example.com/news
 
 Creating a Template
 ===================
@@ -392,8 +392,8 @@ Turning the Page
 ****************
 
 At this point, you might notice that our site's homepage
-(`<http://example.com>`_) is showing the same content as our News page
-(`<http://example.com/news>`_). The reason for this is simple: remember checking
+(`<https://example.com>`_) is showing the same content as our News page
+(`<https://example.com/news>`_). The reason for this is simple: remember checking
 the box next to **Make the index template in this group your site's home page?**
 when you created the "news" template group? That made "news" your site's default
 Template Group, the Template Group that is displayed as the homepage when no
@@ -464,7 +464,7 @@ A Dynamic Duo
 =============
 
 Now follow the link to our "Hello, World!" Entry, which will look like
-`<http://example.com/news/hello-world>`_ thanks to *url_title_path*. You'll be
+`<https://example.com/news/hello-world>`_ thanks to *url_title_path*. You'll be
 taken to our *News* Template Group. But wait, only one Entry is shown now!
 
 .. figure:: ../images/getting_started_template_v4.png

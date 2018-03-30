@@ -5,6 +5,59 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.1.3
+-------------
+
+Release Date: March 23, 2018
+
+- **Security:** Strengthened warning for off-site redirects to help prevent phishing.
+- **Security:** Improved blocking of reverse tabnabbing in user-submitted content.
+- **Security:** Tightened Filesystem security.
+- Fixed a bug (#23284) where deleting a field used for search excerpts didn't reset that setting in the channel(s).
+- Fixed a bug (#23423) where Relationship meta tags in conditionals inside a Fluid field didn't parse unless braced and quoted.
+- Fixed a bug (#23457) where existing Channel Layouts stuck newly added category groups in the third tab, rather than the categories tab.
+- Fixed a bug (#23495) where the Search and Replace utility did not work with the new channel field database schema.
+- Fixed a bug (#23520) where some cache keys may fail to write when using Docker for Windows.
+- Fixed a bug (#23525) where OPcache path restrictions could cause a PHP warning when running the 1-Click Updater.
+- Fixed a bug (#23526) where cloning a Grid column didn't accurately clone the text formatting setting.
+- Fixed a bug (#23531) where the Preview icon would show in the Channel Entry listing when a preview wasn't available.
+- Fixed a bug (#23532) where a Site's 404 Template setting included templates unavailable to that Site.
+- Fixed a bug where removing a bunch of fields from a Fluid field overwhelmed the CP Log; the CP Log can handle it now.
+- Fixed a bug where the Preview button for new entries would not work when the Pages module was installed but the Channel had no preview_url setting.
+- Fixed a bug where in rare circumstances Channel Layout changes did not 'stick' on edit.
+- Fixed a bug where new Template Partials and Variables files were only synced when requested on the front end.
+- Fixed the Template export feature. It now includes Template Partials and Variables, exports templates from all Sites, and is only available to Super Admins.
+- Fixed a fatal PHP error if you were beginning an update from a version older than 2.11.0.
+- Fixed a bug where the Grid field ``:table`` modifier caused PHP errors when used.
+- Fixed a bug where validation errors could occur when Select values were not in the original field options in 'Ajaxified' fields.
+- Fixed a bug where Radio fields caused a PHP error on Channel Forms.
+
+
+Version 4.1.2
+-------------
+
+Release Date: March 13, 2018
+
+- **Security:** Tightened security to filter additional invisible control characters from input.
+- Added a loading state to the Live Preview UI.
+- The Communicate utility will now throw an error when the ``email_batch_size`` config override is set to an invalid value.
+- For member and forum themes, only those themes in the themes/user directory are available in the control panel template editor.
+- Fixed a bug (#23487) where clicking the reorder handle on a new column in the Grid field settings would refresh the page.
+- Fixed a bug (#23498) where ``content`` was not a reserved word for fields. See :doc:`/installation/version_notes_4.0.0` for details on resolving this if you have an existing field with that name.
+- Fixed a bug (#23509) where previewing a new entry with an empty Grid and Relationship would trigger PHP errors.
+- Fixed a bug (#23519) to get a better result. #iseewhatyoudidthere
+- Fixed a bug where ``-`` and other characters could not be used in Layout Variable names.
+- Fixed a bug where importing a Grid field with a Relationship column disregarded the "allow multiple" setting.
+- Fixed a bug where member custom field conditionals were not properly parsed on the member profile templates.
+- Fixed a bug where member custom fields did not respect the display settings on the member profile templates.
+- Fixed a bug where previewing a new entry was so exciting that new entry showed up in all your Channel Entries tags.
+- Fixed a bug where renaming a Fluid field when importing a Channel Set would result in a PHP error.
+- Fixed a bug where the "allow multiple" setting of Relationshp fileds was ignored on export.
+- Fixed a bug where the Preview button would show when a Preview wasn't available.
+- Fixed a bug where the new email and password change notification templates in 4.1.0 were only added to the primary site.
+- Fixed a bug where the updater may show the wrong version is it updating to if the cache is stale.
+
+
 Version 4.1.1
 -------------
 

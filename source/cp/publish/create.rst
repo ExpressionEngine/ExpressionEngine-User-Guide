@@ -51,7 +51,7 @@ titles may only contain alpha-numeric characters and no spaces. The
 purpose of a URL Title is to enable your entries to be accessed using a
 URL such as::
 
-	http://example.com/index.php/channel/comments/joes_first_entry/
+	https://example.com/channel/comments/joes_first_entry/
 
 If you do not specify a "URL Title" one will automatically be created
 for you based upon your entry Title. URL Titles must be unique within a
@@ -205,7 +205,7 @@ URL Title of the entry will be automatically added. For example, this::
 
 Would be rendered like this::
 
-  <a href="http://example.com/index.php/channel/comments/ice_cream/">my entry</a>
+  <a href="https://example.com/channel/comments/ice_cream/">my entry</a>
 
 Forum
 ~~~~~
@@ -265,7 +265,7 @@ alpha-numeric characters, underscore / dash separators, and periods.
 
 **INCORRECT:**
 
--  http://example.com/index.php/company/roster/board/ceo/
+-  https://example.com/company/roster/board/ceo/
 -  /my_stuff/über_list.html
 
 .. note:: Entries cannot share the same Page URI. Each "page" entry must

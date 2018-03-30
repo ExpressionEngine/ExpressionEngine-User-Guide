@@ -39,12 +39,12 @@ the Forum tag when running forums through regular templates. No spaces. Undersco
 Forum directory
 ^^^^^^^^^^^^^^^
 
-URL location to the forum.
+URL location to the forum. This is the URL to the main forum page.
 
 Forum URL segment
 ^^^^^^^^^^^^^^^^^
 
-Word that triggers forum display. Cannot be the same as a template or template group.
+Word that triggers forum display. Cannot be the same as a template or template group.  The trigger word causes the forum to be processed apart from standard templates. If you are outputting the forum via tag on a standard template, this field should be blank.
 
 Default theme
 ^^^^^^^^^^^^^

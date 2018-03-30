@@ -77,7 +77,7 @@ Since CSS and JavaScript cannot be loaded without access to the theme
 folder, it's best to override that setting now since you are already
 editing the config.php file::
 
-  $config['theme_folder_url'] = "http://example.com/themes/";
+  $config['theme_folder_url'] = "https://example.com/themes/";
   $config['theme_folder_path'] = "/home/user/example.com/themes/";
 
 The other paths and folders you can update after logging in to the
@@ -109,27 +109,27 @@ may need to be updated, including:
 You can also set many of these paths in your config.php file using
 configuration variables::
 
-  $config['site_url'] = "http://example.com/";
+  $config['site_url'] = "https://example.com/";
 
-  $config['theme_folder_url'] = "http://example.com/themes/";
+  $config['theme_folder_url'] = "https://example.com/themes/";
   $config['theme_folder_path'] = "/home/user/example.com/themes/";
 
-  $config['captcha_url'] = "http://example.com/images/captchas/";
+  $config['captcha_url'] = "https://example.com/images/captchas/";
   $config['captcha_path'] = "/home/user/example.com/images/captchas/";
 
-  $config['emoticon_url'] = "http://example.com/images/smileys/";
+  $config['emoticon_url'] = "https://example.com/images/smileys/";
 
-  $config['avatar_url'] = "http://example.com/images/avatars/";
+  $config['avatar_url'] = "https://example.com/images/avatars/";
   $config['avatar_path'] = "/home/user/example.com/images/avatars/";
 
-  $config['sig_img_url'] = "http://example.com/images/signature_attachments/";
+  $config['sig_img_url'] = "https://example.com/images/signature_attachments/";
   $config['sig_img_path'] = "/home/user/example.com/images/signature_attachments/";
 
   $config['upload_preferences'] = array(
       6 => array(                                                    // ID of upload destination
           'name'        => 'Image Uploads',                          // Display name in control panel
           'server_path' => '/home/user/example.com/images/uploads/', // Server path to upload directory
-          'url'         => 'http://example.com/images/uploads/'      // URL of upload directory
+          'url'         => 'https://example.com/images/uploads/'      // URL of upload directory
       )
   );
 

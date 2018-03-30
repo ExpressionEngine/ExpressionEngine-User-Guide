@@ -61,7 +61,7 @@ For IIS, provide all permissions to the IIS user for these files and directories
 4. Run The Installation Wizard
 ******************************
 
-#. Point your browser to the URL of the :file:`admin.php` file you uploaded. For example: ``http://example.com/admin.php``.
+#. Point your browser to the URL of the :file:`admin.php` file you uploaded. For example: ``https://example.com/admin.php``.
 
 #. Follow the on-screen instructions to install ExpressionEngine.
 
@@ -74,7 +74,7 @@ For IIS, provide all permissions to the IIS user for these files and directories
 Welcome to ExpressionEngine!
 ****************************
 
-You can now log in to your Control Panel at ``http://example.com/admin.php``!
+You can now log in to your Control Panel at ``https://example.com/admin.php``!
 
 If you're new to ExpressionEngine, get started with the classic :doc:`Hello, World! </how_to/hello-world>` example.
 

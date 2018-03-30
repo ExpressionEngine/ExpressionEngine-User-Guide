@@ -58,7 +58,7 @@ wrap parameter can simplify this process::
 
 Will render as::
 
-  <a href="http://example.com/dir/filename.ext">filename</a>
+  <a href="https://example.com/dir/filename.ext">filename</a>
 
 It can also be used to create image tags. In this case the filename will
 be used to create the alt parameter. ::
@@ -67,7 +67,7 @@ be used to create the alt parameter. ::
 
 Which will output as::
 
-  <img src="http://example.com/dir/filename.ext" alt="filename" />
+  <img src="https://example.com/dir/filename.ext" alt="filename" />
 
 .. _channel_entry_file_field_pair:
 
@@ -201,7 +201,7 @@ automatically added. For example, this::
 
 Would be rendered like this::
 
-  <a href="http://example.com/index.php/gallery/full_image/234/">my picture</a>
+  <a href="https://example.com/gallery/full_image/234/">my picture</a>
 
 location
 ^^^^^^^^

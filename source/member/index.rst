@@ -32,7 +32,7 @@ You'll find many member management options available at:
   having access to your Control Panel. Typically, this Member Profile area
   is found at::
 
-    http://example.com/index.php/member/profile/
+    https://example.com/member/profile/
 
 .. note:: A member account's Username and Screen Name can be identical,
   but must be unique system-wide.
@@ -42,19 +42,20 @@ Member Profile Templates
 ************************
 
 The public profile area has its own set of templates which can be edited
-to change the look. You'll find the templates located at::
+to change the look. You'll find the default templates located at::
 
   themes/ee/member/default/
 
-These templates can be edited with a text editor, or you may choose to edit
-them via your Control Panel at :menuselection:`Developer --> Templates --> Members`
-
-A good strategy is to make a copy of the entire **default** templates folder,
-then edit your copy so you can leave the **default** files intact. Save your new copy to::
+To customize the templates, copy them over to::
 
   themes/user/member/custom_theme_name/
 
-Set your new copy as the site default under :menuselection:`Settings --> Member Settings`
+.. note:: Any changes made to files in themes/ee/ will be lost during an update.  Customized themes must be saved in the themes/user/ folder.
+
+Templates in `themes/user/member/` can be edited with a text editor, or you may choose to edit
+them via your Control Panel at :menuselection:`Developer --> Templates --> Members`
+
+If you do create a custom theme, you may set it as the site default under :menuselection:`Settings --> Member Settings`
 
 .. note:: When building your member profile templates, consider that any
   external links will pass along referrer data. This can cause security
@@ -162,7 +163,7 @@ after successfully logging in. The parameter can be defined in two ways:
    return the user. For instance, if you want the user to be returned to
    the "local" Template in the "news" Template Group, you would use:
    return="news/local"
-#. Use a full URL. For example: return="http://example.com/return.html"
+#. Use a full URL. For example: return="https://example.com/return.html"
 
 Variables
 =========
@@ -262,7 +263,7 @@ Place the variable inside of a link tag::
   <a href="{path='member/profile'}">Edit your profile</a>
 
 When the link is rendered it will appear similar to:
-http://example.com/index.php/member/profile/
+https://example.com/member/profile/
 
 Forgotten Password?
 ===================

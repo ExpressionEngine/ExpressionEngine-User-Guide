@@ -40,7 +40,7 @@ adding a "css" trigger word in the URL. For instance, if your stylesheet
 is the "channel\_css" Template of the "channel" Template Group, you
 could point to it using the URL:
 
-http://example.com/index.php/css/channel/channel\_css/
+https://example.com/css/channel/channel\_css/
 
 Using Tags and PHP in a Stylesheet
 ----------------------------------

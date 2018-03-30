@@ -77,7 +77,7 @@ CAPTCHA directory
 The URL to your :doc:`CAPTCHA </security/captchas>` images. In most cases, this
 will be similar to:
 
- - http://example.com/images/captchas/
+ - https://example.com/images/captchas/
  - ///example.com/images/captchas/
  - /images/captchas/
 
