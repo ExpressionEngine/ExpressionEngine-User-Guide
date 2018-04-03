@@ -368,18 +368,16 @@ Editing Permissions
 
 The {if editable} conditional in the Comment Entries tag outputs content
 when the viewing member has permission to edit the comment indicated
-while the {if can\_moderate\_comment} outputs content if they have
-permission to both edit the comment and close it.
+while the {if can_moderate_comment} outputs content if they have
+permission to close the comment.
 
 For regular members, in order to edit comments they must be a logged in
 member, the author of the comment, and the editing time limit must not
 have expired.
 
-Comment moderators may both edit the comment contents or close the
-comment. Superadmins will always have {editable} and
-{can\_moderate\_comment} permissions on any comment. If a member is in a
-group with permission to edit comments to their own entries and the
-comment is to one of their entries, they will have edit permissions.
+Comment moderators may close the comment. Superadmins will always have {editable} and
+{can_moderate_comment} permissions on any comment.
+
 Lastly, if a member is in a group with permission to edit comments in
 any entry, they will have edit permissions. The edit time limit does not
 apply to moderators.
