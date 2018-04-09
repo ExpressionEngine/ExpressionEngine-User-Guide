@@ -389,7 +389,7 @@ instead of these:
 
   As a general rule, you should never brace your conditional variables, which allows ExpressionEngine to optimize for the best performance and security.
 
-  ☣ **Technical content ahead:** Braced variables in a conditional are literally output to the template like they are anywhere else before evaluating. So rather than being able to use a lightweight internal PHP variable, ExpressionEngine has to comparing string literals. If a lot of text-based content is involved, then you could be creating strain on the application due to internal constraints of PHP and the server's regular expression libraries.
+  ☣ **Technical content ahead:** Braced variables in a conditional are literally output to the template like they are anywhere else before evaluating. So rather than being able to use a lightweight internal PHP variable, ExpressionEngine has to compare string literals. If a lot of text-based content is involved, then you could be creating strain on the application due to internal constraints of PHP and the server's regular expression libraries.
 
 There are a few exceptions to this where bracing is required or even recommended. This is the case for certain types of metadata, where the type, length, and nature of the content is known. In other words, variables that belong to the system, and whose contents are not influenced or created by a content author. For example, comparing formatted dates::
 
