@@ -104,11 +104,8 @@ something less obvious as well.
 #. FTP to your server and change the name of the admin.php file to
    something else that is not easily guessed. For example, let's say
    you've renamed it to razzle.php.
-#. Open ``system/user/config/config.php`` (or whatever you have
-   renamed the system folder to) and update the URL to the admin.php
-   file
-
-::
+#. Visit :menuselection:`Settings --> URL and Path Settings` and update the Control Panel URL setting. Alternatively you can open ``system/user/config/config.php`` (or whatever you have
+   renamed the system folder to) and update the URL using the `cp_url` override::
 
 	  $config['cp_url'] = "http://example.com/razzle.php";
 
