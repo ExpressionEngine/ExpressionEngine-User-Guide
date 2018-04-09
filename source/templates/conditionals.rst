@@ -410,7 +410,9 @@ or this::
 
   {if "{current_time format=\"%F\"}" == "May"}
 
-Tags that output numeric content will work fine with quotes, but also do not need them, e.g. :doc:`Fluid field count variables </fieldtypes/fluid>`::
+Tags that output numeric content will work fine with quotes, but also do not need them, e.g. :doc:`Fluid field count variables </fieldtypes/fluid>`:
+
+.. code-block:: text
 
   {if {fluid_content:count type="long_form_text"} == 3}
 

@@ -56,9 +56,11 @@ Variables
 
 .. tip::
 
-  When using any of these :ref:`tags with a parameter in a conditional<embedding_tags_in_conditionals>` you will have to wrap them in braces (``{}``), like so::
+  When using any of these :ref:`tags with a parameter in a conditional<embedding_tags_in_conditionals>` you will have to wrap them in braces (``{}``), like so:
 
-  {if {fluid_content:first name="text_body"}}
+  .. code-block:: text
+
+    {if {fluid_content:first name="text_body"}}
 
 
 total_fields
