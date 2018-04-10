@@ -427,7 +427,7 @@ public static properties::
   public static $name         = 'Member List';
   public static $version      = '1.0';
   public static $author       = 'Jane Doe';
-  public static $author_url   = 'http://example.com/';
+  public static $author_url   = 'https://example.com/';
   public static $description  = 'Returns a list of site members';
   public static $typography   = FALSE;
 
@@ -457,14 +457,14 @@ ExpressionEngine code.
    * @category        Plugin
    * @author      Jane Doe
    * @copyright       Copyright (c) 2010, Jane Doe
-   * @link        http://example.com/memberlist/
+   * @link        https://example.com/memberlist/
    */
   class Memberlist
   {
     public static $name         = 'Member List';
     public static $version      = '1.0';
     public static $author       = 'Jane Doe';
-    public static $author_url   = 'http://example.com/';
+    public static $author_url   = 'https://example.com/';
     public static $description  = 'Returns a list of site members';
     public static $typography   = FALSE;
 

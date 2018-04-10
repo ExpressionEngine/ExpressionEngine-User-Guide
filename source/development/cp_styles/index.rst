@@ -30,7 +30,7 @@ referrer logs, use :meth:`Cp::masked_url` from the Control Panel Class::
 
 Will result in::
 
-  http://example.com/index.php?URL=http://www.google.com
+  https://example.com?URL=http://www.google.com
 
 .. _cp_internal_links:
 

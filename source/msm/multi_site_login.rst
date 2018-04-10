@@ -5,9 +5,9 @@ If you have multiple sites, you may prefer that when a user logs into one site, 
 
 In order for multi site login to work, all of the sites must use **cookies only** to hold the session data on the frontend.  In :menuselection:`Settings --> Security and Privacy`: make sure the **Website Session type** is set to **Cookies only** for each site you want to include.
 
-If your sites are in separate subfolders (``http://example.com/site2/index.php``) or separate subdomains (``http://site2.example.com/index.php``) you can simply set the cookie domain for each site to the top level domain.
+If your sites are in separate subfolders (``https://example.com/site2/index.php``) or separate subdomains (``http://site2.example.com``) you can simply set the cookie domain for each site to the top level domain.
 
-In the case of ``http://example.com/site2/index.php`` or ``http://site2.example.com/index.php`` type URLs, the cookie domain should be **.example.com**.
+In the case of ``https://example.com/site2/index.php`` or ``http://site2.example.com`` type URLs, the cookie domain should be **.example.com**.
 
 Logging in on any of the URLs would result in cookies that can be read on any subfolder or subdomain of the example.com URL.
 

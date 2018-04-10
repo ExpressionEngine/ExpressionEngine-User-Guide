@@ -107,9 +107,9 @@ something less obvious as well.
 #. Visit :menuselection:`Settings --> URL and Path Settings` and update the Control Panel URL setting. Alternatively you can open ``system/user/config/config.php`` (or whatever you have
    renamed the system folder to) and update the URL using the `cp_url` override::
 
-	  $config['cp_url'] = "http://example.com/razzle.php";
+	  $config['cp_url'] = "https://example.com/razzle.php";
 
 Removing index.php from your URLs
 ---------------------------------
 
-ExpressionEngine is a PHP application, so it is invoked whenever the web server requests the ``index.php`` file, e.g.: *https://example.com/index.php/some/url*. You can configure your server to invoke this file without having it appear in the URL. See :doc:`/urls/remove_index.php` for details on how to accomplish this.
+ExpressionEngine is a PHP application, so it is invoked whenever the web server requests the ``index.php`` file, e.g.: *https://example.com/some/url*. You can configure your server to invoke this file without having it appear in the URL. See :doc:`/urls/remove_index.php` for details on how to accomplish this.

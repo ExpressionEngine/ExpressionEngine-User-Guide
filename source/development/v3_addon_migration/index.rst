@@ -31,7 +31,7 @@ your add-on. Then fill it in with this template, changing the values to match yo
 
   return array(
     'author'      => 'Example, Inc',
-    'author_url'  => 'http://example.com',
+    'author_url'  => 'https://example.com',
     'name'        => 'Hello World',
     'description' => 'Displays a friendly "Hello world!" message.',
     'version'     => '2.0.0',

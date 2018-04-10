@@ -27,7 +27,7 @@ posts::
                   <li class="byline">by {item_authors backspace="2"}{author_name}, {/item_authors}</li>
                   <li class="date">{item_date format="%F %d %Y"}</li>
               </ul>
-              {content}
+              {item_content}
           </li>
       {/feed_items}
   </ul>

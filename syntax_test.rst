@@ -4,7 +4,7 @@ Syntax Highlighting Test
 EE Comment::
 
 	{!-- this is a single line --}
-	
+
 	{!-- this is a
 		multi-line comment --}
 
@@ -37,7 +37,7 @@ Path type::
 Here is some HTML::
 
   <div id="foo">
-    <a href="http://example.com">Sample link</a>
+    <a href="https://example.com">Sample link</a>
   </div>
 
 And here is some PHP::
@@ -60,15 +60,15 @@ And here is some PHP::
 Here are some ExpressionEngine tags::
 
   {embed="foo/bar"}
-  
+
   {webmaster_email}
-  
+
   {encode="email@example.com"}
-  
+
   {exp:plugin:no_closing_tag}
 
   {exp:plugin:method parameter="foo"}{bar}{/exp:plugin:method}
-    
+
 And finally, mixed::
 
   {embed="foo/bar"}
@@ -76,14 +76,14 @@ And finally, mixed::
   {if segment_2 != ''}
     {redirect="404"}
   {/if}
-	
+
   <?php $i = 0; ?>
-  
+
   <div id="articles">
   {exp:channel:entries channel="foo" limit="10"}
 
     <?php if ($i % 2): ?><hr /><?php endif; ?>
-      
+
     <article>
       <time>{entry_date format="%M %d, %Y"}</time>
       {content_field}
@@ -150,7 +150,7 @@ More complex, with simple conditionals, PHP, and pair variables::
 	    <input type="submit" name="submit" value="Submit" />
 
 	{/exp:channel:form}
-	
+
 Tada!
 
 

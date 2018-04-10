@@ -57,7 +57,7 @@ Avatar directory
 The URL to your avatar folder. In most cases, this will be
 similar to:
 
- - http://example.com/images/avatars/
+ - https://example.com/images/avatars/
  - ///example.com/images/avatars/
  - /images/avatars/
 

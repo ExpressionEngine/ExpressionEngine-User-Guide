@@ -197,7 +197,7 @@ the current ExpressionEngine URL::
 The ``{current_url}`` and ``{current_path}`` variables give you access
 to the full url and the path (all segments), respectively::
 
-  {current_url} {!-- http://example.com/something/great --}
+  {current_url} {!-- https://example.com/something/great --}
   {current_path} {!-- /something/great --}
 
 *More Information:* :doc:`./globals/url_segments`

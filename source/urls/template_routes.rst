@@ -4,7 +4,7 @@ Template Routes
 By default Templates are accessed by their name and Template Group using
 this URL structure::
 
-  http://example.com/index.php/template_group/template
+  https://example.com/template_group/template
 
 Template routes allow you to override this default behavior by allowing
 you to assign URL segments to variables and apply rules to them.
