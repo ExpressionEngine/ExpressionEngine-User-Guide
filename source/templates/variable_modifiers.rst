@@ -225,6 +225,8 @@ Perform a ROT13 substitution cypher to the content.
   - **capitalize=** (default: none) One of ``ucfirst`` (uppercase first letter) or ``ucwords`` (uppercase first letter of each word)
   - **locale=** (default: en_US.UTF-8) The ICU locale ID
 
+.. _url_variable_modifier:
+
 :url
 ****
 

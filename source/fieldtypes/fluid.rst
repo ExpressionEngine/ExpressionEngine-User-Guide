@@ -47,6 +47,8 @@ For example, if you have a Fluid field ``fluid_content`` with a text field ``flu
 
 The prefixed tag pair is a looping tag pair.  You can have more than one ``fluid_text`` field for the entry, it's entirely at the entry author's discretion.  The author also determines the order of the field output.
 
+.. _fluid_field_meta_variables:
+
 Variables
 =========
 
