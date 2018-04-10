@@ -428,15 +428,31 @@ variable_time
 
   {variable_time}
 
-This variable accepts a date parameter in the form of a human readable date, including :ref:`relative_dates`.
+This variable accepts a date parameter in the form of a human readable date, including :ref:`relative_dates`. Some examples of valid ``date=`` values:
 
-In the case of relative dates, the date is relative to the current user's localized time.  If no date is specified, the tag works just like the ``{current_time}`` variable.
+- ``date='2018-04-30'``
+- ``date='April 30, 2018'``
+- ``date='+2 weeks'``
+- ``date='2 days ago'``
+- ``date='next Monday'``
 
-As with other date variables, you can use the standard :doc:`date variable formatting</templates/date_variable_formatting>`::
+The result is a standard ExpressionEngine date variable, and can use all :doc:`date variable formatting</templates/date_variable_formatting>` and comparisons available to other date variables. In the case of ``:relative`` dates, the date is relative to the current user's localized time. If no date parameter is give, the tag works just like the ``{current_time}`` variable.
 
-  {variable_time date="2 days ago" format="%Y %m %d %H:%i:%s"}
+Given a current date of April 12, 2018, see the following examples::
 
-.. note:: Like the ``{current_time}`` variable, ``{variable_time}`` is parsed very early on in the Template parser, allowing it to be used as a tag parameter.
+  {variable_time date="2 days ago" format="%F %d, %Y"}
+  {!-- April 10, 2018 --}
+
+  {variable_time:relative date='2018-10-25' units='days'}
+  {!-- in 197 days --}
+
+  {variable_time date='{segment_3}-{segment_4}' format='%F'}
+  {!-- April (given a URL of https://example.com/news/archive/2018/04) --}
+
+  {if "{variable_time date='2 weeks ago' format='%U'}" >= "{variable_time date='2018-04-12'}"}
+  {!-- TRUE, if the current date is within 2 weeks of April 12, 2018. This works because both are output as Unix timestamps allowing basic <, >, =  for chronological comparisons. --}
+
+.. note:: Like the ``{current_time}`` variable, ``{variable_time}`` is available to use as a tag parameter.
 
 webmaster\_email
 ----------------
