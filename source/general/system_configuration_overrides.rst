@@ -2109,6 +2109,27 @@ $config['force_query_string'] = 'y';
 **Also found in CP:** :menuselection:`Settings --> Debugging & Output`: :ref:`Force URL query strings
 <output-force-query-strings-label>`
 
+force_redirect
+--------------
+
+If ``redirect_submitted_links`` is set to ``y``, this setting can be used to show an interstitial message to the user to confirm they want to visit the link they clicked. This can prevent issues where a link looks like it leads to one place, but actually leads to another.
+
+========== ========
+Value      Behavior
+========== ========
+``y``      Show interstitial redirect confirmation screen when a submitted link is clicked
+``n``      Do not force the interstitial screen
+========== ========
+
+Example Usage::
+
+$config['force_redirect'] = 'y';
+
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Settings --> Security & Privacy`: :ref:`Force redirect confirmation on submitted links?
+<enable-rank-denial>`
+
 
 .. _forum_is_installed:
 
@@ -3339,11 +3360,10 @@ Example Usage::
 
 $config['redirect_submitted_links'] = 'y';
 
-.. .. rst-class:: cp-path
-..
-.. **Also found in CP:** :menuselection:`Admin --> Security and
-.. Privacy --> Security and Sessions`: :ref:`Apply Rank Denial to
-.. User-submitted Links <security-apply-rank-denial-label>`
+.. rst-class:: cp-path
+
+**Also found in CP:** :menuselection:`Settings --> Security & Privacy`: :ref:`Enable Rank Denial to submitted links?
+<enable-rank-denial>`
 
 
 .. _redis_config:
