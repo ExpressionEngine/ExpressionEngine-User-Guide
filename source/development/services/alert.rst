@@ -30,7 +30,7 @@ CP/Alert Service Methods
   Makes a new named alert of the specified type.
 
   :param string $name: The name of the alert
-  :param string $type: The type of the alert ('inline', 'banner', or 'standard')
+  :param string $type: The type of the alert ('inline', 'banner', 'standard', or 'alert')
   :returns: An alert
   :rtype: Alert
 
@@ -57,6 +57,16 @@ CP/Alert Service Methods
   :param string $name: The name of the alert
   :returns: An alert
   :rtype: Alert
+
+.. method:: makeAlert($name)
+
+  Makes a new named floating alert.
+
+  :param string $name: The name of the alert
+  :returns: An alert
+  :rtype: Alert
+
+  .. versionadded:: 4.2.0
 
 .. method:: get($name, $type = 'inline')
 
@@ -88,11 +98,47 @@ CP/Alert Service Methods
   :returns: The rendered HTML of the alert
   :rtype: String
 
+.. method:: getAllAlerts()
+
+  Gets the rendered value of the floating alert.
+
+  :returns: The rendered HTML of the alert
+  :rtype: String
+
+  .. versionadded:: 4.2.0
+
 
 Alert Object Methods
 --------------------
 
 .. class:: EllisLab\\ExpressionEngine\\Service\\Alert\\Alert
+
+.. method:: asAttention()
+
+  Marks the alert as one that provides general information about what you are viewing.
+
+  :returns: $this
+  :rtype: Alert
+
+  .. versionadded:: 4.2.0
+
+.. method:: asLoading()
+
+  Creates an alert with a loading style and animation, typically to be shown while AJAXs requests are processing.
+
+  :returns: $this
+  :rtype: Alert
+
+  .. versionadded:: 4.2.0
+
+.. method:: asImportant()
+
+  Marks the alert as an important alert. This alert style is the same as the Warning style but cannot be closed by default.
+
+  :returns: $this
+  :rtype: Alert
+
+  .. versionadded:: 4.2.0
 
 .. method:: asIssue()
 
