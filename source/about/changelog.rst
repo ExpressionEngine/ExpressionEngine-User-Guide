@@ -22,6 +22,12 @@ Release Date: April 12, 2018
   + Sequentially edit many entries at once without have to juggle multiple tabs or windows.
   + ExpressionEngine keeps track of the position so content editors know how many have been edited and how many are left to edit.
 
+- **Relationships** 👨‍👩‍👧‍👦
+
+  + You can now create new entries directly from a Relationship field on the Publish page.
+  + Full-screen modal entry form frees content authors of constraints, while maintaining parent entry context.
+  + Newly created entries from Relationsihp fields are automatically selected in the parent entry, no need to 🛑, 🆕, 💾, 🔙, 🔃, etc.
+
 - **Fluid field Meta Variables** ⛲️
 
   + Power up your Fluid field output with new, flexible metadata variables.
@@ -43,7 +49,7 @@ Release Date: April 12, 2018
 
 - **Templating** 📐
 
-  + New `{variable_time}` date variable
+  + New ``{variable_time}`` date variable
 
     * Apply Date Formatting to any date that you supply.
     * You can provide dates via any standard date format, or even relative to the current time, e.g. `2 weeks ago`.
@@ -79,6 +85,7 @@ Release Date: April 12, 2018
   - Added :doc:`publish_live_preview_route </development/extension_hooks/cp/publish/index>` hook for altering the URI or template for live preview requests.
   - Added ``asImportant()`` :doc:`alert style </development/services/alert>`.
   - Added ``asAttention()`` :doc:`alert style </development/services/alert>`.
+  - Added ``asLoading()`` :doc:`alert style </development/services/alert>`.
   - Added a ``url()`` method to the :doc:`Text Formatter </development/services/format/text>` to normalize URLs for use in markup.
   - Added a ``url()`` method to the Variable Service to simplify URL normalization in template variables.
   - Deprecated the URL Helper ``prep_url()`` function. Use ``ee('Format')->make('Text', $str)->url()`` instead.
