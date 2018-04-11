@@ -88,6 +88,7 @@ Release Date: April 12, 2018
   - Added ``asLoading()`` :doc:`alert style </development/services/alert>`.
   - Added a ``url()`` method to the :doc:`Text Formatter </development/services/format/text>` to normalize URLs for use in markup.
   - Added a ``url()`` method to the Variable Service to simplify URL normalization in template variables.
+  - Fixed a SQL error that would occur in a Model `filter()` that was comparing against the string ``'null'`` intending for a MySQL ``NULL`` comparison, e.g. ``->filter($col, 'null')``.
   - Deprecated the URL Helper ``prep_url()`` function. Use ``ee('Format')->make('Text', $str)->url()`` instead.
   - Deprecated the extension hook ``comment_entries_tagdata``, please see :doc:`Version Notes </installation/version_notes_4.2.0>` for details.
 
