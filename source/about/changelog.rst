@@ -72,6 +72,11 @@ Release Date: April 12, 2018
   - Fixed a bug where some third-party fieldtypes may not validate properly in Grid.
   - Fixed a bug where submitted content could be nullified on output if it contained non-unicode characters.
   - Fixed a bug where using a member custom field in a conditional on the member settings template could result in a PHP error.
+  - Fixed a bug where importing a Channel Set that duplicates a Category Group name wouldn't let you rename the Category Group.
+  - Fixed a bug where importing a Channel Set and renaming a Field Group would generate PHP errors.
+  - Fixed a bug where the Create Template button did not show for member groups with permission to create templates.
+  - Fixed a PHP error that could occur by fiddling with the URL and providing invalid filter input.
+  - Fixed a warning that could occur on PHP 7.2 with the Memcached driver.
   - Fixed a bug (#23539) where Grid data inside a Fluid field wasn't searchable.
   - Fixed a bug (#23540) where ``{if fluid_field}`` would return false when there was only Grid fields inside it.
   - Fixed a bug (#23547) where custom member fields that should show up in the template editor did not show up in the template editor.
