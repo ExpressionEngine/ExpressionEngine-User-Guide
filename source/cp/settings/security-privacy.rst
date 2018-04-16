@@ -271,3 +271,18 @@ Apply XSS filtering?
 
 Checks all file uploads for code injection attempts before finalizing the upload.
 Superadmins are exempt from image XSS filtering.
+
+.. _enable-rank-denial:
+
+Enable Rank Denial to submitted links?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When enabled, all outgoing links are sent to a redirect page. This prevents spammers from `gaining page rank
+<https://support.google.com/webmasters/answer/96569?hl=en>`__.
+
+.. _force-redirect-confirmation:
+
+Force redirect confirmation on submitted links?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When Enable Rank Denial is turned on, this setting will appear to enable forcing the showing of a confirmation screen when a submitted linked is clicked. This can prevent issues where a link looks like it leads to one place, but actually leads to another, and allows the user to confirm the URL is correct before they continue.

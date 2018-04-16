@@ -34,16 +34,11 @@ Comment Administration Privileges
 Comment administration permissions are set on a per member group basis
 in :doc:`Create/Edit Member Groups </cp/members/groups/form>`.
 
--  **Can Moderate Comments**: Can view all comments and change the
-   status of any comment.
--  **Can edit comments in their own channel entries**: Can view, alter
-   the status, and edit only comments to their own entries.
--  **Can delete comments in their own channel entries**: Can delete only
-   comments to their own entries.
--  **Can edit comments in ANY channel entries**: Can view, alter the
-   status, and edit any comment.
--  **Can delete comments in ANY channel entries**: Can delete any
-   comment.
+-  **Can Moderate Comments**: Can view all comments and change the status of any comment.
+-  **Can edit their own comments**: Can view and edit only comments they made.
+-  **Can delete their own comments**: Can delete only comments they made.
+-  **Can edit comments in ANY channel entries**: Can view and edit any comment.
+-  **Can delete comments in ANY channel entries**: Can delete any comment.
 
 .. note:: In order to moderate comments, the member must have access to
    the Comment Module Control Panel.

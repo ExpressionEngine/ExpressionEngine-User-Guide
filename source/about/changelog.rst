@@ -5,6 +5,98 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.2.0
+-------------
+
+Release Date: April 16, 2018
+
+- **Security** 🔒
+
+  - Fixed a bug on Windows servers where PHP errors might disclose the full path to the file.
+  - Fixed a potential XSS vulnerability in Channel Sets.
+  - Added a UI setting for the ``force_redirect`` hidden configuration item.
+
+- **Sequential Editing** ✏️✏️✏️
+
+  + Added an "Edit" bulk action to the Entry Manager.
+  + Sequentially edit many entries at once without have to juggle multiple tabs or windows.
+  + ExpressionEngine keeps track of the position so content editors know how many have been edited and how many are left to edit.
+
+- **Relationships** 👨‍👩‍👧‍👦
+
+  + You can now create new entries directly from a Relationship field on the Publish page.
+  + Full-screen modal entry form frees content authors of constraints, while maintaining parent entry context.
+  + Newly created entries from Relationsihp fields are automatically selected in the parent entry, no need to 🛑, 🆕, 💾, 🔙, 🔃, etc.
+
+- **Fluid field Meta Variables** ⛲️
+
+  + Power up your Fluid field output with new, flexible metadata variables.
+
+    * ``:total_fields``
+    * ``:count``
+    * ``:index``
+    * ``:next_field_name``
+    * ``:prev_field_name``
+    * ``:next_fieldtype``
+    * ``:prev_fieldtype``
+    * ``:first``
+    * ``:last``
+
+  + Use a ``type=`` parameter to constrain count, index, first, and last to a specific fieldtype.
+  + Use a ``name=`` parameter to constrain count, index, first, and last to a specific field name.
+  + All are available to use in conditionals.
+  + See :ref:`Fluid Field Variables <fluid_field_meta_variables>` for more details.
+
+- **Templating** 📐
+
+  + New ``{variable_time}`` date variable
+
+    * Apply Date Formatting to any date that you supply.
+    * You can provide dates via any standard date format, or even relative to the current time, e.g. `2 weeks ago`.
+    * See :ref:`global_variable_time` for more details.
+
+  + Added ``{is_live_preview_request}`` global template variable for conditional usage in preview templates.
+  + Added a :ref:`:url modifier <url_variable_modifier>` to normalize URLs for use in markup.
+
+- **General Changes** 🆕
+
+  + Modernized Comment module entries tag variable parsing, adding compatibility with Variable Modifiers.
+  + Moved the logout button in the control panel to a more intuitive location.
+  + Added the ability to set member group permissions for template group access when creating/editing template groups.
+
+- **Bug Fixes** 💃🐛
+
+  - Fixed Comment moderation / editing permissions to behave more intuitively.
+  - Fixed Comment moderation URLs in admin notification emails
+  - Fixed a bug where "Enable entry revisions?" was not rendered with a toggle field.
+  - Fixed a bug where some third-party fieldtypes may not validate properly in Grid.
+  - Fixed a bug where submitted content could be nullified on output if it contained non-unicode characters.
+  - Fixed a bug where using a member custom field in a conditional on the member settings template could result in a PHP error.
+  - Fixed a bug where importing a Channel Set that duplicates a Category Group name wouldn't let you rename the Category Group.
+  - Fixed a bug where importing a Channel Set and renaming a Field Group would generate PHP errors.
+  - Fixed a bug where the Create Template button did not show for member groups with permission to create templates.
+  - Fixed a PHP error that could occur by fiddling with the URL and providing invalid filter input.
+  - Fixed a warning that could occur on PHP 7.2 with the Memcached driver.
+  - Fixed a bug (#23539) where Grid data inside a Fluid field wasn't searchable.
+  - Fixed a bug (#23540) where ``{if fluid_field}`` would return false when there was only Grid fields inside it.
+  - Fixed a bug (#23547) where custom member fields that should show up in the template editor did not show up in the template editor.
+  - Fixed a bug (#23548) where Grid fields could be more cautious about checking for settings when used outside of channel entries.
+  - Fixed a bug (#23553) where removing all rows of a Grid field may not stick after saving an entry.
+  - Fixed a bug (#23559) where using a filter group with custom fields on a Model query may show an error.
+  - Fixed a bug (#23560) where a fatal error would occur when trying to overwrite non-image files in an upload directory that contains manipulations.
+
+- **Developers** 💻
+
+  - Added :doc:`publish_live_preview_route </development/extension_hooks/cp/publish/index>` hook for altering the URI or template for live preview requests.
+  - Added ``asImportant()`` :doc:`alert style </development/services/alert>`.
+  - Added ``asAttention()`` :doc:`alert style </development/services/alert>`.
+  - Added ``asLoading()`` :doc:`alert style </development/services/alert>`.
+  - Added a ``url()`` method to the :doc:`Text Formatter </development/services/format/text>` to normalize URLs for use in markup.
+  - Added a ``url()`` method to the Variable Service to simplify URL normalization in template variables.
+  - Fixed a SQL error that would occur in a Model `filter()` that was comparing against the string ``'null'`` intending for a MySQL ``NULL`` comparison, e.g. ``->filter($col, 'null')``.
+  - Deprecated the URL Helper ``prep_url()`` function. Use ``ee('Format')->make('Text', $str)->url()`` instead.
+  - Deprecated the extension hook ``comment_entries_tagdata``, please see :doc:`Version Notes </installation/version_notes_4.2.0>` for details.
+
 Version 4.1.3
 -------------
 

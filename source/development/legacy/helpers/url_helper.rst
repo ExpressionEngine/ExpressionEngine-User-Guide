@@ -225,47 +225,14 @@ Available Functions
 
 .. function:: url_title($str, $separator = '-', $lowercase = FALSE)
 
-	:param	string	$str: Input string
-	:param	string	$separator: Word separator
-	:param	string	$lowercase: Whether to transform the output string to lower-case
-	:returns:	URL-formatted string
-	:rtype:	string
-
-	Takes a string as input and creates a human-friendly URL string. This is useful if, for example, you have a blog in which you'd like to use the title of your entries in the URL. Example::
-
-		$title = "What's wrong with CSS?";
-		$url_title = url_title($title);
-		// Produces: Whats-wrong-with-CSS
-
-	The second parameter determines the word delimiter. By default dashes are used. Preferred options are: ``-`` (dash) or ``_`` (underscore)
-
-	Example::
-
-		$title = "What's wrong with CSS?";
-		$url_title = url_title($title, 'underscore');
-		// Produces: Whats_wrong_with_CSS
-
-	The third parameter determines whether or not lowercase characters are forced. By default they are not. Options are boolean ``TRUE``/``FALSE``.
-
-	Example::
-
-		$title = "What's wrong with CSS?";
-		$url_title = url_title($title, 'underscore', TRUE);
-		// Produces: whats_wrong_with_css
+  .. deprecated:: 4.0.0
+    Use :doc:`/development/services/format/text` ``urlSlug()`` method instead.
 
 
 .. function:: prep_url($str = '')
 
-	:param	string	$str: URL string
-	:returns:	Protocol-prefixed URL string
-	:rtype:	string
-
-	This function will add ``http://`` in the event that a protocol prefix is missing from a URL.
-
-	Pass the URL string to the function like this::
-
-		$url = prep_url('example.com');
-
+  .. deprecated:: 4.2.0
+    Use :doc:`/development/services/format/text` ``url()`` method instead.
 
 .. function:: redirect($uri = '', $method = 'auto', $code = NULL)
 

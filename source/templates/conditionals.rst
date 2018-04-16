@@ -367,6 +367,8 @@ username is neither joe nor bob a default message is shown.
    the *right* of the prefix is what determines which conditional you
    are using.
 
+.. _embedding_tags_in_conditionals:
+
 **************
 Embedding Tags
 **************
@@ -383,14 +385,20 @@ instead of these:
   {if {my_snippet} == "hello world"}
   {if "{my_snippet}" == "hello world"}
 
-Tags still require their braces, for example::
+.. tip::
+
+  As a general rule, you should never brace your conditional variables, which allows ExpressionEngine to optimize for the best performance and security.
+
+  ☣ **Technical content ahead:** Braced variables in a conditional are literally output to the template like they are anywhere else before evaluating. So rather than being able to use a lightweight internal PHP variable, ExpressionEngine has to compare string literals. If a lot of text-based content is involved, then you could be creating strain on the application due to internal constraints of PHP and the server's regular expression libraries.
+
+There are a few exceptions to this where bracing is required or even recommended. This is the case for certain types of metadata, where the type, length, and nature of the content is known. In other words, variables that belong to the system, and whose contents are not influenced or created by a content author. For example, comparing formatted dates::
 
   {if "{entry_date format='%Y'}" == "{current_time format='%'}"}
 
 When using tags pay special attention to your quote marks. If you need
 more than one level of quotation you will need to either alternate
 between single and double quote marks, or escape your quotes. For example,
-instead of this::
+instead of this (the problem should be apparent by the syntax highlighting)::
 
   {if "{current_time format="%F"}" == "May"}
 
@@ -401,6 +409,12 @@ do this::
 or this::
 
   {if "{current_time format=\"%F\"}" == "May"}
+
+Tags that output numeric content will work fine with quotes, but also do not need them, e.g. :doc:`Fluid field count variables </fieldtypes/fluid>`:
+
+.. code-block:: text
+
+  {if {fluid_content:count type="long_form_text"} == 3}
 
 ******************
 Short Conditionals

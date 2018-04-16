@@ -25,7 +25,7 @@ Comment Forms
 -------------
 
 Once you have the preference turned on, you'll need to add the CAPTCHA
-code to your :ref:`comment_submission_form`. See below for the `CAPTCHA Code`_.
+code to your :doc:`/comment/form`. See below for the `CAPTCHA Code`_.
 
 Member Registration Form
 ------------------------

@@ -2,7 +2,7 @@
 Fluid
 #####
 
-A Fluid field is a collection of fields.  A Fluid field can contain any native field type except another Fluid field.  The fields assigned to the Fluid field can then be used multiple times in the same entry when creating/editing the entry.  The author also has control over the order of the fields.
+A Fluid field is a collection of fields.  A Fluid field can contain any native fieldtype except another Fluid field.  The fields assigned to the Fluid field can then be used multiple times in the same entry when creating/editing the entry.  The author also has control over the order of the fields.
 
 Fluid fields give the author control over the structure of their content, while ensuring the final output uses the correct design elements.  All that is done without the author worrying about markup or html.  They simply add content to the fields, and template can wrap each field in the proper markup.
 
@@ -45,11 +45,121 @@ For example, if you have a Fluid field ``fluid_content`` with a text field ``flu
 
   {/fluid_content}
 
-
-Only content inside the prefixed tag pair ``{fluid_content:fluid_text}{/fluid_content:fluid_text}`` will be displayed.  The text field is output by the ``{content}``.
-
 The prefixed tag pair is a looping tag pair.  You can have more than one ``fluid_text`` field for the entry, it's entirely at the entry author's discretion.  The author also determines the order of the field output.
 
+.. _fluid_field_meta_variables:
+
+Variables
+=========
+
+.. contents::
+   :local:
+   :depth: 1
+
+.. tip::
+
+  When using any of these :ref:`tags with a parameter in a conditional<embedding_tags_in_conditionals>` you will have to wrap them in braces (``{}``), like so:
+
+  .. code-block:: text
+
+    {if {fluid_content:first name="text_body"}}
+
+
+total_fields
+------------
+
+::
+
+  {fluid_content:total_fields}
+
+The total number of fields regardless of tag output criteria.
+
+count
+-----
+
+::
+
+  {fluid_content:count}
+
+The "count" out of the current field being displayed. If five fields
+are being displayed, then for the fourth field the ``count`` variable
+would have a value of "4". The following parameters are available:
+
+- **type=** Filters the fields by fieldtype
+- **name=** Filters the fields by field name
+
+index
+-----
+
+::
+
+  {fluid_content:index}
+
+The index of the current field being displayed starting at 0. The following
+parameters are available:
+
+- **type=** Filters the fields by fieldtype
+- **name=** Filters the fields by field name
+
+next_field_name
+---------------
+
+::
+
+  {fluid_content:next_field_name}
+
+The name of the next field. This will be blank when on the last field.
+
+prev_field_name
+---------------
+
+::
+
+  {fluid_content:prev_field_name}
+
+The name of the previous field. This will be blank when on the first field.
+
+next_fieldtype
+--------------
+
+::
+
+  {fluid_content:next_fieldtype}
+
+The type of the next field (``rte``, ``grid``, ``text``, ``textarea``, etc). This will be blank when on the last field.
+
+prev_fieldtype
+--------------
+
+::
+
+  {fluid_content:prev_fieldtype}
+
+The type of the previous field (``rte``, ``grid``, ``text``, ``textarea``, etc). This will be blank when on the first field.
+
+first
+-----
+
+::
+
+  {fluid_content:first}
+
+True, if the current field is the first one. The following parameters are available:
+
+- **type=** Filters the fields by fieldtype
+- **name=** Filters the fields by field name
+
+last
+----
+
+::
+
+  {fluid_content:last}
+
+True, if the current field is the last one. The following parameters are available:
+
+- **type=** Filters the fields by fieldtype
+- **name=** Filters the fields by field name
 
 Displaying a Pair variable
 ==========================
@@ -125,7 +235,7 @@ Field Examples
 .. _fluid-field-multi:
 
 Checkbox and Multi Select Fields
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 For checkbox and multiselect single variables::
 
@@ -153,7 +263,7 @@ For checkbox and multiselect variable pairs::
 .. _fluid-field-date:
 
 Date Fields
-~~~~~~~~~~~
+-----------
 
 ::
 
@@ -166,7 +276,7 @@ Date Fields
 .. _fluid-field-email:
 
 Email Address Fields
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 ::
 
@@ -179,7 +289,7 @@ Email Address Fields
 .. _fluid-field-file:
 
 File Fields
-~~~~~~~~~~~
+-----------
 
 A file field variable pair::
 
@@ -207,7 +317,7 @@ Single variable file field::
 .. _fluid-field-grid:
 
 Grid Fields
-~~~~~~~~~~~
+-----------
 
 ::
 
@@ -237,7 +347,7 @@ Grid Fields
 .. _fluid-field-select:
 
 Radio and Select Fields
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 Radio and single select fields use single variables::
 
@@ -251,7 +361,7 @@ Radio and single select fields use single variables::
 .. _fluid-field-relationship:
 
 Relationship Fields
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 ::
 
@@ -274,7 +384,7 @@ Relationship Fields
 .. _fluid-field-text:
 
 RTF Text and Textare Fields
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 ::
 
@@ -287,7 +397,7 @@ RTF Text and Textare Fields
 .. _fluid-field-toggle:
 
 Toggle Fields
-~~~~~~~~~~~~~
+-------------
 
 ::
 
@@ -301,7 +411,7 @@ Toggle Fields
 .. _fluid-field-url:
 
 URL Fields
-~~~~~~~~~~
+----------
 
 ::
 

@@ -792,7 +792,7 @@ by using the field's short name immediately after "search:". You can
 search based on whether a field is an exact match to your provided term
 or whether or not a field simply contains your term.
 
-.. note:: Some fields store their content in a manner that affects the ability to work with this parameter. Grid fields, for instance, could only use this parameter for columns with "Include in search?" enabled.
+.. note:: Some fields store their content in a manner that affects the ability to work with this parameter. Grid fields, for instance, could only use this parameter for columns with "Include in search?" enabled. Relationship fields cannot be searched using the search parameter.
 
 "Exact" Matching
 ~~~~~~~~~~~~~~~~

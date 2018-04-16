@@ -225,6 +225,18 @@ Perform a ROT13 substitution cypher to the content.
   - **capitalize=** (default: none) One of ``ucfirst`` (uppercase first letter) or ``ucwords`` (uppercase first letter of each word)
   - **locale=** (default: en_US.UTF-8) The ICU locale ID
 
+.. _url_variable_modifier:
+
+:url
+****
+
+Normalize a URL to use in markup. Primarily to make sure it contains a valid protocol. For instance if ``{website}`` was ``www.example.com``::
+
+  {website:url}
+  {!-- http://www.example.com/ --}
+
+Note that it is best to use a :doc:`/fieldtypes/url` field, so this is more useful for values coming from plugins or outside sources.
+
 :url_decode
 ***********
 
