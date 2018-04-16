@@ -8,7 +8,7 @@ ExpressionEngine v4 Change Log
 Version 4.2.0
 -------------
 
-Release Date: April 12, 2018
+Release Date: April 16, 2018
 
 - **Security** 🔒
 
