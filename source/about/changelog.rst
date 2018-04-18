@@ -5,6 +5,19 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.16
+--------------
+
+Release Date: April 18, 2018
+
+- Security Fixes
+
+  - Fixed a potential XSS vulnerability in Channel Sets.
+
+- Fixed a fatal PHP error if you were beginning an update from a version older than 2.11.0.
+- Fixed a bug where a PHP error occurred when non-superadmins filtered the templates by a specific template group, even though they had permission to access the group.
+- Fixed a bug where the Create Template button did not show for member groups with permission to create templates.
+
 Version 3.5.15
 --------------
 
