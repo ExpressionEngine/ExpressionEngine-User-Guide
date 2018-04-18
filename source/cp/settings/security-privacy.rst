@@ -38,9 +38,8 @@ This determines how sessions are handled for the Control Panel. You may
 use cookies, session IDs, or a combination. The available options are:
 
 - **Cookies and session ID**: Both cookies and URL session ID
-  parameters are used to track the admin user. This is the default
-  setting, and is the most secure since it relies on two individual
-  cookies and a URL session ID.
+  parameters are used to track the admin user. This is the most secure
+  setting since it relies on two individual cookies and a URL session ID.
 - **Cookies only**: Only cookies are used to track the admin user. When
   this setting is used a "remember me" checkbox will appear next to the
   Control Panel login page, enabling users to stay permanently logged

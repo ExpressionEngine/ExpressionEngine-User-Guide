@@ -58,16 +58,6 @@ CP/Alert Service Methods
   :returns: An alert
   :rtype: Alert
 
-.. method:: makeAlert($name)
-
-  Makes a new named floating alert.
-
-  :param string $name: The name of the alert
-  :returns: An alert
-  :rtype: Alert
-
-  .. versionadded:: 4.2.0
-
 .. method:: get($name, $type = 'inline')
 
   Gets the rendered value of a named alert of a certain type.
@@ -97,15 +87,6 @@ CP/Alert Service Methods
 
   :returns: The rendered HTML of the alert
   :rtype: String
-
-.. method:: getAllAlerts()
-
-  Gets the rendered value of the floating alert.
-
-  :returns: The rendered HTML of the alert
-  :rtype: String
-
-  .. versionadded:: 4.2.0
 
 
 Alert Object Methods
