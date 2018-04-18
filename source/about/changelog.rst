@@ -5,6 +5,30 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.2.1
+-------------
+
+Release Date: April 18, 2018
+
+- **Security:** Fixed a potential reflected XSS issue in the Default theme.
+- **Security:** Fixed an error in the Discussion Forum module that could result in unauthorized editing of posts.
+- **Security:** Improved external site redirect to help prevent users being fooled by an inception-like series of redirects.
+- **Security:** Added CSRF protection to a method in the Blacklist Module to prevent accidental blacklist modification.
+- **Security:** Made control panel login redirects tamper resistant.
+- Added ``:current_field_name`` and ``:current_fieldtype`` to :ref:`Fluid Variables <fluid_field_meta_variables>`.
+- Added some validation checks to the member template list display to avoid a possible PHP error (see discussion #23547).
+- Member IDs can now be specified for new member records in the XML for the Member Import utility (previously only accepted IDs to update existing records).
+- Improved validation for which authors may be assigned to entries.
+- Fixed a PHP warning that could occur if you were using a formatted date variable in a conditional with quotes and braces.
+- Fixed a SQL error in the Discussion Forum module when cookies were broken.
+- Fixed a SQL error that could occur if you attempted to roll back to v3 and re-upgrade to v4 without properly restoring the database.
+- Fixed a bug where the modal pubish form would be cut off by 30 pixels at the bottom.
+- Fixed a bug (#23565) where the file upload buttons for new textarea fields inside a Fluid field didn't cooperate.
+- Fixed a bug (#23566) where the channel entry form's ``option`` tag pair could show non-enabled options.
+- Fixed a bug (#23572) where the sequential edit mode would not load with a Cookies and Session ID session type.
+- Fixed a bug (#23573) where Live Preview may show errors if a Grid column was named ``url``.
+- Fixed a bug (#23576) where the link to edit templates in the developer logs was incorrect.
+
 Version 4.2.0
 -------------
 
