@@ -23,6 +23,7 @@ Release Date: April 18, 2018
 - Fixed a SQL error in the Discussion Forum module when cookies were broken.
 - Fixed a SQL error that could occur if you attempted to roll back to v3 and re-upgrade to v4 without properly restoring the database.
 - Fixed a bug where the modal pubish form would be cut off by 30 pixels at the bottom.
+- Fixed a bug where some control panel alerts would try to hide at the bottom of the page.
 - Fixed a bug (#23565) where the file upload buttons for new textarea fields inside a Fluid field didn't cooperate.
 - Fixed a bug (#23566) where the channel entry form's ``option`` tag pair could show non-enabled options.
 - Fixed a bug (#23572) where the sequential edit mode would not load with a Cookies and Session ID session type.
