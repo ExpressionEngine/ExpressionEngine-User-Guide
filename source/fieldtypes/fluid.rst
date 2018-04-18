@@ -64,16 +64,6 @@ Variables
 
     {if {fluid_content:first name="text_body"}}
 
-
-total_fields
-------------
-
-::
-
-  {fluid_content:total_fields}
-
-The total number of fields regardless of tag output criteria.
-
 count
 -----
 
@@ -84,6 +74,37 @@ count
 The "count" out of the current field being displayed. If five fields
 are being displayed, then for the fourth field the ``count`` variable
 would have a value of "4". The following parameters are available:
+
+- **type=** Filters the fields by fieldtype
+- **name=** Filters the fields by field name
+
+current_field_name
+------------------
+
+::
+
+  {fluid_content:current_field_name}
+
+The name of the current field being processed.
+
+current_fieldtype
+-----------------
+
+::
+
+  {fluid_content:current_fieldtype}
+
+The type of the field currently being processed (``rte``, ``grid``, ``text``, ``textarea``, etc).
+
+
+first
+-----
+
+::
+
+  {fluid_content:first}
+
+True, if the current field is the first one. The following parameters are available:
 
 - **type=** Filters the fields by fieldtype
 - **name=** Filters the fields by field name
@@ -101,54 +122,6 @@ parameters are available:
 - **type=** Filters the fields by fieldtype
 - **name=** Filters the fields by field name
 
-next_field_name
----------------
-
-::
-
-  {fluid_content:next_field_name}
-
-The name of the next field. This will be blank when on the last field.
-
-prev_field_name
----------------
-
-::
-
-  {fluid_content:prev_field_name}
-
-The name of the previous field. This will be blank when on the first field.
-
-next_fieldtype
---------------
-
-::
-
-  {fluid_content:next_fieldtype}
-
-The type of the next field (``rte``, ``grid``, ``text``, ``textarea``, etc). This will be blank when on the last field.
-
-prev_fieldtype
---------------
-
-::
-
-  {fluid_content:prev_fieldtype}
-
-The type of the previous field (``rte``, ``grid``, ``text``, ``textarea``, etc). This will be blank when on the first field.
-
-first
------
-
-::
-
-  {fluid_content:first}
-
-True, if the current field is the first one. The following parameters are available:
-
-- **type=** Filters the fields by fieldtype
-- **name=** Filters the fields by field name
-
 last
 ----
 
@@ -160,6 +133,71 @@ True, if the current field is the last one. The following parameters are availab
 
 - **type=** Filters the fields by fieldtype
 - **name=** Filters the fields by field name
+
+
+next_field_name
+---------------
+
+::
+
+  {fluid_content:next_field_name}
+
+The name of the next field. This will be blank when on the last field.
+
+next_fieldtype
+--------------
+
+::
+
+  {fluid_content:next_fieldtype}
+
+The type of the next field (``rte``, ``grid``, ``text``, ``textarea``, etc). This will be blank when on the last field.
+
+prev_field_name
+---------------
+
+::
+
+  {fluid_content:prev_field_name}
+
+The name of the previous field. This will be blank when on the first field.
+
+prev_fieldtype
+--------------
+
+::
+
+  {fluid_content:prev_fieldtype}
+
+The type of the previous field (``rte``, ``grid``, ``text``, ``textarea``, etc). This will be blank when on the first field.
+
+this_field_name
+---------------
+
+::
+
+  {fluid_content:this_field_name}
+
+Alias of ``:current_field_name``.
+
+this_fieldtype
+--------------
+
+::
+
+  {fluid_content:this_fieldtype}
+
+Alias of ``:current_fieldtype``.
+
+total_fields
+------------
+
+::
+
+  {fluid_content:total_fields}
+
+The total number of fields regardless of tag output criteria.
+
 
 Displaying a Pair variable
 ==========================
