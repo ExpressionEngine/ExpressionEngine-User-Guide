@@ -1409,6 +1409,16 @@ preference under :menuselection:`Developer --> Channels` in the channel's **Sett
 id, URL Title, or other information is included; this is the exact URL
 from the preference.
 
+comment_expiration_date
+-----------------------
+
+::
+
+	{comment_expiration_date format="%Y %m %d"}
+
+The date on which commenting expires for this entry, if they do. See :doc:`Date Variable Formatting
+</templates/date_variable_formatting>` for more information.
+
 comment\_entry\_id\_auto\_path
 ------------------------------
 
