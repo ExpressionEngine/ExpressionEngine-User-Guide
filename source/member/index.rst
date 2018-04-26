@@ -35,7 +35,7 @@ You'll find many member management options available at:
     https://example.com/member/profile/
 
 .. note:: A member account's Username and Screen Name can be identical,
-  but must be unique system-wide.
+  but the Username must be unique system-wide.
 
 ************************
 Member Profile Templates
