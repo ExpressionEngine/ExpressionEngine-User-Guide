@@ -33,7 +33,7 @@ The unique username for the user. This is a required field.
 Screen Name
 ~~~~~~~~~~~
 
-Screen name does not have to match the username but must be unique. This is a required field.
+Screen name is merely a display name. This is a required field.
 
 New Password
 ~~~~~~~~~~~~
