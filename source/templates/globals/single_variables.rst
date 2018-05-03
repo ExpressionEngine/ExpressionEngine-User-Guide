@@ -243,6 +243,19 @@ Boolean (TRUE/FALSE) variable representing whether or not the template is being 
 
   {!-- ExpressionEngine tags below to define content to return --}
 
+is_live_preview_request
+-----------------------
+
+::
+
+  {is_live_preview_request}
+
+Boolean (TRUE/FALSE) variable representing whether or not the current request is a Live Preview from the control panel. Most commonly you would use this to add/hide information on your preview page for content authors::
+
+  {if is_live_preview_request}
+    {!-- include sample rendering of a social share, Twitter card, FB post, etc. --}
+  {/if}
+
 lang
 ----
 
