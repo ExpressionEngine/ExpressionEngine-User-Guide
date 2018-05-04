@@ -42,18 +42,21 @@ Member Profile Templates
 ************************
 
 The public profile area has its own set of templates which can be edited
-to change the look. You'll find the default templates located at::
+to change the look. Theme assets such as images are located in your installation under themes/ee/member/default. Theme templates are located under system/ee/templates/_themes/member/.
 
-  themes/ee/member/default/
 
-To customize the templates, copy them over to::
+To customize the templates:
 
-  themes/user/member/custom_theme_name/
+1. Copy themes/ee/member/theme_name to themes/user/member/custom_theme_name
+2. Copy system/ee/templates/_themes/member/theme_name to system/user/templates/_themes/member/custom_theme_name/
 
-.. note:: Any changes made to files in themes/ee/ will be lost during an update.  Customized themes must be saved in the themes/user/ folder.
 
-Templates in `themes/user/member/` can be edited with a text editor, or you may choose to edit
+.. note:: Any changes made to files in themes/ee/ or system/ee will be lost during an update.  Customized themes must be saved in the themes/user/ or system/user/ folder.
+
+Templates in `system/user/templates/_themes/member/` can be edited with a text editor, or you may choose to edit
 them via your Control Panel at :menuselection:`Developer --> Templates --> Members`
+
+To make edits to the templates from inside the Control Panel, set the system/user/templates/_theme/ folders and files to be writable. See :doc:`/troubleshooting/general/file_permissions` for details. Only themes in the system/user/templates/_theme/ folder will be available for editing in the Control Panel.
 
 If you do create a custom theme, you may set it as the site default under :menuselection:`Settings --> Member Settings`
 
