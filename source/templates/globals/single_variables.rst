@@ -421,7 +421,7 @@ theme\_folder\_url
 
   {theme_folder_url}
 
-The URL to your theme folder.
+The URL to your theme/ee folder.
 
 total\_queries
 --------------
