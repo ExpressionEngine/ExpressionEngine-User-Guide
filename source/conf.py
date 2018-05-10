@@ -108,6 +108,10 @@ extlinks = {
     'style_guide': ('https://ellislab.com/style-guide/%s', 'style_guide')
 }
 
+rst_epilog = """
+.. |gdpr| replace:: `GDPR <https://en.wikipedia.org/wiki/General_Data_Protection_Regulation>`__ (external link)
+"""
+
 # -- Options for HTML output ---------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for

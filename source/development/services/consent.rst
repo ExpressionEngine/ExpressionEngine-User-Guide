@@ -1,59 +1,105 @@
 Consent Service
 ===============
 
+.. highlight:: php
+
+Consent management is key to processing a user's personal data. The Consent service provides a simple API to manage requests for consent, and can be used to determine if a member has granted consent to a specific request.
+
+The Consent service can help an add-on that processes personal data be compliant with regulations such as the |gdpr|. It also enables administrators to display and manage member consents for your add-on consistenly in ExpressionEngine, including retaining proper records of when personal data is processed.
+
 .. contents::
   :local:
   :depth: 1
 
-.. highlight:: php
-
-The consent service records consent for consent requests, and can determine if
-a member has granted consent to a request.
-
 Simple Examples
 ---------------
 
-Grant consent::
+Grant consent, from a POSTed opt-in::
 
-  ee('Consent')->grant('my_addon:do_stuff');
+  if (get_bool_from_string(ee()->input->post('allow_do_stuff')))
+  {
+    ee('Consent')->grant('my_addon:do_stuff');
+  }
 
 Withdraw consent::
 
-  ee('Consent')->withdraw('my_addon:do_stuff');
+  if ( ! get_bool_from_string(ee()->input->post('allow_do_stuff')))
+  {
+    ee('Consent')->withdraw('my_addon:do_stuff');
+  }
 
 Check to see if consent has been granted::
 
   if (ee('Consent')->hasGranted('my_addon:do_stuff'))
   {
-    do_stuff();
+    $this->doStuff();
   }
 
-Act on all members who granted consent::
+Act on all members who granted a specific consent::
 
   $consents = ee('Consent')->getGrantedConsentsFor('my_addon:do_stuff');
   foreach ($consents as $consent)
   {
-    do_stuff_to($consent->Member);
+    $this->doStuffTo($consent->Member);
 
-    // Log what we did for record keeping
-    $consent->log('Did stuff.');
+    // Log what we did for proper record keeping
+    $message = ee()->session->userdata('username') . ' did stuff to member ' . $consent->Member->getId();
+    $consent->log($message);
   }
 
-.. note:: Use the Consent's ``log()`` method when processing personal data.
+.. tip:: Always use the Consent's ``log()`` method when processing personal data.
 
-.. note:: ``ee('Consent')`` acts on the currently logged in member. To act on a different member, pass the ``member_id`` or a member model object as the second parameter, i.e. ``ee('Consent', $member)``.
+.. tip:: ``ee('Consent')`` acts on the currently logged in member. To act on a different member, pass the ``member_id`` or a member model object as the second parameter, i.e. ``ee('Consent', $member)->hasGranted('my_addon:do_stuff')``.
 
-Making A New Request
---------------------
+Creating Add-on Consent Requests
+--------------------------------
 
-When making a consent for your add-on namespace the ``consent_name`` by prefixing
-it with your add-on's prefix (i.e. ``my_addon``) and a colon (``:``)::
+Anyone can check if a member has granted consent for a specific request, and gather all members who have consented for one. But you may only **write** and **grant** consents that your add-on manages. To be able to make and manage your own consents, you need to add your consents to your ``addon.setup.php`` file::
 
-  $request = ee('Model')->make('ConsentRequest');
-  $request->source = 'a'; // App-generated request: cannot be deleted in the CP
-  $request->title = 'Consent to do stuff';
-  $request->consent_name = 'my_addon:do_stuff';
-  $request->save();
+  'consent.requests' => [
+    'do_stuff' => [
+      'title' => 'Do Stuff',
+      'request' => 'We will *do stuff* with your data, okay?',
+      'request_format' => 'markdown',
+    ],
+    'do_some_other_stuff' => [
+      'title' => 'Do Some Other Stuff',
+      'request' => 'We will *do some other stuff* with your data, okay?',
+      'request_format' => 'markdown',
+      'double_opt_in' => TRUE,
+    ],
+  ],
+
+This will register your consent requests with your add-on namespace, and you can now grant and withdraw consent using your add-on's prefix (e.g. ``my_addon``) and a colon(``:``)::
+
+  ee('Consent')->grant('my_addon:do_stuff');
+
+.. note:: Consent requests in your ``addon.setup.php`` file will automatically be created when your add-on is installed. If you modify your ``consent.requests`` in your setup file, any **new** consent requests that do not already exist will automatically be created when the user updates your add-on. So make sure you increment your app version if you add new consent requests.
+
+Anatomy of the ``consent.requests`` array
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The ``consent.requests`` array takes the short name of your consent request as a key, and the properties of your consent request as an array. Here is a definition of the available keys:
+
+
++----------------+----------------------------------------------------------------------------------------------------+
+|      Key       |                                             Definition                                             |
++================+====================================================================================================+
+| title          | (*required*) The display name for the consent request                                              |
++----------------+----------------------------------------------------------------------------------------------------+
+| request        | (*required*) The explanatory text for the consent request.                                         |
+|                | After installation, a site admin can modify this text                                              |
+|                | as necessary to fit their needs, but you should provide a clear                                    |
+|                | and direct explanation of what consenting to this request will allow.                              |
++----------------+----------------------------------------------------------------------------------------------------+
+| request_format | (*optional*) Any valid format that will be used to parse                                           |
+|                | your request text. (e.g. ``br``, ``markdown``, ``none``, ``xhtml``)                                |
++----------------+----------------------------------------------------------------------------------------------------+
+| double_opt_in  | (*optional*) Boolean value, whether or not this consent requests                                   |
+|                | requires a double opt-in (e.g. checking a checkbox and clicking a verification link sent by email) |
++----------------+----------------------------------------------------------------------------------------------------+
+
+.. note:: The short name will also be used by a site builder in ``{exp:consent}`` tag parameters.
 
 Consent Methods
 ---------------
