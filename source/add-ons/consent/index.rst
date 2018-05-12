@@ -115,37 +115,9 @@ Specify a path to redirect the user to after submission. If not specified, they 
 Variables
 =========
 
-The consent requests tag pair loops through consents pulled back by the tag. It's an easy way to output all consent data, including whether consent is currently given or denied.
-
-The following variables are available within the tag pair:
-
-consent_id
-----------
-
-The ID number of the consent.
-
-::
-
-  {consent_id}
-
-consent_granted_date
---------------------
-
-::
-
-  {consent_granted_date format='%Y %m %d'}
-
-If consent was granted to the request, this will show the date the consent was granted. See :doc:`Date Variable Formatting
-</templates/date_variable_formatting>` for more information.
-
-consent_short_name
-------------------
-
-The short name of the consent.
-
-::
-
-  {consent_short_name}
+.. contents::
+  :local:
+  :depth: 1
 
 consent_creation_date
 ---------------------
@@ -156,16 +128,61 @@ The date the consent was created.
 
   {consent_creation_date format='%Y %m %d'}
 
-The date the request was created. See :doc:`Date Variable Formatting
-</templates/date_variable_formatting>` for more information.
+The date the request was created. See :doc:`Date Variable Formatting </templates/date_variable_formatting>` for more information.
 
 consent_edit_date
 -----------------
 
   {consent_edit_date format='%Y %m %d'}
 
-The date the consent request was last edited. See :doc:`Date Variable Formatting
-</templates/date_variable_formatting>` for more information.
+The date the consent request was last edited. See :doc:`Date Variable Formatting </templates/date_variable_formatting>` for more information.
+
+consent_granted
+---------------
+
+A boolean variable for conditionals that returns ``TRUE`` or ``FALSE``.  Returns ``TRUE`` if the user has granted permission to the consent request, ``FALSE`` otherwise.
+
+::
+
+  {if consent_granted}
+      Set that cookie!
+  {/if}
+
+consent_granted_date
+--------------------
+
+::
+
+  {consent_granted_date format='%Y %m %d'}
+
+If consent was granted to the request, this will show the date the consent was granted. See :doc:`Date Variable Formatting </templates/date_variable_formatting>` for more information.
+
+consent_id
+----------
+
+The ID number of the consent.
+
+::
+
+  {consent_id}
+
+consent_request
+---------------
+
+The description of the consent request.
+
+::
+
+  {consent_request}
+
+consent_short_name
+------------------
+
+The short name of the consent.
+
+::
+
+  {consent_short_name}
 
 consent_title
 -------------
@@ -184,26 +201,6 @@ The version_id of the consent request.
 ::
 
   {version_id}
-
-consent_request
----------------
-
-The description of the consent request.
-
-::
-
-  {consent_request}
-
-consent_granted
----------------
-
-A boolean variable for conditionals that returns ``TRUE`` or ``FALSE``.  Returns ``TRUE`` if the user has granted permission to the consent request, ``FALSE`` otherwise.
-
-::
-
-	{if consent_granted}
-	    Set that cookie!
-	{/if}
 
 Examples
 ========
