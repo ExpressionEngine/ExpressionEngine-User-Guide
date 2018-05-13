@@ -32,9 +32,9 @@ Consent Forms allow the visitor to grant or withdraw consent to one or more Cons
 
         {consent_request}
 
-        Accepted: <input type="checkbox" name="{consent_short_name}" value="y" {if consent_granted}checked{/if} />
+        Accepted: <input type="checkbox" name="{consent_short_name}" value="y" {if consent_granted}checked{/if}>
 
-    <input type="submit" name="submit" value="Submit" />
+    <input type="submit" name="submit" value="Submit">
 
   {/exp:consent:form}
 
@@ -224,7 +224,7 @@ Simple Bulk Consent Form
     </fieldset>
 
     <fieldset>
-      <input type="submit" name="submit" value="Submit" />
+      <input type="submit" name="submit" value="Submit">
     </fieldset>
   {/exp:consent:form}
 
@@ -242,7 +242,7 @@ AJAX-Driven Consent Form
         <h1>{consent_title}</h1>
         {consent_request}
         <input type="hidden" name="{consent_short_name}" value="y">
-        <input type="submit" name="submit" value="Allow" />
+        <input type="submit" name="submit" value="Allow">
       {/exp:consent:form}
 
       <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
