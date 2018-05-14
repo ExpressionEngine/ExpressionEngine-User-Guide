@@ -48,6 +48,7 @@ For IIS, provide all permissions to the IIS user for these files and directories
 - :file:`images/uploads/`
 - :file:`themes/ee/`
 - :file:`themes/ee/*` (only top-level files and directories need modifying)
+- :file:`themes/user/`
 
 .. tip::
 
