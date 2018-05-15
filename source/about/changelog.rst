@@ -11,28 +11,26 @@ Version 4.2.2
 Release Date: May 16, 2018
 
 - **Security:** Fixed potential reflected XSS issues.
-- **Security:** Hardened access to theme files.
-- **Security:** Fixed a potential reflected XSS issue in the File Picker.
+- **Security:** Modified theme folders and files to prevent directory listings on improperly configured servers. See the :doc:`Version Notes </installation/version_notes_4.2.2>` for details.
+- **Security:** Hardened security of member import utilities.
 - Added a ``{theme_user_folder_url}`` :doc:`Global variable </templates/globals/single_variables>`.
-- Altered the member importer to upload the member import file.
-- Altered the import file converter to upload the XML import file.
 - Switched debug profiler's highlight.js from a CDN to a local JavaScript file to support offline development. (Issue #23602)
 - Fixed a bug where deleting a lot of members via the control panel might be really slow.
-- Fixed a bug where Core installs would have the upgrade banner obscuring the live preview modal.
+- Fixed a bug where Core installs would have the upgrade banner obscuring the Live Preview modal.
 - Fixed a bug where a Grid field named ``url`` inside a conditional may show errors in live preview.
 - Fixed a bug where private message folders could be renamed too liberally.
 - Fixed a bug where uploading an invalid license file while using Core would generate PHP errors.
 - Fixed a bug where searching for a really long search term could result in an SQL error.
-- Fixed a bug (#23599) where Fluid field's search data was historical rather than current.
+- Fixed a bug (#23599) where Fluid field's search data was historical rather than current.🗿
 - Prevent PHP error that could occur with malformed URLs in the Addon Manager.
-- Fixed a bug where 404 would occur in the background on the Member settings page when no avatar was set for a member.
+- Fixed a bug where a 404 would occur in the background on the Member settings page when no avatar was set for a member.
 - Fixed a bug (#23603) where the presence of some tags may cause Comment Entries date variables to be unparsed.
 - Fixed a bug where Pages entry Live Previews might render entries in addition to the one being previewed.
 - Fixed a bug where the Ajax file sync method had different permission requirements than access to the utility had.
 - Fixed a bug where Fluid field meta variables might not work inside of a fields that use ``{content}{/content}`` as a tag pair.
 - Fixed a bug where the ``{if avatar}`` conditional in the member profile tag was always ``TRUE`` if avatars were enabled.
-- Fixed a bug where the comment notification checkbox wouldn't set to ``yes``.
-- Fixed a bug where the default comment allowed setting was ignored by the channel entry form when the field was not included on the form.
+- Fixed a bug in the comment form where the comment notification checkbox wouldn't set to ``yes``.
+- Fixed a bug where the default "comment allowed" setting was ignored by the channel entry form when the field was not included on the form.
 - **Developers:** You can now set a default of ``CURRENT_TIMESTAMP`` for ``datetime`` and ``timestamp`` columns using DB Forge.
 - **Developers:** Fixed a bug in DB Forge that was not handling ``DEFAULT NULL`` properly.
 
