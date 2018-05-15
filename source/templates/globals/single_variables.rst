@@ -423,6 +423,16 @@ theme\_folder\_url
 
 The URL to your theme/ee folder.
 
+theme_user_folder_url
+---------------------
+
+::
+
+  {theme_user_folder_url}
+
+The URL to your theme/user folder.
+
+
 total\_queries
 --------------
 
