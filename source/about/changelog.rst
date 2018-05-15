@@ -13,6 +13,7 @@ Release Date: May 16, 2018
 - **Security:** Fixed potential reflected XSS issues.
 - **Security:** Hardened access to theme files.
 - **Security:** Fixed a potential reflected XSS issue in the File Picker.
+- Added a ``{theme_user_folder_url}`` :doc:`Global variable </templates/globals/single_variables>`.
 - Altered the member importer to upload the member import file.
 - Altered the import file converter to upload the XML import file.
 - Switched debug profiler's highlight.js from a CDN to a local JavaScript file to support offline development. (Issue #23602)
