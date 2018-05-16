@@ -5,6 +5,14 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+
+Version 4.2.3
+-------------
+
+Release Date: May 16, 2018
+
+- Added back themes/ee/site/default/asset/ folder for backward compatibility until it can be completely removed in the version 5 release.
+
 Version 4.2.2
 -------------
 
