@@ -13,6 +13,10 @@ Overview
 
 HTTP cookies are small bits of data set by a website or app and stored on the user's computer while the user is browsing. ExpressionEngine uses a number of cookies to help create a nicer user experience, both for guests and logged in members.
 
+By default, ExpressionEngine cookies are prefixed with 'exp_', so the session cookie would be named 'exp_sessionid'.  However, the prefix can be configured in :doc:`settings/security-privacy`.
+
+.. note:: This should not be considered an exhaustive list of cookies that might be in use on a given site. Third party addons may have their own cookies and cookies may be set outside of ExpressionEngine entirely.
+
 
 .. csv-table:: Basic Cookies
    :file: cookie-csv/basic-cookies.csv
