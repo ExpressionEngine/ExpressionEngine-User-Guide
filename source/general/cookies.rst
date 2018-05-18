@@ -24,6 +24,8 @@ HTTP cookies are small bits of data set by a website or app and stored on the us
    :widths: 15, 52, 15, 7, 7, 7, 7
    :header-rows: 1
 
+* Cookie is set only if the user opts in to the 'Remember me' checkbox.
+
 .. csv-table:: Forum Cookies
    :file: cookie-csv/forum-cookies.csv
    :widths: 15, 52, 15, 7, 7, 7, 7
