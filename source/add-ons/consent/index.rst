@@ -26,13 +26,14 @@ Consent Form
 
 Consent Forms allow the visitor to grant or withdraw consent to one or more Consent Requests::
 
-  {exp:consent:form consent='ee:cookies'}
-
+  {exp:consent:form consent='ee:cookies_functionality'}
+    {consents}
         <h2>{consent_title}</h2>
 
         {consent_request}
 
         Accepted: <input type="checkbox" name="{consent_short_name}" value="y" {if consent_granted}checked{/if}>
+    {/consents}
 
     <input type="submit" name="submit" value="Submit">
 
@@ -49,32 +50,17 @@ consent=
 
 ::
 
-  consent='ee:cookies'
+  consent='ee:cookies_functionality'
 
 You can specify consent requests by their short name. You may specify multiple requests by separating them with the pipe character:
 
 ::
 
-  consent='ee:cookies|ee:tos'
+  consent='ee:cookies_functionality|terms_of_service'
 
 Or use "not" to exclude entries::
 
   consent='not twitter_app'
-
-consent_id=
------------
-
-  consent_id='3'
-
-You can specify consent requests by their IDs as well. You may also specify multiple consent requests by separating them with the pipe character:
-
-::
-
-  consent_id='13|42|147'
-
-Or use "not" to exclude entries::
-
-  consent_id='not 45|534|807'
 
 form_class=
 -----------
@@ -94,15 +80,6 @@ form_id=
 
 Specify the HTML ``id=`` attribute.
 
-json=
------
-
-::
-
-  json='yes'
-
-Return the results in JSON format, instead of performing a redirect. Used for Ajax consent forms.
-
 return=
 -------
 
@@ -110,10 +87,410 @@ return=
 
   return='site/consent'
 
-Specify a path to redirect the user to after submission. If not specified, they will be returned to the current page.
+Specify a path to redirect the user to after submission. If not specified, they will be returned to the current page. Unused for Ajax-submitted forms.
+
+user_created=
+-------------
+
+::
+
+  user_created='only'
+
+Filter the consent requests based on whether or not they are user-created (as opposed to app / add-on created).
+
++-------------+-------------------------------------+
+| value       | result                              |
++=============+=====================================+
+| y (default) | Include user-created consents       |
++-------------+-------------------------------------+
+| n           | Exclude user-created consents       |
++-------------+-------------------------------------+
+| only        | Show **only** user-created consents |
++-------------+-------------------------------------+
 
 Variables
 =========
+
+.. contents::
+  :local:
+  :depth: 1
+
+{consents}{/consents}
+---------------------
+
+A pair variable used to loop through all of the consent requests you are displaying with this form. It has the following variables:
+
+.. contents::
+  :local:
+  :depth: 1
+
+consent_creation_date
+~~~~~~~~~~~~~~~~~~~~~
+
+The date the consent was created.
+
+::
+
+  {consent_creation_date format='%Y %m %d'}
+
+The date the request was created. See :doc:`Date Variable Formatting </templates/date_variable_formatting>` for more information.
+
+.. consent_double_opt_in NOT YET IMPLEMENTED
+  ---------------------
+
+  A boolean variable for conditionals that returns ``TRUE`` or ``FALSE``.  Returns ``TRUE`` if the consent request requires double opt-in, ``FALSE`` otherwise.
+
+  ::
+
+    {if consent_double_opt_in}
+      Double opt-in!
+    {/if}
+
+.. consent_expiration_date NOT YET IMPLEMENTED
+  -----------------------
+
+    {consent_expiration_date format='%Y %m %d'}
+
+  The date the consent will expire. See :doc:`Date Variable Formatting </templates/date_variable_formatting>` for more information.
+
+consent_given_via
+~~~~~~~~~~~~~~~~~
+
+The method that consent was provided, can be useful for conditionals. Typically ``online_form``::
+
+  {if consent_given_via == 'online_form'}
+    Consent was granted via an online form.
+  {/if}
+
+consent_grant_url
+~~~~~~~~~~~~~~~~~
+
+A URL that when clicked will grant the user's consent for this request.
+
+::
+
+  <a href="{consent_grant_url}">Grant</a>
+
+Optionally accepts a ``return=`` parameter if the action should redirect somewhere other than the current page::
+
+  <a href="{consent_grant_url return='preferences/saved'}">Grant</a>
+
+consent_granted
+~~~~~~~~~~~~~~~
+
+A boolean variable for conditionals that returns ``TRUE`` or ``FALSE``.  Returns ``TRUE`` if the user has granted permission to the consent request, ``FALSE`` otherwise.
+
+::
+
+  {if consent_granted}
+      Set that cookie!
+  {/if}
+
+consent_id
+~~~~~~~~~~
+
+The ID number of the consent.
+
+::
+
+  {consent_id}
+
+consent_request
+~~~~~~~~~~~~~~~
+
+The description of the consent request.
+
+::
+
+  {consent_request}
+
+consent_response_date
+~~~~~~~~~~~~~~~~~~~~~
+
+::
+
+  {consent_response_date format='%Y %m %d'}
+
+The date that consent was granted or withdrawn. See :doc:`Date Variable Formatting </templates/date_variable_formatting>` for more information.
+
+.. consent_retention_period NOT YET IMPLEMENTED
+  ~~~~~~~~~~~~~~~~~~~~~~~~
+
+  The length of time that consent is retained for this request.
+
+consent_short_name
+~~~~~~~~~~~~~~~~~~
+
+The short name of the consent.
+
+::
+
+  {consent_short_name}
+
+consent_title
+~~~~~~~~~~~~~
+
+The title of the consent request.
+
+::
+
+  {consent_title}
+
+consent_user_created
+~~~~~~~~~~~~~~~~~~~~
+
+A boolean variable for conditionals that returns ``TRUE`` or ``FALSE``.  Returns ``TRUE`` if this consent request was user-created or not (by a site admin in the control panel). Returns ``FALSE`` otherwise (app or add-on created consent requests).
+
+::
+
+  {if consent_user_created}
+      This consent request is a custom request created by a site administrator.
+  {/if}
+
+consent_version_id
+~~~~~~~~~~~~~~~~~~
+
+The version_id of the consent request.
+
+::
+
+  {version_id}
+
+consent_withdraw_url
+~~~~~~~~~~~~~~~~~~~~
+
+A URL that when clicked will withdraw the user's consent for this request.
+
+::
+
+  <a href="{consent_withdraw_url}">Withdraw</a>
+
+Optionally accepts a ``return=`` parameter if the action should redirect somewhere other than the current page::
+
+  <a href="{consent_grant_url return='preferences/saved'}">Grant</a>
+
+{if no_results}
+---------------
+
+If this tag would not output any consent requests due to your filters, the contents of this conditional will be displayed instead.
+
+::
+
+  {if no_results}
+    No Consent Requests Available
+  {/if}
+
+Examples
+========
+
+Simple Bulk Consent Form
+-------------------------
+
+::
+
+  {exp:consent:alert}
+    <div class="alert {alert_type}">
+      <p>{alert_message}</p>
+    </div>
+  {/exp:consent:alert}
+
+  {exp:consent:form}
+    {if no_results}
+      <h1>No Consent Requests to Display</h1>
+    {/if}
+
+    {consents}
+      <fieldset>
+        <dl>
+          <dt>{consent_title}</dt>
+          <dd>{consent_request}</dd>
+        </dl>
+        <label>
+          <input type="radio" name="{consent_short_name}" value="y" {if consent_granted}checked{/if}>
+          Accept
+        </label>
+        <label>
+          <input type="radio" name="{consent_short_name}" value="n" {if ! consent_granted}checked{/if}>
+          Decline
+        </label>
+      </fieldset>
+    {/consents}
+
+    <fieldset>
+      <input type="submit" name="submit" value="Save">
+    </fieldset>
+  {/exp:consent:form}
+
+AJAX-Driven Consent Form
+------------------------
+
+::
+
+  <html>
+    <head>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    </head>
+    <body>
+      {exp:consent:form
+        consent='ee:cookies_functionality|ee:cookies_performance|ee:cookies_targeting'
+        form_id='cookieConsentForm'
+      }
+      <p>This website uses a variety of cookies, which you consent to if you continue to use this site. You can read our <a href="{path='privacy'}">Privacy Policy</a> for details about how these cookies are used, and to grant or withdraw your consent for certain types of cookies.</p>
+
+      {consents}
+        <label>
+          <input type="checkbox" name="{consent_short_name}" value="y" {if consent_granted}checked{if:elseif ! consent_response_date}checked{/if}>
+          {consent_title}
+        </label>
+      {/consents}
+
+      <input type="submit" name="submit" value="Ok">
+      {/exp:consent:form}
+
+      <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+
+      <!--using the jQuery Form plugin http://jquery.malsup.com/form/-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js" type="text/javascript"></script>
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('#cookieConsentForm').ajaxForm({
+            dataType: 'json',
+            success: function(data) {
+              if (data.success) {
+                alert(data.success);
+              } else {
+                alert('Failed with the following errors: '+data.errors.join(', '));
+              }
+            }
+          });
+        });
+      </script>
+    </body>
+  </html>
+
+*********
+Alert Tag
+*********
+
+The Alert tag works in concert with standard POSTed forms, as one way to let users know that their consent preferences were saved, and which ones.
+
+::
+
+  {exp:consent:alert}
+    <div class="alert {alert_type}">
+      <p>{alert_message}</p>
+    </div>
+  {/exp:consent:alert}
+
+If you want to provide custom classes and response text, you can do that here as well. The Alert tag will only render when there is something to be displayed. For instance, for a completely bespoke success message that will only display after the user submits a consent form::
+
+  {exp:consent:alert}
+    {if alert_type == 'success'}
+      <div class="alert alert-success" role="alert">
+        We've saved your consent preferences, thank you!
+      </div>
+    {/if}
+  {/exp:consent:alert}
+
+Variables
+=========
+
+.. contents::
+  :local:
+  :depth: 1
+
+alert_message
+-------------
+
+The alert message. "Your consent preferences have been saved for:" followed by a list of the Consent Request titles the user submitted.
+
+::
+
+  {alert_message}
+  {!-- Your consent preferences have been saved for: Functionality Cookies, Performance Cookies, Targeting Cookies --}
+
+alert_type
+----------
+
+One of ``issue``, ``success``, or ``warn``. Can be useful to set CSS classes.
+
+::
+
+  <div class="{alert_type}">
+
+************
+Requests Tag
+************
+
+The Requests tag lets you list or loop through available Consent Requests, without automatically wrapping them in a form tag. This can be useful for dynamically outputting information about your site's Consents in a Terms of Service or Privacy Policy page. It can also be used to output links that let a user grant/withdraw consent to individual consents.
+
+.. tip:: Link-based Grant & Withdraw actions are fully compatible with the Alert Tag.
+
+::
+
+  {exp:consent:requests}
+    {if no_results}
+      <h1>No Consent Requests to Display</h1>
+    {/if}
+
+    <h1>{consent_title}</h1>
+    <div>{consent_request}</div>
+
+    <ul>
+      <li><a href="{consent_grant_url}">Grant</a></li>
+      <li><a href="{consent_withdraw_url}">Withdraw</a></li>
+    </ul>
+  {/exp:consent:requests}
+
+Parameters
+==========
+
+.. contents::
+  :local:
+
+consent=
+--------
+
+::
+
+  consent='ee:cookies_functionality'
+
+You can specify consent requests by their short name. You may specify multiple requests by separating them with the pipe character:
+
+::
+
+  consent='ee:cookies_functionality|terms_of_service'
+
+Or use "not" to exclude entries::
+
+  consent='not twitter_app'
+
+Specify a path to redirect the user to after submission. If not specified, they will be returned to the current page. Unused for Ajax-submitted forms.
+
+user_created=
+-------------
+
+::
+
+  user_created='only'
+
+Filter the consent requests based on whether or not they are user-created (as opposed to app / add-on created).
+
++-------------+-------------------------------------+
+| value       | result                              |
++=============+=====================================+
+| y (default) | Include user-created consents       |
++-------------+-------------------------------------+
+| n           | Exclude user-created consents       |
++-------------+-------------------------------------+
+| only        | Show **only** user-created consents |
++-------------+-------------------------------------+
+
+Variables
+=========
+
+The Requests tag has the same variables available to the Consents Form, but without the need to wrap them in a ``{consents}{/consents}`` tag pair.
 
 .. contents::
   :local:
@@ -130,12 +507,45 @@ The date the consent was created.
 
 The date the request was created. See :doc:`Date Variable Formatting </templates/date_variable_formatting>` for more information.
 
-consent_edit_date
+.. consent_double_opt_in NOT YET IMPLEMENTED
+  ---------------------
+
+  A boolean variable for conditionals that returns ``TRUE`` or ``FALSE``.  Returns ``TRUE`` if the consent request requires double opt-in, ``FALSE`` otherwise.
+
+  ::
+
+    {if consent_double_opt_in}
+      Double opt-in!
+    {/if}
+
+.. consent_expiration_date NOT YET IMPLEMENTED
+  -----------------------
+
+    {consent_expiration_date format='%Y %m %d'}
+
+  The date the consent will expire. See :doc:`Date Variable Formatting </templates/date_variable_formatting>` for more information.
+
+consent_given_via
 -----------------
 
-  {consent_edit_date format='%Y %m %d'}
+The method that consent was provided, can be useful for conditionals. Typically ``online_form``::
 
-The date the consent request was last edited. See :doc:`Date Variable Formatting </templates/date_variable_formatting>` for more information.
+  {if consent_given_via == 'online_form'}
+    Consent was granted via an online form.
+  {/if}
+
+consent_grant_url
+-----------------
+
+A URL that when clicked will grant the user's consent for this request.
+
+::
+
+  <a href="{consent_grant_url}">Grant</a>
+
+Optionally accepts a ``return=`` parameter if the action should redirect somewhere other than the current page::
+
+  <a href="{consent_grant_url return='preferences/saved'}">Grant</a>
 
 consent_granted
 ---------------
@@ -147,15 +557,6 @@ A boolean variable for conditionals that returns ``TRUE`` or ``FALSE``.  Returns
   {if consent_granted}
       Set that cookie!
   {/if}
-
-consent_granted_date
---------------------
-
-::
-
-  {consent_granted_date format='%Y %m %d'}
-
-If consent was granted to the request, this will show the date the consent was granted. See :doc:`Date Variable Formatting </templates/date_variable_formatting>` for more information.
 
 consent_id
 ----------
@@ -175,6 +576,20 @@ The description of the consent request.
 
   {consent_request}
 
+consent_response_date
+---------------------
+
+::
+
+  {consent_response_date format='%Y %m %d'}
+
+The date that consent was granted or withdrawn. See :doc:`Date Variable Formatting </templates/date_variable_formatting>` for more information.
+
+.. consent_retention_period NOT YET IMPLEMENTED
+  ~~~~~~~~~~~~~~~~~~~~~~~~
+
+  The length of time that consent is retained for this request.
+
 consent_short_name
 ------------------
 
@@ -193,6 +608,17 @@ The title of the consent request.
 
   {consent_title}
 
+consent_user_created
+--------------------
+
+A boolean variable for conditionals that returns ``TRUE`` or ``FALSE``.  Returns ``TRUE`` if this consent request was user-created or not (by a site admin in the control panel). Returns ``FALSE`` otherwise (app or add-on created consent requests).
+
+::
+
+  {if consent_user_created}
+      This consent request is a custom request created by a site administrator.
+  {/if}
+
 consent_version_id
 ------------------
 
@@ -202,67 +628,27 @@ The version_id of the consent request.
 
   {version_id}
 
-Examples
-========
+consent_withdraw_url
+--------------------
 
-Simple Bulk Consent Form
--------------------------
-
-::
-
-  {exp:consent:form}
-    <fieldset>
-      <legend>{consent_title}</legend>
-      <label>
-        <input type="radio" name="{consent_short_name}" value="y" {if consent_granted}checked{/if}>
-        Grant Consent
-      </label>
-      <label>
-        <input type="radio" name="{consent_short_name}" value="n" {if ! consent_granted}checked{/if}>
-        Withdraw Consent
-      </label>
-    </fieldset>
-
-    <fieldset>
-      <input type="submit" name="submit" value="Submit">
-    </fieldset>
-  {/exp:consent:form}
-
-AJAX-Driven Consent Form
-------------------------
+A URL that when clicked will withdraw the user's consent for this request.
 
 ::
 
-  <html>
-    <head>
-      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    </head>
-    <body>
-      {exp:consent:form consent='ee:cookies' json='yes' form_id='cookieConsentForm'}
-        <h1>{consent_title}</h1>
-        {consent_request}
-        <input type="hidden" name="{consent_short_name}" value="y">
-        <input type="submit" name="submit" value="Allow">
-      {/exp:consent:form}
+  <a href="{consent_withdraw_url}">Withdraw</a>
 
-      <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+Optionally accepts a ``return=`` parameter if the action should redirect somewhere other than the current page::
 
-      <!--using the jQuery Form plugin http://jquery.malsup.com/form/-->
-      <script src="/js/jquery.form.js" type="text/javascript"></script>
+  <a href="{consent_grant_url return='preferences/saved'}">Grant</a>
 
-      <script type="text/javascript">
-        $(document).ready(function(){
-          $('#cookieConsentForm').ajaxForm({
-            dataType: 'json',
-            success: function(data) {
-              if (data.success) {
-                alert('Cookies will now be set for this site.')
-              } else {
-                alert('Failed with the following errors: '+data.errors.join(', '));
-              }
-            }
-          });
-        });
-      </script>
-    </body>
-  </html>
+{if no_results}
+---------------
+
+If this tag would not output any consent requests due to your filters, the contents of this conditional will be displayed instead.
+
+::
+
+  {if no_results}
+    No Consent Requests Available
+  {/if}
+
