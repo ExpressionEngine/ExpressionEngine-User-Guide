@@ -2,7 +2,7 @@
 GDPR and ExpressionEngine
 *************************
 
-ExpressionEngine has tools to make compliance with regulations like the |gdpr| easy to comply with. :abbr:`GDPR (General Data Protection Regulation)`  (General Data Protection Regulation) has four main prongs: consent, record of processing, portability, and right to be forgotten.
+ExpressionEngine has tools to make compliance with regulations like the |gdpr| easy to comply with. :abbr:`GDPR (General Data Protection Regulation)`  (General Data Protection Regulation) has four main prongs: consent, record of processing, portability, and right to be forgotten. ExpressionEngine makes it easy to comply with these regulations, with infinite flexibility to also accommodate any regional or internal data privacy policies as well.
 
 .. contents::
   :local:
@@ -25,7 +25,7 @@ Other cookies are divided into three categories to let the user manage consent f
 Functionality
 ~~~~~~~~~~~~~
 
-These cookies help personalize content and functionality, including remembering changes a user has made to parts of the website that they can customize. These cookies typically do not contain any :abbr:`PII (Personally Identifiable Information)` and simply make the website friendlier to use.
+These cookies help personalize content and functionality, including remembering changes a user has made to parts of the website that they can customize. These cookies do not contain any :abbr:`PII (Personally Identifiable Information)` and simply make the website friendlier to use and add functionality without requiring registration.
 
 <include first-party functionality cookies table>
 
