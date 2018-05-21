@@ -28,7 +28,7 @@ By default, ExpressionEngine cookies are prefixed with 'exp_', so the session co
    :widths: 15, 52, 15, 7, 7, 7, 7
    :header-rows: 1
 
-* Cookie is set only if the user opts in to the 'Remember me' checkbox.
+* Cookie is set only if the user opts in via the 'save_info' field.
 
 .. csv-table:: Forum Cookies
    :file: cookie-csv/forum-cookies.csv
