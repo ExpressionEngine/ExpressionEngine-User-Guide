@@ -423,6 +423,8 @@ id=
 
 Specify the CSS id.
 
+.. note:: By default, the channel form will have an id of 'cform'.  If using the native CSS for styling, some field types require that id specification  to work properly.
+
 
 include_assets=
 ~~~~~~~~~~~~~~~
