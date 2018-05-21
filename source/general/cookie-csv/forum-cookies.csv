@@ -1,3 +1,3 @@
-Name,Description,Expiration,CP,Frontend,Guests,Member
-forum_theme,"If multiple forum themes exist, this cookie allows the user to save their theme preference.",1 year,,*,*,*
-forum_topics,"Tracks the id number for read topics, allows setting the 'read' status.  Saved in the cookie for guests, the database for members.",1 year,,*,*,*
+Name,Description,Expiration,Necessary,Guests
+forum_theme,"If multiple forum themes exist, this cookie allows the user to save their theme preference.",1 year,,*
+forum_topics,"Tracks the id number for read topics, allows setting the 'read' status.  Saved in the cookie for guests, the database for members.",1 year,,*
