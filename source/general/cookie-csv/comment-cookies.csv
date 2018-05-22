@@ -1,0 +1,7 @@
+Name,Description,Expiration,Type
+my_email*,Email address specified when posting a comment.,1 year,Functionality
+my_location*,Location specified when posting a comment.,1 year,Functionality
+my_name*,Name specified when posting a comment.,1 year,Functionality
+my_url*,URL specified when posting a comment.,1 year,Functionality
+notify_me,"If set to ‘yes’, notifications will be sent to the saved email address when new comments are made.",1 year,Functionality
+save_info,"If set to ‘yes’, allows additional cookies to store guest user information for use when filling out comment forms. This cookie is only set if you submit a comment.",1 year,Functionality
