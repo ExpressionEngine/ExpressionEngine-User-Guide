@@ -68,25 +68,6 @@ Managing Consent via API
 While the granting and withdrawal of consent will typically be done through the member profile page or the consent manager, the Consent service does provide simple methods for managing consents.
 
 
-Grant and Withdraw Consent
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Typically users will manage their consent via the :doc:`consent module </addons/consent_requests/index>`.  However, it is easy to grant and withdraw consent via the API as well.
-
-Grant consent, from a POSTed opt-in::
-
-  if (get_bool_from_string(ee()->input->post('allow_do_stuff')))
-  {
-    ee('Consent')->grant('my_addon:do_stuff');
-  }
-
-Withdraw consent::
-
-  if ( ! get_bool_from_string(ee()->input->post('allow_do_stuff')))
-  {
-    ee('Consent')->withdraw('my_addon:do_stuff');
-  }
-
 Check a Single Consent
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -116,6 +97,25 @@ Act on all members who granted a specific consent::
   }
 
 .. tip:: Always use the Consent's ``log()`` method when processing personal data.
+
+Grant and Withdraw Consent
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Typically users will manage their consent via the :doc:`consent module </addons/consent_requests/index>`.  However, it is easy to grant and withdraw consent via the API as well.
+
+Grant consent, from a POSTed opt-in::
+
+  if (get_bool_from_string(ee()->input->post('allow_do_stuff')))
+  {
+    ee('Consent')->grant('my_addon:do_stuff');
+  }
+
+Withdraw consent::
+
+  if ( ! get_bool_from_string(ee()->input->post('allow_do_stuff')))
+  {
+    ee('Consent')->withdraw('my_addon:do_stuff');
+  }
 
 
 Consent Methods
