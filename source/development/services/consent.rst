@@ -5,51 +5,12 @@ Consent Service
 
 Consent management is key to processing a user's personal data. The Consent service provides a simple API to manage requests for consent, and can be used to determine if a member has granted consent to a specific request.
 
-The Consent service can help an add-on that processes personal data be compliant with regulations such as the |gdpr|. It also enables administrators to display and manage member consents for your add-on consistenly in ExpressionEngine, including retaining proper records of when personal data is processed.
+The Consent service can help an add-on that processes personal data be compliant with regulations such as the |gdpr|. All consent requests registered through the service will be included in the :doc:`consent manager </cp/settings/consents>`.  Consent for requests can be granted and withdrawn via a user's :doc:`control panel profile page </cp/members/profile/consents>` or via the :doc:`consent module </addons/consent_requests/index>` on the frontend.  All consent grants and withdrawals made through the profile and the module will automatically be :doc:`logged </cp/logs/consent>`.
 
 .. contents::
   :local:
   :depth: 1
 
-Simple Examples
----------------
-
-Grant consent, from a POSTed opt-in::
-
-  if (get_bool_from_string(ee()->input->post('allow_do_stuff')))
-  {
-    ee('Consent')->grant('my_addon:do_stuff');
-  }
-
-Withdraw consent::
-
-  if ( ! get_bool_from_string(ee()->input->post('allow_do_stuff')))
-  {
-    ee('Consent')->withdraw('my_addon:do_stuff');
-  }
-
-Check to see if consent has been granted::
-
-  if (ee('Consent')->hasGranted('my_addon:do_stuff'))
-  {
-    $this->doStuff();
-  }
-
-Act on all members who granted a specific consent::
-
-  $consents = ee('Consent')->getGrantedConsentsFor('my_addon:do_stuff');
-  foreach ($consents as $consent)
-  {
-    $this->doStuffTo($consent->Member);
-
-    // Log what we did for proper record keeping
-    $message = ee()->session->userdata('username') . ' did stuff to member ' . $consent->Member->getId();
-    $consent->log($message);
-  }
-
-.. tip:: Always use the Consent's ``log()`` method when processing personal data.
-
-.. tip:: ``ee('Consent')`` acts on the currently logged in member. To act on a different member, pass the ``member_id`` or a member model object as the second parameter, i.e. ``ee('Consent', $member)->hasGranted('my_addon:do_stuff')``.
 
 Creating Add-on Consent Requests
 --------------------------------
@@ -100,6 +61,62 @@ The ``consent.requests`` array takes the short name of your consent request as a
 +----------------+----------------------------------------------------------------------------------------------------+
 
 .. note:: The short name will also be used by a site builder in ``{exp:consent}`` tag parameters.
+
+Managing Consent via API
+------------------------
+
+While the granting and withdrawal of consent will typically be done through the member profile page or the consent manager, the Consent service does provide simple methods for managing consents.
+
+
+Grant and Withdraw Consent
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Typically users will manage their consent via the :doc:`consent module </addons/consent_requests/index>`.  However, it is easy to grant and withdraw consent via the API as well.
+
+Grant consent, from a POSTed opt-in::
+
+  if (get_bool_from_string(ee()->input->post('allow_do_stuff')))
+  {
+    ee('Consent')->grant('my_addon:do_stuff');
+  }
+
+Withdraw consent::
+
+  if ( ! get_bool_from_string(ee()->input->post('allow_do_stuff')))
+  {
+    ee('Consent')->withdraw('my_addon:do_stuff');
+  }
+
+Check a Single Consent
+~~~~~~~~~~~~~~~~~~~~~~
+
+Check to see if consent has been granted by a user::
+
+  if (ee('Consent')->hasGranted('my_addon:do_stuff'))
+  {
+    $this->doStuff();
+  }
+
+.. tip:: ``ee('Consent')`` acts on the currently logged in member. To act on a different member, pass the ``member_id`` or a member model object as the second parameter, i.e. ``ee('Consent', $member)->hasGranted('my_addon:do_stuff')``.
+
+
+Get all Consents for a Request
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Act on all members who granted a specific consent::
+
+  $consents = ee('Consent')->getGrantedConsentsFor('my_addon:do_stuff');
+  foreach ($consents as $consent)
+  {
+    $this->doStuffTo($consent->Member);
+
+    // Log what we did for proper record keeping
+    $message = ee()->session->userdata('username') . ' did stuff to member ' . $consent->Member->getId();
+    $consent->log($message);
+  }
+
+.. tip:: Always use the Consent's ``log()`` method when processing personal data.
+
 
 Consent Methods
 ---------------
