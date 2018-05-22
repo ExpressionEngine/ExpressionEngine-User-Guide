@@ -1,11 +1,11 @@
-Name,Description,Expiration,Necessary,Guests
-anon,Determines whether the user’s username is displayed in the list of currently logged in members.,1 year,,
-cp_last_site_id,MSM cookie indicating the last site accessed in the control panel.,Session,*,
-csrf_token,A security cookie used to identify the user and prevent :ref:`Cross Site Request Forgery <dev_guidelines_csrf_protection>` attacks.,2 hours,*,*
-flash,"Control panel user feedback messages, encrypted for security.",1 day,*,
-last_activity,Records the time of the last page load. Used in conjunction with the last_visit cookie.,1 year,*,*
-last_visit,Date of the user’s last visit. Can be shown as a statistic for members and used by the forum to show unread topics for both members and guests.,1 year,*,*
-remember,Determines whether a user is automatically logged in upon visiting the site.,2 weeks,*,
-sessionid,"Session id, used to associate a logged in user with their data.",1-2 hours,*,
-tracker,"Contains the last 5 pages viewed, encrypted for security. Typically used for form or error message returns.",Session,,*
-visitor_consents,,1 year,*,*
+Name,Description,Expiration,Type
+anon,Determines whether the user’s username is displayed in the list of currently logged in members.,1 year,Functionality
+cp_last_site_id,MSM cookie indicating the last site accessed in the control panel.,Session,Strictly Necessary
+csrf_token,A security cookie used to identify the user and prevent :ref:`Cross Site Request Forgery <dev_guidelines_csrf_protection>` attacks.,2 hours,Strictly Necessary
+flash,"Control panel user feedback messages, encrypted for security.",1 day,Strictly Necessary
+last_activity,Records the time of the last page load. Used in conjunction with the last_visit cookie.,1 year,Strictly Necessary
+last_visit,Date of the user’s last visit. Can be shown as a statistic for members and used by the forum to show unread topics for both members and guests.,1 year,Strictly Necessary
+remember,Determines whether a user is automatically logged in upon visiting the site.,2 weeks,Strictly Necessary
+sessionid,"Session id, used to associate a logged in user with their data.",1-2 hours,Strictly Necessary
+tracker,"Contains the last 5 pages viewed, encrypted for security. Typically used for form or error message returns.",Session,Functionality
+visitor_consents,"Saves responses to Consent requests for non-logged in visitors",1 year,Strictly Necessary
