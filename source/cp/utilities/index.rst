@@ -24,10 +24,11 @@ Contents
 
 - :doc:`php`
 - :doc:`extensions`
-- Import Tools
+- Member Tools
 
   - :doc:`import-converter`
   - :doc:`member-import`
+  - :doc:`mass-notification-export`
 
 - :doc:`sql`
 
