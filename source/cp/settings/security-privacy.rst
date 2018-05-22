@@ -132,14 +132,22 @@ on the same cookie domain.
 Send cookies over HTTP only?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When set to yes, cookies will not be accessible through JavaScript.
+When enabled, cookies will not be accessible through JavaScript.
 
 Send cookies securely?
 ~~~~~~~~~~~~~~~~~~~~~~
 
-When set to yes, cookies will only be transmitted over a secure HTTPS connection.
+When enabled, cookies will only be transmitted over a secure HTTPS connection.
 
 .. note:: Your site must use SSL everywhere for this to work.
+
+.. _require_cookie_consent:
+
+Require user consent to set cookies?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When enabled, only **strictly necessary cookies** will be set until the user consents to your site's cookie policy. See the :doc:`Consent module </addons/consent_requests/index>` documentation for more details.
+
 
 .. _allow-member-username-label:
 
