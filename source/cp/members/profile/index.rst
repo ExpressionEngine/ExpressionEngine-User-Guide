@@ -20,6 +20,7 @@ Contents
   - :doc:`email`
   - :doc:`auth`
   - :doc:`date`
+  - :doc:`consents`
 
 - :doc:`publishing`
 
