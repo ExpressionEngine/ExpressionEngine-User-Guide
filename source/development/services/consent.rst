@@ -131,11 +131,11 @@ Consent Methods
   :returns: TRUE if they have, FALSE if they have not
   :rtype: Boolean
 
-.. method:: getGrantedRequests()
+.. method:: getConsents()
 
-  Gets all the consent requests the member (or anonymous visitor) has granted consent.
+  Gets all the consents the member (or anonymous visitor) has responded to.
 
-  :returns: A Collection of ConsentRequest objects
+  :returns: A Collection of Consent objects (ConsentRequest for anonymous)
   :rtype: Object
 
 .. method:: getGrantedConsentsFor($request_ref)
@@ -144,4 +144,12 @@ Consent Methods
 
   :param string|int $request_ref: The name or ID of a consent request
   :returns: A Collection of Consent objects
+  :rtype: Object
+
+.. method:: getConsentDataFor($request_ref)
+
+  Gets the values for a specific request and the member's consent
+
+  :param int|string|array  $request_ref: The name or an array of names, or id or array of ids
+  :returns: A Collection of associative arrays for each Consent Request
   :rtype: Object
