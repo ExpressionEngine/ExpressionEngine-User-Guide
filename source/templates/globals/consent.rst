@@ -24,7 +24,9 @@ If you use and manage user consents with your site, you can take advantage of Co
 Variables
 *********
 
-All Consent variables are boolean values, intended for use in conditionals to determine whether or not to do something in your template.
+All Consent variables are boolean values, intended for use in conditionals to determine whether or not to do something in your template, and all of them are accessed with the ``consent:`` prefix::
+
+  {if consent:consent_short_name}
 
 Native Consent Requests
 =======================
@@ -54,7 +56,7 @@ Add-on Consent Requests
 
 Addon Consent request are prefixed with the add-on's shortname that corresponds to its folder name and tags. For example if the add-on is named Marketing and has its own consents, the consent variables would be::
 
-  {if marketing:consent-name}
+  {if consent:marketing:consent-name}
     {exp:marketing:action}
       Do Something
     {/exp:marketing:action}
@@ -70,3 +72,30 @@ User-created Consent requests, that you as the site builder create, are referenc
   {if consent:terms-of-service}
     User has consented, so take some particular action
   {/if}
+
+Checking if the User has Responded
+==================================
+
+All of the above variables act like a boolean—``TRUE`` if the user has given consent and ``FALSE`` if they've not given consent, or have denied or withdrawn it. But what about folks who haven't responded yet? You can use the ``has_reponded:`` prefix with any consent variable. For example, you could ask for consent for using a cool widget, but only if they've not responded. If they told you no, you don't want to keep asking.
+
+has_responded:
+::
+
+  {if ! consent:has_responded:my_cool_widget}
+    {exp:consent:requests consent='my_cool_widget'}
+      <h1>{consent_title}</h1>
+      <div>{consent_request}</div>
+
+      <ul>
+        <li><a href="{consent_grant_url}">Allow</a></li>
+        <li><a href="{consent_withdraw_url}">Decline</a></li>
+      </ul>
+    {/exp:consent:requests}
+  {/if}
+
+  {if consent:my_cool_widget}
+    {exp:my_cool_widget:display}
+      {!-- this is super cool! --}
+    {/exp:my_cool_widget}
+  {/if}
+

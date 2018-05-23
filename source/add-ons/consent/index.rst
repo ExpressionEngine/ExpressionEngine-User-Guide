@@ -10,7 +10,7 @@ Consent
 Introduction
 ************
 
-The Consent module allows you to build tools to allow visitors to manage their consent. In conjunction with :ref:`consent_variables`, you can build rich sites that respect activity that a visitor has consented.
+The Consent module allows you to build tools to allow visitors to manage their consent. In conjunction with :doc:`/templates/globals/consent`, you can build rich sites that respect activity that a visitor has consented.
 
 For example, consenting to use of certain cookies, of using their information for marketing purposes, and so on. These tags enable you to ensure that a visitor is freely giving their consent, for specific granular purposes, to inform them of the nature of what they are consenting to, to actively and unambiguously indicate their consent, and to see and manage (grant or withdraw) their consent to individual items.
 
