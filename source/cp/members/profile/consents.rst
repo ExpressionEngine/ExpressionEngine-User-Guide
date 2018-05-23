@@ -9,9 +9,9 @@ Consents
 
 ExpressionEngine creates consent requests for actions that may require user permission.  Third party addons and site administrators may also generate such permission requests.  The consent page allows you to manage your response to all existing consent requests.  Consent may be granted or withdrawn at any point and a record of the user action will be made.
 
-A user may also manage their consent requests on the frontend using the :doc:`consent module </add-ons/consent/index>`.  Consent management is a primary tool for those who need to create :doc:`|gdpr| compliant </general/gdpr>` sites.
+A user may also manage their consent requests on the frontend using the :doc:`consent module </add-ons/consent/index>`.  Consent management is a primary tool for those who need to create :doc:`GDPR compliant</general/gdpr>` sites.
 
-.. note:: The existence of a consent request does **not** indicate that the site is using the user's consent permission settings.
+.. note:: In order for cookie consent requests to display, :ref:`require_cookie_consent` must be enabled.
 
 .. Screenshot (optional)
 
