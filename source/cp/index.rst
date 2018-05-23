@@ -72,6 +72,7 @@ Developer Tools
 
   - :doc:`settings/throttling`
   - :doc:`settings/captcha`
+  - :doc:`settings/consents/index`
 
 :doc:`footer`
 -------------

@@ -40,6 +40,7 @@ Contents
 
   - :doc:`throttling`
   - :doc:`Captcha <captcha>`
+  - :doc:`consents/index`
 
 .. toctree::
   :glob:
@@ -49,4 +50,5 @@ Contents
   *
   buttons/index
   menu/index
+  consents/index
 
