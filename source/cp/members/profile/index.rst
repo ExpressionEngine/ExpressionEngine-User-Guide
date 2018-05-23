@@ -35,10 +35,9 @@ Contents
   - :doc:`group`
   - :doc:`cp-settings`
   - :doc:`/cp/utilities/communicate/index`
-
-.. todo:: Create pages for login and delete
-.. - :doc:`login`
-.. - :doc:`delete`
+  - :doc:`login`
+  - :doc:`anonymize`
+  - :doc:`delete`
 
 .. toctree::
   :glob:
