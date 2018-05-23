@@ -5,7 +5,7 @@ Consent Service
 
 Consent management is key to processing a user's personal data. The Consent service provides a simple API to manage requests for consent, and can be used to determine if a member has granted consent to a specific request.
 
-The Consent service can help an add-on that processes personal data be compliant with regulations such as the |gdpr|. All consent requests registered through the service will be included in the :doc:`consent manager </cp/settings/consents>`.  Consent for requests can be granted and withdrawn via a user's :doc:`control panel profile page </cp/members/profile/consents>` or via the :doc:`consent module </addons/consent_requests/index>` on the frontend.  All consent grants and withdrawals made through the profile and the module will automatically be :doc:`logged </cp/logs/consent>`.
+The Consent service can help an add-on that processes personal data be compliant with regulations such as the |gdpr|. All consent requests registered through the service will be included in the :doc:`consent manager </cp/settings/consents>`.  Consent for requests can be granted and withdrawn via a user's :doc:`control panel profile page </cp/members/profile/consents>` or via the :doc:`consent module </add-ons/consent/index>` on the frontend.  All consent grants and withdrawals made through the profile and the module will automatically be :doc:`logged </cp/logs/consent>`.
 
 .. contents::
   :local:
@@ -101,7 +101,7 @@ Act on all members who granted a specific consent::
 Grant and Withdraw Consent
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Typically users will manage their consent via the :doc:`consent module </addons/consent_requests/index>`.  However, it is easy to grant and withdraw consent via the API as well.
+Typically users will manage their consent via the :doc:`consent module </add-ons/consent/index>`.  However, it is easy to grant and withdraw consent via the API as well.
 
 Grant consent, from a POSTed opt-in::
 

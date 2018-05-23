@@ -18,16 +18,12 @@ Cookies
 
 For your website, the first thing that likely pops in your mind is cookies. ExpressionEngine has a small set of cookies that do not contain any :abbr:`PII (Personally Identifiable Information)` that are **strictly necessary** for the website to function properly. These cookies cannot be disabled except by the user with their browser settings, and if they choose to do so, some basic website features will not work (such as submitting forms, logging in, etc.).
 
-<include first-party strictly necessary cookies table>
-
-Other cookies are divided into three categories to let the user manage consent for these activities. You can use the :doc:`/add-ons/consent/index` to manage the Consents, and :doc:`/templates/globals/consent` to test consents in your templates.
+Other cookies are divided into three categories to let the user manage consent for these activities. You can use the :doc:`Consent module </add-ons/consent/index>` to manage the Consents, and :doc:`/templates/globals/consent` to test consents in your templates.
 
 Functionality
 ~~~~~~~~~~~~~
 
 These cookies help personalize content and functionality, including remembering changes a user has made to parts of the website that they can customize. These cookies do not contain any :abbr:`PII (Personally Identifiable Information)` and simply make the website friendlier to use and add functionality without requiring registration.
-
-<include first-party functionality cookies table>
 
 Performance
 ~~~~~~~~~~~
@@ -38,6 +34,8 @@ Targeting Cookies
 ~~~~~~~~~~~~~~~~~
 
 Targeting cookies are the only kind that should be used in storing and transmitting :abbr:`PII (Personally Identifiable Information)`. The information is :abbr:`PII (Personally Identifiable Information)` and often shared with a third-party service and enable profiles to be gathered, sometimes across many web sites. ExpressionEngine has **no native Targeting cookies**. This consent should be granted if you are using any third-party marketing cookies, or are sending :abbr:`PII (Personally Identifiable Information)` to services like Google Analytics that would _normally_ not include :abbr:`PII (Personally Identifiable Information)`.
+
+.. tip:: Checkout our comprehensive guide to :doc:`cookies` for more details.
 
 Consent for Anything!
 ---------------------

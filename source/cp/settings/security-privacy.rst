@@ -146,7 +146,7 @@ When enabled, cookies will only be transmitted over a secure HTTPS connection.
 Require user consent to set cookies?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When enabled, only **strictly necessary cookies** will be set until the user consents to your site's cookie policy. See the :doc:`Consent module </addons/consent_requests/index>` documentation for more details.
+When enabled, only **strictly necessary cookies** will be set until the user consents to your site's cookie policy. See the :doc:`Consent module </add-ons/consent/index>` documentation for more details.
 
 
 .. _allow-member-username-label:
