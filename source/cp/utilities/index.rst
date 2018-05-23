@@ -52,6 +52,7 @@ Contents
   extensions
   import-converter
   member-import
+  mass-notification-export
   backup_utility
   sql
   query

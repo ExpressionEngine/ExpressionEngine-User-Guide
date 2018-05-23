@@ -28,6 +28,10 @@ The file must return an associative array. For example::
 Available Keys
 --------------
 
+.. contents::
+  :local:
+  :depth: 1
+
 author
 ~~~~~~
 
@@ -198,3 +202,37 @@ models
 This is an associate array of models exposed by this addon. The class name
 should be relative to the addon namespace. Typically addons will be in a
 ``Model`` directory in the addon's folder.
+
+cookies
+~~~~~~~
+
+::
+
+  'cookies.necessary' => [
+    'unique_id',
+  ],
+  'cookies.functionality' => [
+    'font_size',
+  ],
+  'cookies.performance' => [
+    'analytics_id',
+  ],
+  'cookies.targeting' => [
+    'advertising_tracker',
+  ],
+
+If your add-on sets any custom cookies, you must register the name of the cookie here within the array(s) of the appropriate type. This way if the site requires consent for cookies, the user's preferences can be respected. If you set a cookie that is not registered with your add-on, it will still set, but a warning will be generated in the Developer Log detailing the non-compliant cookie.
+
++-----------------------+--------------------------------------------------------------------------------------+
+|          Type         |                                       Purpose                                        |
++=======================+======================================================================================+
+| cookies.necessary     | Required to function properly. Does not contain personally identifiable information. |
++-----------------------+--------------------------------------------------------------------------------------+
+| cookies.functionality | Enhances functionality, such as remembering a user's preferences or settings.        |
++-----------------------+--------------------------------------------------------------------------------------+
+| cookies.performance   | Analytics, statistics, etc. Data should be aggregated and anonymous.                 |
++-----------------------+--------------------------------------------------------------------------------------+
+| cookies.targeting     | Typically the only cookie type that can contain personally identifiable information. |
+|                       | Marketing cookies that help establish profiles for ad delivery, for instance.        |
++-----------------------+--------------------------------------------------------------------------------------+
+

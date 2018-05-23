@@ -5,7 +5,7 @@ Consent Service
 
 Consent management is key to processing a user's personal data. The Consent service provides a simple API to manage requests for consent, and can be used to determine if a member has granted consent to a specific request.
 
-The Consent service can help an add-on that processes personal data be compliant with regulations such as the |gdpr|. All consent requests registered through the service will be included in the :doc:`consent manager </cp/settings/consents>`.  Consent for requests can be granted and withdrawn via a user's :doc:`control panel profile page </cp/members/profile/consents>` or via the :doc:`consent module </addons/consent_requests/index>` on the frontend.  All consent grants and withdrawals made through the profile and the module will automatically be :doc:`logged </cp/logs/consent>`.
+The Consent service can help an add-on that processes personal data be compliant with regulations such as the |gdpr|. All consent requests registered through the service will be included in the :doc:`consent manager </cp/settings/consents>`.  Consent for requests can be granted and withdrawn via a user's :doc:`control panel profile page </cp/members/profile/consents>` or via the :doc:`Consent module </add-ons/consent/index>` on the frontend.  All consent grants and withdrawals made through the profile and the module will automatically be :doc:`logged </cp/logs/consent>`.
 
 .. contents::
   :local:
@@ -62,6 +62,8 @@ The ``consent.requests`` array takes the short name of your consent request as a
 
 .. note:: The short name will also be used by a site builder in ``{exp:consent}`` tag parameters.
 
+.. note:: ``double_opt_in`` will soon be handled automatically by this service. But if you choose to use this now (v4.3.0), you will need to build your own mechanism for the second verification before granting consent.
+
 Managing Consent via API
 ------------------------
 
@@ -101,7 +103,7 @@ Act on all members who granted a specific consent::
 Grant and Withdraw Consent
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Typically users will manage their consent via the :doc:`consent module </addons/consent_requests/index>`.  However, it is easy to grant and withdraw consent via the API as well.
+Typically users will manage their consent via the :doc:`Consent module </add-ons/consent/index>`.  However, it is easy to grant and withdraw consent via the API as well.
 
 Grant consent, from a POSTed opt-in::
 
@@ -143,6 +145,14 @@ Consent Methods
 .. method:: hasGranted($request_ref)
 
   Has the member granted consent for a given consent request?
+
+  :param string|int $request_ref: The name or ID of a consent request
+  :returns: TRUE if they have, FALSE if they have not
+  :rtype: Boolean
+
+.. method:: hasResponded($request_ref)
+
+  Has the member responded to a given consent request?
 
   :param string|int $request_ref: The name or ID of a consent request
   :returns: TRUE if they have, FALSE if they have not
