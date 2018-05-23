@@ -243,6 +243,19 @@ Boolean (TRUE/FALSE) variable representing whether or not the template is being 
 
   {!-- ExpressionEngine tags below to define content to return --}
 
+is_live_preview_request
+-----------------------
+
+::
+
+  {is_live_preview_request}
+
+Boolean (TRUE/FALSE) variable representing whether or not the current request is a Live Preview from the control panel. Most commonly you would use this to add/hide information on your preview page for content authors::
+
+  {if is_live_preview_request}
+    {!-- include sample rendering of a social share, Twitter card, FB post, etc. --}
+  {/if}
+
 lang
 ----
 
@@ -408,7 +421,17 @@ theme\_folder\_url
 
   {theme_folder_url}
 
-The URL to your theme folder.
+The URL to your theme/ee folder.
+
+theme_user_folder_url
+---------------------
+
+::
+
+  {theme_user_folder_url}
+
+The URL to your theme/user folder.
+
 
 total\_queries
 --------------
