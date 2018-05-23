@@ -206,3 +206,22 @@ after_member_bulk_delete
   :rtype: NULL
 
   .. versionadded:: 4.3.0
+
+member_anonymize
+----------------
+
+.. function:: member_anonymize($member)
+
+  Called when an anonymization action is taken on a member. If you have
+  personally-identifiable information about members in your add-on, this is the
+  place to implement your routines to anonymize that information.
+
+  How it's called::
+
+    ee()->extensions->call('member_anonymize', $this);
+
+  :param object $member: Member model object being anonymized
+  :returns: void
+  :rtype: NULL
+
+  .. versionadded:: 4.3.0
