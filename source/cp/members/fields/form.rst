@@ -48,9 +48,6 @@ This is the internal or 'short name' for the field. This is a required field and
 .. note:: Some words are reserved and cannot be used. Please see Reserved Words for details.
 
 
-
-
-
 You may optionally add a description of the field, which can be useful if you need to provide instructions for the field’s use.
 
 Require field?
@@ -58,13 +55,23 @@ Require field?
 
 You may optionally add a description of the field, which can be useful if you need to provide instructions for the field’s use.
 
+Exclude from Anonymization Actions?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When enabled, the contents of the field will **not** be removed it the user requests to be 'forgotten'. Otherwise the custom field data will be deleted if the user is anonymized.
+
+Show in Registration
+~~~~~~~~~~~~~~~~~~~~
+
+When enabled, the field will be available in the public member registration form.
+
+Show in Profile
+~~~~~~~~~~~~~~~
+
+When enabled, the field will be available within the Member Profile areas (both the public one and the My Account page in the Control Panel).
 
 
 
-When set to “yes”, the field will be available in the public member registration form.
 
 
-
-
-When set to “yes”, the field will be available within the Member Profile areas (both the public one and the My Account page in the Control Panel).
 
