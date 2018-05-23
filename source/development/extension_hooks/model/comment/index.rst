@@ -168,3 +168,41 @@ after_comment_delete
   :rtype: NULL
 
   .. versionadded:: 3.1.0
+
+before_comment_bulk_delete
+--------------------------
+
+.. function:: before_comment_bulk_delete($delete_ids)
+
+  Called before a bulk of comment objects are deleted. If you need to do an
+  expensive operation when comments are deleted, it may be more efficient to
+  handle it in bulk here.
+
+  How it's called::
+
+    ee()->extensions->call('before_comment_bulk_delete', $delete_ids);
+
+  :param array $delete_ids: The primary key IDs of the models being deleted
+  :returns: void
+  :rtype: NULL
+
+  .. versionadded:: 4.3.0
+
+after_comment_bulk_delete
+-------------------------
+
+.. function:: after_comment_bulk_delete($delete_ids)
+
+  Called after a bulk of comment objects are deleted. If you need to do an
+  expensive operation when comments are deleted, it may be more efficient to
+  handle it in bulk here.
+
+  How it's called::
+
+    ee()->extensions->call('after_comment_bulk_delete', $delete_ids);
+
+  :param array $delete_ids: The primary key IDs of the models being deleted
+  :returns: void
+  :rtype: NULL
+
+  .. versionadded:: 4.3.0

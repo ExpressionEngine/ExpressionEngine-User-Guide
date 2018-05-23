@@ -168,3 +168,41 @@ after_member_delete
   :rtype: NULL
 
   .. versionadded:: 3.1.0
+
+before_member_bulk_delete
+-------------------------
+
+.. function:: before_member_bulk_delete($delete_ids)
+
+  Called before a bulk of member objects are deleted. If you need to do an
+  expensive operation when members are deleted, it may be more efficient to
+  handle it in bulk here.
+
+  How it's called::
+
+    ee()->extensions->call('before_member_bulk_delete', $delete_ids);
+
+  :param array $delete_ids: The primary key IDs of the models being deleted
+  :returns: void
+  :rtype: NULL
+
+  .. versionadded:: 4.3.0
+
+after_member_bulk_delete
+------------------------
+
+.. function:: after_member_bulk_delete($delete_ids)
+
+  Called after a bulk of member objects are deleted. If you need to do an
+  expensive operation when members are deleted, it may be more efficient to
+  handle it in bulk here.
+
+  How it's called::
+
+    ee()->extensions->call('after_member_bulk_delete', $delete_ids);
+
+  :param array $delete_ids: The primary key IDs of the models being deleted
+  :returns: void
+  :rtype: NULL
+
+  .. versionadded:: 4.3.0
