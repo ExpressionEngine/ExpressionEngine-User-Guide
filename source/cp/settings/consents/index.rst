@@ -46,7 +46,7 @@ This will take you to the :doc:`edit form <form>`. If you edit an existing conse
 Versions
 ~~~~~~~~
 
-- Opens a modal with all versions of the selected consent request and the date each version was created. Selecting a version will show the consent title, name and request description.
+Opens a modal with all versions of the selected consent request and the date each version was created. Selecting a version will show the consent title, name and request description.
 
 
 Application Consent Requests
@@ -62,5 +62,12 @@ This will take you to the :doc:`edit form <form>`. If you edit an existing conse
 Versions
 ~~~~~~~~
 
-- Opens a modal with all versions of the selected consent request and the date each version was created. Selecting a version will show the consent title, name and request description.
+Opens a modal with all versions of the selected consent request and the date each version was created. Selecting a version will show the consent title, name and request description.
+
+.. toctree::
+	:glob:
+	:hidden:
+	:titlesonly:
+
+	*
 
