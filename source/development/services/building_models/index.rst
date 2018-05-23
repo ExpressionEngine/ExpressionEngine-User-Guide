@@ -110,37 +110,50 @@ the events you want to subscribe to::
     echo 'about to save!';
   }
 
+There are some events that are emitted when handling things in bulk so that you
+may do things in efficient batches. These event handlers need to be implemented
+as static methods as your model class will not represent any one record::
+
+  public static function onAfterBulkDelete($delete_ids)
+  {
+    // Handle deleted items, do extra clean-up, etc.
+  }
+
 .. note:: Event names typically start with a lowercase letter, but the
   method name will have them as uppercase due to the ``on`` prefix.
 
 Default Events
 ~~~~~~~~~~~~~~
 
-+----------------+----------------------------------+-------------------------+
-| Event Name     | When                             | Parameters              |
-+================+==================================+=========================+
-| afterLoad      | After a model is fetched         | None                    |
-+----------------+----------------------------------+-------------------------+
-| beforeInsert   | Before saving a new model        | None                    |
-+----------------+----------------------------------+-------------------------+
-| afterInsert    | After saving a new model         | None                    |
-+----------------+----------------------------------+-------------------------+
-| beforeUpdate   | Before saving an existing model  | Array of changed values |
-+----------------+----------------------------------+-------------------------+
-| afterUpdate    | After saving an existing model   | Array of changed values |
-+----------------+----------------------------------+-------------------------+
-| beforeSave     | Before saving a model            | None                    |
-+----------------+----------------------------------+-------------------------+
-| afterSave      | After saving a model             | None                    |
-+----------------+----------------------------------+-------------------------+
-| beforeValidate | Before validating                | None                    |
-+----------------+----------------------------------+-------------------------+
-| afterValidate  | After validating                 | None                    |
-+----------------+----------------------------------+-------------------------+
-| beforeDelete   | Before deleting                  | None                    |
-+----------------+----------------------------------+-------------------------+
-| afterDelete    | After deleting                   | None                    |
-+----------------+----------------------------------+-------------------------+
++------------------+----------------------------------+----------------------------+
+| Event Name       | When                             | Parameters                 |
++==================+==================================+============================+
+| afterLoad        | After a model is fetched         | None                       |
++------------------+----------------------------------+----------------------------+
+| beforeInsert     | Before saving a new model        | None                       |
++------------------+----------------------------------+----------------------------+
+| afterInsert      | After saving a new model         | None                       |
++------------------+----------------------------------+----------------------------+
+| beforeUpdate     | Before saving an existing model  | Array of changed values    |
++------------------+----------------------------------+----------------------------+
+| afterUpdate      | After saving an existing model   | Array of changed values    |
++------------------+----------------------------------+----------------------------+
+| beforeSave       | Before saving a model            | None                       |
++------------------+----------------------------------+----------------------------+
+| afterSave        | After saving a model             | None                       |
++------------------+----------------------------------+----------------------------+
+| beforeValidate   | Before validating                | None                       |
++------------------+----------------------------------+----------------------------+
+| afterValidate    | After validating                 | None                       |
++------------------+----------------------------------+----------------------------+
+| beforeDelete     | Before deleting                  | None                       |
++------------------+----------------------------------+----------------------------+
+| afterDelete      | After deleting                   | None                       |
++------------------+----------------------------------+----------------------------+
+| beforeBulkDelete | Before bulk deleting             | Array of IDs being deleted |
++------------------+----------------------------------+----------------------------+
+| afterBulkDelete  | After deleting                   | Array of IDs deleted       |
++------------------+----------------------------------+----------------------------+
 
 Relationships
 -------------

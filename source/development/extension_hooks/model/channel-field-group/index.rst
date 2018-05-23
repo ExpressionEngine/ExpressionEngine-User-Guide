@@ -153,3 +153,41 @@ after_channel_field_group_delete
   :rtype: NULL
 
   .. versionadded:: 3.3.0
+
+before_channel_field_group_bulk_delete
+--------------------------------------
+
+.. function:: before_channel_field_group_bulk_delete($delete_ids)
+
+  Called before a bulk of channel field group objects are deleted. If you need to do an
+  expensive operation when channel field groups are deleted, it may be more efficient to
+  handle it in bulk here.
+
+  How it's called::
+
+    ee()->extensions->call('before_channel_field_group_bulk_delete', $delete_ids);
+
+  :param array $delete_ids: The primary key IDs of the models being deleted
+  :returns: void
+  :rtype: NULL
+
+  .. versionadded:: 4.3.0
+
+after_channel_field_group_bulk_delete
+-------------------------------------
+
+.. function:: after_channel_field_group_bulk_delete($delete_ids)
+
+  Called after a bulk of channel field group objects are deleted. If you need to do an
+  expensive operation when channel field groups are deleted, it may be more efficient to
+  handle it in bulk here.
+
+  How it's called::
+
+    ee()->extensions->call('after_channel_field_group_bulk_delete', $delete_ids);
+
+  :param array $delete_ids: The primary key IDs of the models being deleted
+  :returns: void
+  :rtype: NULL
+
+  .. versionadded:: 4.3.0
