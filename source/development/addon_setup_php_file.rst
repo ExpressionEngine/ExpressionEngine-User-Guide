@@ -270,7 +270,7 @@ cookies
     'advertising_tracker',
   ],
 
-If your add-on sets any custom cookies, you must register the name of the cookie here within the array(s) of the appropriate type. This way if the site requires consent for cookies, the user's preferences can be respected. If you set a cookie that is not registered with your add-on, it will still set, but a warning will be generated in the Developer Log detailing the non-compliant cookie.
+If your add-on sets any custom cookies, you must register the name of the cookie here within the array(s) of the appropriate type. This way if the site requires consent for cookies, the user's preferences can be respected. If you set a cookie that is not registered with your add-on, it will still set, but a warning will be generated in the Developer Log detailing the non-compliant cookie. The ExpressionEngine cookie prefix will be appended to cookie names automatically and should not be included in the registered name.
 
 +-----------------------+--------------------------------------------------------------------------------------+
 |          Type         |                                       Purpose                                        |
