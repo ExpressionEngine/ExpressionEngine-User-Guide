@@ -5,7 +5,7 @@ Consent Service
 
 Consent management is key to processing a user's personal data. The Consent service provides a simple API to manage requests for consent, and can be used to determine if a member has granted consent to a specific request.
 
-The Consent service can help an add-on that processes personal data be compliant with regulations such as the |gdpr|. All consent requests registered through the service will be included in the :doc:`consent manager </cp/settings/consents>`.  Consent for requests can be granted and withdrawn via a user's :doc:`control panel profile page </cp/members/profile/consents>` or via the :doc:`Consent module </add-ons/consent/index>` on the frontend.  All consent grants and withdrawals made through the profile and the module will automatically be :doc:`logged </cp/logs/consent>`.
+The Consent service can help an add-on that processes personal data be compliant with regulations such as the |gdpr|. All consent requests registered through the service will be included in the :doc:`consent manager </cp/settings/consents/index>`.  Consent for requests can be granted and withdrawn via a user's :doc:`control panel profile page </cp/members/profile/consents>` or via the :doc:`Consent module </add-ons/consent/index>` on the frontend.  All consent grants and withdrawals made through the profile and the module will automatically be :doc:`logged </cp/logs/consent>`.
 
 .. contents::
   :local:
@@ -15,7 +15,7 @@ The Consent service can help an add-on that processes personal data be compliant
 Creating Add-on Consent Requests
 --------------------------------
 
-Anyone can check if a member has granted consent for a specific request, and gather all members who have consented for one. But you may only **write** and **grant** consents that your add-on manages. To be able to make and manage your own consents, you need to add your consents to your :ref:`addon.setup.php` file<addon_consent_requests>`.
+Anyone can check if a member has granted consent for a specific request, and gather all members who have consented for one. But you may only **write** and **grant** consents that your add-on manages. To be able to make and manage your own consents, you need to add your consents to your :ref:`addon_consent_requests`.
 
 Managing Consent via API
 ------------------------

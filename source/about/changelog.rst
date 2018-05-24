@@ -5,6 +5,64 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.3.0
+-------------
+
+Release Date: Unreleased
+
+Let's call it the GDPR-inspired release. :doc:`/general/gdpr`
+
+- **GDPR** 🔏⚖️🇪🇺🏰
+
+  + **Consent!** 🚦
+
+    - NEW Consent module helps you gain, track, and act on user's consent for data processing. :doc:`Consent Module </add-ons/consent/index>`
+    - Simple tags let you build forms or links to let users easily manage their own consents, while maintaing 100% control over the design.
+    - Cookie consent is bundled with ExpressionEngine. Lets you require consent for setting non-necessary cookies, and even lets users selectively allow Functionality, Performance, and Targeting cookies. :doc:`Cookies in ExpressionEngine </general/cookies>`
+    - User consents are available to create powerful logic in your templates to selectively add content, scripts, etc. based on their preferences. :doc:`/templates/globals/consent`.
+    - Add-ons can easily add their own consents that the application can then leverage
+    - Site builders can create any consent request they can imagine, and use it in templates to easily add functionality while respecting user consent. :doc:`Consent Manager </cp/settings/consents/index>`
+    - Immutable logs of consent activity, and easy tools for Developers to log processing activities to said logs.
+    - Permissions are discrete enough to allow a GDPR "Data Protection Officer" to manage consents, view audit logs, and deal with GDPR related requests without making them a Super Admin.
+
+  + **Forget Me!** 🚮
+
+    * You can now delete member records. Just kidding you could always do that.
+    * You can now **anonymize** a member record, so you can comply with a user's request to be forgotten, while still retaining non-personally identifiable information that you need.
+    * You have control over what fields are anonymized (since we have no idea what the purpose or source of your custom fields may be)
+    * Developers have a new extension hook that lets their add-ons tie in and comply with an anonymization request.
+
+  + **Breach!** 🛳
+
+    * Added a :doc:`/cp/utilities/mass-notification-export` utility.
+    * Notifying data subjects of a breach must happen quickly. Hopefully this never happens to you, but this tool gives you a CSV of all of your members' names and email addresses to facilitate notification.
+    * The tool will also identify any obviously invalid email addresses, if any exist.
+    * The valid email CSV can then be used with a responsible email service designed for handling mass notifications, keeping the burden off of your servers and preventing blacklisting from the sudden email volume.
+    * Make sure you delete the CSV when you're done. 😘
+
+- **Other Stuff** 📦
+
+  + Removed the unused 'expiration' cookie from the Session lib.
+  + 🦗🦗🦗
+
+- **Bug Fixes** 💃🐛
+
+  + Fixed a bug (#23593) where deleting a member group with no group reassignment would orphan its members in the database.
+  + Fixed a bug in the spam module control panel when the author of an entry is no longer a member.
+  + Fixed a bug (#23589) where the last login date on the homepage was incorrect for your very first login.
+  + Fixed a bug (#23471) on the publisher where users without permission to assign entries to authors were presented with options in the author select.  Display issue only, as invalid selections were not saved.
+
+- **Developers** 💻
+
+  + New ``cookie.*`` keys in :doc:`/development/addon_setup_php_file` for registering your addon's cookies for consent compliance.
+  + New ``consent.requests`` key in :doc:`/development/addon_setup_php_file` for adding an add-on managed consent.
+  + Added a new :doc:`/development/services/consent`.
+  + Added :doc:`member_anonymize </development/extension_hooks/model/member/index>` hook to respond to anonymization requests.
+  + Added ``beforeBulkDelete`` and ``afterBulkDelete`` events and respective hooks to :doc:`models </development/services/building_models/index>`.
+  + Added an :doc:`/development/services/ipaddress`.
+  + Added ``throwAuthError()`` method to the output class to abstract Ajax return vs. HTML display of "You are not authorized to perform this action" errors.
+  + Deprecated legacy ``member_model::delete_member`` method and corresponding ``member_delete`` hook.
+
 
 Version 4.2.3
 -------------
