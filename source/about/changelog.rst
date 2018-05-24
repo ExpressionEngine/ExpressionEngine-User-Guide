@@ -8,7 +8,7 @@ ExpressionEngine v4 Change Log
 Version 4.3.0
 -------------
 
-Release Date: Unreleased
+Release Date: May 25, 2018
 
 Let's call it the GDPR-inspired release. :doc:`/general/gdpr`
 
@@ -42,11 +42,13 @@ Let's call it the GDPR-inspired release. :doc:`/general/gdpr`
 
 - **Other Stuff** 📦
 
+  + Added an 'author' filter and 'search in' setting to the entry manager page in the control panel.
   + Removed the unused 'expiration' cookie from the Session lib.
   + 🦗🦗🦗
 
 - **Bug Fixes** 💃🐛
 
+  + Fixed a bug where the search module could throw a MySQL error on sites with large numbers of custom fields.
   + Fixed a bug (#23593) where deleting a member group with no group reassignment would orphan its members in the database.
   + Fixed a bug in the spam module control panel when the author of an entry is no longer a member.
   + Fixed a bug (#23589) where the last login date on the homepage was incorrect for your very first login.
