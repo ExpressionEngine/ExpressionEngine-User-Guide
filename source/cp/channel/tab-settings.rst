@@ -75,10 +75,12 @@ RSS feed
 The URL where you can view the RSS feed for this channel. For example:
 https://example.com/channel/rss_2.0
 
+.. _channel_prefs_preview_url:
+
 Preview URL
 ~~~~~~~~~~~
 
-The template path, or route, to use for previewing entries in this Channel. You
+The template path, or route, to use for :ref:`entry_live_preview` in this Channel. You
 can use the variables ``{entry_id}`` and ``{url_title}`` which will be replaced
 with the entry's ID or URL Title when rendering your template.
 For example: ``blog/entry/{url_title}``

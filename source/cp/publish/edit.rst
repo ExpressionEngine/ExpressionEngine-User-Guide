@@ -66,7 +66,7 @@ The icons in the manage column perform actions on the entry in its row.
 View
 ^^^^
 
-When a Channel has a defined Preview URL or the Entry has a Page URI this action will be made available and will take you to the Live Preview of the entry.
+When a Channel has a defined Preview URL or the Entry has a Page URI this action will be made available and will take you to the :ref:`entry_live_preview`.
 
 Edit
 ^^^^
