@@ -5,6 +5,23 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.3.1
+-------------
+
+Release Date: June 1, 2018
+
+- Fixed a bug (#23460) where the 'allow comments' field on the channel entry form did not always default properly.
+- Fixed a bug (#23577) where member and category fields could be changed to incompatible data types.
+- Fixed a bug (#23613) with Grid field "exists" type conditionals (``{if content:foo}Do Something{/if}``) inside Fluid fields.
+- Fixed a bug (#23614) where add-on language would not default to English if the add-on did not provide the requested translation.
+- Fixed a bug (#23617) where the channel entry month and day values were saved incorrectly if the user's date format setting was 'dd/mm/yyyy'.
+- Fixed a bug (#23623) where RTE fields in custom publish form tabs would not respect their rows/height setting.
+- Fixed a bug where downloading the CSV mass notification export was empty.
+- Fixed a bug where searchable Grid data inside a Fluid field would sometimes copy another Grid's data.
+- Fixed a bug where the channel module search parameter did not search for '0'.
+- Fixed a bug where the field type selection for a new Grid column was improperly filtered after a validation error.
+- Fixed some incorrect langauge upon validation error when adding a new or editing a category.
+
 Version 4.3.0
 -------------
 
