@@ -247,8 +247,7 @@ revision is stored.
 Pages Tab
 ---------
 
-.. note:: This tab will only appear if you have the :doc:`Pages Module
-   </add-ons/pages/index>` installed.
+.. note:: This tab will only appear if you have the :doc:`Pages Module </add-ons/pages/index>` installed.
 
 Pages URI
 ~~~~~~~~~
@@ -277,3 +276,32 @@ Template
 
 Here you can choose which template to use to display this "page" entry
 when the above URI is requested.
+
+Form Buttons
+------------
+
+Save
+~~~~
+
+Saves the entry and refreshes the current page.
+
+Save & New
+~~~~~~~~~~
+
+Saves the entry and returns a new, blank create form for the same channel.
+
+Save & Close
+~~~~~~~~~~~~
+
+Saves the entry and returns the :doc:`/cp/publish/edit` page, filtered to the entry's channel.
+
+.. _entry_live_preview:
+
+Preview
+~~~~~~~
+
+The preview button is available if the :ref:`channel_prefs_preview_url` is set **or** the :doc:`Pages Module </add-ons/pages/index>` is installed and a Page URI and template have been set.
+
+The preview will open a split screen that allows a live preview of edits.  The template used to display the preview is based on the Page fields if set and the channel preview URL otherwise.  If neither is available, the Preview button will not display.
+
+
