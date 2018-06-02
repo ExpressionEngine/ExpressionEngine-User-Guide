@@ -293,7 +293,7 @@ Saves the entry and returns a new, blank create form for the same channel.
 Save & Close
 ~~~~~~~~~~~~
 
-Saves the entry and returns the :doc:`Entry Manager<cp/publish/edit>` page, filtered to the entry's channel.
+Saves the entry and returns the :doc:`/cp/publish/edit` page, filtered to the entry's channel.
 
 .. _entry_live_preview:
 
