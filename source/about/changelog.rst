@@ -8,7 +8,7 @@ ExpressionEngine v4 Change Log
 Version 4.3.1
 -------------
 
-Release Date: June 1, 2018
+Release Date: June 2, 2018
 
 - Updated Emoji shortcode database to spuport Unicode 10 / Emoji 5. In addition to fixing an number of codepoints resulting in better renderings across all operating systems, real names were added for flags, and new shortcode support was added for Emoji 5's new emoji:
 
