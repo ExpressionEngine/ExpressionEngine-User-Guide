@@ -10,6 +10,90 @@ Version 4.3.1
 
 Release Date: June 1, 2018
 
+- Updated Emoji shortcode database to spuport Unicode 10 / Emoji 5. In addition to fixing an number of codepoints resulting in better renderings across all operating systems, real names were added for flags, and new shortcode support was added for Emoji 5's new emoji:
+
+  + 🧑 ``:adult:``
+  + 🧔 ``:bearded_person:``
+  + 🧢 ``:billed_cap:``
+  + 🥣 ``:bowl_with_spoon:``
+  + 🧠 ``:brain:``
+  + 🤱 ``:breast-feeding:``
+  + 🥦 ``:broccoli:``
+  + 🥫 ``:canned_food:``
+  + 🧒 ``:child:``
+  + 🥢 ``:chopsticks:``
+  + 🧥 ``:coat:``
+  + 🥥 ``:coconut:``
+  + 🦗 ``:cricket:``
+  + 🤞 ``:crossed_fingers:``
+  + 🥤 ``:cup_with_straw:``
+  + 🥌 ``:curling_stone:``
+  + 🥩 ``:cut_of_meat:``
+  + 🥟 ``:dumpling:``
+  + 🧝 ``:elf:``
+  + 🤯 ``:exploding_head:``
+  + 🤮 ``:face_vomiting:``
+  + 🤭 ``:face_with_hand_over_mouth:``
+  + 🧐 ``:face_with_monocle:``
+  + 🤨 ``:face_with_raised_eyebrow:``
+  + 🤬 ``:face_with_symbols_on_mouth:``
+  + 🧚 ``:fairy:``
+  + 🧝‍♀️ ``:female_elf:``
+  + 🧚‍♀️ ``:female_fairy:``
+  + 🧞‍♀️ ``:female_genie:``
+  + 🧙‍♀️ ``:female_mage:``
+  + 🧛‍♀️ ``:female_vampire:``
+  + 🧟‍♀️ ``:female_zombie:``
+  + 🛸 ``:flying_saucer:``
+  + 🥠 ``:fortune_cookie:``
+  + 🧞 ``:genie:``
+  + 🦒 ``:giraffe_face:``
+  + 🧤 ``:gloves:``
+  + 🦔 ``:hedgehog:``
+  + 🤟 ``:i_love_you_hand_sign:``
+  + 🧙 ``:mage:``
+  + 🧝‍♂️ ``:male_elf:``
+  + 🧚‍♂️ ``:male_fairy:``
+  + 🧞‍♂️ ``:male_genie:``
+  + 🧙‍♂️ ``:male_mage:``
+  + 🧛‍♂️ ``:male_vampire:``
+  + 🧟‍♂️ ``:male_zombie:``
+  + 🧗‍♂ ``:man_climbing:``
+  + 🧘‍♂️ ``:man_in_lotus_position:``
+  + 🧖‍♂️ ``:man_in_steamy_room:``
+  + ⚕️ ``:medical_symbol:``
+  + 🧜‍♀️ ``:mermaid:``
+  + 🧜‍♂️ ``:merman:``
+  + 🧜 ``:merperson:``
+  + 🤶 ``:mrs_claus:``
+  + 🧓 ``:older_adult:``
+  + 🧡 ``:orange_heart:``
+  + 🤲 ``:palms_up_together:``
+  + 🧗 ``:person_climbing:``
+  + 🧘 ``:person_in_lotus_position:``
+  + 🧖 ``:person_in_steamy_room:``
+  + ⛹️ ``:person_with_ball:``
+  + 🧕 ``:person_with_headscarf:``
+  + 🥧 ``:pie:``
+  + 🥨 ``:pretzel:``
+  + 🥪 ``:sandwich:``
+  + 🦕 ``:sauropod:``
+  + 🧣 ``:scarf:``
+  + 🤫 ``:shushing_face:``
+  + 🛷 ``:sled:``
+  + 🧦 ``:socks:``
+  + 🤩 ``:star-struck:``
+  + 🦖 ``:t-rex:``
+  + 🥡 ``:takeout_box:``
+  + ✌️ ``:v:``
+  + 🧛 ``:vampire:``
+  + 🧗‍♀️ ``:woman_climbing:``
+  + 🧘‍♀️ ``:woman_in_lotus_position:``
+  + 🧖‍♀️ ``:woman_in_steamy_room:``
+  + 🤪 ``:zany_face:``
+  + 🦓 ``:zebra_face:``
+  + 🧟 ``:zombie:``
+
 - Fixed a bug (#23460) where the 'allow comments' field on the channel entry form did not always default properly.
 - Fixed a bug (#23577) where member and category fields could be changed to incompatible data types.
 - Fixed a bug (#23613) with Grid field "exists" type conditionals (``{if content:foo}Do Something{/if}``) inside Fluid fields.
