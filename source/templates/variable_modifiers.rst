@@ -259,7 +259,7 @@ URL encode the contents.
 ::
 
   <a href="{path='view/{location:url_encode}'}">{location}</a>
-  {!-- <a href="https://example.com/view/New%20Zealand}">{location}</a> --}
+  {!-- <a href="https://example.com/view/New%20Zealand}">New Zealand</a> --}
 
 :Parameters:
 
