@@ -13,7 +13,7 @@ Simple Example
 Controlling user uploads can be tricky. To help ease the process, the file picker
 service can be used to create simple file upload UIs::
 
-  $picker = ee('CP/FilePicker')->make();
+  $filepicker = ee('CP/FilePicker')->make();
 
 This creates a file picker object for all upload directories that the user has
 access to. It creates up the required modal html and injects the correct javascript
@@ -21,26 +21,28 @@ into the output of the page.
 
 Now we need to create a link to actually pop the file picker modal::
 
-  $link = $filepicker->getLink('Click me!')->render();
+  $link = $filepicker->getLink('Click me!');
 
 And we need to show this link to the user::
 
-  <php echo $link; ?>
+  <?=$link->render()?>
+
+.. tip:: If you aren't further manipulating the ``$link`` object, you can chain the methods to generate an HTML string in a one liner::
+
+   $link = $filepicker->getLink('Click me!')->render();
 
 That's all there is to it! Clicking this link will pop open a file picker and allow
 the user to choose an existing file or upload a new file. Of course, this is not
 helpful unless that choice is populated somewhere.
 
-Usually, the information we need is the file id that they chose. We can automatically
-populate this in a hidden form element. First we need to create that input, we'll
-put it near the link::
-
-  <input name="my-file" id="my-file" type="hidden">
-  <?php echo $link?>
-
-And then we need to tell the link what the form element id is::
+Usually, the information we need is the file id that they chose. We can automatically populate this in a hidden form element. First we need to tell the link what id we will use for this hidden input::
 
   $link->withValueTarget('my-file');
+
+Then we will add a hidden input, and we'll put it near the link for clarity::
+
+  <input name="my-file" id="my-file" type="hidden">
+  <?=$link->render()?>
 
 You can also control this behavior more carefully by using a :ref:`callback<filepicker_javascript_callback>`.
 
