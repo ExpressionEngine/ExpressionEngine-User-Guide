@@ -669,9 +669,13 @@ code will appear for your channel entries:
    list of entries.
 #. **both**: The navigation text and links will appear both above and
    below your list of entries.
+#. **hidden**: The navigation text and links will not appear, but your entries will be paginated. (This is useful for things like JSON.)
+#. **inline**: The navigation text and links will appear within the list of entries for each entry.
 
-If no parameter is specified, the navigation block will default to the
-"bottom" behavior.
+If no parameter is specified, the navigation block will default to the "bottom" behavior.
+
+If the pagination tag pair is not included, the entries returned will not respond to a page indicator in the URL.  In othat case you would need to set the parameter to `hidden` to allow the entries to reflect the pagination in the URL.
+
 
 paginate\_base=
 ---------------

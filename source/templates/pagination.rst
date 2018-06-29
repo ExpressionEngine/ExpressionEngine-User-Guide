@@ -76,6 +76,10 @@ And for the "next/previous" method::
 Parameters
 **********
 
+Pagination tag pair parameters should be used in the enclosing tag.  For example::
+
+  {exp:comment:entries limit="1" paginate="bottom"}
+
 paginate=
 =========
 
