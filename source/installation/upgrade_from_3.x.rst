@@ -3,7 +3,7 @@ Upgrading from ExpressionEngine 3
 
 This guide will help you update your site from ExpressionEngine 3 to the latest version of ExpressionEngine 4.
 
-.. seealso:: If you are upgrading from ExpressionEngine 2, first see `Upgrading from ExpressionEngine 2 <https://docs.expressionengine.com/v3/installation/upgrade_from_2.x.html>`__.
+.. seealso:: If you are upgrading from ExpressionEngine 2, you must first upgrade to ExpressionEngine 3 seperately.  Use the version 3 files and see `Upgrading from ExpressionEngine 2 <https://docs.expressionengine.com/v3/installation/upgrade_from_2.x.html>`__.
 
 1. Backup and Prepare
 ---------------------
