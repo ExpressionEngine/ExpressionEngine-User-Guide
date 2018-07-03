@@ -26,6 +26,7 @@ Release Date: July 5, 2018
 - Fixed a PHP error on the category custom field edit page (#23633).
 - Fixed a bug where the 'New Channel' button could show on the homepage to users without permission to access the channel manager, resulting in a permission error.
 - Fixed a bug in the 4.0.0 update where a MySQL error could occur due to duplicate statuses.
+- Fixed a bug (#23280) where some legacy member custom fields were missing a field format column, causing a PHP error.
 - Fixed a bug (#21785) where the Moblog control panel did not show the names of available image size options in the select field.
 - Fixed a bug (#23651) where file sync did not always resync custom image thumbnails when it should.
 - Fixed a bug (#23637) where ordering the channel entry tag by view count could cause a MySQL error in MySQL 5.7.
