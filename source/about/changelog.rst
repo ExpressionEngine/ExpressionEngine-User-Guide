@@ -5,6 +5,32 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.3.2
+-------------
+
+Release Date: July 5, 2018
+
+- The Translate utility now always shows English labels, shows missing language keys and highlights missing files from the pack you're editing.
+- Checkbox/Radio/Select/Multi-select fields inside a Grid can now be populated by a channel field.
+- Clicks on publish form buttons and tabs are disabled until JavaScript loads to prevent unintended actions.
+- Optimized relationship field parsing of parent tags.
+- Fixed a bug (#23627) where hiding the Pages tab confused Live Preview.
+- Fixed a bug where changing the formatting of a textarea Member Field in the CP didn't stick.
+- Fixed a bug where choosing Markdown as a default text format for a Member Field didn't work.
+- Fixed a bug where the wrong error messages was shown for a CSRF failure with Consent grant/withdrawl links.
+- Fixed a bug (#23655) where the utilities sidebar navigation could include a link to an page where access was denied.
+- Fixed a bug (#23545) in the channel entry module where the 404 result was not triggered when hooks reduced the returned entries to 0.
+- Fixed a bug (#23282) where the parent relationships category parameter didn't work properly with an inclusive stack (i.e., ``category="1&4"``).
+- Added validation to the avatar filename in the member import (#23291).
+- Fixed a bug (#23630) where including the ``{member_group}`` variable in the member module caused a PHP error.
+- Fixed a PHP error on the category custom field edit page (#23633).
+- Fixed a bug where the 'New Channel' button could show on the homepage to users without permission to access the channel manager, resulting in a permission error.
+- Fixed a bug in the 4.0.0 update where a MySQL error could occur due to duplicate statuses.
+- Fixed a bug (#21785) where the Moblog control panel did not show the names of available image size options in the select field.
+- Fixed a bug (#23651) where file sync did not always resync custom image thumbnails when it should.
+- Fixed a bug (#23637) where ordering the channel entry tag by view count could cause a MySQL error in MySQL 5.7.
+- Fixed a bug (#23654) in publish layouts where comment fields couldn't be moved if comments were not enabled when the layout was created.
+
 Version 4.3.1
 -------------
 
