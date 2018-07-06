@@ -498,45 +498,6 @@ member_id
 
 The user's Member ID.
 
-photo_height
-------------
-
-::
-
-  {photo_height}
-
-The height of the photo image associated with the user. Typically used as such::
-
-  {if photo}
-    <img src="{photo_url}" width="{photo_width}" height="{photo_height}" alt="{screen_name}'s photo">
-  {/if}
-
-photo_width
------------
-
-::
-
-  {photo_width}
-
-The width of the photo image associated with the user. Typically used as such::
-
-  {if photo}
-    <img src="{photo_url}" width="{photo_width}" height="{photo_height}" alt="{screen_name}'s photo">
-  {/if}
-
-photo_url
----------
-
-::
-
-  {photo_url}
-
-The URL to the photo image associated with the user. Typically used as such::
-
-  {if photo}
-    <img src="{photo_url}" width="{photo_width}" height="{photo_height}" alt="{screen_name}'s photo">
-  {/if}
-
 
 screen_name
 -----------
