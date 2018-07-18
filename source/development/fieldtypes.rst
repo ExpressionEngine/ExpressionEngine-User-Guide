@@ -925,3 +925,14 @@ are interacted with. If your fieldtype has other interactions that need to
 update the live preview, you can use the following JavaScript::
 
   $(document).trigger('entry:preview');
+
+Many fieldtypes do not need to be notified via JavaScript when the Live Preview
+modal opens and closes, many of your JavaScript bindings should continue to work.
+But certain libraries such as CKEditor may require some more attention in this
+area and for that you can listen to the ``entry:preview-open`` and
+``entry:preview-closed`` events on ``$(document)`` to do any extra processing
+you need::
+
+  $(document).on('entry:preview-open', function(event) {
+    // ...
+  });
