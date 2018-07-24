@@ -38,6 +38,8 @@ Why not save yourself the worry and hassle, enjoy a faster and more secure site 
 
   Thanks!
 
+.. note:: If you are using `MAMP<https://www.mamp.info/>`_, you will need to use PHP 7+ due to older PHP version compatibility issues.
+
 **********************************
 Control Panel Browser Requirements
 **********************************
