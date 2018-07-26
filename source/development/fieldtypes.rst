@@ -917,6 +917,8 @@ You may want to change your ``replace_tag()`` routine to format its data on the 
       return $data;
   }
 
+.. _live_preview_js_events:
+
 Live Preview Javascript
 =======================
 
