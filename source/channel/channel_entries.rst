@@ -1700,36 +1700,6 @@ Will render as::
 
 	https://example.com/channel/archives/235/
 
-photo\_url
-----------
-
-::
-
-	{photo_url}
-
-This variable supplies the URL to the member photo (if you have that
-option enabled and the member has uploaded their photo). It is intended
-for use in an image tag.
-
-photo\_image\_height
---------------------
-
-::
-
-	{photo_image_height}
-
-This variable supplies the height of the member photo. It is intended
-for use in an image tag.
-
-photo\_image\_width
--------------------
-
-::
-
-	{photo_image_width}
-
-This variable supplies the width of the member photo. It is intended for
-use in an image tag.
 
 profile\_path
 -------------
@@ -2186,19 +2156,6 @@ be used like so::
 
 	{if not_forum_topic} There is no forum discussion available. {/if}
 
-if photo
---------
-
-::
-
-	{if photo} content {/if}
-
-This special conditional lets you conditionally display content if the
-current entry's author has a photo image specified. ::
-
-	{if photo}
-		<img src="{photo_url}" width="{photo_image_width}" height="{photo_image_height}" alt="{author}'s photo">
-	{/if}
 
 if signature\_image
 -------------------

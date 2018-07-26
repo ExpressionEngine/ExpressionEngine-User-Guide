@@ -5,6 +5,25 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.3.3
+-------------
+
+Release Date: July 26, 2018
+
+- Colons (``:``) in filenames do not reliably work across all server platforms, so we are now filtering them out on upload.
+- Enabled the Profiler in Live Preview to enhance debugging.
+- Prevented image caching on the image editor pages.
+- Tightened security for entry author assignment.
+- Fixed a bug where avatars that exceeded the allowed filesize failed to upload with no error returned.
+- Fixed a bug where the preview button didn't always show up when a page URI was available.
+- Fixed a bug (#21996) where the channel settings saved the channel XML language in improper format.
+- Fixed a bug (#22787) where the system folder name was not dynamically generated in an error message.
+- Fixed a bug (#23659) where PHP errors could occur outputting grid fields with dashes in their short names.
+- Fixed a bug (#23661) where the author list for entry heir reassignment would not filter if there were many members.
+- Fixed a bug (#23662) where the allowed file size for avatars was hard coded on the member profile settings.
+- Fixed a bug (#23663) where the member profile tag didn't allow relative dates in the default date variables.
+- Developers: Added global :ref:`JavaScript events for live preview open and close <live_preview_js_events>`.
+
 Version 4.3.2
 -------------
 

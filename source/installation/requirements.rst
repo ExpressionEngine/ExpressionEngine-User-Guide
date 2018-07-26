@@ -56,6 +56,10 @@ ExpressionEngine's Control Panel targets compatibility with the final-release ve
 Details and Notes
 *****************
 
+.. contents::
+  :local:
+  :depth: 1
+
 You can safely ignore the rest of this page unless you are experiencing problems, or are a sysadmin setting up a custom environment. All of the following are readily available in most managed environments.
 
 PHP Extensions Required
@@ -119,4 +123,10 @@ URL Segment Support
 
 If the :ref:`Server Compatibility Wizard <server-wizard>` lists URL Segment Support as *Unsupported*, you will need to set your site's URLs to use :ref:`query strings <query-strings>`.
 
+MAMP
+----
 
+|MAMP|_ (external link) can be very convenient for local development, but it has some quirks. If you are using |MAMP|, you will need to use PHP 7+ due to outdated cURL and OpenSSL libraries that |MAMP| ships with its older versions of PHP.
+
+.. |MAMP| replace:: :abbr:`MAMP (My Apache - MySQL - PHP)`
+.. _MAMP: https://www.mamp.info/
