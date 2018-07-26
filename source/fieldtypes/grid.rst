@@ -3,6 +3,10 @@ Grid
 
 The Grid field in ExpressionEngine provides a way to group fieldtypes in repeatable rows. This is useful for when you need to group a subset of data in your channel entry form that may or may not have a varying number of rows. You can select a minimum and a maximum amount of rows to allow data entry for, or it can be virtually infinite.
 
+.. contents::
+   :local:
+   :depth: 1
+
 Field Options
 -------------
 
@@ -380,3 +384,122 @@ field criteria. The ``row_id`` may be populated via a segment variable.
 Given a row ID, this tag pair will provide access to the previous row in
 the field criteria. The ``row_id`` may be populated via a segment
 variable.
+
+Examples
+--------
+
+.. contents::
+  :local:
+  :depth: 1
+
+
+Checkbox and Multi Select Fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For checkbox and multiselect single variables::
+
+  {grid_field}
+    {grid_field:my_checkbox}
+  {/grid_field}
+
+This would output a comma-separated list of the checkbox labels.
+
+For checkbox and multiselect variable pairs::
+
+ {grid_field}
+   {grid_field:my_checkbox}
+      Value: {item}<br>
+      Value: {item:value}<br>
+      Label: {item:label}<br>
+   {/grid_field:my_checkbox}
+ {/grid_field}
+
+
+.. _grid-field-date:
+
+Date Fields
+~~~~~~~~~~~
+
+::
+
+  {grid_field}
+    {grid_field:my_date format="%F %d %Y"}
+  {/grid_field}
+
+.. _grid-field-email:
+
+Email Address Fields
+~~~~~~~~~~~~~~~~~~~~
+
+::
+
+  {grid_field}
+    {if grid_field:my_email}
+      {grid_field:my_email:mailto title="Email about their dog" subject="Question about your dog" encode="no"}
+    {/if}
+  {/grid_field}
+
+.. _grid-field-file:
+
+File Fields
+~~~~~~~~~~~
+
+A file field variable pair::
+
+  {grid_field}
+    {grid_field:my_image}
+        Extension: {extension}
+        Upload date: {upload_date format="%Y %m %d"}
+        URL: {url}
+        Custom med thumbnail url: {url:med}
+    {/grid_field:my_image}
+  {/grid_field}
+
+Single variable file field::
+
+  {grid_field}
+    URL: {grid_field:my_image}
+  {/grid_field}
+
+
+.. _grid-field-relationship:
+
+Relationship Fields
+~~~~~~~~~~~~~~~~~~~
+
+::
+
+  {grid_field}
+    {grid_field:my_relationship status="open"}
+        {if grid_field:my_relationship:count == 1}<h3>Relationships ({grid_field:my_relationship:total_results})</h3>{/if}
+
+        Related entry title: {grid_field:my_relationship:title}
+        Related entry's file field, med custom image size: {grid_field:my_relationship:my_file:med wrap="image"}
+
+    {/grid_field:my_relationship}
+  {/grid_field}
+
+.. _grid-field-toggle:
+
+Toggle Fields
+~~~~~~~~~~~~~
+
+::
+
+  {grid_field}
+    {if grid_field:my_toggle}YES there is a toggle value!{/if}
+  {/grid_field}
+
+
+.. _grid-field-url:
+
+URL Fields
+~~~~~~~~~~
+
+::
+
+  {grid_field}
+    <a href="{grid_field:my_url}">Your Link</a>
+  {/grid_field}
+
+
