@@ -21,7 +21,7 @@ Working either locally with your backed up files, or on the server (**not recomm
 
 #. Copy :file:`admin.php` to :file:`admin.php`
 
-#. Copy :file:`system/index.php` to :file:`system/index.php`
+#. Copy :file:`index.php` to :file:`index.php`
 
 #. Copy :file:`system/ee/` to :file:`system/ee/`
 
