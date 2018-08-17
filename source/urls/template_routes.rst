@@ -245,6 +245,8 @@ Neither setting would allow this route to match::
 
   /not_name
 
+.. note:: If you use a static variable in your route, all segments will be required regardless of this setting.  To allow missing variables, use regex matching in place of static variables.  So ``/add/{url_title:alpha_dash}`` should be ``/{seg1:regex[(add)]}/{url_title:alpha_dash}``.
+
 
 Segment variables and Paths
 ---------------------------

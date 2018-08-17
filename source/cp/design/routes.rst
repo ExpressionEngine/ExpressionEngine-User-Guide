@@ -53,8 +53,15 @@ For more info see: :doc:`/urls/template_routes`
 Require all Segments?
 ~~~~~~~~~~~~~~~~~~~~~
 
-If set to "yes" all segments defined in your Template Route must
-be contained in a URL in order for it to match.
+If set to "yes" all segments defined in your Template Route must be contained in a URL in order for it to match.
+
+If set to "no" and static variables are used in the route, all variables will still be required in order for the URL to match the route. For example, ``/add/{url_title:alpha_dash}`` will not match the URL /add. It requires a third segment to match.
+
+In order to use static variables and not require all variables, use a regular expression match in place of a static variable. In the example above, replace the static variable ``add`` with a regular expression match.  The resulting route would look like:
+
+.. code-block:: none
+
+	/{seg1:regex[(add)]}/{url_title:alpha_dash}
 
 Create New
 ~~~~~~~~~~

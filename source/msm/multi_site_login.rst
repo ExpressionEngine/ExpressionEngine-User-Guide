@@ -15,6 +15,10 @@ However, cookies for one domain cannot be set from a different domain. If your s
 
 $config['multi_login_sites'] = "http://www.example.com/|http://www.sitetwo.com/|http://www.sitethree.com/";
 
+If you use an :ref:`index file <general-config-index-name-label>` such as ``index.php`` in your URL, you should include it in the URL::
+
+$config['multi_login_sites'] = "http://www.example.com/index.php|http://www.sitetwo.com/index.php";
+
 Now when a user logs into the frontend of one of the sites, the login routine will invisibly loop through each URL in the configuration, redirecting to that site, setting the appropriate cookies, and then cycling through to the next site.  Once the user has been logged into all of the sites, they'll end up back on the starting URL.  The login redirects will be virtually unnoticable.
 
 
