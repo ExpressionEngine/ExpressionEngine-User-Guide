@@ -16,7 +16,7 @@ Release Date: August 17, 2018
 - Fixed a bug (#23695) where deleting a member group and re-assigning its members would re-assign every member in the system.
 - Fixed a bug (#23638) where the categories field might not load when uploading a file.
 - Fixed a bug (#23692) where having the same Grid field inside and outside of a Fluid field may load the wrong data on the publish form.
-- Fixed a bug where the "expiration" cookie wasn't resgistered.
+- Fixed a bug where the "expiration" cookie wasn't registered.
 - Fixed a bug where non-super admins were required to be in the author list in order to publish an entry.
 
 Version 4.3.3
