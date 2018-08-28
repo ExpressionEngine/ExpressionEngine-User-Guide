@@ -378,10 +378,8 @@ the variable belongs to::
 Grid Compatibility
 ^^^^^^^^^^^^^^^^^^
 
-The Relationships field can be used as a :doc:`Grid field<grid>` column. Currently it
-is not possible to get the parents of a relationship field that is inside
-of a Grid field. You can also not use Relationships inside of a Grid field
-that does not store Channel data.
+The Relationships field can be used as a :doc:`Grid field<grid>` column. You
+cannot use Relationships inside of a Grid field that does not store Channel data.
 
 Showing the contents of a grid field in a related child, sibling or parent entry is fully supported.
 
@@ -973,4 +971,3 @@ the Seasons channel through the ``games`` field, except for the current one.
 The current entry in the Games channel that the ``channel:entries`` tag has
 pulled up must be related to the channel through the field given to the
 siblings tag.  Otherwise it won't work.
-
