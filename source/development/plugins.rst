@@ -23,14 +23,13 @@ instantiate the "channel" class.
 
 The third segment indicates the 'function' from within a particular
 family of tags: ``{exp:channel:entries}``. This example would tell
-ExpressionEngine you want to use the "entries" function in the "channel"
-class. To be more precise, the third segment is the "method" or
-"function" name within a given class.
+ExpressionEngine you want to use the "entries" method in the "channel"
+class.
 
 A tag, therefore, mirrors an object oriented approach:
-``Class->function``::
+``Class->method``::
 
-  {exp:class_name:function_name}
+  {exp:class_name:method_name}
 
 .. note:: Tags are not always required to have three segments. If your
   plugin is very simple you might opt to only use the class
@@ -62,7 +61,7 @@ Anatomy of a Plugin
 
 A plugin consists of a class and at least one function::
 
-  <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+  <?php
 
   class Plugin_name {
 
@@ -71,16 +70,11 @@ A plugin consists of a class and at least one function::
 
       }
   }
+  // END Class
 
-  /* End of file pi.plugin_name.php */
-  /* Location: ./system/user/addons/plugin_name/pi.plugin_name.php */
+  // EOF
 
-.. note:: Always deny direct access to your script by checking for the
-  ``BASEPATH`` constant.
-
-In addition, you should add some information that is displayed in the
-Plugin Manager section of the Control Panel. This is covered in the
-`Control Panel Information`_ section.
+Your plugin's name and other details are provided by your :doc:`addon.setup.php file <addon_setup_php_file>`.
 
 Creating a Plugin
 -----------------
@@ -123,6 +117,19 @@ In the new file you've created add this class and constructor::
   exception to the rule. Tag names and file names are always
   lowercase, while the class name is capitalized.
 
+And we'll create our ``addon.setup.php`` file to tell ExpressionEngine a bit about our plugin, which will also allow it to be installed in the Add-on Manager::
+
+  <?php
+  return [
+    'author'         => 'Developer James',
+    'author_url'     => 'https://example.com/',
+    'name'           => 'Hello World',
+    'description'    => 'Outputs a simple "Hello World" message to test plugins!',
+    'version'        => '1.0.0',
+    'namespace'      => 'DeveloperJames\HelloWorld',
+    'settings_exist' => FALSE,
+  ];
+
 Returning a Value
 ~~~~~~~~~~~~~~~~~
 
@@ -133,56 +140,56 @@ or two.
 Two Segments
 ~~~~~~~~~~~~
 
-The above tag only has two segments therefore it only utilizes a
-constructor. Since constructors cannot return a value directly, we will
-assign it to a variable called: ``$return_data``::
+The above tag only provides the plugin class, and no method, so it will use a
+constructor. Since constructors in PHP do not have return values, we will
+assign it to a public class property called: ``$return_data``::
 
   class Hello_world
   {
-      public $return_data = "";
+      public $return_data = '';
 
       public function __construct()
       {
-          $this->return_data = "Hello World";
+          $this->return_data = 'Hello World';
       }
   }
 
 Three Segments
 ~~~~~~~~~~~~~~
 
-With tags that utilize three segments you can return directly. Consider
+With tags that use three segments you can return directly since a class method is being called. Consider
 a tag with this syntax::
 
   {exp:hello_world:bold}
 
-The third segment represents a function called bold, which can return a
+The third segment represents a method called ``bold()``, which can return a
 value directly::
 
   class Hello_world
   {
       public function bold()
       {
-          return "<b>Hello World</b>";
+          return '<b>Hello World</b>';
       }
   }
 
-You could create a class with several functions this way::
+You could create a class with several methods this way::
 
   class Hello_world
   {
       public function normal()
       {
-          return "Hello World";
+          return 'Hello World';
       }
 
       public function bold()
       {
-          return "<b>Hello World</b>";
+          return '<b>Hello World</b>';
       }
 
       public function italic()
       {
-          return "<i>Hello World</i>";
+          return '<i>Hello World</i>';
       }
   }
 
@@ -192,10 +199,10 @@ Each function would be accessible using these tags::
   {exp:hello_world:bold}
   {exp:hello_world:italic}
 
-Processing Data Within Tag Pairs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Processing Content Within Tag Pairs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Often you will want to process data contained between a pair of tags.
+Often you will want to process content contained between a pair of tags.
 Let's create a simple tag that makes text bold to illustrate how this is
 done. Our example plugin will have this syntax::
 
@@ -215,7 +222,7 @@ In following our naming rules, we will create a plugin file named:
 
   class Bold
   {
-      public $return_data = "";
+      public $return_data = '';
 
       public function __construct()
       {
@@ -223,7 +230,7 @@ In following our naming rules, we will create a plugin file named:
       }
   }
 
-So how do we fetch the data contained within the tag pairs? Using the
+So how do we fetch the content contained within the tag pairs? Using the
 following variable::
 
   ee()->TMPL->tagdata;
@@ -232,7 +239,7 @@ Here is how the variable is used::
 
   class Bold
   {
-      public $return_data = "";
+      public $return_data = '';
 
       public function __construct()
       {
@@ -245,11 +252,11 @@ it, so let's make it bold::
 
   class Bold
   {
-      public $return_data = "";
+      public $return_data = '';
 
       public function __construct()
       {
-          $this->return_data = "<b>".ee()->TMPL->tagdata."</b>";
+          $this->return_data = '<b>'.ee()->TMPL->tagdata.'</b>';
       }
   }
 
@@ -279,11 +286,12 @@ Create a plugin file named pi.format.php and in it put this::
 
   class Format
   {
-      public $return_data = "";
+      public $return_data = '';
 
       public function __construct()
       {
           $parameter = ee()->TMPL->fetch_param('type');
+          $this->return_data = ee()->TMPL->tagdata;
 
           switch ($parameter)
           {
@@ -317,7 +325,7 @@ directly as a formatting choice::
 
   class Bold
   {
-      public $return_data = "";
+      public $return_data = '';
 
       function __construct($str = NULL)
       {
@@ -336,19 +344,13 @@ run your channel entries through it.
 Database Access
 ---------------
 
-ExpressionEngine makes it easy to access the database using the provided
-database class. To run a query you will use :ellislab:`active record
-</codeigniter/user-guide/database/active_record.html>` syntax::
+ExpressionEngine makes it easy to access your database using the :doc:`/development/services/model`. You can also execute SQL statements by using the legacy :doc:`/development/legacy/database/index`::
 
-  $query = $this->db->get('mytable');
-  // Produces: SELECT * FROM mytable
+  $member = ee('Model')->get('Member')->first();
 
-To show the result of a query you will generally use the
-``result_array`` array. This is an associative array provided by the
-database class that contains the query result. Let's use a real example
-to show how this is used.
+Let's use a real example to show how you might use this.
 
-We will run a query that shows a list of members. For this we will
+We will use the Member model to show a list of members. For this we will
 create a plugin called ``pi.memberlist.php``. The tag syntax will be
 this::
 
@@ -358,166 +360,20 @@ Here is the class syntax::
 
   class Memberlist
   {
-      public $return_data = "";
+      public $return_data = '';
 
       public function __construct()
       {
-          $query = ee()->db->select("screen_name")
-                  ->get('members', 15);
+          $members = ee('Model')->get('Member')->all();
 
-          foreach($query->result() as $row)
+          foreach($members as $member)
           {
-              $this->return_data .= $row->screen_name."<br>";
+              $this->return_data .= $member->screen_name."<br>";
           }
       }
   }
 
-Here are some additional variables available in the database class:
+Where do you go from here?
+--------------------------
 
-$query->row()
-~~~~~~~~~~~~~
-
-If your query only returns one row you can use this variable like this::
-
-  $query = ee()->db->select('screen_name');
-      ->get('members', 1);
-
-  return $query->row('screen_name');
-
-$query->num_rows()
-~~~~~~~~~~~~~~~~~~
-
-The number of rows returned by the query. This is a handy variable that
-can be used like this::
-
-  $query = ee()->db->select('screen_name')
-      ->where('url !=', '')
-      ->get('members');
-
-  if ($query->num_rows() == 0)
-  {
-      $this->return_data = "Sorry, no results";
-  }
-  else
-  {
-      $this->return_data .= sprintf(
-          'Total Results: %s<br>',
-          $query->num_rows()
-      );
-
-      foreach($query->result() as $row)
-      {
-          $this->return_data .= $row->screen_name."<br>";
-      }
-  }
-
-Control Panel Information
--------------------------
-
-In addition to the class and function, you should also add some
-information that will display in the Plugin Manager section of the
-Control Panel. There are two parts to this information.
-
-Plugin Information
-~~~~~~~~~~~~~~~~~~
-
-Your plugin can describe itself in a little more detail by using a series of
-public static properties::
-
-  public static $name         = 'Member List';
-  public static $version      = '1.0';
-  public static $author       = 'Jane Doe';
-  public static $author_url   = 'https://example.com/';
-  public static $description  = 'Returns a list of site members';
-  public static $typography   = FALSE;
-
-The information is as follows:
-
-- ``$name``: The display name of the Plugin
-- ``$version``: The Plugin version number
-- ``$author``: The name of the Plugin author
-- ``$author_url``: The URL associated with the author (or a URL to
-  a page about the Plugin)
-- ``$description``: A short description of the purpose of the Plugin
-- ``$typography``: A boolean indicating if this plugin is used for text conversion
-
-usage() function
-~~~~~~~~~~~~~~~~
-
-The "usage" function is designed to easily allow you to give a
-description of how to use your new Plugin, including giving example
-ExpressionEngine code.
-
-::
-
-  /**
-   * Memberlist Class
-   *
-   * @package     ExpressionEngine
-   * @category        Plugin
-   * @author      Jane Doe
-   * @copyright       Copyright (c) 2010, Jane Doe
-   * @link        https://example.com/memberlist/
-   */
-  class Memberlist
-  {
-    public static $name         = 'Member List';
-    public static $version      = '1.0';
-    public static $author       = 'Jane Doe';
-    public static $author_url   = 'https://example.com/';
-    public static $description  = 'Returns a list of site members';
-    public static $typography   = FALSE;
-
-    public $return_data = "";
-
-    // --------------------------------------------------------------------
-
-    /**
-     * Memberlist
-     *
-     * This function returns a list of members
-     *
-     * @access  public
-     * @return  string
-     */
-    public function __construct()
-    {
-      $query = ee()->db->select('screen_name')
-        ->get('members', 15);
-
-      foreach($query->result_array() as $row)
-      {
-        $this->return_data .= $row['screen_name'];
-        $this->return_data .= "<br />";
-      }
-    }
-
-    // --------------------------------------------------------------------
-
-    /**
-     * Usage
-     *
-     * This function describes how the plugin is used.
-     *
-     * @access  public
-     * @return  string
-     */
-    public static function usage()
-    {
-      ob_start();  ?>
-
-    The Memberlist Plugin simply outputs a
-    list of 15 members of your site.
-
-    {exp:memberlist}
-
-    This is an incredibly simple Plugin.
-
-
-    <?php
-        $buffer = ob_get_contents();
-        ob_end_clean();
-
-        return $buffer;
-    }
-  }
+Now that you understand the anatomy of a plugin, you can do whatever task you need. Your plugin can even have its own variables. For more information about this, and manipulating the tagdata in your plugin, check out the :doc:`/development/legacy/libraries/template`.
