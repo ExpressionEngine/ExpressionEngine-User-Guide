@@ -1,5 +1,5 @@
 {
-    "tag": "3.5.15",
+    "tag": "3.5.17",
 
     "repositories": {
         "app": "git@github.com:EllisLab/ExpressionEngine",
