@@ -5,6 +5,13 @@ ExpressionEngine 3.x Change Log
    :local:
    :depth: 1
 
+Version 3.5.17
+--------------
+
+Release Date: September 13, 2018
+
+- Fixed a bug (#23583) where accessing the front-end may intermittently show a PHP error.
+
 Version 3.5.16
 --------------
 
