@@ -10,6 +10,7 @@ Version 4.3.5
 
 Release Date: September 28, 2018
 
+- **Security:** Fixed potential reflected XSS issues.
 - Added some validation to the channel preview URL setting.
 - All redirects to external sites will now display a redirect warning
 - Encrypting the return GET parameter to prevent tampering
@@ -27,8 +28,6 @@ Release Date: September 28, 2018
 - Fixed a bug where some conditionals for Fluid fields would generate errors
 - Fixed a bug where the language for insecure passwords were not consistenly being pulled from language files.
 - Fixed a bug where unicode characters in language translations could cause system response messages to not be shown.
-- Fixed a potential XSS vulnerability in the Category Manager's display
-- Fixed a potential XSS vulnerability in the License & Registration Settings
 
 Version 4.3.4
 -------------
