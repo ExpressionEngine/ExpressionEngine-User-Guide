@@ -5,6 +5,31 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.3.5
+-------------
+
+Release Date: September 28, 2018
+
+- Added some validation to the channel preview URL setting.
+- All redirects to external sites will now display a redirect warning
+- Encrypting the return GET parameter to prevent tampering
+- Further hardened file upload security against remote code execution.
+- Improved performance of Channel Entries tags that reference multiple channels.
+- Improved performance of loading a publish form containing many Relationship fields, Channels, and nested categories.
+- Improved performance of the File Manager when there is a large number of Member Groups
+- Improved security and behavior related to attempted tampering of license key files.
+- The ``{parents}`` tag now includes results from Grid columns and Fluid fields
+- Fixed a PHP warning in PHP 7.1+ when using unformatted Date variables from a Grid field in conditionals.
+- Fixed a bug (#23640) where filtering entries by date in the control panel would not work with a dd/mm/yyyy date format.
+- Fixed a bug (#23719) where deleted templates were not removed from existing 'No Access' template settings.
+- Fixed a bug (#23728) where closed or expired entries could not be previewed.
+- Fixed a bug (#23735) where filters in the CP could not use upper case letters in their display
+- Fixed a bug where some conditionals for Fluid fields would generate errors
+- Fixed a bug where the language for insecure passwords were not consistenly being pulled from language files.
+- Fixed a bug where unicode characters in language translations could cause system response messages to not be shown.
+- Fixed a potential XSS vulnerability in the Category Manager's display
+- Fixed a potential XSS vulnerability in the License & Registration Settings
+
 Version 4.3.4
 -------------
 
