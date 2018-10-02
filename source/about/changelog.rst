@@ -5,6 +5,13 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.3.6
+-------------
+
+Release Date: October 2, 2018
+
+- Fixed a bug (#23742; introduced in 4.3.5) where some ``{parents}`` tags went unparsed.
+
 Version 4.3.5
 -------------
 
