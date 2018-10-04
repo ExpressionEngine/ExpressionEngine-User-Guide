@@ -228,7 +228,7 @@ This parameter determines whether or not categories that contain no
 entries for the specific channel are displayed. If you set the parameter
 to "no" then categories which do not contain entries will not be
 included in the list. If you want only categories that have no entries
-assigned from **any** channels, use the `restict\_channel
+assigned from **any** channels, use the `restrict\_channel
 parameter <#par_restrict_channel>`_ in conjunction with show\_empty
 
 By default, categories with no entries **will** be included.
