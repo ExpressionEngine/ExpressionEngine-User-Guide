@@ -6,6 +6,10 @@ A Fluid field is a collection of fields.  A Fluid field can contain any native f
 
 Fluid fields give the author control over the structure of their content, while ensuring the final output uses the correct design elements.  All that is done without the author worrying about markup or html.  They simply add content to the fields, and template can wrap each field in the proper markup.
 
+.. contents::
+   :local:
+   :depth: 1
+
 *************
 Field Options
 *************
@@ -32,6 +36,10 @@ The frontend will output the various field contents in the order specified in th
 *************
 Template Tags
 *************
+
+.. contents::
+   :local:
+   :depth: 1
 
 Fluid field content is ouput using variable pairs.  An outer variable pair using the Fluid field's shortname wraps all content.  Within that wrapper variable pair, each field can be output using a prefixed variable pair and the ``{content}`` variable.  Within the prefixed variable pair, the ``{content}`` variable is used in place of the field's shortname.
 
