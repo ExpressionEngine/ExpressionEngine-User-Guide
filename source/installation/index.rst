@@ -14,7 +14,7 @@ Updates & Upgrades
 ******************
 
 - :doc:`update`
-- :doc:`upgrade_from_3.x`
+- :doc:`upgrade_from_3.x_4.x`
 - :doc:`upgrade_from_core`
 - :doc:`version_notes`
 
@@ -26,7 +26,7 @@ Updates & Upgrades
   installation
   best_practices
   update
-  upgrade_from_3.x
+  upgrade_from_3.x_4.x
   upgrade_from_core
   troubleshooting
   version_notes

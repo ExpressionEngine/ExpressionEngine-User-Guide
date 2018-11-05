@@ -55,5 +55,4 @@ Table of Contents
   domainsetup
   Multi Site Login <multi_site_login>
   code
-  additional_sites
   Change Log <msm_changelog>

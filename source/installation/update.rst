@@ -3,7 +3,7 @@ Updating ExpressionEngine 5
 
 This guide will help you update your site from a previous version of ExpressionEngine 5 to the latest version of ExpressionEngine 5.
 
-.. seealso:: If you are upgrading from ExpressionEngine 4 to ExpressionEngine 5, see :doc:`/installation/upgrade_from_4.x`.
+.. seealso:: If you are upgrading from ExpressionEngine 4 to ExpressionEngine 5, see :doc:`/installation/upgrade_from_3.x_4.x`.
 
 One-click Updating
 ------------------
