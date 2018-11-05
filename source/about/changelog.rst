@@ -22,12 +22,14 @@ Release Date: October 6, 2018
 - Fixed a bug where in rare circumstances, a relationship tag was left unparsed.
 - Fixed a bug where a channel entries tag with a categories parameter could generate errors when the tag returned no entries.
 
-- Developers:
-  - Removed unused Javascript plugins:
-    - jscolor.js
-    - jcrop.js
-    - overlay.js
-    - toolbox.expose.js
+
+- **Developers**
+
+  + Removed unused Javascript plugins:
+     - jscolor.js
+     - jcrop.js
+     - overlay.js
+     - toolbox.expose.js
 
 
 
