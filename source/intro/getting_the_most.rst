@@ -32,20 +32,4 @@ Social Media
 
 On Twitter, you can reach us ``@ellislab`` and the broad community of users with the ``#eecms`` hashtag. A lot of ExpressionEngine-related news and tips are shared via ``#eecms``, so add it to your watch list. For example the `Tweetdeck <https://tweetdeck.twitter.com>`_ and `Tweetbot <http://tapbots.com>`_ apps can track that hashtag for you.
 
-News
-====
-
-Fully independent, `EE-Hub <https://ee-hub.com>`_ is what it says on the tin. Stay abreast of what's happening with curated news from across the entire ExpressionEngine community.
-
-*******************
-Additional Training
-*******************
-
-ExpressionEngine is a super flexible platform that allows a designer or developer to customize the CMS to a great degree. Just like there are no two people who write HTML, CSS, or JavaScript the same way, no two people build with ExpressionEngine 100% identically. There are some great resources you can find for additional training; pick the one that suits your style and dive in!
-
-- `The Guide to ExpressionEngine Development <http://eeguidebook.com/>`_
-- `Train-ee <http://www.train-ee.com/>`_
-- `Creat-ee <http://www.creat-ee.com/>`_
-- `Mijingo <http://mijingo.com/>`_
-
 Go forth and conquer!
