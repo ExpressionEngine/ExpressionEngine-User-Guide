@@ -20,7 +20,7 @@ On the right side of the footer, there are options to:
 License Information
 -------------------
 
-At the bottom right of the footer is the licensing information for your install of ExpressionEngine, or an option to set a valid license key. The information provided here is helpful for easy reference to your own license records, and in case you need to contact the license holder and/or transfer the license.
+A license key is not required to use ExpressionEngine, but if you have a legacy license key the bottom right of the footer will display the licensing information for your install of ExpressionEngine.
 
 .. contents::
   :local:

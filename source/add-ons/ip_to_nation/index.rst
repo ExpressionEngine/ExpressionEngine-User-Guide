@@ -18,9 +18,6 @@ address is associated with. You can do two things with this information:
 #. **Show a flag icon** |image0| within your comments or entries to
    indicate the country of the person who submitted the entry.
 
-.. note:: The IP to Nation Module is available only with a
-   `purchased <https://store.ellislab.com/>`_ ExpressionEngine license.
-
 Database Updates
 ----------------
 

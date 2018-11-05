@@ -27,7 +27,7 @@ Working either locally with your backed up files, or on the server (**not recomm
 
 #. Copy :file:`themes/ee/` to :file:`themes/ee/`
 
-#. Copy :file:`system/user/config/license.key` to :file:`system/user/config/license.key`
+#. Copy :file:`system/user/config/license.key` to :file:`system/user/config/license.key`. If there is no :file:`license.key`, skip this step.
 
 .. note:: If you’ve moved your system directory, make sure to change both :file:`index.php` and :file:`admin.php` to point to the correct directory. And don't forget to update **all** :file:`admin.php` files if you're running your control panel from multiple Sites!
 

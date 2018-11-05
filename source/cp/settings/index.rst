@@ -16,7 +16,6 @@ Contents
 
 - :doc:`general`
 
-  - :doc:`license`
   - :doc:`urls`
   - :doc:`email`
   - :doc:`debug-output`

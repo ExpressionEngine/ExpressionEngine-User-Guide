@@ -48,7 +48,6 @@ Developer Tools
 
 - :doc:`settings/general`
 
-  - :doc:`settings/license`
   - :doc:`settings/urls`
   - :doc:`settings/email`
   - :doc:`settings/debug-output`

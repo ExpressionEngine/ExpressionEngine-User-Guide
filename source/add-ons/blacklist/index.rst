@@ -15,8 +15,6 @@ referrers, and other posted information. Used in combination with other
 :doc:`Spam Prevention Features </security/spam_protection>`, the
 occurrence of spam on your site should be rare.
 
-.. note:: The Blacklist/Whitelist Module is available only with a
-   `purchased <https://store.ellislab.com/>`_ ExpressionEngine license.
 
 Blacklist
 ---------
@@ -100,15 +98,12 @@ These are identical to the ones in the Blacklist:
 Downloading ExpressionEngine.com Lists
 --------------------------------------
 
-EllisLab, Inc. maintains its own Blacklist and Whitelist, which are
-available for licensed purchasers of ExpressionEngine. These lists are
+EllisLab, Inc. maintains its own Blacklist and Whitelist. These lists are
 maintained with the help of our users. If you have an IP address, user
 agent, or URL that you believe should be added to the Blacklist or
 Whitelist, please email blacklist@ellislab.com.
 
-To download the ExpressionEngine Lists, you must have a valid license file
-entered into the :menuselection:`Settings --> License & Registration`
-area of the Control Panel. To download the Lists, go into the
+To download the Lists, go into the
 :menuselection:`Developer --> Add-Ons --> Black/White List`.
 In the main menu for the module are links that you can click to
 automatically download and add the ExpressionEngine.com Lists to your

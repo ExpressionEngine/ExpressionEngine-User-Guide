@@ -14,9 +14,6 @@ The Moblog, or "mobile blogging", Module allows you to submit Channel
 Entries to ExpressionEngine via email. Emails may contain images or
 other attachments, typically sent via a mobile device.
 
-.. note:: The Moblog Module is available only with a `purchased <https://store.ellislab.com/>`_
-   ExpressionEngine license.
-
 The basic concept is this: You send an email containing the text of your
 entry along with a file or image attachment to a specific email address
 you've set up as your Moblog account. ExpressionEngine will then check

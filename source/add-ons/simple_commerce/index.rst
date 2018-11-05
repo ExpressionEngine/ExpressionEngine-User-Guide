@@ -13,9 +13,6 @@ Introduction
 The Simple Commerce Module is a basic but flexible module
 that easily integrates ExpressionEngine with PayPal.
 
-.. note:: The Simple Commerce Module is available only with a `purchased
-  <https://store.ellislab.com/>`_ ExpressionEngine license.
-
 - Integrates with ExpressionEngine's Channel Module to define items for
   sale
 - Tracks purchases automatically utilizing PayPal's `Instant Payment
