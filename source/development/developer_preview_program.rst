@@ -25,8 +25,7 @@ following benefits:
 
 - Early access to pre-release versions of ExpressionEngine (typically
   3-4 weeks ahead of a public release)
-- Includes the pre-release builds for ExpressionEngine, Multiple Site
-  Manager, Discussion Forums, the User Guide and ExpressionEngine Core
+- Includes the pre-release builds for ExpressionEngine and the User Guide
 - Email notifications of new pre-release builds
 - Build notes to help point out changes that are most likely to impact
   third-party add-ons

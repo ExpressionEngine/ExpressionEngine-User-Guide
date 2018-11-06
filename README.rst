@@ -61,5 +61,5 @@ Style Guideline
 ***************
 
 Please refer to style_guide.rst for samples and ReST convention standards used
-in EllisLab user guides.  Please note that standard ReST renders will not be
+in the ExpressionEngine user guide.  Please note that standard ReST renders will not be
 able to parse all of the directives, as many are specific to Sphinx.

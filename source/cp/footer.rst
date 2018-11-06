@@ -14,7 +14,7 @@ Get Help
 On the right side of the footer, there are options to:
 
 * **Report a bug** - If you find a glitch in ExpressionEngine, we want to hear about it! Clicking this link will send you to our bug tracker where you can submit a new bug.
-* **Submit a new support ticket** - If you need to ask us a question about how to accomplish something in ExpressionEngine or if you're otherwise having trouble and would like our help, this link will take you directly to the support portal. An :ellislab:`EllisLab support subscription </support>` is required.
+* **Submit a new support ticket** - If you need to ask us a question about how to accomplish something in ExpressionEngine or if you're otherwise having trouble and would like our help, this link will take you directly to the support portal. An :expressionengine:`ExpressionEngine support subscription </support>` is required.
 * **Access this user guide** - Need to reference a tag? Or wondering what a setting in the control panel does? This link will send you directly to the ExpressionEngine documentation.
 
 License Information

@@ -8,10 +8,10 @@ Bugs and Security Reports
 Reporting Bugs
 --------------
 
-Found a bug? Report it as an issue on our public GitHub repo.  See the `Contributing Guidelines <https://github.com/EllisLab/ExpressionEngine/blob/stability/CONTRIBUTING.md>`_
+Found a bug? Report it as an issue on our public GitHub repo.  See the `Contributing Guidelines <https://github.com/EllisLab/ExpressionEngine/blob/stability/CONTRIBUTING.md>`_.
 
 
-.. note:: If you have a **security issue** to report, please submit to our security and disclosure platform over at [HackerOne](https://hackerone.com/expressionengine). **DO NOT** open an issue on GitHub or post publically. Not sure if it's a security bug? Read on!
+.. note:: If you have a **security issue** to report, please submit to our security and disclosure platform over at `HackerOne <https://hackerone.com/expressionengine>`_. **DO NOT** open an issue on GitHub or post publically. Not sure if it's a security bug? Read on!
 
 
 Security Reporting Guidelines
@@ -32,7 +32,7 @@ will donate software or swag for being classy.
 
 If you have a security issue to report, you can let us know at
 `team@ellislab.com <mailto:team@ellislab.com?subject=Security%20Vulnerability>`_
-or if you prefer at `HackerOne <https://hackerone.com>`_.
+or if you prefer at `HackerOne <https://hackerone.com/expressionengine>`_.
 
 What are Security Issues?
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -96,7 +96,7 @@ taken to assess and address the reported issue prior to disclosure.
 - We disclose in our application :doc:`Change Log </about/changelog>` that a security
   bug has been fixed, and what type. We do not disclose the steps or
   circumstances to reproduce the bug.
-- Releases are posted to our :ellislab:`blog </blog>`, and for users who have
+- Releases are posted to our :expressionengine:`blog </blog>`, and for users who have
   left the default feature enabled, receive notification when logged in
   to their control panel.
 - Public disclosure of a security bug prior to resolution makes our

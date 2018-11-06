@@ -42,17 +42,10 @@ When linking to an anchor on another page, you **must** use cross-references (al
   :ref:`Another page's anchor <anchor_on_page>`
   :ref:`anchor_on_page`
 
-When linking to an EllisLab property, use the short forms for that::
+When linking to an ExpressionEngine.com page, use the short forms for that::
 
-  // EllisLab.com Pages
-  :ellislab:`CodeIgniter </codeigniter>`
-  :ellislab:`ExpressionEngine User Guide </expressionengine/user-guide>`
-
-  // EllisLab Support
-  :elsupport:`Bug #12345 </bugs/detail/12345>`
-
-  // EllisLab Store
-  :elstore:`Manage page </manage>`
+  // ExpressionEngine.com Pages
+  :expressionengine:`ExpressionEngine User Guide </expressionengine/user-guide>`
 
   // Forum Topics
   :forum_topic:`Feature Request <12345>`

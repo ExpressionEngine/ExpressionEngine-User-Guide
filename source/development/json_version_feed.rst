@@ -6,7 +6,7 @@ ExpressionEngine, or the release history of previous version numbers,
 that information is available to you via a JSON feed at the following
 URL::
 
-  http://versions.ellislab.com/expressionengine-version-history.json
+  https://expressionengine.com/support/expressionengine-version-history.json
 
 Feed Format
 -----------

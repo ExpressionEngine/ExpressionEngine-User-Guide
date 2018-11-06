@@ -71,6 +71,6 @@ site's short name or, for Template partials available to all sites, *global*::
 
 	{ellislab_date_formatting}
 
-	{codeigniter_date_formatting}
+	{expressionengine_date_formatting}
 
 	{global_date_formatting}
