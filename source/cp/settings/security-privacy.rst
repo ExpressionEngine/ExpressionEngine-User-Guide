@@ -66,6 +66,21 @@ options are:
 - **Session ID only**: Only URL session IDs are used to track the user
   throughout their visit.
 
+Share analytics with the ExpressionEngine Development Team?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+EllisLab asks users to help improve ExpressionEngine by providing analytics, diagnostic, and usage information to the ExpressionEngine Development Team.
+
+When this setting is on, the following information is occasionally collected:
+
+* Site domain
+* ExpressionEngine version
+* PHP version
+* MySQL version
+* List of installed add-ons
+
+You can opt out at any time by turning this setting off.
+
 .. _cookie-domain-label:
 
 Domain
