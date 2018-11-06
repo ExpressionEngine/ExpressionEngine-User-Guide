@@ -4,55 +4,15 @@ Bugs and Security Reports
 .. contents::
    :local:
 
-This is a quick guide on how to submit a bug report and an overview of
-what we do with bugs once they're submitted, as well as how to report
-security issues with ExpressionEngine.
 
-Submitting a Bug Report
------------------------
+Reporting Bugs
+--------------
 
-You can submit bug reports in the :elsupport:`ExpressionEngine Bug
-Tracker </bugs>`. Tips and guidelines are updated periodically on the
-:elsupport:`bug submission page </bugs/submit>`. If your bug is security
-related, please see the `Security Reporting Guidelines`_. Some common
-best practices for reporting bugs are:
-
-- Make sure this is a bug. The best way to do this is to review the
-  appropriate section of the User Guide, check your preferences, and
-  look for typos. We strongly suggest you submit a :elsupport:`support ticket </>`
-  if there is any doubt that this is a bug and not a user or server error.
-- Check the list of :elsupport:`recently reported bugs </bugs>` and/or
-  perform a bug search to see if its already been reported.
-- Tell us what you expected to happen that didn't. For example,
-  "I thought doing this task would produce this result."
-- Then explain what actually happened. "But instead, something else happened."
-- Be sure to include *the exact wording* of any error messages.
-- If possible provide a URI where the bug can be reviewed.
+Found a bug? Report it as an issue on our public GitHub repo.  See the `Contributing Guidelines <https://github.com/EllisLab/ExpressionEngine/blob/stability/CONTRIBUTING.md>`_
 
 
-Bug Tracker Statuses
-~~~~~~~~~~~~~~~~~~~~
+.. note:: If you have a **security issue** to report, please submit to our security and disclosure platform over at [HackerOne](https://hackerone.com/expressionengine). **DO NOT** open an issue on GitHub or post publically. Not sure if it's a security bug? Read on!
 
-When you enter a bug report, it will go in with a status of 'New'.
-Once a staff members has evaluated the bug, the status will be changed
-to one of the following options:
-
--  **Accepted:** The bug has been confirmed and will be addressed by
-   our engineers.
--  **Duplicate:** A bug report already exists for this issue and a
-   link will be provided to the existing issue.
--  **Clarification Requested:** We are unable to duplicate the bug as
-   reported, and need additional information to determine if it is a
-   bug or some other issue.
--  **Fixed is in Upcoming Release:** The bug has been fixed and the fix
-   will be included in a future release (typically the very next one).
-   Where possible, a solution will walk you through adding a temporary
-   fix to your own installation.
--  **Bug Fixed:** The bug has been fixed in the publicly released
-   software.
--  **See Comments:** The reported issue may not be a bug, or may be an
-   issue with an external application or service. Where possible, we
-   will try to explain how to solve the reported problem.
 
 Security Reporting Guidelines
 -----------------------------
