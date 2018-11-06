@@ -1,8 +1,8 @@
-###################################
-ExpressionEngine Reactor User Guide
-###################################
+###########################
+ExpressionEngine User Guide
+###########################
 
-The private user guide repository for the ExpressionEngine Reactor project.
+The public user guide repository for the ExpressionEngine project.
 
 ******************
 Setup Instructions
