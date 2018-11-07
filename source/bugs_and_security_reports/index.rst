@@ -8,7 +8,7 @@ Bugs and Security Reports
 Reporting Bugs
 --------------
 
-Found a bug? Report it as an issue on our public GitHub repo.  See the `Contributing Guidelines <https://github.com/EllisLab/ExpressionEngine/blob/stability/CONTRIBUTING.md>`_.
+Found a bug? Report it as an issue on our public GitHub repo.  See the `Contributing Guidelines <https://github.com/ExpressionEngine/ExpressionEngine/blob/stability/CONTRIBUTING.md>`_.
 
 
 .. note:: If you have a **security issue** to report, please submit to our security and disclosure platform over at `HackerOne <https://hackerone.com/expressionengine>`_. **DO NOT** open an issue on GitHub or post publically. Not sure if it's a security bug? Read on!
