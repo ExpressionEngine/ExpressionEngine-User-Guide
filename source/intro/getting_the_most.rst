@@ -30,6 +30,6 @@ Looking for real-time chat with fellow ExpressionEngine users? Look no further t
 Social Media
 ============
 
-On Twitter, you can reach us ``@ellislab`` and the broad community of users with the ``#eecms`` hashtag. A lot of ExpressionEngine-related news and tips are shared via ``#eecms``, so add it to your watch list. For example the `Tweetdeck <https://tweetdeck.twitter.com>`_ and `Tweetbot <http://tapbots.com>`_ apps can track that hashtag for you.
+On Twitter, you can follow ``@eecms`` and the broad community of users with the ``#eecms`` hashtag. A lot of ExpressionEngine-related news and tips are shared via ``#eecms``, so add it to your watch list. If you're interested in the goings-on of the ExpressionEngine Development Team, you can also follow ``@ellislab``.
 
 Go forth and conquer!
