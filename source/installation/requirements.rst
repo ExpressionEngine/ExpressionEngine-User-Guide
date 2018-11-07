@@ -24,7 +24,7 @@ the server wizard will run some tests and give you an answer.
 Okay, The Bare Minimums
 ***********************
 
-If you are stuck in an older environment, ExpressionEngine *can* run on PHP 5.4.0+ with 32M of memory, and MySQL 5.5.3+. PHP-FPM is also optional, but `tends to handily outperform mod_php <https://www.cloudways.com/blog/php-fpm-on-cloud/>`_. That said, running older versions not only hurts performance—increasing the cost of your website—but also puts your site **at risk of security vulnerabilities**. The PHP Group `stopped providing security patches <http://php.net/eol.php>`_ for PHP 5.5 on July 21, 2016, and even 5.6 only has security support `until December 31, 2018 <http://php.net/supported-versions.php>`_. Oracle will also cease providing security support for MySQL 5.5 at the same time.
+If you are stuck in an older environment, ExpressionEngine *can* run on PHP 5.6.0+ with 32M of memory, and MySQL 5.5.3+. PHP-FPM is also optional, but `tends to handily outperform mod_php <https://www.cloudways.com/blog/php-fpm-on-cloud/>`_. That said, running older versions not only hurts performance—increasing the cost of your website—but also puts your site **at risk of security vulnerabilities**. The PHP Group will only provide security support for PHP 5.6 `until December 31, 2018 <http://php.net/supported-versions.php>`_. Oracle will also cease providing security support for MySQL 5.5 at the same time.
 
 Why not save yourself the worry and hassle, enjoy a faster and more secure site that costs less to maintain, and upgrade now? Here's an email you can send to your host if they need a little nudge:
 
