@@ -212,17 +212,87 @@
 
 
 
-EXPRESSIONENGINE SUBCOMPONENTS:
+EXPRESSIONENGINE DOCUMENTATION SUBCOMPONENTS:
 
-ExpressionEngine includes a number of subcomponents with
+The ExpressionEngine Documentation includes a number of subcomponents with
 separate copyright notices and license terms. Your use of the source
 code for the these subcomponents is subject to the terms and
 conditions of the following licenses.
 
 The following subcomponents are licensed under the MIT License:
 
-    The CodeMirror component:
-        Copyright (C) 2017 by Marijn Haverbeke <marijnh@gmail.com> and others
+    The jQuery and jQuery UI component:
+        Copyright 2014 jQuery Foundation and other contributors
+        http://jquery.com/
 
-    The emoji-data component:
+
+using v1.8.3 jquery.com
+
+
+/*
+ * basic.css
+ * ~~~~~~~~~
+ *
+ * Sphinx stylesheet -- basic theme.
+ *
+ * :copyright: Copyright 2007-2014 by the Sphinx team, see AUTHORS.
+ * :license: BSD, see LICENSE for details.
+
+ /*
+  * doctools.js
+  * ~~~~~~~~~~~
+  *
+  * Sphinx JavaScript utilities for all documentation.
+  *
+  * :copyright: Copyright 2007-2014 by the Sphinx team, see AUTHORS.
+  * :license: BSD, see LICENSE for details.
+  *
+  */
+
+/*
+ * searchtools.js_t
+ * ~~~~~~~~~~~~~~~~
+ *
+ * Sphinx JavaScript utilties for the full-text search.
+ *
+ * :copyright: Copyright 2007-2014 by the Sphinx team, see AUTHORS.
+ * :license: BSD, see LICENSE for details.
+ *
+ */
+
+
+ // Underscore.js 1.3.1
+ // (c) 2009-2012 Jeremy Ashkenas, DocumentCloud Inc.
+ // Underscore is freely distributable under the MIT license.
+ // Portions of Underscore are inspired or borrowed from Prototype,
+ // Oliver Steele's Functional, and John Resig's Micro-Templating.
+ // For all details and documentation:
+ // http://documentcloud.github.com/underscore
+
+ /*
+  * websupport.js
+  * ~~~~~~~~~~~~~
+  *
+  * sphinx.websupport utilties for all documentation.
+  *
+  * :copyright: Copyright 2007-2014 by the Sphinx team, see AUTHORS.
+  * :license: BSD, see LICENSE for details.
+  *
+  */
+
+
+  /**
+   * jQuery plugin to pull repositories from the Github api.
+   *
+   * This script is loaded on the pages that use github data and converts the
+   * existing single item list that just links to Github into a full list of
+   * all repositories. You can optionally filter them down to a specific subset.
+   *
+   * This works by simply assuming that the github link is a single version of
+   * what we want to duplicate. So the .github-language-repos does not need to
+   * be a list. Its contents will be cloned and the link replaced. By using an
+   * existing html element as a template we should be protected against both a
+   * potential api failure as well as future design changes.
+   *
+   */
 
