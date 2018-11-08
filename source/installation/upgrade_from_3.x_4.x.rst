@@ -10,7 +10,7 @@ This guide will help you update your site from ExpressionEngine 3 or 4 to the la
 
 #. :doc:`Back-up your ExpressionEngine database and files </operations/database_backup>`.
 
-#. `Download the latest release of ExpressionEngine <https://github.com/ExpressionEngine/ExpressionEngine/archive/stability.zip>`_ and unzip the files to a folder on your computer.
+#. :expressionengine:`Download the latest release of ExpressionEngine </>` and unzip the files to a folder on your computer.
 
 .. note:: Check your third-party add-ons to see if you need updated versions for v4. Most add-ons do not need updating from v3, or only need minor changes. Your add-on vendor(s) can let you know what, if anything, you need to do for your installed add-ons.
 

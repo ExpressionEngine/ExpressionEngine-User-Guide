@@ -21,7 +21,7 @@ You'll need an empty database and the following credentials handy to install Exp
 2. Upload the Files
 *******************
 
-`Download ExpressionEngine <https://github.com/ExpressionEngine/ExpressionEngine/archive/stability.zip>`_, and unzip the files to a folder on your computer. Then use your favorite FTP client to upload the files to a publicly-accessible directory on your server.
+:expressionengine:`Download the latest release of ExpressionEngine </>` and unzip the files to a folder on your computer. Then use your favorite FTP client to upload the files to a publicly-accessible directory on your server.
 
 .. _file_permissions:
 

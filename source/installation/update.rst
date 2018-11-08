@@ -90,7 +90,7 @@ If you cannot use the one-click updater, here is how you can manually perform an
 
 #. :doc:`Back-up your ExpressionEngine database and files </operations/database_backup>`.
 
-#. `Download the latest release of ExpressionEngine <https://github.com/ExpressionEngine/ExpressionEngine/archive/stability.zip>`_ and unzip the files to a folder on your computer.
+#. :expressionengine:`Download the latest release of ExpressionEngine </>` and unzip the files to a folder on your computer.
 
 2. Copy Files
 ^^^^^^^^^^^^^
