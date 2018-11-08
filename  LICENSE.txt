@@ -230,17 +230,13 @@ The following subcomponents are licensed under the MIT License:
 
 The following subcomponents are licensed under the BSD License:
 
-    Sphinx stylesheet -- basic theme:
+    Sphinx JavaScript utilities and CSS:
 		Copyright 2007-2014 by the Sphinx team
 		https://github.com/sphinx-doc/sphinx/blob/master/LICENSE
 
-	Sphinx JavaScript utilities for all documentation:
-		Copyright 2007-2014 by the Sphinx team
-
-	Sphinx JavaScript utilties for the full-text search:
-		Copyright 2007-2014 by the Sphinx team
 
 	sphinx.websupport utilties for all documentation:
 		Copyright 2007-2014 by the Sphinx team
+		https://github.com/sphinx-doc/sphinx/blob/master/LICENSE
 
 
