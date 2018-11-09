@@ -2,10 +2,6 @@ Removing index.php from URLs
 ============================
 
 .. versionadded:: 2.2
-   Official support, limited to the scope of the recommendations
-   provided here, is now available for removing ``index.php`` from your
-   URLs.
-
 The ``index.php`` appears in your URLs because it is the file
 responsible for processing all requests to the system. In a URL such as
 ``https://example.com/template_group/template``, the
