@@ -76,7 +76,7 @@ At this point, your site should be restored and you should be able to re-enter y
 
 If there are no files in your backup directory, it's likely the updater failed before it could make a backup and your files and database are still intact. You likely just need to remove the folder located at :file:`system/ee/updater/` to access your control panel again.
 
-If you hit an error you cannot resolve and need to contact support, there should be a log file located at :file:`system/user/cache/ee_update/update.log` that may contain helpful information to help us diagnose the issue.
+If you hit an error you cannot resolve there should be a log file located at :file:`system/user/cache/ee_update/update.log` that may contain helpful information to help diagnose the issue.
 
 .. _manual_updating:
 
