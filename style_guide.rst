@@ -45,7 +45,7 @@ When linking to an anchor on another page, you **must** use cross-references (al
 When linking to an ExpressionEngine.com page, use the short forms for that::
 
   // ExpressionEngine.com Pages
-  :expressionengine:`ExpressionEngine User Guide </expressionengine/user-guide>`
+  :expressionengine:`ExpressionEngine Community </community>`
 
   // Forum Topics
   :forum_topic:`Feature Request <12345>`
