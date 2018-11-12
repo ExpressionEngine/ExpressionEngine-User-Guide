@@ -10,6 +10,14 @@ The ExpressionEngine user guide uses Sphinx to manage the documentation and outp
 
 To build the user guide, you must have Docker installed. If you need to install it, the easiest way is with [Docker Desktop](https://www.docker.com/products/docker-desktop).
 
+Once that's installed, you can use the `eetools` helper script to simplify working with the Docker. First you need to build the container:
+
+```
+eetools createcontainer
+```
+
+Note, on MAMP you may get a `eetools: command not found`, as your shell maybe isn’t looking in the current working directory. Just use `./eetools` instead.
+
 ## Editing and Creating Documentation
 
 All of the source files exist under `source/` and is where you will add new documentation or modify existing documentation. We recommend working from feature branches and making pull requests to the `stability` branch of this repo.
@@ -27,8 +35,6 @@ If you want to rebuild all files from scratch instead of just the changed ones, 
 ```
 eetools make -c
 ```
-
-Note, on MAMP you may get a `eetools: command not found`, as your shell maybe isn’t looking in the current working directory. Just use `./eetools` instead.
 
 You will see it do a whiz-bang compilation, at which point the fully rendered user guide and images will be in `build/html/`. After the HTML has been built, each successive build will only rebuild files that have changed, saving considerable time. If for any reason you want to "reset" your build files, use the `-c` flag for a "clean" build.
 
