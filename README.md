@@ -38,9 +38,9 @@ eetools make -c
 
 You will see it do a whiz-bang compilation, at which point the fully rendered user guide and images will be in `build/html/`. After the HTML has been built, each successive build will only rebuild files that have changed, saving considerable time. If for any reason you want to "reset" your build files, use the `-c` flag for a "clean" build.
 
-## Style Guideline
+## Contributing
 
-Please refer to [style_guide.rst](style_guide.rst) for samples and ReST convention standards used in the ExpressionEngine user guide. Please note that standard ReST renders will not be able to parse all of the directives, as many are specific to Sphinx.
+See something that needs fixing? Want to improve the user guide or make it more helpful? Great! Check out [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## Copyright / License Notice
 

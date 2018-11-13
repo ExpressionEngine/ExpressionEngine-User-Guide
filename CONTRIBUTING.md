@@ -6,7 +6,7 @@ If you're an ExpressionEngine user, then you have something to add. There is alw
 
 Table of Contents:
 
-- [Contributing Code](#contributing-code)
+- [Contributing Code](#contributing-to-the-documentation)
 - [Reporting Issues](#reporting-issues)
 
 ## Contributing to the Documentation
@@ -20,6 +20,10 @@ Once you have your new branch, make sure you'rew actually in it!  Then make your
 Push your changes to your fork of the repository, and when you're done, [send us a pull request](https://help.github.com/articles/using-pull-requests).
 
 We'll take a look at your pull request, make sure everything looks alright, ask for any needed changes, and then merge it into the main code.
+
+## Style Guideline
+
+Please refer to [style_guide.rst](style_guide.rst) for samples and ReST convention standards used in the ExpressionEngine user guide. Please note that standard ReST renders will not be able to parse all of the directives, as many are specific to Sphinx.
 
 ## Reporting Issues
 
