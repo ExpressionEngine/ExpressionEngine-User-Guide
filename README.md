@@ -41,3 +41,11 @@ You will see it do a whiz-bang compilation, at which point the fully rendered us
 ## Style Guideline
 
 Please refer to [style_guide.rst](style_guide.rst) for samples and ReST convention standards used in the ExpressionEngine user guide. Please note that standard ReST renders will not be able to parse all of the directives, as many are specific to Sphinx.
+
+## Copyright / License Notice
+
+The ExpressionEngine project is copyright (c) 2003-2018 EllisLab, Inc ([https://ellislab.com](https://ellislab.com)) and is licensed under Apache License, Version 2.0. This project contains subcomponents with separate copyright and license terms, all of which are fully FOSS and compatible with Apache-2.0.
+
+Complete license terms and copyright information can be found in [LICENSE.txt](LICENSE.txt) in the root of this repository.
+
+"ExpressionEngine" is a registered trademark of EllisLab, Inc. in the United States and around the world. Refer to EllisLab's [Trademark Use Policy](https://ellislab.com/trademark-use-policy) for access to logos and acceptable use.
