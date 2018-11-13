@@ -6,7 +6,7 @@ If you're an ExpressionEngine user, then you have something to add. There is alw
 
 Table of Contents:
 
-- [Contributing Code](#contributing-to-the-documentation)
+- [Contributing to the Documentation](#contributing-to-the-documentation)
 - [Reporting Issues](#reporting-issues)
 
 ## Contributing to the Documentation
