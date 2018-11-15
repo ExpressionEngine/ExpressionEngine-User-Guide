@@ -15,29 +15,33 @@ ExpressionEngine v5 Change Log
 Version 5.0.0
 -------------
 
-Release Date: October 6, 2018
+Release Date: November 15, 2018
 
-- ExpressionEngine is now free open-source software with a permissive license (Apache-2.0)!
-- ExpressionEngine now requires PHP 5.6+
-- Made ExpressionEngine news feed on the control panel home page opt-in.
-- Made sharing of diagnostic and usage data to expressionengine.com opt-in.
-- Removed license checks and restrictions from the Multi Site Manager.
-- Removed the license page from the control panel.
-- Removed license validation.
-- Removed "Core" version feature restrictions.
-- Fixed a rendering bug and potential XSS issue.
-- Fixed a bug where in rare circumstances, a relationship tag was left unparsed.
-- Fixed a bug where a channel entries tag with a categories parameter could generate errors when the tag returned no entries.
+- **Free Open-Source Software!** 👐🤝🤗
 
+  + **Licensing** 👩‍⚖️📜
 
-- **Developers**
+    - FOSS is boss! ExpressionEngine is now free open-source software!
+    - Licensed with the permissive :expressionengine:`Apache License, Version 2.0 </license>`.
 
+  + **Application Changes** 🛠
+
+    - ExpressionEngine now requires PHP 5.6+.
+    - The ExpressionEngine news feed on the control panel homepage is now opt-in.
+    - Sharing of diagnostic and usage data to expressionengine.com is now opt-in.
+    - Removed license checks and restrictions from the Site Manager. You can haz All The Sites!
+    - Removed the license page from the control panel.
+    - Removed license validation.
+    - Removed "Core" version feature restrictions.
+
+- **Bug Fixes** 💃🐛
+
+  + Fixed a rendering bug and potential XSS issue.
+  + Fixed a bug where in rare circumstances, a relationship tag was left unparsed.
+  + Fixed a bug where a Channel entries tag with a categories parameter could generate errors when the tag returned no entries.
+
+- **Developers** 💻
+
+  + Development is now taking place in public `on GitHub <https://github.com/ExpressionEngine/ExpressionEngine>`_. Get involved!
   + Removed unused Javascript plugins:
-     - jscolor.js
-     - jcrop.js
-     - overlay.js
-     - toolbox.expose.js
-
-
-
 
