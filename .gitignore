@@ -11,3 +11,4 @@ Thumbs.db
 build/
 
 node_modules/
+.vscode/
