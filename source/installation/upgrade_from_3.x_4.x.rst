@@ -19,7 +19,7 @@ This guide will help you update your site from ExpressionEngine 3 or 4 to the la
 
 #. :expressionengine:`Download the latest release of ExpressionEngine </>` and unzip the files to a folder on your computer.
 
-.. note:: Check your third-party add-ons to see if you need updated versions for v4. Most add-ons do not need updating from v3, or only need minor changes. Your add-on vendor(s) can let you know what, if anything, you need to do for your installed add-ons.
+.. note:: Check your third-party add-ons to see if you need updated versions for v4. Most add-ons do not need updating from v3/v4, or only need minor changes. Your add-on vendor(s) can let you know what, if anything, you need to do for your installed add-ons.
 
 2. Copy Files
 -------------
