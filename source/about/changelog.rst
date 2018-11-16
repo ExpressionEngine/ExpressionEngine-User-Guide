@@ -15,7 +15,7 @@ ExpressionEngine v5 Change Log
 Version 5.0.0
 -------------
 
-Release Date: November 15, 2018
+Release Date: November 16, 2018
 
 - **Free Open-Source Software!** 👐🤝🤗
 
