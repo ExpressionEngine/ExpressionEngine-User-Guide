@@ -1,3 +1,10 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 IP to Nation
 ============
 
@@ -17,9 +24,6 @@ address is associated with. You can do two things with this information:
    referrer data, or use the email/tell-a-friend forms.
 #. **Show a flag icon** |image0| within your comments or entries to
    indicate the country of the person who submitted the entry.
-
-.. note:: The IP to Nation Module is available only with a
-   `purchased <https://store.ellislab.com/>`_ ExpressionEngine license.
 
 Database Updates
 ----------------

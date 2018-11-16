@@ -1,7 +1,14 @@
-Upgrading from ExpressionEngine 3
-=================================
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 
-This guide will help you update your site from ExpressionEngine 3 to the latest version of ExpressionEngine 4.
+Upgrading from ExpressionEngine 3 or 4
+======================================
+
+This guide will help you update your site from ExpressionEngine 3 or 4 to the latest version of ExpressionEngine 5.
 
 .. seealso:: If you are upgrading from ExpressionEngine 2, you must first upgrade to ExpressionEngine 3 seperately.  Use the version 3 files and see `Upgrading from ExpressionEngine 2 <https://docs.expressionengine.com/v3/installation/upgrade_from_2.x.html>`__.
 
@@ -10,9 +17,9 @@ This guide will help you update your site from ExpressionEngine 3 to the latest 
 
 #. :doc:`Back-up your ExpressionEngine database and files </operations/database_backup>`.
 
-#. Download the latest release of ExpressionEngine (either :elstore:`ExpressionEngine Core </#ee-core>` or the :elstore:`standard edition </manage>`, whichever your site is currently running) and unzip the files to a folder on your computer.
+#. :expressionengine:`Download the latest release of ExpressionEngine </>` and unzip the files to a folder on your computer.
 
-.. note:: Check your third-party add-ons to see if you need updated versions for v4. Most add-ons do not need updating from v3, or only need minor changes. Your add-on vendor(s) can let you know what, if anything, you need to do for your installed add-ons.
+.. note:: Check your third-party add-ons to see if you need updated versions for v4. Most add-ons do not need updating from v3/v4, or only need minor changes. Your add-on vendor(s) can let you know what, if anything, you need to do for your installed add-ons.
 
 2. Copy Files
 -------------
@@ -27,7 +34,7 @@ Working either locally with your backed up files, or on the server (**not recomm
 
 #. Copy :file:`themes/ee/` to :file:`themes/ee/`
 
-#. Copy :file:`system/user/config/license.key` to :file:`system/user/config/license.key`
+#. Copy :file:`system/user/config/license.key` to :file:`system/user/config/license.key`. If there is no :file:`license.key`, skip this step.
 
 .. note:: If you’ve moved your system directory, make sure to change both :file:`index.php` and :file:`admin.php` to point to the correct directory. And don't forget to update **all** :file:`admin.php` files if you're running your control panel from multiple Sites!
 

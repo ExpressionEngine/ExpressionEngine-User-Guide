@@ -1,3 +1,10 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 Site Manager
 ============
 
@@ -8,9 +15,6 @@ Site Manager
 .. Overview
 
 Manage multiple Sites from a single installation
-
-.. note:: The Multiple Site Manager **does not** alter the
-	`ExpressionEngine License Agreement <https://expressionengine.com/license>`_. The license holder must be the owner of all Sites on a single installation.
 
 .. Screenshot (optional)
 
@@ -58,11 +62,9 @@ Key Features
 Requirements
 ~~~~~~~~~~~~
 
--  Purchased license of the latest version of ExpressionEngine
 -  All Sites must reside on the same server
 -  If using sub-domains or domains, directories must be able to access
    your main installation system directory.
--  License holder must be the owner of all Sites
 
 .. Permissions
 

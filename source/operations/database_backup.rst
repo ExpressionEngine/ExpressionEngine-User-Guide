@@ -1,3 +1,10 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 #################
 Back Up Your Site
 #################
@@ -297,9 +304,7 @@ If it's too technically challenging or you're just unwilling to get your
 hands dirty in this regard, you may be able to find an add-on that takes
 care of the entire backup process for you.
 
-There are `several add-ons <https://devot-ee.com/search/results?keywords=backup&collection=addons&addon_version_support=>`_
-available for ExpressionEngine that offer to do just this. When
-evaluating these add-ons, it's important to ask many of the same
+When evaluating these add-ons, it's important to ask many of the same
 questions you would when evaluating a host's backup plan:
 
 * What is backed up?

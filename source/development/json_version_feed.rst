@@ -1,3 +1,10 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 JSON Version Feed
 =================
 
@@ -6,7 +13,7 @@ ExpressionEngine, or the release history of previous version numbers,
 that information is available to you via a JSON feed at the following
 URL::
 
-  http://versions.ellislab.com/expressionengine-version-history.json
+  https://expressionengine.com/support/expressionengine-version-history.json
 
 Feed Format
 -----------

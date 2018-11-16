@@ -1,9 +1,16 @@
-Updating ExpressionEngine 4
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
+Updating ExpressionEngine 5
 ===========================
 
-This guide will help you update your site from a previous version of ExpressionEngine 4 to the latest version of ExpressionEngine 4.
+This guide will help you update your site from a previous version of ExpressionEngine 5 to the latest version of ExpressionEngine 5.
 
-.. seealso:: If you are upgrading from ExpressionEngine 3 to ExpressionEngine 4, see :doc:`/installation/upgrade_from_3.x`.
+.. seealso:: If you are upgrading from ExpressionEngine 4 to ExpressionEngine 5, see :doc:`/installation/upgrade_from_3.x_4.x`.
 
 One-click Updating
 ------------------
@@ -76,7 +83,7 @@ At this point, your site should be restored and you should be able to re-enter y
 
 If there are no files in your backup directory, it's likely the updater failed before it could make a backup and your files and database are still intact. You likely just need to remove the folder located at :file:`system/ee/updater/` to access your control panel again.
 
-If you hit an error you cannot resolve and need to contact support, there should be a log file located at :file:`system/user/cache/ee_update/update.log` that may contain helpful information to help us diagnose the issue.
+If you hit an error you cannot resolve there should be a log file located at :file:`system/user/cache/ee_update/update.log` that may contain helpful information to help diagnose the issue.
 
 .. _manual_updating:
 
@@ -90,7 +97,7 @@ If you cannot use the one-click updater, here is how you can manually perform an
 
 #. :doc:`Back-up your ExpressionEngine database and files </operations/database_backup>`.
 
-#. Download the latest release of ExpressionEngine (either :elstore:`ExpressionEngine Core </#ee-core>` or the :elstore:`standard edition </manage>`, whichever your site is currently running) and unzip the files to a folder on your computer.
+#. :expressionengine:`Download the latest release of ExpressionEngine </>` and unzip the files to a folder on your computer.
 
 2. Copy Files
 ^^^^^^^^^^^^^

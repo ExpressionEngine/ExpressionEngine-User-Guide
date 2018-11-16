@@ -1,3 +1,10 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 Security & Privacy
 ==================
 
@@ -65,6 +72,21 @@ options are:
   option since it prevents URLs from showing session IDs.
 - **Session ID only**: Only URL session IDs are used to track the user
   throughout their visit.
+
+Share analytics with the ExpressionEngine Development Team?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+EllisLab asks users to help improve ExpressionEngine by providing analytics, diagnostic, and usage information to the ExpressionEngine Development Team.
+
+When this setting is on, the following information is occasionally collected:
+
+* Site domain
+* ExpressionEngine version
+* PHP version
+* MySQL version
+* List of installed add-ons
+
+You can opt out at any time by turning this setting off.
 
 .. _cookie-domain-label:
 

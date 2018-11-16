@@ -1,3 +1,10 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 ###############
 The Big Picture
 ###############
@@ -5,7 +12,7 @@ The Big Picture
 Thousands of web sites are powered using ExpressionEngine, from business sites,
 to online magazines, to personal blogs. ExpressionEngine's flexible architecture
 allows an endless range of possibilities. Visit the `Showcase
-<https://ellislab.com/showcase/>`__ to see examples of real-world sites with
+<https://expressionengine.com/showcase/>`__ to see examples of real-world sites with
 insight direct from the site builders themselves.
 
 ************

@@ -1,3 +1,10 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 Developer Preview Program
 =========================
 
@@ -25,8 +32,7 @@ following benefits:
 
 - Early access to pre-release versions of ExpressionEngine (typically
   3-4 weeks ahead of a public release)
-- Includes the pre-release builds for ExpressionEngine, Multiple Site
-  Manager, Discussion Forums, the User Guide and ExpressionEngine Core
+- Includes the pre-release builds for ExpressionEngine and the User Guide
 - Email notifications of new pre-release builds
 - Build notes to help point out changes that are most likely to impact
   third-party add-ons
@@ -40,9 +46,9 @@ How to Join
 -----------
 
 In order to join the program you must have a publicly-available add-on
-and have at least one ExpressionEngine 2 license in your account. If you
+and an ExpressionEngine account. If you
 are interested in joining the Developer Preview Program, please send an
-email to `team@ellislab.com`_ and include your EllisLab.com username and
+email to `team@ellislab.com`_ and include your ExpressionEngine.com username and
 a link to your publicly-available add-ons in your request.
 
 .. _team@ellislab.com: team@ellislab.com?subject=Developer%20Preview%20Request
@@ -51,8 +57,7 @@ My Add-ons are Bespoke, Can I Join?
 -----------------------------------
 
 The Developer Preview Program is only available to developers with
-public add-ons and an ExpressionEngine license in order to maximize the
-effectiveness of the engineering resources devoted to the program at
+public add-ons in order to maximize the effectiveness of the engineering resources devoted to the program at
 this time.
 
 Security Researchers and Reporters

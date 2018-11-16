@@ -1,5 +1,12 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 #############################
-ExpressionEngine 4 User Guide
+ExpressionEngine 5 User Guide
 #############################
 
 - Introduction
@@ -135,8 +142,8 @@ Solving Problems
 ****************
 
 - :doc:`troubleshooting/index`
-- :ellislab:`EllisLab Support </support>`
-- :ellislab:`Community Support Forum </forums/viewannounce/230174_114/>`
+- :expressionengine:`ExpressionEngine Support </support>`
+- :expressionengine:`Community Support Forum </forums>`
 - :doc:`bugs_and_security_reports/index`
 
 *******************************
@@ -144,8 +151,8 @@ Developing for ExpressionEngine
 *******************************
 
 - :doc:`development/index`
-- :ellislab:`Style Guide </style-guide/>`
-- :ellislab:`Development & Programming Forum </forums/viewannounce/230178_116/>`
+- :style_guide:`Style Guide </style-guide/>`
+- :expressionengine:`Development & Programming Forum </forums/topics/137/development-and-programming>`
 
 .. toctree::
   :titlesonly:

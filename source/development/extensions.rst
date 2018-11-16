@@ -1,3 +1,10 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 Extensions Development
 ======================
 
@@ -111,7 +118,7 @@ settings (if any).
       var $version        = '1.0';
       var $description    = 'Truncates long links';
       var $settings_exist = 'y';
-      var $docs_url       = ''; // 'https://ellislab.com/expressionengine/user-guide/';
+      var $docs_url       = ''; // 'https://expressionengine.com/expressionengine/user-guide/';
 
       var $settings       = array();
 
@@ -151,8 +158,6 @@ the method in your extension's class to call for this hook.
    *
    * This function enters the extension into the exp_extensions table
    *
-   * @see https://ellislab.com/codeigniter/user-guide/database/index.html for
-   * more information on the db class.
    *
    * @return void
    */
@@ -537,7 +542,7 @@ method might look like:
    * This function is the meat & potatoes of the extension, where all
    * the work is done.
    *
-   * @see https://ellislab.com/expressionengine/user-guide/development/extension_hooks/global/typography/index.html#typography-parse-type-end
+   * @see https://expressionengine.com/user-guide/development/extension_hooks/global/typography/index.html#typography-parse-type-end
    *
    * @param   string  string to look
    * @param   object  typography object

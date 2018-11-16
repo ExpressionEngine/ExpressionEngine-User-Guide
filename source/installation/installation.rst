@@ -1,3 +1,10 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 ###########################
 Installing ExpressionEngine
 ###########################
@@ -21,7 +28,7 @@ You'll need an empty database and the following credentials handy to install Exp
 2. Upload the Files
 *******************
 
-After :elstore:`purchasing ExpressionEngine </>`, download it from :elstore:`your account </manage>` (or grab a copy of the free, feature-limited :elstore:`ExpressionEngine Core </#ee-core>`), and unzip the files to a folder on your computer. Then use your favorite FTP client to upload the files to a publicly-accessible directory on your server.
+:expressionengine:`Download the latest release of ExpressionEngine </>` and unzip the files to a folder on your computer. Then use your favorite FTP client to upload the files to a publicly-accessible directory on your server.
 
 .. _file_permissions:
 

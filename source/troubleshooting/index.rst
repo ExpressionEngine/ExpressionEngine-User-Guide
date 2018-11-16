@@ -1,3 +1,10 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 ###############
 Troubleshooting
 ###############
@@ -81,7 +88,8 @@ Error Messages
 - :doc:`Supplied argument is not a valid MySQL-Link resource <error_messages/supplied_argument_is_not_a_valid_mysql-link_resource>`
 - :doc:`Call to undefined function: imagettftext() <error_messages/call_to_undefined_function_imagettftext>`
 - :doc:`You are not authorized to perform this action <error_messages/you_are_not_authorized_to_perform_this_action>`
-
+- :doc:`ExpressionEngine has detected the modification of a core file <error_messages/expressionengine_has_detected_the_modification_of_a_core_file>`
+- :doc:`You do not have value set for [encryption_key/session_crypt_key] in your config.php <error_messages/missing_encryption_keys>`
 
 .. toctree::
 	:glob:

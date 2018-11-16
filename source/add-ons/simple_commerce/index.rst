@@ -1,3 +1,10 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 ###############
 Simple Commerce
 ###############
@@ -12,9 +19,6 @@ Introduction
 
 The Simple Commerce Module is a basic but flexible module
 that easily integrates ExpressionEngine with PayPal.
-
-.. note:: The Simple Commerce Module is available only with a `purchased
-  <https://store.ellislab.com/>`_ ExpressionEngine license.
 
 - Integrates with ExpressionEngine's Channel Module to define items for
   sale

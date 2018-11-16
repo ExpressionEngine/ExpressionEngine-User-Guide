@@ -1,3 +1,10 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 .. todo:: These are now named Template Variables.
 
 Template Partials
@@ -71,6 +78,6 @@ site's short name or, for Template partials available to all sites, *global*::
 
 	{ellislab_date_formatting}
 
-	{codeigniter_date_formatting}
+	{expressionengine_date_formatting}
 
 	{global_date_formatting}

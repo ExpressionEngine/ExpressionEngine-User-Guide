@@ -1,3 +1,10 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 #################
 Member Management
 #################
@@ -13,9 +20,6 @@ Introduction
 Many member management features are built-in to ExpressionEngine,
 so unlike other modules, the Member Management module is
 not managed from the Modules area of the Control Panel.
-
-.. note:: The Member Module is available only with a `purchased <https://store.ellislab.com/>`_
-   ExpressionEngine license.
 
 You'll find many member management options available at:
 

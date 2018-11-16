@@ -1,3 +1,10 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 CP Footer
 =========
 
@@ -13,14 +20,13 @@ Get Help
 
 On the right side of the footer, there are options to:
 
-* **Report a bug** - If you find a glitch in ExpressionEngine, we want to hear about it! Clicking this link will send you to our bug tracker where you can submit a new bug.
-* **Submit a new support ticket** - If you need to ask us a question about how to accomplish something in ExpressionEngine or if you're otherwise having trouble and would like our help, this link will take you directly to the support portal. An :ellislab:`EllisLab support subscription </support>` is required.
+* **Report a bug** - If you find a glitch in ExpressionEngine, we want to hear about it! Click this link to let us know.
 * **Access this user guide** - Need to reference a tag? Or wondering what a setting in the control panel does? This link will send you directly to the ExpressionEngine documentation.
 
 License Information
 -------------------
 
-At the bottom right of the footer is the licensing information for your install of ExpressionEngine, or an option to set a valid license key. The information provided here is helpful for easy reference to your own license records, and in case you need to contact the license holder and/or transfer the license.
+A license key is not required to use ExpressionEngine, but if you have a legacy license key the bottom right of the footer will display the licensing information for your install of ExpressionEngine.
 
 .. contents::
   :local:

@@ -1,10 +1,12 @@
+.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 Removing index.php from URLs
 ============================
-
-.. versionadded:: 2.2
-   Official support, limited to the scope of the recommendations
-   provided here, is now available for removing ``index.php`` from your
-   URLs.
 
 The ``index.php`` appears in your URLs because it is the file
 responsible for processing all requests to the system. In a URL such as
