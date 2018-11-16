@@ -61,7 +61,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'ExpressionEngine'
-copyright = u'&copy;2002–2018 <a href="https://ellislab.com/" rel="external">EllisLab, Inc.</a>'
+copyright = u'&copy;2002&ndash;2018 <a href="https://ellislab.com/" rel="external">EllisLab, Inc.</a>'
 project_url = u'https://expressionengine.com'
 
 
