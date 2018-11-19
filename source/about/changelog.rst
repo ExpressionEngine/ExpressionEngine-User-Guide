@@ -12,6 +12,13 @@ ExpressionEngine v5 Change Log
    :local:
    :depth: 1
 
+Version 5.0.1
+-------------
+
+Release Date: November 18, 2018
+
+- Fixed a bug where non-repo downloads could not install or update via admin.php.
+
 Version 5.0.0
 -------------
 
