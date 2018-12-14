@@ -12,6 +12,14 @@ ExpressionEngine v5 Change Log
    :local:
    :depth: 1
 
+Version 5.1.0
+-------------
+
+Release Date: ?
+
+- Added drag and drop uploading to the File field
+- Added a new fieldtype, File Grid, for uploading multiple files at once and populating them into a Grid
+
 Version 5.0.2
 -------------
 
