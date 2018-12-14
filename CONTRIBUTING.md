@@ -15,7 +15,7 @@ Suggesting a change is easy and there is no way you'll mess up the public repo.
 
 Start by [forking the repository](https://help.github.com/articles/fork-a-repo), the new branch you create is the one you'll do your work in.
 
-Once you have your new branch, make sure you'rew actually in it!  Then make your changes [inside of your feature branch](https://help.github.com/articles/fork-a-repo).
+Once you have your new branch, make sure you're actually in it!  Then make your changes [inside of your feature branch](https://help.github.com/articles/fork-a-repo).
 
 Push your changes to your fork of the repository, and when you're done, [send us a pull request](https://help.github.com/articles/using-pull-requests).
 
@@ -24,6 +24,17 @@ We'll take a look at your pull request, make sure everything looks alright, ask 
 ## Style Guideline
 
 Please refer to [style_guide.rst](style_guide.rst) for samples and ReST convention standards used in the ExpressionEngine user guide. Please note that standard ReST renders will not be able to parse all of the directives, as many are specific to Sphinx.
+
+### New Pages
+
+If your contribution adds new pages to the user guide, please use the following attribution at the top of the file:
+
+<pre><code>.. # This source file is part of the open source project
+   # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+   #
+   # @link      https://expressionengine.com/
+   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0</code></pre>
 
 ## Reporting Issues
 

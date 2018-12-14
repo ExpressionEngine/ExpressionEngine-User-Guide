@@ -90,6 +90,7 @@ Error Messages
 - :doc:`You are not authorized to perform this action <error_messages/you_are_not_authorized_to_perform_this_action>`
 - :doc:`ExpressionEngine has detected the modification of a core file <error_messages/expressionengine_has_detected_the_modification_of_a_core_file>`
 - :doc:`You do not have value set for [encryption_key/session_crypt_key] in your config.php <error_messages/missing_encryption_keys>`
+- :doc:`An unexpected error occurred attempting to download the current ExpressionEngine version number <error_messages/unexpected_error_occurred_attempting_to_download_the_current_expressionengine_version_number>`
 
 .. toctree::
 	:glob:

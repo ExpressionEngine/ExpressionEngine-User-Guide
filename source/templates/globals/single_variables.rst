@@ -548,16 +548,6 @@ logged\_in\_ip\_address
 This variable will be substituted with the IP address of the currently
 logged in user.
 
-logged\_in\_location
---------------------
-
-::
-
-  {logged_in_location}
-
-The location (as entered in their profile) for the currently logged-in
-user.
-
 logged\_in\_member\_id
 ----------------------
 

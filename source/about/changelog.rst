@@ -12,12 +12,36 @@ ExpressionEngine v5 Change Log
    :local:
    :depth: 1
 
+Version 5.0.2
+-------------
+
+Release Date: December 13, 2018
+
+- Optimized the member delete routine's heir assignments.
+- Fixed a bug where a PHP error may appear when the CP homepage newsfeed cannot be fetched.
+- Fixed a bug where extension hooks may run during a one-click upgrade.
+- Fixed a bug (`#18 <https://github.com/ExpressionEngine/ExpressionEngine/pull/18>`__) where a supplied class was not added to "select" fields in the shared form view.
+- Fixed a potential malformed query issue (`#24 <https://github.com/ExpressionEngine/ExpressionEngine/pull/24>`__) in the relationships_query hook.
+- Fixed a potential PHP error (`#21 <https://github.com/ExpressionEngine/ExpressionEngine/issues/21>`__) when saving option-type Grid columns.
+- Fixed a bug (`#20 <https://github.com/ExpressionEngine/ExpressionEngine/issues/20>`__) where the installer checks if the user theme directory is writable even when not installing the default theme.
+- Fixed a bug (`#13 <https://github.com/ExpressionEngine/ExpressionEngine/issues/13>`__) where ``{if fluid_field}`` conditionals would not work as expected.
+- Fixed a bug (`#14 <https://github.com/ExpressionEngine/ExpressionEngine/issues/14>`__) where entries would fail to save when a Toggle field was hidden and MySQL was in strict mode.
+- Fixed a bug (`#22 <https://github.com/ExpressionEngine/ExpressionEngine/issues/22>`__) where the JavaScript-based URL title generation did not match the PHP version.
+- Fixed a bug (`#37 <https://github.com/ExpressionEngine/ExpressionEngine/issues/37>`__) where Channel settings could not be saved if the default Channel Form author didn't exist.
+- Fixed a bug (`#36 <https://github.com/ExpressionEngine/ExpressionEngine/issues/36>`__) where deleting multiple statuses would not reset the confirmation modal button state.
+- Fixed a bug (`#29 <https://github.com/ExpressionEngine/ExpressionEngine/issues/29>`__) where curly-braced quantifiers could not be used in regular expression conditionals.
+- Fixed a bug (`#41 <https://github.com/ExpressionEngine/ExpressionEngine/issues/41>`__) where text formatting buttons would not appear in Channel Form.
+- Fixed a bug (`#42 <https://github.com/ExpressionEngine/ExpressionEngine/issues/42>`__) where the ``rte_toolset_id=`` parameter in Channel Form wouldn't work.
+- Fixed a bug (`#31 <https://github.com/ExpressionEngine/ExpressionEngine/issues/31>`__) where the Model service could not eager-load third-party inverse relationships.
+- Fixed a bug (`#11 <https://github.com/ExpressionEngine/ExpressionEngine/pull/11>`__) where HasAndBelongstoMany relationships wouldn't work properly.
+- Fixed a bug in the installer where a MySQL error could occur in update 4.0.1 if the layout model was used.
+
 Version 5.0.1
 -------------
 
 Release Date: November 18, 2018
 
-- Fixed a bug where non-repo downloads could not install or update via admin.php.
+- Fixed a bug (`#5 <https://github.com/ExpressionEngine/ExpressionEngine/issues/5>`__) where non-repo downloads could not install or update via admin.php.
 
 Version 5.0.0
 -------------
