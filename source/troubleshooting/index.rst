@@ -45,6 +45,7 @@ Control Panel
 - :doc:`Categories do not appear as filter options in the Edit tab <control_panel/categories_not_appearing_in_edit_tab>`
 - :doc:`Why do I have to re-login to the CP if I'm logged in to the site <control_panel/site_and_cp_login_separate>`
 - :doc:`I can not log into the Control Panel on my Windows-based server <control_panel/no_login_on_windows_server>`
+- :doc:`I've Lost or Forgotten My Username or Password and Can't Log In <control_panel/lost_password_cant_log_in>`
 
 ********************
 Channels and Entries
