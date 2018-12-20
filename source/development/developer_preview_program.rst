@@ -114,7 +114,6 @@ and encourage them to join!
 - Dom Stubbs
 - Dorothy Molloy (Climbing Turn)
 - Doug Black, Jr. (American Bible Society)
-- Doug Thwaites
 - Douglas Green
 - Eli Van Zoeren
 - Elliot Lewis (no two the same)
