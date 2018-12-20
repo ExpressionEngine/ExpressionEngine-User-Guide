@@ -19,8 +19,8 @@ Release Date: ?
 
 - Added PHP 7.3 compatibility
 - Added drag and drop uploading to the File field
-- Added a new fieldtype, File Grid, for uploading multiple files at once and populating them into a Grid
-- Fixed a bug (`#34 <https://github.com/ExpressionEngine/ExpressionEngine/issues/34>`__) where `.app-about-info` would sometimes appear under some content elements.
+- Added a new fieldtype, :doc:`File Grid </fieldtypes/file_grid>`, for uploading multiple files at once and populating them into a Grid
+- Fixed a bug (`#34 <https://github.com/ExpressionEngine/ExpressionEngine/issues/34>`__) where ``.app-about-info`` would sometimes appear under some content elements.
 
 Version 5.0.2
 -------------
