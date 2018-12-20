@@ -15,12 +15,15 @@ ExpressionEngine v5 Change Log
 Version 5.1.0
 -------------
 
-Release Date: ?
+Release Date: December 20, 2018
 
+- *Security:* Fixed a privilege escalation bug for members with member administration access.
 - Added PHP 7.3 compatibility
 - File fields now support drag and drop uploading!
 - Brand new fieldtype, :doc:`File Grid </fieldtypes/file_grid>`, for uploading multiple files at once and populating them into a Grid. Perfect for product photos and galleries!
 - Fixed a bug (`#34 <https://github.com/ExpressionEngine/ExpressionEngine/issues/34>`__) where ``.app-about-info`` would sometimes appear under some content elements.
+- Fixed a possible undefined index error in the members section of the control panel.
+- Fixed some typos in some field descriptions.
 
 Version 5.0.2
 -------------
