@@ -23,7 +23,7 @@ that easily integrates ExpressionEngine with PayPal.
 - Integrates with ExpressionEngine's Channel Module to define items for
   sale
 - Tracks purchases automatically utilizing PayPal's `Instant Payment
-  Notification <https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&content_ID=developer/e_howto_admin_IPNIntro>`__
+  Notification <https://developer.paypal.com/docs/classic/ipn/integration-guide/IPNIntro/>`__
   (external link)
 - Lets you create any number of customized email notification templates
   for both the administrator and customers, even a different
