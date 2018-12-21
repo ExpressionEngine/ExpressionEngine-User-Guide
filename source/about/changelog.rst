@@ -5,6 +5,14 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.3.7
+-------------
+
+Release Date: December 21, 2018
+
+- *Security:* Fixed a privilege escalation bug for members with member administration access.
+- Fixed a bug in the installer where a MySQL error could occur in update 4.0.1 if the layout model was used.
+
 Version 4.3.6
 -------------
 
