@@ -12,6 +12,14 @@ ExpressionEngine v5 Change Log
    :local:
    :depth: 1
 
+Version 5.1.1
+-------------
+
+Release Date: December 21, 2018
+
+- Fixed a bug where File Grid may not work in a Fluid field.
+- Fixed a bug (`#60 <https://github.com/ExpressionEngine/ExpressionEngine/issues/60>`__) where the one-click updater could not back up database tables with a custom prefix.
+
 Version 5.1.0
 -------------
 
