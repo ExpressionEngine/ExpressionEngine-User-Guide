@@ -100,7 +100,7 @@ These are identical to the ones in the Blacklist:
 Downloading ExpressionEngine.com Lists
 --------------------------------------
 
-EllisLab, Inc. maintains its own Blacklist and Whitelist, which are
+EllisLab Corp. maintains its own Blacklist and Whitelist, which are
 available for licensed purchasers of ExpressionEngine. These lists are
 maintained with the help of our users. If you have an IP address, user
 agent, or URL that you believe should be added to the Blacklist or

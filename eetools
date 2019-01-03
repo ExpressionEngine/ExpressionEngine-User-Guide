@@ -2,7 +2,7 @@
 
 # Open a prompt on the Docker container to fiddle
 if [ "$1" == "prompt" ]; then
-	docker run -t -i -p 8080:80 -v $(pwd):/app ellislab/sphinx /bin/bash
+	docker run -t -i -v $(pwd):/app ellislab/sphinx /bin/bash
 elif [ "$1" == "createcontainer" ]; then
 	docker build -t ellislab/sphinx .
 elif [ "$1" == "make" ]; then
