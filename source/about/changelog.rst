@@ -5,6 +5,25 @@ ExpressionEngine v4 Change Log
    :local:
    :depth: 1
 
+Version 4.3.8
+-------------
+
+Release Date: January 3, 2019
+
+- **Security** 🔒
+
+  - Fixed a potential SQL injection vulnerability.
+  - Fixed a potential remote code execution vulnerability in PHP 5.
+
+- **Bug Fixes** 🐛
+
+  - Fixed a bug where the Member Auth module could run queries on Forum tables if Forum was not installed.
+  - Fixed a bug where stringified numbers could be inserted into some queries.
+
+- **Developers** 💻
+
+  + Added the :doc:`/development/services/cookie`
+
 Version 4.3.7
 -------------
 
