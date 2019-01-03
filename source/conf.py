@@ -3,7 +3,7 @@
 # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 #
 #  @link      https://expressionengine.com/
-#  @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+#  @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
 #  @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 #
 
@@ -61,7 +61,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'ExpressionEngine'
-copyright = u'&copy;2002&ndash;2018 <a href="https://ellislab.com/" rel="external">EllisLab, Inc.</a>'
+copyright = u'&copy;2002&ndash;2019 <a href="https://ellislab.com/" rel="external">EllisLab Corp.</a>'
 project_url = u'https://expressionengine.com'
 
 
@@ -215,7 +215,7 @@ htmlhelp_basename = 'ExpressionEnginedoc'
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
     ('index', 'ExpressionEngine.tex', u'ExpressionEngine Documentation',
-        u'EllisLab, Inc.', 'manual'),
+        u'EllisLab Corp.', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -248,7 +248,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'expressionengine', u'ExpressionEngine Documentation',
-     [u'EllisLab, Inc.'], 1)
+     [u'EllisLab Corp.'], 1)
 ]
 
 
@@ -256,9 +256,9 @@ man_pages = [
 
 # Bibliographic Dublin Core info.
 epub_title = u'ExpressionEngine'
-epub_author = u'EllisLab, Inc.'
-epub_publisher = u'EllisLab, Inc.'
-epub_copyright = u'2002-2017, EllisLab, Inc.'
+epub_author = u'EllisLab Corp.'
+epub_publisher = u'EllisLab Corp.'
+epub_copyright = u'2002-2017, EllisLab Corp.'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.

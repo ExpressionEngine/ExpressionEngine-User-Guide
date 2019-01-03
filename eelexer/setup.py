@@ -13,7 +13,7 @@ setup(
     name         = 'pyeelexer',
     version      = '0.2.3',
     description  = __doc__,
-    author       = "EllisLab, Inc.",
+    author       = "EllisLab Corp.",
     packages     = ['eelexer'],
     entry_points = entry_points
 )
