@@ -2,11 +2,11 @@
 
 /*
 =====================================================
-ExpressionEngine - by EllisLab, Inc.
+ExpressionEngine - by EllisLab Corp.
 -----------------------------------------------------
 http://expressionengine.com/
 -----------------------------------------------------
-Copyright (c) 2003 - 2007 EllisLab, Inc.
+Copyright (c) 2003 - 2007 EllisLab Corp.
 =====================================================
 THIS IS COPYRIGHTED SOFTWARE
 PLEASE READ THE LICENSE AGREEMENT

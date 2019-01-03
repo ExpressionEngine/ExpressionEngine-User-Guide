@@ -2,7 +2,7 @@
    # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
    #
    # @link      https://expressionengine.com/
-   # @copyright Copyright (c) 2003-2018, EllisLab, Inc. (https://ellislab.com)
+   # @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
    # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 
 Black/White List
@@ -105,7 +105,7 @@ These are identical to the ones in the Blacklist:
 Downloading ExpressionEngine.com Lists
 --------------------------------------
 
-EllisLab, Inc. maintains its own Blacklist and Whitelist. These lists are
+EllisLab Corp. maintains its own Blacklist and Whitelist. These lists are
 maintained with the help of our users. If you have an IP address, user
 agent, or URL that you believe should be added to the Blacklist or
 Whitelist, please email blacklist@ellislab.com.
