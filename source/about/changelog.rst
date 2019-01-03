@@ -12,6 +12,27 @@ ExpressionEngine v5 Change Log
    :local:
    :depth: 1
 
+Version 5.1.2
+-------------
+
+Release Date: January 3, 2019
+
+- **Security** 🔒
+
+  - Fixed a potential SQL injection vulnerability.
+  - Fixed a potential remote code execution vulnerability in PHP 5.
+
+- **Bug Fixes** 🐛
+
+  - Fixed a bug where the Member Auth module could run queries on Forum tables if Forum was not installed.
+  - Fixed a bug where stringified numbers could be inserted into some queries.
+  - Fixed a bug (`#70 <https://github.com/ExpressionEngine/ExpressionEngine/issues/70>`__) where a template rendered on a POST submission could break Channel Form behavior on that template.
+  - Fixed a bug (`#74 <https://github.com/ExpressionEngine/ExpressionEngine/issues/74>`__) where File Grid might not parse when used inside a Fluid field.
+
+- **Developers** 💻
+
+  + Added the :doc:`/development/services/cookie`
+
 Version 5.1.1
 -------------
 
