@@ -195,6 +195,22 @@ this_field_name
 
 Alias of ``:current_field_name``.
 
+switch
+------
+
+When a Grid Field is inside a Fluid Field loop, the ``{switch}`` syntax is a little different when using this variable in a stand-alone :doc:`Grid Field </fieldtypes/grid>`.
+
+::
+
+  {fluid_field:grid_field}
+    {content}
+      <div class="{content:switch='odd|even'}">
+        ...
+      </div>
+    {/content}
+  {/fluid_field:grid_field}
+
+
 this_fieldtype
 --------------
 
