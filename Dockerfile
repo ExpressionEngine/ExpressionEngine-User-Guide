@@ -5,10 +5,9 @@ FROM ubuntu:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get install -y -q python-setuptools python-dev texlive texlive-latex-extra pandoc build-essential
-RUN easy_install -U sphinx
-RUN easy_install -U sphinxcontrib-phpdomain
-RUN easy_install -U pygments-markdown-lexer
+RUN apt-get update && apt-get install -y -q python-setuptools python-dev texlive texlive-latex-extra pandoc build-essential python3-sphinx python-pip
+RUN pip install -U sphinxcontrib-phpdomain
+RUN pip install pygments-markdown-lexer
 
 COPY eelexer /usr/local/eelexer
 RUN cd /usr/local/eelexer && python setup.py install
