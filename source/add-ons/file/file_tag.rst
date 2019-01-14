@@ -34,8 +34,8 @@ Here is a simple example of a possible usage of this tag::
       {category_image} - <a href="{path='about/test'}">{category_name}</a><br>
     {/categories}
 
-    {if medium_file_url}
-      <p><a href="{id_path='gallery/comments'}"><img src="{medium_file_url}" width="{medium_width}" height="{medium_height}" alt="{title}" title="{title}" /></a></p>
+    {if url:small}
+      <p><a href="{id_path='gallery/comments'}"><img src="{url:small}" width="{width:small}" height="{width:small}" alt="{title}" title="{title}" /></a></p>
     {/if}
 
     {description}
