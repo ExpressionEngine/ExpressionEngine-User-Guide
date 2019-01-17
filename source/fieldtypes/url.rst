@@ -25,6 +25,7 @@ Which URL Schemes the content author is allowed to use in this URL field. Availa
 - ``http://``
 - ``https://``
 - ``//`` (`protocol-relative URLs <https://en.wikipedia.org/wiki/Wikipedia:Protocol-relative_URL>`_)
+- ``mailto:``
 - ``ftp://``
 - ``sftp://``
 - ``ssh://``
