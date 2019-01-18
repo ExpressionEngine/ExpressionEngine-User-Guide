@@ -35,7 +35,7 @@ Here is a simple example of a possible usage of this tag::
     {/categories}
 
     {if url:small}
-      <p><a href="{id_path='gallery/comments'}"><img src="{url:small}" width="{width:small}" height="{width:small}" alt="{title}" title="{title}" /></a></p>
+      <p><a href="{id_path='gallery/comments'}"><img src="{url:small}" width="{width:small}" height="{height:small}" alt="{title}" title="{title}" /></a></p>
     {/if}
 
     {description}
