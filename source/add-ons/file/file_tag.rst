@@ -34,11 +34,11 @@ Here is a simple example of a possible usage of this tag::
       {category_image} - <a href="{path='about/test'}">{category_name}</a><br>
     {/categories}
 
-    {if medium_file_url}
-      <p><a href="{id_path='gallery/comments'}"><img src="{medium_file_url}" width="{medium_width}" height="{medium_height}" alt="{title}" title="{title}" /></a></p>
+    {if url:small}
+      <p><a href="{id_path='gallery/comments'}"><img src="{url:small}" width="{width:small}" height="{height:small}" alt="{title}" title="{title}" /></a></p>
     {/if}
 
-    {caption}
+    {description}
   {/exp:file:entries}
 
 Parameters
@@ -470,7 +470,7 @@ second will use "option_two", the third "option_three", the fourth
 The most straightforward use for this would be to alternate colors. It
 could be used like so::
 
-  {exp:file:entries} <div class="{switch="one|two"}"> <h1>{filename}</h1> {caption} </div> {/exp:file:entries}
+  {exp:file:entries} <div class="{switch="one|two"}"> <h1>{filename}</h1> {description} </div> {/exp:file:entries}
 
 The entries would then alternate between <div class="one"> and <div
 class="two">.
