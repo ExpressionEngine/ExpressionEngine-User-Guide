@@ -1,0 +1,159 @@
+/*!
+ * This source file is part of the open source project
+ * ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+ *
+ * @link      https://expressionengine.com/
+ * @copyright Copyright (c) 2003-2019, EllisLab, Inc. (https://ellislab.com)
+ * @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+ */
+
+.sidebar-container {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	top: @header-height-small;
+	bottom: 0;
+	background-color: @light-background;
+	width: 100%;
+	z-index: 30;
+
+	display: none;
+
+	@media @m-tablet {
+		display: block;
+		height: calc(100% - @header-height);
+		top: @header-height;
+		width: @sidebar-width;
+	}
+
+	@media @m-desktop {
+		min-width: @sidebar-width;
+		width: @sidebar-width;
+		width: calc(((100% - 1200px) / 2) + @sidebar-width);
+	}
+}
+
+.sidebar {
+	margin-left: 0;
+	border-right: 1px solid @border;
+
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color: @light-background;
+
+	@media @m-tablet {
+		width: @sidebar-width;
+		float: right;
+	}
+
+	display: flex;
+	flex-direction: column;
+}
+
+.sidebar-toc {
+	overflow-y: scroll;
+	margin: 0 0 1px 0;
+	position: relative;
+}
+
+
+// -------------------------------------------------------------------
+
+.sidebar-search {
+	width: 100%;
+	padding: @p-nm;
+
+	.algolia-autocomplete {
+		width: 100%;
+	}
+}
+
+.search-input {
+	width: 100%;
+	padding: 6px 10px;
+	// font-weight: 300;
+	border-radius: @corner-radius;
+	border: 1px solid @border;
+	outline: none;
+	background: url(./images/search.svg) no-repeat;
+	// background-size: 15px;
+	background-position: right 10px center;
+	transition: border 150ms ease, box-shadow 150ms ease;
+	background-color: #fff;
+}
+.search-input:focus {
+	border: 1px solid @highlight;
+	.light-shadow;
+}
+.search-input::placeholder {
+	color: @light-gray;
+}
+
+.sidebar-sponsor {
+	display: none;
+	padding-top: 20px;
+
+	p {
+		font-weight: bold;
+	}
+
+	img {
+		padding-top: 10px;
+	}
+}
+
+// -------------------------------------------------------------------
+
+
+.sidebar ul {
+	list-style-type: none;
+	.font-accent;
+}
+
+// The first ul
+.sidebar-toc > ul {
+	padding: 0 0 0 @p-nm;
+	margin: 0;
+}
+// All nested lists
+.sidebar-toc li ul {
+	margin: @p-xs 0 0 @p-nm;
+}
+
+// All items
+.sidebar-toc li {
+	margin-bottom: @p-xs;
+	color: @dark-grey;
+}
+
+// First level items
+.sidebar-toc > ul > li {
+	margin: 0 0 10px 0;
+	font-size: 1em;
+}
+.sidebar-toc > ul > li > a {
+	color: @black;
+	font-weight: 500;
+	// .font-accent;
+}
+// Second level items
+.sidebar-toc > li > li {
+	font-size: 0.95em;
+}
+
+// Highlight active elements
+.sidebar-toc li.active > a {
+	color: @highlight;
+	// font-weight: bold;
+}
+.sidebar-toc li a:hover {
+	color: @highlight;
+	cursor: pointer;
+}
+// Bold the current active page
+.sidebar-toc li[data-active-page="true"] > a {
+	font-weight: bold;
+	// border-left: 2px solid @highlight;
+	// padding-left: 10px;
+}

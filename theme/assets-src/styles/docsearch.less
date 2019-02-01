@@ -1,0 +1,131 @@
+/*!
+ * This source file is part of the open source project
+ * ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+ *
+ * @link      https://expressionengine.com/
+ * @copyright Copyright (c) 2003-2019, EllisLab, Inc. (https://ellislab.com)
+ * @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+ */
+
+.algolia-autocomplete.algolia-autocomplete-left .ds-dropdown-menu {
+	right: 0 !important;
+
+	@media @m-tablet {
+		right: inherit !important;
+	}
+}
+
+
+.algolia-autocomplete {
+
+	// hovered background
+	.ds-suggestion.ds-cursor .algolia-docsearch-suggestion--content {
+		background-color: fadeout(@highlight, 95%) !important;
+	}
+	.algolia-docsearch-suggestion--highlight {
+		color: @highlight;
+		background-color: fadeout(@highlight, 90%);
+	}
+
+
+	.ds-dropdown-menu {
+
+
+		.large-shadow;
+		border: 1px solid @border;
+		padding: 12px 0;
+		background-color: #fff;
+		margin-top: 12px;
+
+		right: 0 !important;
+		min-width: 0;
+
+		@media @m-tablet {
+			min-width: 500px;
+			right: inherit !important;
+		}
+
+		[class^="ds-dataset-"] {
+			padding: 0;
+			overflow: visible;
+			background-color: transparent;
+			border: 0;
+		}
+
+		.ds-suggestions {
+			margin-top: 0;
+		}
+	}
+
+	.algolia-docsearch-suggestion {
+		padding: 0;
+	}
+
+
+	.algolia-docsearch-suggestion--subcategory-column {
+		display: none !important;
+	}
+	.algolia-docsearch-suggestion--content {
+		float: none !important;
+		width: 100% !important;
+		padding-left: 18px !important;
+		padding-right: 18px !important;
+	}
+	.algolia-docsearch-suggestion--content:before {
+		display: none !important;
+	}
+
+
+	.algolia-docsearch-suggestion--wrapper {
+		// padding-left: 20px;
+		// padding-right: 20px;
+		padding: 0;
+	}
+
+	.algolia-docsearch-suggestion--category-header {
+		padding: 8px 14px;
+		margin-top: 0;
+		font-size: 16px;
+		color: @dark-grey;
+		border: none;
+	}
+
+
+	.algolia-docsearch-footer {
+		border-top: 1px solid @border;
+		width: 100%;
+		float: none;
+		font-size: 14px;
+		text-align: right;
+		height: auto;
+		line-height: 1;
+		padding: 10px 14px 0;
+		color: @light-gray;
+	}
+	.algolia-docsearch-footer--logo {
+		background: none;
+		font-size: 14px;
+		display: inline;
+		overflow: visible;
+		color: inherit;
+		text-indent: 0;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.ds-suggestion {
+		&:not(:first-child) {
+			.algolia-docsearch-suggestion--category-header {
+				padding-top: 10px !important;
+				margin-top: 10px !important;
+				border-top: 1px solid @border;
+			}
+		}
+
+		.algolia-docsearch-suggestion--subcategory-column {
+
+		}
+	}
+}

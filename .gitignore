@@ -1,13 +1,6 @@
-#ignore files created by setup.py for the ExpressionEngine Pygments Lexer
-*.egg-info/
-dist/
-
-
-#MacOS system files
 .DS_Store
 Thumbs.db
 
-#build dir shouldn't be revisioned
 build/
 
 node_modules/

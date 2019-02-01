@@ -1,9 +1,0 @@
-version: '2'
-services:
-  sphinx:
-    image: ellislab/sphinx
-    volumes:
-      - .:/docs/
-    entrypoint:
-      - make
-      - html

@@ -1,0 +1,342 @@
+/*!
+ * This source file is part of the open source project
+ * ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+ *
+ * @link      https://expressionengine.com/
+ * @copyright Copyright (c) 2003-2019, EllisLab, Inc. (https://ellislab.com)
+ * @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+ */
+
+.docs-content-wrapper {
+	margin: 0 auto 0 auto;
+	padding-top: @header-height-small;
+	height: 100%;
+	min-height: 100vh;
+	width: 100%;
+	max-width: 1200px;
+
+	.content {
+		padding: @p-nm * @p-y @p-nm 0 @p-nm;
+	}
+
+	@media @m-tablet {
+		padding-top: @header-height;
+		padding-left: @sidebar-width;
+
+		.content {
+			padding: @p-lg * @p-y @p-lg 0 @p-lg;
+		}
+	}
+}
+
+
+.docs-content-wrapper .content {
+
+	@p-sm-x: 16px;
+
+	// -------------------------------------------------------------------
+
+	.docs-footer {
+		margin-top: @p-lg;
+		border-top: 1px solid @border;
+		padding: @p-lg 0 @p-lg 0;
+
+		.copyright {
+			color: @light-gray;
+			margin: 0;
+			font-size: small;
+
+			a {
+				color: inherit;
+
+				&:hover {
+					color: @highlight;
+				}
+			}
+		}
+	}
+
+	// -------------------------------------------------------------------
+
+	h1, h2, h3, h4, h5, h6 {
+		.font-accent;
+		margin: @p-lg 0 @p-nm 0;
+		font-weight: inherit;
+		font-weight: 400;
+		line-height: 1.2;
+
+		a {
+			color: inherit;
+		}
+
+		code {
+			.font-monospaced;
+			font-weight: 600;
+			font-size: 0.9em;
+			background: none;
+			color: inherit;
+			padding: 0;
+			// padding: .25rem .5rem;
+		}
+
+		.anchor {
+			display: block;
+			position: relative;
+			top: -150px;
+			visibility: hidden;
+		}
+	}
+
+	h1 {
+		color: @highlight;
+		margin-top: 0;
+	}
+
+	h2 {
+		color: @highlight;
+		padding-top: @p-lg;
+		font-weight: 500;
+		border-top: 1px solid @border;
+		position: relative;
+	}
+
+	h3 {
+		font-weight: 500;
+		margin: @p-lg 0 @p-nm 0;
+	}
+
+	h4, h5, h6 {
+		margin-top: @p-nm;
+	}
+
+	// -------------------------------------------------------------------
+
+	p {
+		margin-bottom: @p-nm;
+	}
+
+	small, small code {
+		font-size: 0.85em !important;
+	}
+
+	div {
+		margin-bottom: @p-nm;
+	}
+
+	// -------------------------------------------------------------------
+
+	a {
+		color: @highlight;
+	}
+	a:hover {
+		border-bottom: 1px dotted @highlight;
+	}
+
+	// -------------------------------------------------------------------
+
+	img {
+		border-radius: @corner-radius;
+		max-width: 100%;
+	}
+
+	// -------------------------------------------------------------------
+
+	code {
+		border-radius: @corner-radius;
+		padding: 2px 5px;
+		padding: .25rem .5rem;
+		padding: 3px 6px;
+		color: @highlight;
+		word-wrap: break-word;
+		font-size: 0.9em;
+		// border: 1px solid E3E8EF;
+		background-color: darken(@light-background, 1%);
+		// background: @light-background;
+		.font-monospaced;
+		font-weight: inherit;
+	}
+
+	pre {
+		padding: @p-sm @p-sm-x;
+		padding: @p-nm * @p-y @p-nm;
+		margin-bottom: @p-nm;
+		overflow-x: scroll;
+		border-radius: @corner-radius;
+		position: relative;
+		background: darken(@light-background, 1%);
+		// background: @light-background;
+
+		// border: 1px solid #E3E8EF;
+		.font-monospaced;
+	}
+
+	pre code {
+		padding: 0;
+		border: none;
+		color: inherit;
+		word-wrap: initial;
+		background: transparent;
+	}
+
+	// -------------------------------------------------------------------
+
+	.table-wrapper {
+		overflow-x: auto;
+		max-width: 100%;
+		border: 1px solid @border;
+		margin-bottom: @p-nm;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.8em;
+
+		@media @m-tablet {
+			font-size: 0.95em;
+		}
+
+		td, th {
+			border-bottom: 1px solid @border;
+			border-right: 1px solid @border;
+			padding: @p-sm @p-sm-x;
+
+			&:last-child {
+				border-right: none;
+			}
+		}
+
+		th {
+			text-align: left;
+			background-color: @light-background;
+		}
+
+		tr:last-child td {
+			border-bottom: none;
+		}
+	}
+
+	// -------------------------------------------------------------------
+
+	ul, ol {
+		list-style-position: outside;
+		margin: 0 0 @p-nm @p-nm;
+		padding: 0;
+
+		ul, ol {
+			margin-top: @p-sm;
+			margin-bottom: 0;
+		}
+	}
+
+	li {
+		margin-bottom: @p-sm;
+	}
+
+	// -------------------------------------------------------------------
+
+	blockquote {
+		 border-left: 4px solid @border;
+		 margin: 0;
+		 padding: 0 0 0 @p-nm;
+	}
+
+	// -------------------------------------------------------------------
+
+	hr {
+		border: none;
+		height: 1px;
+		border-top: 1px solid @border;
+		margin: @p-lg 0;
+	}
+
+	// -------------------------------------------------------------------
+
+	.tip, .warn, .note {
+		padding: @p-sm * @p-y @p-sm;
+		padding: @p-nm * @p-y @p-nm;
+
+		code {
+			border: none;
+		}
+	}
+
+	.tip {
+		background-color: @tip-bg-color;
+		border: 1px solid @tip-ac-color;
+		color: @tip-fg-color;
+	}
+	.note {
+		background: @note-bg-color;
+		border: 1px solid @note-ac-color;
+		color: @note-fg-color;
+	}
+	.warn {
+		background-color: @warn-bg-color;
+		color: @warn-fg-color;
+		border: 1px solid @warn-ac-color;
+	}
+
+	// -------------------------------------------------------------------
+
+	.video-wrapper {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 25px;
+		height: 0;
+	}
+
+	.video-wrapper iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	// -------------------------------------------------------------------
+
+	.table-of-contents {
+		margin-bottom: @p-nm;
+
+		& > ul {
+			list-style-type: none;
+			margin: @p-nm 0 0 @p-nm;
+
+			li {
+				margin-bottom: 5px;
+
+				code {
+					padding: 0;
+					border: none;
+					color: inherit;
+					background: transparent;
+				}
+
+				&::before {
+					content: '# ';
+					color: #C1D5F2;
+					font-weight: 100 !important;
+				}
+
+				ul {
+					list-style-type: none;
+					margin: 5px 0 0 @p-nm;
+				}
+			}
+		}
+
+		.toc-overview-button {
+			display: inline-block;
+			// background-color: @light-background;
+			border: 1px solid @highlight;
+			border-radius: @corner-radius;
+			color: @highlight;
+			font-weight: 500;
+			padding: 5px 14px;
+			cursor: pointer;
+		}
+	}
+
+	// -------------------------------------------------------------------
+}

@@ -1,0 +1,141 @@
+/*!
+ * This source file is part of the open source project
+ * ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+ *
+ * @link      https://expressionengine.com/
+ * @copyright Copyright (c) 2003-2019, EllisLab, Inc. (https://ellislab.com)
+ * @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+ */
+
+
+.button {
+	display: inline-block;
+	border-radius: @corner-radius;
+	// background-color: @highlight;
+	border: 1px solid @highlight;
+	color: @highlight !important;
+	padding: 10px 14px;
+	padding: 8px 14px;
+}
+a.button {
+	&:hover {
+		border: 1px solid @highlight !important;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+// -------------------------------------------------------------------
+
+// Box Shadows
+.light-shadow {
+	box-shadow: 0 1px 10px fadeout(@highlight, 80%);
+}
+.large-shadow {
+	box-shadow: 0 4px 14px fadeout(darken(@highlight, 40%), 80%);
+}
+
+// -------------------------------------------------------------------
+
+// Icon down arrow
+.i-arrow-down {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 6px;
+	vertical-align: middle;
+	border-top: 4px solid;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}
+
+// -------------------------------------------------------------------
+
+.dropdown {
+	position: relative;
+}
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	z-index: 50;
+	left: 0;
+}
+.dropdown-menu-inner {
+	background-color: #fff;
+	margin-top: 10px;
+	border: 1px solid @border;
+	border-radius: @corner-radius;
+	min-width: 60px;
+	.large-shadow;
+}
+.dropdown-menu a {
+	color: @black !important;
+	padding: 6px 10px;
+	text-decoration: none;
+	display: block;
+
+	&.active {
+		font-weight: bold;
+	}
+
+	&:hover {
+		color: @highlight !important;
+	}
+}
+.dropdown:hover, .dropdown.show {
+	.dropdown-menu {
+		display: block;
+	}
+}
+
+// -------------------------------------------------------------------
+
+.hamburger {
+	height: 16px;
+	width: 24px;
+	min-width: 24px;
+	position: relative;
+
+	span {
+		width: 100%;
+		height: 2px;
+		top: 50%;
+		margin-top: -1px;
+		position: absolute;
+		border-radius: 1px;
+		background-color: #fff;
+		transition: all 200ms ease;
+
+		&:first-child {
+			top: 0;
+			margin-top: 0;
+		}
+
+		&:last-child {
+			top: auto;
+			margin-top: 0;
+			bottom: 0;
+		}
+	}
+
+	&.close span {
+		&:first-child {
+			top: 50%;
+			margin-top: -1;
+			transform: rotate(45deg);
+		}
+
+		&:nth-child(2) {
+			transform: scale(1.6);
+			opacity: 0;
+		}
+
+		&:last-child {
+			top: 50%;
+			margin-top: -1;
+			transform: rotate(135deg);
+		}
+	}
+}
