@@ -22,4 +22,4 @@ Please read the [style guide](https://docs.expressionengine.com/latest/style-gui
 
 ## Reporting Issues
 
-Want to help but not a little daunted by the idea of making a pull request? We still want to hear from you. You can report errors in the documentation as [issues in the github repo](https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/issues).  Just remember, the more detailed the report, the more likely someone will be able to make improvements.
+Want to help but a little daunted by the idea of making a pull request? We still want to hear from you. You can report errors in the documentation as [issues in the github repo](https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/issues).  Just remember, the more detailed the report, the more likely someone will be able to make improvements.
