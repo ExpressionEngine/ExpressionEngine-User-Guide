@@ -484,7 +484,7 @@
               href: development/extension-hooks/cp/login.md
             - name: Members Controller
               href: development/extension-hooks/cp/members.md
-            - name: Control Panel Men
+            - name: Control Panel Menu
               href: development/extension-hooks/cp/menu.md
             - name: My Account Controller
               href: development/extension-hooks/cp/myaccount.md
