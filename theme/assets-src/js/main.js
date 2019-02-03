@@ -205,7 +205,7 @@ function scrollActiveTocLinkIntoView() {
 		}
 
 		var item = e.currentTarget;
-		var itemLink = items.querySelector('a');
+		var itemLink = item.querySelector('a');
 
 		// Don't close the item is it's open and the user is not clicking the item head link
 		if (e.target != item && e.target != itemLink && item.className == 'active') {
