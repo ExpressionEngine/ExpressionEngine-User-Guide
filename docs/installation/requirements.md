@@ -44,7 +44,7 @@ Thanks!
 
 ## Control Panel Browser Requirements
 
-ExpressionEngine's Control Panel targets compatibility with thefinal-release versions of the web browsers listed here, so it'simportant to keep your browser up to date. These requirements do notapply to your website, which **you are 100% in control of**, justExpressionEngine's control panel.
+ExpressionEngine's Control Panel targets compatibility with the final-release versions of the web browsers listed here, so it's important to keep your browser up to date. These requirements do not apply to your website, which **you are 100% in control of**, just ExpressionEngine's control panel.
 
 - Chrome
 - Safari
