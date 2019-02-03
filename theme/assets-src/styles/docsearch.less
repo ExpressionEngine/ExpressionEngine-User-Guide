@@ -29,8 +29,6 @@
 
 
 	.ds-dropdown-menu {
-
-
 		.large-shadow;
 		border: 1px solid @border;
 		padding: 12px 0;
@@ -116,16 +114,16 @@
 	}
 
 	.ds-suggestion {
+		.algolia-docsearch-suggestion--category-header {
+			padding-top: 0 !important;
+		}
+
 		&:not(:first-child) {
 			.algolia-docsearch-suggestion--category-header {
 				padding-top: 10px !important;
 				margin-top: 10px !important;
 				border-top: 1px solid @border;
 			}
-		}
-
-		.algolia-docsearch-suggestion--subcategory-column {
-
 		}
 	}
 }

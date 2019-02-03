@@ -14,6 +14,8 @@
 
 		<title>{{page_title}} — ExpressionEngine {{current_version}} Documentation</title>
 
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+
 		<link rel="stylesheet" href="{{root_dir}}_assets/default.min.css">
 
 		<!-- Favicons -->
@@ -66,10 +68,7 @@
 		<div class="sidebar-container">
 			<div class="sidebar">
 				<div class="sidebar-search">
-					<form action="https://www.google.com/search" method="get">
-						<input type="hidden" name="q" value="site:https://docs.expressionengine.com/latest/">
-						<input type="text" class="search-input" id="docsearch-input" name="q" value="" placeholder="Search">
-					</form>
+				<input type="text" class="search-input" id="docsearch-input" name="search" placeholder="Search">
 					<!-- <div class="sidebar-sponsor">
 						<p>Sponsored By:</p><img src="" alt="">
 					</div> -->
@@ -92,6 +91,17 @@
 				</div>
 			</div>
 		</section>
+
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+		<script type="text/javascript">
+			docsearch({
+				apiKey: 'ba20cc61ab2d8a0148041c98eeddd9c6',
+				indexName: 'expressionengine',
+				inputSelector: '#docsearch-input',
+				algoliaOptions: { 'facetFilters': ["version:latest"] },
+				debug: false
+			});
+		</script>
 
 		<script src="{{root_dir}}_assets/main.min.js"></script>
 	</body>
