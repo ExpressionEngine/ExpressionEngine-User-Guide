@@ -62,7 +62,7 @@ The &lt;password&gt; tag has a special attribute, type. This allows you to provi
 
     <password type="text">pa55w0id</password>
 
-"text" type passwords are plain text, unencrypted passwords. Whey emporting members from an XML file, ExpressionEngine will automatically encrypt "text" type passwords for you before inserting them into the database. This allows you to keep existing passwords when importing member data from a third party application that does not store encrypted passwords.
+"text" type passwords are plain text, unencrypted passwords. When importing members from an XML file, ExpressionEngine will automatically encrypt "text" type passwords for you before inserting them into the database. This allows you to keep existing passwords when importing member data from a third party application that does not store encrypted passwords.
 
 #### "md5"
 
