@@ -63,8 +63,8 @@ It's encouraged to use a simplified title for toc items (not the pages themselve
 ## Page Structure
 
 - h1 = Page Title
-- h2 = Sub-section
-- h3 = Method name, parameter, or smaller section title.
+- h2 = Page Section
+- h3 = Method name, parameter/variable, or sub-section title.
 
 Each page should begin with a heading (h1), followed by (at minimum) an introductory paragraph.
 
