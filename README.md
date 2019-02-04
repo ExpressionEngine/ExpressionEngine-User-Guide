@@ -24,25 +24,11 @@ To dynamically rebuild on any file changes:
 
     npm run watch
 
-To build for production run:
-
-    npm run build
-
 ### Building theme assets
 
 The documentation css and js files are located under `theme/assets-src`.
 
-To build the theme assets:
-
-    npm run buildAssets
-
-To dynamically rebuild the theme assets when a file changes:
-
-    npm run watchAssets
-
-## Editing and Creating Documentation
-
-All of the source files exist under `docs/` and is where you will add new documentation or modify existing documentation. We recommend working from feature branches and making pull requests to the `stability` branch of this repo.
+To build the theme assets, run `npm run buildAssets`. You can also dynamically rebuild the assets when a file changes: `npm run watchAssets`.
 
 ## Contributing
 

@@ -6,6 +6,8 @@ If you're an ExpressionEngine user, then you have something to add. There is alw
 
 ## Contributing to the Documentation
 
+All of the source files exist under `docs/` and is where you will add new documentation or modify existing documentation. We recommend working from feature branches and making pull requests to the `stability` branch of this repo.
+
 Suggesting a change is easy and there is no way you'll mess up the public repo.
 
 Start by [forking the repository](https://help.github.com/articles/fork-a-repo), the new branch you create is the one you'll do your work in.
