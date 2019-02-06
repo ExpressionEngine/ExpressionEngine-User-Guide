@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Duration
+# Duration Fieldtype
 
 Duration is a fieldtype that allows you to store lengths of time. For instance, time results for races, running times of feature films, etc. The site builder can determine whether the publisher is indicating duration in terms of hours, minutes, or seconds. Both the input and output are very flexible.
 

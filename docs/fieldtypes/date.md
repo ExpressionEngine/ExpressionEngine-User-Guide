@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Date
+# Date Fieldtype
 
 The Date field allows for quick entry of dates via the publish form. When the field has focus, a date-picker appears in the form of a calendar where you can select a day to enter into the field.
 

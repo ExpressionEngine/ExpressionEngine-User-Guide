@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Toggle
+# Toggle Fieldtype
 
 Toggle is a fieldtype for storing yes/no or on/off data.
 

@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# URL
+# URL Fieldtype
 
 URL is a fieldtype for storing URLs. This fieldtype is validated for the content author, so that only fully-formed and valid URLs are allowed. The site builder can determine which URL schemes are allowed. URLs are entity-encoded so that they may be used directly in links and other HTML attributes, e.g.:
 

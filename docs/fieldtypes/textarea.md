@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Textarea
+# Textarea Fieldtype
 
 The Textarea is a simple free-form writing space where you can enter text or HTML.
 

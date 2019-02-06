@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Rich Text Editor
+# Rich Text Editor Fieldtype
 
 The Rich Text Editor is like a word processor that allows you to create richly-formatted content without writing any HTML. For example, you can create links, insert images, create bulleted or numbered lists, and a whole lot more.
 

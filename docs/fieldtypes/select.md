@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Checkboxes, Radio Buttons, Select, Multiselect
+# Checkboxes, Radio Buttons, Select, and Multiselect Fieldtypes
 
 [TOC]
 

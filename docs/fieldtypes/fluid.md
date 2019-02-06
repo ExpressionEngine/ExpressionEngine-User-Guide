@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Fluid
+# Fluid Fieldtype
 
 [TOC]
 
