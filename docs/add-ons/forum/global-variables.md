@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Global Variables
+# Discussion Forum Global Variables
 
 Most of the variables used in the forum are specific to their individual templates. Those variables can be found by examining the default themes.
 

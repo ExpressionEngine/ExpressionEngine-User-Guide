@@ -83,7 +83,7 @@
       href: templates/variable.md
     - name: Global Template Variables
       items:
-        - name: Global Variables
+        - name: Single Global Variables
           href: templates/globals/single-variables.md
         - name: Linking to Stylesheets
           href: templates/globals/stylesheet.md
