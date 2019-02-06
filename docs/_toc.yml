@@ -76,7 +76,7 @@
     - name: Embedding Templates
       href: templates/embedding.md
     - name: Template Layouts
-      href: templates/layouts.md      
+      href: templates/layouts.md
     - name: Template Partials
       href: templates/partials.md
     - name: Template Variables
@@ -115,7 +115,7 @@
       href: templates/php.md
     - name: The Template Engine
       href: templates/engine.md
-      
+
 - name: Channels
   items:
     - name: Entries Tag
@@ -364,7 +364,7 @@
           href: control-panel/settings/template.md
         - name: Access Throttling
           href: control-panel/settings/throttling.md
-        - name: URL and Path 
+        - name: URL and Path
           href: control-panel/settings/urls.md
         - name: Word Censorship
           href: control-panel/settings/word-censor.md
@@ -626,12 +626,12 @@
     - name: RTE Tools API
       href: development/rte-tools.md
     - name: Control Panel Javascript
-      items: 
+      items:
         - name: Custom jQuery Events
           href: development/control-panel-js/events.md
         - name: Table Plugin
           href: development/control-panel-js/table.md
-        - name: Rich Text Editor 
+        - name: Rich Text Editor
           href: development/control-panel-js/rich-text-editor.md
         - name: Ranges and Selections
           href: development/control-panel-js/rangesandselections.md
@@ -642,16 +642,16 @@
     - name: JSON Version Feed
       href: development/json-version-feed.md
     - name: Legacy Reference
-      items: 
+      items:
         - name: Common Functions
           href: development/legacy/common-functions.md
         - name: Controllers
           href: development/legacy/controllers.md
         - name: Drivers
-          href: development/legacy/drivers.md 
+          href: development/legacy/drivers.md
         - name: Libraries
           href: development/legacy/libraries/index.md
-          items: 
+          items:
             - name: Creating Libraries
               href: development/legacy/libraries/creating-libraries.md
             - name: Benchmarking Class
@@ -712,7 +712,7 @@
               href: development/legacy/libraries/xmlparser.md
         - name: Database Driver
           href: development/legacy/database/index.md
-          items: 
+          items:
             - name: Active Record
               href: development/legacy/database/active-record.md
             - name: Query Results
