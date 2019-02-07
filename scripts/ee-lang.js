@@ -33,12 +33,17 @@ module.exports = function(hljs) {
 				contains: [
 					{
 						className: 'name',
-						begin: /[a-zA-Z:\.\-_]+/,
+						begin: /[a-zA-Z][a-zA-Z:\.\-_0-9]+/,
+						lexemes: '[a-zA-Z][a-zA-Z0-9_:]*',
+						relevance: 0,
+						keywords: {
+							keyword: 'if if:else if:elseif',
+						},
 						starts: {
 							endsWithParent: true,
 							relevance: 0,
 							keywords: {
-								// keyword: 'and or != ==',
+								keyword: 'and or xor',
 								literal: 'false true null'
 							},
 							contains: [
