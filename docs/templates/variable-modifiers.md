@@ -158,8 +158,8 @@ Output the raw, unparsed content of the variable, for example as stored in the d
 
 Replace text within the content.
 
-    {content:replace find='the cloud' replace='my butt'}
-    {!-- ...enabling you to easily store mass volumes of data in my butt. --}
+    {content:replace find='vegetables' replace='pizza'}
+    {!-- You should eat pizza every day. --}
 
     {full_name:replace find='/(.*?),\s*(.*)/' replace='$2 $1' regex='yes'}
     {!-- John Doe (presuming {full_name} is "Doe, John") --}
