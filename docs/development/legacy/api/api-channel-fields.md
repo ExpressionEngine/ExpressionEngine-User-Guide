@@ -147,7 +147,7 @@ Example Usage:
 | \$field_data | `Array`  | The field settings. Needs the following keys: `group_id`, `site_id`, `field_name`, `field_label`, `field_type`, `field_order`, and also fieldtype-specific settings, e.g. `text_field_text_direction` |
 | Returns      | `String` | The field_id of the updated/created field.                                                                                                                                                            |
 
-This creates a new channel field or updates an existing field. Include a `field_id` in the `$field_data` array to update an existing field, or omit `field_id` to create a new one. :
+This creates a new channel field or updates an existing field. Include a `field_id` in the `$field_data` array to update an existing field, or omit `field_id` to create a new one.
 
     ee()->api_channel_fields->update_field((array) $field_data);
 

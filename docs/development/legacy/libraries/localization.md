@@ -25,7 +25,7 @@ This class is initialized by the system automatically so there is no need to do 
 
 ### property `$now`
 
-To get a Unix timestamp of the current time, access the `now` property in the Localize Class. Using the `now` property rather than PHP's `time()` accounts for the `server_offset` hidden configuration value so the most accurate time can be made available to ExpressionEngine and its add-ons. :
+To get a Unix timestamp of the current time, access the `now` property in the Localize Class. Using the `now` property rather than PHP's `time()` accounts for the `server_offset` hidden configuration value so the most accurate time can be made available to ExpressionEngine and its add-ons.
 
     ee()->localize->now;
 
@@ -64,7 +64,7 @@ Generates a formatted date string based on a given date or the current date:
 | \$localize     | `Boolean` | Boolean of whether the passed date is pre-localized to the current member's timezone (TRUE), or should be treated as GMT (FALSE); or string of PHP timezone the passed date should represent |
 | Returns        | `Integer` | Unix timestamp representing the passed date string.                                                                                                                                          |
 
-Similar to PHP's `strtotime()`, the Localize class provides a way to take a pre-formatted date string, user input for example, and turn it into Unix timestamp for storage in a database. It's important to use our this method instead of `strtotime()` so that the site's or member's localization is taken into account. :
+Similar to PHP's `strtotime()`, the Localize class provides a way to take a pre-formatted date string, user input for example, and turn it into Unix timestamp for storage in a database. It's important to use our this method instead of `strtotime()` so that the site's or member's localization is taken into account.
 
     ee()->localize->string_to_timestamp('2015-10-21 06:30 PM');
     // 1445466600 (Wed, 21 Oct 2015 22:30:00 GMT, localized from America/New_York)
@@ -83,7 +83,7 @@ Similar to PHP's `strtotime()`, the Localize class provides a way to take a pre-
 | \$seconds   | `Boolean` | Whether or not to include seconds, overrides `include_seconds` hidden config                                                                                  |
 | Returns     | `String`  | Human-readable date                                                                                                                                           |
 
-Returns a common human-readable date format conforming to ExpressionEngine's [default time formatting setting](control-panel/settings/general.md). This method is most commonly used to express dates in the control panel. :
+Returns a common human-readable date format conforming to ExpressionEngine's [default time formatting setting](control-panel/settings/general.md). This method is most commonly used to express dates in the control panel.
 
     ee()->localize->human_time();
     // 2013-02-15 03:35 PM

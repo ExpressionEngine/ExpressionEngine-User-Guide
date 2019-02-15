@@ -195,7 +195,7 @@ The number of results to show per page on the search results.
 
 With this parameter you can specify whether or not expired entries will be included in search results. The default behavior is for expired entries to _not_ be included. You may set this parameter to "yes" or "no".
 
-You may also let the user choose by using an Include Expired Entries form field. If you change the form field, you need to be sure to leave the name="show_expired" attribute alone. :
+You may also let the user choose by using an Include Expired Entries form field. If you change the form field, you need to be sure to leave the name="show_expired" attribute alone.
 
     <label for="field_show_expired">Include Expired Entries?</label>
     <select name="show_expired" id="field_show_expired">
@@ -209,7 +209,7 @@ You may also let the user choose by using an Include Expired Entries form field.
 
 With this parameter you can specify whether or not entries with the date set in the future will be included in search results. The default behavior is for future entries to _not_ be included. You may set this parameter to "yes" or "no".
 
-You may also let the user choose by using an Include Future Entries form field. If you change the form field, you need to be sure to leave the name="show_future_entries" attribute alone. :
+You may also let the user choose by using an Include Future Entries form field. If you change the form field, you need to be sure to leave the name="show_future_entries" attribute alone.
 
     <label for="field_show_future_entries">Include Future Entries?</label>
     <select name="show_future_entries" id="field_show_future_entries">

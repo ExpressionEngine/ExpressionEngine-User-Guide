@@ -31,7 +31,7 @@ When dealing with large amounts of data, displaying a single table will almost a
 
 ### Named Columns
 
-For the sake of example, we assume that we have a very bland existing table. In your add-on this will probably be more complex, with potentially thousands of rows coming from the database. :
+For the sake of example, we assume that we have a very bland existing table. In your add-on this will probably be more complex, with potentially thousands of rows coming from the database.
 
     ee()->table->set_heading('Name', 'Color', 'Size');
 
@@ -41,7 +41,7 @@ For the sake of example, we assume that we have a very bland existing table. In 
 
     echo ee()->table->generate();
 
-To start out we need to add some structure to our row and column setup. This will allow us to assign sort and filtering preferences later. Most importantly, we want to get to a point where we can access individual data points in a row through an identifying key. To achieve this goal, we want to name our columns, instead of just specifying headings. Change the first line to use `set_columns()` instead of `set_heading()`. :
+To start out we need to add some structure to our row and column setup. This will allow us to assign sort and filtering preferences later. Most importantly, we want to get to a point where we can access individual data points in a row through an identifying key. To achieve this goal, we want to name our columns, instead of just specifying headings. Change the first line to use `set_columns()` instead of `set_heading()`.
 
     ee()->table->set_columns(array(
         'name'  => array('header' => 'Name'),
@@ -49,7 +49,7 @@ To start out we need to add some structure to our row and column setup. This wil
         'size'  => array('header' => 'Size')
     ));
 
-Let's add this same structure to our data and pass it to _set_data()_ instead of _set_columns()_. :
+Let's add this same structure to our data and pass it to _set_data()_ instead of _set_columns()_.
 
     ee()->table->set_data(array(
         array('name' => 'Fred', 'color' => 'Blue',  'size' => 'Small'),
@@ -63,7 +63,7 @@ Initially this may seem more verbose than the original, but with database result
 
 If we try to add asynchronous elements to this setup, we will quickly run into a lot of boilerplate code to check what data we need to return to the browser, what format it expects, and then a conversion to that format. By moving our data to separate datasource method we can make the Table class do the heavy lifting for us.
 
-Additionally, it lets us keep the sorting, filtering, and pagination logic separate from our main page setup code. A datasource is simply a new method on your current class. This method should return our filtered and sorted data. To allow the Table class to handle our ajax request we need to agree on a return structure. The table class accepts several values in return argument, but for now we will just return the required `rows`. :
+Additionally, it lets us keep the sorting, filtering, and pagination logic separate from our main page setup code. A datasource is simply a new method on your current class. This method should return our filtered and sorted data. To allow the Table class to handle our ajax request we need to agree on a return structure. The table class accepts several values in return argument, but for now we will just return the required `rows`.
 
     function _datasource()
     {
@@ -78,7 +78,7 @@ Additionally, it lets us keep the sorting, filtering, and pagination logic separ
         );
     }
 
-Of course, we need to tell the Table class where to look for the data. So our old `set_data()` and `generate()` calls change into a single pointer to the datasource. :
+Of course, we need to tell the Table class where to look for the data. So our old `set_data()` and `generate()` calls change into a single pointer to the datasource.
 
     $data = ee()->table->datasource('_datasource');
     echo $data['table_html'];
@@ -87,13 +87,13 @@ Remember that our asynchronous calls will stop here, so the Table class has ever
 
 ### Pagination
 
-The real fun begins when we start to add dynamic elements to our table. To show this we will add some fake pagination to our table. This will require a little more work on our datasource. Every datasource receives information about the table's current state in its first parameter. One of the elements this contains is the current page offset. :
+The real fun begins when we start to add dynamic elements to our table. To show this we will add some fake pagination to our table. This will require a little more work on our datasource. Every datasource receives information about the table's current state in its first parameter. One of the elements this contains is the current page offset.
 
     function _datasource($state)
     {
         $offset = $state['offset'];
 
-Let's use that information to cut down our data to just the expected row. We will also return the total rows and some basic configuration that is required by the pagination class. :
+Let's use that information to cut down our data to just the expected row. We will also return the total rows and some basic configuration that is required by the pagination class.
 
     return array(
         'rows' => array_slice($rows, $offset, 1),
@@ -103,7 +103,7 @@ Let's use that information to cut down our data to just the expected row. We wil
         ),
     );
 
-Lastly, our pagination html will be added in the same way that we received our table html, so let's output that. :
+Lastly, our pagination html will be added in the same way that we received our table html, so let's output that.
 
     $data = ee()->table->datasource('_datasource');
     echo $data['table_html'];
@@ -125,12 +125,12 @@ The sorting preferences will be part of the table state that is passed to our da
         'color' => 'desc'
     )
 
-For a MySql application you would simply add these sorts to Active Record using the `order_by()` method. Since our example deals with arrays, we will make use of PHP's [usort()](http://php.net/usort) method. To do that we will need a custom sorting method, which requires exposing the current sort as a class variable. Add this between your `$rows` array and the datasource return value. :
+For a MySql application you would simply add these sorts to Active Record using the `order_by()` method. Since our example deals with arrays, we will make use of PHP's [usort()](http://php.net/usort) method. To do that we will need a custom sorting method, which requires exposing the current sort as a class variable. Add this between your `$rows` array and the datasource return value.
 
     $this->sort = $state['sort'];
     usort($rows, array($this, '_sort_rows'));
 
-Of course we need an implementation for our `_sort_rows()` method that supports sorting on multiple keys. If this method seems complex, don't worry, most of your applications will make use of Active Record. :
+Of course we need an implementation for our `_sort_rows()` method that supports sorting on multiple keys. If this method seems complex, don't worry, most of your applications will make use of Active Record.
 
     function _sort_rows($a, $b)
     {
@@ -152,7 +152,7 @@ Of course we need an implementation for our `_sort_rows()` method that supports 
       }
     }
 
-If you reload the page, you should now have clickable headers that sort your table dynamically using the information from your datasource. One small detail that would be nice is to have an initial sort on our name column. We can add defaults to our datasource by passing them as a parameter. The default options parameter will be of the same format as the current table state. This keeps the parameters you pass and receive largely consistent. So adding a default sort is as simple as passing a sort order. :
+If you reload the page, you should now have clickable headers that sort your table dynamically using the information from your datasource. One small detail that would be nice is to have an initial sort on our name column. We can add defaults to our datasource by passing them as a parameter. The default options parameter will be of the same format as the current table state. This keeps the parameters you pass and receive largely consistent. So adding a default sort is as simple as passing a sort order.
 
     $defaults = array(
         'sort' => array('name' => 'asc')

@@ -13,7 +13,7 @@
 
 ## Overview
 
-The purpose of this tag is to display general information about the specified Channel as set under `Developer --> Channels`. :
+The purpose of this tag is to display general information about the specified Channel as set under `Developer --> Channels`.
 
     {exp:channel:info channel="news"}
         Channel Name: {channel_title}<br>

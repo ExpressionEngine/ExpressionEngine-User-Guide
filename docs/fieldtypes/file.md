@@ -57,7 +57,7 @@ Will render as:
 
     <a href="https://example.com/dir/filename.ext">filename</a>
 
-It can also be used to create image tags. In this case the filename will be used to create the alt parameter. :
+It can also be used to create image tags. In this case the filename will be used to create the alt parameter.
 
     {news_image wrap="image"}
 

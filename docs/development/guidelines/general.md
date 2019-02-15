@@ -289,7 +289,7 @@ CORRECT:
 
 ## Debugging Code
 
-No debugging code can be left in place for submitted add-ons unless it is commented out, i.e. no `var_dump()`, `print_r()`, `die()`, and `exit()` calls that were used while creating the add-on, unless they are commented out. :
+No debugging code can be left in place for submitted add-ons unless it is commented out, i.e. no `var_dump()`, `print_r()`, `die()`, and `exit()` calls that were used while creating the add-on, unless they are commented out.
 
     // print_r($foo);
 

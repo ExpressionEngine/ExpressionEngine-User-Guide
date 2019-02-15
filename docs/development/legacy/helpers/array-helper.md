@@ -69,7 +69,7 @@ The above will return the following array:
         'height' => NULL
     );
 
-You can set the third parameter to any default value you like. :
+You can set the third parameter to any default value you like.
 
     $my_shape = elements(array('color', 'shape', 'height'), $array, 'foobar');
 

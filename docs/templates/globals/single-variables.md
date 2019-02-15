@@ -95,7 +95,7 @@ This variable allows you to embed one Template within another. Please see the [E
 
     {encode="you@example.com" title="Email Me!"}
 
-This variable will encode the specified email address using javascript and HTML entities to make it more difficult for spam harvesters to grab an email address from your site. If you normally show your email address on your site you are encouraged to use this variable. The title parameter on the variable allows you to specify the text you want to use for the link. :
+This variable will encode the specified email address using javascript and HTML entities to make it more difficult for spam harvesters to grab an email address from your site. If you normally show your email address on your site you are encouraged to use this variable. The title parameter on the variable allows you to specify the text you want to use for the link.
 
     Email Me!
 
@@ -159,11 +159,11 @@ This variable is used the `maxlength` property of password inputs on login forms
 
     {redirect='news/local' status_code="301"}
 
-This variable allows you redirect the visitor to another template. Typically this will mean that you will be utilizing the tag within conditionals. :
+This variable allows you redirect the visitor to another template. Typically this will mean that you will be utilizing the tag within conditionals.
 
     {if segment_3 != 'cookies'}   {redirect='bake/cookies'} {/if}
 
-You can also use the redirect variable to provide tighter control of your URLs, and trigger 404 pages in certain conditions. When you want to display your 404 page, just use "404" for the template. For instance, you might do this on a template group's 'index' template that you do not wish to be displayed if an arbitrary second URL segment exists. :
+You can also use the redirect variable to provide tighter control of your URLs, and trigger 404 pages in certain conditions. When you want to display your 404 page, just use "404" for the template. For instance, you might do this on a template group's 'index' template that you do not wish to be displayed if an arbitrary second URL segment exists.
 
     {if segment_2 != ''}   {redirect="404"} {/if}
 

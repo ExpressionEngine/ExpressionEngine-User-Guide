@@ -76,7 +76,7 @@ You can also use the constant "CURRENT_USER" to show entries from only the curre
 
     username="CURRENT_USER"
 
-This allow each logged-in user to get only their entries. Users who are not logged in won't see anything. Alternatively, you can use the constant "NOT_CURRENT_USER" to show entries **except** from the currently logged in user. :
+This allow each logged-in user to get only their entries. Users who are not logged in won't see anything. Alternatively, you can use the constant "NOT_CURRENT_USER" to show entries **except** from the currently logged in user.
 
     username="NOT_CURRENT_USER"
 

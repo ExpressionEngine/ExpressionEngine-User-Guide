@@ -31,7 +31,7 @@ Defaults to `TRUE`.
 
 Enables/disables parsing of the `{elapsed_time}` and `{memory_usage}` pseudo-variables.
 
-ExpressionEngine will parse those tokens in your output by default. To disable this, set this property to `FALSE` in your controller. :
+ExpressionEngine will parse those tokens in your output by default. To disable this, set this property to `FALSE` in your controller.
 
     ee()->output->parse_exec_vars = FALSE;
 
@@ -56,7 +56,7 @@ NOTE: **Important:** If you do set your output manually, it must be the last thi
 | \$charset   | `String`    | Character set                        |
 | Returns     | `EE_Output` | EE_Output instance (method chaining) |
 
-Permits you to set the mime-type of your page so you can serve JSON data, JPEG's, XML, etc easily. :
+Permits you to set the mime-type of your page so you can serve JSON data, JPEG's, XML, etc easily.
 
     ee()->output
         ->set_content_type('application/json')
@@ -78,7 +78,7 @@ You can also set the character set of the document, by passing a second argument
 | --------- | -------- | ------------------- |
 | Returns   | `String` | Content-Type string |
 
-Returns the Content-Type HTTP header that's currently in use, excluding the character set value. :
+Returns the Content-Type HTTP header that's currently in use, excluding the character set value.
 
     $mime = ee()->output->get_content_type();
 
@@ -120,7 +120,7 @@ Note that data will only be retrievable from this function if it has been previo
 | \$output  | `String`    | Additional output data to append     |
 | Returns   | `EE_Output` | EE_Output instance (method chaining) |
 
-Appends data onto the output string. :
+Appends data onto the output string.
 
     ee()->output->append_output($data);
 
