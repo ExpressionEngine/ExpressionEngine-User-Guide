@@ -165,7 +165,7 @@ The keys for the `HasAndBelongsToMany` relationship work slightly differently fr
       'Editors' => array(
         'model' => 'Member',
         'type' => 'HasAndBelongsToMany',
-        'pivot' => 'my_model_editors'
+        'pivot' => 'my_model_editors',
         'from_key' => 'editor_id',
         'to_key' => 'member_id'
       )
