@@ -39,7 +39,7 @@ Here you set the _server path_ (**not** the URL) to the avatars upload folder. B
 
 The server path might look something like:
 
-    /home/example.com/public\_html/images/avatars/
+    /home/example.com/public_html/images/avatars/
 
 If you do not know what to use for your full server path, contact your Host or server admin. Remember that this upload folder must be writable. See [File Permissions](troubleshooting/general.md#file-permissions) for details.
 
