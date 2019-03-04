@@ -22,7 +22,7 @@ The IP to Nation module enables you to determine which country an IP address is 
 
 To update your installation, simply make sure that you are running the latest version of ExpressionEngine, and visit the `Developer --> Add-Ons --> IP to Nation` page in your Control Panel and click the Update IP Database button. The update may take a few seconds; do not click any links or refresh the page while the auto-update is taking place.
 
-## Banning Counties
+## Banning Countries
 
 To look up the country associated with an IP address, or to ban a country, go to `Developer --> Add-Ons --> IP to Nation` in your Control Panel and enter an IP address in the "Search for an IP address" field.
 
