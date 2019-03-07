@@ -9,6 +9,33 @@
 
 # ExpressionEngine v5 Change Log
 
+## Version 5.2.0
+
+Release Date: March 7, 2019
+
+- Added `:number_format` to [Variable Modifiers](templates/variable-modifiers.md#number_format)
+- Added [`db_backup_row_limit` config](general/system-configuration-overrides.html#db_backup_row_limit) to help the [Database Backup Utility](control-panel/utilities.html#database-backup-utility) complete on limited resources.
+- Improved revision listings ([\#87](https://github.com/ExpressionEngine/ExpressionEngine/pull/87)) for entry and template versioning, to sort in reverse chronological order.
+- Database connection and SQL errors are now hidden if debug levels aren't sufficient.
+- Changed hard-coded system paths to be dynamic in some error messages. ([\#126](https://github.com/ExpressionEngine/ExpressionEngine/pull/126))
+- Fixed a bug ([\#55](https://github.com/ExpressionEngine/ExpressionEngine/issues/55) where fields may parse incorrectly if they shared similar names.
+- Fixed a bug ([\#119](https://github.com/ExpressionEngine/ExpressionEngine/issues/119)) where Simple Commerce subscription end date was not correctly formatted before output.
+- Fixed a bug ([\#114](https://github.com/ExpressionEngine/ExpressionEngine/issues/114)) where dates may be incorrectly localized.
+- Fixed a bug ([\#124](https://github.com/ExpressionEngine/ExpressionEngine/issues/124)) where new Channels could not be saved if there were a large number of authors.
+- Fixed a bug ([\#134](https://github.com/ExpressionEngine/ExpressionEngine/issues/134)) where Channel Entries tag queries could be malformed if searching by custom field contents across multiple sites.
+- Fixed a bug ([\#133](https://github.com/ExpressionEngine/ExpressionEngine/issues/133)) where Channel Entries tag queries could be malformed if ordering by custom field contents across multiple sites.
+- Fixed a bug ([\#138](https://github.com/ExpressionEngine/ExpressionEngine/issues/138)) where the JavaScript date picker bind function ignored its elements parameter.
+- Fixed a bug ([\#128](https://github.com/ExpressionEngine/ExpressionEngine/issues/128)) where upload directories were not alphabetized in File Manager upload button dropdown.
+- Fixed a bug ([\#121](https://github.com/ExpressionEngine/ExpressionEngine/issues/121)) where the date picker would stay overlayed when switching tabs.
+- Fixed a bug ([\#118](https://github.com/ExpressionEngine/ExpressionEngine/issues/118)) where using the Search and Replace utility on templates would escape quotes in the replacement text.
+- Fixed a bug ([\#117](https://github.com/ExpressionEngine/ExpressionEngine/issues/117)) where Relationship fields may not parse if using hypens in the field name and similarly-named fields exist.
+- Fixed a bug ([\#132](https://github.com/ExpressionEngine/ExpressionEngine/issues/132)) where the smiley picker would not work in Fluid or Grid.
+- Fixed a bug ([\#144](https://github.com/ExpressionEngine/ExpressionEngine/issues/144)) where the Save & New button was visible without entry creation permissions.
+- Fixed a bug where POST detection of the Channel Form that fixed [\#70](https://github.com/ExpressionEngine/ExpressionEngine/issues/70) would fail if ACTion IDs were not already inserted.
+- Fixed a bug ([\#145](https://github.com/ExpressionEngine/ExpressionEngine/issues/145)) where Live Preview wouldn't work without entry creation permissions.
+- Fixed a bug ([\#146](https://github.com/ExpressionEngine/ExpressionEngine/issues/146)) where Relationship fields that shared field IDs with Grid Relationship columns may clash.
+- Fixed a bug ([\#141](https://github.com/ExpressionEngine/ExpressionEngine/issues/141)) in the search module where the absolute count variable and the total result tag were incorrect.
+
 ## Version 5.1.3
 
 Release Date: January 24, 2019
