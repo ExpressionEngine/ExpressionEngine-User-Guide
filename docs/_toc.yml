@@ -396,7 +396,7 @@
     - name: New Relic Performance Monitoring
       href: optimization/new-relic.md
 
-- name: Mutiple Sites
+- name: Multiple Sites
   items:
     - name: Overview
       href: msm/overview.md

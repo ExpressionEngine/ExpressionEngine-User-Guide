@@ -94,6 +94,6 @@ Used to add new fields to an already existing tab. Because custom layouts may ha
 | \$channel_id | `Mixed` | Limits the channels affected to a single channel ID or array of channel IDs                                                                                        |
 | Returns      | `Mixed` | `TRUE` if successful, otherwise an array of errors                                                                                                                 |
 
-Used to delete fields without removing the existing tab. This method removes all matching field names from the saved layouts, regardless of the tab they are currently saved in. The \$tabs array takes the same format as the `Layout::add_layout_tabs` method, while `$channel_id` is an optional parameter that limits the update to layouts associated with a given channel and should generally be omitted from third party usage. :
+Used to delete fields without removing the existing tab. This method removes all matching field names from the saved layouts, regardless of the tab they are currently saved in. The \$tabs array takes the same format as the `Layout::add_layout_tabs` method, while `$channel_id` is an optional parameter that limits the update to layouts associated with a given channel and should generally be omitted from third party usage.
 
     ee()->layout->delete_layout_fields($tabs, $channel_id);

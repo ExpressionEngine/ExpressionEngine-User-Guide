@@ -166,7 +166,7 @@ TRUE / FALSE, Whether or not the entry being displayed allows comments. Typicall
 
 ### `{author}`
 
-The comment author's screen name, if a member; otherwise, this variable will display the name submitted with the comment. :
+The comment author's screen name, if a member; otherwise, this variable will display the name submitted with the comment.
 
     <a href="http://example.com/index.php/member/{author_id}/">{author}</a>
 
@@ -459,7 +459,7 @@ The following special conditionals are available:
 
     {if avatar} content {/if}
 
-This special conditional lets you conditionally display content if the current entry's author has an avatar image specified. :
+This special conditional lets you conditionally display content if the current entry's author has an avatar image specified.
 
     {if avatar} <img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar" /> {/if}
 
@@ -515,7 +515,7 @@ NOTE: **Important:** Avoid using Template Caching on any Template containing thi
 
     {if no_results} content {/if}
 
-You may use this conditional for displaying a message in the case when no comments are returned. The contents inside of the conditional will be displayed in cases where there are no results returned for the tag. :
+You may use this conditional for displaying a message in the case when no comments are returned. The contents inside of the conditional will be displayed in cases where there are no results returned for the tag.
 
     {if no_results}  <p>There are no comments for this entry yet.</p>  {/if}
 
@@ -527,7 +527,7 @@ Further, you may specify that another Template be shown in a case when there are
 
     {if signature_image} content {/if}
 
-This special conditional lets you conditionally display content if the current entry's author has a signature image specified. :
+This special conditional lets you conditionally display content if the current entry's author has a signature image specified.
 
     {if signature_image} <img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature" /> {/if}
 

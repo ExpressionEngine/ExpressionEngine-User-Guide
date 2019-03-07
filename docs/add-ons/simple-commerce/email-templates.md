@@ -27,7 +27,7 @@ To edit email templates, click the edit button in the toolbar next to the name o
 
 ## Add / Edit Email Template
 
-Below is an example of a typical administrator purchase notification email. :
+Below is an example of a typical administrator purchase notification email.
 
     Purchase completed!  QTY {quantity} - {item_name}
     Total Payment: {payment_gross}

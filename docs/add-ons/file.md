@@ -383,7 +383,7 @@ You may use this conditional to identify images viewable in the browser ('bmp','
 
     {if no_results} content {/if}
 
-You may use this conditional for displaying a message in the case when no files are returned. The contents inside of the conditional will be displayed in cases where there are no results returned for the tag. :
+You may use this conditional for displaying a message in the case when no files are returned. The contents inside of the conditional will be displayed in cases where there are no results returned for the tag.
 
     {if no_results}  <p>There are no current files to view.</p>  {/if}
 

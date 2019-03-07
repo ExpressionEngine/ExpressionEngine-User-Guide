@@ -102,7 +102,7 @@ By default the email address sending the email will be put in the From header fo
 
     return="email/thanks"
 
-This parameter lets you specify a path (or full URL) where the user should be directed after the form is submitted. Upon submission, the user is presented with a standard "thank you" message and a link. If this parameter is **not** used, then the link will point to the page they were on prior to arriving at the email form. :
+This parameter lets you specify a path (or full URL) where the user should be directed after the form is submitted. Upon submission, the user is presented with a standard "thank you" message and a link. If this parameter is **not** used, then the link will point to the page they were on prior to arriving at the email form.
 
     return="email/thanks"
 
@@ -365,7 +365,7 @@ By default the email address sending the email will be put in the From header fo
 
     return="email/thanks"
 
-This parameter lets you specify a path (or full URL) where the user should be directed after the form is submitted. Upon submission, the user is presented with a standard "thank you" message and a link. If this parameter is **not** used, then the link will point to the page they were on prior to arriving at the email form. :
+This parameter lets you specify a path (or full URL) where the user should be directed after the form is submitted. Upon submission, the user is presented with a standard "thank you" message and a link. If this parameter is **not** used, then the link will point to the page they were on prior to arriving at the email form.
 
     return="email/thanks"
 

@@ -42,6 +42,11 @@ WARN: **Warning:** For the greatest accuracy, the PHP intl extension must be ava
     $duration = ee('Format')->make('Number', 112358)->duration();
     // 31:12:38
 
+### Number Format
+
+    $number = ee('Format')->make('Number, 12345.67890)->number_format();
+    // 12,346
+
 ### Ordinal
 
     $ordinal = ee('Format')->make('Number', 43)->ordinal();
@@ -92,6 +97,15 @@ Formats as a duration using a rule-based format, e.g.: hh:mm:ss, mm:ss, or ss se
 | Parameter | Type     | Description                                |
 | --------- | -------- | ------------------------------------------ |
 | \$options | `Array`  | (string) **locale** (default: en_US.UTF-8) |
+| Returns   | `Object` | A Formatter object                         |
+
+### `number_format($options = [])`
+
+Formats with a number using typical options, e.g. `12,345.68`.
+
+| Parameter | Type     | Description                                |
+| --------- | -------- | ------------------------------------------ |
+| \$options | `Array`  | (int) **decimals** decimal precision (default: 0) <br> (string) **decimal_point** character to use as the decimal separator (default: `.`) <br> (string) **thousands_separator** character to use as the thousands separator (default: `,`)|
 | Returns   | `Object` | A Formatter object                         |
 
 ### `ordinal($options = [])`

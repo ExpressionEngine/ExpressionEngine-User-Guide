@@ -32,28 +32,28 @@ The search results are displayed on the page you specify as the [result_page=](#
 
 ### Keywords
 
-The primary search method is to search by keyword. If you change the form field, you need to be sure to leave the name="keywords" attribute alone. :
+The primary search method is to search by keyword. If you change the form field, you need to be sure to leave the name="keywords" attribute alone.
 
     <label for="keywords">Keywords:</label><br>
     <input type="text" name="keywords" id="keywords" maxlength="100" size="20">
 
 ### Member Name
 
-You may _optionally_ search by member name (the screen name) by adding this field to your form. If you change the form field, you need to be sure to leave the name="member_name" attribute alone. :
+You may _optionally_ search by member name (the screen name) by adding this field to your form. If you change the form field, you need to be sure to leave the name="member_name" attribute alone.
 
     <label for="member_name">Member Name:</label><br>
     <input type="text" name="member_name" id="member_name" maxlength="100" size="40">
 
 ### Exact Matching
 
-If you offer the ability to search by member name, then you may also offer the option of matching partial member names or exact member names. If you change the form field, you need to be sure to leave the name="exact_match" attribute alone. :
+If you offer the ability to search by member name, then you may also offer the option of matching partial member names or exact member names. If you change the form field, you need to be sure to leave the name="exact_match" attribute alone.
 
     <input type="checkbox" name="exact_match" id="exact_match" value="y">
     <label for="exact_match">Match Name Exactly</label>
 
 ### Include Expired Entries
 
-Besides specifying whether expired entries are included in the search using the [show_expired="yes"](#show_expired) parameter, it is also possible to include a form field to let the user choose. If you change the form field, you need to be sure to leave the name="show_expired" attribute alone. :
+Besides specifying whether expired entries are included in the search using the [show_expired="yes"](#show_expired) parameter, it is also possible to include a form field to let the user choose. If you change the form field, you need to be sure to leave the name="show_expired" attribute alone.
 
     <label for="field_show_expired">Include Expired Entries?</label>
     <select name="show_expired" id="field_show_expired">
@@ -63,7 +63,7 @@ Besides specifying whether expired entries are included in the search using the 
 
 ### Include Future Entries
 
-Besides specifying whether future entries are included in the search using the [show_future_entries="yes"](#show_future_entries) parameter, it is also possible to include a form field to let the user choose. If you change the form field, you need to be sure to leave the name="show_future_entries" attribute alone. :
+Besides specifying whether future entries are included in the search using the [show_future_entries="yes"](#show_future_entries) parameter, it is also possible to include a form field to let the user choose. If you change the form field, you need to be sure to leave the name="show_future_entries" attribute alone.
 
     <label for="field_show_future_entries">Include Future Entries?</label>
     <select name="show_future_entries" id="field_show_future_entries">

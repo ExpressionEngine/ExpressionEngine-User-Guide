@@ -17,7 +17,7 @@ lang: php
 
 **class `Logger`**
 
-Load the Logger library. :
+Load the Logger library.
 
     ee()->load->library('logger');
 

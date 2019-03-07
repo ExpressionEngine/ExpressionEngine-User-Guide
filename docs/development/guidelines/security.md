@@ -178,13 +178,13 @@ If you are manually creating templates that send POST requests you must include 
 
 ### Creating Template Forms from Add-ons
 
-If your add-on is creating a form for the template, you should use `ee()->functions->form_declaration() <form_declaration>`. This automatically adds the CSRF token as a hidden input field. It also allows any extensions the site may have installed to modify the form before it is served, thus creating a more uniform experience for the end user. :
+If your add-on is creating a form for the template, you should use `ee()->functions->form_declaration() <form_declaration>`. This automatically adds the CSRF token as a hidden input field. It also allows any extensions the site may have installed to modify the form before it is served, thus creating a more uniform experience for the end user.
 
     ee()->functions->form_declaration(array(
       'action'  => ''
     ));
 
-If your form submits to a different site you should ensure that you are not leaking the user's CSRF token. You can either do this by manually creating the form open tag or setting the 'secure' option for the `form_declaration()` method to `FALSE`. :
+If your form submits to a different site you should ensure that you are not leaking the user's CSRF token. You can either do this by manually creating the form open tag or setting the 'secure' option for the `form_declaration()` method to `FALSE`.
 
     ee()->functions->form_declaration(array(
       'secure'  => FALSE

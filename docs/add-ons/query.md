@@ -74,7 +74,7 @@ You may use the {if no_results} conditional variable to display content if your 
 
 ## Dates
 
-If you are pulling dates out of an ExpressionEngine database table, then you can have the dates formatted and localized for the user. As with other date variables, these require the "format" parameter in order to define how the date should be displayed. See the [date variableformatting](templates/date-variable-formatting.md) page for more information. :
+If you are pulling dates out of an ExpressionEngine database table, then you can have the dates formatted and localized for the user. As with other date variables, these require the "format" parameter in order to define how the date should be displayed. See the [date variableformatting](templates/date-variable-formatting.md) page for more information.
 
     <p>Dates for the Last Five Entries:</p>
     {exp:query sql="SELECT entry_date FROM exp_channel_titles ORDER BY entry_date DESC LIMIT 5"}

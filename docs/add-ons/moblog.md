@@ -147,7 +147,7 @@ Further, note that the member account being used must be part of a Member Group 
 
 This tag can be placed in any of your ExpressionEngine Site Templates. It works together with the "Time Between Checks" setting in the Control Panel . Whenever a visitor to your site loads a Template with this Tag on it, ExpressionEngine will look to see if the necessary amount of time has passed based on the "Time Between Checks" setting for this moblog (`Add-Ons --> Modules --> Moblog` in the Control Panel). If the necessary time has passed since the last time a check was performed then ExpressionEngine will check the specified Moblog(s) for new messages.
 
-Typically, this tag would be placed on a relatively high-traffic Template so that checks would be automatically performed at reasonable intervals. The tag can also be placed on a page dedicated to the purpose so that you could have a "Check Moblogs" page on your site if you wished. :
+Typically, this tag would be placed on a relatively high-traffic Template so that checks would be automatically performed at reasonable intervals. The tag can also be placed on a page dedicated to the purpose so that you could have a "Check Moblogs" page on your site if you wished.
 
     {exp:moblog:check silent="yes" which="cellphone"}
 

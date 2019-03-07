@@ -46,7 +46,7 @@ Since the helper classes are all bound on the editor instance you can retrieve a
     editor = $('textarea').data('wysihat');
     selection = editor.Selection;
 
-Alternatively you can use the WysiHat constructor to get access to any of the helper classes directly. This is provided mainly for debugging, to quickly look up information about the undo stack or selection. ::
+Alternatively you can use the WysiHat constructor to get access to any of the helper classes directly. This is provided mainly for debugging, to quickly look up information about the undo stack or selection.:
 
     $('textarea').wysihat('undo'); // undo stack
     $('textarea').wysihat('selection'); // selection utility

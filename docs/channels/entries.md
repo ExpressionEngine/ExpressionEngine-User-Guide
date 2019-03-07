@@ -185,7 +185,7 @@ For example, let's say you are using an instance of your channel tag to show you
         <a href="{title_permalink='channel/comments'}">{title}</a><br>
     {/exp:channel:entries}
 
-In this example you are only showing the title of your entries and nothing else; yet, the channel tag automatically fetches categories and other data. Using the disable= parameter you can turn off the unneeded features from being queried. In this case, you don't need any of the features that can be disabled. :
+In this example you are only showing the title of your entries and nothing else; yet, the channel tag automatically fetches categories and other data. Using the disable= parameter you can turn off the unneeded features from being queried. In this case, you don't need any of the features that can be disabled.
 
     {exp:channel:entries orderby="date" sort="desc" limit="10" disable="categories|custom_fields|member_data|pagination"}
         <a href="{title_permalink='channel/comments'}">{title}</a><br>
@@ -376,7 +376,7 @@ For example, if you wish to order by **screen_name** _alphabetically_ and then h
 
 **Multiple Site Manager and orderby=**
 
-The orderby= parameter can accept a site short-name in the namespace. :
+The orderby= parameter can accept a site short-name in the namespace.
 
     orderby="default_site:body|second_site:summary"
 
@@ -490,11 +490,11 @@ This example would return all entries where the 'body' field was **neither** 'pi
 
 #### "Contains" Matching
 
-Use "Contains" matching when you are interested only if a field contains your terms, anywhere in the field. :
+Use "Contains" matching when you are interested only if a field contains your terms, anywhere in the field.
 
     search:body="pickles|shoes"
 
-This example would return all entries that contained the term "pickles" or contained the term "shoes". :
+This example would return all entries that contained the term "pickles" or contained the term "shoes".
 
     search:body="not pickles|shoes"
 
@@ -540,25 +540,25 @@ TIP: **Tip:** Numeric matching is also used for custom date fields. With date fi
 
 #### Including / Excluding Empty Fields
 
-If you wish to only display entries that have (or do not have) content, use the special search constant IS_EMPTY. :
+If you wish to only display entries that have (or do not have) content, use the special search constant IS_EMPTY.
 
     search:body="IS_EMPTY"
 
-This example would return all results where the body field is empty. :
+This example would return all results where the body field is empty.
 
     search:body="not IS_EMPTY"
 
 This example would return all results where the body field is **not** empty, i.e. only entries where the body field had content.
 
-The IS_EMPTY search constant can also be used in conjunction with other search terms, for both "Exact" and "Contains" type matching. :
+The IS_EMPTY search constant can also be used in conjunction with other search terms, for both "Exact" and "Contains" type matching.
 
     search:body="=IS_EMPTY|sandwich"
 
-Since it is prefixed with =, this example is an "Exact" match and would return all results where the body is empty or is "sandwich". :
+Since it is prefixed with =, this example is an "Exact" match and would return all results where the body is empty or is "sandwich".
 
     search:body="IS_EMPTY|sandwich"
 
-This example is a "Contains" match and would return all results where the body is empty **or** contains the word "sandwich". :
+This example is a "Contains" match and would return all results where the body is empty **or** contains the word "sandwich".
 
     search:body="not IS_EMPTY|sandwich|salad"
 
@@ -676,7 +676,7 @@ By default, sticky topics always remain at the top of the page ("yes"). You can 
 
 ExpressionEngine lets you track how many times a channel entry has been "viewed" on a particular page. The view tracking counter will ONLY increment on pages that show a single entry using the {exp:channel:entries} tag, and only when the feature is enabled by using this parameter in the tag you want tracked. Up to four different instances of the view counter can be used (each in a different tag on a different page).
 
-To enable the view counter you will use one of these four parameters in the tag located in the page you want tracked. :
+To enable the view counter you will use one of these four parameters in the tag located in the page you want tracked.
 
     track_views="one" track_views="two" track_views="three" track_views="four"
 
@@ -720,7 +720,7 @@ You can also use the constant `"CURRENT_USER"` to show entries from only the cur
 
     username="CURRENT_USER"
 
-This allow each logged-in user to get only their entries. Users who are not logged in won't see anything. Alternatively, you can use the constant `"NOT_CURRENT_USER"` to show entries **except** from the currently logged in user. :
+This allow each logged-in user to get only their entries. Users who are not logged in won't see anything. Alternatively, you can use the constant `"NOT_CURRENT_USER"` to show entries **except** from the currently logged in user.
 
     username="NOT_CURRENT_USER"
 
@@ -1135,7 +1135,7 @@ Many of the single variables can be used in a conditional. You may always use th
 
     {if allow_comments} content {/if}
 
-This special conditional lets you conditionally display content if the current entry is set to allow comments. This conditional will return FALSE if commenting has expired. :
+This special conditional lets you conditionally display content if the current entry is set to allow comments. This conditional will return FALSE if commenting has expired.
 
     {if allow_comments}
         ({comment_total}) <a href="{comment_path='channel/comments'}">Comments</a>
@@ -1149,7 +1149,7 @@ Or you can display content if commenting is disabled:
 
     {if avatar} content {/if}
 
-This special conditional lets you conditionally display content if the current entry's author has an avatar image specified. :
+This special conditional lets you conditionally display content if the current entry's author has an avatar image specified.
 
     {if avatar}
         <img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
@@ -1225,7 +1225,7 @@ You may use this conditional for displaying content when _no_ forum topic has be
 
     {if signature_image} content {/if}
 
-This special conditional lets you conditionally display content if the current entry's author has a signature image specified. :
+This special conditional lets you conditionally display content if the current entry's author has a signature image specified.
 
     {if signature_image}
         <img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature">
@@ -1235,7 +1235,7 @@ This special conditional lets you conditionally display content if the current e
 
     {if sticky == 'y'} content {/if}
 
-You may test whether an entry is set to be "sticky". You may also test whether it is not "sticky". :
+You may test whether an entry is set to be "sticky". You may also test whether it is not "sticky".
 
     {if sticky == 'n'} content {/if}
 
@@ -1277,7 +1277,7 @@ NOTE: **Note:** You can use as many date_footers as you want in the same tag. Th
 
 The date heading can be used to show a heading at certain intervals. The interval can be set to show hourly, daily, weekly, monthly, or yearly.
 
-When using weekly intervals, the [week_date](#week_date) variable would typically be used. :
+When using weekly intervals, the [week_date](#week_date) variable would typically be used.
 
     {date_heading display="weekly"}Week of {week_date format="%Y %m %d"}{/date_heading}
 
@@ -1301,7 +1301,7 @@ NOTE: **Note:** You can use as many date_footers as you want in the same tag. Th
 
 [TOC=4]
 
-Categories are unique in that they are a "looping pair". Since you can have multiple categories per entry, we need a mechanism to show as many categories as exist for each entry. :
+Categories are unique in that they are a "looping pair". Since you can have multiple categories per entry, we need a mechanism to show as many categories as exist for each entry.
 
     {categories}
         {category_image}

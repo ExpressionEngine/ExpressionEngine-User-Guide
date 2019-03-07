@@ -11,15 +11,11 @@
 
 [TOC]
 
-Many member management features are built-in to ExpressionEngine, so unlike other modules, the Member Management module is not managed from the Modules area of the Control Panel.
-
 You'll find many member management options available at:
 
 - The [Members](control-panel/member-manager.md) section, which hosts a comprehensive suite of member management utilities including the [Membership Preferences](control-panel/settings/members.md) page.
 - The My Account Page, accessible from the Control Panel's sidebar. It can also display information for any member if you choose a particular member from `Members`.
-- The public side of your website also has a Member Profile area, enabling your site members to manage their personal profile information without having access to your Control Panel. Typically, this Member Profile area is found at:
-
-      https://example.com/member/profile/
+- The public side of your website also has a Member Profile area, enabling your site members to manage their personal profile information without having access to your Control Panel. Typically, this Member Profile area is found at: `https://example.com/member/profile/`
 
 NOTE: **Note:** A member account's Username and Screen Name can be identical, but the Username must be unique system-wide.
 
@@ -34,15 +30,13 @@ To customize the templates:
 
 NOTE: **Note:** Any changes made to files in `themes/ee/`or `system/ee/` will be lost during an update. Customized themes must be saved in the `themes/user/` or `system/user/` folder.
 
-Templates in `system/user/templates/_themes/member/` can be edited with a text editor, or you may choose to edit them via your Control Panel at `Developer --> Templates --> Members`
+Templates in `system/user/templates/_themes/member/` can be edited with a text editor, or you may choose to edit them via your Control Panel at `Developer --> Templates --> Members`.
 
-To make edits to the templates from inside the Control Panel, set the system/user/templates/\_theme/ folders and files to be writable. See [File Permissions](troubleshooting/general.md#file-permissions) for details. Only themes in the system/user/templates/\_theme/ folder will be available for editing in the Control Panel.
+To make edits to the templates from inside the Control Panel, set the `system/user/templates/_theme/` folders and files to be writable. See [File Permissions](troubleshooting/general.md#file-permissions) for details. Only themes in the `system/user/templates/_theme/` folder will be available for editing in the Control Panel.
 
 If you do create a custom theme, you may set it as the site default under `Settings --> Member Settings`
 
-NOTE: **Note:** When building your member profile templates, consider that any external links will pass along referrer data. This can cause security problems if someone clicks on an external link from a secure page. For example, if a user clicks an external link from the password reset page, the external site _could_ use the password reset link from the referrer data to gain access to a user's account.
-
-You can strip everything but the base URL by linking to `{path=""}?URL=<your url>`.
+NOTE: **Note:** When building your member profile templates, consider that any external links will pass along referrer data. This can cause security problems if someone clicks on an external link from a secure page. For example, if a user clicks an external link from the password reset page, the external site _could_ use the password reset link from the referrer data to gain access to a user's account. You can strip everything but the base URL by linking to `{path=""}?URL=<your url>`.
 
 ## Login Form Tag
 
@@ -52,31 +46,29 @@ NOTE: **Note:** The Member Profile Templates described above also contain a logi
 
 Here is how you might use the tag:
 
-```html
-{exp:member:login_form return="site/index"}
-<p>
-  <label>Username</label><br />
-  <input type="text" name="username" value="" maxlength="32" size="25" />
-</p>
-<p>
-  <label>Password</label><br />
-  <input type="password" name="password" value="" maxlength="32" size="25" />
-</p>
-{if auto_login}
-<p>
-  <input type="checkbox" name="auto_login" value="1" /> Auto-login on future
-  visits
-</p>
-{/if}
+    {exp:member:login_form return="site/index"}
+    <p>
+      <label>Username</label><br />
+      <input type="text" name="username" value="" maxlength="32" size="25" />
+    </p>
+    <p>
+      <label>Password</label><br />
+      <input type="password" name="password" value="" maxlength="32" size="25" />
+    </p>
+    {if auto_login}
+    <p>
+      <input type="checkbox" name="auto_login" value="1" /> Auto-login on future
+      visits
+    </p>
+    {/if}
 
-<p>
-  <input type="checkbox" name="anon" value="1" checked="checked" /> Show my name
-  in the online users list
-</p>
-<p><input type="submit" name="submit" value="Submit" /></p>
-<p><a href="{path='member/forgot_password'}">Forgot your password?</a></p>
-{/exp:member:login_form}
-```
+    <p>
+      <input type="checkbox" name="anon" value="1" checked="checked" /> Show my name
+      in the online users list
+    </p>
+    <p><input type="submit" name="submit" value="Submit" /></p>
+    <p><a href="{path='member/forgot_password'}">Forgot your password?</a></p>
+    {/exp:member:login_form}
 
 ### Parameters
 
@@ -234,9 +226,7 @@ Specifies a particular member's information to display. By default (if you do no
 
 [TOC=4]
 
-#### `avatar_height`
-
-    {avatar_height}
+#### `{avatar_height}`
 
 The height of the avatar image associated with the user. Typically used as such:
 
@@ -244,9 +234,7 @@ The height of the avatar image associated with the user. Typically used as such:
       <img src="{avatar_url}" width="{avatar_width}" height="{avatar_height}" alt="{screen_name}'s avatar">
     {/if}
 
-#### `avatar_width`
-
-    {avatar_width}
+#### `{avatar_width}`
 
 The width of the avatar image associated with the user. Typically used as such:
 
@@ -254,9 +242,7 @@ The width of the avatar image associated with the user. Typically used as such:
       <img src="{avatar_url}" width="{avatar_width}" height="{avatar_height}" alt="{screen_name}'s avatar">
     {/if}
 
-#### `avatar_url`
-
-    {avatar_url}
+#### `{avatar_url}`
 
 The URL to the avatar image associated with the user. Typically used as such:
 
@@ -264,139 +250,109 @@ The URL to the avatar image associated with the user. Typically used as such:
       <img src="{avatar_url}" width="{avatar_width}" height="{avatar_height}" alt="{screen_name}'s avatar">
     {/if}
 
-#### `email`
-
-    {email}
+#### `{email}`
 
 The user's Javascript-encoded email address.
 
-#### `group_id`
-
-    {group_id}
+#### `{group_id}`
 
 The user's Group ID.
 
-#### `join_date`
+#### `{join_date}`
 
     {join_date format="%Y %m %d"}
 
 The date the user joined the site.
 
-#### `language`
-
-    {language}
+#### `{language}`
 
 The user's language.
 
-#### `last_activity`
+#### `{last_activity}`
 
     {last_activity format="%Y %m %d"}
 
 The time of the user's last page load.
 
-#### `last_comment_date`
+#### `{last_comment_date}`
 
     {last_comment_date format="%Y %m %d"}
 
 The date of the user's last comment.
 
-#### `last_entry_date`
+#### `{last_entry_date}`
 
     {last_entry_date format="%Y %m %d"}
 
 The date of the user's last channel entry.
 
-#### `last_forum_post_date`
+#### `{last_forum_post_date}`
 
     {last_forum_post_date format="%Y %m %d"}
 
 The date of the user's last forum post.
 
-#### `last_visit`
+#### `{last_visit}`
 
     {last_visit format="%Y %m %d"}
 
 The date when the user was last active on the site PRIOR to their current session.
 
-#### `local_time`
+#### `{local_time}`
 
     {local_time format="%Y %m %d"}
 
 The user's local time.
 
-#### `member_group`
-
-    {member_group}
+#### `{member_group}`
 
 The user's member group.
 
-#### `member_id`
-
-    {member_id}
+#### `{member_id}`
 
 The user's Member ID.
 
-#### `screen_name`
-
-    {screen_name}
+#### `{screen_name}`
 
 The user's screen name.
 
-#### `search_path`
-
-    {search_path}
+#### `{search_path}`
 
 The search path to show entries and posts by this user:
 
     <a href="{search_path}">View Entries by User</a>
 
-#### `send_private_message`
-
-    {send_private_message}
+#### `{send_private_message}`
 
 The URL to send a Private Message to this user:
 
     <a href="{send_private_message}">Send Private Message to {screen_name}.</a>
 
-#### `signature`
-
-    {signature}
+#### `{signature}`
 
 The user's signature.
 
-#### `timezone`
-
-    {timezone}
+#### `{timezone}`
 
 The user's timezone.
 
-#### `total_comments`
-
-    {total_comments}
+#### `{total_comments}`
 
 The total number of comments made by the user.
 
-#### `total_entries`
-
-    {total_entries}
+#### `{total_entries}`
 
 The total number of entries made by the user.
 
-#### `total_forum_posts`
-
-    {total_forum_posts}
+#### `{total_forum_posts}`
 
 The total number of forum posts made by the user.
 
-#### `total_forum_topics`
-
-    {total_forum_topics}
+#### `{total_forum_topics}`
 
 The total number of forum topics made by the user.
 
-#### `username`
-
-    {username}
+#### `{username}`
 
 The user's username.
 

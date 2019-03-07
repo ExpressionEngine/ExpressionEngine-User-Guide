@@ -180,7 +180,7 @@ First let's look at a typical variables array:
 
     )
 
-Looking at this example, we see two "rows" of results. Each "row" contains a pair variable, `'powers'`, which itself has multiple rows with some single variables, `'power'` and `'scale'`. Next we have the single variables `'name'`, `'dob'`, `'type'`, `'affiliation'`, and `'bio'`. We can tell by looking that `'dob'` is a date field, in this case date of birth. The `'bio'` field, though a single variable is also an array, containing the contents and typography formatting instructions, but more on that later. Let's look at a typical way that this array would have been created in an add-on's code. :
+Looking at this example, we see two "rows" of results. Each "row" contains a pair variable, `'powers'`, which itself has multiple rows with some single variables, `'power'` and `'scale'`. Next we have the single variables `'name'`, `'dob'`, `'type'`, `'affiliation'`, and `'bio'`. We can tell by looking that `'dob'` is a date field, in this case date of birth. The `'bio'` field, though a single variable is also an array, containing the contents and typography formatting instructions, but more on that later. Let's look at a typical way that this array would have been created in an add-on's code.
 
     $variables = array();
 
@@ -214,7 +214,7 @@ Note that the order in which the variables are given in the array is the same or
 
 #### Parsing the Variables
 
-Now that our master array is fully loaded, we simply send it along with the tagdata to the `TMPL::parse_variables` method of the Template class, which returns the parsed output. :
+Now that our master array is fully loaded, we simply send it along with the tagdata to the `TMPL::parse_variables` method of the Template class, which returns the parsed output.
 
     $output = ee()->TMPL->parse_variables(ee()->TMPL->tagdata, $variables);
 
@@ -278,7 +278,7 @@ The following subsections break down the procedures in detail.
       <li>Affiliation: {affiliation}</li>
     </ul>
 
-Single variables are defined in the array as simple key =&gt; value pairs. :
+Single variables are defined in the array as simple key =&gt; value pairs.
 
     $vars = array(
         'name' => 'Stinkor',
@@ -289,7 +289,7 @@ Single variables are defined in the array as simple key =&gt; value pairs. :
 
 Additionally, you can have Typography automatically performed on single variables, by sending the variable in the form of an array with two keys
 
-- the first being the content, and the second being an array including any of the four available standard [Typography](development/legacy/libraries/typography.md) preferences that you wish to override. Sending an empty array will result in Typography being parsed with the class defaults. :
+- the first being the content, and the second being an array including any of the four available standard [Typography](development/legacy/libraries/typography.md) preferences that you wish to override. Sending an empty array will result in Typography being parsed with the class defaults.
 
   \$type_prefs = array( 'text_format' => 'markdown', 'html_format' => 'all', 'auto_links' => 'y', 'allow_img_url' => 'y' );
 
@@ -331,7 +331,7 @@ This variable permits you to rotate through any number of values as the results 
 
 #### Date Variables
 
-When the Template Parser encounters a variable that looks like a date variable (format or timezone parameter, relative modifier), it will parse the variable using all of the [parsing options available](templates/date-variable-formatting.md) to you for date variables, so it is important to send date variables as UTC/GMT Unix timestamps. Localization will automatically occur according to the site and logged in user's preferences. :
+When the Template Parser encounters a variable that looks like a date variable (format or timezone parameter, relative modifier), it will parse the variable using all of the [parsing options available](templates/date-variable-formatting.md) to you for date variables, so it is important to send date variables as UTC/GMT Unix timestamps. Localization will automatically occur according to the site and logged in user's preferences.
 
     $var['dob'] = 58924800;  // Nov 14, 1971 (UTC/GMT)
 
@@ -351,7 +351,7 @@ Your variables will automatically be made available to conditionals. No special 
 
 ### Parsing Full Results
 
-Once you have assembled your master array of result "rows", with each row containing the single and pair variables that your tag uses, simply call the `TMPL::parse_variables` method, providing the tag data, and the master array. :
+Once you have assembled your master array of result "rows", with each row containing the single and pair variables that your tag uses, simply call the `TMPL::parse_variables` method, providing the tag data, and the master array.
 
     $str = ee()->TMPL->parse_variables($tagdata, $variables);
 
@@ -373,7 +373,7 @@ You may also parse the result rows yourself, which could be useful if for some r
 
 Before calling the module for the ExpressionEngine tag, the Template class parses out all of the variables contain in the tag's data and puts them into arrays which are Template class variables. This allows the module to have a list of all the single, pair, and conditional tags that it needs to replace with content.
 
-Single variables output a single piece of content, and in the module's code these variables are usually handled by doing a simple find and replace, where the outputted content is replacing the variable. The Template class array for single variables is `TMPL::$var_single`, where the keys are the variable's name and the values are the full variable contents including any formatting parameters. For dates using `format="%Y %m %d"`, only the formatting string is assigned to the array value. The Template class also provides a method, `TMPL::swap_var_single`, for performing the find and replace, making sure that the variable is replaced correctly in the template. :
+Single variables output a single piece of content, and in the module's code these variables are usually handled by doing a simple find and replace, where the outputted content is replacing the variable. The Template class array for single variables is `TMPL::$var_single`, where the keys are the variable's name and the values are the full variable contents including any formatting parameters. For dates using `format="%Y %m %d"`, only the formatting string is assigned to the array value. The Template class also provides a method, `TMPL::swap_var_single`, for performing the find and replace, making sure that the variable is replaced correctly in the template.
 
     foreach (ee()->TMPL->var_single as $key => $val)
     {
@@ -402,7 +402,7 @@ Pair variables are a bit more complicated since they are often used for performi
 
     {exp:channel:entries}
 
-The Template class variable containing the variable pairs in the tag data is `TMPL::$var_pair`, which is an array where the keys are the contents of the pair variable's opening tag and the values are an array containing any parameters for the pair variable. Since the `TMPL::$var_pair` variable does not contain the content of the variable pair, you will have to search the template for it yourself using a `preg_match()` (or possibly a `preg_match_all()`, if you believe there could be multiple instances of this variable pair). :
+The Template class variable containing the variable pairs in the tag data is `TMPL::$var_pair`, which is an array where the keys are the contents of the pair variable's opening tag and the values are an array containing any parameters for the pair variable. Since the `TMPL::$var_pair` variable does not contain the content of the variable pair, you will have to search the template for it yourself using a `preg_match()` (or possibly a `preg_match_all()`, if you believe there could be multiple instances of this variable pair).
 
     foreach (ee()->TMPL->var_pair as $key => $val)
     {

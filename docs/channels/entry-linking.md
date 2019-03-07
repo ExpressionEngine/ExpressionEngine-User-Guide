@@ -173,7 +173,7 @@ The path (template_group/template) where you want to show the entry. The ID numb
 
     <a href="{id_path='site/index'}">{title}</a>
 
-You can also use SITE_INDEX in your path to point to your main site index page. If you show your channel on your home page, using SITE_INDEX is preferable since it will make the URL cleaner. :
+You can also use SITE_INDEX in your path to point to your main site index page. If you show your channel on your home page, using SITE_INDEX is preferable since it will make the URL cleaner.
 
     <a href="{path='SITE_INDEX'}">{title}</a>
 
@@ -185,7 +185,7 @@ The path (template_group/template) where you want to show the entry. This is typ
 
     <a href="{path='site/index'}">{title}</a>
 
-You can also use SITE_INDEX in your path to point to your main site index page. If you show your channel on your home page, using SITE_INDEX is preferable since it will make the URL cleaner. :
+You can also use SITE_INDEX in your path to point to your main site index page. If you show your channel on your home page, using SITE_INDEX is preferable since it will make the URL cleaner.
 
     <a href="{path='SITE_INDEX'}">{title}</a>
 

@@ -33,7 +33,7 @@ The first condition is an invalid template group. ExpressionEngine only checks t
 
 It is recommended that you set you set up a custom 404 page for your site. Even though what a visitor may have entered in the URL is invalid, without a custom 404 page, they'll still see your homepage which may lead to some confusion.
 
-The second condition that will trigger a 404 status is extra segments. This will require some code to be added to your template. Remember that ExpressionEngine is only looking at the first segment to trigger a 404 status, in order to extend this error checking beyond the first segment we need to use a conditional and the [{redirect=} global variable](templates/globals/single-variables.md#redirect). :
+The second condition that will trigger a 404 status is extra segments. This will require some code to be added to your template. Remember that ExpressionEngine is only looking at the first segment to trigger a 404 status, in order to extend this error checking beyond the first segment we need to use a conditional and the [{redirect=} global variable](templates/globals/single-variables.md#redirect).
 
     {if segment_3 != ''}
       {redirect="404"}
@@ -55,13 +55,13 @@ Chances are they will not get that right and trigger a 404. The template group i
 
 Let's take care of that. This is a single entry page, so we can use [require_entry=](channels/entries.md#require_entry) in our channel entries tag pair. This tells the channel entries tag pair to only return results if there is a specific URL title found in the segment of the URL.
 
-Now we need a way to deal with the times there are no results returned. To do this we use a global variable and test for results. :
+Now we need a way to deal with the times there are no results returned. To do this we use a global variable and test for results.
 
     {if no_results}
       {redirect="404"}
     {/if}
 
-So a completed block code would look like this. :
+So a completed block code would look like this.
 
     {exp:channel:entries channel="blog" limit="1" require_entry="yes" url_title="{segment_3}"}
       {if no_results}

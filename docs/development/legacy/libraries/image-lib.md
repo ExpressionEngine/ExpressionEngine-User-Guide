@@ -324,6 +324,6 @@ The clear method resets all of the values used when processing an image. You wil
 | \$close   | `String` | Error message closing tag |
 | Returns   | `String` | Error messages            |
 
-Returns all detected errors formatted as a string. :
+Returns all detected errors formatted as a string.
 
     echo ee()->image_lib->diplay_errors();

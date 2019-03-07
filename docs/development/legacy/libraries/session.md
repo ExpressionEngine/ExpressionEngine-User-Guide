@@ -19,7 +19,7 @@ lang: php
 
 **class `Session`**
 
-ExpressionEngine uses the Session class for storing information about the user currently visiting the ExpressionEngine site. If the user is a member and is logged in, then their various preferences and privileges are loading into variables, which are then immediately available throughout the entire program without the use of a query. This class is initialized automatically. :
+ExpressionEngine uses the Session class for storing information about the user currently visiting the ExpressionEngine site. If the user is a member and is logged in, then their various preferences and privileges are loading into variables, which are then immediately available throughout the entire program without the use of a query. This class is initialized automatically.
 
     function session_example()
     {

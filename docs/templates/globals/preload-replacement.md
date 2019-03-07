@@ -23,7 +23,7 @@ In the above example, variable_name is the name of the template "variable" and r
 
 ### Example Usage
 
-A common usage for preload replacements is to hold the Channel short name(s), to save you from repeatedly typing them into different tags within the same template. :
+A common usage for preload replacements is to hold the Channel short name(s), to save you from repeatedly typing them into different tags within the same template.
 
     {preload_replace:channels="news|reviews"}
 

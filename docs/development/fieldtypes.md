@@ -226,7 +226,7 @@ Finally, the field needs a frontend display. For google maps this will almost ex
 
 Along with parameters a field can also provide tag modifiers to change its output. In the template these are called by adding a colon to the fieldname, followed by the modifier name. For example: `{myfield:latitude}`. The advantage that field modifiers have over parameters is that they can be used in conditionals.
 
-Parsing the modifiers is identical to using the regular `replace_tag()` function. The method name must start with `replace_` followed by the modifier name. :
+Parsing the modifiers is identical to using the regular `replace_tag()` function. The method name must start with `replace_` followed by the modifier name.
 
     function replace_latitude($data, $params = array(), $tagdata = FALSE)
     {

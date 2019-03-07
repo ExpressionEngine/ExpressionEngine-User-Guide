@@ -23,8 +23,8 @@ That's not a perfect analogy but it conveys the scope of what the Multiple Site 
 
 It's important to understand a few key terms before reviewing the rest of the documentation.
 
-- _Multiple Site Manager_: The ExpressionEngine Add-on that enables management of multiple websites from a single ExpressionEngine installation.
-- _Original Site_: The existing ExpressionEngine installation when you installed the Multiple Site Manager. This Site cannot be deleted and will remain if the Multiple Site Manager is removed.
-- _Site_: A unique "website" created using the Multiple Site Manager that is not the Original Site.
-- _Site specific_: Refers to items that apply to a single Site and can be set per Site.
-- _Installation wide_: Refers to items that apply to the entire ExpressionEngine installation and are not Site Specific.
+- **Multiple Site Manager**: The ExpressionEngine Add-on that enables management of multiple websites from a single ExpressionEngine installation.
+- **Original Site**: The existing ExpressionEngine installation when you installed the Multiple Site Manager. This Site cannot be deleted and will remain if the Multiple Site Manager is removed.
+- **Site**: A unique "website" created using the Multiple Site Manager that is not the Original Site.
+- **Site specific**: Refers to items that apply to a single Site and can be set per Site.
+- **Installation wide**: Refers to items that apply to the entire ExpressionEngine installation and are not Site Specific.

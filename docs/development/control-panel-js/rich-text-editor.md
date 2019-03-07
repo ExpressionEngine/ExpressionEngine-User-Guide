@@ -48,7 +48,7 @@ A button needs to be able to respond to its click event. This is done in the but
         }
     });
 
-This works, but it's not particularly interesting. Luckily the editor provides us with some utility methods to manipulate the current selection. Let's begin with a simple requirement: the user must have text selected. :
+This works, but it's not particularly interesting. Luckily the editor provides us with some utility methods to manipulate the current selection. Let's begin with a simple requirement: the user must have text selected.
 
     WysiHat.addButton("ytLink", {
         'label': EE.rte.ytLink.add,
@@ -68,7 +68,7 @@ Here we are using the editor's selection utility to quickly check for the conten
 
 ## Modifying the Text
 
-With that out of the way, we will want to actually create a YouTube link. To do that, we can use the button's `make` method, which will handle the more intricate details for us. :
+With that out of the way, we will want to actually create a YouTube link. To do that, we can use the button's `make` method, which will handle the more intricate details for us.
 
     WysiHat.addButton("ytLink", {
         'label': EE.rte.ytLink.add,
@@ -84,7 +84,7 @@ With that out of the way, we will want to actually create a YouTube link. To do 
         }
     });
 
-Now it would be nice if we could ask the user for a video ID to use. So we will add an overlay to prompt the user for an ID. :
+Now it would be nice if we could ask the user for a video ID to use. So we will add an overlay to prompt the user for an ID.
 
     WysiHat.addButton("ytLink", {
         'label': EE.rte.ytLink.add,

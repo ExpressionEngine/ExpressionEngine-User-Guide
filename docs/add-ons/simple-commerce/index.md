@@ -229,7 +229,7 @@ To use the sandbox area, you will have to set up a free developer account with P
 
 ### Debug Mode
 
-In order for the Simple Commerce module to create purchase links that utilize PayPal's Sandbox area instead of the real PayPal site, you need to enable the module's debug mode. To do so, open mod.simple_commerce.php, and near the top where the class variables are defined, set \$debug to TRUE. :
+In order for the Simple Commerce module to create purchase links that utilize PayPal's Sandbox area instead of the real PayPal site, you need to enable the module's debug mode. To do so, open mod.simple_commerce.php, and near the top where the class variables are defined, set \$debug to TRUE.
 
     var $debug                = TRUE;
 

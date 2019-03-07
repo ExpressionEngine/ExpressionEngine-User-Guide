@@ -13,7 +13,7 @@
 
 While the Discussion Forum module is fairly self-contained, it is possible to display a simple list of "recent forum topics" in your standard Templates. You could use this to list recent threads in a sidebar on your site's main page, for instance. An example:
 
-NOTE: **Note:** This tag is for use in any of your ExpressionEngine templates that are accessible via the TEMPLATES page in the control panel. It is not available for use in your forum templates. If you would like to show recent topics in your forum templates please use the **{include:recent_posts}** tag, which corresponds to the Archive Template: "Recent Post Table". :
+NOTE: **Note:** This tag is for use in any of your ExpressionEngine templates that are accessible via the TEMPLATES page in the control panel. It is not available for use in your forum templates. If you would like to show recent topics in your forum templates please use the **{include:recent_posts}** tag, which corresponds to the Archive Template: "Recent Post Table".
 
     <table>
     		<tr>
