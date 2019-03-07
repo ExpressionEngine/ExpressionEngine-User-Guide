@@ -17,7 +17,6 @@ const FrontMatter = require('front-matter')
 const replaceExt  = require('replace-ext')
 const Yaml        = require('js-yaml')
 
-const PageToc      = require('./page-toc-generator.js')
 const RenderMd     = require('./md-render.js')
 const Logger       = require('./logger.js')
 const CONFIG       = require('./config.js')
@@ -52,7 +51,7 @@ module.exports = () => {
 		let pageFM  = FrontMatter(file.contents.toString())
 		let relPath = getRelativeRootFromPage(file.path)
 
-		BuildInfo.pages[pageId] = { inPageLinks: [] }
+		BuildInfo.pages[pageId] = { inPageLinks: [], headingSlugs: [] }
 
 		let currentPageInfo = {
 			pageId: pageId,
@@ -62,9 +61,7 @@ module.exports = () => {
 			slugify: getSlugger()
 		}
 
-		let pToc = PageToc.renderPage(pageFM.body, currentPageInfo)
-
-		let pageContent = pToc.content
+		let pageContent = pageFM.body
 
 		// Use the first h1 in the page for the title
 		let pageTitle = /^# *(?!#)(.*)/gm.exec(pageContent)
@@ -82,8 +79,6 @@ module.exports = () => {
 			current_version: CONFIG.currentVersion,
 			current_year: CONFIG.currentYear
 		})
-
-		BuildInfo.pages[pageId].headingSlugs = pToc.headings.map(e => e.slug)
 
 		file.contents = Buffer.from(page)
 		file.path     = replaceExt(file.path, '.html')

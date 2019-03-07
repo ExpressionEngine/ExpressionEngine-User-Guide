@@ -14,6 +14,7 @@ const MarkedJs   = require('marked')
 const isUrl      = require('is-url')
 const { bsToFs } = require('./utility.js')
 const Logger     = require('./logger.js')
+const PageTocGenerator	= require('./page-toc-generator.js')
 
 const HlJs       = require('highlight.js')
 
@@ -24,10 +25,11 @@ HlJs.configure({ languages: ['xml', 'ee', 'php', 'apache', 'bash', 'javascript']
 
 // -------------------------------------------------------------------
 
+let currentPageInfo = {}
+let tocGenerator    = null
+
 const defaultRenderer = new MarkedJs.Renderer()
 let renderer          = new MarkedJs.Renderer()
-
-let currentPageInfo = {}
 
 MarkedJs.setOptions({
 	smartypants: true,
@@ -49,6 +51,13 @@ MarkedJs.setOptions({
 // Render custom alerts
 renderer.paragraph = function (text) {
 	let pClass = ''
+
+	let tocTagId = tocGenerator.getTag(text)
+
+	if (tocTagId) {
+		// Replace the toc tag with it's temporary id
+		return tocTagId
+	}
 
 	// Render message boxes
 	for (let box of ['TIP', 'NOTE', 'WARN']) {
@@ -72,6 +81,10 @@ renderer.paragraph = function (text) {
 // Render headings with an anchor
 renderer.heading = function (text, level, raw, slugger) {
 	let slug = currentPageInfo.slugify(raw)
+
+	tocGenerator.addHeading(text, level, slug)
+
+	BuildInfo.pages[currentPageInfo.pageId].headingSlugs.push(slug)
 
 	return `
 		<h${level}>
@@ -170,7 +183,11 @@ renderer.table = function(header, body) {
 
 module.exports = function (text, info) {
 	currentPageInfo = info
-	returnInfo      = { linkedFiles: [], inPageLinks: [], outPageLinks: [] }
+	tocGenerator = new PageTocGenerator()
 
-	return MarkedJs(text, { renderer: renderer })
+	let renderedContent = MarkedJs(text, { renderer: renderer })
+
+	renderedContent = tocGenerator.renderTocs(renderedContent, currentPageInfo)
+
+	return renderedContent
 }
