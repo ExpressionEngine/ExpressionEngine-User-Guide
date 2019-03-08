@@ -14,7 +14,7 @@
 Release Date: March 7, 2019
 
 - Added `:number_format` to [Variable Modifiers](templates/variable-modifiers.md#number_format)
-- Added [`db_backup_row_limit` config](general/system-configuration-overrides.html#db_backup_row_limit) to help the [Database Backup Utility](control-panel/utilities.html#database-backup-utility) complete on limited resources.
+- Added [`db_backup_row_limit` config](general/system-configuration-overrides.md#db_backup_row_limit) to help the [Database Backup Utility](control-panel/utilities.md#database-backup-utility) complete on limited resources.
 - Improved revision listings ([\#87](https://github.com/ExpressionEngine/ExpressionEngine/pull/87)) for entry and template versioning, to sort in reverse chronological order.
 - Database connection and SQL errors are now hidden if debug levels aren't sufficient.
 - Changed hard-coded system paths to be dynamic in some error messages. ([\#126](https://github.com/ExpressionEngine/ExpressionEngine/pull/126))
