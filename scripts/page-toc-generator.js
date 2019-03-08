@@ -11,7 +11,7 @@ const listItem       = require('list-item')
 const Marked         = require('marked')
 const Logger         = require('./logger.js')
 
-const tocTagRegex    = /\[ *TOC(?:=(\d)(?:-(\d))?)? *(hide)? *\]/
+const tocTagRegex    = /^\[ *TOC(?:=(\d)(?:-(\d))?)? *(hide)? *\]/
 
 class PageTocGenerator {
 
