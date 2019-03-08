@@ -124,6 +124,19 @@ Limits the content to the specified number of characters. May be fewer than the 
     {excerpt:limit characters='20'}
     {!-- A discussion&#8230; --}
 
+### `:number_format`
+
+| Parameter              | Default   |                                             |
+| ---------------------- | --------- | ------------------------------------------- |
+| decimals=              | `0`       | Number of decimal precision                 |
+| decimal_point=         | `.`       | character to use as the decimal point       |
+| thousands_separator=   | `,`       | character to use as the thousands separator |
+
+Formats a number using typical options.
+
+    {volume:number_format decimals='2'}
+    {!-- 1,234.56 --}
+
 ### `:ordinal`
 
 | Parameter | Default       |                   |
