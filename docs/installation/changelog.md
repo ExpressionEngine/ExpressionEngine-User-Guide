@@ -9,6 +9,14 @@
 
 # ExpressionEngine v5 Change Log
 
+## Version 5.2.1
+
+Release Date: March 11, 2019
+
+- Fixed a bug where RTE fields did not display properly in the channel form for non-logged in users.
+- Fixed a bug ([\#152](https://github.com/ExpressionEngine/ExpressionEngine/issues/152), [\#154](https://github.com/ExpressionEngine/ExpressionEngine/issues/154)) where some Relationship fields may not parse.
+- Fixed a bug ([\#153](https://github.com/ExpressionEngine/ExpressionEngine/issues/153)) where Channel settings could not save if there were no authors.
+
 ## Version 5.2.0
 
 Release Date: March 7, 2019
