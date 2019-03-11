@@ -9,12 +9,20 @@
 
 # ExpressionEngine v5 Change Log
 
+## Version 5.2.1
+
+Release Date: March 11, 2019
+
+- Fixed a bug where RTE fields did not display properly in the channel form for non-logged in users.
+- Fixed a bug ([\#152](https://github.com/ExpressionEngine/ExpressionEngine/issues/152), [\#154](https://github.com/ExpressionEngine/ExpressionEngine/issues/154)) where some Relationship fields may not parse.
+- Fixed a bug ([\#153](https://github.com/ExpressionEngine/ExpressionEngine/issues/153)) where Channel settings could not save if there were no authors.
+
 ## Version 5.2.0
 
 Release Date: March 7, 2019
 
 - Added `:number_format` to [Variable Modifiers](templates/variable-modifiers.md#number_format)
-- Added [`db_backup_row_limit` config](general/system-configuration-overrides.html#db_backup_row_limit) to help the [Database Backup Utility](control-panel/utilities.html#database-backup-utility) complete on limited resources.
+- Added [`db_backup_row_limit` config](general/system-configuration-overrides.md#db_backup_row_limit) to help the [Database Backup Utility](control-panel/utilities.md#database-backup-utility) complete on limited resources.
 - Improved revision listings ([\#87](https://github.com/ExpressionEngine/ExpressionEngine/pull/87)) for entry and template versioning, to sort in reverse chronological order.
 - Database connection and SQL errors are now hidden if debug levels aren't sufficient.
 - Changed hard-coded system paths to be dynamic in some error messages. ([\#126](https://github.com/ExpressionEngine/ExpressionEngine/pull/126))
