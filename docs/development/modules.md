@@ -228,11 +228,11 @@ The settings array elements:
 
 ### `validate($entry, $values) *`
 
-| Parameter | Type                                                                    | Description                                                                                                                                                                                                            |
-| --------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \$entry   | <small>`EllisLabExpressionEngineModuleChannelModelChannelEntry`</small> | The channel entry entity                                                                                                                                                                                               |
-| \$values  | `array`                                                                 | an associative array with field names as keys and form submission data as the value (i.e. `array('fortune' => 'All your hard work will soon pay off.'))`. The keys are derrived from the data returned by `display()`. |
-| Returns   | <small>`EllisLabExpressionEngineServiceValidationResult`</small>        | A result object                                                                                                                                                                                                        |
+| Parameter | Type                                                                         | Description                                                                                                                                                                                                            |
+| --------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \$entry   | <small>`EllisLab\ExpressionEngine\Module\Channel\Model\ChannelEntry`</small> | The channel entry entity                                                                                                                                                                                               |
+| \$values  | `array`                                                                      | an associative array with field names as keys and form submission data as the value (i.e. `array('fortune' => 'All your hard work will soon pay off.'))`. The keys are derrived from the data returned by `display()`. |
+| Returns   | <small>`EllisLab\ExpressionEngine\Service\Validation\Result`</small>         | A result object                                                                                                                                                                                                        |
 
 Allows you to validate the data after the publish form has been submitted but before any additions to the database:
 
@@ -248,11 +248,11 @@ Allows you to validate the data after the publish form has been submitted but be
 
 ### `save($entry, $values) *`
 
-| Parameter | Type                                                                    | Description                                                                                                                                                                                                           |
-| --------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \$entry   | <small>`EllisLabExpressionEngineModuleChannelModelChannelEntry`</small> | The channel entry entity                                                                                                                                                                                              |
-| \$values  | `array`                                                                 | an associative array with field names as keys and form submission data as the value (i.e. `array('fortune' => 'Do not make extra work for yourself.'))`. The keys are derrived from the data returned by `display()`. |
-| Returns   | `Void`                                                                  |                                                                                                                                                                                                                       |
+| Parameter | Type                                                                         | Description                                                                                                                                                                                                           |
+| --------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \$entry   | <small>`EllisLab\ExpressionEngine\Module\Channel\Model\ChannelEntry`</small> | The channel entry entity                                                                                                                                                                                              |
+| \$values  | `array`                                                                      | an associative array with field names as keys and form submission data as the value (i.e. `array('fortune' => 'Do not make extra work for yourself.'))`. The keys are derrived from the data returned by `display()`. |
+| Returns   | `Void`                                                                       |                                                                                                                                                                                                                       |
 
 Called during a `ChannelEntry` entity's `afterSave` event, this allows you to insert data/update data:
 
