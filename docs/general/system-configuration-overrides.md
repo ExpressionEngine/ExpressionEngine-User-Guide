@@ -612,6 +612,19 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Word Censoring`: [Censored Words](control-panel/settings/word-censor.md#words-to-censor)
 
+### `channel_form_overwrite`
+
+Allows Channel Form authors to overwrite *their own files only* when uploading files named the same as files previously uploaded by that author.
+
+| Value | Behavior                                                                 |
+|-------|--------------------------------------------------------------------------|
+| y     | Allow Channel Form authors to overwrite their own files                  |
+| n     | Files are appended with a number, leaving existing files alone (default) |
+
+Example Usage:
+
+    $config['channel_form_overwrite'] = 'y';
+
 ### `charset`
 
 Specify which character set for the system to use by default.
