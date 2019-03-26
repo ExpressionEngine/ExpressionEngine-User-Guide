@@ -47,4 +47,4 @@ That's not a perfect analogy but it conveys the scope of what the Multiple Site 
 
 **Control Panel Location: `Developer > Site Manager > New/Edit`**
 
-This allows you to create or edit a new Site.
+This allows you to create or edit a new Site. The site manager [must be enabled](#enable-site-manager) in Control Panel Location: `Settings > General Settings` in order to create sites.
