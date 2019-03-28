@@ -1077,7 +1077,7 @@ The total number of entries being displayed.
 
 ### `{trimmed_url}`
 
-The domain name for your site, trimmed of any subdomains. For instance, example.com becomes example.com. Typically only used in the Atom feed Template.
+The domain name for your site, trimmed of any subdomains. For instance, beta.example.com becomes example.com. Typically only used in the Atom feed Template.
 
 ### `{url_title}`
 
@@ -1398,7 +1398,7 @@ This displays the name of the category.
 
 The _opposite_ of `{category_count}`, in that it displays the category count position counting backwards from the total. Countdown all the things!
 
-##### `category_total_results}`
+##### `{category_total_results}`
 
 The total number of categories being displayed.
 

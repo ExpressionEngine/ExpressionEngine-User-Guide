@@ -9,6 +9,26 @@
 
 # ExpressionEngine v5 Change Log
 
+## Version 5.2.2
+
+Release Date: March 28, 2019
+
+- Security: Fixed a potential remote template code execution bug.
+- Added a `channel_form_overwrite` [system configuration override](general/system-configuration-overrides.md#channel_form_overwrite) that allows Channel Form authors to replace files that they have uploaded, if they upload one with the same name as an existing file. No warnings, use with caution!
+- Increased size of the the comment edit and template notes textareas.
+- Fixed a bug where searching an AJAX-filtered list in the control panel by something other than its label may not return the expected result.
+- Fixed a bug where default value selection of a Select list might show an empty selected value.
+- Fixed a bug([\#150](https://github.com/ExpressionEngine/ExpressionEngine/issues/150)) where the Search Module may not filter by category.
+- Fixed a bug([\#158](https://github.com/ExpressionEngine/ExpressionEngine/issues/158)) where a link to create new content would appear on the homepage despite content creation permissions.
+- Fixed a bug([\#160](https://github.com/ExpressionEngine/ExpressionEngine/issues/160)) where a PHP error may appear on the Search Module's no-results screen.
+- Fixed a bug([\#161](https://github.com/ExpressionEngine/ExpressionEngine/issues/161)) where searching for terms wrapped in quotes using the Search Module would return all entries.
+- Fixed a bug([\#162](https://github.com/ExpressionEngine/ExpressionEngine/issues/162)) where the `{switch=}` variable would not parse inside the Comment Entries tag.
+- Fixed a bug where Channel Form edit forms might not respect the `channel=` parameter.
+- Fixed a bug([\#140](https://github.com/ExpressionEngine/ExpressionEngine/issues/140)) where channel field pagination did not recognize fields using the new table structure.
+- Fixed a bug([\#164](https://github.com/ExpressionEngine/ExpressionEngine/issues/164)) where upload directories were not ordered alphabetically in the upload modal filter.
+- Fixed a bug([\#166](https://github.com/ExpressionEngine/ExpressionEngine/issues/166)) where creating a template group with a period in the name would show an error.
+- Fixed a bug where submitting a Channel Form containing a category menu would show an error if there were no category groups assigned to the channel.
+
 ## Version 5.2.1
 
 Release Date: March 11, 2019

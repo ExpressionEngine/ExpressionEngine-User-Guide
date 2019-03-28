@@ -43,14 +43,14 @@ NOTE: **Note:** Spanning an entry across multiple pages is not possible when usi
 
 The Pages Module adds the following parameters for use in the {exp:channel:entries} tag.
 
-- `channel_entries_show_pages`
+- [`show_pages=`](channels/entries.md#show_pages)
 
 ### Variables
 
 The Pages Module adds the following variables for use in the {exp:channel:entries} tag.
 
-- `channel_entries_page_uri`
-- `channel_entries_page_url`
+- [`page_uri=`](channels/entries.md#page_uri)
+- [`page_url=`](channels/entries.md#page_url)
 
 ## Multiple Site Manager
 
