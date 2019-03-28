@@ -14,6 +14,7 @@
 Release Date: March 28, 2019
 
 - Security: Fixed a potential remote template code execution bug.
+- Added a `channel_form_overwrite` [system configuration override](general/system-configuration-overrides.md#channel_form_overwrite) that allows Channel Form authors to replace files that they have uploaded, if they upload one with the same name as an existing file. No warnings, use with caution!
 - Increased size of the the comment edit and template notes textareas.
 - Fixed a bug where searching an AJAX-filtered list in the control panel by something other than its label may not return the expected result.
 - Fixed a bug where default value selection of a Select list might show an empty selected value.
