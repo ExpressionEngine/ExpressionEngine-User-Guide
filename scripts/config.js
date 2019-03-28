@@ -8,7 +8,7 @@
  */
 
 module.exports = {
-	currentVersion: '5.2.1',
+	currentVersion: '5.2.2',
 
 	currentYear: new Date().getFullYear(),
 
