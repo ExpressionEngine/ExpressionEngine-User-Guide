@@ -9,6 +9,7 @@
 
 require('colors')
 
+const path = require('path')
 const gulp = require('gulp')
 const del  = require('del')
 
@@ -26,16 +27,22 @@ function copyThemeAssets() {
 	.pipe(gulp.dest(CONFIG.outputDir + '/_assets'))
 }
 
-// Copies any needed folders to the build dir
-function copyFolders() {
-	return gulp.src(CONFIG.foldersToMove, { base: CONFIG.sourceDir })
+// Copies all other files that are not Markdown
+function copyOtherFiles() {
+	let filesToMove = [
+		path.resolve( CONFIG.sourceDir, '**/**'),
+		'!' + path.resolve(CONFIG.sourceDir, '**/*.md'),
+		'!' + CONFIG.tocPath
+	]
+
+	return gulp.src(filesToMove, { base: CONFIG.sourceDir })
 	.pipe(gulp.dest(CONFIG.outputDir))
 }
 
 // -------------------------------------------------------------------
 
 const build	= require('./scripts/build.js')
-const buildAll = gulp.series(copyFolders, copyThemeAssets, build)
+const buildAll = gulp.series(copyOtherFiles, copyThemeAssets, build)
 
 exports.build = gulp.series(clean, buildAll)
 

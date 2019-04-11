@@ -25,12 +25,7 @@ const DEFAULT_CONFIG = {
 	pageTemplatePath: './theme/doc-page-template.html',
 
 	assetsDir: './theme/_assets',
-	assetsSourceDir: './theme/assets-src',
-
-	foldersToMove: [
-		'./docs/_images/**',
-		'./docs/_downloads/**'
-	]
+	assetsSourceDir: './theme/assets-src'
 }
 
 // -------------------------------------------------------------------
