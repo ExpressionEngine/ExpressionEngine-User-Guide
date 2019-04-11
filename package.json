@@ -2,14 +2,16 @@
   "name": "ExpressionEngine-Docs",
   "repository": "https://github.com/ExpressionEngine/ExpressionEngine-User-Guide",
   "scripts": {
-    "build": "gulp build --gulpfile gulpfile.js",
-    "watch": "gulp watch --gulpfile gulpfile.js",
+    "build": "node scripts/cli.js",
+    "watch": "node scripts/cli.js -w",
     "buildAssets": "gulp buildAssets --gulpfile gulpfile.js",
     "watchAssets": "gulp watchAssets --gulpfile gulpfile.js"
   },
   "license": "Apache-2.0",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "minimist": "^1.2.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
