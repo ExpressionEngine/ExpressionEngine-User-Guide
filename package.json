@@ -27,10 +27,10 @@
     "gulp-rename": "^1.4.0",
     "highlight.js": "^9.13.1",
     "is-url": "^1.2.4",
-    "js-yaml": "^3.12.0",
+    "js-yaml": "^3.13.1",
     "list-item": "^2.0.0",
     "markdown-slug": "^0.1.1",
-    "marked": "^0.5.2",
+    "marked": "^0.6.2",
     "replace-ext": "^1.0.0",
     "through2": "^3.0.0"
   }

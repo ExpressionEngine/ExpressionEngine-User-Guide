@@ -1,0 +1,11 @@
+title: ExpressionEngine Docs
+
+sourceDir: docs
+outputDir: build
+
+themeDir: theme
+
+customVariables:
+  current_version: '5.2.2'
+  current_year: 2019
+

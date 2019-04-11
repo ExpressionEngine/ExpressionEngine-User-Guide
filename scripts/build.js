@@ -71,14 +71,16 @@ module.exports = () => {
 		let pageHtml = RenderMd(pageContent, currentPageInfo)
 
 		// Render the template
-		let page = renderTemplate(pageTemplate, {
+		let templateVariables = {
+			...CONFIG.customVariables,
+
 			page_title: pageTitle,
 			page_content: pageHtml,
 			root_dir: relPath,
 			toc: masterToc.make(file.path, relPath),
-			current_version: CONFIG.currentVersion,
-			current_year: CONFIG.currentYear
-		})
+		}
+
+		let page = renderTemplate(pageTemplate, templateVariables)
 
 		file.contents = Buffer.from(page)
 		file.path     = replaceExt(file.path, '.html')

@@ -7,15 +7,21 @@
  * @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
  */
 
-module.exports = {
-	currentVersion: '5.2.2',
+const fs			= require('fs')
+const path			= require('path')
+const yaml			= require('js-yaml')
 
-	currentYear: new Date().getFullYear(),
+// -------------------------------------------------------------------
 
-	sourceDir: './docs',
-	outputDir: './build',
+const DEFAULT_CONFIG = {
+	title: 'Site',
 
-	tocPath: './docs/_toc.yml',
+	sourceDir: 'site',
+	outputDir: 'build',
+
+	customVariables: {},
+
+	tocPath: 'docs/_toc.yml',
 	pageTemplatePath: './theme/doc-page-template.html',
 
 	assetsDir: './theme/_assets',
@@ -26,3 +32,28 @@ module.exports = {
 		'./docs/_downloads/**'
 	]
 }
+
+// -------------------------------------------------------------------
+
+function getConfig() {
+	let configPath = path.resolve('./config.yml')
+
+	let config = {}
+
+	try {
+		// Get the config file
+		config = fs.readFileSync(configPath, { encoding: 'utf8' })
+
+		// Convert the yaml to json
+		config = yaml.safeLoad(config)
+	} catch (e) {
+		throw `Error loading config.yml: \n ${e}`
+	}
+
+	// Replace any missing config options with the defaults
+	return { ...DEFAULT_CONFIG, ...config }
+}
+
+// -------------------------------------------------------------------
+
+module.exports = getConfig()
