@@ -120,6 +120,12 @@ Setting this parameter to "yes" will display the {day_number} variable as a two-
 
 You may hardcode the month and year to display for the calendar. You **must** specify both the month and year. The month should be specified in numerical form.
 
+### `show_date_span=`
+
+    show_date_span="yes"
+
+Setting this parameter to "yes" will repeat entires for each day between their publish and expiration date. An entry without a set expiration date will show once, without repeating.
+
 ### `show_future_entries=`
 
     show_future_entries="yes"
@@ -132,13 +138,13 @@ You can determine whether you wish for entries dated in the "future" to be inclu
 
 You may define the day of the week on which your week starts. Available values:
 
-- sunday
-- monday
-- tuesday
-- wednesday
-- thursday
-- friday
-- saturday
+-   sunday
+-   monday
+-   tuesday
+-   wednesday
+-   thursday
+-   friday
+-   saturday
 
 ### `switch=`
 
