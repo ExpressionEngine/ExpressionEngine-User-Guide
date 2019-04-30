@@ -16,12 +16,8 @@
       href: installation/installation.md
     - name: Best Practices
       href: installation/best-practices.md
-    - name: One-Click Updating
-      href: installation/one-click-updating.md
-    - name: Manually Updating
-      href: installation/manual-updating.md
-    - name: Updating Via Command Line
-      href: installation/cmd-line-updating.md
+    - name: Updating
+      href: installation/updating.md
     - name: Troubleshooting
       href: installation/troubleshooting.md
     - name: Change Log
