@@ -38,8 +38,6 @@ The syntax available for the condition is comparable to most programming languag
       You're not 30 or Bob. That's all we know.
     {/if}
 
-Don't worry if not all of these make sense. The operators and constructs will be discussed in detail below.
-
 ## Protected Characters
 
 Certain characters must be protected in conditionals to prevent them from being mistaken for regular ExpressionEngine tags:
@@ -67,22 +65,7 @@ When determining Boolean values the following are considered **FALSE**:
 
 Everything else is considered **TRUE**.
 
-NOTE: **Note:** The string `"0"` is considered **TRUE** since it is a non-empty string.
-
-### Boolean Comparisons
-
-The following table illustrates comparing Boolean values with respect to the equality (`==`) operator.
-
-|       | TRUE  | FALSE | 1     | 0     | -1    | "1"   | "0"   | "-1"  |
-| ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
-| TRUE  | TRUE  | FALSE | TRUE  | FALSE | TRUE  | TRUE  | TRUE  | TRUE  |
-| FALSE | FALSE | TRUE  | FALSE | TRUE  | FALSE | FALSE | FALSE | FALSE |
-| 1     | TRUE  | FALSE | TRUE  | FALSE | FALSE | TRUE  | FALSE | FALSE |
-| 0     | FALSE | TRUE  | FALSE | TRUE  | FALSE | FALSE | TRUE  | FALSE |
-| -1    | TRUE  | FALSE | FALSE | FALSE | TRUE  | FALSE | FALSE | TRUE  |
-| "1"   | TRUE  | FALSE | TRUE  | FALSE | FALSE | TRUE  | FALSE | FALSE |
-| "0"   | TRUE  | FALSE | FALSE | TRUE  | FALSE | FALSE | TRUE  | FALSE |
-| "-1"  | TRUE  | FALSE | FALSE | FALSE | TRUE  | FALSE | FALSE | TRUE  |
+**Note:** The string `"0"` is considered **TRUE** since it is a non-empty string.
 
 ## Operators
 

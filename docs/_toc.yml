@@ -67,8 +67,10 @@
   items:
     - name: Overview
       href: templates/overview.md
-    - name: Using Plugins
-      href: templates/plugins.md
+    - name: Template Language
+      href: templates/language.md
+    - name: Conditional Tags
+      href: templates/conditionals.md
     - name: Embedding Templates
       href: templates/embedding.md
     - name: Template Layouts
@@ -91,24 +93,14 @@
           href: templates/globals/path.md
         - name: Preload Text Replacements
           href: templates/globals/preload-replacement.md
-    - name: Conditional Tags
-      href: templates/conditionals.md
-    - name: Hidden Templates
-      href: templates/hidden-templates.md
-    - name: Template Routes
-      href: templates/routes.md
     - name: Variable Modifiers
       href: templates/variable-modifiers.md
-    - name: Template Comments
-      href: templates/comments.md
     - name: Date Variable Formatting
       href: templates/date-variable-formatting.md
+    - name: Template Routes
+      href: templates/routes.md
     - name: Pagination
       href: templates/pagination.md
-    - name: Hit Counters
-      href: templates/hit-counter.md
-    - name: PHP in Templates
-      href: templates/php.md
     - name: The Template Engine
       href: templates/engine.md
 

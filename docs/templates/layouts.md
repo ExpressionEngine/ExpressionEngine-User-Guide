@@ -11,6 +11,8 @@
 
 [TOC]
 
+## Overview
+
 In addition to [embedding](templates/embedding.md) templates within each other, you can also create shared layouts for your templates. A layout can be thought of as a wrapping template or a reverse embed. To use a template you use the `{layout=""}` tag at the top of your template:
 
     {layout="template_group/template"}
@@ -19,11 +21,17 @@ Where "template_group" is the name of the group and "template" is the name of th
 
     {layout="site/wrapper"}
 
-This will use the "wrapper" template in the "site" template group as a a layout for the current template. In the layout itself you must now specify a location where the template contents will be shown. This is done using the "layout:contents" tag:
+This uses the `wrapper` template in the `site` template group as a layout for the current template. In the layout itself, you must now specify a location where the template contents will be shown using the `layout:contents` tag:
 
     {layout:contents}
 
 NOTE: **Note:** The layout tag **must** come before any module or plugin tags.
+
+### Watch an introduction to template layouts:
+
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/jzRIymlfU1w" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
 
 ## Simple Example
 
@@ -71,7 +79,7 @@ You can now write the main template using a single layout tag instead of two emb
       {summary}
     {/exp:channel:entries}
 
-Notice that the layout is a [hidden template](templates/hidden-templates.md). This lets you prevent direct access to the layout template, which is most likely not useful to your users on its own.
+Notice that the layout is a [hidden template](templates/overview.md#hidden-templates). This lets you prevent direct access to the layout template, which is most likely not useful to your users on its own.
 
 ## Layout Variables
 

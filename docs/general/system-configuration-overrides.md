@@ -1398,7 +1398,7 @@ Example Usage:
 
 ### `hidden_template_indicator`
 
-Specify the character(s) that denote a [hidden template](templates/hidden-templates.md) when used to prefix a template name. The default is an underscore, e.g. `_my_hidden_template`.
+Specify the character(s) that denote a [hidden template](templates/overview.md#hidden-templates) when used to prefix a template name. The default is an underscore, e.g. `_my_hidden_template`.
 
 | Value | Description                          |
 | ----- | ------------------------------------ |
