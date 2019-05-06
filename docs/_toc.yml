@@ -32,8 +32,6 @@
 
 - name: General Information
   items:
-    - name: Removing index.php from URL
-      href: general/remove-index.php.md
     - name: URL Structure
       href: general/url-structure.md
     - name: 404 Pages

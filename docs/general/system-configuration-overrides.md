@@ -25,7 +25,7 @@ The **main configuration file**, found at `system/user/config/config.php`, is lo
 
 ##### Site Index File
 
-The **site index file** is the `index.php` file found in the web root of the ExpressionEngine installation. This file acts like the gateway to the front-end of the site. Since all web requests for a site's front-end pass through the site index file, there are a set of configuration overrides you can include in this file to alter ExpressionEngine's configuration. Keep in mind that any overrides set in the site index file only affect the system's behavior for front-end pages. (Even if you have [removed index.php from your site's URLs](general/remove-index.php.md), all front-end web requests are still handled by the site index file.)
+The **site index file** is the `index.php` file found in the web root of the ExpressionEngine installation. This file acts like the gateway to the front-end of the site. Since all web requests for a site's front-end pass through the site index file, there are a set of configuration overrides you can include in this file to alter ExpressionEngine's configuration. Keep in mind that any overrides set in the site index file only affect the system's behavior for front-end pages. (Even if you have [removed index.php from your site's URLs](installation/best-practices.md#removing-indexphp-from-your-urls), all front-end web requests are still handled by the site index file.)
 
 NOTE: **Note:** Overrides available for use in the site index file are limited to [cp_url](#cp_url), [is_site_on](#is_site_on), [newrelic_app_name](#newrelic_app_name), [site_404](#site_404), [site_index](#site_index), [site_name](#site_name), [site_url](#site_url), [template](#template), and [template_group](#template_group).
 
@@ -2612,7 +2612,7 @@ Also available for use in the [site index file](#site-index-file), `index.php`. 
 
 ### `site_index`
 
-Set the filename of the [site index file](#site-index-file). By default, this will be `index.php`, which is located in the base folder. You will only need to alter this setting if you have changed the filename or you want to [remove index.php from your site's URLs](general/remove-index.php.md).
+Set the filename of the [site index file](#site-index-file). By default, this will be `index.php`, which is located in the base folder. You will only need to alter this setting if you have changed the filename or you want to [remove index.php from your site's URLs](installation/best-practices.md#removing-indexphp-from-your-urls).
 
 | Value    | Description                   |
 | -------- | ----------------------------- |
