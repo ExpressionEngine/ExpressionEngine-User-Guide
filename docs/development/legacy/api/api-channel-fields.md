@@ -91,7 +91,7 @@ This method prepares resets the fieldtype class and its settings. It must be cal
 | \$bookmarklet | `Boolean` | `TRUE` if you need the data to be setup for a bookmarklet |
 | Returns       | `Array`   | Nested array of field settings for a channel with data    |
 
-This method will properly populate the settings array for all fields in the specified channel. It returns an array of all field settings, and is typically used before the Channel Entries API's [submit_new_entry()](development/legacy/api/api-channel-entries.md) method:
+This method will properly populate the settings array for all fields in the specified channel. It returns an array of all field settings:
 
     ee()->api_channel_fields->setup_entry_settings((string) $channel_id, (array) $entry_data, (bool) $bookmarklet);
 

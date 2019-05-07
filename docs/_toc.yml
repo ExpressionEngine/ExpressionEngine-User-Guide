@@ -746,8 +746,6 @@
           items:
             - name: Channel Categories API
               href: development/legacy/api/api-channel-categories.md
-            - name: Channel Entries API
-              href: development/legacy/api/api-channel-entries.md
             - name: Channel Fields API
               href: development/legacy/api/api-channel-fields.md
             - name: Channel Structure API
