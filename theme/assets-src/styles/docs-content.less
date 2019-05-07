@@ -34,6 +34,12 @@
 
 	@p-sm-x: 16px;
 
+	font-size: 1rem;
+
+	@media @m-desktop {
+		font-size: 0.97rem;
+	}
+
 	// -------------------------------------------------------------------
 
 	.copyright {
@@ -87,8 +93,10 @@
 	}
 
 	h2 {
-		color: @highlight;
-		padding-top: @p-lg;
+		color: rgb(36, 42, 49);
+		padding-top: 50px;
+		margin: 50px 0 @p-nm 0;
+		font-size: 26px;
 		font-weight: 500;
 		border-top: 1px solid @border;
 		position: relative;
@@ -136,34 +144,36 @@
 	// -------------------------------------------------------------------
 
 	code {
-		border-radius: @corner-radius;
-		padding: 2px 5px;
-		padding: .25rem .5rem;
-		padding: 3px 6px;
-		color: @highlight;
+		.font-monospaced;
+
+		border-radius: 3px;
+		padding: 0.3em 0.6em;
+		color: rgb(85, 86, 109);
 		word-wrap: break-word;
 		font-size: 0.9em;
-		// border: 1px solid E3E8EF;
 		background-color: darken(@light-background, 1%);
-		// background: @light-background;
-		.font-monospaced;
-		font-weight: inherit;
+		font-weight: normal;
+		font-size: 13px;
 	}
 
 	pre {
+		.font-monospaced;
+
 		padding: @p-sm @p-sm-x;
-		padding: @p-nm * @p-y @p-nm;
+		padding: @p-nm - 10px @p-nm;
 		margin-bottom: @p-nm;
 		overflow-x: auto;
-		border-radius: @corner-radius;
+		border-radius: 3px;
 		position: relative;
 		background: darken(@light-background, 1%);
-		.font-monospaced;
+		font-size: 13px;
+		color: rgb(85, 86, 109);
 	}
 
 	pre code {
 		padding: 0;
 		border: none;
+		font-size: inherit;
 		color: inherit;
 		word-wrap: initial;
 		background: transparent;
