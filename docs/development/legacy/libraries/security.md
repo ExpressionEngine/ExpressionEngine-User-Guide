@@ -41,10 +41,6 @@ For general XSS protection handling, please refer to the [Cross Site Scripting](
 
 For general CSRF protection handling, please refer to the [Cross Site Request Forgery](development/guidelines/security.md#cross-site-request-forgery) section of the security guidelines.
 
-### `restore_xid([$xid = REQUEST_XID])`
-
-WARN: Deprecated since version 2.8: CSRF Tokens are now multi-use.
-
 ## Other Class Methods
 
 ### `sanitize_filename($str[, $relative_path = FALSE])`

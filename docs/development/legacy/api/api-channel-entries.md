@@ -102,15 +102,3 @@ This function checks if an entry with a given id exists.
 This function updates the relationship cache table. You should only need to use this function if you are manually changing relationship data, `submit_new_entry()` and `update_entry()` will automatically recompile relationship data:
 
     ee()->api_channel_entries->update_related_cache((int) $entry_id);
-
-### `submit_new_entry($channel_id, $data[, $autosave = FALSE])`
-
-WARN: Deprecated since version 2.6: Use `Api_channel_entries::save_entry` instead.
-
-### `update_entry($entry_id, $data[, $autosave = FALSE])`
-
-WARN: Deprecated since version 2.6: Use `Api_channel_entries::save_entry` instead.
-
-### `send_pings($ping_servers, $channel_id, $entry_id[, $send_now = TRUE])`
-
-WARN: Deprecated since version 2.7.

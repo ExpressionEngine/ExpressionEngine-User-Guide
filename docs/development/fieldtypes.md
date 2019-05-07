@@ -256,12 +256,6 @@ The base class provides a handful of base variables:
 
 [TOC=4]
 
-#### `EE_Fieldtype::$EE`
-
-A reference to the controller instance.
-
-WARN: Deprecated since version 2.7.0.
-
 #### `EE_Fieldtype::$id`
 
 The field identifier (unique for the current content type).
