@@ -306,8 +306,6 @@
       href: control-panel/member-manager.md
     - name: Member Profile
       href: control-panel/member-profile.md
-    - name: Site Manager
-      href: control-panel/msm.md
     - name: Template Manager
       href: control-panel/template-manager.md
     - name: Add-On Manager
@@ -386,8 +384,6 @@
   items:
     - name: Overview
       href: msm/overview.md
-    - name: Setup
-      href: msm/setup.md
     - name: Variables and Parameter
       href: msm/code.md
 

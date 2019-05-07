@@ -51,17 +51,17 @@ This page allows you to configure ExpressionEngine's built-in Rich Text Editor (
 
 If "Yes", the Rich Text Editor will be applied to any Channel Fields of the [Textarea (Rich Text)](control-panel/field-manager.md#createedit-field) fieldtype. If "No", the field will appear as a normal textarea instead.
 
-NOTE: **Note:** If using the [Multiple Site Manager](control-panel/msm.md), this preference is per-site.
+NOTE: **Note:** If using the [Multiple Site Manager](msm/overview.md), this preference is per-site.
 
 ### Default Tool Sets
 
 Determines which tool set will be shown for any member that has not specifically chosen one in [RTE tool set](control-panel/member-profile.md#publishing-settings).
 
-NOTE: **Note:** If using the [Multiple Site Manager](control-panel/msm.md), this preference is per-site.
+NOTE: **Note:** If using the [Multiple Site Manager](msm/overview.md), this preference is per-site.
 
 ## Tool Sets
 
-This section allows you to create, edit, enable, disable and delete tool sets. Each tool set listed will be available (unless it is disabled) to all members of your ExpressionEngine installation, even across [Multiple Site Manager](control-panel/msm.md) sites.
+This section allows you to create, edit, enable, disable and delete tool sets. Each tool set listed will be available (unless it is disabled) to all members of your ExpressionEngine installation, even across [Multiple Site Manager](msm/overview.md) sites.
 
 ### Creating a Tool Set
 

@@ -109,7 +109,7 @@ The base URL where the forum board alias will be displayed.
 
 #### Site for Forum
 
-If the [Multiple Site Manager](control-panel/msm.md) is installed, this allows you to determine which Site the forum board belongs to.
+If the [Multiple Site Manager](msm/overview.md) is enabled, this allows you to determine which Site the forum board belongs to.
 
 #### Forum Triggering Word
 

@@ -11,7 +11,7 @@
 
 **Control Panel Location: `Settings --> Comment Settings`**
 
-This section of the Control Panel allows you to define comment settings of your site. If you are using the [Multiple Site Manager](control-panel/msm.md), note that these settings are per-site.
+This section of the Control Panel allows you to define comment settings of your site. If you are using the [Multiple Site Manager](msm/overview.md), note that these settings are per-site.
 
 ## Settings
 

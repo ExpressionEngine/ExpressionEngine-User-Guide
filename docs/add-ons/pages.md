@@ -54,7 +54,7 @@ The Pages Module adds the following variables for use in the {exp:channel:entrie
 
 ## Multiple Site Manager
 
-If you are using the [Multiple Site Manager](control-panel/msm.md), page data are only available for the current site. If you wish to show the {page_uri} or {page_url} for an entry from a different site, you will need to use the {exp:pages:load_site_pages} tag on the relevant template. This tag has one required parameter: site. For example, if your weblog tag is pulling in pages from sites default_site and corporate_site, your tag should look like:
+If you are using the [Multiple Site Manager](msm/overview.md), page data are only available for the current site. If you wish to show the {page_uri} or {page_url} for an entry from a different site, you will need to use the {exp:pages:load_site_pages} tag on the relevant template. This tag has one required parameter: site. For example, if your weblog tag is pulling in pages from sites default_site and corporate_site, your tag should look like:
 
 `ee {exp:pages:load_site_pages site="default_site|corporate_site"}`
 

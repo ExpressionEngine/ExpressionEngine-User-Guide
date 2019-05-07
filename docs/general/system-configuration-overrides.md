@@ -1493,7 +1493,7 @@ Example Usage:
 
 Specify whether the site should be viewable by the general public or taken offline. This can be helpful when performing maintenance on only one of several MSM sites.
 
-NOTE: **Note:** This setting will have no effect unless [Multiple Site Manager](control-panel/msm.md) is installed and [multiple sites are enabled](#multiple_sites_enabled).
+NOTE: **Note:** This setting will have no effect unless [Multiple Site Manager](msm/overview.md) is installed and [multiple sites are enabled](#multiple_sites_enabled).
 
 NOTE: **Note:** When used in the main configuration file, `config.php`, this setting has the same effect as [is_system_on](#is_system_on) since it will apply to all sites in the system.
 
@@ -1837,7 +1837,7 @@ Example Usage:
 
     $config['multi_login_sites'] = 'https://example.com|http://different_example.com';
 
-For more information, see [MSM multi site login](msm/setup.md#multi-site-login)
+For more information, see [MSM multi site login](msm/overview.md#multi-site-login)
 
 ### `multiple_sites_enabled`
 
@@ -2640,7 +2640,7 @@ Available for use only in the [site index file](#site-index-file), `index.php`, 
 
     $assign_to_config['site_name'] = 'domain2_short_name';
 
-**Also found in CP:** `Developer --> Site Manager --> Edit`: [Site Short Name](control-panel/msm.md)
+**Also found in CP:** `Developer --> Site Manager --> Edit`
 
 ### `site_url`
 
