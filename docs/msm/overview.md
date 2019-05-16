@@ -29,7 +29,7 @@ The site manager must be enabled in Control Panel setting: `Settings > General S
 
 ## Setting Up Multiple Sites
 
-All Sites must reside on the same server If using sub-domains or domains, directories must be able to access your main installation system directory. Please see Setup Domains and Sub-domains for more information.
+All Sites must reside on the same server If using sub-domains or domains, directories must be able to access your main installation system directory.
 
 It is recommended that you [Create a Site](#creating-a-site) before setting up the domain or sub-domain.
 
