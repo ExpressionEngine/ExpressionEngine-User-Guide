@@ -129,7 +129,7 @@ There are a couple common ways of creating MySQL dumps. One is to use [mysqldump
 
     mysqldump -u username db_name > output.sql
 
-The above takes a databased named `db_name` and outputs it to a file called `output.sql`. Knowing this and what we've covered earlier, you could modify the command to output a file with a name of today's date. Combine that with `tar` to compress the file because text compresses very well.
+The above takes a database named `db_name` and outputs it to a file called `output.sql`. Knowing this and what we've covered earlier, you could modify the command to output a file with a name of today's date. Combine that with `tar` to compress the file because text compresses very well.
 
 Many hosts have [phpMyAdmin](http://www.phpmyadmin.net/) installed which also lets you export databases in this format.
 

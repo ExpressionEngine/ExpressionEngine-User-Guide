@@ -31,7 +31,7 @@ It's important to understand that there are two conditions in ExpressionEngine t
 
 The first condition is an invalid template group. ExpressionEngine only checks the first [segment](templates/globals/url-segments.md) to determine whether or not to show a 404 page. Since first segment is the template group, **ExpressionEngine will only display the 404 Template if the requested Template Group in the URL does not exist.**
 
-It is recommended that you set you set up a custom 404 page for your site. Even though what a visitor may have entered in the URL is invalid, without a custom 404 page, they'll still see your homepage which may lead to some confusion.
+It is recommended that you set up a custom 404 page for your site. Even though what a visitor may have entered in the URL is invalid, without a custom 404 page, they'll still see your homepage which may lead to some confusion.
 
 The second condition that will trigger a 404 status is extra segments. This will require some code to be added to your template. Remember that ExpressionEngine is only looking at the first segment to trigger a 404 status, in order to extend this error checking beyond the first segment we need to use a conditional and the [{redirect=} global variable](templates/globals/single-variables.md#redirect).
 
