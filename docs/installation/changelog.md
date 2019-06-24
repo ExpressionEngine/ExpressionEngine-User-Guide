@@ -9,6 +9,17 @@
 
 # ExpressionEngine v5 Change Log
 
+## Version 5.2.4
+
+Release Date: June 24, 2019
+
+- Fixed a bug where relationship fields with parameters were not always parsed.
+- Fixed a bug where relationships in Grid fields could prevent parsing of standalone relationship fields.
+- Fixed a bug in the Channel Form where posting to a different Site could corrupt Site Pages.
+- Fixed a bug([\#212](https://github.com/ExpressionEngine/ExpressionEngine/issues/212)) where the search module did not validate the maximum keyword length.
+- Fixed a bug([\#224](https://github.com/ExpressionEngine/ExpressionEngine/issues/224)) where several links in the control panel linked to the EE4 docs.
+- Fixed a bug where a PHP error occured searching for 'All posts by this member'.
+
 ## Version 5.2.3
 
 Release Date: May 27, 2019
