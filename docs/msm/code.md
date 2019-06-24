@@ -13,9 +13,9 @@
 
 ## Parameter
 
-The Multiple Site Manager enables the use of the site="" parameter installation wide. This parameter will be used when you want to pull the content of one Site into another Site's templates. The value of the parameter is always the Site's Short Name.
+The Multiple Site Manager enables the use of the `site=""` parameter installation wide. This parameter will be used when you want to pull the content of one Site into another Site's templates. The value of the parameter is always the Site's Short Name.
 
-The site="" parameter is available to the following:
+The `site=""` parameter is available to the following:
 
 - Channel Module: Every single tag.
 - Comment Module: Every single tag.
@@ -23,7 +23,7 @@ The site="" parameter is available to the following:
 - Search Module
 - Statistics Module
 
-When you use the site="" parameter it will exclude all other Sites. If the site="" parameter is not specified then the current site is used.
+When you use the `site=""` parameter it will exclude all other Sites. If the site="" parameter is not specified then the current site is used.
 
 ### Embedding Templates from Another Site
 
@@ -31,15 +31,11 @@ To embed a template from another Site, simply prefix the template group and temp
 
     {embed="site_short_name:template_group/template"}
 
-So if the Site's Short Name is "siteA" and you want to embed the "global/footer" template:
-
-    {embed="siteA:global/footer"}
-
 ### Specifying Multiple Sites (prepare for a head trip)
 
 NOTE: **Note:** Specifying multiple Sites does not work with the {embed=""} tag.
 
-When using the site="" parameter in the Channel, Comment, Statistics, and RSS modules you can specify multiple Sites like so:
+When using the `site=""` parameter in the Channel, Comment, Statistics, and RSS modules you can specify multiple Sites like so:
 
     site="siteA|siteB|siteC"
 
@@ -52,8 +48,6 @@ Let's pause a moment to remember that each Site is independent of other Sites. T
 For example, let's say you have SiteA, SiteB, and SiteC. Each of these Sites has a "news" channel which uses the Channel Short Name of "news". The following code would display the "news" channels from all the Sites:
 
     {exp:channel:entries channel="news" site="siteA|siteB|siteC"}
-
-## Parameters
 
 Within the channel entries tag, it is possible to output a list of entries from multiple Sites while ordering by Site and Channel Field. Read more about the [Multiple Site Manager and orderby=](channels/entries.md#orderby).
 

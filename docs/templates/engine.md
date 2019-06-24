@@ -20,7 +20,7 @@ NOTE: **Note:** The information in this article applies only to rendering Templa
 The Template Engine processes the selected template fully from top to bottom through each rendering stage.
 
 1. Determine template to process based on request [URI](general/url-structure.md)
-2. Get **template from database**, check [template access permissions](control-panel/template-manager.md#edit-template), and increment the [hit counter](templates/hit-counter.md)
+2. Get **template from database**, check [template access permissions](control-panel/template-manager.md#edit-template), and increment the [hit counter](templates/overview.md#hit-counters)
 3. If it exists, get [template from file](general/system-configuration-overrides.md#save_tmpl_files)
 4. If template type is [static](control-panel/template-manager.md#create-template), return template and end parsing
 5. Parse (as a group, so order is irrelevant):
@@ -36,13 +36,13 @@ The Template Engine processes the selected template fully from top to bottom thr
 10. Parse [{template_edit_date}](templates/globals/single-variables.md#template_edit_date)
 11. Parse [{current_time}](templates/globals/single-variables.md#current_time)
 12. If present, get [cached template](optimization/caching.md#template-caching), then skip to the **advanced conditionals** parsing stage
-13. Parse [PHP on Input](templates/php.md#php-parsing-stage)
+13. Parse [PHP on Input](templates/overview.md#php-parsing-stage)
 14. Parse [conditional tags](templates/conditionals.md)
 15. Assign and parse [preload_replace variables](templates/globals/preload-replacement.md)
 16. Parse **module and plugin tags**
-    - See notes on how [nested plugins](templates/plugins.md#nested-plugins) are parsed.
+    - See notes on how [nested plugins](templates/language.md#nested-plugins) are parsed.
     - If any module's [{if no_results}](channels/entries.md#if-no_results) tag pair evaluates true, a [{redirect}](templates/globals/single-variables.md#redirect) variable within the tag pair will be processed immediately.
-17. Parse [PHP on Output](templates/php.md)
+17. Parse [PHP on Output](templates/overview.md#php-parsing-stage)
 18. Write **template to cache file**
 19. Parse [conditional tags](templates/conditionals.md)
 20. Process [template layouts](templates/layouts.md)

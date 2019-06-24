@@ -13,7 +13,7 @@
 
 ## Pre-Flight Check
 
-NOTE: **Important:** If you need to **update** your installation from an earlier version, see the [Update Instructions](installation/one-click-updating.md) instead.
+NOTE: **Important:** If you need to **update** your installation from an earlier version, see the [Update Instructions](installation/updating.md) instead.
 
 Before getting started, make sure your web host and your browser meet all the [System Requirements](installation/requirements.md) to run ExpressionEngine.
 

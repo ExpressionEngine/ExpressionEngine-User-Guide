@@ -11,7 +11,7 @@
 
 **Control Panel Location: `Settings > URL and Path Settings`**
 
-This section of the Control Panel allows you to define the URL and path settings of your site. If you are using the [Site Manager](control-panel/msm.md), note that these settings are per-site.
+This section of the Control Panel allows you to define the URL and path settings of your site. If you are using [Multiple Sites](msm/overview.md), note that these settings are per-site.
 
 ## Settings
 

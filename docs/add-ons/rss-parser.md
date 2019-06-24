@@ -15,9 +15,9 @@ The RSS Parser plugin provides RSS parsing tags for your templates. It uses [Sim
 
 ## Example
 
-Here's a simple example where we're pulling the [EllisLab blog](https://ellislab.com/blog/) feed and showing the five most recent posts:
+Here's a simple example where we're pulling the [ExpressionEngine blog](https://expressionengine.com/blog) feed and showing the five most recent posts:
 
-    {exp:rss_parser url="https://ellislab.com/blog/rss-feed" limit="5"}
+    {exp:rss_parser url="https://expressionengine.com/blog/rss-feed" limit="5"}
     <h1>{feed_title}</h1>
     <ul>
         {feed_items}

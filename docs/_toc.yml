@@ -16,14 +16,8 @@
       href: installation/installation.md
     - name: Best Practices
       href: installation/best-practices.md
-    - name: One-Click Updating
-      href: installation/one-click-updating.md
-    - name: Manually Updating
-      href: installation/manual-updating.md
-    - name: Updating Via Command Line
-      href: installation/cmd-line-updating.md
-    - name: Troubleshooting
-      href: installation/troubleshooting.md
+    - name: Updating
+      href: installation/updating.md
     - name: Change Log
       href: installation/changelog.md
 
@@ -36,8 +30,6 @@
 
 - name: General Information
   items:
-    - name: Removing index.php from URL
-      href: general/remove-index.php.md
     - name: URL Structure
       href: general/url-structure.md
     - name: 404 Pages
@@ -71,8 +63,10 @@
   items:
     - name: Overview
       href: templates/overview.md
-    - name: Using Plugins
-      href: templates/plugins.md
+    - name: Template Language
+      href: templates/language.md
+    - name: Conditional Tags
+      href: templates/conditionals.md
     - name: Embedding Templates
       href: templates/embedding.md
     - name: Template Layouts
@@ -95,24 +89,14 @@
           href: templates/globals/path.md
         - name: Preload Text Replacements
           href: templates/globals/preload-replacement.md
-    - name: Conditional Tags
-      href: templates/conditionals.md
-    - name: Hidden Templates
-      href: templates/hidden-templates.md
-    - name: Template Routes
-      href: templates/routes.md
     - name: Variable Modifiers
       href: templates/variable-modifiers.md
-    - name: Template Comments
-      href: templates/comments.md
     - name: Date Variable Formatting
       href: templates/date-variable-formatting.md
+    - name: Template Routes
+      href: templates/routes.md
     - name: Pagination
       href: templates/pagination.md
-    - name: Hit Counters
-      href: templates/hit-counter.md
-    - name: PHP in Templates
-      href: templates/php.md
     - name: The Template Engine
       href: templates/engine.md
 
@@ -176,8 +160,6 @@
   items:
     - name: Overview
       href: add-ons/overview.md
-    - name: Downloadable Add-Ons
-      href: add-ons/downloadable-add-ons.md
     - name: Blacklist / White List
       href: add-ons/blacklist.md
     - name: Consent
@@ -320,8 +302,6 @@
       href: control-panel/member-manager.md
     - name: Member Profile
       href: control-panel/member-profile.md
-    - name: Site Manager
-      href: control-panel/msm.md
     - name: Template Manager
       href: control-panel/template-manager.md
     - name: Add-On Manager
@@ -400,8 +380,6 @@
   items:
     - name: Overview
       href: msm/overview.md
-    - name: Setup
-      href: msm/setup.md
     - name: Variables and Parameter
       href: msm/code.md
 
@@ -409,6 +387,8 @@
   items:
     - name: General
       href: troubleshooting/general.md
+    - name: Installation
+      href: troubleshooting/installation.md
     - name: Templates
       href: troubleshooting/templates.md
     - name: Control Panel
@@ -764,8 +744,6 @@
           items:
             - name: Channel Categories API
               href: development/legacy/api/api-channel-categories.md
-            - name: Channel Entries API
-              href: development/legacy/api/api-channel-entries.md
             - name: Channel Fields API
               href: development/legacy/api/api-channel-fields.md
             - name: Channel Structure API

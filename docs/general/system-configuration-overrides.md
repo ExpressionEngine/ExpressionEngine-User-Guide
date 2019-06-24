@@ -25,7 +25,7 @@ The **main configuration file**, found at `system/user/config/config.php`, is lo
 
 ##### Site Index File
 
-The **site index file** is the `index.php` file found in the web root of the ExpressionEngine installation. This file acts like the gateway to the front-end of the site. Since all web requests for a site's front-end pass through the site index file, there are a set of configuration overrides you can include in this file to alter ExpressionEngine's configuration. Keep in mind that any overrides set in the site index file only affect the system's behavior for front-end pages. (Even if you have [removed index.php from your site's URLs](general/remove-index.php.md), all front-end web requests are still handled by the site index file.)
+The **site index file** is the `index.php` file found in the web root of the ExpressionEngine installation. This file acts like the gateway to the front-end of the site. Since all web requests for a site's front-end pass through the site index file, there are a set of configuration overrides you can include in this file to alter ExpressionEngine's configuration. Keep in mind that any overrides set in the site index file only affect the system's behavior for front-end pages. (Even if you have [removed index.php from your site's URLs](installation/best-practices.md#removing-indexphp-from-your-urls), all front-end web requests are still handled by the site index file.)
 
 NOTE: **Note:** Overrides available for use in the site index file are limited to [cp_url](#cp_url), [is_site_on](#is_site_on), [newrelic_app_name](#newrelic_app_name), [site_404](#site_404), [site_index](#site_index), [site_name](#site_name), [site_url](#site_url), [template](#template), and [template_group](#template_group).
 
@@ -1398,7 +1398,7 @@ Example Usage:
 
 ### `hidden_template_indicator`
 
-Specify the character(s) that denote a [hidden template](templates/hidden-templates.md) when used to prefix a template name. The default is an underscore, e.g. `_my_hidden_template`.
+Specify the character(s) that denote a [hidden template](templates/overview.md#hidden-templates) when used to prefix a template name. The default is an underscore, e.g. `_my_hidden_template`.
 
 | Value | Description                          |
 | ----- | ------------------------------------ |
@@ -1493,7 +1493,7 @@ Example Usage:
 
 Specify whether the site should be viewable by the general public or taken offline. This can be helpful when performing maintenance on only one of several MSM sites.
 
-NOTE: **Note:** This setting will have no effect unless [Multiple Site Manager](control-panel/msm.md) is installed and [multiple sites are enabled](#multiple_sites_enabled).
+NOTE: **Note:** This setting will have no effect unless [Multiple Site Manager](msm/overview.md) is installed and [multiple sites are enabled](#multiple_sites_enabled).
 
 NOTE: **Note:** When used in the main configuration file, `config.php`, this setting has the same effect as [is_system_on](#is_system_on) since it will apply to all sites in the system.
 
@@ -1837,7 +1837,7 @@ Example Usage:
 
     $config['multi_login_sites'] = 'https://example.com|http://different_example.com';
 
-For more information, see [MSM multi site login](msm/setup.md#multi-site-login)
+For more information, see [MSM multi site login](msm/overview.md#multi-site-login)
 
 ### `multiple_sites_enabled`
 
@@ -2612,7 +2612,7 @@ Also available for use in the [site index file](#site-index-file), `index.php`. 
 
 ### `site_index`
 
-Set the filename of the [site index file](#site-index-file). By default, this will be `index.php`, which is located in the base folder. You will only need to alter this setting if you have changed the filename or you want to [remove index.php from your site's URLs](general/remove-index.php.md).
+Set the filename of the [site index file](#site-index-file). By default, this will be `index.php`, which is located in the base folder. You will only need to alter this setting if you have changed the filename or you want to [remove index.php from your site's URLs](installation/best-practices.md#removing-indexphp-from-your-urls).
 
 | Value    | Description                   |
 | -------- | ----------------------------- |
@@ -2640,7 +2640,7 @@ Available for use only in the [site index file](#site-index-file), `index.php`, 
 
     $assign_to_config['site_name'] = 'domain2_short_name';
 
-**Also found in CP:** `Developer --> Site Manager --> Edit`: [Site Short Name](control-panel/msm.md)
+**Also found in CP:** `Developer --> Site Manager --> Edit`
 
 ### `site_url`
 

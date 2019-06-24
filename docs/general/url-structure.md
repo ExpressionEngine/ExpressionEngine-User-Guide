@@ -17,7 +17,7 @@ As described in [The Big Picture](getting-started/the-big-picture.md) a Template
 
 Templates are organized into Template Groups. A Template Group is analogous to a folder on your server. Templates can be created and edited in the `Developer -> Templates` area of your Control Panel.
 
-In ExpressionEngine, a URL will always contains the following structure, which allows a Template Group and a specific Template to be shown:
+In ExpressionEngine, a URL will always contain the following structure, which allows a Template Group and a specific Template to be shown:
 
     http://example.com/template_group/template
 

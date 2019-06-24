@@ -29,7 +29,7 @@ If you are a site builder you will primarily interact with the cluster of links 
 - [Fields](control-panel/field-manager.md)
 - [Categories](control-panel/categories.md)
 - [Template Manager](control-panel/template-manager.md)
-- [Site Manager](control-panel/msm.md)
+- [Site Manager](msm/overview.md)
 - [Add-On Manager](control-panel/addons-manager.md)
 - [Utilities](control-panel/utilities.md)
 - [System Logs](control-panel/system-logs.md)

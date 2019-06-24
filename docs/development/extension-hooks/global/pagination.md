@@ -30,10 +30,6 @@ How it's called:
     $this->extensions->call('pagination_create', $this, $count);
     if ($this->extensions->end_script === TRUE) return;
 
-### `channel_module_create_pagination($this, $count)`
-
-WARN: **Deprecated since version 2.8:** Renamed in 2.8. Use `pagination_create()` instead.
-
 ### `pagination_fetch_data($this)`
 
 | Parameter | Type     | Description                                                             |
@@ -47,7 +43,3 @@ How it's called:
 
     $this->extensions->call('pagination_fetch_data', $this);
     if ($this->extensions->end_script === TRUE) return;
-
-### `channel_module_fetch_pagination_data($this)`
-
-WARN: **Deprecated since version 2.8:** Renamed in 2.8. Use `pagination_fetch_data()` instead.

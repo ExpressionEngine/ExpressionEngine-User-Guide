@@ -505,7 +505,3 @@ Parse the variables within in a string--usually `TMPL::$tagdata`.
 | Returns     | `String`  | The `$tagdata` parsed with `$variables`                                                       |
 
 Parses a single row of data instead of letting `TMPL::parse_variables` handle all of the rows for you.
-
-### `swap_var_single($search, $replace, $source)`
-
-WARN: Deprecated since version 2.0: Use `TMPL::parse_variables` or `TMPL::parse_variables_row` instead

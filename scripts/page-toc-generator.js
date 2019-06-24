@@ -82,7 +82,7 @@ class PageTocGenerator {
 				let heading = toc.items[i]
 
 				// Flatten the headings so that they start at zero
-				var lvl = heading.level - toc.level;
+				let lvl = heading.level - toc.level;
 				let prevLvl = toc.items[i - 1] ? toc.items[i - 1].level - toc.level : false
 
 				// Don't let smaller headings jump inward by more than one
@@ -90,7 +90,10 @@ class PageTocGenerator {
 					lvl = lvl - (prevLvl + 1)
 				}
 
-				list += li(lvl, `[${heading.content}](#${heading.slug})`) + '\n'
+				// Escape markdown link characters. Prevents render problems when the heading content has a markdown link in it.
+				let escapedContent = heading.content.replace(/(\[|\(|\)|\])/g, '\\$1')
+
+				list += li(lvl, `[${escapedContent}](#${heading.slug})`) + '\n'
 			}
 
 			if (toc.items.length == 0) {

@@ -30,7 +30,6 @@ At this point, methods within the api_channel_entries api are callable via `ee()
 ## Available APIs
 
 - [Channel Categories](development/legacy/api/api-channel-categories.md) – Retrieve information on Channel Categories.
-- [Channel Entries](development/legacy/api/api-channel-entries.md) – Retrieve information on Channel Entries.
 - [Channel Fields](development/legacy/api/api-channel-fields.md) – Retrieve information on Channel Fields.
 - [Channel Structure](development/legacy/api/api-channel-structure.md) – Create, Modify, Delete & Update Channels.
 - [Template Structure](development/legacy/api/api-template-structure.md) – Retrieve information on Template Groups.

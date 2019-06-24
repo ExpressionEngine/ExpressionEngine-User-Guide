@@ -66,7 +66,7 @@ The Template Notes tab enables you to save notes and information about your temp
 - **Enable Caching?** -- This determines whether or not Template Caching is enabled for the Template. This is used together with the following preference.
 - **Refresh Interval** -- If the previous preference is enabled, then this specifies how long (in minutes) the Template cache should active. The next time the Template is requested after the time interval has expired, a new cache will be created.
 - **Allow PHP?** -- Here you specify whether or not the Template will parse PHP expressions. If the preference is set to "no", then any PHP in the Template will be output as plain text.
-- **PHP Parsing Stage** -- If the previous preference is enabled, this sets whether PHP is parsed on "input" or "output" in the Template. See [Using PHP in Templates](templates/php.md) for more information.
+- **PHP Parsing Stage** -- If the previous preference is enabled, this sets whether PHP is parsed on "input" or "output" in the Template. See [Using PHP in Templates](templates/overview.md#php-in-templates) for more information.
 - **Hit Counter** -- If you wish to manually revise the hit counter for a Template you may do so.
 
 ### Access

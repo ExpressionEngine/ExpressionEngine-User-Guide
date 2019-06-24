@@ -21,7 +21,7 @@ When you force query strings, ExpressionEngine will add a '?' to system generate
 
     https://example.com?/blog/11245/
 
-If you are using .htaccess to remove the index.php from your URLs, don't force query strings. Instead, [add the query string to your htaccess code](general/remove-index.php.md)
+If you are using .htaccess to remove the index.php from your URLs, don't force query strings. Instead, [add the query string to your htaccess code](installation/best-practices.md#removing-indexphp-from-your-urls)
 
 ## Running PHP as CGI
 

@@ -1398,7 +1398,7 @@ This displays the name of the category.
 
 The _opposite_ of `{category_count}`, in that it displays the category count position counting backwards from the total. Countdown all the things!
 
-##### `category_total_results}`
+##### `{category_total_results}`
 
 The total number of categories being displayed.
 

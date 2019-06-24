@@ -50,7 +50,7 @@ NOTE: **Note:** When flushing a namespace, the key must end with the namespace s
 
 ## Scoping
 
-Items stored in the cache by default are scoped to the site currently saving or retrieving from the cache. This prevents cache keys from colliding when the same keys are used in [multiple sites](control-panel/msm.md) in the same ExpressionEngine install.
+Items stored in the cache by default are scoped to the site currently saving or retrieving from the cache. This prevents cache keys from colliding when the same keys are used in [multiple sites](msm/overview.md) in the same ExpressionEngine install.
 
 But you may want the same cache item available across all sites in your ExpressionEngine install. In that case, you must specify a global scope by passing the `Cache::GLOBAL_SCOPE` constant when saving or retrieving from the cache:
 

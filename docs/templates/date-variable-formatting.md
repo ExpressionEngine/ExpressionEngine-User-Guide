@@ -1,3 +1,7 @@
+---
+lang: ee
+---
+
 <!--
     This source file is part of the open source project
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
@@ -13,17 +17,13 @@
 
 Many tags, including channel fields of the "date" type, are designed to display dates and times. The output of these tags can be formatted so that the date and time appear in the manner you wish. This includes the format of the date, a fixed timezone, and relative date options.
 
-## Standard Dates
+## Formatting Dates
 
-### Parameters
-
-#### format=
-
-The `format=` parameter enables you to format the date using the Date Formatting Codes listed below. Each code letter is always preceded by a percent sign. The example:
+The `format=` parameter enables you to format a date using the date formatting codes listed below. Each code letter is always preceded by a percent sign. For example:
 
     {current_time format="%F %d %Y"}
 
-would be rendered like this:
+Would be rendered like this:
 
     January 15 2006
 
@@ -35,9 +35,17 @@ Would be rendered like this:
 
     Mon, January 15, 2006 - 10:23:45
 
-##### Date Formatting Codes
+### Setting the Timezone
 
-If you are familiar with PHP, then these will look [remarkably similar](http://php.net/manual/en/function.date.php#refsect1-function.date-parameters)
+The `timezone=` parameter will convert a date to the specified timezone:
+
+    timezone="America/Los_Angeles"
+
+This will override the timezone specified in the [localization settings](control-panel/settings/general.md) in the control panel, and the member's localization settings. PHP.net has a [list of supported timezones](http://php.net/manual/en/timezones.php).
+
+## Date Formatting Codes
+
+These are all the available formating codes. If you are familiar with PHP, then these will look [remarkably similar](http://php.net/manual/en/function.date.php#refsect1-function.date-parameters):
 
 | Variable    | Description                                                                                                                                                 | Sample Rendering                           |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
@@ -90,7 +98,7 @@ If you are familiar with PHP, then these will look [remarkably similar](http://p
 
 NOTE: **Note:** Dates in ExpressionEngine are most often stored as integers, which translate to whole seconds. So as with PHP's own `date()` function, _u_ isn't a particularly useful formatting code in this context, and will always output _000000_ for microseconds.
 
-##### Date Formatting Constants
+### Date Formatting Constants
 
 You may also use the pre-defined Date Formatting Constants listed below for easy access to some standard format strings. For example, this:
 
@@ -102,28 +110,18 @@ Would be rendered like this:
 
 Available pre-defined formatting strings are described in the table below.
 
-**Date Formatting Constants:**
-
-| Variable           | Equivalent                  | Sample Rendering                |
+| Constant           | Equivalent                  | Sample Rendering                |
 | ------------------ | --------------------------- | ------------------------------- |
-| **{DATE_ATOM}**    | `%Y-%m-%dT%H:%i:%s%Q`       | 2006-10-16T08:19:39-06:00       |
-| **{DATE_COOKIE}**  | `%l, %d-%M-%y %H:%i:%s UTC` | Monday, 16-Oct-06 08:19:39 UTC  |
-| **{DATE_ISO8601}** | `%Y-%m-%dT%H:%i:%s%Q`       | 2006-10-16T08:19:39-05:00       |
-| **{DATE_RFC822}**  | `%D, %d %M %y %H:%i:%s %O`  | Mon, 16 Oct 06 08:19:39 -0500   |
-| **{DATE_RFC850}**  | `%l, %d-%M-%y %H:%i:%s UTC` | Monday, 16-Oct-06 08:10:19 UTC  |
-| **{DATE_RFC1036}** | `%D, %d %M %y %H:%i:%s %O`  | Mon, 16 Oct 06 08:19:39 -0500   |
-| **{DATE_RFC1123}** | `%D, %d %M %Y %H:%i:%s %O`  | Mon, 16 Oct 2006 08:19:39 -0500 |
-| **{DATE_RFC2822}** | `%D, %d %M %Y %H:%i:%s %O`  | Mon, 16 Oct 2006 08:19:39 -0500 |
-| **{DATE_RSS}**     | `%D, %d %M %Y %H:%i:%s %O`  | Mon, 16 Oct 2006 08:19:39 -0500 |
-| **{DATE_W3C}**     | `%Y-%m-%dT%H:%i:%s%Q`       | 2006-10-16T08:19:39-06:00       |
-
-#### timezone=
-
-The `timezone=` parameter will convert the date to the specified timezone:
-
-    timezone="America/Los_Angeles"
-
-This will override the timezone specified in the [localization settings](control-panel/settings/general.md) in the control panel, and the member's localization settings. PHP.net has a [list of supported timezones](http://php.net/manual/en/timezones.php).
+| `{DATE_ATOM}`    | `%Y-%m-%dT%H:%i:%s%Q`       | 2006-10-16T08:19:39-06:00       |
+| `{DATE_COOKIE}`  | `%l, %d-%M-%y %H:%i:%s UTC` | Monday, 16-Oct-06 08:19:39 UTC  |
+| `{DATE_ISO8601}` | `%Y-%m-%dT%H:%i:%s%Q`       | 2006-10-16T08:19:39-05:00       |
+| `{DATE_RFC822}`  | `%D, %d %M %y %H:%i:%s %O`  | Mon, 16 Oct 06 08:19:39 -0500   |
+| `{DATE_RFC850}`  | `%l, %d-%M-%y %H:%i:%s UTC` | Monday, 16-Oct-06 08:10:19 UTC  |
+| `{DATE_RFC1036}` | `%D, %d %M %y %H:%i:%s %O`  | Mon, 16 Oct 06 08:19:39 -0500   |
+| `{DATE_RFC1123}` | `%D, %d %M %Y %H:%i:%s %O`  | Mon, 16 Oct 2006 08:19:39 -0500 |
+| `{DATE_RFC2822}` | `%D, %d %M %Y %H:%i:%s %O`  | Mon, 16 Oct 2006 08:19:39 -0500 |
+| `{DATE_RSS}`     | `%D, %d %M %Y %H:%i:%s %O`  | Mon, 16 Oct 2006 08:19:39 -0500 |
+| `{DATE_W3C}`     | `%Y-%m-%dT%H:%i:%s%Q`       | 2006-10-16T08:19:39-06:00       |
 
 ## Relative Dates
 
@@ -240,7 +238,7 @@ Would be rendered like this:
 
 #### stop=
 
-The `stop=` parameter determines when to stop calculating a relative date and instead display a standard date. When this happens the [format=](#format) and [timezone=](#timezone) parameters will be processed. Any valid date/time string parameter for PHP's [strtotime()](http://www.php.net/manual/en/function.strtotime.php) function is acceptable. ExpressionEngine will compute a timestamp based on the date and the provided `stop=` value. When the current timestamp is greater than or equal to the computed timestamp the date will be displayed as a standard date.
+The `stop=` parameter determines when to stop calculating a relative date and instead display a standard date. When this happens the [format=](#formatting-dates) and [timezone=](#setting-the-timezone) parameters will be processed. Any valid date/time string parameter for PHP's [strtotime()](http://www.php.net/manual/en/function.strtotime.php) function is acceptable. ExpressionEngine will compute a timestamp based on the date and the provided `stop=` value. When the current timestamp is greater than or equal to the computed timestamp the date will be displayed as a standard date.
 
 For example, if you want relative dates but only for one day:
 

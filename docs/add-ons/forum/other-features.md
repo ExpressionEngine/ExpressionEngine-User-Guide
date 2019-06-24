@@ -13,7 +13,7 @@
 
 ## Using PHP in the Forum Templates
 
-You can enable PHP to be used in the Forum Templates if you wish. This is done under Default Preferences. You can do this if you wish to include other PHP scripts, such as banner ads. As with regular ExpressionEngine Templates, you can choose whether the [PHP is executed](templates/php.md) on "Input" or "Output".
+You can enable PHP to be used in the Forum Templates if you wish. This is done under Default Preferences. You can do this if you wish to include other PHP scripts, such as banner ads. As with regular ExpressionEngine Templates, you can choose whether the [PHP is executed](templates/overview.md#php-in-templates) on "Input" or "Output".
 
 ## Running the Forums Through Regular Templates
 

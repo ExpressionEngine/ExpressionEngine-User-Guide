@@ -256,12 +256,6 @@ The base class provides a handful of base variables:
 
 [TOC=4]
 
-#### `EE_Fieldtype::$EE`
-
-A reference to the controller instance.
-
-WARN: Deprecated since version 2.7.0.
-
 #### `EE_Fieldtype::$id`
 
 The field identifier (unique for the current content type).
@@ -691,12 +685,12 @@ This is accessed as array keys of your `$settings` class property like so:
 
 Several Javascript events are fired on certain actions to let your fieldtypes know when those actions have taken place. Here is an overview.
 
-| Event Name | Description             |                                     |
-| ---------- | ----------------------- | ----------------------------------- |
-| add        | Called when field       | a field is added to a Fluid         |
-| remove     | Called when field       | a field is removed from a Fluid     |
-| beforeSort | Called befo publish for | re a field starts sorting on the m  |
-| afterSort  | Called afte publish for | r a field finishes sorting on the m |
+| Event Name | Description                                                |
+| ---------- | ---------------------------------------------------------- |
+| add        | Called when field is added to a Fluid field                |
+| remove     | Called when field is removed from a Fluid field            |
+| beforeSort | Called before a field starts sorting on the publish form   |
+| afterSort  | Called after a field finishes sorting on the publish form  |
 
 To bind an event, use the below Javascript as an example:
 

@@ -11,7 +11,7 @@
 
 **Control Panel Location: `Settings > General Settings`**
 
-This section of the Control Panel allows you to define the basic settings of your site. If you are using the [Site Manager](control-panel/msm.md), note that these settings are per-site.
+This section of the Control Panel allows you to define the basic settings of your site. If you are using [Multiple Sites](msm/overview.md), note that these settings are per-site.
 
 ![](_images/cp-general-settings.png)
 

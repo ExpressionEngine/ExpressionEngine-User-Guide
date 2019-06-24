@@ -50,10 +50,6 @@ The segment passed to this function is parsed and added to the full site URL to 
 
 Returns uri for current page.
 
-### `remove_double_slashes($str)`
-
-WARN: Deprecated since version 2.6: Use String helper's `reduce_double_slashes()` instead.
-
 ### `extract_path($str)`
 
 | Parameter | Type     | Description                     |

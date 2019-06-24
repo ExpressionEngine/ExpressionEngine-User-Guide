@@ -51,12 +51,6 @@ The right hand subnavigation can be used as the main navigation for a module. Th
         'edit_profile' => BASE.AMP.'C=my_account'.AMP.'M=edit_profile'
     ));
 
-## Set Variables
-
-### `set_variable($name, $value)`
-
-WARN: Deprecated since version 2.6: Use `$this->EE->view->cp_page_title = '...'` instead.
-
 ## Adding Header Data
 
 ### `add_to_head($data)`

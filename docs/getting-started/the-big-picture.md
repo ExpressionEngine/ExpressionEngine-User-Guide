@@ -39,7 +39,7 @@ Templates are organized into Template Groups. A Template Group is analogous to a
 
 ## URL Structure
 
-In ExpressionEngine, a URL will always contains the following structure, which allows a Template Group and a specific Template to be shown:
+In ExpressionEngine, a URL will always contain the following structure, which allows a Template Group and a specific Template to be shown:
 
     http://example.com/template_group/template
 

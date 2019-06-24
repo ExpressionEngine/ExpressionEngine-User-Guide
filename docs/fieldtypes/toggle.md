@@ -11,7 +11,7 @@
 
 Toggle is a fieldtype for storing yes/no or on/off data.
 
-## Template Tags
+## Template Tag
 
 This field is primarily useful with conditionals:
 

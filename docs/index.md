@@ -13,6 +13,10 @@ Welcome to the ExpressionEngine user guide!
 
 In addition to this user guide, there are a number of resources linked below that will help you attain mastery.
 
+### ExpressionEngine University
+
+Tutorials, Tips, Tricks and more! Join us at [ExpressionEngine University](https://u.expressionengine.com), a place to learn and share new knowledge based around building stuff with ExpressionEngine CMS!
+
 ### Forums
 
 The [ExpressionEngine Forums](https://expressionengine.com/forums) are a great place to get involved if you have questions, or to share your own knowledge in order to help others.
