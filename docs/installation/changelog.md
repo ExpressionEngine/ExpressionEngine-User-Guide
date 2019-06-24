@@ -13,6 +13,7 @@
 
 Release Date: June 24, 2019
 
+- Tighten validation of Comment form return parameter.
 - Fixed a bug where relationship fields with parameters were not always parsed.
 - Fixed a bug where relationships in Grid fields could prevent parsing of standalone relationship fields.
 - Fixed a bug in the Channel Form where posting to a different Site could corrupt Site Pages.
