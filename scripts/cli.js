@@ -7,5 +7,7 @@ let tasks = require('../gulpfile.js')
 if ( argv['w'] ) {
 	tasks.watch()
 } else {
+	global.GLOBAL_buildThemeFile = argv['t']
+
 	tasks.build()
 }

@@ -38,7 +38,8 @@ module.exports = () => {
 	var masterToc = getMasterToc()
 
 	// Get the page template
-	const pageTemplate = Fs.readFileSync(CONFIG.pageTemplatePath, { encoding: 'utf8' })
+	let themeTemplate = GLOBAL_buildThemeFile || CONFIG.pageTemplatePath
+	const pageTemplate = Fs.readFileSync(themeTemplate, { encoding: 'utf8' })
 
 	// Get all the markdown files
 	return gulp.src(CONFIG.sourceDir + '/**/*.md')
