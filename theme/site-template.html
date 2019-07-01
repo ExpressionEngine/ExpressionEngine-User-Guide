@@ -1,0 +1,89 @@
+<!--
+	This source file is part of the open source project
+	ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+
+	@link      https://expressionengine.com/
+	@copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+	@license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+-->
+[##page_title##]{{page_title}} — ExpressionEngine {{current_version}} Documentation[/##page_title##]
+<style>
+	.sidebar-toc {
+		visibility: hidden;
+	}
+</style>
+<noscript>
+	<style>
+		.sidebar-toc {
+			visibility: visible;
+		}
+	</style>
+</noscript>
+
+<div class="docs-nav">
+	<div class="docs-nav__title">{{page_title}}</div>
+
+	<div class="docs-nav__search">
+		<div class="search-input">
+			<i class="far fa-search search-input__icon"></i>
+			<input type="text" class="search-input__input" id="docsearch-input-2" placeholder="Search Add-Ons">
+		</div>
+		<i class="far fa-search docs-nav__search-button"></i>
+	</div>
+</div>
+
+<div class="docs-container">
+
+	<div class="docs-sidebar-container ">
+		<div class="docs-sidebar">
+			<div class="docs-sidebar__search">
+				<div class="search-input">
+					<i class="far fa-search search-input__icon"></i>
+					<input type="text" class="search-input__input js-focus-command" id="docsearch-input" placeholder="Search">
+				</div>
+			</div>
+
+			<div class="version-button-wrapper">
+				<a href="" class="dropdown" data-tippy-placement="bottom-start">Version 5 <i class="far fa-angle-down"></i></a>
+				<div class="dropdown__menu">
+					<div class="dropdown__menu-inner">
+						<a href="https://docs.expressionengine.com/latest/"><b>v5</b></a>
+						<a href="https://docs.expressionengine.com/v4/">v4</a>
+						<a href="https://docs.expressionengine.com/v3/">v3</a>
+						<a href="https://docs.expressionengine.com/v2/">v2</a>
+						<a href="https://docs.expressionengine.com/v1/">v1</a>
+					</div>
+				</div>
+				<a href="https://docs.expressionengine.com/downloads/v5" class="download-button"><i class="far fa-arrow-to-bottom"></i></a>
+			</div>
+
+			<div class="docs-sidebar__toc">
+				{{toc}}
+			</div>
+		</div>
+	</div>
+
+	<div class="docs-content-wrapper typo-body">
+		{{page_content}}
+
+		<hr>
+		<p class="docs-footer">ExpressionEngine {{current_version}} Docs <a target="_blank" class="docs-contribute-to-page-button" href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/blob/stability/CONTRIBUTING.md"><i class="far fa-pencil fa-sm"></i> Edit the docs</a></p>
+	</div>
+</div>
+
+<script type="text/javascript">
+	docsearch({
+		apiKey: 'ba20cc61ab2d8a0148041c98eeddd9c6',
+		indexName: 'expressionengine',
+		inputSelector: '#docsearch-input',
+		algoliaOptions: { 'facetFilters': ["version:latest"] },
+		debug: false
+	});
+	docsearch({
+		apiKey: 'ba20cc61ab2d8a0148041c98eeddd9c6',
+		indexName: 'expressionengine',
+		inputSelector: '#docsearch-input-2',
+		algoliaOptions: { 'facetFilters': ["version:latest"] },
+		debug: false
+	});
+</script>
