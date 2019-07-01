@@ -40,6 +40,10 @@
 		font-size: 0.97rem;
 	}
 
+	p, h1, h2, h3, h4, h5, h6, img, ul, ol, pre, div, table, blockquote {
+        margin-bottom: 1.5em;
+    }
+
 	// -------------------------------------------------------------------
 
 	.copyright {
@@ -60,17 +64,17 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		.font-accent;
-		margin: @p-lg 0 @p-nm 0;
-		font-weight: inherit;
-		font-weight: 400;
+		margin-top: 2em;
+		font-weight: 700;
 		line-height: 1.2;
+        margin-bottom: 0.75em;
 
 		a {
 			color: inherit;
 		}
 
 		code {
-			.font-monospaced;
+			.font-monospace;
 			font-weight: 600;
 			font-size: 0.9em;
 			background: none;
@@ -88,33 +92,33 @@
 	}
 
 	h1 {
-		color: @highlight;
-		margin-top: 0;
+		font-size: 3.052em;
 	}
 
-	h2 {
-		color: rgb(36, 42, 49);
+    h2 {
+        font-weight: 600;
+		font-size: 2em;
 		padding-top: 50px;
-		margin: 50px 0 @p-nm 0;
-		font-size: 26px;
-		font-weight: 500;
 		border-top: 1px solid @border;
-		position: relative;
-	}
+    }
 
-	h3 {
-		font-weight: 500;
-		margin: @p-lg 0 @p-nm 0;
-	}
+    h3 {
+        font-size: 1.5em;
+    }
 
-	h4, h5, h6 {
-		margin-top: @p-nm;
-	}
+    h4 {
+        font-size: 1.33em;
+    }
+
+    h5, h6 {
+        font-size: 1.165em;
+    }
 
 	// -------------------------------------------------------------------
 
 	p {
 		margin-bottom: @p-nm;
+		font-size: 1em;
 	}
 
 	small, small code {
@@ -127,12 +131,13 @@
 
 	// -------------------------------------------------------------------
 
-	a {
-		color: @highlight;
-	}
-	a:hover {
-		border-bottom: 1px dotted @highlight;
-	}
+    a {
+        color: rgb(83, 121, 218);
+
+        &:hover {
+            border-bottom: 1px dotted #225aba;
+        }
+    }
 
 	// -------------------------------------------------------------------
 
@@ -144,30 +149,35 @@
 	// -------------------------------------------------------------------
 
 	code {
-		.font-monospaced;
+		.font-monospace;
 
-		border-radius: 3px;
-		padding: 0.3em 0.6em;
-		color: rgb(85, 86, 109);
+		padding: 0.2em 0.8em;
 		word-wrap: break-word;
+		overflow-wrap: break-word;
+		border-radius: 3px;
+		background-color: #F3F5F8;
 		font-size: 0.9em;
-		background-color: darken(@light-background, 1%);
-		font-weight: normal;
-		font-size: 13px;
+		color: rgb(72, 73, 99);
 	}
 
 	pre {
-		.font-monospaced;
+		.font-monospace;
+		.hljs;
+		// .hljs-dark-theme !important;
 
-		padding: @p-sm @p-sm-x;
-		padding: @p-nm - 10px @p-nm;
-		margin-bottom: @p-nm;
-		overflow-x: auto;
-		border-radius: 3px;
 		position: relative;
-		background: darken(@light-background, 1%);
-		font-size: 13px;
-		color: rgb(85, 86, 109);
+		font-size: 0.9em;
+
+		// Reset inline code style
+		code {
+			padding: 0;
+			border: none;
+			font-size: inherit;
+			color: inherit;
+			word-wrap: initial;
+			background: transparent;
+			overflow-wrap: initial;
+		}
 	}
 
 	pre code {
@@ -236,11 +246,17 @@
 
 	// -------------------------------------------------------------------
 
-	blockquote {
-		 border-left: 4px solid @border;
-		 margin: 0;
-		 padding: 0 0 0 @p-nm;
-	}
+    blockquote {
+        padding-left: 1.25em;
+        font-size: 1.1em;
+
+        &, p {
+            color: rgb(139, 135, 154);;
+            margin-top: 0;
+            line-height: 1.5;
+            border-left: 4px solid @border;
+        }
+    }
 
 	// -------------------------------------------------------------------
 
@@ -248,34 +264,7 @@
 		border: none;
 		height: 1px;
 		border-top: 1px solid @border;
-		margin: @p-lg 0;
-	}
-
-	// -------------------------------------------------------------------
-
-	.tip, .warn, .note {
-		padding: @p-sm * @p-y @p-sm;
-		padding: @p-nm * @p-y @p-nm;
-
-		code {
-			border: none;
-		}
-	}
-
-	.tip {
-		background-color: @tip-bg-color;
-		border: 1px solid @tip-ac-color;
-		color: @tip-fg-color;
-	}
-	.note {
-		background: @note-bg-color;
-		border: 1px solid @note-ac-color;
-		color: @note-fg-color;
-	}
-	.warn {
-		background-color: @warn-bg-color;
-		color: @warn-fg-color;
-		border: 1px solid @warn-ac-color;
+		margin: 2em 0;
 	}
 
 	// -------------------------------------------------------------------
@@ -297,6 +286,7 @@
 
 	// -------------------------------------------------------------------
 
+
 	.table-of-contents {
 		margin-bottom: @p-nm;
 
@@ -316,7 +306,7 @@
 
 				&::before {
 					content: '# ';
-					color: #C1D5F2;
+					color: fadeout(rgb(83, 121, 218), 10%);
 					font-weight: 100 !important;
 				}
 
@@ -340,4 +330,32 @@
 	}
 
 	// -------------------------------------------------------------------
+
+	h1:first-child {
+        margin-top: 0.2em;
+    }
+
+	.docs-footer {
+		display: flex;
+		align-items: center;
+		font-size: 1em;
+	}
+
+	.docs-contribute-to-page-button {
+		transition: all 250ms ease;
+		background: #F3F5FA;
+		margin-left: auto;
+		border-radius: 5px;
+		padding: 6px 10px;
+
+		i {
+			margin-right: 5px;
+		}
+
+		&:hover {
+			border-bottom: 0 !important;
+			background: rgb(83, 121, 218);
+			color: #fff;
+		}
+	}
 }

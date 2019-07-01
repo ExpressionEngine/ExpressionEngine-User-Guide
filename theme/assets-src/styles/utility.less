@@ -139,3 +139,15 @@ a.button {
 		}
 	}
 }
+
+.selection(@color, @background) {
+    ::selection {
+        color: @color;
+        background: @background;
+    }
+
+    ::-moz-selection {
+        color: @color;
+        background: @background;
+    }
+}
