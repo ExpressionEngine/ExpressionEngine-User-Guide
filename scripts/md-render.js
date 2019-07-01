@@ -60,11 +60,17 @@ renderer.paragraph = function (text) {
 	}
 
 	// Render message boxes
-	for (let box of ['TIP', 'NOTE', 'WARN']) {
-		let reg = new RegExp('^' + box + ':(.*)', 'gm')
+	let alerts = [
+		{ tag: 'TIP',  class: 'alert alert--hint' },
+		{ tag: 'NOTE', class: 'alert alert--warn' },
+		{ tag: 'WARN', class: 'alert alert--error' }
+	]
+
+	for (let box of alerts) {
+		let reg = new RegExp('^' + box.tag + ':(.*)', 'gm')
 
 		if (text.match(reg)) {
-			pClass = box.toLowerCase()
+			pClass = box.class
 			text = text.replace(reg, '$1')
 			break
 		}
