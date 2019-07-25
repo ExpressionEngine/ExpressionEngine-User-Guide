@@ -957,6 +957,19 @@ Example Usage:
 
     $config['disable_csrf_protection'] = 'y';
 
+### `disable_emoji_shorthand`
+
+Disables parsing of Emoji "shorthand", e.g. parsing `:rocket:` as 🚀.
+
+| Value | Behavior                                 |
+|-------|------------------------------------------|
+| y     | Disable Emoji shorthand parsing          |
+| n     | Enable Emoji shorthand parsing (default) |
+
+Example Usage:
+
+    $config['disable_emoji_shorthand'] = 'y';
+
 ### `disable_tag_caching`
 
 WARN: **Warning:** Use only under extreme circumstances.
