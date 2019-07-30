@@ -2,9 +2,9 @@
   "name": "ExpressionEngine-Docs",
   "repository": "https://github.com/ExpressionEngine/ExpressionEngine-User-Guide",
   "scripts": {
-    "build": "scripts/cli.js",
-    "build:site": "scripts/cli.js -t theme/site-template.html",
-    "watch": "scripts/cli.js -w",
+    "build": "node ./scripts/cli.js",
+    "build:site": "node ./scripts/cli.js -t theme/site-template.html",
+    "watch": "node ./scripts/cli.js -w",
     "buildAssets": "gulp buildAssets --gulpfile gulpfile.js",
     "watchAssets": "gulp watchAssets --gulpfile gulpfile.js"
   },

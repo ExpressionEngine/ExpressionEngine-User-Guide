@@ -9,6 +9,12 @@
 
 # ExpressionEngine v5 Change Log
 
+## Version 5.2.6
+
+Release Date: July 30, 2019
+
+- Fixed a bug ([\#268](https://github.com/ExpressionEngine/ExpressionEngine/issues/268)) where legacy member fields might not display in some circumstances.
+
 ## Version 5.2.5
 
 Release Date: July 25, 2019
