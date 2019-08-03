@@ -147,13 +147,13 @@ NOTE: **Note:** If you're paginating over 10 items and showing 1 item per page, 
 
     *1*  2  3  Next Page  Last Page
 
-> If you changed `page_padding` to another value, say 5, you'd see more page numbers:
->
->     *1*  2  3  4  5  6  Next Page  Last Page
->
-> If you later changed to page 4, you'd see this:
->
->     Previous Page  1  2  3  *4*  5  6  7  8  9  Next Page  Last Page
+If you changed `page_padding` to another value, say 5, you'd see more page numbers:
+
+    *1*  2  3  4  5  6  Next Page  Last Page
+
+If you later changed to page 4, you'd see this:
+
+    Previous Page  1  2  3  *4*  5  6  7  8  9  Next Page  Last Page
 
 ##### always_show_first_last
 
