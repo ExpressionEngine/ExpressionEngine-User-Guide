@@ -11,7 +11,7 @@ lang: php
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Channel Form Settings Model Extension Hooks
+# ChannelFormSettings Model Extension Hooks
 
 [TOC=3]
 
