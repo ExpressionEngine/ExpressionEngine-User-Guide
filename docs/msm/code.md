@@ -30,6 +30,12 @@ When you use the `site=""` parameter it will exclude all other Sites. If the sit
 To embed a template from another Site, simply prefix the template group and template specified with the short name of the site you wish to pull the template from as follows:
 
     {embed="site_short_name:template_group/template"}
+ 
+ ### Template Layouts from Another Site
+
+It is also possible to share a Template Layout from another Site, again, simply prefix the template group and template specified with the short name of the site you wish to pull the template from:
+
+    {layout="site_short_name:template_group/layout_template"}   
 
 ### Specifying Multiple Sites (prepare for a head trip)
 
