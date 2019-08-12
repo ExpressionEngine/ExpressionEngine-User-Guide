@@ -1,130 +1,94 @@
-/* jslint node: true */
-'use strict';
-
-var properties = require('./build.json');
-
-var	gulp = require('gulp'),
-	JSZip = require('jszip'),
-	dateformat = require('dateformat'),
-	del = require('del'),
-	exec = require('child_process').exec,
-	fs = require('fs'),
-	mkdirp = require('mkdirp'),
-	phplint = require('phplint').lint,
-	plugin = require('gulp-load-plugins')(),
-	runSequence = require('run-sequence'),
-	Q = require('q');
-
-gulp.task('version_bump', ['_properties'], function () {
-	return versionBump();
-});
-
-/**
- * Generate certain properties (build date, update file, DP status)
+/*!
+ * This source file is part of the open source project
+ * ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
  *
- * Given a tag with an identifier (3.1.0-dp.4), we can automatically gather the
- * version (3.1.0) and the identifier (dp.4), however both can be supplied
- * manually.
- *
- * @param {String} tag The tag to pull from the repository, must be pushed.
- * @param {String} version (Optional) The version to use when replacing version
- *                         numbers in the code. If no verison is defined, we use
- *                         the contents of the tag up to (but excluding) a `-`.
- *                         If no `-` exists, we use the whole version.
- * @param {Number} build The build date as a number in the `yyyymmdd` format
- *                       (e.g. 20151210)
- * @param {String} identifier (Optional) The version identifier (e.g. dp.2,
- *                            beta.1). If no identifier is defined, we use the
- *                            contents of tag starting from the `-` (excluding
- *                            it) to the end of the tag.
- * @param {Object} repositories Object containing the URLs of the app and
- *                              documentation repositories
- * @param {Array} core_exclude Array containing strings of modules to exclude
- *                             from a Core build
+ * @link      https://expressionengine.com/
+ * @copyright Copyright (c) 2003-2019, EllisLab, Inc. (https://ellislab.com)
+ * @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
  */
-gulp.task('_properties', function () {
-	// Define version
 
-	for (var i = 0; i < process.argv.length; i++) {
-		var arg = process.argv[i];
-		if (arg.indexOf('--version=') != -1) {
-			properties.version = arg.replace('--version=', '');
-		}
-	}
+require('colors')
 
-	if (typeof properties.version == 'undefined') {
-		properties.version = properties.tag;
-	}
+const path = require('path')
+const gulp = require('gulp')
+const del  = require('del')
 
-	// Define identifier
-	if (typeof properties.identifier == 'undefined') {
-		if (properties.tag.lastIndexOf('-') >= 0) {
-			properties.identifier = properties.tag.substr(properties.tag.lastIndexOf('-') + 1);
-		} else {
-			properties.identifier = '';
-		}
-	}
+const CONFIG = require('./scripts/config.js')
 
-	// Set build date to today (e.g. 20150706)
-	if (typeof properties.build === 'undefined') {
-		properties.build = dateformat(new Date(), 'yyyymmdd');
-	}
+// -------------------------------------------------------------------
 
-	// Generate ud_n_n_n.php build version
-	var normalizedVersion = properties.version;
-	if (properties.version.lastIndexOf('-') >= 0) {
-		// Strip any suffixes like -dp.1
-		normalizedVersion = properties.version.substr(0, properties.version.lastIndexOf('-'));
-	}
-	var segments = normalizedVersion.split('.');
-	segments.forEach(function(segment, index) {
-		if (index > 0 && segment.length == 1) {
-			segments[index] = '0' + segment;
-		}
-	});
-	properties.update_file = 'ud_' + segments.join('_') + '.php';
+function clean() {
+	return del([CONFIG.outputDir + '/**/*'])
+}
 
-	// Determine DP status
-	properties.dp = (properties.tag.match(/\-dp/)) ? true : false;
-});
+// Copies the themes assets to the build folder
+function copyThemeAssets() {
+	return gulp.src(CONFIG.assetsDir + '/**/*')
+	.pipe(gulp.dest(CONFIG.outputDir + '/_assets'))
+}
 
-/**
- * Bump the version numbers
- *
- * @param  {string} path The path to change the version in
- *
- * @return {void}
- */
- var versionBump = function (path) {
-	path = (typeof path !== 'undefined') ? path : '.';
+// Copies all other files that are not Markdown
+function copyOtherFiles() {
+	let filesToMove = [
+		path.resolve( CONFIG.sourceDir, '**/**'),
+		'!' + path.resolve(CONFIG.sourceDir, '**/*.md'),
+		'!' + CONFIG.tocPath
+	]
 
-	var fns = [
-		function() {
-			var file = path + '/source/conf.py';
+	return gulp.src(filesToMove, { base: CONFIG.sourceDir })
+	.pipe(gulp.dest(CONFIG.outputDir))
+}
 
-			fs.open(file, 'r', function (err, fd) {
-				if (err) throw err;
-			});
+// -------------------------------------------------------------------
 
-			return gulp.src(file)
-				.pipe(plugin.replace(
-					/release = '(.*?)'/gi,
-					"release = '" + properties.version + "'"
-				))
-				.pipe(gulp.dest('source/', {cwd: path}));
-		}
-	];
+const build	= require('./scripts/build.js')
+const buildAll = gulp.series(copyOtherFiles, copyThemeAssets, build)
 
-	var promises = fns.map(function(fn) {
-		var deferred = Q.defer();
+exports.build = gulp.series(clean, buildAll)
 
-		fn().on('end', function () {
-			deferred.resolve();
-		});
+exports.watch = () => {
+	gulp.watch([CONFIG.sourceDir + '/**/*', CONFIG.assetsDir + '/**/*', CONFIG.pageTemplatePath], buildAll)
+}
 
-		return deferred.promise;
-	});
+// -------------------------------------------------------------------
+// Theme Assets
+// -------------------------------------------------------------------
 
-	return Q.all(promises);
- };
+const less     = require('gulp-less')
+const rename   = require("gulp-rename")
+const minify   = require('gulp-minify')
+const cleanCSS = require('gulp-clean-css')
+const babel    = require('gulp-babel')
 
+function cleanThemeAssets() {
+	return del([CONFIG.assetsDir + '/**/*'])
+}
+
+function buildLess() {
+	return gulp.src(CONFIG.assetsSourceDir + '/styles/default.less')
+	.pipe(less())
+	.pipe(cleanCSS({ level: 1 }))
+	.pipe(rename({ suffix: '.min' }))
+	.pipe(gulp.dest(CONFIG.assetsDir))
+}
+
+function buildJs() {
+	return gulp.src([CONFIG.assetsSourceDir + '/js/main.js'])
+		.pipe(babel({
+			presets: [
+				[ "@babel/preset-env", { "targets": "> 0.25%, not dead"} ]
+			]
+		}))
+		.pipe(minify({ ext: { min: '.min.js' }, noSource: true, preserveComments: 'some'}))
+		.pipe(gulp.dest(CONFIG.assetsDir))
+}
+
+function moveThemeImages() {
+	return gulp.src(CONFIG.assetsSourceDir + '/images/**/*')
+	.pipe(gulp.dest(CONFIG.assetsDir +  '/images'))
+}
+
+const buildAssets = gulp.series(cleanThemeAssets, buildLess, buildJs, moveThemeImages)
+
+exports.buildAssets = buildAssets
+exports.watchAssets = () => gulp.watch([CONFIG.assetsSourceDir + '/styles/**/*', CONFIG.assetsSourceDir + '/js/**/*', CONFIG.assetsSourceDir + '/images/**/**'], buildAssets)

@@ -1,0 +1,362 @@
+/*!
+ * This source file is part of the open source project
+ * ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+ *
+ * @link      https://expressionengine.com/
+ * @copyright Copyright (c) 2003-2019, EllisLab, Inc. (https://ellislab.com)
+ * @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+ */
+
+.docs-content-wrapper {
+	margin: 0 auto 0 auto;
+	padding-top: @header-height-small;
+	height: 100%;
+	min-height: 100vh;
+	width: 100%;
+	max-width: 1200px;
+
+	.content {
+		padding: @p-nm * @p-y @p-nm @p-nm @p-nm;
+	}
+
+	@media @m-tablet {
+		padding-top: @header-height;
+		padding-left: @sidebar-width;
+
+		.content {
+			padding: @p-lg * @p-y @p-lg @p-lg @p-lg;
+		}
+	}
+}
+
+
+.docs-content-wrapper .content {
+
+	@p-sm-x: 16px;
+
+	font-size: 1rem;
+
+	@media @m-desktop {
+		font-size: 0.97rem;
+	}
+
+	p, h1, h2, h3, h4, h5, h6, img, ul, ol, pre, div, table, blockquote {
+        margin-bottom: 1.5em;
+    }
+
+	// -------------------------------------------------------------------
+
+	.copyright {
+		color: @light-gray;
+		margin: 0;
+		font-size: small;
+
+		a {
+			color: inherit;
+
+			&:hover {
+				color: @highlight;
+			}
+		}
+	}
+
+	// -------------------------------------------------------------------
+
+	h1, h2, h3, h4, h5, h6 {
+		.font-accent;
+		margin-top: 2em;
+		font-weight: 700;
+		line-height: 1.2;
+        margin-bottom: 0.75em;
+
+		a {
+			color: inherit;
+		}
+
+		code {
+			.font-monospace;
+			font-weight: 600;
+			font-size: 0.9em;
+			background: none;
+			color: inherit;
+			padding: 0;
+			// padding: .25rem .5rem;
+		}
+
+		.anchor {
+			display: block;
+			position: relative;
+			top: -150px;
+			visibility: hidden;
+		}
+	}
+
+	h1 {
+		font-size: 3.052em;
+	}
+
+    h2 {
+        font-weight: 600;
+		font-size: 2em;
+		margin-top: 50px;
+		padding-top: 50px;
+		border-top: 1px solid darken(@border, 3%);
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1.33em;
+    }
+
+    h5, h6 {
+        font-size: 1.165em;
+    }
+
+	// -------------------------------------------------------------------
+
+	p {
+		margin-bottom: @p-nm;
+		font-size: 1em;
+	}
+
+	small, small code {
+		font-size: 0.85em !important;
+	}
+
+	div {
+		margin-bottom: @p-nm;
+	}
+
+	// -------------------------------------------------------------------
+
+    a {
+        color: rgb(83, 121, 218);
+
+        &:hover {
+            border-bottom: 1px dotted #225aba;
+        }
+    }
+
+	// -------------------------------------------------------------------
+
+	img {
+		border-radius: @corner-radius;
+		max-width: 100%;
+	}
+
+	// -------------------------------------------------------------------
+
+	code {
+		.font-monospace;
+
+		padding: 0.2em 0.8em;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		border-radius: 3px;
+		background-color: #F3F5F8;
+		font-size: 0.9em;
+		color: rgb(72, 73, 99);
+	}
+
+	pre {
+		.font-monospace;
+		.hljs;
+		// .hljs-dark-theme !important;
+
+		position: relative;
+		font-size: 0.9em;
+
+		// Reset inline code style
+		code {
+			padding: 0;
+			border: none;
+			font-size: inherit;
+			color: inherit;
+			word-wrap: initial;
+			background: transparent;
+			overflow-wrap: initial;
+		}
+	}
+
+	pre code {
+		padding: 0;
+		border: none;
+		font-size: inherit;
+		color: inherit;
+		word-wrap: initial;
+		background: transparent;
+	}
+
+	// -------------------------------------------------------------------
+
+	.table-wrapper {
+		overflow-x: auto;
+		max-width: 100%;
+		border: 1px solid @border;
+		margin-bottom: @p-nm;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.8em;
+
+		@media @m-tablet {
+			font-size: 0.95em;
+		}
+
+		td, th {
+			border-bottom: 1px solid @border;
+			border-right: 1px solid @border;
+			padding: @p-sm @p-sm-x;
+
+			&:last-child {
+				border-right: none;
+			}
+		}
+
+		th {
+			text-align: left;
+			background-color: @light-background;
+		}
+
+		tr:last-child td {
+			border-bottom: none;
+		}
+	}
+
+	// -------------------------------------------------------------------
+
+	ul, ol {
+		list-style-position: outside;
+		margin: 0 0 @p-nm @p-nm;
+		padding: 0;
+
+		ul, ol {
+			margin-top: @p-sm;
+			margin-bottom: 0;
+		}
+	}
+
+	li {
+		margin-bottom: @p-sm;
+	}
+
+	// -------------------------------------------------------------------
+
+    blockquote {
+        padding-left: 1.25em;
+        font-size: 1.1em;
+
+        &, p {
+            color: rgb(139, 135, 154);;
+            margin-top: 0;
+            line-height: 1.5;
+            border-left: 4px solid @border;
+        }
+    }
+
+	// -------------------------------------------------------------------
+
+	hr {
+		border: none;
+		height: 1px;
+		border-top: 1px solid @border;
+		margin: 2em 0;
+	}
+
+	// -------------------------------------------------------------------
+
+	.video-wrapper {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 25px;
+		height: 0;
+	}
+
+	.video-wrapper iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	// -------------------------------------------------------------------
+
+
+	.table-of-contents {
+		margin-bottom: @p-nm;
+
+		& > ul {
+			list-style-type: none;
+			margin: @p-nm 0 0 @p-nm;
+
+			li {
+				margin-bottom: 5px;
+
+				code {
+					padding: 0;
+					border: none;
+					color: inherit;
+					background: transparent;
+				}
+
+				&::before {
+					content: '# ';
+					color: fadeout(rgb(83, 121, 218), 10%);
+					font-weight: 100 !important;
+				}
+
+				ul {
+					list-style-type: none;
+					margin: 5px 0 0 @p-nm;
+				}
+			}
+		}
+
+		.toc-overview-button {
+			display: inline-block;
+			// background-color: @light-background;
+			border: 1px solid @highlight;
+			border-radius: @corner-radius;
+			color: @highlight;
+			font-weight: 500;
+			padding: 5px 14px;
+			cursor: pointer;
+		}
+	}
+
+	// -------------------------------------------------------------------
+
+	h1:first-child {
+        margin-top: 0.2em;
+    }
+
+	.docs-footer {
+		display: flex;
+		align-items: center;
+		font-size: 1em;
+	}
+
+	.docs-contribute-to-page-button {
+		transition: all 250ms ease;
+		background: #F3F5FA;
+		margin-left: auto;
+		border-radius: 5px;
+		padding: 6px 10px;
+
+		i {
+			margin-right: 5px;
+		}
+
+		&:hover {
+			border-bottom: 0 !important;
+			background: rgb(83, 121, 218);
+			color: #fff;
+		}
+	}
+}

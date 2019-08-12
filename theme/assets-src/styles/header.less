@@ -1,0 +1,157 @@
+/*!
+ * This source file is part of the open source project
+ * ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+ *
+ * @link      https://expressionengine.com/
+ * @copyright Copyright (c) 2003-2019, EllisLab, Inc. (https://ellislab.com)
+ * @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+ */
+
+.header {
+	position: fixed;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: @header-height-small;
+	z-index: 50;
+	background: @highlight;
+	background: linear-gradient(to bottom, #351344, rgb(46, 18, 74));
+	color: #fff;
+
+	@media @m-tablet {
+		height: @header-height;
+	}
+}
+
+.header-content {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	max-width: 1200px;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	padding: 0 20px;
+}
+
+// -------------------------------------------------------------------
+
+.header-logo {
+	line-height: 0;
+
+	img {
+		height: 21px;
+		margin-right: 10px;
+
+		@media @m-tablet {
+			height: 28px;
+		}
+	}
+}
+
+.header .header-title {
+	display: none;
+	font-size: 1rem;
+	font-weight: 400;
+	.font-accent;
+
+	@media @m-mobile {
+		display: inline-block;
+	}
+}
+
+// -------------------------------------------------------------------
+
+.header nav {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	position: relative;
+
+	.hide {
+		display: none;
+
+		@media @m-mobile {
+			display: block;
+		}
+	}
+}
+.header nav > a {
+	margin-left: 20px;
+	padding: 2px 8px;
+	border-radius: @corner-radius;
+	transition: background 150ms ease;
+
+	&:hover {
+		background: #346FD3;
+	}
+}
+.header nav > a:first-child {
+	margin-left: 10px;
+}
+
+// -------------------------------------------------------------------
+
+.header .hamburger {
+	margin-left: 20px;
+
+	@media @m-tablet {
+		display: none;
+	}
+}
+
+// -------------------------------------------------------------------
+
+.version-button-wrapper {
+	margin-left: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+
+	.dropdown {
+		padding: 1px 8px;
+		// height: 100%;
+		border: 1px solid fadeout(@border, 70%);
+		border-top-left-radius: @corner-radius;
+		border-bottom-left-radius: @corner-radius;
+
+		transition: all 150ms ease;
+
+		&:hover {
+			border-color: #664084;
+			border-right: 1px solid fadeout(@border, 60%);
+			background: #664084;
+		}
+
+		& > a {
+			white-space:nowrap;
+		}
+	}
+
+	.download-button {
+		padding: 0 8px;
+		border: 1px solid fadeout(@border, 70%);
+		border-left: none;
+		// display: inline-block;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		transition: all 150ms ease;
+
+		border-top-right-radius: @corner-radius;
+		border-bottom-right-radius: @corner-radius;
+
+		&:hover {
+			border-color: #664084;
+			background: #664084;
+		}
+
+		img {
+			margin-top: -2px;
+			width: 17px;
+			opacity: 0.9;
+		}
+	}
+}

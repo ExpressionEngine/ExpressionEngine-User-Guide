@@ -1,0 +1,111 @@
+<!--
+	This source file is part of the open source project
+	ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+
+	@link      https://expressionengine.com/
+	@copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+	@license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>{{page_title}} — ExpressionEngine {{current_version}} Documentation</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+
+		<link rel="stylesheet" href="{{root_dir}}_assets/default.min.css?v=3">
+
+		<!-- Favicons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="{{root_dir}}_assets/images/favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{root_dir}}_assets/images/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{root_dir}}_assets/images/favicons/favicon-16x16.png">
+		<link rel="manifest" href="{{root_dir}}_assets/images/favicons/site.webmanifest">
+		<link rel="mask-icon" href="{{root_dir}}_assets/images/favicons/safari-pinned-tab.svg" color="#2e6abd">
+		<link rel="shortcut icon" href="{{root_dir}}_assets/images/favicons/favicon.ico">
+		<meta name="msapplication-TileColor" content="#2e6abd">
+		<meta name="msapplication-config" content="{{root_dir}}_assets/images/favicons/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+
+		<style>.sidebar-toc { visibility: hidden; }</style>
+		<noscript><style>.sidebar-toc { visibility: visible; }</style></noscript>
+	</head>
+	<body>
+
+		<div class="header">
+			<div class="header-content">
+				<a href="https://docs.expressionengine.com/latest" class="header-logo"><img src="{{root_dir}}_assets/images/ee-logo-white.svg" alt=""></a>
+				<a href="https://docs.expressionengine.com/latest" class="header-title">ExpressionEngine Docs</a>
+
+				<nav>
+					<a href="https://u.expressionengine.com" class="hide font-monospace">{ee:u}</a>
+					<a href="https://expressionengine.com/forums" class="hide">Forums</a>
+
+					<div class="version-button-wrapper">
+					<div class="dropdown">
+							<a class="" href="#">v5<span class="i-arrow-down"></span></a>
+							<div class="dropdown-menu">
+								<div class="dropdown-menu-inner">
+									<a class="active" href="https://docs.expressionengine.com/latest/">v5</a>
+									<a href="https://docs.expressionengine.com/v4/">v4</a>
+									<a href="https://docs.expressionengine.com/v3/">v3</a>
+									<a href="https://docs.expressionengine.com/v2/">v2</a>
+									<a href="https://docs.expressionengine.com/v1/">v1</a>
+								</div>
+							</div>
+						</div>
+						<a href="https://docs.expressionengine.com/downloads/v5" class="download-button"><img src="{{root_dir}}_assets/images/download.svg" alt=""></a>
+					</div>
+				</nav>
+
+				<div class="hamburger mobile-menu-button" onclick="toggleMobileMenu();">
+					<span></span><span></span><span></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="sidebar-container">
+			<div class="sidebar">
+				<div class="sidebar-search">
+				<input type="text" class="search-input" id="docsearch-input" name="search" placeholder="Search">
+					<!-- <div class="sidebar-sponsor">
+						<p>Sponsored By:</p><img src="" alt="">
+					</div> -->
+				</div>
+
+				<div class="sidebar-toc">
+					{{toc}}
+				</div>
+			</div>
+		</div>
+
+		<section class="docs-content-wrapper">
+			<div class="content" id="docsearch-content">
+				{{page_content}}
+
+				<hr>
+				<p>Found a mistake? Or do you want to contribute? <a target="_blank" href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/blob/stability/CONTRIBUTING.md">Edit the docs</a></p>
+				<p>ExpressionEngine {{current_version}} Docs</p>
+				<p class="copyright"><a href="https://ellislab.com/">©2002–{{current_year}} EllisLab Corp.</a></p>
+			</div>
+		</section>
+
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+		<script type="text/javascript">
+			docsearch({
+				apiKey: 'ba20cc61ab2d8a0148041c98eeddd9c6',
+				indexName: 'expressionengine',
+				inputSelector: '#docsearch-input',
+				algoliaOptions: { 'facetFilters': ["version:latest"] },
+				debug: false
+			});
+		</script>
+
+		<script src="{{root_dir}}_assets/main.min.js"></script>
+	</body>
+</html>
+
+
+
