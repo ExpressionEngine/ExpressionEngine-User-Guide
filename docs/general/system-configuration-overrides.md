@@ -2324,6 +2324,19 @@ Example Usage:
 
     $config['save_tmpl_files'] = 'y';
 
+### `save_tmpl_globals`
+
+Enable the saving of template global variables as files.
+
+| Value | Behavior                                      |
+| ----- | --------------------------------------------- |
+| y     | Template globals are saved as files (default) |
+| n     | Template globals are not saved as files       |
+
+Example Usage:
+
+    $config['save_tmpl_globals'] = 'y';
+
 ### `save_tmpl_revisions`
 
 Enable template revisions. Template history is saved when changes are made within the [template editor](control-panel/template-manager.md#edit-template).
