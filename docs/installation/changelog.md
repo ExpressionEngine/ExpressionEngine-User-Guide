@@ -9,6 +9,24 @@
 
 # ExpressionEngine v5 Change Log
 
+## Version 5.2.6
+
+Release Date: July 30, 2019
+
+- Fixed a bug ([\#268](https://github.com/ExpressionEngine/ExpressionEngine/issues/268)) where legacy member fields might not display in some circumstances.
+
+## Version 5.2.5
+
+Release Date: July 25, 2019
+
+- Added validation to template variable and template partial labels.
+- Optimized Member model to reduce potential duplicate queries setting up field structure.
+- Added `disable_emoji_shorthand` [system configuration override](general/system-configuration-overrides.md#disable_emoji_shorthand) to disable Emoji shorthand parsing, e.g. `:rocket:` to 🚀
+- Fixed a bug([\#234](https://github.com/ExpressionEngine/ExpressionEngine/issues/234))  where deleting a category from the entry form forced a logout if sessions were being used.
+- Fixed a bug([\#235](https://github.com/ExpressionEngine/ExpressionEngine/issues/235)) where template variable files with long names could cause the creation of duplicate variables.
+- Fixed a bug in the member manager where an error occured when viewed by member groups without member edit permission.
+- Fixed a bug([\#247](https://github.com/ExpressionEngine/ExpressionEngine/issues/247)) where relationship entry_ids single tags were not parsed.
+
 ## Version 5.2.4
 
 Release Date: June 24, 2019
