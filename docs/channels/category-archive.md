@@ -87,6 +87,20 @@ That will produce code like this:
 
 The "backspace" parameter is only allowed if you are using the "linear" style. It is not applicable if you use the "nested" style for the display of the list.
 
+### `category_group=`
+
+    category_group="2"
+
+Category Groups are specified by ID number (the ID number of each [category group](control-panel/categories.md) is displayed in the Control Panel). The reason we use the ID is because category groups can be called anything (with spaces, quotes, etc.), and also renamed. It would be much more difficult to have to update the tag parameters every time you updated a category name.
+
+And as with many other parameters, you can stack category groups
+
+    category_group="1|2|4"
+
+Or use "not" to exclude categories
+
+    category_group="not 2"
+
 ### `channel=`
 
     channel="channel"

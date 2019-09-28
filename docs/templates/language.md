@@ -75,7 +75,7 @@ Here's a modifier which gets the length of a string:
     {excerpt:length}
     {!-- Outputs: 217 --}
 
-A full list of the available modifiers [can be found are here](templates/variable-modifiers.md).
+A full list of the available modifiers [can be found here](templates/variable-modifiers.md).
 
 ## Embedded Templates
 

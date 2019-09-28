@@ -35,7 +35,7 @@ ExpressionEngine will parse those tokens in your output by default. To disable t
 
     ee()->output->parse_exec_vars = FALSE;
 
-### `EE_Output::set_output($output)`
+### `set_output($output)`
 
 | Parameter | Type        | Description                          |
 | --------- | ----------- | ------------------------------------ |
@@ -47,59 +47,6 @@ Permits you to manually set the final output string. Usage example:
     ee()->output->set_output($data);
 
 NOTE: **Important:** If you do set your output manually, it must be the last thing done in the function you call it from. For example, if you build a page in one of your controller methods, don't set the output until the end.
-
-### `set_content_type($mime_type[, $charset = NULL])`
-
-| Parameter   | Type        | Description                          |
-| ----------- | ----------- | ------------------------------------ |
-| \$mime_type | `String`    | MIME Type idenitifer string          |
-| \$charset   | `String`    | Character set                        |
-| Returns     | `EE_Output` | EE_Output instance (method chaining) |
-
-Permits you to set the mime-type of your page so you can serve JSON data, JPEG's, XML, etc easily.
-
-    ee()->output
-        ->set_content_type('application/json')
-        ->set_output(json_encode(array('foo' => 'bar')));
-
-    ee()->output
-        ->set_content_type('jpeg') // You could also use ".jpeg" which will have the full stop removed before looking in config/mimes.php
-        ->set_output(file_get_contents('files/something.jpg'));
-
-NOTE: **Important:** Make sure any non-mime string you pass to this method exists in `system/ee/legacy/config/mimes.php` or it will have no effect.
-
-You can also set the character set of the document, by passing a second argument:
-
-    ee()->output->set_content_type('css', 'utf-8');
-
-### `get_content_type()`
-
-| Parameter | Type     | Description         |
-| --------- | -------- | ------------------- |
-| Returns   | `String` | Content-Type string |
-
-Returns the Content-Type HTTP header that's currently in use, excluding the character set value.
-
-    $mime = ee()->output->get_content_type();
-
-NOTE: **Note:** If not set, the default return value is 'text/html'.
-
-### `get_header($header)`
-
-| Parameter | Type     | Description                               |
-| --------- | -------- | ----------------------------------------- |
-| \$header  | `String` | HTTP header name                          |
-| Returns   | `Mixed`  | HTTP response header or NULL if not found |
-
-Returns the requested HTTP header value, or NULL if the requested header is not set:
-
-    ee()->output->set_content_type('text/plain', 'UTF-8');
-    echo ee()->output->get_header('content-type');
-    // Outputs: text/plain; charset=utf-8
-
-NOTE: **Note:** The header name is compared in a case-insensitive manner.
-
-NOTE: **Note:** Raw headers sent via PHP's native `header()` function are also detected.
 
 ### `get_output()`
 

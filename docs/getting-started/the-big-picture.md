@@ -43,7 +43,7 @@ In ExpressionEngine, a URL will always contain the following structure, which al
 
     http://example.com/template_group/template
 
-Read [URL Structure](general/url-structure.md) fore an in-depth look at URLs.
+Read [URL Structure](general/url-structure.md) for an in-depth look at URLs.
 
 ## Summary
 

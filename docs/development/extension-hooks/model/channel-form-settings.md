@@ -1,0 +1,132 @@
+---
+lang: php
+---
+
+<!--
+    This source file is part of the open source project
+    ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+
+    @link      https://expressionengine.com/
+    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+-->
+
+# ChannelFormSettings Model Extension Hooks
+
+[TOC=3]
+
+### `before_channel_form_settings_insert($channel, $values)`
+
+| Parameter | Type     | Description                                           |
+| --------- | -------- | ------------------------------------------------------|
+| \$channel | `Object` | Current ChannelFormSettings model object              |
+| \$values  | `Array`  | The ChannelFormSettings model object data as an array |
+| Returns   | `NULL`   | void                                                  |
+
+Called before the channel form settings object is inserted. Changes made to the object will be saved automatically.
+
+How it's called:
+
+    ee()->extensions->call('before_channel_form_settings_insert', $this, $this->getValues());
+
+### `after_channel_form_settings_insert($channel, $values)`
+
+| Parameter | Type     | Description                                           |
+| --------- | -------- | ------------------------------------------------------|
+| \$channel | `Object` | Current ChannelFormSettings model object              |
+| \$values  | `Array`  | The ChannelFormSettings model object data as an array |
+| Returns   | `NULL`   | void                                                  |
+
+Called after the channel form settings object is inserted. Changes made to the object object will **not** be saved automatically. Saving the object may trigger the save and update hooks.
+
+How it's called:
+
+    ee()->extensions->call('after_channel_form_settings_insert', $this, $this->getValues());
+
+### `before_channel_form_settings_update($channel, $values, $modified)`
+
+| Parameter  | Type     | Description                                           |
+| ---------- | -------- | ----------------------------------------------------- |
+| \$channel  | `Object` | Current ChannelFormSettings model object              |
+| \$values   | `Array`  | The ChannelFormSettings model object data as an array |
+| \$modified | `Array`  | An array of all the old values that were changed      |
+| Returns    | `NULL`   | void                                                  |
+
+Called before the channel form settings object is updated. Changes made to the object will be saved automatically.
+
+How it's called:
+
+    ee()->extensions->call('before_channel_form_settings_update', $this, $this->getValues(), $modified);
+
+### `after_channel_form_settings_update($channel, $values, $modified)`
+
+| Parameter  | Type     | Description                                           |
+| ---------- | -------- | ----------------------------------------------------- |
+| \$channel  | `Object` | Current ChannelFormSettings model object              |
+| \$values   | `Array`  | The ChannelFormSettings model object data as an array |
+| \$modified | `Array`  | An array of all the old values that were changed      |
+| Returns    | `NULL`   | void                                                  |
+
+Called after the channel form settings object is updated. Changes made to the object will **not** be saved automatically. Calling save may fire additional hooks.
+
+How it's called:
+
+    ee()->extensions->call('after_channel_form_settings_update', $this, $this->getValues(), $modified);
+
+### `before_channel_form_settings_save($channel, $values)`
+
+| Parameter | Type     | Description                                           |
+| --------- | -------- | ----------------------------------------------------- |
+| \$channel | `Object` | Current ChannelFormSettings model object              |
+| \$values  | `Array`  | The ChannelFormSettings model object data as an array |
+| Returns   | `NULL`   | void                                                  |
+
+Called before the channel form settings object is inserted or updated. Changes made to the object will be saved automatically.
+
+How it's called:
+
+    ee()->extensions->call('before_channel_form_settings_save', $this, $this->getValues());
+
+### `after_channel_form_settings_save($channel, $values)`
+
+| Parameter | Type     | Description                                           |
+| --------- | -------- | ----------------------------------------------------- |
+| \$channel | `Object` | Current ChannelFormSettings model object              |
+| \$values  | `Array`  | The ChannelFormSettings model object data as an array |
+| Returns   | `NULL`   | void                                                  |
+
+Called after the channel form settings object is inserted or updated. Changes made to the object will **not** be saved automatically. Calling save may fire additional hooks.
+
+How it's called:
+
+    ee()->extensions->call('after_channel_form_settings_save', $this, $this->getValues());
+
+### `before_channel_form_settings_delete($channel, $values)`
+
+| Parameter | Type     | Description                                           |
+| --------- | -------- | ----------------------------------------------------- |
+| \$channel | `Object` | Current ChannelFormSettings model object              |
+| \$values  | `Array`  | The ChannelFormSettings model object data as an array |
+| Returns   | `NULL`   | void                                                  |
+
+Called before the channel form settings object is deleted. If you are conditionally deleting one of your own models, please consider creating an [inverse relationship](development/services/model/relating-models.md#inverse-relationships) instead. This will provide better performance and strictly enforce data consistency.
+
+How it's called:
+
+    ee()->extensions->call('before_channel_form_settings_delete', $this, $this->getValues());
+
+### `after_channel_form_settings_delete($channel, $values)`
+
+| Parameter | Type     | Description                                           |
+| --------- | -------- | ----------------------------------------------------- |
+| \$channel | `Object` | Current ChannelFormSettings model object              |
+| \$values  | `Array`  | The ChannelFormSettings model object data as an array |
+| Returns   | `NULL`   | void                                                  |
+
+Called after the channel form settings object is deleted. If you are conditionally deleting one of your own models, please consider creating an [inverse relationship](development/services/model/relating-models.md#inverse-relationships) instead. This will provide better performance and strictly enforce data consistency.
+
+How it's called:
+
+    ee()->extensions->call('after_channel_form_settings_delete', $this, $this->getValues());
+
+TIP: **New in version 5.3.0.**
