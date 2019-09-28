@@ -9,6 +9,32 @@
 
 # ExpressionEngine v5 Change Log
 
+## Version 5.3.0
+
+Release Date: September 28, 2019
+
+- Added a [category_group parameter](channels/category-archive.md#category_group) to the Category Archive tag.
+- Added a check to ensure proper image rotation on image upload.
+- Added a config override [`save_tmpl_globals`](general/system-configuration-overrides.md#save_tmpl_globals) to allow separate saving behavior for global variables
+- Added event hooks to the: 
+
+    - [Channel](development/extension-hooks/model/channel.md),
+    - [ChannelFormSettings](development/extension-hooks/model/channel-form-settings.md),
+    - [ChannelLayout](development/extension-hooks/model/channel-layout.md),
+    - [Site](development/extension-hooks/model/site.md),
+    - [Snippet](development/extension-hooks/model/template-snippet.md),
+    - and [Specialty Template](development/extension-hooks/model/template-specialty-template.md) models.
+
+- Fixed Bug ([#139](https://github.com/ExpressionEngine/ExpressionEngine/issues/139)) where on some servers the mime type of SVG is different then we expected.
+- Fixed Bug ([#143](https://github.com/ExpressionEngine/ExpressionEngine/issues/143)) where dbforge->add_key(array()) would create individual, non-sequenced keys rather than make a multi-column key.
+- Fixed a bug ([#178](https://github.com/ExpressionEngine/ExpressionEngine/issues/178)) where the table row tools were not present when managing Pending members with a non-Super Admin.
+- Fixed a bug ([#299](https://github.com/ExpressionEngine/ExpressionEngine/issues/299)) where search strings with quotes in the Search and Replace utility would not be replaced in certain circumstances.
+- Fixed a bug ([#306](https://github.com/ExpressionEngine/ExpressionEngine/issues/306)] where {encode} variable output didn't pass the WC3 validator.
+- Fixed a bug in the Channel Form where the unique_url_title and dynamic_title parameters did not work properly together.
+- Fixed a bug in the forum RSS feed where a PHP error caused an invalid feed.
+- Fixed a bug where the current entry revision did not always show the correct revision author.
+- Fixed a bug where the lowercase parameter of the :url_slug variable modifier wasn't being applied.
+
 ## Version 5.2.6
 
 Release Date: July 30, 2019
