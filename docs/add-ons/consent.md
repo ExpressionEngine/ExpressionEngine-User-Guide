@@ -11,9 +11,13 @@
 
 [TOC]
 
-The Consent module allows you to build tools to allow visitors to manage their consent. In conjunction with [Consent Variables](templates/globals/consent.md), you can build rich sites that respect activity that a visitor has consented.
+The Consent module allows you to build tools to allow visitors to manage their consent. In conjunction with [Consent Variables](templates/globals/consent.md) and [Custom Consent Requests](control-panel/settings/consents.md), you can build rich sites that respect activity that a visitor has consented to.
 
 For example, consenting to use of certain cookies, of using their information for marketing purposes, and so on. These tags enable you to ensure that a visitor is freely giving their consent, for specific granular purposes, to inform them of the nature of what they are consenting to, to actively and unambiguously indicate their consent, and to see and manage (grant or withdraw) their consent to individual items.
+
+NOTE: **Note:** [Require user consent to set cookies](
+control-panel/settings/security-privacy.md#require-user-consent-to-set-cookies) must be enabled before any restrictions on will take effect.
+
 
 ## Consent Form
 
@@ -77,6 +81,7 @@ Filter the consent requests based on whether or not they are user-created (as op
 | y (default) | Include user-created consents   |
 | n           | Exclude user-created consents   |
 | only        | Show only user-created consents |
+
 
 ## Variables
 
