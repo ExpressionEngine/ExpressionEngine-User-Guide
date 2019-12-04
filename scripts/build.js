@@ -77,6 +77,7 @@ module.exports = () => {
 
 			page_title: pageTitle,
 			page_content: pageHtml,
+			page_path: pageId,
 			root_dir: relPath,
 			toc: masterToc.make(file.path, relPath),
 		}
