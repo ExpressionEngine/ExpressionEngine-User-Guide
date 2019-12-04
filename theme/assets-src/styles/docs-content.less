@@ -16,7 +16,7 @@
 	max-width: 1200px;
 
 	.content {
-		padding: @p-nm * @p-y @p-nm @p-nm @p-nm;
+		padding: @p-nm * @p-y 30px @p-nm 30px;
 	}
 
 	@media @m-tablet {
@@ -25,6 +25,7 @@
 
 		.content {
 			padding: @p-lg * @p-y @p-lg @p-lg @p-lg;
+			padding: 45px 80px 40px 80px;
 		}
 	}
 }
@@ -92,15 +93,15 @@
 	}
 
 	h1 {
-		font-size: 3.052em;
+		font-size: 2.5em;
 	}
 
     h2 {
         font-weight: 600;
-		font-size: 2em;
+		font-size: 1.75em;
 		margin-top: 50px;
 		padding-top: 50px;
-		border-top: 1px solid darken(@border, 3%);
+		border-top: 1px solid @border;
     }
 
     h3 {
@@ -152,7 +153,7 @@
 	code {
 		.font-monospace;
 
-		padding: 0.2em 0.8em;
+		padding: 0.2em 0.4em;
 		word-wrap: break-word;
 		overflow-wrap: break-word;
 		border-radius: 3px;
