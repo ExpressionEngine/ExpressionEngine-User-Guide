@@ -258,3 +258,36 @@ function scrollActiveTocLinkIntoView() {
 })();
 
 
+;(function() {
+	var parameters = document.querySelectorAll('.code-parameters');
+
+	parameters.forEach(block => {
+		block.querySelectorAll('h3').forEach(head => {
+			var siblings = [];
+			var nextEl = head.nextElementSibling;
+
+			// Get all of the items next to the head until another head
+			while (nextEl) {
+				if (nextEl.matches('h3')) break;
+
+				siblings.push(nextEl);
+
+				nextEl = nextEl.nextElementSibling;
+			}
+
+			// Create a wrapper to wrap the items
+			var wrapper = document.createElement('div')
+			wrapper.classList.add('code-parameter')
+
+			// Insert the wrapper before the head
+			block.insertBefore(wrapper, head);
+
+			// Add the head and it's siblings to the wrapper
+			wrapper.appendChild(head)
+
+			siblings.forEach(item => {
+				wrapper.appendChild(item)
+			})
+		})
+	});
+})();

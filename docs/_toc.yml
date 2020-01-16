@@ -480,22 +480,38 @@
               href: development/extension-hooks/model/category-group.md
             - name: Category Model
               href: development/extension-hooks/model/category.md
+            - name: Channel Model
+              href: development/extension-hooks/model/channel.md
             - name: Channel Entry Model
               href: development/extension-hooks/model/channel-entry.md
             - name: ChannelFieldGroup Model
               href: development/extension-hooks/model/channel-field-group.md
             - name: ChannelField Model
               href: development/extension-hooks/model/channel-field.md
+            - name: ChannelFormSettings Model
+              href: development/extension-hooks/model/channel-form-settings.md
+            - name: ChannelLayout Model
+              href: development/extension-hooks/model/channel-layout.md
             - name: Comment Model
               href: development/extension-hooks/model/comment.md
             - name: File Model
               href: development/extension-hooks/model/file.md
+            - name: GlobalVariable Model
+              href: development/extension-hooks/model/template-global-variable.md
             - name: MemberField Model
               href: development/extension-hooks/model/member-field.md
             - name: MemberGroup Model
               href: development/extension-hooks/model/member-group.md
             - name: Member Model
               href: development/extension-hooks/model/member.md
+            - name: Site Model
+              href: development/extension-hooks/model/site.md
+            - name: Snippet Model
+              href: development/extension-hooks/model/template-snippet.md
+            - name: SpecialityTemplate Model
+              href: development/extension-hooks/model/template-specialty-template.md
+            - name: Status Model
+              href: development/extension-hooks/model/status.md
             - name: TemplateGroup Model
               href: development/extension-hooks/model/template-group.md
             - name: TemplateRoute Model
