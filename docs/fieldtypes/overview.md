@@ -23,6 +23,7 @@ ExpressionEngine has the following built-in fieldtypes:
 - [Relationships](fieldtypes/relationships.md)
 - [Rich Text Editor](fieldtypes/rte.md)
 - [Checkboxes, Radio Buttons, Select, Multiselect](fieldtypes/select.md)
+- [Color Picker](fieldtypes/colorpicker.md)
 - [Text Input](fieldtypes/text.md)
 - [Textarea](fieldtypes/textarea.md)
 - [Toggle](fieldtypes/toggle.md)

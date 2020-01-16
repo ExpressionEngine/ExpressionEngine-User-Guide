@@ -269,6 +269,8 @@
       href: fieldtypes/rte.md
     - name: Checkboxes, Radio Buttons, Select, Multiselect
       href: fieldtypes/select.md
+    - name: Color Picker
+      href: fieldtypes/colorpicker.md
     - name: Text Input
       href: fieldtypes/text.md
     - name: Textarea
