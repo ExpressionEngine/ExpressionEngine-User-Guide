@@ -31,6 +31,10 @@ Fields can be used more than once and in any order. They can be re-ordered withi
 
 The frontend will output the various field contents in the order specified in the entry.
 
+## Channel Form
+
+A fluid field cannot be used in the channel form.
+
 ## Template Tags
 
 Fluid field content is ouput using variable pairs. An outer variable pair using the Fluid field's shortname wraps all content. Within that wrapper variable pair, each field can be output using a prefixed variable pair and the `{content}` variable. Within the prefixed variable pair, the `{content}` variable is used in place of the field's shortname.
