@@ -11,11 +11,9 @@
 
 ## Version 5.3.1
 
-Release Date: April 2, 2020
+Release Date: April 9, 2020
 
 - **Added support for PHP 7.4**
-- Added the ability to add additional parameters to `form_declaration` functions. Updated function will accept an additional array that will allow for use with data attributes, target, or other JavaScript actions.
-
 - Fixed a bug ([#147](https://github.com/ExpressionEngine/ExpressionEngine/issues/147)) where `is_system_on` was changed to `y` when updating the CMS.
 - Fixed a bug ([#188](https://github.com/ExpressionEngine/ExpressionEngine/issues/188)) where image uploads where failing because of missing integer casting.
 - Fixed a bug ([#190](https://github.com/ExpressionEngine/ExpressionEngine/issues/190)) where omitting the return parameter for the `{exp:consent:form}` tag didn't redirect to same page as it was submitted on per the [docs](https://docs.expressionengine.com/latest/add-ons/consent.html#return).
