@@ -64,6 +64,7 @@ Though the following are available in PHP by default, some hosts may have them d
 
 - [GD (or GD 2)](http://www.php.net/manual/en/ref.image.php) library
 - The [File Information (fileinfo)](http://php.net/manual/en/book.fileinfo.php) PHP extension
+- [Iconv](https://www.php.net/manual/en/book.iconv.php) library
 
 NOTE: **Note:** If you're on MediaTemple you will need [to create a phprc file](http://wiki.dreamhost.com/PHP.ini#How_to_add_a_phprc_file) that contains the following: `extension = fileinfo.so`
 
@@ -73,18 +74,6 @@ These are recommended, but not required.
 
 - The [Internationalization](http://php.net/manual/en/book.intl.php) extension, for full functionality of [variable modifiers](templates/variable-modifiers.md)
 - [Multibyte String](http://php.net/manual/en/mbstring.installation.php) handling
-
-For full support of multibyte encodings, ask your web host or server admin to set `mbstring.func_overload` to `6` in your server configuration by editing `php.ini` as shown below:
-
-    ; overload(replace) single byte functions by mbstring functions.
-    ; mail(), ereg(), etc are overloaded by mb_send_mail(), mb_ereg(),
-    ; etc. Possible values are 0,1,2,4 or combination of them.
-    ; For example, 7 for overload everything.
-    ; 0: No overload
-    ; 1: Overload mail() function
-    ; 2: Overload str*() functions
-    ; 4: Overload ereg*() functions
-    mbstring.func_overload = 6
 
 ### MySQL Privileges
 
