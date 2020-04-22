@@ -11,7 +11,7 @@
 
 ## Version 5.3.2
  
-Release Date: April 21, 2020
+Release Date: April 22, 2020
 - **Updated support for PHP 7.4**
 - Fixed a bug ([#399] (https://github.com/ExpressionEngine/ExpressionEngine/issues/399)) where a user was required to enter a Pages URI when selecting a default template.
 - Fixed a bug ([#404] (https://github.com/ExpressionEngine/ExpressionEngine/issues/404)) where removing a database record for a template that is used would cause an error.
