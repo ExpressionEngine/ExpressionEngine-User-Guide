@@ -9,6 +9,18 @@
 
 # ExpressionEngine v5 Change Log
 
+## Version 5.3.2
+ 
+Release Date: April 22, 2020
+- **Updated support for PHP 7.4**
+- Fixed a bug ([#399] (https://github.com/ExpressionEngine/ExpressionEngine/issues/399)) where a user was required to enter a Pages URI when selecting a default template.
+- Fixed a bug ([#404] (https://github.com/ExpressionEngine/ExpressionEngine/issues/404)) where removing a database record for a template that is used would cause an error.
+- Fixed a bug where some installations on Windows OS where unable to upgrade via the 1 Click Updater.
+- Fixed a bug where selecting the first checkbox in a table's row which contains multiple checkboxes, the last checkbox would also automatically be selected.
+- Fixed a bug ([#406] (https://github.com/ExpressionEngine/ExpressionEngine/issues/406)) where an error was thrown if EE was installed on a server that did not have the `iconv` PHP extension installed.
+- Fixed a bug where if cURL failed during a 1 Click Update, no error was thrown to let the user know what happened.
+
+
 ## Version 5.3.1
 
 Release Date: April 9, 2020
