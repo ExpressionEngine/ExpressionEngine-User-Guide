@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -43,7 +43,7 @@ There are three types of content that you can add to the Whitelist. These are id
 
 ## Downloading ExpressionEngine.com Lists
 
-EllisLab, Inc. maintains its own Blacklist and Whitelist. These lists are maintained with the help of our users. If you have an IP address, user agent, or URL that you believe should be added to the Blacklist or Whitelist, please email <blacklist@ellislab.com>.
+Packet Tide, LLC maintains its own Blacklist and Whitelist. These lists are maintained with the help of our users. If you have an IP address, user agent, or URL that you believe should be added to the Blacklist or Whitelist, please email <blacklist@ellislab.com>.
 
 To download the Lists, go into the `Developer --> Add-Ons --> Black/White List`. In the main menu for the module are links that you can click to automatically download and add the ExpressionEngine.com Lists to your own.
 
