@@ -25,9 +25,9 @@ The Search Results Tag controls how you display results from your searches. Exam
             <th>{lang:recent_comments}</th>
         </tr>
 
-    {exp:search:search_results switch="resultRowOne|resultRowTwo"}
+    {exp:search:search_results}
 
-        <tr class="{switch}">
+        <tr class="{switch="resultRowOne|resultRowTwo"}">
             <td width="30%" valign="top"><b><a href="{auto_path}">{title}</a></b></td>
             <td width="30%" valign="top">{excerpt}</td>
             <td width="10%" valign="top"><a href="{member_path='member/index'}">{author}</a></td>
@@ -109,6 +109,14 @@ This parameter is replaced with the URL to the entry with the Entry ID appended 
     {member_path='member/index'}
 
 The Template_Group/Template with which to display the member profile of the author of the entry. Typically, this variable will be specified as {member_path='member/index'}.
+
+### `{switch=}`
+
+    {switch="option_one|option_two|option_three"}
+
+This variable permits you to rotate through any number of values as the entries are displayed. The first entry will use "option_one", the second will use "option_two", the third "option_three", the fourth "option_one", and so on.
+
+Multiple instances of the {switch=} tag may be used and ExpressionEngine will intelligently keep track of each one.
 
 ## Search Keywords Tag
 

@@ -36,7 +36,7 @@ The Email class will automatically create all email headers and will process the
     ee()->email->to($recipient);
     ee()->email->subject($email_subject);
     ee()->email->message(entities_to_ascii($email_msg));
-    ee()->email->Send();
+    ee()->email->send();
 
 ### Properties
 

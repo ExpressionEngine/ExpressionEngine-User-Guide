@@ -9,6 +9,34 @@
 
 # ExpressionEngine v5 Change Log
 
+## Version 5.3.2
+ 
+Release Date: April 22, 2020
+- **Updated support for PHP 7.4**
+- Fixed a bug ([#399] (https://github.com/ExpressionEngine/ExpressionEngine/issues/399)) where a user was required to enter a Pages URI when selecting a default template.
+- Fixed a bug ([#404] (https://github.com/ExpressionEngine/ExpressionEngine/issues/404)) where removing a database record for a template that is used would cause an error.
+- Fixed a bug where some installations on Windows OS where unable to upgrade via the 1 Click Updater.
+- Fixed a bug where selecting the first checkbox in a table's row which contains multiple checkboxes, the last checkbox would also automatically be selected.
+- Fixed a bug ([#406] (https://github.com/ExpressionEngine/ExpressionEngine/issues/406)) where an error was thrown if EE was installed on a server that did not have the `iconv` PHP extension installed.
+- Fixed a bug where if cURL failed during a 1 Click Update, no error was thrown to let the user know what happened.
+
+
+## Version 5.3.1
+
+Release Date: April 9, 2020
+
+- **Added support for PHP 7.4**
+- Fixed a bug ([#147](https://github.com/ExpressionEngine/ExpressionEngine/issues/147)) where `is_system_on` was changed to `y` when updating the CMS.
+- Fixed a bug ([#188](https://github.com/ExpressionEngine/ExpressionEngine/issues/188)) where image uploads where failing because of missing integer casting.
+- Fixed a bug ([#190](https://github.com/ExpressionEngine/ExpressionEngine/issues/190)) where omitting the return parameter for the `{exp:consent:form}` tag didn't redirect to same page as it was submitted on per the [docs](https://docs.expressionengine.com/latest/add-ons/consent.html#return).
+- Fixed a bug ([#248](https://github.com/ExpressionEngine/ExpressionEngine/issues/248)) where the `after_channel_entry_save` extension hook would run twice when saving a new channel entry.
+- Fixed a bug ([#292](https://github.com/ExpressionEngine/ExpressionEngine/issues/292)) where a user was unable to delete page uri or page template with default theme installed.
+- Fixes a bug ([#321](https://github.com/ExpressionEngine/ExpressionEngine/issues/321)) where a warning was not being displayed when an entry was saved if a URI was entered in the Pages module without also selecting a template.
+- Fixed a bug ([#337](https://github.com/ExpressionEngine/ExpressionEngine/issues/337)) where an entry with a URL title of `n` was being ignored.
+- Fixed a bug ([#346](https://github.com/ExpressionEngine/ExpressionEngine/issues/346)) where strpos Non-string needles will be interpreted as strings in the future.
+- Fixed a bug ([#382](https://github.com/ExpressionEngine/ExpressionEngine/issues/382)) where drag and drop fields were producing errors in MSM sites.
+
+
 ## Version 5.3.0
 
 Release Date: September 28, 2019
