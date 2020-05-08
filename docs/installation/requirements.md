@@ -62,8 +62,10 @@ You can safely ignore the rest of this page unless you are experiencing problems
 
 Though the following are available in PHP by default, some hosts may have them disabled until you ask for them.
 
-- [GD (or GD 2)](http://www.php.net/manual/en/ref.image.php) library
-- The [File Information (fileinfo)](http://php.net/manual/en/book.fileinfo.php) PHP extension
+- [GD (or GD 2) library](http://www.php.net/manual/en/ref.image.php) 
+- [File Information (fileinfo)](http://php.net/manual/en/book.fileinfo.php)
+- [ZIP](https://www.php.net/manual/en/book.zip.php)
+- [iconv](https://www.php.net/manual/en/book.iconv.php)
 
 NOTE: **Note:** If you're on MediaTemple you will need [to create a phprc file](http://wiki.dreamhost.com/PHP.ini#How_to_add_a_phprc_file) that contains the following: `extension = fileinfo.so`
 
@@ -111,6 +113,16 @@ If you are hosted on an Apache server, the `AcceptPathInfo` option needs to be e
 
 If the [Server Compatibility Wizard](#server-compatibility-wizard) lists URL Segment Support as _Unsupported_, you will need to set your site's URLs to use [query strings](general/url-structure.md#query-strings).
 
-### MAMP
+## Local Development
 
-[MAMP](https://www.mamp.info/en/) can be very convenient for local development, but it has some quirks. If you are using MAMP, you will need to use PHP 7+ due to outdated cURL and OpenSSL libraries that MAMP ships with its older versions of PHP.
+ExpressionEngine can be ran locally on a number of local development environments. Below are just a few to help you get started. 
+
+NOTE: **Note:** When setting up your local environment, you must make sure it still meets the requirements listed above.
+
+- **[Valet](https://laravel.com/docs/7.x/valet)** - (macOS only) Valet is the ExpressionEngine's team recommended local development environment. Super fast and easy to use.
+
+- **[DDEV Local](https://www.ddev.com/ddev-local/)** - (macOS, Windows, Linux) DDEV Local makes working with Docker containers a breeze. Quickly setup and share environments that mirror your production.  
+
+- **[Devilbox](http://devilbox.org/)** - (macOS, Windows, Linux) Devilbox is another great stack which allows user to quickly get up and running with Docker environments. To install ExpressionEngine on Devilbox simply follow the [Setup ExpressionEngine Docs](https://devilbox.readthedocs.io/en/latest/examples/setup-expressionengine.html). 
+
+- **[MAMP](https://www.mamp.info/en/)** - (macOS, Windows) MAMP can be very convenient for local development, but it has some quirks. If you are using MAMP, you will need to use PHP 7+ due to outdated cURL and OpenSSL libraries that MAMP ships with its older versions of PHP.
