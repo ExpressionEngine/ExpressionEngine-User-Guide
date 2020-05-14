@@ -25,7 +25,7 @@ Content is added to a channel by clicking the **Entries** link in the main contr
 
 TIP: **Jump Menu:** Don't forget to use the Jump Menu for quicker navigation. CMD/CTRL + J , then start typing "Edit Entry ..."
 
-![](_images/ee6-new-entry.png.png)
+![](_images/ee6-new-entry.png)
 
 ## Templates
 
