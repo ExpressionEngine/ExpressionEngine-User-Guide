@@ -21,7 +21,7 @@ If you would like to change the default way that ExpressionEngine handles 404 er
 
 `Settings --> Template Settings`
 
-![](_images/template-settings.png)
+![](_images/ee6-404-settings.png)
 
 The 404 page setting tells ExpressionEngine which template to use for all the 404 errors that are received. It is worth noting that using [Strict URLs](control-panel/settings/template.md#enable-strict-urls) is preferable as this makes the path to your content more precise, allows more relevant 404 pages, and does not allow your content to be shown with variances in the URL structure
 
