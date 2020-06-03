@@ -11,7 +11,7 @@
 
 [TOC]
 
-ExpressionEngine utilizes a special XML format for member data:
+When importing members from another data source, ExpressionEngine utilizes a special XML format for member data:
 
     <members>
         <member>
