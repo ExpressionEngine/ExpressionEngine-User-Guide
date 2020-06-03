@@ -44,6 +44,8 @@ ExpressionEngine's settings are loaded in this order at runtime:
 
 ## Overrides
 
+Click "Show List" below to list all available overrides, or scroll through the list of overrides and their descriptions further below.
+
 [TOC=3 hide]
 
 ### `allow_avatar_uploads`

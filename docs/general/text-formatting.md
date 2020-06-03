@@ -13,6 +13,8 @@
 
 ExpressionEngine has a number of text formatting options that enable you to control how text is rendered within your channel entries and comments.
 
+While editing entries, these options can be found in the PUBLISH tab. When available, you'll see a menu below each entry field with this option. You can also configure your Comment Preferences so that any comments will be formatted this way.
+
 ## Auto XHTML
 
 The purpose of the _Auto XHTML_ option is to make your content semantically and typographically correct. This feature does the following:
@@ -26,13 +28,13 @@ The purpose of the _Auto XHTML_ option is to make your content semantically and 
 
 In addition, the Auto XHTML feature intelligently handles text containing block level elements, like `<div>`, `<blockquote>`, etc. so that they are not wrapped in paragraph tags. Further, elements within `<pre>` tags are exempt from the paragraph conversion.
 
-The Auto XHTML Feature can be found in the PUBLISH page of the Control Panel. You'll see a menu below each entry field with this option. You can also configure your Comment Preferences so that any comments will be formatted this way.
-
 NOTE: **Note:** By default, all entries and comments are assigned to this formatting option.
 
 ## Markdown
 
 The _Markdown_ option parses all of your content through [a Markdown parser](http://michelf.ca/projects/php-markdown/extra/) and [a SmartyPants parser](http://michelf.ca/projects/php-smartypants/)—the parser follows [Jon Gruber's implementation of Markdown](http://daringfireball.net/projects/markdown/) for the most part, but adds a few things as well. SmartyPants transforms normal quotes into curly quotes, consecutive dashes into en (`--` into –) and em (`---` into `—`) dashes, and three consecutive periods into an ellipsis (`...` into `…`).
+
+NOTE: **Note:** To use the Markdown option, the Markdown Addon must be installed.
 
 ## Auto BR
 
