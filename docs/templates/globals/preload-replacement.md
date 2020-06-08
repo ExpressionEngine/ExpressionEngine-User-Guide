@@ -27,12 +27,12 @@ A common usage for preload replacements is to hold the Channel short name(s), to
 
     {preload_replace:channels="news|reviews"}
 
-    {exp:channel:category_heading channel="{channels}"}
+    {exp:channel:category_heading channel="{kanaallar}"}
         <h1>{category_name}</h1>
         {if category_description != ""}<p>{category_description}</p>{/if}
     {/exp:channel:category_heading}
 
-    {exp:channel:entries channel="{channels}" limit="10"}
+    {exp:channel:entries channel="{kanallar}" limit="10"}
         <h2>{title}</h2>
         {body}
     {/exp:channel:entries}
