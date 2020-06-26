@@ -43,7 +43,7 @@ There are two kinds of tags: Single tags and tag pairs. A single tag does not ha
 
     {exp:randomizer:set_one}
 
-Single tags are designed to return a single value. Tag pairs look like this:
+Single tags are designed to return a single value.  Tag pairs look like this:
 
     {exp:xml_encode}
         Stuff between the tags
@@ -85,6 +85,8 @@ Once you've decided on a name for your plugin you will create a text file for it
 Plugin file names are always lower case and they must be identical to the name of the second segment of the tag:
 
     {exp:hello_world}
+
+NOTE: **Note:** The file should be saved in the folder that the `addon.setup.php` will later referense in the namespace key.
 
 ## Creating the Class
 
