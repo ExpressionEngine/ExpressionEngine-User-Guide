@@ -797,6 +797,20 @@ Example Usage:
 
     $config['cookie_secure'] = 'y';
 
+### `cookie_samesite`
+
+Declare if your cookie should be restricted to a first-party or same-site context. To find out more about SameSite cookies visit https://web.dev/samesite-cookies-explained/
+
+| Value  | Behavior                                                                     |
+| ------ | ---------------------------------------------------------------------------- |
+| None   | Allow cookies to be sent on all requests (cookie_secure will be set to true) |
+| Lax    | Allows cookies to be sent on some cross-site requests (default)              |
+| Strict | Does not allow cookies to be sent on some cross-site requests (default)      |
+
+Example Usage:
+
+    $config['cookie_samesite'] = 'Srict';
+
 ### `cp_session_type`
 
 Set the method for session handling in the Control Panel.
