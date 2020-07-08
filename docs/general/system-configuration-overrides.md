@@ -1598,7 +1598,7 @@ Unused in first party files, this configuration item exists to allow backwards c
 
 ### `log_threshold`
 
-NOTE: **Note:** In order to save anything to log files, you'll need to create the `/system/user/log/` directory and ensure it's writable.
+NOTE: **Note:** In order to save anything to log files, you'll need to create the `/system/user/logs/` directory and ensure it's writable.
 
 Set an error threshold to determine how much information is logged.
 
