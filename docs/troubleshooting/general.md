@@ -124,7 +124,21 @@ Form submissions that silently fail are typically caused by a URL mismatch. Chec
 
 - Forcing the addition or removal of the "www" subdomain
 - Forcing the addition or removal of trailing forward slashes in your URLs
+- Removing index.php from URLs while your settings still include index.php in URL and Path settings
 
 ### Troubleshooting
 
 Such URL re-writing rules are often found in a .htaccess file located in the web root of your site. Temporarily disable this file (if it exists) by renaming it to anything else and testing again. Your host can also help you determine if any such rules are in effect or possibly configured elsewhere.
+
+## Submitting a form fails
+
+There are a variety of reasons beyond redirects that form submissions may fail.
+
+- Mod Security rules may be triggered by some content in the post itself.
+- Server configurations such as [post_max_size](https://www.php.net/manual/en/ini.core.php#ini.post-max-size) or [max_input_vars](https://www.php.net/manual/en/info.configuration.php#ini.max-input-vars) may prevent submission or silently drop data.
+
+### Troubleshooting
+
+Your host may be able to tell you if any security filters have been triggered and if so, why.
+
+Another option you might try is copying the form to a standalone php file and having it post to itself and output the $_POST array.  If the data is lost, you'll know it's something outside of ExpressionEngine at work.
