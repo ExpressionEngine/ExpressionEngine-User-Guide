@@ -2887,6 +2887,19 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Minimum Username Length](control-panel/settings/security-privacy.md#minimum-username-length)
 
+### `updater_allow_advanced`
+
+Allow advanced options to be displayed during the ExpressionEngine update process.
+
+| Value | Behavior                                                       |
+| ----- | -------------------------------------------------------------- |
+| y     | Shows database backup and add-on upgrade during update process |
+| n     | Hides advanced options during update process (default)         |
+
+Example Usage:
+
+    $config['use_category_name'] = 'y';
+
 ### `upload_file_name_blacklist`
 
 With an array, add a case insensitive list of file names that cannot be uploaded.

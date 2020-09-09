@@ -18,6 +18,8 @@
       href: installation/best-practices.md
     - name: Updating
       href: installation/updating.md
+    - name: Upgrading from EE2
+      href: installation/upgrading-from-ee2.md
     - name: Change Log
       href: installation/changelog.md
 
@@ -799,6 +801,8 @@
       href: development/v4-addon-migration.md
     - name: v3 Add-on Migration
       href: development/v3-add-on-migration.md
+    - name: Automated Upgrading
+      href: development/automated-upgrading.md
 
 - name: Bugs and Security Reports
   href: bugs-and-security-reports.md

@@ -23,6 +23,22 @@ In the rare case an update fails, please read [Troubleshooting Automatic Updates
 
 You can also update ExpressionEngine via the command line on your server. This allows you to keep your installation's files only writable by your user and not also by your web service.
 
+### Via EECLI
+
+You can upgrade ExpressionEngine via the command line on your server via `eecli`.
+
+To update via the eecli tool, run:
+
+    php eecli update
+
+#### Options
+**rollback**: Rollsback last update
+**verbose,v**: Verbose output
+**force-addon-upgrades**: Automatically runs all addon updaters at end of update (advanced)
+**y**: Skip all confirmations. (advanced)
+
+## Via EECMS
+
 To update via the command line, execute the tool located at `system/ee/eecms`:
 
     php system/ee/eecms upgrade
