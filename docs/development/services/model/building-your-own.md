@@ -230,9 +230,7 @@ By default setting and getting of properties behaves the way it does for any obj
     $my_model->name = 'Bob Bobson';
     $my_model->first_name; // Bob
 
-NOTE: **Note:** These methods break the camelCase naming convention in order to match the snake_case property names. It also serves as a clear indicator that these methods should not be called directly, even internally: always use `setProperty()`.
-
-When setting properties manually you should take care to use _setRawProperty_, which will correctly track changes to the property.
+**Note:** These methods break the camelCase naming convention in order to match the snake_case property names. It also serves as a clear indicator that these methods should not be called directly, even internally. When setting properties manually you should take care to use _setRawProperty_, which will correctly track changes to the property.
 
 ## Typed Columns
 
