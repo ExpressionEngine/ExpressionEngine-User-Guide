@@ -162,7 +162,7 @@ To get around this problem, you can specify a relationship to be loaded with the
 
 These eager queries can also be nested to retrieve complex model hierarchies:
 
-    ->get('Template')->with(array('LastAuthor' => 'MemberGroup'));
+    ->get('Template')->with(array('LastAuthor' => 'PrimaryRole'));
 
 ### Filtering on Relationships
 

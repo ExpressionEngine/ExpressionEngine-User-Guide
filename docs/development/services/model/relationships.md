@@ -19,13 +19,13 @@ lang: php
 
 Related models are available on the model directly using the relationship name. They are easily differentiated by their `CamelCase` naming conventions:
 
-    $group = $member->MemberGroup;
+    $group = $member->PrimaryRole;
 
 ## Setting Relationships
 
 To set a relationship, simply assign the model or collection that you want to relate, and then `save()` to commit the change:
 
-    $member->MemberGroup = ee('Model')->get('MemberGroup', 1)->first();
+    $member->PrimaryRole = ee('Model')->get('Role', 1)->first();
     $member->save();
 
 ## Adding Related Models
@@ -39,7 +39,7 @@ To add additional models to a `HasMany` or `HasAndBelongsToMany` relationship, s
 
 To unset a relationship, simply assign `NULL`:
 
-    $member->MemberGroup = NULL;
+    $member->PrimaryRole = NULL;
 
 NOTE: **Caution:** Unsetting a relationship may result in the deletion of the child, where it would otherwise be orphaned. This can be prevented by establishing a new relationship before calling `save()`.
 

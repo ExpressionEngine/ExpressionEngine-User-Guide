@@ -288,6 +288,12 @@ NOTE: **Note:** Allowing fields to be used as tag pairs requires some extra proc
 
 `TRUE` if the field can be used as a tag pair
 
+#### `EE_Fieldtype::$entry_manager_compatible`
+
+`true` if the field should be displayed as Entry Manager column in Control Panel.
+
+NOTE: **Note:** when setting `public $entry_manager_compatible = true;` make sure that your fieldtype also implements `renderTableCell` method.
+
 ### Function Reference
 
 **class `EE_Fieldtype`**
@@ -360,6 +366,17 @@ Used to render the publish field.
 | --------- | -------- | ----------------------------------------- |
 | \$data    | `Array`  | Current field data, blank for new entries |
 | Returns   | `String` | The field to display on the publish page  |
+
+#### `EE_Fieldtype::renderTableCell($data, $field_id, $entry)`
+
+Display the field data as column in entry manager
+
+| Parameter | Type     | Description                               |
+| --------- | -------- | ----------------------------------------- |
+| \$data    | `Array`  | Current field data                        |
+| \$field_id| `Int`    | Current field ID                          |
+| \$entry   | `Array`  | Current `ChannelEntry` object             |
+| Returns   | `String` | The string to display in Entry Manager column  |
 
 #### `EE_Fieldtype::validate($data)`
 
@@ -761,3 +778,51 @@ Many fieldtypes do not need to be notified via JavaScript when the Live Preview 
     $(document).on('entry:preview-open', function(event) {
       // ...
     });
+
+## Displaying field data in Entry Manager
+
+Custom fields can display their data inside Entry Manager. There are 3 possible ways to enable that:
+ 1. Declare `public $has_array_data = false;` OR
+ 2. Add `implements ColumnInterface` to fieldtype class definition.
+
+        use ExpressionEngine\Library\CP\EntryManager\ColumnInterface;
+        class Google_maps_ft extends EE_Fieldtype implements ColumnInterface {
+    OR
+ 3. Declare `public $entry_manager_compatible = true;` and implement `renderTableCell` method
+
+**Example:**
+
+    class Google_maps_ft extends EE_Fieldtype
+    {
+        public $has_array_data = true;
+
+        public $entry_manager_compatible = true;
+
+        /*.....*/
+
+        /**
+        * Implements EntryManager\ColumnInterface
+        */
+        public function renderTableCell($data, $field_id, $entry)
+        {
+            if (!empty($data)) {
+                list($latitude, $longitude, $zoom) = explode('|', $data);
+                return "<a href=\"https://www.google.com/maps/@{$latitude},{$longitude},{$zoom}z\" target=\"_blank\">View on map</a>";
+            }
+            return '';
+        }
+
+        /**
+        * Allows HTML in the column content
+        */
+        public function getTableColumnConfig()
+        {
+            return [
+                'encode' => false
+            ];
+        }
+
+        /* .... */
+
+    }
+
