@@ -173,6 +173,10 @@ Saves the entry and returns the [Entry Manager](control-panel/entry-manager.md) 
 
 ### Preview
 
-The preview button is available if the `channel_prefs_preview_url` is set **or** the [Pages Module](add-ons/pages.md) is installed and a Page URI and template have been set.
+The preview is available if the `channel_prefs_preview_url` is set **or** the [Pages Module](add-ons/pages.md) is installed and a Page URI and template have been set.
 
-The preview will open a split screen that allows a live preview of edits. The template used to display the preview is based on the Page fields if set and the channel preview URL otherwise. If neither is available, the Preview button will not display.
+If neither is set, the preview button will link to channel preferences page where Preview URL can be set.
+
+The preview will open a split screen that allows a live preview of edits. The template used to display the preview is based on the Page fields if set and the channel preview URL otherwise. 
+
+When preview is triggered, it is being displayed side-by-side with edit screen. The size of preview container can be adjusted with mouse dragging its border. The preview dynamic and is being updated as you change the fields.
