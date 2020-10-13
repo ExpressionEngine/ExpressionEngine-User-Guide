@@ -64,6 +64,3 @@ If you are a site builder you will primarily interact with the cluster of links 
   - [CAPTCHA Settings](control-panel/settings/captcha.md)
   - [Consents](control-panel/settings/consents.md)
 
-## Footer
-
-- [CP Footer](control-panel/footer.md)

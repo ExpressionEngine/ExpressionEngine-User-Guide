@@ -194,7 +194,7 @@ If you have defined any [image manipulations](control-panel/file-manager.md#cons
 
 In addition to pre-defined [image manipulations](control-panel/file-manager.md#constrain-or-crop) it is possible to perform certain image manipulations on-the-fly in templates by using special template tag parameters.
 
-NOTE: **Note:** Certain image manipulations can be processing-intensive and even cause timeouts. Use with caution.
+WARN: **Warning:** Certain image manipulations can be processing-intensive and even cause timeouts. Use with caution.
 
 
 ### `:resize`
