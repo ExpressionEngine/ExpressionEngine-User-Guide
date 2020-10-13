@@ -109,6 +109,8 @@ The main SQL Manager screen shows a table of your basic database information.
 
 This section presents a form that you can use to submit any standard database query. This feature is intended for **advanced** users since any changes you may make with a query are permanent.
 
+Buttons at the bottom of the form can be used to provide you with a base query for many commonly used queries.
+
 By default MySQL query errors are displayed.
 
 ## Cache Manager
