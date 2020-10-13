@@ -41,6 +41,8 @@ New template settings:
 
 This section of the Control Panel allows you to edit a templates contents and settings.
 
+Clicking on a line number will select the whole line.
+
 This page has the following tabs:
 
 [TOC=3]
