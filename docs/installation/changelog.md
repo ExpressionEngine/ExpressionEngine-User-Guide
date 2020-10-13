@@ -57,15 +57,13 @@
     - New Relationship field
   - Began working toward ADA compliance    
 
-
 - **Bug Fixes** 💃🐛 
   - Resolved bugs in the updaters where MySQL errors could be triggered.
   - Fixed Live Preview functionality with Grid and Fluid Fields
   - Fixed a bug where the debugger code highlighter would also highlight and overwrite other code blocks on a site's page    
-  
 
 - **Developers** 💻
-  - Moved tests to use Cypress
+  - Moved tests to use [Cypress](https://www.cypress.io/)
   - Addons that use Members must use Roles in place of MemberGroups
   - Removed EllisLab from Namespace and EllisLab folders
   - Updated CodeMirror to version 5.48
@@ -74,6 +72,6 @@
   - The config options `enable_avatars` and `allow_avatar_uploads` have been removed
   - Removed the deprecated jQuery add-on
   - Removed the deprecated Emoticon add-on
-  Forgot Password emails will now respect your "Mail Format" preference (essentially enabling the ability to use - HTML in Forgot Password emails).
+  - Forgot Password emails will now respect your "Mail Format" preference (essentially enabling the ability to use - HTML in Forgot Password emails).
   - Fixed a bug where table bulk selections can be saved by the browser on page reload, but don't show in the UI.
-  New base classes can be extended as part of add-ons (setting the stage for future functionality (migrations etc.- )  Not a required change to add-ons but encouraged. 
+  - New base classes can be extended as part of add-ons (setting the stage for future functionality (migrations etc.- )  Not a required change to add-ons but encouraged. 
