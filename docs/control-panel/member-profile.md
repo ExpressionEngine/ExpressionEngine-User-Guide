@@ -49,7 +49,7 @@ Set your default homepage for the control panel.
 
 **Control Panel Location: `Members > Profile > Info & Activity`**
 
-Shows some info on member's activity, such as IP address, last visit, link to member's CP logs etc.
+Shows information related to a member's activity, such as IP address, last visit, link to member's CP logs etc.
 
 ## Date & Time Settings
 
@@ -73,7 +73,8 @@ You may specify the email address associated with the account as well as prefere
 
 **Control Panel Location: `Members > Profile > Member Roles`**
 
-This section allows you to set the Member Roles for the current user. You can not change the role for Super Admins.
+This section allows you to set the Member Roles for the current user. 
+NOTE: **Note:** You can not change the role for Super Admins.
 
 ## Access overview
 

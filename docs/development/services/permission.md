@@ -94,7 +94,7 @@ Checks whether user has any of given roles, supplied as array of IDs or names.
 
 ## Available Permissions
 
-The following are permission names available for check using Permission Service methods.
+The following are permission names available for validating a user's permissions using the Permission Service methods.
 - `can_view_online_system`
 - `can_view_offline_system`
 - `can_view_profiles`
