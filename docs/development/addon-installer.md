@@ -13,13 +13,13 @@ lang: ee
 
 # Add-on Installer
 
-ExpressionEngine 6 has simplified add-on installation procedure that can be used by making module/extension extend `Installer` service.
+ExpressionEngine 6 has simplified the add-on installation procedure by allowing a module or extension extend the `Installer` service.
 
-NOTE: **Note:** This feature is only available in ExpressionEngine 6 (and great). For previous CMS version, please use appropriate function for [Modules](development/modules.html#update-file-function-reference) and [Extensions](development/extensions.html#activating-and-updating).
+NOTE: **Note:** This feature is only available in ExpressionEngine 6 (and greater). For previous CMS versions, please use appropriate function for [Modules](development/modules.html#update-file-function-reference) and [Extensions](development/extensions.html#activating-and-updating).
 
 ## Module installer
 
-At the minimum, the module's `upd.` file needs to have this code
+To use the new installer service, the module's `upd.[module_name].php` file needs to include this code at a minimum.
 
     use ExpressionEngine\Service\Addon\Installer;
 
@@ -35,7 +35,7 @@ At the minimum, the module's `upd.` file needs to have this code
 
 Additional functionality can be installed using the following guidelines:
 
-    <? php
+    <?php
 
     use ExpressionEngine\Service\Addon\Installer; //required
 
@@ -82,7 +82,8 @@ Additional functionality can be installed using the following guidelines:
         }
 
         /** 
-        * install() and uninstall() are optional functions. Only use if additional install or uninstall functionality is needed.
+        * install() and uninstall() are optional functions. 
+        * Only use if additional install or uninstall functionality is needed.
         * If needed, must include parent::__construct();
         */
 
@@ -137,7 +138,7 @@ Extension files can now be as simplified as well. However they must include the 
 
 Additionally you may use `activate_extension()` and `disable_extension()` if needed for additional functionality as shown below.
 
-    <? php
+    <?php
     use ExpressionEngine\Service\Addon\Installer;
 
     class Query_ext extends Installer
