@@ -502,8 +502,6 @@
               href: development/extension-hooks/model/template-global-variable.md
             - name: MemberField Model
               href: development/extension-hooks/model/member-field.md
-            - name: MemberGroup Model
-              href: development/extension-hooks/model/member-group.md
             - name: Member Model
               href: development/extension-hooks/model/member.md
             - name: Site Model
