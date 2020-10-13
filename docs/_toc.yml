@@ -354,8 +354,8 @@
           href: control-panel/settings/html-buttons.md
         - name: Menu Manager
           href: control-panel/settings/menu-manager.md
-    - name: CP Footer
-      href: control-panel/footer.md
+    - name: CP Navigation
+      href: control-panel/navigation.md
 
 
 - name: Security
@@ -408,6 +408,8 @@
   items:
     - name: The addon.setup.php File
       href: development/addon-setup-php-file.md
+    - name: Add-on Installer
+      href: development/addon-installer.md      
     - name: Plugins
       href: development/plugins.md
     - name: Modules
@@ -547,6 +549,8 @@
 
     - name: Fieldtypes
       href: development/fieldtypes.md
+    - name: Jump Menu
+      href: development/jump-menu.md      
     - name: Architecture
       href: development/architecture.md
     - name: Services
@@ -784,10 +788,12 @@
           href: development/guidelines/security.md
         - name: View Files and PHP Syntax
           href: development/guidelines/view-php-syntax.md
+    - name: v3 Add-on Migration
+      href: development/v3-add-on-migration.md          
     - name: v4 Add-on Migration
       href: development/v4-addon-migration.md
-    - name: v3 Add-on Migration
-      href: development/v3-add-on-migration.md
+    - name: v6 Add-on Migration
+      href: development/v6-add-on-migration.md
 
 - name: Bugs and Security Reports
   href: bugs-and-security-reports.md
