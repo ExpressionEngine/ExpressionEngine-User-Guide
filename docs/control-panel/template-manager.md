@@ -145,7 +145,7 @@ You can strip everything but the base URL by linking to `{path=""}?URL=<your url
 
 ## System Message Templates
 
-NOTE: **Note:** As of ExpressionEngine 6, it is possible to use regular templates for user messages. Please find the details in [Custom System Messages](control-panel/template-manager.md#custom-system-messages) section below.
+NOTE: **Note:** As of ExpressionEngine 6, it is possible to use standard templates for custom system messages. Please find the details in [Custom System Messages](control-panel/template-manager.md#custom-system-messages) section below.
 
 **Control Panel Location: `Developer > Templates > Messages`**
 
@@ -157,9 +157,9 @@ Users often receive messages after performing actions in ExpressionEngine: loggi
 
 ## Custom System Messages
 
-It is possible to display user messages using regular ExpressionEngine templates.
+It is possible to display custom system messages to users by using standard ExpressionEngine templates.
 
-In order to make use of this feature, you would need to create `system_messages` template group and within it, template named `generic`.
+In order to do this, you simply need to create a `system_messages` template group, and create a template named `generic` within the group.
 
 At the bare minimum, it is required to have following variables in that template:
 
@@ -172,9 +172,9 @@ It is also recommended to have the following:
 - **`{meta_refresh}`** - meta tag containing refresh/redirect information
 - **`{charset}`** - charset
 
-Additionally, the template may contain any of ExpressionEngine tags.
+Additionally, the template may contain any other ExpressionEngine tags.
 
-Please find the sample custom user message template below
+**Sample System Message Template:**
 
     <html>
     <head>
