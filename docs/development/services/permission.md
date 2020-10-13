@@ -39,7 +39,7 @@ To check for the existence of all listed permissions:
 
 ## Permission Service Methods
 
-**class `EllisLab\ExpressionEngine\Service\Permission\Permission`**
+**class `ExpressionEngine\Service\Permission\Permission`**
 
 [TOC=3]
 

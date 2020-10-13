@@ -46,7 +46,7 @@ For example:
 
 ## CP/URL Service Methods
 
-**class `EllisLab\ExpressionEngine\Library\CP\URLFactory`**
+**class `ExpressionEngine\Library\CP\URLFactory`**
 
 [TOC=3]
 
@@ -89,7 +89,7 @@ Decodes a base64 encoded, serialized URL object.
 
 ## CP/URL Object Methods
 
-**class `EllisLab\ExpressionEngine\Library\CP\URL`**
+**class `ExpressionEngine\Library\CP\URL`**
 
 [TOC=3]
 

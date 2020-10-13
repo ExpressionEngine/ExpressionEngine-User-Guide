@@ -45,7 +45,7 @@ If the environment doesn't allow the memory limit to be increased, this method w
 
 ## Memory Methods
 
-**class `EllisLab\ExpressionEngine\Service\Memory\Memory`**
+**class `ExpressionEngine\Service\Memory\Memory`**
 
 ### `getMemoryLimitBytes()`
 

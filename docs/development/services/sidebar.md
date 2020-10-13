@@ -88,7 +88,7 @@ Where `'list-name'` is the unique name you have your folder list. A jQuery objec
 
 ## CP/Sidebar Methods
 
-**class `EllisLab\ExpressionEngine\Service\Sidebar\Sidebar`**
+**class `ExpressionEngine\Service\Sidebar\Sidebar`**
 
 [TOC=3]
 
@@ -151,7 +151,7 @@ Adds an action bar to the bottom of the sidebar
 
 ## Header Methods
 
-**class `EllisLab\ExpressionEngine\Service\Sidebar\Header`**
+**class `ExpressionEngine\Service\Sidebar\Header`**
 
 [TOC=3]
 
@@ -216,7 +216,7 @@ Adds an item to the list
 
 ## BasicItem Methods
 
-**class `EllisLab\ExpressionEngine\Service\Sidebar\BasicItem`**
+**class `ExpressionEngine\Service\Sidebar\BasicItem`**
 
 [TOC=3]
 
@@ -266,7 +266,7 @@ Marks the item as a delete action
 
 ## FolderList Methods
 
-**class `EllisLab\ExpressionEngine\Service\Sidebar\FolderList`**
+**class `ExpressionEngine\Service\Sidebar\FolderList`**
 
 [TOC=3]
 
@@ -317,7 +317,7 @@ Allows the folder list to be reordered.
 
 ## FolderItem Methods
 
-**class `EllisLab\ExpressionEngine\Service\Sidebar\FolderItem`**
+**class `ExpressionEngine\Service\Sidebar\FolderItem`**
 
 [TOC=3]
 
@@ -425,7 +425,7 @@ Sets the identity value for this item which is used when this item is removed.
 
 ## ActionBar Methods
 
-**class `EllisLab\ExpressionEngine\Service\Sidebar\ActionBar`**
+**class `ExpressionEngine\Service\Sidebar\ActionBar`**
 
 [TOC=3]
 

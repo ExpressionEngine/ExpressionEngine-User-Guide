@@ -67,7 +67,7 @@ WARN: **Warning:** This method requires the PHP intl extension (enabled by defau
 
 ## API Reference
 
-**class `EllisLab\ExpressionEngine\Service\Formatter\Formats\Number`**
+**class `ExpressionEngine\Service\Formatter\Formats\Number`**
 
 [TOC=3]
 

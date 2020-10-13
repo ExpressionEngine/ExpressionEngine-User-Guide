@@ -19,7 +19,7 @@ lang: php
 
 The collection class is a list-style container for composite datatypes that adds more utility than storing them in a simple PHP array. It can store both arrays and objects:
 
-    use EllisLab\ExpressionEngine\Library\Data\Collection;
+    use ExpressionEngine\Library\Data\Collection;
 
     $collection = new Collection(array(
       array('name' => 'Anne', 'age' => 47),
@@ -47,7 +47,7 @@ NOTE: **Note:** Indices are always uninterrupted numeric sequences starting at 0
 
 ## Method Reference
 
-**class `EllisLab\ExpressionEngine\Library\Data\Collection`**
+**class `ExpressionEngine\Library\Data\Collection`**
 
 [TOC=3]
 

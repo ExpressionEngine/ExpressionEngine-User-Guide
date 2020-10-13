@@ -88,7 +88,7 @@ ExpressionEngine allows you to create one-off validation rules on any validator 
 
 Custom conditional rules can be created by calling `skip()` on the `ValidationRule` object. This can be useful, for example, if you need to conditionally validate a field based on the value of another field:
 
-    use EllisLab\ExpressionEngine\Service\Validation\Validator;
+    use ExpressionEngine\Service\Validation\Validator;
 
     $data = $_POST;
 

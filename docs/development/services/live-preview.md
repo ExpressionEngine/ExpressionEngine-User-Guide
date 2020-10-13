@@ -28,7 +28,7 @@ If your fieldtype add-on fetches data when rendering a front-end request, you wi
 
 ## LivePreview Service Methods
 
-**class `EllisLab\ExpressionEngine\Service\LivePreview\LivePreview`**
+**class `ExpressionEngine\Service\LivePreview\LivePreview`**
 
 ### `hasEntryData()`
 
