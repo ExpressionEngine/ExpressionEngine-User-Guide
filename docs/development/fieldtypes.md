@@ -290,9 +290,9 @@ NOTE: **Note:** Allowing fields to be used as tag pairs requires some extra proc
 
 #### `EE_Fieldtype::$entry_manager_compatible`
 
-`true` if the field should be displayed as Entry Manager column in Control Panel.
+`true` if the field should be displayed as an Entry Manager column in the Control Panel.
 
-NOTE: **Note:** when setting `public $entry_manager_compatible = true;` make sure that your fieldtype also implements `renderTableCell` method.
+NOTE: **Note:** when setting `public $entry_manager_compatible = true;` make sure that your fieldtype also implements the [`renderTableCell` method](development/fieldtypes.html#ee_fieldtyperendertablecelldata-field_id-entry).
 
 ### Function Reference
 
@@ -369,7 +369,7 @@ Used to render the publish field.
 
 #### `EE_Fieldtype::renderTableCell($data, $field_id, $entry)`
 
-Display the field data as column in entry manager
+Display the field data as column in the Entry Manager
 
 | Parameter | Type     | Description                               |
 | --------- | -------- | ----------------------------------------- |
@@ -781,7 +781,7 @@ Many fieldtypes do not need to be notified via JavaScript when the Live Preview 
 
 ## Displaying field data in Entry Manager
 
-Custom fields can display their data inside Entry Manager. There are 3 possible ways to enable that:
+Custom fields can display their data inside the Entry Manager through 3 possible ways:
  1. Declare `public $has_array_data = false;` OR
  2. Add `implements ColumnInterface` to fieldtype class definition.
 
