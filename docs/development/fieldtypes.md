@@ -292,7 +292,7 @@ NOTE: **Note:** Allowing fields to be used as tag pairs requires some extra proc
 
 `true` if the field should be displayed as an Entry Manager column in the Control Panel.
 
-NOTE: **Note:** when setting `public $entry_manager_compatible = true;` make sure that your fieldtype also implements the [`renderTableCell` method](development/fieldtypes.html#ee_fieldtyperendertablecelldata-field_id-entry).
+NOTE: **Note:** when setting `public $entry_manager_compatible = true;` make sure that your fieldtype also implements the [`renderTableCell` method](development/fieldtypes.md#ee_fieldtyperendertablecelldata-field_id-entry).
 
 ### Function Reference
 

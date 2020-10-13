@@ -21,7 +21,7 @@ ExpressionEngine 6 offers a rather large codebase update. While we have aimed to
 
 - `EllisLab` has been removed from the file structure and namespace.
 - Member groups have been replaced with Roles. Remember that a member can have multiple Roles.
-- With the introduction of the [Jump Menu](development/jump-menu), add-ons can provide their own Jump Menu items.
+- With the introduction of the [Jump Menu](development/jump-menu.md), add-ons can provide their own Jump Menu items.
 - The system by which permissions were stored for upload directories and templates has been reversed. Previously, we saved information in the database on member groups that are **forbidden** to access given upload directories or templates. Starting with v6, we store info on member roles that are **allowed** to access given objects.
 - Control panel layout changes. Certain HTML selectors have been replaced with the new ones.
 - Columns in the Entry Manager are now customizable. Fieldtypes can provide their data to be displayed in the column.

@@ -15,7 +15,7 @@ lang: ee
 
 ExpressionEngine 6 has simplified the add-on installation procedure by allowing a module or extension extend the `Installer` service.
 
-NOTE: **Note:** This feature is only available in ExpressionEngine 6 (and greater). For previous CMS versions, please use appropriate function for [Modules](development/modules.html#update-file-function-reference) and [Extensions](development/extensions.html#activating-and-updating).
+NOTE: **Note:** This feature is only available in ExpressionEngine 6 (and greater). For previous CMS versions, please use appropriate function for [Modules](development/modules.md#update-file-function-reference) and [Extensions](development/extensions.md#activating-and-updating).
 
 ## Module installer
 
