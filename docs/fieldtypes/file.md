@@ -15,7 +15,9 @@ lang: ee
 
 [TOC]
 
-File fields store uploaded files and images, and utilize the built-in file browser for your publishers to upload and insert files. Your site must have at least one upload directory before you can create a file field.
+File fields utilize the built-in file browser to store uploaded files and images for your publishers. 
+
+NOTE: **Note:**Your site must have at least one upload directory before you can create a file field.
 
 ## Field Options
 
@@ -192,7 +194,7 @@ If you have defined any [image manipulations](control-panel/file-manager.md#cons
 
 In addition to pre-defined [image manipulations](control-panel/file-manager.md#constrain-or-crop) it is possible to perform certain image manipulations on-the-fly in templates by using special template tag parameters.
 
-NOTE: **Note:** Certain image manipulations can be processing-intensive and even cause timeouts. Always use with precaution.
+NOTE: **Note:** Certain image manipulations can be processing-intensive and even cause timeouts. Use with caution.
 
 
 ### `:resize`
