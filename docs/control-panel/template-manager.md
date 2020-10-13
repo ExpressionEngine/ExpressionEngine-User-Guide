@@ -143,6 +143,8 @@ You can strip everything but the base URL by linking to `{path=""}?URL=<your url
 
 ## System Message Templates
 
+NOTE: **Note:** As of ExpressionEngine 6, it is possible to use regular templates for user messages. Please find the details in [Custom System Messages](control-panel/template-manager.md#custom-system-messages) section below.
+
 **Control Panel Location: `Developer > Templates > Messages`**
 
 This section of the Control Panel is for managing the system message templates, such as the Site Offline template and the User Messages template.
@@ -150,6 +152,61 @@ This section of the Control Panel is for managing the system message templates, 
 In the [General Settings](control-panel/settings/general.md) section of the Control Panel you can specify whether or not your site is "Live". If the site is not live then people will be presented with a message when they try to access your page. This can be useful if you are performing maintenance or other such things. This Message Page allows you to define the page that will be shown to people when your site is not "Live".
 
 Users often receive messages after performing actions in ExpressionEngine: logging in, submitting a form, etc. In addition, they may sometimes be shown error messages. You can determine how the page looks that displays these messages.
+
+## Custom System Messages
+
+It is possible to display user messages using regular ExpressionEngine templates.
+
+In order to make use of this feature, you would need to create `system_messages` template group and within it, template named `generic`.
+
+At the bare minimum, it is required to have following variables in that template:
+
+- **`{heading}`** - message heading
+- **`{content}`** - message text
+- **`{link}`** - formatted link provided with the message
+
+It is also recommended to have the following:
+- **`{title}`** - page title
+- **`{meta_refresh}`** - meta tag containing refresh/redirect information
+- **`{charset}`** - charset
+
+Additionally, the template may contain any of ExpressionEngine tags.
+
+Please find the sample custom user message template below
+
+    <html>
+    <head>
+        <title>{title} | {site_name}</title>
+        <meta http-equiv='content-type' content='text/html; charset={charset}' />
+        {meta_refresh}
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    <body>
+    <div class="flex items-center justify-center h-screen" >
+        <div class="max-w-md rounded overflow-hidden shadow-lg ">
+
+            <div class="px-6 py-4 bg-gray-100">
+                <div class="font-bold text-xl mb-2">{heading}</div>
+                    <div class="text-gray-700 text-base">
+
+                    {content}
+
+                    <p class="text-indigo-500">{link}</p>
+
+                    <p>... or read our latest blog post {exp:channel:entries channel="blog" limit="1" dynamic="no" disable="custom_fields"}<a class="text-indigo-500" href="{path=blog/{url_title}}">{title}</a>{/exp:channel:entries}</p>
+                </div>
+            </div>
+            <div class="px-6 pt-4 pb-2 bg-gray-100">
+                <span class="inline-block bg-gray-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#EE6</span>
+                <span class="inline-block bg-gray-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#new-features</span>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
+
+
+
 
 ## Template Partials
 
