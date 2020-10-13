@@ -47,7 +47,7 @@ When an add-on or other application on the server is no longer used, we recommen
 
 ExpressionEngine prevents the upload of code to your server when using any of the native file upload tools including the custom file field in the control panel and Channel Forms, forum attachments, and private message attachments.
 
-However, in the unlikely event that ExpressionEngine's default safeguards are bypassed, an insecure addon is installed, outdated code is exploited, or your server is compromised in any other way, we recommend using your web-servers native security features to further lock down file upload directories.
+However, in the unlikely event that ExpressionEngine's default safeguards are bypassed, an insecure add-on is installed, outdated code is exploited, or your server is compromised in any other way, we recommend using your web-servers native security features to further lock down file upload directories.
 
 We recommend a simple `.htaccess` file at the root of the directory where you'll be allowing user uploads:
 

@@ -138,7 +138,7 @@ NOTE: **Note:** You may need to include your service code's namespace in the add
       'Name' => 'Model\ClassName'
     )
 
-This is an associate array of models exposed by this addon. The class name should be relative to the addon namespace. Typically addons will be in a `Model` directory in the addon's folder.
+This is an associate array of models exposed by this add-on. The class name should be relative to the add-on namespace. Typically add-ons will be in a `Model` directory in the add-on's folder.
 
 ### `consent.requests`
 

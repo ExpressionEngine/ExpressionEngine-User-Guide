@@ -64,7 +64,7 @@
 
 - **Developers** 💻
   - Moved tests to use [Cypress](https://www.cypress.io/)
-  - Addons that use Members must use Roles in place of MemberGroups
+  - Add-ons that use Members must use Roles in place of MemberGroups
   - Removed EllisLab from Namespace and EllisLab folders
   - Updated CodeMirror to version 5.48
   - Deprecated the Channel Status controller `getForegroundColor()`

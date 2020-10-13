@@ -51,7 +51,7 @@ Consent to "Targeting" cookies. These cookies are often referred to as "marketin
 
 ### Add-on Consent Requests
 
-Addon Consent request are prefixed with the add-on's shortname that corresponds to its folder name and tags. For example if the add-on is named Marketing and has its own consents, the consent variables would be:
+Add-on Consent request are prefixed with the add-on's shortname that corresponds to its folder name and tags. For example if the add-on is named Marketing and has its own consents, the consent variables would be:
 
     {if consent:marketing:consent-name}
       {exp:marketing:action}

@@ -17,7 +17,7 @@ Cookies that are necessary to the functioning
 
 By default, ExpressionEngine cookies are prefixed with `exp_`, so the session cookie would be named `exp_sessionid`. However, the prefix can be configured in [Security & Privacy](control-panel/settings/security-privacy.md).
 
-NOTE: **Note:** This should not be considered an exhaustive list of cookies that might be in use on a given site. Third party addons may have their own cookies and cookies may be set outside of ExpressionEngine entirely.
+NOTE: **Note:** This should not be considered an exhaustive list of cookies that might be in use on a given site. Third party add-ons may have their own cookies and cookies may be set outside of ExpressionEngine entirely.
 
 ## Basic Cookies
 

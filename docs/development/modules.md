@@ -19,7 +19,7 @@ Modules are the most complex form of add-on. They can have their own database ta
 
 ## Basic File Structure
 
-Modules should be placed into the addons folder in a package and be named after that package name. At a minimum, there are 4 required files for any module:
+Modules should be placed into the add-ons folder in a package and be named after that package name. At a minimum, there are 4 required files for any module:
 
 - `addons/module_name/upd.module_name.php` - installs, uninstalls and updates the module
 - `addons/module_name/mcp.module_name.php` - the backend control panel

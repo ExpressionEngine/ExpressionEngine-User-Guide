@@ -34,7 +34,7 @@ NOTE: **Note:** By default, all entries and comments are assigned to this format
 
 The _Markdown_ option parses all of your content through [a Markdown parser](http://michelf.ca/projects/php-markdown/extra/) and [a SmartyPants parser](http://michelf.ca/projects/php-smartypants/)—the parser follows [Jon Gruber's implementation of Markdown](http://daringfireball.net/projects/markdown/) for the most part, but adds a few things as well. SmartyPants transforms normal quotes into curly quotes, consecutive dashes into en (`--` into –) and em (`---` into `—`) dashes, and three consecutive periods into an ellipsis (`...` into `…`).
 
-NOTE: **Note:** To use the Markdown option, the Markdown Addon must be installed.
+NOTE: **Note:** To use the Markdown option, the Markdown Add-on must be installed.
 
 ## Auto BR
 

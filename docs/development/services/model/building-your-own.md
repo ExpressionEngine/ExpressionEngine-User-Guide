@@ -28,7 +28,7 @@ All models must be registered in your [addon.setup.php](development/addon-setup-
       'MyModel' => 'Model\MyModel'
     )
 
-NOTE: **Note:** Your addon prefix will be prepended automatically.
+NOTE: **Note:** Your add-on prefix will be prepended automatically.
 
 ## Model Skeleton
 

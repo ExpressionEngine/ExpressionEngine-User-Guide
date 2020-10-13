@@ -20,14 +20,14 @@ The ExpressionEngine core defines a variety of constants to ensure consistency i
 - `SYSDIR` - Name of the system directory
 - `SYSPATH` - Path of the system directory
 - `APPPATH` and `BASEPATH` - Path to the `system/ee/legacy` directory
-- `PATH_ADDONS` - Path to the first-party addons directory
+- `PATH_ADDONS` - Path to the first-party add-ons directory
 - `PATH_THEMES` - Path to the themes directory
 - `PATH_RTE` - Path to the first party RTE tools directory
 - `PATH_MBR_THEMES` - Path to the member themes directory
 - `PATH_CP_GBL_IMG` - Path to the global image directory
 - `PATH_JAVASCRIPT` - Path to the javascript directory
 - `PATH_JQUERY` - Path to the jQuery directory
-- `PATH_THIRD` - Path to third-party addons directory
+- `PATH_THIRD` - Path to third-party add-ons directory
 - `PATH_THIRD_THEMES` - Path to the third-party themes directory
 
 ## Version Constants

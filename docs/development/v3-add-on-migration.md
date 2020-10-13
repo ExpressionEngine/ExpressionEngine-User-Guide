@@ -44,7 +44,7 @@ To get started, create a file called _addon.setup.php_ in the main directory of 
       'namespace'   => 'Example\HelloWorld'
     );
 
-Your addon should now be visible in the Add-Ons section of the control panel. See [addon.setup.php file](development/addon-setup-php-file.md) for full documentation of available keys.
+Your add-on should now be visible in the Add-Ons section of the control panel. See [addon.setup.php file](development/addon-setup-php-file.md) for full documentation of available keys.
 
 ### Component Changes
 
@@ -388,6 +388,6 @@ See [CP/URL Service](development/services/url.md) for the full documentation.
 - `AJAX_REQUEST` - Returns Boolean TRUE if a request was made via an Ajax Request
 - `QUERY_MARKER` - Renders a query marker (`?`)
 - `APPPATH` - Server path to the `system/ee/legacy` directory
-- `PATH_ADDONS` - Server path to the first-party addons directory
-- `PATH_THIRD` - Server path to the third-party addons directory
+- `PATH_ADDONS` - Server path to the first-party add-ons directory
+- `PATH_THIRD` - Server path to the third-party add-ons directory
 - `PATH_JQUERY` - Server path to jQuery files at `themes/ee/javascript/compressed/jquery`
