@@ -22,7 +22,7 @@ Outputs a searchable list of members, including form filters to sort and limit t
 
     error_handling="inline"
 
-Something something.
+Choose to display error messages inline (see [Error Messages](#errormy_field_name)). By default, errors are displayed with the user message template.
 
 ### `return=`
 

@@ -30,7 +30,7 @@ Output a forgotten password form that sends an email with instructions for reset
 
     error_handling="inline"
 
-The name (short name) of the channel. This is a **required** parameter.
+Choose to display error messages inline (see [Error Messages](#errormy_field_name)). By default, errors are displayed with the user message template.
 
 ### `password_reset_email_template=`
 

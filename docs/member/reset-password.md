@@ -30,7 +30,7 @@ Output a reset password form that allows members accessing it via a link from a 
 
     error_handling="inline"
 
-Something something.
+Choose to display error messages inline (see [Error Messages](#errormy_field_name)). By default, errors are displayed with the user message template.
 
 ### `return=`
 

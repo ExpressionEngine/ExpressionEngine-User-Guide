@@ -37,10 +37,11 @@
 
     error_handling="inline"
 
+Choose to display error messages inline (see [Error Messages](#errormy_field_name)). By default, errors are displayed with the user message template.
+
 ### `memberlist_url=`
 
     memberlist_url="member/memberlist"
-
 
 ### `return=`
 
