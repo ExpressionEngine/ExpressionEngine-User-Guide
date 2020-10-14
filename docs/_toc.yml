@@ -432,8 +432,6 @@
               href: development/extension-hooks/global/grid.md
             - name: Input Library
               href: development/extension-hooks/global/input.md
-            - name: Legacy Member Model
-              href: development/extension-hooks/global/member-model.md
             - name: Output Library
               href: development/extension-hooks/global/output.md
             - name: Pagination Library
@@ -623,8 +621,6 @@
       href: development/tree-datastructure.md
     - name: Shared Form View
       href: development/shared-form-view.md
-    - name: RTE Tools API
-      href: development/rte-tools.md
     - name: Control Panel Javascript
       items:
         - name: Custom jQuery Events
