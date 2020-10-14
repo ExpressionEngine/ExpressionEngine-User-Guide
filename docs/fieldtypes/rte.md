@@ -11,13 +11,13 @@
 
 The Rich Text Editor is like a word processor that allows you to create richly-formatted content without writing any HTML. For example, you can create links, insert images, create bulleted or numbered lists, and a whole lot more.
 
-You can find more about general RTE configuration [Rich Text Editor add-ons documentation](/add-ons/rte.md).
+You can find out more about general RTE configuration by reading the [Rich Text Editor add-ons documentation](/add-ons/rte.md).
 
 ## Field Options
 
 When creating or modifying RTE field, the following field settings are available.
 
-- **Editor Configuration** - pre-created Tool Set to use for this field. 
+- **Editor Configuration** - pre-created tool set to use for this field. 
 - **Defer CKEditor initialization?** - turning this on will initialize the field's editing feature only when it will be focused
 - **Column type in database** - database column type to hold your data. TEXT (64Kb) is usually good for an article. If your field content is rather a book, select MEDIUMTEXT (16Mb)
 
@@ -25,7 +25,7 @@ When creating or modifying RTE field, the following field settings are available
 
 **`{rte_field}`**
 
-The formatted field content can displayed in templates using field name (`rte_field` in this example) as variable.
+The formatted field content can displayed in templates using field name (`rte_field` in this example) as a variable.
 
 
 In addition to this, the following are available:

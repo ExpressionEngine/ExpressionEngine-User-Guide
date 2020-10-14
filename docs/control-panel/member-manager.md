@@ -27,7 +27,7 @@ The _Member Roles_ area of the Control Panel permits you to manage your Member R
 
 Each member of your site must have at least one Role, which is referred to as the Primary Role. These roles allow you to restrict and control what a given member is allowed to do, and which pages they are allowed to access. Each Member Role has over 50 different privileges that can be allowed or denied, giving you precise control over what each of your members can do.
 
-You can assign multiple roles to member.
+You can assign multiple roles to a member.
 
 ### Create/Edit All Member Roles
 
