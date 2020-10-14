@@ -13,7 +13,7 @@
 
 ## Overview
 
-The purpose of this tag .
+Output a forgotten password form that sends an email with instructions for resetting a member password when unable to login.
 
     {exp:member:forgot_password_form}
 
@@ -26,9 +26,9 @@ The purpose of this tag .
 
 ## Parameters
 
-### `inline_errors=`
+### `error_handling=`
 
-    inline_errors="yes"
+    error_handling="inline"
 
 The name (short name) of the channel. This is a **required** parameter.
 
@@ -87,10 +87,10 @@ The error text.
 ## Example
 
     {exp:member:forgot_password_form
-        return="mymb/forgot-password/sent"
-        inline_errors="yes"
-        password_reset_url="mymb/reset-password"
-        password_reset_email_template="mymb/email-password-reset"
+        return="member/forgot-password/sent"
+        error_handling="inline"
+        password_reset_url="member/reset-password"
+        password_reset_email_template="member/email-password-reset"
         }
 
         {if errors}
@@ -108,5 +108,5 @@ The error text.
 
         <p><input type="submit" name="submit" value="Submit" /></p>
 
-        <p><a href="{path='mymb/login'}">Login</a> &nbsp; &nbsp; <a href="{path='mymb/registration'}">Register</a></p>
+        <p><a href="{path='member/login'}">Login</a> &nbsp; &nbsp; <a href="{path='member/registration'}">Register</a></p>
     {/exp:member:forgot_password_form}

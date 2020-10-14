@@ -13,7 +13,7 @@
 
 ## Overview
 
-Output a forgotten username form that sends an email with instructions for resetting a member username when unable to login.
+Output a forgotten username form that sends an email with instructions for addressing a forgotten member username when unable to login.
 
     {{exp:member:forgot_username_form}
 
@@ -34,9 +34,9 @@ Output a forgotten username form that sends an email with instructions for reset
 
     email_template="member/email-forgot-username"
 
-### `inline_errors=`
+### `error_handling=`
 
-    inline_errors="yes"
+    error_handling="inline"
 
 Something something.
 
@@ -87,7 +87,7 @@ The error text.
 
     {exp:member:forgot_username_form
         return="member/login/forgot-username"
-        inline_errors="yes"
+        error_handling="inline"
         email_subject="Your Username"
         email_template="member/email-forgot-username"
         }
@@ -107,5 +107,5 @@ The error text.
 
         <p><input type="submit" name="submit" value="Submit" /></p>
 
-        <p><a href="{path='mymb/login'}">Login</a> &nbsp; &nbsp; <a href="{path='mymb/registration'}">Register</a></p>
+        <p><a href="{path='member/login'}">Login</a> &nbsp; &nbsp; <a href="{path='member/registration'}">Register</a></p>
     {/exp:member:forgot_username_form}

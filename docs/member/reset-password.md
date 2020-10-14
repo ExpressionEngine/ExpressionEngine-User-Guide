@@ -13,7 +13,7 @@
 
 ## Overview
 
-Output a forgotten password form that sends an email with instructions for resetting a member password when unable to login.
+Output a reset password form that allows members accessing it via a link from a forgotten email form to reset their password while logged out.
 
     {exp:member:reset_password_form}
 
@@ -26,15 +26,15 @@ Output a forgotten password form that sends an email with instructions for reset
 
 ## Parameters
 
-### `inline_errors=`
+### `error_handling=`
 
-    inline_errors="yes"
+    error_handling="inline"
 
 Something something.
 
 ### `return=`
 
-    return="mymb/login/success"
+    return="member/login/success"
 
 
 # Form Inputs
@@ -86,8 +86,8 @@ The error text.
 ## Example
 
     {exp:member:reset_password_form
-        return="mymb/login/success"
-        inline_errors="yes"
+        return="member/login/success"
+        error_handling="inline"
         }
 
         {if errors}
@@ -111,6 +111,6 @@ The error text.
 
         <p><input type="submit" name="submit" value="Submit" /></p>
 
-        <p><a href="{path='mymb/login'}">Login</a> &nbsp; &nbsp; <a href="{path='mymb/registration'}">Register</a></p>
+        <p><a href="{path='member/login'}">Login</a> &nbsp; &nbsp; <a href="{path='member/registration'}">Register</a></p>
     {/exp:member:reset_password_form}
 

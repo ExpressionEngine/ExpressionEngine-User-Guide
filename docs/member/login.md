@@ -13,7 +13,7 @@
 
 ## Overview
 
-Output a forgotten password form that sends an email with instructions for resetting a member password when unable to login.
+Output a login form.
 
     {exp:member:login_form}
 
@@ -28,9 +28,9 @@ Output a forgotten password form that sends an email with instructions for reset
 
 ## Parameters
 
-### `inline_errors=`
+### `error_handling=`
 
-    inline_errors="yes"
+    error_handling="inline"
 
 
 ### `action=`
@@ -164,5 +164,5 @@ The error text.
 
         <p><input type="submit" name="submit" value="Submit" /></p>
 
-        <p><a href="{path='mymb/forgot-password'}">Forgot password?</a> &nbsp; &nbsp; <a href="{path='mymb/forgot-username'}">Forgot username?</a></p>
+        <p><a href="{path='member/forgot-password'}">Forgot password?</a> &nbsp; &nbsp; <a href="{path='member/forgot-username'}">Forgot username?</a></p>
     {/exp:member:login_form}

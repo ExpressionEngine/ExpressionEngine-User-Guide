@@ -13,26 +13,17 @@
 
 ## Overview
 
-Output a forgotten password form that sends an email with instructions for resetting a member password when unable to login.
-
-    {exp:member:forgot_password_form}
-
-            <label>Your Email Address</label><br />
-            <input type="email" name="email" value="" maxlength="120" size="40" />
-
-			<input type="submit" name="submit" value="Submit" />
-
-    {/exp:member:forgot_password_form}
+Output a member registration form.
 
 ## Parameters
 
-### `inline_errors=`
+### `error_handling=`
 
-    inline_errors="yes"
+    error_handling="inline"
 
 ### `return=`
 
-    return="mymb/registration/success"
+    return="member/registration/success"
 
 
 ## Form Inputs
@@ -66,6 +57,13 @@ Password confirmation. This is a **required** field and must match the entered p
             <label>Confirm New Password</label><br />
             <input type="password" name="password_confirm" value="" maxlength="50" size="40" />
 
+### Screen name
+
+Member username. This is a **required** field and must be unique across the site:
+
+    <label for="screen_name">Screen Name</label>
+    <input type="text" name="screen_name" value="" maxlength="120" size="40" />
+
 ### Username
 
 Member username. This is a **required** field and must be unique across the site:
@@ -81,10 +79,29 @@ Member username. This is a **required** field and must be unique across the site
 
 ## Variables
 
-### `{something}`
+### `{accept_terms}`
 
-This variable yada yada.
+    {if accept_terms == 'y'}checked="checked"{/if}
 
+### `{email}`
+
+    {if email}{email}{/if}
+
+### `{password}`
+
+    {if password}{password}{/if}
+
+### `{password_confirm}`
+
+    {if password_confirm}{password_confirm}{/if}
+
+### `{screen_name}`
+
+    {if screen_name}{screen_name}{/if}
+
+### `{username}`
+
+    {if username}{username}{/if}
 
 ## Variable Pairs
 
@@ -117,8 +134,7 @@ The error text.
 ## Example
 
     {exp:member:registration_form
-        return="mymb/registration/success"
-        inline_errors="no"
+        return="member/registration/success"
         }
 
         {if errors}

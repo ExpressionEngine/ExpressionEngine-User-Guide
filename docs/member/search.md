@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Forgot Username Form Tag
+# Member Search Form Tag
 
 [TOC]
 
@@ -33,18 +33,18 @@
 
 ## Parameters
 
-### `inline_errors=`
+### `error_handling=`
 
-    inline_errors="yes"
+    error_handling="inline"
 
 ### `memberlist_url=`
 
-    memberlist_url="mymb/memberlist"
+    memberlist_url="member/memberlist"
 
 
 ### `return=`
 
-    return="mymb/memberlist"
+    return="member/memberlist"
 
 
 ## Form Variables

@@ -18,15 +18,15 @@ Outputs a searchable list of members, including form filters to sort and limit t
 
 ## Parameters
 
-### `inline_errors=`
+### `error_handling=`
 
-    inline_errors="yes"
+    error_handling="inline"
 
 Something something.
 
 ### `return=`
 
-    return="mymb/memberlist"
+    return="member/memberlist"
 
 
 ## Form Variables
@@ -150,10 +150,10 @@ See [pagination](templates/pagination.md) for more details.
 ## Example
 
     {exp:member:memberlist
-        return="mymb/login/forgot-username"
-        inline_errors="yes"
+        return="member/login/forgot-username"
+        error_handling="inline"
         email_subject="Your Username"
-        email_template="mymb/email-forgot-username"
+        email_template="member/email-forgot-username"
         }
 
         {if errors}
