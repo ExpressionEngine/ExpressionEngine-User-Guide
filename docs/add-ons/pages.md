@@ -19,7 +19,7 @@ The Pages Module allows you to create special "page" entries for holding content
 
 The [Pages Module Control Panel](#control-panel) allows you to create, edit, view and delete your Pages.
 
-NOTE: **Note:** In order to allow content authors full access to create and modify pages through both the Pages tab of the Publish area and the Pages module itself, it is necessary to give those authors' respective member groups the appropriate Control Panel access for publishing and editing content, access to post and edit entries in the particular Channel in question, access to Modules in general, and access to the Pages module specifically.
+NOTE: **Note:** In order to allow content authors full access to create and modify pages through both the Pages tab of the Publish area and the Pages module itself, it is necessary to give those authors' respective roles the appropriate Control Panel access for publishing and editing content, access to post and edit entries in the particular Channel in question, access to Modules in general, and access to the Pages module specifically.
 
 ## Displaying Page Content with the Channel Entries Tag
 

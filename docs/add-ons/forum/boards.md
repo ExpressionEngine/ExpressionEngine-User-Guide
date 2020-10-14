@@ -23,7 +23,7 @@ The "Forum Boards" are displayed in the left navigation. From there you can add 
 
 #### Enable board
 
-When set to **enable**, this forum board will be accessible to member groups with proper permissions
+When set to **enable**, this forum board will be accessible to member roles with proper permissions
 
 #### Name
 

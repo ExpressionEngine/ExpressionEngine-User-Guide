@@ -17,7 +17,7 @@ This section of the Control Panel allows you to define how your site is output f
 
 ### Enable error reporting?
 
-When set to "enable", super admins and member groups with permissions will see PHP/MySQL errors when they occur.
+When set to "enable", super admins and member roles with permissions will see PHP/MySQL errors when they occur.
 
 ### Enable debugging?
 

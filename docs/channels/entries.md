@@ -305,7 +305,7 @@ NOTE: **Note:** Using this parameter will automatically constrain the entries ta
 
     group_id="4"
 
-You can decide from which Member Groups (by specifying the group ID) you wish entries to be shown. If you choose "4", then only entries created by members of the Member Group with the ID of 4 will be shown. You can choose multiple Member Groups using a pipe:
+You can decide from which Member Role (by specifying the role ID) you wish entries to be shown. If you choose "4", then only entries created by members of the Primary Role with the ID of 4 will be shown. You can choose multiple Roles using a pipe:
 
     group_id="2|3|4"
 

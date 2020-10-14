@@ -20,7 +20,7 @@ The Channel Form makes it possible to add and edit channel entries from outside 
 - Adds or edits entries based on the presence of an entry_id and/or url_title.
 - Allows use of the entry_id or url_title in your return URL, so that you may redirect to the entry that was just created. Useful for multi-page forms.
 - Specify a default status, or set forms to override default statuses.
-- Specify different return URLs for different member groups by the group_id. Send visitors to one page, and admins to another.
+- Specify different return URLs for different member primary roles by the group_id. Send visitors to one page, and admins to another.
 - Server-side validation.
 - Handles AJAX requests and can output responses in JSON.
 
@@ -173,7 +173,7 @@ Specify a path to redirect the user to after an entry submission. You may use th
 
     return_X="site/thanks"
 
-Specify a path to redirect the user to after an entry submission, based on the user's member group. Replace X with the group_id of the member group.
+Specify a path to redirect the user to after an entry submission, based on the user's primary role. Replace X with the role_id of the member role.
 
 ### `rules:my_field_name=`
 

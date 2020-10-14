@@ -306,7 +306,7 @@ The user's local time.
 
 #### `{member_group}`
 
-The user's member group.
+The user's primary role.
 
 #### `{member_id}`
 

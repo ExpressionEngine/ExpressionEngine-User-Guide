@@ -19,7 +19,7 @@ lang: php
 
 **class `Layout`**
 
-Administrators may extensively customize publish pages on a per member group and per channel basis. Since these custom layouts are saved as a serialized array in the database, any additions or deletions to publish page tabs and fields must be synced to any saved layouts. The control panel library provides 4 methods to facilitate custom layout updates.
+Administrators may extensively customize publish pages on a per member role and per channel basis. Since these custom layouts are saved as a serialized array in the database, any additions or deletions to publish page tabs and fields must be synced to any saved layouts. The control panel library provides 4 methods to facilitate custom layout updates.
 
     ee()->load->library('layout');
 

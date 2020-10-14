@@ -19,7 +19,7 @@ Keeping your installation up-to-date is the easiest way to keep your site secure
 
 ## Limit User Permissions
 
-You should only provide people with the minimum permissions they need to do what they need to do. In ExpressionEngine parlance, don't put everyone in the Super Admin member group.
+You should only provide people with the minimum permissions they need to do what they need to do. In ExpressionEngine parlance, don't put everyone in the Super Admin role.
 
 This also applies to access to your webserver. Do not provide others with FTP or SSL access unless it is absolutely necessary. Periodically review your access settings and revoke any accounts and permissions that are no longer required.
 

@@ -141,7 +141,7 @@ This variable allows you to wrap a Template in another. Please see the [Template
 
 ### `{member_group}`
 
-The Member Group ID number for the currently logged-in user.
+The Primary Role ID number for the currently logged-in user.
 
 ### `{member_profile_link}`
 
@@ -261,15 +261,15 @@ The email address for the currently logged-in user.
 
 ### `{logged_in_group_description}`
 
-The Member Group description for the currently logged-in user.
+The Primary Role description for the currently logged-in user.
 
 ### `{logged_in_group_id}`
 
-The Member Group ID number for the currently logged-in user.
+The Primary Role ID number for the currently logged-in user.
 
 ### `{logged_in_group_title}`
 
-The title of the member group for the currently logged-in user.
+The title of the Primary Role for the currently logged-in user.
 
 ### `{logged_in_ip_address}`
 

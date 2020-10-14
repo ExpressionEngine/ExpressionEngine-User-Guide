@@ -67,9 +67,9 @@ Optionally set the maximum allowed height in pixes for uploaded images. Images o
 
 Specify one or more alternate versions of an image that automatically get created when the original image is uploaded. A manipulation can include a resized version, a [watermark](#watermarks), or both. You can refer to a particular Image Manipulation in your templates via a File Field's [single variable tag](fieldtypes/file.md#single-variable-usage) or its [variable pair tag](fieldtypes/file.md#url). The resize type will determine whether the image is constrained (resized) or cropped to the specified dimensions. If only height or width is specified, the thumbnails will be created using that as the master dimension. For example, setting the height to 200 and leaving the width blank will result in an image that is no higher than 200 pixels, with the width resized proportionately. Setting both the height and the width to 200 would result in an image that is no higher or wider than 200 pixels.
 
-##### Allowed member groups
+##### Allowed member roles
 
-This setting allows you to specify which member groups have permission to upload files to the upload destination.
+This setting allows you to specify which member roles have permission to upload files to the upload destination.
 
 ##### Allowed category groups
 

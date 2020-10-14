@@ -240,7 +240,7 @@ When accessing certain locations within the control panel ExpressionEngine retur
 
 ### Logging into the Control Panel
 
-Only members of the "Superadmin" Member Group can access the Control Panel under all circumstances. Users belonging to other groups need to have appropriate group permissions to access the Control Panel. By default, ExpressionEngine expects user's browsers to send a **valid IP address** and **User Agent information**. This is meant to help prevent hacking attempts. Some firewalls and other third-party software installed on the user's computer might block this information.
+Only members of the "Superadmin" Role can access the Control Panel under all circumstances. Users belonging to other groups need to have appropriate group permissions to access the Control Panel. By default, ExpressionEngine expects user's browsers to send a **valid IP address** and **User Agent information**. This is meant to help prevent hacking attempts. Some firewalls and other third-party software installed on the user's computer might block this information.
 
 This requirement can be disabled:
 

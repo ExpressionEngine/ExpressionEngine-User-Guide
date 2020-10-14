@@ -142,7 +142,7 @@ Example Usage:
 
 ### `allow_pending_login`
 
-Set whether members of the Pending member group can log in or not. By default, Pending members cannot log in.
+Set whether members of the Pending member role can log in or not. By default, Pending members cannot log in.
 
 | Value | Behavior                                         |
 | ----- | ------------------------------------------------ |
@@ -879,11 +879,11 @@ Example Usage:
 
 ### `default_member_group`
 
-Set the member group to which new users will be assigned.
+Set the primary member role to which new users will be assigned.
 
 | Value   | Description     |
 | ------- | --------------- |
-| integer | Member group ID |
+| integer | Member role ID |
 
 Example Usage:
 
@@ -1788,11 +1788,11 @@ Example Usage:
 
 ### `mime_whitelist_member_group_exception`
 
-Specify member group IDs to exclude from Mime Type whitelist restrictions.
+Specify member role IDs to exclude from Mime Type whitelist restrictions.
 
 | Value | Description                              |
 | ----- | ---------------------------------------- |
-| text  | Comma-delimited list of member group IDs |
+| text  | Comma-delimited list of member role IDs |
 
 Example Usage:
 
@@ -3069,11 +3069,11 @@ Example Usage:
 
 ### `xss_clean_member_group_exception`
 
-Specify member group IDs to exclude from XSS cleaning.
+Specify member role IDs to exclude from XSS cleaning.
 
 | Value | Description                              |
 | ----- | ---------------------------------------- |
-| text  | Comma-delimited list of member group IDs |
+| text  | Comma-delimited list of member role IDs |
 
 Example Usage:
 

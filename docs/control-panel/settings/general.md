@@ -35,7 +35,7 @@ When set to "auto" ExpressionEngine will cause a message to be displayed in the 
 
 ### Enable Site Manager?
 
-When set to "enable", super admins and member groups with permissions will be able to manage additional websites from the CP.
+When set to "enable", super admins and member roles with permissions will be able to manage additional websites from the CP.
 
 ### Language
 

@@ -27,7 +27,7 @@ When set to "enable", commenting will use the [word censoring](control-panel/set
 
 If this option is enabled, then comments will not immediately appear on the site. Instead, the comments will go into a queue and await review/moderation by an administrator.
 
-Member Groups (such as the SuperAdmin Group by default) can be set to bypass comment moderation and have their comments posted immediately. That option can be set at `Members > Member Groups`.
+Member Roles (such as the SuperAdmin Role by default) can be set to bypass comment moderation and have their comments posted immediately. That option can be set at `Members > Member Roles`.
 
 ### Comment edit time limit (in seconds)
 

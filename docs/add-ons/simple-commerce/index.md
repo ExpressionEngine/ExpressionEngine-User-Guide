@@ -18,7 +18,7 @@ The Simple Commerce Module is a basic but flexible module that easily integrates
 - Lets you create any number of customized email notification templates for both the administrator and customers, even a different email template for _every item_!
 - Add and Edit multiple items at once
 - Ability to assign sale prices to items, and easily mark items "on sale"
-- Allows purchases of items to change the user's member group
+- Allows purchases of items to change the user's primary role
 - Supports PayPal Encrypted Payments
 - Tab delimited export of items and purchases
 
@@ -194,7 +194,7 @@ A button to view the contents of the shopping cart.
 
 The Simple Commerce Module supports [Paypal Subscriptions and Recurring Payments](https://www.paypal.com/us/cgi-bin/?cmd=p/xcl/rec/subscr-intro-outside) (offsite link). Using recurring payments, you can offer your users automatically recurring subscriptions. For purchases managed through the module, you can specify emails to be sent upon a recurring purchase, emails to be sent when a recurring payment is canceled, and alter a member's group assignment based on their subscription status.
 
-NOTE: **Note:** Automatic emails and member group changes rely on [Instant Payment Notification](add-ons/simple-commerce/ipn.md). New subscription automated features will only work for purchases made by logged-in members of your site. Subscription termination automatic features will only work for purchases made by members.
+NOTE: **Note:** Automatic emails and member role changes rely on [Instant Payment Notification](add-ons/simple-commerce/ipn.md). New subscription automated features will only work for purchases made by logged-in members of your site. Subscription termination automatic features will only work for purchases made by members.
 
 ### Recurring Payment Variables in Template Tags
 

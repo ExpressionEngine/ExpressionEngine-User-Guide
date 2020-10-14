@@ -69,9 +69,9 @@ The [email template](add-ons/simple-commerce/email-templates.md) that will be us
 
 ### New Member Group
 
-If selected, a member who purchases this item will automatically be moved to the designated member group for this item.
+If selected, a member who purchases this item will automatically be moved to the designated member role for this item.
 
-For example, you could have a member group called "member_paid" and when a current registered member purchases an item called "Yearly Membership" the member group would be automatically switched to the "member_paid" member group.
+For example, you could have a member role called "member_paid" and when a current registered member purchases an item called "Yearly Membership" the member primary role would be automatically switched to the "member_paid" role.
 
 ### Admin Cancel Email Template
 
@@ -83,9 +83,9 @@ For subscription items only, this is the [email template](add-ons/simple-commerc
 
 ### Unsubscribe Member Group
 
-For subscription items, you can designate a member group to move the member to if their subscription runs out.
+For subscription items, you can designate a primary role to move the member to if their subscription runs out.
 
-For example, if you move members to the 'member_paid' group when the purchase a 'Yearly Membership', you could have a member group 'member_unpaid' selected here. Once their subscription runs out, they will automatically be switched to the unpaid member group.
+For example, if you move members to the 'member_paid' group when the purchase a 'Yearly Membership', you could have a member role 'member_unpaid' selected here. Once their subscription runs out, they will automatically be switched to the unpaid role.
 
 ### Recurring Subscription?
 

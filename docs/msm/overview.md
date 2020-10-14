@@ -17,7 +17,7 @@ The Multiple Site Manager empowers you to create and manage multiple “websites
 
 ### From School House to University
 
-Think of the Multiple Site Manager as converting a one-building school house into a University campus. The student body (Member database) is campus wide but every department (Site) has its own building (templates), its own way of doing things (preferences), unique curriculum (channels), student lounge (Site specific forums, requires Discussion Forums 2.0+), and rules about what students can do (Member Group permissions are Site specific). Any department on Campus can take advantage of the schools resources (Modules, Plugins, Extensions).
+Think of the Multiple Site Manager as converting a one-building school house into a University campus. The student body (Member database) is campus wide but every department (Site) has its own building (templates), its own way of doing things (preferences), unique curriculum (channels), student lounge (Site specific forums, requires Discussion Forums 2.0+), and rules about what students can do (Member Role permissions are Site specific). Any department on Campus can take advantage of the schools resources (Modules, Plugins, Extensions).
 
 That's not a perfect analogy but it conveys the scope of what the Multiple Site Manager enables you to do from a single ExpressionEngine installation.
 

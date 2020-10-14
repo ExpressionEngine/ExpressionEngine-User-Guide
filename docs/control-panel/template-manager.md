@@ -73,7 +73,7 @@ The Template Notes tab enables you to save notes and information about your temp
 
 ### Access
 
-- **Allowed member groups** -- Choose which member groups are allowed to access the template.
+- **Allowed member roles** -- Choose which member roles are allowed to access the template.
 - **No access redirect** -- Page to redirect users without permissions to. If a template is selected the user does not have access to, the 404 page will be displayed instead.
 - **Enable HTTP Authentication?** -- When set to enable, users with permissions will have to login to view this template.
 

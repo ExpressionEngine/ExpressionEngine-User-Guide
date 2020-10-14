@@ -329,7 +329,7 @@ The commenter's location as entered in their profile
 
 ### `{member_group_id}`
 
-The commenter's member group id (0 for non-members)
+The commenter's primary role id (0 for non-members)
 
 ### `{member_search_path=}`
 
