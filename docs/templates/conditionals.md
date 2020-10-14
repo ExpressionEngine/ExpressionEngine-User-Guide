@@ -212,7 +212,7 @@ You can use the string concatenation operator (`.`) to concatenate values:
 
 ### Parentheses in Conditionals
 
-You can use parentheses to group parts of a conditional together to have the part of the conditional between the parentheses evaluate before being compared to the part of the conditional outside the parentheses. For example, in the code below, the two member's primary role parts are evaluated _first_ before their result is compared to the channel_id part of the conditional:
+You can use parentheses to group parts of a conditional together to have the part of the conditional between the parentheses evaluate before being compared to the part of the conditional outside the parentheses. For example, in the code below, the member's id is evaluated _first_ before their result is compared to the channel_id part of the conditional:
 
     {if (member_id == '1' OR member_id == '2') && channel_id == '5'}
 
