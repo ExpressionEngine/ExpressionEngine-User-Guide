@@ -26,7 +26,7 @@ Output a forgotten password form that sends an email with instructions for reset
 
 ## Parameters
 
-### `inline=`
+### `inline_errors=`
 
     inline_errors="yes"
 

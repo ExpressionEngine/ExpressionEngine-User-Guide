@@ -18,7 +18,7 @@ Outputs a searchable list of members, including form filters to sort and limit t
 
 ## Parameters
 
-### `inline=`
+### `inline_errors=`
 
     inline_errors="yes"
 

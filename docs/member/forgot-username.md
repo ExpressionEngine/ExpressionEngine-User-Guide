@@ -34,7 +34,7 @@ Output a forgotten username form that sends an email with instructions for reset
 
     email_template="member/email-forgot-username"
 
-### `inline=`
+### `inline_errors=`
 
     inline_errors="yes"
 
@@ -45,7 +45,7 @@ Something something.
     return="member/login/forgot-username"
 
 
-# Form Inputs
+## Form Inputs
 
 ### Email
 

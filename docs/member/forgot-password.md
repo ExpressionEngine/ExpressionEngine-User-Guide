@@ -43,9 +43,9 @@ The name (short name) of the channel. This is a **required** parameter.
 ### `return=`
 
     return="member/forgot-password/sent"
-	
-	
-# Form Inputs
+
+
+## Form Inputs
 
 ### Email
 
