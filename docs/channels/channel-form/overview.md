@@ -195,7 +195,7 @@ You can optionally force a particular toolset ID to use (see below).
 
     rte_toolset_id="1"
 
-The ID of the Rich Text Editor toolset to use. Toolset IDs are listed on the [Rich Text Editor](add-ons/rte.md#control-panel) page.
+The ID of the Rich Text Editor toolset to use. Tool set IDs are listed on the [Rich Text Editor](add-ons/rte.md#tool-sets) page.
 
 ### `secure_action=`
 
