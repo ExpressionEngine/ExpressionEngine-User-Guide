@@ -9,7 +9,7 @@
 
 # ExpressionEngine v6 Change Log
 
-## Version 6.0.0 (Beta Release: October 13, 2020)
+## Version 6.0.0 (Beta Release: October 14, 2020)
 - **New Control Panel Design** 🎨
   - Added Jump Menu. Navigate ExpressionEngine fast
   - Many new changes and improvements that make the control panel cleaner, and more delightful to use
@@ -43,7 +43,7 @@
     - You can now comment EE code with command + / in the template editor
     - You can now select a single line of text when clicking on a gutter number in the template editor
     - Improved EE syntax highlighting
-  - **FOR REVIEW Made it easier to create Custom System Messages**
+  <!-- - **FOR REVIEW Made it easier to create Custom System Messages** -->
   - New Member Template examples have been added
   - New entry manager (Entries listing page)
   - Live preview has been modified to make add-on support easier
