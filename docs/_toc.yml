@@ -451,6 +451,8 @@
               href: development/extension-hooks/global/functions.md
             - name: Grid Fieldtype
               href: development/extension-hooks/global/grid.md
+            - name: RTE Fieldtype
+              href: development/extension-hooks/global/rte.md              
             - name: Input Library
               href: development/extension-hooks/global/input.md
             - name: Output Library
