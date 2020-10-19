@@ -288,6 +288,8 @@
         href: member/registration.md
       - name: Login Tag
         href: member/login.md
+      - name: Logout Tags
+        href: member/logout.md
       - name: Forgot Password
         href: member/forgot-password.md
       - name: Forgot Username
@@ -452,7 +454,7 @@
             - name: Grid Fieldtype
               href: development/extension-hooks/global/grid.md
             - name: RTE Fieldtype
-              href: development/extension-hooks/global/rte.md              
+              href: development/extension-hooks/global/rte.md
             - name: Input Library
               href: development/extension-hooks/global/input.md
             - name: Output Library

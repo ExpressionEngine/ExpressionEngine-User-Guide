@@ -113,6 +113,8 @@ The member_names variable pair allows you to show the currently logged in users:
         <a href="{member_path='member/index'}">{name}</a><br>
     {/member_names}
 
+NOTE: **Note:**  Tracking logged in users requires tracking be enabled in [Settings - Hit Tracking](control-panel/settings/hit-tracking.md).
+
 The {member_path=''} variable allows you to create a link that points to the member's profile page. The example above illustrates how it can be used.
 
 The member_names variable pair can also be used as a conditional:

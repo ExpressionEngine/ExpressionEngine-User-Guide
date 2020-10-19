@@ -77,6 +77,7 @@ Determines whether user is included in the online user list.
 
       <input class="checkbox" type="checkbox" name="auto_login" value="1"> Auto-login on future visits
 
+Logged in users can be displayed using the [Statistics Module](add-ons/statistics.md).
 
 ### `Auto Login`
 
