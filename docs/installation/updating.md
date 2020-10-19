@@ -51,8 +51,6 @@ If you cannot use the one-click updater or command-line updater, you can still d
 
 ## Updating Manually
 
-Note that ExpressionEngine supports [One Click Updates](#one-click-updating) as of **version 4.0** or later.
-
 TIP: **Feature Update:**  
 As of ExpressionEngine 6, you may now upgrade directly from ExpressionEngine 2 to the current version. 
 
@@ -61,7 +59,7 @@ As of ExpressionEngine 6, you may now upgrade directly from ExpressionEngine 2 t
 1. [Back-up your ExpressionEngine database and files](general/database-backup.md).
 2. [Download the latest release of ExpressionEngine](https://expressionengine.com) and unzip the files to a folder on your computer.
 
-NOTE: **Note:** Check your third-party add-ons to see if you need updated versions for the latest version of ExpressionEngine. Most add-ons do not need major changes when updating from v3 or higher. Your add-on vendor(s) can let you know what, if anything, you need to do for your installed add-ons.
+NOTE: **Note:** Check your third-party add-ons to see if you need updated versions for the latest version of ExpressionEngine. Most add-ons do not need major changes when updating from v3 or higher. Your add-on vendor(s) can let you know what, if anything, you need to do for your installed add-ons. **Any add-ons not compatible with the version you are upgrading to, should be uninstalled and removed before attempting the upgrade.**
 
 ### 2. Copy Files
 
