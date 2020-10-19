@@ -59,6 +59,9 @@ The following are the buttons that can be enabled in tool set to manipulate the 
 - Italic
 - Strikethrough
 - Underline
+- Subscript
+- Superscript
+- Code
 - Block quote
 - Heading
 - Remove formatting
