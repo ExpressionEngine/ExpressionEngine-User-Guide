@@ -51,29 +51,57 @@ If you cannot use the one-click updater or command-line updater, you can still d
 
 ## Updating Manually
 
-This document describes how to manually update ExpressionEngine 3.0 or later.
-
-Note that ExpressionEngine supports [One Click Updates](#one-click-updating) as of **version 4.0** or later.
-
-NOTE: **Important:** If you are upgrading from ExpressionEngine 2, you must first upgrade to ExpressionEngine 3 using version 3 files and instructions. Once you have completed that update, you may return to this page and upgrade to the latest version. Please visit [Upgrading from ExpressionEngine 2](https://docs.expressionengine.com/v3/installation/upgrade_from_2.x.html).
+TIP: **Feature Update:**  
+As of ExpressionEngine 6, you may now upgrade directly from ExpressionEngine 2 to the current version. 
 
 ### 1. Backup and Prepare
 
 1. [Back-up your ExpressionEngine database and files](general/database-backup.md).
 2. [Download the latest release of ExpressionEngine](https://expressionengine.com) and unzip the files to a folder on your computer.
 
-NOTE: **Note:** Check your third-party add-ons to see if you need updated versions for v4. Most add-ons do not need updating from v3/v4, or only need minor changes. Your add-on vendor(s) can let you know what, if anything, you need to do for your installed add-ons.
+NOTE: **Note:** Check your third-party add-ons to see if you need updated versions for the latest version of ExpressionEngine. Most add-ons do not need major changes when updating from v3 or higher. Your add-on vendor(s) can let you know what, if anything, you need to do for your installed add-ons. **Any add-ons not compatible with the version you are upgrading to, should be uninstalled and removed before attempting the upgrade.**
 
 ### 2. Copy Files
 
 Working either locally with your backed up files, or on the server (**not recommended**), **copy** the following files from the newly downloaded release to your site:
 
+[TOC=4]
+
+#### If updating from ExpressionEngine 2
+Copy the following files from the backup of your current site to the new folder where you unzipped the new version of ExpressionEngine on your computer:
+
+1. Copy `system/expressionengine/config/config.php` to `system/user/config/config.php`
+2. Copy `system/expressionengine/config/database.php` to `system/user/config/database.php`
+3. If you have any languages other than English in your Control Panel, copy all files and directories except english from `system/expressionengine/language/` to `system/user/language/`.
+4. If you have the forum module installed, copy the directory `themes/forum_themes/` to `themes/user/forum/`.
+5. If you have the wiki module installed, copy the directory `themes/wiki_themes/` to `themes/user/wiki_themes/`.
+6. If you save templates as files, copy all files and directories from `system/expressionengine/templates/` to `system/user/templates/`.
+
+NOTE: **Note:** If you’ve moved your system directory, make sure to change both `index.php` and `admin.php` to point to the correct directory. And don't forget to update **all** `admin.php` files if you're running your control panel from multiple Sites!
+
+NOTE: **Note:** We recommend putting ExpressionEngine 6 compatible third-party add-ons into the `system/user/addons/` directory now.
+
+On the server, rename the following files and directories:
+- Rename `system/` to `system_old/`
+- Rename `themes/` to `themes_old/`
+- Rename `index.php` to `index.php.old`
+- Rename `admin.php` to `admin.php.old`
+
+Then upload the following files and directories:
+- `system/`
+- `themes/`
+- `index.php`
+- `admin.php`
+
+#### If updating from ExpressionEngine 3 or higher
 1.  Copy `admin.php` to `admin.php`
 2.  Copy `index.php` to `index.php`
 3.  Copy `system/ee/` to `system/ee/`
 4.  Copy `themes/ee/` to `themes/ee/`
 
 NOTE: **Note:** If you’ve moved your system directory, make sure to change both `index.php` and `admin.php` to point to the correct directory. And don't forget to update **all** `admin.php` files if you're running your control panel from multiple Sites!
+
+NOTE: **Note:** We recommend putting ExpressionEngine 6 compatible third-party add-ons into the `system/user/addons/` directory now.
 
 ### 3. Run The Update Wizard
 
