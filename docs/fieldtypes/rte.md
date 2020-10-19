@@ -25,12 +25,12 @@ When creating or modifying RTE field, the following field settings are available
 
 ### @-mentions
 
-If you have Pages module (or third-party addons with compatible functionality) installed you can use `@`-mentions to quickly insert links to site pages.
+If you have Pages module (or third-party add-ons with compatible functionality) installed you can use `@`-mentions to quickly insert links to site pages.
 
 Type `@` and then continue typing entry title and you will be offered selection of matching pages altogether with their channel names, from which you can pick the one that you need and your typed input will be replaced with the selected entry title being linked to proper page URL.
 ![](_images/rte-at-mentions.png)
 
-If you just need literally what you types, you can select bottom option for this.
+If you need the text to appear with the `@` sign exactly as typed, you can select the bottom option for this.
 
 
 ## Template Tag
@@ -66,7 +66,7 @@ If your field has a “Read More” separator, this returns the remaining portio
     </div>
 
 ## Text-only mode
-If you pass the parameter `text_only="yes"` to RTE template tags, all the HTML tags will be removed from the content, leaving only the text.
+If you pass the parameter `text_only="yes"` to RTE template tags, all HTML tags will be removed from the content, leaving only the text.
 
     {rte_field text_only="yes"}
 

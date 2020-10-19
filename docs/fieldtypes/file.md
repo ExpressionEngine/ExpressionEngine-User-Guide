@@ -252,9 +252,9 @@ Convert the image to WEBP format. Additionally all the `:resize` manipulations c
 | master_dim        | `auto`/`width`/`height` | `auto`| Master dimention when only width of height is specified |
 
 
-### `:resize`
+### `:resize_crop`
 
-    {news_image:resize_crop resize_width="300" crop_width="100"}
+    {news_image:resize_crop resize:width="300" crop:width="100"}
 
 Resize the image and then crop it.
 
@@ -278,7 +278,7 @@ Resize the image and then crop it.
         <img src="{url}" width="{width}" height="{height}" />
     {/news_image:resize}
 
-Variables:
+**Tag Pair Variables:**
 - `{url}` - processed image URL
 - `{width}` - processed image width
 - `{height}` - processed image height
