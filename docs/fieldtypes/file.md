@@ -196,6 +196,7 @@ In addition to pre-defined [image manipulations](control-panel/file-manager.md#c
 
 WARN: **Warning:** Certain image manipulations can be processing-intensive and even cause timeouts. Use with caution.
 
+The manipulations can be used as single modifiers as well as modifier tag pair.
 
 ### `:resize`
 
@@ -209,8 +210,7 @@ Resize the image.
 | height   | `Number` | `*required`| Height to resize to, px |
 | quality  | `0`-`100`| `75`| Image quality, % |
 | maintain_ratio   | `y` / `n` | `y`| Keep image ratio (yes/no)  |
-| master_dim        | `auto`/`width`/`height` | `auto`| Master dimention when only width of height is specified |
-`*` at least width or height is required
+| master_dim        | `auto`/`width`/`height` | `auto`| Master dimention when keeping image ratio |
 
 ### `:crop`
 
@@ -226,7 +226,6 @@ Crop the image.
 | maintain_ratio   | `y` / `n` | `y`| Keep image ratio (yes/no)  |
 | x        | `Number` | `0`| Horizontal offset, px |
 | y        | `Number` | `0`| Vertical offset, px |
-`*` at least width or height is required
 
 ### `:rotate`
 
@@ -272,5 +271,14 @@ Resize the image and then crop it.
 | crop:maintain_ratio   | `y` / `n` | `y`| Keep image ratio when cropping (yes/no)  |
 | crop:x        | `Number` | `0`| Horizontal crop offset, px |
 | crop:y        | `Number` | `0`| Vertical crop offset, px |
-`*` at least width or height is required
 
+### Using as modifier tags pairs
+
+    {news_image:resize width="100" height="100"}
+        <img src="{url}" width="{width}" height="{height}" />
+    {/news_image:resize}
+
+Variables:
+- `{url}` - processed image URL
+- `{width}` - processed image width
+- `{height}` - processed image height
