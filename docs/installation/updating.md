@@ -77,7 +77,9 @@ Copy the following files from the backup of your current site to the new folder 
 5. If you have the wiki module installed, copy the directory `themes/wiki_themes/` to `themes/user/wiki_themes/`.
 6. If you save templates as files, copy all files and directories from `system/expressionengine/templates/` to `system/user/templates/`.
 
-NOTE: **Note:** We recommend putting ExpressionEngine 3 compatible third-party add-ons into the `system/user/addons/` directory now.
+NOTE: **Note:** If you’ve moved your system directory, make sure to change both `index.php` and `admin.php` to point to the correct directory. And don't forget to update **all** `admin.php` files if you're running your control panel from multiple Sites!
+
+NOTE: **Note:** We recommend putting ExpressionEngine 6 compatible third-party add-ons into the `system/user/addons/` directory now.
 
 On the server, rename the following files and directories:
 - Rename `system/` to `system_old/`
@@ -98,6 +100,8 @@ Then upload the following files and directories:
 4.  Copy `themes/ee/` to `themes/ee/`
 
 NOTE: **Note:** If you’ve moved your system directory, make sure to change both `index.php` and `admin.php` to point to the correct directory. And don't forget to update **all** `admin.php` files if you're running your control panel from multiple Sites!
+
+NOTE: **Note:** We recommend putting ExpressionEngine 6 compatible third-party add-ons into the `system/user/addons/` directory now.
 
 ### 3. Run The Update Wizard
 
