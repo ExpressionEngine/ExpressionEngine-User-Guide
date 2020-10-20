@@ -23,6 +23,8 @@
 - **Documentation** 📝
   - Added new RTE Docs. [Extension Hooks](development/extension-hooks/global/rte.md), [RTE Fieldtype](fieldtypes/rte.md), [RTE Addon](add-ons/rte.md)
   - Updated docs for using the File field as a tag pair. [File Fieldtype](fieldtypes/file.md#using-as-modifier-tags-pairs)
+  - Updated docs for upgrading from v2 to v6. [User Guide #92](https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/issues/92)
+  - Added more documentation to Member Management tags. [Member Management](member/index.md)
   - General editorial updates
 
 - **Bug Fixes** 💃🐛
