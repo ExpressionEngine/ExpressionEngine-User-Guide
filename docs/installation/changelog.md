@@ -9,7 +9,41 @@
 
 # ExpressionEngine v6 Change Log
 
-## Version 6.0.0 (Beta Release: October 14, 2020)
+## Version 6.0.0
+
+### Beta 2 (Release: October 20, 2020)
+- **Enhancements** 🚀
+  - Updated the Members File Converter Utility to help users understand what it does.
+  - Updated styling for the SQL Manager Utility.
+  - Updated styling for results being displayed in the SQL Query Utility
+  - Added "Make Sticky" to the bulk edit options for entires.
+  - Updated styles for the Template Partial editor which was previously set to a small max-height. [#568](https://github.com/ExpressionEngine/ExpressionEngine/issues/568)
+  - Updated styles for the RTE field to better represent paragraph spacing and other block elements. [#562](https://github.com/ExpressionEngine/ExpressionEngine/issues/562)
+
+- **Documentation** 📝
+  - Added new RTE Docs. [Extension Hooks](development/extension-hooks/global/rte.md), [RTE Fieldtype](fieldtypes/rte.md), [RTE Addon](add-ons/rte.md)
+  - Updated docs for using the File field as a tag pair. [File Fieldtype](fieldtypes/file.md#using-as-modifier-tags-pairs)
+  - General editorial updates
+
+- **Bug Fixes** 💃🐛
+  - Fixed a bug where Member template tags were not respecting `site_url` setting.
+  - Fixed a bug where `{path='logout'}` caused too many redirects.
+  - Fixed [#563](https://github.com/ExpressionEngine/ExpressionEngine/issues/563) where toggling the selector to allow multiple relationships on a Relationship field had no effect.
+  - Fixed a bug where there was no "No Results" message in the File Manager when thumbnail view was activated and there where no files to display.
+  - Fixed a bug where a user may not be able to get back to the Login screen after a required password reset.
+  - Fixed [#551](https://github.com/ExpressionEngine/ExpressionEngine/issues/551) where the new RTE field did not work within a grid field.
+  - Fixed [#546](https://github.com/ExpressionEngine/ExpressionEngine/issues/546) where the Color Picker field's color selector overflowed the row when in a grid.
+  - Fixed [#553](https://github.com/ExpressionEngine/ExpressionEngine/issues/553) where a grid row was not added by default when the field's settings required 1 row minimum.
+  - Fixed [#545](https://github.com/ExpressionEngine/ExpressionEngine/issues/545) where a grid row was only removed by clicking the delete icon and not by clicking elsewhere in the button.
+  - Fixed [#545](https://github.com/ExpressionEngine/ExpressionEngine/issues/545) where a grid row was only removed by clicking the delete icon and not by clicking elsewhere in the button.
+  - Fixed [#578](https://github.com/ExpressionEngine/ExpressionEngine/issues/545) where the outline of a grid row delete icon was still shown even though you could not delete the row based on minimum row settings in the field.
+  - Fixed [#544](https://github.com/ExpressionEngine/ExpressionEngine/issues/544) where the Date tab in the entry rendered lowercase after saving the entry.
+  - Fixed [#567](https://github.com/ExpressionEngine/ExpressionEngine/issues/567) where CSS was not being loaded on the installation page in some environments.
+  - Fixed [#456](https://github.com/ExpressionEngine/ExpressionEngine/issues/456) where error was displayed when reloading the Control Panel after a session timeout.
+  - Fixed [#565](https://github.com/ExpressionEngine/ExpressionEngine/issues/565) where an entry modal did not respect the dark mode setting.
+
+
+### Beta 1 (Release: October 14, 2020)
 - **New Control Panel Design** 🎨
   - Added Jump Menu. Navigate ExpressionEngine fast
   - Many new changes and improvements that make the control panel cleaner, and more delightful to use
