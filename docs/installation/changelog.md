@@ -19,6 +19,8 @@
   - Added "Make Sticky" to the bulk edit options for entires.
   - Updated styles for the Template Partial editor which was previously set to a small max-height. [#568](https://github.com/ExpressionEngine/ExpressionEngine/issues/568)
   - Updated styles for the RTE field to better represent paragraph spacing and other block elements. [#562](https://github.com/ExpressionEngine/ExpressionEngine/issues/562)
+  - Added more editor buttons to RTE field
+
 
 - **Documentation** 📝
   - Added new RTE Docs. [Extension Hooks](development/extension-hooks/global/rte.md), [RTE Fieldtype](fieldtypes/rte.md), [RTE Addon](add-ons/rte.md)
@@ -43,6 +45,7 @@
   - Fixed [#567](https://github.com/ExpressionEngine/ExpressionEngine/issues/567) where CSS was not being loaded on the installation page in some environments.
   - Fixed [#456](https://github.com/ExpressionEngine/ExpressionEngine/issues/456) where error was displayed when reloading the Control Panel after a session timeout.
   - Fixed [#565](https://github.com/ExpressionEngine/ExpressionEngine/issues/565) where an entry modal did not respect the dark mode setting.
+  - Fixed [#574](https://github.com/ExpressionEngine/ExpressionEngine/issues/574), a typo in `utilites_lang.php`
 
 
 ### Beta 1 (Release: October 14, 2020)
