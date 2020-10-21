@@ -61,7 +61,7 @@ The page will show a great deal of information about your server, server configu
 
 Since Extensions are calling code within the ExpressionEngine code there is a chance that an extension will interfere with how your site is working. If you are unsure of which extension might be causing a problem you can either turn them off one by one until the problem disappears.
 
-## Import File Converter
+## Member Import File Converter
 
 **Control Panel Location: `Developer > Utilities > File Converter`**
 
