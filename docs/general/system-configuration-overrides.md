@@ -153,6 +153,19 @@ Example Usage:
 
     $config['allow_pending_login'] = 'y';
 
+### `allow_php`
+
+Set whether the toggle to enable/disable PHP in templates is displayed.
+
+| Value | Behavior                                         |
+| ----- | ------------------------------------------------ |
+| y     | Show toggle to allow PHP in templates            |
+| n     | Hide toggle to allow PHP in templates (default)  |
+
+Example Usage:
+
+    $config['allow_php'] = 'y';
+
 ### `allow_signatures`
 
 Set whether member signatures are enabled.

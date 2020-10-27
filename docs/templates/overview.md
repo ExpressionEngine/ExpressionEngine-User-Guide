@@ -85,11 +85,13 @@ Additionally, PHP code in templates will operate slower than same code wrapped i
 
 ExpressionEngine allows you to place [PHP](http://www.php.net/) code within your Templates so that it can be executed, allowing more dynamic capability with your content.
 
-In order for this feature to be used, in needs to be enabled by adding 
+In order for this feature to be available, it needs to be enabled by adding 
 ```php
     $config['allow_php'] = 'y';
 ```
 to your `config.php` file.
+
+NOTE: **Important:** When upgrading from an earlier version of ExpressionEngine to v6, the `allow_php` config override will automatically be set to 'y' if templates already exists that have PHP enabled.
 
 To enable PHP in particular template, set the *Allow PHP?* setting to Yes. Because PHP is a per-template setting, you can embed a Template that has PHP *enabled* into another Template which does *not* have PHP enabled.
 
