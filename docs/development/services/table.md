@@ -292,3 +292,5 @@ If you're using the [Shared Form View](development/shared-form-view.md), your fi
 Note we're setting `wide` to denote the field should take up the entire width of the form, and `grid` so the form display logic can do the necessary markup tweaks for proper styling and behavior of the Grid.
 
 For those not using the Shared Form View, make sure your Grid is in a div tag instead of a fieldset tag and make sure it has a class of `grid-publish`.
+
+Note: We must need to add "fieldset-faux" class as parent to the grid structure.
