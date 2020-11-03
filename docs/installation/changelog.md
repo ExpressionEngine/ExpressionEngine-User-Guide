@@ -10,6 +10,38 @@
 # ExpressionEngine v6 Change Log
 
 ## Version 6.0.0
+### Beta 3 (Release: November 4, 2020)
+- **Enhancements** 🚀
+  - New filters bar!
+  - [`allow_php` config override](general/system-configuration-overrides.md#allow_php) now needs to be set in config.php to be able to enable [PHP in templates](templates/overview.md#php-in-templates).
+  - The Blacklist/Whitelist Module for ExpressionEngine has been renamed to Block/Allow Module.
+  - Upload Directory and Upload Path are now populated with `{base_url}` and `{base_path}` by default when creating new Upload Directories.
+  - `exp_sites.site_pages` data type has been changed to MEDIUMTEXT.
+  - The success notification for a saved entry now links back to the saved entry.
+  - New member groups no longer have access to HTTP-protected templates by default [#279](https://github.com/ExpressionEngine/ExpressionEngine/issues/279).
+  - Moved language files from `system/ee/legacy` folder to `system/ee/language`.
+  - Improved error message for removed models and tables.
+  - Updated default system error messages to use new v6 design.
+  - Updated styles for 1-Click Updater and Installer Screens
+
+- **Documentation** 📝
+  - Added docs for adding the `aliases` key to [add-on-setup.php file](development/addon-setup-php-file.md#aliases).
+  - Added docs for new [`allow_php` config override](general/system-configuration-overrides.md#allow_php).
+
+- **Bug Fixes** 💃🐛
+  - Resolved [#554](https://github.com/ExpressionEngine/ExpressionEngine/issues/554) where the selector to change number of displayed items per page was having no affect on translations page in CP.
+  - Resolved [#581](https://github.com/ExpressionEngine/ExpressionEngine/issues/581) where not clearing cache during an upgrade caused issue with a previously removed MySQL table.
+  - Resolved [#582](https://github.com/ExpressionEngine/ExpressionEngine/issues/582) where there was an inconsisteny in the fieldtype properties of the Toggle fieldtype.
+  - Resolved [#583](https://github.com/ExpressionEngine/ExpressionEngine/issues/583) where using fieldtype name to get addon icon was causing an error.
+  - [#586](https://github.com/ExpressionEngine/ExpressionEngine/issues/586) - supressed deprecation message and moving logging deprecation message to the CP's Developer Log.
+  - Resolved [#589](https://github.com/ExpressionEngine/ExpressionEngine/issues/589) where putting line breaks in the `{pagination_links}` tag would cause rendering issues.
+  - Resolved [#590](https://github.com/ExpressionEngine/ExpressionEngine/issues/590) where a new grid row could not be deleted when there is only one row.
+  - Resolved [#594](https://github.com/ExpressionEngine/ExpressionEngine/issues/594) where Live Preview button is not fixed to top of window when the entry editor form is scrolled vertically.
+  - Resolved [#596](https://github.com/ExpressionEngine/ExpressionEngine/issues/596) which showed an invalid links to EE Docs for Members.
+  - Resolved issue where new template groups were not recognized on a blank install until the user also creates a new template group in the Template Manager.
+  - Resolved [#431](https://github.com/ExpressionEngine/ExpressionEngine/issues/431) where the EE Block/Allow list was not able to be downloaded from within the Block/Allow Module.
+
+
 
 ### Beta 2 (Release: October 20, 2020)
 - **Enhancements** 🚀
