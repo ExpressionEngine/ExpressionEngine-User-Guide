@@ -1446,7 +1446,7 @@ Example Usage:
 
 ### `htaccess_path`
 
-Set the server path used by the [Blacklist/Whitelist](add-ons/blacklist.md) module to [write rules to your .htaccess file](add-ons/blacklist.md#writing-blacklist-to-htaccess-file).
+Set the server path used by the [Block/Allow](add-ons/blocklist.md) module to [write rules to your .htaccess file](add-ons/blocklist.md#writing-blocklist-to-htaccess-file).
 
 | Value | Description                    |
 | ----- | ------------------------------ |
@@ -2902,13 +2902,13 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Minimum Username Length](control-panel/settings/security-privacy.md#minimum-username-length)
 
-### `upload_file_name_blacklist`
+### `upload_file_name_blocklist`
 
 With an array, add a case insensitive list of file names that cannot be uploaded.
 
 Example Usage:
 
-    $config['upload_file_name_blacklist'] = array(
+    $config['upload_file_name_blocklist'] = array(
       'logo.png',
     );
 

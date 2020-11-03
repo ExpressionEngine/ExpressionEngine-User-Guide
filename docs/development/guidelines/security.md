@@ -241,7 +241,7 @@ In your methods that will be handling form data, create a logic map that you can
 - What security checks are performed?
   - Secure form hashes
   - CAPTCHA
-  - Blacklist Banning / Whitelist Overrides
+  - Block list Banning / Allow list Overrides
     - `ee()->blacklist->blacklisted == 'y'` (blacklisted)
     - `ee()->blacklist->whitelisted == 'y'` (whitelist override)
   - Preferences and settings checked against

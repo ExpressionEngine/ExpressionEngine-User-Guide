@@ -160,8 +160,8 @@
   items:
     - name: Overview
       href: add-ons/overview.md
-    - name: Blacklist / White List
-      href: add-ons/blacklist.md
+    - name: Block / Allow
+      href: add-ons/blocklist.md
     - name: Consent
       href: add-ons/consent.md
     - name: Email
