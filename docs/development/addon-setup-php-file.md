@@ -196,3 +196,17 @@ If your add-on sets any custom cookies, you must register the name of the cookie
 | cookies.functionality | Enhances functionality, such as remembering a user's preferences or settings.                                                                                      |
 | cookies.performance   | Analytics, statistics, etc. Data should be aggregated and anonymous.                                                                                               |
 | cookies.targeting     | Typically the only cookie type that can contain personally identifiable information. Marketing cookies that help establish profiles for ad delivery, for instance. |
+
+### `aliases`
+
+    'aliases' => [
+      'ExpressionEngine\Model\Channel\ChannelEntry',
+    ],
+
+The above will set up `EllisLab\ExpressionEngine\Model\Channel\ChannelEntry` as class alias for `ExpressionEngine\Model\Channel\ChannelEntry`. This might be useful for add-ons that need to work both in EE5 and EE6 and that also use typehinting for EE classes. If you do not typehing EE classes or your add-on is just for EE6 then this is not needed - otherwise it needs full list of classes you need for typehinting.
+
+It is also possible to set up class aliases to arbitrary FQCN. The example below will set up `AnotherVendor\Services\ClassName` as class alias for `MyVendor\Services\ClassName`.
+
+    'aliases' => [
+      'MyVendor\Services\ClassName' => 'AnotherVendor\Services\ClassName',
+    ],
