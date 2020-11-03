@@ -203,9 +203,9 @@ If your add-on sets any custom cookies, you must register the name of the cookie
       'ExpressionEngine\Model\Channel\ChannelEntry',
     ],
 
-The above will set up `EllisLab\ExpressionEngine\Model\Channel\ChannelEntry` as class alias for `ExpressionEngine\Model\Channel\ChannelEntry`. This might be useful for add-ons that need to work both in EE5 and EE6 and that also use typehinting for EE classes. If you do not typehing EE classes or your add-on is just for EE6 then this is not needed - otherwise it needs full list of classes you need for typehinting.
+The above will set up `EllisLab\ExpressionEngine\Model\Channel\ChannelEntry` as a class alias for `ExpressionEngine\Model\Channel\ChannelEntry`. This might be useful for add-ons that need to work both in ExpressionEngine v5 and ExpressionEngine v6, and that also use type hinting for ExpressionEngine classes. If you do not type hint ExpressionEngine classes or your add-on is just for ExpressionEngine v6 then this is not needed. Otherwise, the `aliases` key needs a full list of classes you need for type hinting.
 
-It is also possible to set up class aliases to arbitrary FQCN. The example below will set up `AnotherVendor\Services\ClassName` as class alias for `MyVendor\Services\ClassName`.
+It is also possible to set up class aliases to an arbitrary FQCN. The example below will set up `AnotherVendor\Services\ClassName` as a class alias for `MyVendor\Services\ClassName`.
 
     'aliases' => [
       'MyVendor\Services\ClassName' => 'AnotherVendor\Services\ClassName',
