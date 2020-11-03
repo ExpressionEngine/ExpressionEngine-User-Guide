@@ -1446,7 +1446,7 @@ Example Usage:
 
 ### `htaccess_path`
 
-Set the server path used by the [Blacklist/Whitelist](add-ons/blacklist.md) module to [write rules to your .htaccess file](add-ons/blacklist.md#writing-blacklist-to-htaccess-file).
+Set the server path used by the [Block/Allow](add-ons/blocklist.md) module to [write rules to your .htaccess file](add-ons/blocklist.md#writing-blocklist-to-htaccess-file).
 
 | Value | Description                    |
 | ----- | ------------------------------ |
@@ -2030,7 +2030,7 @@ Example Usage:
 
 ### `proxy_ips`
 
-Whitelist of reverse proxy servers that may forward the visitor's IP address.
+Allow list of reverse proxy servers that may forward the visitor's IP address.
 
 | Value        | Description                          |
 | ------------ | ------------------------------------ |

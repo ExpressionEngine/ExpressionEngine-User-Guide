@@ -15,9 +15,9 @@ Comment spamming and other types of spamming have become common problems for sys
 
 ExpressionEngine has several security features aimed at preventing spamming. There is no "silver bullet", as spammers adapt their tactics to new deterrents, but the combination of security features in ExpressionEngine will provide a high degree of safety, particularly against the automated spamming methods.
 
-## Blacklists
+## Block lists
 
-The ExpressionEngine [Blacklist/Whitelist Module](add-ons/blacklist.md) is an integral part of EE's spam prevention capability. This Module allows you to specify URLs, IP addresses, and user agents that you want to deny (blacklist) or specifically allow (whitelist) from your site.
+The ExpressionEngine [Block/Allow Module](add-ons/blocklist.md) is an integral part of ExpressionEngine's spam prevention capability. This Module allows you to specify URLs, IP addresses, and user agents that you want to block or specifically allow from your site.
 
 The module checks all content that is submitted to your site and allows or denies it, according to the rules you have set.
 

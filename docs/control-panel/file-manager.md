@@ -43,7 +43,7 @@ The **full server path** (not a URL) to the upload folder for this destination. 
 1.  **Images only**: The system will only allow image files of the type GIF, JPG, JPEG, or PNG.
 2.  **All file types**: Allows you to upload files of any type to the system. **Be careful** with this setting since it could be possible for someone to upload a malicious file.
 
-NOTE: **Note:** Only file types that are specified in ExpressionEngine's Mime Type file are allowed to be uploaded. The Mime Type file can be found at: `system/ee/legacy/config/mimes.php`. If you are uploading something uncommon and run into problems you may need to add the mime type for your file to the whitelist. See [MIME whitelist](general/system-configuration-overrides.md#mime_whitelist_additions) and [Mime member exception whitelist](general/system-configuration-overrides.md#mime_whitelist_member_exception) for more info.
+NOTE: **Note:** Only file types that are specified in ExpressionEngine's Mime Type file are allowed to be uploaded. The Mime Type file can be found at: `system/ee/legacy/config/mimes.php`. If you are uploading something uncommon and run into problems you may need to add the mime type for your file to the allow list. See [MIME allow list](general/system-configuration-overrides.md#mime_whitelist_additions) and [Mime member exception allow list](general/system-configuration-overrides.md#mime_whitelist_member_exception) for more info.
 
 ##### Default modal view?
 
