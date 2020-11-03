@@ -2030,7 +2030,7 @@ Example Usage:
 
 ### `proxy_ips`
 
-Whitelist of reverse proxy servers that may forward the visitor's IP address.
+Allow list of reverse proxy servers that may forward the visitor's IP address.
 
 | Value        | Description                          |
 | ------------ | ------------------------------------ |
