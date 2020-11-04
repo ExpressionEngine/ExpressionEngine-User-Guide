@@ -2902,13 +2902,13 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Minimum Username Length](control-panel/settings/security-privacy.md#minimum-username-length)
 
-### `upload_file_name_blacklist`
+### `upload_blocked_file_names`
 
 With an array, add a case insensitive list of file names that cannot be uploaded.
 
 Example Usage:
 
-    $config['upload_file_name_blacklist'] = array(
+    $config['upload_blocked_file_names'] = array(
       'logo.png',
     );
 
