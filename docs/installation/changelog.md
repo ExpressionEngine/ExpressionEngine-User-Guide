@@ -14,7 +14,8 @@
 - **Enhancements** 🚀
   - New filters bar!
   - [`allow_php` config override](general/system-configuration-overrides.md#allow_php) now needs to be set in config.php to be able to enable [PHP in templates](templates/overview.md#php-in-templates).
-  - The Blacklist/Whitelist Module for ExpressionEngine has been renamed to Block/Allow Module.
+  - The Blacklist/Whitelist Module for ExpressionEngine has been renamed to Block and Allow Module.
+  - `upload_file_name_blacklist` config override renamed to `upload_blocked_file_names`
   - Upload Directory and Upload Path are now populated with `{base_url}` and `{base_path}` by default when creating new Upload Directories.
   - `exp_sites.site_pages` data type has been changed to MEDIUMTEXT.
   - The success notification for a saved entry now links back to the saved entry.
