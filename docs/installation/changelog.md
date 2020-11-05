@@ -10,7 +10,7 @@
 # ExpressionEngine v6 Change Log
 
 ## Version 6.0.0
-### Beta 3 (Release: November 4, 2020)
+### Beta 3 (Release: November 5, 2020)
 - **Enhancements** 🚀
   - New filters bar with better layout, simpler search, and individual filter clearing!
   - [`allow_php` config override](general/system-configuration-overrides.md#allow_php) now needs to be set in config.php to be able to enable [PHP in templates](templates/overview.md#php-in-templates).
