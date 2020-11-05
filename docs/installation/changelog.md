@@ -12,7 +12,7 @@
 ## Version 6.0.0
 ### Beta 3 (Release: November 4, 2020)
 - **Enhancements** 🚀
-  - New filters bar!
+  - New filters bar with better layout, simpler search, and individual filter clearing!
   - [`allow_php` config override](general/system-configuration-overrides.md#allow_php) now needs to be set in config.php to be able to enable [PHP in templates](templates/overview.md#php-in-templates).
   - The Blacklist/Whitelist Module for ExpressionEngine has been renamed to Block and Allow Module.
   - `upload_file_name_blacklist` config override renamed to `upload_blocked_file_names`
