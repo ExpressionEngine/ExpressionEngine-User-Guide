@@ -17,7 +17,7 @@ lang: php
 
 | Parameter | Type    | Description                                                                                                                                  |
 | --------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| \$data    | `Array` | Array of prepped cookie parameters, which include the following keys: `prefix`, `name`, `value`, `expire`, `path`, `domain`, `secure_cookie` |
+| \$data    | `Array` | Array of prepped cookie parameters, which include the following keys: `prefix`, `name`, `value`, `expire`, `path`, `domain`, `secure_cookie`, `samesite` |
 | Returns   | `Void`  |                                                                                                                                              |
 
 Take control of setting cookies after cookie parameters have been normalized according to the cookie configuration settings.
