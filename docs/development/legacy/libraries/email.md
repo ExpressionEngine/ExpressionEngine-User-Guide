@@ -154,7 +154,7 @@ Sets the email message body:
 
     ee()->email->message('This is my message');
 
-#### `send_alt_message($str = '')`
+#### `set_alt_message($str = '')`
 
 | Parameter | Type     | Description                                                                             |
 | --------- | -------- | --------------------------------------------------------------------------------------- |
