@@ -1446,7 +1446,7 @@ Example Usage:
 
 ### `htaccess_path`
 
-Set the server path used by the [Block/Allow](add-ons/blocklist.md) module to [write rules to your .htaccess file](add-ons/blocklist.md#writing-blocklist-to-htaccess-file).
+Set the server path used by the [Block/Allow](add-ons/blocklist.md) module to [write rules to your .htaccess file](add-ons/blocklist.md#writing-the-block-list-to-htaccess-file).
 
 | Value | Description                    |
 | ----- | ------------------------------ |
