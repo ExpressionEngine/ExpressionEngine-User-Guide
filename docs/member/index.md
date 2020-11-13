@@ -72,6 +72,8 @@ Here is how you might use the tag:
 
 ### Parameters
 
+The Login Form Tag will create an HTML form and include within its opening tag the minimum attributes necessary for it to work.  If you need additional attributes to be specified, The Simple Search Form Tag allows you to specify these attributes as additional parameters within the tag itself.  See the entry for [pass_through_attributes](#pass_through_attributes) in the parameter listing for more information.
+
 [TOC=4]
 
 #### `action=`
@@ -97,6 +99,17 @@ This parameter allows you to specify the id attribute for the &lt;form&gt; tag.
     form_name="login"
 
 This parameter allows you to specify a name attribute for the &lt;form&gt; tag.
+
+### `pass through attributes`
+
+    data-automobile_type="buick" role="search" name="some name"
+
+You can include in your tag a parameter with a name identical to any valid [HTML Form}(https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) attribute, any [HTML Global Attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes), or the [ARIA Search role attribute](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role).  
+
+If you assign a value to your parameter the value will be assigned to the attribute in the completed Form tag.  To include an attribute which does not take a value (e.g. `novalidate`) you need to define a null value for the parameter (i.e. `novalidate=""`).
+
+If you specify a parameter with a name that is the same as an attribute already being set by the Login Form tag, the parameter value you enter will be ignored.
+
 
 #### `return=`
 
