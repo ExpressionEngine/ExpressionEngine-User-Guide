@@ -1455,6 +1455,18 @@ Example Usage:
 
     $config['htaccess_path'] = '/server/path/to/your/.htaccess/';
 
+### `ignore_entry_stats`
+Disable entry stats and analytics being saved during creating/updating of entries when using models. Disabling entry stats can lead to improved performance when using models
+
+| Value | Behavior                                             |
+| ----- | ---------------------------------------------------- |
+| y     | Ignores entry stats                                  |
+| n     | Saves stats when creating/updating entries (default) |
+
+Example Usage:
+
+    $config['ignore_entry_stats'] = 'y';
+
 ### `image_library_path`
 
 Set the path to the selected image library.
