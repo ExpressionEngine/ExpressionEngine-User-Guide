@@ -9,6 +9,60 @@
 
 # ExpressionEngine v5 Change Log
 
+## Version 5.4.0
+Release Date: November XX, 2020
+- **Enhancements** 🚀
+  - Added relationship_entries_tagdata hook, which is functionally identical to the channel_entries_tagdata hook
+  - Added support for [SameSite cookies via config override](general/system-configuration-overrides.md#cookie_samesite)
+  - Added [config override to ignore channel stats](general/system-configuration-overrides.md#ignore_entry_stats), which can lead to improved performance when using models.
+  - Add stats module action to run stats
+  - Added dabatase column type selector for textarea and RTE fields ([#464](https://github.com/ExpressionEngine/ExpressionEngine/issues/464))
+  - Added post-upgrade and utility check for broken template tags and missing fieldtypes
+  - Adds namespacing to v2 upgrades for ease of upgrading from v2 to v5
+  - Added support to be able to upgrade directly from v2 to v5
+  - Improved XSS filtering for CP clerts
+  - Added support for PHP 8
+  - Added support for MySQL 8
+  - Implemented different approach to trigger `before_channel_entry_delete` extension hook. 
+
+
+- **Bug Fixes** 💃🐛
+
+  - Fixed a bug [#589](https://github.com/ExpressionEngine/ExpressionEngine/issues/589) where putting line breaks in the `{pagination_links}` tag would cause rendering issues.
+  - Fixed an inconsistency [#582](https://github.com/ExpressionEngine/ExpressionEngine/issues/582) in the toggle fieldtype properties.
+  - Fixed a bug ([#480](https://github.com/ExpressionEngine/ExpressionEngine/issues/480)) where there has been no notice when extensions are disabled.
+  - Fixed a bug ([#499](https://github.com/ExpressionEngine/ExpressionEngine/issues/499)) where categories hidden from channel layout might get lost upon saving the entry.
+  - Fixed a bug ([#496](https://github.com/ExpressionEngine/ExpressionEngine/issues/496)) where file was sent twice when using drag&drop upload.
+  - Fixed a bug ([#487](https://github.com/ExpressionEngine/ExpressionEngine/issues/487)) where custom fields data were not available for extensions when deleting entry.
+  - Fixed a bug (#[457](https://github.com/ExpressionEngine/ExpressionEngine/issues/457)) where accented characters in variables were not truncated properly
+  - Fixed a bug ([#450](https://github.com/ExpressionEngine/ExpressionEngine/issues/450)) where pagination on tables was not working correctly when performing search for html tags.
+  - Fixed a bug ([#438](https://github.com/ExpressionEngine/ExpressionEngine/issues/438)) where JS combo loader was throwing error if extra `v` was passed into URL.
+  - Fixed a bug ([#432](https://github.com/ExpressionEngine/ExpressionEngine/issues/432)) where parent entries were not fetched for relationship field inside grid.
+  - Fixed a bug [#431](https://github.com/ExpressionEngine/ExpressionEngine/issues/431) where the EE Block/Allow list was not able to be downloaded from within the Block/Allow Module.
+  - Fixed a bug ([#428](https://github.com/ExpressionEngine/ExpressionEngine/issues/428)) where Grid was throwing error PHP with certain fieldtypes.
+  - Fixed a bug ([#421](https://github.com/ExpressionEngine/ExpressionEngine/issues/421)) where attachments were not sent from Communicate page.
+  - Fixed a bug ([#419](https://github.com/ExpressionEngine/ExpressionEngine/issues/419)) where deprecated pagination code in member templates could cause a PHP error.
+  - Fixed a bug ([#416](https://github.com/ExpressionEngine/ExpressionEngine/issues/416)) which prevented the version check in the CP footer from working properly.
+  - Added validation for category parent ([#411](https://github.com/ExpressionEngine/ExpressionEngine/issues/411))
+  - Fixed a bug ([#383](https://github.com/ExpressionEngine/ExpressionEngine/issues/383)) where Moblog wasn't functioning.
+  - Fixed a bug ([#379](https://github.com/ExpressionEngine/ExpressionEngine/issues/379)) where comment subscription emails contained an invalid unsubscribe link.
+  - Fixed a bug ([#283](https://github.com/ExpressionEngine/ExpressionEngine/issues/283)) where "field required" indicator was not showing a Grid column.
+  - Fixed a bug ([#230](https://github.com/ExpressionEngine/ExpressionEngine/issues/230)) where accepting checksum in CP might result in wrong redirect when session type is "Session ID only".
+  - Fixed a bug ([#91](https://github.com/ExpressionEngine/ExpressionEngine/issues/91), [#417](https://github.com/ExpressionEngine/ExpressionEngine/issues/417)) where link button was not working and formatting not displayed in RTE field on frontend.
+  - Fixed a bug ([#72](https://github.com/ExpressionEngine/ExpressionEngine/issues/72)) where Maximum rows limit was not respected in File Grid field.
+  - Fixed a bug ([#53](https://github.com/ExpressionEngine/ExpressionEngine/issues/53)) where previous month link was not clickable in Channel Form datepicker.
+  - Fixed a bug where unsaved entried were not pulled in for live preview when using `status="open|closed"` parameter.
+  - Fixed a bug where checking for updates might produce an error.
+  - Fixed a bug where removing database record for template that is used as "No access redirect" would cause error
+  - Fixed a bug where searching entries in CP in content only could produce SQL error.
+  - Fixed a PHP error that could occur on publish if Pages was installed and hidden via layouts.
+  - Fixed a rare PHP warning in the typography class.
+  - Fixed a bug where some member pages did not display in the forums when using the forum tag on regular templates.
+  - Fixed a PHP warning in the control panel when IDN variants weren't available on the server.
+  - Fixed a bug where a query string could be added to URLs erroneously.
+  - Altered a javascript filename that mod_security tended to object to.
+  - Fixed a bug where input data were assumed to be URL encoded, causing certain character sequences to be stripped when cleaned.
+
 ## Version 5.3.2
  
 Release Date: April 22, 2020
