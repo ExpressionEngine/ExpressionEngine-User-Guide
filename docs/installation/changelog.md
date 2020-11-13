@@ -20,7 +20,7 @@ Release Date: November XX, 2020
   - Added post-upgrade and utility check for broken template tags and missing fieldtypes
   - Adds namespacing to v2 upgrades for ease of upgrading from v2 to v5
   - Added support to be able to upgrade directly from v2 to v5
-  - Improved XSS filtering for CP clerts
+  - Improved [XSS filtering for CP clerts](development/services/alert.html#addtobodyitem-class--null-xss_filter--true)
   - Added support for PHP 8
   - Added support for MySQL 8
   - Implemented different approach to trigger `before_channel_entry_delete` extension hook. 
