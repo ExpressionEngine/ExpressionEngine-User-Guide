@@ -18,6 +18,7 @@ Release Date: November XX, 2020
   - Add stats module action to run stats
   - Added dabatase column type selector for textarea and RTE fields ([#464](https://github.com/ExpressionEngine/ExpressionEngine/issues/464))
   - Added post-upgrade and utility check for broken template tags and missing fieldtypes
+  - Added confirmation screem when attempting to update major versions
   - Adds namespacing to v2 upgrades for ease of upgrading from v2 to v5
   - Added support to be able to upgrade directly from v2 to v5
   - Improved [XSS filtering for CP clerts](development/services/alert.html#addtobodyitem-class--null-xss_filter--true)
