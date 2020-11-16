@@ -52,7 +52,7 @@ If you cannot use the one-click updater or command-line updater, you can still d
 ## Updating Manually
 
 TIP: **Feature Update:**  
-As of ExpressionEngine 6, you may now upgrade directly from ExpressionEngine 2 to the current version. 
+As of ExpressionEngine 5.4, you may now upgrade directly from ExpressionEngine 2 to the current version. 
 
 ### 1. Backup and Prepare
 
