@@ -76,3 +76,12 @@ If you're new to ExpressionEngine, get started with the [Ten Minute Primer](gett
 ### Post-Installation Best Practices
 
 Once you are confident that ExpressionEngine is working normally on your server, we recommend a few [best practices](installation/best-practices.md) for protecting your installation against common security risks.
+
+## Other Installation Options
+
+### Install with Softaculous and cPanel
+
+If your web host utilizes the cPanel admin tool with the Softaculous auto installer, you can one-click install ExpressionEngine. Simply navigate to Softaculous, search for ExpressionEngine under "Portal/CMS" and click "Install Now".
+
+![Softaculous](/_images/softaculous2.png)
+

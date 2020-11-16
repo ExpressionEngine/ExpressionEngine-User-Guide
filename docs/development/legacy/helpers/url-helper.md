@@ -35,7 +35,7 @@ WARN: Deprecated since version 3.0.0: Use [CP/URL Service](development/services/
 | \$protocol | `String` | Protocol, e.g. 'http' or 'https' |
 | Returns    | `String` | Site URL                         |
 
-Returns your site URL, as specified in your config file. The index.php file (or whatever you have set as your site **index_page** in your config file) will be added to the URL, as will any URI segments you pass to the function, plus the **url_suffix** as set in your config file.
+Returns your site URL, as specified in your config file. The index.php file (or whatever you have set as your site **index_page** in your config file) will be added to the URL, as will any URI segments you pass to the function.
 
 You are encouraged to use this function any time you need to generate a local URL so that your pages become more portable in the event your URL changes.
 
@@ -64,7 +64,7 @@ Returns your site base URL, as specified in your config file. Example:
 
     echo base_url();
 
-This function returns the same thing as `site_url()`, without the _index_page_ or _url_suffix_ being appended.
+This function returns the same thing as `site_url()`, without the _index_page_  being appended.
 
 Also like `site_url()`, you can supply segments as a string or an array. Here is a string example:
 

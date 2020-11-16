@@ -103,6 +103,12 @@ ExpressionEngine returns the following error: **"MySQL Error 1366: Incorrect str
 
 This error happens when ExpressionEngine tries to save content with an emoji to the database, and that database is not using the `utf8mb4` character set. Use our [Emoji Suport add-on](https://github.com/ellislab/emoji-support) to update your database.
 
+## MySQL Error 1064: You have an error in your SQL syntax
+
+### Troubleshooting
+
+This happens when the query has a syntax error.  However, if you can't see an obvious syntax error and the query runs in other environments, it may be a server configuration issue.  Make certain MySQL is not running with  [ANSI_QUOTES](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_ansi_quotes) on.
+
 ## Missing Encryption Keys
 
 ExpressionEngine displays the error: **You do not have value set for \[encryption_key/session_crypt_key\] in your config.php. This may leave your install open to security vulnerabilities. Restore the keys or see this troubleshooting article in the user guide for help.**

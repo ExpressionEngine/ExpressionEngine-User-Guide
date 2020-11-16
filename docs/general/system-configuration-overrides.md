@@ -812,6 +812,20 @@ Example Usage:
 
     $config['cookie_secure'] = 'y';
 
+### `cookie_samesite`
+
+Declare if your cookie should be restricted to a first-party or same-site context. To find out more about SameSite cookies visit https://web.dev/samesite-cookies-explained/
+
+| Value  | Behavior                                                                     |
+| ------ | ---------------------------------------------------------------------------- |
+| None   | Allow cookies to be sent on all requests (cookie_secure will be set to true) |
+| Lax    | Allows cookies to be sent on some cross-site requests (default)              |
+| Strict | Does not allow cookies to be sent on some cross-site requests (default)      |
+
+Example Usage:
+
+    $config['cookie_samesite'] = 'Srict';
+
 ### `cp_session_type`
 
 Set the method for session handling in the Control Panel.
@@ -1456,6 +1470,18 @@ Example Usage:
 
     $config['htaccess_path'] = '/server/path/to/your/.htaccess/';
 
+### `ignore_entry_stats`
+Disable entry stats and analytics being saved during creating/updating of entries when using models. Disabling entry stats can lead to improved performance when using models
+
+| Value | Behavior                                             |
+| ----- | ---------------------------------------------------- |
+| y     | Ignores entry stats                                  |
+| n     | Saves stats when creating/updating entries (default) |
+
+Example Usage:
+
+    $config['ignore_entry_stats'] = 'y';
+
 ### `image_library_path`
 
 Set the path to the selected image library.
@@ -1613,7 +1639,7 @@ Unused in first party files, this configuration item exists to allow backwards c
 
 ### `log_threshold`
 
-NOTE: **Note:** In order to save anything to log files, you'll need to create the `/system/user/log/` directory and ensure it's writable.
+NOTE: **Note:** In order to save anything to log files, you'll need to create the `/system/user/logs/` directory and ensure it's writable.
 
 Set an error threshold to determine how much information is logged.
 

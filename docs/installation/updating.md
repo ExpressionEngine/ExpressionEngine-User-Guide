@@ -11,6 +11,9 @@
 
 [TOC]
 
+## Upgrading Major Versions
+WARN: **Important** Updating major version (example from v4.x to v5.x) typically includes major updates and breaking changes. Do not upgrade major version manually or via 1-click without testing in a test or development environment first. Always backup your files and database first as well as ensure that your add-ons are compatibile with the version you are upgrading to.
+
 ## One Click Updating
 
 ExpressionEngine supports one-click updating as of **Version 4.0** or newer. If you are running a version older than 4, then you must perform a [manual update](#updating-manually).

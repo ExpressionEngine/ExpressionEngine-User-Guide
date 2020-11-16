@@ -27,8 +27,8 @@ NOTE: **Note:** This should not be considered an exhaustive list of cookies that
 | cp_last_site_id  | MSM cookie indicating the last site accessed in the control panel.                                                                              | Session    | Strictly Necessary |
 | csrf_token       | A security cookie used to identify the user and prevent Cross Site Request Forgery attacks.                                                     | 2 hours    | Strictly Necessary |
 | flash            | Control panel user feedback messages, encrypted for security.                                                                                   | 1 day      | Strictly Necessary |
-| last_activity    | Records the time of the last page load. Used in conjunction with the last_visit cookie.                                                         | 1 year     | Strictly Necessary |
-| last_visit       | Date of the user’s last visit. Can be shown as a statistic for members and used by the forum to show unread topics for both members and guests. | 1 year     | Strictly Necessary |
+| last_activity    | Records the time of the last page load. Used in in calculating active sessions.                                                         | 1 year     | Strictly Necessary |
+| last_visit       | Date of the user’s last visit, based on the last_activity cookie.  Can be shown as a statistic for members and used by forum and comments to show unread topics for both members and guests. | 1 year     | Strictly Necessary |
 | remember         | Determines whether a user is automatically logged in upon visiting the site.                                                                    | 2 weeks    | Strictly Necessary |
 | sessionid        | Session id, used to associate a logged in user with their data.                                                                                 | 1-2 hours  | Strictly Necessary |
 | tracker          | Contains the last 5 pages viewed, encrypted for security. Typically used for form or error message returns.                                     | Session    | Functionality      |
