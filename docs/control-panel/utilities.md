@@ -62,6 +62,9 @@ The page will show a great deal of information about your server, server configu
 Since Extensions are calling code within the ExpressionEngine code there is a chance that an extension will interfere with how your site is working. If you are unsure of which extension might be causing a problem you can either turn them off one by one until the problem disappears.
 
 ## Debug Tools
+
+TIP: **Tip:** If you are experiencing issues with your installation be sure to [enable debugging](control-panel/settings/debug-output.md#enable-debugging) to have all necessary information displayed.
+
 The Debug Tools section can easily help you find issues or potential issues within your install. This is especially helpful after upgrading ExpressionEngine versions.
 
 ### Debug Tools Overview
@@ -70,7 +73,7 @@ This page is a simple overview of the more detailed Debug Template Tags and Debu
 
 ### Debug Template Tags
 **Control Panel Location: `Developer > Utilities > Debug Tools > Debug Template Tags`**
-Template tags that do not have an associated add-on or extension installed can cause errors to occur within templates. This page will display a list of template tags found within templates which do not have an associated add-on or extension installed. Clicking on a tag will revel templates where this tag have been found so you can easily troubleshoot any issues.
+Template tags that do not have an associated add-on or extension installed can cause errors to occur within templates. This page will display a list of template tags found within templates which do not have an associated add-on or extension installed. Clicking on a tag will reveal templates where this tag have been found so you can easily troubleshoot any issues.
 
 ### Debug Fieldtypes
 **Control Panel Location: `Developer > Utilities > Debug Tools > Debug Fieldtypes`**
