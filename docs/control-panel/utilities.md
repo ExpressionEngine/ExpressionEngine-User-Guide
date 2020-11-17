@@ -63,7 +63,7 @@ Since Extensions are calling code within the ExpressionEngine code there is a ch
 
 ## Debug Tools
 
-TIP: **Tip:** If you are experiencing issues with your installation be sure to [enable debugging](control-panel/settings/debug-output.md#enable-debugging) to have all necessary information displayed.
+TIP: **Tip:** If you are experiencing issues with your installation, be sure to [enable debugging](control-panel/settings/debug-output.md#enable-debugging) to have all necessary information displayed.
 
 The Debug Tools section can easily help you find issues or potential issues within your install. This is especially helpful after upgrading ExpressionEngine versions.
 
