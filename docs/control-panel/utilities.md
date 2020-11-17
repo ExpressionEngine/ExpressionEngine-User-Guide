@@ -57,9 +57,24 @@ The page will show a great deal of information about your server, server configu
 
 ## Manage Add-on Extensions
 
-**Control Panel Location: `Developer > Utilities > Debug Extensions`**
+**Control Panel Location: `Developer > Utilities > Manage Extensions`**
 
 Since Extensions are calling code within the ExpressionEngine code there is a chance that an extension will interfere with how your site is working. If you are unsure of which extension might be causing a problem you can either turn them off one by one until the problem disappears.
+
+## Debug Tools
+The Debug Tools section can easily help you find issues or potential issues within your install. This is especially helpful after upgrading ExpressionEngine versions.
+
+### Debug Tools Overview
+**Control Panel Location: `Developer > Utilities > Debug Tools > Overview`**
+This page is a simple overview of the more detailed Debug Template Tags and Debug Fieldtypes found below.
+
+### Debug Template Tags
+**Control Panel Location: `Developer > Utilities > Debug Tools > Debug Template Tags`**
+Template tags that do not have an associated add-on or extension installed can cause errors to occur within templates. This page will display a list of template tags found within templates which do not have an associated add-on or extension installed. Clicking on a tag will revel templates where this tag have been found so you can easily troubleshoot any issues.
+
+### Debug Fieldtypes
+**Control Panel Location: `Developer > Utilities > Debug Tools > Debug Fieldtypes`**
+This page helps troubleshoot errors that can occur when a fieldtype is installed, but the actual fieldtype PHP file is missing. This page also give an overview of fieldtypes that are installed but not being used, and fieldtypes that are currently in use.
 
 ## Import File Converter
 
