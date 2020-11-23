@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -22,7 +22,7 @@ Release Date: November XX, 2020
   - Added confirmation screen when attempting to update major versions.
   - Adds namespacing to v2 upgrades for ease of upgrading from v2 to v5
   - Added support to be able to upgrade directly from v2 to v5
-  - Improved [XSS filtering for CP alerts](development/services/alert.html#addtobodyitem-class--null-xss_filter--true)
+  - Improved [XSS filtering for CP alerts](development/services/alert.md#addtobodyitem-class--null-xss_filter--true)
   - Added support for PHP 8
   - Added support for MySQL 8
   - Implemented different approach to trigger `before_channel_entry_delete` extension hook. 
