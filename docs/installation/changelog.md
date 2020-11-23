@@ -10,7 +10,7 @@
 # ExpressionEngine v5 Change Log
 
 ## Version 5.4.0
-Release Date: November XX, 2020
+Release Date: November 23, 2020
 - **Enhancements** 🚀
   - Added relationship_entries_tagdata hook, which is functionally identical to the channel_entries_tagdata hook
   - Added support for [SameSite cookies via config override](general/system-configuration-overrides.md#cookie_samesite)
