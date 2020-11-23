@@ -12,7 +12,11 @@
 [TOC]
 
 ## Upgrading Major Versions
-WARN: **Important** Updating major version (example from v4.x to v5.x) typically includes major updates and breaking changes. Do not upgrade major version manually or via 1-click without testing in a test or development environment first. Always backup your files and database first as well as ensure that your add-ons are compatibile with the version you are upgrading to.
+WARN: **Important** Upgrading major version (example from v5.x to v6.x) typically includes major updates and breaking changes. Do not upgrade major version manually or via 1-click without testing in a test or development environment first. Always following best pratices when Upgrading ExpressionEngine
+- Backup files
+- Backup Database
+- Update Add-ons (confirm they support new major version)
+
 
 ## One Click Updating
 
@@ -54,8 +58,8 @@ If you cannot use the one-click updater or command-line updater, you can still d
 
 ## Updating Manually
 
-TIP: **Feature Update:**  
-As of ExpressionEngine 5.4, you may now upgrade directly from ExpressionEngine 2 to the current version. 
+TIP: **Feature Update:**
+As of ExpressionEngine 5.4, you may now upgrade directly from ExpressionEngine 2 to the current version.
 
 ### 1. Backup and Prepare
 
