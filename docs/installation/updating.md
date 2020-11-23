@@ -12,7 +12,11 @@
 [TOC]
 
 ## Upgrading Major Versions
-WARN: **Important** Updating major version (example from v4.x to v5.x) typically includes major updates and breaking changes. Do not upgrade major version manually or via 1-click without testing in a test or development environment first. Always backup your files and database first as well as ensure that your add-ons are compatibile with the version you are upgrading to.
+WARN: **Important** Updating major version (example from v5.x to v6.x) typically includes major updates and breaking changes. Do not upgrade major version manually or via 1-click without testing in a test or development environment first. Always following best pratices when updating ExpressionEngine
+- Backup files
+- Backup Database
+- Update Add-ons (confirm they support new major version)
+
 
 ## One Click Updating
 
