@@ -37,7 +37,9 @@ When set to **yes**, members will receive an email notification when their membe
 
 ### Require terms of service?
 
-When new members register through the site, a "terms of service" block of text is displayed. This preference determines whether new members must indicate that they agree to abide by these terms before they can register. You may edit the terms of service within the registration form template, located at `Design --> Themes --> Member Profile Templates --> Default --> Registration Form`.
+This preference determines whether new members must indicate that they agree to abide by your site's terms of service before they can register. 
+
+If you are using legacy member profile template, when new members register through the site, a "terms of service" block of text is displayed. You may edit the terms of service within the registration form template, located at `Design --> Themes --> Member Profile Templates --> Default --> Registration Form`.
 
 ### Allow members to set time preferences?
 

@@ -127,6 +127,8 @@ For anyone creating their own theme or modifying one, the original "PSD" version
 
 ## Member Profile Templates
 
+NOTE: **Note:** The Member Profile Templates are legacy as of ExpressionEngine 6. If you have to use them, it is required to set `legacy_member_templates` [config override](member/profile-templates.md).
+
 **Control Panel Location: `Developer > Templates > Members`**
 
 The public profile area has its own set of templates which can be edited to change the look. You'll find the templates located at:
