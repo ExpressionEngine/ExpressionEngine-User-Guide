@@ -302,6 +302,8 @@
         href: member/search.md
       - name: Custom Profile Data Tag
         href: member/custom-profile-data.md
+      - name: Member Roles Tags
+        href: member/member-roles-tags.md
       - name: Ignore List Tag
         href: member/ignore-list.md
       - name: Profile Templates (Legacy)
