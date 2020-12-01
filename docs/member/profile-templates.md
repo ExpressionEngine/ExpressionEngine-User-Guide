@@ -11,9 +11,19 @@
 
 [TOC]
 
+NOTE: **Important:** The Member Profile Templates are legacy as of ExpressionEngine 6. If you have to use them, it is required to set `legacy_member_templates` config override.
+
 ## Overview
 
 - The public side of your website also has a Member Profile area, enabling your site members to manage their personal profile information without having access to your Control Panel. Typically, this Member Profile area is found at: `https://example.com/member/profile/`
+
+In order for this feature to be available, it needs to be enabled by adding 
+```php
+    $config['legacy_member_templates'] = 'y';
+```
+to your `config.php` file.
+
+NOTE: **Note:** When upgrading from an earlier version of ExpressionEngine to v6 or when Forum module is installed, the `legacy_member_templates` config override will automatically be set to 'y'.
 
 ## Member Profile Templates
 
@@ -90,4 +100,3 @@ This link points to the page where users can retrieve their password:
 Place the variable inside of a link tag:
 
     <a href="{path='member/forgot_password'}">Forget your password?</a>
-	

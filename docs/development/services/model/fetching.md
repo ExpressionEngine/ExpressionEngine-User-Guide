@@ -29,6 +29,8 @@ Usually these calls are chained for brevity:
 
     $templates = ee('Model')->get('Template')->all();
 
+NOTE: **Note:** Please see [Collection](development/services/model/collection.md) for list of methods to operate returned data.
+
 ## Filters
 
 You can filter your selection by individual model properties using the `filter()` method. It expects a property name, an operator, and a value:

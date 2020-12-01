@@ -1581,6 +1581,19 @@ Example Usage:
 
 **Also found in CP:** `Settings --> General Settings`: [Is system on? ](control-panel/settings/general.md#website-online)
 
+### `legacy_member_templates`
+
+Enables legacy member templates
+
+| Value | Behavior                                         |
+| ----- | ------------------------------------------------ |
+| y     | Legacy member templates enabled                  |
+| n     | Legacy member templates disabled (default)       |
+
+Example Usage:
+
+    $config['legacy_member_templates'] = 'y';
+
 ### `lockout_time`
 
 Set the length of time a throttled visitor will be locked out of the site.
