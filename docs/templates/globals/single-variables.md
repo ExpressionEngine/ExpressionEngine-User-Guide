@@ -35,7 +35,7 @@ This variable will be substituted for the global character set (UTF-8). It is ty
 
 The session id for the control panel. This is the value needed in the "S=" portion of the control panel URL. Only output for logged-in members who have access to the Control Panel, for instance to build a front-end URL to an add-on in the control panel:
 
-    {if logged_in_group_id == 1}
+    {if logged_in_role_id == 1}
       &bull; <a href="{cp_url}?/cp/addons/settings/my_addon&S={cp_session_id}"></a>
     {/if}
 
@@ -263,11 +263,11 @@ The email address for the currently logged-in user.
 
 The Primary Role description for the currently logged-in user.
 
-### `{logged_in_group_id}`
+### `{logged_in_role_id}`
 
 The Primary Role ID number for the currently logged-in user.
 
-### `{logged_in_group_title}`
+### `{logged_in_role_title}`
 
 The title of the Primary Role for the currently logged-in user.
 
