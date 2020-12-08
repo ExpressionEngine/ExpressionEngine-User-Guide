@@ -13,7 +13,7 @@
 ### RC.1 (Release: December 8, 2020)
 - **Enhancements** 🚀
   - Users can now upload [WebP](https://developers.google.com/speed/webp) images via the File Manager [#304](https://github.com/ExpressionEngine/ExpressionEngine/issues/304)
-  - Added `$config['legacy_member_templates'] = 'y';` to allow legacy member functionality which is now not allowed by default [see System Config Overrides](general/system-configuration-overrides.html#legacy_member_templates).
+  - Added `$config['legacy_member_templates'] = 'y';` to allow legacy member functionality which is now not allowed by default [see System Config Overrides](general/system-configuration-overrides.md#legacy_member_templates).
   - Fixed some styling on the Entry Publish Form when Live Preview is active.
   - Added more options to the Jump Menu
   - Many small style changes to Control Panel.
