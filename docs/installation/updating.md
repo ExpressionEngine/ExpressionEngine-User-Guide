@@ -22,6 +22,8 @@ When an update is available, you'll see the version number in the control panel 
 
 In the rare case an update fails, please read [Troubleshooting Automatic Updates](troubleshooting/general.md#troubleshooting-automatic-updates).
 
+NOTE: **Note:** If updating from a version prior to ExpressionEngine 6, you may need to rename or remove `system/ee/EllisLab` directory manually. You will also need to manually copy the index.php and admin.php files from the lastest version to your site's root folder.
+
 ## Updating Via Command Line
 
 You can also update ExpressionEngine via the command line on your server. This allows you to keep your installation's files only writable by your user and not also by your web service.
