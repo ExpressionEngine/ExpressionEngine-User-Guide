@@ -140,3 +140,44 @@ Multiple instances of the {switch=} tag may be used and ExpressionEngine will in
 ### `{total_results}`
 
 The number of total results of the query.
+
+## Troublshooting
+**Column variables are not parsing as expected**  
+When using the Query Module within other tag pairs such as `exp:channel:entries` which have their own variables, a conflict may arise in parsing the `exp:query` tag. 
+
+Example:
+On the page `/about` (assuming there is an entry with the `url_title` of "about" titled "About Us") and using a database with three entries in the `exp_channel_title` table.
+Template:
+```
+{exp:channel:entries}
+    Page Title: {title} <br>
+    {exp:query sql="SELECT title FROM exp_channel_titles"}
+        Query result: {title} <br>
+    {/exp:query}
+{/exp:channel:entries}
+```
+Output:
+```
+Page Title: About Us
+Query result: About Us
+Query result: About Us
+Query result: About Us
+```
+
+"About Us" is outputted with every instance of `{title}` because `{title}` is a variable used by the parent `{exp:channel:entries}` tag.    
+To avoid this confusion, alias your column titles in your query using the `AS` command.
+```
+{exp:channel:entries}
+    Page Title: {title} <br>
+    {exp:query sql="SELECT title AS query_titles FROM exp_channel_titles"}
+        Query result: {query_titles} <br>
+    {/exp:query}
+{/exp:channel:entries}
+```
+Output:
+```
+Page Title: About Us
+Query result: About Us
+Query result: Contact
+Query result: Home
+```
