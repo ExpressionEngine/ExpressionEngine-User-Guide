@@ -10,6 +10,53 @@
 # ExpressionEngine v6 Change Log
 
 ## Version 6.0.0
+### RC.1 (Release: December 8, 2020)
+- **Enhancements** 🚀
+  - Users can now upload [WebP](https://developers.google.com/speed/webp) images via the File Manager [#304](https://github.com/ExpressionEngine/ExpressionEngine/issues/304)
+  - Added `$config['legacy_member_templates'] = 'y';` to allow legacy member functionality which is now not allowed by default [see System Config Overrides](general/system-configuration-overrides.html#legacy_member_templates).
+  - Fixed some styling on the Entry Publish Form when Live Preview is active.
+  - Added more options to the Jump Menu
+  - Many small style changes to Control Panel.
+  - Added [template tags for Roles](member/member-roles-tags.md).
+  
+- **Bug Fixes** 💃🐛
+  - Resolved issue where users could not select a color swatch via the Color Picker fieldtype settings.
+  - Resolved issue where some "check all" options in the Control Panel did not work.
+  - Resolved issue where the new RTE Field was not working in Channel Forms. 
+  - Resolved issue where memory errors where triggered when by add-on SVG icons.
+  - Resolved formatting issue with XML Encode add-on.
+  - Resolved [#474](https://github.com/ExpressionEngine/ExpressionEngine/issues/474) where entries created via Moblog had blank body text.
+  - Resolved [#522](https://github.com/ExpressionEngine/ExpressionEngine/issues/522) where users could be prematurely logged out of the CP.
+  - Resolved [#658](https://github.com/ExpressionEngine/ExpressionEngine/issues/658) where validation errors where not cleared on required Relationship fields in the Entry Publish Form.
+  - Resolved [#659](https://github.com/ExpressionEngine/ExpressionEngine/issues/659) where error messages when creating a member did not reveal to the user what was wrong.
+  - Resolved [#663](https://github.com/ExpressionEngine/ExpressionEngine/issues/663) where permissions were being assigned to incorrect roles.
+  - Resolved [#668](https://github.com/ExpressionEngine/ExpressionEngine/issues/668) where super admins could disable their own access to the Control Panel and other important areas, essentially locking themselves out.
+
+
+### Beta 4 (Release: November 25, 2020)
+
+- **Enhancements** 🚀
+  - The Control Panel sidebar has been reorganized for better navigation.
+  - Fixed many responsive design issues with the Control Panel.
+  - Added warnings if Live Preview cannot be used because of CORS protection.[ reference Issue #584](https://github.com/ExpressionEngine/ExpressionEngine/issues/584)
+  - Merged 5.4(released during 6.0 beta.) updates into 6.0. [See 5.4 changelog](https://docs.expressionengine.com/latest/installation/changelog.html#version-540)   
+
+- **Bug Fixes** 💃🐛
+  - Resolved [#618](https://github.com/ExpressionEngine/ExpressionEngine/issues/618) where a field's settings were not cleared after change the field to another similar fieldtype.
+  - Resolved [#617](https://github.com/ExpressionEngine/ExpressionEngine/issues/617) where a Grid fieldtype Min/Max settings were not being obeyed when used inside a Fluid field
+  - Resolved [#616](https://github.com/ExpressionEngine/ExpressionEngine/issues/616) where the RTE Toolbar was not rendering from inside a Grid Field that's inside a Fluid field.
+  - Resolved a bug where a user could not select a file from the selector in a File Grid field within a fluid field.
+  - Resolved a bug where some Member forms seemed hardcoded to return to `/member` despite having the Profile URL segment set to something else.
+  - Resolved errors with the `{exp:member:edit_profile}` tag
+  - Added back support for `tbl-bulk-act` class which created issues for legacy add-ons using bulk edit functions select menus.
+  - Resolved a bug where the 1-Click Updater would stop during Preflight Check because it was not checking for trailing slashes in `base_path`.
+  - Resolved a bug where a member roles with users assigned to it could not be deleted.    
+  
+  
+- **Documentation** 📝
+  - Updated docs for creating form views in the Control Panel [Docs 94](https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/issues/94)
+  - Merged 5.4(released during 6.0 beta) updates into 6.0 documentation
+
 ### Beta 3 (Release: November 5, 2020)
 - **Enhancements** 🚀
   - New filters bar with better layout, simpler search, and individual filter clearing!
