@@ -145,6 +145,16 @@ The error text.
 
 
     {exp:member:login_form return="member/index"}
+
+        {if errors}
+            <fieldset class="error">
+                <legend>Errors</legend>
+            {errors}
+                {error}<br />
+            {/errors}
+            </fieldset>
+        {/if}
+
         <p>
             <label>Username</label><br />
             <input type="text" name="username" value="" maxlength="32" size="25" />
