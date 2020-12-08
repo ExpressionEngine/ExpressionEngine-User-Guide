@@ -20,6 +20,11 @@ ExpressionEngine supports one-click updating as of **Version 4.0** or newer. If 
 
 When an update is available, you'll see the version number in the control panel footer turn yellow or red. Click the version number, then click "Update Now".
 
+**Upgrade Steps** 
+1. Backup files and Database
+2. Confirm all add-ons are updated and compatiable with new major ExpressionEngine version
+3. Test in staging environment
+
 In the rare case an update fails, please read [Troubleshooting Automatic Updates](troubleshooting/general.md#troubleshooting-automatic-updates).
 
 NOTE: **Note:** If updating from a version prior to ExpressionEngine 6, you may need to rename or remove `system/ee/EllisLab` directory manually. You will also need to manually copy the index.php and admin.php files from the lastest version to your site's root folder.
