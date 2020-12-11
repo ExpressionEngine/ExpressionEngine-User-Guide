@@ -21,7 +21,6 @@ You'll find many member management options available at:
 NOTE: **Note:** A member account's Username and Screen Name can be identical, but the Username must be unique system-wide.
 
 
-
 ### Member Navigation
 
 A good strategy for member navigation links is to use them within conditional tags that let you present links based on whether someone is logged in or not. Here's an example:
@@ -37,14 +36,8 @@ A good strategy for member navigation links is to use them within conditional ta
       Have you <a href="{path='member/forgot'}">forgotten your password</a>?
     {/if}
 
-#### Log Out
 
-This link allows users to log-out of the system. To create the link, use this variable:
 
-    {path='logout'}
 
-Place the variable inside of a link tag:
-
-    <a href="{path='logout'}">Log Out</a>
 
 
