@@ -828,6 +828,8 @@
       href: development/v4-addon-migration.md
     - name: v6 Add-on Migration
       href: development/v6-add-on-migration.md
+    - name: Automated Upgrading
+      href: development/automated-upgrading.md
 
 - name: Bugs and Security Reports
   href: bugs-and-security-reports.md
