@@ -34,12 +34,6 @@ Output a login form.
 
 Allows you to specify the action attribute of the &lt;form&gt; tag. Handy if you need to ensure that authentication points to SSL portions of your site from non-SSL portions. Often used in conjunction with the return= parameter and the [{current_url} global variable](templates/globals/single-variables.md#current_url) so your visitors will go back to the page and domain they logged in from.
 
-### `error_handling=`
-
-    error_handling="inline"
-
-Choose to display error messages inline (see [Error Messages](#errormy_field_name)). By default, errors are displayed with the user message template.
-
 ### `form_class=`
 
     form_class="login"
@@ -112,47 +106,11 @@ This conditional will display the contents inside (typically the "stay logged in
     {/if}
 
 
-
-## Variable Pairs
-
-### `{errors}`
-
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
-
-
-#### Error Tag Pair Parameters
-
-##### `backspace=`
-
-    backspace="3"
-
-The `backspace=` parameter will remove characters, including spaces and line breaks, from the last iteration of the tag pair.
-
-#### Error Tag Pair Variables
-
-##### `{error}`
-
-    {error}
-
-The error text.
-
-
-
 ## Example
 
 
     {exp:member:login_form return="member/index"}
-
-        {if errors}
-            <fieldset class="error">
-                <legend>Errors</legend>
-            {errors}
-                {error}<br />
-            {/errors}
-            </fieldset>
-        {/if}
-
-        <p>
+         <p>
             <label>Username</label><br />
             <input type="text" name="username" value="" maxlength="32" size="25" />
         </p>
