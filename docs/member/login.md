@@ -105,7 +105,7 @@ Member username. This is a **required** field:
 
     {if auto_login} {/if}
 
-It is recommended that you use this variable as indicated in the example code at the top. This conditional will display the contents inside (typically the "stay logged in" checkbox) based on how your session preference is set. In order for this feature to work you must be set to use "cookies only" and not sessions.:
+This conditional will display the contents inside (typically the "stay logged in" checkbox) based on your session preference. In order for this feature to work you must be set to use "cookies only" and not sessions.:
 
     {if auto_login}
       <p><input class="checkbox" type="checkbox" name="auto_login" value="1"> Auto-login on future visits</p>
@@ -119,9 +119,6 @@ It is recommended that you use this variable as indicated in the example code at
 
 Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
 
-    {errors}
-        <p>{error}</p>
-    {/errors}
 
 #### Error Tag Pair Parameters
 
