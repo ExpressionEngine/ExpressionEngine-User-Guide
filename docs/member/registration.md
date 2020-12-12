@@ -163,8 +163,8 @@ The error text.
             </p>
 
             <p>
-                <label for="something">Something*:</label><br />
-                <input type="text" name="something" id="something" value="{if something}{something}{/if}"/><br />
+                <label for="m_field_id_1">Custom Member Field:</label><br />
+                <input type="text" name="m_field_id_1" id="m_field_id_1" value="{if m_field_id_1}{m_field_id_1}{/if}"/><br />
             </p>
 
             <p>

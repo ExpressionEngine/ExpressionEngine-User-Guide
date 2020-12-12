@@ -54,6 +54,11 @@ The `backspace=` parameter will remove characters, including spaces and line bre
 
 #### Member Row Tag Pair Variables
 
+
+##### `{name}`
+
+    {name}
+
 ##### `{member_css}`
 
     {member_css}
