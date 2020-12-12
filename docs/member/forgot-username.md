@@ -34,7 +34,7 @@ Output a forgotten username form that sends an email with instructions for addre
 
     email_template="member/email-forgot-username"
 
-By default, emails will use the dedicated [Email Templates](control-panel/template-manager#email-templates) to control the layout of the forgotten username email.  This parameter allows use of the full templates:
+By default, emails will use the dedicated [Email Templates](control-panel/template-manager.md#email-templates) to control the layout of the forgotten username email.  This parameter allows use of the full templates:
 
 	Hello {name},
 
@@ -52,7 +52,8 @@ By default, emails will use the dedicated [Email Templates](control-panel/templa
 
     error_handling="inline"
 
-Choose to display error messages inline (see [Error Messages](#errormy_field_name)). By default, errors are displayed with the user message template.
+Choose to display error messages inline (see [Errors](#errors)). By default, errors are displayed with the user message template.
+
 
 ### `return=`
 

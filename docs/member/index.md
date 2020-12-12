@@ -9,7 +9,6 @@
 
 # Member Management
 
-[TOC]
 
 You'll find many member management options available at:
 

@@ -30,13 +30,13 @@ Output a forgotten password form that sends an email with instructions for reset
 
     error_handling="inline"
 
-Choose to display error messages inline (see [Error Messages](#errormy_field_name)). By default, errors are displayed with the user message template.
+Choose to display error messages inline (see [Errors](#errors)). By default, errors are displayed with the user message template.
 
 ### `password_reset_email_template=`
 
     password_reset_email_template="member/email-password-reset"
 
-By default, emails will use the dedicated [Email Templates](control-panel/template-manager#email-templates) to control the layout of the forgotten username email.  This parameter allows use of the full templates:
+By default, emails will use the dedicated [Email Templates](control-panel/template-manager.md) to control the layout of the forgotten username email.  This parameter allows use of the full templates:
 
 	Hello {name},
 
@@ -55,7 +55,7 @@ By default, emails will use the dedicated [Email Templates](control-panel/templa
 
     password_reset_url="member/reset-password"
 
-By default, emails will use the dedicated [Email Templates](control-panel/template-manager#email-templates) to control the layout of the forgotten username email.  This parameter allows use of the full templates:
+By default, emails will use the dedicated [Email Templates](control-panel/template-manager.md) to control the layout of the forgotten username email.  This parameter allows use of the full templates:
 
 	Hello {name},
 

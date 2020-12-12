@@ -13,7 +13,7 @@
 
 ## Overview
 
-The search form uses the [Memberlist tag](memberlist.html) to display results.
+The search form uses the [Memberlist tag](member/memberlist.md) to display results.
 
     {exp:member:member_search}
 
@@ -44,7 +44,7 @@ The search form uses the [Memberlist tag](memberlist.html) to display results.
     return="member/memberlist"
 
 
-A result template with a [Memberlist tag](memberlist.html) must be specified in order to output the results of the search.
+A result template with a [Memberlist tag](member/memberlist.md) must be specified in order to output the results of the search.
 
 
 ## Form Inputs

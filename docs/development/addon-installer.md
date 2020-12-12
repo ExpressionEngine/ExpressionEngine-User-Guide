@@ -15,7 +15,7 @@ lang: ee
 
 ExpressionEngine 6 has simplified add-on installation procedure that can be used by making module/extension extend `Installer` service.
 
-NOTE: **Note:** This feature is only available in ExpressionEngine 6 (and great). For previous CMS version, please use appropriate function for [Modules](development/modules.html#update-file-function-reference) and [Extensions](development/extensions.html#activating-and-updating).
+NOTE: **Note:** This feature is only available in ExpressionEngine 6 (and great). For previous CMS version, please use appropriate function for [Modules](development/modules.md#update-file-function-reference) and [Extensions](development/extensions.md#activating-and-updating).
 
 ## Module installer
 
@@ -48,11 +48,11 @@ Additional functionality can be installed using the following guidelines:
 
         public $has_cp_backend = 'n';
         public $has_publish_fields = 'n';
-        
+
         // defines the module's actions that should be installed.
-        public $actions = [ 
+        public $actions = [
                 [
-                    'class' => 'My_addon', 
+                    'class' => 'My_addon',
                     'method' => 'action_function', // required
                     'csrf_exempt' => true
                 ]
@@ -70,7 +70,7 @@ Additional functionality can be installed using the following guidelines:
                 'method' => 'cleanup', // will default to same as hook if not defined
                 'hook' => 'template_post_parse' // required
             ]
-        ];    
+        ];
 
 
         /**
@@ -81,7 +81,7 @@ Additional functionality can be installed using the following guidelines:
             parent::__construct();
         }
 
-        /** 
+        /**
         * install() and uninstall() are optional functions. Only use if additional install or uninstall functionality is needed.
         * If needed, must include parent::__construct();
         */
@@ -120,12 +120,12 @@ Extension files can now be as simplified as well. However they must include the 
                 'method' => 'cleanup', // will default to same as hook if not defined
                 'hook' => 'template_post_parse' // required
             ]
-        ]; 
+        ];
 
-        /** 
-        * Notice that for extensions you must include $settings 
+        /**
+        * Notice that for extensions you must include $settings
         * as a parameter in the constructor
-        */    
+        */
         public function __construct($settings = [])
         {
             parent::__construct($settings);
@@ -154,19 +154,19 @@ Additionally you may use `activate_extension()` and `disable_extension()` if nee
                 'method' => 'cleanup', // will default to same as hook if not defined
                 'hook' => 'template_post_parse' // required
             ]
-        ]; 
+        ];
 
-        /** 
-        * Notice that for extensions you must include $settings 
+        /**
+        * Notice that for extensions you must include $settings
         * as a parameter in the constructor
-        */    
+        */
         public function __construct($settings = [])
         {
             parent::__construct($settings);
         }
 
-        /** 
-        * activate_extension() and disable_extension() are optional functions. 
+        /**
+        * activate_extension() and disable_extension() are optional functions.
         * Only use if additional functionality is needed.
         * If needed, must include parent::__construct();
         */

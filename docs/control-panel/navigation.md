@@ -36,4 +36,4 @@ It is also possible to completely toggle the sidebar navigation off. In Jump Men
 
 ## Custom navigation items
 
-It is possible to inject your custom items into sidebar navigation using [Menu Manager](control-panel/settings/menu-manager.html#menu-manager).
+It is possible to inject your custom items into sidebar navigation using [Menu Manager](control-panel/settings/menu-manager.md#menu-manager).
