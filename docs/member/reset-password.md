@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Forgot Password Form Tag
+# Reset Password Form Tag
 
 [TOC]
 
@@ -17,8 +17,11 @@ Output a reset password form that allows members accessing it via a link from a 
 
     {exp:member:reset_password_form}
 
-            <label>Your Email Address</label><br />
-            <input type="email" name="email" value="" maxlength="120" size="40" />
+            <label>Your New Password</label><br />
+            <input type="password" name="password" value="" maxlength="50" size="40" />
+
+            <label>Confirm New Password</label><br />
+            <input type="password" name="password_confirm" value="" maxlength="50" size="40" />
 
 			<input type="submit" name="submit" value="Submit" />
 
