@@ -34,6 +34,20 @@ Output a forgotten username form that sends an email with instructions for addre
 
     email_template="member/email-forgot-username"
 
+By default, emails will use the dedicated [Email Templates](control-panel/template-manager#email-templates) to control the layout of the forgotten username email.  This parameter allows use of the full templates:
+
+	Hello {name},
+
+	The username associated with this email address is:
+
+	{username}
+
+	You can login using your username and password.
+
+	{site_name}
+	{site_url}
+
+
 ### `error_handling=`
 
     error_handling="inline"

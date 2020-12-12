@@ -40,6 +40,21 @@ Choose to display error messages inline (see [Error Messages](#errormy_field_nam
 
     password_reset_url="member/reset-password"
 
+By default, emails will use the dedicated [Email Templates](control-panel/template-manager#email-templates) to control the layout of the forgotten username email.  This parameter allows use of the full templates:
+
+	Hello {name},
+
+	To reset your password, please go to the following page:
+
+	{reset_url}
+
+	Then log in with your username: {username}
+
+	If you do not wish to reset your password, ignore this message. It will expire in 24 hours.
+
+	{site_name}
+	{site_url}
+
 ### `return=`
 
     return="member/forgot-password/sent"
