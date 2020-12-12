@@ -13,92 +13,28 @@
 
 ## Overview
 
-Outputs a searchable list of members, including form filters to sort and limit the members.
+Outputs a list of members.
 
 
 ## Parameters
 
-### `error_handling=`
+### limit=`
 
-    error_handling="inline"
+    limit="5"
 
-Choose to display error messages inline (see [Error Messages](#errormy_field_name)). By default, errors are displayed with the user message template.
+### `orderby=`
 
-### `return=`
+    orderby="username"
 
-    return="member/memberlist"
+### `role_id=`
 
+    role_id="5"
 
-## Form Variables
+### `sort=`
 
-### `{form_declaration}`
+    sort="desc"
 
-This is a **required** variable in order to use the search form.  It creates the opening form tag.
-
-### `{group_id_options}`
-
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
-
-    <select name='group_id' class='select'>
-        {group_id_options}
-    </select>
-
-
-### `{order_by_options}`
-
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
-
-    <select name='order_by' class='select'>
-        {order_by_options}
-    </select>
-
-
-### `{row_limit_options}`
-
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
-
-    <select name='row_limit' class='select'>
-        {row_limit_options}
-    </select>
-
-
-### `{sort_order_options}`
-
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
-
-    <select name='sort_order' class='select'>
-        {sort_order_options}
-    </select>
-
-
-
-## Variable Pairs
-
-### `{errors}`
-
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
-
-    {errors}
-        <p>{error}</p>
-    {/errors}
-
-#### Error Tag Pair Parameters
-
-##### `backspace=`
-
-    backspace="3"
-
-The `backspace=` parameter will remove characters, including spaces and line breaks, from the last iteration of the tag pair.
-
-#### Error Tag Pair Variables
-
-##### `{error}`
-
-    {error}
-
-The error text.
-
-
+## Member Variables
 
 ### `{member_rows}`
 
@@ -147,23 +83,44 @@ The `backspace=` parameter will remove characters, including spaces and line bre
 
 See [pagination](templates/pagination.md) for more details.
 
+
+## Filter Variables
+
+A number of variables that output select values are available to help create member filters.
+
+### `{role_id_options}`
+
+    <select name='role_id' class='select'>
+        {role_id_options}
+    </select>
+
+
+### `{order_by_options}`
+
+    <select name='order_by' class='select'>
+        {order_by_options}
+    </select>
+
+
+### `{row_limit_options}`
+
+    <select name='row_limit' class='select'>
+        {row_limit_options}
+    </select>
+
+
+### `{sort_order_options}`
+
+
+    <select name='sort_order' class='select'>
+        {sort_order_options}
+    </select>
+
 ## Example
 
     {exp:member:memberlist
-        return="member/login/forgot-username"
-        error_handling="inline"
-        email_subject="Your Username"
-        email_template="member/email-forgot-username"
+        return="{segment_1}/login/forgot-username"
         }
-
-        {if errors}
-            <fieldset class="error">
-                <legend>Errors</legend>
-                {errors}
-                    <p>{error}</p>
-                {/errors}
-            </fieldset>
-        {/if}
 
         {form_declaration}
 
@@ -241,4 +198,3 @@ See [pagination](templates/pagination.md) for more details.
 
         </form>
     {/exp:member:memberlist}
-

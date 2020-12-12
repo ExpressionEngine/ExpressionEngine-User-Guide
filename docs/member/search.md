@@ -13,18 +13,19 @@
 
 ## Overview
 
+The search form uses the [Memberlist tag](memberlist.html) to display results.
+
     {exp:member:member_search}
-        {form_declaration}
+
             <input type="text" name="search_keywords_1" />
             <select name='search_field_1' class='select' >
-                <option value='screen_name'>Search Field</option>
                 <option value='screen_name'>Screen Name</option>
                 <option value='email'>Email Address</option>
                 {custom_profile_field_options}
             </select>
 
-            <select name='search_group_id' class='select' >
-                {group_id_options}
+            <select name='search_role_id' class='select' >
+                {role_id_options}
             </select>
 
             <div class="itempadbig">&nbsp; <input type='submit' value='search' class='submit' /></div>
@@ -33,28 +34,18 @@
 
 ## Parameters
 
-### `error_handling=`
 
-    error_handling="inline"
+### `no_result_page=`
 
-Choose to display error messages inline (see [Error Messages](#errormy_field_name)). By default, errors are displayed with the user message template.
-
-### `memberlist_url=`
-
-    memberlist_url="member/memberlist"
+    no_result_page="member/no_results"
 
 ### `return=`
 
     return="member/memberlist"
 
 
-## Form Variables
+A result template with a [Memberlist tag](memberlist.html) must be specified in order to output the results of the search.
 
-### `{form_declaration}`
-
-This is a **required** variable in order to use the search form.  It creates the opening form tag.
-
-### `{custom_profile_field_options}`
 
 ## Form Inputs
 
