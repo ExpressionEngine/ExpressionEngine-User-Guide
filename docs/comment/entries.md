@@ -293,7 +293,7 @@ The date on which the comment was edited. See [Date Variable Formatting](templat
 
     {if editable}Show Edit{/if}
 
-This variable will be used in a conditional to allow [comment editing](comment/form.md#allowing-members-to-edit-comments-on-the-front-end). It indicates whether a member has [permission to edit a given comment](control-panel/member-manager.md#createedit-all-member-groups).
+This variable will be used in a conditional to allow [comment editing](comment/form.md#allowing-members-to-edit-comments-on-the-front-end). It indicates whether a member has [permission to edit a given comment](control-panel/member-manager.md#createedit-all-member-roles).
 
 ### `{email}`
 

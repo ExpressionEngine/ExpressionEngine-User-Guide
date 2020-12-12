@@ -27,7 +27,7 @@ Alerts are for providing feedback on an action and calling attention to warnings
 
 ## CP/Alert Service Methods
 
-**class `EllisLab\ExpressionEngine\Service\Alert\AlertCollection`**
+**class `ExpressionEngine\Service\Alert\AlertCollection`**
 
 [TOC=3]
 
@@ -104,7 +104,7 @@ Gets the rendered value of the standard alert.
 
 ## Alert Object Methods
 
-**class `EllisLab\ExpressionEngine\Service\Alert\AlertCollection`**
+**class `ExpressionEngine\Service\Alert\AlertCollection`**
 
 [TOC=3]
 

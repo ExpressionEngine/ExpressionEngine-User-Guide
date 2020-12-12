@@ -65,12 +65,12 @@ Each call to `ee('Event')` will return a new event emitter instance. There is cu
 
 To help implement PubSub systems, there are two global interfaces that you should consider using:
 
-    EllisLab\ExpressionEngine\Service\Event\Publisher
-    EllisLab\ExpressionEngine\Service\Event\Subscriber
+    ExpressionEngine\Service\Event\Publisher
+    ExpressionEngine\Service\Event\Subscriber
 
 To create a subscriber, simply implement the `getSubscribedEvents()` interface method. You should also have a public `on<EventName>` method for any events you subscribe to:
 
-    use EllisLab\ExpressionEngine\Service\Event\Subscriber;
+    use ExpressionEngine\Service\Event\Subscriber;
 
     class Button extends UIElement implements Subscriber {
 

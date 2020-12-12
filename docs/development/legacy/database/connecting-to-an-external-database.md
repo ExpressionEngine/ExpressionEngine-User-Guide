@@ -25,12 +25,12 @@ The basic pattern is to:
 
 For example, given an `other_db` block alongside `expressionengine` in the `$config['database']` array of your primary config file:
 
-    $db_config = \EllisLab\ExpressionEngine\Service\Database\DBConfig(ee('Config')->getFile());
+    $db_config = \ExpressionEngine\Service\Database\DBConfig(ee('Config')->getFile());
     $db_config->getGroupConfig('other_db');
-    $db = new \EllisLab\ExpressionEngine\Service\Database\Database($db_config);
+    $db = new \ExpressionEngine\Service\Database\Database($db_config);
     $query = $db->newQuery()->get('my_table');
 
-NOTE: **Note:** Your class can `use EllisLab\ExpressionEngine\Service\Database;` and then reference `Database\DBConfig` and `Database\Database` without typing out the full namespace.
+NOTE: **Note:** Your class can `use ExpressionEngine\Service\Database;` and then reference `Database\DBConfig` and `Database\Database` without typing out the full namespace.
 
 In actual practice you will want to make sure you are only spinning up one connection per request, and you will want to use cleaner and clearer syntax. To that end, here is a complete, simple example using a plugin we will call "Help Desk".
 
@@ -58,7 +58,7 @@ To keep our syntax simple and explicit, we will make our external database avail
 
     <?php
 
-    use EllisLab\ExpressionEngine\Service\Database;
+    use ExpressionEngine\Service\Database;
 
     return array(
       'author'      => 'My Vendor',

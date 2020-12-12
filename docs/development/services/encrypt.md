@@ -45,7 +45,7 @@ To verify the data hasn't changed:
 
 ## Encrypt Methods
 
-**class `EllisLab\ExpressionEngine\Service\Encrypt\Encrypt`**
+**class `ExpressionEngine\Service\Encrypt\Encrypt`**
 
 [TOC=3]
 

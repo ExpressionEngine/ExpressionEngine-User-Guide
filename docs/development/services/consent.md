@@ -74,7 +74,7 @@ Withdraw consent:
 
 ## Consent Methods
 
-**class `EllisLab\ExpressionEngine\Service\Consent\Consent`**
+**class `ExpressionEngine\Service\Consent\Consent`**
 
 [TOC=3]
 

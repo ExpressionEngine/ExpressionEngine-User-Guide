@@ -25,7 +25,7 @@ NOTE: **Note:** This does not replace `ee()->config`
 
 ## Config Service Methods
 
-**class `EllisLab\ExpressionEngine\Service\Config\Factory`**
+**class `ExpressionEngine\Service\Config\Factory`**
 
 [TOC=3]
 
@@ -59,7 +59,7 @@ Get a config item
 
 ## Directory Object Methods
 
-**class `EllisLab\ExpressionEngine\Service\Config\Directory`**
+**class `ExpressionEngine\Service\Config\Directory`**
 
 [TOC=3]
 
@@ -91,7 +91,7 @@ Returns a ConfigFile class representing the config file
 
 ## File Objet Methods
 
-**class `EllisLab\ExpressionEngine\Service\Config\File`**
+**class `ExpressionEngine\Service\Config\File`**
 
 [TOC=3]
 

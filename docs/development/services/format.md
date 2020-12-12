@@ -23,7 +23,7 @@ The Format service is a factory to the various formatters available. If you need
 
 ## Format Factory
 
-**class `EllisLab\ExpressionEngine\Service\Formatter\FormatterFactory`**
+**class `ExpressionEngine\Service\Formatter\FormatterFactory`**
 
 ### `make($formatter_name, $content)`
 

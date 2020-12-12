@@ -27,7 +27,7 @@ Retriving cookie data:
 
 ## Cookie Methods
 
-**class `EllisLab\ExpressionEngine\Service\Cookie\Cookie`**
+**class `ExpressionEngine\Service\Cookie\Cookie`**
 
 ### `getSignedCookie($cookie_name, $xss_clean = FALSE)`
 

@@ -126,7 +126,7 @@ The String Formatter is part of the [Format Service](development/services/format
 
 ## API Reference
 
-**class `EllisLab\ExpressionEngine\Service\Formatter\Formats\Text`**
+**class `ExpressionEngine\Service\Formatter\Formats\Text`**
 
 [TOC=3]
 

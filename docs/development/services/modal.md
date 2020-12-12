@@ -125,7 +125,7 @@ Now when a user selects some content in the table, the bulk action controls shou
 
 ## CP/Modal Service Methods
 
-**class `EllisLab\ExpressionEngine\Service\Modal\ModalCollection`**
+**class `ExpressionEngine\Service\Modal\ModalCollection`**
 
 [TOC=3]
 

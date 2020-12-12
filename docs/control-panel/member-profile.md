@@ -45,6 +45,12 @@ NOTE: **Note:** In order for cookie consent requests to display, [Require user c
 
 Set your default homepage for the control panel.
 
+## Info & Activity
+
+**Control Panel Location: `Members > Profile > Info & Activity`**
+
+Shows some info on member's activity, such as IP address, last visit, link to member's CP logs etc.
+
 ## Date & Time Settings
 
 **Control Panel Location: `Members > Profile > Date & Time`**
@@ -63,11 +69,17 @@ The 'Delete user' link opens a modal to confirm the deletion of the member on th
 
 You may specify the email address associated with the account as well as preferences related to receiving email. If you are not logged in with a Super Admin account, you will need to submit the password associated with the account in order to update these settings. The password is not required when the person editing is a Super Admin account.
 
-## Member Group Assignment
+## Member Roles assignment
 
-**Control Panel Location: `Members > Profile > Member Group`**
+**Control Panel Location: `Members > Profile > Member Roles`**
 
-This section allows you to set the Member Group for the current user. You can not change the group for Super Admins.
+This section allows you to set the Member Roles for the current user. You can not change the role for Super Admins.
+
+## Access overview
+
+**Control Panel Location: `Members > Profile > Access Overview`**
+
+Lists every permission the member has based on the Roles assigned.
 
 ## Blocked Members
 
@@ -80,6 +92,12 @@ This section allows you to set the Member Group for the current user. You can no
 **Control Panel Location: `Members > Profile > Login`**
 
 Super Admin may login as another user while still viewing debugging data. This can be particularly useful when debugging a situation that only occurs for certain user groups and not others.
+
+## Email User
+
+**Control Panel Location: `Members > Profile > Email`**
+
+Shortcut to Communicate tool with the member being primary recipient.
 
 ## Publishing Settings
 

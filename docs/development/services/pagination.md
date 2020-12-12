@@ -25,7 +25,7 @@ Adding pagination to the control panel is a common task and we created a paginat
 
 ## CP/Pagination Service Methods
 
-**class `EllisLab\ExpressionEngine\Library\CP\Pagination`**
+**class `ExpressionEngine\Library\CP\Pagination`**
 
 [TOC=3]
 

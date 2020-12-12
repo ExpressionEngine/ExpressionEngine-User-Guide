@@ -24,7 +24,7 @@ Read-only access to the data in an `addon.setup.php` file is made available via 
 
 ## Addon Service Methods
 
-**class `EllisLab\ExpressionEngine\Service\Addon\Factory`**
+**class `ExpressionEngine\Service\Addon\Factory`**
 
 [TOC=3]
 
@@ -55,7 +55,7 @@ Get all the installed add-ons.
 
 ## Addon Object Methods
 
-**class `EllisLab\ExpressionEngine\Service\Addon\Addon`**
+**class `ExpressionEngine\Service\Addon\Addon`**
 
 [TOC=3]
 
@@ -217,4 +217,4 @@ Get the add-on Provider
 
 | Parameter | Type                                      | Description         |
 | --------- | ----------------------------------------- | ------------------- |
-| Returns   | `EllisLab\ExpressionEngine\Core\Provider` | The add-on provider |
+| Returns   | `ExpressionEngine\Core\Provider` | The add-on provider |

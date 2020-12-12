@@ -48,7 +48,7 @@ The Details tab holds fields for the category group name (used only for display 
 
 **Control Panel Location: `Developer > Categories > New/Edit Category Group > Permissions`**
 
-The Permissions tab controls which member groups have permission to edit or delete categories. The member group must have permission to edit categories in the [member group settings](control-panel/member-manager.md#member-groups) in order to be granted permission to edit a particular category group.
+The Permissions tab controls which member roles have permission to edit or delete categories. The member role must have permission to edit categories in the [member role settings](control-panel/member-manager.md#member-roles) in order to be granted permission to edit a particular category group.
 
 ### Fields tab
 

@@ -41,7 +41,7 @@ Alternatively you could save the resulting data to a file:
 
 ## Methods
 
-**class `EllisLab\ExpressionEngine\Library\Data\CSV`**
+**class `ExpressionEngine\Library\Data\CSV`**
 
 [TOC=3]
 

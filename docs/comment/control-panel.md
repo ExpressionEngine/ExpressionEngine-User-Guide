@@ -29,7 +29,7 @@ The main table shows the following columns:
 
 ### Comment Administration Privileges
 
-Comment administration permissions are set on a per member group basis in [Create/Edit Member Groups](control-panel/member-manager.md#member-groups).
+Comment administration permissions are set on a per member role basis in [Create/Edit Member Roles](control-panel/member-manager.md#member-roles).
 
 - **Can Moderate Comments**: Can view all comments and change the status of any comment.
 - **Can edit their own comments**: Can view and edit only comments they made.

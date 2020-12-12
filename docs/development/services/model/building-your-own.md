@@ -36,7 +36,7 @@ All models **must** declare a primary key, a table name, and a set of properties
 
     namespace My\Namespace\Model\MyModel\Model;
 
-    use EllisLab\ExpressionEngine\Service\Model\Model;
+    use ExpressionEngine\Service\Model\Model;
 
     class MyModel extends Model {
 
@@ -285,7 +285,7 @@ The following composite types are included:
 
 ## Model Methods
 
-**class `EllisLab\ExpressionEngine\Service\Model\Model`**
+**class `ExpressionEngine\Service\Model\Model`**
 
 [TOC=3]
 

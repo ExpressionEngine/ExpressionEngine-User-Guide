@@ -889,7 +889,7 @@ Example Usage:
 
     $config['default_member_group'] = '6';
 
-**Also found in CP:** `Settings --> Members`: [Default Member Group Assigned to New Members](control-panel/settings/members.md#default-member-group)
+**Also found in CP:** `Settings --> Members`: [Default Member Role Assigned to New Members](control-panel/settings/members.md#default-primary-role)
 
 ### `default_site_timezone`
 
