@@ -90,5 +90,5 @@
   - `upload_file_name_blacklist` config override renamed to `upload_blocked_file_names`
   - `exp_sites.site_pages` data type has been changed to MEDIUMTEXT.
   - Moved language files from `system/ee/legacy` folder to `system/ee/language`.
-  - Added `$config['legacy_member_templates'] = 'y';` to allow legacy member functionality which is now not allowed by default [see System Config Overrides](general/system-configuration-overrides.html#legacy_member_templates).    
+  - Added `$config['legacy_member_templates'] = 'y';` to allow legacy member functionality which is now not allowed by default [see System Config Overrides](general/system-configuration-overrides.md#legacy_member_templates).    
   - New member groups no longer have access to HTTP-protected templates by default [#279](https://github.com/ExpressionEngine/ExpressionEngine/issues/279).
