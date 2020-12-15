@@ -9,126 +9,7 @@
 
 # ExpressionEngine v6 Change Log
 
-## Version 6.0.0
-### RC.1 (Release: December 8, 2020)
-- **Enhancements** 🚀
-  - Users can now upload [WebP](https://developers.google.com/speed/webp) images via the File Manager [#304](https://github.com/ExpressionEngine/ExpressionEngine/issues/304)
-  - Added `$config['legacy_member_templates'] = 'y';` to allow legacy member functionality which is now not allowed by default [see System Config Overrides](general/system-configuration-overrides.html#legacy_member_templates).
-  - Fixed some styling on the Entry Publish Form when Live Preview is active.
-  - Added more options to the Jump Menu
-  - Many small style changes to Control Panel.
-  - Added [template tags for Roles](member/member-roles-tags.md).
-  
-- **Bug Fixes** 💃🐛
-  - Resolved issue where users could not select a color swatch via the Color Picker fieldtype settings.
-  - Resolved issue where some "check all" options in the Control Panel did not work.
-  - Resolved issue where the new RTE Field was not working in Channel Forms. 
-  - Resolved issue where memory errors where triggered when by add-on SVG icons.
-  - Resolved formatting issue with XML Encode add-on.
-  - Resolved [#474](https://github.com/ExpressionEngine/ExpressionEngine/issues/474) where entries created via Moblog had blank body text.
-  - Resolved [#522](https://github.com/ExpressionEngine/ExpressionEngine/issues/522) where users could be prematurely logged out of the CP.
-  - Resolved [#658](https://github.com/ExpressionEngine/ExpressionEngine/issues/658) where validation errors where not cleared on required Relationship fields in the Entry Publish Form.
-  - Resolved [#659](https://github.com/ExpressionEngine/ExpressionEngine/issues/659) where error messages when creating a member did not reveal to the user what was wrong.
-  - Resolved [#663](https://github.com/ExpressionEngine/ExpressionEngine/issues/663) where permissions were being assigned to incorrect roles.
-  - Resolved [#668](https://github.com/ExpressionEngine/ExpressionEngine/issues/668) where super admins could disable their own access to the Control Panel and other important areas, essentially locking themselves out.
-
-
-### Beta 4 (Release: November 25, 2020)
-
-- **Enhancements** 🚀
-  - The Control Panel sidebar has been reorganized for better navigation.
-  - Fixed many responsive design issues with the Control Panel.
-  - Added warnings if Live Preview cannot be used because of CORS protection.[ reference Issue #584](https://github.com/ExpressionEngine/ExpressionEngine/issues/584)
-  - Merged 5.4(released during 6.0 beta.) updates into 6.0. [See 5.4 changelog](https://docs.expressionengine.com/latest/installation/changelog.html#version-540)   
-
-- **Bug Fixes** 💃🐛
-  - Resolved [#618](https://github.com/ExpressionEngine/ExpressionEngine/issues/618) where a field's settings were not cleared after change the field to another similar fieldtype.
-  - Resolved [#617](https://github.com/ExpressionEngine/ExpressionEngine/issues/617) where a Grid fieldtype Min/Max settings were not being obeyed when used inside a Fluid field
-  - Resolved [#616](https://github.com/ExpressionEngine/ExpressionEngine/issues/616) where the RTE Toolbar was not rendering from inside a Grid Field that's inside a Fluid field.
-  - Resolved a bug where a user could not select a file from the selector in a File Grid field within a fluid field.
-  - Resolved a bug where some Member forms seemed hardcoded to return to `/member` despite having the Profile URL segment set to something else.
-  - Resolved errors with the `{exp:member:edit_profile}` tag
-  - Added back support for `tbl-bulk-act` class which created issues for legacy add-ons using bulk edit functions select menus.
-  - Resolved a bug where the 1-Click Updater would stop during Preflight Check because it was not checking for trailing slashes in `base_path`.
-  - Resolved a bug where a member roles with users assigned to it could not be deleted.    
-  
-  
-- **Documentation** 📝
-  - Updated docs for creating form views in the Control Panel [Docs 94](https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/issues/94)
-  - Merged 5.4(released during 6.0 beta) updates into 6.0 documentation
-
-### Beta 3 (Release: November 5, 2020)
-- **Enhancements** 🚀
-  - New filters bar with better layout, simpler search, and individual filter clearing!
-  - [`allow_php` config override](general/system-configuration-overrides.md#allow_php) now needs to be set in config.php to be able to enable [PHP in templates](templates/overview.md#php-in-templates).
-  - The Blacklist/Whitelist Module for ExpressionEngine has been renamed to Block and Allow Module.
-  - `upload_file_name_blacklist` config override renamed to `upload_blocked_file_names`
-  - Upload Directory and Upload Path are now populated with `{base_url}` and `{base_path}` by default when creating new Upload Directories.
-  - `exp_sites.site_pages` data type has been changed to MEDIUMTEXT.
-  - The success notification for a saved entry now links back to the saved entry.
-  - New member groups no longer have access to HTTP-protected templates by default [#279](https://github.com/ExpressionEngine/ExpressionEngine/issues/279).
-  - Moved language files from `system/ee/legacy` folder to `system/ee/language`.
-  - Improved error message for removed models and tables.
-  - Updated default system error messages to use new v6 design.
-  - Updated styles for 1-Click Updater and Installer Screens
-
-- **Documentation** 📝
-  - Added docs for adding the `aliases` key to [add-on-setup.php file](development/addon-setup-php-file.md#aliases).
-  - Added docs for new [`allow_php` config override](general/system-configuration-overrides.md#allow_php).
-
-- **Bug Fixes** 💃🐛
-  - Resolved [#554](https://github.com/ExpressionEngine/ExpressionEngine/issues/554) where the selector to change number of displayed items per page was having no affect on translations page in CP.
-  - Resolved [#581](https://github.com/ExpressionEngine/ExpressionEngine/issues/581) where not clearing cache during an upgrade caused issue with a previously removed MySQL table.
-  - Resolved [#582](https://github.com/ExpressionEngine/ExpressionEngine/issues/582) where there was an inconsisteny in the fieldtype properties of the Toggle fieldtype.
-  - Resolved [#583](https://github.com/ExpressionEngine/ExpressionEngine/issues/583) where using fieldtype name to get addon icon was causing an error.
-  - [#586](https://github.com/ExpressionEngine/ExpressionEngine/issues/586) - supressed deprecation message and moving logging deprecation message to the CP's Developer Log.
-  - Resolved [#589](https://github.com/ExpressionEngine/ExpressionEngine/issues/589) where putting line breaks in the `{pagination_links}` tag would cause rendering issues.
-  - Resolved [#590](https://github.com/ExpressionEngine/ExpressionEngine/issues/590) where a new grid row could not be deleted when there is only one row.
-  - Resolved [#594](https://github.com/ExpressionEngine/ExpressionEngine/issues/594) where Live Preview button is not fixed to top of window when the entry editor form is scrolled vertically.
-  - Resolved [#596](https://github.com/ExpressionEngine/ExpressionEngine/issues/596) which showed an invalid links to EE Docs for Members.
-  - Resolved issue where new template groups were not recognized on a blank install until the user also creates a new template group in the Template Manager.
-  - Resolved [#431](https://github.com/ExpressionEngine/ExpressionEngine/issues/431) where the EE Block/Allow list was not able to be downloaded from within the Block/Allow Module.
-
-
-
-### Beta 2 (Release: October 20, 2020)
-- **Enhancements** 🚀
-  - Updated the Members File Converter Utility to help users understand what it does.
-  - Updated styling for the SQL Manager Utility.
-  - Updated styling for results being displayed in the SQL Query Utility
-  - Added "Make Sticky" to the bulk edit options for entires.
-  - Updated styles for the Template Partial editor which was previously set to a small max-height. [#568](https://github.com/ExpressionEngine/ExpressionEngine/issues/568)
-  - Updated styles for the RTE field to better represent paragraph spacing and other block elements. [#562](https://github.com/ExpressionEngine/ExpressionEngine/issues/562)
-  - Added subscript, superscript, code editor buttons to RTE field. [#559](https://github.com/ExpressionEngine/ExpressionEngine/issues/559)
-
-
-- **Documentation** 📝
-  - Added new RTE Docs. [Extension Hooks](development/extension-hooks/global/rte.md), [RTE Fieldtype](fieldtypes/rte.md), [RTE Addon](add-ons/rte.md)
-  - Updated docs for using the File field as a tag pair. [File Fieldtype](fieldtypes/file.md#using-as-modifier-tags-pairs)
-  - Updated docs for upgrading from v2 to v6. [User Guide #92](https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/issues/92)
-  - Added more documentation to Member Management tags. [Member Management](member/index.md)
-  - General editorial updates
-
-- **Bug Fixes** 💃🐛
-  - Fixed a bug where Member template tags were not respecting `site_url` setting.
-  - Fixed a bug where `{path='logout'}` caused too many redirects.
-  - Fixed [#563](https://github.com/ExpressionEngine/ExpressionEngine/issues/563) where toggling the selector to allow multiple relationships on a Relationship field had no effect.
-  - Fixed a bug where there was no "No Results" message in the File Manager when thumbnail view was activated and there where no files to display.
-  - Fixed a bug where a user may not be able to get back to the Login screen after a required password reset.
-  - Fixed [#551](https://github.com/ExpressionEngine/ExpressionEngine/issues/551) where the new RTE field did not work within a grid field.
-  - Fixed [#546](https://github.com/ExpressionEngine/ExpressionEngine/issues/546) where the Color Picker field's color selector overflowed the row when in a grid.
-  - Fixed [#553](https://github.com/ExpressionEngine/ExpressionEngine/issues/553) where a grid row was not added by default when the field's settings required 1 row minimum.
-  - Fixed [#545](https://github.com/ExpressionEngine/ExpressionEngine/issues/545) where a grid row was only removed by clicking the delete icon and not by clicking elsewhere in the button.
-  - Fixed [#545](https://github.com/ExpressionEngine/ExpressionEngine/issues/545) where a grid row was only removed by clicking the delete icon and not by clicking elsewhere in the button.
-  - Fixed [#578](https://github.com/ExpressionEngine/ExpressionEngine/issues/545) where the outline of a grid row delete icon was still shown even though you could not delete the row based on minimum row settings in the field.
-  - Fixed [#544](https://github.com/ExpressionEngine/ExpressionEngine/issues/544) where the Date tab in the entry rendered lowercase after saving the entry.
-  - Fixed [#567](https://github.com/ExpressionEngine/ExpressionEngine/issues/567) where CSS was not being loaded on the installation page in some environments.
-  - Fixed [#456](https://github.com/ExpressionEngine/ExpressionEngine/issues/456) where error was displayed when reloading the Control Panel after a session timeout.
-  - Fixed [#565](https://github.com/ExpressionEngine/ExpressionEngine/issues/565) where an entry modal did not respect the dark mode setting.
-  - Fixed [#574](https://github.com/ExpressionEngine/ExpressionEngine/issues/574), a typo in `utilites_lang.php`
-
-
-### Beta 1 (Release: October 14, 2020)
+## Version 6.0.0 (Release: December 14, 2020)
 - **New Control Panel Design** 🎨
   - Added Jump Menu. Navigate ExpressionEngine fast
   - Many new changes and improvements that make the control panel cleaner, and more delightful to use
@@ -162,9 +43,8 @@
     - You can now comment EE code with command + / in the template editor
     - You can now select a single line of text when clicking on a gutter number in the template editor
     - Improved EE syntax highlighting
-  <!-- - **FOR REVIEW Made it easier to create Custom System Messages** -->
   - New Member Template examples have been added
-  - New entry manager (Entries listing page)
+  - New entry manager (Entries listing page) with filters bar, better layout, simpler search, and individual filter clearing!
   - Live preview has been modified to make add-on support easier
   - New Variable modifiers to crop, resize, and rotate images
   - Member Groups have been replaced with member roles.
@@ -174,12 +54,24 @@
     - New RTE
     - New Color Picker Field
     - New Relationship field
-  - Began working toward ADA compliance    
+  - Began working toward ADA compliance
+  - Users can now upload [WebP](https://developers.google.com/speed/webp) images via the File Manager [#304](https://github.com/ExpressionEngine/ExpressionEngine/issues/304)
+  - The Blacklist/Whitelist Module for ExpressionEngine has been renamed to Block and Allow Module.
+  - Upload Directory and Upload Path are now populated with `{base_url}` and `{base_path}` by default when creating new Upload Directories.
+  - The success notification for a saved entry now links back to the saved entry.
+  - Improved error message for removed models and tables.
+  - Updated default system error messages to use new v6 design.
+  - Updated styles for 1-Click Updater and Installer Screens
+
+
 
 - **Bug Fixes** 💃🐛 
   - Resolved bugs in the updaters where MySQL errors could be triggered.
   - Fixed Live Preview functionality with Grid and Fluid Fields
-  - Fixed a bug where the debugger code highlighter would also highlight and overwrite other code blocks on a site's page    
+  - Fixed a bug where the debugger code highlighter would also highlight and overwrite other code blocks on a site's page
+  - Resolved issue where new template groups were not recognized on a blank install until the user also creates a new template group in the Template Manager.
+  - Resolved [#431](https://github.com/ExpressionEngine/ExpressionEngine/issues/431) where the EE Block/Allow list was not able to be downloaded from within the Block/Allow Module.
+    
 
 - **Developers** 💻
   - Moved tests to use [Cypress](https://www.cypress.io/)
@@ -194,3 +86,9 @@
   - Forgot Password emails will now respect your "Mail Format" preference (essentially enabling the ability to use - HTML in Forgot Password emails).
   - Fixed a bug where table bulk selections can be saved by the browser on page reload, but don't show in the UI.
   - New base classes can be extended as part of add-ons (setting the stage for future functionality (migrations etc.- )  Not a required change to add-ons but encouraged. 
+  - [`allow_php` config override](general/system-configuration-overrides.md#allow_php) now needs to be set in config.php to be able to enable [PHP in templates](templates/overview.md#php-in-templates).
+  - `upload_file_name_blacklist` config override renamed to `upload_blocked_file_names`
+  - `exp_sites.site_pages` data type has been changed to MEDIUMTEXT.
+  - Moved language files from `system/ee/legacy` folder to `system/ee/language`.
+  - Added `$config['legacy_member_templates'] = 'y';` to allow legacy member functionality which is now not allowed by default [see System Config Overrides](general/system-configuration-overrides.html#legacy_member_templates).    
+  - New member groups no longer have access to HTTP-protected templates by default [#279](https://github.com/ExpressionEngine/ExpressionEngine/issues/279).
