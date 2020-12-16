@@ -92,6 +92,19 @@ Checks whether user has any of given roles, supplied as array of IDs or names.
 | \$roles | `Array`   | Array of IDs or names of member roles |
 | Returns      | `Boolean` | TRUE if user has role FALSE if not   |
 
+### `rolesThatHave($permission, $site_id = NULL, $fuzzy = false)`
+
+Checks a session object for any matches against a collection of permissions, from one on up.
+
+| Parameter    | Type      | Description                    |
+| ------------ | --------- | ------------------------------ |
+| \$permission | `String`   | Permission name, or start of permission name |
+| \$site_id | `Int`   | Site ID, defaults to current site |
+| \$fuzzy | `Boolean`   | TRUE if first parameter is start of permission name |
+| Returns      | `Array` | Array of Role IDs   |
+
+
+
 ## Available Permissions
 
 The following are permission names available for validating a user's permissions using the Permission Service methods.
