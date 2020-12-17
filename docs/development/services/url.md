@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -46,7 +46,7 @@ For example:
 
 ## CP/URL Service Methods
 
-**class `EllisLab\ExpressionEngine\Library\CP\URLFactory`**
+**class `ExpressionEngine\Library\CP\URLFactory`**
 
 [TOC=3]
 
@@ -89,7 +89,7 @@ Decodes a base64 encoded, serialized URL object.
 
 ## CP/URL Object Methods
 
-**class `EllisLab\ExpressionEngine\Library\CP\URL`**
+**class `ExpressionEngine\Library\CP\URL`**
 
 [TOC=3]
 

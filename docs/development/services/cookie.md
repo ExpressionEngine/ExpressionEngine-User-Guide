@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -27,7 +27,7 @@ Retriving cookie data:
 
 ## Cookie Methods
 
-**class `EllisLab\ExpressionEngine\Service\Cookie\Cookie`**
+**class `ExpressionEngine\Service\Cookie\Cookie`**
 
 ### `getSignedCookie($cookie_name, $xss_clean = FALSE)`
 

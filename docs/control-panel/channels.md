@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -71,7 +71,7 @@ Statuses have the following settings:
 
 - **Name** -- The name for the status. It is what will be displayed when creating a new channel entry.
 - **Highlight color** -- Specify a highlight color for this status. This is the color of the status name in the [Entry Manager](control-panel/entry-manager.md) main table. This field will take standard [CSS color values](http://www.w3.org/TR/REC-CSS1#color-units) as input.
-- **Status access** -- Allows you to specify whether or not a Member Group can access a particular status in the Publish page. Only works with members that have access to the Control Panel (besides the Super Admin group). This feature can be used to establish a workflow for multiple Member Groups. One group might submit entries that are placed in a "closed" or "draft" status, while another group can review the entry and assign it to be "open".
+- **Status access** -- Allows you to specify whether or not a Member Role can access a particular status in the Publish page. Only works with members that have access to the Control Panel (besides the Super Admin group). This feature can be used to establish a workflow for multiple Roles. One group might submit entries that are placed in a "closed" or "draft" status, while another group can review the entry and assign it to be "open".
 
 ---
 
@@ -111,7 +111,7 @@ NOTE: **Note:** We recommend using the default base URL variable `{base_url}` de
 - **Allow comments default?** -- When set to yes, the "Allow comments" option on the publish page will be set to "yes" by default
 - **Require membership?** -- Determines whether visitors to the website must be members in order to post. If this preferences is set to "Yes" and an unregistered visitor attempts to post a comment the comment will not be accepted and the visitor will receive a message.
 - **Require Email?** -- You can optionally require that anyone posting comments must list an email address. You can determine in your [Template Manager](control-panel/template-manager.md) whether or not the address is shown publicly, but requiring an email address in order to post comments can help reduce the number of "spam" comments you receive since the visitor must submit a valid email address.
-- **Moderate comments?** -- If this option is enabled, then comments will not immediately appear on the site. Instead, the comments will go into a queue and await review/moderation by an administrator. Member Groups (such as the SuperAdmin Group by default) can be set to bypass comment moderation and have their comments posted immediately. That option can be set at `Members --> Member Groups`.
+- **Moderate comments?** -- If this option is enabled, then comments will not immediately appear on the site. Instead, the comments will go into a queue and await review/moderation by an administrator. Member Roles (such as the SuperAdmin Roles by default) can be set to bypass comment moderation and have their comments posted immediately. That option can be set at `Members --> Member Roles`.
 - **Maximum characters allowed?** -- You may set a maximum number of characters allowed in any comment. Setting this preference to 0 (zero) will not place a restriction on the number of characters allowed.
 - **Comment time limit** -- This is the optional number of seconds that must lapse after a comment is posted before that same user can post another comment. This setting can help reduce comment "spam". The preference can be left blank or set to 0 (zero) if you do not want to impose a limit.
 - **Comment expiration** -- The number of days after an entry is posted in which to allow comments. After that period has expired, the entry will be closed to commenting and the comment form will no longer appear. Existing comments will still be displayed. Enter 0 (zero) for no expiration. Note that this preference sets the _default_ setting for the channel. The setting can be overridden and changed on a per-entry basis. You may override this setting in the [Comment Module Control Panel](comment/control-panel.md) section of the Comment Module so that comments are set to be moderated rather than closed once the expiration period is passed. If you also select the checkbox accompanying this setting, then all existing entries in this channel will be updated to reflect the new setting when you submit.
@@ -124,7 +124,7 @@ NOTE: **Note:** We recommend using the default base URL variable `{base_url}` de
 
 **Control Panel Location: `Developer > Channels > Layouts`**
 
-The Publish/Edit page can be customized, with the layout saved per member group, per channel.
+The Publish/Edit page can be customized, with the layout saved per member role, per channel.
 
 ### Create/Edit Form Layouts
 

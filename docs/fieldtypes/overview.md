@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -23,6 +23,7 @@ ExpressionEngine has the following built-in fieldtypes:
 - [Relationships](fieldtypes/relationships.md)
 - [Rich Text Editor](fieldtypes/rte.md)
 - [Checkboxes, Radio Buttons, Select, Multiselect](fieldtypes/select.md)
+- [Color Picker](fieldtypes/colorpicker.md)
 - [Text Input](fieldtypes/text.md)
 - [Textarea](fieldtypes/textarea.md)
 - [Toggle](fieldtypes/toggle.md)

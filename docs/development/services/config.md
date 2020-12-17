@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -25,7 +25,7 @@ NOTE: **Note:** This does not replace `ee()->config`
 
 ## Config Service Methods
 
-**class `EllisLab\ExpressionEngine\Service\Config\Factory`**
+**class `ExpressionEngine\Service\Config\Factory`**
 
 [TOC=3]
 
@@ -59,7 +59,7 @@ Get a config item
 
 ## Directory Object Methods
 
-**class `EllisLab\ExpressionEngine\Service\Config\Directory`**
+**class `ExpressionEngine\Service\Config\Directory`**
 
 [TOC=3]
 
@@ -91,7 +91,7 @@ Returns a ConfigFile class representing the config file
 
 ## File Objet Methods
 
-**class `EllisLab\ExpressionEngine\Service\Config\File`**
+**class `ExpressionEngine\Service\Config\File`**
 
 [TOC=3]
 

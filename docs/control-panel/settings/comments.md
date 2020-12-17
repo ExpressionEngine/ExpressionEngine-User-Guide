@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -27,7 +27,7 @@ When set to "enable", commenting will use the [word censoring](control-panel/set
 
 If this option is enabled, then comments will not immediately appear on the site. Instead, the comments will go into a queue and await review/moderation by an administrator.
 
-Member Groups (such as the SuperAdmin Group by default) can be set to bypass comment moderation and have their comments posted immediately. That option can be set at `Members > Member Groups`.
+Member Roles (such as the SuperAdmin Role by default) can be set to bypass comment moderation and have their comments posted immediately. That option can be set at `Members > Member Roles`.
 
 ### Comment edit time limit (in seconds)
 

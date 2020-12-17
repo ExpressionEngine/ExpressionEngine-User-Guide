@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -35,7 +35,7 @@ This variable will be substituted for the global character set (UTF-8). It is ty
 
 The session id for the control panel. This is the value needed in the "S=" portion of the control panel URL. Only output for logged-in members who have access to the Control Panel, for instance to build a front-end URL to an add-on in the control panel:
 
-    {if logged_in_group_id == 1}
+    {if logged_in_role_id == 1}
       &bull; <a href="{cp_url}?/cp/addons/settings/my_addon&S={cp_session_id}"></a>
     {/if}
 
@@ -141,7 +141,7 @@ This variable allows you to wrap a Template in another. Please see the [Template
 
 ### `{member_group}`
 
-The Member Group ID number for the currently logged-in user.
+The Primary Role ID number for the currently logged-in user.
 
 ### `{member_profile_link}`
 
@@ -261,15 +261,15 @@ The email address for the currently logged-in user.
 
 ### `{logged_in_group_description}`
 
-The Member Group description for the currently logged-in user.
+The Primary Role description for the currently logged-in user.
 
-### `{logged_in_group_id}`
+### `{logged_in_role_id}`
 
-The Member Group ID number for the currently logged-in user.
+The Primary Role ID number for the currently logged-in user.
 
-### `{logged_in_group_title}`
+### `{logged_in_role_title}`
 
-The title of the member group for the currently logged-in user.
+The title of the Primary Role for the currently logged-in user.
 
 ### `{logged_in_ip_address}`
 

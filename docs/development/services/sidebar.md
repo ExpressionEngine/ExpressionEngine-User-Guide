@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -17,70 +17,45 @@ lang: php
 
 ## Simple Example
 
-The Control Panel's left sidebar is built with the Sidebar Service:
+```php
+// The Control Panel's left sidebar is built with the Sidebar Service:
+$sidebar = ee('CP/Sidebar')->make();
 
-    $sidebar = ee('CP/Sidebar')->make();
+// You can add items:
+$item = $sidebar->addItem(lang('new'), ee('CP/URL', 'addons/settings/fortune_cookie/create'));
 
-You can add a header:
+// Items can have an icon:
+$item->withIcon('truck');
 
-    $header = $sidebar->addHeader($text, $url);
+// Items may be marked as active:
+$item->isActive();
 
-Headers may have a button:
+// You can add dividers:
+$sidebar->addDivider();
 
-    $header->withButton($text, $url);
+// You can add a header:
+$header = $sidebar->addHeader('Settings');
 
-Header's may have a list. A list may be a basic list or a folder list:
+// Header's may have a list. A list may be a basic list or a folder list:
+$basic_list  = $header->addBasicList();
+$folder_list = $header->addFolderList($name);
 
-    $basic_list  = $header->addBasicList();
-    $folder_list = $header->addFolderList($name);
+// Lists have items:
+$basic_item  = $basic_list->addItem($text, $url);
+$folder_item = $folder_list->addItem($text, $url)
+    ->withEditUrl($url)
+    ->withRemoveConfirmation($msg)
+    ->identifiedBy($id);
 
-Lists have items:
+// Folder list items may also be marked as default:
+$folder_item->asDefaultItem();
 
-    $basic_item  = $basic_list->addItem($text, $url);
-    $folder_item = $folder_list->addItem($text, $url)
-      ->withEditUrl($url)
-      ->withRemoveConfirmation($msg)
-      ->identifiedBy($id);
+// Basic list items may also be marked as a delete action:
+$basic_item->asDeleteAction();
 
-All list items may be marked as active:
-
-    $item->isActive();
-
-Folder list items may also be marked as default:
-
-    $folder_item->asDefaultItem();
-
-Basic list items may also be marked as a delete action:
-
-    $basic_item->asDeleteAction();
-
-You can add a folder list directly to a sidebar without a header:
-
-    $folder_list = $sidebar->addFolderList($name);
-
-Sidebars can have an action bar at the bottom with one or two buttons:
-
-    $sidebar->addActionBar()
-      ->withLeftButton(
-        $left_button_text,
-        $left_button_url
-      )->withRightButton(
-        $right_button_text,
-        $right_button_url
-      );
-
-## Complete Example
-
-This will build a sidebar with a header, which has a button and two items underneath it:
-
-    $sidebar = ee('CP/Sidebar')->make();
-
-    $fortunes = $sidebar->addHeader(lang('fortunes'))
-      ->withButton(lang('new'), ee('CP/URL', 'addons/settings/fortune_cookie/create'));
-
-    $fortunes_list = $fortunes->addBasicList();
-    $fortunes_list->addItem(lang('recent_fortunes'), ee('CP/URL', 'addons/settings/fortune_cookie/recent'));
-    $fortunes_list->addItem(lang('archived_fortunes'), ee('CP/URL', 'addons/settings/fortune_cookie/archived'));
+// You can add a folder list directly to a sidebar without a header:
+$folder_list = $sidebar->addFolderList($name);
+```
 
 ## Reorderable Folder Lists
 
@@ -113,7 +88,7 @@ Where `'list-name'` is the unique name you have your folder list. A jQuery objec
 
 ## CP/Sidebar Methods
 
-**class `EllisLab\ExpressionEngine\Service\Sidebar\Sidebar`**
+**class `ExpressionEngine\Service\Sidebar\Sidebar`**
 
 [TOC=3]
 
@@ -143,6 +118,20 @@ Adds a header to the sidebar
 | \$url     | CP/URL or string | An optional CPURL object or string containing the URL for the text. |
 | Returns   | `Header`         | A new Header object.                                                |
 
+### `addItem($text, $url = NULL)`
+
+Adds a BasicItem to the sidebar
+
+| Parameter | Type             | Description                                                         |
+| --------- | ---------------- | ------------------------------------------------------------------- |
+| \$text    | `String`         | The item text                                                       |
+| \$url     | CP/URL or string | An optional CPURL object or string containing the URL for the text. |
+| Returns   | `BasicItem`      | A new BasicItem object.                                                |
+
+### `addDivider()`
+
+Adds a divider to the sidebar
+
 ### `addFolderList($name)`
 
 Adds a folder list to the sidebar
@@ -162,27 +151,9 @@ Adds an action bar to the bottom of the sidebar
 
 ## Header Methods
 
-**class `EllisLab\ExpressionEngine\Service\Sidebar\Header`**
+**class `ExpressionEngine\Service\Sidebar\Header`**
 
 [TOC=3]
-
-### `withUrl($url)`
-
-Sets the URL property of the header
-
-| Parameter | Type             | Description                                                 |
-| --------- | ---------------- | ----------------------------------------------------------- |
-| \$url     | CP/URL or string | A CPURL object or string containing the URL for the header. |
-| Returns   | `Header`         | \$this                                                      |
-
-### `urlIsExternal($external = TRUE)`
-
-Sets the URL is external property
-
-| Parameter  | Type             | Description                          |
-| ---------- | ---------------- | ------------------------------------ |
-| \$external | `Bool`(optional) | TRUE if it is external, FALSE if not |
-| Returns    | `Header`         | \$this                               |
 
 ### `isActive()`
 
@@ -219,6 +190,18 @@ Adds a folder list under this header
 | \$name    | `String`     | The name of the folder list |
 | Returns   | `FolderList` | A new FolderList object     |
 
+### `withUrl($url)`
+
+Sets the URL property of the header
+
+WARN: **Deprecated** since v6.0.0. When a link is needed, a sidebar item should be used instead: `$sidebar->addItem()`. Headers should be used to mark sections of the sidebar, not as links.
+
+### `urlIsExternal($external = TRUE)`
+
+Sets the URL is external property
+
+WARN: **Deprecated** since v6.0.0. When a link is needed, a sidebar item should be used instead: `$sidebar->addItem()`. Headers should be used to mark sections of the sidebar, not as links.
+
 ## BasicList Methods
 
 ### `addItem($text, $url = NULL)`
@@ -233,9 +216,18 @@ Adds an item to the list
 
 ## BasicItem Methods
 
-**class `EllisLab\ExpressionEngine\Service\Sidebar\BasicItem`**
+**class `ExpressionEngine\Service\Sidebar\BasicItem`**
 
 [TOC=3]
+
+### `withIcon($icon)`
+
+Sets the icon for the item
+
+| Parameter | Type             | Description                                               |
+| --------- | ---------------- | --------------------------------------------------------- |
+| \$icon    | string           | Name of the icon                                          |
+| Returns   | `BasicItem`      | \$this                                                    |
 
 ### `withUrl($url)`
 
@@ -274,7 +266,7 @@ Marks the item as a delete action
 
 ## FolderList Methods
 
-**class `EllisLab\ExpressionEngine\Service\Sidebar\FolderList`**
+**class `ExpressionEngine\Service\Sidebar\FolderList`**
 
 [TOC=3]
 
@@ -325,9 +317,18 @@ Allows the folder list to be reordered.
 
 ## FolderItem Methods
 
-**class `EllisLab\ExpressionEngine\Service\Sidebar\FolderItem`**
+**class `ExpressionEngine\Service\Sidebar\FolderItem`**
 
 [TOC=3]
+
+### `withIcon($icon)`
+
+Sets the icon for the item
+
+| Parameter | Type             | Description                                               |
+| --------- | ---------------- | --------------------------------------------------------- |
+| \$icon    | string           | Name of the icon                                          |
+| Returns   | `FolderItem`      | \$this                                                    |
 
 ### `withUrl($url)`
 
@@ -424,7 +425,7 @@ Sets the identity value for this item which is used when this item is removed.
 
 ## ActionBar Methods
 
-**class `EllisLab\ExpressionEngine\Service\Sidebar\ActionBar`**
+**class `ExpressionEngine\Service\Sidebar\ActionBar`**
 
 [TOC=3]
 

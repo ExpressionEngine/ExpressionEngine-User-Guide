@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -27,7 +27,7 @@ Alerts are for providing feedback on an action and calling attention to warnings
 
 ## CP/Alert Service Methods
 
-**class `EllisLab\ExpressionEngine\Service\Alert\AlertCollection`**
+**class `ExpressionEngine\Service\Alert\AlertCollection`**
 
 [TOC=3]
 
@@ -104,7 +104,7 @@ Gets the rendered value of the standard alert.
 
 ## Alert Object Methods
 
-**class `EllisLab\ExpressionEngine\Service\Alert\AlertCollection`**
+**class `ExpressionEngine\Service\Alert\AlertCollection`**
 
 [TOC=3]
 

@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -23,9 +23,9 @@ ExpressionEngine uses the Mime Type class whenever a file's, or buffer's, Mime t
 
 NOTE: **Note:** The Mime Type library uses the Mime Type at `system/ee/legacy/config/mimes.php` when determining if a file is safe for uploading or is an image.
 
-NOTE: **Note:** There is a `mime_whitelist_additions` [config override](general/system-configuration-overrides.md#mime_whitelist_additions) for adding installation specific Mime Types to the whitelist.
+NOTE: **Note:** There is a `mime_whitelist_additions` [config override](general/system-configuration-overrides.md#mime_whitelist_additions) for adding installation specific Mime Types to the allow list.
 
-NOTE: **Note:** There is a `mime_whitelist_member_exception` [config override](general/system-configuration-overrides.md#mime_whitelist_member_exception) and a `mime_whitelist_member_group_exception` [config override](general/system-configuration-overrides.md#mime_whitelist_member_group_exception) which will bypass the whitelist for those members and/or member groups.
+NOTE: **Note:** There is a `mime_whitelist_member_exception` [config override](general/system-configuration-overrides.md#mime_whitelist_member_exception) and a `mime_whitelist_member_group_exception` [config override](general/system-configuration-overrides.md#mime_whitelist_member_group_exception) which will bypass the whitelist for those members and/or member roles.
 
 ## Methods
 

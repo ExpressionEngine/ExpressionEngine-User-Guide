@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -29,7 +29,7 @@ The main table shows the following columns:
 
 ### Comment Administration Privileges
 
-Comment administration permissions are set on a per member group basis in [Create/Edit Member Groups](control-panel/member-manager.md#member-groups).
+Comment administration permissions are set on a per member role basis in [Create/Edit Member Roles](control-panel/member-manager.md#member-roles).
 
 - **Can Moderate Comments**: Can view all comments and change the status of any comment.
 - **Can edit their own comments**: Can view and edit only comments they made.

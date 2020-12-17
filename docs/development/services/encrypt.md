@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -45,7 +45,7 @@ To verify the data hasn't changed:
 
 ## Encrypt Methods
 
-**class `EllisLab\ExpressionEngine\Service\Encrypt\Encrypt`**
+**class `ExpressionEngine\Service\Encrypt\Encrypt`**
 
 [TOC=3]
 

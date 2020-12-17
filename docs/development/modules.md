@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -19,7 +19,7 @@ Modules are the most complex form of add-on. They can have their own database ta
 
 ## Basic File Structure
 
-Modules should be placed into the addons folder in a package and be named after that package name. At a minimum, there are 4 required files for any module:
+Modules should be placed into the add-ons folder in a package and be named after that package name. At a minimum, there are 4 required files for any module:
 
 - `addons/module_name/upd.module_name.php` - installs, uninstalls and updates the module
 - `addons/module_name/mcp.module_name.php` - the backend control panel
@@ -230,9 +230,9 @@ The settings array elements:
 
 | Parameter | Type                                                                         | Description                                                                                                                                                                                                            |
 | --------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \$entry   | <small>`EllisLab\ExpressionEngine\Module\Channel\Model\ChannelEntry`</small> | The channel entry entity                                                                                                                                                                                               |
+| \$entry   | <small>`ExpressionEngine\Module\Channel\Model\ChannelEntry`</small> | The channel entry entity                                                                                                                                                                                               |
 | \$values  | `array`                                                                      | an associative array with field names as keys and form submission data as the value (i.e. `array('fortune' => 'All your hard work will soon pay off.'))`. The keys are derrived from the data returned by `display()`. |
-| Returns   | <small>`EllisLab\ExpressionEngine\Service\Validation\Result`</small>         | A result object                                                                                                                                                                                                        |
+| Returns   | <small>`ExpressionEngine\Service\Validation\Result`</small>         | A result object                                                                                                                                                                                                        |
 
 Allows you to validate the data after the publish form has been submitted but before any additions to the database:
 
@@ -250,7 +250,7 @@ Allows you to validate the data after the publish form has been submitted but be
 
 | Parameter | Type                                                                         | Description                                                                                                                                                                                                           |
 | --------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \$entry   | <small>`EllisLab\ExpressionEngine\Module\Channel\Model\ChannelEntry`</small> | The channel entry entity                                                                                                                                                                                              |
+| \$entry   | <small>`ExpressionEngine\Module\Channel\Model\ChannelEntry`</small> | The channel entry entity                                                                                                                                                                                              |
 | \$values  | `array`                                                                      | an associative array with field names as keys and form submission data as the value (i.e. `array('fortune' => 'Do not make extra work for yourself.'))`. The keys are derrived from the data returned by `display()`. |
 | Returns   | `Void`                                                                       |                                                                                                                                                                                                                       |
 

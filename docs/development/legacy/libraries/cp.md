@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -148,7 +148,7 @@ Creates the a the following link: `https://example.com?URL=https://example.com`
 | \$which   | `String` | permission string to check for                                                       |
 | Returns   | `String` | `TRUE` if they have access, `FALSE` if they don't or if the permission doesn't exist |
 
-When a user or logged in member visits an EE site, the Session class ascribes user data to them that, among other things, pertains to their member groups's access to various parts of the site. Returns `FALSE` if they have access, `TRUE` if they do:
+When a user or logged in member visits an EE site, the Session class ascribes user data to them that, among other things, pertains to their member role's access to various parts of the site. Returns `FALSE` if they have access, `TRUE` if they do:
 
     if ( ! ee()->cp->allowed_group('can_delete_all_entries'))
     {
@@ -187,4 +187,4 @@ Modules have certain actions for forms, links, etc. that are recognized via an a
 
 ## Publish Page Layout Methods
 
-Administrators may extensively customize publish pages on a per member group and per channel basis. Since these custom layouts are saved as a serialized array in the database, any additions or deletions to publish page tabs and fields must be synced to any saved layouts. The control panel library provides 4 methods to facilitate custom layout updates. (See also [Tab File Function Reference](development/modules.md#tab-file-function-reference)
+Administrators may extensively customize publish pages on a per member role and per channel basis. Since these custom layouts are saved as a serialized array in the database, any additions or deletions to publish page tabs and fields must be synced to any saved layouts. The control panel library provides 4 methods to facilitate custom layout updates. (See also [Tab File Function Reference](development/modules.md#tab-file-function-reference)

@@ -7,7 +7,7 @@ lang: ee
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -141,7 +141,7 @@ Place this authorization line as the first line in your email
 
 Note that if you have the Authorization Required in Email? option turned on for this Moblog in the Control Panel then you **must** include this user authorization. If you do not include it or if the authorization fails, the entry will not be posted. The Delete Unauthorized Moblog Emails? setting will determine whether or not the email is deleted from the server in these cases.
 
-Further, note that the member account being used must be part of a Member Group that has permission to post entries to this channel.
+Further, note that the member account being used must be part of a Role that has permission to post entries to this channel.
 
 ## Check Moblog Tag
 

@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -66,7 +66,7 @@ Now that our Table object is set up, let's start describing our data. First, we'
       )
     );
 
-NOTE: **Note:** Be sure to include the Table class's namespace at the top of your file to use its constants: `use EllisLab\ExpressionEngine\Library\CP\Table;`
+NOTE: **Note:** Be sure to include the Table class's namespace at the top of your file to use its constants: `use ExpressionEngine\Library\CP\Table;`
 
 Notice we specified some extra parameters for two of the columns. The "Manage" column is going to be of type `COL_TOOLBAR` which can have various action buttons related to the individual Channel. And our last column is just for checkboxes, so that a user can select Channels to perform actions on them in bulk.
 

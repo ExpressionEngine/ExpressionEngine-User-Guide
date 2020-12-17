@@ -7,13 +7,17 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
 # Plugins
 
 [TOC]
+
+## Overview
+
+Plugins are used within Expression Engine Templates.  Once a plugin is made, its tags can be used anywhere in templates to help edit content. Below, tags and plugins are described as well as a walkthrough of how to build your own plugin.
 
 ## Tag Construction
 
@@ -43,7 +47,7 @@ There are two kinds of tags: Single tags and tag pairs. A single tag does not ha
 
     {exp:randomizer:set_one}
 
-Single tags are designed to return a single value. Tag pairs look like this:
+Single tags are designed to return a single value.  Tag pairs look like this:
 
     {exp:xml_encode}
         Stuff between the tags
@@ -86,6 +90,10 @@ Plugin file names are always lower case and they must be identical to the name o
 
     {exp:hello_world}
 
+NOTE: **Note:** The file should be saved in the folder that the `addon.setup.php` will later reference in the namespace key.  The root of this folder is system/user/addons.
+
+So for this example, the pi.hello_world.php should be located at system\user\addons\HelloWorld\pi.hello_world.php
+
 ## Creating the Class
 
 In the new file you've created add this class and constructor:
@@ -102,6 +110,8 @@ NOTE: **Note:** Class name must always be capitalized. This is the one exception
 
 And we'll create our `addon.setup.php` file to tell ExpressionEngine a bit about our plugin, which will also allow it to be installed in the Add-on Manager:
 
+NOTE: **Note:** Once your plugin is complete the Add-on Manager will need to be used to install it before the plugin's tags can be used
+
     <?php
     return [
       'author'         => 'Developer James',
@@ -109,9 +119,11 @@ And we'll create our `addon.setup.php` file to tell ExpressionEngine a bit about
       'name'           => 'Hello World',
       'description'    => 'Outputs a simple "Hello World" message to test plugins!',
       'version'        => '1.0.0',
-      'namespace'      => 'DeveloperJames\HelloWorld',
+      'namespace'      => 'HelloWorld',
       'settings_exist' => FALSE,
     ];
+
+Similar to above, the `addon.setup.php` file should be located at system\user\addons\HelloWorld\addon.setup.php
 
 ### Returning a Value
 
@@ -172,6 +184,8 @@ Each function would be accessible using these tags:
     {exp:hello_world:normal}
     {exp:hello_world:bold}
     {exp:hello_world:italic}
+
+
 
 ### Processing Content Within Tag Pairs
 
@@ -330,3 +344,18 @@ Here is the class syntax:
 ## Where do you go from here?
 
 Now that you understand the anatomy of a plugin, you can do whatever task you need. Your plugin can even have its own variables. For more information about this, and manipulating the tagdata in your plugin, check out the [Template Class](development/legacy/libraries/template.md).
+
+## Debugging
+
+Below are some possible errors you could be getting and how you can fix them.  Before anything else be sure that your plugin is installed from the Add-On manager.  In the control panel go to Developer --> Add-ons and check that your plugin is installed.
+
+#### Problem: The following tag has a syntax error: 
+
+   - Possible Solution: Check the spelling of your pi.nameofaddon.php and addon.settup.php file names. Both of these files need to be saved under system\user\addons\nameofplugin
+
+    
+
+#### Problem: The following tag cannot be processed:
+
+   - Possible Solution: Check the tag used in the template if it has three segments to it as in `exp:nameofplugin:function` make sure that the last segment is a function that exists in your pi. file.
+
