@@ -9,7 +9,7 @@
 
 # ExpressionEngine v6 Change Log
 
-## Version 6.0.0 (Release: December 16, 2020)
+## Version 6.0.0 (Release: December 17, 2020)
 - **New Control Panel Design** 🎨
   - Added Jump Menu. Navigate ExpressionEngine fast
   - Many new changes and improvements that make the control panel cleaner, and more delightful to use
