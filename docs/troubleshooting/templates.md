@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -15,7 +15,7 @@
 
 If you've enabled [HTTP Authentication](control-panel/template-manager.md#edit-template) for a template and authentication is failing:
 
-1.  Dirst check to make sure that you've also given access to the desired member group(s), and that the user you are authenticating with is from one of those groups.
+1.  First check to make sure that you've also given access to the desired member role(s), and that the user you are authenticating with has one of those roles assigned to them.
 2.  Double check that the username and password is correct by logging in to ExpressionEngine as that member.
 
 If it still fails to authenticate, it could be that the web server is not making the authentication details available to PHP (and thus unavailable to ExpressionEngine). This is common when the web server is running PHP-FPM and Apache for instance. In those cases, you can fix this by adding the following to the Apache VirtualHost or in your \`.htaccess\`:

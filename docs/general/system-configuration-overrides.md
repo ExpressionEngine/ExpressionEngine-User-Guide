@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -43,6 +43,8 @@ ExpressionEngine's settings are loaded in this order at runtime:
 4.  If a CP page is being served, a limited array of settings in `admin.php` are loaded and override any settings loaded from the database and the main configuration file.
 
 ## Overrides
+
+Click "Show List" below to list all available overrides, or scroll through the list of overrides and their descriptions further below.
 
 [TOC=3 hide]
 
@@ -140,7 +142,7 @@ Example Usage:
 
 ### `allow_pending_login`
 
-Set whether members of the Pending member group can log in or not. By default, Pending members cannot log in.
+Set whether members of the Pending member role can log in or not. By default, Pending members cannot log in.
 
 | Value | Behavior                                         |
 | ----- | ------------------------------------------------ |
@@ -150,6 +152,19 @@ Set whether members of the Pending member group can log in or not. By default, P
 Example Usage:
 
     $config['allow_pending_login'] = 'y';
+
+### `allow_php`
+
+Set whether the toggle to enable/disable PHP in templates is displayed.
+
+| Value | Behavior                                         |
+| ----- | ------------------------------------------------ |
+| y     | Show toggle to allow PHP in templates            |
+| n     | Hide toggle to allow PHP in templates (default)  |
+
+Example Usage:
+
+    $config['allow_php'] = 'y';
 
 ### `allow_signatures`
 
@@ -891,17 +906,17 @@ Example Usage:
 
 ### `default_member_group`
 
-Set the member group to which new users will be assigned.
+Set the primary member role to which new users will be assigned.
 
 | Value   | Description     |
 | ------- | --------------- |
-| integer | Member group ID |
+| integer | Member role ID |
 
 Example Usage:
 
     $config['default_member_group'] = '6';
 
-**Also found in CP:** `Settings --> Members`: [Default Member Group Assigned to New Members](control-panel/settings/members.md#default-member-group)
+**Also found in CP:** `Settings --> Members`: [Default Member Role Assigned to New Members](control-panel/settings/members.md#default-primary-role)
 
 ### `default_site_timezone`
 
@@ -1445,7 +1460,7 @@ Example Usage:
 
 ### `htaccess_path`
 
-Set the server path used by the [Blacklist/Whitelist](add-ons/blacklist.md) module to [write rules to your .htaccess file](add-ons/blacklist.md#writing-blacklist-to-htaccess-file).
+Set the server path used by the [Block/Allow](add-ons/blocklist.md) module to [write rules to your .htaccess file](add-ons/blocklist.md#writing-the-block-list-to-htaccess-file).
 
 | Value | Description                    |
 | ----- | ------------------------------ |
@@ -1565,6 +1580,19 @@ Example Usage:
     $config['is_system_on'] = 'y';
 
 **Also found in CP:** `Settings --> General Settings`: [Is system on? ](control-panel/settings/general.md#website-online)
+
+### `legacy_member_templates`
+
+Enables legacy member templates
+
+| Value | Behavior                                         |
+| ----- | ------------------------------------------------ |
+| y     | Legacy member templates enabled                  |
+| n     | Legacy member templates disabled (default)       |
+
+Example Usage:
+
+    $config['legacy_member_templates'] = 'y';
 
 ### `lockout_time`
 
@@ -1812,11 +1840,11 @@ Example Usage:
 
 ### `mime_whitelist_member_group_exception`
 
-Specify member group IDs to exclude from Mime Type whitelist restrictions.
+Specify member role IDs to exclude from Mime Type whitelist restrictions.
 
 | Value | Description                              |
 | ----- | ---------------------------------------- |
-| text  | Comma-delimited list of member group IDs |
+| text  | Comma-delimited list of member role IDs |
 
 Example Usage:
 
@@ -2041,7 +2069,7 @@ Example Usage:
 
 ### `proxy_ips`
 
-Whitelist of reverse proxy servers that may forward the visitor's IP address.
+Allow list of reverse proxy servers that may forward the visitor's IP address.
 
 | Value        | Description                          |
 | ------------ | ------------------------------------ |
@@ -2913,13 +2941,27 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Minimum Username Length](control-panel/settings/security-privacy.md#minimum-username-length)
 
-### `upload_file_name_blacklist`
+### `updater_allow_advanced`
+
+Allow advanced options to be displayed during the ExpressionEngine update process.
+
+| Value | Behavior                                                       |
+| ----- | -------------------------------------------------------------- |
+| y     | Shows database backup and add-on upgrade during update process |
+| n     | Hides advanced options during update process (default)         |
+
+Example Usage:
+
+    $config['updater_allow_advanced'] = 'y';
+
+
+### `upload_blocked_file_names`
 
 With an array, add a case insensitive list of file names that cannot be uploaded.
 
 Example Usage:
 
-    $config['upload_file_name_blacklist'] = array(
+    $config['upload_blocked_file_names'] = array(
       'logo.png',
     );
 
@@ -3093,11 +3135,11 @@ Example Usage:
 
 ### `xss_clean_member_group_exception`
 
-Specify member group IDs to exclude from XSS cleaning.
+Specify member role IDs to exclude from XSS cleaning.
 
 | Value | Description                              |
 | ----- | ---------------------------------------- |
-| text  | Comma-delimited list of member group IDs |
+| text  | Comma-delimited list of member role IDs |
 
 Example Usage:
 

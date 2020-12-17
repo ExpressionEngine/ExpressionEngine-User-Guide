@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -212,7 +212,7 @@ You can use the string concatenation operator (`.`) to concatenate values:
 
 ### Parentheses in Conditionals
 
-You can use parentheses to group parts of a conditional together to have the part of the conditional between the parentheses evaluate before being compared to the part of the conditional outside the parentheses. For example, in the code below, the two member group parts are evaluated _first_ before their result is compared to the channel_id part of the conditional:
+You can use parentheses to group parts of a conditional together to have the part of the conditional between the parentheses evaluate before being compared to the part of the conditional outside the parentheses. For example, in the code below, the member's id is evaluated _first_ before their result is compared to the channel_id part of the conditional:
 
     {if (member_id == '1' OR member_id == '2') && channel_id == '5'}
 
@@ -289,7 +289,7 @@ Certain conditionals exist in a shortened form in order to improve template read
 
 This tag pair will display content within the pair if the person viewing the page is currently a logged in member.
 
-NOTE: **Note:** This only tests whether or not someone is logged in. If you want to restrict a particular page based on the member group assignment you'll do that in your Template preferences in the Control Panel.
+NOTE: **Note:** This only tests whether or not someone is logged in. If you want to restrict a particular page based on the member role assignment you'll do that in your Template preferences in the Control Panel.
 
 #### `if logged_out`
 
@@ -318,11 +318,11 @@ You can test against the email address of the currently logged in user.
 
 You can test against the group description of the currently logged in user.
 
-### `logged_in_group_id`
+### `logged_in_role_id`
 
-    {if logged_in_group_id == '7'}  You're an "Editor"!  {/if}
+    {if logged_in_role_id == '7'}  You're an "Editor"!  {/if}
 
-You can test against the Member Group of the currently logged in user.
+You can test against the Primary Role of the currently logged in user.
 
 ### `logged_in_ip_address`
 

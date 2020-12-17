@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -64,6 +64,3 @@ If you are a site builder you will primarily interact with the cluster of links 
   - [CAPTCHA Settings](control-panel/settings/captcha.md)
   - [Consents](control-panel/settings/consents.md)
 
-## Footer
-
-- [CP Footer](control-panel/footer.md)

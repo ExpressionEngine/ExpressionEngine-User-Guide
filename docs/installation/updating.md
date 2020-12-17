@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -24,37 +24,29 @@ ExpressionEngine supports one-click updating as of **Version 4.0** or newer. If 
 
 When an update is available, you'll see the version number in the control panel footer turn yellow or red. Click the version number, then click "Update Now".
 
+**Upgrade Steps** 
+1. Backup files and Database
+2. Confirm all add-ons are updated and compatiable with new major ExpressionEngine version
+3. Test in staging environment
+
 In the rare case an update fails, please read [Troubleshooting Automatic Updates](troubleshooting/general.md#troubleshooting-automatic-updates).
 
-## Updating Via Command Line
+NOTE: **Note:** If updating from a version prior to ExpressionEngine 6, you may need to rename or remove `system/ee/EllisLab` directory manually. You will also need to manually copy the [latest index.php and admin.php files](_downloads/EE6_Index_Admin.zip) to your site's root folder.
+
+
+## Updating Via EECLI
 
 You can also update ExpressionEngine via the command line on your server. This allows you to keep your installation's files only writable by your user and not also by your web service.
 
-To update via the command line, execute the tool located at `system/ee/eecms`:
+To update via the [eecli](cli/intro.md) tool, run:
 
-    php system/ee/eecms upgrade
+    php eecli.php update
 
-Add a `-v` flag for verbose output:
-
-    ./eecms upgrade -v
-
-If you encounter a problem that requires rolling back the upgrade, you can run this command:
-
-    ./eecms --rollback
-
-If you cannot use the one-click updater or command-line updater, you can still do a [manual update](#updating-manually).
-
-**Note:** If you have code in your `config.php` that relies on `$_SERVER` variables or anything else not available in a command-line environment, you can check for `REQ == 'CLI'` to set alternate values, e.g.:
-
-    if (REQ == 'CLI')
-    {
-      $config['site_url'] = 'https://mysite.dev';
-      // ...
-    }
-    else
-    {
-      // Set config via environment variables
-    }
+#### Options
+**rollback**: Rollsback last update
+**verbose,v**: Verbose output
+**force-addon-upgrades**: Automatically runs all addon updaters at end of update (advanced)
+**y**: Skip all confirmations. (advanced)
 
 ## Updating Manually
 

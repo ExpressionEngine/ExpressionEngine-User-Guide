@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -15,7 +15,7 @@ ExpressionEngine includes a Spam Module that allows you to block spammy channel 
 
 ## Usage
 
-The Spam Module is enabled by default and can be accessed through the Addon Manager. Any comments, forums posts, wiki posts, or member registrations that get flagged as spam will be displayed in the Spam Trap.
+The Spam Module is enabled by default and can be accessed through the Add-on Manager. Any comments, forums posts, wiki posts, or member registrations that get flagged as spam will be displayed in the Spam Trap.
 
 To get the most out of the Spam Module you will want to review any content flagged as spam as often as possible. You can mark anything that's not actually spam, and the content will be re-inserted. Once you're done flagging all of the false positives you can submit what's still in the Spam Trap. Once the Spam Trap has been submitted the Spam Module will retrain itself and improve its accuracy.
 

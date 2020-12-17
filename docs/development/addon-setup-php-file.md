@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -138,7 +138,7 @@ NOTE: **Note:** You may need to include your service code's namespace in the add
       'Name' => 'Model\ClassName'
     )
 
-This is an associate array of models exposed by this addon. The class name should be relative to the addon namespace. Typically addons will be in a `Model` directory in the addon's folder.
+This is an associate array of models exposed by this add-on. The class name should be relative to the add-on namespace. Typically add-ons will be in a `Model` directory in the add-on's folder.
 
 ### `consent.requests`
 
@@ -196,3 +196,17 @@ If your add-on sets any custom cookies, you must register the name of the cookie
 | cookies.functionality | Enhances functionality, such as remembering a user's preferences or settings.                                                                                      |
 | cookies.performance   | Analytics, statistics, etc. Data should be aggregated and anonymous.                                                                                               |
 | cookies.targeting     | Typically the only cookie type that can contain personally identifiable information. Marketing cookies that help establish profiles for ad delivery, for instance. |
+
+### `aliases`
+
+    'aliases' => [
+      'ExpressionEngine\Model\Channel\ChannelEntry',
+    ],
+
+The above will set up `EllisLab\ExpressionEngine\Model\Channel\ChannelEntry` as a class alias for `ExpressionEngine\Model\Channel\ChannelEntry`. This might be useful for add-ons that need to work both in ExpressionEngine v5 and ExpressionEngine v6, and that also use type hinting for ExpressionEngine classes. If you do not type hint ExpressionEngine classes or your add-on is just for ExpressionEngine v6 then this is not needed. Otherwise, the `aliases` key needs a full list of classes you need for type hinting.
+
+It is also possible to set up class aliases to an arbitrary FQCN. The example below will set up `AnotherVendor\Services\ClassName` as a class alias for `MyVendor\Services\ClassName`.
+
+    'aliases' => [
+      'MyVendor\Services\ClassName' => 'AnotherVendor\Services\ClassName',
+    ],

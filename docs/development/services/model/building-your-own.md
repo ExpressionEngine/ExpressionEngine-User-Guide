@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -28,7 +28,7 @@ All models must be registered in your [addon.setup.php](development/addon-setup-
       'MyModel' => 'Model\MyModel'
     )
 
-NOTE: **Note:** Your addon prefix will be prepended automatically.
+NOTE: **Note:** Your add-on prefix will be prepended automatically.
 
 ## Model Skeleton
 
@@ -36,7 +36,7 @@ All models **must** declare a primary key, a table name, and a set of properties
 
     namespace My\Namespace\Model\MyModel\Model;
 
-    use EllisLab\ExpressionEngine\Service\Model\Model;
+    use ExpressionEngine\Service\Model\Model;
 
     class MyModel extends Model {
 
@@ -283,7 +283,7 @@ The following composite types are included:
 
 ## Model Methods
 
-**class `EllisLab\ExpressionEngine\Service\Model\Model`**
+**class `ExpressionEngine\Service\Model\Model`**
 
 [TOC=3]
 

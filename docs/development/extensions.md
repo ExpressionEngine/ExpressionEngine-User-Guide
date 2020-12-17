@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -25,9 +25,9 @@ An Extension is an add-on script that is placed in the `/system/user/addons/<pac
 
 Extensions have a similar naming convention to ExpressionEngine plugins so current developers should get the hang of them quickly. There is only a single file required for an extension and inside this file should be a PHP class. The name of the class is used in the file name of the extension with the addition of the suffix `_ext` so that the name of the file is the _lower-cased_ class name with the prefix ext. and the standard PHP suffix of `.php`. So, if we have an extension named '`Link_truncator`', then the file name for this extension would be '`ext.link_truncator.php`' and the class would be called '`Link_truncator_ext`'.
 
-## Addon Setup file
+## Add-on Setup file
 
-All addons must have an `addon.setup.php` file. This one will be quite simple:
+All add-ons must have an `addon.setup.php` file. This one will be quite simple:
 
     <?php
 

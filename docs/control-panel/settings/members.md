@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -37,15 +37,17 @@ When set to **yes**, members will receive an email notification when their membe
 
 ### Require terms of service?
 
-When new members register through the site, a "terms of service" block of text is displayed. This preference determines whether new members must indicate that they agree to abide by these terms before they can register. You may edit the terms of service within the registration form template, located at `Design --> Themes --> Member Profile Templates --> Default --> Registration Form`.
+This preference determines whether new members must indicate that they agree to abide by your site's terms of service before they can register. 
+
+If you are using legacy member profile template, when new members register through the site, a "terms of service" block of text is displayed. You may edit the terms of service within the registration form template, located at `Design --> Themes --> Member Profile Templates --> Default --> Registration Form`.
 
 ### Allow members to set time preferences?
 
 Set whether dates and times are localized to each members' own localization preferences. If set to "No", all dates and times will be localized to the site default and localization preferences will be disabled in the Member Profile and My Account pages.
 
-### Default member group
+### Default Primary Role
 
-This allows you to specify the Member Group to which approved members will be assigned.
+This allows you to specify the Primary Role to which approved members will be assigned.
 
 ### Member profile theme
 

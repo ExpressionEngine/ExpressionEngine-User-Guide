@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -125,7 +125,7 @@ Here `left` describes the pivot table key connecting the current model and `righ
 
 All relationships must be declared in both associated models. This improves code consistency and predictability by allowing both sides of the relationship to be altered without creating orphaned objects. This is particularly important when creating parent-child relationships that cascade their deletions automatically.
 
-When relating to models that are not your own, this becomes problematic since your addon cannot directly add relationships to native models. To get around this problem and to allow for native events to cascade to your models, you must declare all external dependencies in your `addon.setup.php` file:
+When relating to models that are not your own, this becomes problematic since your add-on cannot directly add relationships to native models. To get around this problem and to allow for native events to cascade to your models, you must declare all external dependencies in your `addon.setup.php` file:
 
     'models.dependencies' => array(
       'MyModel'   => array(

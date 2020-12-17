@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -206,7 +206,7 @@ ExpressionEngine displays the error: **An unexpected error occurred attempting t
 
 ### Troubleshooting
 
-Ensure this install has access to the internet and has no restrictions accessing update.expressionengine.com. Some servers may whitelist/blacklist the outbound sites that scripts can connect to.
+Ensure this install has access to the internet and has no restrictions accessing update.expressionengine.com. Some servers may allow/block the outbound sites that scripts can connect to.
 
 Ensure cURL is installed and enabled in your PHP installation.
 
@@ -246,7 +246,7 @@ When accessing certain locations within the control panel ExpressionEngine retur
 
 ### Logging into the Control Panel
 
-Only members of the "Superadmin" Member Group can access the Control Panel under all circumstances. Users belonging to other groups need to have appropriate group permissions to access the Control Panel. By default, ExpressionEngine expects user's browsers to send a **valid IP address** and **User Agent information**. This is meant to help prevent hacking attempts. Some firewalls and other third-party software installed on the user's computer might block this information.
+Only members of the "Superadmin" Role can access the Control Panel under all circumstances. Users not assigned a Superadmin role, need to have appropriate role permissions to access the Control Panel. By default, ExpressionEngine expects user's browsers to send a **valid IP address** and **User Agent information**. This is meant to help prevent hacking attempts. Some firewalls and other third-party software installed on the user's computer might block this information.
 
 This requirement can be disabled:
 
@@ -255,6 +255,6 @@ This requirement can be disabled:
 
       $config['require_ip_for_login'] = "n";
 
-### Banned or Blacklisted Users
+### Banned or Block listed Users
 
-This error will also occur for users that have been banned, or are being blocked by the **Blacklist**. It is possible to block particular **User Agents** or **domain names** under Modules › Blacklist/Whitelist in the Control Panel and specific **IP addresses** under Admin › User Banning.
+This error will also occur for users that have been banned, or are being blocked by the **Block list**. It is possible to block particular **User Agents** or **domain names** under Modules › Block/Allow in the Control Panel and specific **IP addresses** under Admin › User Banning.

@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -25,7 +25,7 @@ Adding pagination to the control panel is a common task and we created a paginat
 
 ## CP/Pagination Service Methods
 
-**class `EllisLab\ExpressionEngine\Library\CP\Pagination`**
+**class `ExpressionEngine\Library\CP\Pagination`**
 
 [TOC=3]
 

@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -43,7 +43,7 @@ The **full server path** (not a URL) to the upload folder for this destination. 
 1.  **Images only**: The system will only allow image files of the type GIF, JPG, JPEG, or PNG.
 2.  **All file types**: Allows you to upload files of any type to the system. **Be careful** with this setting since it could be possible for someone to upload a malicious file.
 
-NOTE: **Note:** Only file types that are specified in ExpressionEngine's Mime Type file are allowed to be uploaded. The Mime Type file can be found at: `system/ee/legacy/config/mimes.php`. If you are uploading something uncommon and run into problems you may need to add the mime type for your file to the whitelist. See [MIME whitelist](general/system-configuration-overrides.md#mime_whitelist_additions) and [Mime member exception whitelist](general/system-configuration-overrides.md#mime_whitelist_member_exception) for more info.
+NOTE: **Note:** Only file types that are specified in ExpressionEngine's Mime Type file are allowed to be uploaded. The Mime Type file can be found at: `system/ee/legacy/config/mimes.php`. If you are uploading something uncommon and run into problems you may need to add the mime type for your file to the allow list. See [MIME allow list](general/system-configuration-overrides.md#mime_whitelist_additions) and [Mime member exception allow list](general/system-configuration-overrides.md#mime_whitelist_member_exception) for more info.
 
 ##### Default modal view?
 
@@ -67,9 +67,9 @@ Optionally set the maximum allowed height in pixes for uploaded images. Images o
 
 Specify one or more alternate versions of an image that automatically get created when the original image is uploaded. A manipulation can include a resized version, a [watermark](#watermarks), or both. You can refer to a particular Image Manipulation in your templates via a File Field's [single variable tag](fieldtypes/file.md#single-variable-usage) or its [variable pair tag](fieldtypes/file.md#url). The resize type will determine whether the image is constrained (resized) or cropped to the specified dimensions. If only height or width is specified, the thumbnails will be created using that as the master dimension. For example, setting the height to 200 and leaving the width blank will result in an image that is no higher than 200 pixels, with the width resized proportionately. Setting both the height and the width to 200 would result in an image that is no higher or wider than 200 pixels.
 
-##### Allowed member groups
+##### Allowed member roles
 
-This setting allows you to specify which member groups have permission to upload files to the upload destination.
+This setting allows you to specify which member roles have permission to upload files to the upload destination.
 
 ##### Allowed category groups
 

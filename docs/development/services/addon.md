@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -24,7 +24,7 @@ Read-only access to the data in an `addon.setup.php` file is made available via 
 
 ## Addon Service Methods
 
-**class `EllisLab\ExpressionEngine\Service\Addon\Factory`**
+**class `ExpressionEngine\Service\Addon\Factory`**
 
 [TOC=3]
 
@@ -55,13 +55,13 @@ Get all the installed add-ons.
 
 ## Addon Object Methods
 
-**class `EllisLab\ExpressionEngine\Service\Addon\Addon`**
+**class `ExpressionEngine\Service\Addon\Addon`**
 
 [TOC=3]
 
 ### `isInstalled()`
 
-Is this addon installed?
+Is this add-on installed?
 
 | Parameter | Type      | Description                 |
 | --------- | --------- | --------------------------- |
@@ -69,7 +69,7 @@ Is this addon installed?
 
 ### `hasUpdate()`
 
-Does this addon have an update available?
+Does this add-on have an update available?
 
 | Parameter | Type      | Description                   |
 | --------- | --------- | ----------------------------- |
@@ -133,7 +133,7 @@ Get the extension class
 
 ### `hasManual()`
 
-Does this addon have a `README.md` file?
+Does this add-on have a `README.md` file?
 
 | Parameter | Type      | Description                   |
 | --------- | --------- | ----------------------------- |
@@ -141,7 +141,7 @@ Does this addon have a `README.md` file?
 
 ### `hasFrontend()`
 
-Does this addon have module or plugin?
+Does this add-on have module or plugin?
 
 | Parameter | Type      | Description                   |
 | --------- | --------- | ----------------------------- |
@@ -149,7 +149,7 @@ Does this addon have module or plugin?
 
 ### `hasInstaller()`
 
-Does this addon have a `upd.` file?
+Does this add-on have a `upd.` file?
 
 | Parameter | Type      | Description                   |
 | --------- | --------- | ----------------------------- |
@@ -157,7 +157,7 @@ Does this addon have a `upd.` file?
 
 ### `hasControlPanel()`
 
-Does this addon have a `mcp.` file?
+Does this add-on have a `mcp.` file?
 
 | Parameter | Type      | Description                   |
 | --------- | --------- | ----------------------------- |
@@ -165,7 +165,7 @@ Does this addon have a `mcp.` file?
 
 ### `hasModule()`
 
-Does this addon have a `mod.` file?
+Does this add-on have a `mod.` file?
 
 | Parameter | Type      | Description                   |
 | --------- | --------- | ----------------------------- |
@@ -173,7 +173,7 @@ Does this addon have a `mod.` file?
 
 ### `hasPlugin()`
 
-Does this addon have a `pi.` file?
+Does this add-on have a `pi.` file?
 
 | Parameter | Type      | Description                   |
 | --------- | --------- | ----------------------------- |
@@ -181,7 +181,7 @@ Does this addon have a `pi.` file?
 
 ### `hasExtension()`
 
-Does this addon have a `ext.` file?
+Does this add-on have a `ext.` file?
 
 | Parameter | Type      | Description                   |
 | --------- | --------- | ----------------------------- |
@@ -189,7 +189,7 @@ Does this addon have a `ext.` file?
 
 ### `hasFieldtype()`
 
-Does this addon have a `ft.` file?
+Does this add-on have a `ft.` file?
 
 | Parameter | Type      | Description                   |
 | --------- | --------- | ----------------------------- |
@@ -217,4 +217,4 @@ Get the add-on Provider
 
 | Parameter | Type                                      | Description         |
 | --------- | ----------------------------------------- | ------------------- |
-| Returns   | `EllisLab\ExpressionEngine\Core\Provider` | The add-on provider |
+| Returns   | `ExpressionEngine\Core\Provider` | The add-on provider |
