@@ -29,13 +29,10 @@ In the rare case an update fails, please read [Troubleshooting Automatic Updates
 
 NOTE: **Note:** If updating from a version prior to ExpressionEngine 6, you may need to rename or remove `system/ee/EllisLab` directory manually. You will also need to manually copy the [latest index.php and admin.php files](_downloads/EE6_Index_Admin.zip) to your site's root folder.
 
-## Updating Via Command Line
+
+## Updating Via EECLI
 
 You can also update ExpressionEngine via the command line on your server. This allows you to keep your installation's files only writable by your user and not also by your web service.
-
-### Via EECLI
-
-You can upgrade ExpressionEngine via the command line on your server via [`eecli`](cli/intro.md).
 
 To update via the [eecli](cli/intro.md) tool, run:
 
@@ -46,34 +43,6 @@ To update via the [eecli](cli/intro.md) tool, run:
 **verbose,v**: Verbose output
 **force-addon-upgrades**: Automatically runs all addon updaters at end of update (advanced)
 **y**: Skip all confirmations. (advanced)
-
-## Via EECMS (deprecated)
-
-To update via the command line, execute the tool located at `system/ee/eecms`:
-
-    php system/ee/eecms upgrade
-
-Add a `-v` flag for verbose output:
-
-    ./eecms upgrade -v
-
-If you encounter a problem that requires rolling back the upgrade, you can run this command:
-
-    ./eecms --rollback
-
-If you cannot use the one-click updater or command-line updater, you can still do a [manual update](#updating-manually).
-
-**Note:** If you have code in your `config.php` that relies on `$_SERVER` variables or anything else not available in a command-line environment, you can check for `REQ == 'CLI'` to set alternate values, e.g.:
-
-    if (REQ == 'CLI')
-    {
-      $config['site_url'] = 'https://mysite.dev';
-      // ...
-    }
-    else
-    {
-      // Set config via environment variables
-    }
 
 ## Updating Manually
 
