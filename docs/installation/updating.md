@@ -39,7 +39,7 @@ You can upgrade ExpressionEngine via the command line on your server via `eecli`
 
 To update via the eecli tool, run:
 
-    php eecli update
+    php eecli.php update
 
 #### Options
 **rollback**: Rollsback last update
