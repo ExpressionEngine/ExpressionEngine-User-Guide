@@ -3,24 +3,26 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
 # ExpressionEngine v5 Change Log
 
 ## Version 5.4.0
-Release Date: November XX, 2020
+Release Date: November 23, 2020
 - **Enhancements** 🚀
   - Added relationship_entries_tagdata hook, which is functionally identical to the channel_entries_tagdata hook
   - Added support for [SameSite cookies via config override](general/system-configuration-overrides.md#cookie_samesite)
   - Added [config override to ignore channel stats](general/system-configuration-overrides.md#ignore_entry_stats), which can lead to improved performance when using models.
   - Add stats module action to run stats
-  - Added dabatase column type selector for textarea and RTE fields ([#464](https://github.com/ExpressionEngine/ExpressionEngine/issues/464))
-  - Added post-upgrade and utility check for broken template tags and missing fieldtypes
+  - Added database column type selector for textarea and RTE fields ([#464](https://github.com/ExpressionEngine/ExpressionEngine/issues/464))
+  - Added post-upgrade and utility check for broken template tags and missing fieldtypes.
+  - Added [Debug Tools utility](control-panel/utilities.md#debug-tools).
+  - Added confirmation screen when attempting to update major versions.
   - Adds namespacing to v2 upgrades for ease of upgrading from v2 to v5
   - Added support to be able to upgrade directly from v2 to v5
-  - Improved [XSS filtering for CP clerts](development/services/alert.html#addtobodyitem-class--null-xss_filter--true)
+  - Improved [XSS filtering for CP alerts](development/services/alert.md#addtobodyitem-class--null-xss_filter--true)
   - Added support for PHP 8
   - Added support for MySQL 8
   - Implemented different approach to trigger `before_channel_entry_delete` extension hook. 
@@ -51,7 +53,7 @@ Release Date: November XX, 2020
   - Fixed a bug ([#91](https://github.com/ExpressionEngine/ExpressionEngine/issues/91), [#417](https://github.com/ExpressionEngine/ExpressionEngine/issues/417)) where link button was not working and formatting not displayed in RTE field on frontend.
   - Fixed a bug ([#72](https://github.com/ExpressionEngine/ExpressionEngine/issues/72)) where Maximum rows limit was not respected in File Grid field.
   - Fixed a bug ([#53](https://github.com/ExpressionEngine/ExpressionEngine/issues/53)) where previous month link was not clickable in Channel Form datepicker.
-  - Fixed a bug where unsaved entried were not pulled in for live preview when using `status="open|closed"` parameter.
+  - Fixed a bug where unsaved entries were not pulled in for live preview when using `status="open|closed"` parameter.
   - Fixed a bug where checking for updates might produce an error.
   - Fixed a bug where removing database record for template that is used as "No access redirect" would cause error
   - Fixed a bug where searching entries in CP in content only could produce SQL error.
@@ -60,7 +62,7 @@ Release Date: November XX, 2020
   - Fixed a bug where some member pages did not display in the forums when using the forum tag on regular templates.
   - Fixed a PHP warning in the control panel when IDN variants weren't available on the server.
   - Fixed a bug where a query string could be added to URLs erroneously.
-  - Altered a javascript filename that mod_security tended to object to.
+  - Altered a JavaScript filename that mod_security tended to object to.
   - Fixed a bug where input data were assumed to be URL encoded, causing certain character sequences to be stripped when cleaned.
 
 ## Version 5.3.2
