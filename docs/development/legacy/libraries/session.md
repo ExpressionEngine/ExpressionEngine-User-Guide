@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -61,7 +61,7 @@ NOTE: **Note:** If a user has a `group_id` of 1, then they can access anything, 
 - `language` - Chosen Language
 - `timezone` - Chosen Timezone (`UM12` - `UTC` - `UP12`)
 - `time_format` - `eu`/`us`
-- `group_id` - Group ID number (1-Superadmin, 2-Banned, 3-Guests, 4-Pending, 5-Members, 6+ Other Member Groups
+- `group_id` - Group ID number (1-Superadmin, 2-Banned, 3-Guests, 4-Pending, 5-Members, 6+ Other Member Roles
 - `is_banned` - `0`/`1`
 - `channel_id` - Default channel's `channel_id` number
 - `tmpl_group_id` - Default template's `group_id` number
@@ -83,7 +83,7 @@ NOTE: **Note:** If a user has a `group_id` of 1, then they can access anything, 
 - `notify_by_default` - Notify of comments by default
 - `ignore_list` - Array containing `member_id`'s that the logged in user wishes to ignore
 - `group_title` - Name of Group
-- `is_locked` - (`y`/`n`) Is member group access locked and only available to Superadmins?
+- `is_locked` - (`y`/`n`) Is member role access locked and only available to Superadmins?
 - `can_view_offline_system` - (`y`/`n`)
 - `can_view_online_system` - (`y`/`n`)
 - `can_access_cp` - (`y`/`n`)

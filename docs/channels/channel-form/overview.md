@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -20,7 +20,7 @@ The Channel Form makes it possible to add and edit channel entries from outside 
 - Adds or edits entries based on the presence of an entry_id and/or url_title.
 - Allows use of the entry_id or url_title in your return URL, so that you may redirect to the entry that was just created. Useful for multi-page forms.
 - Specify a default status, or set forms to override default statuses.
-- Specify different return URLs for different member groups by the group_id. Send visitors to one page, and admins to another.
+- Specify different return URLs for different member primary roles by the group_id. Send visitors to one page, and admins to another.
 - Server-side validation.
 - Handles AJAX requests and can output responses in JSON.
 
@@ -173,7 +173,7 @@ Specify a path to redirect the user to after an entry submission. You may use th
 
     return_X="site/thanks"
 
-Specify a path to redirect the user to after an entry submission, based on the user's member group. Replace X with the group_id of the member group.
+Specify a path to redirect the user to after an entry submission, based on the user's primary role. Replace X with the role_id of the member role.
 
 ### `rules:my_field_name=`
 
@@ -195,7 +195,7 @@ You can optionally force a particular toolset ID to use (see below).
 
     rte_toolset_id="1"
 
-The ID of the Rich Text Editor toolset to use. Toolset IDs are listed on the [Rich Text Editor](add-ons/rte.md#control-panel) page.
+The ID of the Rich Text Editor toolset to use. Tool set IDs are listed on the [Rich Text Editor](add-ons/rte.md#tool-sets) page.
 
 ### `secure_action=`
 

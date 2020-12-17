@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -13,7 +13,7 @@
 
 ## Overview
 
-As described in [The Big Picture](getting-started/the-big-picture.md) a Template represents a page at your site. It can also represent a page component, like a header, but that's a [more advanced concept](templates/embedding.md) which we don't need to cover here.
+As described in [The Big Picture](getting-started/the-big-picture.md) a Template represents a page on your site. It can also represent a page component, like a header, but that's a [more advanced concept](templates/embedding.md) which we don't need to cover here.
 
 Templates are organized into Template Groups. A Template Group is analogous to a folder on your server. Templates can be created and edited in the `Developer -> Templates` area of your Control Panel.
 
@@ -25,6 +25,9 @@ For example: If your site had an "archives" Template within a "blog" Template Gr
 
     http://example.com/blog/archives
 
+In ExpressionEngine, any part of the URL after the domain is known as a ["segment"](templates/globals/url-segments.md#url-segment-variables). In the above example URL, the first segment would be "blog" and the second segment would be "archives". We dive into the power of using segments as you learn more about [templates](templates/overview.md).
+
+
 ## The Concept
 
 The goal was to make the URLs produced by ExpressionEngine search-engine friendly by making the URL structure mimic a traditional _static_ site. In order to accomplish this, the use of query strings was eliminated from the URLs.
@@ -35,7 +38,7 @@ Many dynamic publishing systems use query strings. That is, URLs that look like 
 
 Notice the question mark and ampersand? Those are part of a "query string". These enable dynamic systems to fetch and display specific information. Query strings, however, are disliked by search engines, and they are not human-friendly, so they have been eliminated in ExpressionEngine.
 
-Instead, its URLs are segment driven, like this:
+Instead, ExpressionEngine's URLs are segment driven, like this:
 
     http://example.com/shoes/sneakers
 
@@ -61,7 +64,7 @@ The above URL is identical to doing this:
 
     http://example.com/about/index
 
-A Template Group will always have an `index` Template, which is shown when there is no Template specifically named in the second segment. This can be a useful way to you organize your site.
+An template named "index" is automatically created by ExpressionEngine when a template group is created. A Template Group will then always have an `index` Template, which is shown when there is no Template specifically named in the second segment. This can be a useful way to you organize your site.
 
 For example, let's say you are building a small site that needs four pages (home, services, about, and contact). You could create four Template Groups, each representing one of the four pages, and use the `index` template to contain the HTML markup and dynamic content:
 

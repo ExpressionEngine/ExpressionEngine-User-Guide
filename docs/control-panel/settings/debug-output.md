@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -17,7 +17,7 @@ This section of the Control Panel allows you to define how your site is output f
 
 ### Enable error reporting?
 
-When set to "enable", super admins and member groups with permissions will see PHP/MySQL errors when they occur.
+When set to "enable", super admins and member roles with permissions will see PHP/MySQL errors when they occur.
 
 ### Enable debugging?
 

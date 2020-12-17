@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -51,7 +51,7 @@ Consent to "Targeting" cookies. These cookies are often referred to as "marketin
 
 ### Add-on Consent Requests
 
-Addon Consent request are prefixed with the add-on's shortname that corresponds to its folder name and tags. For example if the add-on is named Marketing and has its own consents, the consent variables would be:
+Add-on Consent request are prefixed with the add-on's shortname that corresponds to its folder name and tags. For example if the add-on is named Marketing and has its own consents, the consent variables would be:
 
     {if consent:marketing:consent-name}
       {exp:marketing:action}

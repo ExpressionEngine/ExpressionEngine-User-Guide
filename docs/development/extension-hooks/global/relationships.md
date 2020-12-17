@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -139,3 +139,18 @@ Allows developers to modify or add to the relationship rows right before parsing
 How it's called:
 
     $rows = ee()->extensions->call('relationships_modify_rows', $rows, $node);
+
+### `relationship_entries_tagdata($tagdata, $row)`
+
+| Parameter | Type     | Description                  |
+| --------- | -------- | ---------------------------- |
+| \$tagdata | `String` | Relationship entries tagdata |
+| \$row     | `Array`  | Current relationship data    |
+| Returns   | `String` | Modified `$tagdata`          |
+
+Modify the tagdata for the relationship tag pair before anything else is parsed.
+
+How it's called:
+
+    $tagdata = $this->extensions->call('relationship_entries_tagdata', $tagdata, $row);
+    if ($this->extensions->end_script === TRUE) return $tagdata;

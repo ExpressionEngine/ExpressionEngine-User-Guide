@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -21,9 +21,11 @@ In your control panel, Channels are managed and configured in the [Channel Manag
 
 For example, you might need a "staff" page with employee biographies. To manage this you could create a channel with fields for the name, biography, an image, and any other relevant info.
 
-Content is added to a channel by clicking the **Edit** button in the main control panel navigation.
+Content is added to a channel by clicking the **Entries** link in the main control panel navigation and selecting the entry you wish to edit.
 
-![](_images/the-big-picture-channels.png)
+TIP: **Jump Menu:** Don't forget to use the Jump Menu for quicker navigation. CMD/CTRL + J , then start typing "Edit Entry ..."
+
+![](_images/ee6-new-entry.png)
 
 ## Templates
 

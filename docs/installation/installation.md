@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -16,6 +16,8 @@
 NOTE: **Important:** If you need to **update** your installation from an earlier version, see the [Update Instructions](installation/updating.md) instead.
 
 Before getting started, make sure your web host and your browser meet all the [System Requirements](installation/requirements.md) to run ExpressionEngine.
+
+The following article assumes you are downloading Expressionengine from the [ExpressionEngine Wesbite](https://expressionengine.com/). If you would like to install ExpressionEngine from our [GitHub repository](https://github.com/ExpressionEngine/ExpressionEngine), be sure to follow the instructions found in the repo's [README](https://github.com/ExpressionEngine/ExpressionEngine/blob/stability/README.md#if-youre-installing-from-the-repository) file for repo specific instructions.
 
 ## 1. Prep the Database
 
@@ -74,3 +76,12 @@ If you're new to ExpressionEngine, get started with the [Ten Minute Primer](gett
 ### Post-Installation Best Practices
 
 Once you are confident that ExpressionEngine is working normally on your server, we recommend a few [best practices](installation/best-practices.md) for protecting your installation against common security risks.
+
+## Other Installation Options
+
+### Install with Softaculous and cPanel
+
+If your web host utilizes the cPanel admin tool with the Softaculous auto installer, you can one-click install ExpressionEngine. Simply navigate to Softaculous, search for ExpressionEngine under "Portal/CMS" and click "Install Now".
+
+![Softaculous](/_images/softaculous2.png)
+

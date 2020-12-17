@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -11,7 +11,7 @@
 
 **Control Panel Location: `Members`**
 
-This page is used both to search and to browse through active members within your ExpressionEngine installation. Also, you can filter the members by member group and search members.
+This page is used both to search and to browse through active members within your ExpressionEngine installation. Also, you can filter the members by member role and search members.
 
 This page also allows you to do the following:
 
@@ -19,19 +19,21 @@ This page also allows you to do the following:
 
 ![Member Manager Control Panel Page](_images/cp-members.png)
 
-## Member Groups
+## Member Roles
 
-**Control Panel Location: `Members > Member Groups`**
+**Control Panel Location: `Members > Member Roles`**
 
-The _Member Groups_ area of the Control Panel permits you to manage your Member Groups. The member groups can be sorted by ID, Group Title, and Status.
+The _Member Roles_ area of the Control Panel permits you to manage your Member Roles. The member roles can be sorted by ID, Role Name, and Status.
 
-Each member of your site must be a member of one of your Member Groups. These groups allow you to restrict and control what a given member is allowed to do, and which pages they are allowed to access. Each Member Group has over 50 different privileges that can be allowed or denied, giving you precise control over what each of your members can do.
+Each member of your site must have at least one Role, which is referred to as the Primary Role. These roles allow you to restrict and control what a given member is allowed to do, and which pages they are allowed to access. Each Member Role has over 50 different privileges that can be allowed or denied, giving you precise control over what each of your members can do.
 
-### Create/Edit All Member Groups
+You can assign multiple roles to a member.
 
-**Control Panel Location: `Members > Member Groups > Create/Edit`**
+### Create/Edit All Member Roles
 
-This sections allows you to set the various permissions and settings for the selected Member Group
+**Control Panel Location: `Members > Member Roles > Create/Edit`**
+
+This sections allows you to set the various permissions and settings for the selected Member Role
 
 ## Custom Member Fields
 
@@ -67,10 +69,11 @@ The New Member Registration section of the Control Panel allows you to manually 
 
 This section has the following options:
 
-- **Member Group** -- The member group to assign the user to.
 - **Username** -- The unique username for the user. This is a required field.
 - **Email** -- The email address for the current user.
 - **Password** -- Change the user's password.
+- **Primary Role** -- The Role to assign the user to as Primary.
+- **Additional Roles** -- other roles to assign to member to extend the scope of permissions.
 
 ## Ban Settings
 

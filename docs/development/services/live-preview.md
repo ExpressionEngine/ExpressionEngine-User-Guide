@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -28,7 +28,7 @@ If your fieldtype add-on fetches data when rendering a front-end request, you wi
 
 ## LivePreview Service Methods
 
-**class `EllisLab\ExpressionEngine\Service\LivePreview\LivePreview`**
+**class `ExpressionEngine\Service\LivePreview\LivePreview`**
 
 ### `hasEntryData()`
 

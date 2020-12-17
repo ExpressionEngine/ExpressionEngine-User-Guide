@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -111,21 +111,28 @@ We give the checkboxes an input name of `content_ids[]`, which will then carry o
       'file' => array('cp/confirm_remove'),
     ));
 
-Finally, we need to create our [Bulk Action Controls](https://ellislab.com/style-guide/c/listings#bulk-action-controls) with some special data attributes that know when to trigger the modal. Here's what we'll add below our table markup:
+Finally, we need to create our Bulk Action Controls with some special data attributes that know when to trigger the modal. You can embed shared view in your own view file to do that:
 
-    <fieldset class="tbl-bulk-act hidden">
-      <select>
-        <option>-- <?=lang('with_selected')?> --</option>
-        <option value="remove" data-confirm-trigger="selected" rel="modal-confirm-remove"><?=lang('remove')?></option>
-      </select>
-      <input class="btn submit" data-conditional-modal="confirm-trigger" type="submit" value="<?=lang('submit')?>">
-    </fieldset>
+      <?php $this->embed('ee:_shared/form/bulk-action-bar', [
+        'options' => [
+          [
+            'value' => "",
+            'text' => '-- ' . lang('with_selected') . ' --'
+          ],
+          [
+            'value' => "remove",
+            'text' => lang('delete'),
+            'attrs' => ' data-confirm-trigger="selected" rel="modal-confirm-remove"'
+          ]
+        ],
+        'modal' => true
+      ]); ?>
 
 Now when a user selects some content in the table, the bulk action controls should appear, and when "Remove" is selected and submitted, a modal will appear showing a list of content about to be deleted, where they can then confirm the deletion and your `POST` handler will be fired.
 
 ## CP/Modal Service Methods
 
-**class `EllisLab\ExpressionEngine\Service\Modal\ModalCollection`**
+**class `ExpressionEngine\Service\Modal\ModalCollection`**
 
 [TOC=3]
 

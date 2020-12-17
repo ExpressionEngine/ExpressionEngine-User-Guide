@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -39,7 +39,7 @@ Users may customize their own account in one of two locations. First, if the use
 
 ## Contributing
 
-All of our language packs are hosted as repositories on [GitHub](https://github.com/EllisLab). Depending on the language, some of the language packs have downloads for both EE 1.x and 2.x, and you can find them by checking both the branches and tags. For each language pack, we tag the repository with the latest known compatible version of ExpressionEngine, so you'll see tags like `2.4.0` and `1.6.8`. We also create a `1.x` branch in the event the language pack supports both 2.x and 1.x. If there are only tags for 1.x versions and there is no `1.x` branch, then that language only supports 1.x.
+All of our language packs are hosted as repositories on [GitHub](https://github.com/EllisLab). Depending on the language, some of the language packs have downloads for multiple versions of ExpressionEngine, and you can find them by checking both the branches and tags. For each language pack, we tag the repository with the latest known compatible version of ExpressionEngine, so you'll see tags like `2.4.0` and `1.6.8`. We also create a `1.x` branch in the event the language pack supports both 2.x and 1.x. If there are only tags for 1.x versions and there is no `1.x` branch, then that language only supports 1.x.
 
 If you want to contribute to a language pack, find the language pack you want to modify, [fork the repository](https://help.github.com/articles/fork-a-repo), make sure you're working from the correct branch, work on your changes [inside of a feature branch](https://help.github.com/articles/fork-a-repo), push your changes to your fork of the repository, and [send us a pull request](https://help.github.com/articles/using-pull-requests). Then, we'll take a look at your pull request, make sure everything looks alright, and merge it in.
 

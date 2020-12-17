@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -305,7 +305,7 @@ NOTE: **Note:** Using this parameter will automatically constrain the entries ta
 
     group_id="4"
 
-You can decide from which Member Groups (by specifying the group ID) you wish entries to be shown. If you choose "4", then only entries created by members of the Member Group with the ID of 4 will be shown. You can choose multiple Member Groups using a pipe:
+You can decide from which Member Role (by specifying the role ID) you wish entries to be shown. If you choose "4", then only entries created by members of the Primary Role with the ID of 4 will be shown. You can choose multiple Roles using a pipe:
 
     group_id="2|3|4"
 
@@ -862,9 +862,9 @@ The "count" out of the current entries being displayed. If five entries are bein
       <a href="{cp_edit_entry_url}">Edit Entry</a>
     {/if}
 
-The URL of the entry form in the control panel where this entry can be edited. It is recommended you wrap this variable in an `{if logged_in}` conditional to hide your control panel's URL from regular site visitors. If you are running a membership based site, hide it behind an appropriate `logged_in_group_id` conditional. For example, to hide this link from everyone but Super Admins:
+The URL of the entry form in the control panel where this entry can be edited. It is recommended you wrap this variable in an `{if logged_in}` conditional to hide your control panel's URL from regular site visitors. If you are running a membership based site, hide it behind an appropriate `logged_in_role_id` conditional. For example, to hide this link from everyone but Super Admins:
 
-    {if logged_in_group_id == 1}
+    {if logged_in_role_id == 1}
       <a href="{cp_edit_entry_url}">Edit Entry</a>
     {/if}
 

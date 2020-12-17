@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -28,7 +28,7 @@ All models must be registered in your [addon.setup.php](development/addon-setup-
       'MyModel' => 'Model\MyModel'
     )
 
-NOTE: **Note:** Your addon prefix will be prepended automatically.
+NOTE: **Note:** Your add-on prefix will be prepended automatically.
 
 ## Model Skeleton
 
@@ -36,7 +36,7 @@ All models **must** declare a primary key, a table name, and a set of properties
 
     namespace My\Namespace\Model\MyModel\Model;
 
-    use EllisLab\ExpressionEngine\Service\Model\Model;
+    use ExpressionEngine\Service\Model\Model;
 
     class MyModel extends Model {
 
@@ -230,9 +230,7 @@ By default setting and getting of properties behaves the way it does for any obj
     $my_model->name = 'Bob Bobson';
     $my_model->first_name; // Bob
 
-NOTE: **Note:** These methods break the camelCase naming convention in order to match the snake_case property names. It also serves as a clear indicator that these methods should not be called directly, even internally: always use `setProperty()`.
-
-When setting properties manually you should take care to use _setRawProperty_, which will correctly track changes to the property.
+**Note:** These methods break the camelCase naming convention in order to match the snake_case property names. It also serves as a clear indicator that these methods should not be called directly, even internally. When setting properties manually you should take care to use _setRawProperty_, which will correctly track changes to the property.
 
 ## Typed Columns
 
@@ -285,7 +283,7 @@ The following composite types are included:
 
 ## Model Methods
 
-**class `EllisLab\ExpressionEngine\Service\Model\Model`**
+**class `ExpressionEngine\Service\Model\Model`**
 
 [TOC=3]
 

@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -29,13 +29,13 @@ There are seven types of permissions you can set. It should be obvious what each
 - Can Upload
 - Can Search
 
-For each type of permission, you can determine whether or not it is available for any of your Member Groups. Check a checkbox in a permission column for a Member Group row if you want that Member Group to have that permission. For instance, you might not want to allow a particular Member Group to be able to post in your forum. If that's the case, then make sure the "Can Post" checkbox is unchecked for that Member Group.
+For each type of permission, you can determine whether or not it is available for any of your Member Roles. Check a checkbox in a permission column for a Role row if you want that Role to have that permission. For instance, you might not want to allow a particular Role to be able to post in your forum. If that's the case, then make sure the "Can Post" checkbox is unchecked for that Role.
 
-The Discussion Forum module requires membership in order to post in the forums. Non logged-in users (the "Guest" Member Group) cannot post to the forums.
+The Discussion Forum module requires membership in order to post in the forums. Non logged-in users (the "Guest" Primary Role) cannot post to the forums.
 
 The "blank" boxes in the last column and last row allow you to easily select or de-select an entire column or row.
 
-Member Groups are managed under `Members --> Member Groups` since Member Groups are used throughout your site and not just as part of the forum.
+Member Roles are managed under `Members --> Member Roles` since Roles are used throughout your site and not just as part of the forum.
 
 ## Add a New Category
 

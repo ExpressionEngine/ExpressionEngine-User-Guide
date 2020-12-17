@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -64,7 +64,7 @@ Newly added members aren't appearing as a selectable option in the author list o
 
 Members must be specifically added to the multi-author list. For individual members, this can be done via `Members`, clicking the member's name and checking **Include user in PUBLISH page multi-author list?** under "Member Preferences".
 
-The appropriate permission for entire member groups can be set at `Members --> Member Groups --> Create/Edit`
+The appropriate permission for entire member roles can be set at `Members --> Member Roles --> Create/Edit`
 
 ## Moving entries to another channel
 

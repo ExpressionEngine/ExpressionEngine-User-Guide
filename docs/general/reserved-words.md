@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -13,7 +13,7 @@
 
 ## Reserved for Templates
 
-To avoid template confusion, some words are reserved for ExpressionEngine's use and can not be used in Template Names. Below is a list of reserved words.
+To avoid template confusion, some words are reserved for ExpressionEngine's use and can not be used in Template Names. Below is a list of reserved words that cannot be used in Template Names.
 
 - act
 - css
@@ -26,7 +26,7 @@ There are some additional words that may be reserved in certain circumstances. T
 
 ## Reserved for Global Variables
 
-There are some words reserved for ExpressionEngine's use that may not be used in naming [Template Variables](templates/variable.md). Below is a list of reserved words.
+There are some words reserved for ExpressionEngine's use that may not be used in naming [Template Variables](templates/variable.md). Below is a list of these reserved words.
 
 - lang
 - charset
@@ -42,7 +42,7 @@ There are some words reserved for ExpressionEngine's use that may not be used in
 
 ## Reserved for Fields
 
-To avoid potential parsing conflicts, some words are reserved and are not available to use as channel or member fields. Below is a list of reserved words.
+To avoid potential parsing conflicts, some words are reserved and are not available to use as channel or member field names. Below is a list of these reserved words.
 
 - app_version
 - author

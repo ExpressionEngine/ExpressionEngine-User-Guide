@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -61,7 +61,7 @@ The page will show a great deal of information about your server, server configu
 
 Since Extensions are calling code within the ExpressionEngine code there is a chance that an extension will interfere with how your site is working. If you are unsure of which extension might be causing a problem you can either turn them off one by one until the problem disappears.
 
-## Import File Converter
+## Member Import File Converter
 
 **Control Panel Location: `Developer > Utilities > File Converter`**
 
@@ -77,7 +77,7 @@ NOTE: **Note:** Many applications export field headings as the first line of a d
 
 The Mass Notification Export utility enables you to export a CSV file of the ID, screen name, username, and email address for all your Members. This action will be logged to the `/cp/logs/cp`.
 
-This can be used to notify users in the unfortunate event of a data breach, such as is required by the . We recommend to validating the email addresses before sending any mass notification emails, otherwise your server could end up blacklisted. Any of the following services will validate email addresses:
+This can be used to notify users in the unfortunate event of a data breach, such as is required by the . We recommend to validating the email addresses before sending any mass notification emails, otherwise your server could end up blocked. Any of the following services will validate email addresses:
 
 - [Email Verifier App](https://www.emailverifierapp.com)
 - [VerifyEmailAddress.org](https://www.verifyemailaddress.org)
@@ -108,6 +108,8 @@ The main SQL Manager screen shows a table of your basic database information.
 **Control Panel Location: `Developer > Utilities > Query Form`**
 
 This section presents a form that you can use to submit any standard database query. This feature is intended for **advanced** users since any changes you may make with a query are permanent.
+
+Buttons at the bottom of the form can be used to provide you with a base query for many commonly used queries.
 
 By default MySQL query errors are displayed.
 
@@ -142,3 +144,20 @@ This section of the Control Panel allows you to search for text within your site
 **Control Panel Location:** `Developer > Utilities > Member Import`
 
 The Member Import Utility enables you to import members from other systems utilizing ExpressionEngine's [special Member Import XML format](general/member-import-xml-format.md).
+
+## Search Reindex
+
+**Control Panel Location:** `Developer > Utilities > Search Reindex`
+
+Search reindexing refreshes the searchable words stored by Grid and Fluid fields that are used by the search module when performing a search. Reindexing is needed when:
+
+- a Grid field's search setting changes
+- the search settings for columns in a Grid field change
+- fields are removed from a Fluid field
+- the Search and Replace tool acted on a Grid or Fluid field
+
+This tool will cycle through all Channel Entries that have a Grid or Fluid field assigned to them and re-index the entry data in those fields.
+
+### Permission Restrictions
+
+- Access Tools sections: Utilities

@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -19,7 +19,7 @@ The Pages Module allows you to create special "page" entries for holding content
 
 The [Pages Module Control Panel](#control-panel) allows you to create, edit, view and delete your Pages.
 
-NOTE: **Note:** In order to allow content authors full access to create and modify pages through both the Pages tab of the Publish area and the Pages module itself, it is necessary to give those authors' respective member groups the appropriate Control Panel access for publishing and editing content, access to post and edit entries in the particular Channel in question, access to Modules in general, and access to the Pages module specifically.
+NOTE: **Note:** In order to allow content authors full access to create and modify pages through both the Pages tab of the Publish area and the Pages module itself, it is necessary to give those authors' respective roles the appropriate Control Panel access for publishing and editing content, access to post and edit entries in the particular Channel in question, access to Modules in general, and access to the Pages module specifically.
 
 ## Displaying Page Content with the Channel Entries Tag
 

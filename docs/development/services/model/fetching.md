@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -28,6 +28,8 @@ This will return a builder object, which we will use narrow down the selection. 
 Usually these calls are chained for brevity:
 
     $templates = ee('Model')->get('Template')->all();
+
+NOTE: **Note:** Please see [Collection](development/services/model/collection.md) for list of methods to operate returned data.
 
 ## Filters
 
@@ -162,7 +164,7 @@ To get around this problem, you can specify a relationship to be loaded with the
 
 These eager queries can also be nested to retrieve complex model hierarchies:
 
-    ->get('Template')->with(array('LastAuthor' => 'MemberGroup'));
+    ->get('Template')->with(array('LastAuthor' => 'PrimaryRole'));
 
 ### Filtering on Relationships
 

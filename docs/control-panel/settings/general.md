@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -35,7 +35,7 @@ When set to "auto" ExpressionEngine will cause a message to be displayed in the 
 
 ### Enable Site Manager?
 
-When set to "enable", super admins and member groups with permissions will be able to manage additional websites from the CP.
+When set to "enable", super admins and member roles with permissions will be able to manage additional websites from the CP.
 
 ### Language
 

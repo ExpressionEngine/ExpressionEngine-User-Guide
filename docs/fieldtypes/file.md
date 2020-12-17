@@ -7,7 +7,7 @@ lang: ee
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -15,7 +15,9 @@ lang: ee
 
 [TOC]
 
-File fields store uploaded files and images, and utilize the built-in file browser for your publishers to upload and insert files. Your site must have at least one upload directory before you can create a file field.
+File fields utilize the built-in file browser to store uploaded files and images for your publishers. 
+
+NOTE: **Note:**Your site must have at least one upload directory before you can create a file field.
 
 ## Field Options
 
@@ -185,3 +187,98 @@ The width of the image (in pixels) if applicable.
 If you have defined any [image manipulations](control-panel/file-manager.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the width of that version:
 
     {width:small}
+
+## On-the-fly image manipulations
+
+[TOC=4]
+
+In addition to pre-defined [image manipulations](control-panel/file-manager.md#constrain-or-crop) it is possible to perform certain image manipulations on-the-fly in templates by using special template tag parameters.
+
+WARN: **Warning:** Certain image manipulations can be processing-intensive and even cause timeouts. Use with caution.
+
+The manipulations can be used as single modifiers as well as modifier tag pair.
+
+### `:resize`
+
+    {news_image:resize width="100" height="100"}
+
+Resize the image.
+
+| Parameter | Values  | Default    | Description                           |
+| --------- | ------- | ---------- | -------------------------------------- |
+| width    | `Number` | `*required`| Width to resize to, px |
+| height   | `Number` | `*required`| Height to resize to, px |
+| quality  | `0`-`100`| `75`| Image quality, % |
+| maintain_ratio   | `y` / `n` | `y`| Keep image ratio (yes/no)  |
+| master_dim        | `auto`/`width`/`height` | `auto`| Master dimention when keeping image ratio |
+
+### `:crop`
+
+    {news_image:crop width="100" height="100"}
+
+Crop the image.
+
+| Parameter | Values  | Default    | Description                           |
+| --------- | ------- | ---------- | -------------------------------------- |
+| width    | `Number` | `*required`| Width to crop to |
+| height   | `Number` | `*required`| Height to crop to |
+| quality  | `0`-`100`| `75`| Image quality, % |
+| maintain_ratio   | `y` / `n` | `y`| Keep image ratio (yes/no)  |
+| x        | `Number` | `0`| Horizontal offset, px |
+| y        | `Number` | `0`| Vertical offset, px |
+
+### `:rotate`
+
+    {news_image:rotate angle="hor"}
+
+Rotate the image.
+
+| Parameter | Values  | Default    | Description                           |
+| --------- | ------- | ---------- | -------------------------------------- |
+| angle    | `90`, `180`, `270`, `vrt`, `hor` | `required`| Rotation angle |
+
+### `:webp`
+
+    {news_image:webp}
+
+Convert the image to WEBP format. Additionally all the `:resize` manipulations can be applied
+
+| Parameter | Values  | Default    | Description                           |
+| --------- | ------- | ---------- | -------------------------------------- |
+| width    | `Number` | | Width to crop to, px |
+| height   | `Number` | | Height to crop to, px |
+| quality  | `0`-`100`| `75`| Image quality, % |
+| maintain_ratio   | `y` / `n` | `y`| Keep image ratio (yes/no)  |
+| master_dim        | `auto`/`width`/`height` | `auto`| Master dimention when only width of height is specified |
+
+
+### `:resize_crop`
+
+    {news_image:resize_crop resize:width="300" crop:width="100"}
+
+Resize the image and then crop it.
+
+| Parameter | Values  | Default    | Description                           |
+| --------- | ------- | ---------- | -------------------------------------- |
+| resize:width    | `Number` | `*required`| Width to resize to, px |
+| resize:height   | `Number` | `*required`| Height to resize to, px |
+| resize:quality  | `0`-`100`| `75`| Resized image quality, % |
+| resize:maintain_ratio   | `y` / `n` | `y`| Keep image ratio when resizing (yes/no)  |
+| resize:master_dim        | `auto`/`width`/`height` | `auto`| Resizing master dimention |
+| crop:width    | `Number` | `*required`| Width to crop to |
+| crop:height   | `Number` | `*required`| Height to crop to |
+| crop:quality  | `0`-`100`| `75`| Cropped image quality, % |
+| crop:maintain_ratio   | `y` / `n` | `y`| Keep image ratio when cropping (yes/no)  |
+| crop:x        | `Number` | `0`| Horizontal crop offset, px |
+| crop:y        | `Number` | `0`| Vertical crop offset, px |
+
+### Using as modifier tags pairs
+
+    {news_image:resize width="100" height="100"}
+        <img src="{url}" width="{width}" height="{height}" />
+    {/news_image:resize}
+
+**Tag Pair Variables:**
+- `{url}` - processed image URL
+- `{width}` - processed image width
+- `{height}` - processed image height

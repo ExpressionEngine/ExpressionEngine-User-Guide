@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -17,7 +17,7 @@ lang: php
 
 | Parameter | Type    | Description                                                                                                                                  |
 | --------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| \$data    | `Array` | Array of prepped cookie parameters, which include the following keys: `prefix`, `name`, `value`, `expire`, `path`, `domain`, `secure_cookie` |
+| \$data    | `Array` | Array of prepped cookie parameters, which include the following keys: `prefix`, `name`, `value`, `expire`, `path`, `domain`, `secure_cookie`, `samesite` |
 | Returns   | `Void`  |                                                                                                                                              |
 
 Take control of setting cookies after cookie parameters have been normalized according to the cookie configuration settings.

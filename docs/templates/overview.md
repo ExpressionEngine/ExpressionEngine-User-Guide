@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -81,10 +81,19 @@ The hit count for each template can be manually altered in the template's prefer
 ## PHP in Templates
 
 NOTE: **Important:** Enabling PHP in a template enables anyone with editing rights for that template to become a de-facto Super Admin since they can execute any PHP they want in that template, including PHP that can reveal information about your system, PHP that can delete data from your database, etc. Exercise extreme caution before enabling this option if you permit others to edit your templates.
+Additionally, PHP code in templates will operate slower than same code wrapped in plugin or module function.
 
 ExpressionEngine allows you to place [PHP](http://www.php.net/) code within your Templates so that it can be executed, allowing more dynamic capability with your content.
 
-To enable PHP in a template, set the *Allow PHP?* setting to Yes. Because PHP is a per-template setting, you can embed a Template that has PHP *enabled* into another Template which does *not* have PHP enabled.
+In order for this feature to be available, it needs to be enabled by adding 
+```php
+    $config['allow_php'] = 'y';
+```
+to your `config.php` file.
+
+NOTE: **Important:** When upgrading from an earlier version of ExpressionEngine to v6, the `allow_php` config override will automatically be set to 'y' if templates already exists that have PHP enabled.
+
+To enable PHP in particular template, set the *Allow PHP?* setting to Yes. Because PHP is a per-template setting, you can embed a Template that has PHP *enabled* into another Template which does *not* have PHP enabled.
 
 ### PHP Parsing Stage
 

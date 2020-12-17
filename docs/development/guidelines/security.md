@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -236,14 +236,14 @@ In your methods that will be handling form data, create a logic map that you can
 
 - What is validated and in what order?
   - Does the user need to be a logged in member?
-  - Does the user need to be in a specific member group for the action?
+  - Does the user need to be in a specific member role for the action?
   - [Deny Duplicate Data](security/spam-protection.md) Check?
 - What security checks are performed?
   - Secure form hashes
   - CAPTCHA
-  - Blacklist Banning / Whitelist Overrides
-    - `ee()->blacklist->blacklisted == 'y'` (blacklisted)
-    - `ee()->blacklist->whitelisted == 'y'` (whitelist override)
+  - Block list Banning / Allow list Overrides
+    - `ee()->blockedlist->blocked == 'y'` (blocked)
+    - `ee()->blockedlist->allowed == 'y'` (allowedlist override)
   - Preferences and settings checked against
 - Data Filtering and Conversion
   - XSS clean

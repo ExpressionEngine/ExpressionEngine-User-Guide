@@ -2,7 +2,7 @@
 # ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 #
 # @link      https://expressionengine.com/
-# @copyright Copyright (c) 2003-2019, EllisLab, Inc. (https://ellislab.com)
+# @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
 # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 
 - name: Welcome
@@ -160,8 +160,8 @@
   items:
     - name: Overview
       href: add-ons/overview.md
-    - name: Blacklist / White List
-      href: add-ons/blacklist.md
+    - name: Block / Allow
+      href: add-ons/blocklist.md
     - name: Consent
       href: add-ons/consent.md
     - name: Email
@@ -245,6 +245,19 @@
     - name: Emoticon (Deprecated)
       href: add-ons/emoticon.md
 
+- name: Command Line Interface (CLI)
+  items:
+    - name: Introduction
+      href: cli/intro.md
+    - name: Usage
+      href: cli/usage.md
+    - name: Creating A Command
+      href: cli/creating-a-command.md
+    - name: Defining Input
+      href: cli/defining-input.md
+    - name: Displaying Output
+      href: cli/displaying-output.md
+
 - name: Fieldtypes
   items:
     - name: Overview
@@ -269,6 +282,8 @@
       href: fieldtypes/rte.md
     - name: Checkboxes, Radio Buttons, Select, Multiselect
       href: fieldtypes/select.md
+    - name: Color Picker
+      href: fieldtypes/colorpicker.md
     - name: Text Input
       href: fieldtypes/text.md
     - name: Textarea
@@ -279,8 +294,33 @@
       href: fieldtypes/url.md
 
 - name: Member Management
-  href: member/index.md
-
+  items:
+      - name: Overview
+        href: member/index.md
+      - name: Registration Tag
+        href: member/registration.md
+      - name: Login Tag
+        href: member/login.md
+      - name: Logout Tags
+        href: member/logout.md
+      - name: Forgot Password
+        href: member/forgot-password.md
+      - name: Forgot Username
+        href: member/forgot-username.md
+      - name: Reset Password
+        href: member/reset-password.md
+      - name: Member List Tag
+        href: member/memberlist.md
+      - name: Member Search Form
+        href: member/search.md
+      - name: Custom Profile Data Tag
+        href: member/custom-profile-data.md
+      - name: Member Roles Tags
+        href: member/member-roles-tags.md
+      - name: Ignore List Tag
+        href: member/ignore-list.md
+      - name: Profile Templates (Legacy)
+        href: member/profile-templates.md
 
 - name: Control Panel
   items:
@@ -352,8 +392,8 @@
           href: control-panel/settings/html-buttons.md
         - name: Menu Manager
           href: control-panel/settings/menu-manager.md
-    - name: CP Footer
-      href: control-panel/footer.md
+    - name: CP Navigation
+      href: control-panel/navigation.md
 
 
 - name: Security
@@ -406,6 +446,8 @@
   items:
     - name: The addon.setup.php File
       href: development/addon-setup-php-file.md
+    - name: Add-on Installer
+      href: development/addon-installer.md
     - name: Plugins
       href: development/plugins.md
     - name: Modules
@@ -426,10 +468,10 @@
               href: development/extension-hooks/global/functions.md
             - name: Grid Fieldtype
               href: development/extension-hooks/global/grid.md
+            - name: RTE Fieldtype
+              href: development/extension-hooks/global/rte.md
             - name: Input Library
               href: development/extension-hooks/global/input.md
-            - name: Legacy Member Model
-              href: development/extension-hooks/global/member-model.md
             - name: Output Library
               href: development/extension-hooks/global/output.md
             - name: Pagination Library
@@ -498,8 +540,6 @@
               href: development/extension-hooks/model/template-global-variable.md
             - name: MemberField Model
               href: development/extension-hooks/model/member-field.md
-            - name: MemberGroup Model
-              href: development/extension-hooks/model/member-group.md
             - name: Member Model
               href: development/extension-hooks/model/member.md
             - name: Site Model
@@ -545,6 +585,8 @@
 
     - name: Fieldtypes
       href: development/fieldtypes.md
+    - name: Jump Menu
+      href: development/jump-menu.md
     - name: Architecture
       href: development/architecture.md
     - name: Services
@@ -619,8 +661,6 @@
       href: development/tree-datastructure.md
     - name: Shared Form View
       href: development/shared-form-view.md
-    - name: RTE Tools API
-      href: development/rte-tools.md
     - name: Control Panel Javascript
       items:
         - name: Custom jQuery Events
@@ -782,10 +822,14 @@
           href: development/guidelines/security.md
         - name: View Files and PHP Syntax
           href: development/guidelines/view-php-syntax.md
-    - name: v4 Add-on Migration
-      href: development/v4-addon-migration.md
     - name: v3 Add-on Migration
       href: development/v3-add-on-migration.md
+    - name: v4 Add-on Migration
+      href: development/v4-addon-migration.md
+    - name: v6 Add-on Migration
+      href: development/v6-add-on-migration.md
+    - name: Automated Upgrading
+      href: development/automated-upgrading.md
 
 - name: Bugs and Security Reports
   href: bugs-and-security-reports.md

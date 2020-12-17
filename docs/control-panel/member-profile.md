@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -33,7 +33,7 @@ Both the Username and Screen Name for the account can be changed. In addition, t
 
 **Control Panel Location: `Members > Profile > Consents`**
 
-ExpressionEngine creates consent requests for actions that may require user permission. Third party addons and site administrators may also generate such permission requests. The consent page allows you to manage your response to all existing consent requests. Consent may be granted or withdrawn at any point and a record of the user action will be made.
+ExpressionEngine creates consent requests for actions that may require user permission. Third party add-ons and site administrators may also generate such permission requests. The consent page allows you to manage your response to all existing consent requests. Consent may be granted or withdrawn at any point and a record of the user action will be made.
 
 A user may also manage their consent requests on the frontend using the [consent module](add-ons/consent.md). Consent management is a primary tool for those who need to create [GDPR compliant](general/gdpr.md) sites.
 
@@ -44,6 +44,12 @@ NOTE: **Note:** In order for cookie consent requests to display, [Require user c
 **Control Panel Location: `Members > Profile > CP Settings`**
 
 Set your default homepage for the control panel.
+
+## Info & Activity
+
+**Control Panel Location: `Members > Profile > Info & Activity`**
+
+Shows information related to a member's activity, such as IP address, last visit, link to member's CP logs etc.
 
 ## Date & Time Settings
 
@@ -63,11 +69,18 @@ The 'Delete user' link opens a modal to confirm the deletion of the member on th
 
 You may specify the email address associated with the account as well as preferences related to receiving email. If you are not logged in with a Super Admin account, you will need to submit the password associated with the account in order to update these settings. The password is not required when the person editing is a Super Admin account.
 
-## Member Group Assignment
+## Member Roles assignment
 
-**Control Panel Location: `Members > Profile > Member Group`**
+**Control Panel Location: `Members > Profile > Member Roles`**
 
-This section allows you to set the Member Group for the current user. You can not change the group for Super Admins.
+This section allows you to set the Member Roles for the current user. 
+NOTE: **Note:** You can not change the role for Super Admins.
+
+## Access overview
+
+**Control Panel Location: `Members > Profile > Access Overview`**
+
+Lists every permission the member has based on the Roles assigned.
 
 ## Blocked Members
 
@@ -80,6 +93,12 @@ This section allows you to set the Member Group for the current user. You can no
 **Control Panel Location: `Members > Profile > Login`**
 
 Super Admin may login as another user while still viewing debugging data. This can be particularly useful when debugging a situation that only occurs for certain user groups and not others.
+
+## Email User
+
+**Control Panel Location: `Members > Profile > Email`**
+
+Shortcut to Communicate tool with the member being primary recipient.
 
 ## Publishing Settings
 

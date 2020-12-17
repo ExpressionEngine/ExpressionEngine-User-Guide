@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -11,7 +11,7 @@
 
 [TOC]
 
-In addition to the regular permissions you set up for your Member Groups earlier (see above), there are two special levels that you can assign to users: Administrator and Moderator. You can assign the Administrator or Moderator level to either an entire Member Group or simply to individual members of your site. In this way you have flexibility as to how you assign these special privileges.
+In addition to the regular permissions you set up for your Member Roles earlier (see above), there are two special levels that you can assign to users: Administrator and Moderator. You can assign the Administrator or Moderator level to either an entire Role or simply to individual members of your site. In this way you have flexibility as to how you assign these special privileges.
 
 You may also set up "Member Ranks", which are sort of steps that users can reach, upon which they gain particular titles.
 
@@ -19,13 +19,13 @@ You access these areas under the User Management tab in the Forum Module.
 
 ## Administrators
 
-The Administrators section is accessed by clicking the orange icon associated with a forum board. Administrators are **very** powerful users. Administrators have all rights when it comes to the forums. They can ban users, delete posts, move threads, close threads, etc. They have the same rights that a member of the "Super Admin" Member Group does, except they can't ban SuperAdmins or delete threads made by a SuperAdmin.
+The Administrators section is accessed by clicking the orange icon associated with a forum board. Administrators are **very** powerful users. Administrators have all rights when it comes to the forums. They can ban users, delete posts, move threads, close threads, etc. They have the same rights that a member of the "Super Admin" Role does, except they can't ban SuperAdmins or delete threads made by a SuperAdmin.
 
-Administrators in the forums are **very** powerful. Be extremely careful when assigning this privilege to a member or Member Group.
+Administrators in the forums are **very** powerful. Be extremely careful when assigning this privilege to a member or Member Role.
 
 ## Moderators
 
-The Administrators section is accessed by clicking the blue icon associated with a forum board. Moderators are special members or Member Groups. You can add Moderators on a forum-by-forum basis and assign them permissions _above and beyond_ those you normally assign through the regular forum permissions.
+The Administrators section is accessed by clicking the blue icon associated with a forum board. Moderators are special members or Member Roles. You can add Moderators on a forum-by-forum basis and assign them permissions _above and beyond_ those you normally assign through the regular forum permissions.
 
 There are six additional permissions that you can grant a Moderator:
 
@@ -36,7 +36,7 @@ There are six additional permissions that you can grant a Moderator:
 - **Can Post Announcements**: The Moderator can post an "announcement" that shows up in all forums.
 - **Can View IP Addresses**: The Moderator can see the IP address of all users who leave posts or replies.
 
-Remember, these permissions are **in addition** to any that may already be assigned to the Member Group when the forum was set up.
+Remember, these permissions are **in addition** to any that may already be assigned to the Member Role when the forum was set up.
 
 ## Member Ranks
 

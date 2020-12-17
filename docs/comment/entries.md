@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -293,7 +293,7 @@ The date on which the comment was edited. See [Date Variable Formatting](templat
 
     {if editable}Show Edit{/if}
 
-This variable will be used in a conditional to allow [comment editing](comment/form.md#allowing-members-to-edit-comments-on-the-front-end). It indicates whether a member has [permission to edit a given comment](control-panel/member-manager.md#createedit-all-member-groups).
+This variable will be used in a conditional to allow [comment editing](comment/form.md#allowing-members-to-edit-comments-on-the-front-end). It indicates whether a member has [permission to edit a given comment](control-panel/member-manager.md#createedit-all-member-roles).
 
 ### `{email}`
 
@@ -329,7 +329,7 @@ The commenter's location as entered in their profile
 
 ### `{member_group_id}`
 
-The commenter's member group id (0 for non-members)
+The commenter's primary role id (0 for non-members)
 
 ### `{member_search_path=}`
 

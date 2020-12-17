@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -27,7 +27,7 @@ Alerts are for providing feedback on an action and calling attention to warnings
 
 ## CP/Alert Service Methods
 
-**class `EllisLab\ExpressionEngine\Service\Alert\AlertCollection`**
+**class `ExpressionEngine\Service\Alert\AlertCollection`**
 
 [TOC=3]
 
@@ -104,7 +104,7 @@ Gets the rendered value of the standard alert.
 
 ## Alert Object Methods
 
-**class `EllisLab\ExpressionEngine\Service\Alert\AlertCollection`**
+**class `ExpressionEngine\Service\Alert\AlertCollection`**
 
 [TOC=3]
 
@@ -181,7 +181,7 @@ Sets the title of the alert.
 | \$title   | `String` | The title of the alert |
 | Returns   | `Alert`  | \$this                 |
 
-### `addToBody($item, $class = NULL)`
+### `addToBody($item, $class = NULL, $xss_filter = TRUE)`
 
 Adds content to the body of the alert.
 
@@ -189,6 +189,7 @@ Adds content to the body of the alert.
 | --------- | -------------- | ------------------------------------------------------------------- |
 | \$item    | `String|array` | The item to display. If it's an array it will be rendred as a list. |
 | \$class   | `String`       | An optional CSS class to add to the item                            |
+| \$xss_filter| `Bool`       | Whether to apply XSS filtering to the body of alert. If you need to display external link in alert and you are not outputting any unfiltered user-provided content, you can set this to `false`, otherwise we recommend skipping it. |
 | Returns   | `Alert`        | \$this                                                              |
 
 ### `addSeparator()`

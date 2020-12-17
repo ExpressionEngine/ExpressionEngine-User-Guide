@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -19,7 +19,7 @@ Keeping your installation up-to-date is the easiest way to keep your site secure
 
 ## Limit User Permissions
 
-You should only provide people with the minimum permissions they need to do what they need to do. In ExpressionEngine parlance, don't put everyone in the Super Admin member group.
+You should only provide people with the minimum permissions they need to do what they need to do. In ExpressionEngine parlance, don't put everyone in the Super Admin role.
 
 This also applies to access to your webserver. Do not provide others with FTP or SSL access unless it is absolutely necessary. Periodically review your access settings and revoke any accounts and permissions that are no longer required.
 
@@ -47,7 +47,7 @@ When an add-on or other application on the server is no longer used, we recommen
 
 ExpressionEngine prevents the upload of code to your server when using any of the native file upload tools including the custom file field in the control panel and Channel Forms, forum attachments, and private message attachments.
 
-However, in the unlikely event that ExpressionEngine's default safeguards are bypassed, an insecure addon is installed, outdated code is exploited, or your server is compromised in any other way, we recommend using your web-servers native security features to further lock down file upload directories.
+However, in the unlikely event that ExpressionEngine's default safeguards are bypassed, an insecure add-on is installed, outdated code is exploited, or your server is compromised in any other way, we recommend using your web-servers native security features to further lock down file upload directories.
 
 We recommend a simple `.htaccess` file at the root of the directory where you'll be allowing user uploads:
 

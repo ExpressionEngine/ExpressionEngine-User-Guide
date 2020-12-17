@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -13,13 +13,13 @@
 
 The menu manager allows you to create customized third tier menus for display in the control panel.
 
-You may create multiple menu sets and assign them to show for specific member groups. A member group may only be assigned a single menu set.
+You may create multiple menu sets and assign them to show for specific member roles. A member role may only be assigned a single menu set.
 
 ## Create/Edit Menu Sets
 
 **Control Panel Location: `Settings > Menu Sets`**
 
-This section of the Control Panel allows you to define your menu sets and assign them to member groups.
+This section of the Control Panel allows you to define your menu sets and assign them to member roles.
 
 ### Fields
 
@@ -27,11 +27,11 @@ This section of the Control Panel allows you to define your menu sets and assign
 
 The name of the menu set.
 
-#### Member Groups
+#### Member Roles
 
-The member group(s) the menu set is assigned to. Only members in the specified groups will see this menu.
+The member role(s) the menu set is assigned to. Only members in the specified groups will see this menu.
 
-NOTE: **Note:** Be careful not to create links to pages the assigned member group does not have access to or they will end up on an error page with a denied access message.
+NOTE: **Note:** Be careful not to create links to pages the assigned member role does not have access to or they will end up on an error page with a denied access message.
 
 #### Menu Items
 
@@ -45,7 +45,7 @@ Clicking the **Add Menu Item** button or the edit link next to an existing menu 
 
 **Control Panel Location: `Settings > Menu Sets`**
 
-This section of the Control Panel allows you to define your menu sets and assign them to member groups.
+This section of the Control Panel allows you to define your menu sets and assign them to member roles.
 
 ### Fields
 

@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -21,7 +21,7 @@ ExpressionEngine's architecture is based around a few core ideas. This section i
 
 ExpressionEngine's core is built around a dependency container:
 
-    use EllisLab\ExpressionEngine\Service\Dependency\InjectionContainer;
+    use ExpressionEngine\Service\Dependency\InjectionContainer;
     $di = new InjectionContainer();
 
 This is simply a container of named objects or factories. The container itself is not public. Additions are made by declaring them in the `addon.setup` file.
@@ -83,7 +83,7 @@ The first parameter to a closure inside a dependency container is always the con
 
 In a system that runs add-on code from potentially many different developers it can be difficult to prevent naming collisions. Namespaces work well when dealing with native objects, but the ability to alias long namespace names gets lost when using strings to identify files and class names.
 
-To consistently solve this problem, ExpressionEngine assigns a prefix to all independent code sources. For any native code this prefix is **ee:**. All addons are assigned a prefix that matches the addon folder name. This also matches the name used in the templating engine.
+To consistently solve this problem, ExpressionEngine assigns a prefix to all independent code sources. For any native code this prefix is **ee:**. All add-ons are assigned a prefix that matches the add-on folder name. This also matches the name used in the templating engine.
 
 The following services currently support the prefix naming conventions:
 
@@ -95,7 +95,7 @@ All config operations support prefixes on item and file names:
 
 ### Dependency Container
 
-The dependency container can use prefixes to create addon services:
+The dependency container can use prefixes to create add-on services:
 
     ee('addonname:ServiceName')
 

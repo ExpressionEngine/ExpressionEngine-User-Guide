@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -66,7 +66,7 @@ Now that our Table object is set up, let's start describing our data. First, we'
       )
     );
 
-NOTE: **Note:** Be sure to include the Table class's namespace at the top of your file to use its constants: `use EllisLab\ExpressionEngine\Library\CP\Table;`
+NOTE: **Note:** Be sure to include the Table class's namespace at the top of your file to use its constants: `use ExpressionEngine\Library\CP\Table;`
 
 Notice we specified some extra parameters for two of the columns. The "Manage" column is going to be of type `COL_TOOLBAR` which can have various action buttons related to the individual Channel. And our last column is just for checkboxes, so that a user can select Channels to perform actions on them in bulk.
 
@@ -292,3 +292,5 @@ If you're using the [Shared Form View](development/shared-form-view.md), your fi
 Note we're setting `wide` to denote the field should take up the entire width of the form, and `grid` so the form display logic can do the necessary markup tweaks for proper styling and behavior of the Grid.
 
 For those not using the Shared Form View, make sure your Grid is in a div tag instead of a fieldset tag and make sure it has a class of `grid-publish`.
+
+Note: We must need to add "fieldset-faux" class as parent to the grid structure.

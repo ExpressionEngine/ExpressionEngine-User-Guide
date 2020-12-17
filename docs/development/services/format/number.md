@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -67,7 +67,7 @@ WARN: **Warning:** This method requires the PHP intl extension (enabled by defau
 
 ## API Reference
 
-**class `EllisLab\ExpressionEngine\Service\Formatter\Formats\Number`**
+**class `ExpressionEngine\Service\Formatter\Formats\Number`**
 
 [TOC=3]
 

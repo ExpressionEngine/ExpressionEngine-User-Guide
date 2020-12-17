@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -159,6 +159,8 @@ Here you can choose which template to use to display this "page" entry when the 
 
 ## Form Buttons
 
+![](_images/cp-entry-form-buttons.png)
+
 ### Save
 
 Saves the entry and refreshes the current page.
@@ -173,6 +175,10 @@ Saves the entry and returns the [Entry Manager](control-panel/entry-manager.md) 
 
 ### Preview
 
-The preview button is available if the `channel_prefs_preview_url` is set **or** the [Pages Module](add-ons/pages.md) is installed and a Page URI and template have been set.
+A live preview of the entry is available if the `channel_prefs_preview_url` is set **or** the [Pages Module](add-ons/pages.md) is installed and a Page URI and template have been set.
 
-The preview will open a split screen that allows a live preview of edits. The template used to display the preview is based on the Page fields if set and the channel preview URL otherwise. If neither is available, the Preview button will not display.
+If neither is set, the preview button will have an exclamation mark (!) and will link to channel preferences page where Preview URL can be set.
+
+The preview will open a split screen that allows a live preview of edits. The template used to display the preview is based on the Page fields if set and the channel preview URL otherwise. 
+
+When the preview is triggered, it is being displayed side-by-side with edit screen. The size of preview container can be adjusted with mouse dragging its border. The preview is dynamically being updated as you change the fields.
