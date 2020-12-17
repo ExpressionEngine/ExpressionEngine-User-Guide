@@ -35,9 +35,9 @@ You can also update ExpressionEngine via the command line on your server. This a
 
 ### Via EECLI
 
-You can upgrade ExpressionEngine via the command line on your server via `eecli`.
+You can upgrade ExpressionEngine via the command line on your server via [`eecli`](cli/intro.md).
 
-To update via the eecli tool, run:
+To update via the [eecli](cli/intro.md) tool, run:
 
     php eecli.php update
 
@@ -47,7 +47,7 @@ To update via the eecli tool, run:
 **force-addon-upgrades**: Automatically runs all addon updaters at end of update (advanced)
 **y**: Skip all confirmations. (advanced)
 
-## Via EECMS
+## Via EECMS (deprecated)
 
 To update via the command line, execute the tool located at `system/ee/eecms`:
 
