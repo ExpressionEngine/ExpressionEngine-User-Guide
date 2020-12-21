@@ -67,11 +67,13 @@ Member username. This is a **required** field and must be unique across the site
     <label for="username">Username</label>
     <input type="text" name="username" value="" maxlength="120" size="40" />
 
-<!--
 ### Custom Member Fields
 
-Member username. This is a **required** field and must be unique across the site:
--->
+Custom member fields that have "Show in registration?" setting turned on can be used in member registration form.
+Please note you need to address those by ID and not name, e.g. `m_field_id_8`
+
+    <label for="work_title">Work title</label>
+    <input type="text" id="work_title" name="m_field_id_1" size="40" />
 
 ## Variables
 
