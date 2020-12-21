@@ -17,12 +17,6 @@ Output a member registration form.
 
 ## Parameters
 
-### `error_handling=`
-
-    error_handling="inline"
-
-Choose to display error messages inline (see [Error Messages](#errors)). By default, errors are displayed with the user message template.
-
 ### `return=`
 
     return="member/registration/success"
@@ -105,33 +99,6 @@ Member username. This is a **required** field and must be unique across the site
 
     {if username}{username}{/if}
 
-## Variable Pairs
-
-### `{errors}`
-
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
-
-    {errors}
-        <p>{error}</p>
-    {/errors}
-
-#### Error Tag Pair Parameters
-
-##### `backspace=`
-
-    backspace="3"
-
-The `backspace=` parameter will remove characters, including spaces and line breaks, from the last iteration of the tag pair.
-
-#### Error Tag Pair Variables
-
-##### `{error}`
-
-    {error}
-
-The error text.
-
-
 
 ## Example
 
@@ -199,5 +166,3 @@ The error text.
 
         <input type="submit" value="Register" class="btn btn-primary" />
     {/exp:member:registration_form}
-
-
