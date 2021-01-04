@@ -312,17 +312,29 @@ There are a handful of variables that are always available to conditionals.
 
 You can test against the email address of the currently logged in user.
 
-### `logged_in_group_description`
-
-    {if logged_in_group_description *= 'games'}  Shall we play a game?  {/if}
-
-You can test against the group description of the currently logged in user.
-
-### `logged_in_role_id`
+### `logged_in_primary_role_id`
 
     {if logged_in_role_id == '7'}  You're an "Editor"!  {/if}
 
 You can test against the Primary Role of the currently logged in user.
+
+### `logged_in_primary_role_name`
+
+    {if logged_in_primary_role_name *= 'games'}  Shall we play a game?  {/if}
+
+You can test against the primary role name of the currently logged in user.
+
+### `logged_in_primary_role_description`
+
+    {if logged_in_primary_role_description *= 'games'}  Shall we play a game?  {/if}
+
+You can test against the primary role description of the currently logged in user.
+
+### `has_role_*X*`
+
+    {if has_role_editor} Logged in with editor permissions {/if}
+
+With `X` being short role name, you can use this conditional to check whether logged in user has certain role. This takes into account all the 'secondary' roles assigned.
 
 ### `logged_in_ip_address`
 

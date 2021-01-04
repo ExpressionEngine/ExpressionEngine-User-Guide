@@ -34,12 +34,6 @@ Output a login form.
 
 Allows you to specify the action attribute of the &lt;form&gt; tag. Handy if you need to ensure that authentication points to SSL portions of your site from non-SSL portions. Often used in conjunction with the return= parameter and the [{current_url} global variable](templates/globals/single-variables.md#current_url) so your visitors will go back to the page and domain they logged in from.
 
-### `error_handling=`
-
-    error_handling="inline"
-
-Choose to display error messages inline (see [Error Messages](#errors)). By default, errors are displayed with the user message template.
-
 ### `form_class=`
 
     form_class="login"
@@ -111,35 +105,6 @@ It is recommended that you use this variable as indicated in the example code at
     {if auto_login}
       <p><input class="checkbox" type="checkbox" name="auto_login" value="1"> Auto-login on future visits</p>
     {/if}
-
-
-
-## Variable Pairs
-
-### `{errors}`
-
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
-
-    {errors}
-        <p>{error}</p>
-    {/errors}
-
-#### Error Tag Pair Parameters
-
-##### `backspace=`
-
-    backspace="3"
-
-The `backspace=` parameter will remove characters, including spaces and line breaks, from the last iteration of the tag pair.
-
-#### Error Tag Pair Variables
-
-##### `{error}`
-
-    {error}
-
-The error text.
-
 
 
 ## Example

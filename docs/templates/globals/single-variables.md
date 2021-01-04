@@ -259,17 +259,17 @@ The email address for the site, as specified in [Email Configuration](control-pa
 
 The email address for the currently logged-in user.
 
-### `{logged_in_group_description}`
-
-The Primary Role description for the currently logged-in user.
-
-### `{logged_in_role_id}`
+### `{logged_in_primary_role_id}`
 
 The Primary Role ID number for the currently logged-in user.
 
-### `{logged_in_role_title}`
+### `{logged_in_primary_role_name}`
 
 The title of the Primary Role for the currently logged-in user.
+
+### `{logged_in_primary_role_description}`
+
+The Primary Role description for the currently logged-in user.
 
 ### `{logged_in_ip_address}`
 
