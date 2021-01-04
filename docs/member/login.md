@@ -1,5 +1,5 @@
 <!--
-    This source file is part of the open sour ce project
+    This source file is part of the open source project
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
