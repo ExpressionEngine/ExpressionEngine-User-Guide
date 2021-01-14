@@ -89,7 +89,7 @@ Returns a ConfigFile class representing the config file
 | \$filename | `String` | Name of the file  |
 | Returns    | `File`   | ConfigFile object |
 
-## File Objet Methods
+## File Object Methods
 
 **class `ExpressionEngine\Service\Config\File`**
 
