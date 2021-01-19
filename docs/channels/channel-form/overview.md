@@ -137,6 +137,12 @@ NOTE: **Note:** By default, the channel form will have an id of 'cform'. If usin
 
 Adds necessary Javascript and CSS to your form. If you do not require the Javascript functionality or reset CSS, set to "no". Defaults to "yes".
 
+### `include_css=`
+
+    include_css="no"
+
+Allows you to manage the inclusion of required CSS independently from the `include_assets` parameter. Defaults to "yes".
+
 ### `include_jquery=`
 
     include_jquery="no"
