@@ -34,7 +34,10 @@
   - Resolved [#705](https://github.com/ExpressionEngine/ExpressionEngine/issues/705) where an incorrect tag was added to docs.
 
 - **Enhancements** 🚀
+  - EE Core code is now formatted for PSR-12!
+  - Select buttons in Relationship fields can now be customized.
   - Add cache clearing option for the JumpMenu [#623](https://github.com/ExpressionEngine/ExpressionEngine/issues/623)
+  - Removed Channel options in relationship field when there is only one channel to choose from [#684](https://github.com/ExpressionEngine/ExpressionEngine/issues/684).
   - Added more heading options to the RTE field [#695](https://github.com/ExpressionEngine/ExpressionEngine/issues/695).
 
 ## Version 6.0.0 (Release: December 17, 2020)
