@@ -8,6 +8,34 @@
 -->
 
 # ExpressionEngine v6 Change Log
+## Version 6.0.1 (Release: January 21, 2021)
+- **Bug Fixes** 💃🐛 
+  - Resolved [#783](https://github.com/ExpressionEngine/ExpressionEngine/issues/783) where an exception could be thrown when deleting users with strange user names.
+  - Resolved [#768](https://github.com/ExpressionEngine/ExpressionEngine/issues/768) where some buttons on the "forgot password" screen where not translated.
+  - Resolved [#730](https://github.com/ExpressionEngine/ExpressionEngine/issues/730) where a link was invalid.
+  - Resolved [#744](https://github.com/ExpressionEngine/ExpressionEngine/issues/744) where the incorrect file upload directory was selected in an RTE field.
+  - Resolved [#733](https://github.com/ExpressionEngine/ExpressionEngine/issues/733) where jump menu was not changing correctly when a user choose a different language for the Control Panel.
+  - Resolved [#753](https://github.com/ExpressionEngine/ExpressionEngine/issues/753) where debug was set to automatically set to `1` on new install.
+  - Resolved [#737](https://github.com/ExpressionEngine/ExpressionEngine/issues/737) where images uploaded to a file grid field did not always show as added to the entry.
+  - Resolved [#713](https://github.com/ExpressionEngine/ExpressionEngine/issues/713) where site was set to "offline" after upgrading to EE6.
+  - Resolved [#693](https://github.com/ExpressionEngine/ExpressionEngine/issues/693) where only 5 images were added to an entry when adding more than 5 images to a file grid within a fluid field.
+  - Resolved [#735](https://github.com/ExpressionEngine/ExpressionEngine/issues/735) where installer could not finish on some shared hosting environments.
+  - Resolved [#740](https://github.com/ExpressionEngine/ExpressionEngine/issues/740) where on-the-fly manipulations were not updated when an image is replaced.
+  - Resolved [#714](https://github.com/ExpressionEngine/ExpressionEngine/issues/714) where Color Picker events are not fired on Grid settings page
+  - Resolved [#742](https://github.com/ExpressionEngine/ExpressionEngine/issues/742) where `logged_in_role_id` was not parsing in templates.
+  - Resolved [#725](https://github.com/ExpressionEngine/ExpressionEngine/issues/725) where a language key was missing for the Jump Menu.
+  - Resolved [#721](https://github.com/ExpressionEngine/ExpressionEngine/issues/721) where channels named with numbers where not shown correctly in main navigation.
+  - Resolved [#708](https://github.com/ExpressionEngine/ExpressionEngine/issues/708) where MySQL's join limit could be reached and cause errors.
+  - Resolved [#717](https://github.com/ExpressionEngine/ExpressionEngine/issues/717) where new user roles where not being shown in the main navigation.
+  - Resolved [#572](https://github.com/ExpressionEngine/ExpressionEngine/issues/572) where the main navigation flyout menu could not accommodate long list of channels.
+  - Resolved [#696](https://github.com/ExpressionEngine/ExpressionEngine/issues/696) where the EECLI was not installed via 1-Click update.
+  - Resolved [#703](https://github.com/ExpressionEngine/ExpressionEngine/issues/703) where channel form could not upload files to other site.
+  - Resolved [#691](https://github.com/ExpressionEngine/ExpressionEngine/issues/691) where `addon.setup.php` aliases key doesn't work for the FilePicker class.
+  - Resolved [#705](https://github.com/ExpressionEngine/ExpressionEngine/issues/705) where an incorrect tag was added to docs.
+
+- **Enhancements** 🚀
+  - Add cache clearing option for the JumpMenu [#623](https://github.com/ExpressionEngine/ExpressionEngine/issues/623)
+  - Added more heading options to the RTE field [#695](https://github.com/ExpressionEngine/ExpressionEngine/issues/695).
 
 ## Version 6.0.0 (Release: December 17, 2020)
 - **New Control Panel Design** 🎨
