@@ -26,10 +26,11 @@ NOTE: **Note:** If updating from a version prior to ExpressionEngine 6, you may 
 
 When an update is available, you'll see the version number in the control panel footer turn yellow or red. Click the version number, then click "Update Now".
 
-**Upgrade Steps** 
+**Upgrade Steps**
 1. Backup files and Database
 2. Confirm all add-ons are updated and compatiable with new major ExpressionEngine version
 3. Test in staging environment
+4. Review the [Version Notes](installation/version-notes.md) for any version-specific changes that you may need to make to your installation.
 
 In the rare case an update fails, please read [Troubleshooting Automatic Updates](troubleshooting/general.md#troubleshooting-automatic-updates).
 
@@ -112,4 +113,5 @@ You're Done! ExpressionEngine is now fully updated. But before you go...
 
 - If the updater could not automatically rename the installer, rename or remove `system/ee/installer/` directory manually. The installer directory can be safely removed after installing ExpressionEngine.
 - To enable one-click updating, make sure your [file permissions](troubleshooting/general.md#file-permissions) are all set.
+- Review the [Version Notes](installation/version-notes.md) for any version-specific changes that you may need to make to your installation.
 - Review [file permissions](troubleshooting/general.md#file-permissions) if something isn't working quite right.
