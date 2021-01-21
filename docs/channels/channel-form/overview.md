@@ -187,22 +187,6 @@ Specify a path to redirect the user to after an entry submission, based on the u
 
 Add additional validation rules to your fields. Separate multiple rules with the pipe | character. You may use any of these rules: (required, matches, min_length, max_length, exact_length, alpha, alpha_numeric, alpha_dash, numeric, integer, is_natural, is_natural_no_zero, valid_ee_date, valid_email, valid_emails, valid_ip, valid_base64).
 
-### `rte_selector=`
-
-    rte_selector=".my-custom-class"
-
-This parameter will automatically load ExpressionEngine's [Rich Text Editor](add-ons/rte.md) and apply it to the element(s) matching the jQuery selector you specify. Any valid jQuery selector is acceptable.
-
-The RTE will use the Toolset preference of the currently logged-in user as chosen in `my_account_rte_prefs`. If the user has not chosen a Toolset or is not logged in, the site's `rte_mcp_default_toolset` will be used.
-
-You can optionally force a particular toolset ID to use (see below).
-
-### `rte_toolset_id=`
-
-    rte_toolset_id="1"
-
-The ID of the Rich Text Editor toolset to use. Tool set IDs are listed on the [Rich Text Editor](add-ons/rte.md#tool-sets) page.
-
 ### `secure_action=`
 
     secure_action="yes"
@@ -317,7 +301,7 @@ If using a field with options, such as Checkboxes or Dropdown, you can display t
       {/if}
 
       {if rte}
-        <textarea id="{field_name}" name="{field_name}" dir="{text_direction}" rows="{rows}" class="WysiHat-field">{field_data}</textarea>
+        {display_field}
       {/if}
 
       {if text}
