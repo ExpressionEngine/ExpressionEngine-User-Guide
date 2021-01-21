@@ -315,6 +315,8 @@
         href: member/search.md
       - name: Custom Profile Data Tag
         href: member/custom-profile-data.md
+      - name: Edit Profile Data Tag
+        href: member/edit-profile.md
       - name: Member Roles Tags
         href: member/member-roles-tags.md
       - name: Ignore List Tag
@@ -673,6 +675,7 @@
           href: development/control-panel-js/rangesandselections.md
         - name: WysiHat API
           href: development/control-panel-js/wysihat-api.md
+
     - name: Constants Reference
       href: development/constants.md
     - name: JSON Version Feed
