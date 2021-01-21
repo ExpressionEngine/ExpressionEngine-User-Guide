@@ -33,8 +33,8 @@ Set whether to assign an entry to both the selected category and its parent cate
 
 This is where you indicate which resizing protocol to use. You may need to contact your Host or server admin to determine which protocols are installed and available on your server. The options are:
 
-- [GD](http://www.boutell.com/gd/)
-- [GD 2](http://www.boutell.com/gd/)
+- [GD](https://www.php.net/manual/en/intro.image.php)
+- [GD 2](https://www.php.net/manual/en/intro.image.php)
 - [ImageMagick](http://www.imagemagick.org/script/index.php)
 - [NetPBM](http://netpbm.sourceforge.net/)
 
