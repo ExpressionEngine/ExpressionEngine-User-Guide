@@ -15,11 +15,11 @@ lang: php
 
 [TOC=3]
 
-### `before_role_insert($member, $values)`
+### `before_role_insert($role, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
-| \$member  | `Object` | Current Role model object              |
+| \$role  | `Object` | Current Role model object              |
 | \$values  | `Array`  | The Role model object data as an array |
 | Returns   | `NULL`   | void                                     |
 
@@ -29,11 +29,11 @@ How it's called:
 
     ee()->extensions->call('before_role_insert', $this, $this->getValues());
 
-### `after_role_insert($member, $values)`
+### `after_role_insert($role, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
-| \$member  | `Object` | Current Role model object              |
+| \$role  | `Object` | Current Role model object              |
 | \$values  | `Array`  | The Role model object data as an array |
 | Returns   | `NULL`   | void                                     |
 
@@ -43,11 +43,11 @@ How it's called:
 
     ee()->extensions->call('after_role_insert', $this, $this->getValues());
 
-### `before_role_update($member, $values, $modified)`
+### `before_role_update($role, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
-| \$member   | `Object` | Current Role model object                      |
+| \$role   | `Object` | Current Role model object                      |
 | \$values   | `Array`  | The Role model object data as an array         |
 | \$modified | `Array`  | An array of all the old values that were changed |
 | Returns    | `NULL`   | void                                             |
@@ -58,11 +58,11 @@ How it's called:
 
     ee()->extensions->call('before_role_update', $this, $this->getValues(), $modified);
 
-### `after_role_update($member, $values, $modified)`
+### `after_role_update($role, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
-| \$member   | `Object` | Current Role model object                      |
+| \$role   | `Object` | Current Role model object                      |
 | \$values   | `Array`  | The Role model object data as an array         |
 | \$modified | `Array`  | An array of all the old values that were changed |
 | Returns    | `NULL`   | void                                             |
@@ -73,11 +73,11 @@ How it's called:
 
     ee()->extensions->call('after_role_update', $this, $this->getValues(), $modified);
 
-### `before_role_save($member, $values)`
+### `before_role_save($role, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
-| \$member  | `Object` | Current Role model object              |
+| \$role  | `Object` | Current Role model object              |
 | \$values  | `Array`  | The Role model object data as an array |
 | Returns   | `NULL`   | void                                     |
 
@@ -87,11 +87,11 @@ How it's called:
 
     ee()->extensions->call('before_role_save', $this, $this->getValues());
 
-### `after_role_save($member, $values)`
+### `after_role_save($role, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
-| \$member  | `Object` | Current Role model object              |
+| \$role  | `Object` | Current Role model object              |
 | \$values  | `Array`  | The Role model object data as an array |
 | Returns   | `NULL`   | void                                     |
 
@@ -101,11 +101,11 @@ How it's called:
 
     ee()->extensions->call('after_role_save', $this, $this->getValues());
 
-### `before_role_delete($member, $values)`
+### `before_role_delete($role, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
-| \$member  | `Object` | Current Role model object              |
+| \$role  | `Object` | Current Role model object              |
 | \$values  | `Array`  | The Role model object data as an array |
 | Returns   | `NULL`   | void                                     |
 
@@ -115,11 +115,11 @@ How it's called:
 
     ee()->extensions->call('before_role_delete', $this, $this->getValues());
 
-### `after_role_delete($member, $values)`
+### `after_role_delete($role, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
-| \$member  | `Object` | Current Role model object              |
+| \$role  | `Object` | Current Role model object              |
 | \$values  | `Array`  | The Role model object data as an array |
 | Returns   | `NULL`   | void                                     |
 
@@ -136,7 +136,7 @@ How it's called:
 | \$delete_ids | `Array` | The primary key IDs of the models being deleted |
 | Returns      | `NULL`  | void                                            |
 
-Called before a bulk of role objects are deleted. If you need to do an expensive operation when members are deleted, it may be more efficient to handle it in bulk here.
+Called before a bulk of role objects are deleted. If you need to do an expensive operation when roles are deleted, it may be more efficient to handle it in bulk here.
 
 How it's called:
 
@@ -150,24 +150,9 @@ How it's called:
 | \$delete_ids | `Array` | The primary key IDs of the models being deleted |
 | Returns      | `NULL`  | void                                            |
 
-Called after a bulk of role objects are deleted. If you need to do an expensive operation when members are deleted, it may be more efficient to handle it in bulk here.
+Called after a bulk of role objects are deleted. If you need to do an expensive operation when roles are deleted, it may be more efficient to handle it in bulk here.
 
 How it's called:
 
     ee()->extensions->call('after_role_bulk_delete', $delete_ids);
 
-
-### `member_anonymize($member)`
-
-| Parameter | Type     | Description                          |
-| --------- | -------- | ------------------------------------ |
-| \$member  | `Object` | Role model object being anonymized |
-| Returns   | `NULL`   | void                                 |
-
-Called when an anonymization action is taken on a member. If you have personally-identifiable information about members in your add-on, this is the place to implement your routines to anonymize that information.
-
-How it's called:
-
-    ee()->extensions->call('member_anonymize', $this);
-
-TIP: **New in version 6.0.1**
