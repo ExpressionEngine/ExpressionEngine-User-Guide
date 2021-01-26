@@ -15,7 +15,7 @@ lang: php
 
 [TOC=3]
 
-### `before_member_insert($member, $values)`
+### `before_role_insert($member, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -27,9 +27,9 @@ Called before the role object is inserted. Changes made to the object will be sa
 
 How it's called:
 
-    ee()->extensions->call('before_member_insert', $this, $this->getValues());
+    ee()->extensions->call('before_role_insert', $this, $this->getValues());
 
-### `after_member_insert($member, $values)`
+### `after_role_insert($member, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -41,9 +41,9 @@ Called after the role object is inserted. Changes made to the object object will
 
 How it's called:
 
-    ee()->extensions->call('after_member_insert', $this, $this->getValues());
+    ee()->extensions->call('after_role_insert', $this, $this->getValues());
 
-### `before_member_update($member, $values, $modified)`
+### `before_role_update($member, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -56,9 +56,9 @@ Called before the role object is updated. Changes made to the object will be sav
 
 How it's called:
 
-    ee()->extensions->call('before_member_update', $this, $this->getValues(), $modified);
+    ee()->extensions->call('before_role_update', $this, $this->getValues(), $modified);
 
-### `after_member_update($member, $values, $modified)`
+### `after_role_update($member, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -71,9 +71,9 @@ Called after the role object is updated. Changes made to the object will **not**
 
 How it's called:
 
-    ee()->extensions->call('after_member_update', $this, $this->getValues(), $modified);
+    ee()->extensions->call('after_role_update', $this, $this->getValues(), $modified);
 
-### `before_member_save($member, $values)`
+### `before_role_save($member, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -85,9 +85,9 @@ Called before the role object is inserted or updated. Changes made to the object
 
 How it's called:
 
-    ee()->extensions->call('before_member_save', $this, $this->getValues());
+    ee()->extensions->call('before_role_save', $this, $this->getValues());
 
-### `after_member_save($member, $values)`
+### `after_role_save($member, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -99,9 +99,9 @@ Called after the role object is inserted or updated. Changes made to the object 
 
 How it's called:
 
-    ee()->extensions->call('after_member_save', $this, $this->getValues());
+    ee()->extensions->call('after_role_save', $this, $this->getValues());
 
-### `before_member_delete($member, $values)`
+### `before_role_delete($member, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -113,9 +113,9 @@ Called before the role object is deleted. If you are conditionally deleting one 
 
 How it's called:
 
-    ee()->extensions->call('before_member_delete', $this, $this->getValues());
+    ee()->extensions->call('before_role_delete', $this, $this->getValues());
 
-### `after_member_delete($member, $values)`
+### `after_role_delete($member, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -127,9 +127,9 @@ Called after the role object is deleted. If you are conditionally deleting one o
 
 How it's called:
 
-    ee()->extensions->call('after_member_delete', $this, $this->getValues());
+    ee()->extensions->call('after_role_delete', $this, $this->getValues());
 
-### `before_member_bulk_delete($delete_ids)`
+### `before_role_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |
@@ -140,10 +140,10 @@ Called before a bulk of role objects are deleted. If you need to do an expensive
 
 How it's called:
 
-    ee()->extensions->call('before_member_bulk_delete', $delete_ids);
+    ee()->extensions->call('before_role_bulk_delete', $delete_ids);
 
 
-### `after_member_bulk_delete($delete_ids)`
+### `after_role_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |
@@ -154,7 +154,7 @@ Called after a bulk of role objects are deleted. If you need to do an expensive 
 
 How it's called:
 
-    ee()->extensions->call('after_member_bulk_delete', $delete_ids);
+    ee()->extensions->call('after_role_bulk_delete', $delete_ids);
 
 
 ### `member_anonymize($member)`
