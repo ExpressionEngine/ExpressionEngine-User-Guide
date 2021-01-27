@@ -13,7 +13,8 @@
   - Resolved [#192](https://github.com/ExpressionEngine/ExpressionEngine/issues/192) where keywords filter was not always working in Entries Manager when using Safari browser.
   - Resolved [#812](https://github.com/ExpressionEngine/ExpressionEngine/issues/812) where SuperAdmin could not log in after editing its role.
   - Resolved [#817](https://github.com/ExpressionEngine/ExpressionEngine/issues/817) where it was not possible to add new items in Simple Commerce.
-  - Resolved a bug where if a file has been physically removed from file system without removing from EE, it still stays linked to entries via file fields.
+  - Resolved a bug where no icons where displaying for missing files in file field.
+  - Resolved display issues in file browser for files that have been physically deleted.
 
 - **Enhancements** 🚀
   - Added extension hooks for Role Model
