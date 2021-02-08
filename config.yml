@@ -6,6 +6,6 @@ outputDir: build
 themeDir: theme
 
 customVariables:
-  current_version: '5.4.0'
-  current_year: 2020
+  current_version: '5.4.1'
+  current_year: 2021
 
