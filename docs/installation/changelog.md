@@ -8,7 +8,7 @@
 -->
 
 # ExpressionEngine v6 Change Log
-## Version 6.0.2 (Release: February 5, 2021)
+## Version 6.0.2 (Release: February 8, 2021)
 - **Bug Fixes** 💃🐛 
   - Resolved [#192](https://github.com/ExpressionEngine/ExpressionEngine/issues/192) where keywords filter was not always working in Entries Manager when using Safari browser.
   - Resolved [#812](https://github.com/ExpressionEngine/ExpressionEngine/issues/812) where SuperAdmin could not log in after editing its role.
