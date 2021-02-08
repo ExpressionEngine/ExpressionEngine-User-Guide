@@ -9,6 +9,20 @@
 
 # ExpressionEngine v5 Change Log
 
+## Version 5.4.1
+Release Date: February 5, 2021
+
+- **Bug Fixes** 💃🐛
+
+  - Fixed a bug where saving template revisions after system upgrade might have caused PHP error
+  - Fixed a bug where categories in related entries were not eager loaded when using `{exp:channel:entries}` tag.
+  - Fixed a bug [#474](https://github.com/ExpressionEngine/ExpressionEngine/issues/582) where entry body could be empty when using Moblog.
+  - Fixed a bug with system not being reset to previous online/offline state when performing 1-Click update.
+  - Fixed a bug with Debug Tools banner not being shown after 1-Click update.
+
+- **Enhancements** 🚀
+  - Updated Xmlrpc and Xmlrpcs libraries for PHP8 support.
+
 ## Version 5.4.0
 Release Date: November 23, 2020
 - **Enhancements** 🚀
