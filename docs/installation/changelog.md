@@ -8,16 +8,20 @@
 -->
 
 # ExpressionEngine v6 Change Log
-## Version 6.0.2 (Release: January 27, 2021)
+## Version 6.0.2 (Release: February 5, 2021)
 - **Bug Fixes** 💃🐛 
   - Resolved [#192](https://github.com/ExpressionEngine/ExpressionEngine/issues/192) where keywords filter was not always working in Entries Manager when using Safari browser.
   - Resolved [#812](https://github.com/ExpressionEngine/ExpressionEngine/issues/812) where SuperAdmin could not log in after editing its role.
   - Resolved [#817](https://github.com/ExpressionEngine/ExpressionEngine/issues/817) where it was not possible to add new items in Simple Commerce.
   - Resolved a bug where no icons where displaying for missing files in file field.
   - Resolved display issues in file browser for files that have been physically deleted.
+  - Resolved [#847](https://github.com/ExpressionEngine/ExpressionEngine/issues/847) where parent_id key was missing on exp_categories table.
+  - Resolved bug with system not being reset to previous online/offline state when performing 1-Click update.
+  - Resolved bug with Debug Tools banner and version info popup not being shown after 1-Click update.
 
 - **Enhancements** 🚀
   - Added extension hooks for Role Model
+  - `index.php` and `admin.php` are now updated automatically when performing 1-Click update.
 
 ## Version 6.0.1 (Release: January 22, 2021)
 - **Bug Fixes** 💃🐛 
