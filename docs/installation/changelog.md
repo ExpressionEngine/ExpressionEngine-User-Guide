@@ -10,7 +10,7 @@
 # ExpressionEngine v5 Change Log
 
 ## Version 5.4.1
-Release Date: February 5, 2021
+Release Date: February 8, 2021
 
 - **Bug Fixes** 💃🐛
 
