@@ -26,6 +26,9 @@ When an update is available, you'll see the version number in the control panel 
 
 In the rare case an update fails, please read [Troubleshooting Automatic Updates](troubleshooting/general.md#troubleshooting-automatic-updates).
 
+NOTE: **Website Online Status:** In some versions of ExpressionEngine the current [Website Online](control-panel/settings/general.md#website-online) status is not available to the updater. In this instance an alert will be displayed post-update with the current [Website Online](control-panel/settings/general.md#website-online) status and the option to turn the system on or off. Please make sure to review this alert and your [Website Online](control-panel/settings/general.md#website-online) status to ensure your website is working as expected.
+![system status](/_images/ee5-offline.png)
+
 ## Updating Via Command Line
 
 You can also update ExpressionEngine via the command line on your server. This allows you to keep your installation's files only writable by your user and not also by your web service.
