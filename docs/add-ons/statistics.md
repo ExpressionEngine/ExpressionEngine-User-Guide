@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -91,7 +91,7 @@ The combined total number of comments for all entries. This variable can be affe
 
 ### `{total_entries}`
 
-The total number of entries in the database. This variable can be affected by the channel= parameter.
+The total number of active entries in the database (not closed and not expired). This variable can be affected by the `channel=` parameter.
 
 ### `{total_guests}`
 
@@ -112,8 +112,6 @@ The member_names variable pair allows you to show the currently logged in users:
     {member_names}
         <a href="{member_path='member/index'}">{name}</a><br>
     {/member_names}
-
-NOTE: **Note:**  Tracking logged in users requires tracking be enabled in [Settings - Hit Tracking](control-panel/settings/hit-tracking.md).
 
 The {member_path=''} variable allows you to create a link that points to the member's profile page. The example above illustrates how it can be used.
 
