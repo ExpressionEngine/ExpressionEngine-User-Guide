@@ -8,6 +8,25 @@
 -->
 
 # ExpressionEngine v6 Change Log
+## Version 6.0.3 (Release: February 16, 2021)
+- **Bug Fixes** 💃🐛 
+  - Resolved [#800](https://github.com/ExpressionEngine/ExpressionEngine/issues/800) where File Picker was not shown for Text fields.
+  - Resolved [#824](https://github.com/ExpressionEngine/ExpressionEngine/issues/824) where channel entry stats numbers were not consistent.
+  - Resolved [#629](https://github.com/ExpressionEngine/ExpressionEngine/issues/629) where CP styles were broken by browser extension.
+  - Resolved bug with file upload not working on entry edit page after invoking file browser in thumb view.
+  - Resolved bug when javascript warning was thrown when file was uploaded and name conflict resolved.
+  - Resolved [#888](https://github.com/ExpressionEngine/ExpressionEngine/issues/888) where PHP notice was shown when viewing front-end of fresh EE6 installation without templates.
+  - Resolved [#885](https://github.com/ExpressionEngine/ExpressionEngine/issues/885) where checking for template access was creating unnecessary server load.
+  - Resolved bug where removing avatars in legacy member templates was throwing PHP error.
+  - Resolved [#871](https://github.com/ExpressionEngine/ExpressionEngine/issues/871) where some channel access checkboxes were still selected on Role edit page after removing all permissions.
+  - Resolved bug where Template Profiler might throw PHP error when checking for memory.
+
+- **Enhancements** 🚀
+  - Added `PrimaryMembers` relationship for Role model.
+  - Added check for table existance in database backup code.
+  - Added extra validation for Theme Folder Path setting.
+  - Improved code for fetching add-on icon.
+
 ## Version 6.0.2 (Release: February 5, 2021)
 - **Bug Fixes** 💃🐛 
   - Resolved [#192](https://github.com/ExpressionEngine/ExpressionEngine/issues/192) where keywords filter was not always working in Entries Manager when using Safari browser.
