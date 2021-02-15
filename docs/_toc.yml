@@ -661,6 +661,14 @@
           href: development/services/view.md
     - name: Tree Datastructure
       href: development/tree-datastructure.md
+    - name: Models
+      items:
+        - name: Working with Models
+          href: development/models/working-with-models.md
+        - name: Member Model
+          href: development/models/member.md
+        - name: Role Model
+          href: development/models/role.md
     - name: Shared Form View
       href: development/shared-form-view.md
     - name: Control Panel Javascript
