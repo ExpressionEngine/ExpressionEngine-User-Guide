@@ -26,7 +26,7 @@
     "gulp-less": "^4.0.1",
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^1.4.0",
-    "highlight.js": "^9.13.1",
+    "highlight.js": "^10.4.1",
     "is-url": "^1.2.4",
     "js-yaml": "^3.13.1",
     "list-item": "^2.0.0",
