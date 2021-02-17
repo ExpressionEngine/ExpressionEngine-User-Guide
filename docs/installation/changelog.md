@@ -8,7 +8,9 @@
 -->
 
 # ExpressionEngine v6 Change Log
-## Version 6.0.3 (Release: February 16, 2021)
+## Version 6.0.3 (Release: February 17, 2021)
+NOTE: **Important:** This version includes important security updates.
+
 - **Bug Fixes** 💃🐛 
   - Resolved [#629](https://github.com/ExpressionEngine/ExpressionEngine/issues/629) where CP styles were broken by browser extension.
   - Resolved [#800](https://github.com/ExpressionEngine/ExpressionEngine/issues/800) where File Picker was not shown for Text fields.
@@ -20,10 +22,12 @@
   removing all permissions.
   - Resolved bug where Template Profiler might throw PHP error when checking for memory.
   - Resolved bug with file upload not working on entry edit page after invoking file browser in thumb view.
-  - Resolved bug when javascript warning was thrown when file was uploaded and name conflict resolved.
+  - Resolved bug when JavaScript warning was thrown when file was uploaded and name conflict resolved.
   - Resolved bug where database may not have existed in backup during update
   - Resolved bug where Theme Folder Path may not have been correct causing errors during updates.
   - Resolved but where some 3rd party add-on icons where not properly fetched.
+  - Security: Fixed a potential remote code execution vulnerability
+  - Security: Fixed a potential directory traversal vulnerability
 
 - **Enhancements** 🚀
   - Added `PrimaryMembers` relationship for Role model.
