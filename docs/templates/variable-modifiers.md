@@ -117,9 +117,10 @@ Outputs the length of the content in characters.
 | Parameter   | Default   |                                                         |
 | ----------- | --------- | ------------------------------------------------------- |
 | characters= | `500`     | Number of characters to limit to                        |
+| preserve_words=   | `y` | Retain whole words |
 | end_char=   | `&#8230;` | character to append when a limit terminates the content |
 
-Limits the content to the specified number of characters. May be fewer than the exact limit, as this retains whole words.
+Limits the content to the specified number of characters. Without `preserve_words='n'` may be fewer than the exact limit, as this retains whole words.
 
     {excerpt:limit characters='20'}
     {!-- A discussion&#8230; --}
