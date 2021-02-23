@@ -154,9 +154,7 @@
 
 				<section class="w-4 fixed-col" id="docs-nav">
 					<div class="box docs-sidebar">
-						<form class="docs-search" method="get" action="https://docs.expressionengine.com/search/v3/">
-							<input type="text" name="q" id="q" placeholder="search eecms docs">
-						</form>
+						<input type="text" class="search-input" id="docsearch-input" name="search" placeholder="search eecms docs">
 
 						{{ toctree(includehidden=True) }}
 					</div>
@@ -179,5 +177,15 @@
 		<noscript><img height="1" width="1" style="display:none"
 		src="https://www.facebook.com/tr?id=565259520351602&ev=PageView&noscript=1"
 		/></noscript>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+		<script type="text/javascript">
+			docsearch({
+				apiKey: 'ba20cc61ab2d8a0148041c98eeddd9c6',
+				indexName: 'expressionengine',
+				inputSelector: '#docsearch-input',
+				algoliaOptions: { 'facetFilters': ["version:v3"] },
+				debug: false
+			});
+		</script>
 	</body>
 </html>
