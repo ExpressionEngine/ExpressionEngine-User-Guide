@@ -179,7 +179,7 @@ The CAPTCHA input for the form. It is usually used with a conditional so that it
         <p>{captcha}<br /> <input type="text" name="captcha" value="" maxlength="20" /></p>
     {/if}
 
-The setting to disable or enable CAPTCHA for the contact form can be found in the [Email Configuration](control-panel/settings/email.md) preferences.
+The setting to disable or enable CAPTCHA is applied based on the [CAPTCHA preferences](control-panel/settings/captcha.md) for all of your site's front end forms.
 
 ### `from`
 
