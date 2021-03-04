@@ -9,6 +9,14 @@
 
 # ExpressionEngine v5 Change Log
 
+## Version 5.4.2
+Release Date: March 4, 2021
+
+NOTE: **Important:** This version includes important security updates.
+- **Bug Fixes** 💃🐛
+  - Fixed a bug [#347](https://github.com/ExpressionEngine/ExpressionEngine/issues/347) where radio field label and values were swapped in channel form.
+  - Security: Fixed a potential directory traversal vulnerability
+
 ## Version 5.4.1
 Release Date: February 8, 2021
 
