@@ -41,4 +41,4 @@ Clicking the link opens a popup with the field that can be modified and saved; a
 
 ### Prolets
 
-Prolets are add-ons components that reveal some of add-ons functionality for the CP to the frontend, making it possible to edit data directly on page where it belongs.
+Prolets are add-on components that reveal some of add-on's functionality for the CP to the frontend, making possible to edit data directly on page where it belongs.
