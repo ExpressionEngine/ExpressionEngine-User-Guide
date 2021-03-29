@@ -864,3 +864,5 @@
           href: pro/development/widgets.md
         - name: Prolets
           href: pro/development/prolets.md
+        - name: Fieldtypes
+          href: pro/development/fieldtypes.md

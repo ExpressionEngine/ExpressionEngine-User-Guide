@@ -14,3 +14,5 @@ Each add-on can provide features that will be accessible through ExpressionEngin
 [Developing Dashboard Widgets](pro/development/widgets.md)
 
 [Developing Prolets](pro/development/prolets.md)
+
+[Pro features for fieldtypes](pro/development/fieldtypes.md)
