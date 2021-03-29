@@ -18,7 +18,7 @@ The links are being placed in yout HTML right before the field's tag (or opening
 ## Disabling the link
 
 There are several ways to disable front-end editing links:
- - globally with [configuration override](pro/configuration.md#disable_frontedit)
+ - globally with [configuration overrides](pro/configuration.md#disable_frontedit)
  - they can be switched off using the toggle in the Dock
  - can be disabled using HTML comments or field parameter
 

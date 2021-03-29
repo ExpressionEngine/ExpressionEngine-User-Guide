@@ -62,3 +62,16 @@ When set to `y`, completely disables front-end editing while keeping Dock visibl
 Example Usage:
 
     $config['disable_frontedit'] = 'n';
+
+### `disable_frontedit_links`
+
+When set to `y`, disables automatic creation of content management links on front-end. The links can still be [added manually](pro/frontend.html#customizing-the-link).
+
+| Value | Behavior                                       |
+| ----- | ---------------------------------------------- |
+| y     | Disable automatic front-end editing links   |
+| n     | Enable automatic front-end editing links    (default) |
+
+Example Usage:
+
+    $config['disable_frontedit_links'] = 'y';
