@@ -34,12 +34,6 @@ Output a forgotten username form that sends an email with instructions for addre
 
     email_template="member/email-forgot-username"
 
-### `error_handling=`
-
-    error_handling="inline"
-
-Choose to display error messages inline (see [Error Messages](#errors)). By default, errors are displayed with the user message template.
-
 ### `return=`
 
     return="member/login/forgot-username"
@@ -87,19 +81,10 @@ The error text.
 
     {exp:member:forgot_username_form
         return="member/login/forgot-username"
-        error_handling="inline"
         email_subject="Your Username"
         email_template="member/email-forgot-username"
         }
 
-        {if errors}
-            <fieldset class="error">
-                <legend>Errors</legend>
-                {errors}
-                    <p>{error}</p>
-                {/errors}
-            </fieldset>
-        {/if}
         <p>
             <label>Your Email Address</label><br />
             <input type="email" name="email" value="" maxlength="120" size="40" />

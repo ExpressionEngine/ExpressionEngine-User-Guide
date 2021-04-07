@@ -108,15 +108,6 @@ Please note you need to address those by ID and not name, e.g. `m_field_id_8`
         return="member/registration/success"
         }
 
-        {if errors}
-            <fieldset class="error">
-                <legend>Errors</legend>
-            {errors}
-                {error}<br />
-            {/errors}
-            </fieldset>
-        {/if}
-
             <p>* Required fields</p>
         <fieldset>
             <h4>Login details</h4>

@@ -26,12 +26,6 @@ Output a reset password form that allows members accessing it via a link from a 
 
 ## Parameters
 
-### `error_handling=`
-
-    error_handling="inline"
-
-Choose to display error messages inline (see [Error Messages](#errors)). By default, errors are displayed with the user message template.
-
 ### `return=`
 
     return="member/login/success"
@@ -87,17 +81,7 @@ The error text.
 
     {exp:member:reset_password_form
         return="member/login/success"
-        error_handling="inline"
         }
-
-        {if errors}
-            <fieldset class="error">
-                <legend>Errors</legend>
-                {errors}
-                    <p>{error}</p>
-                {/errors}
-            </fieldset>
-        {/if}
 
         <p>
             <label>Your New Password</label><br />
@@ -113,4 +97,3 @@ The error text.
 
         <p><a href="{path='member/login'}">Login</a> &nbsp; &nbsp; <a href="{path='member/registration'}">Register</a></p>
     {/exp:member:reset_password_form}
-
