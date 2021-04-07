@@ -33,12 +33,6 @@
 
 ## Parameters
 
-### `error_handling=`
-
-    error_handling="inline"
-
-Choose to display error messages inline <!-- (see [Error Messages](#errors)) -->. By default, errors are displayed with the user message template.
-
 ### `memberlist_url=`
 
     memberlist_url="member/memberlist"
