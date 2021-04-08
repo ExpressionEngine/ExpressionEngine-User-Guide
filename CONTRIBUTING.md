@@ -30,8 +30,7 @@ Recommended branch names are namespaced and unique, e.g.:
 
 - `feature/my-feature-slug`
 - `bug/bug-description-slug`
-
-If you wish to make an update for the currently published version of the docs. Branch off of `#.x`, then submit PR against `#.x` AND `#.dev` if this is for the current version of the docs. 
+ 
 
 
 ## Style Guide
