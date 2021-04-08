@@ -31,8 +31,6 @@ Recommended branch names are namespaced and unique, e.g.:
 - `feature/my-feature-slug`
 - `bug/bug-description-slug`
  
-
-
 ## Style Guide
 
 Please read the [style guide](https://docs.expressionengine.com/latest/style-guide.html) for samples and convention standards used in the ExpressionEngine user guide.
