@@ -8,6 +8,46 @@
 -->
 
 # ExpressionEngine v6 Change Log
+## Version 6.0.3 (Release: February 17, 2021)
+NOTE: **Important:** This version includes important security updates.
+
+- **Bug Fixes** 💃🐛 
+  - Resolved [#629](https://github.com/ExpressionEngine/ExpressionEngine/issues/629) where CP styles were broken by browser extension.
+  - Resolved [#800](https://github.com/ExpressionEngine/ExpressionEngine/issues/800) where File Picker was not shown for Text fields.
+  - Resolved [#824](https://github.com/ExpressionEngine/ExpressionEngine/issues/824) where channel entry stats numbers were not consistent.
+  - Resolved [#871](https://github.com/ExpressionEngine/ExpressionEngine/issues/871) where some channel access checkboxes were still selected on Role edit page after 
+  - Resolved [#885](https://github.com/ExpressionEngine/ExpressionEngine/issues/885) where checking for template access was creating unnecessary server load.
+  - Resolved [#888](https://github.com/ExpressionEngine/ExpressionEngine/issues/888) where PHP notice was shown when viewing front-end of fresh EE6 installation without templates.
+  - Resolved bug where removing avatars in legacy member templates was throwing PHP error.
+  removing all permissions.
+  - Resolved bug where Template Profiler might throw PHP error when checking for memory.
+  - Resolved bug with file upload not working on entry edit page after invoking file browser in thumb view.
+  - Resolved bug when JavaScript warning was thrown when file was uploaded and name conflict resolved.
+  - Resolved bug where database may not have existed in backup during update
+  - Resolved bug where Theme Folder Path may not have been correct causing errors during updates.
+  - Resolved but where some 3rd party add-on icons where not properly fetched.
+  - Security: Fixed a potential remote code execution vulnerability
+  - Security: Fixed a potential directory traversal vulnerability
+
+- **Enhancements** 🚀
+  - Added `PrimaryMembers` relationship for Role model.
+  
+  
+## Version 6.0.2 (Release: February 5, 2021)
+- **Bug Fixes** 💃🐛 
+  - Resolved [#192](https://github.com/ExpressionEngine/ExpressionEngine/issues/192) where keywords filter was not always working in Entries Manager when using Safari browser.
+  - Resolved [#812](https://github.com/ExpressionEngine/ExpressionEngine/issues/812) where SuperAdmin could not log in after editing its role.
+  - Resolved [#817](https://github.com/ExpressionEngine/ExpressionEngine/issues/817) where it was not possible to add new items in Simple Commerce.
+  - Resolved a bug where no icons where displaying for missing files in file field.
+  - Resolved display issues in file browser for files that have been physically deleted.
+  - Resolved [#847](https://github.com/ExpressionEngine/ExpressionEngine/issues/847) where parent_id key was missing on exp_categories table.
+  - Resolved bug with system not being reset to previous online/offline state when performing 1-Click update.
+  - Resolved bug with Debug Tools banner and version info popup not being shown after 1-Click update.
+
+- **Enhancements** 🚀
+  - Added extension hooks for Role Model
+  - `index.php` and `admin.php` are now updated automatically when performing 1-Click update.
+
 ## Version 6.0.1 (Release: January 22, 2021)
 - **Bug Fixes** 💃🐛 
   - Resolved [#783](https://github.com/ExpressionEngine/ExpressionEngine/issues/783) where an exception could be thrown when deleting users with long user names.
