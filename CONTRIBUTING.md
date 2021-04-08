@@ -18,6 +18,22 @@ Push your changes to your fork of the repository, and when you're done, [send us
 
 We'll take a look at your pull request, make sure everything looks alright, ask for any needed changes, and then merge it into the main code.
 
+#### Branches
+
+| Branch | Purpose |
+| ------ | ------- |
+| #.x | Currently released and published version.
+| #.dev | Updates for the next version of ExpressionEngine (current version is the default branch). Does not exist for previous versions. |
+** replace `#` with the current version of ExpressionEngine or version you wish to target.
+
+Recommended branch names are namespaced and unique, e.g.:
+
+- `feature/my-feature-slug`
+- `bug/bug-description-slug`
+
+If you wish to make an update for the currently published version of the docs. Branch off of `#.x`, then submit PR against `#.x` AND `#.dev` if this is for the current version of the docs. 
+
+
 ## Style Guide
 
 Please read the [style guide](https://docs.expressionengine.com/latest/style-guide.html) for samples and convention standards used in the ExpressionEngine user guide.
