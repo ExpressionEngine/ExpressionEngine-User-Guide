@@ -21,35 +21,38 @@ NOTE: **Note:** This should not be considered an exhaustive list of cookies that
 
 ## Basic Cookies
 
-| Name             | Description                                                                                                                                     | Expiration | Type               |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------ |
-| anon             | Determines whether the user’s username is displayed in the list of currently logged in members.                                                 | 1 year     | Functionality      |
-| cp_last_site_id  | MSM cookie indicating the last site accessed in the control panel.                                                                              | Session    | Strictly Necessary |
-| csrf_token       | A security cookie used to identify the user and prevent Cross Site Request Forgery attacks.                                                     | 2 hours    | Strictly Necessary |
-| flash            | Control panel user feedback messages, encrypted for security.                                                                                   | 1 day      | Strictly Necessary |
-| last_activity    | Records the time of the last page load. Used in in calculating active sessions.                                                         | 1 year     | Strictly Necessary |
-| last_visit       | Date of the user’s last visit, based on the last_activity cookie.  Can be shown as a statistic for members and used by forum and comments to show unread topics for both members and guests. | 1 year     | Strictly Necessary |
-| remember         | Determines whether a user is automatically logged in upon visiting the site.                                                                    | 2 weeks    | Strictly Necessary |
-| sessionid        | Session id, used to associate a logged in user with their data.                                                                                 | 1-2 hours  | Strictly Necessary |
-| tracker          | Contains the last 5 pages viewed, encrypted for security. Typically used for form or error message returns.                                     | Session    | Functionality      |
-| visitor_consents | Saves responses to Consent requests for non-logged in visitors                                                                                  | 1 year     | Strictly Necessary |
+| Name              | Description                                                                                                | Expiration | Type               |
+| ----------------- | ---------------------------------------------------------------------------------------------------------- | ---------- | ------------------ |
+| csrf_token        | A security cookie used to identify the user and prevent Cross Site Request Forgery attacks.                | 2 hours    | Strictly Necessary |
+| flash             | Control panel user feedback messages, encrypted for security.                                              | Session    | Strictly Necessary |
+| remember          | Determines whether a user is automatically logged in upon visiting the site.                               | 2 weeks    | Strictly Necessary |
+| sessionid         | Session id, used to associate a logged in user with their data.                                            | 1-2 hours  | Strictly Necessary |
+| visitor_consents  | Saves responses to Consent requests for non-logged in visitors                                             | 360 days   | Strictly Necessary |
+| anon              | Determines whether the user’s username is displayed in the list of currently logged in members.            | 2 weeks    | Functionality      |
+| tracker           | Contains the last 5 pages viewed, encrypted for security. Typically used for form or error message returns.| Session    | Functionality      |
+| cp_last_site_id   | MSM cookie indicating the last site accessed in the Control Panel.                                         | Session    | Functionality      |
+| viewtype          | Indicates "thumb view" or "table view" for File Manager in Control Panel.                                  | 360 days   | Functionality      |
+| ee_cp_viewmode    | Indicates whether "navigation-less" mode should be used in Control Panel.                                  | 360 days   | Functionality      |
+| collapsed_nav     | Indicates whether main sidebar navigation in Control Panel should be collapased.                           | 360 days   | Functionality      |
 
 ## Comment Cookies
 
-| Name          | Description                                                                                                                                                         | Expiration | Type          |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------- |
-| my_email\*    | Email address specified when posting a comment.                                                                                                                     | 1 year     | Functionality |
-| my_location\* | Location specified when posting a comment.                                                                                                                          | 1 year     | Functionality |
-| my_name\*     | Name specified when posting a comment.                                                                                                                              | 1 year     | Functionality |
-| my_url\*      | URL specified when posting a comment.                                                                                                                               | 1 year     | Functionality |
-| notify_me     | If set to ‘yes’, notifications will be sent to the saved email address when new comments are made.                                                                  | 1 year     | Functionality |
-| save_info     | If set to ‘yes’, allows additional cookies to store guest user information for use when filling out comment forms. This cookie is only set if you submit a comment. | 1 year     | Functionality |
+| Name           | Description                                                                                                   | Expiration | Type          |
+| -------------- | ------------------------------------------------------------------------------------------------------------- | ---------- | ------------- |
+| my_email\*     | Email address specified when posting a comment.                                                               | 360 days   | Functionality |
+| my_location\*  | Location specified when posting a comment.                                                                    | 360 days   | Functionality |
+| my_name\*      | Name specified when posting a comment.                                                                        | 360 days   | Functionality |
+| my_url\*       | URL specified when posting a comment.                                                                         | 360 days   | Functionality |
+| notify_me      | If set to ‘yes’, notifications will be sent to the saved email address when new comments are made             | Session    | Functionality |
+| save_info      | If set to ‘yes’, allows additional cookies to store guest user information for use when filling out comment forms. This cookie is only set if you submit a comment. | Session    | Functionality |
 
 \* Cookie is set only if the user opts in via the 'save_info' field.
 
 ## Forum Cookies
 
-| Name         | Description                                                                                                                       | Expiration | Type          |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------- |
-| forum_theme  | If multiple forum themes exist, this cookie allows the user to save their theme preference.                                       | 1 year     | Functionality |
-| forum_topics | Tracks the id number for read topics, allows setting the ‘read’ status. Saved in the cookie for guests, the database for members. | 1 year     | Functionality |
+| Name          | Description                                                                                                    | Expiration | Type          |
+| ------------- | -------------------------------------------------------------------------------------------------------------- | ---------- | ------------- |
+| last_activity | Records the time of the last page load. Used in in calculating active sessions.                                | 360 days   | Functionality |
+| last_visit    | Date of the user’s last visit, based on the last_activity cookie.  Can be shown as a statistic for members and used by forum and comments to show unread topics for both members and guests. | 360 days   | Functionality |
+| forum_theme   | If multiple forum themes exist, this cookie allows the user to save their theme preference.                    | 360 days   | Functionality |
+| forum_topics  | Tracks the id number for read topics, allows setting the ‘read’ status. Saved in the cookie for guests, the database for members. | 360 days   | Functionality |
