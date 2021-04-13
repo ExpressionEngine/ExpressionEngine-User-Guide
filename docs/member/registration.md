@@ -55,7 +55,7 @@ Password confirmation. This is a **required** field and must match the entered p
 
 ### Screen name
 
-Member username. This is a **required** field and must be unique across the site:
+Member username. This is a **required** field:
 
     <label for="screen_name">Screen Name</label>
     <input type="text" name="screen_name" value="" maxlength="120" size="40" />
