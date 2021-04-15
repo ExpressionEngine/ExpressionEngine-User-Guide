@@ -69,7 +69,7 @@ This parameter allows you to define where the user will be returned after succes
 
 Determines whether user is included in the online user list.
 
-      <input class="checkbox" type="checkbox" name="auto_login" value="1"> Auto-login on future visits
+        <input type="checkbox" name="anon" value="1" checked="checked" /> Show my name in the online users list
 
 Logged in users can be displayed using the [Statistics Module](add-ons/statistics.md).
 
