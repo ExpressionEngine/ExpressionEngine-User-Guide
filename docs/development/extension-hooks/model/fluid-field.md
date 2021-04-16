@@ -15,11 +15,11 @@ lang: php
 
 [TOC=3]
 
-### `fluid_field_get_all_data($entry_id, $fluid_field_id)`
+### `fluid_field_get_all_data($data, $fluid_field_id)`
 
 | Parameter        | Type         | Description                                                             |
 | ---------------- | ------------ | ----------------------------------------------------------------------- |
-| \$entry_id       | `Integer`    | Current entry ID                                                        |
+| \$data       	   | `FluidField` | Current instance of ExpressionEngine\Addons\FluidField\Model\FluidField |
 | \$fluid_field_id | `Array`      | The MemberField model object data as an array                           |
 | Returns          | `FluidField` | Current instance of ExpressionEngine\Addons\FluidField\Model\FluidField |
 
@@ -27,7 +27,7 @@ Called before the fluid field field object is returned.
 
 How it's called:
 
-    ee()->extensions->call('fluid_field_get_all_data', $entry_id, $fluid_field_id);
+    ee()->extensions->call('fluid_field_get_all_data', $data, $fluid_field_id);
 
 TIP: **New in version 6.1.0.**
 
