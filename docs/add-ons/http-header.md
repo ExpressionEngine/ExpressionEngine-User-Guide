@@ -50,6 +50,7 @@ Here are the available parameters:
 |last_modified=|Last-Modified - You can use relative date such as "+1 day";|
 |link=|Link|
 |location=|Location|
+|permissions_policy|Permissions-Policy (set to `interest-cohort=()` to opt out of FLoC)|
 |pragma=|Pragma|
 |refresh=|Refresh - You can manually write out the full header value (i.e. 5; url=https://example.com/), or just set the refresh value in seconds and use the url= parameter.|
 |retry_after=|Retry-After - You can either specify a number of seconds or use relative dates (i.e. "+90 mins").|
