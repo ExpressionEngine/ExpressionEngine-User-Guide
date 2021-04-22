@@ -7,11 +7,11 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Template Variables
+# Site Template Variables
 
 **Control Panel Location:** `Developer --> Templates --> Template Variables`
 
-Custom, user-defined template variables can be created for use in any Template.
+Custom, site-defined template variables can be created for use in any Template.
 
 Template variables can hold any **static** information. These variables can be useful for things like site header, footers, copyright notices, etc. Since these variables can go in any template it makes the information very portable and simple to update.
 
