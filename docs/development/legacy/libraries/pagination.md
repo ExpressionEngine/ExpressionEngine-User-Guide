@@ -61,7 +61,7 @@ The next step in the process is building the pagination. This is most of the hea
     $per_page = ee()->TMPL->fetch_param('limit');
     $pagination->build($total_items, $per_page);
 
-It's recommended that you don't run this step if pagination isn't necessary, so you can to see if `$Pagination_object::$paginate` is `TRUE` before running `Pagination_object::build`:
+It's recommended that you don't run this step if pagination isn't necessary, so you can see if `$Pagination_object::$paginate` is `TRUE` before running `Pagination_object::build`:
 
     if ($pagination->paginate === TRUE)
     {
