@@ -233,3 +233,9 @@ Global Variables can contain text, HTML, javascript, etc. but cannot contain PHP
 **Control Panel Location: `Developer > Templates > New/Edit`**
 
 This section of the Control Panel allows you to create or edit a template group.
+
+## Export Templates
+
+**Control Panel Location: `Developer > Templates > Export`**
+
+![Export All Templates icon](/_images/export_templates.png) Clicking the Export All Templates Icon will download all templates, partials, and variables as a compressed *.zip archive. 
