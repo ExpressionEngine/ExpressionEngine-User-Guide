@@ -11,6 +11,12 @@
 
 [TOC]
 
+## When To Update
+It is recommended that you always update your installation of ExpressionEngine when a new version is released to ensure that you have all bug fixes, security updates, and new features.
+
+NOTE: **Note:** Shortly after a major version is released, the previous major version will become a legacy product. Once a product is designated a legacy product, it will only receive security updates and will automatically become a retired product 1 year later (meaning no updates of any kind). Reference the [Version Support](https://expressionengine.com/support/version-support) page of the ExpressionEngine website for more information.
+
+
 ## Upgrading Major Versions
 WARN: **Important** Upgrading major version (example from v5.x to v6.x) typically includes major updates and breaking changes. Do not upgrade major version manually or via 1-click without testing in a test or development environment first. Always following best pratices when Upgrading ExpressionEngine
 - Backup files

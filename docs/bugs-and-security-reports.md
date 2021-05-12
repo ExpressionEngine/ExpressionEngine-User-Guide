@@ -13,9 +13,11 @@
 
 ## Reporting Bugs
 
-Found a bug? Report it as an issue on our public GitHub repo. See the [Contributing Guidelines](https://github.com/ExpressionEngine/ExpressionEngine/blob/stability/CONTRIBUTING.md).
+WARN: **Note:** If you have a **security issue** to report, please submit to our security and disclosure platform as described below. **DO NOT** open an issue on GitHub or post publicly. This helps keep end users secure while patches are being made.
 
-NOTE: **Note:** If you have a **security issue** to report, please submit to our security and disclosure platform as described below. **DO NOT** open an issue on GitHub or post publicly. This helps keep end users secure while patches are being made.
+NOTE: **Note:** While current and legacy versions of ExpressionEngine receive security fixes, only current versions of ExpressionEngine will receive bug fixes. Please reference the [Version Support](https://expressionengine.com/support/version-support) page of the ExpressionEngine website for more information.
+
+Found a bug in a current version of ExpressionEngine? Report it as an issue on our public GitHub repo. See the [Contributing Guidelines](https://github.com/ExpressionEngine/ExpressionEngine/blob/stability/CONTRIBUTING.md).
 
 ## Security Reporting Guidelines
 
@@ -23,7 +25,7 @@ We take security issues very seriously, and encourage responsible reporting with
 
 All software has vulnerabilities, but when we work together with developers and researchers, we can all help make the Internet a safer and better place. We love to acknowledge researchers who make valid security reports and work with us, and while we do not have a bounty program, sometimes will donate software or swag for being classy.
 
-If you have a security issue to report, you can let us know at [team@ellislab.com](mailto:team@ellislab.com?subject=Security%20Vulnerability) or if you prefer at [HackerOne](https://hackerone.com/expressionengine).
+If you have a security issue in a current or legacy version of ExpressionEngine to report, you can let us know at [team@ellislab.com](mailto:team@ellislab.com?subject=Security%20Vulnerability) or if you prefer at [HackerOne](https://hackerone.com/expressionengine).
 
 ### What are Security Issues?
 
