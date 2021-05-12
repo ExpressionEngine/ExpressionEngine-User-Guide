@@ -117,7 +117,8 @@ Conditionals allow you to add logic to your templates:
       You're not 30 or Bob. That's all we know.
     {/if}
 
-*More information:* [Conditional Tags](templates/conditionals.md) , [EE:U Primer On Simple Conditionals](https://u.expressionengine.com/article/a-primer-on-simple-conditionals)
+*More information:* [Conditional Tags](templates/conditionals.md)   
+*Related ExpressionEngine University articles:* [Primer On Simple Conditionals](https://u.expressionengine.com/article/a-primer-on-simple-conditionals)
 
 ## Changing Parsing Order
 
