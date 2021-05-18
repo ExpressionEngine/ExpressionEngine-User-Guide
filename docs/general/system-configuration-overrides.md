@@ -1207,6 +1207,18 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Hit Tracking`: [Enable Channel Entry View Tracking](control-panel/settings/hit-tracking.md#enable-entry-view-tracking)
 
+### `enable_floc`
+
+By default, ExpressionEngine sends a header to disable FLoC in the browser. If this is enabled, the Permissions Policy header will not be sent.
+
+| Value | Behavior                            |
+| ----- | ----------------------------------- |
+| y     | Enable FLoC from the server side    |
+
+Example Usage:
+
+    $config['enable_floc'] = 'y';
+
 ### `enable_hit_tracking`
 
 If enabled, the hit will be tracked each time a template is loaded.
