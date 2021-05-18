@@ -8,6 +8,29 @@
 -->
 
 # ExpressionEngine v6 Change Log
+## Version 6.0.4 (Release: May 18, 2021)
+- **Bug Fixes** 💃🐛 
+  - Resolved [#995](https://github.com/ExpressionEngine/ExpressionEngine/issues/995) where switching between multi-select fieldtypes could result in options being lost.
+  - Resolved [#922](https://github.com/ExpressionEngine/ExpressionEngine/issues/922) where creating rows in a Fluid Field which contained a File fieldtype would result in the file already being chosen and also updating all previous rows.
+  - Resolved [#1044](https://github.com/ExpressionEngine/ExpressionEngine/issues/1044) where the search parameter applied to a grid loop wasn't being applied in Live Preview.
+  - Resolved [#207](https://github.com/ExpressionEngine/ExpressionEngine/issues/207) which prevented the the new file/upload button to be usable in a Textarea Fieldtype after a new Textarea was created in a Fluid Field
+  - Resolved [#998](https://github.com/ExpressionEngine/ExpressionEngine/issues/998) where the `{exp:member:edit_profile}` threw an error when the user accessed the page and was not logged in.
+  - Resolved [#941](https://github.com/ExpressionEngine/ExpressionEngine/issues/994) where the UI let users attempt to delete entries for which they didn't have permission to delete.
+  - Resolved [#936](https://github.com/ExpressionEngine/ExpressionEngine/issues/936) where some data were erased when saving member role.
+  - Resolved [#908](https://github.com/ExpressionEngine/ExpressionEngine/issues/908) where a non-superadmin could not switch MSM sites within the Control Panel
+  - Resolved [#986](https://github.com/ExpressionEngine/ExpressionEngine/issues/937) where a MySQL error was sometimes thrown when creating new template.
+  - Resolved [#347](https://github.com/ExpressionEngine/ExpressionEngine/issues/347) where radio field label and values were swapped in channel form.
+  - Resolved [#233](https://github.com/ExpressionEngine/ExpressionEngine/issues/233) where Template Route could be accidentally erased.
+  - Resolved [#173](https://github.com/ExpressionEngine/ExpressionEngine/issues/173) where Live Preview was not triggered when changing order of related entries in a Relationship Fieldtype.
+  - Resolved [#911](https://github.com/ExpressionEngine/ExpressionEngine/issues/911) where some style assets did not load for the debugger.
+  - Resolved [#910](https://github.com/ExpressionEngine/ExpressionEngine/issues/910) where the Date Picker Fieldtype was adding an extra month when clicking on the last day of the month of months with more days than the next or previous.
+  - Resolved [#939](https://github.com/ExpressionEngine/ExpressionEngine/issues/939) where longer channel names could overlap in the side navigation.
+  - Resolved an issue where the initial sorting of content when populating a custom field based on other fields was incorrect.
+  - Resolved an issue which prevented new posts to be published via the Metaweblog API.
+  - Resolved an issue where creating a new Quick Link could generate an error.
+  - Removed "export" options from template options dropdown when bulk selecting templates in the Template Manager. Export templates always results in exporting all templates.
+
+
 ## Version 6.0.3 (Release: February 17, 2021)
 NOTE: **Important:** This version includes important security updates.
 
