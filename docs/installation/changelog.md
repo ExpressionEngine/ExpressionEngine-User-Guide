@@ -8,6 +8,7 @@
 -->
 # ExpressionEngine v6 Change Log
 ## Version 6.0.5 (Release: May 19, 2021)
+- **Bug Fixes** 💃🐛 
   - Resolved [#323](https://github.com/ExpressionEngine/ExpressionEngine/issues/323) where the Redis Cache driver was using a deprecated command.
   - Resolved [#709](https://github.com/ExpressionEngine/ExpressionEngine/issues/709) where long labels in select fields caused wrapping issues.
   - Resolved [#1087](https://github.com/ExpressionEngine/ExpressionEngine/issues/1087) where roles did not have access to entries after saving role preferences on other MSM site.
