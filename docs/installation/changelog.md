@@ -6,6 +6,18 @@
     @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://www.packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
+# ExpressionEngine v6 Change Log
+## Version 6.0.5 (Release: May 19, 2021)
+  - Resolved [#323](https://github.com/ExpressionEngine/ExpressionEngine/issues/323) where the Redis Cache driver was using a deprecated command.
+  - Resolved [#709](https://github.com/ExpressionEngine/ExpressionEngine/issues/709) where long labels in select fields caused wrapping issues.
+  - Resolved [#1087](https://github.com/ExpressionEngine/ExpressionEngine/issues/1087) where roles did not have access to entries after saving role preferences on other MSM site.
+  - Resolved issue where a PHP 7.3+ warning that occurred when non-members triggered email notifications.
+  - Resolved issue where the search input in entry manager would loose focus after returning results.
+  - Resolved issue with styles for Entries Bulk Edit modal
+  - Resolved issue with modal overlay colors
+  - Resolved issue with positioning of alert banner on Entries Screen.
+
+
 
 # ExpressionEngine v6 Change Log
 ## Version 6.0.4 (Release: May 18, 2021)
