@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
-## Version 6.0.5 (Release: May 19, 2021)
+## Version 6.0.5 (Release: May 20, 2021)
 - **Bug Fixes** 💃🐛 
   - Resolved [#323](https://github.com/ExpressionEngine/ExpressionEngine/issues/323) where the Redis Cache driver was using a deprecated command.
   - Resolved [#709](https://github.com/ExpressionEngine/ExpressionEngine/issues/709) where long labels in select fields caused wrapping issues.
