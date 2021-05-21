@@ -7,6 +7,10 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
+## Version 6.0.6 (Release: May 21, 2021)
+- **Bug Fixes** 💃🐛 
+  - Resolved [#1091](https://github.com/ExpressionEngine/ExpressionEngine/issues/1091) where the field type dropdown when creating a new field was not displaying correctly in Firefox.
+
 ## Version 6.0.5 (Release: May 20, 2021)
 - **Bug Fixes** 💃🐛 
   - Resolved [#323](https://github.com/ExpressionEngine/ExpressionEngine/issues/323) where the Redis Cache driver was using a deprecated command.
@@ -17,8 +21,6 @@
   - Resolved issue with styles for Entries Bulk Edit modal
   - Resolved issue with modal overlay colors
   - Resolved issue with positioning of alert banner on Entries Screen.
-
-
 
 # ExpressionEngine v6 Change Log
 ## Version 6.0.4 (Release: May 18, 2021)
