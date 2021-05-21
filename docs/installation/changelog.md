@@ -22,7 +22,6 @@
   - Resolved issue with modal overlay colors
   - Resolved issue with positioning of alert banner on Entries Screen.
 
-# ExpressionEngine v6 Change Log
 ## Version 6.0.4 (Release: May 18, 2021)
 - **Bug Fixes** 💃🐛 
   - Resolved [#173](https://github.com/ExpressionEngine/ExpressionEngine/issues/173) where Live Preview was not triggered when changing order of related entries in a Relationship Fieldtype.
