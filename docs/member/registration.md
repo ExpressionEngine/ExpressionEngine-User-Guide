@@ -21,6 +21,11 @@ Output a member registration form.
 
     return="member/registration/success"
 
+### `form_class=`
+
+    form_class="register"
+
+This parameter allows you to specify the class attribute for the &lt;form&gt; tag.
 
 ## Form Inputs
 
