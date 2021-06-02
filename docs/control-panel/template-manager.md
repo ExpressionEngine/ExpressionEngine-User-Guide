@@ -31,7 +31,7 @@ New template settings:
   - **CSS**: This type is used for Stylesheets. It tells ExpressionEngine to serve the Template as "text/css" MIME type. Further, the Template will _not_ be parsed for EE Tags like normal. The Template is served "as-is".
   - **RSS Page**: Used for RSS and Atom syndication feeds. It tells ExpressionEngine to serve the Template as "text/xml" MIME type.
   - **JavaScript**: Used for outputting JavaScript code. It tells ExpressionEngine to send "text/javascript" MIME type server headers when being viewed.
-  - **Static**: Used for static content. Absolutely no ExpressionEngine tags pr PHP code will be rendered in this type of template. Useful for HTML design elements embedded in other templates.
+  - **Static**: Used for static content. Absolutely no ExpressionEngine tags or PHP code will be rendered in this type of template. Useful for HTML design elements embedded in other templates.
   - **XML**: Used for outputting XML pages with EE. It tells ExpressionEngine to send "text/xml" MIME type server headers when being viewed.
 - **Duplicate existing template?** -- You may choose one of your existing Templates to duplicate its contents.
 
@@ -63,7 +63,7 @@ The Template Notes tab enables you to save notes and information about your temp
   - **CSS**: This type is used for Stylesheets. It tells ExpressionEngine to serve the Template as "text/css" MIME type. Further, the Template will _not_ be parsed for EE Tags like normal. The Template is served "as-is".
   - **RSS Page**: Used for RSS and Atom syndication feeds. It tells ExpressionEngine to serve the Template as "text/xml" MIME type.
   - **JavaScript**: Used for outputting JavaScript code. It tells ExpressionEngine to send "text/javascript" MIME type server headers when being viewed.
-  - **Static**: Used for static content. Absolutely no ExpressionEngine tags pr PHP code will be rendered in this type of template. Useful for HTML design elements embedded in other templates.
+  - **Static**: Used for static content. Absolutely no ExpressionEngine tags or PHP code will be rendered in this type of template. Useful for HTML design elements embedded in other templates.
   - **XML**: Used for outputting XML pages with EE. It tells ExpressionEngine to send "text/xml" MIME type server headers when being viewed.
 - **Enable Caching?** -- This determines whether or not Template Caching is enabled for the Template. This is used together with the following preference.
 - **Refresh Interval** -- If the previous preference is enabled, then this specifies how long (in minutes) the Template cache should active. The next time the Template is requested after the time interval has expired, a new cache will be created.
