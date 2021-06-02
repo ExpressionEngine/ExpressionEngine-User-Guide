@@ -35,6 +35,8 @@ Email can be sent by ExpressionEngine by one of three protocols.
 - **Sendmail**: This is more efficient than using "PHP Mail", particularly if you maintain a large mailing list, since a direct socket connection is opened to the Sendmail server, however, not all hosting providers allow a socket connection to Sendmail. To determine if this protocol is allowed on your server, select Sendmail as your email protocol, update your Email Configuration preferences, and attempt to send an email to yourself via the Communicate section of the Control Panel. If your email is received then you may use this option.
 - **SMTP**: This protocol is recommended in cases where your host requires it. SMTP is not commonly available on Unix servers so you might check with your hosting provider. In some cases you can use your normal POP3 email account to send ExpressionEngine email. This may only be possible if your POP3 account is on the same server where ExpressionEngine is installed due to "relaying" security restrictions. SMTP usually requires authentication, so you will likely need to fill out the three fields following it to use this protocol.
 
+*Related ExpressionEngine University articles:* [Using Mailgun to Send Emails from your Website](https://u.expressionengine.com/article/using-mailgun-to-send-emails-from-your-website)
+
 ### Server address
 
 If you chose SMTP as your email protocol above, then you will need to fill out this field, which specifies the server address of the SMTP server. This setting is ignored if "SMTP" is not selected as the email protocol.

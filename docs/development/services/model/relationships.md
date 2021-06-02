@@ -21,6 +21,9 @@ Related models are available on the model directly using the relationship name. 
 
     $group = $member->PrimaryRole;
 
+NOTE: **Note:** If you are [filtering on relationship](development/services/model/fetching.html#filtering-on-relationships) the related models will be limited to those that match the criteria specified. If you need full set of related models, you would need to [eager load](development/services/model/fetching.html#eager-loading) the relationship to be populated **before** eager loading the relationship for the filter, which will need to be [aliased](development/services/model/fetching.html#aliasing).
+`$entry = ee('Model')->get('ChannelEntry')->with('Categories', 'Categories as RelatedCategory')->filter('RelatedCategory.cat_id', 7)->all();`
+
 ## Setting Relationships
 
 To set a relationship, simply assign the model or collection that you want to relate, and then `save()` to commit the change:

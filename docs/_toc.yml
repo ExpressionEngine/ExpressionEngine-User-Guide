@@ -845,6 +845,12 @@
 - name: Bugs and Security Reports
   href: bugs-and-security-reports.md
 
+- name: Contributing
+  href: contributing.md
+
+- name: Feature Requests
+  href: feature-requests.md
+
 - name: Docs Style Guide
   href: style-guide.md
 

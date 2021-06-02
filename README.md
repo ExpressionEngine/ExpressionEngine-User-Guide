@@ -36,8 +36,8 @@ See something that needs fixing? Want to improve the user guide or make it more 
 
 ## Copyright / License Notice
 
-The ExpressionEngine project is copyright (c) 2003-2019 EllisLab Corp. ([https://ellislab.com](https://ellislab.com)) and is licensed under Apache License, Version 2.0. This project contains subcomponents with separate copyright and license terms, all of which are fully FOSS and compatible with Apache-2.0.
+The ExpressionEngine project is copyright (c) 2003-2021 Packet Tide, LLC. ([https://packettide.com](https://packettide.com)) and is licensed under Apache License, Version 2.0. This project contains subcomponents with separate copyright and license terms, all of which are fully FOSS and compatible with Apache-2.0.
 
 Complete license terms and copyright information can be found in [LICENSE.txt](LICENSE.txt) in the root of this repository.
 
-"ExpressionEngine" is a registered trademark of EllisLab, Inc. in the United States and around the world. Refer to EllisLab's [Trademark Use Policy](https://ellislab.com/trademark-use-policy) for access to logos and acceptable use.
+"ExpressionEngine" is a registered trademark of Packet Tide, LLC. in the United States and around the world. Refer to ExpressionEngine's [Trademark Use Policy](https://expressionengine.com/about/trademark-use-policy) for access to logos and acceptable use.

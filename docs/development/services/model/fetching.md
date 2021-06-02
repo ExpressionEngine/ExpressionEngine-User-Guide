@@ -166,6 +166,8 @@ These eager queries can also be nested to retrieve complex model hierarchies:
 
     ->get('Template')->with(array('LastAuthor' => 'PrimaryRole'));
 
+NOTE: **Note:** Always call `all()` when using eager loading to ensure getting full set of related models. 
+
 ### Filtering on Relationships
 
 Eager loading also enables more advanced filtering and sorting. To specify a column that is not on the main model, simply prefix it with the relationship name:
