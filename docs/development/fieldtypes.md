@@ -826,3 +826,10 @@ Custom fields can display their data inside the Entry Manager through 3 possible
 
     }
 
+## Implementing Filepicker for Rich Text Editor
+
+If your add-on is operating as File Manager, you might want to make it available as file picker for RTE fields.
+
+In order to achieve that, create file prefixed with `rtefb.` in add-on's main directory, e.g. `rtefb.my_addon.php`. You can refer to the file in Filepicker add-on as an example.
+
+The file's class needs to implement `ExpressionEngine\Library\Rte\RteFilebrowserInterface`. The easiest way to achive that is to extend `ExpressionEngine\Library\Rte\AbstractRteFilebrowser` abstract class and add code only for the functions that work differently from 
