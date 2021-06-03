@@ -25,6 +25,8 @@ NOTE: **Note:** This should not be considered an exhaustive list of cookies that
 | ----------------- | ---------------------------------------------------------------------------------------------------------- | ---------- | ------------------ |
 | csrf_token        | A security cookie used to identify the user and prevent Cross Site Request Forgery attacks.                | 2 hours    | Strictly Necessary |
 | flash             | Control panel user feedback messages, encrypted for security.                                              | Session    | Strictly Necessary |
+| last_activity | Records the time of the last page load. Used in in calculating active sessions.                                | 360 days   | Functionality |
+| last_visit    | Date of the user’s last visit, based on the last_activity cookie.  Can be shown as a statistic for members and used by forum and comments to show unread topics for both members and guests. | 360 days   | Functionality |
 | remember          | Determines whether a user is automatically logged in upon visiting the site.                               | 2 weeks    | Strictly Necessary |
 | sessionid         | Session id, used to associate a logged in user with their data.                                            | 1-2 hours  | Strictly Necessary |
 | visitor_consents  | Saves responses to Consent requests for non-logged in visitors                                             | 360 days   | Strictly Necessary |
@@ -52,7 +54,5 @@ NOTE: **Note:** This should not be considered an exhaustive list of cookies that
 
 | Name          | Description                                                                                                    | Expiration | Type          |
 | ------------- | -------------------------------------------------------------------------------------------------------------- | ---------- | ------------- |
-| last_activity | Records the time of the last page load. Used in in calculating active sessions.                                | 360 days   | Functionality |
-| last_visit    | Date of the user’s last visit, based on the last_activity cookie.  Can be shown as a statistic for members and used by forum and comments to show unread topics for both members and guests. | 360 days   | Functionality |
 | forum_theme   | If multiple forum themes exist, this cookie allows the user to save their theme preference.                    | 360 days   | Functionality |
 | forum_topics  | Tracks the id number for read topics, allows setting the ‘read’ status. Saved in the cookie for guests, the database for members. | 360 days   | Functionality |
