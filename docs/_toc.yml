@@ -862,6 +862,8 @@
       href: pro/configuration.md
     - name: Front-end content management
       href: pro/frontend.md
+    - name: Cookies management
+      href: pro/cookies.md
     - name: Development
       items:
         - name: Overview

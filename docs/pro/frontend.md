@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
+    @copyright Copyright (c) 2003-2021, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -24,7 +24,12 @@ There are several ways to disable front-end editing links:
 
 ### Disabling link in the template
 
-There are two ways to completely prevent field edit link to be displayed in template.
+There are three ways to completely prevent field edit link to be displayed in template.
+
+### Template preferences
+
+In template preferences under Pro Settings there is switch for "Disable front-end editing?"
+When turned on, front-end editing features will be disabled in template completely.
 
 #### HTML Comment
 
@@ -43,15 +48,26 @@ Use `disable="frontedit"` parameter on field tag to disable link for a certain f
 
 The edit link for the field can be placed manually using **front_edit_link** tag if you need to have it in different section of template, custom styled - or you can even place edit link for field that is currently not on the page.
 
+#### `:pro_edit`
+
+Inside `{exp:channel:entries}` tag, using the field name postfixed with `:pro_edit` will generate edit link for that field within displayed entry.
+
+You may find it useful if `disable_frontedit_links` configuration override is set and you need to place the links individually.
+
+Example usage:
+
+    {title:pro_edit}
+
 #### `{front_edit_link}`
 
-When set to `y`, completely disables front-end editing while keeping Dock visible and Prolets functional.
+Can be used to place edit link in arbitrary place (also outside or `exp:channel:entries` tag). The link can have custom CSS class applied to it.
 
 | Parameter  | Description |
 | ---------- | ----------- |
 | entry_id   | ID of entry to edit. Required. |
 | field_name | Short name of field to edit. Required, unless `field_id` is specified. |
 | field_id   | ID of field to edit. Required, unless `field_name` is specified. |
+| site_id    | Extra CSS class to apply to link HTML. |
 | class      | Extra CSS class to apply to link HTML. |
 
 Example usage:
