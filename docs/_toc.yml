@@ -669,6 +669,8 @@
           href: development/models/member.md
         - name: Role Model
           href: development/models/role.md
+        - name: Status Model
+          href: development/models/status.md
     - name: Shared Form View
       href: development/shared-form-view.md
     - name: Control Panel Javascript
