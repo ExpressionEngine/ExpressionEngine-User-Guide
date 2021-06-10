@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
+    @copyright Copyright (c) 2003-2021, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -16,6 +16,14 @@ lang: php
 **class `ExpressionEngine\Model\Role\Role`**
 
 [TOC]
+
+## Properties
+
+#### `name` Required, unique, max 100
+#### `short_name` Required, unique, max 50
+#### `role_id`
+#### `description`
+#### `is_locked`
 
 ## Relationships
 
