@@ -25,7 +25,7 @@ The [ExpressionEngine Forums](https://expressionengine.com/forums) are a great p
 
 ### ExpressionEngine CMS Slack
 
-The official [ExpressionEngine CMS Slack](https://expressionengine.com/blog/join-us-in-slack) hosts users, experts, trainers, and even ExpressionEngine staff. We're always open!
+Slack is the central location of the ExpressionEngine community, with around 7,000 users. The official [ExpressionEngine CMS Slack](https://expressionengine.com/blog/join-us-in-slack) hosts users, experts, trainers, and even ExpressionEngine staff. We're always open, join us in Slack today!
 
 ### ExpressionEngine TV
 
@@ -42,3 +42,7 @@ With our [ExpressionEngine Partners](https://expressionengine.com/partners) you'
 ### Social Media
 
 On Twitter you'll find us at [@eecms](https://twitter.com/eecms).
+The official hash tag of ExpressoinEngine is #eecms.  Please be sure to use it in your posts!
+
+### StackExchange
+[StackExchange](https://expressionengine.stackexchange.com) is a great place to ask questions and get answers from others in the community.  Questions in [StackExchange](https://expressionengine.stackexchange.com) are also cross posted in Slack to get further attention and hopfully answers quickly.
