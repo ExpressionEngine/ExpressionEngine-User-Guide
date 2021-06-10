@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
+    @copyright Copyright (c) 2003-2021, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -16,6 +16,78 @@ lang: php
 **class `ExpressionEngine\Model\Member\Member`**
 
 [TOC]
+
+## Properties
+
+### Required:
+#### `role_id` 
+#### `username`
+#### `email`
+#### `password`
+
+### Optional:
+#### `member_id`
+#### `group_id`
+#### `screen_name`
+#### `salt;`
+#### `unique_id`
+#### `crypt_key`
+#### `authcode`
+#### `signature`
+#### `avatar_filename`
+#### `avatar_width`
+#### `avatar_height`
+#### `photo_filename`
+#### `photo_width`
+#### `photo_height`
+#### `sig_img_filename`
+#### `sig_img_width`
+#### `sig_img_height`
+#### `ignore_list`
+#### `private_messages`
+#### `accept_messages`
+#### `last_view_bulletins`
+#### `last_bulletin_date`
+#### `ip_address`
+#### `join_date`
+#### `last_visit`
+#### `last_activity`
+#### `total_entries`
+#### `total_comments`
+#### `total_forum_topics`
+#### `total_forum_posts`
+#### `last_entry_date`
+#### `last_comment_date`
+#### `last_forum_post_date`
+#### `last_email_date`
+#### `in_authorlist`
+#### `accept_admin_email`
+#### `accept_user_email`
+#### `notify_by_default`
+#### `notify_of_pm`
+#### `display_signatures`
+#### `parse_smileys`
+#### `smart_notifications`
+#### `language`
+#### `timezone`
+#### `time_format`
+#### `date_format`
+#### `include_seconds`
+#### `profile_theme`
+#### `forum_theme`
+#### `tracker`
+#### `template_size`
+#### `notepad`
+#### `notepad_size`
+#### `bookmarklets`
+#### `quick_links`
+#### `quick_tabs`
+#### `show_sidebar`
+#### `pmember_id`
+#### `cp_homepage`
+#### `cp_homepage_channel`
+#### `cp_homepage_custom`
+
 
 ## Relationships
 
@@ -286,3 +358,55 @@ Checks whether member is pending
 | Parameter | Type         | Description                                   |
 | --------- | ------------ | --------------------------------------------- |
 | Returns   | `Bool` | `TRUE` if if member is pending |
+
+
+## Examples:
+
+#### Get Member
+`
+$username = 'bob';
+$member_object = ee('Model')->get('Member')->filter('username', $username)->first();
+`
+
+#### Get A Member's Roles
+`
+$username = 'bob';
+$member_roles_object = ee('Model')->get('Member')->filter('username', $username)->first()->getAllRoles();
+`
+
+#### Change Member's Primary Role
+`
+$new_role_id = 8;
+$member_object->role_id = $new_role_id;
+$member_object->save();
+`
+
+#### Set Member Custom Field
+`
+$field_id = '26';
+$member_object->{'m_field_id_'.$field_id} = 'New Field Value';
+$member_object->save();
+`
+
+#### Create a New Member
+`
+$password_array = ee()->auth->hash_password($unencrypted_password);
+
+$member_data = array(
+
+    'role_id'    => '6',
+    'username'   => 'bobsmith123', // unique.
+    'email'      => 'example@gmail.com`,  // unique.
+    'password'   => $password_array['password'],
+    'ip_address' => ee()->input->ip_address(),
+    'unique_id'  => ee('Encrypt')->generateKey(),
+    'crypt_key'  => ee('Encrypt')->generateKey(),
+    'join_date'  => ee()->localize->now,
+    'language'   => ee()->config->item('deft_lang'),
+
+);
+
+$member = ee('Model')->make('Member');
+$member->set($member_data);
+$member->save();
+`
