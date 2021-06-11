@@ -27,7 +27,7 @@ lang: php
 
 ### Optional:
 #### `member_id`
-#### `group_id`
+#### `group_id` (deprecated, used role_id)
 #### `screen_name`
 #### `salt;`
 #### `unique_id`

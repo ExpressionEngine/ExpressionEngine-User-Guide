@@ -667,10 +667,14 @@
           href: development/models/working-with-models.md
         - name: Member Model
           href: development/models/member.md
+        - name: MemberField Model
+          href: memberField.md
         - name: Role Model
           href: development/models/role.md
         - name: RoleGroup Model
           href: development/models/roleGroup.md
+        - name: RoleSettings Model
+          href: roleSettings.md
         - name: Status Model
           href: development/models/status.md
     - name: Shared Form View

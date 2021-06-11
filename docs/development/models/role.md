@@ -19,8 +19,11 @@ lang: php
 
 ## Properties
 
-#### `name` Required, unique, max 100
-#### `short_name` Required, unique, max 50
+### Required:
+#### `name` Unique, max 100
+#### `short_name` Unique, max 50
+
+### Optional:
 #### `role_id`
 #### `description`
 #### `is_locked`

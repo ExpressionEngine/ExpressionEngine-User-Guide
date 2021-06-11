@@ -19,7 +19,10 @@ lang: php
 
 ## Properties
 
-#### `name` Required
+### Required:
+#### `name`
+
+### Optional:
 #### `group_id`
 
 ## Relationships

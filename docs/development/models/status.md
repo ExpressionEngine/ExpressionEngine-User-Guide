@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
+    @copyright Copyright (c) 2003-2021, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -19,8 +19,11 @@ lang: php
 
 ## Properties
 
-#### `status` Required, unique
-#### `highlight` Required, hex color
+### Required:
+#### `status` Unique
+#### `highlight` Hex color
+
+### Optional:
 #### `status_id`
 #### `status_order`
 
