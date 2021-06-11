@@ -25,7 +25,7 @@ lang: php
 
 ### Optional:
 #### `status_id`
-#### `status_order`
+#### `status_order` ini
 
 ## Relationships
 
@@ -71,3 +71,8 @@ Override of the parent validateUnique to alter the language key if it is a failu
 | value   | `string` | Property value |
 | params   | `array` | Rule parameters |
 | Returns   | `string` | option component array |
+
+
+## Events
+Saving with this model will trigger the following events:
+`beforeInsert`

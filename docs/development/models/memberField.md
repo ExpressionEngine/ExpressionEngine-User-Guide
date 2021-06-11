@@ -20,9 +20,9 @@ lang: php
 ## Properties
 
 ### Required:
-#### m_field_name Required
-#### m_field_label Required
-#### m_field_type Required
+#### m_field_name
+#### m_field_label
+#### m_field_type
 
 ### Optional:
 #### m_field_id
@@ -38,11 +38,11 @@ lang: php
 #### m_field_cp_reg
 #### m_field_fmt
 #### m_field_show_fmt
-#### m_field_exclude_from_anon
+#### m_field_exclude_from_anon boolString
 #### m_field_order
 #### m_field_text_direction
-#### m_field_settings
-#### m_legacy_field_data
+#### m_field_settings json
+#### m_legacy_field_data boolString
 
 ## Relationships
 
@@ -52,27 +52,43 @@ No Relationships.
 
 #### `getSettingsValues`
 
-Returns the member field's settings.
+| Parameter | Type         | Description                                   |
+| --------- | ------------ | --------------------------------------------- |
+| Returns   | `array` | Returns the member field's settings. |
 
 #### `getValues`
 
-Returns an array of field values for the member.
+| Parameter | Type         | Description                                   |
+| --------- | ------------ | --------------------------------------------- |
+| Returns   | `array` | Returns an array of field values for the member. |
 
 #### `getStructure`
 
-A link back to the Structure object that defines this Content's structure.
+| Parameter | Type         | Description                                   |
+| --------- | ------------ | --------------------------------------------- |
+| Returns   | `object` | A link back to the Structure object that defines this Content's structure. |
 
 #### `getContentType`
 
-Returns the content type `member`.
+| Parameter | Type         | Description                                   |
+| --------- | ------------ | --------------------------------------------- |
+| Returns   | `string` | Returns the content type `member`. |
 
 #### `getDataTable`
 
-Returns the name of the table, `member_data`.
+| Parameter | Type         | Description                                   |
+| --------- | ------------ | --------------------------------------------- |
+| Returns   | `string` | Returns the name of the table, `member_data`. |
 
 #### `getColumnPrefix`
 
-Returns the prefix for member fields, `m_`.
+| Parameter | Type         | Description                                   |
+| --------- | ------------ | --------------------------------------------- |
+| Returns   | `string` | Returns the prefix for member fields, `m_`. |
+
+## Events
+Saving with this model will trigger the following events:
+`beforeInsert`
 
 ## Examples:
 

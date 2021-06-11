@@ -20,21 +20,21 @@ lang: php
 ## Properties
 
 ### Required:
-#### `role_id`
+#### `role_id` int
 
 ### Optional:
-#### `id`
-#### `site_id`
-#### `menu_set_id`
+#### `id` 
+#### `site_id` int
+#### `menu_set_id` int
 #### `mbr_delete_notify_emails`
-#### `exclude_from_moderation`
-#### `search_flood_control`
-#### `prv_msg_send_limit`
-#### `prv_msg_storage_limit`
-#### `include_in_authorlist` 
-#### `include_in_memberlist`
+#### `exclude_from_moderation` boolString
+#### `search_flood_control` int
+#### `prv_msg_send_limit` int
+#### `prv_msg_storage_limit` int
+#### `include_in_authorlist`  boolString
+#### `include_in_memberlist` boolString
 #### `cp_homepage`
-#### `cp_homepage_channel`
+#### `cp_homepage_channel` int
 #### `cp_homepage_custom`
 
 ## Relationships
@@ -47,3 +47,6 @@ The role the member belongs to.
 
 #### `Site`
 The site ID the member belongs to.
+
+## Methods
+This model has no additional methods.

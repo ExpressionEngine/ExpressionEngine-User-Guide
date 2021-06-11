@@ -27,9 +27,9 @@ lang: php
 
 ### Optional:
 #### `member_id`
-#### `group_id` (deprecated, used role_id)
+#### `group_id` (deprecated, use role_id)
 #### `screen_name`
-#### `salt;`
+#### `salt` (deprecated)
 #### `unique_id`
 #### `crypt_key`
 #### `authcode`
@@ -83,9 +83,9 @@ lang: php
 #### `quick_links`
 #### `quick_tabs`
 #### `show_sidebar`
-#### `pmember_id`
+#### `pmember_id` (deprecated)
 #### `cp_homepage`
-#### `cp_homepage_channel`
+#### `cp_homepage_channel` json
 #### `cp_homepage_custom`
 
 
@@ -359,6 +359,14 @@ Checks whether member is pending
 | --------- | ------------ | --------------------------------------------- |
 | Returns   | `Bool` | `TRUE` if if member is pending |
 
+## Events
+Saving with this model will trigger the following events:
+`afterUpdate'`
+`beforeDelete'`
+`afterBulkDelete'`
+`beforeInsert'`
+`beforeValidate'`
+`afterSave`
 
 ## Examples:
 
@@ -378,6 +386,27 @@ $member_roles_object = ee('Model')->get('Member')->filter('username', $username)
 `
 $new_role_id = 8;
 $member_object->role_id = $new_role_id;
+$member_object->save();
+`
+
+#### Add additional Role to Member
+`
+// Get the member object.
+$member_object = ee('Model')->get('Member')->filter('username', $username)->first();
+
+// Get Member's existing role ID.
+$current_role_ids = $member_object->Roles->pluck('role_id');
+
+// Your list of new roles to add.
+$roles_to_add = array(5,6);
+
+// Merge the two arrays.
+$all_roles = array_merge($current_role_ids, $roles_to_add);
+
+// Add the roles to the member.
+$member_object->Roles = ee('Model')->get('Role', $all_roles)->all();
+
+// Save the changes.
 $member_object->save();
 `
 

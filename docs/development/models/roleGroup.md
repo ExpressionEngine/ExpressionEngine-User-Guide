@@ -23,7 +23,7 @@ lang: php
 #### `name`
 
 ### Optional:
-#### `group_id`
+#### `group_id` ini
 
 ## Relationships
 
@@ -35,6 +35,7 @@ Members that are assigned to role. May or may not intersect with `PrimaryMembers
 
 NOTE: **Note:** To get full list of members assigned to role, use [`getAllMembers()`](#getallmembers) function.
 
+## Methods
 This model has no methods.
 
 ## Examples
