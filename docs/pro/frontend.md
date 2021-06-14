@@ -31,6 +31,15 @@ There are three ways to completely prevent field edit link to be displayed in te
 In template preferences under Pro Settings there is switch for "Disable front-end editing?"
 When turned on, front-end editing features will be disabled in template completely.
 
+#### EE Comment
+
+Anything content wrapped in `{!-- disable frontedit --} ... {!-- //disable frontedit --}` HTML comment will not have edit links in it.
+
+    <h1>{!-- disable frontedit --}{title}{!-- //disable frontedit --}</h1>
+
+NOTE: **Hint:** If you need to disable front-end edit on large number of templates completely, you can wrap these comments around layout template.
+
+
 #### HTML Comment
 
 Anything content wrapped in `<!-- disable frontedit --> ... <!-- //disable frontedit -->` HTML comment will not have edit links in it.
@@ -46,19 +55,19 @@ Use `disable="frontedit"` parameter on field tag to disable link for a certain f
 
 ### Customizing the link
 
-The edit link for the field can be placed manually using **front_edit_link** tag if you need to have it in different section of template, custom styled - or you can even place edit link for field that is currently not on the page.
+The edit link for the field can be placed manually using **:frontedit** modifier on the field, **frontedit_link** tag if you need to have it in different section of template, custom styled - or you can even place edit link for field that is currently not on the page.
 
-#### `:pro_edit`
+#### `:frontedit`
 
-Inside `{exp:channel:entries}` tag, using the field name postfixed with `:pro_edit` will generate edit link for that field within displayed entry.
+Inside `{exp:channel:entries}` tag, using the field name postfixed with `:frontedit` will generate edit link for that field within displayed entry.
 
 You may find it useful if `disable_frontedit_links` configuration override is set and you need to place the links individually.
 
 Example usage:
 
-    {title:pro_edit}
+    {title:frontedit}
 
-#### `{front_edit_link}`
+#### `{frontedit_link}`
 
 Can be used to place edit link in arbitrary place (also outside or `exp:channel:entries` tag). The link can have custom CSS class applied to it.
 
@@ -74,8 +83,8 @@ Example usage:
 
     <h1>
         <!-- disable frontedit -->{title}<!-- //disable frontedit -->
-        {front_edit_link entry_id="{entry_id}" field_name="title"}
+        {frontedit_link entry_id="{entry_id}" field_name="title"}
     </h1>
 
     {page_content disable="frontedit"}
-    {front_edit_link entry_id="{entry_id}" field_name="page_content" class="extra-styles"}
+    {frontedit_link entry_id="{entry_id}" field_name="page_content" class="extra-styles"}
