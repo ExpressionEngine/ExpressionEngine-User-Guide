@@ -76,3 +76,30 @@ Override of the parent validateUnique to alter the language key if it is a failu
 ## Events
 Saving with this model will trigger the following events:
 `beforeInsert`
+
+## Examples
+
+#### Get a Status
+`
+$status_object = ee('Model')->get('Status')->filter('status','open')->first();
+`
+
+#### Get entry IDs with a specific status
+`
+// Get entries with that status, return the entry id.
+$entries_array = $status_object->ChannelEntries->pluck('entry_id');
+`
+
+#### Set a new status name
+`
+
+`
+#### Users that can access the Status
+`
+// Get related Roles, and then members in those Roles.
+// Return the usernames.
+$username_arrays = $status_object->Roles
+                    ->Members
+                    ->all()
+                    ->pluck('username');
+`

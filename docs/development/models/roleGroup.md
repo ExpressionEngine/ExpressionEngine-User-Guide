@@ -49,13 +49,13 @@ $roleGroup = ee('Model')->get('RoleGroup', $role_id)->first();
 #### Create a Role Group and Add Roles.
 `
 // Role IDs to add to Role Group.
-$role_members = array(1,2,3); 
+$role_members = array(1,2,3);
 
 // Create a new Role instance.
-$role_group = ee('Model')->make('RoleGroup'); 
+$role_group = ee('Model')->make('RoleGroup');
 
 // Use the Roles relationship to get each Role object.
-$role_group->Roles = ee('Model')->get('Role', $role_members)->all(); 
+$role_group->Roles = ee('Model')->get('Role', $role_members)->all();
 
 // Add the changes to the object.
 $role_group->set($group_data);

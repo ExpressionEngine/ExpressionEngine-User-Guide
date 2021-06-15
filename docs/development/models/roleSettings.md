@@ -23,7 +23,7 @@ lang: php
 #### `role_id` int
 
 ### Optional:
-#### `id` 
+#### `id`
 #### `site_id` int
 #### `menu_set_id` int
 #### `mbr_delete_notify_emails`

@@ -20,7 +20,7 @@ lang: php
 ## Properties
 
 ### Required:
-#### `role_id` 
+#### `role_id`
 #### `username`
 #### `email`
 #### `password`
@@ -389,7 +389,7 @@ $member_object->role_id = $new_role_id;
 $member_object->save();
 `
 
-#### Add additional Role to Member
+#### Add additional Roles to Member
 `
 // Get the member object.
 $member_object = ee('Model')->get('Member')->filter('username', $username)->first();
@@ -423,7 +423,7 @@ $password_array = ee()->auth->hash_password($unencrypted_password);
 
 $member_data = array(
 
-    'role_id'    => '6',
+    'role_id'    => 6,
     'username'   => 'bobsmith123', // unique.
     'email'      => 'example@gmail.com`,  // unique.
     'password'   => $password_array['password'],
