@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
+    @copyright Copyright (c) 2003-2021, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -16,6 +16,17 @@ lang: php
 **class `ExpressionEngine\Model\Role\Role`**
 
 [TOC]
+
+## Properties
+
+### Required:
+#### `name` Unique, max 100
+#### `short_name` Unique, max 50
+
+### Optional:
+#### `role_id` ini
+#### `description`
+#### `is_locked` boolString
 
 ## Relationships
 
@@ -86,3 +97,28 @@ Checks whether member role has certain permission
 | --------- | ------------ | --------------------------------------------- |
 | \$permission   | `String` | Full permission name |
 | Returns   | `Bool` | `TRUE` if permission has been granted |
+
+## Events
+Saving with this model will trigger the following events:
+`afterSave`
+
+## Examples
+
+#### Get a Role Object
+`
+$role_id = 6;
+$role_object = ee('Model')->get('Role')->filter('role_id', $role_id)->first();
+`
+
+#### Change Role Name
+`
+// Get role object.
+$role_id = 6;
+$role_object = ee('Model')->get('Role')->filter('role_id', $role_id)->first();
+
+// Change Role name in Object.
+$role_object->name = 'My New Role Name';
+
+// Save the change.
+$role_object->save();
+`
