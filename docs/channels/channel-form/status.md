@@ -27,3 +27,7 @@ Or use the alternative syntax:
         <option value="{status}"{selected}>{status}</option>
       {/statuses}
     </select>
+
+To manually set an entry's status upon sutmitting the Channel Form, you can use a Hidden field:
+
+    <input type="hidden" name="status" value="Shipped" />
