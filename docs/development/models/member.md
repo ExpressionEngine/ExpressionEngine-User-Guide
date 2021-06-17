@@ -26,7 +26,7 @@ lang: php
 #### `password`
 
 ### Optional:
-#### `member_id`
+#### `member_id` Key
 #### `group_id` (deprecated, use role_id)
 #### `screen_name`
 #### `salt` (deprecated)
@@ -371,26 +371,26 @@ Saving with this model will trigger the following events:
 ## Examples:
 
 #### Get Member
-`
+```
 $username = 'bob';
 $member_object = ee('Model')->get('Member')->filter('username', $username)->first();
-`
+```
 
 #### Get A Member's Roles
-`
+```
 $username = 'bob';
 $member_roles_object = ee('Model')->get('Member')->filter('username', $username)->first()->getAllRoles();
-`
+```
 
 #### Change Member's Primary Role
-`
+```
 $new_role_id = 8;
 $member_object->role_id = $new_role_id;
 $member_object->save();
-`
+```
 
 #### Add additional Roles to Member
-`
+```
 // Get the member object.
 $member_object = ee('Model')->get('Member')->filter('username', $username)->first();
 
@@ -408,17 +408,17 @@ $member_object->Roles = ee('Model')->get('Role', $all_roles)->all();
 
 // Save the changes.
 $member_object->save();
-`
+```
 
 #### Set Member Custom Field
-`
+```
 $field_id = '26';
 $member_object->{'m_field_id_'.$field_id} = 'New Field Value';
 $member_object->save();
-`
+```
 
 #### Create a New Member
-`
+```
 $password_array = ee()->auth->hash_password($unencrypted_password);
 
 $member_data = array(
@@ -438,4 +438,4 @@ $member_data = array(
 $member = ee('Model')->make('Member');
 $member->set($member_data);
 $member->save();
-`
+```

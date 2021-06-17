@@ -24,7 +24,7 @@ lang: php
 #### `highlight` Hex color
 
 ### Optional:
-#### `status_id`
+#### `status_id` Key
 #### `status_order` ini
 
 ## Relationships
@@ -80,26 +80,26 @@ Saving with this model will trigger the following events:
 ## Examples
 
 #### Get a Status
-`
+```
 $status_object = ee('Model')->get('Status')->filter('status','open')->first();
-`
+```
 
 #### Get entry IDs with a specific status
-`
+```
 // Get entries with that status, return the entry id.
 $entries_array = $status_object->ChannelEntries->pluck('entry_id');
-`
+```
 
 #### Set a new status name
-`
+```
 
-`
+```
 #### Users that can access the Status
-`
+```
 // Get related Roles, and then members in those Roles.
 // Return the usernames.
 $username_arrays = $status_object->Roles
                     ->Members
                     ->all()
                     ->pluck('username');
-`
+```

@@ -25,7 +25,7 @@ lang: php
 #### `m_field_type`
 
 ### Optional:
-#### `m_field_id`
+#### `m_field_id` Key
 #### `m_field_description`
 #### `m_field_list_items`
 #### `m_field_ta_rows`
@@ -93,7 +93,7 @@ Saving with this model will trigger the following events:
 ## Examples:
 
 #### Get All Custom Member Fields
-`
+```
 $all_member_fields = ee('Model')
         ->get('MemberField')
         ->fields('m_field_label','m_field_id')
@@ -101,10 +101,10 @@ $all_member_fields = ee('Model')
         ->getDictionary('m_field_id', 'm_field_label');
 
 // Example return: [4 => 'My Field Name']
-`
+```
 
 #### Create a member field:
-`
+```
 $new_field = ee('Model')->make('MemberField');
 $new_field->m_field_type        = 'text';
 $new_field->m_field_label       = 'My Member Field';
@@ -114,4 +114,4 @@ $new_field->m_field_settings    = array();
 $new_field->m_field_show_fmt    = 'n';
 $new_field->save();
 $field_id = $new_field->m_field_id;
-`
+```

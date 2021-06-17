@@ -23,7 +23,7 @@ lang: php
 #### `name`
 
 ### Optional:
-#### `group_id` ini
+#### `group_id` Key, ini
 
 ## Relationships
 
@@ -41,13 +41,13 @@ This model has no methods.
 ## Examples
 
 #### Get a Role Group by ID
-`
+```
 $role_id = 6;
 $roleGroup = ee('Model')->get('RoleGroup', $role_id)->first();
-`
+```
 
 #### Create a Role Group and Add Roles.
-`
+```
 // Role IDs to add to Role Group.
 $role_members = array(1,2,3);
 
@@ -62,4 +62,4 @@ $role_group->set($group_data);
 
 // Write the changes.
 $role_group->save();
-`
+```

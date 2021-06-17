@@ -24,7 +24,7 @@ lang: php
 #### `short_name` Unique, max 50
 
 ### Optional:
-#### `role_id` ini
+#### `role_id` Key, ini
 #### `description`
 #### `is_locked` boolString
 
@@ -105,13 +105,13 @@ Saving with this model will trigger the following events:
 ## Examples
 
 #### Get a Role Object
-`
+```
 $role_id = 6;
 $role_object = ee('Model')->get('Role')->filter('role_id', $role_id)->first();
-`
+```
 
 #### Change Role Name
-`
+```
 // Get role object.
 $role_id = 6;
 $role_object = ee('Model')->get('Role')->filter('role_id', $role_id)->first();
@@ -121,4 +121,4 @@ $role_object->name = 'My New Role Name';
 
 // Save the change.
 $role_object->save();
-`
+```

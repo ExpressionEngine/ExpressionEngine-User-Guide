@@ -665,6 +665,16 @@
       items:
         - name: Working with Models
           href: development/models/working-with-models.md
+        - name: Action Model
+          href: development/models/action.md
+        - name: Channel Entry Model
+          href: development/models/channelEntry.md
+        - name: CP Log Model
+          href: development/models/cpLog.md
+        - name: Developer Log Model
+          href: development/models/developerLog.md
+        - name: Email Console Log Model
+          href: development/models/emailConsoleCache.md
         - name: Member Model
           href: development/models/member.md
         - name: MemberField Model
