@@ -19,11 +19,11 @@ lang: php
 
 ## Properties
 
-### Required:
+### Required
 #### `name` Unique, max 100
 #### `short_name` Unique, max 50
 
-### Optional:
+### Optional
 #### `role_id` Key, ini
 #### `description`
 #### `is_locked` boolString
@@ -104,21 +104,86 @@ Saving with this model will trigger the following events:
 
 ## Examples
 
-#### Get a Role Object
+#### Get a Role
 ```
 $role_id = 6;
-$role_object = ee('Model')->get('Role')->filter('role_id', $role_id)->first();
+$role = ee('Model')->get('Role', $role_id)->first();
 ```
+
+#### Get all Members of a Role
+```
+// Get the Role Model.
+$role = ee('Model')->get('Role', $role_id)->first();
+
+// Get the Members model
+$members = $role->Members;
+
+// Return the usernames to an array
+$usernames = $members->pluck('username');
+```
+
+#### Add Role Members
+```
+// Get the Role Model.
+$role = ee('Model')->get('Role', $role_id)->first();
+
+// Get the Existing Member's IDs to an array.
+$current_members = $role->Members->pluck('member_id');
+
+// Get your list of members to add.
+$new_members = array(2,3,4);
+
+// Combine the member ID arrays.
+$all_members = array_merge($current_members, $new_members);
+
+$role->Members = ee('Model')->get('Member', $all_members)->all();
+
+// Validate and Save.
+$result = $role->validate();
+
+if ($result->isValid())
+{
+  $role->save();
+}
+```
+
 
 #### Change Role Name
 ```
 // Get role object.
 $role_id = 6;
-$role_object = ee('Model')->get('Role')->filter('role_id', $role_id)->first();
+$role = ee('Model')->get('Role')->filter('role_id', $role_id)->first();
 
 // Change Role name in Object.
-$role_object->name = 'My New Role Name';
+$role->name = 'My New Role Name';
 
-// Save the change.
-$role_object->save();
+// Validate and Save.
+$result = $role->validate();
+
+if ($result->isValid())
+{
+  $role->save();
+}
+```
+
+
+#### Create a New Role
+```
+// Create a Role Group Model
+$role = ee('Model')->make('Role');
+
+// Set Required Fields
+$role->name       = 'Role Name';
+$role->sort_name  = 'role_name';
+
+// Validate and Save.
+$result = $role->validate();
+
+if ($result->isValid())
+{
+  $role->save();
+}
+
+// The Role ID is now available
+$role->role_id;
 ```
