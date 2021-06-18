@@ -19,7 +19,7 @@ lang: php
 
 ## Properties
 
-### Required:
+### Required
 #### `author_id`
 #### `channel_id`
 #### `title`
@@ -27,7 +27,7 @@ lang: php
 #### `status`
 #### `entry_date`
 
-### Optional:
+### Optional
 #### `entry_id` Key
 #### `site_id`
 #### `forum_topic_id`
@@ -52,26 +52,37 @@ lang: php
 ## Relationships
 
 #### `Channel`
+The Channel the entry belongs to.
 
 #### `Author`
+The user that published the entry.
 
 #### `Status`
+The current status of the entry.
 
 #### `Categories`
+Selected categories the entry has.
 
 #### `Autosaves`
+If enabled, the entry autosaves.
 
 #### `Parents`
+Entries that are related to this entry.
 
 #### `Children`
+Entries that are related to this entry.
 
 #### `Versions`
+If enabled, previous versions of the entry.
 
 #### `Comments`
+Comments for the entry.
 
 #### `CommentSubscriptions`
+Comment subscriptions for the entry.
 
 #### `Site`
+The site the entry is apart of.
 
 
 ## Methods
@@ -141,7 +152,7 @@ lang: php
 #### `afterDelete`
 #### `afterInsert`
 #### `afterSave`
-#### `afterUpdat`
+#### `afterUpdate`
 
 ## Examples
 
@@ -175,8 +186,13 @@ $entry->url_title   = ee('Format')->make('Text', 'An Awesome Title')->urlSlug()-
 $entry->status      = ee('Model')->get('Status', 1)->first()->status; // Returns 'open';
 $entry->entry_date  = ee()->localize->now; // Returns time in seconds: 1623945317
 
-// Create the entry.
-$entry->save();
+// Validate and Save.
+$result = $entry->validate();
+
+if ($result->isValid())
+{
+  $entry->save();
+}
 
 $entry->entry_id; // Will now return the new Entry ID.
 ```
@@ -191,8 +207,13 @@ $entry = ee('Model')->get('ChannelEntry', $entry_id)->first();
 // Returns 'closed'.
 $entry->status = ee('Model')->get('Status', 2)->first()->status; 
 
-// Save the changes.
-$entry->save();
+// Validate and Save.
+$result = $entry->validate();
+
+if ($result->isValid())
+{
+  $entry->save();
+}
 ```
 
 #### Get an Entry's Children
