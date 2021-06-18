@@ -19,11 +19,11 @@ lang: php
 
 ## Properties
 
-### Required:
+### Required
 #### `status` Unique
 #### `highlight` Hex color
 
-### Optional:
+### Optional
 #### `status_id` Key
 #### `status_order` ini
 
@@ -81,25 +81,74 @@ Saving with this model will trigger the following events:
 
 #### Get a Status
 ```
-$status_object = ee('Model')->get('Status')->filter('status','open')->first();
+$status = ee('Model')->get('Status')->filter('status','open')->first();
 ```
 
 #### Get entry IDs with a specific status
 ```
-// Get entries with that status, return the entry id.
-$entries_array = $status_object->ChannelEntries->pluck('entry_id');
+// Get the Status Object.
+$status = ee('Model')->get('Status')->filter('status','open')->first();
+
+// Get entries with that status, returning the entry id to an array.
+$entries_array = $status->ChannelEntries->pluck('entry_id');
 ```
 
-#### Set a new status name
+#### Get Users that can access the Status
 ```
+// Get the Status Object.
+$status = ee('Model')->get('Status')->filter('status','open')->first();
 
-```
-#### Users that can access the Status
-```
-// Get related Roles, and then members in those Roles.
-// Return the usernames.
-$username_arrays = $status_object->Roles
+// Get the related Roles.
+$roles = $status->Roles;
+
+// Get the Members in those Roles
+$members = $roles->Members->all();
+
+// Return the usernames to an array.
+$usernames = $members->pluck('username);
+
+// As one one line:
+$username_arrays = $ee('Model')
+                    ->get('Status')
+                    ->filter('status','open')
+                    ->first()
+                    ->Roles
                     ->Members
                     ->all()
                     ->pluck('username');
+```
+
+#### Edit the Status name
+```
+// Get the Status Object.
+$status = ee('Model')->get('Status')->filter('status','review')->first();
+
+$status->status = 'reviewed';
+
+// Validate and Save.
+$result = $status->validate();
+
+if ($result->isValid())
+{
+  $status->save();
+}
+```
+
+
+#### Create a New Status
+```
+// Make the Status Model.
+$status = ee('Model')->make('Status');
+
+// Set the Title and Hex Color
+$status->status = "MyNewStatus";
+$status->highlight = '009933';
+
+// Validate and Save.
+$result = $status->validate();
+
+if ($result->isValid())
+{
+  $status->save();
+}
 ```
