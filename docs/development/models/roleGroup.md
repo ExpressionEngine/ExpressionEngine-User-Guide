@@ -19,10 +19,10 @@ lang: php
 
 ## Properties
 
-### Required:
+### Required
 #### `name`
 
-### Optional:
+### Optional
 #### `group_id` Key, ini
 
 ## Relationships
@@ -46,20 +46,53 @@ $role_id = 6;
 $roleGroup = ee('Model')->get('RoleGroup', $role_id)->first();
 ```
 
-#### Create a Role Group and Add Roles.
+#### Edit a Role Group Name
+```
+$roleGroup = ee('Model')->get('RoleGroup', 6)->first();
+$roleGroup->name = 'Marvel Members';
+
+// Validate and Save.
+$result = $roleGroup->validate();
+
+if ($result->isValid())
+{
+  $roleGroup->save();
+}
+```
+
+#### Create a Role Group
+```
+// Create a Role Model
+$roleGroup = ee('Model')->make('RoleGroup');
+
+// Set the Require field
+$roleGroup->name = 'DC Members';
+
+// Validate and Save.
+$result = $roleGroup->validate();
+
+if ($result->isValid())
+{
+  $roleGroup->save();
+}
+
+// the ID is now available:
+$roleGroup->group_id;
+```
+
+#### Add Roles to a Role Group
 ```
 // Role IDs to add to Role Group.
 $role_members = array(1,2,3);
 
-// Create a new Role instance.
-$role_group = ee('Model')->make('RoleGroup');
-
 // Use the Roles relationship to get each Role object.
-$role_group->Roles = ee('Model')->get('Role', $role_members)->all();
+$roleGroup->Roles = ee('Model')->get('Role', $role_members)->all();
 
-// Add the changes to the object.
-$role_group->set($group_data);
+// Validate and Save.
+$result = $roleGroup->validate();
 
-// Write the changes.
-$role_group->save();
+if ($result->isValid())
+{
+  $roleGroup->save();
+}
 ```
