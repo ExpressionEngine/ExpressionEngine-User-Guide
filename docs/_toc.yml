@@ -668,27 +668,27 @@
         - name: Action
           href: development/models/action.md
         - name: Channel Entry
-          href: development/models/channelEntry.md
+          href: development/models/channel-entry.md
         - name: CP Log
-          href: development/models/cpLog.md
+          href: development/models/cp-log.md
         - name: Developer Log
-          href: development/models/developerLog.md
+          href: development/models/developer-log.md
         - name: Email Console Log
-          href: development/models/emailConsoleCache.md
+          href: development/models/email-console-cache.md
         - name: Member
           href: development/models/member.md
         - name: MemberField
-          href: development/models/memberField.md
+          href: development/models/member-field.md
         - name: Role
           href: development/models/role.md
         - name: RoleGroup
-          href: development/models/roleGroup.md
+          href: development/models/role-group.md
         - name: RoleSettings
-          href: development/models/roleSettings.md
+          href: development/models/role-settings.md
         - name: Template
           href: development/models/template.md
         - name: Template Group
-          href: development/models/templateGroup.md
+          href: development/models/template-group.md
         - name: Status
           href: development/models/status.md
     - name: Shared Form View
