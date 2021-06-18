@@ -19,10 +19,10 @@ lang: php
 
 ## Properties
 
-### Required:
+### Required
 #### `role_id` int
 
-### Optional:
+### Optional
 #### `id` Key
 #### `site_id` int
 #### `menu_set_id` int
