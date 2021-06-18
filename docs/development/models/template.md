@@ -11,7 +11,7 @@ lang: php
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Model Action Model
+# Template Model
 
 **class `ExpressionEngine\Model\FileSyncedModel\Template`**
 
@@ -106,14 +106,14 @@ if ($result->isValid())
 }
 ```
 
-#### Create a new template and add to group
+#### Create a new Template and add to a template group
 ```
 // Make a new template object.
 $template = ee('Model')->make('Template');
 
 // Add the required fields.
 $template->site_id       = ee()->config->item('site_id');
-$template->group_id      = 1;
+$template->group_id      = 1; // Must be an existing group.
 $template->template_name = 'My New Template';
 $template->template_type = 'webpage';
 
@@ -126,7 +126,7 @@ if ($result->isValid())
 }
 ```
 
-### Restrict a template to Members
+#### Restrict a Template to Members
 ```
 // Get the template object.
 $template = ee('Model')->get('Template')->filter('template_id', 6)->first();

@@ -11,7 +11,7 @@ lang: php
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# MemberGroup Model
+# Role Group Model
 
 **class `ExpressionEngine\Model\Role\RoleGroup`**
 

@@ -11,7 +11,7 @@ lang: php
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# MemberField Model
+# Member Field Model
 
 **class `ExpressionEngine\Model\member\memberField`**
 

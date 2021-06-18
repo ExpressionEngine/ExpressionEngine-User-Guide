@@ -11,7 +11,7 @@ lang: php
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Model Action Model
+# Template Group Model
 
 **class `ExpressionEngine\Model\Template\TemplateGroup`**
 
