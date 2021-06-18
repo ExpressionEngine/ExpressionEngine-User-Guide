@@ -19,13 +19,13 @@ lang: php
 
 ## Properties
 
-### Required:
+### Required
 #### `role_id`
 #### `username`
 #### `email`
 #### `password`
 
-### Optional:
+### Optional
 #### `member_id` Key
 #### `group_id` (deprecated, use role_id)
 #### `screen_name`
@@ -386,7 +386,14 @@ $member_roles_object = ee('Model')->get('Member')->filter('username', $username)
 ```
 $new_role_id = 8;
 $member_object->role_id = $new_role_id;
-$member_object->save();
+
+// Validate and Save.
+$result = $member_object->validate();
+
+if ($result->isValid())
+{
+  $member_object->save();
+}
 ```
 
 #### Add additional Roles to Member
@@ -406,15 +413,27 @@ $all_roles = array_merge($current_role_ids, $roles_to_add);
 // Add the roles to the member.
 $member_object->Roles = ee('Model')->get('Role', $all_roles)->all();
 
-// Save the changes.
-$member_object->save();
+// Validate and Save.
+$result = $member_object->validate();
+
+if ($result->isValid())
+{
+  $member_object->save();
+}
 ```
 
 #### Set Member Custom Field
 ```
 $field_id = '26';
 $member_object->{'m_field_id_'.$field_id} = 'New Field Value';
-$member_object->save();
+
+// Validate and Save.
+$result = $member_object->validate();
+
+if ($result->isValid())
+{
+  $member_object->save();
+}
 ```
 
 #### Create a New Member
@@ -437,5 +456,12 @@ $member_data = array(
 
 $member = ee('Model')->make('Member');
 $member->set($member_data);
-$member->save();
+
+// Validate and Save.
+$result = $member->validate();
+
+if ($result->isValid())
+{
+  $member->save();
+}
 ```
