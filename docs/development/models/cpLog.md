@@ -56,5 +56,12 @@ $log->username   = ee()->session->userdata('username');
 $log->ip_address = ee()->session->userdata('ip_address');
 $log->act_date   = ee()->localize->now;
 $log->action     = "Your Message!";
-$log->save();
+
+// Validate and Save.
+$result = $log->validate();
+
+if ($result->isValid())
+{
+  $log->save();
+}
 ```
