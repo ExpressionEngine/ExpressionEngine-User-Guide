@@ -665,27 +665,31 @@
       items:
         - name: Working with Models
           href: development/models/working-with-models.md
-        - name: Action Model
+        - name: Action
           href: development/models/action.md
-        - name: Channel Entry Model
+        - name: Channel Entry
           href: development/models/channelEntry.md
-        - name: CP Log Model
+        - name: CP Log
           href: development/models/cpLog.md
-        - name: Developer Log Model
+        - name: Developer Log
           href: development/models/developerLog.md
-        - name: Email Console Log Model
+        - name: Email Console Log
           href: development/models/emailConsoleCache.md
-        - name: Member Model
+        - name: Member
           href: development/models/member.md
-        - name: MemberField Model
+        - name: MemberField
           href: memberField.md
-        - name: Role Model
+        - name: Role
           href: development/models/role.md
-        - name: RoleGroup Model
+        - name: RoleGroup
           href: development/models/roleGroup.md
-        - name: RoleSettings Model
+        - name: RoleSettings
           href: roleSettings.md
-        - name: Status Model
+        - name: Template
+          href: template.md
+        - name: Template Group
+          href: templateGroup.md
+        - name: Status
           href: development/models/status.md
     - name: Shared Form View
       href: development/shared-form-view.md
