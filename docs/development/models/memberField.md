@@ -19,12 +19,12 @@ lang: php
 
 ## Properties
 
-### Required:
+### Required
 #### `m_field_name`
 #### `m_field_label`
 #### `m_field_type`
 
-### Optional:
+### Optional
 #### `m_field_id` Key
 #### `m_field_description`
 #### `m_field_list_items`
@@ -112,6 +112,15 @@ $new_field->m_field_name        = 'my_member_field';
 $new_field->m_field_description = 'A custom member field example';
 $new_field->m_field_settings    = array();
 $new_field->m_field_show_fmt    = 'n';
-$new_field->save();
+
+// Validate and Save.
+$result = $new_field->validate();
+
+if ($result->isValid())
+{
+  $new_field->save();
+}
+
+// The field ID is now available.
 $field_id = $new_field->m_field_id;
 ```
