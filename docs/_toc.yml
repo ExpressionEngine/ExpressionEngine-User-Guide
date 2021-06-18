@@ -678,17 +678,17 @@
         - name: Member
           href: development/models/member.md
         - name: MemberField
-          href: memberField.md
+          href: development/models/memberField.md
         - name: Role
           href: development/models/role.md
         - name: RoleGroup
           href: development/models/roleGroup.md
         - name: RoleSettings
-          href: roleSettings.md
+          href: development/models/roleSettings.md
         - name: Template
-          href: template.md
+          href: development/models/template.md
         - name: Template Group
-          href: templateGroup.md
+          href: development/models/templateGroup.md
         - name: Status
           href: development/models/status.md
     - name: Shared Form View
