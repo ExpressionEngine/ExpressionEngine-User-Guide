@@ -42,6 +42,7 @@ $action_id = ee('Model')
                 ->filter('method','your_addon_method')
                 ->first()
                 ->action_id;
-
+                
+// Create a URL to that action.
 $action_url = ee()->functions->fetch_site_index(0, 0) . QUERY_MARKER . 'ACT=' . $action_id;
 ```
