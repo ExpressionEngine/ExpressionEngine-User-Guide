@@ -669,6 +669,10 @@
           href: development/models/action.md
         - name: Channel Entry
           href: development/models/channel-entry.md
+        - name: Channel Field Group
+          href: development/models/channel-field-group.md
+        - name: Channel Field
+          href: development/models/channel-field.md
         - name: CP Log
           href: development/models/cp-log.md
         - name: Developer Log
