@@ -219,13 +219,13 @@ if ($result->isValid())
 #### Get an Entry's Children
 ```
 // The parent entry.
-$entry_id     = 1; 
+$entry_id = 1; 
 
 // Get the Entry's object.
-$entry        = ee('Model')->get('ChannelEntry', $entry_id)->first(); 
+$entry = ee('Model')->get('ChannelEntry', $entry_id)->first(); 
 
 // Get the children relationship.  Returns entry objects.
-$children     = $entry->Children; 
+$children = $entry->Children; 
 
 // Will output array(2, 3, 4...etc);
 $children_ids = $children->pluck('entry_id'); 
@@ -234,4 +234,37 @@ $children_ids = $children->pluck('entry_id');
 As One Line:
 ```
 $children_ids = ee('Model')->get('ChannelEntry', 1)->first()->Children->pluck('entry_id');
+```
+Note that relationships can not be set this way.
+
+### Custom Fields
+
+#### Get an Entry's Custom Field
+```
+// Get a Channel Entry object.
+$entry = ee('Model')->get('ChannelEntry', 5)->first();
+
+// Get the field data.
+$field_data = $entry->field_id_5;
+
+// Using Variables.
+$field_id = 5;
+$field_data = $entry->{'field_id_'.$field_id};
+```
+
+#### Set a Custom Field
+```
+// Get a Channel Entry object.
+$entry = ee('Model')->get('ChannelEntry', 5)->first();
+
+// Set the field data.
+$entry->field_id_5 = 'New Data';
+
+// Validate and Save.
+$result = $entry->validate();
+
+if ($result->isValid())
+{
+  $entry->save();
+}
 ```
