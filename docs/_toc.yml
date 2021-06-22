@@ -679,6 +679,10 @@
           href: development/models/developer-log.md
         - name: Email Console Log
           href: development/models/email-console-cache.md
+        - name: File
+          href: development/models/file.md
+        - name: Upload Destinations
+          href: development/models/upload-destination.md
         - name: Member
           href: development/models/member.md
         - name: MemberField
@@ -686,6 +690,8 @@
         - name: Role
           href: development/models/role.md
         - name: RoleGroup
+        - name: Status
+          href: development/models/status.md        
           href: development/models/role-group.md
         - name: RoleSettings
           href: development/models/role-settings.md
@@ -693,8 +699,7 @@
           href: development/models/template.md
         - name: Template Group
           href: development/models/template-group.md
-        - name: Status
-          href: development/models/status.md
+
     - name: Shared Form View
       href: development/shared-form-view.md
     - name: Control Panel Javascript
