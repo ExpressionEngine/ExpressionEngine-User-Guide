@@ -45,7 +45,7 @@ This model has no events.
 ```
 $member_id = 1;
 
-$logs = ee('Model)->get('CpLog')->filter('member_id', $member_id)->all();
+$super_admin_logs = ee('Model')->get('CpLog')->filter('member_id', $member_id)->all();
 ```
 
 #### Create a new log
