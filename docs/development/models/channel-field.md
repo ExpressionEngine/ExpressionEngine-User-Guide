@@ -133,7 +133,7 @@ if ($result->isValid())
 // Field ID is now available.
 $field->field_id;
 ```
-Note field types `Relationships` `Grid` and `Fluid` require additional steps. Their data will be `NULL`.
+Field types `Relationships` `Grid` and `Fluid` require additional steps. Their data will be `NULL`.
 
 
 #### Add Field to a Field Group
