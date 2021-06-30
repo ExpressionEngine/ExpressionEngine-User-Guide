@@ -200,6 +200,26 @@ Perform a ROT13 substitution cypher to the content.
     {rank:spellout locale='de_DE'}
     {!-- zwei­und­vierzig --}
 
+### `:trim`
+
+Returns a string with whitespace stripped from its beginning and its end.
+
+| Parameter   | Default       |                                                                                              |
+| ----------- | ------------- | -------------------------------------------------------------------------------------------- |
+| characters= | ` \n\r\t\v\0` | As defined by [PHP documentation](https://www.php.net/manual/en/function.trim.php)           |
+
+    {if layout:header_image:trim}
+        <style>
+        .main-header-and-search-form {
+            background-image: url('{layout:header_image:trim}');
+        }
+        </style>
+    {/if}
+
+    {hello:trim characters='Hdle'}
+    {!-- o Wor --}
+
+
 ### `:url`
 
 Normalize a URL to use in markup. Primarily to make sure it contains a valid protocol. For instance if `{website}` was `www.example.com`:
