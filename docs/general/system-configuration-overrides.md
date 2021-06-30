@@ -207,6 +207,16 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Allow members to change their username](control-panel/settings/security-privacy.md#allow-members-to-change-username)
 
+### `allowed_preview_domains`
+
+List extra domains that can be used to show live preview. You will need this if your site or CP is using domain that is not configured as Site URL or CP URL. Can be array or comma-separated string.
+
+Example Usage:
+
+    $config['allowed_preview_domains'] = 'example1.com,example2.com';
+
+    $config['allowed_preview_domains'] = ['example1.com', 'example2.com'];
+
 ### `app_version`
 
 The installation's ExpressionEngine version.
