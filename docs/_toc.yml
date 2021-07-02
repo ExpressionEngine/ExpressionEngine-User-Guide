@@ -677,8 +677,6 @@
           href: development/control-panel-js/events.md
         - name: Table Plugin
           href: development/control-panel-js/table.md
-        - name: Rich Text Editor
-          href: development/control-panel-js/rich-text-editor.md
         - name: Ranges and Selections
           href: development/control-panel-js/rangesandselections.md
         - name: WysiHat API
