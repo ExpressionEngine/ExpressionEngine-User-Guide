@@ -189,7 +189,7 @@ Perform a ROT13 substitution cypher to the content.
 
 | Parameter   | Default       |                                                                                              |
 | ----------- | ------------- | -------------------------------------------------------------------------------------------- |
-| capitalize= | `none`        | One of `ucfirst` (uppercase first letter) or `ucwords` (uppercase first letter of each word) |
+| capitalize= | `none`        | One of `ucfirst` (uppercase first letter) or `ucwords` (uppercase first letter of each word). Might not work for multibyte encodings. |
 | locale=     | `en_US.UTF-8` | The ICU locale ID                                                                            |
 
     {rank:spellout}
@@ -211,10 +211,6 @@ Normalize a URL to use in markup. Primarily to make sure it contains a valid pro
 Note that it is best to use a [URL](fieldtypes/url.md) field, so this is more useful for values coming from plugins or outside sources.
 
 ### `:url_decode`
-
-| Parameter            | Default |                                                         |
-| -------------------- | ------- | ------------------------------------------------------- |
-| plus_encoded_spaces= | `no`    | whether or not to encode spaces as `+` instead of `%20` |
 
 URL decode the contents.
 
