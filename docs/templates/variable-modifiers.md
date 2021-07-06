@@ -117,9 +117,10 @@ Outputs the length of the content in characters.
 | Parameter   | Default   |                                                         |
 | ----------- | --------- | ------------------------------------------------------- |
 | characters= | `500`     | Number of characters to limit to                        |
+| preserve_words=   | `y` | Retain whole words |
 | end_char=   | `&#8230;` | character to append when a limit terminates the content |
 
-Limits the content to the specified number of characters. May be fewer than the exact limit, as this retains whole words.
+Limits the content to the specified number of characters. Without `preserve_words='n'` may be fewer than the exact limit, as this retains whole words.
 
     {excerpt:limit characters='20'}
     {!-- A discussion&#8230; --}
@@ -188,7 +189,7 @@ Perform a ROT13 substitution cypher to the content.
 
 | Parameter   | Default       |                                                                                              |
 | ----------- | ------------- | -------------------------------------------------------------------------------------------- |
-| capitalize= | `none`        | One of `ucfirst` (uppercase first letter) or `ucwords` (uppercase first letter of each word) |
+| capitalize= | `none`        | One of `ucfirst` (uppercase first letter) or `ucwords` (uppercase first letter of each word). Might not work for multibyte encodings. |
 | locale=     | `en_US.UTF-8` | The ICU locale ID                                                                            |
 
     {rank:spellout}
@@ -210,10 +211,6 @@ Normalize a URL to use in markup. Primarily to make sure it contains a valid pro
 Note that it is best to use a [URL](fieldtypes/url.md) field, so this is more useful for values coming from plugins or outside sources.
 
 ### `:url_decode`
-
-| Parameter            | Default |                                                         |
-| -------------------- | ------- | ------------------------------------------------------- |
-| plus_encoded_spaces= | `no`    | whether or not to encode spaces as `+` instead of `%20` |
 
 URL decode the contents.
 
