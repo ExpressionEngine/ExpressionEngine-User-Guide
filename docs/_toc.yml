@@ -204,6 +204,18 @@
       href: add-ons/moblog.md
     - name: Pages
       href: add-ons/pages.md
+    - name: Queue
+      items:
+        - name: Overview
+          href: add-ons/queue/index.md
+        - name: Creating A Job
+          href: add-ons/queue/creating-a-job.md
+        - name: Running the Job
+          href: add-ons/queue/running-queue.md
+        - name: Monitoring the Queue
+          href: add-ons/queue/monitoring-queue.md
+        - name: Important Notes
+          href: add-ons/queue/notes.md
     - name: Query
       href: add-ons/query.md
     - name: RSS
