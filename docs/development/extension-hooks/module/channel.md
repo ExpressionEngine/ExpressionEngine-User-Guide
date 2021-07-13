@@ -61,7 +61,7 @@ How it's called:
     $row = $this->extensions->call('channel_entries_row', $this, $row);
     if ($this->extensions->end_script === TRUE) return $tagdata;
 
-### `function_name($tagdata, $row, $this)`
+### `channel_entries_tagdata_end($tagdata, $row, $this)`
 
 | Parameter | Type     | Description             |
 | --------- | -------- | ----------------------- |
