@@ -62,8 +62,8 @@ Additional functionality can be installed using the following guidelines:
         public $methods = [
             [
                 'method' => 'run', // will default to same as hook if not defined
-                'hook' => 'template_fetch_template' // required
-                'priority' => ""
+                'hook' => 'template_fetch_template', // required
+                'priority' => "",
                 'enabled' => "" // y/n
             ],
             [
@@ -113,8 +113,8 @@ Extension files can now be as simplified as well. However they must include the 
         public $methods = [
             [
                 'method' => 'run', // will default to same as hook if not defined
-                'hook' => 'template_fetch_template' // required
-                'priority' => ""
+                'hook' => 'template_fetch_template', // required
+                'priority' => "",
                 'enabled' => "" // y/n
             ],
             [
@@ -147,8 +147,8 @@ Additionally you may use `activate_extension()` and `disable_extension()` if nee
         public $methods = [
             [
                 'method' => 'run', // will default to same as hook if not defined
-                'hook' => 'template_fetch_template' // required
-                'priority' => ""
+                'hook' => 'template_fetch_template', // required
+                'priority' => "",
                 'enabled' => "" // y/n
             ],
             [
