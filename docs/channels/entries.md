@@ -51,13 +51,13 @@ Modify the parameter value using `not` to exclude Member IDs:
 
     author_id="not 1|2|3"
 
-Use the `CURRENT_USER` constant to limit entries to the currently logged-in user:
+Use the `CURRENT_USER` token to limit entries to the currently logged-in user:
 
     author_id="CURRENT_USER"
 
 NOTE: **Note:** `CURRENT_USER` will limit Channel Entries to return entries authored by the currently logged-in user. Users who are not logged-in will not see any output.
 
-Use the `NOT_CURRENT_USER` constant to limit entries **excluding** the currently logged in user:
+Use the `NOT_CURRENT_USER` token to limit entries **excluding** the currently logged in user:
 
     author_id="NOT_CURRENT_USER"
 
@@ -716,11 +716,11 @@ Or you can add "not" to exclude usernames
 
     username="not tom|dick|harry|fred"
 
-You can also use the constant `"CURRENT_USER"` to show entries from only the currently logged in user.
+You can also use the token `"CURRENT_USER"` to show entries from only the currently logged in user.
 
     username="CURRENT_USER"
 
-This allow each logged-in user to get only their entries. Users who are not logged in won't see anything. Alternatively, you can use the constant `"NOT_CURRENT_USER"` to show entries **except** from the currently logged in user.
+This allow each logged-in user to get only their entries. Users who are not logged in won't see anything. Alternatively, you can use the token `"NOT_CURRENT_USER"` to show entries **except** from the currently logged in user.
 
     username="NOT_CURRENT_USER"
 
