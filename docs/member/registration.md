@@ -55,7 +55,7 @@ Password confirmation. This is a **required** field and must match the entered p
 
 ### Screen name
 
-Member username. This is a **required** field and must be unique across the site:
+Member username. This is a **required** field:
 
     <label for="screen_name">Screen Name</label>
     <input type="text" name="screen_name" value="" maxlength="120" size="40" />
@@ -107,15 +107,6 @@ Please note you need to address those by ID and not name, e.g. `m_field_id_8`
     {exp:member:registration_form
         return="member/registration/success"
         }
-
-        {if errors}
-            <fieldset class="error">
-                <legend>Errors</legend>
-            {errors}
-                {error}<br />
-            {/errors}
-            </fieldset>
-        {/if}
 
             <p>* Required fields</p>
         <fieldset>

@@ -2,7 +2,7 @@
 
 Commands can be called in the terminal of your choice in the format of:
 
-`$ php eecli.php hello`
+`$ php system/eecli.php hello`
 
 This will call `eecli` with a command of `hello`. This is the Hello World of EE commands, and will display:
 
@@ -11,7 +11,7 @@ This will call `eecli` with a command of `hello`. This is the Hello World of EE 
 Commands can also request confirmation:
 
 ```
-$ php eecli.php hello -c
+$ php system/eecli.php hello -c
 
 Hello world
 Are you liking these questions? (yes/no) [no]
@@ -22,7 +22,7 @@ That's good to hear!
 Commands are also able to take interaction:
 
 ```
-$ php eecli.php hello -i
+$ php system/eecli.php hello -i
 
 Hello world
 What's your name? Andy
@@ -33,12 +33,12 @@ Pleasure to meet you, Andy!
 
 To view a list of all available commands, you may use the list command:
 
-`php eecli.php list`
+`php system/eecli.php list`
 
 This will return a basic list of all available system and user-generated commands.
 
 ```
-$ php eecli.php list
+$ php system/eecli.php list
 
 | Command             | Description                                                 |
 -------------------------------------------------------------------------------------
@@ -53,7 +53,7 @@ $ php eecli.php list
 You can get help information on any command by using the `--help` or `-h` parameter when running the command.
 
 ```
-$ php eecli.php hello -h
+$ php system/eecli.php hello -h
 
 SUMMARY
     Hello World -- This is a sample command used to test the CLI
