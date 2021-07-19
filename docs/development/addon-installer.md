@@ -89,12 +89,12 @@ Additional functionality can be installed using the following guidelines:
 
         public function install()
         {
-            parent::install();
+            return parent::install();
         }
 
-        public function uninstall ()
+        public function uninstall()
         {
-            parent::uninstall();
+            return parent::uninstall();
         }
 
     }
