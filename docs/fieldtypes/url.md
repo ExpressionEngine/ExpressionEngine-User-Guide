@@ -26,6 +26,7 @@ Which URL Schemes the content author is allowed to use in this URL field. Availa
 - `ftp://`
 - `sftp://`
 - `ssh://`
+- `tel://`
 
 ### URL Scheme Placeholder
 
