@@ -824,7 +824,7 @@ Declare if your cookie should be restricted to a first-party or same-site contex
 
 Example Usage:
 
-    $config['cookie_samesite'] = 'Srict';
+    $config['cookie_samesite'] = 'Strict';
 
 ### `cp_session_type`
 

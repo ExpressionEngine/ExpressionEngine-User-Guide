@@ -179,7 +179,7 @@ The CAPTCHA input for the form. It is usually used with a conditional so that it
         <p>{captcha}<br /> <input type="text" name="captcha" value="" maxlength="20" /></p>
     {/if}
 
-The setting to disable or enable CAPTCHA for the contact form can be found in the [Email Configuration](control-panel/settings/email.md) preferences.
+The setting to disable or enable CAPTCHA is applied based on the [CAPTCHA preferences](control-panel/settings/captcha.md) for all of your site's front end forms.
 
 ### `from`
 
@@ -320,6 +320,12 @@ In the above example, the Template "friend" contains the Tell-a-Friend form.
 ## Parameters
 
 [TOC=3]
+
+### `allow_attachments=`
+     
+     allow_attachments="yes"
+
+This allows you to add a file input field to your form, make sure to give your file input field the name of `attachment`. Adding this parameter automatically gives the form the `enctype='multipart/form-data'` attribute.
 
 ### `allow_html=`
 

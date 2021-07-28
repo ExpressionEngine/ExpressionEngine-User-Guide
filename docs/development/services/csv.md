@@ -21,19 +21,19 @@ The CSV library is built to take in rows of data as either associative arrays or
 
     $csv = ee('CSV');
     $csv->addRow(array(
-      'email' => 'team at ellislab dot com',
-      'title' => 'EllisLab Team'
+      'email' => 'team at example dot com',
+      'title' => 'Example Team'
     ))->addRow(array(
-      'email' => 'hello at ellislab dot com',
-      'name' => 'Hello to EllisLab'
+      'email' => 'hello at example dot com',
+      'name' => 'Hello to Example'
     ));
     echo (string) $csv;
 
 Would result in:
 
     "email", "title", "name"
-    "team at ellislab dot com", "EllisLab Team", ""
-    "hello at ellislab dot com", "", "Hello to EllisLab"
+    "team at example dot com", "Example Team", ""
+    "hello at example dot com", "", "Hello to Example"
 
 Alternatively you could save the resulting data to a file:
 
@@ -55,15 +55,15 @@ Add a row of data to the CSV instance.
 | Returns   | `Object`       | `$this`, the CSV object itself so you can chain `->addRow()` and       |
 
     $csv->addRow(array(
-      'email' => 'team at ellislab dot com',
-      'title' => 'EllisLab Team'
+      'email' => 'team at example dot com',
+      'title' => 'Example Team'
     ));
 
     // OR
 
     $row = new \stdClass();
-    $row->email = 'team at ellislab dot com';
-    $row->name = 'EllisLab Team';
+    $row->email = 'team at example dot com';
+    $row->name = 'Example Team';
     $result = $csv->addRow($row);
 
 ### `save($filename)`

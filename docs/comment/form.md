@@ -109,7 +109,7 @@ If this parameter is not defined, they will be returned to the form page.
 
 #### `{if captcha}`
 
-As noted in the [captcha section](security/captchas.md), the contents of the conditional ({if captcha}) tag will only appear if you have the CAPTCHA preference turned on for comments in the channel the entry is associated with.
+As noted in the [captcha section](security/captchas.md), the contents of the conditional ({if captcha}) tag will only appear if you have the CAPTCHA preference turned on for front-end forms, although it can be disabled for logged in users.
 
 #### `{if comments_expired}`
 

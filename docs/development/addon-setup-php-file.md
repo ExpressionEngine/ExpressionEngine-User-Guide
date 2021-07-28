@@ -72,7 +72,7 @@ This is the version number of the add-on. We recommend using [Semantic Versionin
 
 This is the [PHP namespace](http://php.net/namespace) for your add-on. This is a **required** key.
 
-This key associates your add-on directory with a namespace. ExpressionEngine will will look inside your add-on directory any time it encounters a class name that begins with this namespace.
+This key associates your add-on directory with a namespace. ExpressionEngine will look inside your add-on directory any time it encounters a class name that begins with this namespace.
 
 ### `settings_exist`
 

@@ -377,7 +377,7 @@ A file grid field variable pair:
 
     {relationship_field}
       {relationship_field:my_fluid_field}
-        {elationship_field:my_fluid_field:my_grid}
+        {relationship_field:my_fluid_field:my_grid}
           {content}
             {if content:count == 1}<h3>Grid total rows: {content:total_rows}{/if}
             Date field: {content:my_grid format="%Y %m"}
@@ -507,7 +507,7 @@ A file grid field variable pair:
 
     {parents field="relationship_field"}
       {parents:my_fluid_field}
-        {elationship_field:my_fluid_field:my_grid}
+        {relationship_field:my_fluid_field:my_grid}
           {content}
             {if content:count == 1}<h3>Grid total rows: {content:total_rows}{/if}
             Date field: {content:my_grid format="%Y %m"}
