@@ -7,6 +7,67 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
+## Version 6.1.0 (Release:xxxx, x 2021)
+Add docs?
+https://packettide.atlassian.net/browse/EECORE-379
+https://github.com/ExpressionEngine/ExpressionEngine/issues/171
+
+NOTE: **Important:** This version includes important security updates.
+
+- **Bug Fixes** 💃🐛 
+  - Resolved [#179](https://github.com/ExpressionEngine/ExpressionEngine/issues/179) where an image thumbnail could be given an incorrect path.
+  - Resolved [#463](https://github.com/ExpressionEngine/ExpressionEngine/issues/463) where `sanitize_filename()` method to incorrectly return empty strings.
+  - Resolved [#536](https://github.com/ExpressionEngine/ExpressionEngine/issues/536) where Control Panel users were not notified when a "resend activation email" failed.
+  - Resolved issues in the Control Panel when use the Safari web browser [#702](https://github.com/ExpressionEngine/ExpressionEngine/issues/702) [#851](https://github.com/ExpressionEngine/ExpressionEngine/issues/851) [#965](https://github.com/ExpressionEngine/ExpressionEngine/issues/965)
+  - Resolved [#724](https://github.com/ExpressionEngine/ExpressionEngine/issues/724) where .`index.html` files where listed in folders that only allowed images.
+  - Resolved [#746](https://github.com/ExpressionEngine/ExpressionEngine/issues/746) where `{options:my_field_name}` not available in Channel Form.
+  - Resolved [#785](https://github.com/ExpressionEngine/ExpressionEngine/issues/785) where users could inadvertently leave an entry publish page without warning while there were unsaved changes.
+  - Resolved [#951](https://github.com/ExpressionEngine/ExpressionEngine/issues/951) where users could see channels they didn't have access to.
+  - Resolved [#957](https://github.com/ExpressionEngine/ExpressionEngine/issues/957) where RTE configs were not properly saving.
+  - Resolved [#1078](https://github.com/ExpressionEngine/ExpressionEngine/issues/1078) where SVGs were not allowed to be uploaded as images.
+  - Resolved [#1149](https://github.com/ExpressionEngine/ExpressionEngine/issues/1149) where channel description character limit is not checked in form.
+  - Resolved bug where live preview failed when cross-domain requests were being made.
+  - Resolved a bug where the Communicate page would not load on sites with extremely large numbers of members. 
+
+
+- **Enhancements** 🚀
+  - Many UI improvements across the Control Panel
+  - Brought back more detail to Breadcrumbs [#573](https://github.com/ExpressionEngine/ExpressionEngine/issues/573)
+  - Added Category Group ID to the Category group listing [#698](https://github.com/ExpressionEngine/ExpressionEngine/issues/698)
+  - Resolved [#927](https://github.com/ExpressionEngine/ExpressionEngine/issues/927) to add clarification.
+  - Added 'preserve_words` parameter for `:limit` modifier. [#171](https://github.com/ExpressionEngine/ExpressionEngine/issues/171)
+  - Users can now use CMD/Ctrl + S to save entries in the Control Panel
+  - Improved functionality of RTE [#669](https://github.com/ExpressionEngine/ExpressionEngine/issues/669)
+  - Major updates to cookies and GDPR functionality.  
+    - Adding logging of all consents, including guests [#271](https://github.com/ExpressionEngine/ExpressionEngine/issues/271)
+    - Removed unused cookies [#955](https://github.com/ExpressionEngine/ExpressionEngine/issues/955)
+    - Added ability to change cookies lifetime value
+    - Converted all front-end cookies to be session cookies. [#955](https://github.com/ExpressionEngine/ExpressionEngine/issues/955)
+    - Added consent version to audit log.
+    - Consents are now invalidated when new cookies are added.
+    - Added ability to change cookies lifetime value 
+  - Added `{if no_results}` to Grid Field for use when using the search to limit rows. [#894](https://github.com/ExpressionEngine/ExpressionEngine/issues/894)
+  - Added `form_class` parameter to the member registration form. [#716](https://github.com/ExpressionEngine/ExpressionEngine/issues/716) [Docs Link](https://docs.expressionengine.com/latest/member/registration.html#parameters)
+  - Added ability to disable Live Preview per channel. [#1012](https://github.com/ExpressionEngine/ExpressionEngine/issues/1012) [Docs Link](https://docs.expressionengine.com/latest/control-panel/channels.html#settings-tab)
+  - Added support for image modifiers when using category images [#942](https://github.com/ExpressionEngine/ExpressionEngine/issues/716) DOCS? https://packettide.atlassian.net/browse/EECORE-1072
+  - Added ability to disable Google FLoC [#1027](https://github.com/ExpressionEngine/ExpressionEngine/issues/1027) [Docs Link](https://docs.expressionengine.com/latest/add-ons/http-header.html)
+  - Added ability to upload m4a files by default [#699](https://github.com/ExpressionEngine/ExpressionEngine/issues/699)
+  - Added new core add-on: [HTTP Methods](https://docs.expressionengine.com/latest/add-ons/https-methods.html) ADD THIS TO DOCS MENUS!
+  - Added option to use Google reCAPTCHA in addition to previous captcha option. [#822](https://github.com/ExpressionEngine/ExpressionEngine/issues/822) [Docs Link](https://docs.expressionengine.com/latest/control-panel/settings/captchas.html)
+  - Added noindex,nofollow to template used by `?URL` redirect warning page.
+  - Added tel scheme option to URL fieldtype. [#1097](https://github.com/ExpressionEngine/ExpressionEngine/issues/1097)
+  - Added ability to review link to an image in RTE [#1082](https://github.com/ExpressionEngine/ExpressionEngine/issues/1082)
+
+    
+
+- **Developers** 💻
+  - Added Member Role constants https://packettide.atlassian.net/browse/EECORE-379
+  - Added ability to define rows and columns in a textarea when using a shared view. [#988](https://github.com/ExpressionEngine/ExpressionEngine/issues/988) [Docs Link](https://docs.expressionengine.com/latest/development/shared-form-view.html)
+  - Added new extension hooks to Fluid Fields [#58](https://github.com/ExpressionEngine/ExpressionEngine/issues/58) [Docs Link](https://docs.expressionengine.com/latest/development/extension-hooks/model/fluid-field.html)
+  - Updated URLs in core files that led to 404s
+  - Updated implementation of `usort` in system/ee/ExpressionEngine/Model/Member/Display/MemberFieldLayout.php
+
+
 ## Version 6.0.6 (Release: May 21, 2021)
 - **Bug Fixes** 💃🐛 
   - Resolved [#1091](https://github.com/ExpressionEngine/ExpressionEngine/issues/1091) where the field type dropdown when creating a new field was not displaying correctly in Firefox.
