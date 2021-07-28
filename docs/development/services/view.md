@@ -69,7 +69,7 @@ All of the current view variables are automatically made available to the subvie
 
     <p><?php $this->embed('addon_name:sub/view', array('username' => $member->username)) ?></p>
 
-Notice that you do not need to echo the output of this method, it i$1 $2dded to the right place automatically.
+Notice that you do not need to echo the output of this method, it is added to the right place automatically.
 
 You can also disable features in a view, using the third parameter:
 
