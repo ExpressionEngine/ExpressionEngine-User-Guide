@@ -88,3 +88,6 @@ Example usage:
 
     {page_content disable="frontedit"}
     {frontedit_link entry_id="{entry_id}" field_name="page_content" class="extra-styles"}
+
+## Unsaved Changes
+When a user edits data and has unsaved changes, Pro will create an autosave of the entry and alert the user via a notification on the edit window with unsaved changes. The autosave is triggerd based on the default autosave interval of 60seconds. If you want to ensure users do not accidentially loose unsaved changes adjust the `[autosave_interval_seconds]` system config override to a lower interval between autosaves. A setting of 2 seconds is the recommendenation. 
