@@ -57,13 +57,9 @@ lang: php
 ### `getDataTable`
 ### `getContentType`
 ### `getSettingsValues`
-### `onBeforeInsert`
-### `onAfterInsert`
-### `onBeforeDelete`
 ### `getAllChannels`
 ### `validateNameIsNotReserved`
 ### `validateIsCompatibleWithPreviousValue`
-
 
 ## Events
 `beforeInsert'`

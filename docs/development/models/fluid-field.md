@@ -33,7 +33,6 @@ lang: php
 
 
 ## Methods
-### `onAfterDelete`
 ### `getSessionCacheKey`
 ### `setFieldData`
 ### `fetchFieldData`

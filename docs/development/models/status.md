@@ -44,10 +44,6 @@ Roles with permissions to use the status.
 
 ## Methods
 
-### `onBeforeInsert()`
-
-New statuses get appended roles assigned
-
 ### `getSelectOptionComponent()`
 
 Returns the value and rendered label for option select input display

@@ -62,7 +62,6 @@ The site the file is apart of.
 #### `getAbsoluteThumbnailPath`
 #### `getAbsoluteURL`
 #### `getAbsoluteThumbnailURL`
-#### `onBeforeDelete`
 #### `memberHasAccess`
 #### `exists`
 #### `isWritable`
