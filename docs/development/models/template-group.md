@@ -42,13 +42,8 @@ The site the group belongs to.
 
 ## Methods
 
-### `onBeforeInsert`
-### `onAfterInsert`
-### `onAfterUpdate`
-### `onAfterSave`
 ### `ensureFolderExists`
 ### `getFolderPath`
-### `onAfterDelete`
 ### `validateTemplateGroupName`
 ### `validateUnique`
 

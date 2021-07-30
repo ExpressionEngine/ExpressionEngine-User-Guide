@@ -73,10 +73,6 @@ Saves the template as a revision.
 ### `validateTemplateName`
 Returns `true` if the template name is not a reserved name.
 
-### `onBeforeInsert`
-### `onAfterSave`
-### `onAfterDelete`
-
 
 ## Events
 ### `beforeInsert`

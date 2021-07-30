@@ -95,22 +95,6 @@ The site the entry is apart of.
 
 #### `validateUniqueUrlTitle`
 
-#### `onBeforeSave`
-
-#### `onAfterSave`
-
-#### `onAfterInsert`
-
-#### `onBeforeInsert`
-
-#### `onBeforeUpdate`
-
-#### `onAfterUpdate`
-
-#### `onBeforeDelete`
-
-#### `onAfterDelete`
-
 #### `saveTabData`
 
 #### `saveVersion`
