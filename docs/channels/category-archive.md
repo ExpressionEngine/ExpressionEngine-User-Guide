@@ -141,6 +141,7 @@ The "order" parameter sets the display order of the entries. Setting options for
 - orderby="title"
 - orderby="comment"
 - orderby="most_recent_comment"
+- orderby="most_used_categories"
 
 If this parameter is not set, it will default to ordering by the title.
 
@@ -189,6 +190,12 @@ You may restrict to entries with a particular [status](control-panel/channels.md
 Or exclude statuses using "not"
 
     status="not submitted|processing|closed"
+
+### `sticky=`
+
+    sticky="no" sticky="yes" sticky="only"
+
+By default, sticky property makes no difference on entries sorting ("no"). You can manually turn on stickies by setting the parameter to "yes". If set to "only", only "sticky" entries are included in the results.
 
 ### `style=`
 
