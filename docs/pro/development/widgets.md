@@ -102,7 +102,7 @@ HTML add-on widgets are installed when add-on is installed or updated.
 
 ## Template widgets
 
-You can create custom widgets specifically for your site by creating `widgets` templates groups and adding templates inside it.
+You can create custom widgets specifically for your site by creating `pro-dashboard-widgets` templates group and adding templates inside it.
 
 The templates need to follow the syntax of HTML widgets.
 

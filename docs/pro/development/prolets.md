@@ -23,6 +23,7 @@ All prolets are required to implement `ExpressionEngine\Addons\Pro\Service\Prole
 The easiest way to achieve that is to make prolet extend abstract class `ExpressionEngine\Addons\Pro\Service\Prolet\AbstractProlet`.
 
 The sample prolet would then look something like
+
     use ExpressionEngine\Addons\Pro\Service\Prolet;
 
     class Sample_prolet_pro extends Prolet\AbstractProlet
@@ -41,7 +42,9 @@ The sample prolet would then look something like
 On each page load, prolets appear on frontend as Dock buttons. If not specified different, `icon.svg` from add-on packagefolder is being used as button. If you want to specify different icon name (which still need to be name of file in add-on package folder) you can do that using `protected $icon` property or `public function getIcon()`.
 
     protected $icon = 'sample_prolet.png';
+
 or
+
     public function getIcon()
     {
         return 'sample_prolet.png';
@@ -51,7 +54,9 @@ or
 Each prolet is required to have a name, which is used as title for the button and also for prolet popup window. It can be defined using `protected $name` property or `public function getName()`. Using function is recommended because you are able to use lang key in it, making the name translatable.
 
     protected $name = 'Sample Prolet';
+
 or
+
     public function getName()
     {
         return lang('sample_prolet');
@@ -62,7 +67,9 @@ or
 If the prolet is opening popup window (which is what currently all prolets are doing) you are able to specify the window size. Available options are `footer`, `large` and `small` (default) and you can do that using `protected $size` property or `public function getSize()`.
 
     protected $size = 'footer';
+
 or
+
     public function getSize()
     {
         return 'large';
@@ -73,7 +80,9 @@ or
 By default each prolet popup window is generated with "Save" button in the footer which sends "save" JavaScript event to the prolet. You can change that to display different buttons, or no buttons at all, using `protected $buttons` property or `public function getButtons()`.
 
     protected $buttons = []; // No buttons will be shown
+
 or
+
     public function getButtons()
     {
         return [
@@ -87,7 +96,9 @@ or
 Prolets are required to contain some method which will generate the data to be output. By default this is assumed to be `index()` method, however you can specify different function name using `protected $action` property or `public function getAction()`.
 
     protected $action = 'do_something_cool';
+
 or
+
     public function getAction()
     {
         return 'do_something_else';
