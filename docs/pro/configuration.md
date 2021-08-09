@@ -37,41 +37,42 @@ Example Usage:
 
     $config['favicon'] = '/url/to/icon.png';
 
-### `disable_dock`
+### `enable_dock`
 
-Allows turning off front-end facing features of EE Pro completely. When set to `y`, Dock will not be shown and front-end field editing will not be enabled.
-
-| Value | Behavior                                       |
-| ----- | ---------------------------------------------- |
-| y     | Turn off Dock, front-end editing and Prolets   |
-| n     | Enabled Dock and all its features    (default) |
-
-Example Usage:
-
-    $config['disable_dock'] = 'n';
-
-### `disable_frontedit`
-
-When set to `y`, completely disables front-end editing while keeping Dock visible and Prolets functional.
+Allows turning off front-end facing features of EE Pro completely. When set to `n`, Dock will not be shown and front-end field editing will not be enabled.
 
 | Value | Behavior                                       |
 | ----- | ---------------------------------------------- |
-| y     | Disable front-end editing   |
-| n     | Enables front-end editing    (default) |
+| y     | Enables Dock and all its features    (default) |
+| n     | Turn off Dock, front-end editing and Prolets   |
 
 Example Usage:
 
-    $config['disable_frontedit'] = 'n';
+    $config['enable_dock'] = 'n';
 
-### `disable_frontedit_links`
+### `enable_frontedit`
 
-When set to `y`, disables automatic creation of content management links on front-end. The links can still be [added manually](pro/frontend.html#customizing-the-link).
+When set to `n`, completely disables front-end editing while keeping Dock visible and Prolets functional.
 
 | Value | Behavior                                       |
 | ----- | ---------------------------------------------- |
-| y     | Disable automatic front-end editing links   |
-| n     | Enable automatic front-end editing links    (default) |
+| y     | Enables front-end editing    (default) |
+| n     | Disable front-end editing   |
+
 
 Example Usage:
 
-    $config['disable_frontedit_links'] = 'y';
+    $config['enable_frontedit'] = 'n';
+
+### `enable_frontedit_links`
+
+When set to `n`, disables automatic creation of content management links on front-end. The links can still be [added manually](pro/frontend.html#customizing-the-link).
+
+| Value | Behavior                                       |
+| ----- | ---------------------------------------------- |
+| y     | Enable automatic front-end editing links    (default) |
+| n     | Disable automatic front-end editing links   |
+
+Example Usage:
+
+    $config['enable_frontedit_links'] = 'y';
