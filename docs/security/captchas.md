@@ -50,6 +50,12 @@ The code used inside the Member Registration Form is very similar, with only the
         <input type="text" name="captcha" value="" size="20" maxlength="20" style="width:140px;" /></p>
     {/if}
 
+If using using [reCAPTCHA v3](security/captchas.md), use a simplified tag that will output the required javascript, with the CAPTCHA otherwise invisible.
+
+    {if captcha}
+        {captcha}
+    {/if}
+
 ## Notes
 
 It is important to note that there is a downside to using CAPTCHAs. While they can be very successful in stopping automated bots from being able to post comments or sign up for memberships, it can also have the same effect on blind or visually impaired users of your site. If you enable CAPTCHAs, then you will be making it extremely difficult for these legitimate users to be able to use your site.
