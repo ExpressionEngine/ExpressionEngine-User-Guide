@@ -18,9 +18,9 @@ The links are being placed in yout HTML right before the field's tag (or opening
 ## Disabling the link
 
 There are several ways to disable front-end editing links:
- - globally with [configuration overrides](pro/configuration.md#disable_frontedit)
- - they can be switched off using the toggle in the Dock
- - can be disabled using HTML comments or field parameter
+ - globally with [configuration overrides](pro/configuration.md#disable_frontedit) or in [General Settings](pro/configuration.md#general-settings)
+ - they can be switched off using the toggle in the Dock itself
+ - can be disabled using HTML comments, ExpressionEngine template comments, or field parameter
 
 ### Disabling link in the template
 
@@ -30,6 +30,8 @@ There are three ways to completely prevent field edit link to be displayed in te
 
 In template preferences under Pro Settings there is switch for "Disable front-end editing?"
 When turned on, front-end editing features will be disabled in template completely.
+
+![pro template settings](/_images/pro_template_settings.png)
 
 #### EE Comment
 
@@ -89,5 +91,47 @@ Example usage:
     {page_content disable="frontedit"}
     {frontedit_link entry_id="{entry_id}" field_name="page_content" class="extra-styles"}
 
+
+#### Label Custom Front-end Edit Links
+When using custom links, it may be useful to label these links for the user. One way of accomplishing this is by wrapping your link in a custom HTML element and then hide/showing element with JavaScript. 
+
+Example:
+
+```
+Template Code:
+<span class="pro-edit-link" style="display:none;">Edit Homepage Property Slider:</span> {homepage_property_slider:frontedit}
+
+Javascript:
+//will only show selected elements if edit links are also visible on the page, which would indicate that ExpressionEngine Pro edit links are active. Otherwise the inline style will hide this element.
+if( $(".eeFrontEdit").length > 0){
+        $(".pro-edit-link").show();
+    }
+```
 ## Unsaved Changes
-When a user edits data and has unsaved changes, Pro will create an autosave of the entry and alert the user via a notification on the edit window with unsaved changes. The autosave is triggerd based on the default autosave interval of 60seconds. If you want to ensure users do not accidentially loose unsaved changes adjust the `[autosave_interval_seconds]` system config override to a lower interval between autosaves. A setting of 2 seconds is the recommendenation. 
+When a user edits data and has unsaved changes, Pro will create an autosave of the entry and alert the user via a notification on the edit window with unsaved changes. The autosave is triggerd based on the default autosave interval of 60seconds. If you want to ensure users do not accidentally loose unsaved changes adjust the `[autosave_interval_seconds]` system config override to a lower interval between autosaves. A setting of 10 seconds is the recommendation.
+
+Example Usage:
+
+```
+$config['autosave_interval_seconds'] = '10'; 
+```
+
+## Reinitialize ExpressionEngine Pro Javascript
+There may be times, such as when using AJAX, that page content is loaded after ExpressionEngine Pro has been initialized on a page. When this happens edit links may not work or even render. To fix this, you need to included `EE.pro.refresh();` in your script. 
+
+Example usage:
+
+```
+function getData() {
+    $.ajax({
+        url : 'example.com',
+        type: 'GET',
+        success : reInitPro
+    })
+}
+
+function reInitPro(){
+    $.get(ajaxLink, function(data) {
+}
+```
+

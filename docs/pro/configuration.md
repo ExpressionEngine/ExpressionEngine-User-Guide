@@ -13,29 +13,44 @@
 
 ## Settings page
 
-On EE Pro add-on settings page you can upload or select image to be shows as company logo on CP login screen and favicon for CP pages.
+### General Settings
+**Control Panel Location: `Addons > ExpressionEngine Pro > General`**
 
-## Dashboard management
 
-Each member can have their own set of widgets saved for CP homepage. To manage what is being shown, click the gear icon in top right corner of homepage. You can hide or unhide the widgets and change their order. The layut is being saved on per-member basis.
+
+![Pro General Settings](/_images/pro_general_settings.png)
+
+* **Enable Dock** - (Default: On, Matching Config Override: [`enable_dock`](#enable_dock) ) Enabling the Dock controls whether ExpressionEngine Pro is turned on for the front-end of your website. When the Dock is disabled all front-end editing, prolets, and Dock features will be disabled.
+
+* **Enable front-end editing** - (Default: On, Matching Config Override: [`enable_frontedit`](#enable_frontedit)) Enabling front-end editing allows users with respective permissions to edit channel entries and content on the front-end of your website using provided edit links ( <img style="margin-bottom: 0px; vertical-align: middle;" src="../_images/pro_edit.png" alt="pro edit icon"> ) .
+
+* **Enable automatic front-end editing links** - (Default: On, Matching Config Override: [`enable_frontedit_links`](#enable_frontedit_links)) By default ExpressionEngine Pro automatically inserts edit links ( <img style="margin-bottom: 0px; vertical-align: middle;" src="../_images/pro_edit.png" alt="pro edit icon"> ) where editable content is found in templates. These can be disabled on a per field basis or globally when using this toggle. When toggled off, ExpressionEngine Pro will no longer automatically generate edit links and links will need to be [added manually](pro/frontend.html#customizing-the-link) where needed in templates.
+
+
+### Branding Settings
+**Control Panel Location: `Addons > ExpressionEngine Pro > Branding`**
+
+
+![Pro Branding Settings](/_images/pro_branding_settings.png)
+
+* **Logo to show on login screen** - This settings allows you to upload an image that will be shown when users log in to the control panel. The recommendation is that the image is no more than 400px in width.
+
+* **Favicon** - This setting allows you to upload an .ico or .png file which will be used as the favicon while users are in the control panel.
+
 
 ## Config overrides
 
-### `login_logo`
+### `autosave_interval_seconds`
 
-URL to file used as branded logo on login page.
+Set the interval between autosaves on the Publish Page and on the Front-end when Pro is installed. If you want to ensure users do not accidentally loose unsaved changes adjust the `[autosave_interval_seconds]` system config override to a lower interval between autosaves. A setting of 10 seconds is the recommendation.
 
-Example Usage:
-
-    $config['login_logo'] = '/url/to/file.jpg';
-
-### `favicon`
-
-URL to file used as favicon in Control Panel.
+| Value   | Description                                  |
+| ------- | -------------------------------------------- |
+| integer | Autosave interval in seconds (default is 60) |
 
 Example Usage:
 
-    $config['favicon'] = '/url/to/icon.png';
+    $config['autosave_interval_seconds'] = '10';
 
 ### `enable_dock`
 
@@ -76,3 +91,24 @@ When set to `n`, disables automatic creation of content management links on fron
 Example Usage:
 
     $config['enable_frontedit_links'] = 'y';
+    
+### `favicon`
+
+URL to file used as favicon in Control Panel.
+
+Example Usage:
+
+    $config['favicon'] = '/url/to/icon.png';
+
+### `login_logo`
+
+URL to file used as branded logo on login page.
+
+Example Usage:
+
+    $config['login_logo'] = '/url/to/file.jpg';
+
+
+## Dashboard management
+
+Each member can have their own set of widgets saved for Control Panel homepage. To manage what is being shown, click the gear icon in top right corner of homepage. You can hide or unhide the widgets and change their order. The layout is being saved on per-member basis.

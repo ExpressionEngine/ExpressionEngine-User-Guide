@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Cookies management
+# Cookie and Consent Management
 
 ExpressionEngine Pro provides additional tools to improve cookies management.
 
@@ -52,9 +52,13 @@ Cookie provider (`ee` or add-on short name)
 Cookie lifetime in seconds. `0` represents session cookies (killed after browsing session ends).
 
 ## Setting cookies lifetime
+**Control Panel Location: `Settings > Cookie Settings`**
 
-Under Settings -> Cookie Settings all cookies set by your ExpressionEngine installation are listed. It is possible to set your own cookie title, description and lifetime in seconds.
+In the Cookie Settings all cookies set by your ExpressionEngine installation are listed. It is possible to set your own cookie title, description and lifetime in seconds.
+
+![pro cookie settings](/_images/pro_cookie_settings.png)
 
 ## Export Consent Audit Log
+**Control Panel Location: `Tools > Logs > Consent`**
 
-ExpressionEngine Pro adds "export" button in the top right of Consent Audit Log in CP which allows to download the CSV file with log records based on filters applied.
+ExpressionEngine Pro adds "export" button ( <img style="margin-bottom: 0px; vertical-align: middle;" src="../_images/pro_consent_export.png" alt="pro consent export icon">) in the top right of Consent Audit Log in CP which allows users to download the CSV file with log records based on filters applied.
