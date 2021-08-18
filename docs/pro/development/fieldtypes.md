@@ -29,3 +29,9 @@ The available options are:
  - large
  - small
  - footer
+
+### Making complex fieldtypes to work
+
+If your fieldtype is representing complex data structures, such as Grid or Fluid field, you'll need to tell Pro is needs to be treated in a different way. You can do this by declaring in fieldtype
+
+    public $complex_data_structure = true;
