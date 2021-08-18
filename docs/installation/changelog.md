@@ -32,12 +32,15 @@ NOTE: **Important:** This version includes important security updates.
 
 - **Enhancements** 🚀
   - Many UI improvements across the Control Panel
+  - Introduced [ExpressionEngine Pro](/pro/overview.md)!
+  - Major updates to [CLI](/cli/into.md)
   - Brought back more detail to Breadcrumbs [#573](https://github.com/ExpressionEngine/ExpressionEngine/issues/573)
   - Added Category Group ID to the Category group listing [#698](https://github.com/ExpressionEngine/ExpressionEngine/issues/698)
   - Resolved [#927](https://github.com/ExpressionEngine/ExpressionEngine/issues/927) to add clarification.
   - Added 'preserve_words` parameter for `:limit` modifier. [#171](https://github.com/ExpressionEngine/ExpressionEngine/issues/171)
   - Users can now use CMD/Ctrl + S to save entries in the Control Panel
   - Improved functionality of RTE [#669](https://github.com/ExpressionEngine/ExpressionEngine/issues/669)
+  - Added Redactor as an editor type in the RTE.
   - Major updates to cookies and GDPR functionality.  
     - Adding logging of all consents, including guests [#271](https://github.com/ExpressionEngine/ExpressionEngine/issues/271)
     - Removed unused cookies [#955](https://github.com/ExpressionEngine/ExpressionEngine/issues/955)
