@@ -27,6 +27,12 @@ Output a member registration form.
 
 This parameter allows you to specify the class attribute for the &lt;form&gt; tag.
 
+### `primary_role=`
+
+    primary_role="6"
+
+The primary role that will be assigned to registered member. If omited, the default role will be assigned.
+
 ## Form Inputs
 
 ### Email
