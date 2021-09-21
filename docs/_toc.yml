@@ -688,6 +688,8 @@
 
     - name: Constants Reference
       href: development/constants.md
+    - name: Cypress Tests
+      href: development/cypress-tests.md
     - name: JSON Version Feed
       href: development/json-version-feed.md
     - name: Legacy Reference
