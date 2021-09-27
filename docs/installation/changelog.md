@@ -26,8 +26,13 @@ NOTE: **Important:** This version includes important security updates.
   - Resolved [#957](https://github.com/ExpressionEngine/ExpressionEngine/issues/957) where RTE configs were not properly saving.
   - Resolved [#1078](https://github.com/ExpressionEngine/ExpressionEngine/issues/1078) where SVGs were not allowed to be uploaded as images.
   - Resolved [#1149](https://github.com/ExpressionEngine/ExpressionEngine/issues/1149) where channel description character limit is not checked in form.
+  - Resolved [#1212](https://github.com/ExpressionEngine/ExpressionEngine/issues/1212) which caused errors in PHP 8.
+  - Resolved [#1242](https://github.com/ExpressionEngine/ExpressionEngine/issues/1242) where HTML entites in RTE settings were parsed incorrectly. 
+  - Resolved [#1264](https://github.com/ExpressionEngine/ExpressionEngine/issues/1264) where the `{comment}` variable within `{exp:comment:entries}` tag did not work with variable modifiers
+  - Resolved [#1278](https://github.com/ExpressionEngine/ExpressionEngine/issues/1278) where relationship fields could throw errors after upgrading versions.
+ 
   - Resolved bug where live preview failed when cross-domain requests were being made.
-  - Resolved a bug where the Communicate page would not load on sites with extremely large numbers of members. 
+  - Resolved a bug where the Communicate page would not load on sites with extremely large numbers of members.
 
 
 - **Enhancements** 🚀
