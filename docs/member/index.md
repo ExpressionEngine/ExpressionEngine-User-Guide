@@ -19,6 +19,20 @@ You'll find many member management options available at:
 
 NOTE: **Note:** A member account's Username and Screen Name can be identical, but the Username must be unique system-wide.
 
+- [Registration Tag](member/registration.md)
+- [Login Tag](member/login.md)
+- [Logout Tags](member/logout.md)
+- [Forgot Password](member/forgot-password.md)
+- [Forgot Username](member/forgot-username.md)
+- [Reset Password](member/reset-password.md)
+- [Two-Factor Authentication Links](member/2fa.md)
+- [Member List Tag](member/memberlist.md)
+- [Member Search Form](member/search.md)
+- [Custom Profile Data Tag](member/custom-profile-data.md)
+- [Edit Profile Data Tag](member/edit-profile.md)
+- [Member Roles Tags](member/member-roles-tags.md)
+- [Ignore List Tag](member/ignore-list.md)
+- [Profile Templates (Legacy)](member/profile-templates.md)
 
 
 ### Member Navigation
@@ -35,7 +49,3 @@ A good strategy for member navigation links is to use them within conditional ta
       Not a member? <a href="{path='member/register'}">Register</a>.<br>
       Have you <a href="{path='member/forgot'}">forgotten your password</a>?
     {/if}
-
-
-
-

@@ -309,6 +309,8 @@
         href: member/forgot-username.md
       - name: Reset Password
         href: member/reset-password.md
+      - name: Two-Factor Authentication Links
+        href: member/2fa.md
       - name: Member List Tag
         href: member/memberlist.md
       - name: Member Search Form
