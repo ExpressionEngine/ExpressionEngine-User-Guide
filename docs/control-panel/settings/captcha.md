@@ -48,3 +48,23 @@ The server path might look something like:
     /home/example.com/public_html/images/captchas/
 
 If you do not know what to use for your full server path, contact your Host or server admin. Remember that this upload folder must be writable. See [File Permissions](troubleshooting/general.md#file-permissions) for details.
+
+## reCAPTCHA v3 Settings
+
+If you wish to use Google reCAPTCH v3 as a replacement you will need to ensure that the site is set up with Google to gain the required site key and secret. See https://www.google.com/recaptcha/admin/create
+
+### Use reCAPTCHA v3?
+
+If you enable this preference then the system will use reCAPTCH v3 in place of the older image based solution.
+
+### reCAPTCHA site key
+
+Enter your site key here
+
+### reCAPTCHA site secret
+
+Enter your site secret here
+
+### Threshold score
+
+Enter the minimum score to pass the CAPTCHA test (a number between 0.1 and 1.0).  The default is 0.5

@@ -538,6 +538,8 @@
               href: development/extension-hooks/model/comment.md
             - name: File Model
               href: development/extension-hooks/model/file.md
+            - name: Fluid Field Library
+              href: development/extension-hooks/model/fluid-field.md
             - name: GlobalVariable Model
               href: development/extension-hooks/model/template-global-variable.md
             - name: MemberField Model
@@ -686,6 +688,8 @@
 
     - name: Constants Reference
       href: development/constants.md
+    - name: Cypress Tests
+      href: development/cypress-tests.md
     - name: JSON Version Feed
       href: development/json-version-feed.md
     - name: Legacy Reference

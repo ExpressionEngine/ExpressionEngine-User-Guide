@@ -45,7 +45,7 @@ The operator is optional and will default to `==` if not given:
 
 By default, filters will be chained as `AND` conditions. An `OR` filter can be applied by using the `orFilter()` method:
 
-    ->filter('username' 'bob')
+    ->filter('username', 'bob')
     ->orFilter('group_id', 1)
 
 ### Available filters

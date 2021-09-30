@@ -64,7 +64,7 @@ The above URL is identical to doing this:
 
     http://example.com/about/index
 
-An template named "index" is automatically created by ExpressionEngine when a template group is created. A Template Group will then always have an `index` Template, which is shown when there is no Template specifically named in the second segment. This can be a useful way to you organize your site.
+An template named "index" is automatically created by ExpressionEngine when a template group is created. A Template Group will then always have an `index` Template, which is shown when there is no Template specifically named in the second segment. This can be a useful way for you to organize your site.
 
 For example, let's say you are building a small site that needs four pages (home, services, about, and contact). You could create four Template Groups, each representing one of the four pages, and use the `index` template to contain the HTML markup and dynamic content:
 

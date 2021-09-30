@@ -18,7 +18,7 @@ NOTE: **Note:** Shortly after a major version is released, the previous major ve
 
 
 ## Upgrading Major Versions
-WARN: **Important** Upgrading major version (example from v5.x to v6.x) typically includes major updates and breaking changes. Do not upgrade major version manually or via 1-click without testing in a test or development environment first. Always following best pratices when Upgrading ExpressionEngine
+WARN: **Important** Upgrading major version (example from v5.x to v6.x) typically includes major updates and breaking changes. Do not upgrade major version manually or via 1-click without testing in a test or development environment first. Always following best practices when Upgrading ExpressionEngine
 - Backup files
 - Backup Database
 - Update Add-ons (confirm they support new major version)
