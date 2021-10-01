@@ -269,7 +269,9 @@ When used in an RSS/Atom feed, this parameter allows ExpressionEngine to dynamic
 
 You can hard code the channel tag to show a specific channel entry. You may also specify multiple entries by separating them with the pipe character:
 
-    entry_id="13|42|147" Or use "not" to exclude entries::
+    entry_id="13|42|147"
+    
+Or use "not" to exclude entries::
 
     entry_id="not 45|534|807"
 
