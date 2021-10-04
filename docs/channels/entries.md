@@ -1366,12 +1366,6 @@ You may alternatively specify which category groups to not show:
 
 [TOC=5]
 
-##### `{active}`
-
-    {if active} This category is active {/if}
-
-You may use this conditional to test whether the category shown is the active category or not, based on the dynamic URI segment.
-
 ##### `{category_count}`
 
 The "count" out of the current categories being displayed. If five categories are being displayed, then for the fourth category the {category_count} variable would have a value of "4".
