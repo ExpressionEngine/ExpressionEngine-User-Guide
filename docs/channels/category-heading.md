@@ -52,7 +52,7 @@ The name (short name) of the channel that the categories are assigned to.
 
 NOTE: **Note:** Unless you are using the `relaxed_categories` parameter, you can only list one channel name, since each channel can have separate category groups.
 
-You must specify this parameter if you use the [Category URL Titles In Links](control-panel/settings/content-design.md) feature.
+You must specify this parameter if you use the [Category URL Titles In Links](control-panel/settings/urls.md#category-url-segment) feature.
 
 ## Variables
 
