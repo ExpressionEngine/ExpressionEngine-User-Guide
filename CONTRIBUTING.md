@@ -6,7 +6,7 @@ If you're an ExpressionEngine user, then you have something to add. There is alw
 
 ## Contributing to the Documentation
 
-All of the source files exist under `docs/` and is where you will add new documentation or modify existing documentation. We recommend working from feature branches and making pull requests to the `stability` branch of this repo.
+All of the source files exist under `docs/` and is where you will add new documentation or modify existing documentation. We recommend working from feature branches and making pull requests to the `#.dev` branch of this repo (See Branches below).
 
 Suggesting a change is easy and there is no way you'll mess up the public repo.
 
@@ -18,6 +18,19 @@ Push your changes to your fork of the repository, and when you're done, [send us
 
 We'll take a look at your pull request, make sure everything looks alright, ask for any needed changes, and then merge it into the main code.
 
+### Branches
+
+| Branch | Purpose |
+| ------ | ------- |
+| #.x | Currently released and published version.
+| #.dev | Updates for the next version of ExpressionEngine (current version is the default branch). Does not exist for previous versions. |
+** replace `#` with the current version of ExpressionEngine or version you wish to target.
+
+Recommended branch names are namespaced and unique, e.g.:
+
+- `feature/my-feature-slug`
+- `bug/bug-description-slug`
+ 
 ## Style Guide
 
 Please read the [style guide](https://docs.expressionengine.com/latest/style-guide.html) for samples and convention standards used in the ExpressionEngine user guide.

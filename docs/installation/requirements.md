@@ -108,7 +108,7 @@ ExpressionEngine can be ran locally on a number of local development environment
 
 NOTE: **Note:** When setting up your local environment, you must make sure it still meets the requirements listed above.
 
-- **[Valet](https://laravel.com/docs/7.x/valet)** - (macOS only) Valet is the ExpressionEngine's team recommended local development environment. Super fast and easy to use.
+- **[Valet](https://laravel.com/docs/8.x/valet)** - (macOS only) Valet is the ExpressionEngine's team recommended local development environment. Super fast and easy to use.
 
 - **[DDEV Local](https://www.ddev.com/ddev-local/)** - (macOS, Windows, Linux) DDEV Local makes working with Docker containers a breeze. Quickly setup and share environments that mirror your production.  
 

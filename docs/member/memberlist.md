@@ -18,12 +18,6 @@ Outputs a searchable list of members, including form filters to sort and limit t
 
 ## Parameters
 
-### `error_handling=`
-
-    error_handling="inline"
-
-Choose to display error messages inline (see [Error Messages](#errors)). By default, errors are displayed with the user message template.
-
 ### `return=`
 
     return="member/memberlist"
@@ -150,20 +144,9 @@ See [pagination](templates/pagination.md) for more details.
 ## Example
 
     {exp:member:memberlist
-        return="member/login/forgot-username"
-        error_handling="inline"
-        email_subject="Your Username"
-        email_template="member/email-forgot-username"
+        orderby="screen_name"
+        sort="asc"
         }
-
-        {if errors}
-            <fieldset class="error">
-                <legend>Errors</legend>
-                {errors}
-                    <p>{error}</p>
-                {/errors}
-            </fieldset>
-        {/if}
 
         {form_declaration}
 
@@ -241,4 +224,3 @@ See [pagination](templates/pagination.md) for more details.
 
         </form>
     {/exp:member:memberlist}
-

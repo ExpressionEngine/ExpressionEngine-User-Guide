@@ -57,7 +57,6 @@ For more complex calls, filters can be grouped by using the `filterGroup()`, `or
         ->orFilter('role_id', '2')
     ->endFilterGroup()
 
-
 ### Available filters
 
 | Operator   | Constraint                  | Example                                 |
@@ -175,6 +174,8 @@ To get around this problem, you can specify a relationship to be loaded with the
 These eager queries can also be nested to retrieve complex model hierarchies:
 
     ->get('Template')->with(array('LastAuthor' => 'PrimaryRole'));
+
+NOTE: **Note:** Always call `all()` when using eager loading to ensure getting full set of related models. 
 
 ### Filtering on Relationships
 

@@ -90,7 +90,7 @@ Extract a value from all elements of the collection using a keyname or callback.
 
 | Parameter   | Type             | Description                                                             |
 | ----------- | ---------------- | ----------------------------------------------------------------------- |
-| \$extractor | `String|Closure` | The name of the property or a closure that returns a value for an item. |
+| \$extractor | `String\|Closure` | The name of the property or a closure that returns a value for an item. |
 | Returns     | `Array`          | Array of values for the key                                             |
 
 ### `sortBy($column, $flags = SORT_REGULAR)`
@@ -119,7 +119,7 @@ It is up to you to ensure that the index keys are unique. If `$extractor` is a c
 
 | Parameter   | Type             | Description                                                             |
 | ----------- | ---------------- | ----------------------------------------------------------------------- |
-| \$extractor | `String|Closure` | The name of the property or a closure that returns a value for an item. |
+| \$extractor | `String\|Closure` | The name of the property or a closure that returns a value for an item. |
 | Returns     | `Array`          | Associative array of elements                                           |
 
 ### `getDictionary($key, $value)`
@@ -130,7 +130,7 @@ It is up to you to ensure that the index keys are unique.
 
 | Parameter   | Type             | Description                                                             |
 | ----------- | ---------------- | ----------------------------------------------------------------------- |
-| \$extractor | `String|Closure` | The name of the property or a closure that returns a value for an item. |
+| \$extractor | `String\|Closure` | The name of the property or a closure that returns a value for an item. |
 | Returns     | `Array`          | Associative key-value array                                             |
 
 ### `map($callback)`

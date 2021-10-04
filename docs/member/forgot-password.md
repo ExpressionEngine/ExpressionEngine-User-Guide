@@ -26,12 +26,6 @@ Output a forgotten password form that sends an email with instructions for reset
 
 ## Parameters
 
-### `error_handling=`
-
-    error_handling="inline"
-
-Choose to display error messages inline <!-- (see [Error Messages](#errors)) -->. By default, errors are displayed with the user message template.
-
 ### `password_reset_email_template=`
 
     password_reset_email_template="member/email-password-reset"
@@ -88,19 +82,10 @@ The error text.
 
     {exp:member:forgot_password_form
         return="member/forgot-password/sent"
-        error_handling="inline"
         password_reset_url="member/reset-password"
         password_reset_email_template="member/email-password-reset"
         }
 
-        {if errors}
-            <fieldset class="error">
-                <legend>Errors</legend>
-                {errors}
-                    <p>{error}</p>
-                {/errors}
-            </fieldset>
-        {/if}
         <p>
             <label>Your Email Address</label><br />
             <input type="email" name="email" value="" maxlength="120" size="40" />

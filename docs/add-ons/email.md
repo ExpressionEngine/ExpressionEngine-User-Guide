@@ -321,6 +321,12 @@ In the above example, the Template "friend" contains the Tell-a-Friend form.
 
 [TOC=3]
 
+### `allow_attachments=`
+     
+     allow_attachments="yes"
+
+This allows you to add a file input field to your form, make sure to give your file input field the name of `attachment`. Adding this parameter automatically gives the form the `enctype='multipart/form-data'` attribute.
+
 ### `allow_html=`
 
     allow_html="yes" allow_html="<p>,<a>" allow_html="no"

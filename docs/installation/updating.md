@@ -11,8 +11,14 @@
 
 [TOC]
 
+## When To Update
+It is recommended that you always update your installation of ExpressionEngine when a new version is released to ensure that you have all bug fixes, security updates, and new features.
+
+NOTE: **Note:** Shortly after a major version is released, the previous major version will become a legacy product. Once a product is designated a legacy product, it will only receive security updates and will automatically become a retired product 1 year later (meaning no updates of any kind). Reference the [Version Support](https://expressionengine.com/support/version-support) page of the ExpressionEngine website for more information.
+
+
 ## Upgrading Major Versions
-WARN: **Important** Upgrading major version (example from v5.x to v6.x) typically includes major updates and breaking changes. Do not upgrade major version manually or via 1-click without testing in a test or development environment first. Always following best pratices when Upgrading ExpressionEngine
+WARN: **Important** Upgrading major version (example from v5.x to v6.x) typically includes major updates and breaking changes. Do not upgrade major version manually or via 1-click without testing in a test or development environment first. Always following best practices when Upgrading ExpressionEngine
 - Backup files
 - Backup Database
 - Update Add-ons (confirm they support new major version)
@@ -34,6 +40,8 @@ When an update is available, you'll see the version number in the control panel 
 
 In the rare case an update fails, please read [Troubleshooting Automatic Updates](troubleshooting/general.md#troubleshooting-automatic-updates).
 
+NOTE: **Website Online Status:** In some versions of ExpressionEngine the current [Website Online](control-panel/settings/general.md#website-online) status is not available to the updater. In this instance an alert will be displayed post-update with the current [Website Online](control-panel/settings/general.md#website-online) status and the option to turn the system on or off. Please make sure to review this alert and your [Website Online](control-panel/settings/general.md#website-online) status to ensure your website is working as expected.
+![system status](/_images/ee6-offline.png)
 
 ## Updating Via EECLI
 
