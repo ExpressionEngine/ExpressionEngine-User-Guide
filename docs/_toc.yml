@@ -206,6 +206,8 @@
       href: add-ons/pages.md
     - name: Query
       href: add-ons/query.md
+    - name: Request
+      href: add-ons/request.md
     - name: RSS
       href: add-ons/rss.md
     - name: RSS Parser
