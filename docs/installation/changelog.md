@@ -7,10 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
-## Version 6.1.0 (Release:xxxx, x 2021)
-Add docs?
-https://packettide.atlassian.net/browse/EECORE-379
-https://github.com/ExpressionEngine/ExpressionEngine/issues/171
+## Version 6.1.0 (Release: October, 6 2021)
 
 NOTE: **Important:** This version includes important security updates.
 
@@ -20,7 +17,7 @@ NOTE: **Important:** This version includes important security updates.
   - Resolved [#536](https://github.com/ExpressionEngine/ExpressionEngine/issues/536) where Control Panel users were not notified when a "resend activation email" failed.
   - Resolved issues in the Control Panel when use the Safari web browser [#702](https://github.com/ExpressionEngine/ExpressionEngine/issues/702) [#851](https://github.com/ExpressionEngine/ExpressionEngine/issues/851) [#965](https://github.com/ExpressionEngine/ExpressionEngine/issues/965)
   - Resolved [#724](https://github.com/ExpressionEngine/ExpressionEngine/issues/724) where .`index.html` files where listed in folders that only allowed images.
-  - Resolved [#746](https://github.com/ExpressionEngine/ExpressionEngine/issues/746) where `{options:my_field_name}` not available in Channel Form.
+  - Resolved [#746](https://github.com/ExpressionEngine/ExpressionEngine/issues/746), [#837](https://github.com/ExpressionEngine/ExpressionEngine/issues/837) where option fieldtypes were not working correctly in Channel Form using PHP8.
   - Resolved [#785](https://github.com/ExpressionEngine/ExpressionEngine/issues/785) where users could inadvertently leave an entry publish page without warning while there were unsaved changes.
   - Resolved [#951](https://github.com/ExpressionEngine/ExpressionEngine/issues/951) where users could see channels they didn't have access to.
   - Resolved [#957](https://github.com/ExpressionEngine/ExpressionEngine/issues/957) where RTE configs were not properly saving.
@@ -30,6 +27,15 @@ NOTE: **Important:** This version includes important security updates.
   - Resolved [#1242](https://github.com/ExpressionEngine/ExpressionEngine/issues/1242) where HTML entites in RTE settings were parsed incorrectly. 
   - Resolved [#1264](https://github.com/ExpressionEngine/ExpressionEngine/issues/1264) where the `{comment}` variable within `{exp:comment:entries}` tag did not work with variable modifiers
   - Resolved [#1278](https://github.com/ExpressionEngine/ExpressionEngine/issues/1278) where relationship fields could throw errors after upgrading versions.
+  - Removed extra quote in breadcrumbs [#1015](https://github.com/ExpressionEngine/ExpressionEngine/issues/1015)
+  - Resolved [#1017](https://github.com/ExpressionEngine/ExpressionEngine/issues/1017) where variable modifiers were not applied to`{count}` variable inside Grid field
+  - Resolved [#996](https://github.com/ExpressionEngine/ExpressionEngine/issues/996) where resizing textareas beyond the parent element was breaking other children of that parent.
+  - Resolved [#1045](https://github.com/ExpressionEngine/ExpressionEngine/issues/1045) where Live Preview requests could be cached.
+  - Resolved [#1016](https://github.com/ExpressionEngine/ExpressionEngine/issues/1016) where turning on cookie consents could throw javascript warning.
+  - Resolved [#1154](https://github.com/ExpressionEngine/ExpressionEngine/issues/1154) where some links in Jump Menu were poiting to wrong pages
+  - Resolved [#1130](https://github.com/ExpressionEngine/ExpressionEngine/issues/1130) where Log class was throwing error in PHP8 during system update
+  - Resolved [#682](https://github.com/ExpressionEngine/ExpressionEngine/issues/682) where the description for "Save Template Revisions" setting was not accurate
+  - Resolved [#1102](https://github.com/ExpressionEngine/ExpressionEngine/issues/682) where entries from other MSM sites were shown on dashboard
  
   - Resolved bug where live preview failed when cross-domain requests were being made.
   - Resolved a bug where the Communicate page would not load on sites with extremely large numbers of members.
@@ -39,12 +45,14 @@ NOTE: **Important:** This version includes important security updates.
   - Many UI improvements across the Control Panel
   - Introduced [ExpressionEngine Pro](/pro/overview.md)!
   - Major updates to [CLI](/cli/into.md)
-  - Brought back more detail to Breadcrumbs [#573](https://github.com/ExpressionEngine/ExpressionEngine/issues/573)
+  - Brought back more details to breadcrumbs [#573](https://github.com/ExpressionEngine/ExpressionEngine/issues/573), [#1159](https://github.com/ExpressionEngine/ExpressionEngine/issues/1159)
   - Added Category Group ID to the Category group listing [#698](https://github.com/ExpressionEngine/ExpressionEngine/issues/698)
   - Resolved [#927](https://github.com/ExpressionEngine/ExpressionEngine/issues/927) to add clarification.
+  - Added number of primary role members on roles listing page [#569](https://github.com/ExpressionEngine/ExpressionEngine/issues/569)
   - Added 'preserve_words` parameter for `:limit` modifier. [#171](https://github.com/ExpressionEngine/ExpressionEngine/issues/171)
   - Users can now use CMD/Ctrl + S to save entries in the Control Panel
-  - Improved functionality of RTE [#669](https://github.com/ExpressionEngine/ExpressionEngine/issues/669)
+  - Improved functionality of RTE [#669](https://github.com/ExpressionEngine/ExpressionEngine/issues/669), [#1006](https://github.com/ExpressionEngine/ExpressionEngine/issues/1006)
+  - Added "Insert HTML" button for RTE fields using CKEditor.
   - Added Redactor as an editor type in the RTE.
   - Major updates to cookies and GDPR functionality.  
     - Adding logging of all consents, including guests [#271](https://github.com/ExpressionEngine/ExpressionEngine/issues/271)
@@ -52,24 +60,26 @@ NOTE: **Important:** This version includes important security updates.
     - Added ability to change cookies lifetime value
     - Converted all front-end cookies to be session cookies. [#955](https://github.com/ExpressionEngine/ExpressionEngine/issues/955)
     - Added consent version to audit log.
+    - Show alert in CP if consent is required but not signed
     - Consents are now invalidated when new cookies are added.
     - Added ability to change cookies lifetime value 
   - Added `{if no_results}` to Grid Field for use when using the search to limit rows. [#894](https://github.com/ExpressionEngine/ExpressionEngine/issues/894)
   - Added `form_class` parameter to the member registration form. [#716](https://github.com/ExpressionEngine/ExpressionEngine/issues/716) [Docs Link](https://docs.expressionengine.com/latest/member/registration.html#parameters)
+   - Made status column in entry list respect the status text case [#246](https://github.com/ExpressionEngine/ExpressionEngine/issues/246)
   - Added ability to disable Live Preview per channel. [#1012](https://github.com/ExpressionEngine/ExpressionEngine/issues/1012) [Docs Link](https://docs.expressionengine.com/latest/control-panel/channels.html#settings-tab)
-  - Added support for image modifiers when using category images [#942](https://github.com/ExpressionEngine/ExpressionEngine/issues/716) DOCS? https://packettide.atlassian.net/browse/EECORE-1072
+  - Added support for image modifiers when using category images [#942](https://github.com/ExpressionEngine/ExpressionEngine/issues/716)
   - Added ability to disable Google FLoC [#1027](https://github.com/ExpressionEngine/ExpressionEngine/issues/1027) [Docs Link](https://docs.expressionengine.com/latest/add-ons/http-header.html)
   - Added ability to upload m4a files by default [#699](https://github.com/ExpressionEngine/ExpressionEngine/issues/699)
-  - Added new core add-on: [HTTP Methods](https://docs.expressionengine.com/latest/add-ons/https-methods.html) ADD THIS TO DOCS MENUS!
+  - Added new core add-on: [Request](https://docs.expressionengine.com/latest/add-ons/request.html) [#413](https://github.com/ExpressionEngine/ExpressionEngine/issues/694139)
   - Added option to use Google reCAPTCHA in addition to previous captcha option. [#822](https://github.com/ExpressionEngine/ExpressionEngine/issues/822) [Docs Link](https://docs.expressionengine.com/latest/control-panel/settings/captchas.html)
   - Added noindex,nofollow to template used by `?URL` redirect warning page.
-  - Added tel scheme option to URL fieldtype. [#1097](https://github.com/ExpressionEngine/ExpressionEngine/issues/1097)
-  - Added ability to review link to an image in RTE [#1082](https://github.com/ExpressionEngine/ExpressionEngine/issues/1082)
+  - Added tel scheme option to URL fieldtype. [#96](https://github.com/ExpressionEngine/ExpressionEngine/issues/96), [#1097](https://github.com/ExpressionEngine/ExpressionEngine/issues/1097)
+  - Enabled adding link to an image in RTE [#1082](https://github.com/ExpressionEngine/ExpressionEngine/issues/1082)
+  - Improved fieldtype loading in Entry Manager [#1129](https://github.com/ExpressionEngine/ExpressionEngine/issues/1129)
 
-    
+
 
 - **Developers** 💻
-  - Added Member Role constants https://packettide.atlassian.net/browse/EECORE-379
   - Added ability to define rows and columns in a textarea when using a shared view. [#988](https://github.com/ExpressionEngine/ExpressionEngine/issues/988) [Docs Link](https://docs.expressionengine.com/latest/development/shared-form-view.html)
   - Added new extension hooks to Fluid Fields [#58](https://github.com/ExpressionEngine/ExpressionEngine/issues/58) [Docs Link](https://docs.expressionengine.com/latest/development/extension-hooks/model/fluid-field.html)
   - Updated URLs in core files that led to 404s
