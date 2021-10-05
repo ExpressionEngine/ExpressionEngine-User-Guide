@@ -122,7 +122,7 @@ NOTE: **Note:** The second value must be a valid regular expression. All [PHP PC
 These operators will work with both numbers and strings, but with numbers it's important to remember that they will be turned into an unambiguous representation. This means that redundant leading and trailing zeros are removed. Floating point numbers &lt; 1 will have a leading zero added if it is not present:
 
     .7 becomes 0.7
-    1. becomes 7
+    1. becomes 1
     .20 becomes 0.2
     0002 becomes 2
     002.5000 becomes 2.5
@@ -145,7 +145,7 @@ You can use the following operators to compare true / false (boolean) values. In
 | -------- | ---- | ------------------------------------------- |
 | !        | Not  | TRUE if the following value is FALSE.       |
 | &&       | And  | TRUE if both values are TRUE.               |
-|          |      |                                             | Or | TRUE if either value is TRUE. |
+| \|\|     | Or   | TRUE if either value is TRUE.               |
 | AND      | And  | TRUE if both values are TRUE.               |
 | XOR      | Xor  | TRUE if either value is TRUE, but not both. |
 | OR       | Or   | TRUE if either value is TRUE.               |

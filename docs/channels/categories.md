@@ -74,7 +74,7 @@ Or use "not" to exclude categories
 
 The name (short name) of the channel that the categories are assigned to. This variable is **required** unless you only have a single channel. Multiple channels may also be specified.
 
-You must specify this parameter if you use the [category name in URL](control-panel/settings/content-design.md) feature.
+You must specify this parameter if you use the [category name in URL](control-panel/settings/urls.md#category-url-segment) feature.
 
 ### `class=`
 

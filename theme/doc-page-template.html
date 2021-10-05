@@ -101,7 +101,7 @@
 					<br>
 					<span class="copyright"><a href="https://packettide.com/">©2002–{{current_year}} Packet Tide,LLC.</a></span>
 					</span>
-					<a target="_blank" class="docs-contribute-to-page-button" href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/blob/stability/docs/{{page_path}}">Edit this page</a>
+					<a target="_blank" class="docs-contribute-to-page-button" href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/blob/6.dev/docs/{{page_path}}">Edit this page</a>
 				</p>
 			</div>
 		</section>
@@ -112,7 +112,10 @@
 				apiKey: 'ba20cc61ab2d8a0148041c98eeddd9c6',
 				indexName: 'expressionengine',
 				inputSelector: '#docsearch-input',
-				algoliaOptions: { 'facetFilters': ["version:latest"] },
+				algoliaOptions: { 
+					'facetFilters': ["version:latest"],
+					'hitsPerPage': 50 
+					},
 				debug: false
 			});
 		</script>

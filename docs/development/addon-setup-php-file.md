@@ -72,7 +72,7 @@ This is the version number of the add-on. We recommend using [Semantic Versionin
 
 This is the [PHP namespace](http://php.net/namespace) for your add-on. This is a **required** key.
 
-This key associates your add-on directory with a namespace. ExpressionEngine will will look inside your add-on directory any time it encounters a class name that begins with this namespace.
+This key associates your add-on directory with a namespace. ExpressionEngine will look inside your add-on directory any time it encounters a class name that begins with this namespace.
 
 ### `settings_exist`
 
@@ -196,6 +196,26 @@ If your add-on sets any custom cookies, you must register the name of the cookie
 | cookies.functionality | Enhances functionality, such as remembering a user's preferences or settings.                                                                                      |
 | cookies.performance   | Analytics, statistics, etc. Data should be aggregated and anonymous.                                                                                               |
 | cookies.targeting     | Typically the only cookie type that can contain personally identifiable information. Marketing cookies that help establish profiles for ad delivery, for instance. |
+
+### `cookie_settings`
+
+    'cookie_settings' => [
+        'forum_theme' => [
+            'description' => 'lang:forum_theme_desc'
+            'lifetime_changeable' => false,
+        ]
+    ]
+
+NOTE: **Note:** Cookie settings are only applicable for users running ExpressionEngine Pro.
+
+If your add-on sets any custom cookies, you can provide default settings for each those.
+
+In the above example, `forum_theme` is the cookie name, `description` sets default description for cookie to string referenced by `forum_theme_desc` key in add-on's language file and `lifetime_changeable` indicates that cookie's liefime cannot be changed by site administrator.
+
+| Type                  | Purpose                |
+| --------------------- | ---------------------- |
+| description           | Default cookie description. String or reference to key in language file (prefixed with `lang:`)                                |
+| lifetime_changeable   | Boolean to indicate whether cookie lifetime can be changes by site admin                                   |
 
 ### `aliases`
 

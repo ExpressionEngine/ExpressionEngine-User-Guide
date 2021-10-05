@@ -269,7 +269,9 @@ When used in an RSS/Atom feed, this parameter allows ExpressionEngine to dynamic
 
 You can hard code the channel tag to show a specific channel entry. You may also specify multiple entries by separating them with the pipe character:
 
-    entry_id="13|42|147" Or use "not" to exclude entries::
+    entry_id="13|42|147"
+    
+Or use "not" to exclude entries::
 
     entry_id="not 45|534|807"
 
@@ -1363,12 +1365,6 @@ You may alternatively specify which category groups to not show:
 #### Categories Tag Pair Variables
 
 [TOC=5]
-
-##### `{active}`
-
-    {if active} This category is active {/if}
-
-You may use this conditional to test whether the category shown is the active category or not, based on the dynamic URI segment.
 
 ##### `{category_count}`
 

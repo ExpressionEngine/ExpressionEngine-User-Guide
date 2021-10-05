@@ -25,7 +25,7 @@ NOTE: **Note:** In order to allow content authors full access to create and modi
 
 Displaying Page content is as easy as displaying normal Channel entries. The primary difference is that when a Page URI is requested, the URL segments do not correlate to a template group and template, as that is determined by the template that the particular "page" entry was assigned to use on the [Pages tab](control-panel/create.md) of the Publish form.
 
-Additionally, the page will automatically be treated as a single entry page for that page entry, so other tags on the template will need to use the dynamic="no" parameter (if available) to display other content.
+Additionally, the page will automatically be treated as a single entry page for that page entry, so other tags on the template will need to use the `dynamic="no"` parameter (if available) to display other content.
 
 In the Template chosen on the [Pages tab](control-panel/create.md) of the Page entry, use a normal [Channel Entries tag](channels/entries.md) with any parameters and variables that you desire to display the entry, e.g.:
 
@@ -54,9 +54,9 @@ The Pages Module adds the following variables for use in the {exp:channel:entrie
 
 ## Multiple Site Manager
 
-If you are using the [Multiple Site Manager](msm/overview.md), page data are only available for the current site. If you wish to show the {page_uri} or {page_url} for an entry from a different site, you will need to use the {exp:pages:load_site_pages} tag on the relevant template. This tag has one required parameter: site. For example, if your weblog tag is pulling in pages from sites default_site and corporate_site, your tag should look like:
+If you are using the [Multiple Site Manager](msm/overview.md), page data are only available for the current site. If you wish to show the `{page_uri}` or `{page_url}` for an entry from a different site, you will need to use the `{exp:pages:load_site_pages}` tag on the relevant template. This tag has one required parameter: `site`. For example, if your channel tag is pulling in pages from sites `default_site` and `corporate_site`, your tag should look like:
 
-`ee {exp:pages:load_site_pages site="default_site|corporate_site"}`
+    {exp:pages:load_site_pages site="default_site|corporate_site"}
 
 ## Control Panel
 

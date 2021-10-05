@@ -25,7 +25,7 @@ We take security issues very seriously, and encourage responsible reporting with
 
 All software has vulnerabilities, but when we work together with developers and researchers, we can all help make the Internet a safer and better place. We love to acknowledge researchers who make valid security reports and work with us, and while we do not have a bounty program, sometimes will donate software or swag for being classy.
 
-If you have a security issue in a current or legacy version of ExpressionEngine to report, you can let us know at [team@ellislab.com](mailto:team@ellislab.com?subject=Security%20Vulnerability) or if you prefer at [HackerOne](https://hackerone.com/expressionengine).
+If you have a security issue in a current or legacy version of ExpressionEngine to report, you can let us know at [support@expressionengine.com](mailto:support@expressionengine.com?subject=Security%20Vulnerability) or if you prefer at [HackerOne](https://hackerone.com/expressionengine).
 
 ### What are Security Issues?
 

@@ -27,7 +27,7 @@ The control panel contains a developer log, which is a log for ExpressionEngine 
 
 **Control Panel Location:** `Developer --> Logs --> Developer`
 
-For example, EllisLab uses the developer log to warn developers if a core function that is planned to be deprecated is being used by any third-party add-ons.
+For example, ExpressionEngine uses the developer log to warn developers if a core function that is planned to be deprecated is being used by any third-party add-ons.
 
 ### `developer($data[, $update = FALSE[, $expires = 0]])`
 
@@ -43,3 +43,21 @@ To use the developer log to log your own events, notices or warnings that need t
     ee()->logger->developer('Log message.');
 
 NOTE: **Note:** Be conscious of how often the developer() method is used so as not to clutter the developer log and run unnecessary queries.
+
+### `log_action($action = '')`
+
+Write log message to the CP Log.
+
+| Parameter | Type      | Description                                              |
+| --------- | --------- | -------------------------------------------------------- |
+| \$data    | `String`  | Message to send to the CP log                            |
+
+### `deprecate_template_tag($message, $regex, $replacement)`
+
+Replace deprecated template tag with the new one in site's template and write message to the Developer Log.
+
+| Parameter        | Type      | Description                                              |
+| ---------------- | --------- | -------------------------------------------------------- |
+| \$message        | `String`  | Message to send to the Developer log                            |
+| \$regex          | `String`  | Regular expression that will match the old (deprecated) template tagthat will be run through preg_replace                            |
+| \$replacement    | `String`  | Replacement with the new template tag to pass to preg_replace                            |

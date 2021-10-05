@@ -167,6 +167,20 @@ This is an optional message string which can be used if you send HTML formatted 
 
 NOTE: **Note:** If you are using data from a channel entry and not sending an HTML email, then you should use the `entities_to_ascii()` method (text helper) to convert any HTML entities back into ASCII characters before sending the message to the class.
 
+#### `attach($filename, $disposition = '', $newname = NULL, $mime = '')`
+
+| Parameter     | Type      | Description                                                                                                                                                                    |
+| ------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| \$filename    | `String`  | The full local path to the file to attach                                                                                                                                      |
+| \$disposition | `String`  | Optionally set the HTTP header [Content-Disposition](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) for the attachment (default: `attachment`) |
+| \$newname     | `String`  | Optionally set a different name for the attachment  (default same as $filename)                                                                                                |
+| \$mime        | `String`  | Optionally set the HTTP header [Content-Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) for the attachment                                       |
+| Returns       | `Object`  | Email class objects                                                                                                                                                            |
+
+Adds an attachment to a message:
+
+    ee()->email->attach($filename);
+
 #### `send($auto_clear = TRUE)`
 
 | Parameter    | Type      | Description                                                                            |
