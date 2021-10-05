@@ -36,7 +36,6 @@ NOTE: **Important:** This version includes important security updates.
   - Resolved [#1130](https://github.com/ExpressionEngine/ExpressionEngine/issues/1130) where Log class was throwing error in PHP8 during system update
   - Resolved [#682](https://github.com/ExpressionEngine/ExpressionEngine/issues/682) where the description for "Save Template Revisions" setting was not accurate
   - Resolved [#1102](https://github.com/ExpressionEngine/ExpressionEngine/issues/682) where entries from other MSM sites were shown on dashboard
- 
   - Resolved bug where live preview failed when cross-domain requests were being made.
   - Resolved a bug where the Communicate page would not load on sites with extremely large numbers of members.
 
@@ -67,6 +66,7 @@ NOTE: **Important:** This version includes important security updates.
   - Added `form_class` parameter to the member registration form. [#716](https://github.com/ExpressionEngine/ExpressionEngine/issues/716) [Docs Link](https://docs.expressionengine.com/latest/member/registration.html#parameters)
    - Made status column in entry list respect the status text case [#246](https://github.com/ExpressionEngine/ExpressionEngine/issues/246)
   - Added ability to disable Live Preview per channel. [#1012](https://github.com/ExpressionEngine/ExpressionEngine/issues/1012) [Docs Link](https://docs.expressionengine.com/latest/control-panel/channels.html#settings-tab)
+  - Added `allowed_preview_domains` configuration override.
   - Added support for image modifiers when using category images [#942](https://github.com/ExpressionEngine/ExpressionEngine/issues/716)
   - Added ability to disable Google FLoC [#1027](https://github.com/ExpressionEngine/ExpressionEngine/issues/1027) [Docs Link](https://docs.expressionengine.com/latest/add-ons/http-header.html)
   - Added ability to upload m4a files by default [#699](https://github.com/ExpressionEngine/ExpressionEngine/issues/699)
