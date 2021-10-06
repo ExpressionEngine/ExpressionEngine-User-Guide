@@ -13,7 +13,7 @@
 
 ## What is a ExpressionEngine Pro?
 
-ExpressionEngine Pro brings the control panel forward to the front-end of your site. A trial of ExpressionEngine Pro is available with each ExpressionEngine site and may be used on any local testing sites; however, a license must be purchased for ExpressionEngine Pro to work on production or remote staging sites.
+ExpressionEngine Pro brings the Control Panel forward to the front-end of your site. A trial of ExpressionEngine Pro is available with each ExpressionEngine site and may be used on any local testing sites; however, a license must be purchased for ExpressionEngine Pro to work on production or remote staging sites.
 
 ExpressionEngine Pro license also includes Low Search and Low Variables. Each of these can be downloaded separately and will be automatically installed with Pro if available in your `user/addons` folder. If you do not wish to use Low Search and/or Low Variables, just do not include these in your `user/addons` folder and they will not be installed.
 
@@ -21,27 +21,25 @@ ExpressionEngine Pro license also includes Low Search and Low Variables. Each of
 
 ### Control Panel Branding
 
-ExpressionEngine Pro allows uploading custom logo to be used on Control Panel login page as well as favicon for Control Panel pages.
+ExpressionEngine Pro allows uploading a custom logo to be used on Control Panel login page as well as favicon for Control Panel pages.
 
 ### Customizable Dashboard
 
-With ExpressionEngine Pro installed, Control Panel homepage can be completely customizable. Pro is being shipped with a set of dashboard widgets that can be shown, hidden or reordered. Each member can customize their own dashboard layout.
-
-Third-party add-ons can provide their own widgets using PHP or ExpressionEngine template tags.
+With ExpressionEngine Pro installed, the Control Panel homepage can be completely customized with native and custom dashboard widgets. These widgets can be shown, hidden or reordered by each member, creating their own dashboard layout.
 
 ### The Dock
 
-Dock is the floating bar that is being displayed on front-end page that provides quick access to the Control Panel and to EE Pro's front-end facing features.
+The dock is a floating bar that is being displayed on front-end pages that provide quick access to the Control Panel and to ExpressionEngine Pro's front-end facing features.
 
 ### Front-end Editing
 
-For admin members with appropriate level of access ExpressionEngine Pro adds "quick edit" links on the site's front-end that allow editing contents of each entry field individually, directly on front-end without going to the control panel.
+For admin members with appropriate level of access ExpressionEngine Pro adds "front edit" links on the site's front-end that allow editing the contents of each entry field individually. This is done directly on front-end without going to the Control Panel.
 
-Clicking the link opens a popup with the field that can be modified and saved; as well it presents the link to edit full entry with live preview showing the current page you are on.
+Clicking the link opens a popup with the field that can be modified and saved. Along with editing, users can also use front edit popup to access the full entry for editing with live preview showing the current page you are on.
 
 ### Prolets
 
-Prolets are add-on components that reveal some of add-on's functionality for the Control Panel to the front-end, making possible to edit data directly on page where it belongs.
+Prolets are add-on components that bring Control Panel type functionality to the front-end, making possible to edit or view data directly on page where it belongs.
 
 ### Cookie and Consent Management
 

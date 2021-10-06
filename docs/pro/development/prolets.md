@@ -11,13 +11,13 @@
 
 [TOC]
 
-Prolets are add-on components that reveal some of add-on's functionality for the CP to the frontend, making possible to edit data directly on page where it belongs.
+Prolets are add-on components that reveal some of add-on's functionality for the Control Panel to the front-end, making possible to edit data directly on page where it belongs.
 
-## Prolet file structure
+## Prolet File Structure
 
-Prolet's file needs to be placed in main add-on's directory together with other main components (modules, extensions, fieldtypes). The file name should start with `pro.` followed by prolet short name and ending with `.php` extension. So if you have `sample` add-on and you want to create `sample_prolet` prolet for it, the file will be `user/addons/sample/pro.sample_prolet.php`.
+A Prolet's file needs to be placed in main add-on's directory, together with other main components (modules, extensions, fieldtypes). The file name should start with `pro.` followed by prolet short name and ending with `.php` extension. So if you have `sample` add-on and you want to create `sample_prolet` prolet for it, the file will be `user/addons/sample/pro.sample_prolet.php`.
 
-Inside prolet file, you are required to define prolet class that should consist of prolet name with first letter capitalized followed by `_pro` postfix. So for the example above, the class name will be `Sample_prolet_pro`.
+Inside a prolet file, you are required to define the prolet class. The class name should consist of prolet name with first letter capitalized followed by `_pro` postfix. So for the example above, the class name will be `Sample_prolet_pro`.
 
 All prolets are required to implement `ExpressionEngine\Addons\Pro\Service\Prolet\ProletInterface`.
 The easiest way to achieve that is to make prolet extend abstract class `ExpressionEngine\Addons\Pro\Service\Prolet\AbstractProlet`.
@@ -36,10 +36,10 @@ The sample prolet would then look something like
         }
     }
 
-## Properties and methods
+## Properties and Methods
 
 ### Icon
-On each page load, prolets appear on frontend as Dock buttons. If not specified different, `icon.svg` from add-on packagefolder is being used as button. If you want to specify different icon name (which still need to be name of file in add-on package folder) you can do that using `protected $icon` property or `public function getIcon()`.
+On each page load, prolets appear on the front-end as Dock buttons. If not specified different, `icon.svg` from the add-on package folder is used as the Dock button. If you want to specify a different icon to use from the add-on's folder, you can do that using `protected $icon` property or `public function getIcon()`.
 
     protected $icon = 'sample_prolet.png';
 
@@ -51,7 +51,7 @@ or
     }
 
 ### Name
-Each prolet is required to have a name, which is used as title for the button and also for prolet popup window. It can be defined using `protected $name` property or `public function getName()`. Using function is recommended because you are able to use lang key in it, making the name translatable.
+Each prolet is required to have a name, which is used as title for the Dock button and also for prolet's popup window. It can be defined using `protected $name` property or `public function getName()`. Using function is recommended because you are able to use lang key in it, making the name translatable.
 
     protected $name = 'Sample Prolet';
 
@@ -62,9 +62,9 @@ or
         return lang('sample_prolet');
     }
 
-### Popup window size
+### Popup Window Size
 
-If the prolet is opening popup window (which is what currently all prolets are doing) you are able to specify the window size. Available options are `footer`, `large` and `small` (default) and you can do that using `protected $size` property or `public function getSize()`.
+If the prolet is opening a popup window (which is what currently all prolets are doing) you are able to specify the window size. Available options are `footer`, `large` and `small` (default) and you can do that using `protected $size` property or `public function getSize()`.
 
     protected $size = 'footer';
 
@@ -75,9 +75,9 @@ or
         return 'large';
     }
 
-### Popup window buttons
+### Popup Window Buttons
 
-By default each prolet popup window is generated with "Save" button in the footer which sends "save" JavaScript event to the prolet. You can change that to display different buttons, or no buttons at all, using `protected $buttons` property or `public function getButtons()`.
+By default each prolet popup window is generated with a "Save" button in the footer which sends "save" JavaScript event to the prolet. You can change that to display different buttons, or no buttons at all, using `protected $buttons` property or `public function getButtons()`.
 
     protected $buttons = []; // No buttons will be shown
 
@@ -91,9 +91,9 @@ or
         ];
     }
 
-### Controller action
+### Controller Action
 
-Prolets are required to contain some method which will generate the data to be output. By default this is assumed to be `index()` method, however you can specify different function name using `protected $action` property or `public function getAction()`.
+Prolets are required to contain some method which will generate the data to be outputted. By default this is assumed to be `index()` method, however you can specify different function name using `protected $action` property or `public function getAction()`.
 
     protected $action = 'do_something_cool';
 
@@ -106,7 +106,7 @@ or
 
 Prolet action method (`public function index()`; or function with name returned by `getAction()` as explained above) can return array of data or string.
 
-If the data returned are of *Array* type, they are being passed to ExpressionEngine Pro's shared form view, which is similar to ExpressionEngine's [Shared Form View](development/shared-form-view.md) but you are only required to have `sections` key in the returned data array. The result will be form with submission endpoint being set to same prolet controller action.
+If the data returned is of *Array* type, it is being passed to ExpressionEngine Pro's shared form view, which is similar to ExpressionEngine's [Shared Form View](development/shared-form-view.md), however you are only required to have `sections` key in the returned data array. The result will be a form with submission endpoint being set to same prolet controller action.
 
     public function index()
     {
@@ -131,19 +131,19 @@ If the data returned are of *Array* type, they are being passed to ExpressionEng
         return $vars;
     }
 
-If the data returned are of *String* type then this string is being wrapped in some required HTML and returned into prolet popup window. In you need a form to be created, you would need to handle that additionally (and you can use one of your MCP actions as endpoint)
+If the data returned is of *String* type then this string is being wrapped in some required HTML and returned into prolet popup window. In you need a form to be created, you would need to handle that (additionally you can use one of your MCP actions as endpoint)
 
 Prolets are expecting form submissions to return JSON upon successful response, which will close their windows.
 
-## Prolet types
+## Prolet Types
 
 Essentially there are two types of prolets. 
 
 Non-initializable prolets are displayed and allow data manipulation on every page of website where Dock is enabled. 
 
-Initializable prolets work the same way, but they are only displayed on pages where they have been initialized, which usually would happen by placing certain template tag.
+Initializable prolets work the same way, but they are only displayed on pages where they have been initialized, which usually would happen by placing certain template tags in the template.
 
-### Initializable prolets
+### Initializable Prolets
 Initializable prolets are required to implement `ExpressionEngine\Addons\Pro\Service\Prolet\InitializableProletInterface`.
 
     use ExpressionEngine\Addons\Pro\Service\Prolet;
@@ -158,14 +158,14 @@ Initializable prolets are required to implement `ExpressionEngine\Addons\Pro\Ser
         }
     }
 
-In order for the prolet to be initialized, module tag from your add-on needs to be called on page. In the programmatic code for that tag, you would need to place a call to `ee('pro:Prolet')->initialize()`
+In order for the prolet to be initialized, the module tag from your add-on needs to be called on page. In the programmatic code for that tag, you would need to place a call to `ee('pro:Prolet')->initialize()`
 
     if (defined('IS_PRO') && IS_PRO) {
         ee('pro:Prolet')->initialize('sample_prolet', ['entry_id' => $entry_id]);
     }
 
-You would need to make sure to wrap the code in `if (defined('IS_PRO') && IS_PRO) {` conditional, so it would be run only on EE versions that support Pro and have it installed.
+You would need to make sure to wrap the code in `if (defined('IS_PRO') && IS_PRO) {` conditional, so it would be run only on ExpressionEngine versions that support Pro and have it installed.
 
 Two parameters need to be passed to `ee('pro:Prolet')->initialize()` function. 
-First is prolet name, in our example `sample_prolet`
-Second is array of data that is being passed to prolet via GET request (in our example we pass `entry_id`)
+First is the prolet name, in our example `sample_prolet`.
+Second is an array of data that is being passed to prolet via GET request (in our example we pass `entry_id`).

@@ -54,7 +54,7 @@ Example Usage:
 
 ### `enable_dock`
 
-Allows turning off front-end facing features of EE Pro completely. When set to `n`, Dock will not be shown and front-end field editing will not be enabled.
+Allows turning off front-end facing features of ExpressionEngine Pro completely. When set to `n`, Dock will not be shown and front-end field editing will not be enabled.
 
 | Value | Behavior                                       |
 | ----- | ---------------------------------------------- |
@@ -94,7 +94,7 @@ Example Usage:
     
 ### `favicon`
 
-URL to file used as favicon in Control Panel.
+URL to file used as favicon in Control Panel. 
 
 Example Usage:
 
@@ -108,7 +108,3 @@ Example Usage:
 
     $config['login_logo'] = '/url/to/file.jpg';
 
-
-## Dashboard management
-
-Each member can have their own set of widgets saved for Control Panel homepage. To manage what is being shown, click the gear icon in top right corner of homepage. You can hide or unhide the widgets and change their order. The layout is being saved on per-member basis.

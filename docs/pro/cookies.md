@@ -9,7 +9,7 @@
 
 # Cookie and Consent Management
 
-ExpressionEngine Pro provides additional tools to improve cookies management.
+ExpressionEngine Pro provides additional tools to improve management of cookies.
 
 ## Displaying the list of cookies
 

@@ -246,7 +246,26 @@
       href: add-ons/statistics.md
     - name: Emoticon (Deprecated)
       href: add-ons/emoticon.md
-
+- name: ExpressionEngine Pro
+  items:
+    - name: Pro Overview
+      href: pro/overview.md
+    - name: Configuration
+      href: pro/configuration.md
+    - name: Dashboard Management
+      href: pro/dashboard_management.md
+    - name: Front-end Content Management
+      href: pro/frontend.md
+    - name: Cookies management
+      href: pro/cookies.md
+    - name: Development
+      items:
+        - name: Dashboard Widgets
+          href: pro/development/widgets.md
+        - name: Fieldtypes
+          href: pro/development/fieldtypes.md
+        - name: Prolets
+          href: pro/development/prolets.md
 - name: Command Line Interface (CLI)
   items:
     - name: Introduction
@@ -858,23 +877,3 @@
 - name: Docs Style Guide
   href: style-guide.md
 
-- name: ExpressionEngine Pro
-  items:
-    - name: Pro Overview
-      href: pro/overview.md
-    - name: Configuration
-      href: pro/configuration.md
-    - name: Front-end content management
-      href: pro/frontend.md
-    - name: Cookies management
-      href: pro/cookies.md
-    - name: Development
-      items:
-        - name: Overview
-          href: pro/development/overview.md
-        - name: Dashboard Widgets
-          href: pro/development/widgets.md
-        - name: Prolets
-          href: pro/development/prolets.md
-        - name: Fieldtypes
-          href: pro/development/fieldtypes.md
