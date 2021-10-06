@@ -7,33 +7,28 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Front-end content management
+# Front-end Content Management
 
-For admin members with appropriate level of access ExpressionEngine Pro adds "quick edit" links on the site's frontend that allow editing contents of each entry field individually, directly on front-end without going to the control panel.
+For admin members with appropriate level of access ExpressionEngine Pro adds "front edit" links ( <img style="margin-bottom: 0px; vertical-align: middle;" src="../_images/pro_edit.png" alt="pro edit icon"> ) on the site's front-end that allow editing the contents of each entry field individually. This is done directly on front-end without going to the Control Panel.
 
-Clicking the link opens a popup with the field that can be modified and saved; as well it presents the link to edit full entry with live preview showing the current page you are on.
+Clicking the link opens a popup with the field that can be modified and saved. Along with editing, users can also use front edit popup to access the full entry for editing with live preview showing the current page you are on.
 
-The links are being placed in yout HTML right before the field's tag (or opening tag if fild tag pair is used).
+![edit popup](_images/pro_edit_popup.png)
+
+The links are being placed in your HTML right before the field's tag (or opening tag if field tag pair is used).
+
+
 
 ## Disabling the link
 
 There are several ways to disable front-end editing links:
- - globally with [configuration overrides](pro/configuration.md#disable_frontedit) or in [General Settings](pro/configuration.md#general-settings)
- - they can be switched off using the toggle in the Dock itself
- - can be disabled using HTML comments, ExpressionEngine template comments, or field parameter
+ - Globally with [configuration overrides](pro/configuration.md#disable_frontedit) or in [General Settings](pro/configuration.md#general-settings)
+ - Via the Dock on the front-end by toggling Edit Mode on/off.
+ - In the template by using [ExpressionEngine template comments](#ee-comment), [HTML comments](#ee-comment), or [field parameter](#field-tag-parameter)
 
 ### Disabling link in the template
 
-There are three ways to completely prevent field edit link to be displayed in template.
-
-### Template preferences
-
-In template preferences under Pro Settings there is switch for "Disable front-end editing?"
-When turned on, front-end editing features will be disabled in template completely.
-
-![pro template settings](/_images/pro_template_settings.png)
-
-#### EE Comment
+#### ExpressionEngine Comment
 
 Anything content wrapped in `{!-- disable frontedit --} ... {!-- //disable frontedit --}` HTML comment will not have edit links in it.
 
@@ -55,13 +50,13 @@ Use `disable="frontedit"` parameter on field tag to disable link for a certain f
 
     {page_content disable="frontedit"}
 
-### Customizing the link
+## Customizing The Link Location
 
-The edit link for the field can be placed manually using **:frontedit** modifier on the field, **frontedit_link** tag if you need to have it in different section of template, custom styled - or you can even place edit link for field that is currently not on the page.
+The edit link for each field can be placed manually using [**:frontedit** modifier](#frontedit) on the field or using the [**frontedit_link**](#frontedit_link) tag if you need to have a link in a different section of a template, custom styled, or you can even place a link for a field that is currently not on the page.
 
-#### `:frontedit`
+### `:frontedit`
 
-Inside `{exp:channel:entries}` tag, using the field name postfixed with `:frontedit` will generate edit link for that field within displayed entry.
+Inside `{exp:channel:entries}` tag, using the field name postfixed with `:frontedit` will generate an edit link for that field within displayed entry.
 
 You may find it useful if `disable_frontedit_links` configuration override is set and you need to place the links individually.
 
@@ -69,7 +64,7 @@ Example usage:
 
     {title:frontedit}
 
-#### `{frontedit_link}`
+### `{frontedit_link}`
 
 Can be used to place edit link in arbitrary place (also outside or `exp:channel:entries` tag). The link can have custom CSS class applied to it.
 
@@ -92,7 +87,7 @@ Example usage:
     {frontedit_link entry_id="{entry_id}" field_name="page_content" class="extra-styles"}
 
 
-#### Label Custom Front-end Edit Links
+### Label Custom Front-end Edit Links
 When using custom links, it may be useful to label these links for the user. One way of accomplishing this is by wrapping your link in a custom HTML element and then hide/showing element with JavaScript. 
 
 Example:
@@ -115,6 +110,7 @@ Example Usage:
 ```
 $config['autosave_interval_seconds'] = '10'; 
 ```
+![unsaved changes](_images/pro_unsaved_changes.png)
 
 ## Reinitialize ExpressionEngine Pro Javascript
 There may be times, such as when using AJAX, that page content is loaded after ExpressionEngine Pro has been initialized on a page. When this happens edit links may not work or even render. To fix this, you need to included `EE.pro.refresh();` in your script. 
@@ -131,7 +127,7 @@ function getData() {
 }
 
 function reInitPro(){
-    $.get(ajaxLink, function(data) {
+    EE.pro.refresh();
 }
 ```
 

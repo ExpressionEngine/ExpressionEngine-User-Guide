@@ -11,20 +11,20 @@
 
 [TOC]
 
-Along with the basic widgets which will come native with EE Pro, each third-party add-on can provide multiple widgets show pertinent information to users.
+Along with the basic widgets which will come native with ExpressionEngine Pro, each third-party add-on can provide multiple widgets to show pertinent information to users.
 
-Widget files can have `.html` or `.php` extension and have to be placed into `widgets` subdirectory of the add-on. They are then installed automatically when the add-on is installed or updated.
+Widgets which are shipped with add-ons can have `.html` or `.php` extension and have to be placed into `widgets` sub-directory of the add-on. They are then installed automatically when the add-on is installed or updated.
 
-It is also possible to create widgets using EE template manager.
+Users can also create widgets using ExpressionEngine template manager.
 
 ## PHP Widgets
 
-In order for add-on to provide dashboard widgets, it needs to contain `widgets` folder inside its main directory, which will contain widget files.
+In order for an add-on to provide dashboard widgets, it needs to contain `widgets` folder inside its main directory, which will contain the widget files.
 
 All widgets are required to implement `ExpressionEngine\Addons\Pro\Service\Dashboard\DashboardWidgetInterface`.
-The easiest way to achieve that is to make prolet extend abstract class `ExpressionEngine\Addons\Pro\Service\Dashboard\AbstractDashboardWidget`.
+The easiest way to achieve that is to make widget extend abstract class `ExpressionEngine\Addons\Pro\Service\Dashboard\AbstractDashboardWidget`.
 
-Each widget should have `namespace` definition, which should consist of add-on's namespace as defined in `addon.setup.php` followed by `\Widgets`.
+Each widget should have `namespace` definition, which should consist of the add-on's namespace as defined in `addon.setup.php` followed by `\Widgets`.
 
 The class name should match the file name with first letter capitalized.
 
@@ -79,7 +79,7 @@ Example PHP Widget:
 PHP widgets are installed when add-on is installed or updated.
 
 ## HTML Widgets
-HTML widgets are utilizing ExpressionEngine template engine, so can contain any template tags and need to return HTML that will be displayed inside the widget. 
+HTML widgets utilize the ExpressionEngine template engine. Therefore, they can contain any template tags and need to return HTML that will be displayed inside the widget. 
 
 HTML widgets are *required* to have this tag as first line:
 `{widget title="Widget Title"}`
@@ -102,8 +102,16 @@ HTML add-on widgets are installed when add-on is installed or updated.
 
 ## Template widgets
 
-You can create custom widgets specifically for your site by creating `pro-dashboard-widgets` templates group and adding templates inside it.
+You can create custom widgets specifically for your site by creating a template group named `pro-dashboard-widgets` and adding templates inside of it.
 
-The templates need to follow the syntax of HTML widgets.
+Templates for Dashboard Widgets need to follow the syntax of [HTML widgets](#html-widgets).
+
+Example HTML widget created as a template ( `pro-dashboard-widgets/widget-name.html`):
+
+    {widget title="Recent Entries" width="half"}
+    {exp:channel:entries channel="news" limit="10"}
+        <h2>{title}</h2>
+        {body}
+    {/exp:channel:entries}
 
 Unlike add-on widgets, template widgets are installed when dashboard layout is updated.

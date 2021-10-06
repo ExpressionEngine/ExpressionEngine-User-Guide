@@ -7,19 +7,19 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Pro features for fieldtypes
+# Pro Features For Fieldtypes
 
-Most of fieldtypes will work with ExpressionEngine Pro's [Front-end content management](pro/frontend.md) out-of-the-box.
+Most fieldtypes will work with ExpressionEngine Pro's [Front-end content management](pro/frontend.md) out-of-the-box.
 
-However there are some parameters that can be set in `ft.` to improve intergation.
+However there are some parameters that can be set in `ft.` to improve integration.
 
-### Disabling front-end edit link 
+### Disabling Front-end Edit Link 
 
     public $disable_frontedit = true;
 
-Setting `$disable_frontedit` to `true` will make the field not frontend-editable and the edit links will never appear.
+Setting `$disable_frontedit` to `true` will disable frontend-editing for the fieldtype and the edit links will never appear.
 
-### Field editing window size
+### Field Editing Window Size
 
     public $size = 'large';
 
@@ -30,8 +30,8 @@ The available options are:
  - small
  - footer
 
-### Making complex fieldtypes to work
+### Making Complex Fieldtypes To Work
 
-If your fieldtype is representing complex data structures, such as Grid or Fluid field, you'll need to tell Pro is needs to be treated in a different way. You can do this by declaring in fieldtype
+If your fieldtype is representing complex data structures, such as Grid or Fluid field, you will need to tell Pro to be treat this fieldtype in a different way. You can do this by declaring in fieldtype
 
     public $complex_data_structure = true;
