@@ -1,4 +1,4 @@
-# php eecli.php make:migration
+# make:migration
 
 Make migration -- Creates a new migration
 

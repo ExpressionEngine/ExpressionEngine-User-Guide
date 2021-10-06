@@ -43,7 +43,7 @@ NOTE: **Important:** This version includes important security updates.
 - **Enhancements** 🚀
   - Many UI improvements across the Control Panel
   - Introduced [ExpressionEngine Pro](/pro/overview.md)!
-  - Major updates to [CLI](/cli/into.md)
+  - Major updates to [CLI](/cli/intro.md)
   - Brought back more details to breadcrumbs [#573](https://github.com/ExpressionEngine/ExpressionEngine/issues/573), [#1159](https://github.com/ExpressionEngine/ExpressionEngine/issues/1159)
   - Added Category Group ID to the Category group listing [#698](https://github.com/ExpressionEngine/ExpressionEngine/issues/698)
   - Resolved [#927](https://github.com/ExpressionEngine/ExpressionEngine/issues/927) to add clarification.
