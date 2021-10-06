@@ -13,34 +13,6 @@ lang: php
 
 # RTE Fieldtype Extension Hooks
 
-### `rte_autocomplete_pages($pages, $search, $site_id)`
-
-| Parameter      | Type     | Description                                                    |
-| -------------- | -------- | -------------------------------------------------------------- |
-| \$pages        | `Array`  | Cached array of site pages                                     |
-| \$search       | `String` | Search string                                                  |
-| \$site_id      | `Int`    | Site ID                                                        |
-
-Allows developers to modify (narrow down or widen) the array of pages used for `@`-autocomplete in RTE.
-
-`$pages` is array with elements in following format:
-
-    $pages[] = (object) [
-        'id' => '@unique-identifier',
-        'text' => 'main displayed text (e.g. entry title)',
-        'extra' => 'extra info displayed (e.g. channel name)',
-        'href' => 'link to the page',
-        'entry_id' => entry ID,
-        'uri' => page URI
-    ];
-
-How it's called:
-
-    $pages = ee()->extensions->call('rte_autocomplete_pages', $pages, $search, $site_id);
-    if (ee()->extensions->end_script === true) {
-        $break = true;
-    }
-
 ### `rte_before_display($field, $data)`
 
 | Parameter      | Type     | Description                                                    |

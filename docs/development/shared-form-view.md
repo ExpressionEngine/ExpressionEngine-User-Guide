@@ -390,6 +390,9 @@ Notice what's different. We added a `group_toggle` key to the select's field def
       )
     );
 
+You can also include multiple groups into `group` parameter if the toggle needs to switch on and off several groups; those need to be separated with a pipe `|` delimiter. Example:
+    'group' => 'text_options|image_options',
+
 Finally, we must include the JavaScript to make it all work:
 
     ee()->cp->add_js_script(array(

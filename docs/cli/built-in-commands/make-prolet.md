@@ -1,4 +1,4 @@
-# php eecli.php make:prolet
+# make:prolet
 
 Prolet Generator -- Creates a new prolet for an add-on
 

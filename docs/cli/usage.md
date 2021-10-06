@@ -4,7 +4,7 @@ Commands can be called in the terminal of your choice in the format of:
 
 `$ php system/eecli.php hello`
 
-This will call `eecli` with a command of `hello`. This is the Hello World of EE commands, and will display:
+This will call `eecli` with a command of `hello`. This is the Hello World of ExpressionEngine commands, and will display:
 
 `Hello world`
 
@@ -44,8 +44,8 @@ $ php system/eecli.php list
 -------------------------------------------------------------------------------------
 | hello               | The most basic of commands                                  |
 | list                | Lists all available commands                                |
-| update              | Updates EE                                                  |
-| cache:clear         | Clears all EE caches                                        |
+| update              | Updates ExpressionEngine                                                  |
+| cache:clear         | Clears all ExpressionEngine caches                                        |
 ```
 
 ## Get Help
@@ -84,13 +84,13 @@ OPTIONS
 ExpressionEngine comes with a number of CLI commands already predefined.
 
 - `hello`: The most basic of commands, a great command for you to learn about the CLI!
-- `list`: Lists all available commands. This will display install commands if EE is not installed, and a full list of commands if it is.
-- `update`: Gets most recent version of EE. This will pull from your local version if you have downloaded the most recent version, or the cloud version for the next major version of EE if not.
-- `cache`:clear: Clears any one, or all, EE caches
+- `list`: Lists all available commands. This will display install commands if ExpressionEngine is not installed, and a full list of commands if it is.
+- `update`: Gets most recent version of EE. This will pull from your local version if you have downloaded the most recent version, or the cloud version for the next major version of ExpressionEngine if not.
+- `cache`:clear: Clears any one, or all, ExpressionEngine caches
 
 ### Advanced Use
 
-The following commands are for advanced usage, used in conjunction with EE upgrades for major versions. It is highly recommended to back up both your database and filesystem before utilizing them
+The following commands are for advanced usage, used in conjunction with ExpressionEngine upgrades for major versions. It is highly recommended to back up both your database and filesystem before utilizing them
 
 - `prepare-upgrade`: Prepare a different site to be upgraded using these files.
 - `run-update-hook`: Runs specific update hooks from your upgrade.config file.

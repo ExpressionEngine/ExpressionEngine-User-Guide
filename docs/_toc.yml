@@ -206,6 +206,8 @@
       href: add-ons/pages.md
     - name: Query
       href: add-ons/query.md
+    - name: Request
+      href: add-ons/request.md
     - name: RSS
       href: add-ons/rss.md
     - name: RSS Parser
@@ -244,13 +246,54 @@
       href: add-ons/statistics.md
     - name: Emoticon (Deprecated)
       href: add-ons/emoticon.md
-
+- name: ExpressionEngine Pro
+  items:
+    - name: Pro Overview
+      href: pro/overview.md
+    - name: Configuration
+      href: pro/configuration.md
+    - name: Dashboard Management
+      href: pro/dashboard_management.md
+    - name: Front-end Content Management
+      href: pro/frontend.md
+    - name: Cookies management
+      href: pro/cookies.md
+    - name: Development
+      items:
+        - name: Dashboard Widgets
+          href: pro/development/widgets.md
+        - name: Fieldtypes
+          href: pro/development/fieldtypes.md
+        - name: Prolets
+          href: pro/development/prolets.md
 - name: Command Line Interface (CLI)
   items:
     - name: Introduction
       href: cli/intro.md
     - name: Usage
       href: cli/usage.md
+    - name: Built In Commands
+      items:
+        - name: Addon Generator
+          href: cli/built-in-commands/make-addon.md
+        - name: Clear Cache
+          href: cli/built-in-commands/cache-clear.md
+        - name: Command Generator
+          href: cli/built-in-commands/make-command.md
+        - name: Generating a migration
+          href: cli/built-in-commands/migrate.md
+        - name: List
+          href: cli/built-in-commands/list.md
+        - name: Make migration
+          href: cli/built-in-commands/make-migration.md
+        - name: Model Generator
+          href: cli/built-in-commands/make-model.md
+        - name: Update ExpressionEngine
+          href: cli/built-in-commands/update.md
+        - name: Prolet Generator
+          href: cli/built-in-commands/make-prolet.md
+        - name: Widget Generator
+          href: cli/built-in-commands/make-widget.md
     - name: Creating A Command
       href: cli/creating-a-command.md
     - name: Defining Input
@@ -679,8 +722,6 @@
           href: development/control-panel-js/events.md
         - name: Table Plugin
           href: development/control-panel-js/table.md
-        - name: Rich Text Editor
-          href: development/control-panel-js/rich-text-editor.md
         - name: Ranges and Selections
           href: development/control-panel-js/rangesandselections.md
         - name: WysiHat API
@@ -857,3 +898,4 @@
 
 - name: Docs Style Guide
   href: style-guide.md
+

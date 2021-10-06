@@ -1,4 +1,4 @@
-# php eecli.php list
+# list
 
 Lists all available CLI commands. This will include all core commands, as well as all commands in add-ons
 

@@ -1,4 +1,4 @@
-# php eecli.php update
+# update
 
 Update -- Updates ExpressionEngine
 

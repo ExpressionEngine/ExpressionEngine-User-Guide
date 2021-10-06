@@ -1,4 +1,4 @@
-# php eecli.php make:addon
+# make:addon
 
 Addon Generator -- Creates a new add-on
 
