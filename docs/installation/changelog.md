@@ -43,7 +43,9 @@ NOTE: **Important:** This version includes important security updates.
 - **Enhancements** 🚀
   - Many UI improvements across the Control Panel
   - Introduced [ExpressionEngine Pro](/pro/overview.md)!
-  - Major updates to [CLI](/cli/intro.md)
+  - Major updates to [CLI](/cli/intro.md).
+    - New commands: `make:addon`,`make:command`,`make:migration`,`make:model`,`make:prolet`,`make:widget`,`migrate`, `migrate:addon`,`migrate:all`,`migrate:core`,`migrate:reset`,`migrate:rollback` .
+    - Modified commands: `prepare-upgrade` is now `update:prepare`, `run-update-hook` is now `update:run-hook`
   - Brought back more details to breadcrumbs [#573](https://github.com/ExpressionEngine/ExpressionEngine/issues/573), [#1159](https://github.com/ExpressionEngine/ExpressionEngine/issues/1159)
   - Added Category Group ID to the Category group listing [#698](https://github.com/ExpressionEngine/ExpressionEngine/issues/698)
   - Resolved [#927](https://github.com/ExpressionEngine/ExpressionEngine/issues/927) to add clarification.
