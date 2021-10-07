@@ -42,11 +42,11 @@
 
 ### `autosave_interval_seconds`
 
-Set the interval between autosaves on the Publish Page and on the Front-end when Pro is installed. If you want to ensure users do not accidentally loose unsaved changes adjust the `[autosave_interval_seconds]` system config override to a lower interval between autosaves. A setting of 10 seconds is the recommendation.
+Set the interval between autosaves on the Publish Page and on the Front-end when Pro is installed. If you want to ensure users do not accidentally loose unsaved changes adjust the `[autosave_interval_seconds]` system config override to a lower interval between autosaves. A setting of 10 seconds is recommended, and set as part of the pro install.
 
-| Value   | Description                                  |
-| ------- | -------------------------------------------- |
-| integer | Autosave interval in seconds (default is 60) |
+| Value   | Description                                                                       |
+| ------- | --------------------------------------------------------------------------------- |
+| integer | Autosave interval in seconds (default of 60 is changed to 10 upon install of Pro) |
 
 Example Usage:
 
