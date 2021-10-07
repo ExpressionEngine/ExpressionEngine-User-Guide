@@ -7,6 +7,15 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
+## Version 6.1.1 (Release: October, 7 2021)
+
+- **Bug Fixes** 💃🐛 
+  - Resolved issue when Live Preview was not always triggered during changes in RTE field.
+  - Resolved [#1199](https://github.com/ExpressionEngine/ExpressionEngine/issues/1199) where it was not always possible to change field population method for Dropdown inside Grid.
+  - Resolved issue with typography filtering being too strict.
+  - Resolved minor CSS issue on Addons page for mobile screens.
+  - Resolved minor JS issue when saving cookie consent in Control Panel.
+
 ## Version 6.1.0 (Release: October, 6 2021)
 
 NOTE: **Important:** This version includes important security updates.
@@ -72,7 +81,7 @@ NOTE: **Important:** This version includes important security updates.
   - Added support for image modifiers when using category images [#942](https://github.com/ExpressionEngine/ExpressionEngine/issues/716)
   - Added ability to disable Google FLoC [#1027](https://github.com/ExpressionEngine/ExpressionEngine/issues/1027) [Docs Link](https://docs.expressionengine.com/latest/add-ons/http-header.html)
   - Added ability to upload m4a files by default [#699](https://github.com/ExpressionEngine/ExpressionEngine/issues/699)
-  - Added new core add-on: [Request](https://docs.expressionengine.com/latest/add-ons/request.html) [#413](https://github.com/ExpressionEngine/ExpressionEngine/issues/694139)
+  - Added new core add-on: [Request](https://docs.expressionengine.com/latest/add-ons/request.html) [#413](https://github.com/ExpressionEngine/ExpressionEngine/issues/413)
   - Added option to use Google reCAPTCHA in addition to previous captcha option. [#822](https://github.com/ExpressionEngine/ExpressionEngine/issues/822) [Docs Link](https://docs.expressionengine.com/latest/control-panel/settings/captchas.html)
   - Added noindex,nofollow to template used by `?URL` redirect warning page.
   - Added tel scheme option to URL fieldtype. [#96](https://github.com/ExpressionEngine/ExpressionEngine/issues/96), [#1097](https://github.com/ExpressionEngine/ExpressionEngine/issues/1097)
