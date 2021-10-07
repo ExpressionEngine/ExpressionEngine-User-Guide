@@ -13,7 +13,7 @@
 
 ## What is ExpressionEngine Pro?
 
-ExpressionEngine Pro brings the Control Panel forward to the front-end of your site. A trial version of ExpressionEngine Pro comes shipped with ExpressionEngine 6.1.0 or higher and may be used on any local testing sites; however, a license must be purchased for ExpressionEngine Pro to work on production or remote staging sites.
+ExpressionEngine Pro brings the Control Panel forward to the front-end of your site. ExpressionEngine Pro comes shipped with ExpressionEngine 6.1.0 or higher and may be used on any local testing sites; however, a license must be purchased for ExpressionEngine Pro to work on production or remote staging sites.
 
 An ExpressionEngine Pro license also includes Low Search and Low Variables. Each of these can be downloaded separately and will be automatically installed with Pro if available in your `user/addons` folder. If you do not wish to use Low Search and/or Low Variables, just do not include these in your `user/addons` folder and they will not be installed.  If your site is already making use of Low Searchand Low Variables, they will continue to  work as intended.
 
