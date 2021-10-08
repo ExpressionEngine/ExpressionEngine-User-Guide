@@ -665,39 +665,39 @@
       items:
         - name: Working with Models
           href: development/models/working-with-models.md
-        - name: Action
+        - name: Action Model
           href: development/models/action.md
-        - name: Channel Entry
+        - name: Channel Entry Model
           href: development/models/channel-entry.md
-        - name: Channel Field Group
+        - name: Channel Field Group Model
           href: development/models/channel-field-group.md
-        - name: Channel Field
+        - name: Channel Field Model
           href: development/models/channel-field.md
-        - name: CP Log
+        - name: CP Log Model
           href: development/models/cp-log.md
-        - name: Developer Log
+        - name: Developer Log Model
           href: development/models/developer-log.md
-        - name: Email Console Log
+        - name: Email Console Log Model
           href: development/models/email-console-cache.md
-        - name: File
+        - name: File Model
           href: development/models/file.md
-        - name: Upload Destinations
+        - name: Upload Destinations Model
           href: development/models/upload-destination.md
-        - name: Member
+        - name: Member Model
           href: development/models/member.md
-        - name: MemberField
+        - name: MemberField Model
           href: development/models/member-field.md
-        - name: Role
+        - name: Role Model
           href: development/models/role.md
-        - name: RoleGroup
-        - name: Status
-          href: development/models/status.md        
+        - name: RoleGroup Model
           href: development/models/role-group.md
-        - name: RoleSettings
+        - name: Status Model
+          href: development/models/status.md   
+        - name: RoleSettings  Model
           href: development/models/role-settings.md
-        - name: Template
+        - name: Template  Model
           href: development/models/template.md
-        - name: Template Group
+        - name: Template Group  Model
           href: development/models/template-group.md
 
     - name: Shared Form View

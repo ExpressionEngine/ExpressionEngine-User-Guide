@@ -24,7 +24,7 @@ lang: php
 #### `short_name` Unique, max 50
 
 ### Optional
-#### `role_id` Key, ini
+#### `role_id` Key, int
 #### `description`
 #### `is_locked` boolString
 
