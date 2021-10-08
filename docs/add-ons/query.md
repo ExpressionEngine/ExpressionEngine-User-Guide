@@ -85,6 +85,21 @@ If you are pulling dates out of an ExpressionEngine database table, then you can
 
 The Query module uses the same pagination syntax as all first-party modules. Please look at the [Pagination](templates/pagination.md) documentation for more information.
 
+## Parameters
+
+### Parsing file paths
+
+In case you select a table which stores files, the returned value will have `{filedir_` in front of the file names. To parse them, enable the `parse_files` parameter:
+
+```
+    {exp:query sql="SELECT col_id_1 AS src, col_id_5 AS description
+        FROM exp_channel_grid_field_2;"
+        parse_files="y"
+    }
+        <img src="{src}" alt="{description}" />
+    {/exp:query}
+```
+
 ## Backspace Parameter
 
 You can add an optional parameter that allows "backspacing":
