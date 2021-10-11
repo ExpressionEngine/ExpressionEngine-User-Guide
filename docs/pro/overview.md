@@ -46,3 +46,7 @@ ExpressionEngine Pro allows uploading a custom logo to be used on Control Panel 
 ### Cookie and Consent Management
 
 ExpressionEngine Pro adds the ability to override cookie values and their lifetime, easily list cookies used by the site on the front-end (or in dashboard widget), and export a list of consents.
+
+### Two-Factor Authentication
+
+ExpressionEngine Pro adds the ability to add protection to Control Panel and front-end pages by adding autentication with a second factor using 2FA app like Google Authenticator, Microsoft Authenticator or Authy.
