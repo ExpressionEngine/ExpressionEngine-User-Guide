@@ -45,8 +45,17 @@ The operator is optional and will default to `==` if not given:
 
 By default, filters will be chained as `AND` conditions. An `OR` filter can be applied by using the `orFilter()` method:
 
-    ->filter('username', 'bob')
-    ->orFilter('group_id', 1)
+    ->filter('username' 'bob')
+    ->orFilter('role_id', 1)
+
+For more complex calls, filters can be grouped by using the `filterGroup()`, `orFilterGroup()`, and `endFilterGroup()` methods:
+
+    // filter members who have less than 10 entries AND either have a primary role_id of 1 OR 2.
+    ->filter('total_entries', '<', '10')
+    ->filterGroup()
+        ->filter('role_id', '1')
+        ->orFilter('role_id', '2')
+    ->endFilterGroup()
 
 ### Available filters
 

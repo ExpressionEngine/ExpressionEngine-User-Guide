@@ -1,6 +1,6 @@
-# php eecli.php cache:clear
+# cache:clear
 
-Clear Cache -- This allows for EE caches to be cleared.
+Clear Cache -- This allows for ExpressionEngine caches to be cleared.
 
 ## Options list:
 

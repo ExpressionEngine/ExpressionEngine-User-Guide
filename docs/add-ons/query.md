@@ -141,7 +141,7 @@ Multiple instances of the {switch=} tag may be used and ExpressionEngine will in
 
 The number of total results of the query.
 
-## Troublshooting
+## Troubleshooting
 **Column variables are not parsing as expected**  
 When using the Query Module within other tag pairs such as `exp:channel:entries` which have their own variables, a conflict may arise in parsing the `exp:query` tag. 
 

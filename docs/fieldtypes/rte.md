@@ -18,7 +18,7 @@ You can find out more about general RTE configuration by reading the [Rich Text 
 When creating or modifying RTE field, the following field settings are available.
 
 - **Editor Configuration** - pre-created tool set to use for this field. 
-- **Defer CKEditor initialization?** - turning this on will initialize the field's editing feature only when it will be focused
+- **Defer Editor initialization?** - turning this on will initialize the field's editing feature only when it will be focused
 - **Column type in database** - database column type to hold your data. TEXT (64Kb) is usually good for an article. If your field content is rather a book, select MEDIUMTEXT (16Mb)
 
 ## Field features

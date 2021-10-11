@@ -505,3 +505,12 @@ Parse the variables within in a string--usually `TMPL::$tagdata`.
 | Returns     | `String`  | The `$tagdata` parsed with `$variables`                                                       |
 
 Parses a single row of data instead of letting `TMPL::parse_variables` handle all of the rows for you.
+
+### `log_item($str, $details = FALSE)`
+
+Write message to template log in Output Profiler.
+
+| Parameter   | Type      | Description                                                     |
+| ----------- | --------- | --------------------------------------------------------------- |
+| \$str       | `String`  | Log message                                                     |
+| \$details   | `String`  | More detailed log message, initially hidden behind "read more"  |

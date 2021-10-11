@@ -1,4 +1,4 @@
-# php eecli.php make:model
+# make:model
 
 Model Generator -- Creates a new model for an add-on
 

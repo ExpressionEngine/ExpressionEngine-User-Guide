@@ -45,7 +45,7 @@ The number of rows to return.
 
 ### `sort=`
 
-    sort="asc" ``sort="desc"``
+    sort="asc" sort="desc"
 
 The sort order can be ascending or descending. The order will default to "descending" if nothing is specified.
 

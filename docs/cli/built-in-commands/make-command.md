@@ -1,4 +1,4 @@
-# php eecli.php make:command
+# make:command
 
 Command Generator -- Creates a new CLI command for an add-on
 
