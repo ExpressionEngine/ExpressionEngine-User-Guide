@@ -710,10 +710,41 @@
       items:
         - name: Working with Models
           href: development/models/working-with-models.md
+        - name: Action Model
+          href: development/models/action.md
+        - name: Channel Entry Model
+          href: development/models/channel-entry.md
+        - name: Channel Field Group Model
+          href: development/models/channel-field-group.md
+        - name: Channel Field Model
+          href: development/models/channel-field.md
+        - name: CP Log Model
+          href: development/models/cp-log.md
+        - name: Developer Log Model
+          href: development/models/developer-log.md
+        - name: Email Console Log Model
+          href: development/models/email-console-cache.md
+        - name: File Model
+          href: development/models/file.md
+        - name: Upload Destinations Model
+          href: development/models/upload-destination.md
         - name: Member Model
           href: development/models/member.md
+        - name: MemberField Model
+          href: development/models/member-field.md
         - name: Role Model
           href: development/models/role.md
+        - name: RoleGroup Model
+          href: development/models/role-group.md
+        - name: Status Model
+          href: development/models/status.md   
+        - name: RoleSettings  Model
+          href: development/models/role-settings.md
+        - name: Template  Model
+          href: development/models/template.md
+        - name: Template Group  Model
+          href: development/models/template-group.md
+
     - name: Shared Form View
       href: development/shared-form-view.md
     - name: Control Panel Javascript
