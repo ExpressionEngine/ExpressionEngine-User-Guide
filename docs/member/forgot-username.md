@@ -15,7 +15,7 @@
 
 Output a forgotten username form that sends an email with instructions for addressing a forgotten member username when unable to login.
 
-    {{exp:member:forgot_username_form}
+    {exp:member:forgot_username_form}
 
             <label>Your Email Address</label><br />
             <input type="email" name="email" value="" maxlength="120" size="40" />
