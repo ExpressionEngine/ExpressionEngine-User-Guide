@@ -147,7 +147,7 @@ Example:
 
 Given a file and path, returns (optionally) the _name_, _path_, _size_ and _date modified_ information attributes for a file. Second parameter allows you to explicitly declare what information you want returned.
 
-Valid `$returned_values` options are: `name`, `size`, `date`, `readable`, `writeable`, `executable` and `fileperms`.
+Valid `$returned_values` options are: `name`, `size`, `date`, `readable`, `writable`, `executable` and `fileperms`.
 
 ### `get_mime_by_extension($filename)`
 
