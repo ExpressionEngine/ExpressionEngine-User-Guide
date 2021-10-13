@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
-## Version 6.1.2 (Release: October, 13 2021)
+## Version 6.1.2 (Release: October 13, 2021)
 
 - **Bug Fixes** 💃🐛 
   
@@ -46,7 +46,7 @@
   - Resolved support for `{if frontedit}` conditional in templates.
 
 
-## Version 6.1.1 (Release: October, 7 2021)
+## Version 6.1.1 (Release: October 7, 2021)
 
 - **Bug Fixes** 💃🐛 
   - Resolved issue when Live Preview was not always triggered during changes in RTE field.
@@ -55,7 +55,7 @@
   - Resolved minor CSS issue on Addons page for mobile screens.
   - Resolved minor JS issue when saving cookie consent in Control Panel.
 
-## Version 6.1.0 (Release: October, 6 2021)
+## Version 6.1.0 (Release: October 6, 2021)
 
 NOTE: **Important:** This version includes important security updates.
 
