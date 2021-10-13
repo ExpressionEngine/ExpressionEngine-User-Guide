@@ -69,13 +69,19 @@ A more complex case of this is when certain fields rely on the presence of other
 
 ## Custom Rules
 
-ExpressionEngine allows you to create one-off validation rules on any validator object. This is done by calling the `defineRule` method:
+ExpressionEngine allows you to create one-off validation rules on any validator object. This is done by calling the `defineRule` method.
+
+The validation rule may return boolean values of `true` (passed), `false` (failed) or string with error message (or corresponding language key). If the rule is associated with a field and you are using [Shared Form View](development/shared-form-view.md) the error message will be added to the field that failed validation.
 
     $validator = ee('Validation')->make();
 
     $validator->defineRule('impossible', function($key, $value, $parameters)
     {
-      return ($value == 5 && $value == 6);
+      if ($value == 5 && $value == 6) {
+        return true;
+      }
+
+      return 'this_is_impossible';
     });
 
     $validator->setRules(array(
