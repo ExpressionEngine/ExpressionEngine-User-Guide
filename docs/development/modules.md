@@ -167,6 +167,8 @@ The Language file contains an array named `$lang`, which is used along with the 
     ''=>''
     );
 
+If the ExpressionEngine core language files contains string with the same key, it will be used in favor of add-on specified string. If an add-on needs to override that string, that can be done by adding it to `$ee_lang` array in the add-on's language file.
+
 ### module tab label
 
 In addition to the two required fields you can have a custom tab label for your publish fields. Just assign the desired label to a key which shares the name of your module name:
