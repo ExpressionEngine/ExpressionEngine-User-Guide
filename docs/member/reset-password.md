@@ -7,9 +7,10 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Forgot Password Form Tag
+# Reset Password Form Tag
 
 [TOC]
+The Reset Password Form Tag is intended to be used on a page which users are directed to from an email link which is provided when using the [Forgot Password](member/forgot-password.md) functionality.
 
 ## Overview
 
@@ -30,6 +31,10 @@ Output a reset password form that allows members accessing it via a link from a 
 
     return="member/login/success"
 
+This parameter allows you to define where the user will be returned after successfully completing the form. The parameter can be defined in two ways:
+
+1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="news/local"
+2.  Use a full URL. For example: return="<https://example.com/return.html>"
 
 ## Form Inputs
 
