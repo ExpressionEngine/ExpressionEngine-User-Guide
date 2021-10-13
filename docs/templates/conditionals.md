@@ -314,7 +314,7 @@ You can test against the email address of the currently logged in user.
 
 ### `logged_in_primary_role_id`
 
-    {if logged_in_role_id == '7'}  You're an "Editor"!  {/if}
+    {if logged_in_primary_role_id == '7'}  You're an "Editor"!  {/if}
 
 You can test against the Primary Role of the currently logged in user.
 

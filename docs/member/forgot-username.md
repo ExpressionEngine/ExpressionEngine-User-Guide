@@ -30,14 +30,26 @@ Output a forgotten username form that sends an email with instructions for addre
 
     email_subject="Your Username"
 
+Subject of email sent to user.
+
+
 ### `email_template=`
 
     email_template="member/email-forgot-username"
+
+Template to use for email which is sent to user. 
+
+WARN: **Warning:** If no email template is defined or defined template does not exist, the email sent to users will be blank.
+
 
 ### `return=`
 
     return="member/login/forgot-username"
 
+This parameter allows you to define where the user will be returned after successfully completing the form. The parameter can be defined in two ways:
+
+1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="news/local"
+2.  Use a full URL. For example: return="<https://example.com/return.html>"
 
 ## Form Inputs
 
