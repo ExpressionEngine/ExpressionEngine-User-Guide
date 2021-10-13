@@ -35,6 +35,8 @@ NOTE: **Note:** This form will only email the user if the user requesting the pa
 
     Template to use for email which is sent to user. 
 
+    If no template is defined or if the template defined does not exist, the default [Member Profile Template](control-panel/template-manager.md#member-profile-templates) for a forgotten password will be used.
+
 ### `password_reset_url=`
 
     password_reset_url="member/reset-password"
