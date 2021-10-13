@@ -7,6 +7,45 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
+## Version 6.1.2 (Release: October, 13 2021)
+
+- **Bug Fixes** 💃🐛 
+  
+  - Resolved [#209](https://github.com/ExpressionEngine/ExpressionEngine/issues/209) where `autocomplete` parameter was not correct for some password inputs.
+  - Resolved [#371](https://github.com/ExpressionEngine/ExpressionEngine/issues/371) where reserved words were not fully respected when creating Template Partials and Variables.
+  - Resolved [#375](https://github.com/ExpressionEngine/ExpressionEngine/issues/375) where creating a checkboxes with populating from another channel field was causing JavaScript error.
+  - Resolved [#387](https://github.com/ExpressionEngine/ExpressionEngine/issues/387) where Select field inside Grid could be not correctly parsed in template.
+  - Resolved [#460](https://github.com/ExpressionEngine/ExpressionEngine/issues/460) where Duration field was not validated correctly.
+  - Resolved [#489](https://github.com/ExpressionEngine/ExpressionEngine/issues/489) where files in File Grid field were uploaded twice when using Channel Form.
+  - Resolved issue where it was not possible to use space in comparison operator when searching with `exp:channel:entries`.
+  - Resolved [#884](https://github.com/ExpressionEngine/ExpressionEngine/issues/884) where `{if no_results}` was not working in `{exp:channel:next_entry}` and `prev_entry` tags.
+  - Resolved [#1058](https://github.com/ExpressionEngine/ExpressionEngine/issues/1058) where search was not working on Relationships field outside of initial list of entries
+  - Resolved [#1070](https://github.com/ExpressionEngine/ExpressionEngine/issues/1070), [#298](https://github.com/ExpressionEngine/ExpressionEngine/issues/298) where tags with varibale modifiers were not parsed when separated on multiple lines.
+  - Resolved [#1100](https://github.com/ExpressionEngine/ExpressionEngine/issues/1100) where 'Show formatting buttons' setting was not respected when duplicating Grid fields with Textarea.
+  - Resolved [#1101](https://github.com/ExpressionEngine/ExpressionEngine/issues/1101), [#845](https://github.com/ExpressionEngine/ExpressionEngine/issues/845) where UI of Publish Layout editing was not correct.
+  - Resolved [#1108](https://github.com/ExpressionEngine/ExpressionEngine/issues/1108), [#854](https://github.com/ExpressionEngine/ExpressionEngine/issues/854) where on-the-fly image manipulations were not always giving expected results.
+  - Resolved [#1125](https://github.com/ExpressionEngine/ExpressionEngine/issues/1125), [#1399](https://github.com/ExpressionEngine/ExpressionEngine/issues/1399) where Translation Utility was not saving all changes correctly.
+  - Resolved [#1172](https://github.com/ExpressionEngine/ExpressionEngine/issues/1172) where Select fields inside Grid did not have empty value
+  - Resolved issue with member Role change in Simple Commerce module
+  - Resolved [#1135](https://github.com/ExpressionEngine/ExpressionEngine/issues/1135) where check for HTTPS connection was not consistent
+  - Fixed JavaSript errors in Channel Form
+  - Resolved [#1140](https://github.com/ExpressionEngine/ExpressionEngine/issues/1140) where selected checkbox options were not showing as checked in Channel Form.
+  - Resolved [#1153](https://github.com/ExpressionEngine/ExpressionEngine/issues/1153) where permissions to delete entries were not always respected
+  - Resolved [#1184](https://github.com/ExpressionEngine/ExpressionEngine/issues/1184) where non-English characters were not displayed properly in channel names and author names inside entries listing
+  - Resolved issue where Toggle field was not rendered correctly as an Entry Manager column.
+  - Resolved [#1224](https://github.com/ExpressionEngine/ExpressionEngine/issues/1224) where validation of fields submitted as arrays was not treating empty values correctly.
+  - Resolved [#1231](https://github.com/ExpressionEngine/ExpressionEngine/issues/1231) where "include in memberlist/authorslist" checkboxes were not un-selectable.
+  - Resolved [#1232](https://github.com/ExpressionEngine/ExpressionEngine/issues/1232) where `None` option was not displayed for Moblog author field.
+  - Resolved [#1240](https://github.com/ExpressionEngine/ExpressionEngine/issues/1240) where `channel_url` was not set to correct value when creating channel.
+
+  - Resolved [#1284](https://github.com/ExpressionEngine/ExpressionEngine/issues/1284) where Textarea was blocking common keyboard shortcut
+  - Resolved [#1309](https://github.com/ExpressionEngine/ExpressionEngine/issues/1309) where the folders dropdown could be clipped on Files modal
+  - Resolved [#1356](https://github.com/ExpressionEngine/ExpressionEngine/issues/1356) where first visit to template that exists only in files could throw an error
+  - Resolved [#1402](https://github.com/ExpressionEngine/ExpressionEngine/issues/1402) where deprecation error was shown on PHP 7.4 when using dynamic parameters with channel form.
+  - Resolved the issue when CP URL could be incorrect after showing idle modal.
+  - Resolved support for `{if frontedit}` conditional in templates.
+
+
 ## Version 6.1.1 (Release: October, 7 2021)
 
 - **Bug Fixes** 💃🐛 
@@ -25,29 +64,28 @@ NOTE: **Important:** This version includes important security updates.
   - Resolved [#463](https://github.com/ExpressionEngine/ExpressionEngine/issues/463) where `sanitize_filename()` method to incorrectly return empty strings.
   - Resolved [#536](https://github.com/ExpressionEngine/ExpressionEngine/issues/536) where Control Panel users were not notified when a "resend activation email" failed.
   - Resolved issues in the Control Panel when use the Safari web browser [#702](https://github.com/ExpressionEngine/ExpressionEngine/issues/702) [#851](https://github.com/ExpressionEngine/ExpressionEngine/issues/851) [#965](https://github.com/ExpressionEngine/ExpressionEngine/issues/965)
+  - Resolved [#682](https://github.com/ExpressionEngine/ExpressionEngine/issues/682) where the description for "Save Template Revisions" setting was not accurate
   - Resolved [#724](https://github.com/ExpressionEngine/ExpressionEngine/issues/724) where .`index.html` files where listed in folders that only allowed images.
   - Resolved [#746](https://github.com/ExpressionEngine/ExpressionEngine/issues/746), [#837](https://github.com/ExpressionEngine/ExpressionEngine/issues/837) where option fieldtypes were not working correctly in Channel Form using PHP8.
   - Resolved [#785](https://github.com/ExpressionEngine/ExpressionEngine/issues/785) where users could inadvertently leave an entry publish page without warning while there were unsaved changes.
   - Resolved [#951](https://github.com/ExpressionEngine/ExpressionEngine/issues/951) where users could see channels they didn't have access to.
   - Resolved [#957](https://github.com/ExpressionEngine/ExpressionEngine/issues/957) where RTE configs were not properly saving.
+  - Resolved [#996](https://github.com/ExpressionEngine/ExpressionEngine/issues/996) where resizing textareas beyond the parent element was breaking other children of that parent.
+  - Removed extra quote in breadcrumbs [#1015](https://github.com/ExpressionEngine/ExpressionEngine/issues/1015)
+  - Resolved [#1016](https://github.com/ExpressionEngine/ExpressionEngine/issues/1016) where turning on cookie consents could throw javascript warning.
+  - Resolved [#1017](https://github.com/ExpressionEngine/ExpressionEngine/issues/1017) where variable modifiers were not applied to`{count}` variable inside Grid field
+  - Resolved [#1045](https://github.com/ExpressionEngine/ExpressionEngine/issues/1045) where Live Preview requests could be cached.
   - Resolved [#1078](https://github.com/ExpressionEngine/ExpressionEngine/issues/1078) where SVGs were not allowed to be uploaded as images.
+  - Resolved [#1102](https://github.com/ExpressionEngine/ExpressionEngine/issues/682) where entries from other MSM sites were shown on dashboard
+  - Resolved [#1130](https://github.com/ExpressionEngine/ExpressionEngine/issues/1130) where Log class was throwing error in PHP8 during system update
   - Resolved [#1149](https://github.com/ExpressionEngine/ExpressionEngine/issues/1149) where channel description character limit is not checked in form.
+  - Resolved [#1154](https://github.com/ExpressionEngine/ExpressionEngine/issues/1154) where some links in Jump Menu were poiting to wrong pages
   - Resolved [#1212](https://github.com/ExpressionEngine/ExpressionEngine/issues/1212) which caused errors in PHP 8.
   - Resolved [#1242](https://github.com/ExpressionEngine/ExpressionEngine/issues/1242) where HTML entites in RTE settings were parsed incorrectly. 
   - Resolved [#1264](https://github.com/ExpressionEngine/ExpressionEngine/issues/1264) where the `{comment}` variable within `{exp:comment:entries}` tag did not work with variable modifiers
   - Resolved [#1278](https://github.com/ExpressionEngine/ExpressionEngine/issues/1278) where relationship fields could throw errors after upgrading versions.
-  - Removed extra quote in breadcrumbs [#1015](https://github.com/ExpressionEngine/ExpressionEngine/issues/1015)
-  - Resolved [#1017](https://github.com/ExpressionEngine/ExpressionEngine/issues/1017) where variable modifiers were not applied to`{count}` variable inside Grid field
-  - Resolved [#996](https://github.com/ExpressionEngine/ExpressionEngine/issues/996) where resizing textareas beyond the parent element was breaking other children of that parent.
-  - Resolved [#1045](https://github.com/ExpressionEngine/ExpressionEngine/issues/1045) where Live Preview requests could be cached.
-  - Resolved [#1016](https://github.com/ExpressionEngine/ExpressionEngine/issues/1016) where turning on cookie consents could throw javascript warning.
-  - Resolved [#1154](https://github.com/ExpressionEngine/ExpressionEngine/issues/1154) where some links in Jump Menu were poiting to wrong pages
-  - Resolved [#1130](https://github.com/ExpressionEngine/ExpressionEngine/issues/1130) where Log class was throwing error in PHP8 during system update
-  - Resolved [#682](https://github.com/ExpressionEngine/ExpressionEngine/issues/682) where the description for "Save Template Revisions" setting was not accurate
-  - Resolved [#1102](https://github.com/ExpressionEngine/ExpressionEngine/issues/682) where entries from other MSM sites were shown on dashboard
   - Resolved bug where live preview failed when cross-domain requests were being made.
   - Resolved a bug where the Communicate page would not load on sites with extremely large numbers of members.
-
 
 - **Enhancements** 🚀
   - Many UI improvements across the Control Panel
