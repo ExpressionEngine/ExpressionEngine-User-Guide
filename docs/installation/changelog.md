@@ -7,6 +7,42 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
+## Version 6.1.2 (Release: October, 13 2021)
+
+- **Bug Fixes** 💃🐛 
+  - Resolved [#1153](https://github.com/ExpressionEngine/ExpressionEngine/issues/1153) where permissions to delete entries were not always respected
+  - Resolved [#209](https://github.com/ExpressionEngine/ExpressionEngine/issues/209) where `autocomplete` parameter was not correct for some password inputs.
+  - Resolved [#1184](https://github.com/ExpressionEngine/ExpressionEngine/issues/1184) where non-English characters were not displayed properly in channel names and author names inside entries listing
+  - Resolved issue where Toggle field was not rendered correctly as an Entry Manager column.
+  - Resolved [#1284](https://github.com/ExpressionEngine/ExpressionEngine/issues/1284) where Textarea was blocking common keyboard shortcut
+  - Resolved [#1135](https://github.com/ExpressionEngine/ExpressionEngine/issues/1135) where check for HTTPS connection was not consistent
+  - Fixed JavaSript errors in Channel Form
+  - Resolved [#1309](https://github.com/ExpressionEngine/ExpressionEngine/issues/1309) where the folders dropdown could be clipped on Files modal
+  - Resolved [#1058](https://github.com/ExpressionEngine/ExpressionEngine/issues/1058) where search was not working on Relationships field outside of initial list of entries
+  - Resolved [#1356](https://github.com/ExpressionEngine/ExpressionEngine/issues/1356) where first visit to template that exists only in files could throw an error
+  - Resolved [#1172](https://github.com/ExpressionEngine/ExpressionEngine/issues/1172) where Select fields inside Grid did not have empty value
+  - Resolved issue with member Role change in Simple Commerce module
+  - Resolved [#1108](https://github.com/ExpressionEngine/ExpressionEngine/issues/1108), [#854](https://github.com/ExpressionEngine/ExpressionEngine/issues/854) where on-the-fly image manipulations were not always giving expected results.
+  - Resolved [#375](https://github.com/ExpressionEngine/ExpressionEngine/issues/375) where creating a checkboxes with populating from another channel field was causing JavaScript error.
+  - Resolved [#1232](https://github.com/ExpressionEngine/ExpressionEngine/issues/1232) where `None` option was not displayed for Moblog author field.
+  - Resolved [#1140](https://github.com/ExpressionEngine/ExpressionEngine/issues/1140) where selected checkbox options were not showing as checked in Channel Form.
+  - Resolved the issue when CP URL could be incorrect after showing idle modal.
+  - Resolved [#1125](https://github.com/ExpressionEngine/ExpressionEngine/issues/1125), [#1399](https://github.com/ExpressionEngine/ExpressionEngine/issues/1399) where Translation Utility was not saving all changes correctly.
+  - Resolved [#1100](https://github.com/ExpressionEngine/ExpressionEngine/issues/1100) where 'Show formatting buttons' setting was not respected when duplicating Grid fields with Textarea.
+  - Resolved [#387](https://github.com/ExpressionEngine/ExpressionEngine/issues/387) where Select field inside Grid could be not correctly parsed in template.
+  - Resolved [#1101](https://github.com/ExpressionEngine/ExpressionEngine/issues/1101), [#845](https://github.com/ExpressionEngine/ExpressionEngine/issues/845) where UI of Publish Layout editing was not correct.
+  - Resolved [#371](https://github.com/ExpressionEngine/ExpressionEngine/issues/371) where reserved words were not fully respected when creating Template Partials and Variables.
+  - Resolved [#884](https://github.com/ExpressionEngine/ExpressionEngine/issues/884) where `{if no_results}` was not working in `{exp:channel:next_entry}` and `prev_entry` tags.
+  - Resolved [#1240](https://github.com/ExpressionEngine/ExpressionEngine/issues/1240) where `channel_url` was not set to correct value when creating channel.
+  - Resolved [#1224](https://github.com/ExpressionEngine/ExpressionEngine/issues/1224) where validation of fields submitted as arrays was not treating empty values correctly.
+  - Resolved [#1231](https://github.com/ExpressionEngine/ExpressionEngine/issues/1231) where "include in memberlist/authorslist" checkboxes were not un-selectable.
+  - Resolved [#489](https://github.com/ExpressionEngine/ExpressionEngine/issues/489) where files in File Grid field were uploaded twice when using Channel Form.
+  - Resolved [#460](https://github.com/ExpressionEngine/ExpressionEngine/issues/460) where Duration field was not validated correctly.
+  - Resolved issue where it was not possible to use space in comparison operator when searching with `exp:channel:entries`.
+  - Resolved [#1070](https://github.com/ExpressionEngine/ExpressionEngine/issues/1070), [#298](https://github.com/ExpressionEngine/ExpressionEngine/issues/298) where tags with varibale modifiers were not parsed when separated on multiple lines.
+  - Resolved support for `{if frontedit}` conditional in templates.
+  - Resolved [#1402](https://github.com/ExpressionEngine/ExpressionEngine/issues/1402) where deprecation error was shown on PHP 7.4 when using dynamic parameters with channel form.
+
 ## Version 6.1.1 (Release: October, 7 2021)
 
 - **Bug Fixes** 💃🐛 
