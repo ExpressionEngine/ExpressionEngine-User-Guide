@@ -147,7 +147,7 @@ Occasionally, you might need to check whether a value passes a validation rule, 
 | url             | Must be a valid URL                                                            | url                   |
 | validBase64     | Base64 character set only                                                      | validBase64           |
 | whenPresent     | Only validate if field was sent. See validation-service-when-present           | whenPresent           |
-| writeable       | File or path must be writeable                                                 | writeable             |
+| writable       | File or path must be writable                                                 | writable             |
 | xss             | Must not contain content that looks like XSS (Cross Site Scripting)            | xss                   |
 
 ## Handling Results
