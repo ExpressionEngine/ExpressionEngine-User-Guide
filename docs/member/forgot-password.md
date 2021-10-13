@@ -24,15 +24,25 @@ Output a forgotten password form that sends an email with instructions for reset
 
     {/exp:member:forgot_password_form}
 
+    
+NOTE: **Note:** This form will only email the user if the user requesting the password reset is not currently logged in.
+
 ## Parameters
 
 ### `email_template=`
 
     email_template="member/email-password-reset"
 
+    Template to use for email which is sent to user. 
+
 ### `password_reset_url=`
 
     password_reset_url="member/reset-password"
+
+    URL that is sent to the user (followed by the hash) to reset the user's password. The parameter can be defined in two ways:
+
+1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="member/reset-password"
+2.  Use a full URL. For example: return="<https://example.com/member/reset-password.html>"
 
 ### `return=`
 
@@ -40,8 +50,8 @@ Output a forgotten password form that sends an email with instructions for reset
 
 This parameter allows you to define where the user will be returned after successfully completing the form. The parameter can be defined in two ways:
 
-1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="news/local"
-2.  Use a full URL. For example: return="<https://example.com/return.html>"
+1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="member/forgot-password/sent"
+2.  Use a full URL. For example: return="<https://example.com/member/forgot-password/sent.html>"
 
 
 ## Form Inputs
@@ -88,7 +98,7 @@ The error text.
     {exp:member:forgot_password_form
         return="member/forgot-password/sent"
         password_reset_url="member/reset-password"
-        password_reset_email_template="member/email-password-reset"
+        email_template="member/email-password-reset"
         }
 
         <p>

@@ -48,8 +48,8 @@ WARN: **Warning:** If no email template is defined or defined template does not 
 
 This parameter allows you to define where the user will be returned after successfully completing the form. The parameter can be defined in two ways:
 
-1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="news/local"
-2.  Use a full URL. For example: return="<https://example.com/return.html>"
+1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="member/login/forgot-username"
+2.  Use a full URL. For example: return="<https://example.com/member/login/forgot-username.html>"
 
 ## Form Inputs
 
