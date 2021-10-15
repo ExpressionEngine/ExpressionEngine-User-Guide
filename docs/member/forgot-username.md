@@ -39,8 +39,7 @@ Subject of email sent to user.
 
 Template to use for email which is sent to user. 
 
-WARN: **Warning:** If no email template is defined or defined template does not exist, the email sent to users will be blank.
-
+If no template is defined or if the template defined does not exist, the default [Member Profile Template](control-panel/template-manager.md#member-profile-templates) for a forgotten username will be used.
 
 ### `return=`
 

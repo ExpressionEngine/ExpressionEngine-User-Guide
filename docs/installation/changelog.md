@@ -7,6 +7,14 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
+## Version 6.1.3 (Release: October 15, 2021)
+
+- **Bug Fixes** 💃🐛 
+  
+  - Resolved issue with 1-Click Updater not working if `cookie_secure`was set to `y`.
+  - Resolved issue where template for 'Forgot Username' email message was missing.
+  - Resolved [#959](https://github.com/ExpressionEngine/ExpressionEngine/issues/959) where link to the custom CP homepage was not showing in navigation.
+
 ## Version 6.1.2 (Release: October 13, 2021)
 
 - **Bug Fixes** 💃🐛 
