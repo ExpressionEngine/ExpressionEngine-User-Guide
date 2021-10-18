@@ -14,5 +14,5 @@ Users must be logged-in on the front-end of your site and assigned a role that h
 ## ExpressionEngine Pro Role Access
 For a user to have access to ExpressionEngine Pro's features (both front-end and in the Control Panel), the user must be assigned a role which has access to add-ons and ExpressionEngine Pro (found within the "Allowed add-on access" section).
 
-![Pro role access](images/pro_role_access.png)
+![Pro role access](_images/pro_role_access.png)
 

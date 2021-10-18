@@ -9,9 +9,10 @@
 
 # Troubleshooting ExpressionEngine Pro
 
-[TOC]
+[TOC=3 hide]
 
-## Dock and/or front edit links do not show on the front-end of the website.
+## Front edit links and Dock
+### Dock and/or front edit links do not show on the front-end of the website.
 
 There are several settings that could prevent the Dock from showing on the front-end of your site.
 
@@ -28,18 +29,28 @@ There are several settings that could prevent the Dock from showing on the front
     - Via Pro's [general settings](pro/configuration.md#general-settings), ensure that the "Enable Dock?" setting is toggled on.
     - Via the [`enable_dock` config override](pro/configuration.md#enable_dock). If in use, this override must be set to `'y'` for the Dock and Pro features to work on the front-end.
 
-## Dock shows, but front edit links do not show on the front-end of the website.
+### Dock shows, but front edit links do not show on the front-end of the website.
 
 - Front edit links are disabled via settings or config override.
     - Via Pro's [general settings](pro/configuration.md#general-settings), ensure that the "Enable front-end editing" setting is toggled on.
     - Via the [`enable_frontedit` config override](pro/configuration.md#enable_frontedit). If in use, this override must be set to `'y'` for front-end editing to work.
 
-## Dock shows everywhere, while front edit links only show some places.
+### Dock shows everywhere, while front edit links only show some places.
 
 - If Front edit links are showing on some templates, but not on others then front edit links may be disabled via template settings. Front-end editing can be enabled/disabled under "Pro Settings" in each template's settings.
-![images/pro_template_settings.png].
 
-- Automatic front-end editing links are disabled via settings or config override. By default, ExpressionEngine Pro automatically generates front edit links for all entry fields. This can be turned on or off, requiring a developer to [manually insert front edit links](pro/frontend.md#customizing-the-link-location) via template tags.
+![template settings](_images/pro_template_settings.png).
+
+- Automatic front-end editing links are disabled via settings or config override. By default, ExpressionEngine Pro automatically generates front edit links for all entry fields. This can be turned on or off, requiring a developer to [manually insert front edit links](pro/frontend.md#customizing-the-link-location) via template tags. If only manually inserted links are showing, this could be the cause.
     - Via Pro's [general settings](pro/configuration.md#general-settings), ensure that the "Enable automatic front-end editing links" setting is toggled on.
     - Via the [`enable_frontedit_links` config override](pro/configuration.md#enable_frontedit_links). If in use, this override must be set to `'y'` for Pro to automatically insert front edit links.
+
+- Front edit links are disabled via HTML comments, EE template comments, or `diable` parameter. There are 3 ways to disable Pro's automatic generation of front edit links. Ensure that the template code your inspecting isn't surrounded by template comments or wrapped in a field tag using `disable="frontedit`. For details on these methods read the [docs regarding disabling Pro links](pro/frontend.md#disabling-the-link) 
+
+## License
+
+### ExpressionEngine Pro shows as "unlicensed"
+
+If you Pro shows as "unlicensed" then no license number is entered in the site settings. 
+
 
