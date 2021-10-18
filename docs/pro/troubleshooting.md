@@ -53,4 +53,6 @@ There are several settings that could prevent the Dock from showing on the front
 
 If you Pro shows as "unlicensed" then no license number is entered in the site settings. 
 
+### ExpressionEngine Pro shows as "unknown"
 
+If you Pro shows as "unknown" then the license number is entered in the site settings is incorrect or not recognized by the ExpressionEngine license server. 

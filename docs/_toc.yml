@@ -250,6 +250,8 @@
   items:
     - name: Pro Overview
       href: pro/overview.md
+    - name: Installation and License Activation
+      href: pro/installation.md
     - name: Configuration
       href: pro/configuration.md
     - name: Dashboard Management
