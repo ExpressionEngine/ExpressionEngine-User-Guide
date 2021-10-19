@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
-## Version 6.1.4 (Release: October 18, 2021)
+## Version 6.1.4 (Release: October 19, 2021)
 
 - **Bug Fixes** 💃🐛 
   
