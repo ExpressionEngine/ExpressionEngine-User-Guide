@@ -12,7 +12,7 @@
 [TOC]
 
 ## Overview 
-For users with appropriate level of access, ExpressionEngine Pro adds "front edit" links ( <img style="margin-bottom: 0px; vertical-align: middle;" src="../_images/pro_edit.png" alt="pro edit icon"> ) on the site's front-end that allow editing the contents of each entry field individually. This is done directly on front-end without going to the Control Panel.
+For users with the appropriate level of access, ExpressionEngine Pro adds "front edit" links ( <img style="margin-bottom: 0px; vertical-align: middle;" src="../_images/pro_edit.png" alt="pro edit icon"> ) on the site's front-end that allow editing the contents of each entry field individually. This is done directly on front-end without going to the Control Panel.
 
 Clicking the link opens a popup with the field that can be modified and saved. Along with editing, users can also use front edit popup to access the full entry for editing with live preview showing the current page you are on.
 
