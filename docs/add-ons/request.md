@@ -13,6 +13,14 @@
 
 The Request plugin allows you to get HTTP request variables in your templates.
 
+It can be used as single tag as well as tag pair. Using as tag pair will be useful if the variable requested is an array. When used tag tag pair, `{item}` will render the variable's value. 
+
+```
+{exp:request:get name="my-var"}
+<li>{item}</li>
+{/exp:request:get}
+```
+
 ## get
 
 Used to get a `$_GET` parameter in your template.
@@ -20,6 +28,7 @@ Used to get a `$_GET` parameter in your template.
 ### Parameters
 
 `name`: Name of the `GET` variable you would like. Returns false if not found.
+`separator`: Separator to use if the data is array. Only applicable when used as single tag. Defaults to `|`
 
 ### Example
 
@@ -34,6 +43,7 @@ Used to get a `$_POST` parameter in your template.
 ### Parameters
 
 `name`: Name of the `POST` variable you would like. Returns false if not found.
+`separator`: Separator to use if the data is array. Only applicable when used as single tag. Defaults to `|`
 
 ### Example
 
@@ -48,6 +58,7 @@ Used to get a `$_POST` or `$_GET` parameter in your template.
 ### Parameters
 
 `name`: Name of the `POST` or `$_GET` variable you would like. Returns false if not found.
+`separator`: Separator to use if the data is array. Only applicable when used as single tag. Defaults to `|`
 
 ### Example
 
