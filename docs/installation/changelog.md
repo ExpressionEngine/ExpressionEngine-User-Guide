@@ -7,6 +7,19 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
+## Version 6.1.4 (Release: October 18, 2021)
+
+- **Bug Fixes** 💃🐛 
+  
+  - Resolved [#1439](https://github.com/ExpressionEngine/ExpressionEngine/issues/1439) where the list of member's Roles was not fully populated on CP page.
+  - Resolved [#1426](https://github.com/ExpressionEngine/ExpressionEngine/issues/1426) where Request plugin did not handle arrays properly.
+  - Resolved [#1411](https://github.com/ExpressionEngine/ExpressionEngine/issues/1411) where length of Grid column name and label were not validated.
+  - Resolved [#1345](https://github.com/ExpressionEngine/ExpressionEngine/issues/1345) where redirect of banned visitor was throwing an error.
+  - Resolved issue where sufficient error message was not provided when 1-click update was failing.
+  - Resolved issue where style of Channel Form could be broken under certain conditions.
+  - Resolved issue where forum message attachments were not being filtered properly.
+  - Resolved issue where 'Login' button was not showing up on prolets after logout.
+
 ## Version 6.1.3 (Release: October 15, 2021)
 
 - **Bug Fixes** 💃🐛 
