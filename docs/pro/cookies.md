@@ -9,6 +9,8 @@
 
 # Cookie and Consent Management
 
+[TOC]
+
 ExpressionEngine Pro provides additional tools to improve management of cookies.
 
 ## Displaying the list of cookies

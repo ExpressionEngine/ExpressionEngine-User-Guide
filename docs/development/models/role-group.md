@@ -33,7 +33,7 @@ lang: php
 #### `Members`
 Members that are assigned to role. May or may not intersect with `PrimaryMembers`.
 
-NOTE: **Note:** To get full list of members assigned to role, use [`getAllMembers()`](#getallmembers) function.
+NOTE: **Note:** To get full list of members assigned to role, use [`getAllMembers()`](development/models/role.md#getallmembers) function.
 
 ## Methods
 This model has no methods.

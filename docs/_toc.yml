@@ -248,12 +248,16 @@
       href: add-ons/emoticon.md
 - name: ExpressionEngine Pro
   items:
-    - name: Pro Overview
+    - name: Overview
       href: pro/overview.md
+    - name: Installation
+      href: pro/installation.md
     - name: Configuration
       href: pro/configuration.md
     - name: Dashboard Management
       href: pro/dashboard_management.md
+    - name: Dock
+      href: pro/dock.md
     - name: Front-end Content Management
       href: pro/frontend.md
     - name: Cookies management
@@ -266,6 +270,10 @@
           href: pro/development/fieldtypes.md
         - name: Prolets
           href: pro/development/prolets.md
+    - name: Permissions
+      href: pro/permissions.md
+    - name: Troubleshooting
+      href: pro/troubleshooting.md
 - name: Command Line Interface (CLI)
   items:
     - name: Introduction

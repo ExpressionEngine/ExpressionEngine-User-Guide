@@ -25,6 +25,10 @@ This is the name of your website. It may contain spaces and punctuation. This na
 
 This will be used in any code-based references to your Site.
 
+### Site License Key
+
+For products that use license validation through the ExpressionEngine Store, a Site License Key is required. (Video: [Attach your product to a site)](https://youtu.be/F80Bl8pid_0) )
+
 ### Website online?
 
 This indicates whether or not your site is "live" and displayed to the public. If you set this preference to "Offline" only members of the Super Admin group, and all groups with the "Offline" Website Access permission, will be able to see the site. All other users will be shown the System Offline page, which you can edit at `Developer --> Templates --> Messages --> System Offline`.
