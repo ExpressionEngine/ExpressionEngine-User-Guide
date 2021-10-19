@@ -62,7 +62,9 @@ There are several settings that could prevent the Dock from showing on the front
 
 ### ExpressionEngine Pro shows as "unlicensed", "unknown", "invalid key", or "missing key"
 
-If Pro shows one of these statuses then ensure that your purchased Pro license is attached to a site and double check that your license key in your Site Settings correctly matches the site license key for which your Pro product is attached. For more information on purchasing a license and installing your key read through the [installation docs](pro/installation.md#purchasing-an-expressionengine-pro-license).
+- If you have recently made updates to your settings or switch domains in your ExpressionEngine Store licenses, then this may be temporary. A page refresh may resolve the issue in this case.
+
+- Ensure that your purchased Pro license is attached to a site and double check that your license key in your Site Settings correctly matches the site license key for which your Pro product is attached. For more information on purchasing a license and installing your key read through the [installation docs](pro/installation.md#purchasing-an-expressionengine-pro-license).
 
 ### A License Error alert shows in the Control Panel
 
