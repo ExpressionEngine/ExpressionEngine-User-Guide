@@ -70,7 +70,7 @@ The Statuses tab allows management of the channel's assigned statuses. By defaul
 Statuses have the following settings:
 
 - **Name** -- The name for the status. It is what will be displayed when creating a new channel entry.
-- **Highlight color** -- Specify a highlight color for this status. This is the color of the status name in the [Entry Manager](control-panel/entry-manager.md) main table. This field will take standard [CSS color values](http://www.w3.org/TR/REC-CSS1#color-units) as input.
+- **Highlight color** -- Specify a highlight color for this status. This is the color of the status name in the [Entry Manager](control-panel/entry-manager.md) main table. This field will take standard [CSS color values](https://www.w3.org/TR/REC-CSS1#color-units) as input.
 - **Status access** -- Allows you to specify whether or not a Member Role can access a particular status in the Publish page. Only works with members that have access to the Control Panel (besides the Super Admin group). This feature can be used to establish a workflow for multiple Roles. One group might submit entries that are placed in a "closed" or "draft" status, while another group can review the entry and assign it to be "open".
 
 ---

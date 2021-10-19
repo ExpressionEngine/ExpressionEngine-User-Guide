@@ -91,7 +91,7 @@ This section is an overview of syntax changes for third party integration with t
 
 ### General Syntax Changes
 
-ExpressionEngine 3.0 adopts [PSR-1](http://www.php-fig.org/psr/psr-1/) and [PSR-4](http://www.php-fig.org/psr/psr-4/), which means `StudlyCaps` for class names, `camelCase` for method names, [namespaces](http://php.net/namespace), and [autoloading](http://php.net/autoload).
+ExpressionEngine 3.0 adopts [PSR-1](https://www.php-fig.org/psr/psr-1/) and [PSR-4](https://www.php-fig.org/psr/psr-4/), which means `StudlyCaps` for class names, `camelCase` for method names, [namespaces](https://php.net/namespace), and [autoloading](https://php.net/autoload).
 
 #### CP URLs
 
@@ -353,11 +353,11 @@ For UX we have published the (link) Human Interface Guidelines for interactions 
 
 To protect the users control panel URL from ending up in web server referrer logs, use `Cp::masked_url` from the Control Panel Class:
 
-    ee()->cp->masked_url('http://www.google.com');
+    ee()->cp->masked_url('https://www.google.com');
 
 Will result in:
 
-    https://example.com?URL=http://www.google.com
+    https://example.com?URL=https://www.google.com
 
 #### Internal Links
 

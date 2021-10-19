@@ -17,7 +17,7 @@
 
 **Control Panel Location: `Developer > Utilities > Communicate`**
 
-The Communicate tab in the Control Panel provides access to the email sending part of the system. Email can be sent in plain text or HTML format, and supported email sending protocols are [SMTP](http://www.webopedia.com/TERM/S/SMTP.html), [Sendmail](http://www.sendmail.org/), and PHP [mail](http://us2.php.net/manual/en/function.mail.php).
+The Communicate tab in the Control Panel provides access to the email sending part of the system. Email can be sent in plain text or HTML format, and supported email sending protocols are [SMTP](https://www.webopedia.com/TERM/S/SMTP.html), [Sendmail](https://www.sendmail.org/), and PHP [mail](https://us2.php.net/manual/en/function.mail.php).
 
 NOTE: **Note:** In the Settings area of the Control Panel you'll find the [Outgoing Email](control-panel/settings/email.md) page.
 
@@ -51,7 +51,7 @@ You can also Save Changes at any point you like; you don't have to complete the 
 
 **Control Panel Location: `Developer > Utilities > PHP Info`**
 
-The PHP Info page of the Control Panel allows you to see the configuration details of your PHP installation, via the standard [phpinfo()](http://www.php.net/phpinfo) command.
+The PHP Info page of the Control Panel allows you to see the configuration details of your PHP installation, via the standard [phpinfo()](https://www.php.net/phpinfo) command.
 
 The page will show a great deal of information about your server, server configuration, PHP installation, etc., which can be very useful if you are trying to troubleshoot a problem or determine whether your server supports a certain feature.
 

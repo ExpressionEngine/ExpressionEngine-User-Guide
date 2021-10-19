@@ -343,7 +343,7 @@ Within your control panel method, or potentially the constructor, just set `ee()
 
 ### Javascript
 
-ExpressionEngine includes both its own JavaScript library as well as the [The jQuery](http://jquery.com/) JavaScript library, enabling developers to easily include JavaScript enhancements. It is worth noting some 'best practices' when using JavaScript in your control panel:
+ExpressionEngine includes both its own JavaScript library as well as the [The jQuery](https://jquery.com/) JavaScript library, enabling developers to easily include JavaScript enhancements. It is worth noting some 'best practices' when using JavaScript in your control panel:
 
 - Loading jQuery plugins:
 

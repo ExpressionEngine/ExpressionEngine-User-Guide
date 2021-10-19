@@ -205,7 +205,7 @@ Perform a ROT13 substitution cypher to the content.
 Normalize a URL to use in markup. Primarily to make sure it contains a valid protocol. For instance if `{website}` was `www.example.com`:
 
     {website:url}
-    {!-- http://www.example.com/ --}
+    {!-- https://www.example.com/ --}
 
 Note that it is best to use a [URL](fieldtypes/url.md) field, so this is more useful for values coming from plugins or outside sources.
 

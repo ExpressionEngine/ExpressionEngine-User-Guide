@@ -30,7 +30,7 @@ Templates are organized into Template Groups. A Template Group is analogous to a
 In ExpressionEngine, a URL always contains the following structure, which allows a Template Group and a specific Template to be shown:
 
 ```md
-http://example.com/template_group/template
+https://example.com/template_group/template
 ```
 
 In addition to HTML and other markup, templates usually contain [ExpressionEngine Tags](templates/language.md), which allows information to be served dynamically.
@@ -83,7 +83,7 @@ The hit count for each template can be manually altered in the template's prefer
 NOTE: **Important:** Enabling PHP in a template enables anyone with editing rights for that template to become a de-facto Super Admin since they can execute any PHP they want in that template, including PHP that can reveal information about your system, PHP that can delete data from your database, etc. Exercise extreme caution before enabling this option if you permit others to edit your templates.
 Additionally, PHP code in templates will operate slower than same code wrapped in plugin or module function.
 
-ExpressionEngine allows you to place [PHP](http://www.php.net/) code within your Templates so that it can be executed, allowing more dynamic capability with your content.
+ExpressionEngine allows you to place [PHP](https://www.php.net/) code within your Templates so that it can be executed, allowing more dynamic capability with your content.
 
 In order for this feature to be available, it needs to be enabled by adding 
 ```php

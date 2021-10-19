@@ -346,7 +346,7 @@ Set the redirect destination for visitors with banned IP addresses. Must be used
 
 Example Usage:
 
-    $config['ban_destination'] = 'http://www.example.com';
+    $config['ban_destination'] = 'https://www.example.com';
 
 ### `ban_message`
 
@@ -415,7 +415,7 @@ Set a URL to serve as the redirect destination for throttled visitors. [Throttli
 
 Example Usage:
 
-    $config['banishment_url'] = 'http://www.yahoo.com';
+    $config['banishment_url'] = 'https://www.yahoo.com';
 
 **Also found in CP:** `Settings --> Access Throttling`: [URL for Redirect](control-panel/settings/throttling.md#redirect)
 
@@ -595,7 +595,7 @@ Set the full URL to the directory containing CAPTCHA images.
 
 Example Usage:
 
-    $config['captcha_url'] = 'http://www.example.com/images/captchas';
+    $config['captcha_url'] = 'https://www.example.com/images/captchas';
 
 **Also found in CP:** `Settings --> CAPTCHA`: [Full URL to CAPTCHA Folder](control-panel/settings/captcha.md#captcha-path)
 
@@ -738,7 +738,7 @@ Example Usage:
 
 ### `cookie_domain`
 
-Optionally specify a domain the cookie is available to. By default, the exact hostname of the requested page is set as the cookie domain. For example, if the page at `http://www.example.com/blog/an-entry-title` is loaded and the cookie domain is left blank in ExpressionEngine's configuration, the browser will use `www.example.com` as the cookie domain. The browser will only make these cookies available when the page's hostname is _exactly_ `www.example.com`.
+Optionally specify a domain the cookie is available to. By default, the exact hostname of the requested page is set as the cookie domain. For example, if the page at `https://www.example.com/blog/an-entry-title` is loaded and the cookie domain is left blank in ExpressionEngine's configuration, the browser will use `www.example.com` as the cookie domain. The browser will only make these cookies available when the page's hostname is _exactly_ `www.example.com`.
 
 If the cookie domain is explicitly specified, however, the browser will make the cookie available whenever the requested page's hostname _contains_ the cookie domain. For example, setting the cookie domain to `.example.com` will ensure the cookie is shared whenever the requested page's hostname includes `example.com`, `www.example.com`, `admin.example.com`, `blog.example.com`, and so on.
 
@@ -858,7 +858,7 @@ Example Usage:
 
 Also available for use in the [site index file](#site-index-file), `index.php`, and the [CP index file](#cp-index-file), `admin.php`. Example Usage:
 
-    $assign_to_config['cp_url'] = 'http://domain2.com/admin.php';
+    $assign_to_config['cp_url'] = 'https://domain2.com/admin.php';
 
 **Also found in CP:** `Settings --> URL and Path Settings`: [URL to your Control Panel index page](control-panel/settings/urls.md#control-panel-directory)
 
@@ -1914,7 +1914,7 @@ Sets the frontend login to apply to multiple sites.
 
 Example Usage:
 
-    $config['multi_login_sites'] = 'https://example.com|http://different_example.com';
+    $config['multi_login_sites'] = 'https://example.com|https://different_example.com';
 
 For more information, see [MSM multi site login](msm/overview.md#multi-site-login)
 
@@ -2180,8 +2180,8 @@ Set the method the system uses for page redirection.
 
 | Value    | Behavior                                                                         |
 | -------- | -------------------------------------------------------------------------------- |
-| redirect | Use header('Location: http://www.example.com/'); (default)                       |
-| refresh  | Use header('Refresh: 0;url=http://www.example.com/'); (Windows servers) (slower) |
+| redirect | Use header('Location: https://www.example.com/'); (default)                       |
+| refresh  | Use header('Refresh: 0;url=https://www.example.com/'); (Windows servers) (slower) |
 
 Example Usage:
 
@@ -2449,7 +2449,7 @@ Example Usage:
 
 Enable encryption for PayPal purchase links and buttons created by Simple Commerce.
 
-NOTE: **Important:** Enabling this requires that your server have [OpenSSL](http://php.net/manual/en/ref.openssl.php) support compiled in PHP. Ask your server administrator for this information.
+NOTE: **Important:** Enabling this requires that your server have [OpenSSL](https://php.net/manual/en/ref.openssl.php) support compiled in PHP. Ask your server administrator for this information.
 
 NOTE: **Note:** Enabling this requires that you use a public certificate and private key. Please read the section on [Encrypted Website Payments](add-ons/simple-commerce/index.md#encrypted-website-payments) for full details. To be the most effective, you should set your PayPal account settings to only accept encrypted payments.
 
@@ -2748,7 +2748,7 @@ Example Usage:
 
 Also available for use in the [site index file](#site-index-file), `index.php`. Example Usage:
 
-    $assign_to_config['site_url'] = 'http://domain2.com';
+    $assign_to_config['site_url'] = 'https://domain2.com';
 
 **Also found in CP:** `Settings --> URL and Path Settings`: [URL to the root directory of your site](control-panel/settings/urls.md#website-root-directory)
 
@@ -2989,7 +2989,7 @@ Example Usage:
         1 => array(                                                            // ID of upload destination
             'name'        => 'Staging Image Uploads',                          // Display name in control panel
             'server_path' => '/home/user/example.com/staging/images/uploads/', // Server path to upload directory
-            'url'         => 'http://staging.example.com/images/uploads/'      // URL of upload directory
+            'url'         => 'https://staging.example.com/images/uploads/'      // URL of upload directory
         )
     );
 
@@ -2997,7 +2997,7 @@ Example Usage:
 
 ### `uri_protocol`
 
-Specify which server global should be used to retrieve the URI string. The default setting of `AUTO` works for most servers. [Learn more](http://www.php.net/manual/en/reserved.variables.server.php) about these server globals.
+Specify which server global should be used to retrieve the URI string. The default setting of `AUTO` works for most servers. [Learn more](https://www.php.net/manual/en/reserved.variables.server.php) about these server globals.
 
 | Value          | Behavior                    |
 | -------------- | --------------------------- |

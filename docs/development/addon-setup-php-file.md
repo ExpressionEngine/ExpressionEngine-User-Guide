@@ -64,13 +64,13 @@ This is a brief description of the add-on. This value is used in the manual disp
 
     'version' => '2.0.0'
 
-This is the version number of the add-on. We recommend using [Semantic Versioning](http://semver.org). This is a **required** key.
+This is the version number of the add-on. We recommend using [Semantic Versioning](https://semver.org). This is a **required** key.
 
 ### `namespace`
 
     'namespace' => 'Example\HelloWorld'
 
-This is the [PHP namespace](http://php.net/namespace) for your add-on. This is a **required** key.
+This is the [PHP namespace](https://php.net/namespace) for your add-on. This is a **required** key.
 
 This key associates your add-on directory with a namespace. ExpressionEngine will look inside your add-on directory any time it encounters a class name that begins with this namespace.
 

@@ -54,4 +54,4 @@ Make sure you include the folder name in the URL and include a trailing slash:
 
 You can optional set the tag to output the name of the country as text by using the type="text" parameter.
 
-NOTE: **Note:** This product includes GeoLite data created by MaxMind, available from <http://maxmind.com/>.
+NOTE: **Note:** This product includes GeoLite data created by MaxMind, available from <https://maxmind.com/>.

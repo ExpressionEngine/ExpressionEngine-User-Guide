@@ -57,13 +57,13 @@ You may specify a particular Template to display if a purchase is cancelled mid-
 
     country_code="DE"
 
-This parameter controls the language that will be used on the initial PayPal shopping cart / log in screen when someone makes a purchase from your store. Use the two letter country abbreviation, following the [ISO 3166 standard](http://en.wikipedia.org/wiki/ISO_3166-1#Current_codes). If no parameter is given, a default of 'US' will be used.
+This parameter controls the language that will be used on the initial PayPal shopping cart / log in screen when someone makes a purchase from your store. Use the two letter country abbreviation, following the [ISO 3166 standard](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes). If no parameter is given, a default of 'US' will be used.
 
 ### `currency=`
 
     currency="USD"
 
-The three letter representation of the currency for the item prices in the store, using the ISO 4217 standard. Default is "USD" (U.S. Dollars). For other currencies, please refer to [Wikipedia's ISO 4127 listing](http://en.wikipedia.org/wiki/ISO_4217#Active_codes).
+The three letter representation of the currency for the item prices in the store, using the ISO 4217 standard. Default is "USD" (U.S. Dollars). For other currencies, please refer to [Wikipedia's ISO 4127 listing](https://en.wikipedia.org/wiki/ISO_4217#Active_codes).
 
 ### `decimal=`
 
@@ -254,7 +254,7 @@ The steps required to use Encrypted Website Payments with PayPal are to:
 
 For the most security, you may also wish to set up your PayPal account so that it [only accepts encrypted payments](#accept-encrypted-payments-only).
 
-PayPal accepts only X.509 public certificates in OpenSSL PEM format, from any established certificate authority, such as [VeriSign](http://www.verisign.com/) You can also create your own private key and public certificate using the open source software [OpenSSL](http://www.openssl.org/). Most \*nix based operating systems (including Macintosh OS X) will already have this software compiled and ready to use. If you are running Windows, there are [pre-compiled binaries](http://www.openssl.org/related/binaries.html) available. The sections that follow describe creating your public certificate and private key using OpenSSL.
+PayPal accepts only X.509 public certificates in OpenSSL PEM format, from any established certificate authority, such as [VeriSign](https://www.verisign.com/) You can also create your own private key and public certificate using the open source software [OpenSSL](https://www.openssl.org/). Most \*nix based operating systems (including Macintosh OS X) will already have this software compiled and ready to use. If you are running Windows, there are [pre-compiled binaries](https://www.openssl.org/related/binaries.html) available. The sections that follow describe creating your public certificate and private key using OpenSSL.
 
 ### Generate a private key
 

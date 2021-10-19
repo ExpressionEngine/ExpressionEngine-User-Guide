@@ -80,7 +80,7 @@ With that out of the way, we will want to actually create a YouTube link. To do 
                 return;
             }
 
-            this.make('link', 'http://youtube.com');
+            this.make('link', 'https://youtube.com');
         }
     });
 
@@ -117,7 +117,7 @@ Now it would be nice if we could ask the user for a video ID to use. So we will 
         {
             this.$target.dialog('close');
             this.Selection.set(this.state.selection);
-            this.make('link', 'http://youtube.com/watch?v=' + $input.val());
+            this.make('link', 'https://youtube.com/watch?v=' + $input.val());
             return false;
         }
     });
@@ -154,7 +154,7 @@ To account for this, the finalizing code is passed to your handler as the second
     {
         this.$target.dialog('close');
         this.Selection.set(this.state.selection);
-        this.make('link', 'http://youtube.com/watch?v=' + $input.val());
+        this.make('link', 'https://youtube.com/watch?v=' + $input.val());
         this.finalize();
         return false;
     }

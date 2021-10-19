@@ -115,7 +115,7 @@ The matches operator checks if a string matches a regular expression:
 
     {if segment_3 ~ "/^P\d+/"}paginated{/if}
 
-NOTE: **Note:** The second value must be a valid regular expression. All [PHP PCRE pattern modifiers](http://us1.php.net/manual/en/reference.pcre.pattern.modifiers.php) are allowed.
+NOTE: **Note:** The second value must be a valid regular expression. All [PHP PCRE pattern modifiers](https://us1.php.net/manual/en/reference.pcre.pattern.modifiers.php) are allowed.
 
 ##### Using Comparison Operators with Numbers
 

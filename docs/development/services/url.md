@@ -32,7 +32,7 @@ Or:
 
 ## When to use `compile()`
 
-The CP/URL object has a magic `__toString()` method that compiles the object into a string when the object is treated as a string (see: PHP's documentation on the magic [\_\_toString() method](http://php.net/manual/en/language.oop5.magic.php#object.tostring) for more information). The `compile()` method exists for those occasions when the object is treated as an object but you need a string instead. As per [PHP's documentation on arrays](http://php.net/manual/en/language.types.array.php): "Arrays and objects can not be used as keys. Doing so will result in a warning: _Illegal offset type._" You will also want to compile the object when you want to JSON encode the URL otherwise you will get a JSON object instead of a string.
+The CP/URL object has a magic `__toString()` method that compiles the object into a string when the object is treated as a string (see: PHP's documentation on the magic [\_\_toString() method](https://php.net/manual/en/language.oop5.magic.php#object.tostring) for more information). The `compile()` method exists for those occasions when the object is treated as an object but you need a string instead. As per [PHP's documentation on arrays](https://php.net/manual/en/language.types.array.php): "Arrays and objects can not be used as keys. Doing so will result in a warning: _Illegal offset type._" You will also want to compile the object when you want to JSON encode the URL otherwise you will get a JSON object instead of a string.
 
 For example:
 

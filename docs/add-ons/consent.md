@@ -241,7 +241,7 @@ If this tag would not output any consent requests due to your filters, the conte
 
         <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 
-        <!--using the jQuery Form plugin http://jquery.malsup.com/form/-->
+        <!--using the jQuery Form plugin https://jquery.malsup.com/form/-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.js" type="text/javascript"></script>
 
         <script type="text/javascript">

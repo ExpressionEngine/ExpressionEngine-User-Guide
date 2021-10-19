@@ -11,7 +11,7 @@
 
 [TOC]
 
-The RSS Parser plugin provides RSS parsing tags for your templates. It uses [SimplePie](http://simplepie.org) to parse and render any RSS or Atom feed you throw at it.
+The RSS Parser plugin provides RSS parsing tags for your templates. It uses [SimplePie](https://simplepie.org) to parse and render any RSS or Atom feed you throw at it.
 
 ## Example
 

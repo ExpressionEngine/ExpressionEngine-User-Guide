@@ -98,7 +98,7 @@ NOTE: **Note:** Calling this function is the same as doing this: `site_url(uri_s
 
 Returns the URI segments of any page that contains this function. For example, if your URL was this:
 
-    http://some-site.com/blog/comments/123
+    https://some-site.com/blog/comments/123
 
 The function would return:
 
@@ -129,7 +129,7 @@ Creates a standard HTML anchor link based on your local site URL.
 
 The first parameter can contain any segments you wish appended to the URL. As with the `site_url()` function above, segments can be a string or an array.
 
-NOTE: **Note:** If you are building links that are internal do not include the base URL (http://...). This will be added automatically from the information specified in your config file. Include only the URI segments you wish appended to the URL.
+NOTE: **Note:** If you are building links that are internal do not include the base URL (https://...). This will be added automatically from the information specified in your config file. Include only the URI segments you wish appended to the URL.
 
 The second segment is the text you would like the link to say. If you leave it blank, the URL will be used.
 
@@ -174,7 +174,7 @@ Here is an example with attributes:
 
 NOTE: **Note:** The above attributes are the function defaults so you only need to set the ones that are different from what you need. If you want the function to use all of its defaults simply pass an empty array in the third parameter: `echo anchor_popup('news/local/123', 'Click Me!', array());`
 
-NOTE: **Note:** The `window_name` is not really an attribute, but an argument to the JavaScript [window.open()](http://www.w3schools.com/jsref/met_win_open.asp) method, which accepts either a window name or a window target.
+NOTE: **Note:** The `window_name` is not really an attribute, but an argument to the JavaScript [window.open()](https://www.w3schools.com/jsref/met_win_open.asp) method, which accepts either a window name or a window target.
 
 NOTE: **Note:** Any other attribute than the listed above will be parsed as an HTML attribute to the anchor tag.
 

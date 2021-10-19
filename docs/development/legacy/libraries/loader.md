@@ -159,7 +159,7 @@ The first parameter is required. It is the name of the view file you would like 
 
 NOTE: **Note:** The `.php` file extension does not need to be specified unless you use something other than `.php`.
 
-The second **optional** parameter can take an associative array or an object as input, which it runs through the PHP [extract()](http://www.php.net/extract) function to convert to variables that can be used in your view files.
+The second **optional** parameter can take an associative array or an object as input, which it runs through the PHP [extract()](https://www.php.net/extract) function to convert to variables that can be used in your view files.
 
 The third **optional** parameter lets you change the behavior of the method so that it returns data as a string rather than sending it to your browser. This can be useful if you want to process the data in some way. If you set the parameter to TRUE (boolean) it will return data. The default behavior is FALSE, which sends it to your browser. Remember to assign it to a variable if you want the data returned:
 
@@ -173,7 +173,7 @@ The third **optional** parameter lets you change the behavior of the method so t
 | \$val     | `Mixed`     | Optional variable value                         |
 | Returns   | `EE_Loader` | EE_Loader instance (method chaining)            |
 
-This method takes an associative array as input and generates variables using the PHP [extract()](http://www.php.net/extract) function. This method produces the same result as using the second parameter of the `ee()->load->view()` method above. The reason you might want to use this method independently is if you would like to set some global variables in the constructor of your controller and have them become available in any view file loaded from any method. You can have multiple calls to this method. The data get cached and merged into one array for conversion to variables.
+This method takes an associative array as input and generates variables using the PHP [extract()](https://www.php.net/extract) function. This method produces the same result as using the second parameter of the `ee()->load->view()` method above. The reason you might want to use this method independently is if you would like to set some global variables in the constructor of your controller and have them become available in any view file loaded from any method. You can have multiple calls to this method. The data get cached and merged into one array for conversion to variables.
 
 ### `get_var($key)`
 

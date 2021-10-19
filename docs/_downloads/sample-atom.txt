@@ -4,7 +4,7 @@
 {exp:rss:feed channel="{master_channel_name}"}
 
 <?xml version="1.0" encoding="{encoding}"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{channel_language}">
+<feed xmlns="https://www.w3.org/2005/Atom" xml:lang="{channel_language}">
 
     <title type="text"><![CDATA[{channel_name}]]></title>
     <subtitle type="text"><![CDATA[{channel_name} - {channel_description}]]></subtitle>
@@ -12,7 +12,7 @@
     <link rel="self" type="application/atom+xml" href="{path='{atom_feed_location}'}" />
     <updated>{gmt_edit_date format='%Y-%m-%dT%H:%i:%sZ'}</updated>
     <rights>Copyright (c) {gmt_date format="%Y"}, {author}</rights>
-    <generator uri="http://expressionengine.com/" version="{version}">ExpressionEngine</generator>
+    <generator uri="https://expressionengine.com/" version="{version}">ExpressionEngine</generator>
     <id>tag:{trimmed_url},{gmt_date format="%Y:%m:%d"}</id>
 
 {exp:channel:entries channel="{master_channel_name}" limit="15" dynamic_start="on" disable="member_data|pagination"}
