@@ -9,24 +9,45 @@
 
 # Front-end Content Management
 
+[TOC]
+
+## Overview 
 For users with appropriate level of access, ExpressionEngine Pro adds "front edit" links ( <img style="margin-bottom: 0px; vertical-align: middle;" src="../_images/pro_edit.png" alt="pro edit icon"> ) on the site's front-end that allow editing the contents of each entry field individually. This is done directly on front-end without going to the Control Panel.
 
 Clicking the link opens a popup with the field that can be modified and saved. Along with editing, users can also use front edit popup to access the full entry for editing with live preview showing the current page you are on.
 
-![edit popup](_images/pro_edit_popup.png)
+![edit popup](_images/ee-pro-window.png)
 
 The links are being placed in your HTML right before the field's tag (or opening tag if field tag pair is used).
 
+## Saving Content
+After editing data, content can be saved by one of two ways:
+- Clicking on "Save", which will trigger a page reload
 
+![save](_images/ee-pro-save.png)
 
-## Disabling the link
+- Clicking the alternate "Save without Reload", which will save the content without reloading the page. This would require a manual page refresh to see any updated content.
+
+![save without reload](_images/ee-pro-save-reload.png)
+
+## Unsaved Changes
+When a user edits data and has unsaved changes, Pro will create an autosave of the entry and alert the user via a notification on the edit window with unsaved changes. The autosave is triggerd based on the default autosave interval of 60seconds. If you want to ensure users do not accidentally loose unsaved changes adjust the `[autosave_interval_seconds]` system config override to a lower interval between autosaves. A setting of 10 seconds is the recommendation.
+
+Example Usage:
+
+```
+$config['autosave_interval_seconds'] = '10'; 
+```
+![unsaved changes](_images/pro_unsaved_changes.png)
+
+## Disabling The Front Edit Link
 
 There are several ways to disable front-end editing links:
  - Globally with [configuration overrides](pro/configuration.md#disable_frontedit) or in [General Settings](pro/configuration.md#general-settings)
  - Via the Dock on the front-end by toggling Edit Mode on/off.
  - In the template by using [ExpressionEngine template comments](#ee-comment), [HTML comments](#ee-comment), or [field parameter](#field-tag-parameter)
 
-### Disabling link in the template
+### Disabling Front Edit Link in the template
 
 #### ExpressionEngine Comment
 
@@ -102,15 +123,6 @@ if( $(".eeFrontEdit").length > 0){
         $(".pro-edit-link").show();
     }
 ```
-## Unsaved Changes
-When a user edits data and has unsaved changes, Pro will create an autosave of the entry and alert the user via a notification on the edit window with unsaved changes. The autosave is triggerd based on the default autosave interval of 60seconds. If you want to ensure users do not accidentally loose unsaved changes adjust the `[autosave_interval_seconds]` system config override to a lower interval between autosaves. A setting of 10 seconds is the recommendation.
-
-Example Usage:
-
-```
-$config['autosave_interval_seconds'] = '10'; 
-```
-![unsaved changes](_images/pro_unsaved_changes.png)
 
 ## Reinitialize ExpressionEngine Pro Javascript
 There may be times, such as when using AJAX, that page content is loaded after ExpressionEngine Pro has been initialized on a page. When this happens edit links may not work or even render. To fix this, you need to included `EE.pro.refresh();` in your script. 

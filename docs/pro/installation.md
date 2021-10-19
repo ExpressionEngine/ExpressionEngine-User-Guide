@@ -20,7 +20,7 @@ Similar to ExpressionEngine add-ons, to install Pro navigate to the [Add-on Mana
 ![install pro](_images/ee-pro-uninstall.png)
 
 ## Trial use of ExpressionEngine Pro
-When used in a local development environment with an [approved top-level domain](pro/installation.md#approved-top-level-domains) or hosted in an [approved PaaS environment](pro/installation.md#approved-platform-as-a-service-paas-domain), ExpressionEngine Pro (including Low Search and Low Variables) can be used freely. All features are available to users while in this trial mode.
+When used in a local development environment with an [approved top-level domain](pro/installation.md#approved-top-level-domains) or hosted in an [approved PaaS environment](pro/installation.md#approved-platform-as-a-service-paas-domains), ExpressionEngine Pro (including Low Search and Low Variables) can be used freely. All features are available to users while in this trial mode.
 
 ![Pro trial](_images/ee-pro-trial.png)
 
@@ -71,14 +71,13 @@ After purchasing your first license for your default site, additional MSM licens
 ## Activating Your License
 Follow these steps to use your purchased Pro license:
 
-1. Go to your [ExpressionEngine Store Account](https://expressionengine.com/store/licenses) and attach the license to a site (Video: [Attach your product to a site)](https://youtu.be/F80Bl8pid_0) ). 
+1. Go to your [ExpressionEngine Store Account](https://expressionengine.com/store/licenses) and attach the license to a site (Video: [Attach your product to a site)](https://youtu.be/F80Bl8pid_0 ). 
 
-<div class="video-wrapper">
-<iframe src="https://www.youtube.com/embed/F80Bl8pid_0?vq=HD1080" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</div>
 
-2. Next, enter your site license key in your [General Settings](control-panel/settings/general.md) (Settings -> General Settings -> Site License Key )
+2. Next, enter your site license key in your [General Settings](control-panel/settings/general.md) (Settings -> General Settings -> Site License Key)
 
 ![license key](_images/ee-pro-site-license-key.png)
 
-Your ExpressionEngine Pro installation should now should as active.
+**Your ExpressionEngine Pro installation should now should show as active.**
+
+![Valid install](_images/ee-pro-valid-install.png)

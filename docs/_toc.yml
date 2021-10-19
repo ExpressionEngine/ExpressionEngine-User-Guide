@@ -248,9 +248,9 @@
       href: add-ons/emoticon.md
 - name: ExpressionEngine Pro
   items:
-    - name: Pro Overview
+    - name: Overview
       href: pro/overview.md
-    - name: Installation and License Activation
+    - name: Installation
       href: pro/installation.md
     - name: Configuration
       href: pro/configuration.md
