@@ -43,9 +43,9 @@ $config['autosave_interval_seconds'] = '10';
 ## Disabling The Front Edit Link
 
 There are several ways to disable front-end editing links:
- - Globally with [configuration overrides](pro/configuration.md#disable_frontedit) or in [General Settings](pro/configuration.md#general-settings)
+ - Globally with [configuration overrides](pro/configuration.md#enable_frontedit_links) or in [General Settings](pro/configuration.md#general-settings)
  - Via the Dock on the front-end by toggling Edit Mode on/off.
- - In the template by using [ExpressionEngine template comments](#ee-comment), [HTML comments](#ee-comment), or [field parameter](#field-tag-parameter)
+ - In the template by using [ExpressionEngine template comments](#expressionengine-comment), [HTML comments](#html-comment), or [field parameter](#field-tag-parameter)
 
 ### Disabling Front Edit Link in the template
 

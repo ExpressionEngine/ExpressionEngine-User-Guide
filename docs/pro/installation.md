@@ -54,7 +54,7 @@ When used in a local development environment with an [approved top-level domain]
 - lndo.site
 
 ## Purchasing an ExpressionEngine Pro License
-ExpressionEngine Pro requires a license to be installed on a publicly visible domain. You can choose from yearly or monthly billing, as well as receive a discount for additional MSM sites.
+ExpressionEngine Pro requires a license to be installed on a publicly visible domain. You can choose from yearly or monthly billing, as well as receive a discount for additional MSM sites. If a site which was developed locally with ExpressionEngine Pro is deployed to a publicly visible site you will most likely see license error messages in your Control Panel. While not breaking the front-end of your site, an invalid license will prevent many Pro features from being used including front-end editing, Low Search, Low Variables, Cookies management, and more.
 
 
 ### Purchase Pro from the Control Panel
@@ -81,3 +81,15 @@ Follow these steps to use your purchased Pro license:
 **Your ExpressionEngine Pro installation should now should show as active.**
 
 ![Valid install](_images/ee-pro-valid-install.png)
+
+## Installation of Included Products
+An ExpressionEngine Pro license also includes access to other products. Currently this includes Low Search and Low Variables. Each of these can be downloaded separately and will be automatically installed with Pro if available in your `user/addons` folder. If you do not wish to use any of the additional products, just do not include these in your `user/addons` folder and they will not be installed.  If your site is already making use of Low Search, Low Variables, or other included products, they will continue to work as intended.
+
+### Downloading Included Products
+Included products (such as Low Search and Low Variables) can be downloaded from the [ExpressionEngine Store](https://expressionengine.com/add-ons). Once downloaded, simply unzip the product package and follow the standard [add-on install process](add-ons/overview.md#installing-add-ons).
+
+### Licenses for Included Products
+Once installed, included products will be licensed through the site license which Pro is attached to. Therefore, all you need to do is ensure that your [site license](pro/installation.md#activating-your-license) is setup correctly, and all your included products will just work.
+
+### Using Included Products Without Pro
+If you have installed included products along side your ExpressionEngine Pro installation, but do not wish to continue to use Pro, then you must purchase individual licenses for those products through the ExpressionEngine Store. Once those licenses are purchased and tied to a site in your Store account, then your products will again have full functionality.

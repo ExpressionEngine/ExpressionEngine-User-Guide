@@ -271,7 +271,7 @@
         - name: Prolets
           href: pro/development/prolets.md
     - name: Permissions
-      href: pro/permissions
+      href: pro/permissions.md
     - name: Troubleshooting
       href: pro/troubleshooting.md
 - name: Command Line Interface (CLI)

@@ -9,7 +9,14 @@
 
 # Troubleshooting ExpressionEngine Pro
 
-[TOC=3 hide]
+[TOC=1-3]
+
+## General
+### I'm unable to use many Pro features.
+If you are unable to use many of Pro features such as front-end editing, Low Search, Low Variables, Cookies management, or other features, then there is most likely an issue with your license. Ensure that your purchased Pro license is attached to a site and double check that your license key in your Site Settings correctly matches the site license key for which your Pro product is attached. For more information on purchasing a license and installing your key read through the [installation docs](pro/installation.md#purchasing-an-expressionengine-pro-license).
+
+### I do not see included products installed.
+If you do not see and wish to use products that are included with ExpressionEngine Pro such as Low Search and Low Variables, then they may not be installed. Please follow the [installation process for included products](pro/installation.md#installation-of-included-products) and ensure that products are installed correctly.
 
 ## Front edit links and Dock
 ### Dock and/or front edit links do not show on the front-end of the website.
@@ -23,7 +30,7 @@ There are several settings that could prevent the Dock from showing on the front
     If either of these conditions are met, then a user will need to be provided with a [login form](member/login.md) on the front-end of the site so to create an active session on the front-end and access ExpressionEngine Pro features.
 
 
-- [Role Permissions](pro/permissions/expressionEngine-pro-role-access) - Users must be assigned a role with proper permissions to use ExpressionEngine Pro on both the front and back-end of the site.
+- [Role Permissions](pro/permissions.md#expressionengine-pro-role-access) - Users must be assigned a role with proper permissions to use ExpressionEngine Pro on both the front and back-end of the site.
 
 - The Dock is disabled via settings or config override. Disabling the Dock will disable all of Pro's features on the front-end of your site.
     - Via Pro's [general settings](pro/configuration.md#general-settings), ensure that the "Enable Dock?" setting is toggled on.
@@ -45,14 +52,16 @@ There are several settings that could prevent the Dock from showing on the front
     - Via Pro's [general settings](pro/configuration.md#general-settings), ensure that the "Enable automatic front-end editing links" setting is toggled on.
     - Via the [`enable_frontedit_links` config override](pro/configuration.md#enable_frontedit_links). If in use, this override must be set to `'y'` for Pro to automatically insert front edit links.
 
-- Front edit links are disabled via HTML comments, EE template comments, or `diable` parameter. There are 3 ways to disable Pro's automatic generation of front edit links. Ensure that the template code your inspecting isn't surrounded by template comments or wrapped in a field tag using `disable="frontedit`. For details on these methods read the [docs regarding disabling Pro links](pro/frontend.md#disabling-the-link) 
+- Front edit links are disabled via HTML comments, EE template comments, or `diable` parameter. There are 3 ways to disable Pro's automatic generation of front edit links. Ensure that the template code your inspecting isn't surrounded by template comments or wrapped in a field tag using `disable="frontedit`. For details on these methods read the [docs regarding disabling Pro links](pro/frontend.md#disabling-the-front-edit-link) 
 
 ## License
 
-### ExpressionEngine Pro shows as "unlicensed"
+### ExpressionEngine Pro shows as "unlicensed", "unknown", "invalid key", or "missing key"
 
-If you Pro shows as "unlicensed" then no license number is entered in the site settings. 
+If Pro shows one of these statuses then ensure that your purchased Pro license is attached to a site and double check that your license key in your Site Settings correctly matches the site license key for which your Pro product is attached. For more information on purchasing a license and installing your key read through the [installation docs](pro/installation.md#purchasing-an-expressionengine-pro-license).
 
-### ExpressionEngine Pro shows as "unknown"
+### A License Error alert shows in the Control Panel
 
-If you Pro shows as "unknown" then the license number is entered in the site settings is incorrect or not recognized by the ExpressionEngine license server. 
+If a license error alert is showing in the Control Panel, such as the one below, then there is an issue with your site license. First ensure that your purchased Pro license is attached to a site and double check that your license key in your Site Settings correctly matches the site license key for which your Pro product is attached. For more information on purchasing a license and installing your key read through the [installation docs](pro/installation.md#purchasing-an-expressionengine-pro-license).
+
+![license error](_images/ee-pro-license-error.png)

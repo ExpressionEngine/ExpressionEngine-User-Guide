@@ -52,7 +52,7 @@ Pro is currently shipped with the Entries prolet. Clicking on the Entries prolet
 ![dock entries](_images/ee-pro-dock-entries.png)
 
 ### Custom Prolets
-Developers may create third-party prolets that can be installed with add-ons. Read the [docs on creating prolets](pro/development/prolets) for more information on how to create and install third-party prolets.
+Developers may create third-party prolets that can be installed with add-ons. Read the [docs on creating prolets](pro/development/prolets.md) for more information on how to create and install third-party prolets.
 
 ![dock prolets](_images/ee-pro-dock-prolets.png)
 
