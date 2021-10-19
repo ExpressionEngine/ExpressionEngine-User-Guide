@@ -19,7 +19,7 @@ The Dock is a central component of ExpressionEngine Pro's front-end functionalit
 ## Controls
 
 ### Drag Handle
-The Dock can be repositioned on the screen by click and holding the drag handle while moving the Dock around on the screen.
+The Dock can be repositioned on the screen by clicking and holding the drag handle while moving the Dock around on the screen.
 
 ![dock drag handle](_images/ee-pro-dock-drag.png)
 
@@ -44,10 +44,10 @@ The Control Panel button on the Dock will open the site's Control Panel in a new
 ![dock control panel button](_images/ee-pro-dock-cp.png)
 
 ## Prolets
-Prolets are add-on components that reveal some of add-on's functionality for the Control Panel to the front-end, making possible to edit data directly on page where it belongs.
+Prolets are add-on components that reveal some of add-on's functionality for the Control Panel to the front-end, making it possible to edit data directly on the page where it belongs.
 
 ### Entries Prolet
-Pro is currently shipped with the Entries prolet. Clicking on the Entries prolet opens a prolet window with all entries currently listed.
+Pro is currently shipped with the Entries prolet. Clicking on the Entries prolet opens a prolet window with all entries currently listed. Allowing you to quickly find and edit other entries in your site.
 
 ![dock entries](_images/ee-pro-dock-entries.png)
 

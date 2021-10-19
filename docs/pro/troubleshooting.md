@@ -13,7 +13,7 @@
 
 ## General
 ### I'm unable to use many Pro features.
-If you are unable to use many of Pro features such as front-end editing, Low Search, Low Variables, Cookies management, or other features, then there is most likely an issue with your license. Ensure that your purchased Pro license is attached to a site and double check that your license key in your Site Settings correctly matches the site license key for which your Pro product is attached. For more information on purchasing a license and installing your key read through the [installation docs](pro/installation.md#purchasing-an-expressionengine-pro-license).
+If you are unable to use many of Pro features such as front-end editing, Low Search, Low Variables, Cookies management, or other features, then there is most likely an issue with your license. Ensure that your purchased Pro license is attached to a site and double check that your license key in your Site Settings correctly matches the site license key for which your Pro product is attached. For more information on purchasing a license and installing your key, read through the [installation docs](pro/installation.md#purchasing-an-expressionengine-pro-license).
 
 ### I do not see included products installed.
 If you do not see and wish to use products that are included with ExpressionEngine Pro such as Low Search and Low Variables, then they may not be installed. Please follow the [installation process for included products](pro/installation.md#installation-of-included-products) and ensure that products are installed correctly.
@@ -42,6 +42,8 @@ There are several settings that could prevent the Dock from showing on the front
     - Via Pro's [general settings](pro/configuration.md#general-settings), ensure that the "Enable front-end editing" setting is toggled on.
     - Via the [`enable_frontedit` config override](pro/configuration.md#enable_frontedit). If in use, this override must be set to `'y'` for front-end editing to work.
 
+- User does not have proper access to edit channels. Users must be assigned a role which has access to channels and to be able to edit channel content to see related front edit links on the site.
+
 ### Dock shows everywhere, while front edit links only show some places.
 
 - If Front edit links are showing on some templates, but not on others then front edit links may be disabled via template settings. Front-end editing can be enabled/disabled under "Pro Settings" in each template's settings.
@@ -52,7 +54,9 @@ There are several settings that could prevent the Dock from showing on the front
     - Via Pro's [general settings](pro/configuration.md#general-settings), ensure that the "Enable automatic front-end editing links" setting is toggled on.
     - Via the [`enable_frontedit_links` config override](pro/configuration.md#enable_frontedit_links). If in use, this override must be set to `'y'` for Pro to automatically insert front edit links.
 
-- Front edit links are disabled via HTML comments, EE template comments, or `diable` parameter. There are 3 ways to disable Pro's automatic generation of front edit links. Ensure that the template code your inspecting isn't surrounded by template comments or wrapped in a field tag using `disable="frontedit`. For details on these methods read the [docs regarding disabling Pro links](pro/frontend.md#disabling-the-front-edit-link) 
+- Front edit links are disabled via HTML comments, EE template comments, or `disable` parameter. There are 3 ways to disable Pro's automatic generation of front edit links. Ensure that the template code your inspecting isn't surrounded by template comments or wrapped in a field tag using `disable="frontedit`. For details on these methods read the [docs regarding disabling Pro links](pro/frontend.md#disabling-the-front-edit-link) 
+
+- User does not have proper access to edit channels they are viewing. Users must be assigned access to channels and to be able to edit channel content to see related front edit links on the site. If the user is viewing entries on the front-end for which they do not have content, then no front edit links will show.
 
 ## License
 
