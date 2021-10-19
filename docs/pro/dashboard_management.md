@@ -9,7 +9,7 @@
 
 # Dashboard Management
 
-Each member can show, hide, or rearrange Dashboard Widget to customize their own Control Panel homepage. 
+Each member can show, hide, or rearrange [Dashboard Widgets](pro/development/widgets.md) to customize their own Control Panel homepage. 
 
 To manage what is being shown:
 

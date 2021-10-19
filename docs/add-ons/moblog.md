@@ -101,7 +101,7 @@ The field override can be defined using either braces ({field}{/field}) or angle
 
 You may only specify a field that is of the "textarea" type here. You cannot specify "text input" or "drop-down list" fields by default.
 
-NOTE: **Note:** You may override field type restriction by setting `moblog_allow_nontextareas` [config override](general/system-configuration-overrides.html#moblog_allow_nontextareas).
+NOTE: **Note:** You may override field type restriction by setting `moblog_allow_nontextareas` [config override](general/system-configuration-overrides.md#moblog_allow_nontextareas).
 
 #### file_archive
 
