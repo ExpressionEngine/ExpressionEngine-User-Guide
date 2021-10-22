@@ -1,9 +1,8 @@
-name: Publish the docs
+name: Publish to Staging
 
 on:
   push:
     branches:
-      - 6.x
       - 6.dev
 
 jobs:
@@ -31,7 +30,6 @@ jobs:
           mv EEDocs6.latest.zip build/downloads/EEDocs6.latest.zip
 
       - name: Rsync to Staging
-        if: github.base_ref == '6.dev'
         uses: Burnett01/rsync-deployments@5.1
         with:
           switches: -avz
