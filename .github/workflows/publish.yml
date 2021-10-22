@@ -31,7 +31,7 @@ jobs:
 
       - name: Rsync to Staging
         if: github.base_ref == '6.dev'
-        uses: Burnett01/rsync-deployments@5
+        uses: Burnett01/rsync-deployments@5.1
         with:
           switches: -av
           path: build/
@@ -42,7 +42,7 @@ jobs:
 
       - name: Rsync to Production
         if: github.base_ref == '6.x'
-        uses: Burnett01/rsync-deployments@5
+        uses: Burnett01/rsync-deployments@5.1
         with:
           switches: -av
           path: build/
