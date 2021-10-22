@@ -27,6 +27,8 @@ jobs:
 
       - name: Move the zip
         run: |
+          ls -latr
+          ls -latr build
           mv EEDocs6.latest.zip build/downloads/EEDocs6.latest.zip
 
       - name: Rsync to Staging
