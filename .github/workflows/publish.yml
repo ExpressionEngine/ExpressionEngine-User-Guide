@@ -28,27 +28,16 @@ jobs:
       - name: Move the zip
         run: |
           ls -latr
-          ls -latr build
+          mkdir build/downloads
           mv EEDocs6.latest.zip build/downloads/EEDocs6.latest.zip
 
       - name: Rsync to Staging
         if: github.base_ref == '6.dev'
         uses: Burnett01/rsync-deployments@5.1
         with:
-          switches: -av
+          switches: -avz
           path: build/
-          remote_path: ${{ secrets.DOCS_PATH_STAGING }}
+          remote_path: ${{ secrets.DOCS_PATH_STAGING }}/v6
           remote_host: ${{ secrets.DOCS_HOST_STAGING }}
-          remote_user: ${{ secrets.DOCS_USER }}
-          remote_key: ${{ secrets.DOCS_USER_ID_RSA }}
-
-      - name: Rsync to Production
-        if: github.base_ref == '6.x'
-        uses: Burnett01/rsync-deployments@5.1
-        with:
-          switches: -av
-          path: build/
-          remote_path: ${{ secrets.DOCS_PATH }}
-          remote_host: ${{ secrets.DOCS_HOST }}
           remote_user: ${{ secrets.DOCS_USER }}
           remote_key: ${{ secrets.DOCS_USER_ID_RSA }}
