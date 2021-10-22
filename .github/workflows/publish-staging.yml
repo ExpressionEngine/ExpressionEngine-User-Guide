@@ -34,7 +34,7 @@ jobs:
         with:
           switches: -avz
           path: build/
-          remote_path: ${{ secrets.DOCS_PATH_STAGING }}/v6
+          remote_path: ${{ secrets.DOCS_PATH_STAGING }}
           remote_host: ${{ secrets.DOCS_HOST_STAGING }}
           remote_user: ${{ secrets.DOCS_USER }}
           remote_key: ${{ secrets.DOCS_USER_ID_RSA }}
