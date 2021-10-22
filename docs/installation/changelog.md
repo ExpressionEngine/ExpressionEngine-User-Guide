@@ -7,7 +7,21 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
-## Version 6.1.4 (Release: October 19, 2021)
+## Version 6.1.5 (Release: October 22, 2021)
+
+- **Bug Fixes** 💃🐛 
+  
+  - Resolved [#1466](https://github.com/ExpressionEngine/ExpressionEngine/issues/1466) where URL input could be confused with password input on "Login as..." page.
+  - Resolved [#1402](https://github.com/ExpressionEngine/ExpressionEngine/issues/1402) where using dynamic parameters in channel form could result in PHP deprecation errors.
+  - Resolved [#1459](https://github.com/ExpressionEngine/ExpressionEngine/issues/1459) where Access Overview page was throwing error if the assigned add-on was removed without uninstall.
+  - Updated the example URLs in index.php to use `https`.
+  - Resolved [#1460](https://github.com/ExpressionEngine/ExpressionEngine/issues/1460) where searching by role in CP if no members have this role was throwing SQL error.
+  - Resolved issue when sorting in Relationship column inside File grid could result in JavaScript error after file upload.
+  - Resolved issue with ExpressionEngine Pro where "Login" button was not shown on prolets after logout from CP.
+  - Resolved [#1462](https://github.com/ExpressionEngine/ExpressionEngine/issues/1462) where using Grid field with jQuery 3 in Channel Form caused JavaScript errors.
+  - Improved PHP8 compatibility.
+
+## Version 6.1.4 (Release: October 18, 2021)
 
 - **Bug Fixes** 💃🐛 
   

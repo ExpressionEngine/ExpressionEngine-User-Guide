@@ -1,0 +1,40 @@
+name: Publish to Staging
+
+on:
+  push:
+    branches:
+      - 6.x
+
+jobs:
+  build:
+    name: Build the HTML
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install NPM and build
+        run: |
+          npm install
+          npm run build
+
+      - name: Zip the docs
+        uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r EEDocs6.latest.zip build
+
+      - name: Move the zip
+        run: |
+          mkdir build/downloads
+          mv EEDocs6.latest.zip build/downloads/EEDocs6.latest.zip
+
+      - name: Rsync to Staging
+        uses: Burnett01/rsync-deployments@5.1
+        with:
+          switches: -avz
+          path: build/
+          remote_path: ${{ secrets.DOCS_PATH }}
+          remote_host: ${{ secrets.DOCS_HOST }}
+          remote_user: ${{ secrets.DOCS_USER }}
+          remote_key: ${{ secrets.DOCS_USER_ID_RSA }}
