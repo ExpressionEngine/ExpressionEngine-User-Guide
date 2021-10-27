@@ -829,7 +829,7 @@ Declare if your cookie should be restricted to a first-party or same-site contex
 | Value  | Behavior                                                                     |
 | ------ | ---------------------------------------------------------------------------- |
 | None   | Allow cookies to be sent on all requests (cookie_secure will be set to true) |
-| Lax    | Allows cookies to be sent on some cross-site requests (default)              |
+| Lax    | Allows cookies to be sent on some cross-site requests                        |
 | Strict | Does not allow cookies to be sent on some cross-site requests (default)      |
 
 Example Usage:
