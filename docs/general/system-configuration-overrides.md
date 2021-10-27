@@ -1490,7 +1490,7 @@ Set the server path used by the [Block/Allow](add-ons/blocklist.md) module to [w
 
 Example Usage:
 
-    $config['htaccess_path'] = '/server/path/to/your/.htaccess/';
+    $config['htaccess_path'] = '/server/path/to/your/.htaccess';
 
 ### `ignore_entry_stats`
 Disable entry stats and analytics being saved during creating/updating of entries when using models. Disabling entry stats can lead to improved performance when using models
