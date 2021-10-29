@@ -252,6 +252,8 @@
       href: pro/overview.md
     - name: Installation
       href: pro/installation.md
+    - name: Changelog
+      href: pro/changelog.md
     - name: Configuration
       href: pro/configuration.md
     - name: Dashboard Management
