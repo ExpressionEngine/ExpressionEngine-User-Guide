@@ -42,6 +42,14 @@ Example Usage:
 ```
 $config['autosave_interval_seconds'] = '10'; 
 ```
+## Conditional Tags
+
+### `{if frontedit}`
+
+```{if frontedit} content {/if}```
+
+This special conditional allows you to display content if front-end editing is enabled.
+
 
 ## Disabling The Front Edit Link
 
@@ -112,19 +120,12 @@ Example usage:
 
 
 ### Label Custom Front-end Edit Links
-When using custom links, it may be useful to label these links for the user. One way of accomplishing this is by wrapping your link in a custom HTML element and then hide/showing element with JavaScript. 
+When using custom links, it may be useful to label these links for the user. One way of accomplishing this is by using the special [`{if frontedit}` conditional](#if-frontedit)
 
 Example:
 
 ```
-Template Code:
-<span class="pro-edit-link" style="display:none;">Edit Homepage Property Slider:</span> {homepage_property_slider:frontedit}
-
-Javascript:
-//will only show selected elements if edit links are also visible on the page, which would indicate that ExpressionEngine Pro edit links are active. Otherwise the inline style will hide this element.
-if( $(".eeFrontEdit").length > 0){
-        $(".pro-edit-link").show();
-    }
+{if frontedit}Edit Entry Title{/if}{frontedit_link entry_id="{entry_id}" field_name="title"}
 ```
 
 ## Reinitialize ExpressionEngine Pro Javascript
