@@ -32,7 +32,7 @@ If possible, you should use an SSL certificate on your site and restrict all tra
 ExpressionEngine's password requirements are customizable. We recommend implementing a reasonable policy:
 
 - Require [a minimum password length](control-panel/settings/security-privacy.md#minimum-password-length) of at least 8 characters
-- Require [secure passwords](control-panel/settings/security-privacy.md#require-secure-passwords) that include at least one lowercase and uppercase letter, and one number
+- Require adhering to [password security policy](control-panel/settings/security-privacy.md#password-security-policy) other than "none".
 - Enable [password lockouts](control-panel/settings/security-privacy.md#enable-password-lock-out)
 
 ## Restrict File Types
