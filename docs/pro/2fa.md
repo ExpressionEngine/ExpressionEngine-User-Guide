@@ -35,7 +35,7 @@ The dialogs are presented using `Two-Factor Authentication Template` from System
 
 ## Template protection
 
-If you need to restrict certain areas of your site to only be accessible to members who have completed two-factor authentication, you can turn `Enable HTTP Authentication?` toggle on in template Access preferences.
+If you need to restrict certain areas of your site to only be accessible to members who have completed two-factor authentication, you can turn `Require Two-Factor Authentication` toggle on in template Access preferences.
 
 ![2FA Template Toggle](/_images/2fa-tmpl-toggle.png)
 
