@@ -75,7 +75,7 @@ Allows the output of the tag pair to order rows in a fixed order of row IDs.
 
     limit="5"
 
-Limits the number of rows output by the tag pair to the number specified here.
+Limits the number of rows output by the tag pair to the number specified here. The limit will default to 100 rows if a value is not specified.
 
 ### `offset=`
 
