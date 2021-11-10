@@ -7,6 +7,17 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
+## Version 6.1.6 (Release: November 10, 2021)
+
+- **Bug Fixes** 💃🐛 
+  
+  - Resolved [#1495](https://github.com/ExpressionEngine/ExpressionEngine/issues/1495) where using regular expressions in templates could cause PHP errors.
+  - Resolved [#1518](https://github.com/ExpressionEngine/ExpressionEngine/issues/1518) where not all header variables were passed to add-on settings pages.
+  - Resolved issue where debug bar was braking some pages in Control Panel
+  - Resolved [#1421](https://github.com/ExpressionEngine/ExpressionEngine/issues/1421) where column header was not localized in Translate utility.
+  - Resolved [#1485](https://github.com/ExpressionEngine/ExpressionEngine/issues/1485) where H2 header was not styled correctly in RTE field using Redactor.
+  - Improved UI in several areas of Control Panel
+
 ## Version 6.1.5 (Release: October 22, 2021)
 
 - **Bug Fixes** 💃🐛 
