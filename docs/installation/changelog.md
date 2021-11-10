@@ -13,7 +13,7 @@
   
   - Resolved [#1495](https://github.com/ExpressionEngine/ExpressionEngine/issues/1495) where using regular expressions in templates could cause PHP errors.
   - Resolved [#1518](https://github.com/ExpressionEngine/ExpressionEngine/issues/1518) where not all header variables were passed to add-on settings pages.
-  - Resolved issue where debug bar was braking some pages in Control Panel
+  - Resolved issue where debug bar was breaking some pages in Control Panel
   - Resolved [#1421](https://github.com/ExpressionEngine/ExpressionEngine/issues/1421) where column header was not localized in Translate utility.
   - Resolved [#1485](https://github.com/ExpressionEngine/ExpressionEngine/issues/1485) where H2 header was not styled correctly in RTE field using Redactor.
   - Improved UI in several areas of Control Panel

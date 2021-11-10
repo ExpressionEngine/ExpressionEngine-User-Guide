@@ -9,10 +9,18 @@
 
 # ExpressionEngine Pro Change Log
 
-## Version 1.0.2 (Release: October 6, 2021)
+## Version 1.0.3 (Release: November 10, 2021)
 
-## Version 1.0.1 (Release: October 6, 2021)
+  - Resolved [#1511](https://github.com/ExpressionEngine/ExpressionEngine/issues/1511) where using `{encode}` tag was causing issues with front-end editing.
+
+## Version 1.0.2 (Release: October 22, 2021)
+
+  - Added "Login" button for login dialog on prolets. 
+
+## Version 1.0.1 (Release: October 13, 2021)
+
+  - Added `{if frontedit}` contional
 
 ## Version 1.0.0 (Release: October 6, 2021)
 
-Initial Release!
+  - Initial Release!
