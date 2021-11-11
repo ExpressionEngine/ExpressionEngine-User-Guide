@@ -9,7 +9,7 @@
 
 # ExpressionEngine Pro Change Log
 
-## Version 1.0.3 (Release: November 10, 2021)
+## Version 1.0.3 (Release: November 11, 2021)
 
   - Resolved [#1511](https://github.com/ExpressionEngine/ExpressionEngine/issues/1511) where using `{encode}` tag was causing issues with front-end editing.
 
