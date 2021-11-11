@@ -90,8 +90,6 @@ Then, you'll need to create a method to handle the form:
         }
     }
 
-> }
-
 Inside that method, you can see that we're initializing the Upload library and checking to see if the upload was sucessful. If not, we kick back to the `upload_form.php` view.
 
 ### The Upload Directory

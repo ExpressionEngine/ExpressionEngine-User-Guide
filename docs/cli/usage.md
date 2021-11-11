@@ -2,7 +2,7 @@
 
 Commands can be called in the terminal of your choice in the format of:
 
-`$ php system/eecli.php hello`
+`$ php system/ee/eecli.php hello`
 
 This will call `eecli` with a command of `hello`. This is the Hello World of ExpressionEngine commands, and will display:
 
@@ -11,7 +11,7 @@ This will call `eecli` with a command of `hello`. This is the Hello World of Exp
 Commands can also request confirmation:
 
 ```
-$ php system/eecli.php hello -c
+$ php system/ee/eecli.php hello -c
 
 Hello world
 Are you liking these questions? (yes/no) [no]
@@ -22,7 +22,7 @@ That's good to hear!
 Commands are also able to take interaction:
 
 ```
-$ php system/eecli.php hello -i
+$ php system/ee/eecli.php hello -i
 
 Hello world
 What's your name? Andy
@@ -33,19 +33,20 @@ Pleasure to meet you, Andy!
 
 To view a list of all available commands, you may use the list command:
 
-`php system/eecli.php list`
+`php system/ee/eecli.php list`
 
 This will return a basic list of all available system and user-generated commands.
 
 ```
-$ php system/eecli.php list
+$ php system/ee/eecli.php list
 
-| Command             | Description                                                 |
--------------------------------------------------------------------------------------
-| hello               | The most basic of commands                                  |
-| list                | Lists all available commands                                |
-| update              | Updates ExpressionEngine                                                  |
-| cache:clear         | Clears all ExpressionEngine caches                                        |
+| Command             | Description                              |
+------------------------------------------------------------------
+| hello               | The most basic of commands               |
+| list                | Lists all available commands             |
+| update              | Updates ExpressionEngine                 |
+| cache:clear         | Clears all ExpressionEngine caches       |
+...
 ```
 
 ## Get Help
@@ -53,7 +54,7 @@ $ php system/eecli.php list
 You can get help information on any command by using the `--help` or `-h` parameter when running the command.
 
 ```
-$ php system/eecli.php hello -h
+$ php system/ee/eecli.php hello -h
 
 SUMMARY
     Hello World -- This is a sample command used to test the CLI
@@ -77,20 +78,3 @@ OPTIONS
     -c
         Test the confirmation
 ```
-
-
-## System Commands
-
-ExpressionEngine comes with a number of CLI commands already predefined.
-
-- `hello`: The most basic of commands, a great command for you to learn about the CLI!
-- `list`: Lists all available commands. This will display install commands if ExpressionEngine is not installed, and a full list of commands if it is.
-- `update`: Gets most recent version of EE. This will pull from your local version if you have downloaded the most recent version, or the cloud version for the next major version of ExpressionEngine if not.
-- `cache`:clear: Clears any one, or all, ExpressionEngine caches
-
-### Advanced Use
-
-The following commands are for advanced usage, used in conjunction with ExpressionEngine upgrades for major versions. It is highly recommended to back up both your database and filesystem before utilizing them
-
-- `prepare-upgrade`: Prepare a different site to be upgraded using these files.
-- `run-update-hook`: Runs specific update hooks from your upgrade.config file.

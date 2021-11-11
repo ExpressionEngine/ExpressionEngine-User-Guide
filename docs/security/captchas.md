@@ -17,7 +17,13 @@ So how does this work? An image is generated in real time for a user loading a w
 
 In ExpressionEngine, CAPTCHAs can be used in several places:
 
-- [CAPTCHAs](#captchas) - [Comment Forms](#comment-forms) - [Member Registration Form](#member-registration-form) - [Contact and Tell-a-Friend Email Forms](#contact-and-tell-a-friend-email-forms) - [CAPTCHA Code](#captcha-code) - [Notes](#notes) - [CAPTCHA Words](#captcha-words)
+- [CAPTCHAs](#captchas) 
+- [Comment Forms](#comment-forms) 
+- [Member Registration Form](#member-registration-form)
+- [Contact and Tell-a-Friend Email Forms](#contact-and-tell-a-friend-email-forms) 
+- [CAPTCHA Code](#captcha-code) 
+- [Notes](#notes) 
+- [CAPTCHA Words](#captcha-words)
 
 The settings to require CAPTCHAs for these forms are located at `Settings --> CAPTCHA` in the control panel.
 
