@@ -154,6 +154,10 @@ These operators let you create complex rules for your templates:
 
     {if member_id != '1' && member_group != "5" OR username == "Billy"} Hi! {/if}
 
+The NOT operator (`!`) also can be used at the beginning of the statement to negate the statement and only execute the template code if the condition following the NOT operator is FALSE.
+
+    {if !(username *= "ee")} Your username does not contain the characters "ee" {/if}
+
 ### Mathematic Operators
 
 You can use the following mathematical operators to compute values:
