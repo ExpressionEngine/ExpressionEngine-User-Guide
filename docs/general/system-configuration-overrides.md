@@ -2939,13 +2939,13 @@ Example Usage:
 
 Set the time interval for measuring the [number of page loads](#max_page_loads) that will trigger throttling. If you set this preference to 5 page loads within 10 seconds, a user can not browse more than 5 pages within a 10 second interval or the throttling feature will be triggered, locking them out for the given [lockout time](#lockout_time).
 
-| Value   | Description              |
-| ------- | ------------------------ |
-| integer | Time interval in seconds |
+| Value   | Description                             |
+| ------- | --------------------------------------- |
+| integer | Time interval in seconds (default is 8) |
 
 Example Usage:
 
-    $config['max_page_loads'] = '10';
+    $config['time_interval'] = '10';
 
 **Also found in CP:** `Settings --> Access Throttling`: [Time Interval](control-panel/settings/throttling.md#time-interval)
 
