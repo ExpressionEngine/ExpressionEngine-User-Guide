@@ -2,9 +2,10 @@
 
 Make migration -- Creates a new migration
 
-Check out our video tutorial!
-
+Check out our video tutorial on making migrations!
+<div class="video-wrapper">
 <iframe src="https://www.youtube.com/embed/4yVgKr9oKto?vq=HD1080" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+</div>
 
 ## Options list:
 

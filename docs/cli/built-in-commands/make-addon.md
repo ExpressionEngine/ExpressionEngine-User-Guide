@@ -2,6 +2,11 @@
 
 Addon Generator -- Creates a new add-on
 
+Check out our video tutorial generating an add-on!
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/I5rZ322RSJk?vq=HD1080" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 ## Options list:
 
 ```

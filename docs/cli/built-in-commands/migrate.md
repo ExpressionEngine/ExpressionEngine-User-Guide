@@ -2,6 +2,11 @@
 
 Generate, run and rollback migrations via the CLI.
 
+Check out our video tutorial on running migrations and rolling back!
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/iD0f6oVBd28?vq=HD1080" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 ## Generating a migration:
 
 - See [make:migration](cli/built-in-commands/make-migration.md) for how to generate a migration.
