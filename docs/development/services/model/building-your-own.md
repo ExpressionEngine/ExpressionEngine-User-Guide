@@ -17,6 +17,8 @@ lang: php
 
 This section gives a detailed description on how to implement your own models.
 
+NOTE: Models can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:model command](cli/built-in-commands/make-model.md) for more information.
+
 NOTE: **Note:** Please review the basic [Model Usage](development/services/model.md) before attempting to write your own. Creating a model does not automatically create the corresponding database tables if they do not exist; you should use DB Forge to create your add-on's tables.
 
 ## Registering Models

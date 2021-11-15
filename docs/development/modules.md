@@ -17,6 +17,9 @@ lang: php
 
 Modules are the most complex form of add-on. They can have their own database tables, backend control panels, tabs and fields that are included on the publish page, as well as their own tags for use in templates.
 
+NOTE: Modules can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](/cli/built-in-commands/make-addon.md) for more information.
+
+
 ## Basic File Structure
 
 Modules should be placed into the add-ons folder in a package and be named after that package name. At a minimum, there are 4 required files for any module:
