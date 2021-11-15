@@ -113,8 +113,8 @@ The supported options are:
 
  - `None`. No security password checks are made for general users.
  - `Basic`. Password should contain at least one uppercase character, one lowercase character, and one numeric character. Passwords that follow this basic formula are much more difficult to guess.
- - `Advanced`. Password should get security rank of 40 or more
- - `Strict`. Password should get security rank of 60 or more.
+ - `Ranked Good`. Password should get security rank of 40 or more
+ - `Ranked Strong`. Password should get security rank of 60 or more.
 
 The password security rank is calculated using complex algorythm. The rank will get the points for the total number of characters, usage of uppercase letters, lowercase letters, numbers and sybmols. Additional points are given for using numbers or symbols in the middle of the password. At the same time, the points will be removed from the rank if the password is using letters only, or numbers only, or it has repeat characters, consecutive uppercase letters, consecutive lowercase letters, consecutive numbers, sequental letters (3+),  sequental numbers (3+),  sequental symbols (3+).
 

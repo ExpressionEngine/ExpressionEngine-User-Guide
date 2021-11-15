@@ -2331,8 +2331,8 @@ Require users' passwords to adhere to certain password security policy as implem
 | ----- | --------------------------------- |
 | n     | Do not require secure passwords   |
 | y     | Require basic password security (default)   |
-| a     | Require advanced password security          |
-| y     | Apply strict password security requirements |
+| g     | Require advanced password security (rank 40 or more)          |
+| s     | Apply advanced password security (rank 60 or more) |
 
 Example Usage:
 
