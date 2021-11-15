@@ -396,17 +396,11 @@ Test against the total number of forum topics by the currently logged in user.
 
 You can test against the username of the currently logged in user.
 
-### `2fa_enabled`
+### `mfa_enabled`
 
-Whether Two-Factor Authentication is enabled for logged in user.
+Whether Multi-Factor Authentication is enabled for logged in user.
 
-    `{if !2fa_enabled}Enable two-factor authentication for more security{/if}`
-
-### `2fa_authorized`
-
-Whether the current logged in user's session is confirmed by Two-Factor Authentication.
-
-    `{if !2fa_authorized}The next page is only available after authentication with second factor{/if}`
+    `{if !mfa_enabled}Enable multi-factor authentication for more security{/if}`
 
 ### `segment_*X*`
 
