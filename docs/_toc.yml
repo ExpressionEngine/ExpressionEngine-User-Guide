@@ -421,7 +421,7 @@
           href: control-panel/settings/comments.md
         - name: Content & Design
           href: control-panel/settings/content-design.md
-        - name: Consents
+        - name: Consents Requests
           href: control-panel/settings/consents.md
         - name: Debugging & Output
           href: control-panel/settings/debug-output.md
@@ -429,6 +429,8 @@
           href: control-panel/settings/email.md
         - name: Hit Tracking
           href: control-panel/settings/hit-tracking.md
+        - name: Logging
+          href: control-panel/settings/logging.md
         - name: Member
           href: control-panel/settings/members.md
         - name: Messaging
