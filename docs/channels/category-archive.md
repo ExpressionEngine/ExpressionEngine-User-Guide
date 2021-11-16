@@ -141,7 +141,6 @@ The "order" parameter sets the display order of the entries. Setting options for
 - orderby="title"
 - orderby="comment"
 - orderby="most_recent_comment"
-- orderby="most_used_categories"
 
 If this parameter is not set, it will default to ordering by the title.
 
