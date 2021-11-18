@@ -21,6 +21,9 @@ Within ExpressionEngine are what is known as 'hooks'; little snippets of code in
 
 An Extension is an add-on script that is placed in the `/system/user/addons/<package_name>/` directory and then enabled via the [Add-on Manager](control-panel/addons-manager.md) in the Control Panel. Extensions can have their own settings and their own database tables, if necessary, but neither is required. If settings are available for an Extension, a language file is required, but unlike a module there is no control panel for Extensions.
 
+NOTE: Extensions can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](/cli/built-in-commands/make-addon.md) for more information.
+
+
 ## Naming Convention
 
 Extensions have a similar naming convention to ExpressionEngine plugins so current developers should get the hang of them quickly. There is only a single file required for an extension and inside this file should be a PHP class. The name of the class is used in the file name of the extension with the addition of the suffix `_ext` so that the name of the file is the _lower-cased_ class name with the prefix ext. and the standard PHP suffix of `.php`. So, if we have an extension named '`Link_truncator`', then the file name for this extension would be '`ext.link_truncator.php`' and the class would be called '`Link_truncator_ext`'.

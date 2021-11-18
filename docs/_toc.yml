@@ -290,7 +290,7 @@
           href: cli/built-in-commands/cache-clear.md
         - name: Command Generator
           href: cli/built-in-commands/make-command.md
-        - name: Generating a migration
+        - name: Migrations
           href: cli/built-in-commands/migrate.md
         - name: List
           href: cli/built-in-commands/list.md
@@ -431,7 +431,7 @@
           href: control-panel/settings/hit-tracking.md
         - name: Logging
           href: control-panel/settings/logging.md
-        - name: Member
+        - name: Member Settings
           href: control-panel/settings/members.md
         - name: Messaging
           href: control-panel/settings/messages.md

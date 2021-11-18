@@ -11,6 +11,12 @@
 
 [TOC]
 
+Check out our video overview of Pro!
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/O5G3hd9PBUM?vq=HD1080" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+
 ## What is ExpressionEngine Pro?
 
 ExpressionEngine Pro brings the Control Panel forward to the front-end of your site. ExpressionEngine Pro comes shipped with ExpressionEngine 6.1.0 or higher and may be used on any local testing sites; however, a license must be purchased for ExpressionEngine Pro to work on production or remote staging sites.

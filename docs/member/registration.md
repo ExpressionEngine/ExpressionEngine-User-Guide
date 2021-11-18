@@ -15,6 +15,8 @@
 
 Output a member registration form.
 
+NOTE: **Important:** In order for site visitors to be allowed to register for accounts via front-end forms the [Allow Registrations](control-panel/settings/members.md#allow-registrations) must be set to allow registrations under Settings > Member Settings.
+
 ## Parameters
 
 ### `return=`

@@ -21,11 +21,11 @@ Cross Site Scripting is a type of security vulnerability that allows code inject
 
 Cross Site Scripting should be taken very seriously as you would never want your add-on to be the source of an attack vector.
 
-### `ee()->security->xss_clean()`
+### `ee('Security/XSS')->clean()`
 
-`ee()->security->xss_clean()` is the built in ExpressionEngine XSS sanitization method, which is constantly tweaked for improved security and performance. It accepts both a `string` and an `array` and will return sanitized text:
+`ee('Security/XSS')->clean()` is the built in ExpressionEngine XSS sanitization method, which is constantly tweaked for improved security and performance. It accepts both a `string` and an `array` and will return sanitized text:
 
-    $str = ee()->security->xss_clean($str);
+    $str = ee('Security/XSS')->clean($str);
 
 ### Sanitized Variables on Input
 
@@ -41,7 +41,7 @@ If the user input is in the Control Panel, such as a module's back end, it is at
 
 ### INSERT and UPDATE Queries
 
-As ExpressionEngine assumes that all information in the database is sanitized against XSS, the responsibility for sanitization falls on **input** to the database. Active Record methods will escape your data, but will not XSS clean it.Therefore, all data should be run through either `ee()->security->xss_clean()` or `ee()->input->get_post('key', TRUE)` before being stored in the database.
+As ExpressionEngine assumes that all information in the database is sanitized against XSS, the responsibility for sanitization falls on **input** to the database. Active Record methods will escape your data, but will not XSS clean it.Therefore, all data should be run through either `ee('Security/XSS')->clean()` or `ee()->input->get_post('key', TRUE)` before being stored in the database.
 
 ### Outputting Data to the Page
 
@@ -53,7 +53,7 @@ Use the [Typography class](development/legacy/libraries/typography.md) whenever 
 
 ### When In Doubt...
 
-If there is any doubt on the safety of a variable that you are outputting or inserting into the database, use XSS Clean: `ee()->security->xss_clean($value)`.
+If there is any doubt on the safety of a variable that you are outputting or inserting into the database, use XSS Clean: `ee('Security/XSS')->clean($value)`.
 
 ## SQL Injection Prevention
 
@@ -70,7 +70,7 @@ PHP variables should be escaped in queries anytime the variable is not explicitl
 
 Manually written queries should use both XSS cleaned data and [ee()->db->escape_str()](development/legacy/libraries/database.md) on variables, even if you think the value is trusted:
 
-    $data = ee()->security->xss_clean($foo);
+    $data = ee('Security/XSS')->clean($foo);
 
     OR
 
@@ -252,7 +252,7 @@ In your methods that will be handling form data, create a logic map that you can
   - XML convert
   - Remove PHP or ExpressionEngine tags?
 - Insert Data or Update
-  - `ee()->security->xss_clean()` on all string data even if there is no intent to output (don't forget about the Query module!)
+  - `ee('Security/XSS')->clean()` on all string data even if there is no intent to output (don't forget about the Query module!)
   - Make sure all data is properly escaped
 
 After processing, make sure submitted data that might be sent to the screen for a success or error message is the filtered and validated version

@@ -15,6 +15,9 @@ lang: php
 
 [TOC]
 
+
+NOTE: Fieldtypes can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](/cli/built-in-commands/make-addon.md) for more information.
+
 ## Basic File Structure
 
 All fieldtypes should be placed into the `system/user/addons` folder in a package and be named after that package name. So in a packaged named google_maps the fieldtype file will be `ft.google_maps.php`. All fieldtypes must inherit from the `EE_Fieldtype` base class and they must provide an \$info array with a name and version number.
