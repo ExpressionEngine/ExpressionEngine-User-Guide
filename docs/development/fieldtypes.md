@@ -239,7 +239,7 @@ Parsing the modifiers is identical to using the regular `replace_tag()` function
 
 There is also a function to catch ALL modifiers, whose declaration includes the modifier name and looks like this:
 
-    function replace_tag_catchall($file_info, $params = array(), $tagdata = FALSE, $modifier)
+    function replace_tag_catchall($file_info, $params = array(), $tagdata = FALSE, $modifier = FALSE)
 
 You can also use variable pairs to capture tag data for processing in your modifier function. The syntax for using modifiers on variable pairs in your templates is:
 
