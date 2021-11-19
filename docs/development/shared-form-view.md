@@ -256,11 +256,11 @@ It is possible to add a standard EE file picker to your form. The EE File picker
 
 The unfilled standard EE File picker looks like this:
 
-![](_images/shared-form-2.png)
+![](_images/ee_file_picker_unpopulated.png)
 
 When the field has an existing value it looks like this:
 
-![](_images/shared-form-2.png)
+![](_images/ee_file_picker_populated.png)
 
 To add this kind of picker to your form you need to define an [HTML](#available-field-input-types) type input and include a call to an EE internal function. The internal function is from a library that is not currently documented, so limited explanation of the parameters applicable to this function are included below.
 
