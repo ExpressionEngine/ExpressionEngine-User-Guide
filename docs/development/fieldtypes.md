@@ -829,6 +829,18 @@ Custom fields can display their data inside the Entry Manager through 3 possible
 
     }
 
+## Entry cloning support
+
+[ExpressionEngine Pro](/pro/overview.md) enables add ability to clone existing entries using "Save as New Entry" option on entry editing page. Most of fieldtypes do not need to do anything special to support this feature. 
+
+However if the fieldtype you are developing is saving data to its own database table, you might need to tell it to save the rows as submission for new entry, and not for the existing one.
+
+You can do it by adding this check:
+
+    if (defined('CLONING_MODE') && CLONING_MODE === true) {
+        //this is cloning request, add new rows
+    }
+
 ## Implementing Filepicker for Rich Text Editor
 
 If your add-on is operating as File Manager, you might want to make it available as file picker for RTE fields.

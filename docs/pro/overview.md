@@ -52,3 +52,7 @@ ExpressionEngine Pro allows uploading a custom logo to be used on Control Panel 
 ### Cookie and Consent Management
 
 ExpressionEngine Pro adds the ability to override cookie values and their lifetime, easily list cookies used by the site on the front-end (or in dashboard widget), and export a list of consents.
+
+### Entry Cloning
+
+With ExpressionEngine Pro license it is possible to clone existing entries using "Save as New Entry" option that is getting added to "Save" dropdown menu on entry editing page. 
