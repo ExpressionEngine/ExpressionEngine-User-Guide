@@ -94,7 +94,7 @@ NOTE: **Note:** To use multiple separate calls to this function simply call the 
 | \$str     | `String` | Input string                     |
 | Returns   | `String` | A string with normalized slashes |
 
-Converts double slashes in a string to a single slash, except those found in URL protocol prefixes (e.g. http://).
+Converts double slashes in a string to a single slash, except those found in URL protocol prefixes (e.g. https://).
 
 Example:
 

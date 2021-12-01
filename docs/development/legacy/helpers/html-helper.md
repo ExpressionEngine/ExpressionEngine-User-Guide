@@ -55,11 +55,11 @@ The above code produces:
 
 Lets you create HTML `<img />` tags. The first parameter contains the image source. Example:
 
-    echo img('images/picture.jpg'); // gives <img src="http://site.com/images/picture.jpg" />
+    echo img('images/picture.jpg'); // gives <img src="https://site.com/images/picture.jpg" />
 
 There is an optional second parameter that is a `TRUE`/`FALSE` value that specifics if the `src` should have the page specified by `$config['index_page']` added to the address it creates. Presumably, this would be if you were using a media controller:
 
-    echo img('images/picture.jpg', TRUE); // gives <img src="http://site.com/index.php/images/picture.jpg" alt="" />
+    echo img('images/picture.jpg', TRUE); // gives <img src="https://site.com/index.php/images/picture.jpg" alt="" />
 
 Additionally, an associative array can be passed to the `img()` function for complete control over all attributes and values. If an `alt` attribute is not provided, CodeIgniter will generate an empty string.
 
@@ -76,7 +76,7 @@ Example:
     );
 
     img($image_properties);
-    // <img src="http://site.com/index.php/images/picture.jpg" alt="Me, demonstrating how to eat 4 slices of pizza at one time" class="post_images" width="200" height="200" title="That was quite a night" rel="lightbox" />
+    // <img src="https://site.com/index.php/images/picture.jpg" alt="Me, demonstrating how to eat 4 slices of pizza at one time" class="post_images" width="200" height="200" title="That was quite a night" rel="lightbox" />
 
 ### `link_tag([$href = ''[, $rel = 'stylesheet'[, $type = 'text/css'[, $title = ''[, $media = ''[, $index_page = FALSE]]]]]])`
 
@@ -97,15 +97,15 @@ Lets you create HTML `<link />` tags. This is useful for stylesheet links, as we
 Example:
 
     echo link_tag('css/mystyles.css');
-    // gives <link href="http://site.com/css/mystyles.css" rel="stylesheet" type="text/css" />
+    // gives <link href="https://site.com/css/mystyles.css" rel="stylesheet" type="text/css" />
 
 Further examples:
 
     echo link_tag('favicon.ico', 'shortcut icon', 'image/ico');
-    // <link href="http://site.com/favicon.ico" rel="shortcut icon" type="image/ico" />
+    // <link href="https://site.com/favicon.ico" rel="shortcut icon" type="image/ico" />
 
     echo link_tag('feed', 'alternate', 'application/rss+xml', 'My RSS Feed');
-    // <link href="http://site.com/feed" rel="alternate" type="application/rss+xml" title="My RSS Feed" />
+    // <link href="https://site.com/feed" rel="alternate" type="application/rss+xml" title="My RSS Feed" />
 
 Additionally, an associative array can be passed to the `link()` function for complete control over all attributes and values:
 
@@ -117,7 +117,7 @@ Additionally, an associative array can be passed to the `link()` function for co
     );
 
     echo link_tag($link);
-    // <link href="http://site.com/css/printer.css" rel="stylesheet" type="text/css" media="print" />
+    // <link href="https://site.com/css/printer.css" rel="stylesheet" type="text/css" media="print" />
 
 ### `ul($list[, $attributes = ''])`
 
@@ -311,22 +311,22 @@ Helps you generate document type declarations, or DTD's. XHTML 1.0 Strict is use
 
 Example:
 
-    echo doctype(); // <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    echo doctype(); // <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-    echo doctype('html4-trans'); // <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+    echo doctype('html4-trans'); // <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "https://www.w3.org/TR/html4/strict.dtd">
 
 The following is a list of doctype choices.
 
 | Document type          | Option        | Result                                                                                                                      |
 | ---------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| XHTML 1.1              | xhtml11       | `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">`                         |
-| XHTML 1.0 Strict       | xhtml1-strict | `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">`             |
-| XHTML 1.0 Transitional | xhtml1-trans  | `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">` |
-| XHTML 1.0 Frameset     | xhtml1-frame  | `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">`         |
+| XHTML 1.1              | xhtml11       | `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">`                         |
+| XHTML 1.0 Strict       | xhtml1-strict | `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">`             |
+| XHTML 1.0 Transitional | xhtml1-trans  | `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">` |
+| XHTML 1.0 Frameset     | xhtml1-frame  | `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">`         |
 | HTML 5                 | html5         | `<!DOCTYPE html>`                                                                                                           |
-| HTML 4 Strict          | html4-strict  | `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">`                                |
-| HTML 4 Transitional    | html4-trans   | `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">`                    |
-| HTML 4 Frameset        | html4-frame   | `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">`                     |
+| HTML 4 Strict          | html4-strict  | `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "https://www.w3.org/TR/html4/strict.dtd">`                                |
+| HTML 4 Transitional    | html4-trans   | `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">`                    |
+| HTML 4 Frameset        | html4-frame   | `<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "https://www.w3.org/TR/html4/frameset.dtd">`                     |
 
 ### `br([$count = 1])`
 

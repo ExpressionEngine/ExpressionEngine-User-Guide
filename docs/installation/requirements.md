@@ -15,8 +15,8 @@
 
 **For the best experience**, ExpressionEngine requires:
 
-- [PHP](http://www.php.net/) 7 or newer, running with [PHP-FPM](http://php.net/manual/en/install.fpm.php)
-- [MySQL](http://www.mysql.com/) 5.6 or newer **OR** [Percona](https://www.percona.com/software/mysql-database/percona-server) 5.6 or newer
+- [PHP](https://www.php.net/) 7 or newer, running with [PHP-FPM](https://php.net/manual/en/install.fpm.php)
+- [MySQL](https://www.mysql.com/) 5.6 or newer **OR** [Percona](https://www.percona.com/software/mysql-database/percona-server) 5.6 or newer
 
 ## Server Compatibility Wizard
 
@@ -28,7 +28,7 @@ If you're not sure whether your server meets the minimum requirements, the serve
 
 ## The Bare Minimums
 
-If you are stuck in an older environment, ExpressionEngine _can_ run on PHP 5.6.0+ with 32M of memory, and MySQL 5.5.3+. PHP-FPM is also optional, but [tends to handily outperform mod_php](https://www.cloudways.com/blog/php-fpm-on-cloud/). That said,running older versions not only hurts performance—increasing the cost of your website—but also puts your site **at risk of security vulnerabilities**. The PHP Group stopped providing support for PHP 5.6 [on December 31, 2018](http://php.net/supported-versions.php). Oracle also ceased providing support for MySQL 5.5 at the same time.
+If you are stuck in an older environment, ExpressionEngine _can_ run on PHP 5.6.0+ with 32M of memory, and MySQL 5.5.3+. PHP-FPM is also optional, but [tends to handily outperform mod_php](https://www.cloudways.com/blog/php-fpm-on-cloud/). That said,running older versions not only hurts performance—increasing the cost of your website—but also puts your site **at risk of security vulnerabilities**. The PHP Group stopped providing support for PHP 5.6 [on December 31, 2018](https://php.net/supported-versions.php). Oracle also ceased providing support for MySQL 5.5 at the same time.
 
 Why not save yourself the worry and hassle, enjoy a faster and more secure site that costs less to maintain, and upgrade now? Here's an email you can send to your host if they need a little nudge:
 
@@ -62,20 +62,20 @@ You can safely ignore the rest of this page unless you are experiencing problems
 
 Though the following are available in PHP by default, some hosts may have them disabled until you ask for them.
 
-- [GD (or GD 2) library](http://www.php.net/manual/en/ref.image.php) 
-- [File Information (fileinfo)](http://php.net/manual/en/book.fileinfo.php)
+- [GD (or GD 2) library](https://www.php.net/manual/en/ref.image.php) 
+- [File Information (fileinfo)](https://php.net/manual/en/book.fileinfo.php)
 - [ZIP](https://www.php.net/manual/en/book.zip.php)
 - [iconv](https://www.php.net/manual/en/book.iconv.php)
 
 
-NOTE: **Note:** If you're on MediaTemple you will need [to create a phprc file](http://wiki.dreamhost.com/PHP.ini#How_to_add_a_phprc_file) that contains the following: `extension = fileinfo.so`
+NOTE: **Note:** If you're on MediaTemple you will need [to create a phprc file](https://help.dreamhost.com/hc/en-us/articles/214894037-How-do-I-create-a-phprc-file-via-FTP-) that contains the following: `extension = fileinfo.so`
 
 ### PHP Extensions Recommended
 
 These are recommended, but not required.
 
-- The [Internationalization](http://php.net/manual/en/book.intl.php) extension, for full functionality of [variable modifiers](templates/variable-modifiers.md)
-- [Multibyte String](http://php.net/manual/en/mbstring.installation.php) handling
+- The [Internationalization](https://php.net/manual/en/book.intl.php) extension, for full functionality of [variable modifiers](templates/variable-modifiers.md)
+- [Multibyte String](https://php.net/manual/en/mbstring.installation.php) handling
 
 ### MySQL Privileges
 

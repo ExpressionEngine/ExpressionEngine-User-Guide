@@ -128,7 +128,7 @@ CORRECT:
 
 In general, code should be commented prolifically. It not only helps describe the flow and intent of the code for less experienced programmers, but can prove invaluable when returning to your own code months down the line. There is not a required format for comments, but the following are recommended.
 
-[DocBlock](http://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_phpDocumentor.howto.pkg.html#basics.docblock) style comments preceding class and method declarations so they can be picked up by IDEs:
+[DocBlock](https://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_phpDocumentor.howto.pkg.html#basics.docblock) style comments preceding class and method declarations so they can be picked up by IDEs:
 
     /**
     * Super Class
@@ -247,7 +247,7 @@ CORRECT:
         }
     }
 
-See also information regarding [typecasting](http://us3.php.net/manual/en/language.types.type-juggling.php#language.types.typecasting), which can be quite useful. Typecasting has a slightly different effect which may be desirable. When casting a variable as a string, for instance, `NULL` and boolean `FALSE` variables become empty strings, 0 (and other numbers) become strings of digits, and boolean `TRUE` becomes `"1"`:
+See also information regarding [typecasting](https://us3.php.net/manual/en/language.types.type-juggling.php#language.types.typecasting), which can be quite useful. Typecasting has a slightly different effect which may be desirable. When casting a variable as a string, for instance, `NULL` and boolean `FALSE` variables become empty strings, 0 (and other numbers) become strings of digits, and boolean `TRUE` becomes `"1"`:
 
     $str = (string) $str; // cast $str as a string
 
@@ -504,7 +504,7 @@ On some servers where display_errors is disabled, and you do not have the abilit
 
     ini_set('display_errors', 1);
 
-NOTE: **Note:** Setting the [display_errors](http://us.php.net/manual/en/ref.errorfunc.php#ini.display-errors) setting with `ini_set()` at runtime is not identical to having it enabled in the PHP environment. Namely, it will not have any effect if the script has fatal errors
+NOTE: **Note:** Setting the [display_errors](https://us.php.net/manual/en/ref.errorfunc.php#ini.display-errors) setting with `ini_set()` at runtime is not identical to having it enabled in the PHP environment. Namely, it will not have any effect if the script has fatal errors
 
 ## Short Open Tags
 
@@ -572,7 +572,7 @@ CORRECT:
 
 ## MySQL Table Key Naming
 
-Table key definitions must be explicitly named, to avoid accidental duplicate keys or inadvertent operations on the wrong index. Multiple column keys should be named distinctly, and preferably use all column names, separated with an underscore. ([Additional info](http://www.mysqlperformanceblog.com/2008/05/28/should-you-name-indexes-while-doing-alter-table/))
+Table key definitions must be explicitly named, to avoid accidental duplicate keys or inadvertent operations on the wrong index. Multiple column keys should be named distinctly, and preferably use all column names, separated with an underscore. ([Additional info](https://www.percona.com/blog/2008/05/28/should-you-name-indexes-while-doing-alter-table/))
 
 INCORRECT:
 

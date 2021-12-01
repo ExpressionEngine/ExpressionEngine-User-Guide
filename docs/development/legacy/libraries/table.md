@@ -125,7 +125,7 @@ The sorting preferences will be part of the table state that is passed to our da
         'color' => 'desc'
     )
 
-For a MySql application you would simply add these sorts to Active Record using the `order_by()` method. Since our example deals with arrays, we will make use of PHP's [usort()](http://php.net/usort) method. To do that we will need a custom sorting method, which requires exposing the current sort as a class variable. Add this between your `$rows` array and the datasource return value.
+For a MySql application you would simply add these sorts to Active Record using the `order_by()` method. Since our example deals with arrays, we will make use of PHP's [usort()](https://php.net/usort) method. To do that we will need a custom sorting method, which requires exposing the current sort as a class variable. Add this between your `$rows` array and the datasource return value.
 
     $this->sort = $state['sort'];
     usort($rows, array($this, '_sort_rows'));

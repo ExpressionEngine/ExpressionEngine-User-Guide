@@ -93,7 +93,7 @@ A [backup driver](general/system-configuration-overrides.md#cache_driver_backup)
 
 Add-on developers can find more information about using caching drivers to store and retrieve items in the [Cache Class](development/legacy/libraries/cache.md) documentation.
 
-NOTE: **Note:** The Memcached driver is set to use PHP's [Memcached](http://www.php.net/manual/en/book.memcached.php) extension by default. If it's not available, the driver will try to use [Memcache](http://www.php.net/manual/en/book.memcache.php) instead.
+NOTE: **Note:** The Memcached driver is set to use PHP's [Memcached](https://www.php.net/manual/en/book.memcached.php) extension by default. If it's not available, the driver will try to use [Memcache](https://www.php.net/manual/en/book.memcache.php) instead.
 
 NOTE: **Note:** The Redis driver uses the [PhpRedis](https://github.com/nicolasff/phpredis) extension.
 

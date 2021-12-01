@@ -130,7 +130,7 @@ The overridden method call (typically the second segment of the URI) will be pas
         }
     }
 
-Any extra segments after the method name are passed into `_remap()` as an optional second parameter. This array can be used in combination with PHP's [call_user_func_array()](http://php.net/call_user_func_array) to emulate ExpressionEngine's default behavior.
+Any extra segments after the method name are passed into `_remap()` as an optional second parameter. This array can be used in combination with PHP's [call_user_func_array()](https://php.net/call_user_func_array) to emulate ExpressionEngine's default behavior.
 
 Example:
 

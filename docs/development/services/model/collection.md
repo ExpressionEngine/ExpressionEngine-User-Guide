@@ -100,7 +100,7 @@ Sort a collection by a certain element key. Returns a new collection.
 | Parameter | Type         | Description                            |
 | --------- | ------------ | -------------------------------------- |
 | \$key     | `String`     | The key or property to sort by         |
-| \$flags   | `Int`        | A [PHP sort flag](http://php.net/sort) |
+| \$flags   | `Int`        | A [PHP sort flag](https://php.net/sort) |
 | Returns   | `Collection` | A new collection                       |
 
 ### `reverse()`

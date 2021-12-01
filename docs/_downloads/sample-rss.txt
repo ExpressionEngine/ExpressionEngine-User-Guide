@@ -3,11 +3,11 @@
 
 <?xml version="1.0" encoding="{encoding}"?>
 <rss version="2.0"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:dc="https://purl.org/dc/elements/1.1/"
+    xmlns:sy="https://purl.org/rss/1.0/modules/syndication/"
     xmlns:admin="http://webns.net/mvcb/"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:content="https://purl.org/rss/1.0/modules/content/">
 
     <channel>
     
@@ -18,7 +18,7 @@
     <dc:creator>{email}</dc:creator>
     <dc:rights>Copyright {gmt_date format="%Y"}</dc:rights>
     <dc:date>{gmt_date format="%Y-%m-%dT%H:%i:%s%Q"}</dc:date>
-    <admin:generatorAgent rdf:resource="http://expressionengine.com/" />
+    <admin:generatorAgent rdf:resource="https://expressionengine.com/" />
     
 {exp:channel:entries channel="{master_channel_name}" limit="10" dynamic_start="on" disable="member_data|pagination"}
     <item>

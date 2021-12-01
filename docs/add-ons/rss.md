@@ -146,7 +146,7 @@ The version of ExpressionEngine that you are using (1.0, 1.1, etc.). This data i
 
 ## RFC3229 Support
 
-ExpressionEngine has the ability to serve only new content if it receives an [RFC3229-compliant](http://www.ietf.org/rfc/rfc3229.txt) request. This means that programs or servers that are configured to do so can request to only see new content that has been produced since the last time it requested a feed and EE will provide only that new content. This allows you to reduce bandwidth costs and download time by only serving the necessary content.
+ExpressionEngine has the ability to serve only new content if it receives an [RFC3229-compliant](https://www.ietf.org/rfc/rfc3229.txt) request. This means that programs or servers that are configured to do so can request to only see new content that has been produced since the last time it requested a feed and EE will provide only that new content. This allows you to reduce bandwidth costs and download time by only serving the necessary content.
 
 This ability is provided by adding a special parameter to the {exp:channel:entries} opening tag, `channel_entries_dynamic_start`. It is used like so:
 

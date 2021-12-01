@@ -58,7 +58,7 @@ But if your entire site is in source control and there are good practices in pla
 
 ### Rsync
 
-[Rsync](http://rsync.samba.org) is a great utility that is available for Unix-based systems. Its purpose is to sync two directories exactly, and the directories can even be remote!
+[Rsync](https://rsync.samba.org) is a great utility that is available for Unix-based systems. Its purpose is to sync two directories exactly, and the directories can even be remote!
 
 A typical `rsync` command looks like this:
 
@@ -84,7 +84,7 @@ But the main problem with this method is we only ever have the latest backup, wh
 
     rsync -ahvz --delete user@production_server:~/public/ ~/backups/$(date +%F)/
 
-This performs a sync as before, but puts the files in a folder named with the current date. You could then run this command via a [cron job](http://en.wikipedia.org/wiki/Cron) every day (recommended) or any interval you choose.
+This performs a sync as before, but puts the files in a folder named with the current date. You could then run this command via a [cron job](https://en.wikipedia.org/wiki/Cron) every day (recommended) or any interval you choose.
 
 If you would rather store your backups as compressed archives, it's as easy as tacking on the command:
 
@@ -95,7 +95,7 @@ If you would rather store your backups as compressed archives, it's as easy as t
 
 Obviously, if you run this backup command every day, you're going to end up with a lot of backups. It would be great if we could automatically purge older backups we shouldn't need.
 
-One method is to compress your backups after `rsync` completes, and then configure [logrotate](http://linuxcommand.org/man_pages/logrotate8.html) to purge the files for you. This is a great option because you can easily set up the rotation to only keep, for example, 7 daily backups, 4 weekly backups, and 6 monthly backups.
+One method is to compress your backups after `rsync` completes, and then configure [logrotate](https://linuxcommand.org/man_pages/logrotate8.html) to purge the files for you. This is a great option because you can easily set up the rotation to only keep, for example, 7 daily backups, 4 weekly backups, and 6 monthly backups.
 
 Another method is a little easier to implement but doesn't give you as much flexibility easily, and that's to simply tack on a command to keep the last X number of backup folders/files in the directory. For example, to keep the 10 most recent backup folders (test in a safe place!):
 
@@ -103,7 +103,7 @@ Another method is a little easier to implement but doesn't give you as much flex
 
 ### Cloud Storage
 
-If you'd rather not maintain a remote backup destination, an easy place to send your files is a cloud storage option like Amazon S3. There are tools like [S3sync](http://s3sync.net) that behave like RSync, except S3 can be used as a source or destination. You can use the same snapshotting methods as above, but since you cannot run `logrotate` or do any other sort of shell commands on S3, you'll need to perform the archival and rotation locally and then sync, or take advantage of S3's [object expiration](http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectExpiration.html) to automatically delete old archives.
+If you'd rather not maintain a remote backup destination, an easy place to send your files is a cloud storage option like Amazon S3. There are tools like [S3sync](https://s3sync.net) that behave like RSync, except S3 can be used as a source or destination. You can use the same snapshotting methods as above, but since you cannot run `logrotate` or do any other sort of shell commands on S3, you'll need to perform the archival and rotation locally and then sync, or take advantage of S3's [object expiration](https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectExpiration.html) to automatically delete old archives.
 
 ### Dropbox
 
@@ -125,19 +125,19 @@ Our goals for backing up the database are:
 
 ### Creating the Dump
 
-There are a couple common ways of creating MySQL dumps. One is to use [mysqldump](http://dev.mysql.com/doc/refman/5.1/en/mysqldump.html):
+There are a couple common ways of creating MySQL dumps. One is to use [mysqldump](https://dev.mysql.com/doc/refman/5.1/en/mysqldump.html):
 
     mysqldump -u username db_name > output.sql
 
 The above takes a database named `db_name` and outputs it to a file called `output.sql`. Knowing this and what we've covered earlier, you could modify the command to output a file with a name of today's date. Combine that with `tar` to compress the file because text compresses very well.
 
-Many hosts have [phpMyAdmin](http://www.phpmyadmin.net/) installed which also lets you export databases in this format.
+Many hosts have [phpMyAdmin](https://www.phpmyadmin.net/) installed which also lets you export databases in this format.
 
 ### Automysqlbackup
 
 Manually creating the dump and handling the files as outlined above can be quite involved. Luckily, there is a very handy and popular script for creating backups of your databases and automatically rotating them so you only keep the backups you need.
 
-It's called [AutoMySQLBackup](http://sourceforge.net/projects/automysqlbackup/) and will backup all databases on your server as you add them, can send you email notifications of successful or failed backups, will automatically compress the backups, and many more configurable options.
+It's called [AutoMySQLBackup](https://sourceforge.net/projects/automysqlbackup/) and will backup all databases on your server as you add them, can send you email notifications of successful or failed backups, will automatically compress the backups, and many more configurable options.
 
 With AutoMySQLBackup, you just take a few minutes to set it up, and then simply incorporate the resulting files into your established file backup routine.
 
