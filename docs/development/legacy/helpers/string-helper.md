@@ -15,7 +15,7 @@ lang: php
 
 The String Helper file contains functions that assist in working with strings. This helper is loaded using the following code:
 
-    $this->load->helper('string');
+    ee()->load->helper('string');
 
 ## Available Functions
 
