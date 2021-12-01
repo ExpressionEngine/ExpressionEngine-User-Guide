@@ -110,7 +110,7 @@ The String Formatter is part of the [Format Service](development/services/format
 
     $str = 'www.example.com';
     $url = ee('Format')->make('Text', $str)->url();
-    // http://www.example.com
+    // https://www.example.com
 
     $str = 'https://';
     $url = ee('Format')->make('Text', $str)->url();

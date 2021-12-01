@@ -80,13 +80,13 @@ This method allows you to include scripts found in the main JavaScript directory
 
 NOTE: **Note:** This method will only load files from the `themes/javascript` directory. To load a third-party add-on package's JavaScript files, use `Cp::load_package_js`.
 
-Several custom jQuery plugins are included with ExpressionEngine and available for third-party developers to use. Plugins available include [ee_interact.event](development/control-panel-js/events.md#form-interaction-event), [tablesorter](http://tablesorter.com/docs/), [ee_table](development/control-panel-js/table.md), and [wysihat](development/control-panel-js/wysihat-api.md).
+Several custom jQuery plugins are included with ExpressionEngine and available for third-party developers to use. Plugins available include [ee_interact.event](development/control-panel-js/events.md#form-interaction-event), [tablesorter](https://mottie.github.io/tablesorter/docs/), [ee_table](development/control-panel-js/table.md), and [wysihat](development/control-panel-js/wysihat-api.md).
 
 An example call to load one of the jQuery plugins:
 
     ee()->cp->add_js_script('plugin', 'tablesorter');
 
-The [jQuery UI](http://jqueryui.com) interactions and widgets are also included with ExpressionEngine for third-party developers to use. The call to load the jQuery UI Autocomplete plugin would look like this, for example:
+The [jQuery UI](https://jqueryui.com) interactions and widgets are also included with ExpressionEngine for third-party developers to use. The call to load the jQuery UI Autocomplete plugin would look like this, for example:
 
     ee()->cp->add_js_script('ui', 'autocomplete');
 

@@ -89,7 +89,7 @@ Remarkably, even if a match occurs on each loop, the additional processing overh
 
 ## Use sprintf instead of str_replace
 
-When you need to add one or more variables to an existing string (e.g. lang values), make sure to use [sprintf](http://php.net/sprintf) instead of `str_replace`.
+When you need to add one or more variables to an existing string (e.g. lang values), make sure to use [sprintf](https://php.net/sprintf) instead of `str_replace`.
 
 INCORRECT:
 
@@ -116,7 +116,7 @@ CORRECT:
     if (strncmp($str, 'foo', 3) == 0)
     if (strncasecmp($str, 'foo', 3) == 0)
 
-[strncmp()](http://us3.php.net/manual/en/function.strncmp.php) and [strncasecmp()](http://us3.php.net/manual/en/function.strcasecmp.php) return &lt; 0 if `str1` is less than `str2`, &gt; 0 if `str1` is greater than `str2`, and **0 if they are equal**.
+[strncmp()](https://us3.php.net/manual/en/function.strncmp.php) and [strncasecmp()](https://us3.php.net/manual/en/function.strcasecmp.php) return &lt; 0 if `str1` is less than `str2`, &gt; 0 if `str1` is greater than `str2`, and **0 if they are equal**.
 
 ## for() Loops
 
@@ -136,7 +136,7 @@ ALTERNATIVE:
 
 ## Heredoc Strings
 
-Avoid [heredoc strings](http://us3.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc) unless absolutely necessary. They are more intensive for PHP to parse than single or double-quoted strings, resulting in slower code execution and increased memory usage.
+Avoid [heredoc strings](https://us3.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc) unless absolutely necessary. They are more intensive for PHP to parse than single or double-quoted strings, resulting in slower code execution and increased memory usage.
 
 ## One-time Use Variables
 

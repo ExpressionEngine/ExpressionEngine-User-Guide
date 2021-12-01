@@ -31,11 +31,11 @@ If you have a security issue in a current or legacy version of ExpressionEngine 
 
 When we speak about security related bugs, we are most interested in:
 
-- [Cross-site Scripting (XSS)](http://en.wikipedia.org/wiki/Cross-site_Scripting)
-- [Cross-site Request Forgery (CSRF)](http://en.wikipedia.org/wiki/Cross-site_request_forgery)
-- [Privilege Escalation](http://en.wikipedia.org/wiki/Privilege_escalation)
-- [Session Hijacking](http://en.wikipedia.org/wiki/Session_hijacking)
-- [Arbitrary Code Execution](http://en.wikipedia.org/wiki/Arbitrary_code_execution)
+- [Cross-site Scripting (XSS)](https://en.wikipedia.org/wiki/Cross-site_Scripting)
+- [Cross-site Request Forgery (CSRF)](https://en.wikipedia.org/wiki/Cross-site_request_forgery)
+- [Privilege Escalation](https://en.wikipedia.org/wiki/Privilege_escalation)
+- [Session Hijacking](https://en.wikipedia.org/wiki/Session_hijacking)
+- [Arbitrary Code Execution](https://en.wikipedia.org/wiki/Arbitrary_code_execution)
 
 ### Making Good Security Reports
 

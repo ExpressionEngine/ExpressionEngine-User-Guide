@@ -69,7 +69,7 @@ You can optionally set the write mode via the third parameter:
 
     write_file('./path/to/file.php', $data, 'r+');
 
-The default mode is 'wb'. Please see the [PHP user guide](http://php.net/fopen) for mode options.
+The default mode is 'wb'. Please see the [PHP user guide](https://php.net/fopen) for mode options.
 
 NOTE: **Note:** The path is relative to your main site index.php file, NOT your controller or view files. CodeIgniter uses a front controller so paths are always relative to the main site index.
 

@@ -41,11 +41,11 @@ The `timezone=` parameter will convert a date to the specified timezone:
 
     timezone="America/Los_Angeles"
 
-This will override the timezone specified in the [localization settings](control-panel/settings/general.md) in the control panel, and the member's localization settings. PHP.net has a [list of supported timezones](http://php.net/manual/en/timezones.php).
+This will override the timezone specified in the [localization settings](control-panel/settings/general.md) in the control panel, and the member's localization settings. PHP.net has a [list of supported timezones](https://php.net/manual/en/timezones.php).
 
 ## Date Formatting Codes
 
-These are all the available formating codes. If you are familiar with PHP, then these will look [remarkably similar](http://php.net/manual/en/function.date.php#refsect1-function.date-parameters):
+These are all the available formating codes. If you are familiar with PHP, then these will look [remarkably similar](https://php.net/manual/en/function.date.php#refsect1-function.date-parameters):
 
 | Variable    | Description                                                                                                                                                 | Sample Rendering                           |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
@@ -238,7 +238,7 @@ Would be rendered like this:
 
 #### stop=
 
-The `stop=` parameter determines when to stop calculating a relative date and instead display a standard date. When this happens the [format=](#formatting-dates) and [timezone=](#setting-the-timezone) parameters will be processed. Any valid date/time string parameter for PHP's [strtotime()](http://www.php.net/manual/en/function.strtotime.php) function is acceptable. ExpressionEngine will compute a timestamp based on the date and the provided `stop=` value. When the current timestamp is greater than or equal to the computed timestamp the date will be displayed as a standard date.
+The `stop=` parameter determines when to stop calculating a relative date and instead display a standard date. When this happens the [format=](#formatting-dates) and [timezone=](#setting-the-timezone) parameters will be processed. Any valid date/time string parameter for PHP's [strtotime()](https://www.php.net/manual/en/function.strtotime.php) function is acceptable. ExpressionEngine will compute a timestamp based on the date and the provided `stop=` value. When the current timestamp is greater than or equal to the computed timestamp the date will be displayed as a standard date.
 
 For example, if you want relative dates but only for one day:
 

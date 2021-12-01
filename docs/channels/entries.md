@@ -261,7 +261,7 @@ Every Parameter available to the channel tag can be set dynamically.
 
 This parameter is only used in the tag when used in an RSS/Atom feed. It will not do anything in any other circumstance. The default value is "no", so you must specify this parameter in order to take advantage of the feature.
 
-When used in an RSS/Atom feed, this parameter allows ExpressionEngine to dynamically provide a starting date for the feed. This is used to allow EE to serve only _new_ content when it is requested by the feed via a RFC3229-compliant request ([RFC3229 info](http://tools.ietf.org/rfc/rfc3229.txt)).
+When used in an RSS/Atom feed, this parameter allows ExpressionEngine to dynamically provide a starting date for the feed. This is used to allow EE to serve only _new_ content when it is requested by the feed via a RFC3229-compliant request ([RFC3229 info](https://tools.ietf.org/rfc/rfc3229.txt)).
 
 ### `entry_id=`
 

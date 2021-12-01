@@ -234,7 +234,7 @@ In this example, the file directory is hard coded and the form is not editable, 
         <head>
             {exp:jquery:script_tag}
 
-            <!--using the jQuery Form plugin http://jquery.malsup.com/form/-->
+            <!--using the jQuery Form plugin https://jquery.malsup.com/form/-->
             <script src="/js/jquery.form.js" type="text/javascript"></script>
 
             <script type="text/javascript">

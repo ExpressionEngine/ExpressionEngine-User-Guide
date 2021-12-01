@@ -171,7 +171,7 @@ We now have 3 items in each list, and the URL, titles, and JSON-LD ListItem posi
 
     <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
@@ -206,7 +206,7 @@ Resulting in:
 
     <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {

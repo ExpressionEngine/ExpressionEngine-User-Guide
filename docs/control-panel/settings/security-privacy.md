@@ -47,7 +47,7 @@ You can opt out at any time by turning this setting off.
 
 ### Domain
 
-Optionally specify a domain the cookie is available to. By default, the exact hostname of the requested page is set as the cookie domain. For example, if the page at `http://www.example.com/blog/an-entry-title` is loaded and the cookie domain is left blank in ExpressionEngine's configuration, the browser will use `www.example.com` as the cookie domain. The browser will only make these cookies available when the page's hostname is _exactly_ `www.example.com`.
+Optionally specify a domain the cookie is available to. By default, the exact hostname of the requested page is set as the cookie domain. For example, if the page at `https://www.example.com/blog/an-entry-title` is loaded and the cookie domain is left blank in ExpressionEngine's configuration, the browser will use `www.example.com` as the cookie domain. The browser will only make these cookies available when the page's hostname is _exactly_ `www.example.com`.
 
 If the cookie domain is explicitly specified, however, the browser will make the cookie available whenever the requested page's hostname _contains_ the cookie domain. For example, setting the cookie domain to `.example.com` will ensure the cookie is shared whenever the requested page's hostname includes `example.com`, `www.example.com`, `admin.example.com`, `blog.example.com`, and so on.
 

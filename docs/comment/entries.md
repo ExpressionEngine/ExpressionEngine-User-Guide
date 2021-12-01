@@ -168,7 +168,7 @@ TRUE / FALSE, Whether or not the entry being displayed allows comments. Typicall
 
 The comment author's screen name, if a member; otherwise, this variable will display the name submitted with the comment.
 
-    <a href="http://example.com/index.php/member/{author_id}/">{author}</a>
+    <a href="https://example.com/index.php/member/{author_id}/">{author}</a>
 
 ### `{author_id}`
 
@@ -176,7 +176,7 @@ The ID corresponding to the comment author's member profile. This is only applic
 
 This can be useful for creating links to the commenter's member profile:
 
-    <a href="http://example.com/index.php/member/{author_id}/">{name}</a>
+    <a href="https://example.com/index.php/member/{author_id}/">{name}</a>
 
 ### `{avatar_image_height}`
 
@@ -238,7 +238,7 @@ This variable is replaced by the URL set in the **Comment Page URL** preference 
 
 Would be rendered like this:
 
-    <a href="http://example.com/index.php/channel/comments/234/">my entry</a>
+    <a href="https://example.com/index.php/channel/comments/234/">my entry</a>
 
 ### `{comment_expiration_date}`
 
@@ -275,7 +275,7 @@ This variable is replaced by the URL set in the **Comment Page URL** preference 
 
 Would be rendered like this:
 
-    <a href="http://example.com/index.php/channel/comments/ice_cream/">my entry</a>
+    <a href="https://example.com/index.php/channel/comments/ice_cream/">my entry</a>
 
 ### `{count}`
 
@@ -317,7 +317,7 @@ The URL to the specified template. The ID number of the entry with which the com
 
 Would be rendered like this:
 
-    <a href="http://example.com/index.php/channel/comments/234/">my entry</a>
+    <a href="https://example.com/index.php/channel/comments/234/">my entry</a>
 
 ### `{ip_address}`
 
@@ -435,7 +435,7 @@ The URL to the specified template. The "url title" of the entry with which the c
 
 Would be rendered like this:
 
-    <a href="http://example.com/index.php/channel/comments/ice_cream/">permalink</a>
+    <a href="https://example.com/index.php/channel/comments/ice_cream/">permalink</a>
 
 ### `{username}`
 

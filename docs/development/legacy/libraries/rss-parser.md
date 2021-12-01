@@ -13,7 +13,7 @@ lang: php
 
 # RSS Parser Class
 
-The RSS Parser Class is singularly used as a factory to create [SimplePie objects](http://simplepie.org/api/class-SimplePie.html).
+The RSS Parser Class is singularly used as a factory to create [SimplePie objects](https://simplepie.org/api/class-SimplePie.html).
 
 ### `create($url[, $duration = 180[, $cache_name = '']])`
 

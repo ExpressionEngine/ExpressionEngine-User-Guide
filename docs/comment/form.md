@@ -99,7 +99,7 @@ With this parameter, you can specify the css id you want the form to have. The d
 This parameter allows you to define where the user will be returned after submitting a comment. The parameter can be defined in two ways:
 
 1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="news/local"
-2.  Use a full URL. For example: return="<http://example.com/return.html>"
+2.  Use a full URL. For example: return="<https://example.com/return.html>"
 
 If this parameter is not defined, they will be returned to the form page.
 

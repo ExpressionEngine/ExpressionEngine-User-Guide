@@ -110,7 +110,7 @@ Permits you to manually set a server status header. Example:
     set_status_header(401);
     // Sets the header as:  Unauthorized
 
-[See here](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) for a full list of headers.
+[See here](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) for a full list of headers.
 
 ### `remove_invisible_characters($str[, $url_encoded = TRUE])`
 

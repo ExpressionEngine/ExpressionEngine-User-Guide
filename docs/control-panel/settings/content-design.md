@@ -35,8 +35,8 @@ This is where you indicate which resizing protocol to use. You may need to conta
 
 - [GD](https://www.php.net/manual/en/intro.image.php)
 - [GD 2](https://www.php.net/manual/en/intro.image.php)
-- [ImageMagick](http://www.imagemagick.org/script/index.php)
-- [NetPBM](http://netpbm.sourceforge.net/)
+- [ImageMagick](https://www.imagemagick.org/script/index.php)
+- [NetPBM](https://sourceforge.net/projects/netpbm/)
 
 ### Converter path
 
