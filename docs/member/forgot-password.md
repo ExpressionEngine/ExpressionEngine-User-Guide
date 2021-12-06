@@ -33,15 +33,15 @@ NOTE: **Note:** This form will only email the user if the user requesting the pa
 
     email_template="member/email-password-reset"
 
-    Template to use for email which is sent to user. 
+Template to use for email which is sent to user. 
 
-    If no template is defined or if the template defined does not exist, the default [Member Profile Template](control-panel/template-manager.md#member-profile-templates) for a forgotten password will be used.
+NOTE: **Note:** If no template is defined or if the template defined does not exist, the default [Member Profile Template](control-panel/template-manager.md#member-profile-templates) for a forgotten password will be used.
 
 ### `password_reset_url=`
 
-    password_reset_url="member/reset-password"
+password_reset_url="member/reset-password"
 
-    URL that is sent to the user (followed by the hash) to reset the user's password. The parameter can be defined in two ways:
+URL that is sent to the user (followed by the hash) to reset the user's password. The parameter can be defined in two ways:
 
 1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="member/reset-password"
 2.  Use a full URL. For example: return="<https://example.com/member/reset-password.html>"
