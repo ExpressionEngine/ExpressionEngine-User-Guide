@@ -25,7 +25,7 @@ NOTE: **Note:** A member account's Username and Screen Name can be identical, bu
 - [Forgot Password](member/forgot-password.md)
 - [Forgot Username](member/forgot-username.md)
 - [Reset Password](member/reset-password.md)
-- [Two-Factor Authentication Links](member/2fa.md)
+- [Multi-Factor Authentication Links](member/mfa.md)
 - [Member List Tag](member/memberlist.md)
 - [Member Search Form](member/search.md)
 - [Custom Profile Data Tag](member/custom-profile-data.md)
