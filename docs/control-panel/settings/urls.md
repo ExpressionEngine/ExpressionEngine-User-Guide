@@ -73,6 +73,8 @@ The full URL to location of the ExpressionEngine User Guide. This URL is used to
 
 ### Profile URL segment
 
+NOTE: **Note:** This setting is only available when [Legacy Member Profile Templates](/member/profile-templates.md) are enabled.
+
 When this word is encountered in your URL it will display your member profile area. The word you choose cannot be the name of an existing template group. The default value of this is "member". That means that a URL like the following would trigger ExpressionEngine to display the member profile area:
 
     https://example.com/member/profile/
