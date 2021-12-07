@@ -29,9 +29,9 @@ If the member has not yet set up their multi-factor authentication, upon login t
 
 ## Enable MFA on front-end
 
-Multi-Factor Authentication on front-end is handled using set of system dialogs. The dialogs can be triggered manually using the links provided by [`{exp:member:two_fa_links}` tag](member/mfa.md) or automatically when user is accessing the template that is protected with MFA.
+Multi-Factor Authentication on front-end is handled using set of system dialogs. The dialogs can be triggered manually using the links provided by [`{exp:member:mfa_links}` tag](member/mfa.md) or automatically when user is accessing the template that is protected with MFA.
 
-The dialogs are presented using `Multi-Factor Authentication Template` from System Message Templates. You can also use custom template from `system_messages` template group, it should be named `mfa`.
+The dialogs are presented using `Multi-Factor Authentication Template` from System Message Templates. You can also use custom template from `system_messages` template group, it should be named `mfa_template`.
 
 ## Template protection
 
