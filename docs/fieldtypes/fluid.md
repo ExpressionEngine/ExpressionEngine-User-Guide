@@ -15,6 +15,8 @@ A Fluid field is a collection of fields. A Fluid field can contain any native fi
 
 Fluid fields give the author control over the structure of their content, while ensuring the final output uses the correct design elements. All that is done without the author worrying about markup or html. They simply add content to the fields, and template can wrap each field in the proper markup.
 
+![fluid fields](_images/field_fluid.png)
+
 ## Field Options
 
 ### Custom Fields

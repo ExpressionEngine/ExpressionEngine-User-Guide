@@ -13,6 +13,8 @@ URL is a fieldtype for storing URLs. This fieldtype is validated for the content
 
     <a href="{your_url_field}">Your Link</a>
 
+![url field](_images/field_url.png)
+
 ## Field Options
 
 ### Allowed URL Schemes

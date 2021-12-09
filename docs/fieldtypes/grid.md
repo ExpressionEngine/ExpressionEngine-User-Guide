@@ -17,6 +17,8 @@ lang: ee
 
 The Grid field in ExpressionEngine provides a way to group fieldtypes in repeatable rows. This is useful for when you need to group a subset of data in your channel entry form that may or may not have a varying number of rows. You can select a minimum and a maximum amount of rows to allow data entry for, or it can be virtually infinite.
 
+![grid field](_images/field_grid.png)
+
 ## Field Options
 
 ### Minimum Rows

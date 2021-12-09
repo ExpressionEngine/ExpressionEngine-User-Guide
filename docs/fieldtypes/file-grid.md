@@ -15,6 +15,8 @@ lang: ee
 
 The File Grid field in ExpressionEngine provides a way to upload multiple files at once via drag-and-drop, and then have those files be populated into a [Grid field](fieldtypes/grid.md). It works by having a default, always-included File column. You can then add any additional columns available to a Grid field to easily associate more content with the file.
 
+![file grid field](_images/field_file_grid.png)
+
 ## Field Options
 
 In addition to the options available to a regular Grid field, you also have the following options to configure the default File column:
