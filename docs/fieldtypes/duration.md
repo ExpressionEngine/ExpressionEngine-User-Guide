@@ -16,6 +16,8 @@ For example, if the duration field is set with "seconds" for units, and the cont
     Lap 1: {duration}
     {!-- Lap 1: 5:33 --}
 
+![duration field](_images/field_duration.png)
+
 ## Field Options
 
 ### Units

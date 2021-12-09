@@ -3,6 +3,8 @@
 
 The color picker lets you select pre-defined or custom colors.
 
+![color picker field](/_images/field_color_picker.png)
+
 ## Field Options
 
 #### Allowed Colors
