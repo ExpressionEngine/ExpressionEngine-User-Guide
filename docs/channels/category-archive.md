@@ -316,6 +316,14 @@ You can also use SITE_INDEX in your path to point to your main site index page. 
 
     <a href="{entry_id_path='SITE_INDEX'}">{title}</a>
 
+### `{page_uri}`
+
+If you have the Pages Module installed and if you have associated a static page with a channel entry (via the "Pages" section of the Publish tab), this is the page uri for the page.
+
+### `{page_url}`
+
+If you have the Pages Module installed and if you have associated a static page with a channel entry (via the "Pages" section of the Publish tab), this is the page url for the page (the site URL + the page URI).
+
 ### `{path}`
 
     {entry_titles} <a href="{path='site/index'}">{title}</a> {/entry_titles}
