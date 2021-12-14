@@ -9,6 +9,22 @@
 
 # ExpressionEngine v5 Change Log
 
+## Version 5.4.3
+Release Date: December 14, 2021
+
+NOTE: **Important:** This version includes important security updates.
+
+- **Enhancements** 🚀
+  - Added noindex,nofollow to template used by ?URL redirect warning page.
+
+- **Security** 🔒
+  - Removed user's name from default email templates.
+  - Updated functions with additional sanitization and XSS filtering.
+  - Removed potential SQL injection vulnerabilities.
+
+
+
+
 ## Version 5.4.2
 Release Date: March 4, 2021
 
