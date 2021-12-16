@@ -32,7 +32,7 @@ In many respects, this variable works much like the {path=''} global variable. H
 
 It is also possible to point to a stylesheet templates by directly adding a "css" trigger word in the URL. For instance, if your stylesheet is the "channel_css" Template of the "channel" Template Group, you could point to it using the URL:
 
-[https://example.com/css/channel/channel\\\_css/](https://example.com/css/channel/channel_css/)
+[https://example.com/css/channel/channel_css/](https://example.com/css/channel/channel_css/)
 
 ## Using Tags and PHP in a Stylesheet
 
