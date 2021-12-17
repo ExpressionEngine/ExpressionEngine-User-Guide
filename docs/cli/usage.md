@@ -29,6 +29,10 @@ What's your name? Andy
 Pleasure to meet you, Andy!
 ```
 
+CLI is available for every user that has access to your site terminal. It does not handle authorization inside ExpressionEngine and is relying on your server's authorization method instead. 
+
+If you want yo disable CLI globally, it can be done by setting `cli_enable` [configuration override](general/system-configuration-overrides.md#cli_enable) to `n`.
+
 ## List All Commands
 
 To view a list of all available commands, you may use the list command:
