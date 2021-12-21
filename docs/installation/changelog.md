@@ -8,6 +8,9 @@
 -->
 # ExpressionEngine v6 Change Log
 ## Version 6.1.6 (Release: November 11, 2021)
+- **Contributors** 🙌   
+ 
+[@bakin1999](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bakin1999), [@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@TomJaeger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger), [@Yulyaswan](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan)
 
 - **Bug Fixes** 💃🐛 
   
@@ -19,6 +22,9 @@
   - Improved UI in several areas of Control Panel
 
 ## Version 6.1.5 (Release: October 22, 2021)
+- **Contributors** 🙌   
+ 
+[@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@jcogs-design](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=jcogs-design), [@TomJaeger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger), [@Yulyaswan](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan)
 
 - **Bug Fixes** 💃🐛 
   
@@ -33,6 +39,9 @@
   - Improved PHP8 compatibility.
 
 ## Version 6.1.4 (Release: October 18, 2021)
+- **Contributors** 🙌   
+ 
+[@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@ops-andy](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ops-andy), [@Yulyaswan](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan)
 
 - **Bug Fixes** 💃🐛 
   
@@ -47,6 +56,9 @@
   - Resolved issue where 'Login' button was not showing up on prolets after logout.
 
 ## Version 6.1.3 (Release: October 15, 2021)
+- **Contributors** 🙌   
+ 
+[@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@ops-andy](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ops-andy)
 
 - **Bug Fixes** 💃🐛 
   
@@ -55,6 +67,9 @@
   - Resolved [#959](https://github.com/ExpressionEngine/ExpressionEngine/issues/959) where link to the custom CP homepage was not showing in navigation.
 
 ## Version 6.1.2 (Release: October 13, 2021)
+- **Contributors** 🙌   
+
+[@bakin1999](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bakin1999), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@litzinger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=litzinger), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@robinsowell](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell), [@robsonsobral](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robsonsobral), [@Yulyaswan](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan)
 
 - **Bug Fixes** 💃🐛 
   
@@ -94,7 +109,9 @@
 
 
 ## Version 6.1.1 (Release: October 7, 2021)
+- **Contributors** 🙌    
 
+[@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@TomJaeger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger), [@Yulyaswan](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan)
 - **Bug Fixes** 💃🐛 
   - Resolved issue when Live Preview was not always triggered during changes in RTE field.
   - Resolved [#1199](https://github.com/ExpressionEngine/ExpressionEngine/issues/1199) where it was not always possible to change field population method for Dropdown inside Grid.
@@ -105,6 +122,10 @@
 ## Version 6.1.0 (Release: October 6, 2021)
 
 NOTE: **Important:** This version includes important security updates.
+
+- **Contributors** 🙌    
+
+[@ajohnson](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ajohnson), [@bakin1999](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bakin1999), [@dougblackjr](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr), [@geoffcowan](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=geoffcowan), [@gilbert-hop](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=gilbert-hop), [@johnfuller](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=johnfuller), [@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@litzinger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=litzinger), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@ops-andy](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ops-andy), [@robinsowell](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell), [@TomJaeger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger), [@Yulyaswan](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan), [@zdehkordi](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=zdehkordi) 
 
 - **Bug Fixes** 💃🐛 
   - Resolved [#179](https://github.com/ExpressionEngine/ExpressionEngine/issues/179) where an image thumbnail could be given an incorrect path.
@@ -183,10 +204,18 @@ NOTE: **Important:** This version includes important security updates.
 
 
 ## Version 6.0.6 (Release: May 21, 2021)
+- **Contributors** 🙌    
+
+[@ajohnson](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ajohnson), [@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@ops-andy](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ops-andy), [@TomJaeger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger)
+
 - **Bug Fixes** 💃🐛 
   - Resolved [#1091](https://github.com/ExpressionEngine/ExpressionEngine/issues/1091) where the field type dropdown when creating a new field was not displaying correctly in Firefox.
 
 ## Version 6.0.5 (Release: May 20, 2021)
+- **Contributors** 🙌    
+
+[@ajohnson](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ajohnson), [@gilbert-hop](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=gilbert-hop), [@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@ops-andy](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ops-andy), [@robinsowell](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell), [@TomJaeger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger)
+
 - **Bug Fixes** 💃🐛 
   - Resolved [#323](https://github.com/ExpressionEngine/ExpressionEngine/issues/323) where the Redis Cache driver was using a deprecated command.
   - Resolved [#709](https://github.com/ExpressionEngine/ExpressionEngine/issues/709) where long labels in select fields caused wrapping issues.
@@ -198,6 +227,10 @@ NOTE: **Important:** This version includes important security updates.
   - Resolved issue with positioning of alert banner on Entries Screen.
 
 ## Version 6.0.4 (Release: May 18, 2021)
+- **Contributors** 🙌    
+
+[@dougblackjr](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr), [@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@Jordan-Ellis](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Jordan-Ellis), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@ops-andy](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ops-andy), [@robinsowell](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell), [@TomJaeger](https://github.com/TomJaeger)
+
 - **Bug Fixes** 💃🐛 
   - Resolved [#173](https://github.com/ExpressionEngine/ExpressionEngine/issues/173) where Live Preview was not triggered when changing order of related entries in a Relationship Fieldtype.
   - Resolved [#207](https://github.com/ExpressionEngine/ExpressionEngine/issues/207) which prevented the the new file/upload button to be usable in a Textarea Fieldtype after a new Textarea was created in a Fluid Field
@@ -223,6 +256,10 @@ NOTE: **Important:** This version includes important security updates.
 ## Version 6.0.3 (Release: February 17, 2021)
 NOTE: **Important:** This version includes important security updates.
 
+- **Contributors** 🙌    
+
+[@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode)
+
 - **Bug Fixes** 💃🐛 
   - Resolved [#629](https://github.com/ExpressionEngine/ExpressionEngine/issues/629) where CP styles were broken by browser extension.
   - Resolved [#800](https://github.com/ExpressionEngine/ExpressionEngine/issues/800) where File Picker was not shown for Text fields.
@@ -246,6 +283,10 @@ NOTE: **Important:** This version includes important security updates.
   
   
 ## Version 6.0.2 (Release: February 5, 2021)
+- **Contributors** 🙌    
+
+[@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@ops-andy](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ops-andy)
+
 - **Bug Fixes** 💃🐛 
   - Resolved [#192](https://github.com/ExpressionEngine/ExpressionEngine/issues/192) where keywords filter was not always working in Entries Manager when using Safari browser.
   - Resolved [#812](https://github.com/ExpressionEngine/ExpressionEngine/issues/812) where SuperAdmin could not log in after editing its role.
@@ -261,6 +302,10 @@ NOTE: **Important:** This version includes important security updates.
   - `index.php` and `admin.php` are now updated automatically when performing 1-Click update.
 
 ## Version 6.0.1 (Release: January 22, 2021)
+- **Contributors** 🙌    
+
+[@dougblackjr](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr), [@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@Jordan-Ellis](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Jordan-Ellis), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@robinsowell](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell)
+
 - **Bug Fixes** 💃🐛 
   - Resolved [#783](https://github.com/ExpressionEngine/ExpressionEngine/issues/783) where an exception could be thrown when deleting users with long user names.
   - Resolved [#768](https://github.com/ExpressionEngine/ExpressionEngine/issues/768) where some buttons on the "forgot password" screen where not translated.
@@ -293,6 +338,11 @@ NOTE: **Important:** This version includes important security updates.
   - Added more heading options to the RTE field [#695](https://github.com/ExpressionEngine/ExpressionEngine/issues/695).
 
 ## Version 6.0.0 (Release: December 17, 2020)
+
+- **Contributors** 🙌    
+
+[@ajohnson](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ajohnson), [@derekjones](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=derekjones), [@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@Jordan-Ellis](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Jordan-Ellis), [@kevincupp](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=kevincupp), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@robinsowell](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell), [@scbarber](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=scbarber)
+
 - **New Control Panel Design** 🎨
   - Added Jump Menu. Navigate ExpressionEngine fast
   - Many new changes and improvements that make the control panel cleaner, and more delightful to use
