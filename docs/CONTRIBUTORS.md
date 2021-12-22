@@ -1,4 +1,6 @@
-This file is a list of all who have contributed content or source code to the ExpressionEngine Docs sorted by most commits.
+# Docs Contributors
+
+This is a list of all who have contributed content or source code to the ExpressionEngine Docs sorted ordered by most commits. If you're interested in contributing to the Docs or to the ExpressionEngine Core Project be sure to read through the [Contributing documentation](/contributing.md). 
 
 
 <div class="flex-container" style="margin-bottom:10px"><div class="flex-child"><img src="https://avatars.githubusercontent.com/u/93695?v=4" width=50 style="margin:0 10px 0 0"/></div><div class="flex-child">Kevin Cupp<br><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=kevincupp" target="_BLANK">@kevincupp</a></div></div>
