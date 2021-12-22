@@ -119,7 +119,7 @@ module.exports = () => {
 
 		// Display any warnings
 		Logger.showMessages()
-		console.log('\nFinished Build!'.green)
+		console.log('\nFinished Build! Did you remember to update Authors and Contributors?'.green)
 	})
 }
 
