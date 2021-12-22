@@ -32,7 +32,9 @@ do
 done
 
 cat > "$here/../docs/CONTRIBUTORS.md" <<- EOF
-This file is a list of all who have contributed content or source code to the ExpressionEngine Docs sorted by most commits.
+# Docs Contributors
+
+This is a list of all who have contributed content or source code to the ExpressionEngine Docs sorted ordered by most commits. If you're interested in contributing to the Docs or to the ExpressionEngine Core Project be sure to read through the [Contributing documentation](/contributing.md). 
 
 $CONTRIBUTORS
 
