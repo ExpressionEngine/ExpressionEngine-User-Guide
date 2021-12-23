@@ -14,7 +14,7 @@
 set -eu
 here="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 #Get all the contributors and output JSON to a file
-curl -s -u "$GHUSER:$GHTOKEN" https://api.github.com/repos/expressionengine/expressionengine-user-guide/contributors | jq . > contributors.json
+curl -s -u "$GHUSER:$GHTOKEN" https://api.github.com/repos/expressionengine/expressionengine-user-guide/contributors?per_page=100 | jq . > contributors.json
 
 #Get the length of the contributors JSON object
 length="$(cat contributors.json | jq length)"
