@@ -52,7 +52,7 @@ do
         
         echo $NAME' - '$AUTHOR | tr -d '"'    
         
-        CONTRIBUTORS+=$'\n<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="'$IMAGE'" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">'$NAME'</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author='$AUTHOR'" target="_BLANK">@'$AUTHOR'</a></p></div></div></div></li>'
+        CONTRIBUTORS+=$'\n<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="'$IMAGE'" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">'$NAME'</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author='$AUTHOR'" target="_BLANK">@'$AUTHOR'</a></p></div></div></div></li>'
     fi
     ((x=x+1))
 done
@@ -65,7 +65,7 @@ cat > "$here/../docs/contributors.md" <<- EOF
 
 This is a list of all who have contributed content or source code to the ExpressionEngine Docs sorted alphabetically. If you're interested in contributing to the Docs or to the ExpressionEngine Core Project be sure to read through the [Contributing documentation](/contributing.md). 
 
-<div class="max-w-7xl mx-auto py-12 px-4 text-center">
+<div class="max-w-7xl mx-auto py-12 px-4">
 <div class="space-y-8 sm:space-y-12">
     <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-5">
     $CONTRIBUTORS
