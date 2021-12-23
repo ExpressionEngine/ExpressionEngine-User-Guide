@@ -12,43 +12,48 @@
 ## This Script also is expecting the jq library to be installed. https://stedolan.github.io/jq/
 
 set -eu
+BASE=$1
+HEAD=$2
+
+CONTRIBUTORS=""
 here="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-#Get all the contributors and output JSON to a file
-curl -s -u "$GHUSER:$GHTOKEN" https://api.github.com/repos/expressionengine/expressionengine-user-guide/contributors | jq . > contributors.json
+
+
+curl -s -u "$GHUSER:$GHTOKEN" https://api.github.com/repos/expressionengine/expressionengine/compare/$1...$2 | jq .commits > core_contributors.json
 
 #Get the length of the contributors JSON object
-length="$(cat contributors.json | jq length)"
+length="$(cat core_contributors.json | jq length)"
 
-#Initialize our contributors string that will be used later
-CONTRIBUTORS=""
 echo "Starting Loop"
 
 #For each element in our JSON object we'll grab the users name and add it. This will allows us to sort alphabetically later
 i=0
+echo $length
 while [ $i -lt $length ]
 do
-    AUTHOR=$(cat contributors.json | jq ".[$i] | .login" | tr -d '"')
+    echo "Starting $i"
+    AUTHOR=$(cat core_contributors.json | jq ".[$i] | .author | .login" | tr -d '"')
     NAME=$(curl -s -u "$GHUSER:$GHTOKEN" https://api.github.com/users/$AUTHOR | jq .name | tr -d '"')
     if [ "$NAME" = "null" ]; then
         NAME="$(echo $AUTHOR | sed 's/.*/\L&/; s/[a-z]*/\u&/g')"
     fi
     tmp=$(mktemp)
-    jq ".[$i] |= . + {\"name\": \"$NAME\"}" contributors.json > "$tmp" && mv "$tmp" contributors.json
-   
+    jq ".[$i] | .author |= . + {\"name\": \"$NAME\"}" core_contributors.json > "$tmp" && mv "$tmp" core_contributors.json
+    echo "Finished $i"
     ((i=i+1))
 done
 
 #Now lets sort of JSON object alphabetically
-jq ".|=sort_by(.name)" contributors.json > "$tmp" && mv "$tmp" contributors.json
+jq ".|=sort_by(.name)" core_contributors.json > "$tmp" && mv "$tmp" core_contributors.json
 
 #Now that we are all sorted, we're going to output our html from our JSON object.
 x=0
 while [ $x -lt $length ]
 do
-    AUTHOR=$(cat contributors.json | jq ".[$x] | .login" | tr -d '"')
-    if [[ ${AUTHOR} != *"dependabot"* ]]; then
-        IMAGE=$(cat contributors.json | jq ".[$x] | .avatar_url" | tr -d '"')
-        NAME=$(cat contributors.json | jq ".[$x] | .name" | tr -d '"')
+        AUTHOR=$(cat core_contributors.json | jq ".[$x] | .author | .login" | tr -d '"')
+    if [[ ${AUTHOR} != *"dependabot"* && " ${contributorList[*]} " != " ${AUTHOR} "]]; then
+        IMAGE=$(cat core_contributors.json | jq ".[$x] | .author | .avatar_url" | tr -d '"')
+        NAME=$(cat core_contributors.json | jq ".[$x] | .author | .name" | tr -d '"')
         
         echo $NAME' - '$AUTHOR | tr -d '"'    
         
@@ -57,14 +62,9 @@ do
     ((x=x+1))
 done
 
-rm contributors.json
 
-#Finally we output our markdown file
-cat > "$here/../docs/contributors.md" <<- EOF
-# Docs Contributors
-
-This is a list of all who have contributed content or source code to the ExpressionEngine Docs sorted alphabetically. If you're interested in contributing to the Docs or to the ExpressionEngine Core Project be sure to read through the [Contributing documentation](/contributing.md). 
-
+echo "=== Copy html below and insert into changelog ==="
+cat > "core_contributors.html" <<- EOF
 <div class="max-w-7xl mx-auto py-12 px-4 text-center">
 <div class="space-y-8 sm:space-y-12">
     <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-5">
@@ -73,10 +73,7 @@ This is a list of all who have contributed content or source code to the Express
 </div>
 </div>
 
-
-
-Additionally, the following contributed content prior to 2011 when this repository was created:
-
-- Paul Burdick
-
 EOF
+cat core_contributors.html
+rm core_contributors.json
+rm core_contributors.html

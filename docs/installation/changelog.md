@@ -10,7 +10,19 @@
 ## Version 6.1.6 (Release: November 11, 2021)
 - **Contributors** 🙌   
  
-[@bakin1999](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bakin1999), [@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@TomJaeger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger), [@Yulyaswan](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+    
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/17011377?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bradford Akin</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=bakin1999" target="_BLANK">@bakin1999</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2160089?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jace Richardson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=obfuscode" target="_BLANK">@obfuscode</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
 
 - **Bug Fixes** 💃🐛 
   
@@ -24,7 +36,17 @@
 ## Version 6.1.5 (Release: October 22, 2021)
 - **Contributors** 🙌   
  
-[@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@jcogs-design](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=jcogs-design), [@TomJaeger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger), [@Yulyaswan](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+    
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/13821249?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">JCOGS Design</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=jcogs-design" target="_BLANK">@jcogs-design</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
 
 - **Bug Fixes** 💃🐛 
   
@@ -41,7 +63,18 @@
 ## Version 6.1.4 (Release: October 18, 2021)
 - **Contributors** 🙌   
  
-[@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@ops-andy](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ops-andy), [@Yulyaswan](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+    
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/55093827?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Andy Mc</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=ops-andy" target="_BLANK">@ops-andy</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2160089?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jace Richardson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=obfuscode" target="_BLANK">@obfuscode</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
 
 - **Bug Fixes** 💃🐛 
   
@@ -58,7 +91,16 @@
 ## Version 6.1.3 (Release: October 15, 2021)
 - **Contributors** 🙌   
  
-[@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@ops-andy](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ops-andy)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+    
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/55093827?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Andy Mc</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=ops-andy" target="_BLANK">@ops-andy</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
 
 - **Bug Fixes** 💃🐛 
   
@@ -69,7 +111,21 @@
 ## Version 6.1.2 (Release: October 13, 2021)
 - **Contributors** 🙌   
 
-[@bakin1999](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bakin1999), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@litzinger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=litzinger), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@robinsowell](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell), [@robsonsobral](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robsonsobral), [@Yulyaswan](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+    
+
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/17011377?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bradford Akin</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=bakin1999" target="_BLANK">@bakin1999</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/53965?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Brian Litzinger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=litzinger" target="_BLANK">@litzinger</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2160089?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jace Richardson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=obfuscode" target="_BLANK">@obfuscode</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Robin</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/931642?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Sobral</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=robsonsobral" target="_BLANK">@robsonsobral</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
 
 - **Bug Fixes** 💃🐛 
   
@@ -111,7 +167,17 @@
 ## Version 6.1.1 (Release: October 7, 2021)
 - **Contributors** 🙌    
 
-[@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@TomJaeger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger), [@Yulyaswan](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>    
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
 - **Bug Fixes** 💃🐛 
   - Resolved issue when Live Preview was not always triggered during changes in RTE field.
   - Resolved [#1199](https://github.com/ExpressionEngine/ExpressionEngine/issues/1199) where it was not always possible to change field population method for Dropdown inside Grid.
@@ -125,7 +191,28 @@ NOTE: **Important:** This version includes important security updates.
 
 - **Contributors** 🙌    
 
-[@ajohnson](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ajohnson), [@bakin1999](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bakin1999), [@dougblackjr](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr), [@geoffcowan](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=geoffcowan), [@gilbert-hop](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=gilbert-hop), [@johnfuller](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=johnfuller), [@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@litzinger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=litzinger), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@ops-andy](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ops-andy), [@robinsowell](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell), [@TomJaeger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger), [@Yulyaswan](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan), [@zdehkordi](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=zdehkordi) 
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+    
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/194579?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Andy Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=ajohnson" target="_BLANK">@ajohnson</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/55093827?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Andy Mc</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=ops-andy" target="_BLANK">@ops-andy</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/17011377?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bradford Akin</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=bakin1999" target="_BLANK">@bakin1999</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/53965?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Brian Litzinger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=litzinger" target="_BLANK">@litzinger</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/6020323?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Doug Black</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=dougblackjr" target="_BLANK">@dougblackjr</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/163302?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Geoff Cowan</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=geoffcowan" target="_BLANK">@geoffcowan</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/35812875?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Gilbert</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=gilbert-hop" target="_BLANK">@gilbert-hop</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2160089?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jace Richardson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=obfuscode" target="_BLANK">@obfuscode</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2587?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">John Fuller</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=johnfuller" target="_BLANK">@johnfuller</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Robin</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/12945835?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Zaccaeus</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=zdehkordi" target="_BLANK">@zdehkordi</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
 
 - **Bug Fixes** 💃🐛 
   - Resolved [#179](https://github.com/ExpressionEngine/ExpressionEngine/issues/179) where an image thumbnail could be given an incorrect path.
@@ -206,7 +293,17 @@ NOTE: **Important:** This version includes important security updates.
 ## Version 6.0.6 (Release: May 21, 2021)
 - **Contributors** 🙌    
 
-[@ajohnson](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ajohnson), [@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@ops-andy](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ops-andy), [@TomJaeger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+    
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/194579?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Andy Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=ajohnson" target="_BLANK">@ajohnson</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/55093827?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Andy Mc</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=ops-andy" target="_BLANK">@ops-andy</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
 
 - **Bug Fixes** 💃🐛 
   - Resolved [#1091](https://github.com/ExpressionEngine/ExpressionEngine/issues/1091) where the field type dropdown when creating a new field was not displaying correctly in Firefox.
@@ -214,7 +311,20 @@ NOTE: **Important:** This version includes important security updates.
 ## Version 6.0.5 (Release: May 20, 2021)
 - **Contributors** 🙌    
 
-[@ajohnson](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ajohnson), [@gilbert-hop](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=gilbert-hop), [@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@ops-andy](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ops-andy), [@robinsowell](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell), [@TomJaeger](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+    
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/194579?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Andy Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=ajohnson" target="_BLANK">@ajohnson</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/35812875?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Gilbert</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=gilbert-hop" target="_BLANK">@gilbert-hop</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2160089?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jace Richardson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=obfuscode" target="_BLANK">@obfuscode</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Robin</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/55093827?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">andy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=ops-andy" target="_BLANK">@ops-andy</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
 
 - **Bug Fixes** 💃🐛 
   - Resolved [#323](https://github.com/ExpressionEngine/ExpressionEngine/issues/323) where the Redis Cache driver was using a deprecated command.
@@ -229,7 +339,20 @@ NOTE: **Important:** This version includes important security updates.
 ## Version 6.0.4 (Release: May 18, 2021)
 - **Contributors** 🙌    
 
-[@dougblackjr](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr), [@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@Jordan-Ellis](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Jordan-Ellis), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@ops-andy](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ops-andy), [@robinsowell](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell), [@TomJaeger](https://github.com/TomJaeger)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+    
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/6020323?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Doug Black Jr</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=dougblackjr" target="_BLANK">@dougblackjr</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2160089?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jace Richardson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=obfuscode" target="_BLANK">@obfuscode</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/18269476?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jordan Ellis</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=Jordan-Ellis" target="_BLANK">@Jordan-Ellis</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Robin</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/55093827?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">andy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=ops-andy" target="_BLANK">@ops-andy</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
 
 - **Bug Fixes** 💃🐛 
   - Resolved [#173](https://github.com/ExpressionEngine/ExpressionEngine/issues/173) where Live Preview was not triggered when changing order of related entries in a Relationship Fieldtype.
@@ -258,7 +381,16 @@ NOTE: **Important:** This version includes important security updates.
 
 - **Contributors** 🙌    
 
-[@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+    
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2160089?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jace Richardson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=obfuscode" target="_BLANK">@obfuscode</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
 
 - **Bug Fixes** 💃🐛 
   - Resolved [#629](https://github.com/ExpressionEngine/ExpressionEngine/issues/629) where CP styles were broken by browser extension.
@@ -285,7 +417,16 @@ NOTE: **Important:** This version includes important security updates.
 ## Version 6.0.2 (Release: February 5, 2021)
 - **Contributors** 🙌    
 
-[@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@ops-andy](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ops-andy)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+    
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2160089?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jace Richardson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=obfuscode" target="_BLANK">@obfuscode</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/55093827?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">andy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=ops-andy" target="_BLANK">@ops-andy</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
 
 - **Bug Fixes** 💃🐛 
   - Resolved [#192](https://github.com/ExpressionEngine/ExpressionEngine/issues/192) where keywords filter was not always working in Entries Manager when using Safari browser.
@@ -304,7 +445,19 @@ NOTE: **Important:** This version includes important security updates.
 ## Version 6.0.1 (Release: January 22, 2021)
 - **Contributors** 🙌    
 
-[@dougblackjr](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr), [@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@Jordan-Ellis](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Jordan-Ellis), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@robinsowell](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+    
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/6020323?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Doug Black Jr</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=dougblackjr" target="_BLANK">@dougblackjr</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2160089?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jace Richardson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=obfuscode" target="_BLANK">@obfuscode</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/18269476?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jordan-Ellis</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=Jordan-Ellis" target="_BLANK">@Jordan-Ellis</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Robin</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
 
 - **Bug Fixes** 💃🐛 
   - Resolved [#783](https://github.com/ExpressionEngine/ExpressionEngine/issues/783) where an exception could be thrown when deleting users with long user names.
@@ -341,7 +494,22 @@ NOTE: **Important:** This version includes important security updates.
 
 - **Contributors** 🙌    
 
-[@ajohnson](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ajohnson), [@derekjones](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=derekjones), [@intoeetive](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive), [@Jordan-Ellis](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Jordan-Ellis), [@kevincupp](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=kevincupp), [@matthewjohns0n](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n), [@obfuscode](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode), [@robinsowell](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell), [@scbarber](https://github.com/ExpressionEngine/ExpressionEngine/commits?author=scbarber)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+    
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/194579?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Andy Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=ajohnson" target="_BLANK">@ajohnson</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="null" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Derek Jones</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=null" target="_BLANK">@null</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2160089?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jace Richardson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=obfuscode" target="_BLANK">@obfuscode</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/18269476?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jordan Ellis</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=Jordan-Ellis" target="_BLANK">@Jordan-Ellis</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/93695?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Kevin Cupp</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=kevincupp" target="_BLANK">@kevincupp</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Robin</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/4808?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Seth Croston Barber</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=scbarber" target="_BLANK">@scbarber</a></p></div></div></div></li>
+<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
 
 - **New Control Panel Design** 🎨
   - Added Jump Menu. Navigate ExpressionEngine fast
