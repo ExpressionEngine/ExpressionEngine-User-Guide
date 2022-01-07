@@ -664,6 +664,19 @@ Example Usage:
 
     $config['charset'] = 'UTF-8';
 
+### `cli_enable`
+
+Allows to disable or enable command line interface.
+
+| Value | Behavior                                                |
+|-------|---------------------------------------------------------|
+| y     | CLI is enabled for all users (default)                  |
+| n     | CLI is disabled                                         |
+
+Example Usage:
+
+    $config['cli_enable'] = 'n';
+
 ### `code_block_pre`
 
 Custom markup to use wrap `[code]` blocks, works with `code_block_post` below to wrap the standard `<pre><code>...</code></pre>` with your custom markup.
