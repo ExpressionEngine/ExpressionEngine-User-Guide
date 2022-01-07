@@ -15,15 +15,15 @@ Multi-factor authentication adds an extra level of protection to the Control Pan
 
 ### Enabling MFA In The Control Panel
 
-With ExpressionEngine Pro is installed, users with Control Panel access can enable/disable Multi-factor authentication via their profile in the Control Panel. 
+With ExpressionEngine Pro installed, users with Control Panel access can enable/disable Multi-factor authentication via their profile in the Control Panel. 
 
 ![MFA CP Setup](/_images/2fa-cp-setup.png)
 
 ### Enable MFA on front-end
 
-Multi-Factor Authentication on front-end is handled using set of system dialogs. The dialogs can be triggered manually using the links provided by [`{exp:member:mfa_links}` tag](member/mfa.md).
+Multi-Factor Authentication on the front-end is handled using a set of system dialogs. These dialogs can be triggered manually using the links provided by the [`{exp:member:mfa_links}` tag](member/mfa.md).
 
-The dialogs are presented using `Multi-Factor Authentication Template` from System Message Templates. You can also use custom template from [`system_messages` template group](/control-panel/template-manager.md#custom-system-messages), it should be named `mfa`.
+The dialogs are presented using `Multi-Factor Authentication Template` from System Message Templates. You can also use a custom template from the [`system_messages` template group](/control-panel/template-manager.md#custom-system-messages), it should be named `mfa`.
 
 ## Control Panel protection
 
@@ -34,7 +34,6 @@ While setting up Multi-factor authentication (2FA) is optional for Control Panel
 With this setting turned on, the members will be presented the dialog to enter one-time password when they log in to CP. They will not be able to access any of CP pages (except the "Multi-Factor Authentication" section of their profile) without authentication - they still will be able to access the site however.
 
 If the member has not yet set up their multi-factor authentication, upon login to Control Panel they will be redirected to page in their profile where they can scan QR code using their MFA app and then enter the provided one-time password (OTP) to complete the setup.
-
 
 ## Resetting MFA
 
