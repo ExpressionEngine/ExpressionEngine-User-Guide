@@ -31,6 +31,28 @@ ExpressionEngine Pro provides additional tools to improve management of cookies.
 
 Type of cookies to display. Possible options are `necessary`, `functionality`, `performance` and `targeting`. If omited, all cookies will be displayed.
 
+It is also possible to combine several types, e.g. `type="performance|targeting"`.
+
+If you need to exclude one or several types from display, use `not ` before the values:
+
+    type='not performance|targeting'
+
+#### `provider=`
+
+    provider='ee'
+
+Limits display of cookies by cookie provider. 
+If the cookie is provided by an add-on, the provider matches the add-ons short name, e.g. `comment` or `forum`
+The core ExpressionEngine cookies are identified by `ee` as provider.
+If cookie is only being used in Control Panel, the provider is set to `cp`.
+Possible options are `necessary`, `functionality`, `performance` and `targeting`. If omited, all cookies will be displayed.
+
+It is also possible to combine several providers, e.g. `type="ee|cp"`.
+
+If you need to exclude one or several providers from display, use `not ` before the values
+
+    provider='not forum|cp'
+
 ### Variables
 
 #### `{cookie_name}`
