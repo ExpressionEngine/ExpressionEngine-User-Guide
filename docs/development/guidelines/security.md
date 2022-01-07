@@ -192,7 +192,7 @@ If your form submits to a different site you should ensure that you are not leak
 
 ### Validating Form Hashes in Your Add-on
 
-ExpressionEngine will automatically check the CSRF token of all requests before handing the request off to your add-on. This means that all forms and requests must include the `csrf_token` field. Asynchronous requests that include an _HTTP_REQUESTED_BY_ header (this is set by most popular libraries, such as jQuery) default to being exempt from these checks as they provide a good layer of intrinsic security.
+ExpressionEngine will automatically check the CSRF token of all requests before handing the request off to your add-on. This means that all forms and requests must include the `csrf_token` field.
 
 There are several ways in which you can control this validation behavior of the CSRF tokens.
 
