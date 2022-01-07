@@ -170,6 +170,7 @@ The syntax for the disable parameter is this: `disable="ITEM YOU WANT TO DISABLE
 - `custom_fields`
 - `member_data`
 - `pagination`
+- `relationships`
 
 NOTE: **Note:** If you disable categories, category fields will automatically be disabled.
 
