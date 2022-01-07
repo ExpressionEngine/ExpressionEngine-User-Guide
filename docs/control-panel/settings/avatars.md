@@ -15,16 +15,6 @@ This section of the Control Panel allows you to define the avatar settings of yo
 
 ## Settings
 
-### Allow avatars?
-
-This determines whether avatars are enabled for your site. If enabled, then users will be able to associate an image with their account that you can optionally display with entries, comments, and forum posts.
-
-### Allow avatar uploads?
-
-Set whether members can upload their own avatar. If this is set to "No" but avatars are enabled, members will only be able to choose from among the default avatars.
-
-NOTE: **Note:** As a site admin, you can add your own avatars by uploading them to `/images/avatars/default_set/`.
-
 ### Avatar directory
 
 The URL to your avatar folder. In most cases, this will be similar to:
@@ -45,11 +35,11 @@ If you do not know what to use for your full server path, contact your Host or s
 
 ### Maximum width
 
-The maximum width (in pixels) allowed for user-uploaded avatars.
+The maximum width (in pixels) allowed for user-uploaded avatars. If the image exceeds maximum width, it will be automatically resized.
 
 ### Maximum height
 
-The maximum height (in pixels) allowed for user-uploaded avatars.
+The maximum height (in pixels) allowed for user-uploaded avatars. If the image exceeds maximum height, it will be automatically resized.
 
 ### Maximum file size (kb)
 
