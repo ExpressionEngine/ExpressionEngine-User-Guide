@@ -15,7 +15,7 @@
 
     {exp:member:edit_avatar}
 
-This tag will allow user to edit their avatar image. The image will be uploaded to Avatar directory as set in [Avatar Settings](control-panel/settings/avatars.md) and is required to be less than Maximum file size specified there. If the image exceeds maximum width or height, it will be automatically resized.
+This tag allows users to edit their avatar image. The image will be uploaded to Avatar directory as set in [Avatar Settings](control-panel/settings/avatars.md) and is required to be less than [maximum file size](control-panel/settings/avatars.md#maximum-file-size-kb) specified in the settings. If the image exceeds maximum width or height, it will be automatically resized.
 
 
 ## Parameters
