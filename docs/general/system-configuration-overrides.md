@@ -1517,6 +1517,18 @@ Example Usage:
 
     $config['ignore_entry_stats'] = 'y';
 
+### `ignore_member_stats`
+Disable member role count being saved during creating/updating of members when using models. Disabling member stats can lead to improved performance when using models
+
+| Value | Behavior                                             |
+| ----- | ---------------------------------------------------- |
+| y     | Ignores member stats                                  |
+| n     | Saves stats when creating/updating members (default) |
+
+Example Usage:
+
+    $config['ignore_member_stats'] = 'y';
+
 ### `image_library_path`
 
 Set the path to the selected image library.
