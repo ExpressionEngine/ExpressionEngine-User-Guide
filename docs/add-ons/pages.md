@@ -49,8 +49,8 @@ The Pages Module adds the following parameters for use in the {exp:channel:entri
 
 The Pages Module adds the following variables for use in the {exp:channel:entries} tag.
 
-- [`page_uri=`](channels/entries.md#page_uri)
-- [`page_url=`](channels/entries.md#page_url)
+- [`page_uri`](channels/entries.md#page_uri)
+- [`page_url`](channels/entries.md#page_url)
 
 ## Multiple Site Manager
 
