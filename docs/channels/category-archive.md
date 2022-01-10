@@ -206,7 +206,7 @@ Options:
 
 There are two list "styles" for your categories: "nested" and "linear".
 
-By default, the category list is displayed fully "nested" to show the parent/child hierarchy between the categories. It will display the categories as nested "unordered lists" and will automatically enclose the contents in &lt;li&gt; tags and nest them correctly to show the hierarchy. This can be used to create cascade menus.
+By default, the category list is displayed fully "nested" to show the parent/child hierarchy between the categories. It will display the categories as nested "unordered lists" and will automatically enclose the contents in `<li>` tags and nest them correctly to show the hierarchy. This can be used to create cascade menus.
 
     <nav class="header-nav">
         {exp:channel:category_archive show_empty="no" disable="category_fields"
@@ -220,8 +220,8 @@ By default, the category list is displayed fully "nested" to show the parent/chi
                     id="entry--{entry_id}"
                     href="{channel_url}/{url_title}"
                 >{title}</a>
-                <small id="{channel_id}" class="channel--{channel_name}">
-                    {channel_title}
+                <small id="{channel_id}" class="channel--{channel_short_name}">
+                    {channel}
                 </small>
             {/entry_titles}
         {/exp:channel:category_archive}
@@ -239,11 +239,7 @@ For more information about how this option works see the parameter description o
 
 [TOC=3 hide]
 
-There are several variables available for use inside the {categories}{/categories} variable pair.
-
-    {categories}
-
-    {/categories}
+There are several variables available for use inside the `{categories}{/categories}` variable pair.
 
 ### `{active}`
 
@@ -315,13 +311,7 @@ These are totally dynamic in that any field you create for your category will au
 
 [TOC=3 hide]
 
-There are several variables available for use inside the {entry_titles}{/entry_titles} variable pair.
-
-    {entry_titles}
-
-    {/entry_titles}
-
-The date the entry was submitted.
+There are several variables available for use inside the `{entry_titles}{/entry_titles}` variable pair.
 
 ### `{channel_id}`
 
@@ -363,7 +353,7 @@ The ID number of the channel entry.
         <a href="{entry_id_path='site/index'}">{title}</a>
     {/entry_titles}
 
-The path (template_group/template) is used to create a URL to display this entry. This variable uses the entry's id number in the URL. This is typically used within a standard HTML link tag
+The path (`template_group/template`) is used to create a URL to display this entry. This variable uses the entry's id number in the URL. This is typically used within a standard HTML link tag
 
     <a href="{entry_id_path='site/index'}">{title}</a>
 
