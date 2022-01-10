@@ -30,6 +30,20 @@ If no Categories are being shown, the tag will not show anything contained withi
 
 [TOC=3]
 
+### `category_id=`
+
+    category_id="5"
+
+The `category_id=` parameter allows you to override the detection of current category on URL.
+
+### `category_url_title=`
+
+    category_url_title="press-releases"
+
+The `category_url_title=` parameter allows you to override the detection of current category on URL without the use of the [Category URL Titles In Links](control-panel/settings/content-design.md) feature.
+
+NOTE: **Note:** You must specify the `channel` parameter to detect the category title. Unless you are using the `relaxed_categories` parameter, you can only list one channel name, since each channel can have separate category groups.
+
 ### `disable=`
 
     disable="category_fields"
