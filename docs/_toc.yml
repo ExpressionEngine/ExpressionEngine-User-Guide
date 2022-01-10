@@ -21,6 +21,11 @@
     - name: Change Log
       href: installation/changelog.md
 
+- name: Localization
+  items:
+    - name: Transliteration
+      href: localization/transliteration.md
+
 - name: Getting Started
   items:
     - name: The Big Picture
@@ -755,7 +760,7 @@
         - name: RoleGroup Model
           href: development/models/role-group.md
         - name: Status Model
-          href: development/models/status.md   
+          href: development/models/status.md
         - name: RoleSettings  Model
           href: development/models/role-settings.md
         - name: Template  Model

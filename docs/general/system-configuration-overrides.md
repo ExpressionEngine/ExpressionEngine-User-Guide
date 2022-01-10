@@ -664,6 +664,19 @@ Example Usage:
 
     $config['charset'] = 'UTF-8';
 
+### `cli_enable`
+
+Allows to disable or enable command line interface.
+
+| Value | Behavior                                                |
+|-------|---------------------------------------------------------|
+| y     | CLI is enabled for all users (default)                  |
+| n     | CLI is disabled                                         |
+
+Example Usage:
+
+    $config['cli_enable'] = 'n';
+
 ### `code_block_pre`
 
 Custom markup to use wrap `[code]` blocks, works with `code_block_post` below to wrap the standard `<pre><code>...</code></pre>` with your custom markup.
@@ -1503,6 +1516,18 @@ Disable entry stats and analytics being saved during creating/updating of entrie
 Example Usage:
 
     $config['ignore_entry_stats'] = 'y';
+
+### `ignore_member_stats`
+Disable member role count being saved during creating/updating of members when using models. Disabling member stats can lead to improved performance when using models
+
+| Value | Behavior                                             |
+| ----- | ---------------------------------------------------- |
+| y     | Ignores member stats                                  |
+| n     | Saves stats when creating/updating members (default) |
+
+Example Usage:
+
+    $config['ignore_member_stats'] = 'y';
 
 ### `image_library_path`
 
