@@ -369,13 +369,10 @@
         href: member/forgot-username.md
       - name: Reset Password
         href: member/reset-password.md
-<<<<<<< HEAD
       - name: Multi-Factor Authentication Links
         href: member/mfa.md
-=======
       - name: Password Validation
         href: member/password-validation.md
->>>>>>> feature/6.x/password-security
       - name: Member List Tag
         href: member/memberlist.md
       - name: Member Search Form
