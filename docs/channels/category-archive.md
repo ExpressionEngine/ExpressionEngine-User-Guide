@@ -190,6 +190,12 @@ Or exclude statuses using "not"
 
     status="not submitted|processing|closed"
 
+### `sticky=`
+
+    sticky="no" sticky="yes" sticky="only"
+
+By default, sticky property makes no difference on entries sorting ("no"). You can manually turn on stickies by setting the parameter to "yes". If set to "only", only "sticky" entries are included in the results.
+
 ### `style=`
 
     style="linear"
