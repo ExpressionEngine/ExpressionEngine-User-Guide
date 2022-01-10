@@ -63,6 +63,7 @@ The URL to the avatar image associated with the user. Typically used as such:
 The user's Javascript-encoded email address.
 
 ### `{group_id}`
+### `{role_id}`
 
 The user's Role ID.
 

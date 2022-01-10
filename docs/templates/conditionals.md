@@ -400,6 +400,12 @@ Test against the total number of forum topics by the currently logged in user.
 
 You can test against the username of the currently logged in user.
 
+### `mfa_enabled`
+
+Whether Multi-Factor Authentication is enabled for logged in user.
+
+    `{if !mfa_enabled}Enable multi-factor authentication for more security{/if}`
+
 ### `segment_*X*`
 
     {if segment_3 == "private"}  You're seeing something private!  {/if}

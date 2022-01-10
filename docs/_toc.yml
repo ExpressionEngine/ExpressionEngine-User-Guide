@@ -264,6 +264,8 @@
       href: pro/frontend.md
     - name: Cookies management
       href: pro/cookies.md
+    - name: Multi-Factor Authentication
+      href: pro/mfa.md
     - name: Development
       items:
         - name: Dashboard Widgets
@@ -362,6 +364,8 @@
         href: member/forgot-username.md
       - name: Reset Password
         href: member/reset-password.md
+      - name: Multi-Factor Authentication Links
+        href: member/mfa.md
       - name: Member List Tag
         href: member/memberlist.md
       - name: Member Search Form
