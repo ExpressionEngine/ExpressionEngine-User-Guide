@@ -2350,18 +2350,20 @@ Example Usage:
 
 ### `require_secure_passwords`
 
-Require users' passwords to contain at least one uppercase character, one lowercase character, and one numeric character. Passwords that follow this basic formula are much more difficult to guess.
+Require users' passwords to adhere to certain password security policy as implemented by ExpressionEngine. Description of each policy can be found in [Password Security Policy](control-panel/settings/security-privacy.md#password-security-policy)
 
 | Value | Behavior                          |
 | ----- | --------------------------------- |
-| y     | Require secure password (default) |
-| n     | Do not require secure passwords   |
+| n     | `none` No security password checks are made for general users.   |
+| y     | `basic` Password should contain at least one uppercase character, one lowercase character, and one numeric character. Passwords that follow this basic formula are much more difficult to guess. (default)   |
+| g     | `Good` Password should get security rank of 40 or more          |
+| s     | `Strong` Password should get security rank of 60 or more. |
 
 Example Usage:
 
     $config['require_secure_passwords'] = 'n';
 
-**Also found in CP:** `Settings --> Security & Privacy`: [Require Secure Passwords](control-panel/settings/security-privacy.md#require-secure-passwords)
+**Also found in CP:** `Settings --> Security & Privacy`: [Require Secure Passwords](control-panel/settings/security-privacy.md#password-security-policy)
 
 ### `require_terms_of_service`
 

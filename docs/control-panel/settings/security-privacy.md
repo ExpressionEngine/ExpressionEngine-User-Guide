@@ -105,9 +105,18 @@ When this preference is set to "Yes", the system will lock a member account if m
 
 This setting is used together with the previous preference. Here you can determine, in minutes, the time interval over which more than four invalid login attempts will trigger a lockout. You may use decimals to indicate fractions of a minute: e.g. 1.5 equals one and a half minutes.
 
-### Require secure passwords?
+### Password security policy
 
-If this preference is set to "Yes", then users will be required to choose a minimally "secure" password. In this case, a password containing at least one uppercase character, one lowercase character, and one numeric character. Passwords that follow this basic formula are much more difficult to guess.
+This setting determines the strictness of your site's password policy. These checks are made when new accounts are created or when passwords are updated.
+
+The supported options are:
+
+ - `None`. No security password checks are made for general users.
+ - `Basic`. Password should contain at least one uppercase character, one lowercase character, and one numeric character. Passwords that follow this basic formula are much more difficult to guess.
+ - `Good`. Password should get security rank of 40 or more
+ - `Strong`. Password should get security rank of 60 or more.
+
+The password security rank is calculated using a complex algorithm. The rank will get the points for the total number of characters, usage of uppercase letters, lowercase letters, numbers and symbols. Additional points are given for using numbers or symbols in the middle of the password. At the same time, the points will be removed from the rank if the password is using letters only, or numbers only, or it has repeat characters, consecutive uppercase letters, consecutive lowercase letters, consecutive numbers, sequential letters (3+),  sequential numbers (3+),  sequential symbols (3+).
 
 ### Minimum password length
 
