@@ -360,7 +360,7 @@
         href: member/forgot-username.md
       - name: Reset Password
         href: member/reset-password.md
-      - name: Password validation
+      - name: Password Validation
         href: member/password-validation.md
       - name: Member List Tag
         href: member/memberlist.md

@@ -2329,10 +2329,10 @@ Require users' passwords to adhere to certain password security policy as implem
 
 | Value | Behavior                          |
 | ----- | --------------------------------- |
-| n     | Do not require secure passwords   |
-| y     | Require basic password security (default)   |
-| g     | Require advanced password security (rank 40 or more)          |
-| s     | Apply advanced password security (rank 60 or more) |
+| n     | `none` No security password checks are made for general users.   |
+| y     | `basic` Password should contain at least one uppercase character, one lowercase character, and one numeric character. Passwords that follow this basic formula are much more difficult to guess. (default)   |
+| g     | `Good` Password should get security rank of 40 or more          |
+| s     | `Strong` Password should get security rank of 60 or more. |
 
 Example Usage:
 
