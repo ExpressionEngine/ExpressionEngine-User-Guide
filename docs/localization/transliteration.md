@@ -11,7 +11,7 @@
 
 [TOC]
 
-Transliteration is the processo of convert phonemes of a language to a another one which isn't capable of reproduce it perfectly. For example, both **Beijing** and **Peking** are transliterations of **北京** by different rules.
+Transliteration is the process of convert phonemes of a language to a another one which isn't capable of reproduce it perfectly. For example, both **Beijing** and **Peking** are transliterations of **北京** by different rules.
 
 ExpressionEngines uses a table of transliteration rules to convert characters from Latin expanded alphabet into recognizable values used in URLs, located at `system\ee\ExpressionEngine\Config\foreign_chars.php`:
 
