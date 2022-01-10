@@ -192,9 +192,13 @@ Or exclude statuses using "not"
 
 ### `sticky=`
 
-    sticky="no" sticky="yes" sticky="only"
+    sticky="no"
 
-By default, sticky property makes no difference on entries sorting ("no"). You can manually turn on stickies by setting the parameter to "yes". If set to "only", only "sticky" entries are included in the results.
+By default, the sticky parameter makes no difference on entries sorting. 
+Options:
+* `sticky="no"` - no effect (default)
+* `sticky="yes"` - manually turn on sticky entries
+* `sticky="only"` - only "sticky" entries are included in the results
 
 ### `style=`
 
