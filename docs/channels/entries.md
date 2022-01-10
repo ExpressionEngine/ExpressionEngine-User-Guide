@@ -671,9 +671,9 @@ This parameter accepts the same date formats as the [start_on=](#start_on) param
 
 ### `sticky=`
 
-    sticky="yes" sticky="no" sticky="only"
+    sticky="yes" sticky="no" sticky="only" sticky="none"
 
-By default, sticky topics always remain at the top of the page ("yes"). You can manually turn off stickies by setting the parameter to "no". If set to "only", only "sticky" entries are included in the results.
+By default, sticky topics always remain at the top of the page ("yes"). You can manually turn off stickies by setting the parameter to "no". If set to "only", only "sticky" entries are included in the results. If set to "none", only "non-sticky" entries are included in the results.
 
 ### `track_views=`
 
