@@ -28,7 +28,7 @@ Each widget should have `namespace` definition, which should consist of the add-
 
 The class name should match the file name with first letter capitalized.
 
-Example PHP Widget:
+Example PHP Widget with filename `dashboard.php` :
 
     <?php
 
@@ -40,7 +40,7 @@ Example PHP Widget:
 
     use ExpressionEngine\Addons\Pro\Service\Dashboard;
 
-    class DashboardWidget extends Dashboard\AbstractDashboardWidget implements Dashboard\DashboardWidgetInterface {
+    class Dashboard extends Dashboard\AbstractDashboardWidget implements Dashboard\DashboardWidgetInterface {
 
         public $width = 'full'; //optional, if you want full width widget
         public $class= '';//optional; extra CSS class you want to give to widget container
