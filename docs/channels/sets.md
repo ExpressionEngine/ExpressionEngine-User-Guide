@@ -72,7 +72,7 @@ Your `channel_set.json` file ties everything together. It will contain structura
 
 The array of channels will contain objects that represent each Channel. Each Channel has a `channel_title`, `status_group`, `field_group`, and `cat_groups`, though they can be empty. In addition, you can supply `title_field_label` to change the Title Label on the publish page.
 
-NOTE: **Note:** Field groups mentioned on `channel_set.json`, but not present on `/custom_fields` folder will be assigned to the channel, but not created. Make it sure they are created previously in this case.
+NOTE: **Note:** Field groups mentioned in `channel_set.json`, but not present in the `/custom_fields` folder will be assigned to the channel, but not created. In this case, make it sure they are previously created.
 
 #### `statuses`
 

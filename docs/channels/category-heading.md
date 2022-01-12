@@ -34,13 +34,19 @@ If no Categories are being shown, the tag will not show anything contained withi
 
     category_id="5"
 
-The `category_id=` parameter allows you to override the detection of current category on URL.
+You can hard code the Category Heading tag to show a specific category. You may also specify multiple categories by separating them with the pipe character:
+
+    category_id=""13|42|147"
+
+Or use “not” to exclude categories:
+
+    category_id="not 45|534|807" 
 
 ### `category_url_title=`
 
     category_url_title="press-releases"
 
-The `category_url_title=` parameter allows you to override the detection of current category on URL without the use of the [Category URL Titles In Links](control-panel/settings/content-design.md) feature.
+The `category_url_title=` parameter allows you to specify the URL title of a specific category you wish to display.
 
 NOTE: **Note:** You must specify the `channel` parameter to detect the category title. Unless you are using the `relaxed_categories` parameter, you can only list one channel name, since each channel can have separate category groups.
 

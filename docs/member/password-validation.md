@@ -13,14 +13,14 @@
 
 ## Overview
 
-It is recommended to select good [password security policy](control-panel/settings/security-privacy.md#password-security-policy) that the site members would need to adhere to. Since the password rank is measured using complex algorithm, ExpressionEngine is providing AJAX endpoint that can return password strength prior to for submission.
+It is recommended to select good a [password security policy](control-panel/settings/security-privacy.md#password-security-policy) that the site members would need to adhere to. Since the password rank is measured using complex algorithm, ExpressionEngine is providing an AJAX endpoint that can return password strength prior to for submission.
 
 ## Validation URL
 
     `{exp:member:validation_url fields="password_rank"}`
 
-Return URL that is serving as endpoint for validating member data and getting password rank. It can only accept POST requests sent via AJAX.
-It returns JSON string that can contain following keys:
+Return URL that is serving as the endpoint for validating member data and getting password rank. It can only accept POST requests sent via AJAX.
+It returns a JSON string that can contain following keys:
  - `success` - (boolean) indicates whether the posted values validate. Is not included for `password_rank` requests
  - `errors` - array of validation errors, if present
  - `rank` - (int) password rank

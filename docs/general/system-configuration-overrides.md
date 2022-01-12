@@ -677,6 +677,8 @@ Example Usage:
 
     $config['cli_enabled'] = 'n';
 
+WARN: **Important:** The CLI is available to every user that has SSH or terminal access to your site's webserver. It does not handle authorization inside ExpressionEngine and is relying on your server's authorization method instead. 
+
 ### `code_block_pre`
 
 Custom markup to use wrap `[code]` blocks, works with `code_block_post` below to wrap the standard `<pre><code>...</code></pre>` with your custom markup.
