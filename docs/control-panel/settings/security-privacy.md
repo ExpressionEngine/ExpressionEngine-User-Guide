@@ -33,7 +33,7 @@ This determines how sessions are handled for the front-end of the site. You may 
 
 ### Share analytics with the ExpressionEngine Development Team?
 
-EllisLab asks users to help improve ExpressionEngine by providing analytics, diagnostic, and usage information to the ExpressionEngine Development Team.
+PacketTide asks users to help improve ExpressionEngine by providing analytics, diagnostic, and usage information to the ExpressionEngine Development Team.
 
 When this setting is on, the following information is occasionally collected:
 
@@ -44,6 +44,12 @@ When this setting is on, the following information is occasionally collected:
 - List of installed add-ons
 
 You can opt out at any time by turning this setting off.
+
+### Enable the Command Line Interface
+
+Allows the CLI to be disabled or enabled globally.
+
+## Cookie Settings
 
 ### Domain
 
