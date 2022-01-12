@@ -26,8 +26,12 @@ NOTE: **Important:** In order for site visitors to be allowed to register for ac
 ### `form_class=`
 
     form_class="register"
+    
+ ### `primary_role=`
 
-This parameter allows you to specify the class attribute for the &lt;form&gt; tag.
+    primary_role="7"   
+
+This parameter allows you to specify the primary role to assign the new member, overrideing the default member setting.
 
 ## Form Inputs
 

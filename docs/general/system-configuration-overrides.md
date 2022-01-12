@@ -664,7 +664,7 @@ Example Usage:
 
     $config['charset'] = 'UTF-8';
 
-### `cli_enable`
+### `cli_enabled`
 
 Allows to disable or enable command line interface.
 
@@ -675,7 +675,7 @@ Allows to disable or enable command line interface.
 
 Example Usage:
 
-    $config['cli_enable'] = 'n';
+    $config['cli_enabled'] = 'n';
 
 ### `code_block_pre`
 
