@@ -27,11 +27,11 @@ The dialogs are presented using `Multi-Factor Authentication Template` from Syst
 
 ## Control Panel protection
 
-While setting up Multi-factor authentication (2FA) is optional for Control Panel users, it can be set as required to access the Control Panel for certain members.
+While setting up Multi-factor authentication (2FA) is optional for Control Panel users, it can be required on a per member role basis.
 
 ![MFA CP Toggle](/_images/2fa-cp-toggle.png)
 
-With this setting turned on, the members will be presented the dialog to enter one-time password when they log in to CP. They will not be able to access any of CP pages (except the "Multi-Factor Authentication" section of their profile) without authentication - they still will be able to access the site however.
+With this setting turned on for a member role, the members with that as their primary role will be presented the dialog to enter one-time password when they log in to CP. They will not be able to access any of CP pages (except the "Multi-Factor Authentication" section of their profile) without authentication - they still will be able to access the site however.  
 
 If the member has not yet set up their multi-factor authentication, upon login to Control Panel they will be redirected to page in their profile where they can scan QR code using their MFA app and then enter the provided one-time password (OTP) to complete the setup.
 
