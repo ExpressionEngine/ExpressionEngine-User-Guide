@@ -53,6 +53,7 @@ NOTE: **Important:** If upgrading from previous version of ExpressionEngine with
   - Added the ability to use `exp:category_heading` without specifying the category in the URL. [#1181](https://github.com/ExpressionEngine/ExpressionEngine/issues/1181).
   - Added the entry_id along with the channel name in Relationship field UI.
   - Added warning when wrong cookie domain is being used and preventing users from logging into the Control Panel.
+  - Added click-to-select text functionality for channel short names,field short names, and category URL segments in the Control Panel.
   - Improved performance of queries and caching [#751](https://github.com/ExpressionEngine/ExpressionEngine/issues/751) , [#1280](https://github.com/ExpressionEngine/ExpressionEngine/issues/1280).
   - Improved cookie registration [#1427](https://github.com/ExpressionEngine/ExpressionEngine/issues/1427).
   - Improved the add-on namespace generator of the CLI. 
@@ -60,6 +61,7 @@ NOTE: **Important:** If upgrading from previous version of ExpressionEngine with
   - Improved UI of the Entry Manager.
   - Improved performance when using the Search Module [#1403](https://github.com/ExpressionEngine/ExpressionEngine/issues/1403).
   - Updated password security options.
+
 
 - **Bug Fixes** 💃🐛 
 

@@ -41,7 +41,7 @@ Choose statuses to limit the entries in this relationships field.
 
 ### Maximum Entries
 
-Maximum number of entries to show in the relationship field. Leave blank to allow all entries.
+Maximum number of entries to show in the relationship field. Leave blank to allow all entries.  All entries are still available to the search, this is simply a display setting.
 
 ### Order By
 
@@ -50,6 +50,12 @@ Default ordering of entries in relationship field.
 ### Allow Multiple Relationships?
 
 When set to yes, authors will be allowed to create multiple relationships in a single field.
+
+### Minimum selection
+The minimum number of relationships that can be added to the field.
+
+### Maximum selection
+The maximum number of relationships that can be added to the field.
 
 ## Template Tags
 
