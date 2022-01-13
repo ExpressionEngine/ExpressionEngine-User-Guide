@@ -36,7 +36,7 @@ If no Categories are being shown, the tag will not show anything contained withi
 
 You can hard code the Category Heading tag to show a specific category. You may also specify multiple categories by separating them with the pipe character:
 
-    category_id=""13|42|147"
+    category_id="13|42|147"
 
 Or use “not” to exclude categories:
 
