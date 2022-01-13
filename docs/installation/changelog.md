@@ -15,6 +15,19 @@ NOTE: **Important:** This version includes important security updates.
 
 - **Enhancements** 🚀
 
+  - Added PHP 8.1 support.
+  - Added counter for total members in a Role [#1582](https://github.com/ExpressionEngine/ExpressionEngine/issues/1582), [#1467](https://github.com/ExpressionEngine/ExpressionEngine/issues/1467).
+  - Added `ignore_member_stats` to increase performance on sites with a large number of members. 
+  - Improved the add-on namespace generator of the CLI. 
+  - Improved the Model Generator when using `make:model` in the CLI.
+  - Added the use of `{if no_results}` to the Request module [#1559](https://github.com/ExpressionEngine/ExpressionEngine/issues/1559).
+  - Added the ability to disable the CLI via settings toggle or System Config Overrides.
+  - Improved cookie registration [#1427](https://github.com/ExpressionEngine/ExpressionEngine/issues/1427) where.
+  - Updated password security options
+  - Added improved password validation when users create, edit, or reset their password.
+  - Improved UI of the the Entry Manager
+  - Added the ability for users to toggle the password input on the login screen, so that users can choose whether to view their passwords as they type.
+  - Improved performance issues when using the Search Module [#1403](https://github.com/ExpressionEngine/ExpressionEngine/issues/1403).
   - Added ability to assign users a role when using front-end Member Form tags.
   - Added a min/max number of relationships to the Relationship field settings [#40](https://github.com/ExpressionEngine/ExpressionEngine/issues/40).
   - Added ability to assign previously created field groups when importing Channel Sets [#1288](https://github.com/ExpressionEngine/ExpressionEngine/issues/1288).
@@ -26,15 +39,34 @@ NOTE: **Important:** This version includes important security updates.
   - Added `entry_id` and `url_title` as searchable fields in the Control Panel Entry Manager [#1259](https://github.com/ExpressionEngine/ExpressionEngine/issues/1259).
   - Added `sticky` parameter and `most_used_categories` value to `orderby` parameter to `exp:channel:category_archive` [#1256](https://github.com/ExpressionEngine/ExpressionEngine/issues/1256).
   - Added new `:trim` variable modifier [#1182](https://github.com/ExpressionEngine/ExpressionEngine/issues/1182)
-  - Added the ability to use `exp:category_heading` statically. 
+  - Added the ability to use `exp:category_heading` without specifying the category in the URL. [#1181](https://github.com/ExpressionEngine/ExpressionEngine/issues/1181).
   - Added the entry_id along with the channel name in Relationship field UI.
+  - Added warning when wrong cookie domain is being used and preventing users from logging into the Control Panel.
+  
 
 - **Bug Fixes** 💃🐛 
 
-  - Resolved [#367](https://github.com/ExpressionEngine/ExpressionEngine/issues/367) where turning on channel entry revision For existing channels did not turn it on for existing entries
-  - Resolved bug where sorting filters were being reset when using pagination with the File Manager
+  - Resolved [#367](https://github.com/ExpressionEngine/ExpressionEngine/issues/367) where turning on channel entry revision For existing channels did not turn it on for existing entries.
+  - Resolved [#1434](https://github.com/ExpressionEngine/ExpressionEngine/issues/1434) where using exact keyword search on `exp:channel:entries` could trigger PHP errors in Live Preview.
+  - Resolved [#1468](https://github.com/ExpressionEngine/ExpressionEngine/issues/1468) where the File Upload modal could make it impossible to Create/Edit a new entry.
+  - Resolved [#1491](https://github.com/ExpressionEngine/ExpressionEngine/issues/1491)
+  - Resolved [#1509](https://github.com/ExpressionEngine/ExpressionEngine/issues/1509) where templates with duplicate names from MSM sites were not being synchronized.
+  - Resolved [#1569](https://github.com/ExpressionEngine/ExpressionEngine/issues/1569) where Shared Form View: 'short-text' type inputs throws E-Notice if 'label' parameter not specified.
+  - Resolved [#1588](https://github.com/ExpressionEngine/ExpressionEngine/issues/1588) where non-superadmins could not upload avatars.
+  - Resolved [#1594](https://github.com/ExpressionEngine/ExpressionEngine/issues/1594) where mod_security could trigger a 406 error in the Control Panel. 
+  - Resolved [#1604](https://github.com/ExpressionEngine/ExpressionEngine/issues/1604) where the `{member_profile_link}` variable could be incorrect
+  - Resolved [#1628](https://github.com/ExpressionEngine/ExpressionEngine/issues/1628) where italic styling was broken in the RTE when using Channel Forms.
+  - Resolved [#1689](https://github.com/ExpressionEngine/ExpressionEngine/issues/1689) where the close button for template settings modal window was not positioned correctly.
+  - Resolved bug where if the search input is empty and loses focus, the dropdown buttons become undefined when using some search forms in the Control Panel.
+  - Resolved issue where the user could be prevented from updating value/label pairs when editing certain field types. 
+  - Resolved bug where CLI `update` command could result in PHP error.
+  - Resolved bug where users couldn't select column type for new grid field.
+  - Resolved bug where the wrong last-modified header was sent with CSS requests.
+  - Resolved bug where sorting filters were being reset when using pagination with the File Manager.
   - Fixed required field error message for a Grid inside a Fluid field that was triggered erroneously.
   - Resolved a maximum row size MySQL error that could be triggered when upgrading from v5 to v6.
+  - Resolved bug in the updater script to remove orphan publish layouts.
+
 
 - **Developers** 💻
 
