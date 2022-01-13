@@ -18,16 +18,10 @@ NOTE: **Important:** This version includes important security updates.
   - Added PHP 8.1 support.
   - Added counter for total members in a Role [#1582](https://github.com/ExpressionEngine/ExpressionEngine/issues/1582), [#1467](https://github.com/ExpressionEngine/ExpressionEngine/issues/1467).
   - Added `ignore_member_stats` to increase performance on sites with a large number of members. 
-  - Improved the add-on namespace generator of the CLI. 
-  - Improved the Model Generator when using `make:model` in the CLI.
   - Added the use of `{if no_results}` to the Request module [#1559](https://github.com/ExpressionEngine/ExpressionEngine/issues/1559).
   - Added the ability to disable the CLI via settings toggle or System Config Overrides.
-  - Improved cookie registration [#1427](https://github.com/ExpressionEngine/ExpressionEngine/issues/1427) where.
-  - Updated password security options
   - Added improved password validation when users create, edit, or reset their password.
-  - Improved UI of the the Entry Manager
-  - Added the ability for users to toggle the password input on the login screen, so that users can choose whether to view their passwords as they type.
-  - Improved performance issues when using the Search Module [#1403](https://github.com/ExpressionEngine/ExpressionEngine/issues/1403).
+  - Added the ability for users to toggle the password input on the login screen, so that users can choose to view their passwords as they type.
   - Added ability to assign users a role when using front-end Member Form tags.
   - Added a min/max number of relationships to the Relationship field settings [#40](https://github.com/ExpressionEngine/ExpressionEngine/issues/40).
   - Added ability to assign previously created field groups when importing Channel Sets [#1288](https://github.com/ExpressionEngine/ExpressionEngine/issues/1288).
@@ -35,14 +29,19 @@ NOTE: **Important:** This version includes important security updates.
   - Added ability for modules to be used in the Menu Manager [#54](https://github.com/ExpressionEngine/ExpressionEngine/issues/54).
   - Added `sticky` column to Entry Manager in the Control Panel [#1293](https://github.com/ExpressionEngine/ExpressionEngine/issues/1293).
   - Added `sticky="none"` parameter for `exp:channel:entries` [#488](https://github.com/ExpressionEngine/ExpressionEngine/issues/488).
-  - Improved performance of queries and caching [#751](https://github.com/ExpressionEngine/ExpressionEngine/issues/751) , [#1280](https://github.com/ExpressionEngine/ExpressionEngine/issues/1280)
   - Added `entry_id` and `url_title` as searchable fields in the Control Panel Entry Manager [#1259](https://github.com/ExpressionEngine/ExpressionEngine/issues/1259).
   - Added `sticky` parameter and `most_used_categories` value to `orderby` parameter to `exp:channel:category_archive` [#1256](https://github.com/ExpressionEngine/ExpressionEngine/issues/1256).
   - Added new `:trim` variable modifier [#1182](https://github.com/ExpressionEngine/ExpressionEngine/issues/1182)
   - Added the ability to use `exp:category_heading` without specifying the category in the URL. [#1181](https://github.com/ExpressionEngine/ExpressionEngine/issues/1181).
   - Added the entry_id along with the channel name in Relationship field UI.
   - Added warning when wrong cookie domain is being used and preventing users from logging into the Control Panel.
-  
+  - Improved performance of queries and caching [#751](https://github.com/ExpressionEngine/ExpressionEngine/issues/751) , [#1280](https://github.com/ExpressionEngine/ExpressionEngine/issues/1280)
+  - Improved cookie registration [#1427](https://github.com/ExpressionEngine/ExpressionEngine/issues/1427).
+  - Improved the add-on namespace generator of the CLI. 
+  - Improved the Model Generator when using `make:model` in the CLI.
+  - Improved UI of the the Entry Manager
+  - Improved performance when using the Search Module [#1403](https://github.com/ExpressionEngine/ExpressionEngine/issues/1403).
+  - Updated password security options
 
 - **Bug Fixes** 💃🐛 
 
