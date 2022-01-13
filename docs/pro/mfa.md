@@ -23,7 +23,7 @@ Multi-Factor Authentication can also be set as required for certain [Member Role
 
 ![MFA CP Toggle](/_images/2fa-cp-toggle.png)
 
-Members assigned to a role where this option is enabled will be required to use MFA to log in via a front-end login form or when accessing the Control Panel (if allowed access).
+Members with a primary role where this option is enabled will be required to use MFA to log in via a front-end login form or when accessing the Control Panel (if allowed access).
 
 If the member has not yet set up their multi-factor authentication, upon login they will be redirected to a page where they can scan QR code using their MFA app and then enter the provided one-time password (OTP) to complete the setup.
 
