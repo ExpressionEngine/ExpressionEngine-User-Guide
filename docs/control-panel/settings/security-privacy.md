@@ -118,7 +118,7 @@ This setting determines the strictness of your site's password policy. These che
 The supported options are:
 
  - `None`. No security password checks are made for general users.
- - `Basic`. Password should contain at least one uppercase character, one lowercase character, and one numeric character. Passwords that follow this basic formula are much more difficult to guess.
+ - `Basic`. (Default) Password should contain at least one uppercase character, one lowercase character, and one numeric character. Passwords that follow this basic formula are much more difficult to guess.
  - `Good`. Password should get security rank of 40 or more
  - `Strong`. Password should get security rank of 60 or more.
 

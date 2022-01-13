@@ -43,7 +43,8 @@ This parameter allows you to define where the user will be returned after succes
             <label>Your New Password</label><br />
             <input type="password" name="password" value="" maxlength="50" size="40" />
 
-The new password to set.
+The new password to set.    
+Be sure to include the required Javascript and CSS to use the native [Password Validation](/member/password-validation.html).
 
 ### Password Confirmation
 

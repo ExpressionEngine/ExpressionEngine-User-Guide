@@ -11,6 +11,8 @@
 
 NOTE: **Important:** This version includes important security updates.
 
+NOTE: **Important:** If upgrading from previous version of ExpressionEngine with "Require Secure Password" enabled, your [Password Security Policy](/control-panel/settings/security-privacy.html#password-security-policy) will be set to `Basic` by default.
+
 - **Contributors** 🙌   
 
 - **Enhancements** 🚀

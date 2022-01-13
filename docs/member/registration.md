@@ -56,6 +56,8 @@ Member password. This is a **required** field.
             <label>Your New Password</label><br />
             <input type="password" name="password" value="" maxlength="50" size="40" />
 
+Be sure to include the required Javascript and CSS to use the native [Password Validation](/member/password-validation.html).
+
 
 ### Password Confirmation
 
