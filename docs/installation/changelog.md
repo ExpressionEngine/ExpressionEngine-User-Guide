@@ -7,6 +7,39 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
+## Version 6.2.0 (Release: January 13, 2022)
+
+NOTE: **Important:** This version includes important security updates.
+
+- **Contributors** 🙌   
+
+- **Enhancements** 🚀
+
+  - Added ability to assign users a role when using front-end Member Form tags.
+  - Added a min/max number of relationships to the Relationship field settings [#40](https://github.com/ExpressionEngine/ExpressionEngine/issues/40).
+  - Added ability to assign previously created field groups when importing Channel Sets [#1288](https://github.com/ExpressionEngine/ExpressionEngine/issues/1288).
+  - Added more links between comment page and Comments Jump menu [#1359](https://github.com/ExpressionEngine/ExpressionEngine/issues/1359).
+  - Added ability for modules to be used in the Menu Manager [#54](https://github.com/ExpressionEngine/ExpressionEngine/issues/54).
+  - Added `sticky` column to Entry Manager in the Control Panel [#1293](https://github.com/ExpressionEngine/ExpressionEngine/issues/1293).
+  - Added `sticky="none"` parameter for `exp:channel:entries` [#488](https://github.com/ExpressionEngine/ExpressionEngine/issues/488).
+  - Improved performance of queries and caching [#751](https://github.com/ExpressionEngine/ExpressionEngine/issues/751) , [#1280](https://github.com/ExpressionEngine/ExpressionEngine/issues/1280)
+  - Added `entry_id` and `url_title` as searchable fields in the Control Panel Entry Manager [#1259](https://github.com/ExpressionEngine/ExpressionEngine/issues/1259).
+  - Added `sticky` parameter and `most_used_categories` value to `orderby` parameter to `exp:channel:category_archive` [#1256](https://github.com/ExpressionEngine/ExpressionEngine/issues/1256).
+  - Added new `:trim` variable modifier [#1182](https://github.com/ExpressionEngine/ExpressionEngine/issues/1182)
+  - Added the ability to use `exp:category_heading` statically. 
+  - Added the entry_id along with the channel name in Relationship field UI.
+
+- **Bug Fixes** 💃🐛 
+
+  - Resolved [#367](https://github.com/ExpressionEngine/ExpressionEngine/issues/367) where turning on channel entry revision For existing channels did not turn it on for existing entries
+  - Resolved bug where sorting filters were being reset when using pagination with the File Manager
+  - Fixed required field error message for a Grid inside a Fluid field that was triggered erroneously.
+  - Resolved a maximum row size MySQL error that could be triggered when upgrading from v5 to v6.
+
+- **Developers** 💻
+
+  - Updated `template_post_parse` hook [#1195](https://github.com/ExpressionEngine/ExpressionEngine/issues/1195).
+
 ## Version 6.1.6 (Release: November 11, 2021)
 - **Contributors** 🙌   
  
