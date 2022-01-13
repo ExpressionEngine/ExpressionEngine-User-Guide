@@ -1,5 +1,5 @@
 <!--
-    This source file is part of the open source project
+    This source file is part of the open-source project
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
@@ -25,7 +25,7 @@ NOTE: **Important:** This version includes important security updates.
   - Added ability to assign users a role when using front-end Member Form tags.
   - Added a min/max number of relationships to the Relationship field settings [#40](https://github.com/ExpressionEngine/ExpressionEngine/issues/40).
   - Added ability to assign previously created field groups when importing Channel Sets [#1288](https://github.com/ExpressionEngine/ExpressionEngine/issues/1288).
-  - Added more links between comment page and Comments Jump menu [#1359](https://github.com/ExpressionEngine/ExpressionEngine/issues/1359).
+  - Added more links between the comment page and Comments Jump menu [#1359](https://github.com/ExpressionEngine/ExpressionEngine/issues/1359).
   - Added ability for modules to be used in the Menu Manager [#54](https://github.com/ExpressionEngine/ExpressionEngine/issues/54).
   - Added `sticky` column to Entry Manager in the Control Panel [#1293](https://github.com/ExpressionEngine/ExpressionEngine/issues/1293).
   - Added `sticky="none"` parameter for `exp:channel:entries` [#488](https://github.com/ExpressionEngine/ExpressionEngine/issues/488).
@@ -39,19 +39,19 @@ NOTE: **Important:** This version includes important security updates.
   - Improved cookie registration [#1427](https://github.com/ExpressionEngine/ExpressionEngine/issues/1427).
   - Improved the add-on namespace generator of the CLI. 
   - Improved the Model Generator when using `make:model` in the CLI.
-  - Improved UI of the the Entry Manager
+  - Improved UI of the Entry Manager
   - Improved performance when using the Search Module [#1403](https://github.com/ExpressionEngine/ExpressionEngine/issues/1403).
   - Updated password security options
 
 - **Bug Fixes** 💃🐛 
 
-  - Resolved [#367](https://github.com/ExpressionEngine/ExpressionEngine/issues/367) where turning on channel entry revision For existing channels did not turn it on for existing entries.
+  - Resolved [#367](https://github.com/ExpressionEngine/ExpressionEngine/issues/367) where turning on channel entry revision for existing channels did not turn it on for existing entries.
   - Resolved [#1434](https://github.com/ExpressionEngine/ExpressionEngine/issues/1434) where using exact keyword search on `exp:channel:entries` could trigger PHP errors in Live Preview.
   - Resolved [#1468](https://github.com/ExpressionEngine/ExpressionEngine/issues/1468) where the File Upload modal could make it impossible to Create/Edit a new entry.
   - Resolved [#1491](https://github.com/ExpressionEngine/ExpressionEngine/issues/1491)
   - Resolved [#1509](https://github.com/ExpressionEngine/ExpressionEngine/issues/1509) where templates with duplicate names from MSM sites were not being synchronized.
-  - Resolved [#1569](https://github.com/ExpressionEngine/ExpressionEngine/issues/1569) where Shared Form View: 'short-text' type inputs throws E-Notice if 'label' parameter not specified.
-  - Resolved [#1588](https://github.com/ExpressionEngine/ExpressionEngine/issues/1588) where non-superadmins could not upload avatars.
+  - Resolved [#1569](https://github.com/ExpressionEngine/ExpressionEngine/issues/1569) where Shared Form View: 'short-text' type inputs throw E-Notice if 'label' parameter not specified.
+  - Resolved [#1588](https://github.com/ExpressionEngine/ExpressionEngine/issues/1588) where non-super admins could not upload avatars.
   - Resolved [#1594](https://github.com/ExpressionEngine/ExpressionEngine/issues/1594) where mod_security could trigger a 406 error in the Control Panel. 
   - Resolved [#1604](https://github.com/ExpressionEngine/ExpressionEngine/issues/1604) where the `{member_profile_link}` variable could be incorrect
   - Resolved [#1628](https://github.com/ExpressionEngine/ExpressionEngine/issues/1628) where italic styling was broken in the RTE when using Channel Forms.
