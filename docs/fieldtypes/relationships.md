@@ -15,6 +15,8 @@ Relationships are an extremely powerful tool that allow you to connect Entries i
 
 This fieldtype is currently only limited to Channels.
 
+![relationship field](_images/filed_relationships.png)
+
 ## Field Options
 
 ### Channels to Relate

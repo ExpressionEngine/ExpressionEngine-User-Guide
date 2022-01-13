@@ -472,7 +472,7 @@ The setting to disable or enable CAPTCHA for the tell-a-friend form can be found
 
 Email address of person who is sending the email.
 
-WARN: **Warning:** If you leave this field open to user input, be aware that it is a potential for abuse by spammers, who could use your form pretending to be someone they are not (i.e. keying in <admin@paypal.com>). If the user is allowed to modify both this and the message field, you have essentially created a [phishing](http://dictionary.reference.com/browse/phishing) form ripe for abuse.
+WARN: **Warning:** If you leave this field open to user input, be aware that it is a potential for abuse by spammers, who could use your form pretending to be someone they are not (i.e. keying in <admin@paypal.com>). If the user is allowed to modify both this and the message field, you have essentially created a [phishing](https://dictionary.reference.com/browse/phishing) form ripe for abuse.
 
 ### `message`
 
@@ -480,7 +480,7 @@ WARN: **Warning:** If you leave this field open to user input, be aware that it 
 
 Main message of the email. If you do not wish to have the tell-a-friend message modified then we suggest using a hidden form field or setting the textarea as read only (ex: &lt;textarea readonly="readonly"&gt;&lt;/textarea&gt;). You must include this form field, even if it is just a hidden field.
 
-WARN: **Warning:** If you leave this field open to user input, be aware that it is a potential for abuse by spammers, who could use your form for email advertising. If the user is allowed to modify both this and the from field, you have essentially created a [phishing](http://dictionary.reference.com/browse/phishing) form ripe for abuse.
+WARN: **Warning:** If you leave this field open to user input, be aware that it is a potential for abuse by spammers, who could use your form for email advertising. If the user is allowed to modify both this and the from field, you have essentially created a [phishing](https://dictionary.reference.com/browse/phishing) form ripe for abuse.
 
 ### `name`
 

@@ -11,6 +11,8 @@
 
 The Date field allows for quick entry of dates via the publish form. When the field has focus, a date-picker appears in the form of a calendar where you can select a day to enter into the field.
 
+![date field](/_images/field_date.png)
+
 ## Field Options
 
 ### Localized or Fixed?

@@ -15,7 +15,7 @@ lang: php
 
 The String Helper file contains functions that assist in working with strings. This helper is loaded using the following code:
 
-    $this->load->helper('string');
+    ee()->load->helper('string');
 
 ## Available Functions
 
@@ -94,7 +94,7 @@ NOTE: **Note:** To use multiple separate calls to this function simply call the 
 | \$str     | `String` | Input string                     |
 | Returns   | `String` | A string with normalized slashes |
 
-Converts double slashes in a string to a single slash, except those found in URL protocol prefixes (e.g. http://).
+Converts double slashes in a string to a single slash, except those found in URL protocol prefixes (e.g. https://).
 
 Example:
 

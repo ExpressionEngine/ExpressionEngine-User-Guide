@@ -21,6 +21,11 @@
     - name: Change Log
       href: installation/changelog.md
 
+- name: Localization
+  items:
+    - name: Transliteration
+      href: localization/transliteration.md
+
 - name: Getting Started
   items:
     - name: The Big Picture
@@ -264,6 +269,8 @@
       href: pro/frontend.md
     - name: Cookies management
       href: pro/cookies.md
+    - name: Multi-Factor Authentication
+      href: pro/mfa.md
     - name: Development
       items:
         - name: Dashboard Widgets
@@ -362,6 +369,10 @@
         href: member/forgot-username.md
       - name: Reset Password
         href: member/reset-password.md
+      - name: Multi-Factor Authentication Links
+        href: member/mfa.md
+      - name: Password Validation
+        href: member/password-validation.md
       - name: Member List Tag
         href: member/memberlist.md
       - name: Member Search Form
@@ -370,6 +381,8 @@
         href: member/custom-profile-data.md
       - name: Edit Profile Data Tag
         href: member/edit-profile.md
+      - name: Edit Avatar Tag
+        href: member/edit-avatar.md
       - name: Member Roles Tags
         href: member/member-roles-tags.md
       - name: Ignore List Tag
@@ -749,7 +762,7 @@
         - name: RoleGroup Model
           href: development/models/role-group.md
         - name: Status Model
-          href: development/models/status.md   
+          href: development/models/status.md
         - name: RoleSettings  Model
           href: development/models/role-settings.md
         - name: Template  Model

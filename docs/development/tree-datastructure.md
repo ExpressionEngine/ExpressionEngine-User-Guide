@@ -444,7 +444,7 @@ Iterates across all nodes in a level-by-level fashion
 
 **class `EE_TreeIterator`**
 
-This class extends [RecursiveArrayIterator](http://php.net/manual/en/class.recursivearrayiterator.php).
+This class extends [RecursiveArrayIterator](https://php.net/manual/en/class.recursivearrayiterator.php).
 
 [TOC=4]
 
@@ -468,7 +468,7 @@ Override `RecursiveArrayIterator`'s get child method to skip ahead into the chil
 
 **class `EE_BreadthFirstIterator`**
 
-This class implements [OuterIterator](http://php.net/manual/en/class.outeriterator.php).
+This class implements [OuterIterator](https://php.net/manual/en/class.outeriterator.php).
 
 [TOC=4]
 

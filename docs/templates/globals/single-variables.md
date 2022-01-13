@@ -169,7 +169,7 @@ You can also use the redirect variable to provide tighter control of your URLs, 
 
 Be careful that through your redirect variables that you do not create an infinite loop.
 
-The `status_code` parameter lets you optionally pass a [3xx redirect code](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) (e.g. 301, 302).
+The `status_code` parameter lets you optionally pass a [3xx redirect code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) (e.g. 301, 302).
 
 ### `{site_description}`
 

@@ -21,7 +21,7 @@ Specify the primary email address associated with the PayPal account processing 
 
 Enable encryption for PayPal purchase links and buttons created by Simple Commerce.
 
-NOTE: **Important:** Enabling this requires that your server have [OpenSSL](http://php.net/manual/en/ref.openssl.php) support compiled in PHP. Ask your server administrator for this information.
+NOTE: **Important:** Enabling this requires that your server have [OpenSSL](https://php.net/manual/en/ref.openssl.php) support compiled in PHP. Ask your server administrator for this information.
 
 NOTE: **Note:** Enabling this requires that you use a public certificate and private key. Please read the section on `simple_commerce_encrypted_payments` for full details. To be the most effective, you should set your PayPal account settings to only accept encrypted payments.
 

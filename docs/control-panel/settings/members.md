@@ -17,9 +17,13 @@ The Membership Preferences section of the Control Panel allows you to set all of
 
 ### Allow registrations?
 
+![allow registrations](/_images/members_allow_registrations.png)
+
 Set whether site visitors are allowed to register for accounts.
 
 ### Account activation type
+
+![activation types](/_images/members_activation_type.png)
 
 Here you can choose how membership accounts are activated:
 
@@ -29,13 +33,19 @@ Here you can choose how membership accounts are activated:
 
 ### Notify members when approved?
 
+![Notify members when approved](/_images/members_notify_approval.png)
+
 When set to **yes**, members will receive an email notification when their member registration is approved.
 
 ### Notify members when declined?
 
+![Notify members when declined](/_images/members_notify_decline.png)
+
 When set to **yes**, members will receive an email notification when their member registration is declined.
 
 ### Require terms of service?
+
+![Require terms of service](/_images/members_require_terms.png)
 
 This preference determines whether new members must indicate that they agree to abide by your site's terms of service before they can register. 
 
@@ -43,32 +53,48 @@ If you are using legacy member profile template, when new members register throu
 
 ### Allow members to set time preferences?
 
+![Allow members to set time preferences](/_images/members_time_prefs.png)
+
 Set whether dates and times are localized to each members' own localization preferences. If set to "No", all dates and times will be localized to the site default and localization preferences will be disabled in the Member Profile and My Account pages.
 
 ### Default Primary Role
+
+![Default Primary Role](/_images/members_default_role.png)
 
 This allows you to specify the Primary Role to which approved members will be assigned.
 
 ### Member profile theme
 
+![Member profile theme](/_images/member_profile_theme.png)
+
 The default member profile theme to be used in the Member Profile area of your site. Available, installed themes are listed in the menu.
 
 ### Sort by
+
+![sort by](/_images/member_sort_by.png)
 
 Specifies the sorting criteria to be used. Choices are: Total Posts, Screen Name, Total Comments, Total Entries, Join Date.
 
 ### Order by
 
+![order by](/_images/member_order_by.png)
+
 Specifies whether to show the list in _Ascending_ or _Descending_ order.
 
 ### Total results
+
+![total results](/_images/member_total_results.png)
 
 Specifies the number of results to return by default.
 
 ### Enable new member notifications?
 
+![Enable new member notifications](/_images/member_new_notifications.png)
+
 If enabled, notifications will be sent to the email addresses specified in the next preference field.
 
 ### Notification recipients
+
+![Notification recipients](/_images/member_notification_recipients.png)
 
 Here you can specify the email addresses which should receive notifications (see previous preference). Multiple email addresses should be separated by commas.

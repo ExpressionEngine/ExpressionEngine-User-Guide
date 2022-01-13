@@ -11,6 +11,8 @@
 
 The Textarea is a simple free-form writing space where you can enter text or HTML.
 
+![textarea field](_images/field_textarea.png)
+
 ## Field Options
 
 ### Textarea Row Height

@@ -17,6 +17,8 @@ lang: ee
 
 File fields utilize the built-in file browser to store uploaded files and images for your publishers. 
 
+![file field](_images/field_file.png)
+
 NOTE: **Note:**Your site must have at least one upload directory before you can create a file field.
 
 ## Field Options

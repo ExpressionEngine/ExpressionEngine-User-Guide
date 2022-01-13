@@ -13,6 +13,8 @@ The Rich Text Editor is like a word processor that allows you to create richly-f
 
 You can find out more about general RTE configuration by reading the [Rich Text Editor add-ons documentation](/add-ons/rte.md).
 
+![rte field](_images/field_rte.png)
+
 ## Field Options
 
 When creating or modifying RTE field, the following field settings are available.

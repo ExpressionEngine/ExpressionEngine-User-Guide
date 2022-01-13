@@ -34,7 +34,7 @@ Channel Sets are zip files containing the following files:
 
 ### Custom Fields
 
-Custom fields are all represented as JSON objects. Each custom field exports its own properties, but `label`, `instructions`, and `order` are always inclued. If after exporting you realize you want to order your fields differently, simply set the `order` property in the order you want the field to appear in:
+Custom fields are all represented as JSON objects. Each custom field exports its own properties, but `label`, `instructions`, and `order` are always included. If after exporting you realize you want to order your fields differently, simply set the `order` property in the order you want the field to appear in:
 
     {
         "label": "Content",
@@ -71,6 +71,8 @@ Your `channel_set.json` file ties everything together. It will contain structura
     }
 
 The array of channels will contain objects that represent each Channel. Each Channel has a `channel_title`, `status_group`, `field_group`, and `cat_groups`, though they can be empty. In addition, you can supply `title_field_label` to change the Title Label on the publish page.
+
+NOTE: **Note:** Field groups mentioned in `channel_set.json`, but not present in the `/custom_fields` folder will be assigned to the channel, but not created. In this case, make it sure they are previously created.
 
 #### `statuses`
 

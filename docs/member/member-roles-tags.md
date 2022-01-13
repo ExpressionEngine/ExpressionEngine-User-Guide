@@ -7,11 +7,11 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Custom Profile Data Tag
+# Member Roles Tags
 
 [TOC]
 
-## Member Roles Tag
+## `{exp:member:roles}`
 
 The `{exp:member:roles}` tag allows you to display all groups that the member belongs to.
 
@@ -53,7 +53,7 @@ Primary role ID
 
 Primary role name
 
-## Has Role Tag
+## `{exp:member:has_role}`
 
 The `{exp:member:has_role}` tag allows you to display or hide its content depending on whether the member belongs to certain role
 

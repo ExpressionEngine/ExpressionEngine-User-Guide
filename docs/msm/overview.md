@@ -76,7 +76,7 @@ Open domain2's new `admin.php` file (this is the file that allows Control Panel 
 2. Uncomment the following `$assign_to_config` variables. Set the Short Name of the site this file will log into, and this file's URL. For example:
 
        $assign_to_config['site_name'] = 'domain2_short_name';
-       $assign_to_config['cp_url']    = 'http://domain2.com/admin.php';
+       $assign_to_config['cp_url']    = 'https://domain2.com/admin.php';
 
 TIP: **Tip:** In some multi-site situations, you may not want to allow Control Panel access from anyhere other than domain1. The `admin.php` file can be removed in those cases.
 
@@ -90,8 +90,8 @@ Open domain2's new index.php file and make the following changes:
 2. Uncomment the following `$assign_to_config` variables. Set the Short Name of the site this file will display, the URL of this site's admin.php file, and the main URL of the site (without index.php). For example:
 
        $assign_to_config['site_name'] = 'domain2_short_name';
-       $assign_to_config['cp_url']    = 'http://domain2.com/admin.php';
-       $assign_to_config['site_url']  = 'http://domain2.com';
+       $assign_to_config['cp_url']    = 'https://domain2.com/admin.php';
+       $assign_to_config['site_url']  = 'https://domain2.com';
 
 ## Multi Site Login
 
@@ -99,15 +99,15 @@ If you have multiple sites, you may prefer that when a user logs into one site, 
 
 In order for multi site login to work, all of the sites must use **cookies only** to hold the session data on the frontend. In `Settings --> Security and Privacy`: make sure the **Website Session type** is set to **Cookies only** for each site you want to include.
 
-If your sites are in separate subfolders (`https://example.com/site2/index.php`) or separate subdomains (`http://site2.example.com`) you can simply set the cookie domain for each site to the top level domain.
+If your sites are in separate subfolders (`https://example.com/site2/index.php`) or separate subdomains (`https://site2.example.com`) you can simply set the cookie domain for each site to the top level domain.
 
-In the case of `https://example.com/site2/index.php` or `http://site2.example.com` type URLs, the cookie domain should be **.example.com**.
+In the case of `https://example.com/site2/index.php` or `https://site2.example.com` type URLs, the cookie domain should be **.example.com**.
 
 Logging in on any of the URLs would result in cookies that can be read on any subfolder or subdomain of the example.com URL.
 
 However, cookies for one domain cannot be set from a different domain. If your sites use different domains, you'll need to use the [multi_login_sites](general/system-configuration-overrides.md) configuration override. Add the following to your `system/user/config/config.php` file, modified according to the domain names used by your sites:
 
-    $config['multi_login_sites'] = "http://www.example.com/index.php|http://www.sitetwo.com/index.php";
+    $config['multi_login_sites'] = "https://www.example.com/index.php|https://www.sitetwo.com/index.php";
 
 Now when a user logs into the frontend of one of the sites, the login routine will invisibly loop through each URL in the configuration, redirecting to that site, setting the appropriate cookies, and then cycling through to the next site. Once the user has been logged into all of the sites, they'll end up back on the starting URL. The login redirects will be virtually unnoticable.
 

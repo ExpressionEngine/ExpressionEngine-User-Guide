@@ -1,5 +1,5 @@
 <!--
-    This source file is part of the open source project
+    This source file is part of the open-source project
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
@@ -7,6 +7,87 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
+## Version 6.2.0 (Release: January 13, 2022)
+
+NOTE: **Important:** This version includes important security updates.
+
+NOTE: **Important:** If upgrading from previous version of ExpressionEngine with "Require Secure Password" enabled, your [Password Security Policy](/control-panel/settings/security-privacy.html#password-security-policy) will be set to `Basic` by default.
+
+- **Contributors** 🙌  
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+      <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/194579?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Andy Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=ajohnson" target="_BLANK">@ajohnson</a></p></div></div></div></li>
+      <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/55093827?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Andy Mc</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=ops-andy" target="_BLANK">@ops-andy</a></p></div></div></div></li>
+      <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/53965?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Brian Litzinger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=litzinger" target="_BLANK">@litzinger</a></p></div></div></div></li>
+      <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+      <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2160089?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jace Richardson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=obfuscode" target="_BLANK">@obfuscode</a></p></div></div></div></li>
+      <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+      <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/931642?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Robson Sobral</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=robsonsobral" target="_BLANK">@robsonsobral</a></p></div></div></div></li>
+      <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+      <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+      <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+- **Enhancements** 🚀
+
+  - Added PHP 8.1 support.
+  - Added counter for total members in a Role [#1582](https://github.com/ExpressionEngine/ExpressionEngine/issues/1582), [#1467](https://github.com/ExpressionEngine/ExpressionEngine/issues/1467).
+  - Added `ignore_member_stats` to increase performance on sites with a large number of members. 
+  - Added the use of `{if no_results}` to the Request module [#1559](https://github.com/ExpressionEngine/ExpressionEngine/issues/1559).
+  - Added the ability to disable the CLI via settings toggle or System Config Overrides.
+  - Added improved password validation when users create, edit, or reset their password.
+  - Added the ability for users to toggle the password input on the login screen, so that users can choose to view their passwords as they type.
+  - Added ability to assign users a role when using front-end Member Form tags.
+  - Added a min/max number of relationships to the Relationship field settings [#40](https://github.com/ExpressionEngine/ExpressionEngine/issues/40).
+  - Added ability to assign previously created field groups when importing Channel Sets [#1288](https://github.com/ExpressionEngine/ExpressionEngine/issues/1288).
+  - Added more links between the comment page and Comments Jump menu [#1359](https://github.com/ExpressionEngine/ExpressionEngine/issues/1359).
+  - Added ability for modules to be used in the Menu Manager [#54](https://github.com/ExpressionEngine/ExpressionEngine/issues/54).
+  - Added `sticky` column to Entry Manager in the Control Panel [#1293](https://github.com/ExpressionEngine/ExpressionEngine/issues/1293).
+  - Added `sticky="none"` parameter for `exp:channel:entries` [#488](https://github.com/ExpressionEngine/ExpressionEngine/issues/488).
+  - Added `entry_id` and `url_title` as searchable fields in the Control Panel Entry Manager [#1259](https://github.com/ExpressionEngine/ExpressionEngine/issues/1259).
+  - Added `sticky` parameter and `most_used_categories` value to `orderby` parameter to `exp:channel:category_archive` [#1256](https://github.com/ExpressionEngine/ExpressionEngine/issues/1256).
+  - Added new `:trim` variable modifier [#1182](https://github.com/ExpressionEngine/ExpressionEngine/issues/1182)
+  - Added the ability to use `exp:category_heading` without specifying the category in the URL. [#1181](https://github.com/ExpressionEngine/ExpressionEngine/issues/1181).
+  - Added the entry_id along with the channel name in Relationship field UI.
+  - Added warning when wrong cookie domain is being used and preventing users from logging into the Control Panel.
+  - Improved performance of queries and caching [#751](https://github.com/ExpressionEngine/ExpressionEngine/issues/751) , [#1280](https://github.com/ExpressionEngine/ExpressionEngine/issues/1280).
+  - Improved cookie registration [#1427](https://github.com/ExpressionEngine/ExpressionEngine/issues/1427).
+  - Improved the add-on namespace generator of the CLI. 
+  - Improved the Model Generator when using `make:model` in the CLI.
+  - Improved UI of the Entry Manager.
+  - Improved performance when using the Search Module [#1403](https://github.com/ExpressionEngine/ExpressionEngine/issues/1403).
+  - Updated password security options.
+
+- **Bug Fixes** 💃🐛 
+
+  - Resolved [#367](https://github.com/ExpressionEngine/ExpressionEngine/issues/367) where turning on channel entry revision for existing channels did not turn it on for existing entries.
+  - Resolved [#1434](https://github.com/ExpressionEngine/ExpressionEngine/issues/1434) where using exact keyword search on `exp:channel:entries` could trigger PHP errors in Live Preview.
+  - Resolved [#1468](https://github.com/ExpressionEngine/ExpressionEngine/issues/1468) where the File Upload modal could make it impossible to Create/Edit a new entry.
+  - Resolved [#1509](https://github.com/ExpressionEngine/ExpressionEngine/issues/1509) where templates with duplicate names from MSM sites were not being synchronized.
+  - Resolved [#1569](https://github.com/ExpressionEngine/ExpressionEngine/issues/1569) where Shared Form View: 'short-text' type inputs throw E-Notice if 'label' parameter not specified.
+  - Resolved [#1588](https://github.com/ExpressionEngine/ExpressionEngine/issues/1588) where non-super admins could not upload avatars.
+  - Resolved [#1491](https://github.com/ExpressionEngine/ExpressionEngine/issues/1491) where mod_security could trigger a 406 error in the Control Panel. 
+  - Resolved [#1604](https://github.com/ExpressionEngine/ExpressionEngine/issues/1604) where the `{member_profile_link}` variable could be incorrect
+  - Resolved [#1628](https://github.com/ExpressionEngine/ExpressionEngine/issues/1628) where italic styling was broken in the RTE when using Channel Forms.
+  - Resolved [#1689](https://github.com/ExpressionEngine/ExpressionEngine/issues/1689) where the close button for template settings modal window was not positioned correctly.
+  - Resolved bug where if the search input is empty and loses focus, the dropdown buttons become undefined when using some search forms in the Control Panel.
+  - Resolved issue where the user could be prevented from updating value/label pairs when editing certain field types. 
+  - Resolved bug where CLI `update` command could result in PHP error.
+  - Resolved bug where users couldn't select column type for new grid field.
+  - Resolved bug where the wrong last-modified header was sent with CSS requests.
+  - Resolved bug where sorting filters were being reset when using pagination with the File Manager.
+  - Fixed required field error message for a Grid inside a Fluid field that was triggered erroneously.
+  - Resolved a maximum row size MySQL error that could be triggered when upgrading from v5 to v6.
+  - Resolved bug in the updater script to remove orphan publish layouts.
+
+
+- **Developers** 💻
+
+  - Updated `template_post_parse` hook [#1195](https://github.com/ExpressionEngine/ExpressionEngine/issues/1195).
+
 ## Version 6.1.6 (Release: November 11, 2021)
 - **Contributors** 🙌   
  

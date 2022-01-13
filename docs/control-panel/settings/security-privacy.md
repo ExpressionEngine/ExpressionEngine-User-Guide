@@ -33,7 +33,7 @@ This determines how sessions are handled for the front-end of the site. You may 
 
 ### Share analytics with the ExpressionEngine Development Team?
 
-EllisLab asks users to help improve ExpressionEngine by providing analytics, diagnostic, and usage information to the ExpressionEngine Development Team.
+PacketTide asks users to help improve ExpressionEngine by providing analytics, diagnostic, and usage information to the ExpressionEngine Development Team.
 
 When this setting is on, the following information is occasionally collected:
 
@@ -45,9 +45,15 @@ When this setting is on, the following information is occasionally collected:
 
 You can opt out at any time by turning this setting off.
 
+### Enable the Command Line Interface
+
+Allows the CLI to be disabled or enabled globally.
+
+## Cookie Settings
+
 ### Domain
 
-Optionally specify a domain the cookie is available to. By default, the exact hostname of the requested page is set as the cookie domain. For example, if the page at `http://www.example.com/blog/an-entry-title` is loaded and the cookie domain is left blank in ExpressionEngine's configuration, the browser will use `www.example.com` as the cookie domain. The browser will only make these cookies available when the page's hostname is _exactly_ `www.example.com`.
+Optionally specify a domain the cookie is available to. By default, the exact hostname of the requested page is set as the cookie domain. For example, if the page at `https://www.example.com/blog/an-entry-title` is loaded and the cookie domain is left blank in ExpressionEngine's configuration, the browser will use `www.example.com` as the cookie domain. The browser will only make these cookies available when the page's hostname is _exactly_ `www.example.com`.
 
 If the cookie domain is explicitly specified, however, the browser will make the cookie available whenever the requested page's hostname _contains_ the cookie domain. For example, setting the cookie domain to `.example.com` will ensure the cookie is shared whenever the requested page's hostname includes `example.com`, `www.example.com`, `admin.example.com`, `blog.example.com`, and so on.
 
@@ -105,9 +111,18 @@ When this preference is set to "Yes", the system will lock a member account if m
 
 This setting is used together with the previous preference. Here you can determine, in minutes, the time interval over which more than four invalid login attempts will trigger a lockout. You may use decimals to indicate fractions of a minute: e.g. 1.5 equals one and a half minutes.
 
-### Require secure passwords?
+### Password security policy
 
-If this preference is set to "Yes", then users will be required to choose a minimally "secure" password. In this case, a password containing at least one uppercase character, one lowercase character, and one numeric character. Passwords that follow this basic formula are much more difficult to guess.
+This setting determines the strictness of your site's password policy. These checks are made when new accounts are created or when passwords are updated.
+
+The supported options are:
+
+ - `None`. No security password checks are made for general users.
+ - `Basic`. (Default) Password should contain at least one uppercase character, one lowercase character, and one numeric character. Passwords that follow this basic formula are much more difficult to guess.
+ - `Good`. Password should get security rank of 40 or more
+ - `Strong`. Password should get security rank of 60 or more.
+
+The password security rank is calculated using a complex algorithm. The rank will get the points for the total number of characters, usage of uppercase letters, lowercase letters, numbers and symbols. Additional points are given for using numbers or symbols in the middle of the password. At the same time, the points will be removed from the rank if the password is using letters only, or numbers only, or it has repeat characters, consecutive uppercase letters, consecutive lowercase letters, consecutive numbers, sequential letters (3+),  sequential numbers (3+),  sequential symbols (3+).
 
 ### Minimum password length
 

@@ -164,7 +164,7 @@ $entry_object = ee('Model')
 ```
 $entry              = ee('Model')->make('ChannelEntry');
 $entry->author_id   = ee()->session->userdata('member_id'); // Returns currently Logged-in user ID.
-$entry->channel_id  = 1,
+$entry->channel_id  = 1;
 $entry->title       = 'An Awesome Title';
 $entry->url_title   = ee('Format')->make('Text', 'An Awesome Title')->urlSlug()->compile(); // Returns an-awesome-title. Must be unique.
 $entry->status      = ee('Model')->get('Status', 1)->first()->status; // Returns 'open';
@@ -173,9 +173,8 @@ $entry->entry_date  = ee()->localize->now; // Returns time in seconds: 162394531
 // Validate and Save.
 $result = $entry->validate();
 
-if ($result->isValid())
-{
-  $entry->save();
+if ($result->isValid()) {
+    $entry->save();
 }
 
 $entry->entry_id; // Will now return the new Entry ID.

@@ -17,7 +17,7 @@ lang: php
 
 ## Cross Site Scripting (XSS)
 
-Cross Site Scripting is a type of security vulnerability that allows code injection by malicious users onto a page. You can find some educational reading and examples on the following site: [http://owasp.org](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet).
+Cross Site Scripting is a type of security vulnerability that allows code injection by malicious users onto a page. You can find some educational reading and examples on the following site: [https://owasp.org](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet).
 
 Cross Site Scripting should be taken very seriously as you would never want your add-on to be the source of an attack vector.
 
@@ -62,7 +62,7 @@ SQL Injection is a special type of attack in which data is used in a query witho
     $evil = "brett'; DELETE FROM exp_members;";
     $query = ee()->db->query("SELECT * FROM exp_members WHERE username='{$evil}'");
 
-For more information, you can read MySQL's guide to SQL Injection security: <http://dev.mysql.com/tech-resources/articles/guide-to-php-security-ch3.pdf>
+For more information, you can read MySQL's guide to SQL Injection security: <https://dev.mysql.com/doc/refman/5.6/en/secure-client-programming.html>
 
 ### Escaping PHP Variables
 
@@ -143,11 +143,11 @@ Or even:
 
     $foo = (ctype_digit($foo = ee()->TMPL->fetch_param('foo'))) ? FALSE : $foo;
 
-NOTE: **Note:** You no doubt notice that `ctype_digit` is being used here to validate the parameter as a numeric value. Why? [is_numeric()](http://us3.php.net/manual/en/function.is-numeric.php) returns `TRUE` for some non-integer numbers, including notation, e.g. "-0123.45e6". [is_int()](http://us2.php.net/manual/en/function.is-int.php) only returns `TRUE` on actual integer variable types, and tag parameters are always strings. Note that [ctype_digit()](http://us3.php.net/manual/en/function.ctype-digit.php), will return `TRUE` on an empty string in pre-5.1.0 versions of PHP.
+NOTE: **Note:** You no doubt notice that `ctype_digit` is being used here to validate the parameter as a numeric value. Why? [is_numeric()](https://us3.php.net/manual/en/function.is-numeric.php) returns `TRUE` for some non-integer numbers, including notation, e.g. "-0123.45e6". [is_int()](https://us2.php.net/manual/en/function.is-int.php) only returns `TRUE` on actual integer variable types, and tag parameters are always strings. Note that [ctype_digit()](https://us3.php.net/manual/en/function.ctype-digit.php), will return `TRUE` on an empty string in pre-5.1.0 versions of PHP.
 
 ### Default Values
 
-Always have default values if you plan to allow the code to execute without parameters being supplied, or in the case of invalid parameter values being provided. An empty string, `NULL`, or boolean `FALSE` simply needs to be tested later to accommodate defaults in your code. This also allows you to change the defaults all in one place in the script. Here is one method, that takes advantage of PHP's [variable variables](http://us2.php.net/manual/en/language.variables.variable.php).
+Always have default values if you plan to allow the code to execute without parameters being supplied, or in the case of invalid parameter values being provided. An empty string, `NULL`, or boolean `FALSE` simply needs to be tested later to accommodate defaults in your code. This also allows you to change the defaults all in one place in the script. Here is one method, that takes advantage of PHP's [variable variables](https://us2.php.net/manual/en/language.variables.variable.php).
 
     $defaults = array(
         'type'    => '',
@@ -192,7 +192,7 @@ If your form submits to a different site you should ensure that you are not leak
 
 ### Validating Form Hashes in Your Add-on
 
-ExpressionEngine will automatically check the CSRF token of all requests before handing the request off to your add-on. This means that all forms and requests must include the `csrf_token` field. Asynchronous requests that include an _HTTP_REQUESTED_BY_ header (this is set by most popular libraries, such as jQuery) default to being exempt from these checks as they provide a good layer of intrinsic security.
+ExpressionEngine will automatically check the CSRF token of all requests before handing the request off to your add-on. This means that all forms and requests must include the `csrf_token` field.
 
 There are several ways in which you can control this validation behavior of the CSRF tokens.
 
@@ -289,7 +289,7 @@ Never send values for preferences or settings in hidden form fields. HTML source
 - JavaScript is good against bots but not against serious hackers.
 - Base 64 encoding is easy to break and therefore NOT recommended.
 - If there are a limited number of _possible_ values, you could use `md5()` or `sha1()` to encode the values and check against encoded _possible_ values. This is not bulletproof of course, as the hacker needs only to know what the possible values are to be able to utilize them.
-- PHP has the [OpenSSL library](http://php.net/manual/en/book.openssl.php) and other PHP libraries which have encryption and decryption with a salt.
+- PHP has the [OpenSSL library](https://php.net/manual/en/book.openssl.php) and other PHP libraries which have encryption and decryption with a salt.
 - ExpressionEngine has an [Encryption service](development/services/encrypt.md) available to developers that uses OpenSSL.
 
 ### Yes / No Preferences

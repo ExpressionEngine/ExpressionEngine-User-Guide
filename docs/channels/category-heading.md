@@ -30,6 +30,26 @@ If no Categories are being shown, the tag will not show anything contained withi
 
 [TOC=3]
 
+### `category_id=`
+
+    category_id="5"
+
+You can hard code the Category Heading tag to show a specific category. You may also specify multiple categories by separating them with the pipe character:
+
+    category_id="13|42|147"
+
+Or use “not” to exclude categories:
+
+    category_id="not 45|534|807" 
+
+### `category_url_title=`
+
+    category_url_title="press-releases"
+
+The `category_url_title=` parameter allows you to specify the URL title of a specific category you wish to display.
+
+NOTE: **Note:** You must specify the [`channel` parameter](/channels/category-heading.html#channel) when using this parameter.
+
 ### `disable=`
 
     disable="category_fields"

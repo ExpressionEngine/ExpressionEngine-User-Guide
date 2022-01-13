@@ -11,6 +11,8 @@
 
 Email Address is a field type for storing email addresses. Only valid emails are allowed to be saved in this field.
 
+![email address field](_images/field_email.png)
+
 ## Template Tag
 
 In its standard form, an Email Address field outputs the raw email address:

@@ -115,7 +115,7 @@ The matches operator checks if a string matches a regular expression:
 
     {if segment_3 ~ "/^P\d+/"}paginated{/if}
 
-NOTE: **Note:** The second value must be a valid regular expression. All [PHP PCRE pattern modifiers](http://us1.php.net/manual/en/reference.pcre.pattern.modifiers.php) are allowed.
+NOTE: **Note:** The second value must be a valid regular expression. All [PHP PCRE pattern modifiers](https://us1.php.net/manual/en/reference.pcre.pattern.modifiers.php) are allowed.
 
 ##### Using Comparison Operators with Numbers
 
@@ -399,6 +399,12 @@ Test against the total number of forum topics by the currently logged in user.
     `{if username != "HAL9000"}  I'm sorry Dave, I'm afraid I can't do that.  {/if}`
 
 You can test against the username of the currently logged in user.
+
+### `mfa_enabled`
+
+Whether Multi-Factor Authentication is enabled for logged in user.
+
+    `{if !mfa_enabled}Enable multi-factor authentication for more security{/if}`
 
 ### `segment_*X*`
 

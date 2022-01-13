@@ -170,6 +170,7 @@ The syntax for the disable parameter is this: `disable="ITEM YOU WANT TO DISABLE
 - `custom_fields`
 - `member_data`
 - `pagination`
+- `relationships`
 
 NOTE: **Note:** If you disable categories, category fields will automatically be disabled.
 
@@ -261,7 +262,7 @@ Every Parameter available to the channel tag can be set dynamically.
 
 This parameter is only used in the tag when used in an RSS/Atom feed. It will not do anything in any other circumstance. The default value is "no", so you must specify this parameter in order to take advantage of the feature.
 
-When used in an RSS/Atom feed, this parameter allows ExpressionEngine to dynamically provide a starting date for the feed. This is used to allow EE to serve only _new_ content when it is requested by the feed via a RFC3229-compliant request ([RFC3229 info](http://tools.ietf.org/rfc/rfc3229.txt)).
+When used in an RSS/Atom feed, this parameter allows ExpressionEngine to dynamically provide a starting date for the feed. This is used to allow EE to serve only _new_ content when it is requested by the feed via a RFC3229-compliant request ([RFC3229 info](https://tools.ietf.org/rfc/rfc3229.txt)).
 
 ### `entry_id=`
 
@@ -670,9 +671,14 @@ This parameter accepts the same date formats as the [start_on=](#start_on) param
 
 ### `sticky=`
 
-    sticky="yes" sticky="no" sticky="only"
+    sticky="yes"
 
-By default, sticky topics always remain at the top of the page ("yes"). You can manually turn off stickies by setting the parameter to "no". If set to "only", only "sticky" entries are included in the results.
+By default, sticky topics always remain at the top of the page.
+Options:
+* `sticky="yes"` - sticky topics always remain at the top of the page (default)
+* `sticky="no"` - no special treatment will be given to sticky entries
+* `sticky="only"` - only sticky entries are included in the results
+* `sticky="none"` - only non-sticky entries are included in the results
 
 ### `track_views=`
 

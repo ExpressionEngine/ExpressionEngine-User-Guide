@@ -62,8 +62,8 @@ In rare cases, the field tag may not be flexible enough for the desired output. 
 ### Checkbox field
 
     {options:my_field_name}
-      <input type="checkbox" name="my_field_name[]" value="{option_value}"
-       {checked}  {option_name}</br>
+      <input type="checkbox" name="my_field_name[]" value="{option_value}" {checked}>
+      {option_name}</br>
      {/options:my_field_name}
 
 See the {options:my_field_name} tag pair.

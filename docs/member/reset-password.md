@@ -37,13 +37,14 @@ This parameter allows you to define where the user will be returned after succes
 2.  Use a full URL. For example: return="<https://example.com/return.html>"
 
 ## Form Inputs
+NOTE: Be sure to include the required Javascript and CSS to use the native [Password Validation](/member/password-validation.html).
 
 ### Password
 
             <label>Your New Password</label><br />
             <input type="password" name="password" value="" maxlength="50" size="40" />
 
-The new password to set.
+The new password to set.    
 
 ### Password Confirmation
 

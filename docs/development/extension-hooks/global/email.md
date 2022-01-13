@@ -17,7 +17,7 @@ lang: php
 
 | Parameter | Type      | Description                                                                                                                                                                                     |
 | --------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| &\$data   | `Array`   | Array of data about email to be sent (see above) passed [by reference](http://php.net/manual/en/language.references.pass.php) so data may be altered without needing to return the altered data |
+| &\$data   | `Array`   | Array of data about email to be sent (see above) passed [by reference](https://php.net/manual/en/language.references.pass.php) so data may be altered without needing to return the altered data |
 | Returns   | `Boolean` | `TRUE` if successfully sent, `FALSE` if not                                                                                                                                                     |
 
 Modify email headers, recipients and body data, and optionally take over email sending completely.
