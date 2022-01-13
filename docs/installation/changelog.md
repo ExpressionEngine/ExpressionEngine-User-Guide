@@ -7,6 +7,11 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
+## Version 6.2.1 (Release: January 13, 2022)
+
+- **Bug Fixes** 💃🐛 
+  - Resolved a bug where the `template_post_parse` hook could cause an error.
+
 ## Version 6.2.0 (Release: January 13, 2022)
 
 NOTE: **Important:** This version includes important security updates.
