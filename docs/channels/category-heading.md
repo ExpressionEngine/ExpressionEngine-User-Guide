@@ -48,7 +48,7 @@ Or use “not” to exclude categories:
 
 The `category_url_title=` parameter allows you to specify the URL title of a specific category you wish to display.
 
-NOTE: **Note:** You must specify the `channel` parameter to detect the category title. Unless you are using the `relaxed_categories` parameter, you can only list one channel name, since each channel can have separate category groups.
+NOTE: **Note:** You must specify the [`channel` parameter](/channels/category-heading.html#channel) when using this parameter.
 
 ### `disable=`
 
