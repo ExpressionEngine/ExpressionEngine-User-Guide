@@ -32,7 +32,7 @@ If the member has not yet set up their multi-factor authentication, upon login t
 
 Setting up Multi-Factor Authentication on the front-end is handled using a set of system dialogs. These dialogs can be triggered manually using the links provided by the [`{exp:member:mfa_links}` tag](member/mfa.md).
 
-The dialogs are presented using `Multi-Factor Authentication Template` from System Message Templates. You can also use a custom template from the [`system_messages` template group](/control-panel/template-manager.md#custom-system-messages), it should be named `mfa`.
+The dialogs are presented using `Multi-Factor Authentication Template` from System Message Templates. You can also use a custom template from the [`system_messages` template group](/control-panel/template-manager.md#custom-system-messages), it should be named `mfa_template`.
 
 
 ## Resetting MFA
