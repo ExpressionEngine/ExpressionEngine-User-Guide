@@ -7,6 +7,21 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
+## Version 6.2.3 (Release: January 17, 2022)
+- **Contributors** 🙌  
+
+- **Bug Fixes** 💃🐛
+  - Resolved [#1574](https://github.com/ExpressionEngine/ExpressionEngine/issues/1609) where an error of "URI too long" could be returned when using the keyword search in a Relationship field.
+  - Resolved [#1609](https://github.com/ExpressionEngine/ExpressionEngine/issues/1609) where some CLI commands could timeout if taking more than 90 seconds.
+  - Resolved [#1616](https://github.com/ExpressionEngine/ExpressionEngine/issues/1616) where Channel Forms could return a PHP error when using PHP 8.
+  - Resolved [#1688](https://github.com/ExpressionEngine/ExpressionEngine/issues/1688) where `{if captcha}` did not correctly check for logged in members on Channel Forms.
+    - Resolved [#1704](https://github.com/ExpressionEngine/ExpressionEngine/issues/1704) where WEBP MIME type detection could return a PHP error when trying to upload media files to a file upload location.
+  - Resolved [#1709](https://github.com/ExpressionEngine/ExpressionEngine/issues/1709) where some SVG images could not be uploaded to "image only" file upload locations.
+  - Resolved [#1717](https://github.com/ExpressionEngine/ExpressionEngine/issues/1717) where some you could not relate more entries than what was set for Maximum Entries Displayed when using the Relationship field.
+
+
+
+# ExpressionEngine v6 Change Log
 ## Version 6.2.1 (Release: January 13, 2022)
 
 - **Contributors** 🙌  
