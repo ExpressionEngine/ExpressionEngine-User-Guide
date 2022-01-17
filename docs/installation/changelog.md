@@ -15,10 +15,16 @@
   - Resolved [#1609](https://github.com/ExpressionEngine/ExpressionEngine/issues/1609) where some CLI commands could timeout if taking more than 90 seconds.
   - Resolved [#1616](https://github.com/ExpressionEngine/ExpressionEngine/issues/1616) where Channel Forms could return a PHP error when using PHP 8.
   - Resolved [#1688](https://github.com/ExpressionEngine/ExpressionEngine/issues/1688) where `{if captcha}` did not correctly check for logged in members on Channel Forms.
-    - Resolved [#1704](https://github.com/ExpressionEngine/ExpressionEngine/issues/1704) where WEBP MIME type detection could return a PHP error when trying to upload media files to a file upload location.
+  - Resolved [#1704](https://github.com/ExpressionEngine/ExpressionEngine/issues/1704) where WEBP MIME type detection could return a PHP error when trying to upload media files to a file upload location.
   - Resolved [#1709](https://github.com/ExpressionEngine/ExpressionEngine/issues/1709) where some SVG images could not be uploaded to "image only" file upload locations.
-  - Resolved [#1717](https://github.com/ExpressionEngine/ExpressionEngine/issues/1717) where some you could not relate more entries than what was set for Maximum Entries Displayed when using the Relationship field.
-
+  - Resolved [#1717](https://github.com/ExpressionEngine/ExpressionEngine/issues/1717) where you could not relate more entries than what was set for Maximum Entries Displayed when using the Relationship field.
+  - Resolved [#1729](https://github.com/ExpressionEngine/ExpressionEngine/issues/1729) where upgrading from earlier versions of ExpressionEngine could result in an error.
+  - Resolved issue where an incorrect error was displayed when an upload directory had an invalid path. 
+  - Resolved issue that could arise when using captcha with PHP 8.1
+  - Resolved issue with logic around search and replace
+  - Fixed logic determining if placeholder index.html file should be added to generated directories.
+  - Updated Password strength badge placement for better consistency
+  - Updated a few error messages with additional clarity
 
 
 # ExpressionEngine v6 Change Log
