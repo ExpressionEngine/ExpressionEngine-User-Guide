@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
-## Version 6.2.3 (Release: January 17, 2022)
+## Version 6.2.2 (Release: January 17, 2022)
 - **Contributors** 🙌  
 <div class="max-w-7xl mx-autotext-center">
 <div class="space-y-8 sm:space-y-12">
