@@ -7,6 +7,20 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
+## Version 6.2.3 (Release: January 20, 2022)
+- **Contributors** 🙌  
+
+
+- **Bug Fixes** 💃🐛
+  - Resolved [#1737](https://github.com/ExpressionEngine/ExpressionEngine/issues/1737) where the `channel` parameter was ignored when using search template tags.
+  - Resolved bug where custom member fields may not be saved when creating a member.
+
+- **Enhancements** 🚀
+  - Updated the Auto-Saved versions subittle translation string in the Entry Editor.
+
+- **Developers** 💻
+  - Changed where the `member_member_login_start` hook is called for Control Panel logins.
+
 ## Version 6.2.2 (Release: January 17, 2022)
 - **Contributors** 🙌  
 <div class="max-w-7xl mx-autotext-center">
