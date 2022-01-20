@@ -15,7 +15,7 @@ Language packs will change the language used in the Control Panel, in messages t
 
 NOTE: **Note:** These language packs do **not** automatically translate the content of your site.
 
-NOTE: **Note:** Since these language packs are contributed by the members of the community, we are not responsible for the accuracy of the translations. If something looks wrong to you, we recommend you [send us a pull request on GitHub](general/languages.md#contributing) with the corrected translation.
+NOTE: **Note:** Since these language packs are contributed by the members of the community, we are not responsible for the accuracy of the translations. If something looks wrong to you, we recommend you [send us a pull request on GitHub](#contributing) with the corrected translation.
 
 ## Downloading Language Packs
 
