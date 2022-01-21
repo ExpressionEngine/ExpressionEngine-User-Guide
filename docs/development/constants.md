@@ -52,7 +52,7 @@ The ExpressionEngine core defines a variety of constants to ensure consistency i
 
 ## Request Constants
 
-- `REQ` - One of: `'PAGE'`, `'CP'`, `'ACT'`
+- `REQ` - One of: `'PAGE'`, `'CP'`, `'ACTION'`
 - `AJAX_REQUEST` - (`bool`) `TRUE` if request came from one of jQuery's ajax functions
 
 ## Filesystem Mode Constants
