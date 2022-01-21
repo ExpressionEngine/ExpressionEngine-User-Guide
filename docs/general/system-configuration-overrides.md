@@ -677,7 +677,7 @@ Example Usage:
 
     $config['cli_enabled'] = 'n';
 
-WARN: **Important:** The CLI is available to every user that has SSH or terminal access to your site's webserver. It does not handle authorization inside ExpressionEngine and is relying on your server's authorization method instead. 
+WARN: **Important:** The CLI is available to every user that has SSH or terminal access to your site's webserver. It does not handle authorization inside ExpressionEngine and is relying on your server's authorization method instead.
 
 ### `code_block_pre`
 
@@ -959,7 +959,7 @@ Example Usage:
 
 ### `deft_lang`
 
-Set the default language. ExpressionEngine ships with English, and additional [language packs](general/languages.md) are available for download.
+Set the default language. ExpressionEngine ships with English, and additional [language packs](localization/languages.md) are available for download.
 
 | Value    | Description                                               |
 | -------- | --------------------------------------------------------- |
