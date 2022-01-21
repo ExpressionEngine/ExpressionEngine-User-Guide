@@ -21,11 +21,6 @@
     - name: Change Log
       href: installation/changelog.md
 
-- name: Localization
-  items:
-    - name: Transliteration
-      href: localization/transliteration.md
-
 - name: Getting Started
   items:
     - name: The Big Picture
@@ -47,10 +42,6 @@
       href: general/gdpr.md
     - name: Cookies
       href: general/cookies.md
-    - name: Date Localization
-      href: general/date-localization.md
-    - name: Language Packs
-      href: general/languages.md
     - name: System Config Overrides
       href: general/system-configuration-overrides.md
     - name: Text Formatting
@@ -63,6 +54,17 @@
       href: general/reserved-words.md
     - name: Member XML Format
       href: general/member-import-xml-format.md
+
+- name: Localization
+  items:
+    - name: Date Localization
+      href: localization/date-localization.md
+    - name: Language Packs
+      href: localization/languages.md
+    - name: Stopwords
+      href: localization/stopwords.md
+    - name: Transliteration
+      href: localization/transliteration.md
 
 - name: Templates
   items:
@@ -954,6 +956,6 @@
 
 - name: Contributing
   href: contributing.md
-  
+
 - name: Docs Contributors
   href: contributors.md
