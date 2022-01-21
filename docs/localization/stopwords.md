@@ -11,9 +11,9 @@
 
 [TOC]
 
-Words whose meaning don't help on processing or search are called **stopwords** and they are filtered out from the search by ExpressionEngine.
+Words whose meaning don't provide useful information in processing or search are called **stopwords** and are filtered out from the search by ExpressionEngine.
 
-In case you need to change the list, because you disagree with the used words or they don't matchthe requirements of your language, you can save a copy of the default list from [`system\ee\ExpressionEngine\Config\stopwords.php`](https://github.com/ExpressionEngine/ExpressionEngine/blob/6.dev/system/ee/ExpressionEngine/Config/stopwords.php) to `data\system\user\config\stopwords.php`.
+In case you need to change the list to match the requirements of your needs or language, you can save a copy of the default list from [`system\ee\ExpressionEngine\Config\stopwords.php`](https://github.com/ExpressionEngine/ExpressionEngine/blob/6.dev/system/ee/ExpressionEngine/Config/stopwords.php) to `data\system\user\config\stopwords.php`.
 
 
 ```php

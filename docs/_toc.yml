@@ -61,6 +61,8 @@
       href: localization/date-localization.md
     - name: Language Packs
       href: localization/languages.md
+    - name: Stopwords
+      href: localization/stopwords.md
     - name: Transliteration
       href: localization/transliteration.md
 
