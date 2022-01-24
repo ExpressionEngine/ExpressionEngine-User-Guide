@@ -7,6 +7,16 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
+## Version 6.2.4 (Release: January 24, 2022)
+- **Bug Fixes** 💃🐛
+  - Resolved bug where models could not be properly serialized.
+  - Resolved [#1738](https://github.com/ExpressionEngine/ExpressionEngine/issues/1738) where some cookies by Comment module were not set.
+  - Resolved bug where the size of `page_uri` field was less than `url_title`
+
+- **Enhancements** 🚀
+  - Resolved [#1523](https://github.com/ExpressionEngine/ExpressionEngine/issues/1523) by displaying Role status on Roles page.
+
+
 ## Version 6.2.3 (Release: January 20, 2022)
 - **Contributors** 🙌  
 <div class="max-w-7xl mx-autotext-center">
