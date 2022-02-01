@@ -26,7 +26,7 @@
 
 * **Enable automatic front-end editing links** - (Default: On, Matching Config Override: [`enable_frontedit_links`](#enable_frontedit_links)) By default ExpressionEngine Pro automatically inserts edit links ( <img style="margin-bottom: 0px; vertical-align: middle;" src="../_images/pro_edit.png" alt="pro edit icon"> ) where editable content is found in templates. These can be disabled on a per field basis or globally when using this toggle. When toggled off, ExpressionEngine Pro will no longer automatically generate edit links and links will need to be [added manually](pro/frontend.md#customizing-the-link-location) where needed in templates.
 
-* **Enable entry cloning** - (Default: On, Matching Config Override: [`enable_entry_cloning`](#enable_entry_cloning) ) Enables cloning the entries by using "Save as New Entry" option in saving dropdown on entry edit page. When enabled globally, can also be disabled individually for each channel in channel preferences.
+* **Enable entry cloning** - (Default: On, Matching Config Override: [`enable_entry_cloning`](#enable_entry_cloning) ) Enables cloning the entries by using "Clone to New Entry" option in saving dropdown on entry edit page. When enabled globally, can also be disabled individually for each channel in channel preferences.
 
 
 ### Branding Settings
