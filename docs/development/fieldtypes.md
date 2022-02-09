@@ -831,11 +831,11 @@ Custom fields can display their data inside the Entry Manager through 3 possible
 
 ## Entry cloning support
 
-[ExpressionEngine Pro](/pro/overview.md) enables add ability to clone existing entries using "Clone to New Entry" option on entry editing page. Most of fieldtypes do not need to do anything special to support this feature. 
+[ExpressionEngine Pro](/pro/overview.md) adds the ability to clone existing entries using the "Clone to New Entry" option on the entry editing page. Most fieldtypes do not need to do anything special to support this feature. 
 
-However if the fieldtype you are developing is saving data to its own database table, you might need to tell it to save the rows as submission for new entry, and not for the existing one.
+However, if the fieldtype you are developing saves data to its own database table, you might need to tell it to save the rows as a submission for the new entry and not for the existing one.
 
-You can do it by adding this check:
+You can do this by adding this check:
 
     if (defined('CLONING_MODE') && CLONING_MODE === true) {
         //this is cloning request, add new rows

@@ -55,4 +55,4 @@ ExpressionEngine Pro adds the ability to override cookie values and their lifeti
 
 ### Entry Cloning
 
-With ExpressionEngine Pro license it is possible to clone existing entries using "Clone to New Entry" option that is getting added to "Save" dropdown menu on entry editing page. 
+With ExpressionEngine Pro installed, it is possible to [clone existing entries](/pro/entry_cloning.md) using the "Clone to New Entry" option that is added to the "Save" dropdown menu on entry editing page. 
