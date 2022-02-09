@@ -10,20 +10,20 @@
 ## Version 6.2.5 (Release: February 9, 2022)
 
 - **Bug Fixes** 💃🐛
-  - Resolved [#1776](https://github.com/ExpressionEngine/ExpressionEngine/issues/1776) where some pages were showing warnings when using PHP 8.1
-  - Resolved [#1766](https://github.com/ExpressionEngine/ExpressionEngine/issues/1766) where Consent module was not respecting `disable_csrf_protection` config override
-  - Resolved [#1747](https://github.com/ExpressionEngine/ExpressionEngine/issues/1747) where mime type of some PDF files was not identified correctly
+  - Resolved [#67](https://github.com/ExpressionEngine/ExpressionEngine/issues/67) issues with avatars
   - Resolved [#1361](https://github.com/ExpressionEngine/ExpressionEngine/issues/1361) where mime type for `.ico` files was not identified correctly
-  - Resolved [#1647](https://github.com/ExpressionEngine/ExpressionEngine/issues/1647) where `page_uri` and `page_url` variables were not parsed in category achive tag
+  - Resolved [#1647](https://github.com/ExpressionEngine/ExpressionEngine/issues/1647) where `page_uri` and `page_url` variables were not parsed in category achive tag  
+  - Resolved [#1698](https://github.com/ExpressionEngine/ExpressionEngine/issues/1698) where template tags were not parsed correctly inside curly braces
+  - Resolved [#1747](https://github.com/ExpressionEngine/ExpressionEngine/issues/1747) where mime type of some PDF files was not identified correctly
+  - Resolved [#1766](https://github.com/ExpressionEngine/ExpressionEngine/issues/1766) where Consent module was not respecting `disable_csrf_protection` config override
+  - Resolved [#1776](https://github.com/ExpressionEngine/ExpressionEngine/issues/1776) where some pages were showing warnings when using PHP 8.1
   - Resolved issue where path to first-party plugins was not set correctly
   - Resolved the issue where config file was not locked properly when performing system upgrade
-  - Resolved [#67](https://github.com/ExpressionEngine/ExpressionEngine/issues/67) issues with avatars
-  - Resolved [#1698](https://github.com/ExpressionEngine/ExpressionEngine/issues/1698) where template tags were not parsed correctly inside curly braces
   - Resolved very minor UI and code issues
 
 
 - **Enhancements** 🚀
-  - Released ExpressionEngine Pro 1.2 with entry cloning support
+  - Released [ExpressionEngine Pro 1.2](/pro/changelog.md) with [entry cloning support](/pro/entry_cloning.md)
   - Resolved [#1400](https://github.com/ExpressionEngine/ExpressionEngine/issues/1400) by adding `parse_files` parameter to Query tag 
 
 - **Developers** 💻

@@ -11,7 +11,7 @@
 
 ## Version 1.2.0 (Release: February 9, 2022)
 
-  - Added entry cloning using "Clone to New Entry" option in entry Save dropdown button.
+  - Added [entry cloning](/pro/entry_cloning.md) using the "Clone to New Entry" option in entry Save dropdown options.
   - Resolved [#1791](https://github.com/ExpressionEngine/ExpressionEngine/issues/1791) where non-existing image was requested by Dock.
 
 ## Version 1.1.0 (Release: January 13, 2022)
