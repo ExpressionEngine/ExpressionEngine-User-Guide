@@ -251,6 +251,40 @@ Allows you to validate the data after the publish form has been submitted but be
       return $validator->validate($values);
     }
 
+### `clone($entry, $values) *`
+
+| Parameter | Type                                                                | Description                         |
+| --------- | ------------------------------------------------------------------- | ------ ----------------------------- |
+| \$entry   | <small>`ExpressionEngine\Module\Channel\Model\ChannelEntry`</small> | The channel entry entity            |
+| \$values  | `array`         | an associative array with field names as keys and form submission data as the value (i.e. `array('fortune' => 'All your hard work will soon pay off.'))`. The keys are derrived from the data returned by `display()`. |
+| Returns   | `array`         | $values modified array of values  |
+
+Code that needs to be executed when an entry is being [cloned](/pro/entry_cloning.md). This function is called before `validate`, so if you need to modify the data that will be passed to validation service (as well as `$_POST` array), this is the place to do it.
+
+    public function clone(ChannelEntry $entry, $values)
+    {
+        if ($values['pages_uri'] == '') {
+            return $values;
+        }
+        //check if submitted URI exists
+        $static_pages = ee()->config->item('site_pages');
+        $uris = $static_pages[ee()->config->item('site_id')]['uris'];
+
+        //exclude current page from check
+        if (isset($uris[$entry->entry_id])) {
+            unset($uris[$entry->entry_id]);
+        }
+        //ensure leading slash is present
+        $value = '/' . trim($values['pages_uri'], '/');
+
+        while (in_array($value, $uris)) {
+            $value .= '_1';
+        }
+        $_POST['pages__pages_uri'] = $values['pages_uri'] = $value;
+
+        return $values;
+    }
+
 ### `save($entry, $values) *`
 
 | Parameter | Type                                                                         | Description                                                                                                                                                                                                           |
