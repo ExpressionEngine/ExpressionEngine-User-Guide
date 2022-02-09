@@ -17,14 +17,18 @@
   - Resolved [#1747](https://github.com/ExpressionEngine/ExpressionEngine/issues/1747) where mime type of some PDF files was not identified correctly
   - Resolved [#1766](https://github.com/ExpressionEngine/ExpressionEngine/issues/1766) where Consent module was not respecting `disable_csrf_protection` config override
   - Resolved [#1776](https://github.com/ExpressionEngine/ExpressionEngine/issues/1776) where some pages were showing warnings when using PHP 8.1
+  - Resolved [#1798](https://github.com/ExpressionEngine/ExpressionEngine/issues/1798) where entry limit notification was incorrectly positioned in the DOM
   - Resolved issue where path to first-party plugins was not set correctly
   - Resolved the issue where config file was not locked properly when performing system upgrade
   - Resolved very minor UI and code issues
-
+  - Resolved PHP 8.1 compatibility issue with the CLI
+  - Resolved bug where some entries where not displayed if they were published at the same exact time as page render.
 
 - **Enhancements** 🚀
   - Released [ExpressionEngine Pro 1.2](/pro/changelog.md) with [entry cloning support](/pro/entry_cloning.md)
   - Resolved [#1400](https://github.com/ExpressionEngine/ExpressionEngine/issues/1400) by adding `parse_files` parameter to Query tag 
+  - Clarified Database Server Address label on the installation page.
+ 
 
 - **Developers** 💻
   - Optimized output of `var_dump` on models
