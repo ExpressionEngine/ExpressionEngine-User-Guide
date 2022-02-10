@@ -96,7 +96,7 @@ Example Usage:
 
 ### `enable_entry_cloning`
 
-When set to `n`, disables "Save as New Entry" option and entry cloning globally. 
+When set to `n`, disables "Clone to New Entry" option and entry cloning globally. 
 
 | Value | Behavior                                       |
 | ----- | ---------------------------------------------- |
