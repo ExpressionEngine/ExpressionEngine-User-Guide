@@ -52,10 +52,11 @@ To update via the [eecli](cli/intro.md) tool, run:
     php eecli.php update
 
 #### Options
-**rollback**: Rollsback last update
-**verbose,v**: Verbose output
-**force-addon-upgrades**: Automatically runs all addon updaters at end of update (advanced)
-**y**: Skip all confirmations. (advanced)
+
+- **rollback**: Rollsback last update
+- **verbose,v**: Verbose output
+- **force-addon-upgrades**: Automatically runs all addon updaters at end of update (advanced)
+- **y**: Skip all confirmations. (advanced)
 
 ## Updating Manually
 

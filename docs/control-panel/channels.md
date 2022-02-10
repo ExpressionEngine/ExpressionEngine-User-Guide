@@ -100,6 +100,8 @@ NOTE: **Note:** We recommend using the default base URL variable `{base_url}` de
 - **Show extra publish controls?** -- When set to yes, a second set of publish controls will appear at the top of the publish form for this channel.
 - **Allow image URLs?** -- You can determine whether or not you want people to be able to display images within your entries by using the URL for the image. If "Yes" is selected for this option, people can display images as inline content in your channel. If the setting is "No" then images will not be allowed.
 - **Render URLs and Email addresses as links?** -- When this option is set to "Yes", any full URLs or email addresses will be automatically formatted as a valid HTML link to the address. If the option is "No" then the URL or email address will be treated and displayed as plain text.
+- **Enable Sticky entries?** -- When enabled, entries can be marked as sticky and have preference in sorted listings.
+- **Enable entry cloning?** -- ([ExpressionEngine Pro](/pro/entry_cloning.md) feature) When enabled, entries can be cloned using "Clone to New Entry" option in Save options dropdown.
 - **Status** -- Status assigned to all new entires in the channel.
 - **Author** -- Default author for guest entries posted via Channel Form.
 - **Allow guest submissions?** -- When set to yes, unregistered users will be able to submit forms for this channel.
@@ -119,7 +121,7 @@ NOTE: **Note:** We recommend using the default base URL variable `{base_url}` de
 - **Text formatting** -- This setting determines how comments are formatted by the system. There are three possible choices:
 - **HTML formatting** -- Like the channel setting, this preference determines how raw HTML code within comments is handled. There are three options:
 - **Allow image URLs?** -- You can determine whether or not you want people to be able to display images within comments by using the URL for the image.
-- **Render URLs and Email addresses as links?** -- When this option is set to "Yes", any full URLs or email addresses will be automatically formatted as a valid HTML link to the address. If the option is "No" then the URL or email address will be treated and displayed as plain text.
+- **Render URLs and Email addresses as links?** -- When this option is set to "Yes", any full URLs or email addresses in comments will be automatically formatted as a valid HTML link to the address. If the option is "No" then the URL or email address in comment body will be treated and displayed as plain text.
 
 ## Form Layouts
 
