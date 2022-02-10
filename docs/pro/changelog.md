@@ -9,7 +9,7 @@
 
 # ExpressionEngine Pro Change Log
 
-## Version 1.2.0 (Release: February 9, 2022)
+## Version 1.2.0 (Release: February 10, 2022)
 
   - Added [entry cloning](/pro/entry_cloning.md) using the "Clone to New Entry" option in entry Save dropdown options.
   - Resolved [#1791](https://github.com/ExpressionEngine/ExpressionEngine/issues/1791) where non-existing image was requested by Dock.

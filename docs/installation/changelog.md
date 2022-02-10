@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
-## Version 6.2.5 (Release: February 9, 2022)
+## Version 6.2.5 (Release: February 10, 2022)
 
 - **Bug Fixes** 💃🐛
   - Resolved [#67](https://github.com/ExpressionEngine/ExpressionEngine/issues/67) issues with avatars
