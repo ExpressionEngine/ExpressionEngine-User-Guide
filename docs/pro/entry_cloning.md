@@ -13,7 +13,7 @@ Entry Cloning makes it possible to clone existing entries when ExpressionEngine 
 
 Check out our video tutorial on Cloning Entries!
 <div class="video-wrapper">
-<iframe src="https://www.youtube.com/embed/cSz7NZdQvGk?vq=HD1080" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/cSz7NZdQvGk?vq=HD1080&rel=0" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 </div>
 
