@@ -85,7 +85,54 @@ If you are pulling dates out of an ExpressionEngine database table, then you can
 
 The Query module uses the same pagination syntax as all first-party modules. Please look at the [Pagination](templates/pagination.md) documentation for more information.
 
-## Backspace Parameter
+## Parameters
+
+### Parsing file paths
+
+In case you select a table which stores files, the returned value will have `{filedir_` in front of the file names. To parse them, enable the `parse_files` parameter:
+
+```html
+{exp:query sql="SELECT col_id_1 AS src, col_id_5 AS description
+    FROM exp_channel_grid_field_2;"
+    parse_files="y"
+}
+    <img src="{src}" alt="{description}" />
+{/exp:query}
+```
+
+NOTE: **Note:** The default values of `parse_files=` and `parse_bases=` can be override using [`parse_variables_query_results_by_default`](/general/system-configuration-overrides.md#parse_variables_query_results_by_default)
+
+### Parsing `{base_` variables
+
+In case you select a table which stores site settings, the returned value may have `{base_` variables. To parse them, enable the `parse_bases` parameter:
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>site_id</th>
+      <th>server_path</th>
+      <th>url</th>
+    </tr>
+  </thead>
+  <tbody>
+    {exp:query
+      sql="SELECT site_id, server_path , url FROM exp_upload_prefs"
+      parse_bases="yes"
+    }
+      <tr>
+        <td>{site_id}</td>
+        <td>{server_path}</td>
+        <td>{url}</td>
+      </tr>
+    {/exp:query}
+  </tbody>
+</table>
+```
+
+NOTE: **Note:** The default values of `parse_files=` and `parse_bases=` can be override using [`parse_variables_query_results_by_default`](/general/system-configuration-overrides.md#parse_variables_query_results_by_default)
+
+### Backspace Parameter
 
 You can add an optional parameter that allows "backspacing":
 
@@ -142,12 +189,16 @@ Multiple instances of the {switch=} tag may be used and ExpressionEngine will in
 The number of total results of the query.
 
 ## Troubleshooting
-**Column variables are not parsing as expected**  
-When using the Query Module within other tag pairs such as `exp:channel:entries` which have their own variables, a conflict may arise in parsing the `exp:query` tag. 
+
+**Column variables are not parsing as expected**
+
+When using the Query Module within other tag pairs such as `exp:channel:entries` which have their own variables, a conflict may arise in parsing the `exp:query` tag.
 
 Example:
 On the page `/about` (assuming there is an entry with the `url_title` of "about" titled "About Us") and using a database with three entries in the `exp_channel_title` table.
+
 Template:
+
 ```
 {exp:channel:entries}
     Page Title: {title} <br>
@@ -156,7 +207,9 @@ Template:
     {/exp:query}
 {/exp:channel:entries}
 ```
+
 Output:
+
 ```
 Page Title: About Us
 Query result: About Us
@@ -164,8 +217,9 @@ Query result: About Us
 Query result: About Us
 ```
 
-"About Us" is outputted with every instance of `{title}` because `{title}` is a variable used by the parent `{exp:channel:entries}` tag.    
+"About Us" is outputted with every instance of `{title}` because `{title}` is a variable used by the parent `{exp:channel:entries}` tag.
 To avoid this confusion, alias your column titles in your query using the `AS` command.
+
 ```
 {exp:channel:entries}
     Page Title: {title} <br>
@@ -174,7 +228,9 @@ To avoid this confusion, alias your column titles in your query using the `AS` c
     {/exp:query}
 {/exp:channel:entries}
 ```
+
 Output:
+
 ```
 Page Title: About Us
 Query result: About Us

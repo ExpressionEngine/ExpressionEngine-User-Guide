@@ -2060,6 +2060,15 @@ Example Usage:
 
     $config['newrelic_include_version_number'] = 'y';
 
+### `parse_variables_query_results_by_default`
+
+In case you select a table which stores files, the returned value will have `{filedir_` in front of the file names. In case you select a table which stores site settings, the returned value may have `{base_` variables. To parse both cases by default, enable the following config:
+
+| Value | Behavior                                    |
+| ----- | ------------------------------------------- |
+| y     | Parse variables by default                  |
+| n     | Do not parse variables by default (default) |
+
 ### `password_lockout`
 
 If enabled, the system will lock a member account if more than four invalid login attempts are made within a [specified time period](#password_lockout_interval). This is designed to deter hackers from using collision attacks to guess poorly chosen passwords. The account remains locked for the duration of the password lockout time period.
