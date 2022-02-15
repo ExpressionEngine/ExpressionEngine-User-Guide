@@ -7,6 +7,50 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
+## Version 6.2.5 (Release: February 10, 2022)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5"> 
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1008036?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Eric Lamb</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=mithra62" target="_BLANK">@mithra62</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2160089?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jace Richardson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=obfuscode" target="_BLANK">@obfuscode</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/931642?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Robson Sobral</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robsonsobral" target="_BLANK">@robsonsobral</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/43254861?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">acalvino4</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=acalvino4" target="_BLANK">@acalvino4</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+- **Bug Fixes** 💃🐛
+  - Resolved [#67](https://github.com/ExpressionEngine/ExpressionEngine/issues/67) issues with avatars
+  - Resolved [#1361](https://github.com/ExpressionEngine/ExpressionEngine/issues/1361) where mime type for `.ico` files was not identified correctly
+  - Resolved [#1647](https://github.com/ExpressionEngine/ExpressionEngine/issues/1647) where `page_uri` and `page_url` variables were not parsed in category achive tag  
+  - Resolved [#1698](https://github.com/ExpressionEngine/ExpressionEngine/issues/1698) where template tags were not parsed correctly inside curly braces
+  - Resolved [#1747](https://github.com/ExpressionEngine/ExpressionEngine/issues/1747) where mime type of some PDF files was not identified correctly
+  - Resolved [#1766](https://github.com/ExpressionEngine/ExpressionEngine/issues/1766) where Consent module was not respecting `disable_csrf_protection` config override
+  - Resolved [#1776](https://github.com/ExpressionEngine/ExpressionEngine/issues/1776) where some pages were showing warnings when using PHP 8.1
+  - Resolved [#1798](https://github.com/ExpressionEngine/ExpressionEngine/issues/1798) where entry limit notification was incorrectly positioned in the DOM
+  - Resolved issue where path to first-party plugins was not set correctly
+  - Resolved the issue where config file was not locked properly when performing system upgrade
+  - Resolved very minor UI and code issues
+  - Resolved PHP 8.1 compatibility issue with the CLI
+  - Resolved bug where some entries where not displayed if they were published at the same exact time as page render.
+
+- **Enhancements** 🚀
+  - Released [ExpressionEngine Pro 1.2](/pro/changelog.md) with [entry cloning support](/pro/entry_cloning.md)
+  - Resolved [#1400](https://github.com/ExpressionEngine/ExpressionEngine/issues/1400) by adding `parse_files` parameter to Query tag 
+  - Clarified Database Server Address label on the installation page.
+ 
+
+- **Developers** 💻
+  - Optimized output of `var_dump` on models
+
 ## Version 6.2.4 (Release: January 24, 2022)
 - **Contributors** 🙌  
 <div class="max-w-7xl mx-autotext-center">

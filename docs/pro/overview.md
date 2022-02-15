@@ -56,3 +56,7 @@ ExpressionEngine Pro adds the ability to override cookie values and their lifeti
 ### Multi-Factor Authentication (MFA)
 
 ExpressionEngine Pro adds the ability to add protection to Control Panel and front-end pages by adding authentication with an MFA app like Google Authenticator, Microsoft Authenticator or Authy.
+
+### Entry Cloning
+
+With ExpressionEngine Pro installed, it is possible to [clone existing entries](/pro/entry_cloning.md) using the "Clone to New Entry" option that is added to the "Save" dropdown menu on entry editing page. 

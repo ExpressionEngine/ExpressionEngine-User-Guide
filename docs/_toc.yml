@@ -267,6 +267,8 @@
       href: pro/dashboard_management.md
     - name: Dock
       href: pro/dock.md
+    - name: Entry Cloning
+      href: pro/entry_cloning.md
     - name: Front-end Content Management
       href: pro/frontend.md
     - name: Cookies management
