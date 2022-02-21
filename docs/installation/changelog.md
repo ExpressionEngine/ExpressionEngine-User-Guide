@@ -23,6 +23,7 @@
   - Resolved the issue where updaing using CLI was not possible from some old ExpressionEngine versions
   - Resolved [#1277](https://github.com/ExpressionEngine/ExpressionEngine/issues/1277) where category field names could not be reused in different category groups.
   - Resolved issue where RTE styles were not respecting Dark theme in CP
+  - Resolved issue where `title` attribute was not available for images in Grid and File Grid
 
 - **Developers** 💻
   - Resolved issue where using `disabled` attibute on shared field view was erasing all other attributes
