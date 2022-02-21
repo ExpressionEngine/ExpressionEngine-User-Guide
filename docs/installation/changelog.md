@@ -20,6 +20,7 @@
   - Resolved [#1764](https://github.com/ExpressionEngine/ExpressionEngine/issues/1764) where PHP error might have been shown when cache was cleared
   - Resolved [#1794](https://github.com/ExpressionEngine/ExpressionEngine/issues/1794) where icons to show/hide password were not showing up correctly in Safari
   - Resolved [#1813](https://github.com/ExpressionEngine/ExpressionEngine/issues/1813) where Forums CP was showing PHP errors
+  - Resolved [#1833](https://github.com/ExpressionEngine/ExpressionEngine/issues/1833) where Fluid field was showing deprecation notices in PHP 8.1
   - Resolved the issue where search in Forum was sometimes not functioning correctly
   - Resolved the issue where categories were not properly assigned when using Metaweblog API
   - Resolved the issue where some links in the Control Panel could be incorrect
