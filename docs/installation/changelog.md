@@ -9,19 +9,21 @@
 # ExpressionEngine v6 Change Log
 ## Version 6.2.6 (Release: February 21, 2022)
 
+- **Contributors** 🙌
+
 - **Bug Fixes** 💃🐛
+  - Resolved [#1086](https://github.com/ExpressionEngine/ExpressionEngine/issues/1086) where commented out sections of templates were not excempt from bad tags check
+  - Resolved [#1277](https://github.com/ExpressionEngine/ExpressionEngine/issues/1277) where category field names could not be reused in different category groups.
+  - Resolved [#1319](https://github.com/ExpressionEngine/ExpressionEngine/issues/1319) where same template could not be used for Seach results and no results pages
+  - Resolved [#1531](https://github.com/ExpressionEngine/ExpressionEngine/issues/1531) where commands with longer names were not listed peroperly in CLI
   - Resolved [#1631](https://github.com/ExpressionEngine/ExpressionEngine/issues/1631) where Jump Menu was appearing over Live Preview
+  - Resolved [#1764](https://github.com/ExpressionEngine/ExpressionEngine/issues/1764) where PHP error might have been shown when cache was cleared
+  - Resolved [#1794](https://github.com/ExpressionEngine/ExpressionEngine/issues/1794) where icons to show/hide password were not showing up correctly in Safari
   - Resolved [#1813](https://github.com/ExpressionEngine/ExpressionEngine/issues/1813) where Forums CP was showing PHP errors
   - Resolved the issue where search in Forum was sometimes not functioning correctly
   - Resolved the issue where categories were not properly assigned when using Metaweblog API
   - Resolved the issue where some links in the Control Panel could be incorrect
-  - Resolved [#1794](https://github.com/ExpressionEngine/ExpressionEngine/issues/1794) where icons to show/hide password were not showing up correctly in Safari
-  - Resolved [#1764](https://github.com/ExpressionEngine/ExpressionEngine/issues/1764) where PHP error might have been shown when cache was cleared
-  - Resolved [#1531](https://github.com/ExpressionEngine/ExpressionEngine/issues/1531) where commands with longer names were not listed peroperly in CLI
-  - Resolved [#1319](https://github.com/ExpressionEngine/ExpressionEngine/issues/1319) where same template could not be used for Seach results and no results pages
-  - Resolved [#1086](https://github.com/ExpressionEngine/ExpressionEngine/issues/1086) where commented out sections of templates were not excempt from bad tags check
   - Resolved the issue where updaing using CLI was not possible from some old ExpressionEngine versions
-  - Resolved [#1277](https://github.com/ExpressionEngine/ExpressionEngine/issues/1277) where category field names could not be reused in different category groups.
   - Resolved issue where RTE styles were not respecting Dark theme in CP
   - Resolved issue where `title` attribute was not available for images in Grid and File Grid
 
