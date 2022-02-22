@@ -13,7 +13,6 @@
 
 - **Bug Fixes** 💃🐛
   - Resolved [#1086](https://github.com/ExpressionEngine/ExpressionEngine/issues/1086) where commented out sections of templates were not excempt from bad tags check
-  - Resolved [#1277](https://github.com/ExpressionEngine/ExpressionEngine/issues/1277) where category field names could not be reused in different category groups.
   - Resolved [#1319](https://github.com/ExpressionEngine/ExpressionEngine/issues/1319) where same template could not be used for Seach results and no results pages
   - Resolved [#1531](https://github.com/ExpressionEngine/ExpressionEngine/issues/1531) where commands with longer names were not listed peroperly in CLI
   - Resolved [#1631](https://github.com/ExpressionEngine/ExpressionEngine/issues/1631) where Jump Menu was appearing over Live Preview
