@@ -7,14 +7,28 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 # ExpressionEngine v6 Change Log
-## Version 6.2.6 (Release: February 21, 2022)
+## Version 6.2.6 (Release: February 23, 2022)
 
 - **Contributors** 🙌
 
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1008036?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Eric Lamb</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=mithra62" target="_BLANK">@mithra62</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/931642?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Robson Sobral</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robsonsobral" target="_BLANK">@robsonsobral</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/45797159?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Stephen G</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=stephengalbraith" target="_BLANK">@stephengalbraith</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
 - **Bug Fixes** 💃🐛
   - Resolved [#1086](https://github.com/ExpressionEngine/ExpressionEngine/issues/1086) where commented out sections of templates were not excempt from bad tags check
-  - Resolved [#1319](https://github.com/ExpressionEngine/ExpressionEngine/issues/1319) where same template could not be used for Seach results and no results pages
-  - Resolved [#1531](https://github.com/ExpressionEngine/ExpressionEngine/issues/1531) where commands with longer names were not listed peroperly in CLI
+  - Resolved [#1319](https://github.com/ExpressionEngine/ExpressionEngine/issues/1319) where same template could not be used for Search results and no results pages
+  - Resolved [#1531](https://github.com/ExpressionEngine/ExpressionEngine/issues/1531) where commands with longer names were not listed properly in CLI
   - Resolved [#1631](https://github.com/ExpressionEngine/ExpressionEngine/issues/1631) where Jump Menu was appearing over Live Preview
   - Resolved [#1764](https://github.com/ExpressionEngine/ExpressionEngine/issues/1764) where PHP error might have been shown when cache was cleared
   - Resolved [#1794](https://github.com/ExpressionEngine/ExpressionEngine/issues/1794) where icons to show/hide password were not showing up correctly in Safari
@@ -23,12 +37,12 @@
   - Resolved the issue where search in Forum was sometimes not functioning correctly
   - Resolved the issue where categories were not properly assigned when using Metaweblog API
   - Resolved the issue where some links in the Control Panel could be incorrect
-  - Resolved the issue where updaing using CLI was not possible from some old ExpressionEngine versions
+  - Resolved the issue where updating using CLI was not possible from some old ExpressionEngine versions
   - Resolved issue where RTE styles were not respecting Dark theme in CP
   - Resolved issue where `title` attribute was not available for images in Grid and File Grid
 
 - **Developers** 💻
-  - Resolved issue where using `disabled` attibute on shared field view was erasing all other attributes
+  - Resolved issue where using `disabled` attribute on shared field view was erasing all other attributes
   - Updated the cleanup of JavaScript code to use angle brackets
   - Improved Cypress tests performance
 
