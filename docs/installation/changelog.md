@@ -11,7 +11,7 @@
 ## Version 6.2.7 (Release: February 28, 2022)
 
 - **Bug Fixes** 💃🐛
-  - Resolved [#1846](https://github.com/ExpressionEngine/ExpressionEngine/issues/1846) where commented out sections of templates were not excempt from bad tags check
+  - Resolved [#1846](https://github.com/ExpressionEngine/ExpressionEngine/issues/1846) where search was not working after performing 1-click update
 
 ## Version 6.2.6 (Release: February 23, 2022)
 
