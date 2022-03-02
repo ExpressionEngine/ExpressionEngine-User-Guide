@@ -18,8 +18,11 @@ Output a reset password form that allows members accessing it via a link from a 
 
     {exp:member:reset_password_form}
 
-            <label>Your Email Address</label><br />
-            <input type="email" name="email" value="" maxlength="120" size="40" />
+            <label>New Password</label><br />
+            <input name="password" value="" maxlength="72" autocomplete="off" size="40" />
+
+            <label>Confirm Password</label><br />
+            <input name="password_confirm" value="" maxlength="72" autocomplete="off" size="40" />
 
 			<input type="submit" name="submit" value="Submit" />
 
