@@ -32,6 +32,12 @@ NOTE: **Note:** Refresh indicates the time, in minutes, between cache refreshes.
 For example, to cache your channel tag in 30 minute intervals you'll do this:
 
     {exp:channel:entries cache="yes" refresh="30"}
+    
+The tag caching will be limited to current URL in which the tag are being viewed. If you need use the same data for multiple URLs, set the key used to save the cache:
+
+```html
+    {exp:channel:entries cache="yes" refresh="30" cache_key="recent_entries"}
+```
 
 ## Template Caching
 
