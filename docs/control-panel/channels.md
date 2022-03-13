@@ -101,6 +101,8 @@ NOTE: **Note:** We recommend using the default base URL variable `{base_url}` de
 - **Allow image URLs?** -- You can determine whether or not you want people to be able to display images within your entries by using the URL for the image. If "Yes" is selected for this option, people can display images as inline content in your channel. If the setting is "No" then images will not be allowed.
 - **Render URLs and Email addresses as links?** -- When this option is set to "Yes", any full URLs or email addresses will be automatically formatted as a valid HTML link to the address. If the option is "No" then the URL or email address will be treated and displayed as plain text.
 - **Enable Sticky entries?** -- When enabled, entries can be marked as sticky and have preference in sorted listings.
+- **Cache management** -- Which part of cache should be purged on publishing new entries.
+![image](https://user-images.githubusercontent.com/931642/158081721-f7f3be2f-17c4-42e3-a133-8df775c1725a.png)
 - **Enable entry cloning?** -- ([ExpressionEngine Pro](/pro/entry_cloning.md) feature) When enabled, entries can be cloned using "Clone to New Entry" option in Save options dropdown.
 - **Status** -- Status assigned to all new entires in the channel.
 - **Author** -- Default author for guest entries posted via Channel Form.
@@ -122,6 +124,8 @@ NOTE: **Note:** We recommend using the default base URL variable `{base_url}` de
 - **HTML formatting** -- Like the channel setting, this preference determines how raw HTML code within comments is handled. There are three options:
 - **Allow image URLs?** -- You can determine whether or not you want people to be able to display images within comments by using the URL for the image.
 - **Render URLs and Email addresses as links?** -- When this option is set to "Yes", any full URLs or email addresses in comments will be automatically formatted as a valid HTML link to the address. If the option is "No" then the URL or email address in comment body will be treated and displayed as plain text.
+- **Cache management** -- Which part of cache should be purged on publishing new comments.
+![image](https://user-images.githubusercontent.com/931642/158081777-2a7e2d9a-41eb-4a22-991d-984c2f51ff9f.png)
 
 ## Form Layouts
 
