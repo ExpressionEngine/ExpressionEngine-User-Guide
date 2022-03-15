@@ -91,13 +91,13 @@ The Query module uses the same pagination syntax as all first-party modules. Ple
 
 In case you select a table which stores files, the returned value will have `{filedir_` in front of the file names. To parse them, enable the `parse_files` parameter:
 
-```
-    {exp:query sql="SELECT col_id_1 AS src, col_id_5 AS description
-        FROM exp_channel_grid_field_2;"
-        parse_files="y"
-    }
-        <img src="{src}" alt="{description}" />
-    {/exp:query}
+```html
+{exp:query sql="SELECT col_id_1 AS src, col_id_5 AS description
+    FROM exp_channel_grid_field_2;"
+    parse_files="y"
+}
+    <img src="{src}" alt="{description}" />
+{/exp:query}
 ```
 
 ## Backspace Parameter
