@@ -822,6 +822,12 @@ The ID number of the actual channel (not the _entry_.)
 
 The short name of the channel of the currently displayed entry.
 
+### `{channel_url}`
+
+    {channel_url}
+
+The [URL of the channel](control-panel/channels.md#settings-tab) the current entry belongs to, set on Control Panel.
+
 ### `{comment_auto_path}`
 
 This variable is replaced by the URL set in the **Comment Page URL** preference under `Developer --> Channels` in the channel's **Settings** tab. No entry id, URL Title, or other information is included; this is the exact URL from the preference.
