@@ -32,6 +32,7 @@ Fields have the following settings:
 - **Require field?** -- If the field is required and the user leaves it blank, upon submission they will receive an error message prompting them to correct it.
 - **Include in search?** -- This determines whether the contents of this field will be included in searches that are within the entry content.
 - **Hide field?** -- Shows or hides the field on the publish page. When hidden, the field will be collapsed by default.
+- **Make Conditional?** -- Shows or hides the field on the publish page based on [conditional settings](/control-panel/settings/field-manager/conditional-fields.md). Fields which are conditionally hidden are not shown at all on the publish page until conditions are met.
 - **Enable front-end editing?** -- If [ExpressionEngine Pro](/pro) is installed this setting will enable/disable frontedit links for this field. This field will not show at all if Pro is not installed.
 - **Field Options** -- Each fieldtype may have additional options. See the [individual field types](fieldtypes/overview.md) for details.
 
