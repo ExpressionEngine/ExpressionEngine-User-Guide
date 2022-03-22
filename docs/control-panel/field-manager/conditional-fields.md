@@ -68,13 +68,6 @@ In the screenshot below, the current field will only show if the Content field h
 
 ![advanced conditional animation](/_images/advanced-conditional.gif)
 
-
-## Required Fields
-A note about required fields. Required fields are still required whether they are currently be conditionally shown or hidden. This means that if a required field is hidden and currently contains no value, the entry validation will fail and the entry cannot be saved. 
-
-If a required field has data before it is hidden by a condition, the entry will validate and save.
-
-
 ## Front-End Templating
 Conditional logic only manages if a field is displayed or not in the entry publish form. It does not automatically display or hide a field in a [template](/templates/overview.md) or in a [Channel Form](channels/channel-form/overview.md).
 
