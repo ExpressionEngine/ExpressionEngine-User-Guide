@@ -352,6 +352,8 @@
       href: fieldtypes/text.md
     - name: Textarea
       href: fieldtypes/textarea.md
+    - name: Number Input
+      href: fieldtypes/number.md
     - name: Toggle
       href: fieldtypes/toggle.md
     - name: URL
