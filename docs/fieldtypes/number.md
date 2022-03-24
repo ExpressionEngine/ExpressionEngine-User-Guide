@@ -21,7 +21,7 @@ The minimal value/number field can contain.
 
 ### Maximum value
 
-The maximal value/number field can contain.
+The maximum value/number field can contain.
 
 ### Step
 
