@@ -8,6 +8,36 @@
 -->
 # ExpressionEngine v6 Change Log
 
+## Version 6.3.0 (Release: March 29, 2022)
+
+- **Enhancements** 🚀
+  - Added Conditional Fields [Docs Link](https://docs.expressionengine.com/v6/control-panel/field-manager/conditional-fields.html)
+  - Implement script tag? (https://github.com/ExpressionEngine/ExpressionEngine/pull/1259) [#1246](https://github.com/ExpressionEngine/ExpressionEngine/issues/1246)
+  - Improved UI when managing categories on publish form
+  - Improved UI for Grid fields on smaller devices
+  - Added new Number Input fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/number.html)
+  - Added new Selectable Button fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/select.html)
+  - Added new Range fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/slider.html)
+  - Added new Slider fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/slider.html)
+  - Added new Notes fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/notes.html) <~-- NEED docs added -->
+  - Added the ability to change the color of the Control Panel sidebar based on current site when using MSM
+  - Keyboard navigation can now be used to open select dropdown menus, radio buttons, and checkbox fields. Resolves [#1686](https://github.com/ExpressionEngine/ExpressionEngine/issues/1686)
+  - Added `allow_url_redirects_from_site` system config override to allow users to enable/disable the use of `?URL=` query string on the front-end. Resolves [#1856](https://github.com/ExpressionEngine/ExpressionEngine/issues/1856)
+
+  
+- **Bug Fixes** 💃🐛
+  - Refactored Member List Tag to use role instead of group.
+  - Resolved [#1880](https://github.com/ExpressionEngine/ExpressionEngine/issues/1880) where reCaptcha 3 was not working in Channel Forms with inline error handling enabled.
+
+
+- **Developers** 💻
+  - AJAX requests now are always sent as content type `application/json`
+  - The user_agent library has now been deprecated
+  - CSRF tokens are no longer refreshed if disabled
+  - `EE_Validate` Library is now deprecated
+  - All Member validation has been moved to separate classes
+
+
 ## Version 6.2.7 (Release: February 28, 2022)
 
 - **Contributors** 🙌
@@ -546,15 +576,15 @@ NOTE: **Important:** This version includes important security updates.
     - Consents are now invalidated when new cookies are added.
     - Added ability to change cookies lifetime value 
   - Added `{if no_results}` to Grid Field for use when using the search to limit rows. [#894](https://github.com/ExpressionEngine/ExpressionEngine/issues/894)
-  - Added `form_class` parameter to the member registration form. [#716](https://github.com/ExpressionEngine/ExpressionEngine/issues/716) [Docs Link](https://docs.expressionengine.com/latest/member/registration.html#parameters)
+  - Added `form_class` parameter to the member registration form. [#716](https://github.com/ExpressionEngine/ExpressionEngine/issues/716) [Docs Link](https://docs.expressionengine.com/v6/member/registration.html#parameters)
    - Made status column in entry list respect the status text case [#246](https://github.com/ExpressionEngine/ExpressionEngine/issues/246)
-  - Added ability to disable Live Preview per channel. [#1012](https://github.com/ExpressionEngine/ExpressionEngine/issues/1012) [Docs Link](https://docs.expressionengine.com/latest/control-panel/channels.html#settings-tab)
+  - Added ability to disable Live Preview per channel. [#1012](https://github.com/ExpressionEngine/ExpressionEngine/issues/1012) [Docs Link](https://docs.expressionengine.com/v6/control-panel/channels.html#settings-tab)
   - Added `allowed_preview_domains` configuration override.
   - Added support for image modifiers when using category images [#942](https://github.com/ExpressionEngine/ExpressionEngine/issues/716)
-  - Added ability to disable Google FLoC [#1027](https://github.com/ExpressionEngine/ExpressionEngine/issues/1027) [Docs Link](https://docs.expressionengine.com/latest/add-ons/http-header.html)
+  - Added ability to disable Google FLoC [#1027](https://github.com/ExpressionEngine/ExpressionEngine/issues/1027) [Docs Link](https://docs.expressionengine.com/v6/add-ons/http-header.html)
   - Added ability to upload m4a files by default [#699](https://github.com/ExpressionEngine/ExpressionEngine/issues/699)
-  - Added new core add-on: [Request](https://docs.expressionengine.com/latest/add-ons/request.html) [#413](https://github.com/ExpressionEngine/ExpressionEngine/issues/413)
-  - Added option to use Google reCAPTCHA in addition to previous captcha option. [#822](https://github.com/ExpressionEngine/ExpressionEngine/issues/822) [Docs Link](https://docs.expressionengine.com/latest/control-panel/settings/captcha.html#recaptcha-v3-settings)
+  - Added new core add-on: [Request](https://docs.expressionengine.com/v6/add-ons/request.html) [#413](https://github.com/ExpressionEngine/ExpressionEngine/issues/413)
+  - Added option to use Google reCAPTCHA in addition to previous captcha option. [#822](https://github.com/ExpressionEngine/ExpressionEngine/issues/822) [Docs Link](https://docs.expressionengine.com/v6/control-panel/settings/captcha.html#recaptcha-v3-settings)
   - Added noindex,nofollow to template used by `?URL` redirect warning page.
   - Added tel scheme option to URL fieldtype. [#96](https://github.com/ExpressionEngine/ExpressionEngine/issues/96), [#1097](https://github.com/ExpressionEngine/ExpressionEngine/issues/1097)
   - Enabled adding link to an image in RTE [#1082](https://github.com/ExpressionEngine/ExpressionEngine/issues/1082)
@@ -563,8 +593,8 @@ NOTE: **Important:** This version includes important security updates.
 
 
 - **Developers** 💻
-  - Added ability to define rows and columns in a textarea when using a shared view. [#988](https://github.com/ExpressionEngine/ExpressionEngine/issues/988) [Docs Link](https://docs.expressionengine.com/latest/development/shared-form-view.html)
-  - Added new extension hooks to Fluid Fields [#58](https://github.com/ExpressionEngine/ExpressionEngine/issues/58) [Docs Link](https://docs.expressionengine.com/latest/development/extension-hooks/model/fluid-field.html)
+  - Added ability to define rows and columns in a textarea when using a shared view. [#988](https://github.com/ExpressionEngine/ExpressionEngine/issues/988) [Docs Link](https://docs.expressionengine.com/v6/development/shared-form-view.html)
+  - Added new extension hooks to Fluid Fields [#58](https://github.com/ExpressionEngine/ExpressionEngine/issues/58) [Docs Link](https://docs.expressionengine.com/v6/development/extension-hooks/model/fluid-field.html)
   - Updated URLs in core files that led to 404s
   - Updated implementation of `usort` in system/ee/ExpressionEngine/Model/Member/Display/MemberFieldLayout.php
 
