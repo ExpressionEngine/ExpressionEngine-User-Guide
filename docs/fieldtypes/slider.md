@@ -9,7 +9,9 @@
 
 # Value Slider and Range Slider Fieldtypes
 
-Value Slider fieldtype offers the slider allowing to select numerical value. It is getting rendered as `range` HTML input type with some additional styling, allowing to precisely select the value. Range Slider fieldtype shows two sliders on the same scale, allowing to select range of numbers (from...to).
+The Value Slider fieldtype allows the user to select numerical value. It is rendered as `range` HTML input type with some additional styling, allowing users to precisely select the value.   
+
+The Range Slider fieldtype shows two sliders on the same scale, allowing to select a range of numbers (from...to).
 
 ![slider field](_images/field_slider.png)
 
@@ -21,7 +23,7 @@ The minimal value/number field can contain.
 
 ### Maximum value
 
-The maximal value/number field can contain.
+The maximum value/number field can contain.
 
 ### Step
 
@@ -37,7 +39,7 @@ The prefix to be shown before the number
 
 ### Allowed Content
 
-Restricts the field to certain data types. Changing this is also changing the column type in database. This setting is only for Value Slider, because Range Slider has two values and is stored as string.
+Restricts the field to certain data types. Changing this also changes the column type in database. This setting is only for Value Slider, because Range Slider has two values and is stored as string.
 
 ## Template Tags
 
@@ -57,25 +59,25 @@ Include prefix before the value, as specified in field settings
 
 #### `{my_value_slider_field:min}`
 
-Field minimal possible value, as specified as settings.
+Field minimal possible value, as specified in settings.
 
 #### `{my_value_slider_field:max}`
 
-Field maximal possible value, as specified as settings.
+Field maximal possible value, as specified in settings.
 
 #### `{my_value_slider_field:prefix}`
 
-Field prefix, as specified as settings.
+Field prefix, as specified in settings.
 
 #### `{my_value_slider_field:suffix}`
 
-Field suffix, as specified as settings.
+Field suffix, as specified in settings.
 
 
 
 ### Range Slider
 
-Range Slider can be rendered as single template tag as well as tag pair.
+The Range Slider can be rendered as a single template tag as well as tag pair.
 
 #### Single tag
 
