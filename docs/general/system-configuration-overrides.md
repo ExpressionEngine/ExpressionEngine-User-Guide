@@ -192,6 +192,14 @@ Example Usage:
 
     $config['allow_textarea_tabs'] = 'y';
 
+### `allow_url_redirects_from_site`
+Set whether `?URL=` query string is enabled on the front-end.
+
+| Value | Behavior                                                                      |
+| ----- | ----------------------------------------------------------------------------- |
+| n     | Disables `?URL=` query string redirecting users on the front-end (default)    |
+| y     | Allows `?URL=` query string to be used to redirect users to external domains  |
+
 ### `allow_username_change`
 
 Set whether members can change their own usernames after registration.
