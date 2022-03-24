@@ -409,7 +409,11 @@
     - name: File Manager
       href: control-panel/file-manager.md
     - name: Field Manager
-      href: control-panel/field-manager.md
+      items:
+        - name: Settings
+          href: control-panel/field-manager/field-manager-settings.md
+        - name: Conditional Fields
+          href: control-panel/field-manager/conditional-fields.md
     - name: Member Manager
       href: control-panel/member-manager.md
     - name: Member Profile
