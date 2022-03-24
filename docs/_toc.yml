@@ -348,6 +348,8 @@
       href: fieldtypes/select.md
     - name: Color Picker
       href: fieldtypes/colorpicker.md
+    - name: Value Slider, Range Slider
+      href: fieldtypes/slider.md
     - name: Text Input
       href: fieldtypes/text.md
     - name: Textarea
