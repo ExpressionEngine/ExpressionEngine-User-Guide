@@ -344,7 +344,7 @@
       href: fieldtypes/relationships.md
     - name: Rich Text Editor
       href: fieldtypes/rte.md
-    - name: Checkboxes, Radio Buttons, Select, Multiselect
+    - name: Checkboxes, Radio Buttons, Select, Multiselect, Selectable Buttons
       href: fieldtypes/select.md
     - name: Color Picker
       href: fieldtypes/colorpicker.md
