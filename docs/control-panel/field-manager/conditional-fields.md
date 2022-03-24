@@ -32,7 +32,7 @@ The result of this being our field (in this case the About Image field) is hidde
 ![example condition animation](/_images/example-conditional-1.gif)
 
 ### Adding Conditions
-Additional conditions can be added to a set when needed. Click on "Add another set..." below your last condition and set the condition as needed. 
+Additional conditions can be added to a set when needed. Click on "Add a Condition..." below your last condition and set the condition as needed. 
 
 Adding to the example above, we are going to have the About Image show only when the Content field has any value and the SEO Title field has the value of "Example".
 
@@ -58,9 +58,11 @@ When "Matching any conditions" is set, only one of the conditions in the set mus
 ### Advanced Conditions with Conditional Sets
 Similar to subsets in logic, conditional sets allow you to create multiple subsets of conditions that must be TRUE for a field to be displayed. 
 
+Conditional Sets can be added by clicking the "Add another set..." link below your current set.
+
 WARN: **NOTE:** All conditional sets must evaluate to TRUE for a field to be displayed.
 
-Conditional fields are displayed when all conditional sets evaluate to TRUE.
+Conditional fields are only displayed in the entry publish screen when all conditional sets evaluate to TRUE.
 
 In the screenshot below, the current field will only show if the Content field has any value and the SEO Title has the value of "Example", and either the Contact Email field has any value or the Contact Phone field is empty. This can also be explained as (Content != "" && SEO Title == "Example") AND (Contact Email != "" OR Contact Phone == "")
 
