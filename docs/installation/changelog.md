@@ -8,34 +8,39 @@
 -->
 # ExpressionEngine v6 Change Log
 
-## Version 6.3.0 (Release: March 29, 2022)
+## Version 6.3.0 (Release: March 30, 2022)
 
 - **Enhancements** 🚀
   - Added Conditional Fields [Docs Link](https://docs.expressionengine.com/v6/control-panel/field-manager/conditional-fields.html)
-  - Implement script tag? (https://github.com/ExpressionEngine/ExpressionEngine/pull/1259) [#1246](https://github.com/ExpressionEngine/ExpressionEngine/issues/1246)
+  - Added `script` template tag [#1246](https://github.com/ExpressionEngine/ExpressionEngine/issues/1246)
+  - Added new Number Input fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/number.html)
+  - Added new Selectable Buttons fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/select.html)
+  - Added new Range Slider fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/slider.html)
+  - Added new Value Slider fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/slider.html)
+  - Added new Notes fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/notes.html)
+  - Added color indicator in Control Panel sidebar based on current site when using MSM
+  - Added `allow_url_redirects_from_site` system config override to allow users to enable/disable the use of `?URL=` query string on the front-end. [#1856](https://github.com/ExpressionEngine/ExpressionEngine/issues/1856)
   - Improved UI when managing categories on publish form
   - Improved UI for Grid fields on smaller devices
-  - Added new Number Input fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/number.html)
-  - Added new Selectable Button fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/select.html)
-  - Added new Range fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/slider.html)
-  - Added new Slider fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/slider.html)
-  - Added new Notes fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/notes.html) <~-- NEED docs added -->
-  - Added the ability to change the color of the Control Panel sidebar based on current site when using MSM
-  - Keyboard navigation can now be used to open select dropdown menus, radio buttons, and checkbox fields. Resolves [#1686](https://github.com/ExpressionEngine/ExpressionEngine/issues/1686)
-  - Added `allow_url_redirects_from_site` system config override to allow users to enable/disable the use of `?URL=` query string on the front-end. Resolves [#1856](https://github.com/ExpressionEngine/ExpressionEngine/issues/1856)
 
   
 - **Bug Fixes** 💃🐛
-  - Refactored Member List Tag to use role instead of group.
+  - Refactored `exp:member:memberlist` Tag to use role instead of group.
+  - Resolved [#1858](https://github.com/ExpressionEngine/ExpressionEngine/issues/1858) where PHP notice was shown when editing guest comment in CP
+  - Resolved [#1864](https://github.com/ExpressionEngine/ExpressionEngine/issues/1864) where Live Preview was not working correctly for new entries using Pages
+  - Resolved [#1867](https://github.com/ExpressionEngine/ExpressionEngine/issues/1867) where Channel page in CP was showing error if default author was removed
+  - Resolved [#1861](https://github.com/ExpressionEngine/ExpressionEngine/issues/1861) where channel form could not be submitted is saved file field contained parenthesis
+  - Resolved [#1874](https://github.com/ExpressionEngine/ExpressionEngine/issues/1874) where "Publishing settings" empty link was shown in profile for members without proper permissions
   - Resolved [#1880](https://github.com/ExpressionEngine/ExpressionEngine/issues/1880) where reCaptcha 3 was not working in Channel Forms with inline error handling enabled.
+  - Resolved [#1686](https://github.com/ExpressionEngine/ExpressionEngine/issues/1686) where it was not fully possible to use keyboard to manupulate select dropdown menus, radio buttons, and checkbox fields.
+  - Resolved [#1930](https://github.com/ExpressionEngine/ExpressionEngine/issues/1930) where some field data could be deleted from Fluid when editing field settings.
 
 
 - **Developers** 💻
   - AJAX requests now are always sent as content type `application/json`
   - The user_agent library has now been deprecated
   - CSRF tokens are no longer refreshed if disabled
-  - `EE_Validate` Library is now deprecated
-  - All Member validation has been moved to separate classes
+  - Refactored validation services.
 
 
 ## Version 6.2.7 (Release: February 28, 2022)
