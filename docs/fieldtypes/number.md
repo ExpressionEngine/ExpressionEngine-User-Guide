@@ -34,3 +34,14 @@ Values that will be shown as recommended options
 ### Allowed Content
 
 Restricts the field to certain data types. Changing this is also changing the column type in database.
+
+## Template Tags
+
+### Value Slider
+
+#### `{my_number_field}`
+
+**Parameters:**
+
+`decimal_place="2"`
+The number of decimal digits to show after the number. Optional.
