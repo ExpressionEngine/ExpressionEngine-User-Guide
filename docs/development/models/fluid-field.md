@@ -13,7 +13,7 @@ lang: php
 
 # Fluid Field Model
 
-**class `ExpressionEngine\Model\FluidField`**
+**class `ExpressionEngine\Addons\FluidField\Model\FluidField`**
 
 [TOC]
 
@@ -66,14 +66,5 @@ $field->field_data_id   = 4; // The row of data in the text field to use.
 
 // Save the changes.
 $field->save();
-
-```
-#### Modify a Field in a Fluid Field
-
-
-
-
-#### Create a Fluid Field
-```
 
 ```

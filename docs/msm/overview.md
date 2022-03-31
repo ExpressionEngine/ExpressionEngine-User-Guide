@@ -35,6 +35,8 @@ Available settings for a site are:
 - **Description**: A brief description of this site.
 - **Color coding for the site**: Allows for applying a custom color to the top of the control panel’s sidebar when the site is selected as the current site in the control panel.
 
+![color code site](/_images/msm_color_code_site.png)
+
 ## Setting Up Multiple Sites
 
 All Sites must reside on the same server If using sub-domains or domains, directories must be able to access your main installation system directory.
@@ -118,4 +120,3 @@ However, cookies for one domain cannot be set from a different domain. If your s
     $config['multi_login_sites'] = "https://www.example.com/index.php|https://www.sitetwo.com/index.php";
 
 Now when a user logs into the frontend of one of the sites, the login routine will invisibly loop through each URL in the configuration, redirecting to that site, setting the appropriate cookies, and then cycling through to the next site. Once the user has been logged into all of the sites, they'll end up back on the starting URL. The login redirects will be virtually unnoticable.
-

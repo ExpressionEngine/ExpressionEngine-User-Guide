@@ -626,6 +626,8 @@
               href: development/extension-hooks/model/member-field.md
             - name: Member Model
               href: development/extension-hooks/model/member.md
+            - name: Role Model
+              href: development/extension-hooks/model/role.md
             - name: Site Model
               href: development/extension-hooks/model/site.md
             - name: Snippet Model
@@ -763,8 +765,8 @@
           href: development/models/email-console-cache.md
         - name: File Model
           href: development/models/file.md
-        - name: Upload Destinations Model
-          href: development/models/upload-destination.md
+        - name: Fluid Field Model
+          href: development/models/fluid-field.md
         - name: Member Model
           href: development/models/member.md
         - name: MemberField Model
@@ -781,6 +783,8 @@
           href: development/models/template.md
         - name: Template Group  Model
           href: development/models/template-group.md
+        - name: Upload Destinations Model
+          href: development/models/upload-destination.md
 
     - name: Shared Form View
       href: development/shared-form-view.md
