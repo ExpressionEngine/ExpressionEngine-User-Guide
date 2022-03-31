@@ -16,7 +16,7 @@ lang: php
 [TOC]
 
 
-NOTE: Fieldtypes can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](/cli/built-in-commands/make-addon.md) for more information.
+NOTE: Fieldtypes can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](cli/built-in-commands/make-addon.md) for more information.
 
 ## Basic File Structure
 
@@ -831,7 +831,7 @@ Custom fields can display their data inside the Entry Manager through 3 possible
 
 ## Entry cloning support
 
-[ExpressionEngine Pro](/pro/overview.md) adds the ability to clone existing entries using the "Clone to New Entry" option on the entry editing page. Most fieldtypes do not need to do anything special to support this feature. 
+[ExpressionEngine Pro](pro/overview.md) adds the ability to clone existing entries using the "Clone to New Entry" option on the entry editing page. Most fieldtypes do not need to do anything special to support this feature. 
 
 However, if the fieldtype you are developing saves data to its own database table, you might need to tell it to save the rows as a submission for the new entry and not for the existing one.
 

@@ -21,7 +21,7 @@ lang: php
 
 The Form Validation class provides comprehensive validation framework to minimize the amount of code you need to write. It provides a toolset for validating user input, showing validation errors, and repopulating form fields.
 
-The base functionality for the Form Validation class is inherited from the corresponding CodeIgniter library---refer to the [Form Validation](https://ellislab.com/codeigniter/user-guide/libraries/form_validation.html) documentation in the CodeIgniter user guide for details.
+The base functionality for the Form Validation class is inherited from the corresponding CodeIgniter library---refer to the [Form Validation](https://www.codeigniter.com/userguide2/libraries/form_validation.html) documentation in the CodeIgniter user guide for details.
 
 ## Setting Reference Values
 

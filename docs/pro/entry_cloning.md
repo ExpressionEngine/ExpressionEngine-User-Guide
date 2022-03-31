@@ -19,12 +19,12 @@ Check out our video tutorial on Cloning Entries!
 
 ## Enabling Entry Cloning
 ### Global
-Entry Cloning is enabled by default when ExpressionEngine Pro is installed. Entry Cloning can be disabled globally for your site via the [Pro Configuration](/pro/configuration.md) setting or the matching [Config Override.](/pro/configuration.md#enable_entry_cloning)
+Entry Cloning is enabled by default when ExpressionEngine Pro is installed. Entry Cloning can be disabled globally for your site via the [Pro Configuration](pro/configuration.md) setting or the matching [Config Override.](pro/configuration.md#enable_entry_cloning)
 
 ![](/_images/entry_cloning_global.png)
 
 ### Per Channel
-for all channels. Disabling, or later enable, Entry Cloning for a specific channel can be done from the [channel settings page](/control-panel/channels.md#settings-tab). 
+for all channels. Disabling, or later enable, Entry Cloning for a specific channel can be done from the [channel settings page](control-panel/channels.md#settings-tab). 
 
 ![](_images/entry_cloning_setting.png)
 

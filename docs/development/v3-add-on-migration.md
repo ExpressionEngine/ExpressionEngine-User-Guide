@@ -317,7 +317,7 @@ And:
 
     <?php $this->embed('ee:_shared/form')?>
 
-See [Shared Form View](/development/shared-form-view.md) for full documentation.
+See [Shared Form View](development/shared-form-view.md) for full documentation.
 
 #### Modals
 

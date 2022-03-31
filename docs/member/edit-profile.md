@@ -35,7 +35,7 @@ Include the CSS for the custom member fields.
 
 
 ## Form Inputs
-NOTE: Be sure to include the required Javascript and CSS to use the native [Password Validation](/member/password-validation.html).
+NOTE: Be sure to include the required Javascript and CSS to use the native [Password Validation](member/password-validation.md).
 
 ### Email
 

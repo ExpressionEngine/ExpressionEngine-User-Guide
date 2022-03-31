@@ -132,7 +132,7 @@
   - Resolved bug where some entries where not displayed if they were published at the same exact time as page render.
 
 - **Enhancements** 🚀
-  - Released [ExpressionEngine Pro 1.2](/pro/changelog.md) with [entry cloning support](/pro/entry_cloning.md)
+  - Released [ExpressionEngine Pro 1.2](pro/changelog.md) with [entry cloning support](pro/entry_cloning.md)
   - Resolved [#1400](https://github.com/ExpressionEngine/ExpressionEngine/issues/1400) by adding `parse_files` parameter to Query tag 
   - Clarified Database Server Address label on the installation page.
  
@@ -242,7 +242,7 @@
 
 NOTE: **Important:** This version includes important security updates.
 
-NOTE: **Important:** If upgrading from previous version of ExpressionEngine with "Require Secure Password" enabled, your [Password Security Policy](/control-panel/settings/security-privacy.html#password-security-policy) will be set to `Basic` by default.
+NOTE: **Important:** If upgrading from previous version of ExpressionEngine with "Require Secure Password" enabled, your [Password Security Policy](control-panel/settings/security-privacy.md#password-security-policy) will be set to `Basic` by default.
 
 - **Contributors** 🙌  
 <div class="max-w-7xl mx-autotext-center">
@@ -558,8 +558,8 @@ NOTE: **Important:** This version includes important security updates.
 
 - **Enhancements** 🚀
   - Many UI improvements across the Control Panel
-  - Introduced [ExpressionEngine Pro](/pro/overview.md)!
-  - Major updates to [CLI](/cli/intro.md).
+  - Introduced [ExpressionEngine Pro](pro/overview.md)!
+  - Major updates to [CLI](cli/intro.md).
     - New commands: `make:addon`,`make:command`,`make:migration`,`make:model`,`make:prolet`,`make:widget`,`migrate`, `migrate:addon`,`migrate:all`,`migrate:core`,`migrate:reset`,`migrate:rollback` .
     - Modified commands: `prepare-upgrade` is now `update:prepare`, `run-update-hook` is now `update:run-hook`
   - Brought back more details to breadcrumbs [#573](https://github.com/ExpressionEngine/ExpressionEngine/issues/573), [#1159](https://github.com/ExpressionEngine/ExpressionEngine/issues/1159)

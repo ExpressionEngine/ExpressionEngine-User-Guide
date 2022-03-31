@@ -19,7 +19,7 @@ lang: php
 
 **class `Table`**
 
-The Table class provides a simplified means to quickly build html tables that usually require a large amount of boilerplate code. The base functionality for the Table class is inherited from the corresponding CodeIgniter library. Refer to the [HTML Table](/codeigniter /user-guide/libraries/table.html) documentation in the CodeIgniter user guide for details on basic table creation.
+The Table class provides a simplified means to quickly build html tables that usually require a large amount of boilerplate code. The base functionality for the Table class is inherited from the corresponding CodeIgniter library. Refer to the [HTML Table](https://www.codeigniter.com/userguide2/libraries/table.html) documentation in the CodeIgniter user guide for details on basic table creation.
 
     ee()->load->library('table');
 
@@ -172,7 +172,7 @@ At this point it becomes easier to work with a database. The filtering informati
 
 [TOC=3]
 
-This documents the ExpressionEngine additions to the table class. Refer to the [HTML Table](https://ellislab.com/codeigniter/user-guide/libraries/table.html) documentation in the CodeIgniter user guide for the base table class reference.
+This documents the ExpressionEngine additions to the table class. Refer to the [HTML Table](https://www.codeigniter.com/userguide2/libraries/table.html) documentation in the CodeIgniter user guide for the base table class reference.
 
 ### `datasource($func[, $options = array()[, $params = array()]])`
 

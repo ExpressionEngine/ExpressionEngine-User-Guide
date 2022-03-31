@@ -11,7 +11,7 @@
 
 The Rich Text Editor is like a word processor that allows you to create richly-formatted content without writing any HTML. For example, you can create links, insert images, create bulleted or numbered lists, and a whole lot more.
 
-You can find out more about general RTE configuration by reading the [Rich Text Editor add-ons documentation](/add-ons/rte.md).
+You can find out more about general RTE configuration by reading the [Rich Text Editor add-ons documentation](add-ons/rte.md).
 
 ![rte field](_images/field_rte.png)
 

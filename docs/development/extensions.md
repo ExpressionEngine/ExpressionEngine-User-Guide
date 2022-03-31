@@ -21,7 +21,7 @@ Within ExpressionEngine are what is known as 'hooks'; little snippets of code in
 
 An Extension is an add-on script that is placed in the `/system/user/addons/<package_name>/` directory and then enabled via the [Add-on Manager](control-panel/addons-manager.md) in the Control Panel. Extensions can have their own settings and their own database tables, if necessary, but neither is required. If settings are available for an Extension, a language file is required, but unlike a module there is no control panel for Extensions.
 
-NOTE: Extensions can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](/cli/built-in-commands/make-addon.md) for more information.
+NOTE: Extensions can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](cli/built-in-commands/make-addon.md) for more information.
 
 
 ## Naming Convention

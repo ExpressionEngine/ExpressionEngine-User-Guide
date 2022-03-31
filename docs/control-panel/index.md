@@ -26,7 +26,7 @@ If you are a site builder you will primarily interact with the cluster of links 
 ### Developer Tools
 
 - [Channels](control-panel/channels.md)
-- [Fields](control-panel/field-manager.md)
+- [Fields](control-panel/field-manager/field-manager-settings.md)
 - [Categories](control-panel/categories.md)
 - [Template Manager](control-panel/template-manager.md)
 - [Site Manager](msm/overview.md)
@@ -63,4 +63,3 @@ If you are a site builder you will primarily interact with the cluster of links 
   - [Access Throttling](control-panel/settings/throttling.md)
   - [CAPTCHA Settings](control-panel/settings/captcha.md)
   - [Consents](control-panel/settings/consents.md)
-
