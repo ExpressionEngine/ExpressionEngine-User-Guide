@@ -670,7 +670,13 @@
               href: development/extension-hooks/module/wiki.md
 
     - name: Fieldtypes
-      href: development/fieldtypes.md
+      items:
+        - name: Fieldtype Development
+          href: development/fieldtypes/fieldtypes.md
+        - name: Fieldtype Example
+          href: development/fieldtypes/example.md
+        - name: Enhanced Fieldtype Features
+          href: development/fieldtypes/enhanced.md
     - name: Jump Menu
       href: development/jump-menu.md
     - name: Architecture
