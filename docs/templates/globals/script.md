@@ -30,12 +30,6 @@ In many respects, this variable works much like the {path=''} global variable. H
 - Pages that are linked through the script tag will **not** be parsed as normal Templates. ExpressionEngine Tags and PHP inside the Template will not be parsed. The Template will be sent exactly as it is stored. This means that your JS files will be much more light-weight as they do not require the use of ExpressionEngine's template parser.
 - When the script tag is used, "text/js" MIME headers will be sent to the browser. Some browsers will not treat the JS file as such without these headers.
 
-## Triggering a Script Via the URL
-
-It is also possible to point to a script templates by directly adding a "js" trigger word in the URL. For instance, if your script is the "channel_js" Template of the "channel" Template Group, you could point to it using the URL:
-
-[https://example.com/js/channel/channel\\\_js/](https://example.com/js/channel/channel_js/)
-
 ## Using Tags and PHP in a Script
 
 Additionally, you can allow your scripts to run through the full template parser so tags and PHP can be used. To do so, just use a normal [path variable](templates/globals/path.md) to access your script. If you specify a template this way make sure that it is set to "JS" as the Template Type.
