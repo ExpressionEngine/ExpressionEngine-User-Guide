@@ -380,7 +380,7 @@ Test against the total number of forum topics by the currently logged in user.
 
 ### `logged_in_username`
 
-    `{if username != "HAL9000"}  I'm sorry Dave, I'm afraid I can't do that.  {/if}`
+    {if username != "HAL9000"}  I'm sorry Dave, I'm afraid I can't do that.  {/if}
 
 You can test against the username of the currently logged in user.
 
