@@ -15,7 +15,7 @@ Checkboxes, Radio Buttons, Select, Multiselect and Selectable Buttons fields are
 
 ![select field](_images/field_select.png)
 
-Selectable Buttons allows swhiching between single selection and multiple selection mode.
+Selectable Buttons allows switching between single selection and multiple selection mode.
 
 ![selectable buttons field](_images/field_selectable_buttons.png)
 
