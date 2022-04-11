@@ -38,6 +38,8 @@
   - Added `allow_url_redirects_from_site` system config override to allow users to enable/disable the use of `?URL=` query string on the front-end. [#1856](https://github.com/ExpressionEngine/ExpressionEngine/issues/1856)
   - Improved UI when managing categories on publish form
   - Improved UI for Grid fields on smaller devices
+  - Added ability to open select items in a dropdown within a grid with keyboard
+  - Improved hover state for navigation submenu items resolves [#1684](https://github.com/ExpressionEngine/ExpressionEngine/issues/1684)
 
   
 - **Bug Fixes** 💃🐛
@@ -50,6 +52,10 @@
   - Resolved [#1880](https://github.com/ExpressionEngine/ExpressionEngine/issues/1880) where reCaptcha 3 was not working in Channel Forms with inline error handling enabled.
   - Resolved [#1686](https://github.com/ExpressionEngine/ExpressionEngine/issues/1686) where it was not fully possible to use keyboard to manupulate select dropdown menus, radio buttons, and checkbox fields.
   - Resolved [#1930](https://github.com/ExpressionEngine/ExpressionEngine/issues/1930) where some field data could be deleted from Fluid when editing field settings.
+  - Resolved [#1967](https://github.com/ExpressionEngine/ExpressionEngine/issues/1967) fixing the ignore member stats override.
+  - Resolved [#1954](https://github.com/ExpressionEngine/ExpressionEngine/issues/1954) where evaluation rules for duration field-type were not alway correct
+  - Fixed bug with text field-types where property was missing
+
 
 
 - **Developers** 💻
