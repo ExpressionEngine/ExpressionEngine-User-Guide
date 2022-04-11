@@ -17,7 +17,7 @@ lang: php
 
 Modules are the most complex form of add-on. They can have their own database tables, backend control panels, tabs and fields that are included on the publish page, as well as their own tags for use in templates.
 
-NOTE: Modules can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](/cli/built-in-commands/make-addon.md) for more information.
+NOTE: Modules can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](cli/built-in-commands/make-addon.md) for more information.
 
 
 ## Basic File Structure
@@ -259,7 +259,7 @@ Allows you to validate the data after the publish form has been submitted but be
 | \$values  | `array`         | an associative array with field names as keys and form submission data as the value (i.e. `array('fortune' => 'All your hard work will soon pay off.'))`. The keys are derrived from the data returned by `display()`. |
 | Returns   | `array`         | $values modified array of values  |
 
-Code that needs to be executed when an entry is being [cloned](/pro/entry_cloning.md). This function is called before `validate`, so if you need to modify the data that will be passed to validation service (as well as `$_POST` array), this is the place to do it.
+Code that needs to be executed when an entry is being [cloned](pro/entry_cloning.md). This function is called before `validate`, so if you need to modify the data that will be passed to validation service (as well as `$_POST` array), this is the place to do it.
 
     public function clone(ChannelEntry $entry, $values)
     {

@@ -29,11 +29,11 @@ Fields have the following settings:
 - **Name** -- The descriptive name for the field which is displayed in the publish form. Unlike the Field Name, the label does not need to be unique within the system, so you can use the same label on multiple fields in different field groups.
 - **Short Name** -- This is the internal or "short name" for the field. The field name must be unique within the system, which means that you cannot have two field groups each containing a field with the field name of "body". The short name is typically used as the variable name in your [Channel Entries Tag](channels/entries.md)
 - **Instructions** -- These are instructions for authors on how or what to enter into the field when submitting an entry. The instructions will appear below the Field Label in your publish page.
-- **Require field?** -- If the field is required and the user leaves it blank, upon submission they will receive an error message prompting them to correct it. Required fields are only required when not [conditionally hidden](/control-panel/field-manager/conditional-fields.md).
+- **Require field?** -- If the field is required and the user leaves it blank, upon submission they will receive an error message prompting them to correct it. Required fields are only required when not [conditionally hidden](control-panel/field-manager/conditional-fields.md).
 - **Include in search?** -- This determines whether the contents of this field will be included in searches that are within the entry content.
 - **Hide field?** -- Shows or hides the field on the publish page. When hidden, the field will be collapsed by default.
-- **Make Conditional?** -- Shows or hides the field on the publish page based on [conditional settings](/control-panel/field-manager/conditional-fields.md). Fields which are conditionally hidden are not shown at all on the publish page until conditions are met.
-- **Enable front-end editing?** -- If [ExpressionEngine Pro](/pro) is installed this setting will enable/disable frontedit links for this field. This field will not show at all if Pro is not installed.
+- **Make Conditional?** -- Shows or hides the field on the publish page based on [conditional settings](control-panel/field-manager/conditional-fields.md). Fields which are conditionally hidden are not shown at all on the publish page until conditions are met.
+- **Enable front-end editing?** -- If [ExpressionEngine Pro](pro/overview.md) is installed this setting will enable/disable frontedit links for this field. This field will not show at all if Pro is not installed.
 - **Field Options** -- Each fieldtype may have additional options. See the [individual field types](fieldtypes/overview.md) for details.
 
 ## Create/Edit Field Group

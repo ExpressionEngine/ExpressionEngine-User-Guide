@@ -148,7 +148,7 @@ Loads a configuration file.
 
 This method retrieves the URL to your site, along with the "index" value you've specified in the config file.
 
-This method is normally accessed via the corresponding functions in the [URL Helper](/development/legacy/helpers/url-helper.md).
+This method is normally accessed via the corresponding functions in the [URL Helper](development/legacy/helpers/url-helper.md).
 
 ### `update_site_prefs([$new_values = array()[, $site_ids = array()[, $find = ''[, $replace = '']]]])`
 

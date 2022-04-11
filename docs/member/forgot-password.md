@@ -57,7 +57,7 @@ This parameter allows you to define where the user will be returned after succes
 
 
 ## Form Inputs
-NOTE: Be sure to include the required Javascript and CSS to use the native [Password Validation](/member/password-validation.html).
+NOTE: Be sure to include the required Javascript and CSS to use the native [Password Validation](member/password-validation.md).
 
 ### Email
 

@@ -117,4 +117,4 @@ If the first parameter is empty this function instead returns the `{elapsed_time
 
 Simply returns the `{memory_usage}` marker.
 
-This permits it to be put it anywhere in a template without the memory being calculated until the end. The [Output Class](/development/legacy/libraries/output.md) will swap the real value for this variable.
+This permits it to be put it anywhere in a template without the memory being calculated until the end. The [Output Class](development/legacy/libraries/output.md) will swap the real value for this variable.

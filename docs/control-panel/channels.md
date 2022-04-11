@@ -95,13 +95,13 @@ NOTE: **Note:** We recommend using the default base URL variable `{base_url}` de
 - **URL title prefix** -- When a new entry is created or previewed, this value will be appended to the beginning of the url_title value, which will help you insure that url_titles are unique between channels.
 - **Status** -- The default status for new channel entries. The available options depend on what [Statuses](#statuses-tab) the channel is assigned to use.
 - **Category** -- The default category for new channel entries. The available options depend on what [Category Group](control-panel/categories.md) the channel is assigned to use and which categories are defined for that group.
-- **Search excerpt** -- You can specify which field from your entries to use in search result excerpts. The list is dynamically populated depending on which [Fields](control-panel/field-manager.md) the channel is assigned to use. Only fields that have been set as "searchable" will be included.
+- **Search excerpt** -- You can specify which field from your entries to use in search result excerpts. The list is dynamically populated depending on which [Fields](control-panel/field-manager/field-manager-settings.md) the channel is assigned to use. Only fields that have been set as "searchable" will be included.
 - **HTML formatting** -- This setting determines how raw HTML code within entries is handled.
 - **Show extra publish controls?** -- When set to yes, a second set of publish controls will appear at the top of the publish form for this channel.
 - **Allow image URLs?** -- You can determine whether or not you want people to be able to display images within your entries by using the URL for the image. If "Yes" is selected for this option, people can display images as inline content in your channel. If the setting is "No" then images will not be allowed.
 - **Render URLs and Email addresses as links?** -- When this option is set to "Yes", any full URLs or email addresses will be automatically formatted as a valid HTML link to the address. If the option is "No" then the URL or email address will be treated and displayed as plain text.
 - **Enable Sticky entries?** -- When enabled, entries can be marked as sticky and have preference in sorted listings.
-- **Enable entry cloning?** -- ([ExpressionEngine Pro](/pro/entry_cloning.md) feature) When enabled, entries can be cloned using "Clone to New Entry" option in Save options dropdown.
+- **Enable entry cloning?** -- ([ExpressionEngine Pro](pro/entry_cloning.md) feature) When enabled, entries can be cloned using "Clone to New Entry" option in Save options dropdown.
 - **Status** -- Status assigned to all new entires in the channel.
 - **Author** -- Default author for guest entries posted via Channel Form.
 - **Allow guest submissions?** -- When set to yes, unregistered users will be able to submit forms for this channel.

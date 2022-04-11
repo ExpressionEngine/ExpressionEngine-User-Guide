@@ -39,7 +39,7 @@ NOTE: **Note:** If you let the system create your URL Title for you it will conv
 
 ### Entry Fields
 
-The names and types of entry fields displayed will be determined by what [Fields](control-panel/field-manager.md) you have defined for this channel. If an entry field is set to be "hidden" by default, it will have to be expanded by clicking on the field name before content can be entered.
+The names and types of entry fields displayed will be determined by what [Fields](control-panel/field-manager/field-manager-settings.md) you have defined for this channel. If an entry field is set to be "hidden" by default, it will have to be expanded by clicking on the field name before content can be entered.
 
 ### Save Revision
 
