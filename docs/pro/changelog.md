@@ -15,6 +15,7 @@
   - Resolved [#1814](https://github.com/ExpressionEngine/ExpressionEngine/issues/1814) where `{!-- disable frontedit --}` was not working outside of `exp:channel:entries` tag
   - Resolved [#1849](https://github.com/ExpressionEngine/ExpressionEngine/issues/1849) where using Pro front-end editing on template with modifier on file field was causing PHP error
   - Resolved the issue where PHP notices were shown in CP during multi-factor authorization
+  - Resolved [#1958](https://github.com/ExpressionEngine/ExpressionEngine/issues/1858) where JS issue would sometimes be encountered in front end editing
 
 ## Version 1.2.0 (Release: February 10, 2022)
 
