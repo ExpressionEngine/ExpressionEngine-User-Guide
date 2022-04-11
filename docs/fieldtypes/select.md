@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Checkboxes, Radio Buttons, Select, and Multiselect Fieldtypes
+# Checkboxes, Radio Buttons, Select, Multiselect and Selectable Buttons Fieldtypes
 
 [TOC]
 
@@ -61,7 +61,7 @@ Checkboxes and Multiselect can have multiple items selected, whereas Select and 
 
 ### Multiple Items
 
-Fields where multiple items can be selected (Checkboxes and Multiselect) will usually be rendered using a variable pair.
+Fields where multiple items can be selected (Checkboxes and Multiselect, as well as Selectable Buttons if multiple selections are allowed) will usually be rendered using a variable pair.
 
     {field_name}
         {item}<br>
@@ -75,11 +75,11 @@ By default, `{item}` will render the item's value. To access the value and label
         Label: {item:label}<br>
     {/field_name}
 
-TIP: **Tip:** You can use a single variable for Checkboxes and Multiselect, e.g. _{field_name}_, and you will get a comma-separated list of the labels.
+TIP: **Tip:** You can use a single variable for Checkboxes, Multiselect and Selectable Buttons, e.g. _{field_name}_, and you will get a comma-separated list of the labels.
 
 ### Single Items
 
-Single-choice fields, such as Select and Radio Buttons, just use the modifier to the single variable name, and do not use a variable pair:
+Single-choice fields, such as Select, Radio Buttons and Selectable Buttons (if "allow multiple selection" settign is turned off), just use the modifier to the single variable name, and do not use a variable pair:
 
     Value: {field_name}<br>
     Value: {field_name:value}<br>
