@@ -340,6 +340,8 @@
       href: fieldtypes/fluid.md
     - name: Grid
       href: fieldtypes/grid.md
+    - name: Notes
+      href: fieldtypes/notes.md
     - name: Relationships
       href: fieldtypes/relationships.md
     - name: Rich Text Editor

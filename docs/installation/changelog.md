@@ -8,7 +8,7 @@
 -->
 # ExpressionEngine v6 Change Log
 
-## Version 6.3.0 (Release: March 30, 2022)
+## Version 6.3.0 (Release: April 11, 2022)
 
 - **Enhancements** 🚀
   - Added Conditional Fields [Docs Link](https://docs.expressionengine.com/v6/control-panel/field-manager/conditional-fields.html)

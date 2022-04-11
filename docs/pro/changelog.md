@@ -9,7 +9,7 @@
 
 # ExpressionEngine Pro Change Log
 
-## Version 1.2.1 (Release: March 30, 2022)
+## Version 1.2.1 (Release: April 11, 2022)
 
   - Resolved [#1787](https://github.com/ExpressionEngine/ExpressionEngine/issues/1787) where advanced conditionals in Grid field were breaking template when using front-end editing
   - Resolved [#1814](https://github.com/ExpressionEngine/ExpressionEngine/issues/1814) where `{!-- disable frontedit --}` was not working outside of `exp:channel:entries` tag
