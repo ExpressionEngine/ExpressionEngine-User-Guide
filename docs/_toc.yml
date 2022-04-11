@@ -88,6 +88,8 @@
           href: templates/globals/single-variables.md
         - name: Linking to Stylesheets
           href: templates/globals/stylesheet.md
+        - name: Linking to Scripts
+          href: templates/globals/scripts.md
         - name: URL Segment Variables
           href: templates/globals/url-segments.md
         - name: Consent Variables
