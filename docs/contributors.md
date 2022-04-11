@@ -1,6 +1,6 @@
 # Docs Contributors
 
-This is a list of all who have contributed content or source code to the ExpressionEngine Docs sorted alphabetically. If you're interested in contributing to the Docs or to the ExpressionEngine Core Project be sure to read through the [Contributing documentation](/contributing.md). 
+This is a list of all who have contributed content or source code to the ExpressionEngine Docs sorted alphabetically. If you're interested in contributing to the Docs or to the ExpressionEngine Core Project be sure to read through the [Contributing documentation](contributing.md). 
 
 <div class="max-w-7xl mx-auto py-12 px-4">
 <div class="space-y-8 sm:space-y-12">
@@ -63,4 +63,3 @@ This is a list of all who have contributed content or source code to the Express
 Additionally, the following contributed content prior to 2011 when this repository was created:
 
 - Paul Burdick
-

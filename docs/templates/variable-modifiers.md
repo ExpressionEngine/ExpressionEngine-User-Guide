@@ -177,6 +177,13 @@ Replace text within the content.
 
     {full_name:replace find='/(.*?),\s*(.*)/' replace='$2 $1' regex='yes'}
     {!-- John Doe (presuming {full_name} is "Doe, John") --}
+    
+    {!-- Getting thumbnails from a Youtube URL --}
+    srcset="
+        {src:replace find='/^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*$/' replace='https://i.ytimg.com/vi/$1/default.jpg' regex='yes'} 120w,
+        {src:replace find='/^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*$/' replace='https://i.ytimg.com/vi/$1/mqdefault.jpg' regex='yes'} 320w,
+        {src:replace find='/^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*$/' replace='https://i.ytimg.com/vi/$1/hqdefault.jpg' regex='yes'} 480w
+    "
 
 ### `:rot13`
 

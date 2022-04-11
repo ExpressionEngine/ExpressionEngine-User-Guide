@@ -340,18 +340,24 @@
       href: fieldtypes/fluid.md
     - name: Grid
       href: fieldtypes/grid.md
+    - name: Notes
+      href: fieldtypes/notes.md
     - name: Relationships
       href: fieldtypes/relationships.md
     - name: Rich Text Editor
       href: fieldtypes/rte.md
-    - name: Checkboxes, Radio Buttons, Select, Multiselect
+    - name: Checkboxes, Radio Buttons, Select, Multiselect, Selectable Buttons
       href: fieldtypes/select.md
     - name: Color Picker
       href: fieldtypes/colorpicker.md
+    - name: Value Slider, Range Slider
+      href: fieldtypes/slider.md
     - name: Text Input
       href: fieldtypes/text.md
     - name: Textarea
       href: fieldtypes/textarea.md
+    - name: Number Input
+      href: fieldtypes/number.md
     - name: Toggle
       href: fieldtypes/toggle.md
     - name: URL
@@ -409,7 +415,11 @@
     - name: File Manager
       href: control-panel/file-manager.md
     - name: Field Manager
-      href: control-panel/field-manager.md
+      items:
+        - name: Settings
+          href: control-panel/field-manager/field-manager-settings.md
+        - name: Conditional Fields
+          href: control-panel/field-manager/conditional-fields.md
     - name: Member Manager
       href: control-panel/member-manager.md
     - name: Member Profile
@@ -618,6 +628,8 @@
               href: development/extension-hooks/model/member-field.md
             - name: Member Model
               href: development/extension-hooks/model/member.md
+            - name: Role Model
+              href: development/extension-hooks/model/role.md
             - name: Site Model
               href: development/extension-hooks/model/site.md
             - name: Snippet Model
@@ -660,7 +672,13 @@
               href: development/extension-hooks/module/wiki.md
 
     - name: Fieldtypes
-      href: development/fieldtypes.md
+      items:
+        - name: Fieldtype Development
+          href: development/fieldtypes/fieldtypes.md
+        - name: Fieldtype Example
+          href: development/fieldtypes/example.md
+        - name: Enhanced Fieldtype Features
+          href: development/fieldtypes/enhanced.md
     - name: Jump Menu
       href: development/jump-menu.md
     - name: Architecture
@@ -755,8 +773,8 @@
           href: development/models/email-console-cache.md
         - name: File Model
           href: development/models/file.md
-        - name: Upload Destinations Model
-          href: development/models/upload-destination.md
+        - name: Fluid Field Model
+          href: development/models/fluid-field.md
         - name: Member Model
           href: development/models/member.md
         - name: MemberField Model
@@ -773,6 +791,8 @@
           href: development/models/template.md
         - name: Template Group  Model
           href: development/models/template-group.md
+        - name: Upload Destinations Model
+          href: development/models/upload-destination.md
 
     - name: Shared Form View
       href: development/shared-form-view.md

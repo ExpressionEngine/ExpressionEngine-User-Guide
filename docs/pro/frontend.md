@@ -55,7 +55,7 @@ This special conditional allows you to display content if front-end editing is e
 
 There are several ways to disable front-end editing links:
  - Globally with [configuration overrides](pro/configuration.md#enable_frontedit_links) or in [General Settings](pro/configuration.md#general-settings)
- - Per field in the [field settings](/control-panel/field-manager.html)
+ - Per field in the [field settings](control-panel/field-manager/field-manager-settings.md)
  - Via the Dock on the front-end by toggling Edit Mode on/off.
  - In the template by using [ExpressionEngine template comments](#expressionengine-comment), [HTML comments](#html-comment), or [field parameter](#field-tag-parameter)
 
@@ -147,4 +147,3 @@ function reInitPro(){
     EE.pro.refresh();
 }
 ```
-

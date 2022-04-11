@@ -18,8 +18,11 @@ Output a reset password form that allows members accessing it via a link from a 
 
     {exp:member:reset_password_form}
 
-            <label>Your Email Address</label><br />
-            <input type="email" name="email" value="" maxlength="120" size="40" />
+            <label>New Password</label><br />
+            <input name="password" value="" maxlength="72" autocomplete="off" size="40" />
+
+            <label>Confirm Password</label><br />
+            <input name="password_confirm" value="" maxlength="72" autocomplete="off" size="40" />
 
 			<input type="submit" name="submit" value="Submit" />
 
@@ -37,7 +40,7 @@ This parameter allows you to define where the user will be returned after succes
 2.  Use a full URL. For example: return="<https://example.com/return.html>"
 
 ## Form Inputs
-NOTE: Be sure to include the required Javascript and CSS to use the native [Password Validation](/member/password-validation.html).
+NOTE: Be sure to include the required Javascript and CSS to use the native [Password Validation](member/password-validation.md).
 
 ### Password
 

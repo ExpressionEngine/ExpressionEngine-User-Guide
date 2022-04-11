@@ -139,7 +139,7 @@ Compatibility can be any string values, the commonly used ones are listed in [th
 
 ### Update Settings Format
 
-The format for the fieldtype settings pages has been changed to the more consistent [Shared Form View](development/shared-form-view.md) format. Please refer to the [Fieldtype Settings](development/fieldtypes.md#individual-settings) documentation for an example.
+The format for the fieldtype settings pages has been changed to the more consistent [Shared Form View](development/shared-form-view.md) format. Please refer to the [Fieldtype Settings](development/fieldtypes/example.md#individual-settings) documentation for an example.
 
 ### Use the Validation Service in Settings
 
@@ -317,7 +317,7 @@ And:
 
     <?php $this->embed('ee:_shared/form')?>
 
-See [Shared Form View](/development/shared-form-view.md) for full documentation.
+See [Shared Form View](development/shared-form-view.md) for full documentation.
 
 #### Modals
 

@@ -8,6 +8,57 @@
 -->
 # ExpressionEngine v6 Change Log
 
+## Version 6.3.0 (Release: April 11, 2022)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/194579?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Andy Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ajohnson" target="_BLANK">@ajohnson</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/6020323?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Doug Black Jr</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr" target="_BLANK">@dougblackjr</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/931642?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Sobral</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robsonsobral" target="_BLANK">@robsonsobral</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+- **Enhancements** 🚀
+  - Added Conditional Fields [Docs Link](https://docs.expressionengine.com/v6/control-panel/field-manager/conditional-fields.html)
+  - Added `script` template tag [#1246](https://github.com/ExpressionEngine/ExpressionEngine/issues/1246)
+  - Added new Number Input fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/number.html)
+  - Added new Selectable Buttons fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/select.html)
+  - Added new Range Slider fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/slider.html)
+  - Added new Value Slider fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/slider.html)
+  - Added new Notes fieldtype [Docs Link](https://docs.expressionengine.com/v6/fieldtypes/notes.html)
+  - Added color indicator in Control Panel sidebar based on current site when using MSM
+  - Added `allow_url_redirects_from_site` system config override to allow users to enable/disable the use of `?URL=` query string on the front-end. [#1856](https://github.com/ExpressionEngine/ExpressionEngine/issues/1856)
+  - Improved UI when managing categories on publish form
+  - Improved UI for Grid fields on smaller devices
+
+  
+- **Bug Fixes** 💃🐛
+  - Refactored `exp:member:memberlist` Tag to use role instead of group.
+  - Resolved [#1858](https://github.com/ExpressionEngine/ExpressionEngine/issues/1858) where PHP notice was shown when editing guest comment in CP
+  - Resolved [#1864](https://github.com/ExpressionEngine/ExpressionEngine/issues/1864) where Live Preview was not working correctly for new entries using Pages
+  - Resolved [#1867](https://github.com/ExpressionEngine/ExpressionEngine/issues/1867) where Channel page in CP was showing error if default author was removed
+  - Resolved [#1861](https://github.com/ExpressionEngine/ExpressionEngine/issues/1861) where channel form could not be submitted is saved file field contained parenthesis
+  - Resolved [#1874](https://github.com/ExpressionEngine/ExpressionEngine/issues/1874) where "Publishing settings" empty link was shown in profile for members without proper permissions
+  - Resolved [#1880](https://github.com/ExpressionEngine/ExpressionEngine/issues/1880) where reCaptcha 3 was not working in Channel Forms with inline error handling enabled.
+  - Resolved [#1686](https://github.com/ExpressionEngine/ExpressionEngine/issues/1686) where it was not fully possible to use keyboard to manupulate select dropdown menus, radio buttons, and checkbox fields.
+  - Resolved [#1930](https://github.com/ExpressionEngine/ExpressionEngine/issues/1930) where some field data could be deleted from Fluid when editing field settings.
+
+
+- **Developers** 💻
+  - AJAX requests now are always sent as content type `application/json`
+  - The user_agent library has now been deprecated
+  - CSRF tokens are no longer refreshed if disabled
+  - Refactored validation services.
+
+
 ## Version 6.2.7 (Release: February 28, 2022)
 
 - **Contributors** 🙌
@@ -97,7 +148,7 @@
   - Resolved bug where some entries where not displayed if they were published at the same exact time as page render.
 
 - **Enhancements** 🚀
-  - Released [ExpressionEngine Pro 1.2](/pro/changelog.md) with [entry cloning support](/pro/entry_cloning.md)
+  - Released [ExpressionEngine Pro 1.2](pro/changelog.md) with [entry cloning support](pro/entry_cloning.md)
   - Resolved [#1400](https://github.com/ExpressionEngine/ExpressionEngine/issues/1400) by adding `parse_files` parameter to Query tag 
   - Clarified Database Server Address label on the installation page.
  
@@ -207,7 +258,7 @@
 
 NOTE: **Important:** This version includes important security updates.
 
-NOTE: **Important:** If upgrading from previous version of ExpressionEngine with "Require Secure Password" enabled, your [Password Security Policy](/control-panel/settings/security-privacy.html#password-security-policy) will be set to `Basic` by default.
+NOTE: **Important:** If upgrading from previous version of ExpressionEngine with "Require Secure Password" enabled, your [Password Security Policy](control-panel/settings/security-privacy.md#password-security-policy) will be set to `Basic` by default.
 
 - **Contributors** 🙌  
 <div class="max-w-7xl mx-autotext-center">
@@ -523,8 +574,8 @@ NOTE: **Important:** This version includes important security updates.
 
 - **Enhancements** 🚀
   - Many UI improvements across the Control Panel
-  - Introduced [ExpressionEngine Pro](/pro/overview.md)!
-  - Major updates to [CLI](/cli/intro.md).
+  - Introduced [ExpressionEngine Pro](pro/overview.md)!
+  - Major updates to [CLI](cli/intro.md).
     - New commands: `make:addon`,`make:command`,`make:migration`,`make:model`,`make:prolet`,`make:widget`,`migrate`, `migrate:addon`,`migrate:all`,`migrate:core`,`migrate:reset`,`migrate:rollback` .
     - Modified commands: `prepare-upgrade` is now `update:prepare`, `run-update-hook` is now `update:run-hook`
   - Brought back more details to breadcrumbs [#573](https://github.com/ExpressionEngine/ExpressionEngine/issues/573), [#1159](https://github.com/ExpressionEngine/ExpressionEngine/issues/1159)
@@ -546,15 +597,15 @@ NOTE: **Important:** This version includes important security updates.
     - Consents are now invalidated when new cookies are added.
     - Added ability to change cookies lifetime value 
   - Added `{if no_results}` to Grid Field for use when using the search to limit rows. [#894](https://github.com/ExpressionEngine/ExpressionEngine/issues/894)
-  - Added `form_class` parameter to the member registration form. [#716](https://github.com/ExpressionEngine/ExpressionEngine/issues/716) [Docs Link](https://docs.expressionengine.com/latest/member/registration.html#parameters)
+  - Added `form_class` parameter to the member registration form. [#716](https://github.com/ExpressionEngine/ExpressionEngine/issues/716) [Docs Link](https://docs.expressionengine.com/v6/member/registration.html#parameters)
    - Made status column in entry list respect the status text case [#246](https://github.com/ExpressionEngine/ExpressionEngine/issues/246)
-  - Added ability to disable Live Preview per channel. [#1012](https://github.com/ExpressionEngine/ExpressionEngine/issues/1012) [Docs Link](https://docs.expressionengine.com/latest/control-panel/channels.html#settings-tab)
+  - Added ability to disable Live Preview per channel. [#1012](https://github.com/ExpressionEngine/ExpressionEngine/issues/1012) [Docs Link](https://docs.expressionengine.com/v6/control-panel/channels.html#settings-tab)
   - Added `allowed_preview_domains` configuration override.
   - Added support for image modifiers when using category images [#942](https://github.com/ExpressionEngine/ExpressionEngine/issues/716)
-  - Added ability to disable Google FLoC [#1027](https://github.com/ExpressionEngine/ExpressionEngine/issues/1027) [Docs Link](https://docs.expressionengine.com/latest/add-ons/http-header.html)
+  - Added ability to disable Google FLoC [#1027](https://github.com/ExpressionEngine/ExpressionEngine/issues/1027) [Docs Link](https://docs.expressionengine.com/v6/add-ons/http-header.html)
   - Added ability to upload m4a files by default [#699](https://github.com/ExpressionEngine/ExpressionEngine/issues/699)
-  - Added new core add-on: [Request](https://docs.expressionengine.com/latest/add-ons/request.html) [#413](https://github.com/ExpressionEngine/ExpressionEngine/issues/413)
-  - Added option to use Google reCAPTCHA in addition to previous captcha option. [#822](https://github.com/ExpressionEngine/ExpressionEngine/issues/822) [Docs Link](https://docs.expressionengine.com/latest/control-panel/settings/captcha.html#recaptcha-v3-settings)
+  - Added new core add-on: [Request](https://docs.expressionengine.com/v6/add-ons/request.html) [#413](https://github.com/ExpressionEngine/ExpressionEngine/issues/413)
+  - Added option to use Google reCAPTCHA in addition to previous captcha option. [#822](https://github.com/ExpressionEngine/ExpressionEngine/issues/822) [Docs Link](https://docs.expressionengine.com/v6/control-panel/settings/captcha.html#recaptcha-v3-settings)
   - Added noindex,nofollow to template used by `?URL` redirect warning page.
   - Added tel scheme option to URL fieldtype. [#96](https://github.com/ExpressionEngine/ExpressionEngine/issues/96), [#1097](https://github.com/ExpressionEngine/ExpressionEngine/issues/1097)
   - Enabled adding link to an image in RTE [#1082](https://github.com/ExpressionEngine/ExpressionEngine/issues/1082)
@@ -563,8 +614,8 @@ NOTE: **Important:** This version includes important security updates.
 
 
 - **Developers** 💻
-  - Added ability to define rows and columns in a textarea when using a shared view. [#988](https://github.com/ExpressionEngine/ExpressionEngine/issues/988) [Docs Link](https://docs.expressionengine.com/latest/development/shared-form-view.html)
-  - Added new extension hooks to Fluid Fields [#58](https://github.com/ExpressionEngine/ExpressionEngine/issues/58) [Docs Link](https://docs.expressionengine.com/latest/development/extension-hooks/model/fluid-field.html)
+  - Added ability to define rows and columns in a textarea when using a shared view. [#988](https://github.com/ExpressionEngine/ExpressionEngine/issues/988) [Docs Link](https://docs.expressionengine.com/v6/development/shared-form-view.html)
+  - Added new extension hooks to Fluid Fields [#58](https://github.com/ExpressionEngine/ExpressionEngine/issues/58) [Docs Link](https://docs.expressionengine.com/v6/development/extension-hooks/model/fluid-field.html)
   - Updated URLs in core files that led to 404s
   - Updated implementation of `usort` in system/ee/ExpressionEngine/Model/Member/Display/MemberFieldLayout.php
 

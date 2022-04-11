@@ -40,3 +40,5 @@ If this preference is set to "Yes", then any changes you make to one of your [Te
 ### Maximum revisions?
 
 The maximum number of revisions that should be kept for **each** template. For example, if you set this to 5, only the most recent 5 revisions will be saved for any given template. This setting helps ensure that your database does not get too large due to storing Template revisions.
+
+![template settings](/_images/template-settings.png)

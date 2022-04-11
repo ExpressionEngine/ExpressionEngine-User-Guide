@@ -136,7 +136,7 @@ This section of the Control Panel allows you to search for text within your site
 - **Search and replace in** -- This setting consists of a drop-down list of the possible database areas for which you can perform the search and replace. The list includes:
   - **Site Preferences**: Select a site to search and replace text within the site's preferences (including such prefs as those for Channels and Upload Directories).
   - **Channel Entry Titles**: Select this to search and replace text within the entry titles.
-  - **Channel Fields**: Under this heading, each of the available [Fields](control-panel/field-manager.md) is listed.
+  - **Channel Fields**: Under this heading, each of the available [Fields](control-panel/field-manager/field-manager-settings.md) is listed.
   - **Templates**: Select this to search and replace text within all of your Templates.
 
 ## Member Import

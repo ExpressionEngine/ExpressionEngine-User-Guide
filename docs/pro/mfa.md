@@ -14,12 +14,12 @@ Multi-factor authentication adds an extra level of protection to the Control Pan
 ## Enabling MFA
 
 ### Enabling MFA per Member
-With ExpressionEngine Pro installed, users with Control Panel access can enable/disable Multi-factor authentication via their [profile](control-panel/member-profile.html) in the Control Panel. 
+With ExpressionEngine Pro installed, users with Control Panel access can enable/disable Multi-factor authentication via their [profile](control-panel/member-profile.md) in the Control Panel. 
 
 ![MFA CP Setup](/_images/2fa-cp-setup.png)
 
 ### Requiring MFA For A Role
-Multi-Factor Authentication can also be set as required for certain [Member Roles](control-panel/member-manager.html#member-roles)
+Multi-Factor Authentication can also be set as required for certain [Member Roles](control-panel/member-manager.md#member-roles)
 
 ![MFA CP Toggle](/_images/2fa-cp-toggle.png)
 
@@ -32,7 +32,7 @@ If the member has not yet set up their multi-factor authentication, upon login t
 
 Setting up Multi-Factor Authentication on the front-end is handled using a set of system dialogs. These dialogs can be triggered manually using the links provided by the [`{exp:member:mfa_links}` tag](member/mfa.md).
 
-The dialogs are presented using `Multi-Factor Authentication Template` from System Message Templates. You can also use a custom template from the [`system_messages` template group](/control-panel/template-manager.md#custom-system-messages), it should be named `mfa_template`.
+The dialogs are presented using `Multi-Factor Authentication Template` from System Message Templates. You can also use a custom template from the [`system_messages` template group](control-panel/template-manager.md#custom-system-messages), it should be named `mfa_template`.
 
 
 ## Resetting MFA

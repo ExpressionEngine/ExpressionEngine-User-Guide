@@ -11,6 +11,6 @@
 
 **Control Panel Location: `Settings > Logging`**
 
-This section allows you to choose what data is anonymized in the [Consent Audit Logs](/control-panel/system-logs.md#consent-logs).
+This section allows you to choose what data is anonymized in the [Consent Audit Logs](control-panel/system-logs.md#consent-logs).
 
 ![Consent Audit Log setting](/_images/consent_log_setting.png)

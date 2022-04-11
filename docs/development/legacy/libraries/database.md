@@ -35,7 +35,7 @@ This class is initialized automatically:
 
 ### Active Record
 
-While we still make `ee()->db->query()` available, it's highly recommended that you use [CodeIgniter's Active Record](https://ellislab.com/codeigniter/user-guide/database/active_record.html) because queries will be easier to read and edit:
+While we still make `ee()->db->query()` available, it's highly recommended that you use [CodeIgniter's Active Record](https://www.codeigniter.com/userguide2/database/active_record.html) because queries will be easier to read and edit:
 
     $query = ee()->db->select('username, screen_name, email, url, signature')
         ->from('members m')
