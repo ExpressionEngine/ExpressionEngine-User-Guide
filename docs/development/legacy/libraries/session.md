@@ -56,8 +56,6 @@ NOTE: **Note:** If a user has a `group_id` of 1, then they can access anything, 
 - `username` - Username of user
 - `screen_name` - Screename of user, if any
 - `email` - Email Address
-- `url` - Homepage, if any
-- `location` - Location, if any
 - `language` - Chosen Language
 - `timezone` - Chosen Timezone (`UM12` - `UTC` - `UP12`)
 - `time_format` - `eu`/`us`
