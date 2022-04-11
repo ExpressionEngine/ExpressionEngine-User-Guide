@@ -37,7 +37,9 @@ NOTE: **Note:** This should not be considered an exhaustive list of cookies that
 | ee_cp_viewmode    | Indicates whether "navigation-less" mode should be used in Control Panel.                                  | 360 days   | Functionality      |
 | collapsed_nav     | Indicates whether main sidebar navigation in Control Panel should be collapased.                           | 360 days   | Functionality      |
 
-NOTE: **Note:** If you need to change the lifetime of `remember` cookie, defining for how long the user will stay logged in, you will need to first copy[`system/ee/ExpressionEngine/Config/remember.php`](https://github.com/ExpressionEngine/ExpressionEngine/blob/6.dev/system/ee/ExpressionEngine/Config/remember.php) to `/system/user/config/stopwords.php`. In that file, you can change `remember_me_ttl` property to the time that you need.
+NOTE: **Note:** If you need to define how long the user will stay logged in for, you can change the lifetime of the remember cookie by copying [`system/ee/ExpressionEngine/Config/remember.php`](https://github.com/ExpressionEngine/ExpressionEngine/blob/6.dev/system/ee/ExpressionEngine/Config/remember.php) to `/system/user/config/stopwords.php` and changing the value of the `remember_me_ttl` property in that file.
+
+
 
 ## Comment Cookies
 
