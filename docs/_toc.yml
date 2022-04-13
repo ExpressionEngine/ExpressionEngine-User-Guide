@@ -5,21 +5,10 @@
 # @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
 # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 
+## Basics
 - name: Welcome
   href: index.md
 
-- name: Installation & Updates
-  items:
-    - name: System Requirements
-      href: installation/requirements.md
-    - name: Installation
-      href: installation/installation.md
-    - name: Best Practices
-      href: installation/best-practices.md
-    - name: Updating
-      href: installation/updating.md
-    - name: Change Log
-      href: installation/changelog.md
 
 - name: Getting Started
   items:
@@ -55,6 +44,19 @@
     - name: Member XML Format
       href: general/member-import-xml-format.md
 
+- name: Installation & Updates
+  items:
+    - name: System Requirements
+      href: installation/requirements.md
+    - name: Installation
+      href: installation/installation.md
+    - name: Best Practices
+      href: installation/best-practices.md
+    - name: Updating
+      href: installation/updating.md
+    - name: Change Log
+      href: installation/changelog.md
+
 - name: Localization
   items:
     - name: Date Localization
@@ -66,6 +68,7 @@
     - name: Transliteration
       href: localization/transliteration.md
 
+## Using ExpressionEngine
 - name: Templates
   items:
     - name: Overview
