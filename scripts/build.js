@@ -79,7 +79,8 @@ module.exports = () => {
 			page_content: pageHtml,
 			page_path: pageId,
 			root_dir: relPath,
-			toc: masterToc.make(file.path, relPath),
+			basics_toc: masterToc.make(file.path, relPath, "basics"),
+			using_ee_toc: masterToc.make(file.path, relPath, "using_ee")
 		}
 
 		let page = renderTemplate(pageTemplate, templateVariables)
@@ -132,12 +133,6 @@ module.exports = () => {
 function getMasterToc() {
 	let toc
 
-	try {
-		 toc = Yaml.safeLoad(Fs.readFileSync(CONFIG.tocPath, 'utf8'))
-	} catch (e) {
-		throw 'Error reading _toc.yml:\n' + e
-	}
-
 	const recurse = (item) => {
 		if (item.href) {
 			let itemPath = Path.resolve(Path.join(CONFIG.sourceDir, item.href))
@@ -157,12 +152,11 @@ function getMasterToc() {
 		}
 	}
 
-	for (let item of toc)
-		recurse(item)
+	
 
 
 	return {
-		make: (page, relPath) => {
+		make: (page, relPath, tocSection) => {
 			page = relFromSource(replaceExt(page, '.html'))
 
 			const makeItem = (item) => {
@@ -190,6 +184,24 @@ function getMasterToc() {
 			}
 
 			let html = ''
+			let tocSectionPath;
+
+			switch(tocSection) {
+			case 'basics':
+				tocSectionPath = 'docs/toc_sections/_basics_toc.yml';
+			case 'using_ee':
+				tocSectionPath = 'docs/toc_sections/_using_ee_toc.yml';
+			}
+			
+			
+			try {
+				toc = Yaml.safeLoad(Fs.readFileSync(tocSectionPath, 'utf8'))
+			} catch (e) {
+				throw 'Error reading _toc.yml:\n' + e
+			}
+
+			for (let item of toc)
+			recurse(item)
 
 			for (let item of toc)
 				html += makeItem(item).html
