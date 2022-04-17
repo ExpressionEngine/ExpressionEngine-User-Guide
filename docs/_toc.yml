@@ -737,6 +737,14 @@
               href: development/services/model/building-your-own.md
             - name: Relating Models
               href: development/services/model/relating-models.md
+        - name: Cp/Form Service
+          items:
+            - name: Cp/Form
+              href: development/services/cp-form.md
+            - name: Fields
+              href: development/services/cp-form/fields.md
+            - name: Table / Grid
+              href: development/services/cp-form/table-grid.md
         - name: CP/Pagination Service
           href: development/services/pagination.md
         - name: Permission Service
