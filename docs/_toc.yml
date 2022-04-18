@@ -741,10 +741,14 @@
           items:
             - name: Cp/Form
               href: development/services/cp-form.md
+            - name: Field Groups
+              href: development/services/cp-form/group.md
+            - name: Field Sets
+              href: development/services/cp-form/field-sets.md
             - name: Fields
               href: development/services/cp-form/fields.md
-            - name: Table / Grid
-              href: development/services/cp-form/table-grid.md
+            - name: Buttons
+              href: development/services/cp-form/buttons.md
         - name: CP/Pagination Service
           href: development/services/pagination.md
         - name: Permission Service
