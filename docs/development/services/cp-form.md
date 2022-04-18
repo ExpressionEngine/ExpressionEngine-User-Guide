@@ -146,7 +146,8 @@ Removes the specified group from the Form object
 
 ### `getButton($name)`
 
-Will return the specified `Form\Button` object if it exists, or prepare and return a new Button object.
+Will return the specified `Form\Button` object if it exists, or prepare and return a new Button object. See [`Buttons`](development/services/cp-form/buttons.md)  for more details.
+
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |

@@ -47,7 +47,7 @@ Returns the entire `Cp\Form\Set` object into an array. Note that all child eleme
 
 ### `getField($name, $type = '')`
 
-Will return the Field Group if it exists, or prepare and return a new Field Group.
+Will return the Field Group if it exists, or prepare and return a new Field Group. See [`Field`](development/services/cp-form/fields.md) for more details.
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |

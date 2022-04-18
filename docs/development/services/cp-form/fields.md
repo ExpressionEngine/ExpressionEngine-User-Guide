@@ -611,7 +611,7 @@ Adds a Toggle control that returns either y or n respectively.
 
 ## The `Input` Field
 
-If you want to use a native HTML5 that is not already a Field, you can do so quite easily. IF a Field is requested that doesn't exist, a Field of the `Input` variety will be provided. The `Input` Field provides a single custom method that will allow you to craft custom HTML5 input elements. 
+If you want to use a [native HTML5 input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) that is not already a Field, you can do so quite easily. IF a Field is requested that doesn't exist, a Field of the `Input` variety will be provided. The `Input` Field provides a single custom method that will allow you to craft custom HTML5 input elements. 
 
 ### `params($params)`
 
@@ -664,7 +664,7 @@ The class property to apply to the Field (`class`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-| \$class | `string` | The value to use for the `class` parameter|
+| \$class | `string` | The value to use for the `class` parameter |
 | Returns | `Form\Field` | `$this`, the Field object to help in chaining |
 
 ### `getClass()`

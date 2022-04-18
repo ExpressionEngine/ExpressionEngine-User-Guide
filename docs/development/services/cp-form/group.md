@@ -56,7 +56,7 @@ Returns the entire `Cp\Form\Group` object into an array. Note that all child ele
 
 ### `getFieldSet($name)`
 
-Will return the Field Group if it exists, or prepare and return a new Field Group.
+Will return the Field Group if it exists, or prepare and return a new Field Group. See [`Field Sets`](development/services/cp-form/field-sets.md)  for more details.
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
