@@ -5,10 +5,6 @@
 # @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
 # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 
-## Basics
-
-
-
 - name: Security
   items:
     - name: Tips
@@ -17,24 +13,6 @@
       href: security/captchas.md
     - name: Spam Protection
       href: security/spam-protection.md
-
-- name: Optimization
-  items:
-    - name: Caching and Performance
-      href: optimization/caching.md
-    - name: Handling Extreme Traffic
-      href: optimization/handling-extreme-traffic.md
-    - name: Throttling
-      href: optimization/throttling.md
-    - name: New Relic Performance Monitoring
-      href: optimization/new-relic.md
-
-- name: Multiple Sites
-  items:
-    - name: Overview
-      href: msm/overview.md
-    - name: Variables and Parameter
-      href: msm/code.md
 
 - name: Troubleshooting
   items:
@@ -495,18 +473,3 @@
       href: development/v6-add-on-migration.md
     - name: Automated Upgrading
       href: development/automated-upgrading.md
-
-- name: Bugs and Security Reports
-  href: bugs-and-security-reports.md
-
-- name: Feature Requests
-  href: feature-requests.md
-
-- name: Docs Style Guide
-  href: style-guide.md
-
-- name: Contributing
-  href: contributing.md
-
-- name: Docs Contributors
-  href: contributors.md

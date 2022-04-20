@@ -79,8 +79,11 @@ module.exports = () => {
 			page_content: pageHtml,
 			page_path: pageId,
 			root_dir: relPath,
-			basics_toc: masterToc.make(file.path, relPath, "basics"),
-			using_ee_toc: masterToc.make(file.path, relPath, "using_ee")
+			getting_started_toc: masterToc.make(file.path, relPath, "getting_started_toc"),
+			the_fundamentals_toc: masterToc.make(file.path, relPath, "the_fundamentals_toc"),
+			advanced_usage_toc: masterToc.make(file.path, relPath, "advanced_usage_toc"),
+			best_practices_toc: masterToc.make(file.path, relPath, "best_practices_toc"),
+			community_toc: masterToc.make(file.path, relPath, "community_toc")
 		}
 
 		let page = renderTemplate(pageTemplate, templateVariables)
@@ -187,10 +190,21 @@ function getMasterToc() {
 			let tocSectionPath;
 
 			switch(tocSection) {
-			case 'basics':
-				tocSectionPath = 'docs/toc_sections/_basics_toc.yml';
-			case 'using_ee':
-				tocSectionPath = 'docs/toc_sections/_using_ee_toc.yml';
+			case 'getting_started_toc':
+				tocSectionPath = 'docs/toc_sections/_getting_started_toc.yml';
+				break;
+			case 'the_fundamentals_toc':
+				tocSectionPath = 'docs/toc_sections/_the_fundamentals_toc.yml';
+				break;
+			case 'advanced_usage_toc':
+				tocSectionPath = 'docs/toc_sections/_advanced_usage_toc.yml';
+				break;
+			case 'best_practices_toc':
+				tocSectionPath = 'docs/toc_sections/_best_practices_toc.yml';
+				break;
+			case 'community_toc':
+				tocSectionPath = 'docs/toc_sections/_community_toc.yml';
+				break;
 			}
 			
 			

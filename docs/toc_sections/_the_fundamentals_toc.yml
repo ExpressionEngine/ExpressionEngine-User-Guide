@@ -1,4 +1,10 @@
-## Using ExpressionEngine
+# This source file is part of the open source project
+# ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+#
+# @link      https://expressionengine.com/
+# @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
+# @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
 - name: Templates
   items:
     - name: Overview
@@ -84,178 +90,6 @@
           href: channels/channel-form/categories.md
         - name: Development
           href: channels/channel-form/development.md
-
-- name: Comments
-  items:
-      - name: Overview
-        href: comment/overview.md
-      - name: Entries Tag
-        href: comment/entries.md
-      - name: Submission Form
-        href: comment/form.md
-      - name: Subscriptions
-        href: comment/subscriptions.md
-      - name: Control Panel
-        href: comment/control-panel.md
-
-- name: Add-Ons
-  items:
-    - name: Overview
-      href: add-ons/overview.md
-    - name: Block / Allow
-      href: add-ons/blocklist.md
-    - name: Consent
-      href: add-ons/consent.md
-    - name: Email
-      href: add-ons/email.md
-    - name: Emoji
-      href: add-ons/emoji.md
-    - name: File
-      href: add-ons/file.md
-    - name: Discussion Forum
-      items:
-        - name: Overview
-          href: add-ons/forum/index.md
-        - name: Setup
-          href: add-ons/forum/setup.md
-        - name: Boards
-          href: add-ons/forum/boards.md
-        - name: Themes
-          href: add-ons/forum/themes.md
-        - name: Global Variables
-          href: add-ons/forum/global-variables.md
-        - name: User Management
-          href: add-ons/forum/user-management.md
-        - name: Associating Channel Entries with Forum Topics
-          href: add-ons/forum/channel-forum.md
-        - name: Recent Forum Topics
-          href: add-ons/forum/recent-topics.md
-        - name: Signatures and Avatars
-          href: add-ons/forum/signatures.md
-        - name: Helper
-          href: add-ons/forum/helper.md
-        - name: Other Features
-          href: add-ons/forum/other-features.md
-    - name: HTTP Header
-      href: add-ons/http-header.md
-    - name: IP to Nation
-      href: add-ons/ip-to-nation.md
-    - name: Metaweblog API
-      href: add-ons/metaweblog-api.md
-    - name: Moblog
-      href: add-ons/moblog.md
-    - name: Pages
-      href: add-ons/pages.md
-    - name: Query
-      href: add-ons/query.md
-    - name: Request
-      href: add-ons/request.md
-    - name: RSS
-      href: add-ons/rss.md
-    - name: RSS Parser
-      href: add-ons/rss-parser.md
-    - name: Rich Text Editor
-      href: add-ons/rte.md
-    - name: Search
-      items:
-        - name: Overview
-          href: add-ons/search/index.md
-        - name: Simple Form Tag
-          href: add-ons/search/simple.md
-        - name: Advanced Form Tag
-          href: add-ons/search/advanced.md
-        - name: Displaying Results
-          href: add-ons/search/results.md
-    - name: Simple Commerce
-      items:
-        - name: Overview
-          href: add-ons/simple-commerce/index.md
-        - name: Control Panel
-          href: add-ons/simple-commerce/control-panel.md
-        - name: Email Templates
-          href: add-ons/simple-commerce/email-templates.md
-        - name: Instant Payment Notification
-          href: add-ons/simple-commerce/ipn.md
-        - name: Managing Store Items
-          href: add-ons/simple-commerce/items.md
-        - name: PayPal Settings
-          href: add-ons/simple-commerce/paypal-settings.md
-        - name: Managing Store Purchases
-          href: add-ons/simple-commerce/purchases.md
-    - name: Spam
-      href: add-ons/spam.md
-    - name: Statistics
-      href: add-ons/statistics.md
-    - name: Emoticon (Deprecated)
-      href: add-ons/emoticon.md
-- name: ExpressionEngine Pro
-  items:
-    - name: Overview
-      href: pro/overview.md
-    - name: Installation
-      href: pro/installation.md
-    - name: Changelog
-      href: pro/changelog.md
-    - name: Configuration
-      href: pro/configuration.md
-    - name: Dashboard Management
-      href: pro/dashboard_management.md
-    - name: Dock
-      href: pro/dock.md
-    - name: Entry Cloning
-      href: pro/entry_cloning.md
-    - name: Front-end Content Management
-      href: pro/frontend.md
-    - name: Cookies management
-      href: pro/cookies.md
-    - name: Multi-Factor Authentication
-      href: pro/mfa.md
-    - name: Development
-      items:
-        - name: Dashboard Widgets
-          href: pro/development/widgets.md
-        - name: Fieldtypes
-          href: pro/development/fieldtypes.md
-        - name: Prolets
-          href: pro/development/prolets.md
-    - name: Permissions
-      href: pro/permissions.md
-    - name: Troubleshooting
-      href: pro/troubleshooting.md
-- name: Command Line Interface (CLI)
-  items:
-    - name: Introduction
-      href: cli/intro.md
-    - name: Usage
-      href: cli/usage.md
-    - name: Built In Commands
-      items:
-        - name: Addon Generator
-          href: cli/built-in-commands/make-addon.md
-        - name: Clear Cache
-          href: cli/built-in-commands/cache-clear.md
-        - name: Command Generator
-          href: cli/built-in-commands/make-command.md
-        - name: Migrations
-          href: cli/built-in-commands/migrate.md
-        - name: List
-          href: cli/built-in-commands/list.md
-        - name: Make migration
-          href: cli/built-in-commands/make-migration.md
-        - name: Model Generator
-          href: cli/built-in-commands/make-model.md
-        - name: Update ExpressionEngine
-          href: cli/built-in-commands/update.md
-        - name: Prolet Generator
-          href: cli/built-in-commands/make-prolet.md
-        - name: Widget Generator
-          href: cli/built-in-commands/make-widget.md
-    - name: Creating A Command
-      href: cli/creating-a-command.md
-    - name: Defining Input
-      href: cli/defining-input.md
-    - name: Displaying Output
-      href: cli/displaying-output.md
 
 - name: Fieldtypes
   items:
@@ -413,3 +247,16 @@
           href: control-panel/settings/menu-manager.md
     - name: CP Navigation
       href: control-panel/navigation.md
+
+- name: Comments
+  items:
+      - name: Overview
+        href: comment/overview.md
+      - name: Entries Tag
+        href: comment/entries.md
+      - name: Submission Form
+        href: comment/form.md
+      - name: Subscriptions
+        href: comment/subscriptions.md
+      - name: Control Panel
+        href: comment/control-panel.md
