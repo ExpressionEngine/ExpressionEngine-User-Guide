@@ -83,7 +83,8 @@ module.exports = () => {
 			the_fundamentals_toc: masterToc.make(file.path, relPath, "the_fundamentals_toc"),
 			advanced_usage_toc: masterToc.make(file.path, relPath, "advanced_usage_toc"),
 			best_practices_toc: masterToc.make(file.path, relPath, "best_practices_toc"),
-			community_toc: masterToc.make(file.path, relPath, "community_toc")
+			community_toc: masterToc.make(file.path, relPath, "community_toc"),
+			guides_toc: masterToc.make(file.path, relPath, "guides_toc")
 		}
 
 		let page = renderTemplate(pageTemplate, templateVariables)
@@ -204,6 +205,9 @@ function getMasterToc() {
 				break;
 			case 'community_toc':
 				tocSectionPath = 'docs/toc_sections/_community_toc.yml';
+				break;
+			case 'guides_toc':
+				tocSectionPath = 'docs/toc_sections/_guides_toc.yml';
 				break;
 			}
 			
