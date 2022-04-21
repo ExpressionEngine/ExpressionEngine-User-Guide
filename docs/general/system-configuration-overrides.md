@@ -3058,7 +3058,7 @@ Example Usage:
 
 ### `use_newrelic`
 
-When enabled, New Relic will add [Real User Monitoring JavaScript](https://newrelic.com/docs/features/real-user-monitoring) to all ExpressionEngine-powered pages on both the front-end and in the CP.
+When enabled, New Relic will add [Real User Monitoring JavaScript](https://docs.newrelic.com/docs/browser/browser-monitoring/getting-started/introduction-browser-monitoring) to all ExpressionEngine-powered pages on both the front-end and in the CP.
 
 | Value | Behavior                                  |
 | ----- | ----------------------------------------- |

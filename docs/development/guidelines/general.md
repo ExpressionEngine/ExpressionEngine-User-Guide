@@ -128,7 +128,7 @@ CORRECT:
 
 In general, code should be commented prolifically. It not only helps describe the flow and intent of the code for less experienced programmers, but can prove invaluable when returning to your own code months down the line. There is not a required format for comments, but the following are recommended.
 
-[DocBlock](https://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_phpDocumentor.howto.pkg.html#basics.docblock) style comments preceding class and method declarations so they can be picked up by IDEs:
+[DocBlock](https://docs.phpdoc.org/guide/guides/docblocks.html) style comments preceding class and method declarations so they can be picked up by IDEs:
 
     /**
     * Super Class

@@ -14,7 +14,7 @@
 The Simple Commerce Module is a basic but flexible module that easily integrates ExpressionEngine with PayPal.
 
 - Integrates with ExpressionEngine's Channel Module to define items for sale
-- Tracks purchases automatically utilizing PayPal's [Instant Payment Notification](https://developer.paypal.com/docs/classic/ipn/integration-guide/IPNIntro/)
+- Tracks purchases automatically utilizing PayPal's [Instant Payment Notification](https://www.paypal.com/us/smarthelp/article/what-is-instant-payment-notification-(ipn)-faq2933)
 - Lets you create any number of customized email notification templates for both the administrator and customers, even a different email template for _every item_!
 - Add and Edit multiple items at once
 - Ability to assign sale prices to items, and easily mark items "on sale"
@@ -254,7 +254,7 @@ The steps required to use Encrypted Website Payments with PayPal are to:
 
 For the most security, you may also wish to set up your PayPal account so that it [only accepts encrypted payments](#accept-encrypted-payments-only).
 
-PayPal accepts only X.509 public certificates in OpenSSL PEM format, from any established certificate authority, such as [VeriSign](https://www.verisign.com/) You can also create your own private key and public certificate using the open source software [OpenSSL](https://www.openssl.org/). Most \*nix based operating systems (including Macintosh OS X) will already have this software compiled and ready to use. If you are running Windows, there are [pre-compiled binaries](https://www.openssl.org/related/binaries.html) available. The sections that follow describe creating your public certificate and private key using OpenSSL.
+PayPal accepts only X.509 public certificates in OpenSSL PEM format, from any established certificate authority, such as [VeriSign](https://www.verisign.com/) You can also create your own private key and public certificate using the open source software [OpenSSL](https://www.openssl.org/). Most \*nix based operating systems (including Macintosh OS X) will already have this software compiled and ready to use. If you are running Windows, there are [pre-compiled binaries](https://wiki.openssl.org/index.php/Binaries) available. The sections that follow describe creating your public certificate and private key using OpenSSL.
 
 ### Generate a private key
 
