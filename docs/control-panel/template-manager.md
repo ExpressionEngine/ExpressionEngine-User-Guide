@@ -123,7 +123,7 @@ In order to edit the Templates inside the Control Panel, set the theme folders a
 
 If you plan to make changes to your theme, we recommend that you make a copy of the themes/forum_themes/default/ directory, name it something else, and make your changes to that one. You can easily switch themes simply by choosing a new one under Default Preferences.
 
-For anyone creating their own theme or modifying one, the original "PSD" version of the "ExpressionEngine Forums" graphic [is available for download](https://ellislab.com/asset/file/forum_logo_psd.zip).
+For anyone creating their own theme or modifying one, the original "PSD" version of the "ExpressionEngine Forums" graphic [is available for download](https://expressionengine.com/asset/file/forum_logo_psd.zip).
 
 ## Member Profile Templates
 

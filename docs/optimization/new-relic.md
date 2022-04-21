@@ -32,6 +32,6 @@ You can also set the application name as a [configuration override](general/syst
 
 **Control Panel Location:** `Settings --> Debugging & Output`
 
-It may be desirable at times to disable New Relic's [Real User Monitoring JavaScript](https://newrelic.com/docs/features/real-user-monitoring) from being inserted into your web pages. Services that fetch your web pages in order to import content for you (such as [Campaign Monitor](https://campaignmonitor.com) and [MailChimp](https://mailchimp.com) for instance) may get hung up on the script tag that the New Relic PHP extension inserts into your content.
+It may be desirable at times to disable New Relic's [Real User Monitoring JavaScript](https://docs.newrelic.com/docs/browser/browser-monitoring/getting-started/introduction-browser-monitoring) from being inserted into your web pages. Services that fetch your web pages in order to import content for you (such as [Campaign Monitor](https://campaignmonitor.com) and [MailChimp](https://mailchimp.com) for instance) may get hung up on the script tag that the New Relic PHP extension inserts into your content.
 
 To disable New Relic's RUM JavaScript from being inserted, turn off the _Enable New Relic RUM JavaScript?_ preference in the _Output and Debugging_ settings.

@@ -32,7 +32,7 @@ To ban a country, make sure your IP database is updated, then find the country y
 
 In order to use the world flag feature, please first visit the Modules page of the control panel and make sure your IP to Nation module is installed.
 
-NOTE: **Note:** Please [download the flag icons](https://ellislab.com/asset/file/world_flags.zip) from ExpressionEngine.com. Once downloaded, unzip the archive, then upload the "world_flags" folder to your server. The folder can go anywhere since you'll set the URL in the tag as described below.
+NOTE: **Note:** Please [download the flag icons](https://expressionengine.com/asset/file/world_flags.zip) from ExpressionEngine.com. Once downloaded, unzip the archive, then upload the "world_flags" folder to your server. The folder can go anywhere since you'll set the URL in the tag as described below.
 
 The "world flags" tag can be used within your {exp:comment:entries} or {exp:channel:entries} like this:
 

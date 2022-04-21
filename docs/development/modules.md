@@ -359,13 +359,13 @@ If you return an associative array it must contain the key `body` and may contai
 
 - `body` (string): HTML string which will be used in the "body" section of the Control Panel layout inside the Add-On manager
 - `breadcrumb` (array): Associative array containing key/value pairs where the key is the [CP/URL](development/services/url.md) and the value is the string to display as the breadcrumb
-- `heading` (string): The string to display as the page `<title>` and the [Section Header](https://ellislab.com/style-guide/c/structure#section-header)
+- `heading` (string): The string to display as the page `<title>` and the Section Header.
 
-If your add-on needs a [sidebar](https://ellislab.com/style-guide/c/structure#content-box-sidebar) use the [Sidebar Service](development/services/sidebar.md).
+If your add-on needs a sidebar use the [Sidebar Service](development/services/sidebar.md).
 
 ### `ee()->cp->header`
 
-This variable allows you to further customize your [Section Header](https://ellislab.com/style-guide/c/structure#section-header) by specifying icons to go in front of the title.
+This variable allows you to further customize your Section Header by specifying icons to go in front of the title.
 
 Within your control panel method, or potentially the constructor, just set `ee()->cp->header`:
 
@@ -378,7 +378,7 @@ Within your control panel method, or potentially the constructor, just set `ee()
       )
     );
 
-- `toolbar_items` (array): An associative array of [buttons](https://ellislab.com/style-guide/c/structure#section-settings) to go in front of the title. The key will define the class and provide an icon (e.g. `settings` and `download`), and the value is another associative array containing the `href` and the `title` of the link.
+- `toolbar_items` (array): An associative array of buttons to go in front of the title. The key will define the class and provide an icon (e.g. `settings` and `download`), and the value is another associative array containing the `href` and the `title` of the link.
 
 ### Javascript
 
