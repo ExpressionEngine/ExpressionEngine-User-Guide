@@ -57,6 +57,7 @@
 	overflow-y: auto;
 	margin: 0 0 1px 0;
 	position: relative;
+  padding-bottom: 15px;
 }
 
 
@@ -120,7 +121,7 @@
 
 // The first ul
 .sidebar-toc > ul {
-	padding: 0 0 0 @p-nm;
+	padding: 0 0 0 @p-lg;
 	margin: 0;
 }
 // All nested lists
@@ -132,8 +133,9 @@
 
 // All items
 .sidebar-toc li {
-	margin-bottom: 2px;
+	margin-bottom: 5px;
 	color: @dark-grey;
+  padding-right: @p-sm;
 }
 
 // First level items
@@ -171,9 +173,13 @@
 
 .sidebar h2 {
 	text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 90%;
 	color: #afb0bf;
-    font-weight: 700;
-	margin-bottom: 10px;
+  font-weight: 700;
+	margin-bottom: 15px;
+  padding-left: @p-nm;
+  padding-right: @p-sm;
 }
 
 .sidebar h2:not(:first-of-type) {
