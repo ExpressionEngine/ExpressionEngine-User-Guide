@@ -206,9 +206,6 @@ function getMasterToc() {
 			case 'community_toc':
 				tocSectionPath = 'docs/toc_sections/_community_toc.yml';
 				break;
-			case 'guides_toc':
-				tocSectionPath = 'docs/toc_sections/_guides_toc.yml';
-				break;
 			}
 			
 			
