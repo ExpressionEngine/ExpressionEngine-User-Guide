@@ -7,13 +7,17 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Hit Tracking
+# Tracking
 
-**Control Panel Location: `Settings > Hit Tracking`**
+**Control Panel Location: `Settings > Tracking`**
 
 This section of the Control Panel allows you to define preferences for various tracking features of ExpressionEngine. Adjustments to these settings can help decrease resource usage if you are not utilizing the features, as well as help you manage [extreme traffic events](optimization/handling-extreme-traffic.md).
 
 ## Settings
+
+### Enable tracker cookie?
+
+When enabled, ExpressionEngine will set `exp_tracker` cookie on each page visit, allowing navigation through browsing history. Disabling it might influence redirect behavior of some forms on front-end.
 
 ### Enable online user tracking?
 

@@ -1046,7 +1046,7 @@ Example Usage:
 
     $config['dynamic_tracking_disabling'] = '350';
 
-**Also found in CP:** `Settings --> Hit Tracking`: [Suspend ALL tracking when number of online visitors exceeds](control-panel/settings/hit-tracking.md#suspend-threshold):
+**Also found in CP:** `Settings --> Tracking`: [Suspend ALL tracking when number of online visitors exceeds](control-panel/settings/hit-tracking.md#suspend-threshold):
 
 ### `email_batch_size`
 
@@ -1235,7 +1235,7 @@ Example Usage:
 
     $config['enable_hit_tracking'] = 'y';
 
-**Also found in CP:** `Settings --> Hit Tracking`: [Enable Template Hit Tracking](control-panel/settings/hit-tracking.md#enable-template-hit-tracking)
+**Also found in CP:** `Settings --> Tracking`: [Enable Template Hit Tracking](control-panel/settings/hit-tracking.md#enable-template-hit-tracking)
 
 ### `enable_online_user_tracking`
 
@@ -1250,7 +1250,22 @@ Example Usage:
 
     $config['enable_online_user_tracking'] = 'y';
 
-**Also found in CP:** `Settings --> Hit Tracking`: [Enable Online User Tracking](control-panel/settings/hit-tracking.md#enable-online-user-tracking)
+**Also found in CP:** `Settings --> Tracking`: [Enable Online User Tracking](control-panel/settings/hit-tracking.md#enable-online-user-tracking)
+
+### `enable_tracking_cookie`
+
+When enabled, ExpressionEngine will set `exp_tracker` cookie on each page visit, allowing navigation through browsing history. Disabling it might influence redirect behavior of some forms on front-end.
+
+| Value | Behavior                               |
+| ----- | -------------------------------------- |
+| y     | Enable `exp_tracker` cookie (default)  |
+| n     | Disable `exp_tracker` cookie           |
+
+Example Usage:
+
+    $config['enable_tracking_cookie'] = 'n';
+
+**Also found in CP:** `Settings --> Tracking`: [Enable tracker cookie?](control-panel/settings/hit-tracking.md#enable-tracker-cookie)
 
 ### `enable_search_log`
 

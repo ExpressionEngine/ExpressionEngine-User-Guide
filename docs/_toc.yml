@@ -456,7 +456,7 @@
           href: control-panel/settings/debug-output.md
         - name: Outgoing Email
           href: control-panel/settings/email.md
-        - name: Hit Tracking
+        - name: Tracking
           href: control-panel/settings/hit-tracking.md
         - name: Logging
           href: control-panel/settings/logging.md
