@@ -79,7 +79,11 @@ module.exports = () => {
 			page_content: pageHtml,
 			page_path: pageId,
 			root_dir: relPath,
-			toc: masterToc.make(file.path, relPath),
+			getting_started_toc: masterToc.make(file.path, relPath, "getting_started_toc"),
+			the_fundamentals_toc: masterToc.make(file.path, relPath, "the_fundamentals_toc"),
+			advanced_usage_toc: masterToc.make(file.path, relPath, "advanced_usage_toc"),
+			best_practices_toc: masterToc.make(file.path, relPath, "best_practices_toc"),
+			community_toc: masterToc.make(file.path, relPath, "community_toc"),
 		}
 
 		let page = renderTemplate(pageTemplate, templateVariables)
@@ -132,12 +136,6 @@ module.exports = () => {
 function getMasterToc() {
 	let toc
 
-	try {
-		 toc = Yaml.safeLoad(Fs.readFileSync(CONFIG.tocPath, 'utf8'))
-	} catch (e) {
-		throw 'Error reading _toc.yml:\n' + e
-	}
-
 	const recurse = (item) => {
 		if (item.href) {
 			let itemPath = Path.resolve(Path.join(CONFIG.sourceDir, item.href))
@@ -157,12 +155,11 @@ function getMasterToc() {
 		}
 	}
 
-	for (let item of toc)
-		recurse(item)
+	
 
 
 	return {
-		make: (page, relPath) => {
+		make: (page, relPath, tocSection) => {
 			page = relFromSource(replaceExt(page, '.html'))
 
 			const makeItem = (item) => {
@@ -190,6 +187,35 @@ function getMasterToc() {
 			}
 
 			let html = ''
+			let tocSectionPath;
+
+			switch(tocSection) {
+			case 'getting_started_toc':
+				tocSectionPath = 'docs/toc_sections/_getting_started_toc.yml';
+				break;
+			case 'the_fundamentals_toc':
+				tocSectionPath = 'docs/toc_sections/_the_fundamentals_toc.yml';
+				break;
+			case 'advanced_usage_toc':
+				tocSectionPath = 'docs/toc_sections/_advanced_usage_toc.yml';
+				break;
+			case 'best_practices_toc':
+				tocSectionPath = 'docs/toc_sections/_best_practices_toc.yml';
+				break;
+			case 'community_toc':
+				tocSectionPath = 'docs/toc_sections/_community_toc.yml';
+				break;
+			}
+			
+			
+			try {
+				toc = Yaml.safeLoad(Fs.readFileSync(tocSectionPath, 'utf8'))
+			} catch (e) {
+				throw 'Error reading _toc.yml:\n' + e
+			}
+
+			for (let item of toc)
+			recurse(item)
 
 			for (let item of toc)
 				html += makeItem(item).html
