@@ -84,7 +84,6 @@ module.exports = () => {
 			advanced_usage_toc: masterToc.make(file.path, relPath, "advanced_usage_toc"),
 			best_practices_toc: masterToc.make(file.path, relPath, "best_practices_toc"),
 			community_toc: masterToc.make(file.path, relPath, "community_toc"),
-			guides_toc: masterToc.make(file.path, relPath, "guides_toc")
 		}
 
 		let page = renderTemplate(pageTemplate, templateVariables)
