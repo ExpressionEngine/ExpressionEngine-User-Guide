@@ -7,13 +7,17 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Select Dropdown Fieldtypes
+# Checkboxes Fieldtype
 
 [TOC]
 
-Select Dropdown fields allow publishers to choose a single item from a dropdown list. If users need to be able to select multiple options see the [Multiselect Fieldtype docs](/fieldtypes/multiselect.md).
+Checkboxes, Radio Buttons, Select, Multiselect and Selectable Buttons fields are all ways to allow publishers to choose items from a list. Radio Buttons and Select fields only allow the users to choose one item, while Checkboxes and Multiselects allow multiple items to be chosen from the list. 
 
 ![select field](_images/field_select.png)
+
+Selectable Buttons allows switching between single selection and multiple selection mode.
+
+![selectable buttons field](_images/field_selectable_buttons.png)
 
 ## Field Options
 
@@ -21,7 +25,7 @@ Select Dropdown fields allow publishers to choose a single item from a dropdown 
 
 Specifies how the entered-text will be formatted when rendered on the front-end. Most items will be entered will be single-lined and thus treated as a single paragraph by most text-processing plugins.
 
-### Select Menu Options
+### Options
 
 This is where the list of items to select from is created. You have several ways to populate these items.
 
@@ -31,11 +35,10 @@ The default choice is to enter a series of values and labels separately. Typical
 
 ![](_images/valuelabel1.png)
 
-This results in an interface with only the labels visible:
+For a Radio Buttons field, for example, this results in an interface with only the labels visible:
 
 ![](_images/valuelabel2.png)
 
-!UPDATE for Dropdown
 But the markup looks like this:
 
     <label><input type="radio" name="field_name" value="1"> One</label>
