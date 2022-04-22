@@ -170,10 +170,15 @@
         - name: Development
           href: channels/channel-form/development.md
 
+#If you update fieldtypes besure to update listing on fieldtypes/overview page.
 - name: Fieldtypes
   items:
     - name: Overview
       href: fieldtypes/overview.md
+    - name: Checkboxes
+      href: fieldtypes/checkboxes.md
+    - name: Color Picker
+      href: fieldtypes/colorpicker.md
     - name: Date
       href: fieldtypes/date.md
     - name: Duration
@@ -190,14 +195,18 @@
       href: fieldtypes/grid.md
     - name: Notes
       href: fieldtypes/notes.md
+    - name: Multiselect
+      href: fieldtypes/multiselect.md
     - name: Relationships
       href: fieldtypes/relationships.md
     - name: Rich Text Editor
       href: fieldtypes/rte.md
-    - name: Checkboxes, Radio Buttons, Select, Multiselect, Selectable Buttons
+    - name: Radio Buttons
+      href: fieldtypes/radio-buttons.md
+    - name: Select Dropdown
       href: fieldtypes/select.md
-    - name: Color Picker
-      href: fieldtypes/colorpicker.md
+    - name: Selectable Buttons
+      href: fieldtypes/selectable-buttons.md
     - name: Value Slider, Range Slider
       href: fieldtypes/slider.md
     - name: Text Input

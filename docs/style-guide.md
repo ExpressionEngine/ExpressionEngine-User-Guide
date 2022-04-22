@@ -38,9 +38,9 @@ If a page has front matter, then the attribution must be directly below it.
 
 ### `_toc.yml`
 
-The toc file is what is responsible for the organization of the sidebar table of contents.
+The YAML files in `toc_sections` are responsible for the organization of the sidebar table of contents.
 
-To add a page to the TOC, specify the link name and path:
+To add a page to the sidebar, edit the respective `toc_sections` file and specify the link name and path:
 
 ```yml
 - name: My Page Title
@@ -256,3 +256,16 @@ Renders as:
 | ------------ | ------- | ------------------------------- |
 | `local_time` | time()  | None                            |
 | `start_day`  | sunday  | sunday, monday, tuesday, _etc._ |
+
+## Word List
+
+### Word Usage
+
+- **Capitalization**: When referencing a specific feature of ExpressionEngine Title Case Capitalization should be used. (Example: The Control Panel is where you will find Channels and Fieldtypes.)
+
+
+### Standardized Spellings
+
+- **Add-on** (noun, an add-on extends the functionality of ExpressionEngine )
+- **ExpressionEngine CMS** (noun, ExpressionEngine CMS the product. Notice capitalization)
+- **Fieldtype** (noun, a field is a container that holds a specific type of information)
