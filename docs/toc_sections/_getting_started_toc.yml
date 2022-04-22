@@ -1,0 +1,67 @@
+# This source file is part of the open source project
+# ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+#
+# @link      https://expressionengine.com/
+# @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
+# @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
+- name: Welcome
+  href: index.md
+
+- name: Installation & Updates
+  items:
+    - name: System Requirements
+      href: installation/requirements.md
+    - name: Installation
+      href: installation/installation.md
+    - name: Best Practices
+      href: installation/best-practices.md
+    - name: Updating
+      href: installation/updating.md
+    - name: Change Log
+      href: installation/changelog.md
+
+- name: Quick Start
+  items:
+    - name: The Big Picture
+      href: getting-started/the-big-picture.md
+    - name: 10 Minute Primer
+      href: getting-started/ten-minute-primer.md
+
+- name: General Information
+  items:
+    - name: URL Structure
+      href: general/url-structure.md
+    - name: 404 Pages
+      href: general/404pages.md
+    - name: Backing Up Your Site
+      href: general/database-backup.md
+    - name: Moving to Another Server
+      href: general/moving.md
+    - name: GDPR Compliance
+      href: general/gdpr.md
+    - name: Cookies
+      href: general/cookies.md
+    - name: System Config Overrides
+      href: general/system-configuration-overrides.md
+    - name: Text Formatting
+      href: general/text-formatting.md
+    - name: Converting to InnoDB
+      href: general/converting-to-innodb.md
+    - name: BBCode Reference
+      href: general/bbcode.md
+    - name: Reserved Words
+      href: general/reserved-words.md
+    - name: Member XML Format
+      href: general/member-import-xml-format.md
+
+- name: Localization
+  items:
+    - name: Date Localization
+      href: localization/date-localization.md
+    - name: Language Packs
+      href: localization/languages.md
+    - name: Stopwords
+      href: localization/stopwords.md
+    - name: Transliteration
+      href: localization/transliteration.md
