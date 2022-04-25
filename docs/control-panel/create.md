@@ -7,9 +7,10 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Create
+# New/Edit Entry
 
-**Control Panel Location: `Create`**
+**Control Panel Location: `Entries > [Channel] > New`**    
+**Jump Menu Shortcut: `Create Entry in [channe]`**
 
 [TOC]
 
