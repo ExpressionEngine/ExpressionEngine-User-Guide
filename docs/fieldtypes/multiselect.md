@@ -13,7 +13,7 @@
 
 Checkboxes, Radio Buttons, Select, Multiselect and Selectable Buttons fields are all ways to allow publishers to choose items from a list. Radio Buttons and Select fields only allow the users to choose one item, while Checkboxes and Multiselects allow multiple items to be chosen from the list. 
 
-![select field](_images/field_select.png)
+![multiselect field](_images/cp-field-multiselect.png)
 
 Selectable Buttons allows switching between single selection and multiple selection mode.
 

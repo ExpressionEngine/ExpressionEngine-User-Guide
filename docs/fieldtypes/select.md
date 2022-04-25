@@ -11,7 +11,7 @@
 
 [TOC]
 
-Select Dropdown fields allow publishers to choose a single item from a dropdown list. If users need to be able to select multiple options see the [Multiselect Fieldtype docs](/fieldtypes/multiselect.md).
+Select Dropdown fields allow publishers to choose a single item from a dropdown list.
 
 ![select field](_images/field_select.png)
 
