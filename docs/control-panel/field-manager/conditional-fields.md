@@ -13,6 +13,10 @@
 
 Conditional Fields allow for fields to be conditionally shown or hidden on the entry publish form based on the value of other fields in a given entry. 
 
+<div class="video-wrapper">
+<iframe src="https://youtu.be/OcCsy56eeGQ?vq=HD1080" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 ## Making Fields Conditional
 To make a field conditional, Navigate to the field's settings in the Control Panel and toggle on the setting "Make Conditional?"
 
