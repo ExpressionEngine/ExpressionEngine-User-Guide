@@ -2667,7 +2667,7 @@ Example Usage:
 
 ### `sig_img_path`
 
-Set the server path to the signature images directory.
+Set the server path to the signature images directory. The default path is `{base_path}/images/signature_attachments/` when no override is set.
 
 | Value | Description                                             |
 | ----- | ------------------------------------------------------- |
@@ -2679,7 +2679,7 @@ Example Usage:
 
 ### `sig_img_url`
 
-Set the URL to the signature images directory.
+Set the URL to the signature images directory. The default path is `{base_url}/images/signature_attachments/` when no override is set.
 
 | Value | Description                       |
 | ----- | --------------------------------- |

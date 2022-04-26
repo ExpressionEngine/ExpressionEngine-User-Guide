@@ -15,6 +15,10 @@ The Range Slider fieldtype shows two sliders on the same scale, allowing to sele
 
 ![slider field](_images/field_slider.png)
 
+<div class="video-wrapper">
+<iframe src="https://youtu.be/zPyPAmVQLNQ?vq=HD1080" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 ## Field Options
 
 ### Minimum value
