@@ -15,7 +15,7 @@ Number Input is a single-lined field where you can enter a number. Its also show
 ![number field](_images/field_number.png)
 
 <div class="video-wrapper">
-<iframe src="https://youtu.be/84i7HlkRxfg?vq=HD1080" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/84i7HlkRxfg?vq=HD1080" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
 
