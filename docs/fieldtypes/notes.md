@@ -14,7 +14,7 @@ Notes is a fieldtype that contains text used to give context to content editors.
 ![notes field](_images/notes.png)
 
 <div class="video-wrapper">
-<iframe src="https://youtu.be/XYOjdOm8E9E?vq=HD1080" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/XYOjdOm8E9E?vq=HD1080" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
 
