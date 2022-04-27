@@ -62,6 +62,7 @@ module.exports = () => {
 			slugify: getSlugger()
 		}
 
+
 		let pageContent = pageFM.body
 
 		// Use the first h1 in the page for the title
@@ -86,7 +87,7 @@ module.exports = () => {
 			community_toc: masterToc.make(file.path, relPath, "community_toc"),
 		}
 
-		let page = renderTemplate(pageTemplate, templateVariables)
+		let page = renderTemplate(pageTemplate, templateVariables, currentPageInfo)
 
 		file.contents = Buffer.from(page)
 		file.path     = replaceExt(file.path, '.html')
