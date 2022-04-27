@@ -10,6 +10,7 @@
 const CONFIG       = require('./config.js')
 const Path         = require('path')
 const MarkdownSlug = require('markdown-slug')
+const Fs          = require('fs')
 
 
 // Converts back slashes to forward slashes. Used to convert paths to URLs
@@ -23,6 +24,13 @@ const renderTemplate = (template, vars) => {
 	for (let [key, value] of Object.entries(vars)) {
 		template = template.replace(new RegExp('{{\\s*' + key + '\\s*}}', 'gi'), value)
 	}
+
+	
+	template = template.replace(new RegExp('{{include\:([^"\']*)}}', 'gi'),Fs.readFileSync('./docs/$1', { encoding: 'utf8' }));
+	//find all {{template:$1}} instances as regex
+	//get data from $1
+	//replace tag with data from $1
+	//continue
 
 	return template
 }

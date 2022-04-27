@@ -42,7 +42,7 @@ module.exports = () => {
 	const pageTemplate = Fs.readFileSync(themeTemplate, { encoding: 'utf8' })
 
 	// Get all the markdown files
-	return gulp.src(CONFIG.sourceDir + '/**/*.md')
+	return gulp.src(CONFIG.sourceDir + '/index.md')
 
 	// Build Each File
 	.pipe(Through2.obj((file, _, cb) => {

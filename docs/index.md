@@ -9,6 +9,8 @@
 
 # Welcome!
 
+{{include:toc_sections/_community_toc.yml}}
+
 Welcome to the ExpressionEngine user guide!
 
 In addition to this user guide, there are a number of resources linked below that will help you attain mastery.
