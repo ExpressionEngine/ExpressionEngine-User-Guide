@@ -34,7 +34,7 @@ const renderTemplate = (template, vars, currentPageInfo) => {;
 	}
 
 	
-	template = template.replace(new RegExp('(?<!code>){{embed\:([^"\']*)}}', 'gi'),returnEmbedContents);
+	template = template.replace(new RegExp('(?<!code>){{embed\:([^"\']*?)}}', 'gi'),returnEmbedContents);
 
 	return template
 }
