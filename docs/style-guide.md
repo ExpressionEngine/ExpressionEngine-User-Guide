@@ -257,6 +257,12 @@ Renders as:
 | `local_time` | time()  | None                            |
 | `start_day`  | sunday  | sunday, monday, tuesday, _etc._ |
 
+## Embeds
+Embeds allow the docs to remain DRY. If multiple pages include the same sections, code snippets, or other common elements another markdown file can be embedded and parsed within other files
+
+Example:
+Using `{{embed:_embeds_/testing.md}}` would result in the content of `/docs/_embeds_/testing.md` being embedded in the current file in place of the template tag.
+
 ## Word List
 
 ### Word Usage
@@ -270,3 +276,4 @@ Renders as:
 - **ExpressionEngine CMS** (noun, ExpressionEngine CMS the product. Notice capitalization)
 - **Fieldtype** (noun, a field is a container that holds a specific type of information)
 - **Multi Select** (noun, a field in which the user can select multiple options).
+
