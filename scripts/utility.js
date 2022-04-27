@@ -10,7 +10,7 @@
 const CONFIG        = require('./config.js')
 const Path          = require('path')
 const MarkdownSlug  = require('markdown-slug')
-const RenderInclude = require('./include-render.js')
+const RenderEmbed = require('./embed-render.js')
 const Fs            = require('fs')
 var parentPageInfo = "";
 
@@ -21,10 +21,10 @@ const bsToFs = (p) => p.replace(/\\/g, '/')
 // Gets the folder depth of the specified path
 const dirDepth = (myDir) => myDir.split(Path.sep).length
 
-const returnIncludeContents = (match, p1, p2, p3, offset, string) => {
-	includeContents = Fs.readFileSync('./docs/'+p1, { encoding: 'utf8' });
-	includeContents = RenderInclude(includeContents, parentPageInfo);
-	return includeContents;
+const returnEmbedContents = (match, p1, p2, p3, offset, string) => {
+	embedContents = Fs.readFileSync('./docs/'+p1, { encoding: 'utf8' });
+	embedContents = RenderEmbed(embedContents, parentPageInfo);
+	return embedContents;
 }
 // Renders handlebar style template variables from an object
 const renderTemplate = (template, vars, currentPageInfo) => {;
@@ -34,7 +34,7 @@ const renderTemplate = (template, vars, currentPageInfo) => {;
 	}
 
 	
-	template = template.replace(new RegExp('{{include\:([^"\']*)}}', 'gi'),returnIncludeContents);
+	template = template.replace(new RegExp('{{embed\:([^"\']*)}}', 'gi'),returnEmbedContents);
 
 	return template
 }
