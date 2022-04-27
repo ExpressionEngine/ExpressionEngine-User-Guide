@@ -7,10 +7,12 @@
  * @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
  */
 
-const CONFIG       = require('./config.js')
-const Path         = require('path')
-const MarkdownSlug = require('markdown-slug')
-const Fs          = require('fs')
+const CONFIG        = require('./config.js')
+const Path          = require('path')
+const MarkdownSlug  = require('markdown-slug')
+const RenderInclude = require('./include-render.js')
+const Fs            = require('fs')
+var parentPageInfo = "";
 
 
 // Converts back slashes to forward slashes. Used to convert paths to URLs
@@ -19,18 +21,20 @@ const bsToFs = (p) => p.replace(/\\/g, '/')
 // Gets the folder depth of the specified path
 const dirDepth = (myDir) => myDir.split(Path.sep).length
 
+const returnIncludeContents = (match, p1, p2, p3, offset, string) => {
+	includeContents = Fs.readFileSync('./docs/'+p1, { encoding: 'utf8' });
+	includeContents = RenderInclude(includeContents, parentPageInfo);
+	return includeContents;
+}
 // Renders handlebar style template variables from an object
-const renderTemplate = (template, vars) => {
+const renderTemplate = (template, vars, currentPageInfo) => {;
+	parentPageInfo = currentPageInfo;
 	for (let [key, value] of Object.entries(vars)) {
 		template = template.replace(new RegExp('{{\\s*' + key + '\\s*}}', 'gi'), value)
 	}
 
 	
-	template = template.replace(new RegExp('{{include\:([^"\']*)}}', 'gi'),Fs.readFileSync('./docs/$1', { encoding: 'utf8' }));
-	//find all {{template:$1}} instances as regex
-	//get data from $1
-	//replace tag with data from $1
-	//continue
+	template = template.replace(new RegExp('{{include\:([^"\']*)}}', 'gi'),returnIncludeContents);
 
 	return template
 }

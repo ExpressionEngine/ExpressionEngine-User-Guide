@@ -42,7 +42,7 @@ module.exports = () => {
 	const pageTemplate = Fs.readFileSync(themeTemplate, { encoding: 'utf8' })
 
 	// Get all the markdown files
-	return gulp.src(CONFIG.sourceDir + '/index.md')
+	return gulp.src(CONFIG.sourceDir + '/**/*.md')
 
 	// Build Each File
 	.pipe(Through2.obj((file, _, cb) => {
@@ -61,6 +61,7 @@ module.exports = () => {
 			codeLang: pageFM.attributes.lang || null,
 			slugify: getSlugger()
 		}
+
 
 		let pageContent = pageFM.body
 
@@ -86,7 +87,7 @@ module.exports = () => {
 			community_toc: masterToc.make(file.path, relPath, "community_toc"),
 		}
 
-		let page = renderTemplate(pageTemplate, templateVariables)
+		let page = renderTemplate(pageTemplate, templateVariables, currentPageInfo)
 
 		file.contents = Buffer.from(page)
 		file.path     = replaceExt(file.path, '.html')

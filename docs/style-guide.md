@@ -256,3 +256,12 @@ Renders as:
 | ------------ | ------- | ------------------------------- |
 | `local_time` | time()  | None                            |
 | `start_day`  | sunday  | sunday, monday, tuesday, _etc._ |
+
+
+## Includes
+Includes allow the docs to remain DRY. If multiple pages include the same sections, code snippets, or other common elements another markdown file can be included and parsed within other files
+
+To include another markdown file in the current file use the syntax `{{include:[path to template]}}`
+
+Example:
+Using `{{include:_includes/testing.md}}` would result in the content of `/docs/_includes/testing.md` being included in the current file in place of the template tag.
