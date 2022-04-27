@@ -269,3 +269,4 @@ Renders as:
 - **Add-on** (noun, an add-on extends the functionality of ExpressionEngine )
 - **ExpressionEngine CMS** (noun, ExpressionEngine CMS the product. Notice capitalization)
 - **Fieldtype** (noun, a field is a container that holds a specific type of information)
+- **Multi Select** (noun, a field in which the user can select multiple options).

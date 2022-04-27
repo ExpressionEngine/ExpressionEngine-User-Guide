@@ -51,7 +51,7 @@ Or, the list may be populated by the contents of another channel field from your
 
 ## Template Tags
 
-Select Dropdown field's value can be rendered in a template using a single variable with the field's name. To specifically display the field's value or label, use the respective modifier.
+A Select Dropdown field's value can be rendered in a template using a single variable with the field's name. To specifically display the field's value or label, use the respective modifier.
 
     Value: {field_name}<br>
     Value: {field_name:value}<br>

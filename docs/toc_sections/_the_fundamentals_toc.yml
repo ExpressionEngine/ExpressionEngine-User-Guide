@@ -195,7 +195,7 @@
       href: fieldtypes/grid.md
     - name: Notes
       href: fieldtypes/notes.md
-    - name: Multiselect
+    - name: Multi Select
       href: fieldtypes/multiselect.md
     - name: Relationships
       href: fieldtypes/relationships.md
