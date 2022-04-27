@@ -53,7 +53,7 @@ The Update file for a module includes a class with a name that is a combination 
 
 [TOC=3]
 
-### `install() *`
+### `install()`
 
 Installs the module, adding a record to the `exp_modules` table, creates and populates and necessary database tables, adds any necessary records to the `exp_actions` table, and if custom tabs are to be used, adds those fields to any saved publish layouts.
 
@@ -86,7 +86,7 @@ Installs the module, adding a record to the `exp_modules` table, creates and pop
       ee()->load->library('layout');
       ee()->layout->add_layout_tabs($this->tabs(), 'module_name');
 
-### `update($current = '') *`
+### `update($current = '')`
 
 | Parameter | Type      | Description                                                        |
 | --------- | --------- | ------------------------------------------------------------------ |
@@ -110,7 +110,7 @@ This function is checked on any visit to the module's control panel, and compare
         return TRUE;
     }
 
-### `uninstall() *`
+### `uninstall()`
 
 | Parameter | Type      | Description                                                  |
 | --------- | --------- | ------------------------------------------------------------ |
@@ -201,7 +201,7 @@ NOTE: **Note:** if your module includes a tab, do not forget to indicate this in
 
 [TOC=3]
 
-### `display($channel_id, $entry_id = '') *`
+### `display($channel_id, $entry_id = '')`
 
 | Parameter    | Type    | Description                                           |
 | ------------ | ------- | ----------------------------------------------------- |
@@ -231,7 +231,7 @@ The settings array elements:
       )
     )
 
-### `validate($entry, $values) *`
+### `validate($entry, $values)`
 
 | Parameter | Type                                                                         | Description                                                                                                                                                                                                            |
 | --------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -251,7 +251,7 @@ Allows you to validate the data after the publish form has been submitted but be
       return $validator->validate($values);
     }
 
-### `clone($entry, $values) *`
+### `cloneData($entry, $values)`
 
 | Parameter | Type                                                                | Description                         |
 | --------- | ------------------------------------------------------------------- | ------ ----------------------------- |
@@ -261,7 +261,7 @@ Allows you to validate the data after the publish form has been submitted but be
 
 Code that needs to be executed when an entry is being [cloned](pro/entry_cloning.md). This function is called before `validate`, so if you need to modify the data that will be passed to validation service (as well as `$_POST` array), this is the place to do it.
 
-    public function clone(ChannelEntry $entry, $values)
+    public function cloneData(ChannelEntry $entry, $values)
     {
         if ($values['pages_uri'] == '') {
             return $values;
@@ -285,7 +285,7 @@ Code that needs to be executed when an entry is being [cloned](pro/entry_cloning
         return $values;
     }
 
-### `save($entry, $values) *`
+### `save($entry, $values)`
 
 | Parameter | Type                                                                         | Description                                                                                                                                                                                                           |
 | --------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -310,7 +310,7 @@ Called during a `ChannelEntry` entity's `afterSave` event, this allows you to in
         ee()->db->insert('table_name', $data);
     }
 
-### `delete($entry_ids) *`
+### `delete($entry_ids)`
 
 | Parameter   | Type    | Description                                           |
 | ----------- | ------- | ----------------------------------------------------- |
