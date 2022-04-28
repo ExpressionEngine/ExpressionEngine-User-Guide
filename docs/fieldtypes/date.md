@@ -13,7 +13,7 @@ The Date field allows for quick entry of dates via the publish form. When the fi
 
 ![date field](/_images/field_date.png)
 
-## Field Options
+## Field Settings
 
 ### Localized or Fixed?
 

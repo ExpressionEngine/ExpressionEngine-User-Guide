@@ -18,7 +18,7 @@ Notes is a fieldtype that contains text used to give context to content editors.
 </div>
 
 
-## Field Options
+## Field Settings
 
 ### Note Content
 

@@ -15,7 +15,7 @@ Radio Buttons allow users to choose a single item from a list of options.
 
 ![radio field](_images/cp-field-radio.png)
 
-## Field Options
+## Field Settings
 
 ### Text Formatting
 
@@ -37,17 +37,7 @@ For a Radio Buttons field this results in an interface with only the labels visi
 
 `1`, `2`, or `3` is what gets stored in the database and is then the value used for the Channel Entries tag [search parameter](channels/entries.md#searchfield_name). But both the value and the label are accessible via the field's template tags, which is outlined below.
 
-#### Manual population
-
-You may also enter each item in the provided textarea, separating each item on a single line. Each line will represent the choices value AND label.
-
-![](_images/cp-select-manual.png)
-
-#### Populate from channel field
-
-Or, the list may be populated by the contents of another channel field from your site.
-
-![](_images/cp-select-channel.png)
+{{embed:fieldtypes/_selectable_field_options.md}}
 
 
 ## Template Tags

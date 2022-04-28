@@ -15,7 +15,7 @@ Select Dropdown fields allow publishers to choose a single item from a dropdown 
 
 ![select field](_images/field_select.png)
 
-## Field Options
+## Field Settings
 
 ### Text Formatting
 
@@ -25,13 +25,7 @@ Specifies how the entered-text will be formatted when rendered on the front-end.
 
 This is where the list of items to select from is created. You have several ways to populate these items.
 
-#### Value/Label pairs
-
-The default choice is to enter a series of values and labels separately. Typically when constructing an HTML form, fields will have a different value than their presentation label. For example, if you want to enable the author to choose from a list of numbers, you might want the database to represent the actual numerical value:
-
-![](_images/valuelabel1.png)
-
-This results in an interface with only the labels visible:
+{{embed:fieldtypes/_selectable_field_value_pair_options.md}}
 
 ![](_images/valuelabel2.png)
 

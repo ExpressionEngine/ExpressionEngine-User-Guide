@@ -17,7 +17,7 @@ The File Grid field in ExpressionEngine provides a way to upload multiple files 
 
 ![file grid field](_images/field_file_grid.png)
 
-## Field Options
+## Field Settings
 
 In addition to the options available to a regular Grid field, you also have the following options to configure the default File column:
 
