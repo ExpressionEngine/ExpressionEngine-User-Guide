@@ -17,6 +17,8 @@ Multi Select Fields allow publishers to choose multiple items from a list.
 
 ## Field Settings
 
+{{embed:fieldtypes/_fieldtype-settings.md}}
+
 ### Text Formatting
 
 Specifies how the entered-text will be formatted when rendered on the front-end. Most items will be entered will be single-lined and thus treated as a single paragraph by most text-processing plugins.
@@ -35,7 +37,7 @@ This is where the list of items to select from is created. You have several ways
 
 ## Template Tags
 
-Checkbox Field values and labels can be displayed in templates using a single variable or a variable pair for more control of the output.
+Multi Select Field values and labels can be displayed in templates using a single variable or a variable pair for more control of the output.
 
 ### Single Variable
 
@@ -96,7 +98,7 @@ This parameter limits the number of selected items output by the tag. It works f
 
 ### Markup Parameter
 
-As a single tag, a checkbox will display a comma separated list of values. If you want an HTML list, you can use markup="ul" or markup="ol" to change the output to the equivalent html list
+As a single tag, a multi select will display a comma separated list of values. If you want an HTML list, you can use markup="ul" or markup="ol" to change the output to the equivalent html list
 
     {field_name markup='ul'}
 

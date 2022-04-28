@@ -195,6 +195,8 @@
       href: fieldtypes/grid.md
     - name: Notes
       href: fieldtypes/notes.md
+    - name: Number Input
+      href: fieldtypes/number.md
     - name: Multi Select
       href: fieldtypes/multiselect.md
     - name: Relationships
@@ -203,20 +205,20 @@
       href: fieldtypes/rte.md
     - name: Radio Buttons
       href: fieldtypes/radio-buttons.md
+    - name: Range Slider
+      href: fieldtypes/range-slider.md
     - name: Select Dropdown
       href: fieldtypes/select.md
     - name: Selectable Buttons
       href: fieldtypes/selectable-buttons.md
-    - name: Value Slider, Range Slider
-      href: fieldtypes/slider.md
     - name: Text Input
       href: fieldtypes/text.md
     - name: Textarea
       href: fieldtypes/textarea.md
-    - name: Number Input
-      href: fieldtypes/number.md
     - name: Toggle
       href: fieldtypes/toggle.md
+    - name: Value Slider
+      href: fieldtypes/value-slider.md
     - name: URL
       href: fieldtypes/url.md
 

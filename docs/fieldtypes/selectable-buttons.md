@@ -17,6 +17,8 @@ Selectable Button fields allow publishers to choose either multiple or single it
 
 ## Field Settings
 
+{{embed:fieldtypes/_fieldtype-settings.md}}
+
 ### Allow multiple selections?
 
 Selectable Buttons allow switching between single selection and multiple selection mode. Enable this option to allow publishers to choose multiple options. Disabling this option (default) will allow publishers to only choose a single option.

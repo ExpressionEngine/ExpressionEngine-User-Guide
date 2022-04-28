@@ -17,6 +17,8 @@ Select Dropdown fields allow publishers to choose a single item from a dropdown 
 
 ## Field Settings
 
+{{embed:fieldtypes/_fieldtype-settings.md}}
+
 ### Text Formatting
 
 Specifies how the entered-text will be formatted when rendered on the front-end. Most items will be entered will be single-lined and thus treated as a single paragraph by most text-processing plugins.
