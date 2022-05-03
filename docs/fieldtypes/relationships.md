@@ -82,6 +82,8 @@ The following parameters are available to all looping relationship tags, allowin
 
 Some relationship tags may have additional parameters available. These are included in the usage instructions below.
 
+NOTE: **NOTE:** The [`disable`](fieldtypes/relationships.md#optimizing-relationships-rerformance) parameter should be applied to the containing `{exp:channel:entries}` call, not to the relationship tag itself.
+
 ## Accessing Children
 
 ### Usage: Multiple Related Entries
@@ -287,6 +289,23 @@ By default the entry IDs will be pipe-delimited, but you can choose to have them
 Would output in the format:
 
     43,48,127
+
+## Optimizing Relationships Performance
+
+If you are heavily using relationship fields, it is recommended that you disable certain features, such as custom fields or categories on related entries, to speed up template loading. That can be done by applying `disable` parameter to the `exp:channel:entries` tag that includes relationship field tag (or siblings / parents tag).
+
+The following items can be turned off:
+
+- `relationship_custom_fields`
+- `relationship_categories`
+
+Example:
+
+    {exp:channel:entries channel="parentChannel" disable="relationship_custom_fields|relationship_categories"}
+      {relationship_field}
+          {relationship_field:title}
+      {/relationship_field}
+    {/exp:channel:entries}
 
 ## Namespacing Variables
 
