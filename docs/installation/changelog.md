@@ -42,6 +42,7 @@
   - Resolved the issue where `wrap` parameter on file field tags was causing PHP errors when used with image modifiers
   - Resolved [#1522](https://github.com/ExpressionEngine/ExpressionEngine/issues/1522) where `[]` could not be used in regex validation rule
   - Resolved [#1852](https://github.com/ExpressionEngine/ExpressionEngine/issues/1852), [#1083](https://github.com/ExpressionEngine/ExpressionEngine/issues/1083) where HTML form validation could cause PHP notices from channel entries parser
+  - Resolved [#1467](https://github.com/ExpressionEngine/ExpressionEngine/issues/1467) where member count for roles could be incorrect when using secondary roles
   - Resolved issue where error message for field in Channel Form could be shown twice
   - Resolved issue where is was not possible to view file URL in table view of File Manager
   - Resolved issue where dragging categories in the Forums CP could make boards not show up on the site
