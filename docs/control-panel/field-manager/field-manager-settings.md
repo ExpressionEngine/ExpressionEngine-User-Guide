@@ -21,7 +21,7 @@ This section of the Control Panel is where custom fields are created, edited and
 
 **Control Panel Location: `Developer > Fields > New/Edit Field`**
 
-This section of the control panel allows you to create and edit fields.
+This section of the control panel allows you to create and edit [Fields](/fieldtypes/overview.md) and Field Groups.
 
 Fields have the following settings:
 
@@ -40,4 +40,4 @@ Fields have the following settings:
 
 **Control Panel Location: `Developer > Fields > Field Groups > New/Edit Field Group`**
 
-This section allows you to create and edit field groups.
+This section allows you to create and edit field groups. Field Groups are collections of fields which can then be related to one or more [Channels](control-panel/channels.html#fields-tab).

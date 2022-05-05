@@ -15,7 +15,7 @@ URL is a fieldtype for storing URLs. This fieldtype is validated for the content
 
 ![url field](_images/field_url.png)
 
-## Field Options
+## Field Settings
 
 ### Allowed URL Schemes
 

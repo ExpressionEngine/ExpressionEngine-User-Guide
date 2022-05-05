@@ -15,7 +15,7 @@ You can find out more about general RTE configuration by reading the [Rich Text 
 
 ![rte field](_images/field_rte.png)
 
-## Field Options
+## Field Settings
 
 When creating or modifying RTE field, the following field settings are available.
 

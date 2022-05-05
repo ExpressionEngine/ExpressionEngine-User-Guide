@@ -17,7 +17,7 @@ Fluid fields give the author control over the structure of their content, while 
 
 ![fluid fields](_images/field_fluid.png)
 
-## Field Options
+## Field Settings
 
 ### Custom Fields
 

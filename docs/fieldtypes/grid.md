@@ -19,7 +19,7 @@ The Grid field in ExpressionEngine provides a way to group fieldtypes in repeata
 
 ![grid field](_images/field_grid.png)
 
-## Field Options
+## Field Settings
 
 ### Minimum Rows
 

@@ -12,6 +12,7 @@ const Path          = require('path')
 const MarkdownSlug  = require('markdown-slug')
 const RenderEmbed = require('./embed-render.js')
 const Fs            = require('fs')
+const Logger       = require('./logger.js')
 var parentPageInfo = "";
 
 
@@ -21,9 +22,15 @@ const bsToFs = (p) => p.replace(/\\/g, '/')
 // Gets the folder depth of the specified path
 const dirDepth = (myDir) => myDir.split(Path.sep).length
 
-const returnEmbedContents = (match, p1, p2, p3, offset, string) => {
-	embedContents = Fs.readFileSync('./docs/'+p1, { encoding: 'utf8' });
-	embedContents = RenderEmbed(embedContents, parentPageInfo);
+const returnEmbedContents = (match, p1, p2, p3, offset, string) => {	
+		console.log("Found Embed: " + p1);
+	try {
+		embedContents = Fs.readFileSync('./docs/'+p1, { encoding: 'utf8' });
+		embedContents = RenderEmbed(embedContents, parentPageInfo);
+	  } catch (err) {
+		embedContents = "";
+		Logger.warn('Unable to embed ' + p1 + ' on page:', parentPageInfo.path, 'Failed Embeds')
+	  }
 	return embedContents;
 }
 // Renders handlebar style template variables from an object
