@@ -19,6 +19,8 @@ NOTE: **Important:** Whenever BBCode is used, even if your settings Allow All HT
 
 NOTE: **Note:** BBCode is automatically disabled if a field's [text formatting](general/text-formatting.md) is set to _none_.
 
+This [guide](https://www.bbcode.org/how-to-use-bbcode-a-complete-guide.php) from bbcode.org contains extra syntax information.
+
 ## URLs and Linking
 
     [url]https://example.com/[/url]
@@ -98,3 +100,17 @@ You can submit pre-formatted text such as script examples. These will be replace
 You can create HTML abbreviations using the above tags. The above tag would result in:
 
     <abbr title="Cascading Style Sheets">CSS</abbr>
+    
+## Lists
+
+    [list]
+
+    [*]First
+
+    [*]Second
+
+    [*]Third
+
+    [/list]
+
+To change the symbol in the list (instead of using a circle), simply use the syntax “list=” in the opening tag, entering the desired symbol (circle, disk, square).
