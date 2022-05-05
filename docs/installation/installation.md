@@ -34,11 +34,7 @@ You'll need an empty database and the following credentials handy to install Exp
 
 ## 3. Set File Permissions
 
-You need to enable write access to the following files and folders.
-
-For Apache, that would be `666` for files and `777` for directories, in a worst-case scenario. You should check with your web host to see if more restrictive permissions can be used to allow PHP to write to files and directories. See [File Permissions](troubleshooting/general.md#file-permissions) for details.
-
-For IIS, provide all permissions to the IIS user for these files and directories.
+You need to enable write access to the following files and folders:
 
 - `system/ee/`
 - `system/ee/*` (only top-level files and directories need modifying)
@@ -55,9 +51,14 @@ For IIS, provide all permissions to the IIS user for these files and directories
 - `themes/ee/*` (only top-level files and directories need modifying)
 - `themes/user/`
 
+For Apache, the permissions would be `644` for files and `755` for directories. For IIS, provide all permissions to the IIS user for these files and directories.
+
 TIP: **Tip:** On a Unix based system, you can use the following pattern in your terminal to set permissions recursively to what you need for folders and files. In this example, we are setting all directories in _system/ee_ to **755** and all files therein to **644**, recursively:
 
     find system/ee \( -type d -exec chmod 755 {} \; \) -o \( -type f -exec chmod 644 {} \; \)
+
+The **more restrictive permissions** should be used to allow PHP to write to files and directories. In a worst-case scenario, use `777` for directories and `666` for files. See [File Permissions](troubleshooting/general.md#file-permissions) for details.
+
 
 ## 4. Run The Installation Wizard
 
