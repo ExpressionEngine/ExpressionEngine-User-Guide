@@ -25,11 +25,13 @@ The Value Slider fieldtype allows the user to select a numerical value. It is re
 
 ## Template Tags
 
-### Value Slider
+The Value Slider can only be rendered as a single template tag.
 
-#### `{my_value_slider_field}`
+### Single tag
 
-**Parameters:**
+`{my_value_slider_field}`
+
+#### Single Tag Parameters:
 
 `decimal_place="2"`
 The number of decimal digits to show after the number
@@ -39,18 +41,20 @@ Include prefix before the value, as specified in field settings
 
 `suffix="yes"`
 
-#### `{my_value_slider_field:min}`
+#### Single Tag Modifiers
+
+##### `{my_value_slider_field:min}`
 
 Field minimal possible value, as specified in settings.
 
-#### `{my_value_slider_field:max}`
+##### `{my_value_slider_field:max}`
 
 Field maximal possible value, as specified in settings.
 
-#### `{my_value_slider_field:prefix}`
+##### `{my_value_slider_field:prefix}`
 
 Field prefix, as specified in settings.
 
-#### `{my_value_slider_field:suffix}`
+##### `{my_value_slider_field:suffix}`
 
 Field suffix, as specified in settings.

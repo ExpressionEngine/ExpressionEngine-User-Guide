@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Range Slider Fieldtypes
+# Range Slider Fieldtype
 
 The Range Slider fieldtype allows the user to select numerical value. It is rendered as `range` HTML input type with some additional styling, allowing users to precisely select the value.   
 
@@ -29,7 +29,7 @@ The Range Slider fieldtype shows two sliders on the same scale, allowing to sele
 
 The Range Slider can be rendered as a single template tag as well as tag pair.
 
-#### Single tag
+### Single tag
 
 `{my_range_slider_field}`
 
@@ -38,7 +38,7 @@ The output would be similar to
 12 &mdash; 43
 ```
 
-**Parameters:**
+#### Single Tag Parameters:
 
 `decimal_place="2"`
 The number of decimal digits to show after the number
@@ -48,23 +48,33 @@ Include prefix before the value, as specified in field settings
 
 `suffix="yes"`
 
-#### `{my_range_slider_field:min}`
+#### Single Tag Modifiers
+
+##### `{my_range_slider_field:min}`
 
 Field minimal possible value, as specified in settings.
 
-#### `{my_range_slider_field:max}`
+##### `{my_range_slider_field:max}`
 
 Field maximal possible value, as specified in settings.
 
-#### `{my_range_slider_field:prefix}`
+##### `{my_range_slider_field:prefix}`
 
 Field prefix, as specified in settings.
 
-#### `{my_range_slider_field:suffix}`
+##### `{my_range_slider_field:suffix}`
 
 Field suffix, as specified in settings.
 
-#### Tag pair
+##### `{my_range_slider_field:from}`
+
+First range slider value. 
+
+##### `{my_range_slider_field:to}`
+
+Second range slider value.
+
+### Tag pair
 
 ```
 {my_range_slider_field}
@@ -77,7 +87,7 @@ The output would be similar to
 between 12 and 43
 ```
 
-**Parameters:**
+#### Tag Pair Parameters:
 
 `decimal_place="2"`
 The number of decimal digits to show after the number
@@ -87,12 +97,12 @@ Include prefix before the value, as specified in field settings
 
 `suffix="yes"`
 
-#### `{my_range_slider_field:from}`
+#### Tag Pair Variables:
+
+##### `{from}`
 
 First range slider value. 
 
-#### `{my_range_slider_field:to}`
+##### `{to}`
 
 Second range slider value.
-
-Additionally, `:min`, `:max`, `:prefix` and `:suffix` modifiers can be used
