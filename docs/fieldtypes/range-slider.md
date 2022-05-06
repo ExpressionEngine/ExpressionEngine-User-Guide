@@ -35,7 +35,7 @@ The Range Slider can be rendered as a single template tag as well as tag pair.
 
 The output would be similar to 
 ```
-12 &mdash; 43
+12 - 43
 ```
 
 #### Single Tag Parameters:

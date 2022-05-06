@@ -8,7 +8,7 @@ The maximum value/number field can contain.
 
 ### Step
 
-The step to increase/decrease the value when clicking arrow buttons in the field.
+The step to increase/decrease the value by in the field.
 
 ### Prefix
 
