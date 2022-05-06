@@ -8,7 +8,7 @@
 -->
 # ExpressionEngine v6 Change Log
 
-## Version 6.3.4 (Release: May 5, 2022)
+## Version 6.3.4 (Release: May 6, 2022)
 
 - **Contributors** 🙌
 <div class="max-w-7xl mx-autotext-center">
