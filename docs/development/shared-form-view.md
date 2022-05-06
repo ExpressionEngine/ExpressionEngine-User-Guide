@@ -134,7 +134,7 @@ Here are the values available to the `type` key documented above:
 |Field name|Description|
 |--- |--- |
 |text|Regular text input.|
-|short-text|Small text input, typically used when a fieldset needs multiple small, normally numeric, values set. <br>N.B. Currently use of this field **requires** the inclusion of an option [label](#individual-field-definitions).|
+|short-text|Small text input, typically used when a fieldset needs multiple small, normally numeric, values set. <br> **Note:** Currently use of this field **requires** the inclusion of an option [label](#individual-field-definitions).|
 |textarea|Textarea input.|
 |select|Select dropdown input.|
 |dropdown|A rich select dropdown .|
