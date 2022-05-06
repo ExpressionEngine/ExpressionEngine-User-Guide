@@ -7,9 +7,9 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Value Slider and Range Slider Fieldtypes
+# Range Slider Fieldtypes
 
-The Value Slider fieldtype allows the user to select numerical value. It is rendered as `range` HTML input type with some additional styling, allowing users to precisely select the value.   
+The Range Slider fieldtype allows the user to select numerical value. It is rendered as `range` HTML input type with some additional styling, allowing users to precisely select the value.   
 
 The Range Slider fieldtype shows two sliders on the same scale, allowing to select a range of numbers (from...to).
 
@@ -37,7 +37,32 @@ The output would be similar to
 ```
 12 &mdash; 43
 ```
-The same parameters can be applied that exist for Value Slider fieldtype.
+
+**Parameters:**
+
+`decimal_place="2"`
+The number of decimal digits to show after the number
+
+`prefix="yes"`
+Include prefix before the value, as specified in field settings
+
+`suffix="yes"`
+
+#### `{my_range_slider_field:min}`
+
+Field minimal possible value, as specified in settings.
+
+#### `{my_range_slider_field:max}`
+
+Field maximal possible value, as specified in settings.
+
+#### `{my_range_slider_field:prefix}`
+
+Field prefix, as specified in settings.
+
+#### `{my_range_slider_field:suffix}`
+
+Field suffix, as specified in settings.
 
 #### Tag pair
 
@@ -51,7 +76,16 @@ The output would be similar to
 ```
 between 12 and 43
 ```
-The same parameters can be applied that exist for Value Slider fieldtype.
+
+**Parameters:**
+
+`decimal_place="2"`
+The number of decimal digits to show after the number
+
+`prefix="yes"`
+Include prefix before the value, as specified in field settings
+
+`suffix="yes"`
 
 #### `{my_range_slider_field:from}`
 
