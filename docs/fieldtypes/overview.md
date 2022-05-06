@@ -9,22 +9,31 @@
 
 # Fieldtype Overview
 
-ExpressionEngine **channels** are where your information gets stored. Within a channel you will typically find **field**. A field is a container that holds a specific type of information. For example, if you have a blog channel, you might have fields for the date, the title, the blog entry itself, an image, etc. Different field types let you manage your data intelligently. Collections of fields are stored in a **Field Group**. Each field group can be assigned to a channel.
+ExpressionEngine **channels** are where your information gets stored. Within a channel you will typically find **field**. A field is a container that holds a specific type of information. 
+
+For example, if you have a blog channel, you might have fields for the date, the title, the blog entry itself, an image, etc. Different fieldtypes let you manage your data intelligently. Field Groups are collections of fields which can then be related to one or more [Channels](control-panel/channels.html#fields-tab).
 
 ExpressionEngine has the following built-in fieldtypes:
-
-- [Date](fieldtypes/date.md)
-- [Duration](fieldtypes/duration.md)
-- [Email Address](fieldtypes/email-address.md)
-- [File](fieldtypes/file.md)
-- [File Grid](fieldtypes/file-grid.md)
-- [Fluid](fieldtypes/fluid.md)
-- [Grid](fieldtypes/grid.md)
-- [Relationships](fieldtypes/relationships.md)
-- [Rich Text Editor](fieldtypes/rte.md)
-- [Checkboxes, Radio Buttons, Select, Multiselect](fieldtypes/select.md)
-- [Color Picker](fieldtypes/colorpicker.md)
-- [Text Input](fieldtypes/text.md)
-- [Textarea](fieldtypes/textarea.md)
-- [Toggle](fieldtypes/toggle.md)
-- [URL](fieldtypes/url.md)
+- [Checkboxes](/fieldtypes/checkboxes.md)
+- [Color Picker](/fieldtypes/colorpicker.md)
+- [Date](/fieldtypes/date.md)
+- [Duration](/fieldtypes/duration.md)
+- [Email Address](/fieldtypes/email-address.md)
+- [File](/fieldtypes/file.md)
+- [File Grid](/fieldtypes/file-grid.md)
+- [Fluid](/fieldtypes/fluid.md)
+- [Grid](/fieldtypes/grid.md)
+- [Multiselect](/fieldtypes/multiselect.md)
+- [Number Input](/fieldtypes/number.md)
+- [Notes](/fieldtypes/notes.md)
+- [Radio Buttons](/fieldtypes/radio-buttons.md)
+- [Range Slider](/fieldtypes/range-slider.md)
+- [Relationships](/fieldtypes/relationships.md)
+- [Rich Text Editor](/fieldtypes/rte.md)d)
+- [Select Dropdown](/fieldtypes/select.md)
+- [Selectable Buttons](/fieldtypes/selectable-buttons.md)
+- [Text Input](/fieldtypes/text.md)
+- [Textarea](/fieldtypes/textarea.md)
+- [Value Slider](/fieldtypes/value-slider.md)
+- [Toggle](/fieldtypes/toggle.md)
+- [URL](/fieldtypes/url.md)

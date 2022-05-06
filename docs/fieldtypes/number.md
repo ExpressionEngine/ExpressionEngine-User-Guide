@@ -19,7 +19,7 @@ Number Input is a single-lined field where you can enter a number. Its also show
 </div>
 
 
-## Field Options
+## Field Settings
 
 ### Minimum value
 

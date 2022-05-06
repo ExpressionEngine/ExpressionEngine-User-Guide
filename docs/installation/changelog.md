@@ -8,6 +8,46 @@
 -->
 # ExpressionEngine v6 Change Log
 
+## Version 6.3.4 (Release: May 6, 2022)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/14070252?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">jamesseavers</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=jamesseavers" target="_BLANK">@jamesseavers</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/308752?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tim Murtaugh</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=murtaugh" target="_BLANK">@murtaugh</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/6020323?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Doug Black Jr</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr" target="_BLANK">@dougblackjr</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/931642?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Sobral</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robsonsobral" target="_BLANK">@robsonsobral</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/35812875?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Gilbert</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=gilbert-hop" target="_BLANK">@gilbert-hop</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+- **Enhancements** 🚀
+  - Allow `{base_` variables to be parsed in query module. [#1808](https://github.com/ExpressionEngine/ExpressionEngine/issues/1808)
+  - Added support for root relative URL in URL field. [#384](https://github.com/ExpressionEngine/ExpressionEngine/issues/384)
+
+- **Bug Fixes** 💃🐛
+  - Resolved [#1889](https://github.com/ExpressionEngine/ExpressionEngine/issues/1889) where `status="not closed|custom"` was not fully respected for relationship `{parent}` tag
+  - Resolved [#1875](https://github.com/ExpressionEngine/ExpressionEngine/issues/1875) where wearch excerpt containing email address was producing unresolved Javascript code
+  - Resolved [#1870](https://github.com/ExpressionEngine/ExpressionEngine/issues/1870) where editing permissions on category group was not always working correctly
+  - Resolved [#1870](https://github.com/ExpressionEngine/ExpressionEngine/issues/1870) where editing permissions on category group was not always working correctly
+  - Resolved [#1734](https://github.com/ExpressionEngine/ExpressionEngine/issues/1734) where pagination in Pages module was not respecting sorting order
+  - Resolved the issue where where searching entries by entry_id in CP did not work when entering less than 3 digits
+  - Resolved [#2000](https://github.com/ExpressionEngine/ExpressionEngine/issues/2000) where regular members could not upload SVG files
+  - Resolved [#2054](https://github.com/ExpressionEngine/ExpressionEngine/issues/2054) where submitting channel from as guest could show PHP error on redirect
+  - Resolved the issue where `wrap` parameter on file field tags was causing PHP errors when used with image modifiers
+  - Resolved [#1522](https://github.com/ExpressionEngine/ExpressionEngine/issues/1522) where `[]` could not be used in regex validation rule
+  - Resolved [#1852](https://github.com/ExpressionEngine/ExpressionEngine/issues/1852), [#1083](https://github.com/ExpressionEngine/ExpressionEngine/issues/1083) where HTML form validation could cause PHP notices from channel entries parser
+  - Resolved [#1467](https://github.com/ExpressionEngine/ExpressionEngine/issues/1467) where member count for roles could be incorrect when using secondary roles
+  - Resolved issue where error message for field in Channel Form could be shown twice
+  - Resolved issue where is was not possible to view file URL in table view of File Manager
+  - Resolved issue where dragging categories in the Forums CP could make boards not show up on the site
+  - Fixed several PHP 8.1 compatibility issues
+
 ## Version 6.3.3 (Release: April 27, 2022)
 
 - **Contributors** 🙌
