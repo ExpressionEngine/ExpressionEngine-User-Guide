@@ -15,6 +15,10 @@ Selectable Button fields allow publishers to choose either multiple or single it
 
 ![selectable buttons field](_images/field_selectable_buttons.png)
 
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/8UUh91hWPOs?vq=HD1080" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 ## Field Settings
 
 {{embed:fieldtypes/_fieldtype-settings.md}}
