@@ -141,7 +141,7 @@ Here are the values available to the `type` key documented above:
 |checkbox|Checkboxes displayed in a vertical list.|
 |radio|Radio buttons displayed in a vertical list.|
 |yes_no|A Toggle control that returns either y or n respectively.|
-|file|File input. Requires filepicker configuration. <br>N.B. This input provides a standard file upload button allowing selection and uploading of a file from the users environment. You will need to provide your own back-end code to do something with the uploaded file. If you want to insert a standard [EE File picker](#adding-an-EE-File-picker-to-your-shared-view-form) see notes later in this article.|
+|file|File input. Requires filepicker configuration. <br> **NOTE:** This input provides a standard file upload button allowing selection and uploading of a file from the users environment. You will need to provide your own back-end code to do something with the uploaded file. If you want to insert a standard [EE File picker](#adding-an-EE-File-picker-to-your-shared-view-form) see notes later in this article.|
 |image|Image input. Like file but shows an image thumbnail of the selected image as well as controls to edit or remove. Requires filepicker configuration.|
 |password|Password input.|
 |hidden|Hidden input.|
