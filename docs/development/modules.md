@@ -17,7 +17,7 @@ lang: php
 
 Modules are the most complex form of add-on. They can have their own database tables, backend control panels, tabs and fields that are included on the publish page, as well as their own tags for use in templates.
 
-NOTE: Modules can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](/cli/built-in-commands/make-addon.md) for more information.
+NOTE: Modules can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](cli/built-in-commands/make-addon.md) for more information.
 
 
 ## Basic File Structure
@@ -53,7 +53,7 @@ The Update file for a module includes a class with a name that is a combination 
 
 [TOC=3]
 
-### `install() *`
+### `install()`
 
 Installs the module, adding a record to the `exp_modules` table, creates and populates and necessary database tables, adds any necessary records to the `exp_actions` table, and if custom tabs are to be used, adds those fields to any saved publish layouts.
 
@@ -86,7 +86,7 @@ Installs the module, adding a record to the `exp_modules` table, creates and pop
       ee()->load->library('layout');
       ee()->layout->add_layout_tabs($this->tabs(), 'module_name');
 
-### `update($current = '') *`
+### `update($current = '')`
 
 | Parameter | Type      | Description                                                        |
 | --------- | --------- | ------------------------------------------------------------------ |
@@ -110,7 +110,7 @@ This function is checked on any visit to the module's control panel, and compare
         return TRUE;
     }
 
-### `uninstall() *`
+### `uninstall()`
 
 | Parameter | Type      | Description                                                  |
 | --------- | --------- | ------------------------------------------------------------ |
@@ -201,7 +201,7 @@ NOTE: **Note:** if your module includes a tab, do not forget to indicate this in
 
 [TOC=3]
 
-### `display($channel_id, $entry_id = '') *`
+### `display($channel_id, $entry_id = '')`
 
 | Parameter    | Type    | Description                                           |
 | ------------ | ------- | ----------------------------------------------------- |
@@ -231,7 +231,7 @@ The settings array elements:
       )
     )
 
-### `validate($entry, $values) *`
+### `validate($entry, $values)`
 
 | Parameter | Type                                                                         | Description                                                                                                                                                                                                            |
 | --------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -251,7 +251,7 @@ Allows you to validate the data after the publish form has been submitted but be
       return $validator->validate($values);
     }
 
-### `clone($entry, $values) *`
+### `cloneData($entry, $values)`
 
 | Parameter | Type                                                                | Description                         |
 | --------- | ------------------------------------------------------------------- | ------ ----------------------------- |
@@ -259,9 +259,9 @@ Allows you to validate the data after the publish form has been submitted but be
 | \$values  | `array`         | an associative array with field names as keys and form submission data as the value (i.e. `array('fortune' => 'All your hard work will soon pay off.'))`. The keys are derrived from the data returned by `display()`. |
 | Returns   | `array`         | $values modified array of values  |
 
-Code that needs to be executed when an entry is being [cloned](/pro/entry_cloning.md). This function is called before `validate`, so if you need to modify the data that will be passed to validation service (as well as `$_POST` array), this is the place to do it.
+Code that needs to be executed when an entry is being [cloned](pro/entry_cloning.md). This function is called before `validate`, so if you need to modify the data that will be passed to validation service (as well as `$_POST` array), this is the place to do it.
 
-    public function clone(ChannelEntry $entry, $values)
+    public function cloneData(ChannelEntry $entry, $values)
     {
         if ($values['pages_uri'] == '') {
             return $values;
@@ -285,7 +285,7 @@ Code that needs to be executed when an entry is being [cloned](/pro/entry_clonin
         return $values;
     }
 
-### `save($entry, $values) *`
+### `save($entry, $values)`
 
 | Parameter | Type                                                                         | Description                                                                                                                                                                                                           |
 | --------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -310,7 +310,7 @@ Called during a `ChannelEntry` entity's `afterSave` event, this allows you to in
         ee()->db->insert('table_name', $data);
     }
 
-### `delete($entry_ids) *`
+### `delete($entry_ids)`
 
 | Parameter   | Type    | Description                                           |
 | ----------- | ------- | ----------------------------------------------------- |
@@ -359,13 +359,13 @@ If you return an associative array it must contain the key `body` and may contai
 
 - `body` (string): HTML string which will be used in the "body" section of the Control Panel layout inside the Add-On manager
 - `breadcrumb` (array): Associative array containing key/value pairs where the key is the [CP/URL](development/services/url.md) and the value is the string to display as the breadcrumb
-- `heading` (string): The string to display as the page `<title>` and the [Section Header](https://ellislab.com/style-guide/c/structure#section-header)
+- `heading` (string): The string to display as the page `<title>` and the Section Header.
 
-If your add-on needs a [sidebar](https://ellislab.com/style-guide/c/structure#content-box-sidebar) use the [Sidebar Service](development/services/sidebar.md).
+If your add-on needs a sidebar use the [Sidebar Service](development/services/sidebar.md).
 
 ### `ee()->cp->header`
 
-This variable allows you to further customize your [Section Header](https://ellislab.com/style-guide/c/structure#section-header) by specifying icons to go in front of the title.
+This variable allows you to further customize your Section Header by specifying icons to go in front of the title.
 
 Within your control panel method, or potentially the constructor, just set `ee()->cp->header`:
 
@@ -378,7 +378,7 @@ Within your control panel method, or potentially the constructor, just set `ee()
       )
     );
 
-- `toolbar_items` (array): An associative array of [buttons](https://ellislab.com/style-guide/c/structure#section-settings) to go in front of the title. The key will define the class and provide an icon (e.g. `settings` and `download`), and the value is another associative array containing the `href` and the `title` of the link.
+- `toolbar_items` (array): An associative array of buttons to go in front of the title. The key will define the class and provide an icon (e.g. `settings` and `download`), and the value is another associative array containing the `href` and the `title` of the link.
 
 ### Javascript
 

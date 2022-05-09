@@ -19,7 +19,7 @@ The Grid field in ExpressionEngine provides a way to group fieldtypes in repeata
 
 ![grid field](_images/field_grid.png)
 
-## Field Options
+## Field Settings
 
 ### Minimum Rows
 
@@ -31,7 +31,7 @@ Specifies the maximum number of rows this Grid can have. For example, if you ent
 
 ### Grid Fields
 
-Here, you specify the columns you want in your Grid field. All [native fieldtypes](fieldtypes/overview.md) are available to add and have many of the [same configuration options](control-panel/field-manager.md#createedit-field) as full fields do.
+Here, you specify the columns you want in your Grid field. All [native fieldtypes](fieldtypes/overview.md) are available to add and have many of the [same configuration options](control-panel/field-manager/field-manager-settings.md#createedit-field) as full fields do.
 
 ## Template Tags
 

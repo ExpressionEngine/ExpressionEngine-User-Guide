@@ -59,4 +59,4 @@ ExpressionEngine Pro adds the ability to add protection to Control Panel and fro
 
 ### Entry Cloning
 
-With ExpressionEngine Pro installed, it is possible to [clone existing entries](/pro/entry_cloning.md) using the "Clone to New Entry" option that is added to the "Save" dropdown menu on entry editing page. 
+With ExpressionEngine Pro installed, it is possible to [clone existing entries](pro/entry_cloning.md) using the "Clone to New Entry" option that is added to the "Save" dropdown menu on entry editing page. 

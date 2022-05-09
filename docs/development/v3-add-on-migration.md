@@ -139,7 +139,7 @@ Compatibility can be any string values, the commonly used ones are listed in [th
 
 ### Update Settings Format
 
-The format for the fieldtype settings pages has been changed to the more consistent [Shared Form View](development/shared-form-view.md) format. Please refer to the [Fieldtype Settings](development/fieldtypes.md#individual-settings) documentation for an example.
+The format for the fieldtype settings pages has been changed to the more consistent [Shared Form View](development/shared-form-view.md) format. Please refer to the [Fieldtype Settings](development/fieldtypes/example.md#individual-settings) documentation for an example.
 
 ### Use the Validation Service in Settings
 
@@ -204,7 +204,7 @@ If you return a string that data will be used in the "body" section of the Contr
 
 If you return an associative array it must contain the key `body` and may contain the keys `breadcrumb`, and `heading`. The `body` key should contain an HTML string which will be used in the "body" section of the Control Panel layout inside our Add-On Manager. The `breadcrumb` key should contain an associative array of URLs as keys and strings for the bodies. The header value will be added as the final segment in the breadcrumb. The `heading` key should contain a string for use as the heading (i.e. `Fortune Cookie Management`).
 
-If your add-on needs a [sidebar](https://ellislab.com/style-guide/c/structure#content-box-sidebar) use the [Sidebar Service](development/services/sidebar.md).
+If your add-on needs a sidebar use the [Sidebar Service](development/services/sidebar.md).
 
 ##### Example
 
@@ -257,7 +257,7 @@ See [CP/Table Service](development/services/table.md) for full documentation.
 
 #### The Pagination Service
 
-Adding pagination to the control panel is a common task and we created a pagination service to assist. This service follows our [style-guide](https://ellislab.com/style-guide/c/listings#pagination) handling all the mathematical calculations. All you need is the number of items you are going to paginate and a URL object:
+Adding pagination to the control panel is a common task and we created a pagination service to assist. This service handles all the mathematical calculations. All you need is the number of items you are going to paginate and a URL object:
 
     $base_url = ee('CP/URL', 'publish/edit');
     $pagination = ee('CP/Pagination')->make($total_count)
@@ -267,7 +267,7 @@ See [CP/Pagination Service](development/services/pagination.md) for full documen
 
 #### The CP/Alert Service
 
-Alerts are for providing feedback on an action and calling attention to warnings or errors. We describe, in detail, how to build different kinds of alerts in our [CP style-guide](https://ellislab.com/style-guide/c/alerts). We have also created an Alert Service for creating alerts in your code. For example:
+Alerts are for providing feedback on an action and calling attention to warnings or errors. We have created an Alert Service for creating alerts in your code. For example:
 
     ee('CP/Alert')->makeInline('fortune-cookie-form')
       ->asIssue()
@@ -317,7 +317,7 @@ And:
 
     <?php $this->embed('ee:_shared/form')?>
 
-See [Shared Form View](/development/shared-form-view.md) for full documentation.
+See [Shared Form View](development/shared-form-view.md) for full documentation.
 
 #### Modals
 
@@ -338,14 +338,6 @@ Under 3.0 modals belong to a specific spot in the Control Panel's DOM, and that 
     <?php ee('CP/Modal')->endModal(); ?>
 
 See [CP/Modal Service](development/services/modal.md) for full documentation.
-
-## Control Panel Styles
-
-### Style Guidelines
-
-For UI we have published the [ExpressionEngine 3.0 CP style-guide](https://ellislab.com/style-guide) which should be used when building user interfaces for the Control Panel.
-
-For UX we have published the (link) Human Interface Guidelines for interactions in the Control Panel so users have a consistent experience throughout the application.
 
 ### PHP Related Guidelines
 

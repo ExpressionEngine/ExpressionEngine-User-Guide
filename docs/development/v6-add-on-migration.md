@@ -45,7 +45,7 @@ The `MemberGroup` model has been completely removed. Therefore, if you have any 
 
 ### Displaying custom fields in entry manager
 
-ExpressionEngine 6 supports displaying custom field data in the Entry Manager table. Please see [Displaying field data in Entry Manager](development/fieldtypes.md#displaying-field-data-in-entry-manager) for more details.
+ExpressionEngine 6 supports displaying custom field data in the Entry Manager table. Please see [Displaying field data in Entry Manager](development/fieldtypes/enhanced.md#displaying-field-data-in-entry-manager) for more details.
 
 ### Base classes for add-on installation
 

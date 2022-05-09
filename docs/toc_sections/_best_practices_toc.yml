@@ -1,0 +1,45 @@
+# This source file is part of the open source project
+# ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+#
+# @link      https://expressionengine.com/
+# @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
+# @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+
+- name: Optimization
+  items:
+    - name: Caching and Performance
+      href: optimization/caching.md
+    - name: Handling Extreme Traffic
+      href: optimization/handling-extreme-traffic.md
+    - name: Throttling
+      href: optimization/throttling.md
+    - name: New Relic Performance Monitoring
+      href: optimization/new-relic.md
+
+- name: Security
+  items:
+    - name: Tips
+      href: security/general-tips.md
+    - name: Captchas
+      href: security/captchas.md
+    - name: Spam Protection
+      href: security/spam-protection.md
+
+- name: Troubleshooting
+  items:
+    - name: General
+      href: troubleshooting/general.md
+    - name: Installation
+      href: troubleshooting/installation.md
+    - name: Templates
+      href: troubleshooting/templates.md
+    - name: Control Panel
+      href: troubleshooting/control-panel.md
+    - name: Channels and Entries
+      href: troubleshooting/channels-and-entries.md
+    - name: Email
+      href: troubleshooting/email.md
+    - name: Simple Commerce Module
+      href: troubleshooting/simple-commerce-module.md
+    - name: Error Messages
+      href: troubleshooting/error-messages.md

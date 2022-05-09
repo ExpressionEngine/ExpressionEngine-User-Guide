@@ -48,21 +48,6 @@ Click "Show List" below to list all available overrides, or scroll through the l
 
 [TOC=3 hide]
 
-### `allow_avatar_uploads`
-
-Set whether members can upload their own avatar.
-
-| Value | Behavior                                                  |
-| ----- | --------------------------------------------------------- |
-| y     | Allow members to upload their own avatar                  |
-| n     | Do not allow members to upload their own avatar (default) |
-
-Example Usage:
-
-    $config['allow_avatar_uploads'] = 'y';
-
-**Also found in CP:** `Settings --> Avatar Settings`: [Allow members to upload their own avatars](control-panel/settings/avatars.md#allow-avatar-uploads)
-
 ### `allow_dictionary_pw`
 
 Set whether words commonly found in the dictionary can be used as passwords. Must be used in combination with [name_of_dictionary_file](#name_of_dictionary_file).
@@ -191,6 +176,14 @@ Set whether a tab keystroke produces a tab in Publish Page and Template Editor t
 Example Usage:
 
     $config['allow_textarea_tabs'] = 'y';
+
+### `allow_url_redirects_from_site`
+Set whether `?URL=` query string is enabled on the front-end.
+
+| Value | Behavior                                                                      |
+| ----- | ----------------------------------------------------------------------------- |
+| n     | Disables `?URL=` query string redirecting users on the front-end (default)    |
+| y     | Allows `?URL=` query string to be used to redirect users to external domains  |
 
 ### `allow_username_change`
 
@@ -1171,21 +1164,6 @@ Example Usage:
     $config['emoticon_url'] = 'https://example.com/images/smileys/';
 
 **Also found in CP:** `Settings --> Content & Design`: [URL to the folder containing your smileys](control-panel/settings/content-design.md#url)
-
-### `enable_avatars`
-
-If enabled, users can associate an image with their account that you can optionally display with entries, comments, and forum posts.
-
-| Value | Behavior                 |
-| ----- | ------------------------ |
-| y     | Enable avatars (default) |
-| n     | Disable avatars          |
-
-Example Usage:
-
-    $config['enable_avatars'] = 'n';
-
-**Also found in CP:** `Settings --> Avatar Settings`: [Enable Avatars](control-panel/settings/avatars.md#allow-avatars)
 
 ### `enable_censoring`
 
@@ -2556,7 +2534,7 @@ Example Usage:
 
     $config['sc_private_key'] = "/path/to/private_key.pem";
 
-**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [Private Key Path](/add-ons/simple-commerce/paypal-settings.md#private-key-path)
+**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [Private Key Path](add-ons/simple-commerce/paypal-settings.md#private-key-path)
 
 ### `sc_public_certificate`
 
@@ -2698,7 +2676,7 @@ Example Usage:
 
 ### `sig_img_path`
 
-Set the server path to the signature images directory.
+Set the server path to the signature images directory. The default path is `{base_path}/images/signature_attachments/` when no override is set.
 
 | Value | Description                                             |
 | ----- | ------------------------------------------------------- |
@@ -2710,7 +2688,7 @@ Example Usage:
 
 ### `sig_img_url`
 
-Set the URL to the signature images directory.
+Set the URL to the signature images directory. The default path is `{base_url}/images/signature_attachments/` when no override is set.
 
 | Value | Description                       |
 | ----- | --------------------------------- |
@@ -3089,7 +3067,7 @@ Example Usage:
 
 ### `use_newrelic`
 
-When enabled, New Relic will add [Real User Monitoring JavaScript](https://newrelic.com/docs/features/real-user-monitoring) to all ExpressionEngine-powered pages on both the front-end and in the CP.
+When enabled, New Relic will add [Real User Monitoring JavaScript](https://docs.newrelic.com/docs/browser/browser-monitoring/getting-started/introduction-browser-monitoring) to all ExpressionEngine-powered pages on both the front-end and in the CP.
 
 | Value | Behavior                                  |
 | ----- | ----------------------------------------- |

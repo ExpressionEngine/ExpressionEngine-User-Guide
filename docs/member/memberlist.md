@@ -15,13 +15,11 @@
 
 Outputs a searchable list of members, including form filters to sort and limit the members.
 
-
 ## Parameters
 
 ### `return=`
 
     return="member/memberlist"
-
 
 ## Form Variables
 
@@ -29,14 +27,13 @@ Outputs a searchable list of members, including form filters to sort and limit t
 
 This is a **required** variable in order to use the search form.  It creates the opening form tag.
 
-### `{group_id_options}`
+### `{role_options}`
 
 Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
 
-    <select name='group_id' class='select'>
-        {group_id_options}
+    <select name='role_id' class='select'>
+        {role_options}
     </select>
-
 
 ### `{order_by_options}`
 
@@ -46,7 +43,6 @@ Form submission errors are displayed using a "looping pair" as there can be more
         {order_by_options}
     </select>
 
-
 ### `{row_limit_options}`
 
 Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
@@ -55,7 +51,6 @@ Form submission errors are displayed using a "looping pair" as there can be more
         {row_limit_options}
     </select>
 
-
 ### `{sort_order_options}`
 
 Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
@@ -63,8 +58,6 @@ Form submission errors are displayed using a "looping pair" as there can be more
     <select name='sort_order' class='select'>
         {sort_order_options}
     </select>
-
-
 
 ## Variable Pairs
 
@@ -96,7 +89,7 @@ The error text.
 
 ### `{member_rows}`
 
-Date for each member are shown using a "looping pair".
+Data for each member are shown using a "looping pair".
 
     {member_rows}
         <p>{name}</p>
@@ -111,6 +104,42 @@ Date for each member are shown using a "looping pair".
 The `backspace=` parameter will remove characters, including spaces and line breaks, from the last iteration of the tag pair.
 
 #### Member Row Tag Pair Variables
+
+#### `member_id`
+
+#### `username`
+
+#### `screen_name`
+
+#### `email`
+
+#### `join_date`
+
+#### `last_visit`
+
+#### `last_activity`
+
+#### `last_entry_date`
+
+#### `last_comment_date`
+
+#### `last_forum_post_date`
+
+#### `total_entries`
+
+#### `total_comments`
+
+#### `total_forum_topics`
+
+#### `language`
+
+#### `timezone`
+
+#### `total_posts`
+
+#### `role`
+
+    Primary role name
 
 ##### `{member_css}`
 
@@ -129,8 +158,29 @@ The `backspace=` parameter will remove characters, including spaces and line bre
 
     {total_combined_posts}
 
-{if accept_email}
-{email_console}
+##### `{if accept_email}`
+
+    Check whether the user can accept emails from site members
+
+##### `{email_console}`
+
+    Link to pop-up with legacy email console
+
+#### `{profile_path}`
+
+    Path to member profile page
+
+#### `{if avatar}`
+
+#### `{avatar_filename}`
+
+#### `{avatar_width}`
+
+#### `{avatar_height}`
+
+#### `{path:avatar}`
+
+    Avatar URL
 
 ### `{paginate}`
 

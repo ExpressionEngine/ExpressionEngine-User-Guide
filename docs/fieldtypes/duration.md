@@ -18,7 +18,7 @@ For example, if the duration field is set with "seconds" for units, and the cont
 
 ![duration field](_images/field_duration.png)
 
-## Field Options
+## Field Settings
 
 ### Units
 

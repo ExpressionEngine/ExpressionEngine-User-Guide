@@ -366,8 +366,11 @@ You may also parse the result rows yourself, which could be useful if for some r
     {
       $row['count'] = ++$count;
       $row['total_results'] = $query->num_rows;
-
-      $output .= ee()->TMPL->parse_variables_row($tagdata, $row);
+      
+      $chunk = ee()->TMPL->parse_variables_row($tagdata, $row);
+      $chunk = ee()->TMPL->parse_switch($chunk, $count - 1);
+      
+      $output .= $chunk;
 
 ## Single and Pair Variables (Legacy)
 

@@ -98,6 +98,7 @@ In case you select a table which stores files, the returned value will have `{fi
 }
     <img src="{src}" alt="{description}" />
 {/exp:query}
+
 ```
 
 NOTE: **Note:** The default values of `parse_files=` and `parse_bases=` can be override using [`parse_variables_query_results_by_default`](/general/system-configuration-overrides.md#parse_variables_query_results_by_default)
@@ -128,7 +129,8 @@ In case you select a table which stores site settings, the returned value may ha
     {/exp:query}
   </tbody>
 </table>
-```
+=======
+
 
 NOTE: **Note:** The default values of `parse_files=` and `parse_bases=` can be override using [`parse_variables_query_results_by_default`](/general/system-configuration-overrides.md#parse_variables_query_results_by_default)
 

@@ -37,6 +37,14 @@ It is also possible to share a Template Layout from another Site, again, simply 
 
     {layout="site_short_name:template_group/layout_template"}   
 
+### Linking Assets from Another Site
+
+To link a script or stylesheet from another Site, simply prefix the template group and template specified with the short name of the site you wish to pull the template from as follows:
+
+    {stylesheet="site_short_name:template_group/style"}
+
+    {script="site_short_name:template_group/script"}
+
 ### Specifying Multiple Sites (prepare for a head trip)
 
 NOTE: **Note:** Specifying multiple Sites does not work with the {embed=""} tag.

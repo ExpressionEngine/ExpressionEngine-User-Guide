@@ -19,7 +19,7 @@ The Modal service organizes various modal views for presentation upon a trigger 
 
 ## Simple example
 
-Let's say we want to create a modal that says "Hello, world!". First, we need to construct the markup that displays the modal. We can either start with the [Modal Wrap](https://ellislab.com/style-guide/c/modals#modal-wrap) markup in the style guide, or we can use our shared modal view. We'll just use our shared modal view and pass in our content so we don't have to worry about maintaining markup:
+Let's say we want to create a modal that says "Hello, world!". First, we need to construct the markup that displays the modal.  We'll then just use our shared modal view and pass in our content so we don't have to worry about maintaining markup:
 
     $modal_vars = array(
       'name' => 'hello',

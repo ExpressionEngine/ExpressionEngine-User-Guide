@@ -17,7 +17,7 @@ lang: php
 
 ## Simple Example
 
-Alerts are for providing feedback on an action and calling attention to warnings or errors. We describe, in detail, how to build different kinds of alerts in our [CP style-guide](https://ellislab.com/style-guide/c/alerts). We have also created an Alert Service for creating alerts in your code. For example:
+Alerts are for providing feedback on an action and calling attention to warnings or errors. We also created an Alert Service for creating alerts in your code. For example:
 
     ee('CP/Alert')->makeInline('fortune-cookie-form')
       ->asIssue()

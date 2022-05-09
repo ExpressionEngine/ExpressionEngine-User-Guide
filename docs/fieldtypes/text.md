@@ -11,9 +11,9 @@
 
 Text Input is a single-lined free-form writing space where you can enter text or HTML.
 
-![textarea field](_images/field_text.png)
+![text field](_images/field_text.png)
 
-## Field Options
+## Field Settings
 
 ### Maximum Characters
 

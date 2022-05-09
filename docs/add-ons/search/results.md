@@ -104,6 +104,23 @@ The text from the entry. Unlike the {excerpt} variable, this one returns the ent
 
 This parameter is replaced with the URL to the entry with the Entry ID appended to the end. Unlike other "path" variables, this variable does **not** require the Template_Group/Template to be specified. Instead, the path will automatically be determined by the Channel URL setting for the channel in [Channel Management](control-panel/channels.md).
 
+
+### `{if no_results}`
+
+    {if no_results} content {/if}
+
+In case you have set both `result_page` and `no_result_page` parameters to the same template, you may use this conditional for displaying a message in the case when no entries are returned.
+
+    {if no_results}  <p>There are no entries available.</p>  {/if}
+
+Further, you may specify that another Template be shown in a case when there are no results. In order to do that, you must use the redirect=variable
+
+    {if no_results} {redirect="channel/noresult"} {/if}
+
+Lastly, if you want to simply display your 404 page (with 404 headers) when no entries are returned, simply use "404" as the template name.
+
+    {if no_results} {redirect="404"} {/if}
+
 ### `{member_path}`
 
     {member_path='member/index'}

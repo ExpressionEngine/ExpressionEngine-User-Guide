@@ -15,7 +15,7 @@ lang: php
 
 [TOC]
 
-When you want to offer users the ability to filter a list use the CP/Filter Service. We have a number of built-in filters, all of them following our [style guide](https://ellislab.com/style-guide/c/listings#filter-options). Filters render as a menu of links, display the current selection, and can allow for custom input. You can also create your own one-off custom filter.
+When you want to offer users the ability to filter a list use the CP/Filter Service. We have a number of built-in filters. Filters render as a menu of links, display the current selection, and can allow for custom input. You can also create your own one-off custom filter.
 
 ## Simple Example
 

@@ -361,7 +361,7 @@ The `orderby` parameter sets the display order of the entries. Setting options f
 - `orderby="view_count_three"`
 - `orderby="view_count_four"`
 
-In addition you can order by a [channel field](control-panel/field-manager.md). Use the "short_name" of the field:
+In addition you can order by a [channel field](control-panel/field-manager/field-manager-settings.md). Use the "short_name" of the field:
 
     orderby="name_of_field"
 
@@ -821,6 +821,12 @@ The ID number of the actual channel (not the _entry_.)
 ### `{channel_short_name}`
 
 The short name of the channel of the currently displayed entry.
+
+### `{channel_url}`
+
+    {channel_url}
+
+The [URL of the channel](control-panel/channels.md#settings-tab) the current entry belongs to, set on Control Panel.
 
 ### `{comment_auto_path}`
 

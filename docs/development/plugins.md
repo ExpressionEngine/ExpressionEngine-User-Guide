@@ -19,7 +19,7 @@ lang: php
 
 Plugins are used within Expression Engine Templates.  Once a plugin is made, its tags can be used anywhere in templates to help edit content. Below, tags and plugins are described as well as a walkthrough of how to build your own plugin.
 
-NOTE: Plugins can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](/cli/built-in-commands/make-addon.md) for more information.
+NOTE: Plugins can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](cli/built-in-commands/make-addon.md) for more information.
 
 ## Tag Construction
 
@@ -360,4 +360,3 @@ Below are some possible errors you could be getting and how you can fix them.  B
 #### Problem: The following tag cannot be processed:
 
    - Possible Solution: Check the tag used in the template if it has three segments to it as in `exp:nameofplugin:function` make sure that the last segment is a function that exists in your pi. file.
-
