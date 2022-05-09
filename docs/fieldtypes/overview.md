@@ -29,7 +29,7 @@ ExpressionEngine has the following built-in fieldtypes:
 - [Radio Buttons](/fieldtypes/radio-buttons.md)
 - [Range Slider](/fieldtypes/range-slider.md)
 - [Relationships](/fieldtypes/relationships.md)
-- [Rich Text Editor](/fieldtypes/rte.md)d)
+- [Rich Text Editor](/fieldtypes/rte.md)
 - [Select Dropdown](/fieldtypes/select.md)
 - [Selectable Buttons](/fieldtypes/selectable-buttons.md)
 - [Text Input](/fieldtypes/text.md)
