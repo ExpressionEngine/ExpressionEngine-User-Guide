@@ -14,6 +14,11 @@
     color: rgba(229, 230, 240, var(--tw-text-opacity));
 }
 
+.text-brand {
+    --tw-text-opacity: 1;
+    color: rgba(65, 49, 133, var(--tw-text-opacity));
+}
+
 .bg-purple-regular {
     background-color: #787DF2;
 }
@@ -26,12 +31,21 @@
     background-color: #D8D5EE;
 }
 
+
+.bg-purple-new {
+    background-color: #413185;
+}
+
 .docs-content-wrapper {
     #welcome-introduce {
         background-color: @white;
 
         h2 {
             font-size: 2rem;
+
+            @media @m-lg {
+                font-size: 1.5rem;
+            }
         }
 
         .links-wrapper {
@@ -43,14 +57,62 @@
     }
 
     #welcome-links {
-        .text-brand {
-            --tw-text-opacity: 1;
-            color: rgba(65, 49, 133, var(--tw-text-opacity));
-        }
-
         .title {
             font-size: 1.75rem;
             line-height: 1.2;
+        }
+    }
+
+    #welcome-grid {
+        h3 {
+            font-size: 32px;
+
+            @media @m-lg {
+                font-size: 1.5rem;
+            }
+        }
+
+        .university {
+            &:before,
+            &:after {
+                position: absolute;
+                display: block;
+                content: '';
+                width: 30%;
+                height: 100%;
+                top: 0;
+            }
+
+            &:before {
+                left: 0;
+                background: url(./../../_images/left.png) no-repeat center;
+            }
+
+            &:after {
+                right: 0;
+                background: url(./../../_images/right.png) no-repeat center;
+            }
+
+
+        }
+
+        .partners {
+            & > * {
+                position: relative;
+                z-index: 2;
+            }
+
+            &:before {
+                position: absolute;
+                display: block;
+                content: '';
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: url(./../../_images/waves.svg) no-repeat 30% 25px;
+                z-index: 1;
+            }
         }
     }
 }
