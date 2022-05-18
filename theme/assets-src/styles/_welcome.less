@@ -78,7 +78,7 @@
                 position: absolute;
                 display: block;
                 content: '';
-                width: 30%;
+                width: 80px;
                 height: 100%;
                 top: 0;
             }
@@ -112,6 +112,26 @@
                 left: 0;
                 background: url(./../../_images/waves.svg) no-repeat 30% 25px;
                 z-index: 1;
+            }
+        }
+
+        .support {
+            &:before {
+                position: absolute;
+                content: '';
+                display: block;
+                background: url(./../../_images/ribbon.svg) no-repeat center;
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                opacity: 0.15;
+            }
+
+            h3 {
+                font-size: 2.5rem;
             }
         }
     }

@@ -44,9 +44,9 @@ Welcome to the official ExpressionEngine Docs! In addition to the documentation,
         <h3 class="text-purple-dark mt-3 mb-2">Partners</h3>
         <p class="text-base text-brand text-opacity-70 mb-0">Find the best EE developers in the world.</p>
     </div>
-    <div class="support rounded-lg flex items-center justify-center flex-col bg-purple-regular text-white mb-0 relative pt-5 pb-7 px-7">
+    <div class="support rounded-lg flex items-center justify-center flex-col bg-purple-regular text-white mb-0 relative h-56 lg:h-auto pt-5 pb-7 px-7">
         <p class="uppercase text-sm font-semibold mb-0">Best-in-class</p>
-        <h3 class="m-0">Support</h3>
+        <h3 class="m-0 font-semibold">Support</h3>
     </div>
 </div>
 
