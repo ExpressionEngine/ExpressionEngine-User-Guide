@@ -42,10 +42,6 @@
 
         h2 {
             font-size: 2rem;
-
-            @media @m-lg {
-                font-size: 1.5rem;
-            }
         }
 
         .links-wrapper {
@@ -60,6 +56,15 @@
         .title {
             font-size: 1.75rem;
             line-height: 1.2;
+        }
+
+        .slack, .forums {
+          transition: transform .2s;
+
+          &:hover {
+            transform: scale(1.10);
+            z-index: 1;
+          }
         }
     }
 
@@ -85,12 +90,16 @@
 
             &:before {
                 left: 0;
-                background: url(./../../_images/left.png) no-repeat center;
+                background: url(./../_images/left.png) no-repeat center;
             }
 
             &:after {
                 right: 0;
-                background: url(./../../_images/right.png) no-repeat center;
+                background: url(./../_images/right.png) no-repeat center;
+            }
+
+            h3 {
+              font-family: "Source Code Pro",SFMono-Regular,Menlo,"Courier New",monospace;
             }
 
 
@@ -110,7 +119,7 @@
                 height: 100%;
                 top: 0;
                 left: 0;
-                background: url(./../../_images/waves.svg) no-repeat 30% 25px;
+                background: url(./../_images/waves.svg) no-repeat 30% 25px;
                 z-index: 1;
             }
         }
@@ -120,7 +129,7 @@
                 position: absolute;
                 content: '';
                 display: block;
-                background: url(./../../_images/ribbon.svg) no-repeat center;
+                background: url(./../_images/ribbon.svg) no-repeat center;
                 z-index: 1;
                 top: 50%;
                 left: 50%;
@@ -134,5 +143,21 @@
                 font-size: 2.5rem;
             }
         }
+
+        .university, .partners, .support {
+          transition: transform .2s;
+
+          &:hover {
+            transform: scale(1.10);
+            z-index: 1;
+          }
+        }
+    }
+
+    #welcome-resources {
+
+      a:hover h3 a {
+        border-bottom: 1px dotted #225aba;
+      }
     }
 }
