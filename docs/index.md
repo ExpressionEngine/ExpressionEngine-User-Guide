@@ -17,7 +17,7 @@ Welcome to the official ExpressionEngine Docs! In addition to the documentation,
     </div>
     <div class="mb-0">
         <span class="text-red font-bold uppercase text-xs mb-4 block tracking-wider">Starter Courses</span>
-        <h2 class="text-purple-dark mb-4 leading-snug p-0 mt-0 border-none ">Build your first ExpessionEngine site.</h2>
+        <h2 class="text-purple-dark mb-4 leading-snug p-0 mt-0 border-none ">Build your first ExpressionEngine site.</h2>
         <p class="text-purple-dark text-base pb-7 mb-0">Walk through step-by-step how to build your own ExpressionEngine site from scratch. Choose from either a video or written course.</p>
         <p class="links-wrapper flex mb-0 flex-wrap xl:flex-nowrap">
             <a href="https://u.expressionengine.com/course/getting-started-with-expressionengine-video-course" class="inline-flex text-base h-12 leading-none justify-center items-center bg-red mb-4 xl:mb-0 mr-2.5 rounded-5 border border-solid border-red hover:bg-white hover:text-red" target="_BLANK">
