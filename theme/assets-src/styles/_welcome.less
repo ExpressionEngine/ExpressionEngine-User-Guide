@@ -1,0 +1,163 @@
+/*!
+ * This source file is part of the open source project
+ * ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+ *
+ * @link      https://expressionengine.com/
+ * @copyright Copyright (c) 2003-2020, EllisLab, Inc. (https://packettide.com)
+ * @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+ */
+
+@white: #fff;
+
+.border-gray {
+    --tw-text-opacity: 1;
+    color: rgba(229, 230, 240, var(--tw-text-opacity));
+}
+
+.text-brand {
+    --tw-text-opacity: 1;
+    color: rgba(65, 49, 133, var(--tw-text-opacity));
+}
+
+.bg-purple-regular {
+    background-color: #787DF2;
+}
+
+.bg-purple-lightest {
+    background-color: #E8E8F9;
+}
+
+.bg-purple-tint {
+    background-color: #D8D5EE;
+}
+
+
+.bg-purple-new {
+    background-color: #413185;
+}
+
+.docs-content-wrapper {
+    #welcome-introduce {
+        background-color: @white;
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        .links-wrapper {
+            a {
+                width: 186px;
+                color: @white;
+            }
+        }
+    }
+
+    #welcome-links {
+        .title {
+            font-size: 1.75rem;
+            line-height: 1.2;
+        }
+
+        .slack, .forums {
+          transition: transform .2s;
+
+          &:hover {
+            transform: scale(1.10);
+            z-index: 1;
+          }
+        }
+    }
+
+    #welcome-grid {
+        h3 {
+            font-size: 32px;
+
+            @media @m-lg {
+                font-size: 1.5rem;
+            }
+        }
+
+        .university {
+            &:before,
+            &:after {
+                position: absolute;
+                display: block;
+                content: '';
+                width: 80px;
+                height: 100%;
+                top: 0;
+            }
+
+            &:before {
+                left: 0;
+                background: url(./../_images/left.png) no-repeat center;
+            }
+
+            &:after {
+                right: 0;
+                background: url(./../_images/right.png) no-repeat center;
+            }
+
+            h3 {
+              font-family: "Source Code Pro",SFMono-Regular,Menlo,"Courier New",monospace;
+            }
+
+
+        }
+
+        .partners {
+            & > * {
+                position: relative;
+                z-index: 2;
+            }
+
+            &:before {
+                position: absolute;
+                display: block;
+                content: '';
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: url(./../_images/waves.svg) no-repeat 30% 25px;
+                z-index: 1;
+            }
+        }
+
+        .support {
+            &:before {
+                position: absolute;
+                content: '';
+                display: block;
+                background: url(./../_images/ribbon.svg) no-repeat center;
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                opacity: 0.15;
+            }
+
+            h3 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .university, .partners, .support {
+          transition: transform .2s;
+
+          &:hover {
+            transform: scale(1.10);
+            z-index: 1;
+          }
+        }
+    }
+
+    #welcome-resources {
+
+      a:hover h3 a {
+        border-bottom: 1px dotted #225aba;
+      }
+    }
+}
