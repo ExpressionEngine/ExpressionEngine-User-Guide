@@ -104,5 +104,5 @@ The Template Engine processes the selected template fully from top to bottom thr
     - {version_identifier}
     - {version}
     - {webmaster_email}
-24. Process  [{stylesheet=}](templates/globals/stylesheet.md) / [{encode=}](templates/globals/single-variables.md#encode) / [{path=}](templates/globals/path.md) / [{route=}](templates/routes.md) tags and variables
+24. Process  [{stylesheet=}](templates/globals/stylesheet.md) / [{scripts=}](templates/globals/scripts.md) / [{encode=}](templates/globals/single-variables.md#encode) / [{path=}](templates/globals/path.md) / [{route=}](templates/routes.md) tags and variables
 25. Add [CSRF tokens](development/guidelines/security.md#cross-site-request-forgery) to forms and parse [{csrf_token}](templates/globals/single-variables.md#csrf_token)

@@ -342,7 +342,7 @@ Radio and single select fields use single variables:
 
     {my_fluid_field}
       {my_fluid_field:my_toggle}
-        {if content}YES there is a toggle value!{/if}
+        {if {content}}YES there is a toggle value!{/if}
       {/my_fluid_field:my_toggle}
     {/my_fluid_field}
 

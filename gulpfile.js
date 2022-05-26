@@ -83,12 +83,17 @@ function buildJs() {
 		.pipe(gulp.dest(CONFIG.assetsDir))
 }
 
+function moveThemeFonts() {
+	return gulp.src(CONFIG.assetsSourceDir + '/webfonts/**/*')
+	.pipe(gulp.dest(CONFIG.assetsDir +  '/webfonts'))
+}
+
 function moveThemeImages() {
 	return gulp.src(CONFIG.assetsSourceDir + '/images/**/*')
 	.pipe(gulp.dest(CONFIG.assetsDir +  '/images'))
 }
 
-const buildAssets = gulp.series(cleanThemeAssets, buildLess, buildJs, moveThemeImages)
+const buildAssets = gulp.series(cleanThemeAssets, buildLess, buildJs, moveThemeImages, moveThemeFonts)
 
 exports.buildAssets = buildAssets
-exports.watchAssets = () => gulp.watch([CONFIG.assetsSourceDir + '/styles/**/*', CONFIG.assetsSourceDir + '/js/**/*', CONFIG.assetsSourceDir + '/images/**/**'], buildAssets)
+exports.watchAssets = () => gulp.watch([CONFIG.assetsSourceDir + '/styles/**/*', CONFIG.assetsSourceDir + '/js/**/*', CONFIG.assetsSourceDir + '/images/**/**', CONFIG.assetsSourceDir + '/webfonts/**/**'], buildAssets)
