@@ -11,9 +11,15 @@
 
 Number Input is a single-lined field where you can enter a number. Its also shows up and down arrows to change the value as provided by HTML `number` input rendered in browser.
 
+
 ![number field](_images/field_number.png)
 
-## Field Options
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/84i7HlkRxfg?vq=HD1080" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+
+## Field Settings
 
 ### Minimum value
 

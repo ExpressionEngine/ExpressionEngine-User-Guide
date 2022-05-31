@@ -19,6 +19,6 @@ NOTE: **Note:** In order for PayPal to be able to send payment notifications to 
 
 ## Enabling PayPal Instant Payment Notification
 
-Please refer to [PayPal's instructions](https://developer.paypal.com/webapps/developer/docs/classic/ipn/integration-guide/IPNIntro/) for the latest information. To enable Instant Payment Notification, login to PayPal, and select "Payment Notifications" from the Profile submenu. Provide PayPal with the **Instant Payment Notification (IPN) URL** found in the Simple Commerce preferences.
+Please refer to [PayPal's instructions](https://www.paypal.com/us/smarthelp/article/what-is-instant-payment-notification-(ipn)-faq2933) for the latest information. To enable Instant Payment Notification, login to PayPal, and select "Payment Notifications" from the Profile submenu. Provide PayPal with the **Instant Payment Notification (IPN) URL** found in the Simple Commerce preferences.
 
 NOTE: **Note:** For ExpressionEngine to reliably track PayPal transactions within Simple Commerce, you must enter your primary PayPal email address as the **PayPal Account** in the Simple Commerce preferences.

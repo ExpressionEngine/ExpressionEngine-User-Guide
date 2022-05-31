@@ -2038,6 +2038,15 @@ Example Usage:
 
     $config['newrelic_include_version_number'] = 'y';
 
+### `parse_variables_query_results_by_default`
+
+In case you select a table which stores files, the returned value will have `{filedir_` in front of the file names. In case you select a table which stores site settings, the returned value may have `{base_` variables. To parse both cases by default, enable the following config:
+
+| Value | Behavior                                    |
+| ----- | ------------------------------------------- |
+| y     | Parse variables by default                  |
+| n     | Do not parse variables by default (default) |
+
 ### `password_lockout`
 
 If enabled, the system will lock a member account if more than four invalid login attempts are made within a [specified time period](#password_lockout_interval). This is designed to deter hackers from using collision attacks to guess poorly chosen passwords. The account remains locked for the duration of the password lockout time period.
@@ -2667,7 +2676,7 @@ Example Usage:
 
 ### `sig_img_path`
 
-Set the server path to the signature images directory.
+Set the server path to the signature images directory. The default path is `{base_path}/images/signature_attachments/` when no override is set.
 
 | Value | Description                                             |
 | ----- | ------------------------------------------------------- |
@@ -2679,7 +2688,7 @@ Example Usage:
 
 ### `sig_img_url`
 
-Set the URL to the signature images directory.
+Set the URL to the signature images directory. The default path is `{base_url}/images/signature_attachments/` when no override is set.
 
 | Value | Description                       |
 | ----- | --------------------------------- |
@@ -3058,7 +3067,7 @@ Example Usage:
 
 ### `use_newrelic`
 
-When enabled, New Relic will add [Real User Monitoring JavaScript](https://newrelic.com/docs/features/real-user-monitoring) to all ExpressionEngine-powered pages on both the front-end and in the CP.
+When enabled, New Relic will add [Real User Monitoring JavaScript](https://docs.newrelic.com/docs/browser/browser-monitoring/getting-started/introduction-browser-monitoring) to all ExpressionEngine-powered pages on both the front-end and in the CP.
 
 | Value | Behavior                                  |
 | ----- | ----------------------------------------- |

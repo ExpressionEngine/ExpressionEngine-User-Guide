@@ -95,7 +95,7 @@ If you would rather store your backups as compressed archives, it's as easy as t
 
 Obviously, if you run this backup command every day, you're going to end up with a lot of backups. It would be great if we could automatically purge older backups we shouldn't need.
 
-One method is to compress your backups after `rsync` completes, and then configure [logrotate](https://linuxcommand.org/man_pages/logrotate8.html) to purge the files for you. This is a great option because you can easily set up the rotation to only keep, for example, 7 daily backups, 4 weekly backups, and 6 monthly backups.
+One method is to compress your backups after `rsync` completes, and then configure [logrotate](https://linux.die.net/man/8/logrotate) to purge the files for you. This is a great option because you can easily set up the rotation to only keep, for example, 7 daily backups, 4 weekly backups, and 6 monthly backups.
 
 Another method is a little easier to implement but doesn't give you as much flexibility easily, and that's to simply tack on a command to keep the last X number of backup folders/files in the directory. For example, to keep the 10 most recent backup folders (test in a safe place!):
 

@@ -17,7 +17,7 @@ This fieldtype is currently only limited to Channels.
 
 ![relationship field](_images/filed_relationships.png)
 
-## Field Options
+## Field Settings
 
 ### Channels to Relate
 

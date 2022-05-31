@@ -5,166 +5,6 @@
 # @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
 # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 
-- name: Welcome
-  href: index.md
-
-- name: Installation & Updates
-  items:
-    - name: System Requirements
-      href: installation/requirements.md
-    - name: Installation
-      href: installation/installation.md
-    - name: Best Practices
-      href: installation/best-practices.md
-    - name: Updating
-      href: installation/updating.md
-    - name: Change Log
-      href: installation/changelog.md
-
-- name: Getting Started
-  items:
-    - name: The Big Picture
-      href: getting-started/the-big-picture.md
-    - name: 10 Minute Primer
-      href: getting-started/ten-minute-primer.md
-
-- name: General Information
-  items:
-    - name: URL Structure
-      href: general/url-structure.md
-    - name: 404 Pages
-      href: general/404pages.md
-    - name: Backing Up Your Site
-      href: general/database-backup.md
-    - name: Moving to Another Server
-      href: general/moving.md
-    - name: GDPR Compliance
-      href: general/gdpr.md
-    - name: Cookies
-      href: general/cookies.md
-    - name: System Config Overrides
-      href: general/system-configuration-overrides.md
-    - name: Text Formatting
-      href: general/text-formatting.md
-    - name: Converting to InnoDB
-      href: general/converting-to-innodb.md
-    - name: BBCode Reference
-      href: general/bbcode.md
-    - name: Reserved Words
-      href: general/reserved-words.md
-    - name: Member XML Format
-      href: general/member-import-xml-format.md
-
-- name: Localization
-  items:
-    - name: Date Localization
-      href: localization/date-localization.md
-    - name: Language Packs
-      href: localization/languages.md
-    - name: Stopwords
-      href: localization/stopwords.md
-    - name: Transliteration
-      href: localization/transliteration.md
-
-- name: Templates
-  items:
-    - name: Overview
-      href: templates/overview.md
-    - name: Template Language
-      href: templates/language.md
-    - name: Conditional Tags
-      href: templates/conditionals.md
-    - name: Embedding Templates
-      href: templates/embedding.md
-    - name: Template Layouts
-      href: templates/layouts.md
-    - name: Template Partials
-      href: templates/partials.md
-    - name: Template Variables
-      href: templates/variable.md
-    - name: Global Template Variables
-      items:
-        - name: Single Global Variables
-          href: templates/globals/single-variables.md
-        - name: Linking to Stylesheets
-          href: templates/globals/stylesheet.md
-        - name: Linking to Scripts
-          href: templates/globals/scripts.md
-        - name: URL Segment Variables
-          href: templates/globals/url-segments.md
-        - name: Consent Variables
-          href: templates/globals/consent.md
-        - name: Path Variables
-          href: templates/globals/path.md
-        - name: Preload Text Replacements
-          href: templates/globals/preload-replacement.md
-    - name: Variable Modifiers
-      href: templates/variable-modifiers.md
-    - name: Date Variable Formatting
-      href: templates/date-variable-formatting.md
-    - name: Template Routes
-      href: templates/routes.md
-    - name: Pagination
-      href: templates/pagination.md
-    - name: The Template Engine
-      href: templates/engine.md
-
-- name: Channels
-  items:
-    - name: Entries Tag
-      href: channels/entries.md
-    - name: Channel Information Tag
-      href: channels/info.md
-    - name: Next/Previous Entries
-      href: channels/entry-linking.md
-    - name: Spanning Across Pages
-      href: channels/entry-spanning.md
-    - name: Entry Views Tracking
-      href: channels/entry-tracking.md
-    - name: Dynamic Parameters
-      href: channels/dynamic-parameters.md
-    - name: Categories Tag
-      href: channels/categories.md
-    - name: Category Archive Tag
-      href: channels/category-archive.md
-    - name: Category Heading Tag
-      href: channels/category-heading.md
-    - name: Archive Month Links
-      href: channels/archive-months.md
-    - name: Channel Sets
-      href: channels/sets.md
-    - name: Calendar Tag
-      href: channels/calendar.md
-    - name: Channel Form
-      items:
-        - name: Channel Form Tag
-          href: channels/channel-form/overview.md
-        - name: Examples
-          href: channels/channel-form/examples.md
-        - name: Form Inputs
-          href: channels/channel-form/inputs.md
-        - name: Other Fields
-          href: channels/channel-form/fields.md
-        - name: Status Selection
-          href: channels/channel-form/status.md
-        - name: Category Selection
-          href: channels/channel-form/categories.md
-        - name: Development
-          href: channels/channel-form/development.md
-
-- name: Comments
-  items:
-      - name: Overview
-        href: comment/overview.md
-      - name: Entries Tag
-        href: comment/entries.md
-      - name: Submission Form
-        href: comment/form.md
-      - name: Subscriptions
-        href: comment/subscriptions.md
-      - name: Control Panel
-        href: comment/control-panel.md
-
 - name: Add-Ons
   items:
     - name: Overview
@@ -255,278 +95,6 @@
       href: add-ons/statistics.md
     - name: Emoticon (Deprecated)
       href: add-ons/emoticon.md
-- name: ExpressionEngine Pro
-  items:
-    - name: Overview
-      href: pro/overview.md
-    - name: Installation
-      href: pro/installation.md
-    - name: Changelog
-      href: pro/changelog.md
-    - name: Configuration
-      href: pro/configuration.md
-    - name: Dashboard Management
-      href: pro/dashboard_management.md
-    - name: Dock
-      href: pro/dock.md
-    - name: Entry Cloning
-      href: pro/entry_cloning.md
-    - name: Front-end Content Management
-      href: pro/frontend.md
-    - name: Cookies management
-      href: pro/cookies.md
-    - name: Multi-Factor Authentication
-      href: pro/mfa.md
-    - name: Development
-      items:
-        - name: Dashboard Widgets
-          href: pro/development/widgets.md
-        - name: Fieldtypes
-          href: pro/development/fieldtypes.md
-        - name: Prolets
-          href: pro/development/prolets.md
-    - name: Permissions
-      href: pro/permissions.md
-    - name: Troubleshooting
-      href: pro/troubleshooting.md
-- name: Command Line Interface (CLI)
-  items:
-    - name: Introduction
-      href: cli/intro.md
-    - name: Usage
-      href: cli/usage.md
-    - name: Built In Commands
-      items:
-        - name: Addon Generator
-          href: cli/built-in-commands/make-addon.md
-        - name: Clear Cache
-          href: cli/built-in-commands/cache-clear.md
-        - name: Command Generator
-          href: cli/built-in-commands/make-command.md
-        - name: Migrations
-          href: cli/built-in-commands/migrate.md
-        - name: List
-          href: cli/built-in-commands/list.md
-        - name: Make migration
-          href: cli/built-in-commands/make-migration.md
-        - name: Model Generator
-          href: cli/built-in-commands/make-model.md
-        - name: Update ExpressionEngine
-          href: cli/built-in-commands/update.md
-        - name: Prolet Generator
-          href: cli/built-in-commands/make-prolet.md
-        - name: Widget Generator
-          href: cli/built-in-commands/make-widget.md
-    - name: Creating A Command
-      href: cli/creating-a-command.md
-    - name: Defining Input
-      href: cli/defining-input.md
-    - name: Displaying Output
-      href: cli/displaying-output.md
-
-- name: Fieldtypes
-  items:
-    - name: Overview
-      href: fieldtypes/overview.md
-    - name: Date
-      href: fieldtypes/date.md
-    - name: Duration
-      href: fieldtypes/duration.md
-    - name: Email Address
-      href: fieldtypes/email-address.md
-    - name: File
-      href: fieldtypes/file.md
-    - name: File Grid
-      href: fieldtypes/file-grid.md
-    - name: Fluid
-      href: fieldtypes/fluid.md
-    - name: Grid
-      href: fieldtypes/grid.md
-    - name: Notes
-      href: fieldtypes/notes.md
-    - name: Relationships
-      href: fieldtypes/relationships.md
-    - name: Rich Text Editor
-      href: fieldtypes/rte.md
-    - name: Checkboxes, Radio Buttons, Select, Multiselect, Selectable Buttons
-      href: fieldtypes/select.md
-    - name: Color Picker
-      href: fieldtypes/colorpicker.md
-    - name: Value Slider, Range Slider
-      href: fieldtypes/slider.md
-    - name: Text Input
-      href: fieldtypes/text.md
-    - name: Textarea
-      href: fieldtypes/textarea.md
-    - name: Number Input
-      href: fieldtypes/number.md
-    - name: Toggle
-      href: fieldtypes/toggle.md
-    - name: URL
-      href: fieldtypes/url.md
-
-- name: Member Management
-  items:
-      - name: Overview
-        href: member/index.md
-      - name: Registration Tag
-        href: member/registration.md
-      - name: Login Tag
-        href: member/login.md
-      - name: Logout Tags
-        href: member/logout.md
-      - name: Forgot Password
-        href: member/forgot-password.md
-      - name: Forgot Username
-        href: member/forgot-username.md
-      - name: Reset Password
-        href: member/reset-password.md
-      - name: Multi-Factor Authentication Links
-        href: member/mfa.md
-      - name: Password Validation
-        href: member/password-validation.md
-      - name: Member List Tag
-        href: member/memberlist.md
-      - name: Member Search Form
-        href: member/search.md
-      - name: Custom Profile Data Tag
-        href: member/custom-profile-data.md
-      - name: Edit Profile Data Tag
-        href: member/edit-profile.md
-      - name: Edit Avatar Tag
-        href: member/edit-avatar.md
-      - name: Member Roles Tags
-        href: member/member-roles-tags.md
-      - name: Ignore List Tag
-        href: member/ignore-list.md
-      - name: Profile Templates (Legacy)
-        href: member/profile-templates.md
-
-- name: Control Panel
-  items:
-    - name: The Control Panel
-      href: control-panel/index.md
-    - name: CP Overview
-      href: control-panel/overview.md
-    - name: Create
-      href: control-panel/create.md
-    - name: Channels
-      href: control-panel/channels.md
-    - name: Entry Manager
-      href: control-panel/entry-manager.md
-    - name: File Manager
-      href: control-panel/file-manager.md
-    - name: Field Manager
-      items:
-        - name: Settings
-          href: control-panel/field-manager/field-manager-settings.md
-        - name: Conditional Fields
-          href: control-panel/field-manager/conditional-fields.md
-    - name: Member Manager
-      href: control-panel/member-manager.md
-    - name: Member Profile
-      href: control-panel/member-profile.md
-    - name: Template Manager
-      href: control-panel/template-manager.md
-    - name: Add-On Manager
-      href: control-panel/addons-manager.md
-    - name: Categories
-      href: control-panel/categories.md
-    - name: Utilities
-      href: control-panel/utilities.md
-    - name: System Logs
-      href: control-panel/system-logs.md
-    - name: System Settings
-      items:
-        - name: Overview
-          href: control-panel/settings/index.md
-        - name: General Settings
-          href: control-panel/settings/general.md
-        - name: Avatar
-          href: control-panel/settings/avatars.md
-        - name: CAPTCHA
-          href: control-panel/settings/captcha.md
-        - name: Comment
-          href: control-panel/settings/comments.md
-        - name: Content & Design
-          href: control-panel/settings/content-design.md
-        - name: Consents Requests
-          href: control-panel/settings/consents.md
-        - name: Debugging & Output
-          href: control-panel/settings/debug-output.md
-        - name: Outgoing Email
-          href: control-panel/settings/email.md
-        - name: Hit Tracking
-          href: control-panel/settings/hit-tracking.md
-        - name: Logging
-          href: control-panel/settings/logging.md
-        - name: Member Settings
-          href: control-panel/settings/members.md
-        - name: Messaging
-          href: control-panel/settings/messages.md
-        - name: Security & Privacy
-          href: control-panel/settings/security-privacy.md
-        - name: Template
-          href: control-panel/settings/template.md
-        - name: Access Throttling
-          href: control-panel/settings/throttling.md
-        - name: URL and Path
-          href: control-panel/settings/urls.md
-        - name: Word Censorship
-          href: control-panel/settings/word-censor.md
-        - name: HTML Buttons
-          href: control-panel/settings/html-buttons.md
-        - name: Menu Manager
-          href: control-panel/settings/menu-manager.md
-    - name: CP Navigation
-      href: control-panel/navigation.md
-
-
-- name: Security
-  items:
-    - name: Tips
-      href: security/general-tips.md
-    - name: Captchas
-      href: security/captchas.md
-    - name: Spam Protection
-      href: security/spam-protection.md
-
-- name: Optimization
-  items:
-    - name: Caching and Performance
-      href: optimization/caching.md
-    - name: Handling Extreme Traffic
-      href: optimization/handling-extreme-traffic.md
-    - name: Throttling
-      href: optimization/throttling.md
-    - name: New Relic Performance Monitoring
-      href: optimization/new-relic.md
-
-- name: Multiple Sites
-  items:
-    - name: Overview
-      href: msm/overview.md
-    - name: Variables and Parameter
-      href: msm/code.md
-
-- name: Troubleshooting
-  items:
-    - name: General
-      href: troubleshooting/general.md
-    - name: Installation
-      href: troubleshooting/installation.md
-    - name: Templates
-      href: troubleshooting/templates.md
-    - name: Control Panel
-      href: troubleshooting/control-panel.md
-    - name: Channels and Entries
-      href: troubleshooting/channels-and-entries.md
-    - name: Email
-      href: troubleshooting/email.md
-    - name: Simple Commerce Module
-      href: troubleshooting/simple-commerce-module.md
-    - name: Error Messages
-      href: troubleshooting/error-messages.md
 
 - name: Add-On Development
   items:
@@ -980,18 +548,83 @@
       href: development/v6-add-on-migration.md
     - name: Automated Upgrading
       href: development/automated-upgrading.md
+      
+- name: Command Line Interface (CLI)
+  items:
+    - name: Introduction
+      href: cli/intro.md
+    - name: Usage
+      href: cli/usage.md
+    - name: Built In Commands
+      items:
+        - name: Addon Generator
+          href: cli/built-in-commands/make-addon.md
+        - name: Clear Cache
+          href: cli/built-in-commands/cache-clear.md
+        - name: Command Generator
+          href: cli/built-in-commands/make-command.md
+        - name: Migrations
+          href: cli/built-in-commands/migrate.md
+        - name: List
+          href: cli/built-in-commands/list.md
+        - name: Make migration
+          href: cli/built-in-commands/make-migration.md
+        - name: Model Generator
+          href: cli/built-in-commands/make-model.md
+        - name: Update ExpressionEngine
+          href: cli/built-in-commands/update.md
+        - name: Prolet Generator
+          href: cli/built-in-commands/make-prolet.md
+        - name: Widget Generator
+          href: cli/built-in-commands/make-widget.md
+    - name: Creating A Command
+      href: cli/creating-a-command.md
+    - name: Defining Input
+      href: cli/defining-input.md
+    - name: Displaying Output
+      href: cli/displaying-output.md
 
-- name: Bugs and Security Reports
-  href: bugs-and-security-reports.md
+- name: ExpressionEngine Pro
+  items:
+    - name: Overview
+      href: pro/overview.md
+    - name: Installation
+      href: pro/installation.md
+    - name: Changelog
+      href: pro/changelog.md
+    - name: Configuration
+      href: pro/configuration.md
+    - name: Dashboard Management
+      href: pro/dashboard_management.md
+    - name: Dock
+      href: pro/dock.md
+    - name: Entry Cloning
+      href: pro/entry_cloning.md
+    - name: Front-end Content Management
+      href: pro/frontend.md
+    - name: Cookies management
+      href: pro/cookies.md
+    - name: Multi-Factor Authentication
+      href: pro/mfa.md
+    - name: Development
+      items:
+        - name: Dashboard Widgets
+          href: pro/development/widgets.md
+        - name: Fieldtypes
+          href: pro/development/fieldtypes.md
+        - name: Prolets
+          href: pro/development/prolets.md
+    - name: Permissions
+      href: pro/permissions.md
+    - name: Troubleshooting
+      href: pro/troubleshooting.md
+     
+- name: Multiple Sites
+  items:
+    - name: Overview
+      href: msm/overview.md
+    - name: Variables and Parameter
+      href: msm/code.md
 
-- name: Feature Requests
-  href: feature-requests.md
 
-- name: Docs Style Guide
-  href: style-guide.md
 
-- name: Contributing
-  href: contributing.md
-
-- name: Docs Contributors
-  href: contributors.md

@@ -7,9 +7,13 @@
  * @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
  */
 
-const CONFIG       = require('./config.js')
-const Path         = require('path')
-const MarkdownSlug = require('markdown-slug')
+const CONFIG        = require('./config.js')
+const Path          = require('path')
+const MarkdownSlug  = require('markdown-slug')
+const RenderEmbed = require('./embed-render.js')
+const Fs            = require('fs')
+const Logger       = require('./logger.js')
+var parentPageInfo = "";
 
 
 // Converts back slashes to forward slashes. Used to convert paths to URLs
@@ -18,11 +22,26 @@ const bsToFs = (p) => p.replace(/\\/g, '/')
 // Gets the folder depth of the specified path
 const dirDepth = (myDir) => myDir.split(Path.sep).length
 
+const returnEmbedContents = (match, p1, p2, p3, offset, string) => {	
+		console.log("Found Embed: " + p1);
+	try {
+		embedContents = Fs.readFileSync('./docs/'+p1, { encoding: 'utf8' });
+		embedContents = RenderEmbed(embedContents, parentPageInfo);
+	  } catch (err) {
+		embedContents = "";
+		Logger.warn('Unable to embed ' + p1 + ' on page:', parentPageInfo.path, 'Failed Embeds')
+	  }
+	return embedContents;
+}
 // Renders handlebar style template variables from an object
-const renderTemplate = (template, vars) => {
+const renderTemplate = (template, vars, currentPageInfo) => {;
+	parentPageInfo = currentPageInfo;
 	for (let [key, value] of Object.entries(vars)) {
 		template = template.replace(new RegExp('{{\\s*' + key + '\\s*}}', 'gi'), value)
 	}
+
+	
+	template = template.replace(new RegExp('(?<!code>){{embed\:([^"\']*?)}}', 'gi'),returnEmbedContents);
 
 	return template
 }

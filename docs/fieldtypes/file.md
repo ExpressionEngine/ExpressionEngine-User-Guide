@@ -21,7 +21,7 @@ File fields utilize the built-in file browser to store uploaded files and images
 
 NOTE: **Note:**Your site must have at least one upload directory before you can create a file field.
 
-## Field Options
+## Field Settings
 
 ### Allowed File Types
 
