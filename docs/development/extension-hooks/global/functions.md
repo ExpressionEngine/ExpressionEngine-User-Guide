@@ -13,6 +13,19 @@ lang: php
 
 # Functions Library Extension Hooks
 
+### `cache_clearing_end($which)`
+
+| Parameter  | Type     | Description                                                        |
+| ---------- | -------- | ------------------------------------------------------------------ |
+| \$which    | `String` | Possible value: `all`, `page`, `db`, `tag`, `sql`                  |
+| Returns    | `Void`   |                                                                    |
+
+Called after the `clear_caching` function has been run.
+
+How it's called:
+
+    $result = ee()->extensions->call('cache_clearing_end', $which);
+
 ### `create_captcha_start($old_word)`
 
 | Parameter  | Type     | Description                                                        |
