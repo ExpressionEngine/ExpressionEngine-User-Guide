@@ -168,7 +168,7 @@ The following conditionals are available:
 
 ## Allowing Members to Edit Comments on the Front End
 
-The available tags and variables allow you to write your own client side code for implementing comment editing. The following is a simplified example using the native `{exp:jquery:script_tag}`.
+The available tags and variables allow you to write your own client side code for implementing comment editing. The following is a simplified example using jQuery.
 
 ### Example Code
 
@@ -198,14 +198,14 @@ The Comment Entries Tag Code:
 
 The JavaScript Code:
 
-    {exp:jquery:script_tag}
+    <script src="/themes/ee/asset/javascript/compressed/jquery/jquery.js" type="text/javascript"></script>
     {exp:comment:edit_comment_script}
 
 ### Comment Edit Script Tag
 
     {exp:comment:edit_comment_script}
 
-This tag outputs a script tag that will include the necessary JavaScript for your comment editor. This script requires jQuery, so you will typically use it in conjunction with the `jquery_script_tag`.
+This tag outputs a script tag that will include the necessary JavaScript for your comment editor. This script requires jQuery, so you will need to include taht as well.
 
 ### AJAX Edit URL Tag
 

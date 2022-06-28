@@ -232,7 +232,8 @@ In this example, the file directory is hard coded and the form is not editable, 
 
     <html>
         <head>
-            {exp:jquery:script_tag}
+            <!--using jQuery https://jquery.com/-->
+            <script src="/themes/ee/asset/javascript/compressed/jquery/jquery.js" type="text/javascript"></script>			
 
             <!--using the jQuery Form plugin https://jquery.malsup.com/form/-->
             <script src="/js/jquery.form.js" type="text/javascript"></script>
