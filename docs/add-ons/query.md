@@ -89,7 +89,7 @@ The Query module uses the same pagination syntax as all first-party modules. Ple
 
 ### Parsing file paths
 
-In case you select a table which stores files, the returned value will have `{filedir_` in front of the file names. To parse them, enable the `parse_files` parameter:
+In case you select a table which stores files, the returned value will look like `{file:XX:url}` or have `{filedir_` in front of the file names (when File Manager is in Compatibility mode). To parse them, enable the `parse_files` parameter:
 
 ```html
 {exp:query sql="SELECT col_id_1 AS src, col_id_5 AS description

@@ -65,7 +65,7 @@ In these cases, MySQL usually returns "Error 145" which means that a "table is m
 
 ### Repairing the database through ExpressionEngine
 
-If ExpressionEngine's Control Panel is still accessible, the database can be repaired via the built-in SQL Manager at `Developer --> Utilities --> SQL Manager`. Select the tables to repair, then choose _Repair selected tables_ at the bottom and click Submit.
+If ExpressionEngine's Control Panel is still accessible, the database can be repaired via the built-in SQL Manager at `Tools --> Utilities --> SQL Manager`. Select the tables to repair, then choose _Repair selected tables_ at the bottom and click Submit.
 
 ### Repairing the database by other means
 

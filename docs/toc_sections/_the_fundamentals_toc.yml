@@ -18,7 +18,13 @@
     - name: Entry Manager
       href: control-panel/entry-manager.md
     - name: File Manager
-      href: control-panel/file-manager.md
+      items:
+        - name: File Manager Overview
+          href: control-panel/file-manager/file-manager.md
+        - name: Upload Directories
+          href: control-panel/file-manager/upload-directories.md
+        - name: File Editing
+          href: control-panel/file-manager/file-edit.md
     - name: Field Manager
       items:
         - name: Settings

@@ -5,6 +5,12 @@
 # @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
 # @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 
+- name: Config Files
+  items:
+  - name: System Config Overrides
+    href: general/system-configuration-overrides.md
+  - name: Additional Config Files
+    href: config/config-files.md
 - name: Add-Ons
   items:
     - name: Overview
@@ -613,6 +619,3 @@
       href: msm/overview.md
     - name: Variables and Parameter
       href: msm/code.md
-
-
-

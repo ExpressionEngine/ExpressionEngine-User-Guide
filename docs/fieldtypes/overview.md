@@ -11,7 +11,7 @@
 
 ExpressionEngine **channels** are where your information gets stored. Within a channel you will typically find **field**. A field is a container that holds a specific type of information. 
 
-For example, if you have a blog channel, you might have fields for the date, the title, the blog entry itself, an image, etc. Different fieldtypes let you manage your data intelligently. Field Groups are collections of fields which can then be related to one or more [Channels](control-panel/channels.html#fields-tab).
+For example, if you have a blog channel, you might have fields for the date, the title, the blog entry itself, an image, etc. Different fieldtypes let you manage your data intelligently. Field Groups are collections of fields which can then be related to one or more [Channels](control-panel/channels.md#fields-tab).
 
 ExpressionEngine has the following built-in fieldtypes:
 - [Checkboxes](/fieldtypes/checkboxes.md)

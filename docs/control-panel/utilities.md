@@ -9,13 +9,13 @@
 
 # Utilities
 
-**Control Panel Location: `Developer > Utilities`**
+**Control Panel Location: `Tools > Utilities`**
 
 [TOC]
 
 ## Communicate
 
-**Control Panel Location: `Developer > Utilities > Communicate`**
+**Control Panel Location: `Tools > Utilities > Communicate`**
 
 The Communicate tab in the Control Panel provides access to the email sending part of the system. Email can be sent in plain text or HTML format, and supported email sending protocols are [SMTP](https://www.webopedia.com/TERM/S/SMTP.html), [Sendmail](https://www.sendmail.org/), and PHP [mail](https://us2.php.net/manual/en/function.mail.php).
 
@@ -23,13 +23,13 @@ NOTE: **Note:** In the Settings area of the Control Panel you'll find the [Outgo
 
 ### Sent Emails
 
-**Control Panel Location: `Developer > Utilities > Sent`**
+**Control Panel Location: `Tools > Utilities > Sent`**
 
 This section of the Control Panel shows a table of all the previously sent emails. It lists the email title (subject), when it was sent, number of recipients, a re-send link, and a delete checkbox.
 
 ## Language Files
 
-**Control Panel Location: `Developer > Utilities > CP Translate`**
+**Control Panel Location: `Tools > Utilities > CP Translate`**
 
 This Translation Utility page of the Control Panel allows you to translate the core language files into other languages.
 
@@ -41,7 +41,7 @@ The main Translation Utility screen shows a list of all the language files curre
 
 ### Translation
 
-**Control Panel Location: `Developer > Utilities > CP Translate > Edit`**
+**Control Panel Location: `Tools > Utilities > CP Translate > Edit`**
 
 Once you have translated all the text for a particular file you will click the Save Changes button and ExpressionEngine will create the new translated file inside the translations folder.
 
@@ -49,7 +49,7 @@ You can also Save Changes at any point you like; you don't have to complete the 
 
 ## PHP Info
 
-**Control Panel Location: `Developer > Utilities > PHP Info`**
+**Control Panel Location: `Tools > Utilities > PHP Info`**
 
 The PHP Info page of the Control Panel allows you to see the configuration details of your PHP installation, via the standard [phpinfo()](https://www.php.net/phpinfo) command.
 
@@ -57,13 +57,13 @@ The page will show a great deal of information about your server, server configu
 
 ## Manage Add-on Extensions
 
-**Control Panel Location: `Developer > Utilities > Manage Extensions`**
+**Control Panel Location: `Tools > Utilities > Manage Extensions`**
 
 Since Extensions are calling code within the ExpressionEngine code there is a chance that an extension will interfere with how your site is working. If you are unsure of which extension might be causing a problem you can either turn them off one by one until the problem disappears.
 
 ## Member Import File Converter
 
-**Control Panel Location: `Developer > Utilities > File Converter`**
+**Control Panel Location: `Tools > Utilities > File Converter`**
 
 The Convert Delimited Data to XML utility enables you to take member information from a third party application that exports a delimited data file and create an XML file in ExpressionEngine’s Member XML Format. Nearly all delimited formats are accepted, such as the common tab-delimited, comma-delimited, and quote-enclosed formats.
 
@@ -73,7 +73,7 @@ NOTE: **Note:** Many applications export field headings as the first line of a d
 
 ## Mass Notification Export
 
-**Control Panel Location: `Developer Tools > Utilities > Mass Notification Export`**
+**Control Panel Location: `Tools > Utilities > Mass Notification Export`**
 
 The Mass Notification Export utility enables you to export a CSV file of the ID, screen name, username, and email address for all your Members. This action will be logged to the `/cp/logs/cp`.
 
@@ -89,7 +89,7 @@ Options:
 
 ## Database Backup Utility
 
-**Control Panel Location: `Developer Tools > Utilities > Backup Utility`**
+**Control Panel Location: `Tools > Utilities > Backup Utility`**
 
 This utility allows you to make simple SQL dump backups of your ExpressionEngine database. For file backups, or more robust and automated database backup options, please refer to [Back-up your ExpressionEngine database and files](general/database-backup.md).
 
@@ -97,7 +97,7 @@ When you click "Backup Database", a SQL dump will be created and stored in your 
 
 ## SQL Manager
 
-**Control Panel Location: `Developer > Utilities > SQL Manager`**
+**Control Panel Location: `Tools > Utilities > SQL Manager`**
 
 This section of the Control Panel allows you to manage your database. You can view information about the database, run queries, optimize your tables, and more.
 
@@ -105,7 +105,7 @@ The main SQL Manager screen shows a table of your basic database information.
 
 ## SQL Query Form
 
-**Control Panel Location: `Developer > Utilities > Query Form`**
+**Control Panel Location: `Tools > Utilities > Query Form`**
 
 This section presents a form that you can use to submit any standard database query. This feature is intended for **advanced** users since any changes you may make with a query are permanent.
 
@@ -115,19 +115,19 @@ By default MySQL query errors are displayed.
 
 ## Cache Manager
 
-**Control Panel Location: `Developer > Utilities > Cache Manager`**
+**Control Panel Location: `Tools > Utilities > Cache Manager`**
 
 This section of the Control Panel allows you clear the cached data for the different types of [caching](optimization/caching.md) that are available.
 
 ## Manage Statistics
 
-**Control Panel Location: `Developer > Utilities > Statistics`**
+**Control Panel Location: `Tools > Utilities > Statistics`**
 
 This section of the Control Panel allows you to force the system to recount different types of statistics. This section is rarely necessary, but every once in a while a statistic can become out of sync or otherwise not reflect the correct data. This section will allow you to make the system update the information.
 
 ## Data Search and Replace
 
-**Control Panel Location: `Developer > Utilities > Search and Replace`**
+**Control Panel Location: `Tools > Utilities > Search and Replace`**
 
 This section of the Control Panel allows you to search for text within your site and replace it with another piece of text. This search and replace operation can be performed on your entry titles, within any of the entry fields, or within your Templates.
 
@@ -141,13 +141,13 @@ This section of the Control Panel allows you to search for text within your site
 
 ## Member Import
 
-**Control Panel Location:** `Developer > Utilities > Member Import`
+**Control Panel Location:** `Tools > Utilities > Member Import`
 
 The Member Import Utility enables you to import members from other systems utilizing ExpressionEngine's [special Member Import XML format](general/member-import-xml-format.md).
 
 ## Search Reindex
 
-**Control Panel Location:** `Developer > Utilities > Search Reindex`
+**Control Panel Location:** `Tools > Utilities > Search Reindex`
 
 Search reindexing refreshes the searchable words stored by Grid and Fluid fields that are used by the search module when performing a search. Reindexing is needed when:
 

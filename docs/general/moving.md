@@ -19,7 +19,7 @@ Upload the [Server Compatibility Wizard](installation/requirements.md#server-com
 
 ## 2. Clear Caches
 
-Go to `Developer --> Utilities --> Cache Manager`. Select **All Caches** and click Submit.
+Go to `Tools --> Utilities --> Cache Manager`. Select **All Caches** and click Submit.
 
 ## 3. Back-up Database and Files
 
@@ -114,7 +114,7 @@ You can also set many of these paths in your config.php file using configuration
 
 ## 10. Clear Caches (Again!)
 
-Go to `Developer --> Utilities --> Cache Manager`. Select **All Caches** and click Submit.
+Go to `Tools --> Utilities --> Cache Manager`. Select **All Caches** and click Submit.
 
 ## You're Done!
 

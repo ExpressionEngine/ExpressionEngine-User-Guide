@@ -18,7 +18,7 @@ If you are a site builder you will primarily interact with the cluster of links 
 - [CP Overview](control-panel/overview.md)
 - [Create](control-panel/create.md)
 - [Entry Manager](control-panel/entry-manager.md)
-- [File Manager](control-panel/file-manager.md)
+- [File Manager](control-panel/file-manager/file-manager.md)
 - [Member Manager](control-panel/member-manager.md)
 
 ## Site Builders

@@ -115,7 +115,7 @@ to:
     $debug = 1;
 
 - Go to `Settings --> Debugging & Output` and ensure that **Debug Preference** is set to _1: PHP/SQL error messages shown only to Super Admins_.
-- Go to `Developer --> Utilities --> PHP Info` and search the page for "display_errors". Ensure it is set to _On_ under the Local column. If it is not, your host can help change this setting for you.
+- Go to `Tools --> Utilities --> PHP Info` and search the page for "display_errors". Ensure it is set to _On_ under the Local column. If it is not, your host can help change this setting for you.
 - Check your server's error logs or contact your host to assist you in cases where errors are being output to logs and not to the screen.
 
 ## Submitting a form has no effect and the page simply reloads

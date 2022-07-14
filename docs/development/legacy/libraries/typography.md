@@ -100,7 +100,7 @@ The Typography class has a number of class properties that you may wish to set b
 
 ### `$parse_images`
 
-(`bool`) \[ **TRUE** / FALSE \] — Whether or not `{filedir_#}` variables are to be parsed.
+(`bool`) \[ **TRUE** / FALSE \] — Whether or not `{file:XX:url}` and `{filedir_#}` variables are to be parsed.
 
 ### `$parse_smileys`
 

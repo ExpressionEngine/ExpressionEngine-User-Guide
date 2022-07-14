@@ -15,7 +15,7 @@
 
 **For the best experience**, ExpressionEngine requires:
 
-- [PHP](https://www.php.net/) 7 or newer, running with [PHP-FPM](https://php.net/manual/en/install.fpm.php)
+- [PHP](https://www.php.net/) 7.4 or newer, running with [PHP-FPM](https://php.net/manual/en/install.fpm.php)
 - [MySQL](https://www.mysql.com/) 5.6 or newer **OR** [Percona](https://www.percona.com/software/mysql-database/percona-server) 5.6 or newer
 
 ## Server Compatibility Wizard
@@ -28,7 +28,7 @@ If you're not sure whether your server meets the minimum requirements, the serve
 
 ## The Bare Minimums
 
-If you are stuck in an older environment, ExpressionEngine _can_ run on PHP 5.6.0+ with 32M of memory, and MySQL 5.5.3+. PHP-FPM is also optional, but [tends to handily outperform mod_php](https://www.cloudways.com/blog/php-fpm-on-cloud/). That said,running older versions not only hurts performance—increasing the cost of your website—but also puts your site **at risk of security vulnerabilities**. The PHP Group stopped providing support for PHP 5.6 [on December 31, 2018](https://php.net/supported-versions.php). Oracle also ceased providing support for MySQL 5.5 at the same time.
+If you are stuck in an older environment, ExpressionEngine _can_ run on PHP 7.2.5+ with 32M of memory, and MySQL 5.5.3+. PHP-FPM is also optional, but [tends to handily outperform mod_php](https://www.cloudways.com/blog/php-fpm-on-cloud/). That said,running older versions not only hurts performance—increasing the cost of your website—but also puts your site **at risk of security vulnerabilities**. The PHP Group stopped providing support for PHP 5.6 [on December 31, 2018](https://php.net/supported-versions.php). Oracle also ceased providing support for MySQL 5.5 at the same time.
 
 Why not save yourself the worry and hassle, enjoy a faster and more secure site that costs less to maintain, and upgrade now? Here's an email you can send to your host if they need a little nudge:
 

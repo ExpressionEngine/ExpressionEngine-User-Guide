@@ -21,13 +21,23 @@ The Grid field in ExpressionEngine provides a way to group fieldtypes in repeata
 
 ## Field Settings
 
-### Minimum Rows
+#### Minimum Rows
 
 Specifies the minimum number of rows this Grid will have. For example, if you enter `3`, the publish form will load with three rows ready to be populated and will not allow the publisher to have less than three rows in this Grid field.
 
-### Maximum Rows
+#### Maximum Rows
 
 Specifies the maximum number of rows this Grid can have. For example, if you enter `10`, the publish form will not allow the publisher to add any more than ten rows to this Grid field.
+
+#### Allow reordering
+
+Enables moving the Grid rows with drag & drop to change the order
+
+#### Always use a vertical grid layout?
+
+The fields within the grid will be always stacked vertically on the publish form.
+
+When turned off, the fields within the grid will be placed in a horizontal row next to each other in bigger screens, and stacked vertically on smaller screens.
 
 ### Grid Fields
 

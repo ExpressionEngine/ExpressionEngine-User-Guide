@@ -40,4 +40,4 @@ Fields have the following settings:
 
 **Control Panel Location: `Developer > Fields > Field Groups > New/Edit Field Group`**
 
-This section allows you to create and edit field groups. Field Groups are collections of fields which can then be related to one or more [Channels](control-panel/channels.html#fields-tab).
+This section allows you to create and edit field groups. Field Groups are collections of fields which can then be related to one or more [Channels](control-panel/channels.md#fields-tab).

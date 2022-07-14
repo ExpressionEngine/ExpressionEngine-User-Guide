@@ -386,12 +386,12 @@ ExpressionEngine will first try to match the entire specified text to something 
 
 #### Upload directory for files
 
-You may determine into which of your File Upload directories the file attachments will be placed. These upload directories are defined in the [Create/Edit Upload Directory](control-panel/file-manager.md#createedit-upload-directory) section.
+You may determine into which of your File Upload directories the file attachments will be placed. These upload directories are defined in the [Create/Edit Upload Directory](control-panel/file-manager/upload-directories.md#createedit-upload-directory) section.
 
 #### Image size
 
-Choose the image from your defined image dimensions from the selected upload directory. If you don't choose a size, the image will upload at full size. These sizes are defined in the [Create/Edit Upload Directory](control-panel/file-manager.md#createedit-upload-directory) section.
+Choose the image from your defined image dimensions from the selected upload directory. If you don't choose a size, the image will upload at full size. These sizes are defined in the [Create/Edit Upload Directory](control-panel/file-manager/upload-directories.md#createedit-upload-directory) section.
 
 #### Thumb size
 
-Choose the thumbnail size from your defined image dimensions from the selected upload directory. These sizes are defined in the [Create/Edit Upload Directory](control-panel/file-manager.md#createedit-upload-directory) section.
+Choose the thumbnail size from your defined image dimensions from the selected upload directory. These sizes are defined in the [Create/Edit Upload Directory](control-panel/file-manager/upload-directories.md#createedit-upload-directory) section.

@@ -42,8 +42,6 @@
       href: general/gdpr.md
     - name: Cookies
       href: general/cookies.md
-    - name: System Config Overrides
-      href: general/system-configuration-overrides.md
     - name: Text Formatting
       href: general/text-formatting.md
     - name: Converting to InnoDB

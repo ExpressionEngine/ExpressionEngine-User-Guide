@@ -15,7 +15,7 @@ lang: ee
 
 [TOC]
 
-The File Module allows you to display data associated with the files in your [File Upload Directories](control-panel/file-manager.md).
+The File Module allows you to display data associated with the files in your [File Upload Directories](control-panel/file-manager/upload-directories.md).
 
 In addition, the File module supports [Pagination](templates/pagination.md).
 
@@ -83,7 +83,7 @@ NOTE: **Note:** Using this parameter will automatically cause ExpressionEngine t
 
     directory_id="3"
 
-From which [file upload directory](control-panel/file-manager.md) to show the files (will show files from any directory if none is specified). Additionally, you can use the pipe character to separate multiple directories:
+From which [file upload directory](control-panel/file-manager/upload-directories.md) to show the files (will show files from any directory if none is specified). Additionally, you can use the pipe character to separate multiple directories:
 
     directory_id="1|2|3"
 
@@ -209,7 +209,7 @@ This includes the appropriate `<abbr>` HTML tag. Or, if you prefer to have the u
 
     {file_size:human_long}
 
-If you have defined any [image manipulations](control-panel/file-manager.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the file size of that version:
+If you have defined any [image manipulations](control-panel/file-manager/upload-directories.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the file size of that version:
 
     {file_size:small}
     {file_size:small:human}
@@ -223,7 +223,7 @@ The URL to the file.
 
 The height (in pixels) of the full-size image. (Empty for non-image files.)
 
-If you have defined any [image manipulations](control-panel/file-manager.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the height of that version:
+If you have defined any [image manipulations](control-panel/file-manager/upload-directories.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the height of that version:
 
     {height:small}
 
@@ -289,7 +289,7 @@ The date when the file was uploaded. As with other date variables, these require
 
 The full URL to the file.
 
-If you have defined any [image manipulations](control-panel/file-manager.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the URL to that version:
+If you have defined any [image manipulations](control-panel/file-manager/upload-directories.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the URL to that version:
 
     {url:small}
 
@@ -297,7 +297,7 @@ If you have defined any [image manipulations](control-panel/file-manager.md#cons
 
 The width (in pixels) of the full-size image. (Empty for non-image files.)
 
-If you have defined any [image manipulations](control-panel/file-manager.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the width of that version:
+If you have defined any [image manipulations](control-panel/file-manager/upload-directories.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the width of that version:
 
     {width:small}
 

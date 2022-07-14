@@ -47,7 +47,7 @@ In its most basic form, a File field can be used as a single tag that simply out
 
     {news_image}
 
-If you have defined any [image manipulations](control-panel/file-manager.md#constrain-or-crop) you can modify the tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the URL to that version:
+If you have defined any [image manipulations](control-panel/file-manager/upload-directories.md#constrain-or-crop) you can modify the tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the URL to that version:
 
     {news_image:small}
 
@@ -120,7 +120,7 @@ This includes the appropriate `<abbr>` HTML tag. Or, if you prefer to have the u
 
     {file_size:human_long}
 
-If you have defined any [image manipulations](control-panel/file-manager.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the file size of that version:
+If you have defined any [image manipulations](control-panel/file-manager/upload-directories.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the file size of that version:
 
     {file_size:small}
     {file_size:small:human}
@@ -130,7 +130,7 @@ If you have defined any [image manipulations](control-panel/file-manager.md#cons
 
 The height of the image (in pixels) if applicable.
 
-If you have defined any [image manipulations](control-panel/file-manager.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the height of that version:
+If you have defined any [image manipulations](control-panel/file-manager/upload-directories.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the height of that version:
 
     {height:small}
 
@@ -178,7 +178,7 @@ The date the file was first uploaded. See [Date Variable Formatting](templates/d
 
 The full URL to the file.
 
-If you have defined any [image manipulations](control-panel/file-manager.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the URL to that version:
+If you have defined any [image manipulations](control-panel/file-manager/upload-directories.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the URL to that version:
 
     {url:small}
 
@@ -186,7 +186,7 @@ If you have defined any [image manipulations](control-panel/file-manager.md#cons
 
 The width of the image (in pixels) if applicable.
 
-If you have defined any [image manipulations](control-panel/file-manager.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the width of that version:
+If you have defined any [image manipulations](control-panel/file-manager/upload-directories.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the width of that version:
 
     {width:small}
 
@@ -194,7 +194,7 @@ If you have defined any [image manipulations](control-panel/file-manager.md#cons
 
 [TOC=4]
 
-In addition to pre-defined [image manipulations](control-panel/file-manager.md#constrain-or-crop) it is possible to perform certain image manipulations on-the-fly in templates by using special template tag parameters.
+In addition to pre-defined [image manipulations](control-panel/file-manager/upload-directories.md#constrain-or-crop) it is possible to perform certain image manipulations on-the-fly in templates by using special template tag parameters.
 
 WARN: **Warning:** Certain image manipulations can be processing-intensive and even cause timeouts. Use with caution.
 

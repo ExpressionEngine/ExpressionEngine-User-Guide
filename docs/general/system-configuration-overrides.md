@@ -2040,7 +2040,7 @@ Example Usage:
 
 ### `parse_variables_query_results_by_default`
 
-In case you select a table which stores files, the returned value will have `{filedir_` in front of the file names. In case you select a table which stores site settings, the returned value may have `{base_` variables. To parse both cases by default, enable the following config:
+In case you select a table which stores files, the returned value will look like `{file:XX:url}` or have `{filedir_` in front of the file names (when File Manager is in Compatibility mode). In case you select a table which stores site settings, the returned value may have `{base_` variables. To parse both cases by default, enable the following config:
 
 | Value | Behavior                                    |
 | ----- | ------------------------------------------- |
@@ -3019,7 +3019,7 @@ Example Usage:
         )
     );
 
-**Also found in CP:** `Files`: [Edit Upload Destination](control-panel/file-manager.md#createedit-upload-directory)
+**Also found in CP:** `Files`: [Edit Upload Destination](control-panel/file-manager/upload-directories.md#createedit-upload-directory)
 
 ### `uri_protocol`
 
