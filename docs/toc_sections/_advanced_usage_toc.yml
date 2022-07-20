@@ -511,7 +511,10 @@
           href: development/control-panel-js/rangesandselections.md
         - name: WysiHat API
           href: development/control-panel-js/wysihat-api.md
-
+    - name: Dashboard Widgets
+      href: pro/development/widgets.md
+    - name: Prolets
+      href: pro/development/prolets.md
     - name: Constants Reference
       href: development/constants.md
     - name: Cypress Tests
@@ -709,12 +712,6 @@
 
 - name: ExpressionEngine Pro
   items:
-    - name: Overview
-      href: pro/overview.md
-    - name: Installation
-      href: pro/installation.md
-    - name: Changelog
-      href: pro/changelog.md
     - name: Configuration
       href: pro/configuration.md
     - name: Dashboard Management
@@ -723,25 +720,18 @@
       href: pro/dock.md
     - name: Entry Cloning
       href: pro/entry_cloning.md
-    - name: Front-end Content Management
-      href: pro/frontend.md
     - name: Cookies management
       href: pro/cookies.md
     - name: Multi-Factor Authentication
       href: pro/mfa.md
-    - name: Development
-      items:
-        - name: Dashboard Widgets
-          href: pro/development/widgets.md
-        - name: Fieldtypes
-          href: pro/development/fieldtypes.md
-        - name: Prolets
-          href: pro/development/prolets.md
     - name: Permissions
       href: pro/permissions.md
     - name: Troubleshooting
       href: pro/troubleshooting.md
-     
+
+- name: Front-end Content Management
+  href: pro/frontend.md
+
 - name: Multiple Sites
   items:
     - name: Overview
