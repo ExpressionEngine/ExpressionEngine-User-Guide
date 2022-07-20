@@ -247,3 +247,32 @@ If your add-on is operating as File Manager, you might want to make it available
 In order to achieve that, create file prefixed with `rtefb.` in add-on's main directory, e.g. `rtefb.my_addon.php`. You can refer to the file in Filepicker add-on as an example.
 
 The file's class needs to implement `ExpressionEngine\Library\Rte\RteFilebrowserInterface`. The easiest way to achive that is to extend `ExpressionEngine\Library\Rte\AbstractRteFilebrowser` abstract class and add code only for the functions that work differently from 
+
+## Working with Front-End Editing
+
+Most fieldtypes will work with [Front-end content management](pro/frontend.md) out-of-the-box.
+
+However there are some parameters that can be set in `ft.` to improve integration.
+
+### Disabling Front-end Edit Link 
+
+    public $disable_frontedit = true;
+
+Setting `$disable_frontedit` to `true` will disable frontend-editing for the fieldtype and the edit links will never appear.
+
+### Field Editing Window Size
+
+    public $size = 'large';
+
+By default, all fields are being opened for front-end editing in the pop-up window of same size. However if you need larger or smaller window, that can be specified in fieldtype file.
+
+The available options are:
+ - large
+ - small
+ - footer
+
+### Making Complex Fieldtypes To Work
+
+If your fieldtype is representing complex data structures, such as Grid or Fluid field, you will need to tell Pro to be treat this fieldtype in a different way. You can do this by declaring in fieldtype
+
+    public $complex_data_structure = true;
