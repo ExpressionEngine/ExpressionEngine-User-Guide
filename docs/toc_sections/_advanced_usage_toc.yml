@@ -102,6 +102,203 @@
     - name: Emoticon (Deprecated)
       href: add-ons/emoticon.md
 
+- name: Fieldtypes
+  items:
+    - name: Overview
+      href: fieldtypes/overview.md
+    - name: Date
+      href: fieldtypes/date.md
+    - name: Duration
+      href: fieldtypes/duration.md
+    - name: Email Address
+      href: fieldtypes/email-address.md
+    - name: File
+      href: fieldtypes/file.md
+    - name: File Grid
+      href: fieldtypes/file-grid.md
+    - name: Fluid
+      href: fieldtypes/fluid.md
+    - name: Grid
+      href: fieldtypes/grid.md
+    - name: Notes
+      href: fieldtypes/notes.md
+    - name: Relationships
+      href: fieldtypes/relationships.md
+    - name: Rich Text Editor
+      href: fieldtypes/rte.md
+    - name: Checkboxes, Radio Buttons, Select, Multiselect, Selectable Buttons
+      href: fieldtypes/select.md
+    - name: Color Picker
+      href: fieldtypes/colorpicker.md
+    - name: Value Slider, Range Slider
+      href: fieldtypes/slider.md
+    - name: Text Input
+      href: fieldtypes/text.md
+    - name: Textarea
+      href: fieldtypes/textarea.md
+    - name: Number Input
+      href: fieldtypes/number.md
+    - name: Toggle
+      href: fieldtypes/toggle.md
+    - name: URL
+      href: fieldtypes/url.md
+
+- name: Member Management
+  items:
+      - name: Overview
+        href: member/index.md
+      - name: Registration Tag
+        href: member/registration.md
+      - name: Login Tag
+        href: member/login.md
+      - name: Logout Tags
+        href: member/logout.md
+      - name: Forgot Password
+        href: member/forgot-password.md
+      - name: Forgot Username
+        href: member/forgot-username.md
+      - name: Reset Password
+        href: member/reset-password.md
+      - name: Multi-Factor Authentication Links
+        href: member/mfa.md
+      - name: Password Validation
+        href: member/password-validation.md
+      - name: Member List Tag
+        href: member/memberlist.md
+      - name: Member Search Form
+        href: member/search.md
+      - name: Custom Profile Data Tag
+        href: member/custom-profile-data.md
+      - name: Edit Profile Data Tag
+        href: member/edit-profile.md
+      - name: Edit Avatar Tag
+        href: member/edit-avatar.md
+      - name: Member Roles Tags
+        href: member/member-roles-tags.md
+      - name: Ignore List Tag
+        href: member/ignore-list.md
+      - name: Profile Templates (Legacy)
+        href: member/profile-templates.md
+
+- name: Control Panel
+  items:
+    - name: The Control Panel
+      href: control-panel/index.md
+    - name: CP Overview
+      href: control-panel/overview.md
+    - name: Create
+      href: control-panel/create.md
+    - name: Channels
+      href: control-panel/channels.md
+    - name: Entry Manager
+      href: control-panel/entry-manager.md
+    - name: File Manager
+      href: control-panel/file-manager.md
+    - name: Field Manager
+      items:
+        - name: Settings
+          href: control-panel/field-manager/field-manager-settings.md
+        - name: Conditional Fields
+          href: control-panel/field-manager/conditional-fields.md
+    - name: Member Manager
+      href: control-panel/member-manager.md
+    - name: Member Profile
+      href: control-panel/member-profile.md
+    - name: Template Manager
+      href: control-panel/template-manager.md
+    - name: Add-On Manager
+      href: control-panel/addons-manager.md
+    - name: Categories
+      href: control-panel/categories.md
+    - name: Utilities
+      href: control-panel/utilities.md
+    - name: System Logs
+      href: control-panel/system-logs.md
+    - name: System Settings
+      items:
+        - name: Overview
+          href: control-panel/settings/index.md
+        - name: General Settings
+          href: control-panel/settings/general.md
+        - name: Avatar
+          href: control-panel/settings/avatars.md
+        - name: CAPTCHA
+          href: control-panel/settings/captcha.md
+        - name: Comment
+          href: control-panel/settings/comments.md
+        - name: Content & Design
+          href: control-panel/settings/content-design.md
+        - name: Consents Requests
+          href: control-panel/settings/consents.md
+        - name: Debugging & Output
+          href: control-panel/settings/debug-output.md
+        - name: Outgoing Email
+          href: control-panel/settings/email.md
+        - name: Tracking
+          href: control-panel/settings/hit-tracking.md
+        - name: Logging
+          href: control-panel/settings/logging.md
+        - name: Member Settings
+          href: control-panel/settings/members.md
+        - name: Messaging
+          href: control-panel/settings/messages.md
+        - name: Security & Privacy
+          href: control-panel/settings/security-privacy.md
+        - name: Template
+          href: control-panel/settings/template.md
+        - name: Access Throttling
+          href: control-panel/settings/throttling.md
+        - name: URL and Path
+          href: control-panel/settings/urls.md
+        - name: Word Censorship
+          href: control-panel/settings/word-censor.md
+        - name: HTML Buttons
+          href: control-panel/settings/html-buttons.md
+        - name: Menu Manager
+          href: control-panel/settings/menu-manager.md
+    - name: CP Navigation
+      href: control-panel/navigation.md
+
+
+- name: Security
+  items:
+    - name: Tips
+      href: security/general-tips.md
+    - name: Captchas
+      href: security/captchas.md
+    - name: Spam Protection
+      href: security/spam-protection.md
+
+- name: Optimization
+  items:
+    - name: Caching and Performance
+      href: optimization/caching.md
+    - name: Handling Extreme Traffic
+      href: optimization/handling-extreme-traffic.md
+    - name: Throttling
+      href: optimization/throttling.md
+    - name: New Relic Performance Monitoring
+      href: optimization/new-relic.md
+
+- name: Troubleshooting
+  items:
+    - name: General
+      href: troubleshooting/general.md
+    - name: Installation
+      href: troubleshooting/installation.md
+    - name: Templates
+      href: troubleshooting/templates.md
+    - name: Control Panel
+      href: troubleshooting/control-panel.md
+    - name: Channels and Entries
+      href: troubleshooting/channels-and-entries.md
+    - name: Email
+      href: troubleshooting/email.md
+    - name: Simple Commerce Module
+      href: troubleshooting/simple-commerce-module.md
+    - name: Error Messages
+      href: troubleshooting/error-messages.md
+
 - name: Add-On Development
   items:
     - name: The addon.setup.php File
