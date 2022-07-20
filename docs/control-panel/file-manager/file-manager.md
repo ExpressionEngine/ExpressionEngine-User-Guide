@@ -11,20 +11,20 @@
 
 **Control Panel Location: `Files`**
 
-TIP: If you are looking for information on using the files in your entries and templates, check the [File module](add-ons/file.md) and [File fieldtype](fieldtypes/file.md) documentation
-
-WARN: For the sites that were running older version of EE previously, [Compatibility Mode](control-panel/file-manager/file-manager.md#compatibility-mode) will be turned on by default, disabling some features
+TIP: If you are looking for information on using the files in your entries and templates, reference the [File module](add-ons/file.md) and [File fieldtype](fieldtypes/file.md) documentation
 
 On the main File Manager page you can view all of your previously uploaded files. Files list can be filtered by a number of criterias as well as searched. The data included in the displayed list can be customized. The files can be manipulated separately or in bulk.
 
 WARN: To use files in ExpressionEngine, you need to have at least one [Upload Directory](control-panel/file-manager/upload-directories.md) configured
 
-![Control Panel File Manager Page](_images/cp-file-manager.png)
-
 [TOC]
 
 - [Upload Directories](control-panel/file-manager/upload-directories.md)
 - [Files Editing](control-panel/file-manager/file-edit.md)
+
+![Control Panel File Manager Page](_images/cp-file-manager.png)
+
+
 
 ## Navigating File Manager
 
