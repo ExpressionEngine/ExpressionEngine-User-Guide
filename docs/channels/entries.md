@@ -85,11 +85,12 @@ Using `backspace=`, Channel Entries will output this markup:
     Entry 2<br />
     Entry 3
 
-### `cache=, refresh=`
+### `cache=, refresh=, cache_prefix=`
 
     cache="yes" refresh="60"
 
 This parameter enables tag caching. Refresh is the number of minutes between cache refreshes.
+By default, caches are separate for each loaded URI. If you need cache file to be shared between different pages, you can specify `cache_prefix="global"` parameter, where "global" can be replaced with any other unique cache prefix.
 
 ### `cat_limit=`
 

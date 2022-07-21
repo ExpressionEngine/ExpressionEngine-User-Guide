@@ -33,6 +33,10 @@ For example, to cache your channel tag in 30 minute intervals you'll do this:
 
     {exp:channel:entries cache="yes" refresh="30"}
 
+By default, the caches are created separately for each URI. If you want certain cached tag to be reused on other pages (e.g. footer) you can do it by specifying `cache_prefix` parameter.
+
+    {exp:channel:entries cache="yes" refresh="30" cache_prefix="global"}
+
 ## Template Caching
 
 Template Caching (or Dynamic Page Caching) lets you cache entire templates, making your pages much more light-weight. Because ExpressionEngine requires some scripting and a few database queries in order to manage core resources, we can't achieve 100% static pages, but we can get close.
