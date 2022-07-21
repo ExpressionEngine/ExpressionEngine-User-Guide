@@ -25,13 +25,15 @@ On the main File Manager page you can view all of your previously uploaded files
 
 The File Manager is composed of several sections to help easily manage your files in ExpressionEngine.
 
+[TOC=3]
+
 ### Sidebar
 
 The sidebar gives you access to creating, viewing, and managing [Upload Directories](control-panel/file-manager/upload-directories.md); [Watermarks](control-panel/file-manager/watermarks.md); and Exporting All Files. 
 
 ![File manager sidebar](_images/cp_file_manager_sidebar.png)
 
-The Sidebar can also be collapsed using the arrow icon ( <img style="margin-bottom: 0px; vertical-align: middle;" src="../_images/cp_collapase_arrow.png" alt="cp collapase arrow"> ) that is displayed to the side of the sidebar when hovering over the sidebar.
+The Sidebar can also be collapsed using the arrow icon ( <img style="margin-bottom: 0px; vertical-align: middle;display:inline-block;" src="../../_images/cp_collapase_arrow.png" alt="cp collapase arrow"> ) that is displayed to the side of the sidebar when hovering over the sidebar.
 
 
 ### Filters

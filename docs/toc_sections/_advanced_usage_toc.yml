@@ -11,6 +11,8 @@
     href: general/system-configuration-overrides.md
   - name: Additional Config Files
     href: config/config-files.md
+  - name: ENV File Support
+    href: advanced-usage/env-support.md
 - name: Add-Ons
   items:
     - name: Overview
