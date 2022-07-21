@@ -23,17 +23,91 @@ On the main File Manager page you can view all of your previously uploaded files
 
 ## Navigating File Manager
 
-By default, all files are shown. The files shown can be further filtered using the filters and search options at the top of the File Manager. 
+The File Manager is composed of several sections to help easily manage your files in ExpressionEngine.
+
+### Sidebar
+
+The sidebar gives you access to creating, viewing, and managing [Upload Directories](control-panel/file-manager/upload-directories.md); [Watermarks](control-panel/file-manager/watermarks.md); and Exporting All Files. 
+
+![File manager sidebar](_images/cp_file_manager_sidebar.png)
+
+The Sidebar can also be collapsed using the arrow icon ( <img style="margin-bottom: 0px; vertical-align: middle;" src="../_images/cp_collapase_arrow.png" alt="cp collapase arrow"> ) that is displayed to the side of the sidebar when hovering over the sidebar.
+
+
+### Filters
+
+Filters all you to quick filter the files listed to find exactly what you need.
 
 ![Control Panel File Manager Page](_images/cp-file-manager-filters.png)
 
-From there, you can narrow it down to specific Upload Directory using sidebar on the left, search / filter directly for the specific file or upload.
+The following selectable filters are available:
 
-You can switch the new type from "table" to "thumbs" and vice versa. The columns displayed can also be configured using the dropdown in filter.
+* Type - Filter by the file type. Available types are Image, Document, Archive, Audio, Video (only file types of currently uploaded files are displayed)
+* Category - Filter by categories available to files. 
+* Date Added - Filter by date added. Available options are Custom Date (enter in a specific date), Last 24 Hours, Last 7 Days, Last 30 Days, Last 180 Days, Last 365 Days
+* Added By - Filter by the member who uploaded files
 
-The view and columns set is automatically saved for user (separately for each Upload Directory or "All Files" page) and persists as you use the filters or use pagination.
+Clear selectable filters by clicking on the `x` in the top right corner of the filter.
 
-![Control Panel File Manager Page in Thumb View](_images/cp-file-manager-thumb-view.png)
+Files can also be filtered using the keyword search option.
+
+### File Listing
+
+The bulk of the File Manager screen is composed of the file list. 
+
+![File Manager Listing](_images/cp_file-manager-listing.png)
+
+The File Listing is where your files are displayed based on your current view options. When using the All Files link, all files uploaded to your site will be available for display. When selecting a single Upload Directory from the sidebar, only files uploaded to that Upload Directory will be displayed.
+
+### View Options
+
+The File Manager offers multiple view options to adjust what and how files are displayed in the file list. 
+
+View options can be set per Upload Directory or the All Files view, and are automatically saved for each user and persists as you use the filters or use pagination.
+
+#### List View
+
+![File Manager List view](_images/cp_file_manager_list-view.png)
+
+The List View also exposes a Utility Action menu which quickly allows for action to be taken on an individual file without having to leave the file listing page. For more on these options see the available [file actions](#file-actions) below which are available in the Utility Action menu and as bulk actions.
+
+![File Manager Utility Action Menu](_images/cp_file_manager_utility_action.png)
+
+The columns displayed in the List View can also be adjusted to display file information relevant to your needs. 
+These columns include:
+
+* Title
+* File Name
+* ID#
+* File Type
+* Size
+* Description
+* Credit
+* Location
+* Categories
+* Date Added
+* Uploaded By
+* Date Modified
+* Modified By
+* Dimensions
+* Usage
+
+#### Grid View
+
+![File Manager Grid View](_images/cp_file_manager_grid-view.png)
+
+The Grid View gives you the ability to easily see thumbnails of images or icons for other file types of each file uploaded.
+
+#### Sorting
+
+Avialble from the Sort By dropdown, both the List View and the Grid View can be sorted by Title and Date Added ordered by assecending and descending. The default is to sort by Date Added, descending.
+
+![File Manager Sorting](_images/cp_file_manager_sorting.png)
+
+#### Display Limit
+
+The Display Limit dropdown allows you to limit the number of files displayed on a single page in the the File Listing. Files can be displayed using a custom limit or by using one of the available options.
+
 
 ## Uploading Files
 
@@ -94,60 +168,8 @@ The list of bulk actions is same that for individual file actions, but some item
 Edit and Copy Link options are available if only single file is selected.
 Download option will download the zip archive of files, even if only one file is selected.
 
-## Using subfolders
 
-To help better organize the files, you can use the subfolders. In order to do that, subfolders need first to be enabled in [Upload Directory](control-panel/file-manager/upload-directories.md) preferences.
-
-After enabling, you will see the "New folder" button in the top right, clicking which will show the folder creation dialog.
-
-![New Folder Dialog](_images/cp-file-manager-new-folder.png)
-
-You can create folder in current location as well as any other where those are enabled. The folders can be nested.
-
-To rename folder, use `...` dropdown and `Rename` option.
-
-## Syncronizing Directory
-
-ExpressionEngine is using the database to store the information on files, so if you have placed the files directly on server and want to use those, it is important to let the CMS know about that.
-
-The Synchronize Files page allows you to synchronize the file records in the database with the files stored in a given upload directory. To load this page, click on the Upload Directory you wish to sync in the sidebar, then click on the sync icon on top right from filter bar.
-
-When submitted, all allowed file types in the directory will be checked against the file records in the database. If there is no record in the database, one will be added. For images, any missing manipulations will be generated and watermarked according to the file upload preferences for that directory.
-
-If an image manipulation is missing, it will be generated automatically. However if you want to re-generate and replace all given manipulations, you can do so by checking checkbox next to manipulation name.
-
-Lastly, any records in the database that do not have a corresponding file in the main directory will be highlighted as not found.
-
-## Watermarks
-
-**Control Panel Location: `Files sidebar > Watermarks`**
-
-This section of the Control Panel allows you to manage watermark settings. A watermark is a unique text string or graphic that is automatically added to your images to mark them as "yours" and to hamper other people from being able to "steal" your images. You can create as many watermark types as you need and apply them to your automatically created thumbnails while [creating or editing an upload directory](control-panel/file-manager/upload-directories.md#createedit-upload-directory).
-
-Watermarks have the following options:
-
-- **Name** -- A descriptive name for the watermark
-- **Type** -- The type of watermark. Can be either a image or text.
-- **Alignment** -- The vertical and horizontal position of the watermark.
-- **Padding** -- The amount of padding between the watermark and the image edge.
-
-Text Watermarks have the following extra options:
-
-- **Text** -- Specify the text you wish to be used for the watermark.
-- **Font face** -- The True Type font for the text to use. By default, the "texb" font is included with ExpressionEngine. If you wish to use a different font then you will need to upload it to your system/fonts/ directory. **Note:** The font selection works only when "Use True Type Font" is enabled.
-- **Text size** -- The font size of the watermark text, in pixels. Note that this is the font size that will be applied to the full-size image. The font size will be scaled proportionally with the image size if applied to the thumbnail or medium sized image. **Note:** The font size selection works only when "Use True Type Font" is enabled.
-- **Text color** -- The watermark text color, in hex.
-- **Enable dropshadow?** -- If enabled, a dropshadow will be added to the watermark text. Dropshadows usually make the text easier to read, especially when used on images with greatly varying color.
-- **Dropshadow distance** -- The distance to offset the dropshadow from the regular text, in pixels.
-- **Dropshadow color** -- The dropshadow color, in hex.
-
-Image Watermarks have the following extra options:
-
-- **Path** -- If you wish to test your watermark settings then you may specify the server path to a test image. This will allow you to see how it would actually appear on a real image. A server path is typically something similar to `/home/domain.com/http_docs/cp_images/watermark_test.jpg`. The specific setting will vary from server to server so you may need to contact your Host or server admin to determine what your correct "server path" is.
-- **Opacity** -- The opacity (i.e. transparency) of the watermark image. This allows the watermark to be faint and not completely obscure details from the original image behind it. A 50% opacity is typical.
-- **Image transparency map** -- Specify a color on the image to be "transparent" for PNG or GIF images. This works by specifying the "X" and "Y" coordinate pixel (measured from the upper left) within the image that corresponds to a pixel representative of the color you want to be transparent.
-
-## Export files
+## Exporting Files
 
 The files can be exported and downloaded as zip archive in two ways.
 
@@ -155,7 +177,7 @@ One is by using Bulk Actions and allows you to export the specific files that yo
 
 Another is by using "Export all files" link in the sidebar and it will export and download all files from all upload directories.
 
-Note that exporting can be time and resource consuming.
+WARN:**Note** that exporting can be time and resource consuming.
 
 ## Compatibility Mode
 

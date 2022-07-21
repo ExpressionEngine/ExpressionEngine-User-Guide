@@ -24,14 +24,19 @@
         - name: File Manager Overview
           href: control-panel/file-manager/file-manager.md
         - name: Upload Directories
-          href: control-panel/file-manager/upload-directories.md
           items:
-            - name: Subfolders
-              href: control-panel/file-manager/subfolders.md
+            - name: Overview
+              href: control-panel/file-manager/upload-directories.md
             - name: Adapters
               href: control-panel/file-manager/adapters.md
+            - name: Subfolders
+              href: control-panel/file-manager/subfolders.md
+            - name: Synchronizing
+              href: control-panel/file-manager/synchronizing.md
         - name: File Editing
           href: control-panel/file-manager/file-edit.md
+        - name: Watermarks
+          href: control-panel/file-manager/watermarks.md        
     - name: Field Manager
       items:
         - name: Settings
