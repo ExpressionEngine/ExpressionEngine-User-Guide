@@ -59,6 +59,26 @@
       href: add-ons/moblog.md
     - name: Pages
       href: add-ons/pages.md
+    - name: Pro Search
+      items:
+        - name: Collections
+          href: add-ons/pro-search/collections.md
+        - name: Settings
+          href: add-ons/pro-search/settings.md
+        - name: Lexicon
+          href: add-ons/pro-search/lexicon.md
+        - name: Shortcuts
+          href: add-ons/pro-search/shortcuts.md
+        - name: Parameters
+          href: add-ons/pro-search/parameters.md
+        - name: Filters
+          href: add-ons/pro-search/filters.md
+        - name: Tags
+          href: add-ons/pro-search/tags.md
+        - name: Examples
+          href: add-ons/pro-search/examples.md
+        - name: Find and Replace
+          href: add-ons/pro-search/find-and-replace.md
     - name: Query
       href: add-ons/query.md
     - name: Request
@@ -101,123 +121,6 @@
       href: add-ons/statistics.md
     - name: Emoticon (Deprecated)
       href: add-ons/emoticon.md
-
-- name: Fieldtypes
-  items:
-    - name: Overview
-      href: fieldtypes/overview.md
-    - name: Date
-      href: fieldtypes/date.md
-    - name: Duration
-      href: fieldtypes/duration.md
-    - name: Email Address
-      href: fieldtypes/email-address.md
-    - name: File
-      href: fieldtypes/file.md
-    - name: File Grid
-      href: fieldtypes/file-grid.md
-    - name: Fluid
-      href: fieldtypes/fluid.md
-    - name: Grid
-      href: fieldtypes/grid.md
-    - name: Notes
-      href: fieldtypes/notes.md
-    - name: Relationships
-      href: fieldtypes/relationships.md
-    - name: Rich Text Editor
-      href: fieldtypes/rte.md
-    - name: Checkboxes, Radio Buttons, Select, Multiselect, Selectable Buttons
-      href: fieldtypes/select.md
-    - name: Color Picker
-      href: fieldtypes/colorpicker.md
-    - name: Value Slider, Range Slider
-      href: fieldtypes/slider.md
-    - name: Text Input
-      href: fieldtypes/text.md
-    - name: Textarea
-      href: fieldtypes/textarea.md
-    - name: Number Input
-      href: fieldtypes/number.md
-    - name: Toggle
-      href: fieldtypes/toggle.md
-    - name: URL
-      href: fieldtypes/url.md
-
-- name: Member Management
-  items:
-      - name: Overview
-        href: member/index.md
-      - name: Registration Tag
-        href: member/registration.md
-      - name: Login Tag
-        href: member/login.md
-      - name: Logout Tags
-        href: member/logout.md
-      - name: Forgot Password
-        href: member/forgot-password.md
-      - name: Forgot Username
-        href: member/forgot-username.md
-      - name: Reset Password
-        href: member/reset-password.md
-      - name: Multi-Factor Authentication Links
-        href: member/mfa.md
-      - name: Password Validation
-        href: member/password-validation.md
-      - name: Member List Tag
-        href: member/memberlist.md
-      - name: Member Search Form
-        href: member/search.md
-      - name: Custom Profile Data Tag
-        href: member/custom-profile-data.md
-      - name: Edit Profile Data Tag
-        href: member/edit-profile.md
-      - name: Edit Avatar Tag
-        href: member/edit-avatar.md
-      - name: Member Roles Tags
-        href: member/member-roles-tags.md
-      - name: Ignore List Tag
-        href: member/ignore-list.md
-      - name: Profile Templates (Legacy)
-        href: member/profile-templates.md
-
-- name: Security
-  items:
-    - name: Tips
-      href: security/general-tips.md
-    - name: Captchas
-      href: security/captchas.md
-    - name: Spam Protection
-      href: security/spam-protection.md
-
-- name: Optimization
-  items:
-    - name: Caching and Performance
-      href: optimization/caching.md
-    - name: Handling Extreme Traffic
-      href: optimization/handling-extreme-traffic.md
-    - name: Throttling
-      href: optimization/throttling.md
-    - name: New Relic Performance Monitoring
-      href: optimization/new-relic.md
-
-- name: Troubleshooting
-  items:
-    - name: General
-      href: troubleshooting/general.md
-    - name: Installation
-      href: troubleshooting/installation.md
-    - name: Templates
-      href: troubleshooting/templates.md
-    - name: Control Panel
-      href: troubleshooting/control-panel.md
-    - name: Channels and Entries
-      href: troubleshooting/channels-and-entries.md
-    - name: Email
-      href: troubleshooting/email.md
-    - name: Simple Commerce Module
-      href: troubleshooting/simple-commerce-module.md
-    - name: Error Messages
-      href: troubleshooting/error-messages.md
 
 - name: Add-On Development
   items:
@@ -512,9 +415,9 @@
         - name: WysiHat API
           href: development/control-panel-js/wysihat-api.md
     - name: Dashboard Widgets
-      href: pro/development/widgets.md
+      href: development/widgets.md
     - name: Prolets
-      href: pro/development/prolets.md
+      href: development/prolets.md
     - name: Constants Reference
       href: development/constants.md
     - name: Cypress Tests
@@ -710,27 +613,17 @@
     - name: Displaying Output
       href: cli/displaying-output.md
 
-- name: ExpressionEngine Pro
-  items:
-    - name: Configuration
-      href: pro/configuration.md
-    - name: Dashboard Management
-      href: pro/dashboard_management.md
-    - name: Dock
-      href: pro/dock.md
-    - name: Entry Cloning
-      href: pro/entry_cloning.md
-    - name: Cookies management
-      href: pro/cookies.md
-    - name: Multi-Factor Authentication
-      href: pro/mfa.md
-    - name: Permissions
-      href: pro/permissions.md
-    - name: Troubleshooting
-      href: pro/troubleshooting.md
-
+- name: Entry Cloning
+  href: channels/entry_cloning.md
+  
 - name: Front-end Content Management
-  href: pro/frontend.md
+  items:
+    - name: Overview
+      href: advanced-usage/front-end/overview.md
+    - name: Front-End Editing
+      href: advanced-usage/front-end/frontend.md
+    - name: Dock
+      href: advanced-usage/front-end/dock.md
 
 - name: Multiple Sites
   items:

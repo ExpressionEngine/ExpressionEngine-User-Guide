@@ -36,11 +36,11 @@ Consent Forms allow the visitor to grant or withdraw consent to one or more Cons
 
     {/exp:consent:form}
 
-## Parameters
+### Consent Form Parameters
 
 [TOC=3]
 
-### `consent=`
+#### `consent=`
 
     consent='ee:cookies_functionality'
 
@@ -52,25 +52,25 @@ Or use "not" to exclude entries:
 
     consent='not twitter_app'
 
-### `form_class=`
+#### `form_class=`
 
     form_class='consent_form'
 
 Specify the HTML `class=` attribute.
 
-### `form_id=`
+#### `form_id=`
 
     form_id='consent_form'
 
 Specify the HTML `id=` attribute.
 
-### `return=`
+#### `return=`
 
     return='site/consent'
 
 Specify a path to redirect the user to after submission. If not specified, they will be returned to the current page. Unused for Ajax-submitted forms.
 
-### `user_created=`
+#### `user_created=`
 
     user_created='only'
 
@@ -83,15 +83,15 @@ Filter the consent requests based on whether or not they are user-created (as op
 | only        | Show only user-created consents |
 
 
-## Variables
+### Consent Form Variables
 
 [TOC=3]
 
-### `{consents}{/consents}`
+#### `{consents}{/consents}`
 
 A pair variable used to loop through all of the consent requests you are displaying with this form. It has the following variables:
 
-### `{consent_creation_date}`
+#### `{consent_creation_date}`
 
 The date the consent was created.
 
@@ -99,7 +99,7 @@ The date the consent was created.
 
 The date the request was created. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
 
-### `{consent_given_via}`
+#### `{consent_given_via}`
 
 The method that consent was provided, can be useful for conditionals. Typically `online_form`:
 
@@ -107,7 +107,7 @@ The method that consent was provided, can be useful for conditionals. Typically 
       Consent was granted via an online form.
     {/if}
 
-### `{consent_grant_url}`
+#### `{consent_grant_url}`
 
 A URL that when clicked will grant the user's consent for this request.
 
@@ -117,7 +117,7 @@ Optionally accepts a `return=` parameter if the action should redirect somewhere
 
     <a href="{consent_grant_url return='preferences/saved'}">Grant</a>
 
-### `{consent_granted}`
+#### `{consent_granted}`
 
 A boolean variable for conditionals that returns `TRUE` or `FALSE`. Returns `TRUE` if the user has granted permission to the consent request, `FALSE` otherwise.
 
@@ -125,29 +125,29 @@ A boolean variable for conditionals that returns `TRUE` or `FALSE`. Returns `TRU
         Set that cookie!
     {/if}
 
-### `{consent_id}`
+#### `{consent_id}`
 
 The ID number of the consent.
 
-### `{consent_request}`
+#### `{consent_request}`
 
 The description of the consent request.
 
-### `{consent_response_date}`
+##### `{consent_response_date}`
 
     {consent_response_date format='%Y %m %d'}
 
 The date that consent was granted or withdrawn. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
 
-### `{consent_short_name}`
+#### `{consent_short_name}`
 
 The short name of the consent.
 
-### `{consent_title}`
+#### `{consent_title}`
 
 The title of the consent request.
 
-### `{consent_user_created}`
+#### `{consent_user_created}`
 
 A boolean variable for conditionals that returns `TRUE` or `FALSE`. Returns `TRUE` if this consent request was user-created or not (by a site admin in the control panel). Returns `FALSE` otherwise (app or add-on created consent requests).
 
@@ -155,13 +155,13 @@ A boolean variable for conditionals that returns `TRUE` or `FALSE`. Returns `TRU
         This consent request is a custom request created by a site administrator.
     {/if}
 
-### `{consent_version_id}`
+#### `{consent_version_id}`
 
 The version_id of the consent request.
 
     {version_id}
 
-### `{consent_withdraw_url}`
+#### `{consent_withdraw_url}`
 
 A URL that when clicked will withdraw the user's consent for this request.
 
@@ -171,7 +171,7 @@ Optionally accepts a `return=` parameter if the action should redirect somewhere
 
     <a href="{consent_grant_url return='preferences/saved'}">Grant</a>
 
-### `{if no_results}`
+#### `{if no_results}`
 
 If this tag would not output any consent requests due to your filters, the contents of this conditional will be displayed instead.
 
@@ -179,9 +179,9 @@ If this tag would not output any consent requests due to your filters, the conte
       No Consent Requests Available
     {/if}
 
-## Examples
+### Conesnt Form Examples
 
-### Simple Bulk Consent Form
+#### Simple Bulk Consent Form
 
     {exp:consent:alert}
       <div class="alert {alert_type}">
@@ -216,7 +216,7 @@ If this tag would not output any consent requests due to your filters, the conte
       </fieldset>
     {/exp:consent:form}
 
-### AJAX-Driven Consent Form
+#### AJAX-Driven Consent Form
 
     <html>
       <head>
@@ -281,18 +281,18 @@ If you want to provide custom classes and response text, you can do that here as
       {/if}
     {/exp:consent:alert}
 
-## Variables
+### Alert Tag Variables
 
 [TOC=3]
 
-### `{alert_message}`
+#### `{alert_message}`
 
 The alert message. "Your consent preferences have been saved for:" followed by a list of the Consent Request titles the user submitted.
 
     {alert_message}
     {!-- Your consent preferences have been saved for: Functionality Cookies, Performance Cookies, Targeting Cookies --}
 
-### `{alert_type}`
+#### `{alert_type}`
 
 One of `issue`, `success`, or `warn`. Can be useful to set CSS classes.
 
@@ -318,11 +318,11 @@ The Requests tag lets you list or loop through available Consent Requests, witho
       </ul>
     {/exp:consent:requests}
 
-## Parameters
+## Requests Tag Parameters
 
 [TOC=3]
 
-### `consent=`
+#### `consent=`
 
     consent='ee:cookies_functionality'
 
@@ -336,7 +336,7 @@ Or use "not" to exclude entries:
 
 Specify a path to redirect the user to after submission. If not specified, they will be returned to the current page. Unused for Ajax-submitted forms.
 
-### `user_created=`
+#### `user_created=`
 
     user_created='only'
 
@@ -344,13 +344,13 @@ Filter the consent requests based on whether or not they are user-created (as op
 
 |value| result| |y (default) |Include user-created consents| |n |Exclude user-created consents| |only | Show only user-created consents|
 
-## Variables
+### Requests Tag Variables
 
 [TOC=3]
 
 The Requests tag has the same variables available to the Consents Form, but without the need to wrap them in a `{consents}{/consents}` tag pair.
 
-### `{consent_creation_date}`
+#### `{consent_creation_date}`
 
 The date the consent was created.
 
@@ -358,7 +358,7 @@ The date the consent was created.
 
 The date the request was created. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
 
-### `{consent_given_via}`
+#### `{consent_given_via}`
 
 The method that consent was provided, can be useful for conditionals. Typically `online_form`:
 
@@ -366,7 +366,7 @@ The method that consent was provided, can be useful for conditionals. Typically 
       Consent was granted via an online form.
     {/if}
 
-### `{consent_grant_url}`
+#### `{consent_grant_url}`
 
 A URL that when clicked will grant the user's consent for this request.
 
@@ -376,7 +376,7 @@ Optionally accepts a `return=` parameter if the action should redirect somewhere
 
     <a href="{consent_grant_url return='preferences/saved'}">Grant</a>
 
-### `{consent_granted}`
+#### `{consent_granted}`
 
 A boolean variable for conditionals that returns `TRUE` or `FALSE`. Returns `TRUE` if the user has granted permission to the consent request, `FALSE` otherwise.
 
@@ -384,29 +384,29 @@ A boolean variable for conditionals that returns `TRUE` or `FALSE`. Returns `TRU
         Set that cookie!
     {/if}
 
-### `{consent_id}`
+#### `{consent_id}`
 
 The ID number of the consent.
 
-### `{consent_request}`
+#### `{consent_request}`
 
 The description of the consent request.
 
-### `{consent_response_date}`
+#### `{consent_response_date}`
 
     {consent_response_date format='%Y %m %d'}
 
 The date that consent was granted or withdrawn. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
 
-### `{consent_short_name}`
+#### `{consent_short_name}`
 
 The short name of the consent.
 
-### `{consent_title}`
+#### `{consent_title}`
 
 The title of the consent request.
 
-### `{consent_user_created}`
+#### `{consent_user_created}`
 
 A boolean variable for conditionals that returns `TRUE` or `FALSE`. Returns `TRUE` if this consent request was user-created or not (by a site admin in the control panel). Returns `FALSE` otherwise (app or add-on created consent requests).
 
@@ -414,13 +414,13 @@ A boolean variable for conditionals that returns `TRUE` or `FALSE`. Returns `TRU
         This consent request is a custom request created by a site administrator.
     {/if}
 
-### `{consent_version_id}`
+#### `{consent_version_id}`
 
 The version_id of the consent request.
 
     {version_id}
 
-### `{consent_withdraw_url}`
+#### `{consent_withdraw_url}`
 
 A URL that when clicked will withdraw the user's consent for this request.
 
@@ -430,10 +430,72 @@ Optionally accepts a `return=` parameter if the action should redirect somewhere
 
     <a href="{consent_grant_url return='preferences/saved'}">Grant</a>
 
-### `{if no_results}`
+#### `{if no_results}`
 
 If this tag would not output any consent requests due to your filters, the contents of this conditional will be displayed instead.
 
     {if no_results}
       No Consent Requests Available
     {/if}
+
+## Cookie List Tag
+
+    {exp:consent:cookies type="necessary"}
+        Cookie name: {cookie_name}<br />
+        Title: {cookie_title}<br />
+        Description: {cookie_description}<br />
+        Is set by: {cookie_provider}<br />
+        Lifetime: {cookie_lifetime}<hr />
+    {/exp:consent:cookies}
+
+### Cookie List Tag Parameters
+
+#### `type=`
+
+    type='necessary'
+
+Type of cookies to display. Possible options are `necessary`, `functionality`, `performance` and `targeting`. If omited, all cookies will be displayed.
+
+It is also possible to combine several types, e.g. `type="performance|targeting"`.
+
+If you need to exclude one or several types from display, use `not ` before the values:
+
+    type='not performance|targeting'
+
+#### `provider=`
+
+    provider='ee'
+
+Limits display of cookies by cookie provider. 
+If the cookie is provided by an add-on, the provider matches the add-ons short name, e.g. `comment` or `forum`
+The core ExpressionEngine cookies are identified by `ee` as provider.
+If cookie is only being used in Control Panel, the provider is set to `cp`.
+Possible options are `necessary`, `functionality`, `performance` and `targeting`. If omited, all cookies will be displayed.
+
+It is also possible to combine several providers, e.g. `type="ee|cp"`.
+
+If you need to exclude one or several providers from display, use `not ` before the values
+
+    provider='not forum|cp'
+
+### Cookie List Tag Variables
+
+#### `{cookie_name}`
+
+Cookie name
+
+#### `{cookie_title}`
+
+Cookie title
+
+#### `{cookie_description}`
+
+Cookie description
+
+#### `{cookie_provider}`
+
+Cookie provider (`ee` or add-on short name)
+
+#### `{cookie_lifetime}`
+
+Cookie lifetime in seconds. `0` represents session cookies (killed after browsing session ends).

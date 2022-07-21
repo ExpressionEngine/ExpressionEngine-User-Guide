@@ -9,8 +9,6 @@
 
 # Entry Cloning
 
-Entry Cloning makes it possible to clone existing entries when ExpressionEngine Pro is installed.
-
 Check out our video tutorial on Cloning Entries!
 <div class="video-wrapper">
 <iframe src="https://www.youtube.com/embed/cSz7NZdQvGk?vq=HD1080&rel=0" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -19,7 +17,7 @@ Check out our video tutorial on Cloning Entries!
 
 ## Enabling Entry Cloning
 ### Global
-Entry Cloning is enabled by default when ExpressionEngine Pro is installed. Entry Cloning can be disabled globally for your site via the [Pro Configuration](pro/configuration.md) setting or the matching [Config Override.](pro/configuration.md#enable_entry_cloning)
+Entry Cloning is enabled by default when ExpressionEngine is installed. Entry Cloning can be disabled globally for your site via the ["enable entry cloning" setting](settings/content-design.md#enable-entry-cloning) setting or the matching [Config Override.](general/system-configuration-overrides.md#enable_entry_cloning)
 
 ![](/_images/entry_cloning_global.png)
 

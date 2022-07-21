@@ -25,6 +25,9 @@ This feature will improve the speed at which your channel pages load by caching 
 
 NOTE: **Note:** Enable this preference only if you **do not** use the "future entries" or "expiring entries" feature.
 
+### Enable entry cloning
+Enables cloning the entries by using "Clone to New Entry" option in saving dropdown on entry edit page. When enabled globally, can also be disabled individually for each channel in channel preferences.
+
 ### Assign category parents?
 
 Set whether to assign an entry to both the selected category and its parent category.

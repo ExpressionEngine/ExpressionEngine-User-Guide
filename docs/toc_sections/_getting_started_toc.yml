@@ -18,6 +18,8 @@
       href: installation/best-practices.md
     - name: Updating
       href: installation/updating.md
+    - name: Site License Management
+      href: installation/license-management.md
     - name: Change Log
       href: installation/changelog.md
 

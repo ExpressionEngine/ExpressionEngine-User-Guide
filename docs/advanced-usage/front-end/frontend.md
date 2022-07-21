@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Front-end Content Management
+# Front-end Editing
 
 [TOC]
 
@@ -19,6 +19,10 @@ Clicking the link opens a popup with the field that can be modified and saved. A
 ![edit popup](_images/ee-pro-window.png)
 
 The links are being placed in your HTML right before the field's tag (or opening tag if field tag pair is used).
+
+WARN:**Permissions:** Users must be logged-in on the front-end of your site and must have a role assigned to them which allows them to access and edit content for that entry's channel.
+
+![channel access](_images/ee-role-channel-access.png).
 
 ## Saving Content
 After editing data, content can be saved by one of two ways:

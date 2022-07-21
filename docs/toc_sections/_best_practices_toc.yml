@@ -33,6 +33,8 @@
       href: troubleshooting/installation.md
     - name: Templates
       href: troubleshooting/templates.md
+    - name: Front-End Content Management
+      href: troubleshooting/front-end-content-management.md
     - name: Control Panel
       href: troubleshooting/control-panel.md
     - name: Channels and Entries

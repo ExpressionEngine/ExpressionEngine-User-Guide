@@ -3,26 +3,16 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2021, Packet Tide, LLC (https://packettide.com)
+    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# ExpressionEngine Pro Installation and Activation
+# Purchasing Pro and Adding a Site License
 
 [TOC]
 
-## Downloading ExpressionEngine Pro
-As of ExpressionEngine version 6.1.0, ExpressionEngine Pro is shipped with the zip file located on the [ExpressionEngine website](https://expressionengine.com) or through the [GitHub release](https://github.com/ExpressionEngine/ExpressionEngine/releases) assets (it is not automatically included if cloning the public repository with Git).
-
-## Installing ExpressionEngine Pro
-Similar to ExpressionEngine add-ons, to install Pro navigate to the [Add-on Manager](control-panel/addons-manager.md), find ExpressionEngine Pro under uninstalled add-ons, and click on "install".
-
-![install pro](_images/ee-pro-uninstall.png)
-
 ## Trial use of ExpressionEngine Pro
-When used in a local development environment with an [approved top-level domain](pro/installation.md#approved-top-level-domains) or hosted in an [approved PaaS environment](pro/installation.md#approved-platform-as-a-service-paas-domains), ExpressionEngine Pro (including Low Search and Low Variables) can be used freely. All features are available to users while in this trial mode.
-
-![Pro trial](_images/ee-pro-trial.png)
+When used in a local development environment with an [approved top-level domain](installation/license-management.md#approved-top-level-domains) or hosted in an [approved PaaS environment](installation/license-management.md#approved-platform-as-a-service-paas-domains), ExpressionEngine Pro (including Low Search and Low Variables) can be used freely. All features are available to users while in this trial mode.
 
 ### Approved Top-Level Domains
 
@@ -80,7 +70,6 @@ Follow these steps to use your purchased Pro license:
 
 **Your ExpressionEngine Pro installation should now should show as active.**
 
-![Valid install](_images/ee-pro-valid-install.png)
 
 ## Installation of Included Products
 An ExpressionEngine Pro license also includes access to other products. Currently this includes Low Search and Low Variables. Each of these can be downloaded separately and will be automatically installed with Pro if available in your `user/addons` folder. If you do not wish to use any of the additional products, just do not include these in your `user/addons` folder and they will not be installed.  If your site is already making use of Low Search, Low Variables, or other included products, they will continue to work as intended.

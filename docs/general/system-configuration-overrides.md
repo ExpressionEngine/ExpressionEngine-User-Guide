@@ -237,7 +237,7 @@ Set the interval between autosaves on the Publish Page.
 
 | Value   | Description                                  |
 | ------- | -------------------------------------------- |
-| integer | Autosave interval in seconds (default is 60) |
+| integer | Autosave interval in seconds (default is 10) |
 
 Example Usage:
 
@@ -1180,6 +1180,32 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Word Censorship`: [Enable Word Censoring](control-panel/settings/word-censor.md#enable-censorship)
 
+### `enable_entry_cloning`
+
+When set to `n`, disables "Clone to New Entry" option and entry cloning globally. 
+
+| Value | Behavior                                       |
+| ----- | ---------------------------------------------- |
+| y     | Enable entry cloning    (default)              |
+| n     | Disable entry cloning                         |
+
+Example Usage:
+
+    $config['enable_entry_cloning'] = 'y';
+
+### `enable_dock`
+
+Allows turning off [front-end editing](advanced-usage/frontend.md) and Prolets completely. When set to `n`, Dock will not be shown and front-end field editing will not be enabled.
+
+| Value | Behavior                                       |
+| ----- | ---------------------------------------------- |
+| y     | Enables Dock and all its features    (default) |
+| n     | Turn off Dock, front-end editing and Prolets   |
+
+Example Usage:
+
+    $config['enable_dock'] = 'n';
+
 ### `enable_emoticons`
 
 If enabled, smileys entered as text will be replaced by emoji.
@@ -1221,6 +1247,33 @@ By default, ExpressionEngine sends a header to disable FLoC in the browser. If t
 Example Usage:
 
     $config['enable_floc'] = 'y';
+
+### `enable_frontedit`
+
+When set to `n`, completely disables [front-end editing](advanced-usage/frontend.md) while keeping Dock visible and Prolets functional.
+
+| Value | Behavior                                       |
+| ----- | ---------------------------------------------- |
+| y     | Enables front-end editing    (default) |
+| n     | Disable front-end editing   |
+
+
+Example Usage:
+
+    $config['enable_frontedit'] = 'n';
+
+### `enable_frontedit_links`
+
+When set to `n`, disables automatic creation of content management links on front-end. The links can still be [added manually](advanced-usage/frontend.md#customizing-the-link-location).
+
+| Value | Behavior                                       |
+| ----- | ---------------------------------------------- |
+| y     | Enable automatic front-end editing links    (default) |
+| n     | Disable automatic front-end editing links   |
+
+Example Usage:
+
+    $config['enable_frontedit_links'] = 'y';
 
 ### `enable_hit_tracking`
 
@@ -1359,6 +1412,15 @@ Set the system to end a user's session when the browser is closed. (In the case 
 Example Usage:
 
     $config['expire_session_on_browser_close'] = 'y';
+
+### `favicon`
+
+URL to file used as favicon in Control Panel. 
+
+Example Usage:
+
+    $config['favicon'] = '/url/to/icon.png';
+
 
 ### `filename_increment`
 
@@ -1709,6 +1771,14 @@ Set an error threshold to determine how much information is logged.
 Example Usage:
 
     $config['log_threshold'] = '1';
+
+### `login_logo`
+
+URL to file used as branded logo on login page.
+
+Example Usage:
+
+    $config['login_logo'] = '/url/to/file.jpg';
 
 ### `mail_format`
 

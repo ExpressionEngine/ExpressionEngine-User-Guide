@@ -51,6 +51,10 @@ This preference determines whether new members must indicate that they agree to 
 
 If you are using legacy member profile template, when new members register through the site, a "terms of service" block of text is displayed. You may edit the terms of service within the registration form template, located at `Design --> Themes --> Member Profile Templates --> Default --> Registration Form`.
 
+### Enable Multi-Factor Authentication?
+
+This preference enables members to setup [Multi-Factor Authentication](member/mfa.md) with their accounts.
+
 ### Allow members to set time preferences?
 
 ![Allow members to set time preferences](/_images/members_time_prefs.png)

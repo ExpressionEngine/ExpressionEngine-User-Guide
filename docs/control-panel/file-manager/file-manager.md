@@ -15,12 +15,7 @@ TIP: If you are looking for information on using the files in your entries and t
 
 On the main File Manager page you can view all of your previously uploaded files. Files list can be filtered by a number of criterias as well as searched. The data included in the displayed list can be customized. The files can be manipulated separately or in bulk.
 
-WARN: To use files in ExpressionEngine, you need to have at least one [Upload Directory](control-panel/file-manager/upload-directories.md) configured
-
-[TOC]
-
-- [Upload Directories](control-panel/file-manager/upload-directories.md)
-- [Files Editing](control-panel/file-manager/file-edit.md)
+[TOC]cp-file
 
 ![Control Panel File Manager Page](_images/cp-file-manager.png)
 
@@ -28,11 +23,11 @@ WARN: To use files in ExpressionEngine, you need to have at least one [Upload Di
 
 ## Navigating File Manager
 
-By default, you are presented the "All files" table.
-
-From there, you can narrow it down to specific Upload Directory using sidebar on the left, search / filter directly for the specific file or upload.
+By default, all files are shown. The files shown can be further filtered using the filters and search options at the top of the File Manager. 
 
 ![Control Panel File Manager Page](_images/cp-file-manager-filters.png)
+
+From there, you can narrow it down to specific Upload Directory using sidebar on the left, search / filter directly for the specific file or upload.
 
 You can switch the new type from "table" to "thumbs" and vice versa. The columns displayed can also be configured using the dropdown in filter.
 
@@ -44,11 +39,11 @@ The view and columns set is automatically saved for user (separately for each Up
 
 There are 3 way to upload a file using File Manager:
 
-1. Drag & drop the files directly to the files listing area. If you are in "All files" page, you will be asked to select Upload Directory first, otherwise the upload starts instantly
+* Drag & drop the files directly to the files listing area. If you are in "All files" page, you will be asked to select Upload Directory first, otherwise the upload starts instantly
 
-2. Use the "Upload" button at top right. It presents the dropdown with the list of available Upload Directories and folders. Picking the one that you need will show OS file selector and upon selection upload will start
+* Use the "Upload" button at top right. It presents the dropdown with the list of available Upload Directories and folders. Picking the one that you need will show OS file selector and upon selection upload will start
 
-3. When viewing specific Upload Directory, you can also use "Upload" button right above the filters, which will upload into current folder.
+* When viewing specific Upload Directory, you can also use "Upload" button right above the filters, which will upload into current folder.
 
 You can select and upload multiple files using each of these methods.
 

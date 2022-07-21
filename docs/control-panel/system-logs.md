@@ -21,6 +21,8 @@ This section of the Control Panel allows you to view the various logs.
 
 This section of the Control Panel allows you to view log messages for consent management, including all grants and withdrawls of specific consent requests.
 
+Consent requests can also be downloaded if needed by using the "export" button ( <img style="margin-bottom: 0px; vertical-align: middle;display:inline-block;" src="../_images/pro_consent_export.png" alt="consent export icon">) in the top right of Consent Audit Log settings. This allows users to download a CSV file with log records based on filters applied.
+
 ## Control Panel Access Logs
 
 **Control Panel Location: `Developer > Logs > Control Panel`**

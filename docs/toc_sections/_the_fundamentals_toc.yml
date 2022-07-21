@@ -15,6 +15,8 @@
       href: control-panel/create.md
     - name: Channels
       href: control-panel/channels.md
+    - name: Dashboard Management
+      href: control-panel/dashboard_management.md
     - name: Entry Manager
       href: control-panel/entry-manager.md
     - name: File Manager
@@ -23,6 +25,11 @@
           href: control-panel/file-manager/file-manager.md
         - name: Upload Directories
           href: control-panel/file-manager/upload-directories.md
+          items:
+            - name: Subfolders
+              href: control-panel/file-manager/subfolders.md
+            - name: Adapters
+              href: control-panel/file-manager/adapters.md
         - name: File Editing
           href: control-panel/file-manager/file-edit.md
     - name: Field Manager
@@ -61,6 +68,8 @@
           href: control-panel/settings/content-design.md
         - name: Consents Requests
           href: control-panel/settings/consents.md
+        - name: Cookie Settings
+          href: control-panel/settings/cookie-settings.md
         - name: Debugging & Output
           href: control-panel/settings/debug-output.md
         - name: Outgoing Email
@@ -87,6 +96,10 @@
           href: control-panel/settings/html-buttons.md
         - name: Menu Manager
           href: control-panel/settings/menu-manager.md
+        - name: Front-End Editing
+          href: control-panel/settings/front-end-editing.md
+        - name: Branding
+          href: control-panel/settings/branding.md
     - name: CP Navigation
       href: control-panel/navigation.md
       
@@ -145,6 +158,8 @@
       href: channels/entry-spanning.md
     - name: Entry Views Tracking
       href: channels/entry-tracking.md
+    - name: Entry Cloning
+      href: channels/entry_cloning.md
     - name: Dynamic Parameters
       href: channels/dynamic-parameters.md
     - name: Categories Tag
@@ -244,7 +259,7 @@
         href: member/forgot-username.md
       - name: Reset Password
         href: member/reset-password.md
-      - name: Multi-Factor Authentication Links
+      - name: Multi-Factor Authentication
         href: member/mfa.md
       - name: Password Validation
         href: member/password-validation.md
