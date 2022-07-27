@@ -408,6 +408,8 @@
       href: development/shared-form-view.md
     - name: Control Panel Javascript
       items:
+        - name: Global Variables
+          href: development/control-panel-js/globals.md
         - name: Custom jQuery Events
           href: development/control-panel-js/events.md
         - name: Table Plugin
@@ -453,6 +455,8 @@
               href: development/legacy/libraries/email.md
             - name: File Uploading Class
               href: development/legacy/libraries/file-uploading.md
+            - name: File Field Library
+              href: development/legacy/libraries/file-field.md
             - name: Form Validation Class
               href: development/legacy/libraries/form-validation.md
             - name: Functions Class
