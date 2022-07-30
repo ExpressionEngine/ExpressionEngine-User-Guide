@@ -31,7 +31,7 @@ TIP: It makes sense to add more weight to small fields, like Title or text input
 
 ### Selecting the excerpt field
 
-You can select one of the available fields to act as the excerpt field. A stripped down version of this field will become available in the Results tag as the `{low_search_excerpt}` variable.
+You can select one of the available fields to act as the excerpt field. A stripped down version of this field will become available in the Results tag as the `{pro_search_excerpt}` variable.
 
 For non-keyword searches, where collection information is not available, the excerpt field defined in the channel preferences will be used instead.
 

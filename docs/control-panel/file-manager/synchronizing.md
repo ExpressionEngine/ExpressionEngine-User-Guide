@@ -6,7 +6,7 @@
     @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
-## Syncronizing A Directory
+# Syncronizing A Directory
 
 ExpressionEngine is using the database to store the information on files, so if you have placed the files directly on server and want to use those, it is important to let the CMS know about that.
 

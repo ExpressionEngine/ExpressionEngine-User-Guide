@@ -48,22 +48,22 @@ Note: Setting keywords:loose to left or both will result in a slower query than 
 
 The keywords filter also makes these variables available in the Results tag:
 
-`{low_search_collection_id}`
+`{pro_search_collection_id}`
     Collection ID for the collection the entry was found in.
-`{low_search_collection_label}`
+`{pro_search_collection_label}`
     Collection label for the collection the entry was found in.
-`{low_search_collection_language}`
+`{pro_search_collection_language}`
     Collection language for the collection the entry was found in.
-`{low_search_collection_name}`
+`{pro_search_collection_name}`
     Collection name for the collection the entry was found in.
-`{low_search_score}`
+`{pro_search_score}`
     Relevance score of the entry.
 
 ## Order by collection
 
 By default, search results will be ordered by relevance score:
 
-low_search_score. Use orderby="low_search_collection:foo,bar" to order by collection first, where foo and bar are collection names. Search results that belong to other collections than defined here will be grouped together and shown last.
+pro_search_score. Use orderby="pro_search_collection:foo,bar" to order by collection first, where foo and bar are collection names. Search results that belong to other collections than defined here will be grouped together and shown last.
 
 keywords:mode="auto"
 
@@ -88,7 +88,7 @@ The automatic keywords:mode uses operators in keywords for any/all/exact matchin
 
 Low Search 4 supports singular and plural matching of keywords (inflections). To enable this, both the keywords:inflect and the keywords:lang parameters must be set. Low Search supports English inflections natively and you can add support for other languages by adding inflection rules to your Config file:
 
-$config['low_search_inflection_rules'][lang] = array(
+$config['pro_search_inflection_rules'][lang] = array(
   'plural'      => array(),
   'singular'    => array(),
   'irregular'   => array(),
@@ -100,7 +100,7 @@ Stems#
 
 Low Search 4 supports matching of keywords by their stem (stemming). To enable this, both the keywords:stem and the keywords:lang parameters must be set. English stemming is supported natively, using a Porter stemmer class, and you can add support for other languages by adding this to your Config file:
 
-$config['low_search_stemmers'][lang] = array(
+$config['pro_search_stemmers'][lang] = array(
   file_path,
   class_name,
   method
@@ -139,7 +139,7 @@ Note: Use two separate fields instead of a single one for better performance.
 
 The Distance filter also makes this variable available in the Results tag:
 
-`{low_search_distance}`
+`{pro_search_distance}`
     The calculated distance in the given unit for this entry.
 
 Note: Using the Distance filter will return the search results ordered by distance, ignoring keyword relevance if applicable. Override by explicitly setting the orderby parameter.

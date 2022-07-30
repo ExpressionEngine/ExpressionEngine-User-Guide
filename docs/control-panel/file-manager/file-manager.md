@@ -183,8 +183,8 @@ WARN:**Note** that exporting can be time and resource consuming.
 
 ## Compatibility Mode
 
-Since ExpressionEngine 7, the file data are being stored differently (using `{file:XX:url}` format instead of `{filedir_X}filename.ext`). This allows us to perform more operations, such as storing the file in a subfolder, moving the file to different location, collecting file usage data.
+WARN:**Note:** Compatibility Mode is enabeld by deafult for sites upgrading from ExpressionEngine versions less than ExpressionEngine 7.
 
-We will still parse the `{filedir_X}` tags in template or channel entries, however if you have some third-party add-on that does its own parsing and is not aware of the `{file:XX:url}` syntax, it might malfunction.
+ExpressionEngine 7+ store files in the database differently then previous versions (using `{file:XX:url}` format instead of `{filedir_X}filename.ext`). This allows ExpressionEngine to perform more operations, such as storing files in subfolders, moving files to different locations, and collecting file usage data.
 
-In order to prevent bad use experience, we are turning on the Compatbility Mode for the sites that are upgrading from ExpressionEngine 6 or earlier versions. If you know your add-ons are compatible with EE7, go to `Settings --> Content & Design Settings` and turn `Run File Manager in Compatibility Mode?` off.
+ExpressionEngine will still parse the `{filedir_X}` tags in templates or channel entries. However, third-party add-ons that parse file data on their own may not be compatiblie with the `{file:XX:url}` syntax causing issues. In order to prevent a bad user experience, users can enable Compatbility Mode for the sites that are upgrading from ExpressionEngine 6 or earlier versions. If you know all installed add-ons are compatible with the new file format, you may disable Compatibility Mode from the [Content & Design settings](/control-panel/settings/content-design.md#run-file-manager-in-compatibility-mode).

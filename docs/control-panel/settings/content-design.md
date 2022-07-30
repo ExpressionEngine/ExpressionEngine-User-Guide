@@ -32,6 +32,12 @@ Enables cloning the entries by using "Clone to New Entry" option in saving dropd
 
 Set whether to assign an entry to both the selected category and its parent category.
 
+### Run File Manager in Compatibility Mode?
+
+WARN:**Note:** Compatibility Mode is enabeld by deafult for sites upgrading from ExpressionEngine versions less than ExpressionEngine 7.
+
+When Compatibility Mode is enabled, files will be stored in the database using a format compatiblie with ExpressionEngine versions 6 and prior. Compatibility Mode disables many newer File Manager features and prevents issues with add-ons that are not ExpressionEngine 7+ compatible. See [`File Manager > Compatibility Mode`](/control-panel/file-manager/file-manager.md#compatibility-mode) for more information.
+
 ### Protocol
 
 This is where you indicate which resizing protocol to use. You may need to contact your Host or server admin to determine which protocols are installed and available on your server. The options are:

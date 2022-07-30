@@ -8,7 +8,7 @@
 -->
 # Parameters in Low Search
 
-Low Search uses both native and its own parameters to generate search results. All these parameters can be applied in two ways: as input fields in a Form, or as hard-coded parameters in the Results or URL tag. The values of these parameters can always be shown inside a Low Search tag by using the parameter name as a variable, prefixed with low_search_.
+Low Search uses both native and its own parameters to generate search results. All these parameters can be applied in two ways: as input fields in a Form, or as hard-coded parameters in the Results or URL tag. The values of these parameters can always be shown inside a Low Search tag by using the parameter name as a variable, prefixed with pro_search_.
 
 So, any parameter:
 
@@ -20,7 +20,7 @@ Is equal to:
 
 And the param_value can be shown with:
 
-`{low_search_param_name}`
+`{pro_search_param_name}`
 
 For example, take a look at these parameters, input fields and variables:
 
@@ -29,8 +29,8 @@ For example, take a look at these parameters, input fields and variables:
 `<input type="hidden" name="channel" value="news">`
 `<input type="checkbox" name="search:featured" value="yes" checked>`
 
-`{low_search_channel}`
-`{low_search_search:featured}`
+`{pro_search_channel}`
+`{pro_search_search:featured}`
 
 TIP Use input fields if you want the value of the parameter to be user defined or logged to the Search Log. Use hard-coded parameters if you want the value to be fixed.
 
@@ -53,8 +53,8 @@ In ExpressionEngine, multiple values of a parameter are usually separated by a v
     <input type="checkbox" name="search:number[]" value="two"> Two
     <input type="checkbox" name="search:number[]" value="three" checked> Three
 
-    {low_search_category}
-    {low_search_search:number}
+    {pro_search_category}
+    {pro_search_search:number}
 
 WARN**Note:** do not include the square brackets in the variable names.
 
@@ -83,9 +83,9 @@ This is equal to:
 
     <input type="hidden" name="require_all" value="category|search:number">
 
-    {low_search_category}
-    {low_search_search:number}
-    {low_search_require_all}
+    {pro_search_category}
+    {pro_search_search:number}
+    {pro_search_require_all}
 
 #### Exclude values
 
@@ -111,9 +111,9 @@ This is equal to:
     <input type="checkbox" name="search:number[]" value="three" checked> Three
     <input type="hidden" name="exclude" value="category|search:number">
 
-    {low_search_category}
-    {low_search_search:number}
-    {low_search_exclude}
+    {pro_search_category}
+    {pro_search_search:number}
+    {pro_search_exclude}
 
 ### SQL parameters
 
@@ -129,7 +129,7 @@ Examples
 
 Display products with a price higher than the overall average price:
 
-    {exp:low_search:results
+    {exp:pro_search:results
       channel="products"
       search:price="> SELECT AVG(field_id_5) FROM exp_channel_data WHERE channel_id = 3;"
       orderby="price"
@@ -137,7 +137,7 @@ Display products with a price higher than the overall average price:
 
 Display articles where the selected author (based on a relationship field) is not Closed. Don’t display anything if all authors are Closed:
 
-    {exp:low_search:results
+    {exp:pro_search:results
       channel="articles"
       child:author="SELECT entry_id FROM exp_channel_titles WHERE channel_id = 4 AND status != 'closed';-1"
     }
@@ -151,7 +151,7 @@ The `pipe_separated_items` and `single_item` variables should be written without
 
     <select name="category[]" multiple>
       {exp:channel:categories channel="news" style="linear"}
-        <option value="{category_id}"{if low_search_category ~ '/(^|\|)'.category_id.'($|\|)/'} selected{/if}>
+        <option value="{category_id}"{if pro_search_category ~ '/(^|\|)'.category_id.'($|\|)/'} selected{/if}>
           {category_name}
         <option>
       {/exp:channel:categories}

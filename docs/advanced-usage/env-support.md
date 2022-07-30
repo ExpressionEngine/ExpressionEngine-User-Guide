@@ -6,7 +6,7 @@
     @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
-#ENV File Support
+# ENV File Support
 
 Config files can also be configured using [PHP Environment variables ($_ENV)](https://www.php.net/manual/en/reserved.variables.environment.php). To utilize this, create a file named `.env.php` in the root of your ExpressionEngine install. Add variables to your `.env.php` file as illustrated below:
 
@@ -22,9 +22,9 @@ This variable can now be used in your `/system/user/config.php` as illustrated b
 ...
 ```
 
-## Full Example
+## Example
 
-Here is an example of what it might look like to manage all your database connection settings, base path, and base url in `.env.php`
+Here is an example of what it might look like to manage all your database connection settings, and Base URL in `.env.php`
 
 ```
 # .env.php

@@ -11,6 +11,8 @@
 
 ExpressionEngine's Search Module has several individual tags that work together to perform searches and display search results.
 
+TIP:As of ExpressionEngine 7, users can take advantage of [Pro Search](add-ons/pro-search/overview.md), which offers more robust searching, filtering, and other advanced features. Pro Search can be installed from the `Add-ons` section of the Control Panel.
+
 ## Simple Search Form
 
 The [Simple Search Form](add-ons/search/simple.md) tag allows you to easily add a single-form search field to your site. This allows you to have a simple search box in a sidebar of your site.

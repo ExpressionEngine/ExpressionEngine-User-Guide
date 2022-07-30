@@ -42,6 +42,6 @@ Use the Shortcuts tag to display a list of shortcuts. By default, these will be 
 
 To display the search results based on a given shortcut, use the shortcut parameter. This parameter is available in the Form tag, Filters tag, URL tag, and Results tag, and is required in the latter to trigger the shortcut search results. A typical Results tag using both encoded queries and shortcuts can look like this:
 
-    {exp:low_search:results query="{segment_2}" shortcut="{segment_2}"}
+    {exp:pro_search:results query="{segment_2}" shortcut="{segment_2}"}
       ...
-    {/exp:low_search:results}
+    {/exp:pro_search:results}

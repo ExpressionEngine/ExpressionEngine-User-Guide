@@ -13,20 +13,32 @@
     href: config/config-files.md
   - name: ENV File Support
     href: advanced-usage/env-support.md
+- name: Helpful Modules
+  items:
+    - name: Consent
+      href: add-ons/consent.md
+    - name: File
+      href: add-ons/file.md
+    - name: Search
+      items:
+        - name: Overview
+          href: add-ons/search/index.md
+        - name: Simple Form Tag
+          href: add-ons/search/simple.md
+        - name: Advanced Form Tag
+          href: add-ons/search/advanced.md
+        - name: Displaying Results
+          href: add-ons/search/results.md
 - name: Add-Ons
   items:
     - name: Overview
       href: add-ons/overview.md
     - name: Block / Allow
       href: add-ons/blocklist.md
-    - name: Consent
-      href: add-ons/consent.md
     - name: Email
       href: add-ons/email.md
     - name: Emoji
       href: add-ons/emoji.md
-    - name: File
-      href: add-ons/file.md
     - name: Discussion Forum
       items:
         - name: Overview
@@ -63,6 +75,8 @@
       href: add-ons/pages.md
     - name: Pro Search
       items:
+        - name: Overview
+          href: add-ons/pro-search/overview.md
         - name: Collections
           href: add-ons/pro-search/collections.md
         - name: Settings
@@ -91,16 +105,6 @@
       href: add-ons/rss-parser.md
     - name: Rich Text Editor
       href: add-ons/rte.md
-    - name: Search
-      items:
-        - name: Overview
-          href: add-ons/search/index.md
-        - name: Simple Form Tag
-          href: add-ons/search/simple.md
-        - name: Advanced Form Tag
-          href: add-ons/search/advanced.md
-        - name: Displaying Results
-          href: add-ons/search/results.md
     - name: Simple Commerce
       items:
         - name: Overview
