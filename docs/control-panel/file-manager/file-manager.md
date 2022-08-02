@@ -11,9 +11,9 @@
 
 **Control Panel Location: `Files`**
 
-TIP: If you are looking for information on using the files in your entries and templates, reference the [File module](add-ons/file.md) and [File fieldtype](fieldtypes/file.md) documentation
+TIP: If you are looking for information on using files in your entries and templates, reference the [File module](add-ons/file.md) and [File fieldtype](fieldtypes/file.md) documentation
 
-On the main File Manager page you can view all of your previously uploaded files. Files list can be filtered by a number of criterias as well as searched. The data included in the displayed list can be customized. The files can be manipulated separately or in bulk.
+On the main File Manager page you can view all of your previously uploaded files. Files can be filtered and searched by a number of criteria. The data included in the displayed list can be customized. The files can also be manipulated separately or in bulk.
 
 [TOC]cp-file
 
@@ -38,7 +38,7 @@ The Sidebar can also be collapsed using the arrow icon ( <img style="margin-bott
 
 ### Filters
 
-Filters all you to quick filter the files listed to find exactly what you need.
+Filters allow you to quickly filter the files listed to find exactly what you need.
 
 ![Control Panel File Manager Page](_images/cp-file-manager-filters.png)
 
@@ -59,13 +59,13 @@ The bulk of the File Manager screen is composed of the file list.
 
 ![File Manager Listing](_images/cp_file-manager-listing.png)
 
-The File Listing is where your files are displayed based on your current view options. When using the All Files link, all files uploaded to your site will be available for display. When selecting a single Upload Directory from the sidebar, only files uploaded to that Upload Directory will be displayed.
+The File Listing is where your files are displayed based on your current view options. When using the All Files link, all files uploaded to your site will be displayed. When selecting a single Upload Directory from the sidebar, only files uploaded to that Upload Directory will be displayed.
 
 ### View Options
 
-The File Manager offers multiple view options to adjust what and how files are displayed in the file list. 
+The File Manager offers multiple view options, and allows you to adjust the files and the related data to be displayed in the file list.
 
-View options can be set per Upload Directory or the All Files view, and are automatically saved for each user and persists as you use the filters or use pagination.
+View options can be set per Upload Directory as well as on the All Files view, and are automatically saved for each user and persists as you use the filters or pagination.
 
 #### List View
 
@@ -98,11 +98,11 @@ These columns include:
 
 ![File Manager Grid View](_images/cp_file_manager_grid-view.png)
 
-The Grid View gives you the ability to easily see thumbnails of images or icons for other file types of each file uploaded.
+The Grid View gives you the ability to easily see thumbnails of images or icons of each file uploaded.
 
 #### Sorting
 
-Avialble from the Sort By dropdown, both the List View and the Grid View can be sorted by Title and Date Added ordered by assecending and descending. The default is to sort by Date Added, descending.
+Avialble from the Sort By dropdown, both the List View and the Grid View can be sorted by Title and Date Added ordered by assecending and descending. The default view is sorted by Date Added, descending.
 
 ![File Manager Sorting](_images/cp_file_manager_sorting.png)
 
@@ -113,13 +113,13 @@ The Display Limit dropdown allows you to limit the number of files displayed on 
 
 ## Uploading Files
 
-There are 3 way to upload a file using File Manager:
+There are 3 way to upload a file using the File Manager:
 
-* Drag & drop the files directly to the files listing area. If you are in "All files" page, you will be asked to select Upload Directory first, otherwise the upload starts instantly
+* Drag & drop the files directly to the files listing area. If you are in "All files" page, you will be asked to select an Upload Directory first, otherwise the upload starts instantly
 
-* Use the "Upload" button at top right. It presents the dropdown with the list of available Upload Directories and folders. Picking the one that you need will show OS file selector and upon selection upload will start
+* Using the "Upload" button at top right. You will be presented with a dropdown containing a list of available Upload Directories and folders. After selecting one you will be shown the OS file selector and upon selection, your upload will start.
 
-* When viewing specific Upload Directory, you can also use "Upload" button right above the filters, which will upload into current folder.
+* When viewing a specific Upload Directory, you can also use the "Upload" button right above the filters, which will upload into the current folder.
 
 You can select and upload multiple files using each of these methods.
 
@@ -129,7 +129,7 @@ Do not navigate away or close the browser tab while the files are being uploaded
 
 The following are available as individual actions on each file in table view. In thumb view, only bulk actions are available
 
-These actions can be accessed by clicking the `...` at the right side of table for each file
+These actions can be accessed by clicking the `...` on the right side of table for each file
 
 The available actions are:
 [TOC=3]
@@ -144,11 +144,10 @@ Downloads the original file
 
 ### Copy Link
 
-Copies the web link to the file to buffer
+Copies the web link to the file
 
 ### Move
-
-Opens the dialog that allows moving the file to different Upload Directory or into another folder on same Upload Directory. If the usage for this file has been noted, the confirmation toggle is being included.
+Opens a dialog that enables you to move the file to a different Upload Directory or into another folder in the same Upload Directory. If a file your moving is in use it will display a notification, as well as a link to view where a give file is in use, and require the confirmation toggle to be switched on to move.
 
 ![Move File Dialog](_images/cp-file-manager-move-file.png)
 
@@ -156,7 +155,7 @@ This option is only available when viewing specific Upload Directory.
 
 ### Delete
 
-Opens the dialog that confirms file deletion. If the usage for this file has been noted, an extra confirmation toggle is being included.
+Opens the dialog that confirms file deletion. If the file is currently in use, it will be noted, and you will be required to switch the confirmation toggle to on.
 
 ![Delete File Dialog](_images/cp-file-manager-delete-file.png)
 
@@ -167,15 +166,15 @@ When checkboxes for one or several files are selected, the Bulk Actions dropdown
 ![File Manager Bulk Actions](_images/cp-file-manager-bulk-actions.png)
 
 The list of bulk actions is same that for individual file actions, but some items behave differently.
-Edit and Copy Link options are available if only single file is selected.
-Download option will download the zip archive of files, even if only one file is selected.
+The Edit and Copy Link options are only available if a single file is selected.
+The Download option will download the zip archive of files, even if only one file is selected.
 
 
 ## Exporting Files
 
 The files can be exported and downloaded as zip archive in two ways.
 
-One is by using Bulk Actions and allows you to export the specific files that you need
+One is by using Bulk Actions and allows you to export the specific files needed.
 
 Another is by using "Export all files" link in the sidebar and it will export and download all files from all upload directories.
 
@@ -183,8 +182,8 @@ WARN:**Note** that exporting can be time and resource consuming.
 
 ## Compatibility Mode
 
-WARN:**Note:** Compatibility Mode is enabeld by deafult for sites upgrading from ExpressionEngine versions less than ExpressionEngine 7.
+WARN:**Note:** Compatibility Mode is enabeld by deafult for sites upgraded from older ExpressionEngine versions.
 
-ExpressionEngine 7+ store files in the database differently then previous versions (using `{file:XX:url}` format instead of `{filedir_X}filename.ext`). This allows ExpressionEngine to perform more operations, such as storing files in subfolders, moving files to different locations, and collecting file usage data.
+ExpressionEngine 7+ stores files in the database differently then previous versions (using `{file:XX:url}` format instead of `{filedir_X}filename.ext`). This enables ExpressionEngine to provide a more powerful overall experience with files, such as storing files in subfolders, moving files to different locations, and collecting file usage data.
 
-ExpressionEngine will still parse the `{filedir_X}` tags in templates or channel entries. However, third-party add-ons that parse file data on their own may not be compatiblie with the `{file:XX:url}` syntax causing issues. In order to prevent a bad user experience, users can enable Compatbility Mode for the sites that are upgrading from ExpressionEngine 6 or earlier versions. If you know all installed add-ons are compatible with the new file format, you may disable Compatibility Mode from the [Content & Design settings](/control-panel/settings/content-design.md#run-file-manager-in-compatibility-mode).
+ExpressionEngine will still parse the `{filedir_X}` tags in templates or channel entries. However, third-party add-ons that parse file data on their own may not be compatiblie with the `{file:XX:url}` syntax causing issues. In order to prevent a bad user experience, users can enable Compatbility Mode for the sites that are upgraded from earlier versions. If you know all installed add-ons are compatible with the new file format, you can run the Update Files Usage (found in Tools-> Utilities-> Update Files Usage) and then disable Compatibility Mode from the [Content & Design settings](/control-panel/settings/content-design.md#run-file-manager-in-compatibility-mode).
