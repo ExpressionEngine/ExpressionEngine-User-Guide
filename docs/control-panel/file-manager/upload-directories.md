@@ -9,7 +9,7 @@
 
 # Upload Directories
 
-Upload Directory is a representation of place where the files are being stored. The files can be stored on local filesystem or in cloud (available as separate free add-on)
+An Upload Directory is a representation of the place where the files are being stored. The files can be stored on the local filesystem or in cloud storage systems ([see Adapters](#adapter))
 
 [TOC]
 
@@ -17,9 +17,9 @@ Upload Directory is a representation of place where the files are being stored. 
 
 ## Create/Edit Upload Directory
 
-To create upload directory, click "New" button next to "Upload directories" in the sidebar on Files page.
+To create an upload directory, click the "New" button next to "Upload directories" in the sidebar on the File Manager page.
 
-To edit, hover the upload directory name in the sidebar and click pencil icon.
+To edit, hover the upload directory name in the sidebar and click the pencil icon.
 
 The following options are available when creating / editing an upload directory:
 
@@ -29,27 +29,27 @@ A descriptive name of the upload destination.
 
 ##### Adapter
 
-The file storage adapter to use. ExpressionEngine is shipped with the "Local" adapter to work with files on local filesystem. Other adapters for use with cloud storage systems are available in the [Add-on Store](https://expressionengine.com/add-ons).
+The file storage adapter to use. ExpressionEngine is shipped with the "Local" adapter to work with files on the local filesystem. Other adapters for use with cloud storage systems are available in the [Add-on Store](https://expressionengine.com/add-ons).
 
 ##### Upload directory
 
-This setting is specific to Local adapter. Other adapters might have their own settings.
+This setting is specific to the local adapter. Other adapters might have their own settings.
 
-The **full URL** to the new destination. For example: `{base_url}/images/uploads/`. We recommend using the default base URL variable `{base_url}` defined in [URL and Path Settings](control-panel/settings/urls.md) in your directory URLS.
+The **full URL** to the new destination. For example: `{base_url}/images/uploads/`. We recommend using the default base URL variable `{base_url}` defined in [URL and Path Settings](control-panel/settings/urls.md) in your directory URL.
 
 ##### Upload path
 
-This setting is specific to Local adapter. Other adapters might have their own settings.
+This setting is specific to the local adapter. Other adapters might have their own settings.
 
 The **full server path** (not a URL) to the upload folder for this destination. For example: `{base_path}/images/uploads/`. We recommend using the default base path variable `{base_path}` defined in [URL and Path Settings](control-panel/settings/urls.md) in your directory paths.
 
 ##### Allowed file types?
 
-The directory can be restricted to accept one or several following file types: Image, Document, Archive, Audio, Video. You can also set it to allow all file types.
+The directory can be restricted to accept one or several following file types: Image, Document, Archive, Audio, and Video. You can also set it to allow all file types.
 
 By default, only images are allowed.
 
-Only file types that are specified in ExpressionEngine's Mime Type file are allowed to be uploaded. The Mime Type file can be found in [`mimes.php`](config/config-files.md#allowed-mime-types). If you are uploading something uncommon and run into problems you may need to add the mime type for your file to the allow list. 
+Only file types that are specified in ExpressionEngine's Mime Type file are allowed to be uploaded. The Mime Type file can be found in [`mimes.php`](config/config-files.md#allowed-mime-types). If you are uploading something uncommon and run into problems, you may need to add the mime type for your file to the allow list. 
 See also [MIME allow list](general/system-configuration-overrides.md#mime_whitelist_additions) and [Mime member exception allow list](general/system-configuration-overrides.md#mime_whitelist_member_exception) for more info.
 
 ##### Default browser view?
@@ -66,13 +66,13 @@ Group subfolders at the top of the files list when browsing, irrespective of sor
 
 ##### File size
 
-You can optionally set a maximum allowed size in kilobytes for uploaded file. Leave blank if you do not wish to impose a limit.
+You can optionally set a maximum allowed size in kilobytes for the uploaded file. Leave blank if you do not wish to impose a limit.
 
 NOTE: **Note:** Servers usually also have built-in limits on the amount of data that can be uploaded via PHP at one time. The default value for this in PHP is 2 MB. If you have a need to upload very large files, then you should contact your Host or server admin and talk to them about any size limits they have in place.
 
 ##### Image width
 
-Optionally set the maximum allowed width in pixes for uploaded images. Images over this setting will be automatically resized.
+Optionally set the maximum allowed width in pixels for uploaded images. Images over this setting will be automatically resized.
 
 ##### Image height
 
