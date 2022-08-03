@@ -27,8 +27,6 @@
           items:
             - name: Overview
               href: control-panel/file-manager/upload-directories.md
-            - name: Adapters
-              href: control-panel/file-manager/adapters.md
             - name: Subfolders
               href: control-panel/file-manager/subfolders.md
             - name: Synchronizing

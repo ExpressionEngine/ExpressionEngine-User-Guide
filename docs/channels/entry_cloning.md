@@ -17,7 +17,7 @@ Check out our video tutorial on Cloning Entries!
 
 ## Enabling Entry Cloning
 ### Global
-Entry Cloning is enabled by default when ExpressionEngine is installed. Entry Cloning can be disabled globally for your site via the ["enable entry cloning" setting](settings/content-design.md#enable-entry-cloning) setting or the matching [Config Override.](general/system-configuration-overrides.md#enable_entry_cloning)
+Entry Cloning is enabled by default when ExpressionEngine is installed. Entry Cloning can be disabled globally for your site via the ["enable entry cloning" setting](/control-panel/settings/content-design.md#enable-entry-cloning) setting or the matching [Config Override.](general/system-configuration-overrides.md#enable_entry_cloning)
 
 ![](/_images/entry_cloning_global.png)
 

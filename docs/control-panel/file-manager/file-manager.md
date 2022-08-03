@@ -11,9 +11,9 @@
 
 **Control Panel Location: `Files`**
 
-TIP: If you are looking for information on using files in your entries and templates, reference the [File module](add-ons/file.md) and [File fieldtype](fieldtypes/file.md) documentation
+TIP: If you are looking for information on using files in your entries and templates, reference the [File module](add-ons/file.md) and [File fieldtype](fieldtypes/file.md) documentation.
 
-On the main File Manager page you can view all of your previously uploaded files. Files can be filtered and searched by a number of criteria. The data included in the displayed list can be customized. The files can also be manipulated separately or in bulk.
+The File Manager allows you to view all of your previously uploaded files. Files can be filtered and searched by a number of criteria. The data included in the displayed list can be customized. The files can also be manipulated separately or in bulk.
 
 [TOC]cp-file
 
@@ -33,7 +33,7 @@ The sidebar gives you access to creating, viewing, and managing [Upload Director
 
 ![File manager sidebar](_images/cp_file_manager_sidebar.png)
 
-The Sidebar can also be collapsed using the arrow icon ( <img style="margin-bottom: 0px; vertical-align: middle;display:inline-block;" src="../../_images/cp_collapase_arrow.png" alt="cp collapase arrow"> ) that is displayed to the side of the sidebar when hovering over the sidebar.
+The sidebar can also be collapsed using the arrow icon ( <img style="margin-bottom: 0px; vertical-align: middle;display:inline-block;" src="../../_images/cp_collapase_arrow.png" alt="cp collapase arrow"> ) that is displayed to the side of the sidebar when hovering over the sidebar.
 
 
 ### Filters
@@ -102,13 +102,13 @@ The Grid View gives you the ability to easily see thumbnails of images or icons 
 
 #### Sorting
 
-Avialble from the Sort By dropdown, both the List View and the Grid View can be sorted by Title and Date Added ordered by assecending and descending. The default view is sorted by Date Added, descending.
+Available from the Sort By dropdown, both the List View and the Grid View can be sorted by Title and Date Added ordered by ascending and descending. The default view is sorted by Date Added, descending.
 
 ![File Manager Sorting](_images/cp_file_manager_sorting.png)
 
 #### Display Limit
 
-The Display Limit dropdown allows you to limit the number of files displayed on a single page in the the File Listing. Files can be displayed using a custom limit or by using one of the available options.
+The Display Limit dropdown allows you to limit the number of files displayed on a single page in the File Listing. Files can be displayed using a custom limit or by using one of the available options.
 
 
 ## Uploading Files

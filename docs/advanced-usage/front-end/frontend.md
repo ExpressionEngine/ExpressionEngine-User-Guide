@@ -12,7 +12,7 @@
 [TOC]
 
 ## Overview 
-For users with the appropriate level of access, ExpressionEngine Pro adds "front edit" links ( <img style="margin-bottom: 0px; vertical-align: middle;" src="../_images/pro_edit.png" alt="pro edit icon"> ) on the site's front-end that allow editing the contents of each entry field individually. This is done directly on front-end without going to the Control Panel.
+For users with the appropriate level of access, ExpressionEngine Pro adds "front edit" links ( <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/pro_edit.png" alt="pro edit icon"> ) on the site's front-end that allow editing the contents of each entry field individually. This is done directly on front-end without going to the Control Panel.
 
 Clicking the link opens a popup with the field that can be modified and saved. Along with editing, users can also use front edit popup to access the full entry for editing with live preview showing the current page you are on.
 
@@ -58,7 +58,7 @@ This special conditional allows you to display content if front-end editing is e
 ## Enable/Disable The Front Edit Link
 
 There are several ways to disable front-end editing links:
- - Globally with [configuration overrides](pro/configuration.md#enable_frontedit_links) or in [General Settings](pro/configuration.md#general-settings)
+ - Globally with [configuration overrides](/general/system-configuration-overrides.html#enable_frontedit_links) or in [General Settings](/control-panel/settings/front-end-editing.md#enable-automatic-front-end-editing-links)
  - Per field in the [field settings](control-panel/field-manager/field-manager-settings.md)
  - Via the Dock on the front-end by toggling Edit Mode on/off.
  - In the template by using [ExpressionEngine template comments](#expressionengine-comment), [HTML comments](#html-comment), or [field parameter](#field-tag-parameter)

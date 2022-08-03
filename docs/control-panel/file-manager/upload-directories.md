@@ -29,7 +29,7 @@ A descriptive name of the upload destination.
 
 ##### Adapter
 
-The file storage adapter to use. ExpressionEngine is shipped with "Local" adapter to work with files on local filesystem. You can get more adapters in the [Add-on Store](https://expressionengine.com/add-ons)
+The file storage adapter to use. ExpressionEngine is shipped with the "Local" adapter to work with files on local filesystem. Other adapters for use with cloud storage systems are available in the [Add-on Store](https://expressionengine.com/add-ons).
 
 ##### Upload directory
 

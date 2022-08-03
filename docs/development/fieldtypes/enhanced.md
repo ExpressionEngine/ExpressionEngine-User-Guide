@@ -114,7 +114,7 @@ Custom fields can display their data inside the Entry Manager through 3 possible
 
 ## Entry cloning support
 
-[ExpressionEngine Pro](pro/overview.md) adds the ability to clone existing entries using the "Clone to New Entry" option on the entry editing page. Most fieldtypes do not need to do anything special to support this feature. 
+ExpressionEngine has the ability to [clone existing entries](/channels/entry_cloning.md) using the "Clone to New Entry" option on the entry editing page. Most fieldtypes do not need to do anything special to support this feature. 
 
 However, if the fieldtype you are developing saves data to its own database table, you might need to tell it to save the rows as a submission for the new entry and not for the existing one.
 
@@ -250,7 +250,7 @@ The file's class needs to implement `ExpressionEngine\Library\Rte\RteFilebrowser
 
 ## Working with Front-End Editing
 
-Most fieldtypes will work with [Front-end content management](pro/frontend.md) out-of-the-box.
+Most fieldtypes will work with [Front-end content management](/advanced-usage/front-end/frontend.md) out-of-the-box.
 
 However there are some parameters that can be set in `ft.` to improve integration.
 

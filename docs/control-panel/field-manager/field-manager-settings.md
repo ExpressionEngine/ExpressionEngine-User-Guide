@@ -33,7 +33,7 @@ Fields have the following settings:
 - **Include in search?** -- This determines whether the contents of this field will be included in searches that are within the entry content.
 - **Hide field?** -- Shows or hides the field on the publish page. When hidden, the field will be collapsed by default.
 - **Make Conditional?** -- Shows or hides the field on the publish page based on [conditional settings](control-panel/field-manager/conditional-fields.md). Fields which are conditionally hidden are not shown at all on the publish page until conditions are met.
-- **Enable front-end editing?** -- If [ExpressionEngine Pro](pro/overview.md) is installed this setting will enable/disable frontedit links for this field. This field will not show at all if Pro is not installed.
+- **Enable front-end editing?** -- Enable/disable [frontedit](/advanced-usage/front-end/frontend.md) links for this field.
 - **Field Options** -- Each fieldtype may have additional options. See the [individual field types](fieldtypes/overview.md) for details.
 
 ## Create/Edit Field Group
