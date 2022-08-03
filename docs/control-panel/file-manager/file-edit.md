@@ -9,7 +9,8 @@
 
 # Files Editing
 
-After uploading, the files can be edited. You can reach this pahe by clicking in File Manager on the file thumbnail, title, or picking "Edit" action.This includes modification of file itself (cropping, resizing, rotating) and edition of file meta information. File edit page can also be used to view detailed information in which entries and categories the file is being used.
+After a file is uploaded, you can edit it by simply going to the File Manager and clicking on a given files thumbnail, title, or choosing the "Edit" action form the action menu.  After doing so you will br brought to the File Edit page where you can modify the file including cropping, resizing, rotating, and editing the file meta data.  The File Edit page can also be used to view detailed information in which entries and categories the file is being used.
+
 
 [TOC]
 
@@ -36,7 +37,7 @@ The following meta data is available:
 
 ## Crop, Rotate & Resize Images
 
-The Image Editor page of the Control Panel allows you to perform basic image editing tasks directly from ExpressionEngine. It is not intended to replace powerful image editing software such as Photoshop, but rather to provide a quick option for common tasks from within the control panel.
+The Image Editor page of the Control Panel allows you to perform basic image editing tasks directly in the ExpressionEngine control panel. It is not intended to replace powerful image editing software such as Photoshop, but rather to provide a quick option for common tasks from within the control panel.
 
 The Image Editor allows the following transformations:
 
@@ -56,4 +57,4 @@ Note that the changes will only be applied when you save the changes. Only one t
 
 ## File Usage
 
-This tab shows the list of entries where file is being used in fieldtype (File, File Grid, Fluid, Textarea, RTE) and categories where it is being used as Category Image.
+This tab shows the list of entries where file is being used in fieldtype (File, File Grid, Fluid, Textarea, RTE) and categories where the file being used as Category Image.
