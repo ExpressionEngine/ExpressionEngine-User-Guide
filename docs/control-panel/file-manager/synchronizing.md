@@ -8,7 +8,7 @@
 -->
 # Synchronizing A Directory
 
-ExpressionEngine automatically use the database to store information about files uploaded through the Control Panel or front-end file fields. However, if you have placed files directly on your file system and want to use those, it is important to let the ExpressionEngine know about that.
+ExpressionEngine automatically uses the database to store information about files uploaded through the Control Panel or front-end file fields. However, if you have placed files directly on your file system and want to use those, it is important to let the ExpressionEngine know about them.
 
 The Synchronize Files page allows you to synchronize the file records in the database with the files stored in a given upload directory. To load this page, click on the Upload Directory you wish to sync in the sidebar, then click on the sync icon in the top right from the filter bar.
 
