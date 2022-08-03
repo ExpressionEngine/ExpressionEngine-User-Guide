@@ -9,7 +9,7 @@
 
 # Upload Directories
 
-An Upload Directory is a representation of the place where the files are being stored. The files can be stored on the local filesystem or in cloud storage systems ([see Adapters](#adapter))
+An Upload Directory is a representation of a location where the files are being stored. The files can be stored on the local filesystem or in cloud storage systems ([see Adapters](#adapter))
 
 [TOC]
 
@@ -19,7 +19,7 @@ An Upload Directory is a representation of the place where the files are being s
 
 To create an upload directory, click the "New" button next to "Upload directories" in the sidebar on the File Manager page.
 
-To edit, hover the upload directory name in the sidebar and click the pencil icon.
+To edit, hover over the upload directory name in the sidebar and click the pencil icon.
 
 The following options are available when creating / editing an upload directory:
 
