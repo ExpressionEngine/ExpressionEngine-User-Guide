@@ -1195,7 +1195,7 @@ Example Usage:
 
 ### `enable_dock`
 
-Allows turning off [front-end editing](advanced-usage/frontend.md) and Prolets completely. When set to `n`, Dock will not be shown and front-end field editing will not be enabled.
+Allows turning off [front-end editing](advanced-usage/front-end/frontend.md) and Prolets completely. When set to `n`, Dock will not be shown and front-end field editing will not be enabled.
 
 | Value | Behavior                                       |
 | ----- | ---------------------------------------------- |
@@ -1250,7 +1250,7 @@ Example Usage:
 
 ### `enable_frontedit`
 
-When set to `n`, completely disables [front-end editing](advanced-usage/frontend.md) while keeping Dock visible and Prolets functional.
+When set to `n`, completely disables [front-end editing](advanced-usage/front-end/frontend.md) while keeping Dock visible and Prolets functional.
 
 | Value | Behavior                                       |
 | ----- | ---------------------------------------------- |
@@ -1264,7 +1264,7 @@ Example Usage:
 
 ### `enable_frontedit_links`
 
-When set to `n`, disables automatic creation of content management links on front-end. The links can still be [added manually](advanced-usage/frontend.md#customizing-the-link-location).
+When set to `n`, disables automatic creation of content management links on front-end. The links can still be [added manually](advanced-usage/front-end/frontend.md#customizing-the-link-location).
 
 | Value | Behavior                                       |
 | ----- | ---------------------------------------------- |

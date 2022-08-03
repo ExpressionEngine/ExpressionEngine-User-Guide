@@ -11,9 +11,9 @@
 
 **Control Panel Location: `Files`**
 
-TIP: If you are looking for information on using files in your entries and templates, reference the [File module](add-ons/file.md) and [File fieldtype](fieldtypes/file.md) documentation
+TIP: If you are looking for information on using files in your entries and templates, reference the [File module](add-ons/file.md) and [File fieldtype](fieldtypes/file.md) documentation.
 
-On the main File Manager page you can view all of your previously uploaded files. Files can be filtered and searched by a number of criteria. The data included in the displayed list can be customized. The files can also be manipulated separately or in bulk.
+The File Manager allows you to view all of your previously uploaded files. Files can be filtered and searched by a number of criteria. The data included in the displayed list can be customized. The files can also be manipulated separately or in bulk.
 
 [TOC]cp-file
 
@@ -33,7 +33,7 @@ The sidebar gives you access to creating, viewing, and managing [Upload Director
 
 ![File manager sidebar](_images/cp_file_manager_sidebar.png)
 
-The Sidebar can also be collapsed using the arrow icon ( <img style="margin-bottom: 0px; vertical-align: middle;display:inline-block;" src="../../_images/cp_collapase_arrow.png" alt="cp collapase arrow"> ) that is displayed to the side of the sidebar when hovering over the sidebar.
+The sidebar can also be collapsed using the arrow icon ( <img style="margin-bottom: 0px; vertical-align: middle;display:inline-block;" src="../../_images/cp_collapase_arrow.png" alt="cp collapase arrow"> ) that is displayed to the side of the sidebar when hovering over the sidebar.
 
 
 ### Filters
@@ -102,34 +102,34 @@ The Grid View gives you the ability to easily see thumbnails of images or icons 
 
 #### Sorting
 
-Avialble from the Sort By dropdown, both the List View and the Grid View can be sorted by Title and Date Added ordered by assecending and descending. The default view is sorted by Date Added, descending.
+Available from the Sort By dropdown, both the List View and the Grid View can be sorted by Title and Date Added ordered by ascending and descending. The default view is sorted by Date Added, descending.
 
 ![File Manager Sorting](_images/cp_file_manager_sorting.png)
 
 #### Display Limit
 
-The Display Limit dropdown allows you to limit the number of files displayed on a single page in the the File Listing. Files can be displayed using a custom limit or by using one of the available options.
+The Display Limit dropdown allows you to limit the number of files displayed on a single page in the File Listing. Files can be displayed using a custom limit or by using one of the available options.
 
 
 ## Uploading Files
 
 There are 3 way to upload a file using the File Manager:
 
-* Drag & drop the files directly to the files listing area. If you are in "All files" page, you will be asked to select an Upload Directory first, otherwise the upload starts instantly
+* Drag & drop the files directly to the files listing area. If you are on the "All files" page, you will be asked to select an Upload Directory first otherwise, the upload starts instantly
 
-* Using the "Upload" button at top right. You will be presented with a dropdown containing a list of available Upload Directories and folders. After selecting one you will be shown the OS file selector and upon selection, your upload will start.
+* Using the "Upload" button at the top right. You will be presented with a dropdown containing a list of available Upload Directories and folders. After selecting an Upload Directory you will be shown the OS file selector, and upon selection, your upload will start.
 
 * When viewing a specific Upload Directory, you can also use the "Upload" button right above the filters, which will upload into the current folder.
 
 You can select and upload multiple files using each of these methods.
 
-Do not navigate away or close the browser tab while the files are being uploaded
+Do not navigate away or close the browser tab while the files are being uploaded.
 
 ## File actions
 
-The following are available as individual actions on each file in table view. In thumb view, only bulk actions are available
+The following are available as individual actions on each file in the table view. In thumb view, only bulk actions are available.
 
-These actions can be accessed by clicking the `...` on the right side of table for each file
+These actions can be accessed by clicking the `...` on the right side of the table for each file.
 
 The available actions are:
 [TOC=3]
@@ -140,18 +140,18 @@ Redirects to [File edit page](control-panel/file-manager/file-edit.md)
 
 ### Download
 
-Downloads the original file
+Downloads the original file.
 
 ### Copy Link
 
-Copies the web link to the file
+Copies the web link to the file.
 
 ### Move
-Opens a dialog that enables you to move the file to a different Upload Directory or into another folder in the same Upload Directory. If a file your moving is in use it will display a notification, as well as a link to view where a give file is in use, and require the confirmation toggle to be switched on to move.
+Opens a dialog that enables you to move the file to a different Upload Directory or into another folder in the same Upload Directory. If a file you are moving is in use, it will display a notification, as well as a link to view where a given file is in use, and require the confirmation toggle to be switched on to move.
 
 ![Move File Dialog](_images/cp-file-manager-move-file.png)
 
-This option is only available when viewing specific Upload Directory.
+This option is only available when viewing a specific Upload Directory.
 
 ### Delete
 
@@ -165,7 +165,7 @@ When checkboxes for one or several files are selected, the Bulk Actions dropdown
 
 ![File Manager Bulk Actions](_images/cp-file-manager-bulk-actions.png)
 
-The list of bulk actions is same that for individual file actions, but some items behave differently.
+The list of bulk actions is the same that for individual file actions, but some items behave differently.
 The Edit and Copy Link options are only available if a single file is selected.
 The Download option will download the zip archive of files, even if only one file is selected.
 
@@ -176,14 +176,14 @@ The files can be exported and downloaded as zip archive in two ways.
 
 One is by using Bulk Actions and allows you to export the specific files needed.
 
-Another is by using "Export all files" link in the sidebar and it will export and download all files from all upload directories.
+Another is by using "Export all files" link in the sidebar. This link will export and download all files from all upload directories.
 
 WARN:**Note** that exporting can be time and resource consuming.
 
 ## Compatibility Mode
 
-WARN:**Note:** Compatibility Mode is enabeld by deafult for sites upgraded from older ExpressionEngine versions.
+WARN:**Note:** Compatibility Mode is enabled by default for sites upgraded from older ExpressionEngine versions.
 
 ExpressionEngine 7+ stores files in the database differently then previous versions (using `{file:XX:url}` format instead of `{filedir_X}filename.ext`). This enables ExpressionEngine to provide a more powerful overall experience with files, such as storing files in subfolders, moving files to different locations, and collecting file usage data.
 
-ExpressionEngine will still parse the `{filedir_X}` tags in templates or channel entries. However, third-party add-ons that parse file data on their own may not be compatiblie with the `{file:XX:url}` syntax causing issues. In order to prevent a bad user experience, users can enable Compatbility Mode for the sites that are upgraded from earlier versions. If you know all installed add-ons are compatible with the new file format, you can run the Update Files Usage (found in Tools-> Utilities-> Update Files Usage) and then disable Compatibility Mode from the [Content & Design settings](/control-panel/settings/content-design.md#run-file-manager-in-compatibility-mode).
+ExpressionEngine will still parse the `{filedir_X}` tags in templates or channel entries. However, third-party add-ons that parse file data on their own may not be compatible with the `{file:XX:url}` syntax, causing issues. In order to prevent a bad user experience, users can enable Compatibility Mode for the sites that are upgraded from earlier versions. If you know all installed add-ons are compatible with the new file format, you can run the Update Files Usage (found in Tools-> Utilities-> Update Files Usage) and then disable Compatibility Mode from the [Content & Design settings](/control-panel/settings/content-design.md#run-file-manager-in-compatibility-mode).

@@ -275,5 +275,6 @@ Using `{{embed:_embeds_/testing.md}}` would result in the content of `/docs/_emb
 - **Add-on** (noun, an add-on extends the functionality of ExpressionEngine )
 - **ExpressionEngine CMS** (noun, ExpressionEngine CMS the product. Notice capitalization)
 - **Fieldtype** (noun, a field is a container that holds a specific type of information)
-- **Multi Select** (noun, a field in which the user can select multiple options).
+- **Multi Select** (noun, a field in which the user can select multiple options)
+- **Subfolder** (noun, a folder contained within another folder)
 

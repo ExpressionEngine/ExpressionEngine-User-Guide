@@ -24,7 +24,7 @@ Clicking the link opens a popup containing the Control Panel field for that cont
 
 NOTE: **Note:** ExpressionEngine intelligently picks up existing user permissions to determine which channels and add-on Prolets a given user can access.
 
-### [The Dock]advanced-usage/front-end/dock.md
+### [The Dock](advanced-usage/front-end/dock.md)
 
 The dock, when enabled, is a floating bar that is displayed on front-end pages, it provides quick access to the Control Panel and to ExpressionEngine's front-end facing features.
 

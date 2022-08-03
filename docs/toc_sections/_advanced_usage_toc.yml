@@ -74,27 +74,9 @@
     - name: Pages
       href: add-ons/pages.md
     - name: Pro Search
-      items:
-        - name: Overview
-          href: add-ons/pro-search/overview.md
-        - name: Collections
-          href: add-ons/pro-search/collections.md
-        - name: Settings
-          href: add-ons/pro-search/settings.md
-        - name: Lexicon
-          href: add-ons/pro-search/lexicon.md
-        - name: Shortcuts
-          href: add-ons/pro-search/shortcuts.md
-        - name: Parameters
-          href: add-ons/pro-search/parameters.md
-        - name: Filters
-          href: add-ons/pro-search/filters.md
-        - name: Tags
-          href: add-ons/pro-search/tags.md
-        - name: Examples
-          href: add-ons/pro-search/examples.md
-        - name: Find and Replace
-          href: add-ons/pro-search/find-and-replace.md
+      href: add-ons/pro-search.md
+    - name: Pro Variables
+      href: add-ons/pro-search.md
     - name: Query
       href: add-ons/query.md
     - name: Request
