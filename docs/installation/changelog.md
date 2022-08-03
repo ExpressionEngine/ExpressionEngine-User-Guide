@@ -8,11 +8,9 @@
 -->
 # ExpressionEngine v7 Change Log
 
-## Version 7.0.0 (Release: August 2, 2022)
+## Version 7.0.0 (Release: August 3, 2022)
 
 NOTE:**Note:** If multiple members are needed, an ExpressionEngine Pro license is now required.
-
-- **Contributors** 🙌
 
 - **New File Manager** 🗃️
   - New File Manager design including the additions to [Filters](/control-panel/file-manager/file-manager.md#filters) and [Views](/control-panel/file-manager/file-manager.md#view-options)
