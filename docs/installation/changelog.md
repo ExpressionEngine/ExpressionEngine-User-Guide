@@ -8,6 +8,14 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.0.2
+(Release: August 4, 2022)
+
+- Temporarily disabled Update File Usage utility due to a bug that affected some users. Utility will be re-enabled in 7.0.3
+
+- **Bug Fixes** 💃🐛
+  - Fixed issue with file usage stats.
+
 ## Version 7.0.1
 (Release: August 4, 2022)
 
