@@ -8,6 +8,15 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.0.1
+(Release: August 4, 2022)
+
+- **Bug Fixes** 💃🐛
+  - Resolved issue where Update File Usage utility did not provide correct results when run for second time.
+  - Resolved issue where URLs to files in subfolder were not parsed in {exp:file:entries} tag.
+  - Resolved issue where Pro Variables and Pro Search could not be installed on some PHP versions.
+
+
 ## Version 7.0.0
 (Release: August 3, 2022)
 
