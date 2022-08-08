@@ -8,6 +8,24 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.0.3
+(Release: August 8, 2022)
+
+- **Bug Fixes** 💃🐛
+  - Fixed issue where Update File Usage utility was not always giving correct results.
+  - Resolved issue where files in subfolder were not stored properly in RTE field using Redactor.
+  - Resolved [#2208](https://github.com/ExpressionEngine/ExpressionEngine/issues/2208) where language files for some add-ons were not placed in correct location.
+  - Resolved issue where Grid inside Fluid was not empty initially
+  - Resolved issue where filtering by member group in channel form could result in SQL error
+
+## Version 7.0.2
+(Release: August 4, 2022)
+
+- Temporarily disabled Update File Usage utility due to a bug that affected some users. Utility will be re-enabled in 7.0.3
+
+- **Bug Fixes** 💃🐛
+  - Fixed issue with file usage stats.
+
 ## Version 7.0.1
 (Release: August 4, 2022)
 
