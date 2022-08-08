@@ -8,6 +8,15 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.0.3
+(Release: August 8, 2022)
+
+- **Bug Fixes** 💃🐛
+  - Resolved [#2208](https://github.com/ExpressionEngine/ExpressionEngine/issues/2208) where language files were for some add-ons were not placed in correct location.
+  - Resolved issue where files used in RTE (Redactor) fieldtype where not stored in the new file format.
+  - Resolved issue where some files were not properly counted when calculating file usage.
+  - Resolved issue where data corruption could occur with the use of a File field in a Fluid field after running the “Update File Usage” utility.
+
 ## Version 7.0.2
 (Release: August 4, 2022)
 
