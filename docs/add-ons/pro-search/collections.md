@@ -12,16 +12,21 @@ Collections are used by the Keywords filter. A Collection generates an index whi
 
 ## Settings
 
-`Channel`
-    The Channel to which the collection is related.
-`Collection label`
-    Full name of the search collection.
-`Collection name`
-    Short name of the search collection.
-`Language`
-    The language of the search collection. Defining a language will add the words in the collection to the lexicon.
-`Modifier`
-    Number used to multiply the relevance score of each entry in this search collection.
+### Channel
+The Channel to which the collection is related.
+
+### Collection label
+Full name of the search collection.
+
+### Collection name
+Short name of the search collection.
+
+### Language
+The language of the search collection. Defining a language will add the words in the collection to the lexicon.
+
+### Modifier
+Number used to multiply the relevance score of each entry in this search collection.
+
 
 ### Adding weight to fields
 
@@ -64,25 +69,18 @@ http://example.com/index.php?ACT=99&key=12345
 
 The following variables can be added to the call to that URL either via GET or POST:
 
-#### Variables
+- `ACT` - The build index action ID, as given. Required
+- `build` - What you need to build, either index, lexicon or both (the default).
+- `collection_id` - Comma separated list of collection IDs to build.
+- `entry_id` - Comma separated list of entry IDs to build.
+- `key` - Your Low Search license key. Required
 
-`ACT`
-    The build index action ID, as given. Required
-`build`
-    What you need to build, either index, lexicon or both (the default).
-`collection_id`
-    Comma separated list of collection IDs to build.
-`entry_id`
-    Comma separated list of entry IDs to build.
-`key`
-    Your Low Search license key. Required
+**Examples:**
 
-Examples
+`http://example.com/index.php?ACT=99&key=12345&collection_id=3`
 
-http://example.com/index.php?ACT=99&key=12345&collection_id=3
+`http://example.com/index.php?ACT=99&key=12345&entry_id=14,15,16&build=lexicon`
 
-http://example.com/index.php?ACT=99&key=12345&entry_id=14,15,16&build=lexicon
+`http://example.com/index.php?ACT=99&key=12345&collection_id=1,2&build=index`
 
-http://example.com/index.php?ACT=99&key=12345&collection_id=1,2&build=index
-
-Note: Building the index or lexicon via this URL will not happen in batches.
+NOTE:**Note:** Building the index or lexicon via this URL will not happen in batches.

@@ -14,7 +14,7 @@ For example, a complicated search query can result in a long URL like this one:
 
 `domain.com/search/eyJyZXN1bHRfcGFnZSI6Im5ld3NcL3NlYXJjaCIsImtleXdvcmRzIjoiaGVsbG8gd29ybGQiLCJjb2xsZWN0aW9uIjoibmV3cyJ9`
 
-If you save this search and name it hello, you will be able to trigger the same search results using this URL:
+If you save this search and name it "hello", you will be able to trigger the same search results using this URL:
 
 `domain.com/search/hello`
 

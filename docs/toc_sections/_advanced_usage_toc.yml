@@ -39,44 +39,40 @@
       href: add-ons/email.md
     - name: Emoji
       href: add-ons/emoji.md
-    - name: Discussion Forum
-      items:
-        - name: Overview
-          href: add-ons/forum/index.md
-        - name: Setup
-          href: add-ons/forum/setup.md
-        - name: Boards
-          href: add-ons/forum/boards.md
-        - name: Themes
-          href: add-ons/forum/themes.md
-        - name: Global Variables
-          href: add-ons/forum/global-variables.md
-        - name: User Management
-          href: add-ons/forum/user-management.md
-        - name: Associating Channel Entries with Forum Topics
-          href: add-ons/forum/channel-forum.md
-        - name: Recent Forum Topics
-          href: add-ons/forum/recent-topics.md
-        - name: Signatures and Avatars
-          href: add-ons/forum/signatures.md
-        - name: Helper
-          href: add-ons/forum/helper.md
-        - name: Other Features
-          href: add-ons/forum/other-features.md
     - name: HTTP Header
       href: add-ons/http-header.md
-    - name: IP to Nation
-      href: add-ons/ip-to-nation.md
     - name: Metaweblog API
       href: add-ons/metaweblog-api.md
     - name: Moblog
       href: add-ons/moblog.md
     - name: Pages
       href: add-ons/pages.md
+#    - name: Pro Search
+#     items:
+#        - name: Overview
+#          href: add-ons/pro-search/overview.md
+#        - name: Collections
+#          href: add-ons/pro-search/collections.md
+#        - name: Settings
+#          href: add-ons/pro-search/settings.md
+#        - name: Lexicon
+#          href: add-ons/pro-search/lexicon.md
+#        - name: Shortcuts
+#          href: add-ons/pro-search/shortcuts.md
+#        - name: Parameters
+#          href: add-ons/pro-search/parameters.md
+#        - name: Filters
+#          href: add-ons/pro-search/filters.md
+#        - name: Tags
+#          href: add-ons/pro-search/tags.md
+#        - name: Examples
+#          href: add-ons/pro-search/examples.md
+#        - name: Find and Replace
+#          href: add-ons/pro-search/find-and-replace.md
     - name: Pro Search
       href: add-ons/pro-search.md
     - name: Pro Variables
-      href: add-ons/pro-search.md
+      href: add-ons/pro-variables.md
     - name: Query
       href: add-ons/query.md
     - name: Request
@@ -87,26 +83,12 @@
       href: add-ons/rss-parser.md
     - name: Rich Text Editor
       href: add-ons/rte.md
-    - name: Simple Commerce
-      items:
-        - name: Overview
-          href: add-ons/simple-commerce/index.md
-        - name: Control Panel
-          href: add-ons/simple-commerce/control-panel.md
-        - name: Email Templates
-          href: add-ons/simple-commerce/email-templates.md
-        - name: Instant Payment Notification
-          href: add-ons/simple-commerce/ipn.md
-        - name: Managing Store Items
-          href: add-ons/simple-commerce/items.md
-        - name: PayPal Settings
-          href: add-ons/simple-commerce/paypal-settings.md
-        - name: Managing Store Purchases
-          href: add-ons/simple-commerce/purchases.md
     - name: Spam
       href: add-ons/spam.md
     - name: Statistics
       href: add-ons/statistics.md
+    - name: Structure
+      href: add-ons/structure/overview.md
     - name: Emoticon (Deprecated)
       href: add-ons/emoticon.md
 

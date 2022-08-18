@@ -16,6 +16,6 @@ To add words, click the Add words tab on the lexicon page in the Control Panel, 
 
 To remove words, click the Find words tab on the lexicon page in the Control Panel, enter the word you want to remove, make sure the correct language is selected, and hit return. A list of matching words will appear on the page. Then click on the word you want to remove.
 
-Finding words in this manner also supports partial matches. For example, use lion to look up the exact word, or use lion* to look for words that start with lion.
+Finding words in this manner also supports partial matches. For example, use `lion` to look up the exact word, or use `lion*` to look for words that start with `lion`.
 
-NOTE**Note:** Only 3+-letter non-digit words will be added to the lexicon.
+NOTE:**Note:** Only 3+-letter non-digit words will be added to the lexicon.
