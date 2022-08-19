@@ -8,6 +8,14 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.1.1
+(Release: August 19, 2022)
+
+- **Bug Fixes** 💃🐛
+  - Resolved issue where license check could return incorrect results
+  - Resolved [#2263](https://github.com/ExpressionEngine/ExpressionEngine/issues/2208) where the instructions for adding IP to Blocked list were not correct
+  - Minor UI updates
+
 ## Version 7.1.0
 (Release: August 18, 2022)
 
