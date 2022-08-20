@@ -8,6 +8,8 @@
 -->
 # Lexicon
 
+[TOC]
+
 Pro Search contains a lexicon which is used for keyword suggestions as well as diacritic-insensitive highlighting of keywords in an entry’s search excerpt or title. Words are unique per site and language. For collections that have a language defined, the words will be added to the lexicon automatically. However, deleting entries will not remove words from the lexicon.
 
 ## Managing the lexicon manually

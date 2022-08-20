@@ -8,6 +8,8 @@
 -->
 # Search Shortcuts
 
+[TOC]
+
 Shortcuts are saved searches. Any search query can be saved as a shortcut, given a name, and then the search query can be triggered with that name. These shortcuts can be grouped and ordered, allowing you to generate a list of readable links to predefined searches.
 
 For example, a complicated search query can result in a long URL like this one:

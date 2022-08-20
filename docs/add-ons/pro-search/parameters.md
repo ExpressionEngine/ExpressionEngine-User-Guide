@@ -8,6 +8,8 @@
 -->
 # Parameters in Low Search
 
+[TOC]
+
 Low Search uses both native and its own parameters to generate search results. All these parameters can be applied in two ways: as input fields in a Form, or as hard-coded parameters in the Results or URL tag. The values of these parameters can always be shown inside a Low Search tag by using the parameter name as a variable, prefixed with pro_search_.
 
 So, any parameter:
@@ -32,7 +34,7 @@ For example, take a look at these parameters, input fields and variables:
 `{pro_search_channel}`
 `{pro_search_search:featured}`
 
-TIP Use input fields if you want the value of the parameter to be user defined or logged to the Search Log. Use hard-coded parameters if you want the value to be fixed.
+TIP:Use input fields if you want the value of the parameter to be user defined or logged to the Search Log. Use hard-coded parameters if you want the value to be fixed.
 
 ### Multiple values
 
@@ -56,7 +58,7 @@ In ExpressionEngine, multiple values of a parameter are usually separated by a v
     {pro_search_category}
     {pro_search_search:number}
 
-WARN**Note:** do not include the square brackets in the variable names.
+WARN:**Note:** do not include the square brackets in the variable names.
 
 ### Inclusive values
 
@@ -123,9 +125,9 @@ Low Search supports SQL parameters. This means you can use a SQL query in any pa
 
 Valid prefixes are: =, not, =not, >, <, >=, and <=.
 
-NOTE SQL queries are only allowed in hard-coded parameters.
+NOTE:**NOTE:** SQL queries are only allowed in hard-coded parameters.
 
-Examples
+**Examples**
 
 Display products with a price higher than the overall average price:
 

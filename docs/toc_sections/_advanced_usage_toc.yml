@@ -7,12 +7,12 @@
 
 - name: Config Files
   items:
-  - name: System Config Overrides
-    href: general/system-configuration-overrides.md
-  - name: Additional Config Files
-    href: config/config-files.md
-  - name: ENV File Support
-    href: advanced-usage/env-support.md
+    - name: System Config Overrides
+      href: general/system-configuration-overrides.md
+    - name: Additional Config Files
+      href: config/config-files.md
+    - name: ENV File Support
+      href: advanced-usage/env-support.md
 - name: Helpful Modules
   items:
     - name: Consent
@@ -48,7 +48,7 @@
     - name: Pages
       href: add-ons/pages.md
 #    - name: Pro Search
-#     items:
+#      items:
 #        - name: Overview
 #          href: add-ons/pro-search/overview.md
 #        - name: Collections
@@ -551,7 +551,7 @@
       href: development/v6-add-on-migration.md
     - name: Automated Upgrading
       href: development/automated-upgrading.md
-      
+
 - name: Command Line Interface (CLI)
   items:
     - name: Introduction
@@ -589,7 +589,7 @@
 
 - name: Entry Cloning
   href: channels/entry_cloning.md
-  
+
 - name: Front-end Content Management
   items:
     - name: Overview

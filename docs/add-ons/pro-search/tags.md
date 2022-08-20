@@ -8,6 +8,8 @@
 -->
 # Tags
 
+[TOC]
+
 <div id="article" class="col-xs-12 col-sm-9 col-lg-10 documentation_content">
 					
 <div class="entry">

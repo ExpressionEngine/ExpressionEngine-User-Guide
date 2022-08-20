@@ -8,6 +8,8 @@
 -->
 # Collections
 
+[TOC]
+
 Collections are used by the Keywords filter. A Collection generates an index which is used to match search terms (ie. keywords) against. They are always tied to one channel, but you can create multiple collections per channel.
 
 ## Settings
