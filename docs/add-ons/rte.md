@@ -150,11 +150,13 @@ NOTE: **Note:** If using the [Multiple Site Manager](msm/overview.md), this pref
 
 When using Redactor, the javascript for the plugin can be placed in the template, which then needs to be selected in "Extra JavaScript" field for the tool set.
 Then enable extended configuration, add the plugin name to list of plugins and provide plugin config if necessary.
-If the plugin needs extra styling, it can be placed in CSS Templates selected in "Custom Stylesheet" field for the tool set.
+If the plugin needs extra styling, it can be placed in CSS Templates selected in "Custom Stylesheet" field for the tool set. If the CSS is targeting buttons, the selectors need to be prefixed with `.redactor-toolbar`.
 
 ### CKEditor
 
 Because ExpressionEngine is using custom build of CKEditor, you would need to recompile the editor if you need to add third-party or your own plugin.
+
+If the plugin needs extra styling, it can be placed in CSS Templates selected in "Custom Stylesheet" field for the tool set. If the CSS is targeting buttons, the selectors need to be prefixed with `.ck-toolbar`.
 
 NOTE: **Warning** Doing this requires advanced development skills.
 
