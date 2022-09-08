@@ -25,16 +25,16 @@
 
 
 - **Bug Fixes** 💃🐛
-Resolved [#2298](https://github.com/ExpressionEngine/ExpressionEngine/issues/2298) where Publish Layouts were not accessible for member via secondary role
-Resolved [#2104](https://github.com/ExpressionEngine/ExpressionEngine/issues/2104) where opening link in new tab could falsely alert about leaving the page 
-Resolved [#2135](https://github.com/ExpressionEngine/ExpressionEngine/issues/2135) where categories were not parsed in related categories mode
-Resolved [#1541](https://github.com/ExpressionEngine/ExpressionEngine/issues/1541) where some fields connected to toggle button were not showing or hiding accordingly
-Resolved [#185](https://github.com/ExpressionEngine/ExpressionEngine/issues/185) where anchor "name" attribute was getting incorrect prefix in third-party textareas inside Grid
-Resolved [#2128](https://github.com/ExpressionEngine/ExpressionEngine/issues/2128) where settings of Checkboxes column in Grid field were not saved
-Resolved [#2348](https://github.com/ExpressionEngine/ExpressionEngine/issues/2348) where saving entry could show PHP error when using PHP 8.1 
-Resolved [#2360](https://github.com/ExpressionEngine/ExpressionEngine/issues/2360), [#2303](https://github.com/ExpressionEngine/ExpressionEngine/issues/2303) where certain server configuration were giving PHP error that caused file management to not function properly
-Resolved [#2122](https://github.com/ExpressionEngine/ExpressionEngine/issues/2122) where Live Preview was not working correctly when template was using search on checkboxes column in Grid
-Resolved [#2285](https://github.com/ExpressionEngine/ExpressionEngine/issues/2285) where exception shown after creating select field populating from other field, but no source field selected
+  - Resolved [#2298](https://github.com/ExpressionEngine/ExpressionEngine/issues/2298) where Publish Layouts were not accessible for member via secondary role
+  - Resolved [#2104](https://github.com/ExpressionEngine/ExpressionEngine/issues/2104) where opening link in new tab could falsely alert about leaving the page 
+  - Resolved [#2135](https://github.com/ExpressionEngine/ExpressionEngine/issues/2135) where categories were not parsed in related categories mode
+  - Resolved [#1541](https://github.com/ExpressionEngine/ExpressionEngine/issues/1541) where some fields connected to toggle button were not showing or hiding accordingly
+  - Resolved [#185](https://github.com/ExpressionEngine/ExpressionEngine/issues/185) where anchor "name" attribute was getting incorrect prefix in third-party textareas inside Grid
+  - Resolved [#2128](https://github.com/ExpressionEngine/ExpressionEngine/issues/2128) where settings of Checkboxes column in Grid field were not saved
+  - Resolved [#2348](https://github.com/ExpressionEngine/ExpressionEngine/issues/2348) where saving entry could show PHP error when using PHP 8.1 
+  - Resolved [#2360](https://github.com/ExpressionEngine/ExpressionEngine/issues/2360), [#2303](https://github.com/ExpressionEngine/ExpressionEngine/issues/2303) where certain server configuration were giving PHP error that caused file management to not function properly
+  - Resolved [#2122](https://github.com/ExpressionEngine/ExpressionEngine/issues/2122) where Live Preview was not working correctly when template was using search on checkboxes column in Grid
+  - Resolved [#2285](https://github.com/ExpressionEngine/ExpressionEngine/issues/2285) where exception shown after creating select field populating from other field, but no source field selected
 
 ## Version 7.1.3
 (Release: September 1, 2022)
