@@ -21,7 +21,7 @@ lang: php
 
 | Name                    | Validation  | Type       | Description |
 | ----------------------- |------------ | ---------- | ----------- |
-| `plugin_id`key          |             |            | |
+| `plugin_id`             |             |            | |
 | `plugin_name`           |             |            | Human-readable name of the plugin. |
 | `plugin_package`        |             |            | Plugin's version number. |
 | `plugin_version`        |             |            | Version of the plugin. |

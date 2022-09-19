@@ -73,12 +73,9 @@ ee()->load->library('subscription');
 // @params module, publisher array, anonymous
 ee()->subscription->init('comment', array('entry_id' => $entry_id), true);
 
-if ($member_id = ee()->session->userdata('member_id'))
-{
+if ($member_id = ee()->session->userdata('member_id')) {
     ee()->subscription->subscribe($member_id);
-}
-else
-{
+} else {
     ee()->subscription->subscribe($guest_email);
 }
 ```

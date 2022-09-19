@@ -21,11 +21,11 @@ lang: php
 
 | Name                  | Validation    | Type       | Description |
 | --------------------- | ------------- | ---------- | ----------- |
-| `module_id` key       |               |            | |
+| `module_id`           |               |            | |
 | `module_name`         |               |            | Human-readable name of the Module. |
 | `module_version`      |               |            | Module's version number. |
 | `has_cp_backend`      | enum[y,n]     | boolString | Shows the option to see addon's settings. |
-| `has_publish_fields`  | enum[y,n]     | boolString | |
+| `has_publish_fields`  | enum[y,n]     | boolString | Whether module provides tab for entry edit page|
 
 ## Relationships
 
@@ -47,7 +47,7 @@ Change a module's name.
 ```php
 $module = ee('Model')
             ->get('Module')
-            ->filter('module_name','Old Module Name')
+            ->filter('module_name', 'Old Module Name')
             ->first();
 
 $module->module_name = 'My New Module Name';

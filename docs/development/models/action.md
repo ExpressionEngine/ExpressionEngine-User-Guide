@@ -39,7 +39,7 @@ This model has no events.
 ```
 $action_id = ee('Model')
                 ->get('Action')
-                ->filter('method','your_addon_method')
+                ->filter('method', 'your_addon_method')
                 ->first()
                 ->action_id;
                 

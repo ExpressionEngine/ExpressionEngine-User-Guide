@@ -22,7 +22,7 @@ lang: php
 | Name                      | Validation                            | Type              | Description  |
 | -----------------------   |------------                           | --------------    | -----------  |
 | `site_id`                 |                                       |                   | |
-| `entry_id` Key            |                                       |                   | |
+| `entry_id`                |                                       |                   | |
 | `author_id`               | required, isNatural, validateAuthorId | int               | |
 | `channel_id`              | required, validateMaxEntries          |                   | |
 | `title`                   | required, maxLength[200], limitHtml[b,cite,code,del,em,i,ins,markspan,strong,sub,sup] | |

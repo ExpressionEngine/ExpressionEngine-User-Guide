@@ -21,7 +21,7 @@ lang: php
 
 | Name                  | Validation | Type        | Description |
 | --------------------- | ---------- |------------ | ----------- |
-| `fieldtype_id` key    |            |             | |
+| `fieldtype_id`        |            |             | |
 | `name`                |            |             | Name of the addon's class |
 | `version`             |            |             | Name of the method executed |
 | `hook`                |            |             | The EE hook name. |

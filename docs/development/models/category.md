@@ -21,7 +21,7 @@ lang: php
 
 | Name                      | Validation                            | Type       | Description  |
 | -----------------------   |------------                           | ---------- | -----------  |
-| `cat_id` Key              |                                       |            |              |
+| `cat_id`                  |                                       |            |              |
 | `site_id`                 |                                       |            |              |
 | `group_id`                |                                       |            |              |
 | `parent_id`               | validateParentCategory                |            |              |

@@ -21,7 +21,7 @@ lang: php
 
 | Name                      | Validation                 | Type       | Description  |
 | -----------------------   |------------                | ---------- | -----------  |
-| `group_id`key             |                            |            |              |
+| `group_id`                |                            |            |              |
 | `site_id`                 |                            |            |              |
 | `group_name`              | required, unique[site_id]  |            |              |
 | `sort_order`              | enum[a,c]                  |            |              |

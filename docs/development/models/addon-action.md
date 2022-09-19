@@ -21,7 +21,7 @@ lang: php
 
 | Name             | Validation   | Type  | Description    |
 | ---------------- | ------------ | ----- | -------------- |
-| `action_id` Key  |              |       | ID used in the URL to call the method. |
+| `action_id`      |              |       | ID used in the URL to call the method. |
 | `class`          |              |       | Name of the addon's class |
 | `method`         |              |       | Name of the method executed |
 | `csrf_exempt`    | enum[0,1]    |       | Enable (0) or disable (1) the security token check.  Disabling is typically used with asynchronous operations. Default is `0` or check enabled |
@@ -45,7 +45,7 @@ This model has no events.
 ```php
 $action_id = ee('Model')
                 ->get('Action')
-                ->filter('method','your_addon_method')
+                ->filter('method', 'your_addon_method')
                 ->first()
                 ->action_id;
 

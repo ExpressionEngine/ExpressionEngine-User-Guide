@@ -46,7 +46,7 @@ Marks the extension as enabled.
 
 ### `disable()`
 
-Marks the extensino as disabled.
+Marks the extension as disabled.
 
 | Parameter | Type         | Description                                   |
 | --------- | ------------ | --------------------------------------------- |
@@ -63,7 +63,7 @@ This model has no events.
 ```php
 $method = ee('Model')
             ->get('Extension')
-            ->filter('class','My_extension_class_ext')
+            ->filter('class', 'My_extension_class_ext')
             ->first();
 
 $method->method = 'my_new_method_name';
@@ -76,11 +76,10 @@ $method->save();
 ```php
 $method = ee('Model')
             ->get('Extension')
-            ->filter('class','My_extension_class_ext')
+            ->filter('class', 'My_extension_class_ext')
             ->first();
 
-if ($method->enabled !== 'y')
-{
+if ($method->enabled !== 'y') {
     $method->enable();
 }
 ```

@@ -21,7 +21,7 @@ lang: php
 
 | Name                      | Validation                        | Type       | Description  |
 | -----------------------   |------------                       | ---------- | -----------  |
-| `field_id`key             |                                   |            | |
+| `field_id`                |                                   |            | |
 | `site_id`                 |                                   |            | |
 | `group_id`                |                                   |            | |
 | `field_name`              | required, alphaDash, unique[site_id], validateNameIsNotReserved, maxLength[32] | | |
