@@ -335,14 +335,32 @@
       items:
         - name: Working with Models
           href: development/models/working-with-models.md
-        - name: Action Model
-          href: development/models/action.md
+        - name: Addon Action Model
+          href: development/models/addon-action.md
+        - name: Addon Module Model
+          href: development/models/addon-module.md
+        - name: Addon Extension Model
+          href: development/models/addon-extension.md
+        - name: Addon Fieldtype Model
+          href: development/models/addon-fieldtype.md
+        - name: Addon Plugin Model
+          href: development/models/addon-plugin.md
+        - name: Category Model
+          href: development/models/category.md
+        - name: Category Field Model
+          href: development/models/category-field.md
+        - name: Category Group Model
+          href: development/models/category-group.md
         - name: Channel Entry Model
           href: development/models/channel-entry.md
         - name: Channel Field Group Model
           href: development/models/channel-field-group.md
         - name: Channel Field Model
           href: development/models/channel-field.md
+        - name: Comment Model
+          href: development/models/comment.md
+        - name: Comment Subscription Model
+          href: development/models/comment-subscription.md
         - name: CP Log Model
           href: development/models/cp-log.md
         - name: Developer Log Model
