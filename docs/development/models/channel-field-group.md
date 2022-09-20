@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2021, Packet Tide, LLC (https://packettide.com)
+    @copyright Copyright (c) 2003-2022, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -20,37 +20,40 @@ lang: php
 ## Properties
 
 ### Required
-#### `site_id`
-#### `group_name`
+
+- `site_id`
+- `group_name`
 
 ### Optional
-#### `group_id` Key
 
+- `group_id` Key
 
 ## Relationships
-#### `ChannelFields`
-#### `Channels`
 
+- `ChannelFields`
+- `Channels`
 
 ## Methods
-### `createChannelField`
-### `validateName`
-### `onAfterUpdate`
 
+- `createChannelField`
+- `validateName`
+- `onAfterUpdate`
 
 ## Events
-This model has no events.
 
+This model has no events.
 
 ## Examples
 
-#### Get a Channel Field.
-```
+### Get a Channel Field
+
+```php
 ee('Model')->get('ChannelFieldGroup', 2)->first();
 ```
 
-#### Change a Field Group Name
-```
+### Change a Field Group Name
+
+```php
 $group = ee('Model')->get('ChannelFieldGroup', 2)->first();
 
 $group->group_name = 'A New Group Name';
@@ -64,8 +67,9 @@ if ($result->isValid())
 }
 ```
 
-#### Create a Field Group
-```
+### Create a Field Group
+
+```php
 $group = ee('Model')->make('ChannelFieldGroup');
 
 // Set Required Fields
@@ -81,8 +85,9 @@ if ($result->isValid())
 }
 ```
 
-#### Add Fields to Group
-```
+### Add Fields to Group
+
+```php
 $group = ee('Model')->get('ChannelFieldGroup', 2)->first();
 
 // Get the Field Objects.  Note the plural differences.
@@ -97,8 +102,9 @@ if ($result->isValid())
 }
 ```
 
-#### Asign a group to a Channel
-```
+### Asign a group to a Channel
+
+```php
 // Get the Field Group object.
 $group = ee('Model')->get('ChannelFieldGroup', 2)->first();
 
