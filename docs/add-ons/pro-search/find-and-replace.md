@@ -16,4 +16,4 @@ Any search indexes for entries affected by a Find & Replace action will be updat
 
 ### Channel field support
 
-The Find & Replace utility allows you to target Titles as well as text-based channel fields like Text, Textarea, RTE and various third party wysiwyg-fieldtypes. It also supports Grid and Matrix fields.
+The Find & Replace utility allows you to target Titles as well as text-based channel fields like Grid, Text, Textarea, RTE and various third party wysiwyg-fieldtypes.
