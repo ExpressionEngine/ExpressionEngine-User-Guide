@@ -20,51 +20,56 @@ lang: php
 ## Properties
 
 ### Required
-#### `group_name`
-#### `site_id`
+
+- `group_name`
+- `site_id`
 
 ### Optional
-#### `group_id` Key
-#### `group_order`
-#### `is_site_default`
 
+- `group_id` Key
+- `group_order`
+- `is_site_default`
 
 ## Relationships
+
 #### `Roles`
+
 Roles with access to the group.
 
 #### `Templates`
+
 Templates in the Template Group
 
 #### `Site`
-The site the group belongs to.
 
+The site the group belongs to.
 
 ## Methods
 
-### `ensureFolderExists`
-### `getFolderPath`
-### `validateTemplateGroupName`
-### `validateUnique`
-
+- `ensureFolderExists`
+- `getFolderPath`
+- `validateTemplateGroupName`
+- `validateUnique`
 
 ## Events
-#### `beforeInsert`
-#### `afterDelete`
-#### `afterInsert`
-#### `afterUpdate`
-#### `afterSave`
 
+- `beforeInsert`
+- `afterDelete`
+- `afterInsert`
+- `afterUpdate`
+- `afterSave`
 
 ## Examples
 
 #### Get a Template Group
-```
+
+```php
 $group = ee('Model')->get('TemplateGroup')->filter('group_name', 'about')->first();
 ```
 
 #### Modify the Group Name
-```
+
+```php
 // Get the group object.
 $group = ee('Model')->get('TemplateGroup')->filter('group_name', 'about')->first();
 
@@ -81,7 +86,8 @@ if ($result->isValid())
 ```
 
 #### Create a New Template Group
-```
+
+```php
 // Make a new template object.
 $group = ee('Model')->make('TemplateGroup');
 

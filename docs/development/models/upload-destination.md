@@ -20,62 +20,69 @@ lang: php
 ## Properties
 
 ### Required
-#### `name`
-#### `server_path`
-#### `url`
+
+- `name`
+- `server_path`
+- `url`
 
 ### Optional
-#### `id` Key
-#### `site_id`
-#### `allowed_types`
-#### `default_modal_view`
-#### `max_size`
-#### `max_height`
-#### `max_width`
-#### `properties`
-#### `pre_format`
-#### `post_format`
-#### `file_properties`
-#### `file_pre_format`
-#### `file_post_format`
-#### `cat_group`
-#### `batch_location`
-#### `module_id`
 
+- `id` Key
+- `site_id`
+- `allowed_types`
+- `default_modal_view`
+- `max_size`
+- `max_height`
+- `max_width`
+- `properties`
+- `pre_format`
+- `post_format`
+- `file_properties`
+- `file_pre_format`
+- `file_post_format`
+- `cat_group`
+- `batch_location`
+- `module_id`
 
 ## Relationships
 
 #### `UploadDestination`
+
 The location the file is uploaded to.
 
 #### `Roles`
+
 The roles that have access to the upload destination.
 
 #### `Module`
+
 Modules that have access to the upload destination.
 
 #### `Files`
+
 Files in the upload destination.
 
 #### `FileDimentions`
+
 Resize dimentions for images.
 
 #### `Site`
-The site the destination is apart of.
 
+The site the destination is apart of.
 
 ## Methods
 
-#### `parseConfigVars`
-#### `fetchOverride`
-#### `getProperty`
-#### `getConfigOverriddenProperty`
-#### `hasOverride`
-#### `validateUrl`
-#### `getFilesystem`
-#### `memberHasAccess`
-#### `exists`
-#### `isWritable`
+- `parseConfigVars`
+- `fetchOverride`
+- `getProperty`
+- `getConfigOverriddenProperty`
+- `hasOverride`
+- `validateUrl`
+- `getFilesystem`
+- `memberHasAccess`
+- `exists`
+- `isWritable`
 
 ## Events
+
 This model has no events.

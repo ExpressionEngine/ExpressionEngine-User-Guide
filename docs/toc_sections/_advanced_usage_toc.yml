@@ -47,30 +47,40 @@
       href: add-ons/moblog.md
     - name: Pages
       href: add-ons/pages.md
-#    - name: Pro Search
-#     items:
-#        - name: Overview
-#          href: add-ons/pro-search/overview.md
-#        - name: Collections
-#          href: add-ons/pro-search/collections.md
-#        - name: Settings
-#          href: add-ons/pro-search/settings.md
-#        - name: Lexicon
-#          href: add-ons/pro-search/lexicon.md
-#        - name: Shortcuts
-#          href: add-ons/pro-search/shortcuts.md
-#        - name: Parameters
-#          href: add-ons/pro-search/parameters.md
-#        - name: Filters
-#          href: add-ons/pro-search/filters.md
-#        - name: Tags
-#          href: add-ons/pro-search/tags.md
-#        - name: Examples
-#          href: add-ons/pro-search/examples.md
-#        - name: Find and Replace
-#          href: add-ons/pro-search/find-and-replace.md
     - name: Pro Search
-      href: add-ons/pro-search.md
+      items:
+        - name: Overview
+          href: add-ons/pro-search/overview.md
+        - name: Collections
+          href: add-ons/pro-search/collections.md
+        - name: Settings
+          href: add-ons/pro-search/settings.md
+        - name: Lexicon
+          href: add-ons/pro-search/lexicon.md
+        - name: Shortcuts
+          href: add-ons/pro-search/shortcuts.md
+        - name: Parameters
+          href: add-ons/pro-search/parameters.md
+        - name: Filters
+          href: add-ons/pro-search/filters.md
+        - name: Tags
+          href: add-ons/pro-search/tags.md
+        - name: Examples
+          href: add-ons/pro-search/examples.md
+        - name: Find and Replace
+          href: add-ons/pro-search/find-and-replace.md
+        - name: Development
+          items:
+            - name: Creating your own Filter
+              href: add-ons/pro-search/development/create.md
+            - name: Anatomy of a Filter
+              href: add-ons/pro-search/development/anatomy.md
+            - name: Helper Functions
+              href: add-ons/pro-search/development/functions.md
+            - name: Search index API
+              href: add-ons/pro-search/development/api.md
+            - name: Extension Hooks
+              href: add-ons/pro-search/development/hooks.md
     - name: Pro Variables
       href: add-ons/pro-variables.md
     - name: Query
@@ -335,14 +345,32 @@
       items:
         - name: Working with Models
           href: development/models/working-with-models.md
-        - name: Action Model
-          href: development/models/action.md
+        - name: Addon Action Model
+          href: development/models/addon-action.md
+        - name: Addon Module Model
+          href: development/models/addon-module.md
+        - name: Addon Extension Model
+          href: development/models/addon-extension.md
+        - name: Addon Fieldtype Model
+          href: development/models/addon-fieldtype.md
+        - name: Addon Plugin Model
+          href: development/models/addon-plugin.md
+        - name: Category Model
+          href: development/models/category.md
+        - name: Category Field Model
+          href: development/models/category-field.md
+        - name: Category Group Model
+          href: development/models/category-group.md
         - name: Channel Entry Model
           href: development/models/channel-entry.md
         - name: Channel Field Group Model
           href: development/models/channel-field-group.md
         - name: Channel Field Model
           href: development/models/channel-field.md
+        - name: Comment Model
+          href: development/models/comment.md
+        - name: Comment Subscription Model
+          href: development/models/comment-subscription.md
         - name: CP Log Model
           href: development/models/cp-log.md
         - name: Developer Log Model
