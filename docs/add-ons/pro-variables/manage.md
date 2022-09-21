@@ -9,6 +9,8 @@
 
 # Managing Variables
 
+[TOC=2-3]
+
 ## Variable Properties
 
 There are a couple of extra properties you can assign to variables, other than their name and value. These are the general properties.
@@ -39,7 +41,7 @@ You can enable early parsing on a per-variable basis.
 
 ### Variable type
 
-Choose any variable type that suits your needs best. [Here’s a list of variable types that come with Pro Variables.](/add-ons/pro-variables/types.md) Each type will reveal additional type-specific properties.
+Choose any variable type that suits your needs best. [Here’s a list of variable types that come with Pro Variables.](/add-ons/pro-variables/type.md) Each type will reveal additional type-specific properties.
 
 ## Variable creation options
 

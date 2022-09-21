@@ -29,7 +29,7 @@ Name of the variable you want to parse. Use a colon to separate site name and va
 
 #### `multiple`
 
-If set to `yes`, the tag will loop through the different values of the variable. This parameter applies to any of the native variable types that use the `separator` setting: [Checkbox Group](/addons/low-variables/docs/types#checkbox-group), [Radio Group](/addons/low-variables/docs/types#radio-group) and _all_ [Select types](/addons/low-variables/docs/types#select). Use only in combination with the `var` parameter. _Not needed in EE3._
+If set to `yes`, the tag will loop through the different values of the variable. This parameter applies to any of the native variable types that use the `separator` setting: [Checkbox Group](/add-ons/pro-variables/type.md#checkbox-group), [Radio Group](/add-ons/pro-variables/type.md#radio-group) and _all_ [Select types](/add-ons/pro-variables/type.md#select). Use only in combination with the `var` parameter.
 
 #### `limit`
 
