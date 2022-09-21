@@ -82,7 +82,25 @@
             - name: Extension Hooks
               href: add-ons/pro-search/development/hooks.md
     - name: Pro Variables
-      href: add-ons/pro-variables.md
+      items:
+        - name: Overview
+          href: add-ons/pro-variables/overview.md
+        - name: Settings
+          href: add-ons/pro-variables/settings.md
+        - name: Managing Variables
+          href: add-ons/pro-variables/manage.md
+        - name: Variable Types
+          href: add-ons/pro-variables/type.md
+        - name: Template Tags
+          href: add-ons/pro-variables/tags.md
+        - name: Fieldtype
+          href: add-ons/pro-variables/fieldtype.md
+        - name: Development
+          items:
+            - name: Fieldtype Bridge
+              href: add-ons/pro-variables/development/fieldtype-bridge.md
+            - name: Extension Hook
+              href: add-ons/pro-variables/development/hooks.md
     - name: Query
       href: add-ons/query.md
     - name: Request
