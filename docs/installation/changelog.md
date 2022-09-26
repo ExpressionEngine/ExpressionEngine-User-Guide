@@ -28,6 +28,9 @@
   - Resolved [#2390](https://github.com/ExpressionEngine/ExpressionEngine/issues/2390) where File Picker was not working if no file field was present on page 
   - Resolved [#2393](https://github.com/ExpressionEngine/ExpressionEngine/issues/2393) where replacing file with existing manipulations could generate PHP error 
   - Resolved issue where entries could be not displayed on front-end if channel name also existed on other MSM site
+  - Resolved [#2395](https://github.com/ExpressionEngine/ExpressionEngine/issues/2395) where deleting directory might not work correctly on some environments
+  - Resolved issue where PHP error could be shown after update if templates are not synchronized
+  - Resolved issue where `search` parameter on `exp:channel:entries` tag could only be used once
 
 ## Version 7.1.5
 (Release: September 13, 2022)
