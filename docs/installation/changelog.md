@@ -8,6 +8,30 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.1.6
+(Release: September 26, 2022)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+- **Bug Fixes** 💃🐛
+  - Resolved issue when saving some member profile settings could show PHP error when using PHP 8
+  - Resolved [#2363](https://github.com/ExpressionEngine/ExpressionEngine/issues/2363) where reordering fields in Channel Layouts did not work properly 
+  - Resolved [#2390](https://github.com/ExpressionEngine/ExpressionEngine/issues/2390) where File Picker was not working if no file field was present on page 
+  - Resolved [#2393](https://github.com/ExpressionEngine/ExpressionEngine/issues/2393) where replacing file with existing manipulations could generate PHP error 
+  - Resolved issue where entries could be not displayed on front-end if channel name also existed on other MSM site
+  - Resolved [#2395](https://github.com/ExpressionEngine/ExpressionEngine/issues/2395) where deleting directory might not work correctly on some environments
+  - Resolved issue where PHP error could be shown after update if templates are not synchronized
+  - Resolved issue where `search` parameter on `exp:channel:entries` tag could only be used once
+
 ## Version 7.1.5
 (Release: September 13, 2022)
 
