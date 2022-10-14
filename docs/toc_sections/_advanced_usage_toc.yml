@@ -102,6 +102,18 @@
       href: development/addon-setup-php-file.md
     - name: Add-on Installer
       href: development/addon-installer.md
+    - name: Add-on Controllers
+      items:
+        - name: About Controllers
+          href: development/addon-controllers/about.md
+        - name: Routing
+          href: development/addon-controllers/routing.md
+        - name: Control Panel
+          href: development/addon-controllers/cp.md
+        - name: Extensions
+          href: development/addon-controllers/extensions.md
+        - name: Modules
+          href: development/addon-controllers/modules.md
     - name: Plugins
       href: development/plugins.md
     - name: Modules
