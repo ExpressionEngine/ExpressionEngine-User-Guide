@@ -23,7 +23,7 @@ class Custom_addon extends Module
 }
 ```
 
-Once that's done, your Add-on Module is now set to look for objects for all calls to it. Those objects depend on what "type" (Tag or Action). Using the configured namespace for the Add-on, the Module routes would be looked for in `Mithra62\PlayThing\Module\Tags|Action`. 
+Once that's done, your Add-on Module is now set to look for objects for all calls to it. Those objects depend on what "type" (Tag or Action). Using the configured namespace for the Add-on, the Module routes would be looked for in YourAddon\Module\Tags|Action`. 
 
 #### Template Tag 
 
