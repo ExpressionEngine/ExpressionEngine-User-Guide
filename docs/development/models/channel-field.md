@@ -25,12 +25,13 @@ lang: php
 - `field_name`
 - `field_label`
 - `field_type`
+- `field_list_items` (can be empty)
+- `field_order`
 
 ### Optional
 
 - `field_id` Key
 - `field_instructions`
-- `field_list_items`
 - `field_pre_populate`
 - `field_pre_channel_id`
 - `field_pre_field_id`
@@ -42,7 +43,6 @@ lang: php
 - `field_is_hidden`
 - `field_fmt`
 - `field_show_fmt`
-- `field_order`
 - `field_content_type`
 - `field_settings`
 - `legacy_field_data`
@@ -125,6 +125,13 @@ $field->site_id     = ee()->config->item('site_id');
 $field->field_name  = 'my_field_name';
 $field->field_label = 'Field Label';
 $field->field_type  = 'text';
+$field->field_list_items  = '';
+$field->field_order = 1;
+
+// Set field-specific settings
+$settings = $field->getSettingsValues();
+$settings['field_settings']['field_show_file_selector'] = 'y';
+$field->setProperty('field_settings', $settings['field_settings']);
 
 // Validate and Save.
 $result = $field->validate();
@@ -138,7 +145,7 @@ if ($result->isValid())
 $field->field_id;
 ```
 
-Field types `Relationships` `Grid` and `Fluid` require additional steps. Their data will be `NULL`.
+Field types `Relationships`, `Grid` and `Fluid` require additional steps. Their data will be `NULL`.
 
 ### Add Field to a Field Group
 
