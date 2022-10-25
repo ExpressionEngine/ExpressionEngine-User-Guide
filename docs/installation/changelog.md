@@ -51,6 +51,8 @@
   - Resolved [#2411](https://github.com/ExpressionEngine/ExpressionEngine/issues/2411), [#2412](https://github.com/ExpressionEngine/ExpressionEngine/issues/2412) where filepicker was not always working outside of File field
   - Resolved issue where File link was not in navigation sidebar for some members with proper permissions
   - Resolved issue where empty edit buttons were present for sidebar elements that member does not have access to edit
+  - Resolved [#2437](https://github.com/ExpressionEngine/ExpressionEngine/issues/2437) where horizontal grid fields could go outside the container
+  - Resolved [#2435](https://github.com/ExpressionEngine/ExpressionEngine/issues/2435) when having two Pro Search results tags with `keywords:stem` parameter on same page caused PHP error
 
 
 - **Developers** 💻
