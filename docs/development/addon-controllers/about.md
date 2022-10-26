@@ -182,7 +182,6 @@ class Index extends AbstractRoute
 }
 ```
 
-File location: `my_addon/Mcp/Index.php`
 The generation of the CP array format is done automatically by the Controller so all the devs really do is assign variables and ensure their `process` method returns an instance of their Route:
 
 ```php
