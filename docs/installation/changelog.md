@@ -28,7 +28,7 @@
 - **Enhancements** 🚀
   - Added dismissable post-upgrade information widget
   - Improved one-click upgrade process
-  - Updated Descussion Forum module to version 5.1.0
+  - Updated Discussion Forum module to version 5.1.0
 
 - **Developers** 💻
   - Fixed typos in repo documentation
