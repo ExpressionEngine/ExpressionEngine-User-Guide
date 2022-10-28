@@ -64,6 +64,7 @@
   - Resolved [#2126](https://github.com/ExpressionEngine/ExpressionEngine/issues/2126) where "add field" button was present for field groups that are not saved yet
   - Resolved issue where notices could be shown by Template library when called by add-on in PHP 8.1
   - Resolved [#1358](https://github.com/ExpressionEngine/ExpressionEngine/issues/1358) where setting CP Homepage for member could cause PHP error on large sites using MSM
+  - Resolved issue where reCaptcha threshold was not checked correctly
 
 
 - **Developers** 💻
