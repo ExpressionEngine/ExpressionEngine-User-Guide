@@ -30,7 +30,7 @@ This class is initialized automatically.
 
 You are not required to use this class to call the incoming data from the superglobal arrays, it will still be available through the superglobals themselves. However, the input class does offer some benefits.
 
-The superglobal methods all allow the specification of an optional second parameter that lets you run the data through the [XSS filter](security). It's enabled by setting the second parameter to boolean TRUE.
+The superglobal methods all allow the specification of an optional second parameter that lets you run the data through the [XSS filter](security). It's enabled by setting the second parameter to `TRUE` (boolean).
 
 Lastly, the superglobal methods will check to see if the item is set and return `FALSE` (boolean) if not. This lets you conveniently use data without having to test whether an item exists first. In other words, normally you might do something like this:
 
