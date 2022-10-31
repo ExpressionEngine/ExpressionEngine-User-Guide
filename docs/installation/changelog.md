@@ -55,6 +55,7 @@
   - Resolved [#2437](https://github.com/ExpressionEngine/ExpressionEngine/issues/2437) where horizontal grid fields could go outside the container
   - Resolved [#2435](https://github.com/ExpressionEngine/ExpressionEngine/issues/2435) when having two Pro Search results tags with `keywords:stem` parameter on same page caused PHP error
   - Resolved issue where reCaptcha threshold was not checked correctly
+  - Resolved [#2484](https://github.com/ExpressionEngine/ExpressionEngine/issues/2484) where FTP library was not working properly on PHP 8.1
 
 
 - **Developers** 💻
