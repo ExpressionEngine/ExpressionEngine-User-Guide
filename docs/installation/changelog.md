@@ -65,6 +65,7 @@
   - Resolved issue where notices could be shown by Template library when called by add-on in PHP 8.1
   - Resolved [#1358](https://github.com/ExpressionEngine/ExpressionEngine/issues/1358) where setting CP Homepage for member could cause PHP error on large sites using MSM
   - Resolved issue where reCaptcha threshold was not checked correctly
+  - Resolved [#2484](https://github.com/ExpressionEngine/ExpressionEngine/issues/2484) where FTP library was not working properly on PHP 8.1
 
 
 - **Developers** 💻
