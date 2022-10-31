@@ -1,20 +1,21 @@
 # Add-on Controllers
 
-Add-on Controllers allows Add-on developers to create their Add-on methods using an abstracted object layer while keeping backwards compatibility intact. It covers Extensions, Modules (Action and Tags), and the Control Panel layers. It's very simple to implement (just inherit an object), while maintaining the legacy implementation in play. 
+Add-on Controllers allow add-on developers to create their add-on methods using an abstracted object layer while keeping backwards compatibility intact. It covers Extensions, Modules (Action and Tags), and the Control Panel layers. It's very simple to implement (just inherit an object), while maintaining the legacy implementation in play. 
 
-To implement, you simply set your Add-on `mod.`, `ext.`, and/or `mcp.` files to inherit from a base object (depending on the implementation).
+To implement, you simply set your add-on `mod.`, `ext.`, and/or `mcp.` files to inherit from a base object (depending on the implementation). Then create your actions, tags, extension hooks, and mcp routes in folders consistent with the supported naming convention. Tags go in the `Module/Tags` folder, Actions go in the `Module/Actions` folder, Extension hooks go in the `Extensions` folder, and Mcp routes go in the `Mcp` folder.
 
 ## Add-on File Examples
 
-Here's a breakdown for how the Add-on files would look for an Add-on named `Custom_addon`.
+Here's a breakdown for how the add-on files would look for an Add-on named `Custom_addon`.
 
-> Note that this works by using set or determined namespaces for a given Add-on. By default, this Controller implementation will use the Add-on name to get the configured namespace within the Add-on. For this example of `Custom_addon`, it's `YourAddon`; all route namespaces are determined by that. 
+> Note that this works by using set or determined namespaces for a given Add-on. By default, this Controller implementation will use the add-on name to get the configured namespace within the add-on. For this example of `Custom_addon`, we are setting the namespace in the `addon.setup.php` file to be  `YourAddon`; all route namespaces are determined by that. 
 
 ### Module
 
 The `mod` file would consist exclusively of the below. 
 
 ```php
+<?php
 use ExpressionEngine\Service\Addon\Module;
 
 class Custom_addon extends Module
@@ -23,13 +24,14 @@ class Custom_addon extends Module
 }
 ```
 
-Once that's done, your Add-on Module is now set to look for objects for all calls to it. Those objects depend on what "type" (Tag or Action). Using the configured namespace for the Add-on, the Module routes would be looked for in YourAddon\Module\Tags|Action`. 
+Once that's done, Tags and Actions can be created as their own files, and placed in the `Module/Tags` and `Module/Actions` folders. Those objects depend on what "type" (Tag or Action). Using the configured namespace for the Add-on, the Module routes would be looked for in `YourAddon\Module\Tags` and `YourAddon\Module\Action` respectively.
 
 #### Template Tag 
 
-For a template tag called as `{exp:custom_addon:test_template_tag}`, you'd setup your Tag object like the below:
+For a template tag called as `{exp:custom_addon:test_template_tag}`, you would set up your Tag object like the below:
 
 ```php
+<?php
 namespace YourAddon\Module\Tags;
 
 use ExpressionEngine\Service\Addon\Controllers\Tag\AbstractRoute;
@@ -44,7 +46,7 @@ class TestTemplateTag extends AbstractRoute
 ```
 
 #### Actions
-Just like with Template Tags, Actions get stored in the `Actions` namespace. The below is for an Action called `my-test-action`. 
+Just like with Template Tags, Actions get stored in the `YourAddon\Module\Actions` namespace. The below is for an Action called `my-test-action`. 
 
 ```php
 <?php
@@ -61,11 +63,23 @@ class MyTestAction extends AbstractRoute
 }
 ```
 
+Please note, you still need to "install" Actions in the upd file. This can be done in the Upd file by extending  `ExpressionEngine\Service\Addon\Installer` and then setting the `$actions` array:
+
+```php
+public $actions = [
+    [
+        'class' => 'Custom_addon',
+        'method' => 'my-test-action'
+    ]
+];
+```
+
 ### Extension
 
 The `ext` is structured just like the others:
 
 ```php
+<?php
 use ExpressionEngine\Service\Addon\Extension;
 
 class Custom_addon_ext extends Extension
@@ -94,6 +108,7 @@ class TestExtension extends AbstractRoute
 Note that the above `process` method allows you to accept variable parameters (just like regular Extensions). For example, to build an Extension around `template_post_parse`, you'd write your Extension like the below:
 
 ```php
+<?php
 namespace YourAddon\Extensions;
 
 use ExpressionEngine\Service\Addon\Controllers\Extension\AbstractRoute;
@@ -112,6 +127,7 @@ class TestExtension extends AbstractRoute
 The `mcp` layer acts more as a Controller/Router than the others in that the CP is supposed to be rendered as Views. To start, just like all the others, you extend from the `Mcp` object. Once that's done, all requests will be routed to the object layer. 
 
 ```php
+<?php
 use ExpressionEngine\Service\Addon\Mcp;
 
 class Custom_addon_mcp extends Mcp
@@ -120,11 +136,25 @@ class Custom_addon_mcp extends Mcp
 }
 ```
 
-#### Route Examples
-
-A basic 'index' route (normally done through a method attached to the `mcp` object) would look like the below:
+Please note, you still need to "install" Extension hooks. One way is to do this in the Upd file by extending  `ExpressionEngine\Service\Addon\Installer` and then setting the `$methods` array:
 
 ```php
+public $methods = [
+    [
+        'class' => 'Custom_addon_ext',
+        'method' => 'test-extension',
+        'hook' => 'sessions_start'
+    ]
+];
+```
+
+
+#### Route Examples
+
+A basic 'index' route, normally done through a method attached to the `mcp` object, would look like the example below:
+
+```php
+<?php
 namespace YourAddon\Mcp;
 
 use ExpressionEngine\Service\Addon\Controllers\Mcp\AbstractRoute;
@@ -155,6 +185,7 @@ class Index extends AbstractRoute
 The generation of the CP array format is done automatically by the Controller so all the devs really do is assign variables and ensure their `process` method returns an instance of their Route:
 
 ```php
+<?php
 namespace YourAddon\Mcp;
 
 use ExpressionEngine\Service\Addon\Controllers\Mcp\AbstractRoute;
@@ -177,8 +208,8 @@ class Index extends AbstractRoute
      */
     public function process($id = false): AbstractRoute
     {
-        $this->addBreadcrumb('test-link', 'test-link')
-             ->addBreadcrumb('test-link2', 'test-link2');
+        $this->addBreadcrumb('test-link', 'My Link')
+            ->addBreadcrumb('test-link2', 'My Second Link');
 
         $variables = [];
         $this->setBody('my-view', $variables);
