@@ -601,6 +601,8 @@
           href: development/guidelines/security.md
         - name: View Files and PHP Syntax
           href: development/guidelines/view-php-syntax.md
+    - name: Debugging
+      href: development/debugging.md
     - name: v3 Add-on Migration
       href: development/v3-add-on-migration.md
     - name: v4 Add-on Migration
