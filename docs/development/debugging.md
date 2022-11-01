@@ -11,11 +11,7 @@
 
 [TOC]
 
-When debugging you add-on (or an issue with someone else's code) you'd need to start with enabling debugging in Control Panel [Debugging & Output](control-panel/settings/debug-output.md) settings.
-
-It might be also worth to edit the site's main `index.php` file and temporary change `$debug = 0;` to `$debug = 1;`.
-
-Then, you can use some helper function to get to the source of problem in PHP code
+In addition to the standard [troubleshooting steps](troubleshooting/general.md#troubleshooting) to display errors in your browser, ExpressionEngine also offers some helper functions to help troubleshoot your add-on code.
 
 ### `dump($var)`
 
