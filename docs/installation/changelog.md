@@ -8,7 +8,7 @@
 -->
 # ExpressionEngine v6 Change Log
 
-## Version 6,4.0
+## Version 6.4.0
 (Release: October 26, 2022)
 
 - **Contributors** 🙌
