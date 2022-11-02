@@ -15,7 +15,7 @@ In addition to the standard [troubleshooting steps](troubleshooting/general.md#t
 
 ### `dump($var)`
 
-Dumps the variable as pre-formatted block. Essentially what `var_dump` does in PHP, but looks nicer.
+Dumps the variable as a pre-formatted block. Essentially what `var_dump` does in PHP, but looks nicer.
 
 ### `dd($var)`
 
@@ -23,4 +23,4 @@ Dumps the variable as pre-formatted block. Essentially what `var_dump` does in P
 
 ### `trace(10)`
 
-Outputs the debug backrace of function being called. Useful if you need to find out which function called your code. The number is the number of steps back, or the functions, to be listed.
+Outputs the debug backtrace of the function being called. Useful if you need to find out which function called your code. The number is the number of steps back, or the functions, to be listed.
