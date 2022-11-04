@@ -249,6 +249,20 @@ There are several variables available for use inside the `{categories}{/categori
 
 You may use this conditional to test whether the category shown is the active category or not, based on the dynamic URI segment.
 
+### `{has_children}`
+
+    {categories}
+        <a href="{path='channel/index'}">{category_name}</a>
+
+        {if has_children}
+            <button
+                type="button"
+                aria-haspopup="true"
+            >children categories</button>
+        {/if}
+    {/categories}
+You may use this conditional to test whether the category shown is or isn't a parent category.
+
 ### `{category_description}`
 
     {categories}
