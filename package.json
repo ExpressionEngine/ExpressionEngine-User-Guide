@@ -1,6 +1,9 @@
 {
   "name": "ExpressionEngine-Docs",
-  "repository": "https://github.com/ExpressionEngine/ExpressionEngine-User-Guide",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExpressionEngine/ExpressionEngine-User-Guide.git"
+  },
   "scripts": {
     "build": "node ./scripts/cli.js",
     "build:site": "node ./scripts/cli.js -t theme/site-template.html",
@@ -11,12 +14,13 @@
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
+    "daisyui": "^2.38.0",
     "minimist": "^1.2.6"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
-    "autoprefixer": "^10.4.0",
+    "autoprefixer": "^10.4.13",
     "colors": "^1.3.3",
     "del": "^3.0.0",
     "front-matter": "^3.0.1",
@@ -35,9 +39,21 @@
     "marked": "^0.7.0",
     "postcss": "^8.4.5",
     "replace-ext": "^1.0.0",
-    "tailwindcss": "2.2.19",
+    "tailwindcss": "^2.2.19",
     "through2": "^3.0.0",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
-  }
+  },
+  "description": "The public user guide repository for the [ExpressionEngine](https://expressionengine.com) project. The online version of the user guide is hosted at [docs.expressionengine.com](https://docs.expressionengine.com).",
+  "bugs": {
+    "url": "https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/issues"
+  },
+  "homepage": "https://github.com/ExpressionEngine/ExpressionEngine-User-Guide#readme",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [],
+  "author": ""
 }
