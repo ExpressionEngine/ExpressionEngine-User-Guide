@@ -188,7 +188,7 @@ If you need to assign an alias to your `JOIN` you can specify it via the fourth 
     ee()->db->join('comments', 'comments.id = exp_blogs.id', 'left', 'observations');
     // Produces: LEFT JOIN comments observations  ON observations.id = exp_blogs.id
 
-NOTE: **Note:** When an alias is specified the normal 'protected' processing of table names in your condition is suspended, so if an alias is being used other tables referenced need to be fully expanded **in the condition**.  
+NOTE: **Note:** When an alias is specified the normal 'protected' processing of table names in your condition is suspended. Therefore if an alias is being used, other tables referenced need to be fully expanded **in the condition**.  
 
 ### `where($key[, $value = NULL[, $escape = TRUE]])`
 
