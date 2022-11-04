@@ -44,7 +44,7 @@ Checkbox Field values and labels can be displayed in templates using a single va
 You can use a single variable for Checkboxes to render a comma-separated list of the labels.
 
 ```
-{field_name} {!-- 1,2,3 --}
+{field_name} {!-- One,Two,Three --}
 ```
 
 ### Variable Pair
@@ -58,15 +58,15 @@ Using a variable pair, allows for customization of the output.
 The above snippet will render as:
 
 ```
-1
-2
-3
+One
+Two
+Three
 ```
 
-By default, `{item}` will render the item's value. To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
+By default, `{item}` will render the item's label To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
 
     {field_name}
-        Value: {item}<br> {!-- 1 --}
+        Label: {item}<br> {!-- 1 --}
         Value: {item:value}<br> {!-- 1 --}
         Label: {item:label}<br> {!-- One --}
     {/field_name}
@@ -82,18 +82,20 @@ These variables are also available as conditionals. Let's say you had the follow
 
 Given that the selection option is 2/Two:
 
-    {if field_name == 2}Yep!{/if}
+    {if field_name == 'Two'}Yep!{/if}
     {if field_name:value == 2}Yep!{/if}
     {if field_name:label == 'Two'}Yep!{/if}
 
 TIP: **Tip:** It is recommended that you use the value in conditionals, as it typically will not change over time. That way, if you ever need to change the wording, spelling, or even casing of labels in your publish/edit UI, you will not need to modify your templates.
+
+TIP: **Tip:** Checkboxes, Multiselect and Selectable Buttons all default to showing the label. Radio Buttons and Selects default to showing the value. 
 
 ### Limit Parameter
 
 This parameter limits the number of selected items output by the tag. It works for both the single variable, as well as the tag pair.
 
 ```
-{field_name limit="2"} {!-- 1,2 --}
+{field_name limit="2"} {!-- One,Two --}
 ```
 
 ### Markup Parameter

@@ -60,10 +60,10 @@ When allowing multiple items to be selected, Selectable Buttons will usually be 
         {item}<br>
     {/field_name}
 
-By default, `{item}` will render the item's value. To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
+By default, `{item}` will render the item's label. To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
 
     {field_name}
-        Value: {item}<br>
+        Label: {item}<br>
         Value: {item:value}<br>
         Label: {item:label}<br>
     {/field_name}
@@ -74,7 +74,7 @@ TIP: **Tip:** You can use a single variable, e.g. _{field_name}_, and you will g
 
 If "allow multiple selection" setting is turned off, just use the modifier to the single variable name, and do not use a variable pair:
 
-    Value: {field_name}<br>
+    Label: {field_name}<br>
     Value: {field_name:value}<br>
     Label: {field_name:label}<br>
 
@@ -88,11 +88,13 @@ In all cases, these variables are also available as conditionals. Let's say you 
 
 Given that the selection option is 2/Two:
 
-    {if field_name == 2}Yep!{/if}
+    {if field_name == 'Two'}Yep!{/if}
     {if field_name:value == 2}Yep!{/if}
     {if field_name:label == 'Two'}Yep!{/if}
 
 TIP: **Tip:** It is recommended that you use the value in conditionals, as it typically will not change over time. That way, if you ever need to change the wording, spelling, or even casing of labels in your publish/edit UI, you will not need to modify your templates.
+
+TIP: **Tip:** Checkboxes, Multiselect and Selectable Buttons all default to showing the label. Radio Buttons and Selects default to showing the value.
 
 NOTE: **NOTE:** For Select fields used in [Custom Member Fields](control-panel/member-manager.md#custom-member-fields) and [Category Group Details Tab](control-panel/categories.md#details-tab), the modifiers are not currently available in conditionals, and _must_ be based on the value, e.g. `{if some_cat_field == 2}`
 
