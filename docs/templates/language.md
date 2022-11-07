@@ -118,7 +118,8 @@ Conditionals allow you to add logic to your templates:
     {/if}
 
 *More information:* [Conditional Tags](templates/conditionals.md)   
-*Related ExpressionEngine University articles:* [Primer On Simple Conditionals](https://u.expressionengine.com/article/a-primer-on-simple-conditionals)
+
+TIP: **{ee:u}** Read the [Primer On Simple Conditionals](https://u.expressionengine.com/article/a-primer-on-simple-conditionals) article on ExpressionEngine University to learn more about using conditionals in ExpressionEngine.
 
 ## Changing Parsing Order
 

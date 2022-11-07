@@ -1054,7 +1054,7 @@ Set the number of emails to be sent in each batch. The batch size you should use
 
 NOTE: **Note:** [Batch mode](#email_batchmode) must be enabled.
 
-If you are using one of the more robust mail protocols, like Sendmail or SMTP, you can set a greater batch total, possibly as high as several hundred or even more if you are on a dedicated server. A batch size of 300 in these cases is a good starting point. If you are having goo$1 $2uccess you can increase it until you begin experiencing time-outs.
+If you are using one of the more robust mail protocols, like Sendmail or SMTP, you can set a greater batch total, possibly as high as several hundred or even more if you are on a dedicated server. A batch size of 300 in these cases is a good starting point. If you are having good success you can increase it until you begin experiencing time-outs.
 
 NOTE: **Note:** Unless your mailing list numbers in the thousands, you won't notice much of a speed gain from setting large batches. If you are using the less efficient "PHP mail" protocol then you will usually need to set a lower batch size; 50-100 is typical.
 

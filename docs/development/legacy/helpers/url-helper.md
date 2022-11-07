@@ -39,16 +39,11 @@ Returns your site URL, as specified in your config file. The index.php file (or 
 
 You are encouraged to use this function any time you need to generate a local URL so that your pages become more portable in the event your URL changes.
 
-Segments can be optionally passed to the function as a string or an array. Here is a string example:
+Segments can be optionally passed to the function as a string. Here is a string example:
 
-    echo site_url('news/local/123');
+    echo site_url('/news/local/123');
 
 The above example would return something like: `https://example.com/news/local/123`
-
-Here is an example of segments passed as an array:
-
-    $segments = array('news', 'local', '123');
-    echo site_url($segments);
 
 This function is an alias for `EE_Config::site_url()`.
 
@@ -65,20 +60,6 @@ Returns your site base URL, as specified in your config file. Example:
     echo base_url();
 
 This function returns the same thing as `site_url()`, without the _index_page_  being appended.
-
-Also like `site_url()`, you can supply segments as a string or an array. Here is a string example:
-
-    echo base_url("blog/post/123");
-
-The above example would return something like: `https://example.com/blog/post/123`
-
-This is useful because unlike `site_url()`, you can supply a string to a file, such as an image or stylesheet. For example:
-
-    echo base_url("images/icons/edit.png");
-
-This would give you something like: `https://example.com/images/icons/edit.png`
-
-This function is an alias for `EE_Config::base_url()`.
 
 ### `current_url()`
 

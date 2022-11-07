@@ -23,6 +23,8 @@ When creating or modifying RTE field, the following field settings are available
 - **Defer Editor initialization?** - turning this on will initialize the field's editing feature only when it will be focused
 - **Column type in database** - database column type to hold your data. TEXT (64Kb) is usually good for an article. If your field content is rather a book, select MEDIUMTEXT (16Mb)
 
+Other settings for the field, such as text direction, allowed upload directories, additional content styling, are being managed in Tool Set setting. Use `Edit Configurations` link to to visit the RTE add-on settings where those can be changed.
+
 ## Field features
 
 ### @-mentions

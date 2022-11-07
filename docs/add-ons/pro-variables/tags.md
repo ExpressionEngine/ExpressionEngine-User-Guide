@@ -17,7 +17,9 @@ In most cases, the simple global variable syntax, eg. `{my_var}` will do. Global
 
     {exp:pro_variables:parse var="my_var"}
 
-Use the Parse, Single or Pair tag to parse variables during the Module & Plugin stage ([learn more about the parsing stages](https://u.expressionengine.com/course/ee-conf-spring-summit-2021/eeconf-spring-2021-but-first-parse-order-and-php-in-expressionengines-templates)). You can also use parameters, which will allow for more options than just using the variable syntax. Some variable types, like RTE and Grid, require using the tag syntax to trigger additional processing.
+Use the Parse, Single or Pair tag to parse variables during the Module & Plugin stage. You can also use parameters, which will allow for more options than just using the variable syntax. Some variable types, like RTE and Grid, require using the tag syntax to trigger additional processing.
+
+TIP: TIP: **{ee:u}** Learn more about the parsing stages at [ExpressionEngine University](https://u.expressionengine.com/course/ee-conf-spring-summit-2021/eeconf-spring-2021-but-first-parse-order-and-php-in-expressionengines-templates).
 
 NOTE: **Note:** Whenever you need parameters or additional processing, use the **tag syntax** rather than the variable syntax.
 

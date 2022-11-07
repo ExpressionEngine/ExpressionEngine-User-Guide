@@ -126,6 +126,18 @@
       href: development/addon-setup-php-file.md
     - name: Add-on Installer
       href: development/addon-installer.md
+    - name: Add-on Controllers
+      items:
+        - name: About Controllers
+          href: development/addon-controllers/about.md
+        - name: Routing
+          href: development/addon-controllers/routing.md
+        - name: Control Panel
+          href: development/addon-controllers/cp.md
+        - name: Extensions
+          href: development/addon-controllers/extensions.md
+        - name: Modules
+          href: development/addon-controllers/modules.md
     - name: Plugins
       href: development/plugins.md
     - name: Modules
@@ -589,6 +601,8 @@
           href: development/guidelines/security.md
         - name: View Files and PHP Syntax
           href: development/guidelines/view-php-syntax.md
+    - name: Debugging
+      href: development/debugging.md
     - name: v3 Add-on Migration
       href: development/v3-add-on-migration.md
     - name: v4 Add-on Migration

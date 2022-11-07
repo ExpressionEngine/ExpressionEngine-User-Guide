@@ -23,6 +23,7 @@ Which URL Schemes the content author is allowed to use in this URL field. Availa
 
 - `http://`
 - `https://`
+- `/` ([single slash protocol-relative URLs](https://en.wikipedia.org/wiki/Wikipedia:Protocol-relative_URL))
 - `//` ([protocol-relative URLs](https://en.wikipedia.org/wiki/Wikipedia:Protocol-relative_URL))
 - `mailto:`
 - `ftp://`

@@ -9,6 +9,7 @@
     color: rgb(84, 78, 114);
     line-height: 1.5;
     margin-bottom: 20px;
+    display: block;
 
     .alert__title {
         .font-accent;
@@ -17,8 +18,14 @@
         margin-bottom: 5px;
         color: darken(@alert-color, 10%);
         font-weight: bold;
-    }
+    }   
 }
+
+//override for Daisy UI alerts
+.alert>:where(*) {
+    display: inline-block;
+}
+
 
 .alert--hint {
     .alert(rgb(91, 189, 71), rgb(247, 255, 246));
