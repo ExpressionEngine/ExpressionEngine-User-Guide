@@ -4439,7 +4439,7 @@ html {
   text-decoration-line: underline !important;
 }
 
-.shadow-black {
+.shadow-custom-black {
   --tw-shadow: 0 2px 25px rgba(0,0,0,0.1) !important;
   --tw-shadow-colored: 0 2px 25px var(--tw-shadow-color) !important;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow) !important;

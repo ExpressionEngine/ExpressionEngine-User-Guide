@@ -39,7 +39,7 @@ module.exports = {
         '20': '1.25rem',
       },
       boxShadow: {
-        'black': '0 2px 25px rgba(0,0,0,0.1)',
+        'custom-black': '0 2px 25px rgba(0,0,0,0.1)',
       },
       lineHeight: {
         '61': '3.6875rem',
