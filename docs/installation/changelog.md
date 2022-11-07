@@ -63,7 +63,7 @@
 
 
 - **Developers** 💻
-  - Added [Add-on Controllers](development/addon-controllers/about.md) classes
+  - New [Add-on Classes](development/best-practices/about.md)
   - `make:addon` CLI command now generates add-on's with Add-on controller classes
 
 ## Version 7.1.6
