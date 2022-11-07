@@ -34,6 +34,10 @@ Check out our video tutorial generating an add-on!
     -e <value>
         Add-on has settings (yes/no)
 
+    --compatibility-mode
+    -p
+        Generate add-on that is compatible with ExpressionEngine versions lower than 7.2.0 and lower than 6.4.0
+
     --version=<value>
     -v <value>
         Version of the add-on
@@ -85,4 +89,8 @@ Check out our video tutorial generating an add-on!
 ### Generating a module:
 
 `php eecli.php make:addon my_awesome_mod --mod --description "Description of addon" --version="1.0.0" --author="Joe Shmoe" --author-url='www.example.com' --has-settings='yes'`
+
+### Generating a module in compatibility mode:
+
+`php eecli.php make:addon my_awesome_mod --mod --description "Description of addon" --version="1.0.0" --author="Joe Shmoe" --author-url='www.example.com' --has-settings='yes' --compatibility-mode`
 

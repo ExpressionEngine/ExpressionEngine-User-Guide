@@ -102,6 +102,18 @@
       href: development/addon-setup-php-file.md
     - name: Add-on Installer
       href: development/addon-installer.md
+    - name: Add-on Controllers
+      items:
+        - name: About Controllers
+          href: development/addon-controllers/about.md
+        - name: Routing
+          href: development/addon-controllers/routing.md
+        - name: Control Panel
+          href: development/addon-controllers/cp.md
+        - name: Extensions
+          href: development/addon-controllers/extensions.md
+        - name: Modules
+          href: development/addon-controllers/modules.md
     - name: Plugins
       href: development/plugins.md
     - name: Modules
@@ -305,6 +317,18 @@
               href: development/services/model/building-your-own.md
             - name: Relating Models
               href: development/services/model/relating-models.md
+        - name: Cp/Form Service
+          items:
+            - name: Cp/Form
+              href: development/services/cp-form.md
+            - name: Field Groups
+              href: development/services/cp-form/group.md
+            - name: Field Sets
+              href: development/services/cp-form/field-sets.md
+            - name: Fields
+              href: development/services/cp-form/fields.md
+            - name: Buttons
+              href: development/services/cp-form/buttons.md
         - name: CP/Pagination Service
           href: development/services/pagination.md
         - name: Permission Service

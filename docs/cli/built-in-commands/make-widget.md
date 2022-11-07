@@ -1,4 +1,4 @@
-# make:prolet
+# make:widget
 
 Widget Generator -- Creates a new Dashboard Widget for an add-on
 
@@ -13,6 +13,6 @@ Widget Generator -- Creates a new Dashboard Widget for an add-on
 
 ## Examples:
 
-### Generating a prolet:
+### Generating a widget:
 
 `php eecli.php make:widget MyNewWidget --addon=my_existing_addon`
