@@ -14,7 +14,7 @@
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
-    "daisyui": "^2.38.0",
+    "daisyui": "^2.38.1",
     "minimist": "^1.2.6"
   },
   "devDependencies": {
@@ -30,6 +30,7 @@
     "gulp-clean-css": "^4.0.0",
     "gulp-less": "^4.0.1",
     "gulp-minify": "^3.1.0",
+    "gulp-postcss": "^9.0.1",
     "gulp-rename": "^1.4.0",
     "highlight.js": "^9.13.1",
     "is-url": "^1.2.4",
@@ -37,9 +38,9 @@
     "list-item": "^2.0.0",
     "markdown-slug": "^0.1.1",
     "marked": "^0.7.0",
-    "postcss": "^8.4.5",
+    "postcss": "^8.4.18",
     "replace-ext": "^1.0.0",
-    "tailwindcss": "^2.2.19",
+    "tailwindcss": "^3.2.1",
     "through2": "^3.0.0",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.4"
