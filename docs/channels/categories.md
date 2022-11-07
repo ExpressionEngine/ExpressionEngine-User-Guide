@@ -272,6 +272,20 @@ These are totally dynamic in that any field you create for your category will au
 
 You may use this conditional to test whether the category shown is the active category or not, based on the dynamic URI segment.
 
+### `{has_children}`
+
+    {exp:channel:categories channel="news" style="nested" show_empty="no"}
+        <a href="{path='channel/index'}">{category_name}</a>
+
+        {if has_children}
+            <button
+                type="button"
+                aria-haspopup="true"
+            >children categories</button>
+        {/if}
+    {/exp:channel:categories}
+You may use this conditional to test whether the category shown is or isn't a parent category.
+
 ## Category Dropdown Menu
 
 You can also display categories in a dropdown menu using the following code:

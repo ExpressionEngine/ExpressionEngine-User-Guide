@@ -40,6 +40,8 @@
   - Support RTL text direction in Rich Text fields; [#1981](https://github.com/ExpressionEngine/ExpressionEngine/issues/1981)
   - Moved the selected checkboxes to the top of the list if the list is too long; [#653](https://github.com/ExpressionEngine/ExpressionEngine/issues/653)
   - Enable including database views into backups
+  - Added new CLI commands for generating add-on [Actions](cli/built-in-commands/make-action.md), [Tags](cli/built-in-commands/make-tag.md), and [Extension Hooks](cli/built-in-commands/make-extension-hook.md)
+  - Added compatibility-mode flag to `make:addon` CLI command
 
 - **Bug Fixes** 💃🐛
   - Resolved [#2438](https://github.com/ExpressionEngine/ExpressionEngine/issues/2438) where Low Variable types were not migrated properly to Pro Variable types
@@ -60,6 +62,7 @@
 
 - **Developers** 💻
   - Added [Add-on Controllers](development/addon-controllers/about.md) classes
+  - `make:addon` CLI command now generates add-on's with Add-on controller classes
 
 ## Version 7.1.6
 (Release: September 26, 2022)
