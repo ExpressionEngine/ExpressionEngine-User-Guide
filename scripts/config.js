@@ -25,7 +25,9 @@ const DEFAULT_CONFIG = {
 	pageTemplatePath: './theme/doc-page-template.html',
 
 	assetsDir: './theme/_assets',
-	assetsSourceDir: './theme/assets-src'
+	assetsSourceDir: './theme/assets-src',
+
+	tailwindConfig: './tailwind.config.js'
 }
 
 // -------------------------------------------------------------------

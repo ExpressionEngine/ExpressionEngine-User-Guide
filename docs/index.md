@@ -17,14 +17,14 @@ Welcome to the official ExpressionEngine Docs! In addition to the documentation,
     </div>
     <div class="mb-0">
         <span class="text-red font-bold uppercase text-xs mb-4 block tracking-wider">Starter Courses</span>
-        <h2 class="text-purple-dark mb-4 leading-snug p-0 mt-0 border-none ">Build your first ExpressionEngine site.</h2>
+        <h2 class="text-purple-dark mb-4 leading-snug p-0 mt-0 border-none text-2">Build your first ExpressionEngine site.</h2>
         <p class="text-purple-dark text-base pb-7 mb-0">Walk through step-by-step how to build your own ExpressionEngine site from scratch. Choose from either a video or written course.</p>
         <p class="links-wrapper flex mb-0 flex-wrap xl:flex-nowrap">
-            <a href="https://u.expressionengine.com/course/getting-started-with-expressionengine-video-course" class="inline-flex text-base h-12 leading-none justify-center items-center bg-red mb-4 xl:mb-0 mr-2.5 rounded-5 border border-solid border-red hover:bg-white hover:text-red" target="_BLANK">
+            <a href="https://u.expressionengine.com/course/getting-started-with-expressionengine-video-course" class="inline-flex text-base h-12 leading-none justify-center items-center bg-red mb-4 xl:mb-0 mr-2.5 rounded-5 border border-solid border-red hover:bg-white hover:text-red text-white" target="_BLANK">
                 <strong>Video</strong>&nbsp;Course
                 <i class="fas fa-arrow-right ml-2"></i>
             </a>
-            <a href="https://u.expressionengine.com/course/introduction-to-building-an-expressionengine-site" class="inline-flex text-base h-12 leading-none justify-center items-center bg-red rounded-5 border border-solid border-red hover:bg-white hover:text-red" target="_BLANK">
+            <a href="https://u.expressionengine.com/course/introduction-to-building-an-expressionengine-site" class="inline-flex text-base h-12 leading-none justify-center items-center bg-red rounded-5 border border-solid border-red hover:bg-white hover:text-red text-white" target="_BLANK">
                 <strong>Written</strong>&nbsp;Course
                 <i class="fas fa-arrow-right ml-2"></i>
             </a>
@@ -41,7 +41,7 @@ Welcome to the official ExpressionEngine Docs! In addition to the documentation,
         <span class="flex items-center justify-center rounded-full bg-purple-new p-4">
             <i class="fas fa-star text-4xl text-white text-opacity-50"></i>
         </span>
-        <h3 class="text-purple-dark mt-3 mb-2">Partners</h3>
+        <h3 class="text-2xl lg:text-2 text-purple-dark mt-3 mb-2">Partners</h3>
         <p class="text-base text-brand text-opacity-70 mb-0">Find the best EE developers in the world.</p>
     </a>
     <a href="https://expressionengine.com/support" class="support rounded-lg flex items-center justify-center flex-col bg-purple-regular text-white mb-0 relative h-56 lg:h-auto pt-5 pb-7 px-7 border-none" target="_BLANK">
@@ -56,7 +56,7 @@ Welcome to the official ExpressionEngine Docs! In addition to the documentation,
             <i class="fab fa-slack text-7xl text-white"></i>
         </p>
         <p class="mb-0 flex flex-wrap w-full items-center">
-            <span class="title text-white font-semibold block w-full leading-none">Slack</span>
+            <span class="title text-1.75 text-white font-semibold block w-full leading-none">Slack</span>
             <span class="flex text-base text-white text-opacity-70 w-full leading-none items-center">Join the community<i class="fas fa-arrow-right text-base ml-auto"></i></span>
         </p>
         <a href="https://expressionengine.com/blog/join-us-in-slack" class="absolute w-full h-full inset-0 border-none" target="_BLANK"></a>
@@ -66,7 +66,7 @@ Welcome to the official ExpressionEngine Docs! In addition to the documentation,
             <i class="fas fa-comment text-4xl text-white"></i>
         </p>
         <p class="mb-0 flex flex-wrap w-full items-center">
-            <span class="title text-brand font-semibold block leading-none w-full">Forum</span>
+            <span class="title text-1.75 text-brand font-semibold block leading-none w-full">Forum</span>
             <span class="flex items-center text-base text-brand text-opacity-70 leading-none w-full">The EE watering hole.<i class="fas fa-arrow-right text-base ml-auto"></i></span>
         </p>
         <a href="https://expressionengine.com/forums" class="absolute w-full h-full inset-0 border-none" target="_BLANK"></a>

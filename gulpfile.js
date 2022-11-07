@@ -12,6 +12,8 @@ require('colors')
 const path = require('path')
 const gulp = require('gulp')
 const del  = require('del')
+const postcss  = require('gulp-postcss')
+const tailwindcss  = require('tailwindcss')
 
 const CONFIG = require('./scripts/config.js')
 
@@ -83,6 +85,16 @@ function buildJs() {
 		.pipe(gulp.dest(CONFIG.assetsDir))
 }
 
+function useTailwindcss() {
+	return gulp.src('./node_modules/tailwindcss/tailwind.css')
+		.pipe(postcss([
+			tailwindcss(CONFIG.tailwindConfig),
+			require( 'autoprefixer' )
+		]))
+		.pipe(rename({ suffix: '.min' }))
+		.pipe(gulp.dest(CONFIG.assetsDir))
+}
+
 function moveThemeFonts() {
 	return gulp.src(CONFIG.assetsSourceDir + '/webfonts/**/*')
 	.pipe(gulp.dest(CONFIG.assetsDir +  '/webfonts'))
@@ -93,7 +105,7 @@ function moveThemeImages() {
 	.pipe(gulp.dest(CONFIG.assetsDir +  '/images'))
 }
 
-const buildAssets = gulp.series(cleanThemeAssets, buildLess, buildJs, moveThemeImages, moveThemeFonts)
+const buildAssets = gulp.series(cleanThemeAssets, buildLess, buildJs, moveThemeImages, moveThemeFonts, useTailwindcss)
 
 exports.buildAssets = buildAssets
 exports.watchAssets = () => gulp.watch([CONFIG.assetsSourceDir + '/styles/**/*', CONFIG.assetsSourceDir + '/js/**/*', CONFIG.assetsSourceDir + '/images/**/**', CONFIG.assetsSourceDir + '/webfonts/**/**'], buildAssets)
