@@ -34,6 +34,8 @@
   - Added visual indication when viewing entry version; [#1897](https://github.com/ExpressionEngine/ExpressionEngine/issues/1897)
   - Added indicator to display number of installed add-ons, [#1944](https://github.com/ExpressionEngine/ExpressionEngine/issues/1944)
   - Added `edit_date` column in Entry Manager, [#1850](https://github.com/ExpressionEngine/ExpressionEngine/issues/1850)
+  - Added new CLI commands for generating add-on [Actions](cli/built-in-commands/make-action.md), [Tags](cli/built-in-commands/make-tag.md), and [Extension Hooks](cli/built-in-commands/make-extension-hook.md)
+  - Added compatibility-mode flag to `make:addon` CLI command
 
 - **Bug Fixes** 💃🐛
   - Resolved [#1541](https://github.com/ExpressionEngine/ExpressionEngine/issues/1541) where some fields connected to toggle button were not showing or hiding accordingly
@@ -70,6 +72,7 @@
 
 - **Developers** 💻
   - Added [Add-on Controllers](development/addon-controllers/about.md) classes
+  - `make:addon` CLI command now generates add-on's with Add-on controller classes
   - Emit more events on model association manipulations
 
 ## Version 6.3.5
