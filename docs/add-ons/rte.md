@@ -174,3 +174,44 @@ In order to create custom CKEditor build:
  - Make your changes to `js-src\ckeditor5-build-classic\src\ckeditor.js` and other files as necessary.
  - Run the command `npm run build:ckeditor`
  - Copy the files from `themes/ee/asset/javascript/src/fields/rte/ckeditor` to same folder on your EE installation
+
+```
+<div class="tabs">
+    <a class="tab tab-lifted">Code</a> 
+    <a class="tab tab-lifted">Screenshot</a> 
+</div>
+```
+
+<div class="js-tabs">
+    <div class="tabs mb-0">
+        <a class="tab tab-lifted">Code</a> 
+        <a class="tab tab-lifted">Screenshot</a> 
+    </div> 
+    <div class="js-tabs__content">
+        <pre><code>
+            <div class="tabs">
+                <a class="tab tab-lifted">Code</a> 
+                <a class="tab tab-lifted">Screenshot</a> 
+            </div>
+        </code></pre>
+    </div>
+    <div class="js-tabs__content">
+        <img src="../_images/rte_js.gif">
+    </div>
+</div>
+
+
+<div class="js-tabs">
+    <div class="tabs">
+        <a class="tab tab-lifted">Code</a> 
+        <a class="tab tab-lifted">Screenshot</a> 
+    </div> 
+    <div class="mockup-code js-tabs__content">
+        <pre data-prefix="$"><code>npm i daisyui</code></pre> 
+        <pre data-prefix=">" class="text-warning"><code>installing...</code></pre> 
+        <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+    </div>
+    <div class="js-tabs__content">
+        <img src="../_images/rte_js.gif">
+    </div>
+</div>

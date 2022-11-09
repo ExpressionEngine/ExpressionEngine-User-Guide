@@ -75,7 +75,7 @@ function buildLess() {
 }
 
 function buildJs() {
-	return gulp.src([CONFIG.assetsSourceDir + '/js/main.js'])
+	return gulp.src([CONFIG.assetsSourceDir + '/js/main.js',CONFIG.assetsSourceDir + '/js/vanilla-js-tabs.js'])
 		.pipe(babel({
 			presets: [
 				[ "@babel/preset-env", { "targets": "> 0.25%, not dead"} ]

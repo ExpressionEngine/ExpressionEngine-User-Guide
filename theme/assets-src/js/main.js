@@ -291,3 +291,18 @@ function scrollActiveTocLinkIntoView() {
 		})
 	});
 })();
+
+window.addEventListener('load', (event) => {
+	[].forEach.call(document.querySelectorAll('.js-tabs__content code'), function(div) {
+		div.innerHTML = div.innerHTML.replace(/[\u00A0-\u9999<>\&]/g, function(i) {
+			return '&#'+i.charCodeAt(0)+';';
+		});
+
+	});
+		
+
+	var tabs = new Tabs({
+		elem: "js-tabs",
+		open: 0
+	});
+});
