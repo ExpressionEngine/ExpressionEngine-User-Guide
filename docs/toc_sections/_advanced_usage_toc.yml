@@ -126,14 +126,14 @@
       items:
         - name: Overview
           href: development/addon-development-structure
-        - name: The addon.setup.php File
+        - name: addon.setup.php
           href: development/addon-setup-php-file.md
         - name: upd.[addon_name].php
           href: development/add-on-update-file.md
         - name: Extensions
           href: development/extensions.md
-    - name: Add-on Installer
-      href: development/addon-installer.md
+        - name: Actions
+          href: development/actions.md
     - name: Add-on Best Practices
       items:
         - name: About New Best Practices
@@ -146,6 +146,7 @@
           href: development/best-practices/extensions.md
         - name: Modules
           href: development/best-practices/modules.md
+
     - name: OLD
       items: 
       - name: Plugins

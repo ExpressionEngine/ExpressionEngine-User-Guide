@@ -18,8 +18,8 @@ Here's the complete structure of an add-on that we'll call "Amazing Add-on".
 ```
 amazing_addon
  ┣ Extensions
- ┃ ┣ CoreBoot.php
- ┃ ┗ SessionsStart.php
+ ┃ ┣ TemplatePostParse.php
+ ┃ ┗ TypographyParseTypeEnd.php
  ┣ Mcp
  ┃ ┣ Index.php
  ┃ ┗ Page2.php
@@ -54,6 +54,19 @@ Starting with version 3.0 each add-on in ExpressionEngine must have an `addon.se
 
 ### `upd.[addon_name].php`
 The Update file for a module includes a class with a name that is a combination of the package’s name with a _upd suffix. This file manages the installtion and uninstallation of our add-on. Here we define extensions we will use, actions to be created, and other functionality that should be exectued on installtion and uninstallation.
+
+### `ext.[addon_name].php`
+The `ext` file is used to route ExpressionEngine to our `Extensions` Folder 
+
+### `/Extensions`
+When we tell the CLI that we want to create an extension, classes are automatically created in the `Extensions` folder along with the above mentioned `ext.[addon_name].php` file. Interacting with hooks allow us to extend ExpressionEngine's functionality, thus we refer to these as "extensions". 
+
+TIP: Reference the [Extensions](development/extensions.md) section of the docs for more information on using extensions in your add-on.
+
+### `mod.[addon_name].php`
+The `mod` file is used to route ExpressionEngine to our `Modules` Folder
+
+### `mcp.[addon_name].php`
 
 
 ## Create an Amazing Add-on
