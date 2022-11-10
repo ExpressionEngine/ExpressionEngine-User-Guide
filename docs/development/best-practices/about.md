@@ -1,6 +1,6 @@
-# Add-on Controllers
+# New Best Practices
 
-Add-on Controllers allow add-on developers to create their add-on methods using an abstracted object layer while keeping backwards compatibility intact. It covers Extensions, Modules (Action and Tags), and the Control Panel layers. It's very simple to implement (just inherit an object), while maintaining the legacy implementation in play. 
+With the release of ExpressionEngine 7.2 we are modernizing how add-ons are constructed. New Add-on classes allow add-on developers to create their add-on methods using an abstracted object layer while keeping backwards compatibility intact. It covers Extensions, Modules (Action and Tags), and the Control Panel layers. It's very simple to implement (just inherit an object), while maintaining the legacy implementation in play. 
 
 To implement, you simply set your add-on `mod.`, `ext.`, and/or `mcp.` files to inherit from a base object (depending on the implementation). Then create your actions, tags, extension hooks, and mcp routes in folders consistent with the supported naming convention. Tags go in the `Module/Tags` folder, Actions go in the `Module/Actions` folder, Extension hooks go in the `Extensions` folder, and Mcp routes go in the `Mcp` folder.
 
