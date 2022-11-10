@@ -1,3 +1,4 @@
+/** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors')
   
 module.exports = {
@@ -8,29 +9,27 @@ module.exports = {
     fontFamily: {
       usual: ['usual', 'system-ui', 'sans-serif'],
     },
-    colors: {
-      teal: colors.teal,
-      cyan: colors.cyan,
-      purple: {
-        dark: '#352670',
-        lighter: '#544E72',
-        light: '#5379DA',
-        lightest: '#E8E8F9',
-        regular: '#787df2',
-        tint: '#D8D5EE',
-        new: '#413185',
-      },
-      red: '#F62958',
-      gray: '#e5e6f0',
-      brand: '#413185',
-    },
-    fontSize: {
-      '1.75': '1.75rem',
-      '2' : '2rem',
-      '21': '1.3125rem',
-      '38': '2.375rem',
-    },
     extend: {
+      colors: {
+        purple: {
+          dark: '#352670',
+          lighter: '#544E72',
+          light: '#5379DA',
+          lightest: '#E8E8F9',
+          regular: '#787df2',
+          tint: '#D8D5EE',
+          new: '#413185',
+        },
+        red: '#F62958',
+        gray: '#e5e6f0',
+        brand: '#413185',
+      },
+      fontSize: {
+        '1.75': '1.75rem',
+        '2' : '2rem',
+        '21': '1.3125rem',
+        '38': '2.375rem',
+      },
       spacing: {
         '15': '3.75rem',
       },
