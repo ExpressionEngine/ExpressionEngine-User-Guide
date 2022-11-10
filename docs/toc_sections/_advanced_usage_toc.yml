@@ -122,8 +122,16 @@
 
 - name: Add-On Development
   items:
-    - name: The addon.setup.php File
-      href: development/addon-setup-php-file.md
+    - name: Add-on Structure
+      items:
+        - name: Overview
+          href: development/addon-development-structure
+        - name: The addon.setup.php File
+          href: development/addon-setup-php-file.md
+        - name: upd.[addon_name].php
+          href: development/add-on-update-file.md
+        - name: Extensions
+          href: development/extensions.md
     - name: Add-on Installer
       href: development/addon-installer.md
     - name: Add-on Best Practices
@@ -134,17 +142,18 @@
           href: development/best-practices/routing.md
         - name: Control Panel
           href: development/best-practices/cp.md
-        - name: Extensions
+        - name: Hook Into Core
           href: development/best-practices/extensions.md
         - name: Modules
           href: development/best-practices/modules.md
-    - name: Plugins
-      href: development/plugins.md
-    - name: Modules
-      href: development/modules.md
-    - name: Extensions
-      href: development/extensions.md
-    - name: Extension Hooks
+    - name: OLD
+      items: 
+      - name: Plugins
+        href: development/plugins.md
+      - name: Modules
+        href: development/modules.md
+
+    - name: Available Core Hooks
       items:
         - name: Global
           items:
