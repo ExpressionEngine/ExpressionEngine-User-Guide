@@ -31,15 +31,14 @@ Follow the prompts to add an extension file to your add-on.
 
 TIP: Files that interact with ExpressionEngine core hooks are referred to as "extensions" because they extend the functionality of ExpressionEngine.
 
-This will create an `ext[addon_name].php` file in our add-on along with an `Extensions` folder where will build out the code we want to run when we interact with a core hook. Inside our `Extensions` folder the CLI will crate a file with the same name as the core hook we plan to use.
+This will create an `ext[addon_name].php` file in our add-on along with an `Extensions` folder where will build out the code we want to run when we interact with a core hook. Inside our `Extensions` folder the CLI will create a file with the same name as the core hook we plan to use.
 
 ```
 amazing_addon
  ┣ Extensions
  ┃ ┣ [HookName].php
- ┣ addon.setup.php
- ┣ ext.amazing_addon.php
- ┗ upd.amazing_addon.php
+ ┃ ...
+ ┗ ext.amazing_addon.php
  ```
 
 TIP: A single add-on can interact with as many hooks as you want.
@@ -64,6 +63,9 @@ amazing_addon
  ┗ upd.amazing_addon.php
  ```
 
+
+### `class [HookName]`
+
 Inside `Extensions\TypographyParseTypeEnd.php` we see the following code generated for us:
 
 ```
@@ -82,8 +84,6 @@ class TypographyParseTypeEnd extends AbstractRoute
 
 ```
 
-### `class [HookName]`
-
 As we can see, the CLI has correctly created a new class using our core hook in PascalCase as the name.
 
 Inside our class is the `process()` function. Again the CLI has already added all parameters that will be passed in from the core hook.  Reference the Available Core Hooks section of the docs to read on what parameters your hook uses.
@@ -92,12 +92,14 @@ From the [`typography_parse_type_end()`](/development/extension-hooks/global/typ
 
 We know that we should expect the following parameters for this hook:
 
-- `string //The string currently being parsed`
-- `object //The Typography library object`
-- `array //Array of preferences sent to EE_Typography::parse_type`
+
+| Parameter | Type     | Description                                              |
+| --------- | -------- | -------------------------------------------------------- |
+| \$str     | `String` | The string currently being parsed                        |
+| \$this    | `Object` | The Typography library object                            |
+| \$prefs   | `Array`  | Array of preferences sent to `EE_Typography::parse_type` |
 
 We also know that we should be returning a string from our `process()` function.
-
 
 
 ## Do Something
