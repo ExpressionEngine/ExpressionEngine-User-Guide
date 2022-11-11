@@ -1,28 +1,127 @@
-# Creating a Command
+# Creating a CLI Command
 
-Commands are created to live within add-ons, and are registered as part of the add-on process.
+[TOC]
 
-## addon.setup.php
+## Overview
+The ExpressionEngine [Command Line Inferface (CLI)](/cli/intro.md) makes it simple and more efficent to do many things inside of ExpressionEngine. In fact, if you're following the docs to build your own custom add-on then you're probably using the CLI to build out the architecture of your add-on.
 
-In order to add commands to your addon, you should add the `commands` parameter as an associative array to your `addon.setup.php` file with the handle as the key, and the class of your command as the value.
+You can also build your own commands that will enable users to interact with your add-on or do other things inside of ExpressionEngine. Commands are created to live within add-ons, and are registered as part of the add-on process.
+
+## Generate Our Add-on
+We add custom commands to the CLI when our add-on is installed by using the CLI.
 
 ```
-return array(
-    'author'             => 'Awesome Developer',
-    'author_url'         => 'https://example.com/',
-    'name'               => 'My Amazing Module',
-    'description'        => 'Does amazing things',
-    'version'            => '1.0',
-    'namespace'          => 'Awesome\AmazingModule',
-    'settings_exist'     => true,
-    'commands'            => [
-        'amazing:run'            => Awesome\AmazingModule\Commands\DoThings::class,
-        'amazing:more-things'    => 'Awesome\AmazingModule\Commands\DoMoreThings',
-    ]
-);
+php system/ee/eecli.php make:command
 ```
 
-It is best practice to namespace your commands, so as not to conflict with other addons.
+Follow the prompts to add a CLI command to your add-on. 
+
+This will create a `Commands` folder in your add-on along with a class and file based on your command name.
+
+```
+amazing_addon
+ ┣ Commands
+ ┃ ┣ Command[CommandName].php
+```
+
+## `addon.setup.php`
+
+We see that the CLI has added our `Commands` folder and created our new class. However, the CLI has also modified our `addon.setup.php` file as well.
+
+```
+amazing_addon
+ ┣ Commands
+ ┃ ┣ CommandAnAmazingCommand.php
+```
+
+CLI Commands are installed through an add-on's `addon.setup.php` file. The CLI takes care of this for us. We can see here that CLI creates the `$commands` array inside the array that gets returned from our `addon.setup.php` file.
+
+```
+<?php
+
+return [
+    'author'            => 'Expressionengine Developer',
+    'author_url'        => 'https://www.expressionengine.com',
+    'name'              => 'Amazing Add-on',
+    'description'       => 'asdfjasdf',
+    'version'           => '1.0.0',
+    'namespace'         => 'ExpressionengineDeveloper\AmazingAddon',
+    'settings_exist'    => true,
+    'commands' => [
+        'amazing_addon:make:amazing-things' => ExpressionengineDeveloper\AmazingAddon\Commands\CommandAnAmazingCommand::class,
+    ],
+
+    ],
+ 
+];
+
+```
+
+Now when our add-on is installed, users will have access to our new command.
+
+## `\Commands\Command[CommandName]`
+Inside of our add-on we now have a file named with our command's name (in PascalCase).
+
+In this example we have created a new command named "An Amazing Command" to our Amazing Add-on:
+
+```
+<?php
+
+namespace ExpressionengineDeveloper\AmazingAddon\Commands;
+
+use ExpressionEngine\Cli\Cli;
+
+class CommandAnAmazingCommand extends Cli
+{
+    /**
+     * name of command
+     * @var string
+     */
+    public $name = 'an amazing command';
+
+    /**
+     * signature of command
+     * @var string
+     */
+    public $signature = 'amazing_addon:make:amazing-things';
+
+    /**
+     * Public description of command
+     * @var string
+     */
+    public $description = 'This command does amazing things';
+
+    /**
+     * Summary of command functionality
+     * @var [type]
+     */
+    public $summary = 'This command does amazing things';
+
+    /**
+     * How to use command
+     * @var string
+     */
+    public $usage = 'php eecli.php amazing_addon:make:amazing-things';
+
+    /**
+     * options available for use in command
+     * @var array
+     */
+    public $commandOptions = [
+
+    ];
+
+    /**
+     * Run the command
+     * @return mixed
+     */
+    public function handle()
+    {
+        $this->info('Hello World!');
+    }
+}
+```
+
 
 ## Anatomy of a Command
 

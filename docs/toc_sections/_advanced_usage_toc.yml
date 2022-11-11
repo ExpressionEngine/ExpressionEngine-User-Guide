@@ -134,7 +134,15 @@
           href: development/extensions.md
         - name: Actions
           href: development/actions.md
-    - name: Add-on Best Practices
+        - name: CLI Commands
+          items:
+          - name: Creating A Command
+            href: cli/creating-a-command.md
+          - name: Defining Input
+            href: cli/defining-input.md
+          - name: Displaying Output
+            href: cli/displaying-output.md
+          - name: Add-on Best Practices
       items:
         - name: About New Best Practices
           href: development/best-practices/about.md
@@ -297,7 +305,7 @@
           href: development/fieldtypes/enhanced.md
     - name: Jump Menu
       href: development/jump-menu.md
-    - name: Architecture
+    - name: Learn About the Core
       href: development/architecture.md
     - name: Services
       items:
@@ -650,12 +658,7 @@
           href: cli/built-in-commands/make-prolet.md
         - name: Widget Generator
           href: cli/built-in-commands/make-widget.md
-    - name: Creating A Command
-      href: cli/creating-a-command.md
-    - name: Defining Input
-      href: cli/defining-input.md
-    - name: Displaying Output
-      href: cli/displaying-output.md
+
 
 - name: Entry Cloning
   href: channels/entry_cloning.md

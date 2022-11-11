@@ -57,7 +57,7 @@ amazing_addon
 
 NOTE: **Note:** For filenames, hyphens and special characters are removed and spaces are replaced with underscores.
 
-There's a lot in this structure, because this add-on can do a lot of things (it's amazing 😀)! Continue reading as we break down the parts of this add-on and then build it from scratch.
+There's a lot in this structure, because this add-on can do a lot of things (it's amazing 😀)! Don't worry though, your add-on can be as simple or complex as you want to make it. This example just shows all the possiblites. Continue reading as we break down the parts of this add-on and then build it from scratch.
 
 
 ### `addon.setup.php`
