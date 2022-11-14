@@ -11,15 +11,59 @@ lang: php
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Plugins
+# Adding Template Tags
 
 [TOC]
 
 ## Overview
 
-Plugins are used within Expression Engine Templates.  Once a plugin is made, its tags can be used anywhere in templates to help edit content. Below, tags and plugins are described as well as a walkthrough of how to build your own plugin.
+An add-on's template tags can be used anywhere in templates to help edit content.
 
-NOTE: Plugins can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](cli/built-in-commands/make-addon.md) for more information.
+## Creating Template Tags
+Tags are created via the CLI by using the `make:template-tag` command. 
+
+```
+php system/ee/eecli.php make:template-tag
+``` 
+
+Follow the prompts to add an extension file to your add-on. 
+
+This will create an `Models/Actions` folder in your add-on.
+
+```
+amazing_addon
+ ┣ Module
+ ┃ ┗ Tags
+ ┃ ┃ ┗ ExampleTag.php
+ ┗ ...
+ ```
+
+## `class [TagName]`
+Inside `Modules/Actions/ExampleTag.php` we see the following code generated for us:
+
+```
+<?php
+
+namespace ExpressionengineDeveloper\AmazingAddOn\Module\Tags;
+
+use ExpressionEngine\Service\Addon\Controllers\Tag\AbstractRoute;
+
+class ExampleTag extends AbstractRoute
+{
+    // Example tag: {exp:amazing_add_on:example_tag}
+    public function process()
+    {
+        return "My tag";
+    }
+}
+```
+
+As we can see, the CLI has correctly created a new class using our tag's name in PascalCase as the class name.
+
+Inside of our class is the `process()` method. Anything we want to happen when our template tag is used should be placed inside this `process()` function.
+
+After your tag is created, you can use your tag by just using `{exp:[tag_name]}`. In the example above, we created a tag named "Example Tag". We can now use the tag `{exp:amazing_add_on:example_tag}` and the text "My Tag" will be outputted to my template.
+
 
 ## Tag Construction
 
@@ -39,10 +83,6 @@ A tag, therefore, mirrors an object oriented approach: `Class->method`:
 
     {exp:class_name:method_name}
 
-NOTE: **Note:** Tags are not always required to have three segments. If your plugin is very simple you might opt to only use the class constructor. In this case you can get by only using two segments:
-
-    {exp:class_name}
-
 ### Two Kinds of Tags
 
 There are two kinds of tags: Single tags and tag pairs. A single tag does not have a closing tag:
@@ -57,203 +97,127 @@ Single tags are designed to return a single value.  Tag pairs look like this:
 
 Tag pairs allow you to process the information contained between the tags. In the above example, the text between the pairs would be encoded with XML entities.
 
-## Anatomy of a Plugin
+## Creating Single Tags
+Single Tags are the easiest template tags to create and process. Here we'll add a single tag to our add-on using the CLI. We'll name the tag Amazing Text.
 
-A plugin consists of a class and at least one function:
+```
+php system/ee/eecli.php make:tag
+What is the tag name? Amazing Text
+What add-on is the tag being added to? amazing_add_on
+Tag created successfully!
+```
 
-    <?php
+This generates the class for our add-on:
 
-    class Plugin_name {
+```
+<?php
 
-        public function __construct()
-        {
+namespace ExpressionengineDeveloper\AmazingAddOn\Module\Tags;
 
-        }
-    }
-    // END Class
+use ExpressionEngine\Service\Addon\Controllers\Tag\AbstractRoute;
 
-    // EOF
-
-Your plugin's name and other details are provided by your [addon.setup.php file](development/addon-setup-php-file.md).
-
-## Creating a Plugin
-
-The best way to learn how a plugin is created is to walk you through the process of creating one. For this example, we will create a plugin that prints "Hello World". Our example plugin will have this syntax:
-
-    {exp:hello_world}
-
-You will be able to use this plugin anywhere in a Template.
-
-## Creating the Plugin File
-
-Once you've decided on a name for your plugin you will create a text file for it. The file name must be the same as the class name and it must have `pi.` as the prefix. We will name our file: `pi.hello_world.php`.
-
-Plugin file names are always lower case and they must be identical to the name of the second segment of the tag:
-
-    {exp:hello_world}
-
-NOTE: **Note:** The file should be saved in the folder that the `addon.setup.php` will later reference in the namespace key.  The root of this folder is system/user/addons.
-
-So for this example, the pi.hello_world.php should be located at system\user\addons\HelloWorld\pi.hello_world.php
-
-## Creating the Class
-
-In the new file you've created add this class and constructor:
-
-    class Hello_world
+class AmazingText extends AbstractRoute
+{
+    // Example tag: {exp:amazing_add_on:amazing_text}
+    public function process()
     {
-        public function __construct()
-        {
-
-        }
+        return "ExpressionEngine is the best CMS in the world!";
     }
+}
+```
 
-NOTE: **Note:** Class name must always be capitalized. This is the one exception to the rule. Tag names and file names are always lowercase, while the class name is capitalized.
+Now in my template I can use my tag as such:
 
-And we'll create our `addon.setup.php` file to tell ExpressionEngine a bit about our plugin, which will also allow it to be installed in the Add-on Manager:
+```
+Here is some amazing text: {exp:amazing_add_on:amazing_text}
 
-NOTE: **Note:** Once your plugin is complete the Add-on Manager will need to be used to install it before the plugin's tags can be used
+```
 
-    <?php
-    return [
-      'author'         => 'Developer James',
-      'author_url'     => 'https://example.com/',
-      'name'           => 'Hello World',
-      'description'    => 'Outputs a simple "Hello World" message to test plugins!',
-      'version'        => '1.0.0',
-      'namespace'      => 'HelloWorld',
-      'settings_exist' => FALSE,
-    ];
+This would render in the browser as:
 
-Similar to above, the `addon.setup.php` file should be located at system\user\addons\HelloWorld\addon.setup.php
+```
+Here is some amazing text: ExpressionEngine is the best CMS in the world!
+```
 
-### Returning a Value
-
-Your new class is useless unless it can return a value. There are two ways to return a value depending on whether your tag has three segments or two.
-
-### Two Segments
-
-The above tag only provides the plugin class, and no method, so it will use a constructor. Since constructors in PHP do not have return values, we will assign it to a public class property called: `$return_data`:
-
-    class Hello_world
-    {
-        public $return_data = '';
-
-        public function __construct()
-        {
-            $this->return_data = 'Hello World';
-        }
-    }
-
-### Three Segments
-
-With tags that use three segments you can return directly since a class method is being called. Consider a tag with this syntax:
-
-    {exp:hello_world:bold}
-
-The third segment represents a method called `bold()`, which can return a value directly:
-
-    class Hello_world
-    {
-        public function bold()
-        {
-            return '<b>Hello World</b>';
-        }
-    }
-
-You could create a class with several methods this way:
-
-    class Hello_world
-    {
-        public function normal()
-        {
-            return 'Hello World';
-        }
-
-        public function bold()
-        {
-            return '<b>Hello World</b>';
-        }
-
-        public function italic()
-        {
-            return '<i>Hello World</i>';
-        }
-    }
-
-Each function would be accessible using these tags:
-
-    {exp:hello_world:normal}
-    {exp:hello_world:bold}
-    {exp:hello_world:italic}
-
-
-
-### Processing Content Within Tag Pairs
+## Creating Tag Pairs
 
 Often you will want to process content contained between a pair of tags. Let's create a simple tag that makes text bold to illustrate how this is done. Our example plugin will have this syntax:
 
-    {exp:bold}
+    {exp:amazing_add_on:bold}
         Some text we want to process.
-    {/exp:bold}
+    {/exp:amazing_add_on:bold}
 
 You will be able to use this plugin anywhere in a Template. You can even put this tag within another tag in order to affect a variable:
 
     {exp:channel:entries}
-        {exp:bold}{title}{/exp:bold}
+        {exp:amazing_add_on:bold}{title}{/exp:amazing_add_on:bold}
     {/exp:channel:entries}
 
-In following our naming rules, we will create a plugin file named: `pi.bold.php`. And we will create a class with this syntax:
+To create this tag pair, we'll use the CLI similarly to how we created a single tag.
 
-    class Bold
+```
+php system/ee/eecli.php make:tag
+What is the tag name? bold
+What add-on is the tag being added to? amazing_add_on
+Tag created successfully!
+```
+
+Now we have our template tag's class located at `Modules/Tags/Bold.php`:
+
+```
+<?php
+
+namespace ExpressionengineDeveloper\AmazingAddOn\Module\Tags;
+
+use ExpressionEngine\Service\Addon\Controllers\Tag\AbstractRoute;
+
+class Bold extends AbstractRoute
+{
+    // Example tag: {exp:amazing_add_on:bold}
+    public function process()
     {
-        public $return_data = '';
-
-        public function __construct()
-        {
-
-        }
+        return "My tag";
     }
+}
 
-So how do we fetch the content contained within the tag pairs? Using the following variable:
+```
 
-    ee()->TMPL->tagdata;
 
-Here is how the variable is used:
+### Fetching Tagdata
+In our class, we use `ee()->TMPL->tagdata;` to capture the template data that is between our opening and closing tag.
 
-    class Bold
+```
+class Bold extends AbstractRoute
+{
+    // Example tag: {exp:amazing_add_on:bold}
+    public function process()
     {
-        public $return_data = '';
-
-        public function __construct()
-        {
-            $this->return_data = ee()->TMPL->tagdata;
-        }
+        return ee()->TMPL->tagdata;
     }
+}
+```
 
-Of course you'll want to do something with the data before you return it, so let's make it bold:
-
-    class Bold
+```
+class Bold extends AbstractRoute
+{
+    // Example tag: {exp:amazing_add_on:bold}
+    public function process()
     {
-        public $return_data = '';
-
-        public function __construct()
-        {
-            $this->return_data = '<b>'.ee()->TMPL->tagdata.'</b>';
-        }
+        return '<b>'.ee()->TMPL->tagdata.'</b>';
     }
+}
+```
 
-### Parameters
-
-Since tags will often have parameters, the template engine makes it easy to fetch them using the following variable:
+## Parameters
+Both single tags and tag pairs can accept parameters. The template engine makes it easy to fetch them using the following variable:
 
     ee()->TMPL->fetch_param('param_name');
 
-To see how this is used, let's create a plugin that lets you format text based on the parameter. Our new plugin will have this syntax:
+To see how this is used, let's create a plugin using the CLI that lets you format text based on the parameter. Our new plugin will have this syntax:
 
-    {exp:format type="uppercase"}
+    {exp:amazing_add_on:format type="uppercase"}
         Some text to process.
-    {/exp:format}
+    {/exp:amazing_add_on:format}
 
 We will allow the following parameter choices:
 
@@ -262,36 +226,51 @@ We will allow the following parameter choices:
 - `type="bold"`
 - `type="italic"`
 
-Create a plugin file named pi.format.php and in it put this:
+```
+php system/ee/eecli.php make:tag
+What is the tag name? format
+What add-on is the tag being added to? amazing_add_on
+Tag created successfully!
+```
 
-    class Format
+Now we have our template tag's class located at `Modules/Tags/Format.php`:
+
+```
+<?php
+
+namespace ExpressionengineDeveloper\AmazingAddOn\Module\Tags;
+
+use ExpressionEngine\Service\Addon\Controllers\Tag\AbstractRoute;
+
+class format extends AbstractRoute
+{
+    // Example tag: {exp:amazing_add_on:format}
+    public function process()
     {
-        public $return_data = '';
-
-        public function __construct()
-        {
-            $parameter = ee()->TMPL->fetch_param('type');
-            $this->return_data = ee()->TMPL->tagdata;
+        $parameter = ee()->TMPL->fetch_param('type');
 
             switch ($parameter)
             {
                 case "uppercase":
-                    $this->return_data = strtoupper(ee()->TMPL->tagdata);
+                    return strtoupper(ee()->TMPL->tagdata);
                     break;
                 case "lowercase":
-                    $this->return_data = strtolower(ee()->TMPL->tagdata);
+                    return strtolower(ee()->TMPL->tagdata);
                     break;
                 case "bold" :
-                    $this->return_data = "<b>".ee()->TMPL->tagdata."</b>";
+                    return "<b>".ee()->TMPL->tagdata."</b>";
                     break;
                 case "italic":
-                    $this->return_data = "<i>".ee()->TMPL->tagdata."</i>";
+                    return "<i>".ee()->TMPL->tagdata."</i>";
                     break;
             }
-        }
-    }
 
-### Passing Data Directly
+    }
+}
+
+```
+
+## Passing Data Directly
 
 ExpressionEngine allows any plugin to be assigned as a text formatting choice in the Publish page of the Control Panel. In order to allow a plugin to be used this way it needs to be able to accept data directly. This is how it's done.
 

@@ -21,7 +21,7 @@ amazing_addon
  ┃ ┣ CommandAnAmazingCommand.php 
  ┣ database
  ┃ ┣ migrations
- ┃ ┃ ┗ ???
+ ┃ ┃ ┗ 2022_11_14_170449_amazing_migration.php
  ┣ Extensions
  ┃ ┣ TemplatePostParse.php
  ┃ ┗ TypographyParseTypeEnd.php
@@ -102,7 +102,7 @@ The `views` folder contains all of our control panel views which will be used to
 The `language` folder contains all of our lang files that will be used to display text on a page in whatever language is selected in the user’s account settings. 
 
 ### `/database/migrations`
-The `/database/migrations` folder holds all migrations that will be ran on installation or updating of our add-on.
+The `/database/migrations` folder holds all migrations that will be ran on installation or updating of our add-on. Using the CLI, migrations can also be ran indepentantly.
 
 ### `Model`
 The `Model` folder holds all models that we are creating with our add-on.
