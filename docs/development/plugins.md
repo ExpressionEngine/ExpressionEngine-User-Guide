@@ -26,9 +26,13 @@ Tags are created via the CLI by using the `make:template-tag` command.
 php system/ee/eecli.php make:template-tag
 ``` 
 
-Follow the prompts to add an extension file to your add-on. 
+Follow the prompts to add a tag file to your add-on. 
 
-This will create an `Models/Actions` folder in your add-on.
+Now, let's update the class to read the timezone that is passed in:
+
+
+
+This will create an `Models/Tags` folder in your add-on.
 
 ```
 amazing_addon
@@ -39,7 +43,7 @@ amazing_addon
  ```
 
 ## `class [TagName]`
-Inside `Modules/Actions/ExampleTag.php` we see the following code generated for us:
+Inside `Modules/Tags/ExampleTag.php` we see the following code generated for us:
 
 ```
 <?php
@@ -186,16 +190,9 @@ class Bold extends AbstractRoute
 ### Fetching Tagdata
 In our class, we use `ee()->TMPL->tagdata;` to capture the template data that is between our opening and closing tag.
 
-```
-class Bold extends AbstractRoute
-{
-    // Example tag: {exp:amazing_add_on:bold}
-    public function process()
-    {
-        return ee()->TMPL->tagdata;
-    }
-}
-```
+In this example we will capture the text we want to make bold in our template and render it back to the browser.
+
+Our tag's class:
 
 ```
 class Bold extends AbstractRoute
@@ -207,6 +204,20 @@ class Bold extends AbstractRoute
     }
 }
 ```
+
+In our template:
+
+```
+We want to bold {exp:amazing_add_on:bold}this text{/exp:amazing_add_on:bold}.
+```
+
+Page source code after our template is rendered in the browser:
+
+```
+We want to bold <b>this text</b>.
+```
+
+As you can see, any template data between our opening and closing tags is captured using `ee()->TMPL->tagdata`.
 
 ## Parameters
 Both single tags and tag pairs can accept parameters. The template engine makes it easy to fetch them using the following variable:
@@ -270,72 +281,105 @@ class format extends AbstractRoute
 
 ```
 
-## Passing Data Directly
+## Variables
+With variables, we can take our tag a step further. Imagine that you have tag pair that you want to use to return data based on some parameters. We can do that using variables inside of our tag.
 
-ExpressionEngine allows any plugin to be assigned as a text formatting choice in the Publish page of the Control Panel. In order to allow a plugin to be used this way it needs to be able to accept data directly. This is how it's done.
+We all know and love [`{exp:channel:entries}`](channels/entries.md). We use the Channel Entries tag by opening and closing the tag, passing some parameters, and then placing some template tags in our template that we know the tag will replace when rendered. 
 
-Add a parameter to the function. It's best to make the parameter conditional so it will know whether it's being used in a template or directly as a formatting choice:
+This typically looks something like this:
 
-    class Bold
+```
+{exp:channel:entries channel="news" limit="10"}
+    <h2>{title}</h2>
+    {body}
+{/exp:channel:entries}
+```
+
+In the snippet above, we're passing in the `channel` and `limit` as parameters. We're then expecting the Channel Entries tag to replace the `{title}` and `{body}` **variables** when the tag is parsed. Now, let's do something similar to our add-on.
+
+Let's add a tag to our add-on that will render the current date and time. The user can pass in their timezone and the tag will return the current Date and time.
+
+First, generate the tag (we're calling our tag "date and time" and adding it to our Amazing Add-On):
+
+```
+php system/ee/eecli.php make:template-tag
+What is the tag name? date and time
+What add-on is the tag being added to? amazing_add_on
+Tag created successfully!
+``` 
+
+Now, let's update the `DateAndTime` class (`Module/Tags/DateAndTime.php`) to read the timezone that is passed in:
+
+```
+namespace ExpressionengineDeveloper\AmazingAddOn\Module\Tags;
+
+use ExpressionEngine\Service\Addon\Controllers\Tag\AbstractRoute;
+
+class DateAndTime extends AbstractRoute
+{
+    // Example tag: {exp:amazing_add_on:date_and_time}
+    public function process()
     {
-        public $return_data = '';
+        $userTimeZone = ee()->TMPL->fetch_param('timezone');
 
-        function __construct($str = NULL)
-        {
-            if (empty($str))
-            {
-                $str = ee()->TMPL->tagdata;
-            }
-
-            $this->return_data = "<b>".$str."</b>";
-        }
+        // return something;
     }
+}
+```
 
-The above tag can then be assigned in the Publish page, allowing you to run your channel entries through it.
+Now we drop in some magic using the `TMPL::parse_variables` method that's provided by the [`Template Class`](development/legacy/libraries/template.md). Here we'll get the current date and time, then create an array of variables the user can use in their template to show the current date and time.
 
-## Database Access
+```
+namespace ExpressionengineDeveloper\AmazingAddOn\Module\Tags;
 
-ExpressionEngine makes it easy to access your database using the [Model Service](development/services/model.md). You can also execute SQL statements by using the legacy [Database Driver](development/legacy/database/index.md):
+use ExpressionEngine\Service\Addon\Controllers\Tag\AbstractRoute;
 
-    $member = ee('Model')->get('Member')->first();
+use DateTime;
+use DateTimeZone;
 
-Let's use a real example to show how you might use this.
-
-We will use the Member model to show a list of members. For this we will create a plugin called `pi.memberlist.php`. The tag syntax will be this:
-
-    {exp:memberlist}
-
-Here is the class syntax:
-
-    class Memberlist
+class DateAndTime extends AbstractRoute
+{
+    // Example tag: {exp:amazing_add_on:date_and_time}
+    public function process()
     {
-        public $return_data = '';
+        //check if the user set a timezone. If not just
+        //use the `America/New_York` timezone
+        $userTimeZone = empty(ee()->TMPL->fetch_param('timezone')) ? 'America/New_York' : ee()->TMPL->fetch_param('timezone');
 
-        public function __construct()
-        {
-            $members = ee('Model')->get('Member')->all();
+        //get the DateTime object
+        $currentDateTime = new DateTime("now", new DateTimeZone('America/New_York') );
 
-            foreach($members as $member)
-            {
-                $this->return_data .= $member->screen_name."<br>";
-            }
-        }
+        //assign value to our array that will match
+        //the variables in our template.
+        $variables[] = array(
+            'timezone' => $userTimeZone,
+            'date' => $currentDateTime->format("F d, Y"),
+            'time' => $currentDateTime->format("h:i A")
+        );
+
+        //use parse_variables method to parse our array as variables
+        return ee()->TMPL->parse_variables(ee()->TMPL->tagdata, $variables);
     }
+}
+```
 
-## Where do you go from here?
+Putting this into practice, let's create a new template and add the following to our template:
 
-Now that you understand the anatomy of a plugin, you can do whatever task you need. Your plugin can even have its own variables. For more information about this, and manipulating the tagdata in your plugin, check out the [Template Class](development/legacy/libraries/template.md).
+```
+{exp:amazing_add_on:date_and_time timezone="Europe/London"}
+    In the {timezone} timezone: <br>
+    The current date is: {date} <br>
+    The current time is: {time}
 
-## Debugging
+{/exp:amazing_add_on:date_and_time}
+```
 
-Below are some possible errors you could be getting and how you can fix them.  Before anything else be sure that your plugin is installed from the Add-On manager.  In the control panel go to Developer --> Add-ons and check that your plugin is installed.
+This will render the following in our browser:
 
-#### Problem: The following tag has a syntax error: 
+```
+In the Europe/London timezone:
+The current date is: November 15, 2022
+The current time is: 02:40 PM
+```
 
-   - Possible Solution: Check the spelling of your pi.nameofaddon.php and addon.settup.php file names. Both of these files need to be saved under system\user\addons\nameofplugin
-
-    
-
-#### Problem: The following tag cannot be processed:
-
-   - Possible Solution: Check the tag used in the template if it has three segments to it as in `exp:nameofplugin:function` make sure that the last segment is a function that exists in your pi. file.
+TIP: Of course, this is only the begining of what you can do with variables in your tag. We created single variables here, but you can create pair variables and much more. For more information about this, and manipulating the tagdata in your plugin, check out the [Template Class](development/legacy/libraries/template.md).

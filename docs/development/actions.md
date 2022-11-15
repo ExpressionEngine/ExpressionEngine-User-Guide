@@ -94,7 +94,7 @@ class ExampleAction extends AbstractRoute
 }
 ```
 
-As we can see, the CLI has correctly created a new class using our method's name in PascalCase as the name.
+As we can see, the CLI has correctly created a new class using our method's name in PascalCase as the class name.
 
 Inside of our class is the `process()` method. Anything we want to happen when a user reaches our action should be placed inside this `process()` function.
 

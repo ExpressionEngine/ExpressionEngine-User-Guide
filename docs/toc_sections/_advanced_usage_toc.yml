@@ -145,6 +145,10 @@
           - name: Add-on Best Practices
         - name: Adding Template Tags
           href: development/plugins.md
+        - name: Adding Text Formatting Options
+          href: development/text-formatting.md
+        - name: Accessing the Database
+          href: development/database-access.md
       items:
         - name: About New Best Practices
           href: development/best-practices/about.md
