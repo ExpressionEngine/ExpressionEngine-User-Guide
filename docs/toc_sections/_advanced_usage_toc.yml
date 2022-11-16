@@ -122,7 +122,7 @@
 
 - name: Add-On Development
   items:
-    - name: Add-on Structure
+    - name: Building An Add-On
       items:
         - name: Overview
           href: development/addon-development-structure
@@ -149,6 +149,7 @@
           href: development/text-formatting.md
         - name: Accessing the Database
           href: development/database-access.md
+    - name: Best Practices
       items:
         - name: About New Best Practices
           href: development/best-practices/about.md

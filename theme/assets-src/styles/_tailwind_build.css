@@ -1827,6 +1827,10 @@ html {
   margin-left: auto !important;
 }
 
+.mt-5 {
+  margin-top: 1.25rem !important;
+}
+
 .block {
   display: block !important;
 }
@@ -1917,6 +1921,10 @@ html {
 
 .max-w-md {
   max-width: 28rem !important;
+}
+
+.flex-1 {
+  flex: 1 1 0% !important;
 }
 
 .flex-shrink-0 {
@@ -2018,6 +2026,12 @@ html {
   --tw-space-y-reverse: 0 !important;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse))) !important;
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse)) !important;
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0 !important;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse))) !important;
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse)) !important;
 }
 
 .overflow-hidden {
@@ -2162,6 +2176,11 @@ html {
 .py-1 {
   padding-top: 0.25rem !important;
   padding-bottom: 0.25rem !important;
+}
+
+.px-2 {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
 }
 
 .pb-7 {
