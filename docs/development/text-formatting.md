@@ -7,25 +7,34 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-## Passing Data Directly
+# Adding Text Formatting Options
 
-ExpressionEngine allows any template tag to be assigned as a text formatting choice in the Publish page of the Control Panel. In order to allow a template tag to be used this way it needs to be able to accept data directly. 
+ExpressionEngine allows any add-on to add a [text formatting](general/text-formatting.md) option in the Publish page of the Control Panel. In order to do this and add-on needs `pi` file also referred to as a plugin file. These files are not supported by the CLI, so we need to make our own. 
 
-Add a parameter to the function. It's best to make the parameter conditional so it will know whether it's being used in a template or directly as a formatting choice:
+We'll start by creating a file named `pi.[addonname].php`. In our case, our add-on is named "Amazing Bold Add-on" so our file will be named `pi.amazing_bold_add_on.php`.
 
-    class Bold
+Now we'll need to our code, being sure to add a string as a parameter. In this case we'll use `$str` 
+
+```
+class Bold
+{
+    public $return_data = '';
+
+    function __construct($str = NULL)
     {
-        public $return_data = '';
-
-        function __construct($str = NULL)
+        if (empty($str))
         {
-            if (empty($str))
-            {
-                $str = ee()->TMPL->tagdata;
-            }
-
-            $this->return_data = "<b>".$str."</b>";
+            $str = ee()->TMPL->tagdata;
         }
-    }
 
-The above tag can then be assigned in the Publish page, allowing you to run your channel entries through it.
+        $this->return_data = "<b>".$str."</b>";
+    }
+}
+```
+
+The above tag can then be assigned in the Publish page or fieldtype settings, allowing you to run your channel entries through it.
+
+![text formatting options](_images/addons_text_formatting.png)
+
+TIP: Plugins allow you to manipulate text much much like a [Template Tag](/development/custom-template-tags.md). 
+

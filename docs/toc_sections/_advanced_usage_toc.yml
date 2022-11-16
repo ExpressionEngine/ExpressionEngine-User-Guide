@@ -126,15 +126,24 @@
       items:
         - name: Overview
           href: development/addon-development-structure
-        - name: addon.setup.php
+        - name: Add-on Setup File
           href: development/addon-setup-php-file.md
-        - name: upd.[addon_name].php
+        - name: Add-on Update File
           href: development/add-on-update-file.md
-        - name: Extensions
+        - name: Extending the Core
           href: development/extensions.md
-        - name: Actions
+        - name: Adding Settings and CP Pages
+        - name: Adding Actions
           href: development/actions.md
-        - name: CLI Commands
+        - name: Adding Fieldtypes
+          items:
+            - name: Fieldtype Development
+              href: development/fieldtypes/fieldtypes.md
+            - name: Fieldtype Example
+              href: development/fieldtypes/example.md
+            - name: Enhanced Fieldtype Features
+              href: development/fieldtypes/enhanced.md
+        - name: Adding CLI Commands
           items:
           - name: Creating A Command
             href: cli/creating-a-command.md
@@ -145,22 +154,10 @@
           - name: Add-on Best Practices
         - name: Adding Template Tags
           href: development/plugins.md
-        - name: Adding Text Formatting Options
+        - name: REMOVE - Adding Text Formatting Options
           href: development/text-formatting.md
-        - name: Accessing the Database
-          href: development/database-access.md
-    - name: Best Practices
-      items:
-        - name: About New Best Practices
-          href: development/best-practices/about.md
-        - name: Routing
-          href: development/best-practices/routing.md
-        - name: Control Panel
-          href: development/best-practices/cp.md
-        - name: Hook Into Core
-          href: development/best-practices/extensions.md
-        - name: Modules
-          href: development/best-practices/modules.md
+    - name: Accessing the Database
+      href: development/database-access.md
 
     - name: OLD
       items: 
@@ -301,14 +298,6 @@
             - name: Wiki Module
               href: development/extension-hooks/module/wiki.md
 
-    - name: Fieldtypes
-      items:
-        - name: Fieldtype Development
-          href: development/fieldtypes/fieldtypes.md
-        - name: Fieldtype Example
-          href: development/fieldtypes/example.md
-        - name: Enhanced Fieldtype Features
-          href: development/fieldtypes/enhanced.md
     - name: Jump Menu
       href: development/jump-menu.md
     - name: Learn About the Core
