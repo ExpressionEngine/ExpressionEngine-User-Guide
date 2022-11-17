@@ -120,7 +120,13 @@ Below the `$actions` array, you will see the `$methods` array. This is created i
 Here you can see that we added two [extension hooks](/development/extensions.md) to our add-on using the [`make:extension-hook`](cli/built-in-commands/make-extension-hook.md) command in the CLI. We are choosing to hook into the `typography_parse_type_end` and `template_post_parse` hooks. 
 
 ## Install Your Add-On (`install()`)
-The CLI automatically generates our install method. This method will ensure that all extensions and actions declared above will be properly installed. If you're just need to install actions and/or extensions, then you can leave this method as is. Otherwise use this section to update the database or do something else when the add-on is installed.
+The CLI automatically generates our install method. This method will ensure that all extensions and actions declared above will be properly installed. If you just need to install actions and/or extensions, then you can leave this method as is. Otherwise use this section to add tabs to saved [publish layouts](), update the database, or do something else when the add-on is installed.
+
+
+| Parameter | Type      | Description                                             |
+| --------- | --------- | ------------------------------------------------------- |
+| Returns   | `Boolean` | `TRUE` if everything installed properly, `FALSE` if not |
+
 
 ```
    public function install()
@@ -129,13 +135,26 @@ The CLI automatically generates our install method. This method will ensure that
 
         // create a database table
         // notify mission control
+        // add publish tabs
 
         return true;
     }
 ```
 
+### Adding Tabs
+Optionally add the publish page tab fields to any saved publish layouts. This is ONLY used if the module adds a tab to the publish page and it requires the `tabs()` function:
+
+      ee()->load->library('layout');
+      ee()->layout->add_layout_tabs($this->tabs(), 'module_name');
+
+
 ## Update Your Add-on (`update()`)
 The `update` method is will run code when a user installs an update to our add-on. 
+
+| Parameter | Type      | Description                                                        |
+| --------- | --------- | ------------------------------------------------------------------ |
+| \$current | `string`  | The last recorded version of the module in the `exp_modules` table |
+| Returns   | `Boolean` | `FALSE` if no update is needed, `TRUE` otherwise   
 
     public function update($current = '')
     {
@@ -157,12 +176,23 @@ The `update` method is will run code when a user installs an update to our add-o
 ## Uninstall Your Add-On (`uninstall()`)
 The CLI automatically generates our uninstall method. This method will ensure that all extensions and actions declared above will be properly uninstalled. Similarly to installation, if you just need to ensure your actions and extensions are uninstalled, you can leave this method as is. However, you added custom functionality in the `install()` method, then you need to also ensure you clean up after yourself here.
 
+| Parameter | Type      | Description                                                  |
+| --------- | --------- | ------------------------------------------------------------ |
+| Returns   | `Boolean` | `TRUE` if everything uninstalled properly, `FALSE` otherwise |
+
     public function uninstall()
     {
         parent::uninstall();
 
         // remove my database tables
+        // remove any publish tabs
         // turn off the lights
 
         return true;
     }
+
+### Removing Tabs
+Optionally delete any publish page tab fields saved in publish layouts. This is ONLY used if the module adds a tab to the publish page and it requires the `tabs()` function:
+
+      ee()->load->library('layout');
+      ee()->layout->delete_layout_tabs($this->tabs(), 'module_name');
