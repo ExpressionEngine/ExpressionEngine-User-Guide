@@ -12,6 +12,8 @@ require('colors')
 const path = require('path')
 const gulp = require('gulp')
 const del  = require('del')
+const postcss  = require('gulp-postcss')
+const tailwindcss  = require('tailwindcss')
 
 const CONFIG = require('./scripts/config.js')
 

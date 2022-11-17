@@ -1,24 +1,35 @@
+/** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors')
   
 module.exports = {
   important: true,
-  content: ["./docs/**/*.{html,js,md}"],
+  content: ['./docs/**/*.{md,html,js}'],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     fontFamily: {
       usual: ['usual', 'system-ui', 'sans-serif'],
     },
-    colors: {
-      teal: colors.teal,
-      cyan: colors.cyan,
-      purple: {
-        dark: '#352670',
-        lighter: '#544E72',
-        light: '#5379DA',
-      },
-      red: '#F62958',
-    },
     extend: {
+      colors: {
+        purple: {
+          dark: '#352670',
+          lighter: '#544E72',
+          light: '#5379DA',
+          lightest: '#E8E8F9',
+          regular: '#787df2',
+          tint: '#D8D5EE',
+          new: '#413185',
+        },
+        red: '#F62958',
+        gray: '#e5e6f0',
+        brand: '#413185',
+      },
+      fontSize: {
+        '1.75': '1.75rem',
+        '2' : '2rem',
+        '21': '1.3125rem',
+        '38': '2.375rem',
+      },
       spacing: {
         '15': '3.75rem',
       },
@@ -27,11 +38,7 @@ module.exports = {
         '20': '1.25rem',
       },
       boxShadow: {
-        'black': '0 2px 25px rgba(0,0,0,0.1)',
-      },
-      fontSize: {
-        '21': '1.3125rem',
-        '38': '2.375rem',
+        'custom-black': '0 2px 25px rgba(0,0,0,0.1)',
       },
       lineHeight: {
         '61': '3.6875rem',
@@ -40,5 +47,6 @@ module.exports = {
     }
   },
   plugins: [
+    require("daisyui"),
   ]
 }
