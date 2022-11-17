@@ -152,9 +152,8 @@
             href: cli/defining-input.md
           - name: Displaying Output
             href: cli/displaying-output.md
-          - name: Add-on Best Practices
         - name: Adding Template Tags
-          href: development/plugins.md
+          href: development/custom-template-tags.md
         - name: Using Language Files
           href: development/add-on-language-files.md
         - name: Adding Publish Form Tabs
