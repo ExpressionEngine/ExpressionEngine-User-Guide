@@ -26,29 +26,24 @@
     }   
 }
 
-//override for Daisy UI alerts
-.alert>:where(*) {
-    display: inline-block;
-}
-
-
-.alert--hint {
+//extra specific to override DaisyUI alert class
+.alert.alert--hint {
     .alert(rgb(91, 189, 71), rgb(247, 255, 246));
 }
 
-.alert--success {
+.alert.alert--success {
     .alert(rgb(91, 189, 71));
 }
 
-.alert--warn {
+.alert.alert--warn {
     .alert(rgb(255, 195, 15));
 }
 
-.alert--error {
+.alert.alert--error {
     .alert(#FA5252);
 }
 
-.alert--empty {
+.alert.alert--empty {
     .alert(rgb(85, 127, 216));
 
     text-align: center;
