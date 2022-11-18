@@ -101,6 +101,20 @@ Located at the top of the Control Panel screen, breadcrumbs help users easily kn
 
 ![Add-on Breadcrumbs](_images/addon_breadcrumbs.png)
 
+To add a breadcrumb for your current MCP page, simply use `$this->addBreadcrumb()`. 
+
+In the starter MCP file created for you by the CLI you will already see `$this->addBreadcrumb('index', 'Home');`. This will add a breadcrumb similar to the one in the screen shot above (`Add-Ons -> [Add-On Name] -> Home`).
+
+If you needed to add more levels to your breadcrumbs you can chain them together as such:
+
+```
+$this->addBreadcrumb($this->url('index'), 'Settings')
+     ->addBreadcrumb($this->url('settings'), 'Configuration');
+```
+
+This would add a breadcrumb that would look like `Add-Ons -> [Add-On Name] -> Settings -> Configuration`
+
+TIP: Using `$this->url()` ensures the Control Panel will correctly render the proper URL
 
 
 ## Output, Breadcrumbs, and Headings
