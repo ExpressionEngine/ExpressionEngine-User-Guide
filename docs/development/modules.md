@@ -108,14 +108,43 @@ In the starter MCP file created for you by the CLI you will already see `$this->
 If you needed to add more levels to your breadcrumbs you can chain them together as such:
 
 ```
-$this->addBreadcrumb($this->url('index'), 'Settings')
-     ->addBreadcrumb($this->url('settings'), 'Configuration');
+        $this->addBreadcrumb('amazing_add_on', 'Settings')
+            ->addBreadcrumb('amazing_add_on/configuration', 'Configuration');
 ```
 
 This would add a breadcrumb that would look like `Add-Ons -> [Add-On Name] -> Settings -> Configuration`
 
-TIP: Using `$this->url()` ensures the Control Panel will correctly render the proper URL
+### Sidebar
+TBD
 
+### Toolbar
+
+The toolbar is a series of icons located in the top right of your add-on settings page. Many add-ons use this area for quick links to settings or other areas of their add-on settings.
+
+![Add-on Toolbar](_images/addon_toolbar.png)
+
+We can add items to the Toolbar by passing an array into `ee()->view->header`.
+
+```
+$header['toolbar_items'] = array(
+    'settings' => array(
+        'href'  => ee('CP/URL','addons/settings/amazing_add_on'),
+        'title' => 'settings'
+    ),
+    'user ' => array(
+        'href'  => ee('CP/URL','addons/settings/amazing_add_on/user_settings'),
+        'title' => 'Users'
+    ),
+    'export ' => array(
+        'href'  => ee('CP/URL','addons/settings/amazing_add_on/export'),
+        'title' => 'Export Data'
+    )
+);
+
+ee()->view->header = $header;
+```
+
+The icon used in the toolbar for each link corresponds to each elements name. Available icons are `add`,`author`,`cart`,`category`,`caution`,`changes`,`channel`,`close`,`columns`,`dashboard`,`date`,`delete`,`export`,`files`,`filters`,`folder`,`gift`,`home`,`invisible`,`issue`,`locked`,`logout`,`members`,`missing`,`nested`,`offline`,`primary`,`remove`,`reorder`,`settings`,`status`,`success`,`sync`,`tabbed`,`tip`,`tools`,`user`,`view`,`visible`,`export`,`settings`.
 
 ## Output, Breadcrumbs, and Headings
 
