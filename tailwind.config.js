@@ -4,7 +4,7 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   important: true,
   content: ['./docs/**/*.{md,html,js}','./build/**/*.{md,html,js}'],
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontFamily: {
       usual: ['usual', 'system-ui', 'sans-serif'],
