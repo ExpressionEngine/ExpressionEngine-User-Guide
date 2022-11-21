@@ -27,9 +27,12 @@ php system/ee/eeclip.php make:settings
 
 Follow the prompts to add settings to your add-on.
 
-This will create an `mcp[addon_name].php` file in your add-on along with a `Mcp` and `views` folder. 
+This will create an `mcp[addon_name].php` file in your add-on along with a `Mcp` and `views` folder.
 
-## `Mcp/index.php`
+Inside of the `Mcp` folder, you will see that the CLI has created your first control panel page with `Mcp/index.php`. This page is accessible via The Add-On Manager -> [Add-On Name] or via the `/admin.php?/cp/addons/settings/[add-on-name]` URL.
+
+
+## Your First Control Panel Page
 When you first add settings to your add-on an `Mcp` folder along with an `Mcp/Index.php` starter file is created. The starter file will look something like this:
 
 ```
@@ -87,7 +90,7 @@ Let's disect the starter file:
 ### `public function process($id = false)`
 The `process()` function, similar to other functionality in your add-on, is the meat of your `Mcp` file. This is where you will render views, add sidebars, and add any nessecary logic.
 
-## Views (Pages)
+## Adding Content To You Page
 
 Now that you have a page in the Control Panel that users can access, let's look at how to output what you want users to see. There are three main areas to a Control Panel page where you will be outputting information to:
 
@@ -95,6 +98,8 @@ Now that you have a page in the Control Panel that users can access, let's look 
 - Sidebar
 - Toolbar
 - Main Body
+
+![Add-on Breadcrumbs](_images/addon-mcp.png)
 
 ### Breadcrumbs
 Located at the top of the Control Panel screen, breadcrumbs help users easily know where they are in the Control Panel and navigate your add-on's settings quickly.
@@ -146,44 +151,167 @@ ee()->view->header = $header;
 
 The icon used in the toolbar for each link corresponds to each elements name. Available icons are `add`,`author`,`cart`,`category`,`caution`,`changes`,`channel`,`close`,`columns`,`dashboard`,`date`,`delete`,`export`,`files`,`filters`,`folder`,`gift`,`home`,`invisible`,`issue`,`locked`,`logout`,`members`,`missing`,`nested`,`offline`,`primary`,`remove`,`reorder`,`settings`,`status`,`success`,`sync`,`tabbed`,`tip`,`tools`,`user`,`view`,`visible`,`export`,`settings`.
 
-## Output, Breadcrumbs, and Headings
+### Main Body
+Probably the most important part of your add-on's control panel page is the main body.
 
-There are two ways to output your control panels. You may either return an HTML string, or you may return an associative array.
+![Add-on Main body](_images/addon-main-body.png)
 
-If you return a string that data will be used in the "body" section of the Control Panel layout inside our Add-On Manager. The breadcrumb will default to `Add-On Manager / Your Add-On Name` and the heading will default to `Your Add-On Name Configuration`. In our fortune cookie module example we would have `Add-On Manager / Fortune Cookies` as the breadcrumb and `Fortune Cookie Configuration` as the heading.
+There are two ways to output to the main body of your add-on's control page.
+- HTML String
+- Using Views
 
-If you return an associative array it must contain the key `body` and may contain the keys `breadcrumb`, and `heading`:
 
-    return array(
-      'body'       => $html,
-      'breadcrumb' => array(
-        ee('CP/URL')->make('addons/settings/module_name')->compile() => lang('module_name')
-      ),
-      'heading' => lang('module_name_settings')
-    );
+#### HTML String
+If you would just like to output a string of HTML for you control panel page, then you would just do something like this inside the 
 
-- `body` (string): HTML string which will be used in the "body" section of the Control Panel layout inside the Add-On manager
-- `breadcrumb` (array): Associative array containing key/value pairs where the key is the [CP/URL](development/services/url.md) and the value is the string to display as the breadcrumb
-- `heading` (string): The string to display as the page `<title>` and the Section Header.
+```
+ public function process($id = false)
+    {
+      $this->addBreadcrumb('index', 'Home');
 
-If your add-on needs a sidebar use the [Sidebar Service](development/services/sidebar.md).
+      $html = "<h2>Welcome to my add-on</h2><p>This is an amazing add-on that does amazing things!"
 
-## `ee()->cp->header`
+      $this->setBody($html);
 
-This variable allows you to further customize your Section Header by specifying icons to go in front of the title.
+      return $this;
+    }
 
-Within your control panel method, or potentially the constructor, just set `ee()->cp->header`:
+```
+This would produce a page looking like this:
 
-    ee()->cp->header = array(
-      'toolbar_items' => array(
-        'settings' => array(
-          'href' => ee('CP/URL')->make('settings/template'),
-          'title' => lang('settings')
-        ),
-      )
-    );
+![simple MCP page](_images/add-on-html-string.png)
 
-- `toolbar_items` (array): An associative array of buttons to go in front of the title. The key will define the class and provide an icon (e.g. `settings` and `download`), and the value is another associative array containing the `href` and the `title` of the link.
+If you would like to make this page more dynamic or include additional functionality, then you need to explore using [Views](#views).
+
+#### Views
+
+When your add-on was created via the CLI a `views` folder was also created in your add-on's folder. Inside of there a file was also created, `views/McpIndex.php`. By deafult this control panel page is already using the [View service](/development/services/view.md) by calling `$this->setView()`. 
+
+```
+$variables = [
+    'name' => 'Matt',
+    'color' => 'Green'
+];
+
+$this->setView('McpIndex', $variables);
+```
+
+As we can see here, the Mcp file here is passing two arguments to `$this->setView()`:
+- `McpIndex` is the name of the corresponding view to use (references `views/McpIndex.php`)
+- `$variables` is an array of variables that will be available to the view.
+
+Now let's look at the view itself, found at `views/McpIndex.php`.
+
+```
+<?php
+
+echo "<h2>Time to make magic</h2>";
+
+if (isset($name)) {
+    echo "<p>Name: " . $name . "</p>";
+}
+
+if (isset($color)) {
+    echo "<p>Color: " . $color . "</p>";
+}
+```
+
+Notice the variables `$name` and `$color` correspond to the `$variables` array passed to the view in the Mcp file.
+
+
+This renders as such:
+
+![add-on rendered with view](_images/add-on-simple-view.png)
+
+
+Taking this a bit further, we can use the [`CP\Form` service](development/services/cp-form.md).
+
+We'll start by using the `CP\Form` service in a method which will return our `$form` array.
+
+```
+private function getForm()
+{
+  $form = ee('CP/Form');
+  $form->asTab();
+  $form->asFileUpload();
+  $field_group = $form->getGroup('header 1');
+  $field_set = $field_group->getFieldSet('first_name');
+  $field_set->getField('first_name', 'text')
+            ->setDisabled(true)
+            ->setValue('Eric');
+  
+  return $form->toArray();
+}
+```
+
+Now, let's add that to our Mcp file and be sure to call the `getForm()` method
+
+```
+public function process($id = false)
+{
+
+  // set the breadcrumb
+  $this->addBreadcrumb('index', 'Home');
+
+  // call our getForm() method to get
+  // out array
+  $form = $this->getForm();
+
+  $variables = [];
+
+  $this->setBody('McpIndex', $variables);
+
+  return $this;
+}
+
+private function getForm()
+{
+  $form = ee('CP/Form');
+  $form->asTab();
+  $form->asFileUpload();
+  $field_group = $form->getGroup('header 1');
+  $field_set = $field_group->getFieldSet('first_name');
+  $field_set->getField('first_name', 'text')
+            ->setDisabled(true)
+            ->setValue('Eric');
+  
+  return $form->toArray();
+}
+```
+
+Inside of `views/McpIndex.php` well use the View service to render our `$form` array as the main body of our control panel page.
+
+```
+if (isset($form)) {
+    echo ee('View')->make('ee:_shared/form')->render($form);
+}
+```
+
+You're add-on will now have a control panel page with a form as seen in this screenshot:
+
+![add-on with form](_images/add-on-view.png)
+
+TIP: This is only the begining of what you can do with forms in the Control Panel. Read more in the docs on the [`CP\Form` service](development/services/cp-form.md)() to understand what else is possible.
+
+TIP: **{ee:u}** Learn more about the [CP\Form service on ExpressionEngine University](https://u.expressionengine.com/article/ultra-double-secret-manual-shared-form-part-four).
+
+
+## Adding More Pages
+
+Often your add-on will need more than one page in the Control Panel. The CLI makes this simple.
+
+Start with:
+
+```
+php system/ee/eecli.php make:mcp
+```
+
+This adds a new file to your `Mcp` folder which will act similar to the Index page we discussed above.
+
+
+
+
+
 
 ## Javascript
 
