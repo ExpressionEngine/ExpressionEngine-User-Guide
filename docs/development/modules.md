@@ -314,10 +314,52 @@ Now inside of your `/Mcp` folder you have a new file and matching Mcp class base
 
 ```
 php system/ee/eecli.php make:mcp
+View name? configurations
+Which add-on would you like to add this to? amazing_add_on
+Mcp successfully created!
 ```
 
+This will create a file in my `Mcp` folder called `Configurations.php` which will look like this:
 
+```
+<?php
 
+namespace ExpressionengineDeveloper\AmazingAddOn\Mcp;
+
+use ExpressionEngine\Service\Addon\Controllers\Mcp\AbstractRoute;
+
+class Configurations extends AbstractRoute
+{
+    /**
+     * @var string
+     */
+    protected $route_path = 'configurations';
+
+    /**
+     * @var string
+     */
+    protected $cp_page_title = 'configurations';
+
+    /**
+     * @param false $id
+     * @return AbstractRoute
+     */
+    public function process($id = false)
+    {
+
+        $variables = [
+            'name' => 'Matt',
+            'color' => 'Green'
+        ];
+
+        $this->setBody('McpIndex', $variables);
+
+        return $this;
+    }
+}
+```
+
+This page will now be accessible via `/admin.php?/cp/addons/settings/amazing_add_on/configurations`.
 
 
 
@@ -336,32 +378,3 @@ ExpressionEngine includes both its own JavaScript library as well as the [The jQ
 - After defining any JavaScript output, you must compile in order to display it:
 
       ee()->javascript->compile();
-
-## Working with Forms
-
-While creating forms for the backend is fairly routine, there are several differences/additions worth noting:
-
-- The [Form Validation library](development/legacy/libraries/form-validation.md) is available, but the best means of checking submitted form data and returning in-line errors is to either use [Model Validation](development/services/model.md#validation) or the [Validation Service](development/services/validation.md).
-- After form submission, you will generally want to output a success (or failure) message using the [CP/Alert Service](development/services/alert.md).
-
-## Outputting Pages
-
-There are two ways to output content to the screen. For very simple pages, you may want to simply return the desired output in a string. Any string that the method returns is placed inside the cp page's content container. With all but the simplest of output, the use of View files will be the preferred method for handling your markup and presentation.
-
-## View Files
-
-While you aren't required to use views to create your backend pages, they are the most modular and easy to read, modify, and edit approach to building control panel pages. A view is simply an html page, or snippet of a page, with some minimal php used to output variables. The variables are passed to the view in an array when you make it:
-
-    return ee('View')->make('module_name:index')->render($vars);
-
-This would return the index.php view page, located in a `views` folder. The view file is passed an array with all of the variables used by the view, and those variables are simple 'plugged into' the html. See the [View Service](development/services/view.md) for more details.
-
-It is recommended that in view pages only, you use the [PHP's alternate syntax](development/guidelines/view-php-syntax.md) in your views, as it makes them easier to read and limits the amount of php. If this is not supported by your server, ExpressionEngine will automatically rewrite the tags.
-
-## The Core Module File (mod.module_name.php)
-
-The Core Module file is used for outputting content via Templates and doing any processing that is required by both the Control Panel and any module tags contained in a template. It includes a class with a name that matches the package (the first letter of the class name must be capitalized). There is one required class variable, \$return_data, which will contain the module's outputted content and is retrieved by the Template parser after the module is done processing.
-
-The tag structure of a module follows the same rules as the [Plugins API](development/plugins.md):
-
-    {exp:module_name:method}

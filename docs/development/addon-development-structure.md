@@ -110,32 +110,3 @@ The `Model` folder holds all models that we are creating with our add-on.
 ### `widgets`
 The `widgets` folder holds all dashboard widgets that we are creating with our add-on.
 
-
-## Create an Amazing Add-on
-
-Well create the initial structure of our add-on by utilizing the [`make:addon`](/cli/built-in-commands/make-addon.md) command from the CLI. We'll name our add-on "Amazing Add-on"
-
-```
-php system/ee/eecli.php make:addon "Amazing Add-on"
-```
-
-The CLI will now ask us a few questions about our add-on.
-
-```
-What type of add-on would you like to create? [extension, plugin, fieldtype, module]
-```
-
-Plugin functionality are a nice and easy way to quickly add template tags. Let's start with that!
-
-```
-php system/ee/eecli.php make:addon "Amazing Add-on"
-Let's build your add-on!
-What type of add-on would you like to create? [extension, plugin, fieldtype, module] plugin
-Plugin description? This is an amazing add-on that will deomonstrate how add-ons are built
-Plugin version? [1.0.0]0.0.1
-Plugin author? ExpressionEngine Developer
-Plugin author URL? https://www.expressionengine.com
-Let's build!
-Your add-on has been created successfully!
-```
-

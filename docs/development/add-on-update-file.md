@@ -141,11 +141,34 @@ The CLI automatically generates our install method. This method will ensure that
     }
 ```
 
-### Adding Tabs
-Optionally add the publish page tab fields to any saved publish layouts. This is ONLY used if the module adds a tab to the publish page and it requires the `tabs()` function:
+### `tabs()`
 
-      ee()->load->library('layout');
-      ee()->layout->add_layout_tabs($this->tabs(), 'module_name');
+| Parameter | Type    | Description                                      |
+| --------- | ------- | ------------------------------------------------ |
+| Returns   | `Array` | Associative array of the tab name and tab fields |
+
+An optional function, included only if your add-on adds a tab to the publish page. This function should return an multidimensional associative array, the top array key consisting of the tab name, followed by any field names, with each field having a variety of default settings. Note that when the fields are added to the publish page, they are namespaced to prevent variable collisions:
+
+    function tabs()
+    {
+        $tabs['tab_name'] = array(
+            'field_name_one'=> array(
+                'visible'   => 'true',
+                'collapse'  => 'false',
+                'htmlbuttons'   => 'true',
+                'width'     => '100%'
+                ),
+            'field_name_two'=> array(
+                'visible'   => 'true',
+                'collapse'  => 'false',
+                'htmlbuttons'   => 'true',
+                'width'     => '100%'
+                ),
+            );
+
+        return $tabs;
+    }
+
 
 
 ## Update Your Add-on (`update()`)
