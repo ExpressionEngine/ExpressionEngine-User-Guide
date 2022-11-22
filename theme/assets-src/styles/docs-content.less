@@ -295,10 +295,15 @@
 
 	.table-of-contents {
 		margin-bottom: @p-nm;
+		
+		&.collapse {
+			display: inline-block !important;
+		}
 
 		& > ul {
 			list-style-type: none;
 			margin: @p-nm 0 0 @p-nm;
+			visibility: visible !important;
 
 			li {
 				margin-bottom: 5px;
@@ -332,6 +337,7 @@
 			font-weight: 500;
 			padding: 5px 14px;
 			cursor: pointer;
+			visibility: visible !important;
 		}
 	}
 
