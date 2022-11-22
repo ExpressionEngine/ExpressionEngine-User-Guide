@@ -447,8 +447,6 @@
         - name: Upload Destinations Model
           href: development/models/upload-destination.md
 
-    - name: Shared Form View
-      href: development/shared-form-view.md
     - name: Control Panel Javascript
       items:
         - name: Global Variables

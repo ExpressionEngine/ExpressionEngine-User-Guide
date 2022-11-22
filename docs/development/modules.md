@@ -171,7 +171,7 @@ If you would just like to output a string of HTML for you control panel page, th
 
       $html = "<h2>Welcome to my add-on</h2><p>This is an amazing add-on that does amazing things!"
 
-      $this->setBody($html);
+      $this->setView($html);
 
       return $this;
     }
@@ -291,6 +291,8 @@ You're add-on will now have a control panel page with a form as seen in this scr
 
 ![add-on with form](_images/add-on-view.png)
 
+You can easily have multiple views (think about if your add-on has [multiple control panel pages](#adding-more-pages). Simply use the CLI's `make:view` command then connect them to your Mcp pages by passing the view name to `$this->setBody();`
+
 TIP: This is only the begining of what you can do with forms in the Control Panel. Read more in the docs on the [`CP\Form` service](development/services/cp-form.md)() to understand what else is possible.
 
 TIP: **{ee:u}** Learn more about the [CP\Form service on ExpressionEngine University](https://u.expressionengine.com/article/ultra-double-secret-manual-shared-form-part-four).
@@ -307,6 +309,12 @@ php system/ee/eecli.php make:mcp
 ```
 
 This adds a new file to your `Mcp` folder which will act similar to the Index page we discussed above.
+
+Now inside of your `/Mcp` folder you have a new file and matching Mcp class based on the name you chose in the CLI. This page will be accessible based on the class name you provided. For example:
+
+```
+php system/ee/eecli.php make:mcp
+```
 
 
 
