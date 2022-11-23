@@ -145,8 +145,8 @@ This will show errors with the submitted password as well as password confirm.
 ## Example
 
     {exp:member:registration_form
-    return="member/registration/success"
-    error_handling="inlinew"
+        return="member/registration/success"
+        error_handling="inlinew"
     }
 
         <p>* Required fields</p>
