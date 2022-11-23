@@ -132,7 +132,7 @@
           href: development/add-on-update-file.md
         - name: Extending the Core
           href: development/extensions.md
-        - name: Adding Settings
+        - name: Adding Control Panel Pages
           href: development/modules.md
         - name: Adding Actions
           href: development/actions.md
@@ -158,16 +158,10 @@
           href: development/add-on-language-files.md
         - name: Adding Publish Form Tabs
           href: development/tab-files.md
-        - name: REMOVE - Adding Text Formatting Options
-          href: development/text-formatting.md
+        #- name: REMOVE - Adding Text Formatting Options
+        #  href: development/text-formatting.md
     - name: Accessing the Database
       href: development/database-access.md
-
-    - name: OLD
-      items: 
-
-      - name: Modules
-        href: development/modules.md
 
     - name: Available Core Hooks
       items:

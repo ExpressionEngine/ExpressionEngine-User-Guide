@@ -50,6 +50,7 @@ amazing_addon
  ┣ ft.amazing_addon.php
  ┣ icon.svg
  ┣ mcp.amazing_addon.php
+ ┣ tab.amazing_addon.php
  ┣ mod.amazing_addon.php
  ┣ pro.amazing_addon.php
  ┗ upd.amazing_addon.php
@@ -63,26 +64,36 @@ There's a lot in this structure, because this add-on can do a lot of things (it'
 ### `addon.setup.php`
 Starting with version 3.0 each add-on in ExpressionEngine must have an `addon.setup.php` file in its package directory. This file provides descriptive data about a specific add-on such as author, name, and version. Reference the [The addon.setup.php File](development/addon-setup-php-file.html) for more information on the contents of this file.
 
-### `upd.[addon_name].php`
+### The Update File (`upd.[addon_name].php`)
+**class `Add_on_name_upd extends Installer`**        
 The Update file for a module includes a class with a name that is a combination of the package’s name with a _upd suffix. This file manages the installtion and uninstallation of our add-on. Here we define extensions we will use, actions to be created, and other functionality that should be exectued on installtion and uninstallation.
 
-### `ext.[addon_name].php`
-The `ext` file is used to route ExpressionEngine to our `Extensions` Folder 
+### The Extension File (`ext.[addon_name].php`)
+**class `Add_on_name_upd extends Extension`**    
+The extension file is used to route ExpressionEngine to our `Extensions` Folder 
 
-### `ft.[addon_name].php`
-The `ft` file is used to create new fieldtypes in ExpressionEngine when your add-on is installed.
+### The Fieldtype File (`ft.[addon_name].php`)
+**class `Add_on_name_ft extends EE_Fieldtype`**    
+The fieldtype file is used to create new fieldtypes in ExpressionEngine when your add-on is installed.
 
-### `mcp.[addon_name].php`
-The `mcp` file is used to route ExpressionEngine to our `Mcp` Folder which contains logic for our control panel views (settings or other pages you might want to add to the control panel for your users to interact with).
+### The Mcp File (`mcp.[addon_name].php`)
+**class `Add_on_name_upd extends Mcp`**    
+The Mcp file is used to route ExpressionEngine to our `Mcp` Folder which contains logic for our control panel views (settings or other pages you might want to add to the control panel for your users to interact with).
 
-### `mod.[addon_name].php`
-The `mod` file is used to route ExpressionEngine to our `Modules` Folder which contains any actions or template tags we are adding with our add-on.
+### The Module File `mod.[addon_name].php`
+**class `Add_on_name_upd extends Module`**    
+The module file is used to route ExpressionEngine to our `Modules` Folder which contains any actions or template tags we are adding with our add-on.
 
-### `pro.[addon_name].php`
-The `pro.[addon_name].php` is used to create new Prolets with our add-on.
+### The Tab File (`tab.[addon_name].php`)
+**class `Module_name_tab`**    
+The tab file is used to create tabs which are visible on in [Publish Layouts](control-panel/channels.md#publish-layouts). Respectivley these tabs would also be visible on the Entry Publish/Edit page if selected in the publish layout.
 
-### `icon.svg`
-The `icon.svg` is used both in the Add-on Manager and in the Dock on the front-end to distinguish your add-on from others.
+### The Prolet File `pro.[addon_name].php`
+**class `Add_on_name_upd extends AbstractProlet implements ProletInterface`**    
+The prolet file is used to create new [Prolets](/development/prolets.md) with our add-on.
+
+### The Add-on Icon File `icon.svg`
+The add-on icon folder is used both in the Add-on Manager and in the Dock on the front-end to distinguish your add-on from others.
 
 ### `/Extensions`
 When we tell the CLI that we want to create an extension, classes are automatically created in the `Extensions` folder along with the above mentioned `ext.[addon_name].php` file. Interacting with hooks allow us to extend ExpressionEngine's functionality, thus we refer to these as "extensions". 

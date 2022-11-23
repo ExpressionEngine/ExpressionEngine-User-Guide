@@ -12,36 +12,19 @@ lang: php
 -->
 
 
+# Adding Publish Layout Tabs
 
+Add-ons can also add tabs which are visible on in [Publish Layouts](control-panel/channels.md#publish-layouts). Respectivley these tabs would also be visible on the Entry Publish/Edit page if selected in the publish layout. Two things are required for your add-on to have this functionality:
+- [`tabs()` method](/development/add-on-update-file.md#add-publish-tabs-with-your-add-on-tabs) addded to the Update File
+- The Tab File (`tab.[addon_name].php`)
 
-### module tab label
+## The Tab File (`tab.module_name.php`)
 
-In addition to the two required fields you can have a custom tab label for your publish fields. Just assign the desired label to a key which shares the name of your module name:
+**class `Add_on_name_tab`**
 
-    // Additional Key => Value pairs go here
+To add Publish Tabs
 
-    /**
-     * Tab Label for publish fields
-     *
-     * Assign the label you wish to use to the module_name array key
-     * Remember only alphanumeric characters, underscores, dashes and spaces are allowed.
-     */
-
-    'module_name' => 'Tab label'
-
-
-### Adding Tabs
-Optionally add the publish page tab fields to any saved publish layouts. This is ONLY used if the module adds a tab to the publish page and it requires the `tabs()` function:
-
-      ee()->load->library('layout');
-      ee()->layout->add_layout_tabs($this->tabs(), 'module_name');
-
-
-## The Tab File (tab.module_name.php)
-
-**class `Module_name_tab`**
-
-This is an optional file, required only if your module needs to include a tab on the publish page. It must have a class with a name that is a combination of the package's name with a `_tab` suffix. There are no required class variables. Because multiple modules may be adding fields to the publish page, all third party tab fields are namespaced using the package name when displayed on the publish page. This namespacing will be stripped prior to any data being returned to the tab functions.
+There are no required class variables. Because multiple modules may be adding fields to the publish page, all third party tab fields are namespaced using the package name when displayed on the publish page. This namespacing will be stripped prior to any data being returned to the tab functions.
 
 NOTE: **Note:** if your module includes a tab, do not forget to indicate this in the update file when installing the module. Further, be sure to include the `tabs()` function in the update file, and use it when updating custom layouts on installation and uninstallation.
 

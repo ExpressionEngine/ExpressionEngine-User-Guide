@@ -44,10 +44,6 @@ use ExpressionEngine\Service\Addon\Controllers\Mcp\AbstractRoute;
 
 class Index extends AbstractRoute
 {
-    /**
-     * @var string
-     */
-    protected $route_path = 'index';
 
     /**
      * @var string
@@ -76,15 +72,7 @@ class Index extends AbstractRoute
 
 Let's disect the starter file:
 
-### `protected $route_path = 'index';`
-`$route_path` defines the URL path that the Control Panel will use to direct users to this page.
-
- For example: `protected $route_path = 'index';` defines this page is accessed via `addons/[addon_name]/settings/index` or `addons/settings` since `index` is typically removed from the URLs.
-
- You can also define a path with more segements with something like `protected $route_path = 'amazing_add_on/configurations';` defines that this page is accessed via `addons/amazing_add_on/configurations` (assuming our add-on's name is Amazing Add-On).
-
-
-### `protected $cp_page_title = 'home';` (OR MAYBE DOES NOTHING :shrug:)
+### `protected $cp_page_title = 'home';` 
 `$cp_page_title` defines what is rendered in the `<title>` tag in the browser.
 
 ### `public function process($id = false)`
@@ -330,10 +318,6 @@ use ExpressionEngine\Service\Addon\Controllers\Mcp\AbstractRoute;
 
 class Configurations extends AbstractRoute
 {
-    /**
-     * @var string
-     */
-    protected $route_path = 'configurations';
 
     /**
      * @var string
