@@ -25,6 +25,7 @@
 
 - **Enhancements** 🚀
   - Added `{logged_in_primary_role_short_name}` global member variable; [#2491](https://github.com/ExpressionEngine/ExpressionEngine/issues/2491)
+  - Added inline error handling for member registration form
 
 - **Bug Fixes** 💃🐛
   - Resolved [#2107](https://github.com/ExpressionEngine/ExpressionEngine/issues/2107) where Cookie Consents were not fully installed when updating from EE2
@@ -34,8 +35,11 @@
   - Resolved [#2525](https://github.com/ExpressionEngine/ExpressionEngine/issues/2525) where using `channel="not ..."` parameter was returning no results on `{exp:channel:entries}`
   - Resolved [#2497](https://github.com/ExpressionEngine/ExpressionEngine/issues/2361) where `categories` parameter did not work on relationship `siblings` and `parents` tags 
   - Resolved [#2505](https://github.com/ExpressionEngine/ExpressionEngine/issues/2505) where Stats module could show PHP error when using PHP 8.1
+  - Resolved [#2550](https://github.com/ExpressionEngine/ExpressionEngine/issues/2550) where Pro Search did not store IPv6 addresses correctly
+  - Resolved [#2432](https://github.com/ExpressionEngine/ExpressionEngine/issues/2432) where some Structure queries were slow on large websites
   - Resolved bug with create generic migration in CLI
   - Fixed some CP styles
+  - Fixed some PHP 8.1 compatibility issues
 
 ## Version 7.2.1
 (Release: November 21, 2022)
