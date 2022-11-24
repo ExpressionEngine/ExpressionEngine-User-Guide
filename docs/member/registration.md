@@ -41,8 +41,8 @@ The primary role that will be assigned to registered member. If omited, the defa
 
 ### `error_handling="inline"`
     error_handling="inline"
-This parameter allows you to use inline errors in your registration form
 
+This parameter allows you to use inline errors in your registration form. The errors can be displayed using `{error:field_name}` name where `field_name` would need to be replaced with the name of the field that has error, as used to compose the form.
 
 ## Form Inputs
 NOTE: Be sure to include the required Javascript and CSS to use the native [Password Validation](member/password-validation.md).
@@ -65,8 +65,8 @@ Terms of Service acceptance. This is a **required** field:
 
 Member password. This is a **required** field.
 
-            <label>Your New Password</label><br />
-            <input type="password" name="password" value="" maxlength="50" size="40" />
+    <label>Your New Password</label><br />
+    <input type="password" name="password" value="" maxlength="50" size="40" />
 
 
 ### Password Confirmation
@@ -96,7 +96,7 @@ Custom member fields that have "Show in registration?" setting turned on can be 
 Please note you need to address those by ID and not name, e.g. `m_field_id_8`
 
     <label for="work_title">Work title</label>
-    <input type="text" id="work_title" name="m_field_id_1" size="40" />
+    <input type="text" id="work_title" name="m_field_id_1" size="40" value="{if m_field_id_1}{m_field_id_1}{/if}" />
 
 ## Variables
 
@@ -164,8 +164,8 @@ This will show errors with the submitted password as well as password confirm.
         </p>
 
         <p>
-            <label for="something">Something*:</label><br />
-            <input type="text" name="something" id="something" value="{if something}{something}{/if}"/><br />
+            <label for="something">Something*: {if error:m_field_id_1}{error:m_field_id_1}{/if}</label><br />
+            <input type="text" name="m_field_id_1" id="something" value="{if m_field_id_1}{m_field_id_1}{/if}"/><br />
         </p>
 
         <p>
@@ -199,4 +199,4 @@ This will show errors with the submitted password as well as password confirm.
     </fieldset>
 
     <input type="submit" value="Register" class="btn btn-primary" />
-{/exp:member:registration_form}
+    {/exp:member:registration_form}
