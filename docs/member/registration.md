@@ -39,6 +39,11 @@ This parameter allows you to specify the primary role to assign the new member, 
 
 The primary role that will be assigned to registered member. If omited, the default role will be assigned.
 
+### `error_handling="inline"`
+    error_handling="inline"
+
+This parameter allows you to use inline errors in your registration form. The errors can be displayed using `{error:field_name}` name where `field_name` would need to be replaced with the name of the field that has error, as used to compose the form.
+
 ## Form Inputs
 NOTE: Be sure to include the required Javascript and CSS to use the native [Password Validation](member/password-validation.md).
 
@@ -60,8 +65,8 @@ Terms of Service acceptance. This is a **required** field:
 
 Member password. This is a **required** field.
 
-            <label>Your New Password</label><br />
-            <input type="password" name="password" value="" maxlength="50" size="40" />
+    <label>Your New Password</label><br />
+    <input type="password" name="password" value="" maxlength="50" size="40" />
 
 
 ### Password Confirmation
@@ -91,7 +96,7 @@ Custom member fields that have "Show in registration?" setting turned on can be 
 Please note you need to address those by ID and not name, e.g. `m_field_id_8`
 
     <label for="work_title">Work title</label>
-    <input type="text" id="work_title" name="m_field_id_1" size="40" />
+    <input type="text" id="work_title" name="m_field_id_1" size="40" value="{if m_field_id_1}{m_field_id_1}{/if}" />
 
 ## Variables
 
@@ -99,13 +104,26 @@ Please note you need to address those by ID and not name, e.g. `m_field_id_8`
 
     {if accept_terms == 'y'}checked="checked"{/if}
 
+### `{error:accept_terms}`
+
+    {if error:accept_terms}{error:accept_terms}{/if}
+
 ### `{email}`
 
     {if email}{email}{/if}
 
+### `{error:email}`
+
+    {if error:email}{error:email}{/if}
+
 ### `{password}`
 
     {if password}{password}{/if}
+
+### `{error:password}`
+
+    {if error:password}{error:password}{/if}
+This will show errors with the submitted password as well as password confirm.
 
 ### `{password_confirm}`
 
@@ -119,61 +137,66 @@ Please note you need to address those by ID and not name, e.g. `m_field_id_8`
 
     {if username}{username}{/if}
 
+### `{error:username}`
+
+    {if error:username}{error:username}{/if}
+
 
 ## Example
 
     {exp:member:registration_form
         return="member/registration/success"
-        }
+        error_handling="inline"
+    }
 
-            <p>* Required fields</p>
-        <fieldset>
-            <h4>Login details</h4>
+        <p>* Required fields</p>
+    <fieldset>
+        <h4>Login details</h4>
 
-            <p>
-                <label for="username">Username*:</label><br />
-                <input type="text" name="username" id="username" value="{if username}{username}{/if}"/><br />
-            </p>
+        <p>
+            <label for="username">Username*: {if error:username}{error:username}{/if}</label><br />
+            <input type="text" name="username" id="username" value="{if username}{username}{/if}"/><br />
+        </p>
 
-            <p>
-                <label for="email">Email*:</label><br />
-                <input type="text" name="email" id="email" value="{if email}{email}{/if}"/><br />
-            </p>
+        <p>
+            <label for="email">Email*: {if error:email}{error:email}{/if}</label><br />
+            <input type="text" name="email" id="email" value="{if email}{email}{/if}"/><br />
+        </p>
 
-            <p>
-                <label for="something">Something*:</label><br />
-                <input type="text" name="something" id="something" value="{if something}{something}{/if}"/><br />
-            </p>
+        <p>
+            <label for="something">Something*: {if error:m_field_id_1}{error:m_field_id_1}{/if}</label><br />
+            <input type="text" name="m_field_id_1" id="something" value="{if m_field_id_1}{m_field_id_1}{/if}"/><br />
+        </p>
 
-            <p>
-                <label for="password">Password*:</label><br />
-                <input type="password" name="password" id="password" value="{if password}{password}{/if}"/>
-            </p>
+        <p>
+            <label for="password">Password*: {if error:password}{error:password}{/if}</label><br />
+            <input type="password" name="password" id="password" value="{if password}{password}{/if}"/>
+        </p>
 
-            <p>
-                <label for="password_confirm">Confirm password*:</label><br />
-                <input type="password" name="password_confirm" id="password_confirm" value="{if password_confirm}{password_confirm}{/if}"/>
-            </p>
+        <p>
+            <label for="password_confirm">Confirm password*: </label><br />
+            <input type="password" name="password_confirm" id="password_confirm" value="{if password_confirm}{password_confirm}{/if}"/>
+        </p>
 
-            <p>
-                <label for="terms_of_service">Terms of service:</label><br />
-                <div>All messages posted at this site express the views of the author, and do not necessarily reflect the views of the owners and administrators
-                    of this site.By registering at this site you agree not to post any messages that are obscene, vulgar, slanderous, hateful, threatening, or that violate any laws. We will
-                    permanently ban all users who do so.We reserve the right to remove, edit, or move any messages for any reason.</div>
-            </p>
+        <p>
+            <label for="terms_of_service">Terms of service:</label><br />
+            <div>All messages posted at this site express the views of the author, and do not necessarily reflect the views of the owners and administrators
+                of this site.By registering at this site you agree not to post any messages that are obscene, vulgar, slanderous, hateful, threatening, or that violate any laws. We will
+                permanently ban all users who do so.We reserve the right to remove, edit, or move any messages for any reason.</div>
+        </p>
 
-            <p>
-                <label><input type="checkbox" name="accept_terms" value="y" {if accept_terms == 'y'}checked="checked"{/if} /> I accept these terms</label>
-            </p>
+        <p>
+            <label><input type="checkbox" name="accept_terms" value="y" {if accept_terms == 'y'}checked="checked"{/if} /> I accept these terms {if error:accept_terms}{error:accept_terms}{/if}</label>
+        </p>
 
-            {if captcha}
-            <p>
-                <label for="captcha">{lang:captcha}*</label>
-                {captcha}<br/>
-                <input type="text" id="captcha" name="captcha" value="" size="20" maxlength="20" style="width:140px;"/>
-            </p>
-            {/if}
-        </fieldset>
+        {if captcha}
+        <p>
+            <label for="captcha">{lang:captcha}*</label>
+            {captcha}<br/>
+            <input type="text" id="captcha" name="captcha" value="" size="20" maxlength="20" style="width:140px;"/>
+        </p>
+        {/if}
+    </fieldset>
 
-        <input type="submit" value="Register" class="btn btn-primary" />
+    <input type="submit" value="Register" class="btn btn-primary" />
     {/exp:member:registration_form}
