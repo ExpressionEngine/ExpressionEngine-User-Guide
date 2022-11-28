@@ -102,18 +102,6 @@
       href: development/addon-setup-php-file.md
     - name: Add-on Installer
       href: development/addon-installer.md
-    - name: Add-on Best Practices
-      items:
-        - name: About New Best Practices
-          href: development/best-practices/about.md
-        - name: Routing
-          href: development/best-practices/routing.md
-        - name: Control Panel
-          href: development/best-practices/cp.md
-        - name: Extensions
-          href: development/best-practices/extensions.md
-        - name: Modules
-          href: development/best-practices/modules.md
     - name: Plugins
       href: development/plugins.md
     - name: Modules
