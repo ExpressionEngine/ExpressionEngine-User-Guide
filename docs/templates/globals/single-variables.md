@@ -267,6 +267,10 @@ The Primary Role ID number for the currently logged-in user.
 
 The title of the Primary Role for the currently logged-in user.
 
+### `{logged_in_primary_role_short_name}`
+
+The short name of the Primary Role for the currently logged-in user.
+
 ### `{logged_in_primary_role_description}`
 
 The Primary Role description for the currently logged-in user.
