@@ -326,7 +326,11 @@ You can test against the Primary Role of the currently logged in user.
 
     {if logged_in_primary_role_name *= 'games'}  Shall we play a game?  {/if}
 
-You can test against the primary role name of the currently logged in user.
+### `logged_in_primary_role_short_name`
+
+    {if logged_in_primary_role_short_name == 'super_admin'} Secret content {/if}
+
+Check against the short name of the primary role for the currently logged in user.
 
 ### `logged_in_primary_role_description`
 
