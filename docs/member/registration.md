@@ -31,21 +31,21 @@ NOTE: **Important:** In order for site visitors to be allowed to register for ac
 
     primary_role="7"   
 
-This parameter allows you to specify the primary role to assign the new member, overrideing the default member setting.
+This parameter allows you to specify the primary role to assign the new member, overriding the default member setting.
 
 ### `primary_role=`
 
     primary_role="6"
 
-The primary role that will be assigned to registered member. If omited, the default role will be assigned.
+The primary role that will be assigned to registered member. If omitted, the default role will be assigned.
 
 ### `error_handling="inline"`
     error_handling="inline"
 
-This parameter allows you to use inline errors in your registration form. The errors can be displayed using `{error:field_name}` name where `field_name` would need to be replaced with the name of the field that has error, as used to compose the form.
+This parameter allows you to use inline errors in your registration form. The errors can be displayed using the `{error:field_name}` tag where `field_name` would need to be replaced with the name of the field that has an error, as used to compose the form.
 
 ## Form Inputs
-NOTE: Be sure to include the required Javascript and CSS to use the native [Password Validation](member/password-validation.md).
+NOTE: Be sure to include the required JavaScript and CSS to use the native [Password Validation](member/password-validation.md).
 
 ### Email
 

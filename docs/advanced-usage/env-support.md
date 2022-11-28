@@ -73,9 +73,9 @@ $config['show_ee_news'] = 'y';
 
 ## MSM Example
 
-If your ExpressionEngine installation is hosting multiple sites, you can specify different values for MSM sites configuiration by using site short name as prefix.
+If your ExpressionEngine installation is hosting multiple sites, you can specify different values for MSM sites configuration by using site short name as prefix.
 
-Th site short name can be accessed in the code using `$GLOBALS['assign_to_config']['site_name']` variable.
+The site short name can be accessed in the code using `$GLOBALS['assign_to_config']['site_name']` variable.
 
 The below example demonstrates this approach, assuming you have 2 MSM sites with short names of `default_site` and `second_site`
 

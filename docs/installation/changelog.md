@@ -31,13 +31,13 @@
   - Resolved [#2107](https://github.com/ExpressionEngine/ExpressionEngine/issues/2107) where Cookie Consents were not fully installed when updating from EE2
   - Resolved [#2439](https://github.com/ExpressionEngine/ExpressionEngine/issues/2439) where channel form CSS link was returning 404 error 
   - Resolved [#2532](https://github.com/ExpressionEngine/ExpressionEngine/issues/2532) where Edit Profile form could show error when used on same page with channel entries tag 
-  - Resolved issue where calculating file usage could show PHP error if some upload destination was missing
+  - Resolved issue where calculating file usage could show a PHP error if some upload destinations were missing
   - Resolved [#2525](https://github.com/ExpressionEngine/ExpressionEngine/issues/2525) where using `channel="not ..."` parameter was returning no results on `{exp:channel:entries}`
   - Resolved [#2497](https://github.com/ExpressionEngine/ExpressionEngine/issues/2361) where `categories` parameter did not work on relationship `siblings` and `parents` tags 
-  - Resolved [#2505](https://github.com/ExpressionEngine/ExpressionEngine/issues/2505) where Stats module could show PHP error when using PHP 8.1
+  - Resolved [#2505](https://github.com/ExpressionEngine/ExpressionEngine/issues/2505) where Stats module could show a PHP error when using PHP 8.1
   - Resolved [#2550](https://github.com/ExpressionEngine/ExpressionEngine/issues/2550) where Pro Search did not store IPv6 addresses correctly
   - Resolved [#2432](https://github.com/ExpressionEngine/ExpressionEngine/issues/2432) where some Structure queries were slow on large websites
-  - Resolved bug with create generic migration in CLI
+  - Resolved bug when creating generic migrations using the CLI
   - Fixed some CP styles
   - Fixed some PHP 8.1 compatibility issues
 
