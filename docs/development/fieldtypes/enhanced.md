@@ -124,6 +124,14 @@ You can do this by adding this check:
         //this is cloning request, add new rows
     }
 
+## Field cloning support
+
+The channel fields themeselves can be clones using "Clone to New Field" option in saving dropdown. All simple fieldtypes (that do not define `$has_array_data` or have it set to `false`) support cloning by default. If your fieldtype is more complex and you want to make possible cloning it, you would need to set
+
+    public $can_be_cloned = true;
+
+You also need to make sure that if you have specific logic for saving fieldtype settings you include checks for `CLONING_MODE` constant as shown above (if necessary).
+
 ## Conditional Fields support
 
 Unless different specified directly, each fieldtype can be as data source for [Conditional Fields](control-panel/field-manager/conditional-fields.md) via the default evaluation rules set. The default set is different depending on whether the fieldtype can hold text-like data or array-like data.
