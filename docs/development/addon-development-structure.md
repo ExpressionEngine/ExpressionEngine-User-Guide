@@ -58,23 +58,28 @@ amazing_addon
 
 NOTE: **Note:** For filenames, hyphens and special characters are removed and spaces are replaced with underscores.
 
-There's a lot in this structure, because this add-on can do a lot of things (it's amazing 😀)! Don't worry though, your add-on can be as simple or complex as you want to make it. This example just shows all the possiblites. Continue reading as we break down the parts of this add-on and then build it from scratch.
+There's a lot in this structure, because this add-on can do a lot of things (it's amazing 😀)! Don't worry though, your add-on can be as simple or complex as you want to make it. This example just shows all the possibilities. Continue reading as we break down the parts of this add-on and then build it from scratch.
 
 
-### `addon.setup.php`
-Starting with version 3.0 each add-on in ExpressionEngine must have an `addon.setup.php` file in its package directory. This file provides descriptive data about a specific add-on such as author, name, and version. Reference the [The addon.setup.php File](development/addon-setup-php-file.html) for more information on the contents of this file.
+### The Add-on Setup File (`addon.setup.php`)
+Starting with version 3.0 each add-on in ExpressionEngine must have an `addon.setup.php` file in its package directory. This file provides descriptive data about a specific add-on such as author, name, and version.   
+Reference the [The Add-on Setup File](development/addon-setup-php-file.md) for more information on the contents of this file.
 
 ### The Update File (`upd.[addon_name].php`)
 **class `Add_on_name_upd extends Installer`**        
-The Update file for a module includes a class with a name that is a combination of the package’s name with a _upd suffix. This file manages the installtion and uninstallation of our add-on. Here we define extensions we will use, actions to be created, and other functionality that should be exectued on installtion and uninstallation.
+The Update file for a module includes a class with a name that is a combination of the package’s name with a `_upd` suffix. This file manages the installation and uninstallation of our add-on. Here we define extensions we will use, actions to be created, and other functionality that should be executed on installation and uninstallation.    
+Reference the [The Add-on Update File](development/add-on-update-file.md) for more information on creating this file.
+
 
 ### The Extension File (`ext.[addon_name].php`)
 **class `Add_on_name_upd extends Extension`**    
-The extension file is used to route ExpressionEngine to our `Extensions` Folder 
+The extension file is used to route ExpressionEngine to our `Extensions` Folder.    
+Reference [Extending The Core](development/extensions.md) for more information on how to use core hooks to extend what ExpressionEngine can do.
 
 ### The Fieldtype File (`ft.[addon_name].php`)
 **class `Add_on_name_ft extends EE_Fieldtype`**    
-The fieldtype file is used to create new fieldtypes in ExpressionEngine when your add-on is installed.
+The fieldtype file is used to create new fieldtypes in ExpressionEngine when your add-on is installed.    
+Reference [Adding Fieldtypes](development/fieldtypes/fieldtypes.md) for more information on adding fieldtypes with your add-on.
 
 ### The Mcp File (`mcp.[addon_name].php`)
 **class `Add_on_name_upd extends Mcp`**    

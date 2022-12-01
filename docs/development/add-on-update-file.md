@@ -141,6 +141,13 @@ The CLI automatically generates our install method. This method will ensure that
     }
 ```
 
+### Adding Publish Tabs
+Optionally add the publish page tab fields to any saved publish layouts. This is ONLY used if the module adds a tab to the publish page and it requires the [`tabs()` function](#add-publish-tabs-with-your-add-on-tabs):
+
+      ee()->load->library('layout');
+      ee()->layout->add_layout_tabs($this->tabs(), 'module_name');
+
+
 ## Add Publish Tabs With Your Add-on (`tabs()`)
 
 | Parameter | Type    | Description                                      |
@@ -169,27 +176,9 @@ An optional function, included only if your add-on adds a tab to the publish pag
         return $tabs;
     }
 
-### module tab label
-
-In addition to the two required fields you can have a custom tab label for your publish fields. Just assign the desired label to a key which shares the name of your module name:
-
-    // Additional Key => Value pairs go here
-
-    /**
-     * Tab Label for publish fields
-     *
-     * Assign the label you wish to use to the module_name array key
-     * Remember only alphanumeric characters, underscores, dashes and spaces are allowed.
-     */
-
-    'module_name' => 'Tab label'
+Be sure that you also update your [`install()` function](#adding-publish-tabs) to add your specified tabs.
 
 
-### Adding Tabs
-Optionally add the publish page tab fields to any saved publish layouts. This is ONLY used if the module adds a tab to the publish page and it requires the `tabs()` function:
-
-      ee()->load->library('layout');
-      ee()->layout->add_layout_tabs($this->tabs(), 'module_name');
 
 
 
