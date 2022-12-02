@@ -79,14 +79,14 @@ Welcome to the official ExpressionEngine Docs! In addition to the documentation,
         <div class="item relative pl-7 mb-0 border-none">
             <span class="absolute text-lg text-purple-light top-0.5 left-0"><i class="fas fa-bolt"></i></span>
             <div class="mb-0">
-                <h3 class="text-lg text-purple-light font-semibold m-0"><a href="https://docs.expressionengine.com/latest/getting-started/the-big-picture.html">Quick Start</a></h3>
+                <h3 class="text-lg text-purple-light font-semibold m-0"><a href="https://docs.expressionengine.com/v6/getting-started/the-big-picture.html">Quick Start</a></h3>
                 <p class="text-sm mb-0 text-black text-opacity-45">The big picture of EE.</p>
             </div>
         </div>
         <div class="item relative pl-7 mb-0">
             <span class="absolute text-lg text-purple-light top-0.5 left-0"><i class="fas fa-download"></i></span>
             <div class="mb-0">
-                <h3 class="text-lg text-purple-light font-semibold m-0"><a href="https://docs.expressionengine.com/latest/installation/installation.html" class="text-current">Installation</a></h3>
+                <h3 class="text-lg text-purple-light font-semibold m-0"><a href="https://docs.expressionengine.com/v6/installation/installation.html" class="text-current">Installation</a></h3>
                 <p class="text-sm mb-0 text-black text-opacity-45">EE installed in 1-2-3.</p>
             </div>
         </div>
@@ -135,7 +135,7 @@ Welcome to the official ExpressionEngine Docs! In addition to the documentation,
         <div class="item relative pl-7 mb-0">
             <span class="absolute text-lg text-purple-light top-0.5 left-0"><i class="fas fa-clipboard"></i></span>
             <div class="mb-0">
-                <h3 class="text-lg text-purple-light font-semibold m-0"><a href="https://docs.expressionengine.com/latest/installation/changelog.html" class="text-current">Change Log</a></h3>
+                <h3 class="text-lg text-purple-light font-semibold m-0"><a href="https://docs.expressionengine.com/v6/installation/changelog.html" class="text-current">Change Log</a></h3>
                 <p class="text-sm mb-0 text-black text-opacity-45">Details of the latest updates.</p>
             </div>
         </div>
