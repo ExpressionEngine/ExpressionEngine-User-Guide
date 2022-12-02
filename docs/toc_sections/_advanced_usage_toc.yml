@@ -124,8 +124,8 @@
   items:
     - name: Building An Add-On
       items:
-        - name: Overview
-          href: development/addon-development-structure
+        - name: Start Here
+          href: development/addon-development-overview
         - name: Add-on Setup File
           href: development/addon-setup-php-file.md
         - name: Add-on Update File
