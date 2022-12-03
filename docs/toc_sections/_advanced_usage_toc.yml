@@ -158,6 +158,10 @@
           href: development/add-on-language-files.md
         - name: Adding Publish Form Tabs
           href: development/tab-files.md
+        - name: Adding Prolets
+          href: development/prolets.md
+        - name: Adding Dashboard Widgets
+          href: development/widgets.md
         #- name: REMOVE - Adding Text Formatting Options
         #  href: development/text-formatting.md
     - name: Accessing the Database
@@ -453,10 +457,6 @@
           href: development/control-panel-js/rangesandselections.md
         - name: WysiHat API
           href: development/control-panel-js/wysihat-api.md
-    - name: Dashboard Widgets
-      href: development/widgets.md
-    - name: Prolets
-      href: development/prolets.md
     - name: Constants Reference
       href: development/constants.md
     - name: Cypress Tests

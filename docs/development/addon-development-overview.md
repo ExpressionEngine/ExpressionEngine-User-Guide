@@ -16,7 +16,7 @@ TIP: In this section we're explaining the parts of an add-on. No need to memoriz
 [TOC]
 
 ## Why Create A Custom Add-On
-While ExpressionEngine offers a lot of functionality right out of the box, sometimes you want more power or to do things that ExpressionEngine doesn't natively do. You can always look for a [third-party add-on](/add-ons/overview.md) developed by someone else. However, even then what you want to do is unique to just your site. This is where custom add-ons come in.     
+While ExpressionEngine offers a lot of functionality right out of the box, sometimes you want more power or to do things that ExpressionEngine doesn't natively do.    
 
 Here are some ideas of what you can accomplish with a custom add-on:
 
@@ -26,6 +26,8 @@ Here are some ideas of what you can accomplish with a custom add-on:
 - Add custom [CLI commands](cli/creating-a-command.md) like `$ eecli.php amazing_add_on:do_something_amazing`
 - Add custom [Publish Form tabs](development/tab-files.md) to help organize entry fields for content editors.
 - Hook into ExpressionEngine and run [custom functions (called Extensions)](development/extensions.md) when ExpressionEngine does certain actions, like emailing your team whenever a post is created or manipulating text when a template is rendered. 
+-reword to display fi [Prolet](/development/prolets.md) to the [ExpressionEngine Dock](/advanced-usage/front-end/dock.md) that displays information from your add-on to content editors on the front-end.
+- Display
 
 Understanding ExpressionEngine add-on development removes the limit of what you can build with ExpressionEngine.
 
@@ -151,7 +153,8 @@ Reference [Adding Publish Form Tabs](development/tab-files.md) for more informat
 
 ### The Prolet File `pro.[addon_name].php`
 **class `Add_on_name_upd extends AbstractProlet implements ProletInterface`**    
-The prolet file is used to create new [Prolets](/development/prolets.md) with our add-on.
+The prolet file is used to create new [Prolets](/development/prolets.md) with our add-on.    
+Reference [Adding Prolets](development/prolets.md) for more information on adding prolets to your add-on.
 
 ### The Add-on Icon File `icon.svg`
 The add-on icon folder is used both in the Add-on Manager and in the Dock on the front-end to distinguish your add-on from others.
