@@ -195,7 +195,7 @@ Validation rules are added using the same format as the [Validation Service](dev
 You can also create your own local validation rules. These one-off rules can be added directly to the model class by creating a public method whose name starts with `validate`. The method will be treated as a [custom validation rule](development/services/validation.md#custom-rules). On validation it will receive the property name, current value, rule parameters, and the rule object. The method should return `TRUE` on success, and an error string or language key on failure:
 
     protected static $_validation_rules = array(
-      'even_number' => 'validateMultipleOf[2]'
+      'even_number' => 'validateMultipleOf[2]',
       'decade' => 'validateMultipleOf[10]'
     );
 
