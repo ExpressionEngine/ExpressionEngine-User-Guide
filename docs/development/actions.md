@@ -27,7 +27,7 @@ Follow the prompts to add an action file to your add-on.
 This will create an `Actions` folder inside our `Module` folder where will build out the code we want to run when a user hits our `ACT` URL. Inside our `Actions` folder the CLI will create a file with the same name as the method we defined when creating our action.
 
 ```
-amazing_addon
+amazing_add_on
  ┣ Module
  ┃ ┣ Actions
  ┃ ┃ ┗ [MethodName].php
@@ -164,7 +164,11 @@ public function up()
 }
 ...
 ```
-- To set an action as CSRF exempt on creation, use the `--csrf_exempt` or `-c` flag in the CLI: `$ php system/ee/eecli.php make:action --csrf_exempt`
+- To set an action as CSRF exempt on creation, use the `--csrf_exempt` or `-c` flag in the CLI: 
+
+```
+$ php system/ee/eecli.php make:action --csrf_exempt
+```
 
 
 
@@ -179,21 +183,13 @@ For this example we'll use a really basic form that would be found in our templa
 
 
 Create our action:
-
-In our template:
-
 ```
-<form method="post" action="/?ACT=41">
-
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value="John"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value="Doe"><br><br>
-    <input type="submit" value="Submit">
-
-</form>
-
+$ php system/ee/eecli.php make:action --install
+What is the action name? ExampleAction
+What add-on is the action being added to? [amazing_add_on,...]: amazing_add_on
 ```
+
+This creates our required files. Now we had some functionality to our action which will add the first and last name submitted from a form to our custom database table.
 
 Our action code:
 
@@ -225,6 +221,22 @@ class ExampleAction extends AbstractRoute
 }
 ```
 
+In our template:
+
+```
+<form method="post" action="/?ACT=41">
+
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+
+</form>
+
+```
+
+
 **A note about action IDs.** For the example above, we looked up the action ID in the database. However, the action ID of your method may be different in your database than someone else as the IDs are auto-incremented by the database on insertion. Therefore, it's always best practice to fetch your action ID for use in a template by using the [`fetch_action_id()`](/development/legacy/libraries/cp.md#fetch_action_idclass-method) method from the `CP Class` library.
 
 We would do this in our add-on with something like this:
@@ -237,6 +249,13 @@ $aid = ee()->cp->fetch_action_id(`Amazing_add_on`, `ExampleAction`);
 ### Return Data
 
 In this next example we are just creating an endpoint which will be reachable from servers outside of our domain. We are going to expect the application to use cURL or similar libray to post an ID to our endpoint. Upon receiving the request our action will return the name of the entry matching the ID if it exists.
+
+Create our action:
+```
+$ php system/ee/eecli.php make:action --install
+What is the action name? ExampleAction
+What add-on is the action being added to? [amazing_add_on,...]: amazing_add_on
+```
 
 Our action code:
 
@@ -279,9 +298,7 @@ However, when I attempt to reach this endpoint from another application I get an
 
 The request:
 ```
-curl --location --request POST 'https://anamzingwebsite.test/?ACT=41' \
---form 'id="1
-"'
+curl --location --request POST 'https://anamzingwebsite.test/?ACT=41' --form 'id="1"'
 ```
 
 The response:
@@ -298,21 +315,8 @@ The response:
 </div>
 ...
 ```
-This is because of the [`csrf_exempt` value](#exp_actions) mentioned above. To fix this we can go into the `exp_actions` table of our database and update the `csrf_exempt` column to `1`. However, to adjust for future installations we need to adjust the `$actions` array of our `upd` file. 
-
-Here we are going to set the `csrf_exempt` value on installation of our add-on.
-```
-    public $actions = [
-        [
-            'class' => 'Demo_addon',
-            'method' => 'Example_Action',
-            'csrf_exempt` => true
-        ]
-    ];
-```
+This is because of the [`csrf_exempt` value](#cross-site-request-forgerycsrf-exemption) mentioned above. To fix this we can go into the `exp_actions` table of our database and update the `csrf_exempt` column to `1`. 
 
 Now when I send that same request, I simply get the entry title I requested.
-
-WARN: **Warning:** Use caution when making an action csrf exempt. First ensure you really need to do so, then also provide some sort of key or validation to ensure the incoming request is not malicious.
 
 

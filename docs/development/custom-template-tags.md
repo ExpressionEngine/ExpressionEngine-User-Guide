@@ -35,7 +35,7 @@ Now, let's update the class to read the timezone that is passed in:
 This will create an `Models/Tags` folder in your add-on.
 
 ```
-amazing_addon
+amazing_add_on
  ┣ Module
  ┃ ┗ Tags
  ┃ ┃ ┗ ExampleTag.php
@@ -66,26 +66,21 @@ As we can see, the CLI has correctly created a new class using our tag's name in
 
 Inside of our class is the `process()` method. Anything we want to happen when our template tag is used should be placed inside this `process()` function.
 
-After your tag is created, you can use your tag by just using `{exp:[tag_name]}`. In the example above, we created a tag named "Example Tag". We can now use the tag `{exp:amazing_add_on:example_tag}` and the text "My Tag" will be outputted to my template.
+After your tag is created, you can use your tag by just using `{exp:[addon_name][tag_name]}`. In the example above, we created a tag named "Example Tag". We can now use the tag `{exp:amazing_add_on:example_tag}` and the text "My Tag" will be outputted to my template.
 
 
 ## Tag Construction
 
-A typical ExpressionEngine tag looks like this:
+A typical custom add-on tag looks like this:
 
-    {exp:channel:entries}
+    {exp:amazing_add_on:bold}
 
 The first segment is the tag identifier: {exp:. It tells the template engine that it has just encountered a tag.
 
-The second segment is the "family" name: `{exp:channel`. There are different families of tags: channel, comments, members, email, stats, etc. In programming terms, the second segment is the name of the 'class' that is instantiated by the tag.
+The second segment is the add-on's name all lowercase and with no spaces or special characters. In this case, we're telling ExpressionEngine to look inside of the Amazing Add-On add-on.
 
-The above example would tell the template engine to dynamically instantiate the "channel" class.
+The third segment indicates the tag from inside the add-on to use. In this case it is the `bold` tag.
 
-The third segment indicates the 'function' from within a particular family of tags: `{exp:channel:entries}`. This example would tell ExpressionEngine you want to use the "entries" method in the "channel" class.
-
-A tag, therefore, mirrors an object oriented approach: `Class->method`:
-
-    {exp:class_name:method_name}
 
 ### Two Kinds of Tags
 
@@ -105,9 +100,9 @@ Tag pairs allow you to process the information contained between the tags. In th
 Single Tags are the easiest template tags to create and process. Here we'll add a single tag to our add-on using the CLI. We'll name the tag Amazing Text.
 
 ```
-php system/ee/eecli.php make:tag
+php system/ee/eecli.php make:template-tag
 What is the tag name? Amazing Text
-What add-on is the tag being added to? amazing_add_on
+What add-on is the tag being added to? [amazing_add_on,...]: amazing_add_on
 Tag created successfully!
 ```
 
@@ -160,9 +155,9 @@ You will be able to use this plugin anywhere in a Template. You can even put thi
 To create this tag pair, we'll use the CLI similarly to how we created a single tag.
 
 ```
-php system/ee/eecli.php make:tag
+php system/ee/eecli.php make:template-tag
 What is the tag name? bold
-What add-on is the tag being added to? amazing_add_on
+What add-on is the tag being added to? [amazing_add_on,...]: amazing_add_on
 Tag created successfully!
 ```
 
@@ -238,9 +233,9 @@ We will allow the following parameter choices:
 - `type="italic"`
 
 ```
-php system/ee/eecli.php make:tag
+php system/ee/eecli.php make:template-tag
 What is the tag name? format
-What add-on is the tag being added to? amazing_add_on
+What add-on is the tag being added to? [amazing_add_on,...]: amazing_add_on
 Tag created successfully!
 ```
 
@@ -304,7 +299,7 @@ First, generate the tag (we're calling our tag "date and time" and adding it to 
 ```
 php system/ee/eecli.php make:template-tag
 What is the tag name? date and time
-What add-on is the tag being added to? amazing_add_on
+What add-on is the tag being added to? [amazing_add_on,...]: amazing_add_on
 Tag created successfully!
 ``` 
 
@@ -382,4 +377,4 @@ The current date is: November 15, 2022
 The current time is: 02:40 PM
 ```
 
-TIP: Of course, this is only the begining of what you can do with variables in your tag. We created single variables here, but you can create pair variables and much more. For more information about this, and manipulating the tagdata in your plugin, check out the [Template Class](development/legacy/libraries/template.md).
+TIP: Of course, this is only the beginning of what you can do with variables in your tag. We created single variables here, but you can create pair variables and much more. For more information about this, and manipulating the tagdata in your plugin, check out the [Template Class](development/legacy/libraries/template.md).

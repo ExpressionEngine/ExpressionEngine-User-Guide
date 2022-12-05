@@ -19,7 +19,7 @@ Follow the prompts to add a CLI command to your add-on.
 This will create a `Commands` folder in your add-on along with a class and file based on your command name.
 
 ```
-amazing_addon
+amazing_add_on
  ┣ Commands
  ┃ ┣ Command[CommandName].php
 ```
@@ -29,7 +29,7 @@ amazing_addon
 We see that the CLI has added our `Commands` folder and created our new class. However, the CLI has also modified our `addon.setup.php` file as well.
 
 ```
-amazing_addon
+amazing_add_on
  ┣ Commands
  ┃ ┣ CommandAnAmazingCommand.php
 ```
@@ -48,7 +48,7 @@ return [
     'namespace'         => 'ExpressionengineDeveloper\AmazingAddon',
     'settings_exist'    => true,
     'commands' => [
-        'amazing_addon:make:amazing-things' => ExpressionengineDeveloper\AmazingAddon\Commands\CommandAnAmazingCommand::class,
+        'amazing_add_on:make:amazing-things' => ExpressionengineDeveloper\AmazingAddon\Commands\CommandAnAmazingCommand::class,
     ],
 
     ],
@@ -83,7 +83,7 @@ class CommandAnAmazingCommand extends Cli
      * signature of command
      * @var string
      */
-    public $signature = 'amazing_addon:make:amazing-things';
+    public $signature = 'amazing_add_on:make:amazing-things';
 
     /**
      * Public description of command
@@ -101,7 +101,7 @@ class CommandAnAmazingCommand extends Cli
      * How to use command
      * @var string
      */
-    public $usage = 'php eecli.php amazing_addon:make:amazing-things';
+    public $usage = 'php eecli.php amazing_add_on:make:amazing-things';
 
     /**
      * options available for use in command

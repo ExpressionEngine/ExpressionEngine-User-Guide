@@ -34,11 +34,11 @@ TIP: Files that interact with ExpressionEngine core hooks are referred to as "ex
 This will create an `ext[addon_name].php` file in our add-on along with an `Extensions` folder where will build out the code we want to run when we interact with a core hook. Inside our `Extensions` folder the CLI will create a file with the same name as the core hook we plan to use.
 
 ```
-amazing_addon
+amazing_add_on
  ┣ Extensions
  ┃ ┣ [HookName].php
  ┃ ...
- ┗ ext.amazing_addon.php
+ ┗ ext.amazing_add_on.php
  ```
 
 TIP: A single add-on can interact with as many hooks as you want.
@@ -55,12 +55,12 @@ Here we have added the ability to interact with the [`typography_parse_type_end(
 So our add-on structure now looks like this:
 
 ```
-amazing_addon
+amazing_add_on
  ┣ Extensions
  ┃ ┣ TypographyParseTypeEnd.php
  ┣ addon.setup.php
- ┣ ext.amazing_addon.php
- ┗ upd.amazing_addon.php
+ ┣ ext.amazing_add_on.php
+ ┗ upd.amazing_add_on.php
  ```
 
 
