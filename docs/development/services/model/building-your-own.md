@@ -126,7 +126,7 @@ NOTE: **Note:** Event names typically start with a lowercase letter, but the met
 
 ## Relationships
 
-_In-Depth Documentation:_ [Relating Models](development/services/model/relating-models.md))
+_In-Depth Documentation:_ [Relating Models](development/services/model/relating-models.md)
 
 Models can be related to other models using just a little bit of metadata. They are defined on a `$_relationships` metadata array. The array keys should be the relationship names, and their values will be a description of the relationship:
 
