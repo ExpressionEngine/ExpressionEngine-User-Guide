@@ -15,7 +15,7 @@ lang: php
 
 [TOC]
 
-Starting with version 3.0 each add-on in ExpressionEngine must have an `addon.setup.php` file in its package directory. This file provides descriptive data about a specific add-on such as author, name, and version. See the [Addon Service](development/services/addon.md) for API access.
+Starting with version 3.0 each add-on in ExpressionEngine must have an `addon.setup.php` file in its package directory. This file provides descriptive data about a specific add-on such as author, name, and version. 
 
 ## Format
 
@@ -230,3 +230,6 @@ It is also possible to set up class aliases to an arbitrary FQCN. The example be
     'aliases' => [
       'MyVendor\Services\ClassName' => 'AnotherVendor\Services\ClassName',
     ],
+
+## Accessing Add-On Information From Another Add-on
+See the [Addon Service](development/services/addon.md) for API access.

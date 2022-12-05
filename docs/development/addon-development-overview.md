@@ -21,15 +21,15 @@ While ExpressionEngine offers a lot of functionality right out of the box, somet
 Here are some ideas of what you can accomplish with a custom add-on:
 
 - Add custom [template tags](development/custom-template-tags.md) like `{exp:amazing_add_on:member_info}`.
-- Run functions or return data when someone pings a certain URL using [URL endpoints (called Actions)](development/actions.md).
+- Run functions or return data when someone reaches a certain URL using [URL endpoints (called Actions)](development/actions.md).
 - Add custom [fieldtypes](development/fieldtypes/fieldtypes.md) for content editors when creating channel entries.
 - Add custom [CLI commands](cli/creating-a-command.md) like `$ eecli.php amazing_add_on:do_something_amazing`
 - Add custom [Publish Form tabs](development/tab-files.md) to help organize entry fields for content editors.
 - Hook into ExpressionEngine and run [custom functions (called Extensions)](development/extensions.md) when ExpressionEngine does certain actions, like emailing your team whenever a post is created or manipulating text when a template is rendered. 
--reword to display fi [Prolet](/development/prolets.md) to the [ExpressionEngine Dock](/advanced-usage/front-end/dock.md) that displays information from your add-on to content editors on the front-end.
-- Display
+- Display information from from your add-on to content editors on the front-end by adding a [Prolet](/development/prolets.md) to the [ExpressionEngine Dock](/advanced-usage/front-end/dock.md).
+- Display information in the [Control Panel Dashboard](/control-panel/dashboard_management.md) using a [custom Dashboard Widget](/development/widgets.md).
 
-Understanding ExpressionEngine add-on development removes the limit of what you can build with ExpressionEngine.
+These are just a few ideas of what you can do with custom add-ons. The possibilities are almost endless. 
 
 ## Getting Started
 Getting started making your own add-on is incredibly easy with the CLI. To begin making an add-on simply use the `make:addon` command from the [CLI](/cli/intro.html). 
@@ -64,7 +64,20 @@ amazing_add_on/
 ┗ upd.amazing_add_on.php
 ```
 
-This is the starting point of an add-on and is enough to begin creating template tags, extension hooks, and much more! 
+This is the starting point of an add-on and is enough to begin creating template tags, extension hooks, and much more! From here you can add more functionality to your add-on depending on your needs. 
+
+Here's a list of functionality that can be added to your add-on:
+
+- [Extension hooks](development/extensions.md)
+- [Control Panel Pages](development/modules.md)
+- [Actions](development/actions.md)
+- [Fieldtypes](development/fieldtypes/fieldtypes.md)
+- [CLI Commands](cli/creating-a-command.md)
+- [Template Tags](development/custom-template-tags.md)
+- [Language Files](development/add-on-language-files.md)
+- [Publish Form Tabs](development/tab-files.md)
+- [Prolets](development/prolets.md)
+- [Dashboard Widgets](development/widgets.md)
 
 Continue reading below to understand all the files and folders found in the structure of an add-on.
 
@@ -185,3 +198,7 @@ The `Model` folder holds all models that we are creating with our add-on.
 ### `widgets`
 The `widgets` folder holds all dashboard widgets that we are creating with our add-on.
 
+## A Word About Legacy Add-On Development
+In the past add-ons were often categorized based on their functionality. We identified our add-on to ExpressionEngine as a fieldtype, extension, module, or plug-in. Thus there was never a clear process to of how to structure one add-on that was all these categories in one. With the release of 6.4.x and 7.2.x we have changed that. The CLI was updated to make creating add-ons and adding functionality incredibly easy, while the docs were also updated to reflect the ideal workflow of creating an add-on. 
+
+While the latest changes shift our view of add-ons and how developers will create add-ons, you may still come across add-ons using the old methodology. We have left much of the old methods and structure in place so that older add-ons will continue to work. However, we are choosing not actively update the documentation for the old methods because we feel it's no longer in the best interest of the community to develop add-ons in this way. If you need to access how the docs once were regarding add-ons add-ons, you can reference the docs in GitHub here: 
