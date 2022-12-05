@@ -7,15 +7,15 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Add-on Update File `upd.[addon_name].php`
+# Add-on Update File
 
-The `upd.[addon_name].php` file (commonly just called the `upd` file) is critical to ExpressionEngine knowing what to do with your add-on. Here we tell ExpressionEngine what actions to register, core hooks we want to use, database tables to update, and much more. We need to tell ExpressionEngine what to do when we install and add-on, update an add-on, and uninstall and add-on. Thankfully the CLI takes care of most of this for us. 
+The `upd.[addon_name].php` file (commonly just called the `upd` file) is critical to ExpressionEngine knowing what to do with your add-on. Here we tell ExpressionEngine what actions to register, core hooks we want to use, database tables to update, and much more. We need to tell ExpressionEngine what to do when we install an add-on, update an add-on, and uninstall and add-on. Thankfully the CLI takes care of most of this for us. 
 
 ## Initial Setup
 
 When you first create your add-on using the [`make:addon`](/cli/built-in-commands/make-addon.md) command from the CLI, a `upd` file is created for you in the root of your add-on.
 
-Here I have created an Amazing Add-on which currently has a module and has some extensions that interact with the core hooks.
+Here I have created an add-on called Amazing Add-on using the CLI.
 
 ```
 <?php
@@ -64,7 +64,7 @@ The first thing you will notice in our `Amazing_add_on_upd` class is a list of p
 ```
 
 ## Install Your Add-On (`install()`)
-The CLI automatically generates our install method. This method will ensure that all extensions and actions declared above will be properly installed. If you just need to install actions and/or extensions, then you can leave this method as is. Otherwise use this section to add tabs to saved [publish layouts](), update the database, or do something else when the add-on is installed.
+The CLI automatically generates our install method. This method will ensure that all extensions and actions declared above will be properly installed. If you only need to install actions and/or extensions, then you can leave this method as is. Otherwise, use this section to add tabs to saved [publish layouts](), update the database, or do something else when the add-on is installed.
 
 
 | Parameter | Type      | Description                                             |
@@ -98,7 +98,7 @@ Optionally add the publish page tab fields to any saved publish layouts. This is
 | --------- | ------- | ------------------------------------------------ |
 | Returns   | `Array` | Associative array of the tab name and tab fields |
 
-An optional function, included only if your add-on adds a tab to the publish page. This function should return an multidimensional associative array, the top array key consisting of the tab name, followed by any field names, with each field having a variety of default settings. Note that when the fields are added to the publish page, they are namespaced to prevent variable collisions:
+An optional function included only if your add-on adds a tab to the publish page. This function should return a multidimensional associative array: the top array key consisting of the tab name, followed by any field names, with each field having a variety of default settings. Note that when the fields are added to the publish page, they are namespaced to prevent variable collisions:
 
     function tabs()
     {
@@ -127,7 +127,7 @@ Be sure that you also update your [`install()` function](#adding-publish-tabs) t
 
 
 ## Update Your Add-on (`update()`)
-The `update` method is will run code when a user installs an update to our add-on. 
+The `update` method will run code when a user installs an update to our add-on. 
 
 | Parameter | Type      | Description                                                        |
 | --------- | --------- | ------------------------------------------------------------------ |
