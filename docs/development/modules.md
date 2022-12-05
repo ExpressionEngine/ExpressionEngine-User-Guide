@@ -11,29 +11,31 @@ lang: php
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Add Settings To Your Add-On
+# Add Control Panel Pages To Your Add-On
 
 [TOC]
 
-If you have ever used some of the add-ons that ship with ExpressionEngine such as Block and Allow or Pro Search, you will notice those add-ons have settings and configuration pages associated with them in the Control Panel. You add this functionality to your add-on using Control Panel files, also known as `Mcp` files. Whenever you add settings to your add-on using the CLI, an `Mcp` and `views` folder is automatically created for you, opening the door to creating your own Control Panel settings and pages.
+If you have ever used some of the add-ons that ship with ExpressionEngine such as [Block and Allow](/add-ons/blocklist.md) or [Pro Search](/add-ons/pro-search/overview.md), you will notice those add-ons have settings and configuration pages associated with them in the Control Panel. You add this functionality to your add-on using Control Panel Routes, also known as `Mcp` files. Whenever you add Control Panel Routes to your add-on using the CLI, an `Mcp` and `views` folder is automatically created for you, opening the door to creating your own Control Panel settings and pages.
 
-## Generate Your Settings Pages
+NOTE:**NOTE:** Control Pages are what is rendered in the browser when visiting your add-on in the Add-on Manager. Control Panel Routes are what we had to our add-on that tells ExpressionEngine to render the pages. Think of it as we add a route to create a page.
 
-Add settings to your add-on using the `make:settings`.
+## Generate Your Route
+
+Add a route to your add-on using the `make:mcp-route`.
 
 ```
-php system/ee/eeclip.php make:settings
+php system/ee/eeclip.php make:mcp-route
 ```
 
-Follow the prompts to add settings to your add-on.
+Follow the prompts to add the route to your add-on.
 
-This will create an `mcp[addon_name].php` file in your add-on along with a `Mcp` and `views` folder.
+This will create an `mcp.[addon_name].php` file in your add-on along with a `Mcp` and `views` folder.
 
-Inside of the `Mcp` folder, you will see that the CLI has created your first control panel page with `Mcp/index.php`. This page is accessible via The Add-On Manager -> [Add-On Name] or via the `/admin.php?/cp/addons/settings/[add-on-name]` URL.
+Inside of the `Mcp` folder, you will see that the CLI has created your first control route with `Mcp/Index.php` and a corresponding view in you `views` folder. This page is accessible via The Add-On Manager -> [Add-On Name] or via the `/admin.php?/cp/addons/settings/[add-on-name]` URL.
 
 
 ## Your First Control Panel Page
-When you first add settings to your add-on an `Mcp` folder along with an `Mcp/Index.php` starter file is created. The starter file will look something like this:
+When you first add a route to your add-on an `Mcp` folder along with an `Mcp/Index.php` starter file is created. The starter file will look something like this:
 
 ```
 <?php
@@ -70,24 +72,24 @@ class Index extends AbstractRoute
 }
 ```
 
-Let's disect the starter file:
+Let's dissect the starter file:
 
-### `protected $cp_page_title = 'home';` 
+### `$cp_page_title = 'home';` 
 `$cp_page_title` defines what is rendered in the `<title>` tag in the browser.
 
-### `public function process($id = false)`
-The `process()` function, similar to other functionality in your add-on, is the meat of your `Mcp` file. This is where you will render views, add sidebars, and add any nessecary logic.
+### `function process($id = false)`
+The `process()` function, similar to other functionality in your add-on, is the meat of your `Mcp` file. This is where you will render views, add sidebars, and add any necessary logic.
 
-## Adding Content To You Page
+## Adding Content To Your Page
 
-Now that you have a page in the Control Panel that users can access, let's look at how to output what you want users to see. There are three main areas to a Control Panel page where you will be outputting information to:
+Now that you have a page in the Control Panel that users can access, let's look at how to output what you want users to see. There are four main areas to a Control Panel page where you will be outputting information to:
 
 - Breadcrumb
 - Sidebar
 - Toolbar
 - Main Body
 
-![Add-on Breadcrumbs](_images/addon-mcp.png)
+![Add-on Breadcrumbs](_images/add-on-mcp.png)
 
 ### Breadcrumbs
 Located at the top of the Control Panel screen, breadcrumbs help users easily know where they are in the Control Panel and navigate your add-on's settings quickly.
@@ -142,11 +144,13 @@ The icon used in the toolbar for each link corresponds to each elements name. Av
 ### Main Body
 Probably the most important part of your add-on's control panel page is the main body.
 
-![Add-on Main body](_images/addon-main-body.png)
+![Add-on Main body](_images/add-on-main-body.png)
 
 There are two ways to output to the main body of your add-on's control page.
 - HTML String
 - Using Views
+
+The `setBody()` method is smart enough to know what you're trying to do. If you pass a single parameter to the method such as `$this->setBody($myString)`, the method knows you are only passing a single string to be rendered on your page. However, if you pass multiple parameters such as `$this->setBody('McpIndex', $variables);`, the method knows that you are passing a View and an array of variables that should be passed to the View. Continue reading to see examples of how to use these two options.
 
 
 #### HTML String
@@ -159,7 +163,7 @@ If you would just like to output a string of HTML for you control panel page, th
 
       $html = "<h2>Welcome to my add-on</h2><p>This is an amazing add-on that does amazing things!"
 
-      $this->setView($html);
+      $this->setBody($html);
 
       return $this;
     }
@@ -173,7 +177,7 @@ If you would like to make this page more dynamic or include additional functiona
 
 #### Views
 
-When your add-on was created via the CLI a `views` folder was also created in your add-on's folder. Inside of there a file was also created, `views/McpIndex.php`. By deafult this control panel page is already using the [View service](/development/services/view.md) by calling `$this->setView()`. 
+When your add-on was created via the CLI a `views` folder was also created in your add-on's folder. Inside of there a file was also created, `views/McpIndex.php`. By deafult this control panel page is already using the [View service](/development/services/view.md) by calling `$this->setBody()`. 
 
 ```
 $variables = [
@@ -181,10 +185,10 @@ $variables = [
     'color' => 'Green'
 ];
 
-$this->setView('McpIndex', $variables);
+$this->setBody('McpIndex', $variables);
 ```
 
-As we can see here, the Mcp file here is passing two arguments to `$this->setView()`:
+As we can see here, the Mcp file here is passing two arguments to `$this->setBody()`:
 - `McpIndex` is the name of the corresponding view to use (references `views/McpIndex.php`)
 - `$variables` is an array of variables that will be available to the view.
 
@@ -214,7 +218,7 @@ This renders as such:
 
 Taking this a bit further, we can use the [`CP\Form` service](development/services/cp-form.md).
 
-We'll start by using the `CP\Form` service in a method which will return our `$form` array.
+We'll start by using the `CP\Form` service in a method which will return our `$form` array. The `$form` array will then be passed to our View through our `$variables` array.
 
 ```
 private function getForm()
@@ -242,10 +246,14 @@ public function process($id = false)
   $this->addBreadcrumb('index', 'Home');
 
   // call our getForm() method to get
-  // out array
+  // our array
   $form = $this->getForm();
 
-  $variables = [];
+  // store our form in our $variables array
+  // to be passed into our view
+  $variables = [
+    'form'  => $form
+  ];
 
   $this->setBody('McpIndex', $variables);
 
@@ -267,7 +275,7 @@ private function getForm()
 }
 ```
 
-Inside of `views/McpIndex.php` well use the View service to render our `$form` array as the main body of our control panel page.
+Since we passed our form to our view in the `$variables` array, inside of `views/McpIndex.php`  we can now use the View service to render our `$form` array as the main body of our control panel page.
 
 ```
 if (isset($form)) {
@@ -293,15 +301,15 @@ Often your add-on will need more than one page in the Control Panel. The CLI mak
 Start with:
 
 ```
-php system/ee/eecli.php make:mcp
+php system/ee/eecli.php make:mcp-route
 ```
 
-This adds a new file to your `Mcp` folder which will act similar to the Index page we discussed above.
+This adds a new file to your `Mcp` folder which will act similar to the Index page we discussed above, along with a matching View in our `views` folder.
 
 Now inside of your `/Mcp` folder you have a new file and matching Mcp class based on the name you chose in the CLI. This page will be accessible based on the class name you provided. For example:
 
 ```
-php system/ee/eecli.php make:mcp
+php system/ee/eecli.php make:mcp-route
 View name? configurations
 Which add-on would you like to add this to? amazing_add_on
 Mcp successfully created!
@@ -345,7 +353,7 @@ class Configurations extends AbstractRoute
 
 This page will now be accessible via `/admin.php?/cp/addons/settings/amazing_add_on/configurations`.
 
-
+TIP:If you just want to create a new View without a Control Panel Route, simply duplicate a current view and rename the file and class accordingly.
 
 ## Javascript
 

@@ -15,7 +15,7 @@
 Actions in ExpressionEngine are URL endpoints which are typically reached with the `ACT` query parameter. An example of this might be `http://myamazingsite.com/?ACT=43` where 43 is the ID given to an action registered in the `exp_actions` database table. These actions are tied to methods in an add-on which can be used to accept input from forms or run some sort of other functionality defined in the add-on. 
 
 ## How To Build An Amazing Add-on?
-To generate an action we use the CLI to add the action to our exisiting add-on named "Amazing Add-on".
+To generate an action we use the CLI to add the action to our existing add-on named "Amazing Add-on".
 
 ```
 php system/ee/eecli.php make:action
@@ -34,40 +34,73 @@ amazing_addon
  ┗...
 ```
 
-We also notice that an `$actions` array is added to our `upd` file. This array will be used when your add-on is installed or uninstalled to tell ExpressionEngine what actions we needed added or removed with our add-on. 
+We also notice that a migration is created in our `database/migrations` folder. This migration is ran when your add-on is installed or uninstalled to tell ExpressionEngine what actions we needed added or removed with our add-on. 
 
 ```
-//upd.amazing_addon.php
-...
-    public $actions = [
-        [
+//database/migrations/[timestamp]_[mirgrationname].php
+<?php
+
+use ExpressionEngine\Service\Migration\Migration;
+
+class CreateactionamazingaztionforaddonamazingAddOn extends Migration
+{
+    /**
+     * Execute the migration
+     * @return void
+     */
+    public function up()
+    {
+        ee('Model')->make('Action', [
             'class' => 'Amazing_add_on',
-            'method' => '[MethodName]'
-        ]
-    ];
-...
+            'method' => 'AmazingAztion',
+            'csrf_exempt' => false,
+        ])->save();
+    }
+
+    /**
+     * Rollback the migration
+     * @return void
+     */
+    public function down()
+    {
+        ee('Model')->get('Action')
+            ->filter('class', 'Amazing_add_on')
+            ->filter('method', 'AmazingAztion')
+            ->delete();
+    }
+}
 ```
 
-In the database, our action has also been added to the `exp_actions` table.
+Actions are not available for use until they have been added to the `exp_actions` database table. Actions have the following schema in the database:
 
 | action_id | class          | method         |csrf_exempt |
 |-----------|----------------|----------------|------------|
 |        41 | Amazing_add_on | ExampleAction  |          0 |
 
+If you want your action to be accessible immediately, you can either run the migration that was created by the CLI or set a flag in the CLI when creating the add-on.
 
-## AddonName\Module\Actions
+### Run Migration
+After creating your action using the CLI run `$ php system/ee/eecli.php migrate`. When asked for the location, type in the name of your add-on. This will run all migrations that have not been ran for your add-on including entering the action into `exp_actions`.
+
+
+### Setting Flag
+On creation of an action, you can also specify to add it to the database after the CLI creates it. You can do this with the `--install` or `-i` flag by running your `make:action` command like so: `$ php system/ee/eecli.php make:action --install`.
+
+
+
+## AddonName/Module/Actions
 
 Once we've added an action to our add-on, an `Actions` folder is created inside our add-on's `Module` folder. The CLI will generate a class and respective file for us based on the method name we passed to the CLI when creating our action. In this case we added an action with a method named  "ExampleAction" to Amazing Add-on.
 
 ```
 php system/ee/eecli.php make:action
 What is the action name? ExampleAction
-What add-on is the action being added to? demo_addon
+What add-on is the action being added to? amazing_add_on
 Action created successfully!
 ```
 
 ```
-amazing_addon
+amazing_add_on
  ┣ Module
  ┃ ┣ Actions
  ┃ ┃ ┗ ExampleAction.php
@@ -82,7 +115,7 @@ Inside `Module/Actions/ExampleAction.php` we see the following code generated fo
 ```
 <?php
 
-namespace ExpressionengineDeveloper\DemoAddon\Module\Actions;
+namespace ExpressionengineDeveloper\AmazingAddon\Module\Actions;
 
 use ExpressionEngine\Service\Addon\Controllers\Action\AbstractRoute;
 
@@ -98,7 +131,7 @@ As we can see, the CLI has correctly created a new class using our method's name
 
 Inside of our class is the `process()` method. Anything we want to happen when a user reaches our action should be placed inside this `process()` function.
 
-### `exp_actions`
+## The `exp_actions` Database Table
 ExpressionEngine's `exp_actions` table is used to provide URL endpoints connected with actions in the core and in add-ons.
 
 The `exp_actions` table is comprised of 4 columns:
@@ -110,14 +143,29 @@ The `exp_actions` table is comprised of 4 columns:
 |method          | varchar(50) | Method in our add-on that is ran when this action is executed|
 |csrf_exempt     | tinyint(1)  | Is this endpoint csrf exempt or not                          |
 
-NOTE: If you want users to be able to reach this endpoint from outside your site (e.g. using cURL to from another domain or application to reach this endpoint and expect data to be returned ) then you will most likely need to set `csrf_exempt` to a value of `1`. Doing so, also makes this endpoint less secure though as you are allowing outside connections to your application.
 
+## Cross Site Request Forgery(CSRF) Exemption
 
-For our Amazing Add-on, we added an action with a method named ExampleAction. This was inserted into the `exp_actions` table as seen here:
+WARN:**Security Alert:**Setting your action to CSRF EXempt, also makes this endpoint less secure though as you are allowing outside connections to your application.
 
-| action_id | class          | method         |csrf_exempt |
-|-----------|----------------|----------------|------------|
-|        41 | Amazing_add_on | ExampleAction  |          0 |
+For security reasons, actions are protected by [Cross Site Request Forgery(CSRF)](/development/guidelines/security.md#cross-site-request-forgery). If you want users to be able to reach this endpoint from outside your site (e.g. using cURL to from another domain or application to reach this endpoint and expect data to be returned ) then you will most likely need to make your action CSRF exempt. 
+
+- To make your action immediately CSRF exempt, update the `csrf_exempt` value in the `exp_actions` table to be a value of `1`.   
+- To ensure your action is CSRF exempt for future installations, update the corresponding migration by setting the `csrf_exempt` property to `true`:
+```
+...
+public function up()
+{
+    ee('Model')->make('Action', [
+        'class' => 'Amazing_add_on',
+        'method' => 'AmazingAztion',
+        'csrf_exempt' => true,
+    ])->save();
+}
+...
+```
+- To set an action as CSRF exempt on creation, use the `--csrf_exempt` or `-c` flag in the CLI: `$ php system/ee/eecli.php make:action --csrf_exempt`
+
 
 
 ## Do Something
@@ -128,6 +176,9 @@ Let's do something with our action to demonstrate how this would work.
 In this example we want to insert a row into our database when a user submits a form. 
 
 For this example we'll use a really basic form that would be found in our template which uses our action's endpoint as the action for the form. We know our action's ID from the `exp_actions` table and we're just going to collect the user's first name and last name. We'll then take that information and store it in our database. For the purpose of this example, we'll insert this into a custom table we've added to ExpressionEngien which just has columns `ID`, `first_name`, `last_name`.
+
+
+Create our action:
 
 In our template:
 
@@ -149,7 +200,7 @@ Our action code:
 ```
 <?php
 
-namespace ExpressionengineDeveloper\DemoAddon\Module\Actions;
+namespace ExpressionengineDeveloper\AmazingAddOn\Module\Actions;
 
 use ExpressionEngine\Service\Addon\Controllers\Action\AbstractRoute;
 
@@ -174,7 +225,7 @@ class ExampleAction extends AbstractRoute
 }
 ```
 
-**A note about action IDs.** For the example above, we looked up the action ID in the database. However, the action ID of your method may be differnt in your database than someone's elses as the IDs are auto-incremented by the database on insertiton. Therefore, it's always best practice to fetch your action ID for use in a template by using the [`fetch_action_id()`](/development/legacy/libraries/cp.md#fetch_action_idclass-method) method from the `CP Class` library.
+**A note about action IDs.** For the example above, we looked up the action ID in the database. However, the action ID of your method may be different in your database than someone else as the IDs are auto-incremented by the database on insertion. Therefore, it's always best practice to fetch your action ID for use in a template by using the [`fetch_action_id()`](/development/legacy/libraries/cp.md#fetch_action_idclass-method) method from the `CP Class` library.
 
 We would do this in our add-on with something like this:
 
@@ -192,7 +243,7 @@ Our action code:
 ```
 <?php
 
-namespace ExpressionengineDeveloper\DemoAddon\Module\Actions;
+namespace ExpressionengineDeveloper\AmazingAddOn\Module\Actions;
 
 use ExpressionEngine\Service\Addon\Controllers\Action\AbstractRoute;
 
