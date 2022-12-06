@@ -33,12 +33,6 @@ NOTE: **Important:** In order for site visitors to be allowed to register for ac
 
 This parameter allows you to specify the primary role to assign the new member, overriding the default member setting.
 
-### `primary_role=`
-
-    primary_role="6"
-
-The primary role that will be assigned to registered member. If omitted, the default role will be assigned.
-
 ### `error_handling="inline"`
     error_handling="inline"
 
