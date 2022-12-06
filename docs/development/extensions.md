@@ -17,21 +17,21 @@ lang: php
 
 ## Overview
 
-Within ExpressionEngine are what is known as 'hooks'; little snippets of code in over 100 strategic places that allow the calling of third-party scripts that can rewrite and modify the inner workings of the program. By hooking into the core, you can do things like modify an entire Control Panel page, add/remove functionality, and modify the appearance of certain page elements. Hooks enable third party developers to modify aspects of ExpressionEngine without hacking the backend scripts.
+Within ExpressionEngine are what is known as "hooks"; little snippets of code in over 100 strategic places that allow the calling of third-party scripts that can rewrite and modify the inner workings of the program. By hooking into the core, you can do things like modify an entire Control Panel page, add/remove functionality, and modify the appearance of certain page elements. Hooks enable third party developers to modify aspects of ExpressionEngine without hacking the core.
 
-## Generate Our Files
+## Generate Our Extension Files
 
 We can give our add-on the ability to hook into the core of ExpressionEngine by using the CLI:
 
 ```
-php system/ee/eecli.php make:extension-hook
+$ php system/ee/eecli.php make:extension-hook
 ```
 
 Follow the prompts to add an extension file to your add-on. 
 
 TIP: Files that interact with ExpressionEngine core hooks are referred to as "extensions" because they extend the functionality of ExpressionEngine.
 
-This will create an `ext[addon_name].php` file in our add-on along with an `Extensions` folder where will build out the code we want to run when we interact with a core hook. Inside our `Extensions` folder the CLI will create a file with the same name as the core hook we plan to use.
+This will create an `ext[addon_name].php` file in our add-on along with an `Extensions` folder where we will build out the code we want to run when we interact with a core hook. Inside our `Extensions` folder the CLI will create a file with the same name as the core hook we plan to use.
 
 ```
 amazing_add_on
@@ -47,8 +47,8 @@ TIP: A single add-on can interact with as many hooks as you want.
 
 Prior to ExpressionEngine 6.4.0 and 7.2.0, all code that was used to hook into the core was placed in our `ext.[addon_name].php` file. However, now that file mainly just extends the `Extension` service and routes ExpressionEngine to reference the `Extensions` folder in our add-on.
 
-## `AddonName\Extensions`
-Once we've added the abillity to hook into the core with our add-on, an `Extensions` folder is created. The CLI will generate a class and a respective file for each core hook we wish to use.
+## `AddonName/Extensions`
+Once we've added the ability to hook into the core with our add-on, an `Extensions` folder is created. The CLI will generate a class and a respective file for each core hook we wish to use.
 
 Here we have added the ability to interact with the [`typography_parse_type_end()`](/development/extension-hooks/global/typography.html#typography_parse_type_endstr-this-prefs) hook.
 
@@ -86,9 +86,9 @@ class TypographyParseTypeEnd extends AbstractRoute
 
 As we can see, the CLI has correctly created a new class using our core hook in PascalCase as the name.
 
-Inside our class is the `process()` function. Again the CLI has already added all parameters that will be passed in from the core hook.  Reference the Available Core Hooks section of the docs to read on what parameters your hook uses.
+Inside our class is the `process()` function. Again the CLI has already added all parameters that will be passed in from the core hook.  Reference the [Available Core Hooks]() section of the docs to read on what parameters your hook uses.
 
-From the [`typography_parse_type_end()`](/development/extension-hooks/global/typography.html#typography_parse_type_endstr-this-prefs) docs we can see that this hook modifies string after all other typography is processed. Thus we should be able to take a string, manipulate it, then pass it back to ExpressionEngine to be rendered in the template.
+From the [`typography_parse_type_end()`](/development/extension-hooks/global/typography.html#typography_parse_type_endstr-this-prefs) docs we can see that this hook modifies a string after all other typography is processed. Thus we should be able to take a string, manipulate it, then pass it back to ExpressionEngine to be rendered in the template.
 
 We know that we should expect the following parameters for this hook:
 
@@ -117,6 +117,8 @@ class TypographyParseTypeEnd extends AbstractRoute
 {
     public function process($str, $obj, $prefs)
     {
+        //check if $str has content, if so replace
+        //all "e" with "EE"
         if(!is_null($str) ){
             $str = str_replace("e","EE",$str);
         }
