@@ -112,8 +112,9 @@ This would add a breadcrumb that would look like `Add-Ons -> [Add-On Name] -> Se
 ### Sidebar
 If your add-on has multiple Control Panel pages, a sidebar can be incredibly helpful for your users to easily navigate between pages. Sidebars can either be generated automatically or manually. 
 
-#### Automatically Generate Your Sidebar
-We can use the `make:sidebar` CLI command to generate a sidebar file for us. 
+Both of these options start with generating your sidebar class using the CLI.
+
+We use the `make:sidebar` CLI command to generate a sidebar file for us. 
 
 ```
 $ php system/ee/eecli.php make:sidebar
@@ -156,7 +157,8 @@ class Sidebar extends AbstractSidebar
 }
 ```
 
-That's it! Our `Sidebar` class will scan our `Mcp` folder for all available Control Panel routes and automatically create respective entries in our sidebar. There's no need to add the sidebar to your Control Panel page as it will automatically be added when the page is rendered. 
+#### Automatically Generate Your Sidebar
+If you'd like to have your sidebar automatically generated then that's it! The `Sidebar` class will scan our `Mcp` folder for all available Control Panel routes and automatically create respective entries in our sidebar. There's no need to add the sidebar to your Control Panel page as it will automatically be added when the page is rendered. 
 
 Example:
 
@@ -178,14 +180,40 @@ Would produce a sidebar in the Control Panel like this:
 ![control panel sidebar](_images/addon_sidebar_start.png)
 
 
-You can take this a step further by adjusting the following properties in your `Mcp` files to adjust how sidebar items are displayed:
-- **`protected $sidebar_title (string)`** - By default the sidebar link text is based on your route's name. This property will overwrite the text displayed for this route.
-- **`protected $sidebar_icon (string)`** - The Font Awesome icon you wish to display next to the sidebar link for this route.
-- **`protected $sidebar_is_folder (bool)`** - 
-- **`protected $sidebar_is_list (bool)`** - 
-- **`protected $exclude_from_sidebar (bool)`** - Exclude this route from the sidebar.
-- **`protected $sidebar_divider_before (bool)`** - Inserts a divider in the sidebar before 
-- **`protected $sidebar_divider_after (bool)`** - 
+You can take this a step further by adjusting the following properties in your Control Panel routes (`Mcp/[route_name].php`) to adjust how sidebar items are displayed:
+##### `protected $sidebar_title (string)`
+By default the sidebar link text is based on your route's name. This property will overwrite the text displayed for this route.
+
+##### `protected $sidebar_icon (string)`
+The Font Awesome icon you wish to display next to the sidebar link for this route.
+
+##### `protected $sidebar_priority (int)`
+Give this route a higher priority in the sidebar. Higher priority items will appear first in the sidebar.
+
+##### `protected $exclude_from_sidebar (bool)`
+Exclude this route from the sidebar.
+
+##### `protected $sidebar_divider_before (bool)`
+Inserts a divider in the sidebar before the link to this route.
+
+##### `protected $sidebar_divider_after (bool)`
+Inserts a divider in the sidebar after the link to this route.
+
+
+You can even modify the generated sidebar in the `process()` method of your `Mcp/Sidebar.php` file by utilizing the [`CP/Sidebar Service`](development/services/sidebar.md). 
+
+#### Manually Generate Your Sidebar
+
+We will set the `$automatic` property in our `Mcp/Sidebar.php` file to `false`.
+
+```
+public $automatic = false;
+```
+
+This tells our Sidebar class not to automatically create any sidebars. 
+
+From here you can utilize utilize the [`CP/Sidebar Service`](development/services/sidebar.md) in the `process()` method of our Sidebar class to manually create your sidebar and all related items.
+
 
 ### Toolbar
 
