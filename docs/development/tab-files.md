@@ -14,25 +14,73 @@ lang: php
 
 # Adding Publish Layout Tabs
 
+
+## Overview
 Add-ons can also add tabs which are visible on in [Publish Layouts](control-panel/channels.md#publish-layouts). Respectivley these tabs would also be visible on the Entry Publish/Edit page if selected in the publish layout. Two things are required for your add-on to have this functionality:
-- [`tabs()` method](/development/add-on-update-file.md#add-publish-tabs-with-your-add-on-tabs) addded to the Update File
+- [`tabs()` method](/development/add-on-update-file.md#add-publish-tabs-with-your-add-on-tabs) added to the Update File
 - The Tab File (`tab.[addon_name].php`)
 
-## The Tab File (`tab.module_name.php`)
+Here is an example of the publish layout's tab for the Structure add-on:
+![structure tab](_images/structure_tab.png)
+
+## Creating The Tab File
+Tab files are not currently able to be generated through the CLI, thus you will need to manually create the file `tab.[addon_name].php` in the root of your add-on's folder.
+
+```
+amazing_add_on
+...
+┣ tab.amazing_add_on.php
+┗...
+```
+
+## The Tab File Structure
+
+```
+<?php
+
+class Amazing_add_on_tab
+{
+
+    public function display($channel_id, $entry_id = ''){
+
+        $settings = [
+            //array of settings
+        ]
+        return $settings;
+    }
+
+    public function validate($entry, $values){
+        $validator = ee('Validation')->make(array(
+            'amazing_field_one' => 'required',
+            'amazing_field_two' => 'required|enum[y,n]',
+        ));
+
+        return $validator->validate($values);
+    }
+
+    public function cloneData($entry, $values){
+
+        return $values;
+    }
+
+    public function save($entry, $values){
+
+    }
+
+    public function delete($entry_ids){
+
+    }
+    
+
+}
+```
 
 **class `Add_on_name_tab`**
-
-To add Publish Tabs
 
 There are no required class variables. Because multiple modules may be adding fields to the publish page, all third party tab fields are namespaced using the package name when displayed on the publish page. This namespacing will be stripped prior to any data being returned to the tab functions.
 
 NOTE: **Note:** if your module includes a tab, do not forget to indicate this in the update file when installing the module. Further, be sure to include the `tabs()` function in the update file, and use it when updating custom layouts on installation and uninstallation.
 
-## Tab File Function Reference
-
-**class `Module_name_tab`**
-
-[TOC=3]
 
 ### `display($channel_id, $entry_id = '')`
 
