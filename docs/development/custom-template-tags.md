@@ -17,7 +17,9 @@ lang: php
 
 ## Overview
 
-An add-on's template tags can be used anywhere in templates to help edit content.
+TIP:If you are unfamiliar with Template Tags be sure to read the docs on [ExpressionEngine's template language](/templates/language.md) first. 
+
+Creating your own custom template tags allows you to display dynamic data from your add-on anywhere you want, in any template.
 
 ## Creating Template Tags
 Tags are created via the CLI by using the `make:template-tag` command. 
@@ -27,10 +29,6 @@ php system/ee/eecli.php make:template-tag
 ``` 
 
 Follow the prompts to add a tag file to your add-on. 
-
-Now, let's update the class to read the timezone that is passed in:
-
-
 
 This will create an `Models/Tags` folder in your add-on.
 
@@ -62,11 +60,12 @@ class ExampleTag extends AbstractRoute
 }
 ```
 
-As we can see, the CLI has correctly created a new class using our tag's name in PascalCase as the class name.
 
 Inside of our class is the `process()` method. Anything we want to happen when our template tag is used should be placed inside this `process()` function.
 
-After your tag is created, you can use your tag by just using `{exp:[addon_name][tag_name]}`. In the example above, we created a tag named "Example Tag". We can now use the tag `{exp:amazing_add_on:example_tag}` and the text "My Tag" will be outputted to my template.
+After your tag is created, you can use your tag by just using `{exp:[addon_name][tag_name]}`.    
+
+In the example above, we created a tag named "Example Tag". We can now use the tag `{exp:amazing_add_on:example_tag}` and the text "My Tag" will be outputted to my template.
 
 
 ## Tag Construction
@@ -96,7 +95,7 @@ Single tags are designed to return a single value.  Tag pairs look like this:
 
 Tag pairs allow you to process the information contained between the tags. In the above example, the text between the pairs would be encoded with XML entities.
 
-## Creating Single Tags
+## Creating Single Template Tags
 Single Tags are the easiest template tags to create and process. Here we'll add a single tag to our add-on using the CLI. We'll name the tag Amazing Text.
 
 ```
@@ -138,7 +137,7 @@ This would render in the browser as:
 Here is some amazing text: ExpressionEngine is the best CMS in the world!
 ```
 
-## Creating Tag Pairs
+## Creating Tag Pair Template Tags
 
 Often you will want to process content contained between a pair of tags. Let's create a simple tag that makes text bold to illustrate how this is done. Our example plugin will have this syntax:
 
@@ -292,6 +291,8 @@ This typically looks something like this:
 
 In the snippet above, we're passing in the `channel` and `limit` as parameters. We're then expecting the Channel Entries tag to replace the `{title}` and `{body}` **variables** when the tag is parsed. Now, let's do something similar to our add-on.
 
+
+## Create A Tag With Variables
 Let's add a tag to our add-on that will render the current date and time. The user can pass in their timezone and the tag will return the current Date and time.
 
 First, generate the tag (we're calling our tag "date and time" and adding it to our Amazing Add-On):

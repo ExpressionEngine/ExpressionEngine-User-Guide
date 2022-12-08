@@ -12,9 +12,9 @@
 [TOC]
 
 ## Overview
-Actions in ExpressionEngine are URL endpoints which are typically reached with the `ACT` query parameter. An example of this might be `http://myamazingsite.com/?ACT=43` where 43 is the ID given to an action registered in the `exp_actions` database table. These actions are tied to methods in an add-on which can be used to accept input from forms or run some sort of other functionality defined in the add-on. 
+Actions in ExpressionEngine are URL endpoints that are reached with the `ACT` query parameter. An example of this might be `http://myamazingsite.com/?ACT=43` where 43 is the ID given to an action registered in the `exp_actions` database table. These actions are tied to methods in an add-on which can be used to accept input from forms or run some sort of other functionality defined in the add-on. 
 
-## How To Build An Amazing Add-on?
+## How To Build An Amazing Action?
 To generate an action we use the CLI to add the action to our existing add-on named "Amazing Add-on".
 
 ```
@@ -79,18 +79,18 @@ Actions are not available for use until they have been added to the `exp_actions
 
 If you want your action to be accessible immediately, you can either run the migration that was created by the CLI or set a flag in the CLI when creating the add-on.
 
-### Run Migration
+### Run Migration To Activate
 After creating your action using the CLI run `$ php system/ee/eecli.php migrate`. When asked for the location, type in the name of your add-on. This will run all migrations that have not been ran for your add-on including entering the action into `exp_actions`.
 
 
-### Setting Flag
+### Setting Flag To Activate On Creation
 On creation of an action, you can also specify to add it to the database after the CLI creates it. You can do this with the `--install` or `-i` flag by running your `make:action` command like so: `$ php system/ee/eecli.php make:action --install`.
 
 
 
 ## AddonName/Module/Actions
 
-Once we've added an action to our add-on, an `Actions` folder is created inside our add-on's `Module` folder. The CLI will generate a class and respective file for us based on the method name we passed to the CLI when creating our action. In this case we added an action with a method named  "ExampleAction" to Amazing Add-on.
+Once we've added an action to our add-on, an `Actions` folder is created inside our add-on's `Module` folder. The CLI will generate a class and respective file for us based on the action name we passed to the CLI when creating our action. In this case we added an action named  "ExampleAction" to Amazing Add-on.
 
 ```
 php system/ee/eecli.php make:action
@@ -108,7 +108,7 @@ amazing_add_on
 ```
 
 
-### class [MethodName]
+### class [ActionName]
 
 Inside `Module/Actions/ExampleAction.php` we see the following code generated for us:
 
@@ -127,7 +127,7 @@ class ExampleAction extends AbstractRoute
 }
 ```
 
-As we can see, the CLI has correctly created a new class using our method's name in PascalCase as the class name.
+As we can see, the CLI has correctly created a new class using our action's name in PascalCase as the class name.
 
 Inside of our class is the `process()` method. Anything we want to happen when a user reaches our action should be placed inside this `process()` function.
 
@@ -179,7 +179,7 @@ Let's do something with our action to demonstrate how this would work.
 ### Form Data
 In this example we want to insert a row into our database when a user submits a form. 
 
-For this example we'll use a really basic form that would be found in our template which uses our action's endpoint as the action for the form. We know our action's ID from the `exp_actions` table and we're just going to collect the user's first name and last name. We'll then take that information and store it in our database. For the purpose of this example, we'll insert this into a custom table we've added to ExpressionEngien which just has columns `ID`, `first_name`, `last_name`.
+For this example we'll use a really basic form that would be found in our template which uses our action's endpoint as the action for the form. We know our action's ID from the `exp_actions` table and we're just going to collect the user's first name and last name. We'll then take that information and store it in our database. For the purpose of this example, we'll insert this into a custom table we've added to ExpressionEngine which just has columns `ID`, `first_name`, `last_name`.
 
 
 Create our action:
@@ -189,9 +189,11 @@ What is the action name? ExampleAction
 What add-on is the action being added to? [amazing_add_on,...]: amazing_add_on
 ```
 
-This creates our required files. Now we had some functionality to our action which will add the first and last name submitted from a form to our custom database table.
+This creates our required files.   
 
-Our action code:
+Now we had some functionality to our action which will add the first and last name submitted from a form to our custom database table.
+
+Our action's code (`Module/Actions/ExampleAction.php`):
 
 ```
 <?php
@@ -221,7 +223,7 @@ class ExampleAction extends AbstractRoute
 }
 ```
 
-In our template:
+Our template code:
 
 ```
 <form method="post" action="/?ACT=41">
@@ -237,9 +239,9 @@ In our template:
 ```
 
 
-**A note about action IDs.** For the example above, we looked up the action ID in the database. However, the action ID of your method may be different in your database than someone else as the IDs are auto-incremented by the database on insertion. Therefore, it's always best practice to fetch your action ID for use in a template by using the [`fetch_action_id()`](/development/legacy/libraries/cp.md#fetch_action_idclass-method) method from the `CP Class` library.
+**A note about action IDs.** For the example above, we looked up the action ID in the database. However, the action ID of your method may be different in your database than someone else as the IDs are auto-incremented by the database on insertion. Therefore, when dynamically creating the form with a custom template tag, it's always best practice to fetch your action ID for use in a template by using the [`fetch_action_id()`](/development/legacy/libraries/cp.md#fetch_action_idclass-method) method from the `CP Class` library.
 
-We would do this in our add-on with something like this:
+We would do this in our add-on's template tag with something like this:
 
 ```
 $aid = ee()->cp->fetch_action_id(`Amazing_add_on`, `ExampleAction`);
@@ -248,7 +250,7 @@ $aid = ee()->cp->fetch_action_id(`Amazing_add_on`, `ExampleAction`);
 
 ### Return Data
 
-In this next example we are just creating an endpoint which will be reachable from servers outside of our domain. We are going to expect the application to use cURL or similar libray to post an ID to our endpoint. Upon receiving the request our action will return the name of the entry matching the ID if it exists.
+In this next example we are just creating an endpoint which will be reachable from servers outside of our domain. We are going to expect the application to use cURL or similar library to post an ID to our endpoint. Upon receiving the request our action will return the name of the entry matching the ID if it exists.
 
 Create our action:
 ```
@@ -317,6 +319,13 @@ The response:
 ```
 This is because of the [`csrf_exempt` value](#cross-site-request-forgerycsrf-exemption) mentioned above. To fix this we can go into the `exp_actions` table of our database and update the `csrf_exempt` column to `1`. 
 
-Now when I send that same request, I simply get the entry title I requested.
+Now when I send that same request, I simply get the entry title I requested:
 
+The response after disabling CSRF protection:
+
+```
+...
+The Entry You Requested
+...
+```
 

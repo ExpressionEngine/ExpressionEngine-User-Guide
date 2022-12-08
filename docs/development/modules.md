@@ -15,16 +15,16 @@ lang: php
 
 [TOC]
 
-If you have ever used some of the add-ons that ship with ExpressionEngine such as [Block and Allow](/add-ons/blocklist.md) or [Pro Search](/add-ons/pro-search/overview.md), you will notice those add-ons have settings and configuration pages associated with them in the Control Panel. You add this functionality to your add-on using Control Panel Routes, also known as `Mcp` files. Whenever you add Control Panel Routes to your add-on using the CLI, an `Mcp` and `views` folder is automatically created for you, opening the door to creating your own Control Panel settings and pages.
+If you have ever used some of the add-ons that ship with ExpressionEngine such as [Block and Allow](/add-ons/blocklist.md) or [Pro Search](/add-ons/pro-search/overview.md), you will notice those add-ons have settings and configuration pages associated with them in the Control Panel. You add this functionality to your add-on using Control Panel Routes, also known as `Mcp` files. Whenever you add a Control Panel Route to your add-on using the CLI, an `Mcp` and `views` folder is automatically created for you, opening the door to creating your own Control Panel settings and pages.
 
 NOTE:**NOTE:** Control Pages are what is rendered in the browser when visiting your add-on in the Add-on Manager. Control Panel Routes are what we had to our add-on that tells ExpressionEngine to render the pages. Think of it as we add a route to create a page.
 
 ## Generate Your Route
 
-Add a route to your add-on using the `make:mcp-route`.
+If your add-on doesn't already have the required `Mcp` and `views` files, you can add a route to your add-on using the `make:mcp-route` command in the CLI.
 
 ```
-php system/ee/eeclip.php make:mcp-route
+$ php system/ee/eeclip.php make:mcp-route
 ```
 
 Follow the prompts to add the route to your add-on.
@@ -139,22 +139,24 @@ $header['toolbar_items'] = array(
 ee()->view->header = $header;
 ```
 
-The icon used in the toolbar for each link corresponds to each elements name. Available icons are `add`,`author`,`cart`,`category`,`caution`,`changes`,`channel`,`close`,`columns`,`dashboard`,`date`,`delete`,`export`,`files`,`filters`,`folder`,`gift`,`home`,`invisible`,`issue`,`locked`,`logout`,`members`,`missing`,`nested`,`offline`,`primary`,`remove`,`reorder`,`settings`,`status`,`success`,`sync`,`tabbed`,`tip`,`tools`,`user`,`view`,`visible`,`export`,`settings`.
+The icon used in the toolbar for each link corresponds to each items `title` element in the array. Available icons are `add`,`author`,`cart`,`category`,`caution`,`changes`,`channel`,`close`,`columns`,`dashboard`,`date`,`delete`,`export`,`files`,`filters`,`folder`,`gift`,`home`,`invisible`,`issue`,`locked`,`logout`,`members`,`missing`,`nested`,`offline`,`primary`,`remove`,`reorder`,`settings`,`status`,`success`,`sync`,`tabbed`,`tip`,`tools`,`user`,`view`,`visible`,`export`,`settings`.
 
 ### Main Body
-Probably the most important part of your add-on's control panel page is the main body.
+Probably the most important part of your add-on's Control Panel page is the main body.
 
 ![Add-on Main body](_images/add-on-main-body.png)
 
-There are two ways to output to the main body of your add-on's control page.
+There are two ways to output to the main body of your add-on's page.
 - HTML String
 - Using Views
 
-The `setBody()` method is smart enough to know what you're trying to do. If you pass a single parameter to the method such as `$this->setBody($myString)`, the method knows you are only passing a single string to be rendered on your page. However, if you pass multiple parameters such as `$this->setBody('McpIndex', $variables);`, the method knows that you are passing a View and an array of variables that should be passed to the View. Continue reading to see examples of how to use these two options.
+The `setBody()` method is smart enough to know what you're trying to do. If you pass a single parameter to the method such as `$this->setBody($myString)`, the method knows you are only passing a single string to be rendered on your page. However, if you pass multiple parameters such as `$this->setBody('McpIndex', $variables);`, the method knows that you are passing a View and an array of variables that should be passed to the View.    
+
+Continue reading to see examples of how to use these two options.
 
 
 #### HTML String
-If you would just like to output a string of HTML for you control panel page, then you would just do something like this inside the 
+If you would just like to output a string of HTML for you control panel page, then you would just do something like the following: 
 
 ```
  public function process($id = false)
@@ -177,7 +179,7 @@ If you would like to make this page more dynamic or include additional functiona
 
 #### Views
 
-When your add-on was created via the CLI a `views` folder was also created in your add-on's folder. Inside of there a file was also created, `views/McpIndex.php`. By deafult this control panel page is already using the [View service](/development/services/view.md) by calling `$this->setBody()`. 
+When your add-on was created via the CLI a `views` folder was also created in your add-on's folder. Inside of this folder a file was also created, `views/McpIndex.php`. By default this Control Panel page is already using the [View service](/development/services/view.md) by calling `$this->setBody()`. 
 
 ```
 $variables = [
@@ -188,7 +190,7 @@ $variables = [
 $this->setBody('McpIndex', $variables);
 ```
 
-As we can see here, the Mcp file here is passing two arguments to `$this->setBody()`:
+As we can see here, the `Mcp` file is passing two arguments to `$this->setBody()`:
 - `McpIndex` is the name of the corresponding view to use (references `views/McpIndex.php`)
 - `$variables` is an array of variables that will be available to the view.
 
@@ -216,7 +218,9 @@ This renders as such:
 ![add-on rendered with view](_images/add-on-simple-view.png)
 
 
-Taking this a bit further, we can use the [`CP\Form` service](development/services/cp-form.md).
+Taking this a bit further, we can use the [`CP\Form` service](development/services/cp-form.md) to display panels and forms similar to what is found on many pages in the Control Panel.
+
+TIP:Using the `CP\Form` is highly recommend to speed up your development and to maintain the integrity of the Control Panel design.
 
 We'll start by using the `CP\Form` service in a method which will return our `$form` array. The `$form` array will then be passed to our View through our `$variables` array.
 
@@ -236,7 +240,7 @@ private function getForm()
 }
 ```
 
-Now, let's add that to our Mcp file and be sure to call the `getForm()` method
+Now, let's add that to our `Mcp` file and be sure to pass the array returned from `getForm()` to our view.
 
 ```
 public function process($id = false)
@@ -275,7 +279,7 @@ private function getForm()
 }
 ```
 
-Since we passed our form to our view in the `$variables` array, inside of `views/McpIndex.php`  we can now use the View service to render our `$form` array as the main body of our control panel page.
+Since we passed our form to our view in the `$variables` array, inside of `views/McpIndex.php`  we can now use the View service to render our `$form` array as the main body of our Control Panel page.
 
 ```
 if (isset($form)) {
@@ -283,13 +287,12 @@ if (isset($form)) {
 }
 ```
 
-You're add-on will now have a control panel page with a form as seen in this screenshot:
+You're add-on will now have a Control Panel page with a form as seen in this screenshot:
 
 ![add-on with form](_images/add-on-view.png)
 
-You can easily have multiple views (think about if your add-on has [multiple control panel pages](#adding-more-pages). Simply use the CLI's `make:view` command then connect them to your Mcp pages by passing the view name to `$this->setBody();`
 
-TIP: This is only the begining of what you can do with forms in the Control Panel. Read more in the docs on the [`CP\Form` service](development/services/cp-form.md)() to understand what else is possible.
+TIP: This is only the beginning of what you can do with forms in the Control Panel. Read more in the docs on the [`CP\Form` service](development/services/cp-form.md)() to understand what else is possible.
 
 TIP: **{ee:u}** Learn more about the [CP\Form service on ExpressionEngine University](https://u.expressionengine.com/article/ultra-double-secret-manual-shared-form-part-four).
 
@@ -353,9 +356,11 @@ class Configurations extends AbstractRoute
 
 This page will now be accessible via `/admin.php?/cp/addons/settings/amazing_add_on/configurations`.
 
+At this point you probably want to make sure you update your breadcrumb on your second page and create a sidebar item to ensure users can easily access this page.
+
 TIP:If you just want to create a new View without a Control Panel Route, simply duplicate a current view and rename the file and class accordingly.
 
-## Javascript
+## JavaScript
 
 ExpressionEngine includes both its own JavaScript library as well as the [The jQuery](https://jquery.com/) JavaScript library, enabling developers to easily include JavaScript enhancements. It is worth noting some 'best practices' when using JavaScript in your control panel:
 

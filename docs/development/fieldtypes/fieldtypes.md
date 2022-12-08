@@ -15,12 +15,24 @@ lang: php
 
 [TOC]
 
+TIP: For an overview of what a Fieldtype is, read the [Fieldtype Overview docs](/fieldtypes/overview.md).
 
-NOTE: Fieldtypes can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](cli/built-in-commands/make-addon.md) for more information.
+
+## Generating A Custom Fieldtype
+
+Adding a custom fieldtype to your add-on is easy with the `make:fieldtype` command. 
+
+```
+$ php system/ee/eecli.php make:fieldtype
+compatiblity
+```
+
+Follow the prompts to complete the setup of your custom fieldtype.
+
 
 ## Basic File Structure
 
-All fieldtypes should be placed into the `system/user/addons` folder in a package and be named after that package name. So in a packaged named google_maps the fieldtype file will be `ft.google_maps.php`. All fieldtypes must inherit from the `EE_Fieldtype` base class and they must provide an \$info array with a name and version number.
+Once generated via the CLI a file named `ft.[addon_name].php` will created in your add-on's folder. All fieldtypes must inherit from the `EE_Fieldtype`.
 
     <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
