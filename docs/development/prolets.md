@@ -140,7 +140,7 @@ If the data returned is of *Array* type, it is being passed to ExpressionEngine 
 
     public function index()
     {
-        if (ee('Request)->isPost()) {
+        if (ee('Request')->isPost()) {
             //handle form submission
             return ee()->output->send_ajax_response(['success']);
         }

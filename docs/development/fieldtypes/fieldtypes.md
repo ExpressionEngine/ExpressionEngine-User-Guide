@@ -24,15 +24,25 @@ Adding a custom fieldtype to your add-on is easy with the `make:fieldtype` comma
 
 ```
 $ php system/ee/eecli.php make:fieldtype
-compatiblity
+Let's implement a fieldtype!
+What is the fieldtype name? Amazing Fieldtype
+What add-on is the fieldtype being added to? [amazing_add_on]:  amazing_add_on
+Building fieldype.
+Fieldtype created successfully!
 ```
 
-Follow the prompts to complete the setup of your custom fieldtype.
+This will create a `ft.[fieldtype_name].php` in your add-on's folder. In the example above, this creates a file named `ft.amazing__fieldtype.php`.
 
+```
+amazing_add_on
+ ...
+┣ ft.[fieldtype_name].php
+┗ ...
+ ```
 
 ## Basic File Structure
 
-Once generated via the CLI a file named `ft.[addon_name].php` will created in your add-on's folder. All fieldtypes must inherit from the `EE_Fieldtype`.
+All fieldtypes must inherit from the `EE_Fieldtype` base class and they must provide an `$info` array with a name and version number.
 
     <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
@@ -59,7 +69,7 @@ Once generated via the CLI a file named `ft.[addon_name].php` will created in yo
     /* End of file ft.google_maps.php */
     /* Location: ./system/user/addons/google_maps/ft.google_maps.php */
 
-NOTE: **Note:** All add-ons are required to have an [addon.setup.php file](development/addon-setup-php-file.md). This is where Fieldtypes can declare their compatibility with other Fieldtypes, allowing a site builder to switch an existing field to another compatible type, e.g. _text_ can be switched to _email_ and vice-versa. Please see [Fieldtype Compatibility Options](development/addon-setup-php-file.md#fieldtypes) for more details.
+NOTE: **Note:** Fieldtypes can declare their compatibility with other Fieldtypes in the `addon.setup.php` file, allowing a site admin to switch an existing field to another compatible type, e.g. _text_ can be switched to _email_ and vice-versa. Please see [Fieldtype Compatibility Options](development/addon-setup-php-file.md#fieldtypes) for more details.
 
 NOTE: We also have [Example fieldtype with annotations](development/fieldtypes/example.md) for your reference.
 
@@ -558,3 +568,7 @@ Here are the usage details for this function:
 A jQuery object of the field being affected by the current event is passed to the callback function.
 
 NOTE: **Note:** Please refer to [Enhanced Fieldtype Features](development/fieldtypes/enhanced.md) page for advanced topics, such ad working with Live Preview, Entry Manager, Entry Cloning, File Picker and Conditional Fields.
+
+## Do Something: Build A Fieldtype
+
+For a complete fieldtype example see the [Google Maps Fieldtype example](/development/fieldtypes/example.md).

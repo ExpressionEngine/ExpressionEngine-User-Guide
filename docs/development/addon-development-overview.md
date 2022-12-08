@@ -38,7 +38,7 @@ Getting started making an add-on is incredibly easy with the CLI. To begin makin
 $ php system/ee/eecli.php make:addon
 Let's build your add-on!
 What is the name of your add-on? Amazing Add-On
-Add-on description? This add-on does amazing things!
+Add-on description? [Amazing Add-on description] This add-on does amazing things!
 Add-on version? [1.0.0]1.0.0
 Add-on author? ExpressionEngine Developer
 Add-on author URL? www.expressionengine.com
@@ -47,15 +47,10 @@ Your add-on has been created successfully!
 
 ```
 
-This will create an add-on named Amazing Add-On in your `system/user/addons` folder with a file structure like below:
+This will create an add-on named Amazing Add-On in your `system/user/addons` folder with a skeleton file structure like below:
 
 ```
 amazing_add_on/
-┣ Module/
-┃ ┣ Actions/
-┃ ┃ ┗ ExampleAction.php
-┃ ┗ Tags/
-┃   ┗ ExampleTag.php
 ┣ language/
 ┃ ┣ english/
 ┃ ┃ ┣ amazing_add_on_lang.php
@@ -64,7 +59,7 @@ amazing_add_on/
 ┗ upd.amazing_add_on.php
 ```
 
-This is the starting point of an add-on and is enough to begin creating template tags, extension hooks, and much more! From here, you can add more functionality to your add-on depending on your needs. 
+At this point, your add-on can't really do anything other than be installed. However, from here, you can add more functionality to your add-on via the CLI depending on your needs. 
 
 Here's a list of functionality that can be added to your add-on and the corresponding CLI command if applicable:
 
@@ -96,6 +91,7 @@ amazing_add_on
  ┃ ┣ TemplatePostParse.php
  ┃ ┗ TypographyParseTypeEnd.php
  ┣ Mcp
+ ┃ ┣ Sidebar.php
  ┃ ┣ Index.php
  ┃ ┗ Page2.php
  ┣ Module
@@ -172,31 +168,51 @@ Reference [Adding Prolets](development/prolets.md) for more information on addin
 ### The Add-on Icon File `icon.svg`
 The add-on icon folder is used both in the Add-on Manager and in the Dock on the front-end to distinguish your add-on from others.
 
-### `/Extensions`
+### Extensions - `/Extensions`
 When we tell the CLI that we want to create an extension, classes are automatically created in the `Extensions` folder along with the above mentioned `ext.[addon_name].php` file. Interacting with hooks allows us to extend ExpressionEngine's functionality, thus we refer to these as "extensions". 
 
 TIP: Reference the [Extensions](development/extensions.md) section of the docs for more information on using extensions in your add-on.
 
-### `Module/Actions`
-The `Module/Actions` folder stores all the business logic for any actions that we are adding to ExpressionEngine with our add-on. Each action will have a separate file and corresponding class created based on information provided in the `$actions` array in the `upd` file.
+### Actions - `/Module/Actions`
+The `Module/Actions` folder stores all the business logic for any actions that we are adding to ExpressionEngine with our add-on. Each action will have a separate file and corresponding class created based on information provided in the `$actions` array in the `upd` file.   
+Reference [Adding Actions](development/actions.md) for more information on creating URL endpoints (actions) with your add-on.
+
+### Control Panel Pages - `/Mcp`
+The `Mcp` folder contains all the Control Panel pages and sidebar we create for our add-on.    
+Reference [Adding Control Panel Pages](development/modules.md) for more information on adding Control Panel pages with your add-on.
 
 ### `Module/Tags`
-The `Module/Tags` folder stores all the business logic for any template tags we create with our add-on. 
+The `Module/Tags` folder stores all the business logic for any template tags we create with our add-on.    
+Reference [Adding Template Tags](development/custom-template-tags.md) for more information on adding template tags with your add-on.
 
 ### `/views`
 The `views` folder contains all of our Control Panel views which will be used to render our add-on's control panel pages.
 
 ### `/language`
-The `language` folder contains all of our language files that will be used to display text on a page in whatever language is selected in the user’s account settings. 
+The `language` folder contains all of our language files that will be used to display text on a page in whatever language is selected in the user’s account settings.    
+Reference [Using Language Files](development/add-on-language-files.md) for more information on using language files with your add-on.
 
 ### `/database/migrations`
 The `/database/migrations` folder holds all migrations that will be ran on installation or updating of our add-on. Using the CLI, migrations can also be ran independently.
 
 ### `Model`
-The `Model` folder holds all models that we are creating with our add-on.
+The `Model` folder holds all models that we are creating with our add-on.     
+Reference [Building Your Own Models](/development/services/model/building-your-own.md) for more information on creating your own models with your add-on.
 
 ### `widgets`
 The `widgets` folder holds all dashboard widgets we create with our add-on.
+Reference [Developing Dashboard Widgets](development/widgets.md) for more information on creating widgets with your add-on.
+
+## Setting Default CLI Config Values 
+
+When creating an add-on via the CLI you will be asked for author and the author's URL. If you'd like to skip these questions when creating an add-on, you can set default values in your [config](/general/system-configuration-overrides.md#main-configuration-file) file like so:
+
+```
+...
+$config['cli_default_addon_author'] = 'ExpressionEngine Developer';
+$config['cli_default_addon_author_url'] = 'https://expressionengine.com';
+...
+```
 
 ## A Word About Legacy Add-On Development
 In the past, add-ons were often categorized based on their functionality. We identified our add-on to ExpressionEngine as a fieldtype, extension, module, or plug-in. Thus there was never a straightforward process on structuring one add-on that contained all these categories in one.   

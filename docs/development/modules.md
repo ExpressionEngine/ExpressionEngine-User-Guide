@@ -110,7 +110,82 @@ If you needed to add more levels to your breadcrumbs you can chain them together
 This would add a breadcrumb that would look like `Add-Ons -> [Add-On Name] -> Settings -> Configuration`
 
 ### Sidebar
-TBD
+If your add-on has multiple Control Panel pages, a sidebar can be incredibly helpful for your users to easily navigate between pages. Sidebars can either be generated automatically or manually. 
+
+#### Automatically Generate Your Sidebar
+We can use the `make:sidebar` CLI command to generate a sidebar file for us. 
+
+```
+$ php system/ee/eecli.php make:sidebar
+What add-on is the sidebar being added to? [amazing_add_on]:  amazing_add_on
+Building sidebar.
+Sidebar created successfully!
+```
+
+This will create the file `Mcp/Sidebar.php` in your add-on's folder.    
+
+```
+amazing_add_on
+┣ Mcp/
+┃ ┣ Sidebar.php
+┗ ...
+```
+
+**Note:** An add-on can only have one sidebar file.
+
+Inside of our `Sidebpar.php` file we'll have the following:
+
+```
+<?php
+
+namespace ExpressionEngineDeveloper\AmazingAddOn\Mcp;
+
+use ExpressionEngine\Service\Addon\Controllers\Mcp\AbstractSidebar;
+
+class Sidebar extends AbstractSidebar
+{
+    public $automatic = true;
+
+    /**
+     * @param false $id
+     * @return AbstractRoute
+     */
+    public function process()
+    {
+    }
+}
+```
+
+That's it! Our `Sidebar` class will scan our `Mcp` folder for all available Control Panel routes and automatically create respective entries in our sidebar. There's no need to add the sidebar to your Control Panel page as it will automatically be added when the page is rendered. 
+
+Example:
+
+With an add-on folder like this:
+
+```
+amazing_add_on
+┣ Mcp
+┃ ┣ Configurations.php
+┃ ┣ Settings.php
+┃ ┣ Licenses.php
+┃ ┣ Index.php
+┃ ┗ Sidebar.php
+┗ ...
+```
+
+Would produce a sidebar in the Control Panel like this:
+
+![control panel sidebar](_images/addon_sidebar_start.png)
+
+
+You can take this a step further by adjusting the following properties in your `Mcp` files to adjust how sidebar items are displayed:
+- **`protected $sidebar_title (string)`** - By default the sidebar link text is based on your route's name. This property will overwrite the text displayed for this route.
+- **`protected $sidebar_icon (string)`** - The Font Awesome icon you wish to display next to the sidebar link for this route.
+- **`protected $sidebar_is_folder (bool)`** - 
+- **`protected $sidebar_is_list (bool)`** - 
+- **`protected $exclude_from_sidebar (bool)`** - Exclude this route from the sidebar.
+- **`protected $sidebar_divider_before (bool)`** - Inserts a divider in the sidebar before 
+- **`protected $sidebar_divider_after (bool)`** - 
 
 ### Toolbar
 
