@@ -19,19 +19,21 @@ lang: php
 
 Within ExpressionEngine are what is known as "hooks"; little snippets of code in over 100 strategic places that allow the calling of third-party scripts that can rewrite and modify the inner workings of the program. By hooking into the core, you can do things like modify an entire Control Panel page, add/remove functionality, and modify the appearance of certain page elements. Hooks enable third party developers to modify aspects of ExpressionEngine without hacking the core.
 
-## Generate Our Extension Files
+## Creating Our Extension Files
 
 We can give our add-on the ability to hook into the core of ExpressionEngine by using the CLI:
 
 ```
 $ php system/ee/eecli.php make:extension-hook
+
 ```
 
-Follow the prompts to add an extension file to your add-on. 
 
 TIP: Files that interact with ExpressionEngine core hooks are referred to as "extensions" because they extend the functionality of ExpressionEngine.
 
-This will create an `ext[addon_name].php` file in our add-on along with an `Extensions` folder where we will build out the code we want to run when we interact with a core hook. Inside our `Extensions` folder the CLI will create a file with the same name as the core hook we plan to use.
+This will create an `ext.[addon_name].php` file in our add-on along with an `Extensions` folder where we will build out the code we want to run when we interact with a core hook. 
+
+Inside our `Extensions` folder the CLI will create a file with the same name as the core hook we plan to use.
 
 ```
 amazing_add_on
@@ -42,10 +44,6 @@ amazing_add_on
  ```
 
 TIP: A single add-on can interact with as many hooks as you want.
-
-## `ext.[addon_name].php`
-
-Prior to ExpressionEngine 6.4.0 and 7.2.0, all code that was used to hook into the core was placed in our `ext.[addon_name].php` file. However, now that file mainly just extends the `Extension` service and routes ExpressionEngine to reference the `Extensions` folder in our add-on.
 
 ## `AddonName/Extensions`
 Once we've added the ability to hook into the core with our add-on, an `Extensions` folder is created. The CLI will generate a class and a respective file for each core hook we wish to use.
@@ -102,9 +100,39 @@ We know that we should expect the following parameters for this hook:
 We also know that we should be returning a string from our `process()` function.
 
 
-## Do Something
+## Do Something - Create An Extension Hook
 
 Let's do something with our hook to demonstrate how this would work. We're going to continue working with the `typography_parse_type_end()` hook by replacing "e" with "EE" everywhere in our templates (because EE is amazing!)
+
+Using the CLI to generate the extension hook:
+
+```
+$ php system/ee/eecli.php make:extension-hook
+Let's implement an extension hook!
+What is the extension hook name? Amazing Hook
+What add-on is the extension hook being added to? [amazing_add_on]:  amazing_add_on
+Building Extension hook.
+Extension hook created successfully!
+```
+This creates our `Extensions/TypographyParseTypeEnd.php` file for us. This file will initially look like this:
+
+```
+
+<?php
+
+namespace ExpressionengineDeveloper\AmazingAddOn\Extensions;
+
+use ExpressionEngine\Service\Addon\Controllers\Extension\AbstractRoute;
+
+class TypographyParseTypeEnd extends AbstractRoute
+{
+    public function process()
+    {
+    }
+}
+```
+
+All the functionality we want to include when our hook is executed needs to go inside our `process()` method. Here we are going to take the string passed in by the `TypographyParseTypeEnd()` core hook, replace all instances of `e` with `EE`, and then return the updated string.
 
 ```
 <?php

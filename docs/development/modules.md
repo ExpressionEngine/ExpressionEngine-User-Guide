@@ -13,7 +13,7 @@ lang: php
 
 # Add Control Panel Pages To Your Add-On
 
-[TOC]
+[TOC=2-3]
 
 If you have ever used some of the add-ons that ship with ExpressionEngine such as [Block and Allow](/add-ons/blocklist.md) or [Pro Search](/add-ons/pro-search/overview.md), you will notice those add-ons have settings and configuration pages associated with them in the Control Panel. You add this functionality to your add-on using Control Panel Routes, also known as `Mcp` files. Whenever you add a Control Panel Route to your add-on using the CLI, an `Mcp` and `views` folder is automatically created for you, opening the door to creating your own Control Panel settings and pages.
 

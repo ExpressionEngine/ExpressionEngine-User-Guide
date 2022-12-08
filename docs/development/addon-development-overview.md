@@ -177,9 +177,9 @@ TIP: Reference the [Extensions](development/extensions.md) section of the docs f
 The `Module/Actions` folder stores all the business logic for any actions that we are adding to ExpressionEngine with our add-on. Each action will have a separate file and corresponding class created based on information provided in the `$actions` array in the `upd` file.   
 Reference [Adding Actions](development/actions.md) for more information on creating URL endpoints (actions) with your add-on.
 
-### Control Panel Pages - `/Mcp`
-The `Mcp` folder contains all the Control Panel pages and sidebar we create for our add-on.    
-Reference [Adding Control Panel Pages](development/modules.md) for more information on adding Control Panel pages with your add-on.
+### Control Panel Routes - `/Mcp`
+The `Mcp` folder contains all the Control Panel routes and we create for our add-on as well as our sidebar.    
+Reference [Adding Control Panel Pages](development/modules.md) for more information on adding Control Panel routes and pages with your add-on.
 
 ### `Module/Tags`
 The `Module/Tags` folder stores all the business logic for any template tags we create with our add-on.    
