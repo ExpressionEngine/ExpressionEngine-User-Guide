@@ -9,7 +9,7 @@ You can also build your own commands that will enable users to interact with you
 
 NOTE:Before adding a custom CLI Command to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
 
-## Generate Our Add-on
+## Creating An Amazing Command
 We add custom commands to the CLI when our add-on is installed by using the CLI.
 
 ```
@@ -24,16 +24,6 @@ This will create a `Commands` folder in your add-on along with a class and file 
 amazing_add_on
  ┣ Commands
  ┃ ┣ Command[CommandName].php
-```
-
-## `addon.setup.php`
-
-We see that the CLI has added our `Commands` folder and created our new class. However, the CLI has also modified our `addon.setup.php` file as well.
-
-```
-amazing_add_on
- ┣ Commands
- ┃ ┣ CommandAnAmazingCommand.php
 ```
 
 CLI Commands are installed through an add-on's `addon.setup.php` file. The CLI takes care of this for us. We can see here that CLI creates the `$commands` array inside the array that gets returned from our `addon.setup.php` file.
@@ -61,7 +51,7 @@ return [
 
 Now when our add-on is installed, users will have access to our new command.
 
-## `\Commands\Command[CommandName]`
+## Anatomy of a Command - `/Commands/Command[CommandName]`
 Inside of our add-on we now have a file named with our command's name (in PascalCase).
 
 In this example we have created a new command named "An Amazing Command" to our Amazing Add-on:
@@ -123,11 +113,6 @@ class CommandAnAmazingCommand extends Cli
     }
 }
 ```
-
-
-## Anatomy of a Command
-
-Creating commands is simple. Each commands is built in a similar way as part of a custom add-on:
 
 ### Class Structure
 

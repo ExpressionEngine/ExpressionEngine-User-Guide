@@ -21,7 +21,7 @@ Within ExpressionEngine are what is known as "hooks"; little snippets of code in
 
 NOTE:Before adding an extension hook to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
 
-## Creating Our Extension Files
+## Creating An Amazing Extension
 
 We can give our add-on the ability to hook into the core of ExpressionEngine by using the CLI:
 
@@ -47,7 +47,7 @@ amazing_add_on
 
 TIP: A single add-on can interact with as many hooks as you want.
 
-## `AddonName/Extensions`
+## Anatomy Of An Extension
 Once we've added the ability to hook into the core with our add-on, an `Extensions` folder is created. The CLI will generate a class and a respective file for each core hook we wish to use.
 
 Here we have added the ability to interact with the [`typography_parse_type_end()`](/development/extension-hooks/global/typography.html#typography_parse_type_endstr-this-prefs) hook.

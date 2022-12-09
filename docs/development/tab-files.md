@@ -14,6 +14,7 @@ lang: php
 
 # Adding Publish Layout Tabs
 
+[TOC]
 
 ## Overview
 Add-ons can also add tabs which are visible on in [Publish Layouts](control-panel/channels.md#publish-layouts). Respectivley these tabs would also be visible on the Entry Publish/Edit page if selected in the publish layout. Two things are required for your add-on to have this functionality:
@@ -25,7 +26,7 @@ Here is an example of the publish layout's tab for the Structure add-on:
 
 NOTE:Before adding a tab to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
 
-## Creating The Tab File
+## Creating An Amazing Tab File
 Tab files are not currently able to be generated through the CLI, thus you will need to manually create the file `tab.[addon_name].php` in the root of your add-on's folder.
 
 ```
@@ -35,7 +36,7 @@ amazing_add_on
 ┗...
 ```
 
-## The Tab File Structure
+## Anatomy Of A Tab File
 
 ```
 <?php

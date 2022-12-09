@@ -16,7 +16,7 @@ Actions in ExpressionEngine are URL endpoints that are reached with the `ACT` qu
 
 NOTE:Before adding an action to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
 
-## How To Build An Amazing Action?
+## Creating An Amazing Action
 To generate an action we use the CLI to add the action to our existing add-on named "Amazing Add-on".
 
 ```
@@ -90,7 +90,7 @@ On creation of an action, you can also specify to add it to the database after t
 
 
 
-## AddonName/Module/Actions
+## Anatomy of An Action
 
 Once we've added an action to our add-on, an `Actions` folder is created inside our add-on's `Module` folder. The CLI will generate a class and respective file for us based on the action name we passed to the CLI when creating our action. In this case we added an action named  "ExampleAction" to Amazing Add-on.
 
@@ -174,7 +174,7 @@ $ php system/ee/eecli.php make:action --csrf_exempt
 
 
 
-## Do Something
+## Do Something - Build An Action
 
 Let's do something with our action to demonstrate how this would work. 
 

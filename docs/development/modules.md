@@ -1,4 +1,4 @@
-0---
+---
 lang: php
 ---
 
@@ -22,7 +22,7 @@ NOTE:**NOTE:** Control Pages are what is rendered in the browser when visiting y
 
 NOTE:Before adding a Control Panel route to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
 
-## Generate Your Route
+## Creating An Amazing Control Panel Route
 
 If your add-on doesn't already have the required `Mcp` and `views` files, you can add a route to your add-on using the `make:mcp-route` command in the CLI.
 
@@ -37,7 +37,7 @@ This will create an `mcp.[addon_name].php` file in your add-on along with a `Mcp
 Inside of the `Mcp` folder, you will see that the CLI has created your first control route with `Mcp/Index.php` and a corresponding view in you `views` folder. This page is accessible via The Add-On Manager -> [Add-On Name] or via the `/admin.php?/cp/addons/settings/[add-on-name]` URL.
 
 
-## Your First Control Panel Page
+## Anatomy Of A Control Panel Route
 When you first add a route to your add-on an `Mcp` folder along with an `Mcp/Index.php` starter file is created. The starter file will look something like this:
 
 ```

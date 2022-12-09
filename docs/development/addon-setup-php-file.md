@@ -15,9 +15,14 @@ lang: php
 
 [TOC]
 
+## Overview
+
 Starting with version 3.0 each add-on in ExpressionEngine must have an `addon.setup.php` file in its package directory. This file provides descriptive data about a specific add-on, such as author, name, and version. Below we walk through the format and available keys. However, most of the time, the CLI will take care of generating and updating this file as needed for you.
 
-## Format
+
+TIP:When using the CLI, your add-on setup file will automatically be created for you. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
+
+## Anatomy Of The Add-On Setup File
 
 The file must return an associative array. For example:
 

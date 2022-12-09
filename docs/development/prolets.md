@@ -20,7 +20,7 @@ Here is an example of the add-on SEEO's prolet, which easily allows editors to e
 
 NOTE:Before adding a Prolet to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
 
-## Creating A Prolet
+## Creating An Amazing Prolet
 
 Creating a Prolet is straightforward using the `make:prolet` command in the CLI.
 
@@ -40,7 +40,7 @@ amazing_add_on
 ```
 
 
-## Prolet File Structure
+## Anatomy Of A Prolet
 
 Inside a prolet file, you are required to define the prolet class. The class name should consist of prolet name with the first letter capitalized followed by `_pro` postfix. So for the example above, the class name will be `Sample_prolet_pro`.
 
@@ -68,7 +68,6 @@ class Amazing_add_on_pro extends AbstractProlet implements ProletInterface
 }
 ```
 
-## Properties and Methods
 
 ### Icon
 On each page load, prolets appear on the front-end as Dock buttons. If not specified otherwise, `icon.svg` from the add-on package folder is used as the Dock button. If you want to specify a different icon to use from the add-on's folder, you can do that using `protected $icon` property or `public function getIcon()`.

@@ -9,7 +9,11 @@
 
 # Add-on Update File
 
+## Overview
+
 The `upd.[addon_name].php` file (commonly just called the `upd` file) is critical to ExpressionEngine knowing what to do with your add-on. Here we tell ExpressionEngine what actions to register, core hooks we want to use, database tables to update, and much more. We need to tell ExpressionEngine what to do when we install an add-on, update an add-on, and uninstall and add-on. Thankfully the CLI takes care of most of this for us. 
+
+TIP:When using the CLI, your add-on update file will automatically be created for you. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
 
 ## Initial Setup
 

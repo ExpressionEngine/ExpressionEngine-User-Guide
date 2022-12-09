@@ -23,7 +23,7 @@ Creating your own custom template tags allows you to display dynamic data from y
 
 NOTE:Before adding a template tag to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
 
-## Creating Template Tags
+## Creating An Amazing Template Tag
 Tags are created via the CLI by using the `make:template-tag` command. 
 
 ```
@@ -42,7 +42,10 @@ amazing_add_on
  ┗ ...
  ```
 
-## `class [TagName]`
+## Anatomy of A Template Tag
+
+**class** `class [TagName]`
+
 Inside `Modules/Tags/ExampleTag.php` we see the following code generated for us:
 
 ```
@@ -139,7 +142,7 @@ This would render in the browser as:
 Here is some amazing text: ExpressionEngine is the best CMS in the world!
 ```
 
-## Creating Tag Pair Template Tags
+## Do Something - Create A Tag Pair Template Tag
 
 Often you will want to process content contained between a pair of tags. Let's create a simple tag that makes text bold to illustrate how this is done. Our example plugin will have this syntax:
 
@@ -182,11 +185,13 @@ class Bold extends AbstractRoute
 
 ```
 
+Now We need to capture the content between our opening and closing tags, and return that context as bold text. In ExpressionEngine, this is called fetching tagdata.
+
 
 ### Fetching Tagdata
 In our class, we use `ee()->TMPL->tagdata;` to capture the template data that is between our opening and closing tag.
 
-In this example we will capture the text we want to make bold in our template and render it back to the browser.
+Let's update our example to capture the text we want to make bold in our template and render it back to the browser.
 
 Our tag's class:
 
@@ -215,7 +220,7 @@ We want to bold <b>this text</b>.
 
 As you can see, any template data between our opening and closing tags is captured using `ee()->TMPL->tagdata`.
 
-## Parameters
+## Do Something - Create A Template Tag With Parameters
 Both single tags and tag pairs can accept parameters. The template engine makes it easy to fetch them using the following variable:
 
     ee()->TMPL->fetch_param('param_name');
@@ -277,7 +282,7 @@ class format extends AbstractRoute
 
 ```
 
-## Variables
+## Using Variables In Your Template Tag
 With variables, we can take our tag a step further. Imagine that you have tag pair that you want to use to return data based on some parameters. We can do that using variables inside of our tag.
 
 We all know and love [`{exp:channel:entries}`](channels/entries.md). We use the Channel Entries tag by opening and closing the tag, passing some parameters, and then placing some template tags in our template that we know the tag will replace when rendered. 
@@ -294,7 +299,7 @@ This typically looks something like this:
 In the snippet above, we're passing in the `channel` and `limit` as parameters. We're then expecting the Channel Entries tag to replace the `{title}` and `{body}` **variables** when the tag is parsed. Now, let's do something similar to our add-on.
 
 
-## Create A Tag With Variables
+## Do Something - Create A Tag With Variables
 Let's add a tag to our add-on that will render the current date and time. The user can pass in their timezone and the tag will return the current Date and time.
 
 First, generate the tag (we're calling our tag "date and time" and adding it to our Amazing Add-On):

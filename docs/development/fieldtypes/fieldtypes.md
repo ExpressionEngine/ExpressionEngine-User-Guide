@@ -22,7 +22,7 @@ TIP: For an overview of what a Fieldtype is, read the [Fieldtype Overview docs](
 
 NOTE:Before adding a fieldtype to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
 
-## Creating A Custom Fieldtype
+## Creating An Amazing Fieldtype
 
 Adding a custom fieldtype to your add-on is easy with the `make:fieldtype` command. 
 
@@ -44,7 +44,9 @@ amazing_add_on
 ┗ ...
  ```
 
-## Basic Fieldtype File Structure
+## Anatomy of A Fieldtype
+
+[TOC=3]
 
 All fieldtypes must inherit from the `EE_Fieldtype` base class and they must provide an `$info` array with a name and version number.
 
@@ -78,9 +80,6 @@ NOTE: **Note:** Fieldtypes can declare their compatibility with other Fieldtypes
 NOTE: We also have [Example fieldtype with annotations](development/fieldtypes/example.md) for your reference.
 
 
-## Development Reference
-
-[TOC=3]
 
 ### Class Variables
 
@@ -573,6 +572,6 @@ A jQuery object of the field being affected by the current event is passed to th
 
 NOTE: **Note:** Please refer to [Enhanced Fieldtype Features](development/fieldtypes/enhanced.md) page for advanced topics, such ad working with Live Preview, Entry Manager, Entry Cloning, File Picker and Conditional Fields.
 
-## Do Something: Build A Fieldtype
+## Do Something - Build A Fieldtype
 
 For a complete fieldtype example see the [Google Maps Fieldtype example](/development/fieldtypes/example.md).
