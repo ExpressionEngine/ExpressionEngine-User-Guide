@@ -23,6 +23,8 @@ Add-ons can also add tabs which are visible on in [Publish Layouts](control-pane
 Here is an example of the publish layout's tab for the Structure add-on:
 ![structure tab](_images/structure_tab.png)
 
+NOTE:Before adding a tab to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
+
 ## Creating The Tab File
 Tab files are not currently able to be generated through the CLI, thus you will need to manually create the file `tab.[addon_name].php` in the root of your add-on's folder.
 

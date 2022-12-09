@@ -18,6 +18,8 @@ Prolets are add-on components that live in the [Dock](/advanced-usage/front-end/
 Here is an example of the add-on SEEO's prolet, which easily allows editors to edit SEO data for the entry they are currently viewing: 
 ![prolet example](_images/prolet_example.png)
 
+NOTE:Before adding a Prolet to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
+
 ## Creating A Prolet
 
 Creating a Prolet is straightforward using the `make:prolet` command in the CLI.

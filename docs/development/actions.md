@@ -14,6 +14,8 @@
 ## Overview
 Actions in ExpressionEngine are URL endpoints that are reached with the `ACT` query parameter. An example of this might be `http://myamazingsite.com/?ACT=43` where 43 is the ID given to an action registered in the `exp_actions` database table. These actions are tied to methods in an add-on which can be used to accept input from forms or run some sort of other functionality defined in the add-on. 
 
+NOTE:Before adding an action to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
+
 ## How To Build An Amazing Action?
 To generate an action we use the CLI to add the action to our existing add-on named "Amazing Add-on".
 

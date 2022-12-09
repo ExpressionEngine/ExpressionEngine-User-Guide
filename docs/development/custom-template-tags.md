@@ -21,6 +21,8 @@ TIP:If you are unfamiliar with Template Tags be sure to read the docs on [Expres
 
 Creating your own custom template tags allows you to display dynamic data from your add-on anywhere you want, in any template.
 
+NOTE:Before adding a template tag to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
+
 ## Creating Template Tags
 Tags are created via the CLI by using the `make:template-tag` command. 
 

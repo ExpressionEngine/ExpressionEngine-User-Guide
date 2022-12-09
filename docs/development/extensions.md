@@ -19,6 +19,8 @@ lang: php
 
 Within ExpressionEngine are what is known as "hooks"; little snippets of code in over 100 strategic places that allow the calling of third-party scripts that can rewrite and modify the inner workings of the program. By hooking into the core, you can do things like modify an entire Control Panel page, add/remove functionality, and modify the appearance of certain page elements. Hooks enable third party developers to modify aspects of ExpressionEngine without hacking the core.
 
+NOTE:Before adding an extension hook to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
+
 ## Creating Our Extension Files
 
 We can give our add-on the ability to hook into the core of ExpressionEngine by using the CLI:

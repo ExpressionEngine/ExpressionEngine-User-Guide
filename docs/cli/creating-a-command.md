@@ -7,6 +7,8 @@ The ExpressionEngine [Command Line Inferface (CLI)](/cli/intro.md) makes it simp
 
 You can also build your own commands that will enable users to interact with your add-on or do other things inside of ExpressionEngine. Commands are created to live within add-ons, and are registered as part of the add-on process.
 
+NOTE:Before adding a custom CLI Command to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
+
 ## Generate Our Add-on
 We add custom commands to the CLI when our add-on is installed by using the CLI.
 

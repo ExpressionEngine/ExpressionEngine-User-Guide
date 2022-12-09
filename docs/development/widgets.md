@@ -11,6 +11,8 @@
 
 [TOC]
 
+## Overview
+
 Along with the basic widgets which will come native with ExpressionEngine, each third-party add-on can provide multiple widgets to show pertinent information to users.
 
 Widgets which are shipped with add-ons can have `.html` or `.php` extension and have to be placed into `widgets` sub-directory of the add-on. They are then installed automatically when the add-on is installed or updated. When using the CLI to generate a widget, a PHP widget will be created.
@@ -19,6 +21,8 @@ TIP:Users can also create widgets using ExpressionEngine template manager withou
 
 Here is an example of the Dashboard Widget shipped with the SEEO add-on:
 ![SEEO dashboard widget](_images/dashboard_widget_example.png)
+
+NOTE:Before adding a Dashboard Widget to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
 
 ## PHP Widgets
 

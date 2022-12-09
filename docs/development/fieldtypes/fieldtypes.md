@@ -15,10 +15,14 @@ lang: php
 
 [TOC]
 
+## Overview
+ExpressionEngine ships with a range of fieldtypes already in place. However, perhaps you want to had your fieldtype that executes functionality differently than the fields that ship with ExpressionEngine. If so, then read below for how to create your own custom fieldtype. 
+
 TIP: For an overview of what a Fieldtype is, read the [Fieldtype Overview docs](/fieldtypes/overview.md).
 
+NOTE:Before adding a fieldtype to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
 
-## Generating A Custom Fieldtype
+## Creating A Custom Fieldtype
 
 Adding a custom fieldtype to your add-on is easy with the `make:fieldtype` command. 
 
@@ -40,7 +44,7 @@ amazing_add_on
 ┗ ...
  ```
 
-## Basic File Structure
+## Basic Fieldtype File Structure
 
 All fieldtypes must inherit from the `EE_Fieldtype` base class and they must provide an `$info` array with a name and version number.
 
