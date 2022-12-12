@@ -322,7 +322,7 @@ if (isset($color)) {
 }
 ```
 
-Notice the variables `$name` and `$color` correspond to the `$variables` array passed to the view in the Mcp file.
+Notice the variables `$name` and `$color` correspond to the `$variables` array passed to the view in the route file.
 
 
 This renders as such:
@@ -425,9 +425,9 @@ Now inside of your `ControlPanel/Routes` folder you have a new file and matching
 
 ```
 php system/ee/eecli.php make:cp-route
-View name? configurations
+What is the route name? configurations
 Which add-on would you like to add this to? amazing_add_on
-Mcp successfully created!
+Control panel route created successfully!
 ```
 
 This will create a file in my `ControlPanel/Routes` folder called `Configurations.php` which will look like this:

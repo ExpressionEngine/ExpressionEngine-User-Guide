@@ -162,7 +162,7 @@ If the data returned is of *Array* type, it is being passed to ExpressionEngine 
         return $vars;
     }
 
-If the data returned is of *String* type then this string is being wrapped in some required HTML and returned into the prolet popup window. In you need a form to be created, you would need to handle that (additionally you can use one of your MCP actions as endpoint).
+If the data returned is of *String* type then this string is being wrapped in some required HTML and returned into the prolet popup window. In you need a form to be created, you would need to handle that (additionally you can use one of your [actions](development/actions.md) as endpoint).
 
 Prolets are expecting form submissions to return JSON upon successful response, which will close their windows.
 
