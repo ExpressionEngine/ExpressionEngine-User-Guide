@@ -28,17 +28,21 @@ Tags are created via the CLI by using the `make:template-tag` command.
 
 ```
 php system/ee/eecli.php make:template-tag
+Let's build a new tag!
+What is the tag name? Amazing
+What add-on is the tag being added to? [amazing_add_on]:  amazing_add_on
+Building Tag.
+Tag created successfully!
 ``` 
 
 Follow the prompts to add a tag file to your add-on. 
 
-This will create an `Models/Tags` folder in your add-on.
+This will create a `Tags` folder in your add-on.
 
 ```
 amazing_add_on
- ┣ Module
- ┃ ┗ Tags
- ┃ ┃ ┗ ExampleTag.php
+ ┣ Tags
+ ┃ ┗ AmazingTag.php
  ┗ ...
  ```
 
@@ -46,12 +50,12 @@ amazing_add_on
 
 **class** `class [TagName]`
 
-Inside `Modules/Tags/ExampleTag.php` we see the following code generated for us:
+Inside `Tags/ExampleTag.php` we see the following code generated for us:
 
 ```
 <?php
 
-namespace ExpressionengineDeveloper\AmazingAddOn\Module\Tags;
+namespace ExpressionengineDeveloper\AmazingAddOn\Tags;
 
 use ExpressionEngine\Service\Addon\Controllers\Tag\AbstractRoute;
 
@@ -115,7 +119,7 @@ This generates the class for our add-on:
 ```
 <?php
 
-namespace ExpressionengineDeveloper\AmazingAddOn\Module\Tags;
+namespace ExpressionengineDeveloper\AmazingAddOn\Tags;
 
 use ExpressionEngine\Service\Addon\Controllers\Tag\AbstractRoute;
 
@@ -165,12 +169,12 @@ What add-on is the tag being added to? [amazing_add_on,...]: amazing_add_on
 Tag created successfully!
 ```
 
-Now we have our template tag's class located at `Modules/Tags/Bold.php`:
+Now we have our template tag's class located at `Tags/Bold.php`:
 
 ```
 <?php
 
-namespace ExpressionengineDeveloper\AmazingAddOn\Module\Tags;
+namespace ExpressionengineDeveloper\AmazingAddOn\Tags;
 
 use ExpressionEngine\Service\Addon\Controllers\Tag\AbstractRoute;
 
@@ -245,12 +249,12 @@ What add-on is the tag being added to? [amazing_add_on,...]: amazing_add_on
 Tag created successfully!
 ```
 
-Now we have our template tag's class located at `Modules/Tags/Format.php`:
+Now we have our template tag's class located at `Tags/Format.php`:
 
 ```
 <?php
 
-namespace ExpressionengineDeveloper\AmazingAddOn\Module\Tags;
+namespace ExpressionengineDeveloper\AmazingAddOn\Tags;
 
 use ExpressionEngine\Service\Addon\Controllers\Tag\AbstractRoute;
 
@@ -311,10 +315,10 @@ What add-on is the tag being added to? [amazing_add_on,...]: amazing_add_on
 Tag created successfully!
 ``` 
 
-Now, let's update the `DateAndTime` class (`Module/Tags/DateAndTime.php`) to read the timezone that is passed in:
+Now, let's update the `DateAndTime` class (`Tags/DateAndTime.php`) to read the timezone that is passed in:
 
 ```
-namespace ExpressionengineDeveloper\AmazingAddOn\Module\Tags;
+namespace ExpressionengineDeveloper\AmazingAddOn\Tags;
 
 use ExpressionEngine\Service\Addon\Controllers\Tag\AbstractRoute;
 
@@ -333,7 +337,7 @@ class DateAndTime extends AbstractRoute
 Now we drop in some magic using the `TMPL::parse_variables` method that's provided by the [`Template Class`](development/legacy/libraries/template.md). Here we'll get the current date and time, then create an array of variables the user can use in their template to show the current date and time.
 
 ```
-namespace ExpressionengineDeveloper\AmazingAddOn\Module\Tags;
+namespace ExpressionengineDeveloper\AmazingAddOn\Tags;
 
 use ExpressionEngine\Service\Addon\Controllers\Tag\AbstractRoute;
 
