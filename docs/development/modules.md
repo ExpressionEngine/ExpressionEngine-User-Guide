@@ -16,7 +16,7 @@ lang: php
 [TOC=2-3]
 
 ## Overview
-If you have ever used some of the add-ons that ship with ExpressionEngine such as [Block and Allow](/add-ons/blocklist.md) or [Pro Search](/add-ons/pro-search/overview.md), you will notice those add-ons have settings and configuration pages associated with them in the Control Panel. You add this functionality to your add-on using Control Panel Routes, also known as `Mcp` files. Whenever you add a Control Panel Route to your add-on using the CLI, an `Mcp` and `views` folder is automatically created for you, opening the door to creating your own Control Panel settings and pages.
+If you have ever used some of the add-ons that ship with ExpressionEngine such as [Block and Allow](/add-ons/blocklist.md) or [Pro Search](/add-ons/pro-search/overview.md), you will notice those add-ons have settings and configuration pages associated with them in the Control Panel. You add this functionality to your add-on using Control Panel Routes.. Whenever you add a Control Panel Route to your add-on using the CLI, a `ControlPanel/Routes` and `views` folder is automatically created for you, opening the door to creating your own Control Panel settings and pages.
 
 NOTE:**NOTE:** Control Pages are what is rendered in the browser when visiting your add-on in the Add-on Manager. Control Panel Routes are what we had to our add-on that tells ExpressionEngine to render the pages. Think of it as we add a route to create a page.
 
@@ -24,26 +24,31 @@ NOTE:Before adding a Control Panel route to your add-on, you need to already hav
 
 ## Creating An Amazing Control Panel Route
 
-If your add-on doesn't already have the required `Mcp` and `views` files, you can add a route to your add-on using the `make:mcp-route` command in the CLI.
+If your add-on doesn't already have the required `ControlPanel/Routes` and `views` files, you can add a route to your add-on using the `make:cp-route` command in the CLI.
 
 ```
-$ php system/ee/eeclip.php make:mcp-route
+$ php system/ee/eeclip.php make:cp-route
+Let's create a control panel route!
+What is the route name? index
+What add-on is the route being added to? [amazing_add_on]:  amazing_add_on
+Building control panel route.
+Control panel route created successfully!
 ```
 
 Follow the prompts to add the route to your add-on.
 
-This will create an `mcp.[addon_name].php` file in your add-on along with a `Mcp` and `views` folder.
+This will create an `mcp.[addon_name].php` file in your add-on along with a `ControlPanel/Routes` and `views` folder.
 
-Inside of the `Mcp` folder, you will see that the CLI has created your first control route with `Mcp/Index.php` and a corresponding view in you `views` folder. This page is accessible via The Add-On Manager -> [Add-On Name] or via the `/admin.php?/cp/addons/settings/[add-on-name]` URL.
+Inside of the `ControlPanel/Routes` folder, you will see that the CLI has created your first control route with `ControlPanel/Routes/Index.php` and a corresponding view in you `views` folder. This page is accessible via The Add-On Manager -> [Add-On Name] or via the `/admin.php?/cp/addons/settings/[add-on-name]` URL.
 
 
 ## Anatomy Of A Control Panel Route
-When you first add a route to your add-on an `Mcp` folder along with an `Mcp/Index.php` starter file is created. The starter file will look something like this:
+When you first add a route to your add-on a `ControlPanel/Routes` folder along with an `ControlPanel/Routes/[RouteName].php` starter file is created. The starter file will look something like this:
 
 ```
 <?php
 
-namespace ExpressionengineDeveloper\AmazingAddOn\Mcp;
+namespace ExpressionengineDeveloper\ControlPanel\Routes;
 
 use ExpressionEngine\Service\Addon\Controllers\Mcp\AbstractRoute;
 
@@ -68,7 +73,7 @@ class Index extends AbstractRoute
             'color' => 'Green'
         ];
 
-        $this->setBody('McpIndex', $variables);
+        $this->setBody('Index', $variables);
 
         return $this;
     }
@@ -81,7 +86,7 @@ Let's dissect the starter file:
 `$cp_page_title` defines what is rendered in the `<title>` tag in the browser.
 
 ### `function process($id = false)`
-The `process()` function, similar to other functionality in your add-on, is the meat of your `Mcp` file. This is where you will render views, add sidebars, and add any necessary logic.
+The `process()` function, similar to other functionality in your add-on, is the meat of your route file. This is where you will render views, add sidebars, and add any necessary logic.
 
 ## Adding Content To Your Page
 
@@ -99,9 +104,9 @@ Located at the top of the Control Panel screen, breadcrumbs help users easily kn
 
 ![Add-on Breadcrumbs](_images/addon_breadcrumbs.png)
 
-To add a breadcrumb for your current MCP page, simply use `$this->addBreadcrumb()`. 
+To add a breadcrumb for your current Control Panel page, simply use `$this->addBreadcrumb()`. 
 
-In the starter MCP file created for you by the CLI you will already see `$this->addBreadcrumb('index', 'Home');`. This will add a breadcrumb similar to the one in the screen shot above (`Add-Ons -> [Add-On Name] -> Home`).
+In the starter route file created for you by the CLI you will already see `$this->addBreadcrumb('index', 'Home');`. This will add a breadcrumb similar to the one in the screen shot above (`Add-Ons -> [Add-On Name] -> Home`).
 
 If you needed to add more levels to your breadcrumbs you can chain them together as such:
 
@@ -126,11 +131,11 @@ Building sidebar.
 Sidebar created successfully!
 ```
 
-This will create the file `Mcp/Sidebar.php` in your add-on's folder.    
+This will create the file `ControlPanel/Sidebar.php` in your add-on's folder.    
 
 ```
 amazing_add_on
-┣ Mcp/
+┣ ControlPanel
 ┃ ┣ Sidebar.php
 ┗ ...
 ```
@@ -142,7 +147,7 @@ Inside of our `Sidebpar.php` file we'll have the following:
 ```
 <?php
 
-namespace ExpressionEngineDeveloper\AmazingAddOn\Mcp;
+namespace ExpressionEngineDeveloper\ControlPanel\Routes;
 
 use ExpressionEngine\Service\Addon\Controllers\Mcp\AbstractSidebar;
 
@@ -161,7 +166,7 @@ class Sidebar extends AbstractSidebar
 ```
 
 #### Automatically Generate Your Sidebar
-If you'd like to have your sidebar automatically generated then that's it! The `Sidebar` class will scan our `Mcp` folder for all available Control Panel routes and automatically create respective entries in our sidebar. There's no need to add the sidebar to your Control Panel page as it will automatically be added when the page is rendered. 
+If you'd like to have your sidebar automatically generated then that's it! The `Sidebar` class will scan our `ControlPanel/Routes` folder for all available Control Panel routes and automatically create respective entries in our sidebar. There's no need to add the sidebar to your Control Panel page as it will automatically be added when the page is rendered. 
 
 Example:
 
@@ -169,11 +174,12 @@ With an add-on folder like this:
 
 ```
 amazing_add_on
-┣ Mcp
-┃ ┣ Configurations.php
-┃ ┣ Settings.php
-┃ ┣ Licenses.php
-┃ ┣ Index.php
+┣ ControlPanel
+┃ ┣ Routes
+┃ ┃ ┣ Configurations.php
+┃ ┃ ┣ Settings.php
+┃ ┃ ┣ Licenses.php
+┃ ┃ ┣ Index.php
 ┃ ┗ Sidebar.php
 ┗ ...
 ```
@@ -183,7 +189,7 @@ Would produce a sidebar in the Control Panel like this:
 ![control panel sidebar](_images/addon_sidebar_start.png)
 
 
-You can take this a step further by adjusting the following properties in your Control Panel routes (`Mcp/[route_name].php`) to adjust how sidebar items are displayed:
+You can take this a step further by adjusting the following properties in your Control Panel routes (`ControlPanel/Routes/[route_name].php`) to adjust how sidebar items are displayed:
 ##### `protected $sidebar_title (string)`
 By default the sidebar link text is based on your route's name. This property will overwrite the text displayed for this route.
 
@@ -203,11 +209,11 @@ Inserts a divider in the sidebar before the link to this route.
 Inserts a divider in the sidebar after the link to this route.
 
 
-You can even modify the generated sidebar in the `process()` method of your `Mcp/Sidebar.php` file by utilizing the [`CP/Sidebar Service`](development/services/sidebar.md). 
+You can even modify the generated sidebar in the `process()` method of your `ControlPanel/Routes/Sidebar.php` file by utilizing the [`CP/Sidebar Service`](development/services/sidebar.md). 
 
 #### Manually Generate Your Sidebar
 
-We will set the `$automatic` property in our `Mcp/Sidebar.php` file to `false`.
+We will set the `$automatic` property in our `ControlPanel/Routes/Sidebar.php` file to `false`.
 
 ```
 public $automatic = false;
@@ -256,7 +262,7 @@ There are two ways to output to the main body of your add-on's page.
 - HTML String
 - Using Views
 
-The `setBody()` method is smart enough to know what you're trying to do. If you pass a single parameter to the method such as `$this->setBody($myString)`, the method knows you are only passing a single string to be rendered on your page. However, if you pass multiple parameters such as `$this->setBody('McpIndex', $variables);`, the method knows that you are passing a View and an array of variables that should be passed to the View.    
+The `setBody()` method is smart enough to know what you're trying to do. If you pass a single parameter to the method such as `$this->setBody($myString)`, the method knows you are only passing a single string to be rendered on your page. However, if you pass multiple parameters such as `$this->setBody('Index', $variables);`, the method knows that you are passing a View and an array of variables that should be passed to the View.    
 
 Continue reading to see examples of how to use these two options.
 
@@ -285,7 +291,7 @@ If you would like to make this page more dynamic or include additional functiona
 
 #### Views
 
-When your add-on was created via the CLI a `views` folder was also created in your add-on's folder. Inside of this folder a file was also created, `views/McpIndex.php`. By default this Control Panel page is already using the [View service](/development/services/view.md) by calling `$this->setBody()`. 
+When your add-on was created via the CLI a `views` folder was also created in your add-on's folder. Inside of this folder a file was also created, `views/Index.php`. By default this Control Panel page is already using the [View service](/development/services/view.md) by calling `$this->setBody()`. 
 
 ```
 $variables = [
@@ -293,14 +299,14 @@ $variables = [
     'color' => 'Green'
 ];
 
-$this->setBody('McpIndex', $variables);
+$this->setBody('Index', $variables);
 ```
 
-As we can see here, the `Mcp` file is passing two arguments to `$this->setBody()`:
-- `McpIndex` is the name of the corresponding view to use (references `views/McpIndex.php`)
+As we can see here, the route file is passing two arguments to `$this->setBody()`:
+- `Index` is the name of the corresponding view to use (references `views/Index.php`)
 - `$variables` is an array of variables that will be available to the view.
 
-Now let's look at the view itself, found at `views/McpIndex.php`.
+Now let's look at the view itself, found at `views/Index.php`.
 
 ```
 <?php
@@ -346,7 +352,7 @@ private function getForm()
 }
 ```
 
-Now, let's add that to our `Mcp` file and be sure to pass the array returned from `getForm()` to our view.
+Now, let's add that to our route file and be sure to pass the array returned from `getForm()` to our view.
 
 ```
 public function process($id = false)
@@ -365,7 +371,7 @@ public function process($id = false)
     'form'  => $form
   ];
 
-  $this->setBody('McpIndex', $variables);
+  $this->setBody('Index', $variables);
 
   return $this;
 }
@@ -385,7 +391,7 @@ private function getForm()
 }
 ```
 
-Since we passed our form to our view in the `$variables` array, inside of `views/McpIndex.php`  we can now use the View service to render our `$form` array as the main body of our Control Panel page.
+Since we passed our form to our view in the `$variables` array, inside of `views/Index.php`  we can now use the View service to render our `$form` array as the main body of our Control Panel page.
 
 ```
 if (isset($form)) {
@@ -410,26 +416,26 @@ Often your add-on will need more than one page in the Control Panel. The CLI mak
 Start with:
 
 ```
-php system/ee/eecli.php make:mcp-route
+php system/ee/eecli.php make:cp-route
 ```
 
-This adds a new file to your `Mcp` folder which will act similar to the Index page we discussed above, along with a matching View in our `views` folder.
+This adds a new file to your `ControlPanel/Routes` folder which will act similar to the Index page we discussed above, along with a matching View in our `views` folder.
 
-Now inside of your `/Mcp` folder you have a new file and matching Mcp class based on the name you chose in the CLI. This page will be accessible based on the class name you provided. For example:
+Now inside of your `ControlPanel/Routes` folder you have a new file and matching class based on the name you chose in the CLI. This page will be accessible based on the class name you provided. For example:
 
 ```
-php system/ee/eecli.php make:mcp-route
+php system/ee/eecli.php make:cp-route
 View name? configurations
 Which add-on would you like to add this to? amazing_add_on
 Mcp successfully created!
 ```
 
-This will create a file in my `Mcp` folder called `Configurations.php` which will look like this:
+This will create a file in my `ControlPanel/Routes` folder called `Configurations.php` which will look like this:
 
 ```
 <?php
 
-namespace ExpressionengineDeveloper\AmazingAddOn\Mcp;
+namespace ExpressionengineDeveloper\ControlPanel\Routes;
 
 use ExpressionEngine\Service\Addon\Controllers\Mcp\AbstractRoute;
 
@@ -453,7 +459,7 @@ class Configurations extends AbstractRoute
             'color' => 'Green'
         ];
 
-        $this->setBody('McpIndex', $variables);
+        $this->setBody('Index', $variables);
 
         return $this;
     }

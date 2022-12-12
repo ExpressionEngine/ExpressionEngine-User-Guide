@@ -64,7 +64,7 @@ At this point, your add-on can't really do anything other than be installed. How
 Here's a list of functionality that can be added to your add-on and the corresponding CLI command if applicable:
 
 - [Extension hooks (`make:extension-hook`)](development/extensions.md)
-- [Control Panel Pages (`make:mcp-route`)](development/modules.md)
+- [Control Panel Pages (`make:cp-route`)](development/modules.md)
 - [Actions (`make:action`)](development/actions.md)
 - [Fieldtypes (`make:fieldtype`)](development/fieldtypes/fieldtypes.md)
 - [CLI Commands (`make:command`)](cli/creating-a-command.md)
@@ -83,33 +83,33 @@ Below is the complete structure of an add-on that we'll call "Amazing Add-on". T
 ```
 amazing_add_on
  ┣ Commands
- ┃ ┣ CommandAnAmazingCommand.php 
+ ┃ ┗ CommandAnAmazingCommand.php 
  ┣ database
  ┃ ┣ migrations
  ┃ ┃ ┗ 2022_11_14_170449_amazing_migration.php
  ┣ Extensions
  ┃ ┣ TemplatePostParse.php
  ┃ ┗ TypographyParseTypeEnd.php
- ┣ Mcp
+ ┣ ControlPanel
+ ┃ ┣ Routes
+ ┃ ┃ ┣ Index.php
+ ┃ ┃ ┗ Page2.php
  ┃ ┣ Sidebar.php
- ┃ ┣ Index.php
- ┃ ┗ Page2.php
- ┣ Module
- ┃ ┣ Actions
- ┃ ┃ ┗ ExampleAction.php
- ┃ ┗ Tags
- ┃ ┃ ┗ ExampleTag.php
+ ┣ Actions
+ ┃ ┗ ExampleAction.php
+ ┣ Tags
+ ┃ ┗ ExampleTag.php
  ┣ Model
- ┃ ┣ AmazingModel.php
+ ┃ ┗ AmazingModel.php
  ┣ language
  ┃ ┣ english
  ┃ ┃ ┣ amazing_add_on_lang.php
  ┃ ┃ ┗ index.html
  ┃ ┗ index.html
  ┣ widgets
- ┃ ┣ AnAmazingWidget.php
+ ┃ ┗ AnAmazingWidget.php
  ┣ views
- ┃ ┣ McpIndex.php
+ ┃ ┣ Index.php
  ┃ ┗ Page2.php
  ┣ addon.setup.php
  ┣ ext.amazing_add_on.php
@@ -147,7 +147,7 @@ Reference [Adding Fieldtypes](development/fieldtypes/fieldtypes.md) for more inf
 
 ### The Mcp File (`mcp.[addon_name].php`)
 **class `Add_on_name_upd extends Mcp`**    
-The Mcp file is used to route ExpressionEngine to our `Mcp` Folder, which contains logic for your Control Panel pages (settings or other pages you might want to add to the Control Panel for your users to interact with).    
+The Mcp file is used to route ExpressionEngine to our `ControlPanel` Folder, which contains logic for your Control Panel pages (settings or other pages you might want to add to the Control Panel for your users to interact with).    
 Reference [Adding Control Panel Pages](development/modules.md) for more information on adding Control Panel pages with your add-on.
 
 ### The Module File `mod.[addon_name].php`
@@ -173,16 +173,16 @@ When we tell the CLI that we want to create an extension, classes are automatica
 
 TIP: Reference the [Extensions](development/extensions.md) section of the docs for more information on using extensions in your add-on.
 
-### Actions - `/Module/Actions`
-The `Module/Actions` folder stores all the business logic for any actions that we are adding to ExpressionEngine with our add-on. Each action will have a separate file and corresponding class created based on information provided in the `$actions` array in the `upd` file.   
+### Actions - `/Actions`
+The `/Actions` folder stores all the business logic for any actions that we are adding to ExpressionEngine with our add-on. Each action will have a separate file and corresponding class created based on information provided in the `$actions` array in the `upd` file.   
 Reference [Adding Actions](development/actions.md) for more information on creating URL endpoints (actions) with your add-on.
 
-### Control Panel Routes - `/Mcp`
-The `Mcp` folder contains all the Control Panel routes and we create for our add-on as well as our sidebar.    
+### Control Panel Routes - `/ControlPanel`
+The `ControlPanel` folder contains all the Control Panel routes and we create for our add-on as well as our sidebar.    
 Reference [Adding Control Panel Pages](development/modules.md) for more information on adding Control Panel routes and pages with your add-on.
 
-### `Module/Tags`
-The `Module/Tags` folder stores all the business logic for any template tags we create with our add-on.    
+### `/Tags`
+The `/Tags` folder stores all the business logic for any template tags we create with our add-on.    
 Reference [Adding Template Tags](development/custom-template-tags.md) for more information on adding template tags with your add-on.
 
 ### `/views`
