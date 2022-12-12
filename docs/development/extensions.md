@@ -86,7 +86,9 @@ class TypographyParseTypeEnd extends AbstractRoute
 
 As we can see, the CLI has correctly created a new class using our core hook in PascalCase as the name.
 
-Inside our class is the `process()` function. Again the CLI has already added all parameters that will be passed in from the core hook.  Reference the [Available Core Hooks]() section of the docs to read on what parameters your hook uses.
+Inside our class is the `process()` function. Again the CLI has already added all parameters that will be passed in from the core hook.  
+
+TIP:Reference the [Available Core Hooks](development/extension-hooks/extension-hooks-overview.md) section of the docs to read on what parameters your hook uses.
 
 From the [`typography_parse_type_end()`](/development/extension-hooks/global/typography.html#typography_parse_type_endstr-this-prefs) docs we can see that this hook modifies a string after all other typography is processed. Thus we should be able to take a string, manipulate it, then pass it back to ExpressionEngine to be rendered in the template.
 

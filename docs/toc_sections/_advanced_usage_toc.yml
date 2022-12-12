@@ -169,6 +169,8 @@
 
     - name: Available Core Hooks
       items:
+        - name: Overview
+          href: development/extension-hooks/extension-hooks-overview.md
         - name: Global
           items:
             - name: Core Library
