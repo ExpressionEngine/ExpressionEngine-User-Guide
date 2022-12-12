@@ -27,6 +27,11 @@ We can give our add-on the ability to hook into the core of ExpressionEngine by 
 
 ```
 $ php system/ee/eecli.php make:extension-hook
+Let's implement an extension hook!
+What hooks would you like to use? (Read more: https://docs.expressionengine.com/latest/development/extensions.html) typography_parse_type_end
+What add-on is the extension hook being added to? [amazing_add_on]:  amazing_add_on
+Building Extension hook.
+Extension hook created successfully!
 
 ```
 
@@ -46,6 +51,8 @@ amazing_add_on
  ```
 
 TIP: A single add-on can interact with as many hooks as you want.
+
+TIP: Extensions need to be enabled to work. When you create an extension, a migration is added which will enable the extension on install. However if you need it immediately available, you can use the `--install` or `-i` flag when creating your extension. This would look like `make:extension-hook --install`.
 
 ## Anatomy Of An Extension
 Once we've added the ability to hook into the core with our add-on, an `Extensions` folder is created. The CLI will generate a class and a respective file for each core hook we wish to use.
@@ -108,16 +115,20 @@ We also know that we should be returning a string from our `process()` function.
 
 Let's do something with our hook to demonstrate how this would work. We're going to continue working with the `typography_parse_type_end()` hook by replacing "e" with "EE" everywhere in our templates (because EE is amazing!)
 
-Using the CLI to generate the extension hook:
+Using the CLI to generate the extension hook (notice the `-i` flag to immediately enable the extension hook):
 
 ```
-$ php system/ee/eecli.php make:extension-hook
+$ php system/ee/eecli.php make:extension-hook -i
 Let's implement an extension hook!
 What is the extension hook name? Amazing Hook
+What hooks would you like to use? (Read more: https://docs.expressionengine.com/latest/development/extensions.html) typography_parse_type_end
 What add-on is the extension hook being added to? [amazing_add_on]:  amazing_add_on
 Building Extension hook.
 Extension hook created successfully!
+Installing extension hook...
+Extension hook installed!
 ```
+
 This creates our `Extensions/TypographyParseTypeEnd.php` file for us. This file will initially look like this:
 
 ```
