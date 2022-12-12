@@ -26,13 +26,12 @@ php system/ee/eecli.php make:action
 Follow the prompts to add an action file to your add-on.
 
 
-This will create an `Actions` folder inside our `Module` folder where will build out the code we want to run when a user hits our `ACT` URL. Inside our `Actions` folder the CLI will create a file with the same name as the method we defined when creating our action.
+This will create an `Actions` folder inside our add-on's folder where will build out the code we want to run when a user hits our `ACT` URL. Inside our `Actions` folder the CLI will create a file with the same name as the method we defined when creating our action.
 
 ```
 amazing_add_on
- ┣ Module
- ┃ ┣ Actions
- ┃ ┃ ┗ [MethodName].php
+ ┣ Actions
+ ┃ ┗ [MethodName].php
  ┗...
 ```
 
@@ -92,7 +91,7 @@ On creation of an action, you can also specify to add it to the database after t
 
 ## Anatomy of An Action
 
-Once we've added an action to our add-on, an `Actions` folder is created inside our add-on's `Module` folder. The CLI will generate a class and respective file for us based on the action name we passed to the CLI when creating our action. In this case we added an action named  "ExampleAction" to Amazing Add-on.
+Once we've added an action to our add-on, an `Actions` folder is created for us. The CLI will generate a class and respective file for us based on the action name we passed to the CLI when creating our action. In this case we added an action named  "ExampleAction" to Amazing Add-on.
 
 ```
 php system/ee/eecli.php make:action
@@ -103,21 +102,20 @@ Action created successfully!
 
 ```
 amazing_add_on
- ┣ Module
- ┃ ┣ Actions
- ┃ ┃ ┗ ExampleAction.php
+ ┣ Actions
+ ┃ ┗ ExampleAction.php
  ┗...
 ```
 
 
 ### class [ActionName]
 
-Inside `Module/Actions/ExampleAction.php` we see the following code generated for us:
+Inside `/Actions/ExampleAction.php` we see the following code generated for us:
 
 ```
 <?php
 
-namespace ExpressionengineDeveloper\AmazingAddon\Module\Actions;
+namespace ExpressionengineDeveloper\AmazingAddon\Actions;
 
 use ExpressionEngine\Service\Addon\Controllers\Action\AbstractRoute;
 
@@ -148,7 +146,7 @@ The `exp_actions` table is comprised of 4 columns:
 
 ## Cross Site Request Forgery(CSRF) Exemption
 
-WARN:**Security Alert:**Setting your action to CSRF EXempt, also makes this endpoint less secure though as you are allowing outside connections to your application.
+WARN:**Security Alert:**Setting your action to CSRF Exempt, also makes this endpoint less secure though as you are allowing outside connections to your application.
 
 For security reasons, actions are protected by [Cross Site Request Forgery(CSRF)](/development/guidelines/security.md#cross-site-request-forgery). If you want users to be able to reach this endpoint from outside your site (e.g. using cURL to from another domain or application to reach this endpoint and expect data to be returned ) then you will most likely need to make your action CSRF exempt. 
 
@@ -195,12 +193,12 @@ This creates our required files.
 
 Now we had some functionality to our action which will add the first and last name submitted from a form to our custom database table.
 
-Our action's code (`Module/Actions/ExampleAction.php`):
+Our action's code (`Actions/ExampleAction.php`):
 
 ```
 <?php
 
-namespace ExpressionengineDeveloper\AmazingAddOn\Module\Actions;
+namespace ExpressionengineDeveloper\AmazingAddOn\Actions;
 
 use ExpressionEngine\Service\Addon\Controllers\Action\AbstractRoute;
 
@@ -266,7 +264,7 @@ Our action code:
 ```
 <?php
 
-namespace ExpressionengineDeveloper\AmazingAddOn\Module\Actions;
+namespace ExpressionengineDeveloper\AmazingAddOn\Actions;
 
 use ExpressionEngine\Service\Addon\Controllers\Action\AbstractRoute;
 
