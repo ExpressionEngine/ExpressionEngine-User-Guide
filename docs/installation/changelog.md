@@ -29,7 +29,6 @@
  - Added ability to skip success message after submitting email contact form. ([#1034](https://github.com/ExpressionEngine/ExpressionEngine/issues/1034))
  - Increased performance of File Manager when attempting to load thousands of files. ([#2564](https://github.com/ExpressionEngine/ExpressionEngine/issues/2564))
  - Added confirmation toggle to keep or remove files when removing upload directory. ([#2623](https://github.com/ExpressionEngine/ExpressionEngine/issues/2623))
- - New add-on methodology. Including updates to CLI.
 
 
 
@@ -45,7 +44,6 @@
 
 - **Developers** 💻
   - Them template type hook is now called only when EE is fully loaded.
-  - New add-on methodology. 
 
 
 
