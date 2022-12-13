@@ -26,6 +26,12 @@ NOTE:Before adding a Dashboard Widget to your add-on, you need to already have a
 
 ## PHP Widgets
 
+To generate widget for an add-on with the CLI, run this command to have the necessary files created automatically:
+
+```
+php system/ee/eecli.php make:widget
+```
+
 In order for an add-on to provide dashboard widgets, it needs to contain `widgets` folder inside its main directory, which will contain the widget files.
 
 All widgets are required to implement `ExpressionEngine\Addons\Pro\Service\Dashboard\DashboardWidgetInterface`.

@@ -27,7 +27,7 @@ NOTE:Before adding a Control Panel route to your add-on, you need to already hav
 If your add-on doesn't already have the required `ControlPanel/Routes` and `views` files, you can add a route to your add-on using the `make:cp-route` command in the CLI.
 
 ```
-$ php system/ee/eeclip.php make:cp-route
+$ php system/ee/eecli.php make:cp-route
 Let's create a control panel route!
 What is the route name? index
 What add-on is the route being added to? [amazing_add_on]:  amazing_add_on
@@ -399,12 +399,44 @@ if (isset($form)) {
 }
 ```
 
-You're add-on will now have a Control Panel page with a form as seen in this screenshot:
+Your add-on will now have a Control Panel page with a form as seen in this screenshot:
 
 ![add-on with form](_images/add-on-view.png)
 
+Finally, make the form submission do something. The form is being submitted to same CP controller, so we can check whether it has been submitted by adding `ee('Request')->isPost()` check. For the sake of this demo, we'll skip the database saving part and just display success message on submission.
 
-TIP: This is only the beginning of what you can do with forms in the Control Panel. Read more in the docs on the [`CP\Form` service](development/services/cp-form.md)() to understand what else is possible.
+```
+public function process($id = false)
+{
+  if (ee('Request')->isPost()) {
+    ee('CP/Alert')->makeBanner('amazing_add_on')
+      ->asSuccess()
+      ->withTitle(lang('success'))
+      ->addToBody('Form has been submitted!')
+      ->now();
+  }
+
+  // set the breadcrumb
+  $this->addBreadcrumb('index', 'Home');
+
+  // call our getForm() method to get
+  // our array
+  $form = $this->getForm();
+
+  // store our form in our $variables array
+  // to be passed into our view
+  $variables = [
+    'form'  => $form
+  ];
+
+  $this->setBody('Index', $variables);
+
+  return $this;
+}
+```
+
+
+TIP: This is only the beginning of what you can do with forms in the Control Panel. Read more in the docs on the [`CP\Form` service](development/services/cp-form.md) to understand what else is possible.
 
 TIP: **{ee:u}** Learn more about the [CP\Form service on ExpressionEngine University](https://u.expressionengine.com/article/ultra-double-secret-manual-shared-form-part-four).
 
