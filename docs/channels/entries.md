@@ -1224,9 +1224,9 @@ Lastly, if you want to simply display your 404 page (with 404 headers) when no e
 
     {if no_results} {redirect="404"} {/if}
 
-NOTE: **Note:** If you have several nested tag, each one would need to include `{if no_results}` pair to be parsed correctly.
+NOTE: **Note:** If you have several nested tags, each one would need to include a `{if no_results}` pair to be parsed correctly.
 
-For instance, if you have Grid field with `if no_results` block, the containing `exp:channel:entries` tag pair would need to include `if no_results` block as well.
+For instance, if you have Grid field with `{if no_results}` block, the parent `{exp:channel:entries}` tag pair would need to include `{if no_results}` block as well.
 ```
 {exp:channel:entries channel="blog"}
     {if no_results} No entries {/if}
