@@ -29,7 +29,7 @@ $field = $field_set->getField('first_name', 'text')
 
 The above will attach a `text` Input field onto the Field Set "First Name". 
 
-Every existing Shared Form View input field is respected as are a couple additions exclusively through the [CP/Form](development/services/cp-form.md) layer:
+Every existing Shared Form View input field is respected as are a couple additions exclusively through the Cp/Form layer:
 
 - A simplified and streamlined Grid and Table layer
 - Native ExpressionEngine Filepicker 
@@ -41,7 +41,7 @@ Every existing Shared Form View input field is respected as are a couple additio
 
 ### `action_button`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\ActionButton`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\ActionButton`**
 
 Adds a “pretty” button style link to your form.
 
@@ -83,25 +83,25 @@ Returns URL you want to use (`text`)
 
 ### `checkbox`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\Checbox`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\Checbox`**
 
 Adds a specialized widget for checkbox
 
 ### `dropdown`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\Dropdown`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\Dropdown`**
 
 Adds a fancy select input field especially useful for large data sets to choose from.
 
 ### `file`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\File`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\File`**
 
 Adds a traditional file HTML field to your form.
 
 ### `file-picker`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\FilePicker`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\FilePicker`**
 
 Adds a File Picker widget to your shared form
 
@@ -158,7 +158,7 @@ Determines whether the mime type is locked to images only
 
 ### `grid`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\Grid`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\Grid`**
 
 Allows for a more streamlined implementation of Grid within Shared Forms. Two important differences with this implementation is a simpler API and direct handling of POST values.
 
@@ -219,13 +219,13 @@ $grid->setBaseUrl( ee('CP/URL')->make($this->base_url ));
 
 ### `hidden`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\Hidden`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\Hidden`**
 
 Adds a hidden field to your form
 
 ### `html`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\Html`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\Html`**
 
 Allows for putting raw (unformatted) HTML inside your form
 
@@ -250,7 +250,7 @@ Returns the content (empty string by default)
 
 ### `multiselect`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\Multiselect`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\Multiselect`**
 
 Deploys a series of select input fields together
 
@@ -279,25 +279,25 @@ Returns the content (empty string by default)
 
 ### `password`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\Password`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\Password`**
 
 Adds your run of the mill password input field wrapped in magic that puts an eye next to it.
 
 ### `radio`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\Radio`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\Radio`**
 
 This behaves just like checkbox with the exception of being scalar so uses a scalar for the value. See checkbox for details.
 
 ### `select`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\Select`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\Select`**
 
 Adds a traditional select input field to your form.
 
 ### `short-text`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\ShortText`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\ShortText`**
 
 Adds a small input HTML field wrapped in a div with flex-input as the class. Useful for stacking fields horizontally.
 
@@ -322,7 +322,7 @@ Returns the label (empty string by default)
 
 ### `slider`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\Slider`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\Slider`**
 
 Puts a slider widget into your form
 
@@ -398,7 +398,7 @@ Returns the unit value
 
 ### `table`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\Table`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\Table`**
 
 Allows for a more streamlined implementation of tables within Shared Forms
 
@@ -533,13 +533,13 @@ $table->addRow([
 
 ### `text`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\Text`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\Text`**
 
 Adds a traditional input HTML field
 
 ### `textarea`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\Textarea`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\Textarea`**
 
 Adds a full textarea input field
 
@@ -599,13 +599,13 @@ Returns the number of rows
 
 ### `toggle`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\Toggle`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\Toggle`**
 
 Adds a Toggle binary toggle
 
 ### `yes_no`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\YesNo`**
+**class `ExpressionEngine\Library\Cp\Form\Fields\YesNo`**
 
 Adds a Toggle control that returns either y or n respectively.
 
@@ -636,7 +636,7 @@ $field_set->getField('my_number_field', 'number')->params(['min' => 100, 'max' =
 
 ## Field API Reference
 
-**class `ExpressionEngine\Library\CP\Form\Field`**
+**class `ExpressionEngine\Library\Cp\Form\Field`**
 
 All input fields are based on the `Field` object. Note that while every Field will have the below methods available, whether they're respected by the Shared Form View layer is a different matter. 
 
@@ -644,7 +644,7 @@ All input fields are based on the `Field` object. Note that while every Field wi
 
 ### `toArray()`
 
-Returns the entire `CP\Form\Field` object into an array. 
+Returns the entire `Cp\Form\Field` object into an array. 
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -846,7 +846,7 @@ Whether this Field is required (`placeholder`)
 
 ## OptionsField API Reference
 
-**class `ExpressionEngine\Library\CP\Form\OptionsField`**
+**class `ExpressionEngine\Library\Cp\Form\OptionsField`**
 
 Input Fields that allow for multiple options or set input parameters are based on the `OptionsField` abstract. Note that `OptionsField` extends from `Field` so you'll also have access to those parent methods, as well. 
 

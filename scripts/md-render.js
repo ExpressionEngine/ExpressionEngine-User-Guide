@@ -100,23 +100,6 @@ renderer.heading = function (text, level, raw, slugger) {
 }
 
 // -------------------------------------------------------------------
-// Render lists with tailwind classes
-renderer.list = function (body, ordered, start,) {
-	if(ordered){
-		return `
-			<ol class="list-decimal">
-				${body}
-			</ol>`
-	}else{
-		return `
-		<ol class="list-disc">
-			${body}
-		</ol>`
-	}
-}
-
-
-// -------------------------------------------------------------------
 
 // Validate links and make doc links relative
 renderer.link = function (href, title, text) {

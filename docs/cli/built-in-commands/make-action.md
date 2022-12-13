@@ -15,5 +15,3 @@ Action Generator -- Creates a new action for an add-on
 ### Generating an action:
 
 `php eecli.php make:action MyNewAction --addon=my_existing_addon`
-
-TIP: For more information on using the `make:action` command to create new action, reference [Adding Actions](development/actions.md).

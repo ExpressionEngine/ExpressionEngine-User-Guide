@@ -15,40 +15,12 @@ lang: php
 
 [TOC]
 
-## Overview
-ExpressionEngine ships with a range of fieldtypes already in place. However, perhaps you want to had your fieldtype that executes functionality differently than the fields that ship with ExpressionEngine. If so, then read below for how to create your own custom fieldtype. 
 
-TIP: For an overview of what a Fieldtype is, read the [Fieldtype Overview docs](/fieldtypes/overview.md).
+NOTE: Fieldtypes can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](cli/built-in-commands/make-addon.md) for more information.
 
-NOTE:Before adding a fieldtype to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
+## Basic File Structure
 
-## Creating An Amazing Fieldtype
-
-Adding a custom fieldtype to your add-on is easy with the `make:fieldtype` command. 
-
-```
-$ php system/ee/eecli.php make:fieldtype
-Let's implement a fieldtype!
-What is the fieldtype name? Amazing Fieldtype
-What add-on is the fieldtype being added to? [amazing_add_on]:  amazing_add_on
-Building fieldype.
-Fieldtype created successfully!
-```
-
-This will create a `ft.[fieldtype_name].php` in your add-on's folder. In the example above, this creates a file named `ft.amazing__fieldtype.php`.
-
-```
-amazing_add_on
- ...
-┣ ft.[fieldtype_name].php
-┗ ...
- ```
-
-## Anatomy of A Fieldtype
-
-[TOC=3]
-
-All fieldtypes must inherit from the `EE_Fieldtype` base class and they must provide an `$info` array with a name and version number.
+All fieldtypes should be placed into the `system/user/addons` folder in a package and be named after that package name. So in a packaged named google_maps the fieldtype file will be `ft.google_maps.php`. All fieldtypes must inherit from the `EE_Fieldtype` base class and they must provide an \$info array with a name and version number.
 
     <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
@@ -75,11 +47,14 @@ All fieldtypes must inherit from the `EE_Fieldtype` base class and they must pro
     /* End of file ft.google_maps.php */
     /* Location: ./system/user/addons/google_maps/ft.google_maps.php */
 
-NOTE: **Note:** Fieldtypes can declare their compatibility with other Fieldtypes in the `addon.setup.php` file, allowing a site admin to switch an existing field to another compatible type, e.g. _text_ can be switched to _email_ and vice-versa. Please see [Fieldtype Compatibility Options](development/addon-setup-php-file.md#fieldtypes) for more details.
+NOTE: **Note:** All add-ons are required to have an [addon.setup.php file](development/addon-setup-php-file.md). This is where Fieldtypes can declare their compatibility with other Fieldtypes, allowing a site builder to switch an existing field to another compatible type, e.g. _text_ can be switched to _email_ and vice-versa. Please see [Fieldtype Compatibility Options](development/addon-setup-php-file.md#fieldtypes) for more details.
 
 NOTE: We also have [Example fieldtype with annotations](development/fieldtypes/example.md) for your reference.
 
 
+## Development Reference
+
+[TOC=3]
 
 ### Class Variables
 
@@ -571,7 +546,3 @@ Here are the usage details for this function:
 A jQuery object of the field being affected by the current event is passed to the callback function.
 
 NOTE: **Note:** Please refer to [Enhanced Fieldtype Features](development/fieldtypes/enhanced.md) page for advanced topics, such ad working with Live Preview, Entry Manager, Entry Cloning, File Picker and Conditional Fields.
-
-## Do Something - Build A Fieldtype
-
-For a complete fieldtype example see the [Google Maps Fieldtype example](/development/fieldtypes/example.md).
