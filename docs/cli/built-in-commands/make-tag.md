@@ -1,4 +1,4 @@
-# make:template-tag
+# make:tag
 
 Tag Generator -- Creates a new tag for an add-on
 
@@ -14,6 +14,4 @@ Tag Generator -- Creates a new tag for an add-on
 
 ### Generating a new tag:
 
-`php eecli.php make:template-tag MyNewTag --addon=my_existing_addon`
-
-TIP: For more information on using the `make:template-tag` command to create new template tag with your add-on, reference [Adding Template Tags](development/custom-template-tags.md).
+`php eecli.php make:tag MyNewTag --addon=my_existing_addon`

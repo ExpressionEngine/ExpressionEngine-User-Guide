@@ -1931,14 +1931,6 @@ html {
   resize: both !important;
 }
 
-.list-disc {
-  list-style-type: disc !important;
-}
-
-.list-decimal {
-  list-style-type: decimal !important;
-}
-
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 }
