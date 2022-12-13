@@ -1,6 +1,6 @@
-# Command Line Inferface (CLI)
+# Command Line Interface (CLI)
 
-The Command Line Inferface (CLI) allows a user to run system and user-generated commands in the terminal. The CLI has access to all of the ExpressionEngine resources, and can be used to update the system, clear caches, and much more.
+The Command Line Interface (CLI) allows a user to run system and user-generated commands in the terminal. The CLI has access to all of the ExpressionEngine resources, and can be used to update the system, clear caches, and much more.
 
 By default the CLI is located `system/ee/eecli.php` . 
 
@@ -18,7 +18,7 @@ By default the CLI is located `system/ee/eecli.php` .
         - [make:migration - Creates a new migration](cli/built-in-commands/make-migration.md)
         - [make:model - Creates a new model for an add-on](cli/built-in-commands/make-model.md)
         - [make:prolet - Creates a new prolet for an add-on](cli/built-in-commands/make-prolet.md)
-        - [make:tag - Creates a new tag for an add-on](cli/built-in-commands/make-tag.md)
+        - [make:template-tag - Creates a new tag for an add-on](cli/built-in-commands/make-tag.md)
         - [make:widget - Generates widgets for existing add-ons](cli/built-in-commands/make-widget.md)
     - Migrate
         - [migrate - Runs specified migrations (all, core, or add-ons)](cli/built-in-commands/migrate.md)
