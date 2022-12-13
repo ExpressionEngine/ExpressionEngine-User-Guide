@@ -26,7 +26,7 @@ $button->setType('submit')->setText('Submit Button')
 
 ## API Reference
 
-**class `ExpressionEngine\Library\CP\Form\Button`**
+**class `ExpressionEngine\Library\Cp\Form\Button`**
 
 [TOC=3]
 
@@ -40,7 +40,7 @@ Returns the name used upon creation for the Button and the id.
 
 ### `toArray()`
 
-Returns the entire `CP\Form\Button` object into an array. 
+Returns the entire `Cp\Form\Button` object into an array. 
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |

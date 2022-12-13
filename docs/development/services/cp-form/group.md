@@ -15,7 +15,7 @@ Every Form consists of Field Groups that contain Field Sets. The below covers ev
 
 ## Usage
 
-When working with Field Groups, you'll always request it from the [`CP\Form`](development/services/cp-form.md) object to request it, initially. Once you have a Field Group, you'll decorate it like everything else. For example:
+When working with Field Groups, you'll always request it from the [`Cp\form`](development/services/cp-form.md) object to request it, initially. Once you have a Field Group, you'll decorate it like everything else. For example:
 
 ```
 $form = ee('CP/Form');
@@ -32,7 +32,7 @@ TIP: If your Form object is set to be a Tabbed form, it's the Groups that make u
 
 ## API Reference
 
-**class `ExpressionEngine\Library\CP\Form\Group`**
+**class `ExpressionEngine\Library\Cp\Form\Group`**
 
 The Group object consists of only a couple methods of use. 
 
@@ -48,7 +48,7 @@ Returns the name used upon creation for the Field Group.
 
 ### `toArray()`
 
-Returns the entire `CP\Form\Group` object into an array. Note that all child elements are converted to an array as well.
+Returns the entire `Cp\Form\Group` object into an array. Note that all child elements are converted to an array as well.
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |

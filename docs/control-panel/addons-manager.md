@@ -9,10 +9,8 @@
 
 # Add-On Manager
 
-**Control Panel Location: `Add-Ons`**
+**Control Panel Location: `Developer > Add-Ons`**
 
 This section of the Control Panel is where add-on functionality is installed, updated, configured, and removed. They can be filtered by status and developer, and sorted by the add-on name and version. This section is divided into to sections, one for add-on functionality included with ExpressionEngine, and one for third party add-ons.
-
-![add-on manager](_images/addon_page.png)
 
 See [Installing Add-ons](add-ons/overview.md#installing-add-ons) to learn how to install an add-on.

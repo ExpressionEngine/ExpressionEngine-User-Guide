@@ -28,5 +28,3 @@ Prolet Generator -- Creates a new prolet for an add-on
 ### Generating a prolet:
 
 `php eecli.php make:prolet MyNewProlet --addon=my_addon --description="This is my prolet description"`
-
-TIP: For more information on using the `make:prolet` command to create new Prolet with your add-on, reference [Adding Prolets](development/prolets.md).
