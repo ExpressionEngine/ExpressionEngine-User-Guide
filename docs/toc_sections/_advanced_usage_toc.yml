@@ -122,18 +122,55 @@
 
 - name: Add-On Development
   items:
-    - name: The addon.setup.php File
-      href: development/addon-setup-php-file.md
-    - name: Add-on Installer
-      href: development/addon-installer.md
-    - name: Plugins
-      href: development/plugins.md
-    - name: Modules
-      href: development/modules.md
-    - name: Extensions
-      href: development/extensions.md
-    - name: Extension Hooks
+    - name: Building An Add-On
       items:
+        - name: Start Here
+          href: development/addon-development-overview
+        - name: Add-on Setup File
+          href: development/addon-setup-php-file.md
+        - name: Add-on Update File
+          href: development/add-on-update-file.md
+        - name: Extending the Core
+          href: development/extensions.md
+        - name: Adding Control Panel Pages
+          href: development/modules.md
+        - name: Adding Actions
+          href: development/actions.md
+        - name: Adding Fieldtypes
+          items:
+            - name: Fieldtype Development
+              href: development/fieldtypes/fieldtypes.md
+            - name: Fieldtype Example
+              href: development/fieldtypes/example.md
+            - name: Enhanced Fieldtype Features
+              href: development/fieldtypes/enhanced.md
+        - name: Adding CLI Commands
+          items:
+          - name: Creating A Command
+            href: cli/creating-a-command.md
+          - name: Defining Input
+            href: cli/defining-input.md
+          - name: Displaying Output
+            href: cli/displaying-output.md
+        - name: Adding Template Tags
+          href: development/custom-template-tags.md
+        - name: Using Language Files
+          href: development/add-on-language-files.md
+        - name: Adding Publish Form Tabs
+          href: development/tab-files.md
+        - name: Adding Prolets
+          href: development/prolets.md
+        - name: Adding Dashboard Widgets
+          href: development/widgets.md
+        #- name: REMOVE - Adding Text Formatting Options
+        #  href: development/text-formatting.md
+    - name: Accessing the Database
+      href: development/database-access.md
+
+    - name: Available Core Hooks
+      items:
+        - name: Overview
+          href: development/extension-hooks/extension-hooks-overview.md
         - name: Global
           items:
             - name: Core Library
@@ -265,17 +302,9 @@
             - name: Wiki Module
               href: development/extension-hooks/module/wiki.md
 
-    - name: Fieldtypes
-      items:
-        - name: Fieldtype Development
-          href: development/fieldtypes/fieldtypes.md
-        - name: Fieldtype Example
-          href: development/fieldtypes/example.md
-        - name: Enhanced Fieldtype Features
-          href: development/fieldtypes/enhanced.md
     - name: Jump Menu
       href: development/jump-menu.md
-    - name: Architecture
+    - name: Learn About the Core
       href: development/architecture.md
     - name: Services
       items:
@@ -418,8 +447,6 @@
         - name: Upload Destinations Model
           href: development/models/upload-destination.md
 
-    - name: Shared Form View
-      href: development/shared-form-view.md
     - name: Control Panel Javascript
       items:
         - name: Global Variables
@@ -432,10 +459,6 @@
           href: development/control-panel-js/rangesandselections.md
         - name: WysiHat API
           href: development/control-panel-js/wysihat-api.md
-    - name: Dashboard Widgets
-      href: development/widgets.md
-    - name: Prolets
-      href: development/prolets.md
     - name: Constants Reference
       href: development/constants.md
     - name: Cypress Tests
@@ -628,12 +651,7 @@
           href: cli/built-in-commands/make-prolet.md
         - name: Widget Generator
           href: cli/built-in-commands/make-widget.md
-    - name: Creating A Command
-      href: cli/creating-a-command.md
-    - name: Defining Input
-      href: cli/defining-input.md
-    - name: Displaying Output
-      href: cli/displaying-output.md
+
 
 - name: Entry Cloning
   href: channels/entry_cloning.md
