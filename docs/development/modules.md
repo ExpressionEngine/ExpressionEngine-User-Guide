@@ -41,6 +41,7 @@ This will create an `mcp.[addon_name].php` file in your add-on along with a `Con
 
 Inside of the `ControlPanel/Routes` folder, you will see that the CLI has created your first control route with `ControlPanel/Routes/Index.php` and a corresponding view in you `views` folder. This page is accessible via The Add-On Manager -> [Add-On Name] or via the `/admin.php?/cp/addons/settings/[add-on-name]` URL.
 
+WARN: **Create and Index route first.** When your add-on has one or more Control Panel pages associated with it, your add-on's card on the Add-On Manager page will link to the `Index` route of your add-on (`ControlPanel/Routes/Index.php`). If this route does not exist, users will be presented with a 404 page.
 
 ## Anatomy Of A Control Panel Route
 When you first add a route to your add-on a `ControlPanel/Routes` folder along with an `ControlPanel/Routes/[RouteName].php` starter file is created. The starter file will look something like this:
