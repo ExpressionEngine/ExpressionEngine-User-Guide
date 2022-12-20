@@ -26,7 +26,7 @@
  - Enabled renaming custom tabs in publish layouts; [#792](https://github.com/ExpressionEngine/ExpressionEngine/issues/792)
  - Added system config override for font size in EE code editors; [#921](https://github.com/ExpressionEngine/ExpressionEngine/issues/921)
  - Added per-channel setting for entry title instructions; [#1790](https://github.com/ExpressionEngine/ExpressionEngine/issues/1790)
-
+ - Updated custom add-on development methodology. (See [Add-on Development Overview](/development/addon-development-overview.md) )
 
 
 - **Bug Fixes** 💃🐛
@@ -36,7 +36,14 @@
   - Resolved [#2622](https://github.com/ExpressionEngine/ExpressionEngine/issues/2622) where deleting several legacy channel fields could cause MySQL error
 
 - **Developers** 💻
-  - Created new addon methodology and code structure
+  - Created CLI command make:fieldtype
+  - Created CLI command make:cp-route
+  - Created CLI command make:sidebar
+  - Renamed CLI command to make:tag to make:template-tag
+  - Overall improvements in several add-on related CLI commands
+  - Improved several add-on service classes
+  - Fixed bugs with several CLI commands
+  - Fixed a few bugs with add-on service classes
 
 ## Version 7.2.4
 (Release: December 13, 2022)
