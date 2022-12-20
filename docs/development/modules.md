@@ -19,6 +19,7 @@ Modules are the most complex form of add-on. They can have their own database ta
 
 NOTE: Modules can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:addon command](cli/built-in-commands/make-addon.md) for more information.
 
+WARN: **Create and Index route first.** When your add-on has one or more Control Panel pages associated with it, your add-on's card on the Add-On Manager page will link to the `Index` route of your add-on (`ControlPanel/Routes/Index.php`). If this route does not exist, users will be presented with a 404 page.
 
 ## Basic File Structure
 
