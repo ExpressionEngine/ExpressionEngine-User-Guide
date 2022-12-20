@@ -92,6 +92,10 @@ You may also set ExpressionEngine to not redirect the user after they reach the 
 
     redirect="none"
 
+If you want to redirect the user immediately after submitting the form, without showing success message, set the value of parameter to `return`.
+
+    redirect="return"
+
 ### `replyto=`
 
     replyto="yes"
@@ -111,6 +115,8 @@ If used with the redirect="none" parameter, the link text can be specified by ad
     return="about|Return to About Page"
 
     return="|Return to the Site"
+
+If the `redirect` parameter was set to value of `return`, then the user will be redirected immediately after submission of the form.
 
 ### `preview=`
 
