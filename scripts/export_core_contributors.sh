@@ -30,7 +30,7 @@ declare -a contributorList=()
 while [ $x -lt $length ]
 do
     AUTHOR=$(cat core_contributors.json | jq ".[$x] | .author | .login" | tr -d '"')
-    if [[ ! " ${contributorList[*]} " =~ " ${AUTHOR} " ]]; then
+    if [[ ! " ${contributorList[*]-} " =~ " ${AUTHOR} " ]]; then
         contributorList[${#contributorList[@]}]=$AUTHOR
         IMAGE=$(cat core_contributors.json | jq ".[$x] | .author | .avatar_url" | tr -d '"')
         NAME=$(cat core_contributors.json | jq ".[$x] | .commit | .author | .name" | tr -d '"')
