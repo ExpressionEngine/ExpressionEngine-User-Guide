@@ -26,7 +26,7 @@ Here are some ideas of what you can accomplish with a custom add-on:
 - Add custom [CLI commands](cli/creating-a-command.md) like `$ eecli.php amazing_add_on:do_something_amazing`
 - Add custom [Publish Form tabs](development/tab-files.md) to help organize entry fields for content editors.
 - Hook into ExpressionEngine and run [custom functions (called Extensions)](development/extensions.md) when ExpressionEngine does certain actions, like emailing your team whenever a post is created or manipulating text when a template is rendered. 
-- Display information from your add-on to content editors on the front-end by adding a [Prolet](/development/prolets.md) to the [ExpressionEngine Dock](/advanced-usage/front-end/dock.md).
+- Display information from your add-on to content editors on the front-end by adding a [Prolet](/development/prolets.md) to the [ExpressionEngine Dock](/pro/dashboard_management.md).
 - Display information in the [Control Panel Dashboard](/control-panel/dashboard_management.md) using a [custom Dashboard Widget](/development/widgets.md).
 
 These are just a few ideas of what you can do with custom add-ons. The possibilities are almost endless. 

@@ -13,7 +13,7 @@
 
 ## Overview
 
-Along with the basic widgets which will come native with ExpressionEngine Pro, each third-party add-on can provide multiple widgets to show pertinent information to users.
+Along with the basic [Dashboard Widgets](/pro/dashboard_management.md) which will come native with ExpressionEngine Pro, each third-party add-on can provide multiple widgets to show pertinent information to users.
 
 Widgets which are shipped with add-ons can have `.html` or `.php` extension and have to be placed into `widgets` sub-directory of the add-on. They are then installed automatically when the add-on is installed or updated. When using the CLI to generate a widget, a PHP widget will be created.
 

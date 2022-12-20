@@ -250,7 +250,7 @@ The file's class needs to implement `ExpressionEngine\Library\Rte\RteFilebrowser
 
 ## Working with Front-End Editing
 
-Most fieldtypes will work with [Front-end content management](/advanced-usage/front-end/frontend.md) out-of-the-box.
+Most fieldtypes will work with [Front-end content management]/pro/frontend.md) out-of-the-box.
 
 However there are some parameters that can be set in `ft.` to improve integration.
 
