@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2021, Packet Tide, LLC (https://packettide.com)
+    @copyright Copyright (c) 2003-2022, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -19,37 +19,40 @@ lang: php
 
 ## Properties
 
-#### `id` Key
-#### `site_id`
-#### `member_id`
-#### `username`
-#### `ip_address`
-#### `act_date`
-#### `action`
+- `id` Key
+- `site_id`
+- `member_id`
+- `username`
+- `ip_address`
+- `act_date`
+- `action`
 
 ## Relationships
 
-#### `Site`
-
-#### `Member`
+- `Site`
+- `Member`
 
 ## Methods
+
 This model has no additional methods.
 
 ## Events
+
 This model has no events.
 
 ## Examples
 
-#### Get Logs by Member ID
-```
+### Get Logs by Member ID
+
+```php
 $member_id = 1;
 
 $super_admin_logs = ee('Model')->get('CpLog')->filter('member_id', $member_id)->all();
 ```
 
 #### Create a new log
-```
+
+```php
 $log             = ee('Model')->make('CpLog');
 $log->member_id  = ee()->session->userdata('member_id');
 $log->username   = ee()->session->userdata('username');

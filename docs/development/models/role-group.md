@@ -20,34 +20,41 @@ lang: php
 ## Properties
 
 ### Required
-#### `name`
+
+- `name`
 
 ### Optional
-#### `group_id` Key, ini
+
+- `group_id` Key, ini
 
 ## Relationships
 
 #### `Roles`
+
 [`Member`](development/models/member.md) instances are assigned to role as Primary Role.
 
 #### `Members`
+
 Members that are assigned to role. May or may not intersect with `PrimaryMembers`.
 
 NOTE: **Note:** To get full list of members assigned to role, use [`getAllMembers()`](development/models/role.md#getallmembers) function.
 
 ## Methods
+
 This model has no methods.
 
 ## Examples
 
-#### Get a Role Group by ID
-```
+### Get a Role Group by ID
+
+```php
 $role_id = 6;
 $roleGroup = ee('Model')->get('RoleGroup', $role_id)->first();
 ```
 
-#### Edit a Role Group Name
-```
+### Edit a Role Group Name
+
+```php
 $roleGroup = ee('Model')->get('RoleGroup', 6)->first();
 $roleGroup->name = 'Marvel Members';
 
@@ -60,8 +67,9 @@ if ($result->isValid())
 }
 ```
 
-#### Create a Role Group
-```
+### Create a Role Group
+
+```php
 // Create a Role Model
 $roleGroup = ee('Model')->make('RoleGroup');
 
@@ -80,8 +88,9 @@ if ($result->isValid())
 $roleGroup->group_id;
 ```
 
-#### Add Roles to a Role Group
-```
+### Add Roles to a Role Group
+
+```php
 // Role IDs to add to Role Group.
 $role_members = array(1,2,3);
 

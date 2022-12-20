@@ -141,7 +141,7 @@ Here are the values available to the `type` key documented above:
 |checkbox|Checkboxes displayed in a vertical list.|
 |radio|Radio buttons displayed in a vertical list.|
 |yes_no|A Toggle control that returns either y or n respectively.|
-|file|File input. Requires filepicker configuration. <br> **NOTE:** This input provides a standard file upload button allowing selection and uploading of a file from the users environment. You will need to provide your own back-end code to do something with the uploaded file. If you want to insert a standard [EE File picker](#adding-an-EE-File-picker-to-your-shared-view-form) see notes later in this article.|
+|file|File input. Requires filepicker configuration. <br> **NOTE:** This input provides a standard file upload button allowing selection and uploading of a file from the users environment. You will need to provide your own back-end code to do something with the uploaded file. If you want to insert a standard [EE File picker](#adding-an-ee-file-picker-to-your-shared-view-form) see notes later in this article.|
 |image|Image input. Like file but shows an image thumbnail of the selected image as well as controls to edit or remove. Requires filepicker configuration.|
 |password|Password input.|
 |hidden|Hidden input.|
@@ -289,7 +289,7 @@ The function concerned (`ee()->file_field->dragAndDropField()`) has the followin
 | Parameter               | Type      | Description                                                                                             |
 | ------------------------| --------- | --------------------------------------------------------------------------------------------------------|
 | \$field_name            | `String`  | The name of the field                                                                                   |
-| \$data                  | `String`  | The data stored in the file field e.g. {filedir_x}filename.ext                                          |
+| \$data                  | `String`  | The data stored in the file field e.g. {file:XX:url} or {filedir_x}filename.ext                         |
 | \$allowed_file_dirs     | `String`  | Whether to show one upload destination or all uploade destinations<br>Either 'all' or ONE directory ID  |
 | \$content_type          | `String`  | The content type allowed. <br>Either 'all' or 'image'                                                   |
 | Returns                 | `String`  | Fully rendered file field                                                                               |

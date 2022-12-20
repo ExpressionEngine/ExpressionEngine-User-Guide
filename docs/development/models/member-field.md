@@ -20,29 +20,31 @@ lang: php
 ## Properties
 
 ### Required
-#### `m_field_name`
-#### `m_field_label`
-#### `m_field_type`
+
+- `m_field_name`
+- `m_field_label`
+- `m_field_type`
 
 ### Optional
-#### `m_field_id` Key
-#### `m_field_description`
-#### `m_field_list_items`
-#### `m_field_ta_rows`
-#### `m_field_maxl`
-#### `m_field_width`
-#### `m_field_search`
-#### `m_field_required`
-#### `m_field_public`
-#### `m_field_reg`
-#### `m_field_cp_reg`
-#### `m_field_fmt`
-#### `m_field_show_fmt`
-#### `m_field_exclude_from_anon boolString`
-#### `m_field_order`
-#### `m_field_text_direction`
-#### `m_field_settings json`
-#### `m_legacy_field_data boolString`
+
+- `m_field_id` Key
+- `m_field_description`
+- `m_field_list_items`
+- `m_field_ta_rows`
+- `m_field_maxl`
+- `m_field_width`
+- `m_field_search`
+- `m_field_required`
+- `m_field_public`
+- `m_field_reg`
+- `m_field_cp_reg`
+- `m_field_fmt`
+- `m_field_show_fmt`
+- `m_field_exclude_from_anon boolString`
+- `m_field_order`
+- `m_field_text_direction`
+- `m_field_settings json`
+- `m_legacy_field_data boolString`
 
 ## Relationships
 
@@ -87,13 +89,16 @@ No Relationships.
 | Returns   | `string` | Returns the prefix for member fields, `m_`. |
 
 ## Events
+
 Saving with this model will trigger the following events:
-`beforeInsert`
 
-## Examples:
+- `beforeInsert`
 
-#### Get All Custom Member Fields
-```
+## Examples
+
+### Get All Custom Member Fields
+
+```php
 $all_member_fields = ee('Model')
         ->get('MemberField')
         ->fields('m_field_label','m_field_id')
@@ -103,8 +108,9 @@ $all_member_fields = ee('Model')
 // Example return: [4 => 'My Field Name']
 ```
 
-#### Create a member field:
-```
+### Create a member field
+
+```php
 $new_field = ee('Model')->make('MemberField');
 $new_field->m_field_type        = 'text';
 $new_field->m_field_label       = 'My Member Field';
