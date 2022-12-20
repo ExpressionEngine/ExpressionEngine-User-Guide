@@ -710,6 +710,18 @@ Example Usage:
 
     $config['codemirror_height'] = '18em';
 
+### `codemirror_fontsize`
+
+Set the font-size of any CodeMirror textareas in the control panel, such as the Template Editor. Default is `1rem`.
+
+| Value               | Description                     |
+| ------------------- | ------------------------------- |
+| codemirror_fontsize | Font-size to use, in CSS units. |
+
+Example Usage:
+
+    $config['codemirror_fontsize'] = '0.9rem';
+
 ### `comment_edit_time_limit`
 
 Set the length of time in seconds that members have to edit their comments on the front end of the site. Set to `0` for no limit. Members in the Super Admin group are exempt from this time limit.
