@@ -17,9 +17,34 @@ The snippets below were truncated for clarity. The full example fieldtype can be
 
 [TOC]
 
-## Installation
+## Generate Fieldtype File
+Start by generating a custom fieldtype for your add-on using the `make:fieldtype` command. 
 
-The google maps fieldtype is going to have 3 global settings. Latitude, longitude, and zoom. These will determine what the default map looks like. By returning an array from within install we can provide a default set of global settings.
+```
+$ php system/ee/eecli.php make:fieldtype
+Let's implement a fieldtype!
+What is the fieldtype name? Amazing Fieldtype
+What add-on is the fieldtype being added to? [amazing_add_on]:  amazing_add_on
+Building fieldype.
+Fieldtype created successfully!
+```
+
+This will create a `ft.amazing__fieldtype.php` in your add-on's folder.
+
+We'll now update the methods found within our fieldtype's class to provide our functionality:
+- `function install()`
+- `function display_global_settings()`
+- `function save_global_settings()`
+- `function display_settings()`
+- `function save_settings()`
+- `function display_field()`
+- `function replace_tag()`
+- `function replace_latitude()`
+- `function replace_tag_catchall()`
+
+## Installation - `install()`
+
+The google maps fieldtype is going to have 3 global settings. Latitude, longitude, and zoom. These will determine what the default map looks like. By returning an array from within our `install()` method we can provide a default set of global settings.
 
     function install()
     {
@@ -35,7 +60,7 @@ The google maps fieldtype is going to have 3 global settings. Latitude, longitud
 
 The installation method for this fieldtype does not create any additional tables, so no cleanup work needs to be done. The default `uninstall()` method provided by the EE_Fieldtype parent class will suffice. Most fieldtype methods have sensible defaults to help reduce duplicate code.
 
-## Global Settings
+## Global  - `display_global_settings()`
 
 The installer sets the default global settings, but currently there is no way to change these from the control panel. We can use the `display_global_settings()` method to return the contents of the settings form. Having this method also enables the global settings link on the overview page.
 
@@ -50,9 +75,9 @@ The installer sets the default global settings, but currently there is no way to
         return $form;
     }
 
-Manually entering longitudes and latitudes is inconvenient so the final method in the example download also adds some javascript to let the user choose from a map.
+Manually entering longitudes and latitudes is inconvenient so the final method in the example download also adds some JavaScript to let the user choose from a map.
 
-## Saving Global Settings
+## Saving Global Settings - `save_global_settings()`
 
 In most instances saving the global settings is as easy as storing the `$_POST` array. Remember to include existing global settings if not everything can be changed.
 
@@ -61,7 +86,7 @@ In most instances saving the global settings is as easy as storing the `$_POST` 
         return array_merge($this->settings, $_POST);
     }
 
-## Individual Settings
+## Individual Settings - `display_settings()`
 
 The default map may not always be the desired choice for each map field, so on the regular settings page it will display a similar configuration screen. We will use the familiar [Shared Form View](development/shared-form-view.md) format to display our settings.
 
@@ -127,7 +152,7 @@ The default map may not always be the desired choice for each map field, so on t
         ));
     }
 
-## Saving Individual Settings
+## Saving Individual Settings - `save_settings()`
 
 Saving individual field settings works largely the same as saving global settings. Keep be aware that they are later merged with global settings, so they can override a global setting.
 
@@ -142,7 +167,7 @@ If your fieldtype needs a wide style on the publish form, like Grid or a Textare
         );
     }
 
-## Displaying the Field (Publish Page)
+## Displaying the Field On the Publish Page - `display_field()`
 
 With all the settings set up, it can now be displayed on the publish screen. A key factor when you get to this stage is to decide in what format the data should be stored. Since all three available values in this case are numbers, this field will store them separated by pipes (`lang|lat|zoom`).
 
@@ -173,9 +198,9 @@ With all the settings set up, it can now be displayed on the publish screen. A k
         return $hidden_input.'<div style="height: 500px;"><div id="map_canvas" style="width: 100%; height: 100%"></div></div>';
     }
 
-## Rendering the Tag
+## Rendering the Tag - `replace_tag()`
 
-Finally, the field needs a frontend display. For google maps this will almost exclusively be javascript.
+Finally, the field needs a frontend display. For google maps this will almost exclusively be JavaScript.
 
     function replace_tag($data, $params = array(), $tagdata = FALSE)
     {
@@ -192,6 +217,8 @@ Finally, the field needs a frontend display. For google maps this will almost ex
 ## Creating Multiple Rendering Options
 
 Along with parameters a field can also provide tag modifiers to change its output. In the template these are called by adding a colon to the fieldname, followed by the modifier name. For example: `{myfield:latitude}`. The advantage that field modifiers have over parameters is that they can be used in conditionals.
+
+These methods are not created by the CLI and need to be added as needed to your fieldtype's class.
 
 Parsing the modifiers is identical to using the regular `replace_tag()` function. The method name must start with `replace_` followed by the modifier name.
 
