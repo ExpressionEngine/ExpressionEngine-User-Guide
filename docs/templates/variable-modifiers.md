@@ -28,7 +28,7 @@ The modifiers are being applied by adding modifier name after variable name, sep
 
 It is possible to apply several modifiers at the same time by chaing those, e.g. `var_name:trim:url_encode`. The modifiers would be applied left to right (so in this case, the variable's content will first be trimmed and then URL-encoded).
 
-When applying several modifiers, there could be conflict in parameter names. To avoid that, the parameters could be prefixed with modifier name followed by semicolon. E.g. `{excerpt:limit characters='20'}` could be written as `{excerpt:limit limit:characters='20'}`. This allows writing constructions such as `{excerpt:limit:trim limit:characters='20' trim::characters='\n\r'}`. Prefixed parameter has higher precedence over non-prefixed one.
+When applying several modifiers, there could be conflict in parameter names. To avoid that, the parameters could be prefixed with modifier name followed by semicolon. E.g. `{excerpt:limit characters='20'}` could be written as `{excerpt:limit limit:characters='20'}`. This allows writing constructions such as `{excerpt:limit:trim limit:characters='20' trim:characters='\n\r'}`. Prefixed parameter has higher precedence over non-prefixed one.
 
 ## Modifiers
 
