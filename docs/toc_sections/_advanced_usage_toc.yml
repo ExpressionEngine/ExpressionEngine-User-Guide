@@ -125,7 +125,7 @@
     - name: Building An Add-On
       items:
         - name: Start Here
-          href: development/addon-development-overview
+          href: development/addon-development-overview.md
         - name: Add-on Setup File
           href: development/addon-setup-php-file.md
         - name: Add-on Update File
@@ -446,7 +446,8 @@
           href: development/models/template-group.md
         - name: Upload Destinations Model
           href: development/models/upload-destination.md
-
+    - name: Shared Form View
+      href: development/shared-form-view.md
     - name: Control Panel Javascript
       items:
         - name: Global Variables
