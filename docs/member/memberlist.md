@@ -21,6 +21,24 @@ Outputs a searchable list of members, including form filters to sort and limit t
 
     return="member/memberlist"
 
+### `form_class=`
+
+    form_class="login"
+
+This parameter allows you to specify the class attribute for the search &lt;form&gt; tag.
+
+### `form_id=`
+
+    form_id="login"
+
+This parameter allows you to specify the id attribute for the search &lt;form&gt; tag.
+
+### `form_name=`
+
+    form_name="login"
+
+This parameter allows you to specify a name attribute for the search &lt;form&gt; tag.
+
 ## Form Variables
 
 ### `{form_declaration}`

@@ -24,6 +24,23 @@ This tag allows users to edit their avatar image. The image will be uploaded to 
 
     return="member/profile"
 
+### `form_class=`
+
+    form_class="login"
+
+This parameter allows you to specify the class attribute for the &lt;form&gt; tag.
+
+### `form_id=`
+
+    form_id="login"
+
+This parameter allows you to specify the id attribute for the &lt;form&gt; tag.
+
+### `form_name=`
+
+    form_name="login"
+
+This parameter allows you to specify a name attribute for the &lt;form&gt; tag.
 
 ## Form Inputs
 
