@@ -17,7 +17,9 @@ lang: php
 [TOC]
 
 ## Overview
-Add-ons can also add tabs which are visible on in [Publish Layouts](control-panel/channels.md#publish-layouts). Respectivley these tabs would also be visible on the Entry Publish/Edit page if selected in the publish layout. Two things are required for your add-on to have this functionality:
+Add-ons can also add tabs which are visible on in [Publish Layouts](control-panel/channels.md#publish-layouts). Respectivley these tabs would also be visible on the Entry Publish/Edit page if selected in the publish layout. Tabs can also optionally display the associated data as columns in Entry Manager.
+
+Two things are required for your add-on to have this functionality:
 - [`tabs()` method](/development/add-on-update-file.md#add-publish-tabs-with-your-add-on-tabs) added to the Update File
 - The Tab File (`tab.[addon_name].php`)
 
@@ -74,6 +76,13 @@ class Amazing_add_on_tab
 
     }
     
+
+    // This function is needed to display data as Entry Manager column
+    public function renderTableCell($data, $field_id, $entry)
+    {
+        $entry_meta = $this->getEntryMeta($entry->entry_id);
+        return json_encode($entry_meta);
+    }
 
 }
 ```
@@ -202,3 +211,20 @@ Called during a `ChannelEntry` entity's `afterSave` event, this allows you to in
 | Returns     | `Void`  |                                                       |
 
 Called during a `ChannelEntry` entity's `beforeDelete` event, this allows you to sync your records if any are tied to channel entry_ids.
+
+### `renderTableCell($data, $field_id, $entry)`
+
+Display the tab data as column in the Entry Manager
+
+| Parameter | Type     | Description                               |
+| --------- | -------- | ----------------------------------------- |
+| \$data    | `Array`  | Ignored by tab files                      |
+| \$field_id| `Int`    | Ignored by tab files                      |
+| \$entry   | `Array`  | Current `ChannelEntry` object             |
+| Returns   | `String` | The string to display in Entry Manager column  |
+
+#### `getTableColumnConfig()`
+
+Sets [table column configuration](development/services/table.html#setting-the-columns) for Entry Manager
+
+Returns `Array`
