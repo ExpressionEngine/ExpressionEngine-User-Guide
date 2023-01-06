@@ -36,7 +36,7 @@ Your jump file MUST have the following:
             'target' => 'See Below. Behavior changes based on dynamic element above'
         ));
 
-To Add Jump Menu commands to your add-on, you simply add array elemnts to the $items array in the example above
+To Add Jump Menu commands to your add-on, you simply add array elements to the $items array in the example above
 
 The array of a Jump Menu command is comprised of the following keys:
 
