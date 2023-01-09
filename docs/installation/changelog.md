@@ -8,6 +8,43 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.2.6
+(Release: January 9, 2023)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/6020323?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Doug Black</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr" target="_BLANK">@dougblackjr</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/17785714?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jonathan Hardisty</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=jHards" target="_BLANK">@jHards</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/17011377?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bradford Akin</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bakin1999" target="_BLANK">@bakin1999</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+- **Enhancements** 🚀
+ - Add additional HTML elements to CP stylesheet; [#2685](https://github.com/ExpressionEngine/ExpressionEngine/issues/2685)
+ - Allow swatches in Colorpicker fieldtype to have names
+ - Retain pagination and filters on Entry Manager page after saving & closing entry; [#111](https://github.com/ExpressionEngine/ExpressionEngine/issues/111)
+ - Improved Pro Search collections page UI
+ - Resolved [#2658](https://github.com/ExpressionEngine/ExpressionEngine/issues/2658) where some parameters were not available for member management forms 
+
+- **Bug Fixes** 💃🐛
+  - Resolved [#2663](https://github.com/ExpressionEngine/ExpressionEngine/pull/2663) where forgot password form could generate erroneous reset URLs
+  - Resolved [#2500](https://github.com/ExpressionEngine/ExpressionEngine/pull/2500) where reordering Grid with images had some issues
+  - Resolved [#2571](https://github.com/ExpressionEngine/ExpressionEngine/pull/2571) where using `exp:channel:categories` with no categories assigned could show PHP warning
+  - Resolves issue with using lang entries in CLI command 
+  - Resolved [#2700](https://github.com/ExpressionEngine/ExpressionEngine/pull/2700) where Pro Variables could show PHP notice
+  - Resolved issue with View Type preference not properly encoded 
+  - Resolved issue where Pro Search filters were using Low Search naming
+  - Resolved [#2679](https://github.com/ExpressionEngine/ExpressionEngine/pull/2679)where password validation URL was giving PHP error
+
+- **Developers** 💻
+  - Added CLI command to generate jump files for add-ons
+
 ## Version 7.2.5
 (Release: December 20, 2022)
 
