@@ -33,6 +33,23 @@ Include the CSS for the custom member fields.
 
     return="member/registration/success"
 
+### `form_class=`
+
+    form_class="login"
+
+This parameter allows you to specify the class attribute for the &lt;form&gt; tag.
+
+### `form_id=`
+
+    form_id="login"
+
+This parameter allows you to specify the id attribute for the &lt;form&gt; tag.
+
+### `form_name=`
+
+    form_name="login"
+
+This parameter allows you to specify a name attribute for the &lt;form&gt; tag.
 
 ## Form Inputs
 NOTE: Be sure to include the required Javascript and CSS to use the native [Password Validation](member/password-validation.md).
