@@ -11,6 +11,8 @@
 ## Version 7.2.6
 (Release: January 10, 2023)
 
+NOTE: **Important:** This version includes important security updates.
+
 - **Contributors** 🙌
 <div class="max-w-7xl mx-autotext-center">
 <div class="space-y-8 sm:space-y-12">
@@ -47,7 +49,7 @@
 - **Developers** 💻
   - Added CLI command to generate jump files for add-ons
 
-- **Security**
+- **Security** 🔒
   - Removed possibility for RCE vulnerability for authenticated CP user
 
 ## Version 7.2.5
