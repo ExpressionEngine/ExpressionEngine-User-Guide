@@ -47,6 +47,9 @@
 - **Developers** 💻
   - Added CLI command to generate jump files for add-ons
 
+- **Security**
+  - Removed possibility for RCE vulnerability for authenticated CP user
+
 ## Version 7.2.5
 (Release: December 20, 2022)
 
