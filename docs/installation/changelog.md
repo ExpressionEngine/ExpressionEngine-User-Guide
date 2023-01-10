@@ -26,18 +26,17 @@
 </div>
 
 - **Enhancements** 🚀
- - Add additional HTML elements to CP stylesheet; [#2685](https://github.com/ExpressionEngine/ExpressionEngine/issues/2685)
- - Allow swatches in Colorpicker fieldtype to have names
- - Retain pagination and filters on Entry Manager page after saving & closing entry; [#111](https://github.com/ExpressionEngine/ExpressionEngine/issues/111)
- - Improved Pro Search collections page UI
- - Resolved [#2658](https://github.com/ExpressionEngine/ExpressionEngine/issues/2658) where some parameters were not available for member management forms 
+  - Add additional HTML elements to CP stylesheet; [#2685](https://github.com/ExpressionEngine/ExpressionEngine/issues/2685)
+  - Allow swatches in Colorpicker fieldtype to have names
+  - Retain pagination and filters on Entry Manager page after saving & closing entry; [#111](https://github.com/ExpressionEngine/ExpressionEngine/issues/111)
+  - Improved Pro Search collections page UI
+  - Resolved [#2658](https://github.com/ExpressionEngine/ExpressionEngine/issues/2658) where some parameters were not available for member management forms 
 
 - **Bug Fixes** 💃🐛
   - Resolved [#2663](https://github.com/ExpressionEngine/ExpressionEngine/pull/2663) where forgot password form could generate erroneous reset URLs
   - Resolved [#2500](https://github.com/ExpressionEngine/ExpressionEngine/pull/2500) where reordering Grid with images had some issues
   - Resolved [#2571](https://github.com/ExpressionEngine/ExpressionEngine/pull/2571) where using `exp:channel:categories` with no categories assigned could show PHP warning
   - Resolves issue with using lang entries in CLI command 
-  - Resolved [#2700](https://github.com/ExpressionEngine/ExpressionEngine/pull/2700) where Pro Variables could show PHP notice
   - Resolved issue with View Type preference not properly encoded 
   - Resolved issue where Pro Search filters were using Low Search naming
   - Resolved [#2679](https://github.com/ExpressionEngine/ExpressionEngine/pull/2679)where password validation URL was giving PHP error
@@ -60,10 +59,10 @@
 </div>
 
 - **Enhancements** 🚀
- - Enabled renaming custom tabs in publish layouts; [#792](https://github.com/ExpressionEngine/ExpressionEngine/issues/792)
- - Added system config override for font size in EE code editors; [#921](https://github.com/ExpressionEngine/ExpressionEngine/issues/921)
- - Added per-channel setting for entry title instructions; [#1790](https://github.com/ExpressionEngine/ExpressionEngine/issues/1790)
- - Updated custom add-on development methodology. (See [Add-on Development Overview](/development/addon-development-overview.md) )
+  - Enabled renaming custom tabs in publish layouts; [#792](https://github.com/ExpressionEngine/ExpressionEngine/issues/792)
+  - Added system config override for font size in EE code editors; [#921](https://github.com/ExpressionEngine/ExpressionEngine/issues/921)
+  - Added per-channel setting for entry title instructions; [#1790](https://github.com/ExpressionEngine/ExpressionEngine/issues/1790)
+  - Updated custom add-on development methodology. (See [Add-on Development Overview](/development/addon-development-overview.md) )
 
 
 - **Bug Fixes** 💃🐛
@@ -98,11 +97,11 @@
 </div>
 
 - **Enhancements** 🚀
- - Reduced the amounts of queries when using a relationship field.
- - Added update date in success message after saving an entry. ([#1157](https://github.com/ExpressionEngine/ExpressionEngine/issues/1157))
- - Added ability to skip success message after submitting email contact form. ([#1034](https://github.com/ExpressionEngine/ExpressionEngine/issues/1034))
- - Increased performance of File Manager when attempting to load thousands of files. ([#2564](https://github.com/ExpressionEngine/ExpressionEngine/issues/2564))
- - Added confirmation toggle to keep or remove files when removing upload directory. ([#2623](https://github.com/ExpressionEngine/ExpressionEngine/issues/2623))
+  - Reduced the amounts of queries when using a relationship field.
+  - Added update date in success message after saving an entry. ([#1157](https://github.com/ExpressionEngine/ExpressionEngine/issues/1157))
+  - Added ability to skip success message after submitting email contact form. ([#1034](https://github.com/ExpressionEngine/ExpressionEngine/issues/1034))
+  - Increased performance of File Manager when attempting to load thousands of files. ([#2564](https://github.com/ExpressionEngine/ExpressionEngine/issues/2564))
+  - Added confirmation toggle to keep or remove files when removing upload directory. ([#2623](https://github.com/ExpressionEngine/ExpressionEngine/issues/2623))
 
 
 
