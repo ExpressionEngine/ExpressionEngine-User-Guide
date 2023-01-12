@@ -12,9 +12,9 @@
 ExpressionEngine’s native `channel:entries` tag allows you to fetch and filter entries in many ways by setting its parameters. The native Search module allows for filtering by keyword, but is limited in its capabilities. Pro Search combines the two into one module and then throw in extra features, filters, and a performance boost.
 
 
-Searching by **keywords** uses a custom [full-text](http://dev.mysql.com/doc/refman/5.5/en/fulltext-search.html) index instead of the raw entry data, which makes Low Search fast. **Very fast**. It also adds **relevance** to search results which can be influenced by applying **weight** to any searchable field.
+Searching by **keywords** uses a custom [full-text](http://dev.mysql.com/doc/refman/5.5/en/fulltext-search.html) index instead of the raw entry data, which makes Pro Search fast. **Very fast**. It also adds **relevance** to search results which can be influenced by applying **weight** to any searchable field.
 
-Apart from the powerful [keywords filter](/add-ons/pro-search/filters.md#keywords), and the ability to **use any native parameter as a search filter**, Low Search adds several other filters to further enhance and refine your search results:
+Apart from the powerful [keywords filter](/add-ons/pro-search/filters.md#keywords), and the ability to **use any native parameter as a search filter**, Pro Search adds several other filters to further enhance and refine your search results:
 
 - Select any combination of [categories](/add-ons/pro-search/filters.md#categories);
 - Limit entries by a given [distance](/add-ons/pro-search/filters.md#distance) based on latitude/longitude values;

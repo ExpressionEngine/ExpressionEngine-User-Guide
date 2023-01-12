@@ -42,24 +42,24 @@ For non-keyword searches, where collection information is not available, the exc
 
 ### Including categories
 
-Low Search can also add category information to the index, making entries searchable by keywords present in their categories. Just like the regular channel fields, you can add weight to the category name, description and any of the category custom fields.
+Pro Search can also add category information to the index, making entries searchable by keywords present in their categories. Just like the regular channel fields, you can add weight to the category name, description and any of the category custom fields.
 
 
 ### Building the index
 
 You will need to build the index of the new collection. To do this, just click the Index link on the collections list page for the collection you’ve just created. If you have defined a language, you can also build the Lexicon or both the index and lexicon. Depending on the Batch size set in your Settings and amount of entries in the collection channel, this could take a while.
 
-Once a collection index and lexicon is built, they will automatically stay up to date. However, if you change any of the field weights, you will need to rebuild the index to apply those changes to itself. Low Search will alert you if a rebuild of the index is necessary. In such cases, the lexicon does not need to be updated.
+Once a collection index and lexicon is built, they will automatically stay up to date. However, if you change any of the field weights, you will need to rebuild the index to apply those changes to itself. Pro Search will alert you if a rebuild of the index is necessary. In such cases, the lexicon does not need to be updated.
 
 ### Third party fieldtypes
 
-If a third party fieldtype stores its data in the native exp_channel_data table, it is supported by Low Search, ie. its contents can be added to the collection index. Because of this, some popular fieldtypes can already be indexed. For example, Matrix stores its searchable columns in said table to enable ExpressionEngine’s native search module and is therefore also supported by Low Search. Playa stores the Title and URL title of selected entries in the same way, which means the index data for searchable Playa fields will consist of these fields.
+If a third party fieldtype stores its data in the native exp_channel_data table, it is supported by Pro Search, ie. its contents can be added to the collection index. Because of this, some popular fieldtypes can already be indexed. For example, Matrix stores its searchable columns in said table to enable ExpressionEngine’s native search module and is therefore also supported by Pro Search. Playa stores the Title and URL title of selected entries in the same way, which means the index data for searchable Playa fields will consist of these fields.
 
 If the fieldtype doesn’t store its data in the native exp_channel_data table, it can make use of the Search index API to customize the data that will be added to the collection index.
 
 ### Diacritics and foreign characters
 
-One of the advantages of Low Search is the accent-insensitive search. This is achieved by removing any diacritics from characters in the search index. Low Search uses the native foreign characters array to convert these characters to simple ASCII. You can find the array in the /system/expressionengine/config/foreign_chars.php file, which you can modify to your liking. Any characters not present in that array will be left alone. Each search query will be treated in the same way.
+One of the advantages of Pro Search is the accent-insensitive search. This is achieved by removing any diacritics from characters in the search index. Pro Search uses the native foreign characters array to convert these characters to simple ASCII. You can find the array in the /system/expressionengine/config/foreign_chars.php file, which you can modify to your liking. Any characters not present in that array will be left alone. Each search query will be treated in the same way.
 
 ### Automate building of search indexes
 
@@ -73,7 +73,7 @@ The following variables can be added to the call to that URL either via GET or P
 - `build` - What you need to build, either index, lexicon or both (the default).
 - `collection_id` - Comma separated list of collection IDs to build.
 - `entry_id` - Comma separated list of entry IDs to build.
-- `key` - Your Low Search license key. Required
+- `key` - Your Pro Search license key. Required
 
 **Examples:**
 
