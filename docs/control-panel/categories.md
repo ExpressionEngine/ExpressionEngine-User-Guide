@@ -9,7 +9,7 @@
 
 # Categories
 
-**Control Panel Location: `Developer > Categories`**
+**Control Panel Location: `Content > Categories`**
 
 [TOC]
 
@@ -21,7 +21,7 @@ Category groups are _collections_ of categories that can be assigned to channels
 
 ## Create/Edit Category
 
-**Control Panel Location: `Developer > Categories > New/Edit Category`**
+**Control Panel Location: `Content > Categories > New/Edit Category`**
 
 Catagories have the following settings:
 
@@ -34,25 +34,25 @@ Catagories have the following settings:
 
 ## Create/Edit Category Groups
 
-**Control Panel Location: `Developer > Categories > New/Edit Category Group`**
+**Control Panel Location: `Content > Categories > New/Edit Category Group`**
 
 The category group form is broken out into 3 tabs:
 
 ### Details tab
 
-**Control Panel Location: `Developer > Categories > New/Edit Category Group > Details`**
+**Control Panel Location: `Content > Categories > New/Edit Category Group > Details`**
 
 The Details tab holds fields for the category group name (used only for display in the control panel), the HTML formatting options, and whether the category group is available in Files, Channels or both.
 
 ### Permissions tab
 
-**Control Panel Location: `Developer > Categories > New/Edit Category Group > Permissions`**
+**Control Panel Location: `Content > Categories > New/Edit Category Group > Permissions`**
 
 The Permissions tab controls which member roles have permission to edit or delete categories. The member role must have permission to edit categories in the [member role settings](control-panel/member-manager.md#member-roles) in order to be granted permission to edit a particular category group.
 
 ### Fields tab
 
-**Control Panel Location: `Developer > Categories > New/Edit Category Group > Fields`**
+**Control Panel Location: `Content > Categories > New/Edit Category Group > Fields`**
 
 The Fields tab allow you to manage all custom fields for the category group, including deleting and creating new fields.
 
