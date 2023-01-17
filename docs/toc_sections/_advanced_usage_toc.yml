@@ -69,6 +69,8 @@
           href: add-ons/pro-search/examples.md
         - name: Find and Replace
           href: add-ons/pro-search/find-and-replace.md
+        - name: Upgrde from Low Search
+          href: add-ons/pro-search/upgrade-from-low-search.md		  
         - name: Development
           items:
             - name: Creating your own Filter
@@ -95,6 +97,8 @@
           href: add-ons/pro-variables/tags.md
         - name: Fieldtype
           href: add-ons/pro-variables/fieldtype.md
+        - name: Upgrde from Low Variables
+          href: add-ons/pro-variables/upgrade-from-low-variables.md		  
         - name: Development
           items:
             - name: Fieldtype Bridge
