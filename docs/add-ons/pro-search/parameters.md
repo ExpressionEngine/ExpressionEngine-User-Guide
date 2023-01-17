@@ -6,9 +6,9 @@
     @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
-# Parameters in Low Search
+# Parameters in Pro Search
 
-Low Search uses both native and its own parameters to generate search results. All these parameters can be applied in two ways: as input fields in a Form, or as hard-coded parameters in the Results or URL tag. The values of these parameters can always be shown inside a Low Search tag by using the parameter name as a variable, prefixed with pro_search_.
+Pro Search uses both native and its own parameters to generate search results. All these parameters can be applied in two ways: as input fields in a Form, or as hard-coded parameters in the Results or URL tag. The values of these parameters can always be shown inside a Pro Search tag by using the parameter name as a variable, prefixed with pro_search_.
 
 So, any parameter:
 
@@ -60,7 +60,7 @@ WARN**Note:** do not include the square brackets in the variable names.
 
 ### Inclusive values
 
-The example above will filter results by any of the values given. However, ExpressionEngine also allows you to filter by all of the values, by separating them with an ampersand (&) rather than a vertical bar. Low Search also caters for this, using the require_all parameter, which takes any amount of parameter names as its value. For example:
+The example above will filter results by any of the values given. However, ExpressionEngine also allows you to filter by all of the values, by separating them with an ampersand (&) rather than a vertical bar. Pro Search also caters for this, using the require_all parameter, which takes any amount of parameter names as its value. For example:
 
 `category="2&4&6" search:number="one&&three"`
 
@@ -89,7 +89,7 @@ This is equal to:
 
 #### Exclude values
 
-ExpressionEngine also allows you to exclude values, by prepending not  to the parameter value, which negates the value. Low Search also caters for this, using the exclude parameter, which takes any amount of parameter names as its value. For example:
+ExpressionEngine also allows you to exclude values, by prepending not  to the parameter value, which negates the value. Pro Search also caters for this, using the exclude parameter, which takes any amount of parameter names as its value. For example:
 
 `category="not 2|4|6" search:number="not one|three"`
 
@@ -117,7 +117,7 @@ This is equal to:
 
 ### SQL parameters
 
-Low Search supports SQL parameters. This means you can use a SQL query in any pararameter. SQL queries are limited to SELECTs only and should always end with a semi-colon (;). Low Search will take the first item in the SELECT statement and creates a pipe-separated list from it. If the SQL query produces no results, it sets the parameter value to what comes after the semi-colon. You can optionally prefix the SQL query for better matching. Schematically, such a query looks like this:
+Pro Search supports SQL parameters. This means you can use a SQL query in any pararameter. SQL queries are limited to SELECTs only and should always end with a semi-colon (;). Pro Search will take the first item in the SELECT statement and creates a pipe-separated list from it. If the SQL query produces no results, it sets the parameter value to what comes after the semi-colon. You can optionally prefix the SQL query for better matching. Schematically, such a query looks like this:
 
 `param="prefix SELECT field FROM table WHERE lorem = 'ipsum';no results"`
 
