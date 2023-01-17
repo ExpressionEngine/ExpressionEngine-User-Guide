@@ -8,6 +8,21 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.2.7
+(Release: January 17, 2023)
+
+- **Enhancements** 🚀
+  - Added ability to set template engine in template manager
+
+- **Bug Fixes** 💃🐛
+  - Resolved [#2759](https://github.com/ExpressionEngine/ExpressionEngine/pull/2759) where checkbox field with the name of "statuses" does not render correctly
+  - Resolved [#2661](https://github.com/ExpressionEngine/ExpressionEngine/pull/2661) where is was not possible to search template group and template at the same time in Pages tab
+  - Resolved [#2437](https://github.com/ExpressionEngine/ExpressionEngine/pull/2437) where building Pro Search Collection via URL did not work properly
+  - Resolved [#2667](https://github.com/ExpressionEngine/ExpressionEngine/pull/2667) where errors for password resetting were not shown properly
+  - Resolved [#2739](https://github.com/ExpressionEngine/ExpressionEngine/pull/2739) where PHP notice could have been shown when accessing plugin documentation when using PHP 8.1
+  - Resolved issue where Channel Form grid has extra unneeded column
+  - Resolved [#2735](https://github.com/ExpressionEngine/ExpressionEngine/pull/2735) where Text Formatter could show deprecation notices when using PHP 8.1
+
 ## Version 7.2.6
 (Release: January 10, 2023)
 
