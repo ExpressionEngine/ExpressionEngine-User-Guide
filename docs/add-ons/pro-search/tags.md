@@ -201,7 +201,7 @@ Set the default value of any parameter. This value will be overwritten when the 
 
 #### disable
 
-In addition to the native values, the disable parameter allows you to disable filters per Results tag. Use the pro_search:filter_name format: for example, disable="pro_search:field_search" will disable Low Search’s Field Search filter. (since v6.2.0)
+In addition to the native values, the disable parameter allows you to disable filters per Results tag. Use the pro_search:filter_name format: for example, disable="pro_search:field_search" will disable Pro Search’s Field Search filter. (since v6.2.0)
 
     {disable}
 
@@ -231,7 +231,7 @@ Combines the native orderby and sort parameters. Separate field and sort order w
 
 #### query
 
-Use this parameter to pass through the encoded search query, which is present in the search results URI. You can override any of its settings by hard-coding the other Low Search parameters. Note that any of the hard-coded query parameters will not be reflected in the Search Log. Not needed when not encoding queries.
+Use this parameter to pass through the encoded search query, which is present in the search results URI. You can override any of its settings by hard-coding the other Pro Search parameters. Note that any of the hard-coded query parameters will not be reflected in the Search Log. Not needed when not encoding queries.
 
     {query}
 
@@ -519,7 +519,7 @@ The keywords, URL-encoded.
 
 #### keywords_clean
 
-The keywords, cleaned by the Low Search algorithm, ie. without punctuation or diacritics.
+The keywords, cleaned by the Pro Search algorithm, ie. without punctuation or diacritics.
 
     {keywords_clean}
 
