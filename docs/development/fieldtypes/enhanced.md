@@ -239,6 +239,16 @@ Possible return values are:
  - `'text'` - shows text input
  - `'select'` - shows select input populated with the field options (for fieldtypes that extend `OptionFieldtype`)
 
+## File Manager support
+
+References to files (as placed by Filepicker) can be in different forms - contaning file ID (e.g. `{file:123:url}`), or contaning directory ID and file name (e.g. `{filedir_2}filename.jpg`) when in [Compatibility Mode](control-panel/file-manager/file-manager.md#compatibility-mode).
+
+To get both cases parsed correctly, please use `ee()->file_field->parse_string` function.
+
+    ee()->load->library('file_field');
+    $data = ee()->file_field->parse_string($data);
+
+If you fieldtype is using custom JavaScript for treating the files, be sure to make the code aware of [`EE.fileManagerCompatibilityMode`](development/control-panel-js/globals.md#filemanagercompatibilitymode) variable. 
 
 ## Implementing Filepicker for Rich Text Editor
 
