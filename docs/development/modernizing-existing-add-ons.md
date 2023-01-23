@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2022, Packet Tide, LLC (https://packettide.com)
+    @copyright Copyright (c) 2003-2023, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -13,7 +13,8 @@
 
 The ExpressionEngine 7.2 release brought a new add-on development approach, which generates the majority of the add-on's needed files and structure. It also brings additional organization to how add-ons are developed.
 
-NOTE: These changes do NOT break existing add-ons.  The old development methodologies will still work.
+NOTE: These changes do NOT break existing add-ons.  The old development methodologies will still work. However once these changes are made the add-on will require ExpressionEngine 7.2+.
+
 
 The idea of an add-on _being_ a "plugin", "module", "extension", "fieldtype", etc. is no longer accurate. Instead, an add-on can include features such as template tags, actions, fieldtypes, or extensions.
 
