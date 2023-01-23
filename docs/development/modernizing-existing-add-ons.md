@@ -19,7 +19,7 @@ The idea of a plugin, module, extension, fieldtype, etc. no longer exist.  Inste
 
 In order to harness the new add-on development methodology, you will have to do a few SMALL updates to your existing add-on's.
 
-TIP: You don't have to migrate your add-on to the new development methodology.  After making the following changes, you can leave your add-ons as is, and start with new / additional development in the new method.
+TIP: You don't have to migrate your add-on to the new development methodology.  After making the following changes, you can leave your add-ons as is, and start new / additional development in the new method.
 
 
 [TOC]
@@ -65,4 +65,4 @@ use ExpressionEngine\Service\Addon\Installer;
 class Addon_upd extends Installer
 ```
 ## A Note on Plugins
-If your add-on is currently a plugin and your looking to take advantage of the new add-on development methodologies, we recommend migrating your plugin methods (functions) to your mod file first.
+If your add-on is currently a plugin and your looking to take advantage of the new add-on development methodologies, we recommend migrating your plugin methods (functions) to your mod file first.  This can be done with a simple copy and paste.
