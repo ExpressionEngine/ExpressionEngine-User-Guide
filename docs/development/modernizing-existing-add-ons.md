@@ -15,7 +15,7 @@ The ExpressionEngine 7.2 release brought a new add-on development approach, whic
 
 NOTE: These changes do NOT break existing add-ons.  The old development methodologies will still work.
 
-The idea of a plugin, module, extension, fieldtype, etc. no longer exists. Instead, an add-on can have a template tag, a fieldtype, or an extension.
+The idea of an add-on _being_ a "plugin", "module", "extension", "fieldtype", etc. is no longer accurate. Instead, an add-on can include features such as template tags, actions, fieldtypes, or extensions.
 
 To utilize the updated method for creating add-ons, you will need to make some small changes to your current add-ons. However, this does not mean that you need to completely convert your add-ons to the new method. After making these updates, you can continue using your existing add-ons and begin creating new ones using the updated method.
 
