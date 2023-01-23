@@ -17,9 +17,8 @@ NOTE: These changes do NOT break existing add-ons.  The old development methodol
 
 The idea of a plugin, module, extension, fieldtype, etc. no longer exists. Instead, an add-on can have a template tag, a fieldtype, or an extension.
 
-In order to harness the new add-on development methodology, you will have to do a few SMALL updates to your existing add-ons.
+To utilize the updated method for creating add-ons, you will need to make some small changes to your current add-ons. However, this does not mean that you need to completely convert your add-ons to the new method. After making these updates, you can continue using your existing add-ons and begin creating new ones using the updated method.
 
-TIP: You don't have to migrate your add-on to the new development methodology.  After making the following changes, you can leave your add-ons as is, and start new/additional development in the new method.
 
 
 [TOC]
