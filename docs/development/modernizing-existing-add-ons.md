@@ -47,7 +47,7 @@ class Addon_mcp extends Mcp
 
 ## Updating your ext.addon.php file
 
-In order to use the new approach, you will have to have your mcp file use and extend the Extension add-on service
+In order to use the new approach, you will have to have your ext file use and extend the Extension add-on service
 
 ```
 use ExpressionEngine\Service\Addon\Extension;
@@ -57,7 +57,7 @@ class Addon_ext extends Extension
 
 ## Updating your upd.addon.php file
 
-In order to use the new approach, you will have to have your mcp file use and extend the Installer add-on service
+In order to use the new approach, you will have to have your upd file use and extend the Installer add-on service
 
 ```
 use ExpressionEngine\Service\Addon\Installer;
