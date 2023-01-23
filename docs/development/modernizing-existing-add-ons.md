@@ -25,34 +25,41 @@ To utilize the updated method for creating add-ons, you will need to make some s
 [TOC]
 
 ## Updating your mod.addon.php file
-In order to use the new approach, you will have to have your mod file use and extend the module add-on service
+In order to use the new approach, you will have to have your mod file use and extend the module add-on service.  Your mod file will also need to add the protected variable $addon_name in the class
 
 
 ```
 use ExpressionEngine\Service\Addon\Module;
 
-class Addon extends Module
+class Amazing_add_on extends Module
+{
+    protected $addon_name = 'amazing_add_on';
 
 ```
 
+
 ## Updating your mcp.addon.php file
 
-In order to use the new approach, you will have to have your mcp file use and extend the Mcp add-on service
+In order to use the new approach, you will have to have your mcp file use and extend the Mcp add-on service. Your mcp file will also need to add the protected variable $addon_name in the class
 
 ```
 use ExpressionEngine\Service\Addon\Mcp;
 
-class Addon_mcp extends Mcp
+class Amazing_add_on_mcp extends Mcp
+{
+    protected $addon_name = 'amazing_add_on';
 ```
 
 ## Updating your ext.addon.php file
 
-In order to use the new approach, you will have to have your ext file use and extend the Extension add-on service
+In order to use the new approach, you will have to have your ext file use and extend the Extension add-on service.  Your ext file will also need to add the protected variable $addon_name in the class
 
 ```
 use ExpressionEngine\Service\Addon\Extension;
 
-class Addon_ext extends Extension
+class Amazing_add_on_ext extends Extension
+{
+    protected $addon_name = 'amazing_add_on';
 ```
 
 ## Updating your upd.addon.php file
@@ -62,7 +69,8 @@ In order to use the new approach, you will have to have your upd file use and ex
 ```
 use ExpressionEngine\Service\Addon\Installer;
 
-class Addon_upd extends Installer
+class Amazing_add_on_upd extends Installer
+{
 ```
 ## A Note on Plugins
 If your add-on is currently a plugin and you are looking to take advantage of the new add-on development methodologies, we recommend migrating your plugin methods (functions) to your mod file first.  This can be done with a simple copy and paste.
