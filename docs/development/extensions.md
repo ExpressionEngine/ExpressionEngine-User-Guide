@@ -26,7 +26,7 @@ NOTE:Before adding an extension hook to your add-on, you need to already have an
 We can give our add-on the ability to hook into the core of ExpressionEngine by using the CLI:
 
 ```
-$ php system/ee/eecli.php make:extension-hook
+$ php system/ee/eecli.php make:extension-hook -i
 Let's implement an extension hook!
 What hooks would you like to use? (Read more: https://docs.expressionengine.com/latest/development/extensions.html) typography_parse_type_end
 What add-on is the extension hook being added to? [amazing_add_on]:  amazing_add_on
@@ -35,6 +35,7 @@ Extension hook created successfully!
 
 ```
 
+NOTE: If your using the command above to add an extention to an existing add-on, please see the [Updating Existing Add-ons](LINK GOES HERE)
 
 TIP: Files that interact with ExpressionEngine core hooks are referred to as "extensions" because they extend the functionality of ExpressionEngine.
 

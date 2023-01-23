@@ -162,6 +162,8 @@
           href: development/prolets.md
         - name: Adding Dashboard Widgets
           href: development/widgets.md
+        - name: Modernizing existing add-ons
+          href: development/modernizing-existing-add-ons.md
         #- name: REMOVE - Adding Text Formatting Options
         #  href: development/text-formatting.md
     - name: Accessing the Database
