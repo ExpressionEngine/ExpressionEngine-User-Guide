@@ -33,7 +33,7 @@ Item commands are comprised of the following:
 
 - `[commandTitle]` _(string)_ Unique command title used as key in global jumps array. Will be prefixed with `[addonName]:` so a command title in Assets of `editS3Source` will be `Assets:editS3Source`
 - `icon` _(string)_ FontAwesome format: `fa-file`
-- `command` )(string)_ lowercase fuzzy-matched search text: `edit external source`
+- `command` _(string)_ lowercase fuzzy-matched search text: `edit external source`
 - `command_title` _(string)_ Human-readable command title, shows up in results
 
 NOTE: Style Note: We use bold, italics, and brackets to denote keywords and actions to the user and urge you to use keep your commands in line with this style:
