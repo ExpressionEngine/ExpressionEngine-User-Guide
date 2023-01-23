@@ -12,7 +12,7 @@ lang: php
 -->
 
 # Extensions and Hooks
-TIP: If your working with an existing add-on we recommend you start with [Modernizing add-ons](development/modernizing-existing-add-ons.md) 
+TIP: If you are working with an existing add-on, we recommend you start with [Modernizing add-ons](development/modernizing-existing-add-ons.md) 
 
 [TOC]
 
@@ -36,7 +36,7 @@ Extension hook created successfully!
 
 ```
 
-NOTE: If your using the command above to add an extention to an existing add-on, please see the [Updating Existing Add-ons](LINK GOES HERE)
+NOTE: If you are using the command above to add an extention to an existing add-on, please see the [Updating Existing Add-ons](development/modernizing-existing-add-ons.md)
 
 TIP: Files that interact with ExpressionEngine core hooks are referred to as "extensions" because they extend the functionality of ExpressionEngine.
 
