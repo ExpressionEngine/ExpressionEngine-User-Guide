@@ -32,7 +32,9 @@ Here are some ideas of what you can accomplish with a custom add-on:
 These are just a few ideas of what you can do with custom add-ons. The possibilities are almost endless. 
 
 ## Getting Started
-Getting started making an add-on is incredibly easy with the CLI. To begin making an add-on simply, use the `make:addon` command from the [CLI](/cli/intro.html). 
+Getting started making an add-on is incredibly easy with the CLI. To begin making an add-on, simply use the `make:addon` command from the [CLI](/cli/intro.html).
+
+TIP: If you are working with an existing add-on, we recommend you start with [Modernizing add-ons](development/modernizing-existing-add-ons.md) 
 
 ```
 $ php system/ee/eecli.php make:addon
