@@ -34,9 +34,20 @@ class My_awesome_plugin_upgrade {
 		}
 
 		if(version_compare($version, '4.0.0', '=')) {
-			// Run updates for upgrade to EE3
+			// Run updates for upgrade to EE4
 		}
 
+		if(version_compare($version, '5.0.0', '=')) {
+			// Run updates for upgrade to EE5
+		}
+
+		if(version_compare($version, '6.0.0', '=')) {
+			// Run updates for upgrade to EE6
+		}
+
+		if(version_compare($version, '7.0.0', '=')) {
+			// Run updates for upgrade to EE7
+		}
 	}
 
 }

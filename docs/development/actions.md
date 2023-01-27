@@ -9,6 +9,8 @@
 
 # Actions
 
+TIP: If you are working with an existing add-on, we recommend you start with [Modernizing add-ons](development/modernizing-existing-add-ons.md) 
+
 [TOC]
 
 ## Overview

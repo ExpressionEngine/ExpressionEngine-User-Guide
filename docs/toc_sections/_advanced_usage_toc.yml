@@ -168,6 +168,8 @@
           href: development/widgets.md
         #- name: REMOVE - Adding Text Formatting Options
         #  href: development/text-formatting.md
+    - name: Modernizing add-ons
+      href: development/modernizing-existing-add-ons.md
     - name: Accessing the Database
       href: development/database-access.md
 
