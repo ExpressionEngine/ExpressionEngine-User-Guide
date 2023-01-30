@@ -25,6 +25,7 @@
 
 **Enhancements** 🚀
 - Added options for different display layouts for File Grid fields; #2764
+- Added initial PHP 8.2 compatibility
 
 **Bug Fixes** 💃🐛
 - Resolved issue when files on non-local filesystem could not be resized or cropped from CP
