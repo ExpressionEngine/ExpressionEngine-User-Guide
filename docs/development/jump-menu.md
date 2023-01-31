@@ -42,7 +42,7 @@ The array of a Jump Menu command is comprised of the following keys:
 
 - `commandArrayTitle` _(string)_ Unique command title used as key in global jumps array. Will be prefixed with the add-ons name so a command title in the add-on Assets of `editS3Source` will be `Assets:editS3Source`
 - `icon` _(string)_ FontAwesome format: `fa-file`
-- `command` )_(string)_ lowercase string to be fuzzy-matched when user is typing in jump menu: “edit external source”
+- `command` _(string)_ lowercase string to be fuzzy-matched when user is typing in jump menu: “edit external source”
 - `command_title` _(string)_ Language file array key for Human-readable command title, shows up in results if fuzzy-matched.  *Please note, this should be in your Lang file.
 
 NOTE: Style Note: We use bold, italics, and brackets to denote keywords and actions to the user and urge you to use keep your commands in line with this style:
