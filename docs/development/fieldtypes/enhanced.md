@@ -241,9 +241,9 @@ Possible return values are:
 
 ## File Manager support
 
-References to files (as placed by Filepicker) can be in different forms - contaning file ID (e.g. `{file:123:url}`), or contaning directory ID and file name (e.g. `{filedir_2}filename.jpg`) when in [Compatibility Mode](control-panel/file-manager/file-manager.md#compatibility-mode).
+References to files in content (ex. when a file is selected by the Filepicker) can be in two different forms, depending on if the file manager is running in Compatibility Mode or not.  If it's not running in compatibility mode, the file references in content will contain a file ID (e.g. `{file:123:url}` where 123 is the file id).  The file can also be referenced in content with a directory ID and file name (e.g. `{filedir_2}filename.jpg`) when in [Compatibility Mode](control-panel/file-manager/file-manager.md#compatibility-mode).
 
-To get both cases parsed correctly, please use `ee()->file_field->parse_string` function.
+To parse both cases correctly, please use `ee()->file_field->parse_string` function.
 
     ee()->load->library('file_field');
     $data = ee()->file_field->parse_string($data);
