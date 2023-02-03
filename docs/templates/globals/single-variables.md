@@ -255,9 +255,29 @@ The email address for the site, as specified in [Email Configuration](control-pa
 
 [TOC=3]
 
+### `{logged_in_avatar_filename}`
+
+The filename of avatar image for the currently logged-in user.
+
+### `{logged_in_avatar_height}`
+
+Height of avatar image for the currently logged-in user.
+
+### `{logged_in_avatar_width}`
+
+Width of avatar image for the currently logged-in user.
+
 ### `{logged_in_email}`
 
 The email address for the currently logged-in user.
+
+### `{logged_in_ip_address}`
+
+This variable will be substituted with the IP address of the currently logged in user.
+
+### `{logged_in_member_id}`
+
+The Member ID for the currently logged-in user.
 
 ### `{logged_in_primary_role_id}`
 
@@ -274,14 +294,6 @@ The short name of the Primary Role for the currently logged-in user.
 ### `{logged_in_primary_role_description}`
 
 The Primary Role description for the currently logged-in user.
-
-### `{logged_in_ip_address}`
-
-This variable will be substituted with the IP address of the currently logged in user.
-
-### `{logged_in_member_id}`
-
-The Member ID for the currently logged-in user.
 
 ### `{logged_in_private_messages}`
 
