@@ -45,3 +45,5 @@
       href: troubleshooting/simple-commerce-module.md
     - name: Error Messages
       href: troubleshooting/error-messages.md
+    - name: Error Logging
+      href: troubleshooting/error-logging.md
