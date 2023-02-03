@@ -57,7 +57,7 @@ TIP: **Tip:** On a Unix based system, you can use the following pattern in your 
 
     find system/ee \( -type d -exec chmod 755 {} \; \) -o \( -type f -exec chmod 644 {} \; \)
 
-The **more restrictive permissions** should be used to allow PHP to write to files and directories. In a worst-case scenario, use `777` for directories and `666` for files. See [File Permissions](troubleshooting/general.md#file-permissions) for details.
+The **more restrictive permissions** should be used to allow PHP to write to files and directories. If your running into other issues related to file permissionsm take a look at [File Permissions](troubleshooting/general.md#file-permissions) in our trouble shooting section for additional details.
 
 
 ## 4. Run The Installation Wizard
