@@ -13,14 +13,14 @@
 
 ### Error Logging
 
-When debugging is disabled, there can be situations where PHP errors can cause a white screen, or there can be errors that are completley invisable to the user, but result in incorrect execution of a given page.
+When debugging is disabled, there can be situations where PHP errors can cause a white screen, or there can be errors that are completely invisible to the user but result in incorrect execution of a given page.
 
-To find these errors, it's recommended to enabled logging in ExpressionEngine.
+To find these errors, it is recommended to enable logging in ExpressionEngine.
 
 To enable error logging, you need to do the following:
 
-1. Create `logs` folder inside your `system/user` folder and make sure it's writable
-2. Open `config.php` file and add following config overrides
+1. Create a `logs` folder inside your `system/user` folder and make sure it's writable
+2. Open the `config.php` file and add the following config overrides:
     - [`log_threshold`](general/system-configuration-overrides.md#log_threshold) (required)
     - [`log_date_format`](general/system-configuration-overrides.md#log_date_format) (optional)
 
@@ -29,4 +29,4 @@ Example:
     $config['log_date_format'] = 'Y-m-d H:i:s';
     $config['log_threshold'] = '1';
 ```
-After adding the two config file items above, PHP errors, warnings etc. will be added logged to a file with the corresponding date inside `system/user/logs` folder.
+After adding the two config file items above, PHP errors, warnings, etc. will be logged to a file with the corresponding date inside the `system/user/logs` folder.
