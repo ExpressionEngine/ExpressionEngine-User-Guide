@@ -77,7 +77,7 @@ class Amazing_add_on_tab
     }
     
 
-    // This function is needed to display data as Entry Manager column
+    // This function is needed to display data as an Entry Manager column
     public function renderTableCell($data, $field_id, $entry)
     {
         $entry_meta = $this->getEntryMeta($entry->entry_id);
