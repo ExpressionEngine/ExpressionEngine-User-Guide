@@ -15,7 +15,7 @@
 
 ExpressionEngine's system files and directories are typically safe from direct HTTP access on a properly configured server.
 
-However, for increased security we recommend that the `system` folder either be renamed or moved entirely above the public web root folder (commonly named `public_html` or referred to as simply "webroot") and that `admin.php` be renamed as well. This document describes the renaming process.
+However, for increased security, we recommend that the `system` folder either be renamed or moved entirely above the public web root folder (commonly named `public_html` or referred to as simply "webroot") and that `admin.php` be renamed as well. This document describes the renaming process.
 
 ## Renaming the System Directory
 
