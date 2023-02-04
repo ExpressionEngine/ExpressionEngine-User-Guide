@@ -236,5 +236,14 @@ It is also possible to set up class aliases to an arbitrary FQCN. The example be
       'MyVendor\Services\ClassName' => 'AnotherVendor\Services\ClassName',
     ],
 
+### `requires`
+
+    'requires'       => [
+        'php'   => '8.0',
+        'ee'    => '7.2.0'
+    ],
+
+If your add-on requires a particular version of ExpressionEngine, or a minimum version of PHP, adding `requires` to your addon.setup.php will check for minimum versions of the specified framework, and will stop installation if the minimum requirement is not meant.
+
 ## Accessing Add-On Information From Another Add-on
 See the [Addon Service](development/services/addon.md) for API access.
