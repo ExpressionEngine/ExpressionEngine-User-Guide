@@ -9,7 +9,7 @@
 # ExpressionEngine v7 Change Log
 
 ## Version 7.2.9
-(Release: February 6, 2023)
+(Release: February 7, 2023)
 
 - **Contributors** 🙌
 <div class="max-w-7xl mx-autotext-center">
