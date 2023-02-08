@@ -153,7 +153,7 @@ Example Usage:
 
 ### `allow_signatures`
 
-Set whether member signatures are enabled.
+Set whether member signatures are enabled when using Discussion Forum.
 
 | Value | Behavior                  |
 | ----- | ------------------------- |
@@ -2711,7 +2711,7 @@ Example Usage:
 
 ### `sig_allow_img_hotlink`
 
-Specify whether members can link to images hosted on other websites as their signature image.
+Specify whether members can link to images hosted on other websites as their signature image for Discussion Forum.
 
 | Value | Behavior                                                 |
 | ----- | -------------------------------------------------------- |
@@ -2724,7 +2724,7 @@ Example Usage:
 
 ### `sig_allow_img_upload`
 
-Set whether members can upload their own signature image.
+Set whether members can upload their own signature image for Discussion Forum.
 
 | Value | Behavior                                                           |
 | ----- | ------------------------------------------------------------------ |
@@ -2737,7 +2737,7 @@ Example Usage:
 
 ### `sig_img_max_height`
 
-Set the maximum height (in pixels) allowed for user-uploaded signature images.
+Set the maximum height (in pixels) allowed for user-uploaded signature images in Discussion Forum.
 
 | Value   | Description            |
 | ------- | ---------------------- |
@@ -2749,7 +2749,7 @@ Example Usage:
 
 ### `sig_img_max_kb`
 
-Set the maximum file size (in kilobytes) allowed for user-uploaded signature images.
+Set the maximum file size (in kilobytes) allowed for user-uploaded signature images in Discussion Forum.
 
 | Value   | Description                  |
 | ------- | ---------------------------- |
@@ -2761,7 +2761,7 @@ Example Usage:
 
 ### `sig_img_max_width`
 
-Set the maximum width (in pixels) allowed for user-uploaded signature images.
+Set the maximum width (in pixels) allowed for user-uploaded signature images in Discussion Forum.
 
 | Value   | Description           |
 | ------- | --------------------- |
@@ -2797,7 +2797,7 @@ Example Usage:
 
 ### `sig_maxlength`
 
-Set the maximum number of characters allowed in a member's signature.
+Set the maximum number of characters allowed in a member's signature for Discussion Forum.
 
 | Value   | Description                                     |
 | ------- | ----------------------------------------------- |
