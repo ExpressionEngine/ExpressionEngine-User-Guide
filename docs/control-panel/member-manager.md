@@ -47,7 +47,29 @@ The _Member Fields_ feature permits you to add fields to the member registration
 
 This section allows you to create or edit Member Fields.
 
-The following fields are available:
+The following field types are compatible as can be used for custom member fields:
+
+- Checkboxes
+- Color Picker
+- Date
+- Duration
+- Email Address
+- File
+- Number Input
+- Multi Select
+- Radio Buttons
+- Range Slider
+- Rich Text Editor
+- Select Dropdown
+- Selectable Buttons
+- Text Input
+- Textarea
+- URL
+- Value Slider
+
+Additionaly, third-party field types that specify their use for `MemberField` model can be selected.
+
+The following fields are available when creating custom field:
 
 - **Type** -- You may choose what type of field this is. There are three choices: 1. **Text Input**: This is a single input line for text. It is the type of field you might use for a title, name, or other short information. 2. **Textarea**: This is a standard text entry box with multiple lines. This is what you would use for larger amount of text. 3. **Drop-down List**: This creates a standard HTML `<select>` drop-down list. You will need to define contents of the list in the provided form.
 

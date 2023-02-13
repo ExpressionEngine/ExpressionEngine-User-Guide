@@ -102,22 +102,35 @@ This indicates whether or not the add-on provides a plugin that should be made a
     'fieldtypes' => array(
       'hello_world' => array(
         'name' => 'Hello World',
-        'compatibility' => 'text'
+        'compatibility' => 'text',
+        'use' => array(
+          'MemberField'
+        )
       )
     )
 
 This is an associative array of the fieldtypes the add-on contains where the key corresponds to the fieldtype, `ft.hello_world.php` in the above example. Each fieldtype defines its name, which is used when creating or editing Channel Fields.
 
-As of 3.1.0 fieldtypes can specify their compatibility. When editing a Channel Field the fieldtype options will be restricted to those fieldtypes that have the same compatibility. ExpressionEngine's native fieldtypes have the following compatibilities:
+Fieldtypes can specify their compatibility. When editing a Channel Field the fieldtype options will be restricted to those fieldtypes that have the same compatibility. ExpressionEngine's native fieldtypes have the following compatibilities:
 
-| Compatibility | Fieldtypes                                                                                                                                                                         |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| date          | [Date](fieldtypes/date.md)                                                                                                                                                         |
-| file          | [File](fieldtypes/file.md)                                                                                                                                                         |
-| grid          | [Grid](fieldtypes/grid.md)                                                                                                                                                         |
-| list          | [Checkboxes, Radio Buttons, Select, Multiselect](fieldtypes/select.md)                                                                                                             |
-| relationship  | [Relationships](https://docs.expressionengine.com/latest/fieldtypes/relationships.html)                                                                                            |
-| text          | [Email Address](fieldtypes/email-address.md), [Rich Text Editor](fieldtypes/rte.md), [Text Input](fieldtypes/text.md), [Textarea](fieldtypes/textarea.md),[URL](fieldtypes/url.md) |
+| Compatibility | Fieldtypes                                                                          |
+| ------------- | ----------------------------------------------------------------------------------- |
+| date          | [Date](fieldtypes/date.md)                                                          |
+| file          | [File](fieldtypes/file.md)                                                          |
+| grid          | [Grid](fieldtypes/grid.md)                                                          |
+| list          | [Checkboxes](fieldtypes/checkboxes.md), [Radio Buttons](fieldtypes/radio-buttons.md), [Select](fieldtypes/select.md), [Multiselect](fieldtypes/multiselect.md), [Selectable Buttons](fieldtypes/selectable-buttons.md)                                                                          |
+| relationship  | [Relationships](fieldtypes/relationships.md)                                        |
+| text          | [Color Picker](fieldtypes/colorpicker.md), [Duration](fieldtypes/duration.md), [Email Address](fieldtypes/email-address.md), [Number](fieldtypes/number.md), [Range Slider](fieldtypes/range-slider.md), [Rich Text Editor](fieldtypes/rte.md), [Text Input](fieldtypes/text.md), [Textarea](fieldtypes/textarea.md), [URL](fieldtypes/url.md), [Value Slider](fieldtypes/value-slider.md) |
+
+If the fieldtype does not specify its compatibility then the type of created field can not be changed.
+
+All fieldtypes can be used as Channel Fields for the entries (as `ChannelField` model).
+
+If a fieldtype is also compatible with other content types (such as `MemberField` model that represents Custom Member Fields) then the model name needs to be specified in `use` array.
+
+    'use' => array(
+      'MemberField'
+    )
 
 ### `services`
 
