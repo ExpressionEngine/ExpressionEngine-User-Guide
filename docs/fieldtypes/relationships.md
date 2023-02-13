@@ -82,7 +82,7 @@ The following parameters are available to all looping relationship tags, allowin
 
 Some relationship tags may have additional parameters available. These are included in the usage instructions below.
 
-NOTE: **NOTE:** The [`disable`](fieldtypes/relationships.md#optimizing-relationships-rerformance) parameter should be applied to the containing `{exp:channel:entries}` call, not to the relationship tag itself.
+NOTE: **NOTE:** The [`disable`](fieldtypes/relationships.md#optimizing-relationships-performance) parameter should be applied to the containing `{exp:channel:entries}` call, not to the relationship tag itself.
 
 ## Accessing Children
 

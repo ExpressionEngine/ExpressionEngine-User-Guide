@@ -609,7 +609,7 @@ NOTE:**Note:** If multiple members are needed, an ExpressionEngine Pro license i
   - Ability to organize content into [subfolders](/control-panel/file-manager/subfolders.md)
   - Folders can now be created directly on the filesystem through the File Manager
   - Implemented [FlySystem PHP library](https://flysystem.thephpleague.com/docs/) to add more extensiblity to the File Manager.
-  - Added support for cloud based file storage through [Adapters](/control-panel/file-manager/adapters.md)
+  - Added support for cloud based file storage through [Adapters](/control-panel/file-manager/upload-directories.md#adapter)
   - Changed how files are referenced in the database. Previously files were referenced using `{filedir_X}filename.ext`. Files are now referenced using `{file:XX:url}`. [Compatiblity Mode](/control-panel/file-manager/file-manager.md#compatibility-mode) is recommended for upgrades until there is confirmation that all add-ons will work with new file data format.
   - File usage is now available in the File Manager to display where a file is used throughout the Control Panel as well as notify users if a file is in use before deleting the file
 
@@ -641,6 +641,6 @@ NOTE:**Note:** If multiple members are needed, an ExpressionEngine Pro license i
   - Simple Commerce Add-on has now been removed from ExpressionEngine and made a downloadable add-on from the ExpressionEngine Store. On upgrades which use the Simple Commerce Add-on, the add-on will be moved from the `ee/addons` folder to `user/addons` and considered a user installed add-on.
   - Ip to Nation Add-on has now been removed from ExpressionEngine and made a downloadable add-on from the ExpressionEngine Store. On upgrades which use the Ip to Nation Add-on, the add-on will be moved from the `ee/addons` folder to `user/addons` and considered a user installed add-on.
   - The included version of jQuery used in the Control Panel has been updated to v3.6.0
-  - Added the option to [globablly cache](/channels/entries.html#cache-refresh-cache_prefix) Channel Entries tag results
+  - Added the option to [globally cache](/channels/entries.md#cache-refresh-cache-prefix) Channel Entries tag results
   - Added [ENV File Support](/advanced-usage/env-support.md)
   - Added new Shared Form View 

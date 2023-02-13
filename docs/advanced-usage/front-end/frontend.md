@@ -58,7 +58,7 @@ This special conditional allows you to display content if front-end editing is e
 ## Enable/Disable The Front Edit Link
 
 There are several ways to disable front-end editing links:
- - Globally with [configuration overrides](/general/system-configuration-overrides.html#enable_frontedit_links) or in [General Settings](/control-panel/settings/front-end-editing.md#enable-automatic-front-end-editing-links)
+ - Globally with [configuration overrides](/general/system-configuration-overrides.md#enable_frontedit_links) or in [General Settings](/control-panel/settings/front-end-editing.md#enable-automatic-front-end-editing-links)
  - Per field in the [field settings](control-panel/field-manager/field-manager-settings.md)
  - Via the Dock on the front-end by toggling Edit Mode on/off.
  - In the template by using [ExpressionEngine template comments](#expressionengine-comment), [HTML comments](#html-comment), or [field parameter](#field-tag-parameter)

@@ -22,13 +22,13 @@ There are several settings that could prevent the Dock from showing on the front
 
 - The Dock is disabled via settings or config override. Disabling the Dock will disable all Front-End Content Management on the front-end of your site.
     - Via [front-end editing settings](control-panel/settings/front-end-editing.md), ensure that the "Enable Dock?" setting is toggled on.
-    - Via the [`enable_dock` config override](general/system-configuration-overrides.md#enable_dock). If in use, this override must be set to `'y'` for the Dock to work on the front-end.
+    - Via the [`enable_dock` config override](general/system-configuration-overrides.md#enable-dock). If in use, this override must be set to `'y'` for the Dock to work on the front-end.
 
 ### Dock shows, but front edit links do not show on the front-end of the website.
 
 - Front edit links are disabled via settings or config override.
     - Via settings [front-end editing settings](control-panel/settings/front-end-editing.md), ensure that the "Enable front-end editing" setting is toggled on.
-    - Via the [`enable_frontedit` config override](general/system-configuration-overrides.md#enable_frontedit). If in use, this override must be set to `'y'` for front-end editing to work.
+    - Via the [`enable_frontedit` config override](general/system-configuration-overrides.md#enable-frontedit). If in use, this override must be set to `'y'` for front-end editing to work.
 
 - User does not have proper access to edit channels. Users must be assigned a role which has access to channels and to be able to edit channel content to see related front edit links on the site.
 
@@ -45,4 +45,3 @@ There are several settings that could prevent the Dock from showing on the front
 - Front edit links are disabled via HTML comments, EE template comments, or `disable` parameter. There are 3 ways to disable Pro's automatic generation of front edit links. Ensure that the template code your inspecting isn't surrounded by template comments or wrapped in a field tag using `disable="frontedit`. For details on these methods read the [docs regarding disabling front-edit links](advanced-usage/front-end/frontend.md#enabledisable-the-front-edit-link) 
 
 - User does not have proper access to edit channels they are viewing. Users must be assigned access to channels and to be able to edit channel content to see related front edit links on the site. If the user is viewing entries on the front-end for which they do not have content, then no front edit links will show.
-

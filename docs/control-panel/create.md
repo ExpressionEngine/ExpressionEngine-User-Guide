@@ -15,7 +15,7 @@
 
 This is the area where you'll create content for your site by publishing new Entries to your Channels. If you have more than one Channel, moving your cursor over the Publish menu will show all of your Channels and allow you to select one.
 
-TIP: **Tip:** Site builders can customize the display of the Publish Page on a per Channel bases by creating a custom layout. Just go to the [Channel manager](control-panel/channels.md) and click 'layouts' to access the [Form layout](control-panel/channels.md#form-layouts).
+TIP: **Tip:** Site builders can customize the display of the Publish Page on a per Channel bases by creating a custom layout. Just go to the [Channel manager](control-panel/channels.md) and click 'layouts' to access the [publish layout](control-panel/channels.md#publish-layouts).
 
 ![Control Panel Create Entry Page](_images/cp-create.png)
 

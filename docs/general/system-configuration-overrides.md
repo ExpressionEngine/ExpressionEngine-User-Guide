@@ -1487,7 +1487,7 @@ Example Usage:
 
 ### `forum_is_installed`
 
-Automatically enabled when the [Discussion Forum](add-ons/forum/index.md) module is installed.
+Automatically enabled when the [Discussion Forum](https://github.com/ExpressionEngine/Forum) module is installed.
 
 | Value | Description                  |
 | ----- | ---------------------------- |
@@ -1500,7 +1500,7 @@ Example Usage:
 
 ### `forum_trigger`
 
-Sets the forum triggering word if the [Discussion Forum module is installed](add-ons/forum/index.md).
+Sets the forum triggering word if the [Discussion Forum module is installed](https://github.com/ExpressionEngine/Forum).
 
 | Value | Description           |
 | ----- | --------------------- |
@@ -1510,7 +1510,7 @@ Example Usage:
 
     $config['forum_trigger'] = 'eerox';
 
-**Also found in CP:** `Developer --> Add-Ons --> Discussion Forum Settings --> Edit`: [Forum Triggering Word](add-ons/forum/boards.md#forum-triggering-word)
+**Also found in CP:** `Developer --> Add-Ons --> Discussion Forum Settings --> Edit`: [Forum Triggering Word](https://github.com/ExpressionEngine/Forum/blob/main/docs/boards.md#forum-triggering-word)
 
 ### `gmail_duplication_prevention`
 
@@ -1648,7 +1648,7 @@ Example Usage:
 
 ### ip2nation
 
-Enable checks against the [IP to Nation](add-ons/ip-to-nation.md) database.
+Enable checks against the [IP to Nation](https://github.com/ExpressionEngine/IP-To-Nation) database.
 
 | Value | Behavior                             |
 | ----- | ------------------------------------ |
@@ -2556,7 +2556,7 @@ Example Usage:
 
 ### `sc_certificate_id`
 
-Specify the unique ID that is supplied by PayPal after providing them with a [public certificate](add-ons/simple-commerce/paypal-settings.md#public-certificate-path).
+Specify the unique ID that is supplied by PayPal after providing them with a [public certificate](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#public-certificate-path).
 
 | Value  | Description    |
 | ------ | -------------- |
@@ -2566,7 +2566,7 @@ Example Usage:
 
     $config['sc_certificate_id'] = 'SX4DT7FDO1234';
 
-**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [ID Given to Public Certificate by PayPal](add-ons/simple-commerce/paypal-settings.md#public-certification-id)
+**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [ID Given to Public Certificate by PayPal](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#public-certification-id)
 
 ### `sc_encrypt_buttons`
 
@@ -2574,7 +2574,7 @@ Enable encryption for PayPal purchase links and buttons created by Simple Commer
 
 NOTE: **Important:** Enabling this requires that your server have [OpenSSL](https://php.net/manual/en/ref.openssl.php) support compiled in PHP. Ask your server administrator for this information.
 
-NOTE: **Note:** Enabling this requires that you use a public certificate and private key. Please read the section on [Encrypted Website Payments](add-ons/simple-commerce/index.md#encrypted-website-payments) for full details. To be the most effective, you should set your PayPal account settings to only accept encrypted payments.
+NOTE: **Note:** Enabling this requires that you use a public certificate and private key. Please read the section on [Encrypted Website Payments](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/index.md#encrypted-website-payments) for full details. To be the most effective, you should set your PayPal account settings to only accept encrypted payments.
 
 | Value | Behavior                     |
 | ----- | ---------------------------- |
@@ -2585,7 +2585,7 @@ Example Usage:
 
     $config['sc_encrypt_buttons'] = 'y';
 
-**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [Encrypt PayPal Buttons and Links? ](add-ons/simple-commerce/paypal-settings.md#encrypt-paypal-buttons-and-links)
+**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [Encrypt PayPal Buttons and Links? ](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#encrypt-paypal-buttons-and-links)
 
 ### `sc_paypal_account`
 
@@ -2599,7 +2599,7 @@ Example Usage:
 
     $config['sc_paypal_account'] = 'paypal_email@example.com';
 
-**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [PayPal Account](add-ons/simple-commerce/paypal-settings.md#paypal-account-email)
+**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [PayPal Account](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#paypal-account-email)
 
 ### `sc_paypal_certificate`
 
@@ -2615,7 +2615,7 @@ Example Usage:
 
     $config['sc_paypal_certificate'] = "/path/to/paypal_certificate.pem";
 
-**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [PayPal Certificate Path](add-ons/simple-commerce/paypal-settings.md#paypal-certificate-path)
+**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [PayPal Certificate Path](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#paypal-certificate-path)
 
 ### `sc_private_key`
 
@@ -2631,7 +2631,7 @@ Example Usage:
 
     $config['sc_private_key'] = "/path/to/private_key.pem";
 
-**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [Private Key Path](add-ons/simple-commerce/paypal-settings.md#private-key-path)
+**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [Private Key Path](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#private-key-path)
 
 ### `sc_public_certificate`
 
@@ -2647,7 +2647,7 @@ Example Usage:
 
     $config['sc_public_certificate'] = "/path/to/public_certificate.pem";
 
-**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [Public Certificate Path](add-ons/simple-commerce/paypal-settings.md#public-certificate-path)
+**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [Public Certificate Path](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#public-certificate-path)
 
 ### `sc_temp_path`
 
@@ -2663,7 +2663,7 @@ Example Usage:
 
     $config['sc_temp_path'] = "/path/to/tmp";
 
-**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [Temporary Encrypted Files Path](add-ons/simple-commerce/paypal-settings.md#temporary-encrypted-files-path)
+**Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [Temporary Encrypted Files Path](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#temporary-encrypted-files-path)
 
 ### `send_headers`
 
@@ -3151,7 +3151,7 @@ Example Usage:
 
 ### `use_forum_url`
 
-Set the system to use the forum URL specified in the [forum board preferences](add-ons/forum/boards.md#forum-url) rather than the [the main site URL](#site_url) to form the forum's URL.
+Set the system to use the forum URL specified in the [forum board preferences](https://github.com/ExpressionEngine/Forum/blob/main/docs/boards.md#forum-url) rather than the [the main site URL](#site_url) to form the forum's URL.
 
 | Value | Behavior                                   |
 | ----- | ------------------------------------------ |

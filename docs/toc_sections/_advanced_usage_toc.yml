@@ -129,7 +129,7 @@
     - name: Building An Add-On
       items:
         - name: Start Here
-          href: development/addon-development-overview
+          href: development/addon-development-overview.md
         - name: Add-on Setup File
           href: development/addon-setup-php-file.md
         - name: Add-on Update File
