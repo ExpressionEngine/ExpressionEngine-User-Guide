@@ -23,7 +23,7 @@ Jumps are created via the CLI by using the `make:jump` command.
 ```
 php eecli.php make:jump 
 Let's create an add-on Jump File!
-What add-on is the Jumps file being added to? (amazing_add_on, cron,):  [amazing_add_on]
+What add-on is the Jumps file being added to? (amazing_add_on, cron):  [amazing_add_on]
 Building Add-on Jumps file now.
 Jumps file successfully created! Please note: You may need to clear your browser cache before you can see the new jump menu items
 
@@ -38,28 +38,28 @@ amazing_add_on
  ┗ ...
  ```
 
-Please note, your jump file will have the following:
+Please note, your jump file will contain of the following:
 
         use ExpressionEngine\Service\JumpMenu\AbstractJumpMenu;
     
         class [AddonName]_jump extends AbstractJumpMenu
         {
 
-        protected static $items = array(
-          'commandArrayTitle' => array(
-            'icon' => 'fa-file',
-            'command' => 'few lowercase words to be fuzzy-matched in jump menu',
-            'command_title' => 'Displayed <b>command title upon match from above</b>',
-            'dynamic' => false,
-            'requires_keyword' => false,
-            'target' => 'See Below. Behavior changes based on dynamic element above'
-        ));
+            protected static $items = array(
+              'commandArrayTitle' => array(
+                'icon' => 'fa-file',
+                'command' => 'few lowercase words to be fuzzy-matched in jump menu',
+                'command_title' => 'Displayed <b>command title upon match from above</b>',
+                'dynamic' => false,
+                'requires_keyword' => false,
+                'target' => 'See Below. Behavior changes based on dynamic element above'
+            ));
 
-To Add Jump Menu commands to your add-on, you simply add array elements to the $items array in the example generated
+To Add Jump Menu commands to your add-on, you simply add array elements to the `$items` array in the example generated
 
 The array of a Jump Menu command is comprised of the following keys:
 
-- `commandArrayTitle` _(string)_ Unique command title used as key in global jumps array. Will be prefixed with the add-ons name so a command title in the add-on Assets of `editS3Source` will be `Assets:editS3Source`
+- `commandArrayTitle` _(string)_ Unique command title used as key in global jumps array. Will be prefixed with the add-ons name so a command title in the add-on AmazingAddOn of `processData` will be `AmazingAddon:processData`
 - `icon` _(string)_ FontAwesome format: `fa-file`
 - `command` _(string)_ lowercase string to be fuzzy-matched when user is typing in jump menu: “edit external source”
 - `command_title` _(string)_ Language file array key for Human-readable command title, shows up in results if fuzzy-matched.  *Please note, this should be in your Lang file.
