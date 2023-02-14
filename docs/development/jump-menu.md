@@ -15,11 +15,30 @@ lang: ee
 
 Add-ons can easily add custom items for the Jump Menu.
 
-NOTE: Sample File: https://gist.github.com/obfuscode/77d0135970c9ce8bc84139c127507bb1
+TIP: If you are working with an existing add-on, we recommend you start with [Modernizing add-ons](development/modernizing-existing-add-ons.md) 
 
-Create a `jump.[addon_name].php` file in your add-on folder
+## Creating your add-on jump file.
+Jumps are created via the CLI by using the `make:jump` command. 
 
-Your jump file MUST have the following:
+```
+php eecli.php make:jump 
+Let's create an add-on Jump File!
+What add-on is the Jumps file being added to? (amazing_add_on, cron,):  [amazing_add_on]
+Building Add-on Jumps file now.
+Jumps file successfully created! Please note: You may need to clear your browser cache before you can see the new jump menu items
+
+``` 
+
+Follow the prompts to add a jump file to your add-on. 
+This will create a `jump.amazing_add_on.php` file in your add-on.
+
+```
+amazing_add_on
+ ┣ jump.amazing_add_on.php
+ ┗ ...
+ ```
+
+Please note, your jump file will have the following:
 
         use ExpressionEngine\Service\JumpMenu\AbstractJumpMenu;
     
@@ -36,7 +55,7 @@ Your jump file MUST have the following:
             'target' => 'See Below. Behavior changes based on dynamic element above'
         ));
 
-To Add Jump Menu commands to your add-on, you simply add array elements to the $items array in the example above
+To Add Jump Menu commands to your add-on, you simply add array elements to the $items array in the example generated
 
 The array of a Jump Menu command is comprised of the following keys:
 

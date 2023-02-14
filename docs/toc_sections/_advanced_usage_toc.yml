@@ -154,6 +154,8 @@
             href: cli/displaying-output.md
         - name: Adding Template Tags
           href: development/custom-template-tags.md
+        - name: Adding Jump Menu Items
+          href: development/jump-menu.md
         - name: Using Language Files
           href: development/add-on-language-files.md
         - name: Adding Publish Form Tabs
@@ -162,6 +164,7 @@
           href: development/prolets.md
         - name: Adding Dashboard Widgets
           href: development/widgets.md
+
         #- name: REMOVE - Adding Text Formatting Options
         #  href: development/text-formatting.md
     - name: Accessing the Database
@@ -302,8 +305,6 @@
             - name: Wiki Module
               href: development/extension-hooks/module/wiki.md
 
-    - name: Jump Menu
-      href: development/jump-menu.md
     - name: Learn About the Core
       href: development/architecture.md
     - name: Services
