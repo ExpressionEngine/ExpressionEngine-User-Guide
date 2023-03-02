@@ -761,119 +761,27 @@ To show only the month of December in 2003 you'll do this
 
 NOTE: **Note:** Don't combine these parameters with the `display_by` parameter discussed previously, as these take precedence over that parameter. In addition, the three parameters must be applied "in order", meaning that you must specify the year if you specify the month and you must specify both month and year to use day.
 
-## Single Variables
+## Variables
 
-[TOC=3 hide]
+Most Channel Entries variables are rendered with a single tag.
 
-### `{absolute_count}`
+However there are some variables (most notably `{categories}` as well as some complex custom fields, such as Grid or Fluid) that need to be rendered as tag pair.
 
-The absolute "count" out of the current entries being displayed by the tag, including those entries on previous pages (if using pagination).
+Variable pairs contain an opening and closing tag as well as content in-between. Example:
 
-If five entries are being displayed per page, then for the fourth entry on the second page the {absolute_count} variable would have a value of "9"
+    {date_heading}  <h1>{entry_date format="%Y %m %d"}</h1>  {/date_heading}
 
-**BONUS:** Since the Search module utilizes channel variables, {absolute_count} is also available to the Search Results tag.
+The reason variable pairs have an opening and closing pair is because the information between the pairs can be shown or not shown if the criteria for each tag is met.
 
-### `{absolute_results}`
+In the case of the "date_heading" pair, for example, it only appears at a certain interval that you set (hourly, daily, weekly, monthly, etc.). By using a pair of variables you can put HTML formatting between them that only gets shown when the interval is met. Otherwise, the chunk is not displayed.
 
-This variable will always display the absolute total number of results that are returned by the tag, regardless of pagination.
+[TOC=3]
 
-### `{absolute_reverse_count}`
+### Entry Variables
 
-The _opposite_ of `{absolute_count}`, in that it displays the entry count position counting backwards from the absolute total. Works across pagination, so the fifth entry in a list of fifteen entries would display "10".
+[TOC=4]
 
-### `{author}`
-
-The author's screen name, if it exists; otherwise, this variable will display the username.
-
-### `{author_id}`
-
-The member ID of the author.
-
-### `{avatar_image_height}`
-
-The height of the avatar image associated with the entry's author. Typically used as such:
-
-    {if avatar}
-        <img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
-    {/if}
-
-### `{avatar_image_width}`
-
-The width of the avatar image associated with the entry's author. Typically used as such:
-
-    {if avatar}
-        <img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
-    {/if}
-
-### `{avatar_url}`
-
-The URL to the avatar image associated with the entry's author. Typically used as such:
-
-    {if avatar}
-        <img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
-    {/if}
-
-### `{channel}`
-
-The name of the channel that the currently displayed entry is assigned to.
-
-### `{channel_id}`
-
-The ID number of the actual channel (not the _entry_.)
-
-### `{channel_short_name}`
-
-The short name of the channel of the currently displayed entry.
-
-### `{channel_url}`
-
-    {channel_url}
-
-The [URL of the channel](control-panel/channels.md#settings-tab) the current entry belongs to, set on Control Panel.
-
-### `{comment_auto_path}`
-
-This variable is replaced by the URL set in the **Comment Page URL** preference under `Developer --> Channels` in the channel's **Settings** tab. No entry id, URL Title, or other information is included; this is the exact URL from the preference.
-
-### `{comment_expiration_date}`
-
-    {comment_expiration_date format="%Y %m %d"}
-
-The date on which commenting expires for this entry, if they do. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
-
-### `{comment_entry_id_auto_path}`
-
-This variable is replaced by the URL set in the **Comment Page URL** preference under `Developer --> Channels` in the channel's **Settings** tab. The ID number of the entry will be automatically added. For example, this:
-
-    <a href="{comment_entry_id_auto_path}">my entry</a>
-
-Would be rendered like this:
-
-    <a href="https://example.com/channel/comments/234">my entry</a>
-
-### `{comment_subscriber_total}`
-
-Total number of subscribers to comments for a particular entry.
-
-### `{comment_total}`
-
-The total number of comments for a particular entry.
-
-### `{comment_url_title_auto_path}`
-
-This variable is replaced by the URL set in the **Comment Page URL** preference under `Developer --> Channels` in the channel's **Settings** tab. The URL Title of the entry will be automatically added. For example, this:
-
-    <a href="{comment_url_title_auto_path}">my entry</a>
-
-Would be rendered like this:
-
-    <a href="https://example.com/channel/comments/ice_cream/">my entry</a>
-
-### `{count}`
-
-The "count" out of the current entries being displayed. If five entries are being displayed, then for the fourth entry the {count} variable would have a value of "4".
-
-### `{cp_edit_entry_url}`
+#### `{cp_edit_entry_url}`
 
     {if logged_in}
       <a href="{cp_edit_entry_url}">Edit Entry</a>
@@ -885,27 +793,13 @@ The URL of the entry form in the control panel where this entry can be edited. I
       <a href="{cp_edit_entry_url}">Edit Entry</a>
     {/if}
 
-### `{edit_date}`
-
-The date on which the entry was last edited. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
-
-### `{email}`
-
-The author's raw email address.
-
-### `{entry_date}`
-
-    {entry_date format="%Y %m %d"}
-
-The date the entry was submitted. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
-
-### `{entry_id}`
+#### `{entry_id}`
 
     {entry_id}
 
 The ID number of the channel entry.
 
-### `{entry_id_path}`
+#### `{entry_id_path}`
 
     {entry_id_path='channel/archives'}
 
@@ -917,17 +811,7 @@ Would be rendered like this:
 
     <a href="https://example.com/channel/archives/234/">my entry</a>
 
-### `{entry_site_id}`
-
-The Site ID of the channel entry.
-
-### `{expiration_date}`
-
-    {expiration_date format="%Y %m %d"}
-
-The expiration date of the entry. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
-
-### `{forum_topic_id}`
+#### `{forum_topic_id}`
 
 If you have the Discussion Forum Module installed and if you have associated a forum thread with a channel entry (via the "Forum" section of the Publish tab), this is the ID number of the forum thread. It will typically be used like so:
 
@@ -935,43 +819,19 @@ If you have the Discussion Forum Module installed and if you have associated a f
         <a href="{path='forums/viewthread'}{forum_topic_id}">Discuss this in our forums</a>
     {/if}
 
-### `{gmt_entry_date}`
+#### `{page_uri}`
 
-    {gmt_entry_date format="%Y %m %d"}
-
-The date the entry was submitted in GMT. This variable is **not** localized for each user's date settings. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
-
-### `{gmt_edit_date}`
-
-    {gmt_edit_date format="%Y %m %d"}
-
-The date on which the entry was last edited in GMT. This variable is **not** localized for each user's date settings. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
-
-### `{ip_address}`
-
-The IP address of the author when they posted the entry.
-
-### `{member_search_path}`
-
-    {member_search_path='search/results'}
-
-This variable is replaced by a URL that passes the author's member name to your search results Template. In this way, you can display all entries made by the author. You should specify the Template_Group/Template that you use to display search results. For example:
-
-    <a href="{member_search_path='search/results'}">View entries by this member</a>
-
-### `{page_uri}`
-
-If you have the Pages Module installed and if you have associated a static page with a channel entry (via the "Pages" section of the Publish tab), this is the page uri for the page. It will typically be used like so:
+If you have the Pages (or Structure) Module installed and if you have associated a static page with a channel entry (via the "Pages" section of the Publish tab), this is the page uri for the page. It will typically be used like so:
 
     {if page_uri != ''} <a href="{page_uri}">View this page</a> {/if}
 
-### `{page_url}`
+#### `{page_url}`
 
-If you have the Pages Module installed and if you have associated a static page with a channel entry (via the "Pages" section of the Publish tab), this is the page url for the page (the site URL + the page URI). It will typically be used like so:
+If you have the Pages (or Structure) Module installed and if you have associated a static page with a channel entry (via the "Pages" section of the Publish tab), this is the page url for the page (the site URL + the page URI). It will typically be used like so:
 
     {if page_url != ''} <a href="{page_url}">View this page</a> {/if}
 
-### `{permalink}`
+#### `{permalink}`
 
 This variable defaults to site index with entry ID number:
 
@@ -985,71 +845,109 @@ Will render as:
 
     https://example.com/channel/archives/235/
 
-### `{profile_path}`
+#### `{status}`
 
-    {profile_path='member'}
+The status of the entry (open, closed, etc.)
 
-The URL to the author of the current entry. The ID number of the author will be automatically added. Used in a link:
+#### `{title}`
 
-    <a href="{profile_path='member'}">{author}</a>
+The title of the entry
 
-### `{recent_comment_date}`
+#### `{title_permalink}`
 
-    {recent_comment_date format="%Y %m %d"}
+This variable uses the "url title" as the link. It defaults to the site index with the "url title":
 
-The date of the most recent comment associated with the entry. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
+    https://example.com/my_ugly_boyfriend/
+
+In addition, you can specify a specific template group/template and the "url title" will automatically be added:
+
+    {title_permalink="channel/archives"}
+
+Will render as:
+
+    https://example.com/channel/archives/my_ugly_boyfriend/
+
+NOTE: **Note:** When creating a new entry, if you don't supply the "url title" then it will be automatically created from the actual entry title. Spaces are turned into underscores and quotes are removed. For example, "Joe's night out" becomes "joes_night_out".
+
+#### `{url_title}`
+
+The human readable title used in the URL as a permalink.
+
+#### `{url_title_path}`
+
+    {url_title_path='channel/archives'}
+
+The URL to the specified template. The "url title" of the entry will be automatically added. For example, this:
+
+    <a href="{url_title_path='channel/archives'}">permalink</a>
+
+Would be rendered like this:
+
+    <a href="https://example.com/channel/archives/ice_cream/">permalink</a>
+
+#### `{my_entry_custom_field}`
+
+Any of entry custom fields can be accessed using the field's [short name](/control-panel/field-manager/field-manager-settings.md#createedit-field) (as single tag or tag pair, whichever is supported by the [field type](/fieldtypes/overview.md))
+
+### Channel and Site Variables
+
+[TOC=4]
+
+#### `{channel}`
+
+The name of the channel that the currently displayed entry is assigned to.
+
+#### `{channel_id}`
+
+The ID number of the actual channel (not the _entry_.)
+
+#### `{channel_short_name}`
+
+The short name of the channel of the currently displayed entry.
+
+#### `{channel_url}`
+
+    {channel_url}
+
+The [URL of the channel](control-panel/channels.md#settings-tab) the current entry belongs to, set on Control Panel.
+
+#### `{entry_site_id}`
+
+The Site ID of the channel entry.
 
 ### `{relative_url}`
 
 The URL stored in your Channel URL setting under Channel Management, with the domain information removed. For example, if your setting is <https://example.com/site/index/> the variable will output /index.php/site/index/. Typically only used in the Atom feed Template.
 
-### `{relative_date}`
+### `{trimmed_url}`
 
-The amount of time that has passed between when the entry was submitted and the current time. The output is displayed in the format 1 day, 3 hours, 45 minutes. This variable is useful for displaying something such as "This entry was posted 1 day, 3 hours, 45 minutes ago."
+The domain name for your site, trimmed of any subdomains. For instance, beta.example.com becomes example.com. Typically only used in the Atom feed Template.
 
-### `{reverse_count}`
+### Counters
 
-The _opposite_ of `{count}`, in that it displays the entry count position counting backwards from the total. Like `{count}`, this is relative to the number of entries the tag is currently displaying. If you want the counts to include paginated results, you may want `{absolute_reverse_count}`.
+[TOC=4]
 
-### `{screen_name}`
+#### `{absolute_count}`
 
-The author's screen name, if it exists. This variable will not return anything if the author does not have a screen name defined.
+The absolute "count" out of the current entries being displayed by the tag, including those entries on previous pages (if using pagination).
 
-### `{signature}`
+If five entries are being displayed per page, then for the fourth entry on the second page the {absolute_count} variable would have a value of "9"
 
-The signature associated with the entry's author. Typically used as such:
+**BONUS:** Since the Search module utilizes channel variables, {absolute_count} is also available to the Search Results tag.
 
-    {if signature} <p>{signature}</p> {/if}
+#### `{absolute_results}`
 
-### `{signature_image_height}`
+This variable will always display the absolute total number of results that are returned by the tag, regardless of pagination.
 
-The height of the signature image associated with the entry's author. Typically used as such:
+#### `{absolute_reverse_count}`
 
-    {if signature_image}
-        <img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature">
-    {/if}
+The _opposite_ of `{absolute_count}`, in that it displays the entry count position counting backwards from the absolute total. Works across pagination, so the fifth entry in a list of fifteen entries would display "10".
 
-### `{signature_image_url}`
+#### `{count}`
 
-The URL to the signature image associated with the entry's author. Typically used as such:
+The "count" out of the current entries being displayed. If five entries are being displayed, then for the fourth entry the {count} variable would have a value of "4".
 
-    {if signature_image}
-        <img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature">
-    {/if}
-
-### `{signature_image_width}`
-
-The width of the signature image associated with the entry's author. Typically used as such:
-
-    {if signature_image}
-        <img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature">
-    {/if}
-
-### `{status}`
-
-The status of the entry (open, closed, etc.)
-
-### `{switch}`
+#### `{switch}`
 
     {switch='option_one|option_two|option_three'}
 
@@ -1068,61 +966,384 @@ The entries would then alternate between `<div class="one">` and `<div class="tw
 
 Multiple instances of the `{switch=}` tag may be used and the system will intelligently keep track of each one.
 
-### `{title}`
+#### `{reverse_count}`
 
-The title of the entry
-
-### `{title_permalink}`
-
-This variable uses the "url title" as the link. It defaults to the site index with the "url title":
-
-    https://example.com/my_ugly_boyfriend/
-
-In addition, you can specify a specific template group/template and the "url title" will automatically be added:
-
-    {title_permalink="channel/archives"}
-
-Will render as:
-
-    https://example.com/channel/archives/my_ugly_boyfriend/
-
-NOTE: **Note:** When creating a new entry, if you don't supply the "url title" then it will be automatically created from the actual entry title. Spaces are turned into underscores and quotes are removed. For example, "Joe's night out" becomes "joes_night_out".
+The _opposite_ of `{count}`, in that it displays the entry count position counting backwards from the total. Like `{count}`, this is relative to the number of entries the tag is currently displaying. If you want the counts to include paginated results, you may want `{absolute_reverse_count}`.
 
 ### `{total_results}`
 
 The total number of entries being displayed.
 
-### `{trimmed_url}`
+### Author Variables
 
-The domain name for your site, trimmed of any subdomains. For instance, beta.example.com becomes example.com. Typically only used in the Atom feed Template.
+[TOC=4]
 
-### `{url_title}`
+#### `{author}`
 
-The human readable title used in the URL as a permalink.
+The author's screen name, if it exists; otherwise, this variable will display the username.
 
-### `{url_title_path}`
+#### `{author_id}`
 
-    {url_title_path='channel/archives'}
+The member ID of the author.
 
-The URL to the specified template. The "url title" of the entry will be automatically added. For example, this:
+#### `{avatar_image_height}`
 
-    <a href="{url_title_path='channel/archives'}">permalink</a>
+The height of the avatar image associated with the entry's author. Typically used as such:
 
-Would be rendered like this:
+    {if avatar}
+        <img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
+    {/if}
 
-    <a href="https://example.com/channel/archives/ice_cream/">permalink</a>
+#### `{avatar_image_width}`
+
+The width of the avatar image associated with the entry's author. Typically used as such:
+
+    {if avatar}
+        <img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
+    {/if}
+
+#### `{avatar_url}`
+
+The URL to the avatar image associated with the entry's author. Typically used as such:
+
+    {if avatar}
+        <img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar">
+    {/if}
+
+#### `{email}`
+
+The author's raw email address.
+
+#### `{ip_address}`
+
+The IP address of the author when they posted the entry.
+
+#### `{member_search_path}`
+
+    {member_search_path='search/results'}
+
+This variable is replaced by a URL that passes the author's member name to your search results Template. In this way, you can display all entries made by the author. You should specify the Template_Group/Template that you use to display search results. For example:
+
+    <a href="{member_search_path='search/results'}">View entries by this member</a>
+
+### `{profile_path}`
+
+    {profile_path='member'}
+
+DEPRECATED. The URL to the author of the current entry using [Legacy Member Profile Templates](member/profile-templates.md). The ID number of the author will be automatically added. Used in a link:
+
+    <a href="{profile_path='member'}">{author}</a>
+
+#### `{screen_name}`
+
+The author's screen name, if it exists. This variable will not return anything if the author does not have a screen name defined.
+
+#### `{signature}`
+
+DEPRECATED. The signature associated with the entry's author. Typically used as such:
+
+    {if signature} <p>{signature}</p> {/if}
+
+#### `{signature_image_height}`
+
+DEPRECATED. The height of the signature image associated with the entry's author. Typically used as such:
+
+    {if signature_image}
+        <img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature">
+    {/if}
+
+#### `{signature_image_url}`
+
+DEPRECATED. The URL to the signature image associated with the entry's author. Typically used as such:
+
+    {if signature_image}
+        <img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature">
+    {/if}
+
+#### `{signature_image_width}`
+
+DEPRECATED. The width of the signature image associated with the entry's author. Typically used as such:
+
+    {if signature_image}
+        <img src="{signature_image_url}" width="{signature_image_width}" height="{signature_image_height}" alt="{author}'s signature">
+    {/if}
 
 ### `{username}`
 
 The author's username.
 
-### `{week_date}`
+#### `{my_member_custom_field}`
+
+Any of [custom profile fields](control-panel/member-manager.md#custom-member-fields) for entry's author can be accessed using the field's short name (as single tag or tag pair, whichever is supported by the [field type](/fieldtypes/overview.md))
+
+### Comment Variables
+
+[TOC=4]
+
+#### `{comment_auto_path}`
+
+This variable is replaced by the URL set in the **Comment Page URL** preference under `Developer --> Channels` in the channel's **Settings** tab. No entry id, URL Title, or other information is included; this is the exact URL from the preference.
+
+#### `{comment_expiration_date}`
+
+    {comment_expiration_date format="%Y %m %d"}
+
+The date on which commenting expires for this entry, if they do. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
+
+#### `{comment_entry_id_auto_path}`
+
+This variable is replaced by the URL set in the **Comment Page URL** preference under `Developer --> Channels` in the channel's **Settings** tab. The ID number of the entry will be automatically added. For example, this:
+
+    <a href="{comment_entry_id_auto_path}">my entry</a>
+
+Would be rendered like this:
+
+    <a href="https://example.com/channel/comments/234">my entry</a>
+
+#### `{comment_subscriber_total}`
+
+Total number of subscribers to comments for a particular entry.
+
+#### `{comment_total}`
+
+The total number of comments for a particular entry.
+
+#### `{comment_url_title_auto_path}`
+
+This variable is replaced by the URL set in the **Comment Page URL** preference under `Developer --> Channels` in the channel's **Settings** tab. The URL Title of the entry will be automatically added. For example, this:
+
+    <a href="{comment_url_title_auto_path}">my entry</a>
+
+Would be rendered like this:
+
+    <a href="https://example.com/channel/comments/ice_cream/">my entry</a>
+
+#### `{recent_comment_date}`
+
+    {recent_comment_date format="%Y %m %d"}
+
+The date of the most recent comment associated with the entry. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
+
+### Date variables
+
+[TOC=4]
+
+#### `{edit_date}`
+
+The date on which the entry was last edited. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
+
+#### `{entry_date}`
+
+    {entry_date format="%Y %m %d"}
+
+The date the entry was submitted. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
+
+#### `{expiration_date}`
+
+    {expiration_date format="%Y %m %d"}
+
+The expiration date of the entry. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
+
+#### `{gmt_entry_date}`
+
+    {gmt_entry_date format="%Y %m %d"}
+
+The date the entry was submitted in GMT. This variable is **not** localized for each user's date settings. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
+
+#### `{gmt_edit_date}`
+
+    {gmt_edit_date format="%Y %m %d"}
+
+The date on which the entry was last edited in GMT. This variable is **not** localized for each user's date settings. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
+
+#### `{relative_date}`
+
+The amount of time that has passed between when the entry was submitted and the current time. The output is displayed in the format 1 day, 3 hours, 45 minutes. This variable is useful for displaying something such as "This entry was posted 1 day, 3 hours, 45 minutes ago."
+
+#### `{week_date}`
 
     {week_date format="%Y %m %d"}
 
 The date that the week of the currently displayed entry started on, most commonly used in "weekly" scenarios with the [date_heading](#date_heading) variable pair.
 
 This variable is affected by the [start_day=](#start_day) parameter. By default, the week date will fall on Sunday for the week of the entry. When `start_day="Monday"` is used, the week date will fall on Monday for the week of the entry. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
+
+#### `{date_footer}`
+
+This variable is intended to use as tag pair.
+
+    {date_footer display="daily"}  <p>That's all from today!</p>  {/date_footer}
+
+The date footer can be used to show a footer at certain intervals. The interval can be set to show hourly, daily, weekly, monthly, or yearly. An optional "display" parameter can be used to set the display interval:
+
+    {date_footer display="daily"}
+
+Choices for the "display" parameter are:
+
+- `{date_footer display="hourly"}`
+- `{date_footer display="daily"}`
+- `{date_footer display="weekly"}`
+- `{date_footer display="monthly"}`
+- `{date_footer display="yearly"}`
+
+If no parameter is specified it will default to "daily".
+
+NOTE: **Note:** You can use as many date_footers as you want in the same tag. There is a bit of a performance hit, however, since date parsing is the most processor intensive. Read the caching section for information on improving performance.
+
+#### `{date_heading}`
+
+This variable is intended to use as tag pair.
+
+    {date_heading}  <h1>{entry_date format="%Y %m %d"}</h1>  {/date_heading}
+
+The date heading can be used to show a heading at certain intervals. The interval can be set to show hourly, daily, weekly, monthly, or yearly.
+
+When using weekly intervals, the [week_date](#week_date) variable would typically be used.
+
+    {date_heading display="weekly"}Week of {week_date format="%Y %m %d"}{/date_heading}
+
+An optional "display" parameter can be used to set the display interval:
+
+    {date_heading display="daily"}
+
+Choices for the "display" parameter are:
+
+- `{date_heading display="hourly"}`
+- `{date_heading display="daily"}`
+- `{date_heading display="weekly"}`
+- `{date_heading display="monthly"}`
+- `{date_heading display="yearly"}`
+
+If no parameter is specified it will default to "daily".
+
+NOTE: **Note:** You can use as many date_footers as you want in the same tag. There is a bit of a performance hit, however, since date parsing is the most processor intensive. Read the caching section for information on improving performance.
+
+### Category Variables
+
+[TOC=4]
+
+Categories are unique in that they are a "looping pair". Since you can have multiple categories per entry, we need a mechanism to show as many categories as exist for each entry.
+
+    {categories}
+        {category_image}
+        <a href="{path='channel/index'}">{category_name}</a>
+    {/categories}
+
+#### Categories Tag Pair Parameters
+
+[TOC=5]
+
+##### `backspace=`
+
+    {categories backspace="5"}
+
+Backspacing removes characters (including spaces and line breaks) from the last iteration of the loop. For example, if you put a &lt;br&gt; tag after each category you'll have this:
+
+    Local News<br>
+    Health News<br>
+    Science News<br>
+
+You might, however, not want the &lt;br&gt; tag after the final item. Simply count the number of characters (including spaces and line breaks) you want to remove and add the backspace parameter to the tag. The &lt;br&gt; tag has 4 characters plus a new line character, so you would do this:
+
+    {categories backspace="5"}
+        {category_name}<br>
+    {/categories}
+
+That will produce code like this:
+
+    Local News<br>
+    Health News<br>
+    Science News
+
+##### `limit=`
+
+    {categories limit="1"}
+
+This parameter limits the number of categories output by this variable pair. When in use, it will limit the output to the number provided, using the specified order in the Category Management page to determine which categories get shown.
+
+##### `show=`
+
+    {categories show="4|7"}
+
+With this parameter, you can specify which categories can be included when listing them with the {categories} variable pair. For instance, if you had entries that belonged to several categories, you could use this parameter to limit the display to only those categories you specified. While the entries may actually belong to more categories, only those you specify would be shown. Category IDs are separated by the pipe character to specify more than one category.
+
+You may alternatively specify which categories to not show:
+
+    {categories show="not 3|6|8"}
+
+##### `show_group=`
+
+    {categories show_group="1|3"}
+
+With this parameter, you can specify which category groups can be included when listing categories with the {categories} variable pair. For instance, if you had entries in a channel that had multiple category groups but only wanted to show the categories for one of those groups, you could specify that category group's ID number with this parameter. Category Group IDs are separated by the pipe character to specify more than one category group.
+
+You may alternatively specify which category groups to not show:
+
+    {categories show_group="not 2|4"}
+
+#### Categories Tag Pair Variables
+
+[TOC=5]
+
+##### `{category_count}`
+
+The "count" out of the current categories being displayed. If five categories are being displayed, then for the fourth category the {category_count} variable would have a value of "4".
+
+##### `{category_description}`
+
+The description associated with the category.
+
+##### `{category_group}`
+
+The category group ID of the category.
+
+##### `{category_id}`
+
+The category ID associated with the category.
+
+##### `{category_image}`
+
+The image link (or other information) you can optionally store with each category within the Control Panel.
+
+##### `{category_name}`
+
+This displays the name of the category.
+
+##### `{category_reverse_count}`
+
+The _opposite_ of `{category_count}`, in that it displays the category count position counting backwards from the total. Countdown all the things!
+
+##### `{category_total_results}`
+
+The total number of categories being displayed.
+
+##### `{category_url_title}`
+
+This variable displays the URL title of the category
+
+##### `{parent_id}`
+
+The category ID associated with the category's parent (or 0 in the case of a top level category).
+
+##### `{path=}`
+
+    {path='channel/index'}
+
+This variable will be replaced by a URL to the specifies Template Group/Template. The category designation information will automatically be added to the end of the URL so that the target page will know which category to display.
+
+If you want the category links to point to your site index instead of a particular template group/template you can use SITE_INDEX instead:
+
+    {categories}  <a href="{path='SITE_INDEX'}">{category_name}</a>  {/categories}
+
+#### Custom Category Fields
+
+All custom fields assigned to a category can be accessed using the "short name" of the field:
+
+    {class} {extended_description} {category_name_fr} etc..
+
+These are totally dynamic in that any field you create for your category will automatically be available by its "short name" as a variable.
+
+
 
 ## Conditional Tags
 
@@ -1268,189 +1489,6 @@ This special conditional lets you conditionally display content if the current e
 You may test whether an entry is set to be "sticky". You may also test whether it is not "sticky".
 
     {if sticky == 'n'} content {/if}
-
-## Variable Pairs
-
-[TOC=3]
-
-Variable pairs contain an opening and closing tag as well as content in-between. Example:
-
-    {date_heading}  <h1>{entry_date format="%Y %m %d"}</h1>  {/date_heading}
-
-The reason variable pairs have an opening and closing pair is because the information between the pairs can be shown or not shown if the criteria for each tag is met.
-
-In the case of the "date_heading" pair, for example, it only appears at a certain interval that you set (hourly, daily, weekly, monthly, etc.). By using a pair of variables you can put HTML formatting between them that only gets shown when the interval is met. Otherwise, the chunk is not displayed.
-
-### `{date_footer}`
-
-    {date_footer display="daily"}  <p>That's all from today!</p>  {/date_footer}
-
-The date footer can be used to show a footer at certain intervals. The interval can be set to show hourly, daily, weekly, monthly, or yearly. An optional "display" parameter can be used to set the display interval:
-
-    {date_footer display="daily"}
-
-Choices for the "display" parameter are:
-
-- `{date_footer display="hourly"}`
-- `{date_footer display="daily"}`
-- `{date_footer display="weekly"}`
-- `{date_footer display="monthly"}`
-- `{date_footer display="yearly"}`
-
-If no parameter is specified it will default to "daily".
-
-NOTE: **Note:** You can use as many date_footers as you want in the same tag. There is a bit of a performance hit, however, since date parsing is the most processor intensive. Read the caching section for information on improving performance.
-
-### `{date_heading}`
-
-    {date_heading}  <h1>{entry_date format="%Y %m %d"}</h1>  {/date_heading}
-
-The date heading can be used to show a heading at certain intervals. The interval can be set to show hourly, daily, weekly, monthly, or yearly.
-
-When using weekly intervals, the [week_date](#week_date) variable would typically be used.
-
-    {date_heading display="weekly"}Week of {week_date format="%Y %m %d"}{/date_heading}
-
-An optional "display" parameter can be used to set the display interval:
-
-    {date_heading display="daily"}
-
-Choices for the "display" parameter are:
-
-- `{date_heading display="hourly"}`
-- `{date_heading display="daily"}`
-- `{date_heading display="weekly"}`
-- `{date_heading display="monthly"}`
-- `{date_heading display="yearly"}`
-
-If no parameter is specified it will default to "daily".
-
-NOTE: **Note:** You can use as many date_footers as you want in the same tag. There is a bit of a performance hit, however, since date parsing is the most processor intensive. Read the caching section for information on improving performance.
-
-### {categories}
-
-[TOC=4]
-
-Categories are unique in that they are a "looping pair". Since you can have multiple categories per entry, we need a mechanism to show as many categories as exist for each entry.
-
-    {categories}
-        {category_image}
-        <a href="{path='channel/index'}">{category_name}</a>
-    {/categories}
-
-#### Categories Tag Pair Parameters
-
-[TOC=5]
-
-##### `backspace=`
-
-    {categories backspace="5"}
-
-Backspacing removes characters (including spaces and line breaks) from the last iteration of the loop. For example, if you put a &lt;br&gt; tag after each category you'll have this:
-
-    Local News<br>
-    Health News<br>
-    Science News<br>
-
-You might, however, not want the &lt;br&gt; tag after the final item. Simply count the number of characters (including spaces and line breaks) you want to remove and add the backspace parameter to the tag. The &lt;br&gt; tag has 4 characters plus a new line character, so you would do this:
-
-    {categories backspace="5"}
-        {category_name}<br>
-    {/categories}
-
-That will produce code like this:
-
-    Local News<br>
-    Health News<br>
-    Science News
-
-##### `limit=`
-
-    {categories limit="1"}
-
-This parameter limits the number of categories output by this variable pair. When in use, it will limit the output to the number provided, using the specified order in the Category Management page to determine which categories get shown.
-
-##### `show=`
-
-    {categories show="4|7"}
-
-With this parameter, you can specify which categories can be included when listing them with the {categories} variable pair. For instance, if you had entries that belonged to several categories, you could use this parameter to limit the display to only those categories you specified. While the entries may actually belong to more categories, only those you specify would be shown. Category IDs are separated by the pipe character to specify more than one category.
-
-You may alternatively specify which categories to not show:
-
-    {categories show="not 3|6|8"}
-
-##### `show_group=`
-
-    {categories show_group="1|3"}
-
-With this parameter, you can specify which category groups can be included when listing categories with the {categories} variable pair. For instance, if you had entries in a channel that had multiple category groups but only wanted to show the categories for one of those groups, you could specify that category group's ID number with this parameter. Category Group IDs are separated by the pipe character to specify more than one category group.
-
-You may alternatively specify which category groups to not show:
-
-    {categories show_group="not 2|4"}
-
-#### Categories Tag Pair Variables
-
-[TOC=5]
-
-##### `{category_count}`
-
-The "count" out of the current categories being displayed. If five categories are being displayed, then for the fourth category the {category_count} variable would have a value of "4".
-
-##### `{category_description}`
-
-The description associated with the category.
-
-##### `{category_group}`
-
-The category group ID of the category.
-
-##### `{category_id}`
-
-The category ID associated with the category.
-
-##### `{category_image}`
-
-The image link (or other information) you can optionally store with each category within the Control Panel.
-
-##### `{category_name}`
-
-This displays the name of the category.
-
-##### `{category_reverse_count}`
-
-The _opposite_ of `{category_count}`, in that it displays the category count position counting backwards from the total. Countdown all the things!
-
-##### `{category_total_results}`
-
-The total number of categories being displayed.
-
-##### `{category_url_title}`
-
-This variable displays the URL title of the category
-
-##### `{parent_id}`
-
-The category ID associated with the category's parent (or 0 in the case of a top level category).
-
-##### `{path=}`
-
-    {path='channel/index'}
-
-This variable will be replaced by a URL to the specifies Template Group/Template. The category designation information will automatically be added to the end of the URL so that the target page will know which category to display.
-
-If you want the category links to point to your site index instead of a particular template group/template you can use SITE_INDEX instead:
-
-    {categories}  <a href="{path='SITE_INDEX'}">{category_name}</a>  {/categories}
-
-#### Custom Category Fields
-
-All custom fields assigned to a category can be accessed using the "short name" of the field:
-
-    {class} {extended_description} {category_name_fr} etc..
-
-These are totally dynamic in that any field you create for your category will automatically be available by its "short name" as a variable.
 
 ## Pagination
 
