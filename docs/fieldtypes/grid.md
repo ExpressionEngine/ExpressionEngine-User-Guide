@@ -35,11 +35,11 @@ Enables moving the Grid rows with drag & drop to change the order
 
 #### Grid layout
 
-**Auto (by default)** - the fields within the grid will be placed in a horizontal row next to each other in bigger screens, and stacked vertically on smaller screens or if there is not enough space on the page for content.
+**Auto (default)** - the fields within the grid will be placed in a horizontal row on bigger screens, and stacked vertically on smaller screens or when there is not enough space on the page.
 
-**Vertical layout** - The fields within the grid will be always stacked vertically on the publish form.
+**Vertical layout** - The fields within the grid will always be stack vertically on the publish form.
 
-**Horizontal layout** - The fields within the grid will be always stacked horizontally on the publish form.
+**Horizontal layout** - The fields within the grid will always be stacked horizontally on the publish form.
 
 ### Grid Fields
 
