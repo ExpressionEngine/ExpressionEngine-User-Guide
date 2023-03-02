@@ -15,7 +15,7 @@ lang: php
 
 In ExpressionEngine 7 the `File` model is inheriting `FileSystemEntity` model, which is also parent of `Directory` model. They share same properties and most of the methods; different models are being used when there is need to distinguish between file and subfolder.
 
-We recommend using `FileSystemEntity` when you need everything that is in certain Upload Directory, and use `File` or `Directory` when working specifically with files or folders within Upload Directory. When saving, always use the exact model (`File` or `Directory`) needs to be used.
+We recommend using `FileSystemEntity` when you need everything that is in certain Upload Directory, and use `File` or `Directory` when working specifically with files or folders within Upload Directory. When saving, the exact model (`File` or `Directory`) always needs to be used.
 
 ## `FileSystemEntity`
 
