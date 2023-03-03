@@ -51,6 +51,8 @@ The Fields tab contains the channel's field and field group assignments.
 
 A channel can have any combination of fields and field groups assigned to it. You can also create fields and field groups on this tab, for a smooth workflow.
 
+![Channel Preferences - Add New Field](_images/cp-channel-new-field.png)
+
 ---
 
 ### Categories tab
