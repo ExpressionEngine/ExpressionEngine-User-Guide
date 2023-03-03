@@ -45,7 +45,7 @@ If an entry field is set to be "hidden" by default, it will have to be expanded 
 
 The fields can be [conditionally hidden](control-panel/field-manager/conditional-fields.md).
 
-In order for the field to be available when publishing or editing entry, it needs to be assigned to the channel the entry is in.
+In order for the field to be available when publishing or editing an entry, it needs to be assigned to the channel the entry is in.
 
 This can be done in two ways:
 - assign custom field to a [Field Group](/control-panel/field-manager/field-manager-settings.md#createedit-field-group) which is associated to the Channel
