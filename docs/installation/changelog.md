@@ -32,7 +32,7 @@
 - Resolved [#3028](https://github.com/ExpressionEngine/ExpressionEngine/issues/3028) where categories tab drag-and-drop re-ordering was not working
 - Resolved issue where turning on front-end editing could cause some tags to not render correctly
 - Resolved issue where CKeditor table in vertical Grid didn't render correctly when creating a new entry
-- Resolved [#2775(https://github.com/ExpressionEngine/ExpressionEngine/issues/2775) where approved members could have Pending as secondary role
+- Resolved [#2775](https://github.com/ExpressionEngine/ExpressionEngine/issues/2775) where approved members could have Pending as secondary role
 
 **Developers** 💻
 
