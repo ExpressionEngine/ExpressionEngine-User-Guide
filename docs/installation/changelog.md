@@ -34,6 +34,7 @@
 - Resolved [#2829](https://github.com/ExpressionEngine/ExpressionEngine/issues/2829)  where entry search in mobile view is not working
 - Resolved [#2838](https://github.com/ExpressionEngine/ExpressionEngine/issues/2838) where the new related entry modal generates JS errors
 - Resolved an issue where the author filter could have a missing label.
+- Resolved [#2775](https://github.com/ExpressionEngine/ExpressionEngine/issues/2775) where approved members could have Pending as secondary role
 
 ## Version 6.4.5
 (Release: February 7, 2023)
