@@ -8,6 +8,33 @@
 -->
 # ExpressionEngine v6 Change Log
 
+## Version 6.4.6
+(Release: March 6, 2023)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#3035](https://github.com/ExpressionEngine/ExpressionEngine/issues/3035) where enabling front-end editing on very complex templates could cause some tags to be not parsed
+- Resolved [#3048](https://github.com/ExpressionEngine/ExpressionEngine/issues/3048) where entry preview on mobile was broken
+- Resolved [#3028](https://github.com/ExpressionEngine/ExpressionEngine/issues/3028) where categories tab drag-and-drop re-ordering not working
+- Resolved [#2739](https://github.com/ExpressionEngine/ExpressionEngine/issues/2739) where PHP notice could have been shown when accessing plugin documentation when using PHP 8.1
+- Resolved issue where performing post-upgrade checks could show PHP error
+- Resolved issue where PHP notice could be shown on Live Preview when invoked from Entries prolet
+- Resolved issue where CKeditor table in vertical Grid didn't render correctly when creating a new entry
+- Resolved [#2829](https://github.com/ExpressionEngine/ExpressionEngine/issues/2829)  where entry search in mobile view is not working
+- Resolved [#2838](https://github.com/ExpressionEngine/ExpressionEngine/issues/2838) where the new related entry modal generates JS errors
+- Resolved an issue where the author filter could have a missing label.
+
 ## Version 6.4.5
 (Release: February 7, 2023)
 
@@ -25,19 +52,19 @@
 
 **Enhancements** 🚀
 
-- Added options for different display layouts for File Grid fields; [#2764](https://github.com/ExpressionEngine/ExpressionEngine/pull/2764)
+- Added options for different display layouts for File Grid fields; [#2764](https://github.com/ExpressionEngine/ExpressionEngine/issues/2764)
 
 **Bug Fixes** 💃🐛
 
-- Resolved [#2639](https://github.com/ExpressionEngine/ExpressionEngine/pull/2639) where animation was removed from GIF files during upload
-- Resolved [#2765](https://github.com/ExpressionEngine/ExpressionEngine/pull/2765) where using `ee()->table->set_data()` was not possible outside of Control Panel
-- Resolved [#2813](https://github.com/ExpressionEngine/ExpressionEngine/pull/2813) where select listing box bursts out of frame if page names are long.
-- Resolved [#2808](https://github.com/ExpressionEngine/ExpressionEngine/pull/2808) where some servers did not accept SVG files to be uploaded into image-only directory
-- Resolved [#2667](https://github.com/ExpressionEngine/ExpressionEngine/pull/2667) where errors for password resetting were not shown properly
-- Resolved [#2737](https://github.com/ExpressionEngine/ExpressionEngine/pull/2737) where templates that require authentication could show PHP notice
-- Resolved [#2312](https://github.com/ExpressionEngine/ExpressionEngine/pull/2312) where conditional fields depending on radio button could be not loaded correctly when creating new entry
-- Resolved [#2653](https://github.com/ExpressionEngine/ExpressionEngine/pull/2653) where Radio and Select fields were showing values and not labels in Entry Manager
-- Resolved [#2356](https://github.com/ExpressionEngine/ExpressionEngine/pull/2356) where Preview button was still visible when preview turned off in channel preferences
+- Resolved [#2639](https://github.com/ExpressionEngine/ExpressionEngine/issues/2639) where animation was removed from GIF files during upload
+- Resolved [#2765](https://github.com/ExpressionEngine/ExpressionEngine/issues/2765) where using `ee()->table->set_data()` was not possible outside of Control Panel
+- Resolved [#2813](https://github.com/ExpressionEngine/ExpressionEngine/issues/2813) where select listing box bursts out of frame if page names are long.
+- Resolved [#2808](https://github.com/ExpressionEngine/ExpressionEngine/issues/2808) where some servers did not accept SVG files to be uploaded into image-only directory
+- Resolved [#2667](https://github.com/ExpressionEngine/ExpressionEngine/issues/2667) where errors for password resetting were not shown properly
+- Resolved [#2737](https://github.com/ExpressionEngine/ExpressionEngine/issues/2737) where templates that require authentication could show PHP notice
+- Resolved [#2312](https://github.com/ExpressionEngine/ExpressionEngine/issues/2312) where conditional fields depending on radio button could be not loaded correctly when creating new entry
+- Resolved [#2653](https://github.com/ExpressionEngine/ExpressionEngine/issues/2653) where Radio and Select fields were showing values and not labels in Entry Manager
+- Resolved [#2356](https://github.com/ExpressionEngine/ExpressionEngine/issues/2356) where Preview button was still visible when preview turned off in channel preferences
 - Resolved issue where Channel Form grid has extra unneeded column
 
 ## Version 6.4.4
@@ -59,10 +86,10 @@
 
 
 - **Bug Fixes** 💃🐛
-  - Resolved [#2679](https://github.com/ExpressionEngine/ExpressionEngine/pull/2679) where password validation URL was giving PHP error
-  - Resolved [#2658](https://github.com/ExpressionEngine/ExpressionEngine/pull/2658) where some parameters were not available for member management forms
-  - Resolved [#791](https://github.com/ExpressionEngine/ExpressionEngine/pull/791) where the page reloads on tab deletion on publish layout page
-  - Resolved [#786](https://github.com/ExpressionEngine/ExpressionEngine/pull/786) where page moves to the top after saving new entry in a relationships modal
+  - Resolved [#2679](https://github.com/ExpressionEngine/ExpressionEngine/issues/2679) where password validation URL was giving PHP error
+  - Resolved [#2658](https://github.com/ExpressionEngine/ExpressionEngine/issues/2658) where some parameters were not available for member management forms
+  - Resolved [#791](https://github.com/ExpressionEngine/ExpressionEngine/issues/791) where the page reloads on tab deletion on publish layout page
+  - Resolved [#786](https://github.com/ExpressionEngine/ExpressionEngine/issues/786) where page moves to the top after saving new entry in a relationships modal
   - Improved PHP 8.1 support
 
 ## Version 6.4.3
@@ -80,10 +107,10 @@
 </div>
 
 - **Bug Fixes** 💃🐛
-  - Resolved [#2608](https://github.com/ExpressionEngine/ExpressionEngine/pull/2608) where the order in which the categories are displayed on the publish page does not match the actual order from the Categories Manager page 
-  - Resolved [#2621](https://github.com/ExpressionEngine/ExpressionEngine/pull/2621) where `{exp:channel:entries orderby="view_count_one"}` when used on category page could throw error on MySQL 5.7
-  - Resolved [#2577](https://github.com/ExpressionEngine/ExpressionEngine/pull/2577) where Control Panel entry pages have missing .map files 
-  - Resolved [#2625](https://github.com/ExpressionEngine/ExpressionEngine/pull/2625) where updater script could fail on some server configurations
+  - Resolved [#2608](https://github.com/ExpressionEngine/ExpressionEngine/issues/2608) where the order in which the categories are displayed on the publish page does not match the actual order from the Categories Manager page 
+  - Resolved [#2621](https://github.com/ExpressionEngine/ExpressionEngine/issues/2621) where `{exp:channel:entries orderby="view_count_one"}` when used on category page could throw error on MySQL 5.7
+  - Resolved [#2577](https://github.com/ExpressionEngine/ExpressionEngine/issues/2577) where Control Panel entry pages have missing .map files 
+  - Resolved [#2625](https://github.com/ExpressionEngine/ExpressionEngine/issues/2625) where updater script could fail on some server configurations
 
 
 ## Version 6.4.2
