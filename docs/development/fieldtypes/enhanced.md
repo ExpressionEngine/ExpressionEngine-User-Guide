@@ -239,6 +239,16 @@ Possible return values are:
  - `'text'` - shows text input
  - `'select'` - shows select input populated with the field options (for fieldtypes that extend `OptionFieldtype`)
 
+## File Manager support
+
+When a file is referenced inside content, it can be in two different forms depending on if the file manager is running in compatibility mode or not. An example of this is when a file is chosen inside an RTE field via the filepicker. If the file manager is not running in [compatibility mode](control-panel/file-manager/file-manager.md#compatibility-mode), the file references in content will contain a file ID (e.g. `{file:123:url}` where 123 is the file ID). The file can also be referenced in content with a directory ID and file name (e.g. `{filedir_2}filename.jpg`) when in compatibility mode.
+
+To parse both cases correctly, please use the `ee()->file_field->parse_string()` function.
+
+    ee()->load->library('file_field');
+    $data = ee()->file_field->parse_string($data);
+
+If the fieldtype is using custom JavaScript for manipulating the files, be sure to make the code aware of the [`EE.fileManagerCompatibilityMode`](development/control-panel-js/globals.md#filemanagercompatibilitymode) variable. 
 
 ## Implementing Filepicker for Rich Text Editor
 

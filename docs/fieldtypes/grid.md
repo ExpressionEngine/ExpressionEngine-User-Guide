@@ -33,11 +33,13 @@ Specifies the maximum number of rows this Grid can have. For example, if you ent
 
 Enables moving the Grid rows with drag & drop to change the order
 
-#### Always use a vertical grid layout?
+#### Grid layout
 
-The fields within the grid will be always stacked vertically on the publish form.
+**Auto (default)** - the fields within the grid will be placed in a horizontal row on bigger screens, and stacked vertically on smaller screens or when there is not enough space on the page.
 
-When turned off, the fields within the grid will be placed in a horizontal row next to each other in bigger screens, and stacked vertically on smaller screens.
+**Vertical layout** - The fields within the grid will always be stack vertically on the publish form.
+
+**Horizontal layout** - The fields within the grid will always be stacked horizontally on the publish form.
 
 ### Grid Fields
 
