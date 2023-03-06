@@ -8,6 +8,36 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.2.11
+(Release: March 6, 2023)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Account for dictionary words when calculating password rank; [#1806](https://github.com/ExpressionEngine/ExpressionEngine/issues/1806)
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#3048](https://github.com/ExpressionEngine/ExpressionEngine/issues/3048) where entry preview on mobile was broken
+- Resolved [#3035](https://github.com/ExpressionEngine/ExpressionEngine/issues/3035) where enabling front-end editing on very complex templates could cause some tags to be not parsed
+- Resolved [#3028](https://github.com/ExpressionEngine/ExpressionEngine/issues/3028) where categories tab drag-and-drop re-ordering was not working
+- Resolved issue where turning on front-end editing could cause some tags to not render correctly
+- Resolved issue where CKeditor table in vertical Grid didn't render correctly when creating a new entry
+- Resolved [#2775](https://github.com/ExpressionEngine/ExpressionEngine/issues/2775) where approved members could have Pending as secondary role
+
+**Developers** 💻
+
+- Resolved [#3030](https://github.com/ExpressionEngine/ExpressionEngine/issues/3030) where property in Channel module has wrong visibility
+
 ## Version 7.2.10
 (Release: February 20, 2023)
 
@@ -26,15 +56,15 @@
 
 **Bug Fixes** 💃🐛
 
-- Resolved [#2847](https://github.com/ExpressionEngine/ExpressionEngine/pull/2847) where some jump menu items were showing data from other MSM sites
+- Resolved [#2847](https://github.com/ExpressionEngine/ExpressionEngine/issues/2847) where some jump menu items were showing data from other MSM sites
 - Resolved issue where performing post-upgrade checks could show PHP error
 - Resolved issue where PHP notice could be shown on Live Preview when invoked from Entries prolet
-- Resolved [#2481](https://github.com/ExpressionEngine/ExpressionEngine/pull/2481) where member count query was suboptimal
+- Resolved [#2481](https://github.com/ExpressionEngine/ExpressionEngine/issues/2481) where member count query was suboptimal
 - Resolved an issue where the author filter could have a missing label.
-- Resolved [#2838](https://github.com/ExpressionEngine/ExpressionEngine/pull/2838) where the new related entry modal generates JS errors
+- Resolved [#2838](https://github.com/ExpressionEngine/ExpressionEngine/issues/2838) where the new related entry modal generates JS errors
 - Resolved issue when saving Grid field from third-party code could behave incorrectly
-- Resolved [#2233](https://github.com/ExpressionEngine/ExpressionEngine/pull/2233) where cloning entry without comments could generate PHP deprecation notices
-- Resolved [#2829](https://github.com/ExpressionEngine/ExpressionEngine/pull/2829) where entry search in mobile view was not working
+- Resolved [#2233](https://github.com/ExpressionEngine/ExpressionEngine/issues/2233) where cloning entry without comments could generate PHP deprecation notices
+- Resolved [#2829](https://github.com/ExpressionEngine/ExpressionEngine/issues/2829) where entry search in mobile view was not working
 
 ## Version 7.2.9
 (Release: February 7, 2023)
@@ -53,12 +83,12 @@
 </div>
 
 **Bug Fixes** 💃🐛
-- Resolved [#2312](https://github.com/ExpressionEngine/ExpressionEngine/pull/2312) where conditional fields depending on radio button could be not loaded correctly when creating new entry
-- Resolved [#2765](https://github.com/ExpressionEngine/ExpressionEngine/pull/2765) where using `ee()->table->set_data()` was not possible outside of Control Panel
-- Resolved [#2356](https://github.com/ExpressionEngine/ExpressionEngine/pull/2356) where Preview button was still visible when preview turned off in channel preferences
-- Resolved [#2808](https://github.com/ExpressionEngine/ExpressionEngine/pull/2808) where some servers did not accept SVG files to be uploaded into image-only directory
-- Resolved [#2653](https://github.com/ExpressionEngine/ExpressionEngine/pull/2653) where Radio and Select fields were showing values and not labels in Entry Manager
-- Resolved [#2784](https://github.com/ExpressionEngine/ExpressionEngine/pull/2784) where having ungrouped fields could cause group filter to malfunction in Field manager
+- Resolved [#2312](https://github.com/ExpressionEngine/ExpressionEngine/issues/2312) where conditional fields depending on radio button could be not loaded correctly when creating new entry
+- Resolved [#2765](https://github.com/ExpressionEngine/ExpressionEngine/issues/2765) where using `ee()->table->set_data()` was not possible outside of Control Panel
+- Resolved [#2356](https://github.com/ExpressionEngine/ExpressionEngine/issues/2356) where Preview button was still visible when preview turned off in channel preferences
+- Resolved [#2808](https://github.com/ExpressionEngine/ExpressionEngine/issues/2808) where some servers did not accept SVG files to be uploaded into image-only directory
+- Resolved [#2653](https://github.com/ExpressionEngine/ExpressionEngine/issues/2653) where Radio and Select fields were showing values and not labels in Entry Manager
+- Resolved [#2784](https://github.com/ExpressionEngine/ExpressionEngine/issues/2784) where having ungrouped fields could cause group filter to malfunction in Field manager
 - Resolved issue when password validation did not work properly in some cases
 
 ## Version 7.2.8
@@ -82,9 +112,9 @@
 
 **Bug Fixes** 💃🐛
 - Resolved issue when files on non-local filesystem could not be resized or cropped from CP
-- Resolved [#2759](https://github.com/ExpressionEngine/ExpressionEngine/pull/2759) where checkbox field with the name of "statuses" did not always render correctly
-- Resolved [#2758](https://github.com/ExpressionEngine/ExpressionEngine/pull/2758) where reordering did not always work properly in third-party grids
-- Resolved [#2761](https://github.com/ExpressionEngine/ExpressionEngine/pull/2761) where Structure could show PHP warning when used with third-party forms
+- Resolved [#2759](https://github.com/ExpressionEngine/ExpressionEngine/issues/2759) where checkbox field with the name of "statuses" did not always render correctly
+- Resolved [#2758](https://github.com/ExpressionEngine/ExpressionEngine/issues/2758) where reordering did not always work properly in third-party grids
+- Resolved [#2761](https://github.com/ExpressionEngine/ExpressionEngine/issues/2761) where Structure could show PHP warning when used with third-party forms
 - Resolved issue where validation error was not properly thrown when saving a Grid in a Pro Variable
 - Resolved issue where saving Fluid without fields could result in PHP error
 
@@ -95,13 +125,13 @@
   - Added ability to set template engine in template manager
 
 - **Bug Fixes** 💃🐛
-  - Resolved [#2759](https://github.com/ExpressionEngine/ExpressionEngine/pull/2759) where checkbox field with the name of "statuses" does not render correctly
-  - Resolved [#2661](https://github.com/ExpressionEngine/ExpressionEngine/pull/2661) where is was not possible to search template group and template at the same time in Pages tab
-  - Resolved [#2437](https://github.com/ExpressionEngine/ExpressionEngine/pull/2437) where building Pro Search Collection via URL did not work properly
-  - Resolved [#2667](https://github.com/ExpressionEngine/ExpressionEngine/pull/2667) where errors for password resetting were not shown properly
-  - Resolved [#2739](https://github.com/ExpressionEngine/ExpressionEngine/pull/2739) where PHP notice could have been shown when accessing plugin documentation when using PHP 8.1
+  - Resolved [#2759](https://github.com/ExpressionEngine/ExpressionEngine/issues/2759) where checkbox field with the name of "statuses" does not render correctly
+  - Resolved [#2661](https://github.com/ExpressionEngine/ExpressionEngine/issues/2661) where is was not possible to search template group and template at the same time in Pages tab
+  - Resolved [#2437](https://github.com/ExpressionEngine/ExpressionEngine/issues/2437) where building Pro Search Collection via URL did not work properly
+  - Resolved [#2667](https://github.com/ExpressionEngine/ExpressionEngine/issues/2667) where errors for password resetting were not shown properly
+  - Resolved [#2739](https://github.com/ExpressionEngine/ExpressionEngine/issues/2739) where PHP notice could have been shown when accessing plugin documentation when using PHP 8.1
   - Resolved issue where Channel Form grid has extra unneeded column
-  - Resolved [#2735](https://github.com/ExpressionEngine/ExpressionEngine/pull/2735) where Text Formatter could show deprecation notices when using PHP 8.1
+  - Resolved [#2735](https://github.com/ExpressionEngine/ExpressionEngine/issues/2735) where Text Formatter could show deprecation notices when using PHP 8.1
 
 ## Version 7.2.6
 (Release: January 10, 2023)
