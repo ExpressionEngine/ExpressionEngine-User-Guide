@@ -638,6 +638,8 @@
       href: cli/usage.md
     - name: Built In Commands
       items:
+        - name: Addon Management
+          href: cli/built-in-commands/addons.md
         - name: Addon Generator
           href: cli/built-in-commands/make-addon.md
         - name: Clear Cache
