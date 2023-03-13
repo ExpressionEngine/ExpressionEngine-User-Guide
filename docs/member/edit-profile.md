@@ -13,6 +13,8 @@
 
 ## Overview
 
+    exp:member:edit_profile
+
 Edit member profile.
 
 ## Parameters

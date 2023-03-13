@@ -92,6 +92,39 @@ Please note you need to address those by ID and not name, e.g. `m_field_id_8`
     <label for="work_title">Work title</label>
     <input type="text" id="work_title" name="m_field_id_1" size="40" value="{if m_field_id_1}{m_field_id_1}{/if}" />
 
+Custom fields can also be output inside the ``{custom_fields}`` varialble tag pair.
+
+        {custom_fields}
+            <p>
+                <label>{lang:profile_field}</label><br>
+                <small>{lang:profile_field_description}</small><br>
+
+                {form:custom_profile_field}
+
+            </p>
+         {/custom_fields}
+
+### `{custom_fields}` Pair Variables
+
+#### `{lang:profile_field}`
+#### `{field_name}`
+
+Outputs the custom field's name.
+
+#### `{lang:profile_field_description}`
+#### `{field_description}`
+
+Outputs the field's description, if any.
+
+#### `{form:custom_profile_field}`
+#### `{field}`
+
+Shows the fully parsed custom member form field.
+
+#### `{if required}`
+
+Indicates whether the field is marked as required
+
 ## Variables
 
 ### `{accept_terms}`
