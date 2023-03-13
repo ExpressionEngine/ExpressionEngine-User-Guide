@@ -27,6 +27,12 @@ The `{exp:member:roles}` tag allows you to display all groups that the member be
 
 Specifies a particular member's information to display. By default (if you do not include the member_id parameter, the tag will simply display information pertaining to the currently logged-in user.
 
+### `username=`
+
+    username="admin"
+
+Username of member to display
+
 ### Variables
 
 #### `{role_id}`
