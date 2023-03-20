@@ -32,6 +32,10 @@
 - Resolved [#2822](https://github.com/ExpressionEngine/ExpressionEngine/issues/2822), [#2678](https://github.com/ExpressionEngine/ExpressionEngine/issues/2678) where some custom fields were not properly parsed in Live Preview mode
 - Resolved [#3093](https://github.com/ExpressionEngine/ExpressionEngine/issues/3093) where deprecation message could be shown when editing member using PHP 8.1
 - Resolved [#3116](https://github.com/ExpressionEngine/ExpressionEngine/issues/3116) where navigating File Picker from Category edit page caused  PHP error
+- [Error](https://github.com/ExpressionEngine/ExpressionEngine/pull/3142/commits/66a49d823363edb22dbdb5d9c1317e486ecb9521) with empty custom member fields
+- [Improved preformance](https://github.com/ExpressionEngine/ExpressionEngine/pull/3142/commits/5754ec61854633ae30fcafb5cbd4b8778af174d1) on member list tag
+- Additional Role Checks on creation
+- Additional PHP 8.2 support
 
 **Developers** 💻
 
