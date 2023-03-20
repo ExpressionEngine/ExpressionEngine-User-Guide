@@ -8,6 +8,40 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.2.12
+(Release: March 20, 2023)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/17785714?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jonathan Hardisty</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=jHards" target="_BLANK">@jHards</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#3019](https://github.com/ExpressionEngine/ExpressionEngine/issues/3019) where MFA dialog was shown after disabling MFA
+- Resolved [#2839](https://github.com/ExpressionEngine/ExpressionEngine/issues/2839) where manipulation URL was wrong for SVG files
+- Resolved [#3075](https://github.com/ExpressionEngine/ExpressionEngine/issues/3075) where some email notifications did not respect HTML formatting preference
+- Resolved [#2842](https://github.com/ExpressionEngine/ExpressionEngine/issues/2842) where channel form with HTML buttons could show notices when using PHP 8.1
+- Resolved [#2207](https://github.com/ExpressionEngine/ExpressionEngine/issues/2207) where the bug report link was incorrect
+- Resolved [#2822](https://github.com/ExpressionEngine/ExpressionEngine/issues/2822), [#2678](https://github.com/ExpressionEngine/ExpressionEngine/issues/2678) where some custom fields were not properly parsed in Live Preview mode
+- Resolved [#3093](https://github.com/ExpressionEngine/ExpressionEngine/issues/3093) where deprecation message could be shown when editing member using PHP 8.1
+- Resolved [#3116](https://github.com/ExpressionEngine/ExpressionEngine/issues/3116) where navigating File Picker from Category edit page caused  PHP error
+- [Error](https://github.com/ExpressionEngine/ExpressionEngine/pull/3142/commits/66a49d823363edb22dbdb5d9c1317e486ecb9521) with empty custom member fields
+- [Improved preformance](https://github.com/ExpressionEngine/ExpressionEngine/pull/3142/commits/5754ec61854633ae30fcafb5cbd4b8778af174d1) on member list tag
+- Additional Role checks on creation
+- Additional PHP 8.2 support
+
+**Developers** 💻
+
+- Resolved [#3069](https://github.com/ExpressionEngine/ExpressionEngine/issues/) where `ChannelField` model could not be saved without `field_order` property
+
 ## Version 7.2.11
 (Release: March 6, 2023)
 
@@ -17,6 +51,7 @@
     <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
 <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
 <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
     </ul>
 </div>
 </div>
