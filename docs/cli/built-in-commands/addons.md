@@ -38,11 +38,14 @@ or
 
 ## `addons:update`
 
-Updates an add-on. Add-on name can be selected (typed) in dialog or provided with `--addon` or `-a` option
+Updates an add-on. Add-on name can be selected (typed) in dialog or provided with `--addon` or `-a` option.
+You can also set `--all` flag to run all add-on updates that are available.
 
     php eecli.php addons:update
 or
     php eecli.php addons:update --addon block_and_allow
+or
+    php eecli.php addons:update --all
 
 ## `addons:uninstall`
 
