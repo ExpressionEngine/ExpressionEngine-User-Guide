@@ -22,7 +22,7 @@
 
 If you're not sure whether your server meets the minimum requirements, the server wizard will run some tests and give you an answer.
 
-- [Download](https://expressionengine.com/asset/file/ee_server_wizard.zip) and unzip the archive.
+- [Download](https://github.com/ExpressionEngine/ExpressionEngine-Server-Wizard/archive/refs/heads/master.zip) and unzip the archive.
 - Upload the folder to your server.
 - Point your web browser to the folder. For example: `https://example.com/ee_wizard`
 
