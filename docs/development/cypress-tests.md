@@ -15,7 +15,7 @@ lang: ee
 
 ExpressionEngine is utilizing [Cypress](https://www.cypress.io/) for integration tests.
 
-The tests are ogranized to check the functionality of ExpressionEngine itself, but can also be extended for add-on testing.
+The tests are organized to check the functionality of ExpressionEngine itself, but can also be extended for add-on testing.
 
 NOTE: In order to get access to Cypress testing, ExpressionEngine need to be [installed from repository](https://github.com/ExpressionEngine/ExpressionEngine/blob/6.dev/README.md#if-youre-installing-from-the-repository). You also need to have [Node.js and NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed.
 
