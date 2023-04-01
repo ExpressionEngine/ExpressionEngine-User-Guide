@@ -8,7 +8,7 @@
 -->
 # ENV File Support
 
-Config files can also be configured using [PHP Environment variables ($_ENV)](https://www.php.net/manual/en/reserved.variables.environment.php). To utilize this, create a file named `.env.php` in the root of your ExpressionEngine install. Add variables to your `.env.php` file as illustrated below:
+Config files can also be configured using [PHP Environment variables ($_ENV)](https://www.php.net/manual/en/reserved.variables.environment.php). To utilize this, create a file named `.env.php` close to the ExpressionEngine system folder. Add variables to your `.env.php` file as illustrated below:
 
 ```
 DB_HOSTNAME=localhost
