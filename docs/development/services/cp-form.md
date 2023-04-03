@@ -13,7 +13,6 @@
 
 The CP/Form Service allows for the creation of Shared Form View data using an object oriented interface. 
 
-TIP: Note this requires PHP >= 7.1
 
 ## Usage
 
