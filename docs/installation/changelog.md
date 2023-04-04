@@ -34,6 +34,11 @@
 - Fixed [#3120](https://github.com/ExpressionEngine/ExpressionEngine/issues/3120) where duplicate status options with large number of statuses in cp
 - Resolved [#3126](https://github.com/ExpressionEngine/ExpressionEngine/issues/3126) where Mass Notification Export utility did not work properly
 - Resolved [#3135](https://github.com/ExpressionEngine/ExpressionEngine/issues/3135), [#3047](https://github.com/ExpressionEngine/ExpressionEngine/issues/3135) where the columns in Entry Manager did not dynamically update if some column is not available
+- Resolved issue with sidebar member links
+
+- **Enhancements** 🚀
+  - Added new needed_fields_only paramater to channel entries loop
+
 
 ## Version 7.2.12
 (Release: March 20, 2023)
