@@ -55,7 +55,7 @@ Cryptographic protocol for SMTP. Can be set to Unencrypted (not recommended), SS
 
 ### TLS version
 
-When using TLS, provide the version that you can find in instructions from your SMTP provider. Version 1.2 is the most commonly used
+When using TLS, provide the version that you can find in the instructions from your SMTP provider. Version 1.2 is the most commonly used
 
 ### Mail format
 
