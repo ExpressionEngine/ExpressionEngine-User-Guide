@@ -2965,6 +2965,22 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Access Throttling`: [Time Interval](control-panel/settings/throttling.md#time-interval)
 
+### `tls_crypto_method`
+
+Stream encryption method, when using TLS for sending emails over SMTP.
+
+| Value                                      | Behavior                   |
+| ------------------------------------------ | -------------------------- |
+| STREAM_CRYPTO_METHOD_TLSv1_0_CLIENT        | TLS v1.0                   |
+| STREAM_CRYPTO_METHOD_TLSv1_1_CLIENT        | TLS v1.1                   |
+| STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT        | TLS v1.2 (default)         |
+| STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT        | TLS v1.3 (as of PHP 7.4.0) |
+
+ 
+Example Usage:
+
+    $config['tls_crypto_method'] = STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT;
+
 ### `un_min_len`
 
 Set the minimum number of characters allowed for member usernames.

@@ -49,6 +49,14 @@ The username used to log in to your SMTP server. Not all SMTP servers require yo
 
 The password used to log in to your SMTP server. Not all SMTP servers require you to _authenticate_, but many of them do. In those cases you will need to specify the username (above) and password.
 
+### Connection type
+
+Cryptographic protocol for SMTP. Can be set to Unencrypted (not recommended), SSL or TLS
+
+### TLS version
+
+When using TLS, provide the version that you can find in instructions from your SMTP provider. Version 1.2 is the most commonly used
+
 ### Mail format
 
 When you send email via the Communicate section of your Control Panel, you are able to send HTML formatted emails. This preference sets whether the Communicate section has "Plain text" or "HTML" selected by default.
