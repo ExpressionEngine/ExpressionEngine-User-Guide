@@ -37,8 +37,8 @@ The comment submission form is created very similar to a standard web form, only
       <input type="submit" name="preview" value="Preview" />
       
       {!-- required to prevent EE from outputting form if commenting is disabled or expired --}
-	  {if comments_disabled}Comments on the entry are currently disabled.{/if}
-      {if comments_expired}Commenting on the entry has expired.{/if}
+	  {if comments_disabled}Comments on this entry are currently disabled.{/if}
+      {if comments_expired}Commenting on this entry has expired.{/if}
 
     {/exp:comment:form}
 
