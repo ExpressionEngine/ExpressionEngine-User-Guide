@@ -8,6 +8,32 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.2.13
+(Release: April 4, 2023)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Bug Fixes** 💃🐛
+
+- Resolved issue where Live Preview did not work with Fluid fields
+- Resolved [#3129](https://github.com/ExpressionEngine/ExpressionEngine/issues/3129) where "extension missing" messages could be visible to guests even when the site is offline
+- Resolved [#2752](https://github.com/ExpressionEngine/ExpressionEngine/issues/2752) where cross-domain multi-site login was not working
+- Fixed [#3130](https://github.com/ExpressionEngine/ExpressionEngine/issues/3130) where the filter control to add/delete columns doesn't do anything on File modal on publish
+- Resolved [#3127](https://github.com/ExpressionEngine/ExpressionEngine/issues/3127) where PHP error was shown when creating shortcut from Pro Search log
+- Fixed [#3120](https://github.com/ExpressionEngine/ExpressionEngine/issues/3120) where duplicate status options with large number of statuses in cp
+- Resolved [#3126](https://github.com/ExpressionEngine/ExpressionEngine/issues/3126) where Mass Notification Export utility did not work properly
+- Resolved [#3135](https://github.com/ExpressionEngine/ExpressionEngine/issues/3135), [#3047](https://github.com/ExpressionEngine/ExpressionEngine/issues/3135) where the columns in Entry Manager did not dynamically update if some column is not available
+
 ## Version 7.2.12
 (Release: March 20, 2023)
 
@@ -40,7 +66,7 @@
 
 **Developers** 💻
 
-- Resolved [#3069](https://github.com/ExpressionEngine/ExpressionEngine/issues/) where `ChannelField` model could not be saved without `field_order` property
+- Resolved [#3069](https://github.com/ExpressionEngine/ExpressionEngine/issues/3069) where `ChannelField` model could not be saved without `field_order` property
 
 ## Version 7.2.11
 (Release: March 6, 2023)
