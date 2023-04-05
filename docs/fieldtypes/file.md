@@ -243,7 +243,7 @@ Rotate the image.
 
     {news_image:webp}
 
-Convert the image to WEBP format. Additionally all the `:resize` manipulations can be applied
+Convert the image to WEBP format.
 
 | Parameter | Values  | Default    | Description                           |
 | --------- | ------- | ---------- | -------------------------------------- |
@@ -252,7 +252,11 @@ Convert the image to WEBP format. Additionally all the `:resize` manipulations c
 | quality  | `0`-`100`| `75`| Image quality, % |
 | maintain_ratio   | `y` / `n` | `y`| Keep image ratio (yes/no)  |
 | master_dim        | `auto`/`width`/`height` | `auto`| Master dimention when only width of height is specified |
-
+| resize:width    | `Number` | | Width to resize to, px |
+| resize:height   | `Number` | | Height to resize to, px |
+| resize:quality  | `0`-`100`| `75`| Resized image quality, % |
+| resize:maintain_ratio   | `y` / `n` | `y`| Keep image ratio when resizing (yes/no)  |
+| resize:master_dim        | `auto`/`width`/`height` | `auto`| Resizing master dimention |
 
 ### `:resize_crop`
 
