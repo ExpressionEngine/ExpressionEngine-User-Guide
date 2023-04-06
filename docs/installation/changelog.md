@@ -8,6 +8,14 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.2.14
+(Release: April 6, 2023)
+
+**Bug Fixes** 💃🐛
+
+- Resolved issue where login form on front-end was showing incorrect error
+
+
 ## Version 7.2.13
 (Release: April 4, 2023)
 
