@@ -8,8 +8,17 @@
 -->
 # ExpressionEngine v6 Change Log
 
+## Version 6.4.9
+(Release: April 6, 2023)
+
+**Bug Fixes** 💃🐛
+
+- Resolved issue where login form on front-end was showing incorrect error
+- Resolved [#3235](https://github.com/ExpressionEngine/ExpressionEngine/issues/3235) where Live Preview did not work with Fluid fields
+- Improved PHP 8.1 compatbility
+
 ## Version 6.4.8
-(Release: April 5, 2023)
+(Release: April 4, 2023)
 
 - **Contributors** 🙌
 <div class="max-w-7xl mx-autotext-center">
