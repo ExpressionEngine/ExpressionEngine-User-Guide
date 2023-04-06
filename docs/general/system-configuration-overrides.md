@@ -874,6 +874,14 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Control Panel Session Type](control-panel/settings/security-privacy.md#cp-session-type)
 
+### `cpan_session_length`
+
+Set TTL for admin sessions.
+
+| Value   | Description                                       |
+| ------- | ------------------------------------------------- |
+| integer | Session TTL in seconds (default is 3600 - 1 hour) |
+
 ### `cp_url`
 
 Set the full URL to your Control Panel.
@@ -3161,6 +3169,14 @@ When enabled, New Relic will add [Real User Monitoring JavaScript](https://docs.
 Example Usage:
 
     $config['use_newrelic'] = 'y';
+
+### user_session_length
+
+Set TTL for user sessions.
+
+| Value   | Description                                        |
+| ------- | -------------------------------------------------- |
+| integer | Session TTL in seconds (default is 7200 - 2 hours) |
 
 ### `webmaster_email`
 
