@@ -12,7 +12,7 @@ By default the CLI is located `system/ee/eecli.php` .
     - [List](cli/built-in-commands/list.md)
     - Make
         - [make:action - Creates a new action for an add-on](cli/built-in-commands/make-action.md)
-        - [make:addon - Creates a new add-on](cli/built-in-commands/make-addon.md)
+        - [make:addon - Creates a new add-on](development/addon-development-overview.md)
         - [make:command - Creates a new CLI command for an add-on](cli/built-in-commands/make-command.md)
         - [make:extension-hook - Implements an EE extension hook in an add-on](cli/built-in-commands/make-extension-hook.md)
         - [make:migration - Creates a new migration](cli/built-in-commands/make-migration.md)
