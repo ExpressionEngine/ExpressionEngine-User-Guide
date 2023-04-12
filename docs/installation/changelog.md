@@ -23,10 +23,11 @@
 
 **Bug Fixes** 💃🐛
 
-- Resolved [#3147](https://github.com/ExpressionEngine/ExpressionEngine/issues/3147) where templates export did not work when using PHP 8.1
-- Resolved issue where built-in RTE field was giving error when using with Low Variables
+
+- Resolved [#3147](https://github.com/ExpressionEngine/ExpressionEngine/issues/3147) where template export did not work when using PHP 8.1
+- Resolved issue where built-in RTE field had an error when used in with Low Variables
 - Resolved [#3157](https://github.com/ExpressionEngine/ExpressionEngine/issues/3157) where the list of authors to reassign the entries when deleting member could be wrong
-- Resolved [#3202](https://github.com/ExpressionEngine/ExpressionEngine/issues/3202) where searching in Categories filter in File Manager category did not work after changing another filter
+- Resolved [#3202](https://github.com/ExpressionEngine/ExpressionEngine/issues/3202) where searching in the Categories filter in the File Manager category did not work after changing another filter
 - Resolved [#1899](https://github.com/ExpressionEngine/ExpressionEngine/issues/1899) Where the "link" HTML button didn't work as intended
 
 ## Version 6.4.9
