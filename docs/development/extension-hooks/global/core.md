@@ -34,6 +34,22 @@ NOTE: **Note:** This hook fires on every ExpressionEngine request, so be mindful
       return;
     }
 
+
+### `core_cp_boot()`
+
+| Parameter | Type   |
+| --------- | ------ |
+| Returns   | `Void` |
+
+Run tasks on every Control Panel request.
+
+How it's called:
+
+    ee()->extensions->call('core_cp_boot');
+    if (ee()->extensions->end_script === TRUE) return;
+
+Runs for every Control Panel request, after making sure the user is fully authorized (including MFA) and `ee()->cp` library is loaded.
+
 ### `core_template_route($uri_string)`
 
 | Parameter    | Type     | Description                                                              |
