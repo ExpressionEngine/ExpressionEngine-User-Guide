@@ -281,6 +281,21 @@ Tags that output numeric content will work fine with quotes, but also do not nee
 
     {if {fluid_content:count type="long_form_text"} == 3}
 
+If the conditional expression contains [variable modifiers](templates/variable-modifiers.md), braces should only be omited if the conditional is executed on top-level variable (not Grid column or Fluid field element) and there is only one check in the expression (no AND / OR operators).
+In other words, you can only do following without braces:
+
+    {if grid_field:total_rows}
+
+But you will need braces in there cases:
+
+    {if {grid_field:total_rows} AND {another_grid_field:total_rows}}
+
+    {if {grid_field:text_column:length}}
+
+    {fluid:rte_field}
+      {if '{content:has_excerpt}' == 'y'}<h1>Read More</h1>{/if}
+    {/fluid:rte_field}
+
 ## Short Conditionals
 
 Certain conditionals exist in a shortened form in order to improve template readability. These conditionals are usually checking to see if a certain thing is true or exists:
