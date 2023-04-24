@@ -28,7 +28,7 @@
 **Bug Fixes 💃🐛**
 
 - Resolved [#3272](https://github.com/ExpressionEngine/ExpressionEngine/issues/3272) where parsing order was not correct for add-ons that contain both module and plugin file
-- Resolved [#846](https://github.com/ExpressionEngine/ExpressionEngine/issues/846), [#1840](https://github.com/ExpressionEngine/ExpressionEngine/issues/1840) where scroll immediately closes the sidebar on mobile screen
+- Resolved [#846](https://github.com/ExpressionEngine/ExpressionEngine/issues/846), [#1840](https://github.com/ExpressionEngine/ExpressionEngine/issues/1840) where scrolling immediately closed the sidebar on mobile screen
 - Resolved [#2417](https://github.com/ExpressionEngine/ExpressionEngine/issues/2417) where PHP error could been shown when saving channel layout
 - Resolved [#510](https://github.com/ExpressionEngine/ExpressionEngine/issues/510) where existing entries did not have correct value for toggle field after adding it and no prompt for update were made
 - Resolved [#3245](https://github.com/ExpressionEngine/ExpressionEngine/issues/3245) where 0 could be displayed as empty string in template variables provided by add-ons
