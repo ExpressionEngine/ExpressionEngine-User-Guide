@@ -37,6 +37,8 @@
 - Resolved [#3245](https://github.com/ExpressionEngine/ExpressionEngine/issues/3245) where 0 could be displayed as empty string in template variables provided by add-ons
 - Resolved [#3246](https://github.com/ExpressionEngine/ExpressionEngine/issues/3246) where not all checks for empty Grid or Fluid field worked correctly in templates when using PHP 8.1
 - Resolved [#3190](https://github.com/ExpressionEngine/ExpressionEngine/issues/3190) where pagination in File Manager did not respect permissions for upload directories
+- Resolved [#3302](https://github.com/ExpressionEngine/ExpressionEngine/issues/3302) where Structure was showing deprecation notices when using PHP 8.2
+- Resolved [#3191](https://github.com/ExpressionEngine/ExpressionEngine/issues/3191) where PHP errors could be shown when installing add-on that has fieldtype and module
 
 ## Version 7.2.15
 (Release: April 12, 2023)
