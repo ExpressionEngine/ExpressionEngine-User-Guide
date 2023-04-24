@@ -8,6 +8,50 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.2.16
+(Release: April 24, 2023)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/931642?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Sobral</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robsonsobral" target="_BLANK">@robsonsobral</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements 🚀**
+
+- Optimize logging developer messages; [#3057](https://github.com/ExpressionEngine/ExpressionEngine/issues/3057)
+- Added keyboard shortcut for saving Pro Variables
+- Added icon for video file
+- Added icon for doc file type
+- Installer / Updated now respects default theme colors
+- Remove "blinks" into the drak on script loads
+- Made styles a bit more generic for multiselect 
+- Added additional styles for long channel titles
+- Resolved [#518](https://github.com/ExpressionEngine/ExpressionEngine/issues/518) where include in search was present on relaionthips and shouldn't be
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#3222](https://github.com/ExpressionEngine/ExpressionEngine/issues/3222) where File icon in File field does not match field type
+- Resolved [#3174](https://github.com/ExpressionEngine/ExpressionEngine/issues/3174) where min height of RTE field could be wrong when using different CKEditor configurations for same entry
+- Resolved [#3272](https://github.com/ExpressionEngine/ExpressionEngine/issues/3272) where parsing order was not correct for add-ons that contain both module and plugin file
+- Resolved [#846](https://github.com/ExpressionEngine/ExpressionEngine/issues/846), [#1840](https://github.com/ExpressionEngine/ExpressionEngine/issues/1840) where scroll immediately closes the sidebar on mobile screen
+- Resolved [#2417](https://github.com/ExpressionEngine/ExpressionEngine/issues/2417) where PHP error could have shown when saving channel layout
+- Resolved [#3274](https://github.com/ExpressionEngine/ExpressionEngine/issues/3274) where special characters in URL for on-the-fly manipulated images were encoded twice
+- Resolved [#3245](https://github.com/ExpressionEngine/ExpressionEngine/issues/3245) where 0 could be displayed as empty string in template variables provided by add-ons
+- Resolved [#3246](https://github.com/ExpressionEngine/ExpressionEngine/issues/3246) where not all checks for empty Grid or Fluid field worked correctly in templates when using PHP 8.1
+- Resolved [#3190](https://github.com/ExpressionEngine/ExpressionEngine/issues/3190) where pagination in File Manager did not respect permissions for upload directories
+- Resolved [#3302](https://github.com/ExpressionEngine/ExpressionEngine/issues/3302) where Structure was showing deprecation notices when using PHP 8.2
+- Resolved [#3191](https://github.com/ExpressionEngine/ExpressionEngine/issues/3191) where PHP errors could be shown when installing add-on that have a fieldtype and module
+- Resolved [#3286](https://github.com/ExpressionEngine/ExpressionEngine/issues/3286) where PHP errors could be thrown on creating of a dynamic property
+- Resolved [#510](https://github.com/ExpressionEngine/ExpressionEngine/issues/510) where Toggle field conditionals on frontend didn't handle defaults correctly 
+
 ## Version 7.2.15
 (Release: April 12, 2023)
 
