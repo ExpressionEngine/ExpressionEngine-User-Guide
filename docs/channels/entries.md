@@ -1313,7 +1313,7 @@ If no parameter is specified it will default to "daily".
 
 NOTE: **Note:** You can use as many date_footers as you want in the same tag. There is a bit of a performance hit, however, since date parsing is the most processor intensive. Read the caching section for information on improving performance.
 
-### {categories}
+### `{categories}`
 
 [TOC=4]
 
