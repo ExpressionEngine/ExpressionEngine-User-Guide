@@ -48,6 +48,16 @@ Displays a date picker. To output anything other than a timestamp, use the `{exp
 
     {exp:pro_variables:single var="my_var" modifier="relative"}
 
+## File
+
+Uses the native [File field](/fieldtypes/file.md). To output the variable, always use the `{exp:pro_variables:pair}` or `{exp:pro_variables:single}` tag where appropriate. If you try to address the variable by name only, it will return the content unparsed, e.g. `{file:XX:url}`. You can use File field [parameters](/fieldtypes/file.md#template-tag-usage) and [variables](/fieldtypes/grid.md#template-tags) using these tags. Additionally, one more parameter is available:
+
+### Parameters
+
+#### `modifier`
+
+Allows applying modifiers, which, among other, are used to apply [on-the-fly image manipulations](/fieldtypes/grid.md#on-the-fly-image-manipulations) to files
+
 ## Grid
 
 Uses the native [Grid field](/fieldtypes/grid.md). All native types are available, _except for Relationships_. To output the variable, use the `{exp:pro_variables:pair}` or `{exp:pro_variables:single}` tag where appropriate. You can use any of Grid’s [parameters](/fieldtypes/grid.md#parameters) and [variables](/fieldtypes/grid.ms#variables) using these tags. Additionally, one more parameter is available:

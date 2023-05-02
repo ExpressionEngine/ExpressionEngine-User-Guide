@@ -31,7 +31,7 @@ Alerts are for providing feedback on an action and calling attention to warnings
 
 [TOC=3]
 
-### `make($name, $type = 'inline')`
+### `make($name, $type = 'alert')`
 
 Makes a new named alert of the specified type.
 
