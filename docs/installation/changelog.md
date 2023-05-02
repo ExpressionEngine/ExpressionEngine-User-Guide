@@ -15,8 +15,6 @@
 <div class="max-w-7xl mx-autotext-center">
 <div class="space-y-8 sm:space-y-12">
     <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
-<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
-<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
 <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/931642?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Sobral</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robsonsobral" target="_BLANK">@robsonsobral</a></p></div></div></div></li>
 <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
 <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
@@ -28,13 +26,11 @@
 
 - Optimize logging developer messages; [#3057](https://github.com/ExpressionEngine/ExpressionEngine/issues/3057)
 - Added keyboard shortcut for saving Pro Variables
-- Added icon for video file
-- Added icon for doc file type
-- Installer / Updated now respects default theme colors
-- Remove "blinks" into the drak on script loads
-- Made styles a bit more generic for multiselect 
-- Added additional styles for long channel titles
-- Resolved [#518](https://github.com/ExpressionEngine/ExpressionEngine/issues/518) where include in search was present on relaionthips and shouldn't be
+- Resolved [#3222](https://github.com/ExpressionEngine/ExpressionEngine/issues/3222) where File icon in File field does not match field type
+- Resolved [#2028](https://github.com/ExpressionEngine/ExpressionEngine/issues/2028) where Installer/Updater does not respect the theme
+- Resolved [#3247](https://github.com/ExpressionEngine/ExpressionEngine/issues/3247), where H2 tag didn't respect theme colors on Redactor RTE 
+- Improved styles for Pages add-on settings 
+- Improved [#518](https://github.com/ExpressionEngine/ExpressionEngine/issues/518) where 'Include in search' option from Relationships field should have been hidden.
 
 **Bug Fixes** 💃🐛
 
@@ -50,7 +46,7 @@
 - Resolved [#3302](https://github.com/ExpressionEngine/ExpressionEngine/issues/3302) where Structure was showing deprecation notices when using PHP 8.2
 - Resolved [#3191](https://github.com/ExpressionEngine/ExpressionEngine/issues/3191) where PHP errors could be shown when installing add-on that have a fieldtype and module
 - Resolved [#3286](https://github.com/ExpressionEngine/ExpressionEngine/issues/3286) where PHP errors could be thrown on creating of a dynamic property
-- Resolved [#510](https://github.com/ExpressionEngine/ExpressionEngine/issues/510) where Toggle field conditionals on frontend didn't handle defaults correctly 
+- Resolved [#510](https://github.com/ExpressionEngine/ExpressionEngine/issues/510) where existing entries did not have the correct value for toggle field after it was added to a channel it also did not prompt to update existing entries with the default toggle value
 
 ## Version 7.2.15
 (Release: April 12, 2023)
