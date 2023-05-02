@@ -46,7 +46,7 @@
 - Resolved [#3302](https://github.com/ExpressionEngine/ExpressionEngine/issues/3302) where Structure was showing deprecation notices when using PHP 8.2
 - Resolved [#3191](https://github.com/ExpressionEngine/ExpressionEngine/issues/3191) where PHP errors could be shown when installing add-on that have a fieldtype and module
 - Resolved [#3286](https://github.com/ExpressionEngine/ExpressionEngine/issues/3286) where PHP errors could be thrown on creating of a dynamic property
-- Resolved [#510](https://github.com/ExpressionEngine/ExpressionEngine/issues/510) where existing entries did not have correct value for toggle field after adding it and no prompt for update were made
+- Resolved [#510](https://github.com/ExpressionEngine/ExpressionEngine/issues/510) where existing entries did not have the correct value for toggle field after it was added to a channel it also did not prompt to update existing entries with the default toggle value
 
 ## Version 7.2.15
 (Release: April 12, 2023)
