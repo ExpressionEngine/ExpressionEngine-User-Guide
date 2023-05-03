@@ -83,6 +83,7 @@ module.exports = () => {
 			getting_started_toc: masterToc.make(file.path, relPath, "getting_started_toc"),
 			the_fundamentals_toc: masterToc.make(file.path, relPath, "the_fundamentals_toc"),
 			advanced_usage_toc: masterToc.make(file.path, relPath, "advanced_usage_toc"),
+			development_toc: masterToc.make(file.path, relPath, "development_toc"),
 			best_practices_toc: masterToc.make(file.path, relPath, "best_practices_toc"),
 			community_toc: masterToc.make(file.path, relPath, "community_toc"),
 		}
@@ -199,6 +200,9 @@ function getMasterToc() {
 				break;
 			case 'advanced_usage_toc':
 				tocSectionPath = 'docs/toc_sections/_advanced_usage_toc.yml';
+				break;
+			case 'development_toc':
+				tocSectionPath = 'docs/toc_sections/_development_toc.yml';
 				break;
 			case 'best_practices_toc':
 				tocSectionPath = 'docs/toc_sections/_best_practices_toc.yml';
