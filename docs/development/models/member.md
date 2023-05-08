@@ -74,6 +74,7 @@ lang: php
 - `timezone`
 - `time_format`
 - `date_format`
+- `week_start`
 - `include_seconds`
 - `profile_theme`
 - `forum_theme`
