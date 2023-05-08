@@ -13,9 +13,13 @@ lang: php
 
 # Shared Form View
 
+TIP: Note. You can also build out control panel views [with objects using the CP form service](development/services/cp-form.md)
+
 [TOC]
 
 ExpressionEngine's control panel markup is very modular and consistent. Because of that, we were able to abstract out the creation of most form views to a single view file to save repeating ourselves and keeping our form markup maintainable. This view is also available to add-on developers and is recommended for built-in support for form validation.
+
+
 
 ## Getting started
 

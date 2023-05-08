@@ -19,7 +19,6 @@ The Custom fields tag pair will conveniently show all your custom fields, but it
 
         <label for="{field_name}">{if required}* {/if}{field_label}</label>
         {field_instructions}
-        {formatting_buttons}
 
         {if error}
           <p class="error">{error}</p>
