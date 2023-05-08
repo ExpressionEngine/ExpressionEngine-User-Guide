@@ -53,6 +53,9 @@ Specify the default timezone for your site. All dates and times displayed by Exp
 
 Specify the default date format for your site, and whether your site should display times in a 24-hour format or a 12-hour format with AM and PM. This is the format the Control Panel uses for displaying dates and for date input.
 
+### Week start
+The day on which the new week starts. This will be used when displaying calendars
+
 ### Show seconds?
 
 Specify whether your site should display seconds in times.

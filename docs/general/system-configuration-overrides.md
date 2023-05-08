@@ -3235,6 +3235,21 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Website Session Type](control-panel/settings/security-privacy.md#website-session-type)
 
+### `week_start`
+
+Set the day on which the new week starts. If [allow_member_localization](#allow_member_localization) is enabled and a member has their own localization preference set, that will override this setting.
+
+| Value    | Description      |
+| -------- | ---------------- |
+| friday   | Friday           |
+| saturday | Saturday         |
+| sunday   | Sunday (default) |
+| monday   | Monday           |
+
+Example Usage:
+
+    $config['week_start'] = 'monday';
+
 ### `word_separator`
 
 Specify the character the system will use to replace spaces when auto-generating a URL title based on the entry's title.
