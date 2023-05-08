@@ -2484,35 +2484,6 @@ Example Usage:
 
 **Also found in CP:** `Settings --> URL and Path Settings`: [Category URL Indicator](control-panel/settings/urls.md#category-url-segment)
 
-### `rte_default_toolset_id`
-
-Set the default RTE toolset shown for any member that has not specifically chosen one in Rich Text Editor Preferences.
-
-| Value      | Description            |
-| ---------- | ---------------------- |
-| toolset ID | Default RTE toolset ID |
-
-Example Usage:
-
-    $config['rte_default_toolset_id'] = '2';
-
-**Also found in CP:** `Developer --> Add-Ons --> Rich Text Editor Settings`: [Default Toolset](control-panel/settings/urls.md#category-url-segment)
-
-### `rte_enabled`
-
-If enabled, the Rich Text Editor will be applied to any _Textarea (Rich Text)_ Channel Field. Otherwise, the field will appear as a normal textarea instead.
-
-| Value | Behavior                             |
-| ----- | ------------------------------------ |
-| y     | Enable RTE (default)                 |
-| n     | Disable RTE and show normal textarea |
-
-Example Usage:
-
-    $config['rte_enabled'] = 'y';
-
-**Also found in CP:** `Developer --> Add-Ons --> Rich Text Editor Settings`: [Enable Rich Text Editor](control-panel/settings/urls.md#category-url-segment)
-
 ### `save_tmpl_files`
 
 Enable the saving of templates as files.
