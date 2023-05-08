@@ -309,13 +309,15 @@ NOTE: **Note:** Using this parameter will automatically constrain the entries ta
 
 ### `group_id=`
 
+NOTE: We recommend using [primary_role_id=](#primary_role_id) parameter instead, which works the same.
+
     group_id="4"
 
 You can decide from which Member Role (by specifying the role ID) you wish entries to be shown. If you choose "4", then only entries created by members of the Primary Role with the ID of 4 will be shown. You can choose multiple Roles using a pipe:
 
     group_id="2|3|4"
 
-Or exclude groups using "not"
+Or exclude role using "not"
 
     group_id="not 2|3|4"
 
@@ -435,6 +437,18 @@ This tells ExpressionEngine to override the normal [pagination](templates/pagina
     paginate_type="field"
 
 This tells ExpressionEngine to function in "pagination" mode for your channel entry fields so that you can automatically have an entry span multiple pages. See the [Spanning a Channel Entry Across Multiple Pages](channels/entry-spanning.md) page.
+
+### `primary_role_id=`
+
+    primary_role_id="4"
+
+You can decide from which Member Role (by specifying the role ID) you wish entries to be shown. If you choose "4", then only entries created by members of the Primary Role with the ID of 4 will be shown. You can choose multiple Roles using a pipe:
+
+    primary_role_id="2|3|4"
+
+Or exclude roles using "not"
+
+    primary_role_id="not 2|3|4"
 
 ### `related_categories_mode=`
 
