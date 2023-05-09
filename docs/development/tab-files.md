@@ -17,7 +17,7 @@ lang: php
 [TOC]
 
 ## Overview
-Add-ons can also add tabs which are visible on in [Publish Layouts](control-panel/channels.md#publish-layouts). Respectivley these tabs would also be visible on the Entry Publish/Edit page if selected in the publish layout. Tabs can also optionally display the associated data as columns in Entry Manager.
+Add-ons can also add tabs which are visible on in [Publish Layouts](control-panel/channels.md#publish-layouts). Respectively these tabs would also be visible on the Entry Publish/Edit page if selected in the publish layout. Tabs can also optionally display the associated data as columns in Entry Manager.
 
 Two things are required for your add-on to have this functionality:
 - [`tabs()` method](/development/add-on-update-file.md#add-publish-tabs-with-your-add-on-tabs) added to the Update File
