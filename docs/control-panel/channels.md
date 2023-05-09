@@ -129,6 +129,8 @@ NOTE: **Note:** We recommend using the default base URL variable `{base_url}` de
 
 **Control Panel Location: `Developer > Channels > Layouts`**
 
+![Channel Publish Layouts Link](_images/channel-publish-layouts.png)
+
 The Publish/Edit page can be customized, with the layout saved per member role, per channel.
 
 ### Create/Edit Publish Layouts
@@ -136,6 +138,14 @@ The Publish/Edit page can be customized, with the layout saved per member role, 
 **Control Panel Location: `Developer > Channels > Layouts > New/Edit`**
 
 This section of the control panel is where channel layouts are created or edited.
+
+When publish layout for channel is assigned to member role, the Publish / Edit entry page would be displayed as defined by that layout, for editors in that role.
+
+The publish layouts are capable of organizing fields into tabs, reordering fields, changing their width for organizing into columns, and hiding the fields that should not be visible.
+
+Each layout needs to be assigned to one or several member roles. However each role can have only one publish layout assigned.
+
+You can have one publish layout for all editor roles, or you can have different layouts for different roles. When only small adjustment is needed, the publish layout can be duplicated using "Clone to New Layout" option in "Save" dropdown.
 
 ## Channel Set Import
 
