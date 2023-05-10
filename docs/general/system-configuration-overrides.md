@@ -1256,18 +1256,6 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Hit Tracking`: [Enable Channel Entry View Tracking](control-panel/settings/hit-tracking.md#enable-entry-view-tracking)
 
-### `enable_floc`
-
-By default, ExpressionEngine sends a header to disable FLoC in the browser. If this is enabled, the Permissions Policy header will not be sent.
-
-| Value | Behavior                            |
-| ----- | ----------------------------------- |
-| y     | Enable FLoC from the server side    |
-
-Example Usage:
-
-    $config['enable_floc'] = 'y';
-
 ### `enable_frontedit`
 
 When set to `n`, completely disables [front-end editing](advanced-usage/front-end/frontend.md) while keeping Dock visible and Prolets functional.
