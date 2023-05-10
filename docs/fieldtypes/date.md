@@ -15,12 +15,24 @@ The Date field allows for quick entry of dates via the publish form. When the fi
 
 ## Field Settings
 
-### Localized or Fixed?
+### Date Localization
 
-On the publish form, along with a field to enter a date, you will also see an option to select whether you want the date localized or fixed:
+Choose how the field data should be localized. The options are
+- _Always localized_ (the date displayed on front-end will be converted into logged-in member's timezone. Example use case is start of online event, when attenders need to know their local time)
+- _Alway fixed_ (the date on front-end will be displayed in the site's configured timezone. Example use case is start of in-person event, when attenders need to know the time as it is in the event's timezone)
+- _Ask each time_
+
+### Include time?
+When turned off, only date will be displayed, otherwise the editor can also enter time into same field.
+
+## Publish form
+
+On the publish form (when `Date Localization` setting is set to `Ask each time`), along with a field to enter a date, you will also see an option to select whether you want the date localized or fixed:
 
 - **Localized:** A date that is localized will be translated into the logged-in member's current timezone. For instance, if you enter a date of _10/21/2015 4:29 PM_ and you're in Pacific Daylight Time, a member in Eastern Daylight Time will see the date as _10/21/2015 7:29 PM_. Or, for logged out members, the date will be localized on the front-end according to the site's configured timezone.
 - **Fixed:** A fixed date will NOT be localized to a member's timezone, or the site's configured timezone. The date will appear as it does in the control panel everywhere by all members.
+
+NOTE: **Note:** These options are only available when using Date as field and not as Grid column.
 
 At the bottom of the calendar popup you will also see a "Today" button that can be used to automatically set the date to the current date.
 
