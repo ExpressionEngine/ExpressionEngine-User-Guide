@@ -43,6 +43,6 @@ All of our language packs are hosted as repositories on [GitHub](https://github.
 
 If you want to contribute to a language pack, find the language pack you want to modify, [fork the repository](https://help.github.com/articles/fork-a-repo), make sure you're working from the correct branch, work on your changes [inside of a feature branch](https://help.github.com/articles/fork-a-repo), push your changes to your fork of the repository, and [send us a pull request](https://help.github.com/articles/using-pull-requests). Then, we'll take a look at your pull request, make sure everything looks alright, and merge it in.
 
-(The [Language Files](control-panel/utilities.md#language-files) can help create new a language pack or update an existing one.)
+(The [Language Files](control-panel/utilities/translation.md#language-files) can help create new a language pack or update an existing one.)
 
 If you want to provide us with a translation we don't already have, the best way is to [email](mailto:team@ellislab.com) us a zip file containing the language pack so we can make sure it fits in with the rest. After that, any time you want to make adjustments you can just follow the steps above to send us a pull request.
