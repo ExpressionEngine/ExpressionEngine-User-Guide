@@ -35,11 +35,74 @@ https://example.com/template_group/template
 
 In addition to HTML and other markup, templates usually contain [ExpressionEngine Tags](templates/language.md), which allows information to be served dynamically.
 
-## Creating a Template
+## Creating & Editing Templates
 
 Templates can be created and edited in the `Developer -> Templates` area of your Control Panel.
 
-ExpressionEngine, by default, saves Template Groups, Templates, Global Variable, and Template Partials as regular folders and files on your server at `system/user/templates`. This allows you to use your preferred text editor to edit Templates and then FTP the changes to the server.
+![Templates List](_images/templates-list.png)
+
+You start off by creating template group. When creating, you will have options to duplicate existing group with all templates in it. You are also able to select the roles that will have editing permissions for templates in this group.
+
+Then, create individual templates. You can duplicate existing template, or create blank one. If necessary, change the template type from "Webpage" to the type that you need (RSS Page, CSS, JavaScript, Static, XML)
+
+Existing templates can be edited with built-in editor, which provides intelligent syntax highlighting.
+
+TIP: **Tip:** The font size in template editor can be adjusted with a [configuration override](general/system-configuration-overrides.md#codemirror_fontsize).
+
+You can also edit template preferences and set front-end access permissions for it.
+
+![Template Editor](_images/template-edit.png)
+
+## Saving templates as files
+
+Templates are always saved into database, however they can also be saved as files by setting [system configuration override](general/system-configuration-overrides.md#save_tmpl_files)in `system/user/config/config.php`:
+```php
+$config['save_tmpl_files'] = 'y';
+```
+ExpressionEngine, by default, saves Template Groups, Templates, Global Variable, and Template Partials as regular folders and files on your server. The directory structure would be similar to shown below
+
+```
+|-- system
+|   |-- user
+|   |   |-- templates
+|   |   |   |-- _global_partials
+|   |   |   |   |-- _header.html
+|   |   |   |   |-- _footer.html
+|   |   |   |-- _global_variables
+|   |   |   |   |-- logo.html
+|   |   |   |-- default_site
+|   |   |   |   |-- _partials
+|   |   |   |   |   |-- sidebar.html
+|   |   |   |   |-- _variables
+|   |   |   |   |   |-- address.html
+|   |   |   |   |-- blog.group
+|   |   |   |   |   |-- entry.html
+|   |   |   |   |   |-- feed.xml
+|   |   |   |   |   |-- index.html
+|   |   |   |   |-- home.group
+|   |   |   |   |   |-- contact.html
+|   |   |   |   |   |-- about.html
+|   |   |   |   |   |-- index.html
+|   |   |   |   |-- styles.group
+|   |   |   |   |   |-- contact.css
+|   |   |   |   |   |-- index.css
+|   |   |   |-- second_msm_site
+|   |   |   |   |-- _partials
+|   |   |   |   |   |-- sidebar.html
+|   |   |   |   |-- _variables
+|   |   |   |   |   |-- address.html
+|   |   |   |   |-- home.group
+|   |   |   |   |   |-- about.html
+|   |   |   |   |   |-- index.html
+```
+
+This allows you to use your preferred text editor to edit Templates and then FTP the changes to the server.
+
+`default_site` and `second_msm_site` are the site short names if you're running [Multiple Site Manager](msm/overview.md). If you have just one site, `default_site` is going to be the only one you need.
+
+`_partials` folder will be holding your [template partials](templates/partials.md) for the site, and `_global_partials` will be holding partials that are shared through all MSM sites.
+
+`_variables` folder will be holding your [template variables](templates/variable.md) for the site, and `_global_variables` will be holding variables that are shared through all MSM sites.
 
 These are the naming rules that ExpressionEngine applies to these resources:
 
@@ -52,7 +115,9 @@ These are the naming rules that ExpressionEngine applies to these resources:
   - _.xml_ creates an 'xml' template type
 - Template group names (not including the .group) and template names (not including the .extension) are limited to 50 characters. Anything longer than that will be truncated by the database and fail to match the file.
 
-You can also choose to save templates in the database using this [system configuration override](general/system-configuration-overrides.md#save_tmpl_files).
+Having several templates with same name but different extensions is not supported.
+
+The existing templates are syncronized with the files as soon as any site page is accessed. However if you created new template or new template group on file system, you need to visit `Developer -> Templates` section of Control Panel in order to have them created in database.
 
 ## Hidden Templates
 
