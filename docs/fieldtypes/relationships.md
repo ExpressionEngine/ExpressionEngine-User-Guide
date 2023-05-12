@@ -225,7 +225,7 @@ The `{siblings}` tag does not need to be a top level tag. It may be used from a 
 
 In addition to the standard parameters, the following parameter may be used in this tag:
 
-#### field
+- `field`
 
 There can be multiple relationship fields in a field group, thus child entries may be related to the same parent via different fields. Use the `field` parameter to specify which field in the parent entry we should be pulling the siblings from. The syntax is:
 
