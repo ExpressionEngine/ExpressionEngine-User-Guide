@@ -125,6 +125,8 @@ Having several templates with same name but different extensions is not supporte
 
 The existing templates are syncronized with the files as soon as any site page is accessed. However if you created new template or new template group on file system, you need to visit `Developer -> Templates` section of Control Panel in order to have them created in database.
 
+NOTE: **Note:** When saving templates as files, `index.html` will be placed automatically into each template group folders when the templates are synchronized.
+
 ## Hidden Templates
 
 Sometimes it is undesirable to allow access to a template via a URL. For instance, a template that you only use as an [embedded template](templates/embedding.md) would likely be an incomplete HTML document, and you wouldn't want visitors to be able to view that template by itself.
