@@ -55,11 +55,17 @@ You can also edit template preferences and set front-end access permissions for 
 
 ## Saving templates as files
 
-Templates are always saved into database, however they can also be saved as files by setting [system configuration override](general/system-configuration-overrides.md#save_tmpl_files)in `system/user/config/config.php`:
+Templates, Template Groups, Templates, Global Variable, and Template Partials are always saved into database and this is their primary souce, however by default they are also saved as regular folders and files on your server.
+
+This behavior is controlled by [system configuration overrides](general/system-configuration-overrides.md#save_tmpl_files)in `system/user/config/config.php`:
 ```php
+// Controls whether template and partial files should be saved on filesystem
 $config['save_tmpl_files'] = 'y';
+// Controls whether Global variables should be saved as files (requires `save_tmpl_files` also being set to `y`)
+$config['save_tmpl_globals'] = 'y';
 ```
-ExpressionEngine, by default, saves Template Groups, Templates, Global Variable, and Template Partials as regular folders and files on your server. The directory structure would be similar to shown below
+
+The directory structure would be similar to shown below
 
 ```
 |-- system
