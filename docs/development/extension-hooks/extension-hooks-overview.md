@@ -20,6 +20,7 @@ TIP: Reference [Extending The Core](development/extensions.md) for more informat
 Core hooks are categorized into 5 categories:
 - Global
     - [Core Library](development/extension-hooks/global/core.md)
+    - [CLI](development/extension-hooks/global/cli.md)
     - [Email Library](development/extension-hooks/global/email.md)
     - [Filemanager Library](development/extension-hooks/global/filemanager.md)
     - [Functions Library](development/extension-hooks/global/functions.md)
