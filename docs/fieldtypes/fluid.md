@@ -39,6 +39,8 @@ Fields (or field groups) can be used more than once and in any order. They can b
 
 The frontend will output the various field contents in the order specified in the entry.
 
+NOTE: **Note:** Conditional fields are not supported inside Fluid
+
 ## Channel Form
 
 A fluid field cannot be used in the channel form.
