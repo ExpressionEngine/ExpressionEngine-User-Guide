@@ -124,14 +124,54 @@ Simple relationship fields with only 1 relationship allowed are very similar in 
       {/options:my_field_name}
     </select>
 
-For relationship fields that allow multiple selections, you may also set the sort order:
+For relationship fields that allow multiple selections, you may also set the reorderable drag-and-drop lists:
 
-    {options:my_field_name}
-        Order:
-        <input type="text" name="my_field_name[sort][]" value="{option_order}" />
-        <input type="checkbox" name="my_field_name[data][]" value="{option_value}" {checked}/>
-        {option_name}<br />
-    {/options:my_field_name}
+    {exp:channel:entries channel="yourChannel"}
+      <ul id="list-group">
+        {relationship_field}
+            <li class="list-item">
+                <div class="list-item__handle">::</div>
+                <div class="list-item__content">
+                    <div class="list-item__title">{relationship_field:title}</div>
+                    <div class="list-item__secondary"><span> #{relationship_field:entry_id} / </span>{relationship_field:status}</div>
+                </div>
+            </li>
+        {/relationship_field}
+      </ul>
+    {/exp:channel:entries}
+
+You need add SortableJs and a bit of Javascript code:
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script>
+        var el = document.getElementById('list-group');
+        var sortable = Sortable.create(el);
+    </script>
+
+Add CSS:
+
+    <style>
+        #list-group {
+            list-style-type: none;
+            padding: 0;
+            margin-left: 15px;
+        }
+        #list-group .list-item{
+            margin-bottom: 10px;
+            border: 1px solid #cecece;
+            padding: 5px 15px;
+            background: #fff;
+            display: flex;
+        }
+        #list-group .list-item__title {
+            font-weight: bold;
+        }
+        #list-group .list-item__handle {
+            cursor: move;
+            cursor: -webkit-grabbing;
+            margin-right: 10px;
+        }
+    </style>
 
 ### Select field
 
