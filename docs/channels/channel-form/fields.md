@@ -140,7 +140,7 @@ For relationship fields that allow multiple selections, you may also set the reo
       </ul>
     {/exp:channel:entries}
 
-You need add SortableJs and a bit of Javascript code:
+You would need a bit of Javascript code (the example below is using SortableJs library):
 
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
     <script>
@@ -172,6 +172,8 @@ Add CSS:
             margin-right: 10px;
         }
     </style>
+
+![Relationship fields](_images/sort-relationship.gif)
 
 ### Select field
 
