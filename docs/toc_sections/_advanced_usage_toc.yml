@@ -643,10 +643,14 @@
           href: cli/built-in-commands/addons.md
         - name: Add-on Generator
           href: cli/built-in-commands/make-addon.md
+        - name: Backup Database
+          href: cli/built-in-commands/backup-database.md
         - name: Clear Cache
           href: cli/built-in-commands/cache-clear.md
         - name: Command Generator
           href: cli/built-in-commands/make-command.md
+        - name: Config Management
+          href: cli/built-in-commands/config-management.md
         - name: Migrations
           href: cli/built-in-commands/migrate.md
         - name: List
