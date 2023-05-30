@@ -139,13 +139,13 @@ The Publish/Edit page can be customized, with the layout saved per member role, 
 
 This section of the control panel is where channel layouts are created or edited.
 
-When publish layout for channel is assigned to member role, the Publish / Edit entry page would be displayed as defined by that layout, for editors in that role.
+Editors in a member role will see the Publish / Edit entry page in accordance with the assigned publish layout for that channel.
 
 The publish layouts are capable of organizing fields into tabs, reordering fields, changing their width for organizing into columns, and hiding the fields that should not be visible.
 
-Each layout needs to be assigned to one or several member roles. However each role can have only one publish layout assigned.
+Each layout needs to be assigned to one or several member roles. However, each role can have only one publish layout assigned.
 
-You can have one publish layout for all editor roles, or you can have different layouts for different roles. When only small adjustment is needed, the publish layout can be duplicated using "Clone to New Layout" option in "Save" dropdown.
+You can have one publish layout for all editor roles, or you can have different layouts for different roles. When only a small adjustment is needed, the publish layout can be duplicated using "Clone to New Layout" option in "Save" dropdown.
 
 ## Channel Set Import
 
