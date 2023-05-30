@@ -43,7 +43,7 @@ Add-ons may also have consent requests, and you can also make any Consent Reques
 
 ## Records, Auditing
 
-ExpressionEngine records an audit log of all consents granted or withdrawn by a user. This is maintained indefinitely. If you ever need to prove or report an individual's granting or withdrawl of consent, just visit your [Consent Logs](control-panel/system-logs.md#consent-logs).
+ExpressionEngine records an audit log of all consents granted or withdrawn by a user. This is maintained indefinitely. If you ever need to prove or report an individual's granting or withdrawal of consent, just visit your [Consent Logs](control-panel/system-logs.md#consent-logs).
 
 ## Data Portability
 

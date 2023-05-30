@@ -7,7 +7,7 @@
 ## @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
 ## @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 
-## This script expects enviornment variables to be set called "GHUSER" and "GHTOKEN". These should correspond to your GitHub username and GitHub personal access token respectively. Reference the GitHub API docs for more information: https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api#authentication
+## This script expects environment variables to be set called "GHUSER" and "GHTOKEN". These should correspond to your GitHub username and GitHub personal access token respectively. Reference the GitHub API docs for more information: https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api#authentication
 ##
 ## This Script also is expecting the jq library to be installed. https://stedolan.github.io/jq/
 

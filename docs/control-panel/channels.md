@@ -90,7 +90,7 @@ NOTE: **Note:** We recommend using the default base URL variable `{base_url}` de
 - **Channel** -- The full URL to the main page for this channel.
 - **Comment form** -- The full URL to the "comments" page for this channel. The URL should include the Template Group and Template. For example: <https://example.com/channel/comments/>
 - **Search results** -- The full URL where you would like search results from this channel to be pointed. The URL should include the Template Group and Template. For example: `{base_url}/index.php/channel/comments/`.
-- **RSS feed** -- Thes URL where you can view the RSS feed for this channel. For example: <https://example.com/channel/rss_2.0>
+- **RSS feed** -- The URL where you can view the RSS feed for this channel. For example: <https://example.com/channel/rss_2.0>
 - **Preview URL** -- The template path, or route, to use for [Live Preview](control-panel/create.md#preview) in this Channel. You can use the variables `{entry_id}` and `{url_title}` which will be replaced with the entry's ID or URL Title when rendering your template. For example: `blog/entry/{url_title}` **Note:** If an Entry has a Page URI it will be used instead of the Preview URL for the channel.
 - **Allow Preview** -- When set to yes, the entry preview will be allowed, don't forget to set the Preview URL too.
 - **Generated title** -- When a new entry is created or previewed, this value will be inserted by default in the Title field. This is helpful if you wish every entry in a channel to have the titles follow a certain format. The automatic URL Title creating javascript for the Publish page will ignore this text during processing.
