@@ -23,7 +23,7 @@ Category groups are _collections_ of categories that can be assigned to channels
 
 **Control Panel Location: `Content > Categories > New/Edit Category`**
 
-Catagories have the following settings:
+Categories have the following settings:
 
 - **Name** -- The name of the new category. The name may include spaces.
 - **URL title** -- The human readable category name used in the URL when using [Category URL Titles in Links](control-panel/settings/content-design.md).

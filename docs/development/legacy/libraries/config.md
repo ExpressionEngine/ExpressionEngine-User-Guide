@@ -134,7 +134,7 @@ This method is identical to `item()`, except it appends a forward slash to the e
 | Parameter         | Type     | Description                                                                                   |
 | ----------------- | -------- | --------------------------------------------------------------------------------------------- |
 | \$file            | `String` | Configuration file name                                                                       |
-| \$use_sections    | `Bool`   | Whether config values shoud be loaded into their own section (index of the main config array) |
+| \$use_sections    | `Bool`   | Whether config values should be loaded into their own section (index of the main config array) |
 | \$fail_gracefully | `Bool`   | Whether to return FALSE or to display an error message                                        |
 | Returns           | `Bool`   | TRUE on success, FALSE on failure                                                             |
 

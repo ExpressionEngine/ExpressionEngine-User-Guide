@@ -261,7 +261,7 @@ URL encode the contents.
 | ----------------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | lowercase=        | `yes`                                                    | Whether to force a lowercase URL slug                                                        |
 | remove_stopwords= | `no`                                                     | Whether to remove common words (obeys site configuration `system/user/config/stopwords.php`) |
-| separator=        | `global-channel-word-seperator-label` (typically a dash) | The character to use as a word separator                                                     |
+| separator=        | `global-channel-word-separator-label` (typically a dash) | The character to use as a word separator                                                     |
 
 Create a URL slug from the content.
 

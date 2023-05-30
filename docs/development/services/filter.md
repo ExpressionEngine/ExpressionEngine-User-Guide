@@ -44,7 +44,7 @@ We have made a few built-in filters that cover the more common cases.
 
 ### Date Filter
 
-The date filter offers a date picker and a list of ranges, from "Last 24 Hours" to "Last 365 Days". When one of the ranges is selectd the value of the filter are the number of seconds for that range (i.e. `86400` for 24 hours, and `31536000` for 365 days). When the date picker is used the selected value is an indexed array of Unix timestamps. The first timestamp is Midnight on the selected date and the second is 86,400 seconds later (or Midnight the next day). It's used thus:
+The date filter offers a date picker and a list of ranges, from "Last 24 Hours" to "Last 365 Days". When one of the ranges is selected the value of the filter are the number of seconds for that range (i.e. `86400` for 24 hours, and `31536000` for 365 days). When the date picker is used the selected value is an indexed array of Unix timestamps. The first timestamp is Midnight on the selected date and the second is 86,400 seconds later (or Midnight the next day). It's used thus:
 
     $filters = ee('CP/Filter')->add('Date');
     $values = $filters->values();

@@ -27,7 +27,7 @@ Select all fields that you want available in your fluid field on the publish pag
 
 ### Add
 
-A fluid field is initially displayed as a simple dropdown 'Add', populated with the field names assigned to the fluid field. When you choose a field from the dropdown, it adds it to the page, maintaing all of the field's settings, instructions and requirements.
+A fluid field is initially displayed as a simple dropdown 'Add', populated with the field names assigned to the fluid field. When you choose a field from the dropdown, it adds it to the page, maintaining all of the field's settings, instructions and requirements.
 
 Fields can be used more than once and in any order. They can be re-ordered within the fluid field by dragging up or down.
 
@@ -39,7 +39,7 @@ A fluid field cannot be used in the channel form.
 
 ## Template Tags
 
-Fluid field content is ouput using variable pairs. An outer variable pair using the Fluid field's shortname wraps all content. Within that wrapper variable pair, each field can be output using a prefixed variable pair and the `{content}` variable. Within the prefixed variable pair, the `{content}` variable is used in place of the field's shortname.
+Fluid field content is output using variable pairs. An outer variable pair using the Fluid field's shortname wraps all content. Within that wrapper variable pair, each field can be output using a prefixed variable pair and the `{content}` variable. Within the prefixed variable pair, the `{content}` variable is used in place of the field's shortname.
 
 For example, if you have a Fluid field `fluid_content` with a text field `fluid_text` your template code may look like this:
 

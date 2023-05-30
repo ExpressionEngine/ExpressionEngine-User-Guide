@@ -73,7 +73,7 @@ With complex menus, you may want to break your navigation up into nested subsect
 
 #### Name
 
-The top level name for this section to dispaly in the menu.
+The top level name for this section to display in the menu.
 
 #### Submenu
 

@@ -108,7 +108,7 @@ Copy files between directories
 Get full server path to file or directory
 
 #### `cy.task('filesystem:list', {target: upload_path, mask: '/*.png'})`
-List the files that match mask in targer directory
+List the files that match mask in target directory
 
 #### `cy.task('filesystem:read', '../../system/user/config/config.php')`
 Read the file

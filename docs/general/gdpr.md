@@ -15,7 +15,7 @@ ExpressionEngine has tools to make compliance with regulations like the easy to 
 
 ## Consent, Consent, Consent
 
-The biggest and most important aspect of GDPR is gaining user consent for processing their PII (Personally Identifiable Information), letting them easily withdraw consent, and only processing PII that the user has consented to. ExpessionEngine makes it easy to gain and manage user consent for any activity you can possibly imagine.
+The biggest and most important aspect of GDPR is gaining user consent for processing their PII (Personally Identifiable Information), letting them easily withdraw consent, and only processing PII that the user has consented to. ExpressionEngine makes it easy to gain and manage user consent for any activity you can possibly imagine.
 
 ### Cookies
 

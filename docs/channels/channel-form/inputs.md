@@ -37,7 +37,7 @@ Set the date of the entry and apply an enabled datepicker:
 
     <p>Date <br> <input type="text" name="entry_date" value="{entry_date}" maxlength="23" size="25" rel="date-picker" data-timestamp="{entry_timestamp}"></p>
 
-NOTE: **Note:** All date formats should match what the user has defined in their localization settings. The date fields will autmatically use that format and validate against it.
+NOTE: **Note:** All date formats should match what the user has defined in their localization settings. The date fields will automatically use that format and validate against it.
 
 ### Expiration Date
 

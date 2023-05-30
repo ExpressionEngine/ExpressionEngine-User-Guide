@@ -89,7 +89,7 @@ Or you can exclude channels by including the word "not" followed by a space:
 
     entry_id="12"
 
-You can limit the tag to specific entries, or more practically, you can ommit specific entries from showing up in the cycle, by using "not":
+You can limit the tag to specific entries, or more practically, you can omit specific entries from showing up in the cycle, by using "not":
 
     entry_id="not 2|9|23|50"
 

@@ -169,7 +169,7 @@
 - Resolved issue with sidebar member links
 
 - **Enhancements** 🚀
-  - Added new needed_fields_only paramater to channel entries loop
+  - Added new needed_fields_only parameter to channel entries loop
 
 
 ## Version 7.2.12
@@ -198,7 +198,7 @@
 - Resolved [#3093](https://github.com/ExpressionEngine/ExpressionEngine/issues/3093) where deprecation message could be shown when editing members using PHP 8.1
 - Resolved [#3116](https://github.com/ExpressionEngine/ExpressionEngine/issues/3116) where navigating File Picker from Category edit page caused  PHP error
 - [Error](https://github.com/ExpressionEngine/ExpressionEngine/pull/3142/commits/66a49d823363edb22dbdb5d9c1317e486ecb9521) with empty custom member fields
-- [Improved preformance](https://github.com/ExpressionEngine/ExpressionEngine/pull/3142/commits/5754ec61854633ae30fcafb5cbd4b8778af174d1) on member list tag
+- [Improved performance](https://github.com/ExpressionEngine/ExpressionEngine/pull/3142/commits/5754ec61854633ae30fcafb5cbd4b8778af174d1) on member list tag
 - Additional Role checks on creation
 - Additional PHP 8.2 support
 
@@ -875,12 +875,12 @@ NOTE:**Note:** If multiple members are needed, an ExpressionEngine Pro license i
   - Added utility action menu to files in the File Manager, allowing for quicker actions to be taken on individual files
   - Added Pop-up preview to thumbnails when viewing files in list view
   - Ability to upload files with drag and drop.
-  - Bulk upload files using drag and drop or standard file sytem upload
+  - Bulk upload files using drag and drop or standard file system upload
   - Ability to organize content into [subfolders](/control-panel/file-manager/subfolders.md)
   - Folders can now be created directly on the filesystem through the File Manager
   - Implemented [FlySystem PHP library](https://flysystem.thephpleague.com/docs/) to add more extensiblity to the File Manager.
   - Added support for cloud based file storage through [Adapters](/control-panel/file-manager/adapters.md)
-  - Changed how files are referenced in the database. Previously files were referenced using `{filedir_X}filename.ext`. Files are now referenced using `{file:XX:url}`. [Compatiblity Mode](/control-panel/file-manager/file-manager.md#compatibility-mode) is recommended for upgrades until there is confirmation that all add-ons will work with new file data format.
+  - Changed how files are referenced in the database. Previously files were referenced using `{filedir_X}filename.ext`. Files are now referenced using `{file:XX:url}`. [Compatibility Mode](/control-panel/file-manager/file-manager.md#compatibility-mode) is recommended for upgrades until there is confirmation that all add-ons will work with new file data format.
   - File usage is now available in the File Manager to display where a file is used throughout the Control Panel as well as notify users if a file is in use before deleting the file
 
 - **Enhancements** 🚀
@@ -900,7 +900,7 @@ NOTE:**Note:** If multiple members are needed, an ExpressionEngine Pro license i
   - Added new light theme. ExpressionEngine 6 theme is still available as the "slate" theme using the Jump Menu
   - Added the option to display Grid fields vertically
   - Added the ability to position Entry Editor fields side-by-side using Publish Layouts
-  - Made the secondary sidebar collapsable throughout the Control Panel
+  - Made the secondary sidebar collapsible throughout the Control Panel
 
 
 
@@ -911,6 +911,6 @@ NOTE:**Note:** If multiple members are needed, an ExpressionEngine Pro license i
   - Simple Commerce Add-on has now been removed from ExpressionEngine and made a downloadable add-on from the ExpressionEngine Store. On upgrades which use the Simple Commerce Add-on, the add-on will be moved from the `ee/addons` folder to `user/addons` and considered a user installed add-on.
   - Ip to Nation Add-on has now been removed from ExpressionEngine and made a downloadable add-on from the ExpressionEngine Store. On upgrades which use the Ip to Nation Add-on, the add-on will be moved from the `ee/addons` folder to `user/addons` and considered a user installed add-on.
   - The included version of jQuery used in the Control Panel has been updated to v3.6.0
-  - Added the option to [globablly cache](/channels/entries.html#cache-refresh-cache_prefix) Channel Entries tag results
+  - Added the option to [globally cache](/channels/entries.html#cache-refresh-cache_prefix) Channel Entries tag results
   - Added [ENV File Support](/advanced-usage/env-support.md)
   - Added new Shared Form View 

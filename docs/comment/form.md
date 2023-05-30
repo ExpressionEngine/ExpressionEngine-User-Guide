@@ -209,7 +209,7 @@ The JavaScript Code:
 
     {exp:comment:edit_comment_script}
 
-This tag outputs a script tag that will include the necessary JavaScript for your comment editor. This script requires jQuery, so you will need to include taht as well.
+This tag outputs a script tag that will include the necessary JavaScript for your comment editor. This script requires jQuery, so you will need to include that as well.
 
 ### AJAX Edit URL Tag
 

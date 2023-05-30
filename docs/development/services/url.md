@@ -122,7 +122,7 @@ Compiles and returns the URL as a string. Typically this is used when you need t
 
 ### `__toString()`
 
-When accessed as a string simply complile the URL and return that.
+When accessed as a string simply compile the URL and return that.
 
 | Parameter | Type      | Description |
 | --------- | --------- | ----------- |

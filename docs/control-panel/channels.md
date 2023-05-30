@@ -104,7 +104,7 @@ NOTE: **Note:** We recommend using the default base URL variable `{base_url}` de
 - **Render URLs and Email addresses as links?** -- When this option is set to "Yes", any full URLs or email addresses will be automatically formatted as a valid HTML link to the address. If the option is "No" then the URL or email address will be treated and displayed as plain text.
 - **Enable Sticky entries?** -- When enabled, entries can be marked as sticky and have preference in sorted listings.
 - **Enable entry cloning?** -- ([ExpressionEngine Pro](/channels/entry_cloning.md) feature) When enabled, entries can be cloned using "Clone to New Entry" option in Save options dropdown.
-- **Status** -- Status assigned to all new entires in the channel.
+- **Status** -- Status assigned to all new entries in the channel.
 - **Author** -- Default author for guest entries posted via Channel Form.
 - **Allow guest submissions?** -- When set to yes, unregistered users will be able to submit forms for this channel.
 - **Enable entry versioning?** -- When set to enable, ExpressionEngine will save revisions of each entry for this channel.

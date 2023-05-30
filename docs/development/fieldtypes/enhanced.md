@@ -143,7 +143,7 @@ If the fieldtype needs to support the list or evaluation rules that is different
 
     public $supportedEvaluationRules = ['isEmpty', 'isNotEmpty', 'contains', 'notContains'];
 
-If certain rule needs to be pre-selected by default when adding new condition to the field, it's name can be specificed in `defaultEvaluationRule` property, e.g.
+If certain rule needs to be pre-selected by default when adding new condition to the field, it's name can be specified in `defaultEvaluationRule` property, e.g.
 
     public $defaultEvaluationRule = 'contains';
 
@@ -228,7 +228,7 @@ Evaluates the rule by comparing the field value (`$fieldValue`) with the `$expec
 
 #### `getLanguageKey()`
 
-Should return language key for this evaluation rule to be displayed as human readble name in dropdown when setting up conditionals for the field.
+Should return language key for this evaluation rule to be displayed as human readable name in dropdown when setting up conditionals for the field.
 Implementation of this method in `AbstractEvaluationRule` will return the rule name as language key.
 
 #### `getConditionalFieldInputType()`

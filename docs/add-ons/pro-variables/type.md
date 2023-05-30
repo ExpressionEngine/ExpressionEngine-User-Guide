@@ -40,7 +40,7 @@ Character to separate multiple values. Either a new line (`\n`), a pipe (`|`) or
 
 ## Date
 
-Displays a date picker. To output anything other than a timestamp, use the `{exp:pro_variables:single}` tag. This takes the same parameters as the native Date field. Additionaly, use `modifier="relative"` to output a relative date string.
+Displays a date picker. To output anything other than a timestamp, use the `{exp:pro_variables:single}` tag. This takes the same parameters as the native Date field. Additionally, use `modifier="relative"` to output a relative date string.
 
 ### Code examples
 
@@ -66,7 +66,7 @@ Uses the native [Grid field](/fieldtypes/grid.md). All native types are availabl
 
 #### `modifier`
 
-Any of the available [modifiers](/fieldtypes/grid.md#modifiers), which will trigger the ouput the modifier provides.
+Any of the available [modifiers](/fieldtypes/grid.md#modifiers), which will trigger the output the modifier provides.
 
 ### Code examples
 
@@ -304,7 +304,7 @@ Limit the number of rows displayed.
 
 ## Text Input
 
-Displays a single line edit input field. The _maxlength_ property can be set as well as the _size_ of the input fied. You can also define a regular expression _pattern_ to validate the value, and the _text direction_ of the input field.
+Displays a single line edit input field. The _maxlength_ property can be set as well as the _size_ of the input field. You can also define a regular expression _pattern_ to validate the value, and the _text direction_ of the input field.
 
 ### Settings
 
