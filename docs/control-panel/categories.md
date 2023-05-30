@@ -34,10 +34,10 @@ Categories have the following settings:
 
 The categories can be saved by clicking "Save" button or pressing `Ctrl`+`s` (`cmd`+`s`) on keyboard. Upon saving, the category editing page remains open so you can make other changes.
 
-Extra saving options are available from dropdown menu under "Save": 
-- "Save & New" - opens new category form after saving
+Extra saving options are also available from the dropdown menu under "Save": 
+- "Save & New" - opens a new category form after saving
 - "Save & Close" - redirects to categories list after saving
-- "Clone to New Category" - saves the changes into new category. The current category is used as "template" and remains unchanged.
+- "Clone to New Category" - saves the changes into a new category. The current category is used as a "template" and remains unchanged.
 
 ## Create/Edit Category Groups
 
