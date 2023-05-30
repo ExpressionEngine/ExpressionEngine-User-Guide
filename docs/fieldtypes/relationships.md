@@ -21,7 +21,7 @@ This fieldtype is currently only limited to Channels.
 
 #### Channels to Relate
 
-Choose which channels can related content be pulled from. When using Miltiple Sites Manager, you can select channels from any site.
+Choose which channels related content can be pulled from. When using Multiple Sites Manager, you can select channels from any site.
 
 #### Include in Selection
 
@@ -70,7 +70,7 @@ When enabled, this field won’t initialize until the Edit Relationships button 
 
 From within the field, the entries can be selected to establish relationship.
 
-The entries can be filtered using search input and, if necessary, channel dropdown. 
+The entries can be filtered using search input and, if necessary, channel dropdown.
 
 If the editor has corresponding permissions, they will see "New Entry" button which allows creating new channel entry without leaving the edit screen of current entry. The can also edit related entry contents without leaving the page.
 
