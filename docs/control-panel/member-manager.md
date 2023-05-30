@@ -36,15 +36,15 @@ You can assign multiple roles to a member.
 This sections allows you to set the various permissions and settings for the selected Member Role.
 
 ExpressionEngine comes with 5 built-in Roles:
-- Super Admin _(#1)_ - has full control over site and all system settings. We advise that all member in this role would use [Multi-factor authentication](member/mfa.md)
-- Banned _(#2)_ - reserved role for members that are registered but have been banned from accessing the site
-- Guests _(#3)_ - reserved role for visitors that are not logged in. We advise to not assign any real member accounts to this role.
-- Pending _(#4)_ - members who filled in registration form but have not been approved yet (by admin or by verifying their email address, depending on your membership preferences)
+- Super Admin _(#1)_ - has full control over the site and all system settings. We advise that all members in this role use [Multi-factor authentication](member/mfa.md)
+- Banned _(#2)_ - reserved role for members that are registered, but have been banned from accessing the site
+- Guests _(#3)_ - reserved role for visitors that are not logged in. It is recommended not to assign any actual member accounts to this role.
+- Pending _(#4)_ - members who submitted the registration form, but have not been approved yet (by admin or by verifying their email address, depending on your membership preferences)
 - Members _(#5)_ - regular site members. This is the default role that everyone gets registered into, unless specified differently
 
 These roles should never be deleted.
 
-If you need custom set of permissions for the role, we suggest creating new role for each case. You can do that by clicking "New Role" button, or you can create new role based on exsting one by picking "Clone to New Role" from the role's "Save" dropdown.
+If you need a custom set of permissions for the role, we suggest creating a new role for each case. You can do that by clicking "New Role" button, or you can create a new role based on an exsting one by picking "Clone to New Role" from the role's "Save" dropdown.
 
 Edit the role by clicking its name in the list.
 
