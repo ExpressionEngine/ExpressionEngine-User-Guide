@@ -70,7 +70,7 @@
         - name: Find and Replace
           href: add-ons/pro-search/find-and-replace.md
         - name: Upgrade from Low Search
-          href: add-ons/pro-search/upgrade-from-low-search.md		  
+          href: add-ons/pro-search/upgrade-from-low-search.md
         - name: Development
           items:
             - name: Creating your own Filter
@@ -98,7 +98,7 @@
         - name: Fieldtype
           href: add-ons/pro-variables/fieldtype.md
         - name: Upgrade from Low Variables
-          href: add-ons/pro-variables/upgrade-from-low-variables.md		  
+          href: add-ons/pro-variables/upgrade-from-low-variables.md
         - name: Development
           items:
             - name: Fieldtype Bridge
@@ -315,7 +315,7 @@
       href: development/architecture.md
     - name: Services
       items:
-        - name: Addon Service
+        - name: Add-on Service
           href: development/services/addon.md
         - name: CP/Alert Service
           href: development/services/alert.md
@@ -399,15 +399,15 @@
       items:
         - name: Working with Models
           href: development/models/working-with-models.md
-        - name: Addon Action Model
+        - name: Add-on Action Model
           href: development/models/addon-action.md
-        - name: Addon Module Model
+        - name: Add-on Module Model
           href: development/models/addon-module.md
-        - name: Addon Extension Model
+        - name: Add-on Extension Model
           href: development/models/addon-extension.md
-        - name: Addon Fieldtype Model
+        - name: Add-on Fieldtype Model
           href: development/models/addon-fieldtype.md
-        - name: Addon Plugin Model
+        - name: Add-on Plugin Model
           href: development/models/addon-plugin.md
         - name: Category Model
           href: development/models/category.md
@@ -630,7 +630,7 @@
       href: development/v6-add-on-migration.md
     - name: Automated Upgrading
       href: development/automated-upgrading.md
-      
+
 - name: Command Line Interface (CLI)
   items:
     - name: Introduction
@@ -639,9 +639,9 @@
       href: cli/usage.md
     - name: Built In Commands
       items:
-        - name: Addon Management
+        - name: Add-on Management
           href: cli/built-in-commands/addons.md
-        - name: Addon Generator
+        - name: Add-on Generator
           href: cli/built-in-commands/make-addon.md
         - name: Clear Cache
           href: cli/built-in-commands/cache-clear.md
@@ -665,7 +665,7 @@
 
 - name: Entry Cloning
   href: channels/entry_cloning.md
-  
+
 - name: Front-end Content Management
   items:
     - name: Overview
