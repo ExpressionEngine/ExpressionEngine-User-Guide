@@ -23,7 +23,7 @@ This section of the Control Panel is where custom fields are created, edited and
 
 This section of the control panel allows you to create and edit [Fields](/fieldtypes/overview.md) to be used in channel entries.
 
-Visit [**Create/Edit Field**](control-panel/field-manager/edit-field.md) page for detailed information.
+Visit the [**Create/Edit Field**](control-panel/field-manager/edit-field.md) page for detailed information.
 
 
 ## Create/Edit Field Group
