@@ -20,7 +20,7 @@ If you are viewing certain field group when clicking "New Field" button, the fie
 Fields have the following settings:
 
 - **Type** -- The type of field. [List of available fieldtypes](fieldtypes/overview.md).
-- **Name** -- The descriptive name for the field which is displayed in the publish form. Unlike the Field Name, the label does not need to be unique within the system, so you can use the same label on multiple fields in different field groups.
+- **Name** -- The descriptive name for the field which is displayed in the publish form. Unlike the Short Name, the Name (you can think of it as a label) does not need to be unique within the system, so you can use the same name on multiple fields in different field groups.
 - **Short Name** -- This is the internal or "short name" for the field. The field name must be unique within the system, which means that you cannot have two field groups each containing a field with the field name of "body". The short name is typically used as the variable name in your [Channel Entries Tag](channels/entries.md)
 - **Instructions** -- These are instructions for authors on how or what to enter into the field when submitting an entry. The instructions will appear below the Field Label in your publish page.
 - **Require field?** -- If the field is required and the user leaves it blank, upon submission they will receive an error message prompting them to correct it. Required fields are only required when not [conditionally hidden](control-panel/field-manager/conditional-fields.md).
