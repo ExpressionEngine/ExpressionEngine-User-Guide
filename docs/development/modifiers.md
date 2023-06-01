@@ -3,29 +3,29 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2021, Packet Tide, LLC (https://packettide.com)
+    @copyright Copyright (c) 2003-2023, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
 # Developing Variable Modifiers
 
-The add-ons can provide their own [variable modifiers](templates/variable-modifiers.md)
+Add-ons can provide their own [variable modifiers](templates/variable-modifiers.md) for use in templates.
 
-Each variable modifier needs be created as a separate file in `Modifiers` directory within add-on's own folder and registered in `addon.setup.php`.
+Each variable modifier needs be created as a separate file in the `Modifiers` directory within the add-on's root folder, and registered in `addon.setup.php`.
 
-The file name (which will also be PHP class name) should be the modifier's name with first letter capitalized.
+The file name, which is also the PHP class name, should be the modifier's name with the first letter capitalized.
 
 All modifier files are required to implement `ExpressionEngine\Service\Template\Variables\ModifierInterface`.
 
-Each widget should have `namespace` definition, which should consist of the add-on's namespace as defined in `addon.setup.php` followed by `\Modifiers`.
+Each modifier should have a `namespace` definition, which consists of the add-on's namespace as defined in `addon.setup.php` followed by `\Modifiers`.
 
-Lastly, the modifier's name should be registered in `addon.setup.php`
+Lastly, the modifier's name should be registered in `addon.setup.php`.
 
-TIP: **Tip:** Modifiers provided by add-on can be called by their name as well as by their name prefixed with add-on's name and underscore. For example below we can use `{title:hacker}` and `{title:seo_hacker}` to achieve same result
+TIP: **Tip:** Modifiers provided by add-ons can be called by their name as well as by their name prefixed with add-on's name and underscore. For example, below we can use `{title:hacker}` and `{title:seeo_hacker}` to achieve the same result.
 
 ### Example
 
-Let's create `:hacker` modifier which would make text look geeky by converting some letters to numbers that look similarly. The modifier would be part of "Seeo" add-on.
+Let's create the `:hacker` modifier, which would make text look geeky by converting some of the letters to similar looking numbers. This example modifier is part of the "Seeo" add-on.
 
     <?php
 
@@ -33,8 +33,6 @@ Let's create `:hacker` modifier which would make text look geeky by converting s
     * namespace is required and must be add-on's namespace + 'Modifiers'
     * 
     */
-    <?php
-
     namespace EEHarbor\Seeo\Modifiers;
 
     use ExpressionEngine\Service\Template\Variables\ModifierInterface;
@@ -50,10 +48,10 @@ Let's create `:hacker` modifier which would make text look geeky by converting s
 Next, we'll add the following to `addon.setup.php`
 
     'modifiers' => array(
-            'hacker'
-        ),
+        'hacker'
+    ),
 
-And now, let's call it in template.
+And now, let's call it in a template.
 
     {exp:channel:entries entry_id="1"}
         <div class="title">
