@@ -24,11 +24,11 @@ NOTE: **Note:** Some add-ons and components may have modifiers not listed here. 
 
 ## Modifiers syntax
 
-The modifiers are being applied by adding modifier name after variable name, separated by semicolon, e.g. `var_name:trim`.
+The modifiers are being applied by adding the modifier name after the variable name, separated by a semicolon, e.g. `var_name:trim`.
 
-It is possible to apply several modifiers at the same time by chaing those, e.g. `var_name:trim:url_encode`. The modifiers would be applied left to right (so in this case, the variable's content will first be trimmed and then URL-encoded).
+It is possible to apply several modifiers at the same time by chaining those, e.g. `var_name:trim:url_encode`. The modifiers would be applied left to right, so in this case the variable's content will first be trimmed and then URL-encoded.
 
-When applying several modifiers, there could be conflict in parameter names. To avoid that, the parameters could be prefixed with modifier name followed by semicolon. E.g. `{excerpt:limit characters='20'}` could be written as `{excerpt:limit limit:characters='20'}`. This allows writing constructions such as `{excerpt:limit:trim limit:characters='20' trim:characters='\n\r'}`. Prefixed parameter has higher precedence over non-prefixed one.
+To avoid conflicts in parameter names when applying several modifiers, the parameters can be prefixed with the modifier name followed by semicolon. E.g. `{excerpt:limit characters='20'}` could be written as `{excerpt:limit limit:characters='20'}`. This allows writing constructions such as `{excerpt:limit:trim limit:characters='20' trim:characters='\n\r'}`. A prefixed parameter has a higher precedence than a non-prefixed parameter.
 
 ## Modifiers
 
