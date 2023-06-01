@@ -121,7 +121,7 @@ As of 3.1.0 fieldtypes can specify their compatibility. When editing a Channel F
       'another_modifier_name'
     )
 
-This property lists the [variable modifiers](development/modifiers.md) that the add-on provides
+This property lists the [variable modifiers](development/modifiers.md) that the add-on provides.
 
 ### `services`
 
