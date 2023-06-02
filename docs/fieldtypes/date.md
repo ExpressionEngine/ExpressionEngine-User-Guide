@@ -18,12 +18,12 @@ The Date field allows for quick entry of dates via the publish form. When the fi
 ### Date Localization
 
 Choose how the field data should be localized. The options are
-- _Always localized_ (the date displayed on front-end will be converted into logged-in member's timezone. Example use case is start of online event, when attenders need to know their local time)
-- _Alway fixed_ (the date on front-end will be displayed in the site's configured timezone. Example use case is start of in-person event, when attenders need to know the time as it is in the event's timezone)
+- _Always localized_ (the date displayed on the front-end will be converted into the logged-in member's timezone. An example use case is the start of an online event, when attenders need to know their local time)
+- _Alway fixed_ (the date on the front-end will be displayed in the site's configured timezone. An example use case is the start of an in-person event, when attenders need to know the time as it is in the event's timezone)
 - _Ask each time_
 
 ### Include time?
-When turned off, only date will be displayed, otherwise the editor can also enter time into same field.
+When turned off, only date will be displayed, otherwise the editor can also enter the time into the same field.
 
 ## Publish form
 
