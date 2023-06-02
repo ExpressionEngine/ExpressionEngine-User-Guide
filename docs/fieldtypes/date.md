@@ -32,7 +32,7 @@ On the publish form (when `Date Localization` setting is set to `Ask each time`)
 - **Localized:** A date that is localized will be translated into the logged-in member's current timezone. For instance, if you enter a date of _10/21/2015 4:29 PM_ and you're in Pacific Daylight Time, a member in Eastern Daylight Time will see the date as _10/21/2015 7:29 PM_. Or, for logged out members, the date will be localized on the front-end according to the site's configured timezone.
 - **Fixed:** A fixed date will NOT be localized to a member's timezone, or the site's configured timezone. The date will appear as it does in the control panel everywhere by all members.
 
-NOTE: **Note:** These options are only available when using Date as field and not as Grid column.
+NOTE: **Note:** These options are only available when using Date as a field and not as a Grid column.
 
 At the bottom of the calendar popup you will also see a "Today" button that can be used to automatically set the date to the current date.
 
