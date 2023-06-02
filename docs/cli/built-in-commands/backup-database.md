@@ -10,7 +10,7 @@ Database backups
 
     --absolute_path=<value>
     -a <value>
-        Absolute path to database backup
+        Absolute path to the directory the database backup will be stored
 
     --file_name=<value>
     -f <value>
