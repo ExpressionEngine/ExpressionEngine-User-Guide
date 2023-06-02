@@ -26,7 +26,7 @@ or
 
     php eecli.php addons:list update-available
 
-List add-ons that can currently be uninstalled:
+List add-ons that are currently uninstalled:
 
     php eecli.php addons:list u
 or
