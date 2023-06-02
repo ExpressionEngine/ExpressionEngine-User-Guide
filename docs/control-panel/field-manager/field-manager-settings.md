@@ -50,5 +50,5 @@ Fields groups have following properties:
 
 - **Name** -- Name of field group displayed in Control Panel
 - **Short Name** -- The short name of field group, used in Fluid fields when looping through the group's fields
-- **Description** -- Description of field group. Displayed in Fluid field on Edit Entry page where this group is used
+- **Description** -- Description of field group
 - **Fields** -- The fields can be reordered by drag and drop, and the fields order will be respected on [Entry Publish page](control-panel/create.md) (unless [Publish Layouts](control-panel/channels.md#publish-layouts) are used) as well as in [Fluid field custom field groups](fieldtypes/fluid.md#custom-field-groups).
