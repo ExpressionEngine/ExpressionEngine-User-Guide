@@ -3,7 +3,7 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
+    @copyright Copyright (c) 2003-2023, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -13,9 +13,9 @@
 
 This section of the control panel allows you to create and edit [Fields](/fieldtypes/overview.md) to be used in channel entries.
 
-New field can be added by clicking "New Field" button, or by picking "Clone to New Field" from the existing field's "Save" dropdown - in that case, the original field will serve as "template" and the changes would be applied to new field only.
+A new field can be added by clicking the "New Field" button, or by picking "Clone to New Field" from the existing field's "Save" dropdown. In that case, the original field will serve as "template" and the changes would be applied to new field only.
 
-If you are viewing certain field group when clicking "New Field" button, the field will be assigned to that group. The existing fields can be assigned to multiple field groups by editing the Field Group.
+If you are viewing a certain field group when clicking the "New Field" button, the field will be assigned to that group. The existing fields can be assigned to multiple field groups by editing the Field Group.
 
 Fields have the following settings:
 
