@@ -62,7 +62,7 @@ For example, if you have a Fluid field `fluid_content` with a text field `fluid_
 The prefixed tag pair is a looping tag pair. You can have more than one `fluid_text` field for the entry, it's entirely at the entry author's discretion. The author also determines the order of the field output.
 
 Displaying field groups from within Fluid field is sligtly different, as it requires additions `{fields}` tag pair.
-So given that `blog` is the name of custom field group and `fluid_header` and `fluid_text` are fields in that group, the template might look like:
+So given that `blog` is the short name of custom field group and `fluid_header` and `fluid_text` are fields in that group, the template might look like:
 
     {fluid_content}
 
@@ -193,19 +193,37 @@ True, if the current field group is the last one.
 
     {fluid_content:current_group_name}
 
-The name of the current field group being processed.
+The "human" name of the current field group being processed.
+
+### `current_group_short_name`
+
+    {fluid_content:current_group_short_name}
+
+The short name of the current field group being processed (as used in the templates).
 
 ### `next_group_name`
 
     {fluid_content:next_group_name}
 
-The name of the next field group. This will be blank when on the last group.
+The "human" name of the next field group. This will be blank when on the last group.
+
+### `next_group_short_name`
+
+    {fluid_content:next_group_short_name}
+
+The short name of the next field group. This will be blank when on the last group.
 
 ### `prev_group_name`
 
     {fluid_content:prev_group_name}
 
-The name of the previous field group. This will be blank when on the first group.
+The "human" name of the previous field group. This will be blank when on the first group.
+
+### `prev_group_short_name`
+
+    {fluid_content:prev_group_short_name}
+
+The short name of the previous field group. This will be blank when on the first group.
 
 ## Displaying a Pair variable
 
