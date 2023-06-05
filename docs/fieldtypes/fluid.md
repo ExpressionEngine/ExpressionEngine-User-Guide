@@ -23,15 +23,23 @@ Fluid fields give the author control over the structure of their content, while 
 
 Select all fields that you want available in your fluid field on the publish page. All native fieldtypes except another fluid field are available.
 
+### Custom field groups
+
+Select custom field groups to make them available to fluid field on the publish page. All fields in group will be displayed together in the order set on field group page.
+
 ## Publish Page
 
 ### Add
 
-A fluid field is initially displayed as a simple dropdown 'Add', populated with the field names assigned to the fluid field. When you choose a field from the dropdown, it adds it to the page, maintaing all of the field's settings, instructions and requirements.
+Each fluid field has list of buttons of available custom fields and custom field groups displayed below. Clicking on the button adds a field (or field group) to Fluid, maintaing all of the field's settings, instructions and requirements.
 
-Fields can be used more than once and in any order. They can be re-ordered within the fluid field by dragging up or down.
+Also each Fluid row has '+' button, clicking which shows a dropdown populated with the field names assigned to the fluid field. When you choose a field from the dropdown, it adds it to the page
+
+Fields (or field groups) can be used more than once and in any order. They can be re-ordered within the fluid field by dragging up or down.
 
 The frontend will output the various field contents in the order specified in the entry.
+
+NOTE: **Note:** Conditional fields are not supported inside Fluid
 
 ## Channel Form
 
@@ -52,6 +60,24 @@ For example, if you have a Fluid field `fluid_content` with a text field `fluid_
     {/fluid_content}
 
 The prefixed tag pair is a looping tag pair. You can have more than one `fluid_text` field for the entry, it's entirely at the entry author's discretion. The author also determines the order of the field output.
+
+Displaying field groups from within Fluid field is sligtly different, as it requires additions `{fields}` tag pair.
+So given that `blog` is the short name of custom field group and `fluid_header` and `fluid_text` are fields in that group, the template might look like:
+
+    {fluid_content}
+
+      {fluid_content:blog}
+        {fields}
+          {fluid_content:fluid_header}
+            <h3>{content}</h3>
+          {/fluid_content:fluid_header}
+          {fluid_content:fluid_text}
+            <div>{content}</div>
+          {/fluid_content:fluid_text}
+        {/fields}
+      {/fluid_content:blog}
+
+    {/fluid_content}
 
 ## Variables
 
@@ -148,6 +174,56 @@ Alias of `:current_fieldtype`.
     {fluid_content:total_fields}
 
 The total number of fields regardless of tag output criteria.
+
+Additionally, the following variable are available when using custom field groups:
+
+### `first_group`
+
+    {fluid_content:first_group}
+
+True, if the current field group is the first one.
+
+### `last_group`
+
+    {fluid_content:first_group}
+
+True, if the current field group is the last one.
+
+### `current_group_name`
+
+    {fluid_content:current_group_name}
+
+The "human" name of the current field group being processed.
+
+### `current_group_short_name`
+
+    {fluid_content:current_group_short_name}
+
+The short name of the current field group being processed (as used in the templates).
+
+### `next_group_name`
+
+    {fluid_content:next_group_name}
+
+The "human" name of the next field group. This will be blank when on the last group.
+
+### `next_group_short_name`
+
+    {fluid_content:next_group_short_name}
+
+The short name of the next field group. This will be blank when on the last group.
+
+### `prev_group_name`
+
+    {fluid_content:prev_group_name}
+
+The "human" name of the previous field group. This will be blank when on the first group.
+
+### `prev_group_short_name`
+
+    {fluid_content:prev_group_short_name}
+
+The short name of the previous field group. This will be blank when on the first group.
 
 ## Displaying a Pair variable
 
