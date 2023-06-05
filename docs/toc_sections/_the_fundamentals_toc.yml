@@ -39,6 +39,8 @@
       items:
         - name: Settings
           href: control-panel/field-manager/field-manager-settings.md
+        - name: Create/Edit Field
+          href: control-panel/field-manager/edit-field.md
         - name: Conditional Fields
           href: control-panel/field-manager/conditional-fields.md
     - name: Member Manager
