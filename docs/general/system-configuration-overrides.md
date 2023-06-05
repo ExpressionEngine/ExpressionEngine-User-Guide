@@ -882,6 +882,8 @@ Set TTL for admin sessions.
 | ------- | ------------------------------------------------- |
 | integer | Session TTL in seconds (default is 3600 - 1 hour) |
 
+NOTE: **Note:** An idle state may still trigger the [Idle Check Modal](control-panel/access.md) regardless of the session length.
+
 ### `cp_url`
 
 Set the full URL to your Control Panel.
