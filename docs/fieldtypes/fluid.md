@@ -243,7 +243,7 @@ In this example, the Fluid field has short name `news_content` with a file field
 
 ## Displaying Multiple Fields
 
-Fluid fields are most useful when multiple fields may be included in the presentation. For example, you want to give your client the flexibility to add content in a number of styles. There's a text field `{full_text}`, a grid field `{img_card}` to hold a varying number of small images with descriptive text, a relationship field `{featured_entry}` where they can set a featured article.
+Fluid fields are most useful when multiple fields may be included in the presentation. For example, you want to give your client the flexibility to add content in a number of styles. There's a text field `{full_text}`, a grid field `{img_card}` to hold a varying number of small images with descriptive text, a relationship field `{featured_entry}` where they can set a featured article and an SEO `seo_group` **field group** containing multiple fields related to meta data.
 
 A fluid field can handle the output of all of those fields, as many as they add, respecting the order they specify when publishing.:
 
@@ -277,6 +277,17 @@ A fluid field can handle the output of all of those fields, as many as they add,
     </div>
   {/fluid_field:featured_entry}
 
+  {fluid_field:seo_group}
+    {fields}
+      {fluid_field:seo_title}
+        <title>{content}</title>
+      {/fluid_field:seo_title}
+      {fluid_field:seo_description}
+        <meta name="description" content="{content}">
+      {/fluid_field:seo_description}    
+    {/fields}	
+  {/fluid_field:seo_group}
+  
 {/fluid_field}
 ```
 
@@ -428,4 +439,56 @@ Radio and single select fields use single variables:
       {my_fluid_field:my_url}
         <a href="{content}">Your Link</a>
       {/my_fluid_field:my_url}
+    {/my_fluid_field}
+	
+## Field Group Examples
+
+Field groups in fluid work exactly like fields do, with one extra tag pair ``{fields}...{/fields}`` required.
+
+### Field Group with Date and Email fields
+
+    {my_fluid_field}
+	  {my_fluid_field:my_field_group}
+	    {fields}
+
+          {my_fluid_field:my_date}
+            {content format="%F %d %Y"}
+          {/my_fluid_field:my_date}
+
+          {my_fluid_field:my_email}
+            {content:mailto title="Email about their dog" subject="Question about your dog" encode="no"}
+          {/my_fluid_field:my_email}
+		  
+		{/fields}
+      {/my_fluid_field:my_field_group}	
+    {/my_fluid_field}
+	
+Field Group with Text and Relationship fields
+
+### Field Group with Text and Relationship fields
+
+    {my_fluid_field}
+	  {my_fluid_field:my_field_group}
+	    {fields}
+
+          {my_fluid_field:my_textarea}
+            {content}
+          {/my_fluid_field:my_textarea}
+	
+          {my_fluid_field:my_relationship}
+            {content status="open"}
+              {if content:count == 1}<h3>Relationships ({content:total_results})</h3>{/if}
+
+              Related entry title: {content:title}
+              Related entry file field, med custom image size: {content:my_file:med wrap="image"}
+
+              Related field in the related child entry:
+              {content:my_related_field_in_child_entry}
+                {content:cmy_related_field_in_child_entry:title}
+              {/content:my_related_field_in_child_entry}
+            {/content}
+          {/my_fluid_field:my_relationship}
+		  
+	    {/fields}
+	  {/my_fluid_field:my_field_group}
     {/my_fluid_field}
