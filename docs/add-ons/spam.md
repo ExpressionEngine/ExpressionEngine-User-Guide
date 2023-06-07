@@ -29,7 +29,7 @@ The Spam Module works by calculating the probability that a piece of content is 
 
 ### Word Limit
 
-This is the number of unqiue words the Spam Module keeps track of when learning from your Spam Trap. More words is more accurate, but this will slow down the Spam Module everytime it tries to classify content as spam.
+This is the number of unique words the Spam Module keeps track of when learning from your Spam Trap. More words is more accurate, but this will slow down the Spam Module everytime it tries to classify content as spam.
 
 ### Content Limit
 

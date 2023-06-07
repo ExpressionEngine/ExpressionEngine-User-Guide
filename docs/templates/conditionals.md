@@ -281,7 +281,7 @@ Tags that output numeric content will work fine with quotes, but also do not nee
 
     {if {fluid_content:count type="long_form_text"} == 3}
 
-If the conditional expression contains [variable modifiers](templates/variable-modifiers.md), braces should only be omited if the conditional is executed on a top-level variable (not Grid column or Fluid field element) and when there is only one check in the expression (no AND / OR operators).
+If the conditional expression contains [variable modifiers](templates/variable-modifiers.md), braces should only be omitted if the conditional is executed on a top-level variable (not Grid column or Fluid field element) and when there is only one check in the expression (no AND / OR operators).
 In other words, you can only do following without braces:
 
     {if grid_field:total_rows}

@@ -174,7 +174,7 @@ Gets the contents of a directory as a flat array, with the option of returning a
 
 ### `getFreeDiskSpace($path = '/')`
 
-Returns the amount of free bytes at a given path.  If $path is ommitted the root directory is used.
+Returns the amount of free bytes at a given path.  If $path is omitted the root directory is used.
 
 | Parameter        | Type           | Description                                     |
 | ---------------- | -------------- | ----------------------------------------------- |
@@ -301,7 +301,7 @@ Copies a directory to another directory by recursively iterating over its files.
 
 Touch a directory or file.
 
-If $time is ommitted then the current server time is used instead.
+If $time is omitted then the current server time is used instead.
 
 | Parameter        | Type        | Description                                      |
 | ---------------- | ----------- | ------------------------------------------------ |

@@ -13,4 +13,4 @@ Structure is a powerful add-on that lets you create pages, generate navigation, 
 
 It forgoes the default template_group/template setup and creates “static” and “listing” pages that are all editable through a tree sitemap view. With Structure enabled, traditional page style content and multiple entry pages can live within the same area.
 
-NOTE:**Note:** Documentation for Structure is still being migrated. Until this is complete, please refernce the [Structure documentation on EEHarbor's website](https://eeharbor.com/structure/documentation).
+NOTE:**Note:** Documentation for Structure is still being migrated. Until this is complete, please reference the [Structure documentation on EEHarbor's website](https://eeharbor.com/structure/documentation).

@@ -280,7 +280,7 @@ Existing rows start with the prefix `row_id_` and then the unique row ID.  When 
 
 #### Columns
 
-In each row is an array of columns.  Columns start with `col_id_` and then the row ID such as `col_id_1`, `col_id_2`.  Data for each column can be any fieldtype compatable with Grid and is set in the same way as if it were out of a Grid field.
+In each row is an array of columns.  Columns start with `col_id_` and then the row ID such as `col_id_1`, `col_id_2`.  Data for each column can be any fieldtype compatible with Grid and is set in the same way as if it were out of a Grid field.
 
 It is important to note that columns have to be set ahead time, and their IDs are also global to the ExpressionEngine site.  In other words, when saving data if a column does not exist in the array, the saving process will not automatically create a new column.  Depending on the method used to save the data, EE may also throw an error if a column is missing.
 

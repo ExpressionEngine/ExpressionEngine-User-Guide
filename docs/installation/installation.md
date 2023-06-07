@@ -17,7 +17,7 @@ NOTE: **Important:** If you need to **update** your installation from an earlier
 
 Before getting started, make sure your web host and your browser meet all the [System Requirements](installation/requirements.md) to run ExpressionEngine.
 
-The following article assumes you are downloading Expressionengine from the [ExpressionEngine Wesbite](https://expressionengine.com/). If you would like to install ExpressionEngine from our [GitHub repository](https://github.com/ExpressionEngine/ExpressionEngine), be sure to follow the instructions found in the repo's [README](https://github.com/ExpressionEngine/ExpressionEngine/blob/stability/README.md#if-youre-installing-from-the-repository) file for repo specific instructions.
+The following article assumes you are downloading Expressionengine from the [ExpressionEngine Website](https://expressionengine.com/). If you would like to install ExpressionEngine from our [GitHub repository](https://github.com/ExpressionEngine/ExpressionEngine), be sure to follow the instructions found in the repo's [README](https://github.com/ExpressionEngine/ExpressionEngine/blob/stability/README.md#if-youre-installing-from-the-repository) file for repo specific instructions.
 
 ## 1. Prep the Database
 

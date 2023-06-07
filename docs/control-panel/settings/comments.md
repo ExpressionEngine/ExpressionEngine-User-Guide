@@ -23,7 +23,7 @@ When set to enable, channels will be able to use the comment module.
 
 When set to "enable", commenting will use the [word censoring](control-panel/settings/word-censor.md) filters.
 
-### Moderate expired entires?
+### Moderate expired entries?
 
 If this option is enabled, then comments will not immediately appear on the site. Instead, the comments will go into a queue and await review/moderation by an administrator.
 

@@ -82,7 +82,7 @@ Optionally set the maximum allowed width in pixels for uploaded images. Images o
 
 ##### Image height
 
-Optionally set the maximum allowed height in pixes for uploaded images. Images over this setting will be automatically resized.
+Optionally set the maximum allowed height in pixels for uploaded images. Images over this setting will be automatically resized.
 
 ##### Constrain or Crop
 

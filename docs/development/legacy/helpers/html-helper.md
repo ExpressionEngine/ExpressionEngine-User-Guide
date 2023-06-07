@@ -207,7 +207,7 @@ The above code will produce this:
                 <li>suare</li>
                 <li>circles
                     <ul>
-                        <li>elipse</li>
+                        <li>ellipse</li>
                         <li>oval</li>
                         <li>sphere</li>
                     </ul>

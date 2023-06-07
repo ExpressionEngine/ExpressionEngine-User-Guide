@@ -209,7 +209,7 @@ Given a column name containing numeric data, returns the average of the column v
 
     {grid_field:highest column="height"}
 
-Given a column name containing numeric data, returns the hightest of the column values in that field, or in the dataset paired down by additional criteria such as search.
+Given a column name containing numeric data, returns the highest of the column values in that field, or in the dataset paired down by additional criteria such as search.
 
 ### `:lowest`
 

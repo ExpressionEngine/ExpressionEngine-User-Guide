@@ -82,7 +82,7 @@ Every so often, you might require or desire the language values from another lan
 | \$id      | `String` | ID of the form element; if supplied will wrap the rendered text in a `<label>` tag |
 | Returns   | `String` | Language value                                                                     |
 
-A module's language file is automatically loaded whenever the module is accessed through the Module section of the Control Panel. So, in that instance, you simply need to call the piece of text you wish from the array contained in your module's langauge file. To do so, you simply use the `lang()` method and specify the key for that piece of text in the array:
+A module's language file is automatically loaded whenever the module is accessed through the Module section of the Control Panel. So, in that instance, you simply need to call the piece of text you wish from the array contained in your module's language file. To do so, you simply use the `lang()` method and specify the key for that piece of text in the array:
 
     ee()->view->cp_page_title = lang('view_moblogs');
     // Returns "Moblog Accounts" as the page title;

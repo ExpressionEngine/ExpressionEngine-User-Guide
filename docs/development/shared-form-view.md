@@ -113,7 +113,7 @@ Fieldsets can contain multiple fields, and they are defined in the `fields` arra
       )
     )
 
-The key for each field defintiion is the field's input name. We'll dive deeper into that array to see how we can show and customize different kinds of fields. Here are the keys available to a field definition array:
+The key for each field definitions is the field's input name. We'll dive deeper into that array to see how we can show and customize different kinds of fields. Here are the keys available to a field definition array:
 
 |Option name|Description|Accepted values|Default value|
 |--- |--- |--- |--- |

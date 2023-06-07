@@ -73,4 +73,4 @@ Invoke dialog to set up multi-factor authentication, if it's not enabled for mem
 
 ##### `{disable_mfa_link}`
 
-Invoke dialog to disable multi-factor authentication. Only avaiable is member is logged in and authenticated with MFA.
+Invoke dialog to disable multi-factor authentication. Only available is member is logged in and authenticated with MFA.

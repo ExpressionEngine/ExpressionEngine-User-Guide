@@ -7,7 +7,7 @@
 ## @copyright Copyright (c) 2003-2019, EllisLab Corp. (https://ellislab.com)
 ## @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 
-## This script expects enviornment variables to be set called "GHUSER" and "GHTOKEN". These should correspond to your GitHub username and GitHub personal access token respectively. Reference the GitHub API docs for more information: https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api#authentication
+## This script expects environment variables to be set called "GHUSER" and "GHTOKEN". These should correspond to your GitHub username and GitHub personal access token respectively. Reference the GitHub API docs for more information: https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api#authentication
 ##
 ## This Script also is expecting the jq library to be installed. https://stedolan.github.io/jq/
 
@@ -54,9 +54,9 @@ do
     if [[ ${AUTHOR} != *"dependabot"* && " ${contributorList[*]} " != " ${AUTHOR} "]]; then
         IMAGE=$(cat core_contributors.json | jq ".[$x] | .author | .avatar_url" | tr -d '"')
         NAME=$(cat core_contributors.json | jq ".[$x] | .author | .name" | tr -d '"')
-        
-        echo $NAME' - '$AUTHOR | tr -d '"'    
-        
+
+        echo $NAME' - '$AUTHOR | tr -d '"'
+
         CONTRIBUTORS+=$'\n<li><div class="space-y-4"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="'$IMAGE'" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">'$NAME'</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/commits?author='$AUTHOR'" target="_BLANK">@'$AUTHOR'</a></p></div></div></div></li>'
     fi
     ((x=x+1))

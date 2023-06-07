@@ -31,9 +31,9 @@ Select custom field groups to make them available to fluid field on the publish 
 
 ### Add
 
-Each fluid field has list of buttons of available custom fields and custom field groups displayed below. Clicking on the button adds a field (or field group) to Fluid, maintaing all of the field's settings, instructions and requirements.
+Each fluid field has a list of buttons of available custom fields and custom field groups displayed below. Clicking on the button adds a field (or field group) to Fluid, maintaing all of the field's settings, instructions and requirements.
 
-Also each Fluid row has '+' button, clicking which shows a dropdown populated with the field names assigned to the fluid field. When you choose a field from the dropdown, it adds it to the page
+Also, each Fluid row has '+' button. Clicking on it shows a dropdown populated with the field names assigned to the fluid field. When you choose a field from the dropdown, it adds it to the page.
 
 Fields (or field groups) can be used more than once and in any order. They can be re-ordered within the fluid field by dragging up or down.
 
@@ -47,7 +47,7 @@ A fluid field cannot be used in the channel form.
 
 ## Template Tags
 
-Fluid field content is ouput using variable pairs. An outer variable pair using the Fluid field's shortname wraps all content. Within that wrapper variable pair, each field can be output using a prefixed variable pair and the `{content}` variable. Within the prefixed variable pair, the `{content}` variable is used in place of the field's shortname.
+Fluid field content is output using variable pairs. An outer variable pair using the Fluid field's shortname wraps all content. Within that wrapper variable pair, each field can be output using a prefixed variable pair and the `{content}` variable. Within the prefixed variable pair, the `{content}` variable is used in place of the field's shortname.
 
 For example, if you have a Fluid field `fluid_content` with a text field `fluid_text` your template code may look like this:
 

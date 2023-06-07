@@ -1,6 +1,6 @@
-# Command Line Inferface (CLI)
+# Command Line Interface (CLI)
 
-The Command Line Inferface (CLI) allows a user to run system and user-generated commands in the terminal. The CLI has access to all of the ExpressionEngine resources, and can be used to update the system, clear caches, and much more.
+The Command Line Interface (CLI) allows a user to run system and user-generated commands in the terminal. The CLI has access to all of the ExpressionEngine resources, and can be used to update the system, clear caches, and much more.
 
 By default the CLI is located `system/ee/eecli.php` . 
 

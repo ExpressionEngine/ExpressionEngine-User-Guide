@@ -101,7 +101,7 @@ This function is an alias for `CI_Log::write_log()`.
 
 | Parameter | Type     | Description                                  |
 | --------- | -------- | -------------------------------------------- |
-| \$code    | `Int`    | HTTP Reponse status code                     |
+| \$code    | `Int`    | HTTP Response status code                     |
 | \$text    | `String` | A custom message to set with the status code |
 | Returns   | `Void`   |                                              |
 

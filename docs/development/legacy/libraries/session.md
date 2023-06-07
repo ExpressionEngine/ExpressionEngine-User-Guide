@@ -222,7 +222,7 @@ Retrieve the value of a Session cache item:
 
 ### property `$tracker`
 
-The Session class has one more useful variable that is only available on the user side of the site. `ee()->session->tracker` is an array that contains the last five ExpressionEngine pages viewed by this user in the form of a ExpresionEngine query string (i.e. '/channel/comments/' or 'index' for main site page). The array's keys ranges from 0-5.
+The Session class has one more useful variable that is only available on the user side of the site. `ee()->session->tracker` is an array that contains the last five ExpressionEngine pages viewed by this user in the form of a ExpressionEngine query string (i.e. '/channel/comments/' or 'index' for main site page). The array's keys ranges from 0-5.
 
     $current_page = ee()->session->tracker['0'];
     $last_page = ee()->session->tracker['1'];

@@ -129,7 +129,7 @@ NOTE: **Note:** when setting `public $entry_manager_compatible = true;` make sur
 
 #### `EE_Fieldtype::$supportedEvaluationRules`
 
-Array of supported evaluation rules when field is used as conditional (or `null` if the field cannot be used as condtional source). If omitted, default rules set will be used.
+Array of supported evaluation rules when field is used as conditional (or `null` if the field cannot be used as conditional source). If omitted, default rules set will be used.
 
 #### `EE_Fieldtype::$defaultEvaluationRule`
 
