@@ -123,7 +123,7 @@ These are the naming rules that ExpressionEngine applies to these resources:
 
 Having several templates with the same name but different extensions is not supported.
 
-The existing templates are synchronized with the files as soon as any site page is accessed. However if you created a new template or a new template group on the file system, you will need to visit the `Developer -> Templates` section of the Control Panel in order to have them created in the database.
+The existing templates are synchronized with the files as soon as any site page is accessed. If you created a new template or a new template group on the file system, the pages or edits will be immediately available, though they will not be added to the database until you visit the `Developer -> Templates` section of the Control Panel or the template is visited on the frontend.
 
 NOTE: **Note:** When saving templates as files, `index.html` will be placed automatically into each template group folder when the templates are synchronized.
 
