@@ -854,6 +854,16 @@ Example Usage:
 
     $config['cookie_samesite'] = 'Strict';
 
+### `cp_session_length`
+
+Set TTL for admin sessions.
+
+| Value   | Description                                       |
+| ------- | ------------------------------------------------- |
+| integer | Session TTL in seconds (default is 3600 - 1 hour) |
+
+NOTE: **Note:** An idle state may still trigger the [Idle Check Modal](control-panel/access.md) regardless of the session length.
+
 ### `cp_session_type`
 
 Set the method for session handling in the Control Panel.
@@ -1245,18 +1255,6 @@ Example Usage:
     $config['enable_entry_view_tracking'] = 'y';
 
 **Also found in CP:** `Settings --> Hit Tracking`: [Enable Channel Entry View Tracking](control-panel/settings/hit-tracking.md#enable-entry-view-tracking)
-
-### `enable_floc`
-
-By default, ExpressionEngine sends a header to disable FLoC in the browser. If this is enabled, the Permissions Policy header will not be sent.
-
-| Value | Behavior                            |
-| ----- | ----------------------------------- |
-| y     | Enable FLoC from the server side    |
-
-Example Usage:
-
-    $config['enable_floc'] = 'y';
 
 ### `enable_frontedit`
 
@@ -3188,6 +3186,15 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Outgoing Email`: [Webmaster or site name for auto-generated emails](control-panel/settings/email.md#from-name)
 
+### website_session_length
+
+Set TTL for frontend sessions.
+
+| Value   | Description                                        |
+| ------- | -------------------------------------------------- |
+| integer | Session TTL in seconds (default is 7200 - 2 hours) |
+
+
 ### `website_session_type`
 
 Specify how sessions are handled on the front-end of the site.
@@ -3203,6 +3210,21 @@ Example Usage:
     $config['website_session_type'] = 'c';
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Website Session Type](control-panel/settings/security-privacy.md#website-session-type)
+
+### `week_start`
+
+Set the day on which the new week starts. If [allow_member_localization](#allow_member_localization) is enabled and a member has their own localization preference set, that will override this setting.
+
+| Value    | Description      |
+| -------- | ---------------- |
+| friday   | Friday           |
+| saturday | Saturday         |
+| sunday   | Sunday (default) |
+| monday   | Monday           |
+
+Example Usage:
+
+    $config['week_start'] = 'monday';
 
 ### `word_separator`
 

@@ -8,6 +8,66 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.3.0
+(Release: June 1, 2023)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/6020323?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Doug Black Jr</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr" target="_BLANK">@dougblackjr</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Raised required MySQL version to 5.6.4 in order to support InnoDB engine for Pro Search indexes
+- Allowed cloning of channel fields, layouts, member roles and categories; [#2032](https://github.com/ExpressionEngine/ExpressionEngine/issues/2032), [#561](https://github.com/ExpressionEngine/ExpressionEngine/issues/561)
+- Added per-channel setting to enforce automatic URL titles for entries; [#952](https://github.com/ExpressionEngine/ExpressionEngine/issues/952); [#2645](https://github.com/ExpressionEngine/ExpressionEngine/issues/2645); [#183](https://github.com/ExpressionEngine/ExpressionEngine/issues/183)
+- Allowed making upload directories available for all MSM sites; [#78](https://github.com/ExpressionEngine/ExpressionEngine/issues/78)
+- Added visual status indicator to Relationship field; [#2522](https://github.com/ExpressionEngine/ExpressionEngine/issues/2522)
+- Added Template Variables, Template Partials and System Templates to Search and Replace utility; [#1384](https://github.com/ExpressionEngine/ExpressionEngine/issues/1384)
+- Added setting for the day of week start
+- Updated date fieldtype to allow hiding localization buttons and not including time; [#652](https://github.com/ExpressionEngine/ExpressionEngine/issues/652)
+- Allowed variables to use multiple modifiers; [#136](https://github.com/ExpressionEngine/ExpressionEngine/issues/136)
+- Enable field groups to be used in Fluid fields
+- Added CLI commands for add-ons management
+- Added CLI commands to modify system configuration
+- Added CLI command to backup database
+- Added CLI commands to synchronize file usage data
+- Updated `underscore.js` library to latest version
+- Added Publish prolet to enable creating entries on front-end
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#2691](https://github.com/ExpressionEngine/ExpressionEngine/issues/2691) where FLoC header was still sent which is not used anymore
+- Resolved issue when not all server requirements were checked when installing ExpressionEngine for the first time
+- Resolved issue where Control Panel links could sometimes break after submitting idle login popup
+- Resolved [#83](https://github.com/ExpressionEngine/ExpressionEngine/issues/83) where 'xhtml' string could mistakenly appear in Fluid field search excerpt
+- Resolved [#458](https://github.com/ExpressionEngine/ExpressionEngine/issues/458) where variable modifiers were not fully available in search results
+- Resolved [#1085](https://github.com/ExpressionEngine/ExpressionEngine/issues/1085) where having variables in searchable fields could break search results
+- Resolved [#1851](https://github.com/ExpressionEngine/ExpressionEngine/issues/1851) where some custom fields could be excluded from search
+- Resolved [#1869](https://github.com/ExpressionEngine/ExpressionEngine/issues/1869) where unnecessary search term sanitization was performed making the results inaccurate
+- Resolved [#1862](https://github.com/ExpressionEngine/ExpressionEngine/issues/1862) where search results could not display more than 100 entries when not using pagination
+- Resolved [#66](https://github.com/ExpressionEngine/ExpressionEngine/issues/66) where sorting search results was limited
+- Resolved [#3402](https://github.com/ExpressionEngine/ExpressionEngine/issues/3402) where PHP 8.1 deprecation noticed were shown when bulk editing entries without Pages URL set but Pages module installed
+- Resolved [#3397](https://github.com/ExpressionEngine/ExpressionEngine/issues/3397) where Template Routes page was showing deprecation notices when using PHP 8.2
+- Resolved [#3123](https://github.com/ExpressionEngine/ExpressionEngine/issues/3123) where having template records without template group in database would case PHP notices in template editor
+- Resolved [#3371](https://github.com/ExpressionEngine/ExpressionEngine/issues/3371) where Grid fields could show PHP error when ExpressionEngine was updated from older version
+- Resolved [#3350](https://github.com/ExpressionEngine/ExpressionEngine/issues/3350) where PHP notice might be shown when parsing empty member field
+
+**Developers** 💻
+
+- Allowed module tabs to be displayed as columns in Entry Manager; [#645](https://github.com/ExpressionEngine/ExpressionEngine/issues/645)
+- Enabled additional variable modifiers to be registered by add-ons; [#1203](https://github.com/ExpressionEngine/ExpressionEngine/issues/1203)
+- Added config overrides for user and Control Panel session length; [#3114](https://github.com/ExpressionEngine/ExpressionEngine/issues/3114)
+
 ## Version 7.2.17
 (Release: May 2, 2023)
 

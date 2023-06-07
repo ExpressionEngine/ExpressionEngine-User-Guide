@@ -19,43 +19,68 @@ This fieldtype is currently only limited to Channels.
 
 ## Field Settings
 
-### Channels to Relate
+#### Channels to Relate
 
-Choose which channels can related content be pulled from.
+Choose which channels related content can be pulled from. When using Multiple Sites Manager, you can select channels from any site.
 
-### Include in Selection
+#### Include in Selection
 
 Allow expired or future entries in this relationships field.
 
-### Limit by Category
+#### Limit by Category
 
 Choose categories to limit the entries in this relationships field.
 
-### Authors
+#### Authors
 
 Choose authors to limit the entries in this relationships field.
 
-### Limit By Status
+#### Limit By Status
 
 Choose statuses to limit the entries in this relationships field.
 
-### Maximum Entries
+#### Maximum Entries
 
 Maximum number of entries to show in the relationship field. Leave blank to allow all entries.  All entries are still available to the search, this is simply a display setting.
 
-### Order By
+#### Order By
 
-Default ordering of entries in relationship field.
+Default ordering of entries in relationship field. Entries can be ordered by title or entry date.
 
-### Allow Multiple Relationships?
+#### Allow Multiple Relationships?
 
 When set to yes, authors will be allowed to create multiple relationships in a single field.
 
-### Minimum selection
+#### Minimum selection
 The minimum number of relationships that can be added to the field.
 
-### Maximum selection
+#### Maximum selection
 The maximum number of relationships that can be added to the field.
+
+#### Display Entry IDs?
+When enabled, entry IDs will be displayed together with entry title inside the field.
+
+#### Display Status?
+When enabled, colored status badge will be displayed together with entry title inside the field.
+
+#### Defer field initialization?
+When enabled, this field won’t initialize until the Edit Relationships button is clicked on. This can result in faster control panel page load times.
+
+## Field UI
+
+From within the field, the entries can be selected to establish relationship.
+
+The entries can be filtered using search input and, if necessary, channel dropdown.
+
+If the editor has corresponding permissions, they will see "New Entry" button which allows creating new channel entry without leaving the edit screen of current entry. The can also edit related entry contents without leaving the page.
+
+If enabled in the field settings, entry ID and status will be shown to make the selection easier.
+
+The order of selected entries can be rearranged with drag&drop.
+
+![Relationship Field UI](_images/ee73-relationship-status.png)
+
+NOTE: **Note:** The described Relationship UI is only available when using Control Panel or [Pro Front-end Content Management](advanced-usage/front-end/frontend). If you need to use this field in [Channel Form](channels/channel-form/fields.md#relationship-field) then HTML Select input will be used.
 
 ## Template Tags
 
@@ -63,28 +88,30 @@ The maximum number of relationships that can be added to the field.
 
 The following parameters are available to all looping relationship tags, allowing you to further filter or sort the entries being retrieved. They function the same as they do when used on the [{exp:channel:entries}](channels/entries.md#parameters). The available parameters are:
 
-- author_id
-- backspace
-- category
-- channel
-- entry_id
-- group_id
-- offset
-- orderby
-- show_expired
-- show_future_entries
-- sort
-- start_on
-- status
-- stop_before
-- url_title
-- username
+- `author_id`
+- `backspace`
+- `category`
+- `channel`
+- `entry_id`
+- `group_id`
+- `offset`
+- `orderby`
+- `show_expired`
+- `show_future_entries`
+- `sort`
+- `start_on`
+- `status`
+- `stop_before`
+- `url_title`
+- `username`
 
 Some relationship tags may have additional parameters available. These are included in the usage instructions below.
 
 NOTE: **NOTE:** The [`disable`](fieldtypes/relationships.md#optimizing-relationships-rerformance) parameter should be applied to the containing `{exp:channel:entries}` call, not to the relationship tag itself.
 
 ## Accessing Children
+
+[TOC=3]
 
 ### Usage: Multiple Related Entries
 
@@ -156,6 +183,8 @@ No looping occurs.
 
 ## Accessing Siblings
 
+[TOC=3]
+
 ### Usage
 
 Given the following channel layout:
@@ -196,13 +225,15 @@ The `{siblings}` tag does not need to be a top level tag. It may be used from a 
 
 In addition to the standard parameters, the following parameter may be used in this tag:
 
-#### field
+- `field`
 
 There can be multiple relationship fields in a field group, thus child entries may be related to the same parent via different fields. Use the `field` parameter to specify which field in the parent entry we should be pulling the siblings from. The syntax is:
 
     {siblings field="relationship_field"}
 
 ## Accessing Parents
+
+[TOC=3]
 
 ### Usage
 
@@ -244,13 +275,15 @@ The `{parents}` tag may be accessed through nested relationships tags using the 
 
 In addition to the standard parameters, the following parameter may be used in this tag:
 
-#### field
+- `field`
 
 There can be multiple relationship fields in a field group, and thus an entry may be selected as a child in multiple fields. Use the `field` parameter to specify which field in the parent entry we should be checking for our child. The syntax is:
 
     {parents field="relationship_field"}
 
 ## Fetching Entry IDs Only
+
+[TOC=3]
 
 Sometimes it's useful to get just a list of the entry IDs of related entries, to pass on to a plugin as a tag a parameter or similar. If you need to do this, you can use the single variable `:entry_ids` shortcut modifier:
 
@@ -280,7 +313,7 @@ For parents:
 
 The _entry_ids_ shortcut tag has only one optional parameter:
 
-#### delimiter
+- `delimiter`
 
 By default the entry IDs will be pipe-delimited, but you can choose to have them delimited with something else:
 
@@ -332,6 +365,8 @@ Any variable available to the channel entries tag can be used inside a relations
     {/exp:channel:entries}
 
 ## Field Examples: Children
+
+[TOC=3]
 
 ### Checkbox and Multi Select Fields
 
@@ -462,6 +497,8 @@ A file grid field variable pair:
     {/relationship_field}
 
 ## Field Examples: Parents
+
+[TOC=3]
 
 ### Checkbox and Multi Select Fields
 
