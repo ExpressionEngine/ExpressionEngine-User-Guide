@@ -47,13 +47,13 @@ Specifies any html attribute you want the form to have. For example: form_id="se
 
 tag. query Use this parameter to pass through a previously executed encoded search query. Not needed when not encoding queries.
 
-    {exp:pro_search:form: form_id="search"}
+    {exp:pro_search:form form_id="search"}
 
 #### required
 
 Set to one or more parameter names to make that parameter a required field
 
-    {exp:pro_search:form: required="fname"}
+    {exp:pro_search:form required="fname"}
 
 #### remember
 

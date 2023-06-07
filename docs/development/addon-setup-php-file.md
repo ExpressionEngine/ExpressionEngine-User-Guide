@@ -119,6 +119,15 @@ As of 3.1.0 fieldtypes can specify their compatibility. When editing a Channel F
 | relationship  | [Relationships](https://docs.expressionengine.com/latest/fieldtypes/relationships.html)                                                                                            |
 | text          | [Email Address](fieldtypes/email-address.md), [Rich Text Editor](fieldtypes/rte.md), [Text Input](fieldtypes/text.md), [Textarea](fieldtypes/textarea.md),[URL](fieldtypes/url.md) |
 
+### `modifiers`
+
+    'modifiers' => array(
+      'modifier_name',
+      'another_modifier_name'
+    )
+
+This property lists the [variable modifiers](development/modifiers.md) that the add-on provides.
+
 ### `services`
 
     'services' => array(

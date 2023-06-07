@@ -52,6 +52,12 @@ By default, only images are allowed.
 Only file types that are specified in ExpressionEngine's Mime Type file are allowed to be uploaded. The Mime Type file can be found in [`mimes.php`](config/config-files.md#allowed-mime-types). If you are uploading something uncommon and run into problems, you may need to add the mime type for your file to the allow list. 
 See also [MIME allow list](general/system-configuration-overrides.md#mime_whitelist_additions) and [Mime member exception allow list](general/system-configuration-overrides.md#mime_whitelist_member_exception) for more info.
 
+##### Share Upload Directory on all sites?
+
+By default, the upload directories are restricted to the site where those have been created. Turning this setting on makes files in this directory accessible through all MSM sites.
+
+NOTE: **Note:** This setting is only available when [Multiple Site Manager](msm/overview.md) has been activated and cannot be changed for existing upload directories.
+
 ##### Default browser view?
 
 Default view type for this upload directory.

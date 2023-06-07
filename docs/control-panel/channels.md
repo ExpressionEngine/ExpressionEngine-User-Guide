@@ -95,6 +95,7 @@ NOTE: **Note:** We recommend using the default base URL variable `{base_url}` de
 - **Allow Preview** -- When set to yes, the entry preview will be allowed, don't forget to set the Preview URL too.
 - **Generated title** -- When a new entry is created or previewed, this value will be inserted by default in the Title field. This is helpful if you wish every entry in a channel to have the titles follow a certain format. The automatic URL Title creating javascript for the Publish page will ignore this text during processing.
 - **URL title prefix** -- When a new entry is created or previewed, this value will be appended to the beginning of the url_title value, which will help you insure that url_titles are unique between channels.
+- **Enforce automatic URL title** -- Make the URL title field read-only and generate a unique value for it automatically. This is useful for entries that don't have their own page on front-end or if you just want to skip the routine of generating a URL Title. Note that when this setting is turned on, you will also not be able to change URL Titles for existin entries in the channel.
 - **Status** -- The default status for new channel entries. The available options depend on what [Statuses](#statuses-tab) the channel is assigned to use.
 - **Category** -- The default category for new channel entries. The available options depend on what [Category Group](control-panel/categories.md) the channel is assigned to use and which categories are defined for that group.
 - **Search excerpt** -- You can specify which field from your entries to use in search result excerpts. The list is dynamically populated depending on which [Fields](control-panel/field-manager/field-manager-settings.md) the channel is assigned to use. Only fields that have been set as "searchable" will be included.
@@ -129,6 +130,8 @@ NOTE: **Note:** We recommend using the default base URL variable `{base_url}` de
 
 **Control Panel Location: `Developer > Channels > Layouts`**
 
+![Channel Publish Layouts Link](_images/channel-publish-layouts.png)
+
 The Publish/Edit page can be customized, with the layout saved per member role, per channel.
 
 ### Create/Edit Publish Layouts
@@ -136,6 +139,14 @@ The Publish/Edit page can be customized, with the layout saved per member role, 
 **Control Panel Location: `Developer > Channels > Layouts > New/Edit`**
 
 This section of the control panel is where channel layouts are created or edited.
+
+Editors in a member role will see the Publish / Edit entry page in accordance with the assigned publish layout for that channel.
+
+The publish layouts are capable of organizing fields into tabs, reordering fields, changing their width for organizing into columns, and hiding the fields that should not be visible.
+
+Each layout needs to be assigned to one or several member roles. However, each role can have only one publish layout assigned.
+
+You can have one publish layout for all editor roles, or you can have different layouts for different roles. When only a small adjustment is needed, the publish layout can be duplicated using "Clone to New Layout" option in "Save" dropdown.
 
 ## Channel Set Import
 

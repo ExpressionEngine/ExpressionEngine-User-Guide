@@ -219,6 +219,12 @@ Display the field data as column in the Entry Manager
 | \$entry   | `Array`  | Current `ChannelEntry` object             |
 | Returns   | `String` | The string to display in Entry Manager column  |
 
+#### `EE_Fieldtype::getTableColumnConfig()`
+
+Sets [table column configuration](development/services/table.html#setting-the-columns) for Entry Manager
+
+Returns `Array`
+
 #### `EE_Fieldtype::validate($data)`
 
 Validates the field input

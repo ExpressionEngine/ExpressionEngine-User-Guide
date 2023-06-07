@@ -35,11 +35,80 @@ https://example.com/template_group/template
 
 In addition to HTML and other markup, templates usually contain [ExpressionEngine Tags](templates/language.md), which allows information to be served dynamically.
 
-## Creating a Template
+## Creating & Editing Templates
 
 Templates can be created and edited in the `Developer -> Templates` area of your Control Panel.
 
-ExpressionEngine, by default, saves Template Groups, Templates, Global Variable, and Template Partials as regular folders and files on your server at `system/user/templates`. This allows you to use your preferred text editor to edit Templates and then FTP the changes to the server.
+![Templates List](_images/templates-list.png)
+
+You start off by creating a template group. During creation you will have the option to duplicate an existing group with all of its templates. You can also select the roles that will have editing permissions for templates in this group.
+
+Then, create individual templates. You can duplicate an existing template, or create a blank one. If necessary, change the template type from "Webpage" to the type that you need (RSS Page, CSS, JavaScript, Static, XML)
+
+Existing templates can be edited with the built-in editor, which provides intelligent syntax highlighting.
+
+TIP: **Tip:** The font size in the template editor can be adjusted with a [configuration override](general/system-configuration-overrides.md#codemirror_fontsize).
+
+You can also edit template preferences and set front-end access permissions for the template.
+
+![Template Editor](_images/template-edit.png)
+
+## Saving templates as files
+
+Template Groups, Templates, Global Variables, and Template Partials are always saved into the database and this is their primary source, however by default they are also saved as regular folders and files on your server.
+
+This behavior is controlled by [system configuration overrides](general/system-configuration-overrides.md#save_tmpl_files)in `system/user/config/config.php`:
+```php
+// Controls whether template and partial files should be saved on filesystem
+$config['save_tmpl_files'] = 'y';
+// Controls whether Global variables should be saved as files (requires `save_tmpl_files` also being set to `y`)
+$config['save_tmpl_globals'] = 'y';
+```
+
+The directory structure would be similar to what is shown below:
+
+```
+|-- system
+|   |-- user
+|   |   |-- templates
+|   |   |   |-- _global_partials
+|   |   |   |   |-- _header.html
+|   |   |   |   |-- _footer.html
+|   |   |   |-- _global_variables
+|   |   |   |   |-- logo.html
+|   |   |   |-- default_site
+|   |   |   |   |-- _partials
+|   |   |   |   |   |-- sidebar.html
+|   |   |   |   |-- _variables
+|   |   |   |   |   |-- address.html
+|   |   |   |   |-- blog.group
+|   |   |   |   |   |-- entry.html
+|   |   |   |   |   |-- feed.xml
+|   |   |   |   |   |-- index.html
+|   |   |   |   |-- home.group
+|   |   |   |   |   |-- contact.html
+|   |   |   |   |   |-- about.html
+|   |   |   |   |   |-- index.html
+|   |   |   |   |-- styles.group
+|   |   |   |   |   |-- contact.css
+|   |   |   |   |   |-- index.css
+|   |   |   |-- second_msm_site
+|   |   |   |   |-- _partials
+|   |   |   |   |   |-- sidebar.html
+|   |   |   |   |-- _variables
+|   |   |   |   |   |-- address.html
+|   |   |   |   |-- home.group
+|   |   |   |   |   |-- about.html
+|   |   |   |   |   |-- index.html
+```
+
+This allows you to use your preferred text editor to edit Templates and then transfer the changes to the server.
+
+`default_site` and `second_msm_site` are the site short names if you're running [Multiple Site Manager](msm/overview.md). If you have just one site, `default_site` is going to be the only one you need.
+
+`_partials` folder holds your [template partials](templates/partials.md) for the site, and `_global_partials` holds partials that are shared through all MSM sites.
+
+`_variables` folder holds your [template variables](templates/variable.md) for the site, and `_global_variables` holds variables that are shared through all MSM sites.
 
 These are the naming rules that ExpressionEngine applies to these resources:
 
@@ -52,7 +121,11 @@ These are the naming rules that ExpressionEngine applies to these resources:
   - _.xml_ creates an 'xml' template type
 - Template group names (not including the .group) and template names (not including the .extension) are limited to 50 characters. Anything longer than that will be truncated by the database and fail to match the file.
 
-You can also choose to save templates in the database using this [system configuration override](general/system-configuration-overrides.md#save_tmpl_files).
+Having several templates with the same name but different extensions is not supported.
+
+The existing templates are synchronized with the files as soon as any site page is accessed. If you created a new template or a new template group on the file system, the pages or edits will be immediately available, though they will not be added to the database until you visit the `Developer -> Templates` section of the Control Panel or the template is visited on the frontend.
+
+NOTE: **Note:** When saving templates as files, `index.html` will be placed automatically into each template group folder when the templates are synchronized.
 
 ## Hidden Templates
 
@@ -85,7 +158,7 @@ Additionally, PHP code in templates will operate slower than same code wrapped i
 
 ExpressionEngine allows you to place [PHP](https://www.php.net/) code within your Templates so that it can be executed, allowing more dynamic capability with your content.
 
-In order for this feature to be available, it needs to be enabled by adding 
+In order for this feature to be available, it needs to be enabled by adding
 ```php
     $config['allow_php'] = 'y';
 ```
