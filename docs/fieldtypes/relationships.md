@@ -78,7 +78,7 @@ If enabled in the field settings, entry ID and status will be shown to make the 
 
 The order of selected entries can be rearranged with drag&drop.
 
-![Relationship Field UI](_images/relationship-ui.png)
+![Relationship Field UI](_images/ee73-relationship-status.png)
 
 NOTE: **Note:** The described Relationship UI is only available when using Control Panel or [Pro Front-end Content Management](advanced-usage/front-end/frontend). If you need to use this field in [Channel Form](channels/channel-form/fields.md#relationship-field) then HTML Select input will be used.
 
