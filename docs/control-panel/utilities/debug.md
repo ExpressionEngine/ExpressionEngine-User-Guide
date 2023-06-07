@@ -21,11 +21,11 @@ The check are being run automatically when you visit the utility pages and also 
 
 ![Debug Template Tags](_images/utilities-debug-tags.png)
 
-This tool is scanning through the site templates and then lists the add-on [template tags](templates/language.md) used.
+This tool scans the site templates and then lists the add-on [template tags](templates/language.md) used.
 
-If it finds a tag that corresponds to the add-on that is not installed or missing, it indicates that.
+If it finds a tag that corresponds to the add-on that is missing or not installed, it indicates that.
 
-Clicking on the tag name would show the list of templates where it is found.
+Clicking on the tag name shows the list of templates where it is found.
 
 ### Debug Fieldtypes
 
@@ -33,6 +33,6 @@ Clicking on the tag name would show the list of templates where it is found.
 
 ![Debug Fieldtypes](_images/utilities-debug-fieldtypes.png)
 
-This page will show the fieldtypes that are being in use by custom fields, but have the corresponding add-on missing or not installed.
+This page shows the fieldtypes that are being used as custom fields, that have their corresponding add-on missing or not installed.
 
-It also lists all the fieldtypes that installed on the system, indicating what is currently in use and what is not in use.
+It also lists all the fieldtypes installed, indicating what is currently in use and what is not in use.

@@ -43,7 +43,7 @@ ExpressionEngine is capable of determining whether updating search indexes is ne
 
 When a [condition](/control-panel/field-manager/conditional-fields.md) is added or updated for field, the entries that are using that field need to be synchronized for field to behave properly.
 
-This utility is build to synchronize the conditional logic for each of the channels. You will be redirected to this page automatically after a change in field conditions sets is made, but you can choose to do this only once after making all the updates to the fields, should you need multiple of those.
+This utility syncs the conditional logic for each of the channels. You will be redirected to this page automatically after a change in field conditions sets is made, but you can choose to do this only once after making all the updates to the fields, should you need multiple of those.
 
 ![Sync Conditional Logic](_images/utilities-sync-conditional-fields.png)
 
@@ -53,7 +53,7 @@ NOTE: **Note:** You can also use `php eecli.php sync:conditional-fields` [CLI co
 
 **Control Panel Location: `Tools > Utilities > Update File Usage`**
 
-NOTE: **Note:** This utility is only needed for sites that have been upgraded from ExpressionEngine versions below 7 and generally only needs to be run one.
+NOTE: **Note:** This utility is only needed for sites that have been upgraded from ExpressionEngine versions below 7 and generally only needs to be run once, though re-running the update is not problematic.
 
 Run this utility to convert all files stored in the database from sites previous to ExpressionEngine 7 to the new ExpressionEngine 7 file format. This must be completed before newer File Manager features may be used.
 
@@ -65,7 +65,7 @@ After the update operation is completed, visit `Content & Design Settings` to di
 
 **Control Panel Location: `Tools > Utilities > Statistics`**
 
-This section of the Control Panel allows you to force the system to recount different types of statistics. This section is rarely necessary, but every once in a while a statistic can become out of sync or otherwise not reflect the correct data. This section will allow you to make the system update the information.
+This section of the Control Panel allows you to recount different types of statistics. This section is rarely necessary, but every once in a while a statistic can become out of sync or otherwise not reflect the correct data. This section will allow you to make the system update the information.
 
 ![Manage Statistics](_images/utilities-stats.png)
 

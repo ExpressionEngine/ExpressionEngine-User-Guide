@@ -27,7 +27,7 @@ NOTE: **Note:** Many applications export field headings as the first line of a d
 
 The Mass Notification Export utility enables you to export a CSV file of the ID, screen name, username, and email address for all your Members. This action will be logged to the `/cp/logs/cp`.
 
-This can be used to notify users in the unfortunate event of a data breach, such as is required by the . We recommend to validating the email addresses before sending any mass notification emails, otherwise your server could end up blocked. Any of the following services will validate email addresses:
+This can be used to notify users in the unfortunate event of a data breach. We recommend validating the email addresses before sending any mass notification emails, otherwise your server could end up blocked. Any of the following services will validate email addresses:
 
 - [Email Verifier App](https://www.emailverifierapp.com)
 - [VerifyEmailAddress.org](https://www.verifyemailaddress.org)
