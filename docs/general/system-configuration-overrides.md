@@ -856,6 +856,16 @@ Example Usage:
 
     $config['cookie_samesite'] = 'Strict';
 
+### `cp_session_length`
+
+Set TTL for admin sessions.
+
+| Value   | Description                                       |
+| ------- | ------------------------------------------------- |
+| integer | Session TTL in seconds (default is 3600 - 1 hour) |
+
+NOTE: **Note:** An idle state may still trigger the [Idle Check Modal](control-panel/access.md) regardless of the session length.
+
 ### `cp_session_type`
 
 Set the method for session handling in the Control Panel.
@@ -873,16 +883,6 @@ Example Usage:
     $config['cp_session_type'] = 's';
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Control Panel Session Type](control-panel/settings/security-privacy.md#cp-session-type)
-
-### `cpan_session_length`
-
-Set TTL for admin sessions.
-
-| Value   | Description                                       |
-| ------- | ------------------------------------------------- |
-| integer | Session TTL in seconds (default is 3600 - 1 hour) |
-
-NOTE: **Note:** An idle state may still trigger the [Idle Check Modal](control-panel/access.md) regardless of the session length.
 
 ### `cp_url`
 
@@ -3160,14 +3160,6 @@ Example Usage:
 
     $config['use_newrelic'] = 'y';
 
-### user_session_length
-
-Set TTL for user sessions.
-
-| Value   | Description                                        |
-| ------- | -------------------------------------------------- |
-| integer | Session TTL in seconds (default is 7200 - 2 hours) |
-
 ### `webmaster_email`
 
 Set the site's return email address for auto-generated emails.
@@ -3195,6 +3187,15 @@ Example Usage:
     $config['webmaster_name'] = 'Your Favorite Website';
 
 **Also found in CP:** `Settings --> Outgoing Email`: [Webmaster or site name for auto-generated emails](control-panel/settings/email.md#from-name)
+
+### website_session_length
+
+Set TTL for user sessions.
+
+| Value   | Description                                        |
+| ------- | -------------------------------------------------- |
+| integer | Session TTL in seconds (default is 7200 - 2 hours) |
+
 
 ### `website_session_type`
 
