@@ -3190,7 +3190,7 @@ Example Usage:
 
 ### website_session_length
 
-Set TTL for user sessions.
+Set TTL for frontend sessions.
 
 | Value   | Description                                        |
 | ------- | -------------------------------------------------- |
