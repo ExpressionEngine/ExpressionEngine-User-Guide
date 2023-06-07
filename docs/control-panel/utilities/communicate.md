@@ -26,6 +26,6 @@ Email can be sent in plain text or HTML format, and supported email sending prot
 
 This section of the Control Panel shows a table of all the previously sent emails. It lists the email title (subject), when it was sent, number of recipients, a re-send link, and a delete checkbox.
 
-You can view the text of email previously sent by clicking on "view" icon, and have it used as template for new message by clicking "resend" icon.
+You can view the text of email previously sent by clicking on the "view" icon, or you can use it as a template for a new message by clicking the "resend" icon.
 
 ![Communicate](_images/utilities-sent.png)

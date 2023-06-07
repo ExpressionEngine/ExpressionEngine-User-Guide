@@ -34,7 +34,7 @@
         - name: File Editing
           href: control-panel/file-manager/file-edit.md
         - name: Watermarks
-          href: control-panel/file-manager/watermarks.md        
+          href: control-panel/file-manager/watermarks.md
     - name: Field Manager
       items:
         - name: Settings
@@ -65,7 +65,7 @@
             href: control-panel/utilities/debug.md
           - name: Member Tools
             href: control-panel/utilities/member-tools.md
-          - name: Database Utilities
+          - name: Database Tools
             href: control-panel/utilities/database.md
           - name: Data Operations
             href: control-panel/utilities/data-operations.md
@@ -121,7 +121,7 @@
           href: control-panel/settings/branding.md
     - name: CP Navigation
       href: control-panel/navigation.md
-      
+
 - name: Templates
   items:
     - name: Overview
@@ -311,4 +311,4 @@
         href: comment/subscriptions.md
       - name: Control Panel
         href: comment/control-panel.md
-  
+

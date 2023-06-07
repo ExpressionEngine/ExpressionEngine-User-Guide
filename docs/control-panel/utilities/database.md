@@ -23,11 +23,11 @@ When you click "Back Up Database", a SQL dump will be created and stored in your
 
 **Control Panel Location: `Tools > Utilities > SQL Manager`**
 
-This section of the Control Panel allows you to manage your database. The main SQL Manager screen shows a table of your basic database information and list of tables.
+This section of the Control Panel allows you to manage your database. The main SQL Manager screen shows a table of your basic database information and a list of tables.
 
-By selecting checkbox next to the table and picking the option from dropdown at the bottom the tables can be optimized or repaired, if necessary.
+By selecting the checkbox next to a table and picking an option from the dropdown at the bottom a table can be optimized or repaired, if necessary.
 
-Click the eye icon to browse the table. From there, you can search the table for the content you're interested in.
+Click the "eye" icon to browse the table. From there, you can search the table for the content you are interested in viewing.
 
 ## SQL Query Form
 

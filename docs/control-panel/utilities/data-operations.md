@@ -19,7 +19,7 @@ This section of the Control Panel allows you clear the cached data for the diffe
 
 ![Manage Add-on Extensions](_images/utilities-cache.png)
 
-TIP: **Tip:** To quickly access this section, press `Ctrl / cmd` + `J` to invoke Jump Menu and pick "Cache Manager"
+TIP: **Tip:** To quickly access this section, press `Ctrl / cmd` + `J` to invoke the Jump Menu and pick "Cache Manager"
 
 ## Search Reindex
 
@@ -31,11 +31,11 @@ Search reindexing refreshes the searchable words stored by Grid and Fluid fields
 - the search settings for columns in a Grid field change
 - fields are removed from a Fluid field
 - the Search and Replace tool acted on a Grid or Fluid field
-- new Toggle field added
+- a new Toggle field was added
 
 This tool will cycle through all Channel Entries that have a Grid or Fluid field assigned to them and re-index the entry data in those fields.
 
-ExpressinEngine is capable of determining whether updating search indexes is needed in most of the cases.
+ExpressionEngine is capable of determining whether updating search indexes is needed in most cases.
 
 ## Sync Conditional Fields
 
@@ -55,7 +55,7 @@ NOTE: **Note:** You can also use `php eecli.php sync:conditional-fields` [CLI co
 
 NOTE: **Note:** This utility is only needed for sites that have been upgraded from ExpressionEngine versions below 7 and generally only needs to be run one.
 
-Run this utility to convert all files stored in the database from sites previous to ExpressionEngine 7 to the new ExpressionEngine 7 file format. This must be completed before newer File Manager features may be used. 
+Run this utility to convert all files stored in the database from sites previous to ExpressionEngine 7 to the new ExpressionEngine 7 file format. This must be completed before newer File Manager features may be used.
 
 It is recommended that you make sure all installed add-ons are compatible with ExpressionEngine 7 and newer, and that you have made a backup of your database before running the utility.
 
@@ -81,9 +81,9 @@ This section of the Control Panel allows you to search for text within your site
   - **Site Preferences**: Select a site to search and replace text within the site's preferences (including such prefs as those for Channels and Upload Directories).
   - **Channel Entry Titles**: Select this to search and replace text within the entry titles.
   - **Channel Fields**: Under this heading, each of the available [Fields](control-panel/field-manager/field-manager-settings.md) is listed.
-  - **Templates**: Select this to search and replace text within all of your Templates, or in certains template groups.
-  - **Template Partials**
-  - **Template Variables**
-  - **System Templates**
+  - **Templates**: Select this to search and replace text within all of your Templates, or in certain template groups.
+  - **Template Partials**: Select this to search and replace text within reusable dynamic Template Partials.
+  - **Template Variables**: Select this to search and replace text within static Template Variables.
+  - **System Templates**: Select this to search and replace text within System Templates.
 
 ![Search and Replace Utility](_images/utilities-sandr.png)

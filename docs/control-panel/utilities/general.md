@@ -27,4 +27,4 @@ Since Extensions are calling code within the ExpressionEngine code there is a ch
 
 ![Manage Add-on Extensions](_images/utilities-extensions.png)
 
-TIP: **Tip:** If you want to temporary disable _all_ extensions, you can set `$config['allow_extensions'] = 'y';` [configuration override](general/system-configuration-overrides.md#allow_extensions) in `config.php` file.
+TIP: **Tip:** If you want to temporary disable _all_ extensions, you can set `$config['allow_extensions'] = 'n';` [configuration override](general/system-configuration-overrides.md#allow_extensions) in `config.php` file.
