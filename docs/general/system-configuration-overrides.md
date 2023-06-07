@@ -76,8 +76,6 @@ Example Usage:
 
     $config['allow_extensions'] = 'y';
 
-**Also found in CP:** `Utilities --> Debug Extensions`: [Disable Extensions? ](control-panel/utilities.md#manage-add-on-extensions)
-
 ### `allow_member_localization`
 
 Set whether dates and times are localized to each members' own localization preferences.
@@ -906,7 +904,7 @@ Example Usage:
 
 ### `db_backup_row_limit`
 
-When using the [Database Backup Utility](control-panel/utilities.md#database-backup-utility), some databases and PHP configurations may cause the backup utility to run out of memory while creating the backup. This config sets the maximum number of rows that will be queried and written to the backup file at a time. If you run into an out-of-memory error, try setting this to a lower number than the default to have the utility work in smaller batches.
+When using the [Database Backup Utility](control-panel/utilities/database.md#database-backup-utility), some databases and PHP configurations may cause the backup utility to run out of memory while creating the backup. This config sets the maximum number of rows that will be queried and written to the backup file at a time. If you run into an out-of-memory error, try setting this to a lower number than the default to have the utility work in smaller batches.
 
 | Value    | Description                     |
 | -------- | ------------------------------- |
