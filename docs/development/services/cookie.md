@@ -21,7 +21,7 @@ Set a cookie:
 
     ee('Cookie')->setSignedCookie('my_cookie_name', $data);
 
-Retriving cookie data:
+Retrieving cookie data:
 
     ee('Cookie')->getSignedCookie('my_cookie_name');
 

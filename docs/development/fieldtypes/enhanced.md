@@ -114,7 +114,7 @@ Custom fields can display their data inside the Entry Manager through 3 possible
 
 ## Entry cloning support
 
-ExpressionEngine has the ability to [clone existing entries](/channels/entry_cloning.md) using the "Clone to New Entry" option on the entry editing page. Most fieldtypes do not need to do anything special to support this feature. 
+ExpressionEngine has the ability to [clone existing entries](/channels/entry_cloning.md) using the "Clone to New Entry" option on the entry editing page. Most fieldtypes do not need to do anything special to support this feature.
 
 However, if the fieldtype you are developing saves data to its own database table, you might need to tell it to save the rows as a submission for the new entry and not for the existing one.
 
@@ -143,7 +143,7 @@ If the fieldtype needs to support the list or evaluation rules that is different
 
     public $supportedEvaluationRules = ['isEmpty', 'isNotEmpty', 'contains', 'notContains'];
 
-If certain rule needs to be pre-selected by default when adding new condition to the field, it's name can be specificed in `defaultEvaluationRule` property, e.g.
+If certain rule needs to be pre-selected by default when adding new condition to the field, it's name can be specified in `defaultEvaluationRule` property, e.g.
 
     public $defaultEvaluationRule = 'contains';
 
@@ -223,12 +223,12 @@ There are 3 available methods, and you are required to implement `evaluate` at t
 
 #### `evaluate($fieldValue, $expectedValue, $fieldSettings)`
 
-Evaluates the rule by comparing the field value (`$fieldValue`) with the `$expectedValue` as entered in the conditional field settings. 
+Evaluates the rule by comparing the field value (`$fieldValue`) with the `$expectedValue` as entered in the conditional field settings.
 `$fieldSettings` is available as array of field settings.
 
 #### `getLanguageKey()`
 
-Should return language key for this evaluation rule to be displayed as human readble name in dropdown when setting up conditionals for the field.
+Should return language key for this evaluation rule to be displayed as human readable name in dropdown when setting up conditionals for the field.
 Implementation of this method in `AbstractEvaluationRule` will return the rule name as language key.
 
 #### `getConditionalFieldInputType()`
@@ -248,7 +248,7 @@ To parse both cases correctly, please use the `ee()->file_field->parse_string()`
     ee()->load->library('file_field');
     $data = ee()->file_field->parse_string($data);
 
-If the fieldtype is using custom JavaScript for manipulating the files, be sure to make the code aware of the [`EE.fileManagerCompatibilityMode`](development/control-panel-js/globals.md#filemanagercompatibilitymode) variable. 
+If the fieldtype is using custom JavaScript for manipulating the files, be sure to make the code aware of the [`EE.fileManagerCompatibilityMode`](development/control-panel-js/globals.md#filemanagercompatibilitymode) variable.
 
 ## Implementing Filepicker for Rich Text Editor
 
@@ -256,7 +256,7 @@ If your add-on is operating as File Manager, you might want to make it available
 
 In order to achieve that, create file prefixed with `rtefb.` in add-on's main directory, e.g. `rtefb.my_addon.php`. You can refer to the file in Filepicker add-on as an example.
 
-The file's class needs to implement `ExpressionEngine\Library\Rte\RteFilebrowserInterface`. The easiest way to achive that is to extend `ExpressionEngine\Library\Rte\AbstractRteFilebrowser` abstract class and add code only for the functions that work differently from 
+The file's class needs to implement `ExpressionEngine\Library\Rte\RteFilebrowserInterface`. The easiest way to achieve that is to extend `ExpressionEngine\Library\Rte\AbstractRteFilebrowser` abstract class and add code only for the functions that work differently from
 
 ## Working with Front-End Editing
 
@@ -264,7 +264,7 @@ Most fieldtypes will work with [Front-end content management](/advanced-usage/fr
 
 However there are some parameters that can be set in `ft.` to improve integration.
 
-### Disabling Front-end Edit Link 
+### Disabling Front-end Edit Link
 
     public $disable_frontedit = true;
 

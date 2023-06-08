@@ -206,7 +206,7 @@ Field types `Relationships`, `Grid` and `Fluid` require additional steps. Their 
 // Get an existing field.
 $field = ee('Model')->get('ChannelField', 4)->first();
 
-// Add the field groups by ID.  Note the plural differences. This overwrites any existing assigments.
+// Add the field groups by ID.  Note the plural differences. This overwrites any existing assignments.
 $field->ChannelFieldGroups = ee('Model')->get('ChannelFieldGroup', array(1,2))->all();
 
 // Validate and Save.

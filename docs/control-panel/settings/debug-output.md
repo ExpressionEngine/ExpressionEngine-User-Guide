@@ -56,6 +56,6 @@ This setting determines what method is used for page redirections. These redirec
 
 The [caching driver](optimization/caching.md#caching-drivers) ExpressionEngine is set to use.
 
-### Cachable URIs
+### Cacheable URIs
 
 If you cache your templates (pages), this preference limits the total number of cache files in order to prevent them from taking up too much disk space. 150 is a good number for a small site. If you have a large site and disk space is not an issue you can set it higher (over 300). There is an internal limit of 1000 regardless of your preference.

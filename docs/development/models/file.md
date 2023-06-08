@@ -116,7 +116,7 @@ Get base url for upload location and folder
 
 #### `getAbsolutePath()`
 
-Get abolute path to the file on the filesystem
+Get absolute path to the file on the filesystem
 
 #### `getAbsoluteManipulationPath($manipulation = 'thumbs')`
 

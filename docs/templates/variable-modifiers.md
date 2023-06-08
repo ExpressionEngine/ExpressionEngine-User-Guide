@@ -22,6 +22,14 @@ Most template variables can be modified for common formatting and output needs w
 
 NOTE: **Note:** Some add-ons and components may have modifiers not listed here. For instance the [File Fieldtype](fieldtypes/file.md) has its own file information-related modifiers. The modifiers listed here are just those universally available.
 
+## Modifiers syntax
+
+The modifiers are being applied by adding the modifier name after the variable name, separated by a semicolon, e.g. `var_name:trim`.
+
+It is possible to apply several modifiers at the same time by chaining those, e.g. `var_name:trim:url_encode`. The modifiers would be applied left to right, so in this case the variable's content will first be trimmed and then URL-encoded.
+
+To avoid conflicts in parameter names when applying several modifiers, the parameters can be prefixed with the modifier name followed by semicolon. E.g. `{excerpt:limit characters='20'}` could be written as `{excerpt:limit limit:characters='20'}`. This allows writing constructions such as `{excerpt:limit:trim limit:characters='20' trim:characters='\n\r'}`. A prefixed parameter has a higher precedence than a non-prefixed parameter.
+
 ## Modifiers
 
 [TOC=3]
@@ -261,7 +269,7 @@ URL encode the contents.
 | ----------------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | lowercase=        | `yes`                                                    | Whether to force a lowercase URL slug                                                        |
 | remove_stopwords= | `no`                                                     | Whether to remove common words (obeys site configuration `system/user/config/stopwords.php`) |
-| separator=        | `global-channel-word-seperator-label` (typically a dash) | The character to use as a word separator                                                     |
+| separator=        | `global-channel-word-separator-label` (typically a dash) | The character to use as a word separator                                                     |
 
 Create a URL slug from the content.
 

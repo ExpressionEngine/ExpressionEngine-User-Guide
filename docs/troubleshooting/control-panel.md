@@ -65,7 +65,7 @@ If you find yourself unable to log in to your control panel, follow the steps be
 
 ### Solution
 
-1.  The first thing to try is the "Forgot Password?" link, which will ask for your email address. If the address is associated with an account in your installation, you will receieve an email with a link that lets you reset your password. **phew**! Don't forget to check your Spam/Junk folder in your email app for the email, just in case.
+1.  The first thing to try is the "Forgot Password?" link, which will ask for your email address. If the address is associated with an account in your installation, you will receive an email with a link that lets you reset your password. **phew**! Don't forget to check your Spam/Junk folder in your email app for the email, just in case.
 2.  If that doesn't work, ask another Super Admin on your site to log in and reset your password for you (and/or let you know what your username is.)
 3.  If neither of those work, then you will need someone who has direct access to the database on your server to do the following:
 

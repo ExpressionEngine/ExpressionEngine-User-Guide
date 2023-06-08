@@ -32,7 +32,7 @@ By default, you cannot use embeds inside of Forum templates. See [Other Features
 
 ## Embedding Variables
 
-In the {embed=""} tag you can also specify parameters that will be used as variables in the embedded page. For example, if you specifiy a parameter of dog_name="Shadow":
+In the {embed=""} tag you can also specify parameters that will be used as variables in the embedded page. For example, if you specify a parameter of dog_name="Shadow":
 
     {embed="site/header" dog_name="Shadow"}
 

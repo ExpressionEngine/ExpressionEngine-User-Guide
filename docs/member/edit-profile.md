@@ -70,7 +70,7 @@ Member password. This is a **required** field.
 
 ### Password Confirmation
 
-Password confirmation. If a new password is submited, the password confirmation field is **required** and must match the entered password.
+Password confirmation. If a new password is submitted, the password confirmation field is **required** and must match the entered password.
 
             <label>Confirm New Password</label><br />
             <input type="password" name="password_confirm" value="" maxlength="50" size="40" />

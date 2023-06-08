@@ -454,7 +454,7 @@ If this tag would not output any consent requests due to your filters, the conte
 
     type='necessary'
 
-Type of cookies to display. Possible options are `necessary`, `functionality`, `performance` and `targeting`. If omited, all cookies will be displayed.
+Type of cookies to display. Possible options are `necessary`, `functionality`, `performance` and `targeting`. If omitted, all cookies will be displayed.
 
 It is also possible to combine several types, e.g. `type="performance|targeting"`.
 
@@ -470,7 +470,7 @@ Limits display of cookies by cookie provider.
 If the cookie is provided by an add-on, the provider matches the add-ons short name, e.g. `comment` or `forum`
 The core ExpressionEngine cookies are identified by `ee` as provider.
 If cookie is only being used in Control Panel, the provider is set to `cp`.
-Possible options are `necessary`, `functionality`, `performance` and `targeting`. If omited, all cookies will be displayed.
+Possible options are `necessary`, `functionality`, `performance` and `targeting`. If omitted, all cookies will be displayed.
 
 It is also possible to combine several providers, e.g. `type="ee|cp"`.
 

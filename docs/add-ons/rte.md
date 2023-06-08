@@ -169,7 +169,7 @@ NOTE: **Warning** Doing this requires advanced development skills.
 
 In order to create custom CKEditor build:
  - Clone [GitHub repo](https://github.com/ExpressionEngine/ExpressionEngine/)
- - Install NPM packages by runnin `npm install`
+ - Install NPM packages by running `npm install`
  - Follow the installation instructions for the plugin itself
  - Make your changes to `js-src\ckeditor5-build-classic\src\ckeditor.js` and other files as necessary.
  - Run the command `npm run build:ckeditor`

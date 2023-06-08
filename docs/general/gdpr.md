@@ -15,7 +15,7 @@ ExpressionEngine has tools to make compliance with regulations like the easy to 
 
 ## Consent, Consent, Consent
 
-The biggest and most important aspect of GDPR is gaining user consent for processing their PII (Personally Identifiable Information), letting them easily withdraw consent, and only processing PII that the user has consented to. ExpessionEngine makes it easy to gain and manage user consent for any activity you can possibly imagine.
+The biggest and most important aspect of GDPR is gaining user consent for processing their PII (Personally Identifiable Information), letting them easily withdraw consent, and only processing PII that the user has consented to. ExpressionEngine makes it easy to gain and manage user consent for any activity you can possibly imagine.
 
 ### Cookies
 
@@ -43,7 +43,7 @@ Add-ons may also have consent requests, and you can also make any Consent Reques
 
 ## Records, Auditing
 
-ExpressionEngine records an audit log of all consents granted or withdrawn by a user. This is maintained indefinitely. If you ever need to prove or report an individual's granting or withdrawl of consent, just visit your [Consent Logs](control-panel/system-logs.md#consent-logs).
+ExpressionEngine records an audit log of all consents granted or withdrawn by a user. This is maintained indefinitely. If you ever need to prove or report an individual's granting or withdrawal of consent, just visit your [Consent Logs](control-panel/system-logs.md#consent-logs).
 
 ## Data Portability
 

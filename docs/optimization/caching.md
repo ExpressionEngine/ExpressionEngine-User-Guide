@@ -141,4 +141,4 @@ Caches are cleared automatically when certain actions occur:
   - Opening or closing a Wiki Revision (clears db cache)
 - Deleting a Category Group (clears all caches)
 
-You may also [manually clear caches](control-panel/utilities.md#cache-manager) through the control panel.
+You may also [manually clear caches](control-panel/utilities/data-operations.md#cache-manager) through the control panel.
