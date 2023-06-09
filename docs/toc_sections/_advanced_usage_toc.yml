@@ -168,7 +168,8 @@
           href: development/prolets.md
         - name: Adding Dashboard Widgets
           href: development/widgets.md
-
+        - name: Developing Variable Modifiers
+          href: development/modifiers.md
         #- name: REMOVE - Adding Text Formatting Options
         #  href: development/text-formatting.md
     - name: Modernizing add-ons
