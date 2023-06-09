@@ -26,6 +26,7 @@
 - Resolved issue where Entry Manager could show PHP error when some add-on was missing
 - Resolved issue where it was impossible to edit Categories when using phone
 - Resolved #3259 where certain coditionals in templates could generate PHP warning
+- Resolved issue where MariaDB 10 could report the wrong version to the DB requirements checker
 
 ## Version 7.3.0
 (Release: June 8, 2023)
