@@ -28,22 +28,22 @@
 
 **Bug Fixes 💃🐛**
 
-Resolved [#2112](https://github.com/ExpressionEngine/ExpressionEngine/issues/2112) where deleting too many logs could cause the system go out of memory
-Resolved [#758](https://github.com/ExpressionEngine/ExpressionEngine/issues/758) where installation wizard did not work when PHP was configured to have no memory limit
-Resolved [#2148](https://github.com/ExpressionEngine/ExpressionEngine/issues/2148) where entry status was not updated after change of status name
-Resolved [#477](https://github.com/ExpressionEngine/ExpressionEngine/issues/477) where no information was provided when editing entry with status that's not accessible to member
-Resolved [#1795](https://github.com/ExpressionEngine/ExpressionEngine/issues/1795) Where display of negative numerical field had `-` placed incorrectly for RTL text direction
-Resolved [#3350](https://github.com/ExpressionEngine/ExpressionEngine/issues/3350) where PHP notice might be shown when parsing empty member field
-Resolved [#3371](https://github.com/ExpressionEngine/ExpressionEngine/issues/3371) where Grid fields could show PHP error when ExpressionEngine was updated from older version
-Resolved [#3123](https://github.com/ExpressionEngine/ExpressionEngine/issues/3123) where having template records without template group in database would case PHP notices in template editor
-Resolved [#3402](https://github.com/ExpressionEngine/ExpressionEngine/issues/3402) where PHP 8.1 deprecation noticed were shown when bulk editing entries without Pages URL set but Pages module installed
-Resolved [#3397](https://github.com/ExpressionEngine/ExpressionEngine/issues/3397) where Template Routes page was showing deprecation notices when using PHP 8.2
-Resolved [#3259](https://github.com/ExpressionEngine/ExpressionEngine/issues/3259) where certain coditionals in templates could generate PHP warning
-Resolved [#3112](https://github.com/ExpressionEngine/ExpressionEngine/issues/3112) where checkboxes could have been duplicated in long checkboxes lists
-Resolved [#1645](https://github.com/ExpressionEngine/ExpressionEngine/issues/1645) where Channel Sets with File Grid field were not properly imported
-Resolved [#2627](https://github.com/ExpressionEngine/ExpressionEngine/issues/2627); [#1623](https://github.com/ExpressionEngine/ExpressionEngine/issues/1623) when importing Channel Set that includes File field caused validation error
-Resolved [#3429](https://github.com/ExpressionEngine/ExpressionEngine/issues/3429) where `channel="not X"` parameter did not work correctly if channel X did not exist
-Resolved issue where it was impossible to edit Categories when using phone
+- Resolved [#2112](https://github.com/ExpressionEngine/ExpressionEngine/issues/2112) where deleting too many logs could cause the system go out of memory
+- Resolved [#758](https://github.com/ExpressionEngine/ExpressionEngine/issues/758) where installation wizard did not work when PHP was configured to have no memory limit
+- Resolved [#2148](https://github.com/ExpressionEngine/ExpressionEngine/issues/2148) where entry status was not updated after change of status name
+- Resolved [#477](https://github.com/ExpressionEngine/ExpressionEngine/issues/477) where no information was provided when editing entry with status that's not accessible to member
+- Resolved [#1795](https://github.com/ExpressionEngine/ExpressionEngine/issues/1795) Where display of negative numerical field had `-` placed incorrectly for RTL text direction
+- Resolved [#3350](https://github.com/ExpressionEngine/ExpressionEngine/issues/3350) where PHP notice might be shown when parsing empty member field
+- Resolved [#3371](https://github.com/ExpressionEngine/ExpressionEngine/issues/3371) where Grid fields could show PHP error when ExpressionEngine was updated from older version
+- Resolved [#3123](https://github.com/ExpressionEngine/ExpressionEngine/issues/3123) where having template records without template group in database would case PHP notices in template editor
+- Resolved [#3402](https://github.com/ExpressionEngine/ExpressionEngine/issues/3402) where PHP 8.1 deprecation noticed were shown when bulk editing entries without Pages URL set but Pages module installed
+- Resolved [#3397](https://github.com/ExpressionEngine/ExpressionEngine/issues/3397) where Template Routes page was showing deprecation notices when using PHP 8.2
+- Resolved [#3259](https://github.com/ExpressionEngine/ExpressionEngine/issues/3259) where certain coditionals in templates could generate PHP warning
+- Resolved [#3112](https://github.com/ExpressionEngine/ExpressionEngine/issues/3112) where checkboxes could have been duplicated in long checkboxes lists
+- Resolved [#1645](https://github.com/ExpressionEngine/ExpressionEngine/issues/1645) where Channel Sets with File Grid field were not properly imported
+- Resolved [#2627](https://github.com/ExpressionEngine/ExpressionEngine/issues/2627); [#1623](https://github.com/ExpressionEngine/ExpressionEngine/issues/1623) when importing Channel Set that includes File field caused validation error
+- Resolved [#3429](https://github.com/ExpressionEngine/ExpressionEngine/issues/3429) where `channel="not X"` parameter did not work correctly if channel X did not exist
+- Resolved issue where it was impossible to edit Categories when using phone
 
 ## Version 6.4.11
 (Release: April 24, 2023)
