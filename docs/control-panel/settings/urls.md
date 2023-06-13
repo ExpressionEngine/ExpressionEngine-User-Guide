@@ -45,7 +45,9 @@ The URL to the folder containing your site's index page. For example, if you hav
 
 Then the correct setting would be:
 
-    {base_url}/index.php
+    {base_url}
+	
+The frontend `{site_url}` global variable is defined by this setting.
 
 ### Control panel directory
 

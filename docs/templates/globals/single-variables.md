@@ -181,7 +181,7 @@ This variable will be substituted with your site name as defined under `Settings
 
 ### `{site_url}`
 
-This variable will be substituted with your site URL as defined under `Settings --> URL and Path Settings`.
+This variable will be substituted with your website root directory as defined under `Settings --> URL and Path Settings`.
 
 ### `{template_name}`
 
