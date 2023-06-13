@@ -162,7 +162,7 @@ NOTE: **Note:** As shown earlier, the `FROM` portion of your query can be specif
 | --------- | --------------------- | --------------------------------------------------------------------------------------------- |
 | \$table   | `String`              | The table to `JOIN`                                                                           |
 | \$cond    | `String`              | The condition to join `ON`                                                                    |
-| \$type    | `String`              | The type of `JOIN` to perform: `LEFT`, `RIGHT`, `OUTER`, `INNER`, `LEFT OUTER`, `RIGHT OUTER` |
+| \$type    | `String`              | The type of `JOIN` to perform: `LEFT`, `RIGHT`, `OUTER`, `INNER`, `LEFT OUTER`, `RIGHT OUTER` `STRAIGHT`|
 | Returns   | `CI_DB_active_record` | The Active Record object                                                                      |
 
 Permits you to write the `JOIN` portion of your query:
@@ -405,6 +405,20 @@ Adds the `DISTINCT` keyword to a query:
 
     ee()->db->distinct();
     ee()->db->get('table'); // Produces: SELECT DISTINCT * FROM table
+
+### `straight([$val = TRUE])`
+
+| Parameter | Type                  | Description                                       |
+| --------- | --------------------- | ------------------------------------------------- |
+| \$val     | `Boolean`             | _Optionally_ set to `FALSE` to disable `STRAIGHT` |
+| Returns   | `CI_DB_active_record` | The Active Record object                          |
+
+Adds the `STRAIGHT_JOIN` keyword to a query:
+
+    ee()->db->straight();
+    ee()->db->get('table'); // Produces: SELECT STRAIGHT_JOIN * FROM (`table1`) JOIN `table2` ON `table2`.`id` = `table1`.`acct`
+	
+Individual tables can be straight joined by specifying in the join syntax.
 
 ### `having($key[, $value = ''[, $escape = TRUE]])`
 
