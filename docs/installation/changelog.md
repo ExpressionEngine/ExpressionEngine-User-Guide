@@ -8,6 +8,40 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.3.4
+(Release: June 19, 2023)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Added preference for TLS version used when sending email over SMTP; [#2035](https://github.com/ExpressionEngine/ExpressionEngine/issues/2035)
+- Added validation for image manipulation names to not be numeric; [#2884](https://github.com/ExpressionEngine/ExpressionEngine/issues/2884)
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#3099](https://github.com/ExpressionEngine/ExpressionEngine/issues/3099), [#2178](https://github.com/ExpressionEngine/ExpressionEngine/issues/2178) where existing entries did not show up in Entry Manager if the user did not have editing permission on another channel
+- Resolved [#3020](https://github.com/ExpressionEngine/ExpressionEngine/issues/3020) where "login as" functionality was broken if member had MFA enabled
+- Resolved [#3522](https://github.com/ExpressionEngine/ExpressionEngine/issues/3522) where early parsed Grids in Pro Variables would not render properly
+- Resolved [#3349](https://github.com/ExpressionEngine/ExpressionEngine/issues/3349) where comment moderation preferences were not fully checked
+- Resolved [#2705](https://github.com/ExpressionEngine/ExpressionEngine/issues/2705) where "minimum rows" setting was not respected by File Grid fields
+- Resolved [#3384](https://github.com/ExpressionEngine/ExpressionEngine/issues/3384) where Reassign Entries dialog sometimes did not populate when deleting a member
+- Resolved [#2666](https://github.com/ExpressionEngine/ExpressionEngine/issues/2666) where using Structure with dynamic channel queries caching on could cause some pages to display incorrectly
+- Resolved issue when not all Pro Variables classes were loaded when creating new field
+- Resolved issue where PHP warnings was shown when running `make:command` in CLI while on PHP 8.2
+- Resolved issue where running updater could try to create templates from files outside of site's template directory
+- Resolved issue where image manipulation could malfunction if the resize protocol was not set
+
 ## Version 7.3.3
 (Release: June 13, 2023)
 
