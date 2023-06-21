@@ -38,7 +38,7 @@ ExpressionEngine provides a number of useful tools and utilities to make managin
 
 **[Data Operation Tools](control-panel/utilities/data-operations.md)**
   - [Cache Manager](control-panel/utilities/data-operations.md#cache-manager)
-  - [Content Reindex](control-panel/utilities/data-operations.md#content-reindex)
+  - [Search Reindex](control-panel/utilities/data-operations.md#search-reindex)
   - [Sync Conditional Logic](control-panel/utilities/data-operations.md#sync-conditional-fields)
   - [Update File Usage Information](control-panel/utilities/data-operations.md#update-file-usage-information)
   - [Manage Statistics](control-panel/utilities/data-operations.md#manage-statistics)
