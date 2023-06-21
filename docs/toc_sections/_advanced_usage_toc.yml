@@ -640,6 +640,8 @@
       href: cli/usage.md
     - name: Built In Commands
       items:
+        - name: List Commands
+          href: cli/built-in-commands/list.md
         - name: Add-on Management
           href: cli/built-in-commands/addons.md
         - name: Add-on Generator
@@ -648,25 +650,14 @@
           href: cli/built-in-commands/backup-database.md
         - name: Clear Cache
           href: cli/built-in-commands/cache-clear.md
-        - name: Command Generator
-          href: cli/built-in-commands/make-command.md
+        - name: Sync Data
+          href: cli/built-in-commands/sync.md
         - name: Config Management
           href: cli/built-in-commands/config-management.md
         - name: Migrations
           href: cli/built-in-commands/migrate.md
-        - name: List
-          href: cli/built-in-commands/list.md
-        - name: Make migration
-          href: cli/built-in-commands/make-migration.md
-        - name: Model Generator
-          href: cli/built-in-commands/make-model.md
         - name: Update ExpressionEngine
           href: cli/built-in-commands/update.md
-        - name: Prolet Generator
-          href: cli/built-in-commands/make-prolet.md
-        - name: Widget Generator
-          href: cli/built-in-commands/make-widget.md
-
 
 - name: Entry Cloning
   href: channels/entry_cloning.md

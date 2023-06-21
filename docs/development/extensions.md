@@ -59,7 +59,7 @@ TIP: Extensions need to be enabled to work. When you create an extension, a migr
 ## Anatomy Of An Extension
 Once we've added the ability to hook into the core with our add-on, an `Extensions` folder is created. The CLI will generate a class and a respective file for each core hook we wish to use.
 
-Here we have added the ability to interact with the [`typography_parse_type_end()`](/development/extension-hooks/global/typography.html#typography_parse_type_endstr-this-prefs) hook.
+Here we have added the ability to interact with the [`typography_parse_type_end()`](development/extension-hooks/global/typography.md#typography_parse_type_endstr-this-prefs) hook.
 
 So our add-on structure now looks like this:
 
@@ -99,7 +99,7 @@ Inside our class is the `process()` function. Again the CLI has already added al
 
 TIP:Reference the [Available Core Hooks](development/extension-hooks/extension-hooks-overview.md) section of the docs to read on what parameters your hook uses.
 
-From the [`typography_parse_type_end()`](/development/extension-hooks/global/typography.html#typography_parse_type_endstr-this-prefs) docs we can see that this hook modifies a string after all other typography is processed. Thus we should be able to take a string, manipulate it, then pass it back to ExpressionEngine to be rendered in the template.
+From the [`typography_parse_type_end()`](development/extension-hooks/global/typography.md#typography_parse_type_endstr-this-prefs) docs we can see that this hook modifies a string after all other typography is processed. Thus we should be able to take a string, manipulate it, then pass it back to ExpressionEngine to be rendered in the template.
 
 We know that we should expect the following parameters for this hook:
 

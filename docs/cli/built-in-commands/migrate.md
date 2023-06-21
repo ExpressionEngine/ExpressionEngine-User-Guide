@@ -2,7 +2,7 @@
 
 Generate, run and rollback migrations via the CLI.
 
-TIP: If you would like to make your own migrations, see [make:migration](cli/built-in-commands/make-migration.md) for details on how to generate a migration.
+TIP: If you would like to make your own migrations, see [make:migration](cli/built-in-commands/make-addon.md#makemigration) for details on how to generate a migration.
 
 Check out our video tutorial on running migrations and rolling back!
 <div class="video-wrapper">

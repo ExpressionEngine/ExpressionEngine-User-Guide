@@ -17,7 +17,7 @@ lang: php
 
 ExpressionEngine has a complex set of data types, such as Channels, Members, Templates, and Categories. These have properties and constraints, as well as relationships and complex storage requirements. The model service helps smooth out interacting with ExpressionEngine's data types by providing an API that mimics their natural language description as closely as is feasible. You do not query for `channel_data` joined on `channel_titles`; instead, you simply get a channel entry with its fields.
 
-NOTE: Models can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:model command](cli/built-in-commands/make-model.md) for more information.
+NOTE: Models can also be **generated quickly by the Command Line Interface (CLI)**. Refer to the [make:model command](cli/built-in-commands/make-addon.md#makemodel) for more information.
 
 
 ## Naming Conventions

@@ -25,7 +25,7 @@ How long a user stays logged into the control panel is determined by two factors
 
 Session Time to Logout (TTL) refers to how long a user stays logged into the control panel after logging in.  By default, after 1 hour of inactivity, administrators will be logged out of the control panel and required to log back in with their username and password.  The default TTL length can be overriden by the [cp_session_length](general/system-configuration-overrides.md#cp_session_length) setting.  
 
-If control panel sessions are set to use cookies only, the 'Remember me' login option will allow the session cookie to persist for 2 weeks.  This may be overriden using the [remember.php configuration file](config/config-files.md#remember_me).
+If control panel sessions are set to use cookies only, the 'Remember me' login option will allow the session cookie to persist for 2 weeks.  This may be overriden using the [remember.php configuration file](config/config-files.md#remember-me-expiration).
 
 ***Adminstrator Idle Check***
 
@@ -39,6 +39,3 @@ Sessions are stored in cookies, session ID (URL) or both, see [Security and Priv
 
 So if you're logged into the control panel but the website acts like you're a guest?  You probably don't have session data stored in a cookie per the control panel session settings.
   
-
-
-

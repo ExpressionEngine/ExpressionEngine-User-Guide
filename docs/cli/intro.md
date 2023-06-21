@@ -8,28 +8,48 @@ By default the CLI is located `system/ee/eecli.php` .
 
 - [Basic Usage](cli/usage.md)
 - Built In Commands
-    - [Clear Cache](cli/built-in-commands/cache-clear.md)
-    - [List](cli/built-in-commands/list.md)
+    - Addons
+        - [addons:install](cli/built-in-commands/addons.md#addonsinstall) - Installs add-on and all its components
+        - [addons:list](cli/built-in-commands/addons.md#addonslist) - List the add-ons
+        - [addons:uninstall](cli/built-in-commands/addons.md#addonsuninstall) - Uninstalls add-on and all its components
+        - [addons:update](cli/built-in-commands/addons.md#addonsupdate) - Updates an add-on to the latest version
+    - Backup
+        - [backup:database](cli/built-in-commands/backup-database.md) - Backup the database
+    - Cache
+        - [cache:clear](cli/built-in-commands/cache-clear.md) - Clears all ExpressionEngine caches
+    - Config
+        - [config:config](cli/built-in-commands/config-management.md#configconfig) - Updates config values in config.php file
+        - [config:env](cli/built-in-commands/config-management.md#configenv) - Updates env values in .env.php file
+    - List
+        - [list](cli/built-in-commands/list.md) - Lists available commands
     - Make
-        - [make:action - Creates a new action for an add-on](cli/built-in-commands/make-action.md)
-        - [make:addon - Creates a new add-on](development/addon-development-overview.md)
-        - [make:command - Creates a new CLI command for an add-on](cli/built-in-commands/make-command.md)
-        - [make:extension-hook - Implements an EE extension hook in an add-on](cli/built-in-commands/make-extension-hook.md)
-        - [make:migration - Creates a new migration](cli/built-in-commands/make-migration.md)
-        - [make:model - Creates a new model for an add-on](cli/built-in-commands/make-model.md)
-        - [make:prolet - Creates a new prolet for an add-on](cli/built-in-commands/make-prolet.md)
-        - [make:tag - Creates a new tag for an add-on](cli/built-in-commands/make-tag.md)
-        - [make:widget - Generates widgets for existing add-ons](cli/built-in-commands/make-widget.md)
+        - [make:addon](cli/built-in-commands/make-addon.md#makeaddon) - Creates a new add-on
+        - [make:action](cli/built-in-commands/make-addon.md#makeaction) - Creates a new action for an add-on
+        - [make:command](cli/built-in-commands/make-addon.md#makecommand) - Creates a new CLI command for an add-on
+        - [make:cp-route](cli/built-in-commands/make-addon.md#makecp-route) - Generates a control panel route for a given third-party add-on*
+        - [make:extension-hook](cli/built-in-commands/make-addon.md#makeextension-hook) - Implements an EE extension hook in an add-on
+        - [make:fieldtype](cli/built-in-commands/make-addon.md#makefieldtype) - Generates a fieldtype for a given third-party add-on*
+        - [make:jump](cli/built-in-commands/make-addon.md#makejump) - Generates a jump menu file for a given third-party add-on*
+        - [make:migration](cli/built-in-commands/make-addon.md#makemigration) - Creates a new migration for an add-on
+        - [make:model](cli/built-in-commands/make-addon.md#makemodel) - Creates a new model for an add-on
+        - [make:prolet](cli/built-in-commands/make-addon.md#makeprolet) - Creates a new prolet for an add-on
+        - [make:sidebar](cli/built-in-commands/make-addon.md#makesidebar) - Creates a control panel sidebar for an add-on
+        - [make:template-tag](cli/built-in-commands/make-addon.md#maketemplate-tag) - Creates a new template tag for an add-on
+        - [make:widget](cli/built-in-commands/make-addon.md#makewidget) - Generates widgets for existing add-ons
     - Migrate
-        - [migrate - Runs specified migrations (all, core, or add-ons)](cli/built-in-commands/migrate.md)
-        - [migrate:addon - Runs add-on migrations](cli/built-in-commands/migrate.md)
-        - [migrate:all - Runs core migrations, then each add-on's migrations](cli/built-in-commands/migrate.md)
-        - [migrate:core - Runs core migrations](cli/built-in-commands/migrate.md)
-        - [migrate:reset - Rolls back all migrations](cli/built-in-commands/migrate.md)
-        - [migrate:rollback - Rolls back most recent migration group](cli/built-in-commands/migrate.md)
+        - [migrate](cli/built-in-commands/migrate.md) - Runs specified migrations (all, core, or add-ons)
+        - [migrate:all](cli/built-in-commands/migrate.md) - Runs core migrations, then each add-on's migrations
+        - [migrate:addon](cli/built-in-commands/migrate.md) - Runs add-on migrations
+        - [migrate:core](cli/built-in-commands/migrate.md) - Runs core migrations
+        - [migrate:reset](cli/built-in-commands/migrate.md) - Rolls back all migrations
+        - [migrate:rollback](cli/built-in-commands/migrate.md) - Rolls back most recent migration group
     - Sync
-        - [sync:conditional-fields - Sync channel entry conditional logic](cli/built-in-commands/sync-conditional-fields.md)
-    - [Update ExpressionEngine](cli/built-in-commands/update.md)
+        - [sync:conditional-fields](cli/built-in-commands/sync.md#syncconditional-fields) - Sync channel entry conditional logic
+        - [sync:file-usage](cli/built-in-commands/sync.md#syncfile-usage) - Syncs the file usage for all files
+    - Update ExpressionEngine
+        - [update](cli/built-in-commands/update.md) Updates ExpressionEngine
+        - [update:prepare](cli/built-in-commands/update.md) Prepare a site to be upgraded using these files
+        - [update:run-hook](cli/built-in-commands/update.md) Runs update hooks from your upgrade.config.php file
 - [Creating a Command](cli/creating-a-command.md)
 - [Defining Input](cli/defining-input.md)
 - [Displaying Output](cli/displaying-output.md)

@@ -61,6 +61,6 @@ Developers may create third-party prolets that can be installed with add-ons. Re
 ![dock prolets](_images/ee-pro-dock-prolets.png)
 
 ## Disabling
-The Dock can be disabled by either the setting in the [Control Panel](control-panel/settings/front-end-editing.md#general-settings) or [config override](general/system-configuration-overrides.md#enable_dock).
+The Dock can be disabled by either the setting in the [Control Panel](control-panel/settings/front-end-editing.md#enable-dock) or [config override](general/system-configuration-overrides.md#enable_dock).
 
 WARN **Warning**: If the Dock is disabled, all of ExpressionEngine's [Front-End Content Management](advanced-usage/front-end/overview.md) is turned off for the front-end. 
