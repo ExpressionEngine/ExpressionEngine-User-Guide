@@ -38,8 +38,30 @@ Running this command will convert saved file information from `{filedir_X}filena
 
 ### Options list:
 
-This command has no options
+    --site_id=<value>
+    -s <value>
+        Site ID. Skip this parameter to reindex content on all sites
 
 ### Example:
 
 `php eecli.php sync:file-usage`
+
+
+## `sync:reindex`
+
+The searchable content might become stale if you have recently changed properties of some fields. Reindexing will re-populate the data used by complex fields in search and Entry Manager.
+
+### Options list:
+
+This command has no options
+
+### Example:
+
+#### Reindex content for Site 1 only
+
+`php eecli.php sync:reindex --site_id=1`
+`php eecli.php sync:reindex -s 1`
+
+#### Reindex content for all sites
+
+`php eecli.php sync:reindex`
