@@ -21,11 +21,11 @@ This section of the Control Panel allows you clear the cached data for the diffe
 
 TIP: **Tip:** To quickly access this section, press `Ctrl / cmd` + `J` to invoke the Jump Menu and pick "Cache Manager"
 
-## Search Reindex
+## Content Reindex
 
-**Control Panel Location:** `Tools > Utilities > Search Reindex`
+**Control Panel Location:** `Tools > Utilities > Content Reindex`
 
-Search reindexing refreshes the searchable words stored by Grid and Fluid fields that are used by the search module when performing a search. Reindexing is needed when:
+Content reindexing refreshes the searchable words stored by Grid and Fluid fields that are used by the search module when performing a search. Reindexing is needed when:
 
 - a Grid field's search setting changes
 - the search settings for columns in a Grid field change
