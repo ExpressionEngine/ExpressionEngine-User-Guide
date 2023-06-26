@@ -8,6 +8,37 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.3.5
+(Release: June 26, 2023)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/6020323?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Doug Black</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr" target="_BLANK">@dougblackjr</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Make 'Synchronize Upload Directory' utility set correct file type if it is not set; [#3134](https://github.com/ExpressionEngine/ExpressionEngine/issues/3134)
+
+**Bug Fixes** 💃🐛
+- Resolved issue where some errors did not render properly when using custom error template
+- Resolved issue where not all messages were added to template processing log
+- Resolved [#3548](https://github.com/ExpressionEngine/ExpressionEngine/issues/3548) where Structure navigation in CP was problematic on mobile devices
+- Resolved [#3445](https://github.com/ExpressionEngine/ExpressionEngine/issues/3445) where wrong error message could be shown when creating a grid field
+- Resolved [#3421](https://github.com/ExpressionEngine/ExpressionEngine/issues/3421) where CLI extension hook generator had wrong info for `relationship_query`
+- Resolved [#595](https://github.com/ExpressionEngine/ExpressionEngine/issues/595) where the message about invalid theme folder path was not clear when performing 1-click update
+- Resolved [#1310](https://github.com/ExpressionEngine/ExpressionEngine/issues/1310) where Moblog add-on was setting incorrect edit_date
+- Resolved [#1829](https://github.com/ExpressionEngine/ExpressionEngine/issues/1829) where entry category was not set properly by Moblog
+- Resolved [#2541](https://github.com/ExpressionEngine/ExpressionEngine/issues/2541) where Moblog was not processing attachments properly
+- Resolved issue where automatically renamed attachments were not properly processed by Moblog
+- Resolved [#690](https://github.com/ExpressionEngine/ExpressionEngine/issues/690) where is was possible to save required File Grid without files
+
 ## Version 7.3.4
 (Release: June 19, 2023)
 
