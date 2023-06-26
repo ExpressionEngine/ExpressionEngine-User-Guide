@@ -25,6 +25,7 @@
 
 - Added preference for TLS version used when sending email over SMTP; [#2035](https://github.com/ExpressionEngine/ExpressionEngine/issues/2035)
 - Added validation for image manipulation names to not be numeric; [#2884](https://github.com/ExpressionEngine/ExpressionEngine/issues/2884)
+- Updated `underscore.js` library to latest version
 
 **Bug Fixes 💃🐛**
 
