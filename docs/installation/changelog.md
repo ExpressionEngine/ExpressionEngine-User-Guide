@@ -24,7 +24,7 @@
 
 **Enhancements** 🚀
 
-- Make 'Synchronize Upload Directory' utility set correct file type if it is not set; [#3134](https://github.com/ExpressionEngine/ExpressionEngine/issues/3134)
+- Make 'Synchronize Upload Directory' utility set the correct file type if it is not set; [#3134](https://github.com/ExpressionEngine/ExpressionEngine/issues/3134)
 
 **Bug Fixes** 💃🐛
 - Resolved issue where some errors did not render properly when using custom error template
