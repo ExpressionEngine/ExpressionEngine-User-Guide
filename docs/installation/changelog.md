@@ -29,9 +29,6 @@
 
 **Bug Fixes 💃🐛**
 
-
-Bug Fixes 💃🐛
-
 - Resolved [#3349](https://github.com/ExpressionEngine/ExpressionEngine/issues/3349) where comment moderation preferences were not fully checked
 - Resolved [#2705](https://github.com/ExpressionEngine/ExpressionEngine/issues/2705) where "minimum rows" setting was not respected by File Grid fields
 - Resolved issue where not all messages were added to template processing log
