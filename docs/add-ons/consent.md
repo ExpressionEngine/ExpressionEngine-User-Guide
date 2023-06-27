@@ -40,6 +40,8 @@ Consent Forms allow the visitor to grant or withdraw consent to one or more Cons
 
 [TOC=3]
 
+{{embed:_tips/form-attributes.md}}
+
 #### `consent=`
 
     consent='ee:cookies_functionality'

@@ -61,6 +61,8 @@ By default, validation errors will be displayed using the User Message Template.
 
 [TOC=3 hide]
 
+{{embed:_tips/form-attributes.md}}
+
 The Following parameters are available for the `{exp:channel:form}`:
 
 ### `allow_comments=`

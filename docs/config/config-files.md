@@ -29,6 +29,12 @@ The list of the words that are being used to generate [CAPTCHA](security/captcha
 
 This file contains an array of foreign characters for transliteration conversion used by the Text helper (example would be generating URL Titles for entries).
 
+#### HTML Form Attributes
+
+`valid_form_attributes.php`
+
+Valid HTML attributes that might be passed via EE template tag parameters to the `form` tag when creating forms with `ee()->functions->form_declaration()`. Additionally, `data-` and `aria-` attributes can be used.
+
 #### Allowed Mime Types
 
 `mimes.php`
