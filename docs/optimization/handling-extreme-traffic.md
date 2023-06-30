@@ -54,3 +54,9 @@ These can be disabled in your Control Panel [Tracking Preferences](control-panel
 ExpressionEngine's caching mechanisms can help reduce database load in most situations. However if you use file-based caching, that may transfer some of the resources saved from the database server to the web server. Thus, it is recommended that you use either the Memcached or Redis [caching driver](optimization/caching.md#caching-drivers) instead of the file driver, especially on high-traffic sites. The increased disk i/o from file caches being created and destroyed during a high traffic event consumes significantly more server resources than the memory-based caching drivers.
 
 If you are running in a PHP environment without Opcode caching, [saving templates as files](general/system-configuration-overrides.md#save_tmpl_files) can marginally increase disk i/o as each template must be retrieved from disk. We recommend running PHP 7 or greater so that this type of file activity is managed better by the server.
+
+## Using Load Balancers
+
+Using load balancer or reverse proxy server is popular solution to mitigare DDoS attacks and make handling high traffic easier.
+
+When the server is placed behind reverse proxy or load balancer, ExpressionEngine in default configuration might not know the user's real IP address because it would be substituted with the proxy IP address. Most of the proxies however would send the real user's IP in some HTTP headers. In order to use the data in those headers to obtain the real user IP address, you need to configure the system to make it aware of the list of trusted proxy IP addresses or ranges. This can be done using [`proxy.php` configuration file](config/config-files.md#reverse-proxy-ip-addresses).
