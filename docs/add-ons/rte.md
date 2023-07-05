@@ -73,6 +73,7 @@ The following are the buttons that can be enabled in tool set to manipulate the 
     <li>Superscript</li>
     <li>Block quote</li>
     <li>Code</li>
+    <li>Code block</li>
     <li>Heading / Format</li>
     <li>Remove formatting (CKEditor only)</li>
     <li>Style (Redactor only)</li>
@@ -95,6 +96,7 @@ The following are the buttons that can be enabled in tool set to manipulate the 
     <li>"Read More" separator</li>
     <li>Font color / background</li>
     <li>Fullscreen (Redactor only)</li>
+    <li>HTML Source editing</li>
 </ul>
 
 #### Custom Stylesheet
@@ -148,6 +150,7 @@ To delete a tool set, check the tool set's checkbox in the tool set table listin
 
 - **Default RTE tool set** - select the tool set that will be selected by default when creating a field.
 - **File Browser** - select file browser that will be used when browsing for images and files from RTE fields. ExpressionEngine's FilePicker is used by default, third-party add-ons can provide their own filepickers
+- **Use custom CKEditor build** - Allows using custom CKEditor build with extra plugins. If enabled, RTE instances running CKEditor will be built using the script in `themes/user/rte/javascript/` folder.
 
 NOTE: **Note:** If using the [Multiple Site Manager](msm/overview.md), this preference is per-site.
 
@@ -170,7 +173,7 @@ NOTE: **Warning** Doing this requires advanced development skills.
 In order to create custom CKEditor build:
  - Clone [GitHub repo](https://github.com/ExpressionEngine/ExpressionEngine/)
  - Install NPM packages by running `npm install`
- - Follow the installation instructions for the plugin itself
- - Make your changes to `js-src\ckeditor5-build-classic\src\ckeditor.js` and other files as necessary.
+ - Follow the installation instructions for the extra CKEditor plugins that you need
+ - Make your changes to `js-src/ckeditor5-build-classic/src/ckeditor.js` and other files as necessary.
  - Run the command `npm run build:ckeditor`
- - Copy the files from `themes/ee/asset/javascript/src/fields/rte/ckeditor` to same folder on your EE installation
+ - Copy the files from `themes/ee/asset/javascript/src/fields/rte/ckeditor` to `themes/user/rte/javascript/` folder on your EE installation
