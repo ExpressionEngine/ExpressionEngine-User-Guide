@@ -177,3 +177,5 @@ In order to create custom CKEditor build:
  - Make your changes to `js-src/ckeditor5-build-classic/src/ckeditor.js` and other files as necessary.
  - Run the command `npm run build:ckeditor`
  - Copy the files from `themes/ee/asset/javascript/src/fields/rte/ckeditor` to `themes/user/rte/javascript/` folder on your EE installation
+
+TIP: Buttons provided by extra plugins might be not availble with visual toolbar builder. You will need to use Advanced Configuration JSON file to add those.
