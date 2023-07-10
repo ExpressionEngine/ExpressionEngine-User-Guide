@@ -8,6 +8,40 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.3.6
+(Release: July 10, 2023)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/17011377?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Brad Akin</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bakin1999" target="_BLANK">@bakin1999</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Bug Fixes** 💃🐛
+
+Resolved [#3568](https://github.com/ExpressionEngine/ExpressionEngine/issues/3568) where deselecting all template access for Role in one MSM site would also deselect it on other sites
+Resolved [#2017](https://github.com/ExpressionEngine/ExpressionEngine/issues/2017) where comments were not added to Spam trap when changing comment status in Control Panel;
+Resolved [#1826](https://github.com/ExpressionEngine/ExpressionEngine/issues/1826) where popup with spam details could be hard to navigate to
+Resolved [#2787](https://github.com/ExpressionEngine/ExpressionEngine/issues/2787) where missing fieldtype would prevent adding new field or entry 
+Resolved [#3456](https://github.com/ExpressionEngine/ExpressionEngine/issues/3456) where image manipulation could have wrong orientation
+Resolved [#674](https://github.com/ExpressionEngine/ExpressionEngine/issues/674) where having conflicting member_id in Member Import XML file was causing SQL error
+Resolved [#2178](https://github.com/ExpressionEngine/ExpressionEngine/issues/2178) where pagination in Entry Manager was not correct for people who only can edit their own entries
+Resolved issue where Structure would show deprecation notice when using PHP 8.2
+Resolved [issue](https://github.com/ExpressionEngine/ExpressionEngine/pull/3477) with Comments entry tag would show deprecation notice whhen using PHP 8.2
+Resolved [#3402](https://github.com/ExpressionEngine/ExpressionEngine/pull/3406) where PHP 8.1 deprecation noticed showed when build editing entries with pages module installed
+Resolved [issue](https://github.com/ExpressionEngine/ExpressionEngine/pull/3587) where uninstalled add-ons could have still have tab file called from Entry Manager
+Resolved [#3397](https://github.com/ExpressionEngine/ExpressionEngine/pull/3400) where Template Routes page was showing deprecation notices when using PHP 8.2
+Resolved [#3123](https://github.com/ExpressionEngine/ExpressionEngine/pull/3398) where having template records without template group in database would case PHP notices in template editor
+Resolved [#3371](https://github.com/ExpressionEngine/ExpressionEngine/pull/3374) where Grid fields could show PHP error when ExpressionEngine was updated from older version
+Resolved [#3350](https://github.com/ExpressionEngine/ExpressionEngine/pull/3361) where PHP notice might be shown when parsing empty member field 
+Resolved [#218](https://github.com/ExpressionEngine/ExpressionEngine/issues/218) where Control Panel links could sometimes break after submitting idle login popup
+
 ## Version 7.3.5
 (Release: June 26, 2023)
 
