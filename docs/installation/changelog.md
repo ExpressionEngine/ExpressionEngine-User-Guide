@@ -8,7 +8,7 @@
 -->
 # ExpressionEngine v7 Change Log
 
-## Version 7.3.7
+## Version 7.3.6
 (Release: July 10, 2023)
 
 - **Contributors** 🙌
