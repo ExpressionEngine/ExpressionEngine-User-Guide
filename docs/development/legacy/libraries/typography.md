@@ -98,25 +98,9 @@ The Typography class has a number of class properties that you may wish to set b
 
 (`string`) \[ **safe** / all / none \] — Controls how HTML is handled in text.
 
-- `"safe"` allows the following HTML tags to be rendered in the DOM, while all other HTML tags are removed from the content.
- - `h2`, `h3`, `h4`, `h5`, `h6`
- - `abbr`
- - `b`
- - `blockquote`
- - `cite`
- - `code`
- - `del`
- - `em`
- - `i`
- - `ins`
- - `mark`
- - `pre`
- - `span`
- - `strong`
- - `sub`
- - `sup`
-- `"all"` allows all HTML tags to be rendered in the DOM. This is not recommended because it may allow users (who may not otherwise have access to edit templates) to inject HTML in unexpected places. For example, if the template is defined as `<p>{content}</p>`, but `{content}` itself is `<form><input></form>`, that will be rendered in the DOM as `<p><form><input></form></p>` which would essentially allow a user to add a form to a page via a `content` field that was probably not intended to be used in this way.
-- `"none"` converts all HTML tags to their encoded values (e.g. `<h1>` becomes `&lt;h1&gt;`) and will output it as text. This is the safest option because it prevents any unexpected HTML to be rendered in the DOM.
+- `"safe"` -- Allows the following HTML tags to be rendered in the DOM: `h2`, `h3`, `h4`, `h5`, `h6`, `abbr`, `b`, `blockquote`, `cite`, `code`, `del`, `em`, `i`, `ins`, `mark`, `pre`, `span`, `strong`, `sub`, `sup`. All other HTML tags are removed from the content.
+- `"all"` -- Allows all HTML tags to be rendered in the DOM. This is not recommended because it may allow users (who may not otherwise have access to edit templates) to inject HTML in unexpected places. For example, if the template is defined as `<p>{content}</p>`, but `{content}` itself is `<form><input></form>`, that will be rendered in the DOM as `<p><form><input></form></p>` which would essentially allow a user to add a form to a page via a `content` field that was probably not intended to be used in this way.
+- `"none"` -- Converts all HTML tags to their encoded values (e.g. `<h1>` becomes `&lt;h1&gt;`) and will output it as text. This is the safest option because it prevents any unexpected HTML to be rendered in the DOM.
 
 ### `$parse_images`
 
