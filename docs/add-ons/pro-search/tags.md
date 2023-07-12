@@ -49,7 +49,7 @@ Specifies any html attribute you want the form to have. For example: form_id="se
 
 #### query
 
-Use this parameter to pass through a previously executed encoded search query. Not needed when not encoding queries.
+Use this parameter to pass through a previously executed encoded search query. Not needed when [not encoding queries](https://docs.expressionengine.com/latest/add-ons/pro-search/settings.html#encode-query).
 
     {exp:pro_search:form query="{segment_3}"}
 
