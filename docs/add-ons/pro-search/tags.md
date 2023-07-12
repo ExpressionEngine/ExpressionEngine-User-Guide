@@ -43,11 +43,15 @@ Set to no to have a given query overwrite a valid shortcut. Defaults to yes (a s
 
 #### form_attribute
 
-Specifies any html attribute you want the form to have. For example: form_id="search" will add id="search" to the
+Specifies any html attribute you want the form to have. For example: form_id="search" will add id="search", or form_class="searchform" will add class="searchform" to the tag.
 
-tag. query Use this parameter to pass through a previously executed encoded search query. Not needed when not encoding queries.
+    {exp:pro_search:form form_id="search" form_class="searchform"}
 
-    {exp:pro_search:form form_id="search"}
+#### query
+
+Use this parameter to pass through a previously executed encoded search query. Not needed when not encoding queries.
+
+    {exp:pro_search:form query="{segment_3}"}
 
 #### required
 
