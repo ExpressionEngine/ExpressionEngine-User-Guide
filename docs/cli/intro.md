@@ -46,6 +46,7 @@ By default the CLI is located `system/ee/eecli.php` .
     - Sync
         - [sync:conditional-fields](cli/built-in-commands/sync.md#syncconditional-fields) - Sync channel entry conditional logic
         - [sync:file-usage](cli/built-in-commands/sync.md#syncfile-usage) - Syncs the file usage for all files
+        - [sync:upload-directory](cli/built-in-commands/sync.md#syncupload-directory) - Synchronize upload directory
     - Update ExpressionEngine
         - [update](cli/built-in-commands/update.md) Updates ExpressionEngine
         - [update:prepare](cli/built-in-commands/update.md) Prepare a site to be upgraded using these files

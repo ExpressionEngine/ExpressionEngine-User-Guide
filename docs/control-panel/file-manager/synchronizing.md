@@ -23,3 +23,5 @@ When submitted, all allowed file types in the directory will be checked against 
 If an image manipulation is missing, it will be generated automatically. However, if you want to regenerate and replace all given manipulations, you can do so by checking the checkbox next to the manipulation name.
 
 Lastly, any records in the database that do not have a corresponding file in the main directory will be highlighted as not found.
+
+NOTE: This functionality is also available as [CLI command](cli/built-in-commands/sync.md#syncupload-directory)
