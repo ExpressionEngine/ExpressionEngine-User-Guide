@@ -153,3 +153,21 @@ This function returns a _reference_ to the MIMEs array from `system/ee/legacy/co
 | Returns   | `Bool` | TRUE if currently using HTTP-over-SSL, FALSE if not |
 
 Returns `TRUE` if a secure (HTTPS) connection is used and `FALSE` in any other case (including non-HTTP requests).
+
+### `redirect($location, [$method = false, [$status_code = null]])`
+
+| Parameter     | Type     | Description                                     |
+| ------------- | -------- | ----------------------------------------------- |
+| \$location    | `String` | Location header holding the URL to redirect to. |
+| \$method      | `String` | Location header holding the URL to redirect to. |
+| \$status_code | `String` | HTTP response status codes.                     |
+| Returns       | `Void`   |                                                 |
+
+When browsers receive a redirect, they immediately load the new URL provided in the Location header.
+
+Example:
+
+    $redirect_url = ee('CP/URL')->make('addons/settings/amazing_add_on')->compile();
+    ee()->functions->redirect($redirect_url);
+
+NOTE: Redirect responses have [status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) that start with `3`.
