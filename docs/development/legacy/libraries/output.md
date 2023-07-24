@@ -158,3 +158,21 @@ Example:
     exit;
 
 NOTE: **Note:** Calling this method manually without aborting script execution will result in duplicated output.
+
+### `send_ajax_response($msg, [$error = false])`
+
+| Parameter | Type     | Description          |
+| --------- | -------- | -------------------- |
+| \$msg  | `Array` | Object to be sent to the client. |
+| \$error  | `Bool` | TRUE to set header status to `500` |
+| Returns   | `Void`   | void                 |
+
+Calling this method encode the given `$msg` parameter and will set the header `Content-Type: application/json`.
+
+Example:
+
+    $output = array(
+        'this' => 'that',
+        'foo' => 'bar'
+    );
+    ee()->output->send_ajax_response($output);
