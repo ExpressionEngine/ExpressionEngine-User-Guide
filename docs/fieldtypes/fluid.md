@@ -175,7 +175,31 @@ Alias of `:current_fieldtype`.
 
 The total number of fields regardless of tag output criteria.
 
-Additionally, the following variable are available when using custom field groups:
+Additionally, the following variable are available **when using custom field groups**:
+
+### `count_in_group`
+
+    {fluid_content:count_in_group}
+
+The "count" out of the field being displayed in current field group. If five fields are in group, then for the fourth field the `count` variable would have a value of "4". 
+
+### `first_in_group`
+
+    {fluid_content:first_in_group}
+
+True, if the current field is the first one in current field group. 
+
+### `index_in_group`
+
+    {fluid_content:index_in_group}
+
+The index of the field being displayed in current field group starting at 0.
+
+### `last_in_group`
+
+    {fluid_content:last_in_group}
+
+True, if the current field is the last one in current field group.
 
 ### `first_group`
 
