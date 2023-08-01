@@ -70,7 +70,7 @@ When enabled, this field won’t initialize until the Edit Relationships button 
 
 From within the field, the entries can be selected to establish relationship.
 
-The entries can be filtered using search input and, if necessary, channel dropdown.
+The entries can be filtered using search input and, if necessary, channel dropdown. You can use entry titles, URL titles and IDs to search by.
 
 If the editor has corresponding permissions, they will see "New Entry" button which allows creating new channel entry without leaving the edit screen of current entry. The can also edit related entry contents without leaving the page.
 
