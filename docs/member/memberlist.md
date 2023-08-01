@@ -17,6 +17,47 @@ Outputs a searchable list of members, including form filters to sort and limit t
 
 ## Parameters
 
+### `role_id=`
+
+    role_id="5"
+
+Restrict the output to members that belong to certain [role](control-panel/member-manager.md#member-roles).
+
+### `orderby=`
+
+    orderby="screen_name"
+
+The "orderby" parameter sets the display order of members. The possible options for this parameter are the built-in member fields - including, but not limited to: 
+    - `member_id`
+    - `role_id`
+    - `screen_name`
+    - `email`
+    - `join_date`
+    - `last_visit`
+    - `last_activity`
+    - `total_entries`
+    - `total_comments`
+    - `last_entry_date`
+    - `last_comment_date`
+
+When not set, defaults to [Member List - Order](control-panel/settings/members.md#order-by)
+setting or [`memberlist_order_by` configuration override](general/system-configuration-overrides.md#memberlist_order_by)
+
+### `sort=`
+
+    sort="asc"
+    sort="desc"
+
+Set the order in which members are displayed.
+When not set, defaults to [Member List - Sort By](control-panel/settings/members.md#sort-by) setting or [`memberlist_sort_order` configuration override](general/system-configuration-overrides.md#memberlist_sort_order)
+
+### `limit=`
+
+    limit="30"
+
+Allows you to limit the number of members displayed.
+When not set, defaults to [Member List - Rows](control-panel/settings/members.md#total-results) setting or [`memberlist_row_limit` configuration override](general/system-configuration-overrides.md#memberlist_row_limit)
+
 ### `return=`
 
     return="member/memberlist"
