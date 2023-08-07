@@ -61,6 +61,15 @@ A channel can have any combination of fields and field groups assigned to it. Yo
 
 This tab allows you to create and assign category groups to your channel. A channel may have multiple category groups assigned, and groups can be created on the fly on this tab.
 
+![Channel Preferences - Categories settings](_images/cp-channel-categories-tab.png)
+
+For each category group assigned to a channel, the following per-group settings are available:
+
+| Setting         | Default | Description                                                                                 |
+| --------------- | ------- | ------------------------------------------------------------------------------------------- |
+| Allow multiple? | Yes     | When turned on, multiple categories from the group can be selected for entry                |
+| Required?       | No      | When turned on, selecting at least one category from the group is required to save an entry |
+
 ---
 
 ### Statuses tab

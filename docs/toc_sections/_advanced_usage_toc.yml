@@ -416,6 +416,8 @@
           href: development/models/category-field.md
         - name: Category Group Model
           href: development/models/category-group.md
+        - name: Category Group Settings Model
+          href: development/models/category-group-settings.md
         - name: Channel Entry Model
           href: development/models/channel-entry.md
         - name: Channel Field Group Model
