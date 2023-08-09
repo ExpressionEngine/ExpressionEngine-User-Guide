@@ -8,6 +8,51 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.3.9
+(Release: August 9, 2023)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/48371903?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Paul L Varner</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=projectnoontide" target="_BLANK">@projectnoontide</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Improved Control Panel accessibility for using screen readers
+- Resolved [#3623](https://github.com/ExpressionEngine/ExpressionEngine/issues/3623) where printing website pages could include graphical elements from the Dock.
+- Include Entry ID when searching in Relationship field; #3537
+- Added Utility and post-update check for duplicate Template Groups
+
+**Bug Fixes** 💃🐛
+
+- Resolved issue where it was not possible to save loaded revision if Fluid field has some fields deleted; 
+- Resolved [#3639](https://github.com/ExpressionEngine/ExpressionEngine/issues/3639) where is was not possible to save loaded revision with removed Grid rows; 
+- Resolved [#3529](https://github.com/ExpressionEngine/ExpressionEngine/issues/3529) where records for Grid and Relationship fields were still left in database after removing from Fluid
+- Resolved [#2666](https://github.com/ExpressionEngine/ExpressionEngine/issues/2666) where using Dynamic query caching caused pagination on Structure listing being inaccurate
+- Resolved issue where field group names were made lowercase in Fluid
+- Resolved [#3347](https://github.com/ExpressionEngine/ExpressionEngine/issues/3347) where members without permission to edit own entries could still access those with direct link
+- Resolved issue when selecting subfolder in file field was showing incorrect message in upload component
+- Resolved [#3634](https://github.com/ExpressionEngine/ExpressionEngine/issues/3634) where having MSM-shared upload directory would cause Pages to be saved to wrong site
+- Resolved issue where JavaScript error could be shown when accessing add-on settings
+- Resolved [#3595](https://github.com/ExpressionEngine/ExpressionEngine/issues/3595) where File field did not present explanation of assigned upload directory on other MSM site
+- Resolved issue where PHP warning could have been shown when using Grid with Pro Variables
+- Resolved [#3596](https://github.com/ExpressionEngine/ExpressionEngine/issues/3596) where duplicate entry dates could cause inconsistent ordering in Entry Manager
+- Resolved [#3538](https://github.com/ExpressionEngine/ExpressionEngine/issues/3538) where validation for Field Group name was too strict
+- Resolved [#723](https://github.com/ExpressionEngine/ExpressionEngine/issues/723) where some language strings were still using "member groups" instead of "roles"
+
+**Developers** 💻
+
+- Moved dependencies for ExpressionEngine Pro to system vendor-build folder; [#3666](https://github.com/ExpressionEngine/ExpressionEngine/issues/3666)
+- Resolved [#442](https://github.com/ExpressionEngine/ExpressionEngine/issues/442) where some code was not formatted well
+
 ## Version 7.3.8
 (Release: July 20, 2023)
 
