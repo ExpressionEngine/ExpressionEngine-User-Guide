@@ -17,7 +17,7 @@ lang: php
 
 **class `Mime_type`**
 
-ExpressionEngine uses the Mime Type class whenever a file's, or buffer's, Mime type needs to be determined. Additionally, it is used to dertermine if a file is an image, and to determine if a file is safe for uploading. This class is a library, so you have to load the Mime Type library before using it:
+ExpressionEngine uses the Mime Type class whenever a file's, or buffer's, Mime type needs to be determined. Additionally, it is used to determine if a file is an image, and to determine if a file is safe for uploading. This class is a library, so you have to load the Mime Type library before using it:
 
     ee()->load->library('mime_type');
 

@@ -34,7 +34,7 @@ When an update is available, you'll see the version number in the control panel 
 
 **Upgrade Steps**
 1. Backup files and Database
-2. Confirm all add-ons are updated and compatiable with new major ExpressionEngine version
+2. Confirm all add-ons are updated and compatible with new major ExpressionEngine version
 3. Test in staging environment
 4. Review the [Version Notes](installation/version-notes.md) for any version-specific changes that you may need to make to your installation.
 

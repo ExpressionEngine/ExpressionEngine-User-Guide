@@ -101,6 +101,12 @@ In order to avoid conflicts with multiple instances of the Parse tag, both singl
 
 In order to avoid conflicts with multiple instances of the Parse tag, both single and paired, you can use the alias `{exp:pro_variables:pair}` for tag pair use. It is identical to the Parse tag, but meant for tag pair use only.
 
+You can also use [variable modifiers](templates/variable-modifiers.md) on pro variables when using them in a tag pair:
+
+    {exp:pro_variables:parse}
+      Encrypted text var: {my_text:encrypt}
+    {/exp:pro_variables:parse}
+
 ## Label tag
 
     {exp:pro_variables:label var="my_var"}

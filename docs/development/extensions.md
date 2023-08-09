@@ -36,7 +36,7 @@ Extension hook created successfully!
 
 ```
 
-NOTE: If you are using the command above to add an extention to an existing add-on, please see the [Updating Existing Add-ons](development/modernizing-existing-add-ons.md)
+NOTE: If you are using the command above to add an extension to an existing add-on, please see the [Updating Existing Add-ons](development/modernizing-existing-add-ons.md)
 
 TIP: Files that interact with ExpressionEngine core hooks are referred to as "extensions" because they extend the functionality of ExpressionEngine.
 

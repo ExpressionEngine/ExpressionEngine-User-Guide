@@ -123,7 +123,7 @@ NOTE: **Note:** Multiple calls to `add_field()` are cumulative.
 
 **Creating an id field**
 
-There is a special exception for creating id fields. A field with type id will automatically be assinged as an `INT(9) auto_incrementing` Primary Key:
+There is a special exception for creating id fields. A field with type id will automatically be assigned as an `INT(9) auto_incrementing` Primary Key:
 
     ee()->dbforge->add_field('id');
     // gives id INT(9) NOT NULL AUTO_INCREMENT
@@ -213,7 +213,7 @@ Executes a `TABLE` rename:
 | Parameter     | Type           | Description                                                                        |
 | ------------- | -------------- | ---------------------------------------------------------------------------------- |
 | \$table       | `String`       | The table to add the column to                                                     |
-| \$field       | `Array`        | The column defintition (see `add_field()` for details)                             |
+| \$field       | `Array`        | The column definition (see `add_field()` for details)                             |
 | \$after_field | `String`       | The field that should come before this new field, leave empty to be the last field |
 | Returns       | `CI_DB_result` | The result of the `ALTER TABLE` query                                              |
 
@@ -254,7 +254,7 @@ Used to remove a column from a table:
 | Parameter | Type           | Description                                            |
 | --------- | -------------- | ------------------------------------------------------ |
 | \$table   | `String`       | The table to add the column to                         |
-| \$field   | `Array`        | The column defintition (see `add_field()` for details) |
+| \$field   | `Array`        | The column definition (see `add_field()` for details) |
 | Returns   | `CI_DB_result` | The result of the `ALTER TABLE` query                  |
 
 The usage of this method is identical to `add_column()`, except it alters an existing column rather than adding a new one. In order to change the name you can add a `name` key into the field defining array:

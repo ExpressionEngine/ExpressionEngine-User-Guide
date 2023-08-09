@@ -19,12 +19,12 @@ The Path Helper file contains functions that permits you to work with file paths
 
 ## Available Functions
 
-### `set_realpath($path[, $check_existance = FALSE])`
+### `set_realpath($path[, $check_existence = FALSE])`
 
 | Parameter         | Type     | Description                                  |
 | ----------------- | -------- | -------------------------------------------- |
 | \$path            | `String` | Path                                         |
-| \$check_existance | `Bool`   | Whether to check if the path actually exists |
+| \$check_existence | `Bool`   | Whether to check if the path actually exists |
 | Returns           | `String` | An absolute path                             |
 
 This function will return a server path without symbolic links or relative directory structures. An optional second argument will cause an error to be triggered if the path cannot be resolved.

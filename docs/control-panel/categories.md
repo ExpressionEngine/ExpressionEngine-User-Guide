@@ -23,7 +23,7 @@ Category groups are _collections_ of categories that can be assigned to channels
 
 **Control Panel Location: `Content > Categories > New/Edit Category`**
 
-Catagories have the following settings:
+Categories have the following settings:
 
 - **Name** -- The name of the new category. The name may include spaces.
 - **URL title** -- The human readable category name used in the URL when using [Category URL Titles in Links](control-panel/settings/content-design.md).
@@ -31,6 +31,13 @@ Catagories have the following settings:
 - **Images** -- This field is designed to allow you to associate an image with the category.
 - **Parent category** -- This drop-down list allows you to create a hierarchical relationship between categories. The list dynamically contains all existing categories for this category group. Selecting a parent category means that the new category will be a "child" of the parent in the hierarchy. The "None" option is available and will make the new category a "top level" category with no parent.
 - **Custom Fields** -- Any [custom category fields](#fields-tab) that exist for this category group will be included in the form.
+
+The categories can be saved by clicking "Save" button or pressing `Ctrl`+`s` (`cmd`+`s`) on keyboard. Upon saving, the category editing page remains open so you can make other changes.
+
+Extra saving options are also available from the dropdown menu under "Save": 
+- "Save & New" - opens a new category form after saving
+- "Save & Close" - redirects to categories list after saving
+- "Clone to New Category" - saves the changes into a new category. The current category is used as a "template" and remains unchanged.
 
 ## Create/Edit Category Groups
 

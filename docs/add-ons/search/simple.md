@@ -182,6 +182,22 @@ With this parameter, you can specify the css class you want the form to have, en
 
 With this parameter, you can specify the css id you want the form to have.
 
+### `orderby=`
+
+    orderby="entry_date"
+
+The "orderby" parameter sets the display order of the entries. The available values for this property are `entry_date`, `most_comments`, `recent_comment`, `title`, `status`, `entry_id`, `url_title`, `edit_date`, `comment_total`, `expiration_date`, `view_count_one`, `view_count_two`, `view_count_three`, `view_count_four`.`
+
+If this parameter is not set, it will default to ordering by entry date.
+
+### `sort=`
+
+    sort="asc"
+
+    sort="desc"
+
+The sort order can be "asc" (ascending order or "oldest item first") or "desc" (descending order or "newest item first"). If you do not use a sort order the default is desc.
+
 ## Variables
 
 There are no specific variables associated with the Simple Search Form. You may use the [{path=''}](templates/globals/path.md) Global Variable to create a link to an Advanced Search Form if you wish.

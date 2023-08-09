@@ -81,7 +81,7 @@ Encodes the string with the set encryption driver and then base64 encodes that.
 
 ### `decode($data, $key = '')`
 
-Decodes an encoded string by first base64 decodeing it, then passing the string off to the driver for its decoding process.
+Decodes an encoded string by first base64 decoding it, then passing the string off to the driver for its decoding process.
 
 | Parameter | Type     | Description                                                |
 | --------- | -------- | ---------------------------------------------------------- |

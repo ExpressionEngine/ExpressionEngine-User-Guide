@@ -77,19 +77,22 @@ The default member profile theme to be used in the Member Profile area of your s
 
 ![sort by](/_images/member_sort_by.png)
 
-Specifies the sorting criteria to be used. Choices are: Total Posts, Screen Name, Total Comments, Total Entries, Join Date.
+Specifies the default sorting criteria to be used by `{exp:members:memberlist}` tag. Choices are: Total Posts, Screen Name, Total Comments, Total Entries, Join Date.
+Can also be changed using [`memberlist_row_limit` configuration override](general/system-configuration-overrides.md#memberlist_row_limit).
 
 ### Order by
 
 ![order by](/_images/member_order_by.png)
 
-Specifies whether to show the list in _Ascending_ or _Descending_ order.
+Specifies whether to show the `{exp:members:memberlist}` list in _Ascending_ or _Descending_ order.
+Can also be changed using [`memberlist_order_by` configuration override](general/system-configuration-overrides.md#memberlist_order_by).
 
 ### Total results
 
 ![total results](/_images/member_total_results.png)
 
-Specifies the number of results to return by default.
+Specifies the number of results that `{exp:members:memberlist}` tag will display by default.
+Can also be changed using [`memberlist_row_limit` configuration override](general/system-configuration-overrides.md#memberlist_row_limit).
 
 ### Enable new member notifications?
 

@@ -70,7 +70,7 @@
         - name: Find and Replace
           href: add-ons/pro-search/find-and-replace.md
         - name: Upgrade from Low Search
-          href: add-ons/pro-search/upgrade-from-low-search.md		  
+          href: add-ons/pro-search/upgrade-from-low-search.md
         - name: Development
           items:
             - name: Creating your own Filter
@@ -98,7 +98,7 @@
         - name: Fieldtype
           href: add-ons/pro-variables/fieldtype.md
         - name: Upgrade from Low Variables
-          href: add-ons/pro-variables/upgrade-from-low-variables.md		  
+          href: add-ons/pro-variables/upgrade-from-low-variables.md
         - name: Development
           items:
             - name: Fieldtype Bridge
@@ -132,10 +132,18 @@
       href: cli/usage.md
     - name: Built In Commands
       items:
+        - name: Add-on Management
+          href: cli/built-in-commands/addons.md
+        - name: Add-on Generator
+          href: cli/built-in-commands/make-addon.md
+        - name: Backup Database
+          href: cli/built-in-commands/backup-database.md
         - name: Clear Cache
           href: cli/built-in-commands/cache-clear.md
         - name: Command Generator
           href: cli/built-in-commands/make-command.md
+        - name: Config Management
+          href: cli/built-in-commands/config-management.md
         - name: Migrations
           href: cli/built-in-commands/migrate.md
         - name: List
@@ -154,7 +162,7 @@
 
 - name: Entry Cloning
   href: channels/entry_cloning.md
-  
+
 - name: Front-end Content Management
   items:
     - name: Overview

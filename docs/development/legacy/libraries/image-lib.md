@@ -326,4 +326,4 @@ The clear method resets all of the values used when processing an image. You wil
 
 Returns all detected errors formatted as a string.
 
-    echo ee()->image_lib->diplay_errors();
+    echo ee()->image_lib->display_errors();

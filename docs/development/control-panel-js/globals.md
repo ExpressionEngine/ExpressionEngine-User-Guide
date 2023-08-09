@@ -46,7 +46,7 @@ Username of currently logged in member
 
 ### `lang`
 
-Object of language strings avaible for JavaScript function in member's preferred language
+Object of language strings available for JavaScript function in member's preferred language
 
     text: EE.lang.loading
 
