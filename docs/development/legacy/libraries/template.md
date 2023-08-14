@@ -477,7 +477,7 @@ Array containing single variables within `TMPL::$tagdata`.
 
 Array containing variable pairs within `TMPL::$tagdata`.
 
-### `TMPL::fetch_param($which[, $default = FALSE])`
+### `fetch_param($which[, $default = FALSE])`
 
 | Parameter | Type     | Description                           |
 | --------- | -------- | ------------------------------------- |
@@ -517,3 +517,65 @@ Write message to template log in Output Profiler.
 | ----------- | --------- | --------------------------------------------------------------- |
 | \$str       | `String`  | Log message                                                     |
 | \$details   | `String`  | More detailed log message, initially hidden behind "read more"  |
+
+
+### `parse_globals($str)`
+
+| Parameter   | Type      | Description                                                     |
+| ----------- | --------- | --------------------------------------------------------------- |
+| \$str       | `String`  | Parsed tempate                                                  |
+
+Parses global variables like the currently logged in member's information, system variables, paths, action IDs, CAPTCHAs. Typically stuff that should only be done after caching to prevent  any manner of changes in the system or who is viewing the page to affect the display.
+
+This function would also strip ExpessionEngine comments from the code. It is being run automatically on each front-end page request, however if you are using TMPL library for other types of requests, you might need to call it manually.
+
+### `show_404()`
+
+Show a 404 page whether one is set in the config or not
+
+### `fetch_template($template_group, $template, $show_default = true, $site_id = '')`
+
+| Parameter        | Type      | Description                                                     |
+| ---------------- | --------- | --------------------------------------------------------------- |
+| \$template_group | `String`  | Template group name                                             |
+| \$template       | `String`  | Tempate name                                                    |
+| \$show_default   | `Bool`    | If `true`, show template from default group in site             |
+| \$site_id        | `Int`     | Site ID                                                         |
+
+Fetch Template Data
+
+Takes a Template Group, Template, and Site ID and will retrieve the Template and its metadata from the database (or file)
+
+### `fetch_and_parse($template_group = '', $template = '', $is_embed = false, $site_id = '', $is_layout = false)`
+
+| Parameter        | Type      | Description                                                     |
+| ---------------- | --------- | --------------------------------------------------------------- |
+| \$template_group | `String`  | Template group name                                             |
+| \$template       | `String`  | Tempate name                                                    |
+| \$is_embed       | `Bool`    | Whether processed template is an embedded template              |
+| \$site_id        | `Int`     | Site ID                                                         |
+| \$is_layout      | `Bool`    | Whether processed template is a layout template                 |
+
+Fetch and Process Template
+
+Determines what template to process, fetches the template and its preferences, and then processes all of it
+
+### `no_results()`
+
+Return template chunk contained inside `{if no_results}...{/if}`
+
+If a tag/class has no results to show, it can call this method. Any `no_results`` variable in  the tag will be followed. May be 404 page, content, or even a redirect.
+
+### `remove_ee_comments($str)`
+
+| Parameter   | Type      | Description                                                     |
+| ----------- | --------- | --------------------------------------------------------------- |
+| \$str       | `String`  | Parsed tempate                                                  |
+
+Remove all EE Code Comment Strings
+
+EE Templates have a special EE Code Comments for site designer notes and are removed during Template processing.
+
+### `sync_from_files()`
+
+Synchronize templates between database and files
