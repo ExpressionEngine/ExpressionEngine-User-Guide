@@ -225,4 +225,4 @@ If ExpressionEngine License Validation is enabled for the add-on, this will retu
 
 | Parameter | Type      | Description         |
 | --------- | --------- | ------------------- |
-| Returns   | `String`  |  Possible license statuses: (valid, invalid, na, trial)  |
+| Returns   | `String`  |  Possible license statuses: (valid, invalid, na, trial, expired)  |
