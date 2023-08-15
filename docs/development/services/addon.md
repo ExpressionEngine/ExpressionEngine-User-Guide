@@ -218,3 +218,11 @@ Get the add-on Provider
 | Parameter | Type                                      | Description         |
 | --------- | ----------------------------------------- | ------------------- |
 | Returns   | `ExpressionEngine\Core\Provider` | The add-on provider |
+
+### `checkCachedLicenseResponse()`
+
+If ExpressionEngine License Validation is enabled for the add-on, this will return the status of the license. You can enable License Validation in the add-on management section of your vendor account. Please note, by enabling license validation through ExpressionEngine.com, you agree that you will not disable any functionality of a live site.
+
+| Parameter | Type      | Description         |
+| --------- | --------- | ------------------- |
+| Returns   | `String`  |  Possible license statuses: (valid, invalid, na, trial)  |
