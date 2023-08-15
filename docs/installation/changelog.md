@@ -8,6 +8,46 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.3.11
+(Release: August 15, 2023)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2423727?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">swierczek</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=swierczek" target="_BLANK">@swierczek</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Added display of seconds for revisions and autosaves; [#3644](https://github.com/ExpressionEngine/ExpressionEngine/issues/3644)
+- Enabled additional caching in Structure
+- Reduced the number of SQL queries when performing search in Entry Manager
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#200](https://github.com/ExpressionEngine/ExpressionEngine/issues/200) where template layouts did not properly work with Channel Form
+- Resolved [#1788](https://github.com/ExpressionEngine/ExpressionEngine/issues/1788) where HTML Buttons were loaded with Channel Form even when not in use
+- Resolved issue where the status indicator was not displayed after searching in the Relationships field.
+- Resolved [#3686](https://github.com/ExpressionEngine/ExpressionEngine/issues/3686) when having Minimum rows setting for File Grid higher than 1 would prevent entry from saving
+- Resolved conflicts in scoped dependency functions
+- Resolved issue where Channel form grid has duplicated label for every single row
+- Resolved [#3680](https://github.com/ExpressionEngine/ExpressionEngine/issues/3680) where term Snippet was still used in error message
+- Resolved issue where Download link for files using on-local storage adapters did not work
+- Resolved [#3383](https://github.com/ExpressionEngine/ExpressionEngine/issues/3383) where loading File Grid fields with many rows was slow
+- Resolved issue where PHP variable was not defined properly
+- Resolved issue where navigating subfolders in File Manager did not retain filers and sorting
+- Fixed issue when styling in Grid field was not accurate when sorting
+- Resolved [#532](https://github.com/ExpressionEngine/ExpressionEngine/issues/532) where index template could be deleted but then immediately recreated
+- Resolved [#3667](https://github.com/ExpressionEngine/ExpressionEngine/issues/3667) where all members with access to Template Manager could access System Templates 
+
 ## Version 7.3.10
 (Release: August 11, 2023)
 
