@@ -131,7 +131,9 @@ if ($result->isValid())
 $field_id = $new_field->m_field_id;
 ```
 
-### Accessing a member field from a member model instance by member field ID
+### Accessing a custom member field from a member model instance by member field ID
+
+Please note, this is the way to access custom member fields. To access built-in member fields, see below.
 
 ```php
 $member_id = 3;  // Example member ID
@@ -141,7 +143,9 @@ $member = ee('Model')->get('Member', $member_id)->first();
 echo $member->$field_column_name;
 ```
 
-### Accessing a member field from a member model instance by member field short name
+### Accessing a custom member field from a member model instance by member field short name
+
+Please note, this is the way to access custom member fields. To access built-in member fields, see below.
 
 ```php
 $member_id = 3;  // Example member ID
@@ -152,4 +156,14 @@ $field_column_name = 'm_field_id_'.$field->m_field_id;
 
 $member = ee('Model')->get('Member', $member_id)->first();
 echo $member->$field_column_name;
+```
+
+
+### Accessing built-in member fields from a member model instance
+
+```php
+$member_id = 3;  // Example member ID
+
+$member = ee('Model')->get('Member', $member_id)->first();
+echo $member->screen_name;
 ```
