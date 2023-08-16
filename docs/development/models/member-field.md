@@ -130,3 +130,26 @@ if ($result->isValid())
 // The field ID is now available.
 $field_id = $new_field->m_field_id;
 ```
+
+### Accessing a member field from a member model instance by member field ID
+
+```php
+$member_id = 3;  // Example member ID
+$field_column_name = 'm_field_id_1';  // Based on the field ID being 1
+
+$member = ee('Model')->get('Member', $member_id)->first();
+echo $member->$field_column_name;
+```
+
+### Accessing a member field from a member model instance by member field short name
+
+```php
+$member_id = 3;  // Example member ID
+
+// Based on the member field short name being `first_name`
+$field = ee('Model')->get('MemberField')->filter('m_field_name', 'first_name')->first();
+$field_column_name = 'm_field_id_'.$field->m_field_id;
+
+$member = ee('Model')->get('Member', $member_id)->first();
+echo $member->$field_column_name;
+```
