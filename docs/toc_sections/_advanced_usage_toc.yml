@@ -326,6 +326,8 @@
           href: development/services/consent.md
         - name: Cookie
           href: development/services/cookie.md
+        - name: Cookie Registry
+          href: development/services/cookie-registry.md
         - name: CSV Library
           href: development/services/csv.md
         - name: Encrypt Service
@@ -426,6 +428,8 @@
           href: development/models/comment.md
         - name: Comment Subscription Model
           href: development/models/comment-subscription.md
+        - name: Cookie Settings Model
+          href: development/models/cookie-settings.md
         - name: CP Log Model
           href: development/models/cp-log.md
         - name: Developer Log Model
