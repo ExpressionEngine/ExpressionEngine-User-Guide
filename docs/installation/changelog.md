@@ -37,6 +37,10 @@
 - Resolved issue where PHP notice was shown when running updater using PHP 8.2
 - Resolved issue where the user was redirected to different page after saving Front-End Editing Settings
 
+**Developers** 💻
+
+- Updated testing suite to use Cypress 12
+
 ## Version 7.3.11
 (Release: August 15, 2023)
 
