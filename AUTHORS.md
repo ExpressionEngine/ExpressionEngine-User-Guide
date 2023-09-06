@@ -17,6 +17,7 @@ If an entry is incorrect or duplicated, add or correct the entry in `.mailmap` i
 - Derek Jones <derek.jones@ellislab.com>
 - Doug Black Jr <dougblackjr@gmail.com>
 - Douglas Black <dougblackjr@gmail.com>
+- Eric Swierczek <2423727+swierczek@users.noreply.github.com>
 - Erwin Romkes <hello@stoneandstorm.com>
 - Gareth Davies <hello@garethtdavies.com>
 - Gavin * JCOGS <gavin@jcogs.net>
@@ -54,7 +55,7 @@ If an entry is incorrect or duplicated, add or correct the entry in `.mailmap` i
 - Simon Job <simon@job.id.au>
 - Stefan Rechsteiner <info@stefanrechsteiner.com>
 - Stephen G <45797159+stephengalbraith@users.noreply.github.com>
-- Stephen G <45797159+zdravvy@users.noreply.github.com>
+- zdravvy <45797159+zdravvy@users.noreply.github.com>
 - Terry Leigh Britton <terrybritton@users.noreply.github.com>
 - Tom Jaeger <Tom@PacketTide.com>
 - TomJaeger <Tom@PacketTide.com>
