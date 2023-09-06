@@ -8,7 +8,7 @@ The ExpressionEngine user guide is written in human-readable Markdown and uses a
 
 ### Prerequisites
 
-Building the docs requires Node and npm.
+Building the docs requires Node and npm (latest stable version).
 
 In the root of the repository, install all the dependencies:
 
@@ -29,6 +29,10 @@ To dynamically rebuild on any file changes:
 The documentation css and js files are located under `theme/assets-src`.
 
 To build the theme assets, run `npm run buildAssets`. You can also dynamically rebuild the assets when a file changes: `npm run watchAssets`.
+
+### Viewing local changes
+
+Manually load `/build/index.html` in your browser to view your local build. For example, `file:///Users/<username>/Documents/ExpressionEngine-User-Guide/build/index.html`. You can use the side navigation to navigate to different local files, but the search functionality always takes you to the live version at docs.expressionengine.com.
 
 ## Contributing
 
