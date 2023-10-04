@@ -773,6 +773,10 @@ If five entries are being displayed per page, then for the fourth entry on the s
 
 **BONUS:** Since the Search module utilizes channel variables, {absolute_count} is also available to the Search Results tag.
 
+### `{absolute_index}`
+
+Similar to `absolute_count` but starts at 0 instead of 1. So the first entry will have value of "0" and the second entry will have a value of "1" etc.
+
 ### `{absolute_results}`
 
 This variable will always display the absolute total number of results that are returned by the tag, regardless of pagination.
@@ -946,6 +950,10 @@ The date the entry was submitted in GMT. This variable is **not** localized for 
     {gmt_edit_date format="%Y %m %d"}
 
 The date on which the entry was last edited in GMT. This variable is **not** localized for each user's date settings. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
+
+### `{index}`
+
+Similar to `count` but starts at 0 instead of 1. So the first entry will have value of "0" and the second entry will have a value of "1" etc.
 
 ### `{ip_address}`
 
