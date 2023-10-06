@@ -11,13 +11,18 @@ lang: php
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# The addon.setup.php File
+# The Add-On Setup File
 
 [TOC]
 
-Starting with version 3.0 each add-on in ExpressionEngine must have an `addon.setup.php` file in its package directory. This file provides descriptive data about a specific add-on such as author, name, and version. See the [Addon Service](development/services/addon.md) for API access.
+## Overview
 
-## Format
+Starting with version 3.0 each add-on in ExpressionEngine must have an `addon.setup.php` file in its package directory. This file provides descriptive data about a specific add-on, such as author, name, and version. Below we walk through the format and available keys. However, most of the time, the CLI will take care of generating and updating this file as needed for you.
+
+
+TIP:When using the CLI, your add-on setup file will automatically be created for you. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
+
+## Anatomy Of The Add-On Setup File
 
 The file must return an associative array. For example:
 
@@ -46,7 +51,7 @@ This is the name of the company or individual responsible for the add-on. This v
 
     'author_url' => 'https://example.com'
 
-This is the URL associated with the add-on. This value is used in manual display for plugins, as such this is a **required** key for all plugins.
+This is the URL associated with the add-on. This value is used in manual display for add-ons, as such this is a **required** key for all add-ons.
 
 ### `name`
 
@@ -58,7 +63,7 @@ This is the name of the add-on. This value is used in the Add-On Manager as the 
 
     'description' => 'Displays a friendly "Hello world!" message.'
 
-This is a brief description of the add-on. This value is used in the manual display for plugins, as such this is a **required** key for all plugins.
+This is a brief description of the add-on. This value is used in the manual display for add-ons, as such this is a **required** key for all add-ons.
 
 ### `version`
 
@@ -101,7 +106,7 @@ This indicates whether or not the add-on provides a plugin that should be made a
       )
     )
 
-This is an associative array of the fieldtypes the add-on contains where the key corresponds to the fieldtype, `ft.hello_world.php` in the above example. Each fieldtype defines its name which is used when creating or editing Channel Fields.
+This is an associative array of the fieldtypes the add-on contains where the key corresponds to the fieldtype, `ft.hello_world.php` in the above example. Each fieldtype defines its name, which is used when creating or editing Channel Fields.
 
 As of 3.1.0 fieldtypes can specify their compatibility. When editing a Channel Field the fieldtype options will be restricted to those fieldtypes that have the same compatibility. ExpressionEngine's native fieldtypes have the following compatibilities:
 
@@ -124,7 +129,7 @@ As of 3.1.0 fieldtypes can specify their compatibility. When editing a Channel F
       }
     )
 
-This is an associative array of services to register on the [Dependency Injection Container](development/architecture.md#dependencies). This is typically used to help you place class construction code in a single place that can be easily called throughout your app. If your service code is written to be unit-testable, you may have several classes you need to insert through dependency injection. Instead of having to copy and paste boiler plate code to set up your service throughout your add-on, you can just register it in the Dependency Injection Container and call it from your add-on like this:
+This is an associative array of services to register on the [Dependency Injection Container](development/architecture.md#dependencies). This is typically used to help you place class construction code in a single place that can be easily called throughout your app. If your service code is written to be unit-testable, you may have several classes you need to insert through dependency injection. Instead of having to copy and paste boilerplate code to set up your service throughout your add-on, you can just register it in the Dependency Injection Container and call it from your add-on like this:
 
     ee('example:MyService');
 
@@ -230,3 +235,6 @@ It is also possible to set up class aliases to an arbitrary FQCN. The example be
     'aliases' => [
       'MyVendor\Services\ClassName' => 'AnotherVendor\Services\ClassName',
     ],
+
+## Accessing Add-On Information From Another Add-on
+See the [Addon Service](development/services/addon.md) for API access.

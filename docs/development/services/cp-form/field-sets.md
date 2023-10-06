@@ -33,13 +33,13 @@ It's important to note that while Field Sets are built to contain multiple Field
 
 ## API Reference
 
-**class `ExpressionEngine\Library\Cp\Form\Set`**
+**class `ExpressionEngine\Library\CP\Form\Set`**
 
 [TOC=3]
 
 ### `toArray()`
 
-Returns the entire `Cp\Form\Set` object into an array. Note that all child elements are converted to an array as well.
+Returns the entire `CP\Form\Set` object into an array. Note that all child elements are converted to an array as well.
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |

@@ -163,7 +163,6 @@ NOTE: **Note:** As shown earlier, the `FROM` portion of your query can be specif
 | \$table   | `String`              | The table to `JOIN`                                                                           |
 | \$cond    | `String`              | The condition to join `ON`                                                                    |
 | \$type    | `String`              | The type of `JOIN` to perform: `LEFT`, `RIGHT`, `OUTER`, `INNER`, `LEFT OUTER`, `RIGHT OUTER` |
-| \$alias   | `String`              | The alias for the JOIN query                                                                  |
 | Returns   | `CI_DB_active_record` | The Active Record object                                                                      |
 
 Permits you to write the `JOIN` portion of your query:
@@ -182,13 +181,6 @@ If you need a specific type of JOIN you can specify it via the third parameter o
 
     ee()->db->join('comments', 'comments.id = blogs.id', 'left');
     // Produces: LEFT JOIN comments ON comments.id = blogs.id
-
-If you need to assign an alias to your `JOIN` you can specify it via the fourth parameter of the function.  
-
-    ee()->db->join('comments', 'comments.id = exp_blogs.id', 'left', 'observations');
-    // Produces: LEFT JOIN comments observations  ON observations.id = exp_blogs.id
-
-NOTE: **Note:** When an alias is specified the normal 'protected' processing of table names in your condition is suspended. Therefore if an alias is being used, other tables referenced need to be fully expanded **in the condition**.  
 
 ### `where($key[, $value = NULL[, $escape = TRUE]])`
 

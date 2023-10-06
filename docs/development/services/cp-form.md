@@ -7,17 +7,17 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Cp/Form Service
+# CP/Form Service
 
 [TOC]
 
-The Cp/Form Service allows for the creation of Shared Form View data using an object oriented interface. 
+The CP/Form Service allows for the creation of Shared Form View data using an object oriented interface. 
 
 TIP: Note this requires PHP >= 7.1
 
 ## Usage
 
-The below shows The Cp/Form Service at its simplest; every form can contain multiple groups, which can contain multiple field sets, which can contain multiple fields.
+The below shows The CP/Form Service at its simplest; every form can contain multiple groups, which can contain multiple field sets, which can contain multiple fields.
 
 ### Basic 
 ```
@@ -53,7 +53,7 @@ $form->toArray();
 ```
 ## API Reference
 
-**class `ExpressionEngine\Library\Cp\Form`**
+**class `ExpressionEngine\Library\CP\Form`**
 
 This object contains the complete outline for your Shared Form View array. For simple forms, all you'll have to do is call the Service using EE's loader, but for more complex Forms, you have quite a few options available. 
 
@@ -65,7 +65,7 @@ Will output the Form object as a Tabbed format array form.
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-| Returns | `Cp\Form` | `$this`, the Form object to help in chaining |
+| Returns | `CP\Form` | `$this`, the Form object to help in chaining |
 
 ### `isTab()`
 
@@ -81,7 +81,7 @@ Will output the Form object as a linear array form (the default)
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-| Returns | `Cp\Form` | `$this`, the Form object to help in chaining |
+| Returns | `CP\Form` | `$this`, the Form object to help in chaining |
 
 ### `getGroup($group_name)`
 
@@ -104,7 +104,7 @@ Removes the specified group from the Form object
 
 ### `toArray()`
 
-Returns the entire Cp\Form object into an array compatible with the Shared Form View layer. Note that all child elements are converted to an array as well.
+Returns the entire CP\Form object into an array compatible with the Shared Form View layer. Note that all child elements are converted to an array as well.
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -112,7 +112,7 @@ Returns the entire Cp\Form object into an array compatible with the Shared Form 
 
 ### `render()`
 
-Returns the entire Cp\Form object as a string for use within the Control Panel.
+Returns the entire CP\Form object as a string for use within the Control Panel.
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -124,16 +124,16 @@ Sets the Shared Form View layer to set the form input's `enctype` to multipart/f
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-| Returns | `Cp\Form` | `$this`, the Form object to help in chaining |
+| Returns | `CP\Form` | `$this`, the Form object to help in chaining |
 
 ### `addAlert($alert_name)`
 
-Sets the Form to render specific Cp/Alert objects
+Sets the Form to render specific CP/Alert objects
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
 | \$alert_name | `string` | The name for the Alert |
-| Returns | `Cp\Form` | `$this`, the Form object to help in chaining |
+| Returns | `CP\Form` | `$this`, the Form object to help in chaining |
 
 ### `removeAlert($alert_name)`
 
@@ -152,7 +152,7 @@ Will return the specified `Form\Button` object if it exists, or prepare and retu
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
 | \$name | `string` | The name for the Button |
-| Returns | `Cp\Form\Button` | The Button object ready for use |
+| Returns | `CP\Form\Button` | The Button object ready for use |
 
 ### `removeButton($name)`
 
@@ -170,7 +170,7 @@ Will return the specified `Form\Fields\Hidden` object if it exists, or prepare a
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
 | \$name | `string` | The name for the Button |
-| Returns | `Cp\Form\Fields\Hidden` | The Hidden Field object |
+| Returns | `CP\Form\Fields\Hidden` | The Hidden Field object |
 
 ### `removeHiddenField($name)`
 
@@ -190,7 +190,7 @@ Will include a custom HTML button with a link in lieu of the top right button of
 | \$text | `string` | The value to display on your custom button |
 | \$href | `string` | What URL to send the user to |
 | \$rel | `string` | For HTML directives |
-| Returns | `Cp\Form` | `$this`, the Form object to help in chaining |
+| Returns | `CP\Form` | `$this`, the Form object to help in chaining |
 
 ### `withOutActionButton()`
 
@@ -198,7 +198,7 @@ Will remove the set action button
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-| Returns | `Cp\Form` | `$this`, the Form object to help in chaining |
+| Returns | `CP\Form` | `$this`, the Form object to help in chaining |
 
 ### `setCpPageTitle($text)`
 
@@ -207,7 +207,7 @@ Sets the string to use for the Page Title within the Control Panel
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
 | \$text | `string` | The name for the page |
-| Returns | `Cp\Form` | `$this`, the Form object to help in chaining |
+| Returns | `CP\Form` | `$this`, the Form object to help in chaining |
 
 ### `getCpPageTitle()`
 
@@ -224,7 +224,7 @@ Sets the string to use for the Alternative Page Title within the Control Panel (
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
 | \$text | `string` | The name for the page |
-| Returns | `Cp\Form` | `$this`, the Form object to help in chaining |
+| Returns | `CP\Form` | `$this`, the Form object to help in chaining |
 
 ### `getCpPageTitle()`
 
@@ -241,7 +241,7 @@ Sets the internal Alerts ID to use specific to this Form (`alerts_name`)
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
 | \$text | `string` | The name for the page |
-| Returns | `Cp\Form` | `$this`, the Form object to help in chaining |
+| Returns | `CP\Form` | `$this`, the Form object to help in chaining |
 
 ### `getAlertsName()`
 
@@ -258,7 +258,7 @@ The URL to process the Form (`base_url`)
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
 | \$url | `string` | The URL the form should be processed at |
-| Returns | `Cp\Form` | `$this`, the Form object to help in chaining |
+| Returns | `CP\Form` | `$this`, the Form object to help in chaining |
 
 ### `getBaseUrl()`
 

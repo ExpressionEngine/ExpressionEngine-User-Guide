@@ -20,55 +20,70 @@ lang: php
 ## Properties
 
 ### Required
-#### `name` Unique, max 100
-#### `short_name` Unique, max 50
+
+- `name` Unique, max 100
+- `short_name` Unique, max 50
 
 ### Optional
-#### `role_id` Key, int
-#### `description`
-#### `is_locked` boolString
+
+- `role_id` Key, int
+- `description`
+- `is_locked` boolString
 
 ## Relationships
 
 #### `PrimaryMembers`
+
 [`Member`](development/models/member.md) instances are assigned to role as Primary Role.
 
 #### `Members`
+
 Members that are assigned to role. May or may not intersect with `PrimaryMembers`.
 
 NOTE: **Note:** To get full list of members assigned to role, use [`getAllMembers()`](#getallmembers) function.
 
 #### `ChannelLayouts`
+
 CP Publish page Layouts assigned to role.
 
 #### `Permissions`
+
 Permission records for the role.
 
 #### `RoleSettings`
+
 Role Settings.
 
 #### `RoleGroups`
+
 Groups that the role belongs to.
 
 #### `AssignedChannels`
+
 Channels assigned to role.
 
 #### `AssignedModules`
+
 Modules assigned to role.
 
 #### `AssignedStatuses`
+
 Entry Statuses assigned to role.
 
 #### `AssignedTemplates`
+
 Templates that the role members can access.
 
 #### `AssignedTemplateGroups`
+
 Template Groups that the role members can edit.
 
 #### `AssignedUploadDestinations`
+
 Upload Destination where role members can manage the files.
 
 #### `EmailCache`
+
 Email Cache records for the role.
 
 ## Methods
@@ -99,19 +114,23 @@ Checks whether member role has certain permission
 | Returns   | `Bool` | `TRUE` if permission has been granted |
 
 ## Events
+
 Saving with this model will trigger the following events:
-`afterSave`
+
+- `afterSave`
 
 ## Examples
 
-#### Get a Role
-```
+### Get a Role
+
+```php
 $role_id = 6;
 $role = ee('Model')->get('Role', $role_id)->first();
 ```
 
-#### Get all Members of a Role
-```
+### Get all Members of a Role
+
+```php
 // Get the Role Model.
 $role = ee('Model')->get('Role', $role_id)->first();
 
@@ -122,8 +141,9 @@ $members = $role->Members;
 $usernames = $members->pluck('username');
 ```
 
-#### Add Role Members
-```
+### Add Role Members
+
+```php
 // Get the Role Model.
 $role = ee('Model')->get('Role', $role_id)->first();
 
@@ -147,9 +167,9 @@ if ($result->isValid())
 }
 ```
 
+### Change Role Name
 
-#### Change Role Name
-```
+```php
 // Get role object.
 $role_id = 6;
 $role = ee('Model')->get('Role')->filter('role_id', $role_id)->first();
@@ -166,9 +186,9 @@ if ($result->isValid())
 }
 ```
 
+### Create a New Role
 
-#### Create a New Role
-```
+```php
 // Create a Role Group Model
 $role = ee('Model')->make('Role');
 

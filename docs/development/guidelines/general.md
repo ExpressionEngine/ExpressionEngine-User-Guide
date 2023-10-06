@@ -301,7 +301,7 @@ When aligning multiple lines (e.g. in an associative array), use spaces instead 
 
 ## Compatibility
 
-Unless specifically mentioned in your add-on's documentation, all code must be compatible with PHP version 5.3.10+. Additionally, do not use PHP functions that require non-default libraries to be installed unless your code contains an alternative method when the function is not available, or you explicitly document that your add-on requires said PHP libraries.
+Unless specifically mentioned in your add-on's documentation, all code must be compatible with PHP version 7.2.5+. Additionally, do not use PHP functions that require non-default libraries to be installed unless your code contains an alternative method when the function is not available, or you explicitly document that your add-on requires said PHP libraries.
 
 ## Use of ee()-&gt;session-&gt;cache
 

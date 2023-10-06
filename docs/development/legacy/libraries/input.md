@@ -30,9 +30,9 @@ This class is initialized automatically.
 
 You are not required to use this class to call the incoming data from the superglobal arrays, it will still be available through the superglobals themselves. However, the input class does offer some benefits.
 
-The superglobal methods all allow the specification of an optional second parameter that lets you run the data through the [XSS filter](security). It's enabled by setting the second parameter to `TRUE` (boolean).
+All of the superglobal methods allow the specification of an optional second parameter that lets you run the data through the [XSS filter](security). It's enabled by setting the second parameter to `TRUE` (boolean).
 
-Lastly, the superglobal methods will check to see if the item is set and return `FALSE` (boolean) if not. This lets you conveniently use data without having to test whether an item exists first. In other words, normally you might do something like this:
+Lastly, the superglobal methods will check to see if the item is set and return `FALSE` (boolean) if not. This lets you conveniently use data without testing whether an item exists first. In other words, normally you might do something like this:
 
     if ( ! isset($_POST['something']))
     {
@@ -175,7 +175,7 @@ The input library contains two methods for manipulating cookies. One for setting
 | \$expire  | `Integer` | When the cookie should expire, if left blank the time is set to the past and the cookie will expire immediately |
 | Returns   | `Void`    |                                                                                                                 |
 
-Sets cookie based on name and value. The advantage to using this function over the standard PHP function is EE will automatically add the cookie domain, cookie prefix, and cookie path as specified in the preferences. Those are helpful for making these cookies unique to EE and not interfering with other cookies set for your site by other software.
+Sets cookie based on name and value. The advantage of using this function over the standard PHP function is EE will automatically add the cookie domain, cookie prefix, and cookie path as specified in the preferences. Those are helpful for making these cookies unique to EE and not interfering with other cookies set for your site by other software.
 
 ### `delete_cookie($name)`
 
@@ -184,4 +184,4 @@ Sets cookie based on name and value. The advantage to using this function over t
 | \$name    | `String` | Name of the cookie |
 | Returns   | `Void`   |                    |
 
-Cleanly delete a cookie. The advantage to using this function over the standard PHP function is EE will automatically add the cookie domain, cookie prefix, and cookie path as specified in the preferences.
+Cleanly delete a cookie. The advantage of using this function over the standard PHP function is EE will automatically add the cookie domain, cookie prefix, and cookie path as specified in the preferences.
