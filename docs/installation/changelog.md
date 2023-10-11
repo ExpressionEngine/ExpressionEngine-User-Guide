@@ -27,12 +27,16 @@
 
 **Bug Fixes** 💃🐛
 
-- Resolved [#3636](https://github.com/ExpressionEngine/ExpressionEngine/issues/3636) where searching in File Manager while having Upload Directory selected did not include files in subfolders
-- Resolved [#2814](https://github.com/ExpressionEngine/ExpressionEngine/issues/2814) where Date picker wasn't always showing calendar when manually entering date into a date field
-- Resolved [#3718](https://github.com/ExpressionEngine/ExpressionEngine/issues/3718) where edit links were showing up in Relationship field even for entries where user had no permissions
-- Resolved issue where PHP notice was shown when running updater using PHP 8.2
-- Resolved issue where the user was redirected to different page after saving Front-End Editing Settings
-- Resolved issue where using undefined layout variables in tag parameters would cause unexpected results
+- Resolved [#3766](https://github.com/ExpressionEngine/ExpressionEngine/issues/3766) where using invalid modifier when chaining on-the-fly image manipulations would cause PHP warning
+- Resolved [#3762](https://github.com/ExpressionEngine/ExpressionEngine/issues/3762) where selection of checkboxes in Grid with values containing single quotes was not re-populated after saving an entry
+- Resolved [#3743](https://github.com/ExpressionEngine/ExpressionEngine/issues/3743) where invisible characters in filenames caused corrupt path errors
+- Updated ColorPicker fieldtype so it could be used with Channel Form
+- Resolved [#3754](https://github.com/ExpressionEngine/ExpressionEngine/issues/3754) where PHP deprecation notice could be shown when using File Grid with file column empty
+- Resolved [#3759](https://github.com/ExpressionEngine/ExpressionEngine/issues/3759) when pressing Ctrl+S with Redactor editor being in full screen mode would cause the field content to be erased
+- Resolved [#3772](https://github.com/ExpressionEngine/ExpressionEngine/issues/3772) where ExpressionEngine News dashboard widgets was not using date fomatting preference
+- Resolved issue where CP could sometimes redirect to invalid URL after idle session
+- Resolved some PHP 8.2 compatibility issues
+
 
 ## Version 7.3.12
 (Release: September 6, 2023)
