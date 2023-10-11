@@ -8,6 +8,36 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.3.13
+(Release: October 11, 2023)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/3705569?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Ignetic Media</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=ignetic" target="_BLANK">@ignetic</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/17011377?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Brad Akin</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bakin1999" target="_BLANK">@bakin1999</a></p></div></div></div></li>
+
+    </ul>
+</div>
+</div>
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#3766](https://github.com/ExpressionEngine/ExpressionEngine/issues/3766) where using invalid modifier when chaining on-the-fly image manipulations would cause PHP warning
+- Resolved [#3762](https://github.com/ExpressionEngine/ExpressionEngine/issues/3762) where selection of checkboxes in Grid with values containing single quotes was not re-populated after saving an entry
+- Resolved [#3743](https://github.com/ExpressionEngine/ExpressionEngine/issues/3743) where invisible characters in filenames caused corrupt path errors
+- Updated ColorPicker fieldtype so it could be used with Channel Form
+- Resolved [#3754](https://github.com/ExpressionEngine/ExpressionEngine/issues/3754) where PHP deprecation notice could be shown when using File Grid with file column empty
+- Resolved [#3759](https://github.com/ExpressionEngine/ExpressionEngine/issues/3759) when pressing Ctrl+S with Redactor editor being in full screen mode would cause the field content to be erased
+- Resolved [#3772](https://github.com/ExpressionEngine/ExpressionEngine/issues/3772) where ExpressionEngine News dashboard widgets was not using date fomatting preference
+- Resolved issue where CP could sometimes redirect to invalid URL after idle session
+- Resolved some PHP 8.2 compatibility issues
+
+
 ## Version 7.3.12
 (Release: September 6, 2023)
 
