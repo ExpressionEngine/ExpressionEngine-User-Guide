@@ -211,6 +211,8 @@
           href: channels/channel-form/categories.md
         - name: Development
           href: channels/channel-form/development.md
+    - name: Channel Field Properties
+      href: channels/fields.md
 
 #If you update fieldtypes besure to update listing on fieldtypes/overview page.
 - name: Fieldtypes
@@ -313,4 +315,3 @@
         href: comment/subscriptions.md
       - name: Control Panel
         href: comment/control-panel.md
-
