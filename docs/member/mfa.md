@@ -9,7 +9,7 @@
 
 # Multi-Factor Authentication
 
-Check out our video tutorial on setting up Multi-factor Authentication!
+Check out our video tutorial on setting up Multi-Factor Authentication!
 <div class="video-wrapper">
 <iframe src="https://www.youtube.com/embed/_QwB1ePxHfQ" title="Multi-factor authentication (MFA) in ExpressionEngine" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
