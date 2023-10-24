@@ -15,11 +15,17 @@ lang: ee
 
 [TOC]
 
-File fields utilize the built-in file browser to store uploaded files and images for your publishers. 
+File fields utilizes the built-in file browser to store uploaded files and images for your publishers. 
 
 ![file field](_images/field_file.png)
 
-NOTE: **Note:**Your site must have at least one upload directory before you can create a file field.
+NOTE: **Note:** Your site must have at least one upload directory before you can create a file field.
+
+File field allows browsing through file that have been already uploaded, as well as uploading new file - using the OS file picker interface or with drag and drop.
+
+![file field with file selected](_images/field_file_file.png)
+
+Once selected in the field, the file can be replaced by clicking <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/icon_edit.png" alt="edit icon"> icon. The field can be cleared by clicking <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/icon_remove.png" alt="remove icon"> icon (this would not remove the file from the system). You can also change the file metadata (such as title or description) by clicking <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/icon_edit_meta.png" alt="settings icon"> icon - note that file meta data will be changed globally throughout the system.
 
 ## Field Settings
 
