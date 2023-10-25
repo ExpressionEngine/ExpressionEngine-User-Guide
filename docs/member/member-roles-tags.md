@@ -13,7 +13,7 @@
 
 ## `{exp:member:roles}`
 
-The `{exp:member:roles}` tag allows you to display all groups that the member belongs to.
+The `{exp:member:roles}` tag allows you to display all roles that the member belongs to.
 
     {exp:member:roles}
       <p>{name} ({role_id}{if is_primary_role}, Primary Role{/if})</p>
@@ -25,7 +25,7 @@ The `{exp:member:roles}` tag allows you to display all groups that the member be
 
     member_id="147"
 
-Specifies a particular member's information to display. By default (if you do not include the member_id parameter, the tag will simply display information pertaining to the currently logged-in user.
+Specifies a particular member's information to display. By default (if you do not include the `member_id`` parameter), the tag will simply display information pertaining to the currently logged-in user.
 
 ### Variables
 
@@ -77,3 +77,29 @@ The `{exp:member:has_role}` tag allows you to display or hide its content depend
     member_id="147"
 
 Specifies a particular member's information to display. By default (if you do not include the member_id parameter, the tag will simply display information pertaining to the currently logged-in user.
+
+## `{exp:member:role_groups}`
+
+The `{exp:member:role_groups}` tag allows you to display role groups to which the member is assigned via his roles.
+
+    {exp:member:role_groups}
+      <p>{role_group_name} (#{role_group_id})</p>
+    {/exp:member:role_groups}
+
+### Parameters
+
+#### `member_id=`
+
+    member_id="147"
+
+Specifies a particular member's information to display. By default (if you do not include the `member_id`` parameter), the tag will display information pertaining to the currently logged-in user.
+
+### Variables
+
+#### `{role_group_id}`
+
+Role Group ID
+
+#### `{role_group_name}`
+
+Role Group name
