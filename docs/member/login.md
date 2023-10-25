@@ -88,9 +88,11 @@ Member password. This is a **required** field:
 
 ### Username
 
-Member username. This is a **required** field:
+Member username. This is a **required** field.
 
-    <label for="username">Username</label>
+NOTE: Starting with ExpressionEngine 7.4 the users are able to enter their email address into username field to log in.
+
+    <label for="username">Username / email</label>
     <input type="text" name="username" value="" maxlength="32" size="25" />
 
 
