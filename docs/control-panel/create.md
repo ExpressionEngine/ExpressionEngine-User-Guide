@@ -51,6 +51,9 @@ This can be done in two ways:
 - assign custom field to a [Field Group](/control-panel/field-manager/field-manager-settings.md#createedit-field-group) which is associated to the Channel
 - assign field directly to channel by editing [Channel preferences](control-panel/channels.md#fields-tab)
 
+In the [templates](templates/overview.md) you will be referencing the field by its short name. The short name of the field is usually displayed next to the field name in the publish form (<img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../_images/field_short_name.png" alt="field short name">) and will be copied to the clipboard when clicked. Displaying the short name can be turned on or off in the [Role](control-panel/member-manager.md) settings.
+
+Note that some field can be displayed with just single tags, while others would require tag pair with extra variables. More information can be found in the documentation for appropriate [field type](fieldtypes/overview.md).
 
 ## Date Tab
 
