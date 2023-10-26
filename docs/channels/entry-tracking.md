@@ -19,7 +19,7 @@ NOTE: **Note:** The view tracking counter works in conjunction with the `{exp:ch
 
 NOTE: **Note:** If you have page caching enabled this feature will not work.
 
-Some people have tags that are used to mimic a single-entry page without it being dynamic (e.g. by using `dynamic="no"` parameter). If you need Entry View Tracking to work for ANY combination that results in only one entry being returned by the tag (including channel query caching), you would need to set [`relaxed_track_views`](general/system-configuration-overrides.md#relaxed_track_views) configuration override.
+Some people have tags that are used to mimic a single-entry page without it being dynamic (e.g. by using `dynamic="no"` parameter). If you need Entry View Tracking to work for ANY combination that results in only one entry being returned by the tag (including channel query caching), you would need to set the [`relaxed_track_views`](general/system-configuration-overrides.md#relaxed_track_views) configuration override if your config file.
 
 ## Tracking Views
 
