@@ -647,7 +647,7 @@
         - name: Add-on Management
           href: cli/built-in-commands/addons.md
         - name: Add-on Generator
-          href: cli/built-in-commands/make-addon.md
+          href: development/addon-development-overview.md
         - name: Backup Database
           href: cli/built-in-commands/backup-database.md
         - name: Clear Cache
@@ -670,6 +670,12 @@
           href: cli/built-in-commands/make-prolet.md
         - name: Widget Generator
           href: cli/built-in-commands/make-widget.md
+    - name: Creating a Command
+      href: cli/creating-a-command.md
+    - name: Defining Input
+      href: cli/defining-input.md
+    - name: Displaying Output
+      href: cli/displaying-output.md
 
 
 - name: Entry Cloning
