@@ -74,13 +74,14 @@ Similar to PHP's `strtotime()`, the Localize class provides a way to take a pre-
 
 ## Human-readable time
 
-### `human_time([$timestamp = NULL[, $localize = TRUE[, $seconds = FALSE]]])`
+### `human_time([$timestamp = NULL[, $localize = TRUE[, $seconds = FALSE[, $include_time = TRUE]]]])`
 
 | Parameter   | Type      | Description                                                                                                                                                   |
 | ----------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | \$timestamp | `Integer` | Unix timestamp                                                                                                                                                |
 | \$localize  | `Boolean` | Boolean of whether to use the current member's timezone for localization (TRUE), or to use GMT (FALSE); or string of PHP timezone to use for the localization |
 | \$seconds   | `Boolean` | Whether or not to include seconds, overrides `include_seconds` hidden config                                                                                  |
+| \$include_time | `Boolean` | Whether or not to include time                                                                                                                             |
 | Returns     | `String`  | Human-readable date                                                                                                                                           |
 
 Returns a common human-readable date format conforming to ExpressionEngine's [default time formatting setting](control-panel/settings/general.md). This method is most commonly used to express dates in the control panel.
