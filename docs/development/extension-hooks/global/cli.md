@@ -18,39 +18,31 @@ lang: php
 | Parameter          | Type     | Description                                                              |
 | ------------------ | -------- | ------------------------------------------------------------------------ |
 | \$cli              | `Object` | Instance of CLI currently running                                        |
-| \$commandClassName | `String` | Class name of command to be executed                                     |
-| \$commandObject    | `Object` | Instance of command class to be executed                                 |
-| Returns            | `Object` | Modified instance of `$commandObject`                                    |
+| Returns            | `Void`   |                                                                          |
 
-Run tasks on every CLI request. Allows running the code before certain CLI command is run as well as modification of command class instance.
+Run tasks on every CLI request. Allows running the code before certain CLI command.
 
 How it's called:
 
-    $command = ee()->extensions->call('cli_boot', $this, $commandClass, $command);
+    $command = ee()->extensions->call('cli_boot', $this);
     if (ee()->extensions->end_script === true) {
         $this->complete('');
     }
 
-### `core_template_route($uri_string)`
+### `cli_before_handle($cli, $command, $commandClass)`
 
-| Parameter    | Type     | Description                                                              |
-| ------------ | -------- | ------------------------------------------------------------------------ |
-| \$uri_string | `String` | Current URI string                                                       |
-| Returns      | `Array`  | Array containing the name of the template group and template (see below) |
+| Parameter      | Type     | Description                                                              |
+| -------------- | -------- | ------------------------------------------------------------------------ |
+| \$cli          | `Object` | Instance of CLI currently running                                        |
+| \$commandClass | `String` | Class name of command to be executed                                     |
+| \$command      | `Object` | Instance of command class to be executed                                 |
+| Returns        | `Object` | Modified instance of `$command`                                          |
 
-Reassign the template group and template loaded for parsing.
+Run tasks right before CLI command is excuted. Allows modification of command class instance.
 
 How it's called:
 
-    $edata = ee()->extensions->call('core_template_route', ee()->uri->uri_string);
-    if (is_array($edata) && count($edata) == 2)
-    {
-        list($template_group, $template) = $edata;
+    $command = ee()->extensions->call('cli_before_handle', $this, $command, $commandClass);
+    if (ee()->extensions->end_script === true) {
+        $this->complete('');
     }
-
-Example of array to return:
-
-    array(
-        'template_group', // Template group name
-        'template'        // Template name
-    );
