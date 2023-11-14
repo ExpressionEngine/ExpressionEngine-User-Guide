@@ -33,6 +33,7 @@ These are the most commonly used models in ExpressionEngine. For a full list, se
 - [Channel Field Model](development/models/channel-field.md)
 - [Comment Model](development/models/comment.md)
 - [Comment Subscription Model](development/models/comment-subscription.md)
+- [Cookie Settings Model](development/models/cookie-settings.md)
 - [CP Log Model](development/models/cp-log.md)
 - [Developer Log Model](development/models/developer-log.md)
 - [Email Console Log Model](development/models/email-console-cache.md)

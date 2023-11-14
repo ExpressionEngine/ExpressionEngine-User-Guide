@@ -185,7 +185,7 @@ True, if the current field group is the first one.
 
 ### `last_group`
 
-    {fluid_content:first_group}
+    {fluid_content:last_group}
 
 True, if the current field group is the last one.
 
@@ -284,10 +284,10 @@ A fluid field can handle the output of all of those fields, as many as they add,
       {/fluid_field:seo_title}
       {fluid_field:seo_description}
         <meta name="description" content="{content}">
-      {/fluid_field:seo_description}    
-    {/fields}	
+      {/fluid_field:seo_description}
+    {/fields}
   {/fluid_field:seo_group}
-  
+
 {/fluid_field}
 ```
 
@@ -440,7 +440,7 @@ Radio and single select fields use single variables:
         <a href="{content}">Your Link</a>
       {/my_fluid_field:my_url}
     {/my_fluid_field}
-	
+
 ## Field Group Examples
 
 Field groups in fluid work exactly like fields do, with one extra tag pair ``{fields}...{/fields}`` required.
@@ -458,11 +458,11 @@ Field groups in fluid work exactly like fields do, with one extra tag pair ``{fi
           {my_fluid_field:my_email}
             {content:mailto title="Email about their dog" subject="Question about your dog" encode="no"}
           {/my_fluid_field:my_email}
-		  
+
 		{/fields}
-      {/my_fluid_field:my_field_group}	
+      {/my_fluid_field:my_field_group}
     {/my_fluid_field}
-	
+
 Field Group with Text and Relationship fields
 
 ### Field Group with Text and Relationship fields
@@ -474,7 +474,7 @@ Field Group with Text and Relationship fields
           {my_fluid_field:my_textarea}
             {content}
           {/my_fluid_field:my_textarea}
-	
+
           {my_fluid_field:my_relationship}
             {content status="open"}
               {if content:count == 1}<h3>Relationships ({content:total_results})</h3>{/if}
@@ -488,7 +488,7 @@ Field Group with Text and Relationship fields
               {/content:my_related_field_in_child_entry}
             {/content}
           {/my_fluid_field:my_relationship}
-		  
+
 	    {/fields}
 	  {/my_fluid_field:my_field_group}
     {/my_fluid_field}

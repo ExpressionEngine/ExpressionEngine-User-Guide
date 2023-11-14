@@ -302,6 +302,7 @@ A file field variable pair:
 
     {grid_field}
       {grid_field:my_image}
+          File title: {title}
           Extension: {extension}
           Upload date: {upload_date format="%Y %m %d"}
           URL: {url}

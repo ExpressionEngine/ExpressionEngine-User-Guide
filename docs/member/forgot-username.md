@@ -22,7 +22,7 @@ Output a forgotten username form that sends an email with instructions for addre
 
 			<input type="submit" name="submit" value="Submit" />
 
-    {/{exp:member:forgot_username_form}
+    {/exp:member:forgot_username_form}
 
 ## Parameters
 

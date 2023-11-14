@@ -52,7 +52,7 @@ class Amazing_add_on_tab
 
         $settings = [
             //array of settings
-        ]
+        ];
         return $settings;
     }
 

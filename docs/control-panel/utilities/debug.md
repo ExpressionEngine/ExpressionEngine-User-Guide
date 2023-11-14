@@ -15,6 +15,15 @@ The check are being run automatically when you visit the utility pages and also 
 
 [TOC]
 
+## Review Duplicate Template Groups
+
+**Control Panel Location: `Tools > Utilities > Duplicate Template Groups`**
+
+ExpressionEngine expects each template group name to be unique per site. We do have automated checks to prevent duplicates, however in very rare cases the checks could have been skipped leading to duplicate records for template groups in database.
+
+This utility helps to identify such cases and provide ability to remove or rename the duplicates.
+
+
 ## Debug Template Tags
 
 **Control Panel Location: `Tools > Utilities > Debug Template Tags`**
@@ -27,7 +36,7 @@ If it finds a tag that corresponds to the add-on that is missing or not installe
 
 Clicking on the tag name shows the list of templates where it is found.
 
-### Debug Fieldtypes
+## Debug Fieldtypes
 
 **Control Panel Location: `Tools > Utilities > Debug Fieldtypes`**
 

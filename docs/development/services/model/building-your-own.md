@@ -262,6 +262,7 @@ The available options include:
 | boolString | Cast to y/n       | Cast to boolean  |
 | yesNo      | Cast to y/n       | Cast to boolean  |
 | timestamp  | Cast to timestamp | Cast to DateTime |
+| pipeDelimited | Cast to string | Cast to array    |
 
 ## Composite Types
 
