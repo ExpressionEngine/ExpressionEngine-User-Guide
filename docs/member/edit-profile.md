@@ -122,7 +122,7 @@ The custom profile fields can be displayed individually by addressing them using
 
 ## Custom Profile Field Variable Pair
 
-All custom fields are output inside the ``{custom_profile_fields}`` varialble tag pair.
+All custom fields are output inside the ``{custom_profile_fields}`` variable tag pair.
 
         {custom_profile_fields}
             <p>
@@ -175,7 +175,7 @@ Text direction set for field (`rtl` or `ltr`)
 
 #### `{maxlength}`
 
-Max. length set for text fields
+Maximum length set for text fields
 
 #### `{field_type}`
 

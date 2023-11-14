@@ -26,10 +26,10 @@ NOTE: **Important:** In order for site visitors to be allowed to register for ac
 ### `form_class=`
 
     form_class="register"
-    
+
  ### `primary_role=`
 
-    primary_role="7"   
+    primary_role="7"
 
 This parameter allows you to specify the primary role to assign the new member, overriding the default member setting.
 
@@ -120,12 +120,12 @@ Please note you need to address those by ID and not name, e.g. `m_field_id_8`
     <label for="work_title">Work title</label>
     <input type="text" id="work_title" name="m_field_id_1" size="40" value="{if m_field_id_1}{m_field_id_1}{/if}" />
 
-And easier way to display the field's input is to use special tag:
+And easier way to display the field's input is to use the special tag:
 
     <label for="work_title">Work title</label>
     {field:work_title}
 
-Custom fields can also be output inside the ``{custom_fields}`` varialble tag pair.
+Custom fields can also be output inside the ``{custom_fields}`` variable tag pair.
 
         {custom_fields}
             <p>
@@ -203,7 +203,7 @@ This will show errors with the submitted password as well as password confirm.
 
 ### `{field:field_name}`
 
-Displays the custom field input form for the given field (substitute `field_name` with actual field name). Note that the field must be set as "visible on registration" in order to show up.
+Displays the custom field input form for the given field (substitute `field_name` with the actual field name). Note that the field must be set as "visible on registration" in order to show up.
 
 ## Example
 
