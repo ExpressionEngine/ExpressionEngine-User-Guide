@@ -13,14 +13,14 @@ lang: php
 
 # CLI Extension Hooks
 
-### `cli_boot($cli, $commandClassName, $commandObject)`
+### `cli_boot($cli)`
 
 | Parameter          | Type     | Description                                                              |
 | ------------------ | -------- | ------------------------------------------------------------------------ |
 | \$cli              | `Object` | Instance of CLI currently running                                        |
 | Returns            | `Void`   |                                                                          |
 
-Run tasks on every CLI request. Allows running the code before certain CLI command.
+Run tasks before every CLI request.
 
 How it's called:
 
@@ -29,7 +29,7 @@ How it's called:
         $this->complete('');
     }
 
-### `cli_before_handle($cli, $command, $commandClass)`
+### `cli_before_handle($cli, $commandClass, $command)`
 
 | Parameter      | Type     | Description                                                              |
 | -------------- | -------- | ------------------------------------------------------------------------ |
@@ -42,7 +42,7 @@ Run tasks right before CLI command is excuted. Allows modification of command cl
 
 How it's called:
 
-    $command = ee()->extensions->call('cli_before_handle', $this, $command, $commandClass);
+    $command = ee()->extensions->call('cli_before_handle', $this, $commandClass, $command);
     if (ee()->extensions->end_script === true) {
         $this->complete('');
     }
