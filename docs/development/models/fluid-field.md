@@ -15,6 +15,8 @@ lang: php
 
 **class `ExpressionEngine\Addons\FluidField\Model\FluidField`**
 
+This model is used to manipulate custom field which is being used inside a Fluid Field for certain Channel Entry.
+
 [TOC]
 
 ## Properties
@@ -22,6 +24,7 @@ lang: php
 - `id` Key
 - `fluid_field_id`
 - `entry_id`
+- `field_group_id`
 - `field_id`
 - `field_data_id`
 - `order`
@@ -29,7 +32,8 @@ lang: php
 ## Relationships
 
 - `ChannelEntry`
-- `ChannelFields`
+- `ChannelField`
+- `ChannelFieldGroup`
 - `FieldField`
 
 ## Methods
