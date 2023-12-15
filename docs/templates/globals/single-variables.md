@@ -251,6 +251,32 @@ NOTE: **Note:** Like the `{current_time}` variable, `{variable_time}` is availab
 
 The email address for the site, as specified in [Email Configuration](control-panel/settings/email.md).
 
+## Custom Global Variables
+
+You can define your own global variables as overrides in your `config.php` file or `index.php` file using `global_vars` property (which itself needs to be an associative array). These variables will be available to all of your templates.
+
+NOTE: Do not confuse these with [Site Template Variables](templates/variable.md), which are defined in the control panel.
+
+When using `index.php` file, you need set `global_vars` property in `$assign_to_config` array. For example:
+
+    $assign_to_config['global_vars'] = array(
+        'show_banner' => 'y',
+    );
+
+When using `config.php` file, you need to set the `$config` array variable. For example:
+
+    $config['global_vars'] = array(
+        'show_banner' => 'n',
+    );
+
+You can use the [environment variables](advanced-usage/env-support.md) for the values of global variables. For example:
+
+    $config['global_vars'] = array(
+        'show_banner' => $_ENV['SHOW_BANNER'],
+    );
+
+Note that the global variables defined in `config.php` file will be overridden by the global variables defined in `index.php` file when the name conflict occurs.
+
 ## Member Variables
 
 [TOC=3]

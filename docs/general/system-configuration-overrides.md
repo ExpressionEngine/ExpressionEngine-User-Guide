@@ -19,6 +19,8 @@ WARN: **Warning:** This article covers advanced topics.
 
 By default, ExpressionEngine's system settings are managed in the Control Panel and stored in the database, but these settings can be overridden with one of 3 configuration files: the main configuration file, the site index file, and the CP index file.
 
+You can also [set your own global variables](templates/globals/single-variables.md#custom-global-variables) in those files.
+
 ##### Main configuration file
 
 The **main configuration file**, found at `system/user/config/config.php`, is loaded every time the system is run, meaning that config overrides set in `config.php` always affect the system's configuration.
