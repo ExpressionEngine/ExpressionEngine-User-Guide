@@ -11,6 +11,8 @@
 ## Version 7.3.15
 (Release: January 16, 2024)
 
+NOTE: **Important:** This version includes important security updates.
+
 - **Contributors** 🙌
 <div class="max-w-7xl mx-autotext-center">
 <div class="space-y-8 sm:space-y-12">
@@ -86,7 +88,7 @@
 - Updated ColorPicker fieldtype so it could be used with Channel Form
 - Resolved [#3754](https://github.com/ExpressionEngine/ExpressionEngine/issues/3754) where PHP deprecation notice could be shown when using File Grid with file column empty
 - Resolved [#3759](https://github.com/ExpressionEngine/ExpressionEngine/issues/3759) when pressing Ctrl+S with Redactor editor being in full screen mode would cause the field content to be erased
-- Resolved [#3772](https://github.com/ExpressionEngine/ExpressionEngine/issues/3772) where ExpressionEngine News dashboard widgets was not using date fomatting preference
+- Resolved [#3772](https://github.com/ExpressionEngine/ExpressionEngine/issues/3772) where ExpressionEngine News dashboard widgets was not using date formatting preference
 - Resolved issue where CP could sometimes redirect to invalid URL after idle session
 - Resolved some PHP 8.2 compatibility issues
 
@@ -292,7 +294,7 @@
 - Resolved [#674](https://github.com/ExpressionEngine/ExpressionEngine/issues/674) where having conflicting member_id in Member Import XML file was causing SQL error
 - Resolved [#2178](https://github.com/ExpressionEngine/ExpressionEngine/issues/2178) where pagination in Entry Manager was not correct for people who only can edit their own entries
 - Resolved issue where Structure would show deprecation notice when using PHP 8.2
-- Resolved [issue](https://github.com/ExpressionEngine/ExpressionEngine/pull/3477) with Comments entry tag would show deprecation notice whhen using PHP 8.2
+- Resolved [issue](https://github.com/ExpressionEngine/ExpressionEngine/pull/3477) with Comments entry tag would show deprecation notice when using PHP 8.2
 - Resolved [#3402](https://github.com/ExpressionEngine/ExpressionEngine/pull/3406) where PHP 8.1 deprecation noticed showed when build editing entries with pages module installed
 - Resolved [issue](https://github.com/ExpressionEngine/ExpressionEngine/pull/3587) where uninstalled add-ons could have still have tab file called from Entry Manager
 - Resolved [#3397](https://github.com/ExpressionEngine/ExpressionEngine/pull/3400) where Template Routes page was showing deprecation notices when using PHP 8.2
@@ -427,7 +429,7 @@
 
 - Resolved issue where Entry Manager could show PHP error when some add-on was missing
 - Resolved issue where it was impossible to edit Categories when using phone
-- Resolved [#3259](https://github.com/ExpressionEngine/ExpressionEngine/issues/3259) where certain coditionals in templates could generate PHP warning
+- Resolved [#3259](https://github.com/ExpressionEngine/ExpressionEngine/issues/3259) where certain conditionals in templates could generate PHP warning
 - Resolved issue where MariaDB 10 could report the wrong version to the DB requirements checker
 
 ## Version 7.3.0
