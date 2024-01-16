@@ -8,6 +8,30 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.3.15
+(Release: January 16, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#3989](https://github.com/ExpressionEngine/ExpressionEngine/issues/3989) where Role permissions could have been saved during validation request
+- Resolved [#3749](https://github.com/ExpressionEngine/ExpressionEngine/issues/3749) where TLS 1.3 was showing up as option in email settings for PHP versions that don't support it
+- Resolved [#3860](https://github.com/ExpressionEngine/ExpressionEngine/issues/3860) where certain "Save" buttons did not scale properly on mobile devices
+- Resolved [#3884](https://github.com/ExpressionEngine/ExpressionEngine/issues/3884) where error could be shown using CLI `sync:conditional-fields` command when using PHP 8.2
+- Resolved issue where saving entry with Fluid field using groups could throw PHP error if field was removed from group
+
+
 ## Version 7.3.14
 (Release: October 24, 2023)
 
