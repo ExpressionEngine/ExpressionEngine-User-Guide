@@ -9,19 +9,25 @@
 
 # Member Manager
 
+[TOC=2-3]
+
+## Members Listing
+
 **Control Panel Location: `Members`**
 
-This page is used both to search and to browse through active members within your ExpressionEngine installation. Also, you can filter the members by member role and search members.
-
-This page also allows you to do the following:
-
-[TOC=2-3]
+This page is used both to search and to browse through members within your ExpressionEngine installation.
 
 ![Member Manager Control Panel Page](_images/cp-members.png)
 
+Filters and search input can be used to narrow down the list of members displayed. 
+
+The set of columns displayed can be customized using "Columns" dropdown. By default, the following columns are shown: Member ID, Name (which is composed out of avatar, username and screen name), Email, Roles, Join Date,Last Visit Date. Also each member row has "Actions" buttons that contains links to some common actions and a checkbox that allows performing bulk actions on selected members. When "Pending" is selected in Role filter, the options in bulk action dropdown are "Approve" and "Decline", otherwise "Remove" is the only option.
+
+In the Roles column all roles assigned to member are shown. When multiple roles are assigned, the primary role wouild have an indicator. If the member is pending, the columns does not say "Pending", but instead shows the role to which the member would be assigned once approved (with pending indicator) and a button to approve.
+
 ## Member Roles
 
-**Control Panel Location: `Members > Member Roles`**
+**Control Panel Location: `Members > Roles`**
 
 The _Member Roles_ area of the Control Panel permits you to manage your Member Roles. The member roles can be sorted by ID, Role Name, and Status.
 
@@ -31,7 +37,7 @@ You can assign multiple roles to a member.
 
 ### Create/Edit All Member Roles
 
-**Control Panel Location: `Members > Member Roles > Create/Edit`**
+**Control Panel Location: `Members > Roles > Create/Edit`**
 
 This sections allows you to set the various permissions and settings for the selected Member Role.
 
@@ -50,13 +56,15 @@ Edit the role by clicking its name in the list.
 
 ## Custom Member Fields
 
-**Control Panel Location: `Members > Member Fields`**
+**Control Panel Location: `Settings > Members > Member Fields`**
+
+The link to this section is also found on top of Member Listing page.
 
 The _Member Fields_ feature permits you to add fields to the member registration form and/or member profile and My Account areas.
 
 ### Create/Edit
 
-**Control Panel Location: `Members > Member Fields > New/Edit`**
+**Control Panel Location: `Settings > Members > Member Fields > New/Edit`**
 
 This section allows you to create or edit Member Fields.
 
@@ -112,7 +120,7 @@ This section has the following options:
 
 ## Ban Settings
 
-**Control Panel Location: `Members sidebar > Ban Settings`**
+**Control Panel Location: `Settings > Members > Ban Settings`**
 
 The User Banning section of the Control Panel allows you to ban users by IP address, email, or name.
 
