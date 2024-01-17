@@ -37,3 +37,5 @@ ExpressionEngine has the following built-in fieldtypes:
 - [Value Slider](/fieldtypes/value-slider.md)
 - [Toggle](/fieldtypes/toggle.md)
 - [URL](/fieldtypes/url.md)
+
+Additionally, more fieldtypes are available in [ExpressionEngine Add-on Store](https://expressionengine.com/add-ons) as add-ons that can be [installed](add-ons/overview.md#installing-add-ons)

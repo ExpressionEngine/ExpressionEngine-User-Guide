@@ -40,13 +40,23 @@ Character to separate multiple values. Either a new line (`\n`), a pipe (`|`) or
 
 ## Date
 
-Displays a date picker. To output anything other than a timestamp, use the `{exp:pro_variables:single}` tag. This takes the same parameters as the native Date field. Additionaly, use `modifier="relative"` to output a relative date string.
+Displays a date picker. To output anything other than a timestamp, use the `{exp:pro_variables:single}` tag. This takes the same parameters as the native Date field. Additionally, use `modifier="relative"` to output a relative date string.
 
 ### Code examples
 
     {exp:pro_variables:single var="my_var" format="%Y-%m-%d"}
 
     {exp:pro_variables:single var="my_var" modifier="relative"}
+
+## File
+
+Uses the native [File field](/fieldtypes/file.md). To output the variable, always use the `{exp:pro_variables:pair}` or `{exp:pro_variables:single}` tag where appropriate. If you try to address the variable by name only, it will return the content unparsed, e.g. `{file:XX:url}`. You can use File field [parameters](/fieldtypes/file.md#template-tag-usage) and [variables](/fieldtypes/grid.md#template-tags) using these tags. Additionally, one more parameter is available:
+
+### Parameters
+
+#### `modifier`
+
+Allows applying modifiers, which, among other, are used to apply [on-the-fly image manipulations](/fieldtypes/grid.md#on-the-fly-image-manipulations) to files
 
 ## Grid
 
@@ -56,7 +66,7 @@ Uses the native [Grid field](/fieldtypes/grid.md). All native types are availabl
 
 #### `modifier`
 
-Any of the available [modifiers](/fieldtypes/grid.md#modifiers), which will trigger the ouput the modifier provides.
+Any of the available [modifiers](/fieldtypes/grid.md#modifiers), which will trigger the output the modifier provides.
 
 ### Code examples
 
@@ -294,7 +304,7 @@ Limit the number of rows displayed.
 
 ## Text Input
 
-Displays a single line edit input field. The _maxlength_ property can be set as well as the _size_ of the input fied. You can also define a regular expression _pattern_ to validate the value, and the _text direction_ of the input field.
+Displays a single line edit input field. The _maxlength_ property can be set as well as the _size_ of the input field. You can also define a regular expression _pattern_ to validate the value, and the _text direction_ of the input field.
 
 ### Settings
 

@@ -2,14 +2,16 @@
 
 Generate, run and rollback migrations via the CLI.
 
+TIP: If you would like to make your own migrations, see [make:migration](cli/built-in-commands/make-migration.md) for details on how to generate a migration.
+
 Check out our video tutorial on running migrations and rolling back!
 <div class="video-wrapper">
 <iframe src="https://www.youtube.com/embed/iD0f6oVBd28?vq=HD1080" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
-## Generating a migration:
 
-- See [make:migration](cli/built-in-commands/make-migration.md) for how to generate a migration.
+
+[TOC]
 
 ## php eecli.php migrate:
 
@@ -39,9 +41,9 @@ Check out our video tutorial on running migrations and rolling back!
         Run migration only for specified addon.
 ```
 
-### Examples:
 
-### Running all migrations:
+
+## Running all migrations:
 
 The following commands will run all available migrations. They are aliases for each other.
 
@@ -54,7 +56,7 @@ The following commands will run all available migrations. They are aliases for e
 `php eecli.php migrate:all`
 
 
-### Running only core migrations:
+## Running only core migrations:
 
 The following commands will run all core migrations. They are aliases for each other.
 
@@ -64,26 +66,26 @@ The following commands will run all core migrations. They are aliases for each o
 
 `php eecli.php migrate:core`
 
-### Running only migrations for single addon:
+## Running only migrations for single addon:
 
 `php eecli.php migrate -a my_addon`
 
 `php eecli.php migrate:addon -a my_addon`
 
-### Running only migrations for all addons:
+## Running only migrations for all addons:
 
 `php eecli.php migrate --addons`
 
 `php eecli.php migrate:addon --all`
 
-### Rolling back one migration group:
+## Rolling back one migration group:
 
 `php eecli.php migrate:rollback`
 
-### Rolling back three migration groups:
+## Rolling back three migration groups:
 
 `php eecli.php migrate:rollback --steps=3`
 
-### Rolling back all migration groups:
+## Rolling back all migration groups:
 
 `php eecli.php migrate:reset`

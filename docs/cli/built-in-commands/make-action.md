@@ -1,6 +1,6 @@
 # make:action
 
-Action Generator -- Creates a new action for an add-on 
+Action Generator -- Creates a new action for an add-on
 
 ## Options list:
 

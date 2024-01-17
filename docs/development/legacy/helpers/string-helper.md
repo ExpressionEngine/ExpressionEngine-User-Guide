@@ -149,7 +149,7 @@ Removes any leading/trailing slashes from a string. Example:
 | \$trim      | `Bool`   | Whether to also trim the specified character |
 | Returns     | `String` | Reduced string                               |
 
-Reduces multiple instances of a particular character occuring directly after each other. Example:
+Reduces multiple instances of a particular character occurring directly after each other. Example:
 
     $string = "Fred, Bill,, Joe, Jimmy";
     $string = reduce_multiples($string,","); //results in "Fred, Bill, Joe, Jimmy"

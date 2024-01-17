@@ -169,7 +169,7 @@ Evaluates a string as PHP:
 | Parameter | Type       | Description            |
 | --------- | ---------- | ---------------------- |
 | \$str     | `String`   | String to limit        |
-| \$num     | `Interger` | Characters to limit to |
+| \$num     | `Integer`  | Characters to limit to |
 | Returns   | `String`   | Limited string         |
 
 Returns section of a string limited to a certain amount of characters but rounds the string up to the nearest word.
@@ -179,7 +179,7 @@ Returns section of a string limited to a certain amount of characters but rounds
 | Parameter | Type       | Description       |
 | --------- | ---------- | ----------------- |
 | \$str     | `String`   | String to limit   |
-| \$num     | `Interger` | Words to limit to |
+| \$num     | `Integer`  | Words to limit to |
 | Returns   | `String`   | Limited string    |
 
 Returns section of a string based on number of words.

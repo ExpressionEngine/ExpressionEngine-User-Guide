@@ -132,6 +132,15 @@ If a fieldtype is also compatible with other content types (such as `MemberField
       'MemberField'
     )
 
+### `modifiers`
+
+    'modifiers' => array(
+      'modifier_name',
+      'another_modifier_name'
+    )
+
+This property lists the [variable modifiers](development/modifiers.md) that the add-on provides.
+
 ### `services`
 
     'services' => array(

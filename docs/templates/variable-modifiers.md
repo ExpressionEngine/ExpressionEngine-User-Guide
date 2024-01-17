@@ -3,11 +3,16 @@
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2020, Packet Tide, LLC (https://packettide.com)
+    @copyright Copyright (c) 2003-2023, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
 # Variable Modifiers
+
+Check out our video tutorial on Variable Modifiers and applying multiple at once!
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/ccpZUbsbWnw?vq=HD1080&rel=0" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
 
 Most template variables can be modified for common formatting and output needs without requiring any plugins. For instance, making user-submitted content safe for use in a `<meta>` tag attribute, limiting to a certain number of characters, displaying currency, or as JSON to create structured data for SEO (search engine optimization). These modifiers apply to:
 
@@ -21,6 +26,14 @@ Most template variables can be modified for common formatting and output needs w
 - All add-ons that use native APIs for parsing variables in templates
 
 NOTE: **Note:** Some add-ons and components may have modifiers not listed here. For instance the [File Fieldtype](fieldtypes/file.md) has its own file information-related modifiers. The modifiers listed here are just those universally available.
+
+## Modifiers syntax
+
+The modifiers are being applied by adding the modifier name after the variable name, separated by a semicolon, e.g. `var_name:trim`.
+
+It is possible to apply several modifiers at the same time by chaining those, e.g. `var_name:trim:url_encode`. The modifiers would be applied left to right, so in this case the variable's content will first be trimmed and then URL-encoded.
+
+To avoid conflicts in parameter names when applying several modifiers, the parameters can be prefixed with the modifier name followed by semicolon. E.g. `{excerpt:limit characters='20'}` could be written as `{excerpt:limit limit:characters='20'}`. This allows writing constructions such as `{excerpt:limit:trim limit:characters='20' trim:characters='\n\r'}`. A prefixed parameter has a higher precedence than a non-prefixed parameter.
 
 ## Modifiers
 
@@ -100,6 +113,11 @@ Make the content safe to use as the value of a form field.
 
 ### `:json`
 
+| Parameter            | Default   |                                                                                                                             |
+| -------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------- |
+| double_encode=       | `yes`      | Whether or not to double encode already-encoded entities, e.g. should `&quot;` become `&amp;quot;`?                         |                           |
+| enclose_with_quotes= | `yes`     | Whether the output is automatically enclosed in quotes |
+
 Encode the content for JSON output.
 
     "headline": {title:json},
@@ -121,6 +139,8 @@ Outputs the length of the content in characters.
 | end_char=   | `&#8230;` | character to append when a limit terminates the content |
 
 Limits the content to the specified number of characters. Without `preserve_words='n'` may be fewer than the exact limit, as this retains whole words.
+
+Note that all HTML formatting will be stripped out automatically before applying limit modifier.
 
     {excerpt:limit characters='20'}
     {!-- A discussion&#8230; --}
@@ -261,7 +281,7 @@ URL encode the contents.
 | ----------------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | lowercase=        | `yes`                                                    | Whether to force a lowercase URL slug                                                        |
 | remove_stopwords= | `no`                                                     | Whether to remove common words (obeys site configuration `system/user/config/stopwords.php`) |
-| separator=        | `global-channel-word-seperator-label` (typically a dash) | The character to use as a word separator                                                     |
+| separator=        | `global-channel-word-separator-label` (typically a dash) | The character to use as a word separator                                                     |
 
 Create a URL slug from the content.
 

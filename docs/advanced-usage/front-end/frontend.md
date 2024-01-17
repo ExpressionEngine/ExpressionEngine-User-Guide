@@ -35,7 +35,7 @@ After editing data, content can be saved by one of two ways:
 ![save without reload](_images/ee-pro-save-reload.png)
 
 ## Unsaved Changes
-When a user edits data and has unsaved changes, Pro will create an autosave of the entry and alert the user via a notification on the edit window with unsaved changes. The autosave is triggerd based on the default autosave interval of 60 seconds. If you want to ensure users do not accidentally lose unsaved changes adjust the `[autosave_interval_seconds]` system config override to a lower interval between autosaves. A setting of 10 seconds is the recommendation.
+When a user edits data and has unsaved changes, Pro will create an autosave of the entry and alert the user via a notification on the edit window with unsaved changes. The autosave is triggered based on the default autosave interval of 60 seconds. If you want to ensure users do not accidentally lose unsaved changes adjust the `[autosave_interval_seconds]` system config override to a lower interval between autosaves. A setting of 10 seconds is the recommendation.
 
 ![unsaved changes](_images/pro_unsaved_changes.png)
 

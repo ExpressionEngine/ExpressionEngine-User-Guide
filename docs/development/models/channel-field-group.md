@@ -102,7 +102,7 @@ if ($result->isValid())
 }
 ```
 
-### Asign a group to a Channel
+### Assign a group to a Channel
 
 ```php
 // Get the Field Group object.

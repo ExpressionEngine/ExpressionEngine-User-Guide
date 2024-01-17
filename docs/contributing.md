@@ -17,7 +17,7 @@ We're excited that you want to get involved in the ExpressionEngine project. The
 ## Contributing to the Docs
 Good documentation is the foundation of good software and your contributions can help make good documentation great.
 
-If you're an ExpressionEngine user, then you have something to add. There is always room for more examples, clarifications, corrections and updates. Jump in and make a pull request or give us a heads up by reporting an issues. Please visit the [Docs Contributing Guidelines](https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/blob/6.dev/CONTRIBUTING.md) to learn how to get started.
+If you're an ExpressionEngine user, then you have something to add. There is always room for more examples, clarifications, corrections and updates. Jump in and make a pull request or give us a heads up by reporting an issues. Please visit the [Docs Contributing Guidelines](https://github.com/ExpressionEngine/ExpressionEngine-User-Guide/blob/7.dev/CONTRIBUTING.md) to learn how to get started.
 
 *Related ExpressionEngine University articles:* [Contributing to ExpressionEngine Documentation](https://u.expressionengine.com/article/contributing-to-expressionengine-documentation)
 

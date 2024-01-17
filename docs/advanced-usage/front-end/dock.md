@@ -46,10 +46,14 @@ The Control Panel button on the Dock will open the site's Control Panel in a new
 ## Prolets
 Prolets are add-on components that reveal some of add-on's functionality for the Control Panel to the front-end, making it possible to edit data directly on the page where it belongs.
 
-### Entries Prolet
-Pro is currently shipped with the Entries prolet. Clicking on the Entries prolet opens a prolet window with all entries currently listed. Allowing you to quickly find and edit other entries in your site.
+### Built-in Prolets
+ExpressionEngine is shipped with the Entries and Publish prolets. 
+
+Clicking on the Entries prolet opens a prolet window with all entries currently listed. Allowing you to quickly find and edit other entries in your site.
 
 ![dock entries](_images/ee-pro-dock-entries.png)
+
+Publish prolets allows creation of new entry directly from the page you are viewing. Clicking Publish prolet button brings the window with channel selection, and picking the channel brings entry form.
 
 ### Custom Prolets
 Developers may create third-party prolets that can be installed with add-ons. Read the [docs on creating prolets](development/prolets.md) for more information on how to create and install third-party prolets.

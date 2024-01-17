@@ -212,7 +212,7 @@ Resize the image.
 | height   | `Number` | `*required`| Height to resize to, px |
 | quality  | `0`-`100`| `75`| Image quality, % |
 | maintain_ratio   | `y` / `n` | `y`| Keep image ratio (yes/no)  |
-| master_dim        | `auto`/`width`/`height` | `auto`| Master dimention when keeping image ratio |
+| master_dim        | `auto`/`width`/`height` | `auto`| Master dimension when keeping image ratio |
 
 ### `:crop`
 
@@ -251,7 +251,7 @@ Convert the image to WEBP format. Additionally all the `:resize` manipulations c
 | height   | `Number` | | Height to crop to, px |
 | quality  | `0`-`100`| `75`| Image quality, % |
 | maintain_ratio   | `y` / `n` | `y`| Keep image ratio (yes/no)  |
-| master_dim        | `auto`/`width`/`height` | `auto`| Master dimention when only width of height is specified |
+| master_dim        | `auto`/`width`/`height` | `auto`| Master dimension when only width of height is specified |
 
 
 ### `:resize_crop`
@@ -266,7 +266,7 @@ Resize the image and then crop it.
 | resize:height   | `Number` | `*required`| Height to resize to, px |
 | resize:quality  | `0`-`100`| `75`| Resized image quality, % |
 | resize:maintain_ratio   | `y` / `n` | `y`| Keep image ratio when resizing (yes/no)  |
-| resize:master_dim        | `auto`/`width`/`height` | `auto`| Resizing master dimention |
+| resize:master_dim        | `auto`/`width`/`height` | `auto`| Resizing master dimension |
 | crop:width    | `Number` | `*required`| Width to crop to |
 | crop:height   | `Number` | `*required`| Height to crop to |
 | crop:quality  | `0`-`100`| `75`| Cropped image quality, % |

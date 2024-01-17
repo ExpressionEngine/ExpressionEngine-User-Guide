@@ -36,7 +36,7 @@ How it's called:
 | \$this     | `Object` | The current Forum object                          |
 | \$function | `String` | The name of the template being parsed.            |
 | \$element  | `String` | A string containing the contents of the template. |
-| Returns    | `String` | Modified temlate (`$element`)                     |
+| Returns    | `String` | Modified template (`$element`)                     |
 
 Allows additional processing of forum templates that are not associated with an existing forum method call. Can be used in conjunction with the forum_add_template hook to parse entirely new templates.
 

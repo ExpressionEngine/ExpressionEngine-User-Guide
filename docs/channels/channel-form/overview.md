@@ -290,7 +290,6 @@ If using a field with options, such as Checkboxes or Dropdown, you can display t
     {custom_fields}
       <label for="{field_name}">{if required}* {/if}{field_label}</label>
       {field_instructions}
-      {formatting_buttons}
 
       {if error}
         <p class="error">{error}</p>
@@ -383,7 +382,6 @@ Within this loop, you have the following single variables:
     {field_id}
     {error}
     {field_instructions}
-    {formatting_buttons} - Shows the EE formatting buttons if have that option selected for that field
     {display_field} - Displays the field as it appears in the CP (using the fieldtype API display_field method)
     {text_direction}
     {rows} - For textareas

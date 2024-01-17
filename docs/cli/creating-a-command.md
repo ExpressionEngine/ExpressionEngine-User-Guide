@@ -44,7 +44,7 @@ class CommandHelloWorld extends Cli {
 
 ### Required Variables
 
-Each commmand is required to have a nummber of public variables that are required for finding and executing, as well as displaying pertinent information.
+Each command is required to have a number of public variables that are required for finding and executing, as well as displaying pertinent information.
 
 `$name`: The name of your Command.
 `$description`: The basic gist of what your command does. This should be limited to one line

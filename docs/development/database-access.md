@@ -77,7 +77,7 @@ class Memberlist extends AbstractRoute
 }
 ```
 
-Both of these examples would produce a list similiar to below:
+Both of these examples would produce a list similar to below:
 
 ```
 admin
@@ -88,4 +88,4 @@ Douglas
 Richmond
 ```
 
-This is only the begining of how you can interact with the database through your add-on. Explore the [Model Service](development/services/model.md) and the legacy [Database Driver](development/legacy/database/index.md) to learn how to add more power to your add-on.
+This is only the beginning of how you can interact with the database through your add-on. Explore the [Model Service](development/services/model.md) and the legacy [Database Driver](development/legacy/database/index.md) to learn how to add more power to your add-on.

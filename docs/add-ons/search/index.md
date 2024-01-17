@@ -23,7 +23,7 @@ The [Advanced Search Form](add-ons/search/advanced.md) tag allows you to display
 
 ## Displaying Search Results
 
-The [Displaying Search Results](add-ons/search/results.md) page details the tags available for controling how you display results from your searches.
+The [Displaying Search Results](add-ons/search/results.md) page details the tags available for controlling how you display results from your searches.
 
 ## Search Syntax
 

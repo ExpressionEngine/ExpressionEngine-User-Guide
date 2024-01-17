@@ -15,7 +15,7 @@
 
 This is the area where you'll create content for your site by publishing new Entries to your Channels. If you have more than one Channel, moving your cursor over the Publish menu will show all of your Channels and allow you to select one.
 
-TIP: **Tip:** Site builders can customize the display of the Publish Page on a per Channel bases by creating a custom layout. Just go to the [Channel manager](control-panel/channels.md) and click 'layouts' to access the [publish layout](control-panel/channels.md#publish-layouts).
+TIP: **Tip:** Site builders can customize the display of the Publish Page on a per Channel bases by creating a custom layout. Just go to the [Channel manager](control-panel/channels.md) and click 'layouts' to access the [Publish Layouts](control-panel/channels.md#publish-layouts).
 
 ![Control Panel Create Entry Page](_images/cp-create.png)
 
@@ -39,15 +39,18 @@ NOTE: **Note:** If you let the system create your URL Title for you it will conv
 
 ### Entry Fields
 
-The names and types of entry fields displayed will be determined by what [Fields](control-panel/field-manager/field-manager-settings.md) you have defined for this channel. If an entry field is set to be "hidden" by default, it will have to be expanded by clicking on the field name before content can be entered.
+The names and types of entry custom fields displayed will be determined by what [Fields](/fieldtypes/overview.md) you have defined for this channel. 
 
-### Save Revision
+If an entry field is set to be "hidden" by default, it will have to be expanded by clicking on the field name before content can be entered.
 
-Allows the content editor to force a revision save.
+The fields can be [conditionally hidden](control-panel/field-manager/conditional-fields.md).
 
-### Submit
+In order for the field to be available when publishing or editing an entry, it needs to be assigned to the channel the entry is in.
 
-The Submit button allows you to save the entry and publish it to your site.
+This can be done in two ways:
+- assign custom field to a [Field Group](/control-panel/field-manager/field-manager-settings.md#createedit-field-group) which is associated to the Channel
+- assign field directly to channel by editing [Channel preferences](control-panel/channels.md#fields-tab)
+
 
 ## Date Tab
 

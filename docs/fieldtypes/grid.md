@@ -33,11 +33,13 @@ Specifies the maximum number of rows this Grid can have. For example, if you ent
 
 Enables moving the Grid rows with drag & drop to change the order
 
-#### Always use a vertical grid layout?
+#### Grid layout
 
-The fields within the grid will be always stacked vertically on the publish form.
+**Auto (default)** - the fields within the grid will be placed in a horizontal row on bigger screens, and stacked vertically on smaller screens or when there is not enough space on the page.
 
-When turned off, the fields within the grid will be placed in a horizontal row next to each other in bigger screens, and stacked vertically on smaller screens.
+**Vertical layout** - The fields within the grid will always be stack vertically on the publish form.
+
+**Horizontal layout** - The fields within the grid will always be stacked horizontally on the publish form.
 
 ### Grid Fields
 
@@ -207,7 +209,7 @@ Given a column name containing numeric data, returns the average of the column v
 
     {grid_field:highest column="height"}
 
-Given a column name containing numeric data, returns the hightest of the column values in that field, or in the dataset paired down by additional criteria such as search.
+Given a column name containing numeric data, returns the highest of the column values in that field, or in the dataset paired down by additional criteria such as search.
 
 ### `:lowest`
 
@@ -300,6 +302,7 @@ A file field variable pair:
 
     {grid_field}
       {grid_field:my_image}
+          File title: {title}
           Extension: {extension}
           Upload date: {upload_date format="%Y %m %d"}
           URL: {url}
