@@ -52,9 +52,9 @@ Edit the role by clicking its name in the list.
 
 **Control Panel Location: `Members > Roles > Create/Edit`**
 
-The roles have a lot of settings, most of which are related to permissions granted to member that belong to the role. Note that permissions are additive, that is if a member belongs to multiple roles, they will have all the permissions granted by all the roles they belong to.
+The roles have a lot of settings, most of which are permissions granted to member that belong to the role. Note that permissions are additive, that is if a member belongs to multiple roles, they will have all the permissions granted by all the roles they belong to.
 
-You need to be specifically careful assigning the preferenced marked with shield icon, as those are related to security of your website.
+You need to be specifically careful assigning the permissions marked with shield icon, as these are related to the security of your website.
 
 The role settings are grouped into the following tabs.
 
@@ -62,7 +62,7 @@ The role settings are grouped into the following tabs.
 
 #### Role tab
 
-This tab contains the generic settings for the role, incling name, description, color label and some common settings, such as security lock of MFA requirement. You can also assign role to Role Group on this tab.
+This tab contains the generic settings for the role, including name, description, color label, security preferences such as requiring MFA. You can also assign role to Role Group on this tab, as and as some other common settings
 
 #### Website Access tab
 
@@ -70,7 +70,7 @@ Use this tab to set up how the members in this role can interact with your websi
 
 #### CP Access tab
 
-This tab is used to set up what sections of the Control Panel the members in this role can access. You can also set up what actions they can perform in each section. There are also settings that define the look of certain Control Panel pages.
+This tab is used to set up the sections of the Control Panel members in this role can access. You can also set up specific actions they can perform in each section. There are also settings that define the look of certain Control Panel pages.
 
 The settings here are grouped into sections for each subset of Control Panel functionality.
 
@@ -82,47 +82,47 @@ Defines whether and how the members in this role can administrate the [Channels]
 
 ##### Channel Entries
 
-Defines the permissions that members have for creating/editing/deleting entries in each of the channels.
+Defines the permissions that members in this role have for creating/editing/deleting entries in each of the channels.
 
 ##### Files
 
-Defines actions can perform on the files as well as administrative permissions on [upload directories](control-panel/file-manager/upload-directories.md).
+Defines actions members in this role can perform on the files as well as administrative permissions on [upload directories](control-panel/file-manager/upload-directories.md).
 
 Note: when editing channel entries with File fields, the members would need access to respective upload directories to modify those.
 
 ##### Members
 
-Defines whether the members of role can access Member Manager and perform certain actions on members and roles.
+Defines whether the members of this role can access Member Manager and perform certain actions on members and roles.
 
 ##### Templates
 
-Defines whether the members can create/edit/modify templates, template partials and template variables. Individual level of administrative permissions can be set per template group here.
+Defines whether the members of this role can create/edit/modify templates, template partials and template variables. Granular administrative permissions can be set per template group here.
 
 ##### Add-Ons
 
-Defines whether the members can access Add-ons section and which add-ons they are allowed to access in the Control Panel.
+Defines whether the members of this role can access the Add-ons section and which add-ons they are allowed to access in the Control Panel.
 
 ##### Utilities
 
-Set the CP utilities that the members of thise role are allowed to use.
+Set the CP utilities that members of this role are allowed to use.
 
 ##### Logs
 
-Defines whether the member can access Logs section in the Control Panel.
+Defines if members of this role can access the Logs section in the Control Panel.
 
 ##### Settings
 
-Defines whether the members can modify system settings, with the separate preferences for the most sensitive settings subsections.
+Defines if members of this role can modify system settings, with the separate preferences for more sensitive settings subsections.
 
 #### Template Access tab
 
-This tab is listing all the template of your website. If you deselect certain templates, the members in this role will not be able to access site pages that are using those. Instead, they will see "No Access" message as configured in settings for those templates.
+This tab lists all the template of your website. If you deselect certain templates, the members in this role will not be able to access site pages that are using these templates. Instead, they will see "No Access" message as configured in settings for those templates.
 
 ### Role Groups
 
-Role Groups are a way to organize your roles into logical groups. Create a Role Group by clicking "New" next to Role Groups heading in the sidebar. You can then set role group name and assign roles to it by checking the appropriate checkboxes.
+Role Groups are a way to organize your roles into logical groups. Create a Role Group by clicking "New" next to Role Groups heading in the sidebar. You can then set the role group name and assign roles to it by checking the appropriate checkboxes.
 
-You can then assign a member to Role Group. The member will have all the permissions granted by all the roles in the group.
+You can then assign a members to Role Group. The member will have all the permissions granted by all the roles in the Roll Group.
 
 ## Custom Member Fields
 
