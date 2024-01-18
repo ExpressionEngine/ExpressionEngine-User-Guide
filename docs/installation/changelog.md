@@ -9,7 +9,9 @@
 # ExpressionEngine v6 Change Log
 
 ## Version 6.4.16
-(Release: January 16, 2024)
+(Release: January 18, 2024)
+
+NOTE: **Important:** This version includes important security updates.
 
 - **Contributors** 🙌
 <div class="max-w-7xl mx-autotext-center">
