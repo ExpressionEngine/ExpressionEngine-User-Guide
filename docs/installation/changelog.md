@@ -9,7 +9,7 @@
 # ExpressionEngine v7 Change Log
 
 ## Version 7.3.15
-(Release: January 16, 2024)
+(Release: January 18, 2024)
 
 NOTE: **Important:** This version includes important security updates.
 
