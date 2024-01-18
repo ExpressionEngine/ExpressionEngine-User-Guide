@@ -84,6 +84,16 @@ Defines whether and how the members in this role can administrate the [Channels]
 
 Defines the permissions that members have for creating/editing/deleting entries in each of the channels.
 
+###### Conditional Entry Permissions
+
+In addition to per-channel permissions, "Check conditional access?" toggle can be turned on for the role. When done so, the member will only be able to access (in Control Panel) the entries that meet the criterias specified in any of conditional rules sets.
+
+![Conditional Entry Editing Permissions](_images/role-conditional-entry-access.png)
+
+It is possible to set up any number of conditional rules sets, each having any number of rules. The rule set can be set up to require _all_ or _any_ of the rules to be met.
+
+The rules can be based on the alsmost any entry data, including custom fields. When [Structure](add-ons/structure/overview.md) is installed, the rules can also be based on the entry's location in the Structure tree.
+
 ##### Files
 
 Defines actions can perform on the files as well as administrative permissions on [upload directories](control-panel/file-manager/upload-directories.md).
