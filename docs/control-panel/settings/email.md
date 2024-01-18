@@ -25,7 +25,7 @@ This setting lets you specify a **name** to be used in the From and Reply-to ema
 
 ### Character encoding
 
-Specifies the character encoding that the emails will be sent with.
+Specifies the character encoding that the emails will be sent with. "UTF-8" is recommended.
 
 ### Protocol
 
@@ -37,25 +37,28 @@ Email can be sent by ExpressionEngine by one of three protocols.
 
 *Related ExpressionEngine University articles:* [Using Mailgun to Send Emails from your Website](https://u.expressionengine.com/article/using-mailgun-to-send-emails-from-your-website)
 
-### Server address
+#### Server address
 
 If you chose SMTP as your email protocol above, then you will need to fill out this field, which specifies the server address of the SMTP server. This setting is ignored if "SMTP" is not selected as the email protocol.
 
-### Username
+#### Username
 
 The username used to log in to your SMTP server. Not all SMTP servers require you to _authenticate_, but many of them do. In those cases you will need to specify the username and password (below).
 
-### Password
+#### Password
 
 The password used to log in to your SMTP server. Not all SMTP servers require you to _authenticate_, but many of them do. In those cases you will need to specify the username (above) and password.
 
-### Connection type
+#### Connection type
 
 Cryptographic protocol for SMTP. Can be set to Unencrypted (not recommended), SSL or TLS
 
-### TLS version
+#### TLS version
 
 When using TLS, provide the version that you can find in the instructions from your SMTP provider. Version 1.2 is the most commonly used
+
+### Email newline character
+\n provides the widest compatibility; if this setting does not work for you, refer to your email provider for instructions. Some folks have reported that \r\n works best for Outlook 365 via SMTP. There is also a [system config override setting](https://docs.expressionengine.com/latest/general/system-configuration-overrides.html#email_crlf) for this.
 
 ### Mail format
 
