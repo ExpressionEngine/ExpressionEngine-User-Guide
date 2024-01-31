@@ -27,57 +27,59 @@ logged in: This tag is only available if the user is logged in.
 
 Use the Form tag to create search forms. Search parameters made available by each Filter should be used as input fields (most commonly `<input>` and `<select>` elements) and can be either hidden or visible for the user.
 
-### Tag Parameters
+### Parameters
 
-#### force_protocol
+[TOC=4 hide]
+
+#### `force_protocol=`
 
 Set to http or https to force the protocol of the generated search results URL.
 
     {exp:pro_search:form force_protocol="https"}
 
-#### force_shortcut
+#### `force_shortcut=`
 
-Set to no to have a given query overwrite a valid shortcut. Defaults to yes (a shortcut will overwrite the query).
+Set to no to have a given query overwrite a valid shortcut. Defaults to "yes" (a shortcut will overwrite the query).
 
     {exp:pro_search:form force_shortcut="no"}
 
-#### form_attribute
+#### `form_attribute=`
 
-Specifies any html attribute you want the form to have. For example: form_id="search" will add id="search", or form_class="searchform" will add class="searchform" to the tag.
+Specifies any html attribute you want the form to have. For example: `form_id="search"` will add `id="search"` to the form tag, while `form_class="searchform"` will add `class="searchform"` to the tag.
 
     {exp:pro_search:form form_id="search" form_class="searchform"}
 
-#### query
+#### `query=`
 
 Use this parameter to pass through a previously executed encoded search query. Not needed when [not encoding queries](https://docs.expressionengine.com/latest/add-ons/pro-search/settings.html#encode-query).
 
     {exp:pro_search:form query="{segment_3}"}
 
-#### required
+#### `required=`
 
 Set to one or more parameter names to make that parameter a required field
 
     {exp:pro_search:form required="fname"}
 
-#### remember
+#### `remember=`
 
 Set to the names of the parameters you want to pass through to the next search without having input fields for them in the form.
 
     {exp:pro_search:form remember="params"}
 
-#### remember_shortcut
+#### `remember_shortcut=`
 
 Set to yes to remember the given shortcut’s parameters without having input fields for them.
 
     {exp:pro_search:form remember_shortcut="yes"}
 
-#### result_page
+#### `result_page=`
 
 The Template_Group/Template where you would like the search results to be shown. If the parameter starts with http:// or https://, that URL will be used as the result page. You can optionally use %s to place the encoded search query anywhere in the URI. Defaults to the value set in your Settings.
 
     {exp:pro_search:form result_page="page"}
 
-#### shortcut
+#### `shortcut=`
 
 Name of the shortcut to use for the search query
 
@@ -85,268 +87,269 @@ Name of the shortcut to use for the search query
 
 ### Variables
 
+[TOC=4 hide]
+
+#### {pro_search_*query_parameter*}
+
+To output the value of an existing [query parameter](parameters.md) such as "keywords" or "item:size", use `{pro_search_}` and append the parameter name e.g. `{pro_search_item:size}`.
+
 #### {collections}{/collections}
 
-Displays all search collections for current site. Available parameters: lang: only display collections for given language(s). AND show: only display collections for given name(s) or ID(s).
+Displays all search collections for current site. Available parameters: `lang=` to only display collections for given language(s). `show=` to only display collections for given name(s) or ID(s).
 
-    {}
+#### Collections Variables
 
-#### collection_id
+##### {collection_id}
 
     {collection_id}
 
-#### collection_name
+##### {collection_name}
 
     {collection_name}
 
-#### collection_label
+##### {collection_label}
 
     {collection_label}
 
-#### collection_language
+##### {collection_language}
 
     {collection_language}
 
-#### collection_count
+##### {collection_count}
 
     {collection_count}
 
-#### total_collections
+##### {total_collections}
 
     {total_collections}
 
-#### collection_is_active
+##### {collection_is_active}
 
     {collection_is_active}
 
-#### error_message
+#### {error_message}
 
 Will display an error message if something went wrong with the search.
 
-    {error_message}
-
-#### pro_search_shortcut_id
+#### {pro_search_shortcut_id}
 
 The shortcut ID used, if applicable
 
-    {pro_search_shortcut_id}
-
-#### pro_search_shortcut_label
+#### {pro_search_shortcut_label}
 
 The shortcut label used, if applicable.
 
-    {pro_search_shortcut_label}
-
-#### pro_search_shortcut_name
+#### {pro_search_shortcut_name}
 
 The shortcut name used, if applicable.
 
-    {pro_search_shortcut_name}
-
-#### pro_search_parameter_missing
+#### {pro_search_parameter_missing}
 
 Use in conditionals to display error messages.
 
-    {pro_search_parameter_missing}
-
-#### pro_search:url
+#### {pro_search:url}
 
 Short syntax for the URL tag. When used, it will automatically inherit the query set in the parent tag.
 
-    {pro_search:url}
+
 
 ## {exp:pro_search:filters}
 
-The Filters tag works identically to the Form tag, without generating a search form. Use it to show search filters anywhere on your page or to create a list of URL tags in short syntax. The following example shows a list of one-click filters to refine search results:
-
-### Tag Parameters
-
-#### query
-
+The Filters tag works identically to the Form tag, without generating a search form. Use it to show specific search filters anywhere on your page, or to create a list of URL tags in short syntax. The following example shows a list of one-click filters based on the current search that could be used to modify the results display with javascript:
     
     {exp:pro_search:filters query="{segment_3}"}
-    {exp:channel:categories channel="entries" style="linear"}
-    {if count ==  1}<ul>{/if}
-    <li>
-    <a href="{pro_search:url toggle:category="{category_id}"}">{category_name}</a>
-    {if pro_search_category ~ '/(^||)'.category_id.'($||)/'}✓{/if}
-    </li>
-    {if count == total_results}</ul>{/if}
-    {/exp:channel:categories}
+     {exp:channel:categories channel="entries" style="linear"}
+      {if count ==  1}<ul>{/if}
+       <li>
+        <a href="{pro_search:url toggle:category="{category_id}"}">{category_name}</a>
+        {if pro_search_category ~ '/(^||)'.category_id.'($||)/'}&check;{/if}
+       </li>
+      {if count == total_results}</ul>{/if}
+     {/exp:channel:categories}
     {/exp:pro_search:filters}
+
+### Parameters
+
+#### `query=`
+
+Use this parameter to pass through a previously executed encoded search query. Not needed when [not encoding queries](https://docs.expressionengine.com/latest/add-ons/pro-search/settings.html#encode-query).
+
+    {exp:pro_search:save query="{segment_3}"}
+
+
 
 ## {exp:pro_search:results}
 
-### Tag Parameters
+### Parameters
 
-The Results tag supports all parameters from the native channel:entries tag and parameters made available by the Filters. In addition to those, the following parameters are available. Any parameters set will override the ones in the given query.
+[TOC=4 hide]
 
-    
-    {exp:pro_search:results query="{segment_3}" limit="10"}
-    {if count ==  1}<ol>{/if}
-    <li><a href="{comment_url_title_auto_path}">{title}</a></li>
-    {if count == total_results}</ol>{/if}
-    {if no_results}No search results{/if}
+The Results tag supports all parameters from the native channel:entries tag and any parameters made available by the Filters. In addition to those, the following parameters are available. Any parameters set in the tag will override the ones in the given query.
+
+    {exp:pro_search:results query="{segment_3}" default:limit="10"}
+     {if count ==  1}<ol>{/if}
+      <li><a href="{comment_url_title_auto_path}">{title}</a></li>
+     {if count == total_results}</ol>{/if}
+     {if no_results}No search results{/if}
     {/exp:pro_search:results}
 
-### Variables
+#### `alias:parameter=`
 
-#### alias:parameter
+Point a given parameter to any other, so parameter x gets treated like parameter y. For example, to use the param `q` as an alias for `keywords`, use `alias:keywords="q"`. Useful if you have previous or multiple search forms with different names for the same parameters, and you want to have one result page.
 
-Point a given parameter to any other, so parameter x gets treated like parameter y. For example, to use the param q as an alias for keywords, use alias:keywords="q".
+    alias:keywords="q"
 
-    {alias:parameter }
-
-#### default:parameter
+#### `default:parameter=`
 
 Set the default value of any parameter. This value will be overwritten when the parameter is present in the search query.
 
-    {default:parameter }
+    default:lastname="Lopez"
 
-#### disable
+#### `disable=`
 
-In addition to the native values, the disable parameter allows you to disable filters per Results tag. Use the pro_search:filter_name format: for example, disable="pro_search:field_search" will disable Pro Search’s Field Search filter. (since v6.2.0)
+In addition to the native options from Channel:entries, the disable parameter allows you to disable specific filters per Results tag. Use the pro_search:filter_name format. For example, `disable="pro_search:field_search"` will disable Pro Search’s Field Search filter. (since v6.2.0).
 
-    {disable}
+    disable="pro_search:field_search"
 
-#### exclude
+TIP: **Tip:** This can be used, for instance, to speed up a small results block that matches based on a single criteria, but is part of a larger results page.
 
-Set to one or more parameter names to exclude their values
+#### `exclude=`
 
-    {exclude}
+Set to one or more parameter names to exclude their values.
 
-#### force_shortcut
+    exclude="category|search:number"
 
-Set to no to have a given query overwrite a valid shortcut. Defaults to yes (a shortcut will overwrite the query)
+#### `force_shortcut=`
 
-    {force_shortcut }
+Set to "no" to have a given query overwrite a valid shortcut. Defaults to "yes" (a shortcut will overwrite the query).
 
-#### log_search
+    force_shortcut="yes"
 
-Set to yes to explicitly log the search on the first page of the search results. By default, searches are already logged if you’re using the search form, so only use this when you’re bypassing that.
+#### `log_search=`
 
-    {log_search }
+Set to "yes" to explicitly log the search on the first page of the search results. By default, searches are already logged if you’re using the search form, so only use this when you’re bypassing the search form but want to log this results set as a search.
 
-#### orderby_sort
+    log_search="yes"
+
+#### `orderby_sort=`
 
 Combines the native orderby and sort parameters. Separate field and sort order with a |. For example: title|asc.
 
-    {orderby_sort}
+    orderby_sort="title|asc"
 
-#### query
+#### `query=`
 
-Use this parameter to pass through the encoded search query, which is present in the search results URI. You can override any of its settings by hard-coding the other Pro Search parameters. Note that any of the hard-coded query parameters will not be reflected in the Search Log. Not needed when not encoding queries.
+Use this parameter when using an encoded search query. You must explicitly reference the encoded search query when it is present in the search results URI. You can override any of the query's values by using Pro Search parameters. Note that none of the hard-coded query parameters will be reflected in the Search Log, which is based on the query. Not needed when not encoding queries.
 
-    {query}
+    query="{segment_3}"
 
-#### require_all
+#### `require_all=`
 
 Set to one or more parameter names to have their values treated as an inclusive stack.
 
-    {require_all}
+    require_all="keywords"
 
-#### require_query
+#### `require_query=`
 
-Set to yes to trigger No Results when no (encoded) query is given. Otherwise all entries will be returned.
+Set to "yes" to trigger No Results when no encoded query is given. Otherwise, by default all entries will be returned if no query is provided.
 
-    {require_query }
+    require_query="no"
 
-#### require_shortcut
+#### `require_shortcut=`
 
-Set to yes to trigger No Results when no (valid) shortcut is given.
+Set to "yes" to trigger No Results when no valid shortcut is given.
 
-    {require_shortcut}
+    require_shortcut="no"
 
-#### shortcut
+#### `shortcut=`
 
 Name of the shortcut to use for the search query.
 
-    {shortcut }
+    shortcut="shortcut_name"
 
-#### auto_path
+### Variables
+
+[TOC=4 hide]
+
+#### {pro_search_*query_parameter*}
+
+To output the value of an existing [query parameter](parameters.md) such as "keywords" or "item:size", use `{pro_search_}` and append the parameter name e.g. `{pro_search_item:size}`.
+
+NOTE: **Note:** This is not used to output the content from a matching result. It outputs the value of an existing search parameter i.e. *Your search for "cowboy hats" in size "Large" returned 19 results.*
+
+#### {auto_path}
 
 The URL of the entry, based on the Search Results URL setting of that entry’s Channel preferences. See also the native Search module.
 
-    {auto_path}
-
-#### pro_search_excerpt
+#### {pro_search_excerpt}
 
 The search excerpt as defined in the collection settings, or as defined in the Channel preferences for keyword-less searches.
 
-    {pro_search_excerpt}
+#### {pro_search_query_string}
 
-#### pro_search_query_string
+This contains the current Query String, but only when [not encoding queries](https://docs.expressionengine.com/latest/add-ons/pro-search/settings.html#encode-query).
 
-This contains the current Query String, when not encoding queries.
-
-    {pro_search_query_string}
-
-#### pro_search_shortcut_id
+#### {pro_search_shortcut_id}
 
 The shortcut ID used, if applicable.
 
-    {pro_search_shortcut_id}
-
-#### pro_search_shortcut_label
+#### {pro_search_shortcut_label}
 
 The shortcut label used, if applicable
 
-    {pro_search_shortcut_label}
-
-#### pro_search_shortcut_name
+#### {pro_search_shortcut_name}
 
 The shortcut name used, if applicable
-
-    {pro_search_shortcut_name}
 
 #### {if pro_search_no_results}{/if}
 
 Alternative syntax for the native {if no_results}{/if} conditional.
 
-    {if pro_search_no_results}{/if}
+
 
 ## {exp:pro_search:shortcuts}
 
-### Tag Parameters
+### Parameters
 
-#### group_id
+[TOC=4 hide]
+
+#### `group_id=`
 
 Limit shortcuts by given group ID
-
     
     {exp:pro_search:shortcuts group_id="1"}
-    {if count == 1}<ul>{/if}
-    <li><a href="{path="search/{shortcut_name}"}">{shortcut_label}</a></li>
-    {if count == total_results}</ul>{/if}
+     {if count == 1}<ul>{/if}
+      <li><a href="{path="search/{shortcut_name}"}">{shortcut_label}</a></li>
+     {if count == total_results}</ul>{/if}
     {/exp:pro_search:shortcuts}
 
-#### limit
+#### `limit=`
 
-#### integer
+#### `integer=`
 
 Maximum amount of shortcuts to display.
 
     {exp:pro_search:shortcuts limit="5"}
 
-#### offset
+#### `offset=`
 
 Offset the output of shortcuts by this amount.
 
     {exp:pro_search:shortcuts offset="3"}
 
-#### orderby
+#### `orderby=`
 
 Field to order the shortcuts by. Defaults by the order in their group
 
     {exp:pro_search:shortcuts orderby="field"}
 
-#### shortcut_id
+#### `shortcut_id=`
 
 Limit shortcuts by given IDs
 
     {exp:pro_search:shortcuts shortcut_id="2"}
 
-#### shortcut_name
+#### `shortcut_name=`
 
 Limit shortcuts by given names.
 
@@ -354,321 +357,303 @@ Limit shortcuts by given names.
 
 ### Variables
 
-#### count
+#### {count}
 
 The shortcut count.
 
-    {count}
-
-#### shortcut_id
+#### {shortcut_id}
 
 The shortcut ID
 
-    {shortcut_id}
-
-#### shortcut_label
+#### {shortcut_label}
 
 The shortcut label
 
-    {shortcut_label}
-
-#### shortcut_name
+#### {shortcut_name}
 
 The shortcut name.
 
-    {shortcut_name}
+#### {shortcut_url}
 
-#### shortcut_url
+The full search URL for this shortcut. You can override any of the shortcut’s parameters by setting parameters in this variable, e.g. {shortcut_url result_page="search/results"}
 
-The full search URL for this shortcut. You can override any of the shortcut’s parameters by setting parameters to this variable, eg. {shortcut_url result_page="search/results"}
-
-    {shortcut_url}
-
-#### total_results
+#### {total_results}
 
 The total amount of shortcuts displayed.
 
-    {total_results}
+
 
 ## {exp:pro_search:save}
 
 Use this tag to generate a form to save a given search query as a shortcut. The form will need input fields for shortcut_name and shortcut_label values.
 
-### Tag Parameters
+### Parameters
 
-#### group_id
+[TOC=4 hide]
+
+#### `group_id=`
 
 Group ID the shortcut needs to be saved to. **Required**.
 
-    
     {exp:pro_search:save query="{segment_3}" group_id="1"}
-    <fieldset>
-    <input name="shortcut_name" placeholder="Name" />
-    <input name="shortcut_label" placeholder="Label" />
-    <button type="submit">Save</button>
-    </fieldset>
+     <fieldset>
+      <input name="shortcut_name" placeholder="Name" />
+      <input name="shortcut_label" placeholder="Label" />
+      <button type="submit">Save</button>
+     </fieldset>
     {/exp:pro_search:save}
+    
+#### `form_attribute=`
+
+Specifies any html attribute you want the form to have. For example: `form_id="search"` will add `id="search"` to the form tag, while `form_class="searchform"` will add `class="searchform"` to the tag.
+
+    {exp:pro_search:save form_id="search" form_class="searchform"}
+
+#### `query=`
+
+Use this parameter to pass through a previously executed encoded search query. Not needed when [not encoding queries](https://docs.expressionengine.com/latest/add-ons/pro-search/settings.html#encode-query).
+
+    {exp:pro_search:save query="{segment_3}"}
+
+
 
 ## {exp:pro_search:url}
 
-Use this single tag to produce a search url you can use for bookmarking or quick linking.
-
-### Tag Parameters
-
-#### keywords
-
-When used inside the Form or Filters tag, you can also use the shortcut syntax. Using the shortcut will inherit all the parameters set in the parent tag. You can use any of the parameters used in the Results tag. In addition to that, these parameters are available:
+Use this single tag to produce a search url you can use for bookmarking or quick linking. For example, this creates a URL with a query containing `keywords="foo"`
 
     {exp:pro_search:url keywords="foo"}
 
-#### query
+When used inside the Form or Filters tag, you can also use the shortcut syntax. Using the shortcut will inherit all the parameters set in the parent tag. You can use any of the parameters used in the Results tag. In addition to those parameters, these parameters are also available:
 
-The encoded search query to inherit. Not needed when not encoding queries, as this will happen automatically. Use the reset parameter to cancel this behaviour
+### Parameters
 
-    {exp:pro_search:url query="{segment_2}}
+[TOC=4 hide]
 
-#### reset
+#### `query=`
 
-Set to yes to not inherit the current query.
+The encoded search query to inherit. Not needed when [not encoding queries](https://docs.expressionengine.com/latest/add-ons/pro-search/settings.html#encode-query), as this will happen automatically. Use the reset parameter to cancel this behaviour.
+
+    {exp:pro_search:url query="{segment_2}"}
+
+#### `reset=`
+
+Set to "yes" to stop this tag from inheriting the current query. 
 
     {exp:pro_search:url reset="yes"}
 
-#### result_page
+#### `result_page=`
 
 The group/template you want to link to, like in the Form tag
 
-    {exp:pro_search:url result_page="template"}
+    {exp:pro_search:url result_page="group/template"}
 
-#### toggle:parameter
+#### `toggle:parameter=`
 
 Toggles a single value in the given query. If the parameter value isn’t present in the current query, it generates a URL where the value is present, and vice versa.
 
-    {exp:pro_search:url toggle:parameter}
+    {exp:pro_search:url toggle:featured="yes"}
+
+NOTE: **Note:** If you simply want to add a specific value or to always override a specific value in a query, do not use this parameter. This toggle is useful when you want to more easily create a query URL for an alternative search (i.e. with vs. without a certain option).
+
+
 
 ## {exp:pro_search:param}
 
-Use this tag to output a given parameter value outside of the Form, Filters or Results tag. You can also loop through multi-valued parameters.
+Use this single tag to output a single given parameter value outside of the Form, Filters or Results tag.
 
-### Tag Parameters
+    {exp:pro_search:param get="item_size"}
 
-#### get
+You can also use it as a paired loop to output multi-valued parameters.
+ 
+    {exp:pro_search:param:loop get="category" as="cat_id" query="{segment_3}"}
+     {cat_id}
+    {/exp:pro_search:param:loop}
+
+### Parameters
+
+#### `get=`
 
 Parameter name you are targeting. **Required.**
 
-    
-    {exp:pro_search:param:loop get="category" as="cat_id" query="{segment_3}"}
-    {cat_id}
-    {/exp:pro_search:param:loop}
+#### `query=`
 
-#### query
+The encoded query where the parameter is present. Required when [encoding queries](https://docs.expressionengine.com/latest/add-ons/pro-search/settings.html#encode-query).
 
-The encoded query where the parameter is present. Required when encoding queries.
+#### `as=`
 
-    {exp:pro_search:param query={segment_x}}
+When outputting the values in a loop, use this parameter to set the variable name used in the loop. **Required when looping values.**
 
-#### format
+#### `format=`
 
-Set to raw for unaltered output, set to url for url-encoded output. Defaults to html-safe output.
+Set to `raw` for unaltered output, set to `url` for url-encoded output. Defaults to `html-safe` output.
 
-Default: html-safe
+    {exp:pro_search:param format="html-safe"}
 
-    {exp:pro_search:param format="raw"}
+
 
 ## {exp:pro_search:popular}
 
 Use this tag to display a list of popular keywords. The Search Log must be enabled for this tag to work properly.
 
-### Tag Parameters
+### Parameters
 
-#### limit
+#### `limit=`
 
 Maximum number of keywords to display. Defaults to 10.
-
-Default: 10
-
     
     {exp:pro_search:popular limit="10"}
-    {if count == 1}<ul>{/if}
-    <li>{keywords}: {search_count}</li>
-    {if count == total_results}</ul>{/if}
+     {if count == 1}<ul>{/if}
+      <li>{keywords}: {search_count}</li>
+     {if count == total_results}</ul>{/if}
     {/exp:pro_search:popular}
 
-#### orderby
+#### `orderby=`
 
-Keywords are ordered by search_count in descending order by default. Set to keywords if you want to order alphabetically by keyword.
+Keywords are ordered by `search_count` in descending order by default. Set to `keywords` if you want to order alphabetically by keyword.
 
-Default: search count
-
-    {exp:pro_search:popilar orderby="keywords"}
+    {exp:pro_search:popular orderby="keywords"}
 
 ### Variables
 
-#### keywords
+#### {keywords}
 
 The keywords, HTML escaped and safe to use in an EE tag parameter.
 
-    {keywords}
-
-#### keywords_raw
+#### {keywords_raw}
 
 The keywords, as is.
 
-    {keywords_raw}
-
-#### keywords_url
+#### {keywords_url}
 
 The keywords, URL-encoded.
 
-    {keywords_url}
+#### {keywords_clean}
 
-#### keywords_clean
+The keywords, cleaned by the Pro Search algorithm, i.e. without punctuation or diacritics.
 
-The keywords, cleaned by the Pro Search algorithm, ie. without punctuation or diacritics.
-
-    {keywords_clean}
-
-#### search_count
+#### {search_count}
 
 The number of times these keywords appear in the search log.
 
-    {search_count}
+
 
 ## {exp:pro_search:keywords}
 
 Use this single tag to display the keywords used in a given search query. It is a shortcut for the Param tag.
 
-### Tag Parameters
+### Parameters
 
-#### query
+#### `query=`
+
+The encoded query where the keywords are present. Required when [encoding queries](https://docs.expressionengine.com/latest/add-ons/pro-search/settings.html#encode-query).
 
     {exp:pro_search:keywords query="{segment_3}"}
+
+
 
 ## {exp:pro_search:collections}
 
 Use this tag to display a list of search collections.
 
-### Tag Parameters
+### Parameters
 
-#### collection
+#### `collection=`
 
 Limit collections by names or IDs given.
 
-#### collection_lang
+#### `collection_lang=`
 
 Limit collections by their language code.
 
-    {exp:pro_search:collections collection_lang=""}
+    {exp:pro_search:collections collection_lang="en"}
 
 ### Variables
 
-#### collection_id
+#### {collection_id}
 
 The collection ID
 
-    {collection_id}
-
-#### collection_name
+#### {collection_name}
 
 The collection name
 
-    {collection_name}
-
-#### collection_label
+#### {collection_label}
 
 The collection label
 
-    {collection_label}
+#### {collection_language}
 
-#### collection_language
+The collection language
 
-The collection language.
 
-    {collection_language}
 
 ## {exp:pro_search:suggestions}
 
-Use this tag to display a list of suggestions based on given keywords, language, and the words currently present in the lexicon. It uses either Levenshtein distance or Soundex similarity (phonetics) to determine the suggestions. Note: Using Soundex for generating suggestions is only effective for languages with a latin-based alphabet. The Levenshtein method works regardless of alphabet type.
+Use this tag to display a list of suggestions based on given keywords, language, and the words currently present in the lexicon. It uses either [Levenshtein distance](http://en.wikipedia.org/wiki/Levenshtein_distance) or [Soundex similarity](http://en.wikipedia.org/wiki/Soundex) (phonetics) to determine the suggestions.
 
-### Tag Parameters
+    {exp:pro_search:suggestions keywords="{pro_search_keywords}" keywords:lang="en" distance="2" limit="4"}
+     {if suggestion_count == 1}Did you mean{/if}
+      <a href="{pro_search:url keywords="{suggestion}"}">{suggestion}</a>{if suggestion_count != total_suggestions}&nbsp;or&nbsp;{if:else}?{/if}
+     {if no_results}Check your spelling or try a different search term.{/if}
+    {/exp:pro_search:suggestions}
 
-#### distance
+### Parameters
+
+[TOC=4 hide]
+
+#### `distance=`
 
 Depending on the method used, either the maximum Levenshtein distance or maximum Soundex word length distance from the original. Either 1, 2 or 3; defaults to 2
 
-    {exp:pro_search:suggestions distance="1"}
-
-#### keywords
+#### `keywords=`
 
 The keywords on which to base the suggestions. Overrides any keywords given in the query.
 
     {exp:pro_search:suggestions keywords="jongle"}
 
-#### keywords:lang
+#### `keywords:lang=`
 
 The language of the keywords on which to base the suggestions. Should point to the lexicon language. Overrides the language given in the query.
 
-    {exp:pro_search:suggestions keywords:lang="en"}
-
-#### limit
+#### `limit=`
 
 Maximum number of suggestions to return. Defaults to 5.
 
-Default: 5
+#### `method=`
 
-    {exp:pro_search:suggestions limit="2"}
-
-#### method
-
-The method used for getting the suggestions, either levenshtein or soundex. Defaults to the former.
-
-Default: levenshtein
+The method used for getting the suggestions, either `levenshtein` or `soundex`. Defaults to Levenshtein.
 
     {exp:pro_search:suggestions method="soundex"}
+    
+NOTE: **Note:** Using Soundex for generating suggestions is only effective for languages with a latin-based alphabet. The Levenshtein method works regardless of alphabet type.
 
-#### query
+#### `query=`
 
 The query that contains the keywords and/or keywords:lang parameters on which to base the suggestions.
 
-    {exp:pro_search:suggestions query="your_query"}
+    {exp:pro_search:suggestions query="{segment_3}"}
 
 ### Variables
 
-#### suggestion
+[TOC=4 hide]
 
-The suggested word in lowercase
+#### {suggestion}, {suggestion:upper}, {suggestion:ucfirst}
 
-    {suggestion}
+The suggested word in lowercase, uppercase, or with only the first letter in uppercase. Because the words are stored in the lexicon in all lower case, you cannot store or retrieve suggestions in mixed case.
 
-#### suggestion:upper
-
-The suggested word in uppercase.
-
-    {suggestion:upper}
-
-#### suggestion:ucfirst
-
-The suggested word with the first letter in uppercase.
-
-    {suggestion:ucfirst}
-
-#### suggestion_count
+#### {suggestion_count}
 
 The count of the current suggestion.
 
-    {suggestion_count}
-
-#### total_suggestions
+#### {total_suggestions}
 
 The total amount of suggestions given.
-
-    {total_suggestions}
 
 #### {if no_suggestions}{/if}
 
 Alternative syntax for the native {if no_results}{/if} conditional.
 
-    
     {exp:pro_search:suggestions keywords="jongle" keywords:lang="en" limit="1"}
-    Did you mean {suggestion}?
-    {if no_suggestions}No suggestions found.{/if}
+     Did you mean {suggestion}?
+     {if no_suggestions}No suggestions found.{/if}
     {/exp:pro_search:suggestions}
