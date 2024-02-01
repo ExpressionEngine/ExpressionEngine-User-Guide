@@ -13,9 +13,7 @@ Members Fieldtype allows selecting one or multiple members and associating those
 
 [TOC]
 
-Relationships are an extremely powerful tool that allow you to connect Entries in one Channel to those in another one, or even to other entries in the same channel. This ability allows you to store very complex content in your Channel entries.
-
-This fieldtype is currently only limited to Channels.
+Members fieldtype is the tool that allow you to connect Members to Channel Entries. This ability allows you to store very complex content in your Channel entries. For example, you could create a Channel called "Articles" and then create a Channel Field called "Authors" that is a Members fieldtype. You could then associate one or more Members with each Article entry. This would allow you to display the author's name, bio, photo, etc. on the Article page.
 
 ![members field](_images/field_members.png)
 

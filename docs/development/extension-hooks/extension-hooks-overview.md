@@ -29,6 +29,7 @@ Core hooks are categorized into 5 categories:
     - [Output Library](development/extension-hooks/global/output.md)
     - [Pagination Library](development/extension-hooks/global/pagination.md)
     - [Relationships Fieldtype](development/extension-hooks/global/relationships.md)
+    - [Members Fieldtype](development/extension-hooks/global/member-ft.md)
     - [Session Library](development/extension-hooks/global/session.md)
     - [Template Library](development/extension-hooks/global/template.md)
     - [Text Helper](development/extension-hooks/global/text-helper.md)
