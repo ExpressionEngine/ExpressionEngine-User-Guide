@@ -100,6 +100,8 @@ An excerpt from the entry. The excerpt consists of the first 50 words from the f
 
 The text from the entry. Unlike the {excerpt} variable, this one returns the entire text from the field specified for search excerpting in your [Channel Management](control-panel/channels.md) settings for your channels.
 
+TIP: **Tip:** Use [variable modifiers](templates/variable-modifiers.md) to more precisely control the output of search results variables.
+
 ### `{id_auto_path}`
 
 This parameter is replaced with the URL to the entry with the Entry ID appended to the end. Unlike other "path" variables, this variable does **not** require the Template_Group/Template to be specified. Instead, the path will automatically be determined by the Channel URL setting for the channel in [Channel Management](control-panel/channels.md).

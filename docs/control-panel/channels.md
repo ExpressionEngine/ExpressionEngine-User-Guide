@@ -90,11 +90,12 @@ NOTE: **Note:** We recommend using the default base URL variable `{base_url}` de
 - **Channel** -- The full URL to the main page for this channel.
 - **Comment form** -- The full URL to the "comments" page for this channel. The URL should include the Template Group and Template. For example: <https://example.com/channel/comments/>
 - **Search results** -- The full URL where you would like search results from this channel to be pointed. The URL should include the Template Group and Template. For example: `{base_url}/index.php/channel/comments/`.
-- **RSS feed** -- Thes URL where you can view the RSS feed for this channel. For example: <https://example.com/channel/rss_2.0>
+- **RSS feed** -- The URL where you can view the RSS feed for this channel. For example: <https://example.com/channel/rss_2.0>
 - **Preview URL** -- The template path, or route, to use for [Live Preview](control-panel/create.md#preview) in this Channel. You can use the variables `{entry_id}` and `{url_title}` which will be replaced with the entry's ID or URL Title when rendering your template. For example: `blog/entry/{url_title}` **Note:** If an Entry has a Page URI it will be used instead of the Preview URL for the channel.
 - **Allow Preview** -- When set to yes, the entry preview will be allowed, don't forget to set the Preview URL too.
 - **Generated title** -- When a new entry is created or previewed, this value will be inserted by default in the Title field. This is helpful if you wish every entry in a channel to have the titles follow a certain format. The automatic URL Title creating javascript for the Publish page will ignore this text during processing.
 - **URL title prefix** -- When a new entry is created or previewed, this value will be appended to the beginning of the url_title value, which will help you insure that url_titles are unique between channels.
+- **Enforce automatic URL title** -- Make the URL title field read-only and generate a unique value for it automatically. This is useful for entries that don't have their own page on front-end or if you just want to skip the routine of generating a URL Title. Note that when this setting is turned on, you will also not be able to change URL Titles for existin entries in the channel.
 - **Status** -- The default status for new channel entries. The available options depend on what [Statuses](#statuses-tab) the channel is assigned to use.
 - **Category** -- The default category for new channel entries. The available options depend on what [Category Group](control-panel/categories.md) the channel is assigned to use and which categories are defined for that group.
 - **Search excerpt** -- You can specify which field from your entries to use in search result excerpts. The list is dynamically populated depending on which [Fields](control-panel/field-manager/field-manager-settings.md) the channel is assigned to use. Only fields that have been set as "searchable" will be included.
@@ -104,7 +105,7 @@ NOTE: **Note:** We recommend using the default base URL variable `{base_url}` de
 - **Render URLs and Email addresses as links?** -- When this option is set to "Yes", any full URLs or email addresses will be automatically formatted as a valid HTML link to the address. If the option is "No" then the URL or email address will be treated and displayed as plain text.
 - **Enable Sticky entries?** -- When enabled, entries can be marked as sticky and have preference in sorted listings.
 - **Enable entry cloning?** -- ([ExpressionEngine Pro](/channels/entry_cloning.md) feature) When enabled, entries can be cloned using "Clone to New Entry" option in Save options dropdown.
-- **Status** -- Status assigned to all new entires in the channel.
+- **Status** -- Status assigned to all new entries in the channel.
 - **Author** -- Default author for guest entries posted via Channel Form.
 - **Allow guest submissions?** -- When set to yes, unregistered users will be able to submit forms for this channel.
 - **Enable entry versioning?** -- When set to enable, ExpressionEngine will save revisions of each entry for this channel.
@@ -120,14 +121,19 @@ NOTE: **Note:** We recommend using the default base URL variable `{base_url}` de
 - **Maximum characters allowed?** -- You may set a maximum number of characters allowed in any comment. Setting this preference to 0 (zero) will not place a restriction on the number of characters allowed.
 - **Comment time limit** -- This is the optional number of seconds that must lapse after a comment is posted before that same user can post another comment. This setting can help reduce comment "spam". The preference can be left blank or set to 0 (zero) if you do not want to impose a limit.
 - **Comment expiration** -- The number of days after an entry is posted in which to allow comments. After that period has expired, the entry will be closed to commenting and the comment form will no longer appear. Existing comments will still be displayed. Enter 0 (zero) for no expiration. Note that this preference sets the _default_ setting for the channel. The setting can be overridden and changed on a per-entry basis. You may override this setting in the [Comment Module Control Panel](comment/control-panel.md) section of the Comment Module so that comments are set to be moderated rather than closed once the expiration period is passed. If you also select the checkbox accompanying this setting, then all existing entries in this channel will be updated to reflect the new setting when you submit.
-- **Text formatting** -- This setting determines how comments are formatted by the system. There are three possible choices:
+- **Text formatting** -- This setting determines how comments are formatted by the system. There are three possible choices: `Auto line break`, `None`, and `XHTML`
 - **HTML formatting** -- Like the channel setting, this preference determines how raw HTML code within comments is handled. There are three options:
+1. Convert to HTML entities -- This will convert any HTML tags to their encoded versions and output the HTML tag as text without rendering the HTML in the DOM. For example: `<h1>` would become `&lt;h1&gt;`.
+2. Allow only safe HTML -- This will remove any unsafe HTML tags as defined in the [Typography library](development/legacy/libraries/typography.md#html_format).
+3. Allow all HTML (not recommended) -- This will allow any HTML to be saved and output as-is. For example: `<h1>test</h1>` would actually render an `h1` in the DOM.
 - **Allow image URLs?** -- You can determine whether or not you want people to be able to display images within comments by using the URL for the image.
 - **Render URLs and Email addresses as links?** -- When this option is set to "Yes", any full URLs or email addresses in comments will be automatically formatted as a valid HTML link to the address. If the option is "No" then the URL or email address in comment body will be treated and displayed as plain text.
 
 ## Publish Layouts
 
 **Control Panel Location: `Developer > Channels > Layouts`**
+
+![Channel Publish Layouts Link](_images/channel-publish-layouts.png)
 
 The Publish/Edit page can be customized, with the layout saved per member role, per channel.
 
@@ -136,6 +142,14 @@ The Publish/Edit page can be customized, with the layout saved per member role, 
 **Control Panel Location: `Developer > Channels > Layouts > New/Edit`**
 
 This section of the control panel is where channel layouts are created or edited.
+
+Editors in a member role will see the Publish / Edit entry page in accordance with the assigned publish layout for that channel.
+
+The publish layouts are capable of organizing fields into tabs, reordering fields, changing their width for organizing into columns, and hiding the fields that should not be visible.
+
+Each layout needs to be assigned to one or several member roles. However, each role can have only one publish layout assigned.
+
+You can have one publish layout for all editor roles, or you can have different layouts for different roles. When only a small adjustment is needed, the publish layout can be duplicated using "Clone to New Layout" option in "Save" dropdown.
 
 ## Channel Set Import
 

@@ -129,7 +129,7 @@ NOTE: **Note:** when setting `public $entry_manager_compatible = true;` make sur
 
 #### `EE_Fieldtype::$supportedEvaluationRules`
 
-Array of supported evaluation rules when field is used as conditional (or `null` if the field cannot be used as condtional source). If omitted, default rules set will be used.
+Array of supported evaluation rules when field is used as conditional (or `null` if the field cannot be used as conditional source). If omitted, default rules set will be used.
 
 #### `EE_Fieldtype::$defaultEvaluationRule`
 
@@ -218,6 +218,12 @@ Display the field data as column in the Entry Manager
 | \$field_id| `Int`    | Current field ID                          |
 | \$entry   | `Array`  | Current `ChannelEntry` object             |
 | Returns   | `String` | The string to display in Entry Manager column  |
+
+#### `EE_Fieldtype::getTableColumnConfig()`
+
+Sets [table column configuration](development/services/table.html#setting-the-columns) for Entry Manager
+
+Returns `Array`
 
 #### `EE_Fieldtype::validate($data)`
 

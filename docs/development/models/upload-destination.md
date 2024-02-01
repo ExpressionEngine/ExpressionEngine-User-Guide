@@ -62,9 +62,9 @@ Modules that have access to the upload destination.
 
 Files in the upload destination.
 
-#### `FileDimentions`
+#### `FileDimensions`
 
-Resize dimentions for images.
+Resize dimensions for images.
 
 #### `Site`
 

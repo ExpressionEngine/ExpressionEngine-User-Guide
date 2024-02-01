@@ -107,7 +107,7 @@ NOTE: **Note:** The default values of `parse_files=` and `parse_bases=` can be o
 
 In case you select a table which stores site settings, the returned value may have `{base_` variables. To parse them, enable the `parse_bases` parameter:
 
-```html
+```
 <table>
   <thead>
     <tr>
@@ -129,7 +129,8 @@ In case you select a table which stores site settings, the returned value may ha
     {/exp:query}
   </tbody>
 </table>
-=======
+```
+
 
 
 NOTE: **Note:** The default values of `parse_files=` and `parse_bases=` can be override using [`parse_variables_query_results_by_default`](/general/system-configuration-overrides.md#parse_variables_query_results_by_default)

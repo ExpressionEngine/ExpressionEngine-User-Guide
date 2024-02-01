@@ -34,11 +34,13 @@
         - name: File Editing
           href: control-panel/file-manager/file-edit.md
         - name: Watermarks
-          href: control-panel/file-manager/watermarks.md        
+          href: control-panel/file-manager/watermarks.md
     - name: Field Manager
       items:
         - name: Settings
           href: control-panel/field-manager/field-manager-settings.md
+        - name: Create/Edit Field
+          href: control-panel/field-manager/edit-field.md
         - name: Conditional Fields
           href: control-panel/field-manager/conditional-fields.md
     - name: Member Manager
@@ -52,7 +54,23 @@
     - name: Categories
       href: control-panel/categories.md
     - name: Utilities
-      href: control-panel/utilities.md
+      items:
+          - name: Overview
+            href: control-panel/utilities.md
+          - name: Communicate Tool
+            href: control-panel/utilities/communicate.md
+          - name: Translation Tool
+            href: control-panel/utilities/translation.md
+          - name: General Utilities
+            href: control-panel/utilities/general.md
+          - name: Debug Tools
+            href: control-panel/utilities/debug.md
+          - name: Member Tools
+            href: control-panel/utilities/member-tools.md
+          - name: Database Tools
+            href: control-panel/utilities/database.md
+          - name: Data Operations
+            href: control-panel/utilities/data-operations.md
     - name: System Logs
       href: control-panel/system-logs.md
     - name: System Settings
@@ -105,7 +123,7 @@
           href: control-panel/settings/branding.md
     - name: CP Navigation
       href: control-panel/navigation.md
-      
+
 - name: Templates
   items:
     - name: Overview
@@ -297,4 +315,4 @@
         href: comment/subscriptions.md
       - name: Control Panel
         href: comment/control-panel.md
-  
+

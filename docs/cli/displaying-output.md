@@ -8,7 +8,7 @@ Standard output can be created using `$this->output->outln`
 
 ### Displaying Error
 
-Similar to the `info()` function, tou can use `$this->error()` for displaying errors that occure. The error call will die upon output, and no further code will be executed.
+Similar to the `info()` function, you can use `$this->error()` for displaying errors that occurred. The error call will die upon output, and no further code will be executed.
 
 ### Formatting Output
 

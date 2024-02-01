@@ -47,7 +47,7 @@ Compiles and returns the content as a string. Typically this is used when you ne
 
 ### `_toString()`
 
-When accessed as a string simply complile the content and return that.
+When accessed as a string simply compile the content and return that.
 
 | Parameter | Type          | Description |
 | --------- | ------------- | ----------- |

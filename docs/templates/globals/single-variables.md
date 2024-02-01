@@ -183,6 +183,10 @@ This variable will be substituted with your site name as defined under `Settings
 
 This variable will be substituted with your site URL as defined under `Settings --> URL and Path Settings`.
 
+### `{site_id}`
+
+This variable will be substituted with the ID of your site as defined under `Developer --> Sites` (if MSM is enabled).
+
 ### `{template_name}`
 
 This variable displays the name of the template currently being processed.:

@@ -45,7 +45,7 @@ This will override the timezone specified in the [localization settings](control
 
 ## Date Formatting Codes
 
-These are all the available formating codes. If you are familiar with PHP, then these will look [remarkably similar](https://php.net/manual/en/function.date.php#refsect1-function.date-parameters):
+These are all the available formatting codes. If you are familiar with PHP, then these will look [remarkably similar](https://php.net/manual/en/function.date.php#refsect1-function.date-parameters):
 
 | Variable    | Description                                                                                                                                                 | Sample Rendering                           |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |

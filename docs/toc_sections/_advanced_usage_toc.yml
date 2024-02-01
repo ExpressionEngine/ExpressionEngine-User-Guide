@@ -70,7 +70,7 @@
         - name: Find and Replace
           href: add-ons/pro-search/find-and-replace.md
         - name: Upgrade from Low Search
-          href: add-ons/pro-search/upgrade-from-low-search.md		  
+          href: add-ons/pro-search/upgrade-from-low-search.md
         - name: Development
           items:
             - name: Creating your own Filter
@@ -98,7 +98,7 @@
         - name: Fieldtype
           href: add-ons/pro-variables/fieldtype.md
         - name: Upgrade from Low Variables
-          href: add-ons/pro-variables/upgrade-from-low-variables.md		  
+          href: add-ons/pro-variables/upgrade-from-low-variables.md
         - name: Development
           items:
             - name: Fieldtype Bridge
@@ -129,7 +129,7 @@
     - name: Building An Add-On
       items:
         - name: Start Here
-          href: development/addon-development-overview
+          href: development/addon-development-overview.md
         - name: Add-on Setup File
           href: development/addon-setup-php-file.md
         - name: Add-on Update File
@@ -168,7 +168,8 @@
           href: development/prolets.md
         - name: Adding Dashboard Widgets
           href: development/widgets.md
-
+        - name: Developing Variable Modifiers
+          href: development/modifiers.md
         #- name: REMOVE - Adding Text Formatting Options
         #  href: development/text-formatting.md
     - name: Modernizing add-ons
@@ -315,7 +316,7 @@
       href: development/architecture.md
     - name: Services
       items:
-        - name: Addon Service
+        - name: Add-on Service
           href: development/services/addon.md
         - name: CP/Alert Service
           href: development/services/alert.md
@@ -325,6 +326,8 @@
           href: development/services/consent.md
         - name: Cookie
           href: development/services/cookie.md
+        - name: Cookie Registry
+          href: development/services/cookie-registry.md
         - name: CSV Library
           href: development/services/csv.md
         - name: Encrypt Service
@@ -399,15 +402,15 @@
       items:
         - name: Working with Models
           href: development/models/working-with-models.md
-        - name: Addon Action Model
+        - name: Add-on Action Model
           href: development/models/addon-action.md
-        - name: Addon Module Model
+        - name: Add-on Module Model
           href: development/models/addon-module.md
-        - name: Addon Extension Model
+        - name: Add-on Extension Model
           href: development/models/addon-extension.md
-        - name: Addon Fieldtype Model
+        - name: Add-on Fieldtype Model
           href: development/models/addon-fieldtype.md
-        - name: Addon Plugin Model
+        - name: Add-on Plugin Model
           href: development/models/addon-plugin.md
         - name: Category Model
           href: development/models/category.md
@@ -425,6 +428,8 @@
           href: development/models/comment.md
         - name: Comment Subscription Model
           href: development/models/comment-subscription.md
+        - name: Cookie Settings Model
+          href: development/models/cookie-settings.md
         - name: CP Log Model
           href: development/models/cp-log.md
         - name: Developer Log Model
@@ -453,7 +458,8 @@
           href: development/models/template-group.md
         - name: Upload Destinations Model
           href: development/models/upload-destination.md
-
+    - name: Shared Form View
+      href: development/shared-form-view.md
     - name: Control Panel Javascript
       items:
         - name: Global Variables
@@ -629,7 +635,7 @@
       href: development/v6-add-on-migration.md
     - name: Automated Upgrading
       href: development/automated-upgrading.md
-      
+
 - name: Command Line Interface (CLI)
   items:
     - name: Introduction
@@ -638,12 +644,18 @@
       href: cli/usage.md
     - name: Built In Commands
       items:
-        - name: Addon Generator
-          href: cli/built-in-commands/make-addon.md
+        - name: Add-on Management
+          href: cli/built-in-commands/addons.md
+        - name: Add-on Generator
+          href: development/addon-development-overview.md
+        - name: Backup Database
+          href: cli/built-in-commands/backup-database.md
         - name: Clear Cache
           href: cli/built-in-commands/cache-clear.md
         - name: Command Generator
           href: cli/built-in-commands/make-command.md
+        - name: Config Management
+          href: cli/built-in-commands/config-management.md
         - name: Migrations
           href: cli/built-in-commands/migrate.md
         - name: List
@@ -658,11 +670,17 @@
           href: cli/built-in-commands/make-prolet.md
         - name: Widget Generator
           href: cli/built-in-commands/make-widget.md
+    - name: Creating a Command
+      href: cli/creating-a-command.md
+    - name: Defining Input
+      href: cli/defining-input.md
+    - name: Displaying Output
+      href: cli/displaying-output.md
 
 
 - name: Entry Cloning
   href: channels/entry_cloning.md
-  
+
 - name: Front-end Content Management
   items:
     - name: Overview

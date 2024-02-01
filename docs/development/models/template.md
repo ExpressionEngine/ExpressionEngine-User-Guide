@@ -70,7 +70,7 @@ Returns the edit date of the template.
 
 ### `getFileExtension`
 
-Returns the template's file extention, such as `html` `css` or `js`.
+Returns the template's file extension, such as `html` `css` or `js`.
 
 ### `saveNewTemplateRevision`
 

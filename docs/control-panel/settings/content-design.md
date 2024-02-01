@@ -34,7 +34,7 @@ Set whether to assign an entry to both the selected category and its parent cate
 
 ### Run File Manager in Compatibility Mode?
 
-WARN:**Note:** Compatibility Mode is enabeld by deafult for sites upgrading from ExpressionEngine versions less than ExpressionEngine 7.
+WARN:**Note:** Compatibility Mode is enabeld by default for sites upgrading from ExpressionEngine versions less than ExpressionEngine 7.
 
 When Compatibility Mode is enabled, files will be stored in the database using a format compatiblie with ExpressionEngine versions 6 and prior. Compatibility Mode disables many newer File Manager features and prevents issues with add-ons that are not ExpressionEngine 7+ compatible. See [`File Manager > Compatibility Mode`](/control-panel/file-manager/file-manager.md#compatibility-mode) for more information.
 

@@ -65,6 +65,6 @@ Can accept string like  `{file:XX:url}`, `{filedir_1}somefile.jpg` as well as nu
 
 Parse field contents, which may be in `{file:XX:url}` or `{filedir_x}filename.ext` format.
 
-This function is being called internally when using [Typography](development/legacy/libraries/typography.md) library, but you might need to explicitely call it in your add-on if the output data are not being passed to EE Typography parser.
+This function is being called internally when using [Typography](development/legacy/libraries/typography.md) library, but you might need to explicitly call it in your add-on if the output data are not being passed to EE Typography parser.
 
     $content = ee()->file_field->parse_field($content);

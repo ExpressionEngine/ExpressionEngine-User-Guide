@@ -267,6 +267,63 @@ With this parameter, you can specify the css class you want the form to have, en
 
 With this parameter, you can specify the css id you want the form to have.
 
+### `orderby=`
+
+    orderby="entry_date"
+
+The "orderby" parameter sets the display order of the entries. The available values for this property are `entry_date`, `most_comments`, `recent_comment`, `title`, `status`, `entry_id`, `url_title`, `edit_date`, `comment_total`, `expiration_date`, `view_count_one`, `view_count_two`, `view_count_three`, `view_count_four`.`
+
+If this parameter is not set, it will default to ordering by entry date.
+
+### `sort=`
+
+    sort="asc"
+
+    sort="desc"
+
+The sort order can be "asc" (ascending order or "oldest item first") or "desc" (descending order or "newest item first"). If you do not use a sort order the default is desc.
+
 ## Variables
 
-A full discussion of the available variables is not feasible there is a great deal of interdependence between the various form fields, variables, and javascript functions. The Parameters can be used to modify how the search behaves. If you wish to modify the search form itself, simply use the default form as a base and customize it from there.
+### `channel_names`
+
+Pre-populated string containing list of `<option>` tags containing channels that can be used to select channel to search in.
+
+### `lang:...`
+
+Should you be willing to use the language string from ExpressionEngine language files to build the search, the following are available:
+
+#### `lang:search_engine`
+#### `lang:search`
+#### `lang:search_by_keyword`
+#### `lang:search_in_titles`
+#### `lang:search_in_entries`
+#### `lang:search_everywhere`
+#### `lang:search_by_member_name`
+#### `lang:exact_name_match`
+#### `lang:exact_phrase_match`
+#### `lang:also_search_comments`
+#### `lang:any_date`
+#### `lang:today_and`
+#### `lang:this_week_and`
+#### `lang:one_month_ago_and`
+#### `lang:three_months_ago_and`
+#### `lang:six_months_ago_and`
+#### `lang:one_year_ago_and`
+#### `lang:channels`
+#### `lang:weblogs`
+#### `lang:categories`
+#### `lang:newer`
+#### `lang:older`
+#### `lang:sort_results_by`
+#### `lang:date`
+#### `lang:title`
+#### `lang:most_comments`
+#### `lang:recent_comment`
+#### `lang:descending`
+#### `lang:ascending`
+#### `lang:search_entries_from`
+#### `lang:any_category`
+#### `lang:search_any_words`
+#### `lang:search_all_words`
+#### `lang:search_exact_word`

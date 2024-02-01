@@ -129,31 +129,44 @@ Occasionally, you might need to check whether a value passes a validation rule, 
 | --------------- | ------------------------------------------------------------------------------ | --------------------- |
 | alpha           | Any alphabetical character                                                     | alpha                 |
 | alphaDash       | Alpha plus dashes and underscores                                              | alphaDash             |
+| alphaDashPeriodEmoji       | Alpha, dashes, underscores, periods and emoji                       | alphaDashPeriodEmoji  |
 | alphaNumeric    | Alpha plus numbers                                                             | alphaNumeric          |
+| authenticated   | Chech that member is authenticated                                             | authenticated         |
 | boolean         | Must be of boolean type                                                        | boolean               |
 | email           | Email addresses                                                                | email                 |
 | enum            | Any in a given list                                                            | enum[blue, red, pink] |
 | exactLength     | Input must have exactly n characters                                           | exactLength[4]        |
 | fileExists      | File or path must exist                                                        | fileExists            |
+| greaterOrEqualThan     | Value greater than x, or equal to x                                     | greaterOrEqualThan[5] |
 | greaterThan     | Value greater than x                                                           | greaterThan[5]        |
 | hexColor        | A three or six-character hex code without a pound sign                         | hexColor              |
 | integer         | Must be an integer                                                             | integer               |
 | ipAddress       | Ip address. Optional parameters: ipv4, ipv6, public                            | ipAddress             |
 | isNatural       | Natural number                                                                 | isNatural             |
 | isNaturalNoZero | Natural number except zeros                                                    | isNaturalNoZero       |
+| lessOrEqualThan | Value less than x, or equal to x                                               | lessOrEqualThan[5]    |
 | lessThan        | Value less than x                                                              | lessThan[5]           |
 | limitHtml       | Limits the kind of HTML tags that can be present in a string                   | limitHtml[a,b,i,span] |
 | maxLength       | No more than n characters                                                      | maxLength[5]          |
 | minLength       | No fewer than n characters                                                     | minLength[8]          |
 | noHtml          | Must not contain HTML                                                          | noHtml                |
+| notBanned       | Chech that member is not banned from using the site                            | notBanned             |
+| notNumeric      | Not a number, natural or decimal                                               | notNumeric            |
+| notStartsWith   | Does not start with given string                                               | notStartsWith[_]      |
 | numeric         | Any number, including decimals                                                 | numeric               |
+| passwordMatchesSecurityPolicy         | Password matches security policy defined for site        | passwordMatchesSecurityPolicy |
 | regex           | Match a regular expression                                                     | regex[/^exp.*?ine$/]  |
 | required        | Must not be blank. See validation-service-required                             | required              |
+| startsWith      | Starts with given string                                                       | startsWith[_]         |
 | uniqueEmail     | Must be a unique email. Gmail addresses strip . before checking for uniqueness | uniqueEmail           |
+| uniqueUsername  | Must be a unique username                                                      | uniqueUsername        |
 | url             | Must be a valid URL                                                            | url                   |
 | validBase64     | Base64 character set only                                                      | validBase64           |
+| validPassword   | Valid password                                                                 | validPassword         |
+| validScreenName | Valid screen name                                                              | validScreenName       |
+| validUsername   | Valid username                                                                 | validUsername         |
 | whenPresent     | Only validate if field was sent. See validation-service-when-present           | whenPresent           |
-| writable       | File or path must be writable                                                 | writable             |
+| writable        | File or path must be writable                                                  | writable              |
 | xss             | Must not contain content that looks like XSS (Cross Site Scripting)            | xss                   |
 
 ## Handling Results

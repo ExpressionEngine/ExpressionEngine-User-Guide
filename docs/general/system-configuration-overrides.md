@@ -76,8 +76,6 @@ Example Usage:
 
     $config['allow_extensions'] = 'y';
 
-**Also found in CP:** `Utilities --> Debug Extensions`: [Disable Extensions? ](control-panel/utilities.md#manage-add-on-extensions)
-
 ### `allow_member_localization`
 
 Set whether dates and times are localized to each members' own localization preferences.
@@ -856,6 +854,16 @@ Example Usage:
 
     $config['cookie_samesite'] = 'Strict';
 
+### `cp_session_length`
+
+Set TTL for admin sessions.
+
+| Value   | Description                                       |
+| ------- | ------------------------------------------------- |
+| integer | Session TTL in seconds (default is 3600 - 1 hour) |
+
+NOTE: **Note:** An idle state may still trigger the [Idle Check Modal](control-panel/access.md) regardless of the session length.
+
 ### `cp_session_type`
 
 Set the method for session handling in the Control Panel.
@@ -906,7 +914,7 @@ Example Usage:
 
 ### `db_backup_row_limit`
 
-When using the [Database Backup Utility](control-panel/utilities.md#database-backup-utility), some databases and PHP configurations may cause the backup utility to run out of memory while creating the backup. This config sets the maximum number of rows that will be queried and written to the backup file at a time. If you run into an out-of-memory error, try setting this to a lower number than the default to have the utility work in smaller batches.
+When using the [Database Backup Utility](control-panel/utilities/database.md#database-backup-utility), some databases and PHP configurations may cause the backup utility to run out of memory while creating the backup. This config sets the maximum number of rows that will be queried and written to the backup file at a time. If you run into an out-of-memory error, try setting this to a lower number than the default to have the utility work in smaller batches.
 
 | Value    | Description                     |
 | -------- | ------------------------------- |
@@ -1247,18 +1255,6 @@ Example Usage:
     $config['enable_entry_view_tracking'] = 'y';
 
 **Also found in CP:** `Settings --> Hit Tracking`: [Enable Channel Entry View Tracking](control-panel/settings/hit-tracking.md#enable-entry-view-tracking)
-
-### `enable_floc`
-
-By default, ExpressionEngine sends a header to disable FLoC in the browser. If this is enabled, the Permissions Policy header will not be sent.
-
-| Value | Behavior                            |
-| ----- | ----------------------------------- |
-| y     | Enable FLoC from the server side    |
-
-Example Usage:
-
-    $config['enable_floc'] = 'y';
 
 ### `enable_frontedit`
 
@@ -2484,35 +2480,6 @@ Example Usage:
 
 **Also found in CP:** `Settings --> URL and Path Settings`: [Category URL Indicator](control-panel/settings/urls.md#category-url-segment)
 
-### `rte_default_toolset_id`
-
-Set the default RTE toolset shown for any member that has not specifically chosen one in Rich Text Editor Preferences.
-
-| Value      | Description            |
-| ---------- | ---------------------- |
-| toolset ID | Default RTE toolset ID |
-
-Example Usage:
-
-    $config['rte_default_toolset_id'] = '2';
-
-**Also found in CP:** `Developer --> Add-Ons --> Rich Text Editor Settings`: [Default Toolset](control-panel/settings/urls.md#category-url-segment)
-
-### `rte_enabled`
-
-If enabled, the Rich Text Editor will be applied to any _Textarea (Rich Text)_ Channel Field. Otherwise, the field will appear as a normal textarea instead.
-
-| Value | Behavior                             |
-| ----- | ------------------------------------ |
-| y     | Enable RTE (default)                 |
-| n     | Disable RTE and show normal textarea |
-
-Example Usage:
-
-    $config['rte_enabled'] = 'y';
-
-**Also found in CP:** `Developer --> Add-Ons --> Rich Text Editor Settings`: [Enable Rich Text Editor](control-panel/settings/urls.md#category-url-segment)
-
 ### `save_tmpl_files`
 
 Enable the saving of templates as files.
@@ -3062,6 +3029,22 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Access Throttling`: [Time Interval](control-panel/settings/throttling.md#time-interval)
 
+### `tls_crypto_method`
+
+Stream encryption method, when using TLS for sending emails over SMTP.
+
+| Value                                      | Behavior                   |
+| ------------------------------------------ | -------------------------- |
+| STREAM_CRYPTO_METHOD_TLSv1_0_CLIENT        | TLS v1.0                   |
+| STREAM_CRYPTO_METHOD_TLSv1_1_CLIENT        | TLS v1.1                   |
+| STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT        | TLS v1.2 (default)         |
+| STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT        | TLS v1.3 (as of PHP 7.4.0) |
+
+ 
+Example Usage:
+
+    $config['tls_crypto_method'] = STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT;
+
 ### `un_min_len`
 
 Set the minimum number of characters allowed for member usernames.
@@ -3203,6 +3186,15 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Outgoing Email`: [Webmaster or site name for auto-generated emails](control-panel/settings/email.md#from-name)
 
+### website_session_length
+
+Set TTL for frontend sessions.
+
+| Value   | Description                                        |
+| ------- | -------------------------------------------------- |
+| integer | Session TTL in seconds (default is 7200 - 2 hours) |
+
+
 ### `website_session_type`
 
 Specify how sessions are handled on the front-end of the site.
@@ -3218,6 +3210,21 @@ Example Usage:
     $config['website_session_type'] = 'c';
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Website Session Type](control-panel/settings/security-privacy.md#website-session-type)
+
+### `week_start`
+
+Set the day on which the new week starts. If [allow_member_localization](#allow_member_localization) is enabled and a member has their own localization preference set, that will override this setting.
+
+| Value    | Description      |
+| -------- | ---------------- |
+| friday   | Friday           |
+| saturday | Saturday         |
+| sunday   | Sunday (default) |
+| monday   | Monday           |
+
+Example Usage:
+
+    $config['week_start'] = 'monday';
 
 ### `word_separator`
 

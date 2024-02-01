@@ -226,7 +226,7 @@ will result in values `> 0` and `< 10` rather than `>= 0` and `<= 10`.
 NOTE: **Note:** For numeric fields, make sure the Field Content option in the field’s settings is set to Number, Integer or Decimal.
 
 ### Supported Fields
-Apart from any custom numeric or date field, the following stardard channel fields are supported:
+Apart from any custom numeric or date field, the following standard channel fields are supported:
 
 - `entry_date`
 - `edit_date`

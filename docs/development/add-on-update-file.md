@@ -17,7 +17,7 @@ TIP:When using the CLI, your add-on update file will automatically be created fo
 
 ## Initial Setup
 
-When you first create your add-on using the [`make:addon`](/cli/built-in-commands/make-addon.md) command from the CLI, a `upd` file is created for you in the root of your add-on.
+When you first create your add-on using the [`make:addon`](development/addon-development-overview.md) command from the CLI, a `upd` file is created for you in the root of your add-on.
 
 Here I have created an add-on called Amazing Add-on using the CLI.
 
