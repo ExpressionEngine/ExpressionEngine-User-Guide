@@ -70,9 +70,9 @@ You may _optionally_ specify a date on which comments for this entry will no lon
 
 You may assign one of multiple (depending on [channel preference](control-panel/channels.md#categories-tab)) categories to your entry from the [category groups](control-panel/categories.md) associated with the channel.
 
-Each associated category group will be rendered as separate set of checkboxes, or - if multiple selections are not allowed - as set of radio buttons. Selecting a category from group can also be set as required for channel.
+Each associated category group will be rendered as separate set of checkboxes, or - if multiple selections are not allowed - as set of radio buttons. Selecting a category from a group can also be set as required for channel.
 
-Additionally, "Manager Categories" toggle is provided, clicking which allows to add, edit or reorder the categories in the group.
+Additionally, a "Manage Categories" toggle is provided, which allows the user to add, edit or reorder categories in the group.
 
 ![Publish Form - Categories](_images/cp-entry-categories-tab.png)
 
