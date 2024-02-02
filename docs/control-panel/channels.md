@@ -67,7 +67,7 @@ For each category group assigned to a channel, the following per-group settings 
 
 | Setting         | Default | Description                                                                                 |
 | --------------- | ------- | ------------------------------------------------------------------------------------------- |
-| Allow multiple? | Yes     | When turned on, multiple categories from the group can be selected for entry                |
+| Allow multiple? | Yes     | When turned on, multiple categories from the group can be selected for an entry                |
 | Required?       | No      | When turned on, selecting at least one category from the group is required to save an entry |
 
 ---
