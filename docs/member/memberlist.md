@@ -84,7 +84,7 @@ This parameter allows you to specify a name attribute for the search &lt;form&gt
 
     backspace="3"
 
-The `backspace=` parameter will remove specified number of characters, including spaces and line breaks, from the last iteration of the tag pair.
+The `backspace=` parameter will remove the specified number of characters, including spaces and line breaks, from the last iteration of the tag pair.
 
 ## Form Variables
 
