@@ -25,7 +25,7 @@ Choose how the field data should be localized. The options are
 ### Include time?
 When turned off, only date will be displayed, otherwise the editor can also enter the time into the same field.
 
-When turned on, the date picker will also display time input. Depending on OS locale, the time input will be in 12 or 24 hour format.
+When turned on, the date picker will also display time input. Depending on member preferences locale, the time input will be in 12 or 24 hour format.
 
 ## Publish form
 
