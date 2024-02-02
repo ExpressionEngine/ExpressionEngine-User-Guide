@@ -37,24 +37,18 @@ class Amazing_add_on_upd extends Installer
 
     public function install()
     {
-        parent::install();
-
-        return true;
+        return parent::install();
     }
 
     public function update($current = '')
     {
         // Runs migrations
-        parent::update($current);
-
-        return true;
+        return parent::update($current);
     }
 
     public function uninstall()
     {
-        parent::uninstall();
-
-        return true;
+        return parent::uninstall();
     }
 }
 ```
@@ -79,13 +73,11 @@ The CLI automatically generates our install method. This method will ensure that
 ```
    public function install()
     {
-        parent::install();
-
         // create a database table
         // notify mission control
         // add publish tabs
 
-        return true;
+        return parent::install();
     }
 ```
 
@@ -140,9 +132,6 @@ The `update` method will run code when a user installs an update to our add-on.
 
     public function update($current = '')
     {
-        // Runs migrations
-        parent::update($current);
-
         // only run the update if the user is currently running a version less than 2.0
         if (version_compare($current, '2.0', '<'))
         {
@@ -150,9 +139,9 @@ The `update` method will run code when a user installs an update to our add-on.
             // update database
             // notify mission control of the update
         }
-        
 
-        return true;
+        // Runs migrations
+        return parent::update($current);
     }
 
 ## Uninstall Your Add-On (`uninstall()`)
@@ -164,13 +153,11 @@ The CLI automatically generates our uninstall method. This method will ensure th
 
     public function uninstall()
     {
-        parent::uninstall();
-
         // remove my database tables
         // remove any publish tabs
         // turn off the lights
 
-        return true;
+        return parent::uninstall();;
     }
 
 ### Removing Tabs
