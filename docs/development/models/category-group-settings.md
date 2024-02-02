@@ -32,7 +32,7 @@ lang: php
 
 ### `Site`
 
-The MSM Site which the Category Group belongs to.
+The MSM Site for which the Category Group belongs to.
 
 ### `Channel`
 
