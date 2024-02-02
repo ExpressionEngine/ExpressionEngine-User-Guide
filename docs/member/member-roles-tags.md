@@ -80,7 +80,7 @@ Specifies a particular member's information to display. By default (if you do no
 
 ## `{exp:member:role_groups}`
 
-The `{exp:member:role_groups}` tag allows you to display role groups to which the member is assigned via his roles.
+The `{exp:member:role_groups}` tag allows you to display the role groups a member belongs to.  Please note, while every member is in a Role not every member is in a Role Group.
 
     {exp:member:role_groups}
       <p>{role_group_name} (#{role_group_id})</p>
