@@ -45,7 +45,7 @@ Note that only members with appropriate permissions are able to perform actions 
 
 **Control Panel Location: `Content > Categories > New/Edit Category Group`**
 
-Access to this sections requires "Can edit category groups" permission to be set for member Role.
+Access to this sections requires "Can edit category groups" permission to be set for the users member Role.
 
 The category group form is broken out into 3 tabs:
 
