@@ -627,6 +627,12 @@
           href: development/guidelines/view-php-syntax.md
     - name: Debugging
       href: development/debugging.md
+    - name: License Validation
+      items:
+        - name: Overview
+          href: development/license-validation/index.md
+        - name: Importing Licenses Through the API
+          href: development/license-validation/importing-licenses.md
     - name: v3 Add-on Migration
       href: development/v3-add-on-migration.md
     - name: v4 Add-on Migration
