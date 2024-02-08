@@ -15,7 +15,7 @@
 
     exp:member:edit_profile
 
-This template tag allows editing member's profile using the form that is similar to [Channel Form](channels/channel-form/overview.md)
+This template tag allows editing a member's profile using the form that is similar to [Channel Form](channels/channel-form/overview.md)
 
 ## Parameters
 
