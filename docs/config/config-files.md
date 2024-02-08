@@ -33,7 +33,7 @@ This file contains an array of foreign characters for transliteration conversion
 
 `valid_form_attributes.php`
 
-Valid HTML attributes that might be passed via EE template tag parameters to the `form` tag when creating forms with `ee()->functions->form_declaration()`. Additionally, `data-` and `aria-` attributes can be used.
+A list of HTML attributes that are allowed to be passed via EE template tag parameters to the `form` tag when creating forms with `ee()->functions->form_declaration()`. Additionally, attributes prefixed with `data-` and `aria-` can be used.
 
 #### Allowed Mime Types
 
