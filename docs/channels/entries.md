@@ -309,7 +309,7 @@ NOTE: **Note:** Using this parameter will automatically constrain the entries ta
 
 ### `group_id=`
 
-NOTE: We recommend using [primary_role_id=](#primary_role_id) parameter instead, which works the same.
+NOTE: We recommend using [primary_role_id=](#primary_role_id) parameter instead, which works the same but more clearly conveys that the filtering is happening on primary role ID.
 
     group_id="4"
 
