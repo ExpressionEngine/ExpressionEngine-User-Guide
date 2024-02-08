@@ -25,8 +25,8 @@ lang: php
 | `site_id`                    |              |            | the site id |
 | `group_id`                   | required     |            | the category group id |
 | `channel_id`                 | required     |            | the channel id |
-| `cat_required`               |              | boolString | whether or not having category in this group is required for this channel |
-| `cat_allow_multiple`         |              | boolString | whether or not this multiple selections are allowed in this category group for this channel |
+| `cat_required`               |              | boolString | whether or not having a category in this group is required for this channel |
+| `cat_allow_multiple`         |              | boolString | whether or not having multiple selections is allowed in this category group for this channel |
 
 ## Relationships
 
