@@ -122,11 +122,11 @@ Fieldtypes can specify their compatibility. When editing a Channel Field the fie
 | relationship  | [Relationships](fieldtypes/relationships.md)                                        |
 | text          | [Color Picker](fieldtypes/colorpicker.md), [Duration](fieldtypes/duration.md), [Email Address](fieldtypes/email-address.md), [Number](fieldtypes/number.md), [Range Slider](fieldtypes/range-slider.md), [Rich Text Editor](fieldtypes/rte.md), [Text Input](fieldtypes/text.md), [Textarea](fieldtypes/textarea.md), [URL](fieldtypes/url.md), [Value Slider](fieldtypes/value-slider.md) |
 
-If the fieldtype does not specify its compatibility then the type of created field can not be changed.
+If the fieldtype does not specify its compatibility then once a field is created with this fieldtype it cannot be changed.
 
-All fieldtypes can be used as Channel Fields for the entries (as `ChannelField` model).
+All defined fieldtypes can be used in Channel Fields and ultimately Channel Entry content.
 
-If a fieldtype is also compatible with other content types (such as `MemberField` model that represents Custom Member Fields) then the model name needs to be specified in `use` array.
+If a fieldtype is compatible with additional content types (such as the `MemberField` model that represents Custom Member Fields) then the model name needs to be specified in the `use` array.
 
     'use' => array(
       'MemberField'
