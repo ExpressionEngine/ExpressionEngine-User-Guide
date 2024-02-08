@@ -41,7 +41,7 @@ The mime types are grouped by file type. You can add the allowed mime types dire
 
 `proxy.php`
 
-If the server is behind reverse proxy or load balancer, the system would need special configuration to discover user's real IP address. If the IP address as passed in by server matches value or range specificed in this configuration file, the system will start looking into headers to determine real IP address, as forwarded by proxy/balancer.
+If the server is behind a reverse proxy or load balancer the system will need special configuration to discover a user's real IP address. If the IP address passed along by the server matches a value or range specificed in this configuration file the system will look at the request headers to determine the real IP address.
 
 Please consult with provider of your reverse proxy or load balancing solutions for the IP addresses or ranges to use. Some providers would let you know the exact IP address of load balancer, while others would give you a range. Here are the links with information for some common providers: [CloudFlare](https://www.cloudflare.com/ips/), [Google Cloud](https://cloud.google.com/load-balancing/docs/https/#firewall_rules), [AWS Elastic](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html)
 
