@@ -57,6 +57,6 @@ If you are running in a PHP environment without Opcode caching, [saving template
 
 ## Using Load Balancers
 
-Using load balancer or reverse proxy server is popular solution to mitigare DDoS attacks and make handling high traffic easier.
+Using a load balancer or reverse proxy is a popular solution to mitigate DDoS attacks and make handling large amounts of traffic easier.
 
-When the server is placed behind reverse proxy or load balancer, ExpressionEngine in default configuration might not know the user's real IP address because it would be substituted with the proxy IP address. Most of the proxies however would send the real user's IP in some HTTP headers. In order to use the data in those headers to obtain the real user IP address, you need to configure the system to make it aware of the list of trusted proxy IP addresses or ranges. This can be done using [`proxy.php` configuration file](config/config-files.md#reverse-proxy-ip-addresses).
+When a server is placed behind a reverse proxy or load balancer ExpressionEngine might not know the user's real IP address because it would be substituted with the proxy's IP address. Most proxies however will preserve the real user's IP address and forward it through a request header. In order to use the data in those headers to obtain the real user's IP address you need to configure the system to recognize and trust the proxy IP addresses. This can be done using the [`proxy.php` configuration file](config/config-files.md#reverse-proxy-ip-addresses).
