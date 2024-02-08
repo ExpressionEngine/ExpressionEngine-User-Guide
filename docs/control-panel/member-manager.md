@@ -21,9 +21,9 @@ This page is used both to search and to browse through members within your Expre
 
 Filters and search input can be used to narrow down the list of members displayed. 
 
-The set of columns displayed can be customized using "Columns" dropdown. By default, the following columns are shown: Member ID, Name (which is composed out of avatar, username and screen name), Email, Roles, Join Date,Last Visit Date. Also each member row has "Actions" buttons that contains links to some common actions and a checkbox that allows performing bulk actions on selected members. When "Pending" is selected in Role filter, the options in bulk action dropdown are "Approve" and "Decline", otherwise "Remove" is the only option.
+The set of columns displayed can be customized using the "Columns" dropdown. By default, the following columns are shown: Member ID, Name (which is composed of avatar, username and screen name), Email, Roles, Join Date, Last Visit Date. Also each member row has "Actions" buttons that contains links to some common actions and a checkbox that allows performing bulk actions on selected members. When "Pending" is selected in the "Role" filter, the bulk action options are "Approve" and "Decline", otherwise "Remove" is the only option.
 
-In the Roles column all roles assigned to member are shown. When multiple roles are assigned, the primary role wouild have an indicator. If the member is pending, the columns does not say "Pending", but instead shows the role to which the member would be assigned once approved (with pending indicator) and a button to approve.
+All roles assigned to a member are shown in the Roles column. When multiple roles are assigned, the primary role will have an indicator. If the member is pending the column does not say "Pending" but instead shows the role to which the member will be assigned once approved (with pending indicator) and a button to approve.
 
 ## Member Roles
 
@@ -58,7 +58,7 @@ Edit the role by clicking its name in the list.
 
 **Control Panel Location: `Settings > Members > Member Fields`**
 
-The link to this section is also found on top of Member Listing page.
+The link to this section is also found on top of the Member Listing page.
 
 The _Member Fields_ feature permits you to add fields to the member registration form and/or member profile and My Account areas.
 
@@ -68,7 +68,7 @@ The _Member Fields_ feature permits you to add fields to the member registration
 
 This section allows you to create or edit Member Fields.
 
-The following field types are compatible as can be used for custom member fields:
+The following field types are compatible and can be used for custom member fields:
 
 - Checkboxes
 - Color Picker
@@ -88,9 +88,9 @@ The following field types are compatible as can be used for custom member fields
 - URL
 - Value Slider
 
-Additionaly, third-party field types that specify their use for `MemberField` model can be selected.
+Additionally, third-party field types that specify support for the `MemberField` model can be selected.
 
-The following fields are available when creating custom field:
+The following fields are available when creating a custom field:
 
 - **Type** -- You may choose what type of field this is. There are three choices: 1. **Text Input**: This is a single input line for text. It is the type of field you might use for a title, name, or other short information. 2. **Textarea**: This is a standard text entry box with multiple lines. This is what you would use for larger amount of text. 3. **Drop-down List**: This creates a standard HTML `<select>` drop-down list. You will need to define contents of the list in the provided form.
 
