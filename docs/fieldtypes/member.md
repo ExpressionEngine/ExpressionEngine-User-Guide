@@ -9,11 +9,11 @@
 
 # Members Fieldtype
 
-Members Fieldtype allows selecting one or multiple members and associating those with a channel entry
+The Members Fieldtype allows selecting one or multiple members and associating those with a channel entry
 
 [TOC]
 
-Members fieldtype is the tool that allow you to connect Members to Channel Entries. This ability allows you to store very complex content in your Channel entries. For example, you could create a Channel called "Articles" and then create a Channel Field called "Authors" that is a Members fieldtype. You could then associate one or more Members with each Article entry. This would allow you to display the author's name, bio, photo, etc. on the Article page.
+The Members fieldtype helps you connect Members to Channel Entries. This lets you create powerful relationships between Members and content in your Channel entries. For example, you could create a Channel called "Articles" and a Channel Field called "Authors" that uses the Members fieldtype. You could then associate one or more Members with each Article entry. This would allow you to display the author's name, bio, photo, etc. on the Article page.
 
 ![members field](_images/field_members.png)
 
@@ -36,16 +36,16 @@ Default ordering of members in the field's dropdown.
 When set to yes, authors will be allowed to create multiple relationships in a single field.
 
 #### Minimum selection
-The minimum number of relationships that can be added to the field.
+The minimum number of members that can be added to the field.
 
 #### Maximum selection
-The maximum number of relationships that can be added to the field.
+The maximum number of members that can be added to the field.
 
 #### Display Member IDs?
 When enabled, member IDs will be displayed together with member screen name inside the field.
 
 #### Defer field initialization?
-When enabled, this field won’t initialize until the Edit Relationships button is clicked on. This can result in faster control panel page load times.
+When enabled, this field won’t initialize until the Edit Members button is clicked on. This can result in faster control panel page load times.
 
 ## Template Tag Pair
 
@@ -142,30 +142,30 @@ In addition to using as template tag pair, the Members field can display its dat
 ### `:member_ids`
 Fetching Member IDs Only
 
-Sometimes it's useful to get just a list of IDs of related members, to pass on to another tag as parameter or similar. If you need to do this, you can use the single variable `:member_ids` shortcut modifier:
+Sometimes it's useful to get just a list of IDs of related members to pass on to another tag as a parameter. If you need to do this you can use the single variable `:member_ids` shortcut modifier:
 
     {members_field:member_ids}
 
-Outputs in the format:
+Which outputs the member IDs in the following format:
 
     43|58|127
 
 #### Parameters
 
-The member field tag with `:member_ids` modifier has only one optional parameter, `delimiter`
+The member field tag with the `:member_ids` modifier has an optional `delimiter` parameter.
 
 By default the member IDs will be pipe-delimited, but you can choose to have them delimited with something else:
 
     {members_field:member_ids delimiter=","}
 
-Would output in the format:
+Would output in the following format:
 
     43,48,127
 
 ### `:length`
 ### `:total_rows`
 
-Both of these modifiers can be used to display the number of members that are related via certain field
+Both of these modifiers can be used to display the number of members that are related via a certain field
 
     {members_field:length} // 2
     {members_field:total_rows} // 2
