@@ -68,9 +68,13 @@ You may _optionally_ specify a date on which comments for this entry will no lon
 
 ## Categories Tab
 
-You may assign your entries to one ore more categories. To select more than one category you will typically hold down the CTRL (or CMD) key while choosing the individual category names.
+You may assign one or multiple (depending on [channel preference](control-panel/channels.md#categories-tab)) categories to your entry from the [category groups](control-panel/categories.md) associated with the channel.
 
-Clicking the Edit Categories link will permit you to add, edit, or delete categories that appear in the list.
+Each associated category group will be rendered as a separate set of checkboxes. If multiple selections are not allowed they will render as a set of radio buttons. Selecting a category from a group can also be set as required for the channel.
+
+Additionally, a "Manage Categories" toggle is provided which allows the user to add, edit or reorder categories within the group.
+
+![Publish Form - Categories](_images/cp-entry-categories-tab.png)
 
 ## Options Tab
 

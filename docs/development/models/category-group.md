@@ -7,7 +7,7 @@ lang: php
     ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
 
     @link      https://expressionengine.com/
-    @copyright Copyright (c) 2003-2022, Packet Tide, LLC (https://packettide.com)
+    @copyright Copyright (c) 2003-2023, Packet Tide, LLC (https://packettide.com)
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
@@ -32,8 +32,29 @@ lang: php
 
 ## Relationships
 
-- `CategoryField`
-- `Category`
+### `Site`
+
+The MSM Site which the Category Group belongs to.
+
+### `CategoryGroupSettings`
+
+Per-channel settings for this Category Group.
+
+### `CategoryFields`
+
+Custom fields associated with this Category Group
+
+### `Categories`
+
+Collection of categories that have been created in this group
+
+### `Channels`
+
+Channels that this Category Group has been assigned to
+
+### `UploadDestinations`
+
+File upload directories that this Category Group has been assigned to
 
 ## Methods
 
