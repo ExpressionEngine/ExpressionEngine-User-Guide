@@ -366,10 +366,10 @@ You may also parse the result rows yourself, which could be useful if for some r
     {
       $row['count'] = ++$count;
       $row['total_results'] = $query->num_rows;
-      
+
       $chunk = ee()->TMPL->parse_variables_row($tagdata, $row);
       $chunk = ee()->TMPL->parse_switch($chunk, $count - 1);
-      
+
       $output .= $chunk;
 
 ## Single and Pair Variables (Legacy)
@@ -523,11 +523,11 @@ Write message to template log in Output Profiler.
 
 | Parameter   | Type      | Description                                                     |
 | ----------- | --------- | --------------------------------------------------------------- |
-| \$str       | `String`  | Parsed tempate                                                  |
+| \$str       | `String`  | Parsed template                                                  |
 
 Parses global variables like the currently logged in member's information, system variables, paths, action IDs, CAPTCHAs. Typically stuff that should only be done after caching to prevent  any manner of changes in the system or who is viewing the page to affect the display.
 
-This function would also strip ExpessionEngine comments from the code. It is being run automatically on each front-end page request, however if you are using TMPL library for other types of requests, you might need to call it manually.
+This function would also strip ExpressionEngine comments from the code. It is being run automatically on each front-end page request, however if you are using TMPL library for other types of requests, you might need to call it manually.
 
 ### `show_404()`
 
@@ -538,7 +538,7 @@ Show a 404 page whether one is set in the config or not
 | Parameter        | Type      | Description                                                     |
 | ---------------- | --------- | --------------------------------------------------------------- |
 | \$template_group | `String`  | Template group name                                             |
-| \$template       | `String`  | Tempate name                                                    |
+| \$template       | `String`  | Template name                                                    |
 | \$show_default   | `Bool`    | If `true`, show template from default group in site             |
 | \$site_id        | `Int`     | Site ID                                                         |
 
@@ -551,7 +551,7 @@ Takes a Template Group, Template, and Site ID and will retrieve the Template and
 | Parameter        | Type      | Description                                                     |
 | ---------------- | --------- | --------------------------------------------------------------- |
 | \$template_group | `String`  | Template group name                                             |
-| \$template       | `String`  | Tempate name                                                    |
+| \$template       | `String`  | Template name                                                    |
 | \$is_embed       | `Bool`    | Whether processed template is an embedded template              |
 | \$site_id        | `Int`     | Site ID                                                         |
 | \$is_layout      | `Bool`    | Whether processed template is a layout template                 |
@@ -570,7 +570,7 @@ If a tag/class has no results to show, it can call this method. Any `no_results`
 
 | Parameter   | Type      | Description                                                     |
 | ----------- | --------- | --------------------------------------------------------------- |
-| \$str       | `String`  | Parsed tempate                                                  |
+| \$str       | `String`  | Parsed template                                                  |
 
 Remove all EE Code Comment Strings
 

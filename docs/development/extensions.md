@@ -12,7 +12,7 @@ lang: php
 -->
 
 # Extensions and Hooks
-TIP: If you are working with an existing add-on, we recommend you start with [Modernizing add-ons](development/modernizing-existing-add-ons.md) 
+TIP: If you are working with an existing add-on, we recommend you start with [Modernizing add-ons](development/modernizing-existing-add-ons.md)
 
 [TOC]
 
@@ -40,7 +40,7 @@ NOTE: If you are using the command above to add an extension to an existing add-
 
 TIP: Files that interact with ExpressionEngine core hooks are referred to as "extensions" because they extend the functionality of ExpressionEngine.
 
-This will create an `ext.[addon_name].php` file in our add-on along with an `Extensions` folder where we will build out the code we want to run when we interact with a core hook. 
+This will create an `ext.[addon_name].php` file in our add-on along with an `Extensions` folder where we will build out the code we want to run when we interact with a core hook.
 
 Inside our `Extensions` folder the CLI will create a file with the same name as the core hook we plan to use.
 
@@ -59,7 +59,7 @@ TIP: Extensions need to be enabled to work. When you create an extension, a migr
 ## Anatomy Of An Extension
 Once we've added the ability to hook into the core with our add-on, an `Extensions` folder is created. The CLI will generate a class and a respective file for each core hook we wish to use.
 
-Here we have added the ability to interact with the [`typography_parse_type_end()`](/development/extension-hooks/global/typography.html#typography_parse_type_endstr-this-prefs) hook.
+Here we have added the ability to interact with the [`typography_parse_type_end()`](/development/extension-hooks/global/typography.md#typography_parse_type_endstr-this-prefs) hook.
 
 So our add-on structure now looks like this:
 
@@ -95,7 +95,7 @@ class TypographyParseTypeEnd extends AbstractRoute
 
 As we can see, the CLI has correctly created a new class using our core hook in PascalCase as the name.
 
-Inside our class is the `process()` function. Again the CLI has already added all parameters that will be passed in from the core hook.  
+Inside our class is the `process()` function. Again the CLI has already added all parameters that will be passed in from the core hook.
 
 TIP:Reference the [Available Core Hooks](development/extension-hooks/extension-hooks-overview.md) section of the docs to read on what parameters your hook uses.
 
@@ -173,7 +173,7 @@ class TypographyParseTypeEnd extends AbstractRoute
 
 ```
 
-Now when we render our site using fields like textarea or other fields that use the Typography Library, our users will see how amazing EE is. 
+Now when we render our site using fields like textarea or other fields that use the Typography Library, our users will see how amazing EE is.
 
 NOTE:**NOTE:** Although ExpressionEngine is amazing, we do not suggest using the above example in production.
 

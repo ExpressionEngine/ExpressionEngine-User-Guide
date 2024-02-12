@@ -15,7 +15,7 @@
 
 Prolets are add-on components that live in the [Dock](/advanced-usage/front-end/dock.md) and bring parts of an add-on's functionality to content editors on the front end.
 
-Here is an example of the add-on SEEO's prolet, which easily allows editors to edit SEO data for the entry they are currently viewing: 
+Here is an example of the add-on SEEO's prolet, which easily allows editors to edit SEO data for the entry they are currently viewing:
 ![prolet example](_images/prolet_example.png)
 
 NOTE:Before adding a Prolet to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
@@ -168,9 +168,9 @@ Prolets are expecting form submissions to return JSON upon successful response, 
 
 ## Prolet Types
 
-Essentially there are two types of prolets. 
+Essentially there are two types of prolets.
 
-Non-initializable prolets are displayed and allow data manipulation on every page of website where the Dock is enabled. 
+Non-initializable prolets are displayed and allow data manipulation on every page of website where the Dock is enabled.
 
 Initializable prolets work the same way, but they are only displayed on pages where they have been initialized, which usually would happen by placing certain template tags in the template.
 
@@ -182,7 +182,7 @@ Initializable prolets are required to implement `ExpressionEngine\Addons\Pro\Ser
     class Sample_prolet_pro extends Prolet\AbstractProlet implements Prolet\InitializableProletInterface
     {
         protected $name = 'Sample prolet';
-        
+
         public function index()
         {
             return 'Hello world!';
@@ -197,6 +197,6 @@ In order for the prolet to be initialized, the template tag from your add-on nee
 
 You would need to make sure to wrap the code in `if (defined('IS_PRO') && IS_PRO) {` conditional, so it would be run only on ExpressionEngine versions that support Pro and have it installed.
 
-Two parameters need to be passed to `ee('pro:Prolet')->initialize()` function. 
+Two parameters need to be passed to `ee('pro:Prolet')->initialize()` function.
 First is the prolet name, in our example `sample_prolet`.
 Second is an array of data that is being passed to prolet via GET request (in our example we pass `entry_id`).

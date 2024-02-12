@@ -204,7 +204,7 @@ The above code will produce this:
         <li>shapes
             <ul>
                 <li>round</li>
-                <li>suare</li>
+                <li>square</li>
                 <li>circles
                     <ul>
                         <li>ellipse</li>

@@ -25,7 +25,7 @@ That's not a perfect analogy but it conveys the scope of what the Multiple Site 
 
 The site manager must be enabled in Control Panel setting: `Settings > General Settings > Enable Site Manager?` in order to create sites.
 
-Once MSM is enabled a new site can be created or editied by clicking the icon next to the site name in the top of the Control Panel sidebar and either selecting the site to edit or adding a new site.
+Once MSM is enabled a new site can be created or edited by clicking the icon next to the site name in the top of the Control Panel sidebar and either selecting the site to edit or adding a new site.
 
 ![add new site](/_images/msm_new_site.png)
 
@@ -88,7 +88,7 @@ Open domain2's new `admin.php` file (this is the file that allows Control Panel 
        $assign_to_config['site_name'] = 'domain2_short_name';
        $assign_to_config['cp_url']    = 'https://domain2.com/admin.php';
 
-TIP: **Tip:** In some multi-site situations, you may not want to allow Control Panel access from anyhere other than domain1. The `admin.php` file can be removed in those cases.
+TIP: **Tip:** In some multi-site situations, you may not want to allow Control Panel access from anywhere other than domain1. The `admin.php` file can be removed in those cases.
 
 ### Step 4
 
@@ -119,4 +119,4 @@ However, cookies for one domain cannot be set from a different domain. If your s
 
     $config['multi_login_sites'] = "https://www.example.com/index.php|https://www.sitetwo.com/index.php";
 
-Now when a user logs into the frontend of one of the sites, the login routine will invisibly loop through each URL in the configuration, redirecting to that site, setting the appropriate cookies, and then cycling through to the next site. Once the user has been logged into all of the sites, they'll end up back on the starting URL. The login redirects will be virtually unnoticable.
+Now when a user logs into the frontend of one of the sites, the login routine will invisibly loop through each URL in the configuration, redirecting to that site, setting the appropriate cookies, and then cycling through to the next site. Once the user has been logged into all of the sites, they'll end up back on the starting URL. The login redirects will be virtually unnoticeable.

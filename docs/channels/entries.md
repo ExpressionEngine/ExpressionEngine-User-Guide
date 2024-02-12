@@ -118,7 +118,7 @@ And, you can use an inclusive stack to only get entries with _all_ of the catego
 
     category="3&7&8"
 
-Or you can negate the inclusive stack and get entries that do not of _all_ of those categories
+Or you can negate the inclusive stack and get entries that do not match _all_ of those categories
 
     category="not 3&5"
 
@@ -274,7 +274,7 @@ When used in an RSS/Atom feed, this parameter allows ExpressionEngine to dynamic
 You can hard code the channel tag to show a specific channel entry. You may also specify multiple entries by separating them with the pipe character:
 
     entry_id="13|42|147"
-    
+
 Or use "not" to exclude entries::
 
     entry_id="not 45|534|807"
@@ -424,7 +424,7 @@ This parameter is for use with entry [pagination](templates/pagination.md) and d
 
 If no parameter is specified, the navigation block will default to the "bottom" behavior.
 
-If the pagination tag pair is not included, the entries returned will not respond to a page indicator in the URL. In othat case you would need to set the parameter to _hidden_ to allow the entries to reflect the pagination in the URL.
+If the pagination tag pair is not included, the entries returned will not respond to a page indicator in the URL. In that case you would need to set the parameter to _hidden_ to allow the entries to reflect the pagination in the URL.
 
 ### `paginate_base=`
 

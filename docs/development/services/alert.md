@@ -187,7 +187,7 @@ Adds content to the body of the alert.
 
 | Parameter | Type           | Description                                                         |
 | --------- | -------------- | ------------------------------------------------------------------- |
-| \$item    | `String|array` | The item to display. If it's an array it will be rendred as a list. |
+| \$item    | `String|array` | The item to display. If it's an array it will be rendered as a list. |
 | \$class   | `String`       | An optional CSS class to add to the item                            |
 | \$xss_filter| `Bool`       | Whether to apply XSS filtering to the body of alert. If you need to display external link in alert and you are not outputting any unfiltered user-provided content, you can set this to `false`, otherwise we recommend skipping it. |
 | Returns   | `Alert`        | \$this                                                              |

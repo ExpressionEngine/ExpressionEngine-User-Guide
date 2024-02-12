@@ -41,7 +41,7 @@ A list of HTML attributes that are allowed to be passed via EE template tag para
 
 These are the mime types that are allowed to be uploaded using the upload class. For security reasons the list is kept as small as possible.  If you need to upload types that are not in the list you can add them.
 
-The mime types are grouped by file type. You can add the allowed mime types directly or you can add new file types containing miltiple mimes.
+The mime types are grouped by file type. You can add the allowed mime types directly or you can add new file types containing multiple mimes.
 
 #### Reverse Proxy IP addresses
 

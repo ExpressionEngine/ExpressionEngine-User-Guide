@@ -28,6 +28,6 @@ Or use the alternative syntax:
       {/statuses}
     </select>
 
-To manually set an entry's status upon sutmitting the Channel Form, you can use a Hidden field:
+To manually set an entry's status upon submitting the Channel Form, you can use a Hidden field:
 
     <input type="hidden" name="status" value="Shipped" />

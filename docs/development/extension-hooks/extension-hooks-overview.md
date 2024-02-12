@@ -66,7 +66,7 @@ Core hooks are categorized into 5 categories:
     - [Role Model](development/extension-hooks/model/role.md)
     - [Site Model](development/extension-hooks/model/site.md)
     - [Snippet Model](development/extension-hooks/model/template-snippet.md)
-    - [SpecialityTemplate Model](development/extension-hooks/model/template-specialty-template.md)
+    - [SpecialtyTemplate Model](development/extension-hooks/model/template-specialty-template.md)
     - [Status Model](development/extension-hooks/model/status.md)
     - [TemplateGroup Model](development/extension-hooks/model/template-group.md)
     - [TemplateRoute Model](development/extension-hooks/model/template-route.md)

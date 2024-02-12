@@ -31,7 +31,7 @@ Select custom field groups to make them available to fluid field on the publish 
 
 ### Add
 
-Each fluid field has a list of buttons of available custom fields and custom field groups displayed below. Clicking on the button adds a field (or field group) to Fluid, maintaing all of the field's settings, instructions and requirements.
+Each fluid field has a list of buttons of available custom fields and custom field groups displayed below. Clicking on the button adds a field (or field group) to Fluid, maintaining all of the field's settings, instructions and requirements.
 
 Also, each Fluid row has '+' button. Clicking on it shows a dropdown populated with the field names assigned to the fluid field. When you choose a field from the dropdown, it adds it to the page.
 
@@ -61,7 +61,7 @@ For example, if you have a Fluid field `fluid_content` with a text field `fluid_
 
 The prefixed tag pair is a looping tag pair. You can have more than one `fluid_text` field for the entry, it's entirely at the entry author's discretion. The author also determines the order of the field output.
 
-Displaying field groups from within Fluid field is sligtly different, as it requires additions `{fields}` tag pair.
+Displaying field groups from within Fluid field is slightly different, as it requires additions `{fields}` tag pair.
 So given that `blog` is the short name of custom field group and `fluid_header` and `fluid_text` are fields in that group, the template might look like:
 
     {fluid_content}
