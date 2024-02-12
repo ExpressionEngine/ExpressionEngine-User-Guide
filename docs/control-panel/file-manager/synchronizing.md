@@ -24,4 +24,4 @@ If an image manipulation is missing, it will be generated automatically. However
 
 Lastly, any records in the database that do not have a corresponding file in the main directory will be highlighted as not found.
 
-NOTE: This functionality is also available as [CLI command](cli/built-in-commands/sync-upload-directory.md)
+NOTE: This functionality is also available as a [CLI command](cli/built-in-commands/sync-upload-directory.md)
