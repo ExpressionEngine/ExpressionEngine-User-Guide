@@ -134,9 +134,6 @@ The following are permission names available for validating a user's permissions
 - `can_create_channel_fields`
 - `can_edit_channel_fields`
 - `can_delete_channel_fields`
-- `can_create_category_groups`
-- `can_edit_category_groups`
-- `can_delete_category_groups`
 - `can_create_categories`
 - `can_edit_categories`
 - `can_delete_categories`
