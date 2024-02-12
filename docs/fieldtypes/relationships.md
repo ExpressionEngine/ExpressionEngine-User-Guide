@@ -11,7 +11,7 @@
 
 [TOC]
 
-Relationships are an extremely powerful tool that allow you to connect Entries in one Channel to those in another one, or even to other entries in the same channel. This ability allows you to store very complex content in your Channel entries.
+Relationships are an extremely powerful tool that allows you to connect Entries in one Channel to those in another one, or even to other entries in the same channel. This ability allows you to store very complex content in your Channel entries.
 
 This fieldtype is currently only limited to Channels.
 
