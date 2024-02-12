@@ -30,6 +30,7 @@ By default the CLI is located `system/ee/eecli.php` .
     - Sync
         - [sync:conditional-fields - Sync channel entry conditional logic](cli/built-in-commands/sync-conditional-fields.md)
         - [sync:reindex - Sync content used in search indexes](cli/built-in-commands/sync-reindex.md)
+        - [sync:upload-directory - Sync files in an upload directory](cli/built-in-commands/sync-upload-directory.md)
     - [Update ExpressionEngine](cli/built-in-commands/update.md)
 - [Creating a Command](cli/creating-a-command.md)
 - [Defining Input](cli/defining-input.md)
