@@ -143,6 +143,8 @@ The search results are displayed on the page you specify as the [result_page=](#
 
 [TOC=3]
 
+{{embed:_tips/form-attributes.md}}
+
 ### `category=`
 
     category="1"

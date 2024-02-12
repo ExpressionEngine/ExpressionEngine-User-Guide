@@ -52,6 +52,8 @@ TIP: **Tip:** Notice the variables in the "value" form fields? These allow us to
 
 [TOC=4]
 
+{{embed:_tips/form-attributes.md}}
+
 #### `entry_id=`
 
     entry_id="24"

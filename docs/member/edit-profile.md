@@ -17,6 +17,8 @@ Edit member profile.
 
 ## Parameters
 
+{{embed:_tips/form-attributes.md}}
+
 ### `datepicker=`
 
 Include the datepicker javascript.  This should be set to ``yes`` if there is a date type member custom field in order to output the calendar.

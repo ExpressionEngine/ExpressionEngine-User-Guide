@@ -28,6 +28,8 @@ Output a login form.
 
 ## Parameters
 
+{{embed:_tips/form-attributes.md}}
+
 ### `action=`
 
     action="https://example.com/"
