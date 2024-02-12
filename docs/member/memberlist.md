@@ -23,7 +23,7 @@ Outputs a searchable list of members, including form filters to sort and limit t
 
 Restrict the output to members that belong to certain [role](control-panel/member-manager.md#member-roles).
 
-NOTE: This parameter replaces `group_id` which is functionality identical and currently still supported.
+NOTE: This parameter replaces `group_id` which is functionally identical and currently still supported.
 
 ### `orderby=`
 
