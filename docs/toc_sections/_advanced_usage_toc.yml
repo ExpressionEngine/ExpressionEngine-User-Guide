@@ -7,6 +7,8 @@
 
 - name: Config Files
   items:
+  - name: Main Configuration File
+    href: config/config.md
   - name: System Config Overrides
     href: general/system-configuration-overrides.md
   - name: Additional Config Files
