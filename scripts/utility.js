@@ -74,4 +74,10 @@ const getSlugger = () => {
 
 const relFromSource = (p) => Path.relative(CONFIG.sourceDir, p)
 
-module.exports = { dirDepth, bsToFs, renderTemplate, getSlugger, getRelativeRootFromPage, relFromSource }
+const pageUrlFunc = (p) => {
+	var str = Path.relative(CONFIG.sourceDir, p);
+	var new_url = str.replace('.md', '.html');
+	return new_url;
+}
+
+module.exports = { dirDepth, bsToFs, renderTemplate, getSlugger, getRelativeRootFromPage, relFromSource, pageUrlFunc }

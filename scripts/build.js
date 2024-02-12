@@ -21,7 +21,7 @@ const RenderMd     = require('./md-render.js')
 const Logger       = require('./logger.js')
 const CONFIG       = require('./config.js')
 
-const { getSlugger, renderTemplate, getRelativeRootFromPage, relFromSource, bsToFs } = require('./utility.js')
+const { getSlugger, renderTemplate, getRelativeRootFromPage, relFromSource, bsToFs, pageUrlFunc } = require('./utility.js')
 
 // Used for saving build information from other files
 global.BuildInfo = { }
@@ -47,6 +47,7 @@ module.exports = () => {
 	// Build Each File
 	.pipe(Through2.obj((file, _, cb) => {
 		let pageId = relFromSource(file.path)
+		let pageUrl = pageUrlFunc(file.path)
 		console.time(pageId.green)
 
 		let pageFM  = FrontMatter(file.contents.toString())
@@ -79,6 +80,7 @@ module.exports = () => {
 			page_title: pageTitle,
 			page_content: pageHtml,
 			page_path: pageId,
+			page_url: pageUrl,
 			root_dir: relPath,
 			getting_started_toc: masterToc.make(file.path, relPath, "getting_started_toc"),
 			the_fundamentals_toc: masterToc.make(file.path, relPath, "the_fundamentals_toc"),
