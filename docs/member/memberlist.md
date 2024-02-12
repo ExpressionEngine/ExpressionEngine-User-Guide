@@ -23,11 +23,13 @@ Outputs a searchable list of members, including form filters to sort and limit t
 
 Restrict the output to members that belong to certain [role](control-panel/member-manager.md#member-roles).
 
+NOTE: This parameter replaces `group_id` which is functionality identical and currently still supported.
+
 ### `orderby=`
 
     orderby="screen_name"
 
-The "orderby" parameter sets the display order of members. The possible options for this parameter are the built-in member fields - including, but not limited to: 
+The "orderby" parameter sets the display order of members. The possible options for this parameter are the built-in member fields - including, but not limited to:
     - `member_id`
     - `role_id`
     - `screen_name`
