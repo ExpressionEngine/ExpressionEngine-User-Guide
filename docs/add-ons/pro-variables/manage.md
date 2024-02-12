@@ -51,7 +51,7 @@ When using the suffix option, you can use `{suffix}` in both the variable name a
 
 ## Variable groups
 
-You can create any number of groups to organise your variables. These groups will appear in the Group drop down for each variable, so you can assign a group to it. On the module home page, variable managers can sort the groups using drag and drop. Variable managers can also edit and delete the groups from here, by clicking on the edit or delete icon next to the group name. You can alter the variable order in a group by editing the group’s properties.
+You can create any number of groups to organize your variables. These groups will appear in the Group drop down for each variable, so you can assign a group to it. On the module home page, variable managers can sort the groups using drag and drop. Variable managers can also edit and delete the groups from here, by clicking on the edit or delete icon next to the group name. You can alter the variable order in a group by editing the group’s properties.
 
 
 ### Group label

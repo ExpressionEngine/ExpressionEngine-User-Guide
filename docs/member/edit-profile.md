@@ -98,7 +98,7 @@ Member username. This is a **required** field and must be unique across the site
 
 ## Custom Profile Field Variable Pair
 
-All custom fields are output inside the ``{custom_profile_fields}`` varialble tag pair.
+All custom fields are output inside the ``{custom_profile_fields}`` variable tag pair.
 
         {custom_profile_fields}
             <p>

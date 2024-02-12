@@ -15,7 +15,7 @@ Every Field Set consists of one or more Fields. The below covers everything abou
 
 ## Usage
 
-When working with Fields, you'll always request it from the [Field Set](development/services/cp-form/field-sets.md) object to request it, initially. Once you have it, you'll decorate it like everything else. For example: 
+When working with Fields, you'll always request it from the [Field Set](development/services/cp-form/field-sets.md) object to request it, initially. Once you have it, you'll decorate it like everything else. For example:
 
 ```
 $form = ee('CP/Form');
@@ -27,12 +27,12 @@ $field = $field_set->getField('first_name', 'text')
     ->setRequired(true);
 ```
 
-The above will attach a `text` Input field onto the Field Set "First Name". 
+The above will attach a `text` Input field onto the Field Set "First Name".
 
 Every existing Shared Form View input field is respected as are a couple additions exclusively through the [CP/Form](development/services/cp-form.md) layer:
 
 - A simplified and streamlined Grid and Table layer
-- Native ExpressionEngine Filepicker 
+- Native ExpressionEngine Filepicker
 - Custom HTML Inputs
 
 ## First Party Fields
@@ -49,7 +49,7 @@ Adds a “pretty” button style link to your form.
 
 #### `setLink($class)`
 
-Returns URL you want to use (`link`). 
+Returns URL you want to use (`link`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -66,7 +66,7 @@ Returns URL you want to use (`link`)
 
 #### `setText($text)`
 
-The copy to use for the button (`text`). 
+The copy to use for the button (`text`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -83,7 +83,7 @@ Returns URL you want to use (`text`)
 
 ### `checkbox`
 
-**class `ExpressionEngine\Library\CP\Form\Fields\Checbox`**
+**class `ExpressionEngine\Library\CP\Form\Fields\Checkbox`**
 
 Adds a specialized widget for checkbox
 
@@ -109,7 +109,7 @@ Adds a File Picker widget to your shared form
 
 #### `withAll()`
 
-Sets the allowed directory parameter to any upload location. 
+Sets the allowed directory parameter to any upload location.
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -175,7 +175,7 @@ Determines whether the mime type is locked to images only
 | \$row | `array` | An array that represents how your rows should be created |
 | Returns | `Form\Fields\Grid` | `$this`, the Grid object to help in chaining |
 
-The `$row` array should be formatted as a simple 2 level, multidimensional, array with each child representing a column and it's fields. As of now, the Grid Field accommodates `select`, `text`, `checkbox`, `file`, `password`, and `textarea` fields natively. 
+The `$row` array should be formatted as a simple 2 level, multidimensional, array with each child representing a column and it's fields. As of now, the Grid Field accommodates `select`, `text`, `checkbox`, `file`, `password`, and `textarea` fields natively.
 
 See the below example for a complete outline.
 
@@ -330,7 +330,7 @@ Puts a slider widget into your form
 
 #### `setMin($min)`
 
-The lowest value in the range of permitted values	
+The lowest value in the range of permitted values
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -347,7 +347,7 @@ Returns the minimum value to allow
 
 #### `setMax($max)`
 
-The greatest value in the range of permitted values	
+The greatest value in the range of permitted values
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -364,7 +364,7 @@ Returns the maximum value to allow
 
 #### `setStep($step)`
 
-Specifies the granularity that the value must adhere to (if any is used, no stepping is implied, and any value is allowed (barring other constraints, such as min and max)	
+Specifies the granularity that the value must adhere to (if any is used, no stepping is implied, and any value is allowed (barring other constraints, such as min and max)
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -381,7 +381,7 @@ Returns the step value
 
 #### `setUnit($unit)`
 
-The symbol your data can best be represented by (defaults to %)	
+The symbol your data can best be represented by (defaults to %)
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -406,7 +406,7 @@ Allows for a more streamlined implementation of tables within Shared Forms
 
 #### `setColumns($cols)`
 
-Sets the columns and options for the Table. Use this to outline how your columns are rendered and prepared. 
+Sets the columns and options for the Table. Use this to outline how your columns are rendered and prepared.
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -486,7 +486,7 @@ Adds a single row to the Table
 
 #### `setBaseUrl($url)`
 
-Sets the URL parameters will be based on 
+Sets the URL parameters will be based on
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -611,11 +611,11 @@ Adds a Toggle control that returns either y or n respectively.
 
 ## The `Input` Field
 
-If you want to use a [native HTML5 input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) that is not already a Field, you can do so quite easily. IF a Field is requested that doesn't exist, a Field of the `Input` variety will be provided. The `Input` Field provides a single custom method that will allow you to craft custom HTML5 input elements. 
+If you want to use a [native HTML5 input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) that is not already a Field, you can do so quite easily. IF a Field is requested that doesn't exist, a Field of the `Input` variety will be provided. The `Input` Field provides a single custom method that will allow you to craft custom HTML5 input elements.
 
 ### `params($params)`
 
-A key=>value array of parameters to be chained into a string internally 
+A key=>value array of parameters to be chained into a string internally
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -624,7 +624,7 @@ A key=>value array of parameters to be chained into a string internally
 
 ### Example
 
-Here's a simple example building both `number` and `color` Input Fields.  
+Here's a simple example building both `number` and `color` Input Fields.
 
 ```
 $field_set = $field_group->getFieldSet('color');
@@ -638,13 +638,13 @@ $field_set->getField('my_number_field', 'number')->params(['min' => 100, 'max' =
 
 **class `ExpressionEngine\Library\CP\Form\Field`**
 
-All input fields are based on the `Field` object. Note that while every Field will have the below methods available, whether they're respected by the Shared Form View layer is a different matter. 
+All input fields are based on the `Field` object. Note that while every Field will have the below methods available, whether they're respected by the Shared Form View layer is a different matter.
 
 [TOC=3]
 
 ### `toArray()`
 
-Returns the entire `CP\Form\Field` object into an array. 
+Returns the entire `CP\Form\Field` object into an array.
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -652,7 +652,7 @@ Returns the entire `CP\Form\Field` object into an array.
 
 ### `getName()`
 
-Returns the name used upon creation for the Field. 
+Returns the name used upon creation for the Field.
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -660,7 +660,7 @@ Returns the name used upon creation for the Field.
 
 ### `setClass($class)`
 
-The class property to apply to the Field (`class`). 
+The class property to apply to the Field (`class`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -677,7 +677,7 @@ Returns the class property (`class`)
 
 ### `withMarginTop()`
 
-The class `margin_top` is added to your input element. 
+The class `margin_top` is added to your input element.
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -693,7 +693,7 @@ Removes the `margin_top` from your input
 
 ### `withMarginLeft()`
 
-The class `margin_left` is added to your input element. 
+The class `margin_left` is added to your input element.
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -709,7 +709,7 @@ Removes the `margin_left` from your input
 
 ### `setNote($note)`
 
-The string you want to use for your Note (`note`). 
+The string you want to use for your Note (`note`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -726,7 +726,7 @@ Returns the note string (`note`)
 
 ### `setAttrs($attrs)`
 
-Any custom input parameters you want to attach to your Field (`attrs`). 
+Any custom input parameters you want to attach to your Field (`attrs`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -743,7 +743,7 @@ Returns the attributes string (`attrs`)
 
 ### `setDisabled($disabled)`
 
-Whether the Field should be editable (`disabled`). 
+Whether the Field should be editable (`disabled`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -760,7 +760,7 @@ Whether the Field is disabled (`disabled`)
 
 ### `setValue($value)`
 
-The value to use for the "value" parameter (`value`). 
+The value to use for the "value" parameter (`value`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -777,7 +777,7 @@ The value to use on the Field (`value`)
 
 ### `setGroup($group)`
 
-The group you want to relate this Field to (`group`). 
+The group you want to relate this Field to (`group`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -794,7 +794,7 @@ The group this Field is related to (`group`)
 
 ### `setGroupToggle($group_toggle)`
 
-The group toggle you want to relate this Field to (`group_toggle`). 
+The group toggle you want to relate this Field to (`group_toggle`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -811,7 +811,7 @@ The group toggle this Field controls (`group_toggle`)
 
 ### `setRequired($required)`
 
-Whether the field can accept input/editing (`required`). 
+Whether the field can accept input/editing (`required`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -828,7 +828,7 @@ Whether this Field is required (`required`)
 
 ### `setPlaceholder($required)`
 
-The string to use for the input "placeholder" attribute (`placeholder`). 
+The string to use for the input "placeholder" attribute (`placeholder`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -848,7 +848,7 @@ Whether this Field is required (`placeholder`)
 
 **class `ExpressionEngine\Library\CP\Form\OptionsField`**
 
-Input Fields that allow for multiple options or set input parameters are based on the `OptionsField` abstract. Note that `OptionsField` extends from `Field` so you'll also have access to those parent methods, as well. 
+Input Fields that allow for multiple options or set input parameters are based on the `OptionsField` abstract. Note that `OptionsField` extends from `Field` so you'll also have access to those parent methods, as well.
 
 [TOC=3]
 
@@ -860,7 +860,7 @@ Used to define quick links when choices are empty.
 | --------- | ---- | ----------- |
 | \$text | `string` | The value to display next to your action button |
 | \$link_text | `string` | The text to display in the action button |
-| \$link_href | `string` | The URL to direct useres to |
+| \$link_href | `string` | The URL to direct users to |
 | Returns | `Form\OptionsField` | `$this`, the Field object to help in chaining |
 
 ### `withOutNoResults()`
@@ -873,7 +873,7 @@ Will remove the set no results details
 
 ### `setChoices($value)`
 
-A simple key=>value array pair to populate options (`choices`). 
+A simple key=>value array pair to populate options (`choices`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -890,7 +890,7 @@ The value to use on the Field (`choices`)
 
 ### `setEncode($encode)`
 
-Whether to format text so that it can be safely placed in a form field in the event it has HTML tags (`encode`). 
+Whether to format text so that it can be safely placed in a form field in the event it has HTML tags (`encode`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -907,7 +907,7 @@ Whether this Field is encoded (`encode`)
 
 ### `setDisabledChoices($disabled_choices)`
 
-A list of keys used in the options array to prevent selection	 (`disabled_choices`). 
+A list of keys used in the options array to prevent selection	 (`disabled_choices`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
@@ -924,7 +924,7 @@ The set disabled choices (`disabled_choices`)
 
 ### `setEmptyText($disabled_choices)`
 
-The text to display if there are no options (`empty_text`). 
+The text to display if there are no options (`empty_text`).
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |

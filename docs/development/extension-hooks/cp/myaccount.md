@@ -37,7 +37,7 @@ How it's called:
         $this->extensions->call('myaccount_nav_setup')
     );
 
-Your hook should return an associative array with the key matching one of the keys above that match the My Account sections. The value should be another associative array with the key being the text you want in the navgation and the value being another associative array with `extension` and `method` being the keys and their values being the respective extension's name and the method being a method that exists in the method's control panel.
+Your hook should return an associative array with the key matching one of the keys above that match the My Account sections. The value should be another associative array with the key being the text you want in the navigation and the value being another associative array with `extension` and `method` being the keys and their values being the respective extension's name and the method being a method that exists in the method's control panel.
 
 Additionally, you should check `extensions->last_call` to avoid overwriting previous changes to the My Account navigation and be sure to use `array_merge_recursive` when merging the previous extension results:
 

@@ -84,7 +84,7 @@ The {multi_field=} variable is the core of the ability to span a channel entry a
 
         {multi_field="page1|page2|page3"}
 
-3.  When you initially visit your comment page for an entry, where you xhave the {multi_field} tag in your Template, you will see the content of your "page1" field, just as if you had used the regular {page1} variable.
+3.  When you initially visit your comment page for an entry, where you have the {multi_field} tag in your Template, you will see the content of your "page1" field, just as if you had used the regular {page1} variable.
 4.  If your entry has content in the "page2" field then you will see a "next page" link.
 5.  When you click that link, you'll see your entry again, but instead of {page1} being displayed, in its place would be {page2}.
 6.  This would continue with as many variables/pages as needed.

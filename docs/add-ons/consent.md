@@ -179,7 +179,7 @@ If this tag would not output any consent requests due to your filters, the conte
       No Consent Requests Available
     {/if}
 
-### Conesnt Form Examples
+### Consent Form Examples
 
 #### Simple Bulk Consent Form
 
@@ -466,7 +466,7 @@ If you need to exclude one or several types from display, use `not ` before the 
 
     provider='ee'
 
-Limits display of cookies by cookie provider. 
+Limits display of cookies by cookie provider.
 If the cookie is provided by an add-on, the provider matches the add-ons short name, e.g. `comment` or `forum`
 The core ExpressionEngine cookies are identified by `ee` as provider.
 If cookie is only being used in Control Panel, the provider is set to `cp`.

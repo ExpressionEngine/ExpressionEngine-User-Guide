@@ -31,7 +31,7 @@ We recommend using `FileSystemEntity` when you need everything that is in certai
 | `site_id`           |                      |            | MSM site ID, default is 1 |
 | `title`             | `xss`                |            | Title (can be different from file name, often used for alt text) |
 | `upload_location_id`|                      |            | ID of Upload Directory that the file is in |
-| `directory_id`      |                      |            | Sobfolder ID, if file is in subfolder |
+| `directory_id`      |                      |            | Subfolder ID, if file is in subfolder |
 | `mime_type`         |                      |            | Registered MIME type for the file. |
 | `file_type`         |                      |            | File type. The built-in types are Image / Document / Archive / Audio / Video |
 | `file_name`         |                      |            | Name of file on filesystem |
@@ -74,7 +74,7 @@ Categories that are using this file as category image
 
 #### `FileEntries`
 
-Entries that are using this file 
+Entries that are using this file
 
 ## Methods
 
@@ -132,7 +132,7 @@ Uses the file's upload destination's url to compute the absolute URL of the file
 
 #### `getAbsoluteManipulationURL($manipulation = 'thumbs')`
 
-Get URL for pre-manupuilated file version. Accepts manipulation name as parameter
+Get URL for pre-manipulated file version. Accepts manipulation name as parameter
 
 #### `getAbsoluteThumbnailURL()`
 
@@ -185,7 +185,7 @@ Perform some action on the file in a local context
 **class `ExpressionEngine\Model\File\File`**
 
 Represents a file. Child of `FileSystemEntity` and is sharing all of it's properties and methods.
-Defines some extra necessary 
+Defines some extra necessary
 
 ## `Directory`
 

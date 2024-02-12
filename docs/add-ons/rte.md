@@ -126,7 +126,7 @@ WARN: **Advanced users only.** Please be careful with using this feature and che
 
 Initially the field is loaded with the saved configuration of tool set being edited.
 
-Consult [Redactor Docs](https://imperavi.com/redactor/docs/settings/) or [CKEDitor Docs](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/configuration.html) for the list of properties. Note that not all features are supported by the ExpressionEngine implementation.
+Consult [Redactor Docs](https://imperavi.com/redactor/docs/settings/) or [CKEditor Docs](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/configuration.html) for the list of properties. Note that not all features are supported by the ExpressionEngine implementation.
 
 #### Extra JavaScript
 JavaScript template to be included with fields using this tool set. Typically used to include extra plugins when using advanced configuration with Redactor.
