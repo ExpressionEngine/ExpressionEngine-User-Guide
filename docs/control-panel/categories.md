@@ -39,9 +39,13 @@ Extra saving options are also available from the dropdown menu under "Save":
 - "Save & Close" - redirects to categories list after saving
 - "Clone to New Category" - saves the changes into a new category. The current category is used as a "template" and remains unchanged.
 
+Note that only members with appropriate permissions are able to perform actions on categories. The permissions are being set per Role globally as well as per each Category Group.
+
 ## Create/Edit Category Groups
 
 **Control Panel Location: `Content > Categories > New/Edit Category Group`**
+
+Access to this sections requires "Can edit category groups" permission to be set for the users member Role.
 
 The category group form is broken out into 3 tabs:
 
