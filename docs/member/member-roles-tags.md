@@ -72,6 +72,11 @@ The `{exp:member:has_role}` tag allows you to display or hide its content depend
 
 **Required** ID or role to check against. The content of the tag will be displayed if the user belongs to this role, otherwise `{if no_results}...{/if}` contents will be displayed.
 
+It is possible to pass multiple roles by separating the ids with a `|` character. In this case, the content will be shown if the member belongs to at least one of the roles.
+
+    role_id="6|12"
+
+
 #### `member_id=`
 
     member_id="147"
