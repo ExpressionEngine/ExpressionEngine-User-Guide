@@ -122,6 +122,12 @@ The file display engine sets some parameters dynamically, based on what is in th
 
 You can hard code the file entries tag to show specific files. You may also specify multiple files by separating them with the pipe character. This parameter takes precedence over any entry specified in the url.
 
+### `folder_id=`
+
+    folder_id="34"
+
+If you want to display only the files that are in certain folder within Upload Directory, specify folder ID using this parameter.
+
 ### `limit=`
 
     limit="30"
@@ -218,6 +224,10 @@ If you have defined any [image manipulations](control-panel/file-manager/upload-
 ### `{file_url}`
 
 The URL to the file.
+
+### `{folder_id}`
+
+If the file is in a subfolder, will return ID of the folder. If the file is in root or upload directory, will return 0.
 
 ### `{height}`
 

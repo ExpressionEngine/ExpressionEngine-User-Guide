@@ -126,6 +126,10 @@ If you have defined any [image manipulations](control-panel/file-manager/upload-
     {file_size:small:human}
     {file_size:small:human_long}
 
+### `{folder_id}`
+
+If the file is in a subfolder, will return ID of the folder. If the file is in root or upload directory, will return 0.
+
 ### `{height}`
 
 The height of the image (in pixels) if applicable.
