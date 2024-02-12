@@ -118,7 +118,7 @@ And, you can use an inclusive stack to only get entries with _all_ of the catego
 
     category="3&7&8"
 
-Or you can negate the inclusive stack and get entries that do not of _all_ of those categories
+Or you can negate the inclusive stack and get entries that do not match _all_ of those categories
 
     category="not 3&5"
 
