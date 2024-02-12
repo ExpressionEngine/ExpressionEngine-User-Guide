@@ -86,7 +86,7 @@ The property `field_settings` consists in an array of settings that depend on th
 | relationship            | `order_field`, `order_dir`        | enum[title,entry_date] , enum[asc,desc]        | Default ordering of entries  |
 | relationship            | `display_entry_id`                | enum[y,n]       |              |
 | relationship            | `allow_multiple`                  | enum[y,n]       |              |
-| Rich text editor        | `toolset_id`                      | integer         | see Rich Text Editor addon for details, for a standard installation: 1 CKEditor Basic, 2 CKEditor Full, 3 Redactor Basic, 4 Redactor Full |
+| Rich text editor        | `toolset_id`                      | integer         | see Rich Text Editor addon for details, for a standard installation: 1 CKEditor Basic, 2 CKEditor Full, 3 RedactorX Basic, 4 RedactorX Full |
 | Rich text editor        | `defer`                           | enum[y,n]       | Defer Editor initialization |
 | Rich text editor, Textarea  | `db_column_type`                  | enum[text,mediumtext]| Column type in database: TEXT(64Kb) MEDIUMTEXT(16Mb) |
 | Rich text editor        | `field_wide`                      | bool            | default true, full width  |
