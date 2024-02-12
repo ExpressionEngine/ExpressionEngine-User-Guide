@@ -2,7 +2,7 @@
 
 The Command Line Interface (CLI) allows a user to run system and user-generated commands in the terminal. The CLI has access to all of the ExpressionEngine resources, and can be used to update the system, clear caches, and much more.
 
-By default the CLI is located `system/ee/eecli.php` . 
+By default the CLI is located `system/ee/eecli.php` .
 
 ![EE CLI](_images/6-1_cli.png)
 
@@ -29,6 +29,7 @@ By default the CLI is located `system/ee/eecli.php` .
         - [migrate:rollback - Rolls back most recent migration group](cli/built-in-commands/migrate.md)
     - Sync
         - [sync:conditional-fields - Sync channel entry conditional logic](cli/built-in-commands/sync-conditional-fields.md)
+        - [sync:reindex](cli/built-in-commands/sync-reindex.md)
     - [Update ExpressionEngine](cli/built-in-commands/update.md)
 - [Creating a Command](cli/creating-a-command.md)
 - [Defining Input](cli/defining-input.md)
