@@ -68,7 +68,7 @@ The first thing you will notice in our `Amazing_add_on_upd` class is a list of p
 ```
 
 ## Install Your Add-On (`install()`)
-The CLI automatically generates our install method. This method will ensure that all extensions and actions declared above will be properly installed. If you only need to install actions and/or extensions, then you can leave this method as is. Otherwise, use this section to add tabs to saved [publish layouts](), update the database, or do something else when the add-on is installed.
+The CLI automatically generates our install method. This method will ensure that all extensions and actions declared above will be properly installed. If you only need to install actions and/or extensions, then you can leave this method as is. Otherwise, use this section to add tabs to saved [publish layouts](control-panel/channels.md#publish-layouts), update the database, or do something else when the add-on is installed.
 
 
 | Parameter | Type      | Description                                             |

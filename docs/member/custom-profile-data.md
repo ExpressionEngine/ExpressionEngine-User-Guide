@@ -30,7 +30,13 @@ NOTE: **Important:** If you omit the member_id= parameter as in the above exampl
 
     member_id="147"
 
-Specifies a particular member's information to display. By default (if you do not include the member_id parameter), the tag will simply display information pertaining to the currently logged-in user.
+Specifies a particular member's information to display. By default (if you do not include the `member_id` or `username` parameter), the tag will simply display information pertaining to the currently logged-in user.
+
+### `username=`
+
+    username="admin"
+
+Username of member to display
 
 ## Variables
 

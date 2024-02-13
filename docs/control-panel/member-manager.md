@@ -9,19 +9,25 @@
 
 # Member Manager
 
+[TOC=2-3]
+
+## Members Listing
+
 **Control Panel Location: `Members`**
 
-This page is used both to search and to browse through active members within your ExpressionEngine installation. Also, you can filter the members by member role and search members.
-
-This page also allows you to do the following:
-
-[TOC=2-3]
+This page is used both to search and to browse through members within your ExpressionEngine installation.
 
 ![Member Manager Control Panel Page](_images/cp-members.png)
 
+Filters and search input can be used to narrow down the list of members displayed. 
+
+The set of columns displayed can be customized using the "Columns" dropdown. By default, the following columns are shown: Member ID, Name (which is composed of avatar, username and screen name), Email, Roles, Join Date, Last Visit Date. Also each member row has "Actions" buttons that contains links to some common actions and a checkbox that allows performing bulk actions on selected members. When "Pending" is selected in the "Role" filter, the bulk action options are "Approve" and "Decline", otherwise "Remove" is the only option.
+
+All roles assigned to a member are shown in the Roles column. When multiple roles are assigned, the primary role will have an indicator. If the member is pending the column does not say "Pending" but instead shows the role to which the member will be assigned once approved (with pending indicator) and a button to approve.
+
 ## Member Roles
 
-**Control Panel Location: `Members > Member Roles`**
+**Control Panel Location: `Members > Roles`**
 
 The _Member Roles_ area of the Control Panel permits you to manage your Member Roles. The member roles can be sorted by ID, Role Name, and Status.
 
@@ -31,7 +37,7 @@ You can assign multiple roles to a member.
 
 ### Create/Edit All Member Roles
 
-**Control Panel Location: `Members > Member Roles > Create/Edit`**
+**Control Panel Location: `Members > Roles > Create/Edit`**
 
 This sections allows you to set the various permissions and settings for the selected Member Role.
 
@@ -50,17 +56,41 @@ Edit the role by clicking its name in the list.
 
 ## Custom Member Fields
 
-**Control Panel Location: `Members > Member Fields`**
+**Control Panel Location: `Settings > Members > Member Fields`**
+
+The link to this section is also found on top of the Member Listing page.
 
 The _Member Fields_ feature permits you to add fields to the member registration form and/or member profile and My Account areas.
 
 ### Create/Edit
 
-**Control Panel Location: `Members > Member Fields > New/Edit`**
+**Control Panel Location: `Settings > Members > Member Fields > New/Edit`**
 
 This section allows you to create or edit Member Fields.
 
-The following fields are available:
+The following field types are compatible and can be used for custom member fields:
+
+- Checkboxes
+- Color Picker
+- Date
+- Duration
+- Email Address
+- File
+- Number Input
+- Multi Select
+- Radio Buttons
+- Range Slider
+- Rich Text Editor
+- Select Dropdown
+- Selectable Buttons
+- Text Input
+- Textarea
+- URL
+- Value Slider
+
+Additionally, third-party field types that specify support for the `MemberField` model can be selected.
+
+The following fields are available when creating a custom field:
 
 - **Type** -- You may choose what type of field this is. There are three choices: 1. **Text Input**: This is a single input line for text. It is the type of field you might use for a title, name, or other short information. 2. **Textarea**: This is a standard text entry box with multiple lines. This is what you would use for larger amount of text. 3. **Drop-down List**: This creates a standard HTML `<select>` drop-down list. You will need to define contents of the list in the provided form.
 
@@ -90,7 +120,7 @@ This section has the following options:
 
 ## Ban Settings
 
-**Control Panel Location: `Members sidebar > Ban Settings`**
+**Control Panel Location: `Settings > Members > Ban Settings`**
 
 The User Banning section of the Control Panel allows you to ban users by IP address, email, or name.
 
