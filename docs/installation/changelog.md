@@ -35,6 +35,7 @@
 - Introduced new Member Manager with configurable column display
 - Added global variables for logged in user's avatar; [#2583](https://github.com/ExpressionEngine/ExpressionEngine/issues/2583)
 - Enabled logging in using email address; [#2931](https://github.com/ExpressionEngine/ExpressionEngine/issues/2931)
+- Member Registration and Profile Edit forms now include form field output options similar to Channel Entry form.
 - Added more variables to address position of field in group inside Fluid field
 - Enabled editing HTML source in RTE with CKEditor
 - Added RTE configuration to use custom CKEditor build
