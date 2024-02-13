@@ -237,7 +237,7 @@ NOTE: **Note:** Cookie settings are only applicable for users running Expression
 
 If your add-on sets any custom cookies, you can provide default settings for each those.
 
-In the above example, `forum_theme` is the cookie name, `description` sets default description for cookie to string referenced by `forum_theme_desc` key in add-on's language file and `lifetime_changeable` indicates that cookie's liefime cannot be changed by site administrator.
+In the above example, `forum_theme` is the cookie name, `description` sets default description for cookie to string referenced by `forum_theme_desc` key in add-on's language file and `lifetime_changeable` indicates that cookie's lifetime cannot be changed by site administrator.
 
 | Type                  | Purpose                |
 | --------------------- | ---------------------- |

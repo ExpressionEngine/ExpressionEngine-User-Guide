@@ -16,7 +16,7 @@ lang: php
 [TOC]
 
 ## Overview
-ExpressionEngine ships with a range of fieldtypes already in place. However, perhaps you want to had your fieldtype that executes functionality differently than the fields that ship with ExpressionEngine. If so, then read below for how to create your own custom fieldtype. 
+ExpressionEngine ships with a range of fieldtypes already in place. However, perhaps you want to had your fieldtype that executes functionality differently than the fields that ship with ExpressionEngine. If so, then read below for how to create your own custom fieldtype.
 
 TIP: For an overview of what a Fieldtype is, read the [Fieldtype Overview docs](/fieldtypes/overview.md).
 
@@ -24,7 +24,7 @@ NOTE:Before adding a fieldtype to your add-on, you need to already have an add-o
 
 ## Creating An Amazing Fieldtype
 
-Adding a custom fieldtype to your add-on is easy with the `make:fieldtype` command. 
+Adding a custom fieldtype to your add-on is easy with the `make:fieldtype` command.
 
 ```
 $ php system/ee/eecli.php make:fieldtype
@@ -221,7 +221,7 @@ Display the field data as column in the Entry Manager
 
 #### `EE_Fieldtype::getTableColumnConfig()`
 
-Sets [table column configuration](development/services/table.html#setting-the-columns) for Entry Manager
+Sets [table column configuration](development/services/table.md#setting-the-columns) for Entry Manager
 
 Returns `Array`
 

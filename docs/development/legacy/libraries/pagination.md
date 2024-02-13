@@ -138,6 +138,6 @@ This property is set once `Pagination_object::prepare` and is only `TRUE` in the
 
 **Only used with :attr:\`Pagination_object::\$field_pagination\`.** The custom fields that we're potentially paginating over.
 
-### `$field_pagiation_query`
+### `$field_pagination_query`
 
 **Only used with :attr:\`Pagination_object::\$field_pagination\`.** This is the query for the individual item that is being field paginated over.

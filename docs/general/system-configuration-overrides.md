@@ -2199,6 +2199,7 @@ Example Usage:
 ### `proxy_ips`
 
 Allow list of reverse proxy servers that may forward the visitor's IP address.
+DEPRECATED. Use [`proxy.php` config file](config/config-files.md#reverse-proxy-ip-addresses) instead.
 
 | Value        | Description                          |
 | ------------ | ------------------------------------ |

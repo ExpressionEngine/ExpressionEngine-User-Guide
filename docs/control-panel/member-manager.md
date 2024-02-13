@@ -50,7 +50,7 @@ ExpressionEngine comes with 5 built-in Roles:
 
 These roles should never be deleted.
 
-If you need a custom set of permissions for the role, we suggest creating a new role for each case. You can do that by clicking "New Role" button, or you can create a new role based on an exsting one by picking "Clone to New Role" from the role's "Save" dropdown.
+If you need a custom set of permissions for the role, we suggest creating a new role for each case. You can do that by clicking "New Role" button, or you can create a new role based on an existing one by picking "Clone to New Role" from the role's "Save" dropdown.
 
 Edit the role by clicking its name in the list.
 

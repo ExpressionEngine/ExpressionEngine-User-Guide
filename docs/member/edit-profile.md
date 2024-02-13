@@ -19,6 +19,14 @@ This template tag allows editing a member's profile using the form that is simil
 
 ## Parameters
 
+{{embed:_tips/form-attributes.md}}
+
+### `datepicker=`
+
+Include the datepicker javascript.  This should be set to ``yes`` if there is a date type member custom field in order to output the calendar.
+
+    datepicker="yes"
+
 ### `include_assets=`
 
     include_assets="yes"

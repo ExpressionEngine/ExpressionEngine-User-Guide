@@ -40,7 +40,7 @@ NOTE: **Note:** To use the Markdown option, the Markdown Add-on must be installe
 
 This Auto BR feature simply converts each line break into an HTML `<br />` tag.
 
-This feature can be found in the PUBLISH page of the Control Panel. Youll see a menu below each entry field with this option. You can also configure your Comment Preferences so that any comments will be formatted this way.
+This feature can be found in the PUBLISH page of the Control Panel. You'll see a menu below each entry field with this option. You can also configure your Comment Preferences so that any comments will be formatted this way.
 
 ## None
 

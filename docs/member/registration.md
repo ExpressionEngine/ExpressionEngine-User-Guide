@@ -19,6 +19,8 @@ NOTE: **Important:** In order for site visitors to be allowed to register for ac
 
 ## Parameters
 
+{{embed:_tips/form-attributes.md}}
+
 ### `return=`
 
     return="member/registration/success"
