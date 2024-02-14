@@ -77,7 +77,7 @@ class Amazing_add_on_tab
     public function delete($entry_ids){
 
     }
-    
+
 
     // This function is needed to display data as an Entry Manager column
     public function renderTableCell($data, $field_id, $entry)
@@ -227,6 +227,6 @@ Display the tab data as column in the Entry Manager
 
 #### `getTableColumnConfig()`
 
-Sets [table column configuration](development/services/table.html#setting-the-columns) for Entry Manager
+Sets [table column configuration](development/services/table.md#setting-the-columns) for Entry Manager
 
 Returns `Array`

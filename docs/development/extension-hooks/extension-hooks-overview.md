@@ -20,6 +20,7 @@ TIP: Reference [Extending The Core](development/extensions.md) for more informat
 Core hooks are categorized into 5 categories:
 - Global
     - [Core Library](development/extension-hooks/global/core.md)
+    - [CLI](development/extension-hooks/global/cli.md)
     - [Email Library](development/extension-hooks/global/email.md)
     - [Filemanager Library](development/extension-hooks/global/filemanager.md)
     - [Functions Library](development/extension-hooks/global/functions.md)
@@ -29,6 +30,7 @@ Core hooks are categorized into 5 categories:
     - [Output Library](development/extension-hooks/global/output.md)
     - [Pagination Library](development/extension-hooks/global/pagination.md)
     - [Relationships Fieldtype](development/extension-hooks/global/relationships.md)
+    - [Members Fieldtype](development/extension-hooks/global/member-ft.md)
     - [Session Library](development/extension-hooks/global/session.md)
     - [Template Library](development/extension-hooks/global/template.md)
     - [Text Helper](development/extension-hooks/global/text-helper.md)
@@ -65,7 +67,7 @@ Core hooks are categorized into 5 categories:
     - [Role Model](development/extension-hooks/model/role.md)
     - [Site Model](development/extension-hooks/model/site.md)
     - [Snippet Model](development/extension-hooks/model/template-snippet.md)
-    - [SpecialityTemplate Model](development/extension-hooks/model/template-specialty-template.md)
+    - [SpecialtyTemplate Model](development/extension-hooks/model/template-specialty-template.md)
     - [Status Model](development/extension-hooks/model/status.md)
     - [TemplateGroup Model](development/extension-hooks/model/template-group.md)
     - [TemplateRoute Model](development/extension-hooks/model/template-route.md)

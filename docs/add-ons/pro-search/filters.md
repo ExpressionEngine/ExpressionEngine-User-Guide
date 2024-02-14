@@ -168,7 +168,7 @@ You can use the native `search:field_name` parameter to target specific fields. 
 ### Parameters
 
 #### `search:field_name`
-    Like the [channel search:field_name= parameter](/channel/channel_entries.html#search-field-name).
+    Like the [channel search:field_name= parameter](/channel/channel_entries.md#search-field-name).
 #### `search:field_name:column_name`
     Works just like the `search:field_name` parameter, but targets a specific column in a Grid/Matrix field.
 #### `search:title`
@@ -178,7 +178,7 @@ You can use the native `search:field_name` parameter to target specific fields. 
 #### `search:status`
     Works just like the `search:field_name` parameter, but targets statuses.
 #### `contains_words`
-    Accepts parameter names. Force the given parameter values to match the full term, to ensure that the values are [not contained within other words](/channel/channel_entries.html#contains-matching). Also possible by using `search:field_name="value\W"`.
+    Accepts parameter names. Force the given parameter values to match the full term, to ensure that the values are [not contained within other words](/channel/channel_entries.md#contains-matching). Also possible by using `search:field_name="value\W"`.
 #### `ends_with`
     Accepts parameter names. Force the given parameter values to match the end of the target field. Also possible by using `search:field_name="value$"`.
 #### `exact`

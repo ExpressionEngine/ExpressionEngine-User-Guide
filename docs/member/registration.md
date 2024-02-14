@@ -19,6 +19,8 @@ NOTE: **Important:** In order for site visitors to be allowed to register for ac
 
 ## Parameters
 
+{{embed:_tips/form-attributes.md}}
+
 ### `return=`
 
     return="member/registration/success"
@@ -26,10 +28,10 @@ NOTE: **Important:** In order for site visitors to be allowed to register for ac
 ### `form_class=`
 
     form_class="register"
-    
+
  ### `primary_role=`
 
-    primary_role="7"   
+    primary_role="7"
 
 This parameter allows you to specify the primary role to assign the new member, overriding the default member setting.
 
@@ -37,6 +39,34 @@ This parameter allows you to specify the primary role to assign the new member, 
     error_handling="inline"
 
 This parameter allows you to use inline errors in your registration form. The errors can be displayed using the `{error:field_name}` tag where `field_name` would need to be replaced with the name of the field that has an error, as used to compose the form.
+
+### `include_assets=`
+
+    include_assets="yes"
+
+Adds the Javascript and CSS that is required by custom member fields to your form. By default, these are **not** included
+
+### `datepicker=`
+
+    datepicker="no"
+
+Adds the datepicker to your date fields. Defaults to "yes".
+
+NOTE: **Note:** If you are manually constructing a date field, in order to apply the date picker you must include `rel="date-picker"`.
+
+### `include_css=`
+
+    include_css="no"
+
+Allows you to manage the inclusion of required CSS independently from the `include_assets` parameter. Defaults to "yes".
+
+### `include_jquery=`
+
+    include_jquery="no"
+
+Includes jQuery automatically. Defaults to "yes".
+
+NOTE: **Note:** If you are using your own copy of jQuery you will need to load it **before** the form.
 
 ## Form Inputs
 NOTE: Be sure to include the required JavaScript and CSS to use the native [Password Validation](member/password-validation.md).
@@ -92,6 +122,44 @@ Please note you need to address those by ID and not name, e.g. `m_field_id_8`
     <label for="work_title">Work title</label>
     <input type="text" id="work_title" name="m_field_id_1" size="40" value="{if m_field_id_1}{m_field_id_1}{/if}" />
 
+And easier way to display the field's input is to use the special tag:
+
+    <label for="work_title">Work title</label>
+    {field:work_title}
+
+Custom fields can also be output inside the ``{custom_fields}`` variable tag pair.
+
+        {custom_fields}
+            <p>
+                <label>{lang:profile_field}</label><br>
+                <small>{lang:profile_field_description}</small><br>
+
+                {form:custom_profile_field}
+
+            </p>
+         {/custom_fields}
+
+### `{custom_fields}` Pair Variables
+
+#### `{lang:profile_field}`
+#### `{field_name}`
+
+Outputs the custom field's name.
+
+#### `{lang:profile_field_description}`
+#### `{field_description}`
+
+Outputs the field's description, if any.
+
+#### `{form:custom_profile_field}`
+#### `{field}`
+
+Shows the fully parsed custom member form field.
+
+#### `{if required}`
+
+Indicates whether the field is marked as required
+
 ## Variables
 
 ### `{accept_terms}`
@@ -135,6 +203,9 @@ This will show errors with the submitted password as well as password confirm.
 
     {if error:username}{error:username}{/if}
 
+### `{field:field_name}`
+
+Displays the custom field input form for the given field (substitute `field_name` with the actual field name). Note that the field must be set as "visible on registration" in order to show up.
 
 ## Example
 

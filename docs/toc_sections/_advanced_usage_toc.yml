@@ -7,6 +7,8 @@
 
 - name: Config Files
   items:
+  - name: Main Configuration File
+    href: config/config.md
   - name: System Config Overrides
     href: general/system-configuration-overrides.md
   - name: Additional Config Files
@@ -203,6 +205,8 @@
               href: development/extension-hooks/global/pagination.md
             - name: Relationships Fieldtype
               href: development/extension-hooks/global/relationships.md
+            - name: Members Fieldtype
+              href: development/extension-hooks/global/member-ft.md
             - name: Session Library
               href: development/extension-hooks/global/session.md
             - name: Template Library
@@ -418,6 +422,8 @@
           href: development/models/category-field.md
         - name: Category Group Model
           href: development/models/category-group.md
+        - name: Category Group Settings Model
+          href: development/models/category-group-settings.md
         - name: Channel Entry Model
           href: development/models/channel-entry.md
         - name: Channel Field Group Model

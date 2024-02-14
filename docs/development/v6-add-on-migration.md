@@ -49,7 +49,7 @@ ExpressionEngine 6 supports displaying custom field data in the Entry Manager ta
 
 ### Base classes for add-on installation
 
-While the legacy methods for installing modules and extensions are still supported, we’ve also made it easier by using the new [Add-on Installer](development/addon-installer.md).
+While the legacy methods for installing modules and extensions are still supported, we’ve also made it easier by using the new [Add-on Installer](development/modernizing-existing-add-ons.md).
 
 
 ### Namespace change

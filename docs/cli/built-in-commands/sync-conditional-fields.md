@@ -1,6 +1,6 @@
 # sync:conditional-fields
 
-Sync Conditional Field Logic -- Checks each channel entry to see if its connditional logic is correct. If it is not, it updates the conditional logic and saves the entry.
+Sync Conditional Field Logic -- Checks each channel entry to see if its conditional logic is correct. If it is not, it updates the conditional logic and saves the entry.
 
 ## Options list:
 

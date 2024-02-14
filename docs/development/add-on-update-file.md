@@ -11,13 +11,13 @@
 
 ## Overview
 
-The `upd.[addon_name].php` file (commonly just called the `upd` file) is critical to ExpressionEngine knowing what to do with your add-on. Here we tell ExpressionEngine what actions to register, core hooks we want to use, database tables to update, and much more. We need to tell ExpressionEngine what to do when we install an add-on, update an add-on, and uninstall and add-on. Thankfully the CLI takes care of most of this for us. 
+The `upd.[addon_name].php` file (commonly just called the `upd` file) is critical to ExpressionEngine knowing what to do with your add-on. Here we tell ExpressionEngine what actions to register, core hooks we want to use, database tables to update, and much more. We need to tell ExpressionEngine what to do when we install an add-on, update an add-on, and uninstall and add-on. Thankfully the CLI takes care of most of this for us.
 
 TIP:When using the CLI, your add-on update file will automatically be created for you. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
 
 ## Initial Setup
 
-When you first create your add-on using the [`make:addon`](development/addon-development-overview.md) command from the CLI, a `upd` file is created for you in the root of your add-on.
+When you first create your add-on using the [`make:addon`](cli/built-in-commands/make-addon.md) command from the CLI, a `upd` file is created for you in the root of your add-on.
 
 Here I have created an add-on called Amazing Add-on using the CLI.
 
@@ -68,7 +68,7 @@ The first thing you will notice in our `Amazing_add_on_upd` class is a list of p
 ```
 
 ## Install Your Add-On (`install()`)
-The CLI automatically generates our install method. This method will ensure that all extensions and actions declared above will be properly installed. If you only need to install actions and/or extensions, then you can leave this method as is. Otherwise, use this section to add tabs to saved [publish layouts](), update the database, or do something else when the add-on is installed.
+The CLI automatically generates our install method. This method will ensure that all extensions and actions declared above will be properly installed. If you only need to install actions and/or extensions, then you can leave this method as is. Otherwise, use this section to add tabs to saved [publish layouts](control-panel/channels.md#publish-layouts), update the database, or do something else when the add-on is installed.
 
 
 | Parameter | Type      | Description                                             |
@@ -131,12 +131,12 @@ Be sure that you also update your [`install()` function](#adding-publish-tabs) t
 
 
 ## Update Your Add-on (`update()`)
-The `update` method will run code when a user installs an update to our add-on. 
+The `update` method will run code when a user installs an update to our add-on.
 
 | Parameter | Type      | Description                                                        |
 | --------- | --------- | ------------------------------------------------------------------ |
 | \$current | `string`  | The last recorded version of the module in the `exp_modules` table |
-| Returns   | `Boolean` | `FALSE` if no update is needed, `TRUE` otherwise   
+| Returns   | `Boolean` | `FALSE` if no update is needed, `TRUE` otherwise
 
     public function update($current = '')
     {
@@ -150,7 +150,7 @@ The `update` method will run code when a user installs an update to our add-on.
             // update database
             // notify mission control of the update
         }
-        
+
 
         return true;
     }

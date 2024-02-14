@@ -325,6 +325,12 @@ You'll notice in the "logout" link above that a special path is used: {path='LOG
 
 There are a handful of variables that are always available to conditionals.
 
+### `logged_in_avatar_filename`
+### `logged_in_avatar_height`
+### `logged_in_avatar_width`
+
+    {if logged_in_avatar_filename}<img src="/avatars/{logged_in_avatar_filename}" width="{logged_in_avatar_width}" height="{logged_in_avatar_height}" />{/if}
+
 ### `logged_in_email`
 
     {if logged_in_email $= 'example.com'}  One of us! One of us!  {/if}

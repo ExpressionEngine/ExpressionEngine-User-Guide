@@ -17,17 +17,21 @@ Outputs a searchable list of members, including form filters to sort and limit t
 
 ## Parameters
 
+{{embed:_tips/form-attributes.md}}
+
 ### `role_id=`
 
     role_id="5"
 
 Restrict the output to members that belong to certain [role](control-panel/member-manager.md#member-roles).
 
+NOTE: This parameter replaces `group_id` which is functionally identical and currently still supported.
+
 ### `orderby=`
 
     orderby="screen_name"
 
-The "orderby" parameter sets the display order of members. The possible options for this parameter are the built-in member fields - including, but not limited to: 
+The "orderby" parameter sets the display order of members. The possible options for this parameter are the built-in member fields - including, but not limited to:
     - `member_id`
     - `role_id`
     - `screen_name`
@@ -79,6 +83,12 @@ This parameter allows you to specify the id attribute for the search &lt;form&gt
     form_name="login"
 
 This parameter allows you to specify a name attribute for the search &lt;form&gt; tag.
+
+### `backspace=`
+
+    backspace="3"
+
+The `backspace=` parameter will remove the specified number of characters, including spaces and line breaks, from the last iteration of the tag pair.
 
 ## Form Variables
 
