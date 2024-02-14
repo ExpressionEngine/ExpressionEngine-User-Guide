@@ -40,7 +40,7 @@ The same query with GET variables would look like this:
 
 `domain.com/search/results?keywords=hello+world`
 
-Using GET variables is not possible if the `uri_protocol` config setting is set to QUERY_STRING. It can also cause unexpected behaviour if you’re using the second exception (the question mark) in your `.htaccess` file when hiding `index.php`. If you can, use the encoded query instead as this will always work.
+Using GET variables is not possible if the `uri_protocol` config setting is set to QUERY_STRING. It can also cause unexpected behavior if you’re using the second exception (the question mark) in your `.htaccess` file when hiding `index.php`. If you can, use the encoded query instead as this will always work.
 
 NOTE:**Note:** When using GET variables, make sure Dynamic Channel Query Caching is turned off.
 
@@ -54,7 +54,7 @@ Choose a tag which is used to highlight keywords in the search excerpt. Options 
 
 ### Minimum word length
 
-The ft_min_word_len setting of your MySQL installation determines the minimum length of words indexed by the Full Text index. Setting that value here will trigger an alternative search algorithm when the search term is smaller than this size. Defaults to 4. Do not alter unless you have customised your MySQL installation.
+The ft_min_word_len setting of your MySQL installation determines the minimum length of words indexed by the Full Text index. Setting that value here will trigger an alternative search algorithm when the search term is smaller than this size. Defaults to 4. Do not alter unless you have customized your MySQL installation.
 
 ### Stop words
 

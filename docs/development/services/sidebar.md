@@ -85,7 +85,7 @@ Where `'list-name'` is the unique name you have your folder list. A jQuery objec
       });
 
       $.ajax({
-        url: EE.templage_groups_reorder_url,
+        url: EE.template_groups_reorder_url,
         data: { 'groups': template_groups },
         type: 'POST',
         dataType: 'json'

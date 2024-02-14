@@ -122,7 +122,7 @@ Caches are cleared automatically when certain actions occur:
 - Updating an Email Notification (clears all caches)
 - Updating a Theme Template (clears all caches)
 - Running a Template Sync (clears all caches)
-- Submission, updating or deleting of an Entry through API (clears if needed either all or sql cache). See [Clear cache for new ntries?](control-panel/settings/content-design.md#clear-cache-for-new-entries).
+- Submission, updating or deleting of an Entry through API (clears if needed either all or sql cache). See [Clear cache for new entries?](control-panel/settings/content-design.md#clear-cache-for-new-entries).
 - Comment Module:
   - Creating, updating or deleting a Comment (clears all caches)
   - Change Comment Status (clears all caches)

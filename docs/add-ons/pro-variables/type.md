@@ -60,7 +60,7 @@ Allows applying modifiers, which, among other, are used to apply [on-the-fly ima
 
 ## Grid
 
-Uses the native [Grid field](/fieldtypes/grid.md). All native types are available, _except for Relationships_. To output the variable, use the `{exp:pro_variables:pair}` or `{exp:pro_variables:single}` tag where appropriate. You can use any of Grid’s [parameters](/fieldtypes/grid.md#parameters) and [variables](/fieldtypes/grid.ms#variables) using these tags. Additionally, one more parameter is available:
+Uses the native [Grid field](/fieldtypes/grid.md). All native types are available, _except for Relationships and Members_. To output the variable, use the `{exp:pro_variables:pair}` or `{exp:pro_variables:single}` tag where appropriate. You can use any of Grid’s [parameters](/fieldtypes/grid.md#parameters) and [variables](/fieldtypes/grid.ms#variables) using these tags. Additionally, one more parameter is available:
 
 ### Parameters
 

@@ -11,7 +11,9 @@
 
 [TOC]
 
-ExpressionEngine's built-in Rich Text Editor (RTE) is a fieldtype that can be used for entry editing in the Control Panel as well as frontend Channel Forms. It is offering [CKEditor 5](https://ckeditor.com/ckeditor-5/) and [Redactor](https://imperavi.com/redactor/) as editing engine.
+ExpressionEngine's built-in Rich Text Editor (RTE) is a fieldtype that can be used for entry editing in the Control Panel as well as frontend Channel Forms. It is offering [CKEditor 5](https://ckeditor.com/ckeditor-5/) and [RedactorX](https://imperavi.com/redactorx/) as editing engine.
+
+Additionally, [Redactor 3](https://imperavi.com/redactor/) is available as a legacy option, but it is not recommended for new projects.
 
 NOTE: **Note:** If you're looking for how to use RTE fields in your channel entries loops, you should look at [the RTE field variable usage documentation](fieldtypes/rte.md) in the channel fields documentation.
 
@@ -24,14 +26,14 @@ Tool Sets are essentially pre-created configurations that can be used by particu
 Initially RTE installs 4 tool sets:
 - **CKEditor Basic:** is based on CKEditor and  has buttons for bold, italic, underline, link, and ordered/unordered lists
 - **CKEditor Full:** offers full set of CKEditor features
-- **Redactor Basic:** is based on Redactor and  has buttons for bold, italic, underline, link, and ordered/unordered lists
-- **Redactor Full:** offers full set of Redactor features
+- **RedactorX Basic:** is based on RedactorX and  has buttons for bold, italic, underline, link, and ordered/unordered lists
+- **RedactorX Full:** offers full set of RedactorX features
 
 ### Creating a Tool Set
 
 - Click the **Create New** button and the tool set creation form will appear.
 - Enter a tool set name.
-- Select tool set type (CKEditor or Redactor)
+- Select tool set type (CKEditor, RedactorX or Redactor)
 - Select the toolbar buttons and plugins you wish to have in your new tool set (or use the [Advanced Configuration option](#advanced-configuration)).
 - Click **Save Tool Set** to save your changes.
 
@@ -49,7 +51,7 @@ Initially RTE installs 4 tool sets:
 
 #### Editor Type
 
-Rich Text Editor comes with [CKEditor](https://ckeditor.com/) v5 and [Redactor](https://imperavi.com/redactor/) v3 support. Both are great, pick the one that fits your needs best.
+Rich Text Editor comes with [CKEditor](https://ckeditor.com/) v5 and [RedactorX](https://imperavi.com/redactorx/). Both are great, pick the one that fits your needs best. [Redactor 3](https://imperavi.com/redactor/) has been deprecated, but is also available.
 
 #### Upload Directory
 
@@ -59,43 +61,15 @@ The file management features in RTE field can be allowed to access all upload di
 
 Choose between "Left to right" and "Right to left"
 
-#### Tool Set Buttons
+#### Customize the Toolbar
 
-The following are the buttons that can be enabled in tool set to manipulate the data within an RTE field.
+![RTE buttons](_images/rte-buttons.png)
 
-<ul style="columns: 4;">
-    <li>HTML (Redactor only)</li>
-    <li>Bold</li>
-    <li>Italic</li>
-    <li>Strikethrough / Deleted</li>
-    <li>Underline</li>
-    <li>Subscript</li>
-    <li>Superscript</li>
-    <li>Block quote</li>
-    <li>Code</li>
-    <li>Heading / Format</li>
-    <li>Remove formatting (CKEditor only)</li>
-    <li>Style (Redactor only)</li>
-    <li>Properties (Redactor only)</li>
-    <li>Undo</li>
-    <li>Redo</li>
-    <li>Numbered list</li>
-    <li>Bulleted list</li>
-    <li>Decrease indent</li>
-    <li>Increase indent</li>
-    <li>Link</li>
-    <li>Image / File Browser</li>
-    <li>Table</li>
-    <li>Media / Video</li>
-    <li>Embed HTML / Widget</li>
-    <li>Align (left / right / center)</li>
-    <li>Justify</li>
-    <li>Horizontal line</li>
-    <li>Special characters</li>
-    <li>"Read More" separator</li>
-    <li>Font color / background</li>
-    <li>Fullscreen (Redactor only)</li>
-</ul>
+The exact set of buttons that are available is specific to the editor type selected. CKEditor and Redactor have a single toolbar, while RedactorX has multiple toolbars, each configured separately.
+
+The buttons / plugins that are enabled are displayed in the order they will appear in the toolbar. You can drag and drop the buttons to change their order.
+
+The disabled buttons / plugins are displayed in grey.
 
 #### Custom Stylesheet
 CSS template with styles to be applied to fields using this tool set. All styles will be automatically prefixed with toolset class, which means that the template should hold rather generic styles for the elements.
@@ -106,7 +80,7 @@ The minimal height for the field in pixels
 
 #### Maximal height
 
-The maximum height for the field in pixels (Redactor only).
+The maximum height for the field in pixels (RedactorX / Redactor only).
 
 #### Limit characters
 
@@ -126,7 +100,7 @@ WARN: **Advanced users only.** Please be careful with using this feature and che
 
 Initially the field is loaded with the saved configuration of tool set being edited.
 
-Consult [Redactor Docs](https://imperavi.com/redactor/docs/settings/) or [CKEDitor Docs](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/configuration.html) for the list of properties. Note that not all features are supported by the ExpressionEngine implementation.
+Consult [RedactorX Docs](https://imperavi.com/redactorx/docs/settings/), [Redactor Docs](https://imperavi.com/redactor/docs/settings/) or [CKEDitor Docs](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/configuration.html) for the list of properties. Note that not all features are supported by the ExpressionEngine implementation.
 
 #### Extra JavaScript
 JavaScript template to be included with fields using this tool set. Typically used to include extra plugins when using advanced configuration with Redactor.
@@ -148,14 +122,15 @@ To delete a tool set, check the tool set's checkbox in the tool set table listin
 
 - **Default RTE tool set** - select the tool set that will be selected by default when creating a field.
 - **File Browser** - select file browser that will be used when browsing for images and files from RTE fields. ExpressionEngine's FilePicker is used by default, third-party add-ons can provide their own filepickers
+- **Use custom CKEditor build** - Allows using custom CKEditor build with extra plugins. If enabled, RTE instances running CKEditor will be built using the script in `themes/user/rte/javascript/` folder.
 
 NOTE: **Note:** If using the [Multiple Site Manager](msm/overview.md), this preference is per-site.
 
 ## Custom plugins
 
-### Redactor
+### RedactorX
 
-When using Redactor, the javascript for the plugin can be placed in the template, which then needs to be selected in "Extra JavaScript" field for the tool set.
+When using RedactorX or Redactor, the javascript for the plugin can be placed in the template, which then needs to be selected in "Extra JavaScript" field for the tool set.
 Then enable extended configuration, add the plugin name to list of plugins and provide plugin config if necessary.
 If the plugin needs extra styling, it can be placed in CSS Templates selected in "Custom Stylesheet" field for the tool set. If the CSS is targeting buttons, the selectors need to be prefixed with `.redactor-toolbar`.
 
@@ -170,7 +145,9 @@ NOTE: **Warning** Doing this requires advanced development skills.
 In order to create custom CKEditor build:
  - Clone [GitHub repo](https://github.com/ExpressionEngine/ExpressionEngine/)
  - Install NPM packages by running `npm install`
- - Follow the installation instructions for the plugin itself
- - Make your changes to `js-src\ckeditor5-build-classic\src\ckeditor.js` and other files as necessary.
+ - Follow the installation instructions for the extra CKEditor plugins that you need
+ - Make your changes to `js-src/ckeditor5-build-classic/src/ckeditor.js` and other files as necessary.
  - Run the command `npm run build:ckeditor`
- - Copy the files from `themes/ee/asset/javascript/src/fields/rte/ckeditor` to same folder on your EE installation
+ - Copy the files from `themes/ee/asset/javascript/src/fields/rte/ckeditor` to `themes/user/rte/javascript/` folder on your EE installation
+
+TIP: Buttons provided by extra plugins might be not availble with visual toolbar builder. You will need to use Advanced Configuration JSON file to add those.

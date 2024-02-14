@@ -235,6 +235,8 @@
       href: fieldtypes/fluid.md
     - name: Grid
       href: fieldtypes/grid.md
+    - name: Members
+      href: fieldtypes/member.md
     - name: Notes
       href: fieldtypes/notes.md
     - name: Number Input

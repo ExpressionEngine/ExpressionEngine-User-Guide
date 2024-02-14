@@ -25,7 +25,7 @@ NOTE: **Note:** This class is initialized automatically by the system so there i
 
 ### Anatomy of a Config File
 
-ExpressionEngine has one primary config file, located at `sysem/user/config/config.php` and add-ons can also contain additional config files located inside their directory. Make sure that you only use the primary configuration file when the config is on a per-install basis.
+ExpressionEngine has one primary config file, located at `system/user/config/config.php` and add-ons can also contain additional config files located inside their directory. Make sure that you only use the primary configuration file when the config is on a per-install basis.
 
 NOTE: **Note:** If you do create your own config files use the same format as the primary one, storing your items in an array called \$config. ExpressionEngine will intelligently manage these files so there will be no conflict even though the array has the same name (assuming an array index is not named the same as another).
 

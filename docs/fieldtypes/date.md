@@ -25,6 +25,8 @@ Choose how the field data should be localized. The options are
 ### Include time?
 When turned off, only date will be displayed, otherwise the editor can also enter the time into the same field.
 
+When turned on, the date picker will also display time input. Depending on member preferences, the time input will be in 12 or 24 hour format.
+
 ## Publish form
 
 On the publish form (when `Date Localization` setting is set to `Ask each time`), along with a field to enter a date, you will also see an option to select whether you want the date localized or fixed:

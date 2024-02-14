@@ -131,7 +131,7 @@ Occasionally, you might need to check whether a value passes a validation rule, 
 | alphaDash       | Alpha plus dashes and underscores                                              | alphaDash             |
 | alphaDashPeriodEmoji       | Alpha, dashes, underscores, periods and emoji                       | alphaDashPeriodEmoji  |
 | alphaNumeric    | Alpha plus numbers                                                             | alphaNumeric          |
-| authenticated   | Chech that member is authenticated                                             | authenticated         |
+| authenticated   | Check that member is authenticated                                             | authenticated         |
 | boolean         | Must be of boolean type                                                        | boolean               |
 | email           | Email addresses                                                                | email                 |
 | enum            | Any in a given list                                                            | enum[blue, red, pink] |

@@ -33,6 +33,8 @@ Output a log out form.
 
 ## Parameters
 
+{{embed:_tips/form-attributes.md}}
+
 ### `action=`
 
     action="https://example.com/"
@@ -65,5 +67,3 @@ This parameter allows you to define where the user will be returned after succes
 
 1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="news/local"
 2.  Use a full URL. For example: return="<https://example.com/return.html>"
-
-

@@ -56,6 +56,8 @@ The contact form is created similar to a standard web form, only you **do not** 
 
 [TOC=3]
 
+{{embed:_tips/form-attributes.md}}
+
 ### `charset=`
 
     charset="utf-8"

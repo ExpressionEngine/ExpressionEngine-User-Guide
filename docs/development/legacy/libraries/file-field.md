@@ -36,7 +36,7 @@ Creates a drag-and-drop, control-panel only file field
 | ------------------------| --------- | --------------------------------------------------------------------------------------------------------|
 | \$field_name            | `String`  | The name of the field                                                                                   |
 | \$data                  | `String`  | The data stored in the file field e.g. `{file:XX:url}` or `{filedir_x}filename.ext`                     |
-| \$allowed_file_dirs     | `String`  | Whether to show one upload destination or all uploade destinations. Either 'all' or ONE directory ID  |
+| \$allowed_file_dirs     | `String`  | Whether to show one upload destination or all upload destinations. Either 'all' or ONE directory ID  |
 | \$content_type          | `String`  | The content type allowed. Either 'all' or 'image'                                                   |
 | Returns                 | `String`  | Fully rendered file field                                                                               |
 
@@ -58,7 +58,7 @@ Creates a front-end-friendly file field
 
 ### `getFileModelForFieldData($data)`
 
-Returns `File` model for the file field value. 
+Returns `File` model for the file field value.
 Can accept string like  `{file:XX:url}`, `{filedir_1}somefile.jpg` as well as numeric file ID.
 
 ### `parse_field($data)`

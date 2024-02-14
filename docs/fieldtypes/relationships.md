@@ -11,7 +11,7 @@
 
 [TOC]
 
-Relationships are an extremely powerful tool that allow you to connect Entries in one Channel to those in another one, or even to other entries in the same channel. This ability allows you to store very complex content in your Channel entries.
+Relationships are an extremely powerful tool that allows you to connect Entries in one Channel to those in another one, or even to other entries in the same channel. This ability allows you to store very complex content in your Channel entries.
 
 This fieldtype is currently only limited to Channels.
 
@@ -80,7 +80,7 @@ The order of selected entries can be rearranged with drag&drop.
 
 ![Relationship Field UI](_images/ee73-relationship-status.png)
 
-NOTE: **Note:** The described Relationship UI is only available when using Control Panel or [Pro Front-end Content Management](advanced-usage/front-end/frontend). If you need to use this field in [Channel Form](channels/channel-form/fields.md#relationship-field) then HTML Select input will be used.
+NOTE: **Note:** The described Relationship UI is only available when using Control Panel or [Pro Front-end Content Management](advanced-usage/front-end/frontend.md). If you need to use this field in [Channel Form](channels/channel-form/fields.md#relationship-field) then HTML Select input will be used.
 
 ## Template Tags
 
@@ -107,7 +107,7 @@ The following parameters are available to all looping relationship tags, allowin
 
 Some relationship tags may have additional parameters available. These are included in the usage instructions below.
 
-NOTE: **NOTE:** The [`disable`](fieldtypes/relationships.md#optimizing-relationships-rerformance) parameter should be applied to the containing `{exp:channel:entries}` call, not to the relationship tag itself.
+NOTE: **NOTE:** The [`disable`](fieldtypes/relationships.md#optimizing-relationships-performance) parameter should be applied to the containing `{exp:channel:entries}` call, not to the relationship tag itself.
 
 ## Accessing Children
 

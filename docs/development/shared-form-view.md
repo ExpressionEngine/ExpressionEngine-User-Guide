@@ -122,7 +122,7 @@ The key for each field definitions is the field's input name. We'll dive deeper 
 |required|Whether or not the field is required for form submission, applies the required style.|Boolean|FALSE|
 |disabled|Whether or not the field input element is disabled.|Boolean|FALSE|
 |choices|For checkboxes, radio buttons and select fields, sets the selectable choices for that field. Array format is `'my_value' => lang('my_label')`. If you need instructional text, structure your array like this: <pre>'my_value' => [<br>'label' => lang('my_label'),<br>'instructions' => lang('my_instructions')<br>]</pre>|Array||
-|disabled_choices|For checkboxes, indicates options that are not currently choosable with an array of field values whose checkboxes should be disabled, e.g. `['value', 'another']`|Array|NULL|
+|disabled_choices|For checkboxes, indicates options that are not currently selectable with an array of field values whose checkboxes should be disabled, e.g. `['value', 'another']`|Array|NULL|
 |maxlength|Sets the maxlength= attribute on text inputs.|Boolean|FALSE|
 |placeholder|	Sets the placeholder= attribute on text inputs.|String|NULL|
 no_results|For checkboxes, radio buttons and select fields, can be set to show a “no results” message and a call-to-action link button to create content that would populate options for the field.|Array|NULL|
