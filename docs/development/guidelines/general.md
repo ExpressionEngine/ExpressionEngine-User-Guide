@@ -13,6 +13,8 @@ lang: php
 
 # General Style and Syntax
 
+NOTE: **Note:** All PHP code submitted to ExpressionEngine repository needs to conform to [PSR-12 coding standards](https://expressionengine.com/blog/expressionengine-adopts-psr-12).
+
 ## File Format
 
 Files should be saved with Unicode (UTF-8) encoding. The BOM should _not_ be used. Unlike UTF-16 and UTF-32, there's no byte order to indicate in a UTF-8 encoded file, and the BOM can have a negative side effect in PHP of sending output, preventing the application from being able to set its own headers. Unix line endings should be used (LF).
@@ -183,7 +185,7 @@ CORRECT:
 
 ## TRUE, FALSE, and NULL
 
-`TRUE`, `FALSE`, and `NULL` keywords should always be fully uppercase.
+`TRUE`, `FALSE`, and `NULL` keywords should always be lowecase.
 
 INCORRECT:
 
