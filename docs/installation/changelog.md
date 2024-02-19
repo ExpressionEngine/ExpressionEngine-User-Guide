@@ -29,9 +29,11 @@
 **Bug Fixes** 💃🐛
 
 - Resolved [#4050](https://github.com/ExpressionEngine/ExpressionEngine/issues/3913) where error was shown in Channel Form when multiple category groups were assigned
-- Resolve [#4048](https://github.com/ExpressionEngine/ExpressionEngine/issues/4048) where category group could not be added from Channel page if no other category groups exist
+- Resolved [#4048](https://github.com/ExpressionEngine/ExpressionEngine/issues/4048) where category group could not be added from Channel page if no other category groups exist
 - Resolved issue when category group settings were not retained after editing from Channel page
 - Resolved issue where `{categories}` variable pair was not populated in Channel Form
+- Resolved issue where only one category group was shown in Categories filter in Entry manager if the channel is selected
+- Resolved issue where Categories filter was empty if no channel is selected in Entry Manager
 - Resolved [#3913](https://github.com/ExpressionEngine/ExpressionEngine/issues/3913) where PHP deprecation error could be shown on entry manager page when entry author did not exist
 - Resolved [#3894](https://github.com/ExpressionEngine/ExpressionEngine/issues/3894) where PHP error could be shown when displaying CAPTCHA using PHP 8.1
 - Resolved [#3886](https://github.com/ExpressionEngine/ExpressionEngine/issues/3886) where namespace of exception handler in the `backup:database` command was causing issues when it fails
