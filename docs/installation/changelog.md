@@ -9,7 +9,7 @@
 # ExpressionEngine v7 Change Log
 
 ## Version 7.4.2
-(Release: February 26, 2024)
+(Release: February 27, 2024)
 
 - **Contributors** 🙌
 <div class="max-w-7xl mx-autotext-center">
@@ -41,6 +41,7 @@
 - Resolved [#3858](https://github.com/ExpressionEngine/ExpressionEngine/issues/3858) where File field was still showing upload component when user did not have File Manager permission
 - Resolved [#3824](https://github.com/ExpressionEngine/ExpressionEngine/issues/3824) where fieldtypes in Fieldtype Advisor were not properly sorted
 - Resolved [#3807](https://github.com/ExpressionEngine/ExpressionEngine/issues/3807) where EE Debug's Font Awesome CSS tag was too aggressive
+- Resolved [#4086](https://github.com/ExpressionEngine/ExpressionEngine/issues/4086) where update to 7.4 could show preflight error on some installations
 
 **Developers** 💻
 
