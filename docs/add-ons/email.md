@@ -152,6 +152,17 @@ With this parameter, you can specify the css class you want the form to have, en
 
 With this parameter, you can specify the css id you want the form to have. The default value is 'contact_form'.
 
+### `error_handling="inline"`
+    error_handling="inline"
+
+This parameter allows you to use inline errors in your registration form. The errors can be displayed using the `{error:field_name}` tag where `field_name` would need to be replaced with the name of the field that has an error or using [`{errors}` variable pair](templates/globals/single-variables.md#error-variables).
+
+### `return_error=`
+
+When inline errors are enabled, this parameter allows you to specify the template to return to if there are errors in the form. The default is the same template that the form is on.
+
+    return_error="member/error"
+
 ## Variables
 
 [TOC=3]
@@ -171,6 +182,12 @@ If a user is logged in, then it will display their email address as recorded in 
 ### `{member_name}`
 
 If a user is logged in, then it will display their screen name as recorded in their member profile.
+
+### `{errors}...{error}...{/errors}`
+
+When inline errors enabled, displays all errors in a loop. Each individual error message is available as `{error}` variable within the loop.
+
+This variable pair is useful for displaying all errors at once, for example, in a fieldset at the top of the form. It can also be used as a conditional to check if there are any errors at all: `{if errors}`.
 
 ## Form Fields
 
@@ -237,7 +254,7 @@ Email address to which the email is being sent. Multiple email addresses may be 
 
 WARN: **Warning:** If you leave this field open to user input, you are potentially giving spammers an easy way to send anonymous emails. If you allow users to access this field, consider using a &lt;select&gt; field to limit the email address to specific choices. Further, you should enable CAPTCHAs to help prevent automated abuse.
 
-### `Preview`
+### `preview`
 
 Occasionally you'll want to provide a way for users to preview their email message before sending it. You'll start by specifying a [preview=](#preview) parameter in your opening tag:
 

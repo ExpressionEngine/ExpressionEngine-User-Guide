@@ -63,7 +63,16 @@ This parameter allows you to define where the user will be returned after succes
 1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="news/local"
 2.  Use a full URL. For example: return="<https://example.com/return.html>"
 
+### `error_handling="inline"`
+    error_handling="inline"
 
+This parameter allows you to use inline errors in your registration form. The errors can be displayed using the `{error:field_name}` tag where `field_name` would need to be replaced with the name of the field that has an error or using [`{errors}` variable pair](templates/globals/single-variables.md#error-variables).
+
+### `return_error=`
+
+When inline errors are enabled, this parameter allows you to specify the template to return to if there are errors in the form. The default is the same template that the form is on.
+
+    return_error="member/error"
 
 ## Form Inputs
 
@@ -110,6 +119,11 @@ It is recommended that you use this variable as indicated in the example code at
       <p><input class="checkbox" type="checkbox" name="auto_login" value="1"> Auto-login on future visits</p>
     {/if}
 
+### `{errors}...{error}...{/errors}`
+
+When inline errors enabled, displays all errors in a loop. Each individual error message is available as `{error}` variable within the loop.
+
+This variable pair is useful for displaying all errors at once, for example, in a fieldset at the top of the form. It can also be used as a conditional to check if there are any errors at all: `{if errors}`.
 
 ## Example
 

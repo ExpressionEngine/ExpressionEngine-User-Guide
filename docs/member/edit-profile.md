@@ -21,6 +21,17 @@ This template tag allows editing a member's profile using the form that is simil
 
 {{embed:_tips/form-attributes.md}}
 
+### `error_handling="inline"`
+    error_handling="inline"
+
+This parameter allows you to use inline errors in profile edit form. The errors can be displayed using the `{error:field_name}` tag where `field_name` would need to be replaced with the name of the field that has an error or using [`{errors}` variable pair](templates/globals/single-variables.md#error-variables).
+
+### `return_error=`
+
+When inline errors are enabled, this parameter allows you to specify the template to return to if there are errors in the form. The default is the same template that the form is on.
+
+    return_error="member/error"
+
 ### `datepicker=`
 
 Include the datepicker javascript.  This should be set to ``yes`` if there is a date type member custom field in order to output the calendar.
@@ -86,27 +97,29 @@ Member email address.
 
     <label for="email">Email</label>
     <input type="email" name="email" value="{email}" maxlength="120" size="40" />
+    {if error:email}<p class="error">{error:email}</p>{/if} // when inline error handling is enabled
 
 ### Password
 
 Member password. This is a **required** field.
 
-            <label>Your New Password</label><br />
-            <input type="password" name="password" value="" maxlength="50" size="40" />
+    <label>Your New Password</label><br />
+    <input type="password" name="password" value="" maxlength="50" size="40" />
+    {if error:password}<p class="error">{error:password}</p>{/if} // when inline error handling is enabled
 
 ### Password Confirmation
 
 Password confirmation. If a new password is submitted, the password confirmation field is **required** and must match the entered password.
 
-            <label>Confirm New Password</label><br />
-            <input type="password" name="password_confirm" value="" maxlength="50" size="40" />
+    <label>Confirm New Password</label><br />
+    <input type="password" name="password_confirm" value="" maxlength="50" size="40" />
 
 ### Current Password
 
 If the password or the email address is submitted, the current password field is **required**.
 
-            <label>Confirm New Password</label><br />
-            <input type="password" name="current_password" value="" maxlength="50" size="40" />
+    <label>Confirm New Password</label><br />
+    <input type="password" name="current_password" value="" maxlength="50" size="40" />
 
 ### Screen name
 
@@ -114,6 +127,7 @@ Member Screen name. This is a **required** field:
 
     <label for="screen_name">Screen Name</label>
     <input type="text" name="screen_name" value="{screen_name}" maxlength="120" size="40" />
+    {if error:screen_name}<p class="error">{error:screen_name}</p>{/if} // when inline error handling is enabled
 
 ### Username
 
@@ -121,12 +135,17 @@ Member username. This is a **required** field and must be unique across the site
 
     <label for="username">Username</label>
     <input type="text" name="username" value="{username}" maxlength="120" size="40" />
+    {if error:username}<p class="error">{error:username}</p>{/if} // when inline error handling is enabled
 
 ### Custom field
 
 The custom profile fields can be displayed individually by addressing them using the field's short name prefixed with `field:`:
 
     {field:birthday}
+
+If inline error handling is enabled, you can use the `{error:field_name}` tag to display the error message for the field.
+
+    {error:birthday}
 
 ## Custom Profile Field Variable Pair
 
@@ -138,6 +157,8 @@ All custom fields are output inside the ``{custom_profile_fields}`` variable tag
                 <small>{lang:profile_field_description}</small><br>
 
                 {form:custom_profile_field}
+
+                {if error}<span class="error">{error}</span>{/if}
 
             </p>
          {/custom_profile_fields}
@@ -188,6 +209,10 @@ Maximum length set for text fields
 #### `{field_type}`
 
 Short name of the fieldtype used for field
+
+#### `{error}`
+
+Error message for the field, if inline error handling is enabled.
 
 ## Example
 

@@ -38,7 +38,13 @@ This parameter allows you to specify the primary role to assign the new member, 
 ### `error_handling="inline"`
     error_handling="inline"
 
-This parameter allows you to use inline errors in your registration form. The errors can be displayed using the `{error:field_name}` tag where `field_name` would need to be replaced with the name of the field that has an error, as used to compose the form.
+This parameter allows you to use inline errors in your registration form. The errors can be displayed using the `{error:field_name}` tag where `field_name` would need to be replaced with the name of the field that has an error or using [`{errors}` variable pair](templates/globals/single-variables.md#error-variables).
+
+### `return_error=`
+
+When inline errors are enabled, this parameter allows you to specify the template to return to if there are errors in the form. The default is the same template that the form is on.
+
+    return_error="member/error"
 
 ### `include_assets=`
 
@@ -160,6 +166,10 @@ Shows the fully parsed custom member form field.
 
 Indicates whether the field is marked as required
 
+#### `{error}`
+
+Error message for the field, if inline error handling is enabled.
+
 ## Variables
 
 ### `{accept_terms}`
@@ -207,6 +217,16 @@ This will show errors with the submitted password as well as password confirm.
 
 Displays the custom field input form for the given field (substitute `field_name` with the actual field name). Note that the field must be set as "visible on registration" in order to show up.
 
+### `{error:field_name}`
+
+When inline errors enabled, displays the error message for the given field (substitute `field_name` with the actual field name).
+
+### `{errors}...{error}...{/errors}`
+
+When inline errors enabled, displays all errors in a loop. Each individual error message is available as `{error}` variable within the loop.
+
+This variable pair is useful for displaying all errors at once, for example, in a fieldset at the top of the form. It can also be used as a conditional to check if there are any errors at all: `{if errors}`.
+
 ## Example
 
     {exp:member:registration_form
@@ -214,7 +234,16 @@ Displays the custom field input form for the given field (substitute `field_name
         error_handling="inline"
     }
 
-        <p>* Required fields</p>
+    {if errors}
+        <fieldset class="error">
+            <legend>Errors</legend>
+            {errors}
+                <p>{error}</p>
+            {/errors}
+        </fieldset>
+    {/if}
+
+    <p>* Required fields</p>
     <fieldset>
         <h4>Login details</h4>
 

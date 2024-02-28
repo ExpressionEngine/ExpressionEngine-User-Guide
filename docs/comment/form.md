@@ -109,6 +109,17 @@ This parameter allows you to define where the user will be returned after submit
 
 If this parameter is not defined, they will be returned to the form page.
 
+### `error_handling="inline"`
+    error_handling="inline"
+
+This parameter allows you to use inline errors in your registration form. The errors can be displayed using the `{error:field_name}` tag where `field_name` would need to be replaced with the name of the field that has an error or using [`{errors}` variable pair](templates/globals/single-variables.md#error-variables).
+
+### `return_error=`
+
+When inline errors are enabled, this parameter allows you to specify the template to return to if there are errors in the form. The default is the same template that the form is on.
+
+    return_error="member/error"
+
 ### Conditionals
 
 [TOC=4]
@@ -160,6 +171,12 @@ The author's location as entered in their profile or the comment entry form.
 #### `{name}`
 
 Name of the author.
+
+### `{errors}...{error}...{/errors}`
+
+When inline errors enabled, displays all errors in a loop. Each individual error message is available as `{error}` variable within the loop.
+
+This variable pair is useful for displaying all errors at once, for example, in a fieldset at the top of the form. It can also be used as a conditional to check if there are any errors at all: `{if errors}`.
 
 #### Conditionals
 

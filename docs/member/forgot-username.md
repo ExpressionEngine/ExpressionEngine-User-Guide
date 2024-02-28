@@ -50,6 +50,17 @@ This parameter allows you to define where the user will be returned after succes
 1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="member/login/forgot-username"
 2.  Use a full URL. For example: return="<https://example.com/member/login/forgot-username.html>"
 
+### `error_handling="inline"`
+    error_handling="inline"
+
+This parameter allows you to use inline errors in your registration form. The errors can be displayed using the `{error:field_name}` tag where `field_name` would need to be replaced with the name of the field that has an error or using [`{errors}` variable pair](templates/globals/single-variables.md#error-variables).
+
+### `return_error=`
+
+When inline errors are enabled, this parameter allows you to specify the template to return to if there are errors in the form. The default is the same template that the form is on.
+
+    return_error="member/error"
+
 ## Form Inputs
 
 ### Email
